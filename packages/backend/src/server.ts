@@ -2,6 +2,12 @@
  * Main server entry point
  */
 
+import dotenv from 'dotenv';
+import path from 'path';
+
+// Load environment variables from root .env file
+dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
+
 import express from 'express';
 import { getConfig } from './config';
 import { corsMiddleware, errorHandler, notFoundHandler } from './middleware';

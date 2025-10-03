@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import type { AppLogicReturn } from './types';
 
 export function useAppLogic(): AppLogicReturn {
@@ -6,6 +6,11 @@ export function useAppLogic(): AppLogicReturn {
   const [backendMessage, setBackendMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  // MZOO test data state
+  const [testData, setTestData] = useState<any>(null);
+  const [testLoading, setTestLoading] = useState(false);
+  const [testError, setTestError] = useState<string | null>(null);
 
   // ALL EVENT HANDLERS HERE
   const callBackend = useCallback(async () => {
@@ -30,6 +35,30 @@ export function useAppLogic(): AppLogicReturn {
     setError(null);
   }, []);
 
+  // Fetch test data on mount
+  useEffect(() => {
+    const fetchTestData = async () => {
+      setTestLoading(true);
+      setTestError(null);
+      
+      try {
+        const response = await fetch('/api/test');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const result = await response.json();
+        setTestData(result.data);
+      } catch (err) {
+        const errorMessage = 'Error: Could not fetch test data from MZOO.';
+        setTestError(errorMessage);
+      } finally {
+        setTestLoading(false);
+      }
+    };
+
+    fetchTestData();
+  }, []);
+
   // ALL COMPUTED VALUES HERE
   const hasMessage = useMemo(() => {
     return backendMessage.length > 0;
@@ -45,7 +74,10 @@ export function useAppLogic(): AppLogicReturn {
     state: {
       backendMessage,
       loading,
-      error
+      error,
+      testData,
+      testLoading,
+      testError
     },
     handlers: {
       callBackend,

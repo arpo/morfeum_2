@@ -2,6 +2,9 @@ export interface AppState {
   backendMessage: string;
   loading: boolean;
   error: string | null;
+  testData: any;
+  testLoading: boolean;
+  testError: string | null;
 }
 
 export interface AppHandlers {
