@@ -1,9 +1,11 @@
 # System Patterns
 
 ## Architecture Overview
-Morfeum follows a strict component-based architecture with clear separation of concerns and design system integration.
+Morfeum follows a strict component-based architecture with clear separation of concerns and design system integration for both frontend and backend.
 
-## Component Architecture Patterns
+## Frontend Architecture Patterns
+
+### Component Architecture Patterns
 
 ### Strict Separation Rules
 ```mermaid
@@ -210,3 +212,200 @@ export interface ComponentLogicReturn {
 - Document architectural decisions
 - Maintain pattern consistency
 - Update documentation as patterns evolve
+
+## Backend Architecture Patterns
+
+### Domain-Driven Module Organization
+```
+packages/backend/src/
+├── server.ts                 # Main entry point (50-150 lines)
+├── config/
+│   ├── constants.ts         # Application constants
+│   ├── environments.ts      # Environment configs
+│   └── index.ts             # Exports
+├── middleware/
+│   ├── cors.ts              # CORS configuration
+│   ├── errorHandler.ts      # Error handling
+│   └── index.ts             # Exports
+├── routes/
+│   ├── api.ts               # API routes
+│   ├── health.ts            # Health checks
+│   └── index.ts             # Route configuration
+├── services/
+│   ├── static.ts            # Static file service
+│   └── index.ts             # Exports
+├── types/
+│   ├── server.ts            # Type definitions
+│   └── index.ts             # Exports
+└── utils/
+    ├── path.ts              # Utility functions
+    └── index.ts             # Exports
+```
+
+### Backend File Size Guidelines
+- **Configuration Files**: 50-200 lines
+- **Route Handlers**: 100-200 lines
+- **Service Modules**: 100-250 lines
+- **Type Definitions**: 50-150 lines
+- **Utility Modules**: 100-250 lines
+- **Main Server**: 50-150 lines
+
+### Configuration as Code Pattern
+```typescript
+// Environment-specific configuration
+export const developmentConfig = (): ServerConfig => ({
+  port: parseInt(process.env.PORT || String(DEFAULT_PORT), 10),
+  nodeEnv: process.env.NODE_ENV || DEFAULT_NODE_ENV,
+  frontendBuildPath: path.resolve(__dirname, STATIC_FILE_CONFIG.DEVELOPMENT_PATH_RELATIVE),
+});
+
+// Type-safe configuration getter
+export const getConfig = (): ServerConfig => {
+  const nodeEnv = process.env.NODE_ENV || DEFAULT_NODE_ENV;
+  
+  switch (nodeEnv) {
+    case 'production': return productionConfig();
+    case 'test': return testConfig();
+    default: return developmentConfig();
+  }
+};
+```
+
+### Service Layer Pattern
+```typescript
+// Separate business logic from infrastructure
+export const configureStaticFiles = (app: express.Application, config: ServerConfig): void => {
+  if (!validatePath(config.frontendBuildPath)) {
+    console.warn(`Warning: Frontend build path may not exist: ${config.frontendBuildPath}`);
+  }
+  app.use(express.static(config.frontendBuildPath));
+};
+```
+
+### Middleware Pattern
+```typescript
+// CORS middleware
+export const corsMiddleware = (req: Request, res: Response, next: NextFunction) => {
+  res.header('Access-Control-Allow-Origin', CORS_CONFIG.ORIGIN);
+  res.header('Access-Control-Allow-Methods', CORS_CONFIG.METHODS.join(', '));
+  res.header('Access-Control-Allow-Headers', CORS_CONFIG.ALLOWED_HEADERS.join(', '));
+  
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+    return;
+  }
+  
+  next();
+};
+
+// Async error wrapper
+export const asyncHandler = (fn: Function) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    Promise.resolve(fn(req, res, next)).catch(next);
+  };
+};
+```
+
+### Route Organization Pattern
+```typescript
+// Domain-specific route files
+const router = Router();
+
+router.get('/', asyncHandler(async (req: Request, res: Response) => {
+  res.status(HTTP_STATUS.OK).send('Hello from the backend API!');
+}));
+
+export { router as apiRouter };
+
+// Route configuration
+export const configureRoutes = (app: any): void => {
+  app.use(API_ROUTES.ROOT, apiRouter);
+  app.use(API_ROUTES.HEALTH, healthRouter);
+};
+```
+
+### Backend Error Handling Pattern
+```typescript
+// Custom error class
+export class AppError extends Error {
+  public statusCode: keyof typeof HTTP_STATUS;
+  public isOperational: boolean;
+
+  constructor(message: string, statusCode: keyof typeof HTTP_STATUS = 'INTERNAL_SERVER_ERROR') {
+    super(message);
+    this.statusCode = statusCode;
+    this.isOperational = true;
+    Error.captureStackTrace(this, this.constructor);
+  }
+}
+
+// Error handler middleware
+export const errorHandler = (error: Error, req: Request, res: Response, next: NextFunction): void => {
+  let statusCode: number = HTTP_STATUS.INTERNAL_SERVER_ERROR;
+  let message = 'Internal Server Error';
+
+  if (error instanceof AppError) {
+    statusCode = HTTP_STATUS[error.statusCode];
+    message = error.message;
+  }
+
+  res.status(statusCode).json({
+    success: false,
+    message,
+    ...(process.env.NODE_ENV === 'development' && { stack: error.stack }),
+  });
+};
+```
+
+### Backend Type Safety Pattern
+```typescript
+// Server configuration types
+export interface ServerConfig {
+  port: number;
+  nodeEnv: string;
+  frontendBuildPath: string;
+}
+
+// API response types
+export interface ApiResponse<T = any> {
+  message: string;
+  data?: T;
+  timestamp: string;
+}
+
+// Health check types
+export interface HealthResponse {
+  status: 'OK';
+  timestamp: string;
+  uptime: number;
+}
+```
+
+### Backend Module Exports Pattern
+```typescript
+// Clean barrel exports
+export * from './constants';
+export * from './environments';
+
+// Named exports for better tree-shaking
+export { configureStaticFiles, configureCatchAllHandler } from './static';
+export { apiRouter, healthRouter } from './routes';
+```
+
+### Backend Development Workflow
+1. Create module directory structure
+2. Implement type definitions first
+3. Create configuration constants
+4. Build service layer
+5. Implement middleware
+6. Create route handlers
+7. Wire everything in server.ts
+8. Build and verify
+
+### Backend Quality Assurance
+- All modules under 300 lines
+- 100% TypeScript coverage
+- Environment-specific configurations
+- Comprehensive error handling
+- Proper logging and monitoring
+- Clean module boundaries

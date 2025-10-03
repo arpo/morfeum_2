@@ -1,34 +1,74 @@
-import express, { Request, Response } from 'express';
-import path from 'path';
+/**
+ * Main server entry point
+ */
 
-const app = express();
-const port = process.env.PORT || 3030;
+import express from 'express';
+import { getConfig } from './config';
+import { corsMiddleware, errorHandler, notFoundHandler } from './middleware';
+import { configureRoutes } from './routes';
+import { configureStaticFiles, configureCatchAllHandler } from './services';
 
-let frontendBuildPath: string;
+/**
+ * Create and configure Express application
+ */
+function createApp(): express.Application {
+  const app = express();
+  const config = getConfig();
 
-if (process.env.NODE_ENV === 'production') {
-  frontendBuildPath = '/app/packages/frontend/dist';
-} else {
-  frontendBuildPath = path.resolve(__dirname, '..', '..', 'frontend', 'dist');
+  // Middleware configuration
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
+  app.use(corsMiddleware);
+
+  // Configure routes (must be before static files)
+  configureRoutes(app);
+
+  // Configure static file serving
+  configureStaticFiles(app, config);
+
+  // Configure catch-all handler for client-side routing
+  configureCatchAllHandler(app, config);
+
+  // Error handling middleware (must be last)
+  app.use(notFoundHandler);
+  app.use(errorHandler);
+
+  return app;
 }
 
-// Define API routes BEFORE serving static files
-app.get('/api', (req: Request, res: Response) => {
-  res.send('Hello from the backend API!');
-});
+/**
+ * Start the server
+ */
+function startServer(): void {
+  const app = createApp();
+  const config = getConfig();
 
-app.get('/health', (req: Request, res: Response) => {
-  res.status(200).send('OK');
-});
+  app.listen(config.port, () => {
+    console.log(`🚀 Backend server is running at http://localhost:${config.port}`);
+    console.log(`📦 Environment: ${config.nodeEnv}`);
+    console.log(`📁 Frontend build path: ${config.frontendBuildPath}`);
+    console.log(`🔗 API endpoints available at:`);
+    console.log(`   GET  http://localhost:${config.port}/api`);
+    console.log(`   GET  http://localhost:${config.port}/api/info`);
+    console.log(`   GET  http://localhost:${config.port}/health`);
+    console.log(`   GET  http://localhost:${config.port}/health/detailed`);
+  });
 
-// Serve static files from the frontend build directory
-app.use(express.static(frontendBuildPath));
+  // Graceful shutdown handling
+  process.on('SIGTERM', () => {
+    console.log('🛑 SIGTERM received, shutting down gracefully');
+    process.exit(0);
+  });
 
-// Catch-all to serve index.html for client-side routing
-app.get('*', (req: Request, res: Response) => {
-  res.sendFile(path.join(frontendBuildPath, 'index.html'));
-});
+  process.on('SIGINT', () => {
+    console.log('🛑 SIGINT received, shutting down gracefully');
+    process.exit(0);
+  });
+}
 
-app.listen(port, () => {
-  console.log(`Backend server is running at http://localhost:${port}`);
-});
+// Start the server if this file is run directly
+if (require.main === module) {
+  startServer();
+}
+
+export { createApp, startServer };

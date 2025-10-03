@@ -13,7 +13,15 @@
 ### Backend Technologies
 - **Node.js**: JavaScript runtime for server-side code
 - **Express.js**: Web framework for API endpoints
-- **TypeScript**: Type-safe backend development
+- **TypeScript**: Type-safe backend development with 100% coverage
+
+### Backend Architecture (Implemented)
+- **Domain-Driven Design**: Modular architecture with 12 focused modules
+- **Configuration as Code**: Environment-specific configurations (dev/prod/test)
+- **Service Layer Pattern**: Business logic separated from infrastructure
+- **Middleware Stack**: CORS, error handling, async wrappers
+- **Route Organization**: Domain-specific routing with clear boundaries
+- **Type Safety**: Comprehensive TypeScript interfaces throughout
 
 ### Development Tools
 - **ESLint**: Code linting and quality enforcement
@@ -327,8 +335,126 @@ FROM node:18-alpine as runtime
 - **Platform Support**: macOS, Linux, Windows
 - **IDE Support**: VS Code recommended with extensions
 
+## Backend Architecture Details
+
+### Backend Module Structure
+```
+packages/backend/src/
+├── server.ts                 # Main entry point (95 lines)
+├── config/
+│   ├── constants.ts         # Application constants (35 lines)
+│   ├── environments.ts      # Environment configs (45 lines)
+│   └── index.ts             # Exports (3 lines)
+├── middleware/
+│   ├── cors.ts              # CORS middleware (25 lines)
+│   ├── errorHandler.ts      # Error handling (65 lines)
+│   └── index.ts             # Exports (3 lines)
+├── routes/
+│   ├── api.ts               # API routes (45 lines)
+│   ├── health.ts            # Health checks (50 lines)
+│   └── index.ts             # Route config (35 lines)
+├── services/
+│   ├── static.ts            # Static files (40 lines)
+│   └── index.ts             # Exports (3 lines)
+├── types/
+│   ├── server.ts            # Type definitions (20 lines)
+│   └── index.ts             # Exports (3 lines)
+└── utils/
+    ├── path.ts              # Path utilities (25 lines)
+    └── index.ts             # Exports (3 lines)
+```
+
+### Backend API Endpoints
+
+**Health Monitoring**:
+- `GET /health` - Basic health check with status and uptime
+- `GET /health/detailed` - Detailed health info with memory usage and system metrics
+
+**API Routes**:
+- `GET /api` - Root API endpoint returning plain text response
+- `GET /api/info` - Comprehensive API documentation with endpoint listing
+
+**Static Files**:
+- `/*` - Catch-all for client-side routing, serves index.html
+
+### Backend Configuration Management
+
+**Environment-Specific Configs**:
+```typescript
+// Development configuration
+developmentConfig(): {
+  port: 3030,
+  nodeEnv: 'development',
+  frontendBuildPath: '../frontend/dist'
+}
+
+// Production configuration
+productionConfig(): {
+  port: 3030,
+  nodeEnv: 'production',
+  frontendBuildPath: '/app/packages/frontend/dist'
+}
+
+// Test configuration
+testConfig(): {
+  port: 3031,
+  nodeEnv: 'test',
+  frontendBuildPath: '../frontend/dist'
+}
+```
+
+### Backend Error Handling
+
+**Custom Error Classes**:
+- `AppError` - Operational errors with specific status codes
+- Environment-specific error responses
+- Structured error logging
+- Graceful shutdown handling
+
+**Error Middleware**:
+- Global error handler with proper status codes
+- Development vs production error responses
+- 404 handler for undefined routes
+- Async error wrapper for route handlers
+
+### Backend Type Safety
+
+**Server Types**:
+```typescript
+interface ServerConfig {
+  port: number;
+  nodeEnv: string;
+  frontendBuildPath: string;
+}
+
+interface HealthResponse {
+  status: 'OK';
+  timestamp: string;
+  uptime: number;
+}
+
+interface ApiResponse<T = any> {
+  message: string;
+  data?: T;
+  timestamp: string;
+}
+```
+
+### Backend Middleware Stack
+
+**Request Processing Order**:
+1. JSON body parser
+2. URL encoded parser
+3. CORS middleware
+4. API route handlers
+5. Health check handlers
+6. Static file serving
+7. Catch-all for SPA routing
+8. 404 handler
+9. Error handler
+
 ## Conclusion
 
-The technical architecture of Morfeum is designed to demonstrate modern best practices while maintaining simplicity and developer experience. The technology choices balance performance, maintainability, and learning value, making it an excellent reference for contemporary React development.
+The technical architecture of Morfeum is designed to demonstrate modern best practices while maintaining simplicity and developer experience. The technology choices balance performance, maintainability, and learning value, making it an excellent reference for contemporary full-stack React development.
 
-The architecture is intentionally opinionated to showcase specific patterns and approaches that have proven effective in production environments. Each technical decision is documented and justified to provide learning value for developers seeking to improve their technical skills.
+The architecture is intentionally opinionated to showcase specific patterns and approaches that have proven effective in production environments. Both frontend and backend demonstrate clean separation of concerns, type safety, and modular design. Each technical decision is documented and justified to provide learning value for developers seeking to improve their technical skills.
