@@ -20,7 +20,7 @@ To start both the Express.js backend and the React frontend development servers 
 npm run dev
 ```
 
-The backend will run on `http://localhost:3000` (or the port you configured), and the frontend will typically open in your browser at `http://localhost:5173` (or another available port).
+The backend will run on `http://localhost:3030` (or the port you configured), and the frontend will typically open in your browser at `http://localhost:5173` (or another available port).
 
 ### 3. Run the Backend (Separately)
 
@@ -31,7 +31,7 @@ cd packages/backend
 npm run dev
 ```
 
-By default, the backend runs on `http://localhost:3000`. If this port is already in use, you will need to change it in `packages/backend/src/server.ts` (e.g., to `3001`). If you change the backend port, remember to also update the proxy configuration in `packages/frontend/vite.config.ts`.
+By default, the backend runs on `http://localhost:3030`. If this port is already in use, you will need to change it in `packages/backend/src/server.ts` (e.g., to `3001`). If you change the backend port, remember to also update the proxy configuration in `packages/frontend/vite.config.ts`.
 
 ### 4. Run the Frontend (Separately)
 

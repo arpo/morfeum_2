@@ -33,11 +33,11 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/packages ./packages
 
 # Expose port (matches server.ts PORT env var)
-EXPOSE 8080
+EXPOSE 3030
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s \
-  CMD wget --quiet --tries=1 --spider http://localhost:8080/health || exit 1
+  CMD wget --quiet --tries=1 --spider http://localhost:3030/health || exit 1
 
 # Start the backend server
 WORKDIR /app/packages/backend
