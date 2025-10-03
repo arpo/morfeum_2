@@ -14,6 +14,7 @@
 - **Node.js**: JavaScript runtime for server-side code
 - **Express.js**: Web framework for API endpoints
 - **TypeScript**: Type-safe backend development with 100% coverage
+- **Dotenv**: Environment variable management for secure configuration
 
 ### Backend Architecture (Implemented)
 - **Domain-Driven Design**: Modular architecture with 12 focused modules
@@ -22,6 +23,8 @@
 - **Middleware Stack**: CORS, error handling, async wrappers
 - **Route Organization**: Domain-specific routing with clear boundaries
 - **Type Safety**: Comprehensive TypeScript interfaces throughout
+- **Environment Management**: Dotenv for secure API key and configuration handling
+- **API Proxy Pattern**: Backend proxy for external API integrations (MZOO)
 
 ### Development Tools
 - **ESLint**: Code linting and quality enforcement
@@ -373,6 +376,7 @@ packages/backend/src/
 **API Routes**:
 - `GET /api` - Root API endpoint returning plain text response
 - `GET /api/info` - Comprehensive API documentation with endpoint listing
+- `GET /api/test` - MZOO database proxy endpoint (fetches test record with id=1)
 
 **Static Files**:
 - `/*` - Catch-all for client-side routing, serves index.html
@@ -402,6 +406,24 @@ testConfig(): {
   frontendBuildPath: '../frontend/dist'
 }
 ```
+
+**Environment Variables (via Dotenv)**:
+```typescript
+// server.ts - Loads .env from root directory
+import dotenv from 'dotenv';
+import path from 'path';
+
+dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
+
+// Access in routes
+const MZOO_API_KEY = process.env.MZOO_API_KEY;
+```
+
+**External API Integration**:
+- MZOO API integration via backend proxy
+- API keys stored in .env file (never exposed to frontend)
+- Secure proxy pattern for external API calls
+- Proper error handling and response formatting
 
 ### Backend Error Handling
 
