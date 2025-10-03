@@ -1,6 +1,5 @@
 import { useAppLogic } from './useAppLogic';
-import { Button } from '@/components/ui';
-import { IconLoader2 } from '@/icons';
+import { Button, Card, LoadingSpinner, Message } from '@/components/ui';
 import styles from './App.module.css';
 
 export function App() {
@@ -10,7 +9,7 @@ export function App() {
     <div className={styles.container}>
       <h1 className={styles.title}>Morfeum</h1>
       
-      <div className={styles.card}>
+      <Card>
         <div className={styles.buttonContainer}>
           <Button 
             onClick={handlers.callBackend}
@@ -31,16 +30,14 @@ export function App() {
         </div>
         
         {state.loading && (
-          <div className={styles.loading}>
-            <IconLoader2 className={styles.spinner} />
-            Calling backend...
-          </div>
+          <LoadingSpinner message="Calling backend..." />
         )}
         
         {computed.hasMessage && !state.loading && (
-          <div className={`${styles.message} ${state.error ? styles.error : ''}`}>
-            {computed.displayMessage}
-          </div>
+          <Message 
+            variant={state.error ? 'error' : 'default'}
+            message={computed.displayMessage}
+          />
         )}
         
         {!computed.hasMessage && !state.loading && (
@@ -48,7 +45,7 @@ export function App() {
             Click "Call Backend" to test the connection
           </div>
         )}
-      </div>
+      </Card>
     </div>
   );
 }

@@ -1,56 +1,9 @@
 // Centralized icon management
 // Add new icons here ONLY - never import directly from @tabler/icons-react
+// Only export icons that are actually used in the application
 
 export {
-  IconHome,
-  IconSettings,
-  IconUser,
-  IconLoader2,
-  IconCheck,
-  IconX,
-  IconAlertCircle,
-  IconChevronDown,
-  IconChevronUp,
-  IconChevronLeft,
-  IconChevronRight,
-  IconPlus,
-  IconMinus,
-  IconEdit,
-  IconTrash,
-  IconSearch,
-  IconFilter,
-  IconRefresh,
-  IconDownload,
-  IconUpload,
-  IconCopy,
-  IconShare,
-  IconHeart,
-  IconBookmark,
-  IconMessageCircle,
-  IconSend,
-  IconPhone,
-  IconMail,
-  IconCalendar,
-  IconClock,
-  IconMapPin,
-  IconCamera,
-  IconPhoto,
-  IconVideo,
-  IconMusic,
-  IconFile,
-  IconFolder,
-  IconArchive,
-  IconLock,
-  IconEye,
-  IconEyeOff,
-  IconMenu,
-  IconX as IconClose,
-  IconArrowsSort,
-  IconAdjustmentsHorizontal,
-  IconZoomIn,
-  IconZoomOut,
-  IconMaximize,
-  IconMinimize
+  IconLoader2
 } from '@tabler/icons-react';
 
 // Icon type for string references
