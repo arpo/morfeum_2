@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <h1>Boilerplate</h1>
+      <h1>Morfeum</h1>
       <div className="card">
         <button onClick={callBackend}>Call Backend</button>
         {backendMessage && <p>Backend says: {backendMessage}</p>}
