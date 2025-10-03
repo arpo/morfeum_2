@@ -1,0 +1,26 @@
+# Ignore node_modules, as dependencies will be installed inside the container
+node_modules
+
+# Ignore source TypeScript files, as we only need the compiled JS in dist/
+*.ts
+*.tsx
+src/
+
+# Ignore development/build tooling configuration
+eslint.config.js
+nodemon.json
+browser-sync.config.cjs
+.gitignore
+.git
+.vscode
+
+# Ignore documentation and non-essential files
+README.md
+memory-bank/
+CONTINUATION_INSTRUCTIONS.md
+deployer-key.json
+
+# Monorepo specific ignores
+packages/backend/node_modules
+# packages/backend/src  <-- This line will be removed
+packages/frontend/node_modules
