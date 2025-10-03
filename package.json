@@ -1,5 +1,5 @@
 {
-  "name": "gcp-monorepo",
+  "name": "morfeum",
   "version": "1.0.0",
   "private": true,
   "workspaces": [
@@ -13,5 +13,10 @@
   },
   "devDependencies": {
     "concurrently": "^8.0.1"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^3.35.0",
+    "react-router-dom": "^7.9.3",
+    "zustand": "^5.0.8"
   }
 }

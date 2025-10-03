@@ -1,159 +1,369 @@
-# Comprehensive Guide to GCP Setup & Deployment
+# Quick Start Guide
 
-This guide provides a complete, step-by-step process for setting up a new Google Cloud Platform (GCP) environment and deploying this application.
+Get your new React/TypeScript project up and running in minutes with proven development patterns.
 
-The process is divided into two parts:
-- **Part 1: One-Time Manual Setup.** You will perform these steps once to create and configure your GCP resources. This part requires manual intervention to run commands and record the outputs.
-- **Part 2: Automated Deployment.** Once the initial setup is complete, you can use a simple, automated script for all future deployments.
+## 🚀 Essential Setup
 
----
+### 1. Project Structure
+```
+your-project/
+├── .clinerules/
+│   ├── zustand-slice-pattern.md
+│   └── design-system-components.md
+├── memory-bank/
+│   └── projectbrief.md
+├── packages/
+│   └── frontend/
+│       ├── src/
+│       │   ├── components/ui/
+│       │   ├── features/
+│       │   ├── icons/
+│       │   └── styles/tokens.module.css
+│       ├── package.json
+│       └── vite.config.ts
+└── package.json
+```
 
-## Part 1: One-Time Manual Setup
+### 2. Core Development Patterns
 
-> **Note for users with existing projects:** If you have already created a GCP project, you can skip the `gcloud projects create` command. However, you must still perform the other configuration steps in this section, such as setting the project, getting the project number, and enabling APIs. Make sure you have your Project ID available.
+#### 🚨 STRICT SEPARATION RULES
 
-**Objective:** To create the necessary GCP project, enable APIs, create a repository, and configure service accounts.
+**NEVER mix these concerns in the same file:**
+- **Markup (.tsx)**: Pure JSX only, no business logic
+- **Logic (.ts)**: State, effects, API calls, no JSX
+- **Styles (.module.css)**: CSS only, no JavaScript
 
-**IMPORTANT:** As you complete these steps, have a text editor open. You will need to **copy and paste** the output values (like your new Project ID and service account emails) to use in Part 2.
+#### Component Structure
+```
+src/features/[feature]/components/[component]/
+├── ComponentName.tsx       # PURE JSX ONLY (50-300 lines)
+├── useComponentLogic.ts    # PURE LOGIC ONLY (50-300 lines)
+├── types.ts               # TypeScript interfaces
+├── ComponentName.module.css # PURE CSS ONLY
+└── index.ts
+```
 
-### 1. Local Prerequisites & Initial Login
+#### Component Template (MARKUP ONLY)
+```tsx
+// ComponentName.tsx - ✅ PURE JSX ONLY
+import { useComponentLogic } from './useComponentLogic';
+import type { ComponentProps } from './types';
 
-- Ensure Node.js, npm, and the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) (`gcloud` CLI) are installed.
-
-#### Authentication Setup
-
-- **Check current authentication status:**
-  ```bash
-  gcloud auth list
-  ```
-  This shows which accounts are authenticated and which one is currently active.
-
-- **If you need to switch accounts or are authenticated with a service account from another project:**
-  ```bash
-  # Log out from current account
-  gcloud auth revoke
+export function ComponentName(props: ComponentProps) {
+  const { state, handlers, computed } = useComponentLogic(props);
   
-  # Or log out from a specific account
-  gcloud auth revoke [ACCOUNT_EMAIL]
-  ```
+  return (
+    <div className={styles.container}>
+      {/* PURE JSX RENDERING ONLY */}
+      {/* NO useState, useEffect, API calls, or business logic */}
+      {state.loading && <Spinner />}
+      <button onClick={handlers.handleClick}>
+        {computed.displayText}
+      </button>
+    </div>
+  );
+}
+```
 
-- **Authenticate with your personal Google account:**
-  ```bash
-  gcloud auth login
-  ```
-  > **Note:** Always use your personal Google account (not a service account) for the setup process. Service accounts from other projects may cause permission issues when creating or configuring new projects.
+#### Logic Template (LOGIC ONLY)
+```ts
+// useComponentLogic.ts - ✅ PURE LOGIC ONLY
+import { useState, useEffect, useCallback } from 'react';
+import type { ComponentProps, ComponentLogicReturn } from './types';
 
-### 2. Create and Configure Your GCP Project
+export function useComponentLogic(props: ComponentProps): ComponentLogicReturn {
+  // ALL STATE MANAGEMENT HERE
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  
+  // ALL SIDE EFFECTS HERE
+  useEffect(() => {
+    // Component lifecycle logic
+  }, []);
+  
+  // ALL EVENT HANDLERS HERE
+  const handleClick = useCallback(async () => {
+    // Business logic implementation
+    setLoading(true);
+    try {
+      const result = await apiCall();
+      setData(result);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+  
+  // ALL COMPUTED VALUES HERE
+  const displayText = computed(() => {
+    return data?.name || 'Default';
+  }, [data]);
+  
+  return {
+    state: { data, loading },
+    handlers: { handleClick },
+    computed: { displayText }
+  };
+}
+```
 
-- **Create a new GCP Project.** Replace `your-unique-project-id` with a unique name.
-  ```bash
-  gcloud projects create your-unique-project-id
-  ```
-  > **ACTION:** A `project_id` will be returned. **Save this value.**
+#### CSS Template (STYLES ONLY)
+```css
+/* ComponentName.module.css - ✅ PURE CSS ONLY */
+.container {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+}
 
-- **Set the `gcloud` CLI to use your new project.**
-  ```bash
-  gcloud config set project [YOUR_SAVED_PROJECT_ID]
-  ```
+/* NO JavaScript, NO logic, NO JSX */
+```
 
-- **Find your Project Number.**
-  ```bash
-  gcloud projects describe [YOUR_SAVED_PROJECT_ID] --format="value(projectNumber)"
-  ```
-  > **ACTION:** **Save the Project Number** that is returned.
+#### Zustand Slice Pattern
+```ts
+// store/slices/featureSlice.ts
+export const createFeatureSlice: StateCreator<CombinedStore> = (set, get) => ({
+  features: [],
+  loading: false,
+  
+  fetchFeatures: async () => {
+    set({ loading: true });
+    try {
+      const data = await fetch('/api/features');
+      set({ features: await data.json(), loading: false });
+    } catch (error) {
+      set({ loading: false });
+    }
+  }
+});
+```
 
-- **Enable the required GCP APIs.**
-  ```bash
-  gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com cloudresourcemanager.googleapis.com iam.googleapis.com serviceusage.googleapis.com
-  ```
+### 3. Design System
 
-### 3. Create the Artifact Registry Repository
+#### Design Tokens
+```css
+/* src/styles/tokens.module.css */
+:root {
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  
+  --color-primary: #3b82f6;
+  --color-text: #1f2937;
+  --color-bg: #ffffff;
+  
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+}
+```
 
-- Create a Docker repository to store your application images.
-  ```bash
-  gcloud artifacts repositories create [CHOOSE_A_REPOSITORY_NAME] \
-      --repository-format=docker \
-      --location=[CHOOSE_A_GCP_REGION] \
-      --description="Application Docker images"
-  ```
-  > **ACTION:** **Save the Repository Name and Region** you chose.
+#### Icon Management
+```ts
+// src/icons/index.ts
+export { IconHome, IconSettings, IconUser } from '@tabler/icons-react';
+// Add new icons here ONLY
+```
 
-### 4. Create Service Accounts and Keys
+#### Usage Rules
+```tsx
+// ✅ Correct
+import { IconHome } from '@/icons';
+import { Button } from '@/components/ui';
 
-- **Create the "Deployer" Service Account.** This account will perform the build and deployment.
-  ```bash
-  gcloud iam service-accounts create [CHOOSE_A_DEPLOYER_SA_NAME] \
-      --display-name="App Deployment Service Account"
-  ```
-  > **ACTION:** **Save the Deployer SA Name.** An email address for this account will be returned. **Save the full email address.**
+<Button leftIcon="IconHome" variant="primary">Home</Button>
 
-- **Grant the "Deployer" Service Account the necessary roles.**
-  ```bash
-  gcloud projects add-iam-policy-binding [YOUR_SAVED_PROJECT_ID] --member="serviceAccount:[YOUR_SAVED_DEPLOYER_SA_EMAIL]" --role="roles/cloudbuild.builds.editor"
-gcloud projects add-iam-policy-binding [YOUR_SAVED_PROJECT_ID] --member="serviceAccount:[YOUR_SAVED_DEPLOYER_SA_EMAIL]" --role="roles/run.admin"
-gcloud projects add-iam-policy-binding [YOUR_SAVED_PROJECT_ID] --member="serviceAccount:[YOUR_SAVED_DEPLOYER_SA_EMAIL]" --role="roles/artifactregistry.writer"
-gcloud projects add-iam-policy-binding [YOUR_SAVED_PROJECT_ID] --member="serviceAccount:[YOUR_SAVED_DEPLOYER_SA_EMAIL]" --role="roles/iam.serviceAccountUser"
-gcloud projects add-iam-policy-binding [YOUR_SAVED_PROJECT_ID] --member="serviceAccount:[YOUR_SAVED_DEPLOYER_SA_EMAIL]" --role="roles/serviceusage.serviceUsageConsumer"
-gcloud projects add-iam-policy-binding [YOUR_SAVED_PROJECT_ID] --member="serviceAccount:[YOUR_SAVED_DEPLOYER_SA_EMAIL]" --role="roles/storage.admin"
-  ```
+// ❌ Wrong
+import { IconHome } from '@tabler/icons-react';
+<Button leftIcon={<IconHome />}>Home</Button>
+```
 
-- **Create and download a key file for the "Deployer" Service Account.**
-  ```bash
-  gcloud iam service-accounts keys create [CHOOSE_A_KEY_FILENAME].json \
-      --iam-account=[YOUR_SAVED_DEPLOYER_SA_EMAIL]
-  ```
-  > **ACTION:** This creates a `.json` file in your current directory. **Save the filename** you chose. This file is sensitive; do not commit it to git.
+### 4. Essential Configuration
 
-  > **Note:** A `deployer-key-example.json` file is included in this project as a template reference. It shows the structure of what your actual service account key file should look like, but contains only placeholder values for security. Your real key file (created above) will have the same structure but with actual credentials. Never commit your real key file to version control.
+#### package.json
+```json
+{
+  "name": "your-project",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev": "cd packages/frontend && npm run dev",
+    "build": "cd packages/frontend && npm run build",
+    "test": "cd packages/frontend && npm test",
+    "lint": "cd packages/frontend && npm run lint"
+  }
+}
+```
 
-- **Identify the "Runtime" Service Account.** This is the default Compute Engine service account. Its email is constructed using your Project Number.
-  > **ACTION:** The email address is `[YOUR_SAVED_PROJECT_NUMBER]-compute@developer.gserviceaccount.com`. **Save this email address.**
+#### Frontend package.json
+```json
+{
+  "name": "@your-project/frontend",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
+    "zustand": "^4.4.0"
+  }
+}
+```
 
-- **Grant the "Runtime" Service Account the necessary roles.**
-  ```bash
-  gcloud projects add-iam-policy-binding [YOUR_SAVED_PROJECT_ID] --member="serviceAccount:[YOUR_SAVED_RUNTIME_SA_EMAIL]" --role="roles/artifactregistry.reader"
-gcloud projects add-iam-policy-binding [YOUR_SAVED_PROJECT_ID] --member="serviceAccount:[YOUR_SAVED_RUNTIME_SA_EMAIL]" --role="roles/storage.objectViewer"
-  ```
+#### vite.config.ts
+```ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
-**You have now completed the one-time setup. You should have all the required values saved.**
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
+  },
+  server: { port: 5173 }
+});
+```
 
----
+### 5. .clinerules (Essential Files Only)
 
-## Part 2: Automated Deployment
+#### zustand-slice-pattern.md
+```markdown
+## Component Separation Rules
+- Presentation (.tsx): Pure JSX, consume hook output
+- Logic (.ts): Business logic, state management, API calls
+- Types (types.ts): Component interfaces
 
-**Objective:** To configure the local project environment and run a simple script for all deployments.
+## Store Rules
+- 50-150 lines per slice
+- Cross-slice communication via get()/getState()
+- Side-effects in hooks, not slices
 
-### 1. Configure Your Local Environment
+## File Naming
+- Components: PascalCase.tsx
+- Hooks: useFeatureLogic.ts
+- Types: types.ts
+```
 
-- **Create your personal environment file** by copying the provided example:
-  ```bash
-  cp .env.example .env
-  ```
+#### design-system-components.md
+```markdown
+## Component Usage
+- Use unified components from @/components/ui
+- Import icons from @/icons ONLY
+- Use design tokens, not hardcoded values
 
-- **Edit the `.env` file.** Open the newly created `.env` file in a text editor.
-- **Fill in the values** that you saved from Part 1. The file contains all the variables the deployment script needs.
+## Import Pattern
+```tsx
+import { Button, Icon } from '@/components/ui';
+import { IconHome } from '@/icons';
+```
 
-  Example of a filled-out `.env` file:
-  ```
-  # GCP Configuration
-  export YOUR_PROJECT_ID="your-gcp-project-id"
-  export YOUR_PROJECT_NUMBER="123456789012"
-  export YOUR_REGION="your-gcp-region"
-  export YOUR_REPOSITORY_NAME="your-artifact-repo-name"
-  export YOUR_IMAGE_NAME="your-application-image-name"
-  export YOUR_SERVICE_NAME="your-cloud-run-service-name"
+## Styling
+- Use CSS custom properties: var(--spacing-md)
+- No hardcoded colors/sizes
+- CSS Modules for component styles
+```
 
-  # Service Account Details
-  export YOUR_DEPLOYER_SA_EMAIL="deployer-sa-name@your-gcp-project-id.iam.gserviceaccount.com"
-  export YOUR_DEPLOYER_KEY_FILE_NAME="your-sa-key-filename.json"
-  export YOUR_RUNTIME_SA_EMAIL="123456789012-compute@developer.gserviceaccount.com"
-  ```
+## 🏃‍♂️ Get Started
 
-### 2. Run the Automated Deployment Script
+### 1. Create Project
+```bash
+mkdir your-project && cd your-project
+npm init -y
+```
 
-- Once your `.env` file is correctly filled out, you can deploy the application at any time by running:
-  ```bash
-  npm run deploy
-  ```
+### 2. Setup Structure
+```bash
+mkdir -p .clinerules memory-bank packages/frontend/src/{components/ui,features,icons,styles}
+```
 
-This script will build your application, authenticate using your key file, push the Docker image to your repository, and deploy it to Cloud Run, confirming with you before it starts.
+### 3. Install Dependencies
+```bash
+npm install react react-dom react-router-dom zustand
+npm install -D vite @vitejs/plugin-react typescript @types/react @types/react-dom
+```
+
+### 4. Create Files
+Copy the templates from above into your project structure.
+
+### 5. Start Development
+```bash
+npm run dev
+```
+
+## 📋 Key Rules to Follow
+
+### 🚨 STRICT SEPARATION (NON-NEGOTIABLE)
+
+1. **Markup Files (.tsx)** - PURE JSX ONLY
+   - ✅ JSX rendering, conditional logic, event binding
+   - ❌ NO useState, useEffect, API calls, business logic
+   - ❌ NO calculations, data processing, side effects
+
+2. **Logic Files (.ts)** - PURE LOGIC ONLY
+   - ✅ useState, useEffect, API calls, calculations
+   - ✅ Event handlers, data processing, side effects
+   - ❌ NO JSX, NO rendering, NO CSS classes
+
+3. **Style Files (.module.css)** - PURE CSS ONLY
+   - ✅ CSS rules, animations, responsive design
+   - ❌ NO JavaScript, NO logic, NO imports
+
+### Additional Rules
+
+4. **Component Size**: 50-300 lines per file, break up larger ones
+5. **Icons**: Centralize in @/icons, never import directly
+6. **Styling**: Use design tokens, CSS Modules only
+7. **State**: Zustand slices, 50-150 lines each
+8. **Naming**: Be consistent, follow established patterns
+
+### 🚨 FORBIDDEN PATTERNS
+
+```tsx
+// ❌ NEVER DO THIS - Mixed concerns
+export function BadComponent() {
+  const [data, setData] = useState(null); // Logic in markup
+  
+  useEffect(() => { // Logic in markup
+    fetchData();
+  }, []);
+  
+  return (
+    <div style={{ color: 'red' }}> {/* Inline styles */}
+      {data.map(item => <span>{item.name}</span>)} {/* Complex logic in JSX */}
+    </div>
+  );
+}
+```
+
+```tsx
+// ✅ ALWAYS DO THIS - Pure separation
+// ComponentName.tsx - Pure JSX
+export function ComponentName(props: ComponentProps) {
+  const { state, handlers } = useComponentLogic(props);
+  
+  return (
+    <div className={styles.container}>
+      {state.data.map(item => (
+        <Item key={item.id} name={item.name} />
+      ))}
+    </div>
+  );
+}
+```
+
+## 🎯 Next Steps
+
+1. Create your first feature following the component structure
+2. Set up your design tokens and icon system
+3. Build a few components to establish patterns
+4. Expand documentation as needed
+
+That's it! You now have a solid foundation for building maintainable React applications.
