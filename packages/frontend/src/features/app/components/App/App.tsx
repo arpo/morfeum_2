@@ -10,22 +10,18 @@ export function App() {
       <h1 className={styles.title}>Morfeum</h1>
       
       {/* MZOO Test Data Section */}
-      <Card>
-        <h2>MZOO Test Data</h2>
-        {state.testLoading && (
-          <LoadingSpinner message="Loading test data..." />
-        )}
-        {state.testError && (
-          <Message variant="error" message={state.testError} />
-        )}
-        {state.testData && !state.testLoading && (
-          <div>
-            <pre style={{ background: 'var(--color-bg)', padding: 'var(--spacing-md)', borderRadius: 'var(--radius-sm)', overflow: 'auto' }}>
-              {JSON.stringify(state.testData, null, 2)}
-            </pre>
-          </div>
-        )}
-      </Card>
+      {state.testLoading && (
+        <LoadingSpinner message="Loading test data..." />
+      )}
+      {state.testError && (
+        <Message variant="error" message={state.testError} />
+      )}
+      {state.testData && !state.testLoading && (
+        <div style={{ marginBottom: 'var(--spacing-lg)' }}>
+          <h2 style={{ marginBottom: 'var(--spacing-sm)' }}>{state.testData.title}</h2>
+          <p style={{ fontSize: 'var(--text-md)', color: 'var(--color-text)' }}>{state.testData.body}</p>
+        </div>
+      )}
 
       <Card>
         <div className={styles.buttonContainer}>
