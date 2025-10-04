@@ -11,6 +11,18 @@ export function useAppLogic(): AppLogicReturn {
   const [testData, setTestData] = useState<any>(null);
   const [testLoading, setTestLoading] = useState(false);
   const [testError, setTestError] = useState<string | null>(null);
+  
+  // MZOO Gemini text generation state
+  const [geminiPrompt, setGeminiPrompt] = useState('');
+  const [geminiResponse, setGeminiResponse] = useState('');
+  const [geminiLoading, setGeminiLoading] = useState(false);
+  const [geminiError, setGeminiError] = useState<string | null>(null);
+  
+  // MZOO FAL Flux image generation state
+  const [imagePrompt, setImagePrompt] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
+  const [imageLoading, setImageLoading] = useState(false);
+  const [imageError, setImageError] = useState<string | null>(null);
 
   // ALL EVENT HANDLERS HERE
   const callBackend = useCallback(async () => {
@@ -33,6 +45,88 @@ export function useAppLogic(): AppLogicReturn {
   const clearMessage = useCallback(() => {
     setBackendMessage('');
     setError(null);
+  }, []);
+
+  const generateText = useCallback(async () => {
+    if (!geminiPrompt.trim()) {
+      setGeminiError('Please enter a prompt');
+      return;
+    }
+
+    setGeminiLoading(true);
+    setGeminiError(null);
+    
+    try {
+      const response = await fetch('/api/gemini/text', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          prompt: geminiPrompt,
+          model: 'gemini-2.5-flash'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      setGeminiResponse(result.data.text);
+    } catch (err) {
+      const errorMessage = 'Error: Could not generate text from MZOO.';
+      setGeminiError(errorMessage);
+    } finally {
+      setGeminiLoading(false);
+    }
+  }, [geminiPrompt]);
+
+  const clearGeminiResponse = useCallback(() => {
+    setGeminiResponse('');
+    setGeminiError(null);
+  }, []);
+
+  const generateImage = useCallback(async () => {
+    if (!imagePrompt.trim()) {
+      setImageError('Please enter a prompt');
+      return;
+    }
+
+    setImageLoading(true);
+    setImageError(null);
+    
+    try {
+      const response = await fetch('/api/fal-flux-srpo/generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          prompt: imagePrompt,
+          num_images: 1,
+          image_size: 'landscape_16_9',
+          acceleration: 'high'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      setImageUrl(result.data.images[0].url);
+    } catch (err) {
+      const errorMessage = 'Error: Could not generate image from MZOO.';
+      setImageError(errorMessage);
+    } finally {
+      setImageLoading(false);
+    }
+  }, [imagePrompt]);
+
+  const clearImageResponse = useCallback(() => {
+    setImageUrl('');
+    setImageError(null);
   }, []);
 
   // Fetch test data on mount
@@ -77,11 +171,25 @@ export function useAppLogic(): AppLogicReturn {
       error,
       testData,
       testLoading,
-      testError
+      testError,
+      geminiPrompt,
+      geminiResponse,
+      geminiLoading,
+      geminiError,
+      imagePrompt,
+      imageUrl,
+      imageLoading,
+      imageError
     },
     handlers: {
       callBackend,
-      clearMessage
+      clearMessage,
+      setGeminiPrompt,
+      generateText,
+      clearGeminiResponse,
+      setImagePrompt,
+      generateImage,
+      clearImageResponse
     },
     computed: {
       hasMessage,

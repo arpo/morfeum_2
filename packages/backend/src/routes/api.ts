@@ -78,4 +78,121 @@ router.get('/test', asyncHandler(async (req: Request, res: Response) => {
   });
 }));
 
+/**
+ * MZOO Gemini text generation endpoint
+ */
+router.post('/gemini/text', asyncHandler(async (req: Request, res: Response) => {
+  const MZOO_API_KEY = process.env.MZOO_API_KEY;
+  
+  if (!MZOO_API_KEY) {
+    res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+      message: 'MZOO API key not configured',
+      error: 'Missing MZOO_API_KEY environment variable',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  const { prompt, model = 'gemini-2.5-flash' } = req.body;
+
+  if (!prompt) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Prompt is required',
+      error: 'Missing prompt in request body',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  const response = await fetch('https://www.mzoo.app/api/v1/ai/gemini/text', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${MZOO_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      prompt,
+      model
+    })
+  });
+  
+  if (!response.ok) {
+    res.status(response.status).json({
+      message: 'Failed to generate text from MZOO API',
+      error: `HTTP error! status: ${response.status}`,
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+  
+  const data = await response.json();
+  res.status(HTTP_STATUS.OK).json({
+    message: 'Text generated successfully',
+    data: data.data,
+    timestamp: new Date().toISOString(),
+  });
+}));
+
+/**
+ * MZOO FAL Flux image generation endpoint
+ */
+router.post('/fal-flux-srpo/generate', asyncHandler(async (req: Request, res: Response) => {
+  const MZOO_API_KEY = process.env.MZOO_API_KEY;
+  
+  if (!MZOO_API_KEY) {
+    res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+      message: 'MZOO API key not configured',
+      error: 'Missing MZOO_API_KEY environment variable',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  const { 
+    prompt, 
+    num_images = 1, 
+    image_size = 'landscape_16_9', 
+    acceleration = 'high' 
+  } = req.body;
+
+  if (!prompt) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Prompt is required',
+      error: 'Missing prompt in request body',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  const response = await fetch('https://www.mzoo.app/api/v1/ai/fal-flux-srpo/generate', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${MZOO_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      prompt,
+      num_images,
+      image_size,
+      acceleration
+    })
+  });
+  
+  if (!response.ok) {
+    res.status(response.status).json({
+      message: 'Failed to generate image from MZOO API',
+      error: `HTTP error! status: ${response.status}`,
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+  
+  const data = await response.json();
+  res.status(HTTP_STATUS.OK).json({
+    message: 'Image generated successfully',
+    data: data.data,
+    timestamp: new Date().toISOString(),
+  });
+}));
+
 export { router as apiRouter };
