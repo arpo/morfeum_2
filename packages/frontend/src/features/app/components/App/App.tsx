@@ -8,9 +8,6 @@ export function App() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>Morfeum</h1>
-      </header>
       
       <section className={styles.chatSection}>
         <Chat chatLogic={chatLogic} />
