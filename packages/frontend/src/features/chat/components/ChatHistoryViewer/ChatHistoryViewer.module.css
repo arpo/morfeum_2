@@ -10,6 +10,7 @@
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: var(--spacing-sm);
+  text-align: left;
 }
 
 .count {
@@ -50,6 +51,7 @@
   font-size: var(--text-sm);
   font-weight: 500;
   color: var(--color-text);
+  text-align: left;
 }
 
 .roleTag {
@@ -98,6 +100,7 @@
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-xs);
   line-height: 1.6;
+  text-align: left;
 }
 
 .detailKey {

@@ -36,7 +36,10 @@ export function useChatLogic(): ChatLogicReturn {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          prompt: inputValue,
+          messages: [...messages, userMessage].map(m => ({
+            role: m.role,
+            content: m.content
+          })),
           model: 'gemini-2.5-flash-lite'
         })
       });
@@ -61,7 +64,7 @@ export function useChatLogic(): ChatLogicReturn {
     } finally {
       setLoading(false);
     }
-  }, [inputValue]);
+  }, [inputValue, messages]);
 
   const clearError = useCallback(() => {
     setError(null);

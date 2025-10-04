@@ -93,16 +93,22 @@ router.post('/gemini/text', asyncHandler(async (req: Request, res: Response) => 
     return;
   }
 
-  const { prompt, model = 'gemini-2.5-flash' } = req.body;
+  const { messages, model = 'gemini-2.5-flash' } = req.body;
 
-  if (!prompt) {
+  if (!messages || !Array.isArray(messages) || messages.length === 0) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
-      message: 'Prompt is required',
-      error: 'Missing prompt in request body',
+      message: 'Messages array is required',
+      error: 'Missing or invalid messages in request body',
       timestamp: new Date().toISOString(),
     });
     return;
   }
+
+  // Format messages array into a single prompt with conversation history
+  const prompt = messages.map((msg: any) => {
+    const role = msg.role === 'system' ? 'System' : msg.role === 'user' ? 'User' : 'Assistant';
+    return `${role}: ${msg.content}`;
+  }).join('\n\n');
 
   const response = await fetch('https://www.mzoo.app/api/v1/ai/gemini/text', {
     method: 'POST',
