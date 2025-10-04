@@ -1,43 +1,68 @@
 /* App Component Styles - PURE CSS ONLY */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: var(--spacing-lg);
-  gap: var(--spacing-lg);
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
   background-color: var(--color-bg);
 }
 
+.header {
+  grid-column: 1 / -1;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
 .title {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 700;
   color: var(--color-text);
   margin: 0;
-  text-align: center;
 }
 
-.buttonContainer {
-  display: flex;
-  gap: var(--spacing-sm);
-  flex-wrap: wrap;
-  justify-content: center;
+.chatSection {
+  grid-column: 1;
+  grid-row: 2;
+  height: 100%;
+  overflow-y: auto;
+  border-right: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
 }
 
-.empty {
-  color: var(--color-text-secondary);
-  font-style: italic;
-  font-size: var(--text-sm);
-  text-align: center;
+.contentSection {
+  grid-column: 2;
+  grid-row: 2;
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--spacing-lg);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  align-content: start;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .container {
-    padding: var(--spacing-md);
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
   }
   
-  .title {
-    font-size: var(--text-xl);
+  .chatSection {
+    grid-column: 1;
+    grid-row: 2;
+    height: 300px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .contentSection {
+    grid-column: 1;
+    grid-row: 3;
   }
 }
