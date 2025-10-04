@@ -1,0 +1,123 @@
+/* ChatHistoryViewer Component Styles - PURE CSS ONLY */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.count {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  font-size: var(--text-sm);
+}
+
+.listContainer {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.messageItem {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+  background-color: var(--color-bg);
+}
+
+.messageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  user-select: none;
+}
+
+.messageHeader:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.messageTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.roleTag {
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.roleSystem {
+  background-color: #6b7280;
+  color: white;
+}
+
+.roleUser {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.roleAssistant {
+  background-color: #10b981;
+  color: white;
+}
+
+.expandIcon {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  transition: transform 0.2s;
+}
+
+.expandIconExpanded {
+  transform: rotate(90deg);
+}
+
+.messageDetails {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg-secondary);
+  font-family: monospace;
+  font-size: var(--text-xs);
+}
+
+.detailRow {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.6;
+}
+
+.detailKey {
+  color: #9333ea;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.detailValue {
+  color: var(--color-text);
+  word-break: break-all;
+  flex: 1;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-style: italic;
+}
