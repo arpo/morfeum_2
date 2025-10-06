@@ -6,6 +6,7 @@ import { Router } from 'express';
 import { API_ROUTES } from '../config';
 import { apiRouter } from './api';
 import { healthRouter } from './health';
+import { mzooRouter } from './mzoo';
 
 /**
  * Configure all application routes
@@ -14,6 +15,9 @@ export const configureRoutes = (app: any): void => {
   // API routes
   app.use(API_ROUTES.ROOT, apiRouter);
   
+  // MZOO API routes
+  app.use(`${API_ROUTES.ROOT}/mzoo`, mzooRouter);
+  
   // Health check routes
   app.use(API_ROUTES.HEALTH, healthRouter);
 };
@@ -21,7 +25,7 @@ export const configureRoutes = (app: any): void => {
 /**
  * Export individual routers for testing or modular use
  */
-export { apiRouter, healthRouter };
+export { apiRouter, healthRouter, mzooRouter };
 
 /**
  * Get all available routes information
