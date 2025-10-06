@@ -179,6 +179,64 @@ router.post('/entity/generate-seed', asyncHandler(async (req: Request, res: Resp
 }));
 
 /**
+ * MZOO Entity image generation endpoint
+ */
+router.post('/entity/generate-image', asyncHandler(async (req: Request, res: Response) => {
+  const { looks, wearing } = req.body;
+
+  if (!looks || !wearing) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Looks and wearing fields are required',
+      error: 'Missing looks or wearing in request body',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  const imagePrompt = `Half Portrait of
+${looks}, ${wearing}
+
+best quality, 4k, ultra-detailed, photorealistic, cinematic lighting, natural soft light, true color, shallow depth of field, realistic skin texture, dynamic composition, volumetric light, god rays, sharp focus`;
+
+  const imageResult = await mzooService.generateImage(
+    (req as any).mzooApiKey,
+    imagePrompt,
+    1,
+    'landscape_16_9',
+    'high'
+  );
+
+  if (imageResult.error) {
+    res.status(imageResult.status).json({
+      message: 'Failed to generate image from MZOO API',
+      error: imageResult.error,
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  // Extract the image URL from the nested structure
+  const imageUrl = imageResult.data?.images?.[0]?.url;
+
+  if (!imageUrl) {
+    res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+      message: 'Image URL not found in response',
+      error: 'Invalid image data structure',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  res.status(HTTP_STATUS.OK).json({
+    message: 'Entity image generated successfully',
+    data: {
+      imageUrl
+    },
+    timestamp: new Date().toISOString(),
+  });
+}));
+
+/**
  * MZOO FAL Flux image generation endpoint
  */
 router.post('/fal-flux-srpo/generate', asyncHandler(async (req: Request, res: Response) => {

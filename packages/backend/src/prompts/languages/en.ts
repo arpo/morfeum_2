@@ -69,6 +69,18 @@ ${textPrompt}`,
     'A radiant elf queen with silver hair braided in intricate patterns and eyes like liquid moonlight.',
     'A shy, non-binary mage with ink-stained fingers and a gentle, hesitant smile.',
     'A confident demon with a disarming grin, subtle horns, and a voice that sounds like velvet and smoke.',
-    'A serene female alien scholar with delicate bioluminescent markings across her temples.'
+    'A serene female alien scholar with delicate bioluminescent markings across her temples.',
+    'A half-elf ranger with weathered features, long auburn hair, and eyes that never stop scanning.',
+    'A dragonborn scholar with golden scales, a calm voice, and hands that tremble only when excited by discovery.',
+    'A celestial healer with faintly glowing skin and an expression of endless patience.',
+    'A mischievous fae trickster with sharp, feline eyes and laughter that feels like a dare.',
+    'A stone golem sculptor whose body bears faint cracks filled with soft blue light.',
+    'An orc poet with rough hands, gentle eyes, and a low voice that carries unexpected tenderness.',
+    'A merfolk explorer with iridescent fins along their arms and curiosity that borders on obsession.',
+    'A fallen angel with soot-stained wings and a voice that carries both sorrow and defiance.',
+    'A kitsune shapeshifter mid-transition, with shifting hair color and a knowing smirk.',
+    'A dwarven inventor covered in soot and copper dust, eyes bright with restless ideas.',
+    'An ancient elf warrior whose stillness feels like the pause before a storm.',
+    'A dream spirit taking human form, features soft and slightly shifting as if remembered from another life.'
   ]
 };

@@ -53,27 +53,45 @@ export function EntityGenerator({ entityLogic }: EntityGeneratorProps) {
         )}
 
         {!state.loading && state.generatedSeed && (
-          <div className={styles.seedCard}>
-            <div className={styles.seedField}>
-              <div className={styles.fieldLabel}>Name</div>
-              <div className={styles.fieldValue}>{state.generatedSeed.name}</div>
+          <>
+            <div className={styles.seedCard}>
+              <div className={styles.seedField}>
+                <div className={styles.fieldLabel}>Name</div>
+                <div className={styles.fieldValue}>{state.generatedSeed.name}</div>
+              </div>
+
+              <div className={styles.seedField}>
+                <div className={styles.fieldLabel}>Looks</div>
+                <div className={styles.fieldValue}>{state.generatedSeed.looks}</div>
+              </div>
+
+              <div className={styles.seedField}>
+                <div className={styles.fieldLabel}>Wearing</div>
+                <div className={styles.fieldValue}>{state.generatedSeed.wearing}</div>
+              </div>
+
+              <div className={styles.seedField}>
+                <div className={styles.fieldLabel}>Personality</div>
+                <div className={styles.fieldValue}>{state.generatedSeed.personality}</div>
+              </div>
             </div>
 
-            <div className={styles.seedField}>
-              <div className={styles.fieldLabel}>Looks</div>
-              <div className={styles.fieldValue}>{state.generatedSeed.looks}</div>
-            </div>
+            {state.imageLoading && !state.generatedSeed.imageUrl && (
+              <div className={styles.imageLoadingContainer}>
+                <LoadingSpinner message="Generating image..." />
+              </div>
+            )}
 
-            <div className={styles.seedField}>
-              <div className={styles.fieldLabel}>Wearing</div>
-              <div className={styles.fieldValue}>{state.generatedSeed.wearing}</div>
-            </div>
-
-            <div className={styles.seedField}>
-              <div className={styles.fieldLabel}>Personality</div>
-              <div className={styles.fieldValue}>{state.generatedSeed.personality}</div>
-            </div>
-          </div>
+            {state.generatedSeed.imageUrl && (
+              <div className={styles.imageContainer}>
+                <img 
+                  src={state.generatedSeed.imageUrl} 
+                  alt={state.generatedSeed.name}
+                  className={styles.generatedImage}
+                />
+              </div>
+            )}
+          </>
         )}
 
         {!state.loading && !state.generatedSeed && (

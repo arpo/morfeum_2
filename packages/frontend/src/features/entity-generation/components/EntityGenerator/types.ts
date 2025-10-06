@@ -3,12 +3,14 @@ export interface EntitySeed {
   looks: string;
   wearing: string;
   personality: string;
+  imageUrl?: string;
 }
 
 export interface EntityGeneratorState {
   textPrompt: string;
   generatedSeed: EntitySeed | null;
   loading: boolean;
+  imageLoading: boolean;
   error: string | null;
 }
 
