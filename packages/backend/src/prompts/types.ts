@@ -4,11 +4,13 @@
 
 export type PromptKey = 
   | 'entitySeedGeneration'
-  | 'chatSystemMessage';
+  | 'chatSystemMessage'
+  | 'sampleEntityPrompts';
 
 export type Language = 'en';
 
 export interface PromptTemplates {
   entitySeedGeneration: (textPrompt: string) => string;
   chatSystemMessage: string;
+  sampleEntityPrompts: string[];
 }

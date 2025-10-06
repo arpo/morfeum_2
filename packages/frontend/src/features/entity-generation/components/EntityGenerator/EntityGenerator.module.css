@@ -41,8 +41,17 @@
   cursor: not-allowed;
 }
 
+.buttonGroup {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.shuffleButton {
+  flex: 1;
+}
+
 .generateButton {
-  align-self: flex-start;
+  flex: 1;
 }
 
 .outputSection {

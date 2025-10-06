@@ -22,14 +22,23 @@ export function EntityGenerator({ entityLogic }: EntityGeneratorProps) {
           placeholder="e.g., curious explorer, late 20s, blonde..."
           disabled={state.loading}
         />
-        <Button
-          onClick={handlers.generateSeed}
-          disabled={state.loading || !state.textPrompt.trim()}
-          loading={state.loading}
-          className={styles.generateButton}
-        >
-          Generate
-        </Button>
+        <div className={styles.buttonGroup}>
+          <Button
+            onClick={handlers.shufflePrompt}
+            disabled={state.loading}
+            className={styles.shuffleButton}
+          >
+            Shuffle
+          </Button>
+          <Button
+            onClick={handlers.generateSeed}
+            disabled={state.loading || !state.textPrompt.trim()}
+            loading={state.loading}
+            className={styles.generateButton}
+          >
+            Generate
+          </Button>
+        </div>
       </div>
 
       {state.error && (

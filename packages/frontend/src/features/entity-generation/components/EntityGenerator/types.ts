@@ -15,6 +15,7 @@ export interface EntityGeneratorState {
 export interface EntityGeneratorHandlers {
   setTextPrompt: (value: string) => void;
   generateSeed: () => void;
+  shufflePrompt: () => void;
   clearError: () => void;
 }
 

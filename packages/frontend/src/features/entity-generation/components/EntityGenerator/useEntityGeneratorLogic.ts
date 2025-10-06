@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import type { EntityGeneratorLogicReturn, EntitySeed } from './types';
 
 export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
@@ -6,6 +6,24 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
   const [generatedSeed, setGeneratedSeed] = useState<EntitySeed | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [samplePrompts, setSamplePrompts] = useState<string[]>([]);
+
+  // Fetch sample prompts on mount
+  useEffect(() => {
+    const fetchSamples = async () => {
+      try {
+        const response = await fetch('/api/mzoo/prompts/entity-samples');
+        if (response.ok) {
+          const result = await response.json();
+          setSamplePrompts(result.data.samples);
+        }
+      } catch (err) {
+        console.error('Failed to fetch sample prompts:', err);
+      }
+    };
+    
+    fetchSamples();
+  }, []);
 
   const generateSeed = useCallback(async () => {
     if (!textPrompt.trim()) return;
@@ -39,6 +57,13 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
     }
   }, [textPrompt]);
 
+  const shufflePrompt = useCallback(() => {
+    if (samplePrompts.length > 0) {
+      const randomIndex = Math.floor(Math.random() * samplePrompts.length);
+      setTextPrompt(samplePrompts[randomIndex]);
+    }
+  }, [samplePrompts]);
+
   const clearError = useCallback(() => {
     setError(null);
   }, []);
@@ -53,6 +78,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
     handlers: {
       setTextPrompt,
       generateSeed,
+      shufflePrompt,
       clearError
     }
   };

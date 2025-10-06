@@ -30,6 +30,21 @@ router.get('/prompts/chat-system', asyncHandler(async (req: Request, res: Respon
 }));
 
 /**
+ * Get sample entity prompts
+ */
+router.get('/prompts/entity-samples', asyncHandler(async (req: Request, res: Response) => {
+  const samples = getPrompt('sampleEntityPrompts', 'en');
+  
+  res.status(HTTP_STATUS.OK).json({
+    message: 'Sample entity prompts retrieved successfully',
+    data: {
+      samples
+    },
+    timestamp: new Date().toISOString(),
+  });
+}));
+
+/**
  * MZOO Gemini text generation endpoint
  */
 router.post('/gemini/text', asyncHandler(async (req: Request, res: Response) => {
