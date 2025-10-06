@@ -15,18 +15,21 @@
 - **Bundle Optimization**: Reduced bundle size with tree-shaking and unused export elimination
 
 ### Backend
-- **Modular Architecture**: Domain-driven design with 12 focused modules
+- **Modular Architecture**: Domain-driven design with 13 focused modules
 - **Configuration Management**: Environment-specific configs (dev/prod/test)
 - **Middleware Stack**: CORS, error handling, async wrappers
-- **Route Organization**: API and health endpoints with clear separation
+- **Route Organization**: Domain-based routing with clear separation (api.ts, mzoo.ts, health.ts)
 - **Service Layer**: Static file serving and business logic separation
 - **Type Safety**: 100% TypeScript coverage with zero build errors
 - **Error Handling**: Custom error classes with proper logging
-- **API Endpoints**: /api, /api/info, /api/test (MZOO proxy), /health, /health/detailed
+- **API Endpoints**: 
+  - Generic: /api, /api/info
+  - MZOO AI: /api/mzoo/vision, /api/mzoo/gemini/text, /api/mzoo/fal-flux-srpo/generate
+  - Health: /health, /health/detailed
 - **Monitoring**: Enhanced health checks with system metrics
-- **File Size Compliance**: All modules follow 50-300 line guidelines
+- **File Size Compliance**: All routes follow 100-200 line guidelines (api.ts: 45, mzoo.ts: 196, health.ts: 54)
 - **Environment Variables**: Dotenv integration for secure configuration
-- **External API Integration**: MZOO database proxy with API key security
+- **External API Integration**: MZOO AI services with secure proxy pattern
 
 ## What's Left to Build 🚧
 - Additional UI components (Input, Modal, etc.)
@@ -70,8 +73,16 @@
 
 ## Recent Refactoring Achievements
 
-### MZOO Integration (Latest)
-- **Backend Proxy**: Secure API proxy endpoint keeping API key server-side
+### MZOO Routes Refactoring (Latest)
+- **Route Organization**: Created dedicated mzoo.ts (196 lines) for all MZOO endpoints
+- **Code Cleanup**: Removed test endpoint, reduced api.ts to 45 lines (generic routes only)
+- **Vision API**: Added POST /api/mzoo/vision endpoint for image analysis
+- **File Size Compliance**: All route files within 100-200 line backend limits
+- **Domain Separation**: Clear separation between generic API (api.ts) and MZOO AI (mzoo.ts)
+- **Three AI Endpoints**: Text generation (Gemini), vision analysis, image generation (FAL Flux)
+
+### MZOO Integration (Previous)
+- **Backend Proxy**: Secure API proxy endpoints keeping API key server-side
 - **Environment Configuration**: Dotenv integration for secure environment variable loading
 - **Frontend Integration**: Automatic data fetching with proper state management
 - **UI Display**: Clean presentation of MZOO data below headline

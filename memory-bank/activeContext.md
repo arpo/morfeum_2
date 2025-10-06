@@ -1,30 +1,50 @@
 # Active Context
 
 ## Current Work Focus
-MZOO database integration successfully implemented with secure backend proxy pattern. The app now automatically fetches and displays test data from the MZOO API on load, demonstrating proper API integration, environment variable handling, and data presentation.
+MZOO API integration successfully implemented with modular backend architecture. All MZOO endpoints organized in dedicated route file, following backend patterns and size limits. Three AI endpoints available: text generation (Gemini), vision analysis, and image generation (FAL Flux).
 
 ## Recent Changes
 
-### MZOO Integration (Latest)
-1. **Backend Proxy Implementation**:
-   - Added `/api/test` endpoint in `packages/backend/src/routes/api.ts`
-   - Securely proxies MZOO API calls keeping API key server-side
-   - Fetches test record from `https://www.mzoo.app/api/v1/data/test/1`
-   - Returns structured JSON response with proper error handling
+### MZOO API Routes Refactoring (Latest)
+1. **Route Organization**:
+   - Created dedicated `packages/backend/src/routes/mzoo.ts` (196 lines)
+   - Moved all MZOO endpoints from api.ts to mzoo.ts
+   - Removed `/api/test` endpoint (integration proven, no longer needed)
+   - api.ts reduced to 45 lines (only generic API routes)
+   - All files now within backend size limits (100-200 lines for routes)
 
-2. **Environment Configuration**:
+2. **MZOO Endpoints**:
+   - POST `/api/mzoo/vision` - Image analysis using Gemini Vision
+   - POST `/api/mzoo/gemini/text` - Text generation with conversation history
+   - POST `/api/mzoo/fal-flux-srpo/generate` - AI image generation
+   - All endpoints use secure proxy pattern with server-side API key
+   - Consistent error handling and response format
+
+3. **Vision API Implementation**:
+   - Accepts base64 encoded images
+   - Supports multiple MIME types (defaults to image/png)
+   - Uses gemini-2.5-flash model
+   - Returns structured analysis in response.data
+
+4. **Route Registration**:
+   - Updated `routes/index.ts` to mount mzooRouter at `/api/mzoo`
+   - Updated `/api/info` endpoint with correct MZOO endpoint paths
+   - Maintains modular export pattern for testing
+
+### MZOO Integration (Previous)
+1. **Environment Configuration**:
    - Installed `dotenv` package for backend
    - Configured `server.ts` to load .env from root directory
-   - MZOO_API_KEY now properly read from environment variables
+   - MZOO_API_KEY properly read from environment variables
    - Prevents API key exposure to frontend
 
-3. **Frontend Data Fetching**:
+2. **Frontend Data Fetching**:
    - Added test data state management in `useAppLogic.ts`
    - Implemented automatic data fetch on component mount with useEffect
    - Proper loading and error state handling
    - Updated TypeScript interfaces to include test data types
 
-4. **UI Display**:
+3. **UI Display**:
    - Test data displayed below "Morfeum" headline
    - Clean presentation of title and body content
    - Loading spinner during data fetch
@@ -84,16 +104,19 @@ MZOO database integration successfully implemented with secure backend proxy pat
 
 ## Next Steps
 The project demonstrates:
-- Complete MZOO API integration with secure proxy pattern
-- Automatic data fetching and display
+- Complete MZOO API integration with modular route architecture
+- Three AI endpoints: text generation, vision analysis, image generation
+- Secure proxy pattern with server-side API key management
 - Environment variable management
 - Complete set of reusable UI components
 - Optimized bundle size and performance
 - Clean architecture following all established patterns
+- All backend files within size limits (45-196 lines)
 - Foundation ready for additional feature development and API integrations
 
 ## Active Decisions
 - All components follow the 50-300 line limit
+- Backend route files follow 100-200 line limit
 - No mixing of concerns in any file
 - CSS Modules used exclusively for styling
 - Design tokens used instead of hardcoded values
@@ -101,15 +124,18 @@ The project demonstrates:
 - Reusable components extracted for maintainability
 - API keys kept server-side, never exposed to frontend
 - Backend proxy pattern for secure external API access
+- Domain-based route organization (api.ts for generic, mzoo.ts for MZOO)
 - Environment variables loaded via dotenv in backend
 
 ## Implementation Notes
-- MZOO integration demonstrates secure API proxy pattern
+- MZOO endpoints organized by domain in dedicated mzoo.ts file
+- All routes comply with backend size guidelines
 - Backend properly loads environment variables from root .env file
+- Vision API accepts base64 images with flexible MIME type support
 - Frontend automatically fetches data on mount with proper state management
 - Data displayed cleanly without raw JSON dump
 - Refactoring successfully eliminated all legacy style conflicts
 - New components (Card, LoadingSpinner, Message) demonstrate proper architecture
 - App component now serves as example of consuming reusable components and API data
 - Build system optimized with proper tree-shaking
-- Memory bank updated to reflect current state and achievements
+- Route split improved maintainability: api.ts (45 lines), mzoo.ts (196 lines)
