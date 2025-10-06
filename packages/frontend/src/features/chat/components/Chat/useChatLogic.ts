@@ -1,18 +1,41 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import type { ChatLogicReturn, ChatMessage } from './types';
 
-const SYSTEM_MESSAGE: ChatMessage = {
-  id: 'system-001',
-  role: 'system',
-  content: 'You are a helpful AI assistant.',
-  timestamp: new Date().toISOString()
-};
-
 export function useChatLogic(): ChatLogicReturn {
-  const [messages, setMessages] = useState<ChatMessage[]>([SYSTEM_MESSAGE]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Fetch system message from backend on mount
+  useEffect(() => {
+    const fetchSystemMessage = async () => {
+      try {
+        const response = await fetch('/api/mzoo/prompts/chat-system');
+        if (response.ok) {
+          const result = await response.json();
+          const systemMessage: ChatMessage = {
+            id: 'system-001',
+            role: 'system',
+            content: result.data.content,
+            timestamp: new Date().toISOString()
+          };
+          setMessages([systemMessage]);
+        }
+      } catch (err) {
+        // Fallback to default if fetch fails
+        const systemMessage: ChatMessage = {
+          id: 'system-001',
+          role: 'system',
+          content: 'You are a helpful AI assistant.',
+          timestamp: new Date().toISOString()
+        };
+        setMessages([systemMessage]);
+      }
+    };
+    
+    fetchSystemMessage();
+  }, []);
 
   const sendMessage = useCallback(async () => {
     if (!inputValue.trim()) return;

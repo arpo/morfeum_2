@@ -1,14 +1,24 @@
 /* App Component Styles - PURE CSS ONLY */
 .container {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 320px 350px 1fr;
   grid-template-rows: 1fr;
   height: 100vh;
   background-color: var(--color-bg);
 }
 
-.chatSection {
+.entitySection {
   grid-column: 1;
+  grid-row: 1;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--spacing-sm);
+  border-right: 1px solid var(--color-border);
+}
+
+.chatSection {
+  grid-column: 2;
   grid-row: 1;
   height: 100%;
   overflow-y: auto;
@@ -16,39 +26,47 @@
 }
 
 .contentSection {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1;
   height: 100%;
   overflow-y: auto;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-md);
   align-content: start;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .container {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 280px 300px 1fr;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  
+  .entitySection {
+    grid-column: 1;
+    grid-row: 1;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    max-height: 60vh;
   }
   
   .chatSection {
     grid-column: 1;
-    grid-row: 1;
-    height: 300px;
+    grid-row: 2;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
+    max-height: 50vh;
   }
   
   .contentSection {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
   }
 }

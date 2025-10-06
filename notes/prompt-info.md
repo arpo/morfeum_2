@@ -22,6 +22,7 @@ Guidelines:
 Formatting:
 - Output clean text using the exact field labels shown.
 - No markdown, lists, or commentary.
+- Return as JSON
 
 Example output:
 [name]
