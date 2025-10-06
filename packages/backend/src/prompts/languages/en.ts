@@ -5,7 +5,7 @@
 import type { PromptTemplates } from '../types';
 
 export const en: PromptTemplates = {
-  entitySeedGeneration: (textPrompt: string) => `Your task is to generate a concise character seed for Morfeum, following the structure and standards below.
+  entitySeedGeneration: (textPrompt: string) => `Your task is to generate a concise character seed, following the structure and standards below.
 
 Return only valid JSON with these exact fields:
 {
@@ -22,6 +22,11 @@ Guidelines:
 - If inspired by an artist, do not mention the artist's name.
 
 - Keep descriptions grounded and emotionally believable.
+
+- [name]: Provide a realistic full name (first and last). Be creative. 
+If the character is a historical figure, use the name of the historical figure.
+DON*T use fictional names Elara, Kaelen, Xylon, Zephyr, Lyra, 
+
 - [looks]: Describe the character’s overall appearance, including age. race and skin tone.
 If relevant, include details like **witch, vampire, soldier, alien, etc.**
 Include race and skin tone and hair color. example: **Nordic, light skin tone and blonde hair**.  
