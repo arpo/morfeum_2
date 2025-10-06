@@ -260,6 +260,91 @@ router.post('/entity/generate-image', asyncHandler(async (req: Request, res: Res
 }));
 
 /**
+ * MZOO Entity visual analysis endpoint
+ */
+router.post('/entity/analyze-image', asyncHandler(async (req: Request, res: Response) => {
+  const { imageUrl, looks, wearing } = req.body;
+
+  if (!imageUrl || !looks || !wearing) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Image URL, looks, and wearing fields are required',
+      error: 'Missing required parameters in request body',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  try {
+    // Fetch the image from the URL
+    const imageResponse = await fetch(imageUrl);
+    if (!imageResponse.ok) {
+      res.status(HTTP_STATUS.BAD_REQUEST).json({
+        message: 'Failed to fetch image from URL',
+        error: `HTTP error! status: ${imageResponse.status}`,
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+
+    // Convert image to base64
+    const imageBuffer = await imageResponse.arrayBuffer();
+    const base64Image = Buffer.from(imageBuffer).toString('base64');
+
+    // Get the visual analysis prompt
+    const analysisPrompt = getPrompt('visualAnalysis', 'en')(looks, wearing);
+
+    // Call vision API with the analysis prompt
+    const visionResult = await mzooService.analyzeImage(
+      (req as any).mzooApiKey,
+      base64Image,
+      analysisPrompt,
+      'image/jpeg',
+      'gemini-2.5-flash'
+    );
+
+    if (visionResult.error) {
+      res.status(visionResult.status).json({
+        message: 'Failed to analyze image from MZOO API',
+        error: visionResult.error,
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+
+    // Parse the JSON response from vision API
+    let parsedAnalysis;
+    try {
+      const jsonMatch = visionResult.data.text.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        parsedAnalysis = JSON.parse(jsonMatch[0]);
+      } else {
+        throw new Error('No JSON found in response');
+      }
+    } catch (parseError) {
+      res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+        message: 'Failed to parse visual analysis JSON',
+        error: 'Response was not valid JSON',
+        rawResponse: visionResult.data.text,
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+
+    res.status(HTTP_STATUS.OK).json({
+      message: 'Visual analysis completed successfully',
+      data: parsedAnalysis,
+      timestamp: new Date().toISOString(),
+    });
+  } catch (error) {
+    res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+      message: 'Failed to process image analysis',
+      error: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date().toISOString(),
+    });
+  }
+}));
+
+/**
  * MZOO FAL Flux image generation endpoint
  */
 router.post('/fal-flux-srpo/generate', asyncHandler(async (req: Request, res: Response) => {

@@ -7,6 +7,7 @@ export type PromptKey =
   | 'chatCharacterImpersonation'
   | 'entitySeedGeneration'
   | 'entityImageGeneration'
+  | 'visualAnalysis'
   | 'sampleEntityPrompts';
 
 export type Language = 'en';
@@ -16,5 +17,6 @@ export interface PromptTemplates {
   entityImageGeneration: (looks: string, wearing: string) => string;
   chatSystemMessage: string;
   chatCharacterImpersonation: (entityData: string) => string;
+  visualAnalysis: (looks: string, wearing: string) => string;
   sampleEntityPrompts: string[];
 }

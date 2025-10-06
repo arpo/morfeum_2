@@ -56,6 +56,7 @@ export const generateText = async (
 export const analyzeImage = async (
   apiKey: string,
   base64Image: string,
+  prompt: string,
   mimeType: string = 'image/png',
   model: string = 'gemini-2.5-flash'
 ): Promise<MzooResponse> => {
@@ -67,6 +68,7 @@ export const analyzeImage = async (
     },
     body: JSON.stringify({
       model,
+      prompt,
       image: {
         mimeType,
         data: base64Image

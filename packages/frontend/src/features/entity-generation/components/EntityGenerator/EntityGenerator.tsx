@@ -83,13 +83,47 @@ export function EntityGenerator({ entityLogic }: EntityGeneratorProps) {
             )}
 
             {state.generatedSeed.imageUrl && (
-              <div className={styles.imageContainer}>
-                <img 
-                  src={state.generatedSeed.imageUrl} 
-                  alt={state.generatedSeed.name}
-                  className={styles.generatedImage}
-                />
-              </div>
+              <>
+                <div className={styles.imageContainer}>
+                  <img 
+                    src={state.generatedSeed.imageUrl} 
+                    alt={state.generatedSeed.name}
+                    className={styles.generatedImage}
+                  />
+                </div>
+
+                {state.analysisLoading && !state.generatedSeed.visualAnalysis && (
+                  <div className={styles.analysisLoadingContainer}>
+                    <LoadingSpinner message="Analyzing image..." />
+                  </div>
+                )}
+
+                {state.generatedSeed.visualAnalysis && (
+                  <div className={styles.analysisCard}>
+                    <div className={styles.analysisTitle}>Visual Analysis</div>
+                    
+                    <div className={styles.analysisField}>
+                      <div className={styles.fieldLabel}>Face</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.visualAnalysis.face}</div>
+                    </div>
+
+                    <div className={styles.analysisField}>
+                      <div className={styles.fieldLabel}>Hair</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.visualAnalysis.hair}</div>
+                    </div>
+
+                    <div className={styles.analysisField}>
+                      <div className={styles.fieldLabel}>Body</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.visualAnalysis.body}</div>
+                    </div>
+
+                    <div className={styles.analysisField}>
+                      <div className={styles.fieldLabel}>Specific Details</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.visualAnalysis.specificdetails}</div>
+                    </div>
+                  </div>
+                )}
+              </>
             )}
           </>
         )}

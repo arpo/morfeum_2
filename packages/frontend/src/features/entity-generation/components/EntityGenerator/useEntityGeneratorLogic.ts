@@ -6,6 +6,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
   const [generatedSeed, setGeneratedSeed] = useState<EntitySeed | null>(null);
   const [loading, setLoading] = useState(false);
   const [imageLoading, setImageLoading] = useState(false);
+  const [analysisLoading, setAnalysisLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [samplePrompts, setSamplePrompts] = useState<string[]>([]);
 
@@ -70,15 +71,49 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
 
         if (imageResponse.ok) {
           const imageResult = await imageResponse.json();
+          const imageUrl = imageResult.data.imageUrl;
+          
           // Update seed with image URL
           setGeneratedSeed(prev => prev ? {
             ...prev,
-            imageUrl: imageResult.data.imageUrl
+            imageUrl
           } : null);
+          
+          // Then analyze the image
+          setImageLoading(false);
+          setAnalysisLoading(true);
+          
+          try {
+            const analysisResponse = await fetch('/api/mzoo/entity/analyze-image', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                imageUrl,
+                looks: result.data.looks,
+                wearing: result.data.wearing
+              })
+            });
+            
+            if (analysisResponse.ok) {
+              const analysisResult = await analysisResponse.json();
+              // Update seed with visual analysis
+              setGeneratedSeed(prev => prev ? {
+                ...prev,
+                visualAnalysis: analysisResult.data
+              } : null);
+            }
+          } catch (analysisErr) {
+            console.error('Failed to analyze image:', analysisErr);
+          } finally {
+            setAnalysisLoading(false);
+          }
+        } else {
+          setImageLoading(false);
         }
       } catch (imageErr) {
         console.error('Failed to generate image:', imageErr);
-      } finally {
         setImageLoading(false);
       }
     } catch (err) {
@@ -105,6 +140,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
       generatedSeed,
       loading,
       imageLoading,
+      analysisLoading,
       error
     },
     handlers: {
