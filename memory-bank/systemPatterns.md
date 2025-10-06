@@ -409,3 +409,230 @@ export { apiRouter, healthRouter } from './routes';
 - Comprehensive error handling
 - Proper logging and monitoring
 - Clean module boundaries
+
+## Adding a New Service - Step by Step Guide
+
+### When to Create a Service
+Create a service layer when you need:
+- **External API Integration**: Calling third-party APIs (e.g., MZOO, Stripe, SendGrid)
+- **Complex Business Logic**: Multi-step operations, data transformations
+- **Reusable Functionality**: Code used by multiple routes
+- **Testable Units**: Logic that should be tested independently from routes
+
+### Service + Middleware Pattern (Recommended)
+
+#### File Structure
+```
+packages/backend/src/
+├── middleware/
+│   ├── [serviceName]Auth.ts    # Authentication/validation middleware
+│   └── index.ts                 # Export middleware
+├── services/
+│   ├── [serviceName].service.ts # Service implementation
+│   └── index.ts                 # Export service
+└── routes/
+    ├── [serviceName].ts         # Route handlers (thin layer)
+    └── index.ts                 # Route configuration
+```
+
+#### Step-by-Step Process
+
+**Step 1: Create Service File**
+```typescript
+// services/example.service.ts (100-250 lines)
+import { HTTP_STATUS } from '../config';
+
+interface ServiceResponse<T = any> {
+  data?: T;
+  error?: string;
+  status: number;
+}
+
+/**
+ * Service function description
+ */
+export const performOperation = async (
+  apiKey: string,
+  params: any
+): Promise<ServiceResponse> => {
+  // Service logic here
+  const response = await fetch('https://api.example.com/endpoint', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(params)
+  });
+  
+  if (!response.ok) {
+    return {
+      status: response.status,
+      error: `HTTP error! status: ${response.status}`
+    };
+  }
+  
+  const data = await response.json();
+  return {
+    status: HTTP_STATUS.OK,
+    data: data.data
+  };
+};
+```
+
+**Step 2: Create Middleware (if needed for auth/validation)**
+```typescript
+// middleware/exampleAuth.ts (20-50 lines)
+import { Request, Response, NextFunction } from 'express';
+import { HTTP_STATUS } from '../config';
+
+export const validateExampleApiKey = (req: Request, res: Response, next: NextFunction): void => {
+  const API_KEY = process.env.EXAMPLE_API_KEY;
+  
+  if (!API_KEY) {
+    res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+      message: 'API key not configured',
+      error: 'Missing EXAMPLE_API_KEY environment variable',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+  
+  // Attach API key to request
+  (req as any).exampleApiKey = API_KEY;
+  next();
+};
+```
+
+**Step 3: Create Route File**
+```typescript
+// routes/example.ts (100-150 lines)
+import { Router, Request, Response } from 'express';
+import { HTTP_STATUS } from '../config';
+import { asyncHandler } from '../middleware';
+import { validateExampleApiKey } from '../middleware/exampleAuth';
+import * as exampleService from '../services/example.service';
+
+const router = Router();
+
+// Apply middleware to all routes
+router.use(validateExampleApiKey);
+
+router.post('/operation', asyncHandler(async (req: Request, res: Response) => {
+  const { param1, param2 } = req.body;
+
+  if (!param1) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Parameter required',
+      error: 'Missing param1 in request body',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  const result = await exampleService.performOperation(
+    (req as any).exampleApiKey,
+    { param1, param2 }
+  );
+  
+  if (result.error) {
+    res.status(result.status).json({
+      message: 'Operation failed',
+      error: result.error,
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+  
+  res.status(HTTP_STATUS.OK).json({
+    message: 'Operation successful',
+    data: result.data,
+    timestamp: new Date().toISOString(),
+  });
+}));
+
+export { router as exampleRouter };
+```
+
+**Step 4: Update Exports**
+```typescript
+// middleware/index.ts
+export * from './cors';
+export * from './errorHandler';
+export * from './exampleAuth'; // Add this
+
+// services/index.ts
+export * from './static';
+export * from './example.service'; // Add this
+```
+
+**Step 5: Register Routes**
+```typescript
+// routes/index.ts
+import { exampleRouter } from './example';
+
+export const configureRoutes = (app: any): void => {
+  app.use(API_ROUTES.ROOT, apiRouter);
+  app.use(`${API_ROUTES.ROOT}/example`, exampleRouter); // Add this
+  app.use(API_ROUTES.HEALTH, healthRouter);
+};
+
+export { apiRouter, healthRouter, exampleRouter }; // Add to exports
+```
+
+**Step 6: Build and Verify**
+```bash
+cd packages/backend && npm run build
+```
+
+### Real Example: MZOO Service
+
+The MZOO implementation demonstrates this pattern:
+
+**Files Created:**
+- `middleware/mzooAuth.ts` (26 lines) - API key validation
+- `services/mzoo.service.ts` (127 lines) - Three service functions
+- `routes/mzoo.ts` (124 lines) - Three route handlers
+
+**Benefits Achieved:**
+- 37% size reduction in routes (196 → 124 lines)
+- DRY: API key validation in one place
+- Testable: Service functions can be unit tested
+- Maintainable: Changes to API logic isolated in service
+- Scalable: Easy to add new MZOO endpoints
+
+### Decision Guide
+
+**Create Middleware When:**
+- Need authentication/authorization
+- Validating API keys or tokens
+- Request preprocessing needed by multiple routes
+- Cross-cutting concerns (logging, rate limiting)
+
+**Create Service When:**
+- External API calls
+- Complex data transformations
+- Multi-step operations
+- Reusable business logic
+
+**Keep in Routes When:**
+- Simple request validation
+- Request/response formatting
+- HTTP-specific logic
+- Routing decisions
+
+### File Size Guidelines for Services
+- **Middleware**: 20-50 lines
+- **Service**: 100-250 lines
+- **Routes**: 100-200 lines
+- Split into multiple services if exceeding limits
+
+### Best Practices
+1. **One Service = One Concern**: Don't mix unrelated APIs in same service
+2. **Type Safety**: Define response interfaces
+3. **Error Handling**: Return structured error responses
+4. **Async/Await**: Use modern async patterns
+5. **Environment Variables**: Never hardcode API keys
+6. **Documentation**: Comment service functions clearly
+7. **Exports**: Always update index files
+8. **Testing**: Write unit tests for service functions

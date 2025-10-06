@@ -5,7 +5,23 @@ MZOO API integration successfully implemented with modular backend architecture.
 
 ## Recent Changes
 
-### MZOO API Routes Refactoring (Latest)
+### Documentation: Adding New Services Guide (Latest)
+1. **Comprehensive Service Guide Added**:
+   - Added "Adding a New Service - Step by Step Guide" to systemPatterns.md
+   - Documents when to create a service layer
+   - Full Service + Middleware pattern with file structure
+   - 6-step process with code examples
+   - MZOO implementation as reference example
+   - Decision guide for middleware vs service vs routes
+   - File size guidelines and best practices
+
+2. **Real-World Example Documented**:
+   - MZOO service pattern fully documented
+   - Benefits and metrics included
+   - Shows 37% size reduction achieved
+   - Demonstrates DRY, testability, maintainability
+
+### MZOO API Routes Refactoring (Previous)
 1. **Route Organization**:
    - Created dedicated `packages/backend/src/routes/mzoo.ts` (196 lines)
    - Moved all MZOO endpoints from api.ts to mzoo.ts
