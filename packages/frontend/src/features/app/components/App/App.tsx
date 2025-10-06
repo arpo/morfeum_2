@@ -10,23 +10,53 @@ export function App() {
   const entityLogic = useEntityGeneratorLogic();
   const lastInitializedEntity = useRef<string | null>(null);
 
-  // Auto-initialize chat when entity is generated (with both seed and image)
+  // Auto-initialize chat when entity generation is complete (with deep profile)
   useEffect(() => {
     const { generatedSeed } = entityLogic.state;
     
-    if (generatedSeed && generatedSeed.imageUrl) {
+    if (generatedSeed && generatedSeed.deepProfile) {
       // Check if we've already initialized with this entity
-      const entityKey = `${generatedSeed.name}-${generatedSeed.imageUrl}`;
+      const entityKey = `${generatedSeed.name}-${generatedSeed.imageUrl}-profile`;
       
       if (lastInitializedEntity.current !== entityKey) {
         lastInitializedEntity.current = entityKey;
         
-        // Entity generation complete (seed + image), initialize chat
+        // Format deep profile for chat initialization
+        const profile = generatedSeed.deepProfile;
+        const formattedProfile = `Name: ${profile.name}
+
+Appearance: ${profile.looks}
+
+Wearing: ${profile.wearing}
+
+Face: ${profile.face}
+
+Hair: ${profile.hair}
+
+Body: ${profile.body}
+
+Specific Details: ${profile.specificDetails}
+
+Style: ${profile.style}
+
+Personality: ${profile.personality}
+
+Voice: ${profile.voice}
+
+Speech Style: ${profile.speechStyle}
+
+Gender: ${profile.gender}
+
+Nationality: ${profile.nationality}
+
+Tags: ${profile.tags}`;
+        
+        // Initialize chat with enriched profile
         chatLogic.handlers.initializeWithEntity({
           name: generatedSeed.name,
-          looks: generatedSeed.looks,
-          wearing: generatedSeed.wearing,
-          personality: generatedSeed.personality,
+          looks: formattedProfile,
+          wearing: '',
+          personality: '',
           imageUrl: generatedSeed.imageUrl
         });
       }

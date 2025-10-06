@@ -7,6 +7,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
   const [loading, setLoading] = useState(false);
   const [imageLoading, setImageLoading] = useState(false);
   const [analysisLoading, setAnalysisLoading] = useState(false);
+  const [profileLoading, setProfileLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [samplePrompts, setSamplePrompts] = useState<string[]>([]);
 
@@ -98,15 +99,48 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
             
             if (analysisResponse.ok) {
               const analysisResult = await analysisResponse.json();
+              const visualAnalysis = analysisResult.data;
+              
               // Update seed with visual analysis
               setGeneratedSeed(prev => prev ? {
                 ...prev,
-                visualAnalysis: analysisResult.data
+                visualAnalysis
               } : null);
+              
+              // Then enrich the profile
+              setAnalysisLoading(false);
+              setProfileLoading(true);
+              
+              try {
+                const enrichResponse = await fetch('/api/mzoo/entity/enrich-profile', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({
+                    seedData: result.data,
+                    visualAnalysis
+                  })
+                });
+                
+                if (enrichResponse.ok) {
+                  const enrichResult = await enrichResponse.json();
+                  // Update seed with deep profile
+                  setGeneratedSeed(prev => prev ? {
+                    ...prev,
+                    deepProfile: enrichResult.data
+                  } : null);
+                }
+              } catch (enrichErr) {
+                console.error('Failed to enrich profile:', enrichErr);
+              } finally {
+                setProfileLoading(false);
+              }
+            } else {
+              setAnalysisLoading(false);
             }
           } catch (analysisErr) {
             console.error('Failed to analyze image:', analysisErr);
-          } finally {
             setAnalysisLoading(false);
           }
         } else {
@@ -141,6 +175,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
       loading,
       imageLoading,
       analysisLoading,
+      profileLoading,
       error
     },
     handlers: {

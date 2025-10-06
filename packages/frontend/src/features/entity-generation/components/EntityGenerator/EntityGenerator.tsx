@@ -123,6 +123,83 @@ export function EntityGenerator({ entityLogic }: EntityGeneratorProps) {
                     </div>
                   </div>
                 )}
+
+                {state.profileLoading && !state.generatedSeed.deepProfile && (
+                  <div className={styles.profileLoadingContainer}>
+                    <LoadingSpinner message="Generating deep profile..." />
+                  </div>
+                )}
+
+                {state.generatedSeed.deepProfile && (
+                  <div className={styles.profileCard}>
+                    <div className={styles.profileTitle}>Deep Profile</div>
+                    
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Looks</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.looks}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Wearing</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.wearing}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Face</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.face}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Hair</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.hair}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Body</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.body}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Specific Details</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.specificDetails}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Style</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.style}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Personality</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.personality}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Voice</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.voice}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Speech Style</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.speechStyle}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Gender</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.gender}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Nationality</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.nationality}</div>
+                    </div>
+
+                    <div className={styles.profileField}>
+                      <div className={styles.fieldLabel}>Tags</div>
+                      <div className={styles.fieldValue}>{state.generatedSeed.deepProfile.tags}</div>
+                    </div>
+                  </div>
+                )}
               </>
             )}
           </>

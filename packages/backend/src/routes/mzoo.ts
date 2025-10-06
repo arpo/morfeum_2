@@ -345,6 +345,83 @@ router.post('/entity/analyze-image', asyncHandler(async (req: Request, res: Resp
 }));
 
 /**
+ * MZOO Entity deep profile enrichment endpoint
+ */
+router.post('/entity/enrich-profile', asyncHandler(async (req: Request, res: Response) => {
+  const { seedData, visualAnalysis } = req.body;
+
+  if (!seedData || !visualAnalysis) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Seed data and visual analysis are required',
+      error: 'Missing required parameters in request body',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  try {
+    // Convert data to JSON strings for the prompt
+    const seedJson = JSON.stringify(seedData, null, 2);
+    const visionJson = JSON.stringify(visualAnalysis, null, 2);
+
+    // Get the deep profile enrichment prompt
+    const enrichmentPrompt = getPrompt('deepProfileEnrichment', 'en')(seedJson, visionJson);
+
+    // Call Gemini with the enrichment prompt
+    const messages = [
+      { role: 'system', content: enrichmentPrompt },
+      { role: 'user', content: 'Generate the complete character profile based on the provided data.' }
+    ];
+
+    const result = await mzooService.generateText(
+      (req as any).mzooApiKey,
+      messages,
+      'gemini-2.5-flash'
+    );
+
+    if (result.error) {
+      res.status(result.status).json({
+        message: 'Failed to generate deep profile from MZOO API',
+        error: result.error,
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+
+    // Parse the response text to extract field values
+    const responseText = result.data.text;
+    const profile: any = {};
+
+    // Extract fields using regex patterns
+    const fields = [
+      'name', 'looks', 'wearing', 'face', 'body', 'hair',
+      'specificDetails', 'style', 'personality', 'voice', 'speechStyle',
+      'gender', 'nationality', 'fictional', 'copyright', 'tags'
+    ];
+
+    fields.forEach(field => {
+      const regex = new RegExp(`\\[${field}\\]\\s*([\\s\\S]*?)(?=\\n\\[|$)`, 'i');
+      const match = responseText.match(regex);
+      if (match && match[1]) {
+        profile[field] = match[1].trim();
+      }
+    });
+
+    res.status(HTTP_STATUS.OK).json({
+      message: 'Deep profile enrichment completed successfully',
+      data: profile,
+      timestamp: new Date().toISOString(),
+    });
+  } catch (error) {
+    res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+      message: 'Failed to process profile enrichment',
+      error: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date().toISOString(),
+    });
+  }
+}));
+
+/**
  * MZOO FAL Flux image generation endpoint
  */
 router.post('/fal-flux-srpo/generate', asyncHandler(async (req: Request, res: Response) => {
