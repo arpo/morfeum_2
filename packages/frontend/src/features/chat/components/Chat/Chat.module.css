@@ -5,6 +5,29 @@
   height: 100%;
 }
 
+.entityBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.entityImage {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  border: 2px solid var(--color-border);
+}
+
+.entityName {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .messagesContainer {
   flex: 1;
   overflow-y: auto;

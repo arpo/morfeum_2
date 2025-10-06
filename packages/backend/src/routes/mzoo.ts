@@ -30,6 +30,32 @@ router.get('/prompts/chat-system', asyncHandler(async (req: Request, res: Respon
 }));
 
 /**
+ * Get chat system prompt with character impersonation
+ */
+router.post('/prompts/chat-system', asyncHandler(async (req: Request, res: Response) => {
+  const { entityData } = req.body;
+
+  if (!entityData || typeof entityData !== 'string') {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Entity data is required',
+      error: 'Missing or invalid entityData in request body',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  const systemMessage = getPrompt('chatCharacterImpersonation', 'en')(entityData);
+  
+  res.status(HTTP_STATUS.OK).json({
+    message: 'Character impersonation prompt generated successfully',
+    data: {
+      content: systemMessage
+    },
+    timestamp: new Date().toISOString(),
+  });
+}));
+
+/**
  * Get sample entity prompts
  */
 router.get('/prompts/entity-samples', asyncHandler(async (req: Request, res: Response) => {

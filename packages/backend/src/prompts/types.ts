@@ -4,6 +4,7 @@
 
 export type PromptKey = 
   | 'chatSystemMessage'
+  | 'chatCharacterImpersonation'
   | 'entitySeedGeneration'
   | 'entityImageGeneration'
   | 'sampleEntityPrompts';
@@ -14,5 +15,6 @@ export interface PromptTemplates {
   entitySeedGeneration: (textPrompt: string) => string;
   entityImageGeneration: (looks: string, wearing: string) => string;
   chatSystemMessage: string;
+  chatCharacterImpersonation: (entityData: string) => string;
   sampleEntityPrompts: string[];
 }

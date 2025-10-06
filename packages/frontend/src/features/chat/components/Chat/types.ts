@@ -10,12 +10,15 @@ export interface ChatState {
   inputValue: string;
   loading: boolean;
   error: string | null;
+  entityImage: string | null;
+  entityName: string | null;
 }
 
 export interface ChatHandlers {
   setInputValue: (value: string) => void;
   sendMessage: () => Promise<void>;
   clearError: () => void;
+  initializeWithEntity: (entityData: { name: string; looks: string; wearing: string; personality: string; imageUrl?: string }) => Promise<void>;
 }
 
 export interface ChatLogicReturn {

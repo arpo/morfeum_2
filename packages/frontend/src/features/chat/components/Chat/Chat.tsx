@@ -20,6 +20,17 @@ export function Chat({ chatLogic }: ChatProps) {
 
   return (
     <div className={styles.container}>
+      {state.entityImage && state.entityName && (
+        <div className={styles.entityBanner}>
+          <img 
+            src={state.entityImage} 
+            alt={state.entityName}
+            className={styles.entityImage}
+          />
+          <div className={styles.entityName}>Chatting with {state.entityName}</div>
+        </div>
+      )}
+      
       <div className={styles.messagesContainer}>
         {visibleMessages.length === 0 && (
           <div className={styles.emptyState}>

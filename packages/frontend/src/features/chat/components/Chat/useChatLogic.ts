@@ -6,6 +6,8 @@ export function useChatLogic(): ChatLogicReturn {
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [entityImage, setEntityImage] = useState<string | null>(null);
+  const [entityName, setEntityName] = useState<string | null>(null);
 
   // Fetch system message from backend on mount
   useEffect(() => {
@@ -53,7 +55,7 @@ export function useChatLogic(): ChatLogicReturn {
     setError(null);
 
     try {
-      const response = await fetch('/api/gemini/text', {
+      const response = await fetch('/api/mzoo/gemini/text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -93,17 +95,70 @@ export function useChatLogic(): ChatLogicReturn {
     setError(null);
   }, []);
 
+  const initializeWithEntity = useCallback(async (entityData: { 
+    name: string; 
+    looks: string; 
+    wearing: string; 
+    personality: string; 
+    imageUrl?: string 
+  }) => {
+    try {
+      // Format entity data for the prompt
+      const formattedEntityData = `Name: ${entityData.name}
+Appearance: ${entityData.looks}
+Wearing: ${entityData.wearing}
+Personality: ${entityData.personality}`;
+
+      // Fetch character impersonation system message
+      const response = await fetch('/api/mzoo/prompts/chat-system', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          entityData: formattedEntityData
+        })
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        const systemMessage: ChatMessage = {
+          id: 'system-001',
+          role: 'system',
+          content: result.data.content,
+          timestamp: new Date().toISOString()
+        };
+        setMessages([systemMessage]);
+        setEntityImage(entityData.imageUrl || null);
+        setEntityName(entityData.name);
+      }
+    } catch (err) {
+      console.error('Failed to initialize chat with entity:', err);
+      // Fallback to default system message
+      const systemMessage: ChatMessage = {
+        id: 'system-001',
+        role: 'system',
+        content: 'You are a helpful AI assistant.',
+        timestamp: new Date().toISOString()
+      };
+      setMessages([systemMessage]);
+    }
+  }, []);
+
   return {
     state: {
       messages,
       inputValue,
       loading,
-      error
+      error,
+      entityImage,
+      entityName
     },
     handlers: {
       setInputValue,
       sendMessage,
-      clearError
+      clearError,
+      initializeWithEntity
     }
   };
 }
