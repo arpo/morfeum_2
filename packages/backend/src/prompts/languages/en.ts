@@ -5,6 +5,11 @@
 import type { PromptTemplates } from '../types';
 
 export const en: PromptTemplates = {
+  entityImageGeneration: (looks: string, wearing: string) => `Half Portrait of
+${looks}, ${wearing}
+
+best quality, 4k, ultra-detailed, photorealistic, cinematic lighting, natural soft light, true color, shallow depth of field, realistic skin texture, dynamic composition, volumetric light, god rays, sharp focus`,
+
   entitySeedGeneration: (textPrompt: string) => `Your task is to generate a concise character seed, following the structure and standards below.
 
 Return only valid JSON with these exact fields:
@@ -81,6 +86,18 @@ ${textPrompt}`,
     'A kitsune shapeshifter mid-transition, with shifting hair color and a knowing smirk.',
     'A dwarven inventor covered in soot and copper dust, eyes bright with restless ideas.',
     'An ancient elf warrior whose stillness feels like the pause before a storm.',
-    'A dream spirit taking human form, features soft and slightly shifting as if remembered from another life.'
+    'A dream spirit taking human form, features soft and slightly shifting as if remembered from another life.',
+    'A lucid dreamer with pupils that shimmer like reflections on water, speaking as if half their mind is elsewhere.',
+    'A synthetic empath whose silicone skin carries faint fingerprints from those who’ve touched them.',
+    'A woman built from memories, her features subtly shifting each time someone recalls her differently.',
+    'An archivist of emotions who wears fragments of other people’s moods like jewelry.',
+    'A glass-veined wanderer whose pulse glows softly under the skin.',
+    'A man with an old modem’s hum behind his voice, eyes flickering when he lies.',
+    'A mirrored twin who never blinks at the same time you do.',
+    'An AI poet that grows freckles each time it learns a new human word.',
+    'A person composed of static and warmth, their outline unstable but their smile certain.',
+    'A cyber-oracle whose tattoos shift to display fragments of possible futures.',
+    'A dream merchant with iridescent hair that fades in hue depending on who they’re talking to.',
+    'A ghost wearing a body of projected light, gestures trailing faint after-images of color.'
   ]
 };

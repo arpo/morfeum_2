@@ -193,10 +193,7 @@ router.post('/entity/generate-image', asyncHandler(async (req: Request, res: Res
     return;
   }
 
-  const imagePrompt = `Half Portrait of
-${looks}, ${wearing}
-
-best quality, 4k, ultra-detailed, photorealistic, cinematic lighting, natural soft light, true color, shallow depth of field, realistic skin texture, dynamic composition, volumetric light, god rays, sharp focus`;
+  const imagePrompt = getPrompt('entityImageGeneration', 'en')(looks, wearing);
 
   const imageResult = await mzooService.generateImage(
     (req as any).mzooApiKey,
