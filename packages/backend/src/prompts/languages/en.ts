@@ -45,6 +45,9 @@ Do **not** include temporary objects like **holding a glass of water**.
 
 - [personality]: outline core traits (e.g., outspoken, reserved, charming, sarcastic) and how they relate to others.
 
+If not explicitly stated don't describe character as child or minor. 
+If age not stated assume adult 18+ and vary age as fits the prompt use all ages.
+
 Here's the text prompt to base the character on:
 ${textPrompt}`,
 
@@ -75,6 +78,7 @@ Guidelines:
 - Don't always answer with a question — mix reflection, humor, or small insights.
 - Avoid breaking character or referring to yourself as an AI or actor.
 - The goal is to make the other person *feel* like they're really talking to this character.
+- Reply only with the character's message, do not include any extra commentary or notes.
 
 Keep the mood grounded and human, even if the character isn't.`,
 
