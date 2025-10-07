@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Button, LoadingSpinner } from '@/components/ui';
 import type { ChatLogicReturn } from './types';
 import styles from './Chat.module.css';
@@ -8,8 +9,15 @@ interface ChatProps {
 
 export function Chat({ chatLogic }: ChatProps) {
   const { state, handlers } = chatLogic;
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Filter out system messages for display
   const visibleMessages = state.messages.filter(msg => msg.role !== 'system');
+
+  // Auto-scroll to bottom when new messages arrive
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [visibleMessages.length]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -34,38 +42,46 @@ export function Chat({ chatLogic }: ChatProps) {
       <div className={styles.messagesContainer}>
         {visibleMessages.length === 0 && (
           <div className={styles.emptyState}>
-            Start a conversation...
+            Start a conversation with {state.entityName}...
           </div>
         )}
         
         {visibleMessages.map((message) => (
           <div 
             key={message.id}
-            className={`${styles.message} ${
-              message.role === 'user' ? styles.messageUser : styles.messageAssistant
+            className={`${styles.messageWrapper} ${
+              message.role === 'user' ? styles.userWrapper : styles.assistantWrapper
             }`}
           >
-            <div className={styles.messageRole}>
-              {message.role === 'user' ? 'You' : 'Assistant'}
-            </div>
-            <div 
-              className={`${styles.messageContent} ${
-                message.role === 'user' ? styles.contentUser : styles.contentAssistant
-              }`}
-            >
-              {message.content}
+            <div className={styles.messageBubble}>
+              <div className={styles.messageRole}>
+                {message.role === 'user' ? 'You' : state.entityName}
+              </div>
+              <div className={styles.messageContent}>
+                {message.content}
+              </div>
             </div>
           </div>
         ))}
         
         {state.loading && (
-          <LoadingSpinner message="Thinking..." />
+          <div className={styles.loadingWrapper}>
+            <LoadingSpinner message={`${state.entityName} is thinking...`} />
+          </div>
         )}
+        
+        <div ref={messagesEndRef} />
       </div>
 
       {state.error && (
         <div className={styles.errorMessage}>
           {state.error}
+          <button 
+            className={styles.errorDismiss}
+            onClick={handlers.clearError}
+          >
+            ✕
+          </button>
         </div>
       )}
 
@@ -76,7 +92,7 @@ export function Chat({ chatLogic }: ChatProps) {
           value={state.inputValue}
           onChange={(e) => handlers.setInputValue(e.target.value)}
           onKeyPress={handleKeyPress}
-          placeholder="Type your message..."
+          placeholder={`Message ${state.entityName}...`}
           disabled={state.loading}
         />
         <Button

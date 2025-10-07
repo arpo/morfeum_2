@@ -18,6 +18,8 @@ export interface ChatSession {
   entityImage?: string;
   systemPrompt: string;
   messages: ChatMessage[];
+  loading?: boolean;
+  error?: string | null;
 }
 
 export interface ChatManagerSlice {
@@ -29,6 +31,9 @@ export interface ChatManagerSlice {
   updateChatSystemPrompt: (spawnId: string, systemPrompt: string) => void;
   setActiveChat: (spawnId: string) => void;
   closeChat: (spawnId: string) => void;
+  sendMessage: (spawnId: string, content: string) => Promise<void>;
+  setLoading: (spawnId: string, loading: boolean) => void;
+  setError: (spawnId: string, error: string | null) => void;
 }
 
 export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get) => ({
@@ -122,6 +127,133 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
         chats: newChats,
         activeChat: newActiveChat
       };
+    });
+  },
+
+  sendMessage: async (spawnId: string, content: string) => {
+    const state = get();
+    const chat = state.chats.get(spawnId);
+    
+    if (!chat) {
+      console.error('[ChatManager] Chat not found:', spawnId);
+      return;
+    }
+
+    // Add user message
+    const userMessage: ChatMessage = {
+      id: `user-${Date.now()}`,
+      role: 'user',
+      content,
+      timestamp: new Date().toISOString()
+    };
+
+    set((state) => {
+      const newChats = new Map(state.chats);
+      const chat = newChats.get(spawnId);
+      if (!chat) return state;
+
+      newChats.set(spawnId, {
+        ...chat,
+        messages: [...chat.messages, userMessage],
+        loading: true,
+        error: null
+      });
+      return { chats: newChats };
+    });
+
+    try {
+      // Prepare messages for API (include system prompt and full history)
+      const updatedChat = get().chats.get(spawnId);
+      if (!updatedChat) return;
+
+      const apiMessages = updatedChat.messages.map(m => ({
+        role: m.role,
+        content: m.content
+      }));
+
+      // Call backend API
+      const response = await fetch('/api/mzoo/gemini/text', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          messages: apiMessages,
+          model: 'gemini-2.5-flash-lite'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      // Add assistant message
+      const assistantMessage: ChatMessage = {
+        id: `assistant-${Date.now()}`,
+        role: 'assistant',
+        content: result.data.text,
+        timestamp: new Date().toISOString()
+      };
+
+      set((state) => {
+        const newChats = new Map(state.chats);
+        const chat = newChats.get(spawnId);
+        if (!chat) return state;
+
+        newChats.set(spawnId, {
+          ...chat,
+          messages: [...chat.messages, assistantMessage],
+          loading: false
+        });
+        return { chats: newChats };
+      });
+
+      console.log('💬 Message sent and response received');
+    } catch (error) {
+      console.error('[ChatManager] Error sending message:', error);
+      
+      set((state) => {
+        const newChats = new Map(state.chats);
+        const chat = newChats.get(spawnId);
+        if (!chat) return state;
+
+        newChats.set(spawnId, {
+          ...chat,
+          loading: false,
+          error: 'Failed to send message. Please try again.'
+        });
+        return { chats: newChats };
+      });
+    }
+  },
+
+  setLoading: (spawnId: string, loading: boolean) => {
+    set((state) => {
+      const chat = state.chats.get(spawnId);
+      if (!chat) return state;
+
+      const newChats = new Map(state.chats);
+      newChats.set(spawnId, {
+        ...chat,
+        loading
+      });
+      return { chats: newChats };
+    });
+  },
+
+  setError: (spawnId: string, error: string | null) => {
+    set((state) => {
+      const chat = state.chats.get(spawnId);
+      if (!chat) return state;
+
+      const newChats = new Map(state.chats);
+      newChats.set(spawnId, {
+        ...chat,
+        error
+      });
+      return { chats: newChats };
     });
   }
 });
