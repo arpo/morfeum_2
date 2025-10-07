@@ -74,8 +74,14 @@ export function useSpawnEvents() {
 
     // Listen for profile complete event
     eventSource.addEventListener('spawn:profile-complete', (e) => {
-      const { spawnId, deepProfile } = JSON.parse(e.data);
+      const { spawnId, deepProfile, enhancedSystemPrompt } = JSON.parse(e.data);
       console.log('✨ Deep Profile:', deepProfile);
+      console.log('💬 Enhanced System Prompt Updated');
+      
+      // Update system prompt with enhanced version from deep profile
+      if (updateChatSystemPrompt && enhancedSystemPrompt) {
+        updateChatSystemPrompt(spawnId, enhancedSystemPrompt);
+      }
       
       // Update spawn status and remove from active list
       if (updateSpawnStatus) {

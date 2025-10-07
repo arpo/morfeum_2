@@ -182,12 +182,33 @@ class SpawnManager {
 
       process.deepProfile = deepProfile;
 
-      // Emit profile complete event (system prompt already sent with seed)
+      // Generate enhanced system prompt with full deep profile data
+      const enhancedEntityData = `Name: ${deepProfile.name}
+Appearance: ${deepProfile.looks}
+Face: ${deepProfile.face}
+Body: ${deepProfile.body}
+Hair: ${deepProfile.hair}
+Wearing: ${deepProfile.wearing}
+Specific Details: ${deepProfile.specificDetails}
+Style: ${deepProfile.style}
+Personality: ${deepProfile.personality}
+Voice: ${deepProfile.voice}
+Speech Style: ${deepProfile.speechStyle}
+Gender: ${deepProfile.gender}
+Nationality: ${deepProfile.nationality}
+Fictional: ${deepProfile.fictional}
+Copyright: ${deepProfile.copyright}
+Tags: ${deepProfile.tags}`;
+
+      const enhancedSystemPrompt = getPrompt('chatCharacterImpersonation', 'en')(enhancedEntityData);
+
+      // Emit profile complete event with enhanced system prompt
       eventEmitter.emit({
         type: 'spawn:profile-complete',
         data: { 
           spawnId, 
-          deepProfile
+          deepProfile,
+          enhancedSystemPrompt
         }
       });
 
