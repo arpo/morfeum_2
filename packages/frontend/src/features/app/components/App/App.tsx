@@ -24,14 +24,14 @@ export function App() {
   return (
     <div className={styles.container}>
       
-      {/* Left Sidebar - All Controls */}
+      {/* Column 1 - Left Sidebar (Controls) */}
       <aside className={styles.sidebar}>
         <SpawnInputBar />
         <ActiveSpawnsPanel />
         <ChatTabs />
       </aside>
       
-      {/* Center - Active Chat */}
+      {/* Column 2 - Active Chat */}
       {activeChatSession && (
         <section className={styles.chatSection}>
           <Card>
@@ -40,7 +40,12 @@ export function App() {
         </section>
       )}
       
-      {/* Right Panel - Chat History (Collapsible) */}
+      {/* Column 3 - Reserved for Future Panels */}
+      <aside className={styles.extraPanel}>
+        {/* Future panel space */}
+      </aside>
+      
+      {/* Column 4 - Chat History (Collapsible) */}
       {activeChatSession && (
         <aside className={styles.historyPanel}>
           <ChatHistoryViewer messages={activeChatSession.messages} />

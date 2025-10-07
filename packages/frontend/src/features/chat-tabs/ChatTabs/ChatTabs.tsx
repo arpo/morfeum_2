@@ -34,22 +34,39 @@ export function ChatTabs() {
 
   return (
     <div className={styles.container}>
-      {chatsArray.map(chat => (
-        <div
-          key={chat.spawnId}
-          className={`${styles.tab} ${activeChat === chat.spawnId ? styles.active : ''}`}
-          onClick={() => handleTabClick(chat.spawnId)}
-        >
-          <span className={styles.tabName}>{chat.entityName}</span>
-          <button
-            className={styles.closeButton}
-            onClick={(e) => handleCloseTab(e, chat.spawnId)}
-            title="Close chat"
+      <div className={styles.header}>Chat Sessions</div>
+      <div className={styles.chatList}>
+        {chatsArray.map(chat => (
+          <div
+            key={chat.spawnId}
+            className={`${styles.chatButton} ${activeChat === chat.spawnId ? styles.active : ''}`}
+            onClick={() => handleTabClick(chat.spawnId)}
           >
-            ✕
-          </button>
-        </div>
-      ))}
+            {chat.entityImage && (
+              <img 
+                src={chat.entityImage} 
+                alt={chat.entityName}
+                className={styles.entityImage}
+              />
+            )}
+            {!chat.entityImage && (
+              <div className={styles.imagePlaceholder}>
+                {chat.entityName.charAt(0).toUpperCase()}
+              </div>
+            )}
+            <div className={styles.chatInfo}>
+              <span className={styles.entityName}>{chat.entityName}</span>
+            </div>
+            <button
+              className={styles.closeButton}
+              onClick={(e) => handleCloseTab(e, chat.spawnId)}
+              title="Close chat"
+            >
+              ✕
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
