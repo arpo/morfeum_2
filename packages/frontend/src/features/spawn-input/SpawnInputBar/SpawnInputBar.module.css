@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #1f2937;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.shuffleButton {
+  padding: 10px 16px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.shuffleButton:hover {
+  background-color: #f3f4f6;
+}
+
+.generateButton {
+  padding: 10px 24px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.generateButton:hover {
+  background-color: #1d4ed8;
+}
+
+.generateButton:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.errorMessage {
+  color: var(--color-error);
+  font-size: var(--text-sm);
+  margin-top: var(--spacing-xs);
+}

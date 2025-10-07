@@ -1,0 +1,52 @@
+/**
+ * Spawn Input Bar Component
+ * Simplified input for triggering entity spawn processes
+ */
+
+import { useSpawnInputLogic } from './useSpawnInputLogic';
+import styles from './SpawnInputBar.module.css';
+
+export function SpawnInputBar() {
+  const { state, handlers } = useSpawnInputLogic();
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && state.textPrompt.trim()) {
+      handlers.handleGenerate();
+    }
+  };
+
+  return (
+    <div>
+      <div className={styles.container}>
+        <textarea
+          className={styles.textarea}
+          value={state.textPrompt}
+          onChange={(e) => handlers.setTextPrompt(e.target.value)}
+          placeholder="Describe a character to spawn..."
+          rows={3}
+        />
+        <div className={styles.buttonRow}>
+          <button
+            className={styles.shuffleButton}
+            onClick={handlers.handleShuffle}
+            title="Random example"
+          >
+            🎲
+          </button>
+          <button
+            className={styles.generateButton}
+            onClick={handlers.handleGenerate}
+            disabled={!state.textPrompt.trim()}
+          >
+            Generate
+          </button>
+        </div>
+      </div>
+      {state.error && (
+        <div className={styles.errorMessage}>
+          {state.error}
+        </div>
+      )}
+    </div>
+  );
+}

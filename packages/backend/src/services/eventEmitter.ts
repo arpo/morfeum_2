@@ -40,7 +40,7 @@ class EventEmitter {
   emit(event: SpawnEvent): void {
     const message = `event: ${event.type}\ndata: ${JSON.stringify(event.data)}\n\n`;
     
-    console.log(`[EventEmitter] Broadcasting event: ${event.type}`, event.data);
+    // console.log(`[EventEmitter] Broadcasting event: ${event.type}`, event.data);
 
     this.clients.forEach((client) => {
       try {

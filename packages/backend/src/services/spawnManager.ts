@@ -80,7 +80,6 @@ class SpawnManager {
     };
 
     this.processes.set(spawnId, process);
-    console.log(`[SpawnManager] Started spawn: ${spawnId} with prompt: "${prompt}"`);
 
     // Run pipeline asynchronously
     this.runPipeline(spawnId).catch((error) => {
@@ -96,16 +95,13 @@ class SpawnManager {
   cancelSpawn(spawnId: string): void {
     const process = this.processes.get(spawnId);
     if (!process) {
-      console.warn(`[SpawnManager] Cannot cancel: spawn ${spawnId} not found`);
       return;
     }
 
     if (process.status === 'completed' || process.status === 'cancelled' || process.status === 'error') {
-      console.log(`[SpawnManager] Spawn ${spawnId} already in terminal state: ${process.status}`);
       return;
     }
 
-    console.log(`[SpawnManager] Cancelling spawn: ${spawnId}`);
     process.abortController.abort();
     process.status = 'cancelled';
 
@@ -133,30 +129,30 @@ class SpawnManager {
 
     try {
       // Stage 1: Generate Seed
-      console.log(`[SpawnManager] ${spawnId}: Generating seed...`);
       process.status = 'generating_seed';
       
       const seed = await this.generateSeed(process.prompt, process.abortController.signal);
       if (process.abortController.signal.aborted) return;
 
       process.seed = seed;
-      console.log(`[SpawnManager] ${spawnId}: Seed complete`, seed);
 
-      // Emit seed complete event
+      // Generate initial system prompt from seed data
+      const entityData = `Name: ${seed.name}\nAppearance: ${seed.looks}\nWearing: ${seed.wearing}\nPersonality: ${seed.personality}`;
+      const systemPrompt = getPrompt('chatCharacterImpersonation', 'en')(entityData);
+
+      // Emit seed complete event with system prompt
       eventEmitter.emit({
         type: 'spawn:seed-complete',
-        data: { spawnId, seed }
+        data: { spawnId, seed, systemPrompt }
       });
 
       // Stage 2: Generate Image
-      console.log(`[SpawnManager] ${spawnId}: Generating image...`);
       process.status = 'generating_image';
 
       const imageUrl = await this.generateImage(seed, process.abortController.signal);
       if (process.abortController.signal.aborted) return;
 
       process.imageUrl = imageUrl;
-      console.log(`[SpawnManager] ${spawnId}: Image complete`, imageUrl);
 
       // Emit image complete event
       eventEmitter.emit({
@@ -165,14 +161,12 @@ class SpawnManager {
       });
 
       // Stage 3: Analyze Image
-      console.log(`[SpawnManager] ${spawnId}: Analyzing image...`);
       process.status = 'analyzing';
 
       const visualAnalysis = await this.analyzeImage(imageUrl, seed, process.abortController.signal);
       if (process.abortController.signal.aborted) return;
 
       process.visualAnalysis = visualAnalysis;
-      console.log(`[SpawnManager] ${spawnId}: Analysis complete`, visualAnalysis);
 
       // Emit analysis complete event
       eventEmitter.emit({
@@ -181,36 +175,27 @@ class SpawnManager {
       });
 
       // Stage 4: Enrich Profile
-      console.log(`[SpawnManager] ${spawnId}: Enriching profile...`);
       process.status = 'enriching';
 
       const deepProfile = await this.enrichProfile(seed, visualAnalysis, process.abortController.signal);
       if (process.abortController.signal.aborted) return;
 
       process.deepProfile = deepProfile;
-      console.log(`[SpawnManager] ${spawnId}: Profile complete`, deepProfile);
 
-      // Generate system prompt
-      const entityData = `Name: ${seed.name}\nAppearance: ${seed.looks}\nWearing: ${seed.wearing}\nPersonality: ${seed.personality}`;
-      const systemPrompt = getPrompt('chatCharacterImpersonation', 'en')(entityData);
-
-      // Emit profile complete event with system prompt
+      // Emit profile complete event (system prompt already sent with seed)
       eventEmitter.emit({
         type: 'spawn:profile-complete',
         data: { 
           spawnId, 
-          deepProfile,
-          systemPrompt
+          deepProfile
         }
       });
 
       // Mark as completed
       process.status = 'completed';
-      console.log(`[SpawnManager] ${spawnId}: Pipeline completed successfully`);
 
     } catch (error) {
       if (error instanceof Error && error.name === 'AbortError') {
-        console.log(`[SpawnManager] ${spawnId}: Pipeline aborted`);
         process.status = 'cancelled';
         return;
       }
