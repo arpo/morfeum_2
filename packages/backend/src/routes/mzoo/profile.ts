@@ -15,7 +15,7 @@ const router = Router();
  * MZOO Entity deep profile enrichment endpoint
  */
 router.post('/enrich-profile', asyncHandler(async (req: Request, res: Response) => {
-  const { seedData, visualAnalysis } = req.body;
+  const { seedData, visualAnalysis, originalPrompt } = req.body;
 
   if (!seedData || !visualAnalysis) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -30,9 +30,10 @@ router.post('/enrich-profile', asyncHandler(async (req: Request, res: Response) 
     // Convert data to JSON strings for the prompt
     const seedJson = JSON.stringify(seedData, null, 2);
     const visionJson = JSON.stringify(visualAnalysis, null, 2);
+    const prompt = originalPrompt || seedData.originalPrompt || 'No specific request provided';
 
     // Get the deep profile enrichment prompt
-    const enrichmentPrompt = getPrompt('deepProfileEnrichment', 'en')(seedJson, visionJson);
+    const enrichmentPrompt = getPrompt('deepProfileEnrichment', 'en')(seedJson, visionJson, prompt);
 
     // Call Gemini with the enrichment prompt
     const messages = [

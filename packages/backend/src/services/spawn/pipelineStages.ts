@@ -138,8 +138,9 @@ export async function enrichProfile(
 ): Promise<DeepProfile> {
   const seedJson = JSON.stringify(seed, null, 2);
   const visionJson = JSON.stringify(visualAnalysis, null, 2);
+  const originalPrompt = seed.originalPrompt || 'No specific request provided';
 
-  const enrichmentPrompt = getPrompt('deepProfileEnrichment', 'en')(seedJson, visionJson);
+  const enrichmentPrompt = getPrompt('deepProfileEnrichment', 'en')(seedJson, visionJson, originalPrompt);
 
   const messages = [
     { role: 'system', content: enrichmentPrompt },

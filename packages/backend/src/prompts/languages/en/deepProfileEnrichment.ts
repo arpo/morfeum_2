@@ -3,7 +3,10 @@
  * Combines seed data and visual analysis into a complete character profile
  */
 
-export const deepProfileEnrichment = (seedJson: string, visionJson: string) => `You are generating a complete, nuanced character profile for Morfeum — a world where realism and imagination coexist.
+export const deepProfileEnrichment = (seedJson: string, visionJson: string, originalPrompt: string) => `You are generating a complete, nuanced character profile for Morfeum — a world where realism and imagination coexist.
+
+Original user request:
+${originalPrompt}
 
 Combine the following data:
 Seed data:

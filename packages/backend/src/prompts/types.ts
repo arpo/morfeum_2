@@ -24,6 +24,6 @@ export interface PromptTemplates {
   chatSystemMessage: string;
   chatCharacterImpersonation: (entityData: string) => string;
   visualAnalysis: (name: string, looks: string, wearing: string, personality: string, presence?: string) => string;
-  deepProfileEnrichment: (seedJson: string, visionJson: string) => string;
+  deepProfileEnrichment: (seedJson: string, visionJson: string, originalPrompt: string) => string;
   sampleEntityPrompts: string[];
 }
