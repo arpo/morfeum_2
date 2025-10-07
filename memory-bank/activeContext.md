@@ -1,9 +1,63 @@
 # Active Context
 
 ## Current Work Focus
-Multi-spawn chat system completed with functional messaging, enhanced system prompts, and redesigned chat UI. All chat features working end-to-end with real-time entity generation and conversation management.
+Multi-spawn chat system with markdown-enhanced narrative responses, 4-column responsive layout, and improved UI/UX. Chat features include concise atmospheric narration with proper formatting, collapsible panels, and vertical chat session navigation.
 
 ## Recent Changes
+
+### UI Layout & Chat Enhancements (Latest)
+1. **Markdown-Enhanced Chat Narrative**:
+   - Installed `react-markdown` for message content rendering
+   - Updated chat impersonation prompt to use concise markdown formatting
+   - Narrative elements limited to 1-5 words (*soft laugh*, *pause*, *eyes narrow*)
+   - Dialogue remains primary (70-80%), narrative as accent (20-30%)
+   - Styled italic text to be subtle/secondary (90% size, 75% opacity)
+   - Visual hierarchy: dialogue prominent, narrative atmospheric touches only
+
+2. **4-Column Responsive Layout**:
+   ```
+   [Sidebar: 350px] | [Chat: 400-600px] | [Reserved: flex] | [History: 350px]
+   - SpawnInputBar       Active chat        Future panels    Collapsible
+   - ActiveSpawnsPanel   content                             debug panel
+   - ChatTabs (vertical)
+   ```
+   - Responsive breakpoints: 1600px, 1400px, 1024px
+   - Column 3 reserved for future panel additions
+   - Chat constrained width for better readability
+
+3. **Collapsible Chat History Panel**:
+   - ChatHistoryViewer now collapsible (like ActiveSpawnsPanel)
+   - Click header to expand/collapse
+   - Shows message count badge
+   - Collapsed by default to maximize screen space
+   - Message details display vertically (not side-by-side) for better readability
+
+4. **Vertical Chat Tabs**:
+   - Replaced horizontal scrolling tabs with vertical list
+   - Entity image (48x48px) or letter placeholder
+   - Entity name with text truncation
+   - Close button (✕) per chat session
+   - No more horizontal overflow with unlimited chat sessions
+   - "Chat Sessions" header panel
+
+5. **Text Formatting Fixes**:
+   - Added `white-space: pre-wrap` to preserve line breaks in messages
+   - Fixed ChatHistoryViewer detail rows from 2-column to vertical stack
+   - Long system prompts now readable with proper wrapping
+   - Markdown paragraphs properly spaced
+
+6. **Files Modified (9 total)**:
+   - `packages/backend/src/prompts/languages/en/chatCharacterImpersonation.ts` - Markdown formatting instructions
+   - `packages/frontend/src/features/chat/components/Chat/Chat.tsx` - ReactMarkdown integration
+   - `packages/frontend/src/features/chat/components/Chat/Chat.module.css` - Narrative styling
+   - `packages/frontend/src/features/chat/components/ChatHistoryViewer/ChatHistoryViewer.tsx` - Collapsible panel
+   - `packages/frontend/src/features/chat/components/ChatHistoryViewer/ChatHistoryViewer.module.css` - Panel styles
+   - `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.tsx` - Vertical layout with images
+   - `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.module.css` - Vertical styles
+   - `packages/frontend/src/features/app/components/App/App.tsx` - 4-column structure
+   - `packages/frontend/src/features/app/components/App/App.module.css` - Grid layout
+
+## Recent Changes (Continued)
 
 ### Multi-Spawn Chat System Implementation (Latest)
 1. **Functional Chat Messaging**:
@@ -91,22 +145,28 @@ Multi-spawn chat system completed with functional messaging, enhanced system pro
 4. **Parsing Reliability**: All three AI operations use JSON parsing (seed, visual, deep)
 
 ## Next Steps
-The multi-spawn chat system demonstrates:
-- Complete end-to-end chat functionality with AI entities
-- Real-time spawn generation with progress tracking
-- Enhanced system prompts with deep profile data
-- Clean, modern chat UI with message bubbles
-- Multiple simultaneous chat sessions
-- Seamless system prompt updates without user disruption
-- Foundation ready for additional chat features (typing indicators, message reactions, etc.)
+The multi-spawn chat system now features:
+- **Markdown-enhanced narrative**: Concise atmospheric touches with styled italics
+- **Responsive 4-column layout**: Room for future panels and features
+- **Vertical chat navigation**: No horizontal overflow, unlimited sessions
+- **Collapsible panels**: Maximize workspace with on-demand debug info
+- **Proper text formatting**: Line breaks, wrapping, and markdown rendering
+- Foundation ready for:
+  - Additional panels in column 3 (entity info, settings, etc.)
+  - Advanced markdown features (bold, links, code blocks)
+  - Typing indicators and message reactions
+  - Chat persistence and history export
 
 ## Active Decisions
 - Multi-spawn architecture: Multiple entities can be generated simultaneously
 - Progressive chat initialization: Chat available immediately after seed
 - System prompt enhancement: Updates automatically when deep profile completes
 - Chat persistence: All messages stored in chat manager
-- UI patterns: Full-width images, personality display, message bubbles
-- Debug visibility: ChatHistoryViewer shows raw message data for inspection
+- **Narrative style**: Markdown-enhanced with concise atmospheric touches (1-5 words)
+- **Layout**: 4-column responsive grid with reserved space for future features
+- **Navigation**: Vertical chat tabs with entity images for better scalability
+- **UI patterns**: Full-width images, personality display, message bubbles, collapsible panels
+- Debug visibility: ChatHistoryViewer shows raw message data for inspection (collapsible)
 
 ## Implementation Notes
 - Chat manager handles all message operations (send, load, error)
@@ -116,3 +176,9 @@ The multi-spawn chat system demonstrates:
 - Chat history preserved during system prompt updates
 - Full-width image layout provides immersive chat experience
 - Personality display gives context for entity character
+- **Markdown rendering**: `react-markdown` processes message content
+- **Narrative styling**: Italics rendered smaller/lighter for visual hierarchy
+- **Text formatting**: `white-space: pre-wrap` preserves line breaks
+- **Responsive grid**: `minmax()` constrains chat width, flexible reserved space
+- **Vertical tabs**: No horizontal overflow, supports unlimited chat sessions
+- **Collapsible panels**: User controls workspace visibility

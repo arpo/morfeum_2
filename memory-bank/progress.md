@@ -102,7 +102,35 @@
 
 ## Recent Refactoring Achievements
 
-### Multi-Spawn Chat System Implementation (Latest)
+### UI Layout & Chat Enhancements (Latest)
+- **Markdown-Enhanced Chat Narrative**:
+  - Installed `react-markdown` package for message rendering
+  - Updated chat impersonation prompt with concise markdown formatting guidelines
+  - Narrative limited to 1-5 words per element (*soft laugh*, *pause*, *eyes narrow*)
+  - Styled italics to be subtle/secondary (90% size, 75% opacity)
+  - Dialogue-focused (70-80%), narrative as atmospheric accent (20-30%)
+- **4-Column Responsive Layout**:
+  - [Sidebar: 350px] | [Chat: 400-600px] | [Reserved: flex] | [History: 350px]
+  - Responsive breakpoints at 1600px, 1400px, 1024px
+  - Column 3 reserved for future panels
+  - Chat constrained to max 600px for better readability
+- **Collapsible Chat History Panel**:
+  - Expandable/collapsible like ActiveSpawnsPanel
+  - Message count badge
+  - Collapsed by default to maximize workspace
+  - Vertical detail display (not side-by-side)
+- **Vertical Chat Tabs**:
+  - Replaced horizontal tabs with vertical list
+  - Entity images (48x48px) or letter placeholders
+  - No horizontal overflow with unlimited sessions
+  - "Chat Sessions" header panel
+- **Text Formatting Fixes**:
+  - `white-space: pre-wrap` for line break preservation
+  - Vertical stacking for ChatHistoryViewer details
+  - Proper markdown paragraph spacing
+- **Files Modified**: 9 files total (prompt, chat components, layout)
+
+### Multi-Spawn Chat System Implementation (Previous)
 - **Functional Chat**: Complete message exchange with Gemini AI
 - **Chat Manager Store**: sendMessage, setLoading, setError, entityPersonality field
 - **Enhanced System Prompts**: Deep profile data (16 fields) updates seamlessly
