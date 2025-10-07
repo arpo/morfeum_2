@@ -37,7 +37,8 @@ Field hints:
   - Describe the creature's outfit in layered detail — clothing, colors, materials, patterns, accessories, and footwear.
 
 - [personality]: 
-  - Describe internal traits, temperament, and social behavior.
+  - Describe internal traits, temperament, and social behavior. Sexual orientation: hetero, homo, bi, asexual. 
+
 
 - [presence]: 
   - Describe emotional temperature — what others *feel* in their vicinity.

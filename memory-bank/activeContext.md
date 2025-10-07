@@ -5,7 +5,44 @@ Entity generation pipeline with deep profile enrichment completed. Four-phase pr
 
 ## Recent Changes
 
-### Entity Generation Deep Profile JSON Parsing (Latest)
+### Prompt Module Refactoring (Latest)
+1. **Modular Prompt Structure Implemented**:
+   - Refactored monolithic `packages/backend/src/prompts/languages/en.ts` (440+ lines)
+   - Split into 9 focused modules following project architectural patterns
+   - Created `en/` directory with single-responsibility files
+   - All files now within 50-300 line size limits
+
+2. **New Directory Structure**:
+   ```
+   packages/backend/src/prompts/languages/en/
+   ├── index.ts                      # Aggregates exports (25 lines)
+   ├── constants.ts                  # Core constants (11 lines)
+   ├── chatSystemMessage.ts          # Simple message (6 lines)
+   ├── chatCharacterImpersonation.ts # Chat prompt (42 lines)
+   ├── entitySeedGeneration.ts       # Seed generation (59 lines)
+   ├── entityImageGeneration.ts      # Image generation (33 lines)
+   ├── visualAnalysis.ts             # Visual analysis (61 lines)
+   ├── deepProfileEnrichment.ts      # Deep profile (161 lines)
+   └── sampleEntityPrompts.ts        # Sample prompts (51 lines)
+   ```
+
+3. **Benefits Achieved**:
+   - Each prompt in its own file with single responsibility
+   - Removed duplication in deepProfileEnrichment (field definitions were repeated twice)
+   - Fixed TypeScript errors (escaped apostrophes in sample prompts)
+   - Same public API - no breaking changes to consumers
+   - Follows same pattern as MZOO service refactoring documented in systemPatterns.md
+   - Average file size: ~50 lines (down from 440+)
+   - Largest file: 161 lines (deepProfileEnrichment, still well under 300 limit)
+
+4. **Implementation Details**:
+   - Constants (morfeumVibes, qualityPrompt, blackListCharacterNames) extracted to shared file
+   - Each prompt function in its own module with clear documentation
+   - Index.ts aggregates all exports into `en` object matching PromptTemplates interface
+   - Parent index.ts import path unchanged (`./languages/en` resolves to new directory)
+   - Build verification: Backend compiles successfully with zero errors
+
+### Entity Generation Deep Profile JSON Parsing (Previous)
 1. **Deep Profile JSON Conversion**:
    - Switched from regex field markers to JSON format
    - Updated `deepProfileEnrichment` prompt to explicitly request JSON
