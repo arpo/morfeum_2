@@ -17,7 +17,8 @@ export const entityImageGeneration = (
 
 Original user description: "${originalPrompt}"
 
-Half portrait of ${name}, looking at the camera.
+Half portrait of ${name}, Centered composition, upper body facing directly toward the viewer, head aligned, eyes meeting the camera lens.
+
 
 Look: ${looks}. 
 

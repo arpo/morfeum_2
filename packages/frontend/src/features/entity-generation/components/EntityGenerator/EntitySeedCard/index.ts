@@ -1,0 +1,1 @@
+export { EntitySeedCard } from './EntitySeedCard';

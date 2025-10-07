@@ -1,0 +1,1 @@
+export { DeepProfileCard } from './DeepProfileCard';
