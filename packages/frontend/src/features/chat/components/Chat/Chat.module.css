@@ -77,6 +77,27 @@
   white-space: pre-wrap;
 }
 
+/* Style markdown elements */
+.messageContent p {
+  margin: 0;
+}
+
+/* Style narrative text (italics) to be subtle and secondary */
+.messageContent em {
+  font-style: italic;
+  font-size: 0.9em;
+  opacity: 0.75;
+  color: inherit;
+}
+
+.assistantWrapper .messageContent em {
+  color: var(--color-text-secondary);
+}
+
+.userWrapper .messageContent em {
+  opacity: 0.85;
+}
+
 .userWrapper .messageContent {
   background-color: #3b82f6;
   color: white;

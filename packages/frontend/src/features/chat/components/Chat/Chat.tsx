@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Button, LoadingSpinner } from '@/components/ui';
 import type { ChatLogicReturn } from './types';
 import styles from './Chat.module.css';
@@ -64,7 +65,7 @@ export function Chat({ chatLogic }: ChatProps) {
                 {message.role === 'user' ? 'You' : state.entityName}
               </div>
               <div className={styles.messageContent}>
-                {message.content}
+                <ReactMarkdown>{message.content}</ReactMarkdown>
               </div>
             </div>
           </div>
