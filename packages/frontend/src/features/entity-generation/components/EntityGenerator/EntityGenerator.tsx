@@ -13,7 +13,7 @@ export function EntityGenerator({ entityLogic }: EntityGeneratorProps) {
     <div className={styles.container}>
       <div className={styles.inputSection}>
         <label className={styles.label}>
-          Character Description
+          Character Description 2
         </label>
         <textarea
           className={styles.textarea}

@@ -221,9 +221,9 @@ router.post('/entity/generate-image', asyncHandler(async (req: Request, res: Res
 
   const imagePrompt = getPrompt('entityImageGeneration', 'en')(originalPrompt, name, looks, wearing, personality, presence, setting);
 
-  console.log('=== IMAGE GENERATION PROMPT ===');
-  console.log(imagePrompt);
-  console.log('==============================');
+  // console.log('=== IMAGE GENERATION PROMPT ===');
+  // console.log(imagePrompt);
+  // console.log('==============================');
 
   const imageResult = await mzooService.generateImage(
     (req as any).mzooApiKey,
