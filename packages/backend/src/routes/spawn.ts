@@ -6,7 +6,7 @@ import { Router, Request, Response } from 'express';
 import { HTTP_STATUS } from '../config';
 import { asyncHandler } from '../middleware';
 import { validateMzooApiKey } from '../middleware/mzooAuth';
-import { createSpawnManager } from '../services/spawnManager';
+import { createSpawnManager, SpawnProcess } from '../services/spawn';
 import { eventEmitter } from '../services/eventEmitter';
 
 const router = Router();
@@ -114,7 +114,7 @@ router.get('/active', asyncHandler(async (req: Request, res: Response) => {
     message: 'Active spawn processes retrieved',
     data: {
       count: activeProcesses.length,
-      processes: activeProcesses.map(p => ({
+      processes: activeProcesses.map((p: SpawnProcess) => ({
         id: p.id,
         prompt: p.prompt,
         status: p.status,
