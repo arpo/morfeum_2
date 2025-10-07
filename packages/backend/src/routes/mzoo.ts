@@ -388,24 +388,35 @@ router.post('/entity/enrich-profile', asyncHandler(async (req: Request, res: Res
       return;
     }
 
-    // Parse the response text to extract field values
+    // Parse the response text to extract JSON
     const responseText = result.data.text;
-    const profile: any = {};
-
-    // Extract fields using regex patterns
-    const fields = [
-      'name', 'looks', 'wearing', 'face', 'body', 'hair',
-      'specificDetails', 'style', 'personality', 'voice', 'speechStyle',
-      'gender', 'nationality', 'fictional', 'copyright', 'tags'
-    ];
-
-    fields.forEach(field => {
-      const regex = new RegExp(`\\[${field}\\]\\s*([\\s\\S]*?)(?=\\n\\[|$)`, 'i');
-      const match = responseText.match(regex);
-      if (match && match[1]) {
-        profile[field] = match[1].trim();
+    
+    console.log('=== RAW LLM RESPONSE ===');
+    console.log(responseText);
+    console.log('=======================');
+    
+    let profile;
+    try {
+      // Extract JSON from the text response (same as seed generation)
+      const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        profile = JSON.parse(jsonMatch[0]);
+      } else {
+        throw new Error('No JSON found in response');
       }
-    });
+    } catch (parseError) {
+      res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+        message: 'Failed to parse deep profile JSON',
+        error: 'Response was not valid JSON',
+        rawResponse: responseText,
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+
+    console.log('=== PARSED PROFILE ===');
+    console.log(JSON.stringify(profile, null, 2));
+    console.log('=====================');
 
     res.status(HTTP_STATUS.OK).json({
       message: 'Deep profile enrichment completed successfully',

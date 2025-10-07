@@ -10,56 +10,21 @@ export function App() {
   const entityLogic = useEntityGeneratorLogic();
   const lastInitializedEntity = useRef<string | null>(null);
 
-  // Auto-initialize chat when entity generation is complete (with deep profile)
+  // Initialize chat immediately with seed data
   useEffect(() => {
     const { generatedSeed } = entityLogic.state;
     
-    if (generatedSeed && generatedSeed.deepProfile) {
-      // Check if we've already initialized with this entity
-      const entityKey = `${generatedSeed.name}-${generatedSeed.imageUrl}-profile`;
+    if (generatedSeed && !lastInitializedEntity.current) {
+      lastInitializedEntity.current = generatedSeed.name;
       
-      if (lastInitializedEntity.current !== entityKey) {
-        lastInitializedEntity.current = entityKey;
-        
-        // Format deep profile for chat initialization
-        const profile = generatedSeed.deepProfile;
-        const formattedProfile = `Name: ${profile.name}
-
-Appearance: ${profile.looks}
-
-Wearing: ${profile.wearing}
-
-Face: ${profile.face}
-
-Hair: ${profile.hair}
-
-Body: ${profile.body}
-
-Specific Details: ${profile.specificDetails}
-
-Style: ${profile.style}
-
-Personality: ${profile.personality}
-
-Voice: ${profile.voice}
-
-Speech Style: ${profile.speechStyle}
-
-Gender: ${profile.gender}
-
-Nationality: ${profile.nationality}
-
-Tags: ${profile.tags}`;
-        
-        // Initialize chat with enriched profile
-        chatLogic.handlers.initializeWithEntity({
-          name: generatedSeed.name,
-          looks: formattedProfile,
-          wearing: '',
-          personality: '',
-          imageUrl: generatedSeed.imageUrl
-        });
-      }
+      // Initialize with basic seed data immediately
+      chatLogic.handlers.initializeWithEntity({
+        name: generatedSeed.name,
+        looks: generatedSeed.looks,
+        wearing: generatedSeed.wearing,
+        personality: generatedSeed.personality,
+        imageUrl: generatedSeed.imageUrl
+      });
     }
   }, [entityLogic.state.generatedSeed, chatLogic.handlers]);
 

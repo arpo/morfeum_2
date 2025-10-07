@@ -52,6 +52,10 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
 
       const result = await response.json();
       
+      console.log('=== SEED DATA ===');
+      console.log('Seed Data:', result.data);
+      console.log('================');
+      
       // Set seed without image first
       setGeneratedSeed(result.data);
       setLoading(false);
@@ -125,6 +129,11 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
                 
                 if (enrichResponse.ok) {
                   const enrichResult = await enrichResponse.json();
+                  
+                  console.log('=== DEEP PROFILE DATA ===');
+                  console.log('Deep Profile Data:', enrichResult.data);
+                  console.log('========================');
+                  
                   // Update seed with deep profile
                   setGeneratedSeed(prev => prev ? {
                     ...prev,
