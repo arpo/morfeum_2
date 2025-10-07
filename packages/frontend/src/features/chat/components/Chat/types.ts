@@ -12,6 +12,7 @@ export interface ChatState {
   error: string | null;
   entityImage: string | null;
   entityName: string | null;
+  entityPersonality: string | null;
 }
 
 export interface ChatHandlers {

@@ -5,27 +5,31 @@
   height: 100%;
 }
 
-.entityBanner {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
+.entityHeaderImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.entityInfo {
   padding: var(--spacing-md);
   background-color: var(--color-bg-secondary);
   border-bottom: 1px solid var(--color-border);
 }
 
-.entityImage {
-  width: 60px;
-  height: 60px;
-  border-radius: var(--radius-md);
-  object-fit: cover;
-  border: 2px solid var(--color-border);
-}
-
 .entityName {
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
   font-weight: 600;
   color: var(--color-text);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.entityPersonality {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
 }
 
 .messagesContainer {

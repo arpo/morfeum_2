@@ -15,6 +15,7 @@ export interface ChatMessage {
 export interface ChatSession {
   spawnId: string;
   entityName: string;
+  entityPersonality?: string;
   entityImage?: string;
   systemPrompt: string;
   messages: ChatMessage[];
@@ -53,6 +54,7 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
     const chatSession: ChatSession = {
       spawnId,
       entityName: seed.name,
+      entityPersonality: seed.personality,
       systemPrompt: systemMessage.content,
       messages: [systemMessage]
     };

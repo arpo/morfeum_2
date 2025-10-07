@@ -33,7 +33,8 @@ export function useChatLogic(): ChatLogicReturn {
       loading: activeChatSession?.loading || false,
       error: activeChatSession?.error || null,
       entityImage: activeChatSession?.entityImage || null,
-      entityName: activeChatSession?.entityName || null
+      entityName: activeChatSession?.entityName || null,
+      entityPersonality: activeChatSession?.entityPersonality || null
     },
     handlers: {
       setInputValue,

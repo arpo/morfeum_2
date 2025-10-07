@@ -28,14 +28,20 @@ export function Chat({ chatLogic }: ChatProps) {
 
   return (
     <div className={styles.container}>
-      {state.entityImage && state.entityName && (
-        <div className={styles.entityBanner}>
-          <img 
-            src={state.entityImage} 
-            alt={state.entityName}
-            className={styles.entityImage}
-          />
-          <div className={styles.entityName}>Chatting with {state.entityName}</div>
+      {state.entityImage && (
+        <img 
+          src={state.entityImage} 
+          alt={state.entityName || 'Entity'}
+          className={styles.entityHeaderImage}
+        />
+      )}
+      
+      {state.entityName && (
+        <div className={styles.entityInfo}>
+          <h2 className={styles.entityName}>{state.entityName}</h2>
+          {state.entityPersonality && (
+            <p className={styles.entityPersonality}>{state.entityPersonality}</p>
+          )}
         </div>
       )}
       
