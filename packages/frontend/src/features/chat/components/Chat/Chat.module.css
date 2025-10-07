@@ -74,6 +74,7 @@
   font-size: var(--text-sm);
   line-height: 1.5;
   word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .userWrapper .messageContent {
