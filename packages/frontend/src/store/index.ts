@@ -6,19 +6,13 @@ import { createChatManagerSlice, type ChatManagerSlice } from './slices/chatMana
 
 // Combined store interface
 export interface CombinedStore extends SpawnManagerSlice, ChatManagerSlice {
-  // Add global state here as needed
-  theme: 'light' | 'dark';
-  setTheme: (theme: 'light' | 'dark') => void;
+  // Theme is handled by separate useThemeStore for persistence
 }
 
 // Create the store with slices
 export const useStore = create<CombinedStore>()(
   devtools(
     (...a) => ({
-      // Global state
-      theme: 'light',
-      setTheme: (theme) => a[0]({ theme }),
-      
       // Spawn manager slice
       ...createSpawnManagerSlice(...a),
       

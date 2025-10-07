@@ -3,7 +3,10 @@
 // Only export icons that are actually used in the application
 
 export {
-  IconLoader2
+  IconLoader2,
+  IconSun,
+  IconMoon,
+  IconSettings
 } from '@tabler/icons-react';
 
 // Icon type for string references

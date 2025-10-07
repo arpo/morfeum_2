@@ -21,6 +21,12 @@
   gap: var(--spacing-md);
 }
 
+.themeToggleContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-sm);
+}
+
 .chatSection {
   grid-column: 2;
   grid-row: 1;

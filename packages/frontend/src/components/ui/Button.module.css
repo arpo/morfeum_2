@@ -41,7 +41,8 @@
 }
 
 .secondary:hover:not(:disabled) {
-  background-color: #4b5563;
+  background-color: var(--color-secondary);
+  opacity: 0.8;
 }
 
 .outline {

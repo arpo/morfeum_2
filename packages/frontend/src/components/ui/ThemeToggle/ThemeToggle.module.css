@@ -1,0 +1,85 @@
+/**
+ * Theme Toggle Component Styles
+ */
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-size: var(--text-sm);
+}
+
+.toggle:hover {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-primary);
+}
+
+.toggle:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: all var(--transition-normal);
+}
+
+.icon.sun {
+  color: #f59e0b;
+}
+
+.icon.moon {
+  color: #6366f1;
+}
+
+.icon.system {
+  color: var(--color-secondary);
+}
+
+.label {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* Dark mode specific adjustments */
+:root[data-theme="dark"] .toggle:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+/* Animation for theme switching */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon.rotating {
+  animation: rotate 0.3s ease-in-out;
+}
+
+/* Compact variant */
+.toggle.compact {
+  padding: var(--spacing-xs);
+  border: none;
+  background: transparent;
+}
+
+.toggle.compact .label {
+  display: none;
+}
+
+.toggle.compact:hover {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-full);
+}
