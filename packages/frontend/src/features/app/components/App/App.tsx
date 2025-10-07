@@ -41,13 +41,15 @@ export function App() {
       
       {/* Column 1 - Left Sidebar (Controls) */}
       <aside className={styles.sidebar}>
-        <div className={styles.themeToggleContainer}>
-          <ThemeToggle className="compact" />
-        </div>
         <SpawnInputBar />
         <ActiveSpawnsPanel />
         <ChatTabs />
       </aside>
+      
+      {/* Theme Toggle - Bottom Right Corner */}
+      <div className={styles.themeToggleContainer}>
+        <ThemeToggle className="compact" />
+      </div>
       
       {/* Column 2 - Active Chat */}
       {activeChatSession && (

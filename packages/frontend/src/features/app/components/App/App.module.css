@@ -22,9 +22,15 @@
 }
 
 .themeToggleContainer {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: var(--spacing-sm);
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  z-index: 1000;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-xs);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
 }
 
 .chatSection {
@@ -101,5 +107,18 @@
   .historyPanel {
     grid-column: 1;
     grid-row: 3;
+  }
+  
+  .themeToggleContainer {
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .themeToggleContainer {
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    padding: var(--spacing-xs);
   }
 }

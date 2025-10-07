@@ -43,6 +43,49 @@ ComponentName/
 - **Never**: Hardcode colors, spacing, or sizes
 - **Always**: Use CSS custom properties (var(--token-name))
 - **Consistent**: Follow design token naming conventions
+- **Theme Support**: Use theme-aware tokens for dark/light mode compatibility
+
+### Dark Mode Pattern
+```css
+/* tokens.module.css - Theme tokens */
+:root {
+  /* Light theme colors */
+  --color-bg: #ffffff;
+  --color-text: #1f2937;
+  --color-bg-secondary: #f9fafb;
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors */
+  --color-bg: #111827;
+  --color-text: #f9fafb;
+  --color-bg-secondary: #1f2937;
+}
+
+/* Component styles */
+.component {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+```
+
+### Theme Management Pattern
+```typescript
+// themeSlice.ts - Zustand theme store
+interface ThemeState {
+  theme: 'light' | 'dark' | 'system';
+  setTheme: (theme: 'light' | 'dark' | 'system') => void;
+}
+
+// Component integration
+import { useThemeStore } from '@/store/slices/themeSlice';
+
+export function ThemeToggle() {
+  const { theme, setTheme } = useThemeStore();
+  // Theme toggle logic
+}
+```
 
 ### Component Pattern
 ```typescript
