@@ -5,6 +5,37 @@ Multi-spawn chat system with markdown-enhanced narrative responses, 4-column res
 
 ## Recent Changes
 
+### Deep Profile Enrichment Enhancement (Latest - Just Completed)
+1. **Original Prompt Integration**:
+   - Modified `deepProfileEnrichment.ts` to accept `originalPrompt` as third parameter
+   - Updated function signature: `(seedJson: string, visionJson: string, originalPrompt: string) => string`
+   - Integrated original user request into prompt template for better context
+   - AI now has access to user's original intent when enriching character profiles
+
+2. **Pipeline Stage Updates**:
+   - Updated `pipelineStages.ts` `enrichProfile()` function to extract and pass `seed.originalPrompt`
+   - Graceful fallback: `'No specific request provided'` if prompt missing
+   - Maintains consistency with other pipeline stages
+
+3. **Type Safety Improvements**:
+   - Updated `types.ts` interface: `deepProfileEnrichment: (seedJson: string, visionJson: string, originalPrompt: string) => string`
+   - Updated profile route endpoint to accept `originalPrompt` in request body
+   - Full TypeScript compilation success with zero errors
+
+4. **Benefits**:
+   - Better character consistency with user's original request
+   - More context for nuanced character development
+   - Enhanced AI understanding of user intent
+   - Backward compatible with existing code
+
+5. **Files Modified (4 total)**:
+   - `packages/backend/src/prompts/languages/en/deepProfileEnrichment.ts` - Added originalPrompt parameter
+   - `packages/backend/src/services/spawn/pipelineStages.ts` - Pass originalPrompt to prompt function
+   - `packages/backend/src/prompts/types.ts` - Updated type definition
+   - `packages/backend/src/routes/mzoo/profile.ts` - Accept originalPrompt in API endpoint
+
+## Recent Changes (Continued)
+
 ### UI Layout & Chat Enhancements (Latest)
 1. **Markdown-Enhanced Chat Narrative**:
    - Installed `react-markdown` for message content rendering

@@ -102,7 +102,26 @@
 
 ## Recent Refactoring Achievements
 
-### UI Layout & Chat Enhancements (Latest)
+### Deep Profile Enrichment Enhancement (Latest - Just Completed)
+- **Original Prompt Integration**:
+  - Modified `deepProfileEnrichment.ts` to accept `originalPrompt` as third parameter
+  - Updated function signature: `(seedJson: string, visionJson: string, originalPrompt: string) => string`
+  - Integrated original user request into prompt template for better AI context
+- **Pipeline Stage Updates**:
+  - Updated `pipelineStages.ts` enrichProfile() to extract and pass `seed.originalPrompt`
+  - Graceful fallback to 'No specific request provided' if prompt missing
+- **Type Safety Improvements**:
+  - Updated `types.ts` interface for deepProfileEnrichment function
+  - Updated profile route endpoint to accept `originalPrompt` in request body
+  - Full TypeScript compilation success with zero errors
+- **Benefits**:
+  - Better character consistency with user's original request
+  - More context for nuanced character development
+  - Enhanced AI understanding of user intent
+  - Backward compatible with existing code
+- **Files Modified**: 4 files total (prompt, pipeline, types, route)
+
+### UI Layout & Chat Enhancements (Previous)
 - **Markdown-Enhanced Chat Narrative**:
   - Installed `react-markdown` package for message rendering
   - Updated chat impersonation prompt with concise markdown formatting guidelines
