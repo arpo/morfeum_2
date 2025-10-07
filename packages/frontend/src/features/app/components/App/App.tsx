@@ -24,18 +24,14 @@ export function App() {
   return (
     <div className={styles.container}>
       
-      {/* Spawn Input Section */}
-      <section className={styles.spawnInputSection}>
+      {/* Left Sidebar - All Controls */}
+      <aside className={styles.sidebar}>
         <SpawnInputBar />
-      </section>
-
-      {/* Active Spawns Panel (only shows when spawns are active) */}
-      <ActiveSpawnsPanel />
-
-      {/* Chat Tabs Section */}
-      <ChatTabs />
+        <ActiveSpawnsPanel />
+        <ChatTabs />
+      </aside>
       
-      {/* Chat Section */}
+      {/* Center - Active Chat */}
       {activeChatSession && (
         <section className={styles.chatSection}>
           <Card>
@@ -44,13 +40,11 @@ export function App() {
         </section>
       )}
       
-      {/* Chat History Section (Debug View) */}
+      {/* Right Panel - Chat History (Collapsible) */}
       {activeChatSession && (
-        <section className={styles.contentSection}>
-          <Card>
-            <ChatHistoryViewer messages={activeChatSession.messages} />
-          </Card>
-        </section>
+        <aside className={styles.historyPanel}>
+          <ChatHistoryViewer messages={activeChatSession.messages} />
+        </aside>
       )}
     </div>
   );

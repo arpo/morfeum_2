@@ -1,27 +1,57 @@
 /* ChatHistoryViewer Component Styles - PURE CSS ONLY */
 .container {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.header {
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.panelHeader:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.panelTitle {
   font-size: var(--text-md);
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: var(--spacing-sm);
-  text-align: left;
 }
 
-.count {
-  color: var(--color-text-secondary);
-  font-weight: 400;
+.panelBadge {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
   font-size: var(--text-sm);
+  font-weight: 600;
+  margin-left: var(--spacing-sm);
+}
+
+.toggleIcon {
+  font-size: var(--text-lg);
+  transition: transform 0.2s;
+}
+
+.toggleIcon.collapsed {
+  transform: rotate(-90deg);
 }
 
 .listContainer {
   flex: 1;
   overflow-y: auto;
+  padding: var(--spacing-md);
 }
 
 .messageItem {

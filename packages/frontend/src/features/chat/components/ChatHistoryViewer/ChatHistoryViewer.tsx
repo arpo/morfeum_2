@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useChatHistoryLogic } from './useChatHistoryLogic';
 import type { ChatHistoryViewerProps } from './types';
 import styles from './ChatHistoryViewer.module.css';
 
 export function ChatHistoryViewer({ messages }: ChatHistoryViewerProps) {
+  const [isPanelExpanded, setIsPanelExpanded] = useState(false);
   const { expandedItems, toggleItem } = useChatHistoryLogic();
 
   const getRoleClassName = (role: string) => {
@@ -14,22 +16,27 @@ export function ChatHistoryViewer({ messages }: ChatHistoryViewerProps) {
     }
   };
 
-  if (messages.length === 0) {
-    return (
-      <div className={styles.container}>
-        <h3 className={styles.header}>Chat History</h3>
-        <div className={styles.emptyState}>No messages yet</div>
-      </div>
-    );
-  }
+  const togglePanel = () => {
+    setIsPanelExpanded(!isPanelExpanded);
+  };
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.header}>
-        Chat History <span className={styles.count}>[{messages.length}]</span>
-      </h3>
+      <div className={styles.panelHeader} onClick={togglePanel}>
+        <div>
+          <span className={styles.panelTitle}>Chat History</span>
+          <span className={styles.panelBadge}>{messages.length}</span>
+        </div>
+        <span className={`${styles.toggleIcon} ${!isPanelExpanded ? styles.collapsed : ''}`}>
+          ▼
+        </span>
+      </div>
+      {isPanelExpanded && messages.length === 0 && (
+        <div className={styles.emptyState}>No messages yet</div>
+      )}
       
-      <div className={styles.listContainer}>
+      {isPanelExpanded && messages.length > 0 && (
+        <div className={styles.listContainer}>
         {messages.map((message, index) => {
           const isExpanded = expandedItems[message.id];
           
@@ -73,7 +80,8 @@ export function ChatHistoryViewer({ messages }: ChatHistoryViewerProps) {
             </div>
           );
         })}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
