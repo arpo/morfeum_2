@@ -7,6 +7,7 @@ import { API_ROUTES } from '../config';
 import { apiRouter } from './api';
 import { healthRouter } from './health';
 import { mzooRouter } from './mzoo';
+import { spawnRouter } from './spawn';
 
 /**
  * Configure all application routes
@@ -18,6 +19,9 @@ export const configureRoutes = (app: any): void => {
   // MZOO API routes
   app.use(`${API_ROUTES.ROOT}/mzoo`, mzooRouter);
   
+  // Spawn management routes
+  app.use(`${API_ROUTES.ROOT}/spawn`, spawnRouter);
+  
   // Health check routes
   app.use(API_ROUTES.HEALTH, healthRouter);
 };
@@ -25,7 +29,7 @@ export const configureRoutes = (app: any): void => {
 /**
  * Export individual routers for testing or modular use
  */
-export { apiRouter, healthRouter, mzooRouter };
+export { apiRouter, healthRouter, mzooRouter, spawnRouter };
 
 /**
  * Get all available routes information
