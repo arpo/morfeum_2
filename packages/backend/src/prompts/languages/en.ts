@@ -308,13 +308,16 @@ Rules & Best Practices:
 Given the image and the seed context (${looks}, ${wearing}),
 describe what is visually observable in short, factual sentences.
 
-Return a JSON object with these keys:
+IMPORTANT: Return ONLY a valid JSON object with these exact keys:
 {
   "face": "...",
   "hair": "...",
   "body": "...",
   "specificdetails": "..."
 }
+
+Do not include any markdown formatting, code blocks, or explanatory text.
+Return only the JSON object.
 
 [face]  
 Describe facial features: shape, wrinkles, scars, facial hair, etc.  

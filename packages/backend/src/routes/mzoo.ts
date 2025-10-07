@@ -312,9 +312,11 @@ router.post('/entity/analyze-image', asyncHandler(async (req: Request, res: Resp
     }
 
     // Parse the JSON response from vision API
+    const visionResponseText = visionResult.data.text;
+    
     let parsedAnalysis;
     try {
-      const jsonMatch = visionResult.data.text.match(/\{[\s\S]*\}/);
+      const jsonMatch = visionResponseText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
         parsedAnalysis = JSON.parse(jsonMatch[0]);
       } else {
@@ -324,7 +326,7 @@ router.post('/entity/analyze-image', asyncHandler(async (req: Request, res: Resp
       res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
         message: 'Failed to parse visual analysis JSON',
         error: 'Response was not valid JSON',
-        rawResponse: visionResult.data.text,
+        rawResponse: visionResponseText,
         timestamp: new Date().toISOString(),
       });
       return;
@@ -391,10 +393,6 @@ router.post('/entity/enrich-profile', asyncHandler(async (req: Request, res: Res
     // Parse the response text to extract JSON
     const responseText = result.data.text;
     
-    console.log('=== RAW LLM RESPONSE ===');
-    console.log(responseText);
-    console.log('=======================');
-    
     let profile;
     try {
       // Extract JSON from the text response (same as seed generation)
@@ -413,10 +411,6 @@ router.post('/entity/enrich-profile', asyncHandler(async (req: Request, res: Res
       });
       return;
     }
-
-    console.log('=== PARSED PROFILE ===');
-    console.log(JSON.stringify(profile, null, 2));
-    console.log('=====================');
 
     res.status(HTTP_STATUS.OK).json({
       message: 'Deep profile enrichment completed successfully',

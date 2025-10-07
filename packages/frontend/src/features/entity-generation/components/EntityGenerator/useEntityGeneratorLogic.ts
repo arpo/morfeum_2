@@ -105,6 +105,10 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
               const analysisResult = await analysisResponse.json();
               const visualAnalysis = analysisResult.data;
               
+              console.log('=== VISUAL ANALYSIS DATA ===');
+              console.log('Visual Analysis:', visualAnalysis);
+              console.log('===========================');
+              
               // Update seed with visual analysis
               setGeneratedSeed(prev => prev ? {
                 ...prev,
