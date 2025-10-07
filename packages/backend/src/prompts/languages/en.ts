@@ -10,6 +10,7 @@ export const en: PromptTemplates = {
 
   qualityPrompt: 'best quality, 4k, ultra-detailed, hyper-realistic, vivid color grading, high contrast, glowing highlights, dynamic lighting, volumetric glow, crisp focus',
 
+  // https://deepinfra.com/blog/flux1-dev-guide
   entityImageGeneration: (
   originalPrompt: string,
   name: string,
