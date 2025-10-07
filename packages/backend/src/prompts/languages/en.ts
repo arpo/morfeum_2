@@ -5,6 +5,7 @@
 import type { PromptTemplates } from '../types';
 
 export const en: PromptTemplates = {
+  blackListCharacterNames: `Elara, Kaelen, Zephyr, Lyra, Anya Petrova`,
   morfeumVibes: 'Morfeum aesthetic — hyper-realistic rendering with vibrant, high-contrast colors, sharp dynamic lighting, glowing bioluminescent accents, and richly saturated tones. Surfaces shimmer with life; darkness carries depth, not gloom. The world feels intensely present, as if reality is turned one notch brighter.',
 
   qualityPrompt: 'best quality, 4k, ultra-detailed, hyper-realistic, vivid color grading, high contrast, glowing highlights, dynamic lighting, volumetric glow, crisp focus',
@@ -21,7 +22,8 @@ export const en: PromptTemplates = {
 
 Original user description: "${originalPrompt}"
 
-Half portrait of ${name}, looking at the camera — detailed face, expressive eyes, and finely rendered clothing.
+Half portrait of ${name}, looking at the camera.
+
 Look: ${looks}. 
 
 wearing: ${wearing}.
@@ -35,11 +37,10 @@ ${personality ? 'Their demeanor reflects: ' + personality + '.' : ''}
 ${en.qualityPrompt}`,
 
 
-  entitySeedGeneration: (textPrompt: string) => `Your task is to generate a concise, visually focused character seed that captures the described being — human, supernatural, or artificial.
+  entitySeedGeneration: (textPrompt: string) => `Generate a concise, visually focused character seed based on the description below.
 
 Return only valid JSON with these exact fields:
 {
-  "originalPrompt": "${textPrompt}",
   "name": "...",
   "looks": "...",
   "wearing": "...",
@@ -48,47 +49,48 @@ Return only valid JSON with these exact fields:
   "setting": "..."
 }
 
-Guidelines:
-- If the being described contains even a hint of the unreal (magic, divinity, technology, mythology, dream, otherworld), expand that visually and clearly.
-- Keep descriptions **visual and physical**, but allow subtle exaggeration, glow, or impossible qualities when appropriate.
-- Avoid purely figurative language — describe what could be *seen or captured by a camera* in this world or a heightened one.
-- 1–3 sentences per field.
+Core rule:
+- Favor striking, image-ready traits over realism. If something sounds even slightly unreal, show it clearly.
 
-Field definitions:
+Field hints:
 
-- [name]:
-  - Human: realistic full name.
-  - Non-human: short evocative name or title that fits its nature.
-  - Avoid clichés unless explicitly given.
-  - blacklisted names: Elara, Kaelen, Zephyr, Lyra, Anya Petrova
+- [name]: 
+  - Human → plausible full name.
+  - Non-human → short evocative name or title (avoid common fantasy tropes).
+  IMPORTANT: don't use and of these names: ${en.blackListCharacterNames}
 
 - [looks]:
-  - Describe age, form, color, and any inhuman or symbolic traits.
-  - Use **material cues** (glass skin, molten eyes, living metal) to signal the otherworldly.
-  - Avoid story-like phrasing.
+- Describe the character’s visible, physical traits — what a lens would capture.
+- Include age, skin texture, facial structure, eye color, hair (only if essential), and any unique anatomical or non-human details.
+- Show age through visible signs — wrinkles, sagging skin, gray hair, posture, or weathered texture — rather than just stating an age.
+- If supernatural or artificial, describe the material of the form (stone, glass, metal, energy) and how light interacts with it.
+- Keep it short, visual, and concrete — no emotions, no metaphors.
 
-- [wearing]:
-  - Clothing or body covering: color, material, fit, and detail.
-  - If part of their body *is* their attire, describe it that way.
-  - Keep the tone grounded in texture and light.
+- [wearing]: 
+  - Describe the creature’s outfit in layered detail — clothing, colors, materials, patterns, accessories, and footwear.
 
-- [personality]:
-  - A few words on temperament, tone of speech, or emotional pattern.
-  - Example: “Calmly persuasive, always a half-smile away from manipulation.”
+- [personality]: 
+  - Describe internal traits, temperament, and social behavior.
 
-- [presence]:
-  - The emotional or sensory impression they leave — warmth, tension, calm, unease.
-  - Example: “Feels both magnetic and faintly dangerous.”
+- [presence]: 
+  - Describe emotional temperature — what others *feel* in their vicinity.
 
-- [setting]:
-  - Simple spatial and lighting cues: color of light, mood of environment.
-  - Example: “Low amber light spilling across dark marble; faint smoke drifting through the air.”
+- [setting]: 
+  - One line of light, color, and spatial atmosphere.
 
-If the prompt suggests the surreal, let it show.  
-If it suggests the mundane, keep it natural.
+IMPORTANT:
+If created character is non-human or fantastical (e.g., alien, elf, robot), don't describe them as human.
+If details are missing, invent them to create a vivid, image-ready character.
 
-Here's the text prompt to base the character on:
-${textPrompt}`,
+If human include race and skin color and gender.
+If age is not specified mention don't depict as a minor.
+
+Do not include any markdown formatting, code blocks, or explanatory text.
+Return only the JSON object.
+
+Input description:
+${textPrompt}`
+  ,
 
 
   chatSystemMessage: 'You are a helpful AI assistant.',

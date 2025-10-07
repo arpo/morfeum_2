@@ -16,6 +16,7 @@ export type PromptKey =
 export type Language = 'en';
 
 export interface PromptTemplates {
+  blackListCharacterNames: string;
   entitySeedGeneration: (textPrompt: string) => string;
   entityImageGeneration: (originalPrompt: string, name: string, looks: string, wearing: string, personality?: string, presence?: string, setting?: string) => string;
   morfeumVibes: string;
