@@ -22,13 +22,13 @@ export const en: PromptTemplates = {
 Original user description: "${originalPrompt}"
 
 Half portrait of ${name}, looking at the camera — detailed face, expressive eyes, and finely rendered clothing.
-${looks}. 
+Look: ${looks}. 
 
-${wearing}.
+wearing: ${wearing}.
 
-${presence ? presence + '.' : ''}
+${presence ? "presence: " + presence + '.' : ''}
 
-${setting ? setting + '.' : ''}
+${setting ? "setting: " + setting + '.' : ''}
 
 ${personality ? 'Their demeanor reflects: ' + personality + '.' : ''}
 
