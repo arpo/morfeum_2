@@ -1,9 +1,42 @@
 # Active Context
 
 ## Current Work Focus
-MZOO API integration successfully implemented with modular backend architecture. All MZOO endpoints organized in dedicated route file, following backend patterns and size limits. Three AI endpoints available: text generation (Gemini), vision analysis, and image generation (FAL Flux).
+Entity generation pipeline with deep profile enrichment completed. Four-phase progressive pipeline: Seed → Image → Visual Analysis → Deep Profile. All AI responses now use reliable JSON parsing. Chat initializes immediately with seed data.
 
 ## Recent Changes
+
+### Entity Generation Deep Profile JSON Parsing (Latest)
+1. **Deep Profile JSON Conversion**:
+   - Switched from regex field markers to JSON format
+   - Updated `deepProfileEnrichment` prompt to explicitly request JSON
+   - Prompt now includes: "IMPORTANT: Return ONLY a valid JSON object"
+   - Uses same reliable JSON.parse() approach as seed generation
+   - Removed fragile regex pattern matching
+
+2. **Visual Analysis JSON Improvements**:
+   - Updated `visualAnalysis` prompt to explicitly request JSON
+   - Added clear instructions: "Do not include markdown, code blocks, or explanatory text"
+   - Consistent JSON parsing across all AI operations
+
+3. **Console Logging for Debugging**:
+   - Frontend: Browser console logs for Seed, Visual Analysis, Deep Profile
+   - Backend: No terminal spam - logging removed
+   - All logging uses clear markers (=== SEED DATA ===, etc.)
+   - Easy debugging without cluttering terminal
+
+4. **Chat Integration Timing Fix**:
+   - Chat initializes immediately with seed data (doesn't wait for deep profile)
+   - Removed automatic chat update when deep profile completes
+   - Progressive experience: chat available as soon as seed generates
+   - User can interact while image/analysis/profile generate in background
+
+5. **Parsing Reliability**:
+   - All three AI operations now use JSON parsing (seed, visual analysis, deep profile)
+   - Consistent error handling with descriptive messages
+   - Raw response included in error messages for debugging
+   - Same pattern: extract JSON with regex, parse with JSON.parse()
+
+### MZOO API Routes Refactoring (Previous)
 
 ### Documentation: Adding New Services Guide (Latest)
 1. **Comprehensive Service Guide Added**:

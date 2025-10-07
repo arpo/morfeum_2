@@ -25,11 +25,24 @@
 - **API Endpoints**: 
   - Generic: /api, /api/info
   - MZOO AI: /api/mzoo/vision, /api/mzoo/gemini/text, /api/mzoo/fal-flux-srpo/generate
+  - Entity Generation: /api/mzoo/entity/generate-seed, /api/mzoo/entity/generate-image, /api/mzoo/entity/analyze-image, /api/mzoo/entity/enrich-profile
   - Health: /health, /health/detailed
 - **Monitoring**: Enhanced health checks with system metrics
 - **File Size Compliance**: All routes follow 100-200 line guidelines (api.ts: 45, mzoo.ts: 196, health.ts: 54)
 - **Environment Variables**: Dotenv integration for secure configuration
 - **External API Integration**: MZOO AI services with secure proxy pattern
+- **Centralized Prompts**: All AI prompts in packages/backend/src/prompts/ with type safety
+- **JSON Parsing**: Reliable JSON extraction and parsing for all AI responses
+
+### Entity Generation Pipeline
+- **Progressive Loading**: Four-phase pipeline (Seed → Image → Visual Analysis → Deep Profile)
+- **Seed Generation**: Character data with name, looks, wearing, personality
+- **Image Generation**: FAL Flux image generation from seed data
+- **Visual Analysis**: Gemini Vision API analyzing generated images
+- **Deep Profile**: Comprehensive character enrichment with 16 fields
+- **JSON Parsing**: All AI responses use reliable JSON.parse() instead of regex
+- **Frontend Logging**: Browser console debugging for seed, analysis, and profile data
+- **Chat Integration**: Immediate chat initialization with seed data (progressive experience)
 
 ## What's Left to Build 🚧
 - Additional UI components (Input, Modal, etc.)
@@ -73,7 +86,16 @@
 
 ## Recent Refactoring Achievements
 
-### MZOO Routes Refactoring (Latest)
+### Entity Generation JSON Parsing (Latest)
+- **Deep Profile Conversion**: Switched from regex field markers to JSON format
+- **Visual Analysis Enhancement**: Explicit JSON output instructions in prompts
+- **Parsing Reliability**: All three AI operations (seed, vision, profile) use consistent JSON parsing
+- **Console Logging**: Frontend browser console logging for debugging (no terminal spam)
+- **Chat Timing Fix**: Chat initializes immediately with seed data, doesn't wait for deep profile
+- **Error Handling**: Better error messages with raw response included for debugging
+- **Prompt System**: Centralized prompts in packages/backend/src/prompts/ with type safety
+
+### MZOO Routes Refactoring (Previous)
 - **Route Organization**: Created dedicated mzoo.ts (196 lines) for all MZOO endpoints
 - **Code Cleanup**: Removed test endpoint, reduced api.ts to 45 lines (generic routes only)
 - **Vision API**: Added POST /api/mzoo/vision endpoint for image analysis
