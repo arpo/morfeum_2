@@ -127,8 +127,9 @@
 
 .detailRow {
   display: flex;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
   line-height: 1.6;
   text-align: left;
 }
@@ -136,13 +137,12 @@
 .detailKey {
   color: #9333ea;
   font-weight: 600;
-  min-width: 100px;
 }
 
 .detailValue {
   color: var(--color-text);
-  word-break: break-all;
-  flex: 1;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 .emptyState {
