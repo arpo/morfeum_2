@@ -1,11 +1,47 @@
 # Active Context
 
 ## Current Work Focus
-Entity generation pipeline with deep profile enrichment completed. Four-phase progressive pipeline: Seed → Image → Visual Analysis → Deep Profile. All AI responses now use reliable JSON parsing. Chat initializes immediately with seed data.
+Component refactoring completed. EntityGenerator component successfully broken into 4 focused, reusable components. All components now comply with size limits and architectural patterns.
 
 ## Recent Changes
 
-### Prompt Module Refactoring (Latest)
+### Frontend Component Refactoring (Latest)
+1. **EntityGenerator Component Breakdown**:
+   - Refactored monolithic EntityGenerator.tsx from 231 lines to 89 lines
+   - Extracted 4 new focused components following single-responsibility principle
+   - All new components follow strict separation of concerns (markup, logic, styles)
+   - Each component has its own directory with .tsx, .module.css, and index.ts files
+
+2. **New Component Structure**:
+   ```
+   EntityGenerator/
+   ├── EntityGenerator.tsx (89 lines - coordinator)
+   ├── EntityGenerator.module.css (77 lines - shared styles)
+   ├── useEntityGeneratorLogic.ts (218 lines - unchanged)
+   ├── EntityInputSection/ (50 lines)
+   │   └── Input field and action buttons
+   ├── EntitySeedCard/ (56 lines)
+   │   └── Basic character seed display
+   ├── VisualAnalysisCard/ (40 lines)
+   │   └── Visual analysis results
+   └── DeepProfileCard/ (101 lines)
+       └── Comprehensive character profile
+   ```
+
+3. **Benefits Achieved**:
+   - EntityGenerator reduced by 62% (231→89 lines)
+   - All components now under 150 lines
+   - Improved reusability - cards can be used independently
+   - Better maintainability - easier to locate and modify features
+   - Follows architectural patterns consistently
+   - Build verified: TypeScript and Vite build passed successfully
+
+4. **CSS Fixes**:
+   - Fixed textarea width overflow in EntityInputSection
+   - Added `box-sizing: border-box` and `max-width: 100%`
+   - Proper container constraints maintained
+
+### Prompt Module Refactoring (Previous)
 1. **Modular Prompt Structure Implemented**:
    - Refactored monolithic `packages/backend/src/prompts/languages/en.ts` (440+ lines)
    - Split into 9 focused modules following project architectural patterns

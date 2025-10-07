@@ -17,16 +17,15 @@ export const entityImageGeneration = (
 
 Original user description: "${originalPrompt}"
 
-Half portrait of ${name}, Centered composition, upper body facing directly toward the viewer, head aligned, eyes meeting the camera lens.
+Half portrait of ${name}, Front-facing half-portrait, symmetrical posture, shoulders square to the viewer, making eye contact.”.
 
+Look: ${looks}.
 
-Look: ${looks}. 
+Wearing: ${wearing}.
 
-wearing: ${wearing}.
+${presence ? "Presence: " + presence + '.' : ''}
 
-${presence ? "presence: " + presence + '.' : ''}
-
-${setting ? "setting: " + setting + '.' : ''}
+${setting ? "Setting: " + setting + '.' : ''}
 
 ${personality ? 'Their demeanor reflects: ' + personality + '.' : ''}
 

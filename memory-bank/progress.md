@@ -86,7 +86,17 @@
 
 ## Recent Refactoring Achievements
 
-### Entity Generation JSON Parsing (Latest)
+### EntityGenerator Component Refactoring (Latest)
+- **Component Breakdown**: Refactored EntityGenerator.tsx from 231 lines to 89 lines (62% reduction)
+- **4 New Components Created**: EntityInputSection, EntitySeedCard, VisualAnalysisCard, DeepProfileCard
+- **Size Compliance**: All components now under 150 lines (largest: DeepProfileCard at 101 lines)
+- **Architecture Adherence**: Strict separation of markup (.tsx), logic (.ts), and styles (.module.css)
+- **Reusability**: Card components can be used independently across the application
+- **Maintainability**: Easier to locate and modify specific features
+- **CSS Fixes**: Fixed textarea width overflow with proper box-sizing
+- **Build Verified**: TypeScript and Vite build successful with zero errors
+
+### Entity Generation JSON Parsing (Previous)
 - **Deep Profile Conversion**: Switched from regex field markers to JSON format
 - **Visual Analysis Enhancement**: Explicit JSON output instructions in prompts
 - **Parsing Reliability**: All three AI operations (seed, vision, profile) use consistent JSON parsing
