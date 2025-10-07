@@ -74,6 +74,20 @@ export function EntityGenerator({ entityLogic }: EntityGeneratorProps) {
                 <div className={styles.fieldLabel}>Personality</div>
                 <div className={styles.fieldValue}>{state.generatedSeed.personality}</div>
               </div>
+
+              {state.generatedSeed.presence && (
+                <div className={styles.seedField}>
+                  <div className={styles.fieldLabel}>Presence</div>
+                  <div className={styles.fieldValue}>{state.generatedSeed.presence}</div>
+                </div>
+              )}
+
+              {state.generatedSeed.setting && (
+                <div className={styles.seedField}>
+                  <div className={styles.fieldLabel}>Setting</div>
+                  <div className={styles.fieldValue}>{state.generatedSeed.setting}</div>
+                </div>
+              )}
             </div>
 
             {state.imageLoading && !state.generatedSeed.imageUrl && (

@@ -7,6 +7,8 @@ export type PromptKey =
   | 'chatCharacterImpersonation'
   | 'entitySeedGeneration'
   | 'entityImageGeneration'
+  | 'morfeumVibes'
+  | 'qualityPrompt'
   | 'visualAnalysis'
   | 'deepProfileEnrichment'
   | 'sampleEntityPrompts';
@@ -15,7 +17,9 @@ export type Language = 'en';
 
 export interface PromptTemplates {
   entitySeedGeneration: (textPrompt: string) => string;
-  entityImageGeneration: (looks: string, wearing: string) => string;
+  entityImageGeneration: (originalPrompt: string, name: string, looks: string, wearing: string, personality?: string, presence?: string, setting?: string) => string;
+  morfeumVibes: string;
+  qualityPrompt: string;
   chatSystemMessage: string;
   chatCharacterImpersonation: (entityData: string) => string;
   visualAnalysis: (looks: string, wearing: string) => string;

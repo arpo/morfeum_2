@@ -208,18 +208,22 @@ router.post('/entity/generate-seed', asyncHandler(async (req: Request, res: Resp
  * MZOO Entity image generation endpoint
  */
 router.post('/entity/generate-image', asyncHandler(async (req: Request, res: Response) => {
-  const { looks, wearing } = req.body;
+  const { originalPrompt, name, looks, wearing, personality, presence, setting } = req.body;
 
-  if (!looks || !wearing) {
+  if (!originalPrompt || !name || !looks || !wearing) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
-      message: 'Looks and wearing fields are required',
-      error: 'Missing looks or wearing in request body',
+      message: 'Original prompt, name, looks, and wearing fields are required',
+      error: 'Missing required fields in request body',
       timestamp: new Date().toISOString(),
     });
     return;
   }
 
-  const imagePrompt = getPrompt('entityImageGeneration', 'en')(looks, wearing);
+  const imagePrompt = getPrompt('entityImageGeneration', 'en')(originalPrompt, name, looks, wearing, personality, presence, setting);
+
+  console.log('=== IMAGE GENERATION PROMPT ===');
+  console.log(imagePrompt);
+  console.log('==============================');
 
   const imageResult = await mzooService.generateImage(
     (req as any).mzooApiKey,

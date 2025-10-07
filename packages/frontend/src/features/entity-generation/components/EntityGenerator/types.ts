@@ -25,10 +25,13 @@ export interface DeepProfile {
 }
 
 export interface EntitySeed {
+  originalPrompt?: string;
   name: string;
   looks: string;
   wearing: string;
   personality: string;
+  presence?: string;
+  setting?: string;
   imageUrl?: string;
   visualAnalysis?: VisualAnalysis;
   deepProfile?: DeepProfile;
