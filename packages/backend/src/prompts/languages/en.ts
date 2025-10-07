@@ -166,6 +166,7 @@ Guidelines:
 - Avoid lists; use natural prose sentences.  
 - The output should read like a detailed character sheet, not a story.  
 - Use the exact field names shown — no markdown, lists, or commentary.
+- don't reuse the character name in the document. It should be stated only once in the name field.
 
 Field definitions and depth instructions:
 
@@ -338,16 +339,21 @@ Provide 5-10 descriptive tags that capture the essence of the character.
 Example: adventurous, introspective, charismatic, resilient, empathetic
 
 Rules & Best Practices:
-- Do not use uncertain language like "likely," "possibly," or "seems."  
+- Do not use uncertain language like "likely," "possibly," or "seems."  "Appears to be", If uncertain make it up.
 - If details are missing, invent them to harmonize with seed and image.  
 - No illegal content.  
 - Do not describe minors or anyone under 18 in a sexual context.  
 - Keep output coherent, sensory, and emotionally believable.`,
 
-  visualAnalysis: (looks: string, wearing: string) => `You are a visual analyst describing a character portrait from Morfeum.
+  visualAnalysis: (name: string, looks: string, wearing: string, personality: string, presence?: string) => `You are a visual analyst describing a character portrait from Morfeum.
 
-Given the image and the seed context (${looks}, ${wearing}),
-describe what is visually observable in short, factual sentences.
+Given the image and the seed context below, describe what is visually observable in short, factual sentences.
+
+Character: ${name}
+Look: ${looks}
+Wearing: ${wearing}
+Personality: ${personality}
+${presence ? 'Presence: ' + presence : ''}
 
 IMPORTANT: Return ONLY a valid JSON object with these exact keys:
 {

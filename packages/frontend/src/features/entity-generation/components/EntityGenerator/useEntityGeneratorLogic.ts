@@ -101,8 +101,11 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
               },
               body: JSON.stringify({
                 imageUrl,
+                name: result.data.name,
                 looks: result.data.looks,
-                wearing: result.data.wearing
+                wearing: result.data.wearing,
+                personality: result.data.personality,
+                presence: result.data.presence
               })
             });
             

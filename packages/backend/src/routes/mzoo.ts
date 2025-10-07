@@ -267,11 +267,11 @@ router.post('/entity/generate-image', asyncHandler(async (req: Request, res: Res
  * MZOO Entity visual analysis endpoint
  */
 router.post('/entity/analyze-image', asyncHandler(async (req: Request, res: Response) => {
-  const { imageUrl, looks, wearing } = req.body;
+  const { imageUrl, name, looks, wearing, personality, presence } = req.body;
 
-  if (!imageUrl || !looks || !wearing) {
+  if (!imageUrl || !name || !looks || !wearing || !personality) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
-      message: 'Image URL, looks, and wearing fields are required',
+      message: 'Image URL, name, looks, wearing, and personality fields are required',
       error: 'Missing required parameters in request body',
       timestamp: new Date().toISOString(),
     });
@@ -295,7 +295,7 @@ router.post('/entity/analyze-image', asyncHandler(async (req: Request, res: Resp
     const base64Image = Buffer.from(imageBuffer).toString('base64');
 
     // Get the visual analysis prompt
-    const analysisPrompt = getPrompt('visualAnalysis', 'en')(looks, wearing);
+    const analysisPrompt = getPrompt('visualAnalysis', 'en')(name, looks, wearing, personality, presence);
 
     // Call vision API with the analysis prompt
     const visionResult = await mzooService.analyzeImage(
