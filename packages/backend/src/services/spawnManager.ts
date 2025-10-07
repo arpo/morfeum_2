@@ -183,22 +183,39 @@ class SpawnManager {
       process.deepProfile = deepProfile;
 
       // Generate enhanced system prompt with full deep profile data
-      const enhancedEntityData = `Name: ${deepProfile.name}
-Appearance: ${deepProfile.looks}
-Face: ${deepProfile.face}
-Body: ${deepProfile.body}
-Hair: ${deepProfile.hair}
-Wearing: ${deepProfile.wearing}
-Specific Details: ${deepProfile.specificDetails}
-Style: ${deepProfile.style}
-Personality: ${deepProfile.personality}
-Voice: ${deepProfile.voice}
-Speech Style: ${deepProfile.speechStyle}
-Gender: ${deepProfile.gender}
-Nationality: ${deepProfile.nationality}
-Fictional: ${deepProfile.fictional}
-Copyright: ${deepProfile.copyright}
-Tags: ${deepProfile.tags}`;
+      const enhancedEntityData = `Name: \n${deepProfile.name} \n
+Appearance:
+${deepProfile.looks}
+
+Face:
+${deepProfile.face}
+
+Body:
+${deepProfile.body}
+
+Hair:
+${deepProfile.hair}
+
+Wearing:
+${deepProfile.wearing}
+
+Specific Details:
+${deepProfile.specificDetails}
+
+Style:
+${deepProfile.style}
+
+Personality:
+${deepProfile.personality}
+
+Speech Style:
+${deepProfile.speechStyle}
+
+Gender: 
+${deepProfile.gender}
+
+Nationality:
+${deepProfile.nationality}`;
 
       const enhancedSystemPrompt = getPrompt('chatCharacterImpersonation', 'en')(enhancedEntityData);
 
