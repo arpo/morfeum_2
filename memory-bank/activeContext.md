@@ -1,16 +1,70 @@
 # Active Context
 
 ## Current Work Focus
-Component refactoring completed. EntityGenerator component successfully broken into 4 focused, reusable components. All components now comply with size limits and architectural patterns.
+Multi-spawn chat system completed with functional messaging, enhanced system prompts, and redesigned chat UI. All chat features working end-to-end with real-time entity generation and conversation management.
 
 ## Recent Changes
 
-### Frontend Component Refactoring (Latest)
+### Multi-Spawn Chat System Implementation (Latest)
+1. **Functional Chat Messaging**:
+   - Chat component connected to Zustand chat manager store
+   - Messages persist across chat sessions
+   - Real-time message exchange with Gemini AI
+   - Store-connected `useChatLogic` replacing old local state
+   - Each entity has independent chat history
+
+2. **Chat Manager Store Enhancement**:
+   ```typescript
+   // New capabilities added:
+   - sendMessage(spawnId, content) - Send user message, call API, store response
+   - setLoading(spawnId, loading) - Per-chat loading state
+   - setError(spawnId, error) - Per-chat error handling
+   - entityPersonality field - Store personality from seed
+   ```
+
+3. **Enhanced System Prompt Updates**:
+   - **Backend** (`spawnManager.ts`): Generate enhanced system prompt when deep profile completes
+   - Includes all 16 deep profile fields (face, body, hair, voice, speechStyle, etc.)
+   - **Frontend** (`useSpawnEvents.ts`): Update system prompt seamlessly
+   - Chat history preserved - only system message updates
+   - User sees no interruption, debug panel shows updated prompt
+
+4. **Chat UI Redesign**:
+   ```
+   Old Layout:                    New Layout:
+   ┌─────────────────────┐       ┌─────────────────────┐
+   │ [img] Name          │       │  [Full-width Image] │
+   ├─────────────────────┤       ├─────────────────────┤
+   │ Messages...         │       │  Name               │
+   │                     │       │  Personality text   │
+                                 ├─────────────────────┤
+                                 │ Messages...         │
+   ```
+   - Full-width entity image at top
+   - Name and personality displayed below
+   - Clean, professional header layout
+   - Message bubbles (user right/blue, assistant left/gray)
+
+5. **Key Components**:
+   - **SpawnInputBar**: Textarea for multi-line character descriptions, shuffle button, generate button
+   - **ActiveSpawnsPanel**: Real-time progress tracking with visual progress bars (25%, 50%, 75%, 90%, 100%)
+   - **ChatTabs**: Multi-session tab management with close buttons
+   - **Chat**: Functional messaging with auto-scroll, loading states, error handling
+
+6. **Files Modified**:
+   - `packages/frontend/src/store/slices/chatManagerSlice.ts` - Message handling, personality field
+   - `packages/frontend/src/features/chat/components/Chat/useChatLogic.ts` - Store connection
+   - `packages/frontend/src/features/chat/components/Chat/Chat.tsx` - New UI with header
+   - `packages/frontend/src/features/chat/components/Chat/Chat.module.css` - Header styles
+   - `packages/frontend/src/features/chat/components/Chat/types.ts` - Added entityPersonality
+   - `packages/backend/src/services/spawnManager.ts` - Enhanced system prompt
+   - `packages/frontend/src/hooks/useSpawnEvents.ts` - System prompt update listener
+
+### Frontend Component Refactoring (Previous)
 1. **EntityGenerator Component Breakdown**:
-   - Refactored monolithic EntityGenerator.tsx from 231 lines to 89 lines
+   - Refactored monolithic EntityGenerator.tsx from 231 lines to 89 lines (62% reduction)
    - Extracted 4 new focused components following single-responsibility principle
    - All new components follow strict separation of concerns (markup, logic, styles)
-   - Each component has its own directory with .tsx, .module.css, and index.ts files
 
 2. **New Component Structure**:
    ```
@@ -18,246 +72,47 @@ Component refactoring completed. EntityGenerator component successfully broken i
    ├── EntityGenerator.tsx (89 lines - coordinator)
    ├── EntityGenerator.module.css (77 lines - shared styles)
    ├── useEntityGeneratorLogic.ts (218 lines - unchanged)
-   ├── EntityInputSection/ (50 lines)
-   │   └── Input field and action buttons
-   ├── EntitySeedCard/ (56 lines)
-   │   └── Basic character seed display
-   ├── VisualAnalysisCard/ (40 lines)
-   │   └── Visual analysis results
-   └── DeepProfileCard/ (101 lines)
-       └── Comprehensive character profile
+   ├── EntityInputSection/ (50 lines) - Input field and action buttons
+   ├── EntitySeedCard/ (56 lines) - Basic character seed display
+   ├── VisualAnalysisCard/ (40 lines) - Visual analysis results
+   └── DeepProfileCard/ (101 lines) - Comprehensive character profile
    ```
-
-3. **Benefits Achieved**:
-   - EntityGenerator reduced by 62% (231→89 lines)
-   - All components now under 150 lines
-   - Improved reusability - cards can be used independently
-   - Better maintainability - easier to locate and modify features
-   - Follows architectural patterns consistently
-   - Build verified: TypeScript and Vite build passed successfully
-
-4. **CSS Fixes**:
-   - Fixed textarea width overflow in EntityInputSection
-   - Added `box-sizing: border-box` and `max-width: 100%`
-   - Proper container constraints maintained
 
 ### Prompt Module Refactoring (Previous)
 1. **Modular Prompt Structure Implemented**:
    - Refactored monolithic `packages/backend/src/prompts/languages/en.ts` (440+ lines)
    - Split into 9 focused modules following project architectural patterns
-   - Created `en/` directory with single-responsibility files
    - All files now within 50-300 line size limits
 
-2. **New Directory Structure**:
-   ```
-   packages/backend/src/prompts/languages/en/
-   ├── index.ts                      # Aggregates exports (25 lines)
-   ├── constants.ts                  # Core constants (11 lines)
-   ├── chatSystemMessage.ts          # Simple message (6 lines)
-   ├── chatCharacterImpersonation.ts # Chat prompt (42 lines)
-   ├── entitySeedGeneration.ts       # Seed generation (59 lines)
-   ├── entityImageGeneration.ts      # Image generation (33 lines)
-   ├── visualAnalysis.ts             # Visual analysis (61 lines)
-   ├── deepProfileEnrichment.ts      # Deep profile (161 lines)
-   └── sampleEntityPrompts.ts        # Sample prompts (51 lines)
-   ```
-
-3. **Benefits Achieved**:
-   - Each prompt in its own file with single responsibility
-   - Removed duplication in deepProfileEnrichment (field definitions were repeated twice)
-   - Fixed TypeScript errors (escaped apostrophes in sample prompts)
-   - Same public API - no breaking changes to consumers
-   - Follows same pattern as MZOO service refactoring documented in systemPatterns.md
-   - Average file size: ~50 lines (down from 440+)
-   - Largest file: 161 lines (deepProfileEnrichment, still well under 300 limit)
-
-4. **Implementation Details**:
-   - Constants (morfeumVibes, qualityPrompt, blackListCharacterNames) extracted to shared file
-   - Each prompt function in its own module with clear documentation
-   - Index.ts aggregates all exports into `en` object matching PromptTemplates interface
-   - Parent index.ts import path unchanged (`./languages/en` resolves to new directory)
-   - Build verification: Backend compiles successfully with zero errors
-
 ### Entity Generation Deep Profile JSON Parsing (Previous)
-1. **Deep Profile JSON Conversion**:
-   - Switched from regex field markers to JSON format
-   - Updated `deepProfileEnrichment` prompt to explicitly request JSON
-   - Prompt now includes: "IMPORTANT: Return ONLY a valid JSON object"
-   - Uses same reliable JSON.parse() approach as seed generation
-   - Removed fragile regex pattern matching
-
-2. **Visual Analysis JSON Improvements**:
-   - Updated `visualAnalysis` prompt to explicitly request JSON
-   - Added clear instructions: "Do not include markdown, code blocks, or explanatory text"
-   - Consistent JSON parsing across all AI operations
-
-3. **Console Logging for Debugging**:
-   - Frontend: Browser console logs for Seed, Visual Analysis, Deep Profile
-   - Backend: No terminal spam - logging removed
-   - All logging uses clear markers (=== SEED DATA ===, etc.)
-   - Easy debugging without cluttering terminal
-
-4. **Chat Integration Timing Fix**:
-   - Chat initializes immediately with seed data (doesn't wait for deep profile)
-   - Removed automatic chat update when deep profile completes
-   - Progressive experience: chat available as soon as seed generates
-   - User can interact while image/analysis/profile generate in background
-
-5. **Parsing Reliability**:
-   - All three AI operations now use JSON parsing (seed, visual analysis, deep profile)
-   - Consistent error handling with descriptive messages
-   - Raw response included in error messages for debugging
-   - Same pattern: extract JSON with regex, parse with JSON.parse()
-
-### MZOO API Routes Refactoring (Previous)
-
-### Documentation: Adding New Services Guide (Latest)
-1. **Comprehensive Service Guide Added**:
-   - Added "Adding a New Service - Step by Step Guide" to systemPatterns.md
-   - Documents when to create a service layer
-   - Full Service + Middleware pattern with file structure
-   - 6-step process with code examples
-   - MZOO implementation as reference example
-   - Decision guide for middleware vs service vs routes
-   - File size guidelines and best practices
-
-2. **Real-World Example Documented**:
-   - MZOO service pattern fully documented
-   - Benefits and metrics included
-   - Shows 37% size reduction achieved
-   - Demonstrates DRY, testability, maintainability
-
-### MZOO API Routes Refactoring (Previous)
-1. **Route Organization**:
-   - Created dedicated `packages/backend/src/routes/mzoo.ts` (196 lines)
-   - Moved all MZOO endpoints from api.ts to mzoo.ts
-   - Removed `/api/test` endpoint (integration proven, no longer needed)
-   - api.ts reduced to 45 lines (only generic API routes)
-   - All files now within backend size limits (100-200 lines for routes)
-
-2. **MZOO Endpoints**:
-   - POST `/api/mzoo/vision` - Image analysis using Gemini Vision
-   - POST `/api/mzoo/gemini/text` - Text generation with conversation history
-   - POST `/api/mzoo/fal-flux-srpo/generate` - AI image generation
-   - All endpoints use secure proxy pattern with server-side API key
-   - Consistent error handling and response format
-
-3. **Vision API Implementation**:
-   - Accepts base64 encoded images
-   - Supports multiple MIME types (defaults to image/png)
-   - Uses gemini-2.5-flash model
-   - Returns structured analysis in response.data
-
-4. **Route Registration**:
-   - Updated `routes/index.ts` to mount mzooRouter at `/api/mzoo`
-   - Updated `/api/info` endpoint with correct MZOO endpoint paths
-   - Maintains modular export pattern for testing
-
-### MZOO Integration (Previous)
-1. **Environment Configuration**:
-   - Installed `dotenv` package for backend
-   - Configured `server.ts` to load .env from root directory
-   - MZOO_API_KEY properly read from environment variables
-   - Prevents API key exposure to frontend
-
-2. **Frontend Data Fetching**:
-   - Added test data state management in `useAppLogic.ts`
-   - Implemented automatic data fetch on component mount with useEffect
-   - Proper loading and error state handling
-   - Updated TypeScript interfaces to include test data types
-
-3. **UI Display**:
-   - Test data displayed below "Morfeum" headline
-   - Clean presentation of title and body content
-   - Loading spinner during data fetch
-   - Error message display on failure
-   - Follows design system patterns with proper spacing
-
-### Backend Refactoring (Previous)
-1. **Modular Architecture Implemented**:
-   - Transformed monolithic 47-line server.ts into 12 focused modules
-   - Implemented domain-driven design with clear separation of concerns
-   - Created config/, middleware/, routes/, services/, types/, and utils/ directories
-   - All modules follow 50-300 line size guidelines
-
-2. **Backend Patterns Established**:
-   - Configuration as Code: Environment-specific configs with type safety
-   - Service Layer Pattern: Separated business logic from infrastructure
-   - Middleware Pattern: CORS, error handling, and async wrappers
-   - Route Organization: Domain-specific routing with clear boundaries
-
-3. **Enhanced API Functionality**:
-   - Original `/api` endpoint maintained (returns plain text)
-   - Added `/api/info` with comprehensive API documentation
-   - Added `/health` and `/health/detailed` for monitoring
-   - Implemented proper error handling and logging
-
-4. **Type Safety and Quality**:
-   - 100% TypeScript coverage across backend
-   - Comprehensive interface definitions
-   - Zero build errors
-   - Proper error handling with custom error classes
-
-### Frontend Refactoring (Earlier)
-1. **Component Refactoring Completed**:
-   - Extracted 3 new reusable components: Card, LoadingSpinner, Message
-   - All components follow strict separation rules (markup/logic/styles)
-   - App component simplified to use reusable components
-   - UI components index updated with proper TypeScript exports
-
-2. **Legacy Style Cleanup**:
-   - Removed unused App.css file (29 lines of legacy styles)
-   - Migrated index.css from hardcoded values to design tokens
-   - Eliminated conflicting button styles that interfered with design system
-   - Reduced CSS complexity while maintaining functionality
-
-3. **Icon Management Optimization**:
-   - Optimized icon exports from 47 to 1 (98% reduction)
-   - Only IconLoader2 exported as it's the only used icon
-   - Improved bundle size through tree-shaking
-   - Added clear documentation about usage policies
-
-4. **Code Quality Improvements**:
-   - All components follow 50-300 line limits
-   - Strict separation of concerns maintained across all files
-   - Design tokens used consistently throughout
-   - Bundle size optimized (CSS: 5.09 kB → 4.96 kB)
-   - Total lines reduced from 660 to 648 while adding functionality
+1. **Deep Profile JSON Conversion**: Switched from regex field markers to JSON format
+2. **Visual Analysis JSON Improvements**: Explicit JSON request in prompts
+3. **Chat Integration Timing Fix**: Chat initializes immediately with seed data
+4. **Parsing Reliability**: All three AI operations use JSON parsing (seed, visual, deep)
 
 ## Next Steps
-The project demonstrates:
-- Complete MZOO API integration with modular route architecture
-- Three AI endpoints: text generation, vision analysis, image generation
-- Secure proxy pattern with server-side API key management
-- Environment variable management
-- Complete set of reusable UI components
-- Optimized bundle size and performance
-- Clean architecture following all established patterns
-- All backend files within size limits (45-196 lines)
-- Foundation ready for additional feature development and API integrations
+The multi-spawn chat system demonstrates:
+- Complete end-to-end chat functionality with AI entities
+- Real-time spawn generation with progress tracking
+- Enhanced system prompts with deep profile data
+- Clean, modern chat UI with message bubbles
+- Multiple simultaneous chat sessions
+- Seamless system prompt updates without user disruption
+- Foundation ready for additional chat features (typing indicators, message reactions, etc.)
 
 ## Active Decisions
-- All components follow the 50-300 line limit
-- Backend route files follow 100-200 line limit
-- No mixing of concerns in any file
-- CSS Modules used exclusively for styling
-- Design tokens used instead of hardcoded values
-- Icons centralized and optimized for actual usage
-- Reusable components extracted for maintainability
-- API keys kept server-side, never exposed to frontend
-- Backend proxy pattern for secure external API access
-- Domain-based route organization (api.ts for generic, mzoo.ts for MZOO)
-- Environment variables loaded via dotenv in backend
+- Multi-spawn architecture: Multiple entities can be generated simultaneously
+- Progressive chat initialization: Chat available immediately after seed
+- System prompt enhancement: Updates automatically when deep profile completes
+- Chat persistence: All messages stored in chat manager
+- UI patterns: Full-width images, personality display, message bubbles
+- Debug visibility: ChatHistoryViewer shows raw message data for inspection
 
 ## Implementation Notes
-- MZOO endpoints organized by domain in dedicated mzoo.ts file
-- All routes comply with backend size guidelines
-- Backend properly loads environment variables from root .env file
-- Vision API accepts base64 images with flexible MIME type support
-- Frontend automatically fetches data on mount with proper state management
-- Data displayed cleanly without raw JSON dump
-- Refactoring successfully eliminated all legacy style conflicts
-- New components (Card, LoadingSpinner, Message) demonstrate proper architecture
-- App component now serves as example of consuming reusable components and API data
-- Build system optimized with proper tree-shaking
-- Route split improved maintainability: api.ts (45 lines), mzoo.ts (196 lines)
+- Chat manager handles all message operations (send, load, error)
+- Store-connected logic pattern eliminates local state
+- SSE events drive spawn progress and chat updates
+- Enhanced system prompts include all 16 deep profile fields
+- Chat history preserved during system prompt updates
+- Full-width image layout provides immersive chat experience
+- Personality display gives context for entity character
