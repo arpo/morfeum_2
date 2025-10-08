@@ -57,7 +57,7 @@ router.get('/events', (req: Request, res: Response) => {
  * POST /api/spawn/start - Start a new spawn process
  */
 router.post('/start', asyncHandler(async (req: Request, res: Response) => {
-  const { prompt } = req.body;
+  const { prompt, entityType = 'character' } = req.body;
 
   if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -68,12 +68,21 @@ router.post('/start', asyncHandler(async (req: Request, res: Response) => {
     return;
   }
 
+  if (entityType !== 'character' && entityType !== 'location') {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Invalid entity type',
+      error: 'entityType must be either "character" or "location"',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
   const spawnManager = getSpawnManager((req as any).mzooApiKey);
-  const spawnId = spawnManager.startSpawn(prompt.trim());
+  const spawnId = spawnManager.startSpawn(prompt.trim(), entityType);
 
   res.status(HTTP_STATUS.OK).json({
     message: 'Spawn process started',
-    data: { spawnId },
+    data: { spawnId, entityType },
     timestamp: new Date().toISOString(),
   });
 }));

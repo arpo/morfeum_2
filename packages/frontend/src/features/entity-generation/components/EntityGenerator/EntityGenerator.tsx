@@ -18,7 +18,9 @@ export function EntityGenerator({ entityLogic }: EntityGeneratorProps) {
       <EntityInputSection
         textPrompt={state.textPrompt}
         loading={state.loading}
+        entityType={state.entityType}
         onTextPromptChange={handlers.setTextPrompt}
+        onEntityTypeChange={handlers.setEntityType}
         onShuffle={handlers.shufflePrompt}
         onGenerate={handlers.generateSeed}
       />

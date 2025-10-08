@@ -6,7 +6,7 @@
 import { eventEmitter } from '../eventEmitter';
 import { getPrompt } from '../../prompts';
 import * as pipeline from './pipelineStages';
-import { SpawnProcess, EntitySeed } from './types';
+import { SpawnProcess, EntitySeed, LocationSeed } from './types';
 
 export class SpawnManager {
   private processes: Map<string, SpawnProcess> = new Map();
@@ -19,13 +19,14 @@ export class SpawnManager {
   /**
    * Start a new spawn process
    */
-  startSpawn(prompt: string): string {
+  startSpawn(prompt: string, entityType: 'character' | 'location' = 'character'): string {
     const spawnId = `spawn-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     const abortController = new AbortController();
 
     const process: SpawnProcess = {
       id: spawnId,
       prompt,
+      entityType,
       status: 'generating_seed',
       createdAt: Date.now(),
       abortController
@@ -86,20 +87,24 @@ export class SpawnManager {
       const seed = await pipeline.generateSeed(
         this.mzooApiKey,
         process.prompt,
-        process.abortController.signal
+        process.abortController.signal,
+        process.entityType
       );
       if (process.abortController.signal.aborted) return;
 
       process.seed = seed;
 
-      // Generate initial system prompt from seed data
-      const entityData = this.formatEntityData(seed);
-      const systemPrompt = getPrompt('chatCharacterImpersonation', 'en')(entityData);
+      // Generate initial system prompt from seed data (only for characters)
+      let systemPrompt = '';
+      if (process.entityType === 'character') {
+        const entityData = this.formatEntityData(seed as EntitySeed);
+        systemPrompt = getPrompt('chatCharacterImpersonation', 'en')(entityData);
+      }
 
       // Emit seed complete event with system prompt
       eventEmitter.emit({
         type: 'spawn:seed-complete',
-        data: { spawnId, seed, systemPrompt }
+        data: { spawnId, seed, systemPrompt, entityType: process.entityType }
       });
 
       // Stage 2: Generate Image
@@ -108,7 +113,8 @@ export class SpawnManager {
       const { imageUrl, imagePrompt } = await pipeline.generateImage(
         this.mzooApiKey,
         seed,
-        process.abortController.signal
+        process.abortController.signal,
+        process.entityType
       );
       if (process.abortController.signal.aborted) return;
 
@@ -118,7 +124,7 @@ export class SpawnManager {
       // Emit image complete event
       eventEmitter.emit({
         type: 'spawn:image-complete',
-        data: { spawnId, imageUrl, imagePrompt }
+        data: { spawnId, imageUrl, imagePrompt, entityType: process.entityType }
       });
 
       // Stage 3: Analyze Image
@@ -128,7 +134,8 @@ export class SpawnManager {
         this.mzooApiKey,
         imageUrl,
         seed,
-        process.abortController.signal
+        process.abortController.signal,
+        process.entityType
       );
       if (process.abortController.signal.aborted) return;
 
@@ -137,7 +144,7 @@ export class SpawnManager {
       // Emit analysis complete event
       eventEmitter.emit({
         type: 'spawn:analysis-complete',
-        data: { spawnId, visualAnalysis }
+        data: { spawnId, visualAnalysis, entityType: process.entityType }
       });
 
       // Stage 4: Enrich Profile
@@ -147,15 +154,19 @@ export class SpawnManager {
         this.mzooApiKey,
         seed,
         visualAnalysis,
-        process.abortController.signal
+        process.abortController.signal,
+        process.entityType
       );
       if (process.abortController.signal.aborted) return;
 
       process.deepProfile = deepProfile;
 
-      // Generate enhanced system prompt with full deep profile data
-      const enhancedEntityData = this.formatEnhancedEntityData(deepProfile);
-      const enhancedSystemPrompt = getPrompt('chatCharacterImpersonation', 'en')(enhancedEntityData);
+      // Generate enhanced system prompt with full deep profile data (only for characters)
+      let enhancedSystemPrompt = '';
+      if (process.entityType === 'character') {
+        const enhancedEntityData = this.formatEnhancedEntityData(deepProfile);
+        enhancedSystemPrompt = getPrompt('chatCharacterImpersonation', 'en')(enhancedEntityData);
+      }
 
       // Emit profile complete event with enhanced system prompt
       eventEmitter.emit({
@@ -163,7 +174,8 @@ export class SpawnManager {
         data: { 
           spawnId, 
           deepProfile,
-          enhancedSystemPrompt
+          enhancedSystemPrompt,
+          entityType: process.entityType
         }
       });
 

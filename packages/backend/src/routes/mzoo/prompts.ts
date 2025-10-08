@@ -66,4 +66,19 @@ router.get('/entity-samples', asyncHandler(async (req: Request, res: Response) =
   });
 }));
 
+/**
+ * Get sample location prompts
+ */
+router.get('/location-samples', asyncHandler(async (req: Request, res: Response) => {
+  const samples = getPrompt('sampleLocationPrompts', 'en');
+  
+  res.status(HTTP_STATUS.OK).json({
+    message: 'Sample location prompts retrieved successfully',
+    data: {
+      samples
+    },
+    timestamp: new Date().toISOString(),
+  });
+}));
+
 export { router as promptsRouter };

@@ -38,15 +38,38 @@ export interface DeepProfile {
   tags: string;
 }
 
+export interface LocationSeed {
+  originalPrompt?: string;
+  name: string;
+  looks: string;
+  atmosphere: string;
+  mood: string;
+}
+
+export interface LocationDeepProfile {
+  name: string;
+  looks: string;
+  atmosphere: string;
+  vegetation: string;
+  architecture: string;
+  animals: string;
+  mood: string;
+  sounds: string;
+  genre: string;
+  fictional: string;
+  copyright: string;
+}
+
 export interface SpawnProcess {
   id: string;
   prompt: string;
+  entityType: 'character' | 'location';
   status: 'generating_seed' | 'generating_image' | 'analyzing' | 'enriching' | 'completed' | 'cancelled' | 'error';
-  seed?: Partial<EntitySeed>;
+  seed?: Partial<EntitySeed | LocationSeed>;
   imageUrl?: string;
   imagePrompt?: string;
   visualAnalysis?: VisualAnalysis;
-  deepProfile?: DeepProfile;
+  deepProfile?: DeepProfile | LocationDeepProfile;
   error?: string;
   createdAt: number;
   abortController: AbortController;

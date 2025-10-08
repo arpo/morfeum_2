@@ -18,11 +18,28 @@ export function SpawnInputBar() {
   return (
     <div>
       <div className={styles.container}>
+        <div className={styles.toggleGroup}>
+          <button
+            className={`${styles.toggleButton} ${state.entityType === 'character' ? styles.active : ''}`}
+            onClick={() => handlers.setEntityType('character')}
+          >
+            Character
+          </button>
+          <button
+            className={`${styles.toggleButton} ${state.entityType === 'location' ? styles.active : ''}`}
+            onClick={() => handlers.setEntityType('location')}
+          >
+            Location
+          </button>
+        </div>
         <textarea
           className={styles.textarea}
           value={state.textPrompt}
           onChange={(e) => handlers.setTextPrompt(e.target.value)}
-          placeholder="Describe a character to spawn..."
+          placeholder={state.entityType === 'character' 
+            ? "Describe a character to spawn..."
+            : "Describe a location to spawn..."
+          }
           rows={3}
         />
         <div className={styles.buttonRow}>

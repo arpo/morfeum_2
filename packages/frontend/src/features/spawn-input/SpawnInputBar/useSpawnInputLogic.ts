@@ -9,16 +9,20 @@ import type { SpawnInputBarLogicReturn } from './types';
 
 export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
   const [textPrompt, setTextPrompt] = useState('');
+  const [entityType, setEntityType] = useState<'character' | 'location'>('location');
   const [error, setError] = useState<string | null>(null);
   const [samplePrompts, setSamplePrompts] = useState<string[]>([]);
 
   const startSpawn = useStore(state => state.startSpawn);
 
-  // Fetch sample prompts on mount
+  // Fetch sample prompts based on entity type
   useEffect(() => {
     const fetchSamples = async () => {
       try {
-        const response = await fetch('/api/mzoo/prompts/entity-samples');
+        const endpoint = entityType === 'location' 
+          ? '/api/mzoo/prompts/location-samples' 
+          : '/api/mzoo/prompts/entity-samples';
+        const response = await fetch(endpoint);
         if (response.ok) {
           const result = await response.json();
           setSamplePrompts(result.data.samples);
@@ -29,13 +33,13 @@ export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
     };
     
     fetchSamples();
-  }, []);
+  }, [entityType]);
 
   const handleGenerate = useCallback(async () => {
     if (!textPrompt.trim()) return;
 
     try {
-      await startSpawn(textPrompt.trim());
+      await startSpawn(textPrompt.trim(), entityType);
       
       // Clear input after starting spawn
       setTextPrompt('');
@@ -45,7 +49,7 @@ export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
       setError(errorMessage);
       console.error('[SpawnInputBar] Failed to start spawn:', err);
     }
-  }, [textPrompt, startSpawn]);
+  }, [textPrompt, entityType, startSpawn]);
 
   const handleShuffle = useCallback(() => {
     if (samplePrompts.length > 0) {
@@ -61,10 +65,12 @@ export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
   return {
     state: {
       textPrompt,
+      entityType,
       error
     },
     handlers: {
       setTextPrompt,
+      setEntityType,
       handleGenerate,
       handleShuffle,
       clearError

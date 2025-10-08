@@ -7,6 +7,45 @@
   border-radius: var(--radius-md);
 }
 
+.toggleGroup {
+  display: flex;
+  gap: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  width: fit-content;
+}
+
+.toggleButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  border-right: 1px solid var(--color-border);
+}
+
+.toggleButton:last-child {
+  border-right: none;
+}
+
+.toggleButton:hover:not(:disabled) {
+  background-color: var(--color-bg-secondary);
+}
+
+.toggleButton.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.toggleButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .textarea {
   width: 100%;
   padding: var(--spacing-sm) var(--spacing-md);

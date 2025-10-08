@@ -4,6 +4,7 @@ import type { EntityGeneratorLogicReturn, EntitySeed } from './types';
 
 export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
   const [textPrompt, setTextPrompt] = useState('');
+  const [entityType, setEntityType] = useState<'character' | 'location'>('location');
   const [generatedSeed, setGeneratedSeed] = useState<EntitySeed | null>(null);
   const [loading, setLoading] = useState(false);
   const [imageLoading, setImageLoading] = useState(false);
@@ -17,11 +18,14 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
   const cancelSpawn = useStore(state => state.cancelSpawn);
   const activeSpawns = useStore(state => state.activeSpawns);
 
-  // Fetch sample prompts on mount
+  // Fetch sample prompts based on entity type
   useEffect(() => {
     const fetchSamples = async () => {
       try {
-        const response = await fetch('/api/mzoo/prompts/entity-samples');
+        const endpoint = entityType === 'location' 
+          ? '/api/mzoo/prompts/location-samples' 
+          : '/api/mzoo/prompts/entity-samples';
+        const response = await fetch(endpoint);
         if (response.ok) {
           const result = await response.json();
           setSamplePrompts(result.data.samples);
@@ -32,15 +36,15 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
     };
     
     fetchSamples();
-  }, []);
+  }, [entityType]);
 
   const generateSeed = useCallback(async () => {
     if (!textPrompt.trim()) return;
 
     try {
       // Start spawn via server-side manager
-      console.log('[EntityGenerator] Starting spawn with prompt:', textPrompt.trim());
-      await startSpawn(textPrompt.trim());
+      console.log('[EntityGenerator] Starting spawn with prompt:', textPrompt.trim(), 'type:', entityType);
+      await startSpawn(textPrompt.trim(), entityType);
       
       // Clear the input after starting spawn
       setTextPrompt('');
@@ -50,7 +54,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
       setError(errorMessage);
       console.error('[EntityGenerator] Failed to start spawn:', err);
     }
-  }, [textPrompt, startSpawn]);
+  }, [textPrompt, entityType, startSpawn]);
 
   const shufflePrompt = useCallback(() => {
     if (samplePrompts.length > 0) {
@@ -66,6 +70,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
   return {
     state: {
       textPrompt,
+      entityType,
       generatedSeed,
       loading,
       imageLoading,
@@ -75,6 +80,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
     },
     handlers: {
       setTextPrompt,
+      setEntityType,
       generateSeed,
       shufflePrompt,
       clearError

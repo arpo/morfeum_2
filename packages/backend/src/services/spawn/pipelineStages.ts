@@ -5,7 +5,7 @@
 
 import * as mzooService from '../mzoo.service';
 import { getPrompt } from '../../prompts';
-import { EntitySeed, VisualAnalysis, DeepProfile } from './types';
+import { EntitySeed, VisualAnalysis, DeepProfile, LocationSeed, LocationDeepProfile } from './types';
 
 /**
  * Generate entity seed from text prompt
@@ -13,9 +13,11 @@ import { EntitySeed, VisualAnalysis, DeepProfile } from './types';
 export async function generateSeed(
   mzooApiKey: string,
   textPrompt: string,
-  signal: AbortSignal
-): Promise<EntitySeed> {
-  const systemPrompt = getPrompt('entitySeedGeneration', 'en')(textPrompt);
+  signal: AbortSignal,
+  entityType: 'character' | 'location' = 'character'
+): Promise<EntitySeed | LocationSeed> {
+  const promptKey = entityType === 'location' ? 'locationSeedGeneration' : 'entitySeedGeneration';
+  const systemPrompt = getPrompt(promptKey, 'en')(textPrompt);
   const messages = [
     { role: 'system', content: systemPrompt },
     { role: 'user', content: textPrompt }
@@ -48,18 +50,33 @@ export async function generateSeed(
  */
 export async function generateImage(
   mzooApiKey: string,
-  seed: EntitySeed,
-  signal: AbortSignal
+  seed: EntitySeed | LocationSeed,
+  signal: AbortSignal,
+  entityType: 'character' | 'location' = 'character'
 ): Promise<{ imageUrl: string; imagePrompt: string }> {
-  const imagePrompt = getPrompt('entityImageGeneration', 'en')(
-    seed.originalPrompt || '',
-    seed.name,
-    seed.looks,
-    seed.wearing,
-    seed.personality,
-    seed.presence,
-    seed.setting
-  );
+  let imagePrompt: string;
+
+  if (entityType === 'location') {
+    const locationSeed = seed as LocationSeed;
+    imagePrompt = getPrompt('locationImageGeneration', 'en')(
+      locationSeed.originalPrompt || '',
+      locationSeed.name,
+      locationSeed.looks,
+      locationSeed.atmosphere,
+      locationSeed.mood
+    );
+  } else {
+    const entitySeed = seed as EntitySeed;
+    imagePrompt = getPrompt('entityImageGeneration', 'en')(
+      entitySeed.originalPrompt || '',
+      entitySeed.name,
+      entitySeed.looks,
+      entitySeed.wearing,
+      entitySeed.personality,
+      entitySeed.presence,
+      entitySeed.setting
+    );
+  }
 
   const result = await mzooService.generateImage(
     mzooApiKey,
@@ -87,8 +104,9 @@ export async function generateImage(
 export async function analyzeImage(
   mzooApiKey: string,
   imageUrl: string,
-  seed: EntitySeed,
-  signal: AbortSignal
+  seed: EntitySeed | LocationSeed,
+  signal: AbortSignal,
+  entityType: 'character' | 'location' = 'character'
 ): Promise<VisualAnalysis> {
   // Fetch image and convert to base64
   const imageResponse = await fetch(imageUrl);
@@ -99,13 +117,24 @@ export async function analyzeImage(
   const imageBuffer = await imageResponse.arrayBuffer();
   const base64Image = Buffer.from(imageBuffer).toString('base64');
 
-  // Get analysis prompt
+  // Get analysis prompt (only for characters, locations skip visual analysis)
+  if (entityType === 'location') {
+    // For locations, return minimal analysis since we don't need detailed facial features
+    return {
+      face: 'N/A',
+      hair: 'N/A',
+      body: 'N/A',
+      specificdetails: 'Location entity - visual analysis not applicable'
+    };
+  }
+
+  const entitySeed = seed as EntitySeed;
   const analysisPrompt = getPrompt('visualAnalysis', 'en')(
-    seed.name,
-    seed.looks,
-    seed.wearing,
-    seed.personality,
-    seed.presence
+    entitySeed.name,
+    entitySeed.looks,
+    entitySeed.wearing,
+    entitySeed.personality,
+    entitySeed.presence
   );
 
   // Call vision API
@@ -135,19 +164,25 @@ export async function analyzeImage(
  */
 export async function enrichProfile(
   mzooApiKey: string,
-  seed: EntitySeed,
+  seed: EntitySeed | LocationSeed,
   visualAnalysis: VisualAnalysis,
-  signal: AbortSignal
-): Promise<DeepProfile> {
+  signal: AbortSignal,
+  entityType: 'character' | 'location' = 'character'
+): Promise<DeepProfile | LocationDeepProfile> {
   const seedJson = JSON.stringify(seed, null, 2);
   const visionJson = JSON.stringify(visualAnalysis, null, 2);
   const originalPrompt = seed.originalPrompt || 'No specific request provided';
 
-  const enrichmentPrompt = getPrompt('deepProfileEnrichment', 'en')(seedJson, visionJson, originalPrompt);
+  const promptKey = entityType === 'location' ? 'locationDeepProfileEnrichment' : 'deepProfileEnrichment';
+  const enrichmentPrompt = getPrompt(promptKey, 'en')(seedJson, visionJson, originalPrompt);
+
+  const userMessage = entityType === 'location' 
+    ? 'Generate the complete location profile based on the provided data.'
+    : 'Generate the complete character profile based on the provided data.';
 
   const messages = [
     { role: 'system', content: enrichmentPrompt },
-    { role: 'user', content: 'Generate the complete character profile based on the provided data.' }
+    { role: 'user', content: userMessage }
   ];
 
   const result = await mzooService.generateText(

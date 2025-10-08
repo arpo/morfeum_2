@@ -6,9 +6,9 @@
 import type { StateCreator } from 'zustand';
 
 export interface SpawnManagerSlice {
-  activeSpawns: Map<string, { prompt: string; status: string }>;
+  activeSpawns: Map<string, { prompt: string; status: string; entityType: 'character' | 'location' }>;
   
-  startSpawn: (prompt: string) => Promise<string>;
+  startSpawn: (prompt: string, entityType?: 'character' | 'location') => Promise<string>;
   cancelSpawn: (spawnId: string) => Promise<void>;
   updateSpawnStatus: (spawnId: string, status: string) => void;
   removeSpawn: (spawnId: string) => void;
@@ -17,14 +17,14 @@ export interface SpawnManagerSlice {
 export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, get) => ({
   activeSpawns: new Map(),
 
-  startSpawn: async (prompt: string) => {
+  startSpawn: async (prompt: string, entityType: 'character' | 'location' = 'character') => {
     try {
       const response = await fetch('/api/spawn/start', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ prompt })
+        body: JSON.stringify({ prompt, entityType })
       });
 
       if (!response.ok) {
@@ -37,11 +37,11 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
       // Add to active spawns
       set((state) => {
         const newSpawns = new Map(state.activeSpawns);
-        newSpawns.set(spawnId, { prompt, status: 'starting' });
+        newSpawns.set(spawnId, { prompt, status: 'starting', entityType });
         return { activeSpawns: newSpawns };
       });
 
-      console.log('[SpawnManager] Started spawn:', spawnId);
+      console.log('[SpawnManager] Started spawn:', spawnId, 'type:', entityType);
       return spawnId;
     } catch (error) {
       console.error('[SpawnManager] Failed to start spawn:', error);

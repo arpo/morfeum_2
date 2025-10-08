@@ -11,6 +11,10 @@ import { entityImageGeneration } from './entityImageGeneration';
 import { visualAnalysis } from './visualAnalysis';
 import { deepProfileEnrichment } from './deepProfileEnrichment';
 import { sampleEntityPrompts } from './sampleEntityPrompts';
+import { locationSeedGeneration } from './locationSeedGeneration';
+import { locationImageGeneration } from './locationImageGeneration';
+import { locationDeepProfileEnrichment } from './locationDeepProfileEnrichment';
+import { sampleLocationPrompts } from './sampleLocationPrompts';
 
 // Export flux filters for external use
 export { fluxFilters, getFluxFilter, getDefaultFluxFilter, type FluxFilter } from './fluxFilters';
@@ -25,5 +29,9 @@ export const en: PromptTemplates = {
   entityImageGeneration,
   visualAnalysis,
   deepProfileEnrichment,
-  sampleEntityPrompts
+  sampleEntityPrompts,
+  locationSeedGeneration,
+  locationImageGeneration,
+  locationDeepProfileEnrichment,
+  sampleLocationPrompts
 };

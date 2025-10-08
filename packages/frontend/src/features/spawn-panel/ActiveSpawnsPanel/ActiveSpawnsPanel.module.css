@@ -74,10 +74,11 @@
   font-size: var(--text-xs);
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   word-break: break-word;
-  max-height: 30px;
+  max-height: 5px;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .spawnStatus {

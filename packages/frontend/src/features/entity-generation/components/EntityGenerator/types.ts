@@ -39,6 +39,7 @@ export interface EntitySeed {
 
 export interface EntityGeneratorState {
   textPrompt: string;
+  entityType: 'character' | 'location';
   generatedSeed: EntitySeed | null;
   loading: boolean;
   imageLoading: boolean;
@@ -49,6 +50,7 @@ export interface EntityGeneratorState {
 
 export interface EntityGeneratorHandlers {
   setTextPrompt: (value: string) => void;
+  setEntityType: (type: 'character' | 'location') => void;
   generateSeed: () => void;
   shufflePrompt: () => void;
   clearError: () => void;
