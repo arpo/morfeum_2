@@ -10,14 +10,24 @@ interface ChatProps {
 
 export function Chat({ chatLogic }: ChatProps) {
   const { state, handlers } = chatLogic;
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
+  const prevMessageCountRef = useRef<number>(0);
 
   // Filter out system messages for display
   const visibleMessages = state.messages.filter(msg => msg.role !== 'system');
 
-  // Auto-scroll to bottom when new messages arrive
+  // Auto-scroll to bottom only when new messages are added (not when switching chats)
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const currentCount = visibleMessages.length;
+    const prevCount = prevMessageCountRef.current;
+    
+    // Only scroll if message count increased (new message added)
+    if (currentCount > prevCount && prevCount > 0 && messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
+    
+    // Update the ref for next comparison
+    prevMessageCountRef.current = currentCount;
   }, [visibleMessages.length]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -46,7 +56,7 @@ export function Chat({ chatLogic }: ChatProps) {
         </div>
       )}
       
-      <div className={styles.messagesContainer}>
+      <div className={styles.messagesContainer} ref={messagesContainerRef}>
         {visibleMessages.length === 0 && (
           <div className={styles.emptyState}>
             Start a conversation with {state.entityName}...
@@ -76,8 +86,6 @@ export function Chat({ chatLogic }: ChatProps) {
             <LoadingSpinner message={`${state.entityName} is thinking...`} />
           </div>
         )}
-        
-        <div ref={messagesEndRef} />
       </div>
 
       {state.error && (
