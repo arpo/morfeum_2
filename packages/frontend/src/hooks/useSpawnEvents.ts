@@ -28,7 +28,7 @@ export function useSpawnEvents() {
     eventSource.addEventListener('spawn:seed-complete', (e) => {
       const { spawnId, seed, systemPrompt } = JSON.parse(e.data);
       console.log('🌱 Seed Generated:', seed);
-      console.log('💬 Initial System Prompt:', systemPrompt);
+      // console.log('💬 Initial System Prompt:', systemPrompt);
       
       // Create new chat with this entity
       if (createChatWithEntity) {
