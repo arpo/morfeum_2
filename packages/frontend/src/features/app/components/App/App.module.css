@@ -15,7 +15,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding: var(--spacing-md);
-  border-right: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
@@ -38,7 +37,8 @@
   grid-row: 1;
   height: 100%;
   overflow-y: auto;
-  border-right: 1px solid var(--color-border);
+  padding-top: var(--spacing-md);
+  /* border-right: 1px solid var(--color-border); */
 }
 
 .extraPanel {
@@ -47,7 +47,7 @@
   height: 100%;
   padding: var(--spacing-md);
   border-right: 1px solid var(--color-border);
-  background-color: var(--color-bg-secondary);
+  /* background-color: var(--color-bg-secondary); */
 }
 
 .historyPanel {
