@@ -23,7 +23,15 @@ export function Chat({ chatLogic }: ChatProps) {
     
     // Only scroll if message count increased (new message added)
     if (currentCount > prevCount && prevCount > 0 && messagesContainerRef.current) {
-      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+      // Use setTimeout to ensure DOM has updated before scrolling
+      setTimeout(() => {
+        if (messagesContainerRef.current) {
+          messagesContainerRef.current.scrollTo({
+            top: messagesContainerRef.current.scrollHeight,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
     }
     
     // Update the ref for next comparison

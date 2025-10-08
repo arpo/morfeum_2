@@ -63,5 +63,6 @@ export const sampleEntityPrompts = [
     'A painter whose tears stain canvas with living color that moves under the moon.',
     'A weary demigod who envies mortals for the brevity of their tenderness.',
     'A memory-eater who preserves what they consume, offering fragments back as dreams.',
-    'A fallen light-spirit who flirts through silence — their laughter visible as flickers of aurora.'
+    'A fallen light-spirit who flirts through silence — their laughter visible as flickers of aurora.',
+    '24-year-old woman, flirtatious, and confident. She is openly bisexual and embraces her sexuality. She is a free spirit who enjoys dancing and socializing. She is also considerate and direct in her communication. She values open relationships and is not shy about her desires. She is a social butterfly and has a playful, charming demeanor.'
 ];
