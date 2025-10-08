@@ -48,7 +48,7 @@
 
 .content {
   padding: var(--spacing-sm);
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-secondary);
   color: var(--color-text);
   font-size: 11px;
   line-height: 1.4;
@@ -56,4 +56,5 @@
   white-space: pre-wrap;
   max-height: 150px;
   overflow-y: auto;
+  border-top: 1px solid var(--color-border);
 }

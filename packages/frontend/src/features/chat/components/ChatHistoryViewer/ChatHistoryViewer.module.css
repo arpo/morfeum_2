@@ -30,6 +30,7 @@
 }
 
 .panelBadge {
+  /* background-color: var(--color-primary); */
   color: white;
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-sm);
@@ -86,7 +87,7 @@
 .roleTag {
   padding: 2px 8px;
   border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -129,19 +130,21 @@
   flex-direction: column;
   gap: var(--spacing-xs);
   margin-bottom: var(--spacing-sm);
-  line-height: 1.6;
+  line-height: 1.4;
   text-align: left;
 }
 
 .detailKey {
   color: #9333ea;
   font-weight: 600;
+  font-size: 10px;
 }
 
 .detailValue {
   color: var(--color-text);
   word-break: break-word;
   white-space: pre-wrap;
+  font-size: 11px;
 }
 
 .emptyState {
