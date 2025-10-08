@@ -38,7 +38,7 @@ export async function generateSeed(
   }
 
   const seed = JSON.parse(jsonMatch[0]);
-  console.log('Generated seed:', JSON.stringify(seed, null, 2));
+  // console.log('Generated seed:', JSON.stringify(seed, null, 2));
   
   return seed;
 }
@@ -50,7 +50,7 @@ export async function generateImage(
   mzooApiKey: string,
   seed: EntitySeed,
   signal: AbortSignal
-): Promise<string> {
+): Promise<{ imageUrl: string; imagePrompt: string }> {
   const imagePrompt = getPrompt('entityImageGeneration', 'en')(
     seed.originalPrompt || '',
     seed.name,
@@ -78,7 +78,7 @@ export async function generateImage(
     throw new Error('Image URL not found in response');
   }
 
-  return imageUrl;
+  return { imageUrl, imagePrompt };
 }
 
 /**

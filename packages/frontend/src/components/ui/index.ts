@@ -5,6 +5,9 @@ export type { ButtonProps } from './Button';
 export { Card } from './Card';
 export type { CardProps } from './Card';
 
+export { CollapsiblePanel } from './CollapsiblePanel';
+export type { CollapsiblePanelProps } from './CollapsiblePanel';
+
 export { LoadingSpinner } from './LoadingSpinner';
 export type { LoadingSpinnerProps } from './LoadingSpinner';
 

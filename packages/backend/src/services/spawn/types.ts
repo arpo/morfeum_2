@@ -44,6 +44,7 @@ export interface SpawnProcess {
   status: 'generating_seed' | 'generating_image' | 'analyzing' | 'enriching' | 'completed' | 'cancelled' | 'error';
   seed?: Partial<EntitySeed>;
   imageUrl?: string;
+  imagePrompt?: string;
   visualAnalysis?: VisualAnalysis;
   deepProfile?: DeepProfile;
   error?: string;

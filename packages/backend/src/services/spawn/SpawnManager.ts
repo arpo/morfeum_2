@@ -105,7 +105,7 @@ export class SpawnManager {
       // Stage 2: Generate Image
       process.status = 'generating_image';
 
-      const imageUrl = await pipeline.generateImage(
+      const { imageUrl, imagePrompt } = await pipeline.generateImage(
         this.mzooApiKey,
         seed,
         process.abortController.signal
@@ -113,11 +113,12 @@ export class SpawnManager {
       if (process.abortController.signal.aborted) return;
 
       process.imageUrl = imageUrl;
+      process.imagePrompt = imagePrompt;
 
       // Emit image complete event
       eventEmitter.emit({
         type: 'spawn:image-complete',
-        data: { spawnId, imageUrl }
+        data: { spawnId, imageUrl, imagePrompt }
       });
 
       // Stage 3: Analyze Image

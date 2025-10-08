@@ -2,6 +2,7 @@ import { useStore } from '@/store';
 import { useThemeStore } from '@/store/slices/themeSlice';
 import { Chat, useChatLogic } from '@/features/chat/components/Chat';
 import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer';
+import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { ActiveSpawnsPanel } from '@/features/spawn-panel/ActiveSpawnsPanel';
 import { ChatTabs } from '@/features/chat-tabs/ChatTabs';
@@ -69,6 +70,9 @@ export function App() {
       {activeChatSession && (
         <aside className={styles.historyPanel}>
           <ChatHistoryViewer messages={activeChatSession.messages} />
+          {activeChatSession.imagePrompt && (
+            <ImagePromptPanel imagePrompt={activeChatSession.imagePrompt} />
+          )}
         </aside>
       )}
     </div>

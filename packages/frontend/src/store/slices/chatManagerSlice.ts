@@ -17,6 +17,7 @@ export interface ChatSession {
   entityName: string;
   entityPersonality?: string;
   entityImage?: string;
+  imagePrompt?: string;
   systemPrompt: string;
   messages: ChatMessage[];
   loading?: boolean;
@@ -29,6 +30,7 @@ export interface ChatManagerSlice {
 
   createChatWithEntity: (spawnId: string, seed: any) => void;
   updateChatImage: (spawnId: string, imageUrl: string) => void;
+  updateChatImagePrompt: (spawnId: string, imagePrompt: string) => void;
   updateChatSystemPrompt: (spawnId: string, systemPrompt: string) => void;
   setActiveChat: (spawnId: string) => void;
   closeChat: (spawnId: string) => void;
@@ -80,6 +82,22 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
       newChats.set(spawnId, {
         ...chat,
         entityImage: imageUrl
+      });
+      return { chats: newChats };
+    });
+  },
+
+  updateChatImagePrompt: (spawnId: string, imagePrompt: string) => {
+    console.log('[ChatManager] Updating chat image prompt for spawn:', spawnId);
+    
+    set((state) => {
+      const chat = state.chats.get(spawnId);
+      if (!chat) return state;
+
+      const newChats = new Map(state.chats);
+      newChats.set(spawnId, {
+        ...chat,
+        imagePrompt
       });
       return { chats: newChats };
     });

@@ -9,6 +9,7 @@ export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);
   const createChatWithEntity = useStore(state => state.createChatWithEntity);
   const updateChatImage = useStore(state => state.updateChatImage);
+  const updateChatImagePrompt = useStore(state => state.updateChatImagePrompt);
   const updateChatSystemPrompt = useStore(state => state.updateChatSystemPrompt);
   const updateSpawnStatus = useStore(state => state.updateSpawnStatus);
   const removeSpawn = useStore(state => state.removeSpawn);
@@ -47,12 +48,17 @@ export function useSpawnEvents() {
 
     // Listen for image complete event
     eventSource.addEventListener('spawn:image-complete', (e) => {
-      const { spawnId, imageUrl } = JSON.parse(e.data);
+      const { spawnId, imageUrl, imagePrompt } = JSON.parse(e.data);
       console.log('🎨 Image Generated:', imageUrl);
       
       // Update chat with image
       if (updateChatImage) {
         updateChatImage(spawnId, imageUrl);
+      }
+      
+      // Update chat with image prompt
+      if (updateChatImagePrompt && imagePrompt) {
+        updateChatImagePrompt(spawnId, imagePrompt);
       }
       
       // Update spawn status
@@ -120,5 +126,5 @@ export function useSpawnEvents() {
     return () => {
       eventSource.close();
     };
-  }, [createChatWithEntity, updateChatImage, updateChatSystemPrompt]);
+  }, [createChatWithEntity, updateChatImage, updateChatImagePrompt, updateChatSystemPrompt]);
 }
