@@ -3,7 +3,7 @@ import { IconX } from '@/icons';
 import type { CharacterInfoModalProps } from './types';
 import styles from './CharacterInfoModal.module.css';
 
-export function CharacterInfoModal({ deepProfile, isOpen, onClose }: CharacterInfoModalProps) {
+export function CharacterInfoModal({ deepProfile, characterName, isOpen, onClose }: CharacterInfoModalProps) {
   const logic = useCharacterInfoLogic({ isOpen, onClose });
 
   if (!logic.state.isOpen || !deepProfile) return null;
@@ -23,7 +23,7 @@ export function CharacterInfoModal({ deepProfile, isOpen, onClose }: CharacterIn
             <h3 className={styles.sectionTitle}>Identity</h3>
             <div className={styles.field}>
               <span className={styles.label}>Name:</span>
-              <span className={styles.value}>{deepProfile.name}</span>
+              <span className={styles.value}>{characterName}</span>
             </div>
             <div className={styles.field}>
               <span className={styles.label}>Gender:</span>

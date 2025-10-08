@@ -17,6 +17,7 @@ export interface ChatState {
   entityPersonality: string | null;
   deepProfile: DeepProfile | undefined;
   isModalOpen: boolean;
+  isFullscreenOpen: boolean;
 }
 
 export interface ChatHandlers {
@@ -26,6 +27,8 @@ export interface ChatHandlers {
   initializeWithEntity: (entityData: { name: string; looks: string; wearing: string; personality: string; imageUrl?: string }) => Promise<void>;
   openModal: () => void;
   closeModal: () => void;
+  openFullscreen: () => void;
+  closeFullscreen: () => void;
 }
 
 export interface ChatLogicReturn {

@@ -8,7 +8,9 @@ export {
   IconMoon,
   IconSettings,
   IconInfoCircle,
-  IconX
+  IconX,
+  IconMaximize,
+  IconMinimize
 } from '@tabler/icons-react';
 
 // Icon type for string references

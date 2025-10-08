@@ -209,7 +209,7 @@ Mention vocabulary tone (casual, analytical, lyrical, archaic).
 2–3 sentences.
 
 [gender]  
-Reply with male, female, non-binary, or other.
+Reply with male, female or other.
 
 [nationality]  
 Provide country, region, or fictional origin consistent with Morfeum’s world or tone.  

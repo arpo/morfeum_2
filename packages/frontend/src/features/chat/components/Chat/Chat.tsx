@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Button, LoadingSpinner } from '@/components/ui';
-import { IconInfoCircle } from '@/icons';
+import { IconInfoCircle, IconMaximize, IconX } from '@/icons';
 import { CharacterInfoModal } from '../CharacterInfoModal';
 import type { ChatLogicReturn } from './types';
 import styles from './Chat.module.css';
@@ -56,14 +56,23 @@ export function Chat({ chatLogic }: ChatProps) {
             alt={state.entityName || 'Entity'}
             className={styles.entityHeaderImage}
           />
-          <button 
-            className={styles.infoButton}
-            onClick={handlers.openModal}
-            disabled={!state.deepProfile}
-            title={state.deepProfile ? 'View character info' : 'Character info not ready'}
-          >
-            <IconInfoCircle size={20} />
-          </button>
+          <div className={styles.imageButtons}>
+            <button 
+              className={styles.imageButton}
+              onClick={handlers.openFullscreen}
+              title="View fullscreen"
+            >
+              <IconMaximize size={20} />
+            </button>
+            <button 
+              className={styles.imageButton}
+              onClick={handlers.openModal}
+              disabled={!state.deepProfile}
+              title={state.deepProfile ? 'View character info' : 'Character info not ready'}
+            >
+              <IconInfoCircle size={20} />
+            </button>
+          </div>
         </div>
       )}
       
@@ -141,9 +150,24 @@ export function Chat({ chatLogic }: ChatProps) {
 
       <CharacterInfoModal 
         deepProfile={state.deepProfile || null}
+        characterName={state.entityName || 'Unknown'}
         isOpen={state.isModalOpen}
         onClose={handlers.closeModal}
       />
+
+      {state.isFullscreenOpen && state.entityImage && (
+        <div className={styles.fullscreenOverlay} onClick={handlers.closeFullscreen}>
+          <button className={styles.fullscreenCloseButton} onClick={handlers.closeFullscreen}>
+            <IconX size={32} />
+          </button>
+          <img 
+            src={state.entityImage} 
+            alt={state.entityName || 'Entity'}
+            className={styles.fullscreenImage}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }

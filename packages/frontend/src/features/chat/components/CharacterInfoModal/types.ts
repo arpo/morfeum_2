@@ -2,6 +2,7 @@ import type { DeepProfile } from '@/store/slices/chatManagerSlice';
 
 export interface CharacterInfoModalProps {
   deepProfile: DeepProfile | null;
+  characterName: string;
   isOpen: boolean;
   onClose: () => void;
 }

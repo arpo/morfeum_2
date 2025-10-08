@@ -1,10 +1,11 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useStore } from '@/store';
 import type { ChatLogicReturn } from './types';
 
 export function useChatLogic(): ChatLogicReturn {
   const [inputValue, setInputValue] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
   
   const activeChat = useStore(state => state.activeChat);
   const chats = useStore(state => state.chats);
@@ -35,6 +36,28 @@ export function useChatLogic(): ChatLogicReturn {
     setIsModalOpen(false);
   }, []);
 
+  const openFullscreen = useCallback(() => {
+    setIsFullscreenOpen(true);
+  }, []);
+
+  const closeFullscreen = useCallback(() => {
+    setIsFullscreenOpen(false);
+  }, []);
+
+  // Handle ESC key for fullscreen
+  useEffect(() => {
+    if (!isFullscreenOpen) return;
+
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeFullscreen();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isFullscreenOpen, closeFullscreen]);
+
   return {
     state: {
       messages: activeChatSession?.messages || [],
@@ -45,7 +68,8 @@ export function useChatLogic(): ChatLogicReturn {
       entityName: activeChatSession?.entityName || null,
       entityPersonality: activeChatSession?.entityPersonality || null,
       deepProfile: activeChatSession?.deepProfile,
-      isModalOpen
+      isModalOpen,
+      isFullscreenOpen
     },
     handlers: {
       setInputValue,
@@ -53,7 +77,9 @@ export function useChatLogic(): ChatLogicReturn {
       clearError,
       initializeWithEntity: async () => {}, // Deprecated - entities are managed by spawn system
       openModal,
-      closeModal
+      closeModal,
+      openFullscreen,
+      closeFullscreen
     }
   };
 }

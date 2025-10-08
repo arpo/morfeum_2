@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import type { CharacterInfoLogicReturn } from './types';
 
 interface UseCharacterInfoLogicProps {
@@ -13,6 +13,20 @@ export function useCharacterInfoLogic({
   const close = useCallback(() => {
     onClose();
   }, [onClose]);
+
+  // Handle ESC key
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        close();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isOpen, close]);
 
   return {
     state: {
