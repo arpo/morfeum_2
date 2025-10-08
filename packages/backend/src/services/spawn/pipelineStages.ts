@@ -64,7 +64,7 @@ export async function generateImage(
       locationSeed.looks,
       locationSeed.atmosphere,
       locationSeed.mood,
-      'Landscape Overview'
+      'Cinematic Establishing Shot'
     );
   } else {
     const entitySeed = seed as EntitySeed;

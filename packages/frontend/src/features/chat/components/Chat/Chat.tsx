@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { Button, LoadingSpinner } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX } from '@/icons';
 import { CharacterInfoModal } from '../CharacterInfoModal';
+import { LocationInfoModal } from '../LocationInfoModal';
 import type { ChatLogicReturn, ChatProps } from './types';
 import styles from './Chat.module.css';
 
@@ -64,7 +65,7 @@ export function Chat({ chatLogic, entityType = 'character' }: ChatProps) {
               className={styles.imageButton}
               onClick={handlers.openModal}
               disabled={!state.deepProfile}
-              title={state.deepProfile ? 'View character info' : 'Character info not ready'}
+              title={state.deepProfile ? 'View info' : 'Info not ready'}
             >
               <IconInfoCircle size={20} />
             </button>
@@ -152,12 +153,21 @@ export function Chat({ chatLogic, entityType = 'character' }: ChatProps) {
         </>
       )}
 
-      <CharacterInfoModal 
-        deepProfile={state.deepProfile || null}
-        characterName={state.entityName || 'Unknown'}
-        isOpen={state.isModalOpen}
-        onClose={handlers.closeModal}
-      />
+      {entityType === 'character' ? (
+        <CharacterInfoModal 
+          deepProfile={state.deepProfile || null}
+          characterName={state.entityName || 'Unknown'}
+          isOpen={state.isModalOpen}
+          onClose={handlers.closeModal}
+        />
+      ) : (
+        <LocationInfoModal 
+          locationProfile={(state.deepProfile as any) || null}
+          locationName={state.entityName || 'Unknown'}
+          isOpen={state.isModalOpen}
+          onClose={handlers.closeModal}
+        />
+      )}
 
       {state.isFullscreenOpen && state.entityImage && (
         <div className={styles.fullscreenOverlay} onClick={handlers.closeFullscreen}>
