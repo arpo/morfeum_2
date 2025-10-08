@@ -74,9 +74,9 @@
   font-size: var(--text-xs);
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: 35px;
+  margin-bottom: 5px;
   word-break: break-word;
-  max-height: 5px;
+  max-height: 35px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
