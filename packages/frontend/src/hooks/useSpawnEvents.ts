@@ -31,9 +31,14 @@ export function useSpawnEvents() {
       console.log('🌱 Seed Generated:', seed);
       // console.log('💬 Initial System Prompt:', systemPrompt);
       
+      // Detect entity type from seed structure
+      // Locations have 'atmosphere', characters have 'personality' as discriminator
+      const entityType: 'character' | 'location' = seed.atmosphere ? 'location' : 'character';
+      console.log('[SpawnEvents] Detected entity type:', entityType);
+      
       // Create new chat with this entity
       if (createChatWithEntity) {
-        createChatWithEntity(spawnId, seed);
+        createChatWithEntity(spawnId, seed, entityType);
       }
       
       // Set initial system prompt

@@ -34,6 +34,7 @@ export interface DeepProfile {
 export interface ChatSession {
   spawnId: string;
   entityName: string;
+  entityType?: 'character' | 'location';
   entityPersonality?: string;
   entityImage?: string;
   imagePrompt?: string;
@@ -48,7 +49,7 @@ export interface ChatManagerSlice {
   chats: Map<string, ChatSession>;
   activeChat: string | null;
 
-  createChatWithEntity: (spawnId: string, seed: any) => void;
+  createChatWithEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => void;
   updateChatImage: (spawnId: string, imageUrl: string) => void;
   updateChatImagePrompt: (spawnId: string, imagePrompt: string) => void;
   updateChatSystemPrompt: (spawnId: string, systemPrompt: string) => void;
@@ -64,8 +65,8 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
   chats: new Map(),
   activeChat: null,
 
-  createChatWithEntity: (spawnId: string, seed: any) => {
-    console.log('[ChatManager] Creating chat for spawn:', spawnId);
+  createChatWithEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => {
+    console.log('[ChatManager] Creating chat for spawn:', spawnId, 'type:', entityType);
     
     const systemMessage: ChatMessage = {
       id: 'system-001',
@@ -77,6 +78,7 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
     const chatSession: ChatSession = {
       spawnId,
       entityName: seed.name,
+      entityType: entityType || 'character',
       entityPersonality: seed.personality,
       systemPrompt: systemMessage.content,
       messages: [systemMessage]

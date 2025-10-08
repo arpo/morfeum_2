@@ -35,3 +35,8 @@ export interface ChatLogicReturn {
   state: ChatState;
   handlers: ChatHandlers;
 }
+
+export interface ChatProps {
+  chatLogic: ChatLogicReturn;
+  entityType?: 'character' | 'location';
+}

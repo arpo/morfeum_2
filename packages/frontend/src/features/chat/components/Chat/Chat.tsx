@@ -3,14 +3,10 @@ import ReactMarkdown from 'react-markdown';
 import { Button, LoadingSpinner } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX } from '@/icons';
 import { CharacterInfoModal } from '../CharacterInfoModal';
-import type { ChatLogicReturn } from './types';
+import type { ChatLogicReturn, ChatProps } from './types';
 import styles from './Chat.module.css';
 
-interface ChatProps {
-  chatLogic: ChatLogicReturn;
-}
-
-export function Chat({ chatLogic }: ChatProps) {
+export function Chat({ chatLogic, entityType = 'character' }: ChatProps) {
   const { state, handlers } = chatLogic;
   const messagesContainerRef = useRef<HTMLDivElement>(null);
   const prevMessageCountRef = useRef<number>(0);
@@ -85,14 +81,16 @@ export function Chat({ chatLogic }: ChatProps) {
         </div>
       )}
       
-      <div className={styles.messagesContainer} ref={messagesContainerRef}>
-        {visibleMessages.length === 0 && (
-          <div className={styles.emptyState}>
-            Start a conversation with {state.entityName}...
-          </div>
-        )}
-        
-        {visibleMessages.map((message) => (
+      {/* Hide messages section for locations */}
+      {entityType !== 'location' && (
+        <div className={styles.messagesContainer} ref={messagesContainerRef}>
+          {visibleMessages.length === 0 && (
+            <div className={styles.emptyState}>
+              Start a conversation with {state.entityName}...
+            </div>
+          )}
+          
+          {visibleMessages.map((message) => (
           <div 
             key={message.id}
             className={`${styles.messageWrapper} ${
@@ -110,43 +108,49 @@ export function Chat({ chatLogic }: ChatProps) {
           </div>
         ))}
         
-        {state.loading && (
-          <div className={styles.loadingWrapper}>
-            <LoadingSpinner message={`${state.entityName} is thinking...`} />
-          </div>
-        )}
-      </div>
-
-      {state.error && (
-        <div className={styles.errorMessage}>
-          {state.error}
-          <button 
-            className={styles.errorDismiss}
-            onClick={handlers.clearError}
-          >
-            ✕
-          </button>
+          {state.loading && (
+            <div className={styles.loadingWrapper}>
+              <LoadingSpinner message={`${state.entityName} is thinking...`} />
+            </div>
+          )}
         </div>
       )}
 
-      <div className={styles.inputContainer}>
-        <input
-          type="text"
-          className={styles.input}
-          value={state.inputValue}
-          onChange={(e) => handlers.setInputValue(e.target.value)}
-          onKeyPress={handleKeyPress}
-          placeholder={`Message ${state.entityName}...`}
-          disabled={state.loading}
-        />
-        <Button
-          onClick={handlers.sendMessage}
-          disabled={state.loading || !state.inputValue.trim()}
-          loading={state.loading}
-        >
-          Send
-        </Button>
-      </div>
+      {/* Hide error and input for locations */}
+      {entityType !== 'location' && (
+        <>
+          {state.error && (
+            <div className={styles.errorMessage}>
+              {state.error}
+              <button 
+                className={styles.errorDismiss}
+                onClick={handlers.clearError}
+              >
+                ✕
+              </button>
+            </div>
+          )}
+
+          <div className={styles.inputContainer}>
+            <input
+              type="text"
+              className={styles.input}
+              value={state.inputValue}
+              onChange={(e) => handlers.setInputValue(e.target.value)}
+              onKeyPress={handleKeyPress}
+              placeholder={`Message ${state.entityName}...`}
+              disabled={state.loading}
+            />
+            <Button
+              onClick={handlers.sendMessage}
+              disabled={state.loading || !state.inputValue.trim()}
+              loading={state.loading}
+            >
+              Send
+            </Button>
+          </div>
+        </>
+      )}
 
       <CharacterInfoModal 
         deepProfile={state.deepProfile || null}

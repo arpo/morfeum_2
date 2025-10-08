@@ -34,13 +34,14 @@ export function ChatTabs() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.header}>Chat Sessions</div>
+      <div className={styles.header}>Entities</div>
       <div className={styles.chatList}>
         {chatsArray.map(chat => (
           <div
             key={chat.spawnId}
             className={`${styles.chatButton} ${activeChat === chat.spawnId ? styles.active : ''}`}
             onClick={() => handleTabClick(chat.spawnId)}
+            data-entity-type={chat.entityType || 'character'}
           >
             {chat.entityImage && (
               <img 

@@ -42,6 +42,25 @@
   border-color: var(--color-primary);
 }
 
+/* Entity type color coding */
+.chatButton[data-entity-type="character"].active {
+  background-color: var(--color-entity-character);
+  border-color: var(--color-entity-character);
+}
+
+.chatButton[data-entity-type="location"].active {
+  background-color: var(--color-entity-location);
+  border-color: var(--color-entity-location);
+}
+
+.chatButton[data-entity-type="character"] .imagePlaceholder {
+  background-color: var(--color-entity-character);
+}
+
+.chatButton[data-entity-type="location"] .imagePlaceholder {
+  background-color: var(--color-entity-location);
+}
+
 .entityImage {
   width: 48px;
   height: 48px;

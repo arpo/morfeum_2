@@ -52,11 +52,11 @@ export function App() {
         <ThemeToggle className="compact" />
       </div>
       
-      {/* Column 2 - Active Chat */}
+      {/* Column 2 - Chat (handles both characters and locations) */}
       {activeChatSession && (
         <section className={styles.chatSection}>
           <Card>
-            <Chat chatLogic={chatLogic} />
+            <Chat chatLogic={chatLogic} entityType={activeChatSession.entityType} />
           </Card>
         </section>
       )}
@@ -66,10 +66,14 @@ export function App() {
         {/* Future panel space */}
       </aside>
       
-      {/* Column 4 - Chat History (Collapsible) */}
+      {/* Column 4 - Chat History (Collapsible) / Image Prompt Panel */}
       {activeChatSession && (
         <aside className={styles.historyPanel}>
-          <ChatHistoryViewer messages={activeChatSession.messages} />
+          {/* Hide chat history for locations */}
+          {activeChatSession.entityType !== 'location' && (
+            <ChatHistoryViewer messages={activeChatSession.messages} />
+          )}
+          {/* Always show image prompt panel */}
           {activeChatSession.imagePrompt && (
             <ImagePromptPanel imagePrompt={activeChatSession.imagePrompt} />
           )}

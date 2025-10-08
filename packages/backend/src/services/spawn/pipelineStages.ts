@@ -63,7 +63,8 @@ export async function generateImage(
       locationSeed.name,
       locationSeed.looks,
       locationSeed.atmosphere,
-      locationSeed.mood
+      locationSeed.mood,
+      'Landscape Overview'
     );
   } else {
     const entitySeed = seed as EntitySeed;
