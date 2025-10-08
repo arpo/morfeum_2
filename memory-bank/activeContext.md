@@ -1,9 +1,89 @@
 # Active Context
 
 ## Current Work Focus
-Complete dark mode implementation with comprehensive theme system, optimized floating theme toggle, and full component coverage. Dark mode features include three theme options (light/dark/system), persistent storage, responsive positioning, and WCAG AA/AAA accessibility compliance.
+Enhanced character interaction features with comprehensive character information modal, fullscreen image viewer, and improved UX with keyboard shortcuts. All features follow project architectural patterns with proper component separation.
 
 ## Recent Changes
+
+### Character Info Modal & Fullscreen Viewer (Latest - Just Completed)
+1. **Character Information Modal**:
+   - New CharacterInfoModal component displaying comprehensive deep profile data
+   - Organized sections: Identity, Physical Appearance, Style & Presence, Personality & Communication, Metadata
+   - Info button (ⓘ) in lower right corner of character image
+   - Button disabled until deep profile data is ready (grayed out, not clickable)
+   - Displays all 16 deep profile fields in organized, scrollable layout
+   - Modal overlay with backdrop and click-outside-to-close functionality
+
+2. **Deep Profile Data Flow**:
+   - Added `DeepProfile` interface to chatManagerSlice
+   - Created `updateChatDeepProfile` action to store deep profile data
+   - Updated `useSpawnEvents` to capture deep profile from `spawn:profile-complete` event
+   - Deep profile stored in chat session for persistent access
+   - Data flows from backend enrichment → SSE event → store → modal display
+
+3. **Fullscreen Image Viewer**:
+   - Fullscreen button (⛶) next to info button in lower right corner
+   - Image stretches to fill entire viewport while maintaining aspect ratio
+   - Uses `width: 100%`, `height: 100%` with `object-fit: contain`
+   - Dark overlay (95% black) for maximum focus
+   - Close button in top-right corner with hover effects
+
+4. **Keyboard Accessibility**:
+   - ESC key closes Character Info Modal
+   - ESC key closes Fullscreen Image Viewer
+   - Event listeners only attach when overlays are open
+   - Proper cleanup on component unmount
+   - Follows accessibility best practices
+
+5. **UI/UX Enhancements**:
+   - Two buttons positioned together in lower right of image
+   - Semi-transparent dark backgrounds with backdrop blur
+   - Hover effects: scale 1.1x, darker background
+   - Disabled state: 40% opacity, no pointer cursor
+   - Tooltips: "View character info" / "Character info not ready" / "View fullscreen"
+   - High z-index layering: fullscreen (2000) > modal (1000)
+
+6. **Name Mismatch Fix**:
+   - Identified issue: deep profile `name` field contained "Morfeum" (world name from AI prompt)
+   - Solution: Modal now displays actual character name from chat session (`entityName`)
+   - Character name passed as separate prop to CharacterInfoModal
+   - Ensures consistency across all UI elements
+
+7. **Component Architecture**:
+   - **CharacterInfoModal/** - Complete component with strict separation:
+     - `types.ts` - Component interfaces
+     - `useCharacterInfoLogic.ts` - Pure logic with ESC key handling
+     - `CharacterInfoModal.tsx` - Pure JSX only
+     - `CharacterInfoModal.module.css` - Pure CSS only
+     - `index.ts` - Exports
+   - Added icons: `IconInfoCircle`, `IconX`, `IconMaximize`, `IconMinimize`
+
+8. **Files Modified (10 total)**:
+   - `packages/frontend/src/store/slices/chatManagerSlice.ts` - DeepProfile interface, updateChatDeepProfile action
+   - `packages/frontend/src/hooks/useSpawnEvents.ts` - Capture deep profile from SSE
+   - `packages/frontend/src/features/chat/components/CharacterInfoModal/` - New component (5 files)
+   - `packages/frontend/src/features/chat/components/Chat/types.ts` - Modal and fullscreen state
+   - `packages/frontend/src/features/chat/components/Chat/useChatLogic.ts` - Modal/fullscreen handlers, ESC key
+   - `packages/frontend/src/features/chat/components/Chat/Chat.tsx` - Button UI, modals
+   - `packages/frontend/src/features/chat/components/Chat/Chat.module.css` - Button and overlay styles
+   - `packages/frontend/src/icons/index.ts` - Added new icons
+
+9. **Key Features Delivered**:
+   - **Progressive Enhancement**: Button disabled until data ready
+   - **Multiple View Options**: In-chat view, detailed modal, fullscreen image
+   - **Keyboard Navigation**: ESC key support for overlays
+   - **Visual Consistency**: Matches existing design system
+   - **Mobile Friendly**: Responsive layouts, touch-optimized buttons
+   - **Accessibility**: Proper ARIA labels, semantic HTML, keyboard support
+
+10. **Quality Verification**:
+    - TypeScript compilation: Zero errors
+    - Architecture compliance: Follows all separation rules
+    - Design tokens: All styling uses CSS custom properties
+    - Name consistency: Fixed across all displays
+    - Event cleanup: Proper listener removal
+
+## Recent Changes (Continued)
 
 ### Dark Mode Implementation (Latest - Just Completed)
 1. **Enhanced Design Token System**:
