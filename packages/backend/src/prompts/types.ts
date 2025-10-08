@@ -15,10 +15,16 @@ export type PromptKey =
 
 export type Language = 'en';
 
+export interface FluxFilter {
+  name: string;
+  text: string;
+  description: string;
+}
+
 export interface PromptTemplates {
   blackListCharacterNames: string;
   entitySeedGeneration: (textPrompt: string) => string;
-  entityImageGeneration: (originalPrompt: string, name: string, looks: string, wearing: string, personality?: string, presence?: string, setting?: string) => string;
+  entityImageGeneration: (originalPrompt: string, name: string, looks: string, wearing: string, personality?: string, presence?: string, setting?: string, filterName?: string) => string;
   morfeumVibes: string;
   qualityPrompt: string;
   chatSystemMessage: string;

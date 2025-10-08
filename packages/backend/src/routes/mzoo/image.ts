@@ -15,7 +15,7 @@ const router = Router();
  * MZOO Entity image generation endpoint
  */
 router.post('/generate-image', asyncHandler(async (req: Request, res: Response) => {
-  const { originalPrompt, name, looks, wearing, personality, presence, setting } = req.body;
+  const { originalPrompt, name, looks, wearing, personality, presence, setting, filterName } = req.body;
 
   if (!originalPrompt || !name || !looks || !wearing) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -26,7 +26,7 @@ router.post('/generate-image', asyncHandler(async (req: Request, res: Response) 
     return;
   }
 
-  const imagePrompt = getPrompt('entityImageGeneration', 'en')(originalPrompt, name, looks, wearing, personality, presence, setting);
+  const imagePrompt = getPrompt('entityImageGeneration', 'en')(originalPrompt, name, looks, wearing, personality, presence, setting, filterName);
 
   const imageResult = await mzooService.generateImage(
     (req as any).mzooApiKey,

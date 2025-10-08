@@ -4,6 +4,7 @@
  */
 
 import { morfeumVibes, qualityPrompt } from './constants';
+import { getFluxFilter, getDefaultFluxFilter } from './fluxFilters';
 
 export const entityImageGeneration = (
   originalPrompt: string,
@@ -12,12 +13,17 @@ export const entityImageGeneration = (
   wearing: string,
   personality?: string,
   presence?: string,
-  setting?: string
-) => `${morfeumVibes}
+  setting?: string,
+  filterName?: string
+) => {
+  const filter = filterName ? getFluxFilter(filterName) : getDefaultFluxFilter();
+  const filterText = filter?.text || getDefaultFluxFilter().text;
+
+  return `${morfeumVibes}
 
 Original user description: "${originalPrompt}"
 
-Half portrait of ${name},, subject looking at the camera. Face in sharp focus, natural lighting, soft background blur (bokeh), balanced composition emphasizing eyes and expression.”.
+${name}, ${filterText}.
 
 Look: ${looks}.
 
@@ -30,3 +36,4 @@ ${setting ? "Setting: " + setting + '.' : ''}
 ${personality ? 'Their demeanor reflects: ' + personality + '.' : ''}
 
 ${qualityPrompt}`;
+};

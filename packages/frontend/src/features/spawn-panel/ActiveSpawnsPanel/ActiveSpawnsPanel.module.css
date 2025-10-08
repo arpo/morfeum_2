@@ -75,8 +75,10 @@
   font-size: var(--text-xs);
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 30px;
   word-break: break-word;
+  max-height: 30px;
+  text-overflow: ellipsis;
 }
 
 .spawnStatus {
