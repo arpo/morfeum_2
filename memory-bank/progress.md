@@ -52,7 +52,7 @@
 ### Multi-Spawn Chat System
 - **SpawnInputBar Component**: Textarea input with shuffle/generate buttons for character creation
 - **ActiveSpawnsPanel**: Real-time progress tracking with visual progress bars (25%, 50%, 75%, 90%, 100%)
-- **ChatTabs Component**: Multi-session tab management with active tab highlighting and close buttons
+- **ChatTabs Component**: Multi-session tab management with active tab highlighting and close buttons (renamed to "Entities")
 - **Chat Component**: Functional messaging with message bubbles, auto-scroll, loading states
 - **Chat Manager Store**: Complete message handling (send, load, error) with personality storage
 - **SSE Events**: Server-sent events for spawn progress and system prompt updates
@@ -60,6 +60,19 @@
 - **Chat UI**: Full-width entity images, personality display, clean message bubbles
 - **Message Persistence**: All messages stored per chat session in Zustand store
 - **Real-time Updates**: Seamless system prompt updates without disrupting conversation
+- **Scrollable Lists**: Entities panel and Active Spawns panel have scrollbars when lists exceed max height
+
+### Location Creation System (Latest)
+- **Dual-Entity Support**: Complete support for both characters AND locations
+- **Location Prompts**: 4 specialized location prompt files (sample, seed, image, deep profile)
+- **Smart UI Adaptation**: Chat component conditionally renders based on entity type
+  - Locations: Image + name + info button only (no chat interface)
+  - Characters: Full chat interface with messages and input
+- **Entity Type Detection**: Auto-detects entity type (locations have `atmosphere`, characters have `personality`)
+- **Visual Differentiation**: Purple color (#8b5cf6) for locations, blue (#3b82f6) for characters
+- **Landscape Filter**: Locations use "Landscape Overview" filter for scenic image generation
+- **Type Safety**: Full TypeScript support for entity types throughout the stack
+- **No Code Duplication**: Reused Chat component with conditional rendering instead of separate viewer
 
 ## What's Left to Build 🚧
 - Additional UI components (Input, Modal, Table, etc.)
@@ -105,7 +118,19 @@
 
 ## Recent Refactoring Achievements
 
-### Dark Mode Implementation (Latest - Just Completed)
+### Location Creation & UI Refinements (Latest - Just Completed)
+- **Location Generation Pipeline**: Complete backend support with 4 specialized prompt files
+- **Dual-Entity System**: Seamless handling of characters and locations in same UI
+- **Smart Chat Component**: Conditional rendering based on entity type (no separate viewer needed)
+- **Color Coding**: Purple for locations, blue for characters throughout UI
+- **Font Size Optimizations**: Reduced textarea fonts to 12px (var(--text-xs)) for better UX
+- **Scrollbar Implementation**: Both Entities and Active Spawns panels scroll when lists exceed height
+- **Container Overflow Fix**: Changed overflow from hidden to visible to allow scrollbars
+- **Entity Type Flow**: Backend → SSE event → store → UI components with full type safety
+- **Files Modified**: 17 files total (5 backend, 12 frontend) with zero TypeScript errors
+- **Quality Verified**: All architectural patterns followed, design tokens used, no code duplication
+
+### Dark Mode Implementation (Previous)
 - **Complete Theme System**: Implemented comprehensive dark mode with light/dark/system options
 - **Enhanced Design Tokens**: Extended tokens.module.css with full dark theme color variables
 - **Theme Management**: Created themeSlice.ts Zustand store with localStorage persistence and system detection

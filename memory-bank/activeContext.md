@@ -1,9 +1,109 @@
 # Active Context
 
 ## Current Work Focus
-Enhanced character interaction features with comprehensive character information modal, fullscreen image viewer, and improved UX with keyboard shortcuts. All features follow project architectural patterns with proper component separation.
+Location creation feature fully implemented with dual-entity system (characters + locations), smart UI adaptation, color coding, and UX refinements. All features follow project architectural patterns with proper component separation.
 
 ## Recent Changes
+
+### Location Creation & Dual-Entity System (Latest - Just Completed)
+1. **Complete Location Generation Pipeline**:
+   - Created 4 new location-specific prompt files mirroring character prompts:
+     - `sampleLocationPrompts.ts` - Sample prompts for inspiration
+     - `locationSeedGeneration.ts` - Initial location seed with atmosphere, mood, looks
+     - `locationImageGeneration.ts` - "Landscape Overview" filter for scenic images
+     - `locationDeepProfileEnrichment.ts` - Detailed location profile (looks, atmosphere, vegetation, architecture, animals, mood, sounds, genre, fictional, copyright)
+   - Updated backend pipeline to handle both entity types
+   - Entity type detection: locations have `atmosphere`, characters have `personality`
+
+2. **Smart UI Adaptation**:
+   - **Chat Component Refactor**: Reused existing Chat component for both entity types
+   - **Conditional Rendering**:
+     - Locations: Show only image + name + info button (NO chat UI, NO message history, NO input)
+     - Characters: Show full chat interface with messages and input
+     - Both: ImagePromptPanel always visible in right column
+   - Added `entityType?: 'character' | 'location'` prop to Chat component
+   - Passed entityType from App.tsx based on chat session data
+
+3. **Entity Type Management**:
+   - Added `entityType` field to `ChatSession` interface
+   - Updated `createChatWithEntity()` to accept and store entityType
+   - Auto-detection in `useSpawnEvents`: checks for `atmosphere` field (location) vs `personality` (character)
+   - Type flows through: backend → SSE event → store → UI components
+
+4. **Visual Differentiation**:
+   - **Purple (#8b5cf6) for locations** vs **Blue (#3b82f6) for characters**
+   - Added design tokens:
+     ```css
+     --color-entity-character: #3b82f6;  /* Blue */
+     --color-entity-location: #8b5cf6;   /* Purple */
+     ```
+   - Applied to:
+     - Active state in entity tabs (ChatTabs)
+     - Image placeholders in entity list
+     - Visual indicator throughout UI
+
+5. **UI Label Updates**:
+   - Changed "Chat Sessions" → "Entities" in ChatTabs header
+   - More accurate terminology for dual-entity system
+
+6. **Font Size Refinements**:
+   - **SpawnInputBar textarea**: 16px → 12px (var(--text-md) → var(--text-xs))
+   - **EntityInputSection textarea**: 14px → 12px (var(--text-sm) → var(--text-xs))
+   - More compact, professional appearance
+
+7. **Scrollbar Implementation**:
+   - **Entities Panel (ChatTabs)**:
+     - `.chatList`: Added `max-height: 400px` + `overflow-y: auto`
+     - `.container`: Changed `overflow: hidden` → `overflow: visible`
+   - **Active Spawns Panel**:
+     - `.spawnsList`: Added `max-height: 300px` + `overflow-y: auto`
+     - `.container`: Changed `overflow: hidden` → `overflow: visible`
+   - Prevents list items from disappearing when lists grow too long
+   - Scrollbar appears automatically when content exceeds max-height
+
+8. **Files Modified (17 total)**:
+   - **Backend (5 files)**:
+     - `packages/backend/src/prompts/languages/en/sampleLocationPrompts.ts` - New location prompts
+     - `packages/backend/src/prompts/languages/en/locationSeedGeneration.ts` - Location seed template
+     - `packages/backend/src/prompts/languages/en/locationImageGeneration.ts` - Location image gen (Landscape Overview)
+     - `packages/backend/src/prompts/languages/en/locationDeepProfileEnrichment.ts` - Location profile enrichment
+     - `packages/backend/src/services/spawn/pipelineStages.ts` - Entity type handling, filter override
+   - **Frontend State (2 files)**:
+     - `packages/frontend/src/store/slices/chatManagerSlice.ts` - EntityType field, type signature update
+     - `packages/frontend/src/hooks/useSpawnEvents.ts` - Auto-detect and pass entityType
+   - **Frontend UI (10 files)**:
+     - `packages/frontend/src/features/chat/components/Chat/types.ts` - ChatProps with entityType
+     - `packages/frontend/src/features/chat/components/Chat/Chat.tsx` - Conditional rendering based on entityType
+     - `packages/frontend/src/features/app/components/App/App.tsx` - Pass entityType to Chat
+     - `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.tsx` - Data attribute + label change
+     - `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.module.css` - Color coding + scrollbar
+     - `packages/frontend/src/styles/tokens.module.css` - Entity color tokens
+     - `packages/frontend/src/features/spawn-input/SpawnInputBar/SpawnInputBar.module.css` - Font size
+     - `packages/frontend/src/features/entity-generation/.../EntityInputSection.module.css` - Font size
+     - `packages/frontend/src/features/spawn-panel/ActiveSpawnsPanel/ActiveSpawnsPanel.module.css` - Scrollbar
+     - `packages/frontend/src/features/app/components/App/App.module.css` - (No location viewer - reused Chat)
+
+9. **Key Features Delivered**:
+   - **Dual-Entity System**: Seamless support for characters AND locations
+   - **Smart UI**: Single Chat component adapts based on entity type
+   - **No Code Duplication**: Reused existing components with conditional rendering
+   - **Visual Clarity**: Color coding differentiates entity types at a glance
+   - **UX Refinements**: Smaller fonts, scrollable lists, clearer labels
+   - **Type Safety**: Full TypeScript support for entity types throughout
+
+10. **Quality Verification**:
+    - TypeScript compilation: Zero errors
+    - Architecture compliance: Followed all separation rules
+    - Design tokens: All colors use CSS custom properties
+    - No duplicate code: Reused Chat component intelligently
+    - Responsive: All UI changes work across screen sizes
+
+11. **Remaining Work** (Future Enhancements):
+    - LocationInfoModal component (separate from CharacterInfoModal)
+    - Modal routing logic to show appropriate modal based on entityType
+    - Location-specific fields display (looks, atmosphere, vegetation, architecture, animals, mood, sounds, genre, fictional, copyright)
+
+## Recent Changes (Continued)
 
 ### Character Info Modal & Fullscreen Viewer (Latest - Just Completed)
 1. **Character Information Modal**:
