@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Button, LoadingSpinner } from '@/components/ui';
+import { IconInfoCircle } from '@/icons';
+import { CharacterInfoModal } from '../CharacterInfoModal';
 import type { ChatLogicReturn } from './types';
 import styles from './Chat.module.css';
 
@@ -48,11 +50,21 @@ export function Chat({ chatLogic }: ChatProps) {
   return (
     <div className={styles.container}>
       {state.entityImage && (
-        <img 
-          src={state.entityImage} 
-          alt={state.entityName || 'Entity'}
-          className={styles.entityHeaderImage}
-        />
+        <div className={styles.imageContainer}>
+          <img 
+            src={state.entityImage} 
+            alt={state.entityName || 'Entity'}
+            className={styles.entityHeaderImage}
+          />
+          <button 
+            className={styles.infoButton}
+            onClick={handlers.openModal}
+            disabled={!state.deepProfile}
+            title={state.deepProfile ? 'View character info' : 'Character info not ready'}
+          >
+            <IconInfoCircle size={20} />
+          </button>
+        </div>
       )}
       
       {state.entityName && (
@@ -126,6 +138,12 @@ export function Chat({ chatLogic }: ChatProps) {
           Send
         </Button>
       </div>
+
+      <CharacterInfoModal 
+        deepProfile={state.deepProfile || null}
+        isOpen={state.isModalOpen}
+        onClose={handlers.closeModal}
+      />
     </div>
   );
 }

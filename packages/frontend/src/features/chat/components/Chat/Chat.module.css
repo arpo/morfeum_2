@@ -5,11 +5,44 @@
   height: 100%;
 }
 
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
 .entityHeaderImage {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+.infoButton {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.infoButton:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.infoButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .entityInfo {

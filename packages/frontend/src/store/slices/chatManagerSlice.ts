@@ -12,6 +12,25 @@ export interface ChatMessage {
   timestamp: string;
 }
 
+export interface DeepProfile {
+  name: string;
+  looks: string;
+  wearing: string;
+  face: string;
+  body: string;
+  hair: string;
+  specificDetails: string;
+  style: string;
+  personality: string;
+  voice: string;
+  speechStyle: string;
+  gender: string;
+  nationality: string;
+  fictional: string;
+  copyright: string;
+  tags: string;
+}
+
 export interface ChatSession {
   spawnId: string;
   entityName: string;
@@ -22,6 +41,7 @@ export interface ChatSession {
   messages: ChatMessage[];
   loading?: boolean;
   error?: string | null;
+  deepProfile?: DeepProfile;
 }
 
 export interface ChatManagerSlice {
@@ -32,6 +52,7 @@ export interface ChatManagerSlice {
   updateChatImage: (spawnId: string, imageUrl: string) => void;
   updateChatImagePrompt: (spawnId: string, imagePrompt: string) => void;
   updateChatSystemPrompt: (spawnId: string, systemPrompt: string) => void;
+  updateChatDeepProfile: (spawnId: string, deepProfile: DeepProfile) => void;
   setActiveChat: (spawnId: string) => void;
   closeChat: (spawnId: string) => void;
   sendMessage: (spawnId: string, content: string) => Promise<void>;
@@ -126,6 +147,22 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
         ...chat,
         systemPrompt,
         messages: updatedMessages
+      });
+      return { chats: newChats };
+    });
+  },
+
+  updateChatDeepProfile: (spawnId: string, deepProfile: DeepProfile) => {
+    console.log('[ChatManager] Updating deep profile for spawn:', spawnId);
+    
+    set((state) => {
+      const chat = state.chats.get(spawnId);
+      if (!chat) return state;
+
+      const newChats = new Map(state.chats);
+      newChats.set(spawnId, {
+        ...chat,
+        deepProfile
       });
       return { chats: newChats };
     });

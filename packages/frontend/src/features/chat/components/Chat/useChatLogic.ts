@@ -4,6 +4,7 @@ import type { ChatLogicReturn } from './types';
 
 export function useChatLogic(): ChatLogicReturn {
   const [inputValue, setInputValue] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   const activeChat = useStore(state => state.activeChat);
   const chats = useStore(state => state.chats);
@@ -26,6 +27,14 @@ export function useChatLogic(): ChatLogicReturn {
     }
   }, [activeChat, setError]);
 
+  const openModal = useCallback(() => {
+    setIsModalOpen(true);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
+
   return {
     state: {
       messages: activeChatSession?.messages || [],
@@ -34,13 +43,17 @@ export function useChatLogic(): ChatLogicReturn {
       error: activeChatSession?.error || null,
       entityImage: activeChatSession?.entityImage || null,
       entityName: activeChatSession?.entityName || null,
-      entityPersonality: activeChatSession?.entityPersonality || null
+      entityPersonality: activeChatSession?.entityPersonality || null,
+      deepProfile: activeChatSession?.deepProfile,
+      isModalOpen
     },
     handlers: {
       setInputValue,
       sendMessage,
       clearError,
-      initializeWithEntity: async () => {} // Deprecated - entities are managed by spawn system
+      initializeWithEntity: async () => {}, // Deprecated - entities are managed by spawn system
+      openModal,
+      closeModal
     }
   };
 }

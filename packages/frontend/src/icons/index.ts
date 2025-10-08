@@ -6,7 +6,9 @@ export {
   IconLoader2,
   IconSun,
   IconMoon,
-  IconSettings
+  IconSettings,
+  IconInfoCircle,
+  IconX
 } from '@tabler/icons-react';
 
 // Icon type for string references

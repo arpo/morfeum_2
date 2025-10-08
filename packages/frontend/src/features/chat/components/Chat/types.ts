@@ -1,3 +1,5 @@
+import type { DeepProfile } from '@/store/slices/chatManagerSlice';
+
 export interface ChatMessage {
   id: string;
   role: 'user' | 'assistant' | 'system';
@@ -13,6 +15,8 @@ export interface ChatState {
   entityImage: string | null;
   entityName: string | null;
   entityPersonality: string | null;
+  deepProfile: DeepProfile | undefined;
+  isModalOpen: boolean;
 }
 
 export interface ChatHandlers {
@@ -20,6 +24,8 @@ export interface ChatHandlers {
   sendMessage: () => Promise<void>;
   clearError: () => void;
   initializeWithEntity: (entityData: { name: string; looks: string; wearing: string; personality: string; imageUrl?: string }) => Promise<void>;
+  openModal: () => void;
+  closeModal: () => void;
 }
 
 export interface ChatLogicReturn {

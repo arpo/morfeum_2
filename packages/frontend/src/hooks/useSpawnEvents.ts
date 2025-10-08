@@ -11,6 +11,7 @@ export function useSpawnEvents() {
   const updateChatImage = useStore(state => state.updateChatImage);
   const updateChatImagePrompt = useStore(state => state.updateChatImagePrompt);
   const updateChatSystemPrompt = useStore(state => state.updateChatSystemPrompt);
+  const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
   const updateSpawnStatus = useStore(state => state.updateSpawnStatus);
   const removeSpawn = useStore(state => state.removeSpawn);
 
@@ -84,6 +85,11 @@ export function useSpawnEvents() {
       console.log('✨ Deep Profile:', deepProfile);
       console.log('💬 Enhanced System Prompt Updated');
       
+      // Store deep profile in chat session
+      if (updateChatDeepProfile && deepProfile) {
+        updateChatDeepProfile(spawnId, deepProfile);
+      }
+      
       // Update system prompt with enhanced version from deep profile
       if (updateChatSystemPrompt && enhancedSystemPrompt) {
         updateChatSystemPrompt(spawnId, enhancedSystemPrompt);
@@ -126,5 +132,5 @@ export function useSpawnEvents() {
     return () => {
       eventSource.close();
     };
-  }, [createChatWithEntity, updateChatImage, updateChatImagePrompt, updateChatSystemPrompt]);
+  }, [createChatWithEntity, updateChatImage, updateChatImagePrompt, updateChatSystemPrompt, updateChatDeepProfile]);
 }
