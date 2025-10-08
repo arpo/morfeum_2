@@ -8,6 +8,7 @@ export const entitySeedGeneration = (textPrompt: string) => `Generate a concise,
 
 Return only valid JSON with these exact fields:
 {
+  "originalPrompt": "...",
   "name": "...",
   "looks": "...",
   "wearing": "...",
@@ -20,6 +21,10 @@ Core rule:
 - Favor striking, image-ready traits over realism. If something sounds even slightly unreal, show it clearly.
 
 Field hints:
+
+- [originalPrompt]:
+  - Echo back the exact original user description provided in the input
+  - Preserve the original text without modification
 
 - [name]: 
   - Human → plausible full name.

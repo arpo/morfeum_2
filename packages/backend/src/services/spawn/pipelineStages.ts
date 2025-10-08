@@ -37,7 +37,10 @@ export async function generateSeed(
     throw new Error('No JSON found in response');
   }
 
-  return JSON.parse(jsonMatch[0]);
+  const seed = JSON.parse(jsonMatch[0]);
+  console.log('Generated seed:', JSON.stringify(seed, null, 2));
+  
+  return seed;
 }
 
 /**
