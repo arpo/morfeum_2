@@ -82,6 +82,7 @@
 .spawnStatus {
   font-size: 10px;
   color: var(--color-text-secondary);
+  margin-top: var(--spacing-xs);
   margin-bottom: var(--spacing-xs);
 }
 
