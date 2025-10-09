@@ -10,7 +10,8 @@ export {
   IconInfoCircle,
   IconX,
   IconMaximize,
-  IconMinimize
+  IconMinimize,
+  IconDeviceFloppy
 } from '@tabler/icons-react';
 
 // Icon type for string references

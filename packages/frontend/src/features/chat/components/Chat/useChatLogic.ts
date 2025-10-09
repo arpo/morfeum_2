@@ -1,16 +1,22 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useStore } from '@/store';
+import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { splitWorldAndLocation } from '@/utils/locationProfile';
 import type { ChatLogicReturn } from './types';
 
 export function useChatLogic(): ChatLogicReturn {
   const [inputValue, setInputValue] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
   
   const activeChat = useStore(state => state.activeChat);
   const chats = useStore(state => state.chats);
   const sendMessageToStore = useStore(state => state.sendMessage);
   const setError = useStore(state => state.setError);
+  
+  const createLocation = useLocationsStore(state => state.createLocation);
+  const getLocation = useLocationsStore(state => state.getLocation);
   
   // Get active chat session
   const activeChatSession = activeChat ? chats.get(activeChat) : null;
@@ -44,6 +50,49 @@ export function useChatLogic(): ChatLogicReturn {
     setIsFullscreenOpen(false);
   }, []);
 
+  const saveLocation = useCallback(() => {
+    if (!activeChatSession || !activeChat) {
+      console.warn('[useChatLogic] Cannot save: no active chat session');
+      return;
+    }
+    
+    const deepProfile = activeChatSession.deepProfile;
+    if (!deepProfile) {
+      console.warn('[useChatLogic] Cannot save: no deep profile data');
+      return;
+    }
+    
+    // Split the deep profile into world and location data
+    const { world, location } = splitWorldAndLocation(deepProfile as Record<string, any>);
+    
+    // Create location in storage
+    createLocation({
+      id: activeChat, // Use spawnId as location ID
+      world_id: activeChat, // Use same ID for world
+      name: activeChatSession.entityName || 'Unnamed Location',
+      locationInfo: location,
+      worldInfo: world,
+      imagePath: activeChatSession.entityImage || '',
+      parent_location_id: null,
+      adjacent_to: [],
+      children: [],
+      depth_level: 0
+    });
+    
+    setIsSaved(true);
+    console.log(`[useChatLogic] Location saved with ID: ${activeChat}`);
+  }, [activeChatSession, activeChat, createLocation]);
+
+  // Check if location is already saved when active chat changes
+  useEffect(() => {
+    if (activeChat) {
+      const existingLocation = getLocation(activeChat);
+      setIsSaved(!!existingLocation);
+    } else {
+      setIsSaved(false);
+    }
+  }, [activeChat, getLocation]);
+
   // Handle ESC key for fullscreen
   useEffect(() => {
     if (!isFullscreenOpen) return;
@@ -69,7 +118,8 @@ export function useChatLogic(): ChatLogicReturn {
       entityPersonality: activeChatSession?.entityPersonality || null,
       deepProfile: activeChatSession?.deepProfile,
       isModalOpen,
-      isFullscreenOpen
+      isFullscreenOpen,
+      isSaved
     },
     handlers: {
       setInputValue,
@@ -79,7 +129,8 @@ export function useChatLogic(): ChatLogicReturn {
       openModal,
       closeModal,
       openFullscreen,
-      closeFullscreen
+      closeFullscreen,
+      saveLocation
     }
   };
 }

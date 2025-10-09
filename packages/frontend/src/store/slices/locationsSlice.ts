@@ -17,7 +17,8 @@ export interface Location {
   children: string[];
   depth_level: number;
   name: string;
-  details: Record<string, any>;
+  locationInfo: Record<string, any>;
+  worldInfo: Record<string, any>;
   imagePath: string;
 }
 

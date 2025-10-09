@@ -18,6 +18,7 @@ export interface ChatState {
   deepProfile: DeepProfile | undefined;
   isModalOpen: boolean;
   isFullscreenOpen: boolean;
+  isSaved: boolean;
 }
 
 export interface ChatHandlers {
@@ -29,6 +30,7 @@ export interface ChatHandlers {
   closeModal: () => void;
   openFullscreen: () => void;
   closeFullscreen: () => void;
+  saveLocation: () => void;
 }
 
 export interface ChatLogicReturn {

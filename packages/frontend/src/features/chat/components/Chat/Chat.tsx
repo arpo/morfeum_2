@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Button, LoadingSpinner } from '@/components/ui';
-import { IconInfoCircle, IconMaximize, IconX } from '@/icons';
+import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
 import { CharacterInfoModal } from '../CharacterInfoModal';
 import { LocationInfoModal } from '../LocationInfoModal';
 import type { ChatLogicReturn, ChatProps } from './types';
@@ -69,6 +69,16 @@ export function Chat({ chatLogic, entityType = 'character' }: ChatProps) {
             >
               <IconInfoCircle size={20} />
             </button>
+            {entityType === 'location' && (
+              <button 
+                className={styles.imageButton}
+                onClick={handlers.saveLocation}
+                disabled={!state.deepProfile || state.isSaved}
+                title={state.isSaved ? 'Location saved' : state.deepProfile ? 'Save location' : 'Profile not ready'}
+              >
+                <IconDeviceFloppy size={20} />
+              </button>
+            )}
           </div>
         </div>
       )}
