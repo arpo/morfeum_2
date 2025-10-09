@@ -90,5 +90,6 @@ export const sampleLocationPrompts = [
     'A lighthouse on a cliff above a sea of stars instead of water.',
     'A city at dusk where gravity bends, and streets spiral upward into the clouds.',
     'A lonely android sitting by a campfire under a shattered moon.',
-    'A gateway of stone opening onto a landscape that seems to breathe.'
+    'A gateway of stone opening onto a landscape that seems to breathe.',
+    'A fractured floating marketplace orbiting a dying sun, where shattered domes of translucent glass drift slowly apart, connected by swaying bridges of vines and torn solar panels. Bioluminescent fungi cling to the steel ribs of the ruins, illuminating stalls still laden with petrified fruit and frozen fabrics that ripple as if moved by forgotten gravity. Below, the planet burns in slow motion, casting rhythmic pulses of amber light through the cracks in the hull. From here, you can see several paths — a collapsed corridor leading into the cargo bay, a shimmering lift-tube descending toward the engine sanctum, and a narrow walkway arcing across the void to another broken dome that flickers with residual power.'
 ];
