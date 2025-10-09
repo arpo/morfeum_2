@@ -55,7 +55,7 @@ router.post('/chat-system', asyncHandler(async (req: Request, res: Response) => 
  * Get sample entity prompts
  */
 router.get('/entity-samples', asyncHandler(async (req: Request, res: Response) => {
-  const samples = getPrompt('sampleEntityPrompts', 'en');
+  const samples = getPrompt('sampleCharacterPrompts', 'en');
   
   res.status(HTTP_STATUS.OK).json({
     message: 'Sample entity prompts retrieved successfully',

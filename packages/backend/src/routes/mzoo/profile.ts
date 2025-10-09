@@ -33,7 +33,7 @@ router.post('/enrich-profile', asyncHandler(async (req: Request, res: Response) 
     const prompt = originalPrompt || seedData.originalPrompt || 'No specific request provided';
 
     // Get the deep profile enrichment prompt
-    const enrichmentPrompt = getPrompt('deepProfileEnrichment', 'en')(seedJson, visionJson, prompt);
+    const enrichmentPrompt = getPrompt('characterDeepProfileEnrichment', 'en')(seedJson, visionJson, prompt);
 
     // Call Gemini with the enrichment prompt
     const messages = [

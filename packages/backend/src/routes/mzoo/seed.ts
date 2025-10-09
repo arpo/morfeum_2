@@ -26,7 +26,7 @@ router.post('/generate-seed', asyncHandler(async (req: Request, res: Response) =
     return;
   }
 
-  const systemPrompt = getPrompt('entitySeedGeneration', 'en')(textPrompt);
+  const systemPrompt = getPrompt('characterSeedGeneration', 'en')(textPrompt);
 
   const messages = [
     { role: 'system', content: systemPrompt },

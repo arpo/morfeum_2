@@ -1,8 +1,8 @@
 /**
- * Sample entity prompts for testing and inspiration
+ * Sample character prompts for testing and inspiration
  */
 
-export const sampleEntityPrompts = [
+export const sampleCharacterPrompts = [
     'A graceful elf with luminous eyes and a calm intelligence that feels centuries old.',
     'A charming woman in her 20s with a confident smile and a hint of mischief in her gaze.',
     'A fierce female warrior with a scar over one eyebrow and the posture of unshakable pride.',

@@ -16,7 +16,7 @@ export async function generateSeed(
   signal: AbortSignal,
   entityType: 'character' | 'location' = 'character'
 ): Promise<EntitySeed | LocationSeed> {
-  const promptKey = entityType === 'location' ? 'locationSeedGeneration' : 'entitySeedGeneration';
+  const promptKey = entityType === 'location' ? 'locationSeedGeneration' : 'characterSeedGeneration';
   const systemPrompt = getPrompt(promptKey, 'en')(textPrompt);
   const messages = [
     { role: 'system', content: systemPrompt },
@@ -68,7 +68,7 @@ export async function generateImage(
     );
   } else {
     const entitySeed = seed as EntitySeed;
-    imagePrompt = getPrompt('entityImageGeneration', 'en')(
+    imagePrompt = getPrompt('characterImageGeneration', 'en')(
       entitySeed.originalPrompt || '',
       entitySeed.name,
       entitySeed.looks,
@@ -175,7 +175,7 @@ export async function enrichProfile(
   const visionJson = JSON.stringify(visualAnalysis, null, 2);
   const originalPrompt = seed.originalPrompt || 'No specific request provided';
 
-  const promptKey = entityType === 'location' ? 'locationDeepProfileEnrichment' : 'deepProfileEnrichment';
+  const promptKey = entityType === 'location' ? 'locationDeepProfileEnrichment' : 'characterDeepProfileEnrichment';
   const enrichmentPrompt = getPrompt(promptKey, 'en')(seedJson, visionJson, originalPrompt);
 
   const userMessage = entityType === 'location' 

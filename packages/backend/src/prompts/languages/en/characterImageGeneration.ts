@@ -1,12 +1,12 @@
 /**
- * Entity image generation prompt
+ * Character image generation prompt
  * Source: https://deepinfra.com/blog/flux1-dev-guide
  */
 
 import { morfeumVibes, qualityPrompt } from './constants';
 import { getFluxFilter, getDefaultFluxFilter } from './fluxFilters';
 
-export const entityImageGeneration = (
+export const characterImageGeneration = (
   originalPrompt: string,
   name: string,
   looks: string,

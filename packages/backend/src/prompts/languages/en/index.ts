@@ -6,12 +6,12 @@ import type { PromptTemplates } from '../../types';
 import { blackListCharacterNames, morfeumVibes, qualityPrompt } from './constants';
 import { chatSystemMessage } from './chatSystemMessage';
 import { chatCharacterImpersonation } from './chatCharacterImpersonation';
-import { entitySeedGeneration } from './entitySeedGeneration';
-import { entityImageGeneration } from './entityImageGeneration';
+import { characterSeedGeneration } from './characterSeedGeneration';
+import { characterImageGeneration } from './characterImageGeneration';
 import { characterVisualAnalysis } from './characterVisualAnalysis';
 import { locationVisualAnalysis } from './locationVisualAnalysis';
-import { deepProfileEnrichment } from './deepProfileEnrichment';
-import { sampleEntityPrompts } from './sampleEntityPrompts';
+import { characterDeepProfileEnrichment } from './characterDeepProfileEnrichment';
+import { sampleCharacterPrompts } from './sampleCharacterPrompts';
 import { locationSeedGeneration } from './locationSeedGeneration';
 import { locationImageGeneration } from './locationImageGeneration';
 import { locationDeepProfileEnrichment } from './locationDeepProfileEnrichment';
@@ -26,12 +26,12 @@ export const en: PromptTemplates = {
   qualityPrompt,
   chatSystemMessage,
   chatCharacterImpersonation,
-  entitySeedGeneration,
-  entityImageGeneration,
+  characterSeedGeneration,
+  characterImageGeneration,
   characterVisualAnalysis,
   locationVisualAnalysis,
-  deepProfileEnrichment,
-  sampleEntityPrompts,
+  characterDeepProfileEnrichment,
+  sampleCharacterPrompts,
   locationSeedGeneration,
   locationImageGeneration,
   locationDeepProfileEnrichment,

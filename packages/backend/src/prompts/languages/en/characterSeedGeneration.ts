@@ -1,10 +1,10 @@
 /**
- * Entity seed generation prompt
+ * Character seed generation prompt
  */
 
 import { blackListCharacterNames } from './constants';
 
-export const entitySeedGeneration = (textPrompt: string) => `Generate a concise, visually focused character seed based on the description below.
+export const characterSeedGeneration = (textPrompt: string) => `Generate a concise, visually focused character seed based on the description below.
 
 Return only valid JSON with these exact fields:
 {
