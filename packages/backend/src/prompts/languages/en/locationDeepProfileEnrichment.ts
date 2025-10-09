@@ -22,14 +22,17 @@ IMPORTANT: Return ONLY a valid JSON object with these exact fields:
   "looks": "...",
   "colorsAndLighting": "...",
   "atmosphere": "...",
-  "vegetation": "...",
-  "animals": "...",
+  "flora": "...",
+  "fauna": "...",
   "architecture": "...",
+  "materials": "...",
   "mood": "...",
   "sounds": "...",
   "genre": "...",
-  "fictional": "true or false",
-  "copyright": "true or false"
+  "symbolicThemes": "...",
+  "airParticles": "...",
+  "fictional": true,
+  "copyright": false
 }
 
 Do not include any markdown formatting, code blocks, or explanatory text.
@@ -37,91 +40,90 @@ Return only the JSON object.
 
 Guidelines:
 - Maintain strict continuity with both the seed and the image.
-- Enrich each section with sensory, spatial, and atmospheric precision.
-- Favor evocative phrasing over adjectives — describe through texture, color, light, and scale.
+- Enrich each section with sensory, spatial, and emotional precision.
+- Favor evocative phrasing over generic adjectives — describe through texture, color, light, and spatial relationship.
 - Avoid lists; use natural prose sentences.
-- The output should read like a detailed location profile, not a story.
+- The output should read like a detailed environmental profile, not a story.
 - Use the exact field names shown — no markdown, lists, or commentary.
-- Don't reuse the location name in the document. It should be stated only once in the name field.
+- Do not reuse the location name anywhere except in the "name" field.
 
 Field definitions and depth instructions:
 
 [name]
-The name of the location from the seed data.
-One short phrase only.
+Short, evocative name of the location derived from the seed.
 
 [looks]
-Describe the location's overall visual impression in layered detail.
-Include spatial layout, scale, architecture (if any), nature, structures, materials, and textures.
-Mention how light or color interacts with surfaces, what dominates the visual field.
-Note perspective and focal points — what draws the eye first.
-If relevant, mention weather-worn details, decay, growth, or pristine condition.
-Write 4-6 sentences rich in visual texture and spatial awareness.
+Describe the overall visual composition and spatial structure.
+Include geometry, dominant forms, terrain, scale, and what draws the eye.
+Mention how light interacts with surfaces and materials.
+4–6 sentences of layered visual detail.
 
 [colorsAndLighting]
-Describe the color palette and lighting conditions of the location.
-Include dominant colors, contrasts, and how they shift across surfaces.
+Summarize the dominant palette, contrast, and light source qualities.
+Describe light behavior (glow, reflection, flicker, diffusion).
+1–3 sentences.
 
 [atmosphere]
-Describe the atmospheric qualities of the space in full sensory detail.
-Include the color and quality of ambient lights (natural, artificial, magical, bioluminescent).
-Mention fog, mist, haze, air particles, dust, clarity, or any visual atmosphere.
-Describe temperature sensations (warm, cold, humid, dry, oppressive, refreshing).
-Note environmental effects such as wind, stillness, pressure, or acoustic qualities.
-Mention overall luminosity, color palette, and how atmosphere affects visibility.
-Write 3-5 sentences.
+Describe the environmental presence and sensory field of the space.
+Include temperature, humidity, density, motion (wind, stillness, pressure), and how these qualities affect perception.
+Mention fog, mist, haze, or clarity.
+3–5 sentences.
 
-[vegetation]
-Describe plant life, flora, or organic growth present in the location.
-Include types (trees, vines, moss, flowers, grass, fungi), density, and condition.
-Mention colors, textures, and how vegetation interacts with structures or light.
-If no vegetation exists, reply with "None" and briefly explain why (desert, space station, urban concrete, etc.).
-2-4 sentences or "None" with reason.
+[flora]
+Describe plant or organic growth in the scene.
+Include types, colors, density, and how they interact with light or terrain.
+If none, return "None" and briefly state why (desert, sterile facility, oceanic void).
+2–4 sentences or "None" with reason.
+
+[fauna]
+Describe animal or creature presence and behavior.
+Note whether natural, mechanical, or fantastical.
+If none, return "None."
+1–3 sentences or "None."
 
 [architecture]
-Describe built structures, construction style, and human-made (or non-human-made) elements.
-Include architectural period or style (modern, ancient, Gothic, brutalist, organic, alien).
-Mention materials (stone, metal, glass, crystal, living tissue), scale, and condition.
-Note symmetry, ornamentation, function, and spatial organization.
-If no architecture exists, reply with "None" and briefly explain (natural wilderness, open ocean, etc.).
-2-4 sentences or "None" with reason.
+Describe built or constructed structures, if present.
+Include style, scale, material, age, and condition.
+If none, reply "None" and explain briefly.
+2–4 sentences.
 
-[animals]
-Describe animal life or creatures present in the location.
-Include types, behaviors, sounds, and how they interact with the environment.
-Mention if they're natural, fantastical, or mechanical.
-If no animals are present, reply with "None."
-1-3 sentences or "None."
+[materials]
+List or describe key materials visible in this environment — natural or artificial.
+Mention texture, reflectivity, and condition (rusted, polished, organic, crystalline).
+1–3 sentences.
 
 [mood]
-Describe the emotional temperature and psychological atmosphere of the space.
-What emotions would someone experience upon entering or inhabiting this location?
-Examples: tense, relaxed, romantic, melancholic, mysterious, energetic, serene, oppressive, welcoming, haunting, euphoric.
-Ground mood in subtle contrasts (e.g., serene yet unsettling).
-2-3 sentences.
+Describe the emotional and psychological atmosphere experienced by a visitor.
+Use subtle contrasts (serene yet haunting, beautiful yet isolating).
+2–3 sentences.
 
 [sounds]
-MANDATORY: Provide 3-7 words describing background sounds in this location.
-Condense the audio atmosphere into a brief, evocative phrase.
-Describe suitable sounds for the entire location, not a single moment.
-Examples: "birds chirping, wind blowing, distant thunder", "mechanical hums, steam hissing, footsteps echoing", "waves crashing, gulls crying, wood creaking"
-One phrase only, 3-7 words.
+Provide one short phrase (3–7 words) describing the ambient soundscape.
+Examples: "waves lapping, wind sighing, distant bells", "machinery hum, footsteps echo, soft static"
 
 [genre]
-Describe the genre or aesthetic this location belongs to.
-Examples: fantasy, sci-fi, horror, steampunk, cyberpunk, gothic, post-apocalyptic, magical realism, cosmic horror, solarpunk, noir
-If it spans multiple genres, list them separated by commas.
-1-2 sentences.
+Specify the genre or aesthetic tone.
+Examples: fantasy, sci-fi, surrealism, magical realism, post-apocalyptic.
+If multiple, separate by commas.
+
+[symbolicThemes]
+List or describe recurring metaphors or underlying ideas represented by the scene.
+Examples: decay and rebirth, memory and reflection, isolation and transcendence.
+1–2 sentences or a short phrase.
+
+[airParticles]
+Describe visible particulates in the air (dust, mist, glowing motes, embers, spores).
+If none, reply "None."
+1–2 sentences.
 
 [fictional]
-Reply with "true" if the location is fictional, "false" if it's a real place.
+"true" if the location is fictional; "false" if real.
 
 [copyright]
-Reply with "true" if the location belongs to copyrighted material (e.g., Middle-earth, Hogwarts, Star Wars locations).
-Reply with "false" if it's public domain or original creation created recently.
+"true" if it belongs to copyrighted material (e.g., Middle-earth, Star Wars);
+"false" if it's public domain or an original creation.
 
 Rules & Best Practices:
-- Do not use uncertain language like "likely," "possibly," or "seems." "Appears to be". If uncertain, make it up.
-- If details are missing, invent them to harmonize with seed and image.
-- No illegal content.
-- Keep output coherent, sensory, and atmospherically believable.`;
+- Avoid uncertain phrasing ("might", "possibly"). If unknown, invent a consistent detail.
+- No illegal, graphic, or copyrighted descriptions.
+- Keep it sensory, coherent, and believable within Morfeum's tone.`;

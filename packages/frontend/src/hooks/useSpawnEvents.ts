@@ -5,6 +5,50 @@
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
 
+/**
+ * Splits a flat deep profile JSON into world and location parts
+ */
+function splitWorldAndLocation(flat: Record<string, any>) {
+  // Fields describing persistent world DNA
+  const worldKeys = [
+    "colorsAndLighting",
+    "atmosphere",
+    "flora",
+    "fauna",
+    "architecture",
+    "materials",
+    "genre",
+    "symbolicThemes",
+    "fictional",
+    "copyright"
+  ];
+
+  // Fields describing a single place or scene
+  const locationKeys = [
+    "name",
+    "looks",
+    "mood",
+    "sounds",
+    "airParticles"
+  ];
+
+  const world: Record<string, any> = {};
+  const location: Record<string, any> = {};
+
+  for (const [key, value] of Object.entries(flat)) {
+    if (worldKeys.includes(key)) {
+      world[key] = value;
+    } else if (locationKeys.includes(key)) {
+      location[key] = value;
+    } else {
+      // Optional: log any unexpected keys for debugging
+      console.warn(`splitWorldAndLocation: unrecognized key "${key}"`);
+    }
+  }
+
+  return { world, location };
+}
+
 export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);
   const createChatWithEntity = useStore(state => state.createChatWithEntity);
@@ -87,7 +131,11 @@ export function useSpawnEvents() {
     // Listen for profile complete event
     eventSource.addEventListener('spawn:profile-complete', (e) => {
       const { spawnId, deepProfile, enhancedSystemPrompt } = JSON.parse(e.data);
-      console.log('✨ Deep Profile:', deepProfile);
+      
+      // Split deep profile into world and location parts
+      const { world, location } = splitWorldAndLocation(deepProfile);
+      console.log('🌍 World DNA:', world);
+      console.log('📍 Location Instance:', location);
       console.log('💬 Enhanced System Prompt Updated');
       
       // Store deep profile in chat session
