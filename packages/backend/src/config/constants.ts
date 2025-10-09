@@ -27,3 +27,9 @@ export const CORS_CONFIG = {
   METHODS: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   ALLOWED_HEADERS: ['Content-Type', 'Authorization'],
 } as const;
+
+export const AI_MODELS = {
+  SEED_GENERATION: 'gemini-2.5-flash-lite',
+  VISUAL_ANALYSIS: 'gemini-2.5-flash-lite',
+  PROFILE_ENRICHMENT: 'gemini-2.5-flash-lite',
+} as const;

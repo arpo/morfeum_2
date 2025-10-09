@@ -80,9 +80,13 @@ export class SpawnManager {
     const process = this.processes.get(spawnId);
     if (!process) return;
 
+    const pipelineStartTime = Date.now();
+    const timings: Record<string, number> = {};
+
     try {
       // Stage 1: Generate Seed
       process.status = 'generating_seed';
+      const seedStartTime = Date.now();
       
       const seed = await pipeline.generateSeed(
         this.mzooApiKey,
@@ -93,6 +97,7 @@ export class SpawnManager {
       if (process.abortController.signal.aborted) return;
 
       process.seed = seed;
+      timings.seedGeneration = Date.now() - seedStartTime;
 
       // Generate initial system prompt from seed data (only for characters)
       let systemPrompt = '';
@@ -109,6 +114,7 @@ export class SpawnManager {
 
       // Stage 2: Generate Image
       process.status = 'generating_image';
+      const imageStartTime = Date.now();
 
       const { imageUrl, imagePrompt } = await pipeline.generateImage(
         this.mzooApiKey,
@@ -120,6 +126,7 @@ export class SpawnManager {
 
       process.imageUrl = imageUrl;
       process.imagePrompt = imagePrompt;
+      timings.imageGeneration = Date.now() - imageStartTime;
 
       // Emit image complete event
       eventEmitter.emit({
@@ -129,6 +136,7 @@ export class SpawnManager {
 
       // Stage 3: Analyze Image
       process.status = 'analyzing';
+      const analysisStartTime = Date.now();
 
       const visualAnalysis = await pipeline.analyzeImage(
         this.mzooApiKey,
@@ -140,6 +148,7 @@ export class SpawnManager {
       if (process.abortController.signal.aborted) return;
 
       process.visualAnalysis = visualAnalysis;
+      timings.visualAnalysis = Date.now() - analysisStartTime;
 
       // Emit analysis complete event
       eventEmitter.emit({
@@ -149,6 +158,7 @@ export class SpawnManager {
 
       // Stage 4: Enrich Profile
       process.status = 'enriching';
+      const enrichStartTime = Date.now();
 
       const deepProfile = await pipeline.enrichProfile(
         this.mzooApiKey,
@@ -160,6 +170,7 @@ export class SpawnManager {
       if (process.abortController.signal.aborted) return;
 
       process.deepProfile = deepProfile;
+      timings.profileEnrichment = Date.now() - enrichStartTime;
 
       // Generate enhanced system prompt with full deep profile data (only for characters)
       let enhancedSystemPrompt = '';
@@ -181,6 +192,17 @@ export class SpawnManager {
 
       // Mark as completed
       process.status = 'completed';
+
+      // Calculate and log total time
+      const totalTime = Date.now() - pipelineStartTime;
+      console.log(`\n[SpawnManager] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
+      console.log(`  Entity Type: ${process.entityType}`);
+      console.log(`  Stage Timings:`);
+      console.log(`    - Seed Generation:     ${(timings.seedGeneration / 1000).toFixed(2)}s`);
+      console.log(`    - Image Generation:    ${(timings.imageGeneration / 1000).toFixed(2)}s`);
+      console.log(`    - Visual Analysis:     ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
+      console.log(`    - Profile Enrichment:  ${(timings.profileEnrichment / 1000).toFixed(2)}s`);
+      console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
 
     } catch (error) {
       if (error instanceof Error && error.name === 'AbortError') {

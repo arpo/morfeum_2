@@ -76,7 +76,6 @@ export const sampleLocationPrompts = [
     'A city floating above a sea of clouds, its towers made of mirrored glass and bone.',
     'A forest where the trees emit soft light from within, and rivers flow upward toward the stars.',
     'A mountain carved with faces of forgotten gods, snow falling in silence.',
-    'A giant mechanical heart pulsing beneath a crystal cavern.',
     'A sunken temple covered in coral, with flickering holograms of ancient rituals.',
     'A traveler standing at the edge of a rift in the sky, colors leaking through like liquid aurora.',
     'A library that stretches into the horizon, books whispering as they rearrange themselves.',

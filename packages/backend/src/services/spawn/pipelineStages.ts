@@ -5,6 +5,7 @@
 
 import * as mzooService from '../mzoo.service';
 import { getPrompt } from '../../prompts';
+import { AI_MODELS } from '../../config/constants';
 import { EntitySeed, VisualAnalysis, LocationVisualAnalysis, DeepProfile, LocationSeed, LocationDeepProfile } from './types';
 
 /**
@@ -26,7 +27,7 @@ export async function generateSeed(
   const result = await mzooService.generateText(
     mzooApiKey,
     messages,
-    'gemini-2.5-flash-lite'
+    AI_MODELS.SEED_GENERATION
   );
 
   if (result.error) {
@@ -145,7 +146,7 @@ export async function analyzeImage(
     base64Image,
     analysisPrompt,
     'image/jpeg',
-    'gemini-2.5-flash'
+    AI_MODELS.VISUAL_ANALYSIS
   );
 
   if (result.error) {
@@ -190,7 +191,7 @@ export async function enrichProfile(
   const result = await mzooService.generateText(
     mzooApiKey,
     messages,
-    'gemini-2.5-flash'
+    AI_MODELS.PROFILE_ENRICHMENT
   );
 
   if (result.error) {
