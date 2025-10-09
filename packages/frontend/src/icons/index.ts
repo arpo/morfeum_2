@@ -14,7 +14,9 @@ export {
   IconDeviceFloppy,
   IconBookmark,
   IconTrash,
-  IconDice
+  IconDice,
+  IconPin,
+  IconPinFilled
 } from '@tabler/icons-react';
 
 // Icon type for string references

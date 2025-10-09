@@ -24,6 +24,7 @@ export interface Location {
 
 interface LocationsState {
   locations: Record<string, Location>;
+  pinnedId: string | null;
   
   // CRUD operations
   createLocation: (location: Omit<Location, 'id'> & { id?: string }) => string;
@@ -37,6 +38,11 @@ interface LocationsState {
   getAdjacentLocations: (id: string) => Location[];
   getAllLocations: () => Location[];
   
+  // Pin operations
+  setPinned: (id: string) => void;
+  clearPinned: () => void;
+  getPinnedLocation: () => Location | undefined;
+  
   // Bulk operations
   clearAllLocations: () => void;
   importLocations: (locations: Location[]) => void;
@@ -46,6 +52,7 @@ export const useLocationsStore = create<LocationsState>()(
   persist(
     (set, get) => ({
       locations: {},
+      pinnedId: null,
       
       createLocation: (location) => {
         const id = location.id || uuidv4();
@@ -117,8 +124,24 @@ export const useLocationsStore = create<LocationsState>()(
         return Object.values(get().locations);
       },
       
+      setPinned: (id) => {
+        const location = get().locations[id];
+        if (location) {
+          set({ pinnedId: id });
+        }
+      },
+      
+      clearPinned: () => {
+        set({ pinnedId: null });
+      },
+      
+      getPinnedLocation: () => {
+        const pinnedId = get().pinnedId;
+        return pinnedId ? get().locations[pinnedId] : undefined;
+      },
+      
       clearAllLocations: () => {
-        set({ locations: {} });
+        set({ locations: {}, pinnedId: null });
       },
       
       importLocations: (locations) => {
@@ -132,7 +155,10 @@ export const useLocationsStore = create<LocationsState>()(
     }),
     {
       name: 'morfeum-locations-storage',
-      partialize: (state) => ({ locations: state.locations }),
+      partialize: (state) => ({ 
+        locations: state.locations,
+        pinnedId: state.pinnedId 
+      }),
     }
   )
 );

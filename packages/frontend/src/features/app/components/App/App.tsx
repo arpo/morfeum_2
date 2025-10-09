@@ -1,5 +1,7 @@
 import { useStore } from '@/store';
 import { useThemeStore } from '@/store/slices/themeSlice';
+import { useCharactersStore } from '@/store/slices/charactersSlice';
+import { useLocationsStore } from '@/store/slices/locationsSlice';
 import { Chat, useChatLogic } from '@/features/chat/components/Chat';
 import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer';
 import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
@@ -20,6 +22,14 @@ export function App() {
   
   const activeChat = useStore(state => state.activeChat);
   const chats = useStore(state => state.chats);
+  const createChatWithEntity = useStore(state => state.createChatWithEntity);
+  const setActiveChat = useStore(state => state.setActiveChat);
+  const updateChatImage = useStore(state => state.updateChatImage);
+  const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
+  
+  // Get pinned entities
+  const pinnedCharacter = useCharactersStore(state => state.getPinnedCharacter());
+  const pinnedLocation = useLocationsStore(state => state.getPinnedLocation());
   
   // Get active chat session
   const activeChatSession = activeChat ? chats.get(activeChat) : null;
@@ -36,6 +46,55 @@ export function App() {
     
     document.documentElement.setAttribute('data-theme', resolvedTheme);
   }, [theme]);
+
+  // Auto-load pinned entities on mount
+  useEffect(() => {
+    let hasLoaded = false;
+    
+    // Load pinned character if exists
+    if (pinnedCharacter) {
+      console.log('[App] Auto-loading pinned character:', pinnedCharacter.id);
+      
+      const seed = {
+        name: pinnedCharacter.name,
+        personality: pinnedCharacter.details.personality || 'Unknown personality'
+      };
+      
+      createChatWithEntity(pinnedCharacter.id, seed, 'character');
+      
+      if (pinnedCharacter.imagePath) {
+        updateChatImage(pinnedCharacter.id, pinnedCharacter.imagePath);
+      }
+      
+      updateChatDeepProfile(pinnedCharacter.id, pinnedCharacter.details as any);
+      setActiveChat(pinnedCharacter.id);
+      hasLoaded = true;
+    }
+    
+    // Load pinned location if exists (and no character was loaded)
+    if (!hasLoaded && pinnedLocation) {
+      console.log('[App] Auto-loading pinned location:', pinnedLocation.id);
+      
+      const deepProfile = {
+        ...pinnedLocation.locationInfo,
+        ...pinnedLocation.worldInfo
+      };
+      
+      const seed = {
+        name: pinnedLocation.name,
+        atmosphere: pinnedLocation.worldInfo.atmosphere || 'Unknown atmosphere'
+      };
+      
+      createChatWithEntity(pinnedLocation.id, seed, 'location');
+      
+      if (pinnedLocation.imagePath) {
+        updateChatImage(pinnedLocation.id, pinnedLocation.imagePath);
+      }
+      
+      updateChatDeepProfile(pinnedLocation.id, deepProfile as any);
+      setActiveChat(pinnedLocation.id);
+    }
+  }, []); // Only run on mount
 
   return (
     <div className={styles.container}>

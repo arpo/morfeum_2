@@ -1,5 +1,5 @@
 import { Modal, ModalHeader, ModalContent } from '@/components/ui/Modal';
-import { IconTrash } from '@/icons';
+import { IconTrash, IconPin, IconPinFilled } from '@/icons';
 import { useSavedEntitiesLogic } from './useSavedLocationsLogic';
 import type { SavedEntitiesModalProps } from './types';
 import styles from './SavedLocationsModal.module.css';
@@ -10,15 +10,21 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
     setActiveTab, 
     locations, 
     characters, 
+    pinnedLocationId,
+    pinnedCharacterId,
     handleLoadLocation, 
     handleLoadCharacter,
     handleDeleteLocation,
-    handleDeleteCharacter 
+    handleDeleteCharacter,
+    handlePinLocation,
+    handlePinCharacter
   } = useSavedEntitiesLogic(onClose);
 
   const entities = activeTab === 'characters' ? characters : locations;
   const handleLoadEntity = activeTab === 'characters' ? handleLoadCharacter : handleLoadLocation;
   const handleDeleteEntity = activeTab === 'characters' ? handleDeleteCharacter : handleDeleteLocation;
+  const handlePinEntity = activeTab === 'characters' ? handlePinCharacter : handlePinLocation;
+  const pinnedEntityId = activeTab === 'characters' ? pinnedCharacterId : pinnedLocationId;
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} maxWidth="lg">
@@ -67,16 +73,28 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
                 </div>
                 <div className={styles.info}>
                   <h3 className={styles.name}>{entity.name}</h3>
-                  <button
-                    className={styles.deleteButton}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleDeleteEntity(entity.id);
-                    }}
-                    title={`Delete ${activeTab === 'characters' ? 'character' : 'location'}`}
-                  >
-                    <IconTrash size={18} />
-                  </button>
+                  <div className={styles.actions}>
+                    <button
+                      className={`${styles.pinButton} ${pinnedEntityId === entity.id ? styles.pinned : ''}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handlePinEntity(entity.id);
+                      }}
+                      title={pinnedEntityId === entity.id ? 'Unpin (will not auto-load)' : 'Pin (auto-loads on startup)'}
+                    >
+                      {pinnedEntityId === entity.id ? <IconPinFilled size={18} /> : <IconPin size={18} />}
+                    </button>
+                    <button
+                      className={styles.deleteButton}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDeleteEntity(entity.id);
+                      }}
+                      title={`Delete ${activeTab === 'characters' ? 'character' : 'location'}`}
+                    >
+                      <IconTrash size={18} />
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}

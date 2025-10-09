@@ -13,8 +13,12 @@ export interface SavedEntitiesLogicReturn {
   setActiveTab: (tab: EntityTab) => void;
   locations: Location[];
   characters: Character[];
+  pinnedLocationId: string | null;
+  pinnedCharacterId: string | null;
   handleLoadLocation: (location: Location) => void;
   handleLoadCharacter: (character: Character) => void;
   handleDeleteLocation: (locationId: string) => void;
   handleDeleteCharacter: (characterId: string) => void;
+  handlePinLocation: (locationId: string) => void;
+  handlePinCharacter: (characterId: string) => void;
 }

@@ -18,6 +18,7 @@ export interface Character {
 
 interface CharactersState {
   characters: Record<string, Character>;
+  pinnedId: string | null;
   
   // CRUD operations
   createCharacter: (character: Omit<Character, 'id'> & { id?: string }) => string;
@@ -28,6 +29,11 @@ interface CharactersState {
   // Query operations
   getAllCharacters: () => Character[];
   
+  // Pin operations
+  setPinned: (id: string) => void;
+  clearPinned: () => void;
+  getPinnedCharacter: () => Character | undefined;
+  
   // Bulk operations
   clearAllCharacters: () => void;
   importCharacters: (characters: Character[]) => void;
@@ -37,6 +43,7 @@ export const useCharactersStore = create<CharactersState>()(
   persist(
     (set, get) => ({
       characters: {},
+      pinnedId: null,
       
       createCharacter: (character) => {
         const id = character.id || uuidv4();
@@ -87,8 +94,24 @@ export const useCharactersStore = create<CharactersState>()(
         return Object.values(get().characters);
       },
       
+      setPinned: (id) => {
+        const character = get().characters[id];
+        if (character) {
+          set({ pinnedId: id });
+        }
+      },
+      
+      clearPinned: () => {
+        set({ pinnedId: null });
+      },
+      
+      getPinnedCharacter: () => {
+        const pinnedId = get().pinnedId;
+        return pinnedId ? get().characters[pinnedId] : undefined;
+      },
+      
       clearAllCharacters: () => {
-        set({ characters: {} });
+        set({ characters: {}, pinnedId: null });
       },
       
       importCharacters: (characters) => {
@@ -102,7 +125,10 @@ export const useCharactersStore = create<CharactersState>()(
     }),
     {
       name: 'morfeum-characters-storage',
-      partialize: (state) => ({ characters: state.characters }),
+      partialize: (state) => ({ 
+        characters: state.characters,
+        pinnedId: state.pinnedId 
+      }),
     }
   )
 );
