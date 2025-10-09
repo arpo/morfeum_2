@@ -29,5 +29,12 @@ Atmosphere: ${atmosphere}.
 
 ${mood ? 'Mood: ' + mood + '.' : ''}
 
+If water is present, depict it as calm and still if nothing else is specified.
+
+Adhere to the following guidelines:
+- Use natural, sensory language to evoke a vivid scene.
+- Emphasize realism and believability within Morfeum’s tone.
+- No text, logos, watermarks, or UI elements.
+
 ${qualityPrompt}`;
 };
