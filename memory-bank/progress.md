@@ -133,7 +133,19 @@
 
 ## Recent Refactoring Achievements
 
-### Location Creation & UI Refinements (Latest - Just Completed)
+### Multi-Pin System for Saved Entities (Latest - Just Completed)
+- **Unlimited Pins Per Type**: Upgraded from single-pin limitation to array-based storage
+  - Previous: One pinned character + one pinned location maximum
+  - New: Pin as many characters/locations as desired
+- **Storage Architecture**: Changed `pinnedId: string | null` → `pinnedIds: string[]` in both slices
+- **Toggle Functionality**: Simple pin/unpin with `togglePinned(id)` method
+- **Auto-Load All Pinned**: Every pinned entity loads automatically into tabs on page refresh
+- **Bug Fix**: Solved infinite loop by using `getState()` instead of hook calls in component body
+- **UI Polish**: Increased button spacing, removed card lift on hover, smooth image zoom easing
+- **Files Modified**: 11 files across storage slices, modal components, and App.tsx
+- **Quality Verified**: Build successful (316.26 kB), zero TypeScript errors, no infinite loops
+
+### Location Creation & UI Refinements (Previous)
 - **Location Generation Pipeline**: Complete backend support with 4 specialized prompt files
 - **Dual-Entity System**: Seamless handling of characters and locations in same UI
 - **Smart Chat Component**: Conditional rendering based on entity type (no separate viewer needed)

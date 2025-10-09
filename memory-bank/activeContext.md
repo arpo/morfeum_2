@@ -1,9 +1,83 @@
 # Active Context
 
 ## Current Work Focus
-Location deep profile system refactored with flat JSON structure, split into world DNA and location instance components. All location data now follows a clear architectural pattern for reusability and future world-building features. Shared utilities eliminate code duplication across the codebase.
+Multi-pin system implemented for saved entities (characters and locations). Users can now pin unlimited characters and locations that auto-load on startup. System uses array-based storage with toggle functionality, replacing the previous single-pin-per-type limitation. All pinned entities load into tabs automatically on page refresh.
 
 ## Recent Changes
+
+### Multi-Pin System for Saved Entities (Latest - Just Completed)
+1. **Upgraded from Single to Multiple Pins**:
+   - Previous: One pinned character + one pinned location maximum
+   - New: Unlimited pins per entity type (pin as many characters/locations as desired)
+   - All pinned entities auto-load on startup into separate chat tabs
+   - Last pinned entity becomes the active chat
+
+2. **Storage Architecture Changes**:
+   **Characters Slice** (`charactersSlice.ts`):
+   - Changed: `pinnedId: string | null` → `pinnedIds: string[]`
+   - Removed: `setPinned()`, `clearPinned()`, `getPinnedCharacter()`
+   - Added: `togglePinned(id)`, `isPinned(id)`, `getPinnedCharacters()` (returns array)
+   - Toggle behavior: Click to pin/unpin (adds/removes from array)
+   
+   **Locations Slice** (`locationsSlice.ts`):
+   - Changed: `pinnedId: string | null` → `pinnedIds: string[]`
+   - Removed: `setPinned()`, `clearPinned()`, `getPinnedLocation()`
+   - Added: `togglePinned(id)`, `isPinned(id)`, `getPinnedLocations()` (returns array)
+   - localStorage persistence for both slices
+
+3. **Modal UI Updates**:
+   - Updated `SavedEntitiesModal` to use array-based pin checking (`pinnedEntityIds.includes(entity.id)`)
+   - Multiple entities show filled pin icon simultaneously
+   - Pin button next to delete button with improved spacing
+   - Visual feedback: `IconPin` (outline) when unpinned, `IconPinFilled` (filled) when pinned
+   - Pinned state uses primary color for visual emphasis
+
+4. **Auto-Load Implementation**:
+   - App.tsx loads all pinned entities on mount using `useEffect` with empty dependency array
+   - Uses `getState()` to avoid infinite loop (previous bug with direct hook calls)
+   - Loads all pinned characters first, then all pinned locations
+   - Each entity creates full chat session with image and deep profile
+   - Last loaded entity set as active chat
+   - Console logging for debugging: `"[App] Auto-loaded X characters and Y locations"`
+
+5. **Bug Fix - Infinite Loop**:
+   - **Problem**: Calling `getPinnedCharacters()` and `getPinnedLocations()` in component body created new arrays on every render
+   - **Solution**: Moved calls inside `useEffect` and used `useCharactersStore.getState()` / `useLocationsStore.getState()`
+   - **Result**: Pinned entities retrieved only once on mount, not on every render
+
+6. **UI Polish**:
+   - **Button spacing**: Changed actions container gap from `var(--spacing-xs)` to `var(--spacing-sm)`
+   - **Card hover**: Removed `transform: translateY(-2px)` upward movement, kept shadow effect only
+   - **Image zoom**: Added smooth `ease-out` animation (0.3s) for better feel
+
+7. **Files Modified (11 total)**:
+   - `packages/frontend/src/icons/index.ts` - Added IconPin, IconPinFilled
+   - `packages/frontend/src/store/slices/charactersSlice.ts` - Array-based pins, toggle function
+   - `packages/frontend/src/store/slices/locationsSlice.ts` - Array-based pins, toggle function
+   - `packages/frontend/src/features/saved-locations/SavedLocationsModal/types.ts` - Updated interfaces
+   - `packages/frontend/src/features/saved-locations/SavedLocationsModal/useSavedLocationsLogic.ts` - Toggle handlers
+   - `packages/frontend/src/features/saved-locations/SavedLocationsModal/SavedLocationsModal.tsx` - Array-based UI
+   - `packages/frontend/src/features/saved-locations/SavedLocationsModal/SavedLocationsModal.module.css` - Button styles + spacing
+   - `packages/frontend/src/features/app/components/App/App.tsx` - Multi-entity auto-load logic
+   - Plus 3 other supporting files
+
+8. **Key Features Delivered**:
+   - ✅ **Unlimited pins**: Pin as many characters/locations as needed
+   - ✅ **Toggle functionality**: Click to pin/unpin any entity
+   - ✅ **All auto-load**: Every pinned entity loads on startup
+   - ✅ **Visual feedback**: Filled icons for all pinned entities
+   - ✅ **localStorage persistence**: All pins survive page refresh
+   - ✅ **No infinite loops**: Fixed with proper state access pattern
+   - ✅ **Smooth animations**: Ease-out transitions for image zoom
+   - ✅ **Better spacing**: Improved button layout
+
+9. **Quality Verification**:
+   - Build successful: 316.26 kB bundle, zero errors
+   - Architecture compliance: All patterns followed
+   - Type safety: Full TypeScript coverage
+   - Performance: Single load on mount, no render loops
+
+## Recent Changes (Continued)
 
 ### Location Creation & Dual-Entity System (Latest - Just Completed)
 1. **Complete Location Generation Pipeline**:

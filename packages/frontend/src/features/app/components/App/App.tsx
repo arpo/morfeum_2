@@ -49,12 +49,12 @@ export function App() {
     const pinnedCharacters = useCharactersStore.getState().getPinnedCharacters();
     const pinnedLocations = useLocationsStore.getState().getPinnedLocations();
     
-    console.log('[App] Auto-loading pinned entities...');
+    // console.log('[App] Auto-loading pinned entities...');
     let lastLoadedId: string | null = null;
     
     // Load all pinned characters
     pinnedCharacters.forEach((character) => {
-      console.log('[App] Auto-loading pinned character:', character.id);
+      // console.log('[App] Auto-loading pinned character:', character.id);
       
       const seed = {
         name: character.name,
@@ -73,7 +73,7 @@ export function App() {
     
     // Load all pinned locations
     pinnedLocations.forEach((location) => {
-      console.log('[App] Auto-loading pinned location:', location.id);
+      // console.log('[App] Auto-loading pinned location:', location.id);
       
       const deepProfile = {
         ...location.locationInfo,
