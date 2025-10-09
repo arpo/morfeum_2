@@ -75,9 +75,19 @@
 - **No Code Duplication**: Reused Chat component with conditional rendering instead of separate viewer
 - **LocationInfoModal**: Complete modal component for displaying location deep profile data
   - 5 component files following architectural patterns (types, logic, markup, styles, index)
-  - Organized sections: Overview, Environment, Ambiance, Metadata
+  - **Split JSON Display**: Two distinct sections (Location Instance + World DNA)
+  - Location Instance: name, looks, mood, sounds, airParticles (scene-specific)
+  - World DNA: colorsAndLighting, atmosphere, flora, fauna, architecture, materials, genre, symbolicThemes, fictional, copyright (persistent environmental DNA)
   - Conditional modal rendering based on entity type in Chat component
   - ESC key support and backdrop click to close
+- **Location Deep Profile Refactoring**:
+  - **Flat 15-field JSON**: Refactored prompt to output flat structure instead of nested
+  - **Field Renaming**: vegetation → flora, animals → fauna
+  - **New Fields**: materials, symbolicThemes, airParticles
+  - **Shared Utility**: Created `packages/frontend/src/utils/locationProfile.ts` as single source of truth
+  - **DRY Principle**: Eliminates code duplication between useSpawnEvents and LocationInfoModal
+  - **Split Architecture**: Clear separation between world DNA (reusable) and location instance (scene-specific)
+  - **Scalability**: Foundation for generating multiple locations within same world
 
 ## What's Left to Build 🚧
 - Additional UI components (Input, Modal, Table, etc.)
@@ -134,12 +144,21 @@
 - **Entity Type Flow**: Backend → SSE event → store → UI components with full type safety
 - **LocationInfoModal Component**: Complete modal for location deep profile display
   - Created 5 files following strict separation (types, logic, markup, styles, index)
-  - 4 organized sections: Overview (looks, atmosphere, mood), Environment (vegetation, architecture, wildlife), Ambiance (sounds), Metadata (genre, fictional, copyrighted)
+  - **Split JSON Display**: Location Instance (5 fields) + World DNA (10 fields) sections
   - Conditional modal routing in Chat.tsx based on entityType
   - Generic button tooltips ("View info") work for both entity types
   - Type safety with appropriate casting for deep profile compatibility
-- **Files Modified**: 23 files total (5 backend, 18 frontend) with zero TypeScript errors
-- **Quality Verified**: All architectural patterns followed, design tokens used, no code duplication, full accessibility
+- **Location Deep Profile Refactoring**:
+  - Updated `locationDeepProfileEnrichment.ts` to output flat 15-field JSON
+  - Renamed fields: vegetation → flora, animals → fauna
+  - Added new fields: materials, symbolicThemes, airParticles
+  - Created shared utility `locationProfile.ts` with WORLD_DNA_KEYS, LOCATION_INSTANCE_KEYS, and splitWorldAndLocation function
+  - Updated useSpawnEvents.ts and LocationInfoModal.tsx to use shared utility
+  - Console logs split JSONs (🌍 World DNA + 📍 Location Instance)
+  - Modal displays split JSONs in two distinct sections
+  - Architectural decision: airParticles in location instance (scene-specific, not world DNA)
+- **Files Modified**: 28 files total (6 backend, 22 frontend) with zero TypeScript errors
+- **Quality Verified**: All architectural patterns followed, design tokens used, no code duplication, full accessibility, DRY principle enforced
 
 ### Dark Mode Implementation (Previous)
 - **Complete Theme System**: Implemented comprehensive dark mode with light/dark/system options

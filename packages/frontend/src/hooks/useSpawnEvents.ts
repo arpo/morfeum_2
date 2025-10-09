@@ -4,50 +4,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
-
-/**
- * Splits a flat deep profile JSON into world and location parts
- */
-function splitWorldAndLocation(flat: Record<string, any>) {
-  // Fields describing persistent world DNA
-  const worldKeys = [
-    "colorsAndLighting",
-    "atmosphere",
-    "flora",
-    "fauna",
-    "architecture",
-    "materials",
-    "genre",
-    "symbolicThemes",
-    "fictional",
-    "copyright"
-  ];
-
-  // Fields describing a single place or scene
-  const locationKeys = [
-    "name",
-    "looks",
-    "mood",
-    "sounds",
-    "airParticles"
-  ];
-
-  const world: Record<string, any> = {};
-  const location: Record<string, any> = {};
-
-  for (const [key, value] of Object.entries(flat)) {
-    if (worldKeys.includes(key)) {
-      world[key] = value;
-    } else if (locationKeys.includes(key)) {
-      location[key] = value;
-    } else {
-      // Optional: log any unexpected keys for debugging
-      console.warn(`splitWorldAndLocation: unrecognized key "${key}"`);
-    }
-  }
-
-  return { world, location };
-}
+import { splitWorldAndLocation } from '@/utils/locationProfile';
 
 export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);

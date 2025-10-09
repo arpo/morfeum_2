@@ -1,12 +1,17 @@
 export interface LocationProfile {
+  name: string;
   looks: string;
+  colorsAndLighting: string;
   atmosphere: string;
-  vegetation: string;
+  flora: string;
+  fauna: string;
   architecture: string;
-  animals: string;
+  materials: string;
   mood: string;
   sounds: string;
   genre: string;
+  symbolicThemes: string;
+  airParticles: string;
   fictional: boolean;
   copyright: boolean;
 }

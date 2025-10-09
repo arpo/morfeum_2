@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Work Focus
-Location creation feature fully implemented with dual-entity system (characters + locations), smart UI adaptation, color coding, and UX refinements. All features follow project architectural patterns with proper component separation.
+Location deep profile system refactored with flat JSON structure, split into world DNA and location instance components. All location data now follows a clear architectural pattern for reusability and future world-building features. Shared utilities eliminate code duplication across the codebase.
 
 ## Recent Changes
 
@@ -98,19 +98,17 @@ Location creation feature fully implemented with dual-entity system (characters 
     - No duplicate code: Reused Chat component intelligently
     - Responsive: All UI changes work across screen sizes
 
-11. **LocationInfoModal Component** (Latest Addition):
+11. **LocationInfoModal Component with Split JSON Display** (Latest Addition):
     - **New Component Created**: LocationInfoModal following CharacterInfoModal pattern
     - **Component Structure** (5 files):
-      - `types.ts` - LocationProfile interface (10 fields)
+      - `types.ts` - LocationProfile interface (15 fields - refactored)
       - `useLocationInfoLogic.ts` - ESC key handling logic
-      - `LocationInfoModal.tsx` - Pure JSX with organized sections
+      - `LocationInfoModal.tsx` - Pure JSX with split JSON sections
       - `LocationInfoModal.module.css` - Styled modal matching CharacterInfoModal
       - `index.ts` - Exports
-    - **Location Profile Sections**:
-      - Overview: Description (looks), Atmosphere, Mood
-      - Environment: Vegetation, Architecture, Wildlife (animals)
-      - Ambiance: Sounds
-      - Metadata: Genre, Fictional (Yes/No), Copyrighted (Yes/No)
+    - **Split JSON Display Architecture**:
+      - **📍 Location Instance** (scene-specific details): name, looks, mood, sounds, airParticles
+      - **🌍 World DNA** (persistent environmental DNA): colorsAndLighting, atmosphere, flora, fauna, architecture, materials, genre, symbolicThemes, fictional, copyright
     - **Modal Routing**:
       - Updated Chat.tsx to conditionally render modals based on entityType
       - Characters → CharacterInfoModal
@@ -118,6 +116,33 @@ Location creation feature fully implemented with dual-entity system (characters 
     - **Generic Button Tooltips**: Changed from "View character info" to "View info"
     - **Type Safety**: Used type casting for deep profile compatibility
     - **Files Modified**: 6 total (5 new LocationInfoModal files + 1 updated Chat.tsx)
+
+12. **Location Deep Profile Refactoring** (Latest - Just Completed):
+    - **Backend Prompt Refactoring**:
+      - Updated `locationDeepProfileEnrichment.ts` to output flat 15-field JSON
+      - Renamed fields: `vegetation` → `flora`, `animals` → `fauna`
+      - Added new fields: `materials`, `symbolicThemes`, `airParticles`
+      - Enhanced field descriptions with clearer guidance and sentence counts
+      - Field order matches split structure for easier processing
+    - **Shared Utility Creation**:
+      - Created `packages/frontend/src/utils/locationProfile.ts` as single source of truth
+      - Exported `WORLD_DNA_KEYS` constant (10 fields)
+      - Exported `LOCATION_INSTANCE_KEYS` constant (5 fields)
+      - Exported `splitWorldAndLocation()` function
+      - Eliminates code duplication between useSpawnEvents and LocationInfoModal
+    - **Frontend Integration**:
+      - Updated `useSpawnEvents.ts` to use shared utility, logs split JSONs to console
+      - Updated `LocationInfoModal.tsx` to use shared utility, displays split JSONs in modal
+      - Updated `types.ts` with all 15 fields in LocationProfile interface
+    - **Key Architectural Decision**: `airParticles` moved to location instance
+      - Rationale: Air particles (dust, mist, embers) are scene-specific, not world DNA
+      - Allows same world to have different particle effects in different locations
+    - **Files Modified**: 5 total (1 prompt, 1 utility, 3 frontend files)
+    - **Benefits**:
+      - **DRY Principle**: Single source of truth for field splitting logic
+      - **Maintainability**: Future updates only need to be made in one place
+      - **Clarity**: Clear separation between reusable world data and scene instances
+      - **Scalability**: Foundation for generating multiple locations within same world
 
 ## Recent Changes (Continued)
 

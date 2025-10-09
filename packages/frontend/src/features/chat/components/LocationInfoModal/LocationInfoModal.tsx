@@ -2,12 +2,16 @@ import { IconX } from '@/icons';
 import { useLocationInfoLogic } from './useLocationInfoLogic';
 import type { LocationInfoModalProps } from './types';
 import styles from './LocationInfoModal.module.css';
+import { splitWorldAndLocation } from '@/utils/locationProfile';
 
 export function LocationInfoModal(props: LocationInfoModalProps) {
   const { locationProfile, locationName, isOpen } = props;
   const { handleClose } = useLocationInfoLogic(props);
 
   if (!isOpen || !locationProfile) return null;
+
+  // Split the profile into location instance and world DNA
+  const { location, world } = splitWorldAndLocation(locationProfile);
 
   return (
     <div className={styles.overlay} onClick={handleClose}>
@@ -20,79 +24,98 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
         </div>
 
         <div className={styles.content}>
-          {/* Overview Section */}
+          {/* Location Instance Section */}
           <section className={styles.section}>
-            <h3 className={styles.sectionTitle}>Overview</h3>
+            <h3 className={styles.sectionTitle}>Location Instance</h3>
+            <p className={styles.sectionDescription}>Scene-specific details</p>
             
             <div className={styles.field}>
-              <label className={styles.label}>Description</label>
-              <p className={styles.value}>{locationProfile.looks}</p>
+              <label className={styles.label}>Name</label>
+              <p className={styles.value}>{location.name}</p>
             </div>
 
             <div className={styles.field}>
-              <label className={styles.label}>Atmosphere</label>
-              <p className={styles.value}>{locationProfile.atmosphere}</p>
+              <label className={styles.label}>Looks</label>
+              <p className={styles.value}>{location.looks}</p>
             </div>
 
             <div className={styles.field}>
               <label className={styles.label}>Mood</label>
-              <p className={styles.value}>{locationProfile.mood}</p>
+              <p className={styles.value}>{location.mood}</p>
             </div>
-          </section>
-
-          {/* Environment Section */}
-          <section className={styles.section}>
-            <h3 className={styles.sectionTitle}>Environment</h3>
-
-            {locationProfile.vegetation && (
-              <div className={styles.field}>
-                <label className={styles.label}>Vegetation</label>
-                <p className={styles.value}>{locationProfile.vegetation}</p>
-              </div>
-            )}
-
-            {locationProfile.architecture && (
-              <div className={styles.field}>
-                <label className={styles.label}>Architecture</label>
-                <p className={styles.value}>{locationProfile.architecture}</p>
-              </div>
-            )}
-
-            {locationProfile.animals && (
-              <div className={styles.field}>
-                <label className={styles.label}>Wildlife</label>
-                <p className={styles.value}>{locationProfile.animals}</p>
-              </div>
-            )}
-          </section>
-
-          {/* Ambiance Section */}
-          <section className={styles.section}>
-            <h3 className={styles.sectionTitle}>Ambiance</h3>
 
             <div className={styles.field}>
               <label className={styles.label}>Sounds</label>
-              <p className={styles.value}>{locationProfile.sounds}</p>
+              <p className={styles.value}>{location.sounds}</p>
             </div>
+
+            {location.airParticles && location.airParticles !== 'None' && (
+              <div className={styles.field}>
+                <label className={styles.label}>Air Particles</label>
+                <p className={styles.value}>{location.airParticles}</p>
+              </div>
+            )}
           </section>
 
-          {/* Metadata Section */}
+          {/* World DNA Section */}
           <section className={styles.section}>
-            <h3 className={styles.sectionTitle}>Metadata</h3>
+            <h3 className={styles.sectionTitle}>World DNA</h3>
+            <p className={styles.sectionDescription}>Persistent environmental characteristics</p>
+
+            <div className={styles.field}>
+              <label className={styles.label}>Colors & Lighting</label>
+              <p className={styles.value}>{world.colorsAndLighting}</p>
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.label}>Atmosphere</label>
+              <p className={styles.value}>{world.atmosphere}</p>
+            </div>
+
+            {world.flora && world.flora !== 'None' && (
+              <div className={styles.field}>
+                <label className={styles.label}>Flora</label>
+                <p className={styles.value}>{world.flora}</p>
+              </div>
+            )}
+
+            {world.fauna && world.fauna !== 'None' && (
+              <div className={styles.field}>
+                <label className={styles.label}>Fauna</label>
+                <p className={styles.value}>{world.fauna}</p>
+              </div>
+            )}
+
+            {world.architecture && world.architecture !== 'None' && (
+              <div className={styles.field}>
+                <label className={styles.label}>Architecture</label>
+                <p className={styles.value}>{world.architecture}</p>
+              </div>
+            )}
+
+            <div className={styles.field}>
+              <label className={styles.label}>Materials</label>
+              <p className={styles.value}>{world.materials}</p>
+            </div>
 
             <div className={styles.field}>
               <label className={styles.label}>Genre</label>
-              <p className={styles.value}>{locationProfile.genre}</p>
+              <p className={styles.value}>{world.genre}</p>
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.label}>Symbolic Themes</label>
+              <p className={styles.value}>{world.symbolicThemes}</p>
             </div>
 
             <div className={styles.field}>
               <label className={styles.label}>Fictional</label>
-              <p className={styles.value}>{locationProfile.fictional ? 'Yes' : 'No'}</p>
+              <p className={styles.value}>{world.fictional ? 'Yes' : 'No'}</p>
             </div>
 
             <div className={styles.field}>
               <label className={styles.label}>Copyrighted</label>
-              <p className={styles.value}>{locationProfile.copyright ? 'Yes' : 'No'}</p>
+              <p className={styles.value}>{world.copyright ? 'Yes' : 'No'}</p>
             </div>
           </section>
         </div>
