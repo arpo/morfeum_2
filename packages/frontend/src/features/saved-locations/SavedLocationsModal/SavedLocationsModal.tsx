@@ -10,8 +10,8 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
     setActiveTab, 
     locations, 
     characters, 
-    pinnedLocationId,
-    pinnedCharacterId,
+    pinnedLocationIds,
+    pinnedCharacterIds,
     handleLoadLocation, 
     handleLoadCharacter,
     handleDeleteLocation,
@@ -24,7 +24,7 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
   const handleLoadEntity = activeTab === 'characters' ? handleLoadCharacter : handleLoadLocation;
   const handleDeleteEntity = activeTab === 'characters' ? handleDeleteCharacter : handleDeleteLocation;
   const handlePinEntity = activeTab === 'characters' ? handlePinCharacter : handlePinLocation;
-  const pinnedEntityId = activeTab === 'characters' ? pinnedCharacterId : pinnedLocationId;
+  const pinnedEntityIds = activeTab === 'characters' ? pinnedCharacterIds : pinnedLocationIds;
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} maxWidth="lg">
@@ -75,14 +75,14 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
                   <h3 className={styles.name}>{entity.name}</h3>
                   <div className={styles.actions}>
                     <button
-                      className={`${styles.pinButton} ${pinnedEntityId === entity.id ? styles.pinned : ''}`}
+                      className={`${styles.pinButton} ${pinnedEntityIds.includes(entity.id) ? styles.pinned : ''}`}
                       onClick={(e) => {
                         e.stopPropagation();
                         handlePinEntity(entity.id);
                       }}
-                      title={pinnedEntityId === entity.id ? 'Unpin (will not auto-load)' : 'Pin (auto-loads on startup)'}
+                      title={pinnedEntityIds.includes(entity.id) ? 'Unpin (will not auto-load)' : 'Pin (auto-loads on startup)'}
                     >
-                      {pinnedEntityId === entity.id ? <IconPinFilled size={18} /> : <IconPin size={18} />}
+                      {pinnedEntityIds.includes(entity.id) ? <IconPinFilled size={18} /> : <IconPin size={18} />}
                     </button>
                     <button
                       className={styles.deleteButton}

@@ -27,10 +27,6 @@ export function App() {
   const updateChatImage = useStore(state => state.updateChatImage);
   const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
   
-  // Get pinned entities
-  const pinnedCharacter = useCharactersStore(state => state.getPinnedCharacter());
-  const pinnedLocation = useLocationsStore(state => state.getPinnedLocation());
-  
   // Get active chat session
   const activeChatSession = activeChat ? chats.get(activeChat) : null;
   
@@ -49,51 +45,62 @@ export function App() {
 
   // Auto-load pinned entities on mount
   useEffect(() => {
-    let hasLoaded = false;
+    // Get pinned entities
+    const pinnedCharacters = useCharactersStore.getState().getPinnedCharacters();
+    const pinnedLocations = useLocationsStore.getState().getPinnedLocations();
     
-    // Load pinned character if exists
-    if (pinnedCharacter) {
-      console.log('[App] Auto-loading pinned character:', pinnedCharacter.id);
+    console.log('[App] Auto-loading pinned entities...');
+    let lastLoadedId: string | null = null;
+    
+    // Load all pinned characters
+    pinnedCharacters.forEach((character) => {
+      console.log('[App] Auto-loading pinned character:', character.id);
       
       const seed = {
-        name: pinnedCharacter.name,
-        personality: pinnedCharacter.details.personality || 'Unknown personality'
+        name: character.name,
+        personality: character.details.personality || 'Unknown personality'
       };
       
-      createChatWithEntity(pinnedCharacter.id, seed, 'character');
+      createChatWithEntity(character.id, seed, 'character');
       
-      if (pinnedCharacter.imagePath) {
-        updateChatImage(pinnedCharacter.id, pinnedCharacter.imagePath);
+      if (character.imagePath) {
+        updateChatImage(character.id, character.imagePath);
       }
       
-      updateChatDeepProfile(pinnedCharacter.id, pinnedCharacter.details as any);
-      setActiveChat(pinnedCharacter.id);
-      hasLoaded = true;
-    }
+      updateChatDeepProfile(character.id, character.details as any);
+      lastLoadedId = character.id;
+    });
     
-    // Load pinned location if exists (and no character was loaded)
-    if (!hasLoaded && pinnedLocation) {
-      console.log('[App] Auto-loading pinned location:', pinnedLocation.id);
+    // Load all pinned locations
+    pinnedLocations.forEach((location) => {
+      console.log('[App] Auto-loading pinned location:', location.id);
       
       const deepProfile = {
-        ...pinnedLocation.locationInfo,
-        ...pinnedLocation.worldInfo
+        ...location.locationInfo,
+        ...location.worldInfo
       };
       
       const seed = {
-        name: pinnedLocation.name,
-        atmosphere: pinnedLocation.worldInfo.atmosphere || 'Unknown atmosphere'
+        name: location.name,
+        atmosphere: location.worldInfo.atmosphere || 'Unknown atmosphere'
       };
       
-      createChatWithEntity(pinnedLocation.id, seed, 'location');
+      createChatWithEntity(location.id, seed, 'location');
       
-      if (pinnedLocation.imagePath) {
-        updateChatImage(pinnedLocation.id, pinnedLocation.imagePath);
+      if (location.imagePath) {
+        updateChatImage(location.id, location.imagePath);
       }
       
-      updateChatDeepProfile(pinnedLocation.id, deepProfile as any);
-      setActiveChat(pinnedLocation.id);
+      updateChatDeepProfile(location.id, deepProfile as any);
+      lastLoadedId = location.id;
+    });
+    
+    // Set the last loaded entity as active
+    if (lastLoadedId) {
+      setActiveChat(lastLoadedId);
     }
+    
+    console.log(`[App] Auto-loaded ${pinnedCharacters.length} characters and ${pinnedLocations.length} locations`);
   }, []); // Only run on mount
 
   return (

@@ -24,7 +24,7 @@ export interface Location {
 
 interface LocationsState {
   locations: Record<string, Location>;
-  pinnedId: string | null;
+  pinnedIds: string[];
   
   // CRUD operations
   createLocation: (location: Omit<Location, 'id'> & { id?: string }) => string;
@@ -39,9 +39,9 @@ interface LocationsState {
   getAllLocations: () => Location[];
   
   // Pin operations
-  setPinned: (id: string) => void;
-  clearPinned: () => void;
-  getPinnedLocation: () => Location | undefined;
+  togglePinned: (id: string) => void;
+  isPinned: (id: string) => boolean;
+  getPinnedLocations: () => Location[];
   
   // Bulk operations
   clearAllLocations: () => void;
@@ -52,7 +52,7 @@ export const useLocationsStore = create<LocationsState>()(
   persist(
     (set, get) => ({
       locations: {},
-      pinnedId: null,
+      pinnedIds: [],
       
       createLocation: (location) => {
         const id = location.id || uuidv4();
@@ -124,24 +124,39 @@ export const useLocationsStore = create<LocationsState>()(
         return Object.values(get().locations);
       },
       
-      setPinned: (id) => {
+      togglePinned: (id) => {
         const location = get().locations[id];
-        if (location) {
-          set({ pinnedId: id });
-        }
+        if (!location) return;
+        
+        set((state) => {
+          const pinnedIds = [...state.pinnedIds];
+          const index = pinnedIds.indexOf(id);
+          
+          if (index > -1) {
+            // Already pinned, unpin it
+            pinnedIds.splice(index, 1);
+          } else {
+            // Not pinned, pin it
+            pinnedIds.push(id);
+          }
+          
+          return { pinnedIds };
+        });
       },
       
-      clearPinned: () => {
-        set({ pinnedId: null });
+      isPinned: (id) => {
+        return get().pinnedIds.includes(id);
       },
       
-      getPinnedLocation: () => {
-        const pinnedId = get().pinnedId;
-        return pinnedId ? get().locations[pinnedId] : undefined;
+      getPinnedLocations: () => {
+        const pinnedIds = get().pinnedIds;
+        return pinnedIds
+          .map(id => get().locations[id])
+          .filter(Boolean) as Location[];
       },
       
       clearAllLocations: () => {
-        set({ locations: {}, pinnedId: null });
+        set({ locations: {}, pinnedIds: [] });
       },
       
       importLocations: (locations) => {
@@ -157,7 +172,7 @@ export const useLocationsStore = create<LocationsState>()(
       name: 'morfeum-locations-storage',
       partialize: (state) => ({ 
         locations: state.locations,
-        pinnedId: state.pinnedId 
+        pinnedIds: state.pinnedIds 
       }),
     }
   )

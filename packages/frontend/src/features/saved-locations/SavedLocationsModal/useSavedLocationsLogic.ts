@@ -13,18 +13,18 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   // Locations
   const locationsMap = useLocationsStore(state => state.locations);
   const locations = useMemo(() => Object.values(locationsMap), [locationsMap]);
-  const pinnedLocationId = useLocationsStore(state => state.pinnedId);
+  const pinnedLocationIds = useLocationsStore(state => state.pinnedIds);
   const deleteLocation = useLocationsStore(state => state.deleteLocation);
-  const setPinnedLocation = useLocationsStore(state => state.setPinned);
-  const clearPinnedLocation = useLocationsStore(state => state.clearPinned);
+  const togglePinnedLocation = useLocationsStore(state => state.togglePinned);
+  const isLocationPinned = useLocationsStore(state => state.isPinned);
   
   // Characters
   const charactersMap = useCharactersStore(state => state.characters);
   const characters = useMemo(() => Object.values(charactersMap), [charactersMap]);
-  const pinnedCharacterId = useCharactersStore(state => state.pinnedId);
+  const pinnedCharacterIds = useCharactersStore(state => state.pinnedIds);
   const deleteCharacter = useCharactersStore(state => state.deleteCharacter);
-  const setPinnedCharacter = useCharactersStore(state => state.setPinned);
-  const clearPinnedCharacter = useCharactersStore(state => state.clearPinned);
+  const togglePinnedCharacter = useCharactersStore(state => state.togglePinned);
+  const isCharacterPinned = useCharactersStore(state => state.isPinned);
   
   // Chat management
   const createChatWithEntity = useStore(state => state.createChatWithEntity);
@@ -109,36 +109,24 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   }, [deleteCharacter]);
 
   const handlePinLocation = useCallback((locationId: string) => {
-    if (pinnedLocationId === locationId) {
-      // Unpin if already pinned
-      clearPinnedLocation();
-      console.log('[SavedEntitiesModal] Unpinned location:', locationId);
-    } else {
-      // Pin this location
-      setPinnedLocation(locationId);
-      console.log('[SavedEntitiesModal] Pinned location:', locationId);
-    }
-  }, [pinnedLocationId, setPinnedLocation, clearPinnedLocation]);
+    const isPinned = isLocationPinned(locationId);
+    togglePinnedLocation(locationId);
+    console.log(`[SavedEntitiesModal] ${isPinned ? 'Unpinned' : 'Pinned'} location:`, locationId);
+  }, [togglePinnedLocation, isLocationPinned]);
 
   const handlePinCharacter = useCallback((characterId: string) => {
-    if (pinnedCharacterId === characterId) {
-      // Unpin if already pinned
-      clearPinnedCharacter();
-      console.log('[SavedEntitiesModal] Unpinned character:', characterId);
-    } else {
-      // Pin this character
-      setPinnedCharacter(characterId);
-      console.log('[SavedEntitiesModal] Pinned character:', characterId);
-    }
-  }, [pinnedCharacterId, setPinnedCharacter, clearPinnedCharacter]);
+    const isPinned = isCharacterPinned(characterId);
+    togglePinnedCharacter(characterId);
+    console.log(`[SavedEntitiesModal] ${isPinned ? 'Unpinned' : 'Pinned'} character:`, characterId);
+  }, [togglePinnedCharacter, isCharacterPinned]);
 
   return {
     activeTab,
     setActiveTab,
     locations,
     characters,
-    pinnedLocationId,
-    pinnedCharacterId,
+    pinnedLocationIds,
+    pinnedCharacterIds,
     handleLoadLocation,
     handleLoadCharacter,
     handleDeleteLocation,

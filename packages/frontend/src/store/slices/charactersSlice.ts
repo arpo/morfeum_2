@@ -18,7 +18,7 @@ export interface Character {
 
 interface CharactersState {
   characters: Record<string, Character>;
-  pinnedId: string | null;
+  pinnedIds: string[];
   
   // CRUD operations
   createCharacter: (character: Omit<Character, 'id'> & { id?: string }) => string;
@@ -30,9 +30,9 @@ interface CharactersState {
   getAllCharacters: () => Character[];
   
   // Pin operations
-  setPinned: (id: string) => void;
-  clearPinned: () => void;
-  getPinnedCharacter: () => Character | undefined;
+  togglePinned: (id: string) => void;
+  isPinned: (id: string) => boolean;
+  getPinnedCharacters: () => Character[];
   
   // Bulk operations
   clearAllCharacters: () => void;
@@ -43,7 +43,7 @@ export const useCharactersStore = create<CharactersState>()(
   persist(
     (set, get) => ({
       characters: {},
-      pinnedId: null,
+      pinnedIds: [],
       
       createCharacter: (character) => {
         const id = character.id || uuidv4();
@@ -94,24 +94,39 @@ export const useCharactersStore = create<CharactersState>()(
         return Object.values(get().characters);
       },
       
-      setPinned: (id) => {
+      togglePinned: (id) => {
         const character = get().characters[id];
-        if (character) {
-          set({ pinnedId: id });
-        }
+        if (!character) return;
+        
+        set((state) => {
+          const pinnedIds = [...state.pinnedIds];
+          const index = pinnedIds.indexOf(id);
+          
+          if (index > -1) {
+            // Already pinned, unpin it
+            pinnedIds.splice(index, 1);
+          } else {
+            // Not pinned, pin it
+            pinnedIds.push(id);
+          }
+          
+          return { pinnedIds };
+        });
       },
       
-      clearPinned: () => {
-        set({ pinnedId: null });
+      isPinned: (id) => {
+        return get().pinnedIds.includes(id);
       },
       
-      getPinnedCharacter: () => {
-        const pinnedId = get().pinnedId;
-        return pinnedId ? get().characters[pinnedId] : undefined;
+      getPinnedCharacters: () => {
+        const pinnedIds = get().pinnedIds;
+        return pinnedIds
+          .map(id => get().characters[id])
+          .filter(Boolean) as Character[];
       },
       
       clearAllCharacters: () => {
-        set({ characters: {}, pinnedId: null });
+        set({ characters: {}, pinnedIds: [] });
       },
       
       importCharacters: (characters) => {
@@ -127,7 +142,7 @@ export const useCharactersStore = create<CharactersState>()(
       name: 'morfeum-characters-storage',
       partialize: (state) => ({ 
         characters: state.characters,
-        pinnedId: state.pinnedId 
+        pinnedIds: state.pinnedIds 
       }),
     }
   )
