@@ -488,6 +488,83 @@ Location deep profile system refactored with flat JSON structure, split into wor
 3. **Chat Integration Timing Fix**: Chat initializes immediately with seed data
 4. **Parsing Reliability**: All three AI operations use JSON parsing (seed, visual, deep)
 
+## Recent Changes (Continued)
+
+### UI Refactoring - Modal Component (Latest - Just Completed)
+1. **Reusable Modal Component Created** (`@/components/ui/Modal/`):
+   - **Modal.tsx** (65 lines) - Main modal with overlay, ESC key handling, click-outside-to-close
+   - **Modal.module.css** (118 lines) - Complete modal styling with responsive breakpoints
+   - **types.ts** (22 lines) - TypeScript interfaces for all modal components
+   - **index.ts** (3 lines) - Clean barrel exports
+   - **Subcomponents**: Modal, ModalHeader, ModalContent, ModalSection
+
+2. **Modal Features**:
+   - Automatic ESC key handling for accessibility
+   - Click-outside-to-close functionality
+   - 3 size variants (sm/md/lg) via maxWidth prop
+   - Fully accessible (ARIA labels, semantic HTML)
+   - Dark mode compatible (uses design tokens)
+   - Responsive design with mobile breakpoints
+   - Overlay with backdrop blur effect
+
+3. **CharacterInfoModal Refactored**:
+   - **Before**: 127 lines TSX + 97 CSS = 224 total lines
+   - **After**: 106 lines TSX + 26 CSS = 132 total lines
+   - **Reduction**: 92 lines (41% smaller)
+   - **Changes**: 
+     - Removed overlay, modal, header, closeButton, content, section styles (now from Modal component)
+     - Kept only field-specific styles (grid layout, hover states)
+     - Simplified component structure using Modal subcomponents
+
+4. **LocationInfoModal Refactored**:
+   - **Before**: 145 lines TSX + 117 CSS = 262 total lines
+   - **After**: 116 lines TSX + 27 CSS = 143 total lines
+   - **Reduction**: 119 lines (45% smaller)
+   - **Changes**:
+     - Removed all modal infrastructure styles (overlay, modal, header, etc.)
+     - Kept only field-specific styles (label, value formatting)
+     - Consistent structure with CharacterInfoModal
+
+5. **Eliminated Duplication**:
+   - **CSS Classes Centralized**: .overlay, .modal, .header, .title, .closeButton, .content, .section, .sectionTitle, .sectionDescription
+   - **Total Lines Saved**: ~211 lines across both modal components
+   - **Future Benefit**: Any new modal/dialog takes 5 minutes to implement
+   - **Single Source of Truth**: All modal behavior and styling defined once
+
+6. **Files Modified (13 total)**:
+   - **Created**:
+     - `packages/frontend/src/components/ui/Modal/types.ts` - Modal TypeScript interfaces
+     - `packages/frontend/src/components/ui/Modal/Modal.module.css` - Centralized modal styles
+     - `packages/frontend/src/components/ui/Modal/Modal.tsx` - Reusable modal components
+     - `packages/frontend/src/components/ui/Modal/index.ts` - Modal exports
+   - **Updated**:
+     - `packages/frontend/src/components/ui/index.ts` - Added Modal exports to UI system
+     - `packages/frontend/src/features/chat/components/CharacterInfoModal/CharacterInfoModal.tsx` - Refactored to use Modal
+     - `packages/frontend/src/features/chat/components/CharacterInfoModal/CharacterInfoModal.module.css` - Removed duplicated styles
+     - `packages/frontend/src/features/chat/components/LocationInfoModal/LocationInfoModal.tsx` - Refactored to use Modal
+     - `packages/frontend/src/features/chat/components/LocationInfoModal/LocationInfoModal.module.css` - Removed duplicated styles
+
+7. **Quality Verification**:
+   - **Build Status**: TypeScript compilation successful (zero errors)
+   - **Bundle Size**: 303.71 kB (unchanged - tree shaking working correctly)
+   - **Architecture**: Follows all project patterns (strict separation, design tokens, 50-300 line limits)
+   - **Maintainability**: Single source of truth for modal patterns
+   - **Accessibility**: Full keyboard navigation, ARIA labels, semantic HTML
+   - **Dark Mode**: Works seamlessly with existing theme system
+
+8. **Key Benefits**:
+   - **DRY Principle**: Modal structure defined once, used everywhere
+   - **Consistency**: All modals have identical behavior and styling
+   - **Developer Experience**: New modals can be created in minutes
+   - **Type Safety**: Full TypeScript coverage with proper interfaces
+   - **Scalability**: Easy to add new modal variants or features
+
+9. **Design System Integration**:
+   - Modal component now part of unified UI component system
+   - Exports alongside Button, Card, CollapsiblePanel, etc.
+   - Uses existing design tokens for all styling
+   - Follows same architectural patterns as other UI components
+
 ## Next Steps
 The multi-spawn chat system now features:
 - **Markdown-enhanced narrative**: Concise atmospheric touches with styled italics
@@ -495,11 +572,13 @@ The multi-spawn chat system now features:
 - **Vertical chat navigation**: No horizontal overflow, unlimited sessions
 - **Collapsible panels**: Maximize workspace with on-demand debug info
 - **Proper text formatting**: Line breaks, wrapping, and markdown rendering
+- **Reusable Modal System**: Zero duplication, instant modal creation
 - Foundation ready for:
   - Additional panels in column 3 (entity info, settings, etc.)
   - Advanced markdown features (bold, links, code blocks)
   - Typing indicators and message reactions
   - Chat persistence and history export
+  - More modals using the centralized Modal component
 
 ## Active Decisions
 - Multi-spawn architecture: Multiple entities can be generated simultaneously
