@@ -69,16 +69,14 @@ export function Chat({ chatLogic, entityType = 'character' }: ChatProps) {
             >
               <IconInfoCircle size={20} />
             </button>
-            {entityType === 'location' && (
-              <button 
-                className={styles.imageButton}
-                onClick={handlers.saveLocation}
-                disabled={!state.deepProfile || state.isSaved}
-                title={state.isSaved ? 'Location saved' : state.deepProfile ? 'Save location' : 'Profile not ready'}
-              >
-                <IconDeviceFloppy size={20} />
-              </button>
-            )}
+            <button 
+              className={styles.imageButton}
+              onClick={entityType === 'location' ? handlers.saveLocation : handlers.saveCharacter}
+              disabled={!state.deepProfile || state.isSaved}
+              title={state.isSaved ? `${entityType === 'location' ? 'Location' : 'Character'} saved` : state.deepProfile ? `Save ${entityType}` : 'Profile not ready'}
+            >
+              <IconDeviceFloppy size={20} />
+            </button>
           </div>
         </div>
       )}

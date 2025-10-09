@@ -31,6 +31,7 @@ export interface ChatHandlers {
   openFullscreen: () => void;
   closeFullscreen: () => void;
   saveLocation: () => void;
+  saveCharacter: () => void;
 }
 
 export interface ChatLogicReturn {

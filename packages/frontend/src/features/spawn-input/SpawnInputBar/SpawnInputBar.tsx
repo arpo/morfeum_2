@@ -5,7 +5,7 @@
 
 import { useState } from 'react';
 import { useSpawnInputLogic } from './useSpawnInputLogic';
-import { SavedLocationsModal } from '@/features/saved-locations/SavedLocationsModal';
+import { SavedEntitiesModal } from '@/features/saved-locations/SavedLocationsModal';
 import { IconBookmark, IconDice } from '@/icons';
 import styles from './SpawnInputBar.module.css';
 
@@ -75,7 +75,7 @@ export function SpawnInputBar() {
           {state.error}
         </div>
       )}
-      <SavedLocationsModal 
+      <SavedEntitiesModal 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />

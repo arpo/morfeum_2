@@ -1,2 +1,2 @@
-export { SavedLocationsModal } from './SavedLocationsModal';
-export type { SavedLocationsModalProps } from './types';
+export { SavedEntitiesModal } from './SavedLocationsModal';
+export type { SavedEntitiesModalProps, EntityTab } from './types';

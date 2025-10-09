@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { splitWorldAndLocation } from '@/utils/locationProfile';
 import type { ChatLogicReturn } from './types';
 
@@ -17,6 +18,9 @@ export function useChatLogic(): ChatLogicReturn {
   
   const createLocation = useLocationsStore(state => state.createLocation);
   const getLocation = useLocationsStore(state => state.getLocation);
+  
+  const createCharacter = useCharactersStore(state => state.createCharacter);
+  const getCharacter = useCharactersStore(state => state.getCharacter);
   
   // Get active chat session
   const activeChatSession = activeChat ? chats.get(activeChat) : null;
@@ -83,15 +87,44 @@ export function useChatLogic(): ChatLogicReturn {
     console.log(`[useChatLogic] Location saved with ID: ${activeChat}`);
   }, [activeChatSession, activeChat, createLocation]);
 
-  // Check if location is already saved when active chat changes
+  const saveCharacter = useCallback(() => {
+    if (!activeChatSession || !activeChat) {
+      console.warn('[useChatLogic] Cannot save: no active chat session');
+      return;
+    }
+    
+    const deepProfile = activeChatSession.deepProfile;
+    if (!deepProfile) {
+      console.warn('[useChatLogic] Cannot save: no deep profile data');
+      return;
+    }
+    
+    // Create character in storage
+    createCharacter({
+      id: activeChat, // Use spawnId as character ID
+      name: activeChatSession.entityName || 'Unnamed Character',
+      details: deepProfile as Record<string, any>,
+      imagePath: activeChatSession.entityImage || ''
+    });
+    
+    setIsSaved(true);
+    console.log(`[useChatLogic] Character saved with ID: ${activeChat}`);
+  }, [activeChatSession, activeChat, createCharacter]);
+
+  // Check if entity is already saved when active chat changes
   useEffect(() => {
-    if (activeChat) {
-      const existingLocation = getLocation(activeChat);
-      setIsSaved(!!existingLocation);
+    if (activeChat && activeChatSession) {
+      if (activeChatSession.entityType === 'location') {
+        const existingLocation = getLocation(activeChat);
+        setIsSaved(!!existingLocation);
+      } else {
+        const existingCharacter = getCharacter(activeChat);
+        setIsSaved(!!existingCharacter);
+      }
     } else {
       setIsSaved(false);
     }
-  }, [activeChat, getLocation]);
+  }, [activeChat, activeChatSession, getLocation, getCharacter]);
 
   // Handle ESC key for fullscreen
   useEffect(() => {
@@ -130,7 +163,8 @@ export function useChatLogic(): ChatLogicReturn {
       closeModal,
       openFullscreen,
       closeFullscreen,
-      saveLocation
+      saveLocation,
+      saveCharacter
     }
   };
 }

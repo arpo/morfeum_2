@@ -1,21 +1,33 @@
-import { useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
 import { splitWorldAndLocation } from '@/utils/locationProfile';
-import type { SavedLocationsLogicReturn } from './types';
+import type { SavedEntitiesLogicReturn, EntityTab } from './types';
 import type { Location } from '@/store/slices/locationsSlice';
+import type { Character } from '@/store/slices/charactersSlice';
 
-export function useSavedLocationsLogic(onClose: () => void): SavedLocationsLogicReturn {
+export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicReturn {
+  const [activeTab, setActiveTab] = useState<EntityTab>('characters');
+  
+  // Locations
   const locationsMap = useLocationsStore(state => state.locations);
   const locations = useMemo(() => Object.values(locationsMap), [locationsMap]);
   const deleteLocation = useLocationsStore(state => state.deleteLocation);
+  
+  // Characters
+  const charactersMap = useCharactersStore(state => state.characters);
+  const characters = useMemo(() => Object.values(charactersMap), [charactersMap]);
+  const deleteCharacter = useCharactersStore(state => state.deleteCharacter);
+  
+  // Chat management
   const createChatWithEntity = useStore(state => state.createChatWithEntity);
   const setActiveChat = useStore(state => state.setActiveChat);
   const updateChatImage = useStore(state => state.updateChatImage);
   const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
 
   const handleLoadLocation = useCallback((location: Location) => {
-    console.log('[SavedLocationsModal] Loading location:', location.id);
+    console.log('[SavedEntitiesModal] Loading location:', location.id);
     
     // Reconstruct the deep profile from locationInfo and worldInfo
     const deepProfile = {
@@ -45,19 +57,59 @@ export function useSavedLocationsLogic(onClose: () => void): SavedLocationsLogic
     // Close modal
     onClose();
     
-    console.log('[SavedLocationsModal] Location loaded successfully');
+    console.log('[SavedEntitiesModal] Location loaded successfully');
+  }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose]);
+
+  const handleLoadCharacter = useCallback((character: Character) => {
+    console.log('[SavedEntitiesModal] Loading character:', character.id);
+    
+    // Create seed data for chat initialization
+    const seed = {
+      name: character.name,
+      personality: character.details.personality || 'Unknown personality'
+    };
+    
+    // Create chat session for this character
+    createChatWithEntity(character.id, seed, 'character');
+    
+    // Update chat with image and deep profile
+    if (character.imagePath) {
+      updateChatImage(character.id, character.imagePath);
+    }
+    
+    updateChatDeepProfile(character.id, character.details as any);
+    
+    // Set as active chat
+    setActiveChat(character.id);
+    
+    // Close modal
+    onClose();
+    
+    console.log('[SavedEntitiesModal] Character loaded successfully');
   }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose]);
 
   const handleDeleteLocation = useCallback((locationId: string) => {
     if (window.confirm('Are you sure you want to delete this location?')) {
-      console.log('[SavedLocationsModal] Deleting location:', locationId);
+      console.log('[SavedEntitiesModal] Deleting location:', locationId);
       deleteLocation(locationId);
     }
   }, [deleteLocation]);
 
+  const handleDeleteCharacter = useCallback((characterId: string) => {
+    if (window.confirm('Are you sure you want to delete this character?')) {
+      console.log('[SavedEntitiesModal] Deleting character:', characterId);
+      deleteCharacter(characterId);
+    }
+  }, [deleteCharacter]);
+
   return {
+    activeTab,
+    setActiveTab,
     locations,
+    characters,
     handleLoadLocation,
-    handleDeleteLocation
+    handleLoadCharacter,
+    handleDeleteLocation,
+    handleDeleteCharacter
   };
 }
