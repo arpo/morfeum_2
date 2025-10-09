@@ -85,7 +85,7 @@ export async function generateImage(
     imagePrompt,
     1,
     'landscape_16_9',
-    'high'
+    'none'
   );
 
   if (result.error) {
