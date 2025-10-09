@@ -8,7 +8,8 @@ import { chatSystemMessage } from './chatSystemMessage';
 import { chatCharacterImpersonation } from './chatCharacterImpersonation';
 import { entitySeedGeneration } from './entitySeedGeneration';
 import { entityImageGeneration } from './entityImageGeneration';
-import { visualAnalysis } from './visualAnalysis';
+import { characterVisualAnalysis } from './characterVisualAnalysis';
+import { locationVisualAnalysis } from './locationVisualAnalysis';
 import { deepProfileEnrichment } from './deepProfileEnrichment';
 import { sampleEntityPrompts } from './sampleEntityPrompts';
 import { locationSeedGeneration } from './locationSeedGeneration';
@@ -27,7 +28,8 @@ export const en: PromptTemplates = {
   chatCharacterImpersonation,
   entitySeedGeneration,
   entityImageGeneration,
-  visualAnalysis,
+  characterVisualAnalysis,
+  locationVisualAnalysis,
   deepProfileEnrichment,
   sampleEntityPrompts,
   locationSeedGeneration,

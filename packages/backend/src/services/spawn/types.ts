@@ -19,6 +19,16 @@ export interface VisualAnalysis {
   specificdetails: string;
 }
 
+export interface LocationVisualAnalysis {
+  looks: string;
+  colorsAndLighting: string;
+  atmosphere: string;
+  vegetation: string;
+  architecture: string;
+  animals: string;
+  mood: string;
+}
+
 export interface DeepProfile {
   name: string;
   looks: string;
@@ -68,7 +78,7 @@ export interface SpawnProcess {
   seed?: Partial<EntitySeed | LocationSeed>;
   imageUrl?: string;
   imagePrompt?: string;
-  visualAnalysis?: VisualAnalysis;
+  visualAnalysis?: VisualAnalysis | LocationVisualAnalysis;
   deepProfile?: DeepProfile | LocationDeepProfile;
   error?: string;
   createdAt: number;

@@ -98,7 +98,7 @@ router.post('/analyze-image', asyncHandler(async (req: Request, res: Response) =
     const base64Image = Buffer.from(imageBuffer).toString('base64');
 
     // Get the visual analysis prompt
-    const analysisPrompt = getPrompt('visualAnalysis', 'en')(name, looks, wearing, personality, presence);
+    const analysisPrompt = getPrompt('characterVisualAnalysis', 'en')(name, looks, wearing, personality, presence);
 
     // Call vision API with the analysis prompt
     const visionResult = await mzooService.analyzeImage(

@@ -2,7 +2,7 @@
  * Visual analysis prompt for character portraits
  */
 
-export const visualAnalysis = (
+export const characterVisualAnalysis = (
   name: string, 
   looks: string, 
   wearing: string, 

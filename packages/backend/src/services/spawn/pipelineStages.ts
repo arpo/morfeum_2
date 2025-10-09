@@ -5,7 +5,7 @@
 
 import * as mzooService from '../mzoo.service';
 import { getPrompt } from '../../prompts';
-import { EntitySeed, VisualAnalysis, DeepProfile, LocationSeed, LocationDeepProfile } from './types';
+import { EntitySeed, VisualAnalysis, LocationVisualAnalysis, DeepProfile, LocationSeed, LocationDeepProfile } from './types';
 
 /**
  * Generate entity seed from text prompt
@@ -108,7 +108,7 @@ export async function analyzeImage(
   seed: EntitySeed | LocationSeed,
   signal: AbortSignal,
   entityType: 'character' | 'location' = 'character'
-): Promise<VisualAnalysis> {
+): Promise<VisualAnalysis | LocationVisualAnalysis> {
   // Fetch image and convert to base64
   const imageResponse = await fetch(imageUrl);
   if (!imageResponse.ok) {
@@ -118,25 +118,26 @@ export async function analyzeImage(
   const imageBuffer = await imageResponse.arrayBuffer();
   const base64Image = Buffer.from(imageBuffer).toString('base64');
 
-  // Get analysis prompt (only for characters, locations skip visual analysis)
-  if (entityType === 'location') {
-    // For locations, return minimal analysis since we don't need detailed facial features
-    return {
-      face: 'N/A',
-      hair: 'N/A',
-      body: 'N/A',
-      specificdetails: 'Location entity - visual analysis not applicable'
-    };
-  }
+  let analysisPrompt: string;
 
-  const entitySeed = seed as EntitySeed;
-  const analysisPrompt = getPrompt('visualAnalysis', 'en')(
-    entitySeed.name,
-    entitySeed.looks,
-    entitySeed.wearing,
-    entitySeed.personality,
-    entitySeed.presence
-  );
+  if (entityType === 'location') {
+    const locationSeed = seed as LocationSeed;
+    analysisPrompt = getPrompt('locationVisualAnalysis', 'en')(
+      locationSeed.name,
+      locationSeed.looks,
+      locationSeed.atmosphere,
+      locationSeed.mood
+    );
+  } else {
+    const entitySeed = seed as EntitySeed;
+    analysisPrompt = getPrompt('characterVisualAnalysis', 'en')(
+      entitySeed.name,
+      entitySeed.looks,
+      entitySeed.wearing,
+      entitySeed.personality,
+      entitySeed.presence
+    );
+  }
 
   // Call vision API
   const result = await mzooService.analyzeImage(
@@ -166,7 +167,7 @@ export async function analyzeImage(
 export async function enrichProfile(
   mzooApiKey: string,
   seed: EntitySeed | LocationSeed,
-  visualAnalysis: VisualAnalysis,
+  visualAnalysis: VisualAnalysis | LocationVisualAnalysis,
   signal: AbortSignal,
   entityType: 'character' | 'location' = 'character'
 ): Promise<DeepProfile | LocationDeepProfile> {
