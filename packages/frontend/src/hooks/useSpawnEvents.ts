@@ -29,13 +29,13 @@ export function useSpawnEvents() {
     // Listen for seed complete event
     eventSource.addEventListener('spawn:seed-complete', (e) => {
       const { spawnId, seed, systemPrompt } = JSON.parse(e.data);
-      console.log('🌱 Seed Generated:', seed);
+      // console.log('🌱 Seed Generated:', seed);
       // console.log('💬 Initial System Prompt:', systemPrompt);
       
       // Detect entity type from seed structure
       // Locations have 'atmosphere', characters have 'personality' as discriminator
       const entityType: 'character' | 'location' = seed.atmosphere ? 'location' : 'character';
-      console.log('[SpawnEvents] Detected entity type:', entityType);
+      // console.log('[SpawnEvents] Detected entity type:', entityType);
       
       // Create new chat with this entity
       if (createChatWithEntity) {
@@ -56,7 +56,7 @@ export function useSpawnEvents() {
     // Listen for image complete event
     eventSource.addEventListener('spawn:image-complete', (e) => {
       const { spawnId, imageUrl, imagePrompt } = JSON.parse(e.data);
-      console.log('🎨 Image Generated:', imageUrl);
+      // console.log('🎨 Image Generated:', imageUrl);
       
       // Update chat with image
       if (updateChatImage) {
@@ -77,7 +77,7 @@ export function useSpawnEvents() {
     // Listen for analysis complete event
     eventSource.addEventListener('spawn:analysis-complete', (e) => {
       const { spawnId, visualAnalysis } = JSON.parse(e.data);
-      console.log('👁️ Visual Analysis:', visualAnalysis);
+      // console.log('👁️ Visual Analysis:', visualAnalysis);
       
       // Update spawn status
       if (updateSpawnStatus) {

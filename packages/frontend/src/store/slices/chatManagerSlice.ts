@@ -66,7 +66,7 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
   activeChat: null,
 
   createChatWithEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => {
-    console.log('[ChatManager] Creating chat for spawn:', spawnId, 'type:', entityType);
+    // console.log('[ChatManager] Creating chat for spawn:', spawnId, 'type:', entityType);
     
     const systemMessage: ChatMessage = {
       id: 'system-001',
@@ -95,7 +95,7 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
   },
 
   updateChatImage: (spawnId: string, imageUrl: string) => {
-    console.log('[ChatManager] Updating chat image for spawn:', spawnId);
+    // console.log('[ChatManager] Updating chat image for spawn:', spawnId);
     
     set((state) => {
       const chat = state.chats.get(spawnId);
@@ -111,7 +111,7 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
   },
 
   updateChatImagePrompt: (spawnId: string, imagePrompt: string) => {
-    console.log('[ChatManager] Updating chat image prompt for spawn:', spawnId);
+    // console.log('[ChatManager] Updating chat image prompt for spawn:', spawnId);
     
     set((state) => {
       const chat = state.chats.get(spawnId);
@@ -127,7 +127,7 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
   },
 
   updateChatSystemPrompt: (spawnId: string, systemPrompt: string) => {
-    console.log('[ChatManager] Updating system prompt for spawn:', spawnId);
+    // console.log('[ChatManager] Updating system prompt for spawn:', spawnId);
     
     set((state) => {
       const chat = state.chats.get(spawnId);
@@ -155,7 +155,7 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
   },
 
   updateChatDeepProfile: (spawnId: string, deepProfile: DeepProfile) => {
-    console.log('[ChatManager] Updating deep profile for spawn:', spawnId);
+    // console.log('[ChatManager] Updating deep profile for spawn:', spawnId);
     
     set((state) => {
       const chat = state.chats.get(spawnId);
