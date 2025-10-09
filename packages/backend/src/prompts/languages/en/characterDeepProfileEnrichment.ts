@@ -55,7 +55,7 @@ Describe the character's overall visual impression and energy.
 Include approximate age, physical archetype, and atmosphere they project when seen.  
 Mention how they carry themselves, how light or color interacts with them, and what kind of presence they have.  
 If relevant, note archetypal hints such as wanderer, engineer, mystic, soldier, or dreamer.  
-Write 3–5 sentences rich in texture and mood.
+Write 3-5 sentences rich in texture and mood.
 
 [wearing]  
 Describe the full outfit in layered detail — clothing, colors, materials, patterns, accessories, and footwear.  
@@ -63,38 +63,38 @@ Mention fabric types (denim, linen, leather, synthetic fiber), fit (loose, tailo
 Note small signs of use: creases, stains, fraying edges, or carefully chosen jewelry.  
 Colors are important; describe them precisely and how they contrast or harmonize.  
 Avoid mentioning handheld or temporary objects.  
-Write 3–6 sentences.
+Write 3-6 sentences.
 
 [face]  
 Describe the face in close detail: shape, bone structure, expression when neutral, and skin tone under light.  
 Include details of the nose, lips, eyes, ears, and any asymmetries or marks.  
 Note texture (smooth, freckled, weathered), complexion, and subtle features such as dimples or fine lines.  
 Mention makeup or lack thereof.  
-2–5 sentences.
+2-5 sentences.
 
 [body]  
 Describe height, build, weight distribution, and posture.  
 Convey the sense of movement or stillness they embody — how they stand, walk, or occupy space.  
 Mention muscle tone, proportion, and any defining physical rhythm (e.g., graceful, rigid, agile).  
-2–4 sentences.
+2-4 sentences.
 
 [hair]  
 Describe hair color, tone, texture, and cut in full detail.  
 Mention how light interacts with it, how it moves, how it's styled or worn day-to-day.  
 If relevant, include accessories (clips, bands, ornaments).  
-Hair descriptions should be vivid and realistic, 2–3 sentences.
+Hair descriptions should be vivid and realistic, 2-3 sentences.
 
 [specificDetails]  
 MANDATORY: include at least one unique, visible, and identifying trait — e.g., scar, tattoo, piercing, prosthetic, birthmark, heterochromia, cybernetic element.  
 Describe how it looks, where it is, and how it influences their presence or aesthetic.  
 Never reply with "None."  
-1–3 sentences.
+1-3 sentences.
 
 [style]  
 Describe the general aesthetic signature of the character — what their visual identity communicates.  
 Mention palette tendencies, silhouette shapes, and how they adapt across situations (formal vs casual).  
 Include emotional subtext (e.g., serene, chaotic, sensual, restrained).  
-2–4 sentences.
+2-4 sentences.
 
 [personality]  
 Describe internal traits, temperament, and social behavior.  
@@ -102,19 +102,19 @@ Include their emotional rhythm, confidence, curiosity, humor, or restraint.
 Explain how they behave in conversation, how they make others feel, and what they seek or avoid in connection.  
 Ground traits in subtle contrasts (e.g., bold yet observant).  
 describe sexual orientation if relevant.  
-4–6 sentences.
+4-6 sentences.
 
 [voice]  
 Describe tone, texture, and rhythm of their voice.  
 Include pitch range, timbre (husky, crystalline, warm), and emotional resonance.  
 Mention how their voice changes with mood or setting.  
-1–3 sentences.
+1-3 sentences.
 
 [speechStyle]  
 Describe the cadence and language patterns of their speech.  
 Note whether they speak quickly, pause often, choose poetic phrasing, or favor short direct lines.  
 Mention vocabulary tone (casual, analytical, lyrical, archaic).  
-2–3 sentences.
+1-2 sentences.
 
 [gender]  
 Reply with male, female For the most use male or female unless the character is clearly androgynous or gender is defined otherwise.
@@ -126,7 +126,8 @@ Provide country, region, or fictional. be short and specific.
 Reply with true if the character is fictional, false if historical.
 
 [copyright]  
-Reply with true if the character belongs to copyrighted material, false if public domain.
+Reply with "true" if the location belongs to copyrighted material (e.g., Middle-earth, Hogwarts, Star Wars locations).
+Reply with "false" if it's public domain or original creation created recently.
 
 [tags]
 Provide 5-10 descriptive tags that capture the essence of the character.
