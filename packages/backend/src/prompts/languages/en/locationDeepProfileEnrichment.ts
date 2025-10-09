@@ -20,6 +20,7 @@ IMPORTANT: Return ONLY a valid JSON object with these exact fields:
 {
   "name": "...",
   "looks": "...",
+  "colorsAndLighting": "...",
   "atmosphere": "...",
   "vegetation": "...",
   "architecture": "...",
@@ -56,6 +57,10 @@ Mention how light or color interacts with surfaces, what dominates the visual fi
 Note perspective and focal points — what draws the eye first.
 If relevant, mention weather-worn details, decay, growth, or pristine condition.
 Write 4–6 sentences rich in visual texture and spatial awareness.
+
+[colorsAndLighting]
+Describe the color palette and lighting conditions of the location.
+Include dominant colors, contrasts, and how they shift across surfaces.
 
 [atmosphere]
 Describe the atmospheric qualities of the space in full sensory detail.

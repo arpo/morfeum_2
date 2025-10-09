@@ -73,6 +73,11 @@
 - **Landscape Filter**: Locations use "Landscape Overview" filter for scenic image generation
 - **Type Safety**: Full TypeScript support for entity types throughout the stack
 - **No Code Duplication**: Reused Chat component with conditional rendering instead of separate viewer
+- **LocationInfoModal**: Complete modal component for displaying location deep profile data
+  - 5 component files following architectural patterns (types, logic, markup, styles, index)
+  - Organized sections: Overview, Environment, Ambiance, Metadata
+  - Conditional modal rendering based on entity type in Chat component
+  - ESC key support and backdrop click to close
 
 ## What's Left to Build 🚧
 - Additional UI components (Input, Modal, Table, etc.)
@@ -127,8 +132,14 @@
 - **Scrollbar Implementation**: Both Entities and Active Spawns panels scroll when lists exceed height
 - **Container Overflow Fix**: Changed overflow from hidden to visible to allow scrollbars
 - **Entity Type Flow**: Backend → SSE event → store → UI components with full type safety
-- **Files Modified**: 17 files total (5 backend, 12 frontend) with zero TypeScript errors
-- **Quality Verified**: All architectural patterns followed, design tokens used, no code duplication
+- **LocationInfoModal Component**: Complete modal for location deep profile display
+  - Created 5 files following strict separation (types, logic, markup, styles, index)
+  - 4 organized sections: Overview (looks, atmosphere, mood), Environment (vegetation, architecture, wildlife), Ambiance (sounds), Metadata (genre, fictional, copyrighted)
+  - Conditional modal routing in Chat.tsx based on entityType
+  - Generic button tooltips ("View info") work for both entity types
+  - Type safety with appropriate casting for deep profile compatibility
+- **Files Modified**: 23 files total (5 backend, 18 frontend) with zero TypeScript errors
+- **Quality Verified**: All architectural patterns followed, design tokens used, no code duplication, full accessibility
 
 ### Dark Mode Implementation (Previous)
 - **Complete Theme System**: Implemented comprehensive dark mode with light/dark/system options
