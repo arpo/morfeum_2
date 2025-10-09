@@ -107,8 +107,8 @@ export const fluxFilters: Record<string, FluxFilter> = {
   },
   "Cinematic Establishing Shot": {
     name: "Landscape Overview",
-    text: "wide-angle composition, dynamic asymmetrical framing, slight camera tilt or offset horizon, layered depth, atmospheric perspective, volumetric haze, natural leading lines from foreground elements, soft parallax between near and far objects",
-    description: "Expansive sense of place with natural imbalance; introduces motion and realism by avoiding perfect symmetry."
+    text: "wide shot with realistic lens optics, asymmetrical composition, slight camera offset or diagonal framing, visible foreground elements adding depth",
+    description: "A grounded, photo-realistic overview with natural imbalance and spatial depth; avoids perfect symmetry and feels like a moment captured rather than staged."
   },
   "Dream Fragment": {
     name: "Dream Fragment",
