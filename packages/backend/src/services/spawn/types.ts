@@ -70,6 +70,17 @@ export interface LocationDeepProfile {
   copyright: string;
 }
 
+export interface MovementContext {
+  movementType: 'descend' | 'ascend' | 'traverse' | 'jump';
+  currentLocationId: string;
+  currentLocationName: string;
+  worldInfo?: any;
+  locationInfo?: any;
+  parentLocationId?: string | null;
+  adjacentTo?: string[];
+  depthLevel?: number;
+}
+
 export interface SpawnProcess {
   id: string;
   prompt: string;
@@ -83,4 +94,5 @@ export interface SpawnProcess {
   error?: string;
   createdAt: number;
   abortController: AbortController;
+  movementContext?: MovementContext;
 }

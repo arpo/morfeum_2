@@ -21,6 +21,8 @@ export const locationImageGeneration = (
 
 ${name}, ${filterText}.
 
+Original user description: "${originalPrompt}"
+
 Visual details: ${looks}.
 
 Atmosphere: ${atmosphere}.

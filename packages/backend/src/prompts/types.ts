@@ -16,7 +16,8 @@ export type PromptKey =
   | 'locationSeedGeneration'
   | 'locationImageGeneration'
   | 'locationDeepProfileEnrichment'
-  | 'sampleLocationPrompts';
+  | 'sampleLocationPrompts'
+  | 'movementClassification';
 
 export type Language = 'en';
 
@@ -42,4 +43,5 @@ export interface PromptTemplates {
   locationImageGeneration: (originalPrompt: string, name: string, looks: string, atmosphere: string, mood?: string, filterName?: string) => string;
   locationDeepProfileEnrichment: (seedJson: string, visionJson: string, originalPrompt: string) => string;
   sampleLocationPrompts: string[];
+  movementClassification: (userCommand: string, currentLocationName: string, knownLocationNames: string) => string;
 }

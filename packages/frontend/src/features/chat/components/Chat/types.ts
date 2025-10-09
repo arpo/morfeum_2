@@ -12,13 +12,15 @@ export interface ChatState {
   inputValue: string;
   loading: boolean;
   error: string | null;
-  entityImage: string | null;
   entityName: string | null;
+  entityImage: string | null;
   entityPersonality: string | null;
-  deepProfile: DeepProfile | undefined;
+  deepProfile: DeepProfile | null;
   isModalOpen: boolean;
   isFullscreenOpen: boolean;
   isSaved: boolean;
+  movementInput: string;
+  isMoving: boolean;
 }
 
 export interface ChatHandlers {
@@ -32,6 +34,8 @@ export interface ChatHandlers {
   closeFullscreen: () => void;
   saveLocation: () => void;
   saveCharacter: () => void;
+  setMovementInput: (value: string) => void;
+  handleMove: () => Promise<void>;
 }
 
 export interface ChatLogicReturn {

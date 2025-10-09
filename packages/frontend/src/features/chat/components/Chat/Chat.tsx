@@ -89,6 +89,33 @@ export function Chat({ chatLogic, entityType = 'character' }: ChatProps) {
           )}
         </div>
       )}
+
+      {/* Movement input for locations */}
+      {entityType === 'location' && (
+        <div className={styles.movementSection}>
+          <input
+            type="text"
+            className={styles.movementInput}
+            value={state.movementInput}
+            onChange={(e) => handlers.setMovementInput(e.target.value)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter' && !state.isMoving) {
+                e.preventDefault();
+                handlers.handleMove();
+              }
+            }}
+            placeholder="Where do you want to go?"
+            disabled={state.isMoving}
+          />
+          <Button
+            onClick={handlers.handleMove}
+            disabled={state.isMoving || !state.movementInput.trim()}
+            loading={state.isMoving}
+          >
+            Travel
+          </Button>
+        </div>
+      )}
       
       {/* Hide messages section for locations */}
       {entityType !== 'location' && (
