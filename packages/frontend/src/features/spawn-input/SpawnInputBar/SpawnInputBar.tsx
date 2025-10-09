@@ -3,11 +3,15 @@
  * Simplified input for triggering entity spawn processes
  */
 
+import { useState } from 'react';
 import { useSpawnInputLogic } from './useSpawnInputLogic';
+import { SavedLocationsModal } from '@/features/saved-locations/SavedLocationsModal';
+import { IconBookmark, IconDice } from '@/icons';
 import styles from './SpawnInputBar.module.css';
 
 export function SpawnInputBar() {
   const { state, handlers } = useSpawnInputLogic();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && state.textPrompt.trim()) {
@@ -48,7 +52,14 @@ export function SpawnInputBar() {
             onClick={handlers.handleShuffle}
             title="Random example"
           >
-            🎲
+            <IconDice size={18} />
+          </button>
+          <button
+            className={styles.savedButton}
+            onClick={() => setIsModalOpen(true)}
+            title="Browse saved locations"
+          >
+            <IconBookmark size={18} />
           </button>
           <button
             className={styles.generateButton}
@@ -64,6 +75,10 @@ export function SpawnInputBar() {
           {state.error}
         </div>
       )}
+      <SavedLocationsModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }

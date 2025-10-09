@@ -11,7 +11,10 @@ export {
   IconX,
   IconMaximize,
   IconMinimize,
-  IconDeviceFloppy
+  IconDeviceFloppy,
+  IconBookmark,
+  IconTrash,
+  IconDice
 } from '@tabler/icons-react';
 
 // Icon type for string references
