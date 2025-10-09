@@ -117,11 +117,10 @@ Mention vocabulary tone (casual, analytical, lyrical, archaic).
 2–3 sentences.
 
 [gender]  
-Reply with male, female, or other. For the most use male or female unless the character is clearly androgynous.
+Reply with male, female For the most use male or female unless the character is clearly androgynous or gender is defined otherwise.
 
 [nationality]  
-Provide country, region, or fictional origin consistent with Morfeum's world or tone.  
-1 sentence.
+Provide country, region, or fictional. be short and specific.  
 
 [fictional]  
 Reply with true if the character is fictional, false if historical.
