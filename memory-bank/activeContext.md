@@ -1,9 +1,87 @@
 # Active Context
 
 ## Current Work Focus
-**Entity Pipeline & UI Refactoring Complete** - Both backend spawn pipeline and frontend UI have been completely refactored to support scalable multi-entity architecture. Backend uses manager pattern with entity-specific pipelines. Frontend has dedicated CharacterPanel (chat) and LocationPanel (travel) components with shared base logic. System now supports unlimited entity types with ~20 minute implementation time per new type.
+**Entity Panel Skeleton Loader Polish Complete** - Fixed skeleton loader visibility and animation issues in both CharacterPanel and LocationPanel. Skeleton now shows immediately when panel opens with smooth pulsating opacity effect filling entire 300px container. Buttons (fullscreen, info, save) properly visible with z-index layering. System provides immediate visual feedback throughout entire entity generation process.
 
 ## Recent Changes
+
+### Entity Panel Skeleton Loader Polish (Latest - Just Completed)
+1. **Fixed Skeleton Visibility Issues**:
+   - **Problem**: Skeleton only appeared when image URL existed, causing height jumps
+   - **Solution**: Container always rendered (not conditional), skeleton shows before image arrives
+   - **Logic Updated**: `{(!state.entityImage || imageLoading) && <skeleton />}` ensures immediate display
+   - **Height Stability**: Changed `max-height: 300px` → `height: 300px` (fixed, no shrinking)
+
+2. **Button Visibility Fix**:
+   - **Problem**: Buttons were inside image conditional fragment, disappeared when no image
+   - **Solution**: Moved buttons outside image element but kept conditional on image existence
+   - **Z-Index Layering**: Added `z-index: 3` to `.imageButtons` class
+     - Skeleton: z-index 1 (back)
+     - Image: z-index 2 (middle)  
+     - Buttons: z-index 3 (front) ✨
+
+3. **Animation Change: Breathing → Pulsating**:
+   - **Before (Breathing)**:
+     ```css
+     @keyframes breathing {
+       transform: scale(0.98) → scale(1.02);  /* Size changes */
+       opacity: 0.6 → 1.0;
+     }
+     ```
+   - **After (Pulsating)**:
+     ```css
+     @keyframes pulsate {
+       opacity: 0.4 → 0.8 → 0.4;  /* Only opacity */
+     }
+     ```
+   - **Removed**: Scale transforms (no size changes)
+   - **Faster**: 2.5s → 2s cycle
+   - **Smoother**: Clean opacity fade without scaling
+
+4. **Skeleton Size Optimization**:
+   - **Before**: 80% width/height with rounded corners (centered rectangle in container)
+   - **After**: 100% width/height, no border-radius (fills entire container)
+   - **Rationale**: Full-container fill looks cleaner, less distracting than centered shape
+   - **Visual Result**: Edge-to-edge diagonal gradient pulsating effect
+
+5. **CSS Color Fix**:
+   - **Problem**: CSS variables (`var(--color-bg-secondary)`) might not be defined
+   - **Solution**: Hardcoded visible colors for skeleton
+     - Container: `#2a2a2a` (dark gray)
+     - Gradient: `#3a3a3a` → `#4a4a4a` → `#3a3a3a` (diagonal lighter grays)
+   - **Result**: Skeleton always visible regardless of theme state
+
+6. **Files Modified (4 total)**:
+   - `CharacterPanel.tsx` - Buttons moved outside image fragment
+   - `CharacterPanel.module.css` - Pulsate animation, z-index, full size, hardcoded colors
+   - `LocationPanel.tsx` - Buttons moved outside image fragment
+   - `LocationPanel.module.css` - Pulsate animation, z-index, full size, hardcoded colors
+
+7. **Complete Visual Flow**:
+   ```
+   1. Panel opens → 300px container, pulsating skeleton visible immediately
+   2. Seed arrives → Entity name appears, skeleton keeps pulsating
+   3. Image URL arrives → Skeleton still visible, image starts loading
+   4. Image loads → Skeleton fades out (opacity 0), image fades in (opacity 1)
+   5. Buttons appear → Fullscreen, Info, Save visible on top of image
+   ```
+
+8. **Key Benefits**:
+   - ✅ **Immediate feedback**: Skeleton visible from moment panel opens
+   - ✅ **No height jumps**: Fixed 300px container throughout entire process
+   - ✅ **Smooth transitions**: Skeleton → Image with 0.3s fade
+   - ✅ **Button visibility**: Always accessible when image loaded
+   - ✅ **Clean animation**: Simple opacity pulse without distracting size changes
+   - ✅ **Professional feel**: Edge-to-edge gradient effect
+
+9. **Quality Verification**:
+   - ✅ Build successful: 321.59 kB (gzipped: 99.16 kB)
+   - ✅ Zero TypeScript errors
+   - ✅ Both panels work identically (CharacterPanel + LocationPanel)
+   - ✅ Animation performance smooth (CSS-only, no JavaScript)
+   - ✅ Accessible: Maintains visual hierarchy, no flashing effects
+
+## Recent Changes (Continued)
 
 ### Complete Backend & Frontend Refactoring (Latest - Just Completed)
 1. **Backend Pipeline Architecture Refactored**:

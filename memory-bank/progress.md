@@ -6,11 +6,18 @@
 - **Project Structure**: Complete monorepo setup following SETUP_GUIDE.md
 - **Design System**: Comprehensive design tokens and CSS custom properties with dark mode support
 - **Component Architecture**: Strict separation of concerns implemented
-- **UI Components**: Complete set of reusable components (Button, Card, LoadingSpinner, Message, ThemeToggle)
+- **UI Components**: Complete set of reusable components (Button, Card, LoadingSpinner, Message, ThemeToggle, Modal)
 - **Icon Management**: Optimized centralized icon system with only used exports
 - **State Management**: Zustand store with chat manager, spawn manager, and theme management slices
 - **Multi-Spawn System**: Generate multiple AI entities simultaneously with progress tracking
 - **Chat System**: Functional multi-session chat with AI entities (Gemini)
+- **Entity Panels**: Dedicated CharacterPanel (chat) and LocationPanel (travel) components with shared base logic
+- **Skeleton Loaders**: Immediate visual feedback with pulsating gradient effect filling entire 300px container
+  - Fixed height prevents layout shifts throughout entity generation
+  - Smooth pulsating animation (opacity 0.4 → 0.8, 2s cycle)
+  - Proper z-index layering (skeleton: 1, image: 2, buttons: 3)
+  - Buttons visible when image loaded (fullscreen, info, save)
+  - Edge-to-edge gradient effect with hardcoded visible colors
 - **Dark Mode Implementation**: Complete theme system with light/dark/system options, persistent storage, and WCAG compliance
 - **Theme Toggle**: Optimized floating button in bottom right corner with responsive positioning
 - **Build System**: Vite configuration with path aliases
