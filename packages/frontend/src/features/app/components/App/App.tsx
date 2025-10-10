@@ -2,7 +2,8 @@ import { useStore } from '@/store';
 import { useThemeStore } from '@/store/slices/themeSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locationsSlice';
-import { Chat, useChatLogic } from '@/features/chat/components/Chat';
+import { CharacterPanel } from '@/features/entity-panel/components/CharacterPanel';
+import { LocationPanel } from '@/features/entity-panel/components/LocationPanel';
 import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer';
 import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
@@ -29,9 +30,6 @@ export function App() {
   
   // Get active chat session
   const activeChatSession = activeChat ? chats.get(activeChat) : null;
-  
-  // Initialize chat logic
-  const chatLogic = useChatLogic();
 
   // Initialize theme on component mount
   useEffect(() => {
@@ -118,11 +116,15 @@ export function App() {
         <ThemeToggle className="compact" />
       </div>
       
-      {/* Column 2 - Chat (handles both characters and locations) */}
+      {/* Column 2 - Entity Panel (Character or Location) */}
       {activeChatSession && (
         <section className={styles.chatSection}>
           <Card>
-            <Chat chatLogic={chatLogic} entityType={activeChatSession.entityType} />
+            {activeChatSession.entityType === 'character' ? (
+              <CharacterPanel />
+            ) : (
+              <LocationPanel />
+            )}
           </Card>
         </section>
       )}

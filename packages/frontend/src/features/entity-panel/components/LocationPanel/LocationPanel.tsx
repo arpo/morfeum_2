@@ -1,0 +1,109 @@
+import { Button } from '@/components/ui';
+import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
+import { LocationInfoModal } from '../../../chat/components/LocationInfoModal';
+import { useLocationPanel } from './useLocationPanel';
+import styles from './LocationPanel.module.css';
+
+export function LocationPanel() {
+  const { state, handlers } = useLocationPanel();
+
+  return (
+    <div className={styles.container}>
+      {state.entityImage && (
+        <div className={styles.imageContainer}>
+          <img 
+            src={state.entityImage} 
+            alt={state.entityName || 'Location'}
+            className={styles.locationHeaderImage}
+          />
+          <div className={styles.imageButtons}>
+            <button 
+              className={styles.imageButton}
+              onClick={handlers.openFullscreen}
+              title="View fullscreen"
+            >
+              <IconMaximize size={20} />
+            </button>
+            <button 
+              className={styles.imageButton}
+              onClick={handlers.openModal}
+              disabled={!state.deepProfile}
+              title={state.deepProfile ? 'View info' : 'Info not ready'}
+            >
+              <IconInfoCircle size={20} />
+            </button>
+            <button 
+              className={styles.imageButton}
+              onClick={handlers.saveLocation}
+              disabled={!state.deepProfile || state.isSaved}
+              title={state.isSaved ? 'Location saved' : state.deepProfile ? 'Save location' : 'Profile not ready'}
+            >
+              <IconDeviceFloppy size={20} />
+            </button>
+          </div>
+        </div>
+      )}
+      
+      {state.entityName && (
+        <div className={styles.locationInfo}>
+          <h2 className={styles.locationName}>{state.entityName}</h2>
+          {state.entityPersonality && (
+            <p className={styles.locationAtmosphere}>{state.entityPersonality}</p>
+          )}
+        </div>
+      )}
+
+      {/* Travel Section */}
+      <div className={styles.travelSection}>
+        <h3 className={styles.travelTitle}>Travel</h3>
+        <p className={styles.travelDescription}>
+          Where would you like to go from here?
+        </p>
+        <div className={styles.movementSection}>
+          <input
+            type="text"
+            className={styles.movementInput}
+            value={state.movementInput}
+            onChange={(e) => handlers.setMovementInput(e.target.value)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter' && !state.isMoving) {
+                e.preventDefault();
+                handlers.handleMove();
+              }
+            }}
+            placeholder="Describe where you want to go..."
+            disabled={state.isMoving}
+          />
+          <Button
+            onClick={handlers.handleMove}
+            disabled={state.isMoving || !state.movementInput.trim()}
+            loading={state.isMoving}
+          >
+            Travel
+          </Button>
+        </div>
+      </div>
+
+      <LocationInfoModal 
+        locationProfile={state.deepProfile as any}
+        locationName={state.entityName || 'Unknown'}
+        isOpen={state.isModalOpen}
+        onClose={handlers.closeModal}
+      />
+
+      {state.isFullscreenOpen && state.entityImage && (
+        <div className={styles.fullscreenOverlay} onClick={handlers.closeFullscreen}>
+          <button className={styles.fullscreenCloseButton} onClick={handlers.closeFullscreen}>
+            <IconX size={32} />
+          </button>
+          <img 
+            src={state.entityImage} 
+            alt={state.entityName || 'Location'}
+            className={styles.fullscreenImage}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
