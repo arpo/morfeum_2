@@ -87,12 +87,15 @@ export function useSpawnEvents() {
 
     // Listen for profile complete event
     eventSource.addEventListener('spawn:profile-complete', (e) => {
-      const { spawnId, deepProfile, enhancedSystemPrompt } = JSON.parse(e.data);
+      const { spawnId, deepProfile, enhancedSystemPrompt, entityType } = JSON.parse(e.data);
       
-      // Split deep profile into world and location parts
-      const { world, location } = splitWorldAndLocation(deepProfile);
-      console.log('🌍 World DNA:', world);
-      console.log('📍 Location Instance:', location);
+      // Split deep profile into world and location parts (locations only)
+      if (entityType === 'location') {
+        const { world, location } = splitWorldAndLocation(deepProfile);
+        console.log('🌍 World DNA:', world);
+        console.log('📍 Location Instance:', location);
+      }
+      
       console.log('💬 Enhanced System Prompt Updated');
       
       // Store deep profile in chat session
