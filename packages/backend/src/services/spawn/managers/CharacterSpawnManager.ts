@@ -51,7 +51,8 @@ export class CharacterSpawnManager extends BasePipelineManager {
       seed.wearing,
       seed.personality,
       seed.presence,
-      seed.setting
+      seed.setting,
+      'Half Portrait'
     );
 
     const result = await mzooService.generateImage(

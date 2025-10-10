@@ -132,9 +132,9 @@ export const getFluxFilter = (filterName: string): FluxFilter | undefined => {
 };
 
 /**
- * Get the default filter (Half Portrait)
- * @returns The default Half Portrait filter
+ * Get the default filter (None)
+ * @returns The default None filter
  */
 export const getDefaultFluxFilter = (): FluxFilter => {
-  return fluxFilters["Half Portrait"];
+  return fluxFilters["None"];
 };
