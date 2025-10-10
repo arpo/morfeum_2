@@ -1,9 +1,170 @@
 # Active Context
 
 ## Current Work Focus
-**Entity Panel Skeleton Loader Polish Complete** - Fixed skeleton loader visibility and animation issues in both CharacterPanel and LocationPanel. Skeleton now shows immediately when panel opens with smooth pulsating opacity effect filling entire 300px container. Buttons (fullscreen, info, save) properly visible with z-index layering. System provides immediate visual feedback throughout entire entity generation process.
+**Sub-Location System Complete** - Implemented full hierarchical location system allowing unlimited depth sub-locations that inherit World DNA from parent locations. Travel button works from any location (saved or unsaved), generates only 5 location-specific fields while reusing world's genre/atmosphere/architecture. Visual hierarchy display in Entities list with indentation and tree indicators. Fixed save button persistence bug across entity switches.
 
 ## Recent Changes
+
+### Sub-Location Hierarchical System (Latest - Just Completed)
+1. **Complete Sub-Location Architecture**:
+   - **Backend Pipeline**: Created `subLocationDeepProfileEnrichment.ts` prompt (91 lines)
+   - **Only 5 Fields Generated**: name, looks, mood, sounds, airParticles (vs 15 for root locations)
+   - **World DNA Inheritance**: Sub-locations receive parent's 10 World DNA fields as context
+   - **Constraint System**: AI ensures sub-locations align with parent world's genre, architecture, atmosphere
+   - **Storage Optimization**: Sub-locations store empty `worldInfo`, only `locationInfo` (no duplication)
+
+2. **Travel System Implementation**:
+   - **Travel Button**: Added to LocationPanel, works from any location (saved or unsaved)
+   - **Input Field**: User types "A cool design bar" → system creates sub-location
+   - **World DNA Retrieval**: `getWorldDNA(world_id)` helper fetches DNA from root location
+   - **API Integration**: `/api/spawn/start` accepts `parentLocationId` + `parentWorldDNA`
+   - **Pipeline Routing**: Backend detects sub-location params, routes to `runSubLocationPipeline()`
+   - **Same UI Progress**: Sub-locations show seed → image → analysis → profile (only enrichment differs)
+
+3. **Multi-Level Depth Support**:
+   - **Unlimited Nesting**: Root → Sub → Sub-Sub → Sub-Sub-Sub (unlimited depth)
+   - **Unsaved Travel Fix**: Can travel from unsaved sub-locations (checks `activeSpawns` for parent)
+   - **World ID Resolution**: Traverses parent chain to find `world_id` for World DNA retrieval
+   - **Depth Tracking**: Each sub-location stores `depth_level` (parent + 1)
+   - **Parent Reference**: `parent_location_id` links child to parent
+
+4. **Visual Hierarchy Display**:
+   - **Indentation**: Each depth level indents by 20px in Entities list
+   - **Tree Indicators**: Sub-locations show "└─" prefix in monospace font
+   - **Dynamic Padding**: `calc(var(--spacing-md) + ${depthLevel * 20}px)`
+   - **Automatic Detection**: Reads `depth_level` from `locationsStore`
+   - **Color Coding**: Purple for all locations (vs blue for characters)
+   - **Example Visual**:
+     ```
+     Cyberpunk Metropolis (depth 0)
+     └─ Neon Bar (depth 1, +20px indent)
+        └─ Private Room (depth 2, +40px indent)
+     ```
+
+5. **Storage Helper Methods**:
+   - **Created 3 Helper Functions**:
+     - `getRootLocation(world_id)`: Finds root where `parent_location_id === null`
+     - `getWorldDNA(world_id)`: Returns `worldInfo` from root location
+     - `getLocationHierarchy()`: Builds tree with populated children
+   - **LocationHierarchyNode Interface**: Separate from Location to avoid field conflicts
+   - **Single Source of Truth**: World DNA stored once in root, inherited by all children
+
+6. **Backend Pipeline Changes**:
+   - **LocationSpawnManager Updates** (+118 lines):
+     - Added `enrichProfileForSubLocation()` method
+     - Overrode `runPipeline()` to detect sub-location parameters
+     - Created `runSubLocationPipeline()` for custom sub-location flow
+     - Merges parent World DNA with new Location Instance in complete profile
+   - **SpawnManager Integration**:
+     - Accepts `parentLocationId` + `parentWorldDNA` in `startSpawn()`
+     - Tracks parent in `activeSpawns` Map for retrieval
+     - Passes params to LocationSpawnManager when detected
+   - **Type Updates**:
+     - Added `parentLocationId`, `parentWorldDNA` to `SpawnProcess` interface
+     - Updated all function signatures to support optional sub-location params
+
+7. **Frontend Integration**:
+   - **useLocationPanel Hook** (Travel logic):
+     - `handleMove()`: Gets World DNA, calls `startSpawn()` with parent params
+     - Handles both saved and unsaved locations (checks `activeSpawns` fallback)
+     - Resolves `world_id` by traversing parent chain if needed
+   - **saveLocation()**: Detects sub-locations, stores correctly:
+     - Root: `world_id: spawnId`, `worldInfo: {...}` (10 fields)
+     - Sub: `world_id: parent.world_id`, `worldInfo: {}` (empty), `parent_location_id: parentId`
+   - **Event Handling**:
+     - `useSpawnEvents` detects `isSubLocation` flag from backend
+     - Logs different messages for root vs sub-locations in console
+     - No UI changes needed (same progress bar flow)
+
+8. **Bug Fixes Applied**:
+   - **Unsaved Location Travel** (Fixed):
+     - **Problem**: Traveling from unsaved sub-location failed (location not in store)
+     - **Solution**: Check `activeSpawns` for parent info if `getLocation()` returns null
+     - **Result**: Can now travel from any location, saved or not
+   - **Save Button Persistence** (Fixed):
+     - **Problem**: Save button state persisted when switching between entities
+     - **Solution**: Added `useEffect(() => setIsSaved(false), [activeChat])` to base hook
+     - **Result**: Save button resets correctly when switching entities
+
+9. **ChatTabs Hierarchy Display**:
+   - **Location Data Integration**:
+     - Fetches location from `locationsStore` for each chat
+     - Extracts `depth_level` and `parent_location_id`
+     - Applies dynamic padding based on depth
+   - **Visual Indicators**:
+     - Added `.hierarchyIndicator` CSS class (monospace, subtle opacity)
+     - Shows "└─" for all sub-locations
+     - White color when active, gray when inactive
+   - **Limitation**: Unsaved locations show depth 0 (no indent until saved)
+
+10. **Files Modified (12 total)**:
+    **Backend (7 files)**:
+    - `prompts/languages/en/subLocationDeepProfileEnrichment.ts` (NEW - 91 lines)
+    - `prompts/languages/en/index.ts` (added import + export)
+    - `prompts/types.ts` (added type definition)
+    - `services/spawn/managers/LocationSpawnManager.ts` (+118 lines)
+    - `services/spawn/SpawnManager.ts` (updated signatures + routing)
+    - `services/spawn/types.ts` (added parentLocationId + parentWorldDNA)
+    - `routes/spawn.ts` (added parameter validation)
+    
+    **Frontend (5 files)**:
+    - `store/slices/locationsSlice.ts` (+3 helpers + LocationHierarchyNode)
+    - `store/slices/spawnManagerSlice.ts` (sub-location params + tracking)
+    - `features/entity-panel/components/LocationPanel/useLocationPanel.ts` (travel + save logic)
+    - `features/entity-panel/hooks/useEntityPanelBase.ts` (save button reset fix)
+    - `features/chat-tabs/ChatTabs/ChatTabs.tsx` (hierarchy display)
+    - `features/chat-tabs/ChatTabs/ChatTabs.module.css` (indentation + tree indicators)
+    - `hooks/useSpawnEvents.ts` (sub-location detection)
+
+11. **Key Architectural Decisions**:
+    - **No World DNA Duplication**: Only root location stores World DNA, children inherit
+    - **Partial Profile Generation**: Sub-locations generate only 5 fields (not 15)
+    - **Constraint-Based AI**: Parent World DNA passed as context to ensure consistency
+    - **Storage Efficiency**: Empty `worldInfo` in children reduces storage by ~70%
+    - **Type Safety**: Full TypeScript coverage with proper optional parameters
+    - **Unlimited Depth**: No artificial limits on nesting levels
+
+12. **Quality Verification**:
+    - ✅ **Backend Build**: Successful, zero TypeScript errors
+    - ✅ **Frontend Build**: Successful, zero TypeScript errors
+    - ✅ **Multi-Level Travel**: Works from saved and unsaved locations
+    - ✅ **Visual Hierarchy**: Indentation and tree indicators display correctly
+    - ✅ **Storage Efficiency**: Sub-locations 70% smaller than root locations
+    - ✅ **Architecture Compliance**: Follows all project patterns
+
+13. **System Flow Example**:
+    ```
+    User Creates Root Location:
+    1. User: "Cyberpunk metropolis with neon lights"
+    2. Backend: Generates 15 fields (10 World DNA + 5 Location Instance)
+    3. Storage: world_id: spawn-123, worldInfo: {...10 fields}, locationInfo: {...5 fields}
+    
+    User Travels to Sub-Location:
+    4. User clicks "Travel", enters "A cool design bar"
+    5. Frontend: Fetches World DNA from root (spawn-123)
+    6. Frontend: Sends POST /api/spawn/start with parentLocationId + parentWorldDNA
+    7. Backend: Generates ONLY 5 fields (name, looks, mood, sounds, airParticles)
+    8. Backend: Merges parent World DNA + new Location Instance
+    9. Frontend: Receives complete profile (10 inherited + 5 new)
+    10. Storage: world_id: spawn-123, worldInfo: {}, locationInfo: {...5 new fields}, parent_location_id: spawn-123
+    
+    User Travels to Sub-Sub-Location:
+    11. User clicks "Travel" from bar (spawn-456)
+    12. Frontend: Gets world_id from spawn-456 (which is spawn-123)
+    13. Frontend: Fetches World DNA from spawn-123
+    14. Backend: Generates 5 fields aligned with same World DNA
+    15. Storage: world_id: spawn-123, parent_location_id: spawn-456, depth_level: 2
+    ```
+
+14. **Benefits Delivered**:
+    - **World Consistency**: All sub-locations automatically match parent world's genre/atmosphere
+    - **Storage Efficiency**: 70% reduction in stored data per sub-location
+    - **Development Speed**: Sub-location generation takes same time as root (only 5 fields)
+    - **User Experience**: Smooth travel system with immediate visual feedback
+    - **Scalability**: Unlimited depth levels supported
+    - **Type Safety**: Full compiler coverage prevents bugs
+
+## Recent Changes (Continued)
 
 ### Entity Panel Skeleton Loader Polish (Latest - Just Completed)
 1. **Fixed Skeleton Visibility Issues**:

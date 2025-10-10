@@ -98,7 +98,7 @@ export function App() {
       setActiveChat(lastLoadedId);
     }
     
-    console.log(`[App] Auto-loaded ${pinnedCharacters.length} characters and ${pinnedLocations.length} locations`);
+    // console.log(`[App] Auto-loaded ${pinnedCharacters.length} characters and ${pinnedLocations.length} locations`);
   }, []); // Only run on mount
 
   return (

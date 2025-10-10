@@ -4,6 +4,7 @@
  */
 
 import { useStore } from '@/store';
+import { useLocationsStore } from '@/store/slices/locationsSlice';
 import styles from './ChatTabs.module.css';
 
 export function ChatTabs() {
@@ -11,12 +12,20 @@ export function ChatTabs() {
   const activeChat = useStore(state => state.activeChat);
   const setActiveChat = useStore(state => state.setActiveChat);
   const closeChat = useStore(state => state.closeChat);
+  const getLocation = useLocationsStore(state => state.getLocation);
 
-  // Convert Map to array for rendering
-  const chatsArray = Array.from(chats.entries()).map(([spawnId, chat]) => ({
-    ...chat,
-    spawnId
-  }));
+  // Convert Map to array for rendering with location depth data
+  const chatsArray = Array.from(chats.entries()).map(([spawnId, chat]) => {
+    // Check if this is a saved location to get depth info
+    const locationData = chat.entityType === 'location' ? getLocation(spawnId) : null;
+    
+    return {
+      ...chat,
+      spawnId,
+      depthLevel: locationData?.depth_level ?? 0,
+      isSubLocation: locationData?.parent_location_id !== null && locationData?.parent_location_id !== undefined
+    };
+  });
 
   // Don't render if no chats
   if (chatsArray.length === 0) {
@@ -42,7 +51,13 @@ export function ChatTabs() {
             className={`${styles.chatButton} ${activeChat === chat.spawnId ? styles.active : ''}`}
             onClick={() => handleTabClick(chat.spawnId)}
             data-entity-type={chat.entityType || 'character'}
+            style={{
+              paddingLeft: `calc(var(--spacing-md) + ${chat.depthLevel * 20}px)`
+            }}
           >
+            {chat.isSubLocation && (
+              <span className={styles.hierarchyIndicator}>└─</span>
+            )}
             {chat.entityImage && (
               <img 
                 src={chat.entityImage} 
