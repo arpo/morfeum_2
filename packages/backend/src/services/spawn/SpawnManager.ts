@@ -21,8 +21,7 @@ export class SpawnManager {
    */
   startSpawn(
     prompt: string, 
-    entityType: 'character' | 'location' = 'character',
-    movementContext?: any
+    entityType: 'character' | 'location' = 'character'
   ): string {
     const spawnId = `spawn-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     const abortController = new AbortController();
@@ -33,18 +32,8 @@ export class SpawnManager {
       entityType,
       status: 'generating_seed',
       createdAt: Date.now(),
-      abortController,
-      movementContext
+      abortController
     };
-
-    console.log(`[SpawnManager] Starting spawn ${spawnId}:`, {
-      prompt,
-      entityType,
-      hasMovementContext: !!movementContext,
-      movementType: movementContext?.movementType,
-      hasWorldInfo: !!movementContext?.worldInfo,
-      hasLocationInfo: !!movementContext?.locationInfo
-    });
 
     this.processes.set(spawnId, process);
 
@@ -106,8 +95,7 @@ export class SpawnManager {
         this.mzooApiKey,
         process.prompt,
         process.abortController.signal,
-        process.entityType,
-        process.movementContext
+        process.entityType
       );
       if (process.abortController.signal.aborted) return;
 

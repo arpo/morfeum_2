@@ -114,6 +114,11 @@ export const fluxFilters: Record<string, FluxFilter> = {
     name: "Dream Fragment",
     text: "low contrast, selective blur, surreal light direction, floating focus, disjoint color balance",
     description: "Suggests partial memory or hallucination; ideal for symbolic or subconscious scenes."
+  },
+  "None": {
+    name: "None",
+    text: "",
+    description: "No specific visual style applied."
   }
 };
 

@@ -15,39 +15,10 @@ export async function generateSeed(
   mzooApiKey: string,
   textPrompt: string,
   signal: AbortSignal,
-  entityType: 'character' | 'location' = 'character',
-  movementContext?: any
+  entityType: 'character' | 'location' = 'character'
 ): Promise<EntitySeed | LocationSeed> {
   const promptKey = entityType === 'location' ? 'locationSeedGeneration' : 'characterSeedGeneration';
-  
-  // Build the system prompt with movement context if available
-  let systemPrompt = getPrompt(promptKey, 'en')(textPrompt);
-  
-  // For locations with movement context, append world/location info
-  if (entityType === 'location' && movementContext) {
-    console.log('[generateSeed] Using movement context:', {
-      movementType: movementContext.movementType,
-      hasWorldInfo: !!movementContext.worldInfo,
-      hasLocationInfo: !!movementContext.locationInfo
-    });
-    
-    let contextAddition = '\n\n=== MOVEMENT CONTEXT ===\n';
-    contextAddition += `Movement Type: ${movementContext.movementType}\n`;
-    contextAddition += `Current Location: ${movementContext.currentLocationName}\n`;
-    
-    if (movementContext.worldInfo) {
-      contextAddition += '\n--- World DNA (maintain these characteristics) ---\n';
-      contextAddition += JSON.stringify(movementContext.worldInfo, null, 2);
-    }
-    
-    if (movementContext.locationInfo) {
-      contextAddition += '\n\n--- Current Location Context ---\n';
-      contextAddition += JSON.stringify(movementContext.locationInfo, null, 2);
-    }
-    
-    systemPrompt += contextAddition;
-    console.log('[generateSeed] Enhanced prompt length:', systemPrompt.length);
-  }
+  const systemPrompt = getPrompt(promptKey, 'en')(textPrompt);
   
   const messages = [
     { role: 'system', content: systemPrompt },
@@ -71,7 +42,6 @@ export async function generateSeed(
   }
 
   const seed = JSON.parse(jsonMatch[0]);
-  // console.log('Generated seed:', JSON.stringify(seed, null, 2));
   
   return seed;
 }
@@ -95,7 +65,7 @@ export async function generateImage(
       locationSeed.looks,
       locationSeed.atmosphere,
       locationSeed.mood,
-      'Cinematic Establishing Shot'
+      'None'
     );
   } else {
     const entitySeed = seed as EntitySeed;

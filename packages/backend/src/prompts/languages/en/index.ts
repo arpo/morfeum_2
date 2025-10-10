@@ -16,7 +16,6 @@ import { locationSeedGeneration } from './locationSeedGeneration';
 import { locationImageGeneration } from './locationImageGeneration';
 import { locationDeepProfileEnrichment } from './locationDeepProfileEnrichment';
 import { sampleLocationPrompts } from './sampleLocationPrompts';
-import { movementClassification } from './movementClassification';
 
 // Export flux filters for external use
 export { fluxFilters, getFluxFilter, getDefaultFluxFilter, type FluxFilter } from './fluxFilters';
@@ -36,6 +35,5 @@ export const en: PromptTemplates = {
   locationSeedGeneration,
   locationImageGeneration,
   locationDeepProfileEnrichment,
-  sampleLocationPrompts,
-  movementClassification
+  sampleLocationPrompts
 };
