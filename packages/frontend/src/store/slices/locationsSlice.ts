@@ -22,6 +22,11 @@ export interface Location {
   imagePath: string;
 }
 
+// Location hierarchy with populated children
+export interface LocationHierarchyNode extends Omit<Location, 'children'> {
+  children: Location[];
+}
+
 interface LocationsState {
   locations: Record<string, Location>;
   pinnedIds: string[];
@@ -46,6 +51,11 @@ interface LocationsState {
   // Bulk operations
   clearAllLocations: () => void;
   importLocations: (locations: Location[]) => void;
+  
+  // Helper methods for World DNA management
+  getRootLocation: (world_id: string) => Location;
+  getWorldDNA: (world_id: string) => Record<string, any>;
+  getLocationHierarchy: () => LocationHierarchyNode[];
 }
 
 export const useLocationsStore = create<LocationsState>()(
@@ -159,14 +169,44 @@ export const useLocationsStore = create<LocationsState>()(
         set({ locations: {}, pinnedIds: [] });
       },
       
-      importLocations: (locations) => {
-        const locationsMap = locations.reduce((acc, location) => {
-          acc[location.id] = location;
-          return acc;
-        }, {} as Record<string, Location>);
-        
-        set({ locations: locationsMap });
-      },
+  importLocations: (locations) => {
+    const locationsMap = locations.reduce((acc, location) => {
+      acc[location.id] = location;
+      return acc;
+    }, {} as Record<string, Location>);
+    
+    set({ locations: locationsMap });
+  },
+  
+  // Helper methods for World DNA management
+  getRootLocation: (world_id) => {
+    const locations = Object.values(get().locations);
+    const root = locations.find(
+      (loc) => loc.world_id === world_id && loc.parent_location_id === null
+    );
+    if (!root) {
+      throw new Error(`No root location found for world ${world_id}`);
+    }
+    return root;
+  },
+  
+  getWorldDNA: (world_id) => {
+    const root = get().getRootLocation(world_id);
+    return root.worldInfo;
+  },
+  
+  getLocationHierarchy: () => {
+    const locations = Object.values(get().locations);
+    
+    // Build hierarchy tree
+    const roots = locations.filter((loc) => loc.parent_location_id === null);
+    const children = locations.filter((loc) => loc.parent_location_id !== null);
+    
+    return roots.map((root) => ({
+      ...root,
+      children: children.filter((child) => child.parent_location_id === root.id),
+    }));
+  },
     }),
     {
       name: 'morfeum-locations-storage',

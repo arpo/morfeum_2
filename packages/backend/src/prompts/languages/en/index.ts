@@ -15,6 +15,7 @@ import { sampleCharacterPrompts } from './sampleCharacterPrompts';
 import { locationSeedGeneration } from './locationSeedGeneration';
 import { locationImageGeneration } from './locationImageGeneration';
 import { locationDeepProfileEnrichment } from './locationDeepProfileEnrichment';
+import { subLocationDeepProfileEnrichment } from './subLocationDeepProfileEnrichment';
 import { sampleLocationPrompts } from './sampleLocationPrompts';
 
 // Export flux filters for external use
@@ -35,5 +36,6 @@ export const en: PromptTemplates = {
   locationSeedGeneration,
   locationImageGeneration,
   locationDeepProfileEnrichment,
+  subLocationDeepProfileEnrichment,
   sampleLocationPrompts
 };

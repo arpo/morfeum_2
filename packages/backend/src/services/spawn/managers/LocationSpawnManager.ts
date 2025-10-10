@@ -135,6 +135,42 @@ export class LocationSpawnManager extends BasePipelineManager {
     return parseJSON(result.data.text);
   }
 
+  async enrichProfileForSubLocation(
+    seed: LocationSeed,
+    visualAnalysis: LocationVisualAnalysis,
+    parentWorldDNA: Record<string, any>,
+    signal: AbortSignal
+  ): Promise<Partial<LocationDeepProfile>> {
+    const seedJson = JSON.stringify(seed, null, 2);
+    const visionJson = JSON.stringify(visualAnalysis, null, 2);
+    const originalPrompt = seed.originalPrompt || 'No specific request provided';
+    const worldDNAJson = JSON.stringify(parentWorldDNA, null, 2);
+
+    const enrichmentPrompt = getPrompt('subLocationDeepProfileEnrichment', 'en')(
+      seedJson,
+      visionJson,
+      originalPrompt,
+      worldDNAJson
+    );
+
+    const messages = [
+      { role: 'system', content: enrichmentPrompt },
+      { role: 'user', content: 'Generate the sub-location profile based on the provided data.' }
+    ];
+
+    const result = await mzooService.generateText(
+      this.mzooApiKey,
+      messages,
+      AI_MODELS.PROFILE_ENRICHMENT
+    );
+
+    if (result.error) {
+      throw new Error(result.error);
+    }
+
+    return parseJSON(result.data.text);
+  }
+
   // Locations don't have system prompts for chat
   // These methods are intentionally not implemented
 }
