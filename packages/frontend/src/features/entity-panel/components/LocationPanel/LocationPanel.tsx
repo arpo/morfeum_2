@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
 import { LocationInfoModal } from '../../../chat/components/LocationInfoModal';
@@ -6,17 +7,33 @@ import styles from './LocationPanel.module.css';
 
 export function LocationPanel() {
   const { state, handlers } = useLocationPanel();
+  const [imageLoading, setImageLoading] = useState(true);
+
+  // Reset loading state when image URL changes
+  useEffect(() => {
+    if (state.entityImage) {
+      setImageLoading(true);
+    }
+  }, [state.entityImage]);
 
   return (
     <div className={styles.container}>
-      {state.entityImage && (
-        <div className={styles.imageContainer}>
-          <img 
-            src={state.entityImage} 
-            alt={state.entityName || 'Location'}
-            className={styles.locationHeaderImage}
-          />
-          <div className={styles.imageButtons}>
+      <div className={styles.imageContainer}>
+        {(!state.entityImage || imageLoading) && (
+          <div className={styles.imageSkeleton}>
+            <div className={styles.skeletonBreathing} />
+          </div>
+        )}
+        {state.entityImage && (
+          <>
+            <img 
+              src={state.entityImage} 
+              alt={state.entityName || 'Location'}
+              className={styles.locationHeaderImage}
+              onLoad={() => setImageLoading(false)}
+              style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease-in' }}
+            />
+            <div className={styles.imageButtons}>
             <button 
               className={styles.imageButton}
               onClick={handlers.openFullscreen}
@@ -40,9 +57,10 @@ export function LocationPanel() {
             >
               <IconDeviceFloppy size={20} />
             </button>
-          </div>
-        </div>
-      )}
+            </div>
+          </>
+        )}
+      </div>
       
       {state.entityName && (
         <div className={styles.locationInfo}>

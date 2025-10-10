@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Button, LoadingSpinner } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
@@ -11,6 +11,14 @@ export function CharacterPanel() {
   const { state, handlers } = useCharacterPanel();
   const messagesContainerRef = useRef<HTMLDivElement>(null);
   const prevMessageCountRef = useRef<number>(0);
+  const [imageLoading, setImageLoading] = useState(true);
+
+  // Reset loading state when image URL changes
+  useEffect(() => {
+    if (state.entityImage) {
+      setImageLoading(true);
+    }
+  }, [state.entityImage]);
 
   // Filter out system messages for display
   const visibleMessages = state.messages.filter((msg: Message) => msg.role !== 'system');
@@ -46,14 +54,22 @@ export function CharacterPanel() {
 
   return (
     <div className={styles.container}>
-      {state.entityImage && (
-        <div className={styles.imageContainer}>
-          <img 
-            src={state.entityImage} 
-            alt={state.entityName || 'Character'}
-            className={styles.characterHeaderImage}
-          />
-          <div className={styles.imageButtons}>
+      <div className={styles.imageContainer}>
+        {(!state.entityImage || imageLoading) && (
+          <div className={styles.imageSkeleton}>
+            <div className={styles.skeletonBreathing} />
+          </div>
+        )}
+        {state.entityImage && (
+          <>
+            <img 
+              src={state.entityImage} 
+              alt={state.entityName || 'Character'}
+              className={styles.characterHeaderImage}
+              onLoad={() => setImageLoading(false)}
+              style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease-in' }}
+            />
+            <div className={styles.imageButtons}>
             <button 
               className={styles.imageButton}
               onClick={handlers.openFullscreen}
@@ -77,9 +93,10 @@ export function CharacterPanel() {
             >
               <IconDeviceFloppy size={20} />
             </button>
-          </div>
-        </div>
-      )}
+            </div>
+          </>
+        )}
+      </div>
       
       {state.entityName && (
         <div className={styles.characterInfo}>
