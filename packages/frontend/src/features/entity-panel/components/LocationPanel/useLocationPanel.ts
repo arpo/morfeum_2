@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useStore } from '@/store';
 import { splitWorldAndLocation } from '@/utils/locationProfile';
 import { useEntityPanelBase } from '../../hooks/useEntityPanelBase';
 import type { LocationPanelLogicReturn } from './types';
@@ -10,15 +11,72 @@ import type { LocationPanelLogicReturn } from './types';
 export function useLocationPanel(): LocationPanelLogicReturn {
   const base = useEntityPanelBase();
   const [movementInput, setMovementInput] = useState('');
-  const [isMoving] = useState(false); // Future: implement travel logic
+  const [isMoving, setIsMoving] = useState(false);
   
   const createLocation = useLocationsStore(state => state.createLocation);
+  const getLocation = useLocationsStore(state => state.getLocation);
+  const getWorldDNA = useLocationsStore(state => state.getWorldDNA);
+  const startSpawn = useStore(state => state.startSpawn);
 
   const handleMove = useCallback(async () => {
-    // Movement logic - UI placeholder for future travel feature
-    console.log('[useLocationPanel] Movement input:', movementInput);
-    // TODO: Implement travel system
-  }, [movementInput]);
+    if (!movementInput.trim() || !base.activeChat) {
+      console.warn('[useLocationPanel] Cannot travel: missing input or location');
+      return;
+    }
+    
+    try {
+      setIsMoving(true);
+      
+      // Try to get saved location
+      let currentLocation = getLocation(base.activeChat);
+      let worldId: string;
+      
+      if (!currentLocation) {
+        // Location not saved yet - check if it's in chat session
+        if (!base.activeChatSession?.deepProfile) {
+          console.error('[useLocationPanel] No location data available. Please save the location first.');
+          return;
+        }
+        
+        // Get world_id from spawn info (for unsaved sub-locations)
+        const spawnInfo = useStore.getState().activeSpawns.get(base.activeChat);
+        if (spawnInfo?.parentLocationId) {
+          // This is an unsaved sub-location - get world_id from parent
+          const parentLocation = getLocation(spawnInfo.parentLocationId);
+          if (!parentLocation) {
+            console.error('[useLocationPanel] Parent location not found');
+            return;
+          }
+          worldId = parentLocation.world_id;
+        } else {
+          // This is an unsaved root location - use its own ID as world_id
+          worldId = base.activeChat;
+        }
+      } else {
+        // Location is saved - use its world_id
+        worldId = currentLocation.world_id;
+      }
+      
+      // Get World DNA from root location
+      const worldDNA = getWorldDNA(worldId);
+      
+      // Start sub-location spawn
+      await startSpawn(
+        movementInput.trim(),
+        'location',
+        base.activeChat, // Parent location ID (can be unsaved)
+        worldDNA
+      );
+      
+      // Clear input
+      setMovementInput('');
+      console.log('[useLocationPanel] Started sub-location spawn from:', base.activeChatSession?.entityName || 'current location');
+    } catch (error) {
+      console.error('[useLocationPanel] Failed to start travel:', error);
+    } finally {
+      setIsMoving(false);
+    }
+  }, [movementInput, base.activeChat, base.activeChatSession, getLocation, getWorldDNA, startSpawn]);
 
   const saveLocation = useCallback(() => {
     if (!base.activeChatSession || !base.activeChat) {
@@ -35,23 +93,53 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     // Split the deep profile into world and location data
     const { world, location } = splitWorldAndLocation(deepProfile as Record<string, any>);
     
-    // Create location in storage
-    createLocation({
-      id: base.activeChat, // Use spawnId as location ID
-      world_id: base.activeChat, // Use same ID for world
-      name: base.activeChatSession.entityName || 'Unnamed Location',
-      locationInfo: location,
-      worldInfo: world,
-      imagePath: base.activeChatSession.entityImage || '',
-      parent_location_id: null,
-      adjacent_to: [],
-      children: [],
-      depth_level: 0
-    });
+    // Check if this spawn was a sub-location
+    const spawnInfo = useStore.getState().activeSpawns.get(base.activeChat);
+    const isSubLocation = !!spawnInfo?.parentLocationId;
+    
+    if (isSubLocation && spawnInfo?.parentLocationId) {
+      // Sub-location: inherit world_id from parent, store empty worldInfo
+      const parentLocation = getLocation(spawnInfo.parentLocationId);
+      
+      if (!parentLocation) {
+        console.error('[useLocationPanel] Parent location not found');
+        return;
+      }
+      
+      createLocation({
+        id: base.activeChat,
+        world_id: parentLocation.world_id, // Inherit parent's world
+        name: base.activeChatSession.entityName || 'Unnamed Location',
+        locationInfo: location, // Only 5 location-specific fields
+        worldInfo: {}, // Empty - inherits from root location
+        imagePath: base.activeChatSession.entityImage || '',
+        parent_location_id: spawnInfo.parentLocationId,
+        adjacent_to: [],
+        children: [],
+        depth_level: (parentLocation.depth_level || 0) + 1
+      });
+      
+      console.log(`[useLocationPanel] Sub-location saved under parent: ${parentLocation.name}`);
+    } else {
+      // Root location: store full World DNA + Location Instance
+      createLocation({
+        id: base.activeChat,
+        world_id: base.activeChat, // Root location uses own ID as world_id
+        name: base.activeChatSession.entityName || 'Unnamed Location',
+        locationInfo: location,
+        worldInfo: world,
+        imagePath: base.activeChatSession.entityImage || '',
+        parent_location_id: null,
+        adjacent_to: [],
+        children: [],
+        depth_level: 0
+      });
+      
+      console.log(`[useLocationPanel] Root location saved with ID: ${base.activeChat}`);
+    }
     
     base.setIsSaved(true);
-    console.log(`[useLocationPanel] Location saved with ID: ${base.activeChat}`);
-  }, [base, createLocation]);
+  }, [base, createLocation, getLocation]);
 
   return {
     state: {

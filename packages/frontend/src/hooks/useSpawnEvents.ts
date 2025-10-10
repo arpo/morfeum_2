@@ -15,6 +15,7 @@ export function useSpawnEvents() {
   const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
   const updateSpawnStatus = useStore(state => state.updateSpawnStatus);
   const removeSpawn = useStore(state => state.removeSpawn);
+  const activeSpawns = useStore(state => state.activeSpawns);
 
   useEffect(() => {
     // Connect to SSE endpoint
@@ -87,13 +88,23 @@ export function useSpawnEvents() {
 
     // Listen for profile complete event
     eventSource.addEventListener('spawn:profile-complete', (e) => {
-      const { spawnId, deepProfile, enhancedSystemPrompt, entityType } = JSON.parse(e.data);
+      const { spawnId, deepProfile, enhancedSystemPrompt, entityType, isSubLocation } = JSON.parse(e.data);
+      
+      // Check if this is a sub-location by looking at activeSpawns
+      const spawnInfo = activeSpawns.get(spawnId);
+      const isActuallySubLocation = isSubLocation || !!spawnInfo?.parentLocationId;
       
       // Split deep profile into world and location parts (locations only)
       if (entityType === 'location') {
         const { world, location } = splitWorldAndLocation(deepProfile);
-        console.log('🌍 World DNA:', world);
-        console.log('📍 Location Instance:', location);
+        
+        if (isActuallySubLocation) {
+          console.log('�️ Sub-Location Generated (inherits World DNA from parent)');
+          console.log('📍 Location Instance Only:', location);
+        } else {
+          console.log('�🌍 Root Location - World DNA:', world);
+          console.log('📍 Location Instance:', location);
+        }
       }
       
       console.log('💬 Enhanced System Prompt Updated');

@@ -16,6 +16,11 @@ export function useEntityPanelBase() {
   // Get active chat session
   const activeChatSession = activeChat ? chats.get(activeChat) : null;
 
+  // Reset isSaved when switching to a different entity
+  useEffect(() => {
+    setIsSaved(false);
+  }, [activeChat]);
+
   const openModal = useCallback(() => {
     setIsModalOpen(true);
   }, []);

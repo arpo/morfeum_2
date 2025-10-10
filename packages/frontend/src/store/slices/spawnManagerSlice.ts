@@ -6,9 +6,19 @@
 import type { StateCreator } from 'zustand';
 
 export interface SpawnManagerSlice {
-  activeSpawns: Map<string, { prompt: string; status: string; entityType: 'character' | 'location' }>;
+  activeSpawns: Map<string, { 
+    prompt: string; 
+    status: string; 
+    entityType: 'character' | 'location';
+    parentLocationId?: string;
+  }>;
   
-  startSpawn: (prompt: string, entityType?: 'character' | 'location') => Promise<string>;
+  startSpawn: (
+    prompt: string, 
+    entityType?: 'character' | 'location',
+    parentLocationId?: string,
+    parentWorldDNA?: Record<string, any>
+  ) => Promise<string>;
   cancelSpawn: (spawnId: string) => Promise<void>;
   updateSpawnStatus: (spawnId: string, status: string) => void;
   removeSpawn: (spawnId: string) => void;
@@ -17,14 +27,27 @@ export interface SpawnManagerSlice {
 export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, get) => ({
   activeSpawns: new Map(),
 
-  startSpawn: async (prompt: string, entityType: 'character' | 'location' = 'character') => {
+  startSpawn: async (
+    prompt: string, 
+    entityType: 'character' | 'location' = 'character',
+    parentLocationId?: string,
+    parentWorldDNA?: Record<string, any>
+  ) => {
     try {
+      const body: any = { prompt, entityType };
+      
+      // Add sub-location parameters if provided
+      if (parentLocationId && parentWorldDNA) {
+        body.parentLocationId = parentLocationId;
+        body.parentWorldDNA = parentWorldDNA;
+      }
+      
       const response = await fetch('/api/spawn/start', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ prompt, entityType })
+        body: JSON.stringify(body)
       });
 
       if (!response.ok) {
@@ -37,11 +60,16 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
       // Add to active spawns
       set((state) => {
         const newSpawns = new Map(state.activeSpawns);
-        newSpawns.set(spawnId, { prompt, status: 'starting', entityType });
+        newSpawns.set(spawnId, { 
+          prompt, 
+          status: 'starting', 
+          entityType,
+          parentLocationId // Track parent for sub-locations
+        });
         return { activeSpawns: newSpawns };
       });
 
-      // console.log('[SpawnManager] Started spawn:', spawnId, 'type:', entityType);
+      console.log('[SpawnManager] Started spawn:', spawnId, 'type:', entityType, 'isSubLocation:', !!parentLocationId);
       return spawnId;
     } catch (error) {
       console.error('[SpawnManager] Failed to start spawn:', error);

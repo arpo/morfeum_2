@@ -95,4 +95,6 @@ export interface SpawnProcess {
   createdAt: number;
   abortController: AbortController;
   movementContext?: MovementContext;
+  parentLocationId?: string;
+  parentWorldDNA?: Record<string, any>;
 }

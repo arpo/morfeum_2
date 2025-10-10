@@ -23,6 +23,7 @@ Field hints:
   - Preserve the original text without modification
 
 - [name]: 
+  - If name is mentioned in the text, use that name
   - Come up with a memorable name for the location if not mentioned in the text
   - Use evocative, descriptive names that capture the essence
   - Examples: "The Whispering Archives", "Neon Sanctum", "Forgotten Shore"
