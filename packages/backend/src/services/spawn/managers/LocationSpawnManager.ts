@@ -50,7 +50,7 @@ export class LocationSpawnManager extends BasePipelineManager {
       seed.looks,
       seed.atmosphere,
       seed.mood,
-      'Landscape Overview'
+      'Cinematic Establishing Shot'
     );
 
     const result = await mzooService.generateImage(

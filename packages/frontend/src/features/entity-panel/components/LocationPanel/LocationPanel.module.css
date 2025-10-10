@@ -18,7 +18,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--color-bg-secondary);
+  background: #2a2a2a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,26 +26,23 @@
 }
 
 .skeletonBreathing {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     135deg,
-    var(--color-bg-tertiary) 0%,
-    var(--color-bg-secondary) 50%,
-    var(--color-bg-tertiary) 100%
+    #3a3a3a 0%,
+    #4a4a4a 50%,
+    #3a3a3a 100%
   );
-  border-radius: var(--radius-lg);
-  animation: breathing 2.5s ease-in-out infinite;
+  animation: pulsate 2s ease-in-out infinite;
 }
 
-@keyframes breathing {
+@keyframes pulsate {
   0%, 100% {
-    transform: scale(0.98);
-    opacity: 0.6;
+    opacity: 0.4;
   }
   50% {
-    transform: scale(1.02);
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 
@@ -73,6 +70,7 @@
   right: var(--spacing-sm);
   display: flex;
   gap: var(--spacing-xs);
+  z-index: 3;
 }
 
 .imageButton {

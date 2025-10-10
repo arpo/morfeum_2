@@ -17,6 +17,9 @@ export function CharacterPanel() {
   useEffect(() => {
     if (state.entityImage) {
       setImageLoading(true);
+    } else {
+      // If no image, keep showing skeleton
+      setImageLoading(true);
     }
   }, [state.entityImage]);
 
@@ -61,15 +64,16 @@ export function CharacterPanel() {
           </div>
         )}
         {state.entityImage && (
-          <>
-            <img 
-              src={state.entityImage} 
-              alt={state.entityName || 'Character'}
-              className={styles.characterHeaderImage}
-              onLoad={() => setImageLoading(false)}
-              style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease-in' }}
-            />
-            <div className={styles.imageButtons}>
+          <img 
+            src={state.entityImage} 
+            alt={state.entityName || 'Character'}
+            className={styles.characterHeaderImage}
+            onLoad={() => setImageLoading(false)}
+            style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease-in' }}
+          />
+        )}
+        {state.entityImage && (
+          <div className={styles.imageButtons}>
             <button 
               className={styles.imageButton}
               onClick={handlers.openFullscreen}
@@ -93,8 +97,7 @@ export function CharacterPanel() {
             >
               <IconDeviceFloppy size={20} />
             </button>
-            </div>
-          </>
+          </div>
         )}
       </div>
       
