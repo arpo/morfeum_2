@@ -74,6 +74,78 @@ export class LocationSpawnManager extends BasePipelineManager {
     return { imageUrl, imagePrompt };
   }
 
+  /**
+   * Generate image for sub-location with World DNA aesthetic guidance
+   * Ensures generated image matches parent world's aesthetic while respecting the specific sub-location request
+   */
+  async generateImageForSubLocation(
+    seed: LocationSeed,
+    parentWorldDNA: Record<string, any>,
+    signal: AbortSignal
+  ): Promise<ImageResult> {
+    // Build World DNA aesthetic guidance section
+    const worldAesthetic = `
+WORLD AESTHETIC (apply these qualities to the scene):
+Genre/Style: ${parentWorldDNA.genre}
+Architecture Style: ${parentWorldDNA.architecture}
+Material Palette: ${parentWorldDNA.materials}
+Lighting Style: ${parentWorldDNA.colorsAndLighting}
+Atmospheric Quality: ${parentWorldDNA.atmosphere}
+Flora Characteristics: ${parentWorldDNA.flora}
+Fauna Characteristics: ${parentWorldDNA.fauna}`.trim();
+
+    // Enhanced prompt with World DNA
+    const { morfeumVibes, qualityPrompt } = await import('../../../prompts/languages/en/constants');
+    const { getFluxFilter, getDefaultFluxFilter } = await import('../../../prompts/languages/en/fluxFilters');
+    
+    const filter = getFluxFilter('Cinematic Establishing Shot') || getDefaultFluxFilter();
+    const filterText = filter?.text || getDefaultFluxFilter().text;
+
+    const imagePrompt = `${morfeumVibes}
+
+${seed.name}, ${filterText}.
+
+PRIMARY SUBJECT (what to depict):
+Original user request: "${seed.originalPrompt || ''}"
+Visual description: ${seed.looks}
+Mood: ${seed.mood}
+
+${worldAesthetic}
+
+Guidelines:
+- DEPICT the specific location requested by the user (${seed.originalPrompt || 'as described'})
+- APPLY the world's aesthetic qualities listed above (genre, architecture style, materials, lighting, atmosphere)
+- The world aesthetic defines HOW things look, not WHAT you depict
+- Example: If user asks for "a bar" in a cyberpunk world → depict a bar WITH cyberpunk aesthetic
+- Focus on the location itself, avoid including people or animals if not specified
+- Ensure the scene matches the world's visual style while being the requested location
+
+IMPORTANT:
+- If water is present, depict it as calm and still if nothing else is specified
+- Don't add a figure or person unless explicitly mentioned in the original prompt
+
+${qualityPrompt}`;
+
+    const result = await mzooService.generateImage(
+      this.mzooApiKey,
+      imagePrompt,
+      1,
+      'landscape_16_9',
+      'none'
+    );
+
+    if (result.error) {
+      throw new Error(result.error);
+    }
+
+    const imageUrl = result.data?.images?.[0]?.url;
+    if (!imageUrl) {
+      throw new Error('Image URL not found in response');
+    }
+
+    return { imageUrl, imagePrompt };
+  }
+
   async analyzeImage(
     imageUrl: string,
     seed: LocationSeed,
@@ -136,40 +208,46 @@ export class LocationSpawnManager extends BasePipelineManager {
     return parseJSON(result.data.text);
   }
 
+  /**
+   * Enrich profile for sub-location using World DNA lock approach
+   * - Runs FULL enrichment (15 fields) for coherence
+   * - Replaces 10 World DNA fields with parent's exact values (prevents drift)
+   * - Returns complete profile with 5 fresh location fields + 10 inherited World DNA fields
+   */
   async enrichProfileForSubLocation(
     seed: LocationSeed,
     visualAnalysis: LocationVisualAnalysis,
     parentWorldDNA: Record<string, any>,
     signal: AbortSignal
-  ): Promise<Partial<LocationDeepProfile>> {
-    const seedJson = JSON.stringify(seed, null, 2);
-    const visionJson = JSON.stringify(visualAnalysis, null, 2);
-    const originalPrompt = seed.originalPrompt || 'No specific request provided';
-    const worldDNAJson = JSON.stringify(parentWorldDNA, null, 2);
+  ): Promise<LocationDeepProfile> {
+    // Step 1: Run FULL enrichment (AI generates all 15 fields)
+    const fullProfile = await this.enrichProfile(seed, visualAnalysis, signal);
 
-    const enrichmentPrompt = getPrompt('subLocationDeepProfileEnrichment', 'en')(
-      seedJson,
-      visionJson,
-      originalPrompt,
-      worldDNAJson
-    );
-
-    const messages = [
-      { role: 'system', content: enrichmentPrompt },
-      { role: 'user', content: 'Generate the sub-location profile based on the provided data.' }
+    // Step 2: Lock World DNA - replace AI's 10 World DNA fields with parent's exact values
+    const WORLD_DNA_KEYS = [
+      'colorsAndLighting',
+      'atmosphere',
+      'flora',
+      'fauna',
+      'architecture',
+      'materials',
+      'genre',
+      'symbolicThemes',
+      'fictional',
+      'copyright'
     ];
 
-    const result = await mzooService.generateText(
-      this.mzooApiKey,
-      messages,
-      AI_MODELS.PROFILE_ENRICHMENT
-    );
+    // Overwrite World DNA fields with parent's values (zero drift guarantee)
+    WORLD_DNA_KEYS.forEach(key => {
+      if (key in parentWorldDNA) {
+        (fullProfile as any)[key] = parentWorldDNA[key];
+      }
+    });
 
-    if (result.error) {
-      throw new Error(result.error);
-    }
-
-    return parseJSON(result.data.text);
+    // Return complete profile:
+    // - 5 location-specific fields (name, looks, mood, sounds, airParticles) from AI
+    // - 10 World DNA fields from parent (locked, no interpretation)
+    return fullProfile;
   }
 
   /**
@@ -215,9 +293,10 @@ export class LocationSpawnManager extends BasePipelineManager {
         data: { spawnId, seed, systemPrompt: '', entityType: 'location' }
       });
 
-      // Stage 2: Generate Image (same as root location)
-      const { imageUrl, imagePrompt } = await this.generateImage(
+      // Stage 2: Generate Image WITH World DNA constraints
+      const { imageUrl, imagePrompt } = await this.generateImageForSubLocation(
         seed,
+        parentWorldDNA,
         abortController.signal
       );
       if (abortController.signal.aborted) return;
