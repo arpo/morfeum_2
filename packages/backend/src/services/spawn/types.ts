@@ -50,6 +50,11 @@ export interface DeepProfile {
 
 export interface LocationSeed {
   originalPrompt?: string;
+  classification?: {
+    primarySubject: 'world' | 'region' | 'location' | 'sublocation';
+    targetName: string;
+    context?: string;
+  };
   name: string;
   looks: string;
   atmosphere: string;

@@ -9,6 +9,11 @@ Generate a concise, visually focused location seed based on the description belo
 Return ONLY valid JSON with these exact fields:
 {
   "originalPrompt": "...",
+  "classification": {
+    "primarySubject": "world|region|location|sublocation",
+    "targetName": "...",
+    "context": "..."  // optional, parent context if applicable
+  },
   "name": "...",
   "looks": "...",
   "atmosphere": "...",
@@ -24,6 +29,23 @@ Field hints:
 
 - [originalPrompt]:
   - Echo the exact user text, unchanged.
+
+- [classification]:
+  - Analyze the user's PRIMARY INTENT:
+    • primarySubject: What is the user asking you to CREATE?
+      → "world" if it's a comprehensive city/realm description (even if it mentions specific locations)
+      → "region" if it's a district/neighborhood within a larger area
+      → "location" if it's explicitly requesting a specific structure/building (e.g., "Botanical Dome", "lighthouse")
+      → "sublocation" if it's explicitly requesting a space INSIDE a structure (e.g., "bar in the dome", "VIP room")
+    • targetName: The name of what they're asking you to create
+    • context: Optional parent context (e.g., if asking for "Botanical Dome in Metropolis", context = "Metropolis")
+  
+  - KEY RULE: If the user provides a long, comprehensive description of a city/world, classify it as "world" even if specific locations are mentioned within the description.
+  - Examples:
+    • "Metropolis [long description mentioning Botanical Dome]" → primarySubject: "world", targetName: "Metropolis"
+    • "Botanical Dome in Metropolis" → primarySubject: "location", targetName: "Botanical Dome", context: "Metropolis"
+    • "VIP room in a club in Berlin" → primarySubject: "sublocation", targetName: "VIP room", context: "club in Berlin"
+    • "A cliffside monastery" → primarySubject: "location", targetName: "[generated name]"
 
 - [name]:
   - Use any name mentioned, or invent a short, memorable one.
