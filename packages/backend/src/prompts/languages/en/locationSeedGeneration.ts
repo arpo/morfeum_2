@@ -2,59 +2,65 @@
  * Location seed generation prompt
  */
 
-export const locationSeedGeneration = (textPrompt: string) => `Generate a concise, visually focused location seed based on the description below.
+export const locationSeedGeneration = (textPrompt: string) => `
 
-Return only valid JSON with these exact fields:
+Generate a concise, visually focused location seed based on the description below.
+
+Return ONLY valid JSON with these exact fields:
 {
   "originalPrompt": "...",
   "name": "...",
   "looks": "...",
   "atmosphere": "...",
-  "mood": "..."
+  "mood": "...",
+  "renderInstructions": "..."   // camera geometry only
 }
 
 Core rule:
-- Favor striking, image-ready details over realism. If something sounds even slightly unreal, show it clearly.
+- Favor clear, image-ready details over realism.
+- The "renderInstructions" field must describe camera placement, angle, offset, and height only — no lighting or mood.
 
 Field hints:
 
 - [originalPrompt]:
-  - Echo back the exact original user description provided in the input
-  - Preserve the original text without modification
+  - Echo the exact user text, unchanged.
 
-- [name]: 
-  - If name is mentioned in the text, use that name
-  - Come up with a memorable name for the location if not mentioned in the text
-  - Use evocative, descriptive names that capture the essence
-  - Examples: "The Whispering Archives", "Neon Sanctum", "Forgotten Shore"
+- [name]:
+  - Use any name mentioned, or invent a short, memorable one.
+  - Examples: "The Whispering Archives", "Neon Sanctum", "Forgotten Shore".
 
 - [looks]:
-  - Describe the location's visible, physical traits — what a lens would capture
-  - Include nature, architecture, vegetation, structures, materials, and unique features
-  - Describe spatial layout, scale, and distinctive visual elements
-  - Mention textures, surfaces, and how light interacts with the environment
-  - Keep it visual and concrete — no emotions, no metaphors
-  - Short, image-ready description
+  - Describe visible geometry, layout, and scale — what a lens would capture.
+  - Mention key shapes, surfaces, and spatial focus.
+  - Keep it visual and concrete; avoid emotion or metaphor.
 
-- [atmosphere]: 
-  - Detailed description of the atmospheric qualities
-  - Include color and quality of ambient lights (natural, artificial, magical)
-  - Describe fog, mist, haze, air particles, dust, or clarity
-  - Mention temperature sensations (warm, cold, humid, dry)
-  - Note any environmental effects (wind, stillness, pressure)
-  - Describe overall luminosity and color palette
+- [atmosphere]:
+  - Describe air and motion: still, windy, hazy, clear.
+  - Add temperature or humidity only if distinctive.
 
-- [mood]: 
-  - Describe the emotional temperature of the space
-  - Examples: tense, relaxed, romantic, melancholic, mysterious, energetic, serene
-  - What emotions would someone feel upon entering this space?
-  - Keep it concise but evocative
+- [mood]:
+  - Concise emotional tone a visitor would feel (tense, serene, lonely, electric).
 
-IMPORTANT:
-If details are missing, invent them to create a vivid, image-ready location.
+- [renderInstructions]:
+  - One short sentence describing camera geometry only:
+    • position (close / medium / wide / overhead)
+    • angle (aerial view / high / tilted)
+    • offset or symmetry (centered / left / right / diagonal / asymmetrical)
+    • relative height (ground / human-eye / elevated / aerial)
+  - Do **not** include lighting, color, or mood — those are handled globally.
+  - Examples:
+    • "wide shot, slight right offset, aerial view"
+    • "medium framing, overhead tilt, centered composition"
+    • "close-up, ground-level, diagonal offset"
+    • "Drone shot, high angle, centered"
+    • "Cinematic view, balanced composition"
 
-Do not include any markdown formatting, code blocks, or explanatory text.
+If details are missing, infer cinematic defaults.
+
+Do NOT include markdown, code blocks, or commentary.
 Return only the JSON object.
 
 Input description:
-${textPrompt}`;
+${textPrompt}
+
+`;

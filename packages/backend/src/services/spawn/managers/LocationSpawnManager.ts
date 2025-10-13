@@ -51,7 +51,7 @@ export class LocationSpawnManager extends BasePipelineManager {
       seed.looks,
       seed.atmosphere,
       seed.mood,
-      'Cinematic Establishing Shot'
+      seed.renderInstructions
     );
 
     const result = await mzooService.generateImage(
@@ -96,14 +96,13 @@ Fauna Characteristics: ${parentWorldDNA.fauna}`.trim();
 
     // Enhanced prompt with World DNA
     const { morfeumVibes, qualityPrompt } = await import('../../../prompts/languages/en/constants');
-    const { getFluxFilter, getDefaultFluxFilter } = await import('../../../prompts/languages/en/fluxFilters');
     
-    const filter = getFluxFilter('Cinematic Establishing Shot') || getDefaultFluxFilter();
-    const filterText = filter?.text || getDefaultFluxFilter().text;
+    // Use renderInstructions from seed
+    const renderDirective = seed.renderInstructions || 'cinematic view, balanced composition, natural lighting';
 
     const imagePrompt = `${morfeumVibes}
 
-${seed.name}, ${filterText}.
+${seed.name}, ${renderDirective}.
 
 PRIMARY SUBJECT (what to depict):
 Original user request: "${seed.originalPrompt || ''}"

@@ -4,7 +4,6 @@
  */
 // Original user description: "${originalPrompt}"
 import { morfeumVibes, qualityPrompt } from './constants';
-import { getFluxFilter, getDefaultFluxFilter } from './fluxFilters';
 
 export const locationImageGeneration = (
   originalPrompt: string,
@@ -12,14 +11,14 @@ export const locationImageGeneration = (
   looks: string,
   atmosphere: string,
   mood?: string,
-  filterName?: string
+  renderInstructions?: string
 ) => {
-  const filter = filterName ? getFluxFilter(filterName) : getDefaultFluxFilter();
-  const filterText = filter?.text || getDefaultFluxFilter().text;
+  // Use renderInstructions from seed, or fallback to default
+  const renderDirective = renderInstructions || 'cinematic view, balanced composition, natural lighting';
 
   return `${morfeumVibes}
 
-${name}, ${filterText}.
+${name}, ${renderDirective}.
 
 Original user description: "${originalPrompt}"
 

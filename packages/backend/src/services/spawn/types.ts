@@ -54,6 +54,7 @@ export interface LocationSeed {
   looks: string;
   atmosphere: string;
   mood: string;
+  renderInstructions: string;
 }
 
 // Hierarchical location DNA types
