@@ -21,18 +21,22 @@ export const generateNewWorldDNA = (
   originalPrompt: string
 ) => `
 
-You are Morfeum's world architect AI. Create a NEW fictional world from scratch.
-Merge the user's request, the seed, and the visual analysis into a coherent, layered DNA.
+You are Morfeum's world architect AI. Interpret and formalize the user's description into structured DNA.
 
-Depth rules (minimal set):
-- Always create a WORLD node.
-- If the text implies a broader zone (district/city/shoreline), add a REGION.
-- If it describes a specific site, add a LOCATION.
-- If it clearly describes an interior or tight pocket, add a SUBLOCATION.
-- Interior rule: if the text places the user inside a space that belongs to a larger structure (e.g., "inner sanctum of the monastery", "control room in the ship", "VIP room in a club"),
-  emit BOTH the enclosing LOCATION and the SUBLOCATION.
+SCOPE GUARD (classifier first, then build):
+- Classify input scope as one of: "world" | "region" | "location" | "sublocation".
+- If scope = world (city/realm/planet language), OUTPUT only WORLD (and REGION if clearly implied). DO NOT create a LOCATION unless the text explicitly names a site (e.g., "promenade", "old town square", "skybridge hub", "marina", "museum").
+- If scope = region, OUTPUT WORLD + REGION.
+- If scope = location, OUTPUT WORLD + (REGION if implied) + LOCATION.
+- If scope = sublocation, OUTPUT WORLD + (REGION if implied) + LOCATION + SUBLOCATION.
+- Interior rule: when the text places the user inside a space that belongs to a larger site ("inner sanctum of the monastery", "VIP room in a club"), emit BOTH the enclosing LOCATION and the SUBLOCATION.
 
-Camera-only render (short, keyword style):
+NAME DISCIPLINE:
+- Preserve user-given proper names exactly (e.g., "Metropolis").
+- Do NOT invent brand-like names. If a node is unnamed, use a descriptive label from the text (e.g., "waterfront district", "old town district", "waterfront promenade", "skybridge network", "floating marinas", "archipelago islands").
+- Never use generic adjectives as names (e.g., avoid "sprawling coastal metropolis" as a location name). Use a label that denotes a place type from the text.
+
+CAMERA-ONLY RENDER (concise keywords):
 - Each node's "render" contains ONLY:
   {
     "camera": {
@@ -44,13 +48,18 @@ Camera-only render (short, keyword style):
       "depth_cues": "optional (foreground framing|layered depth|leading lines|vanishing point)"
     }
   }
-- No lighting, style, or mood in render.
+- No lighting, color, style, or mood in render.
+
+SUGGESTED DESTINATIONS (no invented names):
+- 3–5 items on the deepest node created.
+- Labels must be descriptive and derived from the input lexicon (e.g., "waterfront promenade", "old town district", "skybridge network", "floating marinas", "archipelago islands", "art museum district").
+- Keep labels lowercase, ≤3 words. No brand-new toponyms.
 
 Return JSON ONLY in this structure:
 
 {
   "world": {
-    "meta": { "name": "string" },
+    "meta": { "name": "string" },               // preserve user-provided name if given
     "semantic": {
       "environment": "e.g., coastal megacity | haunted archipelago | desert moon",
       "dominant_materials": ["string", "string"],
@@ -61,18 +70,16 @@ Return JSON ONLY in this structure:
       "palette_bias": ["global color tendencies"],
       "physics": "normal | stylized | magical"
     },
-    "spatial": {
-      "orientation": { "light_behavior": "e.g., perpetual golden hour | twin moons | overcast bias" }
-    },
-    "render": { "camera": { /* camera-only, per spec above */ } },
+    "spatial": { "orientation": { "light_behavior": "e.g., perpetual golden hour | twin moons | overcast bias" } },
+    "render": { "camera": { /* camera-only as above */ } },
     "profile": {
       "colorsAndLighting": "1–3 sentences (global palette & light; descriptive text only)",
       "symbolicThemes": "short phrase/sentence (world-level)"
     }
   },
 
-  "region": {                      // include ONLY if implied
-    "meta": { "name": "string" },
+  "region": {                                   // include ONLY if implied
+    "meta": { "name": "string" },               // descriptive if unnamed (e.g., "waterfront district")
     "semantic": {
       "environment": "e.g., fogbound coast, art-deco downtown",
       "climate": "e.g., oceanic mist, arid breeze",
@@ -86,8 +93,8 @@ Return JSON ONLY in this structure:
     "profile": { "colorsAndLighting": "1–2 sentences", "symbolicThemes": "short phrase" }
   },
 
-  "location": {                    // include if a site is described
-    "meta": { "name": "string" },
+  "location": {                                  // include ONLY if an explicit site is named
+    "meta": { "name": "string" },                // descriptive if unnamed (e.g., "waterfront promenade")
     "semantic": {
       "environment": "natural | built | mixed",
       "terrain_or_interior": "terrain or overall interior type",
@@ -95,7 +102,7 @@ Return JSON ONLY in this structure:
         { "type": "string", "material": "string", "color": "string", "condition": "string" }
       ],
       "vegetation": { "types": ["string"], "density": "sparse | moderate | lush" },
-      "fauna": { "types": ["string"], "presence": "none | rare | common" },
+      "fauna": { "types": [], "presence": "none | rare | common" },
       "time_of_day": "night | dusk | dawn | day | inherited",
       "lighting": "concise local lighting behavior (text only)",
       "weather_or_air": "mist | dry heat | sea spray | indoor haze",
@@ -115,11 +122,11 @@ Return JSON ONLY in this structure:
         "light_source_direction": "N|NE|E|SE|S|SW|W|NW",
         "prevailing_wind_or_flow": "short phrase"
       },
-      "connectivity": { "links_to": ["plausible node names if any"] }
+      "connectivity": { "links_to": ["descriptive labels only (no proper nouns)"] }
     },
     "render": { "camera": { /* camera-only */ } },
     "profile": {
-      "looks": "4–6 sentences (geometry, dominant forms, materials, scale, light interaction)",
+      "looks": "4–6 sentences",
       "colorsAndLighting": "1–3 sentences",
       "atmosphere": "3–5 sentences",
       "materials": "1–3 sentences",
@@ -135,8 +142,8 @@ Return JSON ONLY in this structure:
     ]
   },
 
-  "sublocation": {                 // include if interior/tight pocket OR by interior rule
-    "meta": { "name": "string" },
+  "sublocation": {                               // include if interior or by interior rule
+    "meta": { "name": "string" },                // descriptive if unnamed (e.g., "beacon room")
     "semantic": {
       "environment": "interior type",
       "terrain_or_interior": "room/hall/stairwell/etc.",
@@ -144,7 +151,7 @@ Return JSON ONLY in this structure:
         { "type": "fixture/furniture/machinery", "material": "string", "color": "string", "condition": "string" }
       ],
       "vegetation": { "types": ["string"], "density": "none|sparse|incidental" },
-      "fauna": { "types": ["string"], "presence": "none|rare|ambient" },
+      "fauna": { "types": [], "presence": "none | rare | ambient" },
       "time_of_day": "inherited unless windowed",
       "lighting": "interior lighting (text only)",
       "weather_or_air": "indoor haze | dust | salt damp",
@@ -157,11 +164,11 @@ Return JSON ONLY in this structure:
       "scale": { "ceiling_height_m": null, "room_length_m": null, "room_width_m": null },
       "placement": { "key_subject_position": "e.g., altar at far end", "camera_anchor": "e.g., entry threshold, eye-level" },
       "orientation": { "dominant_view_axis": "e.g., axial aisle | spiral stair" },
-      "connectivity": { "links_to": ["return to location", "adjacent room hint"] }
+      "connectivity": { "links_to": ["return to location", "adjacent room"] }
     },
     "render": { "camera": { /* camera-only */ } },
     "profile": {
-      "looks": "3–5 sentences (interior geometry, focal fixtures, light-play)",
+      "looks": "3–5 sentences",
       "colorsAndLighting": "1–2 sentences",
       "atmosphere": "2–3 sentences",
       "materials": "1–2 sentences",
@@ -178,13 +185,14 @@ Return JSON ONLY in this structure:
   }
 }
 
-Strict rules:
+STRICT:
 - JSON ONLY; no commentary or markdown.
+- Preserve user-provided names; do not invent proper nouns.
+- Scope guard: if input is world-scale, do NOT output a location unless a specific site is explicitly named.
+- Suggested destinations: descriptive labels only, derived from user text; no new toponyms.
 - Maintain continuity with seed + vision; if missing, pick ONE consistent value.
-- Soundscape ONLY at location/sublocation (never world/region).
-- Provide numeric scale where reasonable (m); else null.
-- Camera-only render everywhere (no lighting/style/mood).
-- Suggested destinations: 3–5 total on the deepest node created.
+- Soundscape only at location/sublocation. Numeric scale reasonable or null.
+- Camera-only render everywhere.
 
 User request:
 ${originalPrompt}
@@ -194,5 +202,4 @@ ${seedJson}
 
 Visual analysis:
 ${visionJson}
-
 `;
