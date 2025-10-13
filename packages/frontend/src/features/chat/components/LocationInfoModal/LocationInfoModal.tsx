@@ -10,12 +10,15 @@ const renderArray = (arr: any[] | undefined) => {
   return arr.join(', ');
 };
 
-// Helper to render object values
-const renderObject = (obj: any) => {
-  if (!obj) return 'N/A';
-  return Object.entries(obj)
-    .map(([key, value]) => `${key}: ${value}`)
-    .join(' | ');
+// Helper to render any value (string, number, object, etc.)
+const renderValue = (value: any) => {
+  if (value === null || value === undefined) return 'N/A';
+  if (typeof value === 'object' && !Array.isArray(value)) {
+    return Object.entries(value)
+      .map(([key, val]) => `${key}: ${val}`)
+      .join(' | ');
+  }
+  return String(value);
 };
 
 export function LocationInfoModal(props: LocationInfoModalProps) {
@@ -381,23 +384,23 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   <h4 className={styles.subsectionTitle}>Render</h4>
                   <div className={styles.field}>
                     <label className={styles.label}>Style</label>
-                    <p className={styles.value}>{profile.location.render.style || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.location.render.style)}</p>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Camera</label>
-                    <p className={styles.value}>{profile.location.render.camera || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.location.render.camera)}</p>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Composition</label>
-                    <p className={styles.value}>{profile.location.render.composition || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.location.render.composition)}</p>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Lighting Profile</label>
-                    <p className={styles.value}>{profile.location.render.lighting_profile || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.location.render.lighting_profile)}</p>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Seed</label>
-                    <p className={styles.value}>{profile.location.render.seed || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.location.render.seed)}</p>
                   </div>
                 </div>
               )}
@@ -592,23 +595,23 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   <h4 className={styles.subsectionTitle}>Render</h4>
                   <div className={styles.field}>
                     <label className={styles.label}>Style</label>
-                    <p className={styles.value}>{profile.sublocation.render.style || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.sublocation.render.style)}</p>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Camera</label>
-                    <p className={styles.value}>{profile.sublocation.render.camera || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.sublocation.render.camera)}</p>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Composition</label>
-                    <p className={styles.value}>{profile.sublocation.render.composition || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.sublocation.render.composition)}</p>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Lighting Profile</label>
-                    <p className={styles.value}>{profile.sublocation.render.lighting_profile || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.sublocation.render.lighting_profile)}</p>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Seed</label>
-                    <p className={styles.value}>{profile.sublocation.render.seed || 'N/A'}</p>
+                    <p className={styles.value}>{renderValue(profile.sublocation.render.seed)}</p>
                   </div>
                 </div>
               )}
