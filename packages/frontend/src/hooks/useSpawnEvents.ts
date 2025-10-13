@@ -30,8 +30,8 @@ export function useSpawnEvents() {
     // Listen for seed complete event
     eventSource.addEventListener('spawn:seed-complete', (e) => {
       const { spawnId, seed, systemPrompt } = JSON.parse(e.data);
-      // console.log('🌱 Seed Generated:', seed);
-      // console.log('💬 Initial System Prompt:', systemPrompt);
+      console.log('🌱 Seed Generated:', seed);
+      console.log('💬 Initial System Prompt:', systemPrompt);
       
       // Detect entity type from seed structure
       // Locations have 'atmosphere', characters have 'personality' as discriminator
