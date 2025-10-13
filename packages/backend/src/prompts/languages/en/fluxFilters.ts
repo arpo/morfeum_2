@@ -67,7 +67,7 @@ export const fluxFilters: Record<string, FluxFilter> = {
   },
   "Half Portrait": {
     name: "Half Portrait",
-    text: "subject looking at the camera. Face in sharp focus, natural lighting, soft background blur (bokeh), balanced composition emphasizing eyes and expression.",
+    text: "subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture.",
     description: "Shows both personality and attire; keeps intimacy while revealing environment tone."
   },
   "Landscape Overview": {

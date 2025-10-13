@@ -24,46 +24,33 @@ export const generateNewWorldDNA = (
 You are Morfeum's world architect AI. Create a NEW fictional world from scratch.
 Merge the user's request, the seed, and the visual analysis into a coherent, layered DNA.
 
-Depth rules:
-- Always create a WORLD node (global constants).
-- If the request implies a broad area (district/city/shoreline), add a REGION node.
-- If it describes a specific site, add a LOCATION node.
-- If it clearly describes being inside or a tight interior, add a SUBLOCATION node.
-- IMPORTANT: If the description places the user inside a space that belongs to a larger structure (e.g., "inner sanctum of the cliffside monastery", "control room inside the ship", "VIP room in a club"),
-  then create BOTH the enclosing LOCATION (the larger site) AND a SUBLOCATION (the interior pocket).
-- Produce the MINIMAL set of nodes needed to place the user exactly where they asked to be.
+Depth rules (minimal set):
+- Always create a WORLD node.
+- If the text implies a broader zone (district/city/shoreline), add a REGION.
+- If it describes a specific site, add a LOCATION.
+- If it clearly describes an interior or tight pocket, add a SUBLOCATION.
+- Interior rule: if the text places the user inside a space that belongs to a larger structure (e.g., "inner sanctum of the monastery", "control room in the ship", "VIP room in a club"),
+  emit BOTH the enclosing LOCATION and the SUBLOCATION.
 
-Camera-only render policy:
-- The "render" section may contain ONLY camera geometry. No lighting, color, style, or mood.
-- Camera grammar:
-  • framing_distance: close | medium | wide | establishing | panoramic
-  • angle: low | high | tilted | oblique | top-down
-  • composition_bias: centered | left | right | diagonal | asymmetrical | off-balance
-  • height: ground-level | eye-level | elevated | aerial
-  • perspective: optional, e.g., first-person | isometric | three-quarter
-  • depth_cues: optional, e.g., foreground framing | layered depth | leading lines | vanishing point
-- Keep it to short phrases; no prose.
+Camera-only render (short, keyword style):
+- Each node's "render" contains ONLY:
+  {
+    "camera": {
+      "framing_distance": "close|medium|wide|establishing|panoramic",
+      "angle": "low|high|tilted|oblique|top-down",
+      "composition_bias": "centered|left|right|diagonal|asymmetrical|off-balance",
+      "height": "ground-level|eye-level|elevated|aerial",
+      "perspective": "optional (first-person|isometric|three-quarter)",
+      "depth_cues": "optional (foreground framing|layered depth|leading lines|vanishing point)"
+    }
+  }
+- No lighting, style, or mood in render.
 
-Reference camera phrasing (examples only; do not copy verbatim):
-- "wide landscape shot, low vantage, diagonal composition with strong leading lines"
-- "aerial 45° oblique view, layered terrain with sweeping diagonal layout"
-- "elevated perspective, centered vanishing point, receding depth through valley"
-- "ground-level framing, slight upward tilt, asymmetrical composition with foreground foliage"
-- "interior wide shot, low angle, right offset through doorway framing"
-- "panoramic view, gentle horizon curve, balanced asymmetry"
-- "medium-wide interior view, diagonal depth through repeating columns"
-- "drone shot, angled 30° down, dynamic layout with crossing lines"
-- "wide establishing frame, off-center balance, layered architecture depth"
-- "low three-quarter angle, diagonal layout guiding eye through midground"
-
-Return JSON ONLY in this exact structure:
+Return JSON ONLY in this structure:
 
 {
   "world": {
-    "meta": {
-      "name": "string",
-      "slug": "world_slug"
-    },
+    "meta": { "name": "string" },
     "semantic": {
       "environment": "e.g., coastal megacity | haunted archipelago | desert moon",
       "dominant_materials": ["string", "string"],
@@ -77,24 +64,15 @@ Return JSON ONLY in this exact structure:
     "spatial": {
       "orientation": { "light_behavior": "e.g., perpetual golden hour | twin moons | overcast bias" }
     },
-    "render": {                      // CAMERA ONLY
-      "camera": {
-        "framing_distance": "wide | establishing | ...",
-        "angle": "low | high | tilted | oblique | top-down",
-        "composition_bias": "centered | left | right | diagonal | asymmetrical | off-balance",
-        "height": "ground-level | eye-level | elevated | aerial",
-        "perspective": "optional",
-        "depth_cues": "optional"
-      }
-    },
+    "render": { "camera": { /* camera-only, per spec above */ } },
     "profile": {
       "colorsAndLighting": "1–3 sentences (global palette & light; descriptive text only)",
       "symbolicThemes": "short phrase/sentence (world-level)"
     }
   },
 
-  "region": {                       // include ONLY if implied by text
-    "meta": { "name": "string", "slug": "region_slug" },
+  "region": {                      // include ONLY if implied
+    "meta": { "name": "string" },
     "semantic": {
       "environment": "e.g., fogbound coast, art-deco downtown",
       "climate": "e.g., oceanic mist, arid breeze",
@@ -103,27 +81,13 @@ Return JSON ONLY in this exact structure:
       "mood": "regional emotional tone",
       "palette_shift": ["regional color slant"]
     },
-    "spatial": {
-      "orientation": { "dominant_view_axis": "shoreline sweep | canyon corridor" }
-    },
-    "render": {                      // CAMERA ONLY
-      "camera": {
-        "framing_distance": "…",
-        "angle": "…",
-        "composition_bias": "…",
-        "height": "…",
-        "perspective": "optional",
-        "depth_cues": "optional"
-      }
-    },
-    "profile": {
-      "colorsAndLighting": "1–2 sentences",
-      "symbolicThemes": "short phrase"
-    }
+    "spatial": { "orientation": { "dominant_view_axis": "shoreline sweep | canyon corridor" } },
+    "render": { "camera": { /* camera-only */ } },
+    "profile": { "colorsAndLighting": "1–2 sentences", "symbolicThemes": "short phrase" }
   },
 
-  "location": {                     // include if the request names a site
-    "meta": { "name": "string", "slug": "location_slug" },
+  "location": {                    // include if a site is described
+    "meta": { "name": "string" },
     "semantic": {
       "environment": "natural | built | mixed",
       "terrain_or_interior": "terrain or overall interior type",
@@ -151,37 +115,28 @@ Return JSON ONLY in this exact structure:
         "light_source_direction": "N|NE|E|SE|S|SW|W|NW",
         "prevailing_wind_or_flow": "short phrase"
       },
-      "connectivity": { "links_to": ["plausible node slugs if any"] }
+      "connectivity": { "links_to": ["plausible node names if any"] }
     },
-    "render": {                      // CAMERA ONLY
-      "camera": {
-        "framing_distance": "close | medium | wide | establishing | panoramic",
-        "angle": "low | high | tilted | oblique | top-down",
-        "composition_bias": "centered | left | right | diagonal | asymmetrical | off-balance",
-        "height": "ground-level | eye-level | elevated | aerial",
-        "perspective": "optional",
-        "depth_cues": "optional (e.g., foreground framing | layered depth | leading lines | vanishing point)"
-      }
-    },
+    "render": { "camera": { /* camera-only */ } },
     "profile": {
       "looks": "4–6 sentences (geometry, dominant forms, materials, scale, light interaction)",
-      "colorsAndLighting": "1–3 sentences (palette & light behavior)",
-      "atmosphere": "3–5 sentences (sensory field, motion, clarity/haze)",
-      "materials": "1–3 sentences (textures, reflectivity, condition)",
-      "mood": "2–3 sentences (emotional read)",
-      "sounds": "3–7 words (ambient soundscape)",
+      "colorsAndLighting": "1–3 sentences",
+      "atmosphere": "3–5 sentences",
+      "materials": "1–3 sentences",
+      "mood": "2–3 sentences",
+      "sounds": "3–7 words",
       "symbolicThemes": "1–2 sentences or short phrase",
       "airParticles": "1–2 sentences or 'None'",
       "fictional": true,
       "copyright": false
     },
     "suggestedDestinations": [
-      { "name": "string", "action": "string", "relation": "sublocation|nearby|adjacent|special", "slug_hint": "string" }
+      { "name": "string", "action": "string", "relation": "sublocation|nearby|adjacent|special" }
     ]
   },
 
-  "sublocation": {                  // include if clearly interior/tight pocket OR forced by rule above
-    "meta": { "name": "string", "slug": "sublocation_slug" },
+  "sublocation": {                 // include if interior/tight pocket OR by interior rule
+    "meta": { "name": "string" },
     "semantic": {
       "environment": "interior type",
       "terrain_or_interior": "room/hall/stairwell/etc.",
@@ -202,18 +157,9 @@ Return JSON ONLY in this exact structure:
       "scale": { "ceiling_height_m": null, "room_length_m": null, "room_width_m": null },
       "placement": { "key_subject_position": "e.g., altar at far end", "camera_anchor": "e.g., entry threshold, eye-level" },
       "orientation": { "dominant_view_axis": "e.g., axial aisle | spiral stair" },
-      "connectivity": { "links_to": ["return_to_location_slug", "adjacent_room_slug_hint"] }
+      "connectivity": { "links_to": ["return to location", "adjacent room hint"] }
     },
-    "render": {                      // CAMERA ONLY
-      "camera": {
-        "framing_distance": "close | medium | wide",
-        "angle": "low | high | tilted | oblique | top-down",
-        "composition_bias": "centered | left | right | diagonal | asymmetrical | off-balance",
-        "height": "ground-level | eye-level | elevated",
-        "perspective": "optional",
-        "depth_cues": "optional"
-      }
-    },
+    "render": { "camera": { /* camera-only */ } },
     "profile": {
       "looks": "3–5 sentences (interior geometry, focal fixtures, light-play)",
       "colorsAndLighting": "1–2 sentences",
@@ -227,19 +173,18 @@ Return JSON ONLY in this exact structure:
       "copyright": false
     },
     "suggestedDestinations": [
-      { "name": "string", "action": "string", "relation": "nearby|adjacent|special|back", "slug_hint": "string" }
+      { "name": "string", "action": "string", "relation": "nearby|adjacent|special|back" }
     ]
   }
 }
 
 Strict rules:
-- Output JSON ONLY. No markdown, no commentary.
-- Maintain continuity with seed + vision; if a detail is missing, choose ONE consistent value (no hedging).
-- Keep soundscape ONLY at location/sublocation; never at world/region.
-- Provide numeric scale where reasonable (meters). If unknown, use null (don't invent absurd numbers).
-- Use vivid, precise sentences in "profile"; avoid bullet lists there.
-- Camera-only render: no lighting/color/style/mood in any render blocks.
-- Suggested destinations: return 3–5 total across the deepest node you created (favor sublocation if present, else location).
+- JSON ONLY; no commentary or markdown.
+- Maintain continuity with seed + vision; if missing, pick ONE consistent value.
+- Soundscape ONLY at location/sublocation (never world/region).
+- Provide numeric scale where reasonable (m); else null.
+- Camera-only render everywhere (no lighting/style/mood).
+- Suggested destinations: 3–5 total on the deepest node created.
 
 User request:
 ${originalPrompt}

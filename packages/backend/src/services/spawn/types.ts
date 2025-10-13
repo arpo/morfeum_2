@@ -61,7 +61,6 @@ export interface LocationSeed {
 export interface WorldNode {
   meta: {
     name: string;
-    slug: string;
   };
   semantic: {
     environment: string;
@@ -79,10 +78,14 @@ export interface WorldNode {
     };
   };
   render: {
-    style: string;
-    lighting_defaults: string;
-    camera_defaults: string;
-    seed: string;
+    camera: {
+      framing_distance: string;
+      angle: string;
+      composition_bias: string;
+      height: string;
+      perspective?: string;
+      depth_cues?: string;
+    };
   };
   profile: {
     colorsAndLighting: string;
@@ -93,7 +96,6 @@ export interface WorldNode {
 export interface RegionNode {
   meta: {
     name: string;
-    slug: string;
   };
   semantic: {
     environment: string;
@@ -109,9 +111,14 @@ export interface RegionNode {
     };
   };
   render: {
-    style: string;
-    lighting_profile: string;
-    seed: string;
+    camera: {
+      framing_distance: string;
+      angle: string;
+      composition_bias: string;
+      height: string;
+      perspective?: string;
+      depth_cues?: string;
+    };
   };
   profile: {
     colorsAndLighting: string;
@@ -122,7 +129,6 @@ export interface RegionNode {
 export interface LocationNode {
   meta: {
     name: string;
-    slug: string;
   };
   semantic: {
     environment: string;
@@ -168,11 +174,14 @@ export interface LocationNode {
     };
   };
   render: {
-    style: string;
-    camera: string;
-    composition: string;
-    lighting_profile: string;
-    seed: string;
+    camera: {
+      framing_distance: string;
+      angle: string;
+      composition_bias: string;
+      height: string;
+      perspective?: string;
+      depth_cues?: string;
+    };
   };
   profile: {
     looks: string;
@@ -190,14 +199,12 @@ export interface LocationNode {
     name: string;
     action: string;
     relation: string;
-    slug_hint: string;
   }>;
 }
 
 export interface SublocationNode {
   meta: {
     name: string;
-    slug: string;
   };
   semantic: {
     environment: string;
@@ -242,11 +249,14 @@ export interface SublocationNode {
     };
   };
   render: {
-    style: string;
-    camera: string;
-    composition: string;
-    lighting_profile: string;
-    seed: string;
+    camera: {
+      framing_distance: string;
+      angle: string;
+      composition_bias: string;
+      height: string;
+      perspective?: string;
+      depth_cues?: string;
+    };
   };
   profile: {
     looks: string;
@@ -264,7 +274,6 @@ export interface SublocationNode {
     name: string;
     action: string;
     relation: string;
-    slug_hint: string;
   }>;
 }
 

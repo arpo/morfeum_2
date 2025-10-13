@@ -46,10 +46,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   <label className={styles.label}>Name</label>
                   <p className={styles.value}>{profile.world.meta?.name || 'N/A'}</p>
                 </div>
-                <div className={styles.field}>
-                  <label className={styles.label}>Slug</label>
-                  <p className={styles.value}>{profile.world.meta?.slug || 'N/A'}</p>
-                </div>
               </div>
 
               {/* Semantic */}
@@ -102,26 +98,38 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 </div>
               )}
 
-              {/* Render */}
-              {profile.world.render && (
+              {/* Render - Camera Only */}
+              {profile.world.render?.camera && (
                 <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Render</h4>
+                  <h4 className={styles.subsectionTitle}>Render (Camera)</h4>
                   <div className={styles.field}>
-                    <label className={styles.label}>Style</label>
-                    <p className={styles.value}>{profile.world.render.style || 'N/A'}</p>
+                    <label className={styles.label}>Framing Distance</label>
+                    <p className={styles.value}>{profile.world.render.camera.framing_distance || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Lighting Defaults</label>
-                    <p className={styles.value}>{profile.world.render.lighting_defaults || 'N/A'}</p>
+                    <label className={styles.label}>Angle</label>
+                    <p className={styles.value}>{profile.world.render.camera.angle || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Camera Defaults</label>
-                    <p className={styles.value}>{profile.world.render.camera_defaults || 'N/A'}</p>
+                    <label className={styles.label}>Composition Bias</label>
+                    <p className={styles.value}>{profile.world.render.camera.composition_bias || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Seed</label>
-                    <p className={styles.value}>{profile.world.render.seed || 'N/A'}</p>
+                    <label className={styles.label}>Height</label>
+                    <p className={styles.value}>{profile.world.render.camera.height || 'N/A'}</p>
                   </div>
+                  {profile.world.render.camera.perspective && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Perspective</label>
+                      <p className={styles.value}>{profile.world.render.camera.perspective}</p>
+                    </div>
+                  )}
+                  {profile.world.render.camera.depth_cues && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Depth Cues</label>
+                      <p className={styles.value}>{profile.world.render.camera.depth_cues}</p>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -155,10 +163,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 <div className={styles.field}>
                   <label className={styles.label}>Name</label>
                   <p className={styles.value}>{profile.region.meta?.name || 'N/A'}</p>
-                </div>
-                <div className={styles.field}>
-                  <label className={styles.label}>Slug</label>
-                  <p className={styles.value}>{profile.region.meta?.slug || 'N/A'}</p>
                 </div>
               </div>
 
@@ -204,22 +208,38 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 </div>
               )}
 
-              {/* Render */}
-              {profile.region.render && (
+              {/* Render - Camera Only */}
+              {profile.region.render?.camera && (
                 <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Render</h4>
+                  <h4 className={styles.subsectionTitle}>Render (Camera)</h4>
                   <div className={styles.field}>
-                    <label className={styles.label}>Style</label>
-                    <p className={styles.value}>{profile.region.render.style || 'N/A'}</p>
+                    <label className={styles.label}>Framing Distance</label>
+                    <p className={styles.value}>{profile.region.render.camera.framing_distance || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Lighting Profile</label>
-                    <p className={styles.value}>{profile.region.render.lighting_profile || 'N/A'}</p>
+                    <label className={styles.label}>Angle</label>
+                    <p className={styles.value}>{profile.region.render.camera.angle || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Seed</label>
-                    <p className={styles.value}>{profile.region.render.seed || 'N/A'}</p>
+                    <label className={styles.label}>Composition Bias</label>
+                    <p className={styles.value}>{profile.region.render.camera.composition_bias || 'N/A'}</p>
                   </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Height</label>
+                    <p className={styles.value}>{profile.region.render.camera.height || 'N/A'}</p>
+                  </div>
+                  {profile.region.render.camera.perspective && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Perspective</label>
+                      <p className={styles.value}>{profile.region.render.camera.perspective}</p>
+                    </div>
+                  )}
+                  {profile.region.render.camera.depth_cues && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Depth Cues</label>
+                      <p className={styles.value}>{profile.region.render.camera.depth_cues}</p>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -253,10 +273,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 <div className={styles.field}>
                   <label className={styles.label}>Name</label>
                   <p className={styles.value}>{profile.location.meta?.name || 'N/A'}</p>
-                </div>
-                <div className={styles.field}>
-                  <label className={styles.label}>Slug</label>
-                  <p className={styles.value}>{profile.location.meta?.slug || 'N/A'}</p>
                 </div>
               </div>
 
@@ -378,30 +394,38 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 </div>
               )}
 
-              {/* Render */}
-              {profile.location.render && (
+              {/* Render - Camera Only */}
+              {profile.location.render?.camera && (
                 <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Render</h4>
+                  <h4 className={styles.subsectionTitle}>Render (Camera)</h4>
                   <div className={styles.field}>
-                    <label className={styles.label}>Style</label>
-                    <p className={styles.value}>{renderValue(profile.location.render.style)}</p>
+                    <label className={styles.label}>Framing Distance</label>
+                    <p className={styles.value}>{profile.location.render.camera.framing_distance || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Camera</label>
-                    <p className={styles.value}>{renderValue(profile.location.render.camera)}</p>
+                    <label className={styles.label}>Angle</label>
+                    <p className={styles.value}>{profile.location.render.camera.angle || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Composition</label>
-                    <p className={styles.value}>{renderValue(profile.location.render.composition)}</p>
+                    <label className={styles.label}>Composition Bias</label>
+                    <p className={styles.value}>{profile.location.render.camera.composition_bias || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Lighting Profile</label>
-                    <p className={styles.value}>{renderValue(profile.location.render.lighting_profile)}</p>
+                    <label className={styles.label}>Height</label>
+                    <p className={styles.value}>{profile.location.render.camera.height || 'N/A'}</p>
                   </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Seed</label>
-                    <p className={styles.value}>{renderValue(profile.location.render.seed)}</p>
-                  </div>
+                  {profile.location.render.camera.perspective && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Perspective</label>
+                      <p className={styles.value}>{profile.location.render.camera.perspective}</p>
+                    </div>
+                  )}
+                  {profile.location.render.camera.depth_cues && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Depth Cues</label>
+                      <p className={styles.value}>{profile.location.render.camera.depth_cues}</p>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -461,7 +485,7 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   {profile.location.suggestedDestinations.map((dest: any, i: number) => (
                     <div key={i} className={styles.field}>
                       <label className={styles.label}>{dest.name}</label>
-                      <p className={styles.value}>{`${dest.action} (${dest.relation}) - ${dest.slug_hint}`}</p>
+                      <p className={styles.value}>{`${dest.action} (${dest.relation})`}</p>
                     </div>
                   ))}
                 </div>
@@ -482,10 +506,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 <div className={styles.field}>
                   <label className={styles.label}>Name</label>
                   <p className={styles.value}>{profile.sublocation.meta?.name || 'N/A'}</p>
-                </div>
-                <div className={styles.field}>
-                  <label className={styles.label}>Slug</label>
-                  <p className={styles.value}>{profile.sublocation.meta?.slug || 'N/A'}</p>
                 </div>
               </div>
 
@@ -589,30 +609,38 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 </div>
               )}
 
-              {/* Render */}
-              {profile.sublocation.render && (
+              {/* Render - Camera Only */}
+              {profile.sublocation.render?.camera && (
                 <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Render</h4>
+                  <h4 className={styles.subsectionTitle}>Render (Camera)</h4>
                   <div className={styles.field}>
-                    <label className={styles.label}>Style</label>
-                    <p className={styles.value}>{renderValue(profile.sublocation.render.style)}</p>
+                    <label className={styles.label}>Framing Distance</label>
+                    <p className={styles.value}>{profile.sublocation.render.camera.framing_distance || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Camera</label>
-                    <p className={styles.value}>{renderValue(profile.sublocation.render.camera)}</p>
+                    <label className={styles.label}>Angle</label>
+                    <p className={styles.value}>{profile.sublocation.render.camera.angle || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Composition</label>
-                    <p className={styles.value}>{renderValue(profile.sublocation.render.composition)}</p>
+                    <label className={styles.label}>Composition Bias</label>
+                    <p className={styles.value}>{profile.sublocation.render.camera.composition_bias || 'N/A'}</p>
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Lighting Profile</label>
-                    <p className={styles.value}>{renderValue(profile.sublocation.render.lighting_profile)}</p>
+                    <label className={styles.label}>Height</label>
+                    <p className={styles.value}>{profile.sublocation.render.camera.height || 'N/A'}</p>
                   </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Seed</label>
-                    <p className={styles.value}>{renderValue(profile.sublocation.render.seed)}</p>
-                  </div>
+                  {profile.sublocation.render.camera.perspective && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Perspective</label>
+                      <p className={styles.value}>{profile.sublocation.render.camera.perspective}</p>
+                    </div>
+                  )}
+                  {profile.sublocation.render.camera.depth_cues && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Depth Cues</label>
+                      <p className={styles.value}>{profile.sublocation.render.camera.depth_cues}</p>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -672,7 +700,7 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   {profile.sublocation.suggestedDestinations.map((dest: any, i: number) => (
                     <div key={i} className={styles.field}>
                       <label className={styles.label}>{dest.name}</label>
-                      <p className={styles.value}>{`${dest.action} (${dest.relation}) - ${dest.slug_hint}`}</p>
+                      <p className={styles.value}>{`${dest.action} (${dest.relation})`}</p>
                     </div>
                   ))}
                 </div>
