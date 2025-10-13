@@ -1,5 +1,28 @@
 /* LocationInfoModal Component Styles - PURE CSS ONLY */
 
+/* Subsection grouping */
+.subsection {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsectionTitle {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-md) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
 /* Field-specific styles (not covered by Modal component) */
 .field {
   margin-bottom: var(--spacing-md);
