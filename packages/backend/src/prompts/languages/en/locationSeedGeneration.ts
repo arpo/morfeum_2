@@ -42,18 +42,34 @@ Field hints:
   - Concise emotional tone a visitor would feel (tense, serene, lonely, electric).
 
 - [renderInstructions]:
-  - One short sentence describing camera geometry only:
-    • position (close / medium / wide / overhead)
-    • angle (aerial view / high / tilted)
-    • offset or symmetry (centered / left / right / diagonal / asymmetrical)
-    • relative height (ground / human-eye / elevated / aerial)
-  - Do **not** include lighting, color, or mood — those are handled globally.
-  - Examples:
-    • "wide shot, slight right offset, aerial view"
-    • "medium framing, overhead tilt, centered composition"
-    • "close-up, ground-level, diagonal offset"
-    • "Drone shot, high angle, centered"
-    • "Cinematic view, balanced composition"
+  - Write one short, precise sentence describing only the **camera geometry**:
+    • framing distance (close / medium / wide / establishing / panoramic)
+    • camera angle (low / high / tilted / oblique / top-down)
+    • composition bias (centered / left / right / diagonal / asymmetrical / off-balance)
+    • relative height or perspective (ground-level / eye-level / elevated / aerial)
+    • optional depth cues (foreground framing / layered depth / leading lines / vanishing point)
+  - Do not include lighting, color, or mood — those are defined elsewhere.
+  - Prioritize spatial depth, rhythm, and perspective over symmetry.
+
+  ✦ Updated Camera Geometry Prompts  
+  Keep them short, one sentence each.
+
+  • "wide landscape shot, low vantage, diagonal composition with strong leading lines"  
+  • "aerial 45° oblique view, layered terrain with sweeping diagonal layout"  
+  • "elevated perspective, centered vanishing point, receding depth through valley"  
+  • "ground-level framing, slight upward tilt, asymmetrical composition with foreground foliage"  
+  • "interior wide shot, low angle, right offset through doorway framing"  
+  • "panoramic view, gentle horizon curve, balanced asymmetry"  
+  • "medium-wide interior view, diagonal depth through repeating columns"  
+  • "drone shot, angled 30° down, dynamic layout with crossing lines"  
+  • "wide establishing frame, off-center balance, layered architecture depth"  
+  • "low three-quarter angle, diagonal layout guiding eye through midground"
+
+  ✦ Tips for Keeping Shots Alive  
+  • Use diagonals, layering, or framing elements (doorways, trees, railings) to add dimension.  
+  • Avoid static symmetry unless shooting formal architecture.  
+  • Alternate between compressed (telephoto) and expanded (wide) perspectives to create visual rhythm.
+
 
 If details are missing, infer cinematic defaults.
 

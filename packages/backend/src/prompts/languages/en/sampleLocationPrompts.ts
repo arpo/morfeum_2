@@ -3,93 +3,54 @@
  */
 
 export const sampleLocationPrompts = [
-    'A fog-covered pier where old radios still play songs from lovers long gone.',
-    'A cathedral grown from coral, its halls filled with bioluminescent prayers.',
-    'A derelict orbital garden where plants have learned to glow in zero gravity.',
-    'A neon-lit marketplace beneath the city where time moves differently.',
-    'An abandoned lighthouse that still broadcasts warnings in a forgotten language.',
-    'A crystalline cavern where water droplets hang suspended in mid-air.',
-    'A rooftop garden overtaken by wild roses and rust, twenty stories above a silent city.',
-    'A library carved into living ice, its books preserved in frozen time.',
-    'A train station platform that exists between dimensions, connecting impossible places.',
-    'A desert oasis where the sand sings at twilight and stars touch the water.',
-    'A grove of trees with bark like mirrors, reflecting everything but the observer.',
-    'An underwater ballroom where chandeliers still burn with cold blue flame.',
-    'A mountain peak where clouds gather to share stories before becoming rain.',
-    'A forgotten subway tunnel lined with murals that change when no one is watching.',
-    'A glass bridge suspended over an abyss filled with luminescent mist.',
-    'A courtyard where cherry blossoms fall upward into a perpetually sunset sky.',
-    'A clocktower frozen at midnight, its gears replaced by living vines.',
-    'A canyon where echoes arrive before the sounds that created them.',
-    'A floating island of moss and stone, drifting slowly through an endless twilight.',
-    'A café that appears only on rainy nights, serving memories instead of coffee.',
-    'A portal hidden in an alley behind a door that only appears at 3:33 AM.',
-    'A beach where the tide brings in fragments of dreams instead of shells.',
-    'A temple built from fallen stars, humming with residual cosmic energy.',
-    'A forest clearing where moonlight pools like liquid silver on the ground.',
-    'A Victorian greenhouse filled with plants from worlds that no longer exist.',
-    'A canyon carved by winds that whisper secrets in dead languages.',
-    'A stone circle older than memory, where grass grows in perfect spirals.',
-    'A ruined castle overtaken by bioluminescent fungi that pulse like heartbeats.',
-    'A space station observation deck overlooking a dying supernova.',
-    'A hidden valley where seasons change every few hours.',
-    'A dive bar at the end of the universe, serving drinks to the last travelers.',
-    'A battlefield now silent, where wildflowers grow from rusted armor.',
-    'A monastery carved into a cliff face, accessible only by rope bridges.',
-    'A night market that appears in different cities, never in the same place twice.',
-    'A jazz club where the music plays backwards and everyone dances in reverse.',
-    'A bunker transformed into an art gallery, its concrete walls covered in murals.',
-    'A Gothic cathedral repurposed as a vertical farm, vines climbing to stained glass.',
-    'A subway car stuck between stations, transformed into a cozy bookshop.',
-    'A fog-covered pier where old radios still play songs from lovers long gone.',
-    'A cathedral grown from coral, its halls filled with bioluminescent prayers.',
-    'A derelict orbital garden where plants have learned to glow in zero gravity.',
-    'A desert of mirrored sand that reflects the sky more perfectly than water.',
-    'A forest whose trees whisper visitors’ memories back to them in different voices.',
-    'A rain-soaked street in Kyoto where holograms flicker like ghosts in puddles.',
-    'An underground observatory carved into the shell of a fossilized leviathan.',
-    'A mountaintop monastery suspended between thunderclouds and starlight.',
-    'A neon bazaar built inside an abandoned particle accelerator.',
-    'A half-submerged library where each book hums with the thoughts of its last reader.',
-    'A moonlit café at the edge of a digital ocean, where avatars meet their creators.',
-    'A train station that only appears during solar eclipses, departing to forgotten cities.',
-    'A crystalline canyon that resonates with music when walked upon.',
-    'A field of rusted robots slowly overtaken by wildflowers.',
-    'An ancient temple buried beneath a metropolis, its statues wired into the power grid.',
-    'A perpetual twilight beach where the tide is made of light instead of water.',
-    'A floating observatory orbiting Jupiter, haunted by recordings of its builders.',
-    'A narrow alley in Venice that leads to a mirror world if entered at midnight.',
-    'A garden of bioluminescent fungi where time slows the deeper you wander.',
-    'A glass bridge stretching over a city of clouds, trembling when secrets are spoken.',
-    'An abandoned amusement park where the rides move only when no one looks.',
-    'A subterranean marketplace illuminated by the glow of bottled memories.',
-    'A valley of frozen thunder — lightning suspended mid-strike for millennia.',
-    'A hidden atelier where dreams are distilled into perfumes.',
-    'A quiet room on a space station where gravity hums softly like a heartbeat.',
-    'A derelict cathedral repurposed as a sanctuary for obsolete AIs.',
-    'A sunken opera house where merfolk sing in languages no one remembers.',
-    'A desert oasis surrounded by levitating stones inscribed with lost equations.',
-    'A city built inside a gigantic hourglass, sand constantly falling through its streets.',
-    'A forest of glass spires reflecting fragments of possible futures.',
-    'A hidden library that only appears to those who truly seek knowledge.',
-    'A vast desert with glowing ruins half-buried under shifting dunes, a single figure walking toward a broken monolith.',
-    'A city floating above a sea of clouds, its towers made of mirrored glass and bone.',
-    'A forest where the trees emit soft light from within, and rivers flow upward toward the stars.',
-    'A mountain carved with faces of forgotten gods, snow falling in silence.',
-    'A sunken temple covered in coral, with flickering holograms of ancient rituals.',
-    'A traveler standing at the edge of a rift in the sky, colors leaking through like liquid aurora.',
-    'A library that stretches into the horizon, books whispering as they rearrange themselves.',
-    'A city built around a sleeping colossus, vines and lights wrapping its limbs.',
-    'A dreamlike train gliding across a glass ocean beneath two moons.',
-    'A quiet meadow on an alien planet where bioluminescent flowers sway to an unseen rhythm.',
-    'A vast hall of mirrors reflecting a thousand possible futures.',
-    'A bridge of light connecting two floating islands, travelers crossing in silence.',
-    'A cathedral built from shifting sand, dissolving and reforming in the wind.',
-    'A cosmic marketplace where creatures trade memories instead of goods.',
-    'A garden growing inside the skull of an ancient giant.',
-    'A lighthouse on a cliff above a sea of stars instead of water.',
-    'A city at dusk where gravity bends, and streets spiral upward into the clouds.',
-    'A lonely android sitting by a campfire under a shattered moon.',
-    'A gateway of stone opening onto a landscape that seems to breathe.',
-    'A fractured floating marketplace orbiting a dying sun, where shattered domes of translucent glass drift slowly apart, connected by swaying bridges of vines and torn solar panels. Bioluminescent fungi cling to the steel ribs of the ruins, illuminating stalls still laden with petrified fruit and frozen fabrics that ripple as if moved by forgotten gravity. Below, the planet burns in slow motion, casting rhythmic pulses of amber light through the cracks in the hull. From here, you can see several paths — a collapsed corridor leading into the cargo bay, a shimmering lift-tube descending toward the engine sanctum, and a narrow walkway arcing across the void to another broken dome that flickers with residual power.'
+    // World-level
+    "A colossal floating continent drifting above endless storm clouds, its underside glowing with molten rivers of light.",
+
+    "An endless desert world where crystal monoliths hum with ancient energy beneath twin suns.",
+
+    "A city built within the ribcage of a long-dead leviathan, its streets winding between bone towers and coral-lit canals.",
+
+    "A frozen ocean world where entire civilizations live inside translucent glaciers that pulse with bioluminescent veins.",
+
+    "A vertical jungle world, layer upon layer of canopy stretching miles into the mist, filled with ruins and waterfalls.",
+
+    "A lonely android sitting by a campfire under a shattered moon.",
+
+    "A fractured floating marketplace orbiting a dying sun, where shattered domes of translucent glass drift slowly apart, connected by swaying bridges of vines and torn solar panels. Bioluminescent fungi cling to the steel ribs of the ruins, illuminating stalls still laden with petrified fruit and frozen fabrics that ripple as if moved by forgotten gravity. Below, the planet burns in slow motion, casting rhythmic pulses of amber light through the cracks in the hull. From here, you can see several paths — a collapsed corridor leading into the cargo bay, a shimmering lift-tube descending toward the engine sanctum, and a narrow walkway arcing across the void to another broken dome that flickers with residual power.",
+
+    // Region-level (distinct biomes or districts)
+
+    "The Ember District — a volcanic valley where lava flows serve as roads and iron bridges glow from the heat.",
+
+    "The Glass Expanse — an endless salt flat shimmering like a mirror under a violet sky.",
+
+    "The Nocturne Quarter — a twilight district of an eternal city, lit by floating lanterns and reflected neon.",
+
+    "The Verdant Shroud — a dense forest surrounding ancient machinery, vines coiling through broken metal.",
+
+    "The Azure Archipelago — hundreds of hovering islands linked by light bridges and waterfalls cascading into clouds.",
+
+    // Location-level (specific sites)
+
+    "A lighthouse built inside the hollow trunk of a petrified tree, its beacon spiraling upward through polished amber lenses.",
+
+    "A grand plaza paved in obsidian glass, centered around a floating obelisk that rotates silently, aligning with unseen stars.",
+
+    "An abandoned train station where ghostly carriages arrive without passengers, doors opening to empty light.",
+
+    "A subterranean library carved from volcanic rock, its shelves glowing faintly from embedded crystals.",
+
+    "A cliffside monastery clinging to wind-carved stone, its golden bells tolling in the fog.",
+
+    // Sub-location-level (interiors or focused pockets)
+
+    "Inside the lighthouse beacon room, glass shards hang in midair, refracting green light across ancient runes.",
+
+    "Within the floating obelisk — a hollow chamber lined with mirrored metal and whispering constellations.",
+
+    "The conductor’s cabin of the spectral train, filled with silver instruments that move on their own.",
+
+    "The inner sanctum of the cliffside monastery, where candles float weightlessly around a suspended statue.",
+
+    "Beneath the crystal library — a hidden archive submerged in warm, luminescent water.",
 ];
