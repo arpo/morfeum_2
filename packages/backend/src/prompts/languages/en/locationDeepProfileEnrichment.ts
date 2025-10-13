@@ -18,18 +18,49 @@
 export const generateNewWorldDNA = (
   seedJson: string,
   visionJson: string,
-  originalPrompt: string
+  originalPrompt: string,
+  scopeHint?: string
 ) => `
 
 You are Morfeum's world architect AI. Interpret and formalize the user's description into structured DNA.
 
-SCOPE GUARD (classifier first, then build):
-- Classify input scope as one of: "world" | "region" | "location" | "sublocation".
-- If scope = world (city/realm/planet language), OUTPUT only WORLD (and REGION if clearly implied). DO NOT create a LOCATION unless the text explicitly names a site (e.g., "promenade", "old town square", "skybridge hub", "marina", "museum").
-- If scope = region, OUTPUT WORLD + REGION.
-- If scope = location, OUTPUT WORLD + (REGION if implied) + LOCATION.
-- If scope = sublocation, OUTPUT WORLD + (REGION if implied) + LOCATION + SUBLOCATION.
-- Interior rule: when the text places the user inside a space that belongs to a larger site ("inner sanctum of the monastery", "VIP room in a club"), emit BOTH the enclosing LOCATION and the SUBLOCATION.
+CLASSIFICATION RULES (MANDATORY - follow exactly):
+
+STEP 1: IDENTIFY THE PRIMARY SUBJECT
+- What is the main thing being described? Look for proper nouns or structure names.
+- "Botanical Dome" → primary subject is the DOME (a structure)
+- "bar in the Botanical Dome" → primary subject is the BAR (a space inside the dome)
+
+STEP 2: CLASSIFY BY TYPE (NOT by description)
+- STRUCTURE/BUILDING NAME → LOCATION
+  * Any named structure: dome, temple, tower, lighthouse, club, bar (as building), station, bridge, plaza, market
+  * Even if the description talks about what's INSIDE it, the structure itself is a LOCATION
+  * Example: "Botanical Dome (filled with tropical plants)" → LOCATION (ignore the interior description)
+  
+- ROOM/SPACE NAME → SUBLOCATION
+  * Only if the text explicitly names a room/space WITHIN a structure
+  * Requires "in the X", "inside X", "within X", "X room", "X chamber"
+  * Example: "the bar in Botanical Dome" → bar is SUBLOCATION
+
+- CITY/REALM NAME → WORLD or REGION
+  * Metropolis, city names, realm names → WORLD
+  * Districts, neighborhoods → REGION
+
+STEP 3: APPLY OUTPUT RULES
+- Named structure? → WORLD + LOCATION (the structure is the location)
+- Named room in a structure? → WORLD + LOCATION + SUBLOCATION
+- City/world only? → WORLD only
+
+CRITICAL RULES (NEVER VIOLATE):
+1. If the user names a STRUCTURE (like "Botanical Dome"), OUTPUT it as a LOCATION, NOT a sublocation
+2. Descriptions of what's INSIDE a structure do NOT make it a sublocation
+3. Only explicit interior spaces (rooms, chambers, specific areas WITHIN) are sublocations
+4. "filled with X" or "containing Y" describe a location's contents, not its hierarchical level
+
+EXAMPLES:
+✅ "Botanical Dome in Metropolis" → WORLD (Metropolis) + LOCATION (Botanical Dome)
+✅ "bar in the Botanical Dome" → WORLD + LOCATION (Botanical Dome) + SUBLOCATION (bar)
+❌ WRONG: treating "Botanical Dome" as sublocation just because it describes interior contents
 
 NAME DISCIPLINE:
 - Preserve user-given proper names exactly (e.g., "Metropolis").

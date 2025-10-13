@@ -183,6 +183,7 @@ ${qualityPrompt}`;
     const visionJson = JSON.stringify(visualAnalysis, null, 2);
     const originalPrompt = seed.originalPrompt || 'No specific request provided';
 
+    // Let the LLM handle all classification with improved prompt rules
     const enrichmentPrompt = getPrompt('locationDeepProfileEnrichment', 'en')(
       seedJson,
       visionJson,
