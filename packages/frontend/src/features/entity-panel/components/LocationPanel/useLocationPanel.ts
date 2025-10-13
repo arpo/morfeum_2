@@ -1,7 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useLocationsStore } from '@/store/slices/locationsSlice';
 import { useStore } from '@/store';
-import { splitWorldAndLocation } from '@/utils/locationProfile';
 import { useEntityPanelBase } from '../../hooks/useEntityPanelBase';
 import type { LocationPanelLogicReturn } from './types';
 
@@ -90,15 +89,15 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       return;
     }
     
-    // Split the deep profile into world and location data
-    const { world, location } = splitWorldAndLocation(deepProfile as Record<string, any>);
+    // Cast to hierarchical structure
+    const profile = deepProfile as any;
     
     // Check if this spawn was a sub-location
     const spawnInfo = useStore.getState().activeSpawns.get(base.activeChat);
     const isSubLocation = !!spawnInfo?.parentLocationId;
     
     if (isSubLocation && spawnInfo?.parentLocationId) {
-      // Sub-location: inherit world_id from parent, store empty worldInfo
+      // Sub-location: inherit world_id from parent
       const parentLocation = getLocation(spawnInfo.parentLocationId);
       
       if (!parentLocation) {
@@ -110,8 +109,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         id: base.activeChat,
         world_id: parentLocation.world_id, // Inherit parent's world
         name: base.activeChatSession.entityName || 'Unnamed Location',
-        locationInfo: location, // Only 5 location-specific fields
-        worldInfo: {}, // Empty - inherits from root location
+        dna: profile, // Store complete hierarchical profile
         imagePath: base.activeChatSession.entityImage || '',
         parent_location_id: spawnInfo.parentLocationId,
         adjacent_to: [],
@@ -121,13 +119,12 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       
       console.log(`[useLocationPanel] Sub-location saved under parent: ${parentLocation.name}`);
     } else {
-      // Root location: store full World DNA + Location Instance
+      // Root location: store full hierarchical DNA
       createLocation({
         id: base.activeChat,
         world_id: base.activeChat, // Root location uses own ID as world_id
         name: base.activeChatSession.entityName || 'Unnamed Location',
-        locationInfo: location,
-        worldInfo: world,
+        dna: profile, // Store complete hierarchical profile
         imagePath: base.activeChatSession.entityImage || '',
         parent_location_id: null,
         adjacent_to: [],

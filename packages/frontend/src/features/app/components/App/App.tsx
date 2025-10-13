@@ -73,14 +73,18 @@ export function App() {
     pinnedLocations.forEach((location) => {
       // console.log('[App] Auto-loading pinned location:', location.id);
       
-      const deepProfile = {
-        ...location.locationInfo,
-        ...location.worldInfo
-      };
+      // Check if location has new hierarchical structure
+      if (!location.dna || !location.dna.world) {
+        console.warn('[App] Skipping location with old data structure:', location.id);
+        return; // Skip old locations - they need to be regenerated
+      }
+      
+      // Use hierarchical DNA structure
+      const deepProfile = location.dna;
       
       const seed = {
         name: location.name,
-        atmosphere: location.worldInfo.atmosphere || 'Unknown atmosphere'
+        atmosphere: location.dna.world.semantic?.atmosphere || 'Unknown atmosphere'
       };
       
       createChatWithEntity(location.id, seed, 'location');

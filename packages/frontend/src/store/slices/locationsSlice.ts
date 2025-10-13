@@ -8,7 +8,218 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { v4 as uuidv4 } from 'uuid';
 
-// Location interface matching database table structure
+// Hierarchical location DNA types (matching backend)
+export interface WorldNode {
+  meta: {
+    name: string;
+    slug: string;
+  };
+  semantic: {
+    environment: string;
+    dominant_materials: string[];
+    atmosphere: string;
+    architectural_tone: string;
+    genre: string;
+    mood_baseline: string;
+    palette_bias: string[];
+    physics: string;
+  };
+  spatial: {
+    orientation: {
+      light_behavior: string;
+    };
+  };
+  render: {
+    style: string;
+    lighting_defaults: string;
+    camera_defaults: string;
+    seed: string;
+  };
+  profile: {
+    colorsAndLighting: string;
+    symbolicThemes: string;
+  };
+}
+
+export interface RegionNode {
+  meta: {
+    name: string;
+    slug: string;
+  };
+  semantic: {
+    environment: string;
+    climate: string;
+    weather_pattern: string;
+    architecture_style: string;
+    mood: string;
+    palette_shift: string[];
+  };
+  spatial: {
+    orientation: {
+      dominant_view_axis: string;
+    };
+  };
+  render: {
+    style: string;
+    lighting_profile: string;
+    seed: string;
+  };
+  profile: {
+    colorsAndLighting: string;
+    symbolicThemes: string;
+  };
+}
+
+export interface LocationNode {
+  meta: {
+    name: string;
+    slug: string;
+  };
+  semantic: {
+    environment: string;
+    terrain_or_interior: string;
+    structures: Array<{
+      type: string;
+      material: string;
+      color: string;
+      condition: string;
+    }>;
+    vegetation: {
+      types: string[];
+      density: string;
+    };
+    fauna: {
+      types: string[];
+      presence: string;
+    };
+    time_of_day: string;
+    lighting: string;
+    weather_or_air: string;
+    atmosphere: string;
+    mood: string;
+    color_palette: string[];
+    soundscape: string[];
+    genre: string;
+  };
+  spatial: {
+    scale: {
+      primary_height_m: number | null;
+      scene_width_m: number | null;
+    };
+    placement: {
+      key_subject_position: string;
+      camera_anchor: string;
+    };
+    orientation: {
+      light_source_direction: string;
+      prevailing_wind_or_flow: string;
+    };
+    connectivity: {
+      links_to: string[];
+    };
+  };
+  render: {
+    style: string;
+    camera: string;
+    composition: string;
+    lighting_profile: string;
+    seed: string;
+  };
+  profile: {
+    looks: string;
+    colorsAndLighting: string;
+    atmosphere: string;
+    materials: string;
+    mood: string;
+    sounds: string;
+    symbolicThemes: string;
+    airParticles: string;
+    fictional: boolean;
+    copyright: boolean;
+  };
+  suggestedDestinations: Array<{
+    name: string;
+    action: string;
+    relation: string;
+    slug_hint: string;
+  }>;
+}
+
+export interface SublocationNode {
+  meta: {
+    name: string;
+    slug: string;
+  };
+  semantic: {
+    environment: string;
+    terrain_or_interior: string;
+    structures: Array<{
+      type: string;
+      material: string;
+      color: string;
+      condition: string;
+    }>;
+    vegetation: {
+      types: string[];
+      density: string;
+    };
+    fauna: {
+      types: string[];
+      presence: string;
+    };
+    time_of_day: string;
+    lighting: string;
+    weather_or_air: string;
+    atmosphere: string;
+    mood: string;
+    color_palette: string[];
+    soundscape: string[];
+  };
+  spatial: {
+    scale: {
+      ceiling_height_m: number | null;
+      room_length_m: number | null;
+      room_width_m: number | null;
+    };
+    placement: {
+      key_subject_position: string;
+      camera_anchor: string;
+    };
+    orientation: {
+      dominant_view_axis: string;
+    };
+    connectivity: {
+      links_to: string[];
+    };
+  };
+  render: {
+    style: string;
+    camera: string;
+    composition: string;
+    lighting_profile: string;
+    seed: string;
+  };
+  profile: {
+    looks: string;
+    colorsAndLighting: string;
+    atmosphere: string;
+    materials: string;
+    mood: string;
+    sounds: string;
+    symbolicThemes: string;
+    airParticles: string;
+    fictional: boolean;
+    copyright: boolean;
+  };
+  suggestedDestinations: Array<{
+    name: string;
+    action: string;
+    relation: string;
+    slug_hint: string;
+  }>;
+}
+
+// Location interface with hierarchical DNA structure
 export interface Location {
   id: string;
   world_id: string;
@@ -17,8 +228,12 @@ export interface Location {
   children: string[];
   depth_level: number;
   name: string;
-  locationInfo: Record<string, any>;
-  worldInfo: Record<string, any>;
+  dna: {
+    world: WorldNode;
+    region?: RegionNode;
+    location?: LocationNode;
+    sublocation?: SublocationNode;
+  };
   imagePath: string;
 }
 
@@ -192,7 +407,7 @@ export const useLocationsStore = create<LocationsState>()(
   
   getWorldDNA: (world_id) => {
     const root = get().getRootLocation(world_id);
-    return root.worldInfo;
+    return root.dna.world;
   },
   
   getLocationHierarchy: () => {

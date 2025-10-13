@@ -4,7 +4,6 @@
 
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
-import { splitWorldAndLocation } from '@/utils/locationProfile';
 
 export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);
@@ -78,7 +77,7 @@ export function useSpawnEvents() {
     // Listen for analysis complete event
     eventSource.addEventListener('spawn:analysis-complete', (e) => {
       const { spawnId, visualAnalysis } = JSON.parse(e.data);
-      // console.log('👁️ Visual Analysis:', visualAnalysis);
+      console.log('👁️ Visual Analysis:', visualAnalysis);
       
       // Update spawn status
       if (updateSpawnStatus) {
@@ -94,16 +93,23 @@ export function useSpawnEvents() {
       const spawnInfo = activeSpawns.get(spawnId);
       const isActuallySubLocation = isSubLocation || !!spawnInfo?.parentLocationId;
       
-      // Split deep profile into world and location parts (locations only)
+      // Log hierarchical location structure (locations only)
       if (entityType === 'location') {
-        const { world, location } = splitWorldAndLocation(deepProfile);
-        
         if (isActuallySubLocation) {
-          console.log('�️ Sub-Location Generated (inherits World DNA from parent)');
-          console.log('📍 Location Instance Only:', location);
+          console.log('🏛️ Sub-Location Generated (inherits World DNA from parent)');
+          console.log('📍 Deep Profile:', deepProfile);
         } else {
-          console.log('�🌍 Root Location - World DNA:', world);
-          console.log('📍 Location Instance:', location);
+          console.log('🌍 Root Location Generated with Hierarchical DNA:');
+          console.log('  🌐 World Node:', deepProfile.world);
+          if (deepProfile.region) {
+            console.log('  🗺️ Region Node:', deepProfile.region);
+          }
+          if (deepProfile.location) {
+            console.log('  📍 Location Node:', deepProfile.location);
+          }
+          if (deepProfile.sublocation) {
+            console.log('  🚪 Sublocation Node:', deepProfile.sublocation);
+          }
         }
       }
       

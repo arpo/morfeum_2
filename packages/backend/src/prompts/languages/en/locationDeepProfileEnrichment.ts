@@ -1,129 +1,220 @@
 /**
- * Deep profile enrichment prompt for locations
- * Combines seed data and visual analysis into a complete location profile
+ * Morfeum — New World Bootstrap, Depth-Aware DNA Generator
+ * Inputs: originalPrompt (user text), seedJson (fast seed), visionJson (caption from vision step)
+ * Output: JSON ONLY with world (+ optional region) + location (+ optional sublocation),
+ *         each containing rich "semantic", "spatial", "render" blocks AND a "profile" block
+ *         (looks/colorsAndLighting/atmosphere/materials/mood/etc.), plus suggested destinations.
+ *
+ * Notes:
+ * - Always create a NEW WORLD (no reuse).
+ * - Choose additional layers based on the user text:
+ *   • vast scope (city/realm/planet) → include REGION (and LOCATION if implied)
+ *   • concrete site (lighthouse/club/temple) → include LOCATION
+ *   • clear interior (room/hall/cabin) → include SUBLOCATION
+ * - Sound is LOCAL (location/sublocation), not world/region.
+ * - Include numeric scale where sensible; keep seeds deterministic from names.
  */
 
-export const locationDeepProfileEnrichment = (seedJson: string, visionJson: string, originalPrompt: string) => `You are generating a complete, nuanced location profile for Morfeum — a world where realism and imagination coexist.
+export const generateNewWorldDNA = (
+  seedJson: string,
+  visionJson: string,
+  originalPrompt: string
+) => `
+You are Morfeum's world architect AI. Create a NEW fictional world from scratch.
+Merge the user's request, the seed, and the visual analysis into a coherent, layered DNA.
 
-Original user request:
-${originalPrompt}
+Depth rules:
+- Always create a WORLD node (global constants).
+- If the request implies a broad area (district/city/shoreline), add a REGION node.
+- If it describes a specific site, add a LOCATION node.
+- If it clearly describes being inside or a tight interior, add a SUBLOCATION node.
+- Produce the MINIMAL set of nodes needed to place the user exactly where they asked to be.
 
-Combine the following data:
-Seed data:
-${seedJson}
-Visual analysis:
-${visionJson}
+Return JSON ONLY in this exact structure:
 
-Your goal is to merge and expand this information into a coherent, vivid, and believable location.
-
-IMPORTANT: Return ONLY a valid JSON object with these exact fields:
 {
-  "name": "...",
-  "looks": "...",
-  "colorsAndLighting": "...",
-  "atmosphere": "...",
-  "flora": "...",
-  "fauna": "...",
-  "architecture": "...",
-  "materials": "...",
-  "mood": "...",
-  "sounds": "...",
-  "genre": "...",
-  "symbolicThemes": "...",
-  "airParticles": "...",
-  "fictional": true,
-  "copyright": false
+  "world": {
+    "meta": {
+      "name": "string",               // world name
+      "slug": "world_slug"
+    },
+    "semantic": {
+      "environment": "e.g., coastal megacity | haunted archipelago | desert moon",
+      "dominant_materials": ["string", "string"],
+      "atmosphere": "short global description (NOT sound)",
+      "architectural_tone": "e.g., organic futurism, brutalist relics",
+      "genre": "e.g., magical realism, surrealism, sci-fi",
+      "mood_baseline": "global emotional register",
+      "palette_bias": ["global color tendencies"],
+      "physics": "normal | stylized | magical"
+    },
+    "spatial": {
+      "orientation": { "light_behavior": "e.g., perpetual golden hour | twin moons | overcast bias" }
+    },
+    "render": {
+      "style": "cinematic photorealism | painterly | etc.",
+      "lighting_defaults": "global light behavior",
+      "camera_defaults": "e.g., wide exteriors, 35mm interiors",
+      "seed": "deterministic seed for world (derive from slug)"
+    },
+    "profile": {
+      "colorsAndLighting": "1–3 sentences (global palette & light)",
+      "symbolicThemes": "short phrase/sentence (world-level)"
+    }
+  },
+
+  "region": {                     // include ONLY if implied by text
+    "meta": { "name": "string", "slug": "region_slug" },
+    "semantic": {
+      "environment": "e.g., fogbound coast, art-deco downtown",
+      "climate": "e.g., oceanic mist, arid breeze",
+      "weather_pattern": "e.g., drifting fog, neon rain",
+      "architecture_style": "regional vernacular",
+      "mood": "regional emotional tone",
+      "palette_shift": ["regional color slant"]
+    },
+    "spatial": {
+      "orientation": { "dominant_view_axis": "shoreline sweep | canyon corridor" }
+    },
+    "render": {
+      "style": "inherits or refines world",
+      "lighting_profile": "regional light nuance",
+      "seed": "deterministic seed for region"
+    },
+    "profile": {
+      "colorsAndLighting": "1–2 sentences",
+      "symbolicThemes": "short phrase"
+    }
+  },
+
+  "location": {                   // include if the request names a site
+    "meta": { "name": "string", "slug": "location_slug" },
+    "semantic": {
+      "environment": "natural | built | mixed",
+      "terrain_or_interior": "terrain or overall interior type",
+      "structures": [
+        { "type": "string", "material": "string", "color": "string", "condition": "string" }
+      ],
+      "vegetation": {
+        "types": ["string"], "density": "sparse | moderate | lush"
+      },
+      "fauna": {
+        "types": ["string"], "presence": "none | rare | common"
+      },
+      "time_of_day": "night | dusk | dawn | day | inherited",
+      "lighting": "concise local lighting behavior (overrides region/world as needed)",
+      "weather_or_air": "mist | dry heat | sea spray | indoor haze",
+      "atmosphere": "local sensory field (temp, humidity, density, motion)",
+      "mood": "emotional tone for this site",
+      "color_palette": ["dominant","accent","contrast"],
+      "soundscape": ["local sounds (short phrases)"],
+      "genre": "inherits or refines world"
+    },
+    "spatial": {
+      "scale": {
+        "primary_height_m": null,          // e.g., lighthouse height, club ceiling
+        "scene_width_m": null
+      },
+      "placement": {
+        "key_subject_position": "left|center|right|elevated|shoreline|plaza-core",
+        "camera_anchor": "relative pose (e.g., 40m offshore facing NE | entry threshold, eye-level)"
+      },
+      "orientation": {
+        "light_source_direction": "N|NE|E|SE|S|SW|W|NW",
+        "prevailing_wind_or_flow": "short phrase"
+      },
+      "connectivity": {
+        "links_to": ["plausible node slugs if any"]
+      }
+    },
+    "render": {
+      "style": "inherits/refines world",
+      "camera": "wide | medium | close-up | isometric | first-person",
+      "composition": "rule-of-thirds | centered | corridor vanishing-point | shoreline sweep",
+      "lighting_profile": "soft diffuse | hard contrast | lantern glow | moonlit haze",
+      "seed": "deterministic seed for location"
+    },
+    "profile": {
+      "looks": "4–6 sentences (geometry, dominant forms, materials, scale, light interaction)",
+      "colorsAndLighting": "1–3 sentences (palette & light behavior)",
+      "atmosphere": "3–5 sentences (sensory field, motion, clarity/haze)",
+      "materials": "1–3 sentences (textures, reflectivity, condition)",
+      "mood": "2–3 sentences (emotional read)",
+      "sounds": "3–7 words (ambient soundscape)",
+      "symbolicThemes": "1–2 sentences or short phrase",
+      "airParticles": "1–2 sentences or 'None'",
+      "fictional": true,
+      "copyright": false
+    },
+    "suggestedDestinations": [
+      { "name": "string", "action": "string", "relation": "sublocation|nearby|adjacent|special", "slug_hint": "string" }
+    ]
+  },
+
+  "sublocation": {               // include if clearly interior/tight pocket
+    "meta": { "name": "string", "slug": "sublocation_slug" },
+    "semantic": {
+      "environment": "interior type",
+      "terrain_or_interior": "room/hall/stairwell/etc.",
+      "structures": [
+        { "type": "fixture/furniture/machinery", "material": "string", "color": "string", "condition": "string" }
+      ],
+      "vegetation": { "types": ["string"], "density": "none|sparse|incidental" },
+      "fauna": { "types": ["string"], "presence": "none|rare|ambient" },
+      "time_of_day": "inherited unless windowed",
+      "lighting": "interior lighting (lantern | LEDs | neon spill)",
+      "weather_or_air": "indoor haze | dust | salt damp",
+      "atmosphere": "claustrophobic/airy/echoing etc.",
+      "mood": "local emotional tone",
+      "color_palette": ["dominant","accent","contrast"],
+      "soundscape": ["local, interior-scale sounds"]
+    },
+    "spatial": {
+      "scale": { "ceiling_height_m": null, "room_length_m": null, "room_width_m": null },
+      "placement": { "key_subject_position": "e.g., altar at far end", "camera_anchor": "e.g., entry threshold, eye-level" },
+      "orientation": { "dominant_view_axis": "e.g., axial aisle | spiral stair" },
+      "connectivity": { "links_to": ["return_to_location_slug", "adjacent_room_slug_hint"] }
+    },
+    "render": {
+      "style": "inherits/refines",
+      "camera": "medium | close-up | first-person",
+      "composition": "corridor vanishing-point | centered shrine | spiral",
+      "lighting_profile": "lantern glow | LED strips | volumetric shafts",
+      "seed": "deterministic seed for sublocation"
+    },
+    "profile": {
+      "looks": "3–5 sentences (interior geometry, focal fixtures, light-play)",
+      "colorsAndLighting": "1–2 sentences",
+      "atmosphere": "2–3 sentences",
+      "materials": "1–2 sentences",
+      "mood": "1–2 sentences",
+      "sounds": "3–7 words",
+      "symbolicThemes": "short phrase",
+      "airParticles": "1 sentence or 'None'",
+      "fictional": true,
+      "copyright": false
+    },
+    "suggestedDestinations": [
+      { "name": "string", "action": "string", "relation": "nearby|adjacent|special|back", "slug_hint": "string" }
+    ]
+  }
 }
 
-Do not include any markdown formatting, code blocks, or explanatory text.
-Return only the JSON object.
+Strict rules:
+- Output JSON ONLY. No markdown, no commentary.
+- Maintain continuity with seed + vision; if a detail is missing, choose ONE consistent value (no hedging).
+- Keep soundscape ONLY at location/sublocation; never at world/region.
+- Provide numeric scale where reasonable (meters). If unknown, use null (don't invent absurd numbers).
+- Use vivid, precise sentences in "profile"; avoid bullet lists there.
+- Seeds must be deterministic from slugs (e.g., hash or readable concatenation).
+- Suggested destinations: return 3–5 total across the deepest node you created (favor sublocation if present, else location).
 
-Guidelines:
-- Maintain strict continuity with both the seed and the image.
-- Enrich each section with sensory, spatial, and emotional precision.
-- Favor evocative phrasing over generic adjectives — describe through texture, color, light, and spatial relationship.
-- Avoid lists; use natural prose sentences.
-- The output should read like a detailed environmental profile, not a story.
-- Use the exact field names shown — no markdown, lists, or commentary.
-- Do not reuse the location name anywhere except in the "name" field.
+User request:
+${originalPrompt}
 
-Field definitions and depth instructions:
+Seed data:
+${seedJson}
 
-[name]
-Short, evocative name of the location derived from the seed.
-
-[looks]
-Describe the overall visual composition and spatial structure.
-Include geometry, dominant forms, terrain, scale, and what draws the eye.
-Mention how light interacts with surfaces and materials.
-4–6 sentences of layered visual detail.
-
-[colorsAndLighting]
-Summarize the dominant palette, contrast, and light source qualities.
-Describe light behavior (glow, reflection, flicker, diffusion).
-1–3 sentences.
-
-[atmosphere]
-Describe the environmental presence and sensory field of the space.
-Include temperature, humidity, density, motion (wind, stillness, pressure), and how these qualities affect perception.
-Mention fog, mist, haze, or clarity.
-3–5 sentences.
-
-[flora]
-Describe plant or organic growth in the scene.
-Include types, colors, density, and how they interact with light or terrain.
-If none, return "None" and briefly state why (desert, sterile facility, oceanic void).
-2–4 sentences or "None" with reason.
-
-[fauna]
-Describe animal or creature presence and behavior.
-Note whether natural, mechanical, or fantastical.
-If none, return "None."
-1–3 sentences or "None."
-
-[architecture]
-Describe built or constructed structures, if present.
-Include style, scale, material, age, and condition.
-If none, reply "None" and explain briefly.
-2–4 sentences.
-
-[materials]
-List or describe key materials visible in this environment — natural or artificial.
-Mention texture, reflectivity, and condition (rusted, polished, organic, crystalline).
-1–3 sentences.
-
-[mood]
-Describe the emotional and psychological atmosphere experienced by a visitor.
-Use subtle contrasts (serene yet haunting, beautiful yet isolating).
-2–3 sentences.
-
-[sounds]
-Provide one short phrase (3–7 words) describing the ambient soundscape.
-Examples: "waves lapping, wind sighing, distant bells", "machinery hum, footsteps echo, soft static"
-
-[genre]
-Specify the genre or aesthetic tone.
-Examples: fantasy, sci-fi, surrealism, magical realism, post-apocalyptic.
-If multiple, separate by commas.
-
-[symbolicThemes]
-List or describe recurring metaphors or underlying ideas represented by the scene.
-Examples: decay and rebirth, memory and reflection, isolation and transcendence.
-1–2 sentences or a short phrase.
-
-[airParticles]
-Describe visible particulates in the air (dust, mist, glowing motes, embers, spores).
-If none, reply "None."
-1–2 sentences.
-
-[fictional]
-"true" if the location is fictional; "false" if real.
-
-[copyright]
-"true" if it belongs to copyrighted material (e.g., Middle-earth, Star Wars);
-"false" if it's public domain or an original creation.
-
-Rules & Best Practices:
-- Avoid uncertain phrasing ("might", "possibly"). If unknown, invent a consistent detail.
-- No illegal, graphic, or copyrighted descriptions.
-- Keep it sensory, coherent, and believable within Morfeum's tone.`;
+Visual analysis:
+${visionJson}
+`;

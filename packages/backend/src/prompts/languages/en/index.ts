@@ -14,7 +14,7 @@ import { characterDeepProfileEnrichment } from './characterDeepProfileEnrichment
 import { sampleCharacterPrompts } from './sampleCharacterPrompts';
 import { locationSeedGeneration } from './locationSeedGeneration';
 import { locationImageGeneration } from './locationImageGeneration';
-import { locationDeepProfileEnrichment } from './locationDeepProfileEnrichment';
+import { generateNewWorldDNA } from './locationDeepProfileEnrichment';
 import { subLocationDeepProfileEnrichment } from './subLocationDeepProfileEnrichment';
 import { sampleLocationPrompts } from './sampleLocationPrompts';
 
@@ -35,7 +35,7 @@ export const en: PromptTemplates = {
   sampleCharacterPrompts,
   locationSeedGeneration,
   locationImageGeneration,
-  locationDeepProfileEnrichment,
+  locationDeepProfileEnrichment: generateNewWorldDNA,
   subLocationDeepProfileEnrichment,
   sampleLocationPrompts
 };

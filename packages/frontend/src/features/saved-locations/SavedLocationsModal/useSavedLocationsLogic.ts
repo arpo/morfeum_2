@@ -2,7 +2,6 @@ import { useState, useCallback, useMemo } from 'react';
 import { useLocationsStore } from '@/store/slices/locationsSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
-import { splitWorldAndLocation } from '@/utils/locationProfile';
 import type { SavedEntitiesLogicReturn, EntityTab } from './types';
 import type { Location } from '@/store/slices/locationsSlice';
 import type { Character } from '@/store/slices/charactersSlice';
@@ -35,16 +34,20 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   const handleLoadLocation = useCallback((location: Location) => {
     console.log('[SavedEntitiesModal] Loading location:', location.id);
     
-    // Reconstruct the deep profile from locationInfo and worldInfo
-    const deepProfile = {
-      ...location.locationInfo,
-      ...location.worldInfo
-    };
+    // Check if location has new hierarchical structure
+    if (!location.dna || !location.dna.world) {
+      console.error('[SavedEntitiesModal] Cannot load location with old data structure. Please regenerate this location.');
+      alert('This location uses an outdated format. Please delete and regenerate it.');
+      return;
+    }
+    
+    // Use hierarchical DNA structure
+    const deepProfile = location.dna;
     
     // Create seed data for chat initialization
     const seed = {
       name: location.name,
-      atmosphere: location.worldInfo.atmosphere || 'Unknown atmosphere'
+      atmosphere: location.dna.world.semantic?.atmosphere || 'Unknown atmosphere'
     };
     
     // Create chat session for this location
