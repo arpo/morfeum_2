@@ -123,6 +123,24 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     console.log(`[SavedEntitiesModal] ${isPinned ? 'Unpinned' : 'Pinned'} character:`, characterId);
   }, [togglePinnedCharacter, isCharacterPinned]);
 
+  const handleCopyWorldInfo = useCallback((location: Location) => {
+    console.log('[SavedEntitiesModal] Copying full location JSON for:', location.id);
+    
+    // Copy the entire location object as JSON
+    const locationJson = JSON.stringify(location, null, 2);
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(locationJson)
+      .then(() => {
+        console.log('[SavedEntitiesModal] Location JSON copied to clipboard');
+        alert('Location data copied to clipboard!');
+      })
+      .catch((err) => {
+        console.error('[SavedEntitiesModal] Failed to copy location data:', err);
+        alert('Failed to copy location data. Please try again.');
+      });
+  }, []);
+
   return {
     activeTab,
     setActiveTab,
@@ -135,6 +153,7 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     handleDeleteLocation,
     handleDeleteCharacter,
     handlePinLocation,
-    handlePinCharacter
+    handlePinCharacter,
+    handleCopyWorldInfo
   };
 }

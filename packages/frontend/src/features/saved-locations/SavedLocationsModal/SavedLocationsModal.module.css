@@ -142,6 +142,29 @@
   flex-shrink: 0;
 }
 
+/* Copy Button */
+.copyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.copyButton:hover {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text);
+}
+
+.copyButton:active {
+  transform: scale(0.95);
+}
+
 /* Pin Button */
 .pinButton {
   display: flex;

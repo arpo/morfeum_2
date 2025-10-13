@@ -1,5 +1,5 @@
 import { Modal, ModalHeader, ModalContent } from '@/components/ui/Modal';
-import { IconTrash, IconPin, IconPinFilled } from '@/icons';
+import { IconTrash, IconPin, IconPinFilled, IconCopy } from '@/icons';
 import { useSavedEntitiesLogic } from './useSavedLocationsLogic';
 import type { SavedEntitiesModalProps } from './types';
 import styles from './SavedLocationsModal.module.css';
@@ -17,7 +17,8 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
     handleDeleteLocation,
     handleDeleteCharacter,
     handlePinLocation,
-    handlePinCharacter
+    handlePinCharacter,
+    handleCopyWorldInfo
   } = useSavedEntitiesLogic(onClose);
 
   const entities = activeTab === 'characters' ? characters : locations;
@@ -74,6 +75,18 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
                 <div className={styles.info}>
                   <h3 className={styles.name}>{entity.name}</h3>
                   <div className={styles.actions}>
+                    {activeTab === 'locations' && (
+                      <button
+                        className={styles.copyButton}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleCopyWorldInfo(entity as any);
+                        }}
+                        title="Copy world info to clipboard"
+                      >
+                        <IconCopy size={18} />
+                      </button>
+                    )}
                     <button
                       className={`${styles.pinButton} ${pinnedEntityIds.includes(entity.id) ? styles.pinned : ''}`}
                       onClick={(e) => {

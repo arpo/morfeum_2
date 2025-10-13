@@ -21,4 +21,5 @@ export interface SavedEntitiesLogicReturn {
   handleDeleteCharacter: (characterId: string) => void;
   handlePinLocation: (locationId: string) => void;
   handlePinCharacter: (characterId: string) => void;
+  handleCopyWorldInfo: (location: Location) => void;
 }
