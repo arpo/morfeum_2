@@ -69,7 +69,47 @@
 - **Real-time Updates**: Seamless system prompt updates without disrupting conversation
 - **Scrollable Lists**: Entities panel and Active Spawns panel have scrollbars when lists exceed max height
 
-### Location Creation System (Latest)
+### Focus System for Location Navigation (Latest - Just Completed)
+- **Complete Focus State Tracking**: Monitors where user is viewing from in world node tree
+  - **FocusState Interface**: node_id, perspective, viewpoint, distance fields
+  - Added to both backend (`packages/backend/src/services/spawn/types.ts`) and frontend types
+  - Extended Location interface with optional `focus?: FocusState` field
+- **Focus Management Infrastructure**:
+  - **Utility Functions** (`packages/frontend/src/utils/locationFocus.ts`):
+    - `initFocus(location)`: Initialize from DNA's viewContext with sensible defaults
+    - `updateFocus(currentFocus, nodeId, updates)`: Create updated focus state immutably
+  - **Store Methods** (`locationsSlice.ts`):
+    - `updateLocationFocus(locationId, focus)`: Update focus state for a location
+    - `getLocationFocus(locationId)`: Retrieve current focus state
+    - `ensureFocusInitialized(locationId)`: Auto-initialize from viewContext if missing
+- **LocationInfoModal Enhancements**:
+  - **New 🎯 Current Focus Section**: Displays at top showing node_id, perspective, viewpoint, distance
+  - **Reversed Section Order** for better information hierarchy:
+    - 🎯 Current Focus (most immediate - where you are now)
+    - 📍 Location (specific site details)
+    - 🗺️ Region (broader area)
+    - 🌐 World DNA (foundational - at bottom)
+  - **Fallback Display Logic**: Shows focus from viewContext in DNA if location not saved yet
+  - Works for both saved and newly spawned locations
+- **Type System Updates**:
+  - Added `FocusState` to LocationInfoModal types
+  - Added `locationId` prop to LocationInfoModal
+  - Added `activeChat` to EntityPanelBaseState for proper type safety
+  - Updated LocationNode.profile to include optional viewContext field
+- **Quality Assurance**:
+  - ✅ Frontend Build: Successful (336.83 kB, gzip: 101.87 kB)
+  - ✅ Backend Build: Successful (zero TypeScript errors)
+  - ✅ Focus Display: Works for both saved and unsaved locations
+  - ✅ Architecture Compliance: Follows all project patterns
+- **Files Modified**: 9 total (3 backend, 6 frontend)
+- **Key Benefits**:
+  - Navigation Ready: System knows where user is viewing from
+  - Future-Proof: Foundation for sub-location generation and world navigation
+  - Better UX: Information hierarchy flows from immediate to foundational
+  - Flexible Display: Works for both saved and unsaved locations
+  - Type Safety: Full TypeScript coverage throughout
+
+### Location Creation System (Previously Completed)
 - **Dual-Entity Support**: Complete support for both characters AND locations
 - **Location Prompts**: 4 specialized location prompt files (sample, seed, image, deep profile)
 - **Smart UI Adaptation**: Chat component conditionally renders based on entity type

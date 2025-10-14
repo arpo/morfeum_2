@@ -3,6 +3,7 @@
  */
 
 export interface EntityPanelBaseState {
+  activeChat: string | null;
   entityImage: string | null;
   entityName: string | null;
   entityPersonality: string | null;

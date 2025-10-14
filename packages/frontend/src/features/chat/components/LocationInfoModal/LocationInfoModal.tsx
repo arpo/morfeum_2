@@ -1,5 +1,6 @@
 // LocationInfoModal Component - PURE JSX ONLY
 import { Modal, ModalContent, ModalSection } from '@/components/ui';
+import { useLocationsStore } from '@/store/slices/locationsSlice';
 import { useLocationInfoLogic } from './useLocationInfoLogic';
 import type { LocationInfoModalProps } from './types';
 import styles from './LocationInfoModal.module.css';
@@ -22,177 +23,60 @@ const renderValue = (value: any) => {
 };
 
 export function LocationInfoModal(props: LocationInfoModalProps) {
-  const { locationProfile, locationName, isOpen } = props;
+  const { locationProfile, locationName, locationId, isOpen } = props;
   const { handleClose } = useLocationInfoLogic(props);
+  const getLocationFocus = useLocationsStore(state => state.getLocationFocus);
 
   if (!locationProfile) return null;
 
   // Cast to hierarchical structure
   const profile = locationProfile as any;
+  
+  // Get focus state from saved location or initialize from viewContext
+  let focus = locationId ? getLocationFocus(locationId) : null;
+  
+  // If no saved focus but we have viewContext in the profile, create a temporary focus display
+  if (!focus && profile.location?.profile?.viewContext) {
+    const vc = profile.location.profile.viewContext;
+    focus = {
+      node_id: profile.location.meta?.name || locationName,
+      perspective: vc.perspective as any,
+      viewpoint: vc.composition || 'default view',
+      distance: vc.distance as any
+    };
+  }
 
   return (
     <Modal isOpen={isOpen} onClose={handleClose} title={`${locationName} - DNA Structure`} maxWidth="lg">
       <ModalContent>
         {/* ============================================
-            WORLD NODE - Always Present
+            FOCUS STATE - Current viewing position
         ============================================ */}
-        {profile.world && (
-          <>
-            <ModalSection title="🌐 World DNA" description="Global environmental constants">
-              {/* Meta */}
-              <div className={styles.subsection}>
-                <h4 className={styles.subsectionTitle}>Meta</h4>
-                <div className={styles.field}>
-                  <label className={styles.label}>Name</label>
-                  <p className={styles.value}>{profile.world.meta?.name || 'N/A'}</p>
-                </div>
+        {focus && (
+          <ModalSection title="🎯 Current Focus" description="Where you are viewing from">
+            <div className={styles.subsection}>
+              <div className={styles.field}>
+                <label className={styles.label}>Node ID</label>
+                <p className={styles.value}>{focus.node_id}</p>
               </div>
-
-              {/* Semantic */}
-              {profile.world.semantic && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Semantic</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Environment</label>
-                    <p className={styles.value}>{profile.world.semantic.environment || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Dominant Materials</label>
-                    <p className={styles.value}>{renderArray(profile.world.semantic.dominant_materials)}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Atmosphere</label>
-                    <p className={styles.value}>{profile.world.semantic.atmosphere || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Architectural Tone</label>
-                    <p className={styles.value}>{profile.world.semantic.architectural_tone || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Genre</label>
-                    <p className={styles.value}>{profile.world.semantic.genre || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Mood Baseline</label>
-                    <p className={styles.value}>{profile.world.semantic.mood_baseline || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Palette Bias</label>
-                    <p className={styles.value}>{renderArray(profile.world.semantic.palette_bias)}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Physics</label>
-                    <p className={styles.value}>{profile.world.semantic.physics || 'N/A'}</p>
-                  </div>
-                </div>
-              )}
-
-              {/* Spatial */}
-              {profile.world.spatial && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Spatial</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Light Behavior</label>
-                    <p className={styles.value}>{profile.world.spatial.orientation?.light_behavior || 'N/A'}</p>
-                  </div>
-                </div>
-              )}
-
-              {/* Profile */}
-              {profile.world.profile && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Profile</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Colors & Lighting</label>
-                    <p className={styles.value}>{profile.world.profile.colorsAndLighting || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Symbolic Themes</label>
-                    <p className={styles.value}>{profile.world.profile.symbolicThemes || 'N/A'}</p>
-                  </div>
-                </div>
-              )}
-            </ModalSection>
-          </>
+              <div className={styles.field}>
+                <label className={styles.label}>Perspective</label>
+                <p className={styles.value}>{focus.perspective}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Viewpoint</label>
+                <p className={styles.value}>{focus.viewpoint}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Distance</label>
+                <p className={styles.value}>{focus.distance}</p>
+              </div>
+            </div>
+          </ModalSection>
         )}
 
         {/* ============================================
-            REGION NODE - Optional
-        ============================================ */}
-        {profile.region && (
-          <>
-            <ModalSection title="🗺️ Region" description="Broad area characteristics">
-              {/* Meta */}
-              <div className={styles.subsection}>
-                <h4 className={styles.subsectionTitle}>Meta</h4>
-                <div className={styles.field}>
-                  <label className={styles.label}>Name</label>
-                  <p className={styles.value}>{profile.region.meta?.name || 'N/A'}</p>
-                </div>
-              </div>
-
-              {/* Semantic */}
-              {profile.region.semantic && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Semantic</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Environment</label>
-                    <p className={styles.value}>{profile.region.semantic.environment || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Climate</label>
-                    <p className={styles.value}>{profile.region.semantic.climate || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Weather Pattern</label>
-                    <p className={styles.value}>{profile.region.semantic.weather_pattern || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Architecture Style</label>
-                    <p className={styles.value}>{profile.region.semantic.architecture_style || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Mood</label>
-                    <p className={styles.value}>{profile.region.semantic.mood || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Palette Shift</label>
-                    <p className={styles.value}>{renderArray(profile.region.semantic.palette_shift)}</p>
-                  </div>
-                </div>
-              )}
-
-              {/* Spatial */}
-              {profile.region.spatial && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Spatial</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Dominant View Axis</label>
-                    <p className={styles.value}>{profile.region.spatial.orientation?.dominant_view_axis || 'N/A'}</p>
-                  </div>
-                </div>
-              )}
-
-              {/* Profile */}
-              {profile.region.profile && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Profile</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Colors & Lighting</label>
-                    <p className={styles.value}>{profile.region.profile.colorsAndLighting || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Symbolic Themes</label>
-                    <p className={styles.value}>{profile.region.profile.symbolicThemes || 'N/A'}</p>
-                  </div>
-                </div>
-              )}
-            </ModalSection>
-          </>
-        )}
-
-        {/* ============================================
-            LOCATION NODE - Optional
+            LOCATION NODE - Specific site details
         ============================================ */}
         {profile.location && (
           <>
@@ -409,6 +293,164 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                       </div>
                     </>
                   )}
+                </div>
+              )}
+            </ModalSection>
+          </>
+        )}
+
+        {/* ============================================
+            REGION NODE - Optional
+        ============================================ */}
+        {profile.region && (
+          <>
+            <ModalSection title="🗺️ Region" description="Broad area characteristics">
+              {/* Meta */}
+              <div className={styles.subsection}>
+                <h4 className={styles.subsectionTitle}>Meta</h4>
+                <div className={styles.field}>
+                  <label className={styles.label}>Name</label>
+                  <p className={styles.value}>{profile.region.meta?.name || 'N/A'}</p>
+                </div>
+              </div>
+
+              {/* Semantic */}
+              {profile.region.semantic && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Semantic</h4>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Environment</label>
+                    <p className={styles.value}>{profile.region.semantic.environment || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Climate</label>
+                    <p className={styles.value}>{profile.region.semantic.climate || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Weather Pattern</label>
+                    <p className={styles.value}>{profile.region.semantic.weather_pattern || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Architecture Style</label>
+                    <p className={styles.value}>{profile.region.semantic.architecture_style || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Mood</label>
+                    <p className={styles.value}>{profile.region.semantic.mood || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Palette Shift</label>
+                    <p className={styles.value}>{renderArray(profile.region.semantic.palette_shift)}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Spatial */}
+              {profile.region.spatial && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Spatial</h4>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Dominant View Axis</label>
+                    <p className={styles.value}>{profile.region.spatial.orientation?.dominant_view_axis || 'N/A'}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Profile */}
+              {profile.region.profile && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Profile</h4>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Colors & Lighting</label>
+                    <p className={styles.value}>{profile.region.profile.colorsAndLighting || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Symbolic Themes</label>
+                    <p className={styles.value}>{profile.region.profile.symbolicThemes || 'N/A'}</p>
+                  </div>
+                </div>
+              )}
+            </ModalSection>
+          </>
+        )}
+
+        {/* ============================================
+            WORLD NODE - Always Present
+        ============================================ */}
+        {profile.world && (
+          <>
+            <ModalSection title="🌐 World DNA" description="Global environmental constants">
+              {/* Meta */}
+              <div className={styles.subsection}>
+                <h4 className={styles.subsectionTitle}>Meta</h4>
+                <div className={styles.field}>
+                  <label className={styles.label}>Name</label>
+                  <p className={styles.value}>{profile.world.meta?.name || 'N/A'}</p>
+                </div>
+              </div>
+
+              {/* Semantic */}
+              {profile.world.semantic && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Semantic</h4>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Environment</label>
+                    <p className={styles.value}>{profile.world.semantic.environment || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Dominant Materials</label>
+                    <p className={styles.value}>{renderArray(profile.world.semantic.dominant_materials)}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Atmosphere</label>
+                    <p className={styles.value}>{profile.world.semantic.atmosphere || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Architectural Tone</label>
+                    <p className={styles.value}>{profile.world.semantic.architectural_tone || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Genre</label>
+                    <p className={styles.value}>{profile.world.semantic.genre || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Mood Baseline</label>
+                    <p className={styles.value}>{profile.world.semantic.mood_baseline || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Palette Bias</label>
+                    <p className={styles.value}>{renderArray(profile.world.semantic.palette_bias)}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Physics</label>
+                    <p className={styles.value}>{profile.world.semantic.physics || 'N/A'}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Spatial */}
+              {profile.world.spatial && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Spatial</h4>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Light Behavior</label>
+                    <p className={styles.value}>{profile.world.spatial.orientation?.light_behavior || 'N/A'}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Profile */}
+              {profile.world.profile && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Profile</h4>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Colors & Lighting</label>
+                    <p className={styles.value}>{profile.world.profile.colorsAndLighting || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Symbolic Themes</label>
+                    <p className={styles.value}>{profile.world.profile.symbolicThemes || 'N/A'}</p>
+                  </div>
                 </div>
               )}
             </ModalSection>

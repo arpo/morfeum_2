@@ -2,6 +2,13 @@
  * Spawn Manager Type Definitions
  */
 
+export interface FocusState {
+  node_id: string;
+  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
+  viewpoint: string;
+  distance: 'close' | 'medium' | 'far';
+}
+
 export interface EntitySeed {
   originalPrompt?: string;
   name: string;

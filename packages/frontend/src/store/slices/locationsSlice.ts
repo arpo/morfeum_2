@@ -8,6 +8,14 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { v4 as uuidv4 } from 'uuid';
 
+// Focus state for tracking current view
+export interface FocusState {
+  node_id: string;
+  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
+  viewpoint: string;
+  distance: 'close' | 'medium' | 'far';
+}
+
 // Hierarchical location DNA types (matching backend)
 export interface WorldNode {
   meta: {
@@ -136,6 +144,12 @@ export interface LocationNode {
     airParticles: string;
     fictional: boolean;
     copyright: boolean;
+    viewContext?: {
+      perspective: string;
+      focusTarget: string;
+      distance: string;
+      composition: string;
+    };
   };
   suggestedDestinations: Array<{
     name: string;
@@ -160,6 +174,7 @@ export interface Location {
     location?: LocationNode;
   };
   imagePath: string;
+  focus?: FocusState;
 }
 
 // Location hierarchy with populated children
@@ -196,6 +211,11 @@ interface LocationsState {
   getRootLocation: (world_id: string) => Location;
   getWorldDNA: (world_id: string) => Record<string, any>;
   getLocationHierarchy: () => LocationHierarchyNode[];
+  
+  // Focus management
+  updateLocationFocus: (locationId: string, focus: FocusState) => void;
+  getLocationFocus: (locationId: string) => FocusState | undefined;
+  ensureFocusInitialized: (locationId: string) => void;
 }
 
 export const useLocationsStore = create<LocationsState>()(
@@ -346,6 +366,35 @@ export const useLocationsStore = create<LocationsState>()(
       ...root,
       children: children.filter((child) => child.parent_location_id === root.id),
     }));
+  },
+  
+  // Focus management methods
+  updateLocationFocus: (locationId, focus) => {
+    get().updateLocation(locationId, { focus });
+  },
+  
+  getLocationFocus: (locationId) => {
+    const location = get().locations[locationId];
+    return location?.focus;
+  },
+  
+  ensureFocusInitialized: (locationId) => {
+    const location = get().locations[locationId];
+    if (!location) return;
+    
+    if (!location.focus) {
+      const vc = location.dna?.location?.profile?.viewContext;
+      const locationName = location.dna?.location?.meta?.name ?? location.name;
+      
+      const defaultFocus: FocusState = {
+        node_id: locationName,
+        perspective: (vc?.perspective as FocusState['perspective']) ?? 'exterior',
+        viewpoint: vc?.composition ?? 'default world view',
+        distance: (vc?.distance as FocusState['distance']) ?? 'medium',
+      };
+      
+      get().updateLocation(locationId, { focus: defaultFocus });
+    }
   },
     }),
     {

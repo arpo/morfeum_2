@@ -16,9 +16,17 @@ export interface LocationProfile {
   copyright: boolean;
 }
 
+export interface FocusState {
+  node_id: string;
+  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
+  viewpoint: string;
+  distance: 'close' | 'medium' | 'far';
+}
+
 export interface LocationInfoModalProps {
   locationProfile: LocationProfile | null;
   locationName: string;
+  locationId?: string;
   isOpen: boolean;
   onClose: () => void;
 }

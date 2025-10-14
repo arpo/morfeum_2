@@ -1,11 +1,81 @@
 # Active Context
 
 ## Current Work Focus
-**Location System Performance & Navigation** - Optimized prompts reducing generation time from 17-21s to 13-15s. Added viewContext field for navigation positioning. Fixed World Node generation to always be mandatory. System now ready for world navigation implementation.
+**Focus System for Location Navigation** - Implemented complete focus state tracking system to monitor where user is viewing from in world node tree. Added focus display to LocationInfoModal with reversed hierarchical order (Focus → Location → Region → World). System now tracks perspective, viewpoint, distance, and node_id for future navigation and sub-location generation.
 
 ## Recent Changes
 
-### Location Generation Performance Optimization (Latest - Just Completed)
+### Focus System Implementation (Latest - Just Completed)
+1. **Complete Focus State Tracking System**:
+   - **Purpose**: Track where user is viewing from in world node tree for future navigation and sub-location generation
+   - **FocusState Interface**:
+     ```typescript
+     interface FocusState {
+       node_id: string;           // Current node being viewed
+       perspective: string;        // exterior | interior | aerial | ground-level | elevated | distant
+       viewpoint: string;          // Free-text description of viewer position
+       distance: string;           // close | medium | far
+     }
+     ```
+   - Added to both backend and frontend type systems
+   - Extended Location interface with optional `focus?: FocusState` field
+
+2. **Focus Management Infrastructure**:
+   - **Utility Functions** (`packages/frontend/src/utils/locationFocus.ts`):
+     - `initFocus(location)`: Initialize focus from DNA's viewContext with sensible defaults
+     - `updateFocus(currentFocus, nodeId, updates)`: Create updated focus state immutably
+   - **Store Methods** (`locationsSlice.ts`):
+     - `updateLocationFocus(locationId, focus)`: Update focus state for a location
+     - `getLocationFocus(locationId)`: Retrieve current focus state
+     - `ensureFocusInitialized(locationId)`: Auto-initialize focus from viewContext if missing
+
+3. **LocationInfoModal Enhancements**:
+   - **New Focus Display Section** (🎯 Current Focus):
+     - Displays node_id, perspective, viewpoint, distance
+     - Shows at top of modal for immediate visibility
+     - Falls back to viewContext from DNA if location not saved yet
+   - **Reversed Section Order** for better information hierarchy:
+     ```
+     🎯 Current Focus     (most immediate - where you are now)
+     📍 Location          (specific site details)
+     🗺️ Region           (broader area)
+     🌐 World DNA         (foundational - at bottom)
+     ```
+   - This order flows from most immediate context to most foundational
+
+4. **Display Logic Fix**:
+   - **Problem**: Focus info didn't show for unsaved locations (not in store yet)
+   - **Solution**: Modal now falls back to viewContext in DNA if no saved focus exists
+   - Works for both saved and newly spawned locations
+   - Focus section always displays when viewContext data available
+
+5. **Files Modified (9 total)**:
+   - **Backend (3 files)**:
+     - `packages/backend/src/services/spawn/types.ts` - FocusState interface
+     - `packages/backend/src/prompts/languages/en/index.ts` - Fixed deleted imports
+     - `packages/backend/src/prompts/types.ts` - Fixed types
+   - **Frontend (6 files)**:
+     - `packages/frontend/src/store/slices/locationsSlice.ts` - Focus management methods, viewContext in LocationNode
+     - `packages/frontend/src/utils/locationFocus.ts` - **NEW** utility functions
+     - `packages/frontend/src/features/chat/components/LocationInfoModal/types.ts` - FocusState + locationId
+     - `packages/frontend/src/features/chat/components/LocationInfoModal/LocationInfoModal.tsx` - Display focus + reversed order + viewContext fallback
+     - `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.tsx` - Pass locationId
+     - `packages/frontend/src/features/entity-panel/types.ts` - Added activeChat to base state
+
+6. **Key Benefits Delivered**:
+   - **Navigation Ready**: System now knows where user is viewing from
+   - **Future-Proof**: Foundation for sub-location generation and world navigation
+   - **Better UX**: Information hierarchy flows from immediate to foundational
+   - **Flexible Display**: Works for both saved and unsaved locations
+   - **Type Safety**: Full TypeScript coverage throughout
+
+7. **Quality Verification**:
+   - ✅ **Frontend Build**: Successful (336.83 kB, gzip: 101.87 kB)
+   - ✅ **Backend Build**: Successful (zero TypeScript errors)
+   - ✅ **Focus Display**: Works for both saved and unsaved locations
+   - ✅ **Architecture Compliance**: Follows all project patterns
+
+### Location Generation Performance Optimization (Previously Completed)
 1. **Prompt Optimization for Speed**:
    - **Problem**: Generation time increased from 11-13s to 17-21s after visual anchors addition
    - **Cause**: Verbose prompts with extensive examples and repetitive instructions

@@ -108,6 +108,7 @@ export function LocationPanel() {
       <LocationInfoModal 
         locationProfile={state.deepProfile as any}
         locationName={state.entityName || 'Unknown'}
+        locationId={state.activeChat || undefined}
         isOpen={state.isModalOpen}
         onClose={handlers.closeModal}
       />
