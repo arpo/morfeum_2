@@ -13,7 +13,7 @@ interface FocusContext {
 interface WorldNode {
   id: string;
   name: string;
-  dna: any;
+  searchDesc?: string;
   depth_level: number;
   parent_location_id: string | null;
 }
@@ -32,92 +32,48 @@ export const navigatorSemanticNodeSelector = (
   const currentNodeName = currentNode?.name || 'Unknown location';
   const currentDepth = currentNode?.depth_level || 0;
   
-  // Create summarized node list for context
+  // Create node list with search descriptions for context
   const nodeSummaries = allNodes.map(node => {
-    const looks = node.dna?.location?.profile?.looks || 
-                  node.dna?.region?.profile?.colorsAndLighting || 
-                  node.dna?.world?.profile?.colorsAndLighting || 
-                  'No description available';
-    
-    return `- ${node.name} (ID: ${node.id}, Depth: ${node.depth_level}): ${looks.substring(0, 100)}...`;
+    const desc = node.searchDesc ? `: ${node.searchDesc}` : '';
+    return `- ${node.name}${desc} (ID: ${node.id}, Depth: ${node.depth_level}, Parent: ${node.parent_location_id || 'none'})`;
   }).join('\n');
 
-  return `You are the NavigatorAI for Morfeum — an intelligent spatial guide that connects worlds, regions, and locations.
+  return `NavigatorAI: Match user's navigation command to existing nodes or suggest generating a new one.
 
-Your job:
-Understand where the user wants to go based on their command, and match it to existing world nodes if possible.
+Current: ${currentNodeName} (ID: ${currentFocus.node_id}, Depth: ${currentDepth})
 
-Current focus:
-- Current location: ${currentNodeName}
-- Depth level: ${currentDepth} (0=world, 1=region, 2=location, 3=sub-location)
-- Node ID: ${currentFocus.node_id}
-- Perspective: ${currentFocus.perspective}
-- Viewpoint: ${currentFocus.viewpoint}
-- Distance: ${currentFocus.distance}
+Available nodes:
+${nodeSummaries || '(none)'}
 
-Known nodes in this world:
-${nodeSummaries || '(No nodes available)'}
+User: "${userCommand}"
 
-User command:
-"${userCommand}"
+Node Type Prefixes:
+- [World] = depth 0, top-level world
+- [Region] = depth 1, area within world
+- [Location - Exterior] = depth 2, outside view of place
+- [Location - Interior] = depth 2, inside view of place
+- [Sublocation - Interior] = depth 3+, room/space within location
 
-Analyze the command and decide:
+Rules:
+- If command matches an existing node → action: "move", include targetNodeId
+- If no match → action: "generate", include parentNodeId and hierarchical name
+- Use node type prefixes to understand hierarchy
+- "into/inside/enter" commands → look for Interior nodes or generate sublocation
+- "outside/exit/back" commands → look for parent or Exterior nodes
+- Name format: "[Name] ([level]) of [Parent] ([parent-level])"
+- parentNodeId rules: sublocation = current ID, adjacent/nearby = parent ID, teleport = null
 
-1. **If the command clearly refers to one of the listed nodes** → Return "move" action with the target node ID
-   - Match based on name, description, or spatial context (e.g., "go inside" might mean a sublocation)
-   - Consider hierarchy: child nodes are "inside" or "enter", parent/sibling nodes are "back to" or "go to"
-   
-2. **If no existing node matches** → Return "generate" action with details for creating a new node
-   - Infer what kind of location should exist (world/region/location/sublocation)
-   - Determine spatial relation to current focus (sublocation, adjacent, nearby, teleport)
-   - **CRITICAL**: Generate name using hierarchical syntax:
-     * Format: "[Name] ([level]) of [Parent Name] ([parent-level])"
-     * Example: "The inner chamber (sub-location) of the Lighthouse (location)"
-     * Use flowing, evocative language
-     * Always include the level markers in parentheses
-
-Return ONLY valid JSON in this exact format:
+Return JSON only:
 {
   "action": "move" | "generate",
-  "targetNodeId": "id-of-existing-node" | null,
-  "parentNodeId": "id-of-parent-node-for-new-location" | null,
-  "name": "descriptive-name-if-generating" | null,
+  "targetNodeId": "id" | null,
+  "parentNodeId": "id" | null,
+  "name": "hierarchical name" | null,
   "relation": "sublocation" | "adjacent" | "nearby" | "parent" | "teleport" | null,
-  "reason": "brief 1-sentence explanation of your decision"
+  "reason": "brief explanation"
 }
 
-**Important**: When action is "generate", always include parentNodeId:
-- For "sublocation": parentNodeId = current node ID
-- For "adjacent": parentNodeId = current node's parent ID
-- For "nearby": parentNodeId = current node's parent ID
-- For "teleport": parentNodeId = null (disconnected location)
-
 Examples:
-
-User: "go inside"
-Current node: Lighthouse (exterior)
-Available: Lighthouse Interior (child)
-Response: {"action":"move","targetNodeId":"lighthouse-interior-id","parentNodeId":null,"name":null,"relation":null,"reason":"User wants to enter the building, child node exists"}
-
-User: "back to the beach"
-Current node: Cave Interior
-Available: Moonlit Beach (parent)
-Response: {"action":"move","targetNodeId":"beach-id","parentNodeId":null,"name":null,"relation":null,"reason":"User wants to return to parent location"}
-
-User: "explore the hidden tower"
-Current node: The Forest Clearing (location), ID: forest-clearing-123
-Available: No tower exists
-Response: {"action":"generate","targetNodeId":null,"parentNodeId":"forest-clearing-123","name":"The Hidden Tower (location) near the Forest Clearing (location)","relation":"nearby","reason":"No tower exists in known nodes, creating nearby location"}
-
-User: "go inside"
-Current node: The Lighthouse of Broken Glass (location), ID: lighthouse-456
-Available: No interior exists
-Response: {"action":"generate","targetNodeId":null,"parentNodeId":"lighthouse-456","name":"The inner chamber (sub-location) of the Lighthouse of Broken Glass (location)","relation":"sublocation","reason":"User wants to enter, creating interior sub-location"}
-
-User: "teleport to the crystal caves"
-Current node: Desert Oasis
-Available: Crystal Caves exist
-Response: {"action":"move","targetNodeId":"caves-id","parentNodeId":null,"name":null,"relation":null,"reason":"User wants to jump to distant known location"}
-
-Now process the user's command and return your JSON response:`;
+1. User at exterior, child exists: {"action":"move","targetNodeId":"interior-id","parentNodeId":null,"name":null,"relation":null,"reason":"Found interior sublocation"}
+2. User wants interior, none exists: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"The Inner Chamber (sub-location) of ${currentNodeName} (location)","relation":"sublocation","reason":"Creating interior space"}`;
 };

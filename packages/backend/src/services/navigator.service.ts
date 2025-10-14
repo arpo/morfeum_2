@@ -5,7 +5,7 @@
 
 import * as mzooService from './mzoo.service';
 import { en as prompts } from '../prompts/languages/en';
-import { HTTP_STATUS } from '../config';
+import { HTTP_STATUS, AI_MODELS } from '../config';
 
 interface FocusContext {
   node_id: string;
@@ -17,7 +17,7 @@ interface FocusContext {
 interface WorldNode {
   id: string;
   name: string;
-  dna: any;
+  searchDesc?: string;
   depth_level: number;
   parent_location_id: string | null;
 }
@@ -59,11 +59,15 @@ export const findDestinationNode = async (
       allNodes
     );
 
+    console.log('[NavigatorAI] Prompt size:', prompt.length, 'characters');
+    console.log('[NavigatorAI] Number of nodes:', allNodes.length);
+    console.log('[NavigatorAI] Prompt preview:', prompt.substring(0, 500));
+
     // Call Gemini through MZOO service
     const response = await mzooService.generateText(
       apiKey,
       [{ role: 'user', content: prompt }],
-      'gemini-2.5-flash'
+      AI_MODELS.NAVIGATOR
     );
 
     if (response.error || !response.data) {

@@ -56,7 +56,8 @@ JSON STRUCTURE:
     "spatial": { "orientation": { "light_behavior": "perpetual golden hour | twin moons" } },
     "profile": {
       "colorsAndLighting": "1-3 sentences",
-      "symbolicThemes": "short phrase"
+      "symbolicThemes": "short phrase",
+      "searchDesc": "75-100 chars - MUST start with '[World]' prefix, then describe type/function + key features (e.g., '[World] Coastal megacity with rugged cliffs and stormy seas')"
     }
   },
 
@@ -71,7 +72,11 @@ JSON STRUCTURE:
       "palette_shift": ["regional color slant"]
     },
     "spatial": { "orientation": { "dominant_view_axis": "shoreline sweep | canyon corridor" } },
-    "profile": { "colorsAndLighting": "1-2 sentences", "symbolicThemes": "short phrase" }
+    "profile": { 
+      "colorsAndLighting": "1-2 sentences", 
+      "symbolicThemes": "short phrase",
+      "searchDesc": "75-100 chars - MUST start with '[Region]' prefix, then describe regional type + defining features (e.g., '[Region] Storm-lashed coastal area with dramatic cliffs')"
+    }
   },
 
   "location": {
@@ -134,7 +139,8 @@ JSON STRUCTURE:
         "focusTarget": "main subject being viewed",
         "distance": "close | medium | far",
         "composition": "viewer position and facing direction"
-      }
+      },
+      "searchDesc": "75-100 chars - MUST start with '[Location - Exterior]' or '[Location - Interior]' prefix based on viewContext.perspective, then describe location type + spatial context. If exterior and has interior spaces, mention it (e.g., '[Location - Exterior] Stone lighthouse on cliff edge, has interior chambers')"
     }
   },
 
@@ -191,7 +197,8 @@ JSON STRUCTURE:
         "focusTarget": "main subject being viewed",
         "distance": "close | medium | far",
         "composition": "viewer position and facing direction"
-      }
+      },
+      "searchDesc": "75-100 chars - MUST start with '[Sublocation - Interior]' prefix, then describe what this interior space contains (e.g., '[Sublocation - Interior] Lighthouse chamber with spiral stairs to lantern room')"
     }
   }
 }

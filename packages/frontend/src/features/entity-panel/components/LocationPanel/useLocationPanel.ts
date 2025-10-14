@@ -55,6 +55,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       console.log('[NavigatorAI] Available nodes:', allNodes.length);
       
       // Call NavigatorAI backend endpoint
+      // Only send minimal node data for performance
       const response = await fetch('/api/mzoo/navigator/find-destination', {
         method: 'POST',
         headers: {
@@ -66,7 +67,10 @@ export function useLocationPanel(): LocationPanelLogicReturn {
           allNodes: allNodes.map(node => ({
             id: node.id,
             name: node.name,
-            dna: node.dna,
+            searchDesc: (node.dna?.location?.profile as any)?.searchDesc ||
+                       (node.dna?.region?.profile as any)?.searchDesc ||
+                       (node.dna?.world?.profile as any)?.searchDesc ||
+                       node.name,
             depth_level: node.depth_level,
             parent_location_id: node.parent_location_id
           }))
