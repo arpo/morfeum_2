@@ -11,7 +11,7 @@ interface Client {
 }
 
 interface SpawnEvent {
-  type: 'spawn:seed-complete' | 'spawn:image-complete' | 'spawn:analysis-complete' | 'spawn:profile-complete' | 'spawn:cancelled' | 'spawn:error';
+  type: 'spawn:seed-complete' | 'spawn:image-complete' | 'spawn:analysis-complete' | 'spawn:profile-complete' | 'spawn:cancelled' | 'spawn:error' | 'spawn:sublocation-dna-complete' | 'spawn:sublocation-image-complete' | 'spawn:sublocation-complete';
   data: any;
 }
 

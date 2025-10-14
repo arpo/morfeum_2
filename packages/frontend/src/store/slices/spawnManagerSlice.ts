@@ -9,12 +9,13 @@ export interface SpawnManagerSlice {
   activeSpawns: Map<string, { 
     prompt: string; 
     status: string; 
-    entityType: 'character' | 'location';
+    entityType: 'character' | 'location' | 'sublocation';
   }>;
   
   startSpawn: (
     prompt: string, 
-    entityType?: 'character' | 'location'
+    entityType?: 'character' | 'location' | 'sublocation',
+    metadata?: any
   ) => Promise<string>;
   cancelSpawn: (spawnId: string) => Promise<void>;
   updateSpawnStatus: (spawnId: string, status: string) => void;
@@ -26,15 +27,25 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
 
   startSpawn: async (
     prompt: string, 
-    entityType: 'character' | 'location' = 'character'
+    entityType: 'character' | 'location' | 'sublocation' = 'character',
+    metadata?: any
   ) => {
     try {
-      const response = await fetch('/api/spawn/start', {
+      // Different endpoint for sublocation spawns
+      const endpoint = entityType === 'sublocation' 
+        ? '/api/spawn/sublocation/start' 
+        : '/api/spawn/start';
+      
+      const body = entityType === 'sublocation'
+        ? metadata // For sublocations, metadata contains all required fields
+        : { prompt, entityType };
+      
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ prompt, entityType })
+        body: JSON.stringify(body)
       });
 
       if (!response.ok) {

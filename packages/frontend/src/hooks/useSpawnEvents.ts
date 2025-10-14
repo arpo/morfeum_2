@@ -4,6 +4,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
+import { useLocationsStore } from '@/store/slices/locationsSlice';
 
 export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);
@@ -14,6 +15,9 @@ export function useSpawnEvents() {
   const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
   const updateSpawnStatus = useStore(state => state.updateSpawnStatus);
   const removeSpawn = useStore(state => state.removeSpawn);
+  const setActiveChat = useStore(state => state.setActiveChat);
+  const createLocation = useLocationsStore(state => state.createLocation);
+  const getLocation = useLocationsStore(state => state.getLocation);
 
   useEffect(() => {
     // Connect to SSE endpoint
@@ -143,6 +147,132 @@ export function useSpawnEvents() {
       if (removeSpawn) {
         removeSpawn(spawnId);
       }
+    });
+
+    // Listen for sublocation DNA complete event
+    eventSource.addEventListener('spawn:sublocation-dna-complete', (e) => {
+      const { spawnId, dna, parentNodeId } = JSON.parse(e.data);
+      console.log('[SSE] 🧬 Sublocation DNA generated:', spawnId);
+      
+      // Get parent location to build inherited DNA structure
+      const parentLocation = getLocation(parentNodeId);
+      if (!parentLocation) {
+        console.error('[SSE] ❌ Parent location not found for DNA inheritance:', parentNodeId);
+        return;
+      }
+      
+      console.log('[SSE] 🔍 Building inherited DNA from parent:', parentNodeId);
+      
+      // Build complete inherited DNA structure
+      const inheritedDNA = {
+        world: parentLocation.dna.world,
+        region: parentLocation.dna.region,
+        location: (parentLocation.dna as any).sublocation || parentLocation.dna.location,
+        sublocation: dna
+      };
+      
+      console.log('[SSE] ✅ Preview DNA has world node:', !!inheritedDNA.world);
+      
+      // Create preview immediately with DNA (no image yet)
+      // This switches the preview panel to show the new sublocation
+      if (createChatWithEntity) {
+        const seed = {
+          name: dna.meta.name,
+          looks: dna.profile.looks,
+          atmosphere: dna.profile.atmosphere,
+          mood: dna.profile.mood
+        };
+        createChatWithEntity(spawnId, seed, 'location');
+      }
+      
+      // Store complete inherited DNA in deep profile
+      if (updateChatDeepProfile) {
+        updateChatDeepProfile(spawnId, inheritedDNA as any);
+      }
+      
+      // Switch to this chat immediately
+      if (setActiveChat) {
+        setActiveChat(spawnId);
+        console.log('[SSE] 🎯 Preview switched to sublocation:', spawnId);
+      }
+      
+      if (updateSpawnStatus) {
+        updateSpawnStatus(spawnId, 'generating_image');
+      }
+    });
+
+    // Listen for sublocation image complete event
+    eventSource.addEventListener('spawn:sublocation-image-complete', (e) => {
+      const { spawnId, imageUrl } = JSON.parse(e.data);
+      console.log('[SSE] 🎨 Sublocation image generated:', imageUrl);
+      
+      // Update the preview with the image
+      if (updateChatImage) {
+        updateChatImage(spawnId, imageUrl);
+      }
+      
+      if (updateSpawnStatus) {
+        updateSpawnStatus(spawnId, 'completed');
+      }
+    });
+
+    // Listen for sublocation complete event
+    eventSource.addEventListener('spawn:sublocation-complete', (e) => {
+      const { spawnId, dna, imageUrl, parentNodeId } = JSON.parse(e.data);
+      console.log('[SSE] ✅ Sublocation generation complete:', spawnId);
+      
+      // Get parent location to inherit hierarchy info
+      const parentLocation = getLocation(parentNodeId);
+      if (!parentLocation) {
+        console.error('[SSE] ❌ Parent location not found:', parentNodeId);
+        return;
+      }
+      
+      console.log('[SSE] 🔍 Parent location DNA structure:', parentLocation.dna);
+      
+      // Determine which nodes to inherit
+      // If parent is a sublocation, it already has world/region/location inherited
+      const inheritedDNA = {
+        world: parentLocation.dna.world,
+        region: parentLocation.dna.region,
+        location: (parentLocation.dna as any).sublocation || parentLocation.dna.location,
+        sublocation: dna
+      };
+      
+      console.log('[SSE] 🧬 Creating sublocation with DNA:', inheritedDNA);
+      
+      // Extract clean name (remove the hierarchical suffix)
+      const cleanName = dna.meta.name.split(' (')[0];
+      
+      // Store sublocation in locationsSlice
+      createLocation({
+        id: spawnId,
+        world_id: parentLocation.world_id,
+        parent_location_id: parentNodeId,
+        depth_level: parentLocation.depth_level + 1,
+        name: cleanName, // Use clean name for display
+        dna: inheritedDNA as any,
+        imagePath: imageUrl || '',
+        adjacent_to: [],
+        children: []
+      });
+      
+      console.log('[SSE] 📍 Sublocation stored:', spawnId);
+      console.log('[SSE] 📊 Hierarchy: world_id:', parentLocation.world_id, ', parent:', parentNodeId, ', depth:', parentLocation.depth_level + 1);
+      console.log('[SSE] ✅ Verified DNA has world node:', !!inheritedDNA.world);
+      
+      // Switch active chat to new sublocation
+      if (setActiveChat) {
+        setActiveChat(spawnId);
+        console.log('[SSE] 🎯 Switched to sublocation:', spawnId);
+      }
+      
+      // Remove from active spawns after delay
+      setTimeout(() => {
+        if (removeSpawn) {
+          removeSpawn(spawnId);
+        }
+      }, 2000);
     });
 
     // Cleanup on unmount

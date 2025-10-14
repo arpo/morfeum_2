@@ -76,6 +76,176 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
         )}
 
         {/* ============================================
+            SUBLOCATION NODE - Interior/nested space details
+        ============================================ */}
+        {profile.sublocation && (
+          <>
+            <ModalSection title="🔷 Sublocation" description="Interior/nested space details">
+              {/* Meta */}
+              <div className={styles.subsection}>
+                <h4 className={styles.subsectionTitle}>Meta</h4>
+                <div className={styles.field}>
+                  <label className={styles.label}>Name</label>
+                  <p className={styles.value}>{profile.sublocation.meta?.name || 'N/A'}</p>
+                </div>
+              </div>
+
+              {/* Semantic */}
+              {profile.sublocation.semantic && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Semantic</h4>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Environment</label>
+                    <p className={styles.value}>{profile.sublocation.semantic.environment || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Terrain/Interior</label>
+                    <p className={styles.value}>{profile.sublocation.semantic.terrain_or_interior || 'N/A'}</p>
+                  </div>
+                  {profile.sublocation.semantic.structures && profile.sublocation.semantic.structures.length > 0 && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Structures</label>
+                      <p className={styles.value}>
+                        {profile.sublocation.semantic.structures.map((s: any, i: number) => (
+                          <span key={i}>{`${s.type} (${s.material}, ${s.color}, ${s.condition})`}{i < profile.sublocation.semantic.structures.length - 1 ? '; ' : ''}</span>
+                        ))}
+                      </p>
+                    </div>
+                  )}
+                  <div className={styles.field}>
+                    <label className={styles.label}>Lighting</label>
+                    <p className={styles.value}>{profile.sublocation.semantic.lighting || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Weather/Air</label>
+                    <p className={styles.value}>{profile.sublocation.semantic.weather_or_air || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Atmosphere</label>
+                    <p className={styles.value}>{profile.sublocation.semantic.atmosphere || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Mood</label>
+                    <p className={styles.value}>{profile.sublocation.semantic.mood || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Color Palette</label>
+                    <p className={styles.value}>{renderArray(profile.sublocation.semantic.color_palette)}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Soundscape</label>
+                    <p className={styles.value}>{renderArray(profile.sublocation.semantic.soundscape)}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Spatial */}
+              {profile.sublocation.spatial && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Spatial</h4>
+                  {profile.sublocation.spatial.scale && (
+                    <>
+                      <div className={styles.field}>
+                        <label className={styles.label}>Ceiling Height (m)</label>
+                        <p className={styles.value}>{profile.sublocation.spatial.scale.ceiling_height_m ?? 'N/A'}</p>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>Room Width (m)</label>
+                        <p className={styles.value}>{profile.sublocation.spatial.scale.room_width_m ?? 'N/A'}</p>
+                      </div>
+                    </>
+                  )}
+                  {profile.sublocation.spatial.placement && (
+                    <>
+                      <div className={styles.field}>
+                        <label className={styles.label}>Key Subject Position</label>
+                        <p className={styles.value}>{profile.sublocation.spatial.placement.key_subject_position || 'N/A'}</p>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>Camera Anchor</label>
+                        <p className={styles.value}>{profile.sublocation.spatial.placement.camera_anchor || 'N/A'}</p>
+                      </div>
+                    </>
+                  )}
+                  {profile.sublocation.spatial.connectivity && (
+                    <div className={styles.field}>
+                      <label className={styles.label}>Links To</label>
+                      <p className={styles.value}>{renderArray(profile.sublocation.spatial.connectivity.links_to)}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Profile */}
+              {profile.sublocation.profile && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>Profile</h4>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Looks</label>
+                    <p className={styles.value}>{profile.sublocation.profile.looks || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Colors & Lighting</label>
+                    <p className={styles.value}>{profile.sublocation.profile.colorsAndLighting || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Atmosphere</label>
+                    <p className={styles.value}>{profile.sublocation.profile.atmosphere || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Materials</label>
+                    <p className={styles.value}>{profile.sublocation.profile.materials || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Mood</label>
+                    <p className={styles.value}>{profile.sublocation.profile.mood || 'N/A'}</p>
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Sounds</label>
+                    <p className={styles.value}>{profile.sublocation.profile.sounds || 'N/A'}</p>
+                  </div>
+
+                  {/* Visual Anchors */}
+                  {profile.sublocation.profile.visualAnchors && (
+                    <>
+                      <div className={styles.field}>
+                        <label className={styles.label}>🎯 Dominant Elements</label>
+                        <ul className={styles.list}>
+                          {profile.sublocation.profile.visualAnchors.dominantElements?.map((elem: string, i: number) => (
+                            <li key={i}>{elem}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>📐 Spatial Layout</label>
+                        <p className={styles.value}>{profile.sublocation.profile.visualAnchors.spatialLayout}</p>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>🧱 Surface Materials</label>
+                        <p className={styles.value}>
+                          <strong>Primary:</strong> {profile.sublocation.profile.visualAnchors.surfaceMaterialMap?.primary_surfaces}<br/>
+                          <strong>Secondary:</strong> {profile.sublocation.profile.visualAnchors.surfaceMaterialMap?.secondary_surfaces}<br/>
+                          <strong>Accents:</strong> {profile.sublocation.profile.visualAnchors.surfaceMaterialMap?.accent_features}
+                        </p>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>🎨 Color Mapping</label>
+                        <p className={styles.value}>
+                          <strong>Dominant:</strong> {profile.sublocation.profile.visualAnchors.colorMapping?.dominant}<br/>
+                          <strong>Secondary:</strong> {profile.sublocation.profile.visualAnchors.colorMapping?.secondary}<br/>
+                          <strong>Accent:</strong> {profile.sublocation.profile.visualAnchors.colorMapping?.accent}<br/>
+                          <strong>Ambient:</strong> {profile.sublocation.profile.visualAnchors.colorMapping?.ambient}
+                        </p>
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+            </ModalSection>
+          </>
+        )}
+
+        {/* ============================================
             LOCATION NODE - Specific site details
         ============================================ */}
         {profile.location && (
