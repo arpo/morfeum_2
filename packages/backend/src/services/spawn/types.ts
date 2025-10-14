@@ -93,7 +93,6 @@ export interface WorldNode {
     genre: string;
     mood_baseline: string;
     palette_bias: string[];
-    physics: string;
   };
   spatial: {
     orientation: {
