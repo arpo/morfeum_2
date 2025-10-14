@@ -10,14 +10,11 @@ export interface SpawnManagerSlice {
     prompt: string; 
     status: string; 
     entityType: 'character' | 'location';
-    parentLocationId?: string;
   }>;
   
   startSpawn: (
     prompt: string, 
-    entityType?: 'character' | 'location',
-    parentLocationId?: string,
-    parentWorldDNA?: Record<string, any>
+    entityType?: 'character' | 'location'
   ) => Promise<string>;
   cancelSpawn: (spawnId: string) => Promise<void>;
   updateSpawnStatus: (spawnId: string, status: string) => void;
@@ -29,25 +26,15 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
 
   startSpawn: async (
     prompt: string, 
-    entityType: 'character' | 'location' = 'character',
-    parentLocationId?: string,
-    parentWorldDNA?: Record<string, any>
+    entityType: 'character' | 'location' = 'character'
   ) => {
     try {
-      const body: any = { prompt, entityType };
-      
-      // Add sub-location parameters if provided
-      if (parentLocationId && parentWorldDNA) {
-        body.parentLocationId = parentLocationId;
-        body.parentWorldDNA = parentWorldDNA;
-      }
-      
       const response = await fetch('/api/spawn/start', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify({ prompt, entityType })
       });
 
       if (!response.ok) {
@@ -63,13 +50,12 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
         newSpawns.set(spawnId, { 
           prompt, 
           status: 'starting', 
-          entityType,
-          parentLocationId // Track parent for sub-locations
+          entityType
         });
         return { activeSpawns: newSpawns };
       });
 
-      console.log('[SpawnManager] Started spawn:', spawnId, 'type:', entityType, 'isSubLocation:', !!parentLocationId);
+      console.log('[SpawnManager] Started spawn:', spawnId, 'type:', entityType);
       return spawnId;
     } catch (error) {
       console.error('[SpawnManager] Failed to start spawn:', error);

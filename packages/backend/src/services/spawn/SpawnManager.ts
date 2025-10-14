@@ -25,9 +25,7 @@ export class SpawnManager {
    */
   startSpawn(
     prompt: string, 
-    entityType: 'character' | 'location' = 'character',
-    parentLocationId?: string,
-    parentWorldDNA?: Record<string, any>
+    entityType: 'character' | 'location' = 'character'
   ): string {
     const spawnId = `spawn-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     const abortController = new AbortController();
@@ -38,9 +36,7 @@ export class SpawnManager {
       entityType,
       status: 'generating_seed',
       createdAt: Date.now(),
-      abortController,
-      parentLocationId,
-      parentWorldDNA
+      abortController
     };
 
     this.processes.set(spawnId, process);
@@ -99,20 +95,7 @@ export class SpawnManager {
       }
 
       // Delegate to the entity-specific manager
-      // Pass sub-location parameters if this is a location manager
-      if (process.entityType === 'location' && process.parentLocationId && process.parentWorldDNA) {
-        // Cast to LocationSpawnManager and pass sub-location params
-        await (manager as any).runPipeline(
-          spawnId, 
-          process.prompt, 
-          process.abortController,
-          process.parentLocationId,
-          process.parentWorldDNA
-        );
-      } else {
-        // Standard pipeline for characters and root locations
-        await manager.runPipeline(spawnId, process.prompt, process.abortController);
-      }
+      await manager.runPipeline(spawnId, process.prompt, process.abortController);
 
       // Mark as completed
       process.status = 'completed';

@@ -145,80 +145,6 @@ export interface LocationNode {
   }>;
 }
 
-export interface SublocationNode {
-  meta: {
-    name: string;
-    slug: string;
-  };
-  semantic: {
-    environment: string;
-    terrain_or_interior: string;
-    structures: Array<{
-      type: string;
-      material: string;
-      color: string;
-      condition: string;
-    }>;
-    vegetation: {
-      types: string[];
-      density: string;
-    };
-    fauna: {
-      types: string[];
-      presence: string;
-    };
-    time_of_day: string;
-    lighting: string;
-    weather_or_air: string;
-    atmosphere: string;
-    mood: string;
-    color_palette: string[];
-    soundscape: string[];
-  };
-  spatial: {
-    scale: {
-      ceiling_height_m: number | null;
-      room_length_m: number | null;
-      room_width_m: number | null;
-    };
-    placement: {
-      key_subject_position: string;
-      camera_anchor: string;
-    };
-    orientation: {
-      dominant_view_axis: string;
-    };
-    connectivity: {
-      links_to: string[];
-    };
-  };
-  render: {
-    style: string;
-    camera: string;
-    composition: string;
-    lighting_profile: string;
-    seed: string;
-  };
-  profile: {
-    looks: string;
-    colorsAndLighting: string;
-    atmosphere: string;
-    materials: string;
-    mood: string;
-    sounds: string;
-    symbolicThemes: string;
-    airParticles: string;
-    fictional: boolean;
-    copyright: boolean;
-  };
-  suggestedDestinations: Array<{
-    name: string;
-    action: string;
-    relation: string;
-    slug_hint: string;
-  }>;
-}
-
 // Location interface with hierarchical DNA structure
 export interface Location {
   id: string;
@@ -232,7 +158,6 @@ export interface Location {
     world: WorldNode;
     region?: RegionNode;
     location?: LocationNode;
-    sublocation?: SublocationNode;
   };
   imagePath: string;
 }

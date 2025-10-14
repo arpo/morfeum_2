@@ -3,7 +3,7 @@
  * Pre-parse user prompts to determine intended world depth
  */
 
-export type LocationScope = 'world' | 'region' | 'location' | 'sublocation';
+export type LocationScope = 'world' | 'region' | 'location';
 
 /**
  * Detect the intended scope/depth from user prompt
@@ -11,12 +11,6 @@ export type LocationScope = 'world' | 'region' | 'location' | 'sublocation';
  */
 export function detectScope(prompt: string): LocationScope {
   const lowerPrompt = prompt.toLowerCase();
-
-  // Interior indicators → sublocation
-  // Phrases like "in the", "inside the", "within", etc.
-  if (/\b(in the|inside the?|within the?|beneath the?|under the?)\b/i.test(prompt)) {
-    return 'sublocation';
-  }
 
   // Named place types → location
   // Specific structures/sites that are distinct entities
@@ -80,22 +74,15 @@ export function guardLocationDepth(result: any, scope: LocationScope): any {
       // Only world allowed
       delete guarded.region;
       delete guarded.location;
-      delete guarded.sublocation;
       break;
       
     case 'region':
       // World + region allowed
       delete guarded.location;
-      delete guarded.sublocation;
       break;
       
     case 'location':
       // World + region + location allowed
-      delete guarded.sublocation;
-      break;
-      
-    case 'sublocation':
-      // All layers allowed
       break;
   }
 

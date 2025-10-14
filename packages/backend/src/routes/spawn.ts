@@ -57,7 +57,7 @@ router.get('/events', (req: Request, res: Response) => {
  * POST /api/spawn/start - Start a new spawn process
  */
 router.post('/start', asyncHandler(async (req: Request, res: Response) => {
-  const { prompt, entityType = 'character', parentLocationId, parentWorldDNA } = req.body;
+  const { prompt, entityType = 'character' } = req.body;
 
   if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -77,25 +77,14 @@ router.post('/start', asyncHandler(async (req: Request, res: Response) => {
     return;
   }
 
-  // Validate sub-location parameters
-  if (parentLocationId && !parentWorldDNA) {
-    res.status(HTTP_STATUS.BAD_REQUEST).json({
-      message: 'Parent World DNA required',
-      error: 'parentWorldDNA must be provided when creating sub-location',
-      timestamp: new Date().toISOString(),
-    });
-    return;
-  }
-
   const spawnManager = getSpawnManager((req as any).mzooApiKey);
-  const spawnId = spawnManager.startSpawn(prompt.trim(), entityType, parentLocationId, parentWorldDNA);
+  const spawnId = spawnManager.startSpawn(prompt.trim(), entityType);
 
   res.status(HTTP_STATUS.OK).json({
     message: 'Spawn process started',
     data: { 
       spawnId, 
-      entityType,
-      isSubLocation: !!parentLocationId 
+      entityType
     },
     timestamp: new Date().toISOString(),
   });

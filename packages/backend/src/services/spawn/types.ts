@@ -51,7 +51,7 @@ export interface DeepProfile {
 export interface LocationSeed {
   originalPrompt?: string;
   classification?: {
-    primarySubject: 'world' | 'region' | 'location' | 'sublocation';
+    primarySubject: 'world' | 'region' | 'location';
     targetName: string;
     context?: string;
   };
@@ -207,86 +207,10 @@ export interface LocationNode {
   }>;
 }
 
-export interface SublocationNode {
-  meta: {
-    name: string;
-  };
-  semantic: {
-    environment: string;
-    terrain_or_interior: string;
-    structures: Array<{
-      type: string;
-      material: string;
-      color: string;
-      condition: string;
-    }>;
-    vegetation: {
-      types: string[];
-      density: string;
-    };
-    fauna: {
-      types: string[];
-      presence: string;
-    };
-    time_of_day: string;
-    lighting: string;
-    weather_or_air: string;
-    atmosphere: string;
-    mood: string;
-    color_palette: string[];
-    soundscape: string[];
-  };
-  spatial: {
-    scale: {
-      ceiling_height_m: number | null;
-      room_length_m: number | null;
-      room_width_m: number | null;
-    };
-    placement: {
-      key_subject_position: string;
-      camera_anchor: string;
-    };
-    orientation: {
-      dominant_view_axis: string;
-    };
-    connectivity: {
-      links_to: string[];
-    };
-  };
-  render: {
-    camera: {
-      framing_distance: string;
-      angle: string;
-      composition_bias: string;
-      height: string;
-      perspective?: string;
-      depth_cues?: string;
-    };
-  };
-  profile: {
-    looks: string;
-    colorsAndLighting: string;
-    atmosphere: string;
-    materials: string;
-    mood: string;
-    sounds: string;
-    symbolicThemes: string;
-    airParticles: string;
-    fictional: boolean;
-    copyright: boolean;
-  };
-  suggestedDestinations: Array<{
-    name: string;
-    action: string;
-    relation: string;
-  }>;
-}
-
 export interface LocationDeepProfile {
   world: WorldNode;
   region?: RegionNode;
   location?: LocationNode;
-  sublocation?: SublocationNode;
 }
 
 export interface MovementContext {
@@ -314,6 +238,4 @@ export interface SpawnProcess {
   createdAt: number;
   abortController: AbortController;
   movementContext?: MovementContext;
-  parentLocationId?: string;
-  parentWorldDNA?: Record<string, any>;
 }

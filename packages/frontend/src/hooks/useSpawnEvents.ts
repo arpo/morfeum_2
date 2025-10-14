@@ -87,29 +87,17 @@ export function useSpawnEvents() {
 
     // Listen for profile complete event
     eventSource.addEventListener('spawn:profile-complete', (e) => {
-      const { spawnId, deepProfile, enhancedSystemPrompt, entityType, isSubLocation } = JSON.parse(e.data);
-      
-      // Check if this is a sub-location by looking at activeSpawns
-      const spawnInfo = activeSpawns.get(spawnId);
-      const isActuallySubLocation = isSubLocation || !!spawnInfo?.parentLocationId;
+      const { spawnId, deepProfile, enhancedSystemPrompt, entityType } = JSON.parse(e.data);
       
       // Log hierarchical location structure (locations only)
       if (entityType === 'location') {
-        if (isActuallySubLocation) {
-          console.log('🏛️ Sub-Location Generated (inherits World DNA from parent)');
-          console.log('📍 Deep Profile:', deepProfile);
-        } else {
-          console.log('🌍 Root Location Generated with Hierarchical DNA:');
-          console.log('  🌐 World Node:', deepProfile.world);
-          if (deepProfile.region) {
-            console.log('  🗺️ Region Node:', deepProfile.region);
-          }
-          if (deepProfile.location) {
-            console.log('  📍 Location Node:', deepProfile.location);
-          }
-          if (deepProfile.sublocation) {
-            console.log('  🚪 Sublocation Node:', deepProfile.sublocation);
-          }
+        console.log(' Location Generated with Hierarchical DNA:');
+        console.log('  🌐 World Node:', deepProfile.world);
+        if (deepProfile.region) {
+          console.log('  🗺️ Region Node:', deepProfile.region);
+        }
+        if (deepProfile.location) {
+          console.log('  📍 Location Node:', deepProfile.location);
         }
       }
       
