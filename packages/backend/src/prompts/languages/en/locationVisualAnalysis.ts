@@ -7,16 +7,20 @@ export const locationVisualAnalysis = (
   looks: string,
   atmosphere: string,
   mood: string
-) => `You are a visual analyst describing a location image from Morfeum.
+) => `
+
+You are a visual analyst describing a location image from Morfeum.
 
 Given the image and the seed context below, describe what is visually observable in detailed, factual sentences.
+Be objective and precise — describe what is seen, not what might exist beyond the frame.
 
+Context:
 Location: ${name}
 Looks: ${looks}
 Atmosphere: ${atmosphere}
 Mood: ${mood}
 
-IMPORTANT: Return ONLY a valid JSON object with these exact keys:
+Return ONLY a valid JSON object with these exact keys:
 {
   "looks": "...",
   "colorsAndLighting": "...",
@@ -40,43 +44,86 @@ IMPORTANT: Return ONLY a valid JSON object with these exact keys:
       "ambient": "..."
     },
     "uniqueIdentifiers": ["...", "..."]
+  },
+  "viewContext": {
+    "perspective": "exterior | interior | aerial | ground-level | elevated | distant",
+    "focusTarget": "main subject or area being viewed (e.g., lighthouse, dome interior, street, skyline)",
+    "distance": "close | medium | far",
+    "composition": "brief factual note describing viewer position and what they are facing (e.g., 'viewer standing on beach facing lighthouse and moon')"
   }
 }
 
-Do not include any markdown formatting, code blocks, or explanatory text.
+Do not include markdown, code blocks, commentary, or explanations.
 Return only the JSON object.
 
-[looks] 4-6 sentences: spatial layout, scale, architecture, nature, materials, light interaction, focal points.
+-----------------------------------------
+FIELD DEFINITIONS
+-----------------------------------------
 
-[colorsAndLighting] 2-4 sentences: dominant colors, contrasts, light quality, gradients, shadows.
+[looks]  
+4–6 sentences: describe visible spatial layout, scale, architecture, nature, materials, light interaction, and focal points.  
+Mention how light interacts with major forms (reflection, diffusion, glow).
 
-[atmosphere] 3-5 sentences: visual atmosphere (fog/mist/haze), temperature feel, environmental effects, luminosity.
+[colorsAndLighting]  
+2–4 sentences: describe dominant colors, contrast, and light quality (warm/cool, hard/soft).  
+Include gradient behavior or any directional lighting cues.
 
-[vegetation] 2-4 sentences: types, density, colors, interaction with structures. If none: "None" + reason.
+[atmosphere]  
+3–5 sentences: describe visible atmospheric qualities (fog, mist, haze, air clarity, humidity).  
+Mention luminosity, motion, and depth visibility.
 
-[architecture] 2-4 sentences: style, materials, scale, condition, spatial organization. If none: "None" + reason.
+[vegetation]  
+2–4 sentences: describe plants, density, coloration, and how they interact with light or architecture.  
+If none visible, return "None" and explain briefly why.
 
-[animals] 1-3 sentences: types, behaviors. If none: "None".
+[architecture]  
+2–4 sentences: describe visible structures — style, materials, scale, and condition.  
+If none visible, return "None" and explain briefly why.
 
-[mood] 2-3 sentences: emotional tone visitor would feel.
+[animals]  
+1–3 sentences: describe any visible creatures, birds, or traces of movement.  
+If none visible, return "None."
 
-[visualAnchors] CRITICAL for reproducibility - be specific with measurements/positions.
+[mood]  
+2–3 sentences: describe the emotional tone conveyed by lighting, color, and composition, as it would feel to a visitor.
 
-[dominantElements] 3-5 prominent elements with size/position (e.g., "circular skylight, 15m diameter, centered").
+-----------------------------------------
+VISUAL ANCHORS (CRITICAL FOR CONSISTENCY)
+-----------------------------------------
 
-[spatialLayout] 2-4 sentences: shape, dimensions, entry points, focal centers, organization.
+[visualAnchors]
+- [dominantElements]  
+  3–5 key elements with size/position (e.g., “cylindrical tower ~80m tall on left cliff, large moon at upper right”)
+- [spatialLayout]  
+  2–4 sentences describing geometry and framing (foreground, midground, background, subject alignment)
+- [surfaceMaterialMap]  
+  Map visible textures and surfaces:
+  - primary_surfaces: major structural or terrain materials
+  - secondary_surfaces: support or filler materials
+  - accent_features: small luminous, reflective, or decorative details
+- [colorMapping]  
+  - dominant: main color + where it appears  
+  - secondary: supporting tones and regions  
+  - accent: highlights, glows, or contrasting points  
+  - ambient: overall light tone or environmental hue
+- [uniqueIdentifiers]  
+  2–4 distinct features that make this location unmistakable.
 
-[surfaceMaterialMap] Map materials to surfaces:
-- primary_surfaces: main structural materials with location
-- secondary_surfaces: supporting materials
-- accent_features: decorative/functional details
+-----------------------------------------
+VIEW CONTEXT (SCENE POSITION)
+-----------------------------------------
 
-[colorMapping] Map colors to locations:
-- dominant: primary color + coverage area
-- secondary: secondary color + location
-- accent: accent colors + specific placement
-- ambient: overall light tone
+[viewContext]
+- [perspective] classify viewer vantage: exterior, interior, aerial, ground-level, elevated, or distant.  
+- [focusTarget] identify the main subject or region the viewer is facing.  
+- [distance] close, medium, or far relative to the main subject.  
+- [composition] one concise, factual sentence describing the viewpoint (e.g., “camera positioned at beach level looking toward lighthouse and moon”).
 
-[uniqueIdentifiers] 2-4 distinctive details that make location instantly recognizable.
+Guidelines:
+- Describe what is *visible* and spatially inferable, not hypothetical lore.  
+- Use quantitative cues when possible (“~50m tall tower”, “moon occupying upper right quadrant”).  
+- Stay consistent in tone and field naming.  
+- Be concise but vivid; favor factual spatial clarity over prose style.
 
-Guidelines: Be specific ("three walkways at 8m height" not "multiple walkways"). Only describe visible details from image.`;
+
+`;

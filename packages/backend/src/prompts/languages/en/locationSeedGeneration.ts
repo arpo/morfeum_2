@@ -63,34 +63,45 @@ Field hints:
 - [mood]:
   - Concise emotional tone a visitor would feel (tense, serene, lonely, electric).
 
-- [renderInstructions]:
-  - Write one short, precise sentence describing only the **camera geometry**:
-    • framing distance (close / medium / wide / establishing / panoramic)
-    • camera angle (low / high / tilted / oblique / top-down)
-    • composition bias (centered / left / right / diagonal / asymmetrical / off-balance)
-    • relative height or perspective (ground-level / eye-level / elevated / aerial)
-    • optional depth cues (foreground framing / layered depth / leading lines / vanishing point)
-  - Do not include lighting, color, or mood — those are defined elsewhere.
-  - Prioritize spatial depth, rhythm, and perspective over symmetry.
+✦ [renderInstructions] — Revised for Dynamic Composition
 
-  ✦ Updated Camera Geometry Prompts  
-  Keep them short, one sentence each.
+Goal: Generate camera geometry that feels lived-in and cinematic — prioritizing tension, diagonal flow, and spatial rhythm over symmetry or centering.
 
-  • "wide landscape shot, low vantage, diagonal composition with strong leading lines"  
-  • "aerial 45° oblique view, layered terrain with sweeping diagonal layout"  
-  • "elevated perspective, centered vanishing point, receding depth through valley"  
-  • "ground-level framing, slight upward tilt, asymmetrical composition with foreground foliage"  
-  • "interior wide shot, low angle, right offset through doorway framing"  
-  • "panoramic view, gentle horizon curve, balanced asymmetry"  
-  • "medium-wide interior view, diagonal depth through repeating columns"  
-  • "drone shot, angled 30° down, dynamic layout with crossing lines"  
-  • "wide establishing frame, off-center balance, layered architecture depth"  
-  • "low three-quarter angle, diagonal layout guiding eye through midground"
+Write one short, precise sentence describing only the camera geometry:
+Include:
+• framing distance (close / medium / wide / establishing / panoramic)
+• camera angle (low / high / tilted / oblique / off-axis)
+• composition bias (left / right / diagonal / offset / foreground-weighted)
+• relative height or perspective (ground-level / elevated / aerial / eye-level)
+• optional depth cues (foreground framing / occlusion / parallax / leading lines / layered planes)
 
-  ✦ Tips for Keeping Shots Alive  
-  • Use diagonals, layering, or framing elements (doorways, trees, railings) to add dimension.  
-  • Avoid static symmetry unless shooting formal architecture.  
-  • Alternate between compressed (telephoto) and expanded (wide) perspectives to create visual rhythm.
+Avoid: phrases like centered, perfect symmetry, directly facing, or eye-level balance.
+
+Favor: diagonals, partial obstructions, asymmetrical framing, near/far contrasts, lens compression or expansion, and environmental intrusion (vines, railings, shadows).
+
+✦ Updated Camera Geometry Examples
+
+• “low three-quarter angle, diagonal layout with strong foreground occlusion and receding arches”
+• “elevated side vantage, wide framing, layered trees forming asymmetrical tunnel toward distant portal”
+• “ground-level shot, oblique axis, right-weighted composition with glowing crystals leading into depth”
+• “medium-wide view, slight tilt, framed between trunks with diagonal rhythm through walkway”
+• “aerial 45° off-axis angle, sweeping lines converging into misty focal point”
+• “wide architectural view, skewed symmetry broken by foreground branches and uneven lighting falloff”
+• “telephoto compression, layered columns creating rhythmic parallax, off-center horizon line”
+
+✦ Practical Prompts for Variation
+
+When you want to break the static frame, add:
+
+“off-axis” or “three-quarter angle”
+
+“foreground obstruction” or “partial frame intrusion”
+
+“diagonal vanishing line”
+
+“lens compression” (for telephoto) or “expanded perspective” (for wide)
+
+“handheld feel” or “imperfect horizon” (for natural energy)
 
 
 If details are missing, infer cinematic defaults.

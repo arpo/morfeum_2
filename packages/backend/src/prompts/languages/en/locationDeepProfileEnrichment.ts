@@ -4,7 +4,7 @@
  * Output: JSON with world + optional region/location/sublocation
  * 
  * Rules:
- * - Always create NEW WORLD
+ * - WORLD NODE IS MANDATORY - ALWAYS CREATE IT
  * - NO render/time_of_day/suggestedDestinations (handled separately)
  * - Sound LOCAL only (location/sublocation)
  * - Follow seed classification strictly
@@ -19,15 +19,20 @@ export const generateNewWorldDNA = (
 
 Interpret user's description into structured DNA.
 
+⚠️ CRITICAL: WORLD NODE IS MANDATORY - YOU MUST ALWAYS CREATE IT ⚠️
+
 CLASSIFICATION (use seed's classification field):
 - primarySubject="world" → WORLD only
 - primarySubject="region" → WORLD + REGION
 - primarySubject="location" → WORLD + (REGION if implied) + LOCATION
 - primarySubject="sublocation" → WORLD + (REGION if implied) + LOCATION + SUBLOCATION
 
+NOTE: Even if user asks for just a location or room, you MUST infer and create the world context.
+Example: "a bar" → infer urban world + create WORLD + LOCATION
+
 FALLBACK:
-- Structure/building name → LOCATION
-- Room/space within structure → SUBLOCATION
+- Structure/building name → infer world context → WORLD + LOCATION
+- Room/space within structure → infer world + parent → WORLD + LOCATION + SUBLOCATION
 - City/realm name → WORLD or REGION
 
 NAMES: Preserve user names exactly. Use descriptive labels if unnamed (e.g., "waterfront district").
@@ -123,6 +128,12 @@ JSON STRUCTURE:
           "ambient": "overall light tone"
         },
         "uniqueIdentifiers": ["2-4 distinctive visual fingerprints"]
+      },
+      "viewContext": {
+        "perspective": "exterior | interior | aerial | ground-level | elevated | distant",
+        "focusTarget": "main subject being viewed",
+        "distance": "close | medium | far",
+        "composition": "viewer position and facing direction"
       }
     }
   },
@@ -174,6 +185,12 @@ JSON STRUCTURE:
           "ambient": "overall light tone"
         },
         "uniqueIdentifiers": ["2-4 distinctive visual fingerprints"]
+      },
+      "viewContext": {
+        "perspective": "exterior | interior | aerial | ground-level | elevated | distant",
+        "focusTarget": "main subject being viewed",
+        "distance": "close | medium | far",
+        "composition": "viewer position and facing direction"
       }
     }
   }
@@ -181,9 +198,11 @@ JSON STRUCTURE:
 
 RULES:
 - JSON only, no markdown
+- WORLD node is MANDATORY - never omit it
 - Preserve user names
 - NO render/time_of_day/suggestedDestinations
 - Maintain continuity with seed + vision
+- If world context unclear, infer from visual analysis (architecture style, atmosphere, genre)
 
 User: ${originalPrompt}
 Seed: ${seedJson}

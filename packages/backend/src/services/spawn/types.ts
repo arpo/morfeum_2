@@ -45,6 +45,12 @@ export interface LocationVisualAnalysis {
   animals: string;
   mood: string;
   visualAnchors: VisualAnchors;
+  viewContext: {
+    perspective: string;
+    focusTarget: string;
+    distance: string;
+    composition: string;
+  };
 }
 
 export interface DeepProfile {
@@ -186,6 +192,12 @@ export interface LocationNode {
     fictional: boolean;
     copyright: boolean;
     visualAnchors: VisualAnchors;
+    viewContext: {
+      perspective: string;
+      focusTarget: string;
+      distance: string;
+      composition: string;
+    };
   };
 }
 
