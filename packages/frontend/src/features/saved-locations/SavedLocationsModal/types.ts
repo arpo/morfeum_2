@@ -1,4 +1,4 @@
-import type { Location } from '@/store/slices/locationsSlice';
+import type { Node } from '@/store/slices/locationsSlice';
 import type { Character } from '@/store/slices/charactersSlice';
 
 export type EntityTab = 'characters' | 'locations';
@@ -11,15 +11,15 @@ export interface SavedEntitiesModalProps {
 export interface SavedEntitiesLogicReturn {
   activeTab: EntityTab;
   setActiveTab: (tab: EntityTab) => void;
-  locations: Location[];
+  locations: Node[];
   characters: Character[];
   pinnedLocationIds: string[];
   pinnedCharacterIds: string[];
-  handleLoadLocation: (location: Location) => void;
+  handleLoadLocation: (node: Node) => void;
   handleLoadCharacter: (character: Character) => void;
   handleDeleteLocation: (locationId: string) => void;
   handleDeleteCharacter: (characterId: string) => void;
   handlePinLocation: (locationId: string) => void;
   handlePinCharacter: (characterId: string) => void;
-  handleCopyWorldInfo: (location: Location) => void;
+  handleCopyWorldInfo: (node: Node) => void;
 }

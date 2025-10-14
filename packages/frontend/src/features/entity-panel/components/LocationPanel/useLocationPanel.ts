@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
 import { useStore } from '@/store';
 import { useEntityPanelBase } from '../../hooks/useEntityPanelBase';
 import type { LocationPanelLogicReturn } from './types';
@@ -14,11 +14,12 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   const [isMoving, setIsMoving] = useState(false);
   const [createImage, setCreateImage] = useState(true);
   
-  const createLocation = useLocationsStore(state => state.createLocation);
-  const getLocation = useLocationsStore(state => state.getLocation);
-  const getAllLocations = useLocationsStore(state => state.getAllLocations);
-  const getLocationsByWorld = useLocationsStore(state => state.getLocationsByWorld);
-  const updateLocationFocus = useLocationsStore(state => state.updateLocationFocus);
+  // New tree-based methods
+  const getNode = useLocationsStore(state => state.getNode);
+  const getSpatialNodes = useLocationsStore(state => state.getSpatialNodes);
+  const updateNodeFocus = useLocationsStore(state => state.updateNodeFocus);
+  const getCascadedDNA = useLocationsStore(state => state.getCascadedDNA);
+  const getWorldTree = useLocationsStore(state => state.getWorldTree);
   const startSpawn = useStore(state => state.startSpawn);
   const setActiveChat = useStore(state => state.setActiveChat);
 
@@ -36,37 +37,42 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     try {
       setIsMoving(true);
       
-      // Auto-save current location if not saved
-      let currentLocation = getLocation(base.activeChat);
-      if (!currentLocation && base.activeChatSession?.deepProfile) {
-        console.log('[useLocationPanel] ⚠️ Location not saved, saving now...');
+      // Get current node
+      let currentNode = getNode(base.activeChat);
+      if (!currentNode && base.activeChatSession?.deepProfile) {
+        console.log('[useLocationPanel] ⚠️ Node not saved, saving now...');
         saveLocation();
-        // Get the newly saved location
-        currentLocation = getLocation(base.activeChat);
+        currentNode = getNode(base.activeChat);
       }
       
-      if (!currentLocation) {
-        console.warn('[useLocationPanel] Cannot travel: current location not found');
+      if (!currentNode) {
+        console.warn('[useLocationPanel] Cannot travel: current node not found');
         return;
       }
       
-      console.log('[useLocationPanel] 🔍 Current location DNA:', currentLocation.dna);
-      console.log('[useLocationPanel] 🌐 Has world DNA:', !!currentLocation.dna.world);
+      console.log('[useLocationPanel] 🔍 Current node:', currentNode.name, '(', currentNode.type, ')');
+      
+      // Get cascaded DNA for current node
+      const cascadedDNA = getCascadedDNA(currentNode.id);
+      console.log('[useLocationPanel] 🌐 Cascaded DNA:', cascadedDNA);
       
       // Initialize focus if missing
-      const currentFocus = currentLocation.focus || initFocus(currentLocation);
+      const currentFocus = currentNode.focus || {
+        node_id: currentNode.name,
+        perspective: 'exterior' as const,
+        viewpoint: 'default view',
+        distance: 'medium' as const,
+      };
       
-      // Get all nodes in this world
-      const worldId = currentLocation.world_id;
-      const allNodes = getLocationsByWorld(worldId);
+      // Get spatially connected nodes (ancestors, siblings, children)
+      const spatialNodes = getSpatialNodes(currentNode.id);
       
       console.log('[NavigatorAI] Finding destination...');
       console.log('[NavigatorAI] Command:', movementInput.trim());
       console.log('[NavigatorAI] Current focus:', currentFocus);
-      console.log('[NavigatorAI] Available nodes:', allNodes.length);
+      console.log('[NavigatorAI] Spatial nodes:', spatialNodes.length);
       
-      // Call NavigatorAI backend endpoint
-      // Only send minimal node data for performance
+      // Call NavigatorAI backend endpoint with spatial filtering
       const response = await fetch('/api/mzoo/navigator/find-destination', {
         method: 'POST',
         headers: {
@@ -75,16 +81,22 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         body: JSON.stringify({
           userCommand: movementInput.trim(),
           currentFocus,
-          allNodes: allNodes.map(node => ({
-            id: node.id,
-            name: node.name,
-            searchDesc: (node.dna?.location?.profile as any)?.searchDesc ||
-                       (node.dna?.region?.profile as any)?.searchDesc ||
-                       (node.dna?.world?.profile as any)?.searchDesc ||
-                       node.name,
-            depth_level: node.depth_level,
-            parent_location_id: node.parent_location_id
-          }))
+          allNodes: spatialNodes.map(node => {
+            // Extract searchDesc from node's DNA based on type
+            let searchDesc = node.name;
+            const dna = node.dna as any;
+            
+            if (dna.profile?.searchDesc) {
+              searchDesc = dna.profile.searchDesc;
+            }
+            
+            return {
+              id: node.id,
+              name: node.name,
+              searchDesc,
+              type: node.type,
+            };
+          })
         })
       });
       
@@ -100,97 +112,104 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       console.log('[NavigatorAI] Result:', navigation);
       
       if (navigation.action === 'move' && navigation.targetNodeId) {
-        // Move to existing location
-        const targetLocation = getLocation(navigation.targetNodeId);
-        if (targetLocation) {
+        // Move to existing node
+        const targetNode = getNode(navigation.targetNodeId);
+        if (targetNode) {
           console.log('[NavigatorAI] 🚀 Moving to:', {
-            name: targetLocation.name,
+            name: targetNode.name,
+            type: targetNode.type,
             id: navigation.targetNodeId,
             reason: navigation.reason
           });
           
-          // Update focus to target location
+          // Update focus to target node
           const newFocus = updateFocus(currentFocus, navigation.targetNodeId, {
             perspective: 'exterior' // Default, could be inferred from command
           });
-          updateLocationFocus(navigation.targetNodeId, newFocus);
+          updateNodeFocus(navigation.targetNodeId, newFocus);
           
-          // Switch active chat to target location
+          // Switch active chat to target node
           setActiveChat(navigation.targetNodeId);
-          console.log('[NavigatorAI] ✅ Switched to location:', navigation.targetNodeId);
+          console.log('[NavigatorAI] ✅ Switched to node:', navigation.targetNodeId);
         } else {
-          console.warn('[NavigatorAI] ❌ Target location not found:', navigation.targetNodeId);
+          console.warn('[NavigatorAI] ❌ Target node not found:', navigation.targetNodeId);
         }
       } else if (navigation.action === 'generate') {
-        // Check depth limit
-        if (currentLocation.depth_level >= 5) {
-          console.error('[NavigatorAI] ❌ Max depth reached (5). Cannot create deeper sublocations.');
+        // Get parent node
+        const parentNode = getNode(navigation.parentNodeId);
+        if (!parentNode) {
+          console.error('[NavigatorAI] ❌ Parent node not found:', navigation.parentNodeId);
           return;
         }
         
-        // Get parent location
-        const parentLocation = getLocation(navigation.parentNodeId);
-        if (!parentLocation) {
-          console.error('[NavigatorAI] ❌ Parent location not found:', navigation.parentNodeId);
-          return;
+        // Validate parent is in same world tree (prevent cross-world generation)
+        const parentCascaded = getCascadedDNA(navigation.parentNodeId);
+        
+        // Both current and parent must have world DNA, and they must be the same world
+        if (!cascadedDNA.world || !parentCascaded.world) {
+          console.error('[NavigatorAI] ❌ Missing world DNA, using current node as parent');
+          navigation.parentNodeId = currentNode.id;
+        } else if (cascadedDNA.world.meta.name !== parentCascaded.world.meta.name) {
+          console.error('[NavigatorAI] ❌ Parent node is in different world tree, using current node as parent');
+          console.log('[NavigatorAI] Current world:', cascadedDNA.world.meta.name);
+          console.log('[NavigatorAI] Parent world:', parentCascaded.world.meta.name);
+          navigation.parentNodeId = currentNode.id;
         }
         
-        const parentDNA = parentLocation.dna;
+        // Get cascaded DNA from parent for context building
+        const parentCascadedDNA = getCascadedDNA(navigation.parentNodeId);
         
-        // Determine which node to use as the immediate parent
-        // If parent has sublocation, use that; otherwise use location
-        const immediateParent = (parentDNA as any).sublocation || parentDNA.location;
+        // Build cascaded context from parent's DNA tree
+        const cascadedContext: any = {};
         
-        // Extract visual context from world (base layer) - safely access
-        const worldNode = parentDNA.world;
-        if (!worldNode) {
-          console.error('[NavigatorAI] ❌ Parent location missing world DNA');
-          console.error('[NavigatorAI] 🔍 Parent DNA structure:', parentDNA);
-          console.error('[NavigatorAI] 📍 Parent location:', parentLocation);
-          return;
+        // Extract world context
+        if (parentCascadedDNA.world) {
+          cascadedContext.environment = parentCascadedDNA.world.semantic?.environment || '';
+          cascadedContext.dominant_materials = parentCascadedDNA.world.semantic?.dominant_materials || [];
+          cascadedContext.atmosphere = parentCascadedDNA.world.semantic?.atmosphere || '';
+          cascadedContext.architectural_tone = parentCascadedDNA.world.semantic?.architectural_tone || '';
+          cascadedContext.genre = parentCascadedDNA.world.semantic?.genre || '';
+          cascadedContext.mood_baseline = parentCascadedDNA.world.semantic?.mood_baseline || '';
+          cascadedContext.palette_bias = parentCascadedDNA.world.semantic?.palette_bias || [];
+          cascadedContext.colorsAndLighting = parentCascadedDNA.world.profile?.colorsAndLighting || '';
         }
         
-        const worldContext = {
-          environment: worldNode.semantic?.environment || '',
-          dominant_materials: worldNode.semantic?.dominant_materials || [],
-          atmosphere: worldNode.semantic?.atmosphere || '',
-          architectural_tone: worldNode.semantic?.architectural_tone || '',
-          genre: worldNode.semantic?.genre || '',
-          mood_baseline: worldNode.semantic?.mood_baseline || '',
-          palette_bias: worldNode.semantic?.palette_bias || [],
-          colorsAndLighting: worldNode.profile?.colorsAndLighting || ''
-        };
-        
-        // Cascade with region (if exists) - overrides world
-        const cascadedContext: any = { ...worldContext };
-        
-        if (parentDNA.region) {
-          cascadedContext.environment = parentDNA.region.semantic?.environment || cascadedContext.environment;
-          cascadedContext.climate = parentDNA.region.semantic?.climate;
-          cascadedContext.weather = parentDNA.region.semantic?.weather_pattern;
-          cascadedContext.architecture = parentDNA.region.semantic?.architecture_style;
-          cascadedContext.mood = parentDNA.region.semantic?.mood || worldContext.mood_baseline;
-          cascadedContext.palette = parentDNA.region.semantic?.palette_shift || worldContext.palette_bias;
-          cascadedContext.colorsAndLighting = parentDNA.region.profile?.colorsAndLighting || worldContext.colorsAndLighting;
+        // Override with region context if exists
+        if (parentCascadedDNA.region) {
+          cascadedContext.environment = parentCascadedDNA.region.semantic?.environment || cascadedContext.environment;
+          cascadedContext.climate = parentCascadedDNA.region.semantic?.climate;
+          cascadedContext.weather = parentCascadedDNA.region.semantic?.weather_pattern;
+          cascadedContext.architecture = parentCascadedDNA.region.semantic?.architecture_style;
+          cascadedContext.mood = parentCascadedDNA.region.semantic?.mood || cascadedContext.mood_baseline;
+          cascadedContext.palette = parentCascadedDNA.region.semantic?.palette_shift || cascadedContext.palette_bias;
+          cascadedContext.colorsAndLighting = parentCascadedDNA.region.profile?.colorsAndLighting || cascadedContext.colorsAndLighting;
         } else {
-          // No region, use world values
-          cascadedContext.mood = worldContext.mood_baseline;
-          cascadedContext.palette = worldContext.palette_bias;
+          cascadedContext.mood = cascadedContext.mood_baseline;
+          cascadedContext.palette = cascadedContext.palette_bias;
         }
         
-        // Final cascade with immediate parent (location or sublocation) - overrides everything
-        if (immediateParent) {
-          cascadedContext.parentLocationName = immediateParent.meta?.name || 'Unknown';
-          cascadedContext.structures = immediateParent.semantic?.structures || [];
-          cascadedContext.lighting = immediateParent.semantic?.lighting || '';
-          cascadedContext.weather = immediateParent.semantic?.weather_or_air || '';
-          cascadedContext.atmosphere = immediateParent.semantic?.atmosphere || '';
-          cascadedContext.mood = immediateParent.semantic?.mood || cascadedContext.mood;
-          cascadedContext.palette = immediateParent.semantic?.color_palette || cascadedContext.palette;
-          cascadedContext.soundscape = immediateParent.semantic?.soundscape || [];
-          cascadedContext.materials = immediateParent.profile?.materials || '';
-          cascadedContext.colorsAndLighting = immediateParent.profile?.colorsAndLighting || cascadedContext.colorsAndLighting;
+        // Get immediate parent DNA (location or sublocation)
+        const immediateParentDNA = parentCascadedDNA.sublocation || parentCascadedDNA.location;
+        
+        // Final override with immediate parent context
+        if (immediateParentDNA) {
+          cascadedContext.parentLocationName = immediateParentDNA.meta?.name || 'Unknown';
+          cascadedContext.structures = immediateParentDNA.semantic?.structures || [];
+          cascadedContext.lighting = immediateParentDNA.semantic?.lighting || '';
+          cascadedContext.weather = immediateParentDNA.semantic?.weather_or_air || '';
+          cascadedContext.atmosphere = immediateParentDNA.semantic?.atmosphere || '';
+          cascadedContext.mood = immediateParentDNA.semantic?.mood || cascadedContext.mood;
+          cascadedContext.palette = immediateParentDNA.semantic?.color_palette || cascadedContext.palette;
+          cascadedContext.soundscape = immediateParentDNA.semantic?.soundscape || [];
+          cascadedContext.materials = immediateParentDNA.profile?.materials || '';
+          cascadedContext.colorsAndLighting = immediateParentDNA.profile?.colorsAndLighting || cascadedContext.colorsAndLighting;
         }
+        
+        // Ensure required array properties have defaults to prevent .join() errors
+        cascadedContext.palette = cascadedContext.palette || [];
+        cascadedContext.soundscape = cascadedContext.soundscape || [];
+        cascadedContext.dominant_materials = cascadedContext.dominant_materials || [];
+        cascadedContext.structures = cascadedContext.structures || [];
         
         // Log cascaded context for verification
         console.log('[Sublocation Generation] 🎨 Cascaded Visual Context:', cascadedContext);
@@ -225,7 +244,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     } finally {
       setIsMoving(false);
     }
-  }, [movementInput, base.activeChat, getLocation, getAllLocations, getLocationsByWorld, updateLocationFocus, startSpawn]);
+  }, [movementInput, base.activeChat, getNode, getSpatialNodes, updateNodeFocus, getCascadedDNA, getWorldTree, startSpawn, setActiveChat, createImage]);
 
   const saveLocation = useCallback(() => {
     if (!base.activeChatSession || !base.activeChat) {
@@ -239,26 +258,16 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       return;
     }
     
-    // Cast to hierarchical structure
-    const profile = deepProfile as any;
+    console.log('[useLocationPanel] Saving world tree structure...');
     
-    // Root location: store full hierarchical DNA
-    createLocation({
-      id: base.activeChat,
-      world_id: base.activeChat, // Root location uses own ID as world_id
-      name: base.activeChatSession.entityName || 'Unnamed Location',
-      dna: profile, // Store complete hierarchical profile
-      imagePath: base.activeChatSession.entityImage || '',
-      parent_location_id: null,
-      adjacent_to: [],
-      children: [],
-      depth_level: 0
-    });
+    // The tree should already be created by useSpawnEvents during profile-complete
+    // This method is primarily for marking the entity as saved in the UI
+    // The actual node creation happens in useSpawnEvents.ts
     
-    console.log(`[useLocationPanel] Location saved with ID: ${base.activeChat}`);
+    console.log(`[useLocationPanel] Location tree saved with ID: ${base.activeChat}`);
     
     base.setIsSaved(true);
-  }, [base, createLocation]);
+  }, [base]);
 
   return {
     state: {

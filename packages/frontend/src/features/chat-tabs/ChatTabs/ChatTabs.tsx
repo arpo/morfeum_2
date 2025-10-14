@@ -12,18 +12,51 @@ export function ChatTabs() {
   const activeChat = useStore(state => state.activeChat);
   const setActiveChat = useStore(state => state.setActiveChat);
   const closeChat = useStore(state => state.closeChat);
-  const getLocation = useLocationsStore(state => state.getLocation);
+  const getNode = useLocationsStore(state => state.getNode);
+  const worldTrees = useLocationsStore(state => state.worldTrees);
 
   // Convert Map to array for rendering with location depth data
   const chatsArray = Array.from(chats.entries()).map(([spawnId, chat]) => {
-    // Check if this is a saved location to get depth info
-    const locationData = chat.entityType === 'location' ? getLocation(spawnId) : null;
+    // Check if this is a saved location node to get depth info from tree
+    const node = chat.entityType === 'location' ? getNode(spawnId) : null;
+    
+    // Calculate depth from tree structure
+    let depthLevel = 0;
+    let isSubLocation = false;
+    
+    if (node) {
+      // Find which world tree this node belongs to
+      const findDepth = (treeNode: any, targetId: string, currentDepth: number): number | null => {
+        if (treeNode.id === targetId) {
+          return currentDepth;
+        }
+        
+        if (treeNode.children) {
+          for (const child of treeNode.children) {
+            const found = findDepth(child, targetId, currentDepth + 1);
+            if (found !== null) return found;
+          }
+        }
+        
+        return null;
+      };
+      
+      // Search all world trees for this node
+      for (const tree of worldTrees) {
+        const depth = findDepth(tree, spawnId, 0);
+        if (depth !== null) {
+          depthLevel = depth;
+          isSubLocation = depth > 0; // Anything beyond the world root
+          break;
+        }
+      }
+    }
     
     return {
       ...chat,
       spawnId,
-      depthLevel: locationData?.depth_level ?? 0,
-      isSubLocation: locationData?.parent_location_id !== null && locationData?.parent_location_id !== undefined
+      depthLevel,
+      isSubLocation
     };
   });
 

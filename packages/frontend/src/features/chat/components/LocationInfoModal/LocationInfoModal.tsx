@@ -25,7 +25,7 @@ const renderValue = (value: any) => {
 export function LocationInfoModal(props: LocationInfoModalProps) {
   const { locationProfile, locationName, locationId, isOpen } = props;
   const { handleClose } = useLocationInfoLogic(props);
-  const getLocationFocus = useLocationsStore(state => state.getLocationFocus);
+  const getNodeFocus = useLocationsStore(state => state.getNodeFocus);
 
   if (!locationProfile) return null;
 
@@ -33,7 +33,7 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
   const profile = locationProfile as any;
   
   // Get focus state from saved location or initialize from viewContext
-  let focus = locationId ? getLocationFocus(locationId) : null;
+  let focus = locationId ? getNodeFocus(locationId) : null;
   
   // If no saved focus but we have viewContext in the profile, create a temporary focus display
   if (!focus && profile.location?.profile?.viewContext) {

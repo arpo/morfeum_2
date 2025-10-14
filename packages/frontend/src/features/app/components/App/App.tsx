@@ -45,7 +45,7 @@ export function App() {
   useEffect(() => {
     // Get pinned entities
     const pinnedCharacters = useCharactersStore.getState().getPinnedCharacters();
-    const pinnedLocations = useLocationsStore.getState().getPinnedLocations();
+    const pinnedLocations = useLocationsStore.getState().getPinnedNodes();
     
     // console.log('[App] Auto-loading pinned entities...');
     let lastLoadedId: string | null = null;
@@ -69,32 +69,33 @@ export function App() {
       lastLoadedId = character.id;
     });
     
-    // Load all pinned locations
-    pinnedLocations.forEach((location) => {
-      // console.log('[App] Auto-loading pinned location:', location.id);
+    // Load all pinned location nodes
+    const getCascadedDNA = useLocationsStore.getState().getCascadedDNA;
+    
+    pinnedLocations.forEach((node) => {
+      // console.log('[App] Auto-loading pinned node:', node.id);
       
-      // Check if location has new hierarchical structure
-      if (!location.dna || !location.dna.world) {
-        console.warn('[App] Skipping location with old data structure:', location.id);
-        return; // Skip old locations - they need to be regenerated
+      // Get cascaded DNA for this node
+      const cascadedDNA = getCascadedDNA(node.id);
+      
+      if (!cascadedDNA.world) {
+        console.warn('[App] Skipping node with missing world DNA:', node.id);
+        return;
       }
-      
-      // Use hierarchical DNA structure
-      const deepProfile = location.dna;
       
       const seed = {
-        name: location.name,
-        atmosphere: location.dna.world.semantic?.atmosphere || 'Unknown atmosphere'
+        name: node.name,
+        atmosphere: cascadedDNA.world.semantic?.atmosphere || 'Unknown atmosphere'
       };
       
-      createChatWithEntity(location.id, seed, 'location');
+      createChatWithEntity(node.id, seed, 'location');
       
-      if (location.imagePath) {
-        updateChatImage(location.id, location.imagePath);
+      if (node.imagePath) {
+        updateChatImage(node.id, node.imagePath);
       }
       
-      updateChatDeepProfile(location.id, deepProfile as any);
-      lastLoadedId = location.id;
+      updateChatDeepProfile(node.id, cascadedDNA as any);
+      lastLoadedId = node.id;
     });
     
     // Set the last loaded entity as active

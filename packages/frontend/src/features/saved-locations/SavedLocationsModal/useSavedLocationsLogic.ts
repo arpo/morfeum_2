@@ -1,21 +1,21 @@
 import { useState, useCallback, useMemo } from 'react';
-import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
 import type { SavedEntitiesLogicReturn, EntityTab } from './types';
-import type { Location } from '@/store/slices/locationsSlice';
 import type { Character } from '@/store/slices/charactersSlice';
 
 export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicReturn {
   const [activeTab, setActiveTab] = useState<EntityTab>('characters');
   
-  // Locations
-  const locationsMap = useLocationsStore(state => state.locations);
-  const locations = useMemo(() => Object.values(locationsMap), [locationsMap]);
+  // Locations (now nodes)
+  const nodesMap = useLocationsStore(state => state.nodes);
+  const locations = useMemo(() => Object.values(nodesMap), [nodesMap]);
   const pinnedLocationIds = useLocationsStore(state => state.pinnedIds);
-  const deleteLocation = useLocationsStore(state => state.deleteLocation);
+  const deleteNode = useLocationsStore(state => state.deleteNode);
   const togglePinnedLocation = useLocationsStore(state => state.togglePinned);
   const isLocationPinned = useLocationsStore(state => state.isPinned);
+  const getCascadedDNA = useLocationsStore(state => state.getCascadedDNA);
   
   // Characters
   const charactersMap = useCharactersStore(state => state.characters);
@@ -31,43 +31,42 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   const updateChatImage = useStore(state => state.updateChatImage);
   const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
 
-  const handleLoadLocation = useCallback((location: Location) => {
-    console.log('[SavedEntitiesModal] Loading location:', location.id);
+  const handleLoadLocation = useCallback((node: Node) => {
+    console.log('[SavedEntitiesModal] Loading node:', node.id);
     
-    // Check if location has new hierarchical structure
-    if (!location.dna || !location.dna.world) {
-      console.error('[SavedEntitiesModal] Cannot load location with old data structure. Please regenerate this location.');
-      alert('This location uses an outdated format. Please delete and regenerate it.');
+    // Get cascaded DNA for this node
+    const cascadedDNA = getCascadedDNA(node.id);
+    
+    if (!cascadedDNA.world) {
+      console.error('[SavedEntitiesModal] Cannot load node without world DNA.');
+      alert('This location is missing world data. Please regenerate it.');
       return;
     }
     
-    // Use hierarchical DNA structure
-    const deepProfile = location.dna;
-    
     // Create seed data for chat initialization
     const seed = {
-      name: location.name,
-      atmosphere: location.dna.world.semantic?.atmosphere || 'Unknown atmosphere'
+      name: node.name,
+      atmosphere: cascadedDNA.world.semantic?.atmosphere || 'Unknown atmosphere'
     };
     
-    // Create chat session for this location
-    createChatWithEntity(location.id, seed, 'location');
+    // Create chat session for this node
+    createChatWithEntity(node.id, seed, 'location');
     
     // Update chat with image and deep profile
-    if (location.imagePath) {
-      updateChatImage(location.id, location.imagePath);
+    if (node.imagePath) {
+      updateChatImage(node.id, node.imagePath);
     }
     
-    updateChatDeepProfile(location.id, deepProfile as any);
+    updateChatDeepProfile(node.id, cascadedDNA as any);
     
     // Set as active chat
-    setActiveChat(location.id);
+    setActiveChat(node.id);
     
     // Close modal
     onClose();
     
-    console.log('[SavedEntitiesModal] Location loaded successfully');
-  }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose]);
+    console.log('[SavedEntitiesModal] Node loaded successfully');
+  }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose, getCascadedDNA]);
 
   const handleLoadCharacter = useCallback((character: Character) => {
     console.log('[SavedEntitiesModal] Loading character:', character.id);
@@ -98,11 +97,11 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose]);
 
   const handleDeleteLocation = useCallback((locationId: string) => {
-    if (window.confirm('Are you sure you want to delete this location?')) {
-      console.log('[SavedEntitiesModal] Deleting location:', locationId);
-      deleteLocation(locationId);
+    if (window.confirm('Are you sure you want to delete this node?')) {
+      console.log('[SavedEntitiesModal] Deleting node:', locationId);
+      deleteNode(locationId);
     }
-  }, [deleteLocation]);
+  }, [deleteNode]);
 
   const handleDeleteCharacter = useCallback((characterId: string) => {
     if (window.confirm('Are you sure you want to delete this character?')) {
@@ -123,23 +122,29 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     console.log(`[SavedEntitiesModal] ${isPinned ? 'Unpinned' : 'Pinned'} character:`, characterId);
   }, [togglePinnedCharacter, isCharacterPinned]);
 
-  const handleCopyWorldInfo = useCallback((location: Location) => {
-    console.log('[SavedEntitiesModal] Copying full location JSON for:', location.id);
+  const handleCopyWorldInfo = useCallback((node: Node) => {
+    console.log('[SavedEntitiesModal] Copying full node JSON for:', node.id);
     
-    // Copy the entire location object as JSON
-    const locationJson = JSON.stringify(location, null, 2);
+    // Get cascaded DNA and include it in the export
+    const cascadedDNA = getCascadedDNA(node.id);
+    const exportData = {
+      node,
+      cascadedDNA
+    };
+    
+    const nodeJson = JSON.stringify(exportData, null, 2);
     
     // Copy to clipboard
-    navigator.clipboard.writeText(locationJson)
+    navigator.clipboard.writeText(nodeJson)
       .then(() => {
-        console.log('[SavedEntitiesModal] Location JSON copied to clipboard');
+        console.log('[SavedEntitiesModal] Node JSON copied to clipboard');
         alert('Location data copied to clipboard!');
       })
       .catch((err) => {
-        console.error('[SavedEntitiesModal] Failed to copy location data:', err);
+        console.error('[SavedEntitiesModal] Failed to copy node data:', err);
         alert('Failed to copy location data. Please try again.');
       });
-  }, []);
+  }, [getCascadedDNA]);
 
   return {
     activeTab,
