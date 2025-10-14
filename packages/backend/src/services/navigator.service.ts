@@ -59,9 +59,9 @@ export const findDestinationNode = async (
       allNodes
     );
 
-    console.log('[NavigatorAI] Prompt size:', prompt.length, 'characters');
-    console.log('[NavigatorAI] Number of nodes:', allNodes.length);
-    console.log('[NavigatorAI] Prompt preview:', prompt.substring(0, 500));
+    // console.log('[NavigatorAI] Prompt size:', prompt.length, 'characters');
+    // console.log('[NavigatorAI] Number of nodes:', allNodes.length);
+    // console.log('[NavigatorAI] Prompt preview:', prompt.substring(0, 500));
 
     // Call Gemini through MZOO service
     const response = await mzooService.generateText(
@@ -91,7 +91,7 @@ export const findDestinationNode = async (
       }
       jsonText = jsonText.trim();
       
-      console.log('[NavigatorAI] Raw AI response:', jsonText.substring(0, 500));
+      // console.log('[NavigatorAI] Raw AI response:', jsonText.substring(0, 500));
       
       // Extract JSON from markdown code blocks if present
       if (jsonText.startsWith('```json')) {

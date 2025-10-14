@@ -111,15 +111,99 @@ export function useLocationPanel(): LocationPanelLogicReturn {
           console.warn('[NavigatorAI] ❌ Target location not found:', navigation.targetNodeId);
         }
       } else if (navigation.action === 'generate') {
-        // Just log the suggestion, don't auto-spawn
-        console.log('[NavigatorAI] 💡 Suggestion to generate:', {
-          name: navigation.name,
-          parentNodeId: navigation.parentNodeId,
-          relation: navigation.relation,
-          reason: navigation.reason
-        });
-        console.log('[NavigatorAI] 📝 Parent location ID:', navigation.parentNodeId);
-        console.log('[NavigatorAI] 📝 To create this location, use the spawn input with:', navigation.name);
+        // Check depth limit
+        if (currentLocation.depth_level >= 5) {
+          console.error('[NavigatorAI] ❌ Max depth reached (5). Cannot create deeper sublocations.');
+          return;
+        }
+        
+        // Get parent location
+        const parentLocation = getLocation(navigation.parentNodeId);
+        if (!parentLocation) {
+          console.error('[NavigatorAI] ❌ Parent location not found:', navigation.parentNodeId);
+          return;
+        }
+        
+        const parentDNA = parentLocation.dna;
+        
+        // Extract visual context from world (base layer)
+        const worldContext = {
+          environment: parentDNA.world.semantic.environment,
+          dominant_materials: parentDNA.world.semantic.dominant_materials,
+          atmosphere: parentDNA.world.semantic.atmosphere,
+          architectural_tone: parentDNA.world.semantic.architectural_tone,
+          genre: parentDNA.world.semantic.genre,
+          mood_baseline: parentDNA.world.semantic.mood_baseline,
+          palette_bias: parentDNA.world.semantic.palette_bias,
+          colorsAndLighting: parentDNA.world.profile.colorsAndLighting
+        };
+        
+        // Cascade with region (if exists) - overrides world
+        const cascadedContext: any = { ...worldContext };
+        
+        if (parentDNA.region) {
+          cascadedContext.environment = parentDNA.region.semantic.environment;
+          cascadedContext.climate = parentDNA.region.semantic.climate;
+          cascadedContext.weather = parentDNA.region.semantic.weather_pattern;
+          cascadedContext.architecture = parentDNA.region.semantic.architecture_style;
+          cascadedContext.mood = parentDNA.region.semantic.mood;
+          cascadedContext.palette = parentDNA.region.semantic.palette_shift;
+          cascadedContext.colorsAndLighting = parentDNA.region.profile.colorsAndLighting;
+        } else {
+          // No region, use world values
+          cascadedContext.mood = worldContext.mood_baseline;
+          cascadedContext.palette = worldContext.palette_bias;
+        }
+        
+        // Final cascade with parent location - overrides everything
+        if (parentDNA.location) {
+          cascadedContext.parentLocationName = parentDNA.location.meta.name;
+          cascadedContext.structures = parentDNA.location.semantic.structures;
+          cascadedContext.lighting = parentDNA.location.semantic.lighting;
+          cascadedContext.weather = parentDNA.location.semantic.weather_or_air;
+          cascadedContext.atmosphere = parentDNA.location.semantic.atmosphere;
+          cascadedContext.mood = parentDNA.location.semantic.mood;
+          cascadedContext.palette = parentDNA.location.semantic.color_palette;
+          cascadedContext.soundscape = parentDNA.location.semantic.soundscape;
+          cascadedContext.materials = parentDNA.location.profile.materials;
+          cascadedContext.colorsAndLighting = parentDNA.location.profile.colorsAndLighting;
+        }
+        
+        // Log cascaded context for verification
+        console.log('[Sublocation Generation] 🎨 Cascaded Visual Context:', cascadedContext);
+        
+        // Call backend to generate sublocation DNA
+        console.log('[Sublocation Generation] ⚙️ Generating sublocation DNA...');
+        
+        try {
+          const sublocationResponse = await fetch('/api/mzoo/locations/generate-sublocation', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              sublocationName: navigation.name,
+              cascadedContext,
+              createImage: false // For now, don't create image
+            })
+          });
+          
+          if (!sublocationResponse.ok) {
+            const error = await sublocationResponse.json();
+            console.error('[Sublocation Generation] ❌ API error:', error);
+            return;
+          }
+          
+          const sublocationResult = await sublocationResponse.json();
+          const sublocationDNA = sublocationResult.data.sublocation;
+          
+          console.log('\n[Sublocation Generation] ✅ DNA Generated Successfully!');
+          console.log('[Sublocation DNA] � Complete Structure:');
+          console.log(JSON.stringify(sublocationDNA, null, 2));
+          
+        } catch (genError) {
+          console.error('[Sublocation Generation] ❌ Failed to generate:', genError);
+        }
       }
       
       // Clear input
