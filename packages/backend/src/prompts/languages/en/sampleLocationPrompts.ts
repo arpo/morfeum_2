@@ -3,54 +3,45 @@
  */
 
 export const sampleLocationPrompts = [
-    // World-level
-    "A colossal floating continent drifting above endless storm clouds, its underside glowing with molten rivers of light.",
+    
+  "Eclipsera (world), a twilight realm where day and night coexist in perpetual balance, and gravity hums like a song.",
+  "The Mistwoven Archipelago (region) of Eclipsera (world), where islands drift through silver fog and bridges form from condensed light.",
+  "The Observatory of Silent Stars (location) on the Mistwoven Archipelago (region), its glass dome breathing with slow pulses of radiance.",
+  "The inner dome (sub-location) of the Observatory of Silent Stars (location), where constellations rearrange themselves to mirror the observer’s thoughts.",
 
-    "An endless desert world where crystal monoliths hum with ancient energy beneath twin suns.",
+  "Auralis Prime (world), a solar ocean where sound sculpts the land and music controls the tides.",
+  "The Obsidian Shores (region) of Auralis Prime (world), where molten sand cools into black glass under a turquoise sky.",
+  "The Lighthouse of Broken Glass (location) on the Obsidian Shores (region), its prism lens casting spectral shadows across the sea.",
+  "The lower chamber (sub-location) of the Lighthouse of Broken Glass (location), where forgotten messages echo in crystalline whispers.",
 
-    "A city built within the ribcage of a long-dead leviathan, its streets winding between bone towers and coral-lit canals.",
+  "Nythra (world), a digital dream that believes itself organic, threaded by living code and blooming data flora.",
+  "The Coral Systems (region) of Nythra (world), vast reef-like megastructures alive with neural light.",
+  "The Archive Garden (location) within the Coral Systems (region), where memories grow as translucent fruits on silver vines.",
+  "The root chamber (sub-location) of the Archive Garden (location), glowing with data-pollen that remembers every touch.",
 
-    "A frozen ocean world where entire civilizations live inside translucent glaciers that pulse with bioluminescent veins.",
+  "Vaelune (world), a dying star reborn as a drifting civilization of floating cities tethered to plasma rivers.",
+  "The Ember District (region) of Vaelune (world), where architecture shimmers like cooled magma and time runs slow.",
+  "The Sky Bazaar (location) above the Ember District (region), filled with merchants trading light instead of goods.",
+  "The vault beneath the Sky Bazaar (sub-location), where old suns are stored in crystal spheres for future resurrection.",
 
-    "A vertical jungle world, layer upon layer of canopy stretching miles into the mist, filled with ruins and waterfalls.",
+  "Serein (world), a water-mirror cosmos where reflections live separate lives from their originals.",
+  "The Luminous Depths (region) of Serein (world), where translucent leviathans drift between upside-down cities.",
+  "The Cathedral of Waves (location) within the Luminous Depths (region), echoing with choirs that breathe underwater.",
+  "The reflection pool (sub-location) of the Cathedral of Waves (location), where one can meet the version of oneself that never surfaced.",
 
-    "A lonely android sitting by a campfire under a shattered moon.",
+  "Myrrhvale (world), a forested planet steeped in golden mist, where every tree holds ancestral memories.",
+  "The Valley of Reeds (region) of Myrrhvale (world), perpetually resonating with wind-born harmonics.",
+  "The Whispering Bridge (location) over the Valley of Reeds (region), carved from the ribs of a giant creature now worshipped as wind.",
+  "The underside (sub-location) of the Whispering Bridge (location), lined with runes that shift meaning when read aloud.",
 
-    "A fractured floating marketplace orbiting a dying sun, where shattered domes of translucent glass drift slowly apart, connected by swaying bridges of vines and torn solar panels. Bioluminescent fungi cling to the steel ribs of the ruins, illuminating stalls still laden with petrified fruit and frozen fabrics that ripple as if moved by forgotten gravity. Below, the planet burns in slow motion, casting rhythmic pulses of amber light through the cracks in the hull. From here, you can see several paths — a collapsed corridor leading into the cargo bay, a shimmering lift-tube descending toward the engine sanctum, and a narrow walkway arcing across the void to another broken dome that flickers with residual power.",
+  "Hollow Sky (world), a universe turned inside out, where clouds form continents and stars drift beneath.",
+  "The Rainfall Plains (region) of Hollow Sky (world), where storms are tamed into architecture.",
+  "The Glass Shelter (location) in the Rainfall Plains (region), a transparent dome collecting thunder for energy.",
+  "The storm heart (sub-location) of the Glass Shelter (location), a chamber where lightning folds itself into geometric shapes.",
 
-    // Region-level (distinct biomes or districts)
+  "Solgrave (world), a fractured utopia where light refracts into parallel timelines.",
+  "The Mirror Expanse (region) of Solgrave (world), a desert of mirrored dunes that record everything reflected on them.",
+  "The Waystation of Echoes (location) in the Mirror Expanse (region), a resting place for travelers lost between timelines.",
+  "The hidden alcove (sub-location) of the Waystation of Echoes (location), where echoes become voices that tell forgotten futures."
 
-    "The Ember District — a volcanic valley where lava flows serve as roads and iron bridges glow from the heat.",
-
-    "The Glass Expanse — an endless salt flat shimmering like a mirror under a violet sky.",
-
-    "The Nocturne Quarter — a twilight district of an eternal city, lit by floating lanterns and reflected neon.",
-
-    "The Verdant Shroud — a dense forest surrounding ancient machinery, vines coiling through broken metal.",
-
-    "The Azure Archipelago — hundreds of hovering islands linked by light bridges and waterfalls cascading into clouds.",
-
-    // Location-level (specific sites)
-
-    "A lighthouse built inside the hollow trunk of a petrified tree, its beacon spiraling upward through polished amber lenses.",
-
-    "A grand plaza paved in obsidian glass, centered around a floating obelisk that rotates silently, aligning with unseen stars.",
-
-    "An abandoned train station where ghostly carriages arrive without passengers, doors opening to empty light.",
-
-    "A subterranean library carved from volcanic rock, its shelves glowing faintly from embedded crystals.",
-
-    "A cliffside monastery clinging to wind-carved stone, its golden bells tolling in the fog.",
-
-    // Sub-location-level (interiors or focused pockets)
-
-    "Inside the lighthouse beacon room, glass shards hang in midair, refracting green light across ancient runes.",
-
-    "Within the floating obelisk — a hollow chamber lined with mirrored metal and whispering constellations.",
-
-    "The conductor’s cabin of the spectral train, filled with silver instruments that move on their own.",
-
-    "The inner sanctum of the cliffside monastery, where candles float weightlessly around a suspended statue.",
-
-    "Beneath the crystal library — a hidden archive submerged in warm, luminescent water.",
 ];
