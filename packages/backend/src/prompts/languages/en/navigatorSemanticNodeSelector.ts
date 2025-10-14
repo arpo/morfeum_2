@@ -55,13 +55,15 @@ Node Type Prefixes:
 - [Sublocation - Interior] = depth 3+, room/space within location
 
 Rules:
-- If command matches an existing node → action: "move", include targetNodeId
+- If command matches an existing node → action: "move", include targetNodeId (use the node's ID field, NOT name)
 - If no match → action: "generate", include parentNodeId and hierarchical name
 - Use node type prefixes to understand hierarchy
 - "into/inside/enter" commands → look for Interior nodes or generate sublocation
 - "outside/exit/back" commands → look for parent or Exterior nodes
 - Name format: "[Name] ([level]) of [Parent] ([parent-level])"
 - parentNodeId rules: sublocation = current ID, adjacent/nearby = parent ID, teleport = null
+- CRITICAL: Always use node IDs (like "spawn-1760475394478-xyz"), NEVER use node names (like "Upstairs")
+- The ID field is the unique identifier - names are just labels
 
 Return JSON only:
 {
@@ -74,6 +76,9 @@ Return JSON only:
 }
 
 Examples:
-1. User at exterior, child exists: {"action":"move","targetNodeId":"interior-id","parentNodeId":null,"name":null,"relation":null,"reason":"Found interior sublocation"}
-2. User wants interior, none exists: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"The Inner Chamber (sub-location) of ${currentNodeName} (location)","relation":"sublocation","reason":"Creating interior space"}`;
+1. User at exterior, child exists: {"action":"move","targetNodeId":"spawn-abc123","parentNodeId":null,"name":null,"relation":null,"reason":"Found interior sublocation"}
+2. User wants interior, none exists: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"The Inner Chamber (sub-location) of ${currentNodeName} (location)","relation":"sublocation","reason":"Creating interior space"}
+3. User wants to go to "Upstairs" node (id: spawn-xyz789): {"action":"move","targetNodeId":"spawn-xyz789","parentNodeId":null,"name":null,"relation":null,"reason":"Moving to existing Upstairs location"}
+
+IMPORTANT: In your response, targetNodeId and parentNodeId must ALWAYS be the full ID string (starting with "spawn-"), never the node name.`;
 };
