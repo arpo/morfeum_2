@@ -98,41 +98,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 </div>
               )}
 
-              {/* Render - Camera Only */}
-              {profile.world.render?.camera && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Render (Camera)</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Framing Distance</label>
-                    <p className={styles.value}>{profile.world.render.camera.framing_distance || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Angle</label>
-                    <p className={styles.value}>{profile.world.render.camera.angle || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Composition Bias</label>
-                    <p className={styles.value}>{profile.world.render.camera.composition_bias || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Height</label>
-                    <p className={styles.value}>{profile.world.render.camera.height || 'N/A'}</p>
-                  </div>
-                  {profile.world.render.camera.perspective && (
-                    <div className={styles.field}>
-                      <label className={styles.label}>Perspective</label>
-                      <p className={styles.value}>{profile.world.render.camera.perspective}</p>
-                    </div>
-                  )}
-                  {profile.world.render.camera.depth_cues && (
-                    <div className={styles.field}>
-                      <label className={styles.label}>Depth Cues</label>
-                      <p className={styles.value}>{profile.world.render.camera.depth_cues}</p>
-                    </div>
-                  )}
-                </div>
-              )}
-
               {/* Profile */}
               {profile.world.profile && (
                 <div className={styles.subsection}>
@@ -208,41 +173,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 </div>
               )}
 
-              {/* Render - Camera Only */}
-              {profile.region.render?.camera && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Render (Camera)</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Framing Distance</label>
-                    <p className={styles.value}>{profile.region.render.camera.framing_distance || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Angle</label>
-                    <p className={styles.value}>{profile.region.render.camera.angle || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Composition Bias</label>
-                    <p className={styles.value}>{profile.region.render.camera.composition_bias || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Height</label>
-                    <p className={styles.value}>{profile.region.render.camera.height || 'N/A'}</p>
-                  </div>
-                  {profile.region.render.camera.perspective && (
-                    <div className={styles.field}>
-                      <label className={styles.label}>Perspective</label>
-                      <p className={styles.value}>{profile.region.render.camera.perspective}</p>
-                    </div>
-                  )}
-                  {profile.region.render.camera.depth_cues && (
-                    <div className={styles.field}>
-                      <label className={styles.label}>Depth Cues</label>
-                      <p className={styles.value}>{profile.region.render.camera.depth_cues}</p>
-                    </div>
-                  )}
-                </div>
-              )}
-
               {/* Profile */}
               {profile.region.profile && (
                 <div className={styles.subsection}>
@@ -310,10 +240,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                       <p className={styles.value}>{`${renderArray(profile.location.semantic.fauna.types)} (${profile.location.semantic.fauna.presence || 'unknown'})`}</p>
                     </div>
                   )}
-                  <div className={styles.field}>
-                    <label className={styles.label}>Time of Day</label>
-                    <p className={styles.value}>{profile.location.semantic.time_of_day || 'N/A'}</p>
-                  </div>
                   <div className={styles.field}>
                     <label className={styles.label}>Lighting</label>
                     <p className={styles.value}>{profile.location.semantic.lighting || 'N/A'}</p>
@@ -394,41 +320,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 </div>
               )}
 
-              {/* Render - Camera Only */}
-              {profile.location.render?.camera && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Render (Camera)</h4>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Framing Distance</label>
-                    <p className={styles.value}>{profile.location.render.camera.framing_distance || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Angle</label>
-                    <p className={styles.value}>{profile.location.render.camera.angle || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Composition Bias</label>
-                    <p className={styles.value}>{profile.location.render.camera.composition_bias || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Height</label>
-                    <p className={styles.value}>{profile.location.render.camera.height || 'N/A'}</p>
-                  </div>
-                  {profile.location.render.camera.perspective && (
-                    <div className={styles.field}>
-                      <label className={styles.label}>Perspective</label>
-                      <p className={styles.value}>{profile.location.render.camera.perspective}</p>
-                    </div>
-                  )}
-                  {profile.location.render.camera.depth_cues && (
-                    <div className={styles.field}>
-                      <label className={styles.label}>Depth Cues</label>
-                      <p className={styles.value}>{profile.location.render.camera.depth_cues}</p>
-                    </div>
-                  )}
-                </div>
-              )}
-
               {/* Profile */}
               {profile.location.profile && (
                 <div className={styles.subsection}>
@@ -475,19 +366,49 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                     <label className={styles.label}>Copyrighted</label>
                     <p className={styles.value}>{profile.location.profile.copyright ? 'Yes' : 'No'}</p>
                   </div>
-                </div>
-              )}
 
-              {/* Suggested Destinations */}
-              {profile.location.suggestedDestinations && profile.location.suggestedDestinations.length > 0 && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Suggested Destinations</h4>
-                  {profile.location.suggestedDestinations.map((dest: any, i: number) => (
-                    <div key={i} className={styles.field}>
-                      <label className={styles.label}>{dest.name}</label>
-                      <p className={styles.value}>{`${dest.action} (${dest.relation})`}</p>
-                    </div>
-                  ))}
+                  {/* Visual Anchors */}
+                  {profile.location.profile.visualAnchors && (
+                    <>
+                      <div className={styles.field}>
+                        <label className={styles.label}>🎯 Dominant Elements</label>
+                        <ul className={styles.list}>
+                          {profile.location.profile.visualAnchors.dominantElements?.map((elem: string, i: number) => (
+                            <li key={i}>{elem}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>📐 Spatial Layout</label>
+                        <p className={styles.value}>{profile.location.profile.visualAnchors.spatialLayout}</p>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>🧱 Surface Materials</label>
+                        <p className={styles.value}>
+                          <strong>Primary:</strong> {profile.location.profile.visualAnchors.surfaceMaterialMap?.primary_surfaces}<br/>
+                          <strong>Secondary:</strong> {profile.location.profile.visualAnchors.surfaceMaterialMap?.secondary_surfaces}<br/>
+                          <strong>Accents:</strong> {profile.location.profile.visualAnchors.surfaceMaterialMap?.accent_features}
+                        </p>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>🎨 Color Mapping</label>
+                        <p className={styles.value}>
+                          <strong>Dominant:</strong> {profile.location.profile.visualAnchors.colorMapping?.dominant}<br/>
+                          <strong>Secondary:</strong> {profile.location.profile.visualAnchors.colorMapping?.secondary}<br/>
+                          <strong>Accent:</strong> {profile.location.profile.visualAnchors.colorMapping?.accent}<br/>
+                          <strong>Ambient:</strong> {profile.location.profile.visualAnchors.colorMapping?.ambient}
+                        </p>
+                      </div>
+                      <div className={styles.field}>
+                        <label className={styles.label}>✨ Unique Identifiers</label>
+                        <ul className={styles.list}>
+                          {profile.location.profile.visualAnchors.uniqueIdentifiers?.map((id: string, i: number) => (
+                            <li key={i}>{id}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
                 </div>
               )}
             </ModalSection>

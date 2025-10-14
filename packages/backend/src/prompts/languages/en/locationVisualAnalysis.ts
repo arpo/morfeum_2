@@ -24,7 +24,23 @@ IMPORTANT: Return ONLY a valid JSON object with these exact keys:
   "vegetation": "...",
   "architecture": "...",
   "animals": "...",
-  "mood": "..."
+  "mood": "...",
+  "visualAnchors": {
+    "dominantElements": ["...", "...", "..."],
+    "spatialLayout": "...",
+    "surfaceMaterialMap": {
+      "primary_surfaces": "...",
+      "secondary_surfaces": "...",
+      "accent_features": "..."
+    },
+    "colorMapping": {
+      "dominant": "...",
+      "secondary": "...",
+      "accent": "...",
+      "ambient": "..."
+    },
+    "uniqueIdentifiers": ["...", "..."]
+  }
 }
 
 Do not include any markdown formatting, code blocks, or explanatory text.
@@ -83,8 +99,62 @@ Examples: tense, relaxed, romantic, melancholic, mysterious, energetic, serene, 
 Ground mood in subtle contrasts (e.g., serene yet unsettling).
 2–3 sentences.
 
+[visualAnchors]
+CRITICAL: These anchors are what make this location visually UNIQUE and REPRODUCIBLE. Focus on concrete, specific details.
+
+[visualAnchors.dominantElements]
+List 3-5 of the MOST PROMINENT visual elements that define this location.
+These should be the first things your eye is drawn to.
+Be specific about size, position, and characteristics.
+Examples:
+- "Large circular skylight spanning 15m diameter, centered above main space"
+- "Three suspended wooden walkways crossing at 8m height, forming star pattern"
+- "Massive twisted oak tree rising through center, trunk 3m diameter"
+- "Floor-to-ceiling glass wall facing ocean, 20m wide"
+Array of 3-5 specific strings.
+
+[visualAnchors.spatialLayout]
+Describe the STRUCTURE and ORGANIZATION of the space.
+Include: shape, dimensions (approximate), entry points, focal centers, boundaries.
+Example: "Circular space, approximately 50m diameter, 30m height. Entry on north side via glass doors. Central hub where walkways intersect creates focal point. Dense vegetation fills lower 5m, walkways suspended at 8m height."
+2-4 sentences providing clear spatial understanding.
+
+[visualAnchors.surfaceMaterialMap]
+Map specific MATERIALS to specific SURFACES.
+Don't just list materials - say WHERE they are.
+Use keys: "primary_surfaces", "secondary_surfaces", "accent_features"
+Example:
+{
+  "primary_surfaces": "transparent curved glass panels forming dome ceiling with steel framework grid",
+  "secondary_surfaces": "natural teak wood planking for walkways, steel cable railings",
+  "accent_features": "bronze lanterns at walkway intersections, stone planters at entry"
+}
+
+[visualAnchors.colorMapping]
+Map specific COLORS to specific LOCATIONS in the scene.
+Use keys: "dominant", "secondary", "accent", "ambient"
+Be specific about where colors appear and their characteristics.
+Example:
+{
+  "dominant": "vibrant jungle greens throughout canopy and undergrowth (60% of visual field)",
+  "secondary": "warm teak browns on walkways and tree trunks (20%)",
+  "accent": "exotic flower bursts - orchid purple clusters left side, orange bird of paradise right side (15%)",
+  "ambient": "soft golden-amber sunlight filtering through glass dome (overall tone)"
+}
+
+[visualAnchors.uniqueIdentifiers]
+List 2-4 SPECIFIC details that make this location instantly recognizable.
+These are the visual "fingerprints" - distinctive elements that wouldn't appear elsewhere.
+Examples:
+- "Star-shaped intersection pattern where three walkways meet at center point"
+- "Clusters of bioluminescent vines hanging from northeast quadrant"
+- "Spiral staircase at entry wraps around 200-year-old oak trunk"
+- "Mosaic tile pattern on floor depicts compass rose in blue and gold"
+Array of 2-4 highly specific strings.
+
 Guidelines:
 - Focus only on visible traits and observable details from the image.
 - Do not invent details that are not visible in the image.
 - Be concrete and visual.
-- Use natural, descriptive language.`;
+- Use natural, descriptive language.
+- For visualAnchors: Be SPECIFIC, not generic. "Three walkways" not "multiple walkways". "Purple orchids on left wall" not "colorful flowers".`;

@@ -49,3 +49,20 @@
   margin: 0;
   white-space: pre-wrap;
 }
+
+.list {
+  list-style: disc;
+  padding-left: var(--spacing-lg);
+  margin: var(--spacing-xs) 0 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}

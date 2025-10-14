@@ -58,6 +58,7 @@
   resize: vertical;
   box-sizing: border-box;
   transition: border-color var(--transition-fast);
+  height: 6rem;
 }
 
 .textarea:focus {

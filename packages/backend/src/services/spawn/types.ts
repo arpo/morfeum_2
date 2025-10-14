@@ -19,6 +19,23 @@ export interface VisualAnalysis {
   specificdetails: string;
 }
 
+export interface VisualAnchors {
+  dominantElements: string[];
+  spatialLayout: string;
+  surfaceMaterialMap: {
+    primary_surfaces: string;
+    secondary_surfaces: string;
+    accent_features: string;
+  };
+  colorMapping: {
+    dominant: string;
+    secondary: string;
+    accent: string;
+    ambient: string;
+  };
+  uniqueIdentifiers: string[];
+}
+
 export interface LocationVisualAnalysis {
   looks: string;
   colorsAndLighting: string;
@@ -27,6 +44,7 @@ export interface LocationVisualAnalysis {
   architecture: string;
   animals: string;
   mood: string;
+  visualAnchors: VisualAnchors;
 }
 
 export interface DeepProfile {
@@ -82,16 +100,6 @@ export interface WorldNode {
       light_behavior: string;
     };
   };
-  render: {
-    camera: {
-      framing_distance: string;
-      angle: string;
-      composition_bias: string;
-      height: string;
-      perspective?: string;
-      depth_cues?: string;
-    };
-  };
   profile: {
     colorsAndLighting: string;
     symbolicThemes: string;
@@ -113,16 +121,6 @@ export interface RegionNode {
   spatial: {
     orientation: {
       dominant_view_axis: string;
-    };
-  };
-  render: {
-    camera: {
-      framing_distance: string;
-      angle: string;
-      composition_bias: string;
-      height: string;
-      perspective?: string;
-      depth_cues?: string;
     };
   };
   profile: {
@@ -152,7 +150,6 @@ export interface LocationNode {
       types: string[];
       presence: string;
     };
-    time_of_day: string;
     lighting: string;
     weather_or_air: string;
     atmosphere: string;
@@ -178,16 +175,6 @@ export interface LocationNode {
       links_to: string[];
     };
   };
-  render: {
-    camera: {
-      framing_distance: string;
-      angle: string;
-      composition_bias: string;
-      height: string;
-      perspective?: string;
-      depth_cues?: string;
-    };
-  };
   profile: {
     looks: string;
     colorsAndLighting: string;
@@ -199,12 +186,8 @@ export interface LocationNode {
     airParticles: string;
     fictional: boolean;
     copyright: boolean;
+    visualAnchors: VisualAnchors;
   };
-  suggestedDestinations: Array<{
-    name: string;
-    action: string;
-    relation: string;
-  }>;
 }
 
 export interface LocationDeepProfile {
