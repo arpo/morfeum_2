@@ -1,11 +1,124 @@
 # Active Context
 
 ## Current Work Focus
-**Focus System for Location Navigation** - Implemented complete focus state tracking system to monitor where user is viewing from in world node tree. Added focus display to LocationInfoModal with reversed hierarchical order (Focus → Location → Region → World). System now tracks perspective, viewpoint, distance, and node_id for future navigation and sub-location generation.
+**NavigatorAI - LLM-Based Semantic Navigation System** - Implemented complete NavigatorAI system that uses LLM reasoning to find or generate locations based on natural language commands. System analyzes user intent ("go inside", "back to beach", "explore tower"), matches to existing nodes using semantic understanding, or triggers generation of new locations when none exist.
 
 ## Recent Changes
 
-### Focus System Implementation (Latest - Just Completed)
+### NavigatorAI Implementation (Latest - Just Completed)
+1. **Complete LLM-Based Navigation System**:
+   - **Purpose**: Semantic location finding and generation using natural language commands
+   - **Core Capability**: LLM analyzes user intent and world context to decide whether to:
+     - **Move**: Navigate to existing location that matches command
+     - **Generate**: Create new location when no suitable match exists
+   - Replaces traditional vector search with LLM reasoning
+   - Understands spatial relationships, hierarchy, and fuzzy user intent
+
+2. **Backend Architecture**:
+   - **Prompt** (`navigatorSemanticNodeSelector.ts` - 108 lines):
+     - Takes user command, current focus state, and all world nodes
+     - Provides spatial context (hierarchy: child nodes = "inside", parent = "back to")
+     - Returns JSON with action, targetNodeId, name, relation, reason
+     - Includes examples for move vs generate scenarios
+   - **Service** (`navigator.service.ts` - 116 lines):
+     - `findDestinationNode()` - Main navigation function
+     - Calls Gemini 2.5 Flash through MZOO service
+     - Handles JSON parsing with markdown code block extraction
+     - Returns NavigationResult with action details
+   - **API Endpoint** (`routes/mzoo/navigator.ts` - 81 lines):
+     - POST `/api/mzoo/navigator/find-destination`
+     - Validates userCommand, currentFocus, allNodes
+     - Protected by MZOO API key middleware
+     - Returns navigation result or error
+
+3. **Frontend Integration**:
+   - **LocationPanel Updates** (`useLocationPanel.ts`):
+     - Enhanced `handleMove()` with full NavigatorAI integration
+     - Fetches current location and focus state
+     - Gets all nodes in current world for context
+     - Calls NavigatorAI backend endpoint
+     - **Move Action**: Updates focus to target location
+     - **Generate Action**: Triggers location spawn with LLM-suggested name
+     - Comprehensive console logging for debugging
+   - **Focus System Integration**:
+     - Uses `initFocus()` to ensure focus state exists
+     - Uses `updateFocus()` for immutable focus updates
+     - Uses `updateLocationFocus()` to persist changes
+     - Leverages `getLocationsByWorld()` for world context
+
+4. **NavigationResult Interface**:
+   ```typescript
+   interface NavigationResult {
+     action: 'move' | 'generate';
+     targetNodeId: string | null;      // For move action
+     name: string | null;               // For generate action
+     relation: 'sublocation' | 'adjacent' | 'nearby' | 'parent' | 'teleport' | null;
+     reason: string;                    // LLM explanation
+   }
+   ```
+
+5. **Example Navigation Flows**:
+   **Move to Existing Location**:
+   ```
+   User: "go inside"
+   Current: Lighthouse (exterior)
+   Available: Lighthouse Interior (child node)
+   → Action: move, targetNodeId: "lighthouse-interior-id"
+   → Result: Focus updated to interior
+   ```
+   
+   **Generate New Location**:
+   ```
+   User: "explore the hidden tower"
+   Current: Forest Clearing
+   Available: No tower exists
+   → Action: generate, name: "Hidden Tower", relation: "nearby"
+   → Result: Location spawn triggered
+   ```
+
+6. **Files Created/Modified (6 total)**:
+   - **Backend (4 files)**:
+     - `packages/backend/src/prompts/languages/en/navigatorSemanticNodeSelector.ts` - **NEW** prompt
+     - `packages/backend/src/services/navigator.service.ts` - **NEW** service
+     - `packages/backend/src/routes/mzoo/navigator.ts` - **NEW** API route
+     - `packages/backend/src/routes/mzoo/index.ts` - Registered navigator router
+   - **Type Definitions (2 files)**:
+     - `packages/backend/src/prompts/types.ts` - Added navigatorSemanticNodeSelector
+     - `packages/backend/src/prompts/languages/en/index.ts` - Exported prompt
+   - **Frontend (1 file)**:
+     - `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts` - Full integration
+
+7. **Key Benefits Delivered**:
+   - **Natural Language**: Users can describe where they want to go naturally
+   - **Context-Aware**: Understands spatial relationships and hierarchy
+   - **Fuzzy Matching**: Handles imprecise commands ("back", "inside", "the glowing place")
+   - **Smart Generation**: Creates new locations only when needed
+   - **Explainable**: LLM provides reason for each decision
+   - **Future-Proof**: Foundation for embeddings and vector search optimization
+
+8. **Quality Verification**:
+   - ✅ **Backend Build**: Successful (zero TypeScript errors)
+   - ✅ **Frontend Build**: Successful (338.67 kB, gzip: 102.46 kB)
+   - ✅ **API Endpoint**: Registered and middleware-protected
+   - ✅ **Type Safety**: Full TypeScript coverage throughout
+   - ✅ **Architecture Compliance**: Follows all project patterns
+   - ✅ **Error Handling**: Comprehensive validation and logging
+
+9. **Integration Points**:
+   - **Focus System**: Uses FocusState for spatial context
+   - **Location Storage**: Reads from locationsSlice.getLocationsByWorld()
+   - **Spawn System**: Triggers startSpawn() for new locations
+   - **MZOO Service**: Reuses existing Gemini API integration
+   - **Travel UI**: Activates from LocationPanel "Travel" button
+
+10. **Next Steps for NavigatorAI**:
+    - Add perspective inference (infer 'interior' from "go inside")
+    - Switch active chat to target location after move
+    - Implement embedding-based candidate shortlisting
+    - Add navigation history for "go back" command
+    - Support multi-hop navigation ("teleport to X then Y")
+
+### Focus System Implementation (Previously Completed)
 1. **Complete Focus State Tracking System**:
    - **Purpose**: Track where user is viewing from in world node tree for future navigation and sub-location generation
    - **FocusState Interface**:

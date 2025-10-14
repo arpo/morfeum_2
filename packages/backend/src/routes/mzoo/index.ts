@@ -10,6 +10,7 @@ import { seedRouter } from './seed';
 import { imageRouter } from './image';
 import { profileRouter } from './profile';
 import { aiRouter } from './ai';
+import { navigatorRouter } from './navigator';
 
 const router = Router();
 
@@ -21,6 +22,7 @@ router.use('/prompts', promptsRouter);
 router.use('/entity', seedRouter);
 router.use('/entity', imageRouter);
 router.use('/entity', profileRouter);
+router.use('/navigator', navigatorRouter);
 router.use('/', aiRouter);
 
 export { router as mzooRouter };

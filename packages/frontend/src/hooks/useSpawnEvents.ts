@@ -14,7 +14,6 @@ export function useSpawnEvents() {
   const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
   const updateSpawnStatus = useStore(state => state.updateSpawnStatus);
   const removeSpawn = useStore(state => state.removeSpawn);
-  const activeSpawns = useStore(state => state.activeSpawns);
 
   useEffect(() => {
     // Connect to SSE endpoint
@@ -91,7 +90,7 @@ export function useSpawnEvents() {
       
       // Log hierarchical location structure (locations only)
       if (entityType === 'location') {
-        console.log(' Location Generated with Hierarchical DNA:');
+        console.log('🌍 Location Generated with Hierarchical DNA:');
         console.log('  🌐 World Node:', deepProfile.world);
         if (deepProfile.region) {
           console.log('  🗺️ Region Node:', deepProfile.region);

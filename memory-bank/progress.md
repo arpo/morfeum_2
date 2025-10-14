@@ -69,7 +69,76 @@
 - **Real-time Updates**: Seamless system prompt updates without disrupting conversation
 - **Scrollable Lists**: Entities panel and Active Spawns panel have scrollbars when lists exceed max height
 
-### Focus System for Location Navigation (Latest - Just Completed)
+### NavigatorAI - LLM-Based Semantic Navigation (Latest - Just Completed)
+- **Complete LLM-Powered Navigation System**: Uses Gemini 2.5 Flash to analyze user intent and find/generate locations
+  - **Natural Language Commands**: "go inside", "back to beach", "explore tower", "teleport to caves"
+  - **Semantic Understanding**: Matches fuzzy user intent to world nodes using LLM reasoning
+  - **Smart Generation**: Creates new locations when no suitable match exists
+  - Replaces traditional vector search with intelligent spatial reasoning
+- **Backend Architecture**:
+  - **Prompt** (`navigatorSemanticNodeSelector.ts` - 108 lines):
+    - Takes user command, current focus, all world nodes as context
+    - Understands hierarchy (child nodes = "inside", parent = "back to")
+    - Returns JSON: action (move/generate), targetNodeId, name, relation, reason
+    - Includes examples for training LLM on spatial reasoning
+  - **Service** (`navigator.service.ts` - 116 lines):
+    - `findDestinationNode()` main navigation function
+    - Calls Gemini through MZOO service
+    - JSON parsing with markdown code block extraction
+    - Returns NavigationResult with action details
+  - **API Endpoint** (`routes/mzoo/navigator.ts` - 81 lines):
+    - POST `/api/mzoo/navigator/find-destination`
+    - Validates userCommand, currentFocus, allNodes
+    - Protected by MZOO API key middleware
+- **Frontend Integration** (`useLocationPanel.ts`):
+  - Enhanced `handleMove()` with full NavigatorAI integration
+  - Fetches current location and focus state
+  - Gets all nodes in world for LLM context
+  - Calls backend NavigatorAI endpoint
+  - **Move Action**: Updates focus to existing target location
+  - **Generate Action**: Triggers location spawn with LLM-suggested name
+  - Comprehensive console logging for debugging
+- **NavigationResult Interface**:
+  ```typescript
+  {
+    action: 'move' | 'generate';
+    targetNodeId: string | null;      // For move
+    name: string | null;               // For generate
+    relation: 'sublocation' | 'adjacent' | 'nearby' | 'parent' | 'teleport' | null;
+    reason: string;                    // LLM explanation
+  }
+  ```
+- **Example Flows**:
+  - **Move**: "go inside" → Finds "Lighthouse Interior" child node → Updates focus
+  - **Generate**: "explore hidden tower" → No tower exists → Spawns new "Hidden Tower" location
+- **Files Modified**: 7 total (4 backend, 2 type definitions, 1 frontend)
+- **Quality Verification**:
+  - ✅ Backend Build: Successful (zero errors)
+  - ✅ Frontend Build: Successful (338.67 kB, gzip: 102.46 kB)
+  - ✅ API Endpoint: Registered and protected
+  - ✅ Type Safety: Full TypeScript coverage
+  - ✅ Architecture: Follows all project patterns
+- **Key Benefits**:
+  - Natural language navigation (no precise commands needed)
+  - Context-aware spatial understanding
+  - Fuzzy matching for imprecise commands
+  - Smart generation only when needed
+  - Explainable decisions with reason field
+  - Foundation for embeddings optimization
+- **Integration Points**:
+  - Uses Focus System for spatial context
+  - Reads from locationsSlice for world nodes
+  - Triggers spawn system for new locations
+  - Reuses MZOO Gemini integration
+  - Activates from LocationPanel travel button
+- **Next Steps**:
+  - Add perspective inference from commands
+  - Switch active chat to target after move
+  - Implement embedding-based candidate shortlisting
+  - Add navigation history for "go back"
+  - Support multi-hop navigation
+
+### Focus System for Location Navigation (Previously Completed)
 - **Complete Focus State Tracking**: Monitors where user is viewing from in world node tree
   - **FocusState Interface**: node_id, perspective, viewpoint, distance fields
   - Added to both backend (`packages/backend/src/services/spawn/types.ts`) and frontend types
