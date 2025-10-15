@@ -1,9 +1,120 @@
 # Active Context
 
 ## Current Work Focus
-**NavigatorAI - Performance & searchDesc System** - Enhanced NavigatorAI with 10x performance improvement (gemini-2.5-flash-lite), added searchDesc field to DNA for better navigation matching, and implemented type-prefixed descriptions for clear hierarchy understanding.
+**World-Centric Tree Architecture** - Completed transformation to world-centric navigation and storage system with cascade deletion, recursive child loading, and proper world node handling. Foundation established for true hierarchical location management.
 
 ## Recent Changes
+
+### World-Centric Saved Locations & Tree Loading (Latest - Just Completed)
+1. **Saved Locations Transformed to World-Only View**:
+   - **Previous**: Modal showed all nodes (world, region, location, sublocation) in flat list
+   - **New**: Only world nodes displayed - clean, organized world management
+   - **Filtering**: `Object.values(nodesMap).filter(node => node.type === 'world')`
+   - **Display**: Each world shows thumbnail, name, and "Contains X nodes" count
+   - **User Benefit**: See all worlds at a glance, no clutter from nested nodes
+
+2. **Cascade Tree Deletion Implemented**:
+   - **New Method**: `deleteWorldTree(worldId)` in locationsSlice
+   - **Recursive Collection**: Gathers all descendant node IDs in tree
+   - **Complete Cleanup**: Deletes all nodes, removes tree, cleans up pins
+   - **Smart Confirmation**: "Delete this world and all 8 nodes in it?"
+   - **Example**: Deleting "Ethereal Nexus" removes world + regions + locations + sublocations (all children)
+
+3. **Node Count Helper**:
+   - **New Method**: `getWorldNodeCount(worldId)` returns total nodes in tree
+   - **Display**: Shows "Contains X nodes" under world name
+   - **UI Integration**: Used in deletion confirmation and card display
+
+4. **Auto-Load All World Tree Children on Startup**:
+   - **Previous**: Only world node loaded, children lost on page refresh
+   - **New**: Recursively loads ALL children (regions, locations, sublocations)
+   - **Implementation** (App.tsx lines 107-144):
+     ```typescript
+     if (node.type === 'world') {
+       const worldTree = getWorldTree(node.id);
+       const loadChildren = (treeNode) => {
+         treeNode.children?.forEach((child) => {
+           const childNode = getNode(child.id);
+           createChatWithEntity(child.id, childSeed, 'location');
+           if (childNode.imagePath) updateChatImage(child.id, childNode.imagePath);
+           updateChatDeepProfile(child.id, childCascadedDNA);
+           loadChildren(child); // Recurse for grandchildren
+         });
+       };
+       loadChildren(worldTree);
+     }
+     ```
+   - **Result**: Page refresh now shows complete tree in ChatTabs with proper indentation
+   - **Console Logging**: `[App] 🌲 Loading all children of world: Ethereal Nexus`
+
+5. **World Node Image & Name Fix**:
+   - **Bug**: World nodes showed "No Image" and no name in Saved Locations
+   - **Root Cause**: World node created with `imagePath: ''` even though image already in chat session
+   - **Solution** (useSpawnEvents.ts lines 131-138):
+     ```typescript
+     // Get image from chat session (already stored by image-complete event)
+     const chats = useStore.getState().chats;
+     const chatSession = chats.get(spawnId);
+     const worldImage = chatSession?.entityImage || '';
+     
+     const worldNode: Node = {
+       id: worldId,
+       type: 'world',
+       name: deepProfile.world.meta.name,  // ✅ Name from DNA
+       imagePath: worldImage,  // ✅ Image from chat session
+       ...
+     };
+     ```
+   - **Timing Flow**: image-complete → stores in chat → profile-complete → creates world node → retrieves image from chat
+   - **Note**: Old worlds need deletion and regeneration (data migration issue)
+
+6. **ChatTabs Tree Display**:
+   - **Depth Calculation**: Traverses world trees to find node depth
+   - **Indentation**: `paddingLeft: calc(var(--spacing-md) + ${depthLevel * 20}px)`
+   - **Hierarchy Indicator**: `└─` symbol for child nodes
+   - **Visual Result**:
+     ```
+     Ethereal Nexus (world)
+     └─ Northern Wastes (region)
+       └─ Archive Garden (location)
+         └─ Lighthouse Interior (sublocation)
+     ```
+   - **Preservation**: Tree structure maintained across page reloads
+
+7. **Files Modified (10 total)**:
+   - **Backend**: No changes needed (tree structure already existed)
+   - **Frontend (10 files)**:
+     - `store/slices/locationsSlice.ts` - Added deleteWorldTree, getWorldNodeCount, updated TypeScript interface
+     - `features/saved-locations/SavedLocationsModal/useSavedLocationsLogic.ts` - Filter to worlds, use deleteWorldTree
+     - `features/saved-locations/SavedLocationsModal/SavedLocationsModal.tsx` - Display node counts, updated handlers
+     - `features/saved-locations/SavedLocationsModal/types.ts` - Added getWorldNodeCount to interface
+     - `features/saved-locations/SavedLocationsModal/SavedLocationsModal.module.css` - Added .nodeCount styling
+     - `features/app/components/App/App.tsx` - Recursive world tree children loading
+     - `hooks/useSpawnEvents.ts` - Get world image from chat session when creating node
+     - `features/chat-tabs/ChatTabs/ChatTabs.tsx` - Already had tree display (no changes needed)
+
+8. **Key Benefits Delivered**:
+   - **Clean World Management**: See all worlds without nested node clutter
+   - **Complete Tree Deletion**: One click removes entire world tree safely
+   - **Persistent Tree Structure**: Page reload maintains full hierarchy in ChatTabs
+   - **Visual Consistency**: World cards show thumbnails and names correctly
+   - **User Experience**: Tree indentation preserved exactly as during generation
+   - **Data Integrity**: Cascade deletion prevents orphaned nodes
+
+9. **Quality Verification**:
+   - ✅ **Build Status**: TypeScript compilation successful (zero errors)
+   - ✅ **Tree Loading**: All child nodes appear in ChatTabs on page reload
+   - ✅ **Cascade Deletion**: Confirmed all nodes removed from store and worldTrees
+   - ✅ **World Display**: Images and names show correctly (for new worlds)
+   - ✅ **Indentation**: Tree structure rendered with proper visual hierarchy
+   - ✅ **Architecture**: Follows all project patterns
+
+10. **Data Migration Note**:
+    - **Old Worlds**: Created before image fix won't have `imagePath` or `name`
+    - **Solution**: Delete old worlds and regenerate new ones
+    - **Future**: All new worlds will have correct image and name from creation
+
+## Recent Changes (Continued)
 
 ### NavigatorAI Performance & searchDesc Enhancement (Latest - Just Completed)
 1. **Performance Optimization**:

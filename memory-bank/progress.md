@@ -69,7 +69,42 @@
 - **Real-time Updates**: Seamless system prompt updates without disrupting conversation
 - **Scrollable Lists**: Entities panel and Active Spawns panel have scrollbars when lists exceed max height
 
-### NavigatorAI - LLM-Based Semantic Navigation (Latest - Just Completed)
+### World-Centric Tree Architecture & Saved Locations (Latest - Just Completed)
+- **Complete World-Centric Saved Locations System**: Transformed UI to show only world nodes
+  - Saved Locations modal displays worlds only (filtered view)
+  - Each world card shows thumbnail, name, and "Contains X nodes" count
+  - Clean, organized world management without nested node clutter
+- **Cascade Tree Deletion**: Complete world tree removal with single action
+  - `deleteWorldTree(worldId)` method recursively deletes all descendants
+  - Smart confirmation: "Delete this world and all 8 nodes in it?"
+  - Complete cleanup: removes nodes, tree structure, and pins
+- **Node Count Helper**: `getWorldNodeCount(worldId)` returns total nodes in tree
+  - Used in deletion confirmation and card display
+  - Provides transparency about tree size
+- **Auto-Load All World Tree Children on Startup**: Recursive child loading
+  - Previous: Only world node loaded, children lost on page refresh
+  - New: Recursively loads ALL children (regions, locations, sublocations)
+  - Implementation in App.tsx with `loadChildren()` recursive function
+  - Result: Complete tree structure visible in ChatTabs after refresh
+- **ChatTabs Tree Display**: Hierarchical indentation maintained
+  - Depth calculation traverses world trees
+  - Visual indentation: `paddingLeft: calc(var(--spacing-md) + ${depthLevel * 20}px)`
+  - Hierarchy indicator: `└─` symbol for child nodes
+  - Tree structure preserved exactly as during generation
+- **World Node Image & Name Fix**: Correct display in Saved Locations
+  - Bug fixed: World nodes now retrieve image from chat session when created
+  - Timing: image-complete → stores in chat → profile-complete → creates world node → retrieves image
+  - Note: Old worlds need deletion and regeneration (data migration issue)
+- **Files Modified**: 10 frontend files (no backend changes needed)
+- **Quality Verified**: TypeScript zero errors, tree loading works, cascade deletion confirmed
+- **Key Benefits**:
+  - Clean world management interface
+  - Complete tree deletion with data integrity
+  - Persistent tree structure across page reloads
+  - Visual consistency with thumbnails and names
+  - User experience matches generation-time display
+
+### NavigatorAI - LLM-Based Semantic Navigation (Previously Completed)
 - **Complete LLM-Powered Navigation System**: Uses Gemini 2.5 Flash to analyze user intent and find/generate locations
   - **Natural Language Commands**: "go inside", "back to beach", "explore tower", "teleport to caves"
   - **Semantic Understanding**: Matches fuzzy user intent to world nodes using LLM reasoning
