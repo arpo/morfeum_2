@@ -47,10 +47,10 @@ router.post('/enrich-profile', asyncHandler(async (req: Request, res: Response) 
       'gemini-2.5-flash'
     );
 
-    if (result.error) {
+    if (result.error || !result.data) {
       res.status(result.status).json({
         message: 'Failed to generate deep profile from MZOO API',
-        error: result.error,
+        error: result.error || 'No data returned',
         timestamp: new Date().toISOString(),
       });
       return;

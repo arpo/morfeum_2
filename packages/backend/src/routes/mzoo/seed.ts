@@ -39,10 +39,10 @@ router.post('/generate-seed', asyncHandler(async (req: Request, res: Response) =
     'gemini-2.5-flash-lite'
   );
   
-  if (result.error) {
+  if (result.error || !result.data) {
     res.status(result.status).json({
       message: 'Failed to generate entity seed from MZOO API',
-      error: result.error,
+      error: result.error || 'No data returned',
       timestamp: new Date().toISOString(),
     });
     return;

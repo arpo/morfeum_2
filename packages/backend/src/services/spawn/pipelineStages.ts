@@ -31,8 +31,8 @@ export async function generateSeed(
     AI_MODELS.SEED_GENERATION
   );
 
-  if (result.error) {
-    throw new Error(result.error);
+  if (result.error || !result.data) {
+    throw new Error(result.error || 'No data returned from API');
   }
 
   // Parse JSON response
@@ -149,8 +149,8 @@ export async function analyzeImage(
     AI_MODELS.VISUAL_ANALYSIS
   );
 
-  if (result.error) {
-    throw new Error(result.error);
+  if (result.error || !result.data) {
+    throw new Error(result.error || 'No data returned from API');
   }
 
   // Parse JSON response
@@ -194,8 +194,8 @@ export async function enrichProfile(
     AI_MODELS.PROFILE_ENRICHMENT
   );
 
-  if (result.error) {
-    throw new Error(result.error);
+  if (result.error || !result.data) {
+    throw new Error(result.error || 'No data returned from API');
   }
 
   // Parse JSON response

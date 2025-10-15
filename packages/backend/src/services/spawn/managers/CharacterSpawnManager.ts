@@ -33,8 +33,8 @@ export class CharacterSpawnManager extends BasePipelineManager {
       AI_MODELS.SEED_GENERATION
     );
 
-    if (result.error) {
-      throw new Error(result.error);
+    if (result.error || !result.data) {
+      throw new Error(result.error || 'No data returned from API');
     }
 
     return parseJSON(result.data.text);
@@ -98,8 +98,8 @@ export class CharacterSpawnManager extends BasePipelineManager {
       AI_MODELS.VISUAL_ANALYSIS
     );
 
-    if (result.error) {
-      throw new Error(result.error);
+    if (result.error || !result.data) {
+      throw new Error(result.error || 'No data returned from API');
     }
 
     return parseJSON(result.data.text);
@@ -131,8 +131,8 @@ export class CharacterSpawnManager extends BasePipelineManager {
       AI_MODELS.PROFILE_ENRICHMENT
     );
 
-    if (result.error) {
-      throw new Error(result.error);
+    if (result.error || !result.data) {
+      throw new Error(result.error || 'No data returned from API');
     }
 
     return parseJSON(result.data.text);

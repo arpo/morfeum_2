@@ -109,10 +109,10 @@ router.post('/analyze-image', asyncHandler(async (req: Request, res: Response) =
       'gemini-2.5-flash'
     );
 
-    if (visionResult.error) {
+    if (visionResult.error || !visionResult.data) {
       res.status(visionResult.status).json({
         message: 'Failed to analyze image from MZOO API',
-        error: visionResult.error,
+        error: visionResult.error || 'No data returned',
         timestamp: new Date().toISOString(),
       });
       return;
