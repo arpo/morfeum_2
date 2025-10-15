@@ -187,6 +187,38 @@ export function useSpawnEvents() {
             updateChatDeepProfile(spawnId, deepProfile);
           }
         }
+        
+        // Load all child nodes into chat sessions (same as App.tsx page load logic)
+        const getWorldTree = useLocationsStore.getState().getWorldTree;
+        const worldTree = getWorldTree(worldId);
+        
+        if (worldTree) {
+          const loadChildren = (treeNode: any) => {
+            treeNode.children?.forEach((child: any) => {
+              const childNode = getNode(child.id);
+              if (childNode) {
+                const childCascadedDNA = getCascadedDNA(child.id);
+                const childSeed = {
+                  name: childNode.name,
+                  atmosphere: childCascadedDNA.world?.semantic?.atmosphere || 'Unknown'
+                };
+                
+                createChatWithEntity(child.id, childSeed, 'location');
+                
+                if (childNode.imagePath) {
+                  updateChatImage(child.id, childNode.imagePath);
+                }
+                
+                updateChatDeepProfile(child.id, childCascadedDNA as any);
+              }
+              
+              // Recurse for grandchildren
+              loadChildren(child);
+            });
+          };
+          
+          loadChildren(worldTree);
+        }
       } else {
         // Character entity - store deep profile normally
         if (updateChatDeepProfile && deepProfile) {
