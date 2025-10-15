@@ -91,35 +91,37 @@ Goal: Generate camera geometry that feels lived-in and cinematic — prioritizin
 
 Write one short, precise sentence describing only the camera geometry:
 
-Include:
-• framing distance (close / medium / wide / establishing / panoramic / macro)  
-• camera angle (low / high / tilted / oblique / off-axis / three-quarter)  
-• composition bias (left / right / diagonal / offset / foreground-weighted / subject-dominant)  
-• relative height or perspective (ground-level / elevated / aerial / eye-level / top-down / detail-plane)  
-• optional depth cues (foreground framing / occlusion / parallax / leading lines / layered planes / scale intrusion)
 
-Avoid: phrases like centered, perfect symmetry, directly facing, or eye-level balance.
+**Include:**
+• framing distance — close / medium / wide / establishing / panoramic / macro
+• camera angle — low / high / tilted / oblique / off-axis / three-quarter
+• composition bias — left / right / diagonal / offset / foreground-weighted / subject-dominant
+• perspective height — ground-level / elevated / aerial / top-down / detail-plane
+• depth cues — foreground framing / occlusion / parallax / leading lines / layered planes / scale intrusion
 
-Favor: diagonals, partial obstructions, asymmetrical framing, near/far contrasts, lens compression or expansion, and environmental intrusion (vines, railings, shadows).
+**Avoid:** centered or perfectly symmetric framing, directly facing or eye-level balance.
 
-When describing **machines, devices, or weapons**, emphasize tactile geometry:
-- Tight or macro framing showing mechanisms, contours, or interfaces  
-- Oblique or three-quarter angles that reveal depth and form  
-- Strong surface occlusion, shallow depth cues, or overlapping components  
-- Avoid pulling back to include unnecessary surroundings
+**Favor:** diagonals, partial obstructions, asymmetry, near-far contrast, environmental intrusion (vines, railings, shadows), lens compression or expansion, skewed horizons, uneven lighting falloff.
 
-✦ Updated Camera Geometry Examples
+**For machines, devices, or weapons:** emphasize tactile geometry —
 
-• “macro detail shot, three-quarter angle, diagonal composition, shallow depth with strong surface occlusion”  
-• “tight close-up, oblique overhead view, right-weighted frame, lens compression revealing layered components”  
-• “medium detail framing, ground-level offset, diagonal axis through weapon chassis”  
-• “low three-quarter angle, diagonal layout with strong foreground occlusion and receding arches”  
-• “elevated side vantage, wide framing, layered trees forming asymmetrical tunnel toward distant portal”  
-• “ground-level shot, oblique axis, right-weighted composition with glowing crystals leading into depth”  
-• “medium-wide view, slight tilt, framed between trunks with diagonal rhythm through walkway”  
-• “aerial 45° off-axis angle, sweeping lines converging into misty focal point”  
-• “wide architectural view, skewed symmetry broken by foreground branches and uneven lighting falloff”  
-• “telephoto compression, layered columns creating rhythmic parallax, off-center horizon line”
+* tight or macro framing on mechanisms and contours
+* oblique or three-quarter angles showing depth and overlap
+* strong surface occlusion, shallow depth cues, layered components
+* avoid wide pulls or excess background context
+
+**Camera geometry examples:**
+• “macro detail, three-quarter angle, diagonal composition, shallow depth with surface occlusion”
+• “tight close-up, oblique overhead, right-weighted frame, compressed depth through layered components”
+• “medium detail, ground-level offset, diagonal axis through chassis or structure”
+• “low three-quarter, diagonal layout, strong foreground occlusion with receding arches”
+• “elevated side vantage, wide framing, asymmetrical tunnel of trees toward distant portal”
+• “ground-level oblique shot, right-weighted composition, glowing elements leading into depth”
+• “medium-wide, slight tilt, framed between trunks with diagonal rhythm”
+• “aerial 45° off-axis, sweeping lines converging into mist”
+• “wide architectural, skewed symmetry broken by foreground branches and light falloff”
+• “telephoto compression, layered columns forming rhythmic parallax, off-center horizon”
+
 
 
 ✦ Practical Prompts for Variation
