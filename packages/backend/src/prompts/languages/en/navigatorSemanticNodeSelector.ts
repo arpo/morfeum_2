@@ -188,9 +188,12 @@ When specifying targetNodeId or parentNodeId in your JSON response:
 
 🚨 CRITICAL OUTPUT FORMAT 🚨
 
-You MUST return valid JSON. NO explanations, NO text, ONLY the JSON object below.
+You MUST return ONLY valid JSON with NO preamble, NO explanation text, NO reasoning before the JSON.
+Do NOT write "The user command is..." or explain your thinking.
+Start your response IMMEDIATELY with the opening brace { of the JSON object.
 Even if the request seems impossible, you MUST return JSON with action: "generate".
 NEVER refuse a request - always provide a JSON response.
+If you must use markdown code fences, wrap ONLY the JSON with no text before the fence.
 
 {
   "action": "move" | "generate" | "look",

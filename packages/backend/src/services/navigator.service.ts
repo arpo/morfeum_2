@@ -137,10 +137,24 @@ export const findDestinationNode = async (
       // console.log('[NavigatorAI] Raw AI response:', jsonText.substring(0, 500));
       
       // Extract JSON from markdown code blocks if present
-      if (jsonText.startsWith('```json')) {
-        jsonText = jsonText.substring(7, jsonText.lastIndexOf('```')).trim();
+      // Handle case where AI adds explanation text before the JSON
+      const jsonFenceMatch = jsonText.match(/```json\s*\n([\s\S]*?)\n```/);
+      if (jsonFenceMatch) {
+        jsonText = jsonFenceMatch[1].trim();
+      } else if (jsonText.includes('```json')) {
+        // Fallback: find ```json and extract until ```
+        const startIndex = jsonText.indexOf('```json') + 7;
+        const endIndex = jsonText.lastIndexOf('```');
+        jsonText = jsonText.substring(startIndex, endIndex).trim();
       } else if (jsonText.startsWith('```')) {
         jsonText = jsonText.substring(3, jsonText.lastIndexOf('```')).trim();
+      } else if (jsonText.includes('{')) {
+        // Last resort: extract first JSON object
+        const firstBrace = jsonText.indexOf('{');
+        const lastBrace = jsonText.lastIndexOf('}');
+        if (firstBrace !== -1 && lastBrace !== -1) {
+          jsonText = jsonText.substring(firstBrace, lastBrace + 1).trim();
+        }
       }
 
       // console.log('[NavigatorAI] Extracted JSON text:', jsonText);
