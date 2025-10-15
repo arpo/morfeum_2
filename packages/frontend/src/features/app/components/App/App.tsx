@@ -71,6 +71,8 @@ export function App() {
     
     // Load all pinned location nodes
     const getCascadedDNA = useLocationsStore.getState().getCascadedDNA;
+    const getWorldTree = useLocationsStore.getState().getWorldTree;
+    const getNode = useLocationsStore.getState().getNode;
     
     pinnedLocations.forEach((node) => {
       // console.log('[App] Auto-loading pinned node:', node.id);
@@ -96,6 +98,42 @@ export function App() {
       
       updateChatDeepProfile(node.id, cascadedDNA as any);
       lastLoadedId = node.id;
+      
+      // If this is a world node, also load all its children
+      if (node.type === 'world') {
+        console.log('[App] 🌲 Loading all children of world:', node.name);
+        const worldTree = getWorldTree(node.id);
+        
+        if (worldTree) {
+          // Recursively load all child nodes
+          const loadChildren = (treeNode: any) => {
+            treeNode.children?.forEach((child: any) => {
+              const childNode = getNode(child.id);
+              if (childNode) {
+                const childCascadedDNA = getCascadedDNA(child.id);
+                const childSeed = {
+                  name: childNode.name,
+                  atmosphere: childCascadedDNA.world?.semantic?.atmosphere || 'Unknown'
+                };
+                
+                createChatWithEntity(child.id, childSeed, 'location');
+                
+                if (childNode.imagePath) {
+                  updateChatImage(child.id, childNode.imagePath);
+                }
+                
+                updateChatDeepProfile(child.id, childCascadedDNA as any);
+                console.log('[App]   └─ Loaded child node:', childNode.name, `(${childNode.type})`);
+              }
+              
+              // Recurse for grandchildren
+              loadChildren(child);
+            });
+          };
+          
+          loadChildren(worldTree);
+        }
+      }
     });
     
     // Set the last loaded entity as active
