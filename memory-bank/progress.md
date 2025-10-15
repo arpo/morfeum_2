@@ -104,6 +104,28 @@
   - Visual consistency with thumbnails and names
   - User experience matches generation-time display
 
+### Multi-View Preparation & Distance-Based Navigation (Latest - Just Completed)
+- **generateViewDescriptions.ts Prompt**: Infrastructure for multi-view text descriptions
+  - Generates north/south/east/west directional views (text only, ~1-2 seconds)
+  - Output includes: looks, focusTarget, renderInstructions, hasImage flag
+  - Prepared for lazy image generation when user looks in that direction
+  - Optional integration in LocationSpawnManager (commented out by default)
+- **Distance-Based Navigation Enhancement**:
+  - **"Go closer to X"**: Generates detail child node with scale_hint: "detail"
+  - **"Go back" / "move away"**: Returns to parent node (wider view)
+  - Added comprehensive examples (Scenarios 7 & 8) to NavigatorAI prompt
+  - Full integration into navigation decision tree
+- **locationSeedGeneration.ts Updated for Close-Ups**:
+  - Special detection for detail/close-up views (phrases like "Closer to", "Approach")
+  - Target object becomes dominant subject filling 70%+ of frame
+  - Uses tight framing (close-up, detail shot, intimate perspective)
+  - Inherits parent location's atmosphere, mood, visual style
+  - Minimizes new invention - focuses on what already exists
+- **Type System Complete**: Added generateViewDescriptions to PromptKey and PromptTemplates
+- **Error to Warning Fix**: Changed "Target node not found" from error to warning in useLocationPanel
+- **Files Modified**: 6 total (4 backend prompts, 1 type file, 1 frontend logic)
+- **Quality Verified**: Backend builds successfully with zero TypeScript errors
+
 ### NavigatorAI - Complete Spatial Navigation System (Latest - Just Completed)
 - **Complete LLM-Powered Navigation System**: Uses Gemini 2.5 Flash Lite to analyze user intent and find/generate locations
 - **architectural_tone Field Integration**: Added to NodeDNA for visual style cascading
