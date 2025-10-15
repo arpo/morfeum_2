@@ -289,6 +289,8 @@ interface LocationsState {
   getAllNodes: () => Node[];
   
   // Tree operations
+  deleteWorldTree: (worldId: string) => void;
+  getWorldNodeCount: (worldId: string) => number;
   getWorldTree: (worldId: string) => TreeNode | undefined;
   addNodeToTree: (worldId: string, parentId: string | null, nodeId: string, type: NodeType) => void;
   removeNodeFromTree: (worldId: string, nodeId: string) => void;
@@ -452,6 +454,59 @@ export const useLocationsStore = create<LocationsState>()(
       
       getAllNodes: () => {
         return Object.values(get().nodes);
+      },
+      
+      // Delete entire world tree (all nodes in the tree)
+      deleteWorldTree: (worldId: string) => {
+        const { nodes, worldTrees, pinnedIds } = get();
+        
+        // Find the world tree
+        const treeIndex = worldTrees.findIndex(t => t.id === worldId);
+        if (treeIndex === -1) {
+          console.warn('[locationsSlice] World tree not found:', worldId);
+          return;
+        }
+        
+        // Collect all node IDs in the tree (recursive)
+        const nodeIdsToDelete = new Set<string>();
+        const collectNodeIds = (treeNode: TreeNode) => {
+          nodeIdsToDelete.add(treeNode.id);
+          treeNode.children?.forEach(child => collectNodeIds(child));
+        };
+        collectNodeIds(worldTrees[treeIndex]);
+        
+        // Delete all nodes from nodes map
+        const newNodes = { ...nodes };
+        nodeIdsToDelete.forEach(id => delete newNodes[id]);
+        
+        // Remove tree from worldTrees array
+        const newTrees = worldTrees.filter((_, i) => i !== treeIndex);
+        
+        // Clean up pins
+        const newPinnedIds = pinnedIds.filter(id => !nodeIdsToDelete.has(id));
+        
+        set({
+          nodes: newNodes,
+          worldTrees: newTrees,
+          pinnedIds: newPinnedIds
+        });
+        
+        console.log(`[locationsSlice] Deleted world tree: ${worldId} (${nodeIdsToDelete.size} nodes)`);
+      },
+      
+      // Get count of nodes in a world tree
+      getWorldNodeCount: (worldId: string) => {
+        const { worldTrees } = get();
+        const tree = worldTrees.find(t => t.id === worldId);
+        if (!tree) return 0;
+        
+        let count = 0;
+        const traverse = (node: TreeNode) => {
+          count++;
+          node.children?.forEach(traverse);
+        };
+        traverse(tree);
+        return count;
       },
       
       // Tree operations

@@ -65,11 +65,17 @@ Rules:
 - CRITICAL: Always use node IDs (like "spawn-1760475394478-xyz"), NEVER use node names (like "Upstairs")
 - The ID field is the unique identifier - names are just labels
 
+⚠️ CRITICAL REQUIREMENT ⚠️
+When specifying targetNodeId or parentNodeId in your JSON response:
+- MUST use the full ID from the node list (starts with "spawn-")
+- DO NOT use the node name (like "The Garden", "Upstairs", etc.)
+- Example: If the node is listed as "The Garden (ID: spawn-abc123...)", use "spawn-abc123..." in your response
+
 Return JSON only:
 {
   "action": "move" | "generate",
-  "targetNodeId": "id" | null,
-  "parentNodeId": "id" | null,
+  "targetNodeId": "spawn-..." | null,
+  "parentNodeId": "spawn-..." | null,
   "name": "hierarchical name" | null,
   "relation": "sublocation" | "adjacent" | "nearby" | "parent" | "teleport" | null,
   "reason": "brief explanation"

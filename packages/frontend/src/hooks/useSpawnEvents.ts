@@ -76,6 +76,13 @@ export function useSpawnEvents() {
         updateChatImagePrompt(spawnId, imagePrompt);
       }
       
+      // Update world node image (world node uses spawnId as its ID)
+      const worldNode = getNode(spawnId);
+      if (worldNode && worldNode.type === 'world') {
+        console.log('[SSE] 📸 Updating world node image:', spawnId);
+        updateNode(spawnId, { imagePath: imageUrl });
+      }
+      
       // For location nodes, update the imagePath in the location node
       // The location node ID should be spawnId-location based on tree creation logic
       const locationNodeId = `${spawnId}-location`;
@@ -120,18 +127,25 @@ export function useSpawnEvents() {
         // Build tree structure from hierarchical DNA
         const worldId = spawnId; // Root world uses spawn ID
         
+        // Get image from chat session (already stored by image-complete event)
+        const chats = useStore.getState().chats;
+        const chatSession = chats.get(spawnId);
+        const worldImage = chatSession?.entityImage || '';
+        
+        console.log('[SSE] 🖼️ World node image from session:', worldImage ? 'found' : 'missing');
+        
         // Create world node
         const worldNode: Node = {
           id: worldId,
           type: 'world',
           name: deepProfile.world.meta.name,
           dna: deepProfile.world,
-          imagePath: '',
+          imagePath: worldImage,
           focus: undefined,
         };
         createNode(worldNode);
         addNodeToTree(worldId, null, worldId, 'world');
-        console.log('[Tree] Created world node:', worldId);
+        // console.log('[Tree] Created world node:', worldId);
         
         // Create region node if exists
         let regionId: string | null = null;
@@ -147,7 +161,7 @@ export function useSpawnEvents() {
           };
           createNode(regionNode);
           addNodeToTree(worldId, worldId, regionId, 'region');
-          console.log('[Tree] Created region node:', regionId);
+          // console.log('[Tree] Created region node:', regionId);
         }
         
         // Create location node if exists

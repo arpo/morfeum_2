@@ -119,6 +119,38 @@ export const findDestinationNode = async (
         };
       }
 
+      // CRITICAL: Validate and fix ID fields if LLM returned names instead of IDs
+      // Check targetNodeId
+      if (navigationResult.targetNodeId && !navigationResult.targetNodeId.startsWith('spawn-')) {
+        console.warn('[NavigatorAI] ⚠️ targetNodeId looks like a name, not an ID:', navigationResult.targetNodeId);
+        const matchedNode = allNodes.find(n => n.name === navigationResult.targetNodeId);
+        if (matchedNode) {
+          console.log('[NavigatorAI] ✅ Fixed targetNodeId:', matchedNode.name, '→', matchedNode.id);
+          navigationResult.targetNodeId = matchedNode.id;
+        } else {
+          console.error('[NavigatorAI] ❌ Could not find node with name:', navigationResult.targetNodeId);
+          return {
+            status: HTTP_STATUS.INTERNAL_SERVER_ERROR,
+            error: `Invalid targetNodeId: "${navigationResult.targetNodeId}" is not a valid ID and no matching node name found`
+          };
+        }
+      }
+
+      // Check parentNodeId
+      if (navigationResult.parentNodeId && !navigationResult.parentNodeId.startsWith('spawn-')) {
+        console.warn('[NavigatorAI] ⚠️ parentNodeId looks like a name, not an ID:', navigationResult.parentNodeId);
+        const matchedNode = allNodes.find(n => n.name === navigationResult.parentNodeId);
+        if (matchedNode) {
+          console.log('[NavigatorAI] ✅ Fixed parentNodeId:', matchedNode.name, '→', matchedNode.id);
+          navigationResult.parentNodeId = matchedNode.id;
+        } else {
+          console.error('[NavigatorAI] ❌ Could not find node with name:', navigationResult.parentNodeId);
+          // For parentNodeId, fallback to current node
+          console.log('[NavigatorAI] 🔄 Falling back to current node as parent:', currentFocus.node_id);
+          navigationResult.parentNodeId = currentFocus.node_id;
+        }
+      }
+
       return {
         status: HTTP_STATUS.OK,
         data: navigationResult

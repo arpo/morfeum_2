@@ -135,6 +135,13 @@
   flex: 1;
 }
 
+.nodeCount {
+  margin: var(--spacing-xs) 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
 /* Actions Container */
 .actions {
   display: flex;

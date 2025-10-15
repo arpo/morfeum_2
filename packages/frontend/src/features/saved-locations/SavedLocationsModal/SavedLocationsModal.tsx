@@ -18,7 +18,8 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
     handleDeleteCharacter,
     handlePinLocation,
     handlePinCharacter,
-    handleCopyWorldInfo
+    handleCopyWorldInfo,
+    getWorldNodeCount
   } = useSavedEntitiesLogic(onClose);
 
   const entities = activeTab === 'characters' ? characters : locations;
@@ -53,12 +54,16 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
           </div>
         ) : (
           <div className={styles.grid}>
-            {entities.map((entity) => (
+            {entities.map((entity) => {
+              // Get world node count for locations
+              const nodeCount = activeTab === 'locations' ? getWorldNodeCount(entity.id) : 0;
+              
+              return (
               <div key={entity.id} className={styles.card}>
                 <div 
                   className={styles.imageContainer}
                   onClick={() => handleLoadEntity(entity as any)}
-                  title={`Click to load ${activeTab === 'characters' ? 'character' : 'location'}`}
+                  title={`Click to load ${activeTab === 'characters' ? 'character' : 'world'}`}
                 >
                   {entity.imagePath ? (
                     <img 
@@ -74,6 +79,9 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
                 </div>
                 <div className={styles.info}>
                   <h3 className={styles.name}>{entity.name}</h3>
+                  {activeTab === 'locations' && (
+                    <p className={styles.nodeCount}>Contains {nodeCount} {nodeCount === 1 ? 'node' : 'nodes'}</p>
+                  )}
                   <div className={styles.actions}>
                     {activeTab === 'locations' && (
                       <button
@@ -110,7 +118,8 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </ModalContent>

@@ -8,11 +8,15 @@ import type { Character } from '@/store/slices/charactersSlice';
 export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicReturn {
   const [activeTab, setActiveTab] = useState<EntityTab>('characters');
   
-  // Locations (now nodes)
+  // Locations (filter to world nodes only)
   const nodesMap = useLocationsStore(state => state.nodes);
-  const locations = useMemo(() => Object.values(nodesMap), [nodesMap]);
+  const locations = useMemo(() => 
+    Object.values(nodesMap).filter(node => node.type === 'world'),
+    [nodesMap]
+  );
   const pinnedLocationIds = useLocationsStore(state => state.pinnedIds);
-  const deleteNode = useLocationsStore(state => state.deleteNode);
+  const deleteWorldTree = useLocationsStore(state => state.deleteWorldTree);
+  const getWorldNodeCount = useLocationsStore(state => state.getWorldNodeCount);
   const togglePinnedLocation = useLocationsStore(state => state.togglePinned);
   const isLocationPinned = useLocationsStore(state => state.isPinned);
   const getCascadedDNA = useLocationsStore(state => state.getCascadedDNA);
@@ -96,12 +100,15 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     console.log('[SavedEntitiesModal] Character loaded successfully');
   }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose]);
 
-  const handleDeleteLocation = useCallback((locationId: string) => {
-    if (window.confirm('Are you sure you want to delete this node?')) {
-      console.log('[SavedEntitiesModal] Deleting node:', locationId);
-      deleteNode(locationId);
+  const handleDeleteLocation = useCallback((worldId: string) => {
+    const nodeCount = getWorldNodeCount(worldId);
+    const message = `Delete this world and all ${nodeCount} nodes in it?`;
+    
+    if (window.confirm(message)) {
+      console.log('[SavedEntitiesModal] Deleting world tree:', worldId, `(${nodeCount} nodes)`);
+      deleteWorldTree(worldId);
     }
-  }, [deleteNode]);
+  }, [deleteWorldTree, getWorldNodeCount]);
 
   const handleDeleteCharacter = useCallback((characterId: string) => {
     if (window.confirm('Are you sure you want to delete this character?')) {
@@ -159,6 +166,7 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     handleDeleteCharacter,
     handlePinLocation,
     handlePinCharacter,
-    handleCopyWorldInfo
+    handleCopyWorldInfo,
+    getWorldNodeCount
   };
 }

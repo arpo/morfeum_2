@@ -15,11 +15,12 @@ export interface SavedEntitiesLogicReturn {
   characters: Character[];
   pinnedLocationIds: string[];
   pinnedCharacterIds: string[];
-  handleLoadLocation: (node: Node) => void;
+  handleLoadLocation: (location: Node) => void;
   handleLoadCharacter: (character: Character) => void;
   handleDeleteLocation: (locationId: string) => void;
   handleDeleteCharacter: (characterId: string) => void;
   handlePinLocation: (locationId: string) => void;
   handlePinCharacter: (characterId: string) => void;
-  handleCopyWorldInfo: (node: Node) => void;
+  handleCopyWorldInfo: (location: Node) => void;
+  getWorldNodeCount: (worldId: string) => number;
 }
