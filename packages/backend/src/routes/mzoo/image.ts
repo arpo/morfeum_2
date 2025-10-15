@@ -6,7 +6,7 @@
 import { Router, Request, Response } from 'express';
 import { HTTP_STATUS } from '../../config';
 import { asyncHandler } from '../../middleware';
-import * as mzooService from '../../services/mzoo.service';
+import * as mzooService from '../../services/mzoo';
 import { getPrompt } from '../../prompts';
 
 const router = Router();

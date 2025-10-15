@@ -4,7 +4,7 @@
  */
 
 import { BasePipelineManager } from './BasePipelineManager';
-import * as mzooService from '../../mzoo.service';
+import * as mzooService from '../../mzoo';
 import { getPrompt } from '../../../prompts';
 import { AI_MODELS } from '../../../config/constants';
 import { ImageResult } from '../shared/types';

@@ -3,7 +3,7 @@
  * Individual stages of entity generation pipeline
  */
 
-import * as mzooService from '../mzoo.service';
+import * as mzooService from '../mzoo';
 import { getPrompt } from '../../prompts';
 import { AI_MODELS } from '../../config/constants';
 import { EntitySeed, VisualAnalysis, LocationVisualAnalysis, DeepProfile, LocationSeed, LocationDeepProfile } from './types';
