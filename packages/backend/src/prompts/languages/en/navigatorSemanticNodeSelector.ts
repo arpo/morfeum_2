@@ -109,31 +109,45 @@ User Command: "${userCommand}"
 
 ⚠️ SPATIAL REASONING RULES ⚠️
 
-1. **Prioritize Visible Elements**:
+1. **Self-Move Prevention (CRITICAL)**:
+   - NEVER return action: "move" with targetNodeId equal to current node ID
+   - If matched node is current location → use action: "generate" instead
+
+2. **Inside/Outside Navigation (CRITICAL)**:
+   - **"Go inside X" / "Enter X"**: If current node name contains X or matches X
+     → action: "generate", scale_hint: "interior", relation: "child"
+     → name: "Interior of {current node name}"
+     → parentNodeId: current node ID
+   - **"Go outside" / "Exit" / "Leave"**: Move to parent node
+     → action: "move", relation: "parent"
+     → targetNodeId: current node's parent_location_id
+     → Only works if parent exists (parent_location_id is not null)
+
+3. **Prioritize Visible Elements**:
    - If user mentions element in visual anchors → it's HERE, generate child node
    - Example: "Go up the stair" + stair in visualElements → create stair sublocation HERE
    
-2. **Use Directional Cues**:
+4. **Use Directional Cues**:
    - "left"/"right"/"behind" → check directional context for what's in that direction
    - If element is in direction mentioned → it's in THIS location
    - Example: "go left" + directional context["left"] mentions doorway → doorway is HERE
    
-3. **Distance Inference**:
+5. **Distance Inference**:
    - No location qualifier = element is HERE (visible in current location)
    - "the stair" (no location) = visible stair in THIS room
    - "stair in the tower" = different location (search other nodes)
    
-4. **Match Priority**:
+6. **Match Priority**:
    1. Visible elements in current location (highest priority)
    2. Child nodes of current location
    3. Sibling nodes (same parent)
    4. Distant nodes (lowest priority)
 
-5. **ID Usage**:
+7. **ID Usage**:
    - CRITICAL: Always use node IDs (like "spawn-1760475394478-xyz"), NEVER use node names
    - The ID field is the unique identifier - names are just labels
 
-6. **Scale Hints** (for generate action):
+8. **Scale Hints** (for generate action):
    - macro: Vast landscapes, worlds, continents
    - area: Regions, districts, large outdoor spaces
    - site: Buildings, locations, specific places
@@ -196,6 +210,16 @@ Examples with Visual Context:
 - Other node: "East Wing" also has "servant staircase"
 - User: "Go up the stairs"
 - Response: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"Upper Floor (sub-location) of ${currentNodeName}","scale_hint":"interior","relation":"child","reason":"No qualifier = use visible stair in current location"}
+
+**Scenario 5: Go Inside (When Current Node Matches)**
+- Current: "Shipwreck" (ID: subloc-123)
+- User: "Go inside the shipwreck"
+- Response: {"action":"generate","targetNodeId":null,"parentNodeId":"subloc-123","name":"Interior of Shipwreck","scale_hint":"interior","relation":"child","reason":"User wants to go inside current location. Generating interior sublocation."}
+
+**Scenario 6: Go Outside (Parent Navigation)**
+- Current: "Interior of Shipwreck" (ID: subloc-456, Parent: subloc-123)
+- User: "Go outside" or "Exit" or "Leave"
+- Response: {"action":"move","targetNodeId":"subloc-123","parentNodeId":null,"name":null,"scale_hint":null,"relation":"parent","reason":"User wants to exit current location. Moving to parent node."}
 
 IMPORTANT: In your response, targetNodeId and parentNodeId must ALWAYS be the full ID string (starting with "spawn-"), never the node name.`;
 };

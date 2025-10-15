@@ -124,16 +124,38 @@ export function useLocationPanel(): LocationPanelLogicReturn {
               searchDesc = dna.profile.searchDesc;
             }
             
-            // Find world tree containing this node to get depth info
-            const worldTree = getWorldTree(node.id);
-            let depth_level = 0;
-            let parent_location_id = null;
+            // Find world tree containing this node
+            const worldTrees = useLocationsStore.getState().worldTrees;
+            const worldTree = worldTrees.find(tree => {
+              const findInTree = (treeNode: any, targetId: string): boolean => {
+                if (treeNode.id === targetId) return true;
+                return treeNode.children?.some((child: any) => findInTree(child, targetId)) || false;
+              };
+              return findInTree(tree, node.id);
+            });
             
-            // Simple depth calculation based on node type (temporary)
-            if (node.type === 'world') depth_level = 0;
-            else if (node.type === 'region') depth_level = 1;
-            else if (node.type === 'location') depth_level = 2;
-            else if (node.type === 'sublocation') depth_level = 3;
+            let depth_level = 0;
+            let parent_location_id: string | null = null;
+            
+            // Get tree path to find parent and depth
+            if (worldTree) {
+              const getPath = (treeNode: any, targetId: string, path: string[] = []): string[] | null => {
+                path.push(treeNode.id);
+                if (treeNode.id === targetId) return path;
+                
+                for (const child of treeNode.children || []) {
+                  const found = getPath(child, targetId, [...path]);
+                  if (found) return found;
+                }
+                return null;
+              };
+              
+              const path = getPath(worldTree, node.id);
+              if (path) {
+                depth_level = path.length - 1; // 0 for world, 1 for region, etc.
+                parent_location_id = path.length > 1 ? path[path.length - 2] : null;
+              }
+            }
             
             return {
               id: node.id,

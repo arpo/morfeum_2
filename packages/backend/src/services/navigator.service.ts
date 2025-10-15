@@ -198,6 +198,22 @@ export const findDestinationNode = async (
         }
       }
 
+      // Auto-fill targetNodeId for parent navigation
+      if (navigationResult.relation === 'parent' && !navigationResult.targetNodeId) {
+        const currentNode = allNodes.find(n => n.id === currentFocus.node_id);
+        
+        if (currentNode?.parent_location_id) {
+          navigationResult.targetNodeId = currentNode.parent_location_id;
+          console.log('[NavigatorAI] Auto-filled parent targetNodeId:', navigationResult.targetNodeId);
+        } else {
+          console.error('[NavigatorAI] Cannot exit: current location has no parent');
+          return {
+            status: HTTP_STATUS.BAD_REQUEST,
+            error: 'Cannot exit: current location has no parent node'
+          };
+        }
+      }
+
       return {
         status: HTTP_STATUS.OK,
         data: navigationResult
