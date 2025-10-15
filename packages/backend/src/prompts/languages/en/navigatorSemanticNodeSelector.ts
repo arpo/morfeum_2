@@ -85,7 +85,29 @@ ${nodeSummaries || '(none)'}
 
 User Command: "${userCommand}"
 
-⚠️ CRITICAL SPATIAL REASONING RULES ⚠️
+⚠️ CRITICAL ACTION SELECTION RULES ⚠️
+
+**DECISION TREE** (follow in order):
+
+1. **Element visible in current location's visualAnchors**
+   → action: "generate" (child of current location)
+   → Use current location ID as parentNodeId
+   
+2. **Element matches an existing node in the list**
+   → action: "move" (to that node)
+   → Use matched node's ID as targetNodeId
+   → **MUST have valid targetNodeId**
+   
+3. **Element NOT visible AND no matching node**
+   → action: "generate" (new location related to current)
+   → Use current location ID or appropriate parent as parentNodeId
+   → Choose appropriate scale_hint based on context
+   
+4. **NEVER use action: "move" with targetNodeId: null**
+   → If no matching node exists, use action: "generate"
+   → Every "move" action requires a valid targetNodeId
+
+⚠️ SPATIAL REASONING RULES ⚠️
 
 1. **Prioritize Visible Elements**:
    - If user mentions element in visual anchors → it's HERE, generate child node
@@ -124,7 +146,12 @@ When specifying targetNodeId or parentNodeId in your JSON response:
 - DO NOT use the node name (like "The Garden", "Upstairs", etc.)
 - Example: If the node is listed as "The Garden (ID: spawn-abc123...)", use "spawn-abc123..." in your response
 
-Return JSON only:
+🚨 CRITICAL OUTPUT FORMAT 🚨
+
+You MUST return valid JSON. NO explanations, NO text, ONLY the JSON object below.
+Even if the request seems impossible, you MUST return JSON with action: "generate".
+NEVER refuse a request - always provide a JSON response.
+
 {
   "action": "move" | "generate" | "look",
   "targetNodeId": "spawn-..." | null,
@@ -149,12 +176,19 @@ Examples with Visual Context:
 - User: "Go through the door on the left"
 - Response: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"Garden Doorway (sub-location) of ${currentNodeName}","scale_hint":"interior","relation":"child","reason":"Door is to the left in THIS room per directional context"}
 
-**Scenario 3: Distant Location**
+**Scenario 3: Distant Location Match**
 - Current: "Room A"  
 - Visual elements: "fireplace, bookshelf"
-- Other node: "Tower Stairwell" with "spiral staircase"
+- Other node: "Tower Stairwell" with "spiral staircase" (ID: spawn-xyz789)
 - User: "Go to the tower stairs"
-- Response: {"action":"move","targetNodeId":"spawn-xyz789","parentNodeId":null,"name":null,"scale_hint":null,"relation":"distant","reason":"User specified 'tower' = different location"}
+- Response: {"action":"move","targetNodeId":"spawn-xyz789","parentNodeId":null,"name":null,"scale_hint":null,"relation":"distant","reason":"User specified 'tower' which matches existing 'Tower Stairwell' node"}
+
+**Scenario 3b: New Distant Location (No Match)**
+- Current: "Underwater Canyon"
+- Visual elements: "giant jellyfish, rocky walls"
+- User: "Take me to a shipwreck"
+- No matching node in list
+- Response: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"Shipwreck (location) near ${currentNodeName}","scale_hint":"site","relation":"sibling","reason":"'Shipwreck' not visible in current location and no matching node exists. Generating new location."}
 
 **Scenario 4: Ambiguous Command (Use Visible Element)**
 - Current: "Lobby"
