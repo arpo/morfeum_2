@@ -124,9 +124,14 @@ export function useSpawnEvents() {
         
         console.log('[SSE] 🖼️ Node image from session:', nodeImage ? 'found' : 'missing');
         
-        // Extract name from seed (stored in chat session during seed-complete event)
-        const seedData = chatSession?.deepProfile || deepProfile;
-        const nodeName = (seedData as any)?.looks ? deepProfile.searchDesc?.split(' - ')[1] || 'Unknown Location' : 'Unknown Location';
+        // Extract name from deep profile - try multiple sources
+        const nodeName = (deepProfile as any).name || 
+                        (deepProfile as any).meta?.name ||
+                        deepProfile.searchDesc?.split('] ')[1] || // Extract from "[World] Name"
+                        chatSession?.entityName ||
+                        'Unknown Location';
+        
+        console.log('[SSE] 📝 Extracted node name:', nodeName);
         
         // Create single node with flat NodeDNA (simplified for now - keep old structure temporarily)
         const node: Partial<Node> = {

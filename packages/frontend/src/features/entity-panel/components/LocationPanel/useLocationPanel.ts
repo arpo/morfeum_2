@@ -252,7 +252,13 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         // Detect structure: flat NodeDNA vs hierarchical
         const isFlatDNA = !parentDNA.world && !parentDNA.region && !parentDNA.location && parentDNA.looks;
         
-        console.log('[Sublocation Generation] Parent DNA structure:', isFlatDNA ? 'Flat NodeDNA' : 'Hierarchical');
+        console.log('[Sublocation Generation] Parent node:', {
+          id: parentNode.id,
+          name: parentNode.name,
+          type: parentNode.type,
+          structure: isFlatDNA ? 'Flat NodeDNA' : 'Hierarchical'
+        });
+        console.log('[Sublocation Generation] Parent DNA:', parentDNA);
         
         // Build cascaded context from parent's DNA
         const cascadedContext: any = {};
