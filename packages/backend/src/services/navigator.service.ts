@@ -100,7 +100,7 @@ export const findDestinationNode = async (
         jsonText = jsonText.substring(3, jsonText.lastIndexOf('```')).trim();
       }
 
-      console.log('[NavigatorAI] Extracted JSON text:', jsonText);
+      // console.log('[NavigatorAI] Extracted JSON text:', jsonText);
       
       const navigationResult: NavigationResult = JSON.parse(jsonText);
       
