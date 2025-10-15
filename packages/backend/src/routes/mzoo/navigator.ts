@@ -18,6 +18,25 @@ interface NavigationRequest {
     viewpoint: string;
     distance: string;
   };
+  currentLocationDetails: {
+    node_id: string;
+    name: string;
+    searchDesc: string;
+    visualAnchors: {
+      dominantElements: string[];
+      uniqueIdentifiers: string[];
+    };
+    viewDescriptions?: {
+      [viewKey: string]: {
+        looks: string;
+        focusTarget: string;
+      };
+    };
+    currentView: {
+      viewKey: string;
+      focusTarget: string;
+    };
+  };
   allNodes: Array<{
     id: string;
     name: string;
@@ -32,12 +51,12 @@ interface NavigationRequest {
  * Find destination node using semantic search
  */
 router.post('/find-destination', asyncHandler(async (req: Request, res: Response) => {
-  const { userCommand, currentFocus, allNodes }: NavigationRequest = req.body;
+  const { userCommand, currentFocus, currentLocationDetails, allNodes }: NavigationRequest = req.body;
 
   // Validation
-  if (!userCommand || !currentFocus || !allNodes) {
+  if (!userCommand || !currentFocus || !currentLocationDetails || !allNodes) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
-      error: 'Missing required fields: userCommand, currentFocus, allNodes'
+      error: 'Missing required fields: userCommand, currentFocus, currentLocationDetails, allNodes'
     });
     return;
   }
@@ -64,6 +83,7 @@ router.post('/find-destination', asyncHandler(async (req: Request, res: Response
     apiKey,
     userCommand,
     currentFocus,
+    currentLocationDetails,
     allNodes
   );
 

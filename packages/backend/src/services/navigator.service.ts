@@ -22,12 +22,52 @@ interface WorldNode {
   parent_location_id: string | null;
 }
 
-interface NavigationResult {
-  action: 'move' | 'generate';
-  targetNodeId: string | null;
+// NEW: Visual context for current location
+export interface CurrentLocationDetails {
+  node_id: string;
+  name: string;
+  searchDesc: string;
+  
+  // Visual context from current location
+  visualAnchors: {
+    dominantElements: string[];
+    uniqueIdentifiers: string[];
+  };
+  
+  // Optional: what's in each direction (from viewDescriptions)
+  viewDescriptions?: {
+    [viewKey: string]: {
+      looks: string;
+      focusTarget: string;
+    };
+  };
+  
+  // Current view direction
+  currentView: {
+    viewKey: string;
+    focusTarget: string;
+  };
+}
+
+// Enhanced navigation result
+export interface NavigationResult {
+  action: 'move' | 'generate' | 'look';
+  
+  // For 'move' action
+  targetNodeId?: string | null;
+  
+  // For 'generate' action
   parentNodeId?: string | null;
-  name: string | null;
-  relation: 'sublocation' | 'adjacent' | 'nearby' | 'parent' | 'teleport' | null;
+  name?: string | null;
+  scale_hint?: 'macro' | 'area' | 'site' | 'interior' | 'detail';
+  
+  // For 'look' action (prepare for future multi-view)
+  viewUpdate?: {
+    viewKey: string;
+    needsImageGeneration: boolean;
+  };
+  
+  relation?: 'child' | 'sibling' | 'parent' | 'distant' | null;
   reason: string;
 }
 
@@ -42,6 +82,7 @@ interface NavigatorResponse {
  * @param apiKey - MZOO API key
  * @param userCommand - Natural language navigation command
  * @param currentFocus - Current focus state
+ * @param currentLocationDetails - Visual context of current location (NEW)
  * @param allNodes - All available nodes in the world
  * @returns Navigation result with action and details
  */
@@ -49,13 +90,15 @@ export const findDestinationNode = async (
   apiKey: string,
   userCommand: string,
   currentFocus: FocusContext,
+  currentLocationDetails: CurrentLocationDetails,
   allNodes: WorldNode[]
 ): Promise<NavigatorResponse> => {
   try {
-    // Get the prompt template
+    // Get the prompt template (now with visual context)
     const prompt = prompts.navigatorSemanticNodeSelector(
       userCommand,
       currentFocus,
+      currentLocationDetails,
       allNodes
     );
 
@@ -145,10 +188,12 @@ export const findDestinationNode = async (
         if (!looksLikeId) {
           const matchedNode = allNodes.find(n => n.name === navigationResult.parentNodeId);
           if (matchedNode) {
+            console.log('[NavigatorAI] Fixed parentNodeId from name to ID:', matchedNode.id);
             navigationResult.parentNodeId = matchedNode.id;
           } else {
-            // For parentNodeId, fallback to current node
-            navigationResult.parentNodeId = currentFocus.node_id;
+            // For parentNodeId, fallback to current location node ID
+            console.log('[NavigatorAI] Invalid parentNodeId, using currentLocationDetails.node_id:', currentLocationDetails.node_id);
+            navigationResult.parentNodeId = currentLocationDetails.node_id;
           }
         }
       }

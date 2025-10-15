@@ -9,7 +9,7 @@ import { getPrompt } from '../../../prompts';
 import { AI_MODELS } from '../../../config/constants';
 import { ImageResult } from '../shared/types';
 import { parseJSON, fetchImageAsBase64 } from '../shared/pipelineCommon';
-import { LocationSeed, LocationVisualAnalysis, LocationDeepProfile } from '../types';
+import { LocationSeed, LocationVisualAnalysis, LocationDeepProfile, NodeDNA } from '../types';
 import { eventEmitter } from '../../eventEmitter';
 
 export class LocationSpawnManager extends BasePipelineManager {
@@ -108,12 +108,12 @@ export class LocationSpawnManager extends BasePipelineManager {
     seed: LocationSeed,
     visualAnalysis: LocationVisualAnalysis,
     signal: AbortSignal
-  ): Promise<LocationDeepProfile> {
+  ): Promise<NodeDNA> {
     const seedJson = JSON.stringify(seed, null, 2);
     const visionJson = JSON.stringify(visualAnalysis, null, 2);
     const originalPrompt = seed.originalPrompt || 'No specific request provided';
 
-    // Let the LLM handle all classification with improved prompt rules
+    // NEW: Simplified flat DNA structure
     const enrichmentPrompt = getPrompt('locationDeepProfileEnrichment', 'en')(
       seedJson,
       visionJson,
@@ -135,7 +135,10 @@ export class LocationSpawnManager extends BasePipelineManager {
       throw new Error(result.error);
     }
 
-    return parseJSON(result.data.text);
+    // Parse simplified NodeDNA structure
+    const nodeDNA: NodeDNA = parseJSON(result.data.text);
+    
+    return nodeDNA;
   }
 
 

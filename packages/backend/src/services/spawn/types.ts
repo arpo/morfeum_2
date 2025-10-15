@@ -91,6 +91,7 @@ export interface LocationSeed {
   atmosphere: string;
   mood: string;
   renderInstructions: string;
+  scale_hint?: 'macro' | 'area' | 'site' | 'interior' | 'detail';
 }
 
 // Hierarchical location DNA types
@@ -208,11 +209,72 @@ export interface LocationNode {
   };
 }
 
+// NEW: Unified NodeDNA structure (flat, simplified)
+export interface NodeDNA {
+  // Visual essentials
+  looks: string;
+  colorsAndLighting: string;
+  atmosphere: string;
+  architectural_tone: string;
+  materials: string;
+  mood: string;
+  sounds: string;
+  
+  // Visual anchors (critical for consistency and navigation)
+  visualAnchors: VisualAnchors;
+  
+  // Navigation context
+  searchDesc: string;
+  viewContext: ViewContext;
+  
+  // Metadata
+  fictional: boolean;
+  copyright: boolean;
+}
+
+// View context from image analysis
+export interface ViewContext {
+  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
+  focusTarget: string;
+  distance: 'close' | 'medium' | 'far';
+  composition: string;
+}
+
+// Current view tracking
+export interface CurrentView {
+  viewKey: string;
+  imagePath: string;
+  focusTarget: string;
+}
+
+// Multi-view text descriptions (prepared for future)
+export interface ViewDescription {
+  viewKey: string;
+  looks: string;
+  focusTarget: string;
+  renderInstructions: string;
+  hasImage: boolean;
+}
+
+export interface ViewDescriptions {
+  [viewKey: string]: ViewDescription;
+}
+
+// Cached generated images
+export interface CachedImage {
+  imagePath: string;
+  generatedAt: string;
+}
+
+// DEPRECATED: Old hierarchical structure (kept for compatibility during migration)
 export interface LocationDeepProfile {
   world: WorldNode;
   region?: RegionNode;
   location?: LocationNode;
 }
+
+// NEW: Simplified location deep profile (just NodeDNA)
+export type LocationDeepProfileV2 = NodeDNA;
 
 export interface MovementContext {
   movementType: 'descend' | 'ascend' | 'traverse' | 'jump';

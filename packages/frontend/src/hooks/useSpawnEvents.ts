@@ -4,7 +4,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
-import { useLocationsStore, Node, NodeType } from '@/store/slices/locationsSlice';
+import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
 
 export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);
@@ -113,111 +113,38 @@ export function useSpawnEvents() {
     eventSource.addEventListener('spawn:profile-complete', (e) => {
       const { spawnId, deepProfile, enhancedSystemPrompt, entityType } = JSON.parse(e.data);
       
-      // Log hierarchical location structure (locations only)
+      // NEW: Simplified single node creation (no hierarchical splitting)
       if (entityType === 'location') {
-        console.log('🌍 Location Generated with Hierarchical DNA:');
-        console.log('  🌐 World Node:', deepProfile.world);
-        if (deepProfile.region) {
-          console.log('  🗺️ Region Node:', deepProfile.region);
-        }
-        if (deepProfile.location) {
-          console.log('  📍 Location Node:', deepProfile.location);
-        }
-        
-        // Build tree structure from hierarchical DNA
-        const worldId = spawnId; // Root world uses spawn ID
+        console.log('🌍 Location Generated with Simplified NodeDNA');
         
         // Get image from chat session (already stored by image-complete event)
         const chats = useStore.getState().chats;
         const chatSession = chats.get(spawnId);
-        const worldImage = chatSession?.entityImage || '';
+        const nodeImage = chatSession?.entityImage || '';
         
-        console.log('[SSE] 🖼️ World node image from session:', worldImage ? 'found' : 'missing');
+        console.log('[SSE] 🖼️ Node image from session:', nodeImage ? 'found' : 'missing');
         
-        // Create world node
-        const worldNode: Node = {
-          id: worldId,
-          type: 'world',
-          name: deepProfile.world.meta.name,
-          dna: deepProfile.world,
-          imagePath: worldImage,
-          focus: undefined,
+        // Extract name from seed (stored in chat session during seed-complete event)
+        const seedData = chatSession?.deepProfile || deepProfile;
+        const nodeName = (seedData as any)?.looks ? deepProfile.searchDesc?.split(' - ')[1] || 'Unknown Location' : 'Unknown Location';
+        
+        // Create single node with flat NodeDNA (simplified for now - keep old structure temporarily)
+        const node: Partial<Node> = {
+          id: spawnId,
+          type: 'world' as any, // Temporary - will be removed in full migration
+          name: nodeName,
+          dna: deepProfile, // Flat NodeDNA structure
+          imagePath: nodeImage,
+          focus: undefined
         };
-        createNode(worldNode);
-        addNodeToTree(worldId, null, worldId, 'world');
-        // console.log('[Tree] Created world node:', worldId);
         
-        // Create region node if exists
-        let regionId: string | null = null;
-        if (deepProfile.region) {
-          regionId = `${worldId}-region`;
-          const regionNode: Node = {
-            id: regionId,
-            type: 'region',
-            name: deepProfile.region.meta.name,
-            dna: deepProfile.region,
-            imagePath: '',
-            focus: undefined,
-          };
-          createNode(regionNode);
-          addNodeToTree(worldId, worldId, regionId, 'region');
-          // console.log('[Tree] Created region node:', regionId);
-        }
+        createNode(node as any);
+        addNodeToTree(spawnId, null, spawnId, 'world' as any);
+        console.log('[SSE] ✅ Created single root node:', spawnId);
         
-        // Create location node if exists
-        if (deepProfile.location) {
-          const locationId = `${worldId}-location`;
-          const locationNode: Node = {
-            id: locationId,
-            type: 'location',
-            name: deepProfile.location.meta.name,
-            dna: deepProfile.location,
-            imagePath: '', // Will be set when image arrives
-            focus: undefined,
-          };
-          createNode(locationNode);
-          
-          const parentId = regionId || worldId;
-          addNodeToTree(worldId, parentId, locationId, 'location');
-          console.log('[Tree] Created location node:', locationId);
-          
-          // Update the chat session's deep profile to use the location node ID
-          // This ensures the image and focus updates target the location node
-          if (updateChatDeepProfile && deepProfile) {
-            updateChatDeepProfile(spawnId, deepProfile);
-          }
-        }
-        
-        // Load all child nodes into chat sessions (same as App.tsx page load logic)
-        const getWorldTree = useLocationsStore.getState().getWorldTree;
-        const worldTree = getWorldTree(worldId);
-        
-        if (worldTree) {
-          const loadChildren = (treeNode: any) => {
-            treeNode.children?.forEach((child: any) => {
-              const childNode = getNode(child.id);
-              if (childNode) {
-                const childCascadedDNA = getCascadedDNA(child.id);
-                const childSeed = {
-                  name: childNode.name,
-                  atmosphere: childCascadedDNA.world?.semantic?.atmosphere || 'Unknown'
-                };
-                
-                createChatWithEntity(child.id, childSeed, 'location');
-                
-                if (childNode.imagePath) {
-                  updateChatImage(child.id, childNode.imagePath);
-                }
-                
-                updateChatDeepProfile(child.id, childCascadedDNA as any);
-              }
-              
-              // Recurse for grandchildren
-              loadChildren(child);
-            });
-          };
-          
-          loadChildren(worldTree);
+        // Store simplified DNA in deep profile
+        if (updateChatDeepProfile && deepProfile) {
+          updateChatDeepProfile(spawnId, deepProfile);
         }
       } else {
         // Character entity - store deep profile normally

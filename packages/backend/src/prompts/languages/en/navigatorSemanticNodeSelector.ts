@@ -18,13 +18,34 @@ interface WorldNode {
   parent_location_id: string | null;
 }
 
+interface CurrentLocationDetails {
+  node_id: string;
+  name: string;
+  searchDesc: string;
+  visualAnchors: {
+    dominantElements: string[];
+    uniqueIdentifiers: string[];
+  };
+  viewDescriptions?: {
+    [viewKey: string]: {
+      looks: string;
+      focusTarget: string;
+    };
+  };
+  currentView: {
+    viewKey: string;
+    focusTarget: string;
+  };
+}
+
 /**
- * Generate prompt for semantic node selection
- * Returns JSON with action (move/generate) and target details
+ * Generate prompt for semantic node selection with visual context awareness
+ * Returns JSON with action (move/generate/look) and target details
  */
 export const navigatorSemanticNodeSelector = (
   userCommand: string,
   currentFocus: FocusContext,
+  currentLocationDetails: CurrentLocationDetails,
   allNodes: WorldNode[]
 ): string => {
   // Find current node to get its full context
@@ -38,32 +59,64 @@ export const navigatorSemanticNodeSelector = (
     return `- ${node.name}${desc} (ID: ${node.id}, Depth: ${node.depth_level}, Parent: ${node.parent_location_id || 'none'})`;
   }).join('\n');
 
-  return `NavigatorAI: Match user's navigation command to existing nodes or suggest generating a new one.
+  // Build visual context section
+  const visualElements = currentLocationDetails.visualAnchors.dominantElements.join(', ');
+  const currentViewTarget = currentLocationDetails.currentView.focusTarget;
+  
+  // Build directional context if available
+  let directionalContext = '';
+  if (currentLocationDetails.viewDescriptions) {
+    directionalContext = Object.entries(currentLocationDetails.viewDescriptions)
+      .map(([dir, view]) => `- ${dir}: ${view.focusTarget}`)
+      .join('\n');
+  }
 
-Current: ${currentNodeName} (ID: ${currentFocus.node_id}, Depth: ${currentDepth})
+  return `NavigatorAI: Match user's navigation command using VISUAL CONTEXT FIRST.
 
-Available nodes:
+Current Location: ${currentNodeName} (ID: ${currentFocus.node_id}, Depth: ${currentDepth})
+Current View: Looking at ${currentViewTarget}
+
+Visual Elements in This Location:
+${visualElements}
+
+${directionalContext ? `Directional Context:\n${directionalContext}\n` : ''}
+Available Nodes in World:
 ${nodeSummaries || '(none)'}
 
-User: "${userCommand}"
+User Command: "${userCommand}"
 
-Node Type Prefixes:
-- [World] = depth 0, top-level world
-- [Region] = depth 1, area within world
-- [Location - Exterior] = depth 2, outside view of place
-- [Location - Interior] = depth 2, inside view of place
-- [Sublocation - Interior] = depth 3+, room/space within location
+⚠️ CRITICAL SPATIAL REASONING RULES ⚠️
 
-Rules:
-- If command matches an existing node → action: "move", include targetNodeId (use the node's ID field, NOT name)
-- If no match → action: "generate", include parentNodeId and hierarchical name
-- Use node type prefixes to understand hierarchy
-- "into/inside/enter" commands → look for Interior nodes or generate sublocation
-- "outside/exit/back" commands → look for parent or Exterior nodes
-- Name format: "[Name] ([level]) of [Parent] ([parent-level])"
-- parentNodeId rules: sublocation = current ID, adjacent/nearby = parent ID, teleport = null
-- CRITICAL: Always use node IDs (like "spawn-1760475394478-xyz"), NEVER use node names (like "Upstairs")
-- The ID field is the unique identifier - names are just labels
+1. **Prioritize Visible Elements**:
+   - If user mentions element in visual anchors → it's HERE, generate child node
+   - Example: "Go up the stair" + stair in visualElements → create stair sublocation HERE
+   
+2. **Use Directional Cues**:
+   - "left"/"right"/"behind" → check directional context for what's in that direction
+   - If element is in direction mentioned → it's in THIS location
+   - Example: "go left" + directional context["left"] mentions doorway → doorway is HERE
+   
+3. **Distance Inference**:
+   - No location qualifier = element is HERE (visible in current location)
+   - "the stair" (no location) = visible stair in THIS room
+   - "stair in the tower" = different location (search other nodes)
+   
+4. **Match Priority**:
+   1. Visible elements in current location (highest priority)
+   2. Child nodes of current location
+   3. Sibling nodes (same parent)
+   4. Distant nodes (lowest priority)
+
+5. **ID Usage**:
+   - CRITICAL: Always use node IDs (like "spawn-1760475394478-xyz"), NEVER use node names
+   - The ID field is the unique identifier - names are just labels
+
+6. **Scale Hints** (for generate action):
+   - macro: Vast landscapes, worlds, continents
+   - area: Regions, districts, large outdoor spaces
+   - site: Buildings, locations, specific places
+   - interior: Rooms, chambers, indoor spaces
+   - detail: Specific objects, alcoves, tiny spaces
 
 ⚠️ CRITICAL REQUIREMENT ⚠️
 When specifying targetNodeId or parentNodeId in your JSON response:
@@ -73,18 +126,42 @@ When specifying targetNodeId or parentNodeId in your JSON response:
 
 Return JSON only:
 {
-  "action": "move" | "generate",
+  "action": "move" | "generate" | "look",
   "targetNodeId": "spawn-..." | null,
   "parentNodeId": "spawn-..." | null,
   "name": "hierarchical name" | null,
-  "relation": "sublocation" | "adjacent" | "nearby" | "parent" | "teleport" | null,
-  "reason": "brief explanation"
+  "scale_hint": "macro" | "area" | "site" | "interior" | "detail" | null,
+  "relation": "child" | "sibling" | "parent" | "distant" | null,
+  "reason": "brief spatial reasoning explanation"
 }
 
-Examples:
-1. User at exterior, child exists: {"action":"move","targetNodeId":"spawn-abc123","parentNodeId":null,"name":null,"relation":null,"reason":"Found interior sublocation"}
-2. User wants interior, none exists: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"The Inner Chamber (sub-location) of ${currentNodeName} (location)","relation":"sublocation","reason":"Creating interior space"}
-3. User wants to go to "Upstairs" node (id: spawn-xyz789): {"action":"move","targetNodeId":"spawn-xyz789","parentNodeId":null,"name":null,"relation":null,"reason":"Moving to existing Upstairs location"}
+Examples with Visual Context:
+
+**Scenario 1: Element Visible in Current Location**
+- Current: "Room A"
+- Visual elements: "stone staircase on left wall, window on right"
+- User: "Go up the stair"
+- Response: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"Upstairs (sub-location) of ${currentNodeName}","scale_hint":"interior","relation":"child","reason":"Stair is visible HERE in visual elements, not elsewhere"}
+
+**Scenario 2: Directional Cue**
+- Current: "Room A"
+- Directional context["left"]: { focusTarget: "doorway leading to garden" }
+- User: "Go through the door on the left"
+- Response: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"Garden Doorway (sub-location) of ${currentNodeName}","scale_hint":"interior","relation":"child","reason":"Door is to the left in THIS room per directional context"}
+
+**Scenario 3: Distant Location**
+- Current: "Room A"  
+- Visual elements: "fireplace, bookshelf"
+- Other node: "Tower Stairwell" with "spiral staircase"
+- User: "Go to the tower stairs"
+- Response: {"action":"move","targetNodeId":"spawn-xyz789","parentNodeId":null,"name":null,"scale_hint":null,"relation":"distant","reason":"User specified 'tower' = different location"}
+
+**Scenario 4: Ambiguous Command (Use Visible Element)**
+- Current: "Lobby"
+- Visual elements: "grand staircase in center"
+- Other node: "East Wing" also has "servant staircase"
+- User: "Go up the stairs"
+- Response: {"action":"generate","targetNodeId":null,"parentNodeId":"${currentFocus.node_id}","name":"Upper Floor (sub-location) of ${currentNodeName}","scale_hint":"interior","relation":"child","reason":"No qualifier = use visible stair in current location"}
 
 IMPORTANT: In your response, targetNodeId and parentNodeId must ALWAYS be the full ID string (starting with "spawn-"), never the node name.`;
 };

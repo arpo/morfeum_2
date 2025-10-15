@@ -82,7 +82,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -121,4 +121,4 @@
     right: var(--spacing-sm);
     padding: var(--spacing-xs);
   }
-}
+} */

@@ -29,23 +29,193 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
 
   if (!locationProfile) return null;
 
-  // Cast to hierarchical structure
   const profile = locationProfile as any;
   
-  // Get focus state from saved location or initialize from viewContext
+  // Detect structure type: flat NodeDNA vs hierarchical
+  const isFlat = !profile.world && !profile.region && !profile.location && profile.looks;
+  
+  // Get focus state
   let focus = locationId ? getNodeFocus(locationId) : null;
   
-  // If no saved focus but we have viewContext in the profile, create a temporary focus display
-  if (!focus && profile.location?.profile?.viewContext) {
-    const vc = profile.location.profile.viewContext;
-    focus = {
-      node_id: profile.location.meta?.name || locationName,
-      perspective: vc.perspective as any,
-      viewpoint: vc.composition || 'default view',
-      distance: vc.distance as any
-    };
+  // Initialize focus from viewContext if available
+  if (!focus) {
+    if (isFlat && profile.viewContext) {
+      focus = {
+        node_id: locationName,
+        perspective: profile.viewContext.perspective as any,
+        viewpoint: profile.viewContext.composition || 'default view',
+        distance: profile.viewContext.distance as any
+      };
+    } else if (profile.location?.profile?.viewContext) {
+      const vc = profile.location.profile.viewContext;
+      focus = {
+        node_id: profile.location.meta?.name || locationName,
+        perspective: vc.perspective as any,
+        viewpoint: vc.composition || 'default view',
+        distance: vc.distance as any
+      };
+    }
   }
 
+  // Render flat NodeDNA structure
+  if (isFlat) {
+    return (
+      <Modal isOpen={isOpen} onClose={handleClose} title={`${locationName} - Simplified DNA`} maxWidth="lg">
+        <ModalContent>
+          {/* Focus State */}
+          {focus && (
+            <ModalSection title="🎯 Current Focus" description="Where you are viewing from">
+              <div className={styles.subsection}>
+                <div className={styles.field}>
+                  <label className={styles.label}>Perspective</label>
+                  <p className={styles.value}>{focus.perspective}</p>
+                </div>
+                <div className={styles.field}>
+                  <label className={styles.label}>Viewpoint</label>
+                  <p className={styles.value}>{focus.viewpoint}</p>
+                </div>
+                <div className={styles.field}>
+                  <label className={styles.label}>Distance</label>
+                  <p className={styles.value}>{focus.distance}</p>
+                </div>
+              </div>
+            </ModalSection>
+          )}
+
+          {/* Simplified Profile */}
+          <ModalSection title="🌍 Location Profile" description="Flat DNA structure">
+            <div className={styles.subsection}>
+              <div className={styles.field}>
+                <label className={styles.label}>Looks</label>
+                <p className={styles.value}>{profile.looks || 'N/A'}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Colors & Lighting</label>
+                <p className={styles.value}>{profile.colorsAndLighting || 'N/A'}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Atmosphere</label>
+                <p className={styles.value}>{profile.atmosphere || 'N/A'}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Materials</label>
+                <p className={styles.value}>{profile.materials || 'N/A'}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Mood</label>
+                <p className={styles.value}>{profile.mood || 'N/A'}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Sounds</label>
+                <p className={styles.value}>{profile.sounds || 'N/A'}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Search Description</label>
+                <p className={styles.value}>{profile.searchDesc || 'N/A'}</p>
+              </div>
+            </div>
+
+            {/* Visual Anchors */}
+            {profile.visualAnchors && (
+              <div className={styles.subsection}>
+                <h4 className={styles.subsectionTitle}>🎯 Visual Anchors</h4>
+                
+                {profile.visualAnchors.dominantElements && profile.visualAnchors.dominantElements.length > 0 && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>Dominant Elements</label>
+                    <ul className={styles.list}>
+                      {profile.visualAnchors.dominantElements.map((elem: string, i: number) => (
+                        <li key={i}>{elem}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {profile.visualAnchors.spatialLayout && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>Spatial Layout</label>
+                    <p className={styles.value}>{profile.visualAnchors.spatialLayout}</p>
+                  </div>
+                )}
+                
+                {profile.visualAnchors.surfaceMaterialMap && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>Surface Materials</label>
+                    <p className={styles.value}>
+                      <strong>Primary:</strong> {profile.visualAnchors.surfaceMaterialMap.primary_surfaces || 'N/A'}<br/>
+                      <strong>Secondary:</strong> {profile.visualAnchors.surfaceMaterialMap.secondary_surfaces || 'N/A'}<br/>
+                      <strong>Accents:</strong> {profile.visualAnchors.surfaceMaterialMap.accent_features || 'N/A'}
+                    </p>
+                  </div>
+                )}
+                
+                {profile.visualAnchors.colorMapping && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>Color Mapping</label>
+                    <p className={styles.value}>
+                      <strong>Dominant:</strong> {profile.visualAnchors.colorMapping.dominant || 'N/A'}<br/>
+                      <strong>Secondary:</strong> {profile.visualAnchors.colorMapping.secondary || 'N/A'}<br/>
+                      <strong>Accent:</strong> {profile.visualAnchors.colorMapping.accent || 'N/A'}<br/>
+                      <strong>Ambient:</strong> {profile.visualAnchors.colorMapping.ambient || 'N/A'}
+                    </p>
+                  </div>
+                )}
+                
+                {profile.visualAnchors.uniqueIdentifiers && profile.visualAnchors.uniqueIdentifiers.length > 0 && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>Unique Identifiers</label>
+                    <ul className={styles.list}>
+                      {profile.visualAnchors.uniqueIdentifiers.map((id: string, i: number) => (
+                        <li key={i}>{id}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* View Context */}
+            {profile.viewContext && (
+              <div className={styles.subsection}>
+                <h4 className={styles.subsectionTitle}>📷 View Context</h4>
+                <div className={styles.field}>
+                  <label className={styles.label}>Perspective</label>
+                  <p className={styles.value}>{profile.viewContext.perspective || 'N/A'}</p>
+                </div>
+                <div className={styles.field}>
+                  <label className={styles.label}>Focus Target</label>
+                  <p className={styles.value}>{profile.viewContext.focusTarget || 'N/A'}</p>
+                </div>
+                <div className={styles.field}>
+                  <label className={styles.label}>Distance</label>
+                  <p className={styles.value}>{profile.viewContext.distance || 'N/A'}</p>
+                </div>
+                <div className={styles.field}>
+                  <label className={styles.label}>Composition</label>
+                  <p className={styles.value}>{profile.viewContext.composition || 'N/A'}</p>
+                </div>
+              </div>
+            )}
+
+            {/* Metadata */}
+            <div className={styles.subsection}>
+              <h4 className={styles.subsectionTitle}>Metadata</h4>
+              <div className={styles.field}>
+                <label className={styles.label}>Fictional</label>
+                <p className={styles.value}>{profile.fictional ? 'Yes' : 'No'}</p>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label}>Copyrighted</label>
+                <p className={styles.value}>{profile.copyright ? 'Yes' : 'No'}</p>
+              </div>
+            </div>
+          </ModalSection>
+        </ModalContent>
+      </Modal>
+    );
+  }
+
+  // Render hierarchical structure (old format)
   return (
     <Modal isOpen={isOpen} onClose={handleClose} title={`${locationName} - DNA Structure`} maxWidth="lg">
       <ModalContent>

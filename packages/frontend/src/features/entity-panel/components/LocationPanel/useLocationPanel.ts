@@ -67,12 +67,45 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       // Get spatially connected nodes (ancestors, siblings, children)
       const spatialNodes = getSpatialNodes(currentNode.id);
       
-      // console.log('[NavigatorAI] Finding destination...');
-      // console.log('[NavigatorAI] Command:', movementInput.trim());
-      // console.log('[NavigatorAI] Current focus:', currentFocus);
-      // console.log('[NavigatorAI] Spatial nodes:', spatialNodes.length);
+      // NEW: Build currentLocationDetails from node DNA for visual context
+      const nodeDNA = currentNode.dna as any;
       
-      // Call NavigatorAI backend endpoint with spatial filtering
+      // Extract visualAnchors from DNA (flat NodeDNA structure)
+      const visualAnchors = nodeDNA.visualAnchors || {
+        dominantElements: [],
+        uniqueIdentifiers: []
+      };
+      
+      // Extract searchDesc
+      const searchDesc = nodeDNA.searchDesc || nodeDNA.profile?.searchDesc || currentNode.name;
+      
+      // Extract viewContext
+      const viewContext = nodeDNA.viewContext || nodeDNA.profile?.viewContext || {
+        focusTarget: currentNode.name
+      };
+      
+      // Build currentLocationDetails
+      const currentLocationDetails = {
+        node_id: currentNode.id,
+        name: currentNode.name,
+        searchDesc,
+        visualAnchors: {
+          dominantElements: visualAnchors.dominantElements || [],
+          uniqueIdentifiers: visualAnchors.uniqueIdentifiers || []
+        },
+        currentView: {
+          viewKey: 'default',
+          focusTarget: viewContext.focusTarget || currentNode.name
+        }
+        // viewDescriptions will be added in future multi-view implementation
+      };
+      
+      console.log('[NavigatorAI] 🎯 Visual context:', {
+        dominantElements: currentLocationDetails.visualAnchors.dominantElements,
+        currentView: currentLocationDetails.currentView.focusTarget
+      });
+      
+      // Call NavigatorAI backend endpoint with visual context
       const response = await fetch('/api/mzoo/navigator/find-destination', {
         method: 'POST',
         headers: {
@@ -81,6 +114,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         body: JSON.stringify({
           userCommand: movementInput.trim(),
           currentFocus,
+          currentLocationDetails, // NEW: Visual context for spatial reasoning
           allNodes: spatialNodes.map(node => {
             // Extract searchDesc from node's DNA based on type
             let searchDesc = node.name;
@@ -90,11 +124,24 @@ export function useLocationPanel(): LocationPanelLogicReturn {
               searchDesc = dna.profile.searchDesc;
             }
             
+            // Find world tree containing this node to get depth info
+            const worldTree = getWorldTree(node.id);
+            let depth_level = 0;
+            let parent_location_id = null;
+            
+            // Simple depth calculation based on node type (temporary)
+            if (node.type === 'world') depth_level = 0;
+            else if (node.type === 'region') depth_level = 1;
+            else if (node.type === 'location') depth_level = 2;
+            else if (node.type === 'sublocation') depth_level = 3;
+            
             return {
               id: node.id,
               name: node.name,
+              dna: node.dna,
               searchDesc,
-              type: node.type,
+              depth_level,
+              parent_location_id
             };
           })
         })
@@ -139,70 +186,136 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         const parentNode = getNode(navigation.parentNodeId);
         if (!parentNode) {
           console.error('[NavigatorAI] ❌ Parent node not found:', navigation.parentNodeId);
+          console.error('[NavigatorAI] Available nodes:', spatialNodes.map(n => ({id: n.id, name: n.name})));
           return;
         }
         
         // Validate parent is in same world tree (prevent cross-world generation)
         const parentCascaded = getCascadedDNA(navigation.parentNodeId);
         
-        // Both current and parent must have world DNA, and they must be the same world
-        if (!cascadedDNA.world || !parentCascaded.world) {
-          console.error('[NavigatorAI] ❌ Missing world DNA, using current node as parent');
+        // Add null check for parentCascaded
+        if (!parentCascaded || !parentCascaded.world) {
+          console.error('[NavigatorAI] ❌ Could not get cascaded DNA for parent:', navigation.parentNodeId);
+          console.error('[NavigatorAI] Using current node as parent instead');
           navigation.parentNodeId = currentNode.id;
-        } else if (cascadedDNA.world.meta.name !== parentCascaded.world.meta.name) {
+        }
+        
+        // Both current and parent must have world DNA, and they must be the same world
+        if (!cascadedDNA.world) {
+          console.error('[NavigatorAI] ❌ Current node missing world DNA');
+          return;
+        }
+        
+        if (!parentCascaded.world) {
+          console.error('[NavigatorAI] ❌ Parent node missing world DNA, using current node as parent');
+          navigation.parentNodeId = currentNode.id;
+        } else if (cascadedDNA.world.meta?.name !== parentCascaded.world.meta?.name) {
           console.error('[NavigatorAI] ❌ Parent node is in different world tree, using current node as parent');
           console.log('[NavigatorAI] Current world:', cascadedDNA.world.meta.name);
           console.log('[NavigatorAI] Parent world:', parentCascaded.world.meta.name);
           navigation.parentNodeId = currentNode.id;
         }
         
-        // Get cascaded DNA from parent for context building
-        const parentCascadedDNA = getCascadedDNA(navigation.parentNodeId);
+        // Get parent node DNA directly (not cascaded)
+        const parentDNA = parentNode.dna as any;
         
-        // Build cascaded context from parent's DNA tree
+        // Detect structure: flat NodeDNA vs hierarchical
+        const isFlatDNA = !parentDNA.world && !parentDNA.region && !parentDNA.location && parentDNA.looks;
+        
+        console.log('[Sublocation Generation] Parent DNA structure:', isFlatDNA ? 'Flat NodeDNA' : 'Hierarchical');
+        
+        // Build cascaded context from parent's DNA
         const cascadedContext: any = {};
         
-        // Extract world context
-        if (parentCascadedDNA.world) {
-          cascadedContext.environment = parentCascadedDNA.world.semantic?.environment || '';
-          cascadedContext.dominant_materials = parentCascadedDNA.world.semantic?.dominant_materials || [];
-          cascadedContext.atmosphere = parentCascadedDNA.world.semantic?.atmosphere || '';
-          cascadedContext.architectural_tone = parentCascadedDNA.world.semantic?.architectural_tone || '';
-          cascadedContext.genre = parentCascadedDNA.world.semantic?.genre || '';
-          cascadedContext.mood_baseline = parentCascadedDNA.world.semantic?.mood_baseline || '';
-          cascadedContext.palette_bias = parentCascadedDNA.world.semantic?.palette_bias || [];
-          cascadedContext.colorsAndLighting = parentCascadedDNA.world.profile?.colorsAndLighting || '';
-        }
-        
-        // Override with region context if exists
-        if (parentCascadedDNA.region) {
-          cascadedContext.environment = parentCascadedDNA.region.semantic?.environment || cascadedContext.environment;
-          cascadedContext.climate = parentCascadedDNA.region.semantic?.climate;
-          cascadedContext.weather = parentCascadedDNA.region.semantic?.weather_pattern;
-          cascadedContext.architecture = parentCascadedDNA.region.semantic?.architecture_style;
-          cascadedContext.mood = parentCascadedDNA.region.semantic?.mood || cascadedContext.mood_baseline;
-          cascadedContext.palette = parentCascadedDNA.region.semantic?.palette_shift || cascadedContext.palette_bias;
-          cascadedContext.colorsAndLighting = parentCascadedDNA.region.profile?.colorsAndLighting || cascadedContext.colorsAndLighting;
+        if (isFlatDNA) {
+          // NEW: Extract from flat NodeDNA structure
+          console.log('[Sublocation Generation] Extracting context from flat NodeDNA');
+          
+          cascadedContext.parentLocationName = parentNode.name;
+          cascadedContext.atmosphere = parentDNA.atmosphere || '';
+          cascadedContext.mood = parentDNA.mood || '';
+          cascadedContext.colorsAndLighting = parentDNA.colorsAndLighting || '';
+          cascadedContext.materials = parentDNA.materials || '';
+          cascadedContext.lighting = parentDNA.colorsAndLighting || ''; // Use colorsAndLighting for lighting
+          cascadedContext.architectural_tone = parentDNA.architectural_tone || ''; // NEW: architectural style
+          
+          // Extract from visualAnchors if available
+          if (parentDNA.visualAnchors) {
+            if (parentDNA.visualAnchors.colorMapping) {
+              cascadedContext.palette = [
+                parentDNA.visualAnchors.colorMapping.dominant,
+                parentDNA.visualAnchors.colorMapping.secondary,
+                parentDNA.visualAnchors.colorMapping.accent
+              ].filter(Boolean);
+            }
+            
+            if (parentDNA.visualAnchors.surfaceMaterialMap) {
+              const mats = parentDNA.visualAnchors.surfaceMaterialMap;
+              cascadedContext.dominant_materials = [
+                mats.primary_surfaces,
+                mats.secondary_surfaces
+              ].filter(Boolean);
+            }
+          }
+          
+          // Parse sounds into soundscape array
+          if (parentDNA.sounds) {
+            cascadedContext.soundscape = parentDNA.sounds.split(',').map((s: string) => s.trim());
+          }
+          
+          // Set empty defaults for missing fields
+          cascadedContext.environment = '';
+          cascadedContext.genre = '';
+          cascadedContext.structures = [];
+          
         } else {
-          cascadedContext.mood = cascadedContext.mood_baseline;
-          cascadedContext.palette = cascadedContext.palette_bias;
-        }
-        
-        // Get immediate parent DNA (location or sublocation)
-        const immediateParentDNA = parentCascadedDNA.sublocation || parentCascadedDNA.location;
-        
-        // Final override with immediate parent context
-        if (immediateParentDNA) {
-          cascadedContext.parentLocationName = immediateParentDNA.meta?.name || 'Unknown';
-          cascadedContext.structures = immediateParentDNA.semantic?.structures || [];
-          cascadedContext.lighting = immediateParentDNA.semantic?.lighting || '';
-          cascadedContext.weather = immediateParentDNA.semantic?.weather_or_air || '';
-          cascadedContext.atmosphere = immediateParentDNA.semantic?.atmosphere || '';
-          cascadedContext.mood = immediateParentDNA.semantic?.mood || cascadedContext.mood;
-          cascadedContext.palette = immediateParentDNA.semantic?.color_palette || cascadedContext.palette;
-          cascadedContext.soundscape = immediateParentDNA.semantic?.soundscape || [];
-          cascadedContext.materials = immediateParentDNA.profile?.materials || '';
-          cascadedContext.colorsAndLighting = immediateParentDNA.profile?.colorsAndLighting || cascadedContext.colorsAndLighting;
+          // OLD: Extract from hierarchical structure
+          console.log('[Sublocation Generation] Extracting context from hierarchical structure');
+          
+          const parentCascadedDNA = getCascadedDNA(navigation.parentNodeId);
+          
+          // Extract world context
+          if (parentCascadedDNA.world) {
+            cascadedContext.environment = parentCascadedDNA.world.semantic?.environment || '';
+            cascadedContext.dominant_materials = parentCascadedDNA.world.semantic?.dominant_materials || [];
+            cascadedContext.atmosphere = parentCascadedDNA.world.semantic?.atmosphere || '';
+            cascadedContext.architectural_tone = parentCascadedDNA.world.semantic?.architectural_tone || '';
+            cascadedContext.genre = parentCascadedDNA.world.semantic?.genre || '';
+            cascadedContext.mood_baseline = parentCascadedDNA.world.semantic?.mood_baseline || '';
+            cascadedContext.palette_bias = parentCascadedDNA.world.semantic?.palette_bias || [];
+            cascadedContext.colorsAndLighting = parentCascadedDNA.world.profile?.colorsAndLighting || '';
+          }
+          
+          // Override with region context if exists
+          if (parentCascadedDNA.region) {
+            cascadedContext.environment = parentCascadedDNA.region.semantic?.environment || cascadedContext.environment;
+            cascadedContext.climate = parentCascadedDNA.region.semantic?.climate;
+            cascadedContext.weather = parentCascadedDNA.region.semantic?.weather_pattern;
+            cascadedContext.architecture = parentCascadedDNA.region.semantic?.architecture_style;
+            cascadedContext.mood = parentCascadedDNA.region.semantic?.mood || cascadedContext.mood_baseline;
+            cascadedContext.palette = parentCascadedDNA.region.semantic?.palette_shift || cascadedContext.palette_bias;
+            cascadedContext.colorsAndLighting = parentCascadedDNA.region.profile?.colorsAndLighting || cascadedContext.colorsAndLighting;
+          } else {
+            cascadedContext.mood = cascadedContext.mood_baseline;
+            cascadedContext.palette = cascadedContext.palette_bias;
+          }
+          
+          // Get immediate parent DNA (location or sublocation)
+          const immediateParentDNA = parentCascadedDNA.sublocation || parentCascadedDNA.location;
+          
+          // Final override with immediate parent context
+          if (immediateParentDNA) {
+            cascadedContext.parentLocationName = immediateParentDNA.meta?.name || 'Unknown';
+            cascadedContext.structures = immediateParentDNA.semantic?.structures || [];
+            cascadedContext.lighting = immediateParentDNA.semantic?.lighting || '';
+            cascadedContext.weather = immediateParentDNA.semantic?.weather_or_air || '';
+            cascadedContext.atmosphere = immediateParentDNA.semantic?.atmosphere || '';
+            cascadedContext.mood = immediateParentDNA.semantic?.mood || cascadedContext.mood;
+            cascadedContext.palette = immediateParentDNA.semantic?.color_palette || cascadedContext.palette;
+            cascadedContext.soundscape = immediateParentDNA.semantic?.soundscape || [];
+            cascadedContext.materials = immediateParentDNA.profile?.materials || '';
+            cascadedContext.colorsAndLighting = immediateParentDNA.profile?.colorsAndLighting || cascadedContext.colorsAndLighting;
+          }
         }
         
         // Ensure required array properties have defaults to prevent .join() errors
