@@ -3,6 +3,7 @@ Project-specific guidelines for logging practices and memory bank management in 
 
 ## Logging practices
 - **No automatic logging**: Do NOT add `console.log()` or terminal logging statements unless explicitly requested by the user
+- **Emoji usage**: Avoid using emojis in logs or outputs
 - **Reason**: Excessive logging creates spam and clutters output
 - **When logging is acceptable**: Only when user explicitly asks for debugging output or logging
 

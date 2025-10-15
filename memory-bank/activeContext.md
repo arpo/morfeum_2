@@ -45,7 +45,7 @@
      }
      ```
    - **Result**: Page refresh now shows complete tree in ChatTabs with proper indentation
-   - **Console Logging**: `[App] 🌲 Loading all children of world: Ethereal Nexus`
+   <!-- - **Console Logging**: `[App] 🌲 Loading all children of world: Ethereal Nexus` -->
 
 5. **World Node Image & Name Fix**:
    - **Bug**: World nodes showed "No Image" and no name in Saved Locations

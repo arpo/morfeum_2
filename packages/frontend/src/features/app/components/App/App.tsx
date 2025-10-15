@@ -101,7 +101,7 @@ export function App() {
       
       // If this is a world node, also load all its children
       if (node.type === 'world') {
-        console.log('[App] 🌲 Loading all children of world:', node.name);
+        // console.log('[App] 🌲 Loading all children of world:', node.name);
         const worldTree = getWorldTree(node.id);
         
         if (worldTree) {
@@ -123,7 +123,7 @@ export function App() {
                 }
                 
                 updateChatDeepProfile(child.id, childCascadedDNA as any);
-                console.log('[App]   └─ Loaded child node:', childNode.name, `(${childNode.type})`);
+                // console.log('[App]   └─ Loaded child node:', childNode.name, `(${childNode.type})`);
               }
               
               // Recurse for grandchildren

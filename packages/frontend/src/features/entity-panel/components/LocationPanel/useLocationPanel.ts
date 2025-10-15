@@ -50,11 +50,11 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         return;
       }
       
-      console.log('[useLocationPanel] 🔍 Current node:', currentNode.name, '(', currentNode.type, ')');
+      // console.log('[useLocationPanel] 🔍 Current node:', currentNode.name, '(', currentNode.type, ')');
       
       // Get cascaded DNA for current node
       const cascadedDNA = getCascadedDNA(currentNode.id);
-      console.log('[useLocationPanel] 🌐 Cascaded DNA:', cascadedDNA);
+      // console.log('[useLocationPanel] 🌐 Cascaded DNA:', cascadedDNA);
       
       // Initialize focus if missing
       const currentFocus = currentNode.focus || {
@@ -67,10 +67,10 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       // Get spatially connected nodes (ancestors, siblings, children)
       const spatialNodes = getSpatialNodes(currentNode.id);
       
-      console.log('[NavigatorAI] Finding destination...');
-      console.log('[NavigatorAI] Command:', movementInput.trim());
-      console.log('[NavigatorAI] Current focus:', currentFocus);
-      console.log('[NavigatorAI] Spatial nodes:', spatialNodes.length);
+      // console.log('[NavigatorAI] Finding destination...');
+      // console.log('[NavigatorAI] Command:', movementInput.trim());
+      // console.log('[NavigatorAI] Current focus:', currentFocus);
+      // console.log('[NavigatorAI] Spatial nodes:', spatialNodes.length);
       
       // Call NavigatorAI backend endpoint with spatial filtering
       const response = await fetch('/api/mzoo/navigator/find-destination', {
@@ -130,7 +130,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
           
           // Switch active chat to target node
           setActiveChat(navigation.targetNodeId);
-          console.log('[NavigatorAI] ✅ Switched to node:', navigation.targetNodeId);
+          // console.log('[NavigatorAI] ✅ Switched to node:', navigation.targetNodeId);
         } else {
           console.warn('[NavigatorAI] ❌ Target node not found:', navigation.targetNodeId);
         }
