@@ -104,8 +104,37 @@
   - Visual consistency with thumbnails and names
   - User experience matches generation-time display
 
-### NavigatorAI - LLM-Based Semantic Navigation (Previously Completed)
-- **Complete LLM-Powered Navigation System**: Uses Gemini 2.5 Flash to analyze user intent and find/generate locations
+### NavigatorAI - Complete Spatial Navigation System (Latest - Just Completed)
+- **Complete LLM-Powered Navigation System**: Uses Gemini 2.5 Flash Lite to analyze user intent and find/generate locations
+- **architectural_tone Field Integration**: Added to NodeDNA for visual style cascading
+  - Ensures architectural consistency from parent to child locations
+  - Example: "Gothic cathedral" → interior sublocations inherit gothic style
+  - Flows through locationDeepProfileEnrichment prompt and sublocation generation
+- **NavigatorAI Action Selection Fixed**: Clear decision tree for move vs generate actions
+  - Explicit rules prevent AI confusion
+  - Self-move prevention (never move to same node)
+  - JSON-only output with no text refusals
+  - Added examples for distant location generation
+- **Inside/Outside Navigation Complete**:
+  - **"Go Inside" Detection**: Recognizes "go inside", "enter", "step into", "interior"
+    - Action: Generates interior sublocation with scale_hint: interior
+    - Parent: Current exterior location
+  - **"Exit/Outside" Detection**: Recognizes "exit", "leave", "go outside", "back"
+    - Action: Move to parent location
+    - Backend auto-fills parent ID from tree traversal
+    - User-friendly error: "You're already at the top level of this world"
+- **Parent Node Tree Traversal**: Deterministic parent lookup
+  - Frontend populates parent_location_id by traversing tree structure
+  - Backend auto-fills targetNodeId for parent navigation
+  - No more AI guessing at parent relationships
+- **Visual Context Integration**: Enhanced spatial reasoning
+  - CurrentLocationDetails interface provides visual anchors
+  - Dominant elements and unique identifiers from current scene
+  - Better AI understanding for "inside that building" commands
+- **Error Handling Improvements**: User-friendly messaging
+  - Top-level exit attempt: Clear message instead of technical error
+  - Frontend graceful handling with clean logging
+  - Ready for future toast notification integration
   - **Natural Language Commands**: "go inside", "back to beach", "explore tower", "teleport to caves"
   - **Semantic Understanding**: Matches fuzzy user intent to world nodes using LLM reasoning
   - **Smart Generation**: Creates new locations when no suitable match exists

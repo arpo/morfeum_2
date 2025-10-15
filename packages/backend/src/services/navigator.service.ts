@@ -206,10 +206,11 @@ export const findDestinationNode = async (
           navigationResult.targetNodeId = currentNode.parent_location_id;
           console.log('[NavigatorAI] Auto-filled parent targetNodeId:', navigationResult.targetNodeId);
         } else {
-          console.error('[NavigatorAI] Cannot exit: current location has no parent');
+          // User-friendly message for top-level nodes
+          console.log('[NavigatorAI] Already at top level - cannot exit further');
           return {
             status: HTTP_STATUS.BAD_REQUEST,
-            error: 'Cannot exit: current location has no parent node'
+            error: "You're already at the top level of this world. There's nowhere to exit to."
           };
         }
       }

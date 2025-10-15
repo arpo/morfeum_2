@@ -1,11 +1,137 @@
 # Active Context
 
 ## Current Work Focus
-**World-Centric Tree Architecture** - Completed transformation to world-centric navigation and storage system with cascade deletion, recursive child loading, and proper world node handling. Foundation established for true hierarchical location management.
+**NavigatorAI Spatial Navigation System** - Complete implementation of LLM-powered location navigation with inside/outside navigation, visual context integration, parent tree traversal, and user-friendly error handling. System intelligently decides between moving to existing locations and generating new ones.
 
 ## Recent Changes
 
-### World-Centric Saved Locations & Tree Loading (Latest - Just Completed)
+### NavigatorAI Spatial Navigation Complete (Latest - Just Completed)
+1. **architectural_tone Field Added**:
+   - Added to NodeDNA interface and TypeScript types
+   - Integrated into locationDeepProfileEnrichment prompt
+   - Cascades from parent to child locations during sublocation generation
+   - Example: "Gothic cathedral architecture" flows to interior sublocations
+   - Ensures visual consistency across location hierarchy
+
+2. **NavigatorAI Action Selection Fixed**:
+   - **Problem**: AI confused when to move vs generate new locations
+   - **Solution**: Clear decision tree in prompt with explicit rules
+   - **Move Action**: Only for existing nodes that match command
+   - **Generate Action**: For new locations or when no match exists
+   - **Self-Move Prevention**: Never move to same node
+   - **JSON-Only Output**: No text refusals, pure JSON responses
+   - **Example Added**: "Take me to distant shipwreck" → generate (not invalid move)
+
+3. **Inside/Outside Navigation Implemented**:
+   - **"Go Inside" Detection**:
+     - Recognizes: "go inside", "enter", "step into", "interior"
+     - Action: Generates interior sublocation if none exists
+     - Parent: Current exterior location
+     - Scale: interior hint for room-sized generation
+   - **"Exit/Outside" Detection**:
+     - Recognizes: "exit", "leave", "go outside", "back"
+     - Action: Move to parent location
+     - Backend auto-fills parent ID from tree traversal
+     - Error handling: Clear message if at top level
+
+4. **Parent Node Tree Traversal**:
+   - **Frontend Data Population** (useLocationPanel.ts):
+     ```typescript
+     // Traverse tree to find each node's parent
+     const worldTree = worldTrees.find(tree => findInTree(tree, node.id));
+     const path = getPath(worldTree, node.id);
+     parent_location_id = path.length > 1 ? path[path.length - 2] : null;
+     ```
+   - **Backend Auto-Fill** (navigator.service.ts):
+     ```typescript
+     if (relation === 'parent' && !targetNodeId) {
+       const currentNode = allNodes.find(n => n.id === currentFocus.node_id);
+       targetNodeId = currentNode.parent_location_id;
+     }
+     ```
+   - **Result**: Deterministic parent lookup instead of AI guesswork
+
+5. **Visual Context Integration**:
+   - **CurrentLocationDetails Interface**:
+     - Dominant visual elements from current location
+     - Unique identifiers for spatial grounding
+     - Current view focus and direction
+   - **Prompt Enhancement**:
+     - AI receives visual anchors from current scene
+     - Better spatial reasoning for navigation decisions
+     - Understands "inside that building" by seeing the building
+
+6. **Error Handling Improvements**:
+   - **Top-Level Exit Attempt**:
+     - Before: `"Cannot exit: current location has no parent node"`
+     - After: `"You're already at the top level of this world. There's nowhere to exit to."`
+   - **Frontend Graceful Handling**:
+     - Detects user-friendly error messages
+     - Logs cleanly without red console errors
+     - Ready for future toast notification integration
+
+7. **Files Modified (6 total)**:
+   - **Backend (3 files)**:
+     - `services/navigator.service.ts` - Parent auto-fill, error messages
+     - `prompts/languages/en/navigatorSemanticNodeSelector.ts` - Decision tree, examples
+     - `prompts/languages/en/locationDeepProfileEnrichment.ts` - architectural_tone field
+   - **Frontend (3 files)**:
+     - `features/entity-panel/components/LocationPanel/useLocationPanel.ts` - Tree traversal, error handling
+     - `services/spawn/types.ts` - architectural_tone in NodeDNA
+     - `hooks/useSpawnEvents.ts` - Context extraction for sublocations
+
+8. **Complete Navigation Flows**:
+   **Creating New Location:**
+   ```
+   User: "Take me to a shipwreck"
+   AI: No shipwreck exists
+   Action: generate
+   Result: Creates new "Shipwreck" location
+   ```
+   
+   **Going Inside:**
+   ```
+   User: "Go inside the shipwreck"
+   Current: Shipwreck (exterior)
+   AI: Detects "inside" keyword + exterior parent
+   Action: generate with scale_hint: interior
+   Result: Creates "Shipwreck Interior" sublocation
+   ```
+   
+   **Going Outside:**
+   ```
+   User: "Exit" / "Leave" / "Go outside"
+   Current: Shipwreck Interior (child)
+   Backend: Looks up parent_location_id from tree
+   Action: move to parent (Shipwreck exterior)
+   Result: Returns to exterior location
+   ```
+   
+   **Edge Case - Top Level:**
+   ```
+   User: "Exit"
+   Current: World root node
+   Backend: parent_location_id is null
+   Result: Friendly error "already at top level"
+   ```
+
+9. **Key Benefits Delivered**:
+   - **Natural Navigation**: Users can explore with simple commands
+   - **Spatial Intelligence**: AI understands hierarchy and relationships
+   - **Visual Consistency**: architectural_tone cascades to children
+   - **Reliable Parent Lookup**: Tree traversal instead of AI guessing
+   - **User-Friendly Errors**: Clear messages for edge cases
+   - **Complete Inside/Outside**: Full bi-directional navigation
+
+10. **Quality Verification**:
+    - ✅ Backend Build: Successful, zero TypeScript errors
+    - ✅ Frontend Build: Successful, zero TypeScript errors
+    - ✅ Navigation Test: All flows working correctly
+    - ✅ Error Handling: Clean messages, no red console spam
+    - ✅ Tree Traversal: Parent IDs correctly populated
+    - ✅ Architecture: Follows all project patterns
+
+### World-Centric Saved Locations & Tree Loading (Previously Completed)
 1. **Saved Locations Transformed to World-Only View**:
    - **Previous**: Modal showed all nodes (world, region, location, sublocation) in flat list
    - **New**: Only world nodes displayed - clean, organized world management

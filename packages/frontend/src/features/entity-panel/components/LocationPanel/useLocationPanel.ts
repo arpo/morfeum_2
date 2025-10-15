@@ -171,6 +171,14 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       
       if (!response.ok) {
         const error = await response.json();
+        
+        // Display user-friendly error for top-level exit attempts
+        if (error.error && error.error.includes("already at the top level")) {
+          console.log('[NavigatorAI]', error.error);
+          // Optionally show a toast or alert here in future
+          return;
+        }
+        
         console.error('[NavigatorAI] API error:', error);
         return;
       }
