@@ -1,13 +1,23 @@
 /**
  * Sublocation DNA Generator
- * Generates interior sublocation DNA using cascaded visual context from parent hierarchy
+ * Generates sublocation DNA using cascaded visual context from parent hierarchy
+ * Can generate both interior and exterior sublocations based on scale_hint
  */
 
 export const generateSublocationDNA = (
   sublocationName: string,
-  cascadedContext: any
-) => `
-Generate an interior sublocation: "${sublocationName}"
+  cascadedContext: any,
+  scaleHint: 'macro' | 'area' | 'site' | 'interior' | 'detail' = 'interior'
+) => {
+  const isExterior = scaleHint === 'site' || scaleHint === 'area' || scaleHint === 'macro';
+  const perspectiveType = isExterior ? 'exterior' : 'interior';
+  const terrainLabel = isExterior ? 'terrain_type' : 'terrain_or_interior';
+  const terrainExample = isExterior ? 'plaza/courtyard/pier/open area' : 'room/hall/stairwell/chamber';
+  const environmentType = isExterior ? 'outdoor type' : 'interior type';
+  const searchPrefix = isExterior ? '[Sublocation - Exterior]' : '[Sublocation - Interior]';
+  
+  return `
+Generate a ${perspectiveType} sublocation: "${sublocationName}"
 
 INHERITED VISUAL CONTEXT (cascaded from world → region → location):
 
@@ -34,8 +44,8 @@ OUTPUT: JSON matching this exact structure:
     "name": "${sublocationName}"
   },
   "semantic": {
-    "environment": "interior type",
-    "terrain_or_interior": "room/hall/stairwell/chamber",
+    "environment": "${environmentType}",
+    "${terrainLabel}": "${terrainExample}",
     "structures": [
       {
         "type": "fixture/furniture/architectural element",
@@ -52,12 +62,12 @@ OUTPUT: JSON matching this exact structure:
       "types": [],
       "presence": "none|rare|ambient"
     },
-    "lighting": "interior lighting description",
-    "weather_or_air": "indoor air quality/particles",
-    "atmosphere": "claustrophobic/airy/echoing/etc",
+    "lighting": "${isExterior ? 'outdoor lighting (natural/artificial)' : 'interior lighting description'}",
+    "weather_or_air": "${isExterior ? 'weather conditions/wind' : 'indoor air quality/particles'}",
+    "atmosphere": "${isExterior ? 'open/exposed/sheltered/etc' : 'claustrophobic/airy/echoing/etc'}",
     "mood": "emotional tone inheriting from parent",
     "color_palette": ["dominant", "accent", "contrast"],
-    "soundscape": ["interior sounds"]
+    "soundscape": ["${isExterior ? 'outdoor ambient sounds' : 'interior sounds'}"]
   },
   "spatial": {
     "scale": {
@@ -108,24 +118,26 @@ OUTPUT: JSON matching this exact structure:
       ]
     },
     "viewContext": {
-      "perspective": "interior",
+      "perspective": "${perspectiveType}",
       "focusTarget": "main subject being viewed",
       "distance": "close|medium|far",
       "composition": "viewer position and facing direction"
     },
-    "searchDesc": "[Sublocation - Interior] concise 75-100 char description of what this interior space contains"
+    "searchDesc": "${searchPrefix} concise 75-100 char description of what this ${perspectiveType} space contains"
   }
 }
 
 CRITICAL RULES:
 - Maintain visual consistency with inherited context (genre, mood, materials, palette)
-- Interior space must feel like it belongs inside parent location
-- Use inherited color palette as base, refine for interior
-- Lighting should be interior version of parent lighting
-- Soundscape should be interior interpretation (muffled exterior sounds + interior sounds)
-- searchDesc MUST start with "[Sublocation - Interior]" prefix
+- ${isExterior ? 'Exterior space must feel like it belongs adjacent to/within parent location' : 'Interior space must feel like it belongs inside parent location'}
+- Use inherited color palette as base, ${isExterior ? 'adapt for outdoor lighting' : 'refine for interior'}
+- Lighting should be ${isExterior ? 'natural outdoor lighting influenced by parent atmosphere' : 'interior version of parent lighting'}
+- Soundscape should be ${isExterior ? 'outdoor ambient sounds influenced by location' : 'interior interpretation (muffled exterior sounds + interior sounds)'}
+- searchDesc MUST start with "${searchPrefix}" prefix
+- ${isExterior ? 'For exterior spaces: describe open-air environments, outdoor structures, exterior views' : 'For interior spaces: describe enclosed rooms, indoor fixtures, contained atmospheres'}
 - JSON only, no markdown
 - Be specific and detailed in visualAnchors
 
 Generate the JSON now:
 `;
+};

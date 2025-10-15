@@ -6,6 +6,7 @@
 import * as mzooService from '../../mzoo.service';
 import { generateSublocationDNA as generateSublocationPrompt } from '../../../prompts/languages/en/sublocationGeneration';
 import { sublocationImageGeneration } from '../../../prompts/languages/en/sublocationImageGeneration';
+import { locationImageGeneration } from '../../../prompts/languages/en/locationImageGeneration';
 import { AI_MODELS } from '../../../config/constants';
 import { parseJSON } from '../shared/pipelineCommon';
 import { eventEmitter } from '../../eventEmitter';
@@ -16,6 +17,7 @@ interface SublocPipelineOptions {
   parentNodeId: string;
   cascadedContext: any;
   createImage: boolean;
+  scaleHint?: 'macro' | 'area' | 'site' | 'interior' | 'detail';
   mzooApiKey: string;
 }
 
@@ -25,6 +27,7 @@ export class SublocPipelineManager {
   private parentNodeId: string;
   private cascadedContext: any;
   private createImage: boolean;
+  private scaleHint: 'macro' | 'area' | 'site' | 'interior' | 'detail';
   private mzooApiKey: string;
   private abortController: AbortController;
 
@@ -34,13 +37,25 @@ export class SublocPipelineManager {
     this.parentNodeId = options.parentNodeId;
     this.cascadedContext = options.cascadedContext;
     this.createImage = options.createImage;
+    this.scaleHint = options.scaleHint || 'interior';
     this.mzooApiKey = options.mzooApiKey;
     this.abortController = new AbortController();
+    
+    console.log('[SublocPipeline] 🏗️ Constructor initialized with:', {
+      spawnId: this.spawnId,
+      sublocationName: this.sublocationName,
+      scaleHint: this.scaleHint,
+      receivedScaleHint: options.scaleHint,
+      willCreateImage: this.createImage
+    });
   }
 
   async run(): Promise<void> {
     try {
-      console.log('[SublocPipeline] Starting sublocation generation:', this.sublocationName);
+      console.log('[SublocPipeline] ▶️ Starting sublocation generation:', {
+        name: this.sublocationName,
+        scaleHint: this.scaleHint
+      });
 
       // Stage 1: Generate DNA
       const dna = await this.generateDNA();
@@ -97,9 +112,12 @@ export class SublocPipelineManager {
   }
 
   private async generateDNA(): Promise<any> {
+    console.log('[SublocPipeline] 🧬 Generating DNA with scale_hint:', this.scaleHint);
+    
     const prompt = generateSublocationPrompt(
       this.sublocationName,
-      this.cascadedContext
+      this.cascadedContext,
+      this.scaleHint
     );
 
     const result = await mzooService.generateText(
@@ -126,14 +144,32 @@ export class SublocPipelineManager {
   }
 
   private async generateImage(dna: any): Promise<string> {
-    const imagePrompt = sublocationImageGeneration(
-      dna.meta.name,
-      dna.profile.looks,
-      dna.profile.atmosphere,
-      dna.profile.colorsAndLighting,
-      dna.profile.mood,
-      dna.profile.viewContext
-    );
+    // Choose the correct image generation prompt based on scale_hint
+    let imagePrompt: string;
+    
+    if (this.scaleHint === 'interior' || this.scaleHint === 'detail') {
+      // Use interior-focused prompt for actual interior spaces and detail views
+      console.log('[SublocPipeline] Using interior image prompt for scale:', this.scaleHint);
+      imagePrompt = sublocationImageGeneration(
+        dna.meta.name,
+        dna.profile.looks,
+        dna.profile.atmosphere,
+        dna.profile.colorsAndLighting,
+        dna.profile.mood,
+        dna.profile.viewContext
+      );
+    } else {
+      // Use exterior-focused prompt for site, area, macro scales
+      console.log('[SublocPipeline] Using exterior image prompt for scale:', this.scaleHint);
+      imagePrompt = locationImageGeneration(
+        dna.meta.name,
+        dna.profile.looks,
+        dna.profile.atmosphere,
+        dna.profile.colorsAndLighting,
+        dna.profile.mood,
+        dna.profile.viewContext
+      );
+    }
 
     const result = await mzooService.generateImage(
       this.mzooApiKey,

@@ -186,7 +186,13 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       const result = await response.json();
       const navigation = result.data;
       
-      console.log('[NavigatorAI] Result:', navigation);
+      console.log('[NavigatorAI] ✅ Navigation Result:', {
+        action: navigation.action,
+        name: navigation.name,
+        scale_hint: navigation.scale_hint,
+        relation: navigation.relation,
+        reason: navigation.reason
+      });
       
       if (navigation.action === 'move' && navigation.targetNodeId) {
         // Move to existing node
@@ -367,6 +373,12 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         // console.log('[Sublocation Generation] ⚙️ Starting sublocation spawn pipeline...');
         
         try {
+          console.log('[Sublocation Generation] 🎯 Passing to spawn API:', {
+            sublocationName: navigation.name,
+            scaleHint: navigation.scale_hint || 'interior',
+            hasScaleHint: !!navigation.scale_hint
+          });
+          
           const spawnId = await startSpawn(
             navigation.name,
             'sublocation',
@@ -374,7 +386,8 @@ export function useLocationPanel(): LocationPanelLogicReturn {
               sublocationName: navigation.name,
               parentNodeId: navigation.parentNodeId,
               cascadedContext,
-              createImage
+              createImage,
+              scaleHint: navigation.scale_hint || 'interior'
             }
           );
           

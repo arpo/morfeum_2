@@ -95,7 +95,7 @@ router.post('/start', asyncHandler(async (req: Request, res: Response) => {
  * POST /api/spawn/sublocation/start - Start a sublocation spawn process
  */
 router.post('/sublocation/start', asyncHandler(async (req: Request, res: Response) => {
-  const { sublocationName, parentNodeId, cascadedContext, createImage = true } = req.body;
+  const { sublocationName, parentNodeId, cascadedContext, createImage = true, scaleHint = 'interior' } = req.body;
 
   if (!sublocationName || typeof sublocationName !== 'string') {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -127,6 +127,13 @@ router.post('/sublocation/start', asyncHandler(async (req: Request, res: Respons
   // Generate unique spawn ID
   const spawnId = `subloc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
+  console.log('[Spawn Route] 📥 Received sublocation request:', {
+    sublocationName,
+    scaleHint,
+    hasScaleHint: scaleHint !== undefined,
+    scaleHintValue: scaleHint
+  });
+
   // Start pipeline in background
   const pipeline = new SublocPipelineManager({
     spawnId,
@@ -134,8 +141,11 @@ router.post('/sublocation/start', asyncHandler(async (req: Request, res: Respons
     parentNodeId,
     cascadedContext,
     createImage,
+    scaleHint,
     mzooApiKey: (req as any).mzooApiKey
   });
+  
+  console.log('[Spawn Route] 🚀 Created pipeline with scaleHint:', scaleHint);
 
   // Run pipeline asynchronously (don't await)
   pipeline.run().catch(error => {
