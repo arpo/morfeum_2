@@ -66,7 +66,7 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
         return { activeSpawns: newSpawns };
       });
 
-      console.log('[SpawnManager] Started spawn:', spawnId, 'type:', entityType);
+      // console.log('[SpawnManager] Started spawn:', spawnId, 'type:', entityType);
       return spawnId;
     } catch (error) {
       console.error('[SpawnManager] Failed to start spawn:', error);

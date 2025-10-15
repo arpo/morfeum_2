@@ -72,7 +72,7 @@ export class SublocPipelineManager {
       }
 
       // Stage 3: Complete
-      console.log('[SublocPipeline] Sublocation generation complete');
+      // console.log('[SublocPipeline] Sublocation generation complete');
       eventEmitter.emit({
         type: 'spawn:sublocation-complete',
         data: {

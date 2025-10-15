@@ -215,7 +215,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         console.log('[Sublocation Generation] 🎨 Cascaded Visual Context:', cascadedContext);
         
         // Start sublocation spawn with pipeline
-        console.log('[Sublocation Generation] ⚙️ Starting sublocation spawn pipeline...');
+        // console.log('[Sublocation Generation] ⚙️ Starting sublocation spawn pipeline...');
         
         try {
           const spawnId = await startSpawn(
@@ -229,8 +229,8 @@ export function useLocationPanel(): LocationPanelLogicReturn {
             }
           );
           
-          console.log('[Sublocation Generation] ✅ Spawn started:', spawnId);
-          console.log('[Sublocation Generation] 📊 Watch the ActiveSpawnsPanel for progress updates');
+          // console.log('[Sublocation Generation] ✅ Spawn started:', spawnId);
+          // console.log('[Sublocation Generation] 📊 Watch the ActiveSpawnsPanel for progress updates');
           
         } catch (genError) {
           console.error('[Sublocation Generation] ❌ Failed to start spawn:', genError);

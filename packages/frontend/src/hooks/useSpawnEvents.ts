@@ -237,7 +237,7 @@ export function useSpawnEvents() {
     // Listen for sublocation DNA complete event
     eventSource.addEventListener('spawn:sublocation-dna-complete', (e) => {
       const { spawnId, dna, parentNodeId } = JSON.parse(e.data);
-      console.log('[SSE] 🧬 Sublocation DNA generated:', spawnId);
+      // console.log('[SSE] 🧬 Sublocation DNA generated:', spawnId);
       
       // Get parent node to build cascaded DNA for preview
       const parentNode = getNode(parentNodeId);
@@ -246,7 +246,7 @@ export function useSpawnEvents() {
         return;
       }
       
-      console.log('[SSE] 🔍 Getting cascaded DNA from parent:', parentNodeId);
+      // console.log('[SSE] 🔍 Getting cascaded DNA from parent:', parentNodeId);
       
       // Get cascaded DNA from tree traversal
       const cascadedDNA = getCascadedDNA(parentNodeId);
@@ -257,7 +257,7 @@ export function useSpawnEvents() {
         sublocation: dna
       };
       
-      console.log('[SSE] ✅ Preview DNA has world node:', !!inheritedDNA.world);
+      // console.log('[SSE] ✅ Preview DNA has world node:', !!inheritedDNA.world);
       
       // Create preview immediately with DNA (no image yet)
       // This switches the preview panel to show the new sublocation
@@ -280,7 +280,7 @@ export function useSpawnEvents() {
       // Switch to this chat immediately
       if (setActiveChat) {
         setActiveChat(spawnId);
-        console.log('[SSE] 🎯 Preview switched to sublocation:', spawnId);
+        // console.log('[SSE] 🎯 Preview switched to sublocation:', spawnId);
       }
       
       if (updateSpawnStatus) {
@@ -291,7 +291,7 @@ export function useSpawnEvents() {
     // Listen for sublocation image complete event
     eventSource.addEventListener('spawn:sublocation-image-complete', (e) => {
       const { spawnId, imageUrl } = JSON.parse(e.data);
-      console.log('[SSE] 🎨 Sublocation image generated:', imageUrl);
+      // console.log('[SSE] 🎨 Sublocation image generated:', imageUrl);
       
       // Update the preview with the image
       if (updateChatImage) {
@@ -306,7 +306,7 @@ export function useSpawnEvents() {
     // Listen for sublocation complete event
     eventSource.addEventListener('spawn:sublocation-complete', (e) => {
       const { spawnId, dna, imageUrl, parentNodeId } = JSON.parse(e.data);
-      console.log('[SSE] ✅ Sublocation generation complete:', spawnId);
+      // console.log('[SSE] ✅ Sublocation generation complete:', spawnId);
       
       // Get parent node
       const parentNode = getNode(parentNodeId);

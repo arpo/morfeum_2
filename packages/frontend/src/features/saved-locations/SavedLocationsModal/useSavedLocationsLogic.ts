@@ -36,7 +36,7 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
 
   const handleLoadLocation = useCallback((node: Node) => {
-    console.log('[SavedEntitiesModal] Loading node:', node.id);
+    // console.log('[SavedEntitiesModal] Loading node:', node.id);
     
     // Get cascaded DNA for this node
     const cascadedDNA = getCascadedDNA(node.id);
@@ -69,7 +69,7 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     // Close modal
     onClose();
     
-    console.log('[SavedEntitiesModal] Node loaded successfully');
+    // console.log('[SavedEntitiesModal] Node loaded successfully');
   }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose, getCascadedDNA]);
 
   const handleLoadCharacter = useCallback((character: Character) => {
