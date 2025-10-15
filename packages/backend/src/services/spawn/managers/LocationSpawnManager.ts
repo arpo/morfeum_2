@@ -138,7 +138,62 @@ export class LocationSpawnManager extends BasePipelineManager {
     // Parse simplified NodeDNA structure
     const nodeDNA: NodeDNA = parseJSON(result.data.text);
     
+    // OPTIONAL: Generate view descriptions for multi-view support
+    // This is prepared for future use but not yet fully integrated
+    // Uncomment when ready to enable multi-view navigation
+    /*
+    try {
+      const viewDescriptions = await this.generateViewDescriptions(
+        seed,
+        visualAnalysis,
+        signal
+      );
+      nodeDNA.viewDescriptions = viewDescriptions;
+    } catch (error) {
+      console.log('[LocationSpawnManager] View descriptions generation failed (optional):', error);
+      // Continue without view descriptions - not critical
+    }
+    */
+    
     return nodeDNA;
+  }
+
+  /**
+   * OPTIONAL: Generate text descriptions for different viewpoints
+   * Prepares infrastructure for multi-view navigation without generating images upfront
+   * Images will be generated lazily when user looks in that direction
+   */
+  async generateViewDescriptions(
+    seed: LocationSeed,
+    visualAnalysis: LocationVisualAnalysis,
+    signal: AbortSignal
+  ): Promise<Record<string, any>> {
+    const seedJson = JSON.stringify(seed, null, 2);
+    const visionJson = JSON.stringify(visualAnalysis, null, 2);
+    const renderInstructions = seed.renderInstructions || '';
+
+    const viewPrompt = getPrompt('generateViewDescriptions', 'en')(
+      seedJson,
+      visionJson,
+      renderInstructions
+    );
+
+    const messages = [
+      { role: 'system', content: viewPrompt },
+      { role: 'user', content: 'Generate view descriptions for all directions.' }
+    ];
+
+    const result = await mzooService.generateText(
+      this.mzooApiKey,
+      messages,
+      AI_MODELS.SEED_GENERATION // Fast model for text generation
+    );
+
+    if (result.error) {
+      throw new Error(result.error);
+    }
+
+    return parseJSON(result.data.text);
   }
 
 

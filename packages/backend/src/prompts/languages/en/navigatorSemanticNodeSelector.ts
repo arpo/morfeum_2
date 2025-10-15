@@ -132,10 +132,25 @@ User Command: "${userCommand}"
    - If element is in direction mentioned → it's in THIS location
    - Example: "go left" + directional context["left"] mentions doorway → doorway is HERE
    
-5. **Distance Inference**:
+5. **Distance Inference & Distance Modifiers**:
    - No location qualifier = element is HERE (visible in current location)
    - "the stair" (no location) = visible stair in THIS room
    - "stair in the tower" = different location (search other nodes)
+   
+   **Distance Modifiers** (CRITICAL - New Feature):
+   - **"closer to X" / "approach X" / "near X"**:
+     → If X is in visualAnchors: generate child node with scale_hint: "detail"
+     → name: "Closer to {X}" or "{X} Area"
+     → parentNodeId: current node ID
+     → This creates a closer viewpoint of something visible in current location
+   - **"further from X" / "away from X" / "back from X"**:
+     → action: "move" to parent node (moving back = going further)
+     → relation: "parent"
+   
+   **Example**: 
+   - Current: "Factory Floor" with "large machine" in visualAnchors
+   - User: "Go closer to machine" or "Approach the machine"
+   - Response: action: "generate", scale_hint: "detail", name: "Closer to Machine"
    
 6. **Match Priority**:
    1. Visible elements in current location (highest priority)
@@ -220,6 +235,17 @@ Examples with Visual Context:
 - Current: "Interior of Shipwreck" (ID: subloc-456, Parent: subloc-123)
 - User: "Go outside" or "Exit" or "Leave"
 - Response: {"action":"move","targetNodeId":"subloc-123","parentNodeId":null,"name":null,"scale_hint":null,"relation":"parent","reason":"User wants to exit current location. Moving to parent node."}
+
+**Scenario 7: Distance-Based Navigation (Closer)**
+- Current: "Factory Floor" (ID: loc-789)
+- Visual elements: "large industrial machine in distance, conveyor belts, control panel"
+- User: "Go closer to machine" or "Approach the machine"
+- Response: {"action":"generate","targetNodeId":null,"parentNodeId":"loc-789","name":"Closer to Machine","scale_hint":"detail","relation":"child","reason":"Machine is visible in current location's visualAnchors. Creating closer detail view as child node."}
+
+**Scenario 8: Distance-Based Navigation (Further/Back)**
+- Current: "Closer to Machine" (ID: subloc-999, Parent: loc-789)
+- User: "Go back" or "Move away" or "Step back"
+- Response: {"action":"move","targetNodeId":"loc-789","parentNodeId":null,"name":null,"scale_hint":null,"relation":"parent","reason":"User wants to move further away. Returning to parent node."}
 
 IMPORTANT: In your response, targetNodeId and parentNodeId must ALWAYS be the full ID string (starting with "spawn-"), never the node name.`;
 };

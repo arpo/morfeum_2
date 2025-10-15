@@ -17,6 +17,7 @@ import { locationImageGeneration } from './locationImageGeneration';
 import { generateNewWorldDNA } from './locationDeepProfileEnrichment';
 import { sampleLocationPrompts } from './sampleLocationPrompts';
 import { navigatorSemanticNodeSelector } from './navigatorSemanticNodeSelector';
+import { generateViewDescriptions } from './generateViewDescriptions';
 
 // Export flux filters for external use
 export { fluxFilters, getFluxFilter, getDefaultFluxFilter, type FluxFilter } from './fluxFilters';
@@ -37,5 +38,6 @@ export const en: PromptTemplates = {
   locationImageGeneration,
   locationDeepProfileEnrichment: generateNewWorldDNA,
   sampleLocationPrompts,
-  navigatorSemanticNodeSelector
+  navigatorSemanticNodeSelector,
+  generateViewDescriptions
 };

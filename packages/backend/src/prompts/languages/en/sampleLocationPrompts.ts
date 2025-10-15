@@ -3,37 +3,44 @@
  */
 
 export const sampleLocationPrompts = [
-    
-  "Eclipsera (world), a twilight realm where day and night coexist in perpetual balance, and gravity hums like a song.",
-  "The Mistwoven Archipelago (region) of Eclipsera (world), where islands drift through silver fog and bridges form from condensed light.",
-  "The Observatory of Silent Stars (location) on the Mistwoven Archipelago (region), its glass dome breathing with slow pulses of radiance.",
-
-  "Auralis Prime (world), a solar ocean where sound sculpts the land and music controls the tides.",
-  "The Obsidian Shores (region) of Auralis Prime (world), where molten sand cools into black glass under a turquoise sky.",
-  "The Lighthouse of Broken Glass (location) on the Obsidian Shores (region), its prism lens casting spectral shadows across the sea.",
-
-  "Nythra (world), a digital dream that believes itself organic, threaded by living code and blooming data flora.",
-  "The Coral Systems (region) of Nythra (world), vast reef-like megastructures alive with neural light.",
-  "The Archive Garden (location) within the Coral Systems (region), where memories grow as translucent fruits on silver vines.",
-
-  "Vaelune (world), a dying star reborn as a drifting civilization of floating cities tethered to plasma rivers.",
-  "The Ember District (region) of Vaelune (world), where architecture shimmers like cooled magma and time runs slow.",
-  "The Sky Bazaar (location) above the Ember District (region), filled with merchants trading light instead of goods.",
-
-  "Serein (world), a water-mirror cosmos where reflections live separate lives from their originals.",
-  "The Luminous Depths (region) of Serein (world), where translucent leviathans drift between upside-down cities.",
-  "The Cathedral of Waves (location) within the Luminous Depths (region), echoing with choirs that breathe underwater.",
-
-  "Myrrhvale (world), a forested planet steeped in golden mist, where every tree holds ancestral memories.",
-  "The Valley of Reeds (region) of Myrrhvale (world), perpetually resonating with wind-born harmonics.",
-  "The Whispering Bridge (location) over the Valley of Reeds (region), carved from the ribs of a giant creature now worshipped as wind.",
-
-  "Hollow Sky (world), a universe turned inside out, where clouds form continents and stars drift beneath.",
-  "The Rainfall Plains (region) of Hollow Sky (world), where storms are tamed into architecture.",
-  "The Glass Shelter (location) in the Rainfall Plains (region), a transparent dome collecting thunder for energy.",
-
-  "Solgrave (world), a fractured utopia where light refracts into parallel timelines.",
-  "The Mirror Expanse (region) of Solgrave (world), a desert of mirrored dunes that record everything reflected on them.",
-  "The Waystation of Echoes (location) in the Mirror Expanse (region), a resting place for travelers lost between timelines."
-
+  "The Wreck of the Aurelion (location), a half-submerged starliner lying on a tidal flat, its corridors still echoing with faint intercom static.",
+  "The Obsidian Monastery (location), carved into a cliff of black glass, its doors sealed by melted stone yet whispering from within.",
+  "The Signal Spire (location), a radio tower rising from fog-drowned ruins, still pulsing with messages from a vanished civilization.",
+  "The Hollow Observatory (location), perched on a mountain ridge, its telescope aimed at a sky that no longer matches the stars above.",
+  "The Lantern City (location), an underground metropolis built from rusted train cars, its tunnels lit by bioluminescent graffiti.",
+  "The Forgotten Station (location), buried beneath the ice shelf, its platforms glowing faintly with residual power from another age.",
+  "The Dream Capsule (location), a derelict sleep pod adrift in orbit, interiors lined with vines that hum in response to thought.",
+  "The Coral Citadel (location), a fortress grown from living reef, doors breathing open and shut like the gills of some vast creature.",
+  "The Iron Basilica (location), a cathedral-ship resting in a desert crater, its stained hull ringing when touched by wind.",
+  "The Pale Market (location), an abandoned bazaar on a frozen moon, stalls filled with crystallized echoes of forgotten trade.",
+  "The Spiral Archive (location), a cylindrical library descending deep into the crust, shelves rotating in slow mechanical rhythm.",
+  "The Luminous Engine (location), a reactor chamber that glows from within, surrounded by ghostly silhouettes of those who once tended it.",
+  "The Drift Temple (location), a floating shrine orbiting a gas giant, its marble corridors open to space and filled with drifting candles.",
+  "The Mirror Factory (location), a ruined plant where reflections are manufactured, each pane showing a slightly different world.",
+  "The Skywell (location), a colossal pit in the clouds with spiral platforms leading down to a city suspended by cables and mist.",
+  "The Glass Womb (location), a crystalline biodome on a forgotten planet, its interior climate still alive and lush after centuries of silence.",
+  "The Ruined Elevator (location), a thousand-meter shaft through an empty megastructure, the lift car frozen between worlds.",
+  "The Ember Vault (location), a subterranean furnace-temple where molten rivers carve symbols that glow when spoken to.",
+  "The Tide Cathedral (location), a half-flooded temple where waves crash through stained glass, and bioluminescent fish glide between pews.",
+  "The Silent Shipyard (location), a maze of unfinished vessels suspended in zero gravity, their hulls drifting like sleeping leviathans.",
+   "The Gatelock Bastion (location), a fortress of iron and salt with doors that open only at lunar eclipse, its corridors humming beneath the tide.",
+  "The Arkfall Hangar (location), a buried docking bay beneath desert sand, its sealed blast doors half-cracked by ancient pressure.",
+  "The Ivory Ascent (location), a spiral tower carved from a single tusk, its entrance marked by a door that sings when touched.",
+  "The Hollow Bridge (location), a suspended passage of petrified bone leading into fog, its midpoint hiding an unseen door beneath runes.",
+  "The Ashen Terminal (location), a spaceport entombed in volcanic rock, airlocks still cycling though no passengers remain.",
+  "The Vault of Glass (location), a transparent structure sunken in a crater, entry through a single pressure hatch glowing faintly blue.",
+  "The Sepulcher Gate (location), twin obsidian doors standing alone in a field of stone, opening to an interior far larger than its frame.",
+  "The Resonance Hall (location), a domed chamber whose bronze doors vibrate like tuning forks when approached.",
+  "The Ruined Embassy (location), shattered pillars guarding a grand stairway leading into a blackened doorway beneath fallen banners.",
+  "The Oath Corridor (location), a corridor of mirrors extending into shadow, its entry sealed by a velvet curtain that breathes softly.",
+  "The Starcradle Dock (location), an orbital bay lined with derelict escape pods, each hatch leading to a micro-world of frozen time.",
+  "The Verdant Gatehouse (location), an overgrown entryway to an ancient arboretum, vines parting when a heartbeat nears.",
+  "The Rustspire Lift (location), an elevator shaft at the center of a ruined skyscraper, its door ajar and flickering with old emergency light.",
+  "The Ember Atrium (location), a temple entrance beneath a molten sky, brass doors warped by heat but still barely movable.",
+  "The Silent Portico (location), a colonnaded gateway leading into a labyrinth where every door whispers names when opened.",
+  "The Celestial Hatch (location), a sealed airlock in a derelict satellite, the entry wheel frozen halfway between open and closed.",
+  "The Forgotten Monolith (location), a seamless black tower with one narrow slit of light serving as its only doorway inward.",
+  "The Bone Passage (location), a tunnel formed by fossilized ribs leading into the earth, each arch narrowing like a mouth.",
+  "The Memory Gate (location), a circular portal engraved with shifting symbols, opening when a voice from the past is spoken aloud.",
+  "The Flooded Vestibule (location), the waterlogged entrance of a sunken museum, its revolving door still turning beneath the waves."
 ];

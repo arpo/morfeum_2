@@ -6,6 +6,16 @@ export const locationSeedGeneration = (textPrompt: string) => `
 
 Generate a concise, visually focused location seed based on the description below.
 
+⚠️ SPECIAL CASE - DETAIL/CLOSE-UP VIEWS:
+If the user prompt contains phrases like "Closer to", "Approach", or similar proximity modifiers:
+- This is a DETAIL VIEW of an existing element (structure or object)
+-The named subject MUST fill most of the frame (≈70%+)
+- Use TIGHT FRAMING: close-up, macro, or intimate perspective
+- INHERIT parent environment’s atmosphere, mood, and material language
+- MINIMIZE new invention — emphasize existing design logic and material continuity
+- Treat the subject as tactile: reveal surface, mechanics, or craft
+- Camera positioned extremely near the object’s geometry (focus on contour, interface, or mechanism)
+
 Return ONLY valid JSON with these exact fields:
 {
   "originalPrompt": "...",
@@ -33,10 +43,22 @@ Field hints:
 - [classification]:
   - Analyze the user's PRIMARY INTENT:
     • primarySubject: What is the user asking you to CREATE?
-      → "world" if it's a comprehensive city/realm description (even if it mentions specific locations)
-      → "region" if it's a district/neighborhood within a larger area
-      → "location" if it's explicitly requesting a specific structure/building (e.g., "Botanical Dome", "lighthouse")
-      → "sublocation" if it's explicitly requesting a space INSIDE a structure (e.g., "bar in the dome", "VIP room")
+      
+   - "world" → comprehensive realm or city  
+    - "region" → district or neighborhood  
+    - "location" → specific structure or building  
+    - "sublocation" → defined space inside a structure  
+    - "object" → mechanical, crafted, or technological element  
+      *(machine, device, vehicle, weapon, console, control panel, tool, etc.)*
+
+  - If the prompt includes clear mechanical or crafted nouns  
+    *(e.g., "engine core", "weapon", "machine", "device", "console", "gear")*,  
+    classify it as "object".
+
+  - When “Closer to” or similar phrasing references such an item,  
+    it becomes "object" with the parent "context" drawn from its environment.
+
+
     • targetName: The name of what they're asking you to create
     • context: Optional parent context (e.g., if asking for "Botanical Dome in Metropolis", context = "Metropolis")
   
@@ -68,26 +90,37 @@ Field hints:
 Goal: Generate camera geometry that feels lived-in and cinematic — prioritizing tension, diagonal flow, and spatial rhythm over symmetry or centering.
 
 Write one short, precise sentence describing only the camera geometry:
+
 Include:
-• framing distance (close / medium / wide / establishing / panoramic)
-• camera angle (low / high / tilted / oblique / off-axis)
-• composition bias (left / right / diagonal / offset / foreground-weighted)
-• relative height or perspective (ground-level / elevated / aerial / eye-level)
-• optional depth cues (foreground framing / occlusion / parallax / leading lines / layered planes)
+• framing distance (close / medium / wide / establishing / panoramic / macro)  
+• camera angle (low / high / tilted / oblique / off-axis / three-quarter)  
+• composition bias (left / right / diagonal / offset / foreground-weighted / subject-dominant)  
+• relative height or perspective (ground-level / elevated / aerial / eye-level / top-down / detail-plane)  
+• optional depth cues (foreground framing / occlusion / parallax / leading lines / layered planes / scale intrusion)
 
 Avoid: phrases like centered, perfect symmetry, directly facing, or eye-level balance.
 
 Favor: diagonals, partial obstructions, asymmetrical framing, near/far contrasts, lens compression or expansion, and environmental intrusion (vines, railings, shadows).
 
+When describing **machines, devices, or weapons**, emphasize tactile geometry:
+- Tight or macro framing showing mechanisms, contours, or interfaces  
+- Oblique or three-quarter angles that reveal depth and form  
+- Strong surface occlusion, shallow depth cues, or overlapping components  
+- Avoid pulling back to include unnecessary surroundings
+
 ✦ Updated Camera Geometry Examples
 
-• “low three-quarter angle, diagonal layout with strong foreground occlusion and receding arches”
-• “elevated side vantage, wide framing, layered trees forming asymmetrical tunnel toward distant portal”
-• “ground-level shot, oblique axis, right-weighted composition with glowing crystals leading into depth”
-• “medium-wide view, slight tilt, framed between trunks with diagonal rhythm through walkway”
-• “aerial 45° off-axis angle, sweeping lines converging into misty focal point”
-• “wide architectural view, skewed symmetry broken by foreground branches and uneven lighting falloff”
+• “macro detail shot, three-quarter angle, diagonal composition, shallow depth with strong surface occlusion”  
+• “tight close-up, oblique overhead view, right-weighted frame, lens compression revealing layered components”  
+• “medium detail framing, ground-level offset, diagonal axis through weapon chassis”  
+• “low three-quarter angle, diagonal layout with strong foreground occlusion and receding arches”  
+• “elevated side vantage, wide framing, layered trees forming asymmetrical tunnel toward distant portal”  
+• “ground-level shot, oblique axis, right-weighted composition with glowing crystals leading into depth”  
+• “medium-wide view, slight tilt, framed between trunks with diagonal rhythm through walkway”  
+• “aerial 45° off-axis angle, sweeping lines converging into misty focal point”  
+• “wide architectural view, skewed symmetry broken by foreground branches and uneven lighting falloff”  
 • “telephoto compression, layered columns creating rhythmic parallax, off-center horizon line”
+
 
 ✦ Practical Prompts for Variation
 

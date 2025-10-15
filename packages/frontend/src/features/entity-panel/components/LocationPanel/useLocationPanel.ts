@@ -209,7 +209,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
           setActiveChat(navigation.targetNodeId);
           // console.log('[NavigatorAI] ✅ Switched to node:', navigation.targetNodeId);
         } else {
-          console.warn('[NavigatorAI] ❌ Target node not found:', navigation.targetNodeId);
+          console.warn('[NavigatorAI] ⚠️ Target node not found:', navigation.targetNodeId);
         }
       } else if (navigation.action === 'generate') {
         // Get parent node
