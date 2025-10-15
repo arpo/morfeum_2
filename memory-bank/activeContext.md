@@ -1,9 +1,174 @@
 # Active Context
 
 ## Current Work Focus
-**Multi-View Preparation & Distance-Based Navigation** - Enhanced NavigatorAI with distance modifiers ("go closer", "go back"), created infrastructure for multi-view text descriptions, and improved close-up image generation. System now supports zooming into objects and returning to wider views.
+**Interior/Exterior Perspective System Complete** - Fixed critical issue where all sublocation generations defaulted to interior spaces. Implemented complete chain from NavigatorAI perspective inference through DNA generation to image generation, ensuring marinas show harbors, not control rooms.
 
 ## Recent Changes
+
+### Interior/Exterior Perspective Fix & JSON Parsing Enhancement (Latest - Just Completed)
+1. **The Problem Identified**:
+   - **Symptom**: "go to marina" generated interior control room images instead of exterior harbor views
+   - **Root Cause**: DNA generation (`sublocationGeneration.ts`) was hardcoded to create interior spaces
+   - **Secondary Issue**: NavigatorAI sometimes added explanation text before JSON, causing parse errors
+
+2. **Complete Fix Chain** (NavigatorAI → Frontend → Backend → DNA → Image):
+   
+   **Step 1: NavigatorAI Perspective Inference** ✅
+   - Updated `navigatorSemanticNodeSelector.ts` with **Rule #3: Perspective Inference**
+   - **"go to X"** (without "inside") → defaults to `scale_hint: "site"` (exterior)
+   - **"go inside X"** → uses `scale_hint: "interior"`
+   - **Exterior keywords force exterior**: marina, plaza, quarters, harbor, garden, courtyard, rooftop
+   - Added 3 new example scenarios (9, 10, 11) demonstrating interior vs exterior
+   
+   **Step 2: Frontend Pass-Through** ✅
+   - Updated `useLocationPanel.ts` to pass `scale_hint` from NavigationResult
+   - Added: `scaleHint: navigation.scale_hint || 'interior'` to sublocation metadata
+   - Added comprehensive logging to trace scale_hint through the chain
+   
+   **Step 3: Backend Route** ✅
+   - Updated `spawn.ts` route to accept `scaleHint` parameter
+   - Defaults to `'interior'` if not provided
+   - Passes to SublocPipelineManager constructor
+   
+   **Step 4: Pipeline Manager** ✅
+   - Updated `SublocPipelineManager.ts` to store and use `scaleHint`
+   - Added to `SublocPipelineOptions` interface
+   - Passes to both DNA generation AND image generation
+   
+   **Step 5: DNA Generation** ✅ (THE KEY FIX)
+   - Updated `sublocationGeneration.ts` to accept `scaleHint` parameter
+   - **Dynamic prompt generation based on perspective**:
+     - **Exterior** (`site`, `area`, `macro`):
+       - Uses `terrain_type` field (not `terrain_or_interior`)
+       - Example: "plaza/courtyard/pier/open area"
+       - Outdoor lighting descriptions
+       - Weather conditions instead of indoor air
+       - Exterior soundscapes
+       - `[Sublocation - Exterior]` prefix in searchDesc
+     - **Interior** (`interior`, `detail`):
+       - Uses `terrain_or_interior` field
+       - Example: "room/hall/stairwell/chamber"
+       - Interior lighting descriptions
+       - Indoor air quality
+       - Interior soundscapes
+       - `[Sublocation - Interior]` prefix in searchDesc
+   
+   **Step 6: Image Generation** ✅
+   - Updated `SublocPipelineManager.ts` image generation logic
+   - **Chooses correct prompt based on scale_hint**:
+     - `scale_hint === 'interior'` or `'detail'` → uses `sublocationImageGeneration` (indoor focus)
+     - `scale_hint === 'site'` or `'area'` or `'macro'` → uses `locationImageGeneration` (outdoor focus)
+   - Logs which prompt is being used for verification
+
+3. **JSON Parsing Enhancement** (Fixed Secondary Issue):
+   
+   **Problem**: NavigatorAI added explanation text before JSON:
+   ```
+   The user command is "Go closer to star ship".
+   This command uses the distance modifier...
+   ```json
+   { actual json here }
+   ```
+   ```
+   
+   **Solution - Enhanced JSON Extraction** (`navigator.service.ts`):
+   - **Regex Match**: Finds ````json\n...\n```` fences even with text before
+   - **Multiple Fallbacks**:
+     1. Regex match for complete fence blocks
+     2. Manual index search for ```json markers
+     3. Last resort: extract first `{...}` object found
+   - **Result**: Robust parsing handles any AI response format
+   
+   **Solution - Stricter Prompt** (`navigatorSemanticNodeSelector.ts`):
+   - Added explicit instructions:
+     - "Do NOT write 'The user command is...' or explain your thinking"
+     - "Start your response IMMEDIATELY with the opening brace {"
+     - "If you must use markdown code fences, wrap ONLY the JSON"
+   - **Result**: AI less likely to add preamble text
+
+4. **Complete Logging Chain** (For Debugging):
+   ```
+   Frontend (useLocationPanel.ts):
+   [NavigatorAI] ✅ Navigation Result: { scale_hint: "site", ... }
+   [Sublocation Generation] 🎯 Passing to spawn API: { scaleHint: "site" }
+   
+   Backend (spawn.ts):
+   [Spawn Route] 📥 Received sublocation request: { scaleHint: "site" }
+   [Spawn Route] 🚀 Created pipeline with scaleHint: site
+   
+   Pipeline (SublocPipelineManager.ts):
+   [SublocPipeline] 🏗️ Constructor initialized with: { scaleHint: "site" }
+   [SublocPipeline] ▶️ Starting sublocation generation: { scaleHint: "site" }
+   [SublocPipeline] 🧬 Generating DNA with scale_hint: site
+   [SublocPipeline] Using exterior image prompt for scale: site
+   ```
+
+5. **Example Flows Now Working**:
+   
+   **Exterior Location (Marina)**:
+   ```
+   User: "go to marina"
+   NavigatorAI: scale_hint: "site" (exterior keyword detected)
+   DNA Generation: Creates outdoor DNA with terrain_type: "pier"
+   Image Generation: Uses locationImageGeneration (exterior prompt)
+   Result: Harbor view with boats, docks, water ✅
+   ```
+   
+   **Interior Location (Office)**:
+   ```
+   User: "go inside marina office"
+   NavigatorAI: scale_hint: "interior" ("inside" keyword detected)
+   DNA Generation: Creates indoor DNA with terrain_or_interior: "office"
+   Image Generation: Uses sublocationImageGeneration (interior prompt)
+   Result: Indoor office with desk, windows, equipment ✅
+   ```
+
+6. **Files Modified (8 total)**:
+   - **Backend (5 files)**:
+     - `prompts/languages/en/navigatorSemanticNodeSelector.ts` - Perspective inference rules + stricter output format
+     - `prompts/languages/en/sublocationGeneration.ts` - Dynamic exterior/interior DNA generation
+     - `routes/spawn.ts` - Accept and pass scaleHint parameter
+     - `services/spawn/managers/SublocPipelineManager.ts` - Store scaleHint, use for DNA and image
+     - `services/navigator.service.ts` - Enhanced JSON extraction with fallbacks
+   - **Frontend (3 files)**:
+     - `features/entity-panel/components/LocationPanel/useLocationPanel.ts` - Pass scale_hint, comprehensive logging
+     - (Store slices already supported scale_hint from previous work)
+
+7. **Key Benefits Delivered**:
+   - ✅ **Correct Perspectives**: Exteriors generate outdoor views, interiors generate indoor views
+   - ✅ **Natural Language**: "go to X" understood as exterior, "go inside X" as interior
+   - ✅ **Robust Parsing**: JSON extraction works regardless of AI response format
+   - ✅ **Complete Chain**: scale_hint flows from NavigatorAI → Frontend → Backend → DNA → Image
+   - ✅ **Comprehensive Logging**: Every step logged for easy debugging
+   - ✅ **Backward Compatible**: Defaults to 'interior' if scale_hint not provided
+
+8. **Quality Verification**:
+   - ✅ **Backend Build**: Successful, zero TypeScript errors
+   - ✅ **Frontend Build**: Successful, zero TypeScript errors  
+   - ✅ **Scale Hint Flow**: Confirmed through logs (NavigatorAI → Image Generation)
+   - ✅ **DNA Structure**: Correct fields based on perspective (terrain_type vs terrain_or_interior)
+   - ✅ **Image Prompts**: Appropriate prompt selected (exterior vs interior)
+   - ✅ **JSON Parsing**: Handles explanation text, markdown fences, raw JSON
+
+9. **Testing Confirmed**:
+   - **Test Case**: User command "Marina"
+   - **NavigatorAI Output**: `scale_hint: "site"` ✅
+   - **Frontend Pass**: `scaleHint: "site"` ✅
+   - **Backend Receipt**: `scaleHint: "site"` ✅
+   - **Pipeline Init**: `scaleHint: "site"` ✅
+   - **DNA Generation**: Using exterior prompt ✅
+   - **Image Generation**: Using exterior prompt ✅
+   - **Result**: System correctly generates exterior marina views
+
+10. **Architecture Impact**:
+    - **No Breaking Changes**: All changes additive and backward compatible
+    - **Type Safety**: Full TypeScript coverage throughout chain
+    - **Separation of Concerns**: Each layer handles its responsibility cleanly
+    - **Logging Strategy**: Progressive detail from user action to image result
+    - **Error Handling**: Graceful fallbacks at each step (default to interior if missing)
+
+## Recent Changes (Continued)
+## Recent Changes (Continued)
 
 ### Multi-View Preparation & Distance Navigation (Latest - Just Completed)
 1. **generateViewDescriptions.ts Prompt Created**:

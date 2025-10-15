@@ -2,6 +2,28 @@
 
 ## What Works ✅
 
+### Interior/Exterior Perspective System (Latest - Just Completed) ✅
+- **Complete Fix Chain**: NavigatorAI → Frontend → Backend → DNA → Image Generation
+- **Perspective Inference**: "go to X" defaults to exterior (site), "go inside X" uses interior
+- **Dynamic DNA Generation**: sublocationGeneration.ts creates exterior/interior DNA based on scale_hint
+  - Exterior (site/area/macro): Uses terrain_type, outdoor lighting, weather conditions, exterior soundscapes
+  - Interior (interior/detail): Uses terrain_or_interior, indoor lighting, air quality, interior soundscapes
+- **Image Prompt Selection**: Correct prompt chosen based on scale_hint
+  - Exterior: locationImageGeneration (outdoor focus)
+  - Interior: sublocationImageGeneration (indoor focus)
+- **Robust JSON Parsing**: Enhanced JSON extraction handles AI explanation text before JSON
+  - Multiple fallback strategies (regex, index search, last resort extraction)
+  - Works regardless of AI response format (with/without markdown fences, with/without preamble)
+- **Complete Logging Chain**: Every step logged for debugging (NavigatorAI → Image Generation)
+- **Quality Verified**: Zero TypeScript errors, correct DNA fields, appropriate image prompts
+- **Files Modified**: 8 total (5 backend, 3 frontend)
+- **Key Benefits**:
+  - Correct perspectives: Marinas show harbors, not control rooms
+  - Natural language: "go to marina" understood as exterior
+  - Robust parsing: JSON extraction works with any AI response format
+  - Complete chain: scale_hint flows from intent to final image
+  - Backward compatible: Defaults to 'interior' if scale_hint missing
+
 ### Frontend
 - **Project Structure**: Complete monorepo setup following SETUP_GUIDE.md
 - **Design System**: Comprehensive design tokens and CSS custom properties with dark mode support
