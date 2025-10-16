@@ -54,6 +54,7 @@ Field hints:
 IMPORTANT:
 If created character is non-human or fantastical (e.g., alien, elf, robot), don't describe them as human.
 If details are missing, invent them to create a vivid, image-ready character.
+if the input description a location or scene, invent a character that fits naturally within that context and describe the portrait of that character.
 
 If human include race and skin color and gender.
 If age is not specified mention don't depict as a minor.
