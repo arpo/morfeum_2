@@ -39,6 +39,7 @@ Write ONE sentence with camera geometry only.
 
 Include: framing (close/medium/wide/macro), angle (low/high/tilted/oblique/three-quarter), composition (left/right/diagonal/offset), height (ground/elevated/aerial), depth cues (foreground framing/occlusion/parallax/leading lines)
 
+CRITICAL:
 **Avoid:** centered or perfectly symmetric framing, directly facing or eye-level balance.
 
 **Favor:** diagonals, partial obstructions, asymmetry, near-far contrast, environmental intrusion (vines, railings, shadows), lens compression or expansion, skewed horizons, uneven lighting falloff.

@@ -64,9 +64,11 @@ export abstract class BasePipelineManager {
   async runPipeline(
     spawnId: string,
     prompt: string,
-    abortController: AbortController
+    abortController: AbortController,
+    options?: { skipVisualAnalysis?: boolean }
   ): Promise<void> {
     const pipelineStartTime = Date.now();
+    const skipVisualAnalysis = options?.skipVisualAnalysis ?? false;
     const timings: PipelineTimings = {
       seedGeneration: 0,
       imageGeneration: 0,
@@ -118,25 +120,32 @@ export abstract class BasePipelineManager {
         }
       });
 
-      // Stage 3: Analyze Image
-      const analysisStartTime = Date.now();
-      const visualAnalysis = await this.analyzeImage(
-        imageUrl,
-        seed,
-        abortController.signal
-      );
-      if (abortController.signal.aborted) return;
-      timings.visualAnalysis = Date.now() - analysisStartTime;
+      // Stage 3: Analyze Image (optional - can be skipped for faster generation)
+      let visualAnalysis: any;
+      if (skipVisualAnalysis) {
+        console.log(`[${this.constructor.name}] ⚡ Skipping visual analysis (fast mode)`);
+        // Use seed data as fallback for visual analysis
+        visualAnalysis = seed;
+      } else {
+        const analysisStartTime = Date.now();
+        visualAnalysis = await this.analyzeImage(
+          imageUrl,
+          seed,
+          abortController.signal
+        );
+        if (abortController.signal.aborted) return;
+        timings.visualAnalysis = Date.now() - analysisStartTime;
 
-      // Emit analysis complete event
-      eventEmitter.emit({
-        type: 'spawn:analysis-complete',
-        data: { 
-          spawnId, 
-          visualAnalysis, 
-          entityType: this.getEntityType() 
-        }
-      });
+        // Emit analysis complete event
+        eventEmitter.emit({
+          type: 'spawn:analysis-complete',
+          data: { 
+            spawnId, 
+            visualAnalysis, 
+            entityType: this.getEntityType() 
+          }
+        });
+      }
 
       // Stage 4: Enrich Profile
       const enrichStartTime = Date.now();
@@ -172,7 +181,11 @@ export abstract class BasePipelineManager {
       console.log(`  Stage Timings:`);
       console.log(`    - Seed Generation:     ${(timings.seedGeneration / 1000).toFixed(2)}s`);
       console.log(`    - Image Generation:    ${(timings.imageGeneration / 1000).toFixed(2)}s`);
-      console.log(`    - Visual Analysis:     ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
+      if (skipVisualAnalysis) {
+        console.log(`    - Visual Analysis:     SKIPPED (fast mode)`);
+      } else {
+        console.log(`    - Visual Analysis:     ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
+      }
       console.log(`    - Profile Enrichment:  ${(timings.profileEnrichment / 1000).toFixed(2)}s`);
       console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
 

@@ -25,7 +25,8 @@ export class SpawnManager {
    */
   startSpawn(
     prompt: string, 
-    entityType: 'character' | 'location' = 'character'
+    entityType: 'character' | 'location' = 'character',
+    options?: { skipVisualAnalysis?: boolean }
   ): string {
     const spawnId = `spawn-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     const abortController = new AbortController();
@@ -36,7 +37,8 @@ export class SpawnManager {
       entityType,
       status: 'generating_seed',
       createdAt: Date.now(),
-      abortController
+      abortController,
+      skipVisualAnalysis: options?.skipVisualAnalysis ?? false
     };
 
     this.processes.set(spawnId, process);
@@ -94,8 +96,13 @@ export class SpawnManager {
         throw new Error(`No manager found for entity type: ${process.entityType}`);
       }
 
-      // Delegate to the entity-specific manager
-      await manager.runPipeline(spawnId, process.prompt, process.abortController);
+      // Delegate to the entity-specific manager with options
+      await manager.runPipeline(
+        spawnId, 
+        process.prompt, 
+        process.abortController,
+        { skipVisualAnalysis: process.skipVisualAnalysis }
+      );
 
       // Mark as completed
       process.status = 'completed';

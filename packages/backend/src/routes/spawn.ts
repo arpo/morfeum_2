@@ -58,7 +58,7 @@ router.get('/events', (req: Request, res: Response) => {
  * POST /api/spawn/start - Start a new spawn process
  */
 router.post('/start', asyncHandler(async (req: Request, res: Response) => {
-  const { prompt, entityType = 'character' } = req.body;
+  const { prompt, entityType = 'character', skipVisualAnalysis = false } = req.body;
 
   if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -79,13 +79,18 @@ router.post('/start', asyncHandler(async (req: Request, res: Response) => {
   }
 
   const spawnManager = getSpawnManager((req as any).mzooApiKey);
-  const spawnId = spawnManager.startSpawn(prompt.trim(), entityType);
+  const spawnId = spawnManager.startSpawn(
+    prompt.trim(), 
+    entityType,
+    { skipVisualAnalysis }
+  );
 
   res.status(HTTP_STATUS.OK).json({
     message: 'Spawn process started',
     data: { 
       spawnId, 
-      entityType
+      entityType,
+      skipVisualAnalysis
     },
     timestamp: new Date().toISOString(),
   });

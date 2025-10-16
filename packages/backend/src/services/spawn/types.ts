@@ -301,4 +301,5 @@ export interface SpawnProcess {
   createdAt: number;
   abortController: AbortController;
   movementContext?: MovementContext;
+  skipVisualAnalysis?: boolean;
 }
