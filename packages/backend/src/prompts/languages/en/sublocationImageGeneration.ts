@@ -12,13 +12,13 @@ export const sublocationImageGeneration = (
   mood?: string
 ) => {
   // Interior-focused composition
-  const compositionDirective = 'interior view from entry point, eye-level perspective';
+  
 
   return `${morfeumVibes}
 
-${name}, ${compositionDirective}.
+${name}.
 
-Interior visual details: ${looks}.
+Visual details: ${looks}.
 
 Colors and Lighting: ${colorsAndLighting}.
 
@@ -27,19 +27,15 @@ Atmosphere: ${atmosphere}.
 ${mood ? 'Mood: ' + mood + '.' : ''}
 
 Guidelines:
-- This is an interior space - focus on architectural details, fixtures, and ambient lighting.
-- Capture the spatial layout and depth of the room.
-- Show texture and materials of walls, floors, ceiling.
-- Include lighting sources and how light interacts with surfaces.
-- Avoid including people unless they are explicitly part of the scene's purpose.
-- Use rich, evocative language to convey the interior atmosphere.
-- Be specific about materials, colors, and spatial relationships.
+- Focus on the location itself, avoid including people or animals if not specified in the original prompt.
+- Use rich, evocative language to bring the scene to life.
+- Avoid generic terms; be specific and concrete in descriptions.
+- Ensure the scene is coherent and visually engaging.
 
-IMPORTANT:
-- Interior perspective: viewer is inside the space, not looking at it from outside.
-- Show architectural elements like stairs, doorways, windows if present.
-- Emphasize the enclosed nature and spatial qualities of the interior.
-- Don't add figures or people unless explicitly required for the scene's context.
+[WORLD RULES:]
+No human or animal figures appear unless explicitly mentioned.
+Water, when visible, is calm and mirror-still, reflecting light softly.
+
 
 ${qualityPrompt}`;
 };

@@ -28,7 +28,6 @@ Think of the lens as a presence within the world:
 • "cropped off-axis view, partial column blocking the frame edge"
 • "tight diagonal framing breaking perspective alignment"
 • "camera half-hidden behind shelving, uneven sightline through haze"
-• "handheld-feel, low oblique angle, dynamic left-weighted frame"
 • "tilted perspective cutting the vanishing point off-frame"
 
 **2. Depth and Spatial Tension**
@@ -53,7 +52,6 @@ Show evidence of activity or decay:
 • "rain streaking unevenly across glass"
 
 **5. Lens Pack Examples**
-• [LENS:] 24mm f/2.8 — near-ground oblique, diagonal depth, foreground intrusion
 • [LENS:] 35mm f/2 — handheld, partial occlusion, mid-depth compression
 • [LENS:] 85mm f/1.8 — shallow focus, telephoto compression, off-axis tilt
 
@@ -64,9 +62,7 @@ Show evidence of activity or decay:
 • Establishing: "wide, elevated yet tilted frame, horizon broken by structure or terrain"
 
 **7. Complete Examples**
-• "tight medium framing, low oblique angle between two shelves, half-hidden view through drifting dust, right-weighted composition with columns cutting the frame"
 • "elevated side vantage, wide framing, asymmetrical tunnel view, diagonal rhythm into haze"
-• "ground-level shot, diagonal layout, partial obstruction from debris, layered parallax depth"
 • "aerial 45° off-axis, sweeping composition with one edge cropped by structure"
 
 If scene details are missing, infer cinematic defaults that favor asymmetry, depth, and visual tension over order or balance.`;

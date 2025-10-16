@@ -41,21 +41,21 @@ export class SublocPipelineManager {
     this.mzooApiKey = options.mzooApiKey;
     this.abortController = new AbortController();
     
-    console.log('[SublocPipeline] 🏗️ Constructor initialized with:', {
-      spawnId: this.spawnId,
-      sublocationName: this.sublocationName,
-      scaleHint: this.scaleHint,
-      receivedScaleHint: options.scaleHint,
-      willCreateImage: this.createImage
-    });
+    // console.log('[SublocPipeline] 🏗️ Constructor initialized with:', {
+    //   spawnId: this.spawnId,
+    //   sublocationName: this.sublocationName,
+    //   scaleHint: this.scaleHint,
+    //   receivedScaleHint: options.scaleHint,
+    //   willCreateImage: this.createImage
+    // });
   }
 
   async run(): Promise<void> {
     try {
-      console.log('[SublocPipeline] ▶️ Starting sublocation generation:', {
-        name: this.sublocationName,
-        scaleHint: this.scaleHint
-      });
+      // console.log('[SublocPipeline] ▶️ Starting sublocation generation:', {
+      //   name: this.sublocationName,
+      //   scaleHint: this.scaleHint
+      // });
 
       // Stage 1: Generate DNA
       const dna = await this.generateDNA();
@@ -73,7 +73,7 @@ export class SublocPipelineManager {
       // Stage 2: Generate Image (if requested)
       let imageUrl = '';
       if (this.createImage) {
-        console.log('[SublocPipeline] Generating image for sublocation...');
+        // console.log('[SublocPipeline] Generating image for sublocation...');
         imageUrl = await this.generateImage(dna);
         
         // Emit image complete event
@@ -112,7 +112,7 @@ export class SublocPipelineManager {
   }
 
   private async generateDNA(): Promise<any> {
-    console.log('[SublocPipeline] 🧬 Generating DNA with scale_hint:', this.scaleHint);
+    // console.log('[SublocPipeline] 🧬 Generating DNA with scale_hint:', this.scaleHint);
     
     const prompt = generateSublocationPrompt(
       this.sublocationName,
@@ -146,10 +146,14 @@ export class SublocPipelineManager {
   private async generateImage(dna: any): Promise<string> {
     // Choose the correct image generation prompt based on scale_hint
     let imagePrompt: string;
+
+    console.log('--------');
+    console.log(dna);
+    console.log('--------');
     
     if (this.scaleHint === 'interior' || this.scaleHint === 'detail') {
       // Use interior-focused prompt for actual interior spaces and detail views
-      console.log('[SublocPipeline] Using interior image prompt for scale:', this.scaleHint);
+      
       imagePrompt = sublocationImageGeneration(
         dna.meta.name,
         dna.profile.looks,
@@ -159,7 +163,7 @@ export class SublocPipelineManager {
       );
     } else {
       // Use exterior-focused prompt for site, area, macro scales
-      console.log('[SublocPipeline] Using exterior image prompt for scale:', this.scaleHint);
+      
       imagePrompt = locationImageGeneration(
         dna.meta.name,
         dna.profile.looks,
