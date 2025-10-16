@@ -29,7 +29,15 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
 
   if (!locationProfile) return null;
 
-  const profile = locationProfile as any;
+  let profile = locationProfile as any;
+  
+  // Detect if this is a bare WorldNode (has meta.name + semantic but no 'world' wrapper)
+  const isBareWorldNode = profile.meta?.name && profile.semantic && !profile.world && !profile.location && !profile.looks;
+  
+  // Wrap bare WorldNode in expected hierarchical format
+  if (isBareWorldNode) {
+    profile = { world: profile };
+  }
   
   // Detect structure type: flat NodeDNA vs hierarchical
   const isFlat = !profile.world && !profile.region && !profile.location && profile.looks;
