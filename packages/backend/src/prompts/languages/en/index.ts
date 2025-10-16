@@ -18,6 +18,8 @@ import { generateNewWorldDNA } from './locationDeepProfileEnrichment';
 import { sampleLocationPrompts } from './sampleLocationPrompts';
 import { navigatorSemanticNodeSelector } from './navigatorSemanticNodeSelector';
 import { generateViewDescriptions } from './generateViewDescriptions';
+import { characterProfileGenerationUserMessage, locationProfileGenerationUserMessage } from './profileGenerationUserMessages';
+import { basicEntityDataFormatting, enhancedEntityDataFormatting } from './entityDataFormatting';
 
 // Export flux filters for external use
 export { fluxFilters, getFluxFilter, getDefaultFluxFilter, type FluxFilter } from './fluxFilters';
@@ -39,5 +41,9 @@ export const en: PromptTemplates = {
   locationDeepProfileEnrichment: generateNewWorldDNA,
   sampleLocationPrompts,
   navigatorSemanticNodeSelector,
-  generateViewDescriptions
+  generateViewDescriptions,
+  characterProfileGenerationUserMessage,
+  locationProfileGenerationUserMessage,
+  basicEntityDataFormatting,
+  enhancedEntityDataFormatting
 };

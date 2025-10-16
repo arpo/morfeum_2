@@ -120,9 +120,10 @@ export class CharacterSpawnManager extends BasePipelineManager {
       originalPrompt
     );
 
+    const userMessage = getPrompt('characterProfileGenerationUserMessage', 'en');
     const messages = [
       { role: 'system', content: enrichmentPrompt },
-      { role: 'user', content: 'Generate the complete character profile based on the provided data.' }
+      { role: 'user', content: userMessage }
     ];
 
     const result = await mzooService.generateText(
@@ -139,12 +140,12 @@ export class CharacterSpawnManager extends BasePipelineManager {
   }
 
   generateInitialSystemPrompt(seed: EntitySeed): string {
-    const entityData = `Name: ${seed.name}\nAppearance: ${seed.looks}\nWearing: ${seed.wearing}\nPersonality: ${seed.personality}`;
+    const entityData = getPrompt('basicEntityDataFormatting', 'en')(seed.name, seed.looks, seed.wearing, seed.personality);
     return getPrompt('chatCharacterImpersonation', 'en')(entityData);
   }
 
   generateEnhancedSystemPrompt(deepProfile: DeepProfile): string {
-    const enhancedData = `Name: \n${deepProfile.name} \n\nAppearance:\n${deepProfile.looks}\n\nFace:\n${deepProfile.face}\n\nBody:\n${deepProfile.body}\n\nHair:\n${deepProfile.hair}\n\nWearing:\n${deepProfile.wearing}\n\nSpecific Details:\n${deepProfile.specificDetails}\n\nStyle:\n${deepProfile.style}\n\nPersonality:\n${deepProfile.personality}\n\nSpeech Style:\n${deepProfile.speechStyle}\n\nGender: \n${deepProfile.gender}\n\nNationality:\n${deepProfile.nationality}`;
+    const enhancedData = getPrompt('enhancedEntityDataFormatting', 'en')(deepProfile);
     return getPrompt('chatCharacterImpersonation', 'en')(enhancedData);
   }
 }

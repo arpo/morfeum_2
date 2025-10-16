@@ -120,9 +120,10 @@ export class LocationSpawnManager extends BasePipelineManager {
       originalPrompt
     );
 
+    const userMessage = getPrompt('locationProfileGenerationUserMessage', 'en');
     const messages = [
       { role: 'system', content: enrichmentPrompt },
-      { role: 'user', content: 'Generate the complete location profile based on the provided data.' }
+      { role: 'user', content: userMessage }
     ];
 
     const result = await mzooService.generateText(

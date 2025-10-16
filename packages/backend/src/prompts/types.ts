@@ -17,7 +17,11 @@ export type PromptKey =
   | 'locationImageGeneration'
   | 'locationDeepProfileEnrichment'
   | 'sampleLocationPrompts'
-  | 'generateViewDescriptions';
+  | 'generateViewDescriptions'
+  | 'characterProfileGenerationUserMessage'
+  | 'locationProfileGenerationUserMessage'
+  | 'basicEntityDataFormatting'
+  | 'enhancedEntityDataFormatting';
 
 export type Language = 'en';
 
@@ -45,4 +49,8 @@ export interface PromptTemplates {
   sampleLocationPrompts: string[];
   navigatorSemanticNodeSelector: (userCommand: string, currentFocus: any, currentLocationDetails: any, allNodes: any[]) => string;
   generateViewDescriptions: (seedJson: string, visualAnalysisJson: string, renderInstructions: string) => string;
+  characterProfileGenerationUserMessage: string;
+  locationProfileGenerationUserMessage: string;
+  basicEntityDataFormatting: (name: string, looks: string, wearing: string, personality: string) => string;
+  enhancedEntityDataFormatting: (deepProfile: any) => string;
 }

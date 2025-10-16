@@ -36,9 +36,10 @@ router.post('/enrich-profile', asyncHandler(async (req: Request, res: Response) 
     const enrichmentPrompt = getPrompt('characterDeepProfileEnrichment', 'en')(seedJson, visionJson, prompt);
 
     // Call Gemini with the enrichment prompt
+    const userMessage = getPrompt('characterProfileGenerationUserMessage', 'en');
     const messages = [
       { role: 'system', content: enrichmentPrompt },
-      { role: 'user', content: 'Generate the complete character profile based on the provided data.' }
+      { role: 'user', content: userMessage }
     ];
 
     const result = await mzooService.generateText(

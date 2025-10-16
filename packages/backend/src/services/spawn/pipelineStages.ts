@@ -179,9 +179,10 @@ export async function enrichProfile(
   const promptKey = entityType === 'location' ? 'locationDeepProfileEnrichment' : 'characterDeepProfileEnrichment';
   const enrichmentPrompt = getPrompt(promptKey, 'en')(seedJson, visionJson, originalPrompt);
 
-  const userMessage = entityType === 'location' 
-    ? 'Generate the complete location profile based on the provided data.'
-    : 'Generate the complete character profile based on the provided data.';
+  const userMessagePromptKey = entityType === 'location' 
+    ? 'locationProfileGenerationUserMessage'
+    : 'characterProfileGenerationUserMessage';
+  const userMessage = getPrompt(userMessagePromptKey, 'en');
 
   const messages = [
     { role: 'system', content: enrichmentPrompt },
