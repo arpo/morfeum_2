@@ -34,9 +34,12 @@ Guidelines:
 - Avoid generic terms; be specific and concrete in descriptions.
 - Ensure the scene is coherent and visually engaging.
 
-IMPORTANT:
-- If water is present, depict it as calm and still if nothing else is specified.
-- Don't add a figure or person unless explicitly mentioned in the original prompt like "a bustling city street with people" or "a serene lakeside with a fisherman" or "a crowded marketplace with vendors and shoppers".
+[WORLD RULES:]
+No human or animal figures appear unless explicitly mentioned.
+Water, when visible, is calm and mirror-still, reflecting light softly.
 
-${qualityPrompt}`;
+
+${qualityPrompt}
+
+`;
 };
