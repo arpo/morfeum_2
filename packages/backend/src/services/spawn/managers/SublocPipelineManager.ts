@@ -75,10 +75,6 @@ export class SublocPipelineManager {
         // Stage 2a: Generate FLUX prompt via LLM
         const fluxPrompt = await this.generateImagePrompt(dna);
         
-        console.log('[SublocPipeline] ✨ Generated FLUX Prompt:');
-        console.log('---START FLUX PROMPT---');
-        console.log(fluxPrompt);
-        console.log('---END FLUX PROMPT---');
         
         // Emit image prompt generated event
         eventEmitter.emit({
@@ -160,6 +156,13 @@ export class SublocPipelineManager {
   }
 
   private async generateImagePrompt(dna: any): Promise<string> {
+    // console.log('=== SUBLOCATION IMAGE PROMPT INPUT DATA ===');
+    // console.log('DNA:');
+    // console.log(JSON.stringify(dna, null, 2));
+    // console.log('\nCascaded Context:');
+    // console.log(JSON.stringify(this.cascadedContext, null, 2));
+    // console.log('===========================================');
+    
     const prompt = sublocationImagePromptGeneration(dna, this.cascadedContext);
 
     const result = await mzooService.generateText(
