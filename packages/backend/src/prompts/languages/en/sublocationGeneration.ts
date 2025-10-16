@@ -117,12 +117,6 @@ OUTPUT: JSON matching this exact structure:
         "2-4 distinctive visual fingerprints that make this space memorable"
       ]
     },
-    "viewContext": {
-      "perspective": "${perspectiveType}",
-      "focusTarget": "main subject being viewed",
-      "distance": "close|medium|far",
-      "composition": "viewer position and facing direction"
-    },
     "searchDesc": "${searchPrefix} concise 75-100 char description of what this ${perspectiveType} space contains"
   }
 }

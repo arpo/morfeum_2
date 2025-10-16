@@ -149,12 +149,6 @@ export interface LocationNode {
     airParticles: string;
     fictional: boolean;
     copyright: boolean;
-    viewContext?: {
-      perspective: string;
-      focusTarget: string;
-      distance: string;
-      composition: string;
-    };
     searchDesc?: string;
   };
   suggestedDestinations: Array<{
@@ -222,12 +216,6 @@ export interface SublocationNode {
     airParticles: string;
     fictional: boolean;
     copyright: boolean;
-    viewContext?: {
-      perspective: string;
-      focusTarget: string;
-      distance: string;
-      composition: string;
-    };
     searchDesc?: string;
   };
 }
@@ -723,26 +711,13 @@ export const useLocationsStore = create<LocationsState>()(
         const node = get().getNode(nodeId);
         if (!node || node.focus) return;
         
-        // Try to extract focus from DNA
-        let defaultFocus: FocusState = {
+        // Use default focus values
+        const defaultFocus: FocusState = {
           node_id: node.name,
           perspective: 'exterior',
           viewpoint: 'default view',
           distance: 'medium',
         };
-        
-        // Check if node has location DNA with viewContext
-        if (node.type === 'location' || node.type === 'sublocation') {
-          const dna = node.dna as LocationNode | SublocationNode;
-          if (dna.profile?.viewContext) {
-            defaultFocus = {
-              node_id: node.name,
-              perspective: (dna.profile.viewContext.perspective as FocusState['perspective']) || 'exterior',
-              viewpoint: dna.profile.viewContext.composition || 'default view',
-              distance: (dna.profile.viewContext.distance as FocusState['distance']) || 'medium',
-            };
-          }
-        }
         
         get().updateNode(nodeId, { focus: defaultFocus });
       },

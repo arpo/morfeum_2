@@ -155,8 +155,7 @@ export class SublocPipelineManager {
         dna.profile.looks,
         dna.profile.atmosphere,
         dna.profile.colorsAndLighting,
-        dna.profile.mood,
-        dna.profile.viewContext
+        dna.profile.mood
       );
     } else {
       // Use exterior-focused prompt for site, area, macro scales
@@ -166,8 +165,7 @@ export class SublocPipelineManager {
         dna.profile.looks,
         dna.profile.atmosphere,
         dna.profile.colorsAndLighting,
-        dna.profile.mood,
-        dna.profile.viewContext
+        dna.profile.mood
       );
     }
 

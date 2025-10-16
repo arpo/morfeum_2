@@ -2,13 +2,6 @@
  * Spawn Manager Type Definitions
  */
 
-export interface FocusState {
-  node_id: string;
-  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
-  viewpoint: string;
-  distance: 'close' | 'medium' | 'far';
-}
-
 export interface EntitySeed {
   originalPrompt?: string;
   name: string;
@@ -52,12 +45,6 @@ export interface LocationVisualAnalysis {
   animals: string;
   mood: string;
   visualAnchors: VisualAnchors;
-  viewContext: {
-    perspective: string;
-    focusTarget: string;
-    distance: string;
-    composition: string;
-  };
 }
 
 export interface DeepProfile {
@@ -200,12 +187,6 @@ export interface LocationNode {
     fictional: boolean;
     copyright: boolean;
     visualAnchors: VisualAnchors;
-    viewContext: {
-      perspective: string;
-      focusTarget: string;
-      distance: string;
-      composition: string;
-    };
   };
 }
 
@@ -225,19 +206,10 @@ export interface NodeDNA {
   
   // Navigation context
   searchDesc: string;
-  viewContext: ViewContext;
   
   // Metadata
   fictional: boolean;
   copyright: boolean;
-}
-
-// View context from image analysis
-export interface ViewContext {
-  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
-  focusTarget: string;
-  distance: 'close' | 'medium' | 'far';
-  composition: string;
 }
 
 // Current view tracking

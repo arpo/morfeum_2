@@ -69,13 +69,6 @@ OUTPUT JSON STRUCTURE:
   
   "searchDesc": "75-100 characters describing this place for semantic search. Be concise but descriptive. Capture type, function, and key visual features.",
   
-  "viewContext": {
-    "perspective": "exterior | interior | aerial | ground-level | elevated | distant",
-    "focusTarget": "The main subject being viewed (e.g., 'lighthouse tower', 'stone archway', 'mountain peak')",
-    "distance": "close | medium | far",
-    "composition": "Viewer position and facing direction (e.g., 'standing at entrance looking inward', 'aerial view from northwest')"
-  },
-  
   "fictional": true,
   "copyright": false
 }

@@ -42,5 +42,4 @@ export const sampleLocationPrompts = [
   "The Wadi Rum Desert (exterior), a Martian expanse of sandstone canyons burning crimson under silent stars.",
   "The Orpheum Theatre in Los Angeles (interior), velvet seats and golden balconies resting in half-light, waiting for applause that never came.",
   "The Pripyat Amusement Park (exterior), rusted rides frozen in mid-spin beneath the watchful silence of the reactor’s glow.",
-  "The Blue Hole of Belize (exterior), a perfect circle of deep cobalt in the reef, its descent swallowing sunlight and certainty alike."
 ]

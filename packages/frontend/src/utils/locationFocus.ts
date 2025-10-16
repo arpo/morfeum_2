@@ -6,18 +6,16 @@
 import type { Location, FocusState } from '@/store/slices/locationsSlice';
 
 /**
- * Initialize focus state from location DNA's viewContext
- * Falls back to sensible defaults if viewContext is missing
+ * Initialize focus state with default values
  */
 export function initFocus(location: Location): FocusState {
-  const vc = location.dna?.location?.profile?.viewContext;
   const locationName = location.dna?.location?.meta?.name ?? location.name;
   
   return {
     node_id: locationName,
-    perspective: (vc?.perspective as FocusState['perspective']) ?? 'exterior',
-    viewpoint: vc?.composition ?? 'default world view',
-    distance: (vc?.distance as FocusState['distance']) ?? 'medium',
+    perspective: 'exterior',
+    viewpoint: 'default world view',
+    distance: 'medium',
   };
 }
 

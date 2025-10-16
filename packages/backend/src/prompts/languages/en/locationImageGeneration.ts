@@ -14,7 +14,7 @@ export const locationImageGeneration = (
   renderInstructions?: string
 ) => {
   // Use renderInstructions from seed, or fallback to default
-  const renderDirective = renderInstructions || 'cinematic view, balanced composition, natural lighting';
+  const renderDirective = renderInstructions || '';
 
   return `${morfeumVibes}
 

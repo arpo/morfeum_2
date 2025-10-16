@@ -45,25 +45,7 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
   // Get focus state
   let focus = locationId ? getNodeFocus(locationId) : null;
   
-  // Initialize focus from viewContext if available
-  if (!focus) {
-    if (isFlat && profile.viewContext) {
-      focus = {
-        node_id: locationName,
-        perspective: profile.viewContext.perspective as any,
-        viewpoint: profile.viewContext.composition || 'default view',
-        distance: profile.viewContext.distance as any
-      };
-    } else if (profile.location?.profile?.viewContext) {
-      const vc = profile.location.profile.viewContext;
-      focus = {
-        node_id: profile.location.meta?.name || locationName,
-        perspective: vc.perspective as any,
-        viewpoint: vc.composition || 'default view',
-        distance: vc.distance as any
-      };
-    }
-  }
+  // Focus is managed separately by the locations store
 
   // Render flat NodeDNA structure
   if (isFlat) {
@@ -179,29 +161,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                     </ul>
                   </div>
                 )}
-              </div>
-            )}
-
-            {/* View Context */}
-            {profile.viewContext && (
-              <div className={styles.subsection}>
-                <h4 className={styles.subsectionTitle}>📷 View Context</h4>
-                <div className={styles.field}>
-                  <label className={styles.label}>Perspective</label>
-                  <p className={styles.value}>{profile.viewContext.perspective || 'N/A'}</p>
-                </div>
-                <div className={styles.field}>
-                  <label className={styles.label}>Focus Target</label>
-                  <p className={styles.value}>{profile.viewContext.focusTarget || 'N/A'}</p>
-                </div>
-                <div className={styles.field}>
-                  <label className={styles.label}>Distance</label>
-                  <p className={styles.value}>{profile.viewContext.distance || 'N/A'}</p>
-                </div>
-                <div className={styles.field}>
-                  <label className={styles.label}>Composition</label>
-                  <p className={styles.value}>{profile.viewContext.composition || 'N/A'}</p>
-                </div>
               </div>
             )}
 

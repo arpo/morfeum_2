@@ -60,11 +60,6 @@ export function buildCurrentLocationDetails(currentNode: Node): CurrentLocationD
   // Extract searchDesc
   const searchDesc = nodeDNA.searchDesc || nodeDNA.profile?.searchDesc || currentNode.name;
   
-  // Extract viewContext
-  const viewContext = nodeDNA.viewContext || nodeDNA.profile?.viewContext || {
-    focusTarget: currentNode.name
-  };
-  
   return {
     node_id: currentNode.id,
     name: currentNode.name,
@@ -75,7 +70,7 @@ export function buildCurrentLocationDetails(currentNode: Node): CurrentLocationD
     },
     currentView: {
       viewKey: 'default',
-      focusTarget: viewContext.focusTarget || currentNode.name
+      focusTarget: currentNode.name
     }
   };
 }

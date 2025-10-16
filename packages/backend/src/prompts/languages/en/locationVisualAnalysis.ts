@@ -44,12 +44,6 @@ Return ONLY a valid JSON object with these exact keys:
       "ambient": "..."
     },
     "uniqueIdentifiers": ["...", "..."]
-  },
-  "viewContext": {
-    "perspective": "exterior | interior | aerial | ground-level | elevated | distant",
-    "focusTarget": "main subject or area being viewed (e.g., lighthouse, dome interior, street, skyline)",
-    "distance": "close | medium | far",
-    "composition": "brief factual note describing viewer position and what they are facing (e.g., 'viewer standing on beach facing lighthouse and moon')"
   }
 }
 
@@ -108,16 +102,6 @@ VISUAL ANCHORS (CRITICAL FOR CONSISTENCY)
   - ambient: overall light tone or environmental hue
 - [uniqueIdentifiers]  
   2–4 distinct features that make this location unmistakable.
-
------------------------------------------
-VIEW CONTEXT (SCENE POSITION)
------------------------------------------
-
-[viewContext]
-- [perspective] classify viewer vantage: exterior, interior, aerial, ground-level, elevated, or distant.  
-- [focusTarget] identify the main subject or region the viewer is facing.  
-- [distance] close, medium, or far relative to the main subject.  
-- [composition] one concise, factual sentence describing the viewpoint (e.g., “camera positioned at beach level looking toward lighthouse and moon”).
 
 Guidelines:
 - Describe what is *visible* and spatially inferable, not hypothetical lore.  

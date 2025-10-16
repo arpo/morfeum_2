@@ -9,16 +9,10 @@ export const sublocationImageGeneration = (
   looks: string,
   atmosphere: string,
   colorsAndLighting: string,
-  mood?: string,
-  viewContext?: {
-    perspective: string;
-    focusTarget: string;
-    distance: string;
-    composition: string;
-  }
+  mood?: string
 ) => {
   // Interior-focused composition
-  const compositionDirective = viewContext?.composition || 'interior view from entry point, eye-level perspective';
+  const compositionDirective = 'interior view from entry point, eye-level perspective';
 
   return `${morfeumVibes}
 
