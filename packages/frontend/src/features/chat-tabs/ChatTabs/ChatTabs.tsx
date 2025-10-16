@@ -14,6 +14,9 @@ export function ChatTabs() {
   const closeChat = useStore(state => state.closeChat);
   const getNode = useLocationsStore(state => state.getNode);
   const worldTrees = useLocationsStore(state => state.worldTrees);
+  const deleteWorldTree = useLocationsStore(state => state.deleteWorldTree);
+  const removeNodeFromTree = useLocationsStore(state => state.removeNodeFromTree);
+  const deleteNode = useLocationsStore(state => state.deleteNode);
 
   // Convert Map to array for rendering with location depth data
   const chatsArray = Array.from(chats.entries()).map(([spawnId, chat]) => {
@@ -71,6 +74,50 @@ export function ChatTabs() {
 
   const handleCloseTab = (e: React.MouseEvent, spawnId: string) => {
     e.stopPropagation();
+    
+    // Check if this is a location node that should be deleted from tree
+    const chat = chats.get(spawnId);
+    if (chat?.entityType === 'location') {
+      const node = getNode(spawnId);
+      if (node) {
+        // Find which world tree this node belongs to
+        const findWorldId = (treeNode: any, targetId: string): string | null => {
+          if (treeNode.id === targetId) {
+            return treeNode.id; // This is the world root
+          }
+          
+          if (treeNode.children) {
+            for (const child of treeNode.children) {
+              const found = findWorldId(child, targetId);
+              if (found !== null) return treeNode.id; // Return the root ID
+            }
+          }
+          
+          return null;
+        };
+        
+        // Search all world trees for this node
+        for (const tree of worldTrees) {
+          const worldId = findWorldId(tree, spawnId);
+          if (worldId !== null) {
+            // Check if this is the world root node
+            if (node.type === 'world') {
+              // Delete entire world tree
+              deleteWorldTree(spawnId);
+              console.log(`[ChatTabs] Deleted world tree: ${spawnId}`);
+            } else {
+              // Delete child node from tree and nodes map
+              removeNodeFromTree(worldId, spawnId);
+              deleteNode(spawnId);
+              console.log(`[ChatTabs] Deleted node from tree: ${spawnId}`);
+            }
+            break;
+          }
+        }
+      }
+    }
+    
+    // Always close the chat session
     closeChat(spawnId);
   };
 

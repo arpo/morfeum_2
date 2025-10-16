@@ -124,6 +124,14 @@
   gap: var(--spacing-sm);
 }
 
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0; /* Allows text truncation */
+  gap: var(--spacing-xs);
+}
+
 .name {
   margin: 0;
   font-size: var(--text-md);
@@ -132,7 +140,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  flex: 1;
 }
 
 .nodeCount {

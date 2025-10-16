@@ -78,10 +78,12 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
                   )}
                 </div>
                 <div className={styles.info}>
-                  <h3 className={styles.name}>{entity.name}</h3>
-                  {activeTab === 'locations' && (
-                    <p className={styles.nodeCount}>Contains {nodeCount} {nodeCount === 1 ? 'node' : 'nodes'}</p>
-                  )}
+                  <div className={styles.textContainer}>
+                    <h3 className={styles.name}>{entity.name}</h3>
+                    {activeTab === 'locations' && (
+                      <p className={styles.nodeCount}>Contains {nodeCount} {nodeCount === 1 ? 'node' : 'nodes'}</p>
+                    )}
+                  </div>
                   <div className={styles.actions}>
                     {activeTab === 'locations' && (
                       <button
