@@ -17,80 +17,45 @@ export const generateSublocationDNA = (
   const searchPrefix = isExterior ? '[Sublocation - Exterior]' : '[Sublocation - Interior]';
   
   return `
-Generate a ${perspectiveType} sublocation: "${sublocationName}"
+Generate ${perspectiveType} sublocation: "${sublocationName}"
 
-INHERITED VISUAL CONTEXT (cascaded from world → region → location):
-
-Genre: ${cascadedContext.genre}
-Architectural Tone: ${cascadedContext.architectural_tone}
-Mood: ${cascadedContext.mood}
-Atmosphere: ${cascadedContext.atmosphere}
-Materials: ${cascadedContext.materials}
-Palette: ${cascadedContext.palette.join(', ')}
-Lighting: ${cascadedContext.lighting}
-Architecture Style: ${cascadedContext.architecture || 'not specified'}
-Weather/Air: ${cascadedContext.weather}
+INHERITED CONTEXT:
+Genre: ${cascadedContext.genre} | Arch: ${cascadedContext.architectural_tone} | Mood: ${cascadedContext.mood}
+Atmosphere: ${cascadedContext.atmosphere} | Materials: ${cascadedContext.materials}
+Palette: ${cascadedContext.palette.join(', ')} | Lighting: ${cascadedContext.lighting}
+Style: ${cascadedContext.architecture || 'not specified'} | Weather/Air: ${cascadedContext.weather}
 Soundscape: ${cascadedContext.soundscape.join(', ')}
-Colors & Lighting: ${cascadedContext.colorsAndLighting}
+Parent: ${cascadedContext.parentLocationName}
 
-Parent Location: ${cascadedContext.parentLocationName}
-Parent Structures: ${JSON.stringify(cascadedContext.structures)}
+TASK: Generate sublocation DNA consistent with inherited context.
 
-TASK: Generate detailed sublocation DNA maintaining consistency with inherited context.
-
-OUTPUT: JSON matching this exact structure:
+JSON Structure:
 {
-  "meta": {
-    "name": "${sublocationName}"
-  },
+  "meta": {"name": "${sublocationName}"},
   "semantic": {
     "environment": "${environmentType}",
     "${terrainLabel}": "${terrainExample}",
-    "structures": [
-      {
-        "type": "fixture/furniture/architectural element",
-        "material": "string",
-        "color": "string",
-        "condition": "string"
-      }
-    ],
-    "vegetation": {
-      "types": ["if any"],
-      "density": "none|sparse|incidental"
-    },
-    "fauna": {
-      "types": [],
-      "presence": "none|rare|ambient"
-    },
-    "lighting": "${isExterior ? 'outdoor lighting (natural/artificial)' : 'interior lighting description'}",
-    "weather_or_air": "${isExterior ? 'weather conditions/wind' : 'indoor air quality/particles'}",
-    "atmosphere": "${isExterior ? 'open/exposed/sheltered/etc' : 'claustrophobic/airy/echoing/etc'}",
-    "mood": "emotional tone inheriting from parent",
+    "structures": [{"type": "...", "material": "...", "color": "...", "condition": "..."}],
+    "vegetation": {"types": ["..."], "density": "none|sparse|incidental"},
+    "fauna": {"types": [], "presence": "none|rare|ambient"},
+    "lighting": "${isExterior ? 'outdoor (natural/artificial)' : 'interior description'}",
+    "weather_or_air": "${isExterior ? 'weather/wind' : 'air quality/particles'}",
+    "atmosphere": "${isExterior ? 'open/exposed/sheltered' : 'claustrophobic/airy/echoing'}",
+    "mood": "inherit from parent",
     "color_palette": ["dominant", "accent", "contrast"],
-    "soundscape": ["${isExterior ? 'outdoor ambient sounds' : 'interior sounds'}"]
+    "soundscape": ["${isExterior ? 'outdoor sounds' : 'interior sounds'}"]
   },
   "spatial": {
-    "scale": {
-      "ceiling_height_m": number or null,
-      "room_length_m": number or null,
-      "room_width_m": number or null
-    },
-    "placement": {
-      "key_subject_position": "describe focal point position",
-      "camera_anchor": "entry threshold/center/etc"
-    },
-    "orientation": {
-      "dominant_view_axis": "axial/spiral/circular/etc"
-    },
-    "connectivity": {
-      "links_to": ["return to parent location", "other connected spaces"]
-    }
+    "scale": {"ceiling_height_m": null, "room_length_m": null, "room_width_m": null},
+    "placement": {"key_subject_position": "...", "camera_anchor": "entry/center/etc"},
+    "orientation": {"dominant_view_axis": "axial/spiral/circular"},
+    "connectivity": {"links_to": ["parent", "other spaces"]}
   },
   "profile": {
-    "looks": "3-5 sentences describing visual appearance",
-    "colorsAndLighting": "1-2 sentences inheriting parent palette",
-    "atmosphere": "2-3 sentences about spatial feel",
-    "materials": "1-2 sentences consistent with parent materials",
+    "looks": "3-5 sentences visual appearance",
+    "colorsAndLighting": "1-2 sentences inherit parent palette",
+    "atmosphere": "2-3 sentences spatial feel",
+    "materials": "1-2 sentences consistent with parent",
     "mood": "1-2 sentences",
     "sounds": "3-7 words",
     "symbolicThemes": "short phrase",
@@ -98,46 +63,39 @@ OUTPUT: JSON matching this exact structure:
     "fictional": true,
     "copyright": false,
     "visualAnchors": {
-      "dominantElements": [
-        "3-5 key elements with size/position"
-      ],
-      "spatialLayout": "2-4 sentences describing room shape, dimensions, entry points, focal centers",
+      "dominantElements": ["3-5 key elements with size/position"],
+      "spatialLayout": "2-4 sentences: shape, dimensions, entries, focal centers",
       "surfaceMaterialMap": {
-        "primary_surfaces": "materials with location (walls, floor, ceiling)",
-        "secondary_surfaces": "supporting materials",
+        "primary_surfaces": "walls/floor/ceiling materials",
+        "secondary_surfaces": "support materials",
         "accent_features": "decorative details"
       },
       "colorMapping": {
-        "dominant": "primary color + coverage area",
-        "secondary": "secondary color + location",
-        "accent": "accent colors + placement",
-        "ambient": "overall light tone"
+        "dominant": "primary color + area",
+        "secondary": "secondary + location",
+        "accent": "accents + placement",
+        "ambient": "light tone"
       },
-      "uniqueIdentifiers": [
-        "2-4 distinctive visual fingerprints that make this space memorable"
-      ]
+      "uniqueIdentifiers": ["2-4 memorable distinctive features"]
     },
     "viewContext": {
       "perspective": "${perspectiveType}",
-      "focusTarget": "main subject being viewed",
+      "focusTarget": "main subject",
       "distance": "close|medium|far",
-      "composition": "viewer position and facing direction"
+      "composition": "viewer position and facing"
     },
-    "searchDesc": "${searchPrefix} concise 75-100 char description of what this ${perspectiveType} space contains"
+    "searchDesc": "${searchPrefix} 75-100 char description"
   }
 }
 
-CRITICAL RULES:
-- Maintain visual consistency with inherited context (genre, mood, materials, palette)
-- ${isExterior ? 'Exterior space must feel like it belongs adjacent to/within parent location' : 'Interior space must feel like it belongs inside parent location'}
-- Use inherited color palette as base, ${isExterior ? 'adapt for outdoor lighting' : 'refine for interior'}
-- Lighting should be ${isExterior ? 'natural outdoor lighting influenced by parent atmosphere' : 'interior version of parent lighting'}
-- Soundscape should be ${isExterior ? 'outdoor ambient sounds influenced by location' : 'interior interpretation (muffled exterior sounds + interior sounds)'}
-- searchDesc MUST start with "${searchPrefix}" prefix
-- ${isExterior ? 'For exterior spaces: describe open-air environments, outdoor structures, exterior views' : 'For interior spaces: describe enclosed rooms, indoor fixtures, contained atmospheres'}
-- JSON only, no markdown
-- Be specific and detailed in visualAnchors
-
-Generate the JSON now:
+RULES:
+• Maintain consistency: genre, mood, materials, palette from parent
+• ${isExterior ? 'Exterior: belongs adjacent/within parent' : 'Interior: belongs inside parent'}
+• Use inherited palette, ${isExterior ? 'adapt for outdoor light' : 'refine for interior'}
+• Lighting: ${isExterior ? 'outdoor influenced by parent atmosphere' : 'interior version of parent'}
+• Soundscape: ${isExterior ? 'outdoor ambient' : 'muffled exterior + interior sounds'}
+• searchDesc starts with "${searchPrefix}"
+• Specific detailed visualAnchors
+• JSON only, no markdown
 `;
 };

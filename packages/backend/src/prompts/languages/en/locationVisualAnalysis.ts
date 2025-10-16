@@ -8,11 +8,7 @@ export const locationVisualAnalysis = (
   atmosphere: string,
   mood: string
 ) => `
-
-You are a visual analyst describing a location image from Morfeum.
-
-Given the image and the seed context below, describe what is visually observable in detailed, factual sentences.
-Be objective and precise — describe what is seen, not what might exist beyond the frame.
+Analyze location image factually. Describe only what's visible.
 
 Context:
 Location: ${name}
@@ -20,110 +16,42 @@ Looks: ${looks}
 Atmosphere: ${atmosphere}
 Mood: ${mood}
 
-Return ONLY a valid JSON object with these exact keys:
+Return ONLY valid JSON:
 {
-  "looks": "...",
-  "colorsAndLighting": "...",
-  "atmosphere": "...",
-  "vegetation": "...",
-  "architecture": "...",
-  "animals": "...",
-  "mood": "...",
+  "looks": "4-6 sentences: spatial layout, scale, architecture, materials, light interaction, focal points",
+  "colorsAndLighting": "2-4 sentences: dominant colors, contrast, light quality (warm/cool, hard/soft), gradients",
+  "atmosphere": "3-5 sentences: fog/mist/haze/clarity, luminosity, motion, depth visibility",
+  "vegetation": "2-4 sentences: plants, density, color, interaction with light/architecture (or 'None')",
+  "architecture": "2-4 sentences: style, materials, scale, condition (or 'None')",
+  "animals": "1-3 sentences: creatures, birds, movement traces (or 'None')",
+  "mood": "2-3 sentences: emotional tone from lighting/color/composition",
   "visualAnchors": {
-    "dominantElements": ["...", "...", "..."],
-    "spatialLayout": "...",
+    "dominantElements": ["3-5 key elements with size/position (e.g., 'tower ~80m tall left cliff')"],
+    "spatialLayout": "2-4 sentences: geometry, framing (foreground/midground/background)",
     "surfaceMaterialMap": {
-      "primary_surfaces": "...",
-      "secondary_surfaces": "...",
-      "accent_features": "..."
+      "primary_surfaces": "major structural/terrain materials + locations",
+      "secondary_surfaces": "support/filler materials",
+      "accent_features": "luminous/reflective/decorative details"
     },
     "colorMapping": {
-      "dominant": "...",
-      "secondary": "...",
-      "accent": "...",
-      "ambient": "..."
+      "dominant": "main color + coverage area",
+      "secondary": "supporting tones + regions",
+      "accent": "highlights/glows + placement",
+      "ambient": "overall light tone"
     },
-    "uniqueIdentifiers": ["...", "..."]
+    "uniqueIdentifiers": ["2-4 distinctive unmistakable features"]
   },
   "viewContext": {
-    "perspective": "exterior | interior | aerial | ground-level | elevated | distant",
-    "focusTarget": "main subject or area being viewed (e.g., lighthouse, dome interior, street, skyline)",
-    "distance": "close | medium | far",
-    "composition": "brief factual note describing viewer position and what they are facing (e.g., 'viewer standing on beach facing lighthouse and moon')"
+    "perspective": "exterior|interior|aerial|ground-level|elevated|distant",
+    "focusTarget": "main subject viewer faces",
+    "distance": "close|medium|far",
+    "composition": "viewer position and facing (e.g., 'beach level facing lighthouse and moon')"
   }
 }
 
-Do not include markdown, code blocks, commentary, or explanations.
-Return only the JSON object.
-
------------------------------------------
-FIELD DEFINITIONS
------------------------------------------
-
-[looks]  
-4–6 sentences: describe visible spatial layout, scale, architecture, nature, materials, light interaction, and focal points.  
-Mention how light interacts with major forms (reflection, diffusion, glow).
-
-[colorsAndLighting]  
-2–4 sentences: describe dominant colors, contrast, and light quality (warm/cool, hard/soft).  
-Include gradient behavior or any directional lighting cues.
-
-[atmosphere]  
-3–5 sentences: describe visible atmospheric qualities (fog, mist, haze, air clarity, humidity).  
-Mention luminosity, motion, and depth visibility.
-
-[vegetation]  
-2–4 sentences: describe plants, density, coloration, and how they interact with light or architecture.  
-If none visible, return "None" and explain briefly why.
-
-[architecture]  
-2–4 sentences: describe visible structures — style, materials, scale, and condition.  
-If none visible, return "None" and explain briefly why.
-
-[animals]  
-1–3 sentences: describe any visible creatures, birds, or traces of movement.  
-If none visible, return "None."
-
-[mood]  
-2–3 sentences: describe the emotional tone conveyed by lighting, color, and composition, as it would feel to a visitor.
-
------------------------------------------
-VISUAL ANCHORS (CRITICAL FOR CONSISTENCY)
------------------------------------------
-
-[visualAnchors]
-- [dominantElements]  
-  3–5 key elements with size/position (e.g., “cylindrical tower ~80m tall on left cliff, large moon at upper right”)
-- [spatialLayout]  
-  2–4 sentences describing geometry and framing (foreground, midground, background, subject alignment)
-- [surfaceMaterialMap]  
-  Map visible textures and surfaces:
-  - primary_surfaces: major structural or terrain materials
-  - secondary_surfaces: support or filler materials
-  - accent_features: small luminous, reflective, or decorative details
-- [colorMapping]  
-  - dominant: main color + where it appears  
-  - secondary: supporting tones and regions  
-  - accent: highlights, glows, or contrasting points  
-  - ambient: overall light tone or environmental hue
-- [uniqueIdentifiers]  
-  2–4 distinct features that make this location unmistakable.
-
------------------------------------------
-VIEW CONTEXT (SCENE POSITION)
------------------------------------------
-
-[viewContext]
-- [perspective] classify viewer vantage: exterior, interior, aerial, ground-level, elevated, or distant.  
-- [focusTarget] identify the main subject or region the viewer is facing.  
-- [distance] close, medium, or far relative to the main subject.  
-- [composition] one concise, factual sentence describing the viewpoint (e.g., “camera positioned at beach level looking toward lighthouse and moon”).
-
 Guidelines:
-- Describe what is *visible* and spatially inferable, not hypothetical lore.  
-- Use quantitative cues when possible (“~50m tall tower”, “moon occupying upper right quadrant”).  
-- Stay consistent in tone and field naming.  
-- Be concise but vivid; favor factual spatial clarity over prose style.
-
-
+• Describe visible/spatially inferable only
+• Use quantitative cues (~50m tall, upper right quadrant)
+• Factual spatial clarity over prose
+• No markdown, code blocks, or commentary
 `;

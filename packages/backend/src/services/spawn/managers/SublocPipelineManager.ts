@@ -51,6 +51,12 @@ export class SublocPipelineManager {
   }
 
   async run(): Promise<void> {
+    const pipelineStartTime = Date.now();
+    const timings = {
+      dnaGeneration: 0,
+      imageGeneration: 0
+    };
+
     try {
       console.log('[SublocPipeline] ▶️ Starting sublocation generation:', {
         name: this.sublocationName,
@@ -58,7 +64,9 @@ export class SublocPipelineManager {
       });
 
       // Stage 1: Generate DNA
+      const dnaStartTime = Date.now();
       const dna = await this.generateDNA();
+      timings.dnaGeneration = Date.now() - dnaStartTime;
       
       // Emit DNA complete event with parentNodeId so frontend can build inherited DNA
       eventEmitter.emit({
@@ -74,7 +82,9 @@ export class SublocPipelineManager {
       let imageUrl = '';
       if (this.createImage) {
         console.log('[SublocPipeline] Generating image for sublocation...');
+        const imageStartTime = Date.now();
         imageUrl = await this.generateImage(dna);
+        timings.imageGeneration = Date.now() - imageStartTime;
         
         // Emit image complete event
         eventEmitter.emit({
@@ -87,7 +97,6 @@ export class SublocPipelineManager {
       }
 
       // Stage 3: Complete
-      // console.log('[SublocPipeline] Sublocation generation complete');
       eventEmitter.emit({
         type: 'spawn:sublocation-complete',
         data: {
@@ -97,6 +106,17 @@ export class SublocPipelineManager {
           parentNodeId: this.parentNodeId
         }
       });
+
+      // Log completion with timing (matching BasePipelineManager format)
+      const totalTime = Date.now() - pipelineStartTime;
+      console.log(`\n[SublocPipelineManager] ${this.spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
+      console.log(`  Entity Type: sublocation`);
+      console.log(`  Stage Timings:`);
+      console.log(`    - DNA Generation:      ${(timings.dnaGeneration / 1000).toFixed(2)}s`);
+      if (this.createImage) {
+        console.log(`    - Image Generation:    ${(timings.imageGeneration / 1000).toFixed(2)}s`);
+      }
+      console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
 
     } catch (error: any) {
       console.error('[SublocPipeline] Error:', error);

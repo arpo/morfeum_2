@@ -127,12 +127,12 @@ router.post('/sublocation/start', asyncHandler(async (req: Request, res: Respons
   // Generate unique spawn ID
   const spawnId = `subloc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
-  console.log('[Spawn Route] 📥 Received sublocation request:', {
-    sublocationName,
-    scaleHint,
-    hasScaleHint: scaleHint !== undefined,
-    scaleHintValue: scaleHint
-  });
+  // console.log('[Spawn Route] 📥 Received sublocation request:', {
+  //   sublocationName,
+  //   scaleHint,
+  //   hasScaleHint: scaleHint !== undefined,
+  //   scaleHintValue: scaleHint
+  // });
 
   // Start pipeline in background
   const pipeline = new SublocPipelineManager({
