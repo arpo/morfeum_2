@@ -13,7 +13,6 @@ export const sampleLocationPrompts = [
   "The Coral Citadel (exterior), a fortress grown from living reef, doors breathing open and shut like the gills of some vast creature.",
   "The Iron Basilica (exterior), a cathedral-ship resting in a desert crater, its stained hull ringing when touched by wind.",
   "The Mirror Factory (interior), a ruined plant where reflections are manufactured, each pane showing a slightly different world.",
-  "The Skywell (exterior), a colossal pit in the clouds with spiral platforms leading down to a city suspended by cables and mist.",
   "The Glass Womb (interior), a crystalline biodome on a forgotten planet, its interior climate still alive and lush after centuries of silence.",
   "The Tide Cathedral (exterior), a half-flooded temple where waves crash through stained glass, and bioluminescent fish glide between pews.",
   "The Silent Shipyard (exterior), a maze of unfinished vessels suspended in zero gravity, their hulls drifting like sleeping leviathans.",

@@ -4,65 +4,48 @@
  * Used across location, sublocation, and image generation prompts
  */
 
-export const renderInstructionsGuidance = `[renderInstructions]
-Describe the camera’s stance — where it hides, how it leans, and what it sees past or through. Avoid perfect vanishing lines.
+export const renderInstructionsGuidance = `
+[renderInstructions]
+Describe the camera’s stance — where it hides, how it leans, what it sees past or through. Favor elevated or oblique views over ground-level shots.
 
-**Structure:** framing + angle + composition + depth cues + near/mid/far tension
+**Core:** framing + angle + composition + depth + near/mid/far tension  
 
-**ABSOLUTE RULES:**
-- No centered corridors
-- No full symmetry
-- No horizon-line balance
-- No straight, eye-level perspective unless dramatically justified
+**RULES:**
+- No centered corridors or full symmetry  
+- No horizon-line balance  
+- No straight, low, or human-eye perspectives unless essential  
 
-**FAVOR:**
-- Diagonal or off-axis composition
-- Cropped, uneven, or obstructed framing
-- Partial occlusions and layered depth
-- Foreground anchors (objects close to lens)
-- Parallax between near/mid/far planes
-- Hints of movement: smoke, mist, flicker, sway
+**Favor:** diagonal, off-axis composition • cropped edges • occlusion • layered depth • foreground anchors • parallax • subtle motion (smoke, mist, flicker)
 
-**1. Camera Behavior**
-Think of the lens as a presence within the world:
-• "cropped off-axis view, partial column blocking the frame edge"
-• "tight diagonal framing breaking perspective alignment"
-• "camera half-hidden behind shelving, uneven sightline through haze"
-• "tilted perspective cutting the vanishing point off-frame"
+**Camera Presence:**  
+“elevated oblique view, partial structure cutting frame edge”  
+“high side vantage, uneven sightline through haze”  
+“aerial 45° tilt, diagonal layout breaking vanishing point”  
 
-**2. Depth and Spatial Tension**
-Create physical distance between planes:
-• "foreground obstruction from a shelf corner, shallow parallax through drifting dust"
-• "lens peers between books, far aisle barely visible through haze"
-• "near pipes or railings framing distant glow"
-• "foreground reflection in puddle breaking the symmetry"
+**Depth & Light:**  
+“foreground obstruction from railings, shallow parallax through mist”  
+“hard sidelight cutting through haze”  
+“neon spill grazing wet pavement”  
+“diffused dawn light mixing with sodium glow”
 
-**3. Micro-Drama in Light**
-Describe origin and interaction, not generic lighting:
-• "hard sidelight from sodium lamps cutting through mist"
-• "neon spill from a workshop door grazing wet pavement"
-• "bioluminescent bloom seeping from drain grates"
-• "diffused predawn blue mixing with orange industrial light"
+**Environmental Life:**  
+“steam drifting from vents” • “wind shifting cables” • “rain streaking glass”  
 
-**4. Environmental Life (without people)**
-Show evidence of activity or decay:
-• "steam rising from vents"
-• "ripples from unseen machinery"
-• "wind shifting hanging cables"
-• "rain streaking unevenly across glass"
+**Lenses:**  
+24mm f/2.8 — elevated wide, diagonal sweep, foreground intrusion  
+35mm f/2 — oblique, partial occlusion, mid-depth  
+85mm f/1.8 — telephoto compression, off-axis tilt  
 
-**5. Lens Pack Examples**
-• [LENS:] 35mm f/2 — handheld, partial occlusion, mid-depth compression
-• [LENS:] 85mm f/1.8 — shallow focus, telephoto compression, off-axis tilt
+**Scene Types:**  
+Macro — diagonal detail, shallow focus, occlusion  
+Interior — medium framing, elevated offset, cropped geometry  
+Exterior — wide oblique, asymmetrical layout, parallax through haze  
+Establishing — high vantage, tilted horizon, layered terrain  
 
-**6. Scene Type Examples**
-• Macro/machines: "macro detail, three-quarter angle, diagonal layout, shallow focus with occlusion"
-• Interiors: "medium framing, low oblique offset, cropped geometry, layered depth"
-• Exteriors: "medium-wide, off-axis elevation, asymmetrical layout, parallax through haze"
-• Establishing: "wide, elevated yet tilted frame, horizon broken by structure or terrain"
+**Examples:**  
+“elevated side view through hanging cables, diagonal composition fading into haze”  
+“aerial 45° off-axis frame, one edge cropped by rooftop structure”
 
-**7. Complete Examples**
-• "elevated side vantage, wide framing, asymmetrical tunnel view, diagonal rhythm into haze"
-• "aerial 45° off-axis, sweeping composition with one edge cropped by structure"
-
-If scene details are missing, infer cinematic defaults that favor asymmetry, depth, and visual tension over order or balance.`;
+Default to height, asymmetry, and depth over balance or symmetry.
+Use light and environmental elements to add texture and life.
+`;
