@@ -248,6 +248,23 @@ export function useSpawnEvents() {
       }
       
       if (updateSpawnStatus) {
+        updateSpawnStatus(spawnId, 'generating_flux_prompt');
+      }
+    });
+
+    // Listen for sublocation image prompt complete event
+    eventSource.addEventListener('spawn:sublocation-image-prompt-complete', (e) => {
+      const { spawnId, imagePrompt } = JSON.parse(e.data);
+      console.log('[SSE] ✨ Sublocation FLUX prompt generated');
+      console.log(imagePrompt);
+      
+      // Store the image prompt
+      if (updateChatImagePrompt) {
+        updateChatImagePrompt(spawnId, imagePrompt);
+      }
+      
+      // Update status to show we're now generating the actual image
+      if (updateSpawnStatus) {
         updateSpawnStatus(spawnId, 'generating_image');
       }
     });

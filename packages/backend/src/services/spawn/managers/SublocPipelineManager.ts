@@ -5,8 +5,7 @@
 
 import * as mzooService from '../../mzoo.service';
 import { generateSublocationDNA as generateSublocationPrompt } from '../../../prompts/languages/en/sublocationGeneration';
-import { sublocationImageGeneration } from '../../../prompts/languages/en/sublocationImageGeneration';
-import { locationImageGeneration } from '../../../prompts/languages/en/locationImageGeneration';
+import { sublocationImagePromptGeneration } from '../../../prompts/languages/en/sublocationImagePromptGeneration';
 import { AI_MODELS } from '../../../config/constants';
 import { parseJSON } from '../shared/pipelineCommon';
 import { eventEmitter } from '../../eventEmitter';
@@ -73,8 +72,25 @@ export class SublocPipelineManager {
       // Stage 2: Generate Image (if requested)
       let imageUrl = '';
       if (this.createImage) {
-        // console.log('[SublocPipeline] Generating image for sublocation...');
-        imageUrl = await this.generateImage(dna);
+        // Stage 2a: Generate FLUX prompt via LLM
+        const fluxPrompt = await this.generateImagePrompt(dna);
+        
+        console.log('[SublocPipeline] ✨ Generated FLUX Prompt:');
+        console.log('---START FLUX PROMPT---');
+        console.log(fluxPrompt);
+        console.log('---END FLUX PROMPT---');
+        
+        // Emit image prompt generated event
+        eventEmitter.emit({
+          type: 'spawn:sublocation-image-prompt-complete',
+          data: {
+            spawnId: this.spawnId,
+            imagePrompt: fluxPrompt
+          }
+        });
+        
+        // Stage 2b: Generate image using LLM-generated prompt
+        imageUrl = await this.generateImage(fluxPrompt);
         
         // Emit image complete event
         eventEmitter.emit({
@@ -143,39 +159,36 @@ export class SublocPipelineManager {
     return parseJSON(jsonText);
   }
 
-  private async generateImage(dna: any): Promise<string> {
-    // Choose the correct image generation prompt based on scale_hint
-    let imagePrompt: string;
+  private async generateImagePrompt(dna: any): Promise<string> {
+    const prompt = sublocationImagePromptGeneration(dna, this.cascadedContext);
 
-    console.log('--------');
-    console.log(dna);
-    console.log('--------');
-    
-    if (this.scaleHint === 'interior' || this.scaleHint === 'detail') {
-      // Use interior-focused prompt for actual interior spaces and detail views
-      
-      imagePrompt = sublocationImageGeneration(
-        dna.meta.name,
-        dna.profile.looks,
-        dna.profile.atmosphere,
-        dna.profile.colorsAndLighting,
-        dna.profile.mood
-      );
-    } else {
-      // Use exterior-focused prompt for site, area, macro scales
-      
-      imagePrompt = locationImageGeneration(
-        dna.meta.name,
-        dna.profile.looks,
-        dna.profile.atmosphere,
-        dna.profile.colorsAndLighting,
-        dna.profile.mood
-      );
+    const result = await mzooService.generateText(
+      this.mzooApiKey,
+      [{ role: 'user', content: prompt }],
+      AI_MODELS.PROFILE_ENRICHMENT
+    );
+
+    if (result.error || !result.data) {
+      throw new Error(`Failed to generate image prompt: ${result.error || 'No response'}`);
     }
 
+    // Extract text from response
+    let fluxPrompt: string;
+    if (typeof result.data === 'string') {
+      fluxPrompt = result.data;
+    } else if (result.data && typeof result.data === 'object' && 'text' in result.data) {
+      fluxPrompt = (result.data as any).text;
+    } else {
+      fluxPrompt = JSON.stringify(result.data);
+    }
+
+    return fluxPrompt.trim();
+  }
+
+  private async generateImage(fluxPrompt: string): Promise<string> {
     const result = await mzooService.generateImage(
       this.mzooApiKey,
-      imagePrompt,
+      fluxPrompt,
       1,
       'landscape_16_9',
       'none'

@@ -19,11 +19,13 @@ export function SpawnRow({ spawnId, prompt, status }: SpawnRowProps) {
     switch (status) {
       case 'starting':
       case 'generating_seed':
-        return 25;
+        return 20;
+      case 'generating_flux_prompt':
+        return 40;
       case 'generating_image':
-        return 50;
+        return 60;
       case 'analyzing':
-        return 75;
+        return 80;
       case 'enriching':
         return 90;
       case 'completed':
@@ -38,8 +40,10 @@ export function SpawnRow({ spawnId, prompt, status }: SpawnRowProps) {
       case 'starting':
       case 'generating_seed':
         return 'Generating seed...';
+      case 'generating_flux_prompt':
+        return 'Creating FLUX prompt...';
       case 'generating_image':
-        return 'Creating image...';
+        return 'Generating image...';
       case 'analyzing':
         return 'Analyzing...';
       case 'enriching':
