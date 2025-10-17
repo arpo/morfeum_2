@@ -10,13 +10,48 @@ export function buildHierarchyCategorizerPrompt(userPrompt: string): string {
 
 ## THE 5-LAYER SYSTEM
 
-| Layer        | Example          | Function                                              |
-| ------------ | ---------------- | ----------------------------------------------------- |
-| **Host**     | *London*       | Governs tone, culture, light rhythm, social logic.    |
-| **Region**   | *Camden*         | Defines sub-culture or biome, local climate and mood. |
-| **Location** | *Techno club*    | Specific place of activity or architecture.           |
-| **Niche**    | *VIP niche*      | Micro-environment, interior or exterior focus zone.   |
-| **Detail**   | *Glass on table* | **SPECIFIC OBJECT ONLY** - Not environmental qualities! |
+| Layer        | Function                                              |
+| ------------ | ----------------------------------------------------- |
+| **Host**     | Broad setting; defines laws, tone, culture            |
+| **Region**   | A distinct district or biome within the world         |
+| **Location** | Specific site that can be entered or explored         |
+| **Niche**    | Micro-environment within a location                   |
+| **Detail**   | Specific object (only when marked with "(detail)")    |
+
+### Layer Examples
+
+**Host (World)**
+- "Neo-Paris, a luminous megacity rebuilt after the Flood."
+- "The Shire, a pastoral valley of green hills and round doors."
+- "Erebus-9, a mining moon wrapped in perpetual night."
+- "Old London, smog-choked capital of empire and invention."
+- "Auralis Prime, an ocean world where sound shapes matter."
+
+**Region**
+- "Camden District, a maze of canals, markets, and music clubs."
+- "The Glass Quarter, a high-rise sector of mirrored towers."
+- "Verdant Basin, humid lowlands beneath floating gardens."
+- "Rust Docks, the city's decaying industrial shoreline."
+- "The Northern Sprawl, a frozen expanse of concrete and wind."
+
+**Location**
+- "The Gilded Bar, where holographic jazz flickers against smoke."
+- "The Solar Dome, a vast botanical sphere of filtered sunlight."
+- "Reactor 12, its core pulsing with unstable blue light."
+- "The Abandoned Starliner Aurelion, half-buried in tidal mud."
+- "The Lantern Bazaar, an underground market lit by bioluminescent stalls."
+
+**Niche**
+- "VIP kitchen behind the main bar, lined with chrome and quiet."
+- "Observation deck above the dome's canopy, mist drifting through vents."
+- "Maintenance crawlspace behind Reactor 12's coolant pipes."
+- "Captain's cabin inside the derelict ship, papers floating in zero-g."
+- "Side alley of the Lantern Bazaar, walls glowing with graffiti light."
+
+**Detail (only with explicit marker)**
+- "A silver key on the captain's desk (detail)"
+- "The broken clock frozen at 3:47 (detail)"
+- "A glass of amber liquid on the bar (detail)"
 
 ### CRITICAL: Detail Layer Rules
 **ONLY create Detail nodes when the user explicitly marks them with (detail)**
@@ -30,6 +65,36 @@ export function buildHierarchyCategorizerPrompt(userPrompt: string): string {
 **If an object or element is NOT marked with (detail), include it in the parent node's description instead.**
 
 This prevents over-categorization and keeps the hierarchy clean. Users must explicitly request Detail nodes by adding the (detail) marker.
+
+## PARSING RULES: Structured Input vs. Descriptive Prose
+
+**CRITICAL: Distinguish between explicit nodes and descriptive text**
+
+### What Creates a Node:
+1. **Explicit markers**: "Name: Metropolis (world)", "Solar Dome (location)"
+2. **Section headers**: "---- Locations", "---- Regions" followed by list items
+3. **Clear hierarchical phrases**: "X in Y in Z" structure
+
+### What is Description (NOT a node):
+1. **Prose paragraphs**: Long descriptive text about atmosphere, culture, design
+2. **Atmospheric details**: "Golden hour light", "Bioluminescent plants", "Ocean breeze"
+3. **General qualities**: "Modern skyscrapers", "Old European buildings", "Street art"
+
+**EXAMPLE OF CORRECT PARSING:**
+
+Input:
+Name: Metropolis (world)
+A sprawling coastal metropolis with sleek modern skyscrapers and old European buildings. The city stretches along the coastline where golden hour light bathes everything. Pedestrian skybridges connect cafes and museums. The ocean breeze carries saltwater scent.
+---- Locations
+Famous Botanical Dome (location) - A vast glass dome filled with tropical greenery.
+
+Correct Output:
+Host: Metropolis (with full description paragraph)
+Region: Central District (inferred)
+Location: Famous Botanical Dome
+
+**WRONG: Creating separate regions from prose like "Coastal Front", "Historic Heart", "Architectural Showcase" etc.**
+The prose describes the host world, not separate regions. Only create regions when explicitly listed or clearly distinct districts are mentioned.
 
 ## INFERENCE RULES
 
@@ -46,25 +111,23 @@ This prevents over-categorization and keeps the hierarchy clean. Users must expl
 
 ### Rule 3: Hierarchical Pattern (e.g., "X in Y in Z")
 - Parse hierarchy from innermost to outermost
-- Example: "Glass on table in VIP room in club in Camden in London"
-  - Detail: Glass on table
+- Example: "Glass (detail) on table in VIP room in club in Camden in London"
+  - Detail: Glass (only if marked with "(detail)")
   - Niche: VIP room
   - Location: Club
   - Region: Camden
   - Host: London
 
-### Rule 4: Multiple Attractions in Same City
-- Create separate regions for distinct vibes/districts
-- Example: "Botanical Dome and Halo Spire in Metropolis"
-  - Host: Metropolis
-  - Region 1: Botanical District → Location: Botanical Dome
-  - Region 2: Financial District → Location: Halo Spire
+### Rule 4: Structured Lists After Section Headers
+- Look for headers like "---- Locations", "---- Regions", "#### Niches"
+- Items following these headers become nodes
+- Everything else is descriptive prose
 
-### Rule 5: Complex Description
-- Extract all mentioned layers
-- Create hierarchy based on spatial relationships
-- Infer missing layers when obvious
-- Multiple locations under same region if they share vibe/district
+### Rule 5: Complex Description with Explicit Nodes
+- Extract ONLY explicitly marked nodes
+- Use prose as description for Host/Region/Location
+- Infer minimal regions when locations are listed without regions
+- Multiple locations can share one inferred region if they have similar vibes
 
 ## REGION INFERENCE GUIDELINES
 
