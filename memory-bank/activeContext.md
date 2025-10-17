@@ -1,9 +1,95 @@
 # Active Context
 
 ## Current Work Focus
-**Engine Refactoring - Phase 2 Complete (Character Pipeline)** - Character generation fully migrated to new engine. All prompts converted, system prompt generation added (same as old code), UI connected. Console cleaned (30 logs removed). Characters respond with full personality in chat. Location pipeline remains in old system.
+**Frontend Terminology Refactoring Complete** - Renamed "chat" to "entity" throughout codebase. Created entityManagerSlice to replace chatManagerSlice. All entity management properly named now (characters and locations are "entities", not "chats"). Spawn progress animations now sync with backend timing using dynamic per-stage durations.
 
 ## Recent Changes
+
+### Entity Terminology Refactoring & Spawn Animation Timing (Latest - Just Completed)
+1. **Complete "Chat" to "Entity" Refactoring**:
+   - **Problem**: System was called "chat manager" but manages both characters (chatted with) and locations (explored)
+   - **Solution**: Renamed everything from "chat" to "entity" for clarity
+   - **chatManagerSlice.ts** → **entityManagerSlice.ts**:
+     - `ChatSession` → `EntityData`
+     - `ChatManagerSlice` → `EntityManagerSlice`
+     - `chats: Map<>` → `entities: Map<>`
+     - `activeChat` → `activeEntity`
+   - **Method Renaming**:
+     - `createChatWithEntity()` → `createEntity()`
+     - `updateChatImage()` → `updateEntityImage()`
+     - `updateChatImagePrompt()` → `updateEntityImagePrompt()`
+     - `updateChatSystemPrompt()` → `updateEntitySystemPrompt()`
+     - `updateChatDeepProfile()` → `updateEntityProfile()`
+     - `setActiveChat()` → `setActiveEntity()`
+     - `closeChat()` → `closeEntity()`
+   - **Files Updated (11 total)**:
+     - Backend: No changes (entity types already existed in SSE events)
+     - Frontend: store/index.ts, useSpawnEvents.ts, useSavedLocationsLogic.ts, App.tsx, ChatTabs.tsx, CharacterInfoModal/types.ts, useLocationPanel.ts, useEntityPanelBase.ts
+     - Old file deleted: chatManagerSlice.ts
+   - **Key Benefits**:
+     - Clear terminology: "Entity sessions" instead of "chat sessions"
+     - Characters are chatted with, locations are explored
+     - No confusion about what "chat" means for locations
+     - All TypeScript errors resolved
+
+2. **Spawn Progress Animation Dynamic Timing**:
+   - **Problem**: Progress bar animated instantly (0.3s) between stages, didn't match backend timing
+   - **Solution**: Created per-stage timing configuration matching actual backend durations
+   - **spawnTimings.ts Configuration**:
+     ```typescript
+     character: {
+       starting: 3500ms,        // 0% → 20% over 3.5s
+       generating_image: 2100ms, // 20% → 60% over 2.1s
+       analyzing: 4500ms,        // 60% → 80% over 4.5s
+       enriching: 4200ms,        // 80% → 90% over 4.2s
+       completed: 200ms          // 90% → 100% quick jump
+     }
+     ```
+   - **Dynamic Animation**: Progress bar now animates at speeds matching backend processing
+   - **Initial Animation Fix**: Used `useState(0)` + `requestAnimationFrame` to ensure 0% → 20% animates properly
+   - **Status Name Mapping**: Discovered actual status names differ from expected:
+     - Frontend expected: "generating_seed"
+     - Backend emits: "starting" (for first stage)
+     - Added missing "starting" and "completed" to timing config
+   - **Completion Jump**: Changed from 1000ms to 200ms for satisfying snap-to-finish effect
+   - **Files Modified**: 
+     - Created: `spawnTimings.ts` (timing configuration)
+     - Updated: `SpawnRow.tsx` (dynamic transition duration)
+     - Updated: `ActiveSpawnsPanel.tsx` (pass entityType prop)
+     - Updated: `ActiveSpawnsPanel.module.css` (removed hardcoded transition)
+   - **Key Benefits**:
+     - Realistic progress: Animation speed matches actual backend work
+     - Visual feedback: Users see how long each stage actually takes
+     - Configurable: Easy to tune timings per entity type
+     - Satisfying completion: Quick snap to 100% when done
+
+3. **Quality Verification**:
+   - ✅ **TypeScript Compilation**: Zero errors throughout refactoring
+   - ✅ **All Imports Updated**: Every file using chat terminology updated
+   - ✅ **Spawn Animations**: Progress bar timing verified with console logs
+   - ✅ **Entity Management**: Characters and locations work correctly
+   - ✅ **Backward Compatibility**: useEntityPanelBase returns old property names for existing code
+
+4. **Files Modified (15 total)**:
+   - **Frontend State (3 files)**:
+     - `store/index.ts` - Updated imports and store composition
+     - `store/slices/entityManagerSlice.ts` - NEW (replaced chatManagerSlice.ts)
+     - `store/slices/chatManagerSlice.ts` - DELETED
+   - **Frontend Components (8 files)**:
+     - `hooks/useSpawnEvents.ts` - All entity method calls updated
+     - `features/saved-locations/.../useSavedLocationsLogic.ts` - Entity loading
+     - `features/app/components/App/App.tsx` - Active entity session
+     - `features/chat-tabs/ChatTabs/ChatTabs.tsx` - Entity tabs
+     - `features/chat/components/CharacterInfoModal/types.ts` - Import path fix
+     - `features/entity-panel/components/LocationPanel/useLocationPanel.ts` - setActiveEntity
+     - `features/entity-panel/hooks/useEntityPanelBase.ts` - Entity state management
+   - **Frontend Spawn Panel (4 files)**:
+     - `features/spawn-panel/ActiveSpawnsPanel/spawnTimings.ts` - NEW timing config
+     - `features/spawn-panel/ActiveSpawnsPanel/SpawnRow.tsx` - Dynamic transitions
+     - `features/spawn-panel/ActiveSpawnsPanel/ActiveSpawnsPanel.tsx` - Pass entityType
+     - `features/spawn-panel/ActiveSpawnsPanel/ActiveSpawnsPanel.module.css` - CSS cleanup
+
+## Recent Changes (Continued)
 
 ### Character Pipeline Migration - Engine Phase 2 Complete (Latest - Just Completed)
 1. **Complete Character Pipeline Migration**:
