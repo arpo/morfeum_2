@@ -11,7 +11,7 @@ export const sampleLocationPrompts = [
   "The Forgotten Station (interior), buried beneath the ice shelf, its platforms glowing faintly with residual power from another age.",
   "The Dream Capsule (interior), a derelict sleep pod adrift in orbit, interiors lined with vines that hum in response to thought.",
   "The Coral Citadel (exterior), a fortress grown from living reef, doors breathing open and shut like the gills of some vast creature.",
-  "The Iron Basilica (exterior), a cathedral-ship resting in a desert crater, its stained hull ringing when touched by wind.",
+  "Ironia (exterior), a ritual-shipwreck resting in a desert crater, its stained hull ringing when touched by wind.",
   "The Mirror Factory (interior), a ruined plant where reflections are manufactured, each pane showing a slightly different world.",
   "The Glass Womb (interior), a crystalline biodome on a forgotten planet, its interior climate still alive and lush after centuries of silence.",
   "The Tide Cathedral (exterior), a half-flooded temple where waves crash through stained glass, and bioluminescent fish glide between pews.",
