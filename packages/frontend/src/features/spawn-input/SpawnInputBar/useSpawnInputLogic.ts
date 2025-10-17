@@ -38,21 +38,23 @@ export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
   const handleGenerate = useCallback(async () => {
     if (!textPrompt.trim()) return;
 
-    try {
-      // Use new engine for characters, old system for locations
-      if (entityType === 'character') {
-        console.log('[SpawnInputBar] Using NEW ENGINE for character:', textPrompt.trim());
+    if (entityType === 'character') {
+      // Characters: Use new engine (CONNECTED)
+      try {
         await startSpawn(textPrompt.trim(), entityType, true); // true = use new engine
-      } else {
-        console.log('[SpawnInputBar] Using OLD SYSTEM for location:', textPrompt.trim());
-        await startSpawn(textPrompt.trim(), entityType, false); // false = use old system
+        setTextPrompt('');
+        setError(null);
+      } catch (err) {
+        const errorMessage = 'Error: Could not start entity spawn.';
+        setError(errorMessage);
       }
+    } else {
+      // Locations: Keep disconnected (STUB ONLY)
+      // ⚠️ UI DISCONNECTED - Backend refactoring in progress
+      // See: packages/backend/src/engine/REASSEMBLY_PLAN.md
+      console.log('[UI DISCONNECTED] Would call startSpawn for location:', textPrompt.trim());
       setTextPrompt('');
       setError(null);
-    } catch (err) {
-      const errorMessage = 'Error: Could not start entity spawn.';
-      setError(errorMessage);
-      console.error('[SpawnInputBar] Failed to start spawn:', err);
     }
   }, [textPrompt, entityType, startSpawn]);
 

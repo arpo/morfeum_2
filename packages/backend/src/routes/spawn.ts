@@ -93,11 +93,20 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
   (async () => {
     try {
       // Import individual pipeline functions for step-by-step execution
-      const { generateCharacterSeed, generateCharacterImage, analyzeCharacterImage, enrichCharacterProfile } = 
-        await import('../engine/generation');
+      const { 
+        generateCharacterSeed, 
+        generateCharacterImage, 
+        analyzeCharacterImage, 
+        enrichCharacterProfile,
+        generateInitialSystemPrompt,
+        generateEnhancedSystemPrompt
+      } = await import('../engine/generation');
       
       // Step 1: Generate seed
       const seed = await generateCharacterSeed(prompt.trim(), apiKey);
+      
+      // Generate initial system prompt from seed
+      const systemPrompt = generateInitialSystemPrompt(seed);
       
       // Emit seed complete event
       eventEmitter.emit({
@@ -105,7 +114,7 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
         data: {
           spawnId,
           seed,
-          systemPrompt: '' // System prompt can be added later
+          systemPrompt
         }
       });
       
@@ -128,6 +137,9 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       // Step 4: Enrich profile
       const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey);
       
+      // Generate enhanced system prompt from deep profile
+      const enhancedSystemPrompt = generateEnhancedSystemPrompt(deepProfile);
+      
       // Emit profile complete event
       eventEmitter.emit({
         type: 'spawn:profile-complete',
@@ -140,7 +152,7 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
             seed,
             visualAnalysis
           },
-          enhancedSystemPrompt: undefined, // System prompt handling to be added later
+          enhancedSystemPrompt,
           entityType: 'character'
         }
       });

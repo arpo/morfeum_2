@@ -8,7 +8,9 @@ export {
   generateCharacterImage,
   analyzeCharacterImage,
   enrichCharacterProfile,
-  runCharacterPipeline
+  runCharacterPipeline,
+  generateInitialSystemPrompt,
+  generateEnhancedSystemPrompt
 } from './characterPipeline';
 
 // Re-export prompts for testing
@@ -17,4 +19,4 @@ export {
   characterImagePrompt,
   characterVisualAnalysisPrompt,
   characterDeepProfilePrompt
-} from './prompts';
+} from './prompts/index';

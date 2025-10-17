@@ -7,6 +7,7 @@ import { parseJSON } from '../utils/parseJSON';
 import * as mzooService from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import type { EntitySeed, VisualAnalysis, DeepProfile } from '../types';
+import { getPrompt } from '../../prompts';
 
 // Import new prompt templates
 import { characterSeedPrompt } from './prompts/characterSeed';
@@ -35,10 +36,7 @@ export async function generateCharacterSeed(
   apiKey: string,
   signal?: AbortSignal
 ): Promise<EntitySeed> {
-  console.log('[CharacterPipeline] Generating seed...');
-  
   const prompt = characterSeedPrompt(userPrompt);
-  console.log(`[CharacterPipeline] Seed prompt: ~${Math.ceil(prompt.length / 4)} tokens`);
   
   const messages = [
     { role: 'system', content: prompt },
@@ -58,7 +56,6 @@ export async function generateCharacterSeed(
   const seed = parseJSON<EntitySeed>(result.data.text);
   seed.originalPrompt = userPrompt;
   
-  console.log('[CharacterPipeline] Seed generated:', seed.name);
   return seed;
 }
 
@@ -70,8 +67,6 @@ export async function generateCharacterImage(
   apiKey: string,
   signal?: AbortSignal
 ): Promise<{ imageUrl: string; imagePrompt: string }> {
-  console.log('[CharacterPipeline] Generating image...');
-  
   const imagePromptText = characterImagePrompt(
     seed.originalPrompt || '',
     seed.name,
@@ -82,8 +77,6 @@ export async function generateCharacterImage(
     seed.setting,
     'Half Portrait'
   );
-  
-  console.log(`[CharacterPipeline] Image prompt: ~${Math.ceil(imagePromptText.length / 4)} tokens`);
 
   const result = await mzooService.generateImage(
     apiKey,
@@ -102,7 +95,6 @@ export async function generateCharacterImage(
     throw new Error('Image URL not found in response');
   }
 
-  console.log('[CharacterPipeline] Image generated:', imageUrl);
   return { imageUrl, imagePrompt: imagePromptText };
 }
 
@@ -115,8 +107,6 @@ export async function analyzeCharacterImage(
   apiKey: string,
   signal?: AbortSignal
 ): Promise<VisualAnalysis> {
-  console.log('[CharacterPipeline] Analyzing image...');
-  
   const base64Image = await fetchImageAsBase64(imageUrl);
   
   const analysisPrompt = characterVisualAnalysisPrompt(
@@ -126,8 +116,6 @@ export async function analyzeCharacterImage(
     seed.personality || '',
     seed.presence
   );
-  
-  console.log(`[CharacterPipeline] Visual analysis prompt: ~${Math.ceil(analysisPrompt.length / 4)} tokens`);
 
   const result = await mzooService.analyzeImage(
     apiKey,
@@ -142,7 +130,6 @@ export async function analyzeCharacterImage(
   }
 
   const analysis = parseJSON<VisualAnalysis>(result.data.text);
-  console.log('[CharacterPipeline] Visual analysis complete');
   return analysis;
 }
 
@@ -155,8 +142,6 @@ export async function enrichCharacterProfile(
   apiKey: string,
   signal?: AbortSignal
 ): Promise<DeepProfile> {
-  console.log('[CharacterPipeline] Enriching profile...');
-  
   const seedJson = JSON.stringify(seed, null, 2);
   const visionJson = JSON.stringify(visualAnalysis, null, 2);
   const originalPrompt = seed.originalPrompt || 'No specific request provided';
@@ -166,8 +151,6 @@ export async function enrichCharacterProfile(
     visionJson,
     originalPrompt
   );
-  
-  console.log(`[CharacterPipeline] Deep profile prompt: ~${Math.ceil(enrichmentPrompt.length / 4)} tokens`);
 
   const messages = [
     { role: 'system', content: enrichmentPrompt },
@@ -185,8 +168,30 @@ export async function enrichCharacterProfile(
   }
 
   const profile = parseJSON<DeepProfile>(result.data.text);
-  console.log('[CharacterPipeline] Profile enriched');
   return profile;
+}
+
+/**
+ * Generate initial system prompt from seed (for chat personality)
+ * Uses the same approach as old CharacterSpawnManager
+ */
+export function generateInitialSystemPrompt(seed: EntitySeed): string {
+  const entityData = getPrompt('basicEntityDataFormatting', 'en')(
+    seed.name,
+    seed.looks,
+    seed.wearing || '',
+    seed.personality || ''
+  );
+  return getPrompt('chatCharacterImpersonation', 'en')(entityData);
+}
+
+/**
+ * Generate enhanced system prompt from deep profile (for chat personality)
+ * Uses the same approach as old CharacterSpawnManager
+ */
+export function generateEnhancedSystemPrompt(deepProfile: DeepProfile): string {
+  const enhancedData = getPrompt('enhancedEntityDataFormatting', 'en')(deepProfile);
+  return getPrompt('chatCharacterImpersonation', 'en')(enhancedData);
 }
 
 /**
@@ -203,9 +208,6 @@ export async function runCharacterPipeline(
   visualAnalysis: VisualAnalysis;
   deepProfile: DeepProfile;
 }> {
-  console.log('[CharacterPipeline] Starting complete pipeline...');
-  const startTime = Date.now();
-
   // Step 1: Generate seed
   const seed = await generateCharacterSeed(userPrompt, apiKey, signal);
   
@@ -217,9 +219,6 @@ export async function runCharacterPipeline(
   
   // Step 4: Enrich profile
   const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey, signal);
-
-  const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);
-  console.log(`[CharacterPipeline] Pipeline complete in ${elapsed}s`);
 
   return {
     seed,

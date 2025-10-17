@@ -45,11 +45,9 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
       } else if (useNewEngine && entityType === 'character') {
         endpoint = '/api/spawn/engine/start';
         body = { prompt, entityType };
-        console.log('[SpawnManager] Using NEW ENGINE endpoint:', endpoint);
       } else {
         endpoint = '/api/spawn/start';
         body = { prompt, entityType };
-        console.log('[SpawnManager] Using OLD SYSTEM endpoint:', endpoint);
       }
       
       const response = await fetch(endpoint, {

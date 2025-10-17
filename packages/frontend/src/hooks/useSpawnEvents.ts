@@ -37,13 +37,10 @@ export function useSpawnEvents() {
     // Listen for seed complete event
     eventSource.addEventListener('spawn:seed-complete', (e) => {
       const { spawnId, seed, systemPrompt } = JSON.parse(e.data);
-      console.log('🌱 Seed Generated:', seed);
-      console.log('💬 Initial System Prompt:', systemPrompt);
       
       // Detect entity type from seed structure
       // Locations have 'atmosphere', characters have 'personality' as discriminator
       const entityType: 'character' | 'location' = seed.atmosphere ? 'location' : 'character';
-      // console.log('[SpawnEvents] Detected entity type:', entityType);
       
       // Create new chat with this entity
       if (createChatWithEntity) {
@@ -64,7 +61,6 @@ export function useSpawnEvents() {
     // Listen for image complete event
     eventSource.addEventListener('spawn:image-complete', (e) => {
       const { spawnId, imageUrl, imagePrompt } = JSON.parse(e.data);
-      console.log('🎨 Image Generated:', imageUrl);
       
       // Update chat with image
       if (updateChatImage) {
@@ -101,7 +97,6 @@ export function useSpawnEvents() {
     // Listen for analysis complete event
     eventSource.addEventListener('spawn:analysis-complete', (e) => {
       const { spawnId, visualAnalysis } = JSON.parse(e.data);
-      console.log('👁️ Visual Analysis:', visualAnalysis);
       
       // Update spawn status
       if (updateSpawnStatus) {
@@ -115,23 +110,18 @@ export function useSpawnEvents() {
       
       // NEW: Simplified single node creation (no hierarchical splitting)
       if (entityType === 'location') {
-        console.log('🌍 Location Generated with Simplified NodeDNA');
         
         // Get image from chat session (already stored by image-complete event)
         const chats = useStore.getState().chats;
         const chatSession = chats.get(spawnId);
         const nodeImage = chatSession?.entityImage || '';
         
-        console.log('[SSE] 🖼️ Node image from session:', nodeImage ? 'found' : 'missing');
-        
         // Extract name from deep profile - try multiple sources
-        const nodeName = (deepProfile as any).name || 
+        const nodeName = (deepProfile as any).name ||
                         (deepProfile as any).meta?.name ||
                         deepProfile.searchDesc?.split('] ')[1] || // Extract from "[World] Name"
                         chatSession?.entityName ||
                         'Unknown Location';
-        
-        console.log('[SSE] 📝 Extracted node name:', nodeName);
         
         // Create single node with flat NodeDNA (simplified for now - keep old structure temporarily)
         const node: Partial<Node> = {
@@ -145,7 +135,6 @@ export function useSpawnEvents() {
         
         createNode(node as any);
         addNodeToTree(spawnId, null, spawnId, 'world' as any);
-        console.log('[SSE] ✅ Created single root node:', spawnId);
         
         // Store simplified DNA in deep profile
         if (updateChatDeepProfile && deepProfile) {
@@ -157,8 +146,6 @@ export function useSpawnEvents() {
           updateChatDeepProfile(spawnId, deepProfile);
         }
       }
-      
-      console.log('💬 Enhanced System Prompt Updated');
       
       // Update system prompt with enhanced version from deep profile
       if (updateChatSystemPrompt && enhancedSystemPrompt) {
