@@ -36,8 +36,8 @@ engine/
 ├── REASSEMBLY_PLAN.md          # Complete refactoring plan
 ├── generation/                  # Pipeline stages (Phase 2+)
 ├── navigation/                  # NavigatorAI (Phase 7)
-├── prompts/                     # Prompt templates
-│   └── templateBuilder.ts      # Template system ✅
+├── templates/                   # Template system
+│   └── templateBuilder.ts      # Template builder ✅
 ├── types/                       # Type definitions
 │   └── index.ts                # Core types ✅
 └── utils/                       # Utilities

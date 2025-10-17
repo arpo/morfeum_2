@@ -46,7 +46,7 @@ This document outlines the step-by-step plan for refactoring the Morfeum world g
    - Core types: EntitySeed, VisualAnalysis, DeepProfile
    - ImageResult, PipelineTimings interfaces
    
-3. [x] Tagged Template System (`engine/prompts/`)
+3. [x] Tagged Template System (`engine/templates/`)
    - Template builder with `buildPrompt()`, `estimateTokens()`, `logPrompt()`
    - Type-safe parameter validation
    - Ready for use
@@ -131,7 +131,7 @@ packages/backend/src/engine/generation/
 **Goal:** Generate images from seeds
 
 **Tasks:**
-1. [ ] Image Prompt Template (`engine/prompts/templates/locationImage.ts`)
+1. [ ] Image Prompt Template (`engine/templates/locationImage.ts`)
    - Convert `locationImageGeneration.ts`
    - **TRIM:** Simplify FLUX instructions
    - **TEST:** Does simpler prompt still produce good images?
@@ -154,7 +154,7 @@ packages/backend/src/engine/generation/
 **Goal:** Analyze generated images to extract details
 
 **Tasks:**
-1. [ ] Analysis Prompt Template (`engine/prompts/templates/locationAnalysis.ts`)
+1. [ ] Analysis Prompt Template (`engine/templates/locationAnalysis.ts`)
    - Convert `locationVisualAnalysis.ts`
    - **TRIM:** Remove verbose examples, keep only necessary guidance
    - Focus on capturing visual anchors
@@ -177,7 +177,7 @@ packages/backend/src/engine/generation/
 **Goal:** Complete DNA generation with all fields
 
 **Tasks:**
-1. [ ] Enrichment Prompt Template (`engine/prompts/templates/locationEnrichment.ts`)
+1. [ ] Enrichment Prompt Template (`engine/templates/locationEnrichment.ts`)
    - Convert `locationDeepProfileEnrichment.ts`
    - **TRIM:** Simplify field instructions
    - Remove redundant explanations
@@ -222,7 +222,7 @@ packages/backend/src/engine/generation/
 **Goal:** Semantic navigation with LLM
 
 **Tasks:**
-1. [ ] Navigator Prompt Template (`engine/prompts/templates/navigator.ts`)
+1. [ ] Navigator Prompt Template (`engine/templates/navigator.ts`)
    - Convert `navigatorSemanticNodeSelector.ts`
    - **TRIM:** Keep only best examples (remove redundant ones)
    - Test decision quality
@@ -249,7 +249,7 @@ packages/backend/src/engine/generation/
 **Goal:** Interior/detail view generation
 
 **Tasks:**
-1. [ ] Sublocation Prompts (`engine/prompts/templates/`)
+1. [ ] Sublocation Prompts (`engine/templates/`)
    - Convert `sublocationGeneration.ts`
    - Convert `sublocationImagePromptGeneration.ts`
    - **OPTIMIZE:** For speed (sublocations should be fast)
