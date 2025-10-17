@@ -91,6 +91,14 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
 
   // Run pipeline asynchronously with SSE events (emitting intermediate events)
   (async () => {
+    const pipelineStartTime = Date.now();
+    const timings = {
+      seedGeneration: 0,
+      imageGeneration: 0,
+      visualAnalysis: 0,
+      profileEnrichment: 0
+    };
+
     try {
       // Import individual pipeline functions for step-by-step execution
       const { 
@@ -103,7 +111,9 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       } = await import('../engine/generation');
       
       // Step 1: Generate seed
+      const seedStartTime = Date.now();
       const seed = await generateCharacterSeed(prompt.trim(), apiKey);
+      timings.seedGeneration = Date.now() - seedStartTime;
       
       // Generate initial system prompt from seed
       const systemPrompt = generateInitialSystemPrompt(seed);
@@ -119,7 +129,9 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       });
       
       // Step 2: Generate image
+      const imageStartTime = Date.now();
       const { imageUrl, imagePrompt } = await generateCharacterImage(seed, apiKey);
+      timings.imageGeneration = Date.now() - imageStartTime;
       
       // Emit image complete event
       eventEmitter.emit({
@@ -132,10 +144,14 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       });
       
       // Step 3: Analyze image
+      const analysisStartTime = Date.now();
       const visualAnalysis = await analyzeCharacterImage(imageUrl, seed, apiKey);
+      timings.visualAnalysis = Date.now() - analysisStartTime;
       
       // Step 4: Enrich profile
+      const enrichStartTime = Date.now();
       const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey);
+      timings.profileEnrichment = Date.now() - enrichStartTime;
       
       // Generate enhanced system prompt from deep profile
       const enhancedSystemPrompt = generateEnhancedSystemPrompt(deepProfile);
@@ -156,6 +172,17 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
           entityType: 'character'
         }
       });
+
+      // Log completion with timing breakdown
+      const totalTime = Date.now() - pipelineStartTime;
+      console.log(`\n[CharacterPipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
+      console.log(`  Entity Type: character`);
+      console.log(`  Stage Timings:`);
+      console.log(`    - Seed Generation:     ${(timings.seedGeneration / 1000).toFixed(2)}s`);
+      console.log(`    - Image Generation:    ${(timings.imageGeneration / 1000).toFixed(2)}s`);
+      console.log(`    - Visual Analysis:     ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
+      console.log(`    - Profile Enrichment:  ${(timings.profileEnrichment / 1000).toFixed(2)}s`);
+      console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
 
     } catch (error: any) {
       console.error('[Engine Route] Pipeline failed:', error);

@@ -208,17 +208,44 @@ export async function runCharacterPipeline(
   visualAnalysis: VisualAnalysis;
   deepProfile: DeepProfile;
 }> {
+  const pipelineStartTime = Date.now();
+  const timings = {
+    seedGeneration: 0,
+    imageGeneration: 0,
+    visualAnalysis: 0,
+    profileEnrichment: 0
+  };
+
   // Step 1: Generate seed
+  const seedStartTime = Date.now();
   const seed = await generateCharacterSeed(userPrompt, apiKey, signal);
+  timings.seedGeneration = Date.now() - seedStartTime;
   
   // Step 2: Generate image
+  const imageStartTime = Date.now();
   const { imageUrl, imagePrompt } = await generateCharacterImage(seed, apiKey, signal);
+  timings.imageGeneration = Date.now() - imageStartTime;
   
   // Step 3: Analyze image
+  const analysisStartTime = Date.now();
   const visualAnalysis = await analyzeCharacterImage(imageUrl, seed, apiKey, signal);
+  timings.visualAnalysis = Date.now() - analysisStartTime;
   
   // Step 4: Enrich profile
+  const enrichStartTime = Date.now();
   const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey, signal);
+  timings.profileEnrichment = Date.now() - enrichStartTime;
+
+  // Log completion with timing breakdown
+  const totalTime = Date.now() - pipelineStartTime;
+  console.log(`\n[CharacterPipeline] Character generation completed in ${(totalTime / 1000).toFixed(2)}s`);
+  console.log(`  Entity Type: character`);
+  console.log(`  Stage Timings:`);
+  console.log(`    - Seed Generation:     ${(timings.seedGeneration / 1000).toFixed(2)}s`);
+  console.log(`    - Image Generation:    ${(timings.imageGeneration / 1000).toFixed(2)}s`);
+  console.log(`    - Visual Analysis:     ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
+  console.log(`    - Profile Enrichment:  ${(timings.profileEnrichment / 1000).toFixed(2)}s`);
+  console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
 
   return {
     seed,
