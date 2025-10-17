@@ -2,7 +2,41 @@
 
 ## What Works ✅
 
-### LocationPanel Code Refactoring (Latest - Just Completed) ✅
+### Engine Refactoring - Phase 0 & 1 Complete (Latest - Just Completed) ✅
+- **Strategic Refactoring Initiated**: Complete backend refactoring for prompt optimization
+- **Phase 0 - Foundation Complete**:
+  - ✅ Created `engine/` folder structure (generation/, navigation/, prompts/, utils/)
+  - ✅ Created REASSEMBLY_PLAN.md with 10-phase roadmap and optimization tracking table
+  - ✅ Added deprecation warnings to old code (SpawnManager, BasePipelineManager, navigator service)
+  - ✅ Disconnected UI from backend (logs to console, UI still renders normally)
+  - ✅ Created engine/README.md quick reference
+- **Phase 1 - Utilities & Prompts Complete**:
+  - ✅ Created `engine/utils/parseJSON.ts` - Handles markdown fences, safe parsing
+  - ✅ Created `engine/types/index.ts` - Core types (EntitySeed, VisualAnalysis, DeepProfile, etc.)
+  - ✅ Created `engine/prompts/templateBuilder.ts` - Tagged template system with token estimation
+- **Design Decisions Confirmed**:
+  - No unit tests (manual testing for speed)
+  - Tagged templates (type-safe prompts)
+  - Keep locationsSlice (don't rebuild storage)
+  - Keep SSE (don't break events)
+  - Focus on prompt optimization (main goal: trim tokens)
+- **Testing Disconnected UI**:
+  - Browser console shows: `[UI DISCONNECTED] Would call startSpawn with: {...}`
+  - Navigation logs: `[UI DISCONNECTED] Would call NavigatorAI with: {...}`
+  - UI renders normally, input clears, no actual generation
+- **Files Created**: 7 new files (REASSEMBLY_PLAN.md, README.md, parseJSON.ts, types/index.ts, templateBuilder.ts)
+- **Files Modified**: 5 files (deprecation warnings + UI disconnect)
+- **Next Steps**: Phase 2 - Seed Generation (convert prompt to tagged template, trim and measure tokens)
+- **Key Benefits**:
+  - Safe refactoring (old system preserved)
+  - Clean separation (new code in engine/)
+  - Incremental progress (test each phase)
+  - Optimization ready (foundation for trimming)
+  - Full type safety (TypeScript coverage)
+  - Clear documentation (roadmap + progress tracking)
+- **Quality Verified**: All files compile, UI disconnected successfully, deprecation warnings in place
+
+### LocationPanel Code Refactoring (Previously Completed) ✅
 - **File Size Reduction**: Refactored useLocationPanel.ts from 477 lines to ~240 lines (50% reduction)
 - **Created 3 Utility Modules**: Extracted complex logic into focused, testable modules
   - `locationNavigation.ts` (~200 lines) - NavigatorAI API calls and spatial data preparation

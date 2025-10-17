@@ -1,9 +1,103 @@
 # Active Context
 
 ## Current Work Focus
-**Backend Services Refactoring Complete** - Successfully refactored Navigator and MZOO services from monolithic files into clean, modular structures. Improved type safety across all consuming code and created comprehensive documentation.
+**Engine Refactoring - Phase 0 & 1 Complete** - Initiated complete backend refactoring. Old spawn system marked as deprecated, UI disconnected for safe incremental rebuild. Foundation utilities (JSON parser, types, tagged templates) created. Ready for Phase 2 (Seed Generation).
 
 ## Recent Changes
+
+### Engine Refactoring - Phase 0 & 1 Complete (Latest - Just Completed)
+1. **Strategic Refactoring Approach**:
+   - **Problem**: Complex spawn/navigation system difficult to optimize and maintain
+   - **Solution**: Incremental rebuild in new `engine/` directory while preserving old system
+   - **Strategy**: Disconnect UI → Build piece by piece → Test manually → Optimize prompts → Reconnect UI
+   - **Goal**: Primarily prompt optimization (trim verbose prompts, measure token savings)
+
+2. **Phase 0: Foundation**:
+   - ✅ Created `packages/backend/src/engine/` folder structure:
+     - `generation/` - Pipeline stages (future)
+     - `navigation/` - NavigatorAI (future)
+     - `prompts/` - Template system
+     - `utils/` - Utilities
+   - ✅ Created `REASSEMBLY_PLAN.md` - Complete 10-phase roadmap with optimization tracking
+   - ✅ Added deprecation warnings to old code:
+     - `services/spawn/SpawnManager.ts`
+     - `services/spawn/managers/BasePipelineManager.ts`
+     - `services/navigator/index.ts`
+   - ✅ Disconnected UI from backend:
+     - `SpawnInputBar`: Generate button logs to console instead of calling API
+     - `LocationPanel`: Navigation logs to console and throws friendly error
+     - UI still renders normally, just doesn't execute backend calls
+   - ✅ Created `engine/README.md` - Quick reference documentation
+
+3. **Phase 1: Utilities & Prompts**:
+   - ✅ Created `engine/utils/parseJSON.ts`:
+     - Handles markdown fences in AI responses
+     - Removes ````json``` wrappers automatically
+     - Safe parsing with null fallback
+   - ✅ Created `engine/types/index.ts`:
+     - Core type definitions: EntitySeed, VisualAnalysis, DeepProfile
+     - ImageResult, PipelineTimings interfaces
+     - Simplified from old system, only what's needed
+   - ✅ Created `engine/prompts/templateBuilder.ts`:
+     - Tagged template system with type safety
+     - `buildPrompt()` - Execute template with parameters
+     - `estimateTokens()` - Simple token counting (~4 chars per token)
+     - `logPrompt()` - Debug logging with token counts
+
+4. **Design Decisions Confirmed**:
+   - ✅ **No unit tests** - Manual testing as we go for speed
+   - ✅ **Tagged templates** - Type-safe prompts with variable interpolation
+   - ✅ **Keep locationsSlice** - Don't touch working storage system
+   - ✅ **Keep SSE** - Don't break event system
+   - ✅ **Focus on prompt optimization** - Main goal is trimming tokens
+
+5. **Testing Disconnected UI**:
+   - Open browser console
+   - Try creating location: Should log `[UI DISCONNECTED] Would call startSpawn with: {...}`
+   - Try navigation: Should log `[UI DISCONNECTED] Would call NavigatorAI with: {...}`
+   - UI renders normally, input clears, no actual generation happens
+
+6. **Files Created (7 new)**:
+   - `packages/backend/src/engine/REASSEMBLY_PLAN.md` - 10-phase roadmap
+   - `packages/backend/src/engine/README.md` - Quick reference
+   - `packages/backend/src/engine/utils/parseJSON.ts` - JSON parser
+   - `packages/backend/src/engine/types/index.ts` - Type definitions
+   - `packages/backend/src/engine/prompts/templateBuilder.ts` - Template system
+
+7. **Files Modified (5 files)**:
+   - `packages/backend/src/services/spawn/SpawnManager.ts` - Deprecation warning
+   - `packages/backend/src/services/spawn/managers/BasePipelineManager.ts` - Deprecation warning
+   - `packages/backend/src/services/navigator/index.ts` - Deprecation warning
+   - `packages/frontend/src/features/spawn-input/SpawnInputBar/useSpawnInputLogic.ts` - Disconnected
+   - `packages/frontend/src/features/entity-panel/components/LocationPanel/locationNavigation.ts` - Disconnected
+
+8. **Next Steps - Phase 2: Seed Generation**:
+   - Convert `locationSeedGeneration.ts` prompt to tagged template
+   - **TRIM:** Remove verbose examples, keep only essential
+   - **MEASURE:** Track token count before/after
+   - Create seed generator using new template system
+   - Test with 10+ different prompts
+   - Log: prompt → tokens → response time → output quality
+   - Compare with old system
+   - Iterate on prompt trimming
+
+9. **Key Benefits Delivered**:
+   - **Safe Refactoring**: Old system still exists, no data loss risk
+   - **Clean Separation**: New code isolated in `engine/` directory
+   - **Incremental Progress**: Can test each phase independently
+   - **Optimization Ready**: Foundation built for prompt trimming
+   - **Type Safety**: Full TypeScript coverage in new code
+   - **Documentation**: Clear roadmap and progress tracking
+
+10. **Quality Verification**:
+    - ✅ **Folder Structure**: All directories created successfully
+    - ✅ **Documentation**: REASSEMBLY_PLAN.md and README.md complete
+    - ✅ **TypeScript**: All new files compile with zero errors
+    - ✅ **UI Disconnected**: Console logs confirm UI not calling backend
+    - ✅ **Deprecation Warnings**: Old code clearly marked
+    - ✅ **Architecture**: Follows all project patterns
+
+## Recent Changes (Continued)
 
 ### Backend Services Refactoring Complete (Latest - Just Completed)
 1. **Navigator Service Modularization** (270 lines → 5 files)
