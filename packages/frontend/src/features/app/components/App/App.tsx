@@ -172,12 +172,7 @@ export function App() {
         </section>
       )}
       
-      {/* Column 3 - Reserved for Future Panels */}
-      <aside className={styles.extraPanel}>
-        {/* Future panel space */}
-      </aside>
-      
-      {/* Column 4 - Chat History (Collapsible) / Image Prompt Panel */}
+      {/* Column 3 - Chat History (Collapsible) / Image Prompt Panel */}
       {activeEntitySession && (
         <aside className={styles.historyPanel}>
           {/* Hide chat history for locations */}
