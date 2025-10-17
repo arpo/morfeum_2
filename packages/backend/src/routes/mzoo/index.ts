@@ -12,6 +12,7 @@ import { profileRouter } from './profile';
 import { aiRouter } from './ai';
 import { navigatorRouter } from './navigator';
 import locationsRouter from './locations';
+import hierarchyRouter from './hierarchy';
 
 const router = Router();
 
@@ -25,6 +26,7 @@ router.use('/entity', imageRouter);
 router.use('/entity', profileRouter);
 router.use('/navigator', navigatorRouter);
 router.use('/locations', locationsRouter);
+router.use('/hierarchy', hierarchyRouter);
 router.use('/', aiRouter);
 
 export { router as mzooRouter };

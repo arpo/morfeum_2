@@ -49,12 +49,35 @@ export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
         setError(errorMessage);
       }
     } else {
-      // Locations: Keep disconnected (STUB ONLY)
-      // ⚠️ UI DISCONNECTED - Backend refactoring in progress
-      // See: packages/backend/src/engine/REASSEMBLY_PLAN.md
-      console.log('[UI DISCONNECTED] Would call startSpawn for location:', textPrompt.trim());
-      setTextPrompt('');
-      setError(null);
+      // Locations: Call hierarchy analysis endpoint for testing
+      try {
+        console.log('[Hierarchy Test] Analyzing location:', textPrompt.trim());
+        
+        const response = await fetch('/api/mzoo/hierarchy/analyze', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            userPrompt: textPrompt.trim()
+          })
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          console.log('[Hierarchy Test] Result:', JSON.stringify(result, null, 2));
+        } else {
+          console.error('[Hierarchy Test] Failed:', response.status);
+          const errorText = await response.text();
+          console.error('[Hierarchy Test] Error:', errorText);
+        }
+        
+        setTextPrompt('');
+        setError(null);
+      } catch (err) {
+        console.error('[Hierarchy Test] Exception:', err);
+        setError('Error: Could not analyze hierarchy.');
+      }
     }
   }, [textPrompt, entityType, startSpawn]);
 
