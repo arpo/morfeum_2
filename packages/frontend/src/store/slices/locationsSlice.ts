@@ -479,7 +479,6 @@ export const useLocationsStore = create<LocationsState>()(
           pinnedIds: newPinnedIds
         });
         
-        console.log(`[locationsSlice] Deleted world tree: ${worldId} (${nodeIdsToDelete.size} nodes)`);
       },
       
       // Get count of nodes in a world tree

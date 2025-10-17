@@ -61,6 +61,14 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
       });
     }
 
+    // Log complete hierarchy result as object (expandable in console)
+    console.log('\n[Hierarchy Analysis] Complete Result:');
+    console.log(result);
+    
+    // Log world tree structure separately for easier inspection
+    console.log('\n[Hierarchy Analysis] World Tree:');
+    console.log(result.hierarchy);
+
     // Return successful result
     res.json(result);
   } catch (error: any) {

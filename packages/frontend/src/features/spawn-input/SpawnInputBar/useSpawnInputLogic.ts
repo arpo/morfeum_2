@@ -65,7 +65,7 @@ export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
 
         if (response.ok) {
           const result = await response.json();
-          console.log('[Hierarchy Test] Result:', JSON.stringify(result, null, 2));
+          
         } else {
           console.error('[Hierarchy Test] Failed:', response.status);
           const errorText = await response.text();

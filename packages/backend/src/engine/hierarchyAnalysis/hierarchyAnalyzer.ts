@@ -8,12 +8,17 @@ import { generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
 import { buildHierarchyCategorizerPrompt } from './hierarchyCategorizer';
+import { generateNodeDNA, extractParentContext } from './nodeDNAGenerator';
 import type { 
   HierarchyAnalysisResult, 
   HierarchyStructure, 
   HierarchyMetadata,
   LayerType,
-  HostNode 
+  HostNode,
+  RegionNode,
+  LocationNode,
+  NicheNode,
+  DetailNode
 } from './types';
 
 /**
@@ -53,6 +58,9 @@ export async function analyzeHierarchy(
     throw new Error('Failed to parse hierarchy from LLM response');
   }
 
+  // Enrich hierarchy with DNA (top-down approach)
+  await enrichHierarchyWithDNA(parsedHierarchy, userPrompt, apiKey);
+
   // Generate metadata
   const metadata = generateMetadata(parsedHierarchy);
 
@@ -60,6 +68,158 @@ export async function analyzeHierarchy(
     hierarchy: parsedHierarchy,
     metadata,
   };
+}
+
+/**
+ * Enriches hierarchy with DNA for each node (top-down recursive approach)
+ * Generates DNA for Host, then cascades context to child nodes
+ */
+async function enrichHierarchyWithDNA(
+  hierarchy: HierarchyStructure,
+  userPrompt: string,
+  apiKey: string
+): Promise<void> {
+  // 1. Generate Host DNA (no parent context)
+  try {
+    hierarchy.host.dna = await generateNodeDNA(
+      apiKey,
+      userPrompt,
+      hierarchy.host.name,
+      'host',
+      hierarchy.host.description
+    );
+  } catch (error) {
+    console.error(`[DNA Generation] Failed for Host "${hierarchy.host.name}":`, error);
+    // Continue without DNA for this node
+  }
+
+  // 2. Generate Region DNA (with Host context)
+  if (hierarchy.host.regions) {
+    for (const region of hierarchy.host.regions) {
+      await enrichRegionWithDNA(region, userPrompt, apiKey, hierarchy.host);
+    }
+  }
+}
+
+/**
+ * Enriches a region node and its children with DNA
+ */
+async function enrichRegionWithDNA(
+  region: RegionNode,
+  userPrompt: string,
+  apiKey: string,
+  parent: HostNode
+): Promise<void> {
+  // Generate Region DNA
+  try {
+    region.dna = await generateNodeDNA(
+      apiKey,
+      userPrompt,
+      region.name,
+      'region',
+      region.description,
+      extractParentContext(parent.dna)
+    );
+  } catch (error) {
+    console.error(`[DNA Generation] Failed for Region "${region.name}":`, error);
+    // Continue without DNA for this node
+  }
+
+  // Generate Location DNA (with Region context)
+  if (region.locations) {
+    for (const location of region.locations) {
+      await enrichLocationWithDNA(location, userPrompt, apiKey, region);
+    }
+  }
+}
+
+/**
+ * Enriches a location node and its children with DNA
+ */
+async function enrichLocationWithDNA(
+  location: LocationNode,
+  userPrompt: string,
+  apiKey: string,
+  parent: RegionNode
+): Promise<void> {
+  // Generate Location DNA
+  try {
+    location.dna = await generateNodeDNA(
+      apiKey,
+      userPrompt,
+      location.name,
+      'location',
+      location.description,
+      extractParentContext(parent.dna)
+    );
+  } catch (error) {
+    console.error(`[DNA Generation] Failed for Location "${location.name}":`, error);
+    // Continue without DNA for this node
+  }
+
+  // Generate Niche DNA (with Location context)
+  if (location.niches) {
+    for (const niche of location.niches) {
+      await enrichNicheWithDNA(niche, userPrompt, apiKey, location);
+    }
+  }
+}
+
+/**
+ * Enriches a niche node and its children with DNA
+ */
+async function enrichNicheWithDNA(
+  niche: NicheNode,
+  userPrompt: string,
+  apiKey: string,
+  parent: LocationNode
+): Promise<void> {
+  // Generate Niche DNA
+  try {
+    niche.dna = await generateNodeDNA(
+      apiKey,
+      userPrompt,
+      niche.name,
+      'niche',
+      niche.description,
+      extractParentContext(parent.dna)
+    );
+  } catch (error) {
+    console.error(`[DNA Generation] Failed for Niche "${niche.name}":`, error);
+    // Continue without DNA for this node
+  }
+
+  // Generate Detail DNA (with Niche context)
+  if (niche.details) {
+    for (const detail of niche.details) {
+      await enrichDetailWithDNA(detail, userPrompt, apiKey, niche);
+    }
+  }
+}
+
+/**
+ * Enriches a detail node with DNA
+ */
+async function enrichDetailWithDNA(
+  detail: DetailNode,
+  userPrompt: string,
+  apiKey: string,
+  parent: NicheNode
+): Promise<void> {
+  // Generate Detail DNA
+  try {
+    detail.dna = await generateNodeDNA(
+      apiKey,
+      userPrompt,
+      detail.name,
+      'detail',
+      detail.description,
+      extractParentContext(parent.dna)
+    );
+  } catch (error) {
+    console.error(`[DNA Generation] Failed for Detail "${detail.name}":`, error);
+    // Continue without DNA for this node
+  }
 }
 
 /**

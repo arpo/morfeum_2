@@ -104,7 +104,6 @@ export function ChatTabs() {
             if (node.type === 'world') {
               // Delete entire world tree
               deleteWorldTree(spawnId);
-              console.log(`[ChatTabs] Deleted world tree: ${spawnId}`);
             } else {
               // Delete child node from tree and nodes map
               removeNodeFromTree(worldId, spawnId);
