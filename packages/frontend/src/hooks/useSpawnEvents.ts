@@ -337,6 +337,48 @@ export function useSpawnEvents() {
       }, 2000);
     });
 
+    // Listen for hierarchy classification complete event
+    eventSource.addEventListener('hierarchy:classification-complete', (e) => {
+      const { hierarchy } = JSON.parse(e.data);
+      console.log('[Hierarchy] Classification Complete:');
+      console.log(hierarchy);
+    });
+
+    // Listen for hierarchy host DNA complete event
+    eventSource.addEventListener('hierarchy:host-dna-complete', (e) => {
+      const { nodeName, dna } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Host DNA Complete: ${nodeName}`);
+      console.log(dna);
+    });
+
+    // Listen for hierarchy region DNA complete event
+    eventSource.addEventListener('hierarchy:region-dna-complete', (e) => {
+      const { nodeName, dna } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Region DNA Complete: ${nodeName}`);
+      console.log(dna);
+    });
+
+    // Listen for hierarchy location DNA complete event
+    eventSource.addEventListener('hierarchy:location-dna-complete', (e) => {
+      const { nodeName, dna } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Location DNA Complete: ${nodeName}`);
+      console.log(dna);
+    });
+
+    // Listen for hierarchy niche DNA complete event
+    eventSource.addEventListener('hierarchy:niche-dna-complete', (e) => {
+      const { nodeName, dna } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Niche DNA Complete: ${nodeName}`);
+      console.log(dna);
+    });
+
+    // Listen for hierarchy detail DNA complete event
+    eventSource.addEventListener('hierarchy:detail-dna-complete', (e) => {
+      const { nodeName, dna } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Detail DNA Complete: ${nodeName}`);
+      console.log(dna);
+    });
+
     // Cleanup on unmount
     return () => {
       eventSource.close();

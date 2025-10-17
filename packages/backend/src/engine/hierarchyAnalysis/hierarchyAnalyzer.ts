@@ -9,6 +9,7 @@ import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
 import { buildHierarchyCategorizerPrompt } from './hierarchyCategorizer';
 import { generateNodeDNA, extractParentContext } from './nodeDNAGenerator';
+import { eventEmitter } from '../../services/eventEmitter';
 import type { 
   HierarchyAnalysisResult, 
   HierarchyStructure, 
@@ -58,6 +59,12 @@ export async function analyzeHierarchy(
     throw new Error('Failed to parse hierarchy from LLM response');
   }
 
+  // Emit classification complete event
+  eventEmitter.emit({
+    type: 'hierarchy:classification-complete',
+    data: { hierarchy: parsedHierarchy }
+  });
+
   // Enrich hierarchy with DNA (top-down approach)
   await enrichHierarchyWithDNA(parsedHierarchy, userPrompt, apiKey);
 
@@ -88,6 +95,15 @@ async function enrichHierarchyWithDNA(
       'host',
       hierarchy.host.description
     );
+    
+    // Emit host DNA complete event
+    eventEmitter.emit({
+      type: 'hierarchy:host-dna-complete',
+      data: { 
+        nodeName: hierarchy.host.name,
+        dna: hierarchy.host.dna 
+      }
+    });
   } catch (error) {
     console.error(`[DNA Generation] Failed for Host "${hierarchy.host.name}":`, error);
     // Continue without DNA for this node
@@ -120,6 +136,15 @@ async function enrichRegionWithDNA(
       region.description,
       extractParentContext(parent.dna)
     );
+    
+    // Emit region DNA complete event
+    eventEmitter.emit({
+      type: 'hierarchy:region-dna-complete',
+      data: { 
+        nodeName: region.name,
+        dna: region.dna 
+      }
+    });
   } catch (error) {
     console.error(`[DNA Generation] Failed for Region "${region.name}":`, error);
     // Continue without DNA for this node
@@ -152,6 +177,15 @@ async function enrichLocationWithDNA(
       location.description,
       extractParentContext(parent.dna)
     );
+    
+    // Emit location DNA complete event
+    eventEmitter.emit({
+      type: 'hierarchy:location-dna-complete',
+      data: { 
+        nodeName: location.name,
+        dna: location.dna 
+      }
+    });
   } catch (error) {
     console.error(`[DNA Generation] Failed for Location "${location.name}":`, error);
     // Continue without DNA for this node
@@ -184,6 +218,15 @@ async function enrichNicheWithDNA(
       niche.description,
       extractParentContext(parent.dna)
     );
+    
+    // Emit niche DNA complete event
+    eventEmitter.emit({
+      type: 'hierarchy:niche-dna-complete',
+      data: { 
+        nodeName: niche.name,
+        dna: niche.dna 
+      }
+    });
   } catch (error) {
     console.error(`[DNA Generation] Failed for Niche "${niche.name}":`, error);
     // Continue without DNA for this node
@@ -216,6 +259,15 @@ async function enrichDetailWithDNA(
       detail.description,
       extractParentContext(parent.dna)
     );
+    
+    // Emit detail DNA complete event
+    eventEmitter.emit({
+      type: 'hierarchy:detail-dna-complete',
+      data: { 
+        nodeName: detail.name,
+        dna: detail.dna 
+      }
+    });
   } catch (error) {
     console.error(`[DNA Generation] Failed for Detail "${detail.name}":`, error);
     // Continue without DNA for this node
