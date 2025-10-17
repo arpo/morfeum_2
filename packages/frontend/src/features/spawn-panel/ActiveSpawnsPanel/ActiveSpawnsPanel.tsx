@@ -47,6 +47,7 @@ export function ActiveSpawnsPanel() {
               spawnId={spawn.id}
               prompt={spawn.prompt}
               status={spawn.status}
+              entityType={spawn.entityType}
             />
           ))}
         </div>

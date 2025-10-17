@@ -101,7 +101,7 @@
 .progressFill {
   height: 100%;
   background-color: var(--color-primary);
-  transition: width 0.3s ease;
+  /* Transition timing now controlled dynamically by component */
 }
 
 .cancelButton {

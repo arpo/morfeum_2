@@ -3,17 +3,21 @@
  * Individual spawn item showing progress and cancel button
  */
 
+import { useEffect, useState } from 'react';
 import { useStore } from '@/store';
 import styles from './ActiveSpawnsPanel.module.css';
+import { getTransitionDuration } from './spawnTimings';
 
 interface SpawnRowProps {
   spawnId: string;
   prompt: string;
   status: string;
+  entityType?: 'character' | 'location' | 'sublocation';
 }
 
-export function SpawnRow({ spawnId, prompt, status }: SpawnRowProps) {
+export function SpawnRow({ spawnId, prompt, status, entityType = 'character' }: SpawnRowProps) {
   const cancelSpawn = useStore(state => state.cancelSpawn);
+  const [animatedProgress, setAnimatedProgress] = useState(0);
 
   const getProgress = (status: string): number => {
     switch (status) {
@@ -57,6 +61,18 @@ export function SpawnRow({ spawnId, prompt, status }: SpawnRowProps) {
 
   const progress = getProgress(status);
   const statusLabel = getStatusLabel(status);
+  const transitionDuration = getTransitionDuration(status, entityType);
+
+  // Animate progress on mount and when progress changes
+  useEffect(() => {
+    // Use requestAnimationFrame to ensure browser has painted initial state
+    // This ensures the transition is properly applied
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setAnimatedProgress(progress);
+      });
+    });
+  }, [progress]);
 
   const handleCancel = () => {
     cancelSpawn(spawnId);
@@ -71,7 +87,10 @@ export function SpawnRow({ spawnId, prompt, status }: SpawnRowProps) {
       <div className={styles.progressBar}>
         <div 
           className={styles.progressFill} 
-          style={{ width: `${progress}%` }}
+          style={{ 
+            width: `${animatedProgress}%`,
+            transition: `width ${transitionDuration}ms ease`
+          }}
         />
       </div>
       <button 
