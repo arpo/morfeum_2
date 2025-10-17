@@ -5,6 +5,118 @@
 
 ## Recent Changes
 
+### Hierarchy Analysis System Implementation (Latest - Just Completed)
+1. **Complete Hierarchy Categorization System**:
+   - Created `/api/mzoo/hierarchy/analyze` endpoint for world hierarchy analysis
+   - Built prompt system that organizes user input into 5-layer structure:
+     - **Host (World)**: Broad setting defining laws, tone, culture
+     - **Region**: Distinct districts or biomes within the world
+     - **Location**: Specific sites that can be entered or explored
+     - **Niche**: Micro-environments within locations
+     - **Detail**: Specific objects (only when explicitly marked with "(detail)")
+   - Connected to UI Generate button for real-time hierarchy preview
+
+2. **Smart Parsing Rules**:
+   - **What Creates Nodes**:
+     - Explicit markers: `"Name: Metropolis (world)"`, `"Solar Dome (location)"`
+     - Section headers: `"---- Locations"`, `"---- Regions"` followed by list items
+     - Clear hierarchical phrases: `"X in Y in Z"` structure
+   - **What is Description (NOT a node)**:
+     - Prose paragraphs about atmosphere, culture, design
+     - Atmospheric details: "Golden hour light", "Bioluminescent plants"
+     - General qualities: "Modern skyscrapers", "Old European buildings"
+   - **Critical Fix**: System no longer invents regions from descriptive prose
+     - Previous: Saw "Coastal Front" in prose → created Region node
+     - Now: Prose descriptions stay in parent node's description field
+
+3. **Detail Layer Rules**:
+   - **Explicit Marker Required**: Details only created when marked with `(detail)`
+   - **Examples**:
+     - ✅ "A key in the secret chamber (detail)" → Creates Detail node
+     - ✅ "A broken clock on the wall (detail)" → Creates Detail node
+     - ❌ "A glass on the table" → NO Detail (included in parent description)
+     - ❌ "Nature is reclaiming the space" → NO Detail (environmental quality, not object)
+   - **Result**: Clean hierarchy without over-categorization
+
+4. **Quality Examples Added**:
+   - Added comprehensive examples for each layer showing proper naming and style
+   - **Host**: "Neo-Paris, a luminous megacity rebuilt after the Flood"
+   - **Region**: "Camden District, a maze of canals, markets, and music clubs"
+   - **Location**: "The Gilded Bar, where holographic jazz flickers against smoke"
+   - **Niche**: "VIP kitchen behind the main bar, lined with chrome and quiet"
+   - **Detail**: "A silver key on the captain's desk (detail)"
+
+5. **Correct Parsing Example**:
+   ```
+   Input:
+   Name: Metropolis (world)
+   [Long atmospheric description about coastal megacity...]
+   ---- Locations
+   Famous Botanical Dome (location)
+   
+   Correct Output:
+   Host: Metropolis (with full description paragraph)
+   Region: Central District (inferred minimal region)
+   Location: Famous Botanical Dome
+   
+   WRONG: Creating separate regions from prose like "Coastal Front", "Historic Heart"
+   ```
+
+6. **Backend Implementation**:
+   - **Files Created (5)**:
+     - `engine/hierarchyAnalysis/hierarchyAnalyzer.ts` - Main analysis service
+     - `engine/hierarchyAnalysis/hierarchyCategorizer.ts` - LLM prompt with rules
+     - `engine/hierarchyAnalysis/types.ts` - TypeScript interfaces
+     - `engine/hierarchyAnalysis/index.ts` - Exports
+     - `routes/mzoo/hierarchy.ts` - API endpoint
+   - **Prompt Features**:
+     - 5-layer system with clear function definitions
+     - Parsing rules distinguishing structured input from prose
+     - Quality examples for each layer
+     - Detail layer explicit marker requirement
+     - Inference rules for different input patterns
+     - Validation rules for output quality
+
+7. **Files Modified (6 total)**:
+   - **Backend (6 files)**:
+     - Created: `engine/hierarchyAnalysis/` directory with 4 files
+     - Created: `routes/mzoo/hierarchy.ts` - New API route
+     - Modified: `routes/mzoo/index.ts` - Register hierarchy router
+
+8. **Key Features Delivered**:
+   - ✅ **Smart Parsing**: Distinguishes explicit nodes from descriptive prose
+   - ✅ **Explicit Details**: Only creates Detail nodes when marked with `(detail)`
+   - ✅ **Quality Examples**: Comprehensive examples guide LLM behavior
+   - ✅ **Flexible Input**: Handles simple prompts to complex descriptions
+   - ✅ **Prevents Over-Categorization**: Prose stays in descriptions, not new nodes
+   - ✅ **Type Safe**: Full TypeScript coverage
+   - ✅ **Fast Response**: Uses Gemini 2.0 Flash Experimental for speed
+
+9. **Testing Results**:
+   - **Metropolis Example**: 
+     - Input: Long prose description + one explicit location
+     - Previous: Invented 4 regions from prose + extra locations
+     - Now: Creates Host with description + inferred region + explicit location only
+   - **Detail Marker Test**:
+     - Without `(detail)`: Environmental qualities stay in parent description
+     - With `(detail)`: Creates proper Detail node for specific objects
+
+10. **Quality Verification**:
+    - ✅ **Backend Build**: Successful, zero TypeScript errors
+    - ✅ **Prompt Refinement**: Multiple iterations to perfect parsing logic
+    - ✅ **Real-World Testing**: Verified with complex Metropolis example
+    - ✅ **Architecture Compliance**: Follows all project patterns
+    - ✅ **API Integration**: Connected to UI Generate button
+
+11. **Next Steps for Hierarchy System**:
+    - Use hierarchy analysis to guide world generation
+    - Create region/location nodes based on analysis
+    - Integrate with existing location spawn system
+    - Use hierarchy to structure world DNA
+    - Build UI for displaying/editing hierarchy before generation
+
+## Recent Changes (Continued)
+
 ### Draggable Chat Panel System (Latest - Just Completed)
 1. **Complete Draggable/Resizable Panel Component**:
    - Created reusable `DraggablePanel` component with full drag and resize functionality

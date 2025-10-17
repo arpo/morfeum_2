@@ -2,7 +2,40 @@
 
 ## What Works ✅
 
-### Draggable Chat Panel System (Latest - Just Completed) ✅
+### Hierarchy Analysis System (Latest - Just Completed) ✅
+- **Complete LLM-Based Hierarchy Categorization**: Analyzes user prompts and organizes into 5-layer structure
+  - Host (World): Broad setting defining laws, tone, culture
+  - Region: Distinct districts or biomes within the world
+  - Location: Specific sites that can be entered or explored
+  - Niche: Micro-environments within locations
+  - Detail: Specific objects (only when explicitly marked with "(detail)")
+- **Smart Parsing Rules**: Distinguishes between explicit node declarations and descriptive prose
+  - Creates nodes from: Explicit markers, section headers, hierarchical phrases
+  - Treats as description: Prose paragraphs, atmospheric details, general qualities
+  - Prevents over-categorization of environmental descriptions
+- **Detail Layer Control**: Only creates Details when explicitly marked with `(detail)` tag
+  - "A key in the chamber (detail)" → Creates Detail node
+  - "Nature is reclaiming" → Stays in parent description (environmental quality, not object)
+- **Quality Examples**: Comprehensive examples for each layer showing proper naming style
+- **Backend Implementation**: 5 new files in engine/hierarchyAnalysis/
+  - hierarchyAnalyzer.ts - Main analysis service
+  - hierarchyCategorizer.ts - LLM prompt with parsing rules
+  - types.ts - TypeScript interfaces
+  - index.ts - Exports
+  - routes/mzoo/hierarchy.ts - API endpoint
+- **API Endpoint**: POST `/api/mzoo/hierarchy/analyze` for real-time hierarchy preview
+- **Testing Results**: Metropolis example correctly creates Host + Region + Location (no invented regions from prose)
+- **Quality Verified**: Zero TypeScript errors, real-world testing with complex prompts, architecture compliance
+- **Files Modified**: 6 total (5 new backend files, 1 route registration)
+- **Key Benefits**:
+  - Smart parsing prevents region invention from atmospheric prose
+  - Explicit Detail markers prevent over-categorization
+  - Quality examples guide LLM behavior
+  - Flexible input handling (simple to complex descriptions)
+  - Fast response (Gemini 2.0 Flash Experimental)
+  - Type-safe throughout
+
+### Draggable Chat Panel System (Previously Completed) ✅
 - **Complete Draggable/Resizable Panel Component**: Created reusable DraggablePanel with full functionality
   - Drag from header to reposition anywhere on screen
   - Resize from edges and corners with min/max constraints
