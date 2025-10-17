@@ -1,4 +1,4 @@
-import type { DeepProfile } from '@/store/slices/chatManagerSlice';
+import type { DeepProfile } from '@/store/slices/entityManagerSlice';
 
 export interface CharacterInfoModalProps {
   deepProfile: DeepProfile | null;

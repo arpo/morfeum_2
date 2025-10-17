@@ -29,11 +29,11 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   const togglePinnedCharacter = useCharactersStore(state => state.togglePinned);
   const isCharacterPinned = useCharactersStore(state => state.isPinned);
   
-  // Chat management
-  const createChatWithEntity = useStore(state => state.createChatWithEntity);
-  const setActiveChat = useStore(state => state.setActiveChat);
-  const updateChatImage = useStore(state => state.updateChatImage);
-  const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
+  // Entity management
+  const createEntity = useStore(state => state.createEntity);
+  const setActiveEntity = useStore(state => state.setActiveEntity);
+  const updateEntityImage = useStore(state => state.updateEntityImage);
+  const updateEntityProfile = useStore(state => state.updateEntityProfile);
 
   const handleLoadLocation = useCallback((node: Node) => {
     // console.log('[SavedEntitiesModal] Loading node:', node.id);
@@ -53,24 +53,24 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
       atmosphere: cascadedDNA.world.semantic?.atmosphere || 'Unknown atmosphere'
     };
     
-    // Create chat session for this node
-    createChatWithEntity(node.id, seed, 'location');
+    // Create entity session for this node
+    createEntity(node.id, seed, 'location');
     
-    // Update chat with image and deep profile
+    // Update entity with image and deep profile
     if (node.imagePath) {
-      updateChatImage(node.id, node.imagePath);
+      updateEntityImage(node.id, node.imagePath);
     }
     
-    updateChatDeepProfile(node.id, cascadedDNA as any);
+    updateEntityProfile(node.id, cascadedDNA as any);
     
-    // Set as active chat
-    setActiveChat(node.id);
+    // Set as active entity
+    setActiveEntity(node.id);
     
     // Close modal
     onClose();
     
     // console.log('[SavedEntitiesModal] Node loaded successfully');
-  }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose, getCascadedDNA]);
+  }, [createEntity, updateEntityImage, updateEntityProfile, setActiveEntity, onClose, getCascadedDNA]);
 
   const handleLoadCharacter = useCallback((character: Character) => {
     // Create seed data for chat initialization
@@ -79,22 +79,22 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
       personality: character.details.personality || 'Unknown personality'
     };
     
-    // Create chat session for this character
-    createChatWithEntity(character.id, seed, 'character');
+    // Create entity session for this character
+    createEntity(character.id, seed, 'character');
     
-    // Update chat with image and deep profile
+    // Update entity with image and deep profile
     if (character.imagePath) {
-      updateChatImage(character.id, character.imagePath);
+      updateEntityImage(character.id, character.imagePath);
     }
     
-    updateChatDeepProfile(character.id, character.details as any);
+    updateEntityProfile(character.id, character.details as any);
     
-    // Set as active chat
-    setActiveChat(character.id);
+    // Set as active entity
+    setActiveEntity(character.id);
     
     // Close modal
     onClose();
-  }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose]);
+  }, [createEntity, updateEntityImage, updateEntityProfile, setActiveEntity, onClose]);
 
   const handleDeleteLocation = useCallback((worldId: string) => {
     const nodeCount = getWorldNodeCount(worldId);

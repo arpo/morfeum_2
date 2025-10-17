@@ -8,14 +8,14 @@ import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
 
 export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);
-  const createChatWithEntity = useStore(state => state.createChatWithEntity);
-  const updateChatImage = useStore(state => state.updateChatImage);
-  const updateChatImagePrompt = useStore(state => state.updateChatImagePrompt);
-  const updateChatSystemPrompt = useStore(state => state.updateChatSystemPrompt);
-  const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
+  const createEntity = useStore(state => state.createEntity);
+  const updateEntityImage = useStore(state => state.updateEntityImage);
+  const updateEntityImagePrompt = useStore(state => state.updateEntityImagePrompt);
+  const updateEntitySystemPrompt = useStore(state => state.updateEntitySystemPrompt);
+  const updateEntityProfile = useStore(state => state.updateEntityProfile);
   const updateSpawnStatus = useStore(state => state.updateSpawnStatus);
   const removeSpawn = useStore(state => state.removeSpawn);
-  const setActiveChat = useStore(state => state.setActiveChat);
+  const setActiveEntity = useStore(state => state.setActiveEntity);
   
   // New tree-based methods
   const createNode = useLocationsStore(state => state.createNode);
@@ -42,14 +42,14 @@ export function useSpawnEvents() {
       // Locations have 'atmosphere', characters have 'personality' as discriminator
       const entityType: 'character' | 'location' = seed.atmosphere ? 'location' : 'character';
       
-      // Create new chat with this entity
-      if (createChatWithEntity) {
-        createChatWithEntity(spawnId, seed, entityType);
+      // Create entity session
+      if (createEntity) {
+        createEntity(spawnId, seed, entityType);
       }
       
       // Set initial system prompt
-      if (updateChatSystemPrompt) {
-        updateChatSystemPrompt(spawnId, systemPrompt);
+      if (updateEntitySystemPrompt) {
+        updateEntitySystemPrompt(spawnId, systemPrompt);
       }
       
       // Update spawn status
@@ -62,14 +62,14 @@ export function useSpawnEvents() {
     eventSource.addEventListener('spawn:image-complete', (e) => {
       const { spawnId, imageUrl, imagePrompt } = JSON.parse(e.data);
       
-      // Update chat with image
-      if (updateChatImage) {
-        updateChatImage(spawnId, imageUrl);
+      // Update entity with image
+      if (updateEntityImage) {
+        updateEntityImage(spawnId, imageUrl);
       }
       
-      // Update chat with image prompt
-      if (updateChatImagePrompt && imagePrompt) {
-        updateChatImagePrompt(spawnId, imagePrompt);
+      // Update entity with image prompt
+      if (updateEntityImagePrompt && imagePrompt) {
+        updateEntityImagePrompt(spawnId, imagePrompt);
       }
       
       // Update world node image (world node uses spawnId as its ID)
@@ -109,16 +109,16 @@ export function useSpawnEvents() {
       // NEW: Simplified single node creation (no hierarchical splitting)
       if (entityType === 'location') {
         
-        // Get image from chat session (already stored by image-complete event)
-        const chats = useStore.getState().chats;
-        const chatSession = chats.get(spawnId);
-        const nodeImage = chatSession?.entityImage || '';
+        // Get image from entity session (already stored by image-complete event)
+        const entities = useStore.getState().entities;
+        const entitySession = entities.get(spawnId);
+        const nodeImage = entitySession?.entityImage || '';
         
         // Extract name from deep profile - try multiple sources
         const nodeName = (deepProfile as any).name ||
                         (deepProfile as any).meta?.name ||
                         deepProfile.searchDesc?.split('] ')[1] || // Extract from "[World] Name"
-                        chatSession?.entityName ||
+                        entitySession?.entityName ||
                         'Unknown Location';
         
         // Create single node with flat NodeDNA (simplified for now - keep old structure temporarily)
@@ -135,19 +135,19 @@ export function useSpawnEvents() {
         addNodeToTree(spawnId, null, spawnId, 'world' as any);
         
         // Store simplified DNA in deep profile
-        if (updateChatDeepProfile && deepProfile) {
-          updateChatDeepProfile(spawnId, deepProfile);
+        if (updateEntityProfile && deepProfile) {
+          updateEntityProfile(spawnId, deepProfile);
         }
       } else {
         // Character entity - store deep profile normally
-        if (updateChatDeepProfile && deepProfile) {
-          updateChatDeepProfile(spawnId, deepProfile);
+        if (updateEntityProfile && deepProfile) {
+          updateEntityProfile(spawnId, deepProfile);
         }
       }
       
       // Update system prompt with enhanced version from deep profile
-      if (updateChatSystemPrompt && enhancedSystemPrompt) {
-        updateChatSystemPrompt(spawnId, enhancedSystemPrompt);
+      if (updateEntitySystemPrompt && enhancedSystemPrompt) {
+        updateEntitySystemPrompt(spawnId, enhancedSystemPrompt);
       }
       
       // Update spawn status and remove from active list
@@ -210,7 +210,7 @@ export function useSpawnEvents() {
       
       // Create preview immediately with DNA (no image yet)
       // This switches the preview panel to show the new sublocation
-      if (createChatWithEntity) {
+      if (createEntity) {
         const cleanName = dna.meta.name.split(' (')[0];
         const seed = {
           name: cleanName,
@@ -218,17 +218,17 @@ export function useSpawnEvents() {
           atmosphere: dna.profile.atmosphere,
           mood: dna.profile.mood
         };
-        createChatWithEntity(spawnId, seed, 'location');
+        createEntity(spawnId, seed, 'location');
       }
       
       // Store complete inherited DNA in deep profile
-      if (updateChatDeepProfile) {
-        updateChatDeepProfile(spawnId, inheritedDNA as any);
+      if (updateEntityProfile) {
+        updateEntityProfile(spawnId, inheritedDNA as any);
       }
       
-      // Switch to this chat immediately
-      if (setActiveChat) {
-        setActiveChat(spawnId);
+      // Switch to this entity immediately
+      if (setActiveEntity) {
+        setActiveEntity(spawnId);
         // console.log('[SSE] 🎯 Preview switched to sublocation:', spawnId);
       }
       
@@ -242,8 +242,8 @@ export function useSpawnEvents() {
       const { spawnId, imagePrompt } = JSON.parse(e.data);
       
       // Store the image prompt
-      if (updateChatImagePrompt) {
-        updateChatImagePrompt(spawnId, imagePrompt);
+      if (updateEntityImagePrompt) {
+        updateEntityImagePrompt(spawnId, imagePrompt);
       }
       
       // Update status to show we're now generating the actual image
@@ -258,8 +258,8 @@ export function useSpawnEvents() {
       // console.log('[SSE] 🎨 Sublocation image generated:', imageUrl);
       
       // Update the preview with the image
-      if (updateChatImage) {
-        updateChatImage(spawnId, imageUrl);
+      if (updateEntityImage) {
+        updateEntityImage(spawnId, imageUrl);
       }
       
       if (updateSpawnStatus) {
@@ -314,19 +314,19 @@ export function useSpawnEvents() {
       // Add to tree under parent
       addNodeToTree(worldId, parentNodeId, spawnId, 'sublocation');
       
-      // Update chat deep profile with cascaded DNA for display
+      // Update entity deep profile with cascaded DNA for display
       const fullCascadedDNA = {
         ...cascadedDNA,
         sublocation: dna
       };
       
-      if (updateChatDeepProfile) {
-        updateChatDeepProfile(spawnId, fullCascadedDNA as any);
+      if (updateEntityProfile) {
+        updateEntityProfile(spawnId, fullCascadedDNA as any);
       }
       
-      // Switch active chat to new sublocation
-      if (setActiveChat) {
-        setActiveChat(spawnId);
+      // Switch active entity to new sublocation
+      if (setActiveEntity) {
+        setActiveEntity(spawnId);
       }
       
       // Remove from active spawns after delay
@@ -341,5 +341,5 @@ export function useSpawnEvents() {
     return () => {
       eventSource.close();
     };
-  }, [createChatWithEntity, updateChatImage, updateChatImagePrompt, updateChatSystemPrompt, updateChatDeepProfile]);
+  }, [createEntity, updateEntityImage, updateEntityImagePrompt, updateEntitySystemPrompt, updateEntityProfile]);
 }

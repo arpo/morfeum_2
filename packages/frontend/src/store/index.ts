@@ -2,10 +2,10 @@ import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import type { StateCreator } from 'zustand';
 import { createSpawnManagerSlice, type SpawnManagerSlice } from './slices/spawnManagerSlice';
-import { createChatManagerSlice, type ChatManagerSlice } from './slices/chatManagerSlice';
+import { createEntityManagerSlice, type EntityManagerSlice } from './slices/entityManagerSlice';
 
 // Combined store interface
-export interface CombinedStore extends SpawnManagerSlice, ChatManagerSlice {
+export interface CombinedStore extends SpawnManagerSlice, EntityManagerSlice {
   // Theme is handled by separate useThemeStore for persistence
 }
 
@@ -16,8 +16,8 @@ export const useStore = create<CombinedStore>()(
       // Spawn manager slice
       ...createSpawnManagerSlice(...a),
       
-      // Chat manager slice
-      ...createChatManagerSlice(...a),
+      // Entity manager slice
+      ...createEntityManagerSlice(...a),
     }),
     {
       name: 'morfeum-store',

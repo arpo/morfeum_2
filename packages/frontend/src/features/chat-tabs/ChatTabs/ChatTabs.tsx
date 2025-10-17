@@ -8,10 +8,10 @@ import { useLocationsStore } from '@/store/slices/locationsSlice';
 import styles from './ChatTabs.module.css';
 
 export function ChatTabs() {
-  const chats = useStore(state => state.chats);
-  const activeChat = useStore(state => state.activeChat);
-  const setActiveChat = useStore(state => state.setActiveChat);
-  const closeChat = useStore(state => state.closeChat);
+  const entities = useStore(state => state.entities);
+  const activeEntity = useStore(state => state.activeEntity);
+  const setActiveEntity = useStore(state => state.setActiveEntity);
+  const closeEntity = useStore(state => state.closeEntity);
   const getNode = useLocationsStore(state => state.getNode);
   const worldTrees = useLocationsStore(state => state.worldTrees);
   const deleteWorldTree = useLocationsStore(state => state.deleteWorldTree);
@@ -19,9 +19,9 @@ export function ChatTabs() {
   const deleteNode = useLocationsStore(state => state.deleteNode);
 
   // Convert Map to array for rendering with location depth data
-  const chatsArray = Array.from(chats.entries()).map(([spawnId, chat]) => {
+  const entitiesArray = Array.from(entities.entries()).map(([spawnId, entity]) => {
     // Check if this is a saved location node to get depth info from tree
-    const node = chat.entityType === 'location' ? getNode(spawnId) : null;
+    const node = entity.entityType === 'location' ? getNode(spawnId) : null;
     
     // Calculate depth from tree structure
     let depthLevel = 0;
@@ -56,28 +56,28 @@ export function ChatTabs() {
     }
     
     return {
-      ...chat,
+      ...entity,
       spawnId,
       depthLevel,
       isSubLocation
     };
   });
 
-  // Don't render if no chats
-  if (chatsArray.length === 0) {
+  // Don't render if no entities
+  if (entitiesArray.length === 0) {
     return null;
   }
 
   const handleTabClick = (spawnId: string) => {
-    setActiveChat(spawnId);
+    setActiveEntity(spawnId);
   };
 
   const handleCloseTab = (e: React.MouseEvent, spawnId: string) => {
     e.stopPropagation();
     
     // Check if this is a location node that should be deleted from tree
-    const chat = chats.get(spawnId);
-    if (chat?.entityType === 'location') {
+    const entity = entities.get(spawnId);
+    if (entity?.entityType === 'location') {
       const node = getNode(spawnId);
       if (node) {
         // Find which world tree this node belongs to
@@ -117,46 +117,46 @@ export function ChatTabs() {
       }
     }
     
-    // Always close the chat session
-    closeChat(spawnId);
+    // Always close the entity session
+    closeEntity(spawnId);
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>Entities</div>
       <div className={styles.chatList}>
-        {chatsArray.map(chat => (
+        {entitiesArray.map(entity => (
           <div
-            key={chat.spawnId}
-            className={`${styles.chatButton} ${activeChat === chat.spawnId ? styles.active : ''}`}
-            onClick={() => handleTabClick(chat.spawnId)}
-            data-entity-type={chat.entityType || 'character'}
+            key={entity.spawnId}
+            className={`${styles.chatButton} ${activeEntity === entity.spawnId ? styles.active : ''}`}
+            onClick={() => handleTabClick(entity.spawnId)}
+            data-entity-type={entity.entityType || 'character'}
             style={{
-              paddingLeft: `calc(var(--spacing-md) + ${chat.depthLevel * 20}px)`
+              paddingLeft: `calc(var(--spacing-md) + ${entity.depthLevel * 20}px)`
             }}
           >
-            {chat.isSubLocation && (
+            {entity.isSubLocation && (
               <span className={styles.hierarchyIndicator}>└─</span>
             )}
-            {chat.entityImage && (
+            {entity.entityImage && (
               <img 
-                src={chat.entityImage} 
-                alt={chat.entityName}
+                src={entity.entityImage} 
+                alt={entity.entityName}
                 className={styles.entityImage}
               />
             )}
-            {!chat.entityImage && (
+            {!entity.entityImage && (
               <div className={styles.imagePlaceholder}>
-                {chat.entityName.charAt(0).toUpperCase()}
+                {entity.entityName.charAt(0).toUpperCase()}
               </div>
             )}
             <div className={styles.chatInfo}>
-              <span className={styles.entityName}>{chat.entityName}</span>
+              <span className={styles.entityName}>{entity.entityName}</span>
             </div>
             <button
               className={styles.closeButton}
-              onClick={(e) => handleCloseTab(e, chat.spawnId)}
-              title="Close chat"
+              onClick={(e) => handleCloseTab(e, entity.spawnId)}
+              title="Close entity"
             >
               ✕
             </button>

@@ -31,7 +31,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   const getCascadedDNA = useLocationsStore(state => state.getCascadedDNA);
   const worldTrees = useLocationsStore(state => state.worldTrees);
   const startSpawn = useStore(state => state.startSpawn);
-  const setActiveChat = useStore(state => state.setActiveChat);
+  const setActiveEntity = useStore(state => state.setActiveEntity);
 
   const handleMove = useCallback(async () => {
     if (!movementInput.trim()) {
@@ -116,7 +116,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     getCascadedDNA,
     worldTrees,
     startSpawn,
-    setActiveChat,
+    setActiveEntity,
     createImage
   ]);
 
@@ -142,12 +142,12 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       });
       updateNodeFocus(navigation.targetNodeId, newFocus);
       
-      // Switch active chat to target node
-      setActiveChat(navigation.targetNodeId);
+      // Switch active entity to target node
+      setActiveEntity(navigation.targetNodeId);
     } else {
       console.warn('[NavigatorAI] ⚠️ Target node not found:', navigation.targetNodeId);
     }
-  }, [getNode, updateNodeFocus, setActiveChat]);
+  }, [getNode, updateNodeFocus, setActiveEntity]);
 
   /**
    * Handle 'generate' action - create new sublocation

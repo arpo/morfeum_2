@@ -21,15 +21,15 @@ export function App() {
   // Initialize theme on mount
   const { setTheme, theme } = useThemeStore();
   
-  const activeChat = useStore(state => state.activeChat);
-  const chats = useStore(state => state.chats);
-  const createChatWithEntity = useStore(state => state.createChatWithEntity);
-  const setActiveChat = useStore(state => state.setActiveChat);
-  const updateChatImage = useStore(state => state.updateChatImage);
-  const updateChatDeepProfile = useStore(state => state.updateChatDeepProfile);
+  const activeEntity = useStore(state => state.activeEntity);
+  const entities = useStore(state => state.entities);
+  const createEntity = useStore(state => state.createEntity);
+  const setActiveEntity = useStore(state => state.setActiveEntity);
+  const updateEntityImage = useStore(state => state.updateEntityImage);
+  const updateEntityProfile = useStore(state => state.updateEntityProfile);
   
-  // Get active chat session
-  const activeChatSession = activeChat ? chats.get(activeChat) : null;
+  // Get active entity session
+  const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
 
   // Initialize theme on component mount
   useEffect(() => {
@@ -59,13 +59,13 @@ export function App() {
         personality: character.details.personality || 'Unknown personality'
       };
       
-      createChatWithEntity(character.id, seed, 'character');
+      createEntity(character.id, seed, 'character');
       
       if (character.imagePath) {
-        updateChatImage(character.id, character.imagePath);
+        updateEntityImage(character.id, character.imagePath);
       }
       
-      updateChatDeepProfile(character.id, character.details as any);
+      updateEntityProfile(character.id, character.details as any);
       lastLoadedId = character.id;
     });
     
@@ -90,13 +90,13 @@ export function App() {
         atmosphere: cascadedDNA.world.semantic?.atmosphere || 'Unknown atmosphere'
       };
       
-      createChatWithEntity(node.id, seed, 'location');
+      createEntity(node.id, seed, 'location');
       
       if (node.imagePath) {
-        updateChatImage(node.id, node.imagePath);
+        updateEntityImage(node.id, node.imagePath);
       }
       
-      updateChatDeepProfile(node.id, cascadedDNA as any);
+      updateEntityProfile(node.id, cascadedDNA as any);
       lastLoadedId = node.id;
       
       // If this is a world node, also load all its children
@@ -116,13 +116,13 @@ export function App() {
                   atmosphere: childCascadedDNA.world?.semantic?.atmosphere || 'Unknown'
                 };
                 
-                createChatWithEntity(child.id, childSeed, 'location');
+                createEntity(child.id, childSeed, 'location');
                 
                 if (childNode.imagePath) {
-                  updateChatImage(child.id, childNode.imagePath);
+                  updateEntityImage(child.id, childNode.imagePath);
                 }
                 
-                updateChatDeepProfile(child.id, childCascadedDNA as any);
+                updateEntityProfile(child.id, childCascadedDNA as any);
                 // console.log('[App]   └─ Loaded child node:', childNode.name, `(${childNode.type})`);
               }
               
@@ -138,7 +138,7 @@ export function App() {
     
     // Set the last loaded entity as active
     if (lastLoadedId) {
-      setActiveChat(lastLoadedId);
+      setActiveEntity(lastLoadedId);
     }
     
     // console.log(`[App] Auto-loaded ${pinnedCharacters.length} characters and ${pinnedLocations.length} locations`);
@@ -160,10 +160,10 @@ export function App() {
       </div>
       
       {/* Column 2 - Entity Panel (Character or Location) */}
-      {activeChatSession && (
+      {activeEntitySession && (
         <section className={styles.chatSection}>
           <Card>
-            {activeChatSession.entityType === 'character' ? (
+            {activeEntitySession.entityType === 'character' ? (
               <CharacterPanel />
             ) : (
               <LocationPanel />
@@ -178,15 +178,15 @@ export function App() {
       </aside>
       
       {/* Column 4 - Chat History (Collapsible) / Image Prompt Panel */}
-      {activeChatSession && (
+      {activeEntitySession && (
         <aside className={styles.historyPanel}>
           {/* Hide chat history for locations */}
-          {activeChatSession.entityType !== 'location' && (
-            <ChatHistoryViewer messages={activeChatSession.messages} />
+          {activeEntitySession.entityType !== 'location' && (
+            <ChatHistoryViewer messages={activeEntitySession.messages} />
           )}
           {/* Always show image prompt panel */}
-          {activeChatSession.imagePrompt && (
-            <ImagePromptPanel imagePrompt={activeChatSession.imagePrompt} />
+          {activeEntitySession.imagePrompt && (
+            <ImagePromptPanel imagePrompt={activeEntitySession.imagePrompt} />
           )}
         </aside>
       )}

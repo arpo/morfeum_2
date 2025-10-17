@@ -10,16 +10,16 @@ export function useEntityPanelBase() {
   const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   
-  const activeChat = useStore(state => state.activeChat);
-  const chats = useStore(state => state.chats);
+  const activeEntity = useStore(state => state.activeEntity);
+  const entities = useStore(state => state.entities);
   
-  // Get active chat session
-  const activeChatSession = activeChat ? chats.get(activeChat) : null;
+  // Get active entity session
+  const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
 
   // Reset isSaved when switching to a different entity
   useEffect(() => {
     setIsSaved(false);
-  }, [activeChat]);
+  }, [activeEntity]);
 
   const openModal = useCallback(() => {
     setIsModalOpen(true);
@@ -53,12 +53,12 @@ export function useEntityPanelBase() {
 
   return {
     // Shared state
-    activeChat,
-    activeChatSession,
-    entityImage: activeChatSession?.entityImage || null,
-    entityName: activeChatSession?.entityName || null,
-    entityPersonality: activeChatSession?.entityPersonality || null,
-    deepProfile: activeChatSession?.deepProfile || null,
+    activeChat: activeEntity,
+    activeChatSession: activeEntitySession,
+    entityImage: activeEntitySession?.entityImage || null,
+    entityName: activeEntitySession?.entityName || null,
+    entityPersonality: activeEntitySession?.entityPersonality || null,
+    deepProfile: activeEntitySession?.deepProfile || null,
     isModalOpen,
     isFullscreenOpen,
     isSaved,
