@@ -16,7 +16,20 @@ export function buildHierarchyCategorizerPrompt(userPrompt: string): string {
 | **Region**   | *Camden*         | Defines sub-culture or biome, local climate and mood. |
 | **Location** | *Techno club*    | Specific place of activity or architecture.           |
 | **Niche**    | *VIP niche*      | Micro-environment, interior or exterior focus zone.   |
-| **Detail**   | *Glass on table* | Singular object or moment of attention.               |
+| **Detail**   | *Glass on table* | **SPECIFIC OBJECT ONLY** - Not environmental qualities! |
+
+### CRITICAL: Detail Layer Rules
+**ONLY create Detail nodes when the user explicitly marks them with (detail)**
+
+**Examples:**
+- ✅ "A key in the secret chamber (detail)" → Create Detail node
+- ✅ "A broken clock on the wall (detail)" → Create Detail node  
+- ❌ "A glass on the table" → Do NOT create Detail (no marker)
+- ❌ "Nature is reclaiming the space" → Do NOT create Detail (no marker)
+
+**If an object or element is NOT marked with (detail), include it in the parent node's description instead.**
+
+This prevents over-categorization and keeps the hierarchy clean. Users must explicitly request Detail nodes by adding the (detail) marker.
 
 ## INFERENCE RULES
 
