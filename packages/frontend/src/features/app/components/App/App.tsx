@@ -6,6 +6,7 @@ import { CharacterPanel } from '@/features/entity-panel/components/CharacterPane
 import { LocationPanel } from '@/features/entity-panel/components/LocationPanel';
 import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer';
 import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
+import { ChatPanel } from '@/features/chat/components/ChatPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { ActiveSpawnsPanel } from '@/features/spawn-panel/ActiveSpawnsPanel';
 import { ChatTabs } from '@/features/chat-tabs/ChatTabs';
@@ -27,6 +28,8 @@ export function App() {
   const setActiveEntity = useStore(state => state.setActiveEntity);
   const updateEntityImage = useStore(state => state.updateEntityImage);
   const updateEntityProfile = useStore(state => state.updateEntityProfile);
+  const chatPanelOpen = useStore(state => state.chatPanelOpen);
+  const closeChatPanel = useStore(state => state.closeChatPanel);
   
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
@@ -185,6 +188,21 @@ export function App() {
           )}
         </aside>
       )}
+
+      {/* Draggable Chat Panels */}
+      {Array.from(entities.entries()).map(([entityId, entity]) => {
+        const isPanelOpen = chatPanelOpen.get(entityId);
+        if (!isPanelOpen || entity.entityType !== 'character') return null;
+        
+        return (
+          <ChatPanel
+            key={entityId}
+            entityId={entityId}
+            entityName={entity.entityName}
+            onClose={() => closeChatPanel(entityId)}
+          />
+        );
+      })}
     </div>
   );
 }

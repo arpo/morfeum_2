@@ -48,6 +48,7 @@ export interface EntityData {
 export interface EntityManagerSlice {
   entities: Map<string, EntityData>;
   activeEntity: string | null;
+  chatPanelOpen: Map<string, boolean>;
 
   createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => void;
   updateEntityImage: (spawnId: string, imageUrl: string) => void;
@@ -59,11 +60,15 @@ export interface EntityManagerSlice {
   sendMessage: (spawnId: string, content: string) => Promise<void>;
   setLoading: (spawnId: string, loading: boolean) => void;
   setError: (spawnId: string, error: string | null) => void;
+  openChatPanel: (entityId: string) => void;
+  closeChatPanel: (entityId: string) => void;
+  isChatPanelOpen: (entityId: string) => boolean;
 }
 
 export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, get) => ({
   entities: new Map(),
   activeEntity: null,
+  chatPanelOpen: new Map(),
 
   createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => {
     const systemMessage: ChatMessage = {
@@ -302,5 +307,25 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       });
       return { entities: newEntities };
     });
+  },
+
+  openChatPanel: (entityId: string) => {
+    set((state) => {
+      const newChatPanelOpen = new Map(state.chatPanelOpen);
+      newChatPanelOpen.set(entityId, true);
+      return { chatPanelOpen: newChatPanelOpen };
+    });
+  },
+
+  closeChatPanel: (entityId: string) => {
+    set((state) => {
+      const newChatPanelOpen = new Map(state.chatPanelOpen);
+      newChatPanelOpen.set(entityId, false);
+      return { chatPanelOpen: newChatPanelOpen };
+    });
+  },
+
+  isChatPanelOpen: (entityId: string) => {
+    return get().chatPanelOpen.get(entityId) || false;
   }
 });

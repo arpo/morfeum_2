@@ -162,8 +162,13 @@
 .locationAtmosphere {
   font-size: var(--text-xs);
   color: var(--color-text-secondary);
-  margin: 0;
+  margin: 0 0 var(--spacing-sm) 0;
   line-height: 1.4;
+}
+
+.chatButton {
+  width: 100%;
+  margin-top: var(--spacing-xs);
 }
 
 /* Movement Section */

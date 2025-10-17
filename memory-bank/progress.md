@@ -2,7 +2,52 @@
 
 ## What Works ✅
 
-### Character Pipeline Migration - Engine Phase 2 Complete (Latest - Just Completed) ✅
+### Draggable Chat Panel System (Latest - Just Completed) ✅
+- **Complete Draggable/Resizable Panel Component**: Created reusable DraggablePanel with full functionality
+  - Drag from header to reposition anywhere on screen
+  - Resize from edges and corners with min/max constraints
+  - Smooth animations and visual feedback
+  - Keyboard accessible (ESC to close)
+  - CSS-only resize handles
+  - 5 files created: component, hook, types, styles, index
+- **State Management for Chat Panels**: Extended entityManagerSlice with chat panel tracking
+  - `chatPanelOpen: Map<string, boolean>` tracks which chat panels are open
+  - `openChatPanel(entityId)`, `closeChatPanel(entityId)`, `isChatPanelOpen(entityId)` methods
+  - Multiple chat panels can be open simultaneously
+- **Dedicated ChatPanel Component**: Floating chat interface separate from entity info display
+  - Displays conversation history (user/assistant messages)
+  - Real-time message sending with loading states
+  - Error handling with dismissible messages
+  - Auto-scroll on new messages
+  - Markdown rendering for rich text
+  - 5 files created: component, hook, types, styles, index
+- **CharacterPanel Simplification**: Removed inline chat UI, added "💬 Chat" button
+  - Removed: Messages list, input field, send button
+  - Added: Chat button to open floating panel
+  - Kept: Character info, image viewer, save functionality
+  - Clean separation between entity info and chat interaction
+  - Updated 3 files: component, hook, types
+- **App Integration**: Chat panels render as floating windows outside main layout
+  - Each character gets independent chat window
+  - Panels stack naturally with z-index
+  - Multiple panels can be open simultaneously
+- **Architecture Benefits**:
+  - Clean separation: Entity info panel vs chat interaction panel
+  - Multi-chat support: Chat with multiple characters at once
+  - Flexible positioning: Users position and size panels as needed
+  - Maintainability: Chat logic separate from entity display
+  - Reusable: DraggablePanel can be used for other floating UI
+- **Files Modified/Created**: 18 total (15 created, 3 modified)
+- **Key Features Delivered**:
+  - ✅ Drag & Drop: Move panels anywhere by dragging header
+  - ✅ Resize: Resize from any edge or corner with constraints
+  - ✅ Multi-Panel: Open multiple character chats simultaneously
+  - ✅ Clean UI: Main panel focuses on entity info
+  - ✅ Persistent State: Chat history maintained when panels close/reopen
+  - ✅ Responsive: Works on all screen sizes
+- **Quality Verified**: TypeScript compilation passes (zero errors), architecture compliance, design tokens used
+
+### Character Pipeline Migration - Engine Phase 2 Complete (Previously Completed) ✅
 - **Complete Character Pipeline Migration**: Migrated character generation from deprecated spawn system to new `engine/` directory
 - **Zero Content Changes**: Prompts identical to old system, proven to work
 - **System Prompt Generation Added**: Characters respond with full personality in chat

@@ -20,5 +20,8 @@ export type { ModalProps, ModalHeaderProps, ModalContentProps, ModalSectionProps
 export { ThemeToggle } from './ThemeToggle';
 export type { ThemeToggleProps } from './ThemeToggle';
 
+export { DraggablePanel } from './DraggablePanel';
+export type { DraggablePanelProps, Position, Size } from './DraggablePanel';
+
 // Re-export icons for convenience
 export * from '@/icons';

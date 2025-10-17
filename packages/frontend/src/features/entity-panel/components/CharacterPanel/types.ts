@@ -19,6 +19,7 @@ export interface CharacterPanelHandlers extends EntityPanelBaseHandlers {
   sendMessage: () => Promise<void>;
   clearError: () => void;
   saveCharacter: () => void;
+  openChat: () => void;
 }
 
 export interface CharacterPanelLogicReturn {
