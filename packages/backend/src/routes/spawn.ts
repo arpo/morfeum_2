@@ -9,6 +9,7 @@ import { validateMzooApiKey } from '../middleware/mzooAuth';
 import { createSpawnManager, SpawnProcess } from '../services/spawn';
 import { eventEmitter } from '../services/eventEmitter';
 import { SublocPipelineManager } from '../services/spawn/managers/SublocPipelineManager';
+import { runCharacterPipeline } from '../engine/generation';
 
 const router = Router();
 
@@ -55,7 +56,111 @@ router.get('/events', (req: Request, res: Response) => {
 });
 
 /**
- * POST /api/spawn/start - Start a new spawn process
+ * POST /api/spawn/engine/start - NEW ENGINE: Start character spawn with new pipeline
+ */
+router.post('/engine/start', asyncHandler(async (req: Request, res: Response) => {
+  const { prompt, entityType = 'character' } = req.body;
+
+  if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Valid prompt is required',
+      error: 'Missing or invalid prompt in request body',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  if (entityType !== 'character') {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Only character type supported in new engine',
+      error: 'entityType must be "character" (location coming soon)',
+      timestamp: new Date().toISOString(),
+    });
+    return;
+  }
+
+  const spawnId = `char-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  const apiKey = (req as any).mzooApiKey;
+
+  // Send immediate response
+  res.status(HTTP_STATUS.OK).json({
+    message: 'Character spawn started (new engine)',
+    data: { spawnId, entityType, engine: 'new' },
+    timestamp: new Date().toISOString(),
+  });
+
+  // Run pipeline asynchronously with SSE events (emitting intermediate events)
+  (async () => {
+    try {
+      // Import individual pipeline functions for step-by-step execution
+      const { generateCharacterSeed, generateCharacterImage, analyzeCharacterImage, enrichCharacterProfile } = 
+        await import('../engine/generation');
+      
+      // Step 1: Generate seed
+      const seed = await generateCharacterSeed(prompt.trim(), apiKey);
+      
+      // Emit seed complete event
+      eventEmitter.emit({
+        type: 'spawn:seed-complete',
+        data: {
+          spawnId,
+          seed,
+          systemPrompt: '' // System prompt can be added later
+        }
+      });
+      
+      // Step 2: Generate image
+      const { imageUrl, imagePrompt } = await generateCharacterImage(seed, apiKey);
+      
+      // Emit image complete event
+      eventEmitter.emit({
+        type: 'spawn:image-complete',
+        data: {
+          spawnId,
+          imageUrl,
+          imagePrompt
+        }
+      });
+      
+      // Step 3: Analyze image
+      const visualAnalysis = await analyzeCharacterImage(imageUrl, seed, apiKey);
+      
+      // Step 4: Enrich profile
+      const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey);
+      
+      // Emit profile complete event
+      eventEmitter.emit({
+        type: 'spawn:profile-complete',
+        data: {
+          spawnId,
+          deepProfile: {
+            ...deepProfile,
+            imageUrl,
+            imagePrompt,
+            seed,
+            visualAnalysis
+          },
+          enhancedSystemPrompt: undefined, // System prompt handling to be added later
+          entityType: 'character'
+        }
+      });
+
+    } catch (error: any) {
+      console.error('[Engine Route] Pipeline failed:', error);
+      eventEmitter.emit({
+        type: 'spawn:error',
+        data: {
+          spawnId,
+          error: error.message || 'Unknown error',
+          stage: 'pipeline'
+        }
+      });
+    }
+  })();
+}));
+
+/**
+ * POST /api/spawn/start - OLD SYSTEM: Start a new spawn process (deprecated, use /engine/start)
  */
 router.post('/start', asyncHandler(async (req: Request, res: Response) => {
   const { prompt, entityType = 'character' } = req.body;

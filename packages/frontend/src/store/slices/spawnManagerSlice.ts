@@ -15,7 +15,7 @@ export interface SpawnManagerSlice {
   startSpawn: (
     prompt: string, 
     entityType?: 'character' | 'location' | 'sublocation',
-    metadata?: any
+    useNewEngine?: boolean | any
   ) => Promise<string>;
   cancelSpawn: (spawnId: string) => Promise<void>;
   updateSpawnStatus: (spawnId: string, status: string) => void;
@@ -28,17 +28,29 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
   startSpawn: async (
     prompt: string, 
     entityType: 'character' | 'location' | 'sublocation' = 'character',
-    metadata?: any
+    useNewEngineOrMetadata?: boolean | any
   ) => {
     try {
-      // Different endpoint for sublocation spawns
-      const endpoint = entityType === 'sublocation' 
-        ? '/api/spawn/sublocation/start' 
-        : '/api/spawn/start';
+      // Determine if this is sublocation (metadata object) or new engine (boolean)
+      const isSublocMetadata = typeof useNewEngineOrMetadata === 'object';
+      const useNewEngine = typeof useNewEngineOrMetadata === 'boolean' ? useNewEngineOrMetadata : false;
       
-      const body = entityType === 'sublocation'
-        ? metadata // For sublocations, metadata contains all required fields
-        : { prompt, entityType };
+      // Route to appropriate endpoint
+      let endpoint: string;
+      let body: any;
+      
+      if (entityType === 'sublocation') {
+        endpoint = '/api/spawn/sublocation/start';
+        body = useNewEngineOrMetadata; // metadata object
+      } else if (useNewEngine && entityType === 'character') {
+        endpoint = '/api/spawn/engine/start';
+        body = { prompt, entityType };
+        console.log('[SpawnManager] Using NEW ENGINE endpoint:', endpoint);
+      } else {
+        endpoint = '/api/spawn/start';
+        body = { prompt, entityType };
+        console.log('[SpawnManager] Using OLD SYSTEM endpoint:', endpoint);
+      }
       
       const response = await fetch(endpoint, {
         method: 'POST',
