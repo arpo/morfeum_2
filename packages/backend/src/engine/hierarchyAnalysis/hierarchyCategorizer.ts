@@ -15,8 +15,8 @@ export function buildHierarchyCategorizerPrompt(userPrompt: string): string {
 | **Host**     | Broad setting; defines laws, tone, culture            |
 | **Region**   | A distinct district or biome within the world         |
 | **Location** | Specific site that can be entered or explored         |
-| **Niche**    | Micro-environment within a location                   |
-| **Detail**   | Specific object (only when marked with "(detail)")    |
+| **Niche**    | A smaller location within a location                   |
+| **Detail**   | Smaller specific object (only when marked with "(detail)")    |
 
 ### Layer Examples
 
@@ -42,11 +42,11 @@ export function buildHierarchyCategorizerPrompt(userPrompt: string): string {
 - "The Lantern Bazaar, an underground market lit by bioluminescent stalls."
 
 **Niche**
-- "VIP kitchen behind the main bar, lined with chrome and quiet."
-- "Observation deck above the dome's canopy, mist drifting through vents."
-- "Maintenance crawlspace behind Reactor 12's coolant pipes."
-- "Captain's cabin inside the derelict ship, papers floating in zero-g."
-- "Side alley of the Lantern Bazaar, walls glowing with graffiti light."
+- VIP room in a nightclub, lined with velvet seats and low amber light.
+-Secret room in the basement, hidden behind loose paneling and humming pipes.
+- Toilet in a restaurant, tiled, echoing, with a single flickering bulb.
+- Kitchen behind the café counter, steam rising over clattering pans.
+- Storage closet in the museum, stacked with forgotten display cases.
 
 **Detail (only with explicit marker)**
 - "A silver key on the captain's desk (detail)"
