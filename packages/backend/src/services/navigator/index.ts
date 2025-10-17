@@ -1,4 +1,8 @@
 /**
+ * ⚠️ DEPRECATED - DO NOT UPDATE
+ * This code is being refactored into packages/backend/src/engine/navigation/
+ * See: packages/backend/src/engine/REASSEMBLY_PLAN.md
+ * 
  * Navigator Service
  * Semantic location navigation using LLM reasoning
  */

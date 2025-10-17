@@ -38,18 +38,28 @@ export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
   const handleGenerate = useCallback(async () => {
     if (!textPrompt.trim()) return;
 
-    try {
-      await startSpawn(textPrompt.trim(), entityType);
-      
-      // Clear input after starting spawn
-      setTextPrompt('');
-      setError(null);
-    } catch (err) {
-      const errorMessage = 'Error: Could not start entity spawn.';
-      setError(errorMessage);
-      console.error('[SpawnInputBar] Failed to start spawn:', err);
-    }
-  }, [textPrompt, entityType, startSpawn]);
+    // ⚠️ UI DISCONNECTED - Backend refactoring in progress
+    // See: packages/backend/src/engine/REASSEMBLY_PLAN.md
+    console.log('[UI DISCONNECTED] Would call startSpawn with:', {
+      prompt: textPrompt.trim(),
+      entityType: entityType
+    });
+    
+    // Clear input to simulate normal behavior
+    setTextPrompt('');
+    setError(null);
+
+    // ORIGINAL CODE (disabled during refactor):
+    // try {
+    //   await startSpawn(textPrompt.trim(), entityType);
+    //   setTextPrompt('');
+    //   setError(null);
+    // } catch (err) {
+    //   const errorMessage = 'Error: Could not start entity spawn.';
+    //   setError(errorMessage);
+    //   console.error('[SpawnInputBar] Failed to start spawn:', err);
+    // }
+  }, [textPrompt, entityType]);
 
   const handleShuffle = useCallback(() => {
     if (samplePrompts.length > 0) {

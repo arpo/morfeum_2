@@ -1,6 +1,10 @@
 /**
+ * ⚠️ DEPRECATED - DO NOT UPDATE
+ * This code is being refactored into packages/backend/src/engine/
+ * See: packages/backend/src/engine/REASSEMBLY_PLAN.md
+ * 
  * Base Pipeline Manager
- * Abstract base class for all entity-specific pipeline managers
+ * Abstract base class for entity-specific spawn pipelines
  */
 
 import { eventEmitter } from '../../eventEmitter';

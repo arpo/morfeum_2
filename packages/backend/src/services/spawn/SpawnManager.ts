@@ -1,4 +1,9 @@
 /**
+ * ⚠️ DEPRECATED - DO NOT UPDATE
+ * This code is being refactored into packages/backend/src/engine/
+ * Any changes here will be lost during migration.
+ * See: packages/backend/src/engine/REASSEMBLY_PLAN.md
+ * 
  * Spawn Manager
  * Factory/Router for entity-specific pipeline managers
  */
