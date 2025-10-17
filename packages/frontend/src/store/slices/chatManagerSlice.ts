@@ -268,8 +268,6 @@ export const createChatManagerSlice: StateCreator<ChatManagerSlice> = (set, get)
         });
         return { chats: newChats };
       });
-
-      console.log('💬 Message sent and response received');
     } catch (error) {
       console.error('[ChatManager] Error sending message:', error);
       

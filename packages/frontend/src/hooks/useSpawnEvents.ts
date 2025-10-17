@@ -75,7 +75,6 @@ export function useSpawnEvents() {
       // Update world node image (world node uses spawnId as its ID)
       const worldNode = getNode(spawnId);
       if (worldNode && worldNode.type === 'world') {
-        console.log('[SSE] 📸 Updating world node image:', spawnId);
         updateNode(spawnId, { imagePath: imageUrl });
       }
       
@@ -84,7 +83,6 @@ export function useSpawnEvents() {
       const locationNodeId = `${spawnId}-location`;
       const locationNode = getNode(locationNodeId);
       if (locationNode) {
-        console.log('[SSE] 📸 Updating location node image:', locationNodeId);
         updateNode(locationNodeId, { imagePath: imageUrl });
       }
       
@@ -242,8 +240,6 @@ export function useSpawnEvents() {
     // Listen for sublocation image prompt complete event
     eventSource.addEventListener('spawn:sublocation-image-prompt-complete', (e) => {
       const { spawnId, imagePrompt } = JSON.parse(e.data);
-      console.log('[SSE] ✨ Sublocation FLUX prompt generated');
-      console.log(imagePrompt);
       
       // Store the image prompt
       if (updateChatImagePrompt) {
@@ -293,8 +289,6 @@ export function useSpawnEvents() {
       // Extract clean name (remove the hierarchical suffix)
       const cleanName = dna.meta.name.split(' (')[0];
       
-      console.log('[SSE] 🧬 Creating sublocation node:', cleanName);
-      
       // Create sublocation node
       const sublocationNode: Node = {
         id: spawnId,
@@ -320,10 +314,6 @@ export function useSpawnEvents() {
       // Add to tree under parent
       addNodeToTree(worldId, parentNodeId, spawnId, 'sublocation');
       
-      console.log('[SSE] 📍 Sublocation stored in tree:', spawnId);
-      console.log('[SSE] 📊 Tree: world:', worldId, ', parent:', parentNodeId);
-      console.log('[SSE] ✅ Node created with clean name:', cleanName);
-      
       // Update chat deep profile with cascaded DNA for display
       const fullCascadedDNA = {
         ...cascadedDNA,
@@ -337,7 +327,6 @@ export function useSpawnEvents() {
       // Switch active chat to new sublocation
       if (setActiveChat) {
         setActiveChat(spawnId);
-        console.log('[SSE] 🎯 Switched to sublocation:', spawnId);
       }
       
       // Remove from active spawns after delay

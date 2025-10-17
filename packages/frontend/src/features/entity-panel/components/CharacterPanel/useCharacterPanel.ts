@@ -52,7 +52,6 @@ export function useCharacterPanel(): CharacterPanelLogicReturn {
     });
     
     base.setIsSaved(true);
-    console.log(`[useCharacterPanel] Character saved with ID: ${base.activeChat}`);
   }, [base, createCharacter]);
 
   // Check if character is already saved when active chat changes

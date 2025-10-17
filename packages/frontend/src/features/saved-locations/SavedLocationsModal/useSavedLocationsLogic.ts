@@ -73,8 +73,6 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose, getCascadedDNA]);
 
   const handleLoadCharacter = useCallback((character: Character) => {
-    console.log('[SavedEntitiesModal] Loading character:', character.id);
-    
     // Create seed data for chat initialization
     const seed = {
       name: character.name,
@@ -96,8 +94,6 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     
     // Close modal
     onClose();
-    
-    console.log('[SavedEntitiesModal] Character loaded successfully');
   }, [createChatWithEntity, updateChatImage, updateChatDeepProfile, setActiveChat, onClose]);
 
   const handleDeleteLocation = useCallback((worldId: string) => {
@@ -105,33 +101,25 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     const message = `Delete this world and all ${nodeCount} nodes in it?`;
     
     if (window.confirm(message)) {
-      console.log('[SavedEntitiesModal] Deleting world tree:', worldId, `(${nodeCount} nodes)`);
       deleteWorldTree(worldId);
     }
   }, [deleteWorldTree, getWorldNodeCount]);
 
   const handleDeleteCharacter = useCallback((characterId: string) => {
     if (window.confirm('Are you sure you want to delete this character?')) {
-      console.log('[SavedEntitiesModal] Deleting character:', characterId);
       deleteCharacter(characterId);
     }
   }, [deleteCharacter]);
 
   const handlePinLocation = useCallback((locationId: string) => {
-    const isPinned = isLocationPinned(locationId);
     togglePinnedLocation(locationId);
-    console.log(`[SavedEntitiesModal] ${isPinned ? 'Unpinned' : 'Pinned'} location:`, locationId);
   }, [togglePinnedLocation, isLocationPinned]);
 
   const handlePinCharacter = useCallback((characterId: string) => {
-    const isPinned = isCharacterPinned(characterId);
     togglePinnedCharacter(characterId);
-    console.log(`[SavedEntitiesModal] ${isPinned ? 'Unpinned' : 'Pinned'} character:`, characterId);
   }, [togglePinnedCharacter, isCharacterPinned]);
 
   const handleCopyWorldInfo = useCallback((node: Node) => {
-    console.log('[SavedEntitiesModal] Copying full node JSON for:', node.id);
-    
     // Get cascaded DNA and include it in the export
     const cascadedDNA = getCascadedDNA(node.id);
     const exportData = {
@@ -144,7 +132,6 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     // Copy to clipboard
     navigator.clipboard.writeText(nodeJson)
       .then(() => {
-        console.log('[SavedEntitiesModal] Node JSON copied to clipboard');
         alert('Location data copied to clipboard!');
       })
       .catch((err) => {

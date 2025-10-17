@@ -2,7 +2,21 @@
 
 ## What Works ✅
 
-### Engine Refactoring - Phase 0 & 1 Complete (Latest - Just Completed) ✅
+### Character Pipeline Migration - Engine Phase 2 Complete (Latest - Just Completed) ✅
+- **Complete Character Pipeline Migration**: Migrated character generation from deprecated spawn system to new `engine/` directory
+- **Zero Content Changes**: Prompts identical to old system, proven to work
+- **System Prompt Generation Added**: Characters respond with full personality in chat
+  - `generateInitialSystemPrompt()` - From seed (basic personality using basicEntityDataFormatting → chatCharacterImpersonation)
+  - `generateEnhancedSystemPrompt()` - From deep profile (full personality with 16 fields using enhancedEntityDataFormatting → chatCharacterImpersonation)
+  - Both prompts emitted in SSE events (spawn:seed-complete and spawn:profile-complete)
+- **Console Log Cleanup**: Removed 30 logs (28 frontend, 2 backend) - clean console following project rules
+- **New Endpoint**: `/api/spawn/engine/start` for new pipeline, old `/api/spawn/start` marked deprecated
+- **Files Created**: 5 new files (characterPipeline.ts + 4 prompt files)
+- **Files Modified**: 13 total (3 backend, 10 frontend for log cleanup)
+- **Quality Verified**: Zero TypeScript errors, characters respond in personality, clean console
+- **Engine Progress**: Phase 0 ✅ Phase 1 ✅ Phase 2 ✅ (characters only, locations next)
+
+### Engine Refactoring - Phase 0 & 1 Complete (Previously Completed) ✅
 - **Strategic Refactoring Initiated**: Complete backend refactoring for prompt optimization
 - **Phase 0 - Foundation Complete**:
   - ✅ Created `engine/` folder structure (generation/, navigation/, prompts/, utils/)

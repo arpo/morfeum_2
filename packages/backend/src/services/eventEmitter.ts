@@ -23,7 +23,6 @@ class EventEmitter {
    */
   addClient(clientId: string, response: Response): void {
     this.clients.set(clientId, { id: clientId, response });
-    console.log(`[EventEmitter] Client connected: ${clientId} (Total: ${this.clients.size})`);
   }
 
   /**
@@ -31,7 +30,6 @@ class EventEmitter {
    */
   removeClient(clientId: string): void {
     this.clients.delete(clientId);
-    console.log(`[EventEmitter] Client disconnected: ${clientId} (Total: ${this.clients.size})`);
   }
 
   /**
