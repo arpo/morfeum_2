@@ -8,6 +8,53 @@
 export function buildHierarchyCategorizerPrompt(userPrompt: string): string {
   return `You are a spatial hierarchy analyzer. Your task is to analyze user descriptions and organize them into a structured 5-layer hierarchy.
 
+## ⚠️ CRITICAL: PROPER NESTING RULES
+
+**THE MOST IMPORTANT RULE: Each layer MUST be nested INSIDE its parent, NOT as a sibling at the root level.**
+
+### ❌ WRONG - Flat Structure (Common Mistake):
+\`\`\`json
+{
+  "host": {...},
+  "regions": [{...}],
+  "locations": [{...}],    // ← ERROR! At root level
+  "niches": [{...}]        // ← ERROR! At root level
+}
+\`\`\`
+
+### ✅ RIGHT - Properly Nested Structure:
+\`\`\`json
+{
+  "host": {
+    "type": "host",
+    "name": "World Name",
+    "description": "...",
+    "regions": [{                    // ← Regions INSIDE host
+      "type": "region",
+      "name": "Region Name",
+      "description": "...",
+      "locations": [{                // ← Locations INSIDE region
+        "type": "location",
+        "name": "Location Name",
+        "description": "...",
+        "niches": [{                 // ← Niches INSIDE location
+          "type": "niche",
+          "name": "Niche Name",
+          "description": "...",
+          "details": [{              // ← Details INSIDE niche
+            "type": "detail",
+            "name": "Detail Name",
+            "description": "..."
+          }]
+        }]
+      }]
+    }]
+  }
+}
+\`\`\`
+
+**Remember: The hierarchy cascades DOWN, not sideways. Each child goes INSIDE its parent's object.**
+
 ## THE 5-LAYER SYSTEM
 
 | Layer        | Function                                              |

@@ -27,12 +27,19 @@ PARENT CONTEXT (inherit and respect these attributes):
 - Cultural Tone: ${parentContext.cultural_tone || 'Not specified'}
 - Dominant Color: ${parentContext.dominant || 'Not specified'}
 - Mood: ${parentContext.mood || 'Not specified'}
+
+⚠️ CRITICAL: This node has a PARENT. Focus on what's NEW or DIFFERENT.
+- INHERIT parent's architectural_tone, cultural_tone, dominant color, and mood UNLESS this node is distinctly different
+- Only describe what makes THIS node unique within its parent
+- Avoid repeating parent information - focus on the DELTA (what's added/changed)
+- If parent says "ancient stone", don't repeat it unless this node changes to "modern metal"
+- If parent says "cosmic awe", don't repeat it unless this specific node feels different
 `
     : '';
 
   return `Interpret the user's description into a simplified, flat DNA structure.
 
-OBJECTIVE: Create a single unified node profile that captures the essential visual and atmospheric qualities without hierarchical complexity.
+OBJECTIVE: Create a single unified node profile that captures ${parentContext ? 'ONLY the NEW details that distinguish this node from its parent' : 'the essential visual and atmospheric qualities'}.
 
 NODE INFORMATION:
 Name: ${nodeName}
@@ -93,6 +100,33 @@ ${parentContext ? '   - INHERIT parent context attributes (architectural_tone, c
    - Flat JSON only.
    - No markdown, code fences, or comments.
    - All schema fields required unless explicitly null.
+
+${parentContext ? `6. **Inheritance Rules for Child Nodes**
+   
+   ⚠️ CRITICAL: Leave fields EMPTY ("") if they're the same as parent. Only fill if DIFFERENT.
+   
+   LEAVE EMPTY if same as parent:
+   - architectural_tone (empty "" unless this node has different style)
+   - cultural_tone (empty "" unless this node has different function)
+   - dominant (empty "" unless different primary color)
+   - mood (empty "" unless this specific space feels different)
+   - ambient (empty "" unless different light tone)
+   - atmosphere (empty "" unless air/temperature/weather different here)
+   - colorsAndLighting (empty "" unless lighting is distinctly different)
+   
+   ALWAYS DESCRIBE (unique to this node):
+   - looks (what you SEE in THIS specific node)
+   - spatialLayout (THIS space's shape and dimensions)
+   - dominantElementsDescriptors (objects/structures in THIS node)
+   - uniqueIdentifiers (what makes THIS node recognizable)
+   - searchDesc (specific to THIS node)
+   
+   DESCRIBE ONLY IF DIFFERENT:
+   - materials (only if different from parent's general materials)
+   - sounds (only if different sounds than parent atmosphere)
+   - primary_surfaces (only if different from parent)
+   - secondary_surfaces (only if different from parent)
+` : ''}
 
 RATIONALE
 - Keeps nodes lightweight and fast to merge.
