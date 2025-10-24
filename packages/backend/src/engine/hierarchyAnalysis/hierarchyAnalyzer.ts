@@ -8,7 +8,8 @@ import { generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
 import { buildHierarchyCategorizerPrompt } from './hierarchyCategorizer';
-import { generateNodeDNA, extractParentContext } from './nodeDNAGenerator';
+import { generateHostAndRegions, generateLocationsAndNiches } from './nodeDNAGenerator';
+import { mergeDNA } from './dnaMerge';
 import { eventEmitter } from '../../services/eventEmitter';
 import type { 
   HierarchyAnalysisResult, 
@@ -78,199 +79,131 @@ export async function analyzeHierarchy(
 }
 
 /**
- * Enriches hierarchy with DNA for each node (top-down recursive approach)
- * Generates DNA for Host, then cascades context to child nodes
+ * Enriches hierarchy with DNA using batched generation
+ * - Batch 1: Host + All Regions (1 LLM call)
+ * - Batch 2-N: Locations + Niches per region (1 call per region)
  */
 async function enrichHierarchyWithDNA(
   hierarchy: HierarchyStructure,
   userPrompt: string,
   apiKey: string
 ): Promise<void> {
-  // 1. Generate Host DNA (no parent context)
+  // Step 1: Generate Host + All Regions in one call
   try {
-    hierarchy.host.dna = await generateNodeDNA(
+    const regions = (hierarchy.host.regions || []).map(r => ({
+      name: r.name,
+      description: r.description
+    }));
+
+    const { hostDNA, regionDNAs } = await generateHostAndRegions(
       apiKey,
       userPrompt,
       hierarchy.host.name,
-      'host',
-      hierarchy.host.description
+      hierarchy.host.description,
+      regions
     );
-    
-    // Emit host DNA complete event
+
+    // Assign Host DNA
+    hierarchy.host.dna = hostDNA;
+
+    // Emit Host DNA complete event
     eventEmitter.emit({
       type: 'hierarchy:host-dna-complete',
-      data: { 
+      data: {
         nodeName: hierarchy.host.name,
-        dna: hierarchy.host.dna 
+        dna: hostDNA
+      }
+    });
+
+    // Assign Region DNAs (sparse) and emit individual events
+    regionDNAs.forEach((regionDNA, index) => {
+      if (hierarchy.host.regions && hierarchy.host.regions[index]) {
+        hierarchy.host.regions[index].dna = regionDNA.dna as any;
+        
+        // Emit individual region DNA complete event
+        eventEmitter.emit({
+          type: 'hierarchy:region-dna-complete',
+          data: {
+            nodeName: regionDNA.name,
+            dna: regionDNA.dna
+          }
+        });
       }
     });
   } catch (error) {
-    console.error(`[DNA Generation] Failed for Host "${hierarchy.host.name}":`, error);
-    // Continue without DNA for this node
+    console.error(`[DNA Generation] Failed for Host + Regions:`, error);
+    return;
   }
 
-  // 2. Generate Region DNA (with Host context)
-  if (hierarchy.host.regions) {
+  // Step 2: For each region, generate Locations + Niches
+  if (hierarchy.host.regions && hierarchy.host.dna) {
     for (const region of hierarchy.host.regions) {
-      await enrichRegionWithDNA(region, userPrompt, apiKey, hierarchy.host);
-    }
-  }
-}
-
-/**
- * Enriches a region node and its children with DNA
- */
-async function enrichRegionWithDNA(
-  region: RegionNode,
-  userPrompt: string,
-  apiKey: string,
-  parent: HostNode
-): Promise<void> {
-  // Generate Region DNA
-  try {
-    region.dna = await generateNodeDNA(
-      apiKey,
-      userPrompt,
-      region.name,
-      'region',
-      region.description,
-      extractParentContext(parent.dna)
-    );
-    
-    // Emit region DNA complete event
-    eventEmitter.emit({
-      type: 'hierarchy:region-dna-complete',
-      data: { 
-        nodeName: region.name,
-        dna: region.dna 
+      if (!region.locations || region.locations.length === 0) {
+        continue;
       }
-    });
-  } catch (error) {
-    console.error(`[DNA Generation] Failed for Region "${region.name}":`, error);
-    // Continue without DNA for this node
-  }
 
-  // Generate Location DNA (with Region context)
-  if (region.locations) {
-    for (const location of region.locations) {
-      await enrichLocationWithDNA(location, userPrompt, apiKey, region);
-    }
-  }
-}
+      try {
+        // Merge Host + Region DNA for context
+        const mergedParentDNA = mergeDNA(hierarchy.host.dna, region.dna);
 
-/**
- * Enriches a location node and its children with DNA
- */
-async function enrichLocationWithDNA(
-  location: LocationNode,
-  userPrompt: string,
-  apiKey: string,
-  parent: RegionNode
-): Promise<void> {
-  // Generate Location DNA
-  try {
-    location.dna = await generateNodeDNA(
-      apiKey,
-      userPrompt,
-      location.name,
-      'location',
-      location.description,
-      extractParentContext(parent.dna)
-    );
-    
-    // Emit location DNA complete event
-    eventEmitter.emit({
-      type: 'hierarchy:location-dna-complete',
-      data: { 
-        nodeName: location.name,
-        dna: location.dna 
+        // Prepare locations data
+        const locations = region.locations.map(loc => ({
+          name: loc.name,
+          description: loc.description,
+          niches: (loc.niches || []).map(n => ({
+            name: n.name,
+            description: n.description
+          }))
+        }));
+
+        // Generate all locations + niches for this region
+        const locationResults = await generateLocationsAndNiches(
+          apiKey,
+          userPrompt,
+          region.name,
+          mergedParentDNA,
+          locations
+        );
+
+        // Assign Location and Niche DNAs + emit individual events
+        locationResults.forEach((locResult, locIndex) => {
+          if (!region.locations || !region.locations[locIndex]) return;
+          
+          const location = region.locations[locIndex];
+          location.dna = locResult.dna as any;
+
+          // Emit individual location DNA complete event
+          eventEmitter.emit({
+            type: 'hierarchy:location-dna-complete',
+            data: {
+              nodeName: locResult.name,
+              dna: locResult.dna
+            }
+          });
+
+          // Assign Niche DNAs + emit individual events
+          if (locResult.niches && location.niches) {
+            locResult.niches.forEach((nicheResult, nicheIndex) => {
+              if (location.niches && location.niches[nicheIndex]) {
+                location.niches[nicheIndex].dna = nicheResult.dna as any;
+                
+                // Emit individual niche DNA complete event
+                eventEmitter.emit({
+                  type: 'hierarchy:niche-dna-complete',
+                  data: {
+                    nodeName: nicheResult.name,
+                    dna: nicheResult.dna
+                  }
+                });
+              }
+            });
+          }
+        });
+      } catch (error) {
+        console.error(`[DNA Generation] Failed for Region "${region.name}" locations:`, error);
+        // Continue with next region
       }
-    });
-  } catch (error) {
-    console.error(`[DNA Generation] Failed for Location "${location.name}":`, error);
-    // Continue without DNA for this node
-  }
-
-  // Generate Niche DNA (with Location context)
-  if (location.niches) {
-    for (const niche of location.niches) {
-      await enrichNicheWithDNA(niche, userPrompt, apiKey, location);
     }
-  }
-}
-
-/**
- * Enriches a niche node and its children with DNA
- */
-async function enrichNicheWithDNA(
-  niche: NicheNode,
-  userPrompt: string,
-  apiKey: string,
-  parent: LocationNode
-): Promise<void> {
-  // Generate Niche DNA
-  try {
-    niche.dna = await generateNodeDNA(
-      apiKey,
-      userPrompt,
-      niche.name,
-      'niche',
-      niche.description,
-      extractParentContext(parent.dna)
-    );
-    
-    // Emit niche DNA complete event
-    eventEmitter.emit({
-      type: 'hierarchy:niche-dna-complete',
-      data: { 
-        nodeName: niche.name,
-        dna: niche.dna 
-      }
-    });
-  } catch (error) {
-    console.error(`[DNA Generation] Failed for Niche "${niche.name}":`, error);
-    // Continue without DNA for this node
-  }
-
-  // Generate Detail DNA (with Niche context)
-  if (niche.details) {
-    for (const detail of niche.details) {
-      await enrichDetailWithDNA(detail, userPrompt, apiKey, niche);
-    }
-  }
-}
-
-/**
- * Enriches a detail node with DNA
- */
-async function enrichDetailWithDNA(
-  detail: DetailNode,
-  userPrompt: string,
-  apiKey: string,
-  parent: NicheNode
-): Promise<void> {
-  // Generate Detail DNA
-  try {
-    detail.dna = await generateNodeDNA(
-      apiKey,
-      userPrompt,
-      detail.name,
-      'detail',
-      detail.description,
-      extractParentContext(parent.dna)
-    );
-    
-    // Emit detail DNA complete event
-    eventEmitter.emit({
-      type: 'hierarchy:detail-dna-complete',
-      data: { 
-        nodeName: detail.name,
-        dna: detail.dna 
-      }
-    });
-  } catch (error) {
-    console.error(`[DNA Generation] Failed for Detail "${detail.name}":`, error);
-    // Continue without DNA for this node
   }
 }
 

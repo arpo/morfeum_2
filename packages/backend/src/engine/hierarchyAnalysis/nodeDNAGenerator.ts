@@ -3,12 +3,17 @@
  * 
  * Generates simplified, flat DNA structure for each node in the hierarchy
  * Uses LLM to create visual and atmospheric profiles
+ * 
+ * Supports batched generation:
+ * - Host + All Regions (1 call)
+ * - Locations + Niches per region (1 call per region)
  */
 
 import { generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
-import type { NodeDNA, LayerType, ParentContext } from './types';
+import { formatDNAForContext } from './dnaMerge';
+import type { NodeDNA, LayerType, ParentContext, RegionNode, LocationNode, NicheNode } from './types';
 
 /**
  * Build DNA generation prompt for a node
@@ -160,4 +165,201 @@ export function extractParentContext(parentDNA?: NodeDNA): ParentContext {
     dominant: parentDNA.dominant,
     mood: parentDNA.mood
   };
+}
+
+/**
+ * Generate Host + All Regions in a single LLM call
+ * Returns full DNA for Host and sparse DNA for Regions
+ */
+export async function generateHostAndRegions(
+  apiKey: string,
+  originalPrompt: string,
+  hostName: string,
+  hostDescription: string,
+  regions: Array<{ name: string; description: string }>
+): Promise<{ hostDNA: NodeDNA; regionDNAs: Array<{ name: string; dna: Partial<NodeDNA> }> }> {
+  const prompt = `Generate DNA for a Host world and all its Regions in one batch.
+
+OBJECTIVE: Create complete DNA for the Host, and sparse override DNA for each Region.
+
+USER INPUT:
+${originalPrompt}
+
+HOST:
+Name: ${hostName}
+Description: ${hostDescription}
+
+REGIONS:
+${regions.map(r => `- ${r.name}: ${r.description}`).join('\n')}
+
+OUTPUT STRUCTURE:
+
+{
+  "host": {
+    // FULL DNA - all 22 fields populated
+    "looks": "...",
+    "colorsAndLighting": "...",
+    "atmosphere": "...",
+    "architectural_tone": "...",
+    "cultural_tone": "...",
+    "materials": "...",
+    "mood": "...",
+    "sounds": "...",
+    "dominantElementsDescriptors": "...",
+    "spatialLayout": "...",
+    "primary_surfaces": "...",
+    "secondary_surfaces": "...",
+    "accent_features": "...",
+    "dominant": "...",
+    "secondary": "...",
+    "accent": "...",
+    "ambient": "...",
+    "uniqueIdentifiers": [...],
+    "searchDesc": "..."
+  },
+  "regions": [
+    {
+      "name": "Region Name",
+      "dna": {
+        // SPARSE DNA - only fields that DIFFER from Host
+        // Set to null for fields that should inherit from Host
+        "architectural_tone": "different style" or null,
+        "cultural_tone": "different culture" or null,
+        "looks": null,  // inherits from host
+        "atmosphere": null,  // inherits from host
+        // ... other fields null if inheriting
+      }
+    }
+  ]
+}
+
+CRITICAL GUIDELINES:
+
+1. **Host DNA**: Generate ALL 22 fields with complete descriptions
+2. **Region DNA**: ONLY populate fields that are DIFFERENT from Host
+   - If a region has same atmosphere as host → null
+   - If a region has different architectural style → populate
+   - If a region has unique cultural vibe → populate
+3. **Inheritance**: Null values mean "inherit from parent"
+4. **Clarity**: Make it obvious what makes each region unique
+5. **Output**: Flat JSON only, no markdown or comments
+
+Generate now:`;
+
+  const messages = [
+    { role: 'system', content: prompt },
+    { role: 'user', content: `Generate Host DNA for "${hostName}" and Region DNAs for: ${regions.map(r => r.name).join(', ')}` }
+  ];
+
+  const result = await generateText(apiKey, messages, AI_MODELS.SEED_GENERATION);
+
+  if (result.error || !result.data) {
+    throw new Error(result.error || 'No DNA data returned from LLM');
+  }
+
+  const parsed = parseJSON<{ host: NodeDNA; regions: Array<{ name: string; dna: Partial<NodeDNA> }> }>(result.data.text);
+
+  if (!parsed || !parsed.host) {
+    throw new Error('Failed to parse batched DNA from LLM response');
+  }
+
+  return {
+    hostDNA: parsed.host,
+    regionDNAs: parsed.regions || []
+  };
+}
+
+/**
+ * Generate Locations + Niches for a region in a single LLM call
+ * Takes merged parent DNA (Host + Region) as context
+ * Returns sparse DNA for Locations and Niches
+ */
+export async function generateLocationsAndNiches(
+  apiKey: string,
+  originalPrompt: string,
+  regionName: string,
+  mergedParentDNA: NodeDNA,
+  locations: Array<{ 
+    name: string; 
+    description: string; 
+    niches?: Array<{ name: string; description: string }> 
+  }>
+): Promise<Array<{ 
+  name: string; 
+  dna: Partial<NodeDNA>; 
+  niches: Array<{ name: string; dna: Partial<NodeDNA> }> 
+}>> {
+  const prompt = `Generate DNA for all Locations and Niches in "${regionName}" region.
+
+OBJECTIVE: Create sparse override DNA for each Location and Niche, given the merged parent DNA.
+
+USER INPUT:
+${originalPrompt}
+
+PARENT DNA (MERGED HOST + REGION):
+${formatDNAForContext(mergedParentDNA)}
+
+LOCATIONS:
+${locations.map(loc => `
+- ${loc.name}: ${loc.description}
+  ${loc.niches ? 'Niches:\n' + loc.niches.map(n => `  - ${n.name}: ${n.description}`).join('\n') : ''}
+`).join('\n')}
+
+OUTPUT STRUCTURE:
+
+{
+  "locations": [
+    {
+      "name": "Location Name",
+      "dna": {
+        // SPARSE DNA - only fields that DIFFER from parent
+        "mood": "different mood" or null,
+        "sounds": "different sounds" or null,
+        "looks": null,  // inherits from parent
+        // ... other fields null if inheriting
+      },
+      "niches": [
+        {
+          "name": "Niche Name",
+          "dna": {
+            // SPARSE DNA - only fields that DIFFER from location+parent
+            "atmosphere": "intimate" or null,
+            "materials": "plush velvet" or null,
+            // ... other fields null if inheriting
+          }
+        }
+      ]
+    }
+  ]
+}
+
+CRITICAL GUIDELINES:
+
+1. **Sparse DNA Only**: ONLY populate fields that DIFFER from parent DNA
+2. **Parent Inheritance**: The parent DNA above is already merged (Host + Region)
+3. **Null = Inherit**: Set fields to null if they should inherit from parent
+4. **Differentiation**: Focus on what makes each location/niche unique
+5. **Consistency**: Respect parent's architectural_tone, cultural_tone, colors, mood
+6. **Output**: Flat JSON only, no markdown or comments
+
+Generate now:`;
+
+  const messages = [
+    { role: 'system', content: prompt },
+    { role: 'user', content: `Generate Location DNAs for: ${locations.map(l => l.name).join(', ')}` }
+  ];
+
+  const result = await generateText(apiKey, messages, AI_MODELS.SEED_GENERATION);
+
+  if (result.error || !result.data) {
+    throw new Error(result.error || 'No DNA data returned from LLM');
+  }
+
+  const parsed = parseJSON<{ locations: Array<{ name: string; dna: Partial<NodeDNA>; niches: Array<{ name: string; dna: Partial<NodeDNA> }> }> }>(result.data.text);
+
+  if (!parsed || !parsed.locations) {
+    throw new Error('Failed to parse batched location DNA from LLM response');
+  }
+
+  return parsed.locations;
 }
