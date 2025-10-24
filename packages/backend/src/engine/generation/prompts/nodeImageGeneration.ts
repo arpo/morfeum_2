@@ -136,7 +136,8 @@ export function nodeImageGeneration(
   originalPrompt?: string
 ): string {
   // Determine camera angle based on node type
-  const isOverview = node.type === 'host' || node.type === 'region';
+  // const isOverview = node.type === 'host' || node.type === 'region';
+  const isOverview = node.type === 'host';
   const renderInstructions = isOverview 
     ? overviewRenderInstructions 
     : firstPersonRenderInstructions;
