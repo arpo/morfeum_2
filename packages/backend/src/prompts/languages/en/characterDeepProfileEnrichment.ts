@@ -114,7 +114,6 @@ Mention how their voice changes with mood or setting.
 Describe the cadence and language patterns of their speech.  
 Note whether they speak quickly, pause often, choose poetic phrasing, or favor short direct lines.  
 Mention vocabulary tone (casual, analytical, lyrical, archaic).  
-Cant be a mute or nonverbal character.
 1-2 sentences.
 
 [gender]  
