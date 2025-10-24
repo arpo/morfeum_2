@@ -1,11 +1,13 @@
 /**
- * Hierarchy Categorizer Prompt
+ * Hierarchy Categorization Prompt
  * 
  * Analyzes user input and categorizes it into a 5-layer hierarchy:
  * Host → Region → Location → Niche → Detail
+ * 
+ * @param userPrompt - The user's input to analyze
+ * @returns Prompt string for LLM
  */
-
-export function buildHierarchyCategorizerPrompt(userPrompt: string): string {
+export function hierarchyCategorization(userPrompt: string): string {
   return `You are a spatial hierarchy analyzer. Your task is to analyze user descriptions and organize them into a structured 5-layer hierarchy.
 
 ## ⚠️ CRITICAL: PROPER NESTING RULES

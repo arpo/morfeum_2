@@ -7,7 +7,7 @@
 import { generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
-import { buildHierarchyCategorizerPrompt } from './hierarchyCategorizer';
+import { en } from '../../prompts/languages/en';
 import { generateHostAndRegions, generateLocationsAndNiches } from './nodeDNAGenerator';
 import { mergeDNA } from './dnaMerge';
 import { eventEmitter } from '../../services/eventEmitter';
@@ -34,8 +34,8 @@ export async function analyzeHierarchy(
   userPrompt: string, 
   apiKey: string
 ): Promise<HierarchyAnalysisResult> {
-  // Build prompt
-  const prompt = buildHierarchyCategorizerPrompt(userPrompt);
+  // Build prompt from centralized prompts
+  const prompt = en.hierarchyCategorization(userPrompt);
   
   // Call LLM (using fast model for quick categorization)
   const messages = [
