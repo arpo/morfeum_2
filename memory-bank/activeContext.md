@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Work Focus
-**Batched Differential DNA Generation System Complete** - Implemented efficient batched DNA generation with parent context awareness and sparse DNA architecture. System generates Host + All Regions in one LLM call, then Locations + Niches per region with merged parent DNA as context. Progressive SSE events emit individual node completions for real-time UI updates. Token-optimized prompts focus on essential instructions.
+**Hierarchy-Based Location Spawn System Complete with Full UI Integration** - Integrated the hierarchy system with spawn progress panel and image generation. Location spawns now use the new hierarchy pipeline (POST /api/spawn/location/start) which analyzes structure, generates DNA for all nodes (Host → Region → Location → Niche), and generates an image for the deepest node. Frontend displays 4-stage progress: "Analyzing structure..." → "Generating DNA..." → "Generating image..." → "Complete" with proper SSE event handling and timing animations.
 
 ## Recent Changes
 

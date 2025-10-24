@@ -2,7 +2,65 @@
 
 ## What Works ✅
 
-### Batched Differential DNA Generation System (Latest - Just Completed) ✅
+### Hierarchy Spawn System UI Integration (Latest - Just Completed) ✅
+- **Complete Frontend Integration**: Connected hierarchy spawn system to progress panel and UI
+  - POST `/api/spawn/location/start` endpoint for hierarchy-based location spawns
+  - Frontend routes location spawns through new endpoint (not old hierarchy/analyze)
+  - 4-stage progress tracking with proper labels and timing
+- **Progress Panel Updates** (3 files modified):
+  - **SpawnRow.tsx**: Added hierarchy status labels
+    - `classifying` (25%) → "Analyzing structure..."
+    - `generating_dna` (50%) → "Generating DNA..."
+    - `generating_image` (75%) → "Generating image..."
+    - `completed` (100%) → "Complete"
+  - **spawnTimings.ts**: Added realistic timing animations
+    - `classifying`: 3000ms (3 seconds)
+    - `generating_dna`: 8000ms (8 seconds - multiple nodes)
+    - `generating_image`: 5000ms (5 seconds - Flux generation)
+  - **useSpawnEvents.ts**: Added status update handlers
+    - `hierarchy:classification-complete` → Updates to `classifying`
+    - `hierarchy:host-dna-complete` → Updates to `generating_dna`
+    - `hierarchy:image-generation-started` → Updates to `generating_image`
+    - `hierarchy:complete` → Creates entity, displays image, switches preview
+- **Spawn Route Updates** (2 files modified):
+  - **useSpawnInputLogic.ts**: Locations call `startSpawn()` instead of direct API
+  - **spawnManagerSlice.ts**: Added location route to `/api/spawn/location/start`
+- **Event Handlers Complete** (useSpawnEvents.ts):
+  - `hierarchy:image-complete` → Logs image URL
+  - `hierarchy:complete` → Full integration:
+    - Creates entity session with hierarchy data
+    - Updates entity image (displays in preview panel)
+    - Stores full hierarchy as deep profile
+    - Creates node in location tree
+    - Switches active entity (displays in preview)
+    - Removes from spawn list after 2s
+- **Complete Flow Working**:
+  ```
+  User clicks "Generate" (location)
+      ↓
+  POST /api/spawn/location/start
+      ↓
+  Progress: "Analyzing structure..." (25%)
+      ↓
+  Progress: "Generating DNA..." (50%)
+      ↓
+  Progress: "Generating image..." (75%)
+      ↓
+  Image displays in preview panel (100%)
+      ↓
+  Entity switches to show new location
+  ```
+- **Files Modified**: 5 total (3 progress panel, 2 routing)
+- **Quality Verified**: Zero TypeScript errors, smooth progress transitions, image preview works
+- **Key Benefits**:
+  - ✅ Real-time progress updates through all stages
+  - ✅ Proper status labels (not old "Generating seed...")
+  - ✅ Realistic timing animations matching backend
+  - ✅ Image displays automatically when complete
+  - ✅ Entity preview switches to show new location
+  - ✅ Complete hierarchy stored in deep profile
+
+### Batched Differential DNA Generation System (Previously Completed) ✅
 - **Efficient Batched Generation Architecture**: Reduced LLM calls from 10+ sequential to 2-3 batched
   - **Batch 1**: Host + All Regions in single call (Host: full DNA, Regions: sparse DNA intended)
   - **Batch 2-N**: Locations + Niches per region in single call (sparse DNA with merged parent context)
