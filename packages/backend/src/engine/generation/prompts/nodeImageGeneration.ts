@@ -6,30 +6,24 @@
  * Location/Niche → First-person (immersive)
  */
 
-import { morfeumVibes, qualityPrompt } from '../../../prompts/languages/en/constants';
+import { qualityPrompt } from '../../../prompts/languages/en/constants';
 import type { HierarchyNode, NodeDNA } from '../../hierarchyAnalysis/types';
 
 /**
- * Stripped-down render instructions for overview shots (Host/Region)
+ * Overview shot instructions (Host/Region)
  */
-const overviewRenderInstructions = `
-Elevated oblique view, aerial 45° tilt, wide composition with layered depth.
-Favor diagonal framing, asymmetrical layout, foreground occlusion.
-Light: diffused with parallax through haze.
-Environmental: subtle motion (mist, wind, smoke).
-Avoid symmetry and ground-level perspectives.
-`;
+const overviewShotInstructions = {
+  shot: 'elevated oblique, aerial 45° tilt, wide composition with layered depth, diagonal framing, asymmetrical layout, foreground occlusion (not symmetrical)',
+  light: 'diffused key with parallax through haze, environmental motion (mist, wind, smoke)'
+};
 
 /**
- * Stripped-down render instructions for first-person shots (Location/Niche)
+ * First-person shot instructions (Location/Niche)
  */
-const firstPersonRenderInstructions = `
-Mid-angle view, subject-centered with depth.
-Framing: slightly off-axis, partial occlusion from nearby objects.
-Light: directional with atmospheric depth.
-Environmental: ambient motion (steam, flicker).
-Favor immersive perspective over symmetrical composition.
-`;
+const firstPersonShotInstructions = {
+  shot: 'mid-angle, subject-centered with depth, slightly off-axis, partial occlusion from nearby objects, immersive perspective (not symmetrical)',
+  light: 'directional key, atmospheric depth, environmental motion (steam, flicker)'
+};
 
 /**
  * Build DNA-based image prompt using all fields except searchDesc and sounds
@@ -37,61 +31,31 @@ Favor immersive perspective over symmetrical composition.
 function buildDNAPrompt(
   name: string,
   dna: NodeDNA,
-  renderInstructions: string,
+  shotInstructions: { shot: string; light: string },
   originalPrompt?: string
 ): string {
-  return `${morfeumVibes}
+  return `${name}
 
-${name}
+[SHOT:] ${shotInstructions.shot}
+[LIGHT:] ${shotInstructions.light}
 
-${renderInstructions}
-
+[SCENE:]
 ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
 
-VISUAL DESCRIPTION:
-${dna.looks}
+[LOOK:] ${dna.looks}
+[COLORS & LIGHT:] ${dna.colorsAndLighting}
+[ATMOSPHERE:] ${dna.atmosphere}
+[ARCHITECTURE:] ${dna.architectural_tone}
+[CULTURE:] ${dna.cultural_tone}
+[MATERIALS:] ${dna.materials}
+[MOOD:] ${dna.mood}
+[DOMINANT ELEMENTS:] ${dna.dominantElementsDescriptors}
+[SPATIAL LAYOUT:] ${dna.spatialLayout}
+[SURFACES:] primary ${dna.primary_surfaces}; secondary ${dna.secondary_surfaces}; accents ${dna.accent_features}
+[COLOR PALETTE:] dominant ${dna.dominant}; secondary ${dna.secondary}; accent ${dna.accent}; ambient ${dna.ambient}
+[IDENTIFIERS:] ${dna.uniqueIdentifiers}
 
-COLORS & LIGHTING:
-${dna.colorsAndLighting}
-
-ATMOSPHERE:
-${dna.atmosphere}
-
-ARCHITECTURAL TONE:
-${dna.architectural_tone}
-
-CULTURAL TONE:
-${dna.cultural_tone}
-
-MATERIALS:
-${dna.materials}
-
-MOOD:
-${dna.mood}
-
-DOMINANT ELEMENTS:
-${dna.dominantElementsDescriptors}
-
-SPATIAL LAYOUT:
-${dna.spatialLayout}
-
-SURFACE MATERIALS:
-Primary: ${dna.primary_surfaces}
-Secondary: ${dna.secondary_surfaces}
-Accents: ${dna.accent_features}
-
-COLOR PALETTE:
-Dominant: ${dna.dominant}
-Secondary: ${dna.secondary}
-Accent: ${dna.accent}
-Ambient light: ${dna.ambient}
-
-UNIQUE IDENTIFIERS:
-${dna.uniqueIdentifiers}
-
-[WORLD RULES:]
-No human or animal figures appear unless explicitly mentioned.
-Water, when visible, is calm and mirror-still, reflecting light softly.
+[WORLD RULES:] no humans or animals unless specified; water calm and mirror-still
 
 ${qualityPrompt}
 `;
@@ -103,22 +67,20 @@ ${qualityPrompt}
 function buildBasicPrompt(
   name: string,
   description: string,
-  renderInstructions: string,
+  shotInstructions: { shot: string; light: string },
   originalPrompt?: string
 ): string {
-  return `${morfeumVibes}
+  return `${name}
 
-${name}
+[SHOT:] ${shotInstructions.shot}
+[LIGHT:] ${shotInstructions.light}
 
-${renderInstructions}
-
+[SCENE:]
 ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
 
 ${description}
 
-[WORLD RULES:]
-No human or animal figures appear unless explicitly mentioned.
-Water, when visible, is calm and mirror-still, reflecting light softly.
+[WORLD RULES:] no humans or animals unless specified; water calm and mirror-still
 
 ${qualityPrompt}
 `;
@@ -136,18 +98,17 @@ export function nodeImageGeneration(
   originalPrompt?: string
 ): string {
   // Determine camera angle based on node type
-  // const isOverview = node.type === 'host' || node.type === 'region';
-  const isOverview = node.type === 'host';
-  const renderInstructions = isOverview 
-    ? overviewRenderInstructions 
-    : firstPersonRenderInstructions;
+  const isOverview = node.type === 'host' || node.type === 'region';
+  const shotInstructions = isOverview 
+    ? overviewShotInstructions 
+    : firstPersonShotInstructions;
   
   // Build prompt from DNA (if exists) or fallback to name + description
   if (!node.dna) {
     // Fallback for missing DNA (unlikely but handle gracefully)
-    return buildBasicPrompt(node.name, node.description, renderInstructions, originalPrompt);
+    return buildBasicPrompt(node.name, node.description, shotInstructions, originalPrompt);
   }
   
   // Build rich DNA-based prompt
-  return buildDNAPrompt(node.name, node.dna, renderInstructions, originalPrompt);
+  return buildDNAPrompt(node.name, node.dna, shotInstructions, originalPrompt);
 }
