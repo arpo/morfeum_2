@@ -24,6 +24,7 @@ import { hierarchyCategorization } from './hierarchyCategorization';
 import { nodeDNAGeneration } from './nodeDNAGeneration';
 import { hostAndRegionsDNA } from './hostAndRegionsDNA';
 import { locationsAndNichesDNA } from './locationsAndNichesDNA';
+import { nodeImageGeneration } from './nodeImageGeneration';
 
 // Export flux filters for external use
 export { fluxFilters, getFluxFilter, getDefaultFluxFilter, type FluxFilter } from './fluxFilters';
@@ -53,5 +54,6 @@ export const en: PromptTemplates = {
   hierarchyCategorization,
   nodeDNAGeneration,
   hostAndRegionsDNA,
-  locationsAndNichesDNA
+  locationsAndNichesDNA,
+  nodeImageGeneration
 };

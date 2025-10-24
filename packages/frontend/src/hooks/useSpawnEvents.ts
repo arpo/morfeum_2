@@ -379,6 +379,19 @@ export function useSpawnEvents() {
       console.log(dna);
     });
 
+    // Listen for hierarchy image prompt generated event
+    eventSource.addEventListener('hierarchy:image-prompt-generated', (e) => {
+      const { nodeType, nodeName, prompt } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Image Prompt Generated [${nodeType.toUpperCase()}]: ${nodeName}`);
+      console.log(prompt);
+    });
+
+    // Listen for all image prompts complete event
+    eventSource.addEventListener('hierarchy:all-image-prompts-complete', (e) => {
+      const { totalNodes } = JSON.parse(e.data);
+      console.log(`[Hierarchy] All Image Prompts Complete (${totalNodes} nodes)`);
+    });
+
     // Cleanup on unmount
     return () => {
       eventSource.close();

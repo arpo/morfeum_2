@@ -131,6 +131,131 @@ export async function analyzeHierarchy(
 }
 
 /**
+ * Generate image prompt for the deepest node in the hierarchy using cascaded DNA
+ */
+function generateImagePromptsForHierarchy(
+  hierarchy: HierarchyStructure,
+  userPrompt: string
+): void {
+  // Find the deepest node in each branch and generate image prompt with cascaded DNA
+  if (hierarchy.host.regions) {
+    for (const region of hierarchy.host.regions) {
+      if (region.locations) {
+        for (const location of region.locations) {
+          // Check if this location has niches
+          if (location.niches && location.niches.length > 0) {
+            // Niche is the deepest - generate prompt for niche with cascaded DNA
+            for (const niche of location.niches) {
+              if (niche.dna && hierarchy.host.dna && region.dna && location.dna) {
+                // Cascade DNA: Host → Region → Location → Niche
+                const hostRegionDNA = mergeDNA(hierarchy.host.dna, region.dna);
+                const hostRegionLocationDNA = mergeDNA(hostRegionDNA, location.dna);
+                const fullCascadedDNA = mergeDNA(hostRegionLocationDNA, niche.dna);
+                
+                // Create temp node with cascaded DNA for image prompt
+                const nodeWithCascadedDNA = {
+                  ...niche,
+                  dna: fullCascadedDNA
+                };
+                
+                const nichePrompt = en.nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+                eventEmitter.emit({
+                  type: 'hierarchy:image-prompt-generated',
+                  data: {
+                    nodeType: 'niche',
+                    nodeName: niche.name,
+                    prompt: nichePrompt
+                  }
+                });
+              }
+            }
+          } else if (location.dna && hierarchy.host.dna && region.dna) {
+            // Location is the deepest - generate prompt with cascaded DNA
+            const hostRegionDNA = mergeDNA(hierarchy.host.dna, region.dna);
+            const fullCascadedDNA = mergeDNA(hostRegionDNA, location.dna);
+            
+            const nodeWithCascadedDNA = {
+              ...location,
+              dna: fullCascadedDNA
+            };
+            
+            const locationPrompt = en.nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+            eventEmitter.emit({
+              type: 'hierarchy:image-prompt-generated',
+              data: {
+                nodeType: 'location',
+                nodeName: location.name,
+                prompt: locationPrompt
+              }
+            });
+          }
+        }
+      } else if (region.dna && hierarchy.host.dna) {
+        // Region is the deepest - generate prompt with cascaded DNA
+        const fullCascadedDNA = mergeDNA(hierarchy.host.dna, region.dna);
+        
+        const nodeWithCascadedDNA = {
+          ...region,
+          dna: fullCascadedDNA
+        };
+        
+        const regionPrompt = en.nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+        eventEmitter.emit({
+          type: 'hierarchy:image-prompt-generated',
+          data: {
+            nodeType: 'region',
+            nodeName: region.name,
+            prompt: regionPrompt
+          }
+        });
+      }
+    }
+  } else if (hierarchy.host.dna) {
+    // Host is the only node - generate prompt with host DNA
+    const hostPrompt = en.nodeImageGeneration(hierarchy.host, userPrompt);
+    eventEmitter.emit({
+      type: 'hierarchy:image-prompt-generated',
+      data: {
+        nodeType: 'host',
+        nodeName: hierarchy.host.name,
+        prompt: hostPrompt
+      }
+    });
+  }
+
+  // Emit completion event
+  eventEmitter.emit({
+    type: 'hierarchy:all-image-prompts-complete',
+    data: { totalNodes: 1 } // Always 1 prompt now
+  });
+}
+
+/**
+ * Count nodes with DNA in hierarchy
+ */
+function countNodesWithDNA(hierarchy: HierarchyStructure): number {
+  let count = hierarchy.host.dna ? 1 : 0;
+  
+  if (hierarchy.host.regions) {
+    for (const region of hierarchy.host.regions) {
+      if (region.dna) count++;
+      if (region.locations) {
+        for (const location of region.locations) {
+          if (location.dna) count++;
+          if (location.niches) {
+            for (const niche of location.niches) {
+              if (niche.dna) count++;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  return count;
+}
+
+/**
  * Enriches hierarchy with DNA using batched generation
  * - Batch 1: Host + All Regions (1 LLM call)
  * - Batch 2-N: Locations + Niches per region (1 call per region)
@@ -257,6 +382,9 @@ async function enrichHierarchyWithDNA(
       }
     }
   }
+
+  // Generate and log image prompts after all DNA is complete
+  generateImagePromptsForHierarchy(hierarchy, userPrompt);
 }
 
 /**
