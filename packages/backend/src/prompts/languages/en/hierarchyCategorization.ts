@@ -178,6 +178,16 @@ The prose describes the host world, not separate regions. Only create regions wh
 - Infer minimal regions when locations are listed without regions
 - Multiple locations can share one inferred region if they have similar vibes
 
+### Rule 6: Interior/Inside Detection
+- **"inside X"** or **"interior of X"** → Create X as Location, then create a Niche for the interior space
+- Example: "inside pub in Camden in London"
+  - Host: London
+  - Region: Camden
+  - Location: The Pub (the building/exterior)
+  - Niche: Interior of the Pub (the inside space)
+- **"X (interior)"** WITHOUT "inside" → Treat as regular location with interior description
+  - Example: "The Lantern City (interior)" → Create as Location with interior atmosphere in description
+
 ## REGION INFERENCE GUIDELINES
 
 Create multiple regions when:
