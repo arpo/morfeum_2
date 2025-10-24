@@ -20,11 +20,6 @@ import { navigatorSemanticNodeSelector } from './navigatorSemanticNodeSelector';
 import { generateViewDescriptions } from './generateViewDescriptions';
 import { characterProfileGenerationUserMessage, locationProfileGenerationUserMessage } from './profileGenerationUserMessages';
 import { basicEntityDataFormatting, enhancedEntityDataFormatting } from './entityDataFormatting';
-import { hierarchyCategorization } from './hierarchyCategorization';
-import { nodeDNAGeneration } from './nodeDNAGeneration';
-import { hostAndRegionsDNA } from './hostAndRegionsDNA';
-import { locationsAndNichesDNA } from './locationsAndNichesDNA';
-import { nodeImageGeneration } from './nodeImageGeneration';
 
 // Export flux filters for external use
 export { fluxFilters, getFluxFilter, getDefaultFluxFilter, type FluxFilter } from './fluxFilters';
@@ -51,9 +46,4 @@ export const en: PromptTemplates = {
   locationProfileGenerationUserMessage,
   basicEntityDataFormatting,
   enhancedEntityDataFormatting,
-  hierarchyCategorization,
-  nodeDNAGeneration,
-  hostAndRegionsDNA,
-  locationsAndNichesDNA,
-  nodeImageGeneration
 };

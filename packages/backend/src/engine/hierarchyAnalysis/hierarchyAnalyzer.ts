@@ -7,7 +7,8 @@
 import { generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
-import { en } from '../../prompts/languages/en';
+import { hierarchyCategorization } from '../generation/prompts/hierarchyCategorization';
+import { nodeImageGeneration } from '../generation/prompts/nodeImageGeneration';
 import { generateHostAndRegions, generateLocationsAndNiches } from './nodeDNAGenerator';
 import { mergeDNA } from './dnaMerge';
 import { eventEmitter } from '../../services/eventEmitter';
@@ -30,6 +31,12 @@ import type {
  * Passthrough nodes inherit parent's name and have empty description
  */
 function normalizeHierarchy(hierarchy: HierarchyStructure): void {
+  // Fix: Regions at root level instead of inside host (LLM mistake)
+  if ((hierarchy as any).regions && Array.isArray((hierarchy as any).regions)) {
+    hierarchy.host.regions = (hierarchy as any).regions;
+    delete (hierarchy as any).regions;
+  }
+
   const host = hierarchy.host;
 
   // Fix: Host → Locations (missing Region)
@@ -84,7 +91,7 @@ export async function analyzeHierarchy(
   apiKey: string
 ): Promise<HierarchyAnalysisResult> {
   // Build prompt from centralized prompts
-  const prompt = en.hierarchyCategorization(userPrompt);
+  const prompt = hierarchyCategorization(userPrompt);
   
   // Call LLM (using fast model for quick categorization)
   const messages = [
@@ -158,7 +165,7 @@ function generateImagePromptsForHierarchy(
                   dna: fullCascadedDNA
                 };
                 
-                const nichePrompt = en.nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+                const nichePrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
                 eventEmitter.emit({
                   type: 'hierarchy:image-prompt-generated',
                   data: {
@@ -179,7 +186,7 @@ function generateImagePromptsForHierarchy(
               dna: fullCascadedDNA
             };
             
-            const locationPrompt = en.nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+            const locationPrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
             eventEmitter.emit({
               type: 'hierarchy:image-prompt-generated',
               data: {
@@ -199,7 +206,7 @@ function generateImagePromptsForHierarchy(
           dna: fullCascadedDNA
         };
         
-        const regionPrompt = en.nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+        const regionPrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
         eventEmitter.emit({
           type: 'hierarchy:image-prompt-generated',
           data: {
@@ -212,7 +219,7 @@ function generateImagePromptsForHierarchy(
     }
   } else if (hierarchy.host.dna) {
     // Host is the only node - generate prompt with host DNA
-    const hostPrompt = en.nodeImageGeneration(hierarchy.host, userPrompt);
+    const hostPrompt = nodeImageGeneration(hierarchy.host, userPrompt);
     eventEmitter.emit({
       type: 'hierarchy:image-prompt-generated',
       data: {

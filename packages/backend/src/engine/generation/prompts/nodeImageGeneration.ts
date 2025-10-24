@@ -6,8 +6,8 @@
  * Location/Niche → First-person (immersive)
  */
 
-import { morfeumVibes, qualityPrompt } from './constants';
-import type { HierarchyNode, NodeDNA } from '../../../engine/hierarchyAnalysis/types';
+import { morfeumVibes, qualityPrompt } from '../../../prompts/languages/en/constants';
+import type { HierarchyNode, NodeDNA } from '../../hierarchyAnalysis/types';
 
 /**
  * Stripped-down render instructions for overview shots (Host/Region)

@@ -22,11 +22,6 @@ export type PromptKey =
   | 'locationProfileGenerationUserMessage'
   | 'basicEntityDataFormatting'
   | 'enhancedEntityDataFormatting'
-  | 'hierarchyCategorization'
-  | 'nodeDNAGeneration'
-  | 'hostAndRegionsDNA'
-  | 'locationsAndNichesDNA'
-  | 'nodeImageGeneration';
 
 export type Language = 'en';
 
@@ -58,9 +53,4 @@ export interface PromptTemplates {
   locationProfileGenerationUserMessage: string;
   basicEntityDataFormatting: (name: string, looks: string, wearing: string, personality: string) => string;
   enhancedEntityDataFormatting: (deepProfile: any) => string;
-  hierarchyCategorization: (userPrompt: string) => string;
-  nodeDNAGeneration: (originalPrompt: string, nodeName: string, nodeType: string, nodeDescription: string, parentContext?: { architectural_tone?: string; cultural_tone?: string; dominant?: string; mood?: string }) => string;
-  hostAndRegionsDNA: (originalPrompt: string, hostName: string, hostDescription: string, regions: Array<{ name: string; description: string }>) => string;
-  locationsAndNichesDNA: (originalPrompt: string, regionName: string, mergedParentDNA: string, locations: Array<{ name: string; description: string; niches?: Array<{ name: string; description: string }> }>) => string;
-  nodeImageGeneration: (node: any, originalPrompt?: string) => string;
 }

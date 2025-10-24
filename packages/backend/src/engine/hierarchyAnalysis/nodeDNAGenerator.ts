@@ -13,7 +13,9 @@ import { generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
 import { formatDNAForContext } from './dnaMerge';
-import { en } from '../../prompts/languages/en';
+import { nodeDNAGeneration } from '../generation/prompts/nodeDNAGeneration';
+import { hostAndRegionsDNA } from '../generation/prompts/hostAndRegionsDNA';
+import { locationsAndNichesDNA } from '../generation/prompts/locationsAndNichesDNA';
 import type { NodeDNA, LayerType, ParentContext, RegionNode, LocationNode, NicheNode } from './types';
 
 /**
@@ -28,7 +30,7 @@ export async function generateNodeDNA(
   parentContext?: ParentContext
 ): Promise<NodeDNA> {
   // Build prompt from centralized prompts
-  const prompt = en.nodeDNAGeneration(
+  const prompt = nodeDNAGeneration(
     originalPrompt,
     nodeName,
     nodeType,
@@ -90,7 +92,7 @@ export async function generateHostAndRegions(
   regions: Array<{ name: string; description: string }>
 ): Promise<{ hostDNA: NodeDNA; regionDNAs: Array<{ name: string; dna: Partial<NodeDNA> }> }> {
   // Build prompt from centralized prompts
-  const prompt = en.hostAndRegionsDNA(
+  const prompt = hostAndRegionsDNA(
     originalPrompt,
     hostName,
     hostDescription,
@@ -141,7 +143,7 @@ export async function generateLocationsAndNiches(
   niches: Array<{ name: string; dna: Partial<NodeDNA> }> 
 }>> {
   // Build prompt from centralized prompts
-  const prompt = en.locationsAndNichesDNA(
+  const prompt = locationsAndNichesDNA(
     originalPrompt,
     regionName,
     formatDNAForContext(mergedParentDNA),
