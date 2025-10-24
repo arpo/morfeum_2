@@ -24,10 +24,14 @@ export function SpawnRow({ spawnId, prompt, status, entityType = 'character' }: 
       case 'starting':
       case 'generating_seed':
         return 20;
+      case 'classifying':
+        return 25;
+      case 'generating_dna':
+        return 50;
       case 'generating_flux_prompt':
         return 40;
       case 'generating_image':
-        return 60;
+        return 75;
       case 'analyzing':
         return 80;
       case 'enriching':
@@ -44,6 +48,10 @@ export function SpawnRow({ spawnId, prompt, status, entityType = 'character' }: 
       case 'starting':
       case 'generating_seed':
         return 'Generating seed...';
+      case 'classifying':
+        return 'Analyzing structure...';
+      case 'generating_dna':
+        return 'Generating DNA...';
       case 'generating_flux_prompt':
         return 'Creating FLUX prompt...';
       case 'generating_image':

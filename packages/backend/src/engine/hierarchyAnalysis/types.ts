@@ -131,6 +131,7 @@ export interface HierarchyMetadata {
 export interface HierarchyAnalysisResult {
   hierarchy: HierarchyStructure;
   metadata: HierarchyMetadata;
+  imageUrl?: string;
 }
 
 /**

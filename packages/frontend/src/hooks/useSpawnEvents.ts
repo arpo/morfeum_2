@@ -342,6 +342,14 @@ export function useSpawnEvents() {
       const { hierarchy } = JSON.parse(e.data);
       console.log('[Hierarchy] Classification Complete:');
       console.log(hierarchy);
+      
+      // Update status for all active location spawns
+      const activeSpawns = useStore.getState().activeSpawns;
+      activeSpawns.forEach((spawn, spawnId) => {
+        if (spawn.entityType === 'location' && updateSpawnStatus) {
+          updateSpawnStatus(spawnId, 'classifying');
+        }
+      });
     });
 
     // Listen for hierarchy host DNA complete event
@@ -349,6 +357,14 @@ export function useSpawnEvents() {
       const { nodeName, dna } = JSON.parse(e.data);
       console.log(`[Hierarchy] Host DNA Complete: ${nodeName}`);
       console.log(dna);
+      
+      // Update status to DNA generation
+      const activeSpawns = useStore.getState().activeSpawns;
+      activeSpawns.forEach((spawn, spawnId) => {
+        if (spawn.entityType === 'location' && updateSpawnStatus) {
+          updateSpawnStatus(spawnId, 'generating_dna');
+        }
+      });
     });
 
     // Listen for hierarchy region DNA complete event
@@ -390,6 +406,92 @@ export function useSpawnEvents() {
     eventSource.addEventListener('hierarchy:all-image-prompts-complete', (e) => {
       const { totalNodes } = JSON.parse(e.data);
       console.log(`[Hierarchy] All Image Prompts Complete (${totalNodes} nodes)`);
+    });
+
+    // Listen for hierarchy image generation started event
+    eventSource.addEventListener('hierarchy:image-generation-started', (e) => {
+      const { nodeType, nodeName, prompt } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Image Generation Started [${nodeType.toUpperCase()}]: ${nodeName}`);
+      
+      // Update status to image generation
+      const activeSpawns = useStore.getState().activeSpawns;
+      activeSpawns.forEach((spawn, spawnId) => {
+        if (spawn.entityType === 'location' && updateSpawnStatus) {
+          updateSpawnStatus(spawnId, 'generating_image');
+        }
+      });
+    });
+
+    // Listen for hierarchy image complete event
+    eventSource.addEventListener('hierarchy:image-complete', (e) => {
+      const { nodeType, nodeName, imageUrl, imagePrompt } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Image Complete [${nodeType.toUpperCase()}]: ${nodeName}`);
+      console.log('Image URL:', imageUrl);
+    });
+
+    // Listen for hierarchy complete event (FINAL - displays result)
+    eventSource.addEventListener('hierarchy:complete', (e) => {
+      const { spawnId, hierarchy, metadata, imageUrl, entityType } = JSON.parse(e.data);
+      console.log(`[Hierarchy] Complete!`);
+      console.log('Hierarchy:', hierarchy);
+      console.log('Metadata:', metadata);
+      console.log('Image URL:', imageUrl);
+      
+      // Create entity session with hierarchy data
+      if (createEntity && hierarchy.host) {
+        const seed = {
+          name: hierarchy.host.name,
+          looks: hierarchy.host.dna?.looks || hierarchy.host.description,
+          atmosphere: hierarchy.host.dna?.atmosphere || '',
+          mood: hierarchy.host.dna?.mood || ''
+        };
+        createEntity(spawnId, seed, 'location');
+      }
+      
+      // Update entity with image
+      if (updateEntityImage && imageUrl) {
+        updateEntityImage(spawnId, imageUrl);
+      }
+      
+      // Store full hierarchy as deep profile
+      if (updateEntityProfile) {
+        updateEntityProfile(spawnId, {
+          hierarchy,
+          metadata,
+          imageUrl
+        } as any);
+      }
+      
+      // Create node in location tree
+      if (hierarchy.host) {
+        const node: Partial<Node> = {
+          id: spawnId,
+          type: 'world' as any,
+          name: hierarchy.host.name,
+          dna: hierarchy as any,
+          imagePath: imageUrl || '',
+          focus: undefined
+        };
+        
+        createNode(node as any);
+        addNodeToTree(spawnId, null, spawnId, 'world' as any);
+      }
+      
+      // Switch to this entity
+      if (setActiveEntity) {
+        setActiveEntity(spawnId);
+      }
+      
+      // Update spawn status and remove from active list
+      if (updateSpawnStatus) {
+        updateSpawnStatus(spawnId, 'completed');
+      }
+      
+      setTimeout(() => {
+        if (removeSpawn) {
+          removeSpawn(spawnId);
+        }
+      }, 2000);
     });
 
     // Cleanup on unmount

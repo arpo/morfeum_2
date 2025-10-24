@@ -22,10 +22,12 @@ export const STAGE_TIMINGS: EntityTimings = {
   },
   location: {
     starting: 2500,
-    generating_seed: 2500,      // Locations typically take slightly longer
-    generating_image: 2300,
-    analyzing: 3000,
-    enriching: 4200,
+    generating_seed: 2500,      // Old location system (deprecated)
+    classifying: 3000,          // Hierarchy: Structure analysis
+    generating_dna: 8000,       // Hierarchy: DNA generation (multiple nodes)
+    generating_image: 5000,     // Hierarchy: Image generation with Flux
+    analyzing: 3000,            // Old location system
+    enriching: 4200,            // Old location system
     completed: 200              // Quick jump to 100%
   },
   sublocation: {

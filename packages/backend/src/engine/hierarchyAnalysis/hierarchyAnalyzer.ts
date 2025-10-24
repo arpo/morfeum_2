@@ -4,7 +4,7 @@
  * Calls LLM to analyze user input and extract hierarchical structure
  */
 
-import { generateText } from '../../services/mzoo';
+import { generateText, generateImage } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
 import { hierarchyCategorization } from '../generation/prompts/hierarchyCategorization';
@@ -84,7 +84,7 @@ function normalizeHierarchy(hierarchy: HierarchyStructure): void {
  * 
  * @param userPrompt - User's description of place/scene
  * @param apiKey - MZOO API key
- * @returns Structured hierarchy with metadata
+ * @returns Structured hierarchy with metadata and imageUrl
  */
 export async function analyzeHierarchy(
   userPrompt: string, 
@@ -125,8 +125,8 @@ export async function analyzeHierarchy(
     data: { hierarchy: parsedHierarchy }
   });
 
-  // Enrich hierarchy with DNA (top-down approach)
-  await enrichHierarchyWithDNA(parsedHierarchy, userPrompt, apiKey);
+  // Enrich hierarchy with DNA (top-down approach) and generate image
+  const imageUrl = await enrichHierarchyWithDNA(parsedHierarchy, userPrompt, apiKey);
 
   // Generate metadata
   const metadata = generateMetadata(parsedHierarchy);
@@ -134,50 +134,72 @@ export async function analyzeHierarchy(
   return {
     hierarchy: parsedHierarchy,
     metadata,
+    imageUrl: imageUrl || undefined,
   };
 }
 
 /**
- * Generate image prompt for the deepest node in the hierarchy using cascaded DNA
+ * Generate image for the FIRST deepest node in the hierarchy using cascaded DNA
+ * Returns the image URL
  */
-function generateImagePromptsForHierarchy(
+async function generateImageForDeepestNode(
   hierarchy: HierarchyStructure,
-  userPrompt: string
-): void {
-  // Find the deepest node in each branch and generate image prompt with cascaded DNA
+  userPrompt: string,
+  apiKey: string
+): Promise<string | null> {
+  // Find the FIRST deepest node (Niche > Location > Region > Host)
   if (hierarchy.host.regions) {
     for (const region of hierarchy.host.regions) {
       if (region.locations) {
         for (const location of region.locations) {
-          // Check if this location has niches
+          // Check if this location has niches - deepest level
           if (location.niches && location.niches.length > 0) {
-            // Niche is the deepest - generate prompt for niche with cascaded DNA
-            for (const niche of location.niches) {
-              if (niche.dna && hierarchy.host.dna && region.dna && location.dna) {
-                // Cascade DNA: Host → Region → Location → Niche
-                const hostRegionDNA = mergeDNA(hierarchy.host.dna, region.dna);
-                const hostRegionLocationDNA = mergeDNA(hostRegionDNA, location.dna);
-                const fullCascadedDNA = mergeDNA(hostRegionLocationDNA, niche.dna);
-                
-                // Create temp node with cascaded DNA for image prompt
-                const nodeWithCascadedDNA = {
-                  ...niche,
-                  dna: fullCascadedDNA
-                };
-                
-                const nichePrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
-                eventEmitter.emit({
-                  type: 'hierarchy:image-prompt-generated',
-                  data: {
-                    nodeType: 'niche',
-                    nodeName: niche.name,
-                    prompt: nichePrompt
-                  }
-                });
+            const niche = location.niches[0]; // Take first niche
+            if (niche.dna && hierarchy.host.dna && region.dna && location.dna) {
+              // Cascade DNA: Host → Region → Location → Niche
+              const hostRegionDNA = mergeDNA(hierarchy.host.dna, region.dna);
+              const hostRegionLocationDNA = mergeDNA(hostRegionDNA, location.dna);
+              const fullCascadedDNA = mergeDNA(hostRegionLocationDNA, niche.dna);
+              
+              const nodeWithCascadedDNA = {
+                ...niche,
+                dna: fullCascadedDNA
+              };
+              
+              // Generate prompt and image
+              const imagePrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+              
+              eventEmitter.emit({
+                type: 'hierarchy:image-generation-started',
+                data: {
+                  nodeType: 'niche',
+                  nodeName: niche.name,
+                  prompt: imagePrompt
+                }
+              });
+              
+              const result = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
+              
+              if (result.error || !result.data?.images?.[0]?.url) {
+                throw new Error(result.error || 'Image URL not found in response');
               }
+              
+              const imageUrl = result.data.images[0].url;
+              
+              eventEmitter.emit({
+                type: 'hierarchy:image-complete',
+                data: {
+                  nodeType: 'niche',
+                  nodeName: niche.name,
+                  imageUrl,
+                  imagePrompt
+                }
+              });
+              
+              return imageUrl;
             }
           } else if (location.dna && hierarchy.host.dna && region.dna) {
-            // Location is the deepest - generate prompt with cascaded DNA
+            // Location is the deepest - generate image
             const hostRegionDNA = mergeDNA(hierarchy.host.dna, region.dna);
             const fullCascadedDNA = mergeDNA(hostRegionDNA, location.dna);
             
@@ -186,19 +208,40 @@ function generateImagePromptsForHierarchy(
               dna: fullCascadedDNA
             };
             
-            const locationPrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+            const imagePrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+            
             eventEmitter.emit({
-              type: 'hierarchy:image-prompt-generated',
+              type: 'hierarchy:image-generation-started',
               data: {
                 nodeType: 'location',
                 nodeName: location.name,
-                prompt: locationPrompt
+                prompt: imagePrompt
               }
             });
+            
+            const result = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
+            
+            if (result.error || !result.data?.images?.[0]?.url) {
+              throw new Error(result.error || 'Image URL not found in response');
+            }
+            
+            const imageUrl = result.data.images[0].url;
+            
+            eventEmitter.emit({
+              type: 'hierarchy:image-complete',
+              data: {
+                nodeType: 'location',
+                nodeName: location.name,
+                imageUrl,
+                imagePrompt
+              }
+            });
+            
+            return imageUrl;
           }
         }
       } else if (region.dna && hierarchy.host.dna) {
-        // Region is the deepest - generate prompt with cascaded DNA
+        // Region is the deepest - generate image
         const fullCascadedDNA = mergeDNA(hierarchy.host.dna, region.dna);
         
         const nodeWithCascadedDNA = {
@@ -206,35 +249,73 @@ function generateImagePromptsForHierarchy(
           dna: fullCascadedDNA
         };
         
-        const regionPrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+        const imagePrompt = nodeImageGeneration(nodeWithCascadedDNA, userPrompt);
+        
         eventEmitter.emit({
-          type: 'hierarchy:image-prompt-generated',
+          type: 'hierarchy:image-generation-started',
           data: {
             nodeType: 'region',
             nodeName: region.name,
-            prompt: regionPrompt
+            prompt: imagePrompt
           }
         });
+        
+        const result = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
+        
+        if (result.error || !result.data?.images?.[0]?.url) {
+          throw new Error(result.error || 'Image URL not found in response');
+        }
+        
+        const imageUrl = result.data.images[0].url;
+        
+        eventEmitter.emit({
+          type: 'hierarchy:image-complete',
+          data: {
+            nodeType: 'region',
+            nodeName: region.name,
+            imageUrl,
+            imagePrompt
+          }
+        });
+        
+        return imageUrl;
       }
     }
   } else if (hierarchy.host.dna) {
-    // Host is the only node - generate prompt with host DNA
-    const hostPrompt = nodeImageGeneration(hierarchy.host, userPrompt);
+    // Host is the only node - generate image
+    const imagePrompt = nodeImageGeneration(hierarchy.host, userPrompt);
+    
     eventEmitter.emit({
-      type: 'hierarchy:image-prompt-generated',
+      type: 'hierarchy:image-generation-started',
       data: {
         nodeType: 'host',
         nodeName: hierarchy.host.name,
-        prompt: hostPrompt
+        prompt: imagePrompt
       }
     });
+    
+    const result = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
+    
+    if (result.error || !result.data?.images?.[0]?.url) {
+      throw new Error(result.error || 'Image URL not found in response');
+    }
+    
+    const imageUrl = result.data.images[0].url;
+    
+    eventEmitter.emit({
+      type: 'hierarchy:image-complete',
+      data: {
+        nodeType: 'host',
+        nodeName: hierarchy.host.name,
+        imageUrl,
+        imagePrompt
+      }
+    });
+    
+    return imageUrl;
   }
-
-  // Emit completion event
-  eventEmitter.emit({
-    type: 'hierarchy:all-image-prompts-complete',
-    data: { totalNodes: 1 } // Always 1 prompt now
-  });
+  
+  return null;
 }
 
 /**
@@ -266,12 +347,13 @@ function countNodesWithDNA(hierarchy: HierarchyStructure): number {
  * Enriches hierarchy with DNA using batched generation
  * - Batch 1: Host + All Regions (1 LLM call)
  * - Batch 2-N: Locations + Niches per region (1 call per region)
+ * - Returns imageUrl from deepest node
  */
 async function enrichHierarchyWithDNA(
   hierarchy: HierarchyStructure,
   userPrompt: string,
   apiKey: string
-): Promise<void> {
+): Promise<string | null> {
   // Step 1: Generate Host + All Regions in one call
   try {
     const regions = (hierarchy.host.regions || []).map(r => ({
@@ -316,7 +398,7 @@ async function enrichHierarchyWithDNA(
     });
   } catch (error) {
     console.error(`[DNA Generation] Failed for Host + Regions:`, error);
-    return;
+    return null;
   }
 
   // Step 2: For each region, generate Locations + Niches
@@ -390,8 +472,9 @@ async function enrichHierarchyWithDNA(
     }
   }
 
-  // Generate and log image prompts after all DNA is complete
-  generateImagePromptsForHierarchy(hierarchy, userPrompt);
+  // Generate image for deepest node after all DNA is complete
+  const imageUrl = await generateImageForDeepestNode(hierarchy, userPrompt, apiKey);
+  return imageUrl;
 }
 
 /**

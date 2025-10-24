@@ -49,34 +49,14 @@ export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
         setError(errorMessage);
       }
     } else {
-      // Locations: Call hierarchy analysis endpoint for testing
+      // Locations: Use hierarchy spawn system with SSE events
       try {
-        console.log('[Hierarchy Test] Analyzing location:', textPrompt.trim());
-        
-        const response = await fetch('/api/mzoo/hierarchy/analyze', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            userPrompt: textPrompt.trim()
-          })
-        });
-
-        if (response.ok) {
-          const result = await response.json();
-          
-        } else {
-          console.error('[Hierarchy Test] Failed:', response.status);
-          const errorText = await response.text();
-          console.error('[Hierarchy Test] Error:', errorText);
-        }
-        
+        await startSpawn(textPrompt.trim(), entityType, false); // Use spawn system
         setTextPrompt('');
         setError(null);
       } catch (err) {
-        console.error('[Hierarchy Test] Exception:', err);
-        setError('Error: Could not analyze hierarchy.');
+        const errorMessage = 'Error: Could not start location spawn.';
+        setError(errorMessage);
       }
     }
   }, [textPrompt, entityType, startSpawn]);

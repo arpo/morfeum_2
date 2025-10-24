@@ -45,6 +45,9 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
       } else if (useNewEngine && entityType === 'character') {
         endpoint = '/api/spawn/engine/start';
         body = { prompt, entityType };
+      } else if (entityType === 'location') {
+        endpoint = '/api/spawn/location/start';
+        body = { prompt };
       } else {
         endpoint = '/api/spawn/start';
         body = { prompt, entityType };

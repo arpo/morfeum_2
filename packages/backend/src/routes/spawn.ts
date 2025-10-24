@@ -199,10 +199,10 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
 }));
 
 /**
- * POST /api/spawn/start - OLD SYSTEM: Start a new spawn process (deprecated, use /engine/start)
+ * POST /api/spawn/location/start - NEW: Start hierarchy-based location spawn
  */
-router.post('/start', asyncHandler(async (req: Request, res: Response) => {
-  const { prompt, entityType = 'character' } = req.body;
+router.post('/location/start', asyncHandler(async (req: Request, res: Response) => {
+  const { prompt } = req.body;
 
   if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -213,26 +213,60 @@ router.post('/start', asyncHandler(async (req: Request, res: Response) => {
     return;
   }
 
-  if (entityType !== 'character' && entityType !== 'location') {
-    res.status(HTTP_STATUS.BAD_REQUEST).json({
-      message: 'Invalid entity type',
-      error: 'entityType must be either "character" or "location"',
-      timestamp: new Date().toISOString(),
-    });
-    return;
-  }
+  const spawnId = `loc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  const apiKey = (req as any).mzooApiKey;
 
-  const spawnManager = getSpawnManager((req as any).mzooApiKey);
-  const spawnId = spawnManager.startSpawn(prompt.trim(), entityType);
-
+  // Send immediate response
   res.status(HTTP_STATUS.OK).json({
-    message: 'Spawn process started',
-    data: { 
-      spawnId, 
-      entityType
-    },
+    message: 'Location spawn started (hierarchy system)',
+    data: { spawnId, entityType: 'location', engine: 'hierarchy' },
     timestamp: new Date().toISOString(),
   });
+
+  // Run hierarchy analysis asynchronously with SSE events
+  (async () => {
+    const pipelineStartTime = Date.now();
+
+    try {
+      // Import hierarchy analyzer
+      const { analyzeHierarchy } = await import('../engine/hierarchyAnalysis');
+      
+      // Analyze hierarchy (emits events during process)
+      const result = await analyzeHierarchy(prompt.trim(), apiKey);
+      
+      // Emit final complete event with imageUrl
+      eventEmitter.emit({
+        type: 'hierarchy:complete',
+        data: {
+          spawnId,
+          hierarchy: result.hierarchy,
+          metadata: result.metadata,
+          imageUrl: result.imageUrl,
+          entityType: 'location'
+        }
+      });
+
+      // Log completion
+      const totalTime = Date.now() - pipelineStartTime;
+      console.log(`\n[HierarchyPipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
+      console.log(`  Entity Type: location`);
+      console.log(`  Layers: ${result.metadata.layersDetected.join(' → ')}`);
+      console.log(`  Total Nodes: ${result.metadata.totalNodes}`);
+      console.log(`  Image URL: ${result.imageUrl || 'none'}`);
+      console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
+
+    } catch (error: any) {
+      console.error('[Hierarchy Route] Pipeline failed:', error);
+      eventEmitter.emit({
+        type: 'hierarchy:error',
+        data: {
+          spawnId,
+          error: error.message || 'Unknown error',
+          stage: 'hierarchy-analysis'
+        }
+      });
+    }
+  })();
 }));
 
 /**
