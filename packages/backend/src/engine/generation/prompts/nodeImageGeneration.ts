@@ -18,11 +18,21 @@ const overviewShotInstructions = {
 };
 
 /**
- * First-person shot instructions (Location/Niche)
+ * First-person EXTERIOR shot instructions (Location)
+ * Dynamic outdoor perspective with depth and asymmetry
  */
-const firstPersonShotInstructions = {
-  shot: 'mid-angle, subject-centered with depth, slightly off-axis, partial occlusion from nearby objects, immersive perspective (not symmetrical)',
-  light: 'directional key, atmospheric depth, environmental motion (steam, flicker)'
+const firstPersonExteriorInstructions = {
+  shot: 'elevated oblique 3/4 view, diagonal approach angle, foreground occlusion from natural elements (branches, rocks, structures), off-axis composition with cropped edges, layered depth showing near/mid/far, asymmetrical framing (not centered, not symmetrical)',
+  light: 'directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions'
+};
+
+/**
+ * First-person INTERIOR shot instructions (Niche)
+ * Dynamic indoor perspective with depth and asymmetry
+ */
+const firstPersonInteriorInstructions = {
+  shot: 'medium elevated offset angle, diagonal composition through doorway or partial wall, foreground intrusion from architectural elements (beams, pillars, furniture edges), off-axis framing with cropped geometry, layered depth (not corridor symmetry)',
+  light: 'hard sidelight cutting through space, atmospheric depth with environmental motion (steam, dust motes, flickering sources), mixed lighting temperature creating visual texture'
 };
 
 /**
@@ -55,8 +65,9 @@ ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
 [COLOR PALETTE:] dominant ${dna.dominant}; secondary ${dna.secondary}; accent ${dna.accent}; ambient ${dna.ambient}
 [IDENTIFIERS:] ${dna.uniqueIdentifiers}
 
-[WORLD RULES:] no humans or animals unless specified; water calm and mirror-still
+[WORLD RULES:] water calm and mirror-still
 
+IMPORTANT: no humans or animals unless specified
 ${qualityPrompt}
 `;
 }
@@ -98,10 +109,18 @@ export function nodeImageGeneration(
   originalPrompt?: string
 ): string {
   // Determine camera angle based on node type
-  const isOverview = node.type === 'host' || node.type === 'region';
-  const shotInstructions = isOverview 
-    ? overviewShotInstructions 
-    : firstPersonShotInstructions;
+  let shotInstructions;
+  
+  if (node.type === 'host' || node.type === 'region') {
+    // Overview: Aerial/elevated shots
+    shotInstructions = overviewShotInstructions;
+  } else if (node.type === 'location') {
+    // Location: First-person EXTERIOR (outside, ground level)
+    shotInstructions = firstPersonExteriorInstructions;
+  } else {
+    // Niche: First-person INTERIOR (inside, enclosed)
+    shotInstructions = firstPersonInteriorInstructions;
+  }
   
   // Build prompt from DNA (if exists) or fallback to name + description
   if (!node.dna) {
