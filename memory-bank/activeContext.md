@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Work Focus
-**Hierarchy-Based Location Spawn System Complete with Full UI Integration** - Integrated the hierarchy system with spawn progress panel and image generation. Location spawns now use the new hierarchy pipeline (POST /api/spawn/location/start) which analyzes structure, generates DNA for all nodes (Host → Region → Location → Niche), and generates an image for the deepest node. Frontend displays 4-stage progress: "Analyzing structure..." → "Generating DNA..." → "Generating image..." → "Complete" with proper SSE event handling and timing animations.
+**Visual Enrichment for Deepest Node - Instant Image Generation** - Enhanced hierarchy classification to generate rich visual details for the deepest node only (name, looks, atmosphere, mood). This creates much more atmospheric, detailed images immediately after classification (~6-10 seconds total). Locations default to exterior shots; "inside" keyword creates niche nodes for interior shots. System now generates creative location names ("The Iron Tide" instead of "Bar") and detailed visual descriptions that flow into the image prompt for richer results.
 
 ## Recent Changes
 

@@ -64,8 +64,11 @@ export function hierarchyCategorization(userPrompt: string): string {
 - "Pub in Camden in London" → Host (London) + Region (Camden) + Location (Pub)
 
 **Rule 4: Interior/Inside detection**
-- "inside pub in Camden" → Host + Region + Location (pub) + Niche (interior)
-- "Pub (interior)" → Host + Region + Location with interior description
+- "Bar at Ringön in Göteborg" → Host + Region + **Location** (gets exterior shot)
+- "Inside bar at Ringön in Göteborg" → Host + Region + Location (bar) + **Niche** (interior, gets interior shot)
+- "Pub (interior)" → Host + Region + Location + Niche with interior description
+
+**Key: Location = EXTERIOR by default. Add "inside" to create Niche = INTERIOR.**
 
 **Keep minimal unless:**
 - Different vibes warrant multiple regions (Financial District vs Arts District)

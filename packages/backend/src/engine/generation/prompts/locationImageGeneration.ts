@@ -11,13 +11,13 @@ const morfeumVibes = 'Morfeum aesthetic — hyper-realistic, high-contrast visua
  * Shot instructions based on node type
  */
 function getLocationShotInstructions(nodeType: string) {
-  if (nodeType === 'host' || nodeType === 'region') {
+  if (nodeType === 'host') {
     // Overview shots for large areas
     return {
       shot: 'elevated oblique, aerial 45° tilt, wide composition with layered depth, diagonal framing, asymmetrical layout',
       light: 'diffused key with parallax through haze, environmental motion (mist, wind, smoke)'
     };
-  } else if (nodeType === 'location') {
+  } else if (nodeType === 'location' || nodeType === 'region') {
     // Exterior ground-level for locations
     return {
       shot: 'elevated oblique 3/4 view, diagonal approach angle, foreground occlusion from natural elements, off-axis composition with cropped edges, layered depth',

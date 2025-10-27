@@ -2,7 +2,41 @@
 
 ## What Works ✅
 
-### Hierarchy Spawn System UI Integration (Latest - Just Completed) ✅
+### Visual Enrichment for Deepest Node - Instant Image Generation (Latest - Just Completed) ✅
+- **Enhanced Hierarchy Classification with Visual Details**: Deepest node now receives rich visual enrichment
+  - **Name Enrichment**: Creative, memorable names (e.g., "The Iron Tide" instead of "Bar")
+  - **Visual Fields Added**: looks, atmosphere, mood fields for deepest node only
+  - **Image Prompt Integration**: Enriched fields flow directly into image generation
+  - **Exterior/Interior Shot Logic**: Locations default to exterior, "inside" keyword creates niche nodes for interior
+- **Hierarchy Classification Updates** (hierarchyCategorization.ts):
+  - Added comprehensive visual enrichment section for deepest node
+  - Explicit guidance: Use mentioned name OR invent memorable one
+  - Examples: "The Whispering Archives", "Neon Sanctum", "The Rusted Anchor"
+  - Clear instructions: Avoid generic names like "Bar", "Club", "Room"
+  - Parent nodes (Host, Region) remain simple (type, name, description only)
+- **Image Generation Updates** (locationImageGeneration.ts):
+  - Extracts enriched fields from deepest node (looks, atmosphere, mood)
+  - Builds enhanced scene description with all visual details
+  - Type-safe handling with optional field checking
+- **Frontend Integration** (useSpawnEvents.ts):
+  - Extracts all enriched fields from deepest node when creating entity
+  - Falls back to description if enriched fields not present
+  - Entity preview displays enriched information immediately
+- **Shot Logic Clarification**:
+  - Rule 4 updated with explicit examples:
+    - "Bar at Ringön" → Location (exterior shot)
+    - "Inside bar at Ringön" → Location + Niche (interior shot via niche node)
+  - Key principle documented: Location = EXTERIOR by default, "inside" creates Niche = INTERIOR
+- **Files Modified**: 3 total (hierarchyCategorization.ts, locationImageGeneration.ts, useSpawnEvents.ts)
+- **Quality Verified**: Backend build passes (zero TypeScript errors), proper shot selection logic
+- **Key Benefits**:
+  - ✅ **Much Richer Images**: Detailed visual descriptions generate more atmospheric results
+  - ✅ **Creative Names**: Memorable location names instead of generic labels
+  - ✅ **Instant Feedback**: All enrichment happens during classification (~6-10 seconds total)
+  - ✅ **Clear Shot Logic**: Exterior/interior distinction well-documented and tested
+  - ✅ **Backward Compatible**: Parent nodes unchanged, only deepest node enriched
+
+### Hierarchy Spawn System UI Integration (Previously Completed) ✅
 - **Complete Frontend Integration**: Connected hierarchy spawn system to progress panel and UI
   - POST `/api/spawn/location/start` endpoint for hierarchy-based location spawns
   - Frontend routes location spawns through new endpoint (not old hierarchy/analyze)
