@@ -31,8 +31,15 @@ import type {
  * Passthrough nodes inherit parent's name and have empty description
  */
 function normalizeHierarchy(hierarchy: HierarchyStructure): void {
+  // Debug: Log structure before normalization
+  console.log('[Hierarchy] Structure before normalization:');
+  console.log('  - host:', hierarchy.host.name);
+  console.log('  - host.regions:', hierarchy.host.regions ? hierarchy.host.regions.length : 'undefined');
+  console.log('  - root keys:', Object.keys(hierarchy));
+  
   // Fix: Regions at root level instead of inside host (LLM mistake)
   if ((hierarchy as any).regions && Array.isArray((hierarchy as any).regions)) {
+    console.log('[Hierarchy] Found regions at root level, moving to host');
     hierarchy.host.regions = (hierarchy as any).regions;
     delete (hierarchy as any).regions;
   }
@@ -50,6 +57,30 @@ function normalizeHierarchy(hierarchy: HierarchyStructure): void {
     }];
     
     delete (hierarchy as any).locations;
+  }
+
+  // Fix: Singular location at root level (should be inside region inside host)
+  if ((hierarchy as any).location && typeof (hierarchy as any).location === 'object') {
+    const location = (hierarchy as any).location;
+    
+    console.log('[Hierarchy] Normalizing singular location at root:', location.name);
+    
+    // Ensure location has type field
+    if (!location.type) {
+      location.type = 'location';
+    }
+    
+    // Create passthrough region with single location
+    hierarchy.host.regions = [{
+      type: 'region',
+      name: hierarchy.host.name,  // Inherit host name
+      description: '',  // Empty description
+      locations: [location]  // Wrap in array
+    }];
+    
+    console.log('[Hierarchy] Created region with location. regions:', hierarchy.host.regions.length);
+    
+    delete (hierarchy as any).location;
   }
 
   // Fix: Niches at root level (should be inside location inside region inside host)
@@ -152,6 +183,24 @@ export async function analyzeHierarchy(
     console.error('[Hierarchy] Failed to parse JSON from LLM response:');
     console.error('Raw response:', result.data.text.substring(0, 500));
     throw new Error(`Failed to parse JSON: ${parseError}`);
+  }
+  
+  // Fix: If LLM returns only location without host, create host wrapper
+  if (parsedHierarchy && !parsedHierarchy.host && (parsedHierarchy as any).location) {
+    console.log('[Hierarchy] LLM returned location without host, creating host wrapper');
+    const location = (parsedHierarchy as any).location;
+    
+    // Create host from location name
+    parsedHierarchy = {
+      host: {
+        type: 'host',
+        name: location.name,
+        description: location.description
+      }
+    } as any;
+    
+    // Store location for normalization
+    (parsedHierarchy as any).location = location;
   }
   
   if (!parsedHierarchy || !parsedHierarchy.host) {
