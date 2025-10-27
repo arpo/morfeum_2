@@ -277,14 +277,19 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
     const pipelineStartTime = Date.now();
     const timings = {
       hierarchyClassification: 0,
-      imageGeneration: 0
+      imageGeneration: 0,
+      visualAnalysis: 0
     };
 
     try {
       // Import hierarchy analyzer and image generation
       const { analyzeHierarchy } = await import('../engine/hierarchyAnalysis');
-      const { generateImage } = await import('../services/mzoo');
+      const { generateImage, analyzeImage } = await import('../services/mzoo');
       const { locationImageGeneration } = await import('../engine/generation/prompts/locationImageGeneration');
+      const { locationVisualAnalysisPrompt } = await import('../engine/generation/prompts');
+      const { parseJSON } = await import('../engine/utils/parseJSON');
+      const { fetchImageAsBase64 } = await import('../services/spawn/shared/pipelineCommon');
+      const { AI_MODELS } = await import('../config/constants');
       
       // Stage 1: Hierarchy Classification
       const classificationStart = Date.now();
@@ -326,23 +331,73 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
         }
       });
 
+      // Stage 4: Visual Analysis
+      const analysisStart = Date.now();
+      
+      // Fetch image as base64
+      const base64Image = await fetchImageAsBase64(imageUrl);
+      
+      // Generate visual analysis prompt
+      const analysisPrompt = locationVisualAnalysisPrompt(prompt.trim(), nodeChain);
+      
+      // Analyze image
+      const analysisResult = await analyzeImage(
+        apiKey,
+        base64Image,
+        analysisPrompt,
+        'image/jpeg',
+        AI_MODELS.VISUAL_ANALYSIS
+      );
+      
+      if (analysisResult.error || !analysisResult.data) {
+        console.error('[LocationPipeline] Visual analysis API error:', analysisResult.error);
+        throw new Error(analysisResult.error || 'No data returned from visual analysis');
+      }
+      
+      const visualAnalysis = parseJSON(analysisResult.data.text);
+      timings.visualAnalysis = Date.now() - analysisStart;
+      
+      // Merge visual analysis into deepest node
+      const deepestNode = nodeChain[nodeChain.length - 1];
+      Object.assign(deepestNode, {
+        looks: visualAnalysis.looks,
+        colorsAndLighting: visualAnalysis.colorsAndLighting,
+        atmosphere: visualAnalysis.atmosphere,
+        vegetation: visualAnalysis.vegetation,
+        architecture: visualAnalysis.architecture,
+        animals: visualAnalysis.animals,
+        mood: visualAnalysis.mood,
+        visualAnchors: visualAnalysis.visualAnchors
+      });
+      
+      // Emit visual analysis complete event
+      eventEmitter.emit({
+        type: 'hierarchy:visual-analysis-complete',
+        data: {
+          spawnId,
+          visualAnalysis,
+          enrichedNode: deepestNode
+        }
+      });
+
       // Log timing breakdown
       const totalTime = Date.now() - pipelineStartTime;
-      console.log(`\n[LocationInstantImage] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
+      console.log(`\n[LocationPipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
       console.log(`  Entity Type: location`);
       console.log(`  Stage Timings:`);
       console.log(`    - Hierarchy Classification: ${(timings.hierarchyClassification / 1000).toFixed(2)}s`);
       console.log(`    - Image Generation:         ${(timings.imageGeneration / 1000).toFixed(2)}s`);
+      console.log(`    - Visual Analysis:          ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
       console.log(`  Total:                        ${(totalTime / 1000).toFixed(2)}s\n`);
 
     } catch (error: any) {
-      console.error('[LocationInstantImage] Pipeline failed:', error);
+      console.error('[LocationPipeline] Pipeline failed:', error);
       eventEmitter.emit({
         type: 'hierarchy:error',
         data: {
           spawnId,
           error: error.message || 'Unknown error',
-          stage: 'location-instant-image'
+          stage: 'location-pipeline'
         }
       });
     }

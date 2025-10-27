@@ -17,3 +17,4 @@ export { hostAndRegionsDNA } from './hostAndRegionsDNA';
 export { locationsAndNichesDNA } from './locationsAndNichesDNA';
 export { nodeImageGeneration } from './nodeImageGeneration';
 export { locationImageGeneration } from './locationImageGeneration';
+export { locationVisualAnalysisPrompt } from './locationVisualAnalysis';

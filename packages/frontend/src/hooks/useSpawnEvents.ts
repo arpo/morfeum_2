@@ -467,7 +467,20 @@ export function useSpawnEvents() {
         updateEntityImagePrompt(spawnId, imagePrompt);
       }
       
-      // Update spawn status
+      // Update spawn status to analyzing
+      if (spawnId && updateSpawnStatus) {
+        updateSpawnStatus(spawnId, 'analyzing');
+      }
+    });
+
+    // Listen for hierarchy visual analysis complete event
+    eventSource.addEventListener('hierarchy:visual-analysis-complete', (e) => {
+      const { spawnId, visualAnalysis, enrichedNode } = JSON.parse(e.data);
+      console.log('[Hierarchy] Visual Analysis Complete');
+      console.log('Visual Analysis:', visualAnalysis);
+      console.log('Enriched Node:', enrichedNode);
+      
+      // Update spawn status and remove from active list
       if (spawnId && updateSpawnStatus) {
         updateSpawnStatus(spawnId, 'completed');
         
