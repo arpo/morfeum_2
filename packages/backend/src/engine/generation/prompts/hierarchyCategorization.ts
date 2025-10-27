@@ -1,53 +1,99 @@
 /**
  * Hierarchy Categorization Prompt
  * 
- * Analyzes user input and categorizes it into a 5-layer hierarchy:
- * Host → Region → Location → Niche → Detail
+ * Analyzes user input and categorizes it into a 4-layer hierarchy:
+ * Host → Region → Location → Niche
  * 
  * @param userPrompt - The user's input to analyze
  * @returns Prompt string for LLM
  */
 export function hierarchyCategorization(userPrompt: string): string {
-  return `You are a spatial hierarchy analyzer. Your task is to analyze user descriptions and organize them into a structured 5-layer hierarchy.
+  return `You are a spatial hierarchy analyzer. Analyze user input and organize it into a 4-layer hierarchy.
 
-## ⚠️ CRITICAL: PROPER NESTING RULES
+## ⚠️ MINIMAL BY DEFAULT
 
-**THE MOST IMPORTANT RULE: Each layer MUST be nested INSIDE its parent, NOT as a sibling at the root level.**
+**MOST IMPORTANT RULE: Create ONLY what is explicitly mentioned.**
 
-### ❌ WRONG - Flat Structure (Common Mistake):
-\`\`\`json
-{
-  "host": {...},
-  "regions": [{...}],
-  "locations": [{...}],    // ← ERROR! At root level
-  "niches": [{...}]        // ← ERROR! At root level
-}
-\`\`\`
+- Simple phrase/description → **Host only**
+- Explicit hierarchy → Parse as stated
+- Vague/atmospheric description → **Host only**
 
-### ✅ RIGHT - Properly Nested Structure:
+**Examples:**
+✅ "Göteborg inspired by Tron" → Host only
+✅ "Paris" → Host only
+✅ "Camden in London" → Host + Region
+✅ "A pub in Camden in London" → Host + Region + Location
+❌ "Göteborg inspired by Tron" → Host + Regions + Locations (WRONG!)
+
+## 4-LAYER SYSTEM
+
+| Layer        | Function                                    | Examples |
+| ------------ | ------------------------------------------- | -------- |
+| **Host**     | Broad setting; defines laws, tone, culture  | Neo-Paris, The Shire, London |
+| **Region**   | Distinct district or biome within the world | Camden District, Glass Quarter |
+| **Location** | Specific site that can be entered           | The Gilded Bar, Solar Dome |
+| **Niche**    | Smaller space within a location             | VIP room, kitchen, storage closet |
+
+## PARSING RULES
+
+**Create a node when:**
+- Explicit markers: "Name: Metropolis (world)", "Camden (region)", "Pub (location)"
+- Section headers: "---- Locations", "---- Regions" followed by list
+- Hierarchical phrase: "X in Y in Z" structure or similar like "inside", "within", "at", "on"
+
+**Treat as description (NOT a node):**
+- Prose paragraphs about atmosphere, culture, design
+- Atmospheric details: "Golden hour light", "Ocean breeze"
+- General qualities: "Modern skyscrapers", "Street art"
+
+**Hierarchical pattern parsing:**
+- "Glass on table in VIP room in club in Camden in London"
+  - Parse innermost to outermost: Niche → Location → Region → Host
+
+## INFERENCE RULES
+
+**Rule 1: Simple phrase → Host only**
+- "Paris" → Host only
+- "Göteborg inspired by Tron" → Host only
+
+**Rule 2: Famous landmark → Host + Location (minimal)**
+- "Eiffel Tower" → Host (Paris) + Location (Eiffel Tower)
+
+**Rule 3: Hierarchical phrase → Parse structure**
+- "Camden in London" → Host (London) + Region (Camden)
+- "Pub in Camden in London" → Host (London) + Region (Camden) + Location (Pub)
+
+**Rule 4: Interior/Inside detection**
+- "inside pub in Camden" → Host + Region + Location (pub) + Niche (interior)
+- "Pub (interior)" → Host + Region + Location with interior description
+
+**Keep minimal unless:**
+- Different vibes warrant multiple regions (Financial District vs Arts District)
+- Explicitly mentioned distinct areas
+
+## NESTING STRUCTURE
+
+**CRITICAL: Each layer MUST nest INSIDE its parent.**
+
+✅ **Correct:**
 \`\`\`json
 {
   "host": {
     "type": "host",
-    "name": "World Name",
+    "name": "London",
     "description": "...",
-    "regions": [{                    // ← Regions INSIDE host
+    "regions": [{
       "type": "region",
-      "name": "Region Name",
+      "name": "Camden",
       "description": "...",
-      "locations": [{                // ← Locations INSIDE region
+      "locations": [{
         "type": "location",
-        "name": "Location Name",
+        "name": "Pub",
         "description": "...",
-        "niches": [{                 // ← Niches INSIDE location
+        "niches": [{
           "type": "niche",
-          "name": "Niche Name",
-          "description": "...",
-          "details": [{              // ← Details INSIDE niche
-            "type": "detail",
-            "name": "Detail Name",
-            "description": "..."
-          }]
+          "name": "VIP Room",
+          "description": "..."
         }]
       }]
     }]
@@ -55,193 +101,40 @@ export function hierarchyCategorization(userPrompt: string): string {
 }
 \`\`\`
 
-**Remember: The hierarchy cascades DOWN, not sideways. Each child goes INSIDE its parent's object.**
-
-## THE 5-LAYER SYSTEM
-
-| Layer        | Function                                              |
-| ------------ | ----------------------------------------------------- |
-| **Host**     | Broad setting; defines laws, tone, culture            |
-| **Region**   | A distinct district or biome within the world         |
-| **Location** | Specific site that can be entered or explored         |
-| **Niche**    | A smaller location within a location                   |
-| **Detail**   | Smaller specific object (only when marked with "(detail)")    |
-
-### Layer Examples
-
-**Host (World)**
-- "Neo-Paris, a luminous megacity rebuilt after the Flood."
-- "The Shire, a pastoral valley of green hills and round doors."
-- "Erebus-9, a mining moon wrapped in perpetual night."
-- "Old London, smog-choked capital of empire and invention."
-- "Auralis Prime, an ocean world where sound shapes matter."
-
-**Region**
-- "Camden District, a maze of canals, markets, and music clubs."
-- "The Glass Quarter, a high-rise sector of mirrored towers."
-- "Verdant Basin, humid lowlands beneath floating gardens."
-- "Rust Docks, the city's decaying industrial shoreline."
-- "The Northern Sprawl, a frozen expanse of concrete and wind."
-
-**Location**
-- "The Gilded Bar, where holographic jazz flickers against smoke."
-- "The Solar Dome, a vast botanical sphere of filtered sunlight."
-- "Reactor 12, its core pulsing with unstable blue light."
-- "The Abandoned Starliner Aurelion, half-buried in tidal mud."
-- "The Lantern Bazaar, an underground market lit by bioluminescent stalls."
-
-**Niche**
-- VIP room in a nightclub, lined with velvet seats and low amber light.
--Secret room in the basement, hidden behind loose paneling and humming pipes.
-- Toilet in a restaurant, tiled, echoing, with a single flickering bulb.
-- Kitchen behind the café counter, steam rising over clattering pans.
-- Storage closet in the museum, stacked with forgotten display cases.
-
-**Detail (only with explicit marker)**
-- "A silver key on the captain's desk (detail)"
-- "The broken clock frozen at 3:47 (detail)"
-- "A glass of amber liquid on the bar (detail)"
-
-### CRITICAL: Detail Layer Rules
-**ONLY create Detail nodes when the user explicitly marks them with (detail)**
-
-**Examples:**
-- ✅ "A key in the secret chamber (detail)" → Create Detail node
-- ✅ "A broken clock on the wall (detail)" → Create Detail node  
-- ❌ "A glass on the table" → Do NOT create Detail (no marker)
-- ❌ "Nature is reclaiming the space" → Do NOT create Detail (no marker)
-
-**If an object or element is NOT marked with (detail), include it in the parent node's description instead.**
-
-This prevents over-categorization and keeps the hierarchy clean. Users must explicitly request Detail nodes by adding the (detail) marker.
-
-## PARSING RULES: Structured Input vs. Descriptive Prose
-
-**CRITICAL: Distinguish between explicit nodes and descriptive text**
-
-### What Creates a Node:
-1. **Explicit markers**: "Name: Metropolis (world)", "Solar Dome (location)"
-2. **Section headers**: "---- Locations", "---- Regions" followed by list items
-3. **Clear hierarchical phrases**: "X in Y in Z" structure
-
-### What is Description (NOT a node):
-1. **Prose paragraphs**: Long descriptive text about atmosphere, culture, design
-2. **Atmospheric details**: "Golden hour light", "Bioluminescent plants", "Ocean breeze"
-3. **General qualities**: "Modern skyscrapers", "Old European buildings", "Street art"
-
-**EXAMPLE OF CORRECT PARSING:**
-
-Input:
-Name: Metropolis (world)
-A sprawling coastal metropolis with sleek modern skyscrapers and old European buildings. The city stretches along the coastline where golden hour light bathes everything. Pedestrian skybridges connect cafes and museums. The ocean breeze carries saltwater scent.
----- Locations
-Famous Botanical Dome (location) - A vast glass dome filled with tropical greenery.
-
-Correct Output:
-Host: Metropolis (with full description paragraph)
-Region: Central District (inferred)
-Location: Famous Botanical Dome
-
-**WRONG: Creating separate regions from prose like "Coastal Front", "Historic Heart", "Architectural Showcase" etc.**
-The prose describes the host world, not separate regions. Only create regions when explicitly listed or clearly distinct districts are mentioned.
-
-## INFERENCE RULES
-
-### Rule 1: Single Word Input (e.g., "Paris")
-- Create Host only
-- Infer description from world knowledge
-- Output: { host: { name: "Paris", description: "..." } }
-
-### Rule 2: Famous Landmark (e.g., "Eiffel Tower")
-- Infer Host from world knowledge (Paris)
-- Create Region if landmark has distinct district
-- Create Location for the landmark itself
-- Output: { host: { regions: [{ locations: [...] }] } }
-
-### Rule 3: Hierarchical Pattern (e.g., "X in Y in Z")
-- Parse hierarchy from innermost to outermost
-- Example: "Glass (detail) on table in VIP room in club in Camden in London"
-  - Detail: Glass (only if marked with "(detail)")
-  - Niche: VIP room
-  - Location: Club
-  - Region: Camden
-  - Host: London
-
-### Rule 4: Structured Lists After Section Headers
-- Look for headers like "---- Locations", "---- Regions", "#### Niches"
-- Items following these headers become nodes
-- Everything else is descriptive prose
-
-### Rule 5: Complex Description with Explicit Nodes
-- Extract ONLY explicitly marked nodes
-- Use prose as description for Host/Region/Location
-- Infer minimal regions when locations are listed without regions
-- Multiple locations can share one inferred region if they have similar vibes
-
-### Rule 6: Interior/Inside Detection
-- **"inside X"** or **"interior of X"** → Create X as Location, then create a Niche for the interior space
-- Example: "inside pub in Camden in London"
-  - Host: London
-  - Region: Camden
-  - Location: The Pub (the building/exterior)
-  - Niche: Interior of the Pub (the inside space)
-- **"X (interior)"** WITHOUT "inside" → Treat as regular location with interior description
-  - Example: "The Lantern City (interior)" → Create as Location with interior atmosphere in description
-
-## REGION INFERENCE GUIDELINES
-
-Create multiple regions when:
-- Different cultural vibes (Financial District vs Arts District)
-- Different functions (Industrial vs Residential)
-- Different atmospheres (Nightlife Zone vs Museum Quarter)
-- Explicitly mentioned (North Side, South Side)
-
-Keep single region when:
-- Locations share same vibe/purpose
-- No distinct district mentioned
-- All locations are similar types
-
 ## OUTPUT FORMAT
 
-**CRITICAL: Output ONLY pure JSON. No markdown fences, no explanation text, no comments.**
-
-Structure based on what exists in input:
+**Output ONLY pure JSON. No markdown fences, no explanation.**
 
 **Minimal (Host only):**
 \`\`\`json
 {
   "host": {
     "type": "host",
-    "name": "Paris",
-    "description": "The capital city of France, known for art, fashion, and culture."
+    "name": "Göteborg (Tron-inspired)",
+    "description": "A futuristic, neon-drenched interpretation of Göteborg."
   }
 }
 \`\`\`
 
-**Full Hierarchy:**
+**Explicit hierarchy:**
 \`\`\`json
 {
   "host": {
     "type": "host",
     "name": "London",
-    "description": "A vibrant coastal city in Sweden.",
+    "description": "A vibrant coastal city.",
     "regions": [{
       "type": "region",
       "name": "Camden",
-      "description": "An industrial district with emerging nightlife.",
+      "description": "Industrial district with emerging nightlife.",
       "locations": [{
         "type": "location",
         "name": "Techno Club",
-        "description": "A pulsating electronic music venue with underground atmosphere.",
+        "description": "Pulsating electronic music venue.",
         "niches": [{
           "type": "niche",
           "name": "VIP Room",
-          "description": "An exclusive lounge area with plush seating.",
-          "details": [{
-            "type": "detail",
-            "name": "Glass on Table",
-            "description": "A drink resting on the polished table surface."
-          }]
+          "description": "Exclusive lounge with plush seating."
         }]
       }]
     }]
@@ -249,74 +142,17 @@ Structure based on what exists in input:
 }
 \`\`\`
 
-**Multiple Regions:**
-\`\`\`json
-{
-  "host": {
-    "type": "host",
-    "name": "Metropolis",
-    "description": "A sprawling coastal metropolis with diverse districts.",
-    "regions": [
-      {
-        "type": "region",
-        "name": "Botanical District",
-        "description": "Known for lush greenery and botanical wonders.",
-        "locations": [{
-          "type": "location",
-          "name": "Famous Botanical Dome",
-          "description": "A vast glass dome filled with tropical greenery and exotic flowers."
-        }]
-      },
-      {
-        "type": "region",
-        "name": "Financial District",
-        "description": "The bustling heart of commerce and innovation.",
-        "locations": [{
-          "type": "location",
-          "name": "Halo Spire",
-          "description": "A towering spiraling skyscraper with vertical gardens."
-        }]
-      }
-    ]
-  }
-}
-\`\`\`
+## VALIDATION
 
-## VALIDATION RULES
+- All names must be meaningful strings (not empty, not generic)
+- Descriptions must be 1-3 sentences
+- Type field required: "host", "region", "location", "niche"
+- Don't create empty arrays - only include nested layers if they exist
+- Infer sensibly when information is implicit
 
-1. **All names must be meaningful strings** (not empty, not generic like "Location 1")
-2. **Descriptions must be 1-3 sentences** capturing essence
-3. **Type field required** for every node ("host", "region", "location", "niche", "detail")
-4. **Don't create empty arrays** - only include nested layers if they exist
-5. **Names should match user input** when explicitly given
-6. **Infer sensibly** when information is implicit
-
-## SPECIAL CASES
-
-**Vague Input:** "A place"
-- Create minimal host with generic name
-- Add note in description about vague input
-
-**Multiple Locations, Same Region:**
-- If locations share vibe, put in same region
-- Example: "Louvre and Arc de Triomphe" → Both in "Central Paris" region
-
-**Details without Container:**
-- Infer appropriate containers
-- Example: "A sword" → Infer museum/display/collection location
-
-## USER INPUT TO ANALYZE
+## USER INPUT
 
 ${userPrompt}
-
-## YOUR TASK
-
-Analyze the input above and output the appropriate JSON hierarchy. Remember:
-- Start from Host (always required)
-- Add nested layers only if they exist in input or can be clearly inferred
-- Use world knowledge to fill in descriptions
-- Create multiple regions/locations when distinct vibes/purposes exist
-- Output ONLY JSON, no explanation
 
 ANALYZE NOW:`;
 }

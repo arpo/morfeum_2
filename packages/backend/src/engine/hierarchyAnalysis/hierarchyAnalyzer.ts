@@ -125,8 +125,9 @@ export async function analyzeHierarchy(
     data: { hierarchy: parsedHierarchy }
   });
 
-  // Enrich hierarchy with DNA (top-down approach) and generate image
-  const imageUrl = await enrichHierarchyWithDNA(parsedHierarchy, userPrompt, apiKey);
+  // ⚠️ PIPELINE STOPPED HERE FOR REFACTORING
+  // TODO: Refactor DNA generation and image generation
+  // const imageUrl = await enrichHierarchyWithDNA(parsedHierarchy, userPrompt, apiKey);
 
   // Generate metadata
   const metadata = generateMetadata(parsedHierarchy);
@@ -134,7 +135,7 @@ export async function analyzeHierarchy(
   return {
     hierarchy: parsedHierarchy,
     metadata,
-    imageUrl: imageUrl || undefined,
+    imageUrl: undefined,  // No image generation yet - stopped after classification
   };
 }
 

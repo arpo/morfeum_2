@@ -234,26 +234,26 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       // Analyze hierarchy (emits events during process)
       const result = await analyzeHierarchy(prompt.trim(), apiKey);
       
-      // Emit final complete event with imageUrl
-      eventEmitter.emit({
-        type: 'hierarchy:complete',
-        data: {
-          spawnId,
-          hierarchy: result.hierarchy,
-          metadata: result.metadata,
-          imageUrl: result.imageUrl,
-          entityType: 'location'
-        }
-      });
+      // ⚠️ PIPELINE STOPPED - Don't emit complete event yet
+      // TODO: Emit complete event after DNA and image generation are refactored
+      // eventEmitter.emit({
+      //   type: 'hierarchy:complete',
+      //   data: {
+      //     spawnId,
+      //     hierarchy: result.hierarchy,
+      //     metadata: result.metadata,
+      //     imageUrl: result.imageUrl,
+      //     entityType: 'location'
+      //   }
+      // });
 
-      // Log completion
+      // Log classification result only
       const totalTime = Date.now() - pipelineStartTime;
-      console.log(`\n[HierarchyPipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
+      console.log(`\n[HierarchyPipeline] ${spawnId} classification completed in ${(totalTime / 1000).toFixed(2)}s`);
       console.log(`  Entity Type: location`);
       console.log(`  Layers: ${result.metadata.layersDetected.join(' → ')}`);
       console.log(`  Total Nodes: ${result.metadata.totalNodes}`);
-      console.log(`  Image URL: ${result.imageUrl || 'none'}`);
-      console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
+      console.log(`  ⚠️  Pipeline stopped after classification - no DNA or image generation\n`);
 
     } catch (error: any) {
       console.error('[Hierarchy Route] Pipeline failed:', error);
