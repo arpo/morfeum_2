@@ -34,6 +34,56 @@ export function hierarchyCategorization(userPrompt: string): string {
 | **Location** | Specific site that can be entered           | The Gilded Bar, Solar Dome |
 | **Niche**    | Smaller space within a location             | VIP room, kitchen, storage closet |
 
+## NICHE CREATION RULES
+
+**⚠️ CRITICAL: Niches are ONLY for distinct smaller PHYSICAL SPACES, not environmental descriptions.**
+
+**✅ CREATE NICHE When:**
+- "A control room inside the biodome" → Separate enclosed space
+- "Hidden chamber beneath the lighthouse" → Distinct sub-room
+- "VIP section behind velvet curtain" → Physically separated area
+- "The bar's back office" → Enclosed separate room
+- **Test: Can you physically walk from the main space INTO a distinct separate area?** YES → Create niche
+
+**❌ DO NOT Create Niche For:**
+- "The biodome's interior is lush" → Use location's looks/atmosphere fields
+- "Inside the bar it's smoky" → Use location's atmosphere field
+- "The room is warm and humid" → Environmental quality, use atmosphere
+- "The space is filled with vegetation" → Visual description, use looks
+- **Test: Is this describing the ENVIRONMENT of the main space?** YES → Use visual enrichment, NOT a niche
+
+**Examples:**
+
+**Example A - NO Niche (Environmental Description):**
+Input: "A crystalline biodome, its interior lush and humid"
+✅ Correct:
+{
+  "location": {
+    "type": "location",
+    "name": "The Glass Womb",
+    "description": "A crystalline biodome on a forgotten planet",
+    "looks": "Vast crystalline dome structure, lush vegetation filling interior, alien flora throughout",
+    "atmosphere": "Humid and warm, circulating airflow, scent of damp earth and exotic blossoms",
+    "mood": "Serene, ancient, hauntingly beautiful"
+  }
+}
+
+**Example B - YES Niche (Distinct Physical Space):**
+Input: "A biodome with a hidden control room"
+✅ Correct:
+{
+  "location": {
+    "type": "location",
+    "name": "The Glass Womb",
+    "description": "Crystalline biodome exterior"
+  },
+  "niches": [{
+    "type": "niche",
+    "name": "Control Room",
+    "description": "Hidden control chamber beneath the main dome"
+  }]
+}
+
 ## PARSING RULES
 
 **Create a node when:**
