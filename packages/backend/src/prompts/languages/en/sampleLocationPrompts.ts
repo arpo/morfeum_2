@@ -22,5 +22,27 @@ export const sampleLocationPrompts = [
 "The Fracture Basilica, built on the rim of a tectonic scar that glows faintly blue, each tremor sounding like a hymn.",
 "The Lantern Orchard, a grove where bioluminescent fruit hang like captive stars, illuminating the fog.",
 "The Vault of Tides, a rotating chamber beneath the ocean floor that measures time through pressure and silence.",
-"The Gossamer Foundry, a factory suspended in perpetual twilight, weaving threads of light into impossible machines."
+"The Gossamer Foundry, a factory suspended in perpetual twilight, weaving threads of light into impossible machines.",
+"The Argent Terminal, a vast transit hub adrift in orbit, its departure boards flickering with destinations that no longer exist.",
+"The Mire Conservatory, a glasshouse sinking slowly into a swamp, each vine curving toward the last shaft of sunlight.",
+"The Solstice Atrium, an inverted ziggurat filled with drifting dust motes that turn to gold at noon.",
+"The Rift Pavilion, a museum built around a dimensional tear, its exhibits rearranging themselves nightly.",
+"The Pale Bazaar, a market of soundless vendors beneath a perpetual eclipse, trading in reflections and scent.",
+"The Chlorine Palace, a submerged ruin whose corridors glow with the ghosts of swimmers long gone.",
+"The Meridian Bastion, a cliffside fortress aligned perfectly with the planet’s magnetic field, its halls humming with invisible current.",
+"The Oath Chamber, buried beneath a mountain shrine, where whispered promises carve themselves into the walls.",
+"The Ferro Garden, an abandoned greenhouse where metallic plants coil and bloom when thunder rolls.",
+"The Dreamhouse Array, a cluster of mirrored dwellings that record and replay the dreams of their inhabitants.",
+"The Black Salt Foundry, a volcanic refinery that exhales pale steam scented like burned sugar.",
+"The Aether Rail, a suspended railway looping through clouds of bioluminescent spores, carriages creaking like whales.",
+"The Chrysalis Vault, a subterranean chamber filled with cocoons that pulse in time with passing footsteps.",
+"The Eclipse Forum, a circular plaza built to trap shadow, where no light has ever touched the center stone.",
+"The Rusted Sanctum, deep in a scrapyard canyon, its altar made of welded engines still faintly warm.",
+"The Neon Abbey, a decayed monastery whose stained glass now flickers with coded data streams.",
+"The Orchard of Bones, rows of fossilized trees that ring when struck by wind, forming an endless mournful melody.",
+"The Velvet Observatory, hidden within a collapsed theater dome, its telescopes aimed inward toward dreams instead of stars.",
+"The Flooded Arcade, an ancient shopping concourse turned coral reef, escalators carrying fish instead of people.",
+"The Prism Basilica, a sunlit ruin whose ceilings split light into living specters that wander the nave."
+ 
+
 ]

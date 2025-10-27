@@ -145,10 +145,19 @@ export async function analyzeHierarchy(
   }
 
   // Parse JSON response
-  const parsedHierarchy = parseJSON<HierarchyStructure>(result.data.text);
+  let parsedHierarchy;
+  try {
+    parsedHierarchy = parseJSON<HierarchyStructure>(result.data.text);
+  } catch (parseError) {
+    console.error('[Hierarchy] Failed to parse JSON from LLM response:');
+    console.error('Raw response:', result.data.text.substring(0, 500));
+    throw new Error(`Failed to parse JSON: ${parseError}`);
+  }
   
   if (!parsedHierarchy || !parsedHierarchy.host) {
-    throw new Error('Failed to parse hierarchy from LLM response');
+    console.error('[Hierarchy] Invalid hierarchy structure returned:');
+    console.error('Parsed result:', JSON.stringify(parsedHierarchy, null, 2));
+    throw new Error('Failed to parse hierarchy from LLM response - missing host property');
   }
 
   // Normalize hierarchy (insert missing layers as passthrough nodes)

@@ -51,7 +51,7 @@ export interface NodeDNA {
 export interface BaseHierarchyNode {
   name: string;
   description: string;
-  dna?: NodeDNA;
+  dna?: NodeDNA | Partial<NodeDNA>;
 }
 
 /**

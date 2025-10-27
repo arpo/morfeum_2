@@ -278,12 +278,13 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
     const timings = {
       hierarchyClassification: 0,
       imageGeneration: 0,
-      visualAnalysis: 0
+      visualAnalysis: 0,
+      dnaGeneration: 0
     };
 
     try {
       // Import hierarchy analyzer and image generation
-      const { analyzeHierarchy } = await import('../engine/hierarchyAnalysis');
+      const { analyzeHierarchy, generateBatchDNA } = await import('../engine/hierarchyAnalysis');
       const { generateImage, analyzeImage } = await import('../services/mzoo');
       const { locationImageGeneration } = await import('../engine/generation/prompts/locationImageGeneration');
       const { locationVisualAnalysisPrompt } = await import('../engine/generation/prompts');
@@ -357,26 +358,27 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       const visualAnalysis = parseJSON(analysisResult.data.text);
       timings.visualAnalysis = Date.now() - analysisStart;
       
-      // Merge visual analysis into deepest node
-      const deepestNode = nodeChain[nodeChain.length - 1];
-      Object.assign(deepestNode, {
-        looks: visualAnalysis.looks,
-        colorsAndLighting: visualAnalysis.colorsAndLighting,
-        atmosphere: visualAnalysis.atmosphere,
-        vegetation: visualAnalysis.vegetation,
-        architecture: visualAnalysis.architecture,
-        animals: visualAnalysis.animals,
-        mood: visualAnalysis.mood,
-        visualAnchors: visualAnalysis.visualAnchors
-      });
+      // Stage 5: Batch DNA Generation for all nodes
+      const dnaStart = Date.now();
       
-      // Emit visual analysis complete event
+      // Generate DNA for entire hierarchy
+      const fullHierarchy = await generateBatchDNA(
+        result.hierarchy,
+        visualAnalysis,
+        prompt.trim(),
+        apiKey
+      );
+      
+      timings.dnaGeneration = Date.now() - dnaStart;
+      
+      // Emit complete hierarchy with all DNA
       eventEmitter.emit({
-        type: 'hierarchy:visual-analysis-complete',
+        type: 'hierarchy:complete',
         data: {
           spawnId,
-          visualAnalysis,
-          enrichedNode: deepestNode
+          hierarchy: fullHierarchy,
+          metadata: result.metadata,
+          imageUrl
         }
       });
 
@@ -388,6 +390,7 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       console.log(`    - Hierarchy Classification: ${(timings.hierarchyClassification / 1000).toFixed(2)}s`);
       console.log(`    - Image Generation:         ${(timings.imageGeneration / 1000).toFixed(2)}s`);
       console.log(`    - Visual Analysis:          ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
+      console.log(`    - DNA Generation:           ${(timings.dnaGeneration / 1000).toFixed(2)}s`);
       console.log(`  Total:                        ${(totalTime / 1000).toFixed(2)}s\n`);
 
     } catch (error: any) {

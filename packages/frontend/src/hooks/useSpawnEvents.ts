@@ -480,16 +480,9 @@ export function useSpawnEvents() {
       console.log('Visual Analysis:', visualAnalysis);
       console.log('Enriched Node:', enrichedNode);
       
-      // Update spawn status and remove from active list
+      // Update spawn status to DNA generation
       if (spawnId && updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'completed');
-        
-        // Remove from active spawns after delay
-        setTimeout(() => {
-          if (removeSpawn) {
-            removeSpawn(spawnId);
-          }
-        }, 2000);
+        updateSpawnStatus(spawnId, 'generating_dna');
       }
     });
 
