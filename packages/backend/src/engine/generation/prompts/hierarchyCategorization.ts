@@ -101,6 +101,34 @@ export function hierarchyCategorization(userPrompt: string): string {
 }
 \`\`\`
 
+## VISUAL ENRICHMENT FOR DEEPEST NODE
+
+**IMPORTANT: The DEEPEST node (most specific layer) must include visual enrichment:**
+
+- **name**: Use mentioned name OR invent memorable one
+  - Examples: "The Whispering Archives", "Neon Sanctum", "Forgotten Shore", "The Iron Tide"
+  - Avoid generic: "Bar", "Club", "Room"
+  
+- **description**: 2-3 sentences explaining what it is
+
+- **looks**: Visible geometry, layout, scale. Key shapes, surfaces, spatial focus. Visual and concrete.
+
+- **atmosphere**: Air and motion: still, windy, hazy, clear. Temperature/humidity only if distinctive.
+
+- **mood**: Concise emotional tone (tense, serene, lonely, electric).
+
+**Example deepest node:**
+{
+  "type": "location",
+  "name": "The Rusted Anchor",
+  "description": "A drinking establishment frequented by dockworkers and sailors",
+  "looks": "Industrial brick walls, weathered copper bar counter, ship porthole windows, Edison bulbs",
+  "atmosphere": "Hazy with smoke, still air, warm amber lighting, smell of salt and beer",
+  "mood": "Relaxed yet edgy, working-class authenticity"
+}
+
+**Parent nodes (Host, Region) do NOT need visual fields - only type, name, description.**
+
 ## OUTPUT FORMAT
 
 **Output ONLY pure JSON. No markdown fences, no explanation.**
@@ -152,7 +180,5 @@ export function hierarchyCategorization(userPrompt: string): string {
 
 ## USER INPUT
 
-${userPrompt}
-
-ANALYZE NOW:`;
+${userPrompt}`;
 }

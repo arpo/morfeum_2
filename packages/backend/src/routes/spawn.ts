@@ -10,6 +10,7 @@ import { createSpawnManager, SpawnProcess } from '../services/spawn';
 import { eventEmitter } from '../services/eventEmitter';
 import { SublocPipelineManager } from '../services/spawn/managers/SublocPipelineManager';
 import { runCharacterPipeline } from '../engine/generation';
+import type { HierarchyStructure } from '../engine/hierarchyAnalysis/types';
 
 const router = Router();
 
@@ -18,6 +19,54 @@ router.use(validateMzooApiKey);
 
 // Store spawn managers per API key (in production, consider a more robust solution)
 const spawnManagers = new Map<string, ReturnType<typeof createSpawnManager>>();
+
+/**
+ * Build node chain from hierarchy (deepest node + all parents)
+ */
+function buildNodeChain(hierarchy: HierarchyStructure): Array<{
+  type: string;
+  name: string;
+  description: string;
+}> {
+  const chain: Array<any> = [];
+  
+  // Start with host
+  chain.push({
+    type: 'host',
+    name: hierarchy.host.name,
+    description: hierarchy.host.description
+  });
+  
+  // Find deepest node path
+  if (hierarchy.host.regions && hierarchy.host.regions.length > 0) {
+    const region = hierarchy.host.regions[0]; // Take first region
+    chain.push({
+      type: 'region',
+      name: region.name,
+      description: region.description
+    });
+    
+    if (region.locations && region.locations.length > 0) {
+      const location = region.locations[0]; // Take first location
+      chain.push({
+        type: 'location',
+        name: location.name,
+        description: location.description
+      });
+      
+      if (location.niches && location.niches.length > 0) {
+        const niche = location.niches[0]; // Take first niche
+        chain.push({
+          type: 'niche',
+          name: niche.name,
+          description: niche.description
+        });
+      }
+    }
+  }
+  
+  return chain;
+}
 
 /**
  * Get or create spawn manager for the current API key
@@ -226,43 +275,74 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
   // Run hierarchy analysis asynchronously with SSE events
   (async () => {
     const pipelineStartTime = Date.now();
+    const timings = {
+      hierarchyClassification: 0,
+      imageGeneration: 0
+    };
 
     try {
-      // Import hierarchy analyzer
+      // Import hierarchy analyzer and image generation
       const { analyzeHierarchy } = await import('../engine/hierarchyAnalysis');
+      const { generateImage } = await import('../services/mzoo');
+      const { locationImageGeneration } = await import('../engine/generation/prompts/locationImageGeneration');
       
-      // Analyze hierarchy (emits events during process)
+      // Stage 1: Hierarchy Classification
+      const classificationStart = Date.now();
       const result = await analyzeHierarchy(prompt.trim(), apiKey);
+      timings.hierarchyClassification = Date.now() - classificationStart;
       
-      // ⚠️ PIPELINE STOPPED - Don't emit complete event yet
-      // TODO: Emit complete event after DNA and image generation are refactored
-      // eventEmitter.emit({
-      //   type: 'hierarchy:complete',
-      //   data: {
-      //     spawnId,
-      //     hierarchy: result.hierarchy,
-      //     metadata: result.metadata,
-      //     imageUrl: result.imageUrl,
-      //     entityType: 'location'
-      //   }
-      // });
+      // Stage 2: Build node chain and generate image prompt
+      const nodeChain = buildNodeChain(result.hierarchy);
+      const imagePrompt = locationImageGeneration(prompt.trim(), nodeChain);
+      
+      // Emit image prompt generated event
+      eventEmitter.emit({
+        type: 'hierarchy:image-prompt-generated',
+        data: {
+          spawnId,
+          imagePrompt,
+          nodeChain
+        }
+      });
+      
+      // Stage 3: Generate image
+      const imageStart = Date.now();
+      const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
+      timings.imageGeneration = Date.now() - imageStart;
+      
+      if (imageResult.error || !imageResult.data?.images?.[0]?.url) {
+        throw new Error(imageResult.error || 'Image URL not found in response');
+      }
+      
+      const imageUrl = imageResult.data.images[0].url;
+      
+      // Emit image complete event
+      eventEmitter.emit({
+        type: 'hierarchy:image-complete',
+        data: {
+          spawnId,
+          imageUrl,
+          imagePrompt
+        }
+      });
 
-      // Log classification result only
+      // Log timing breakdown
       const totalTime = Date.now() - pipelineStartTime;
-      console.log(`\n[HierarchyPipeline] ${spawnId} classification completed in ${(totalTime / 1000).toFixed(2)}s`);
+      console.log(`\n[LocationInstantImage] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
       console.log(`  Entity Type: location`);
-      console.log(`  Layers: ${result.metadata.layersDetected.join(' → ')}`);
-      console.log(`  Total Nodes: ${result.metadata.totalNodes}`);
-      console.log(`  ⚠️  Pipeline stopped after classification - no DNA or image generation\n`);
+      console.log(`  Stage Timings:`);
+      console.log(`    - Hierarchy Classification: ${(timings.hierarchyClassification / 1000).toFixed(2)}s`);
+      console.log(`    - Image Generation:         ${(timings.imageGeneration / 1000).toFixed(2)}s`);
+      console.log(`  Total:                        ${(totalTime / 1000).toFixed(2)}s\n`);
 
     } catch (error: any) {
-      console.error('[Hierarchy Route] Pipeline failed:', error);
+      console.error('[LocationInstantImage] Pipeline failed:', error);
       eventEmitter.emit({
         type: 'hierarchy:error',
         data: {
           spawnId,
           error: error.message || 'Unknown error',
-          stage: 'hierarchy-analysis'
+          stage: 'location-instant-image'
         }
       });
     }

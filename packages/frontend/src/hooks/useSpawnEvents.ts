@@ -352,6 +352,36 @@ export function useSpawnEvents() {
       });
     });
 
+    // Listen for hierarchy image prompt generated event
+    eventSource.addEventListener('hierarchy:image-prompt-generated', (e) => {
+      const { spawnId, imagePrompt, nodeChain } = JSON.parse(e.data);
+      console.log('[Hierarchy] Image Prompt Generated:');
+      console.log(imagePrompt);
+      console.log('Node Chain:', nodeChain);
+      
+      // Create entity session with enriched data from deepest node
+      if (createEntity && nodeChain && nodeChain.length > 0) {
+        const targetNode = nodeChain[nodeChain.length - 1];
+        const seed = {
+          name: targetNode.name,
+          looks: targetNode.looks || targetNode.description,
+          atmosphere: targetNode.atmosphere || '',
+          mood: targetNode.mood || ''
+        };
+        createEntity(spawnId, seed, 'location');
+      }
+      
+      // Store image prompt
+      if (updateEntityImagePrompt) {
+        updateEntityImagePrompt(spawnId, imagePrompt);
+      }
+      
+      // Update status to generating image
+      if (updateSpawnStatus) {
+        updateSpawnStatus(spawnId, 'generating_image');
+      }
+    });
+
     // Listen for hierarchy host DNA complete event
     eventSource.addEventListener('hierarchy:host-dna-complete', (e) => {
       const { nodeName, dna } = JSON.parse(e.data);
@@ -395,13 +425,6 @@ export function useSpawnEvents() {
       console.log(dna);
     });
 
-    // Listen for hierarchy image prompt generated event
-    eventSource.addEventListener('hierarchy:image-prompt-generated', (e) => {
-      const { nodeType, nodeName, prompt } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Image Prompt Generated [${nodeType.toUpperCase()}]: ${nodeName}`);
-      console.log(prompt);
-    });
-
     // Listen for all image prompts complete event
     eventSource.addEventListener('hierarchy:all-image-prompts-complete', (e) => {
       const { totalNodes } = JSON.parse(e.data);
@@ -411,7 +434,9 @@ export function useSpawnEvents() {
     // Listen for hierarchy image generation started event
     eventSource.addEventListener('hierarchy:image-generation-started', (e) => {
       const { nodeType, nodeName, prompt } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Image Generation Started [${nodeType.toUpperCase()}]: ${nodeName}`);
+      if (nodeType && nodeName) {
+        console.log(`[Hierarchy] Image Generation Started [${nodeType.toUpperCase()}]: ${nodeName}`);
+      }
       
       // Update status to image generation
       const activeSpawns = useStore.getState().activeSpawns;
@@ -424,9 +449,35 @@ export function useSpawnEvents() {
 
     // Listen for hierarchy image complete event
     eventSource.addEventListener('hierarchy:image-complete', (e) => {
-      const { nodeType, nodeName, imageUrl, imagePrompt } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Image Complete [${nodeType.toUpperCase()}]: ${nodeName}`);
+      const { spawnId, nodeType, nodeName, imageUrl, imagePrompt } = JSON.parse(e.data);
+      if (nodeType && nodeName) {
+        console.log(`[Hierarchy] Image Complete [${nodeType.toUpperCase()}]: ${nodeName}`);
+      } else {
+        console.log('[Hierarchy] Image Complete');
+      }
       console.log('Image URL:', imageUrl);
+      
+      // Update entity with image for instant flow
+      if (spawnId && updateEntityImage) {
+        updateEntityImage(spawnId, imageUrl);
+      }
+      
+      // Update entity with image prompt
+      if (spawnId && updateEntityImagePrompt && imagePrompt) {
+        updateEntityImagePrompt(spawnId, imagePrompt);
+      }
+      
+      // Update spawn status
+      if (spawnId && updateSpawnStatus) {
+        updateSpawnStatus(spawnId, 'completed');
+        
+        // Remove from active spawns after delay
+        setTimeout(() => {
+          if (removeSpawn) {
+            removeSpawn(spawnId);
+          }
+        }, 2000);
+      }
     });
 
     // Listen for hierarchy complete event (FINAL - displays result)

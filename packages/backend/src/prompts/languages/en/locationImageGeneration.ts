@@ -1,8 +1,8 @@
 /**
- * Location image generation prompt
- * Source: https://deepinfra.com/blog/flux1-dev-guide
+ * LEGACY: Location image generation for seed-based flow
+ * Used by old LocationSpawnManager - kept for backward compatibility
  */
-// Original user description: "${originalPrompt}"
+
 import { morfeumVibes, qualityPrompt } from './constants';
 
 export const locationImageGeneration = (
@@ -11,35 +11,32 @@ export const locationImageGeneration = (
   looks: string,
   atmosphere: string,
   mood?: string,
-  renderInstructions?: string
-) => {
-  // Use renderInstructions from seed, or fallback to default
-  const renderDirective = renderInstructions || '';
-
+  filterName?: string
+): string => {
+  // Simple location prompt using seed data
+  const shotInstructions = {
+    shot: 'elevated oblique 3/4 view, diagonal approach angle, foreground occlusion from natural elements, off-axis composition with cropped edges, layered depth',
+    light: 'directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds)'
+  };
+  
   return `${morfeumVibes}
-
-${name}, ${renderDirective}.
 
 Original user description: "${originalPrompt}"
 
-Visual details: ${looks}.
+${name}, ${shotInstructions.shot}.
+
+[LIGHT:] ${shotInstructions.light}
+
+[SCENE:]
+Description: ${looks}.
 
 Atmosphere: ${atmosphere}.
 
-${mood ? 'Mood: ' + mood + '.' : ''}
+${mood ? `Mood: ${mood}.` : ''}
 
-Guidelines:
-- Focus on the location itself, avoid including people or animals if not specified in the original prompt.
-- Use rich, evocative language to bring the scene to life.
-- Avoid generic terms; be specific and concrete in descriptions.
-- Ensure the scene is coherent and visually engaging.
+[WORLD RULES:] water calm and mirror-still
 
-[WORLD RULES:]
-No human or animal figures appear unless explicitly mentioned.
-Water, when visible, is calm and mirror-still, reflecting light softly.
+IMPORTANT: no humans or animals unless specified
 
-
-${qualityPrompt}
-
-`;
+${qualityPrompt}`;
 };
