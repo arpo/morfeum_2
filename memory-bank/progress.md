@@ -2,7 +2,25 @@
 
 ## What Works ✅
 
-### Visual Enrichment for Deepest Node - Instant Image Generation (Latest - Just Completed) ✅
+### Niche Creation Rules - Environmental vs Physical Space Distinction (Latest - Just Completed) ✅
+- **Problem**: AI creating niche nodes for environmental descriptions (e.g., "lush interior climate" → separate niche)
+- **Solution**: Added comprehensive niche creation rules to hierarchyCategorization.ts
+- **Clear Distinction**:
+  - ✅ **CREATE NICHE**: Distinct physical spaces you can walk into (control room, hidden chamber, VIP section)
+  - ❌ **DO NOT Create Niche**: Environmental descriptions (humid air, lush vegetation, smoky atmosphere)
+  - **Test**: "Can you physically walk INTO a distinct separate area?" YES → niche, NO → use visual enrichment
+- **Examples Added**:
+  - **Example A (NO Niche)**: "Crystalline biodome, interior lush and humid" → Location with looks/atmosphere fields
+  - **Example B (YES Niche)**: "Biodome with hidden control room" → Location + Niche (control room)
+- **Files Modified**: 1 file (hierarchyCategorization.ts)
+- **Quality Verified**: Backend build passes (zero TypeScript errors)
+- **Key Benefits**:
+  - ✅ **Correct Node Structure**: Environmental qualities stay in location DNA, not as separate spaces
+  - ✅ **Clear Guidelines**: Physical space test makes distinction obvious
+  - ✅ **Better Examples**: Glass Womb case explicitly documented as NO niche scenario
+  - ✅ **Reduced Over-Generation**: Fewer unnecessary niche nodes created
+
+### Visual Enrichment for Deepest Node - Instant Image Generation (Previously Completed) ✅
 - **Enhanced Hierarchy Classification with Visual Details**: Deepest node now receives rich visual enrichment
   - **Name Enrichment**: Creative, memorable names (e.g., "The Iron Tide" instead of "Bar")
   - **Visual Fields Added**: looks, atmosphere, mood fields for deepest node only

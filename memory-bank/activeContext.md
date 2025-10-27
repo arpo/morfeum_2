@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Work Focus
-**Visual Enrichment for Deepest Node - Instant Image Generation** - Enhanced hierarchy classification to generate rich visual details for the deepest node only (name, looks, atmosphere, mood). This creates much more atmospheric, detailed images immediately after classification (~6-10 seconds total). Locations default to exterior shots; "inside" keyword creates niche nodes for interior shots. System now generates creative location names ("The Iron Tide" instead of "Bar") and detailed visual descriptions that flow into the image prompt for richer results.
+**Cascading DNA Architecture - Pipeline Refactoring** - Designing cascading DNA system for hierarchical locations with visual consistency. Goal: Host/Region DNA provides foundation, each child node adds differential DNA (only what differs), final deepest node enhanced with visual analysis from generated image. Pipeline currently stopped after hierarchy classification + instant image generation (~3 seconds). DNA generation prompt created (nodeDNAGeneration.ts) but not yet integrated into active pipeline. Visual analysis for locations still to be implemented (similar to character visual analysis system).
 
 ## Recent Changes
 
