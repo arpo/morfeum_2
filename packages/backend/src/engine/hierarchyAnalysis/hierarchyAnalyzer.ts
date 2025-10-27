@@ -37,6 +37,41 @@ function normalizeHierarchy(hierarchy: HierarchyStructure): void {
     delete (hierarchy as any).regions;
   }
 
+  // Fix: Locations at root level (should be inside region inside host)
+  if ((hierarchy as any).locations && Array.isArray((hierarchy as any).locations)) {
+    const locations = (hierarchy as any).locations;
+    
+    // Create passthrough region with locations
+    hierarchy.host.regions = [{
+      type: 'region',
+      name: hierarchy.host.name,  // Inherit host name
+      description: '',  // Empty description
+      locations: locations
+    }];
+    
+    delete (hierarchy as any).locations;
+  }
+
+  // Fix: Niches at root level (should be inside location inside region inside host)
+  if ((hierarchy as any).niches && Array.isArray((hierarchy as any).niches)) {
+    const niches = (hierarchy as any).niches;
+    
+    // Create passthrough region → passthrough location → niches
+    hierarchy.host.regions = [{
+      type: 'region',
+      name: hierarchy.host.name,  // Inherit host name
+      description: '',  // Empty description
+      locations: [{
+        type: 'location',
+        name: hierarchy.host.name,  // Inherit host name
+        description: '',  // Empty description
+        niches: niches
+      }]
+    }];
+    
+    delete (hierarchy as any).niches;
+  }
+
   const host = hierarchy.host;
 
   // Fix: Host → Locations (missing Region)
@@ -139,10 +174,16 @@ export async function analyzeHierarchy(
   };
 }
 
+// ============================================================================
+// COMMENTED OUT - Pipeline stopped after classification
+// TODO: Refactor these functions when rebuilding DNA + image generation pipeline
+// ============================================================================
+
+/*
 /**
  * Generate image for the FIRST deepest node in the hierarchy using cascaded DNA
  * Returns the image URL
- */
+ *\/
 async function generateImageForDeepestNode(
   hierarchy: HierarchyStructure,
   userPrompt: string,
@@ -321,7 +362,7 @@ async function generateImageForDeepestNode(
 
 /**
  * Count nodes with DNA in hierarchy
- */
+ *\/
 function countNodesWithDNA(hierarchy: HierarchyStructure): number {
   let count = hierarchy.host.dna ? 1 : 0;
   
@@ -349,7 +390,7 @@ function countNodesWithDNA(hierarchy: HierarchyStructure): number {
  * - Batch 1: Host + All Regions (1 LLM call)
  * - Batch 2-N: Locations + Niches per region (1 call per region)
  * - Returns imageUrl from deepest node
- */
+ *\/
 async function enrichHierarchyWithDNA(
   hierarchy: HierarchyStructure,
   userPrompt: string,
@@ -477,6 +518,11 @@ async function enrichHierarchyWithDNA(
   const imageUrl = await generateImageForDeepestNode(hierarchy, userPrompt, apiKey);
   return imageUrl;
 }
+*/
+
+// ============================================================================
+// END COMMENTED OUT SECTION
+// ============================================================================
 
 /**
  * Generates metadata about the hierarchy structure

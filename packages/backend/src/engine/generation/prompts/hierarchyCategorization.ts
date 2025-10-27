@@ -145,7 +145,7 @@ export function hierarchyCategorization(userPrompt: string): string {
 ## VALIDATION
 
 - All names must be meaningful strings (not empty, not generic)
-- Descriptions must be 1-3 sentences
+- Descriptions must be 2-3 sentences if its a real place mention its name.
 - Type field required: "host", "region", "location", "niche"
 - Don't create empty arrays - only include nested layers if they exist
 - Infer sensibly when information is implicit
