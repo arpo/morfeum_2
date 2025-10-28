@@ -14,31 +14,36 @@ export function hierarchyCategorization(userPrompt: string): string {
 
 **BEFORE DOING ANYTHING ELSE, CHECK FOR THIS PATTERN:**
 
-Pattern: "[thing] in [WORD] in [WORD]"
+Pattern: "[thing] [preposition] [WORD] in [WORD]"
+
+Where [preposition] can be: **in, on, at, by, near, within, beside, around**
 
 If you find this pattern:
-- First WORD (rightmost) = Host
-- Second WORD (middle) = Region  
-- Third part (leftmost) = Location
+- Second WORD (rightmost, after "in") = Host
+- First WORD (middle, after preposition) = Region  
+- Thing (leftmost) = Location
 
 EXAMPLES OF THIS CRITICAL PATTERN:
 "club in Camden in London" → Host: London, Region: Camden, Location: club
-"bar in Shibuya in Tokyo" → Host: Tokyo, Region: Shibuya, Location: bar
-"pub in SoHo in New York" → Host: New York, Region: SoHo, Location: pub
+"bar on Ringön in Göteborg" → Host: Göteborg, Region: Ringön, Location: bar
+"bar at Shibuya in Tokyo" → Host: Tokyo, Region: Shibuya, Location: bar
+"pub by SoHo in New York" → Host: New York, Region: SoHo, Location: pub
+"cafe near Montmartre in Paris" → Host: Paris, Region: Montmartre, Location: cafe
 
 ❌ WRONG (DO NOT DO THIS):
 {
-  "host": {"name": "London"},
-  "regions": [{"name": "London", "description": ""}]  ← Passthrough region (WRONG!)
+  "host": {"name": "Göteborg"},
+  "regions": [{"name": "Göteborg", "description": ""}]  ← Passthrough region (WRONG!)
 }
 
 ✅ CORRECT:
 {
-  "host": {"name": "London"},
-  "regions": [{"name": "Camden", "description": "Alternative district"}]  ← District extracted!
+  "host": {"name": "Göteborg"},
+  "regions": [{"name": "Ringön", "description": "Industrial island district"}]  ← District extracted!
 }
 
 If this pattern exists, YOU MUST extract the middle word as a Region. NO EXCEPTIONS.
+The Region name must NEVER be the same as the Host name.
 
 ## ⚠️ MINIMAL BY DEFAULT
 
@@ -335,17 +340,26 @@ Example output:
 
 **RUN THESE CHECKS BEFORE OUTPUTTING:**
 
-1. **Pattern Check**: Does input match "[thing] in [WORD] in [WORD]"?
-   - YES → Is middle WORD extracted as Region with a description?
-   - NO → STOP and fix. Middle word MUST be a Region.
+1. **Spatial Pattern Check**: Does input match "[thing] [preposition] [WORD] in [WORD]"?
+   - Where preposition = in, on, at, by, near, within, beside, around
+   - YES → Is middle WORD (after preposition, before "in") extracted as Region?
+   - If NO → STOP and fix. Middle word MUST be a Region with meaningful description.
 
-2. **Passthrough Region Check**: Is any Region name identical to Host name with empty description?
-   - YES → This is an ERROR. Extract the district name from user input as the Region.
+2. **Passthrough Region Check**: Is any Region name identical to Host name?
+   - YES → This is a CRITICAL ERROR. You missed extracting the actual region/district.
+   - Check the user input again for district, neighborhood, or area names.
+   - The Region name MUST be different from the Host name.
    - NO → Continue.
 
-3. **Specific Camden/London Check**: If input mentions both "Camden" and "London":
-   - Region MUST be "Camden"
-   - Region MUST NOT be "London"
+3. **Empty Description Check**: Does any Region have an empty or missing description?
+   - YES → This is an ERROR. All Regions must have meaningful 1-2 sentence descriptions.
+   - NO → Continue.
+
+4. **Specific Examples Check**: 
+   - "Camden" and "London" → Region MUST be "Camden", NOT "London"
+   - "Ringön" and "Göteborg" → Region MUST be "Ringön", NOT "Göteborg"
+   - "Shibuya" and "Tokyo" → Region MUST be "Shibuya", NOT "Tokyo"
+   - "SoHo" and "New York" → Region MUST be "SoHo", NOT "New York"
 
 ## VALIDATION
 
