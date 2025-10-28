@@ -23,7 +23,7 @@ export const locationVisualAnalysisPrompt = (
   const atmosphere = (targetNode as any).atmosphere || '';
   const mood = (targetNode as any).mood || '';
 
-  return `You are a visual analyst describing a location image from Morfeum.
+  const rv = `You are a visual analyst describing a location image from Morfeum.
 
 Given the image and the context below, describe what is visually observable in detailed, factual sentences.
 Be objective and precise — describe what is seen, not what might exist beyond the frame.
@@ -136,4 +136,9 @@ Guidelines:
 - Extract ALL navigable elements for navigation system
 - Keep searchDesc concise but informative
 `;
+// console.log(rv);
+
+  return rv;
 };
+
+

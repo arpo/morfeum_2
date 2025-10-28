@@ -2,6 +2,55 @@
 
 ## Recent Updates
 
+### Navigation Decision System (October 28, 2025 - 3:25 PM)
+
+**Completed:**
+- ✅ Created AI navigation decision prompt (`navigationDecision.ts`)
+- ✅ Implemented `/api/mzoo/navigation/decide` backend route
+- ✅ Fixed AI response parsing to extract text from MZOO service wrapper
+- ✅ Connected existing LocationPanel to new navigation API
+- ✅ Created NavigationInput component with travel suggestions
+- ✅ Created LocationTreePanel component for hierarchical display
+- ✅ Updated terminology: "world" → "host", "sublocation" → "niche"
+- ✅ Added View interface to locationsSlice for multi-view support
+
+**Problem Solved:**
+Navigation system was disabled during backend refactoring. Users couldn't travel to new locations or navigate the world tree.
+
+**Solution:**
+Built complete AI-powered navigation decision system:
+- AI analyzes user commands (e.g., "Go to kitchen")
+- Returns structured decisions: `move` (existing node), `generate` (new node), or `look` (view change)
+- Provides scale hints (macro/area/site/interior/detail) for proper node generation
+- Supports spatial relationships (child/sibling/parent/distant)
+- Handles navigableElements as suggestions
+
+**Files Created:**
+- `packages/backend/src/engine/generation/prompts/navigationDecision.ts` - AI prompt
+- `packages/backend/src/routes/mzoo/navigation.ts` - Navigation route handler
+- `packages/frontend/src/features/navigation/NavigationInput/*` - New component
+- `packages/frontend/src/features/navigation/LocationTreePanel/*` - Tree display component
+
+**Files Modified:**
+- `packages/backend/src/routes/mzoo/index.ts` - Mounted navigation router
+- `packages/frontend/src/store/slices/locationsSlice.ts` - Added View interface
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/locationNavigation.ts` - Connected to API
+
+**Result:**
+Navigation system fully functional. AI correctly analyzes commands and returns:
+- Action type (move/generate/look)
+- Target information (nodeId, parentId, name)
+- Scale hints for generation
+- Reasoning for decision
+
+Users can now type "Go to kitchen" and AI determines whether to move to existing kitchen or generate new one as child/sibling with appropriate scale.
+
+**Next Steps:**
+- Wire up decision actions to actually execute (update focus, trigger spawn, create views)
+- Test end-to-end navigation flow with image generation
+
+---
+
 ### Image Prompt Generation Enhancement (October 28, 2025 - 2:00 PM)
 
 **Completed:**

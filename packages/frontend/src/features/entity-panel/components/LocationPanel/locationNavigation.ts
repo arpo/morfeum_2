@@ -136,9 +136,7 @@ export function buildSpatialNodes(
 
 /**
  * Call NavigatorAI API to find destination
- * 
- * ⚠️ UI DISCONNECTED - Backend refactoring in progress
- * See: packages/backend/src/engine/REASSEMBLY_PLAN.md
+ * Updated to use new navigation decision system
  */
 export async function findDestination(
   userCommand: string,
@@ -146,15 +144,61 @@ export async function findDestination(
   currentLocationDetails: CurrentLocationDetails,
   spatialNodes: SpatialNode[]
 ): Promise<NavigationResult> {
-  console.log('[UI DISCONNECTED] Would call NavigatorAI with:', {
+  console.log('[NavigatorAI] Calling navigation/decide with:', {
     userCommand,
     currentNode: currentLocationDetails.name,
     currentFocus,
     availableNodes: spatialNodes.length
   });
   
-  // Return mock navigation result
-  throw new Error('Navigation is temporarily disabled during backend refactoring');
+  // Call new navigation decision API
+  const response = await fetch('/api/mzoo/navigation/decide', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      userCommand: userCommand.trim(),
+      currentFocus,
+      currentNode: {
+        id: currentLocationDetails.node_id,
+        name: currentLocationDetails.name,
+        type: 'location', // Will be inferred from context
+        searchDesc: currentLocationDetails.searchDesc,
+        navigableElements: [], // Can be added if available
+        profile: {
+          looks: '',
+          atmosphere: '',
+          searchDesc: currentLocationDetails.searchDesc
+        }
+      },
+      allNodes: spatialNodes.map(node => ({
+        id: node.id,
+        name: node.name,
+        type: 'location', // Simplified for now
+        searchDesc: node.searchDesc
+      }))
+    })
+  });
+  
+  if (!response.ok) {
+    const error = await response.json();
+    console.error('[NavigatorAI] API error:', error);
+    throw new Error(`Navigation API failed: ${error.error || 'Unknown error'}`);
+  }
+  
+  const result = await response.json();
+  const navigation = result.data;
+  
+  console.log('[NavigatorAI] ✅ Navigation Decision:', {
+    action: navigation.action,
+    name: navigation.name,
+    scale_hint: navigation.scale_hint,
+    relation: navigation.relation,
+    reason: navigation.reason
+  });
+  
+  return navigation;
   
   // ORIGINAL CODE (disabled during refactor):
   // console.log('[NavigatorAI] 🎯 Visual context:', {

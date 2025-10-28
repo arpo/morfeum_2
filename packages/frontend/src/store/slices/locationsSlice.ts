@@ -14,6 +14,18 @@ export interface FocusState {
   perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
   viewpoint: string;
   distance: 'close' | 'medium' | 'far';
+  currentViewId?: string; // optional reference to specific view
+}
+
+// View interface - multiple views per node
+export interface View {
+  id: string;
+  nodeId: string; // parent node this view belongs to
+  imagePath?: string; // optional, for later image generation
+  perspective: string;
+  viewpoint: string;
+  focusTarget: string;
+  searchDesc: string; // "view from entrance", "looking at harbor"
 }
 
 // Node types
@@ -266,6 +278,7 @@ export interface Location {
 interface LocationsState {
   // New tree-based storage
   nodes: Record<string, Node>;
+  views: Record<string, View>; // multiple views per node
   worldTrees: TreeNode[];
   pinnedIds: string[];
   
@@ -391,6 +404,7 @@ export const useLocationsStore = create<LocationsState>()(
   persist(
     (set, get) => ({
       nodes: {},
+      views: {},
       worldTrees: [],
       pinnedIds: [],
       
@@ -442,6 +456,44 @@ export const useLocationsStore = create<LocationsState>()(
       
       getAllNodes: () => {
         return Object.values(get().nodes);
+      },
+      
+      // View CRUD operations
+      createView: (view: Omit<View, 'id'> & { id?: string }) => {
+        const id = view.id || uuidv4();
+        const newView: View = {
+          ...view,
+          id,
+        };
+        
+        set((state) => ({
+          views: {
+            ...state.views,
+            [id]: newView,
+          },
+        }));
+        
+        return id;
+      },
+      
+      getView: (id: string) => {
+        return get().views[id];
+      },
+      
+      getNodeViews: (nodeId: string) => {
+        const allViews = get().views;
+        return Object.values(allViews).filter(view => view.nodeId === nodeId);
+      },
+      
+      deleteView: (id: string) => {
+        set((state) => {
+          const { [id]: deleted, ...rest } = state.views;
+          return { views: rest };
+        });
+      },
+      
+      getAllViews: () => {
+        return Object.values(get().views);
       },
       
       // Delete entire world tree (all nodes in the tree)
@@ -693,7 +745,7 @@ export const useLocationsStore = create<LocationsState>()(
       
       // Bulk operations
       clearAll: () => {
-        set({ nodes: {}, worldTrees: [], pinnedIds: [] });
+        set({ nodes: {}, views: {}, worldTrees: [], pinnedIds: [] });
       },
       
       // Focus management
@@ -814,6 +866,7 @@ export const useLocationsStore = create<LocationsState>()(
       name: 'morfeum-locations-storage',
       partialize: (state) => ({
         nodes: state.nodes,
+        views: state.views,
         worldTrees: state.worldTrees,
         pinnedIds: state.pinnedIds,
       }),

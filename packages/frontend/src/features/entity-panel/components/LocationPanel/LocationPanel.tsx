@@ -95,6 +95,15 @@ export function LocationPanel() {
             placeholder="Describe where you want to go..."
             disabled={state.isMoving}
           />
+          <Button
+            onClick={handlers.handleMove}
+            disabled={state.isMoving || !state.movementInput.trim()}
+            loading={state.isMoving}
+          >
+            Travel
+          </Button>
+        </div>
+        <div>
           <label className={styles.checkboxLabel}>
             <input
               type="checkbox"
@@ -104,13 +113,6 @@ export function LocationPanel() {
             />
             <span>Create image</span>
           </label>
-          <Button
-            onClick={handlers.handleMove}
-            disabled={state.isMoving || !state.movementInput.trim()}
-            loading={state.isMoving}
-          >
-            Travel
-          </Button>
         </div>
       </div>
 
