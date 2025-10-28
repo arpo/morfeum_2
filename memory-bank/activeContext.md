@@ -1,35 +1,68 @@
 # Active Context
 
 ## Current Work Focus
-**Location Hierarchy Parsing Improvements** - Refining hierarchical location generation system to handle edge cases. Recent fixes: district extraction (e.g., "Camden in London"), sparse DNA enforcement attempts, hierarchy normalization for singular location nodes. System mostly working but some edge cases remain (passthrough regions, DNA not fully sparse despite prompt updates).
+**Location System DNA & Visual Analysis Integration** - Fixed critical DNA duplication issues and improved visual analysis context flow. Completed: Visual analysis context integration, DNA/visual separation, cascade direction clarification, structure keyword detection, and duplication removal. System now properly separates scene-specific details (visual analysis) from cascading style properties (DNA).
 
-### Recent Work
-1. **District Extraction Pattern Detection** (hierarchyCategorization.ts):
-   - Added aggressive pre-flight check for "[thing] in [DISTRICT] in [CITY]" pattern
-   - Final validation step to prevent passthrough regions
-   - Explicit Camden/London example documentation
-   - Pattern: Middle word in "X in Y in Z" MUST be extracted as Region
-   
-2. **Sparse DNA Enforcement Attempts** (completeDNAGeneration.ts):
-   - Added passthrough region exception (2-3 contextual fields minimum)
-   - Updated prompt with verbose examples showing correct sparse DNA
-   - Result: LLMs still tend to populate most/all fields (inherent LLM behavior)
-   - Trade-off accepted: Full DNA works correctly with merge logic
-   
-3. **Hierarchy Normalization**:
-   - Fixed handling of singular `{\"location\": {...}}` responses without host wrapper
-   - System now creates proper Host → Region → Location nesting
-   - Edge case: Root-level regions/locations normalized correctly
+### Recent Work (Latest - Just Completed)
+
+1. **Visual Analysis Context Integration** (completeDNAGeneration.ts):
+   - Added `visualAnalysis` parameter to DNA generation function
+   - Passes visual analysis from deepest node to DNA generation prompt
+   - Displays looks, atmosphere, lighting, materials, colors to LLM
+   - Clear instructions: "These scene details are ALREADY captured - DO NOT duplicate in DNA"
+   - Abstraction examples: "polished chrome walls" → "industrial metallic aesthetic"
+   - Result: LLM can see what's already described and extract complementary style properties
+
+2. **DNA/Visual Separation Fixed** (completeDNAGeneration.ts):
+   - Added warning at top: "DNA contains ONLY cascading style/vibe properties - NOT scene-specific details"
+   - Explicit prohibition: NO "looks", "atmosphere", "lighting", specific materials/colors in DNA
+   - Updated field descriptions to emphasize STYLE/PALETTE not specifics:
+     - architectural_tone: "architectural STYLE (not specific structures)"
+     - materials_base: "material PALETTE/STYLE (not specific objects)"
+     - palette_bias: "COLOR STYLE/FAMILIES (not specific colors in scene)"
+   - Result: Clear boundary between DNA (style that cascades) and visual analysis (scene specifics)
+
+3. **Cascade Direction Clarified** (completeDNAGeneration.ts):
+   - Added prominent header: "🔄 CASCADE DIRECTION: You are working BACKWARDS from the deepest node!"
+   - Explicit flow explanation:
+     1. We have DEEPEST NODE with visual analysis (scene specifics)
+     2. You generate DNA for HOST (world-level style)
+     3. You generate DNA for REGION (biome-level style)
+     4. You generate DNA for LOCATION (site-level style)
+     5. Later, DNA CASCADES DOWN: Host → Region → Location → Future Children
+   - Visual analysis section titled: "Your Context for Working Backwards"
+   - Key principles: Extract world-level style that would PRODUCE this kind of location
+
+4. **Structure Keyword Detection** (hierarchyCategorization.ts):
+   - Added Rule 0: "Specific Structure Detection → Create Location with Inferred Host"
+   - Comprehensive keyword lists:
+     - Buildings: greenhouse, tower, shop, bar, pub, restaurant, observatory, lighthouse, etc. (24 keywords)
+     - Structures: bridge, fountain, monument, gate, wall, etc. (9 keywords)
+     - Natural features: cave, waterfall, grove, crater, canyon, etc. (11 keywords)
+   - When detected: Structure = Location, infer Host from thematic context
+   - Examples added: "The Ferro Garden, an abandoned greenhouse" → creates world + region + location
+   - Result: Specific buildings no longer mistakenly treated as entire worlds
+
+5. **Adjusted Sparsity Targets by Node Type** (completeDNAGeneration.ts):
+   - **Regions**: 60-80% fields populated (define climate, materials, sounds, flora/fauna)
+   - **Locations**: 40-60% fields populated (refine region aspects)
+   - **Niches**: 20-40% fields populated (intimate details only)
+   - Rationale: Regions define biomes and need richer DNA than before
+
+6. **Duplication Removal** (batchDNAGenerator.ts):
+   - Removed duplicate visual analysis merge that was adding looks/atmosphere to DNA
+   - Added comment: "Visual analysis merging is handled in spawn.ts (Stage 4.5)"
+   - Visual analysis only merges to node root, NOT to DNA object
+   - Result: Clean separation maintained throughout pipeline
 
 ### Known Issues
-- **District Extraction Still Inconsistent**: Despite explicit examples, LLM sometimes creates passthrough regions (e.g., Region: "London" instead of Region: "Camden")
-- **DNA Not Sparse**: LLMs populate most fields instead of leaving null, resulting in redundant DNA across hierarchy levels
-- **Passthrough Regions**: When district not detected, creates empty-description region with same name as host
+- None currently - all major DNA and visual analysis issues resolved
 
 ### Next Steps
-- May need to switch to post-processing approach (detect and fix passthrough regions in code)
-- Consider enforcing district extraction through regex pattern matching instead of relying on LLM
-- Accept that DNA will be full (not sparse) and rely on merge logic to handle it
+- Test updated prompts with various location types (exterior structures, interior spaces, natural features)
+- Monitor DNA output to verify looks/atmosphere no longer appear in DNA
+- Verify region DNA is richer now with updated sparsity targets
+- Continue refining structure keyword list based on user prompts
 
 ## Recent Changes
 
