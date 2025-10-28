@@ -11,7 +11,7 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   // Locations (filter to world nodes only)
   const nodesMap = useLocationsStore(state => state.nodes);
   const locations = useMemo(() => 
-    Object.values(nodesMap).filter(node => node.type === 'world'),
+    Object.values(nodesMap).filter(node => node.type === 'host'),
     [nodesMap]
   );
   const pinnedLocationIds = useLocationsStore(state => state.pinnedIds);

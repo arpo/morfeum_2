@@ -4,6 +4,7 @@
  */
 
 import { useLocationTreeLogic } from './useLocationTreeLogic';
+import { IconWorld, IconMapPin, IconBuilding, IconDoor } from '@/icons';
 import styles from './LocationTreePanel.module.css';
 
 interface LocationTreePanelProps {
@@ -24,29 +25,25 @@ interface TreeNodeProps {
 
 function TreeNode({ node, onNodeClick, depth }: TreeNodeProps) {
   const getTypeIcon = (type: string) => {
+    const iconProps = { size: 16, stroke: 1.5 };
+    
     switch (type) {
-      case 'world':
-        return '🌍';
+      case 'host':
+        return <IconWorld {...iconProps} />;
       case 'region':
-        return '📍';
+        return <IconMapPin {...iconProps} />;
       case 'location':
-        return '🏛️';
-      case 'sublocation':
-        return '🚪';
+        return <IconBuilding {...iconProps} />;
+      case 'niche':
+        return <IconDoor {...iconProps} />;
       default:
-        return '●';
+        return <IconBuilding {...iconProps} />;
     }
   };
   
   const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'world':
-        return 'host';
-      case 'sublocation':
-        return 'niche';
-      default:
-        return type;
-    }
+    // Types are now already host/niche, just return as-is
+    return type;
   };
 
   return (
@@ -55,7 +52,9 @@ function TreeNode({ node, onNodeClick, depth }: TreeNodeProps) {
         onClick={() => onNodeClick(node.id)}
         className={`${styles.nodeButton} ${node.isCurrentNode ? styles.currentNode : ''}`}
       >
-        <span className={styles.nodeIcon}>{getTypeIcon(node.type)}</span>
+        <span className={styles.nodeIcon}>
+          {getTypeIcon(node.type)}
+        </span>
         <span className={styles.nodeName}>{node.name}</span>
         <span className={styles.nodeType}>({getTypeLabel(node.type)})</span>
       </button>

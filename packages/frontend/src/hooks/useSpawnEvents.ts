@@ -100,7 +100,7 @@ export function useSpawnEvents() {
       
       // Update world node image (world node uses spawnId as its ID)
       const worldNode = getNode(spawnId);
-      if (worldNode && worldNode.type === 'world') {
+      if (worldNode && worldNode.type === 'host') {
         updateNode(spawnId, { imagePath: imageUrl });
       }
       
@@ -315,30 +315,30 @@ export function useSpawnEvents() {
       // Extract clean name (remove the hierarchical suffix)
       const cleanName = dna.meta.name.split(' (')[0];
       
-      // Create sublocation node
-      const sublocationNode: Node = {
+      // Create niche node (formerly sublocation)
+      const nicheNode: Node = {
         id: spawnId,
-        type: 'sublocation',
+        type: 'niche',
         name: cleanName,
         dna: dna,
         imagePath: imageUrl || '',
         focus: undefined,
       };
       
-      createNode(sublocationNode);
+      createNode(nicheNode);
       
       // Find world ID from cascaded DNA
       // The world node ID is the first node in any tree path
       const worldId = Object.values(useLocationsStore.getState().nodes)
-        .find(node => node.type === 'world' && node.dna === cascadedDNA.world)?.id;
+        .find(node => node.type === 'host' && node.dna === cascadedDNA.world)?.id;
       
       if (!worldId) {
-        console.error('[SSE] ❌ Could not find world ID for sublocation');
+        console.error('[SSE] ❌ Could not find world ID for niche');
         return;
       }
       
       // Add to tree under parent
-      addNodeToTree(worldId, parentNodeId, spawnId, 'sublocation');
+      addNodeToTree(worldId, parentNodeId, spawnId, 'niche');
       
       // Update entity deep profile with cascaded DNA for display
       const fullCascadedDNA = {
