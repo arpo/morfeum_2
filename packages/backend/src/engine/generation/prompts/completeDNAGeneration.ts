@@ -246,6 +246,5 @@ OUTPUT STRUCTURE:
 
 Generate now:`
 ;
-  console.log(rv);
   return rv;
 }

@@ -1,7 +1,7 @@
 // LocationInfoModal Component - PURE JSX ONLY
-import { Modal, ModalContent, ModalSection } from '@/components/ui';
+import { Modal, ModalContent, ModalSection, CollapsiblePanel } from '@/components/ui';
 import { useLocationsStore } from '@/store/slices/locationsSlice';
-import { useLocationInfoLogic } from './useLocationInfoLogic';
+import { useLocationInfoLogic, determineCurrentNode } from './useLocationInfoLogic';
 import type { LocationInfoModalProps } from './types';
 import styles from './LocationInfoModal.module.css';
 
@@ -31,6 +31,35 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
 
   let profile = locationProfile as any;
   
+  // Handle new hierarchy structure from hierarchy:complete event
+  if (profile.hierarchy) {
+    // Convert hierarchy structure to expected format
+    const hierarchy = profile.hierarchy;
+    const convertedProfile: any = {};
+    
+    // Map host -> world
+    if (hierarchy.host) {
+      convertedProfile.world = hierarchy.host;
+    }
+    
+    // Map first region if exists
+    if (hierarchy.host?.regions?.[0]) {
+      convertedProfile.region = hierarchy.host.regions[0];
+    }
+    
+    // Map first location if exists
+    if (hierarchy.host?.regions?.[0]?.locations?.[0]) {
+      convertedProfile.location = hierarchy.host.regions[0].locations[0];
+    }
+    
+    // Map first niche if exists
+    if (hierarchy.host?.regions?.[0]?.locations?.[0]?.niches?.[0]) {
+      convertedProfile.sublocation = hierarchy.host.regions[0].locations[0].niches[0];
+    }
+    
+    profile = convertedProfile;
+  }
+  
   // Detect if this is a bare WorldNode (has meta.name + semantic but no 'world' wrapper)
   const isBareWorldNode = profile.meta?.name && profile.semantic && !profile.world && !profile.location && !profile.looks;
   
@@ -58,15 +87,15 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
               <div className={styles.subsection}>
                 <div className={styles.field}>
                   <label className={styles.label}>Perspective</label>
-                  <p className={styles.value}>{focus.perspective}</p>
+                  <p className={styles.value}>{focus?.perspective ?? 'N/A'}</p>
                 </div>
                 <div className={styles.field}>
                   <label className={styles.label}>Viewpoint</label>
-                  <p className={styles.value}>{focus.viewpoint}</p>
+                  <p className={styles.value}>{focus?.viewpoint ?? 'N/A'}</p>
                 </div>
                 <div className={styles.field}>
                   <label className={styles.label}>Distance</label>
-                  <p className={styles.value}>{focus.distance}</p>
+                  <p className={styles.value}>{focus?.distance ?? 'N/A'}</p>
                 </div>
               </div>
             </ModalSection>
@@ -182,19 +211,22 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
     );
   }
 
-  // Render hierarchical structure (old format)
+  // Determine which node is currently in focus
+  const currentNodeType = determineCurrentNode(focus || null, profile);
+
+  // Render hierarchical structure with current node first, parents as collapsible
   return (
     <Modal isOpen={isOpen} onClose={handleClose} title={`${locationName} - DNA Structure`} maxWidth="lg">
       <ModalContent>
         {/* ============================================
-            FOCUS STATE - Current viewing position
+            FOCUS STATE - Hidden by default (for debugging only)
         ============================================ */}
-        {focus && (
+        {/* {false && focus ? (
           <ModalSection title="🎯 Current Focus" description="Where you are viewing from">
             <div className={styles.subsection}>
               <div className={styles.field}>
-                <label className={styles.label}>Node ID</label>
-                <p className={styles.value}>{focus.node_id}</p>
+                <label className={styles.label}>Current Node</label>
+                <p className={styles.value}>{focus.node_id} ({currentNodeType || 'unknown'})</p>
               </div>
               <div className={styles.field}>
                 <label className={styles.label}>Perspective</label>
@@ -210,7 +242,7 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
               </div>
             </div>
           </ModalSection>
-        )}
+        ) : null} */}
 
         {/* ============================================
             SUBLOCATION NODE - Interior/nested space details
@@ -393,8 +425,14 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 <h4 className={styles.subsectionTitle}>Meta</h4>
                 <div className={styles.field}>
                   <label className={styles.label}>Name</label>
-                  <p className={styles.value}>{profile.location.meta?.name || 'N/A'}</p>
+                  <p className={styles.value}>{profile.location.name || profile.location.meta?.name || 'N/A'}</p>
                 </div>
+                {profile.location.description && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>Description</label>
+                    <p className={styles.value}>{profile.location.description}</p>
+                  </div>
+                )}
               </div>
 
               {/* Semantic */}
@@ -511,97 +549,126 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 </div>
               )}
 
-              {/* Profile */}
-              {profile.location.profile && (
-                <div className={styles.subsection}>
-                  <h4 className={styles.subsectionTitle}>Profile</h4>
+              {/* Profile - Check both flat and nested structures */}
+              <div className={styles.subsection}>
+                <h4 className={styles.subsectionTitle}>Profile</h4>
+                <div className={styles.field}>
+                  <label className={styles.label}>Looks</label>
+                  <p className={styles.value}>{profile.location.looks || profile.location.profile?.looks || 'N/A'}</p>
+                </div>
+                {(profile.location.lighting || profile.location.profile?.colorsAndLighting) && (
                   <div className={styles.field}>
-                    <label className={styles.label}>Looks</label>
-                    <p className={styles.value}>{profile.location.profile.looks || 'N/A'}</p>
+                    <label className={styles.label}>Lighting</label>
+                    <p className={styles.value}>{profile.location.lighting || profile.location.profile?.colorsAndLighting || 'N/A'}</p>
                   </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Colors & Lighting</label>
-                    <p className={styles.value}>{profile.location.profile.colorsAndLighting || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Atmosphere</label>
-                    <p className={styles.value}>{profile.location.profile.atmosphere || 'N/A'}</p>
-                  </div>
+                )}
+                <div className={styles.field}>
+                  <label className={styles.label}>Atmosphere</label>
+                  <p className={styles.value}>{profile.location.atmosphere || profile.location.profile?.atmosphere || 'N/A'}</p>
+                </div>
+                {(profile.location.materials_primary || profile.location.profile?.materials) && (
                   <div className={styles.field}>
                     <label className={styles.label}>Materials</label>
-                    <p className={styles.value}>{profile.location.profile.materials || 'N/A'}</p>
+                    <p className={styles.value}>{profile.location.materials_primary || profile.location.profile?.materials || 'N/A'}</p>
                   </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Mood</label>
-                    <p className={styles.value}>{profile.location.profile.mood || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Sounds</label>
-                    <p className={styles.value}>{profile.location.profile.sounds || 'N/A'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Symbolic Themes</label>
-                    <p className={styles.value}>{profile.location.profile.symbolicThemes || 'N/A'}</p>
-                  </div>
-                  {profile.location.profile.airParticles && profile.location.profile.airParticles !== 'None' && (
-                    <div className={styles.field}>
-                      <label className={styles.label}>Air Particles</label>
-                      <p className={styles.value}>{profile.location.profile.airParticles}</p>
-                    </div>
-                  )}
-                  <div className={styles.field}>
-                    <label className={styles.label}>Fictional</label>
-                    <p className={styles.value}>{profile.location.profile.fictional ? 'Yes' : 'No'}</p>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label}>Copyrighted</label>
-                    <p className={styles.value}>{profile.location.profile.copyright ? 'Yes' : 'No'}</p>
-                  </div>
-
-                  {/* Visual Anchors */}
-                  {profile.location.profile.visualAnchors && (
-                    <>
-                      <div className={styles.field}>
-                        <label className={styles.label}>🎯 Dominant Elements</label>
-                        <ul className={styles.list}>
-                          {profile.location.profile.visualAnchors.dominantElements?.map((elem: string, i: number) => (
-                            <li key={i}>{elem}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className={styles.field}>
-                        <label className={styles.label}>📐 Spatial Layout</label>
-                        <p className={styles.value}>{profile.location.profile.visualAnchors.spatialLayout}</p>
-                      </div>
-                      <div className={styles.field}>
-                        <label className={styles.label}>🧱 Surface Materials</label>
-                        <p className={styles.value}>
-                          <strong>Primary:</strong> {profile.location.profile.visualAnchors.surfaceMaterialMap?.primary_surfaces}<br/>
-                          <strong>Secondary:</strong> {profile.location.profile.visualAnchors.surfaceMaterialMap?.secondary_surfaces}<br/>
-                          <strong>Accents:</strong> {profile.location.profile.visualAnchors.surfaceMaterialMap?.accent_features}
-                        </p>
-                      </div>
-                      <div className={styles.field}>
-                        <label className={styles.label}>🎨 Color Mapping</label>
-                        <p className={styles.value}>
-                          <strong>Dominant:</strong> {profile.location.profile.visualAnchors.colorMapping?.dominant}<br/>
-                          <strong>Secondary:</strong> {profile.location.profile.visualAnchors.colorMapping?.secondary}<br/>
-                          <strong>Accent:</strong> {profile.location.profile.visualAnchors.colorMapping?.accent}<br/>
-                          <strong>Ambient:</strong> {profile.location.profile.visualAnchors.colorMapping?.ambient}
-                        </p>
-                      </div>
-                      <div className={styles.field}>
-                        <label className={styles.label}>✨ Unique Identifiers</label>
-                        <ul className={styles.list}>
-                          {profile.location.profile.visualAnchors.uniqueIdentifiers?.map((id: string, i: number) => (
-                            <li key={i}>{id}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
-                  )}
+                )}
+                <div className={styles.field}>
+                  <label className={styles.label}>Mood</label>
+                  <p className={styles.value}>{profile.location.mood || profile.location.profile?.mood || 'N/A'}</p>
                 </div>
-              )}
+                
+                {/* Flat structure visual analysis fields */}
+                {profile.location.dominantElements && profile.location.dominantElements.length > 0 && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>🎯 Dominant Elements</label>
+                    <ul className={styles.list}>
+                      {profile.location.dominantElements.map((elem: string, i: number) => (
+                        <li key={i}>{elem}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {profile.location.spatialLayout && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>📐 Spatial Layout</label>
+                    <p className={styles.value}>{profile.location.spatialLayout}</p>
+                  </div>
+                )}
+                
+                {profile.location.uniqueIdentifiers && profile.location.uniqueIdentifiers.length > 0 && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>✨ Unique Identifiers</label>
+                    <ul className={styles.list}>
+                      {profile.location.uniqueIdentifiers.map((id: string, i: number) => (
+                        <li key={i}>{id}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {/* Materials (flat structure) */}
+                {(profile.location.materials_primary || profile.location.materials_secondary || profile.location.materials_accents) && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>🧱 Materials</label>
+                    <p className={styles.value}>
+                      {profile.location.materials_primary && <><strong>Primary:</strong> {profile.location.materials_primary}<br/></>}
+                      {profile.location.materials_secondary && <><strong>Secondary:</strong> {profile.location.materials_secondary}<br/></>}
+                      {profile.location.materials_accents && <><strong>Accents:</strong> {profile.location.materials_accents}</>}
+                    </p>
+                  </div>
+                )}
+                
+                {/* Colors (flat structure) */}
+                {(profile.location.colors_dominant || profile.location.colors_secondary || profile.location.colors_accents || profile.location.colors_ambient) && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>🎨 Colors</label>
+                    <p className={styles.value}>
+                      {profile.location.colors_dominant && <><strong>Dominant:</strong> {profile.location.colors_dominant}<br/></>}
+                      {profile.location.colors_secondary && <><strong>Secondary:</strong> {profile.location.colors_secondary}<br/></>}
+                      {profile.location.colors_accents && <><strong>Accents:</strong> {profile.location.colors_accents}<br/></>}
+                      {profile.location.colors_ambient && <><strong>Ambient:</strong> {profile.location.colors_ambient}</>}
+                    </p>
+                  </div>
+                )}
+                
+                {/* Navigable Elements */}
+                {profile.location.navigableElements && profile.location.navigableElements.length > 0 && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>🚪 Navigable Elements</label>
+                    <ul className={styles.list}>
+                      {profile.location.navigableElements.map((elem: any, i: number) => (
+                        <li key={i}>{elem.type} ({elem.position}): {elem.description}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {/* DNA subsection */}
+                {profile.location.dna && (
+                  <>
+                    <h4 className={styles.subsectionTitle}>DNA</h4>
+                    {profile.location.dna.architectural_tone && (
+                      <div className={styles.field}>
+                        <label className={styles.label}>Architectural Tone</label>
+                        <p className={styles.value}>{profile.location.dna.architectural_tone}</p>
+                      </div>
+                    )}
+                    {profile.location.dna.cultural_tone && (
+                      <div className={styles.field}>
+                        <label className={styles.label}>Cultural Tone</label>
+                        <p className={styles.value}>{profile.location.dna.cultural_tone}</p>
+                      </div>
+                    )}
+                    {profile.location.dna.soundscape_base && (
+                      <div className={styles.field}>
+                        <label className={styles.label}>Soundscape</label>
+                        <p className={styles.value}>{profile.location.dna.soundscape_base}</p>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
             </ModalSection>
           </>
         )}
@@ -617,8 +684,14 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 <h4 className={styles.subsectionTitle}>Meta</h4>
                 <div className={styles.field}>
                   <label className={styles.label}>Name</label>
-                  <p className={styles.value}>{profile.region.meta?.name || 'N/A'}</p>
+                  <p className={styles.value}>{profile.region.name || profile.region.meta?.name || 'N/A'}</p>
                 </div>
+                {profile.region.description && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>Description</label>
+                    <p className={styles.value}>{profile.region.description}</p>
+                  </div>
+                )}
               </div>
 
               {/* Semantic */}
@@ -692,8 +765,14 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                 <h4 className={styles.subsectionTitle}>Meta</h4>
                 <div className={styles.field}>
                   <label className={styles.label}>Name</label>
-                  <p className={styles.value}>{profile.world.meta?.name || 'N/A'}</p>
+                  <p className={styles.value}>{profile.world.name || profile.world.meta?.name || 'N/A'}</p>
                 </div>
+                {profile.world.description && (
+                  <div className={styles.field}>
+                    <label className={styles.label}>Description</label>
+                    <p className={styles.value}>{profile.world.description}</p>
+                  </div>
+                )}
               </div>
 
               {/* Semantic */}
