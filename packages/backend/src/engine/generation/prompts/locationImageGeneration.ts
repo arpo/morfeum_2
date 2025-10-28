@@ -4,6 +4,7 @@
  */
 
 import { qualityPrompt } from '../../../prompts/languages/en/constants';
+import type { HierarchyNode } from '../../hierarchyAnalysis/types';
 
 const morfeumVibes = 'Morfeum aesthetic — hyper-realistic, high-contrast visuals with sharp light, glowing bioluminescence, and richly saturated tones. Surfaces feel alive; darkness holds depth, not gloom. Reality, one notch brighter.';
 
@@ -36,16 +37,12 @@ function getLocationShotInstructions(nodeType: string) {
  * Generate image prompt from hierarchy node chain
  * 
  * @param originalPrompt - Original user input
- * @param nodeChain - Array of nodes from broadest to most specific
+ * @param nodeChain - Array of complete hierarchy nodes from broadest to most specific
  * @returns Image generation prompt string
  */
 export function locationImageGeneration(
   originalPrompt: string,
-  nodeChain: Array<{
-    type: string;
-    name: string;
-    description: string;
-  }>
+  nodeChain: HierarchyNode[]
 ): string {
   // Last node is the target (what we're generating image for)
   const targetNode = nodeChain[nodeChain.length - 1];
@@ -63,20 +60,21 @@ export function locationImageGeneration(
   // Build scene description with enriched visual fields from deepest node
   let sceneDescription = `Description: ${targetNode.description}.`;
   
-  if ((targetNode as any).looks) {
-    sceneDescription += `\n\nLooks: ${(targetNode as any).looks}.`;
+  // Add visual enrichment fields if present (from hierarchyCategorization)
+  if ('looks' in targetNode && targetNode.looks) {
+    sceneDescription += `\n\nLooks: ${targetNode.looks}.`;
   }
-  if ((targetNode as any).atmosphere) {
-    sceneDescription += `\n\nAtmosphere: ${(targetNode as any).atmosphere}.`;
+  if ('atmosphere' in targetNode && targetNode.atmosphere) {
+    sceneDescription += `\n\nAtmosphere: ${targetNode.atmosphere}.`;
   }
-  if ((targetNode as any).mood) {
-    sceneDescription += `\n\nMood: ${(targetNode as any).mood}.`;
+  if ('mood' in targetNode && targetNode.mood) {
+    sceneDescription += `\n\nMood: ${targetNode.mood}.`;
   }
   
   // Use appropriate shot instructions based on target node type
   const shotInstructions = getLocationShotInstructions(targetNode.type);
   
-  return `${morfeumVibes}
+  const rv = `${morfeumVibes}
 
 Original user description: "${originalPrompt}"
 
@@ -92,4 +90,6 @@ ${contextText}${sceneDescription}
 IMPORTANT: no humans or animals unless specified
 
 ${qualityPrompt}`;
+// console.log(rv);
+  return rv;
 }

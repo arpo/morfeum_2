@@ -10,7 +10,7 @@ import { createSpawnManager, SpawnProcess } from '../services/spawn';
 import { eventEmitter } from '../services/eventEmitter';
 import { SublocPipelineManager } from '../services/spawn/managers/SublocPipelineManager';
 import { runCharacterPipeline } from '../engine/generation';
-import type { HierarchyStructure } from '../engine/hierarchyAnalysis/types';
+import type { HierarchyStructure, HierarchyNode } from '../engine/hierarchyAnalysis/types';
 
 const router = Router();
 
@@ -22,45 +22,26 @@ const spawnManagers = new Map<string, ReturnType<typeof createSpawnManager>>();
 
 /**
  * Build node chain from hierarchy (deepest node + all parents)
+ * Returns complete node objects to preserve visual enrichment fields
  */
-function buildNodeChain(hierarchy: HierarchyStructure): Array<{
-  type: string;
-  name: string;
-  description: string;
-}> {
-  const chain: Array<any> = [];
+function buildNodeChain(hierarchy: HierarchyStructure): HierarchyNode[] {
+  const chain: HierarchyNode[] = [];
   
-  // Start with host
-  chain.push({
-    type: 'host',
-    name: hierarchy.host.name,
-    description: hierarchy.host.description
-  });
+  // Start with host (complete object)
+  chain.push(hierarchy.host);
   
-  // Find deepest node path
+  // Find deepest node path and push complete objects
   if (hierarchy.host.regions && hierarchy.host.regions.length > 0) {
     const region = hierarchy.host.regions[0]; // Take first region
-    chain.push({
-      type: 'region',
-      name: region.name,
-      description: region.description
-    });
+    chain.push(region);
     
     if (region.locations && region.locations.length > 0) {
       const location = region.locations[0]; // Take first location
-      chain.push({
-        type: 'location',
-        name: location.name,
-        description: location.description
-      });
+      chain.push(location);
       
       if (location.niches && location.niches.length > 0) {
         const niche = location.niches[0]; // Take first niche
-        chain.push({
-          type: 'niche',
-          name: niche.name,
-          description: niche.description
-        });
+        chain.push(niche);
       }
     }
   }
