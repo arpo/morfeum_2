@@ -133,9 +133,78 @@ Input: "A biodome with a hidden control room"
 
 ## INFERENCE RULES
 
-**Rule 1: Simple phrase → Host only**
+**Rule 0: Specific Structure Detection → Create Location with Inferred Host**
+
+**🔍 STRUCTURE KEYWORDS indicate a Location, NOT a Host:**
+
+**Buildings:** greenhouse, tower, shop, bar, pub, club, restaurant, cafe, temple, church, cathedral, observatory, lighthouse, dome, warehouse, factory, bunker, station, terminal, hangar, library, museum, theater, arena, stadium
+
+**Structures:** bridge, fountain, monument, statue, gate, wall, archway, obelisk, pavilion, gazebo
+
+**Natural Features:** cave, cavern, grotto, waterfall, grove, clearing, crater, canyon, ravine, valley, peak, summit
+
+**When STRUCTURE KEYWORD detected:**
+1. The named structure becomes a **Location**
+2. **Infer a Host** from thematic context in the description
+3. Optionally infer Region if strong regional cues present
+
+**Examples:**
+
+✅ "The Ferro Garden, an abandoned greenhouse where metallic plants bloom"
+Example output:
+{
+  "host": {
+    "type": "host",
+    "name": "The Rusted Realm",
+    "description": "A world where nature and metal intertwine, where metallic flora responds to electrical storms."
+  },
+  "regions": [{
+    "type": "region", 
+    "name": "The Storm Territories",
+    "description": "A region frequently struck by thunderstorms that awaken the metallic vegetation.",
+    "locations": [{
+      "type": "location",
+      "name": "The Ferro Garden",
+      "description": "An abandoned greenhouse where metallic plants coil and bloom when thunder rolls.",
+      "looks": "Decaying glass panes, rusted metal frames, strange metallic flora coiling around support beams",
+      "atmosphere": "Damp, echoing, occasionally charged with static electricity during storms",
+      "mood": "Eerie, desolate, strangely vibrant"
+    }]
+  }]
+}
+
+✅ "The Crystal Spire, a tower reaching into the clouds"
+Example output:
+{
+  "host": {
+    "type": "host",
+    "name": "Celestial Heights",
+    "description": "A world of floating islands and cloud-piercing structures."
+  },
+  "regions": [{
+    "type": "region",
+    "name": "The Upper Reaches", 
+    "description": "The highest elevations where structures breach the cloud layer.",
+    "locations": [{
+      "type": "location",
+      "name": "The Crystal Spire",
+      "description": "A magnificent tower reaching through the clouds into the clear sky above.",
+      "looks": "Gleaming crystalline structure, geometric facets catching sunlight, cloud layer swirling around base",
+      "atmosphere": "Thin air, wispy clouds passing by, crystal surfaces resonating with wind",
+      "mood": "Majestic, isolated, ethereal"
+    }]
+  }]
+}
+
+✅ "A bar in Tokyo"
+- "bar" = structure keyword → Location
+- "Tokyo" = city name → Host
+- Result: Host (Tokyo) + Location (Bar)
+
+**Rule 1: Simple phrase → Host only (IF NO STRUCTURE KEYWORD)**
 - "Paris" → Host only
 - "London inspired by Tron" → Host only
+- "A cyberpunk world" → Host only
 
 **Rule 2: Famous landmark → Host + Location (minimal)**
 - "Eiffel Tower" → Host (Paris) + Location (Eiffel Tower)
