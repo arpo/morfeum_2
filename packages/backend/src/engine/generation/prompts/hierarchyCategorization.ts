@@ -258,8 +258,16 @@ Example output:
 
 **IMPORTANT: The DEEPEST node (most specific layer) must include visual enrichment:**
 
-- **name**: Use mentioned name OR invent memorable one
-  - Examples: "The Whispering Archives", "Neon Sanctum", "Forgotten Shore", "The Iron Tide"
+- **name**: Use mentioned name OR invent memorable, evocative one
+  - Be creative - the name should reflect the PLACE DESCRIBED, not the inspiration source
+  - If location is inspired by an artist or similar, DO NOT mention the inspiration source in the name
+  - Alien/exotic places can use alien language names or poetic descriptors
+  - Examples:
+    - "The Whispering Archives" (not "Borges-inspired Library")
+    - "Neon Sanctum" (not "Blade Runner-style Club")
+    - "The Crystalline Expanse" (not "Moebius-inspired Desert")
+    - "Zyx'thara Prime" (alien world name)
+    - "The Singing Bridges" (focuses on the feature, not the artist)
   - Avoid generic: "Bar", "Club", "Room"
   
 - **description**: 2-3 sentences explaining what it is

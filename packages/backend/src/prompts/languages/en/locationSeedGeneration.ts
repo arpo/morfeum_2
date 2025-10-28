@@ -45,8 +45,16 @@ Examples:
 • "VIP room in a club" → sublocation: "VIP room", context: "club"
 
 [name]
-- Use mentioned name or invent memorable one.
-- Examples: "The Whispering Archives", "Neon Sanctum", "Forgotten Shore"
+- Use mentioned name OR invent memorable, evocative one
+- Be creative - the name should reflect the PLACE DESCRIBED, not the inspiration source
+- If location is inspired by an artist or similar, DO NOT mention the inspiration source in the name
+- Alien/exotic places can use alien language names or poetic descriptors
+- Examples:
+  - "The Whispering Archives" (not "Borges-inspired Library")
+  - "Neon Sanctum" (not "Blade Runner-style Club")
+  - "The Crystalline Expanse" (not "Moebius-inspired Desert")
+  - "Zyx'thara Prime" (alien world name)
+  - "The Singing Bridges" (focuses on the feature, not the artist)
 
 [looks]
 - Visible geometry, layout, scale.

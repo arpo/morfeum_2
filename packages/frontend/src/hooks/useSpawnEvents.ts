@@ -5,6 +5,32 @@
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
+import { initFocus } from '@/utils/locationFocus';
+
+/**
+ * Helper function to find the deepest node in a hierarchy
+ */
+function findDeepestNode(hierarchy: any) {
+  const host = hierarchy.host;
+  
+  // Check for niches in locations
+  if (host.regions?.[0]?.locations?.[0]?.niches?.[0]) {
+    return host.regions[0].locations[0].niches[0];
+  }
+  
+  // Check for locations in regions
+  if (host.regions?.[0]?.locations?.[0]) {
+    return host.regions[0].locations[0];
+  }
+  
+  // Check for regions
+  if (host.regions?.[0]) {
+    return host.regions[0];
+  }
+  
+  // Default to host
+  return host;
+}
 
 export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);
@@ -494,13 +520,17 @@ export function useSpawnEvents() {
       console.log('Metadata:', metadata);
       console.log('Image URL:', imageUrl);
       
-      // Create entity session with hierarchy data
+      // Find the deepest node in the hierarchy
+      const deepestNode = findDeepestNode(hierarchy);
+      console.log('[Hierarchy] Deepest node:', deepestNode.name, `(${deepestNode.type || 'unknown'})`);
+      
+      // Create entity session with DEEPEST NODE data (not host)
       if (createEntity && hierarchy.host) {
         const seed = {
-          name: hierarchy.host.name,
-          looks: hierarchy.host.dna?.looks || hierarchy.host.description,
-          atmosphere: hierarchy.host.dna?.atmosphere || '',
-          mood: hierarchy.host.dna?.mood || ''
+          name: deepestNode.name,
+          looks: deepestNode.looks || deepestNode.dna?.looks || deepestNode.description,
+          atmosphere: deepestNode.atmosphere || deepestNode.dna?.atmosphere || '',
+          mood: deepestNode.mood || deepestNode.dna?.mood || ''
         };
         createEntity(spawnId, seed, 'location');
       }
@@ -519,15 +549,18 @@ export function useSpawnEvents() {
         } as any);
       }
       
-      // Create node in location tree
+      // Create node in location tree with DEEPEST NODE name and focus
       if (hierarchy.host) {
         const node: Partial<Node> = {
           id: spawnId,
           type: 'world' as any,
-          name: hierarchy.host.name,
+          name: deepestNode.name,
           dna: hierarchy as any,
           imagePath: imageUrl || '',
-          focus: undefined
+          focus: initFocus({
+            name: deepestNode.name,
+            dna: deepestNode.dna || deepestNode
+          } as any)
         };
         
         createNode(node as any);
