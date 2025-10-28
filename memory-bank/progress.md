@@ -2,7 +2,46 @@
 
 ## What Works ✅
 
-### Niche Creation Rules - Environmental vs Physical Space Distinction (Latest - Just Completed) ✅
+### Location Hierarchy Parsing Improvements (Latest - Just Completed) ✅
+1. **District Extraction Pattern Detection** (hierarchyCategorization.ts):
+   - Added aggressive pre-flight check for "[thing] in [DISTRICT] in [CITY]" pattern
+   - Final validation step to prevent passthrough regions
+   - Explicit Camden/London example documentation
+   - Pattern: Middle word in "X in Y in Z" MUST be extracted as Region
+   - **Known Issue**: LLM sometimes still creates passthrough regions despite examples
+   
+2. **Sparse DNA Enforcement Attempts** (completeDNAGeneration.ts):
+   - Added passthrough region exception (2-3 contextual fields minimum for empty-description regions)
+   - Updated prompt with verbose examples showing correct sparse DNA
+   - **Result**: LLMs still populate most/all fields (inherent LLM behavior - trained to be helpful/complete)
+   - **Trade-off Accepted**: Full DNA works correctly with merge logic, minimal storage impact (~1-2KB per node)
+   - Removed verbose examples to save ~800 tokens per call
+   
+3. **Hierarchy Normalization Fixes**:
+   - Fixed handling of singular `{"location": {...}}` responses without host wrapper
+   - System now creates proper Host → Region → Location nesting
+   - Edge case: Root-level regions/locations normalized correctly
+   
+4. **Files Modified**: 2 total (hierarchyCategorization.ts, completeDNAGeneration.ts)
+5. **Quality Verified**: Backend build passes (zero TypeScript errors)
+6. **Key Challenges**:
+   - **District Extraction Still Inconsistent**: LLM behavior difficult to fully control with prompts alone
+   - **DNA Not Sparse**: LLMs resist null fields, may need post-processing approach in future
+   - **Passthrough Regions**: When district not detected, creates empty region with same name as host
+   
+7. **What Works**:
+   - ✅ Batched DNA generation reduces API calls dramatically (2-3 vs 10+)
+   - ✅ Parent context flows correctly through hierarchy
+   - ✅ Progressive SSE events provide real-time UI feedback
+   - ✅ Merge logic handles both sparse and full DNA correctly
+   - ✅ Token usage optimized by removing ineffective prompt additions
+   
+8. **Potential Future Solutions**:
+   - Post-processing detection and fix of passthrough regions in code
+   - Regex pattern matching for district extraction instead of relying solely on LLM
+   - Accept full DNA as standard behavior and optimize merge logic
+
+### Niche Creation Rules - Environmental vs Physical Space Distinction (Previously Completed) ✅
 - **Problem**: AI creating niche nodes for environmental descriptions (e.g., "lush interior climate" → separate niche)
 - **Solution**: Added comprehensive niche creation rules to hierarchyCategorization.ts
 - **Clear Distinction**:

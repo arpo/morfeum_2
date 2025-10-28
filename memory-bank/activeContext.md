@@ -1,7 +1,35 @@
 # Active Context
 
 ## Current Work Focus
-**Cascading DNA Architecture - Pipeline Refactoring** - Designing cascading DNA system for hierarchical locations with visual consistency. Goal: Host/Region DNA provides foundation, each child node adds differential DNA (only what differs), final deepest node enhanced with visual analysis from generated image. Pipeline currently stopped after hierarchy classification + instant image generation (~3 seconds). DNA generation prompt created (nodeDNAGeneration.ts) but not yet integrated into active pipeline. Visual analysis for locations still to be implemented (similar to character visual analysis system).
+**Location Hierarchy Parsing Improvements** - Refining hierarchical location generation system to handle edge cases. Recent fixes: district extraction (e.g., "Camden in London"), sparse DNA enforcement attempts, hierarchy normalization for singular location nodes. System mostly working but some edge cases remain (passthrough regions, DNA not fully sparse despite prompt updates).
+
+### Recent Work
+1. **District Extraction Pattern Detection** (hierarchyCategorization.ts):
+   - Added aggressive pre-flight check for "[thing] in [DISTRICT] in [CITY]" pattern
+   - Final validation step to prevent passthrough regions
+   - Explicit Camden/London example documentation
+   - Pattern: Middle word in "X in Y in Z" MUST be extracted as Region
+   
+2. **Sparse DNA Enforcement Attempts** (completeDNAGeneration.ts):
+   - Added passthrough region exception (2-3 contextual fields minimum)
+   - Updated prompt with verbose examples showing correct sparse DNA
+   - Result: LLMs still tend to populate most/all fields (inherent LLM behavior)
+   - Trade-off accepted: Full DNA works correctly with merge logic
+   
+3. **Hierarchy Normalization**:
+   - Fixed handling of singular `{\"location\": {...}}` responses without host wrapper
+   - System now creates proper Host → Region → Location nesting
+   - Edge case: Root-level regions/locations normalized correctly
+
+### Known Issues
+- **District Extraction Still Inconsistent**: Despite explicit examples, LLM sometimes creates passthrough regions (e.g., Region: "London" instead of Region: "Camden")
+- **DNA Not Sparse**: LLMs populate most fields instead of leaving null, resulting in redundant DNA across hierarchy levels
+- **Passthrough Regions**: When district not detected, creates empty-description region with same name as host
+
+### Next Steps
+- May need to switch to post-processing approach (detect and fix passthrough regions in code)
+- Consider enforcing district extraction through regex pattern matching instead of relying on LLM
+- Accept that DNA will be full (not sparse) and rely on merge logic to handle it
 
 ## Recent Changes
 

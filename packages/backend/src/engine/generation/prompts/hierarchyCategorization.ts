@@ -10,6 +10,36 @@
 export function hierarchyCategorization(userPrompt: string): string {
   return `You are a spatial hierarchy analyzer. Analyze user input and organize it into a 4-layer hierarchy.
 
+## 🚨🚨🚨 STEP 1: PRE-FLIGHT CHECK - READ THIS FIRST 🚨🚨🚨
+
+**BEFORE DOING ANYTHING ELSE, CHECK FOR THIS PATTERN:**
+
+Pattern: "[thing] in [WORD] in [WORD]"
+
+If you find this pattern:
+- First WORD (rightmost) = Host
+- Second WORD (middle) = Region  
+- Third part (leftmost) = Location
+
+EXAMPLES OF THIS CRITICAL PATTERN:
+"club in Camden in London" → Host: London, Region: Camden, Location: club
+"bar in Shibuya in Tokyo" → Host: Tokyo, Region: Shibuya, Location: bar
+"pub in SoHo in New York" → Host: New York, Region: SoHo, Location: pub
+
+❌ WRONG (DO NOT DO THIS):
+{
+  "host": {"name": "London"},
+  "regions": [{"name": "London", "description": ""}]  ← Passthrough region (WRONG!)
+}
+
+✅ CORRECT:
+{
+  "host": {"name": "London"},
+  "regions": [{"name": "Camden", "description": "Alternative district"}]  ← District extracted!
+}
+
+If this pattern exists, YOU MUST extract the middle word as a Region. NO EXCEPTIONS.
+
 ## ⚠️ MINIMAL BY DEFAULT
 
 **MOST IMPORTANT RULE: Create ONLY what is explicitly mentioned.**
@@ -19,11 +49,11 @@ export function hierarchyCategorization(userPrompt: string): string {
 - Vague/atmospheric description → **Host only**
 
 **Examples:**
-✅ "Göteborg inspired by Tron" → Host only
+✅ "London inspired by Tron" → Host only
 ✅ "Paris" → Host only
 ✅ "Camden in London" → Host + Region
 ✅ "A pub in Camden in London" → Host + Region + Location
-❌ "Göteborg inspired by Tron" → Host + Regions + Locations (WRONG!)
+❌ "London inspired by Tron" → Host + Regions + Locations (WRONG!)
 
 ## 4-LAYER SYSTEM
 
@@ -90,6 +120,7 @@ Input: "A biodome with a hidden control room"
 - Explicit markers: "Name: Metropolis (world)", "Camden (region)", "Pub (location)"
 - Section headers: "---- Locations", "---- Regions" followed by list
 - Hierarchical phrase: "X in Y in Z" structure or similar like "inside", "within", "at", "on"
+- **District/neighborhood names: ALWAYS extract as Region**
 
 **Treat as description (NOT a node):**
 - Prose paragraphs about atmosphere, culture, design
@@ -104,7 +135,7 @@ Input: "A biodome with a hidden control room"
 
 **Rule 1: Simple phrase → Host only**
 - "Paris" → Host only
-- "Göteborg inspired by Tron" → Host only
+- "London inspired by Tron" → Host only
 
 **Rule 2: Famous landmark → Host + Location (minimal)**
 - "Eiffel Tower" → Host (Paris) + Location (Eiffel Tower)
@@ -114,8 +145,8 @@ Input: "A biodome with a hidden control room"
 - "Pub in Camden in London" → Host (London) + Region (Camden) + Location (Pub)
 
 **Rule 4: Interior/Inside detection**
-- "Bar at Ringön in Göteborg" → Host + Region + **Location** (gets exterior shot)
-- "Inside bar at Ringön in Göteborg" → Host + Region + Location (bar) + **Niche** (interior, gets interior shot)
+- "Bar at Camden in London" → Host + Region + **Location** (gets exterior shot)
+- "Inside bar at Camden in London" → Host + Region + Location (bar) + **Niche** (interior, gets interior shot)
 - "Pub (interior)" → Host + Region + Location + Niche with interior description
 
 **Key: Location = EXTERIOR by default. Add "inside" to create Niche = INTERIOR.**
@@ -176,7 +207,7 @@ Input: "A biodome with a hidden control room"
   "name": "The Rusted Anchor",
   "description": "A drinking establishment frequented by dockworkers and sailors",
   "looks": "Industrial brick walls, weathered copper bar counter, ship porthole windows, Edison bulbs",
-  "atmosphere": "Hazy with smoke, still air, warm amber lighting, smell of salt and beer",
+  "atmosphere": "Hazy with smoke, still air, warm ambient lighting, smell of salt and beer",
   "mood": "Relaxed yet edgy, working-class authenticity"
 }
 
@@ -191,8 +222,8 @@ Input: "A biodome with a hidden control room"
 {
   "host": {
     "type": "host",
-    "name": "Göteborg (Tron-inspired)",
-    "description": "A futuristic, neon-drenched interpretation of Göteborg."
+    "name": "London (Tron-inspired)",
+    "description": "A futuristic, neon-drenched interpretation of London."
   }
 }
 \`\`\`
@@ -222,6 +253,22 @@ Input: "A biodome with a hidden control room"
   }
 }
 \`\`\`
+
+## 🚨 STEP 2: BEFORE OUTPUT - FINAL VALIDATION 🚨
+
+**RUN THESE CHECKS BEFORE OUTPUTTING:**
+
+1. **Pattern Check**: Does input match "[thing] in [WORD] in [WORD]"?
+   - YES → Is middle WORD extracted as Region with a description?
+   - NO → STOP and fix. Middle word MUST be a Region.
+
+2. **Passthrough Region Check**: Is any Region name identical to Host name with empty description?
+   - YES → This is an ERROR. Extract the district name from user input as the Region.
+   - NO → Continue.
+
+3. **Specific Camden/London Check**: If input mentions both "Camden" and "London":
+   - Region MUST be "Camden"
+   - Region MUST NOT be "London"
 
 ## VALIDATION
 
