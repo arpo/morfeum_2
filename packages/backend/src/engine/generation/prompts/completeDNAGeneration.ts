@@ -52,26 +52,16 @@ OUTPUT STRUCTURE:
 
 {
   "host": {
-    // FULL DNA - all 22 fields populated
-    "looks": "2-4 sentences describing what is seen",
-    "colorsAndLighting": "1-3 sentences on colors and light",
-    "atmosphere": "2-4 sentences on air, temperature, motion, weather",
-    "architectural_tone": "10-20 char phrase (e.g. 'futuristic metal')",
-    "cultural_tone": "1 sentence on social/functional identity",
-    "materials": "1-3 sentences naming main materials",
-    "mood": "1-2 sentences on emotional tone",
-    "sounds": "5-7 words listing ambient sounds",
-    "dominantElementsDescriptors": "3-5 defining objects or structures",
-    "spatialLayout": "1-3 sentences on space shape, dimensions",
-    "primary_surfaces": "Main materials on walls, floor, ceiling",
-    "secondary_surfaces": "Supporting materials on furniture",
-    "accent_features": "Decorative or striking details",
-    "dominant": "Primary color family with coverage area",
-    "secondary": "Secondary color and where it appears",
-    "accent": "Accent colors and placement",
-    "ambient": "Overall light tone (warm/cool/neutral)",
-    "uniqueIdentifiers": "2-4 distinctive visual features",
-    "searchDesc": "75-100 char search description"
+    // FULL DNA - all 9 fields populated
+    "genre": "post-apocalyptic|fantasy|sci-fi|historical|modern|etc",
+    "architectural_tone": "2-4 words describing architectural style",
+    "cultural_tone": "1-2 sentences on social/functional identity",
+    "materials_base": "2-3 sentences naming main materials and textures",
+    "mood_baseline": "2-3 words describing emotional tone",
+    "palette_bias": "2-3 sentences on dominant color families and overall palette",
+    "soundscape_base": "2-3 sentences describing ambient sounds",
+    "flora_base": "2-3 sentences on plant life, vegetation types, or 'None'",
+    "fauna_base": "2-3 sentences on animal life, creatures, or 'None'"
   },
   "regions": [
     {
@@ -79,10 +69,15 @@ OUTPUT STRUCTURE:
       "dna": {
         // SPARSE DNA - only fields that DIFFER from Host
         // Set to null for fields that inherit from Host
+        // Genre is NEVER provided (always inherited from host)
         "architectural_tone": "different style" or null,
         "cultural_tone": "different culture" or null,
-        "mood": "different mood" or null,
-        // ... other fields null if inheriting from Host
+        "materials_base": "different materials" or null,
+        "mood_baseline": "different mood" or null,
+        "palette_bias": "different colors" or null,
+        "soundscape_base": "different sounds" or null,
+        "flora_base": "different vegetation" or null,
+        "fauna_base": "different creatures" or null
       }
     }
   ],
@@ -92,9 +87,15 @@ OUTPUT STRUCTURE:
       "name": "Location Name",
       "dna": {
         // SPARSE DNA - only fields that DIFFER from Host + Region
-        "sounds": "different sounds" or null,
-        "materials": "different materials" or null,
-        // ... other fields null if inheriting
+        // Genre is NEVER provided (always inherited from host)
+        "architectural_tone": "refined style" or null,
+        "cultural_tone": "specific culture" or null,
+        "materials_base": "specific materials" or null,
+        "mood_baseline": "specific mood" or null,
+        "palette_bias": "specific colors" or null,
+        "soundscape_base": "specific sounds" or null,
+        "flora_base": "specific vegetation" or null,
+        "fauna_base": "specific creatures" or null
       }
     }
   ],
@@ -104,9 +105,13 @@ OUTPUT STRUCTURE:
       "name": "Niche Name",
       "dna": {
         // SPARSE DNA - only fields that DIFFER from parent chain
-        "atmosphere": "intimate feel" or null,
-        "spatialLayout": "specific layout" or null,
-        // ... other fields null if inheriting
+        // Genre is NEVER provided (always inherited from host)
+        "architectural_tone": "intimate style" or null,
+        "materials_base": "detail materials" or null,
+        "mood_baseline": "intimate mood" or null,
+        "soundscape_base": "intimate sounds" or null,
+        "flora_base": "localized vegetation" or null,
+        "fauna_base": "localized creatures" or null
       }
     }
   ]
@@ -114,74 +119,63 @@ OUTPUT STRUCTURE:
 
 ⚠️ CRITICAL GUIDELINES - SPARSE DNA ENFORCEMENT ⚠️
 
-1. **Host DNA**: Generate ALL 22 fields with complete descriptions
+1. **Host DNA**: Generate ALL 9 fields with complete descriptions
+   - genre: ONLY set in host (world-level constant)
+   - All other fields: full descriptions
 
 2. **Child DNA - FIELD-BY-FIELD SPARSE ENFORCEMENT**:
    
-   🚨 FOR EACH OF THE 22 FIELDS, YOU MUST ASK: "Is this DIFFERENT from parent?" 🚨
+   🚨 FOR EACH OF THE 8 CASCADING FIELDS, YOU MUST ASK: "Is this DIFFERENT from parent?" 🚨
    
    Go through EVERY field in this exact order for child nodes:
    
-   1. looks → Different? If NO → null
-   2. colorsAndLighting → Different? If NO → null
-   3. atmosphere → Different? If NO → null
-   4. architectural_tone → Different? If NO → null
-   5. cultural_tone → Different? If NO → null
-   6. materials → Different? If NO → null
-   7. mood → Different? If NO → null
-   8. sounds → Different? If NO → null
-   9. dominantElementsDescriptors → Different? If NO → null
-   10. spatialLayout → Different? If NO → null
-   11. primary_surfaces → Different? If NO → null
-   12. secondary_surfaces → Different? If NO → null
-   13. accent_features → Different? If NO → null
-   14. dominant → Different? If NO → null
-   15. secondary → Different? If NO → null
-   16. accent → Different? If NO → null
-   17. ambient → Different? If NO → null
-   18. uniqueIdentifiers → Different? If NO → null
-   19. searchDesc → Must be unique, always provide
+   1. architectural_tone → Different from parent? If NO → null
+   2. cultural_tone → Different from parent? If NO → null
+   3. materials_base → Different from parent? If NO → null
+   4. mood_baseline → Different from parent? If NO → null
+   5. palette_bias → Different from parent? If NO → null
+   6. soundscape_base → Different from parent? If NO → null
+   7. flora_base → Different from parent? If NO → null
+   8. fauna_base → Different from parent? If NO → null
    
-   EXAMPLE - Camden region (parent: London):
-   1. looks: Camden has street art, markets → DIFFERENT → Provide value
-   2. colorsAndLighting: Same urban lighting → SAME → null
-   3. atmosphere: Camden more bohemian → DIFFERENT → Provide value
-   4. architectural_tone: Same Victorian/modern mix → SAME → null
-   5. cultural_tone: Camden alternative scene → DIFFERENT → Provide value
-   6. materials: Same brick/concrete → SAME → null
-   7. mood: Camden more rebellious → DIFFERENT → Provide value
-   8. sounds: Same traffic/urban sounds → SAME → null
-   9. dominantElementsDescriptors: Camden markets unique → DIFFERENT → Provide value
-   10. spatialLayout: Same dense urban → SAME → null
-   11. primary_surfaces: Same brick/concrete → SAME → null
-   12. secondary_surfaces: Same → SAME → null
-   13. accent_features: Camden street art unique → DIFFERENT → Provide value
-   14. dominant: Same gray → SAME → null
-   15. secondary: Same → SAME → null
-   16. accent: Camden neon different → DIFFERENT → Provide value
-   17. ambient: Same → SAME → null
-   18. uniqueIdentifiers: Camden Lock Market → DIFFERENT → Provide value
-   19. searchDesc: Always unique → Provide value
+   🚨 NEVER include "genre" in child nodes - it's always inherited from host 🚨
    
-   RESULT: 9 fields populated, 13 null (this is correct!)
+   EXAMPLE - Desert Canyon region (parent: Post-Apocalyptic Earth):
+   1. architectural_tone: Desert more sun-bleached wreckage → DIFFERENT → "sun-bleached metal ruins"
+   2. cultural_tone: Same survival-focused → SAME → null
+   3. materials_base: Desert more sand-scoured → DIFFERENT → "rust-eaten metal, sand-scoured scrap"
+   4. mood_baseline: Same grim determination → SAME → null
+   5. palette_bias: Desert more rust/sand colors → DIFFERENT → "rust orange, sand yellow, dark grey"
+   6. soundscape_base: Desert wind different → DIFFERENT → "wind through metal, sand shifting"
+   7. flora_base: Desert vegetation different → DIFFERENT → "desert cacti, radiation-mutated shrubs"
+   8. fauna_base: Desert creatures different → DIFFERENT → "scorpions, vultures, sand beetles"
+   
+   RESULT: 6 fields populated, 2 null (this is correct!)
    
    ⚠️ PASSTHROUGH REGIONS (empty description, same name as host):
    Provide minimum 2-3 contextual fields to prevent completely empty DNA.
    
-   🚨 TARGET: Child nodes should have 60-70% fields as null 🚨
+   🚨 TARGET: Child nodes should have 40-60% fields as null 🚨
 
-3. **Inheritance Chain**: 
+3. **Genre Inheritance**:
+   - Genre is ONLY set in host DNA
+   - All children inherit genre automatically - NEVER include it in child DNA
+   - Example: Host sets "post-apocalyptic", all regions/locations/niches inherit this
+
+4. **Inheritance Chain**: 
    - Regions inherit from Host
    - Locations inherit from Host + Region
    - Niches inherit from Host + Region + Location
 
-4. **Parent References**: 
+5. **Parent References**: 
    - Locations must specify "regionName"
    - Niches must specify "locationName"
 
-5. **Consistency**: Maintain visual coherence across hierarchy
+6. **Consistency**: Maintain coherence across hierarchy
+   - Genre stays constant throughout
+   - Other fields cascade and can be refined
 
-6. **Output**: Flat JSON only, no markdown or comments
+7. **Output**: Flat JSON only, no markdown or comments
 
 Generate now:`
 ;

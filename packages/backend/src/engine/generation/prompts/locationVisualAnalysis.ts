@@ -42,28 +42,26 @@ ${mood ? `Mood: ${mood}` : ''}
 IMPORTANT: Return ONLY a valid JSON object with these exact keys:
 {
   "looks": "...",
-  "colorsAndLighting": "...",
   "atmosphere": "...",
-  "vegetation": "...",
-  "architecture": "...",
-  "animals": "...",
-  "mood": "...",
-  "visualAnchors": {
-    "dominantElements": ["...", "...", "..."],
-    "spatialLayout": "...",
-    "surfaceMaterialMap": {
-      "primary_surfaces": "...",
-      "secondary_surfaces": "...",
-      "accent_features": "..."
-    },
-    "colorMapping": {
-      "dominant": "...",
-      "secondary": "...",
-      "accent": "...",
-      "ambient": "..."
-    },
-    "uniqueIdentifiers": ["...", "..."]
-  }
+  "lighting": "...",
+  "dominantElements": ["...", "...", "..."],
+  "spatialLayout": "...",
+  "uniqueIdentifiers": ["...", "..."],
+  "materials_primary": "...",
+  "materials_secondary": "...",
+  "materials_accents": "...",
+  "colors_dominant": "...",
+  "colors_secondary": "...",
+  "colors_accents": "...",
+  "colors_ambient": "...",
+  "navigableElements": [
+    {
+      "type": "stairs|door|corridor|passage|bridge|archway|portal|window|object",
+      "position": "left/right/center, foreground/midground/background",
+      "description": "brief description"
+    }
+  ],
+  "searchDesc": "[Type] Brief description. Has: element1 (position), element2 (position)"
 }
 
 Do not include markdown, code blocks, commentary, or explanations.
@@ -74,58 +72,68 @@ FIELD DEFINITIONS
 -----------------------------------------
 
 [looks]  
-4–6 sentences: describe visible spatial layout, scale, architecture, nature, materials, light interaction, and focal points.  
-Mention how light interacts with major forms (reflection, diffusion, glow).
-
-[colorsAndLighting]  
-2–4 sentences: describe dominant colors, contrast, and light quality (warm/cool, hard/soft).  
-Include gradient behavior or any directional lighting cues.
+4–6 sentences: describe visible spatial layout, scale, architecture, nature, materials, light interaction, and focal points.
 
 [atmosphere]  
-3–5 sentences: describe visible atmospheric qualities (fog, mist, haze, air clarity, humidity).  
-Mention luminosity, motion, and depth visibility.
+2–3 sentences: describe visible atmospheric qualities (fog, mist, haze, air clarity, humidity).
 
-[vegetation]  
-2–4 sentences: describe plants, density, coloration, and how they interact with light or architecture.  
-If none visible, return "None" and explain briefly why.
+[lighting]  
+2–3 sentences: describe light quality (warm/cool, hard/soft), dominant colors, contrast, and directional cues.
 
-[architecture]  
-2–4 sentences: describe visible structures — style, materials, scale, and condition.  
-If none visible, return "None" and explain briefly why.
+[dominantElements]  
+3–5 key elements with size/position (e.g., "Circular structure ~40m diameter with columns")
 
-[animals]  
-1–3 sentences: describe any visible creatures, birds, or traces of movement.  
-If none visible, return "None."
+[spatialLayout]  
+2–4 sentences describing geometry and framing (foreground, midground, background, subject alignment)
 
-[mood]  
-2–3 sentences: describe the emotional tone conveyed by lighting, color, and composition, as it would feel to a visitor.
+[uniqueIdentifiers]  
+2–4 distinct features that make this location unmistakable
 
------------------------------------------
-VISUAL ANCHORS (CRITICAL FOR CONSISTENCY)
------------------------------------------
+[materials_primary]  
+Major structural or terrain materials
 
-[visualAnchors]
-- [dominantElements]  
-  3–5 key elements with size/position (e.g., "cylindrical tower ~80m tall on left cliff, large moon at upper right")
-- [spatialLayout]  
-  2–4 sentences describing geometry and framing (foreground, midground, background, subject alignment)
-- [surfaceMaterialMap]  
-  Map visible textures and surfaces:
-  - primary_surfaces: major structural or terrain materials
-  - secondary_surfaces: support or filler materials
-  - accent_features: small luminous, reflective, or decorative details
-- [colorMapping]  
-  - dominant: main color + where it appears  
-  - secondary: supporting tones and regions  
-  - accent: highlights, glows, or contrasting points  
-  - ambient: overall light tone or environmental hue
-- [uniqueIdentifiers]  
-  2–4 distinct features that make this location unmistakable.
+[materials_secondary]  
+Support or filler materials
+
+[materials_accents]  
+Small luminous, reflective, or decorative details
+
+[colors_dominant]  
+Main color and where it appears
+
+[colors_secondary]  
+Supporting tones and regions
+
+[colors_accents]  
+Highlights, glows, or contrasting points
+
+[colors_ambient]  
+Overall light tone or environmental hue
+
+[navigableElements]  
+Array of interactive/navigable elements visible in the scene:
+- TYPE: stairs, door, corridor, passage, bridge, archway, portal, window, object, painting, key, furniture, altar, console
+- POSITION: "left/right/center", "foreground/midground/background", or specific location like "far wall", "center of room"
+- DESCRIPTION: Brief 5-10 word description
+
+Examples:
+  { "type": "stairs", "position": "left side", "description": "Metal spiral stairs ascending to upper level" }
+  { "type": "door", "position": "far end", "description": "Heavy reinforced door with rust patterns" }
+  { "type": "portal", "position": "center wall", "description": "Glowing orange circular opening" }
+  { "type": "object", "position": "altar center", "description": "Ancient key on stone pedestal" }
+
+[searchDesc]  
+Concise 75-100 character summary with navigable elements.
+Format: "[Type] Brief scene description. Has: element1 (position), element2 (position), element3 (position)"
+
+Examples:
+  "[Location - Interior] Circular sunken chamber with columns. Has: spiral stairs (left), heavy door (far end), glowing portal (center)"
+  "[Location - Exterior] Lighthouse on cliff. Has: entrance door (base), viewing platform (top), path to shore (right)"
 
 Guidelines:
-- Describe what is *visible* and spatially inferable, not hypothetical lore.  
-- Use quantitative cues when possible ("~50m tall tower", "moon occupying upper right quadrant").  
-- Stay consistent in tone and field naming.  
-- Be concise but vivid; favor factual spatial clarity over prose style.
+- Describe what is *visible* and spatially inferable, not hypothetical lore
+- Use quantitative cues when possible ("~50m tall tower")
+- Extract ALL navigable elements for navigation system
+- Keep searchDesc concise but informative
 `;
 };
