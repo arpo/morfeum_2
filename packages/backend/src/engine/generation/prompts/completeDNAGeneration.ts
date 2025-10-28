@@ -23,9 +23,60 @@ export function completeDNAGeneration(
       description: string;
       niches?: Array<{ name: string; description: string }>;
     }>;
-  }>
+  }>,
+  visualAnalysis?: any
 ): string {
+  // Build visual analysis context section
+  let visualAnalysisSection = '';
+  if (visualAnalysis) {
+    visualAnalysisSection = `
+🎯 VISUAL ANALYSIS OF DEEPEST NODE (Your Context for Working Backwards):
+(These scene details are ALREADY captured - DO NOT duplicate in DNA)
+
+Looks: ${visualAnalysis.looks || 'N/A'}
+Atmosphere: ${visualAnalysis.atmosphere || 'N/A'}
+Lighting: ${visualAnalysis.lighting || 'N/A'}
+Materials (Primary): ${visualAnalysis.materials_primary || 'N/A'}
+Materials (Secondary): ${visualAnalysis.materials_secondary || 'N/A'}
+Colors (Dominant): ${visualAnalysis.colors_dominant || 'N/A'}
+Colors (Secondary): ${visualAnalysis.colors_secondary || 'N/A'}
+Colors (Ambient): ${visualAnalysis.colors_ambient || 'N/A'}
+
+📝 YOUR TASK - Work Backwards to Infer Parent DNA:
+Use the scene details above to INFER what style properties the parent nodes should have.
+This DNA will CASCADE DOWN the tree: Host → Region → Location → Future children.
+
+ABSTRACTION EXAMPLES:
+- Scene shows "polished chrome walls" → Host DNA: "industrial metallic aesthetic"
+- Scene shows "deep blue haze" → Host DNA: "cool, muted palette with ethereal tones"
+- Scene shows "hovering platforms" → Host DNA: "anti-gravity architectural style"
+
+KEY PRINCIPLES:
+1. DO NOT repeat specific scene details (those are already captured)
+2. DO generate STYLE/VIBE that would produce similar scenes in future children
+3. Host DNA = world-level style that could produce this kind of location
+4. Region DNA = biome-level refinements
+5. Location DNA = site-level refinements
+`;
+  }
+
   const rv = `Generate complete DNA for an entire location hierarchy in ONE response.
+
+🔄 CASCADE DIRECTION: You are working BACKWARDS from the deepest node! 🔄
+
+The deepest node (location/niche) has been ANALYZED and has scene details.
+Your task: INFER what DNA the parent nodes (host/region) should have, so that DNA can CASCADE DOWN.
+
+FLOW:
+1. We have the DEEPEST NODE with visual analysis (scene specifics)
+2. You generate DNA for HOST (world-level style)
+3. You generate DNA for REGION (biome-level style, refines host)
+4. You generate DNA for LOCATION (site-level style, refines region)
+5. Later, this DNA CASCADES DOWN: Host → Region → Location → Future Children
+
+⚠️ DNA contains ONLY cascading STYLE/VIBE properties - NOT scene-specific details ⚠️
+Scene-specific details (looks, atmosphere, lighting, materials, colors) come from visual analysis.
+DNA defines the STYLE PALETTE that cascades to children, not the actual physical appearance.
 
 USER INPUT:
 ${originalPrompt}
@@ -47,21 +98,23 @@ ${region.locations ? region.locations.map(loc => `
   `).join('') : ''}
 `).join('') : ''}
 `).join('')}
-
+${visualAnalysisSection}
 OUTPUT STRUCTURE:
 
 {
   "host": {
     // FULL DNA - all 9 fields populated
+    // These are STYLE/VIBE properties that cascade to children
+    // Do NOT include scene-specific fields (looks, atmosphere, lighting, materials, colors)
     "genre": "post-apocalyptic|fantasy|sci-fi|historical|modern|etc",
-    "architectural_tone": "2-4 words describing architectural style",
+    "architectural_tone": "2-4 words describing architectural STYLE (not specific structures)",
     "cultural_tone": "1-2 sentences on social/functional identity",
-    "materials_base": "2-3 sentences naming main materials and textures",
+    "materials_base": "2-3 sentences on material PALETTE/STYLE (not specific objects)",
     "mood_baseline": "2-3 words describing emotional tone",
-    "palette_bias": "2-3 sentences on dominant color families and overall palette",
-    "soundscape_base": "2-3 sentences describing ambient sounds",
-    "flora_base": "2-3 sentences on plant life, vegetation types, or 'None'",
-    "fauna_base": "2-3 sentences on animal life, creatures, or 'None'"
+    "palette_bias": "2-3 sentences on COLOR STYLE/FAMILIES (not specific colors in scene)",
+    "soundscape_base": "2-3 sentences describing ambient SOUND STYLE",
+    "flora_base": "2-3 sentences on plant life types, or 'None'",
+    "fauna_base": "2-3 sentences on animal life types, or 'None'"
   },
   "regions": [
     {
@@ -152,10 +205,24 @@ OUTPUT STRUCTURE:
    
    RESULT: 6 fields populated, 2 null (this is correct!)
    
-   ⚠️ PASSTHROUGH REGIONS (empty description, same name as host):
-   Provide minimum 2-3 contextual fields to prevent completely empty DNA.
+   ⚠️ REGIONS are biomes/climates - they should populate MORE fields ⚠️
+   Regions define climate, regional materials, regional sounds, regional flora/fauna.
+   They should have 60-80% fields populated (only 20-40% null).
    
-   🚨 TARGET: Child nodes should have 40-60% fields as null 🚨
+   ⚠️ LOCATIONS refine regions - moderate sparsity ⚠️
+   Locations inherit from region and refine specific aspects.
+   They should have 40-60% fields populated (40-60% null).
+   
+   ⚠️ NICHES are smallest - highest sparsity ⚠️
+   Niches inherit from location and add intimate details.
+   They should have 20-40% fields populated (60-80% null).
+
+   🚨 NEVER INCLUDE SCENE FIELDS IN DNA 🚨
+   - NO "looks" (comes from visual analysis)
+   - NO "atmosphere" (comes from visual analysis)
+   - NO "lighting" (comes from visual analysis)
+   - NO specific materials/colors (comes from visual analysis)
+   - DNA is about STYLE/VIBE that cascades, not scene specifics
 
 3. **Genre Inheritance**:
    - Genre is ONLY set in host DNA

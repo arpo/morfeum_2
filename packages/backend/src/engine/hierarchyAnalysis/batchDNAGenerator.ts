@@ -46,7 +46,8 @@ export async function generateBatchDNA(
     originalPrompt,
     host.name,
     host.description,
-    regions
+    regions,
+    visualAnalysis
   );
   
   const messages = [{ role: 'user', content: prompt }];
@@ -106,47 +107,8 @@ export async function generateBatchDNA(
     }
   }
   
-  // Merge visual analysis into deepest node
-  const deepestNode = findDeepestNode(hierarchy);
-  if (deepestNode && deepestNode.dna) {
-    // Visual analysis overrides existing DNA fields
-    Object.assign(deepestNode.dna, {
-      looks: visualAnalysis.looks,
-      colorsAndLighting: visualAnalysis.colorsAndLighting,
-      atmosphere: visualAnalysis.atmosphere,
-      mood: visualAnalysis.mood,
-    });
-    
-    // Add visual anchors if present
-    if (visualAnalysis.visualAnchors) {
-      (deepestNode.dna as any).visualAnchors = visualAnalysis.visualAnchors;
-    }
-  }
+  // NOTE: Visual analysis merging is handled in spawn.ts (Stage 4.5)
+  // It merges to node root, NOT DNA, so we don't do it here
   
   return hierarchy;
-}
-
-/**
- * Find the deepest node in the hierarchy
- */
-function findDeepestNode(hierarchy: HierarchyStructure): HostNode | RegionNode | LocationNode | NicheNode | null {
-  const host = hierarchy.host;
-  
-  if (!host.regions || host.regions.length === 0) {
-    return host;
-  }
-  
-  const region = host.regions[0]; // Take first region
-  
-  if (!region.locations || region.locations.length === 0) {
-    return region;
-  }
-  
-  const location = region.locations[0]; // Take first location
-  
-  if (!location.niches || location.niches.length === 0) {
-    return location;
-  }
-  
-  return location.niches[0]; // Take first niche
 }

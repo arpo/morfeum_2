@@ -23,9 +23,9 @@ export const STAGE_TIMINGS: EntityTimings = {
   location: {
     starting: 1500,
     classifying: 1500,          // Hierarchy: Structure analysis (~1.42s actual)
-    generating_image: 2000,     // Hierarchy: Image generation (~1.91s actual)
+    generating_image: 3000,     // Hierarchy: Image generation (~1.91s actual)
     analyzing: 7000,            // Visual analysis of generated image (~6.62s actual)
-    generating_dna: 8000,       // DNA generation for all nodes (~3.5-4s actual, single call)
+    generating_dna: 5000,       // DNA generation for all nodes (~3.5-4s actual, single call)
     completed: 200              // Quick jump to 100%
   },
   sublocation: {
