@@ -104,6 +104,40 @@
   color: white;
 }
 
+.infoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.infoButton:hover:not(:disabled) {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.infoButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.chatButton.active .infoButton {
+  color: white;
+}
+
+.chatButton.active .infoButton:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .closeButton {
   display: flex;
   align-items: center;

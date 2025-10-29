@@ -36,8 +36,9 @@ export function CharacterPanel() {
             style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease-in' }}
           />
         )}
-        {state.entityImage && (
-          <div className={styles.imageButtons}>
+        {/* Always show image buttons, positioned over skeleton or image */}
+        <div className={styles.imageButtons}>
+          {state.entityImage && (
             <button 
               className={styles.imageButton}
               onClick={handlers.openFullscreen}
@@ -45,14 +46,16 @@ export function CharacterPanel() {
             >
               <IconMaximize size={20} />
             </button>
-            <button 
-              className={styles.imageButton}
-              onClick={handlers.openModal}
-              disabled={!state.deepProfile}
-              title={state.deepProfile ? 'View info' : 'Info not ready'}
-            >
-              <IconInfoCircle size={20} />
-            </button>
+          )}
+          <button 
+            className={styles.imageButton}
+            onClick={handlers.openModal}
+            disabled={!state.deepProfile}
+            title={state.deepProfile ? 'View info' : 'Info not ready'}
+          >
+            <IconInfoCircle size={20} />
+          </button>
+          {state.entityImage && (
             <button 
               className={styles.imageButton}
               onClick={handlers.saveCharacter}
@@ -61,8 +64,8 @@ export function CharacterPanel() {
             >
               <IconDeviceFloppy size={20} />
             </button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
       
       {state.entityName && (

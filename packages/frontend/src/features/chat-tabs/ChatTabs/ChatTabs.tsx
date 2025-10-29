@@ -3,8 +3,12 @@
  * Shows tabs for all active chat sessions
  */
 
+import { useState } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { IconInfoCircle } from '@/icons';
+import { LocationInfoModal } from '@/features/chat/components/LocationInfoModal';
+import { CharacterInfoModal } from '@/features/chat/components/CharacterInfoModal';
 import styles from './ChatTabs.module.css';
 
 export function ChatTabs() {
@@ -17,6 +21,9 @@ export function ChatTabs() {
   const deleteWorldTree = useLocationsStore(state => state.deleteWorldTree);
   const removeNodeFromTree = useLocationsStore(state => state.removeNodeFromTree);
   const deleteNode = useLocationsStore(state => state.deleteNode);
+
+  // Modal state
+  const [infoModalOpen, setInfoModalOpen] = useState<string | null>(null);
 
   // Convert Map to array for rendering with location depth data
   const entitiesArray = Array.from(entities.entries()).map(([spawnId, entity]) => {
@@ -120,6 +127,15 @@ export function ChatTabs() {
     closeEntity(spawnId);
   };
 
+  const handleOpenInfo = (e: React.MouseEvent, spawnId: string) => {
+    e.stopPropagation();
+    setInfoModalOpen(spawnId);
+  };
+
+  const handleCloseInfo = () => {
+    setInfoModalOpen(null);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>Entities</div>
@@ -153,6 +169,14 @@ export function ChatTabs() {
               <span className={styles.entityName}>{entity.entityName}</span>
             </div>
             <button
+              className={styles.infoButton}
+              onClick={(e) => handleOpenInfo(e, entity.spawnId)}
+              title="View details"
+              disabled={!entity.deepProfile}
+            >
+              <IconInfoCircle size={16} />
+            </button>
+            <button
               className={styles.closeButton}
               onClick={(e) => handleCloseTab(e, entity.spawnId)}
               title="Close entity"
@@ -162,6 +186,33 @@ export function ChatTabs() {
           </div>
         ))}
       </div>
+
+      {/* Render modals for entities with info open */}
+      {infoModalOpen && (() => {
+        const entity = entities.get(infoModalOpen);
+        if (!entity) return null;
+
+        if (entity.entityType === 'location') {
+          return (
+            <LocationInfoModal
+              locationProfile={entity.deepProfile as any}
+              locationName={entity.entityName}
+              locationId={infoModalOpen}
+              isOpen={true}
+              onClose={handleCloseInfo}
+            />
+          );
+        } else {
+          return (
+            <CharacterInfoModal
+              deepProfile={entity.deepProfile as any}
+              characterName={entity.entityName}
+              isOpen={true}
+              onClose={handleCloseInfo}
+            />
+          );
+        }
+      })()}
     </div>
   );
 }
