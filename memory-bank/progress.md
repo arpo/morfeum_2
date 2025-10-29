@@ -2,6 +2,45 @@
 
 ## Recent Updates
 
+### Navigation System Cleanup (October 29, 2025 - 7:59 AM)
+
+**Completed:**
+- ✅ Removed unused navigation UI components (NavigationInput, LocationTreePanel)
+- ✅ Disabled image generation for navigation 'generate' actions
+- ✅ Navigation decisions still work and log to console for debugging
+- ✅ 'Move' actions still functional for navigating between existing nodes
+- ✅ Backend navigation decision system remains intact and working
+
+**Problem Identified:**
+Redundant UI components created during navigation system development. User wanted:
+1. No automatic spawning/image generation from navigation commands
+2. Cleaner UI without duplicate location tree panels
+
+**Solution:**
+- Removed entire `packages/frontend/src/features/navigation/` directory
+- Modified `useLocationPanel.ts` to comment out `handleGenerateAction()` call
+- Added console logging to show what would be generated without actually doing it
+- Kept 'move' actions functional for navigating between existing nodes
+
+**Files Removed:**
+- `packages/frontend/src/features/navigation/` - Entire directory with NavigationInput and LocationTreePanel
+
+**Files Modified:**
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts`:
+  - Commented out spawn trigger in 'generate' action handling
+  - Added detailed console logging for debugging
+  - Preserved 'move' action functionality
+
+**Result:**
+Cleaner codebase with navigation analysis working (logs to console) but no automatic spawning or image generation. LocationPanel remains the single source of truth for location navigation UI.
+
+**Current Behavior:**
+- Type "Go to kitchen" → AI analyzes command → Logs decision to console → No spawning
+- Type "Go to [existing location]" → AI analyzes → Moves to that location
+- Backend navigation decision API fully functional and ready for future use
+
+---
+
 ### Navigation Decision System (October 28, 2025 - 3:25 PM)
 
 **Completed:**

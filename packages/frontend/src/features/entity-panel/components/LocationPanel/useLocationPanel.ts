@@ -92,7 +92,15 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       if (navigation.action === 'move' && navigation.targetNodeId) {
         await handleMoveAction(navigation, currentFocus);
       } else if (navigation.action === 'generate') {
-        await handleGenerateAction(navigation, currentNode, cascadedDNA);
+        // TODO: Implement generate action - currently disabled
+        console.log('[NavigatorAI] 🔧 Generate action disabled - would create:', {
+          name: navigation.name,
+          parentNodeId: navigation.parentNodeId,
+          scale_hint: navigation.scale_hint,
+          relation: navigation.relation,
+          reason: navigation.reason
+        });
+        // await handleGenerateAction(navigation, currentNode, cascadedDNA);
       }
       
       // Clear input

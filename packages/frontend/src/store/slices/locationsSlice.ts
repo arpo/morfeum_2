@@ -29,7 +29,7 @@ export interface View {
 }
 
 // Node types
-export type NodeType = 'host' | 'region' | 'location' | 'niche';
+export type NodeType = 'world' | 'region' | 'location' | 'sublocation';
 
 // DNA type definitions (single-layer per node)
 export interface WorldNode {
@@ -400,51 +400,6 @@ const removeNodeFromTreeRecursive = (tree: TreeNode, targetId: string): boolean 
   return false;
 };
 
-// Migration function to convert old type names to new ones
-const migrateOldTypes = (state: any) => {
-  if (!state) return state;
-  
-  let migrated = false;
-  
-  // Migrate nodes
-  if (state.nodes) {
-    Object.values(state.nodes).forEach((node: any) => {
-      if (node.type === 'world') {
-        node.type = 'host';
-        migrated = true;
-      } else if (node.type === 'sublocation') {
-        node.type = 'niche';
-        migrated = true;
-      }
-    });
-  }
-  
-  // Migrate world trees
-  if (state.worldTrees) {
-    const migrateTreeNode = (treeNode: any) => {
-      if (treeNode.type === 'world') {
-        treeNode.type = 'host';
-        migrated = true;
-      } else if (treeNode.type === 'sublocation') {
-        treeNode.type = 'niche';
-        migrated = true;
-      }
-      
-      if (treeNode.children) {
-        treeNode.children.forEach(migrateTreeNode);
-      }
-    };
-    
-    state.worldTrees.forEach(migrateTreeNode);
-  }
-  
-  if (migrated) {
-    console.log('[locationsSlice] Migrated old type names to new terminology');
-  }
-  
-  return state;
-};
-
 export const useLocationsStore = create<LocationsState>()(
   persist(
     (set, get) => ({
@@ -699,7 +654,7 @@ export const useLocationsStore = create<LocationsState>()(
           if (!pathNode) continue;
           
           switch (pathNode.type) {
-            case 'host':
+            case 'world':
               cascaded.world = pathNode.dna as WorldNode;
               break;
             case 'region':
@@ -708,7 +663,7 @@ export const useLocationsStore = create<LocationsState>()(
             case 'location':
               cascaded.location = pathNode.dna as LocationNode;
               break;
-            case 'niche':
+            case 'sublocation':
               cascaded.sublocation = pathNode.dna as SublocationNode;
               break;
           }
@@ -827,7 +782,7 @@ export const useLocationsStore = create<LocationsState>()(
         // Extract nodes from nested DNA
         const worldNode: Node = {
           id: location.world_id,
-          type: 'host',
+          type: 'world',
           name: location.dna.world.meta.name,
           dna: location.dna.world,
           imagePath: '',
@@ -837,7 +792,7 @@ export const useLocationsStore = create<LocationsState>()(
         // Create world node if it doesn't exist
         if (!get().getNode(location.world_id)) {
           get().createNode(worldNode);
-          get().addNodeToTree(location.world_id, null, location.world_id, 'host');
+          get().addNodeToTree(location.world_id, null, location.world_id, 'world');
         }
         
         // Create region node if exists
@@ -890,7 +845,7 @@ export const useLocationsStore = create<LocationsState>()(
         
         return {
           id: node.id,
-          world_id: cascaded.world ? Object.keys(get().nodes).find(k => get().nodes[k].type === 'host') || '' : '',
+          world_id: cascaded.world ? Object.keys(get().nodes).find(k => get().nodes[k].type === 'world') || '' : '',
           parent_location_id: null,
           adjacent_to: [],
           children: [],
@@ -915,12 +870,6 @@ export const useLocationsStore = create<LocationsState>()(
         worldTrees: state.worldTrees,
         pinnedIds: state.pinnedIds,
       }),
-      onRehydrateStorage: () => (state) => {
-        // Run migration on rehydration
-        if (state) {
-          migrateOldTypes(state);
-        }
-      },
     }
   )
 );

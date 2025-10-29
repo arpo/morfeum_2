@@ -17,11 +17,7 @@ export {
   IconDice,
   IconPin,
   IconPinFilled,
-  IconCopy,
-  IconWorld,
-  IconMapPin,
-  IconBuilding,
-  IconDoor
+  IconCopy
 } from '@tabler/icons-react';
 
 // Icon type for string references

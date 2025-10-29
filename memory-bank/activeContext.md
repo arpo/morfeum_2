@@ -1,24 +1,21 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 28, 2025 - 3:25 PM)
+## Latest Session Summary (October 29, 2025 - 7:59 AM)
 
-### Current Task: Navigation Decision System
-Implemented AI-powered navigation system that analyzes user travel commands and routes to existing or new locations.
+### Current Task: Navigation System Cleanup
+Removed redundant UI components and disabled auto-spawning from navigation commands.
 
 ### Recently Completed Work
 
-**Navigation Decision System (Complete):**
-- ✅ Created `navigationDecision.ts` AI prompt for analyzing travel commands
-- ✅ Built `/api/mzoo/navigation/decide` backend route
-- ✅ Fixed AI response parsing to extract `text` field from MZOO service responses
-- ✅ Connected existing LocationPanel travel input to new navigation API
-- ✅ Created NavigationInput standalone component with suggestions
-- ✅ Created LocationTreePanel component for hierarchical world tree display
-- ✅ Updated terminology: "world" → "host", "sublocation" → "niche"
-- ✅ Added View interface to locationsSlice for multi-view support
-- ✅ System fully functional - AI correctly returns move/generate/look decisions
+**Navigation System Cleanup (Complete):**
+- ✅ Removed unused navigation UI components (NavigationInput, LocationTreePanel)
+- ✅ Disabled image generation for navigation 'generate' actions
+- ✅ Navigation decisions still work and log to console for debugging
+- ✅ 'Move' actions still functional for navigating between existing nodes
+- ✅ Backend navigation decision system remains intact and working
 
 **Previous Sessions:**
+- Navigation Decision System (AI-powered navigation analysis)
 - Image prompt enhancement (visual enrichment data flow fixed)
 - Location information modal enhancement (new hierarchy structure support)
 
@@ -45,11 +42,13 @@ Implemented AI-powered navigation system that analyzes user travel commands and 
 - AI prompt documentation uses new terminology
 - LocationTreePanel UI shows updated labels
 
-**Component Architecture:**
-- NavigationInput: Travel command input with navigableElements suggestions
-- LocationTreePanel: Hierarchical tree display with click navigation
-- Existing LocationPanel: Connected to navigation API via `findDestination()`
-- All follow strict separation: .tsx (markup), .ts (logic), .module.css (styles)
+**Current Navigation Implementation:**
+- LocationPanel only - single panel for location details and travel
+- Travel input calls navigation decision API
+- AI analyzes commands, returns decisions (logged to console)
+- 'Move' actions navigate to existing nodes
+- 'Generate' actions disabled (no spawning or image generation)
+- Follows strict separation: .tsx (markup), .ts (logic), .module.css (styles)
 
 ### Architecture Patterns Used
 - Pure functions: locationImageGeneration receives complete data, no side effects
@@ -61,18 +60,15 @@ Implemented AI-powered navigation system that analyzes user travel commands and 
 ## Next Priority Items
 
 ### Immediate (Ready to Implement)
-1. **Implement Navigation Actions**: Wire up move/generate/look actions to actually:
-   - `move`: Update focus state to target node
-   - `generate`: Trigger spawn pipeline with parent + scale_hint
-   - `look`: Create new View and update focus to show it
-2. **Test Navigation Flow**: Verify end-to-end navigation with image generation
-3. **Integrate NavigationInput Component**: Add to main UI (optional, existing LocationPanel already works)
+1. **Re-enable Generate Actions**: When needed, uncomment `handleGenerateAction()` call in useLocationPanel.ts
+2. **Implement 'Look' Actions**: Create new View when user wants different perspective
+3. **Test Move Actions**: Verify navigation between existing nodes works correctly
 
 ### Medium Priority
 1. **View Management UI**: Display and switch between multiple views per node
 2. **Navigation History**: Track and display navigation breadcrumbs
-3. **Enhanced Tree Navigation**: Expand/collapse nodes, visual focus indicators
-4. **Collapsible Parent Nodes**: Use CollapsiblePanel for hierarchy display
+3. **Enhanced Tree Navigation**: Consider if hierarchical tree view is needed (currently removed)
+4. **Collapsible Parent Nodes**: Use CollapsiblePanel for hierarchy display if tree view returns
 
 ## Current System State
 
@@ -102,16 +98,16 @@ Implemented AI-powered navigation system that analyzes user travel commands and 
 
 ## Files Modified in Latest Session
 
-**Backend:**
-- `packages/backend/src/engine/generation/prompts/navigationDecision.ts`: Created AI navigation prompt
-- `packages/backend/src/routes/mzoo/navigation.ts`: Created navigation route with decision logic
-- `packages/backend/src/routes/mzoo/index.ts`: Mounted navigation router
+**Removed:**
+- `packages/frontend/src/features/navigation/` (entire directory) - Redundant UI components
 
-**Frontend:**
-- `packages/frontend/src/store/slices/locationsSlice.ts`: Added View interface and multi-view support
-- `packages/frontend/src/features/entity-panel/components/LocationPanel/locationNavigation.ts`: Connected to new API
-- `packages/frontend/src/features/navigation/NavigationInput/`: Created new component (markup, logic, styles)
-- `packages/frontend/src/features/navigation/LocationTreePanel/`: Created new component with updated labels
-- `packages/frontend/src/features/navigation/index.ts`: Exported navigation components
+**Modified:**
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts`: 
+  - Commented out `handleGenerateAction()` call
+  - Added console logging for what would be generated
+  - 'Move' actions still functional
 
-**Result:** Navigation system fully functional - AI correctly analyzes commands and returns structured decisions
+**Result:** 
+- Navigation analysis works (logs decisions to console)
+- No automatic spawning or image generation
+- Cleaner codebase without redundant components
