@@ -1,13 +1,21 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 29, 2025 - 4:00 PM)
+## Latest Session Summary (October 29, 2025 - 4:40 PM)
 
-### Current Task: Data Preservation Refactoring - COMPLETED ✅
-Massively simplified hierarchyParser and entitySessionLoader to preserve ALL backend data without transformation.
+### Current Task: Location Tree Display Fixes - COMPLETED ✅
+Fixed node selection, image assignment, and info button accessibility for location tree nodes.
 
 ### Recently Completed Work
 
-**Data Preservation Refactoring (Complete):**
+**Location Tree Display Fixes (Complete):**
+- ✅ Added info button (ℹ️) to ChatTabs for all nodes regardless of image status
+- ✅ Made EntityPanel info buttons always visible (no longer conditional on image)
+- ✅ Fixed host node image assignment - no longer displays deepest node's image incorrectly
+- ✅ Fixed duplicate node creation - removed duplicate createEntity call for deepest node
+- ✅ Nodes without images now properly show placeholder with first letter of name
+- ✅ All nodes can access detail panel via info button in tree view or entity panel
+
+**Previous: Data Preservation Refactoring (Complete):**
 - ✅ Simplified hierarchyParser extract functions from 200+ lines to 3 lines each
 - ✅ Changed from selective field mapping to complete passthrough (`...location`)
 - ✅ Fixed entitySessionLoader to spread ALL fields from `node.dna`
@@ -31,7 +39,25 @@ Massively simplified hierarchyParser and entitySessionLoader to preserve ALL bac
 
 ### Key Technical Decisions
 
-**Data Preservation Philosophy (NEW):**
+**Info Button Accessibility (NEW):**
+- **ChatTabs Integration**: Info button added next to close button for every node
+- **Always Visible**: Button shows regardless of image status, disabled until profile loads
+- **EntityPanel Updates**: Info button moved outside image conditional blocks
+- **Consistent UX**: Users can access node details from tree view without selecting node
+
+**Image Assignment Fix (NEW):**
+- **Host Node Pattern**: Changed from `imageUrl || host.imageUrl || ''` to `host.imageUrl || ''`
+- **Correct Behavior**: Host nodes only display images if backend provides `host.imageUrl`
+- **No Fallback**: Removed fallback to hierarchy's main image (which belongs to deepest node)
+- **Placeholder Display**: Nodes without images show first letter of name in colored circle
+
+**Duplicate Node Prevention (NEW):**
+- **Single Entity Creation**: Removed duplicate `createEntity` call for deepest node
+- **Loop Handles All**: The `parsed.nodes.forEach` loop creates entity sessions for ALL nodes
+- **No Redundancy**: Each node appears exactly once in tree view
+- **Image Update Only**: Deepest node gets its image updated separately (not recreated)
+
+**Data Preservation Philosophy:**
 - **"Dumb Passthrough" Approach**: No selective field mapping, no transformation
 - **Zero Data Loss**: ALL backend fields preserved using object spread (`...location`)
 - **Minimal Processing**: Only adds `slug` if missing, everything else untouched
@@ -60,12 +86,14 @@ Massively simplified hierarchyParser and entitySessionLoader to preserve ALL bac
 - Calculates node depth by traversing `worldTrees`
 - Shows hierarchy with indentation and indicators (└─)
 - Only displays nodes with entity sessions
+- **Info Button**: Now accessible for all nodes in tree view
 - **Critical**: ALL nodes must have entity sessions to appear
 
 **Entity Session Creation:**
 - **New Locations**: SSE handler creates sessions for all nodes in `useSpawnEvents.ts`
 - **Manual Load**: Modal creates sessions for all nodes in tree
 - **Auto-Load**: App.tsx creates sessions for all nodes on page refresh
+- **Single Creation**: Each node created exactly once (no duplicates)
 - **Timing Fix**: 50ms delay before modal close ensures React flushes all updates
 
 **Type Safety:**
@@ -80,38 +108,50 @@ Massively simplified hierarchyParser and entitySessionLoader to preserve ALL bac
 - **Component separation**: .tsx (markup), .ts (logic), .module.css (styles)
 - **Zustand store integration**: Flat nodes + tree index for efficient lookup
 - **React batching awareness**: Timing delays where needed for multiple updates
+- **Conditional rendering**: Info buttons always visible, other buttons conditional on image
 
 ## Next Priority Items
 
 ### Immediate (Ready to Implement)
-1. **Test saved locations with complex hierarchies**: Verify all 4 levels display correctly
-2. **Remove debug logging**: Clean up console.log statements from load functions
-3. **Optimize auto-load**: Consider if all nodes need entity sessions immediately
+1. **Test new location generation**: Verify fixes work with fresh locations (not saved ones)
+2. **Clean up saved locations**: Consider clearing localStorage to see fixes in action
+3. **Remove debug logging**: Clean up console.log statements from load functions
 
 ### Medium Priority
 1. **Vector search preparation**: Saved nodes already flat, ready for vector DB integration
 2. **Migration utility**: Add function to rebuild worldTrees from nodes if corrupted
 3. **Enhanced tree visualization**: Consider visual improvements to hierarchy display
+4. **Image generation per node**: Consider generating images for host/region nodes individually
 
 ## Current System State
+
+**Location Tree Display:** ✅ Fixed
+- Info button accessible for all nodes (with or without images)
+- Host nodes show correct images (or placeholders)
+- No duplicate nodes in tree view
+- Entity panels show info button even without images
+- Placeholders display first letter of node name
 
 **Location Generation Pipeline:** ✅ Fully Functional
 - Hierarchy classification generates nested structure
 - Parser splits into flat nodes + tree
 - All nodes saved with structured DNA
 - Tree structure preserved for hierarchy display
+- Each node gets single entity session
 
 **Location Loading:** ✅ Fixed
 - Manual load creates entity sessions for ALL nodes
 - Auto-load creates entity sessions for ALL nodes
 - ChatTabs displays full hierarchy with indentation
 - Detail panel shows complete DNA for selected node
+- Info button works from tree view and entity panel
 
 **Data Structure:** ✅ Consistent
 - All nodes use meta/semantic/profile format
 - Arrays properly handled with ensureArray()
 - worldTrees maintained for depth calculation
 - No data loss during parse/save/load cycle
+- Image paths correctly assigned per node
 
 **Memory Management:** ✅ Updated
 - Progress documentation current
@@ -121,47 +161,82 @@ Massively simplified hierarchyParser and entitySessionLoader to preserve ALL bac
 ## Files Modified in Latest Session
 
 **Modified:**
-- `packages/frontend/src/utils/hierarchyParser.ts`: 
-  - Simplified extractHostDNA, extractRegionDNA, extractLocationDNA, extractNicheDNA
-  - Changed from 200+ lines of selective mapping to 3 lines each: `{ ...node, slug: generateSlug(node.name) }`
-  - Now preserves ALL backend fields without filtering
-  
-- `packages/frontend/src/utils/entitySessionLoader.ts`:
-  - Fixed to read from `node.dna` (contains all backend fields)
-  - Changed from selective field picking to spreading all fields: `...dna`
-  - Enriched profile now includes EVERYTHING from backend
+- `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.tsx`:
+  - Added info button next to close button for every node
+  - Added modal state management for LocationInfoModal and CharacterInfoModal
+  - Info button disabled until deepProfile is ready
+  - Imports IconInfoCircle and modal components
 
-- `packages/frontend/src/utils/README.md`:
-  - Added "Philosophy: Preserve Everything" section to hierarchyParser docs
-  - Added "Philosophy: Preserve Raw Data" section to entitySessionLoader docs
-  - Documented "dumb passthrough" approach
-  - Added data flow examples showing field preservation
+- `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.module.css`:
+  - Added `.infoButton` styles matching close button pattern
+  - Hover states, disabled states, and active states
+  - Color-coded for entity types (character/location)
 
-**Before (Selective Mapping - Lost Data):**
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.tsx`:
+  - Moved info button outside `{state.entityImage && ...}` conditional
+  - Info button now always visible (even without image)
+  - Fullscreen and save buttons remain conditional on image
+
+- `packages/frontend/src/features/entity-panel/components/CharacterPanel/CharacterPanel.tsx`:
+  - Moved info button outside `{state.entityImage && ...}` conditional
+  - Info button now always visible (even without image)
+  - Fullscreen and save buttons remain conditional on image
+
+- `packages/frontend/src/utils/hierarchyParser.ts`:
+  - Fixed host node image assignment from `imageUrl || host.imageUrl || ''` to `host.imageUrl || ''`
+  - Host nodes now only use their own image property from backend
+  - Consistent with region/location/niche image assignment pattern
+
+- `packages/frontend/src/hooks/useSpawnEvents.ts`:
+  - Removed duplicate `createEntity` call for deepest node in `hierarchy:complete` handler
+  - Entity sessions now created only once in `parsed.nodes.forEach` loop
+  - Deepest node image updated separately without recreating entity session
+  - Prevents duplicate nodes appearing in tree view
+
+**Before (Image Assignment Bug):**
 ```typescript
-function extractLocationDNA(location: any): any {
-  return {
-    meta: { name: location.name, slug: ... },
-    semantic: { environment: ..., mood: ... },
-    // dominantElements LOST ❌
-    // navigableElements LOST ❌
-  };
-}
+// Host node incorrectly grabbed hierarchy's main image
+const hostNode: Node = {
+  imagePath: imageUrl || host.imageUrl || '', // ❌ Wrong fallback
+};
 ```
 
-**After (Complete Preservation - No Loss):**
+**After (Correct Pattern):**
 ```typescript
-function extractLocationDNA(location: any): any {
-  return {
-    ...location,  // ALL fields preserved ✅
-    slug: location.slug || generateSlug(location.name)
-  };
+// Host node only uses its own image
+const hostNode: Node = {
+  imagePath: host.imageUrl || '', // ✅ Correct - no fallback
+};
+```
+
+**Before (Duplicate Node Bug):**
+```typescript
+// Loop creates all nodes including deepest
+parsed.nodes.forEach(node => {
+  createEntity(node.id, seed, 'location'); // Creates deepest node
+});
+
+// Then creates deepest node AGAIN
+createEntity(parsed.deepestNodeId, seed, 'location'); // ❌ Duplicate!
+```
+
+**After (Single Creation):**
+```typescript
+// Loop creates all nodes including deepest
+parsed.nodes.forEach(node => {
+  createEntity(node.id, seed, 'location'); // Creates all nodes once
+});
+
+// Only update image, don't recreate
+if (updateEntityImage && deepestNode.imagePath) {
+  updateEntityImage(parsed.deepestNodeId, deepestNode.imagePath); // ✅ Just update
 }
 ```
 
 **Result:** 
-- ALL visual analysis fields now preserved: dominantElements, spatialLayout, uniqueIdentifiers, materials_*, colors_*, navigableElements, dna subsection
-- LocationInfoModal displays complete data
-- No data loss from backend to frontend
-- Code reduced from ~400 lines to ~50 lines total
-- Architecture is simple, maintainable, and extensible
+- All nodes accessible via info button regardless of image status
+- Host nodes display correct images (their own, not deepest node's)
+- Each node appears exactly once in tree view (no duplicates)
+- Placeholders work correctly for nodes without images
+- User can access node details from tree view or entity panel
+- Clean, consistent behavior across all node types
