@@ -565,7 +565,7 @@ export function useSpawnEvents() {
         buildTreeRecursive(parsed.tree, spawnId);
         console.log('[Hierarchy] Tree structure built successfully');
         
-        // Get the deepest node for entity session
+        // Get the deepest node to update its image and profile
         const deepestNode = parsed.nodes.find(n => n.id === parsed.deepestNodeId);
         
         if (!deepestNode) {
@@ -573,20 +573,10 @@ export function useSpawnEvents() {
           return;
         }
         
-        // Create entity session with DEEPEST NODE data
-        if (createEntity) {
-          const seed = {
-            name: deepestNode.name,
-            looks: (deepestNode.dna as any)?.profile?.looks || deepestNode.name,
-            atmosphere: (deepestNode.dna as any)?.profile?.atmosphere || (deepestNode.dna as any)?.semantic?.atmosphere || '',
-            mood: (deepestNode.dna as any)?.profile?.mood || (deepestNode.dna as any)?.semantic?.mood || ''
-          };
-          createEntity(parsed.deepestNodeId, seed, 'location');
-        }
-        
+        // Entity session already created in loop above - just update image if needed
         // Update entity with image (use deepest node's image if available)
-        if (updateEntityImage) {
-          updateEntityImage(parsed.deepestNodeId, deepestNode.imagePath || imageUrl || '');
+        if (updateEntityImage && deepestNode.imagePath) {
+          updateEntityImage(parsed.deepestNodeId, deepestNode.imagePath);
         }
         
         // Store cascaded DNA as deep profile for deepest node
