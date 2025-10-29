@@ -100,9 +100,9 @@ export function ChatTabs() {
         for (const tree of worldTrees) {
           const worldId = findWorldId(tree, spawnId);
           if (worldId !== null) {
-            // Check if this is the world root node
-            if (node.type === 'world') {
-              // Delete entire world tree
+            // Check if this is the host root node
+            if (node.type === 'host') {
+              // Delete entire host tree
               deleteWorldTree(spawnId);
             } else {
               // Delete child node from tree and nodes map

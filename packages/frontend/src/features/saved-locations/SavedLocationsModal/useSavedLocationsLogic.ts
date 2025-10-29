@@ -11,7 +11,7 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   // Locations (filter to world nodes only)
   const nodesMap = useLocationsStore(state => state.nodes);
   const locations = useMemo(() => 
-    Object.values(nodesMap).filter(node => node.type === 'world'),
+    Object.values(nodesMap).filter(node => node.type === 'host'),
     [nodesMap]
   );
   const pinnedLocationIds = useLocationsStore(state => state.pinnedIds);
@@ -36,7 +36,7 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   const updateEntityProfile = useStore(state => state.updateEntityProfile);
 
   const handleLoadLocation = useCallback((node: Node) => {
-    // console.log('[SavedEntitiesModal] Loading node:', node.id);
+    console.log('[SavedEntitiesModal] Loading node:', node.id);
     
     // Get cascaded DNA for this node
     const cascadedDNA = getCascadedDNA(node.id);
@@ -47,29 +47,81 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
       return;
     }
     
-    // Create seed data for chat initialization
-    const seed = {
-      name: node.name,
-      atmosphere: cascadedDNA.world.semantic?.atmosphere || 'Unknown atmosphere'
-    };
+    // Find the world tree containing this node
+    const worldTrees = useLocationsStore.getState().worldTrees;
+    console.log('[SavedEntitiesModal] worldTrees:', worldTrees);
     
-    // Create entity session for this node
-    createEntity(node.id, seed, 'location');
+    const worldTree = worldTrees.find(tree => {
+      const findNode = (treeNode: any, targetId: string): boolean => {
+        if (treeNode.id === targetId) return true;
+        return treeNode.children?.some((child: any) => findNode(child, targetId)) || false;
+      };
+      return findNode(tree, node.id);
+    });
     
-    // Update entity with image and deep profile
-    if (node.imagePath) {
-      updateEntityImage(node.id, node.imagePath);
+    if (!worldTree) {
+      console.error('[SavedEntitiesModal] Could not find world tree for node:', node.id);
+      return;
     }
     
-    updateEntityProfile(node.id, cascadedDNA as any);
+    console.log('[SavedEntitiesModal] Found worldTree:', worldTree);
     
-    // Set as active entity
+    // Collect all node IDs in the tree
+    const allNodeIds: string[] = [];
+    const collectIds = (treeNode: any) => {
+      allNodeIds.push(treeNode.id);
+      treeNode.children?.forEach(collectIds);
+    };
+    collectIds(worldTree);
+    
+    console.log('[SavedEntitiesModal] Collected node IDs:', allNodeIds);
+    
+    // Create entity sessions for ALL nodes in the tree
+    const getNode = useLocationsStore.getState().getNode;
+    allNodeIds.forEach(nodeId => {
+      const treeNode = getNode(nodeId);
+      if (!treeNode) {
+        console.warn('[SavedEntitiesModal] Node not found:', nodeId);
+        return;
+      }
+      
+      console.log('[SavedEntitiesModal] Creating entity for:', nodeId, treeNode.name, treeNode.type);
+      
+      // Get cascaded DNA for this specific node
+      const nodeCascadedDNA = getCascadedDNA(nodeId);
+      
+      // Create seed from node data
+      const seed = {
+        name: treeNode.name,
+        looks: (treeNode.dna as any)?.profile?.looks || treeNode.name,
+        atmosphere: (treeNode.dna as any)?.profile?.atmosphere || (treeNode.dna as any)?.semantic?.atmosphere || '',
+        mood: (treeNode.dna as any)?.profile?.mood || (treeNode.dna as any)?.semantic?.mood || ''
+      };
+      
+      // Create entity session
+      createEntity(nodeId, seed, 'location');
+      console.log('[SavedEntitiesModal] Created entity session for:', nodeId);
+      
+      // Update with image if available
+      if (treeNode.imagePath) {
+        updateEntityImage(nodeId, treeNode.imagePath);
+      }
+      
+      // Update with cascaded DNA profile
+      updateEntityProfile(nodeId, nodeCascadedDNA as any);
+    });
+    
+    console.log('[SavedEntitiesModal] All entity sessions created, total:', allNodeIds.length);
+    
+    // Set clicked node as active entity
     setActiveEntity(node.id);
     
-    // Close modal
-    onClose();
-    
-    // console.log('[SavedEntitiesModal] Node loaded successfully');
+    // Close modal after a brief delay to ensure all entity updates are flushed
+    // This fixes a React batching issue where ChatTabs would render before
+    // all entity updates were committed to the store
+    setTimeout(() => {
+      onClose();
+    }, 50);
   }, [createEntity, updateEntityImage, updateEntityProfile, setActiveEntity, onClose, getCascadedDNA]);
 
   const handleLoadCharacter = useCallback((character: Character) => {

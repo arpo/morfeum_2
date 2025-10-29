@@ -2,6 +2,64 @@
 
 ## Recent Updates
 
+### Save Location Refactoring (October 29, 2025 - 1:13 PM)
+
+**Completed:**
+- ✅ Created hierarchyParser utility to convert nested JSON to flat nodes + tree structure
+- ✅ Updated terminology throughout codebase: `'world'` → `'host'`, `'sublocation'` → `'niche'`
+- ✅ Fixed DNA structure to always use meta/semantic/profile format
+- ✅ Fixed array type errors with ensureArray() helper
+- ✅ Fixed ChatTabs to display all nodes with hierarchy indicators
+- ✅ Fixed entity session creation for manual and auto-load paths
+- ✅ Added timing delay fix for React batching issue
+
+**Problem Identified:**
+Backend generates nested hierarchies (host → regions → locations → niches), but frontend needs:
+1. Flat storage for vector search
+2. Tree structure for hierarchy display
+3. Entity sessions for all nodes to appear in ChatTabs
+4. Consistent terminology throughout codebase
+
+**Solution:**
+- Created `hierarchyParser.ts` utility that converts nested JSON into flat nodes + tree structure
+- Updated all type references from 'world' to 'host' and 'sublocation' to 'niche'
+- Added `ensureArray()` helper to handle string/array field mismatches
+- Fixed entity session creation in three code paths:
+  1. New generation (useSpawnEvents.ts) - creates sessions for ALL nodes
+  2. Manual load (SavedLocationsModal) - creates sessions for ALL nodes in tree
+  3. Auto-load (App.tsx) - creates sessions for ALL pinned nodes in tree
+- Added 50ms delay before modal close to fix React batching issue
+
+**Files Created:**
+- `packages/frontend/src/utils/hierarchyParser.ts` - Hierarchy parser utility with extraction functions
+
+**Files Modified:**
+- `packages/frontend/src/store/slices/locationsSlice.ts`: NodeType updated to use 'host' and 'niche'
+- `packages/frontend/src/hooks/useSpawnEvents.ts`: 
+  - Entity session creation for all nodes in hierarchy
+  - Updated type checks from 'world' to 'host'
+  - Uses hierarchyParser for all hierarchy:complete events
+- `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.tsx`: Updated type check to 'host'
+- `packages/frontend/src/features/saved-locations/SavedLocationsModal/useSavedLocationsLogic.ts`:
+  - Entity session creation for all nodes in tree
+  - 50ms delay before modal close
+  - Debug logging for troubleshooting
+- `packages/frontend/src/features/app/components/App/App.tsx`: Updated type check from 'world' to 'host' in auto-load
+
+**Result:**
+All three location loading paths now work correctly:
+1. **New generation** - ChatTabs shows all 4 levels immediately with hierarchy indicators
+2. **Manual load** - All nodes appear with proper indentation when loading from modal
+3. **Auto-load** - Pinned locations show complete hierarchy on page refresh
+
+Data structure:
+- Flat `nodes` map for efficient lookup and future vector search
+- Nested `worldTrees` array for hierarchy display and depth calculation
+- All DNA properly structured as meta/semantic/spatial/render/profile
+- No data loss during parse/save/load cycle
+
+---
+
 ### Navigation System Cleanup (October 29, 2025 - 7:59 AM)
 
 **Completed:**
@@ -157,6 +215,21 @@ Information modal now displays comprehensive location data instead of just "N/A"
 - Entity panels display location information properly
 
 ## Current Status
-- Location information modal fully functional with new data structure
-- Ready for additional UX enhancements like collapsible parent nodes
-- All core location generation and display systems operational
+
+**Location System:** ✅ Fully Operational
+- Hierarchies generate correctly with all 4 levels (host/region/location/niche)
+- Parser converts nested JSON to flat storage + tree structure
+- ChatTabs displays full hierarchy with indentation
+- All three load paths working (new/manual/auto)
+- Data structure ready for vector search integration
+
+**Navigation System:** ✅ Backend Complete, Frontend Minimal
+- AI decision system analyzes travel commands
+- Returns action types with context
+- Currently logs decisions to console
+- Ready to re-enable when needed
+
+**Memory Bank:** ✅ Updated
+- Active context reflects latest work
+- Progress documentation current
+- All architectural decisions documented

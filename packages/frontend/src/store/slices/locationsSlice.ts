@@ -29,7 +29,7 @@ export interface View {
 }
 
 // Node types
-export type NodeType = 'world' | 'region' | 'location' | 'sublocation';
+export type NodeType = 'host' | 'region' | 'location' | 'niche';
 
 // DNA type definitions (single-layer per node)
 export interface WorldNode {
@@ -654,7 +654,7 @@ export const useLocationsStore = create<LocationsState>()(
           if (!pathNode) continue;
           
           switch (pathNode.type) {
-            case 'world':
+            case 'host':
               cascaded.world = pathNode.dna as WorldNode;
               break;
             case 'region':
@@ -663,7 +663,7 @@ export const useLocationsStore = create<LocationsState>()(
             case 'location':
               cascaded.location = pathNode.dna as LocationNode;
               break;
-            case 'sublocation':
+            case 'niche':
               cascaded.sublocation = pathNode.dna as SublocationNode;
               break;
           }
@@ -780,19 +780,19 @@ export const useLocationsStore = create<LocationsState>()(
         const id = location.id || uuidv4();
         
         // Extract nodes from nested DNA
-        const worldNode: Node = {
+        const hostNode: Node = {
           id: location.world_id,
-          type: 'world',
+          type: 'host',
           name: location.dna.world.meta.name,
           dna: location.dna.world,
           imagePath: '',
           focus: undefined,
         };
         
-        // Create world node if it doesn't exist
+        // Create host node if it doesn't exist
         if (!get().getNode(location.world_id)) {
-          get().createNode(worldNode);
-          get().addNodeToTree(location.world_id, null, location.world_id, 'world');
+          get().createNode(hostNode);
+          get().addNodeToTree(location.world_id, null, location.world_id, 'host');
         }
         
         // Create region node if exists
@@ -845,7 +845,7 @@ export const useLocationsStore = create<LocationsState>()(
         
         return {
           id: node.id,
-          world_id: cascaded.world ? Object.keys(get().nodes).find(k => get().nodes[k].type === 'world') || '' : '',
+          world_id: cascaded.world ? Object.keys(get().nodes).find(k => get().nodes[k].type === 'host') || '' : '',
           parent_location_id: null,
           adjacent_to: [],
           children: [],

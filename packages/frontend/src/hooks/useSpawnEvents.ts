@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
 import { initFocus } from '@/utils/locationFocus';
+import { parseNestedHierarchy } from '@/utils/hierarchyParser';
 
 /**
  * Helper function to find the deepest node in a hierarchy
@@ -98,9 +99,9 @@ export function useSpawnEvents() {
         updateEntityImagePrompt(spawnId, imagePrompt);
       }
       
-      // Update world node image (world node uses spawnId as its ID)
-      const worldNode = getNode(spawnId);
-      if (worldNode && worldNode.type === 'world') {
+      // Update host node image (host node uses spawnId as its ID)
+      const hostNode = getNode(spawnId);
+      if (hostNode && hostNode.type === 'host') {
         updateNode(spawnId, { imagePath: imageUrl });
       }
       
@@ -318,7 +319,7 @@ export function useSpawnEvents() {
       // Create sublocation node
       const sublocationNode: Node = {
         id: spawnId,
-        type: 'sublocation',
+        type: 'niche',
         name: cleanName,
         dna: dna,
         imagePath: imageUrl || '',
@@ -327,18 +328,18 @@ export function useSpawnEvents() {
       
       createNode(sublocationNode);
       
-      // Find world ID from cascaded DNA
-      // The world node ID is the first node in any tree path
-      const worldId = Object.values(useLocationsStore.getState().nodes)
-        .find(node => node.type === 'world' && node.dna === cascadedDNA.world)?.id;
+      // Find host ID from cascaded DNA
+      // The host node ID is the first node in any tree path
+      const hostId = Object.values(useLocationsStore.getState().nodes)
+        .find(node => node.type === 'host' && node.dna === cascadedDNA.world)?.id;
       
-      if (!worldId) {
-        console.error('[SSE] ❌ Could not find world ID for sublocation');
+      if (!hostId) {
+        console.error('[SSE] ❌ Could not find host ID for sublocation');
         return;
       }
       
       // Add to tree under parent
-      addNodeToTree(worldId, parentNodeId, spawnId, 'sublocation');
+      addNodeToTree(hostId, parentNodeId, spawnId, 'niche');
       
       // Update entity deep profile with cascaded DNA for display
       const fullCascadedDNA = {
@@ -520,37 +521,124 @@ export function useSpawnEvents() {
       console.log('Metadata:', metadata);
       console.log('Image URL:', imageUrl);
       
-      // Find the deepest node in the hierarchy
-      const deepestNode = findDeepestNode(hierarchy);
-      console.log('[Hierarchy] Deepest node:', deepestNode.name, `(${deepestNode.type || 'unknown'})`);
-      
-      // Create entity session with DEEPEST NODE data (not host)
-      if (createEntity && hierarchy.host) {
-        const seed = {
-          name: deepestNode.name,
-          looks: deepestNode.looks || deepestNode.dna?.looks || deepestNode.description,
-          atmosphere: deepestNode.atmosphere || deepestNode.dna?.atmosphere || '',
-          mood: deepestNode.mood || deepestNode.dna?.mood || ''
+      try {
+        // Parse nested hierarchy into flat nodes + tree structure
+        const parsed = parseNestedHierarchy(hierarchy, spawnId, imageUrl);
+        console.log(`[Hierarchy] Parsed into ${parsed.nodes.length} nodes`);
+        console.log('[Hierarchy] Tree structure:', parsed.tree);
+        
+        // Create all nodes in flat storage
+        parsed.nodes.forEach(node => {
+          createNode(node);
+          console.log(`[Hierarchy] Created node: ${node.name} (${node.type})`);
+          
+          // Create entity session for each node
+          if (createEntity) {
+            const seed = {
+              name: node.name,
+              looks: (node.dna as any)?.profile?.looks || node.name,
+              atmosphere: (node.dna as any)?.profile?.atmosphere || (node.dna as any)?.semantic?.atmosphere || '',
+              mood: (node.dna as any)?.profile?.mood || (node.dna as any)?.semantic?.mood || ''
+            };
+            createEntity(node.id, seed, 'location');
+          }
+          
+          // Set image if available
+          if (updateEntityImage && node.imagePath) {
+            updateEntityImage(node.id, node.imagePath);
+          }
+        });
+        
+        // Add tree structure to worldTrees
+        addNodeToTree(spawnId, null, spawnId, 'host');
+        
+        // Manually build tree structure for child nodes
+        const buildTreeRecursive = (treeNode: any, parentId: string) => {
+          treeNode.children.forEach((child: any) => {
+            addNodeToTree(spawnId, parentId, child.id, child.type as any);
+            if (child.children && child.children.length > 0) {
+              buildTreeRecursive(child, child.id);
+            }
+          });
         };
-        createEntity(spawnId, seed, 'location');
-      }
-      
-      // Update entity with image
-      if (updateEntityImage && imageUrl) {
-        updateEntityImage(spawnId, imageUrl);
-      }
-      
-      // Store full hierarchy as deep profile
-      if (updateEntityProfile) {
-        updateEntityProfile(spawnId, {
-          hierarchy,
-          metadata,
-          imageUrl
-        } as any);
-      }
-      
-      // Create node in location tree with DEEPEST NODE name and focus
-      if (hierarchy.host) {
+        
+        buildTreeRecursive(parsed.tree, spawnId);
+        console.log('[Hierarchy] Tree structure built successfully');
+        
+        // Get the deepest node for entity session
+        const deepestNode = parsed.nodes.find(n => n.id === parsed.deepestNodeId);
+        
+        if (!deepestNode) {
+          console.error('[Hierarchy] Could not find deepest node');
+          return;
+        }
+        
+        // Create entity session with DEEPEST NODE data
+        if (createEntity) {
+          const seed = {
+            name: deepestNode.name,
+            looks: (deepestNode.dna as any)?.profile?.looks || deepestNode.name,
+            atmosphere: (deepestNode.dna as any)?.profile?.atmosphere || (deepestNode.dna as any)?.semantic?.atmosphere || '',
+            mood: (deepestNode.dna as any)?.profile?.mood || (deepestNode.dna as any)?.semantic?.mood || ''
+          };
+          createEntity(parsed.deepestNodeId, seed, 'location');
+        }
+        
+        // Update entity with image (use deepest node's image if available)
+        if (updateEntityImage) {
+          updateEntityImage(parsed.deepestNodeId, deepestNode.imagePath || imageUrl || '');
+        }
+        
+        // Store cascaded DNA as deep profile for deepest node
+        if (updateEntityProfile) {
+          const cascadedDNA = getCascadedDNA(parsed.deepestNodeId);
+          updateEntityProfile(parsed.deepestNodeId, cascadedDNA as any);
+        }
+        
+        // Switch to deepest node entity
+        if (setActiveEntity) {
+          setActiveEntity(parsed.deepestNodeId);
+        }
+        
+        // Update spawn status and remove from active list
+        if (updateSpawnStatus) {
+          updateSpawnStatus(spawnId, 'completed');
+        }
+        
+        setTimeout(() => {
+          if (removeSpawn) {
+            removeSpawn(spawnId);
+          }
+        }, 2000);
+        
+      } catch (error) {
+        console.error('[Hierarchy] Failed to parse hierarchy:', error);
+        
+        // Fallback to old behavior if parsing fails
+        const deepestNode = findDeepestNode(hierarchy);
+        
+        if (createEntity && hierarchy.host) {
+          const seed = {
+            name: deepestNode.name,
+            looks: deepestNode.looks || deepestNode.dna?.looks || deepestNode.description,
+            atmosphere: deepestNode.atmosphere || deepestNode.dna?.atmosphere || '',
+            mood: deepestNode.mood || deepestNode.dna?.mood || ''
+          };
+          createEntity(spawnId, seed, 'location');
+        }
+        
+        if (updateEntityImage && imageUrl) {
+          updateEntityImage(spawnId, imageUrl);
+        }
+        
+        if (updateEntityProfile) {
+          updateEntityProfile(spawnId, {
+            hierarchy,
+            metadata,
+            imageUrl
+          } as any);
+        }
+        
         const node: Partial<Node> = {
           id: spawnId,
           type: 'world' as any,
@@ -565,23 +653,21 @@ export function useSpawnEvents() {
         
         createNode(node as any);
         addNodeToTree(spawnId, null, spawnId, 'world' as any);
-      }
-      
-      // Switch to this entity
-      if (setActiveEntity) {
-        setActiveEntity(spawnId);
-      }
-      
-      // Update spawn status and remove from active list
-      if (updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'completed');
-      }
-      
-      setTimeout(() => {
-        if (removeSpawn) {
-          removeSpawn(spawnId);
+        
+        if (setActiveEntity) {
+          setActiveEntity(spawnId);
         }
-      }, 2000);
+        
+        if (updateSpawnStatus) {
+          updateSpawnStatus(spawnId, 'completed');
+        }
+        
+        setTimeout(() => {
+          if (removeSpawn) {
+            removeSpawn(spawnId);
+          }
+        }, 2000);
+      }
     });
 
     // Cleanup on unmount

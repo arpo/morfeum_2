@@ -102,8 +102,8 @@ export function App() {
       updateEntityProfile(node.id, cascadedDNA as any);
       lastLoadedId = node.id;
       
-      // If this is a world node, also load all its children
-      if (node.type === 'world') {
+      // If this is a host node, also load all its children
+      if (node.type === 'host') {
         // console.log('[App] 🌲 Loading all children of world:', node.name);
         const worldTree = getWorldTree(node.id);
         
