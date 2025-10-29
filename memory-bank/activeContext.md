@@ -1,11 +1,17 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 29, 2025 - 4:40 PM)
+## Latest Session Summary (October 29, 2025 - 4:51 PM)
 
-### Current Task: Location Tree Display Fixes - COMPLETED ✅
-Fixed node selection, image assignment, and info button accessibility for location tree nodes.
+### Current Task: Location Tree Display & Thumbnail Fixes - COMPLETED ✅
+Fixed node selection, image assignment, info button accessibility, and saved locations thumbnails.
 
 ### Recently Completed Work
+
+**Saved Locations Thumbnail Fix (NEW - Complete):**
+- ✅ Created `findFirstImageInTree` utility function in treeUtils.ts
+- ✅ Updated SavedLocationsModal logic to compute thumbnails from tree hierarchy
+- ✅ Saved locations now show meaningful thumbnails (first image found in tree)
+- ✅ Maintains separation: tree nodes show own images, saved list shows best available
 
 **Location Tree Display Fixes (Complete):**
 - ✅ Added info button (ℹ️) to ChatTabs for all nodes regardless of image status
@@ -39,19 +45,26 @@ Fixed node selection, image assignment, and info button accessibility for locati
 
 ### Key Technical Decisions
 
-**Info Button Accessibility (NEW):**
+**Saved Locations Thumbnail Strategy (NEW):**
+- **Computed Display Value**: Don't modify stored data, compute thumbnail at render time
+- **Tree Traversal**: Use depth-first search to find first non-empty image in hierarchy
+- **Fallback Chain**: Host → Region → Location → Niche (first found wins)
+- **Maintains Integrity**: Each node still stores only its own image in `imagePath`
+- **User Experience**: Saved locations list shows meaningful visual even when host has no image
+
+**Info Button Accessibility:**
 - **ChatTabs Integration**: Info button added next to close button for every node
 - **Always Visible**: Button shows regardless of image status, disabled until profile loads
 - **EntityPanel Updates**: Info button moved outside image conditional blocks
 - **Consistent UX**: Users can access node details from tree view without selecting node
 
-**Image Assignment Fix (NEW):**
+**Image Assignment Fix:**
 - **Host Node Pattern**: Changed from `imageUrl || host.imageUrl || ''` to `host.imageUrl || ''`
 - **Correct Behavior**: Host nodes only display images if backend provides `host.imageUrl`
 - **No Fallback**: Removed fallback to hierarchy's main image (which belongs to deepest node)
 - **Placeholder Display**: Nodes without images show first letter of name in colored circle
 
-**Duplicate Node Prevention (NEW):**
+**Duplicate Node Prevention:**
 - **Single Entity Creation**: Removed duplicate `createEntity` call for deepest node
 - **Loop Handles All**: The `parsed.nodes.forEach` loop creates entity sessions for ALL nodes
 - **No Redundancy**: Each node appears exactly once in tree view
@@ -109,13 +122,14 @@ Fixed node selection, image assignment, and info button accessibility for locati
 - **Zustand store integration**: Flat nodes + tree index for efficient lookup
 - **React batching awareness**: Timing delays where needed for multiple updates
 - **Conditional rendering**: Info buttons always visible, other buttons conditional on image
+- **Computed values**: Thumbnails computed at render time, not stored
 
 ## Next Priority Items
 
 ### Immediate (Ready to Implement)
-1. **Test new location generation**: Verify fixes work with fresh locations (not saved ones)
-2. **Clean up saved locations**: Consider clearing localStorage to see fixes in action
-3. **Remove debug logging**: Clean up console.log statements from load functions
+1. **Test all fixes together**: Generate new location and verify all features work
+2. **Clean up debug logging**: Remove console.log statements from load functions
+3. **Performance check**: Verify thumbnail computation doesn't slow down modal
 
 ### Medium Priority
 1. **Vector search preparation**: Saved nodes already flat, ready for vector DB integration
@@ -124,6 +138,12 @@ Fixed node selection, image assignment, and info button accessibility for locati
 4. **Image generation per node**: Consider generating images for host/region nodes individually
 
 ## Current System State
+
+**Saved Locations Display:** ✅ Fixed
+- Thumbnails show first image found in tree hierarchy
+- Meaningful visuals even when host nodes have no images
+- Computed at render time, no data structure changes
+- Falls back to placeholder only if entire tree has no images
 
 **Location Tree Display:** ✅ Fixed
 - Info button accessible for all nodes (with or without images)
@@ -160,7 +180,22 @@ Fixed node selection, image assignment, and info button accessibility for locati
 
 ## Files Modified in Latest Session
 
-**Modified:**
+**Modified (Thumbnail Fix):**
+- `packages/frontend/src/utils/treeUtils.ts`:
+  - Added `findFirstImageInTree` utility function
+  - Traverses tree depth-first to find first non-empty imagePath
+  - Takes nodeId, getNode function, and worldTrees array
+  - Returns first image found or empty string
+  - Generic function signature for reusability
+
+- `packages/frontend/src/features/saved-locations/SavedLocationsModal/useSavedLocationsLogic.ts`:
+  - Imported `findFirstImageInTree` from treeUtils
+  - Added `getNode` and `worldTrees` from store
+  - Changed locations from simple filter to computed map
+  - Each location gets computed `imagePath` from tree traversal
+  - Original node.imagePath used as ultimate fallback
+
+**Modified (Tree Display Fixes):**
 - `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.tsx`:
   - Added info button next to close button for every node
   - Added modal state management for LocationInfoModal and CharacterInfoModal
@@ -193,50 +228,66 @@ Fixed node selection, image assignment, and info button accessibility for locati
   - Deepest node image updated separately without recreating entity session
   - Prevents duplicate nodes appearing in tree view
 
-**Before (Image Assignment Bug):**
+## Code Examples
+
+**Thumbnail Computation (NEW):**
 ```typescript
-// Host node incorrectly grabbed hierarchy's main image
+// Find first image in tree hierarchy
+const locations = useMemo(() => {
+  const hostNodes = Object.values(nodesMap).filter(node => node.type === 'host');
+  
+  // Add computed thumbnail for each location
+  return hostNodes.map(node => ({
+    ...node,
+    imagePath: findFirstImageInTree(node.id, getNode, worldTrees) || node.imagePath
+  }));
+}, [nodesMap, getNode, worldTrees]);
+```
+
+**Image Assignment Fix:**
+```typescript
+// Before - Host node incorrectly grabbed hierarchy's main image
 const hostNode: Node = {
   imagePath: imageUrl || host.imageUrl || '', // ❌ Wrong fallback
 };
-```
 
-**After (Correct Pattern):**
-```typescript
-// Host node only uses its own image
+// After - Host node only uses its own image
 const hostNode: Node = {
   imagePath: host.imageUrl || '', // ✅ Correct - no fallback
 };
 ```
 
-**Before (Duplicate Node Bug):**
+**Duplicate Prevention:**
 ```typescript
-// Loop creates all nodes including deepest
+// Before - Created deepest node twice
 parsed.nodes.forEach(node => {
   createEntity(node.id, seed, 'location'); // Creates deepest node
 });
-
-// Then creates deepest node AGAIN
 createEntity(parsed.deepestNodeId, seed, 'location'); // ❌ Duplicate!
-```
 
-**After (Single Creation):**
-```typescript
-// Loop creates all nodes including deepest
+// After - Create once, update separately
 parsed.nodes.forEach(node => {
   createEntity(node.id, seed, 'location'); // Creates all nodes once
 });
-
 // Only update image, don't recreate
 if (updateEntityImage && deepestNode.imagePath) {
   updateEntityImage(parsed.deepestNodeId, deepestNode.imagePath); // ✅ Just update
 }
 ```
 
-**Result:** 
-- All nodes accessible via info button regardless of image status
-- Host nodes display correct images (their own, not deepest node's)
-- Each node appears exactly once in tree view (no duplicates)
-- Placeholders work correctly for nodes without images
-- User can access node details from tree view or entity panel
-- Clean, consistent behavior across all node types
+## Session Results
+
+**Complete Fix Chain:**
+1. ✅ Info buttons accessible everywhere (tree view + entity panels)
+2. ✅ Host nodes display correct images (not stealing from children)
+3. ✅ No duplicate nodes in tree view
+4. ✅ Saved locations show meaningful thumbnails (best available from tree)
+5. ✅ Placeholders work correctly when no images exist
+6. ✅ Clean separation of concerns (stored vs computed vs displayed data)
+
+**Benefits Delivered:**
+- **Better UX**: Users can access info for any node, anytime
+- **Correct Display**: Each node shows its own image, not borrowed from others
+- **Meaningful Thumbnails**: Saved locations list shows visual representation even when host has no image
+- **Data Integrity**: Stored data unchanged, computed values separate
+- **Maintainability**: Clear, simple code patterns throughout

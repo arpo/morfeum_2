@@ -147,3 +147,39 @@ export function getAncestors(tree: TreeNode, targetId: string): TreeNode[] {
   findPath(tree, []);
   return ancestors;
 }
+
+/**
+ * Finds the first image in a tree by traversing depth-first
+ * Useful for finding a representative image for a location hierarchy
+ * @param nodeId Root node ID to start search from
+ * @param getNode Function to get a node by ID from store
+ * @param worldTrees Array of all world trees
+ * @returns First non-empty imagePath found, or empty string if none
+ */
+export function findFirstImageInTree(
+  nodeId: string,
+  getNode: (id: string) => { imagePath?: string } | undefined,
+  worldTrees: TreeNode[]
+): string {
+  // Find tree containing this node
+  const tree = findTreeContainingNode(worldTrees, nodeId);
+  if (!tree) return '';
+  
+  // Traverse tree depth-first looking for first image
+  const checkNode = (treeNode: TreeNode): string => {
+    const node = getNode(treeNode.id);
+    if (node?.imagePath) return node.imagePath;
+    
+    // Check children
+    if (treeNode.children) {
+      for (const child of treeNode.children) {
+        const found = checkNode(child);
+        if (found) return found;
+      }
+    }
+    
+    return '';
+  };
+  
+  return checkNode(tree);
+}

@@ -2,7 +2,7 @@ import { useState, useCallback, useMemo } from 'react';
 import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
-import { findTreeContainingNode, collectAllNodeIds } from '@/utils/treeUtils';
+import { findTreeContainingNode, collectAllNodeIds, findFirstImageInTree } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import type { SavedEntitiesLogicReturn, EntityTab } from './types';
 import type { Character } from '@/store/slices/charactersSlice';
@@ -12,10 +12,19 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   
   // Locations (filter to world nodes only)
   const nodesMap = useLocationsStore(state => state.nodes);
-  const locations = useMemo(() => 
-    Object.values(nodesMap).filter(node => node.type === 'host'),
-    [nodesMap]
-  );
+  const getNode = useLocationsStore(state => state.getNode);
+  const worldTrees = useLocationsStore(state => state.worldTrees);
+  
+  // Compute locations with thumbnail images
+  const locations = useMemo(() => {
+    const hostNodes = Object.values(nodesMap).filter(node => node.type === 'host');
+    
+    // Add computed thumbnail image for each location
+    return hostNodes.map(node => ({
+      ...node,
+      imagePath: findFirstImageInTree(node.id, getNode, worldTrees) || node.imagePath
+    }));
+  }, [nodesMap, getNode, worldTrees]);
   const pinnedLocationIds = useLocationsStore(state => state.pinnedIds);
   const deleteWorldTree = useLocationsStore(state => state.deleteWorldTree);
   const getWorldNodeCount = useLocationsStore(state => state.getWorldNodeCount);
