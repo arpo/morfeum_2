@@ -1,9 +1,20 @@
 /**
- * Locations Storage Slice - Tree-Based Architecture
- * Two-table system: Nodes (flat) + World Trees (nested)
- * Each node stores only its own DNA layer
+ * DEPRECATED: This file has been refactored into smaller slices
+ * Import from './locations' instead
+ * 
+ * This file is kept temporarily for backward compatibility
+ * and will be removed in a future update.
  */
 
+// Re-export everything from the new modular structure
+export * from './locations';
+export { useLocationsStore } from './locations';
+
+/*
+ * OLD MONOLITHIC CODE BELOW (875 lines) - DEPRECATED
+ * Kept for reference during migration
+ * DELETE THIS FILE once all imports are updated
+ *
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { v4 as uuidv4 } from 'uuid';
@@ -873,3 +884,4 @@ export const useLocationsStore = create<LocationsState>()(
     }
   )
 );
+*/
