@@ -22,6 +22,30 @@ const renderValue = (value: any) => {
   return String(value);
 };
 
+// Helper to format field names nicely
+const formatFieldName = (key: string): string => {
+  return key
+    .replace(/_/g, ' ')  // Replace underscores with spaces
+    .replace(/\b\w/g, char => char.toUpperCase());  // Capitalize each word
+};
+
+// Generic DNA renderer - displays all fields in a DNA object
+const renderDNA = (dna: any, styles: any) => {
+  if (!dna || typeof dna !== 'object') return null;
+  
+  return Object.entries(dna).map(([key, value]) => {
+    // Skip nested objects and arrays for now, or handle them specially
+    if (value === null || value === undefined) return null;
+    
+    return (
+      <div className={styles.field} key={key}>
+        <label className={styles.label}>{formatFieldName(key)}</label>
+        <p className={styles.value}>{renderValue(value)}</p>
+      </div>
+    );
+  });
+};
+
 export function LocationInfoModal(props: LocationInfoModalProps) {
   const { locationProfile, locationName, locationId, isOpen } = props;
   const { handleClose } = useLocationInfoLogic(props);
@@ -638,58 +662,11 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   </div>
                 )}
                 
-                {/* DNA subsection */}
+                {/* DNA subsection - Generic renderer */}
                 {profile.location.dna && (
                   <>
                     <h4 className={styles.subsectionTitle}>DNA</h4>
-                    {profile.location.dna.architectural_tone && (
-                      <div className={styles.field}>
-                        <label className={styles.label}>Architectural Tone</label>
-                        <p className={styles.value}>{profile.location.dna.architectural_tone}</p>
-                      </div>
-                    )}
-                    {profile.location.dna.cultural_tone && (
-                      <div className={styles.field}>
-                        <label className={styles.label}>Cultural Tone</label>
-                        <p className={styles.value}>{profile.location.dna.cultural_tone}</p>
-                      </div>
-                    )}
-                    {profile.location.dna.materials_base && (
-                      <div className={styles.field}>
-                        <label className={styles.label}>Materials Base</label>
-                        <p className={styles.value}>{profile.location.dna.materials_base}</p>
-                      </div>
-                    )}
-                    {profile.location.dna.mood_baseline && (
-                      <div className={styles.field}>
-                        <label className={styles.label}>Mood Baseline</label>
-                        <p className={styles.value}>{profile.location.dna.mood_baseline}</p>
-                      </div>
-                    )}
-                    {profile.location.dna.palette_bias && (
-                      <div className={styles.field}>
-                        <label className={styles.label}>Palette Bias</label>
-                        <p className={styles.value}>{profile.location.dna.palette_bias}</p>
-                      </div>
-                    )}
-                    {profile.location.dna.soundscape_base && (
-                      <div className={styles.field}>
-                        <label className={styles.label}>Soundscape</label>
-                        <p className={styles.value}>{profile.location.dna.soundscape_base}</p>
-                      </div>
-                    )}
-                    {profile.location.dna.flora_base && (
-                      <div className={styles.field}>
-                        <label className={styles.label}>Flora Base</label>
-                        <p className={styles.value}>{profile.location.dna.flora_base || 'N/A'}</p>
-                      </div>
-                    )}
-                    {profile.location.dna.fauna_base && (
-                      <div className={styles.field}>
-                        <label className={styles.label}>Fauna Base</label>
-                        <p className={styles.value}>{profile.location.dna.fauna_base || 'N/A'}</p>
-                      </div>
-                    )}
+                    {renderDNA(profile.location.dna, styles)}
                   </>
                 )}
               </div>
@@ -772,6 +749,14 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                     <label className={styles.label}>Symbolic Themes</label>
                     <p className={styles.value}>{profile.region.profile.symbolicThemes || 'N/A'}</p>
                   </div>
+                </div>
+              )}
+
+              {/* DNA subsection - Generic renderer */}
+              {profile.region.dna && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>DNA</h4>
+                  {renderDNA(profile.region.dna, styles)}
                 </div>
               )}
             </ModalSection>
@@ -861,6 +846,14 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                     <label className={styles.label}>Symbolic Themes</label>
                     <p className={styles.value}>{profile.world.profile.symbolicThemes || 'N/A'}</p>
                   </div>
+                </div>
+              )}
+
+              {/* DNA subsection - Generic renderer */}
+              {profile.world.dna && (
+                <div className={styles.subsection}>
+                  <h4 className={styles.subsectionTitle}>DNA</h4>
+                  {renderDNA(profile.world.dna, styles)}
                 </div>
               )}
             </ModalSection>
