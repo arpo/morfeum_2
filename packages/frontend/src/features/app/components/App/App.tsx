@@ -12,6 +12,7 @@ import { ActiveSpawnsPanel } from '@/features/spawn-panel/ActiveSpawnsPanel';
 import { ChatTabs } from '@/features/chat-tabs/ChatTabs';
 import { Card, ThemeToggle } from '@/components/ui';
 import { useSpawnEvents } from '@/hooks/useSpawnEvents';
+import { collectAllNodeIds } from '@/utils/treeUtils';
 import { useEffect } from 'react';
 import styles from './App.module.css';
 
@@ -102,39 +103,34 @@ export function App() {
       updateEntityProfile(node.id, cascadedDNA as any);
       lastLoadedId = node.id;
       
-      // If this is a host node, also load all its children
+      // If this is a host node, also load all its children using centralized utility
       if (node.type === 'host') {
-        // console.log('[App] 🌲 Loading all children of world:', node.name);
         const worldTree = getWorldTree(node.id);
         
         if (worldTree) {
-          // Recursively load all child nodes
-          const loadChildren = (treeNode: any) => {
-            treeNode.children?.forEach((child: any) => {
-              const childNode = getNode(child.id);
-              if (childNode) {
-                const childCascadedDNA = getCascadedDNA(child.id);
-                const childSeed = {
-                  name: childNode.name,
-                  atmosphere: childCascadedDNA.world?.semantic?.atmosphere || 'Unknown'
-                };
-                
-                createEntity(child.id, childSeed, 'location');
-                
-                if (childNode.imagePath) {
-                  updateEntityImage(child.id, childNode.imagePath);
-                }
-                
-                updateEntityProfile(child.id, childCascadedDNA as any);
-                // console.log('[App]   └─ Loaded child node:', childNode.name, `(${childNode.type})`);
+          // Get all node IDs in tree (excluding root which we already loaded)
+          const allNodeIds = collectAllNodeIds(worldTree);
+          const childNodeIds = allNodeIds.slice(1); // Skip first ID (root)
+          
+          // Create entity sessions for all child nodes
+          childNodeIds.forEach((childId) => {
+            const childNode = getNode(childId);
+            if (childNode) {
+              const childCascadedDNA = getCascadedDNA(childId);
+              const childSeed = {
+                name: childNode.name,
+                atmosphere: childCascadedDNA.world?.semantic?.atmosphere || 'Unknown'
+              };
+              
+              createEntity(childId, childSeed, 'location');
+              
+              if (childNode.imagePath) {
+                updateEntityImage(childId, childNode.imagePath);
               }
               
-              // Recurse for grandchildren
-              loadChildren(child);
-            });
-          };
-          
-          loadChildren(worldTree);
+              updateEntityProfile(childId, childCascadedDNA as any);
+            }
+          });
         }
       }
     });

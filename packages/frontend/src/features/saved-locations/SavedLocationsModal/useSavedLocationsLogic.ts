@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo } from 'react';
 import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
+import { findTreeContainingNode, collectAllNodeIds } from '@/utils/treeUtils';
 import type { SavedEntitiesLogicReturn, EntityTab } from './types';
 import type { Character } from '@/store/slices/charactersSlice';
 
@@ -47,17 +48,11 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
       return;
     }
     
-    // Find the world tree containing this node
+    // Find the world tree containing this node using centralized utility
     const worldTrees = useLocationsStore.getState().worldTrees;
     console.log('[SavedEntitiesModal] worldTrees:', worldTrees);
     
-    const worldTree = worldTrees.find(tree => {
-      const findNode = (treeNode: any, targetId: string): boolean => {
-        if (treeNode.id === targetId) return true;
-        return treeNode.children?.some((child: any) => findNode(child, targetId)) || false;
-      };
-      return findNode(tree, node.id);
-    });
+    const worldTree = findTreeContainingNode(worldTrees, node.id);
     
     if (!worldTree) {
       console.error('[SavedEntitiesModal] Could not find world tree for node:', node.id);
@@ -66,13 +61,8 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     
     console.log('[SavedEntitiesModal] Found worldTree:', worldTree);
     
-    // Collect all node IDs in the tree
-    const allNodeIds: string[] = [];
-    const collectIds = (treeNode: any) => {
-      allNodeIds.push(treeNode.id);
-      treeNode.children?.forEach(collectIds);
-    };
-    collectIds(worldTree);
+    // Collect all node IDs in the tree using centralized utility
+    const allNodeIds = collectAllNodeIds(worldTree);
     
     console.log('[SavedEntitiesModal] Collected node IDs:', allNodeIds);
     
