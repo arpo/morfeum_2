@@ -13,6 +13,7 @@ import { ChatTabs } from '@/features/chat-tabs/ChatTabs';
 import { Card, ThemeToggle } from '@/components/ui';
 import { useSpawnEvents } from '@/hooks/useSpawnEvents';
 import { collectAllNodeIds } from '@/utils/treeUtils';
+import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import { useEffect } from 'react';
 import styles from './App.module.css';
 
@@ -103,7 +104,7 @@ export function App() {
       updateEntityProfile(node.id, cascadedDNA as any);
       lastLoadedId = node.id;
       
-      // If this is a host node, also load all its children using centralized utility
+      // If this is a host node, also load all its children using centralized utilities
       if (node.type === 'host') {
         const worldTree = getWorldTree(node.id);
         
@@ -112,25 +113,11 @@ export function App() {
           const allNodeIds = collectAllNodeIds(worldTree);
           const childNodeIds = allNodeIds.slice(1); // Skip first ID (root)
           
-          // Create entity sessions for all child nodes
-          childNodeIds.forEach((childId) => {
-            const childNode = getNode(childId);
-            if (childNode) {
-              const childCascadedDNA = getCascadedDNA(childId);
-              const childSeed = {
-                name: childNode.name,
-                atmosphere: childCascadedDNA.world?.semantic?.atmosphere || 'Unknown'
-              };
-              
-              createEntity(childId, childSeed, 'location');
-              
-              if (childNode.imagePath) {
-                updateEntityImage(childId, childNode.imagePath);
-              }
-              
-              updateEntityProfile(childId, childCascadedDNA as any);
-            }
-          });
+          // Create entity sessions for all child nodes using centralized utility
+          createEntitySessionsForNodes(
+            childNodeIds,
+            { createEntity, updateEntityImage, updateEntityProfile }
+          );
         }
       }
     });

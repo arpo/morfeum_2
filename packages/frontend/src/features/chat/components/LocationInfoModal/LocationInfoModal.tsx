@@ -566,18 +566,12 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   <label className={styles.label}>Atmosphere</label>
                   <p className={styles.value}>{profile.location.atmosphere || profile.location.profile?.atmosphere || 'N/A'}</p>
                 </div>
-                {(profile.location.materials_primary || profile.location.profile?.materials) && (
-                  <div className={styles.field}>
-                    <label className={styles.label}>Materials</label>
-                    <p className={styles.value}>{profile.location.materials_primary || profile.location.profile?.materials || 'N/A'}</p>
-                  </div>
-                )}
                 <div className={styles.field}>
                   <label className={styles.label}>Mood</label>
                   <p className={styles.value}>{profile.location.mood || profile.location.profile?.mood || 'N/A'}</p>
                 </div>
                 
-                {/* Flat structure visual analysis fields */}
+                {/* Visual Analysis Fields */}
                 {profile.location.dominantElements && profile.location.dominantElements.length > 0 && (
                   <div className={styles.field}>
                     <label className={styles.label}>🎯 Dominant Elements</label>
@@ -607,7 +601,7 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   </div>
                 )}
                 
-                {/* Materials (flat structure) */}
+                {/* Materials breakdown */}
                 {(profile.location.materials_primary || profile.location.materials_secondary || profile.location.materials_accents) && (
                   <div className={styles.field}>
                     <label className={styles.label}>🧱 Materials</label>
@@ -619,7 +613,7 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                   </div>
                 )}
                 
-                {/* Colors (flat structure) */}
+                {/* Colors breakdown */}
                 {(profile.location.colors_dominant || profile.location.colors_secondary || profile.location.colors_accents || profile.location.colors_ambient) && (
                   <div className={styles.field}>
                     <label className={styles.label}>🎨 Colors</label>
@@ -660,10 +654,40 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
                         <p className={styles.value}>{profile.location.dna.cultural_tone}</p>
                       </div>
                     )}
+                    {profile.location.dna.materials_base && (
+                      <div className={styles.field}>
+                        <label className={styles.label}>Materials Base</label>
+                        <p className={styles.value}>{profile.location.dna.materials_base}</p>
+                      </div>
+                    )}
+                    {profile.location.dna.mood_baseline && (
+                      <div className={styles.field}>
+                        <label className={styles.label}>Mood Baseline</label>
+                        <p className={styles.value}>{profile.location.dna.mood_baseline}</p>
+                      </div>
+                    )}
+                    {profile.location.dna.palette_bias && (
+                      <div className={styles.field}>
+                        <label className={styles.label}>Palette Bias</label>
+                        <p className={styles.value}>{profile.location.dna.palette_bias}</p>
+                      </div>
+                    )}
                     {profile.location.dna.soundscape_base && (
                       <div className={styles.field}>
                         <label className={styles.label}>Soundscape</label>
                         <p className={styles.value}>{profile.location.dna.soundscape_base}</p>
+                      </div>
+                    )}
+                    {profile.location.dna.flora_base && (
+                      <div className={styles.field}>
+                        <label className={styles.label}>Flora Base</label>
+                        <p className={styles.value}>{profile.location.dna.flora_base || 'N/A'}</p>
+                      </div>
+                    )}
+                    {profile.location.dna.fauna_base && (
+                      <div className={styles.field}>
+                        <label className={styles.label}>Fauna Base</label>
+                        <p className={styles.value}>{profile.location.dna.fauna_base || 'N/A'}</p>
                       </div>
                     )}
                   </>

@@ -3,6 +3,7 @@ import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
 import { findTreeContainingNode, collectAllNodeIds } from '@/utils/treeUtils';
+import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import type { SavedEntitiesLogicReturn, EntityTab } from './types';
 import type { Character } from '@/store/slices/charactersSlice';
 
@@ -66,42 +67,14 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     
     console.log('[SavedEntitiesModal] Collected node IDs:', allNodeIds);
     
-    // Create entity sessions for ALL nodes in the tree
-    const getNode = useLocationsStore.getState().getNode;
-    allNodeIds.forEach(nodeId => {
-      const treeNode = getNode(nodeId);
-      if (!treeNode) {
-        console.warn('[SavedEntitiesModal] Node not found:', nodeId);
-        return;
-      }
-      
-      console.log('[SavedEntitiesModal] Creating entity for:', nodeId, treeNode.name, treeNode.type);
-      
-      // Get cascaded DNA for this specific node
-      const nodeCascadedDNA = getCascadedDNA(nodeId);
-      
-      // Create seed from node data
-      const seed = {
-        name: treeNode.name,
-        looks: (treeNode.dna as any)?.profile?.looks || treeNode.name,
-        atmosphere: (treeNode.dna as any)?.profile?.atmosphere || (treeNode.dna as any)?.semantic?.atmosphere || '',
-        mood: (treeNode.dna as any)?.profile?.mood || (treeNode.dna as any)?.semantic?.mood || ''
-      };
-      
-      // Create entity session
-      createEntity(nodeId, seed, 'location');
-      console.log('[SavedEntitiesModal] Created entity session for:', nodeId);
-      
-      // Update with image if available
-      if (treeNode.imagePath) {
-        updateEntityImage(nodeId, treeNode.imagePath);
-      }
-      
-      // Update with cascaded DNA profile
-      updateEntityProfile(nodeId, nodeCascadedDNA as any);
-    });
+    // Create entity sessions for ALL nodes using centralized utility
+    const count = createEntitySessionsForNodes(
+      allNodeIds,
+      { createEntity, updateEntityImage, updateEntityProfile },
+      { logProgress: true, logPrefix: '[SavedEntitiesModal]' }
+    );
     
-    console.log('[SavedEntitiesModal] All entity sessions created, total:', allNodeIds.length);
+    console.log('[SavedEntitiesModal] All entity sessions created, total:', count);
     
     // Set clicked node as active entity
     setActiveEntity(node.id);

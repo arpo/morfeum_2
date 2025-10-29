@@ -1,13 +1,21 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 29, 2025 - 1:13 PM)
+## Latest Session Summary (October 29, 2025 - 4:00 PM)
 
-### Current Task: Save Location Refactoring - COMPLETED ✅
-Successfully refactored saved locations system to support new nested hierarchy structure.
+### Current Task: Data Preservation Refactoring - COMPLETED ✅
+Massively simplified hierarchyParser and entitySessionLoader to preserve ALL backend data without transformation.
 
 ### Recently Completed Work
 
-**Save Location Refactoring (Complete):**
+**Data Preservation Refactoring (Complete):**
+- ✅ Simplified hierarchyParser extract functions from 200+ lines to 3 lines each
+- ✅ Changed from selective field mapping to complete passthrough (`...location`)
+- ✅ Fixed entitySessionLoader to spread ALL fields from `node.dna`
+- ✅ Removed all field-picking logic - now preserves everything from backend
+- ✅ Updated README with "dumb passthrough" philosophy documentation
+- ✅ Tested with saved locations - all visual analysis fields now display correctly
+
+**Previous: Save Location Refactoring (Complete):**
 - ✅ Created hierarchyParser utility to convert nested JSON to flat nodes + tree structure
 - ✅ Updated terminology throughout codebase: `'world'` → `'host'`, `'sublocation'` → `'niche'`
 - ✅ Fixed DNA structure to always use meta/semantic/profile format
@@ -23,11 +31,17 @@ Successfully refactored saved locations system to support new nested hierarchy s
 
 ### Key Technical Decisions
 
+**Data Preservation Philosophy (NEW):**
+- **"Dumb Passthrough" Approach**: No selective field mapping, no transformation
+- **Zero Data Loss**: ALL backend fields preserved using object spread (`...location`)
+- **Minimal Processing**: Only adds `slug` if missing, everything else untouched
+- **Simple Code**: Extract functions reduced from 40+ lines to 3 lines each
+
 **Hierarchy Parser Architecture:**
 - New utility: `packages/frontend/src/utils/hierarchyParser.ts`
 - Converts nested backend hierarchy into flat nodes + tree structure
-- Each node type (host/region/location/niche) extracted separately
-- DNA always restructured into proper format regardless of input shape
+- **SIMPLIFIED**: Extract functions now just `{ ...node, slug: generateSlug(node.name) }`
+- **Preserves Everything**: dominantElements, navigableElements, materials_*, colors_*, dna, etc.
 - Tree structure maintained in `worldTrees` array for depth calculation
 
 **Save Location Structure:**
@@ -106,23 +120,48 @@ Successfully refactored saved locations system to support new nested hierarchy s
 
 ## Files Modified in Latest Session
 
-**Created:**
-- `packages/frontend/src/utils/hierarchyParser.ts`: Hierarchy parser utility
-
 **Modified:**
-- `packages/frontend/src/store/slices/locationsSlice.ts`: NodeType updated to use 'host' and 'niche'
-- `packages/frontend/src/hooks/useSpawnEvents.ts`: 
-  - Entity session creation for all nodes in hierarchy
-  - Updated type checks from 'world' to 'host'
-- `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.tsx`: Updated type check to 'host'
-- `packages/frontend/src/features/saved-locations/SavedLocationsModal/useSavedLocationsLogic.ts`:
-  - Entity session creation for all nodes in tree
-  - 50ms delay before modal close
-  - Debug logging added
-- `packages/frontend/src/features/app/components/App/App.tsx`: Updated type check from 'world' to 'host' in auto-load
+- `packages/frontend/src/utils/hierarchyParser.ts`: 
+  - Simplified extractHostDNA, extractRegionDNA, extractLocationDNA, extractNicheDNA
+  - Changed from 200+ lines of selective mapping to 3 lines each: `{ ...node, slug: generateSlug(node.name) }`
+  - Now preserves ALL backend fields without filtering
+  
+- `packages/frontend/src/utils/entitySessionLoader.ts`:
+  - Fixed to read from `node.dna` (contains all backend fields)
+  - Changed from selective field picking to spreading all fields: `...dna`
+  - Enriched profile now includes EVERYTHING from backend
+
+- `packages/frontend/src/utils/README.md`:
+  - Added "Philosophy: Preserve Everything" section to hierarchyParser docs
+  - Added "Philosophy: Preserve Raw Data" section to entitySessionLoader docs
+  - Documented "dumb passthrough" approach
+  - Added data flow examples showing field preservation
+
+**Before (Selective Mapping - Lost Data):**
+```typescript
+function extractLocationDNA(location: any): any {
+  return {
+    meta: { name: location.name, slug: ... },
+    semantic: { environment: ..., mood: ... },
+    // dominantElements LOST ❌
+    // navigableElements LOST ❌
+  };
+}
+```
+
+**After (Complete Preservation - No Loss):**
+```typescript
+function extractLocationDNA(location: any): any {
+  return {
+    ...location,  // ALL fields preserved ✅
+    slug: location.slug || generateSlug(location.name)
+  };
+}
+```
 
 **Result:** 
-- Hierarchies parse correctly into flat storage + tree structure
-- ChatTabs displays all nodes with proper hierarchy indicators
-- Manual and auto-load both work correctly
-- Save/load cycle preserves all data and structure
+- ALL visual analysis fields now preserved: dominantElements, spatialLayout, uniqueIdentifiers, materials_*, colors_*, navigableElements, dna subsection
+- LocationInfoModal displays complete data
+- No data loss from backend to frontend
+- Code reduced from ~400 lines to ~50 lines total
+- Architecture is simple, maintainable, and extensible
