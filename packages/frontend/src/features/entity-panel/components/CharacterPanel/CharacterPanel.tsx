@@ -78,7 +78,7 @@ export function CharacterPanel() {
             onClick={handlers.openChat}
             className={styles.chatButton}
           >
-            💬 Chat
+            Chat
           </Button>
         </div>
       )}
