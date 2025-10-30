@@ -6,7 +6,7 @@
 import { Router, Request, Response } from 'express';
 import { HTTP_STATUS } from '../../config';
 import { asyncHandler } from '../../middleware';
-import { getPrompt } from '../../prompts';
+import { getPrompt } from '../../engine/generation/prompts';
 
 const router = Router();
 

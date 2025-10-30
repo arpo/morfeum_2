@@ -8,7 +8,7 @@
  */
 
 import * as mzooService from '../mzoo.service';
-import { en as prompts } from '../../prompts/languages/en';
+import { en as prompts } from '../../engine/generation/prompts/languages/en';
 import { HTTP_STATUS, AI_MODELS } from '../../config';
 import { parseAIResponse } from './processors/jsonExtractor';
 import { validateNavigationResult } from './processors/idValidator';

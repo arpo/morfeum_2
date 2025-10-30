@@ -1,28 +1,56 @@
 /**
  * Prompt Generation Module
- * Centralized exports for all prompt generation functions
+ * Centralized exports for all prompt generation functions and access API
  * 
  * Organized by domain:
  * - characters/ - Character generation prompts
  * - locations/ - Location and hierarchy prompts
  * - navigation/ - Navigation decision prompts
- * - samples/ - Sample prompts (for future migration)
+ * - chat/ - Chat interaction prompts
+ * - shared/ - Shared constants and utilities
+ * - samples/ - Sample prompts
  */
 
-// Character prompts
+import type { PromptKey, Language, PromptTemplates } from './types';
+import { en } from './languages/en';
+
+// Domain exports
 export * from './characters';
-
-// Location and hierarchy prompts
 export * from './locations';
-
-// Navigation prompts
 export * from './navigation';
-
-// Sample prompts
 export * from './samples';
-
-// Chat prompts
 export * from './chat';
-
-// Shared utilities (constants, filters, render instructions)
 export * from './shared';
+
+// Type exports
+export type { PromptKey, Language } from './types';
+
+// Language map for prompt access
+const languageMap: Record<Language, PromptTemplates> = {
+  en
+};
+
+/**
+ * Get a prompt by key and language
+ * @param key - The prompt identifier
+ * @param language - The language code (defaults to 'en')
+ * @returns The prompt template or string
+ */
+export function getPrompt<K extends PromptKey>(
+  key: K,
+  language: Language = 'en'
+): PromptTemplates[K] {
+  const prompts = languageMap[language];
+  
+  if (!prompts) {
+    throw new Error(`Language '${language}' not found`);
+  }
+  
+  const prompt = prompts[key];
+  
+  if (!prompt) {
+    throw new Error(`Prompt key '${key}' not found for language '${language}'`);
+  }
+  
+  return prompt;
+}

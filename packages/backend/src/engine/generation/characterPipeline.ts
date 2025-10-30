@@ -7,7 +7,7 @@ import { parseJSON } from '../utils/parseJSON';
 import * as mzooService from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import type { EntitySeed, VisualAnalysis, DeepProfile } from '../types';
-import { getPrompt } from '../../prompts';
+import { getPrompt } from './prompts';
 
 // Import new prompt templates
 import { characterSeedPrompt } from './prompts/characters/characterSeed';
