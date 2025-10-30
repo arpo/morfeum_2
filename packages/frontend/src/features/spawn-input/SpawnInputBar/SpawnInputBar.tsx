@@ -5,14 +5,10 @@
 
 import { useState } from 'react';
 import { useSpawnInputLogic } from './useSpawnInputLogic';
-import { IconBookmark, IconDice, IconChevronDown, IconChevronUp } from '@/icons';
+import { IconDice, IconChevronDown, IconChevronUp } from '@/icons';
 import styles from './SpawnInputBar.module.css';
 
-interface SpawnInputBarProps {
-  onOpenSavedEntities: () => void;
-}
-
-export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
+export function SpawnInputBar() {
   const { state, handlers } = useSpawnInputLogic();
   const [isMinimized, setIsMinimized] = useState(false);
 
@@ -77,13 +73,6 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
               title="Random example"
             >
               <IconDice size={18} />
-            </button>
-            <button
-              className={styles.savedButton}
-              onClick={onOpenSavedEntities}
-              title="Browse saved locations"
-            >
-              <IconBookmark size={18} />
             </button>
             <button
               className={styles.generateButton}

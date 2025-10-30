@@ -6,12 +6,16 @@
 import { useState } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
-import { IconInfoCircle } from '@/icons';
+import { IconInfoCircle, IconBookmark } from '@/icons';
 import { LocationInfoModal } from '@/features/chat/components/LocationInfoModal';
 import { CharacterInfoModal } from '@/features/chat/components/CharacterInfoModal';
 import styles from './EntityTabs.module.css';
 
-export function EntityTabs() {
+interface EntityTabsProps {
+  onOpenSavedEntities: () => void;
+}
+
+export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
   const entities = useStore(state => state.entities);
   const activeEntity = useStore(state => state.activeEntity);
   const setActiveEntity = useStore(state => state.setActiveEntity);
@@ -138,7 +142,16 @@ export function EntityTabs() {
 
   return (
     <div className={styles.container} data-component="entity-tabs">
-      <div className={styles.header}>Entities</div>
+      <div className={styles.header}>
+        <span className={styles.headerTitle}>Entities</span>
+        <button
+          className={styles.headerButton}
+          onClick={onOpenSavedEntities}
+          title="Browse saved locations"
+        >
+          <IconBookmark size={18} />
+        </button>
+      </div>
       <div className={styles.entityList}>
         {entitiesArray.map(entity => (
           <div

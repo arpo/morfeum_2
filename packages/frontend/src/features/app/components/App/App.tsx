@@ -138,12 +138,12 @@ export function App() {
       {/* Column 1 - Left Sidebar (Controls) */}
       <aside className={styles.sidebar}>
         <ActiveSpawnsPanel />
-        <EntityTabs />
+        <EntityTabs onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
       </aside>
       
       {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
       <div className={styles.spawnInputContainer}>
-        <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
+        <SpawnInputBar />
       </div>
       
       {/* Theme Toggle - Bottom Right Corner */}

@@ -160,8 +160,7 @@
   align-items: center;
 }
 
-.shuffleButton,
-.savedButton {
+.shuffleButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,8 +174,7 @@
   transition: all var(--transition-fast);
 }
 
-.shuffleButton:hover,
-.savedButton:hover {
+.shuffleButton:hover {
   background-color: var(--color-bg-tertiary);
 }
 
