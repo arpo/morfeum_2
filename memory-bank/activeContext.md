@@ -1,8 +1,22 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 29, 2025 - 4:51 PM)
+## Latest Session Summary (October 30, 2025 - 10:06 AM)
 
-### Current Task: Location Tree Display & Thumbnail Fixes - COMPLETED ✅
+### Current Task: Backend Prompts System Consolidation - COMPLETED ✅
+Migrated entire prompts system into engine structure, removing separate prompts folder.
+
+### Recently Completed Work
+
+**Backend Prompts Consolidation (NEW - Complete):**
+- ✅ Moved `prompts/types.ts` → `engine/generation/prompts/types.ts`
+- ✅ Moved `prompts/languages/en/index.ts` → `engine/generation/prompts/languages/en.ts`
+- ✅ Merged `prompts/index.ts` logic into `engine/generation/prompts/index.ts`
+- ✅ Added `getPrompt()` function to engine/generation/prompts/index.ts
+- ✅ Updated 4 import paths (characterPipeline, routes/mzoo/prompts, services/navigator, languages/en)
+- ✅ Deleted entire `packages/backend/src/prompts/` directory
+- ✅ TypeScript compilation clean - all paths working
+
+**Previous Session: Location Tree Display & Thumbnail Fixes (Complete):**
 Fixed node selection, image assignment, info button accessibility, and saved locations thumbnails.
 
 ### Recently Completed Work

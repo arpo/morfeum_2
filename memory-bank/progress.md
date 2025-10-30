@@ -2,6 +2,64 @@
 
 ## Recent Updates
 
+### Backend Prompts System Consolidation (October 30, 2025 - 10:06 AM)
+
+**Completed:**
+- ✅ Moved entire prompts system into `engine/generation/prompts/` structure
+- ✅ Consolidated types.ts and languages/en into engine
+- ✅ Merged getPrompt() API into engine/generation/prompts/index.ts
+- ✅ Updated 4 import paths across codebase
+- ✅ Deleted old `packages/backend/src/prompts/` directory
+- ✅ TypeScript compilation clean
+
+**Problem Identified:**
+Prompts system split between `src/prompts/` (API layer) and `engine/generation/prompts/` (content). This created:
+1. Duplication and confusion about where prompts live
+2. Extra directory to maintain
+3. Import paths spanning multiple directories
+
+**Solution:**
+Consolidated everything into engine structure:
+- Moved `prompts/types.ts` → `engine/generation/prompts/types.ts`
+- Moved `prompts/languages/en/index.ts` → `engine/generation/prompts/languages/en.ts`
+- Added `getPrompt()` function to `engine/generation/prompts/index.ts`
+- Updated all import paths to point to engine
+- Deleted entire old prompts directory
+
+**Files Moved:**
+- `src/prompts/types.ts` → `src/engine/generation/prompts/types.ts`
+- `src/prompts/languages/en/index.ts` → `src/engine/generation/prompts/languages/en.ts`
+
+**Files Modified:**
+- `engine/generation/prompts/index.ts`: Added getPrompt() function and type exports
+- `engine/generation/prompts/languages/en.ts`: Fixed import paths to use relative paths
+- `engine/generation/characterPipeline.ts`: Changed from `../../prompts` to `./prompts`
+- `routes/mzoo/prompts.ts`: Changed from `../../prompts` to `../../engine/generation/prompts`
+- `services/navigator/index.ts`: Changed from `../../prompts/languages/en` to `../../engine/generation/prompts/languages/en`
+
+**Files Deleted:**
+- Entire `packages/backend/src/prompts/` directory and contents
+
+**Result:**
+Single unified location for all prompt-related code:
+```
+engine/generation/prompts/
+├── index.ts              (exports + getPrompt API)
+├── types.ts              (type definitions)
+├── languages/
+│   └── en.ts            (English prompt aggregator)
+├── characters/          (character generation)
+├── locations/           (location generation)
+├── navigation/          (navigation prompts)
+├── chat/                (chat interactions)
+├── shared/              (constants, filters, instructions)
+└── samples/             (sample prompts)
+```
+
+All consumers now import from a single location. Clean architecture with co-located content and API.
+
+---
+
 ### Save Location Refactoring (October 29, 2025 - 1:13 PM)
 
 **Completed:**
