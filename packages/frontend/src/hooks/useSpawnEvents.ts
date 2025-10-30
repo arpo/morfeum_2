@@ -565,6 +565,16 @@ export function useSpawnEvents() {
         buildTreeRecursive(parsed.tree, spawnId);
         console.log('[Hierarchy] Tree structure built successfully');
         
+        // FIX: Populate deepProfile for ALL nodes AFTER tree is built
+        // This ensures getCascadedDNA can walk the complete tree path
+        parsed.nodes.forEach(node => {
+          if (updateEntityProfile) {
+            const cascadedDNA = getCascadedDNA(node.id);
+            updateEntityProfile(node.id, cascadedDNA as any);
+            console.log(`[Hierarchy] Set deepProfile for node: ${node.name}`);
+          }
+        });
+        
         // Get the deepest node to update its image and profile
         const deepestNode = parsed.nodes.find(n => n.id === parsed.deepestNodeId);
         

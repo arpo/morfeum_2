@@ -32,10 +32,10 @@ import type {
  */
 function normalizeHierarchy(hierarchy: HierarchyStructure): void {
   // Debug: Log structure before normalization
-  console.log('[Hierarchy] Structure before normalization:');
-  console.log('  - host:', hierarchy.host.name);
-  console.log('  - host.regions:', hierarchy.host.regions ? hierarchy.host.regions.length : 'undefined');
-  console.log('  - root keys:', Object.keys(hierarchy));
+  // console.log('[Hierarchy] Structure before normalization:');
+  // console.log('  - host:', hierarchy.host.name);
+  // console.log('  - host.regions:', hierarchy.host.regions ? hierarchy.host.regions.length : 'undefined');
+  // console.log('  - root keys:', Object.keys(hierarchy));
   
   // Fix: Regions at root level instead of inside host (LLM mistake)
   if ((hierarchy as any).regions && Array.isArray((hierarchy as any).regions)) {
