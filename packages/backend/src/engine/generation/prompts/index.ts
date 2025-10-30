@@ -18,5 +18,11 @@ export * from './locations';
 // Navigation prompts
 export * from './navigation';
 
-// Sample prompts (empty for now, will be populated during migration)
+// Sample prompts
 export * from './samples';
+
+// Chat prompts
+export * from './chat';
+
+// Shared utilities (constants, filters, render instructions)
+export * from './shared';

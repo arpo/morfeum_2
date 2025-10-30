@@ -6,7 +6,7 @@
  * Location/Niche → First-person (immersive)
  */
 
-import { qualityPrompt } from '../../../../prompts/languages/en/constants';
+import { qualityPrompt } from '../shared';
 import type { HierarchyNode, NodeDNA } from '../../../hierarchyAnalysis/types';
 
 /**

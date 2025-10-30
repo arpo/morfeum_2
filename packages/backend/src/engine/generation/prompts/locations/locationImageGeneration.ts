@@ -3,7 +3,7 @@
  * Pure function - generates Flux image prompts from node chains
  */
 
-import { qualityPrompt } from '../../../../prompts/languages/en/constants';
+import { qualityPrompt } from '../shared';
 import type { HierarchyNode } from '../../../hierarchyAnalysis/types';
 
 const morfeumVibes = 'Morfeum aesthetic — hyper-realistic, high-contrast visuals with sharp light, glowing bioluminescence, and richly saturated tones. Surfaces feel alive; darkness holds depth, not gloom. Reality, one notch brighter.';
