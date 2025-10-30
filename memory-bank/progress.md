@@ -2,6 +2,84 @@
 
 ## Recent Updates
 
+### Data Component Attributes & Terminology Cleanup (October 30, 2025 - 12:28 PM)
+
+**Completed:**
+- ✅ Added `data-component` attributes to 9 major UI components
+- ✅ Created documentation: `docs/data-component-reference.md`
+- ✅ Created .clinerules guide: `.clinerules/data-component-attributes.md`
+- ✅ Renamed `chat-tabs/` → `entity-tabs/`
+- ✅ Renamed `ChatTabs` → `EntityTabs`
+- ✅ Updated all CSS classes from chat* to entity*
+- ✅ Updated store methods from chatPanel* to entityPanel*
+- ✅ Preserved actual chat functionality (ChatPanel, ChatHistoryViewer)
+
+**Problem Identified:**
+1. No consistent way to reference UI components in conversations
+2. Misleading "chat*" naming for components managing both characters and locations
+3. Needed better component identification for debugging and future testing
+
+**Solution:**
+Added semantic `data-component` attributes to major components:
+- spawn-input-bar
+- active-spawns-panel
+- entity-tabs (with data-entity-id and data-entity-type on individual tabs)
+- character-panel
+- location-panel
+- chat-history-viewer
+- image-prompt-panel
+- saved-entities-modal
+- theme-toggle
+
+Renamed misleading terminology throughout codebase to better reflect functionality.
+
+**Files Created:**
+- `docs/data-component-reference.md` - Complete reference of all data-component values
+- `.clinerules/data-component-attributes.md` - Guidelines for the pattern
+
+**Files Modified (Data Components):**
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/SpawnInputBar.tsx`
+- `packages/frontend/src/features/spawn-panel/ActiveSpawnsPanel/ActiveSpawnsPanel.tsx`
+- `packages/frontend/src/features/entity-tabs/EntityTabs/EntityTabs.tsx`
+- `packages/frontend/src/features/entity-panel/components/CharacterPanel/CharacterPanel.tsx`
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.tsx`
+- `packages/frontend/src/features/chat/components/ChatHistoryViewer/ChatHistoryViewer.tsx`
+- `packages/frontend/src/features/chat/components/ImagePromptPanel/ImagePromptPanel.tsx`
+- `packages/frontend/src/features/saved-locations/SavedLocationsModal/SavedLocationsModal.tsx`
+- `packages/frontend/src/components/ui/ThemeToggle/ThemeToggle.tsx`
+
+**Files Renamed (Terminology Cleanup):**
+- `features/chat-tabs/` → `features/entity-tabs/`
+- `ChatTabs/` → `EntityTabs/`
+- `ChatTabs.tsx` → `EntityTabs.tsx`
+- `ChatTabs.module.css` → `EntityTabs.module.css`
+
+**Files Modified (Terminology Cleanup):**
+- `packages/frontend/src/store/slices/entityManagerSlice.ts` - Properties and methods renamed
+- `packages/frontend/src/features/entity-tabs/EntityTabs/EntityTabs.module.css` - CSS classes renamed
+- `packages/frontend/src/features/app/components/App/App.tsx` - Import and references updated
+- `packages/frontend/src/features/app/components/App/App.module.css` - CSS class renamed
+- `packages/frontend/src/features/entity-panel/components/CharacterPanel/CharacterPanel.module.css` - CSS class renamed
+- `packages/frontend/src/features/entity-panel/components/CharacterPanel/CharacterPanel.tsx` - CSS class reference updated
+- `packages/frontend/src/features/entity-panel/components/CharacterPanel/useCharacterPanel.ts` - Method names updated
+
+**Result:**
+Clear, consistent way to reference UI components:
+- "Update the spawn-input-bar" instead of "the input panel on the left"
+- "Modify the character-panel" instead of "the detail view in the middle"
+- Accurate terminology: "entity" for general management, "chat" only for actual conversations
+- All major components easily identifiable in DevTools and conversations
+- TypeScript compilation successful
+
+**Benefits:**
+- Easier communication about UI elements
+- Self-documenting component structure
+- Ready for future automated testing
+- Clear separation: entity management vs chat functionality
+- Improved developer experience
+
+---
+
 ### Spawn Cancellation Fix (October 30, 2025 - 11:56 AM)
 
 **Completed:**

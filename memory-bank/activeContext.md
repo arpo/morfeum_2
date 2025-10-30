@@ -1,8 +1,33 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 30, 2025 - 11:56 AM)
+## Latest Session Summary (October 30, 2025 - 12:28 PM)
 
-### Current Task: Spawn Cancellation Fix - COMPLETED ✅
+### Current Task: Data Component Attributes & Terminology Cleanup - COMPLETED ✅
+Added data-component attributes to all major UI components and renamed misleading "chat*" identifiers to "entity/entities".
+
+### Recently Completed Work
+
+**Data Component Attributes (NEW - Complete):**
+- ✅ Added `data-component` attributes to 9 major UI components for easy reference
+- ✅ Created comprehensive documentation in `docs/data-component-reference.md`
+- ✅ Added .clinerules guide for data-component pattern
+- ✅ Components: spawn-input-bar, active-spawns-panel, entity-tabs, character-panel, location-panel, chat-history-viewer, image-prompt-panel, saved-entities-modal, theme-toggle
+- ✅ Added context attributes (data-entity-id, data-entity-type) to entity tabs
+- ✅ TypeScript compilation verified successful
+
+**Terminology Cleanup: Chat* → Entity* (NEW - Complete):**
+- ✅ Renamed directory: `features/chat-tabs/` → `features/entity-tabs/`
+- ✅ Renamed component: `ChatTabs` → `EntityTabs`
+- ✅ Updated CSS classes: `.chatList` → `.entityList`, `.chatButton` → `.entityButton`, `.chatInfo` → `.entityInfo`
+- ✅ Updated store properties: `chatPanelOpen` → `entityPanelOpen`
+- ✅ Updated store methods: `openChatPanel()` → `openEntityPanel()`, `closeChatPanel()` → `closeEntityPanel()`
+- ✅ Updated all component imports and references throughout codebase
+- ✅ Updated App.tsx and App.module.css references
+- ✅ Updated CharacterPanel CSS class: `.chatButton` → `.entityChatButton`
+- ✅ Updated useCharacterPanel hook to use new method names
+- ✅ Preserved actual chat functionality names (ChatPanel, ChatHistoryViewer remain as "chat")
+
+**Previous: Spawn Cancellation Fix - COMPLETED ✅
 Implemented proper pipeline cancellation support using AbortController to stop spawns when clicking the X button.
 
 ### Recently Completed Work
