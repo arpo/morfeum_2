@@ -1,9 +1,7 @@
 /**
  * Sample Prompts
- * Will contain sample character and location prompts when migrated from old prompts folder
+ * Example prompts for character and location generation
  */
 
-// TODO: Migrate sampleCharacterPrompts.ts and sampleLocationPrompts.ts here
-
-// Empty export to make this a valid module
-export {};
+export { sampleCharacterPrompts } from './sampleCharacterPrompts';
+export { sampleLocationPrompts } from './sampleLocationPrompts';
