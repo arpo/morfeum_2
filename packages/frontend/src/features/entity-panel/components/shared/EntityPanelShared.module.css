@@ -200,7 +200,7 @@
 .movementSection {
   display: flex;
   gap: var(--spacing-sm);
-  padding: var(--spacing-sm) 0  0  0;
+  padding: var(--spacing-sm) 0;
   /* background-color: var(--color-bg-secondary); */
   border-radius: var(--radius-md);
   margin-bottom: var(--spacing-md);

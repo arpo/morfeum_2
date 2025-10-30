@@ -2,6 +2,96 @@
 
 ## Recent Updates
 
+### UI Component Library Improvements (October 30, 2025 - 10:05 PM)
+
+**Completed:**
+- ✅ Created global typography standards in index.css
+- ✅ Standardized h1-h6 and label element sizing across entire app
+- ✅ Created custom Checkbox component using icons instead of native HTML
+- ✅ Added IconSquare and IconSquareCheckFilled to icon library
+- ✅ Replaced native checkbox in LocationPanel with new icon-based component
+- ✅ Audited entire component library (confirmed no duplication)
+- ✅ Cleaned up empty placeholder directories
+
+**Typography Standardization:**
+Created centralized typography system:
+- h1: 1.5rem (24px)
+- h2: 1.25rem (20px) - Entity names
+- h3: 1.125rem (18px) - Section titles
+- h4: 1rem (16px) - Subsection titles
+- label: 1rem (16px) - Form labels
+
+Removed redundant font-size/color from 5 module CSS files:
+- EntityPanelShared.module.css
+- LocationPanel.module.css
+- Modal.module.css
+- EntityDetailShared.module.css
+- LocationInfoModal.module.css
+
+**Custom Checkbox Component:**
+Created `/components/ui/Checkbox/` with:
+- Icon-based design (IconSquare unchecked, IconSquareCheckFilled checked)
+- Proper accessibility (keyboard support, ARIA attributes, hidden native input)
+- Clean design without hover effects
+- Vertical padding for proper spacing
+- Exported from UI component library
+
+**Component Structure:**
+```
+components/ui/Checkbox/
+├── Checkbox.tsx          (component implementation)
+├── Checkbox.module.css   (styles)
+├── types.ts             (TypeScript interfaces)
+└── index.ts             (exports)
+```
+
+**Usage Example:**
+```tsx
+<Checkbox
+  checked={state.createImage}
+  onChange={handlers.setCreateImage}
+  disabled={state.isMoving}
+  label="Create image"
+/>
+```
+
+**Component Library Audit Results:**
+- ✅ 9 UI components properly organized and exported
+- ✅ No duplicated components found
+- ✅ Clear separation: generic UI vs feature-specific components
+- ✅ Removed empty placeholder directories (ImageCarousel, ImagePromptInput)
+
+**Files Created:**
+- `packages/frontend/src/components/ui/Checkbox/Checkbox.tsx`
+- `packages/frontend/src/components/ui/Checkbox/Checkbox.module.css`
+- `packages/frontend/src/components/ui/Checkbox/types.ts`
+- `packages/frontend/src/components/ui/Checkbox/index.ts`
+
+**Files Modified:**
+- `packages/frontend/src/icons/index.ts` - Added IconSquare and IconSquareCheckFilled
+- `packages/frontend/src/components/ui/index.ts` - Exported Checkbox component
+- `packages/frontend/src/index.css` - Added global typography standards (h1-h6, label)
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.tsx` - Uses new Checkbox
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.module.css` - Removed old checkbox styles
+- 5 CSS files cleaned up (removed redundant typography declarations)
+
+**Result:**
+- Professional icon-based checkbox matching app design
+- Centralized typography system (single source of truth)
+- Clean, maintainable component library with no duplication
+- Better accessibility and keyboard navigation
+- Consistent sizing across all headings and labels
+
+**Benefits:**
+- **Visual Consistency**: Icon-based checkbox matches rest of UI
+- **Accessibility**: Full keyboard support and ARIA attributes
+- **Maintainability**: Change typography once, affects entire app
+- **Code Quality**: Removed redundant CSS declarations
+- **User Experience**: Clean design without distracting hover effects
+- **Reusability**: Checkbox component available throughout app
+
+---
+
 ### CSS Refactoring & Theme Updates (October 30, 2025 - 3:02 PM)
 
 **Completed:**

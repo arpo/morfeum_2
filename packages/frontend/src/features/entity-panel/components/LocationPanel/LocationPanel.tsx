@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Button } from '@/components/ui';
+import { Button, Checkbox } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
 import { LocationInfoModal } from '../../../chat/components/LocationInfoModal';
 import { useLocationPanel } from './useLocationPanel';
@@ -107,17 +107,12 @@ export function LocationPanel() {
             Travel
           </Button>
         </div>
-        <div>
-          <label className={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              checked={state.createImage}
-              onChange={(e) => handlers.setCreateImage(e.target.checked)}
-              disabled={state.isMoving}
-            />
-            <span>Create image</span>
-          </label>
-        </div>
+        <Checkbox
+          checked={state.createImage}
+          onChange={handlers.setCreateImage}
+          disabled={state.isMoving}
+          label="Create image"
+        />
       </div>
 
       <LocationInfoModal 

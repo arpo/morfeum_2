@@ -23,5 +23,8 @@ export type { ThemeToggleProps } from './ThemeToggle';
 export { DraggablePanel } from './DraggablePanel';
 export type { DraggablePanelProps, Position, Size } from './DraggablePanel';
 
+export { Checkbox } from './Checkbox';
+export type { CheckboxProps } from './Checkbox';
+
 // Re-export icons for convenience
 export * from '@/icons';

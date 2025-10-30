@@ -1,8 +1,33 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 30, 2025 - 4:47 PM)
+## Latest Session Summary (October 30, 2025 - 10:05 PM)
 
-### Current Task: Modal & Overlay Portal Fix - COMPLETED ✅
+### Current Task: UI Component Library Improvements - COMPLETED ✅
+
+**Typography Standardization (Complete):**
+- ✅ Created global typography standards in index.css (h1-h6, label elements)
+- ✅ Removed redundant font-size/color declarations from 5 module CSS files
+- ✅ Established clear hierarchy: h2=1.25rem, h3=1.125rem, h4=1rem, label=1rem
+- ✅ Single source of truth for typography across entire app
+
+**Custom Checkbox Component (Complete - NEW):**
+- ✅ Created `/components/ui/Checkbox/` component using icons instead of native HTML checkbox
+- ✅ Uses `IconSquare` (unchecked) and `IconSquareCheckFilled` (checked) from Tabler
+- ✅ Added checkbox icons to `/icons/index.ts`
+- ✅ Implements proper accessibility (keyboard support, ARIA attributes, hidden native input)
+- ✅ Clean design without hover effects (per user request)
+- ✅ Proper vertical padding (`var(--spacing-sm)`) for spacing
+- ✅ Exported from UI component library
+- ✅ Replaced native checkbox in LocationPanel with new component
+
+**Component Library Audit (Complete):**
+- ✅ Audited all UI components and feature components
+- ✅ Confirmed no duplicated components across project
+- ✅ Verified proper organization (generic UI vs feature-specific)
+- ✅ Cleaned up empty placeholder directories (ImageCarousel, ImagePromptInput)
+- ✅ All 9 UI components properly exported and documented
+
+### Previous Task: Modal & Overlay Portal Fix - COMPLETED ✅
 Fixed modal and fullscreen overlays to render at document root using React Portals, ensuring proper full-screen display and consistent sizing.
 
 ### Recently Completed Work
