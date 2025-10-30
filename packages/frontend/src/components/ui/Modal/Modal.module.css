@@ -48,9 +48,6 @@
 
 .title {
   margin: 0;
-  font-size: var(--text-md);
-  font-weight: 600;
-  color: var(--color-text);
 }
 
 .closeButton {
@@ -85,10 +82,7 @@
 }
 
 .sectionTitle {
-  font-size: var(--text-sm);
-  color: var(--color-primary);
   margin: 0 0 var(--spacing-sm) 0;
-  font-weight: 600;
 }
 
 .sectionDescription {
@@ -107,11 +101,4 @@
     max-height: 90vh;
   }
 
-  .title {
-    font-size: var(--text-md);
-  }
-
-  .sectionTitle {
-    font-size: var(--text-sm);
-  }
 }

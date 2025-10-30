@@ -14,9 +14,6 @@
 }
 
 .subsectionTitle {
-  font-size: var(--text-sm);
-  font-weight: 700;
-  color: var(--color-text);
   margin: 0 0 var(--spacing-md) 0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -33,13 +30,12 @@
 }
 
 .label {
-  display: block;
-  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-xs);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-size: var(--text-xs);
 }
 
 .value {

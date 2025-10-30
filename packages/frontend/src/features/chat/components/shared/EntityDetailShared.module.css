@@ -6,10 +6,6 @@
 }
 
 .label {
-  display: block;
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--color-primary);
   margin-bottom: var(--spacing-xs);
 }
 
@@ -36,9 +32,6 @@
 }
 
 .subsectionTitle {
-  font-size: var(--text-md);
-  font-weight: 600;
-  color: var(--color-text);
   margin: 0 0 var(--spacing-md) 0;
   padding-bottom: var(--spacing-sm);
   border-bottom: 2px solid var(--color-border);
