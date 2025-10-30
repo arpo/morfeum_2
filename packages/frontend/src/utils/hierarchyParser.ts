@@ -30,7 +30,7 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
     type: 'host',
     name: host.name,
     dna: extractHostDNA(host),
-    imagePath: host.imageUrl || '',
+    imagePath: imageUrl || host.imageUrl || '',
     focus: initFocus({ name: host.name, dna: host.dna || host } as any)
   };
   nodes.push(hostNode);
