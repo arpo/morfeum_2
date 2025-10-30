@@ -27,6 +27,16 @@
   gap: var(--spacing-md);
 }
 
+.spawnInputContainer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 900;
+  width: 700px;
+  max-width: calc(100vw - var(--spacing-xl) * 2);
+}
+
 .themeToggleContainer {
   position: fixed;
   bottom: var(--spacing-lg);

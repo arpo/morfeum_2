@@ -17,7 +17,9 @@ export {
   IconDice,
   IconPin,
   IconPinFilled,
-  IconCopy
+  IconCopy,
+  IconChevronDown,
+  IconChevronUp
 } from '@tabler/icons-react';
 
 // Icon type for string references

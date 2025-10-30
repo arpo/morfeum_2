@@ -10,14 +10,16 @@ import { ChatPanel } from '@/features/chat/components/ChatPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { ActiveSpawnsPanel } from '@/features/spawn-panel/ActiveSpawnsPanel';
 import { EntityTabs } from '@/features/entity-tabs/EntityTabs';
+import { SavedEntitiesModal } from '@/features/saved-locations/SavedLocationsModal';
 import { Card, ThemeToggle } from '@/components/ui';
 import { useSpawnEvents } from '@/hooks/useSpawnEvents';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './App.module.css';
 
 export function App() {
+  const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
   // Initialize SSE connection for spawn events
   useSpawnEvents();
   
@@ -135,10 +137,14 @@ export function App() {
       
       {/* Column 1 - Left Sidebar (Controls) */}
       <aside className={styles.sidebar}>
-        <SpawnInputBar />
         <ActiveSpawnsPanel />
         <EntityTabs />
       </aside>
+      
+      {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
+      <div className={styles.spawnInputContainer}>
+        <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
+      </div>
       
       {/* Theme Toggle - Bottom Right Corner */}
       <div className={styles.themeToggleContainer}>
@@ -186,6 +192,12 @@ export function App() {
           />
         );
       })}
+
+      {/* Saved Entities Modal - Rendered at App level for proper centering */}
+      <SavedEntitiesModal 
+        isOpen={isSavedEntitiesModalOpen}
+        onClose={() => setIsSavedEntitiesModalOpen(false)}
+      />
     </div>
   );
 }

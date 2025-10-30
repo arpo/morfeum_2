@@ -1,6 +1,8 @@
 /* CollapsiblePanel Component Styles - PURE CSS ONLY */
 .container {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: var(--spacing-md);

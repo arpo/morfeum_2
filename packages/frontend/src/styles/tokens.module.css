@@ -48,10 +48,18 @@
   
   /* Aspect Ratios */
   --aspect-16-9: 16 / 9;
+  
+  /* Frosted Glass Effect */
+  --glass-bg: rgba(30, 36, 53, 0.8);
+  --glass-bg-light: rgba(249, 250, 251, 0.9);
+  --glass-blur: blur(10px);
 }
 
 /* Light Theme */
 :root[data-theme="light"] {
+  /* Frosted Glass Effect */
+  --glass-bg: var(--glass-bg-light);
+  
   /* Colors */
   --color-primary: #6B31B2;
   --color-primary-hover: #6026a5;
@@ -78,6 +86,9 @@
 
 /* Dark Theme */
 :root[data-theme="dark"] {
+  /* Frosted Glass Effect */
+  --glass-bg: rgba(30, 36, 53, 0.8);
+  
   /* Colors */
   --color-primary: #6B31B2;
   --color-primary-hover: #6026a5;
