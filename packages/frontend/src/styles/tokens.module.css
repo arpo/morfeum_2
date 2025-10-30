@@ -1,5 +1,6 @@
 :root {
   /* Spacing */
+  --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
@@ -23,6 +24,30 @@
   --transition-fast: 150ms ease-in-out;
   --transition-normal: 250ms ease-in-out;
   --transition-slow: 350ms ease-in-out;
+  
+  /* Sizes */
+  --button-sm: 36px;
+  --button-md: 48px;
+  
+  /* Brand Colors (Skeleton Animation) */
+  --brand-purple: #6B31B2;
+  --brand-purple-light: #c085f3;
+  --brand-blue: #2d50ad;
+  --brand-blue-bright: #3d5cbe;
+  --brand-teal: #2487a8;
+  --brand-cyan-light: #bae9ff;
+  
+  /* Overlays */
+  --overlay-dark: rgba(0, 0, 0, 0.95);
+  --overlay-medium: rgba(0, 0, 0, 0.6);
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  --overlay-light-hover: rgba(255, 255, 255, 0.2);
+  
+  /* Skeleton Background */
+  --skeleton-bg: #2a2a2a;
+  
+  /* Aspect Ratios */
+  --aspect-16-9: 16 / 9;
 }
 
 /* Light Theme (Default) */
