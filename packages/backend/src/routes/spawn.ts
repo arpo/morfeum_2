@@ -8,7 +8,6 @@ import { asyncHandler } from '../middleware';
 import { validateMzooApiKey } from '../middleware/mzooAuth';
 import { createSpawnManager, SpawnProcess } from '../services/spawn';
 import { eventEmitter } from '../services/eventEmitter';
-import { SublocPipelineManager } from '../services/spawn/managers/SublocPipelineManager';
 import { runCharacterPipeline } from '../engine/generation';
 import type { HierarchyStructure, HierarchyNode } from '../engine/hierarchyAnalysis/types';
 
@@ -424,79 +423,6 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       });
     }
   })();
-}));
-
-/**
- * POST /api/spawn/sublocation/start - Start a sublocation spawn process
- */
-router.post('/sublocation/start', asyncHandler(async (req: Request, res: Response) => {
-  const { sublocationName, parentNodeId, cascadedContext, createImage = true, scaleHint = 'interior' } = req.body;
-
-  if (!sublocationName || typeof sublocationName !== 'string') {
-    res.status(HTTP_STATUS.BAD_REQUEST).json({
-      message: 'Valid sublocation name is required',
-      error: 'Missing or invalid sublocationName in request body',
-      timestamp: new Date().toISOString(),
-    });
-    return;
-  }
-
-  if (!parentNodeId || typeof parentNodeId !== 'string') {
-    res.status(HTTP_STATUS.BAD_REQUEST).json({
-      message: 'Valid parent node ID is required',
-      error: 'Missing or invalid parentNodeId in request body',
-      timestamp: new Date().toISOString(),
-    });
-    return;
-  }
-
-  if (!cascadedContext || typeof cascadedContext !== 'object') {
-    res.status(HTTP_STATUS.BAD_REQUEST).json({
-      message: 'Valid cascaded context is required',
-      error: 'Missing or invalid cascadedContext in request body',
-      timestamp: new Date().toISOString(),
-    });
-    return;
-  }
-
-  // Generate unique spawn ID
-  const spawnId = `subloc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-
-  // console.log('[Spawn Route] 📥 Received sublocation request:', {
-  //   sublocationName,
-  //   scaleHint,
-  //   hasScaleHint: scaleHint !== undefined,
-  //   scaleHintValue: scaleHint
-  // });
-
-  // Start pipeline in background
-  const pipeline = new SublocPipelineManager({
-    spawnId,
-    sublocationName,
-    parentNodeId,
-    cascadedContext,
-    createImage,
-    scaleHint,
-    mzooApiKey: (req as any).mzooApiKey
-  });
-  
-  // console.log('[Spawn Route] 🚀 Created pipeline with scaleHint:', scaleHint);
-
-  // Run pipeline asynchronously (don't await)
-  pipeline.run().catch(error => {
-    console.error('[Spawn] Sublocation pipeline failed:', error);
-  });
-
-  res.status(HTTP_STATUS.OK).json({
-    message: 'Sublocation spawn process started',
-    data: { 
-      spawnId,
-      sublocationName,
-      parentNodeId,
-      createImage
-    },
-    timestamp: new Date().toISOString(),
-  });
 }));
 
 /**
