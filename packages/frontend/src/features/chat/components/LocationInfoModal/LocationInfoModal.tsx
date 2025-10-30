@@ -2,6 +2,7 @@
 import { Modal, ModalContent, ModalSection, CollapsiblePanel } from '@/components/ui';
 import { useLocationsStore } from '@/store/slices/locations';
 import { useLocationInfoLogic, determineCurrentNode } from './useLocationInfoLogic';
+import { EntityField, EntitySection } from '../shared';
 import type { LocationInfoModalProps } from './types';
 import styles from './LocationInfoModal.module.css';
 

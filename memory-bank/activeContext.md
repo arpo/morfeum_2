@@ -1,13 +1,24 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 30, 2025 - 3:02 PM)
+## Latest Session Summary (October 30, 2025 - 4:47 PM)
 
-### Current Task: CSS Refactoring & Theme Updates - COMPLETED ✅
-Major CSS refactoring to eliminate duplication, created shared styles, and updated theme to purple/blue brand palette.
+### Current Task: Modal & Overlay Portal Fix - COMPLETED ✅
+Fixed modal and fullscreen overlays to render at document root using React Portals, ensuring proper full-screen display and consistent sizing.
 
 ### Recently Completed Work
 
-**CSS Refactoring & Theme Updates (NEW - Complete):**
+**Modal & Overlay Portal Fix (NEW - Complete):**
+- ✅ Added React Portal support to Modal component using `createPortal()`
+- ✅ Modals now render at `document.body` level instead of parent container
+- ✅ Added Portal support to LocationPanel fullscreen overlay
+- ✅ Fullscreen images now render at document root level
+- ✅ Fixed modal width consistency - both CharacterInfoModal and LocationInfoModal use 800px (lg)
+- ✅ Added CSS tokens import to index.css for global variable availability
+- ✅ Created reusable EntityField and EntitySection components for modal content
+- ✅ Refactored CharacterInfoModal to use shared components (50% code reduction)
+- ✅ All overlays now properly escape parent containers and display full-screen
+
+**CSS Refactoring & Theme Updates (Complete):**
 - ✅ Created liquid morphing skeleton animation using brand colors (purple/blue/cyan gradient)
 - ✅ Refactored CSS to eliminate ~70% duplication across CharacterPanel and LocationPanel
 - ✅ Created `EntityPanelShared.module.css` (~250 lines) - shared container, image, skeleton, buttons, overlays
@@ -122,7 +133,30 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 
 ### Key Technical Decisions
 
-**CSS Refactoring Architecture (NEW):**
+**React Portal Architecture (NEW):**
+- **Portal Pattern**: Use `createPortal(element, document.body)` to render at document root
+- **Modal Component**: Wrap entire modal overlay in portal to escape parent containers
+- **Fullscreen Overlay**: Wrap fullscreen image overlay in portal for true full-screen display
+- **Import Pattern**: `import { createPortal } from 'react-dom'`
+- **Target**: Always render to `document.body` to avoid z-index and positioning issues
+- **Event Handling**: Click handlers still work normally through portal boundary
+- **CSS Independence**: Portal-rendered elements use their own CSS without parent interference
+
+**Modal Consistency Standards:**
+- **Width Standardization**: All entity detail modals use `maxWidth="lg"` (800px)
+- **CharacterInfoModal**: Changed from 600px (md) to 800px (lg)
+- **LocationInfoModal**: Already using 800px (lg)
+- **SavedLocationsModal**: Using 800px (lg)
+- **Benefit**: Consistent user experience across all modal types
+
+**Shared Modal Components:**
+- **EntityField Component**: Reusable label-value pair display
+- **EntitySection Component**: Reusable section grouping with title
+- **EntityDetailShared.module.css**: Shared styles for all modal content
+- **Code Reduction**: CharacterInfoModal reduced ~50% by using shared components
+- **Maintainability**: Single source of truth for field/section styling
+
+**CSS Refactoring Architecture:**
 - **Shared Styles Strategy**: Extract common patterns into reusable CSS modules
 - **EntityPanelShared.module.css**: Container, image handling, skeleton animation, buttons, overlays, entity info
 - **ChatShared.module.css**: All messaging UI (containers, wrappers, bubbles, input, errors)
@@ -294,6 +328,52 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 - Project patterns documented
 
 ## Files Modified in Latest Session
+
+**Modified (Modal & Overlay Portal Fix - NEW):**
+- `packages/frontend/src/components/ui/Modal/Modal.tsx`:
+  - Added `import { createPortal } from 'react-dom'`
+  - Wrapped entire modal overlay in `createPortal(..., document.body)`
+  - Modal now renders at document root instead of parent container
+  - Escapes sidebar/panel containers for true full-screen display
+
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.tsx`:
+  - Added `import { createPortal } from 'react-dom'`
+  - Wrapped fullscreen image overlay in `createPortal(..., document.body)`
+  - Fullscreen images now render at document root
+  - Properly covers entire viewport without parent container constraints
+
+- `packages/frontend/src/features/chat/components/CharacterInfoModal/CharacterInfoModal.tsx`:
+  - Changed `maxWidth="md"` to `maxWidth="lg"` for consistency
+  - Now uses 800px width matching LocationInfoModal
+  - Removed `CharacterInfoModal.module.css` (no longer needed)
+  - Refactored to use shared EntityField components
+  - Reduced from ~100 lines to ~50 lines (50% reduction)
+
+- `packages/frontend/src/index.css`:
+  - Added `@import './styles/tokens.module.css'` at top
+  - Makes all CSS variables globally available
+  - Fixes --glass-bg, --glass-blur, and other token usage in modals
+
+- `packages/frontend/src/features/chat/components/shared/EntityDetailShared.module.css` (NEW):
+  - Created shared styles for modal fields and sections
+  - `.field` - Label-value pair styling
+  - `.label` and `.value` - Typography and spacing
+  - Used by both CharacterInfoModal and LocationInfoModal
+
+- `packages/frontend/src/features/chat/components/shared/EntityField.tsx` (NEW):
+  - Reusable component for displaying label-value pairs
+  - Takes `label` and `value` props
+  - Uses EntityDetailShared.module.css
+  - Replaces repetitive field markup in modals
+
+- `packages/frontend/src/features/chat/components/shared/EntitySection.tsx` (NEW):
+  - Reusable component for grouping fields with titles
+  - Wraps ModalSection from UI components
+  - Provides consistent section structure
+
+- `packages/frontend/src/features/chat/components/shared/index.ts` (NEW):
+  - Central export point for shared modal components
+  - Exports EntityField and EntitySection
 
 **Modified (CSS Refactoring & Theme Updates):**
 - `packages/frontend/src/styles/tokens.module.css`:

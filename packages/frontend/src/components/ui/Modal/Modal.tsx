@@ -1,5 +1,6 @@
 // Modal Component - PURE JSX ONLY
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { IconX } from '@/icons';
 import styles from './Modal.module.css';
 import type { ModalProps, ModalHeaderProps, ModalContentProps, ModalSectionProps } from './types';
@@ -20,13 +21,15 @@ export function Modal({ isOpen, onClose, title, maxWidth = 'md', children }: Mod
 
   if (!isOpen) return null;
 
-  return (
+  // Render modal at document.body level using portal
+  return createPortal(
     <div className={styles.overlay} onClick={onClose}>
       <div className={`${styles.modal} ${styles[maxWidth]}`} onClick={(e) => e.stopPropagation()}>
         {title && <ModalHeader title={title} onClose={onClose} />}
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 

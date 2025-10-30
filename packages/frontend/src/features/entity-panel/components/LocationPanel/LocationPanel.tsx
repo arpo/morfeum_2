@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Button } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
 import { LocationInfoModal } from '../../../chat/components/LocationInfoModal';
@@ -127,7 +128,7 @@ export function LocationPanel() {
         onClose={handlers.closeModal}
       />
 
-      {state.isFullscreenOpen && state.entityImage && (
+      {state.isFullscreenOpen && state.entityImage && createPortal(
         <div className={styles.fullscreenOverlay} onClick={handlers.closeFullscreen}>
           <button className={styles.fullscreenCloseButton} onClick={handlers.closeFullscreen}>
             <IconX size={32} />
@@ -138,7 +139,8 @@ export function LocationPanel() {
             className={styles.fullscreenImage}
             onClick={(e) => e.stopPropagation()}
           />
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

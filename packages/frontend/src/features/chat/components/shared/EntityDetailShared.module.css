@@ -1,0 +1,61 @@
+/* Shared Entity Detail Modal Styles - PURE CSS ONLY */
+
+/* Field Layouts */
+.field {
+  margin-bottom: var(--spacing-md);
+}
+
+.label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.value {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Subsections */
+.subsection {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsectionTitle {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-md) 0;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* Lists */
+.list {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+.list li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.5;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}
