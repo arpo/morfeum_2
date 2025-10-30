@@ -6,8 +6,8 @@
  * Location/Niche → First-person (immersive)
  */
 
-import { qualityPrompt } from '../../../prompts/languages/en/constants';
-import type { HierarchyNode, NodeDNA } from '../../hierarchyAnalysis/types';
+import { qualityPrompt } from '../../../../prompts/languages/en/constants';
+import type { HierarchyNode, NodeDNA } from '../../../hierarchyAnalysis/types';
 
 /**
  * Overview shot instructions (Host/Region)

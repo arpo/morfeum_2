@@ -8,7 +8,7 @@ import { mergeDNA } from './dnaMerge';
 import { parseJSON } from '../utils/parseJSON';
 import { generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
-import { completeDNAGeneration } from '../generation/prompts/completeDNAGeneration';
+import { completeDNAGeneration } from '../generation/prompts/locations/completeDNAGeneration';
 
 /**
  * Generate DNA for all nodes in the hierarchy using batch calls

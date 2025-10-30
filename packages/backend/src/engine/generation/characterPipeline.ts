@@ -10,10 +10,10 @@ import type { EntitySeed, VisualAnalysis, DeepProfile } from '../types';
 import { getPrompt } from '../../prompts';
 
 // Import new prompt templates
-import { characterSeedPrompt } from './prompts/characterSeed';
-import { characterImagePrompt } from './prompts/characterImage';
-import { characterVisualAnalysisPrompt } from './prompts/characterVisualAnalysis';
-import { characterDeepProfilePrompt } from './prompts/characterDeepProfile';
+import { characterSeedPrompt } from './prompts/characters/characterSeed';
+import { characterImagePrompt } from './prompts/characters/characterImage';
+import { characterVisualAnalysisPrompt } from './prompts/characters/characterVisualAnalysis';
+import { characterDeepProfilePrompt } from './prompts/characters/characterDeepProfile';
 
 /**
  * Fetch image as base64

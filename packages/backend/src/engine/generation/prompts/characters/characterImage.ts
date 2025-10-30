@@ -4,8 +4,8 @@
  * Source: https://deepinfra.com/blog/flux1-dev-guide
  */
 
-import { morfeumVibes, qualityPrompt } from '../../../prompts/languages/en/constants';
-import { getFluxFilter, getDefaultFluxFilter } from '../../../prompts/languages/en/fluxFilters';
+import { morfeumVibes, qualityPrompt } from '../../../../prompts/languages/en/constants';
+import { getFluxFilter, getDefaultFluxFilter } from '../../../../prompts/languages/en/fluxFilters';
 
 export const characterImagePrompt = (
   originalPrompt: string,

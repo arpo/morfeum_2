@@ -1,21 +1,22 @@
 /**
- * Character Prompt Exports
+ * Prompt Generation Module
+ * Centralized exports for all prompt generation functions
+ * 
+ * Organized by domain:
+ * - characters/ - Character generation prompts
+ * - locations/ - Location and hierarchy prompts
+ * - navigation/ - Navigation decision prompts
+ * - samples/ - Sample prompts (for future migration)
  */
 
-export { characterSeedPrompt } from './characterSeed';
-export { characterImagePrompt } from './characterImage';
-export { characterVisualAnalysisPrompt } from './characterVisualAnalysis';
-export { characterDeepProfilePrompt } from './characterDeepProfile';
+// Character prompts
+export * from './characters';
 
-/**
- * Hierarchy/Location Prompt Exports
- */
+// Location and hierarchy prompts
+export * from './locations';
 
-export { hierarchyCategorization } from './hierarchyCategorization';
-export { nodeDNAGeneration } from './nodeDNAGeneration';
-export { hostAndRegionsDNA } from './hostAndRegionsDNA';
-export { locationsAndNichesDNA } from './locationsAndNichesDNA';
-export { nodeImageGeneration } from './nodeImageGeneration';
-export { locationImageGeneration } from './locationImageGeneration';
-export { locationVisualAnalysisPrompt } from './locationVisualAnalysis';
-export { completeDNAGeneration } from './completeDNAGeneration';
+// Navigation prompts
+export * from './navigation';
+
+// Sample prompts (empty for now, will be populated during migration)
+export * from './samples';

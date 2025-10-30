@@ -11,7 +11,7 @@ import {
   navigationDecisionPrompt, 
   NavigationDecisionRequest,
   NavigationDecision 
-} from '../../engine/generation/prompts/navigationDecision';
+} from '../../engine/generation/prompts/navigation/navigationDecision';
 
 const router = Router();
 

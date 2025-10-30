@@ -267,7 +267,7 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       // Import hierarchy analyzer and image generation
       const { analyzeHierarchy, generateBatchDNA } = await import('../engine/hierarchyAnalysis');
       const { generateImage, analyzeImage } = await import('../services/mzoo');
-      const { locationImageGeneration } = await import('../engine/generation/prompts/locationImageGeneration');
+      const { locationImageGeneration } = await import('../engine/generation/prompts/locations/locationImageGeneration');
       const { locationVisualAnalysisPrompt } = await import('../engine/generation/prompts');
       const { parseJSON } = await import('../engine/utils/parseJSON');
       const { fetchImageAsBase64 } = await import('../services/spawn/shared/pipelineCommon');

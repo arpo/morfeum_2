@@ -7,7 +7,7 @@
 import { AI_MODELS } from '../../config/constants';
 import { eventEmitter } from '../../services/eventEmitter';
 import { generateText } from '../../services/mzoo';
-import { hierarchyCategorization } from '../generation/prompts/hierarchyCategorization';
+import { hierarchyCategorization } from '../generation/prompts/locations/hierarchyCategorization';
 import { parseJSON } from '../utils/parseJSON';
 import type {
   HierarchyAnalysisResult,

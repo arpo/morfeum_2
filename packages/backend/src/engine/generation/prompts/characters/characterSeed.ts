@@ -3,7 +3,7 @@
  * Migrated from packages/backend/src/prompts/languages/en/characterSeedGeneration.ts
  */
 
-import { blackListCharacterNames } from '../../../prompts/languages/en/constants';
+import { blackListCharacterNames } from '../../../../prompts/languages/en/constants';
 
 export const characterSeedPrompt = (textPrompt: string) => `Generate a concise, visually focused character seed based on the description below.
 
