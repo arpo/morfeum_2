@@ -9,7 +9,6 @@ export type PromptKey =
   | 'qualityPrompt'
   | 'sampleCharacterPrompts'
   | 'sampleLocationPrompts'
-  | 'generateViewDescriptions'
   | 'characterProfileGenerationUserMessage'
   | 'locationProfileGenerationUserMessage'
   | 'basicEntityDataFormatting'
@@ -32,7 +31,6 @@ export interface PromptTemplates {
   sampleCharacterPrompts: string[];
   sampleLocationPrompts: string[];
   navigatorSemanticNodeSelector: (userCommand: string, currentFocus: any, currentLocationDetails: any, allNodes: any[]) => string;
-  generateViewDescriptions: (seedJson: string, visualAnalysisJson: string, renderInstructions: string) => string;
   characterProfileGenerationUserMessage: string;
   locationProfileGenerationUserMessage: string;
   basicEntityDataFormatting: (name: string, looks: string, wearing: string, personality: string) => string;

@@ -8,8 +8,7 @@ import { chatSystemMessage } from '../../../engine/generation/prompts/chat/chatS
 import { chatCharacterImpersonation } from '../../../engine/generation/prompts/chat/chatCharacterImpersonation';
 import { sampleCharacterPrompts } from '../../../engine/generation/prompts/samples/sampleCharacterPrompts';
 import { sampleLocationPrompts } from '../../../engine/generation/prompts/samples/sampleLocationPrompts';
-import { navigatorSemanticNodeSelector } from './navigatorSemanticNodeSelector';
-import { generateViewDescriptions } from './generateViewDescriptions';
+import { navigatorSemanticNodeSelector } from '../../../engine/generation/prompts/navigation/navigatorSemanticNodeSelector';
 import { characterProfileGenerationUserMessage, locationProfileGenerationUserMessage } from '../../../engine/generation/prompts/chat/profileGenerationUserMessages';
 import { basicEntityDataFormatting, enhancedEntityDataFormatting } from '../../../engine/generation/prompts/chat/entityDataFormatting';
 
@@ -25,7 +24,6 @@ export const en: PromptTemplates = {
   sampleCharacterPrompts,
   sampleLocationPrompts,
   navigatorSemanticNodeSelector,
-  generateViewDescriptions,
   characterProfileGenerationUserMessage,
   locationProfileGenerationUserMessage,
   basicEntityDataFormatting,

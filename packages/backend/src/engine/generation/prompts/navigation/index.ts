@@ -5,3 +5,4 @@
 
 export { navigationDecisionPrompt } from './navigationDecision';
 export type { NavigationDecisionRequest, NavigationDecision } from './navigationDecision';
+export { navigatorSemanticNodeSelector } from './navigatorSemanticNodeSelector';
