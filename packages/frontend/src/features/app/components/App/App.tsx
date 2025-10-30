@@ -9,7 +9,7 @@ import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { ChatPanel } from '@/features/chat/components/ChatPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { ActiveSpawnsPanel } from '@/features/spawn-panel/ActiveSpawnsPanel';
-import { ChatTabs } from '@/features/chat-tabs/ChatTabs';
+import { EntityTabs } from '@/features/entity-tabs/EntityTabs';
 import { Card, ThemeToggle } from '@/components/ui';
 import { useSpawnEvents } from '@/hooks/useSpawnEvents';
 import { collectAllNodeIds } from '@/utils/treeUtils';
@@ -30,8 +30,8 @@ export function App() {
   const setActiveEntity = useStore(state => state.setActiveEntity);
   const updateEntityImage = useStore(state => state.updateEntityImage);
   const updateEntityProfile = useStore(state => state.updateEntityProfile);
-  const chatPanelOpen = useStore(state => state.chatPanelOpen);
-  const closeChatPanel = useStore(state => state.closeChatPanel);
+  const entityPanelOpen = useStore(state => state.entityPanelOpen);
+  const closeEntityPanel = useStore(state => state.closeEntityPanel);
   
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
@@ -137,7 +137,7 @@ export function App() {
       <aside className={styles.sidebar}>
         <SpawnInputBar />
         <ActiveSpawnsPanel />
-        <ChatTabs />
+        <EntityTabs />
       </aside>
       
       {/* Theme Toggle - Bottom Right Corner */}
@@ -147,7 +147,7 @@ export function App() {
       
       {/* Column 2 - Entity Panel (Character or Location) */}
       {activeEntitySession && (
-        <section className={styles.chatSection}>
+        <section className={styles.entitySection}>
           <Card>
             {activeEntitySession.entityType === 'character' ? (
               <CharacterPanel />
@@ -174,7 +174,7 @@ export function App() {
 
       {/* Draggable Chat Panels */}
       {Array.from(entities.entries()).map(([entityId, entity]) => {
-        const isPanelOpen = chatPanelOpen.get(entityId);
+        const isPanelOpen = entityPanelOpen.get(entityId);
         if (!isPanelOpen || entity.entityType !== 'character') return null;
         
         return (
@@ -182,7 +182,7 @@ export function App() {
             key={entityId}
             entityId={entityId}
             entityName={entity.entityName}
-            onClose={() => closeChatPanel(entityId)}
+            onClose={() => closeEntityPanel(entityId)}
           />
         );
       })}

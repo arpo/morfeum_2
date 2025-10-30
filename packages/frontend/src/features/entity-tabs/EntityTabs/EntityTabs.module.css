@@ -13,16 +13,16 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-.chatList {
+.entityList {
   padding: var(--spacing-sm);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
-  max-height: 400px;
   overflow-y: auto;
+  max-height: calc(100vh - 200px);
 }
 
-.chatButton {
+.entityButton {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -35,31 +35,31 @@
   position: relative;
 }
 
-.chatButton:hover {
+.entityButton:hover {
   background-color: var(--color-bg-hover);
 }
 
-.chatButton.active {
+.entityButton.active {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
 /* Entity type color coding */
-.chatButton[data-entity-type="character"].active {
+.entityButton[data-entity-type="character"].active {
   background-color: var(--color-entity-character);
   border-color: var(--color-entity-character);
 }
 
-.chatButton[data-entity-type="location"].active {
+.entityButton[data-entity-type="location"].active {
   background-color: var(--color-entity-location);
   border-color: var(--color-entity-location);
 }
 
-.chatButton[data-entity-type="character"] .imagePlaceholder {
+.entityButton[data-entity-type="character"] .imagePlaceholder {
   background-color: var(--color-entity-character);
 }
 
-.chatButton[data-entity-type="location"] .imagePlaceholder {
+.entityButton[data-entity-type="location"] .imagePlaceholder {
   background-color: var(--color-entity-location);
 }
 
@@ -85,7 +85,7 @@
   flex-shrink: 0;
 }
 
-.chatInfo {
+.entityInfo {
   flex: 1;
   min-width: 0;
 }
@@ -100,7 +100,7 @@
   display: block;
 }
 
-.chatButton.active .entityName {
+.entityButton.active .entityName {
   color: white;
 }
 
@@ -130,11 +130,11 @@
   cursor: not-allowed;
 }
 
-.chatButton.active .infoButton {
+.entityButton.active .infoButton {
   color: white;
 }
 
-.chatButton.active .infoButton:hover:not(:disabled) {
+.entityButton.active .infoButton:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -160,11 +160,11 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.chatButton.active .closeButton {
+.entityButton.active .closeButton {
   color: white;
 }
 
-.chatButton.active .closeButton:hover {
+.entityButton.active .closeButton:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -177,7 +177,7 @@
   font-family: monospace;
 }
 
-.chatButton.active .hierarchyIndicator {
+.entityButton.active .hierarchyIndicator {
   color: white;
   opacity: 0.8;
 }

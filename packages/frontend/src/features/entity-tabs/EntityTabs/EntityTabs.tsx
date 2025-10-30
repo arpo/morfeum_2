@@ -1,6 +1,6 @@
 /**
- * Chat Tabs Component
- * Shows tabs for all active chat sessions
+ * Entity Tabs Component
+ * Shows tabs for all active entity sessions
  */
 
 import { useState } from 'react';
@@ -9,9 +9,9 @@ import { useLocationsStore } from '@/store/slices/locationsSlice';
 import { IconInfoCircle } from '@/icons';
 import { LocationInfoModal } from '@/features/chat/components/LocationInfoModal';
 import { CharacterInfoModal } from '@/features/chat/components/CharacterInfoModal';
-import styles from './ChatTabs.module.css';
+import styles from './EntityTabs.module.css';
 
-export function ChatTabs() {
+export function EntityTabs() {
   const entities = useStore(state => state.entities);
   const activeEntity = useStore(state => state.activeEntity);
   const setActiveEntity = useStore(state => state.setActiveEntity);
@@ -115,7 +115,7 @@ export function ChatTabs() {
               // Delete child node from tree and nodes map
               removeNodeFromTree(worldId, spawnId);
               deleteNode(spawnId);
-              console.log(`[ChatTabs] Deleted node from tree: ${spawnId}`);
+              console.log(`[EntityTabs] Deleted node from tree: ${spawnId}`);
             }
             break;
           }
@@ -139,11 +139,11 @@ export function ChatTabs() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>Entities</div>
-      <div className={styles.chatList}>
+      <div className={styles.entityList}>
         {entitiesArray.map(entity => (
           <div
             key={entity.spawnId}
-            className={`${styles.chatButton} ${activeEntity === entity.spawnId ? styles.active : ''}`}
+            className={`${styles.entityButton} ${activeEntity === entity.spawnId ? styles.active : ''}`}
             onClick={() => handleTabClick(entity.spawnId)}
             data-entity-type={entity.entityType || 'character'}
             style={{
@@ -165,7 +165,7 @@ export function ChatTabs() {
                 {entity.entityName.charAt(0).toUpperCase()}
               </div>
             )}
-            <div className={styles.chatInfo}>
+            <div className={styles.entityInfo}>
               <span className={styles.entityName}>{entity.entityName}</span>
             </div>
             <button

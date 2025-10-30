@@ -76,7 +76,7 @@ export function CharacterPanel() {
           )}
           <Button
             onClick={handlers.openChat}
-            className={styles.chatButton}
+            className={styles.entityChatButton}
           >
             Chat
           </Button>

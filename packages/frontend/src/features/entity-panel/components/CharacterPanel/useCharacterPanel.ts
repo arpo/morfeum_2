@@ -14,7 +14,7 @@ export function useCharacterPanel(): CharacterPanelLogicReturn {
   
   const sendMessageToStore = useStore(state => state.sendMessage);
   const setError = useStore(state => state.setError);
-  const openChatPanel = useStore(state => state.openChatPanel);
+  const openEntityPanel = useStore(state => state.openEntityPanel);
   
   const createCharacter = useCharactersStore(state => state.createCharacter);
   const getCharacter = useCharactersStore(state => state.getCharacter);
@@ -57,9 +57,9 @@ export function useCharacterPanel(): CharacterPanelLogicReturn {
 
   const openChat = useCallback(() => {
     if (base.activeChat) {
-      openChatPanel(base.activeChat);
+      openEntityPanel(base.activeChat);
     }
-  }, [base.activeChat, openChatPanel]);
+  }, [base.activeChat, openEntityPanel]);
 
   // Check if character is already saved when active chat changes
   useEffect(() => {
