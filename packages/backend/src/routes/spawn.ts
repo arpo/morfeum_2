@@ -19,6 +19,9 @@ router.use(validateMzooApiKey);
 // Store spawn managers per API key (in production, consider a more robust solution)
 const spawnManagers = new Map<string, ReturnType<typeof createSpawnManager>>();
 
+// Track active pipeline abort controllers by spawnId
+const activeAbortControllers = new Map<string, AbortController>();
+
 /**
  * Build node chain from hierarchy (deepest node + all parents)
  * Returns complete node objects to preserve visual enrichment fields
@@ -111,6 +114,10 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
   const spawnId = `char-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const apiKey = (req as any).mzooApiKey;
 
+  // Create abort controller for this spawn
+  const abortController = new AbortController();
+  activeAbortControllers.set(spawnId, abortController);
+
   // Send immediate response
   res.status(HTTP_STATUS.OK).json({
     message: 'Character spawn started (new engine)',
@@ -144,6 +151,12 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       const seed = await generateCharacterSeed(prompt.trim(), apiKey);
       timings.seedGeneration = Date.now() - seedStartTime;
       
+      // Check if cancelled
+      if (abortController.signal.aborted) {
+        console.log(`[CharacterPipeline] ${spawnId} cancelled after seed generation`);
+        return;
+      }
+      
       // Generate initial system prompt from seed
       const systemPrompt = generateInitialSystemPrompt(seed);
       
@@ -162,6 +175,12 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       const { imageUrl, imagePrompt } = await generateCharacterImage(seed, apiKey);
       timings.imageGeneration = Date.now() - imageStartTime;
       
+      // Check if cancelled
+      if (abortController.signal.aborted) {
+        console.log(`[CharacterPipeline] ${spawnId} cancelled after image generation`);
+        return;
+      }
+      
       // Emit image complete event
       eventEmitter.emit({
         type: 'spawn:image-complete',
@@ -177,10 +196,22 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       const visualAnalysis = await analyzeCharacterImage(imageUrl, seed, apiKey);
       timings.visualAnalysis = Date.now() - analysisStartTime;
       
+      // Check if cancelled
+      if (abortController.signal.aborted) {
+        console.log(`[CharacterPipeline] ${spawnId} cancelled after visual analysis`);
+        return;
+      }
+      
       // Step 4: Enrich profile
       const enrichStartTime = Date.now();
       const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey);
       timings.profileEnrichment = Date.now() - enrichStartTime;
+      
+      // Check if cancelled
+      if (abortController.signal.aborted) {
+        console.log(`[CharacterPipeline] ${spawnId} cancelled after profile enrichment`);
+        return;
+      }
       
       // Generate enhanced system prompt from deep profile
       const enhancedSystemPrompt = generateEnhancedSystemPrompt(deepProfile);
@@ -214,15 +245,26 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
 
     } catch (error: any) {
-      console.error('[Engine Route] Pipeline failed:', error);
-      eventEmitter.emit({
-        type: 'spawn:error',
-        data: {
-          spawnId,
-          error: error.message || 'Unknown error',
-          stage: 'pipeline'
-        }
-      });
+      if (abortController.signal.aborted) {
+        console.log(`[CharacterPipeline] ${spawnId} cancelled`);
+        eventEmitter.emit({
+          type: 'spawn:cancelled',
+          data: { spawnId }
+        });
+      } else {
+        console.error('[Engine Route] Pipeline failed:', error);
+        eventEmitter.emit({
+          type: 'spawn:error',
+          data: {
+            spawnId,
+            error: error.message || 'Unknown error',
+            stage: 'pipeline'
+          }
+        });
+      }
+    } finally {
+      // Clean up abort controller
+      activeAbortControllers.delete(spawnId);
     }
   })();
 }));
@@ -244,6 +286,10 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
 
   const spawnId = `loc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const apiKey = (req as any).mzooApiKey;
+
+  // Create abort controller for this spawn
+  const abortController = new AbortController();
+  activeAbortControllers.set(spawnId, abortController);
 
   // Send immediate response
   res.status(HTTP_STATUS.OK).json({
@@ -277,6 +323,12 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       const result = await analyzeHierarchy(prompt.trim(), apiKey);
       timings.hierarchyClassification = Date.now() - classificationStart;
       
+      // Check if cancelled
+      if (abortController.signal.aborted) {
+        console.log(`[LocationPipeline] ${spawnId} cancelled after hierarchy classification`);
+        return;
+      }
+      
       // Stage 2: Build node chain and generate image prompt
       const nodeChain = buildNodeChain(result.hierarchy);
       const imagePrompt = locationImageGeneration(prompt.trim(), nodeChain);
@@ -295,6 +347,12 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       const imageStart = Date.now();
       const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
       timings.imageGeneration = Date.now() - imageStart;
+      
+      // Check if cancelled
+      if (abortController.signal.aborted) {
+        console.log(`[LocationPipeline] ${spawnId} cancelled after image generation`);
+        return;
+      }
       
       if (imageResult.error || !imageResult.data?.images?.[0]?.url) {
         throw new Error(imageResult.error || 'Image URL not found in response');
@@ -337,6 +395,12 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       
       const visualAnalysis = parseJSON(analysisResult.data.text);
       timings.visualAnalysis = Date.now() - analysisStart;
+      
+      // Check if cancelled
+      if (abortController.signal.aborted) {
+        console.log(`[LocationPipeline] ${spawnId} cancelled after visual analysis`);
+        return;
+      }
       
       // Stage 4.5: Merge visual analysis scene fields into target node
       // Find target node (deepest node in chain)
@@ -389,6 +453,12 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       
       timings.dnaGeneration = Date.now() - dnaStart;
       
+      // Check if cancelled
+      if (abortController.signal.aborted) {
+        console.log(`[LocationPipeline] ${spawnId} cancelled after DNA generation`);
+        return;
+      }
+      
       // Emit complete hierarchy with all DNA
       eventEmitter.emit({
         type: 'hierarchy:complete',
@@ -412,15 +482,26 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       console.log(`  Total:                        ${(totalTime / 1000).toFixed(2)}s\n`);
 
     } catch (error: any) {
-      console.error('[LocationPipeline] Pipeline failed:', error);
-      eventEmitter.emit({
-        type: 'hierarchy:error',
-        data: {
-          spawnId,
-          error: error.message || 'Unknown error',
-          stage: 'location-pipeline'
-        }
-      });
+      if (abortController.signal.aborted) {
+        console.log(`[LocationPipeline] ${spawnId} cancelled`);
+        eventEmitter.emit({
+          type: 'hierarchy:cancelled',
+          data: { spawnId }
+        });
+      } else {
+        console.error('[LocationPipeline] Pipeline failed:', error);
+        eventEmitter.emit({
+          type: 'hierarchy:error',
+          data: {
+            spawnId,
+            error: error.message || 'Unknown error',
+            stage: 'location-pipeline'
+          }
+        });
+      }
+    } finally {
+      // Clean up abort controller
+      activeAbortControllers.delete(spawnId);
     }
   })();
 }));
@@ -440,6 +521,15 @@ router.delete('/:spawnId', asyncHandler(async (req: Request, res: Response) => {
     return;
   }
 
+  // Abort new engine pipeline if active
+  const abortController = activeAbortControllers.get(spawnId);
+  if (abortController) {
+    abortController.abort();
+    activeAbortControllers.delete(spawnId);
+    console.log(`[Spawn] Cancelled active pipeline: ${spawnId}`);
+  }
+
+  // Also cancel through old spawn manager (for backwards compatibility)
   const spawnManager = getSpawnManager((req as any).mzooApiKey);
   spawnManager.cancelSpawn(spawnId);
 

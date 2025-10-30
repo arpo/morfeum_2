@@ -210,6 +210,27 @@ export function useSpawnEvents() {
       }
     });
 
+    // Listen for hierarchy cancelled event
+    eventSource.addEventListener('hierarchy:cancelled', (e) => {
+      const { spawnId } = JSON.parse(e.data);
+      
+      // Remove from active spawns
+      if (removeSpawn) {
+        removeSpawn(spawnId);
+      }
+    });
+
+    // Listen for hierarchy error event
+    eventSource.addEventListener('hierarchy:error', (e) => {
+      const { spawnId, error } = JSON.parse(e.data);
+      console.error('[SSE] Hierarchy error:', { spawnId, error });
+      
+      // Remove from active spawns
+      if (removeSpawn) {
+        removeSpawn(spawnId);
+      }
+    });
+
     // Listen for sublocation DNA complete event
     eventSource.addEventListener('spawn:sublocation-dna-complete', (e) => {
       const { spawnId, dna, parentNodeId } = JSON.parse(e.data);

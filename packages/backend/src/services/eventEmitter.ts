@@ -11,7 +11,7 @@ interface Client {
 }
 
 interface SpawnEvent {
-  type: 'spawn:seed-complete' | 'spawn:image-complete' | 'spawn:analysis-complete' | 'spawn:profile-complete' | 'spawn:cancelled' | 'spawn:error' | 'hierarchy:classification-complete' | 'hierarchy:host-dna-complete' | 'hierarchy:region-dna-complete' | 'hierarchy:location-dna-complete' | 'hierarchy:niche-dna-complete' | 'hierarchy:detail-dna-complete' | 'hierarchy:image-prompt-generated' | 'hierarchy:all-image-prompts-complete' | 'hierarchy:image-generation-started' | 'hierarchy:image-complete' | 'hierarchy:visual-analysis-complete' | 'hierarchy:complete' | 'hierarchy:error';
+  type: 'spawn:seed-complete' | 'spawn:image-complete' | 'spawn:analysis-complete' | 'spawn:profile-complete' | 'spawn:cancelled' | 'spawn:error' | 'hierarchy:classification-complete' | 'hierarchy:host-dna-complete' | 'hierarchy:region-dna-complete' | 'hierarchy:location-dna-complete' | 'hierarchy:niche-dna-complete' | 'hierarchy:detail-dna-complete' | 'hierarchy:image-prompt-generated' | 'hierarchy:all-image-prompts-complete' | 'hierarchy:image-generation-started' | 'hierarchy:image-complete' | 'hierarchy:visual-analysis-complete' | 'hierarchy:complete' | 'hierarchy:cancelled' | 'hierarchy:error';
   data: any;
 }
 
