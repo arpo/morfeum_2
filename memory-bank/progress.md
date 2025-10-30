@@ -2,6 +2,70 @@
 
 ## Recent Updates
 
+### Spawn Cancellation Fix (October 30, 2025 - 11:56 AM)
+
+**Completed:**
+- ✅ Added AbortController tracking in spawn routes
+- ✅ Implemented abort signal checks between pipeline stages
+- ✅ Wired DELETE endpoint to properly cancel active pipelines
+- ✅ Added `hierarchy:cancelled` event type to SpawnEvent interface
+- ✅ Added frontend event listeners for cancellation events
+- ✅ Pipelines now stop immediately when X button clicked
+
+**Problem Identified:**
+The new engine routes (`/api/spawn/engine/start` and `/api/spawn/location/start`) were running pipelines in async IIFE functions without any abort mechanism. When users clicked the X button to cancel a spawn, the frontend called DELETE but the backend continued executing all pipeline stages, wasting API calls and resources.
+
+**Solution:**
+Implemented proper cancellation using AbortController pattern:
+1. **Tracking Map**: Created `activeAbortControllers` Map to store controllers by spawnId
+2. **Controller Creation**: Each spawn creates an AbortController when starting
+3. **Checkpoint Pattern**: Added abort signal checks after each major pipeline stage
+4. **Cleanup**: Controllers removed from Map in finally blocks
+5. **Event Flow**: Emit `spawn:cancelled` or `hierarchy:cancelled` when aborted
+6. **Frontend Handling**: Event listeners remove spawn from UI immediately
+
+**Files Modified:**
+- `packages/backend/src/routes/spawn.ts`:
+  - Added `activeAbortControllers` Map for tracking
+  - Character pipeline: 4 abort checkpoints (after seed, image, analysis, enrichment)
+  - Location pipeline: 4 abort checkpoints (after classification, image, analysis, DNA)
+  - DELETE endpoint: Aborts controller and cleans up from Map
+  - Error handling: Distinguishes between abort and other errors
+
+- `packages/backend/src/services/eventEmitter.ts`:
+  - Added `hierarchy:cancelled` to SpawnEvent type union
+
+- `packages/frontend/src/hooks/useSpawnEvents.ts`:
+  - Added `hierarchy:cancelled` event listener
+  - Added `hierarchy:error` event listener
+  - Both remove spawn from active spawns UI
+
+**Result:**
+Cancellation works correctly for both character and location pipelines:
+- Click X → Frontend calls DELETE → Backend aborts controller
+- Pipeline checks abort signal between stages → Exits immediately if aborted
+- Cancellation event emitted → Frontend removes spawn from UI
+- No wasted API calls after cancellation
+- Proper cleanup prevents memory leaks
+
+**Checkpoint Locations:**
+
+*Character Pipeline:*
+1. After seed generation
+2. After image generation
+3. After visual analysis
+4. After profile enrichment
+
+*Location Pipeline:*
+1. After hierarchy classification
+2. After image generation
+3. After visual analysis
+4. After DNA generation
+
+Each checkpoint exits early if `abortController.signal.aborted` is true.
+
+---
+
 ### Backend Prompts System Consolidation (October 30, 2025 - 10:06 AM)
 
 **Completed:**

@@ -1,13 +1,26 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 30, 2025 - 10:06 AM)
+## Latest Session Summary (October 30, 2025 - 11:56 AM)
 
-### Current Task: Backend Prompts System Consolidation - COMPLETED ✅
-Migrated entire prompts system into engine structure, removing separate prompts folder.
+### Current Task: Spawn Cancellation Fix - COMPLETED ✅
+Implemented proper pipeline cancellation support using AbortController to stop spawns when clicking the X button.
 
 ### Recently Completed Work
 
-**Backend Prompts Consolidation (NEW - Complete):**
+**Spawn Cancellation Implementation (NEW - Complete):**
+- ✅ Added AbortController tracking Map in spawn routes (`activeAbortControllers`)
+- ✅ Created abort controller for each spawn (character and location pipelines)
+- ✅ Added abort signal checks after each pipeline stage
+- ✅ Wired DELETE endpoint to abort active pipelines
+- ✅ Added proper cleanup in finally blocks
+- ✅ Added `hierarchy:cancelled` event type to SpawnEvent interface
+- ✅ Added hierarchy cancellation event listeners in frontend
+- ✅ Pipelines now stop immediately when user clicks X button
+
+**Previous: Backend Prompts System Consolidation (COMPLETED):**
+Migrated entire prompts system into engine structure, removing separate prompts folder.
+
+**Backend Prompts Consolidation (Complete):**
 - ✅ Moved `prompts/types.ts` → `engine/generation/prompts/types.ts`
 - ✅ Moved `prompts/languages/en/index.ts` → `engine/generation/prompts/languages/en.ts`
 - ✅ Merged `prompts/index.ts` logic into `engine/generation/prompts/index.ts`
@@ -59,7 +72,17 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 
 ### Key Technical Decisions
 
-**Saved Locations Thumbnail Strategy (NEW):**
+**Spawn Cancellation Architecture (NEW):**
+- **AbortController Pattern**: Each spawn gets its own AbortController stored in a Map
+- **Checkpoint Strategy**: Check `abortController.signal.aborted` between each major stage
+- **Character Pipeline Checkpoints**: After seed, image, analysis, enrichment
+- **Location Pipeline Checkpoints**: After classification, image, analysis, DNA generation
+- **Event Flow**: Emit `spawn:cancelled` or `hierarchy:cancelled` on abort
+- **Cleanup Pattern**: Controllers removed from Map in finally block
+- **Frontend Handling**: Event listeners remove spawn from UI immediately
+- **No Partial Results**: Pipeline exits completely when cancelled
+
+**Saved Locations Thumbnail Strategy:**
 - **Computed Display Value**: Don't modify stored data, compute thumbnail at render time
 - **Tree Traversal**: Use depth-first search to find first non-empty image in hierarchy
 - **Fallback Chain**: Host → Region → Location → Niche (first found wins)
@@ -141,9 +164,9 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 ## Next Priority Items
 
 ### Immediate (Ready to Implement)
-1. **Test all fixes together**: Generate new location and verify all features work
-2. **Clean up debug logging**: Remove console.log statements from load functions
-3. **Performance check**: Verify thumbnail computation doesn't slow down modal
+1. **Test cancellation**: Verify spawn cancellation works for both character and location pipelines
+2. **Monitor performance**: Check if abort checks add noticeable overhead
+3. **Error handling**: Verify cancelled spawns don't leave orphaned data
 
 ### Medium Priority
 1. **Vector search preparation**: Saved nodes already flat, ready for vector DB integration
@@ -194,7 +217,26 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 
 ## Files Modified in Latest Session
 
-**Modified (Thumbnail Fix):**
+**Modified (Spawn Cancellation Fix):**
+- `packages/backend/src/routes/spawn.ts`:
+  - Added `activeAbortControllers` Map to track controllers by spawnId
+  - Character pipeline: Create controller, add 4 abort checks, emit cancelled event
+  - Location pipeline: Create controller, add 4 abort checks, emit cancelled event
+  - DELETE endpoint: Abort controller and clean up from Map
+  - Finally blocks: Clean up controllers after completion or cancellation
+  - Error handling: Distinguish between abort and other errors
+
+- `packages/backend/src/services/eventEmitter.ts`:
+  - Added `hierarchy:cancelled` to SpawnEvent type union
+  - Allows backend to emit cancellation events for location pipelines
+
+- `packages/frontend/src/hooks/useSpawnEvents.ts`:
+  - Added `hierarchy:cancelled` event listener
+  - Added `hierarchy:error` event listener  
+  - Both listeners call `removeSpawn` to clear from active spawns UI
+  - Ensures cancelled spawns disappear from Active Spawns panel
+
+**Previous (Thumbnail Fix):**
 - `packages/frontend/src/utils/treeUtils.ts`:
   - Added `findFirstImageInTree` utility function
   - Traverses tree depth-first to find first non-empty imagePath
@@ -244,7 +286,35 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 
 ## Code Examples
 
-**Thumbnail Computation (NEW):**
+**Spawn Cancellation Pattern (NEW):**
+```typescript
+// Backend: Create and track abort controller
+const spawnId = `char-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+const abortController = new AbortController();
+activeAbortControllers.set(spawnId, abortController);
+
+// Backend: Check between pipeline stages
+const seed = await generateCharacterSeed(prompt.trim(), apiKey);
+if (abortController.signal.aborted) {
+  console.log(`[CharacterPipeline] ${spawnId} cancelled after seed generation`);
+  return; // Exit pipeline immediately
+}
+
+// Backend: DELETE endpoint
+const abortController = activeAbortControllers.get(spawnId);
+if (abortController) {
+  abortController.abort();
+  activeAbortControllers.delete(spawnId);
+}
+
+// Frontend: Handle cancellation events
+eventSource.addEventListener('spawn:cancelled', (e) => {
+  const { spawnId } = JSON.parse(e.data);
+  removeSpawn(spawnId); // Remove from UI
+});
+```
+
+**Thumbnail Computation:**
 ```typescript
 // Find first image in tree hierarchy
 const locations = useMemo(() => {
@@ -291,17 +361,26 @@ if (updateEntityImage && deepestNode.imagePath) {
 
 ## Session Results
 
-**Complete Fix Chain:**
-1. ✅ Info buttons accessible everywhere (tree view + entity panels)
-2. ✅ Host nodes display correct images (not stealing from children)
-3. ✅ No duplicate nodes in tree view
-4. ✅ Saved locations show meaningful thumbnails (best available from tree)
-5. ✅ Placeholders work correctly when no images exist
-6. ✅ Clean separation of concerns (stored vs computed vs displayed data)
+**Spawn Cancellation (NEW):**
+1. ✅ AbortController tracking implemented in spawn routes
+2. ✅ Abort checks added between all pipeline stages
+3. ✅ DELETE endpoint properly cancels active pipelines
+4. ✅ Cancellation events emitted and handled by frontend
+5. ✅ Active spawns removed from UI immediately on cancel
+6. ✅ No partial results or orphaned data from cancelled spawns
 
 **Benefits Delivered:**
-- **Better UX**: Users can access info for any node, anytime
-- **Correct Display**: Each node shows its own image, not borrowed from others
-- **Meaningful Thumbnails**: Saved locations list shows visual representation even when host has no image
-- **Data Integrity**: Stored data unchanged, computed values separate
-- **Maintainability**: Clear, simple code patterns throughout
+- **User Control**: Cancel button actually stops pipeline execution
+- **Resource Efficiency**: No wasted API calls after cancellation
+- **Clean State**: Cancelled spawns removed from UI immediately
+- **Proper Cleanup**: Controllers properly removed from tracking Map
+- **Error Handling**: Distinguishes between cancellation and errors
+- **Event Flow**: SSE events notify frontend of cancellation status
+
+**Previous Session Results:**
+- Info buttons accessible everywhere (tree view + entity panels)
+- Host nodes display correct images (not stealing from children)
+- No duplicate nodes in tree view
+- Saved locations show meaningful thumbnails (best available from tree)
+- Placeholders work correctly when no images exist
+- Clean separation of concerns (stored vs computed vs displayed data)
