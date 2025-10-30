@@ -1,13 +1,27 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 30, 2025 - 2:17 PM)
+## Latest Session Summary (October 30, 2025 - 3:02 PM)
 
-### Current Task: Component Refactoring Cleanup - COMPLETED ✅
-Cleaned up codebase by removing deprecated files and extracting reusable helper utilities.
+### Current Task: CSS Refactoring & Theme Updates - COMPLETED ✅
+Major CSS refactoring to eliminate duplication, created shared styles, and updated theme to purple/blue brand palette.
 
 ### Recently Completed Work
 
-**Component Refactoring Cleanup (NEW - Complete):**
+**CSS Refactoring & Theme Updates (NEW - Complete):**
+- ✅ Created liquid morphing skeleton animation using brand colors (purple/blue/cyan gradient)
+- ✅ Refactored CSS to eliminate ~70% duplication across CharacterPanel and LocationPanel
+- ✅ Created `EntityPanelShared.module.css` (~250 lines) - shared container, image, skeleton, buttons, overlays
+- ✅ Created `ChatShared.module.css` (~150 lines) - shared messaging, input, error styles
+- ✅ Reduced CharacterPanel.module.css from 400 → 25 lines (94% reduction)
+- ✅ Reduced LocationPanel.module.css from 400 → 60 lines (85% reduction)
+- ✅ Added CSS design tokens: spacing-xs, button sizes, brand colors, overlays, aspect ratios
+- ✅ Updated theme to purple/blue brand palette across light and dark themes
+- ✅ Changed background color to #191e2c (dark blue-gray)
+- ✅ Updated entity colors: Character=#3d5cbe (blue), Location=#6B31B2 (purple)
+- ✅ All hardcoded colors replaced with CSS variables
+- ✅ Components use CSS `composes` to inherit shared styles
+
+**Previous: Component Refactoring Cleanup (Complete):**
 - ✅ Deleted deprecated `locationsSlice.ts` (887 lines) - migrated to modular structure
 - ✅ Updated 13 import statements from `@/store/slices/locationsSlice` to `@/store/slices/locations`
 - ✅ Created `LocationInfoModal/helpers.tsx` (104 lines) with utility functions
@@ -108,7 +122,35 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 
 ### Key Technical Decisions
 
-**Spawn Cancellation Architecture (NEW):**
+**CSS Refactoring Architecture (NEW):**
+- **Shared Styles Strategy**: Extract common patterns into reusable CSS modules
+- **EntityPanelShared.module.css**: Container, image handling, skeleton animation, buttons, overlays, entity info
+- **ChatShared.module.css**: All messaging UI (containers, wrappers, bubbles, input, errors)
+- **CSS Composes Pattern**: Component files use `composes:` to inherit shared styles
+- **Design Tokens First**: All hardcoded values converted to CSS variables
+- **Brand Colors**: Added specific tokens for skeleton animation colors
+- **Overlay Colors**: Standardized semi-transparent overlays
+- **Button Sizes**: Defined as tokens (--button-sm: 36px, --button-md: 48px)
+- **Aspect Ratios**: CSS custom property for 16:9 ratio
+- **Theme Consistency**: Colors defined per theme (light/dark) with default fallback
+
+**Liquid Morphing Skeleton Animation:**
+- **Multi-color Gradient**: Flows through purple → light purple → blue → bright blue → teal
+- **Background Animation**: 400% sized gradient with position animation (5s loop)
+- **Overlay Layer**: Rotating cyan radial gradient (8s loop) adds depth
+- **CSS Variables**: All colors reference design tokens (--brand-purple, --brand-blue, etc.)
+- **Reusability**: Single definition in EntityPanelShared, inherited by all entity panels
+
+**Theme Color Updates:**
+- **Primary Purple**: #6B31B2 (brand color across all themes)
+- **Secondary Blue**: #3d5cbe (bright blue for accents)
+- **Background Dark**: #191e2c (dark blue-gray, not pure black)
+- **Background Secondary**: #1e2435 (slightly lighter blue-tinted)
+- **Entity Colors**: Character=#3d5cbe (blue), Location=#6B31B2 (purple)
+- **Text Colors**: rgba(255,255,255,0.87) for readability on dark
+- **Link Colors**: #646cff with #535bf2 hover (blue-purple range)
+
+**Previous: Spawn Cancellation Architecture:**
 - **AbortController Pattern**: Each spawn gets its own AbortController stored in a Map
 - **Checkpoint Strategy**: Check `abortController.signal.aborted` between each major stage
 - **Character Pipeline Checkpoints**: After seed, image, analysis, enrichment
@@ -253,7 +295,46 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 
 ## Files Modified in Latest Session
 
-**Modified (Spawn Cancellation Fix):**
+**Modified (CSS Refactoring & Theme Updates):**
+- `packages/frontend/src/styles/tokens.module.css`:
+  - Added design tokens: --spacing-xs, --button-sm/md, --aspect-16-9
+  - Added brand color tokens: --brand-purple, --brand-purple-light, --brand-blue, --brand-blue-bright, --brand-teal, --brand-cyan-light
+  - Added overlay tokens: --overlay-dark, --overlay-medium, --overlay-light, --overlay-light-hover
+  - Added --skeleton-bg token
+  - Updated dark theme colors: Primary=#6B31B2, Secondary=#3d5cbe, Background=#191e2c
+  - Updated entity colors: Character=#3d5cbe, Location=#6B31B2
+  - Updated text colors: rgba(255,255,255,0.87)
+  - Added link colors: --color-link and --color-link-hover
+  - Light theme updated to match purple/blue palette
+
+- `packages/frontend/src/features/entity-panel/components/shared/EntityPanelShared.module.css` (NEW):
+  - Created shared styles for entity panels (~250 lines)
+  - Container, image handling, skeleton animation, buttons, overlays
+  - Liquid morphing skeleton animation with brand color gradient
+  - Image buttons, fullscreen overlay, entity info sections
+  - Movement section and empty state
+  - All styles use CSS variables
+
+- `packages/frontend/src/features/entity-panel/components/shared/ChatShared.module.css` (NEW):
+  - Created shared chat/messaging styles (~150 lines)
+  - Messages container, wrappers, bubbles
+  - Message content with markdown styling
+  - Input container and error messages
+  - User/assistant message variants
+  - All styles use CSS variables
+
+- `packages/frontend/src/features/entity-panel/components/CharacterPanel/CharacterPanel.module.css`:
+  - Reduced from ~400 lines to 25 lines (94% reduction)
+  - Uses CSS `composes` to inherit from shared files
+  - Only character-specific overrides remain
+
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.module.css`:
+  - Reduced from ~400 lines to 60 lines (85% reduction)
+  - Uses CSS `composes` to inherit from shared files
+  - Added location-specific travel section styles
+  - Movement section override for location styling
+
+**Previous (Spawn Cancellation Fix):**
 - `packages/backend/src/routes/spawn.ts`:
   - Added `activeAbortControllers` Map to track controllers by spawnId
   - Character pipeline: Create controller, add 4 abort checks, emit cancelled event

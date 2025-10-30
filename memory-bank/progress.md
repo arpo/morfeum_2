@@ -2,6 +2,94 @@
 
 ## Recent Updates
 
+### CSS Refactoring & Theme Updates (October 30, 2025 - 3:02 PM)
+
+**Completed:**
+- ✅ Created liquid morphing skeleton animation with brand colors
+- ✅ Refactored CSS to eliminate ~70% duplication
+- ✅ Created shared CSS modules (EntityPanelShared, ChatShared)
+- ✅ Reduced CharacterPanel from 400 → 25 lines (94% reduction)
+- ✅ Reduced LocationPanel from 400 → 60 lines (85% reduction)
+- ✅ Added comprehensive CSS design tokens
+- ✅ Updated theme to purple/blue brand palette
+- ✅ Changed background to #191e2c (dark blue-gray)
+- ✅ Updated entity colors to match brand
+
+**Problem Identified:**
+1. Massive CSS duplication between CharacterPanel and LocationPanel (~400 lines each)
+2. Hardcoded colors throughout stylesheets
+3. Boring pulsating gray skeleton animation
+4. No brand identity in color scheme
+
+**Solution:**
+Three-phase refactoring:
+
+**Phase 1: Liquid Morphing Skeleton Animation**
+- Created multi-color gradient flowing through brand palette
+- Purple → Light Purple → Blue → Bright Blue → Teal
+- 5-second background position animation (400% size)
+- 8-second rotating cyan radial overlay for depth
+- All colors reference CSS variables for consistency
+
+**Phase 2: Extract Shared Styles**
+- Created `EntityPanelShared.module.css` (~250 lines):
+  - Container, image handling, skeleton animation
+  - Image buttons, fullscreen overlay, entity info
+  - Movement section, empty state
+- Created `ChatShared.module.css` (~150 lines):
+  - Messages container, wrappers, bubbles
+  - Message content with markdown styling
+  - Input container, error messages
+  - User/assistant message variants
+
+**Phase 3: CSS Variables & Theme Updates**
+- Added design tokens: spacing-xs, button sizes, overlays, aspect ratios
+- Added brand color tokens: purple, blue, cyan ranges
+- Updated dark theme: Primary=#6B31B2, Background=#191e2c
+- Updated entity colors: Character=#3d5cbe (blue), Location=#6B31B2 (purple)
+- All hardcoded values replaced with CSS variables
+
+**Files Created:**
+- `packages/frontend/src/features/entity-panel/components/shared/EntityPanelShared.module.css`
+- `packages/frontend/src/features/entity-panel/components/shared/ChatShared.module.css`
+
+**Files Modified:**
+- `packages/frontend/src/styles/tokens.module.css`:
+  - Added --spacing-xs, --button-sm/md, --aspect-16-9
+  - Added brand colors: --brand-purple, --brand-blue, --brand-teal, etc.
+  - Added overlays: --overlay-dark, --overlay-medium, etc.
+  - Updated theme colors for light and dark modes
+  
+- `packages/frontend/src/features/entity-panel/components/CharacterPanel/CharacterPanel.module.css`:
+  - Reduced from ~400 lines to 25 lines
+  - Uses CSS `composes` to inherit shared styles
+  
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.module.css`:
+  - Reduced from ~400 lines to 60 lines
+  - Uses CSS `composes` to inherit shared styles
+  - Added location-specific travel section
+
+**Result:**
+Professional, branded UI with dramatically reduced code duplication:
+- Liquid morphing skeleton animation with purple/blue/cyan gradient
+- ~70% reduction in CSS duplication
+- Single source of truth for shared styles
+- All colors use CSS variables
+- Consistent purple/blue brand identity
+- Dark theme with #191e2c background
+- Easy to maintain and update globally
+
+**Benefits:**
+- **Visual Appeal**: Modern animated skeleton loading with brand colors
+- **Maintainability**: Update one file, change all panels
+- **Consistency**: Design tokens ensure uniform styling
+- **Brand Identity**: Purple/blue palette throughout application
+- **Code Quality**: Eliminated massive duplication
+- **Performance**: Shared styles load once
+- **Flexibility**: Easy to theme or update colors
+
+---
+
 ### Component Refactoring Cleanup (October 30, 2025 - 2:17 PM)
 
 **Completed:**
