@@ -20,7 +20,7 @@ export function CharacterPanel() {
   }, [state.entityImage]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-component="character-panel">
       <div className={styles.imageContainer}>
         {(!state.entityImage || imageLoading) && (
           <div className={styles.imageSkeleton}>

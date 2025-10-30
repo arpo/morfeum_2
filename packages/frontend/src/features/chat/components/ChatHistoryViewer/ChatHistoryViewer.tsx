@@ -21,7 +21,7 @@ export function ChatHistoryViewer({ messages }: ChatHistoryViewerProps) {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-component="chat-history-viewer">
       <div className={styles.panelHeader} onClick={togglePanel}>
         <div>
           <span className={styles.panelTitle}>Chat History</span>

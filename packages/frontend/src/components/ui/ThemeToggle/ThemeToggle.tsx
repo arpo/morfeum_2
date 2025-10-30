@@ -34,6 +34,7 @@ export function ThemeToggle({ className = '' }: ThemeToggleProps) {
       type="button"
       aria-label={`Switch to ${getLabel()} theme`}
       title={`Current theme: ${resolvedTheme}. Click to switch to ${getLabel()} theme`}
+      data-component="theme-toggle"
     >
       {getIcon()}
       <span className={styles.label}>{getLabel()}</span>

@@ -29,7 +29,7 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
   const pinnedEntityIds = activeTab === 'characters' ? pinnedCharacterIds : pinnedLocationIds;
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} maxWidth="lg">
+    <Modal isOpen={isOpen} onClose={onClose} maxWidth="lg" data-component="saved-entities-modal">
       <ModalHeader title="Saved Entities" onClose={onClose} />
       <ModalContent>
         <div className={styles.tabs}>

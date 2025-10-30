@@ -28,7 +28,7 @@ export function ActiveSpawnsPanel() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-component="active-spawns-panel">
       <div className={styles.header} onClick={toggleExpanded}>
         <div>
           <span className={styles.headerTitle}>Active Spawns</span>

@@ -137,7 +137,7 @@ export function EntityTabs() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-component="entity-tabs">
       <div className={styles.header}>Entities</div>
       <div className={styles.entityList}>
         {entitiesArray.map(entity => (
@@ -145,6 +145,8 @@ export function EntityTabs() {
             key={entity.spawnId}
             className={`${styles.entityButton} ${activeEntity === entity.spawnId ? styles.active : ''}`}
             onClick={() => handleTabClick(entity.spawnId)}
+            data-component="entity-tab"
+            data-entity-id={entity.spawnId}
             data-entity-type={entity.entityType || 'character'}
             style={{
               paddingLeft: `calc(var(--spacing-md) + ${entity.depthLevel * 20}px)`

@@ -20,7 +20,7 @@ export function LocationPanel() {
   }, [state.entityImage]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-component="location-panel">
       <div className={styles.imageContainer}>
         {(!state.entityImage || imageLoading) && (
           <div className={styles.imageSkeleton}>

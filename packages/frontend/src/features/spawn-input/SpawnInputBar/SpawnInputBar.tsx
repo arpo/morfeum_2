@@ -20,7 +20,7 @@ export function SpawnInputBar() {
   };
 
   return (
-    <div>
+    <div data-component="spawn-input-bar">
       <div className={styles.container}>
         <div className={styles.toggleGroup}>
           <button

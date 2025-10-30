@@ -7,13 +7,15 @@ export interface ImagePromptPanelProps {
 
 export function ImagePromptPanel({ imagePrompt }: ImagePromptPanelProps) {
   return (
-    <CollapsiblePanel 
-      title="Image Prompt" 
-      defaultExpanded={false}
-    >
-      <div className={styles.promptText}>
-        {imagePrompt}
-      </div>
-    </CollapsiblePanel>
+    <div data-component="image-prompt-panel">
+      <CollapsiblePanel 
+        title="Image Prompt" 
+        defaultExpanded={false}
+      >
+        <div className={styles.promptText}>
+          {imagePrompt}
+        </div>
+      </CollapsiblePanel>
+    </div>
   );
 }
