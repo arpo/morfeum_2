@@ -10,8 +10,9 @@
 
 import { eventEmitter } from '../eventEmitter';
 import { BasePipelineManager } from './managers/BasePipelineManager';
-import { CharacterSpawnManager } from './managers/CharacterSpawnManager';
-import { LocationSpawnManager } from './managers/LocationSpawnManager';
+// NOTE: Old managers removed - using new engine pipelines instead
+// import { CharacterSpawnManager } from './managers/CharacterSpawnManager';
+// import { LocationSpawnManager } from './managers/LocationSpawnManager';
 import { SpawnProcess } from './types';
 
 export class SpawnManager {
@@ -21,8 +22,9 @@ export class SpawnManager {
   constructor(mzooApiKey: string) {
     // Initialize entity-specific pipeline managers
     this.managers = new Map<string, BasePipelineManager>();
-    this.managers.set('character', new CharacterSpawnManager(mzooApiKey));
-    this.managers.set('location', new LocationSpawnManager(mzooApiKey));
+    // NOTE: Old spawn managers removed - this SpawnManager is now only used for
+    // tracking active processes and cancellation. Actual spawning happens through
+    // new engine routes: /api/spawn/engine/start and /api/spawn/location/start
   }
 
   /**
