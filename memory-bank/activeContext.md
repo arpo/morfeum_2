@@ -1,13 +1,24 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 30, 2025 - 12:28 PM)
+## Latest Session Summary (October 30, 2025 - 2:17 PM)
 
-### Current Task: Data Component Attributes & Terminology Cleanup - COMPLETED ✅
-Added data-component attributes to all major UI components and renamed misleading "chat*" identifiers to "entity/entities".
+### Current Task: Component Refactoring Cleanup - COMPLETED ✅
+Cleaned up codebase by removing deprecated files and extracting reusable helper utilities.
 
 ### Recently Completed Work
 
-**Data Component Attributes (NEW - Complete):**
+**Component Refactoring Cleanup (NEW - Complete):**
+- ✅ Deleted deprecated `locationsSlice.ts` (887 lines) - migrated to modular structure
+- ✅ Updated 13 import statements from `@/store/slices/locationsSlice` to `@/store/slices/locations`
+- ✅ Created `LocationInfoModal/helpers.tsx` (104 lines) with utility functions
+- ✅ Extracted helper functions: `renderArray`, `renderValue`, `formatFieldName`, `renderDNA`
+- ✅ Extracted data transformation: `transformProfile`, `isFlatDNA`
+- ✅ Cleaned up unused handler files from incomplete useSpawnEvents refactoring attempt
+- ✅ Deleted `packages/frontend/src/hooks/useSpawnEvents/` directory (~400 lines dead code)
+- ✅ TypeScript compilation clean - no errors
+- ✅ Total cleanup: ~1,200 lines of duplicate/unused code removed
+
+**Previous: Data Component Attributes (Complete):**
 - ✅ Added `data-component` attributes to 9 major UI components for easy reference
 - ✅ Created comprehensive documentation in `docs/data-component-reference.md`
 - ✅ Added .clinerules guide for data-component pattern
