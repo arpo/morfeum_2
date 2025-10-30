@@ -4,7 +4,7 @@
  */
 
 import { v4 as uuidv4 } from 'uuid';
-import type { Node, NodeType, TreeNode } from '@/store/slices/locationsSlice';
+import type { Node, NodeType, TreeNode } from '@/store/slices/locations';
 import { initFocus } from './locationFocus';
 
 export interface ParsedHierarchy {

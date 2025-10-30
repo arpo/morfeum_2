@@ -1,7 +1,7 @@
 import { useStore } from '@/store';
 import { useThemeStore } from '@/store/slices/themeSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
-import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useLocationsStore } from '@/store/slices/locations';
 import { CharacterPanel } from '@/features/entity-panel/components/CharacterPanel';
 import { LocationPanel } from '@/features/entity-panel/components/LocationPanel';
 import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer';

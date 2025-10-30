@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
-import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
+import { useLocationsStore, Node } from '@/store/slices/locations';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
 import { findTreeContainingNode, collectAllNodeIds, findFirstImageInTree } from '@/utils/treeUtils';

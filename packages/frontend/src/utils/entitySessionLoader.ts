@@ -5,7 +5,7 @@
  * ensuring consistency across all loading paths (new generation, manual load, auto-load).
  */
 
-import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
+import { useLocationsStore, Node } from '@/store/slices/locations';
 
 export interface EntitySessionCallbacks {
   createEntity: (id: string, seed: any, type: 'location' | 'character') => void;

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import type { LocationInfoModalProps, LocationInfoLogicReturn } from './types';
-import type { FocusState } from '@/store/slices/locationsSlice';
+import type { FocusState } from '@/store/slices/locations';
 
 /**
  * Determine which node is currently in focus based on hierarchy structure

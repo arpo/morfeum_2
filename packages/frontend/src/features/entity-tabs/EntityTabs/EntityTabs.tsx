@@ -5,7 +5,7 @@
 
 import { useState } from 'react';
 import { useStore } from '@/store';
-import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useLocationsStore } from '@/store/slices/locations';
 import { IconInfoCircle } from '@/icons';
 import { LocationInfoModal } from '@/features/chat/components/LocationInfoModal';
 import { CharacterInfoModal } from '@/features/chat/components/CharacterInfoModal';

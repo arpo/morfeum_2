@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useLocationsStore } from '@/store/slices/locations';
 import { useStore } from '@/store';
 import { useEntityPanelBase } from '../../hooks/useEntityPanelBase';
 import type { LocationPanelLogicReturn } from './types';

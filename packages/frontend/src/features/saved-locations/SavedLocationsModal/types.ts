@@ -1,4 +1,4 @@
-import type { Node } from '@/store/slices/locationsSlice';
+import type { Node } from '@/store/slices/locations';
 import type { Character } from '@/store/slices/charactersSlice';
 
 export type EntityTab = 'characters' | 'locations';

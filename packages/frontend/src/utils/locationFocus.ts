@@ -3,7 +3,7 @@
  * Helper functions for initializing and managing focus state
  */
 
-import type { Location, FocusState } from '@/store/slices/locationsSlice';
+import type { Location, FocusState } from '@/store/slices/locations';
 
 /**
  * Initialize focus state with default values

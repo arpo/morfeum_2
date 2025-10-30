@@ -4,7 +4,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
-import { useLocationsStore, Node } from '@/store/slices/locationsSlice';
+import { useLocationsStore, Node } from '@/store/slices/locations';
 import { initFocus } from '@/utils/locationFocus';
 import { parseNestedHierarchy } from '@/utils/hierarchyParser';
 

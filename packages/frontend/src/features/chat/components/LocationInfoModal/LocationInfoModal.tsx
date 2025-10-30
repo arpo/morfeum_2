@@ -1,6 +1,6 @@
 // LocationInfoModal Component - PURE JSX ONLY
 import { Modal, ModalContent, ModalSection, CollapsiblePanel } from '@/components/ui';
-import { useLocationsStore } from '@/store/slices/locationsSlice';
+import { useLocationsStore } from '@/store/slices/locations';
 import { useLocationInfoLogic, determineCurrentNode } from './useLocationInfoLogic';
 import type { LocationInfoModalProps } from './types';
 import styles from './LocationInfoModal.module.css';

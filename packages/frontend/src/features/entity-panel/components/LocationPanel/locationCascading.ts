@@ -3,7 +3,7 @@
  * Handles DNA extraction and cascading context building
  */
 
-import { Node } from '@/store/slices/locationsSlice';
+import { Node } from '@/store/slices/locations';
 
 interface CascadedContext {
   parentLocationName: string;

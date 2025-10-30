@@ -3,7 +3,7 @@
  * Handles NavigatorAI API calls and spatial navigation logic
  */
 
-import { Node } from '@/store/slices/locationsSlice';
+import { Node } from '@/store/slices/locations';
 
 interface FocusState {
   node_id: string;
