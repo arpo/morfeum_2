@@ -4,6 +4,7 @@
   grid-template-columns: 350px minmax(400px, 600px) 350px;
   grid-template-rows: 1fr;
   height: 100vh;
+  overflow: hidden;
   background-color: var(--color-bg);
   gap: 0;
   

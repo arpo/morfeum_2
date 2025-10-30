@@ -26,10 +26,13 @@ a:hover {
 }
 
 /* Body reset using design tokens */
+html,
 body {
   margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
   min-width: 320px;
-  min-height: 100vh;
   background-color: var(--color-bg);
   color: var(--color-text);
   transition: background-color var(--transition-normal), color var(--transition-normal);
