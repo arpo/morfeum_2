@@ -10,7 +10,7 @@
 export function hierarchyCategorization(userPrompt: string): string {
   return `You are a spatial hierarchy analyzer. Analyze user input and organize it into a 4-layer hierarchy.
 
-## 🚨🚨🚨 STEP 1: PRE-FLIGHT CHECK - READ THIS FIRST 🚨🚨🚨
+## STEP 1: PRE-FLIGHT CHECK - READ THIS FIRST
 
 **BEFORE DOING ANYTHING ELSE, CHECK FOR THIS PATTERN:**
 
@@ -30,13 +30,13 @@ EXAMPLES OF THIS CRITICAL PATTERN:
 "pub by SoHo in New York" → Host: New York, Region: SoHo, Location: pub
 "cafe near Montmartre in Paris" → Host: Paris, Region: Montmartre, Location: cafe
 
-❌ WRONG (DO NOT DO THIS):
+ WRONG (DO NOT DO THIS):
 {
   "host": {"name": "Göteborg"},
   "regions": [{"name": "Göteborg", "description": ""}]  ← Passthrough region (WRONG!)
 }
 
-✅ CORRECT:
+ CORRECT:
 {
   "host": {"name": "Göteborg"},
   "regions": [{"name": "Ringön", "description": "Industrial island district"}]  ← District extracted!
@@ -45,7 +45,7 @@ EXAMPLES OF THIS CRITICAL PATTERN:
 If this pattern exists, YOU MUST extract the middle word as a Region. NO EXCEPTIONS.
 The Region name must NEVER be the same as the Host name.
 
-## ⚠️ MINIMAL BY DEFAULT
+##  MINIMAL BY DEFAULT
 
 **MOST IMPORTANT RULE: Create ONLY what is explicitly mentioned.**
 
@@ -54,11 +54,11 @@ The Region name must NEVER be the same as the Host name.
 - Vague/atmospheric description → **Host only**
 
 **Examples:**
-✅ "London inspired by Tron" → Host only
-✅ "Paris" → Host only
-✅ "Camden in London" → Host + Region
-✅ "A pub in Camden in London" → Host + Region + Location
-❌ "London inspired by Tron" → Host + Regions + Locations (WRONG!)
+ "London inspired by Tron" → Host only
+ "Paris" → Host only
+ "Camden in London" → Host + Region
+ "A pub in Camden in London" → Host + Region + Location
+ "London inspired by Tron" → Host + Regions + Locations (WRONG!)
 
 ## 4-LAYER SYSTEM
 
@@ -71,52 +71,112 @@ The Region name must NEVER be the same as the Host name.
 
 ## NICHE CREATION RULES
 
-**⚠️ CRITICAL: Niches are ONLY for distinct smaller PHYSICAL SPACES, not environmental descriptions.**
+** CRITICAL: Automatically create a niche when interior context is mentioned for a building/structure.**
 
-**✅ CREATE NICHE When:**
-- "A control room inside the biodome" → Separate enclosed space
-- "Hidden chamber beneath the lighthouse" → Distinct sub-room
-- "VIP section behind velvet curtain" → Physically separated area
-- "The bar's back office" → Enclosed separate room
-- **Test: Can you physically walk from the main space INTO a distinct separate area?** YES → Create niche
+## AUTOMATIC INTERIOR DETECTION
 
-**❌ DO NOT Create Niche For:**
-- "The biodome's interior is lush" → Use location's looks/atmosphere fields
-- "Inside the bar it's smoky" → Use location's atmosphere field
-- "The room is warm and humid" → Environmental quality, use atmosphere
-- "The space is filled with vegetation" → Visual description, use looks
-- **Test: Is this describing the ENVIRONMENT of the main space?** YES → Use visual enrichment, NOT a niche
+**When a Location (building/structure) has interior descriptions, you MUST:**
+1. Create the Location with EXTERIOR-focused description
+2. Automatically create a Niche for the INTERIOR
+3. Split visual enrichment between exterior (Location) and interior (Niche)
+
+**Interior Keywords that trigger automatic niche creation:**
+- Explicit interior words: inside, interior, within, indoors, indoor
+- Room features: floor, ceiling, walls, room, space, hall, chamber
+- Furnishings: furniture, desk, table, chair, bed, shelf, counter, cabinet
+- Decor elements: decoration, painting, mural, tapestry, rug, carpet
+- Lighting fixtures: light, lighting, lamp, chandelier, candle, bulb, fixture
+- Architectural details: window, door, doorway, archway, column, pillar, beam
+- Interior atmosphere: enclosed, confined, sheltered, contained
+- Interior activities: any description of people/actions happening inside a space
+
+** CREATE AUTOMATIC INTERIOR NICHE When:**
+- "A cozy bar with dim lighting and wooden tables" → Location (exterior) + Niche (interior with lighting/tables)
+- "A pub where patrons gather around the fireplace" → Location (exterior) + Niche (interior with fireplace)
+- "A nightclub with strobing lights and dance floor" → Location (exterior) + Niche (interior with lights/floor)
+- "A cafe with comfortable seating and book-lined walls" → Location (exterior) + Niche (interior with seating/books)
+- **Test: Does the description mention what's INSIDE the building?** YES → Split into Location (exterior) + Niche (interior)
+
+** ALSO CREATE NICHE For Distinct Sub-Spaces:**
+- "A bar with a VIP room upstairs" → Location + 2 Niches (main room + VIP room)
+- "Hidden chamber beneath the lighthouse" → Location + Niche (chamber)
+- "The bar's back office" → Location + Niche (office)
+- **Test: Is this a separate room within the building?** YES → Create additional niche
+
+** DO NOT Create Niche When:**
+- "A biodome on the horizon" → Pure exterior description, no interior mentioned
+- "A towering lighthouse against the cliffs" → Exterior only
+- "A bar in Camden" → No interior details provided
+- **Test: Is interior context absent?** YES → Location only, no niche
 
 **Examples:**
 
-**Example A - NO Niche (Environmental Description):**
-Input: "A crystalline biodome, its interior lush and humid"
-✅ Correct:
+**Example A - Automatic Interior Niche (Interior Keywords Detected):**
+Input: "A cozy bar with dim lighting and wooden tables in Camden"
+ Correct:
 {
   "location": {
     "type": "location",
-    "name": "The Glass Womb",
-    "description": "A crystalline biodome on a forgotten planet",
-    "looks": "Vast crystalline dome structure, lush vegetation filling interior, alien flora throughout",
-    "atmosphere": "Humid and warm, circulating airflow, scent of damp earth and exotic blossoms",
-    "mood": "Serene, ancient, hauntingly beautiful"
-  }
-}
-
-**Example B - YES Niche (Distinct Physical Space):**
-Input: "A biodome with a hidden control room"
-✅ Correct:
-{
-  "location": {
-    "type": "location",
-    "name": "The Glass Womb",
-    "description": "Crystalline biodome exterior"
+    "name": "The Rustic Anchor",
+    "description": "A traditional drinking establishment in Camden's industrial quarter",
+    "looks": "Weathered brick facade, wooden door with brass fixtures, hanging pub sign",
+    "atmosphere": "Street noise, evening foot traffic, warm light spilling from windows",
+    "mood": "Inviting, unpretentious, neighborhood charm"
   },
   "niches": [{
     "type": "niche",
-    "name": "Control Room",
-    "description": "Hidden control chamber beneath the main dome"
+    "name": "Main Bar Room",
+    "description": "The intimate interior space of the pub",
+    "looks": "Dim Edison bulb lighting, dark wooden tables and bar counter, exposed brick walls",
+    "atmosphere": "Smoky warmth, low conversation hum, smell of beer and aged wood",
+    "mood": "Cozy, relaxed, working-class authenticity"
   }]
+}
+
+**Example B - Location Only (No Interior Context):**
+Input: "A towering lighthouse on the rocky cliffs"
+ Correct:
+{
+  "location": {
+    "type": "location",
+    "name": "The Beacon's Edge",
+    "description": "A solitary lighthouse perched on treacherous coastal cliffs",
+    "looks": "White-painted cylindrical tower, glass observation dome at peak, rocky cliff foundation",
+    "atmosphere": "Salt spray, howling wind, crashing waves below, rotating beam cutting through fog",
+    "mood": "Isolated, vigilant, weatherbeaten"
+  }
+}
+
+**Example C - Multiple Niches (Interior + Sub-Space):**
+Input: "A nightclub with a pulsing dance floor and VIP lounge upstairs"
+ Correct:
+{
+  "location": {
+    "type": "location",
+    "name": "Pulse",
+    "description": "A modern nightclub with neon signage and industrial architecture",
+    "looks": "Concrete facade, steel entrance doors, glowing neon logo",
+    "atmosphere": "Bass vibration through walls, queue of people outside, street energy",
+    "mood": "Electric, exclusive, urban"
+  },
+  "niches": [
+    {
+      "type": "niche",
+      "name": "Main Dance Floor",
+      "description": "The primary club space with dance floor and DJ booth",
+      "looks": "Strobing lights, raised DJ platform, packed dance floor, bar along back wall",
+      "atmosphere": "Pounding bass, heat from crowd, laser effects cutting through haze",
+      "mood": "Frenetic, euphoric, sensory overload"
+    },
+    {
+      "type": "niche",
+      "name": "VIP Lounge",
+      "description": "Exclusive upper level overlooking the main floor",
+      "looks": "Plush velvet seating, glass balcony railing, subdued mood lighting",
+      "atmosphere": "Muffled bass from below, quieter conversation, bottle service",
+      "mood": "Exclusive, sophisticated, detached"
+    }
+  ]
 }
 
 ## PARSING RULES
@@ -140,11 +200,19 @@ Input: "A biodome with a hidden control room"
 
 **Rule 0: Specific Structure Detection → Create Location with Inferred Host**
 
-**🔍 STRUCTURE KEYWORDS indicate a Location, NOT a Host:**
+**STRUCTURE KEYWORDS indicate a Location, NOT a Host:**
 
 **Buildings:** greenhouse, tower, shop, bar, pub, club, restaurant, cafe, temple, church, cathedral, observatory, lighthouse, dome, warehouse, factory, bunker, station, terminal, hangar, library, museum, theater, arena, stadium
 
-**Structures:** bridge, fountain, monument, statue, gate, wall, archway, obelisk, pavilion, gazebo
+**Fantasy Structures:** castle, fortress, keep, dungeon, crypt, vault, sanctum, spire, inn, tavern, citadel, monastery, abbey
+
+**Sci-Fi Structures:** spaceship, starship, vessel, cruiser, freighter, shuttle, pod, module, sector, outpost, relay, beacon, colony, habitat
+
+**Vehicles/Transport:** ship, boat, yacht, submarine, train, carriage, wagon, airship
+
+**Bio/Organic:** hive, nest, cocoon, chrysalis
+
+**Architectural:** bridge, fountain, monument, statue, gate, wall, archway, obelisk, pavilion, gazebo
 
 **Natural Features:** cave, cavern, grotto, waterfall, grove, clearing, crater, canyon, ravine, valley, peak, summit
 
@@ -155,7 +223,7 @@ Input: "A biodome with a hidden control room"
 
 **Examples:**
 
-✅ "The Ferro Garden, an abandoned greenhouse where metallic plants bloom"
+ "The Ferro Garden, an abandoned greenhouse where metallic plants bloom"
 Example output:
 {
   "host": {
@@ -178,7 +246,7 @@ Example output:
   }]
 }
 
-✅ "The Crystal Spire, a tower reaching into the clouds"
+ "The Crystal Spire, a tower reaching into the clouds"
 Example output:
 {
   "host": {
@@ -201,7 +269,7 @@ Example output:
   }]
 }
 
-✅ "A bar in Tokyo"
+ "A bar in Tokyo"
 - "bar" = structure keyword → Location
 - "Tokyo" = city name → Host
 - Result: Host (Tokyo) + Location (Bar)
@@ -233,7 +301,7 @@ Example output:
 
 **CRITICAL: Each layer MUST nest INSIDE its parent.**
 
-✅ **Correct:**
+ **Correct:**
 \`\`\`json
 {
   "host": {
@@ -336,7 +404,7 @@ Example output:
 }
 \`\`\`
 
-## 🚨 STEP 2: BEFORE OUTPUT - FINAL VALIDATION 🚨
+## STEP 2: BEFORE OUTPUT - FINAL VALIDATION
 
 **RUN THESE CHECKS BEFORE OUTPUTTING:**
 

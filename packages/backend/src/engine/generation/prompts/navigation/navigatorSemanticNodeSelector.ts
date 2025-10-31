@@ -85,7 +85,7 @@ ${nodeSummaries || '(none)'}
 
 User Command: "${userCommand}"
 
-⚠️ CRITICAL ACTION SELECTION RULES ⚠️
+ CRITICAL ACTION SELECTION RULES 
 
 **DECISION TREE** (follow in order):
 
@@ -107,7 +107,7 @@ User Command: "${userCommand}"
    → If no matching node exists, use action: "generate"
    → Every "move" action requires a valid targetNodeId
 
-⚠️ SPATIAL REASONING RULES ⚠️
+ SPATIAL REASONING RULES 
 
 1. **Self-Move Prevention (CRITICAL)**:
    - NEVER return action: "move" with targetNodeId equal to current node ID
@@ -180,13 +180,13 @@ User Command: "${userCommand}"
    - interior: Rooms, chambers, indoor spaces
    - detail: Specific objects, alcoves, tiny spaces
 
-⚠️ CRITICAL REQUIREMENT ⚠️
+ CRITICAL REQUIREMENT 
 When specifying targetNodeId or parentNodeId in your JSON response:
 - MUST use the full ID from the node list (starts with "spawn-")
 - DO NOT use the node name (like "The Garden", "Upstairs", etc.)
 - Example: If the node is listed as "The Garden (ID: spawn-abc123...)", use "spawn-abc123..." in your response
 
-🚨 CRITICAL OUTPUT FORMAT 🚨
+ CRITICAL OUTPUT FORMAT 
 
 You MUST return ONLY valid JSON with NO preamble, NO explanation text, NO reasoning before the JSON.
 Do NOT write "The user command is..." or explain your thinking.

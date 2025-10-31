@@ -74,7 +74,7 @@ FLOW:
 4. You generate DNA for LOCATION (site-level style, refines region)
 5. Later, this DNA CASCADES DOWN: Host → Region → Location → Future Children
 
-⚠️ DNA contains ONLY cascading STYLE/VIBE properties - NOT scene-specific details ⚠️
+ DNA contains ONLY cascading STYLE/VIBE properties - NOT scene-specific details 
 Scene-specific details (looks, atmosphere, lighting, materials, colors) come from visual analysis.
 DNA defines the STYLE PALETTE that cascades to children, not the actual physical appearance.
 
@@ -170,7 +170,7 @@ OUTPUT STRUCTURE:
   ]
 }
 
-⚠️ CRITICAL GUIDELINES - SPARSE DNA ENFORCEMENT ⚠️
+ CRITICAL GUIDELINES - SPARSE DNA ENFORCEMENT 
 
 1. **Host DNA**: Generate ALL 9 fields with complete descriptions
    - genre: ONLY set in host (world-level constant)
@@ -178,7 +178,7 @@ OUTPUT STRUCTURE:
 
 2. **Child DNA - FIELD-BY-FIELD SPARSE ENFORCEMENT**:
    
-   🚨 FOR EACH OF THE 8 CASCADING FIELDS, YOU MUST ASK: "Is this DIFFERENT from parent?" 🚨
+    FOR EACH OF THE 8 CASCADING FIELDS, YOU MUST ASK: "Is this DIFFERENT from parent?" 
    
    Go through EVERY field in this exact order for child nodes:
    
@@ -191,7 +191,7 @@ OUTPUT STRUCTURE:
    7. flora_base → Different from parent? If NO → null
    8. fauna_base → Different from parent? If NO → null
    
-   🚨 NEVER include "genre" in child nodes - it's always inherited from host 🚨
+    NEVER include "genre" in child nodes - it's always inherited from host 
    
    EXAMPLE - Desert Canyon region (parent: Post-Apocalyptic Earth):
    1. architectural_tone: Desert more sun-bleached wreckage → DIFFERENT → "sun-bleached metal ruins"
@@ -205,19 +205,19 @@ OUTPUT STRUCTURE:
    
    RESULT: 6 fields populated, 2 null (this is correct!)
    
-   ⚠️ REGIONS are biomes/climates - they should populate MORE fields ⚠️
+    REGIONS are biomes/climates - they should populate MORE fields 
    Regions define climate, regional materials, regional sounds, regional flora/fauna.
    They should have 60-80% fields populated (only 20-40% null).
    
-   ⚠️ LOCATIONS refine regions - moderate sparsity ⚠️
+    LOCATIONS refine regions - moderate sparsity 
    Locations inherit from region and refine specific aspects.
    They should have 40-60% fields populated (40-60% null).
    
-   ⚠️ NICHES are smallest - highest sparsity ⚠️
+    NICHES are smallest - highest sparsity 
    Niches inherit from location and add intimate details.
    They should have 20-40% fields populated (60-80% null).
 
-   🚨 NEVER INCLUDE SCENE FIELDS IN DNA 🚨
+    NEVER INCLUDE SCENE FIELDS IN DNA 
    - NO "looks" (comes from visual analysis)
    - NO "atmosphere" (comes from visual analysis)
    - NO "lighting" (comes from visual analysis)
