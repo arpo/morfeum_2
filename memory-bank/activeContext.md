@@ -1,8 +1,38 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 31, 2025 - 1:35 PM)
+## Latest Session Summary (October 31, 2025 - 2:19 PM)
 
-### Current Task: LocationInfoModal Dynamic Rendering & Formatting - COMPLETED ✅
+### Current Task: Hierarchy Image Assignment Bug Fix - COMPLETED ✅
+
+**Two-Part Bug Fix (NEW - Complete):**
+- ✅ Fixed host node incorrectly receiving deepest node's image in multi-level hierarchies
+- ✅ Fixed preview panel not showing image immediately after generation
+- ✅ Modified `hierarchyParser.ts` to remove imageUrl fallback from host node
+- ✅ Restored `updateEntityImage()` in `hierarchy:image-complete` event handler
+- ✅ Preview entity (spawnId) shows image instantly, then gets replaced by proper nodes
+
+**Root Cause Analysis:**
+- **Issue 1**: Host node was using `imageUrl || host.imageUrl || ''` which assigned deepest node's image to host
+- **Issue 2**: Removed `updateEntityImage()` call broke instant preview display
+- **Solution**: Two-part fix addressing both image assignment and preview display
+
+**Technical Implementation:**
+- **hierarchyParser.ts (line 30)**: Changed to `imagePath: host.imageUrl || ''` (removed imageUrl fallback)
+- **useSpawnEvents.ts**: Restored `updateEntityImage(spawnId, imageUrl)` in `hierarchy:image-complete` handler
+- **Preview Flow**: Temporary entity shows image immediately, proper nodes created later with correct assignments
+
+**How It Works Now:**
+- **Multi-level hierarchy (host/region/location)**:
+  - Image generates → shows immediately in preview panel ✅
+  - Backend sets `imageUrl` on location node, NOT on host
+  - Host has no image (unless backend provides `host.imageUrl`)
+  - Location has the generated image
+- **Single-level hierarchy (host only)**:
+  - Image generates → shows immediately in preview panel ✅
+  - Backend sets `imageUrl` on host (since it IS the deepest node)
+  - Host correctly receives the generated image
+
+### Previous Task: LocationInfoModal Dynamic Rendering & Formatting - COMPLETED ✅
 
 **Complete Modal Rebuild (NEW - Complete):**
 - ✅ Completely rewrote LocationInfoModal from 800+ lines to 70 lines (91% reduction)

@@ -505,12 +505,14 @@ export function useSpawnEvents() {
       }
       console.log('Image URL:', imageUrl);
       
-      // Update entity with image for instant flow
+      // Update preview entity (spawnId) with image for instant display
+      // This is the temporary entity session that shows the preview
+      // It will be replaced by proper nodes in hierarchy:complete
       if (spawnId && updateEntityImage) {
         updateEntityImage(spawnId, imageUrl);
       }
       
-      // Update entity with image prompt
+      // Update entity with image prompt for reference
       if (spawnId && updateEntityImagePrompt && imagePrompt) {
         updateEntityImagePrompt(spawnId, imagePrompt);
       }
