@@ -1,8 +1,40 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (October 30, 2025 - 10:05 PM)
+## Latest Session Summary (October 31, 2025 - 1:35 PM)
 
-### Current Task: UI Component Library Improvements - COMPLETED ✅
+### Current Task: LocationInfoModal Dynamic Rendering & Formatting - COMPLETED ✅
+
+**Complete Modal Rebuild (NEW - Complete):**
+- ✅ Completely rewrote LocationInfoModal from 800+ lines to 70 lines (91% reduction)
+- ✅ Removed ALL hardcoded field mappings (semantic.environment, spatial.layout, etc.)
+- ✅ Implemented fully dynamic rendering using `renderSection()` helper
+- ✅ Updated all "sublocation" terminology to "niche" throughout
+- ✅ Added recursive object rendering with depth tracking
+- ✅ Fixed array of objects display (NavigableElements, Niches, Regions)
+- ✅ Added proper formatting with indentation, borders, and spacing
+- ✅ Modal now displays ANY JSON structure backend sends
+
+**Dynamic Rendering Architecture:**
+- ✅ Created `renderSection()` function for generic node section rendering
+- ✅ Enhanced `renderValue()` with recursive depth parameter
+- ✅ Changed `renderDNA()` from `<p>` to `<div>` to support JSX elements
+- ✅ Arrays of objects render as formatted lists with left borders
+- ✅ Nested objects render with proper indentation hierarchy
+- ✅ Each field displays on its own line with bold labels
+
+**Terminology Updates:**
+- ✅ Updated `transformProfile()` to use `niche` instead of `sublocation`
+- ✅ Modal UI displays "🔷 Niche" instead of "Sublocation"
+- ✅ All data structures now use consistent niche terminology
+
+**True "Dumb Passthrough" Achievement:**
+- ✅ Zero hardcoded field names - works with any JSON structure
+- ✅ No data loss - displays everything backend sends
+- ✅ Automatically handles new fields without code changes
+- ✅ Supports unlimited nesting depth
+- ✅ Component separation rules followed (markup/logic/styles)
+
+### Previous Task: UI Component Library Improvements - COMPLETED ✅
 
 **Typography Standardization (Complete):**
 - ✅ Created global typography standards in index.css (h1-h6, label elements)
@@ -354,7 +386,33 @@ Fixed node selection, image assignment, info button accessibility, and saved loc
 
 ## Files Modified in Latest Session
 
-**Modified (Modal & Overlay Portal Fix - NEW):**
+**Modified (LocationInfoModal Dynamic Rendering - NEW):**
+- `packages/frontend/src/features/chat/components/LocationInfoModal/LocationInfoModal.tsx`:
+  - Completely rebuilt from 800+ lines to 70 lines (91% reduction)
+  - Removed ALL hardcoded field mappings
+  - Now uses `renderSection()` for dynamic rendering
+  - Changed all "sublocation" references to "niche"
+  - Pure JSX only - no inline logic or helpers
+  - Displays: Niche, Location, Region, World sections
+
+- `packages/frontend/src/features/chat/components/LocationInfoModal/helpers.tsx`:
+  - Added `renderSection()` function for generic section rendering
+  - Enhanced `renderValue()` with recursive depth parameter (depth: number = 0)
+  - Changed `renderDNA()` from `<p>` to `<div>` wrapper for JSX support
+  - Arrays of objects render as formatted lists with borders
+  - Nested objects render with indentation hierarchy
+  - Recursive rendering supports unlimited nesting depth
+  - Updated `transformProfile()` to use `niche` instead of `sublocation`
+
+**Dynamic Rendering Benefits:**
+- Displays ANY JSON structure without code changes
+- No hardcoded field names (semantic.environment, etc.)
+- Handles nested objects at any depth
+- Arrays of objects show each field on separate line
+- Formatted with bold labels, indentation, and borders
+- True "dumb passthrough" - zero data loss
+
+**Previous (Modal & Overlay Portal Fix):**
 - `packages/frontend/src/components/ui/Modal/Modal.tsx`:
   - Added `import { createPortal } from 'react-dom'`
   - Wrapped entire modal overlay in `createPortal(..., document.body)`
