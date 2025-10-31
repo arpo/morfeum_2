@@ -57,7 +57,7 @@ When detected:
 
 ## NESTING STRUCTURE
 
-Each layer MUST nest inside its parent:
+**Each layer MUST nest inside its parent:**
 \`\`\`json
 {
   "host": {
@@ -141,7 +141,7 @@ Each layer MUST nest inside its parent:
 
 ## PRE-OUTPUT VALIDATION
 
-Run these checks:
+**Run these checks:**
 1. Pattern "[thing] [prep] [WORD] in [WORD]" found? → Middle WORD must be Region
 2. Region name identical to Host name? → CRITICAL ERROR, fix it
 3. Empty Region descriptions? → ERROR, add descriptions
