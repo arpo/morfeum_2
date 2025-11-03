@@ -31,13 +31,34 @@ Bio/Organic: hive, nest, cocoon, chrysalis
 Architectural: bridge, fountain, monument, statue, gate, wall, archway, obelisk, pavilion, gazebo
 Natural: cave, cavern, grotto, waterfall, grove, clearing, crater, canyon, ravine, valley, peak, summit
 
-**4. AUTO-CREATE NICHE when interior keywords detected**:
-Interior Keywords: inside, interior, within, indoors, floor, ceiling, walls, room, space, hall, chamber, furniture, desk, table, chair, bed, shelf, counter, cabinet, decoration, painting, mural, tapestry, rug, carpet, light, lighting, lamp, chandelier, candle, bulb, fixture, window, door, doorway, archway, column, pillar, beam, enclosed, confined, sheltered
+**4. AUTO-CREATE NICHE for interior/detail descriptions**:
 
-When detected:
-- Location = EXTERIOR description
-- Niche = INTERIOR description
-- Example: "bar with dim lighting" → Location (exterior) + Niche (interior with lighting)
+When user describes contents WITHIN a structure, create a niche containing those elements.
+
+**Detection Pattern**: "[structure] with [thing(s)]" → The things are INSIDE the structure
+- "cave with stairs and machine" → Location: cave exterior, Niche: interior with stairs and machine
+- "bar with dim lighting and tables" → Location: bar exterior, Niche: interior with lighting and tables
+- "temple with altar and pillars" → Location: temple exterior, Niche: interior with altar and pillars
+- "lighthouse" (no contents) → Location only, NO niche
+
+**Reasoning**: Use spatial context, not keyword matching
+- If user mentions features positioned inside/within a structure → Create niche
+- If user only describes the structure itself → No niche needed
+- Let the sentence structure guide you: "X with Y" typically means Y is inside X
+
+**SPATIAL GROUPING** (critical):
+- **Multiple elements in SAME space** → ONE niche
+  - Connected by "and" in same sentence → SAME niche
+  - Directional indicators ("to the left", "to the right", "center", "corner") → SAME niche (describing layout)
+  - Example: "cave with stairs to the left and machine to the right" → ONE niche with both elements
+
+- **Multiple SEPARATE spaces** → MULTIPLE niches
+  - Separation keywords: "next to it", "adjacent room", "another room", "separate", "different room", "other side of", "through the", "beyond the", "past the", "neighboring"
+  - Example: "cave with stairs and in the room next to it a machine" → TWO niches
+
+Structure:
+- Location = EXTERIOR description (the structure itself)
+- Niche = INTERIOR/CONTENTS description (what's inside the structure)
 
 ## HIERARCHY LAYERS
 
@@ -50,6 +71,9 @@ When detected:
 
 **Visual Fields** (deepest node only):
 - name: Evocative, memorable (not generic "Bar" or "Club")
+  - Niches: Reflect atmosphere/mood (Ember, Hum, Echo) + distinctive features (Ascending, Vault, Sanctum)
+  - Examples: "The Echoing Vault", "The Humming Sanctum", "The Ember Lounge", "The Spiral Ascent"
+  - Avoid: "Interior", "Main Room", "Chamber" alone - always add descriptive qualifier
 - description: 2-3 sentences
 - looks: Visible geometry, layout, scale
 - atmosphere: Air, motion, distinctive temperature/humidity
@@ -108,10 +132,10 @@ Each layer MUST nest inside its parent:
       "mood": "Inviting, unpretentious",
       "niches": [{
         "type": "niche",
-        "name": "Main Bar Room",
-        "description": "The intimate interior",
-        "looks": "Dim Edison bulbs, dark wooden tables, exposed brick",
-        "atmosphere": "Smoky warmth, low conversation",
+        "name": "The Ember Lounge",
+        "description": "The intimate interior bathed in warm light",
+        "looks": "Dim Edison bulbs casting amber glow, dark wooden tables, exposed brick walls",
+        "atmosphere": "Smoky warmth, low conversation, clinking glasses",
         "mood": "Cozy, relaxed"
       }]
     }]
@@ -134,6 +158,72 @@ Each layer MUST nest inside its parent:
       "looks": "White cylindrical tower, glass dome, rocky foundation",
       "atmosphere": "Salt spray, howling wind, crashing waves",
       "mood": "Isolated, vigilant"
+    }]
+  }]
+}
+\`\`\`
+
+**Input**: "A cave with a stair up to the left and an alien machine to the right"
+\`\`\`json
+{
+  "host": {"type": "host", "name": "Underground Complex", "description": "Subterranean network"},
+  "regions": [{
+    "type": "region",
+    "name": "Deep Caverns",
+    "description": "Ancient cave system with mysterious technology",
+    "locations": [{
+      "type": "location",
+      "name": "The Vault Cave",
+      "description": "A large cave chamber housing strange artifacts",
+      "looks": "Rough stone walls, natural formation with carved passages",
+      "atmosphere": "Cool, damp air with mechanical hum",
+      "mood": "Mysterious, ancient",
+      "niches": [{
+        "type": "niche",
+        "name": "The Echoing Vault",
+        "description": "The main chamber where ancient stairs meet alien technology",
+        "looks": "Stone stairway ascending on the left side, alien machine with glowing panels positioned to the right",
+        "atmosphere": "Echoing footsteps, low mechanical hum reverberating off stone",
+        "mood": "Enigmatic, exploratory"
+      }]
+    }]
+  }]
+}
+\`\`\`
+
+**Input**: "A cave with a stair up to the left and in the room next to it an alien machine to the right"
+\`\`\`json
+{
+  "host": {"type": "host", "name": "Underground Complex", "description": "Subterranean network"},
+  "regions": [{
+    "type": "region",
+    "name": "Deep Caverns",
+    "description": "Ancient cave system with multiple chambers",
+    "locations": [{
+      "type": "location",
+      "name": "The Vault Cave",
+      "description": "A cave complex with connected chambers",
+      "looks": "Rough stone walls connecting multiple spaces",
+      "atmosphere": "Cool, damp air with mechanical sounds in distance",
+      "mood": "Mysterious, segmented",
+      "niches": [
+        {
+          "type": "niche",
+          "name": "The Ascending Passage",
+          "description": "The first chamber with carved stairway leading upward",
+          "looks": "Natural cave walls with carved stone stairway leading upward on left wall",
+          "atmosphere": "Echo of dripping water, cool stone air",
+          "mood": "Ancient, ascending"
+        },
+        {
+          "type": "niche",
+          "name": "The Humming Sanctum",
+          "description": "Adjacent chamber housing alien technology",
+          "looks": "Separate chamber with alien machine mounted on right wall, glowing controls pulsing with energy",
+          "atmosphere": "Mechanical hum, warmer air radiating from machine",
+          "mood": "Technological, isolated"
+        }
+      ]
     }]
   }]
 }

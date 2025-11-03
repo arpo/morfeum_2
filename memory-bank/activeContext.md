@@ -1,8 +1,81 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (November 3, 2025 - 2:00 PM)
+## Latest Session Summary (November 3, 2025 - 2:50 PM)
 
-### Current Task: Navigation System Phase 1 - COMPLETED ✅
+### Current Task: World Generation Niche Creation Fix - COMPLETED ✅
+
+**World Generation Spatial Grouping Fix (NEW - Complete):**
+- ✅ Fixed spatial grouping: single space vs multiple spaces
+- ✅ Replaced brittle keyword matching with context-based detection
+- ✅ Improved niche naming with evocative examples
+- ✅ Updated hierarchy categorization prompt
+
+**Problem Solved:**
+User prompt: "A cave with a stair up to the left and an alien machine to the right"
+- **Issue 1**: Creating TWO separate niches instead of ONE (spatial grouping)
+- **Issue 2**: Not creating niche at all (keyword mismatch: "stair" vs "stairs", "machine" not in keywords)
+- **Issue 3**: Generic niche names like "Dual Feature Chamber" or "Cave Interior"
+
+**Solution 1: Spatial Grouping (Rule #4)**
+Added clear distinction between same space vs separate spaces:
+- **Same space**: Elements connected by "and" in same sentence → ONE niche
+  - Example: "cave with stairs left and machine right" → ONE niche with both
+- **Separate spaces**: Separation keywords detected → MULTIPLE niches
+  - Keywords: "next to it", "adjacent room", "another room", "separate", etc.
+  - Example: "cave with stairs and in room next to it a machine" → TWO niches
+
+**Solution 2: Context-Based Detection**
+Removed rigid keyword list, replaced with spatial reasoning:
+```
+Old Approach (Removed):
+Interior Keywords: inside, interior, within, indoors, floor, ceiling, walls... [long list]
+
+New Approach (Implemented):
+Detection Pattern: "[structure] with [thing(s)]" → Things are INSIDE
+- "cave with stairs and machine" → niche with both
+- "bar with lighting and tables" → niche with both  
+- "lighthouse" (no contents) → no niche
+
+Reasoning: Use spatial context, not keyword matching
+```
+
+**Solution 3: Evocative Naming**
+Added naming guidance and updated all examples:
+```
+Naming Pattern for Niches:
+- Reflect atmosphere/mood (Ember, Hum, Echo, Ascending)
+- Reference distinctive features (Vault, Passage, Sanctum, Lounge)
+- Use evocative adjectives (Ancient, Glowing, Silent, Forgotten)
+
+Examples Updated:
+❌ "Cave Interior" → ✅ "The Echoing Vault"
+❌ "Main Bar Room" → ✅ "The Ember Lounge"  
+❌ "Stairway Chamber" → ✅ "The Ascending Passage"
+❌ "Machine Chamber" → ✅ "The Humming Sanctum"
+```
+
+**Files Modified:**
+- `packages/backend/src/engine/generation/prompts/locations/hierarchyCategorization.ts`
+  - Updated Rule #4: Context-based niche detection
+  - Added spatial grouping rules (same space vs separate)
+  - Added naming guidance to Visual Fields section
+  - Updated all 3 examples with better niche names
+
+**Benefits:**
+- **Flexible**: Works with ANY object types, not just predefined keywords
+- **Intent-based**: Follows what user means from sentence structure
+- **Natural**: "X with Y" implies Y is inside X
+- **Evocative**: Generates memorable niche names
+- **Maintainable**: No keyword lists to maintain
+
+**Test Case:**
+"A cave with a stair up to the left and an alien machine to the right"
+- ✅ Creates ONE niche (not two)
+- ✅ Detects "with X and Y" as interior contents
+- ✅ Groups both elements in same space
+- ✅ Generates name like "The Echoing Vault" (not "Cave Interior")
+
+### Previous Task: Navigation System Phase 1 - COMPLETED ✅
 
 **Navigation System Rebuild (NEW - Complete):**
 - ✅ Brainstormed and rebuilt navigation system in `packages/backend/src/engine/navigation/`
