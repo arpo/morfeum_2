@@ -18,27 +18,38 @@ export function handleExploreFeature(intent: IntentResult, context: NavigationCo
   // Niches are typically interior, locations are typically exterior
   const isInterior = currentNode.type === 'niche';
   
-  // Create sibling at same level showing progression
-  if (!currentNode.parentId) {
-    // If no parent, can't create sibling
+  // If we have a parent, create sibling
+  if (currentNode.parentId) {
     return {
-      action: 'unknown',
-      reasoning: `Cannot explore further - no parent node available`
+      action: 'create_niche',
+      parentNodeId: currentNode.parentId,
+      newNodeType: currentNode.type,
+      newNodeName: `Further along ${feature}`,
+      metadata: {
+        relation: 'sibling',
+        progression: true,
+        feature: feature,
+        interior: isInterior
+      },
+      reasoning: `Exploring further along ${feature} (creating sibling ${currentNode.type})`
     };
   }
   
+  // No parent - top-level location
+  // Create progression as child location (connected to current)
+  // This allows exploration even from top-level locations
   return {
     action: 'create_niche',
-    parentNodeId: currentNode.parentId,
-    newNodeType: currentNode.type,
+    parentNodeId: currentNode.id,
+    newNodeType: 'location',
     newNodeName: `Further along ${feature}`,
     metadata: {
-      relation: 'sibling',
+      relation: 'child',
       progression: true,
       feature: feature,
-      interior: isInterior
+      interior: false
     },
-    reasoning: `Exploring further along ${feature} (creating sibling ${currentNode.type})`
+    reasoning: `Exploring further along ${feature} (creating connected location)`
   };
 }
 

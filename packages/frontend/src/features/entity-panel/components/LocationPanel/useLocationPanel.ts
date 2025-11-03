@@ -93,13 +93,12 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         await handleMoveAction(navigation, currentFocus);
       } else if (navigation.action === 'generate') {
         // TODO: Implement generate action - currently disabled
-        console.log('[NavigatorAI] 🔧 Generate action disabled - would create:', {
-          name: navigation.name,
-          parentNodeId: navigation.parentNodeId,
-          scale_hint: navigation.scale_hint,
-          relation: navigation.relation,
-          reason: navigation.reason
-        });
+        console.log('[NavigatorAI] 🔧 Generate action disabled - would create:');
+        console.log(`Name: ${navigation.name}`);
+        console.log(`Parent Node ID: ${navigation.parentNodeId}`);
+        console.log(`Scale Hint: ${navigation.scale_hint}`);
+        console.log(`Relation: ${navigation.relation}`);
+        console.log(`Reason: ${navigation.reason}`);
         // await handleGenerateAction(navigation, currentNode, cascadedDNA);
       }
       

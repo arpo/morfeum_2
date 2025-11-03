@@ -188,12 +188,12 @@ export async function findDestination(
   const result = await response.json();
   
   // Log EVERYTHING to browser console
-  console.log('🧭 ═══════════════════════════════════════════════════');
-  console.log('🧭 NAVIGATION ANALYSIS');
-  console.log('🧭 ═══════════════════════════════════════════════════');
-  console.log('📝 User Command:', result.data.userCommand);
+  console.log(' ═══════════════════════════════════════════════════');
+  console.log(' NAVIGATION ANALYSIS');
+  console.log(' ═══════════════════════════════════════════════════');
+  console.log(' User Command:', result.data.userCommand);
   console.log('');
-  console.log('🎯 Intent Classification:');
+  console.log(' Intent Classification:');
   console.log('  Intent:', result.data.intent.intent);
   console.log('  Target:', result.data.intent.target || 'none');
   console.log('  Direction:', result.data.intent.direction || 'none');
@@ -205,14 +205,14 @@ export async function findDestination(
   console.log('  New Node Name:', result.data.decision.newNodeName || 'N/A');
   console.log('  Parent Node ID:', result.data.decision.parentNodeId || 'N/A');
   console.log('  Target Node ID:', result.data.decision.targetNodeId || 'N/A');
-  console.log('  Metadata:', result.data.decision.metadata || {});
+  console.log('  Metadata:', JSON.stringify(result.data.decision.metadata) || {});
   console.log('  Reasoning:', result.data.decision.reasoning);
   console.log('');
-  console.log('📦 Context Used:');
+  console.log(' Context Used:');
   console.log('  Current Node:', result.data.context.currentNode.name);
   console.log('  Node Type:', result.data.context.currentNode.type);
   console.log('  Dominant Elements:', result.data.context.currentNode.data.dominantElements);
-  console.log('🧭 ═══════════════════════════════════════════════════');
+  console.log(' ═══════════════════════════════════════════════════');
   
   // Convert to legacy format for compatibility
   const navigation: NavigationResult = {
