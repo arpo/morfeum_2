@@ -8,6 +8,12 @@ export interface IntentClassifierRequest {
   currentNode: {
     type: 'host' | 'region' | 'location' | 'niche' | 'detail' | 'view';
     name: string;
+    navigableElements?: Array<{
+      type: string;
+      position: string;
+      description: string;
+    }>;
+    dominantElements?: string[];
   };
 }
 
@@ -18,11 +24,36 @@ export interface IntentClassifierRequest {
 export function intentClassifierPrompt(request: IntentClassifierRequest): string {
   const { userCommand, currentNode } = request;
 
+  // Build context string with optional navigable elements
+  let contextString = `Current Context:
+- Node Type: ${currentNode.type}
+- Node Name: "${currentNode.name}"`;
+
+  // Add navigable elements if available
+  if (currentNode.navigableElements && currentNode.navigableElements.length > 0) {
+    const spaces = currentNode.navigableElements
+      .map(el => el.type)
+      .filter(Boolean)
+      .slice(0, 8) // Limit to 8 to keep prompt concise
+      .join(', ');
+    
+    if (spaces) {
+      contextString += `\n- Available Spaces: ${spaces}`;
+    }
+  }
+
+  // Add dominant elements if available (helps with LOOK_AT disambiguation)
+  if (currentNode.dominantElements && currentNode.dominantElements.length > 0) {
+    const elements = currentNode.dominantElements
+      .slice(0, 5) // Limit to 5 most dominant
+      .join(', ');
+    
+    contextString += `\n- Visible Elements: ${elements}`;
+  }
+
   return `You are a navigation intent classifier. Analyze the user's command and return ONLY a JSON object.
 
-Current Context:
-- Node Type: ${currentNode.type}
-- Node Name: "${currentNode.name}"
+${contextString}
 
 User Command: "${userCommand}"
 

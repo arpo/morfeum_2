@@ -14,13 +14,17 @@ import type { IntentResult, NodeType } from './types';
  * @param userCommand - Natural language command from user
  * @param currentNodeType - Type of node user is currently at
  * @param currentNodeName - Name of current node
+ * @param navigableElements - Optional navigable spaces/rooms
+ * @param dominantElements - Optional dominant visual elements
  * @returns IntentResult with classified intent and extracted information
  */
 export async function classifyIntent(
   apiKey: string,
   userCommand: string,
   currentNodeType: NodeType,
-  currentNodeName: string
+  currentNodeName: string,
+  navigableElements?: Array<{ type: string; position: string; description: string }>,
+  dominantElements?: string[]
 ): Promise<IntentResult> {
   
   // Generate prompt
@@ -28,7 +32,9 @@ export async function classifyIntent(
     userCommand,
     currentNode: {
       type: currentNodeType,
-      name: currentNodeName
+      name: currentNodeName,
+      navigableElements,
+      dominantElements
     }
   });
   

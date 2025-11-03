@@ -37,12 +37,14 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
   const apiKey = (req as any).mzooApiKey;
 
   try {
-    // Step 1: Classify intent using LLM
+    // Step 1: Classify intent using LLM (with optional context)
     const intent = await classifyIntent(
       apiKey,
       userCommand,
       context.currentNode.type,
-      context.currentNode.name
+      context.currentNode.name,
+      context.currentNode.data.navigableElements,
+      context.currentNode.data.dominantElements
     );
 
     // Step 2: Route navigation using deterministic logic
