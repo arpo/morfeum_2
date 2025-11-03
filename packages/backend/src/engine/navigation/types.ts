@@ -16,12 +16,16 @@ export type NavigationIntent =
   | 'GO_UP_DOWN'
   | 'ENTER_PORTAL'
   | 'APPROACH'
+  | 'EXPLORE_FEATURE'
+  | 'RELOCATE'
   | 'UNKNOWN';
 
 export interface IntentResult {
   intent: NavigationIntent;
   target: string | null;
   direction: string | null;
+  newRegion?: string | null;
+  relocationType?: 'macro' | 'micro' | null;
   confidence: number;
 }
 
@@ -68,8 +72,21 @@ export type NavigationAction =
   | 'create_niche'
   | 'create_detail'
   | 'create_view'
+  | 'create_hierarchy'
   | 'teleport'
   | 'unknown';
+
+export interface NodeSpec {
+  type: NodeType;
+  name: string;
+  parentId: string;
+  metadata: {
+    interior?: boolean;
+    placeType?: string;
+    progression?: boolean;
+    [key: string]: any;
+  };
+}
 
 export interface NavigationDecision {
   action: NavigationAction;
@@ -77,6 +94,7 @@ export interface NavigationDecision {
   parentNodeId?: string;
   newNodeType?: NodeType;
   newNodeName?: string;
+  nodeSpecs?: NodeSpec[];
   metadata?: {
     relation?: 'child' | 'sibling' | 'parent' | 'distant';
     elevation?: 'up' | 'down';
@@ -84,6 +102,9 @@ export interface NavigationDecision {
     entrance?: string;
     viewType?: 'approach' | 'detail' | 'through';
     portal?: string;
+    interior?: boolean;
+    progression?: boolean;
+    relocationType?: 'macro' | 'micro';
     [key: string]: any;
   };
   reasoning: string;
