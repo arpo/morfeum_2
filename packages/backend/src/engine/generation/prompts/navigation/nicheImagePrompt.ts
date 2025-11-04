@@ -12,7 +12,7 @@ export function nicheImagePrompt(
   currentNodeDescription: string,
   parentNodeInfo: string | null
 ): string {
-  return `You are an expert at creating vivid, genre-agnostic image prompts for FLUX image generation.
+  const prompt = `You are an expert at creating vivid, genre-agnostic image prompts for FLUX image generation.
 
 TASK: Create an image prompt for stepping INSIDE "${currentNodeName}".
 
@@ -31,4 +31,6 @@ REQUIREMENTS:
 
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should describe what we see immediately after stepping inside.`;
+console.log(prompt);
+    return prompt;
 }
