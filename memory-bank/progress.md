@@ -2,6 +2,71 @@
 
 ## Recent Updates
 
+### Terminology Cleanup Complete (November 4, 2025 - 1:50 PM)
+
+**Completed:**
+- ✅ Cleaned up confusing "world"/"sublocation" terminology inconsistencies
+- ✅ Renamed "world" → "host" across codebase for clarity
+- ✅ Renamed "sublocation" → "niche" for consistency
+- ✅ Updated all type definitions and interfaces
+- ✅ Fixed configuration files and constants
+- ✅ Updated code logic and event handling
+- ✅ Maintained backward compatibility where needed
+
+**Problem Solved:**
+Codebase had confusing terminology where:
+- "world" was used inconsistently (sometimes meant host, sometimes meant broader concept)
+- "sublocation" was ambiguous (interior spaces, smaller areas, etc.)
+- Type definitions mixed old and new terminology causing confusion
+- Configuration patterns and error messages used outdated terms
+
+**Solution:**
+Comprehensive terminology standardization:
+1. **Type System Updates**: `WorldNode` → `HostNode`, `SublocationNode` → `NicheNode`
+2. **Union Types**: `'world' | 'region' | 'location'` → `'host' | 'region' | 'location'`
+3. **NodeType**: Updated to include 'host' and 'niche' types consistently
+4. **Configuration**: ID patterns and error messages updated to new terminology
+5. **Logic**: All references to old terminology updated throughout codebase
+
+**Files Updated:**
+- `packages/backend/src/services/spawn/types/location.ts` - Core type definitions
+- `packages/frontend/src/store/slices/locations/types.ts` - Frontend type definitions
+- `packages/backend/src/services/spawn/shared/scopeDetection.ts` - Scope detection logic
+- `packages/backend/src/services/navigator/config/constants.ts` - Configuration constants
+- `packages/frontend/src/hooks/useSpawnEvents.ts` - Event handling logic
+- `packages/backend/src/services/spawn/types/deprecated.ts` - Legacy type compatibility
+
+**Key Changes:**
+- **Type Definitions**: All `WorldNode` references → `HostNode`, `SublocationNode` → `NicheNode`
+- **LocationScope**: Type updated from `'world' | 'region' | 'location'` to `'host' | 'region' | 'location'`
+- **NodeType Union**: Now consistently uses 'host' and 'niche' throughout
+- **ID Patterns**: Regex patterns updated from `world-` to `host-` prefix
+- **Error Messages**: User-facing messages now use "host" instead of "world"
+- **Event Handling**: Spawn events updated to work with new node type terminology
+
+**Benefits:**
+- **Reduced Confusion**: Clear distinction between host (top-level environment) and niche (interior spaces)
+- **Type Safety**: Updated type definitions prevent mixing old/new terminology
+- **Developer Experience**: Consistent naming across entire codebase
+- **Future-Proofing**: New code uses correct terminology, preventing technical debt
+- **Maintainability**: No ambiguity about what "world" or "sublocation" means in any context
+
+**System Impact:**
+- All core navigation and spawn systems now use consistent terminology
+- Legacy compatibility maintained for existing functionality
+- No breaking changes to public APIs
+- All tests and functionality remain intact
+- Search results show remaining references are in compatibility layers or comments
+
+**Result:**
+Production-ready codebase with consistent, clear terminology:
+- Host = top-level environment (city, world, realm, etc.)
+- Region = subdivisions within host (districts, biomes, areas)
+- Location = specific sites within regions (buildings, landmarks, structures)
+- Niche = interior spaces within locations (rooms, areas, details)
+
+---
+
 ### Navigation System Phase 1 Complete (November 3, 2025 - 2:00 PM)
 
 **Completed:**
