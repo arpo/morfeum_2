@@ -1,9 +1,9 @@
 /**
  * Scope Detection Utilities
- * Pre-parse user prompts to determine intended world depth
+ * Pre-parse user prompts to determine intended host depth
  */
 
-export type LocationScope = 'world' | 'region' | 'location';
+export type LocationScope = 'host' | 'region' | 'location';
 
 /**
  * Detect the intended scope/depth from user prompt
@@ -30,7 +30,7 @@ export function detectScope(prompt: string): LocationScope {
   }
 
   // Geographic regions → region
-  // Broad areas within a world
+  // Broad areas within a host
   const regionPatterns = [
     'district', 'quarter', 'neighborhood', 'borough',
     'shoreline', 'coastline', 'coast', 'waterfront',
@@ -44,22 +44,22 @@ export function detectScope(prompt: string): LocationScope {
     return 'region';
   }
 
-  // World-scale indicators → world
+  // Host-scale indicators → host
   // Large-scale entities (default case)
-  const worldPatterns = [
+  const hostPatterns = [
     'metropolis', 'city', 'town', 'village',
-    'world', 'realm', 'kingdom', 'empire',
+    'realm', 'kingdom', 'empire',
     'planet', 'moon', 'station', 'habitat',
     'dimension', 'universe', 'plane'
   ];
   
-  const worldRegex = new RegExp(`\\b(${worldPatterns.join('|')})\\b`, 'i');
-  if (worldRegex.test(prompt)) {
-    return 'world';
+  const hostRegex = new RegExp(`\\b(${hostPatterns.join('|')})\\b`, 'i');
+  if (hostRegex.test(prompt)) {
+    return 'host';
   }
 
-  // Default to world for ambiguous cases
-  return 'world';
+  // Default to host for ambiguous cases
+  return 'host';
 }
 
 /**
@@ -70,19 +70,19 @@ export function guardLocationDepth(result: any, scope: LocationScope): any {
   const guarded = { ...result };
 
   switch (scope) {
-    case 'world':
-      // Only world allowed
+    case 'host':
+      // Only host allowed
       delete guarded.region;
       delete guarded.location;
       break;
       
     case 'region':
-      // World + region allowed
+      // Host + region allowed
       delete guarded.location;
       break;
       
     case 'location':
-      // World + region + location allowed
+      // Host + region + location allowed
       break;
   }
 

@@ -151,7 +151,7 @@ export function useSpawnEvents() {
         // Create single node with flat NodeDNA (simplified for now - keep old structure temporarily)
         const node: Partial<Node> = {
           id: spawnId,
-          type: 'world' as any, // Temporary - will be removed in full migration
+          type: 'host' as any, // Temporary - will be removed in full migration
           name: nodeName,
           dna: deepProfile, // Flat NodeDNA structure
           imagePath: nodeImage,
@@ -159,7 +159,7 @@ export function useSpawnEvents() {
         };
         
         createNode(node as any);
-        addNodeToTree(spawnId, null, spawnId, 'world' as any);
+        addNodeToTree(spawnId, null, spawnId, 'host' as any);
         
         // Store simplified DNA in deep profile
         if (updateEntityProfile && deepProfile) {
@@ -327,7 +327,7 @@ export function useSpawnEvents() {
         return;
       }
       
-      // Find world ID by traversing tree
+      // Find host ID by traversing tree
       const cascadedDNA = getCascadedDNA(parentNodeId);
       if (!cascadedDNA.world) {
         console.error('[SSE] ❌ Could not find world DNA for parent:', parentNodeId);
@@ -337,8 +337,8 @@ export function useSpawnEvents() {
       // Extract clean name (remove the hierarchical suffix)
       const cleanName = dna.meta.name.split(' (')[0];
       
-      // Create sublocation node
-      const sublocationNode: Node = {
+      // Create niche node
+      const nicheNode: Node = {
         id: spawnId,
         type: 'niche',
         name: cleanName,
@@ -347,7 +347,7 @@ export function useSpawnEvents() {
         focus: undefined,
       };
       
-      createNode(sublocationNode);
+      createNode(nicheNode);
       
       // Find host ID from cascaded DNA
       // The host node ID is the first node in any tree path
@@ -355,7 +355,7 @@ export function useSpawnEvents() {
         .find(node => node.type === 'host' && node.dna === cascadedDNA.world)?.id;
       
       if (!hostId) {
-        console.error('[SSE] ❌ Could not find host ID for sublocation');
+        console.error('[SSE] ❌ Could not find host ID for niche');
         return;
       }
       
@@ -372,7 +372,7 @@ export function useSpawnEvents() {
         updateEntityProfile(spawnId, fullCascadedDNA as any);
       }
       
-      // Switch active entity to new sublocation
+      // Switch active entity to new niche
       if (setActiveEntity) {
         setActiveEntity(spawnId);
       }
@@ -664,7 +664,7 @@ export function useSpawnEvents() {
         
         const node: Partial<Node> = {
           id: spawnId,
-          type: 'world' as any,
+          type: 'host' as any,
           name: deepestNode.name,
           dna: hierarchy as any,
           imagePath: imageUrl || '',
@@ -675,7 +675,7 @@ export function useSpawnEvents() {
         };
         
         createNode(node as any);
-        addNodeToTree(spawnId, null, spawnId, 'world' as any);
+        addNodeToTree(spawnId, null, spawnId, 'host' as any);
         
         if (setActiveEntity) {
           setActiveEntity(spawnId);

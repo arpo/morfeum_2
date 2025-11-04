@@ -27,7 +27,7 @@ export interface View {
 export type NodeType = 'host' | 'region' | 'location' | 'niche';
 
 // DNA type definitions (single-layer per node)
-export interface WorldNode {
+export interface HostNode {
   meta: {
     name: string;
     slug: string;
@@ -166,7 +166,7 @@ export interface LocationNode {
   }>;
 }
 
-export interface SublocationNode {
+export interface NicheNode {
   meta: {
     name: string;
     slug?: string;
@@ -232,7 +232,7 @@ export interface Node {
   id: string;
   type: NodeType;
   name: string;
-  dna: WorldNode | RegionNode | LocationNode | SublocationNode;
+  dna: HostNode | RegionNode | LocationNode | NicheNode;
   imagePath: string;
   focus?: FocusState;
 }
@@ -246,10 +246,10 @@ export interface TreeNode {
 
 // Cascaded DNA for generation (collected from tree path)
 export interface CascadedDNA {
-  world?: WorldNode;
+  world?: HostNode;
   region?: RegionNode;
   location?: LocationNode;
-  sublocation?: SublocationNode;
+  sublocation?: NicheNode;
 }
 
 // Legacy Location interface for backward compatibility
@@ -262,7 +262,7 @@ export interface Location {
   depth_level: number;
   name: string;
   dna: {
-    world: WorldNode;
+    world: HostNode;
     region?: RegionNode;
     location?: LocationNode;
   };
