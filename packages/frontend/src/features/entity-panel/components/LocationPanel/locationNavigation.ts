@@ -43,6 +43,8 @@ interface NavigationResult {
   scale_hint?: string;
   relation?: string;
   reason: string;
+  imageUrl?: string;
+  imagePrompt?: string;
 }
 
 /**
@@ -187,33 +189,6 @@ export async function findDestination(
   
   const result = await response.json();
   
-  // Log EVERYTHING to browser console
-  console.log(' ═══════════════════════════════════════════════════');
-  console.log(' NAVIGATION ANALYSIS');
-  console.log(' ═══════════════════════════════════════════════════');
-  console.log(' User Command:', result.data.userCommand);
-  console.log('');
-  console.log(' Intent Classification:');
-  console.log('  Intent:', result.data.intent.intent);
-  console.log('  Target:', result.data.intent.target || 'none');
-  console.log('  Direction:', result.data.intent.direction || 'none');
-  console.log('  Confidence:', result.data.intent.confidence);
-  console.log('');
-  console.log('⚡ Navigation Decision:');
-  console.log('  Action:', result.data.decision.action);
-  console.log('  New Node Type:', result.data.decision.newNodeType || 'N/A');
-  console.log('  New Node Name:', result.data.decision.newNodeName || 'N/A');
-  console.log('  Parent Node ID:', result.data.decision.parentNodeId || 'N/A');
-  console.log('  Target Node ID:', result.data.decision.targetNodeId || 'N/A');
-  console.log('  Metadata:', JSON.stringify(result.data.decision.metadata) || {});
-  console.log('  Reasoning:', result.data.decision.reasoning);
-  console.log('');
-  console.log(' Context Used:');
-  console.log('  Current Node:', result.data.context.currentNode.name);
-  console.log('  Node Type:', result.data.context.currentNode.type);
-  console.log('  Dominant Elements:', result.data.context.currentNode.data.dominantElements);
-  console.log(' ═══════════════════════════════════════════════════');
-  
   // Convert to legacy format for compatibility
   const navigation: NavigationResult = {
     action: result.data.decision.action === 'create_niche' || 
@@ -225,7 +200,9 @@ export async function findDestination(
     name: result.data.decision.newNodeName,
     scale_hint: result.data.decision.newNodeType,
     relation: result.data.decision.metadata?.relation,
-    reason: result.data.decision.reasoning
+    reason: result.data.decision.reasoning,
+    imageUrl: result.data.imageUrl,
+    imagePrompt: result.data.imagePrompt
   };
   
   return navigation;

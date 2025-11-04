@@ -23,14 +23,14 @@ export function LocationPanel() {
   return (
     <div className={styles.container} data-component="location-panel">
       <div className={styles.imageContainer}>
-        {(!state.entityImage || imageLoading) && (
+        {((!state.entityImage && !state.previewImage) || imageLoading) && (
           <div className={styles.imageSkeleton}>
             <div className={styles.skeletonBreathing} />
           </div>
         )}
-        {state.entityImage && (
+        {(state.previewImage || state.entityImage) && (
           <img 
-            src={state.entityImage} 
+            src={(state.previewImage || state.entityImage) || ''} 
             alt={state.entityName || 'Location'}
             className={styles.locationHeaderImage}
             onLoad={() => setImageLoading(false)}

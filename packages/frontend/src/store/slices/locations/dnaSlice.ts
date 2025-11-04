@@ -4,7 +4,7 @@
  */
 
 import { StateCreator } from 'zustand';
-import { CascadedDNA, Node, WorldNode, RegionNode, LocationNode, SublocationNode, TreeNode } from './types';
+import { CascadedDNA, Node, HostNode, RegionNode, LocationNode, NicheNode, TreeNode } from './types';
 import { NodesSlice } from './nodesSlice';
 import { TreesSlice } from './treesSlice';
 
@@ -79,7 +79,7 @@ export const createDNASlice: StateCreator<
       
       switch (pathNode.type) {
         case 'host':
-          cascaded.world = pathNode.dna as WorldNode;
+          cascaded.world = pathNode.dna as HostNode;
           break;
         case 'region':
           cascaded.region = pathNode.dna as RegionNode;
@@ -88,7 +88,7 @@ export const createDNASlice: StateCreator<
           cascaded.location = pathNode.dna as LocationNode;
           break;
         case 'niche':
-          cascaded.sublocation = pathNode.dna as SublocationNode;
+          cascaded.sublocation = pathNode.dna as NicheNode;
           break;
       }
     }

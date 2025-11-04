@@ -51,9 +51,9 @@ export type {
   View,
   FocusState,
   CascadedDNA,
-  WorldNode,
+  HostNode,
   RegionNode,
   LocationNode,
-  SublocationNode,
+  NicheNode,
   Location, // Legacy - deprecated
 } from './types';

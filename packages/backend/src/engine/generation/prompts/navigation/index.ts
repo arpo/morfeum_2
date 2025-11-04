@@ -8,3 +8,4 @@ export type { NavigationDecisionRequest, NavigationDecision } from './navigation
 export { navigatorSemanticNodeSelector } from './navigatorSemanticNodeSelector';
 export { intentClassifierPrompt } from './intentClassifier';
 export type { IntentClassifierRequest } from './intentClassifier';
+export { nicheImagePrompt } from './nicheImagePrompt';

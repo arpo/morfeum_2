@@ -23,6 +23,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   const [movementInput, setMovementInput] = useState('');
   const [isMoving, setIsMoving] = useState(false);
   const [createImage, setCreateImage] = useState(true);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
   
   // Store methods
   const getNode = useLocationsStore(state => state.getNode);
@@ -87,6 +88,11 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         currentLocationDetails,
         spatialNodesWithTree
       );
+      
+      // If image was generated, display it
+      if (navigation.imageUrl) {
+        setPreviewImage(navigation.imageUrl);
+      }
       
       // Handle navigation result
       if (navigation.action === 'move' && navigation.targetNodeId) {
@@ -226,7 +232,8 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       ...base,
       movementInput,
       isMoving,
-      createImage
+      createImage,
+      previewImage
     },
     handlers: {
       openModal: base.openModal,
@@ -236,7 +243,8 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       setMovementInput,
       handleMove,
       saveLocation,
-      setCreateImage
+      setCreateImage,
+      clearPreviewImage: () => setPreviewImage(null)
     }
   };
 }
