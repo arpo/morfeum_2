@@ -6,22 +6,22 @@
 import { generateText, generateImage } from '../../../services/mzoo';
 import { AI_MODELS } from '../../../config/constants';
 import { nicheImagePrompt } from '../../generation/prompts/navigation/nicheImagePrompt';
-import type { NavigationDecision, NavigationContext } from '../types';
+import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
 
 /**
  * Generate image prompt for stepping inside using LLM
  */
 async function generateNicheImagePrompt(
-  currentNodeName: string,
-  currentNodeDescription: string,
-  parentNodeInfo: string | null,
+  context: NavigationContext,
+  intent: IntentResult,
+  decision: NavigationDecision,
   apiKey: string
 ): Promise<string> {
-  const prompt = nicheImagePrompt(currentNodeName, currentNodeDescription, parentNodeInfo);
+  const prompt = nicheImagePrompt(context, intent, decision);
 
   const messages = [
     { role: 'system', content: prompt },
-    { role: 'user', content: `Generate image prompt for stepping inside: ${currentNodeName}` }
+    { role: 'user', content: `Generate image prompt for stepping inside: ${context.currentNode.name}` }
   ];
 
   const result = await generateText(
@@ -43,25 +43,14 @@ async function generateNicheImagePrompt(
 export async function runCreateNichePipeline(
   decision: NavigationDecision,
   context: NavigationContext,
+  intent: IntentResult,
   apiKey: string
 ): Promise<{ imageUrl: string; imagePrompt: string }> {
-  // Step 1: Gather context
-  const currentNodeName = context.currentNode.name;
-  const currentNodeDescription = context.currentNode.data.description || 
-                                  context.currentNode.data.looks || 
-                                  'No description available';
-  
-  // Get parent context if available
-  let parentNodeInfo: string | null = null;
-  if (context.parentNode) {
-    parentNodeInfo = `${context.parentNode.name}: ${context.parentNode.data?.description || context.parentNode.data?.looks || ''}`;
-  }
-
-  // Step 2: Generate image prompt using LLM
+  // Generate image prompt using LLM with full context
   const imagePrompt = await generateNicheImagePrompt(
-    currentNodeName,
-    currentNodeDescription,
-    parentNodeInfo,
+    context,
+    intent,
+    decision,
     apiKey
   );
 

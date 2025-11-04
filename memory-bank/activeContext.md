@@ -1,6 +1,142 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (November 4, 2025 - 1:50 PM)
+## Latest Session Summary (November 4, 2025 - 5:00 PM)
+
+### Current Task: Niche Node Pipeline Implementation - COMPLETED ✅
+
+**Niche Node Pipeline for GO_INSIDE Navigation (COMPLETED):**
+- ✅ Created `createNicheNodePipeline.ts` for GO_INSIDE intent handling
+- ✅ Created `nicheImagePrompt.ts` to generate FLUX image prompts for interior views
+- ✅ Wired navigation router to run pipeline when GO_INSIDE detected
+- ✅ Fixed frontend data flow to pass complete node DNA and parent context
+- ✅ Simplified prompt to dump all data as JSON for manual prompt crafting
+- ✅ Added navigation decision data to prompt (action, reasoning, metadata)
+- ✅ Images display in LocationPanel preview panel immediately
+
+**Problem Solved:**
+Navigation system had intent classification working (GO_INSIDE detected correctly), but no pipeline to actually generate the interior view image. User command "go inside" would classify correctly but do nothing.
+
+**Solution:**
+Built complete pipeline for interior image generation:
+
+1. **Pipeline Creation**: `createNicheNodePipeline.ts`
+   - Takes navigation decision + context + intent
+   - Calls LLM to generate FLUX image prompt
+   - Generates image via mzoo API
+   - Returns imageUrl and imagePrompt
+
+2. **Prompt Engineering**: `nicheImagePrompt.ts`
+   - Initially tried to extract specific fields (colors, lighting, etc.)
+   - Data structure didn't match expectations (missing fields)
+   - **Final Solution**: Dump ALL data as JSON for manual prompt crafting
+   - Includes: intent, decision, currentNode (full DNA), parentNode (full DNA)
+
+3. **Data Flow Fix**: Frontend context building
+   - **Problem**: Only sending minimal data (name, description)
+   - **Solution**: Pass complete node with full DNA and navigableElements
+   - Find parent node from spatial tree structure
+   - Extract all data from currentNode.dna directly
+
+4. **Integration**: Navigation router
+   - Added pipeline call in `handleGoInside` handler
+   - Returns imageUrl/imagePrompt in navigation result
+   - Frontend displays image in preview panel
+
+**Architecture:**
+```
+User: "go inside" 
+  ↓
+Intent Classifier (LLM) → GO_INSIDE
+  ↓
+Navigation Router → handleGoInside()
+  ↓
+createNicheNodePipeline(decision, context, intent)
+  ↓
+nicheImagePrompt() → Dumps all data as JSON
+  ↓
+LLM generates FLUX prompt
+  ↓
+mzoo API generates image
+  ↓
+Image displays in LocationPanel
+```
+
+**Key Technical Decisions:**
+
+**Prompt Data Structure:**
+- Initially: Tried to extract specific fields (visualStyle.colors, etc.)
+- Problem: Node DNA structure didn't have those exact field names
+- Solution: Dump everything as `JSON.stringify()` for transparency
+- Benefit: User can see ALL available data and craft prompt accordingly
+
+**Frontend Data Flow:**
+- Initially: `findDestination(userCommand, currentFocus, currentLocationDetails, spatialNodes, currentNode)`
+- Problem: Too many parameters, some unused (currentFocus never used)
+- Final: `findDestination(userCommand, currentNode, spatialNodes)`
+- Extract all data from currentNode.dna inside the function
+- Find parent from spatialNodes tree structure
+
+**Prompt Content:**
+```typescript
+NAVIGATION INTENT:
+{
+  "intent": "GO_INSIDE",
+  "target": null,
+  "confidence": 1
+}
+
+NAVIGATION DECISION:
+{
+  "action": "create_niche",
+  "newNodeType": "niche",
+  "newNodeName": "Interior of Blackwood Manor",
+  "parentNodeId": "...",
+  "metadata": { "relation": "child", "entrance": "Blackwood Manor" },
+  "reasoning": "Creating interior niche..."
+}
+
+CURRENT NODE: {...complete DNA object...}
+PARENT NODE: {...complete parent DNA...}
+```
+
+**Files Created:**
+- `packages/backend/src/engine/navigation/pipelines/createNicheNodePipeline.ts` - Complete pipeline
+- `packages/backend/src/engine/generation/prompts/navigation/nicheImagePrompt.ts` - Prompt generator
+- `packages/backend/src/engine/generation/prompts/navigation/index.ts` - Exports
+
+**Files Modified:**
+- `packages/backend/src/routes/mzoo/navigation.ts` - Calls pipeline in GO_INSIDE handler
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/locationNavigation.ts`:
+  - Simplified to 3 parameters: `findDestination(userCommand, currentNode, spatialNodes)`
+  - Extract all data from currentNode.dna inside function
+  - Find parent using spatialNodes tree structure
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts`:
+  - Updated call site to pass 3 parameters
+  - Removed unused currentFocus and currentLocationDetails parameters
+
+**Result:**
+GO_INSIDE navigation now generates interior images:
+- User types "go inside" → Intent classified → Pipeline runs
+- LLM receives ALL node data (DNA, parent context, decision metadata)
+- FLUX image generated showing interior view
+- Image displays immediately in LocationPanel preview
+- Prompt dumps complete JSON for manual prompt crafting
+
+**Benefits:**
+- **Working Pipeline**: GO_INSIDE intent now has complete implementation
+- **Transparency**: All data visible in console.log for prompt engineering
+- **Flexibility**: User can handcraft prompt based on actual data structure
+- **Clean Code**: Simplified frontend function signatures (3 params vs 5)
+- **Data Rich**: LLM has complete context (intent, decision, node DNA, parent DNA)
+
+**Next Steps:**
+- User will handcraft the image prompt based on the JSON data dump
+- Can use actual field names from the DNA structure
+- May add more pipelines for other intent types (GO_OUTSIDE, GO_TO_ROOM, etc.)
+
+---
+
+## Previous Session Summary (November 4, 2025 - 1:50 PM)
 
 ### Current Task: Terminology Cleanup - COMPLETED ✅
 

@@ -57,7 +57,7 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
     
     if (decision.action === 'create_niche') {
       try {
-        const pipelineResult = await runCreateNichePipeline(decision, context, apiKey);
+        const pipelineResult = await runCreateNichePipeline(decision, context, intent, apiKey);
         imageUrl = pipelineResult.imageUrl;
         imagePrompt = pipelineResult.imagePrompt;
       } catch (pipelineError) {

@@ -2,6 +2,91 @@
 
 ## Recent Updates
 
+### Niche Node Pipeline Implementation Complete (November 4, 2025 - 5:00 PM)
+
+**Completed:**
+- ✅ Created complete pipeline for GO_INSIDE navigation intent
+- ✅ Built image generation system for interior views
+- ✅ Fixed frontend data flow to pass complete node DNA
+- ✅ Simplified prompt to dump all data as JSON
+- ✅ Integrated with existing navigation system
+- ✅ Images display immediately in LocationPanel
+
+**Problem Solved:**
+Navigation system could classify GO_INSIDE intent but had no pipeline to generate the interior view image.
+
+**Solution:**
+Built end-to-end pipeline:
+
+**Pipeline Architecture:**
+```
+User: "go inside"
+  ↓
+Intent Classifier → GO_INSIDE
+  ↓
+Navigation Router → handleGoInside()
+  ↓
+createNicheNodePipeline(decision, context, intent)
+  ↓
+nicheImagePrompt() → Dumps all data as JSON
+  ↓
+LLM generates FLUX prompt
+  ↓
+mzoo API generates image
+  ↓
+Image displays in LocationPanel
+```
+
+**Key Components:**
+
+1. **Pipeline**: `createNicheNodePipeline.ts`
+   - Takes navigation decision, context, and intent
+   - Calls LLM to generate FLUX image prompt
+   - Generates image via mzoo API
+   - Returns imageUrl and imagePrompt
+
+2. **Prompt Generator**: `nicheImagePrompt.ts`
+   - Dumps complete data as JSON for transparency
+   - Includes: intent, decision, currentNode (full DNA), parentNode (full DNA)
+   - User can see all available data for prompt crafting
+
+3. **Frontend Data Flow**: Fixed to pass complete context
+   - Extract all data from currentNode.dna
+   - Find parent node from spatial tree structure
+   - Simplified function signatures (3 params vs 5)
+
+**Files Created:**
+- `packages/backend/src/engine/navigation/pipelines/createNicheNodePipeline.ts`
+- `packages/backend/src/engine/generation/prompts/navigation/nicheImagePrompt.ts`
+- `packages/backend/src/engine/generation/prompts/navigation/index.ts`
+
+**Files Modified:**
+- `packages/backend/src/routes/mzoo/navigation.ts` - Calls pipeline in GO_INSIDE handler
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/locationNavigation.ts` - Simplified data flow
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts` - Updated call site
+
+**Result:**
+GO_INSIDE navigation fully functional:
+- User types "go inside" → Intent classified → Pipeline runs → Image generated
+- LLM receives ALL node data (DNA, parent context, decision metadata)
+- FLUX image shows interior view
+- Image displays immediately in LocationPanel preview
+- Console.log dumps complete JSON for manual prompt crafting
+
+**Benefits:**
+- **Working Pipeline**: GO_INSIDE intent has complete implementation
+- **Transparency**: All data visible for prompt engineering
+- **Flexibility**: User can handcraft prompt based on actual data
+- **Clean Code**: Simplified function signatures
+- **Data Rich**: LLM has complete context
+
+**Next Steps:**
+- User will handcraft image prompt based on JSON data dump
+- Can use actual field names from DNA structure
+- May add pipelines for other intent types (GO_OUTSIDE, GO_TO_ROOM, etc.)
+
+---
+
 ### Terminology Cleanup Complete (November 4, 2025 - 1:50 PM)
 
 **Completed:**

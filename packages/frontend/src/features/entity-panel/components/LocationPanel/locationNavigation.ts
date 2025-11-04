@@ -142,26 +142,51 @@ export function buildSpatialNodes(
  */
 export async function findDestination(
   userCommand: string,
-  currentFocus: FocusState,
-  currentLocationDetails: CurrentLocationDetails,
+  currentNode: Node,
   spatialNodes: SpatialNode[]
 ): Promise<NavigationResult> {
-  // Build context for new navigation system
+  // Extract data from currentNode DNA
+  const nodeDNA = currentNode.dna as any;
+  const navigableElements = nodeDNA?.navigableElements || [];
+  const visualAnchors = nodeDNA.visualAnchors || {
+    dominantElements: [],
+    uniqueIdentifiers: []
+  };
+  const searchDesc = nodeDNA.searchDesc || nodeDNA.profile?.searchDesc || currentNode.name;
+  
+  // Find parent node from spatialNodes (parent has this node as a child in tree)
+  const currentSpatialNode = spatialNodes.find(node => node.id === currentNode.id);
+  const parentNodeData = currentSpatialNode?.parent_location_id 
+    ? spatialNodes.find(node => node.id === currentSpatialNode.parent_location_id)
+    : undefined;
+  
+  // Build context for new navigation system with full data
   const context = {
     currentNode: {
-      id: currentLocationDetails.node_id,
+      id: currentNode.id,
       type: 'location' as const,
-      name: currentLocationDetails.name,
-      parentId: null, // Will be determined from spatial nodes
+      name: currentNode.name,
+      parentId: currentSpatialNode?.parent_location_id || null,
       data: {
-        description: currentLocationDetails.searchDesc,
-        looks: currentLocationDetails.searchDesc,
-        dominantElements: currentLocationDetails.visualAnchors.dominantElements,
-        uniqueIdentifiers: currentLocationDetails.visualAnchors.uniqueIdentifiers,
-        searchDesc: currentLocationDetails.searchDesc
-      }
+        description: searchDesc,
+        looks: searchDesc,
+        dominantElements: visualAnchors.dominantElements,
+        uniqueIdentifiers: visualAnchors.uniqueIdentifiers,
+        searchDesc: searchDesc,
+        navigableElements: navigableElements
+      },
+      dna: currentNode.dna  // Include full DNA
     },
-    parentNode: undefined, // Add if available
+    parentNode: parentNodeData ? {
+      id: parentNodeData.id,
+      type: 'location' as const,
+      name: parentNodeData.name,
+      data: {
+        description: parentNodeData.searchDesc,
+        looks: parentNodeData.searchDesc
+      },
+      dna: parentNodeData.dna  // Include parent DNA for lighting context
+    } : undefined,
     siblingNodes: spatialNodes.map(node => ({
       id: node.id,
       name: node.name,

@@ -64,7 +64,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       // Get cascaded DNA for current node
       const cascadedDNA = getCascadedDNA(currentNode.id);
       
-      // Initialize focus if missing
+      // Initialize focus if missing (for later move action)
       const currentFocus = currentNode.focus || {
         node_id: currentNode.name,
         perspective: 'exterior' as const,
@@ -75,17 +75,13 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       // Get spatially connected nodes
       const spatialNodes = getSpatialNodes(currentNode.id);
       
-      // Build current location details with visual context
-      const currentLocationDetails = buildCurrentLocationDetails(currentNode);
-      
       // Build spatial nodes with tree traversal data
       const spatialNodesWithTree = buildSpatialNodes(spatialNodes, worldTrees);
       
       // Call NavigatorAI to find destination
       const navigation = await findDestination(
         movementInput,
-        currentFocus,
-        currentLocationDetails,
+        currentNode,
         spatialNodesWithTree
       );
       
