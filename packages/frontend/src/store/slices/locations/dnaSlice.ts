@@ -77,18 +77,21 @@ export const createDNASlice: StateCreator<
       const pathNode = get().getNode(id);
       if (!pathNode) continue;
       
+      // Extract inner dna field if it exists (handles nested structure from backend)
+      const nodeDNA = (pathNode.dna as any)?.dna || pathNode.dna;
+      
       switch (pathNode.type) {
         case 'host':
-          cascaded.world = pathNode.dna as HostNode;
+          cascaded.world = nodeDNA as HostNode;
           break;
         case 'region':
-          cascaded.region = pathNode.dna as RegionNode;
+          cascaded.region = nodeDNA as RegionNode;
           break;
         case 'location':
-          cascaded.location = pathNode.dna as LocationNode;
+          cascaded.location = nodeDNA as LocationNode;
           break;
         case 'niche':
-          cascaded.sublocation = pathNode.dna as NicheNode;
+          cascaded.sublocation = nodeDNA as NicheNode;
           break;
       }
     }

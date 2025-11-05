@@ -679,3 +679,117 @@ The MZOO implementation demonstrates this pattern:
 6. **Documentation**: Comment service functions clearly
 7. **Exports**: Always update index files
 8. **Testing**: Write unit tests for service functions
+
+## DNA System Architecture
+
+### Philosophy: Storage vs Usage
+
+The DNA system maintains **separate structures** for different purposes:
+
+**Storage (Database/Store)**:
+- Nodes stored separately with clean DNA
+- No nested child arrays (`host.regions[]` removed)
+- Each node has only its own data
+- Enables: vector search, efficient queries, modular updates
+
+**LLM Usage (Image Generation, Navigation)**:
+- Nodes need merged DNA with inheritance
+- Child nodes inherit parent values (null-skipping)
+- Complete context for creative generation
+- Enables: consistent world-building, inherited aesthetics
+
+### Core Functions
+
+#### extractCleanDNA - For Storage
+
+**Purpose**: Strip nested child arrays when storing nodes from backend
+
+**Location**: `packages/frontend/src/utils/nodeDNAExtractor.ts`
+
+**Usage**:
+```typescript
+import { extractCleanDNA } from '@/utils/nodeDNAExtractor';
+const cleanDNA = extractCleanDNA(backendHostData, 'host');
+```
+
+**Used By**:
+- `hierarchyParser.ts` - When receiving backend data
+- Ensures clean storage in Zustand store
+
+#### getMergedDNA - For LLM Usage
+
+**Purpose**: Merge cascaded DNA with inheritance (null-skipping)
+
+**Location**: `packages/frontend/src/utils/nodeDNAExtractor.ts`
+
+**Usage**:
+```typescript
+import { getMergedDNA } from '@/utils/nodeDNAExtractor';
+const cascaded = getCascadedDNA(nodeId);
+const merged = getMergedDNA(cascaded);
+```
+
+**Inheritance Rules**:
+1. Start with host/world DNA as base
+2. Override with region DNA (skip null values)
+3. Override with location DNA (skip null values)
+4. Override with niche DNA (skip null values)
+
+**Used By**:
+- `locationNavigation.ts` - Before sending to backend APIs
+- Any code needing complete inherited context
+
+### Data Flow Pattern
+
+```
+Backend (nested) → extractCleanDNA → Store (clean, flat)
+Store → getCascadedDNA → getMergedDNA → Backend LLM (merged)
+```
+
+### Key Design Decisions
+
+**1. Separate Storage and Usage**: Storage optimized for queries, usage optimized for LLM context
+
+**2. Null-Skipping Inheritance**: `null` means "inherit from parent", explicit values override
+
+**3. Inner DNA Extraction**: `getCascadedDNA` extracts nested `dna` field automatically
+
+### Implementation Files
+
+**Core Utility**:
+- `packages/frontend/src/utils/nodeDNAExtractor.ts`
+
+**Storage (extractCleanDNA)**:
+- `packages/frontend/src/utils/hierarchyParser.ts`
+
+**LLM Usage (getMergedDNA)**:
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/locationNavigation.ts`
+
+**DNA Access**:
+- `packages/frontend/src/store/slices/locations/dnaSlice.ts`
+
+### Best Practices
+
+**When to Use extractCleanDNA**:
+- ✅ When receiving data from backend
+- ✅ When storing nodes in store
+- ❌ Not needed for data already in store
+
+**When to Use getMergedDNA**:
+- ✅ Before sending context to backend LLM APIs
+- ✅ When you need complete inherited DNA
+- ✅ For image generation, navigation prompts
+- ❌ Not needed for detail page display
+
+**Don't Mix Concerns**:
+- ❌ Don't merge DNA at storage time
+- ❌ Don't send raw cascaded DNA to LLM
+- ✅ Clean storage, merge at usage
+
+### Documentation
+
+See `docs/dna-system-architecture.md` for complete documentation including:
+- Detailed philosophy and problem statement
+- Data flow diagrams
+- Complete examples
+- Future enhancement plans

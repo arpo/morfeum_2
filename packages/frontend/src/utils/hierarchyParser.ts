@@ -6,6 +6,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import type { Node, NodeType, TreeNode } from '@/store/slices/locations';
 import { initFocus } from './locationFocus';
+import { extractCleanDNA } from './nodeDNAExtractor';
 
 export interface ParsedHierarchy {
   nodes: Node[];
@@ -123,65 +124,33 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
 }
 
 /**
- * Preserve host/world data from backend
- * Simply store everything - let backend structure win
+ * Extract host DNA using shared utility
+ * Strips nested 'regions' array
  */
 function extractHostDNA(host: any): any {
-  return {
-    ...host,  // Preserve ALL fields from backend
-    slug: host.slug || generateSlug(host.name)  // Add slug if missing
-  };
+  return extractCleanDNA(host, 'host');
 }
 
 /**
- * Preserve region data from backend
- * Simply store everything - let backend structure win
+ * Extract region DNA using shared utility
+ * Strips nested 'locations' array
  */
 function extractRegionDNA(region: any): any {
-  return {
-    ...region,  // Preserve ALL fields from backend
-    slug: region.slug || generateSlug(region.name)  // Add slug if missing
-  };
+  return extractCleanDNA(region, 'region');
 }
 
 /**
- * Preserve location data from backend
- * Simply store everything - let backend structure win
+ * Extract location DNA using shared utility
+ * Strips nested 'niches' array
  */
 function extractLocationDNA(location: any): any {
-  return {
-    ...location,  // Preserve ALL fields from backend
-    slug: location.slug || generateSlug(location.name)  // Add slug if missing
-  };
+  return extractCleanDNA(location, 'location');
 }
 
 /**
- * Preserve niche/sublocation data from backend
- * Simply store everything - let backend structure win
+ * Extract niche DNA using shared utility
+ * No nested arrays to strip
  */
 function extractNicheDNA(niche: any): any {
-  return {
-    ...niche,  // Preserve ALL fields from backend
-    slug: niche.slug || generateSlug(niche.name)  // Add slug if missing
-  };
-}
-
-/**
- * Ensure a value is an array
- */
-function ensureArray(value: any): any[] {
-  if (!value) return [];
-  if (Array.isArray(value)) return value;
-  if (typeof value === 'string') return value.split(',').map(s => s.trim()).filter(Boolean);
-  return [];
-}
-
-/**
- * Generate URL-friendly slug from name
- */
-function generateSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
+  return extractCleanDNA(niche, 'niche');
 }

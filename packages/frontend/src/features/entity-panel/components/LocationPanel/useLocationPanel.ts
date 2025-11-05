@@ -82,7 +82,8 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       const navigation = await findDestination(
         movementInput,
         currentNode,
-        spatialNodesWithTree
+        spatialNodesWithTree,
+        getCascadedDNA
       );
       
       // If image was generated, display it

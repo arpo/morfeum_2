@@ -4,6 +4,7 @@
  */
 
 import { Node } from '@/store/slices/locations';
+import { getMergedDNA } from '@/utils/nodeDNAExtractor';
 
 interface FocusState {
   node_id: string;
@@ -143,16 +144,12 @@ export function buildSpatialNodes(
 export async function findDestination(
   userCommand: string,
   currentNode: Node,
-  spatialNodes: SpatialNode[]
+  spatialNodes: SpatialNode[],
+  getCascadedDNA: (nodeId: string) => any
 ): Promise<NavigationResult> {
   // Extract data from currentNode DNA
-  const nodeDNA = currentNode.dna as any;
-  const navigableElements = nodeDNA?.navigableElements || [];
-  const visualAnchors = nodeDNA.visualAnchors || {
-    dominantElements: [],
-    uniqueIdentifiers: []
-  };
-  const searchDesc = nodeDNA.searchDesc || nodeDNA.profile?.searchDesc || currentNode.name;
+  const nodeDNA = (currentNode.dna || {}) as Record<string, any>;
+  const { dna: _currentNestedDNA, ...currentNodeBaseData } = nodeDNA;
   
   // Find parent node from spatialNodes (parent has this node as a child in tree)
   const currentSpatialNode = spatialNodes.find(node => node.id === currentNode.id);
@@ -160,32 +157,41 @@ export async function findDestination(
     ? spatialNodes.find(node => node.id === currentSpatialNode.parent_location_id)
     : undefined;
   
-  // Build context for new navigation system with full data
+  // Get cascaded DNA and merge for LLM usage (inherits parent values)
+  const currentCascadedDNA = getCascadedDNA(currentNode.id);
+  const currentMergedDNA = getMergedDNA(currentCascadedDNA);
+  const currentNodeDataForContext = {
+    ...currentNodeBaseData
+  };
+  
+  const parentRawDNA = parentNodeData
+    ? ((parentNodeData.dna || {}) as Record<string, any>)
+    : undefined;
+  const parentMergedDNA = parentNodeData
+    ? getMergedDNA(getCascadedDNA(parentNodeData.id))
+    : undefined;
+  let parentNodeDataForContext: Record<string, any> | undefined;
+  if (parentRawDNA) {
+    parentNodeDataForContext = { ...parentRawDNA };
+    delete parentNodeDataForContext.dna;
+  }
+  
+  // Build context for new navigation system with merged DNA
   const context = {
     currentNode: {
       id: currentNode.id,
       type: 'location' as const,
       name: currentNode.name,
       parentId: currentSpatialNode?.parent_location_id || null,
-      data: {
-        description: searchDesc,
-        looks: searchDesc,
-        dominantElements: visualAnchors.dominantElements,
-        uniqueIdentifiers: visualAnchors.uniqueIdentifiers,
-        searchDesc: searchDesc,
-        navigableElements: navigableElements
-      },
-      dna: currentNode.dna  // Include full DNA
+      data: currentNodeDataForContext,
+      dna: currentMergedDNA  // Merged DNA with inheritance
     },
     parentNode: parentNodeData ? {
       id: parentNodeData.id,
       type: 'location' as const,
       name: parentNodeData.name,
-      data: {
-        description: parentNodeData.searchDesc,
-        looks: parentNodeData.searchDesc
-      },
-      dna: parentNodeData.dna  // Include parent DNA for lighting context
+      data: parentNodeDataForContext,
+      dna: parentMergedDNA
     } : undefined,
     siblingNodes: spatialNodes.map(node => ({
       id: node.id,

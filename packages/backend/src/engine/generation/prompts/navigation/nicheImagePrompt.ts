@@ -16,13 +16,13 @@ export function nicheImagePrompt(
 ): string {
   const prompt = `You are an expert at creating vivid, genre-agnostic image prompts for FLUX image generation.
 
-TASK: Create an image prompt for stepping INSIDE "${context.currentNode.name}".
+TASK: Create an image prompt for ${intent.intent} "${context.currentNode.name}".
+${decision.reasoning ? `You should aim to "${decision.reasoning}".` : ''}
 
-NAVIGATION INTENT:
-${JSON.stringify(intent, null, 2)}
+The scene can be both interior and exterior depending on the context.
 
-NAVIGATION DECISION:
-${JSON.stringify(decision, null, 2)}
+You should create a niche inside a location based on the following data:
+Description: ${context.currentNode.data.description || 'N/A'}
 
 CURRENT NODE (location we're entering):
 ${JSON.stringify(context.currentNode, null, 2)}

@@ -1,6 +1,145 @@
 # Active Context - Current Work Focus
 
-## Latest Session Summary (November 4, 2025 - 5:00 PM)
+## Latest Session Summary (November 5, 2025 - 5:18 PM)
+
+### Current Task: Navigation Niche Pipeline — IN PROGRESS
+- Objective: implement `createNicheNodePipeline` triggered by `handleGoInside` within `packages/backend/src/engine/navigation/navigationRouter.ts`.
+- Required pipeline flow:
+  1. Collect the active location node DNA plus parent/region context (including time-of-day) before invoking the LLM.
+  2. Prompt the LLM to imagine the moment immediately after stepping inside the location, using genre-neutral language and highlighting navigation affordances (doors, stairs, portals).
+  3. Receive a FLUX-compatible image prompt from the LLM.
+  4. Use the MZOO API to generate the FLUX image asset.
+  5. Return image prompt + URL so the frontend `location-panel` can display the result.
+- Additional considerations:
+  - Pull regional/environmental cues (weather, lighting, time) from parent nodes to avoid mismatched scenes.
+  - Ensure the prompt gracefully handles missing context and still encourages creative but coherent imagery.
+  - Decide how the generated niche node should be persisted or previewed once the asset is created.
+- Next actions:
+  - Scaffold `createNicheNodePipeline` under `packages/backend/src/engine/navigation/pipelines/`.
+  - Author a prompt builder in `packages/backend/src/engine/generation/prompts/navigation/` tailored for interior niche imagery.
+  - Update `handleGoInside` to launch the pipeline and propagate returned image metadata back to the client.
+
+## Latest Session Summary (November 5, 2025 - 3:50 PM)
+
+### Current Task: DNA System Architecture - COMPLETED ✅
+
+**DNA Extraction and Inheritance System (COMPLETED):**
+- ✅ Created comprehensive DNA extraction and inheritance system
+- ✅ Built extractCleanDNA for clean storage (strips nested arrays)
+- ✅ Built getMergedDNA for LLM usage (inheritance with null-skipping)
+- ✅ Fixed getCascadedDNA to extract inner dna field from nested backend structure
+- ✅ Updated hierarchyParser to use extractCleanDNA for all node types
+- ✅ Updated locationNavigation to use getMergedDNA before sending to backend
+- ✅ Created comprehensive documentation (docs/dna-system-architecture.md)
+- ✅ Updated memory bank with DNA system patterns
+
+**Problem Solved:**
+Region nodes with null DNA values weren't inheriting host DNA when sent to LLM for image generation. This caused inconsistent world-building aesthetics.
+
+**Root Causes:**
+1. **Nested Arrays in Storage**: hierarchyParser was storing entire backend structure including nested child arrays (`host.regions`, `region.locations`, etc.)
+2. **Wrong DNA Structure**: node.dna had nested structure `{ type, name, dna: { ...actual DNA... } }` instead of flat DNA
+3. **No Inheritance**: LLM received null values instead of inherited parent values
+
+**Solution:**
+Built complete two-function system with proper data extraction:
+
+**1. extractCleanDNA - For Storage**
+```typescript
+// Strips nested child arrays when storing nodes
+const cleanDNA = extractCleanDNA(backendHostData, 'host');
+// Result: Clean node without regions[] array
+```
+
+**Exclusion Rules:**
+- host: removes 'regions' array
+- region: removes 'locations' array
+- location: removes 'niches' array
+- niche: no children to remove
+
+**2. getMergedDNA - For LLM Usage**
+```typescript
+// Merges cascaded DNA with null-skipping inheritance
+const cascaded = getCascadedDNA(nodeId);
+const merged = getMergedDNA(cascaded);
+// Result: Child nulls inherit from parent values
+```
+
+**Inheritance Rules:**
+1. Start with host/world DNA as base
+2. Override with region DNA (skip null values)
+3. Override with location DNA (skip null values)
+4. Override with niche DNA (skip null values)
+
+**3. getCascadedDNA - Extract Inner DNA**
+```typescript
+// Extracts inner dna field from nested structure
+const nodeDNA = (pathNode.dna as any)?.dna || pathNode.dna;
+// Handles: { type, name, dna: { ...actual DNA... } }
+// Returns: { architectural_tone, mood_baseline, ... }
+```
+
+**Architecture Flow:**
+```
+Backend (nested) → hierarchyParser + extractCleanDNA → Store (clean, flat)
+                                                         ↓
+                                        Store → getCascadedDNA → getMergedDNA → Backend LLM (merged)
+```
+
+**Key Design Decisions:**
+
+1. **Separate Storage and Usage**: Storage optimized for queries, usage optimized for LLM context
+2. **Null-Skipping Inheritance**: `null` means "inherit from parent", explicit values override
+3. **Inner DNA Extraction**: Automatically handles nested backend structure
+
+**Files Created:**
+- `packages/frontend/src/utils/nodeDNAExtractor.ts` (170 lines)
+  - extractCleanDNA() - strips nested arrays
+  - getMergedDNA() - merges with inheritance
+  - Comprehensive inline documentation
+
+**Files Modified:**
+- `packages/frontend/src/utils/hierarchyParser.ts` - Uses extractCleanDNA for all node types
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/locationNavigation.ts` - Uses getMergedDNA before backend API calls
+- `packages/frontend/src/store/slices/locations/dnaSlice.ts` - Extracts inner dna field in getCascadedDNA
+- `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts` - Updated call site
+
+**Documentation Created:**
+- `docs/dna-system-architecture.md` - Complete guide with examples, diagrams, best practices
+- `memory-bank/systemPatterns.md` - Added DNA System Architecture section
+- `memory-bank/progress.md` - Added DNA System entry
+
+**Example Result:**
+```typescript
+// Storage (clean, flat)
+region.dna = {
+  architectural_tone: null,  // stored as null
+  cultural_tone: null,
+  mood_baseline: null
+}
+
+// LLM Usage (merged with inheritance)
+mergedDNA = {
+  architectural_tone: "gothic decay",      // ← inherited from host
+  cultural_tone: "forgotten civilization", // ← inherited from host
+  mood_baseline: "melancholy"              // ← inherited from host
+}
+```
+
+**Benefits:**
+- **Clean Storage**: No nested arrays, ready for vector search
+- **Complete Context**: LLM receives full inherited DNA
+- **Consistent Images**: Region inherits world aesthetics automatically
+- **Maintainability**: Single source of truth for DNA operations
+- **Reusability**: Functions work across entire codebase
+- **Well Documented**: Comprehensive guides for future developers
+
+**Result:**
+Production-ready DNA system that ensures region nodes properly inherit host DNA when generating images, maintaining consistent world-building aesthetics across hierarchies! 🎉
+
+---
+
+## Previous Session Summary (November 4, 2025 - 5:00 PM)
 
 ### Current Task: Niche Node Pipeline Implementation - COMPLETED ✅
 
