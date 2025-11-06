@@ -47,6 +47,13 @@ export interface NavigationContext {
         description: string;
       }>;
       searchDesc?: string;
+      materials_primary?: string;
+      materials_secondary?: string;
+      materials_accents?: string;
+      colors_dominant?: string;
+      colors_secondary?: string;
+      colors_accents?: string;
+      colors_ambient?: string;
     };
     dna?: any;
   };
@@ -57,6 +64,16 @@ export interface NavigationContext {
     data?: {
       description?: string;
       looks?: string;
+    };
+    dna?: {
+      genre?: string;
+      architectural_tone?: string;
+      cultural_tone?: string;
+      materials_base?: string;
+      mood_baseline?: string;
+      palette_bias?: string;
+      flora_base?: string;
+      fauna_base?: string;
     };
   };
   siblingNodes?: Array<{

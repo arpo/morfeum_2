@@ -14,29 +14,63 @@ export function nicheImagePrompt(
   intent: IntentResult,
   decision: NavigationDecision
 ): string {
-  const prompt = `You are an expert at creating vivid, genre-agnostic image prompts for FLUX image generation.
+  const prompt = `You are an expert at creating image prompts for FLUX image generation.
 
 TASK: Create an image prompt for ${intent.intent} "${context.currentNode.name}".
+
 ${decision.reasoning ? `You should aim to "${decision.reasoning}".` : ''}
-
 The scene can be both interior and exterior depending on the context.
+You should create a niche inside ${context.currentNode.name} that has the following features:
 
-You should create a niche inside a location based on the following data:
 Description: ${context.currentNode.data.description || 'N/A'}
+Looks: ${context.currentNode.data.looks || 'N/A'}
+Dominant elements of : ${context.currentNode.data.dominantElements?.join(', ') || 'N/A'}
+Spatial Layout: ${context.currentNode.data.spatialLayout || 'N/A'}
+Unique Identifiers: ${context.currentNode.data.uniqueIdentifiers?.join(', ') || 'N/A'}
+Materials: ${[
+    context.currentNode.data.materials_primary,
+    context.currentNode.data.materials_secondary,
+    context.currentNode.data.materials_accents
+  ]
+    .filter(Boolean)
+    .join(', ') || 'N/A'}
+Colors: ${[
+    context.currentNode.data.colors_dominant,
+    context.currentNode.data.colors_secondary,
+    context.currentNode.data.colors_accents,
+    context.currentNode.data.colors_ambient 
+  ]
+    .filter(Boolean)
+    .join(', ') || 'N/A'}
 
-CURRENT NODE (location we're entering):
-${JSON.stringify(context.currentNode, null, 2)}
+${context.currentNode.dna ? `Genre: ${context.currentNode.dna.genre || 'N/A'}
+Architectural Tone: ${context.currentNode.dna.architectural_tone || 'N/A'}
+Cultural Tone: ${context.currentNode.dna.cultural_tone || 'N/A'}
+Materials Base: ${context.currentNode.dna.materials_base || 'N/A'}
+Mood Baseline: ${context.currentNode.dna.mood_baseline || 'N/A'}
+Palette Bias: ${context.currentNode.dna.palette_bias || 'N/A'}` : 'N/A'}
+Flora and Fauna:
+${context.currentNode.dna ? `Flora Base: ${context.currentNode.dna.flora_base || 'N/A'}
+Fauna Base: ${context.currentNode.dna.fauna_base || 'N/A'}` : 'N/A'}
 
-PARENT NODE (exterior context):
-${JSON.stringify(context.parentNode, null, 2)}
+
+The surrounding context (the area just surrounding the location) is as follows.
+This is secondary information to help you understand the vibe and setting.
+
+Architectural Tone: ${context.parentNode?.dna?.architectural_tone || 'N/A'}
+Cultural Tone: ${context.parentNode?.dna?.cultural_tone || 'N/A'}
+Materials Base: ${context.parentNode?.dna?.materials_base || 'N/A'}
+Mood Baseline: ${context.parentNode?.dna?.mood_baseline || 'N/A'}
+Palette Bias: ${context.parentNode?.dna?.palette_bias || 'N/A'}
+
+Flora and Fauna:
+${context.parentNode?.dna ? `Flora Base: ${context.parentNode.dna.flora_base || 'N/A'}
+Fauna Base: ${context.parentNode.dna.fauna_base || 'N/A'}` : 'N/A'}
 
 REQUIREMENTS:
 1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance
 2. Use first-person interior perspective (medium elevated offset angle, diagonal composition)
-3. Include interesting navigation details (doors, stairs, passages, rooms) if suitable based on the data
-4. Consider time of day and lighting based on the context
-5. Be creative and genre-agnostic (works for fantasy, sci-fi, modern, any setting)
-6. Create a vivid, atmospheric scene
+3. Include interesting navigation details (doors, stairs, passages, rooms, paintings etc) if suitable based on the data, be creative.
 
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should describe what we see immediately after stepping inside.`;
@@ -44,3 +78,4 @@ The prompt should describe what we see immediately after stepping inside.`;
   console.log(prompt);
   return prompt;
 }
+
