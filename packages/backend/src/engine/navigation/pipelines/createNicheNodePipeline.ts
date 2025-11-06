@@ -7,6 +7,7 @@ import { generateText, generateImage } from '../../../services/mzoo';
 import { AI_MODELS } from '../../../config/constants';
 import { nicheImagePrompt } from '../../generation/prompts/navigation/nicheImagePrompt';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
+import { generalPromptFix } from '../../generation/prompts/shared/generalPromptFix';
 
 /**
  * Generate image prompt for stepping inside using LLM
@@ -33,7 +34,6 @@ async function generateNicheImagePrompt(
   if (result.error || !result.data) {
     throw new Error(result.error || 'No image prompt returned from LLM');
   }
-
   return result.data.text.trim();
 }
 
@@ -53,11 +53,12 @@ export async function runCreateNichePipeline(
     decision,
     apiKey
   );
-
+const fixedPrompt = generalPromptFix(imagePrompt);
+  console.log('Fixed Prompt:', fixedPrompt);
   // Step 3: Generate FLUX image
   const result = await generateImage(
     apiKey,
-    imagePrompt,
+    fixedPrompt,
     1,
     'landscape_16_9',
     'none'

@@ -4,6 +4,7 @@
  */
 
 import type { NavigationContext, IntentResult, NavigationDecision } from '../../../navigation/types';
+import { fluxInstructions } from '../shared/constants';
 
 /**
  * Generate prompt for LLM to create FLUX image description
@@ -68,14 +69,15 @@ ${context.parentNode?.dna ? `Flora Base: ${context.parentNode.dna.flora_base || 
 Fauna Base: ${context.parentNode.dna.fauna_base || 'N/A'}` : 'N/A'}
 
 REQUIREMENTS:
-1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance
+1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance, don't show what you stepped in form like the door, gate etc. Thats supposed to be behind the viewer. Show the immediate interior space.
 2. Use first-person interior perspective (medium elevated offset angle, diagonal composition)
 3. Include interesting navigation details (doors, stairs, passages, rooms, paintings etc) if suitable based on the data, be creative.
+4. If the description describes an interior space make sure its an interior space, the same for exterior spaces, Don't mix them and create a hybrid unless the description explicitly calls for it.
 
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should describe what we see immediately after stepping inside.`;
 
-  console.log(prompt);
+  // console.log(prompt);
   return prompt;
 }
 

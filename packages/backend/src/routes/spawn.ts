@@ -345,6 +345,7 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       
       // Stage 3: Generate image
       const imageStart = Date.now();
+      console.log(imagePrompt);
       const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
       timings.imageGeneration = Date.now() - imageStart;
       
