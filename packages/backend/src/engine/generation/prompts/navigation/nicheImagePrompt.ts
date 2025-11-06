@@ -4,7 +4,7 @@
  */
 
 import type { NavigationContext, IntentResult, NavigationDecision } from '../../../navigation/types';
-import { fluxInstructions } from '../shared/constants';
+import { fluxInstructionsShort } from '../shared/constants';
 
 /**
  * Generate prompt for LLM to create FLUX image description
@@ -54,23 +54,11 @@ Flora and Fauna:
 ${context.currentNode.dna ? `Flora Base: ${context.currentNode.dna.flora_base || 'N/A'}
 Fauna Base: ${context.currentNode.dna.fauna_base || 'N/A'}` : 'N/A'}
 
-
-The surrounding context (the area just surrounding the location) is as follows.
-This is secondary information to help you understand the vibe and setting.
-
-Architectural Tone: ${context.parentNode?.dna?.architectural_tone || 'N/A'}
-Cultural Tone: ${context.parentNode?.dna?.cultural_tone || 'N/A'}
-Materials Base: ${context.parentNode?.dna?.materials_base || 'N/A'}
-Mood Baseline: ${context.parentNode?.dna?.mood_baseline || 'N/A'}
-Palette Bias: ${context.parentNode?.dna?.palette_bias || 'N/A'}
-
-Flora and Fauna:
-${context.parentNode?.dna ? `Flora Base: ${context.parentNode.dna.flora_base || 'N/A'}
-Fauna Base: ${context.parentNode.dna.fauna_base || 'N/A'}` : 'N/A'}
+${fluxInstructionsShort}
 
 REQUIREMENTS:
 1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance, don't show what you stepped in form like the door, gate etc. Thats supposed to be behind the viewer. Show the immediate interior space.
-2. Use first-person interior perspective (medium elevated offset angle, diagonal composition)
+2. Use first-person interior perspective (medium elevated, diagonal composition)
 3. Include interesting navigation details (doors, stairs, passages, rooms, paintings etc) if suitable based on the data, be creative.
 4. If the description describes an interior space make sure its an interior space, the same for exterior spaces, Don't mix them and create a hybrid unless the description explicitly calls for it.
 

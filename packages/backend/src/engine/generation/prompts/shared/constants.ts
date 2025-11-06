@@ -15,8 +15,30 @@ export const generalRules = `
 IMPORTANT: no humans or animals unless specified.
 No watermarks, logos, or signatures.`;
 
+export const fluxInstructionsShort = `
 
-export const fluxInstructions = `
+Identify the main focus or subject of the image based on the description.
+
+
+## Composition
+Describe how the elements are arranged: foreground, middle ground, background.
+Use hierarchical or layered structure when describing scene elements (foreground → midground → background).
+
+## Layering / Foreground vs. Background
+If the scene is complex, describe it in layers. Make it clear which elements appear in front and which behind.
+Avoid confusion by organizing the description carefully rather than scattering details.
+
+## When you output the final prompt:
+Ensure it reads like an artist's brief—concise but richly descriptive.
+Make it a readable block of text with line breaks, written in natural human language.
+Include if applicable: as separate mentions of foreground, middle ground, and background.
+
+Your job: Take any long scene description I give and produce a final FLUX.1-style prompt that follows the guidelines above. The final output should be precise, detailed, and designed to yield a stunning, high-quality photograph when used with an AI image generator.
+
+`;
+
+
+export const fluxInstructionsLong = `
 
 Identify the main focus or subject of the image based on the description.
 
