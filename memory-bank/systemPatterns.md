@@ -58,6 +58,31 @@ ComponentName/
 - Cross-slice communication via get()/getState()
 - **No persist middleware** - persistence handled by backend storage service
 
+### Deletion Pattern
+Cascading deletes maintain data integrity:
+
+**Location Store (`treesSlice.ts`):**
+```typescript
+deleteNodeWithChildren: (nodeId) => {
+  // 1. Find subtree in tree structure
+  // 2. Collect all descendant IDs recursively
+  // 3. Delete all nodes from nodes map
+  // 4. Remove subtree from tree structure
+  // 5. Clean up pins for deleted nodes
+  // 6. Auto-save to backend
+}
+```
+
+**Entity Manager (EntityTabs):**
+```typescript
+handleCloseTab: () => {
+  // 1. Collect all descendant entity IDs
+  // 2. Delete from location store (cascading)
+  // 3. Close all entity sessions (tabs)
+  // Result: No orphaned data or UI elements
+}
+```
+
 #### Storage Integration Pattern
 Stores now use backend API instead of localStorage:
 ```typescript
@@ -115,11 +140,21 @@ Centralized file-based storage for development:
 - Files: `worlds.json`, `characters.json`
 - Purpose: Temporary storage before database migration
 - API: GET/POST/DELETE endpoints at `/api/worlds` and `/api/characters`
+- **Path Resolution**: Uses `__dirname` for reliable path resolution
 
 **Storage Flow:**
 ```
 Frontend Store → POST /api/worlds → storageService.ts → temp-db/worlds.json
 temp-db/worlds.json → storageService.ts → GET /api/worlds → Frontend Store
+```
+
+**Auto-Save Pattern:**
+All store mutations automatically trigger backend save:
+```typescript
+set((state) => ({
+  // State updates
+}));
+(get() as any).saveToBackend?.(); // Automatic save
 ```
 
 ### Service Layer Pattern

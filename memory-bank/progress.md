@@ -29,6 +29,9 @@
 - [x] Auto-migration from localStorage to backend
 - [x] Save buttons persist to backend files
 - [x] Pinned entities auto-load on startup
+- [x] Auto-save on all state mutations
+- [x] Cascading delete for nodes and children
+- [x] Entity session cleanup on delete
 
 ### Technical Improvements
 - [x] Memory bank consolidation (69% reduction)
@@ -37,6 +40,8 @@
 - [x] Zustand slice architecture
 - [x] Data-component attributes
 - [x] Memory bank update rules
+- [x] Console log cleanup (removed 56+ spam logs)
+- [x] Backend path resolution fix (__dirname)
 
 ## In Progress 🔄
 
@@ -67,12 +72,10 @@
 - [ ] Community features
 
 ## Technical Debt
-- [ ] Update backend dist/ files with niche terminology
-- [ ] Rename backend routes from sublocation to niche
 - [ ] Add comprehensive error handling
 - [ ] Implement retry mechanisms
 - [ ] Add loading states for all async operations
-- [ ] Move from temp-db to real database (Supabase/PostgreSQL)
+- [ ] Move from temp-db to real database (when ready)
 
 ## Testing Needs
 - [ ] Navigation system edge cases
