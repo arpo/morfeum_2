@@ -1,7 +1,7 @@
 /**
  * Flux AI Render Instructions Guidance
  * Comprehensive guide for creating dynamic, cinematic camera instructions
- * Used across location, sublocation, and image generation prompts
+ * Used across location, niche, and image generation prompts
  */
 
 export const renderInstructionsGuidance = `

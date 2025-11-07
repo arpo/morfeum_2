@@ -7,7 +7,7 @@ import { VisualAnchors } from './common';
 export interface LocationSeed {
   originalPrompt?: string;
   classification?: {
-    primarySubject: 'world' | 'region' | 'location';
+    primarySubject: 'host' | 'region' | 'location';
     targetName: string;
     context?: string;
   };
@@ -31,7 +31,7 @@ export interface LocationVisualAnalysis {
 }
 
 // Hierarchical location DNA types
-export interface WorldNode {
+export interface HostNode {
   meta: {
     name: string;
   };

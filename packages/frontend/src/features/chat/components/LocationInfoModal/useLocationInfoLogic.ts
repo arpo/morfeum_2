@@ -9,14 +9,14 @@ export function determineCurrentNode(focus: FocusState | null, profile: any): 'n
   if (!focus || !profile) return null;
   
   // Check if flat structure (no hierarchy)
-  const isFlat = !profile.world && !profile.region && !profile.location && !profile.sublocation && profile.looks;
+  const isFlat = !profile.world && !profile.region && !profile.location && !profile.niche && profile.looks;
   if (isFlat) return 'location'; // Treat flat as location
   
   // Match focus.node_id with node names in hierarchy
   const focusNodeId = focus.node_id;
   
-  // Check sublocation/niche
-  if (profile.sublocation?.meta?.name === focusNodeId) {
+  // Check niche
+  if (profile.niche?.meta?.name === focusNodeId) {
     return 'niche';
   }
   
@@ -36,7 +36,7 @@ export function determineCurrentNode(focus: FocusState | null, profile: any): 'n
   }
   
   // Default to deepest available node if no match
-  if (profile.sublocation) return 'niche';
+  if (profile.niche) return 'niche';
   if (profile.location) return 'location';
   if (profile.region) return 'region';
   if (profile.world) return 'world';

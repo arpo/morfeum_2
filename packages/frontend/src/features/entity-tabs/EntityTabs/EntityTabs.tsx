@@ -36,7 +36,7 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
     
     // Calculate depth from tree structure
     let depthLevel = 0;
-    let isSubLocation = false;
+    let isNiche = false;
     
     if (node) {
       // Find which world tree this node belongs to
@@ -60,7 +60,7 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
         const depth = findDepth(tree, spawnId, 0);
         if (depth !== null) {
           depthLevel = depth;
-          isSubLocation = depth > 0; // Anything beyond the world root
+          isNiche = depth > 0; // Anything beyond the world root
           break;
         }
       }
@@ -70,7 +70,7 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
       ...entity,
       spawnId,
       depthLevel,
-      isSubLocation
+      isNiche
     };
   });
 
@@ -165,7 +165,7 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
               paddingLeft: `calc(var(--spacing-md) + ${entity.depthLevel * 20}px)`
             }}
           >
-            {entity.isSubLocation && (
+            {entity.isNiche && (
               <span className={styles.hierarchyIndicator}>└─</span>
             )}
             {entity.entityImage && (

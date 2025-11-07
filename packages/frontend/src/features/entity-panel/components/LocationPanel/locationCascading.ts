@@ -153,8 +153,8 @@ function extractFromHierarchicalDNA(
     cascadedContext.palette = cascadedContext.palette_bias;
   }
   
-  // Get immediate parent DNA (location or sublocation)
-  const immediateParentDNA = parentCascadedDNA.sublocation || parentCascadedDNA.location;
+  // Get immediate parent DNA (location or niche)
+  const immediateParentDNA = parentCascadedDNA.niche || parentCascadedDNA.location;
   
   // Final override with immediate parent context
   if (immediateParentDNA) {

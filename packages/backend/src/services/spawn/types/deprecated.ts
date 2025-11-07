@@ -5,14 +5,14 @@
  * @deprecated Use types from location.ts instead
  */
 
-import { WorldNode, RegionNode, LocationNode } from './location';
+import { HostNode, RegionNode, LocationNode } from './location';
 
 /**
  * @deprecated Use NodeDNA from location.ts instead
  * DEPRECATED: Old hierarchical structure (kept for compatibility during migration)
  */
 export interface LocationDeepProfile {
-  world: WorldNode;
+  world: HostNode;
   region?: RegionNode;
   location?: LocationNode;
 }

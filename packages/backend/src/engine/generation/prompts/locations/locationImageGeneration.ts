@@ -5,6 +5,8 @@
 
 import { qualityPrompt } from '../shared';
 import type { HierarchyNode } from '../../../hierarchyAnalysis/types';
+import { generalRules } from '../shared/constants';
+import { generalPromptFix } from '../shared/generalPromptFix';
 
 const morfeumVibes = 'Morfeum aesthetic — hyper-realistic, high-contrast visuals with sharp light, glowing bioluminescence, and richly saturated tones. Surfaces feel alive; darkness holds depth, not gloom. Reality, one notch brighter.';
 
@@ -74,22 +76,16 @@ export function locationImageGeneration(
   // Use appropriate shot instructions based on target node type
   const shotInstructions = getLocationShotInstructions(targetNode.type);
   
-  const rv = `${morfeumVibes}
-
-Original user description: "${originalPrompt}"
+const prompt = `Original user description: "${originalPrompt}"
 
 ${targetNode.name}, ${shotInstructions.shot}.
 
 [LIGHT:] ${shotInstructions.light}
 
 [SCENE:]
-${contextText}${sceneDescription}
+${contextText}${sceneDescription}`;
 
-[WORLD RULES:] water calm and mirror-still
-
-IMPORTANT: no humans or animals unless specified
-
-${qualityPrompt}`;
+const rv = generalPromptFix(prompt)
 // console.log(rv);
   return rv;
 }

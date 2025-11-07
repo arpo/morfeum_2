@@ -151,7 +151,7 @@ export function useSpawnEvents() {
         // Create single node with flat NodeDNA (simplified for now - keep old structure temporarily)
         const node: Partial<Node> = {
           id: spawnId,
-          type: 'world' as any, // Temporary - will be removed in full migration
+          type: 'host' as any, // Temporary - will be removed in full migration
           name: nodeName,
           dna: deepProfile, // Flat NodeDNA structure
           imagePath: nodeImage,
@@ -159,7 +159,7 @@ export function useSpawnEvents() {
         };
         
         createNode(node as any);
-        addNodeToTree(spawnId, null, spawnId, 'world' as any);
+        addNodeToTree(spawnId, null, spawnId, 'host' as any);
         
         // Store simplified DNA in deep profile
         if (updateEntityProfile && deepProfile) {
@@ -231,8 +231,8 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for sublocation DNA complete event
-    eventSource.addEventListener('spawn:sublocation-dna-complete', (e) => {
+    // Listen for niche DNA complete event
+    eventSource.addEventListener('spawn:niche-dna-complete', (e) => {
       const { spawnId, dna, parentNodeId } = JSON.parse(e.data);
       // console.log('[SSE] 🧬 Sublocation DNA generated:', spawnId);
       
@@ -251,13 +251,13 @@ export function useSpawnEvents() {
       // Build complete inherited DNA structure for preview
       const inheritedDNA = {
         ...cascadedDNA,
-        sublocation: dna
+        niche: dna
       };
       
       // console.log('[SSE] ✅ Preview DNA has world node:', !!inheritedDNA.world);
       
       // Create preview immediately with DNA (no image yet)
-      // This switches the preview panel to show the new sublocation
+      // This switches the preview panel to show the new niche
       if (createEntity) {
         const cleanName = dna.meta.name.split(' (')[0];
         const seed = {
@@ -277,7 +277,7 @@ export function useSpawnEvents() {
       // Switch to this entity immediately
       if (setActiveEntity) {
         setActiveEntity(spawnId);
-        // console.log('[SSE] 🎯 Preview switched to sublocation:', spawnId);
+        // console.log('[SSE] 🎯 Preview switched to niche:', spawnId);
       }
       
       if (updateSpawnStatus) {
@@ -285,8 +285,8 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for sublocation image prompt complete event
-    eventSource.addEventListener('spawn:sublocation-image-prompt-complete', (e) => {
+    // Listen for niche image prompt complete event
+    eventSource.addEventListener('spawn:niche-image-prompt-complete', (e) => {
       const { spawnId, imagePrompt } = JSON.parse(e.data);
       
       // Store the image prompt
@@ -300,10 +300,10 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for sublocation image complete event
-    eventSource.addEventListener('spawn:sublocation-image-complete', (e) => {
+    // Listen for niche image complete event
+    eventSource.addEventListener('spawn:niche-image-complete', (e) => {
       const { spawnId, imageUrl } = JSON.parse(e.data);
-      // console.log('[SSE] 🎨 Sublocation image generated:', imageUrl);
+      // console.log('[SSE] 🎨 Niche image generated:', imageUrl);
       
       // Update the preview with the image
       if (updateEntityImage) {
@@ -315,10 +315,10 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for sublocation complete event
-    eventSource.addEventListener('spawn:sublocation-complete', (e) => {
+    // Listen for niche complete event
+    eventSource.addEventListener('spawn:niche-complete', (e) => {
       const { spawnId, dna, imageUrl, parentNodeId } = JSON.parse(e.data);
-      // console.log('[SSE] ✅ Sublocation generation complete:', spawnId);
+      // console.log('[SSE] ✅ Niche generation complete:', spawnId);
       
       // Get parent node
       const parentNode = getNode(parentNodeId);
@@ -327,7 +327,7 @@ export function useSpawnEvents() {
         return;
       }
       
-      // Find world ID by traversing tree
+      // Find host ID by traversing tree
       const cascadedDNA = getCascadedDNA(parentNodeId);
       if (!cascadedDNA.world) {
         console.error('[SSE] ❌ Could not find world DNA for parent:', parentNodeId);
@@ -337,8 +337,8 @@ export function useSpawnEvents() {
       // Extract clean name (remove the hierarchical suffix)
       const cleanName = dna.meta.name.split(' (')[0];
       
-      // Create sublocation node
-      const sublocationNode: Node = {
+      // Create niche node
+      const nicheNode: Node = {
         id: spawnId,
         type: 'niche',
         name: cleanName,
@@ -347,7 +347,7 @@ export function useSpawnEvents() {
         focus: undefined,
       };
       
-      createNode(sublocationNode);
+      createNode(nicheNode);
       
       // Find host ID from cascaded DNA
       // The host node ID is the first node in any tree path
@@ -355,7 +355,7 @@ export function useSpawnEvents() {
         .find(node => node.type === 'host' && node.dna === cascadedDNA.world)?.id;
       
       if (!hostId) {
-        console.error('[SSE] ❌ Could not find host ID for sublocation');
+        console.error('[SSE] ❌ Could not find host ID for niche');
         return;
       }
       
@@ -365,14 +365,14 @@ export function useSpawnEvents() {
       // Update entity deep profile with cascaded DNA for display
       const fullCascadedDNA = {
         ...cascadedDNA,
-        sublocation: dna
+        niche: dna
       };
       
       if (updateEntityProfile) {
         updateEntityProfile(spawnId, fullCascadedDNA as any);
       }
       
-      // Switch active entity to new sublocation
+      // Switch active entity to new niche
       if (setActiveEntity) {
         setActiveEntity(spawnId);
       }
@@ -664,7 +664,7 @@ export function useSpawnEvents() {
         
         const node: Partial<Node> = {
           id: spawnId,
-          type: 'world' as any,
+          type: 'host' as any,
           name: deepestNode.name,
           dna: hierarchy as any,
           imagePath: imageUrl || '',
@@ -675,7 +675,7 @@ export function useSpawnEvents() {
         };
         
         createNode(node as any);
-        addNodeToTree(spawnId, null, spawnId, 'world' as any);
+        addNodeToTree(spawnId, null, spawnId, 'host' as any);
         
         if (setActiveEntity) {
           setActiveEntity(spawnId);

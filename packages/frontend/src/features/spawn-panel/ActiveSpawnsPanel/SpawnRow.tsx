@@ -12,7 +12,7 @@ interface SpawnRowProps {
   spawnId: string;
   prompt: string;
   status: string;
-  entityType?: 'character' | 'location' | 'sublocation';
+  entityType?: 'character' | 'location' | 'niche';
 }
 
 export function SpawnRow({ spawnId, prompt, status, entityType = 'character' }: SpawnRowProps) {

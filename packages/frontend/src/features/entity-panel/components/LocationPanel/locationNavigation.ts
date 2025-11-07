@@ -4,6 +4,7 @@
  */
 
 import { Node } from '@/store/slices/locations';
+import { getMergedDNA } from '@/utils/nodeDNAExtractor';
 
 interface FocusState {
   node_id: string;
@@ -43,6 +44,8 @@ interface NavigationResult {
   scale_hint?: string;
   relation?: string;
   reason: string;
+  imageUrl?: string;
+  imagePrompt?: string;
 }
 
 /**
@@ -140,26 +143,56 @@ export function buildSpatialNodes(
  */
 export async function findDestination(
   userCommand: string,
-  currentFocus: FocusState,
-  currentLocationDetails: CurrentLocationDetails,
-  spatialNodes: SpatialNode[]
+  currentNode: Node,
+  spatialNodes: SpatialNode[],
+  getCascadedDNA: (nodeId: string) => any
 ): Promise<NavigationResult> {
-  // Build context for new navigation system
+  // Extract data from currentNode DNA
+  const nodeDNA = (currentNode.dna || {}) as Record<string, any>;
+  const { dna: _currentNestedDNA, ...currentNodeBaseData } = nodeDNA;
+  
+  // Find parent node from spatialNodes (parent has this node as a child in tree)
+  const currentSpatialNode = spatialNodes.find(node => node.id === currentNode.id);
+  const parentNodeData = currentSpatialNode?.parent_location_id 
+    ? spatialNodes.find(node => node.id === currentSpatialNode.parent_location_id)
+    : undefined;
+  
+  // Get cascaded DNA and merge for LLM usage (inherits parent values)
+  const currentCascadedDNA = getCascadedDNA(currentNode.id);
+  const currentMergedDNA = getMergedDNA(currentCascadedDNA);
+  const currentNodeDataForContext = {
+    ...currentNodeBaseData
+  };
+  
+  const parentRawDNA = parentNodeData
+    ? ((parentNodeData.dna || {}) as Record<string, any>)
+    : undefined;
+  const parentMergedDNA = parentNodeData
+    ? getMergedDNA(getCascadedDNA(parentNodeData.id))
+    : undefined;
+  let parentNodeDataForContext: Record<string, any> | undefined;
+  if (parentRawDNA) {
+    parentNodeDataForContext = { ...parentRawDNA };
+    delete parentNodeDataForContext.dna;
+  }
+  
+  // Build context for new navigation system with merged DNA
   const context = {
     currentNode: {
-      id: currentLocationDetails.node_id,
+      id: currentNode.id,
       type: 'location' as const,
-      name: currentLocationDetails.name,
-      parentId: null, // Will be determined from spatial nodes
-      data: {
-        description: currentLocationDetails.searchDesc,
-        looks: currentLocationDetails.searchDesc,
-        dominantElements: currentLocationDetails.visualAnchors.dominantElements,
-        uniqueIdentifiers: currentLocationDetails.visualAnchors.uniqueIdentifiers,
-        searchDesc: currentLocationDetails.searchDesc
-      }
+      name: currentNode.name,
+      parentId: currentSpatialNode?.parent_location_id || null,
+      data: currentNodeDataForContext,
+      dna: currentMergedDNA  // Merged DNA with inheritance
     },
-    parentNode: undefined, // Add if available
+    parentNode: parentNodeData ? {
+      id: parentNodeData.id,
+      type: 'location' as const,
+      name: parentNodeData.name,
+      data: parentNodeDataForContext,
+      dna: parentMergedDNA
+    } : undefined,
     siblingNodes: spatialNodes.map(node => ({
       id: node.id,
       name: node.name,
@@ -187,7 +220,7 @@ export async function findDestination(
   
   const result = await response.json();
   
-  // Log EVERYTHING to browser console
+  // Log navigation analysis to browser console
   console.log(' ═══════════════════════════════════════════════════');
   console.log(' NAVIGATION ANALYSIS');
   console.log(' ═══════════════════════════════════════════════════');
@@ -225,7 +258,9 @@ export async function findDestination(
     name: result.data.decision.newNodeName,
     scale_hint: result.data.decision.newNodeType,
     relation: result.data.decision.metadata?.relation,
-    reason: result.data.decision.reasoning
+    reason: result.data.decision.reasoning,
+    imageUrl: result.data.imageUrl,
+    imagePrompt: result.data.imagePrompt
   };
   
   return navigation;

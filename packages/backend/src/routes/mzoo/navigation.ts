@@ -7,6 +7,7 @@ import { Router, Request, Response } from 'express';
 import { asyncHandler } from '../../middleware/errorHandler';
 import { HTTP_STATUS } from '../../config';
 import { classifyIntent, routeNavigation } from '../../engine/navigation';
+import { runCreateNichePipeline } from '../../engine/navigation/pipelines/createNicheNodePipeline';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 
 const router = Router();
@@ -50,7 +51,21 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
     // Step 2: Route navigation using deterministic logic
     const decision = routeNavigation(intent, context);
 
-    // Step 3: Build complete response for frontend logging
+    // Step 3: If decision is create_niche, run image generation pipeline
+    let imageUrl: string | undefined;
+    let imagePrompt: string | undefined;
+    
+    if (decision.action === 'create_niche') {
+      try {
+        const pipelineResult = await runCreateNichePipeline(decision, context, intent, apiKey);
+        imageUrl = pipelineResult.imageUrl;
+        imagePrompt = pipelineResult.imagePrompt;
+      } catch (pipelineError) {
+        // Continue without image - don't fail the whole request
+      }
+    }
+
+    // Step 4: Build complete response for frontend
     const result: NavigationAnalysisResult = {
       userCommand,
       context,
@@ -58,9 +73,13 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
       decision
     };
 
-    // Return everything - frontend will log it
+    // Return everything including optional image
     res.status(HTTP_STATUS.OK).json({
-      data: result
+      data: {
+        ...result,
+        imageUrl,
+        imagePrompt
+      }
     });
   } catch (error) {
     res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({

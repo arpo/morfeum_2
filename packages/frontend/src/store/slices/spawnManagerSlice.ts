@@ -9,12 +9,12 @@ export interface SpawnManagerSlice {
   activeSpawns: Map<string, { 
     prompt: string; 
     status: string; 
-    entityType: 'character' | 'location' | 'sublocation';
+    entityType: 'character' | 'location' | 'niche';
   }>;
   
   startSpawn: (
     prompt: string, 
-    entityType?: 'character' | 'location' | 'sublocation',
+    entityType?: 'character' | 'location' | 'niche',
     useNewEngine?: boolean | any
   ) => Promise<string>;
   cancelSpawn: (spawnId: string) => Promise<void>;
@@ -27,20 +27,20 @@ export const createSpawnManagerSlice: StateCreator<SpawnManagerSlice> = (set, ge
 
   startSpawn: async (
     prompt: string, 
-    entityType: 'character' | 'location' | 'sublocation' = 'character',
+    entityType: 'character' | 'location' | 'niche' = 'character',
     useNewEngineOrMetadata?: boolean | any
   ) => {
     try {
-      // Determine if this is sublocation (metadata object) or new engine (boolean)
-      const isSublocMetadata = typeof useNewEngineOrMetadata === 'object';
+      // Determine if this is niche (metadata object) or new engine (boolean)
+      const isNicheMetadata = typeof useNewEngineOrMetadata === 'object';
       const useNewEngine = typeof useNewEngineOrMetadata === 'boolean' ? useNewEngineOrMetadata : false;
       
       // Route to appropriate endpoint
       let endpoint: string;
       let body: any;
       
-      if (entityType === 'sublocation') {
-        endpoint = '/api/spawn/sublocation/start';
+      if (entityType === 'niche') {
+        endpoint = '/api/spawn/niche/start';
         body = useNewEngineOrMetadata; // metadata object
       } else if (useNewEngine && entityType === 'character') {
         endpoint = '/api/spawn/engine/start';

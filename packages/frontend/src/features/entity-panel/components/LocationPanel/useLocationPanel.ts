@@ -23,6 +23,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   const [movementInput, setMovementInput] = useState('');
   const [isMoving, setIsMoving] = useState(false);
   const [createImage, setCreateImage] = useState(true);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
   
   // Store methods
   const getNode = useLocationsStore(state => state.getNode);
@@ -63,7 +64,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       // Get cascaded DNA for current node
       const cascadedDNA = getCascadedDNA(currentNode.id);
       
-      // Initialize focus if missing
+      // Initialize focus if missing (for later move action)
       const currentFocus = currentNode.focus || {
         node_id: currentNode.name,
         perspective: 'exterior' as const,
@@ -74,19 +75,21 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       // Get spatially connected nodes
       const spatialNodes = getSpatialNodes(currentNode.id);
       
-      // Build current location details with visual context
-      const currentLocationDetails = buildCurrentLocationDetails(currentNode);
-      
       // Build spatial nodes with tree traversal data
       const spatialNodesWithTree = buildSpatialNodes(spatialNodes, worldTrees);
       
       // Call NavigatorAI to find destination
       const navigation = await findDestination(
         movementInput,
-        currentFocus,
-        currentLocationDetails,
-        spatialNodesWithTree
+        currentNode,
+        spatialNodesWithTree,
+        getCascadedDNA
       );
+      
+      // If image was generated, display it
+      if (navigation.imageUrl) {
+        setPreviewImage(navigation.imageUrl);
+      }
       
       // Handle navigation result
       if (navigation.action === 'move' && navigation.targetNodeId) {
@@ -157,7 +160,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   }, [getNode, updateNodeFocus, setActiveEntity]);
 
   /**
-   * Handle 'generate' action - create new sublocation
+   * Handle 'generate' action - create new niche
    */
   const handleGenerateAction = useCallback(async (
     navigation: any,
@@ -192,7 +195,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       getCascadedDNA
     );
     
-    // Start sublocation spawn
+    // Start niche spawn
     await startSublocationSpawn(
       navigation.name,
       validatedParentId,
@@ -226,7 +229,8 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       ...base,
       movementInput,
       isMoving,
-      createImage
+      createImage,
+      previewImage
     },
     handlers: {
       openModal: base.openModal,
@@ -236,7 +240,8 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       setMovementInput,
       handleMove,
       saveLocation,
-      setCreateImage
+      setCreateImage,
+      clearPreviewImage: () => setPreviewImage(null)
     }
   };
 }

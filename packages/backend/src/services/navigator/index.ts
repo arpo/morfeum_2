@@ -27,7 +27,7 @@ import {
  * @param userCommand - Natural language navigation command
  * @param currentFocus - Current focus state
  * @param currentLocationDetails - Visual context of current location
- * @param allNodes - All available nodes in the world
+ * @param allNodes - All available nodes in the host
  * @returns Navigation result with action and details
  */
 export async function findDestinationNode(
