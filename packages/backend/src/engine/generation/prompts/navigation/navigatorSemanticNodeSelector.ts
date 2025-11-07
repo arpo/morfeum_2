@@ -136,7 +136,7 @@ User Command: "${userCommand}"
 
 4. **Prioritize Visible Elements**:
    - If user mentions element in visual anchors → it's HERE, generate child node
-   - Example: "Go up the stair" + stair in visualElements → create stair sublocation HERE
+   - Example: "Go up the stair" + stair in visualElements → create stair niche HERE
    
 5. **Use Directional Cues**:
    - "left"/"right"/"behind" → check directional context for what's in that direction
@@ -243,7 +243,7 @@ Examples with Visual Context:
 **Scenario 5: Go Inside (When Current Node Matches)**
 - Current: "Shipwreck" (ID: subloc-123)
 - User: "Go inside the shipwreck"
-- Response: {"action":"generate","targetNodeId":null,"parentNodeId":"subloc-123","name":"Interior of Shipwreck","scale_hint":"interior","relation":"child","reason":"User wants to go inside current location. Generating interior sublocation."}
+- Response: {"action":"generate","targetNodeId":null,"parentNodeId":"niche-123","name":"Interior of Shipwreck","scale_hint":"interior","relation":"child","reason":"User wants to go inside current location. Generating interior niche."}
 
 **Scenario 6: Go Outside (Parent Navigation)**
 - Current: "Interior of Shipwreck" (ID: subloc-456, Parent: subloc-123)

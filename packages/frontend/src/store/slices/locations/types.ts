@@ -249,7 +249,7 @@ export interface CascadedDNA {
   world?: HostNode;
   region?: RegionNode;
   location?: LocationNode;
-  sublocation?: NicheNode;
+  niche?: NicheNode;
 }
 
 // Legacy Location interface for backward compatibility

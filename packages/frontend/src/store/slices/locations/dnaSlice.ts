@@ -91,7 +91,7 @@ export const createDNASlice: StateCreator<
           cascaded.location = nodeDNA as LocationNode;
           break;
         case 'niche':
-          cascaded.sublocation = nodeDNA as NicheNode;
+          cascaded.niche = nodeDNA as NicheNode;
           break;
       }
     }

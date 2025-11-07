@@ -28,9 +28,9 @@ export const STAGE_TIMINGS: EntityTimings = {
     generating_dna: 5000,       // DNA generation for all nodes (~3.5-4s actual, single call)
     completed: 200              // Quick jump to 100%
   },
-  sublocation: {
+  niche: {
     starting: 1800,
-    generating_seed: 1800,      // Sublocations are faster
+    generating_seed: 1800,      // Niches are faster
     generating_flux_prompt: 1500,
     generating_image: 2000,
     completed: 200              // Quick jump to 100%
@@ -42,7 +42,7 @@ export const STAGE_TIMINGS: EntityTimings = {
  */
 export function getTransitionDuration(
   status: string,
-  entityType: 'character' | 'location' | 'sublocation' = 'character'
+  entityType: 'character' | 'location' | 'niche' = 'character'
 ): number {
   const timings = STAGE_TIMINGS[entityType];
   return timings?.[status] || 1000; // Default to 1s if not found

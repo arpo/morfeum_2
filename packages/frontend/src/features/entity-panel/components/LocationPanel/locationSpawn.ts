@@ -1,6 +1,6 @@
 /**
  * Location Spawn Utility
- * Handles sublocation generation and spawn parameter building
+ * Handles niche generation and spawn parameter building
  */
 
 interface SpawnOptions {
@@ -12,7 +12,7 @@ interface SpawnOptions {
 }
 
 /**
- * Start sublocation spawn with proper parameters
+ * Start niche spawn with proper parameters
  */
 export async function startSublocationSpawn(
   navigationName: string,
@@ -20,7 +20,7 @@ export async function startSublocationSpawn(
   cascadedContext: any,
   createImage: boolean,
   scaleHint: string,
-  startSpawn: (prompt: string, entityType?: 'location' | 'character' | 'sublocation', metadata?: any) => Promise<string>
+  startSpawn: (prompt: string, entityType?: 'location' | 'character' | 'niche', metadata?: any) => Promise<string>
 ): Promise<void> {
   console.log('[Sublocation Generation] 🎯 Passing to spawn API:', {
     sublocationName: navigationName,
@@ -31,7 +31,7 @@ export async function startSublocationSpawn(
   try {
     const spawnId = await startSpawn(
       navigationName,
-      'sublocation',
+      'niche',
       {
         sublocationName: navigationName,
         parentNodeId,

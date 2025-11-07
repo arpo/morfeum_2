@@ -231,8 +231,8 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for sublocation DNA complete event
-    eventSource.addEventListener('spawn:sublocation-dna-complete', (e) => {
+    // Listen for niche DNA complete event
+    eventSource.addEventListener('spawn:niche-dna-complete', (e) => {
       const { spawnId, dna, parentNodeId } = JSON.parse(e.data);
       // console.log('[SSE] 🧬 Sublocation DNA generated:', spawnId);
       
@@ -251,13 +251,13 @@ export function useSpawnEvents() {
       // Build complete inherited DNA structure for preview
       const inheritedDNA = {
         ...cascadedDNA,
-        sublocation: dna
+        niche: dna
       };
       
       // console.log('[SSE] ✅ Preview DNA has world node:', !!inheritedDNA.world);
       
       // Create preview immediately with DNA (no image yet)
-      // This switches the preview panel to show the new sublocation
+      // This switches the preview panel to show the new niche
       if (createEntity) {
         const cleanName = dna.meta.name.split(' (')[0];
         const seed = {
@@ -277,7 +277,7 @@ export function useSpawnEvents() {
       // Switch to this entity immediately
       if (setActiveEntity) {
         setActiveEntity(spawnId);
-        // console.log('[SSE] 🎯 Preview switched to sublocation:', spawnId);
+        // console.log('[SSE] 🎯 Preview switched to niche:', spawnId);
       }
       
       if (updateSpawnStatus) {
@@ -285,8 +285,8 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for sublocation image prompt complete event
-    eventSource.addEventListener('spawn:sublocation-image-prompt-complete', (e) => {
+    // Listen for niche image prompt complete event
+    eventSource.addEventListener('spawn:niche-image-prompt-complete', (e) => {
       const { spawnId, imagePrompt } = JSON.parse(e.data);
       
       // Store the image prompt
@@ -300,10 +300,10 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for sublocation image complete event
-    eventSource.addEventListener('spawn:sublocation-image-complete', (e) => {
+    // Listen for niche image complete event
+    eventSource.addEventListener('spawn:niche-image-complete', (e) => {
       const { spawnId, imageUrl } = JSON.parse(e.data);
-      // console.log('[SSE] 🎨 Sublocation image generated:', imageUrl);
+      // console.log('[SSE] 🎨 Niche image generated:', imageUrl);
       
       // Update the preview with the image
       if (updateEntityImage) {
@@ -315,10 +315,10 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for sublocation complete event
-    eventSource.addEventListener('spawn:sublocation-complete', (e) => {
+    // Listen for niche complete event
+    eventSource.addEventListener('spawn:niche-complete', (e) => {
       const { spawnId, dna, imageUrl, parentNodeId } = JSON.parse(e.data);
-      // console.log('[SSE] ✅ Sublocation generation complete:', spawnId);
+      // console.log('[SSE] ✅ Niche generation complete:', spawnId);
       
       // Get parent node
       const parentNode = getNode(parentNodeId);
@@ -365,7 +365,7 @@ export function useSpawnEvents() {
       // Update entity deep profile with cascaded DNA for display
       const fullCascadedDNA = {
         ...cascadedDNA,
-        sublocation: dna
+        niche: dna
       };
       
       if (updateEntityProfile) {

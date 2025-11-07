@@ -160,7 +160,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   }, [getNode, updateNodeFocus, setActiveEntity]);
 
   /**
-   * Handle 'generate' action - create new sublocation
+   * Handle 'generate' action - create new niche
    */
   const handleGenerateAction = useCallback(async (
     navigation: any,
@@ -195,7 +195,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       getCascadedDNA
     );
     
-    // Start sublocation spawn
+    // Start niche spawn
     await startSublocationSpawn(
       navigation.name,
       validatedParentId,
