@@ -835,6 +835,122 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762510996120-34gpfwbei": {
+      "id": "loc-1762510996120-34gpfwbei",
+      "type": "host",
+      "name": "The Whispering Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Whispering Expanse",
+        "description": "A land where magic flows like water and dreams manifest.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic integration, ancient magic",
+          "cultural_tone": "A culture deeply connected to natural cycles and unseen forces, where craftsmanship is imbued with a touch of the mystical. Functionality is secondary to harmony with the environment.",
+          "materials_base": "Natural, weathered materials like stone, wood, and living plant matter. Textures are rough and aged, speaking of time and exposure. There's an emphasis on materials that can be shaped by natural processes or subtle enchantments.",
+          "mood_baseline": "serene, mystical, ancient",
+          "palette_bias": "Earthy, muted tones dominate, favoring greens, browns, and grays that reflect the natural world. Subtle hints of ethereal blues and purples might appear in magical influences, creating a dreamlike quality.",
+          "soundscape_base": "The gentle, pervasive sounds of nature - flowing water, rustling leaves, distant animal calls. A subtle hum of ambient magic might be felt or heard, adding an otherworldly resonance.",
+          "flora_base": "Abundant, verdant plant life that is deeply integrated with structures and the landscape. Think old-growth forests, mosses, lichens, and vines that reclaim and adorn surfaces.",
+          "fauna_base": "Creatures that are elusive, magical, or adapted to a life intertwined with nature and arcane energies. Think spirit animals, enchanted beings, or highly specialized naturalists."
+        },
+        "slug": "the-whispering-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "30fc99c6-b041-4ad1-b87b-92247136dfb1": {
+      "id": "30fc99c6-b041-4ad1-b87b-92247136dfb1",
+      "type": "region",
+      "name": "The Whispering Expanse",
+      "dna": {
+        "type": "region",
+        "name": "The Whispering Expanse",
+        "description": "",
+        "slug": "the-whispering-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "9a757258-513b-4f57-9bf2-42814bb4d954": {
+      "id": "9a757258-513b-4f57-9bf2-42814bb4d954",
+      "type": "location",
+      "name": "The Dream Mill",
+      "dna": {
+        "type": "location",
+        "name": "The Dream Mill",
+        "description": "A moss-clad complex with ancient water wheels, its purpose tied to unseen currents.",
+        "looks": "A multi-level stone building is heavily overgrown with vibrant green moss and ivy, appearing ancient and integrated with the surrounding nature. Large, weathered wooden water wheels stand prominently on the left and within a circular window on the right facade. The structure is nestled beside a flowing river with visible rapids and moss-covered rocks. Lush green foliage from the surrounding forest creates a dense canopy overhead and frames the scene.",
+        "atmosphere": "A thick, damp mist hangs in the air, obscuring the distant trees and softening the light. The air appears heavy with moisture, suggesting a humid environment. The overall impression is one of a secluded and primeval setting.",
+        "mood": "Mysterious, ancient, tranquil",
+        "lighting": "The lighting is soft and diffused, characteristic of an overcast day or heavy mist. There is a cool, subdued quality to the light, with subtle warm glows emanating from a few windows within the building. Contrast is low, creating a gentle and even illumination across the scene.",
+        "dominantElements": [
+          "Stone building covered in moss and ivy",
+          "Large wooden water wheel (left foreground)",
+          "River with visible flow and rocks (foreground/midground)",
+          "Dense forest in the background"
+        ],
+        "spatialLayout": "The main stone building with its water wheel is positioned in the midground, dominating the center and left of the frame. A river flows from the background towards the foreground, wrapping around the building's foundation. The surrounding landscape is a steep, forested embankment on both sides, creating a sense of enclosure.",
+        "uniqueIdentifiers": [
+          "Moss-clad stone structure with prominent water wheels",
+          "Inclusion of both water wheels and river integration",
+          "Heavy overgrowth of moss and ivy"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Wood, Moss, Ivy",
+        "materials_accents": "Warm light from windows",
+        "colors_dominant": "Green (moss, foliage)",
+        "colors_secondary": "Gray (stone), Brown (wood, river)",
+        "colors_accents": "Orange (window lights)",
+        "colors_ambient": "Cool, muted green and gray tones",
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "center midground",
+            "description": "Large, ornate water wheel on building facade"
+          },
+          {
+            "type": "object",
+            "position": "left midground",
+            "description": "Large, wooden water wheel integrated with structure"
+          },
+          {
+            "type": "door",
+            "position": "right facade",
+            "description": "Small, dark wooden door with red trim"
+          },
+          {
+            "type": "window",
+            "position": "right facade",
+            "description": "Circular window with intricate wooden spokes"
+          },
+          {
+            "type": "bridge",
+            "position": "right background",
+            "description": "Wooden walkway/bridge connected to building"
+          }
+        ],
+        "searchDesc": "Ancient moss-covered mill by a river. Has: water wheel (left midground), door (right facade), wooden bridge (right background)",
+        "slug": "the-dream-mill"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/FOhZYHQ5NjvU5zVaoOG4y.jpg",
+      "focus": {
+        "node_id": "The Dream Mill",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -946,6 +1062,23 @@
           "children": [
             {
               "id": "bc3bc152-cffa-4863-8034-4519926dba9d",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762510996120-34gpfwbei",
+      "type": "host",
+      "children": [
+        {
+          "id": "30fc99c6-b041-4ad1-b87b-92247136dfb1",
+          "type": "region",
+          "children": [
+            {
+              "id": "9a757258-513b-4f57-9bf2-42814bb4d954",
               "type": "location",
               "children": []
             }

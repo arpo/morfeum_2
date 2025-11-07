@@ -65,7 +65,7 @@ REQUIREMENTS:
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should describe what we see immediately after stepping inside.`;
 
-  // console.log(prompt);
+  console.log('-------- Prompt-----------', prompt, '-------------------------');
   return prompt;
 }
 
