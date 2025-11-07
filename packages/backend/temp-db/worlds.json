@@ -711,148 +711,126 @@
         "distance": "medium"
       }
     },
-    "loc-1762505961823-s1010stqq": {
-      "id": "loc-1762505961823-s1010stqq",
+    "loc-1762506552850-1oimkbmvf": {
+      "id": "loc-1762506552850-1oimkbmvf",
       "type": "host",
-      "name": "Aetherium City",
+      "name": "The Shattered Coast",
       "dna": {
         "type": "host",
-        "name": "Aetherium City",
-        "description": "A metropolis where advanced clockwork technology intertwines with organic life.",
+        "name": "The Shattered Coast",
+        "description": "A land perpetually battered by the sea, where coastal erosion reveals ancient secrets.",
         "dna": {
-          "genre": "steampunk|fantasy",
-          "architectural_tone": "ornate clockwork, grand engineering",
-          "cultural_tone": "A society that reveres precision and the intricate beauty of mechanical design. Functionality is art, and timekeeping is a spiritual practice.",
-          "materials_base": "Polished brass, gleaming copper, intricately carved wood, reinforced glass, and various refined metallic alloys form the building blocks of this civilization.",
-          "mood_baseline": "orderly, meticulous, wondrous",
-          "palette_bias": "Warm metallic tones with rich earthy accents. Think burnished golds, coppers, and bronzes, complemented by deep browns and occasional jewel-like highlights.",
-          "soundscape_base": "A constant hum of intricate machinery, punctuated by the rhythmic ticking and whirring of gears. Occasional chimes mark the passing of time.",
-          "flora_base": "Engineered botanical lifeforms, crafted from metal and powered by intricate clockwork mechanisms. They bloom and retract with precise timing.",
-          "fauna_base": "Clockwork automatons designed for specific tasks, and perhaps bio-mechanical creatures where organic life has been augmented by technology."
+          "genre": "fantasy",
+          "architectural_tone": "ancient coastal ruins, organic integration",
+          "cultural_tone": "A culture deeply connected to the sea, where ancient pacts and natural forces shape existence. Survival and reverence for the ocean's power are paramount.",
+          "materials_base": "Predominantly calcified marine growth, weathered stone, and materials salvaged from shipwrecks or deep-sea exploration. A sense of age and natural erosion is key.",
+          "mood_baseline": "melancholy, resilient, awe-inspiring",
+          "palette_bias": "Dominated by cool, oceanic tones of deep blues, seafoam greens, and muted greys, contrasted with the stark whites and pale yellows of salt-worn surfaces.",
+          "soundscape_base": "The constant, powerful roar of the ocean, the cries of seabirds, and the eerie groans of shifting stone and kelp.",
+          "flora_base": "Salt-tolerant sea grasses, resilient cliffside mosses, and bioluminescent deep-sea flora that might wash ashore.",
+          "fauna_base": "Marine life adapted to harsh coastal conditions, such as hardy seabirds, salt-crusted crustaceans, and perhaps ancient, leviathan-like sea creatures."
         },
-        "slug": "aetherium-city"
+        "slug": "the-shattered-coast"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "Aetherium City",
+        "node_id": "The Shattered Coast",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "64db85d1-626c-4a1e-8e4b-0aca3ec6701f": {
-      "id": "64db85d1-626c-4a1e-8e4b-0aca3ec6701f",
+    "179fa8ca-a359-4c83-b597-d4bc2bf25e4e": {
+      "id": "179fa8ca-a359-4c83-b597-d4bc2bf25e4e",
       "type": "region",
-      "name": "Aetherium City",
+      "name": "The Shattered Coast",
       "dna": {
         "type": "region",
-        "name": "Aetherium City",
+        "name": "The Shattered Coast",
         "description": "",
         "dna": {
-          "architectural_tone": null,
-          "cultural_tone": "Within the grand city, the culture emphasizes public displays of engineered marvels and communal time-based events. Architecture often incorporates open spaces for showcasing flora.",
-          "materials_base": null,
-          "mood_baseline": null,
-          "palette_bias": "Slightly more vibrant metallic hues, with an emphasis on gold and polished brass to reflect the city's status.",
-          "soundscape_base": "The city's ambient sounds are more pronounced, with larger chimes and more noticeable gear work from public structures.",
-          "flora_base": "A greater diversity of mechanical flora, specifically cultivated for public display and aesthetic appeal.",
-          "fauna_base": null
+          "architectural_tone": "wind-scoured structures, integrated into cliff faces",
+          "cultural_tone": "Inhabitants here are hardy survivors, accustomed to the relentless sea and the whispers of forgotten eras. Their settlements are built for defense against the elements and the unknown.",
+          "materials_base": "Primarily weathered rock, compacted salt, and remnants of coral-like formations, often reinforced with salvaged driftwood and iron.",
+          "mood_baseline": "isolated, stark, enduring",
+          "palette_bias": "Emphasizes shades of grey and pale blues from mist and sea, accented by the ochre and rust tones of exposed mineral deposits and sea-worn metals.",
+          "soundscape_base": "The omnipresent crashing of waves against cliffs, the mournful howl of sea winds, and the distant, echoing calls of unknown creatures.",
+          "flora_base": "Sparse, salt-blasted scrub brush, hardy sea herbs, and gnarled, wind-battered trees clinging precariously to the rock.",
+          "fauna_base": "Tough, scavengers like cliff-dwelling goats, large predatory birds, and the occasional sighting of larger, more elusive marine predators near the shore."
         },
-        "slug": "aetherium-city"
+        "slug": "the-shattered-coast"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "Aetherium City",
+        "node_id": "The Shattered Coast",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "60bb9bc5-f342-49a9-aacf-ceb50a9cf04e": {
-      "id": "60bb9bc5-f342-49a9-aacf-ceb50a9cf04e",
+    "bc3bc152-cffa-4863-8034-4519926dba9d": {
+      "id": "bc3bc152-cffa-4863-8034-4519926dba9d",
       "type": "location",
-      "name": "Aetherium City",
+      "name": "The House of Salt and Rain",
       "dna": {
         "type": "location",
-        "name": "Aetherium City",
-        "description": "",
-        "dna": {
-          "architectural_tone": "Grand public spaces with high ceilings and abundant natural light, designed to showcase the mechanical flora.",
-          "cultural_tone": "This specific area is dedicated to the horticultural exhibition of the city's finest mechanical flora, a place of quiet admiration.",
-          "materials_base": "Stone flooring, ornate wooden columns, and decorative metallic accents are prevalent.",
-          "mood_baseline": "serene, contemplative, awe-inspiring",
-          "palette_bias": "Dominance of warm, sun-drenched tones, with accents of dark wood and opulent gold.",
-          "soundscape_base": "Subtle ambient whirring and gentle, melodic chimes from the flora themselves, with hushed footsteps on stone.",
-          "flora_base": "Precisely arranged mechanical flora with visible internal mechanisms.",
-          "fauna_base": "None (focus on flora)"
-        },
-        "slug": "aetherium-city"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Aetherium City",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "f1073862-ac26-4106-8261-f556b35a86d0": {
-      "id": "f1073862-ac26-4106-8261-f556b35a86d0",
-      "type": "niche",
-      "name": "The Brass Bloom Atrium",
-      "dna": {
-        "type": "niche",
-        "name": "The Brass Bloom Atrium",
-        "description": "The central area where the mechanical flora are meticulously arranged, showcasing their programmed beauty.",
-        "looks": "A grand, sunlit atrium features rows of vibrant, orange-hued mechanical flora lining the left and right walls. Ornate, dark brown columns support a high, vaulted ceiling adorned with golden detailing and a large, tiered chandelier. Sunlight streams in through arched openings, illuminating the space and casting dappled light on a patterned carpet. The mechanical flowers, with their detailed petals and visible internal mechanisms, are arranged on pedestals or directly in planters.",
-        "atmosphere": "The air appears clear and slightly hazy with sunlight, creating a soft, diffused effect. A gentle luminescence emanates from the mechanical flowers, suggesting an internal light source.",
-        "mood": "Regulated beauty, timed marvel",
-        "lighting": "The lighting is primarily natural, with strong shafts of sunlight entering from the right and from the large central archway. The light is warm and golden, creating a high contrast between illuminated areas and shadows. A large, ornate chandelier hangs from the ceiling, providing additional warm, diffused light.",
+        "name": "The House of Salt and Rain",
+        "description": "A cliffside manor constructed entirely from bleached coral, its architecture echoing the waves it overlooks.",
+        "looks": "A sprawling cliffside manor dominates the frame, its multi-tiered structure intricately carved from a material resembling bleached coral. Ornate battlements and balconies jut out over the churning sea, their surfaces appearing textured and weathered. Numerous arched windows and openings punctuate the facade, some illuminated from within. Terraces, carved directly into the cliff face, are visible at various levels, catching the spray from the waves below.",
+        "atmosphere": "A thick, pervasive mist blankets the background, obscuring the distant cliffs and creating a sense of isolation. The air appears heavy with moisture, clinging to the architecture and softening the light.",
+        "mood": "Melancholy, ancient, exposed",
+        "lighting": "The lighting is dim and diffused, suggesting twilight or an overcast day. Warm, yellow light emanates from many of the windows, casting an inviting glow against the cool, blue-grey tones of the structure and the sea. The contrast between the interior light and the exterior gloom is notable.",
         "dominantElements": [
-          "Mechanical flora with orange blossoms (left and right foreground)",
-          "Ornate columns with golden accents (midground)",
-          "Large arched opening to an exterior (background right)",
-          "Patterned carpet (foreground)"
+          "Cliffside manor structure",
+          "Craggy cliff face",
+          "Turbulent ocean waves"
         ],
-        "spatialLayout": "The atrium is elongated, with a clear pathway leading from the foreground towards a grand archway in the background. The mechanical flora are symmetrically arranged along the sides, framing the central view. The architecture suggests a formal, open-plan design.",
+        "spatialLayout": "The manor is built directly into the steep cliff face, with its various levels cascading downwards towards the sea. The foreground features the rough, textured rock of the cliff, while the midground is occupied by the main body of the manor and its extensive terraces. The background is dominated by the misty sea and distant, hazy mountains.",
         "uniqueIdentifiers": [
-          "Mechanical flora with glowing orange blossoms",
-          "Ornate architecture with dark wood and gold accents",
-          "Sunbeams streaming through arched openings"
+          "Architecture composed of bleached coral-like material",
+          "Cliffside integration of the manor",
+          "Multi-tiered terraces with ornate railings"
         ],
-        "materials_primary": "Stone (floor, walls)",
-        "materials_secondary": "Wood (columns, trim)",
-        "materials_accents": "Brass or copper (flower petals), gold (ornaments, chandelier)",
-        "colors_dominant": "Warm orange (flowers)",
-        "colors_secondary": "Dark brown (columns, walls), gold (accents, ceiling)",
-        "colors_accents": "Bright white/yellow (sunlight highlights, flower lights)",
-        "colors_ambient": "Warm golden hue",
+        "materials_primary": "Bleached coral-like stone",
+        "materials_secondary": "Rock cliff",
+        "materials_accents": "Glowing window lights",
+        "colors_dominant": "Grey-blue (structure and sea)",
+        "colors_secondary": "White (sea spray, foam)",
+        "colors_accents": "Warm yellow (window lights)",
+        "colors_ambient": "Misty blue-grey",
         "navigableElements": [
           {
-            "type": "stairs",
-            "position": "background right",
-            "description": "Stone stairs ascending into a bright, sunlit area"
+            "type": "door",
+            "position": "midground, lower levels",
+            "description": "Arched doorways leading into lower levels of the manor"
           },
           {
-            "type": "passage",
-            "position": "background center",
-            "description": "Large arched opening leading to an outdoor garden"
+            "type": "window",
+            "position": "midground, various levels",
+            "description": "Rectangular and arched windows emitting warm light"
+          },
+          {
+            "type": "object",
+            "position": "midground, terraces",
+            "description": "Balconies and terraces with ornate railings"
           }
         ],
-        "searchDesc": "[Location - Interior] Ornate atrium with mechanical flora. Has: stairs (background right), passage (background center)",
+        "searchDesc": "[Location - Exterior] Cliffside manor built of coral-like stone. Has: arched doorways (midground, lower levels), illuminated windows (midground, various levels), ornate terraces (midground)",
         "dna": {
-          "architectural_tone": null,
-          "materials_base": "Focus on brass and copper for the mechanical flora, with stone and wood for the display structures.",
-          "mood_baseline": "radiant, precisely timed, blooming",
-          "soundscape_base": "The distinct clicking and unfurling of petals, accompanied by the faint hum of individual flower mechanisms.",
-          "flora_base": "Highly detailed mechanical flora with brass and copper petals.",
-          "fauna_base": null
+          "architectural_tone": "organic coral architecture, glistening, wave-inspired",
+          "cultural_tone": "A place of solitary contemplation or perhaps a sanctuary for those seeking refuge from the harsher elements, imbued with a sense of faded grandeur and lingering memory.",
+          "materials_base": "Bleached coral-like stone, naturally smoothed by sea and time, with terraces that absorb and reflect the sea spray.",
+          "mood_baseline": "haunting, ethereal, serene",
+          "palette_bias": "A delicate interplay of pearlescent whites and soft greys of the coral, contrasted with the deep, reflective blues of the sea and the warm, inviting glows from within.",
+          "soundscape_base": "The gentle lapping of waves against the coral structure, the soft hiss of sea spray, and the distant, resonant hum of the ocean's depths.",
+          "flora_base": "Minimal, perhaps clinging sea mosses or small, salt-tolerant flowering plants cultivated in sheltered terrace nooks.",
+          "fauna_base": "Small, unobtrusive sea creatures, such as tiny crabs skittering along the wet surfaces, or phosphorescent plankton within the collected sea water."
         },
-        "slug": "the-brass-bloom-atrium"
+        "slug": "the-house-of-salt-and-rain"
       },
-      "imagePath": "https://v3b.fal.media/files/b/elephant/6Oyaq7O2UgjAG3wge4GaP.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/koala/q9RQzhFRqrQD6nh-b2WtA.jpg",
       "focus": {
-        "node_id": "The Brass Bloom Atrium",
+        "node_id": "The House of Salt and Rain",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
@@ -959,23 +937,17 @@
       ]
     },
     {
-      "id": "loc-1762505961823-s1010stqq",
+      "id": "loc-1762506552850-1oimkbmvf",
       "type": "host",
       "children": [
         {
-          "id": "64db85d1-626c-4a1e-8e4b-0aca3ec6701f",
+          "id": "179fa8ca-a359-4c83-b597-d4bc2bf25e4e",
           "type": "region",
           "children": [
             {
-              "id": "60bb9bc5-f342-49a9-aacf-ceb50a9cf04e",
+              "id": "bc3bc152-cffa-4863-8034-4519926dba9d",
               "type": "location",
-              "children": [
-                {
-                  "id": "f1073862-ac26-4106-8261-f556b35a86d0",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
+              "children": []
             }
           ]
         }

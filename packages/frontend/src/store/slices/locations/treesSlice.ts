@@ -18,6 +18,7 @@ export interface TreesSlice {
   findNodeInTree: (tree: TreeNode, nodeId: string) => TreeNode | null;
   getTreePath: (worldId: string, nodeId: string) => string[];
   deleteWorldTree: (worldId: string) => void;
+  deleteNodeWithChildren: (nodeId: string) => void;
   getWorldNodeCount: (worldId: string) => number;
 }
 
@@ -184,6 +185,75 @@ export const createTreesSlice: StateCreator<
     
     // Remove tree from worldTrees array
     const newTrees = worldTrees.filter((_: TreeNode, i: number) => i !== treeIndex);
+    
+    // Clean up pins
+    const newPinnedIds = pinnedIds.filter((id: string) => !nodeIdsToDelete.has(id));
+    
+    set({
+      nodes: newNodes,
+      worldTrees: newTrees,
+      pinnedIds: newPinnedIds
+    });
+    
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
+  },
+  
+  deleteNodeWithChildren: (nodeId) => {
+    const { nodes, worldTrees, pinnedIds } = get() as any;
+    
+    // Find which world tree contains this node
+    let targetWorldId: string | null = null;
+    let targetSubtree: TreeNode | null = null;
+    
+    for (const tree of worldTrees) {
+      const findNode = (treeNode: TreeNode): TreeNode | null => {
+        if (treeNode.id === nodeId) return treeNode;
+        for (const child of treeNode.children) {
+          const found = findNode(child);
+          if (found) return found;
+        }
+        return null;
+      };
+      
+      targetSubtree = findNode(tree);
+      if (targetSubtree) {
+        targetWorldId = tree.id;
+        break;
+      }
+    }
+    
+    if (!targetSubtree || !targetWorldId) {
+      console.warn('[treesSlice] Node not found in any tree:', nodeId);
+      return;
+    }
+    
+    // Collect all node IDs in the subtree (including the target node)
+    const nodeIdsToDelete = new Set<string>();
+    const collectNodeIds = (treeNode: TreeNode) => {
+      nodeIdsToDelete.add(treeNode.id);
+      treeNode.children?.forEach(child => collectNodeIds(child));
+    };
+    collectNodeIds(targetSubtree);
+    
+    // Delete all nodes from nodes map
+    const newNodes = { ...nodes };
+    nodeIdsToDelete.forEach(id => delete newNodes[id]);
+    
+    // Remove the subtree from parent in the tree structure
+    const newTrees = worldTrees.map((tree: TreeNode) => {
+      if (tree.id !== targetWorldId) return tree;
+      
+      // Deep clone the tree and remove the target node
+      const cloneTree = (node: TreeNode): TreeNode => ({
+        ...node,
+        children: node.children
+          .filter(child => child.id !== nodeId)
+          .map(child => cloneTree(child))
+      });
+      
+      return cloneTree(tree);
+    });
     
     // Clean up pins
     const newPinnedIds = pinnedIds.filter((id: string) => !nodeIdsToDelete.has(id));

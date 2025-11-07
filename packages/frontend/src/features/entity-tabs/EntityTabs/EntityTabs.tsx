@@ -23,8 +23,7 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
   const getNode = useLocationsStore(state => state.getNode);
   const worldTrees = useLocationsStore(state => state.worldTrees);
   const deleteWorldTree = useLocationsStore(state => state.deleteWorldTree);
-  const removeNodeFromTree = useLocationsStore(state => state.removeNodeFromTree);
-  const deleteNode = useLocationsStore(state => state.deleteNode);
+  const deleteNodeWithChildren = useLocationsStore(state => state.deleteNodeWithChildren);
 
   // Modal state
   const [infoModalOpen, setInfoModalOpen] = useState<string | null>(null);
@@ -86,43 +85,58 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
     if (entity?.entityType === 'location') {
       const node = getNode(spawnId);
       if (node) {
-        // Find which world tree this node belongs to
-        const findWorldId = (treeNode: any, targetId: string): string | null => {
-          if (treeNode.id === targetId) {
-            return treeNode.id; // This is the world root
-          }
-          
+        // Collect all descendant node IDs that need entity sessions closed
+        const collectDescendantIds = (treeNode: any): string[] => {
+          const ids = [treeNode.id];
           if (treeNode.children) {
-            for (const child of treeNode.children) {
-              const found = findWorldId(child, targetId);
-              if (found !== null) return treeNode.id; // Return the root ID
+            treeNode.children.forEach((child: any) => {
+              ids.push(...collectDescendantIds(child));
+            });
+          }
+          return ids;
+        };
+        
+        // Find the subtree starting at this node
+        const findSubtree = (tree: any, targetId: string): any | null => {
+          if (tree.id === targetId) return tree;
+          if (tree.children) {
+            for (const child of tree.children) {
+              const found = findSubtree(child, targetId);
+              if (found) return found;
             }
           }
-          
           return null;
         };
         
-        // Search all world trees for this node
+        // Find which tree contains this node and get its subtree
+        let subtree = null;
         for (const tree of worldTrees) {
-          const worldId = findWorldId(tree, spawnId);
-          if (worldId !== null) {
-            // Check if this is the host root node
-            if (node.type === 'host') {
-              // Delete entire host tree
-              deleteWorldTree(spawnId);
-            } else {
-              // Delete child node from tree and nodes map
-              removeNodeFromTree(worldId, spawnId);
-              deleteNode(spawnId);
-              console.log(`[EntityTabs] Deleted node from tree: ${spawnId}`);
-            }
-            break;
-          }
+          subtree = findSubtree(tree, spawnId);
+          if (subtree) break;
         }
+        
+        // Collect all IDs to close (including the node itself)
+        const idsToClose = subtree ? collectDescendantIds(subtree) : [spawnId];
+        
+        // Delete from location store (cascading delete)
+        if (node.type === 'host') {
+          deleteWorldTree(spawnId);
+        } else {
+          deleteNodeWithChildren(spawnId);
+        }
+        
+        // Close all entity sessions for this node and its descendants
+        idsToClose.forEach(id => {
+          if (entities.has(id)) {
+            closeEntity(id);
+          }
+        });
+        
+        return; // Don't call closeEntity again below
       }
     }
     
-    // Always close the entity session
+    // For non-location entities, just close the entity session
     closeEntity(spawnId);
   };
 
