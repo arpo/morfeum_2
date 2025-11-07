@@ -1,36 +1,26 @@
 # Technical Context
 
-## Technology Stack Overview
+## Technology Stack
 
-### Frontend Technologies
+### Frontend
 - **React 18**: Modern React with hooks and concurrent features
 - **TypeScript**: Full type safety and enhanced developer experience
 - **Vite**: Fast build tool and development server
 - **CSS Modules**: Scoped styling preventing conflicts
 - **Zustand**: Lightweight state management
-- **React Router DOM**: Client-side routing (installed, ready for implementation)
+- **Tabler Icons**: Icon library (centralized exports)
 
-### Backend Technologies
+### Backend
 - **Node.js**: JavaScript runtime for server-side code
 - **Express.js**: Web framework for API endpoints
-- **TypeScript**: Type-safe backend development with 100% coverage
-- **Dotenv**: Environment variable management for secure configuration
-
-### Backend Architecture (Implemented)
-- **Domain-Driven Design**: Modular architecture with 12 focused modules
-- **Configuration as Code**: Environment-specific configurations (dev/prod/test)
-- **Service Layer Pattern**: Business logic separated from infrastructure
-- **Middleware Stack**: CORS, error handling, async wrappers
-- **Route Organization**: Domain-specific routing with clear boundaries
-- **Type Safety**: Comprehensive TypeScript interfaces throughout
-- **Environment Management**: Dotenv for secure API key and configuration handling
-- **API Proxy Pattern**: Backend proxy for external API integrations (MZOO)
+- **TypeScript**: Type-safe backend development
+- **Dotenv**: Environment variable management
 
 ### Development Tools
 - **ESLint**: Code linting and quality enforcement
 - **Prettier**: Code formatting and consistency
-- **Vitest**: Fast unit testing framework
-- **TypeScript Compiler**: Static type checking
+- **npm**: Package management
+- **Git**: Version control
 
 ## Architecture Decisions
 
@@ -45,42 +35,24 @@ morfeum_2/
 └── Configuration files    # Root-level setup
 ```
 
-**Rationale**: Monorepo structure provides:
-- Shared configuration and dependencies
-- Simplified development workflow
-- Consistent tooling across packages
-- Easy code sharing between frontend and backend
+**Benefits**: Shared configuration, simplified workflow, consistent tooling
 
 ### Component Architecture
+- Strict separation: markup (.tsx), logic (.ts), styles (.module.css), types (.ts)
+- 50-300 line file limits enforced
+- Single responsibility per file
+
+### State Management
+**Zustand chosen for**:
+- Minimal boilerplate (~2.3KB bundle size)
+- Excellent TypeScript inference
+- Simple learning curve
+- Efficient re-rendering
+
+## Build Configuration
+
+### Vite Setup
 ```typescript
-// Strict separation pattern
-ComponentName/
-├── ComponentName.tsx      # Pure JSX markup
-├── useComponentLogic.ts   # Business logic
-├── ComponentName.module.css # Scoped styles
-├── types.ts              # TypeScript interfaces
-└── index.ts              # Public exports
-```
-
-**Rationale**: Enforced separation provides:
-- Clear responsibility boundaries
-- Easier testing and maintenance
-- Better code reusability
-- Improved developer experience
-
-### State Management Choice
-**Zustand over Redux/Context API**:
-- **Simplicity**: Minimal boilerplate code
-- **Performance**: Efficient re-rendering
-- **TypeScript**: Excellent type inference
-- **Bundle Size**: Small footprint (~2.3KB)
-- **Learning Curve**: Easy to understand and adopt
-
-## Build System Configuration
-
-### Vite Configuration
-```typescript
-// vite.config.ts
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -88,395 +60,117 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  // Additional optimizations
 });
 ```
 
-**Key Features**:
-- **Path Aliases**: Clean imports with @/ shortcuts
-- **Hot Module Replacement**: Fast development iterations
-- **Tree Shaking**: Automatic dead code elimination
-- **Optimized Builds**: Production-ready output
+**Features**: Path aliases, HMR, tree shaking, optimized builds
 
 ### TypeScript Configuration
-```json
-// tsconfig.json
-{
-  "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
-}
-```
+- Target: ES2020
+- Module: ESNext
+- Strict mode enabled
+- Path aliases configured
+- No unused locals/parameters
 
-## Design System Implementation
+## Design System
 
 ### CSS Custom Properties
 ```css
-/* tokens.module.css */
 :root {
-  /* Spacing */
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
-  
-  /* Colors */
   --color-primary: #3b82f6;
   --color-text: #1f2937;
   --color-bg: #ffffff;
-  
-  /* Typography */
-  --text-sm: 0.875rem;
-  --text-md: 1rem;
-  --text-lg: 1.125rem;
-  
-  /* Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
 }
 ```
 
-**Benefits**:
-- **Consistency**: Unified design language
-- **Theming**: Easy theme switching
-- **Maintainability**: Centralized design decisions
-- **Performance**: CSS variables are fast
-
-### Component Styling Pattern
-```css
-/* Component.module.css */
-.button {
-  background-color: var(--color-primary);
-  padding: var(--spacing-md);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
-}
-
-.button:hover {
-  background-color: var(--color-primary-hover);
-}
-```
-
-## Icon Management Strategy
-
-### Centralized Icon Exports
-```typescript
-// icons/index.ts
-export { IconLoader2 } from '@tabler/icons-react';
-// Add new icons as needed - never import directly
-```
-
-**Optimization Benefits**:
-- **Bundle Size**: Only used icons included
-- **Tree Shaking**: Unused icons eliminated
-- **Consistency**: Single source of truth
-- **Maintainability**: Easy to track icon usage
-
-## Performance Optimizations
-
-### Bundle Optimization
-- **Code Splitting**: Dynamic imports for large features
-- **Tree Shaking**: Automatic dead code elimination
-- **Minification**: Production build optimizations
-- **Compression**: Gzip compression for deployment
-
-### Runtime Performance
-- **React.memo**: Component memoization where appropriate
-- **useCallback/useMemo**: Hook optimizations
-- **CSS Modules**: Scoped styles prevent conflicts
-- **Virtualization**: For large lists (when needed)
-
-### Build Performance
-- **Vite**: Fast development server and builds
-- **ESBuild**: Rapid TypeScript compilation
-- **Hot Module Replacement**: Instant development feedback
-- **Incremental Builds**: Faster subsequent builds
+### Theme Support
+- CSS variables for all design tokens
+- Dark/light mode toggle
+- Consistent spacing and typography
+- No hardcoded values
 
 ## Development Workflow
 
 ### Local Development
 ```bash
-# Frontend development
-cd packages/frontend
-npm run dev
+# Frontend
+cd packages/frontend && npm run dev
 
-# Backend development
-cd packages/backend
-npm run dev
+# Backend  
+cd packages/backend && npm run dev
 
-# Full stack development
+# Full stack
 npm run dev
 ```
 
 ### Build Process
 ```bash
-# Production build
-npm run build
-
-# Type checking
-npm run type-check
-
-# Linting
-npm run lint
-
-# Testing (when implemented)
-npm run test
+npm run build        # Production build
+npm run type-check   # TypeScript checking
+npm run lint         # ESLint
 ```
 
-### Code Quality Tools
-- **TypeScript**: Static type checking
-- **ESLint**: Code quality and style enforcement
-- **Prettier**: Consistent code formatting
-- **Husky**: Git hooks for pre-commit checks
+## API Architecture
 
-## Deployment Considerations
+### Endpoints
+- **Health**: `/health` - Basic health check
+- **API**: `/api/*` - Main API routes
+- **MZOO Proxy**: `/api/mzoo/*` - External API proxy
+- **Spawn**: `/api/spawn/*` - Entity generation
+- **Static**: `/*` - SPA catch-all
 
-### Frontend Deployment
-- **Static Files**: Built assets can be served from any CDN
-- **SPA Routing**: Requires server configuration for client-side routing
-- **Caching**: Appropriate cache headers for assets
-- **Compression**: Gzip/Brotli compression enabled
-
-### Backend Deployment
-- **Node.js Server**: Requires Node.js runtime
-- **Environment Variables**: Configuration via environment
-- **Process Management**: PM2 or similar for production
-- **Health Checks**: /health endpoint for monitoring
-
-### Docker Support
-```dockerfile
-# Multi-stage build for optimized images
-FROM node:18-alpine as builder
-# Build stage
-
-FROM node:18-alpine as runtime
-# Production stage
+### Environment Variables
+```env
+MZOO_API_KEY=xxx        # External API key
+PORT=3030               # Server port
+NODE_ENV=development    # Environment
 ```
 
-## Security Considerations
+## Performance Targets
 
-### Frontend Security
-- **CSP Headers**: Content Security Policy implementation
-- **Dependency Scanning**: Regular security audits
-- **XSS Prevention**: React's built-in XSS protection
-- **HTTPS**: Enforce secure connections in production
+### Frontend
+- Bundle size: < 150KB gzipped
+- First contentful paint: < 2 seconds
+- Build time: < 2 seconds
 
-### Backend Security
-- **Input Validation**: Request validation and sanitization
-- **CORS Configuration**: Proper cross-origin resource sharing
-- **Rate Limiting**: API abuse prevention
-- **Environment Security**: Secure environment variable handling
-
-## Monitoring and Observability
-
-### Performance Monitoring
-- **Bundle Analysis**: Regular bundle size tracking
-- **Performance Metrics**: Core Web Vitals monitoring
-- **Error Tracking**: Client and server error logging
-- **Usage Analytics**: Feature usage tracking
-
-### Development Monitoring
-- **Build Times**: Compilation and build performance
-- **Type Coverage**: TypeScript usage metrics
-- **Test Coverage**: Code coverage tracking
-- **Lint Metrics**: Code quality trends
-
-## Future Technical Roadmap
-
-### Short-term Technical Goals
-- **Testing Infrastructure**: Vitest + Testing Library setup
-- **Code Quality**: ESLint + Prettier configuration
-- **Documentation**: Storybook integration
-- **Accessibility**: ARIA patterns and testing
-
-### Medium-term Technical Goals
-- **Performance Monitoring**: Real user monitoring integration
-- **Error Tracking**: Comprehensive error reporting
-- **CI/CD Pipeline**: Automated testing and deployment
-- **Security Scanning**: Automated security audits
-
-### Long-term Technical Goals
-- **Micro-frontends**: Modular architecture patterns
-- **Performance Budgets**: Automated performance enforcement
-- **Advanced Testing**: E2E testing with Playwright
-- **Component Library**: Published design system
+### Backend
+- Response time: < 100ms for local operations
+- Startup time: < 1 second
+- Memory usage: < 100MB baseline
 
 ## Technical Constraints
 
 ### Browser Support
-- **Modern Browsers**: Chrome, Firefox, Safari, Edge (last 2 versions)
-- **ES2020 Features**: Modern JavaScript features
-- **CSS Features**: CSS Grid, Flexbox, Custom Properties
-- **No IE Support**: Focused on modern browser capabilities
+- Modern browsers only (Chrome, Firefox, Safari, Edge)
+- ES2020 features used
+- No IE11 support
 
-### Performance Constraints
-- **Bundle Size**: Target under 150KB gzipped
-- **Load Time**: First contentful paint under 2 seconds
-- **Interaction Time**: First input delay under 100ms
-- **Memory Usage**: Efficient memory management
+### Development Requirements
+- Node.js 18.x or higher
+- npm package manager
+- VS Code recommended
 
-### Development Constraints
-- **Node.js Version**: 18.x or higher
-- **Package Manager**: npm (but compatible with yarn/pnpm)
-- **Platform Support**: macOS, Linux, Windows
-- **IDE Support**: VS Code recommended with extensions
+### Platform Support
+- macOS, Linux, Windows
+- Docker optional
+- Cloud deployment ready
 
-## Backend Architecture Details
+## Current Technical State
 
-### Backend Module Structure
-```
-packages/backend/src/
-├── server.ts                 # Main entry point (95 lines)
-├── config/
-│   ├── constants.ts         # Application constants (35 lines)
-│   ├── environments.ts      # Environment configs (45 lines)
-│   └── index.ts             # Exports (3 lines)
-├── middleware/
-│   ├── cors.ts              # CORS middleware (25 lines)
-│   ├── errorHandler.ts      # Error handling (65 lines)
-│   └── index.ts             # Exports (3 lines)
-├── routes/
-│   ├── api.ts               # API routes (45 lines)
-│   ├── health.ts            # Health checks (50 lines)
-│   └── index.ts             # Route config (35 lines)
-├── services/
-│   ├── static.ts            # Static files (40 lines)
-│   └── index.ts             # Exports (3 lines)
-├── types/
-│   ├── server.ts            # Type definitions (20 lines)
-│   └── index.ts             # Exports (3 lines)
-└── utils/
-    ├── path.ts              # Path utilities (25 lines)
-    └── index.ts             # Exports (3 lines)
-```
+### Implemented
+- ✅ Component library with design system
+- ✅ Zustand state management
+- ✅ Navigation system (13 intent types)
+- ✅ Location hierarchy system (4 levels)
+- ✅ DNA inheritance system
+- ✅ FLUX image generation integration
+- ✅ SSE for real-time updates
 
-### Backend API Endpoints
-
-**Health Monitoring**:
-- `GET /health` - Basic health check with status and uptime
-- `GET /health/detailed` - Detailed health info with memory usage and system metrics
-
-**API Routes**:
-- `GET /api` - Root API endpoint returning plain text response
-- `GET /api/info` - Comprehensive API documentation with endpoint listing
-- `GET /api/test` - MZOO database proxy endpoint (fetches test record with id=1)
-
-**Static Files**:
-- `/*` - Catch-all for client-side routing, serves index.html
-
-### Backend Configuration Management
-
-**Environment-Specific Configs**:
-```typescript
-// Development configuration
-developmentConfig(): {
-  port: 3030,
-  nodeEnv: 'development',
-  frontendBuildPath: '../frontend/dist'
-}
-
-// Production configuration
-productionConfig(): {
-  port: 3030,
-  nodeEnv: 'production',
-  frontendBuildPath: '/app/packages/frontend/dist'
-}
-
-// Test configuration
-testConfig(): {
-  port: 3031,
-  nodeEnv: 'test',
-  frontendBuildPath: '../frontend/dist'
-}
-```
-
-**Environment Variables (via Dotenv)**:
-```typescript
-// server.ts - Loads .env from root directory
-import dotenv from 'dotenv';
-import path from 'path';
-
-dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
-
-// Access in routes
-const MZOO_API_KEY = process.env.MZOO_API_KEY;
-```
-
-**External API Integration**:
-- MZOO API integration via backend proxy
-- API keys stored in .env file (never exposed to frontend)
-- Secure proxy pattern for external API calls
-- Proper error handling and response formatting
-
-### Backend Error Handling
-
-**Custom Error Classes**:
-- `AppError` - Operational errors with specific status codes
-- Environment-specific error responses
-- Structured error logging
-- Graceful shutdown handling
-
-**Error Middleware**:
-- Global error handler with proper status codes
-- Development vs production error responses
-- 404 handler for undefined routes
-- Async error wrapper for route handlers
-
-### Backend Type Safety
-
-**Server Types**:
-```typescript
-interface ServerConfig {
-  port: number;
-  nodeEnv: string;
-  frontendBuildPath: string;
-}
-
-interface HealthResponse {
-  status: 'OK';
-  timestamp: string;
-  uptime: number;
-}
-
-interface ApiResponse<T = any> {
-  message: string;
-  data?: T;
-  timestamp: string;
-}
-```
-
-### Backend Middleware Stack
-
-**Request Processing Order**:
-1. JSON body parser
-2. URL encoded parser
-3. CORS middleware
-4. API route handlers
-5. Health check handlers
-6. Static file serving
-7. Catch-all for SPA routing
-8. 404 handler
-9. Error handler
-
-## Conclusion
-
-The technical architecture of Morfeum is designed to demonstrate modern best practices while maintaining simplicity and developer experience. The technology choices balance performance, maintainability, and learning value, making it an excellent reference for contemporary full-stack React development.
-
-The architecture is intentionally opinionated to showcase specific patterns and approaches that have proven effective in production environments. Both frontend and backend demonstrate clean separation of concerns, type safety, and modular design. Each technical decision is documented and justified to provide learning value for developers seeking to improve their technical skills.
+### Pending
+- ⏳ Testing infrastructure (Vitest)
+- ⏳ E2E testing (Playwright)
+- ⏳ CI/CD pipeline
+- ⏳ Performance monitoring
