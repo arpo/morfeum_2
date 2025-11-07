@@ -47,8 +47,6 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
   const updateEntityProfile = useStore(state => state.updateEntityProfile);
 
   const handleLoadLocation = useCallback((node: Node) => {
-    console.log('[SavedEntitiesModal] Loading node:', node.id);
-    
     // Get cascaded DNA for this node
     const cascadedDNA = getCascadedDNA(node.id);
     
@@ -60,7 +58,6 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     
     // Find the world tree containing this node using centralized utility
     const worldTrees = useLocationsStore.getState().worldTrees;
-    console.log('[SavedEntitiesModal] worldTrees:', worldTrees);
     
     const worldTree = findTreeContainingNode(worldTrees, node.id);
     
@@ -69,21 +66,14 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
       return;
     }
     
-    console.log('[SavedEntitiesModal] Found worldTree:', worldTree);
-    
     // Collect all node IDs in the tree using centralized utility
     const allNodeIds = collectAllNodeIds(worldTree);
     
-    console.log('[SavedEntitiesModal] Collected node IDs:', allNodeIds);
-    
     // Create entity sessions for ALL nodes using centralized utility
-    const count = createEntitySessionsForNodes(
+    createEntitySessionsForNodes(
       allNodeIds,
-      { createEntity, updateEntityImage, updateEntityProfile },
-      { logProgress: true, logPrefix: '[SavedEntitiesModal]' }
+      { createEntity, updateEntityImage, updateEntityProfile }
     );
-    
-    console.log('[SavedEntitiesModal] All entity sessions created, total:', count);
     
     // Set clicked node as active entity
     setActiveEntity(node.id);

@@ -51,7 +51,6 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       // Get current node
       let currentNode = getNode(base.activeChat);
       if (!currentNode && base.activeChatSession?.deepProfile) {
-        console.log('[useLocationPanel] ⚠️ Node not saved, saving now...');
         saveLocation();
         currentNode = getNode(base.activeChat);
       }
@@ -96,12 +95,6 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         await handleMoveAction(navigation, currentFocus);
       } else if (navigation.action === 'generate') {
         // TODO: Implement generate action - currently disabled
-        console.log('[NavigatorAI] 🔧 Generate action disabled - would create:');
-        console.log(`Name: ${navigation.name}`);
-        console.log(`Parent Node ID: ${navigation.parentNodeId}`);
-        console.log(`Scale Hint: ${navigation.scale_hint}`);
-        console.log(`Relation: ${navigation.relation}`);
-        console.log(`Reason: ${navigation.reason}`);
         // await handleGenerateAction(navigation, currentNode, cascadedDNA);
       }
       
@@ -139,13 +132,6 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   ) => {
     const targetNode = getNode(navigation.targetNodeId);
     if (targetNode) {
-      console.log('[NavigatorAI] 🚀 Moving to:', {
-        name: targetNode.name,
-        type: targetNode.type,
-        id: navigation.targetNodeId,
-        reason: navigation.reason
-      });
-      
       // Update focus to target node
       const newFocus = updateFocus(currentFocus, navigation.targetNodeId, {
         perspective: 'exterior'
@@ -218,15 +204,11 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       return;
     }
     
-    console.log('[useLocationPanel] Saving world tree structure...');
-    console.log(`[useLocationPanel] Location tree saved with ID: ${base.activeChat}`);
-    
     // Save to backend file
     const saveToBackend = useLocationsStore.getState().saveToBackend;
     const success = await saveToBackend();
     
     if (success) {
-      console.log('[useLocationPanel] Saved to backend successfully');
       base.setIsSaved(true);
     } else {
       console.error('[useLocationPanel] Failed to save to backend');

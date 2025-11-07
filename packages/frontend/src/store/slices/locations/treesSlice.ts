@@ -121,6 +121,9 @@ export const createTreesSlice: StateCreator<
       
       return { worldTrees: trees };
     });
+    
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
   },
   
   removeNodeFromTree: (worldId, nodeId) => {
@@ -140,6 +143,9 @@ export const createTreesSlice: StateCreator<
       removeNodeFromTreeRecursive(worldTree, nodeId);
       return { worldTrees: trees };
     });
+    
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
   },
   
   findNodeInTree: (tree, nodeId) => {
@@ -187,6 +193,9 @@ export const createTreesSlice: StateCreator<
       worldTrees: newTrees,
       pinnedIds: newPinnedIds
     });
+    
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
   },
   
   getWorldNodeCount: (worldId) => {

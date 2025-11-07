@@ -62,7 +62,6 @@ export const useLocationsStore = create<LocationsState>()(
           worldTrees: data.worldTrees,
           pinnedIds: data.pinnedIds,
         });
-        console.log('[LocationsStore] Loaded worlds from backend');
         return true;
       }
       return false;
@@ -78,10 +77,8 @@ export const useLocationsStore = create<LocationsState>()(
           worldTrees: data.worldTrees,
           pinnedIds: data.pinnedIds,
         });
-        console.log('[LocationsStore] Initialized with backend data');
         return true;
       }
-      console.log('[LocationsStore] No backend data, starting fresh');
       return false;
     },
     
@@ -93,9 +90,8 @@ export const useLocationsStore = create<LocationsState>()(
           nodes: {},
           views: {},
           worldTrees: [],
-          pinnedIds: [],
+          pinnedIds: []
         });
-        console.log('[LocationsStore] Cleared backend and local state');
       }
       return cleared;
     },

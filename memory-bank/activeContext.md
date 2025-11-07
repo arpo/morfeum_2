@@ -4,6 +4,14 @@
 The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
+- **Storage Migration**: Migrated from localStorage to backend file storage (temp-db/)
+  - Created backend storage service for worlds and characters
+  - Added API endpoints: GET/POST/DELETE for `/api/worlds` and `/api/characters`
+  - Implemented auto-migration from localStorage to backend files
+  - Fixed payload size limit (100KB → 10MB) to handle large world data
+  - Fixed save buttons to actually persist data to backend
+  - Fixed EntityTabs to always show (bookmark button accessible)
+  - Fixed pinned entities auto-load timing issue
 - **Memory Bank Optimization**: Reduced from 18,800 to 5,800 lines (69% reduction)
 - **Terminology Standardization**: Changed "sublocation" → "niche" across entire codebase
 - **Added Memory Bank Update Rules**: Created `.clinerules/memory-bank-updates.md` to prevent unnecessary updates

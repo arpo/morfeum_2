@@ -41,7 +41,6 @@ class WorldStorageService {
       
       const result = await response.json();
       if (result.success && result.data) {
-        console.log('[WorldStorage] Loaded worlds from backend');
         return result.data;
       }
       
@@ -71,7 +70,6 @@ class WorldStorageService {
       
       const result = await response.json();
       if (result.success) {
-        console.log('[WorldStorage] Saved worlds to backend');
         return true;
       }
       
@@ -97,7 +95,6 @@ class WorldStorageService {
       
       const result = await response.json();
       if (result.success) {
-        console.log('[WorldStorage] Cleared worlds from backend');
         return true;
       }
       
@@ -121,7 +118,6 @@ class WorldStorageService {
       // Extract the state data (Zustand persist format includes state and version)
       const state = parsed.state || parsed;
       
-      console.log('[WorldStorage] Found worlds in localStorage');
       return {
         nodes: state.nodes || {},
         views: state.views || {},
@@ -140,7 +136,6 @@ class WorldStorageService {
   clearLocalStorage(): void {
     try {
       localStorage.removeItem(LOCALSTORAGE_KEY);
-      console.log('[WorldStorage] Cleared localStorage');
     } catch (error) {
       console.error('[WorldStorage] Error clearing localStorage:', error);
     }
@@ -154,14 +149,12 @@ class WorldStorageService {
       // Check if backend already has data
       const hasBackend = await this.hasBackendWorlds();
       if (hasBackend) {
-        console.log('[WorldStorage] Backend already has data, skipping migration');
         return false;
       }
       
       // Check if localStorage has data
       const localData = this.getLocalStorageWorlds();
       if (!localData) {
-        console.log('[WorldStorage] No localStorage data to migrate');
         return false;
       }
       
@@ -170,23 +163,19 @@ class WorldStorageService {
                         localData.worldTrees.length > 0;
       
       if (!hasContent) {
-        console.log('[WorldStorage] localStorage is empty, nothing to migrate');
         return false;
       }
       
       // Migrate to backend
-      console.log('[WorldStorage] Migrating localStorage to backend...');
       const saved = await this.saveWorlds(localData);
       
       if (saved) {
-        console.log('[WorldStorage] Migration successful!');
         // Optionally clear localStorage after successful migration
         // Keeping it for now as backup
         // this.clearLocalStorage();
         return true;
       }
       
-      console.error('[WorldStorage] Migration failed');
       return false;
     } catch (error) {
       console.error('[WorldStorage] Error during migration:', error);

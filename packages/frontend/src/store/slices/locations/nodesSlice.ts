@@ -40,6 +40,9 @@ export const createNodesSlice: StateCreator<
       },
     }));
     
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
+    
     return id;
   },
   
@@ -62,6 +65,9 @@ export const createNodesSlice: StateCreator<
         },
       };
     });
+    
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
   },
   
   deleteNode: (id) => {
@@ -69,6 +75,9 @@ export const createNodesSlice: StateCreator<
       const { [id]: deleted, ...rest } = state.nodes;
       return { nodes: rest };
     });
+    
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
   },
   
   getAllNodes: () => {

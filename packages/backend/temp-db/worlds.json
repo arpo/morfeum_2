@@ -136,377 +136,6 @@
         "distance": "medium"
       }
     },
-    "loc-1762418123020-li0ykrunu": {
-      "id": "loc-1762418123020-li0ykrunu",
-      "type": "host",
-      "name": "Xylos",
-      "dna": {
-        "type": "host",
-        "name": "Xylos",
-        "description": "A desolate planet with harsh desert landscapes and mysterious alien ruins.",
-        "dna": {
-          "genre": "sci-fi",
-          "architectural_tone": "monolithic alien constructs",
-          "cultural_tone": "Ancient, inscrutable, and potentially dangerous alien civilization.",
-          "materials_base": "Primarily constructed from unknown, incredibly durable, and naturally occurring alien mineral composites. Surface textures are often sharp, crystalline, or obsidian-like. Features exposed energy conduits or conduits that shimmer with internal light.",
-          "mood_baseline": "desolate, mysterious, awe-inspiring",
-          "palette_bias": "Dominated by deep, contrasting colors. Expect dark, rich purples and blues for the environment, contrasted with vibrant, often unnatural, artificial light sources.",
-          "soundscape_base": "Sparse and echoing. The sounds are alien and guttural, with a pervasive low hum or resonant thrumming of unseen energies. Occasional sharp, crystalline chimes or distant, mournful winds.",
-          "flora_base": "Extremely sparse, adapted to extreme arid conditions. Think hardy, metallic-sheened succulents or crystalline growths that absorb ambient energy, or 'None' in areas of extreme desolation.",
-          "fauna_base": "Rare and specialized. Creatures are likely adapted to the harsh environment, possibly silicon-based or energy-form beings. Expect resilient scavengers or airborne predators that thrive in thin atmospheres, or 'None' in truly barren zones."
-        },
-        "slug": "xylos"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Xylos",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "529d90b6-3f1d-45b7-bc6f-782f81c9d193": {
-      "id": "529d90b6-3f1d-45b7-bc6f-782f81c9d193",
-      "type": "region",
-      "name": "Xylos",
-      "dna": {
-        "type": "region",
-        "name": "Xylos",
-        "description": "",
-        "dna": {
-          "architectural_tone": "harsh geomantic structures",
-          "cultural_tone": "Nomadic survival in a world dominated by ancient, decaying alien mega-structures.",
-          "materials_base": "Scoured rock, wind-blasted metallic debris from ancient ruins, crystalline sand formations. Emphasis on naturally eroded and resilient materials.",
-          "mood_baseline": "survivial, enduring, exposed",
-          "palette_bias": "Warm, desaturated earth tones mixed with the cool hues of twilight and the stark shadows cast by towering alien formations. Hints of metallic sheen.",
-          "soundscape_base": "Primarily the sound of abrasive winds carrying fine grit. Distant, low-frequency rumbles from geological activity or remnants of alien machinery. Occasional skittering or the calls of hardy desert fauna.",
-          "flora_base": "Sparse, hardy desert flora. Cacti-like growths with metallic or crystalline spines, low-lying, wind-resistant scrub, and mineral-rich mosses clinging to rock faces.",
-          "fauna_base": "Small, resilient desert creatures. Burrowing arthropods, heat-resistant reptilian scavengers, and swift, avian predators adapted to thin air and vast, open spaces."
-        },
-        "slug": "xylos"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Xylos",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "a819fbd9-02ce-4ff3-93f7-4ca7139c9641": {
-      "id": "a819fbd9-02ce-4ff3-93f7-4ca7139c9641",
-      "type": "location",
-      "name": "The Obsidian Spire",
-      "dna": {
-        "type": "location",
-        "name": "The Obsidian Spire",
-        "description": "A bizarre, towering structure of unknown origin, its surface shimmering with an unnatural sheen.",
-        "looks": "A massive, jagged spire dominates the landscape, appearing to be carved from dark, rough rock. Its peak is fractured, revealing smaller, spiky protrusions. A central vertical section of the spire glows with an intense blue light, containing intricate, vertical patterns. The base of the spire is partially obscured by its own eroded slopes. The structure's surface exhibits a subtle shimmer, especially where the blue light reflects.",
-        "atmosphere": "The air appears thin and hazy, with dust motes possibly present. The distant horizon is softened by atmospheric perspective, suggesting a dry, arid environment.",
-        "mood": "Unsettling, awe-inspiring",
-        "lighting": "The scene is illuminated by a low, ambient light source, likely from a setting or rising sun, casting a soft, warm glow on the clouds and higher elevations. The spire itself emits a bright, cool blue light from its central core, creating a strong contrast with the surrounding environment.",
-        "dominantElements": [
-          "Jagged spire with glowing blue core (center, background)",
-          "Red-toned rocky terrain (foreground, midground)",
-          "Dramatic, colorful sky with clouds (background)"
-        ],
-        "spatialLayout": "The image is framed by imposing, rocky formations on the left and right foreground, creating a canyon-like effect that leads the eye towards the central spire in the background. A dry riverbed or wash cuts through the foreground and midground.",
-        "uniqueIdentifiers": [
-          "Towering spire with integrated glowing blue architecture",
-          "Jagged, dark obsidian-like material",
-          "Unnatural blue light emanating from the spire's core"
-        ],
-        "materials_primary": "Rock, Stone",
-        "materials_secondary": "Dust, Sand",
-        "materials_accents": "Glowing blue energy conduits",
-        "colors_dominant": "Deep purples and blues in the sky and shadows",
-        "colors_secondary": "Reds and browns in the rocky terrain",
-        "colors_accents": "Intense electric blue from the spire's core",
-        "colors_ambient": "Soft pinks and oranges in the sky, purplish hues in the landscape",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, midground",
-            "description": "Glowing blue pathway or energy conduit leading into the spire."
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Alien spire in desert landscape. Has: glowing blue passage (center, midground)",
-        "dna": {
-          "architectural_tone": "monolithic verticality",
-          "cultural_tone": "A focal point of ancient alien power or technology, its purpose unknown and its presence imposing.",
-          "materials_base": "Polished obsidian-like composite, exposed glowing crystalline cores, rough-hewn alien stone, fine particulate dust coatings.",
-          "mood_baseline": "enigmatic, imposing, luminous",
-          "palette_bias": "Intense contrast between the deep, dark hues of the spire's exterior and the vibrant, artificial blues of its internal energy. The surrounding landscape is rendered in muted purples and browns by the low ambient light.",
-          "soundscape_base": "A deep, resonant hum emanating from the spire's core, occasionally punctuated by sharp, high-frequency energy discharges or the whistling of wind around its fractured peak.",
-          "flora_base": "None",
-          "fauna_base": "None"
-        },
-        "slug": "the-obsidian-spire"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/panda/DXVmzKnWZTVlqFXa48cgz.jpg",
-      "focus": {
-        "node_id": "The Obsidian Spire",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "loc-1762418711348-7r4e0rcpy": {
-      "id": "loc-1762418711348-7r4e0rcpy",
-      "type": "host",
-      "name": "Eldoria",
-      "dna": {
-        "type": "host",
-        "name": "Eldoria",
-        "description": "A realm steeped in ancient magic and forgotten lore.",
-        "dna": {
-          "genre": "fantasy",
-          "architectural_tone": "ancient, organic, mystical",
-          "cultural_tone": "Deeply connected to nature and primal forces. Magic is interwoven into daily life and the very fabric of the world, often manifesting in wild, untamed ways.",
-          "materials_base": "Primarily natural materials like gnarled wood, rough stone, and living flora. Structures often appear to grow from the earth or be woven from natural elements, eschewing refined or manufactured components.",
-          "mood_baseline": "enigmatic, wild, ancient",
-          "palette_bias": "Earthy tones dominate, with deep greens, rich browns, and stone grays. Muted blues and mystical purples may appear as accents or magical manifestations.",
-          "soundscape_base": "The rustling of leaves, the distant calls of unseen creatures, and the hum of ambient magic. Sounds are often natural and imbued with a sense of the wild and unknown.",
-          "flora_base": "Lush, overgrown, and sometimes sentient plant life. Expect ancient trees, magical fungi, thorny vines, and plants with unusual or luminescent properties.",
-          "fauna_base": "Magical beasts, fey creatures, and spirits of nature. Wildlife is often elusive, dangerous, or possesses unusual magical capabilities."
-        },
-        "slug": "eldoria"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Eldoria",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "578f4bb3-bb6d-4dc1-99af-b6aa51af6328": {
-      "id": "578f4bb3-bb6d-4dc1-99af-b6aa51af6328",
-      "type": "region",
-      "name": "Eldoria",
-      "dna": {
-        "type": "region",
-        "name": "Eldoria",
-        "description": "",
-        "dna": {
-          "architectural_tone": "untamed, primal, secretive",
-          "cultural_tone": "Inhabitants are reclusive, often solitary, and hold ancient superstitions. They live in harmony, or wary truce, with the powerful natural forces of the land.",
-          "materials_base": "Primarily dark, gnarled wood, moss-covered stone, and dense undergrowth. Structures are often rough-hewn and blend into the dense forest environment.",
-          "mood_baseline": "foreboding, mystical, overgrown",
-          "palette_bias": "Deep, shadowed greens and browns are prevalent, with a pervasive, cool, muted blue from mist and shadow. Accents of dark, damp earth tones.",
-          "soundscape_base": "Whispering winds through dense foliage, creaking ancient trees, and the occasional unsettling calls of forest dwellers. A pervasive damp stillness.",
-          "flora_base": "Ancient, twisted trees with dense canopies, thick mosses, hardy ferns, and an abundance of dark, shadowy undergrowth.",
-          "fauna_base": "Elusive forest spirits, wary woodland creatures, and potentially larger, more dangerous predators that thrive in the deep woods."
-        },
-        "slug": "eldoria"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Eldoria",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "9175d55d-fb3d-4e7a-ae79-b9642e83e38d": {
-      "id": "9175d55d-fb3d-4e7a-ae79-b9642e83e38d",
-      "type": "location",
-      "name": "Baba Yaga's Hut",
-      "dna": {
-        "type": "location",
-        "name": "Baba Yaga's Hut",
-        "description": "A peculiar dwelling that rests upon fowl's legs, situated deep within the Whispering Woods. It is known for its unsettling aura and arcane secrets.",
-        "looks": "A small, crooked cottage with a steeply pitched, moss-covered thatched roof dominates the midground. The walls appear to be constructed of rough-hewn logs and stone. Two windows glow with warm light, and a dark, recessed entrance is visible. Overgrown vegetation surrounds the base of the structure, and large, bare trees frame the scene.",
-        "atmosphere": "A heavy mist or fog hangs in the air, obscuring the background and softening the light. The overall air appears damp and still, contributing to an enclosed feeling within the forest.",
-        "mood": "Eerie, foreboding",
-        "lighting": "The scene is dimly lit, with the primary light source appearing to be warm, glowing light emanating from the cottage windows. The ambient light is cool and bluish, creating a stark contrast with the warm interior light. Shadows are deep and pronounced.",
-        "dominantElements": [
-          "Moss-covered thatched roof cottage (~10m tall)",
-          "Large, bare trees (foreground and midground)",
-          "Dense forest vegetation (foreground)"
-        ],
-        "spatialLayout": "The cottage is centrally positioned in the midground, with a winding path leading towards it from the foreground. Dense forest foliage and trees occupy the foreground and sides, framing the dwelling. The background is lost in atmospheric mist.",
-        "uniqueIdentifiers": [
-          "Thatch-roofed cottage with glowing windows",
-          "Forest setting with heavy mist",
-          "Crooked, rustic architecture"
-        ],
-        "materials_primary": "Wood, Thatch, Stone",
-        "materials_secondary": "Moss, Earth, Foliage",
-        "materials_accents": "Glowing window panes",
-        "colors_dominant": "Dark Greens (moss, foliage)",
-        "colors_secondary": "Browns (wood, earth), Grays (stone, mist)",
-        "colors_accents": "Warm Yellow/Orange (window light)",
-        "colors_ambient": "Misty Blue",
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center, midground",
-            "description": "Dark, recessed wooden door with steps leading up"
-          },
-          {
-            "type": "window",
-            "position": "left facade, midground",
-            "description": "Small, square window glowing with warm light"
-          },
-          {
-            "type": "window",
-            "position": "right facade, midground",
-            "description": "Arched window glowing with warm light"
-          },
-          {
-            "type": "passage",
-            "position": "foreground to midground",
-            "description": "Winding dirt path leading to the cottage"
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Witch's cottage in misty woods. Has: door (center, midground), window (left facade, midground), passage (foreground to midground)",
-        "dna": {
-          "architectural_tone": "grotesque, eccentric, organic",
-          "cultural_tone": "A solitary dwelling of a powerful, enigmatic witch. Its presence is both a warning and an invitation to those seeking forbidden knowledge.",
-          "materials_base": "Rough-hewn logs, weathered thatch, and rough stone. The structure appears cobbled together and subject to the whims of its inhabitant and the surrounding environment.",
-          "mood_baseline": "unsettling, arcane, isolated",
-          "palette_bias": "Dominant dark greens and browns, with stark contrasts from the glowing, warm interior. Misty blues and grays create a sense of obscured reality.",
-          "soundscape_base": "The hooting of owls, the rustling of unseen things in the undergrowth, and the faint crackle of a hearthfire. A profound silence broken only by natural or uncanny sounds.",
-          "flora_base": "Thick, grasping vines and overgrown moss clinging to the structure, with gnarled, bare trees encircling the immediate vicinity.",
-          "fauna_base": "None explicitly visible, but implied to be the domain of the witch's familiars or creatures drawn to its dark magic."
-        },
-        "slug": "baba-yaga-s-hut"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/wLfmeo5_MtC99kRt6J5wE.jpg",
-      "focus": {
-        "node_id": "Baba Yaga's Hut",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "loc-1762419876717-0x888tk0a": {
-      "id": "loc-1762419876717-0x888tk0a",
-      "type": "host",
-      "name": "Alien World",
-      "dna": {
-        "type": "host",
-        "name": "Alien World",
-        "description": "A world teeming with unknown life and strange landscapes.",
-        "dna": {
-          "genre": "sci-fi",
-          "architectural_tone": "monolithic alien engineering, brutalist, geometric",
-          "cultural_tone": "advanced, indifferent, focused on production and function over aesthetics.",
-          "materials_base": "Primarily synthetic, ultra-durable alloys with a tendency towards dark, matte finishes. Incorporates energy conduits and glowing structural elements as integral design features.",
-          "mood_baseline": "industrial, imposing, enigmatic",
-          "palette_bias": "Dominated by deep, cool tones and stark artificial lights. Expect blues, teals, and occasional sharp, vibrant accent colors for energy and warnings.",
-          "soundscape_base": "A constant low hum of machinery, punctuated by the rhythmic thud of heavy industry, punctuated by alien chimes or alarms.",
-          "flora_base": "Minimal to non-existent in core industrial zones. Any organic life would be highly specialized, possibly bio-engineered, or symbiotic with machinery.",
-          "fauna_base": "Likely artificial constructs or highly specialized, utilitarian organisms adapted for industrial environments. 'Wild' fauna is improbable."
-        },
-        "slug": "alien-world"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Alien World",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "8d7cbda2-2480-4826-867c-3893c3c67f3b": {
-      "id": "8d7cbda2-2480-4826-867c-3893c3c67f3b",
-      "type": "region",
-      "name": "Xylos Sector",
-      "dna": {
-        "type": "region",
-        "name": "Xylos Sector",
-        "description": "A desolate, industrial region characterized by alien manufactories.",
-        "dna": {
-          "architectural_tone": "massive utilitarian structures, functional anti-gravity elements",
-          "cultural_tone": "A hub of intensive, large-scale manufacturing, characterized by constant industrial activity and limited habitation.",
-          "materials_base": "Exposed, reinforced alien metals and composites, with visible energy conduits and heat-dissipating surfaces.",
-          "mood_baseline": "desolate, industrious, alien",
-          "palette_bias": "Muted industrial grays and dark blues, offset by intense, localized energy glows of cyan and yellow.",
-          "soundscape_base": "The pervasive drone of heavy machinery, punctuated by the hiss of steam or coolant, and distant sonic booms from manufacturing processes.",
-          "flora_base": "Null",
-          "fauna_base": "Null"
-        },
-        "slug": "xylos-sector"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Xylos Sector",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "2237be1b-6193-4882-9ca6-7b4947ef297a": {
-      "id": "2237be1b-6193-4882-9ca6-7b4947ef297a",
-      "type": "location",
-      "name": "The Lumina Forge",
-      "dna": {
-        "type": "location",
-        "name": "The Lumina Forge",
-        "description": "A massive alien factory, its exterior pulsing with strange energy.",
-        "looks": "A colossal, multi-tiered metallic structure dominates the midground, its dark surfaces punctuated by countless glowing lights and vertical conduits. Two prominent cylindrical towers rise from its upper sections, illuminated by a bright cyan energy. Numerous external platforms, walkways, and industrial protrusions extend from the main body, suggesting vast internal complexity. The factory is set against a backdrop of a stark, cloudy sky and framed by dark, rocky foreground terrain.",
-        "atmosphere": "A visible haze or mist hovers near the ground and around the factory's base, obscuring details and contributing to the sense of depth. The air appears clear at higher altitudes, with clouds obscuring the sky.",
-        "mood": "Foreboding, awe-inspiring",
-        "lighting": "The scene is illuminated by a cool, artificial light emanating from the factory itself, primarily in cyan and yellow hues. This artificial light creates strong contrasts with the dark structures and foreground elements. The overall ambient lighting is dim and blue-toned, typical of a twilight or alien night sky.",
-        "dominantElements": [
-          "Massive metallic factory structure (~300m tall)",
-          "Two cylindrical towers on factory roof",
-          "Extensive network of glowing conduits",
-          "Rocky, uneven foreground terrain"
-        ],
-        "spatialLayout": "The image is framed by dark, rocky formations in the foreground, leading the eye towards the sprawling alien factory in the midground. The factory acts as the central focal point, with the sky and distant lights forming the background. The scale of the factory is emphasized by its isolation and the rough terrain.",
-        "uniqueIdentifiers": [
-          "Vertical cyan glowing conduits",
-          "Prominent cylindrical towers on factory",
-          "Alien text/logos on the factory exterior"
-        ],
-        "materials_primary": "Metal",
-        "materials_secondary": "Rock",
-        "materials_accents": "Glowing conduits, illuminated vents, signage lights",
-        "colors_dominant": "Dark blue (sky, shadows)",
-        "colors_secondary": "Cyan (conduits, signage), yellow (lights)",
-        "colors_accents": "Bright cyan glows from vertical lines and signage",
-        "colors_ambient": "Deep teal",
-        "navigableElements": [
-          {
-            "type": "bridge",
-            "position": "midground right",
-            "description": "Illuminated metallic bridge connecting to factory"
-          },
-          {
-            "type": "door",
-            "position": "factory base, midground",
-            "description": "Obscured entrances at factory level"
-          },
-          {
-            "type": "passage",
-            "position": "factory mid-section",
-            "description": "Visible external walkways and platforms"
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Alien factory complex. Has: illuminated bridge (midground right), obscured entrances (factory base), external walkways (factory mid-section)",
-        "dna": {
-          "architectural_tone": "colossal multi-tiered metallic form, integrated energy towers",
-          "cultural_tone": "A primary production nexus, pulsating with immense raw energy and complex internal operations.",
-          "materials_base": "Primarily dark, textured alien metals, with integrated glowing cyan conduits and structural lighting.",
-          "mood_baseline": "powerful, humming, imposing",
-          "palette_bias": "Deep teal ambient lighting, with sharp cyan energy sources and occasional yellow operational lights.",
-          "soundscape_base": "A deep, resonant hum of power generation, interspersed with the sharp crackle of contained energy and the whine of heavy machinery.",
-          "flora_base": "Null",
-          "fauna_base": "Null"
-        },
-        "slug": "the-lumina-forge"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/CMasH-hhTTPsozlVXuFw-.jpg",
-      "focus": {
-        "node_id": "The Lumina Forge",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
     "loc-1762421007194-yh2hvh5cl": {
       "id": "loc-1762421007194-yh2hvh5cl",
       "type": "host",
@@ -954,6 +583,280 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762504431455-0zjmciq3h": {
+      "id": "loc-1762504431455-0zjmciq3h",
+      "type": "host",
+      "name": "The Bloom Engine",
+      "dna": {
+        "type": "host",
+        "name": "The Bloom Engine",
+        "description": "An overgrown reactor with unique emissions.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "decaying industrial megastructures",
+          "cultural_tone": "Remnants of a lost technological era, now reclaimed by nature. A sense of forgotten purpose and persistent, albeit mutated, growth.",
+          "materials_base": "Corroded metals, heavily weathered concrete, and resilient, invasive plant life. Surfaces are rough, textured, and show signs of significant environmental decay.",
+          "mood_baseline": "melancholy, overgrown, enigmatic",
+          "palette_bias": "Dominant cool blues and greens, contrasted with muted earthy tones and occasional vibrant, bio-luminescent accents. A palette that evokes dampness and artificial decay.",
+          "soundscape_base": "The low hum of residual energy, the rustle of dense foliage, and the drip of moisture. A quiet, pervasive, and slightly unsettling ambiance.",
+          "flora_base": "Aggressive, fast-growing vegetation that infiltrates and consumes artificial structures. Expect mutated or bio-luminescent plant forms thriving in challenging environments.",
+          "fauna_base": "Small, resilient creatures adapted to industrial decay and mutated flora. Primarily insectoid or scavenger species, likely with bioluminescent traits."
+        },
+        "slug": "the-bloom-engine"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Bloom Engine",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "84caf64e-f3bb-4bfb-9bc0-c6f1dc1b9a99": {
+      "id": "84caf64e-f3bb-4bfb-9bc0-c6f1dc1b9a99",
+      "type": "region",
+      "name": "The Bloom Engine",
+      "dna": {
+        "type": "region",
+        "name": "The Bloom Engine",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "Introduces warmer, hazy tones to the dominant cool palette, suggesting the emission's influence.",
+          "soundscape_base": "The gentle hiss of vents and the subtle buzz of disturbed spores are added to the baseline.",
+          "flora_base": "Vegetation exhibits unusual growth patterns and an increased presence of pollen-producing or bio-luminescent variants.",
+          "fauna_base": null
+        },
+        "slug": "the-bloom-engine"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Bloom Engine",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "86d923af-ced2-45f1-b332-a968f20ca1d5": {
+      "id": "86d923af-ced2-45f1-b332-a968f20ca1d5",
+      "type": "location",
+      "name": "The Pollen Vents",
+      "dna": {
+        "type": "location",
+        "name": "The Pollen Vents",
+        "description": "Cooling vents of The Bloom Engine that exhale glowing pollen.",
+        "looks": "Massive, weathered cylindrical structures line the landscape, suggesting an industrial or reactor-like purpose. These structures are partially obscured by lush, overgrown vegetation, including dense foliage and scattered orange flowers. Openings resembling large vents or windows on the cylinders emit a warm, glowing light. A narrow body of water, possibly a stream or canal, flows through the foreground, reflecting the ambient light.",
+        "atmosphere": "A thick, greenish-blue mist permeates the scene, creating a sense of low visibility and dampness. The air appears heavy and humid, contributing to the overgrown, slightly oppressive feel of the environment.",
+        "mood": "Overgrown, mysterious",
+        "lighting": "The primary light sources are the warm, orange glows emanating from the openings in the cylindrical structures. These internal lights cast diffuse illumination onto the surrounding mist and vegetation, creating soft highlights and deep shadows. The overall lighting is dim and atmospheric.",
+        "dominantElements": [
+          "Massive cylindrical structures (midground/background)",
+          "Overgrown vegetation and flowers (foreground/midground)",
+          "Narrow waterway (foreground)",
+          "Glowing vents/windows (midground)"
+        ],
+        "spatialLayout": "The scene is framed by dark, dense foliage on the left and right, directing the eye towards the midground where a series of large, imposing cylindrical structures recede into the misty background. A waterway occupies the foreground, winding its way between the rocky, vegetated banks.",
+        "uniqueIdentifiers": [
+          "Overgrown industrial reactor-like cylinders",
+          "Emitting glowing vents/windows",
+          "Pollen-like glowing particles (implied by prompt)",
+          "Orange wildflowers"
+        ],
+        "materials_primary": "Weathered metal (cylinders), rock (terrain)",
+        "materials_secondary": "Dense vegetation, water",
+        "materials_accents": "Glowing orange light, reflective water",
+        "colors_dominant": "Teal/Cyan (mist, sky)",
+        "colors_secondary": "Dark green (foliage), brown/grey (structures, rock)",
+        "colors_accents": "Orange (flowers, interior light)",
+        "colors_ambient": "Misty teal",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Subterranean passage beneath glowing vents"
+          },
+          {
+            "type": "object",
+            "position": "foreground water",
+            "description": "Flowing stream reflecting ambient light"
+          },
+          {
+            "type": "passage",
+            "position": "right side, midground",
+            "description": "Open pathway beside structure"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Overgrown reactor with glowing vents. Has: passage (center, midground), passage (right side, midground), stream (foreground water)",
+        "dna": {
+          "architectural_tone": "exposed industrial vents and conduits",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "ethereal, diffused, humid",
+          "palette_bias": null,
+          "soundscape_base": "The prominent sound is the gentle exhalation of gases, interspersed with the faint hum of internal machinery.",
+          "flora_base": "Concentrated patches of vibrant, light-emitting flora near vent outputs, heavily influenced by the emitted particles.",
+          "fauna_base": "Small, airborne or highly localized insectoid creatures attracted to the glowing pollen."
+        },
+        "slug": "the-pollen-vents"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/5PIkwkJbhdpuQsY0VPR3P.jpg",
+      "focus": {
+        "node_id": "The Pollen Vents",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762505961823-s1010stqq": {
+      "id": "loc-1762505961823-s1010stqq",
+      "type": "host",
+      "name": "Aetherium City",
+      "dna": {
+        "type": "host",
+        "name": "Aetherium City",
+        "description": "A metropolis where advanced clockwork technology intertwines with organic life.",
+        "dna": {
+          "genre": "steampunk|fantasy",
+          "architectural_tone": "ornate clockwork, grand engineering",
+          "cultural_tone": "A society that reveres precision and the intricate beauty of mechanical design. Functionality is art, and timekeeping is a spiritual practice.",
+          "materials_base": "Polished brass, gleaming copper, intricately carved wood, reinforced glass, and various refined metallic alloys form the building blocks of this civilization.",
+          "mood_baseline": "orderly, meticulous, wondrous",
+          "palette_bias": "Warm metallic tones with rich earthy accents. Think burnished golds, coppers, and bronzes, complemented by deep browns and occasional jewel-like highlights.",
+          "soundscape_base": "A constant hum of intricate machinery, punctuated by the rhythmic ticking and whirring of gears. Occasional chimes mark the passing of time.",
+          "flora_base": "Engineered botanical lifeforms, crafted from metal and powered by intricate clockwork mechanisms. They bloom and retract with precise timing.",
+          "fauna_base": "Clockwork automatons designed for specific tasks, and perhaps bio-mechanical creatures where organic life has been augmented by technology."
+        },
+        "slug": "aetherium-city"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aetherium City",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "64db85d1-626c-4a1e-8e4b-0aca3ec6701f": {
+      "id": "64db85d1-626c-4a1e-8e4b-0aca3ec6701f",
+      "type": "region",
+      "name": "Aetherium City",
+      "dna": {
+        "type": "region",
+        "name": "Aetherium City",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": "Within the grand city, the culture emphasizes public displays of engineered marvels and communal time-based events. Architecture often incorporates open spaces for showcasing flora.",
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "Slightly more vibrant metallic hues, with an emphasis on gold and polished brass to reflect the city's status.",
+          "soundscape_base": "The city's ambient sounds are more pronounced, with larger chimes and more noticeable gear work from public structures.",
+          "flora_base": "A greater diversity of mechanical flora, specifically cultivated for public display and aesthetic appeal.",
+          "fauna_base": null
+        },
+        "slug": "aetherium-city"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aetherium City",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "60bb9bc5-f342-49a9-aacf-ceb50a9cf04e": {
+      "id": "60bb9bc5-f342-49a9-aacf-ceb50a9cf04e",
+      "type": "location",
+      "name": "Aetherium City",
+      "dna": {
+        "type": "location",
+        "name": "Aetherium City",
+        "description": "",
+        "dna": {
+          "architectural_tone": "Grand public spaces with high ceilings and abundant natural light, designed to showcase the mechanical flora.",
+          "cultural_tone": "This specific area is dedicated to the horticultural exhibition of the city's finest mechanical flora, a place of quiet admiration.",
+          "materials_base": "Stone flooring, ornate wooden columns, and decorative metallic accents are prevalent.",
+          "mood_baseline": "serene, contemplative, awe-inspiring",
+          "palette_bias": "Dominance of warm, sun-drenched tones, with accents of dark wood and opulent gold.",
+          "soundscape_base": "Subtle ambient whirring and gentle, melodic chimes from the flora themselves, with hushed footsteps on stone.",
+          "flora_base": "Precisely arranged mechanical flora with visible internal mechanisms.",
+          "fauna_base": "None (focus on flora)"
+        },
+        "slug": "aetherium-city"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aetherium City",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "f1073862-ac26-4106-8261-f556b35a86d0": {
+      "id": "f1073862-ac26-4106-8261-f556b35a86d0",
+      "type": "niche",
+      "name": "The Brass Bloom Atrium",
+      "dna": {
+        "type": "niche",
+        "name": "The Brass Bloom Atrium",
+        "description": "The central area where the mechanical flora are meticulously arranged, showcasing their programmed beauty.",
+        "looks": "A grand, sunlit atrium features rows of vibrant, orange-hued mechanical flora lining the left and right walls. Ornate, dark brown columns support a high, vaulted ceiling adorned with golden detailing and a large, tiered chandelier. Sunlight streams in through arched openings, illuminating the space and casting dappled light on a patterned carpet. The mechanical flowers, with their detailed petals and visible internal mechanisms, are arranged on pedestals or directly in planters.",
+        "atmosphere": "The air appears clear and slightly hazy with sunlight, creating a soft, diffused effect. A gentle luminescence emanates from the mechanical flowers, suggesting an internal light source.",
+        "mood": "Regulated beauty, timed marvel",
+        "lighting": "The lighting is primarily natural, with strong shafts of sunlight entering from the right and from the large central archway. The light is warm and golden, creating a high contrast between illuminated areas and shadows. A large, ornate chandelier hangs from the ceiling, providing additional warm, diffused light.",
+        "dominantElements": [
+          "Mechanical flora with orange blossoms (left and right foreground)",
+          "Ornate columns with golden accents (midground)",
+          "Large arched opening to an exterior (background right)",
+          "Patterned carpet (foreground)"
+        ],
+        "spatialLayout": "The atrium is elongated, with a clear pathway leading from the foreground towards a grand archway in the background. The mechanical flora are symmetrically arranged along the sides, framing the central view. The architecture suggests a formal, open-plan design.",
+        "uniqueIdentifiers": [
+          "Mechanical flora with glowing orange blossoms",
+          "Ornate architecture with dark wood and gold accents",
+          "Sunbeams streaming through arched openings"
+        ],
+        "materials_primary": "Stone (floor, walls)",
+        "materials_secondary": "Wood (columns, trim)",
+        "materials_accents": "Brass or copper (flower petals), gold (ornaments, chandelier)",
+        "colors_dominant": "Warm orange (flowers)",
+        "colors_secondary": "Dark brown (columns, walls), gold (accents, ceiling)",
+        "colors_accents": "Bright white/yellow (sunlight highlights, flower lights)",
+        "colors_ambient": "Warm golden hue",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "background right",
+            "description": "Stone stairs ascending into a bright, sunlit area"
+          },
+          {
+            "type": "passage",
+            "position": "background center",
+            "description": "Large arched opening leading to an outdoor garden"
+          }
+        ],
+        "searchDesc": "[Location - Interior] Ornate atrium with mechanical flora. Has: stairs (background right), passage (background center)",
+        "dna": {
+          "architectural_tone": null,
+          "materials_base": "Focus on brass and copper for the mechanical flora, with stone and wood for the display structures.",
+          "mood_baseline": "radiant, precisely timed, blooming",
+          "soundscape_base": "The distinct clicking and unfurling of petals, accompanied by the faint hum of individual flower mechanisms.",
+          "flora_base": "Highly detailed mechanical flora with brass and copper petals.",
+          "fauna_base": null
+        },
+        "slug": "the-brass-bloom-atrium"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/6Oyaq7O2UgjAG3wge4GaP.jpg",
+      "focus": {
+        "node_id": "The Brass Bloom Atrium",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -976,57 +879,6 @@
                   "children": []
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762418123020-li0ykrunu",
-      "type": "host",
-      "children": [
-        {
-          "id": "529d90b6-3f1d-45b7-bc6f-782f81c9d193",
-          "type": "region",
-          "children": [
-            {
-              "id": "a819fbd9-02ce-4ff3-93f7-4ca7139c9641",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762418711348-7r4e0rcpy",
-      "type": "host",
-      "children": [
-        {
-          "id": "578f4bb3-bb6d-4dc1-99af-b6aa51af6328",
-          "type": "region",
-          "children": [
-            {
-              "id": "9175d55d-fb3d-4e7a-ae79-b9642e83e38d",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762419876717-0x888tk0a",
-      "type": "host",
-      "children": [
-        {
-          "id": "8d7cbda2-2480-4826-867c-3893c3c67f3b",
-          "type": "region",
-          "children": [
-            {
-              "id": "2237be1b-6193-4882-9ca6-7b4947ef297a",
-              "type": "location",
-              "children": []
             }
           ]
         }
@@ -1088,10 +940,50 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762504431455-0zjmciq3h",
+      "type": "host",
+      "children": [
+        {
+          "id": "84caf64e-f3bb-4bfb-9bc0-c6f1dc1b9a99",
+          "type": "region",
+          "children": [
+            {
+              "id": "86d923af-ced2-45f1-b332-a968f20ca1d5",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762505961823-s1010stqq",
+      "type": "host",
+      "children": [
+        {
+          "id": "64db85d1-626c-4a1e-8e4b-0aca3ec6701f",
+          "type": "region",
+          "children": [
+            {
+              "id": "60bb9bc5-f342-49a9-aacf-ceb50a9cf04e",
+              "type": "location",
+              "children": [
+                {
+                  "id": "f1073862-ac26-4106-8261-f556b35a86d0",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1762353225835-nrktky3z3",
-    "loc-1762464785149-2j72ib0w7"
+    "loc-1762464785149-2j72ib0w7",
+    "loc-1762504431455-0zjmciq3h"
   ]
 }

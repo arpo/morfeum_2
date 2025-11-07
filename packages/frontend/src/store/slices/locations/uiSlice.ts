@@ -48,6 +48,9 @@ export const createUISlice: StateCreator<
       
       return { pinnedIds };
     });
+    
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
   },
   
   isPinned: (id) => {

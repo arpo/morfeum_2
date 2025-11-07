@@ -30,12 +30,28 @@ morfeum_2/
 ├── packages/
 │   ├── frontend/          # React application
 │   └── backend/           # Express API server
+│       └── temp-db/       # Temporary file storage
+│           ├── worlds.json
+│           └── characters.json
 ├── memory-bank/           # Project documentation
 ├── .clinerules/           # Development patterns
 └── Configuration files    # Root-level setup
 ```
 
 **Benefits**: Shared configuration, simplified workflow, consistent tooling
+
+### Storage Architecture
+**Current: File-Based Storage (temp-db/)**
+- JSON files for worlds and characters
+- Auto-migration from localStorage
+- 10MB payload limit for large world data
+- API endpoints: `/api/worlds` and `/api/characters`
+- Tracked in Git for deployment
+
+**Future: Database Migration**
+- Planned migration to Supabase/PostgreSQL
+- File storage serves as temporary solution
+- Maintains same API interface for easy migration
 
 ### Component Architecture
 - Strict separation: markup (.tsx), logic (.ts), styles (.module.css), types (.ts)
@@ -48,6 +64,12 @@ morfeum_2/
 - Excellent TypeScript inference
 - Simple learning curve
 - Efficient re-rendering
+
+**Persistence Strategy**:
+- Removed Zustand persist middleware
+- Persistence now handled by backend storage service
+- Frontend stores call backend API for save/load operations
+- Data flows: Store → Backend API → JSON files
 
 ## Build Configuration
 
@@ -129,6 +151,11 @@ PORT=3030               # Server port
 NODE_ENV=development    # Environment
 ```
 
+### Server Configuration
+- **Payload Limit**: 10MB (increased from default 100KB)
+- Handles large world data with extensive hierarchies
+- Configured in `packages/backend/src/server.ts`
+
 ## Performance Targets
 
 ### Frontend
@@ -163,6 +190,9 @@ NODE_ENV=development    # Environment
 ### Implemented
 - ✅ Component library with design system
 - ✅ Zustand state management
+- ✅ Backend file storage system (temp-db/)
+- ✅ Storage API endpoints (worlds + characters)
+- ✅ Auto-migration from localStorage
 - ✅ Navigation system (13 intent types)
 - ✅ Location hierarchy system (4 levels)
 - ✅ DNA inheritance system
@@ -170,6 +200,7 @@ NODE_ENV=development    # Environment
 - ✅ SSE for real-time updates
 
 ### Pending
+- ⏳ Database migration (Supabase/PostgreSQL)
 - ⏳ Testing infrastructure (Vitest)
 - ⏳ E2E testing (Playwright)
 - ⏳ CI/CD pipeline

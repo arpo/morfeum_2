@@ -16,11 +16,19 @@
 - [x] Character panel with chat
 - [x] Location panel with navigation
 - [x] Active spawns panel
-- [x] Entity tabs system
+- [x] Entity tabs system (always visible with browse button)
 - [x] Theme toggle (light/dark)
 - [x] Image fullscreen viewer
 - [x] Chat history viewer
 - [x] Spawn input bar
+
+### Storage & Persistence
+- [x] Backend file storage system (temp-db/)
+- [x] Worlds storage service with API endpoints
+- [x] Characters storage service with API endpoints
+- [x] Auto-migration from localStorage to backend
+- [x] Save buttons persist to backend files
+- [x] Pinned entities auto-load on startup
 
 ### Technical Improvements
 - [x] Memory bank consolidation (69% reduction)
@@ -41,9 +49,9 @@
 ## Planned Features 📋
 
 ### Priority 1
-- [ ] Saved entities browser functionality
+- [x] Session persistence (via backend file storage)
+- [ ] Saved entities browser functionality (UI exists, needs full implementation)
 - [ ] Character-location chat switching
-- [ ] Session persistence
 - [ ] Export/import entities
 
 ### Priority 2
@@ -64,6 +72,7 @@
 - [ ] Add comprehensive error handling
 - [ ] Implement retry mechanisms
 - [ ] Add loading states for all async operations
+- [ ] Move from temp-db to real database (Supabase/PostgreSQL)
 
 ## Testing Needs
 - [ ] Navigation system edge cases

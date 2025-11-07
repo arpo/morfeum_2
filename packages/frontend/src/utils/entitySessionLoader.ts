@@ -56,14 +56,7 @@ export function createEntitySessionsForNodes(
     const node = getNode(nodeId);
     
     if (!node) {
-      if (logProgress) {
-        console.warn(`${logPrefix} Node not found:`, nodeId);
-      }
       return;
-    }
-    
-    if (logProgress) {
-      console.log(`${logPrefix} Creating entity for:`, nodeId, node.name, node.type);
     }
     
     // Get cascaded DNA for this node
@@ -105,10 +98,6 @@ export function createEntitySessionsForNodes(
     
     successCount++;
   });
-  
-  if (logProgress) {
-    console.log(`${logPrefix} Created ${successCount} entity sessions`);
-  }
   
   return successCount;
 }

@@ -56,6 +56,27 @@ ComponentName/
 - Use `getState()` for current state
 - Side-effects in hooks, not slices
 - Cross-slice communication via get()/getState()
+- **No persist middleware** - persistence handled by backend storage service
+
+#### Storage Integration Pattern
+Stores now use backend API instead of localStorage:
+```typescript
+// In store slice
+const saveToBackend = async () => {
+  const response = await fetch('/api/worlds', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+  return response.ok;
+};
+
+const loadFromBackend = async () => {
+  const response = await fetch('/api/worlds');
+  const data = await response.json();
+  set({ data });
+};
+```
 
 ### Icon Management
 - Centralized in `@/icons/index.ts`
@@ -78,9 +99,27 @@ packages/backend/src/
 ├── config/                   # Application configuration
 ├── middleware/               # Request processing
 ├── routes/                   # API endpoints
+│   ├── storage.ts           # Storage API endpoints
+│   └── ...
 ├── services/                 # Business logic
+│   ├── storage/             # File storage service
+│   └── ...
 ├── types/                    # Type definitions
 └── utils/                    # Utilities
+```
+
+### Storage Service Pattern
+Centralized file-based storage for development:
+- Location: `packages/backend/src/services/storage/storageService.ts`
+- Storage directory: `packages/backend/temp-db/`
+- Files: `worlds.json`, `characters.json`
+- Purpose: Temporary storage before database migration
+- API: GET/POST/DELETE endpoints at `/api/worlds` and `/api/characters`
+
+**Storage Flow:**
+```
+Frontend Store → POST /api/worlds → storageService.ts → temp-db/worlds.json
+temp-db/worlds.json → storageService.ts → GET /api/worlds → Frontend Store
 ```
 
 ### Service Layer Pattern

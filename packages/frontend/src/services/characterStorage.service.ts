@@ -39,7 +39,6 @@ class CharacterStorageService {
       
       const result = await response.json();
       if (result.success && result.data) {
-        console.log('[CharacterStorage] Loaded characters from backend');
         return result.data;
       }
       
@@ -69,7 +68,6 @@ class CharacterStorageService {
       
       const result = await response.json();
       if (result.success) {
-        console.log('[CharacterStorage] Saved characters to backend');
         return true;
       }
       
@@ -95,7 +93,6 @@ class CharacterStorageService {
       
       const result = await response.json();
       if (result.success) {
-        console.log('[CharacterStorage] Cleared characters from backend');
         return true;
       }
       
@@ -119,7 +116,6 @@ class CharacterStorageService {
       // Extract the state data (Zustand persist format includes state and version)
       const state = parsed.state || parsed;
       
-      console.log('[CharacterStorage] Found characters in localStorage');
       return {
         characters: state.characters || {},
         pinnedIds: state.pinnedIds || [],
@@ -136,7 +132,6 @@ class CharacterStorageService {
   clearLocalStorage(): void {
     try {
       localStorage.removeItem(LOCALSTORAGE_KEY);
-      console.log('[CharacterStorage] Cleared localStorage');
     } catch (error) {
       console.error('[CharacterStorage] Error clearing localStorage:', error);
     }
@@ -150,14 +145,12 @@ class CharacterStorageService {
       // Check if backend already has data
       const hasBackend = await this.hasBackendCharacters();
       if (hasBackend) {
-        console.log('[CharacterStorage] Backend already has data, skipping migration');
         return false;
       }
       
       // Check if localStorage has data
       const localData = this.getLocalStorageCharacters();
       if (!localData) {
-        console.log('[CharacterStorage] No localStorage data to migrate');
         return false;
       }
       
@@ -165,23 +158,19 @@ class CharacterStorageService {
       const hasContent = Object.keys(localData.characters).length > 0;
       
       if (!hasContent) {
-        console.log('[CharacterStorage] localStorage is empty, nothing to migrate');
         return false;
       }
       
       // Migrate to backend
-      console.log('[CharacterStorage] Migrating localStorage to backend...');
       const saved = await this.saveCharacters(localData);
       
       if (saved) {
-        console.log('[CharacterStorage] Migration successful!');
         // Optionally clear localStorage after successful migration
         // Keeping it for now as backup
         // this.clearLocalStorage();
         return true;
       }
       
-      console.error('[CharacterStorage] Migration failed');
       return false;
     } catch (error) {
       console.error('[CharacterStorage] Error during migration:', error);

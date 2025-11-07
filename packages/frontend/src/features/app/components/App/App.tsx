@@ -53,37 +53,21 @@ export function App() {
   useEffect(() => {
     const initializeData = async () => {
       // Initialize worlds
-      console.log('[App] Initializing worlds from backend...');
       const initializeWorldsFromBackend = useLocationsStore.getState().initializeFromBackend;
-      const worldsSuccess = await initializeWorldsFromBackend();
-      if (worldsSuccess) {
-        console.log('[App] Worlds initialized from backend');
-      } else {
-        console.log('[App] No backend worlds found, starting fresh');
-      }
+      await initializeWorldsFromBackend();
       
       // Initialize characters
-      console.log('[App] Initializing characters from backend...');
       const initializeCharactersFromBackend = useCharactersStore.getState().initializeFromBackend;
-      const charactersSuccess = await initializeCharactersFromBackend();
-      if (charactersSuccess) {
-        console.log('[App] Characters initialized from backend');
-      } else {
-        console.log('[App] No backend characters found, starting fresh');
-      }
+      await initializeCharactersFromBackend();
       
       // After data is loaded, auto-load pinned entities
-      console.log('[App] Auto-loading pinned entities...');
       const pinnedCharacters = useCharactersStore.getState().getPinnedCharacters();
       const pinnedLocations = useLocationsStore.getState().getPinnedNodes();
     
-    // console.log('[App] Auto-loading pinned entities...');
     let lastLoadedId: string | null = null;
     
     // Load all pinned characters
     pinnedCharacters.forEach((character) => {
-      // console.log('[App] Auto-loading pinned character:', character.id);
-      
       const seed = {
         name: character.name,
         personality: character.details.personality || 'Unknown personality'
@@ -105,8 +89,6 @@ export function App() {
     const getNode = useLocationsStore.getState().getNode;
     
     pinnedLocations.forEach((node) => {
-      // console.log('[App] Auto-loading pinned node:', node.id);
-      
       // Get cascaded DNA for this node
       const cascadedDNA = getCascadedDNA(node.id);
       
@@ -151,8 +133,6 @@ export function App() {
     if (lastLoadedId) {
       setActiveEntity(lastLoadedId);
     }
-      
-      console.log(`[App] Auto-loaded ${pinnedCharacters.length} characters and ${pinnedLocations.length} locations`);
     };
     
     initializeData();

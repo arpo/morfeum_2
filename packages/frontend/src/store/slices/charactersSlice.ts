@@ -66,6 +66,9 @@ export const useCharactersStore = create<CharactersState>()(
           },
         }));
         
+        // Save to backend after state update
+        get().saveToBackend();
+        
         return id;
       },
       
@@ -88,6 +91,9 @@ export const useCharactersStore = create<CharactersState>()(
             },
           };
         });
+        
+        // Save to backend after state update
+        get().saveToBackend();
       },
       
       deleteCharacter: (id) => {
@@ -95,6 +101,9 @@ export const useCharactersStore = create<CharactersState>()(
           const { [id]: deleted, ...rest } = state.characters;
           return { characters: rest };
         });
+        
+        // Save to backend after state update
+        get().saveToBackend();
       },
       
       getAllCharacters: () => {
@@ -119,6 +128,9 @@ export const useCharactersStore = create<CharactersState>()(
           
           return { pinnedIds };
         });
+        
+        // Save to backend after state update
+        get().saveToBackend();
       },
       
       isPinned: (id) => {
@@ -134,6 +146,9 @@ export const useCharactersStore = create<CharactersState>()(
       
       clearAllCharacters: () => {
         set({ characters: {}, pinnedIds: [] });
+        
+        // Save to backend after state update
+        get().saveToBackend();
       },
       
       importCharacters: (characters) => {
@@ -143,6 +158,9 @@ export const useCharactersStore = create<CharactersState>()(
         }, {} as Record<string, Character>);
         
         set({ characters: charactersMap });
+        
+        // Save to backend after state update
+        get().saveToBackend();
       },
       
       // Storage actions
@@ -162,7 +180,6 @@ export const useCharactersStore = create<CharactersState>()(
             characters: data.characters,
             pinnedIds: data.pinnedIds,
           });
-          console.log('[CharactersStore] Loaded characters from backend');
           return true;
         }
         return false;
@@ -176,10 +193,8 @@ export const useCharactersStore = create<CharactersState>()(
             characters: data.characters,
             pinnedIds: data.pinnedIds,
           });
-          console.log('[CharactersStore] Initialized with backend data');
           return true;
         }
-        console.log('[CharactersStore] No backend data, starting fresh');
         return false;
       },
       
@@ -191,7 +206,6 @@ export const useCharactersStore = create<CharactersState>()(
             characters: {},
             pinnedIds: [],
           });
-          console.log('[CharactersStore] Cleared backend and local state');
         }
         return cleared;
       },

@@ -8,7 +8,9 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
 
-const STORAGE_DIR = path.join(process.cwd(), 'temp-db');
+// Use __dirname to get the actual file location, then navigate to packages/backend/temp-db
+// This works regardless of where the Node process is started from
+const STORAGE_DIR = path.resolve(__dirname, '../../../temp-db');
 const WORLDS_FILE = path.join(STORAGE_DIR, 'worlds.json');
 const CHARACTERS_FILE = path.join(STORAGE_DIR, 'characters.json');
 
@@ -33,7 +35,6 @@ class StorageService {
       await fs.access(STORAGE_DIR);
     } catch {
       await fs.mkdir(STORAGE_DIR, { recursive: true });
-      console.log('[Storage] Created temp-db directory');
     }
   }
 
@@ -58,13 +59,11 @@ class StorageService {
       
       const hasFile = await this.hasWorldsFile();
       if (!hasFile) {
-        console.log('[Storage] No worlds file found, returning null');
         return null;
       }
 
       const data = await fs.readFile(WORLDS_FILE, 'utf-8');
       const parsed = JSON.parse(data);
-      console.log('[Storage] Loaded worlds from temp-db');
       return parsed;
     } catch (error) {
       console.error('[Storage] Error loading worlds:', error);
@@ -83,7 +82,6 @@ class StorageService {
       const json = JSON.stringify(data, null, 2);
       await fs.writeFile(WORLDS_FILE, json, 'utf-8');
       
-      console.log('[Storage] Saved worlds to temp-db');
       return true;
     } catch (error) {
       console.error('[Storage] Error saving worlds:', error);
@@ -99,7 +97,6 @@ class StorageService {
       const hasFile = await this.hasWorldsFile();
       if (hasFile) {
         await fs.unlink(WORLDS_FILE);
-        console.log('[Storage] Cleared worlds file');
       }
       return true;
     } catch (error) {
@@ -151,13 +148,11 @@ class StorageService {
       
       const hasFile = await this.hasCharactersFile();
       if (!hasFile) {
-        console.log('[Storage] No characters file found, returning null');
         return null;
       }
 
       const data = await fs.readFile(CHARACTERS_FILE, 'utf-8');
       const parsed = JSON.parse(data);
-      console.log('[Storage] Loaded characters from temp-db');
       return parsed;
     } catch (error) {
       console.error('[Storage] Error loading characters:', error);
@@ -176,7 +171,6 @@ class StorageService {
       const json = JSON.stringify(data, null, 2);
       await fs.writeFile(CHARACTERS_FILE, json, 'utf-8');
       
-      console.log('[Storage] Saved characters to temp-db');
       return true;
     } catch (error) {
       console.error('[Storage] Error saving characters:', error);
@@ -192,7 +186,6 @@ class StorageService {
       const hasFile = await this.hasCharactersFile();
       if (hasFile) {
         await fs.unlink(CHARACTERS_FILE);
-        console.log('[Storage] Cleared characters file');
       }
       return true;
     } catch (error) {
