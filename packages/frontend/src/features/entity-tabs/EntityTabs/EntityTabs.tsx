@@ -74,11 +74,6 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
     };
   });
 
-  // Don't render if no entities
-  if (entitiesArray.length === 0) {
-    return null;
-  }
-
   const handleTabClick = (spawnId: string) => {
     setActiveEntity(spawnId);
   };
@@ -152,8 +147,14 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
           <IconBookmark size={18} />
         </button>
       </div>
-      <div className={styles.entityList}>
-        {entitiesArray.map(entity => (
+      {entitiesArray.length === 0 ? (
+        <div className={styles.emptyState}>
+          <p>No entities loaded</p>
+          <p className={styles.emptyStateHint}>Use the bookmark button above to browse saved entities</p>
+        </div>
+      ) : (
+        <div className={styles.entityList}>
+          {entitiesArray.map(entity => (
           <div
             key={entity.spawnId}
             className={`${styles.entityButton} ${activeEntity === entity.spawnId ? styles.active : ''}`}
@@ -199,8 +200,9 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
               ✕
             </button>
           </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
 
       {/* Render modals for entities with info open */}
       {infoModalOpen && (() => {

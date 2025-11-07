@@ -11,7 +11,7 @@ import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { ActiveSpawnsPanel } from '@/features/spawn-panel/ActiveSpawnsPanel';
 import { EntityTabs } from '@/features/entity-tabs/EntityTabs';
 import { SavedEntitiesModal } from '@/features/saved-locations/SavedLocationsModal';
-import { Card, ThemeToggle } from '@/components/ui';
+import { Card, ThemeToggle, Button } from '@/components/ui';
 import { useSpawnEvents } from '@/hooks/useSpawnEvents';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
@@ -20,6 +20,7 @@ import styles from './App.module.css';
 
 export function App() {
   const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
+  
   // Initialize SSE connection for spawn events
   useSpawnEvents();
   
@@ -48,11 +49,33 @@ export function App() {
     document.documentElement.setAttribute('data-theme', resolvedTheme);
   }, [theme]);
 
-  // Auto-load pinned entities on mount
+  // Initialize worlds and characters from backend, then auto-load pinned entities
   useEffect(() => {
-    // Get pinned entities
-    const pinnedCharacters = useCharactersStore.getState().getPinnedCharacters();
-    const pinnedLocations = useLocationsStore.getState().getPinnedNodes();
+    const initializeData = async () => {
+      // Initialize worlds
+      console.log('[App] Initializing worlds from backend...');
+      const initializeWorldsFromBackend = useLocationsStore.getState().initializeFromBackend;
+      const worldsSuccess = await initializeWorldsFromBackend();
+      if (worldsSuccess) {
+        console.log('[App] Worlds initialized from backend');
+      } else {
+        console.log('[App] No backend worlds found, starting fresh');
+      }
+      
+      // Initialize characters
+      console.log('[App] Initializing characters from backend...');
+      const initializeCharactersFromBackend = useCharactersStore.getState().initializeFromBackend;
+      const charactersSuccess = await initializeCharactersFromBackend();
+      if (charactersSuccess) {
+        console.log('[App] Characters initialized from backend');
+      } else {
+        console.log('[App] No backend characters found, starting fresh');
+      }
+      
+      // After data is loaded, auto-load pinned entities
+      console.log('[App] Auto-loading pinned entities...');
+      const pinnedCharacters = useCharactersStore.getState().getPinnedCharacters();
+      const pinnedLocations = useLocationsStore.getState().getPinnedNodes();
     
     // console.log('[App] Auto-loading pinned entities...');
     let lastLoadedId: string | null = null;
@@ -128,8 +151,11 @@ export function App() {
     if (lastLoadedId) {
       setActiveEntity(lastLoadedId);
     }
+      
+      console.log(`[App] Auto-loaded ${pinnedCharacters.length} characters and ${pinnedLocations.length} locations`);
+    };
     
-    // console.log(`[App] Auto-loaded ${pinnedCharacters.length} characters and ${pinnedLocations.length} locations`);
+    initializeData();
   }, []); // Only run on mount
 
   return (

@@ -32,7 +32,7 @@ export function useCharacterPanel(): CharacterPanelLogicReturn {
     }
   }, [base.activeChat, setError]);
 
-  const saveCharacter = useCallback(() => {
+  const saveCharacter = useCallback(async () => {
     if (!base.activeChatSession || !base.activeChat) {
       console.warn('[useCharacterPanel] Cannot save: no active chat session');
       return;
@@ -52,7 +52,16 @@ export function useCharacterPanel(): CharacterPanelLogicReturn {
       imagePath: base.activeChatSession.entityImage || ''
     });
     
-    base.setIsSaved(true);
+    // Save to backend file
+    const saveToBackend = useCharactersStore.getState().saveToBackend;
+    const success = await saveToBackend();
+    
+    if (success) {
+      console.log('[useCharacterPanel] Saved to backend successfully');
+      base.setIsSaved(true);
+    } else {
+      console.error('[useCharacterPanel] Failed to save to backend');
+    }
   }, [base, createCharacter]);
 
   const openChat = useCallback(() => {

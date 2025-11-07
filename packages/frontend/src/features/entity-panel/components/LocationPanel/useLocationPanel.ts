@@ -206,7 +206,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     );
   }, [getNode, getCascadedDNA, createImage, startSpawn]);
 
-  const saveLocation = useCallback(() => {
+  const saveLocation = useCallback(async () => {
     if (!base.activeChatSession || !base.activeChat) {
       console.warn('[useLocationPanel] Cannot save: no active chat session');
       return;
@@ -221,7 +221,16 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     console.log('[useLocationPanel] Saving world tree structure...');
     console.log(`[useLocationPanel] Location tree saved with ID: ${base.activeChat}`);
     
-    base.setIsSaved(true);
+    // Save to backend file
+    const saveToBackend = useLocationsStore.getState().saveToBackend;
+    const success = await saveToBackend();
+    
+    if (success) {
+      console.log('[useLocationPanel] Saved to backend successfully');
+      base.setIsSaved(true);
+    } else {
+      console.error('[useLocationPanel] Failed to save to backend');
+    }
   }, [base]);
 
   return {

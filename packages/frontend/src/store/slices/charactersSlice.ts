@@ -1,12 +1,11 @@
 /**
  * Characters Storage Slice
- * Provides temporary localStorage-based CRUD operations for characters
- * Will be replaced with real database calls in the future
+ * Uses backend file storage for persistence
  */
 
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
 import { v4 as uuidv4 } from 'uuid';
+import { characterStorageService, CharactersData } from '@/services/characterStorage.service';
 
 // Character interface - simple structure for metadata storage
 export interface Character {
@@ -16,7 +15,15 @@ export interface Character {
   imagePath: string;
 }
 
-interface CharactersState {
+// Storage actions
+export interface StorageActions {
+  saveToBackend: () => Promise<boolean>;
+  loadFromBackend: () => Promise<boolean>;
+  initializeFromBackend: () => Promise<boolean>;
+  clearBackend: () => Promise<boolean>;
+}
+
+interface CharactersState extends StorageActions {
   characters: Record<string, Character>;
   pinnedIds: string[];
   
@@ -39,9 +46,9 @@ interface CharactersState {
   importCharacters: (characters: Character[]) => void;
 }
 
+// Create the store WITHOUT persist middleware
 export const useCharactersStore = create<CharactersState>()(
-  persist(
-    (set, get) => ({
+  (set, get) => ({
       characters: {},
       pinnedIds: [],
       
@@ -137,13 +144,56 @@ export const useCharactersStore = create<CharactersState>()(
         
         set({ characters: charactersMap });
       },
-    }),
-    {
-      name: 'morfeum-characters-storage',
-      partialize: (state) => ({ 
-        characters: state.characters,
-        pinnedIds: state.pinnedIds 
-      }),
-    }
-  )
+      
+      // Storage actions
+      saveToBackend: async () => {
+        const state = useCharactersStore.getState();
+        const data: CharactersData = {
+          characters: state.characters,
+          pinnedIds: state.pinnedIds,
+        };
+        return await characterStorageService.saveCharacters(data);
+      },
+      
+      loadFromBackend: async () => {
+        const data = await characterStorageService.loadCharacters();
+        if (data) {
+          useCharactersStore.setState({
+            characters: data.characters,
+            pinnedIds: data.pinnedIds,
+          });
+          console.log('[CharactersStore] Loaded characters from backend');
+          return true;
+        }
+        return false;
+      },
+      
+      initializeFromBackend: async () => {
+        // This handles migration automatically
+        const data = await characterStorageService.initialize();
+        if (data) {
+          useCharactersStore.setState({
+            characters: data.characters,
+            pinnedIds: data.pinnedIds,
+          });
+          console.log('[CharactersStore] Initialized with backend data');
+          return true;
+        }
+        console.log('[CharactersStore] No backend data, starting fresh');
+        return false;
+      },
+      
+      clearBackend: async () => {
+        const cleared = await characterStorageService.clearCharacters();
+        if (cleared) {
+          // Also clear local state
+          useCharactersStore.setState({
+            characters: {},
+            pinnedIds: [],
+          });
+          console.log('[CharactersStore] Cleared backend and local state');
+        }
+        return cleared;
+      },
+    })
 );
