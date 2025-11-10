@@ -951,6 +951,1680 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762513904488-sgu3uu1nx": {
+      "id": "loc-1762513904488-sgu3uu1nx",
+      "type": "host",
+      "name": "Unknown World",
+      "dna": {
+        "type": "host",
+        "name": "Unknown World",
+        "description": "A realm of forgotten civilizations and untamed wilderness.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "grand ancient ruins, overgrown structures",
+          "cultural_tone": "A world where advanced civilizations have fallen, leaving behind monumental remnants. Their societies were likely focused on monumental construction and a connection to nature or mystical forces.",
+          "materials_base": "Primarily monumental stone and aged, weathered metals. Natural elements like dense foliage and flowing water are integral, suggesting a palette of earth tones and natural patinas.",
+          "mood_baseline": "melancholy, mysterious, serene",
+          "palette_bias": "Dominated by muted, naturalistic colors. Earthy browns, deep greens, stone grays, and weathered metallic hues. Subtle hints of faded grandeur in blues or ochres are possible.",
+          "soundscape_base": "Echoes of the past, the ambient sounds of untamed nature. Think distant crumbling, wind through stone, the rustling of leaves, and the gentle flow of water.",
+          "flora_base": "Vast, encroaching, and resilient plant life. Think ancient trees, thick vines, mosses, and ferns that aggressively reclaim man-made structures.",
+          "fauna_base": "Mostly wild, elusive creatures that have adapted to the ruins. Could include large insects, resilient birds, or creatures that thrive in overgrown, damp environments."
+        },
+        "slug": "unknown-world"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Unknown World",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "c8b4f034-90c2-4760-9db2-6fee8a7e58f5": {
+      "id": "c8b4f034-90c2-4760-9db2-6fee8a7e58f5",
+      "type": "region",
+      "name": "Unknown World",
+      "dna": {
+        "type": "region",
+        "name": "Unknown World",
+        "description": "",
+        "slug": "unknown-world"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Unknown World",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "a8c8acbc-76bd-45af-8789-55e68a28de5d": {
+      "id": "a8c8acbc-76bd-45af-8789-55e68a28de5d",
+      "type": "location",
+      "name": "The Sunken Embassy",
+      "dna": {
+        "type": "location",
+        "name": "The Sunken Embassy",
+        "description": "An imposing marble complex, partially reclaimed by the jungle.",
+        "looks": "An imposing, weathered marble complex stands partially submerged in a tranquil body of water. Majestic columns, thick with encroaching jungle vines, support a grand, arched facade. Faded flags, likely once vibrant, now hang limply, adding to the sense of abandonment. The structure's architecture suggests a classical influence, with tiered staircases leading towards ornate doorways. Light sources within the building cast a warm glow onto the surrounding greenery and water.",
+        "atmosphere": "A visible haze hangs in the air, suggesting a humid environment permeated by the scent of damp earth and lush vegetation. The atmosphere is thick, contributing to a sense of deep isolation.",
+        "mood": "Melancholy, mysterious",
+        "lighting": "The lighting is soft and diffused, originating from within the structure and reflecting off the water. A predominantly cool ambient light from the sky contrasts with the warm yellow interior lights, creating a low-contrast scene with pools of illumination.",
+        "dominantElements": [
+          "Marble complex facade with columns",
+          "Encroaching jungle vines and foliage",
+          "Body of water in the foreground",
+          "Tiered marble staircase leading to entrance"
+        ],
+        "spatialLayout": "The marble complex occupies the midground and background, presented symmetrically with a central focus on its main entrance. The foreground is dominated by a reflective body of water, with rocky outcrops and dense foliage framing the scene.",
+        "uniqueIdentifiers": [
+          "Marble structure overgrown with vines",
+          "Reflective body of water before the entrance",
+          "Classical architectural elements amidst jungle"
+        ],
+        "materials_primary": "Marble",
+        "materials_secondary": "Stone, Vegetation (vines, leaves, trees)",
+        "materials_accents": "Warm interior lights",
+        "colors_dominant": "Gray (marble)",
+        "colors_secondary": "Green (foliage), Teal/Blue (water)",
+        "colors_accents": "Yellow/Orange (interior lights)",
+        "colors_ambient": "Cool blue-green haze",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center foreground",
+            "description": "Tiered marble stairs leading up to the main entrance."
+          },
+          {
+            "type": "door",
+            "position": "center midground",
+            "description": "Ornate arched doorway behind columns."
+          },
+          {
+            "type": "door",
+            "position": "left midground",
+            "description": "Arched doorway with visible window and interior light."
+          },
+          {
+            "type": "passage",
+            "position": "left midground",
+            "description": "Series of arches forming a covered walkway."
+          }
+        ],
+        "searchDesc": "Marble complex overgrown with vines. Has: stairs (center foreground), door (center midground), passage (left midground)",
+        "slug": "the-sunken-embassy"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/zbA73dsYlD3T_S8jZF22m.jpg",
+      "focus": {
+        "node_id": "The Sunken Embassy",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762522072204-m4w5cmf9n": {
+      "id": "loc-1762522072204-m4w5cmf9n",
+      "type": "host",
+      "name": "The Whispering Wastes",
+      "dna": {
+        "type": "host",
+        "name": "The Whispering Wastes",
+        "description": "A vast desert landscape where the wind carries ancient secrets and the very air shimmers with magic.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "otherworldly crystalline formations, organic integration",
+          "cultural_tone": "A nomadic culture that thrives on the echoes of forgotten celestial events, finding beauty in ephemeral phenomena and resonant energies.",
+          "materials_base": "Surfaces are composed of naturally occurring, resonant crystalline structures that hum with latent energy. Textures range from smooth, polished facets to rough, geode-like formations.",
+          "mood_baseline": "mysterious, wondrous, resonant",
+          "palette_bias": "A palette dominated by iridescent, shifting colors that evoke spectral light and deep, cosmic hues. Expect subtle transitions between cool blues, vibrant purples, and ethereal silvers, with occasional bursts of warm, celestial fire.",
+          "soundscape_base": "The ambient soundscape is characterized by low, resonant hums and chimes that seem to emanate from the very earth. Wind currents carry faint, melodic echoes and distant, harmonized tones.",
+          "flora_base": "Sparse, hardy desert flora adapted to absorb ambient magical energies. Plants often exhibit bioluminescent properties or crystalline growth patterns.",
+          "fauna_base": "Creatures attuned to sonic vibrations and light. May include crystalline insects, luminous sand-swimmers, or birds with melodic calls."
+        },
+        "slug": "the-whispering-wastes"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Wastes",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "2ae5323f-075c-4f15-9302-73fc7dc2243d": {
+      "id": "2ae5323f-075c-4f15-9302-73fc7dc2243d",
+      "type": "region",
+      "name": "The Whispering Wastes",
+      "dna": {
+        "type": "region",
+        "name": "The Whispering Wastes",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": "Vast expanses of shifting, fine-grained sand interspersed with exposed crystalline veins and ancient, wind-scoured rock formations. The primary materials interact with ambient energy, causing subtle light shifts and harmonic resonances.",
+          "mood_baseline": "vast, serene, echoing",
+          "palette_bias": "Dominant hues of ochre, sandstone, and deep desert purples, punctuated by the shimmering, unearthly colors of exposed crystal formations. The palette is a marriage of earthy tones and otherworldly luminescence.",
+          "soundscape_base": "The constant whisper of wind is the dominant sound, carrying faint, melodic undertones from resonating crystals. Occasional, distant chimes suggest unseen energy transfers.",
+          "flora_base": "Drought-resistant succulents with crystalline dew drops, and hardy, wind-bent desert shrubs that glow faintly at dusk.",
+          "fauna_base": "Desert reptiles with crystalline scales, nocturnal insects that emit soft light, and migratory birds that navigate by sonic echoes."
+        },
+        "slug": "the-whispering-wastes"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Wastes",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "40962760-f96b-459a-8478-21db3b2f11e8": {
+      "id": "40962760-f96b-459a-8478-21db3b2f11e8",
+      "type": "location",
+      "name": "The Whispering Wastes",
+      "dna": {
+        "type": "location",
+        "name": "The Whispering Wastes",
+        "description": "",
+        "dna": {
+          "architectural_tone": "The landscape features naturally occurring crystalline structures that have been subtly shaped to form pavilions and conduits for ambient energy, blending seamlessly with the desert.",
+          "cultural_tone": "A place of transient convergence, serving as a gathering point for those drawn to the resonant energies of the Wastes. It is a site of temporary dwelling and ceremonial exchange.",
+          "materials_base": "Dominated by massive, naturally formed crystal outcrops and compacted desert earth. The crystal structures are highly refractive and seem to hum with a faint, internal light.",
+          "mood_baseline": "vibrant, dynamic, ephemeral",
+          "palette_bias": "Intense, saturated colors that bloom from the crystalline structures, creating sharp contrasts with the muted desert backdrop. Fiery reds, deep blues, and radiant purples dominate the immediate vicinity.",
+          "soundscape_base": "A complex symphony of refracted sounds. Each resonance from the environment is amplified and transformed into audible light, creating a constant, multi-layered auditory and visual spectacle.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-whispering-wastes"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Wastes",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ecbadfbb-3b58-4786-9563-1c787e738938": {
+      "id": "ecbadfbb-3b58-4786-9563-1c787e738938",
+      "type": "niche",
+      "name": "The Prismatic Arenas",
+      "dna": {
+        "type": "niche",
+        "name": "The Prismatic Arenas",
+        "description": "The individual pavilions within the festival grounds where sound is visibly transformed into light.",
+        "looks": "The interior of a cavernous space is lined with a series of arched openings. Each opening reveals a brightly glowing, crystalline substance that appears to be in a state of flux. The walls are textured and uneven, resembling rough-hewn stone or compacted earth. Light spills from the openings and onto the uneven floor, creating pools of intense color. A hazy mist is present, obscuring the far end of the corridor and softening the overall appearance.",
+        "atmosphere": "The air is thick with a visible, shimmering haze, especially in the midground and background. This mist appears to be illuminated by the light sources within the arched openings. A subtle energy seems to permeate the space, giving it a vibrant and dynamic quality.",
+        "mood": "Enchanting, sensory, radiant",
+        "lighting": "The lighting is dramatic and high-contrast, originating from the intensely bright, colorful sources within the arched openings. The light quality is radiant and somewhat diffused by the atmospheric haze. There is a clear distinction between the warm reds and oranges on the left and the cool blues and purples on the right.",
+        "dominantElements": [
+          "Series of arched openings (lining walls)",
+          "Luminous crystalline interiors within openings (various colors)",
+          "Textured cavern walls",
+          "Uneven ground surface"
+        ],
+        "spatialLayout": "The scene depicts a corridor-like space formed by a repeating pattern of rough, rock-like walls and arched openings. The perspective draws the eye down the corridor towards a brightly lit opening at the far end. The ground is uneven, with undulations and depressions that catch the light.",
+        "uniqueIdentifiers": [
+          "Alternating warm and cool colored luminous openings",
+          "Rough, organic texture of the cavern walls",
+          "Hazy, light-filled atmosphere within the openings"
+        ],
+        "materials_primary": "Stone-like rock or compacted earth",
+        "materials_secondary": "Crystalline material within openings",
+        "materials_accents": "Luminous particles within crystalline material",
+        "colors_dominant": "Purple and pink hues in the cavern walls and general ambient light",
+        "colors_secondary": "Intense fiery red and orange in the left openings, bright blue and white in the right openings",
+        "colors_accents": "Sparkling white and golden light within the crystalline structures",
+        "colors_ambient": "A soft, diffused purple and blue tone pervades the space, contrasting with the intense colors of the openings.",
+        "navigableElements": [
+          {
+            "type": "portal",
+            "position": "center, background",
+            "description": "Brightly glowing arched portal, appears to be a pathway"
+          },
+          {
+            "type": "portal",
+            "position": "left, midground",
+            "description": "Arched opening with intense red-orange glowing material"
+          },
+          {
+            "type": "portal",
+            "position": "right, midground",
+            "description": "Arched opening with intense blue glowing material"
+          },
+          {
+            "type": "portal",
+            "position": "left, foreground",
+            "description": "Arched opening with strong pink-orange light"
+          },
+          {
+            "type": "portal",
+            "position": "right, foreground",
+            "description": "Arched opening with vibrant blue light"
+          }
+        ],
+        "searchDesc": "Cavern corridor with luminous portals. Has: glowing portal (background), red portal (midground left), blue portal (midground right)",
+        "dna": {
+          "architectural_tone": "Individual, contained crystalline formations designed to amplify and visualize specific sonic frequencies.",
+          "materials_base": "Primarily composed of highly pure, intensely luminous crystalline substances. Surfaces are smooth and reflective, designed to capture and refract light with precision.",
+          "mood_baseline": "electric, awe-inspiring, immersive",
+          "soundscape_base": "The focused transformation of sound into light. Each sonic event, from a whisper to a beat, creates a distinct visual cascade of color and pattern within the arena."
+        },
+        "slug": "the-prismatic-arenas"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/qFSJki40Fpz9W7fscHg0y.jpg",
+      "focus": {
+        "node_id": "The Prismatic Arenas",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762522653602-5a2na9wmr": {
+      "id": "loc-1762522653602-5a2na9wmr",
+      "type": "host",
+      "name": "The Azure Canopy",
+      "dna": {
+        "type": "host",
+        "name": "The Azure Canopy",
+        "description": "A realm of vibrant, humid jungles and ancient spirits.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, spiritual, ancient",
+          "cultural_tone": "A realm steeped in ancient spiritual traditions, where nature and the divine are intrinsically linked. Belief systems often revolve around veneration of spirits, deities, and natural forces.",
+          "materials_base": "Rich, fertile earth, ancient wood, stone weathered by time, and ethereal energies. Materials often possess a living or spiritual quality.",
+          "mood_baseline": "mystical, serene, awe-inspiring",
+          "palette_bias": "Deep, verdant greens and earthy browns form the base, accented by vibrant, jewel-toned spiritual energies and soft, ethereal blues and purples.",
+          "soundscape_base": "A constant hum of natural life, punctuated by the whispers of unseen spirits, the rustling of ancient leaves, and resonant, chanting tones.",
+          "flora_base": "Lush, oversized jungle flora with a vibrant, almost sentient presence. Towering trees with colossal roots, bioluminescent plants, and moss-draped ancient growths are common.",
+          "fauna_base": "Elusive, spirit-infused creatures of the jungle. This includes large, exotic insects, mythical beasts, and spirits that manifest in animalistic forms."
+        },
+        "slug": "the-azure-canopy"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Canopy",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "3664f124-96a2-49d4-9c60-7303b8ad275d": {
+      "id": "3664f124-96a2-49d4-9c60-7303b8ad275d",
+      "type": "region",
+      "name": "Whispering Roots",
+      "dna": {
+        "type": "region",
+        "name": "Whispering Roots",
+        "description": "A mystical clearing deep within the tropical jungle, steeped in ancient power.",
+        "dna": {
+          "architectural_tone": "naturalistic, integrated with earth",
+          "cultural_tone": "Areas of deep spiritual significance, often marked by ancient, overgrown ruins or natural formations imbued with primal power. Shrines and sacred sites are common.",
+          "materials_base": "Massive, gnarled roots, dense earth, weathered stone, and subtle flows of spiritual energy. Structures are often grown or carved from the environment itself.",
+          "mood_baseline": "sacred, tranquil, powerful",
+          "palette_bias": "Dominance of deep greens and browns, with accents of mystical blues and faint, glowing spiritual energies. Colors are often muted by mist and shadow.",
+          "soundscape_base": "The deep stillness of the ancient jungle, amplified by the low hum of latent power, distant animal calls, and the gentle drip of water.",
+          "flora_base": "Colossal, ancient trees with exposed root systems that form natural structures. Thick mosses, ferns, and vines dominate, often interwoven with luminescent fungi.",
+          "fauna_base": "Subtle and elusive forest spirits, large, docile herbivores adapted to dense foliage, and bioluminescent insects."
+        },
+        "slug": "whispering-roots"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Whispering Roots",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "10291774-769a-495a-8dfd-962d29df4da8": {
+      "id": "10291774-769a-495a-8dfd-962d29df4da8",
+      "type": "location",
+      "name": "The Grove of Shiva",
+      "dna": {
+        "type": "location",
+        "name": "The Grove of Shiva",
+        "description": "An ancient and sacred grove dedicated to Shiva, characterized by a colossal blue statue.",
+        "looks": "A vast, immense blue statue of a seated figure dominates the center of the clearing, rising from a base of massive, gnarled roots. The figure is surrounded by a soft, ethereal mist that blurs the background of towering, dark trees. Luminous blue lights are visible around the base of the statue and on the exposed roots. The statue itself appears intricately detailed with jewelry and ornamentation.",
+        "atmosphere": "A thick, pervasive mist hangs in the air, obscuring visibility into the deeper jungle. The air appears heavy and humid, with the visual suggestion of dense foliage implied by the dark, silhouetted trees.",
+        "mood": "Reverent, mystical, awe-inspiring",
+        "lighting": "The scene is illuminated by a soft, diffuse light emanating from an unseen source behind the statue, creating a bright, almost blown-out effect in the upper background. A strong blue glow originates from the luminous objects at the statue's base, casting shadows and highlighting the surrounding roots. The overall lighting is cool and mystical.",
+        "dominantElements": [
+          "Immense blue statue of Shiva (~20m tall)",
+          "Massive, gnarled tree roots forming the foreground and base",
+          "Towering, dark trees forming the background",
+          "Luminous blue light sources at the base of the statue"
+        ],
+        "spatialLayout": "The primary focal point, the statue, is centrally positioned in the midground. The foreground is defined by the expansive, textured roots of large trees that frame the scene. The background consists of a dense, misty forest that recedes into obscurity.",
+        "uniqueIdentifiers": [
+          "Colossal blue statue of Shiva in meditative pose",
+          "Intricate network of exposed, gnarled tree roots",
+          "Scattered luminous blue light sources"
+        ],
+        "materials_primary": "Stone (statue), Earth (ground)",
+        "materials_secondary": "Wood (tree trunks and roots), foliage",
+        "materials_accents": "Luminous energy (light sources)",
+        "colors_dominant": "Deep blue (statue, lights)",
+        "colors_secondary": "Dark green/brown (trees, roots)",
+        "colors_accents": "Bright white (light source in background)",
+        "colors_ambient": "Misty blue",
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "center, foreground",
+            "description": "Luminous blue light sources scattered around statue base"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Mystical jungle clearing. Has: immense blue statue (center), gnarled roots (foreground), luminous blue lights (center)",
+        "dna": {
+          "architectural_tone": "monumental, deity-focused",
+          "cultural_tone": "A hallowed ground dedicated to a powerful deity, characterized by immense devotional statues and artifacts that channel spiritual energy.",
+          "materials_base": "Hewn stone for monumental figures, ancient, reinforced roots forming a base, and concentrated streams of pure, luminous energy.",
+          "mood_baseline": "reverent, contemplative, otherworldly",
+          "palette_bias": "Strong emphasis on deep blues and vibrant, luminous azure, contrasting with the dark earthy tones of the surrounding roots and mist.",
+          "soundscape_base": "The low thrum of spiritual energy, the subtle whirring of light-based artifacts, and the distant, echoing resonance of ancient chants.",
+          "flora_base": "Essentially 'None' as the grove is dominated by the statue and its immediate root system, with only the densest, mist-shrouded trees framing the periphery.",
+          "fauna_base": "Likely 'None' within the immediate sacred space, emphasizing the divine focus."
+        },
+        "slug": "the-grove-of-shiva"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/kj3o55tmbo_YgVPTq3ddN.jpg",
+      "focus": {
+        "node_id": "The Grove of Shiva",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762522714681-5gi3hcs6a": {
+      "id": "loc-1762522714681-5gi3hcs6a",
+      "type": "host",
+      "name": "The Lumina Isles",
+      "dna": {
+        "type": "host",
+        "name": "The Lumina Isles",
+        "description": "A chain of islands renowned for their bioluminescent flora and vibrant festivals.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, bioluminescent structures",
+          "cultural_tone": "Celebratory island culture deeply connected to nature's light and rhythm, with a focus on communal gatherings and spiritual harmony.",
+          "materials_base": "Glow-infused natural elements like pulsating flora, shimmering sands, and naturally luminous minerals. Structures are often grown or shaped from living materials.",
+          "mood_baseline": "Enchanting, vibrant, celebratory",
+          "palette_bias": "Rich, saturated jewel tones interwoven with ethereal glows and deep, contrasting darks. Emphasis on luminous blues, vibrant pinks, and rich greens.",
+          "soundscape_base": "A blend of rhythmic drumming, echoing natural melodies, and the gentle hum of bioluminescent life. Sounds are often amplified or naturally resonant.",
+          "flora_base": "Giant, sentient flora that glows and pulses with internal light, capable of emitting sound and responding to stimuli. Abundant, lush tropical vegetation.",
+          "fauna_base": "Creatures adapted to bioluminescent environments, often with glowing markings or bioluminescent organs. May include magical or elemental beings."
+        },
+        "slug": "the-lumina-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Lumina Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ddccd77c-5f03-497d-899b-b23af06687b8": {
+      "id": "ddccd77c-5f03-497d-899b-b23af06687b8",
+      "type": "region",
+      "name": "The Lumina Isles",
+      "dna": {
+        "type": "region",
+        "name": "The Lumina Isles",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-lumina-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Lumina Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "a8adcd5d-d066-4171-bf73-7c3d3e7844a3": {
+      "id": "a8adcd5d-d066-4171-bf73-7c3d3e7844a3",
+      "type": "location",
+      "name": "The Festival Shore",
+      "dna": {
+        "type": "location",
+        "name": "The Festival Shore",
+        "description": "A stunning crescent beach where colossal, pulsating flowers meet the sea.",
+        "looks": "A wide, sandy crescent beach curves into the distance, bordered by a dense line of palm trees on the left and right. Colossal, luminous flowers with glowing petals are scattered across the foreground and midground, some emerging from lush foliage. The ocean exhibits a vibrant bioluminescent glow along its shoreline, contrasting with the dark, lush hills that rise in the background. Structures resembling open-air buildings with glowing lights are visible nestled among the trees on the right.",
+        "atmosphere": "The air appears thick with humidity, suggesting a warm, tropical environment. A sense of enchantment pervades the scene, enhanced by the vibrant, unnatural illumination.",
+        "mood": "Festive, enchanting",
+        "lighting": "The lighting is dim and atmospheric, characteristic of twilight or night. Soft, diffused light emanates from the large flowers and the shoreline, casting a warm pink and cool blue glow. The sky is a deep twilight blue, with soft clouds reflecting hints of pink and purple.",
+        "dominantElements": [
+          "Crescent beach",
+          "Giant luminous flowers",
+          "Bioluminescent ocean shoreline",
+          "Palm trees"
+        ],
+        "spatialLayout": "The scene presents a broad, sweeping vista with the beach forming a prominent curve in the midground. Foreground elements of large flowers and foliage frame the view, leading the eye towards the ocean and the distant treeline. The horizon is defined by the meeting of the ocean and the sky, with a small sailboat visible on the water.",
+        "uniqueIdentifiers": [
+          "Colossal bioluminescent flowers",
+          "Bioluminescent ocean shoreline",
+          "Tropical beach setting with palm trees"
+        ],
+        "materials_primary": "Sand, Water, Vegetation",
+        "materials_secondary": "Wood (structures)",
+        "materials_accents": "Bioluminescent glow, building lights",
+        "colors_dominant": "Deep blue (sky, ocean)",
+        "colors_secondary": "Pink and magenta (flowers, foliage, shoreline), green (foliage)",
+        "colors_accents": "Bright blue and violet (shoreline luminescence), warm orange/pink (building lights)",
+        "colors_ambient": "Twilight blue, with pink and magenta hues",
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "midground ocean",
+            "description": "Small sailboat with glowing lights"
+          },
+          {
+            "type": "passage",
+            "position": "right midground",
+            "description": "Path or open area between structures and beach"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Bioluminescent beach festival. Has: giant flowers (foreground), glowing shoreline (midground), structures (right)",
+        "dna": {
+          "architectural_tone": "Open-air structures integrated with nature",
+          "cultural_tone": "The primary gathering place for festivals, amplifying the natural rhythm and light for communal celebration.",
+          "materials_base": "Smooth, polished wood for structures, interwoven with living, glowing vines and accents.",
+          "mood_baseline": "Exhilarating, enrapturing, communal",
+          "palette_bias": "Strong contrast between deep twilight blues and vibrant, pulsating pinks and magentas, accented by warm, organic greens.",
+          "soundscape_base": "The rhythmic pulse of drums amplified by the natural acoustics of the cove, layered with the soft hum of flora and the ocean's gentle roar.",
+          "flora_base": "Colossal, rhythmically pulsing flowers with luminescent petals; dense, vibrant palm lines.",
+          "fauna_base": "None specified, but implied to be marine life with bioluminescent properties near the shore."
+        },
+        "slug": "the-festival-shore"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/916meifk4eydhsepcRPFI.jpg",
+      "focus": {
+        "node_id": "The Festival Shore",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762522813100-t0g5zfs19": {
+      "id": "loc-1762522813100-t0g5zfs19",
+      "type": "host",
+      "name": "The Azure Archipelago",
+      "dna": {
+        "type": "host",
+        "name": "The Azure Archipelago",
+        "description": "A chain of islands known for their vibrant coral reefs and ancient mysteries.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "ancient monumentalism, organic sculpting",
+          "cultural_tone": "A civilization deeply connected to the natural world, where art and spirituality are intertwined with the land. Their structures often serve both aesthetic and functional purposes, designed to resonate with natural forces.",
+          "materials_base": "Primarily stone and rock, shaped and weathered by time and the elements. Emphasis on natural textures and forms, showcasing the inherent beauty of geological materials.",
+          "mood_baseline": "Mysterious, serene, ancient",
+          "palette_bias": "Cool and oceanic hues, with a preference for blues and muted greys. Tones that evoke depth, tranquility, and the vastness of natural landscapes.",
+          "soundscape_base": "Subtle, resonant, and echoing. Sounds that are amplified or shaped by the environment, such as wind, water, and natural harmonics.",
+          "flora_base": "Lush, tropical vegetation that integrates with or climbs over natural and sculpted structures. Think large leaves, flowering vines, and dense, verdant growth.",
+          "fauna_base": "Creatures that are adapted to coastal and oceanic environments, possibly with a touch of the mystical or elemental. Seabirds, marine life, and perhaps beings tied to the very essence of the islands."
+        },
+        "slug": "the-azure-archipelago"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Archipelago",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "49d45d4a-185c-4dff-b45a-ce4fa36ca130": {
+      "id": "49d45d4a-185c-4dff-b45a-ce4fa36ca130",
+      "type": "region",
+      "name": "The Whispering Peninsula",
+      "dna": {
+        "type": "region",
+        "name": "The Whispering Peninsula",
+        "description": "A dramatic tropical headland where nature and art converge.",
+        "dna": {
+          "architectural_tone": "dramatic cliffside sculpting, naturalistic forms",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "windswept, awe-inspiring, primal",
+          "palette_bias": "emphasizing the interplay of sea blue, weathered stone grey, and verdant greens",
+          "soundscape_base": "constant sea breeze, distant waves, the subtle hum of the peninsula's unique acoustic properties",
+          "flora_base": "resilient coastal plants, salt-tolerant trees clinging to cliffs",
+          "fauna_base": "seabirds, specialized cliff-dwelling insects, perhaps smaller amphibious creatures"
+        },
+        "slug": "the-whispering-peninsula"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Peninsula",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "9c42e331-a003-4209-8b91-eb2edc979a21": {
+      "id": "9c42e331-a003-4209-8b91-eb2edc979a21",
+      "type": "location",
+      "name": "The Grotto of Echoes",
+      "dna": {
+        "type": "location",
+        "name": "The Grotto of Echoes",
+        "description": "A series of immense, ancient statues carved directly into the sheer cliffs of the peninsula.",
+        "looks": "Towering stone figures with open mouths, weathered by sea and wind, integrated into the natural cliff face.",
+        "atmosphere": "Constant sea breeze, faint reverberation of the wind.",
+        "mood": "Mysterious, awe-inspiring",
+        "dna": {
+          "architectural_tone": "monolithic carved faces, cavernous interior",
+          "cultural_tone": "A sacred or ceremonial site, likely used for rituals or as a testament to ancestral power. The carvings suggest a deep reverence for form and sonic expression.",
+          "materials_base": null,
+          "mood_baseline": "hushed, sacred, contemplative",
+          "palette_bias": "deepening blues and greys, with subtle highlights catching sculpted features",
+          "soundscape_base": "amplified wind currents, the resonance of carved maws, a sense of contained echoes",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-grotto-of-echoes"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Grotto of Echoes",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "9d22f5fc-6be6-48bd-b9ba-8c6eace861c0": {
+      "id": "9d22f5fc-6be6-48bd-b9ba-8c6eace861c0",
+      "type": "niche",
+      "name": "The Harmonic Maws",
+      "dna": {
+        "type": "niche",
+        "name": "The Harmonic Maws",
+        "description": "The mouths of the statues, each designed to emit a specific low note when the wind passes through.",
+        "looks": "Massive stone statues, carved into the interior of a cavernous space, emerge from a textured floor. The statues depict human faces with serene expressions and elaborate headdresses. Their forms appear weathered, with visible imperfections and a rough texture. The scale suggests immense craftsmanship and age. The architecture is organic, forming a natural-looking, though sculpted, environment.",
+        "atmosphere": "The air within the grotto appears clear, with a faint luminescence. Subtle dust motes or particles seem to be suspended in the air, catching the light. The overall impression is of a still, ancient, and somewhat mystical environment.",
+        "mood": "Ethereal, resonant",
+        "lighting": "The scene is illuminated by a cool, blue light emanating from a bright opening in the background. This creates a strong contrast between the brightly lit background and the darker, shadowed foreground statues. The light source is directional, casting soft shadows and highlighting the sculpted features of the statues.",
+        "dominantElements": [
+          "Large carved stone statue head (left foreground)",
+          "Carved stone faces receding into background (midground)",
+          "Natural cavernous rock formations (framing)",
+          "Bright light source from opening (background)"
+        ],
+        "spatialLayout": "The image presents a deep cavern with several colossal sculpted heads lining its interior. The foreground is dominated by the left half of a large statue head. The midground shows a series of these statues receding into the distance, framing a bright, open passage. The space feels vast and enclosed by natural rock.",
+        "uniqueIdentifiers": [
+          "Colossal carved heads within a grotto",
+          "Distinctive blue, ethereal lighting",
+          "Rough-textured, ancient-looking stone carvings"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Rock",
+        "materials_accents": "Luminescent particles",
+        "colors_dominant": "Blue",
+        "colors_secondary": "Dark blue, Gray",
+        "colors_accents": "Bright white (light source)",
+        "colors_ambient": "Blue",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, background",
+            "description": "Brightly lit opening leading out of the grotto"
+          }
+        ],
+        "searchDesc": "[Location - Interior] Grotto with carved stone statues. Has: passage (background)",
+        "dna": {
+          "architectural_tone": "precision sculpted apertures, designed for airflow",
+          "materials_base": "stone, with an emphasis on smooth, wind-channeling surfaces",
+          "mood_baseline": "resonant, vocal, ethereal",
+          "soundscape_base": "specific low-frequency tones generated by wind, carrying and blending with the ambient soundscape"
+        },
+        "slug": "the-harmonic-maws"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/aCYP81AY0CBavY929uKfc.jpg",
+      "focus": {
+        "node_id": "The Harmonic Maws",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762523654029-ne40v1giv": {
+      "id": "loc-1762523654029-ne40v1giv",
+      "type": "host",
+      "name": "The Verdant Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Verdant Expanse",
+        "description": "A sprawling world of untamed jungles and hidden wonders.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic integration, hidden structures",
+          "cultural_tone": "Tribalistic, deeply connected to nature and the mystical forces of the world. Focused on craft and spiritualism.",
+          "materials_base": "Abundant use of natural, raw materials like wood, stone, woven fibers, and living plant matter. A focus on earthy textures and organically shaped components.",
+          "mood_baseline": "Mysterious, enchanting, ancient",
+          "palette_bias": "Rich, earthy tones of green, brown, and ochre, contrasted with vibrant jewel tones and bioluminescent accents. A palette that feels alive and mystical.",
+          "soundscape_base": "The omnipresent hum of nature – rustling leaves, flowing water, distant animal calls. Interspersed with ethereal chimes, soft chanting, and the murmur of hidden activity.",
+          "flora_base": "Lush, vibrant, and often oversized jungle flora. Plants with unusual shapes, glowing elements, and potent natural scents. Many plants are integrated directly into structures.",
+          "fauna_base": "A diverse array of fantastical jungle creatures, from small, glowing insects to majestic, elusive beasts. Animals are often depicted with a mystical or spiritual aura."
+        },
+        "slug": "the-verdant-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "73c3fcfe-17d4-4a4a-9fbe-802f6b9d30fb": {
+      "id": "73c3fcfe-17d4-4a4a-9fbe-802f6b9d30fb",
+      "type": "region",
+      "name": "The Verdant Expanse",
+      "dna": {
+        "type": "region",
+        "name": "The Verdant Expanse",
+        "description": "",
+        "dna": {
+          "architectural_tone": "organic integration, hidden structures",
+          "cultural_tone": "Tribalistic, deeply connected to nature and the mystical forces of the world. Focused on craft and spiritualism.",
+          "materials_base": "Abundant use of natural, raw materials like wood, stone, woven fibers, and living plant matter. A focus on earthy textures and organically shaped components.",
+          "mood_baseline": "Mysterious, enchanting, ancient",
+          "palette_bias": "Rich, earthy tones of green, brown, and ochre, contrasted with vibrant jewel tones and bioluminescent accents. A palette that feels alive and mystical.",
+          "soundscape_base": "The omnipresent hum of nature – rustling leaves, flowing water, distant animal calls. Interspersed with ethereal chimes, soft chanting, and the murmur of hidden activity.",
+          "flora_base": "Lush, vibrant, and often oversized jungle flora. Plants with unusual shapes, glowing elements, and potent natural scents. Many plants are integrated directly into structures.",
+          "fauna_base": "A diverse array of fantastical jungle creatures, from small, glowing insects to majestic, elusive beasts. Animals are often depicted with a mystical or spiritual aura."
+        },
+        "slug": "the-verdant-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "3186872f-9509-4ac6-bf02-f945bc6f3d1f": {
+      "id": "3186872f-9509-4ac6-bf02-f945bc6f3d1f",
+      "type": "location",
+      "name": "The Mist Market",
+      "dna": {
+        "type": "location",
+        "name": "The Mist Market",
+        "description": "An open-air market set within a vibrant jungle valley, renowned for its artistic stalls and ethereal atmosphere.",
+        "looks": "Rows of open-air stalls line a misty jungle path, each covered by a canopy. The stalls are filled with various items, and illuminated by hanging lightbulbs. Silhouettes of people walk along the path between the stalls, creating a sense of depth. Dense foliage of the jungle frames the scene on both sides.",
+        "atmosphere": "Thick, swirling mist permeates the scene, obscuring distant details and lending an ethereal quality. The air appears humid and dense, contributing to the mysterious ambiance of the market.",
+        "mood": "Enchanting, vibrant, mysterious",
+        "lighting": "The lighting is predominantly warm and orange, originating from the lightbulbs illuminating the stalls. This contrasts with the cool, blue tones of the ambient mist and jungle background. The light casts soft glows and highlights on the wet ground.",
+        "dominantElements": [
+          "Art stalls with glowing canopies",
+          "Swirling mist",
+          "Silhouettes of people",
+          "Dense jungle foliage"
+        ],
+        "spatialLayout": "The market is laid out along a central path that recedes into the distance. Stalls are positioned on either side of this path, creating a corridor-like effect. The jungle canopy and mist create a sense of enclosure and depth, with the foreground being darker and the background fading into the fog.",
+        "uniqueIdentifiers": [
+          "Art stalls under glowing canopies in a jungle setting",
+          "Thick, multicolored mist",
+          "Silhouetted figures navigating the market"
+        ],
+        "materials_primary": "Tents/Canopies (fabric), Natural ground (earth/mud)",
+        "materials_secondary": "Wood (stall structures, fencing), Dense foliage (leaves, branches)",
+        "materials_accents": "Glowing lightbulbs, Reflective wet surfaces",
+        "colors_dominant": "Orange (stall lights)",
+        "colors_secondary": "Blue (mist, ambient light, foliage), Brown (ground, stall structures)",
+        "colors_accents": "White (lightbulbs)",
+        "colors_ambient": "Cool blue with tinges of purple and pink",
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "center, midground",
+            "description": "Path between market stalls"
+          },
+          {
+            "type": "object",
+            "position": "left, foreground",
+            "description": "Market stall with items on display"
+          },
+          {
+            "type": "object",
+            "position": "right, foreground",
+            "description": "Market stall with items on display"
+          }
+        ],
+        "searchDesc": "[Market] Open-air market in a misty jungle. Has: market stalls (left and right), path (center)",
+        "dna": {
+          "architectural_tone": "improvised stalls, flowing canopies",
+          "cultural_tone": "A vibrant hub of artisans and traders, fostering a lively yet somewhat secretive atmosphere due to the pervasive mist. A place for exchange of both goods and rumors.",
+          "materials_base": "Emphasis on woven fabrics for canopies, aged wood for stall structures, and natural ground cover. Accents of crafted metals and glowing organic elements.",
+          "mood_baseline": "Vibrant, magical, veiled",
+          "palette_bias": "Warm, inviting tones from stall lighting (oranges, yellows) juxtaposed with the cool, ethereal blues and purples of the mist. High contrast between artificial light and ambient atmosphere.",
+          "soundscape_base": "A lively cacophony of bartering, laughter, and music, all softened and diffused by the swirling mist. Occasional exotic animal calls filter through.",
+          "flora_base": "Dense, overhanging jungle foliage framing the market, with smaller, decorative plants integrated into stall designs. Some plants might have glowing properties.",
+          "fauna_base": "Mostly unseen or hinted at within the mist, with occasional sightings of small, swift creatures or large, silhouetted forms in the distance."
+        },
+        "slug": "the-mist-market"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/rscTCG31GJIcQ70SWq1x8.jpg",
+      "focus": {
+        "node_id": "The Mist Market",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762524073694-9pmf6mjfl": {
+      "id": "loc-1762524073694-9pmf6mjfl",
+      "type": "host",
+      "name": "Lost Paradise",
+      "dna": {
+        "type": "host",
+        "name": "Lost Paradise",
+        "description": "A forgotten world where nature reclaims civilization.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "ancient forgotten ruins, organic integration",
+          "cultural_tone": "A civilization that valued opulent living and spiritual connection with nature, now lost to time.",
+          "materials_base": "A palette dominated by natural stone and weathered, once-refined materials. Think aged marble, sandstone, and possibly remnants of ornate metalwork.",
+          "mood_baseline": "melancholy, serene, mysterious",
+          "palette_bias": "A bias towards muted earth tones, verdant greens, and the ethereal glow of ambient magical energies or twilight. Accents of deep blues and jewel tones may appear.",
+          "soundscape_base": "Echoes of distant, forgotten music mingled with the pervasive sounds of nature: wind through foliage, water trickling, and the calls of unseen creatures.",
+          "flora_base": "Abundant, wild, and untamed plant life that aggressively reclaims structures. Expect dense vines, large-leafed tropical plants, and trees growing through man-made surfaces.",
+          "fauna_base": "Wildlife that has adapted to this reclaimed environment, likely nocturnal or elusive. Think tropical birds, insects, and possibly larger, gentler forest dwellers."
+        },
+        "slug": "lost-paradise"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Lost Paradise",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "d9e2d3d4-d53e-4cc8-ad50-5af845ce0039": {
+      "id": "d9e2d3d4-d53e-4cc8-ad50-5af845ce0039",
+      "type": "region",
+      "name": "Lost Paradise",
+      "dna": {
+        "type": "region",
+        "name": "Lost Paradise",
+        "description": "",
+        "dna": {
+          "architectural_tone": "ornate, classical decay",
+          "cultural_tone": null,
+          "materials_base": "aged marble, weathered stone, remnants of polished plaster",
+          "mood_baseline": "nostalgic, tranquil, overgrown",
+          "palette_bias": "soft twilight hues, deep jungle greens, cool water reflections, subtle moonlit shimmer",
+          "soundscape_base": "gentle water sounds, rustling leaves, distant nocturnal calls",
+          "flora_base": "lush, dense tropical foliage, rampant vines, large-leafed plants",
+          "fauna_base": "small tropical birds, amphibians, various insects"
+        },
+        "slug": "lost-paradise"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Lost Paradise",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "9543608a-75c6-4095-adf3-b3dd2173510e": {
+      "id": "9543608a-75c6-4095-adf3-b3dd2173510e",
+      "type": "location",
+      "name": "The Palmera Haven",
+      "dna": {
+        "type": "location",
+        "name": "The Palmera Haven",
+        "description": "An overgrown resort, once luxurious, now a testament to nature's reclamation.",
+        "looks": "A luxurious resort complex is partially submerged in lush, overgrown vegetation, with palm fronds arching over cracked marble terraces and buildings. A large, freeform swimming pool with an illuminated turquoise interior dominates the foreground, its surface reflecting the ambient light. The architecture features classical columns and balconies, suggesting a former grandeur, now softened by the encroaching jungle. Lounge chairs and umbrellas are arranged on the surrounding stone pathways, indicating areas of past relaxation. The scene is bathed in the soft glow of artificial lights and the twilight sky.",
+        "atmosphere": "The air appears still and humid, heavy with the presence of dense foliage and water. Shadows suggest a tropical climate, where moisture clings to surfaces and plants thrive unchecked.",
+        "mood": "Melancholy, serene, wild",
+        "lighting": "The lighting is a mix of artificial warm glows from interior lights and pathway lamps, and the cool, dim light of twilight. The pool's interior is brightly illuminated with a vibrant turquoise light, creating a stark contrast. Shadows are soft but distinct, defining the forms of plants and structures.",
+        "dominantElements": [
+          "Curving swimming pool with turquoise illumination (foreground/midground)",
+          "Overgrown palm trees and dense vegetation (surrounding structures)",
+          "Classical resort buildings with balconies and columns (midground/background)",
+          "Cracked marble terraces and pathways (foreground/midground)"
+        ],
+        "spatialLayout": "The image presents a curved swimming pool as the central, foreground element, leading the eye towards the midground resort buildings. Dense tropical foliage frames the scene on the left, right, and background, creating a sense of enclosure. The architecture is arranged around the pool and courtyard areas, with pathways connecting different sections.",
+        "uniqueIdentifiers": [
+          "Overgrown resort architecture with classical elements",
+          "Freeform swimming pool with bright turquoise underwater lighting",
+          "Abundant, encroaching tropical vegetation, particularly palm trees"
+        ],
+        "materials_primary": "Marble, stone",
+        "materials_secondary": "Concrete, stucco, foliage",
+        "materials_accents": "Underwater pool lights, pathway lamps",
+        "colors_dominant": "Turquoise (pool)",
+        "colors_secondary": "Greens (vegetation), beige/tan (buildings and stone)",
+        "colors_accents": "Warm yellow/orange (interior lights)",
+        "colors_ambient": "Deep blue/grey (sky), soft twilight hues",
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "right midground",
+            "description": "Two empty lounge chairs on stone patio"
+          },
+          {
+            "type": "object",
+            "position": "left foreground",
+            "description": "Covered seating area with cushions"
+          },
+          {
+            "type": "window",
+            "position": "midground buildings",
+            "description": "Illuminated windows in resort structures"
+          },
+          {
+            "type": "object",
+            "position": "midground",
+            "description": "White patio umbrellas over seating"
+          }
+        ],
+        "searchDesc": "Overgrown resort by a pool. Has: lounge chairs (right midground), seating area (left foreground), patio umbrellas (midground)",
+        "dna": {
+          "architectural_tone": "grand resort decay, botanical intrusion",
+          "cultural_tone": null,
+          "materials_base": "cracked marble, stone terraces, concrete foundations",
+          "mood_baseline": "peaceful, haunting, serene decay",
+          "palette_bias": "accented by vibrant turquoise water, moonlit highlights on stone, deep shadows",
+          "soundscape_base": "stillness punctuated by the drip of water, faint breeze, chirping insects",
+          "flora_base": "overgrown palm trees, vines weaving through structures, moss on stone",
+          "fauna_base": null
+        },
+        "slug": "the-palmera-haven"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/M6fdvdtA6GJVsbwsA94lA.jpg",
+      "focus": {
+        "node_id": "The Palmera Haven",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762524336982-29pssvepx": {
+      "id": "loc-1762524336982-29pssvepx",
+      "type": "host",
+      "name": "The Bloom Isles",
+      "dna": {
+        "type": "host",
+        "name": "The Bloom Isles",
+        "description": "Scattered tropical islands where soft coral reefs rise to form natural stages.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic living structures",
+          "cultural_tone": "A culture deeply intertwined with nature's luminous cycles, fostering art and celebration through symbiotic living.",
+          "materials_base": "Living bio-luminescent organisms integrated with natural formations like coral, shell, and polished stone.",
+          "mood_baseline": "ethereal, vibrant, tranquil",
+          "palette_bias": "Dominated by cool, glowing blues and vibrant oceanic hues, with accents of otherworldly pinks and oranges.",
+          "soundscape_base": "Gentle lapping of water, soft bioluminescent hums, distant melodic calls of unseen aquatic life.",
+          "flora_base": "Bioluminescent corals, glowing sea anemones, aquatic flora that pulses with light, crystalline formations.",
+          "fauna_base": "Gentle, luminous aquatic creatures, possibly bioluminescent insects or airborne organisms attracted to light."
+        },
+        "slug": "the-bloom-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Bloom Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "a4a553ca-e5f9-4e41-bc1f-c9f54477cad8": {
+      "id": "a4a553ca-e5f9-4e41-bc1f-c9f54477cad8",
+      "type": "region",
+      "name": "The Bloom Isles",
+      "dna": {
+        "type": "region",
+        "name": "The Bloom Isles",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-bloom-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Bloom Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5ca6857f-b1c9-40db-b418-729cb06ec2c6": {
+      "id": "5ca6857f-b1c9-40db-b418-729cb06ec2c6",
+      "type": "location",
+      "name": "The Bloom Isles",
+      "dna": {
+        "type": "location",
+        "name": "The Bloom Isles",
+        "description": "",
+        "dna": {
+          "architectural_tone": "natural stages formed from coral",
+          "cultural_tone": null,
+          "materials_base": "polished coral, water-worn stone",
+          "mood_baseline": "celebratory, dynamic",
+          "palette_bias": null,
+          "soundscape_base": "gentle ebb and flow of luminous tides",
+          "flora_base": "lush, oversized coral formations, glowing aquatic grasses",
+          "fauna_base": null
+        },
+        "slug": "the-bloom-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Bloom Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "c9d9cb1f-cb44-42b7-9be7-e7aac4a630f8": {
+      "id": "c9d9cb1f-cb44-42b7-9be7-e7aac4a630f8",
+      "type": "niche",
+      "name": "The Glowing Tide",
+      "dna": {
+        "type": "niche",
+        "name": "The Glowing Tide",
+        "description": "The shallow waters where dancers move amidst bioluminescent coral.",
+        "looks": "The scene depicts a vibrant, glowing body of water flowing through a gorge-like environment. Rocky formations line the edges, supporting sparse, gnarled trees and clusters of luminous, coral-like plants. A large, stone archway frames the waterway in the background, suggesting a passage to another area. The water itself is a dominant feature, emitting a bright blue luminescence, creating reflections on the surrounding rock and vegetation. The scale suggests a moderately sized natural formation, possibly a river or a wide channel.",
+        "atmosphere": "The air appears thick with a soft, diffused glow, suggesting a humid and possibly misty environment. There is a sense of enclosed space, yet the receding waterway offers depth and potential openness.",
+        "mood": "Ethereal, celebratory",
+        "lighting": "The primary light source appears to be the bioluminescent water, casting a strong, cool blue glow. Accents of pink and orange light emanate from the coral-like flora and foliage on the rocks. The overall lighting is soft and ethereal, with low contrast in the illuminated areas.",
+        "dominantElements": [
+          "Glowing blue water (foreground/midground)",
+          "Rock formations (left/right/background)",
+          "Stone archway (midground/background)",
+          "Luminous pink flora (left/right foreground)"
+        ],
+        "spatialLayout": "The foreground is dominated by rocky outcroppings flanking a channel of intensely glowing blue water. The midground features a grand stone archway leading to a receding waterway that disappears into a blue, misty distance. Trees are scattered on the rocky ledges, their forms silhouetted against the ambient light.",
+        "uniqueIdentifiers": [
+          "Bioluminescent blue water",
+          "Stone archway entrance",
+          "Pink glowing coral-like flora"
+        ],
+        "materials_primary": "Rock",
+        "materials_secondary": "Water",
+        "materials_accents": "Bioluminescent coral-like plants, glowing foliage",
+        "colors_dominant": "Electric Blue (water)",
+        "colors_secondary": "Dark Blue/Grey (rock), Muted Green/Brown (trees)",
+        "colors_accents": "Vibrant Pink/Magenta (flora), faint Orange (foliage)",
+        "colors_ambient": "Soft Blue",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center background",
+            "description": "Archway leading into a glowing blue channel"
+          }
+        ],
+        "searchDesc": "Glowing water passage. Has: archway (center background)",
+        "dna": {
+          "architectural_tone": null,
+          "materials_base": "rocky outcrops, water-slicked surfaces",
+          "mood_baseline": "enchanting, serene",
+          "soundscape_base": "soft splashing, low resonant hum of bioluminescence",
+          "flora_base": "luminous coral-like plants, sparse gnarled trees on rock",
+          "fauna_base": "n/a"
+        },
+        "slug": "the-glowing-tide"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/ccUNQFD6N2RKzTHwSuU73.jpg",
+      "focus": {
+        "node_id": "The Glowing Tide",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762530924356-52kbg9yg6": {
+      "id": "loc-1762530924356-52kbg9yg6",
+      "type": "host",
+      "name": "The Verdant Confluence",
+      "dna": {
+        "type": "host",
+        "name": "The Verdant Confluence",
+        "description": "A tropical delta where multiple rivers meet in a swirl of mist.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, natural integration",
+          "cultural_tone": "A culture deeply connected to the natural world, valuing harmony and life, often with a spiritual reverence for its environment. Resources are managed sustainably.",
+          "materials_base": "Primarily natural, grown, or found materials. Emphasis on wood, stone, living plant matter, and woven fibers. Structures blend seamlessly with the landscape.",
+          "mood_baseline": "serene, mystical, vibrant",
+          "palette_bias": "Rich, saturated greens dominate, complemented by earthy browns, stone grays, and occasional bursts of vibrant floral colors. A sense of lushness and vitality.",
+          "soundscape_base": "Abundant natural sounds: flowing water, rustling leaves, distant wildlife calls, gentle breezes. A peaceful, immersive environment.",
+          "flora_base": "Dense, varied tropical vegetation. Towering trees, abundant undergrowth, flowering vines, and moss-covered surfaces are common.",
+          "fauna_base": "Diverse and often unique tropical fauna, ranging from small, colorful insects and birds to larger, more elusive jungle creatures. Some may possess magical or unusual qualities."
+        },
+        "slug": "the-verdant-confluence"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Confluence",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ebd3db86-68a8-4c6f-8a7a-eafb16107155": {
+      "id": "ebd3db86-68a8-4c6f-8a7a-eafb16107155",
+      "type": "region",
+      "name": "The Verdant Confluence",
+      "dna": {
+        "type": "region",
+        "name": "The Verdant Confluence",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": "Living wood and dense foliage are the primary building materials, seamlessly integrated with water features and natural landforms.",
+          "mood_baseline": "ethereal, humid, tranquil",
+          "palette_bias": "Deep emeralds and moss greens are central, with muted blues and grays from mist, and occasional soft, warm light accents.",
+          "soundscape_base": "The constant murmur of flowing water is paramount, overlaid with the hum of insects, chirping, and the gentle sigh of mist.",
+          "flora_base": "Exotic, water-loving plants flourish, forming dense canopies and hanging gardens. Luminescent flora may be present.",
+          "fauna_base": "Amphibious and aquatic life is abundant, alongside unique arboreal creatures adapted to high humidity and dense vegetation."
+        },
+        "slug": "the-verdant-confluence"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Confluence",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "de1d4092-5243-44b5-8ad8-3c877e01cb2f": {
+      "id": "de1d4092-5243-44b5-8ad8-3c877e01cb2f",
+      "type": "location",
+      "name": "Living Branch Bridges",
+      "dna": {
+        "type": "location",
+        "name": "Living Branch Bridges",
+        "description": "Bridges woven from living branches that traverse the delta.",
+        "looks": "Multiple bridges made of interwoven, living branches span a deep chasm filled with water. The branches are densely covered in lush foliage, creating a natural, organic structure. Along the edges of the bridges, strings of small, warm lights are suspended, illuminating the path. The overall impression is one of a fantastical, overgrown pathway suspended above a serene body of water, seamlessly integrated into the surrounding jungle.",
+        "atmosphere": "The air appears thick with mist or fog, obscuring distant details and softening the edges of the landscape. This atmospheric effect suggests high humidity and a damp environment characteristic of a tropical delta.",
+        "mood": "Magical, tranquil",
+        "lighting": "The lighting is primarily soft and ambient, originating from numerous small, warm yellow lights strung along the bridges. These lights create a gentle glow that contrasts with the cool, diffused natural light of the misty environment. The light reflects subtly on the water's surface.",
+        "dominantElements": [
+          "Living branch bridges",
+          "Dense jungle foliage",
+          "Warm string lights",
+          "Misty atmosphere",
+          "Dark water"
+        ],
+        "spatialLayout": "The scene is framed by the dense jungle on either side, with the bridges appearing in the midground and background, curving across the composition. The water flows in the foreground and midground below the bridges, creating a sense of depth and height.",
+        "uniqueIdentifiers": [
+          "Bridges woven from living branches",
+          "String lights along bridges",
+          "Tropical delta with mist"
+        ],
+        "materials_primary": "Living branches, dense foliage",
+        "materials_secondary": "Undergrowth, vines",
+        "materials_accents": "Small, luminous bulbs",
+        "colors_dominant": "Deep greens (foliage, trees)",
+        "colors_secondary": "Misty blues and grays (atmosphere)",
+        "colors_accents": "Warm yellow (lights)",
+        "colors_ambient": "Cool, diffused blues and greens",
+        "navigableElements": [
+          {
+            "type": "bridge",
+            "position": "center, midground",
+            "description": "Curving bridge made of living branches and lights."
+          },
+          {
+            "type": "bridge",
+            "position": "center, background",
+            "description": "Further section of the living branch bridge."
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Tropical delta with living bridges. Has: living branch bridge (center, midground), string lights (center, midground), mist (background)",
+        "dna": {
+          "architectural_tone": "grown structures, biomimetic",
+          "cultural_tone": null,
+          "materials_base": "Interwoven living branches form the core structure, enhanced by natural fibers and subtle, integrated lighting elements.",
+          "mood_baseline": "enchanting, intimate, awe-inspiring",
+          "palette_bias": "Dominant deep greens and earthy browns of the branches are illuminated by warm, golden light, contrasting with the cool mist.",
+          "soundscape_base": "Muffled sounds of the delta below, the gentle creaking of branches, and the soft buzz of nearby glowing flora.",
+          "flora_base": "Specific climbing plants and epiphytes are encouraged to grow along the bridges, adding to their organic form.",
+          "fauna_base": "Small, bioluminescent insects or arboreal creatures might inhabit the bridges themselves."
+        },
+        "slug": "living-branch-bridges"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/lys5M7AWrBPXrzgAd3OUT.jpg",
+      "focus": {
+        "node_id": "Living Branch Bridges",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762531151077-tgr970pny": {
+      "id": "loc-1762531151077-tgr970pny",
+      "type": "host",
+      "name": "Isla Perdida",
+      "dna": {
+        "type": "host",
+        "name": "Isla Perdida",
+        "description": "A lost island paradise slowly succumbing to the wild.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "decadent decay, lost civilization",
+          "cultural_tone": "A once-grand civilization now forgotten, leaving behind remnants of opulent living slowly being reclaimed by the untamed natural world.",
+          "materials_base": "A palette dominated by weathered stone, aged metals, and opulent but decaying textiles. Hints of advanced or magical materials may be present but are now tarnished and overgrown.",
+          "mood_baseline": "melancholy, mysterious, tranquil",
+          "palette_bias": "A blend of muted, earthy tones and the vibrant, saturated colors of encroaching nature. Deep greens and blues contrast with weathered stone grays and subtle metallic sheens.",
+          "soundscape_base": "The ambient sounds of nature – wind through foliage, distant water, and the calls of unseen creatures – intermingling with the subtle echoes of past grandeur, like faint chimes or creaking structures.",
+          "flora_base": "Luxuriant, fast-growing tropical and subtropical flora that aggressively encroaches on all man-made structures, featuring large-leafed plants, vines, and dense undergrowth.",
+          "fauna_base": "Small to medium-sized wildlife, birds, and insects that thrive in the overgrown environment, adapted to a semi-aquatic or arboreal existence within the ruins."
+        },
+        "slug": "isla-perdida"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Isla Perdida",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5a426a94-3fa2-48c2-9d31-c4bcfa8e6894": {
+      "id": "5a426a94-3fa2-48c2-9d31-c4bcfa8e6894",
+      "type": "region",
+      "name": "Isla Perdida",
+      "dna": {
+        "type": "region",
+        "name": "Isla Perdida",
+        "description": "",
+        "dna": {
+          "architectural_tone": "tropical colonial decadence, overgrown ruins",
+          "cultural_tone": "Remnants of a lost, leisure-focused civilization; the architecture reflects a period of wealth and relaxation now surrendered to the jungle's embrace.",
+          "materials_base": "Weathered stone and coral blocks form the primary structures, augmented by tropical hardwoods that have begun to warp and decay. Thatch roofing is common, often integrated with vine growth.",
+          "mood_baseline": "serene decay, hidden beauty",
+          "palette_bias": "Dominantly lush greens and blues, interspersed with the warm, sandy tones of aged stone and the occasional splash of vibrant floral colors. Hints of turquoise from water features.",
+          "soundscape_base": "The constant hum of tropical insects, the gentle lapping of water, and the rustling of dense palm fronds. Occasional exotic bird calls echo through the humid air.",
+          "flora_base": "Dense, vibrant tropical foliage characterized by large palm fronds, broad-leafed plants, and aggressive vines that seek to cover and integrate with any structure.",
+          "fauna_base": "Abundant tropical birdlife, small reptiles, and amphibians. Insects are a constant presence, contributing to the immersive atmosphere."
+        },
+        "slug": "isla-perdida"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Isla Perdida",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "e50cee00-ec72-4c62-a9c7-9b29422d9d5d": {
+      "id": "e50cee00-ec72-4c62-a9c7-9b29422d9d5d",
+      "type": "location",
+      "name": "The Palmera Haven",
+      "dna": {
+        "type": "location",
+        "name": "The Palmera Haven",
+        "description": "An overgrown resort where nature is reclaiming the structures.",
+        "looks": "A long, rectangular swimming pool with illuminated turquoise water is the central feature, bordered by a cracked stone patio. Adjacent to the pool is a multi-story building with stone walls, arched colonnades on the ground floor, and thatched roofing. Lush palm trees with broad fronds overhang the scene, their leaves interspersed with the architecture. Lounge chairs and outdoor seating are visible on the patio and under the covered walkways. The overall appearance suggests a formerly luxurious resort now overtaken by dense tropical vegetation.",
+        "atmosphere": "The air appears heavy and humid, with a visible haze or mist in the background that softens the edges of the foliage and distant structures. The scene evokes a sense of dampness, with lush greenery suggesting plentiful moisture.",
+        "mood": "Melancholy beauty, forgotten luxury",
+        "lighting": "The lighting is a mix of warm, artificial light emanating from the building's interior and exterior fixtures, and the cool, ethereal glow of the illuminated swimming pool. This creates a high contrast between illuminated areas and the surrounding darkness. The pool's light provides a dominant cool tone to the immediate vicinity.",
+        "dominantElements": [
+          "Swimming pool with turquoise water (center, midground)",
+          "Multi-story stone building with arched colonnades (left, background)",
+          "Lush palm trees and dense vegetation (surrounding, background)"
+        ],
+        "spatialLayout": "The scene is framed by foreground foliage on the left and right, opening up to a central swimming pool and a building complex in the midground and background. The perspective is low, looking across the pool towards the main structure, with dense jungle filling the far background.",
+        "uniqueIdentifiers": [
+          "Illuminated turquoise swimming pool",
+          "Stone building with thatched roof and arched colonnades",
+          "Overgrown palm trees encroaching on architecture"
+        ],
+        "materials_primary": "Stone, Water",
+        "materials_secondary": "Thatch, Wood",
+        "materials_accents": "Pool lights, Exterior lamps",
+        "colors_dominant": "Turquoise (pool water)",
+        "colors_secondary": "Earthy stone tones, Deep greens (vegetation)",
+        "colors_accents": "Warm yellow/orange (lamps, interior lights), White (pool reflections)",
+        "colors_ambient": "Muted blues and greys (evening sky, mist)",
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "left foreground",
+            "description": "Orange outdoor seating on patio"
+          },
+          {
+            "type": "object",
+            "position": "center midground",
+            "description": "White lounge chairs near pool"
+          },
+          {
+            "type": "passage",
+            "position": "left midground",
+            "description": "Arched walkway leading into building"
+          },
+          {
+            "type": "object",
+            "position": "background building",
+            "description": "Outdoor dining table and chairs"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Overgrown resort with pool. Has: outdoor seating (left foreground), lounge chairs (center midground), arched walkway (left midground), dining table (background building)",
+        "dna": {
+          "architectural_tone": "overgrown resort structures, crumbling grandeur",
+          "cultural_tone": "A former luxury resort where leisure amenities are now dramatically overtaken by relentless natural growth.",
+          "materials_base": "Cracked marble and stone paving, eroded statuary, and timber frames woven with thick vegetation. Water features are central and often illuminated.",
+          "mood_baseline": "hauntingly beautiful, forgotten luxury",
+          "palette_bias": "Deep, saturated greens from the dense palm foliage contrast sharply with the cool, luminous turquoise of illuminated pools. Stone elements provide earthy undertones.",
+          "soundscape_base": "The distinct sound of water movement from pools and fountains, punctuated by the dense rustling of palm leaves and the chirping of unseen aquatic life.",
+          "flora_base": "Dominant palm trees with broad fronds piercing through architectural elements, alongside thick ground cover and climbing vines. Overgrown ornamental plants.",
+          "fauna_base": "Small fish within the illuminated pools, potentially small amphibians or insects drawn to the water."
+        },
+        "slug": "the-palmera-haven"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/UfSR5kkJsUK2rNrInExOb.jpg",
+      "focus": {
+        "node_id": "The Palmera Haven",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762540912670-lgvkf8l0u": {
+      "id": "loc-1762540912670-lgvkf8l0u",
+      "type": "host",
+      "name": "The Azure Archipelago",
+      "dna": {
+        "type": "host",
+        "name": "The Azure Archipelago",
+        "description": "A chain of tropical islands renowned for their vibrant ecosystems and hidden wonders.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, integrated, ancient",
+          "cultural_tone": "A world of deep natural harmony, where civilizations live in tune with their environments, valuing discovery and the preservation of natural wonders. Magic is subtle, woven into the fabric of existence.",
+          "materials_base": "A palette dominated by naturally occurring, living, and weathered materials. Think living wood, sculpted stone, woven plant fibers, and perhaps luminescent mineral deposits. Textures are often rough, textured, or smooth and water-worn.",
+          "mood_baseline": "mysterious, serene, vibrant",
+          "palette_bias": "Rich, saturated greens and blues form the core, accented by earthy browns and stony grays. Luminous, ethereal highlights in turquoise and emerald suggest hidden energies and vibrant life.",
+          "soundscape_base": "A symphony of natural ambient sounds. Water in motion, rustling leaves, distant animal calls, and the gentle hum of natural energies. Any artificial sounds are designed to blend seamlessly, enhancing rather than disrupting.",
+          "flora_base": "Abundant, vibrant, and often unusual plant life. Think giant ferns, glowing mosses, trees with bioluminescent properties, and vines that actively grow and intertwine.",
+          "fauna_base": "Diverse and often fantastical creatures that are integrated into the ecosystem. This could include glowing insects, amphibious beings, and bird species with unique calls."
+        },
+        "slug": "the-azure-archipelago"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Archipelago",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "7a1d7911-61e7-41b4-9a7c-42803c0c747a": {
+      "id": "7a1d7911-61e7-41b4-9a7c-42803c0c747a",
+      "type": "region",
+      "name": "The Azure Archipelago",
+      "dna": {
+        "type": "region",
+        "name": "The Azure Archipelago",
+        "description": "",
+        "dna": {
+          "architectural_tone": "null",
+          "cultural_tone": "null",
+          "materials_base": "null",
+          "mood_baseline": "null",
+          "palette_bias": "null",
+          "soundscape_base": "null",
+          "flora_base": "Dense, overgrown jungle flora with a strong aquatic presence. Expect water-loving plants, submerged vegetation, and roots that extend into the sea.",
+          "fauna_base": "Amphibious and marine life that is accustomed to transitioning between water and land. Small, agile creatures that can navigate both environments."
+        },
+        "slug": "the-azure-archipelago"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Archipelago",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "94e01242-7d40-4cba-9781-2cd296f994b0": {
+      "id": "94e01242-7d40-4cba-9781-2cd296f994b0",
+      "type": "location",
+      "name": "The Azure Archipelago",
+      "dna": {
+        "type": "location",
+        "name": "The Azure Archipelago",
+        "description": "",
+        "slug": "the-azure-archipelago"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Archipelago",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "51628eaf-3722-49ac-83fe-eca0b8cb6194": {
+      "id": "51628eaf-3722-49ac-83fe-eca0b8cb6194",
+      "type": "niche",
+      "name": "The Echoing Canopy",
+      "dna": {
+        "type": "niche",
+        "name": "The Echoing Canopy",
+        "description": "The interior of the grove where unseen speakers are artfully concealed within the trees, filling the air with melodic sounds.",
+        "looks": "Sunlight filters through a dense, overgrown canopy, creating dappled patterns on the mossy cave walls. Lush green vines cascade from the ceiling, intertwining with unseen structures. A turquoise body of water flows into the scene from the background, reflecting the vibrant greenery. The cave opens up into a brighter, sunlit area on the right, contrasting with the darker, more enclosed space on the left.",
+        "atmosphere": "A gentle mist or haze is visible in the sunlit area, diffusing the light. The air appears moist and thick with vegetation, contributing to an immersive, natural environment.",
+        "mood": "Enchanting, immersive",
+        "lighting": "Soft, diffused sunlight enters from the right, creating luminous shafts of light. The light is warm and bright in the open area, transitioning to a cooler, dimmer illumination within the cave. Contrast is moderate, with bright highlights on the water and foliage against darker rock formations.",
+        "dominantElements": [
+          "Overhanging cave ceiling with hanging vines",
+          "Turquoise water in a channel",
+          "Steep stone staircase on the left",
+          "Dense green foliage covering rock faces"
+        ],
+        "spatialLayout": "The scene is framed by dark, moss-covered cave walls on the left and right, creating a sense of enclosure. A body of water dominates the midground and extends into the background. A set of stairs is positioned in the left foreground, leading up from the water.",
+        "uniqueIdentifiers": [
+          "Intertwining vines on cave walls",
+          "Turquoise water flowing into a cave",
+          "Stone staircase leading from water"
+        ],
+        "materials_primary": "Rock, water, vegetation",
+        "materials_secondary": "Moss, soil",
+        "materials_accents": "Sunlight shafts",
+        "colors_dominant": "Green (foliage, moss, cave walls)",
+        "colors_secondary": "Turquoise (water), brown (rock)",
+        "colors_accents": "Yellowish-white (sunlight shafts)",
+        "colors_ambient": "Ethereal greenish-blue",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "left midground",
+            "description": "Stone stairs with metal railings ascending from water"
+          }
+        ],
+        "searchDesc": "[Location - Interior/Exterior] Lush cave opening with water. Has: stone stairs (left midground)",
+        "slug": "the-echoing-canopy"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/oXBm_Cmrav8CbrWEFeXHm.jpg",
+      "focus": {
+        "node_id": "The Echoing Canopy",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762673863161-ap1ru71be": {
+      "id": "loc-1762673863161-ap1ru71be",
+      "type": "host",
+      "name": "The Azure Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Azure Expanse",
+        "description": "A vast ocean world dotted with vibrant archipelagos.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "monolithic, ancient, organic",
+          "cultural_tone": "A world shaped by colossal, nature-integrated artistry and profound acoustic phenomena. Civilizations are deeply connected to the natural world, often incorporating it into their spiritual and societal structures.",
+          "materials_base": "Primarily stone, with secondary emphasis on dense, natural growth and geological formations. Textures range from rough-hewn rock to smoothly eroded surfaces. Metallics are rare and ancient.",
+          "mood_baseline": "awe-inspiring, mystical, serene",
+          "palette_bias": "Dominated by deep, oceanic blues and greens, complemented by earthy greys and muted, verdant tones. Ambient light often lends a cool, ethereal cast.",
+          "soundscape_base": "A constant murmur of natural elements – wind, water, and the subtle resonance of stone and earth. Melodies are often born from the environment itself.",
+          "flora_base": "Lush, abundant tropical and subtropical vegetation. Expect dense canopies, thick undergrowth, and clinging vines. Flora often exhibits vibrant or deep jewel tones.",
+          "fauna_base": "Diverse marine and avian life are prominent. Terrestrial fauna is often adapted to dense jungle or rocky terrains, potentially with unique adaptations tied to the world's acoustic properties."
+        },
+        "slug": "the-azure-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "6abec58d-c783-4e89-9adf-16976b46a691": {
+      "id": "6abec58d-c783-4e89-9adf-16976b46a691",
+      "type": "region",
+      "name": "The Whispering Peninsula",
+      "dna": {
+        "type": "region",
+        "name": "The Whispering Peninsula",
+        "description": "A tropical headland known for its unique acoustic phenomena and ancient artistry.",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": "This region is defined by a singular focus on sculpting the natural landscape into resonant art. Ancient rituals and ceremonies are tied to the land's inherent sonic qualities.",
+          "materials_base": null,
+          "mood_baseline": "enigmatic, melancholic, resonant",
+          "palette_bias": " Teal and grey-blue hues are dominant, reflecting the sea and sky, with rich dark greens from dense foliage.",
+          "soundscape_base": "The defining characteristic is the perpetual hum of wind through carved structures, creating a low, resonant symphony with the crashing sea.",
+          "flora_base": "Dense, dark green jungle vegetation clings to sheer rock faces, interwoven with mosses and vines.",
+          "fauna_base": null
+        },
+        "slug": "the-whispering-peninsula"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Peninsula",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "11e0cebc-7482-473b-b3f6-5b3561c225ca": {
+      "id": "11e0cebc-7482-473b-b3f6-5b3561c225ca",
+      "type": "location",
+      "name": "The Harmonic Cliffs",
+      "dna": {
+        "type": "location",
+        "name": "The Harmonic Cliffs",
+        "description": "A series of towering cliffs adorned with weathered statues, their mouths open to the sea.",
+        "looks": "Towering, rugged cliffs rise steeply from the turbulent sea, their surfaces covered in dense, dark green vegetation. Humanoid faces are carved into the rock faces, their mouths open, appearing weathered and ancient. The sheer scale of the cliffs is immense, dwarfing the crashing waves below. The overall impression is one of natural grandeur blended with sculpted artistry.",
+        "atmosphere": "A thick, pervasive mist hangs in the air, obscuring the distant horizon and softening the edges of the cliffs. The atmosphere feels heavy and humid, suggesting a tropical environment.",
+        "mood": "Mysterious, ancient, serene",
+        "lighting": "The lighting is diffused and cool, emanating from an overcast sky. There is a low contrast between light and shadow, with a prevalent bluish-green hue casting an ethereal glow over the scene.",
+        "dominantElements": [
+          "Towering cliffs covered in vegetation",
+          "Carved stone faces embedded in cliffs",
+          "Turbulent turquoise sea with crashing waves",
+          "Dense green foliage on cliff tops"
+        ],
+        "spatialLayout": "The scene is framed by the sea in the foreground and midground, with the imposing cliffs occupying the left and central background. The perspective is from sea level, looking up towards the cliff faces.",
+        "uniqueIdentifiers": [
+          "Massive cliff faces with carved humanoid faces",
+          "The distinct presence of weathered, sculpted visages in a natural cliff environment",
+          "The combination of dense jungle growth and sheer rock formations"
+        ],
+        "materials_primary": "Stone (cliffs)",
+        "materials_secondary": "Vegetation (jungle, moss, vines)",
+        "materials_accents": "Water spray, foam",
+        "colors_dominant": "Teal (sea, sky, mist)",
+        "colors_secondary": "Dark green (vegetation), grey-blue (cliffs)",
+        "colors_accents": "White (wave foam)",
+        "colors_ambient": "Bluish-green",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Ocean passage between cliffs and rocky shore"
+          },
+          {
+            "type": "object",
+            "position": "left, foreground",
+            "description": "Jagged, dark rocks at the water's edge"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Cliff faces with carved statues overlooking the sea. Has: ocean passage (midground), jagged rocks (foreground)",
+        "dna": {
+          "architectural_tone": "statuesque, monumental carvings",
+          "cultural_tone": "These cliffs are an ancient sanctuary where sculpted visages actively contribute to the region's sonic landscape, serving as focal points for contemplation or ancient rites.",
+          "materials_base": "Primary focus on weathered stone cliff faces and their carved details. Secondary is the dense, almost overgrown vegetation that softens the stone.",
+          "mood_baseline": "grand, ancient, haunting",
+          "palette_bias": "muted grey-blue stone tones are overlaid with deep emerald greens, creating a low-contrast, somber visual.",
+          "soundscape_base": "The soundscape is dominated by the specific, mournful notes emanating from the carved mouths, harmonizing with the ambient sea wind and waves.",
+          "flora_base": "Thick, dark green vegetation, including jungle growth, mosses, and vines, that obscures and complements the carved stone.",
+          "fauna_base": null
+        },
+        "slug": "the-harmonic-cliffs"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/3Lzk_veXHjat5wbslKfGT.jpg",
+      "focus": {
+        "node_id": "The Harmonic Cliffs",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762686925573-qgot90570": {
+      "id": "loc-1762686925573-qgot90570",
+      "type": "host",
+      "name": "India",
+      "dna": {
+        "type": "host",
+        "name": "India",
+        "description": "A vast and diverse subcontinent.",
+        "dna": {
+          "genre": "historical|fantasy",
+          "architectural_tone": "ancient monumental stone",
+          "cultural_tone": "Deeply spiritual and ritualistic societies centered around grand temples and sacred sites. Emphasis on devotion, community gatherings, and reverence for deities.",
+          "materials_base": "Primarily robust, carved stone with intricate details. Secondary use of natural elements like wood, clay, and water features. Textures are often rough-hewn or finely sculpted.",
+          "mood_baseline": "tranquil spiritual devotional",
+          "palette_bias": "Earthy and rich color families. Dominant tones are deep ochres, terracotta reds, sandstone browns, and shadowed greys, often accented by vibrant blues and greens from natural surroundings.",
+          "soundscape_base": "A blend of resonating temple bells, distant chanting, flowing water, and the natural ambient sounds of the environment. A sense of echoing space and contemplative quiet.",
+          "flora_base": "Lush, verdant vegetation common in tropical or subtropical climates. Abundant flowering plants, large shade trees, and dense foliage surrounding sacred structures.",
+          "fauna_base": "Diverse wildlife including monkeys, exotic birds, insects, and possibly sacred cows or other animals associated with religious practices."
+        },
+        "slug": "india"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "India",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "05f62ad6-c300-4a74-80a5-5742becb6f9e": {
+      "id": "05f62ad6-c300-4a74-80a5-5742becb6f9e",
+      "type": "region",
+      "name": "India",
+      "dna": {
+        "type": "region",
+        "name": "India",
+        "description": "",
+        "dna": {
+          "architectural_tone": "ornate temple architecture",
+          "cultural_tone": "A land rich with ancient traditions, vibrant festivals, and diverse spiritual practices. Regions often feature iconic religious landmarks and bustling local life.",
+          "materials_base": "Stone masonry forming grand temples and structures. Use of carved wood, terracotta, and vibrant textiles for decoration. Expect weathered surfaces and natural patina.",
+          "mood_baseline": "vibrant spiritual community",
+          "palette_bias": "Warm and inviting palettes. Dominated by sun-baked earth tones, rich spice colors like turmeric and saffron, deep blues, and vibrant greens. Accent colors are often bright and varied.",
+          "soundscape_base": "A symphony of market chatter, devotional music, animal sounds, and the hum of distant traffic. Sounds are often layered and energetic.",
+          "flora_base": "Abundant tropical and subtropical flora. Dense jungles, rice paddies, and flowering trees are common. Coastal regions feature palm trees and coastal vegetation.",
+          "fauna_base": "A wide array of terrestrial and avian life. Includes elephants, tigers, peacocks, monkeys, and numerous insect species."
+        },
+        "slug": "india"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "India",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "76ddba84-f180-4dcb-9150-3901ad375df7": {
+      "id": "76ddba84-f180-4dcb-9150-3901ad375df7",
+      "type": "location",
+      "name": "The Mahabal Ishwara Temple",
+      "dna": {
+        "type": "location",
+        "name": "The Mahabal Ishwara Temple",
+        "description": "A prominent Shiva temple in Gokarna.",
+        "looks": "A towering, multi-tiered temple complex dominates the scene, built from dark, intricately carved stone.  The main structure features a pyramidal roof that tapers to a pointed spire, adorned with smaller spires and decorative elements.  Numerous small lights illuminate the architectural details and illuminate walkways around the structure.  A smaller, similar temple structure stands to the left.  The complex is situated on a rocky outcrop overlooking the sea and a lush, tree-covered hillside.",
+        "atmosphere": "The air appears clear with a slight twilight haze adding depth to the distant hills and sea. The overall atmosphere suggests a tranquil evening setting.",
+        "mood": "Spiritual, peaceful",
+        "lighting": "The lighting is predominantly warm and artificial, emanating from numerous small, glowing lamps strategically placed around the temple structures and pathways. These lights create a strong contrast against the dark stone and the twilight sky, casting a golden hue on the immediate surroundings.",
+        "dominantElements": [
+          "Main temple spire (~70m tall) with intricate carvings and golden pinnacle",
+          "Lower temple structure to the left (~30m tall)",
+          "Courtyard area with pathways and scattered lights",
+          "Ocean waves crashing on the shore below",
+          "Lush green foliage in the foreground and surrounding hills"
+        ],
+        "spatialLayout": "The image is framed from an elevated viewpoint looking down and across towards the temple complex. The main temple is centrally located in the midground, with the ocean and sky stretching into the background. Foreground elements of trees frame the left and lower edges of the scene.",
+        "uniqueIdentifiers": [
+          "Distinctive tiered pyramidal temple architecture",
+          "Seaside location on a prominent rocky outcrop",
+          "Abundant illumination of architectural features at twilight"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Vegetation (trees, foliage)",
+        "materials_accents": "Light sources (lamps)",
+        "colors_dominant": "Dark grey (temple structures)",
+        "colors_secondary": "Deep blue (sky, sea)",
+        "colors_accents": "Golden yellow/orange (lights)",
+        "colors_ambient": "Muted blues and grays",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, foreground",
+            "description": "Stone stairs leading up to the temple entrance"
+          },
+          {
+            "type": "passage",
+            "position": "midground, right side",
+            "description": "Illuminated pathways around the temple base"
+          },
+          {
+            "type": "archway",
+            "position": "midground, center",
+            "description": "Decorative archways integrated into the temple facade"
+          }
+        ],
+        "searchDesc": "Temple complex at dusk. Has: stone stairs (center, foreground), illuminated pathways (midground, right side), decorative archways (midground, center)",
+        "dna": {
+          "architectural_tone": "monolithic carved stone",
+          "cultural_tone": "A site of deep religious significance and pilgrimage, dedicated to Lord Shiva. Characterized by ancient rituals, prayers, and a sense of profound peace.",
+          "materials_base": "Intricately carved, dark, weathered stone. The primary material emphasizes monolithic construction and detailed sculptural work.",
+          "mood_baseline": "sacred serene devout",
+          "palette_bias": "Deep greys and blues of stone and sky, with subtle warm accent lighting.",
+          "soundscape_base": "Echoing temple chants, the distant sound of the sea, and the rustling of nearby trees.",
+          "flora_base": "Rocky outcrops with sparse, hardy vegetation interspersed with more lush trees on nearby hillsides.",
+          "fauna_base": "Likely birds and insects adapted to coastal rocky environments."
+        },
+        "slug": "the-mahabal-ishwara-temple"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/3j6PhXFiH0BkQgYumncWH.jpg",
+      "focus": {
+        "node_id": "The Mahabal Ishwara Temple",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -1085,10 +2759,255 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762513904488-sgu3uu1nx",
+      "type": "host",
+      "children": [
+        {
+          "id": "c8b4f034-90c2-4760-9db2-6fee8a7e58f5",
+          "type": "region",
+          "children": [
+            {
+              "id": "a8c8acbc-76bd-45af-8789-55e68a28de5d",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762522072204-m4w5cmf9n",
+      "type": "host",
+      "children": [
+        {
+          "id": "2ae5323f-075c-4f15-9302-73fc7dc2243d",
+          "type": "region",
+          "children": [
+            {
+              "id": "40962760-f96b-459a-8478-21db3b2f11e8",
+              "type": "location",
+              "children": [
+                {
+                  "id": "ecbadfbb-3b58-4786-9563-1c787e738938",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762522653602-5a2na9wmr",
+      "type": "host",
+      "children": [
+        {
+          "id": "3664f124-96a2-49d4-9c60-7303b8ad275d",
+          "type": "region",
+          "children": [
+            {
+              "id": "10291774-769a-495a-8dfd-962d29df4da8",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762522714681-5gi3hcs6a",
+      "type": "host",
+      "children": [
+        {
+          "id": "ddccd77c-5f03-497d-899b-b23af06687b8",
+          "type": "region",
+          "children": [
+            {
+              "id": "a8adcd5d-d066-4171-bf73-7c3d3e7844a3",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762522813100-t0g5zfs19",
+      "type": "host",
+      "children": [
+        {
+          "id": "49d45d4a-185c-4dff-b45a-ce4fa36ca130",
+          "type": "region",
+          "children": [
+            {
+              "id": "9c42e331-a003-4209-8b91-eb2edc979a21",
+              "type": "location",
+              "children": [
+                {
+                  "id": "9d22f5fc-6be6-48bd-b9ba-8c6eace861c0",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762523654029-ne40v1giv",
+      "type": "host",
+      "children": [
+        {
+          "id": "73c3fcfe-17d4-4a4a-9fbe-802f6b9d30fb",
+          "type": "region",
+          "children": [
+            {
+              "id": "3186872f-9509-4ac6-bf02-f945bc6f3d1f",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762524073694-9pmf6mjfl",
+      "type": "host",
+      "children": [
+        {
+          "id": "d9e2d3d4-d53e-4cc8-ad50-5af845ce0039",
+          "type": "region",
+          "children": [
+            {
+              "id": "9543608a-75c6-4095-adf3-b3dd2173510e",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762524336982-29pssvepx",
+      "type": "host",
+      "children": [
+        {
+          "id": "a4a553ca-e5f9-4e41-bc1f-c9f54477cad8",
+          "type": "region",
+          "children": [
+            {
+              "id": "5ca6857f-b1c9-40db-b418-729cb06ec2c6",
+              "type": "location",
+              "children": [
+                {
+                  "id": "c9d9cb1f-cb44-42b7-9be7-e7aac4a630f8",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762530924356-52kbg9yg6",
+      "type": "host",
+      "children": [
+        {
+          "id": "ebd3db86-68a8-4c6f-8a7a-eafb16107155",
+          "type": "region",
+          "children": [
+            {
+              "id": "de1d4092-5243-44b5-8ad8-3c877e01cb2f",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762531151077-tgr970pny",
+      "type": "host",
+      "children": [
+        {
+          "id": "5a426a94-3fa2-48c2-9d31-c4bcfa8e6894",
+          "type": "region",
+          "children": [
+            {
+              "id": "e50cee00-ec72-4c62-a9c7-9b29422d9d5d",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762540912670-lgvkf8l0u",
+      "type": "host",
+      "children": [
+        {
+          "id": "7a1d7911-61e7-41b4-9a7c-42803c0c747a",
+          "type": "region",
+          "children": [
+            {
+              "id": "94e01242-7d40-4cba-9781-2cd296f994b0",
+              "type": "location",
+              "children": [
+                {
+                  "id": "51628eaf-3722-49ac-83fe-eca0b8cb6194",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762673863161-ap1ru71be",
+      "type": "host",
+      "children": [
+        {
+          "id": "6abec58d-c783-4e89-9adf-16976b46a691",
+          "type": "region",
+          "children": [
+            {
+              "id": "11e0cebc-7482-473b-b3f6-5b3561c225ca",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762686925573-qgot90570",
+      "type": "host",
+      "children": [
+        {
+          "id": "05f62ad6-c300-4a74-80a5-5742becb6f9e",
+          "type": "region",
+          "children": [
+            {
+              "id": "76ddba84-f180-4dcb-9150-3901ad375df7",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1762464785149-2j72ib0w7",
-    "loc-1762504431455-0zjmciq3h"
+    "loc-1762530924356-52kbg9yg6",
+    "loc-1762686925573-qgot90570"
   ]
 }

@@ -74,6 +74,12 @@ router.get('/events', (req: Request, res: Response) => {
   // Generate client ID
   const clientId = `client-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
+  // Add error handler to prevent unhandled error crashes
+  res.on('error', (error) => {
+    console.error(`[SSE] Error on client ${clientId}:`, error.message);
+    eventEmitter.removeClient(clientId);
+  });
+
   // Register client
   eventEmitter.addClient(clientId, res);
 

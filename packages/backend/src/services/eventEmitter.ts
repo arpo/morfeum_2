@@ -22,6 +22,12 @@ class EventEmitter {
    * Add a new SSE client
    */
   addClient(clientId: string, response: Response): void {
+    // Attach error handler to prevent unhandled error crashes
+    response.on('error', (error) => {
+      console.error(`[EventEmitter] Response error for client ${clientId}:`, error.message);
+      this.removeClient(clientId);
+    });
+    
     this.clients.set(clientId, { id: clientId, response });
   }
 
