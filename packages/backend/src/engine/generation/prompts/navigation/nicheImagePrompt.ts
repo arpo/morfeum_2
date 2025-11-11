@@ -15,26 +15,6 @@ export function nicheImagePrompt(
   intent: IntentResult,
   decision: NavigationDecision
 ): string {
-  // Determine space guidance based on intent classification
-  let spaceGuidance = '';
-  if (intent.spaceType === 'interior') {
-    spaceGuidance = `
-CRITICAL: This is an INTERIOR space.
-- Show enclosed space with ceiling/roof overhead
-- Interior lighting (ambient, artificial light, or light from windows)
-- Walls and interior architecture visible
-- No open sky visible, unless through windows or openings`;
-  } else if (intent.spaceType === 'exterior') {
-    spaceGuidance = `
-CRITICAL: This is an EXTERIOR space.
-- Open-air environment with sky visible
-- Natural outdoor lighting (sunlight, ambient outdoor light, atmospheric conditions)
-- Landscape or outdoor architectural elements
-- No ceiling/roof unless it's an open structure (pergola, pavilion, etc.)`;
-  } else {
-    spaceGuidance = `Based on the description below, determine if this is an interior or exterior space and maintain strict consistency throughout the image.`;
-  }
-
   // Build descriptors only from non-empty values
   const descriptors: string[] = [];
   
@@ -92,54 +72,94 @@ CRITICAL: This is an EXTERIOR space.
     if (context.currentNode.dna.fauna_base) dnaDescriptors.push(`Fauna Base: ${context.currentNode.dna.fauna_base}`);
   }
 
-  // Build task description based on space type
-  let taskDescription = '';
-  if (intent.spaceType === 'interior') {
-    taskDescription = `You have just stepped INSIDE through the entrance. You are now in an INTERIOR SPACE.
-Based on the parent location details above, IMAGINE and describe what this interior space looks like.`;
-  } else if (intent.spaceType === 'exterior') {
-    taskDescription = `You have just stepped INSIDE through the entrance. You are now in an EXTERIOR SPACE (like a park, courtyard, or open area).
-Based on the parent location details above, IMAGINE and describe what this exterior space looks like.`;
-  } else {
-    taskDescription = `You have just stepped through the entrance into a new space.
-Based on the parent location details above, determine if this is an interior or exterior space, then IMAGINE and describe what it looks like.`;
+  // Extract entrance element from decision.reasoning
+  // Example: "Creating interior niche based on Massive cylindrical structures (midground/background) in The Pollen Vents"
+  // Extract: "Massive cylindrical structures"
+  let entranceElement = 'this structure';
+  if (decision.reasoning) {
+    const match = decision.reasoning.match(/based on (.+?) (?:\(|in)/i);
+    if (match && match[1]) {
+      entranceElement = match[1].trim();
+    }
   }
 
   const prompt = `You are an expert at creating image prompts for FLUX image generation.
 
 ${decision.reasoning ? `CONTEXT: ${decision.reasoning}` : ''}
 
-PARENT LOCATION (where you were standing):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 YOU ARE INSIDE: ${entranceElement}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is an INTERIOR space - you are literally INSIDE the structure mentioned above.
+The interior architecture MUST reflect the form and nature of what you entered.
+
+ARCHITECTURAL FORM MATCHING (CRITICAL):
+You entered through: "${entranceElement}"
+
+Your interior architecture MUST match this form:
+- Cylindrical/tube-like structure → Curved cylindrical walls and ceiling (like being inside a pipe/cylinder)
+- Rectangular building → Straight walls with corners and flat ceiling
+- Dome/spherical structure → Curved ceiling overhead, circular floor plan
+- Cave/natural formation → Organic irregular rock formations
+- Arch/archway → Arched ceiling and supports
+
+The interior should feel like being INSIDE the specific structure type mentioned above.
+
+PARENT LOCATION CONTEXT (reference for materials/style only):
 Name: "${context.currentNode.name}"
 ${descriptors.join('\n')}
 
 ${dnaDescriptors.length > 0 ? `INHERITED STYLE & ATMOSPHERE (use as guidance):\n${dnaDescriptors.join('\n')}` : ''}
 
-YOUR TASK:
-${taskDescription}
-
-CRITICAL INSTRUCTIONS:
-${spaceGuidance}
+CRITICAL - THIS IS AN INTERIOR SPACE:
+- Show enclosed space with ceiling/roof overhead
+- Interior lighting (ambient, artificial light, or light from windows/vents)
+- Walls and interior architecture visible
+- No open sky visible (unless through small windows/openings)
+- Interior architecture must match the form of "${entranceElement}"
 
 PERSPECTIVE & FRAMING:
-- Camera position: 2-3 meters inside the entrance, facing inward into the interior space
+- Camera position: Just past the entrance threshold (1-2 meters inside)
+- View: Straight ahead showing the immediate entry view - what you first see when stepping in
+- Composition: Entrance-view perspective with slight asymmetry for visual interest
+  * Avoid extreme diagonal offset or purely symmetric tunnel view
+  * Main space/path visible ahead with interesting details on sides for depth
+- Camera: Wide-angle (24-35mm equivalent), eye-level
 - The entrance is BEHIND the camera - do not show it
-- Show what lies ahead in the interior
-- Camera: Wide-angle view (24-35mm equivalent), eye-level to slightly elevated
 
-HOW TO USE PARENT LOCATION DETAILS:
-- Use materials, colors, and architectural style as HINTS for the interior
-- DO NOT literally recreate the exterior scene indoors
-- Imagine what the INTERIOR would logically look like based on exterior clues
-- Example: Exterior shows "weathered metal cylinders" → Interior might have "corroded metal walls and industrial architecture"
+HOW TO USE PARENT LOCATION DETAILS - CRITICAL TRANSFORMATION RULES:
+
+✓ INCLUDE (transformed for interior):
+- Materials & colors → Apply to interior surfaces, walls, ceiling, floor
+- Architectural style → Adapt to interior architecture and structure
+- Atmosphere & mood → Maintain similar emotional feel
+- Lighting hints → Transform to interior light sources
+
+✗ DO NOT INCLUDE (unless contextually logical):
+- Exterior waterways/streams → Only if it's a logical interior feature (fountain, pool, drainage channel)
+- Overgrown vegetation → Only sparse interior plants if contextually appropriate (hydroponics, garden room, etc.)
+- Open landscapes → Replace with enclosed spatial elements
+- Sky/outdoor ambient light → Transform to interior lighting sources (fixtures, windows, bioluminescence)
+- Weather elements (mist, fog) → Only if it makes sense indoors (steam, smoke from vents, etc.)
+
+REASONING TEST: For each parent element, ask "Would this logically exist inside this structure?"
 
 ${fluxInstructionsShort}
 
+EXPLORATION & NAVIGATION (context-dependent):
+- If space description suggests it's exploratory/transitional: show clear walkable path forward with depth
+- If space description suggests it's a dead-end/terminal room: focus on the contained space itself
+- Navigation features (doorways, passages, stairs, architectural details) should only be included IF contextually appropriate
+  * Include when: space suggests progression, multiple rooms, corridors, complexity
+  * Omit when: space is clearly a dead-end chamber, small alcove, confined terminal room
+- Create sense of depth and spatial interest appropriate to the space type
+
 REQUIREMENTS:
-1. The entrance/threshold is BEHIND the camera - show only what lies ahead in the space
-2. Include interesting navigation details (doorways, passages, architectural features, objects) if suitable
-3. Maintain consistent space type (interior OR exterior, no mixing)
-4. Use diagonal composition with depth
+1. The entrance/threshold is BEHIND the camera - show the immediate entry view
+2. Maintain consistent space type (interior OR exterior, no mixing)
+3. Only include elements that would logically exist in this type of space (use transformation rules above)
+4. Composition should be engaging with slight asymmetry, avoiding both extreme offset and pure symmetry
 
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should describe what we see immediately after stepping inside.`;
