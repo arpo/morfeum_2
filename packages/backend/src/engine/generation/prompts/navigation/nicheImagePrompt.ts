@@ -1,10 +1,22 @@
 /**
- * Niche Image Prompt Generation
+ * Interior Image Prompt Generation
  * Creates image prompts for stepping inside locations (GO_INSIDE intent)
+ * 
+ * Refactored to use shared utilities for maintainability
  */
 
-import type { NavigationContext, IntentResult, NavigationDecision } from '../../../navigation/types';
+import type { IntentResult, NavigationContext, NavigationDecision } from '../../../navigation/types';
 import { fluxInstructionsShort } from '../shared/constants';
+import {
+  buildColorsDescription,
+  buildDNADescriptors,
+  buildLocationDescriptors,
+  buildMaterialsDescription,
+} from '../shared/contextBuilders';
+import {
+  buildNavigationGuidance,
+  extractEntranceElement
+} from '../shared/promptSections';
 
 /**
  * Generate prompt for LLM to create FLUX image description
@@ -16,107 +28,24 @@ export function nicheImagePrompt(
   decision: NavigationDecision,
   navigationFeatures?: string
 ): string {
-  // Build descriptors only from non-empty values
-  const descriptors: string[] = [];
+  // Build context using shared utilities
+  const descriptors = buildLocationDescriptors(context.currentNode.data);
+  const materials = buildMaterialsDescription(context.currentNode.data);
+  const colors = buildColorsDescription(context.currentNode.data);
+  const dnaDescriptors = buildDNADescriptors(context.currentNode.dna);
   
-  if (context.currentNode.data.description) {
-    descriptors.push(`Description: ${context.currentNode.data.description}`);
-  }
-  
-  if (context.currentNode.data.looks) {
-    descriptors.push(`Visual Character: ${context.currentNode.data.looks}`);
-  }
-  
-  if (context.currentNode.data.dominantElements && context.currentNode.data.dominantElements.length > 0) {
-    descriptors.push(`Dominant Elements: ${context.currentNode.data.dominantElements.join(', ')}`);
-  }
-  
-  if (context.currentNode.data.spatialLayout) {
-    descriptors.push(`Spatial Layout: ${context.currentNode.data.spatialLayout}`);
-  }
-  
-  if (context.currentNode.data.uniqueIdentifiers && context.currentNode.data.uniqueIdentifiers.length > 0) {
-    descriptors.push(`Unique Identifiers: ${context.currentNode.data.uniqueIdentifiers.join(', ')}`);
-  }
-  
-  // Build materials description
-  const materials = [
-    context.currentNode.data.materials_primary,
-    context.currentNode.data.materials_secondary,
-    context.currentNode.data.materials_accents
+  // Combine all descriptors
+  const allDescriptors = [
+    ...descriptors,
+    materials,
+    colors,
   ].filter(Boolean);
-  if (materials.length > 0) {
-    descriptors.push(`Materials: ${materials.join(', ')}`);
-  }
+
+  // Extract entrance element
+  const entranceElement = extractEntranceElement(decision.reasoning);
   
-  // Build colors description
-  const colors = [
-    context.currentNode.data.colors_dominant,
-    context.currentNode.data.colors_secondary,
-    context.currentNode.data.colors_accents,
-    context.currentNode.data.colors_ambient
-  ].filter(Boolean);
-  if (colors.length > 0) {
-    descriptors.push(`Colors: ${colors.join(', ')}`);
-  }
-  
-  // Build DNA context if available
-  const dnaDescriptors: string[] = [];
-  if (context.currentNode.dna) {
-    if (context.currentNode.dna.genre) dnaDescriptors.push(`Genre: ${context.currentNode.dna.genre}`);
-    if (context.currentNode.dna.architectural_tone) dnaDescriptors.push(`Architectural Tone: ${context.currentNode.dna.architectural_tone}`);
-    if (context.currentNode.dna.cultural_tone) dnaDescriptors.push(`Cultural Tone: ${context.currentNode.dna.cultural_tone}`);
-    if (context.currentNode.dna.materials_base) dnaDescriptors.push(`Materials Base: ${context.currentNode.dna.materials_base}`);
-    if (context.currentNode.dna.mood_baseline) dnaDescriptors.push(`Mood Baseline: ${context.currentNode.dna.mood_baseline}`);
-    if (context.currentNode.dna.palette_bias) dnaDescriptors.push(`Palette Bias: ${context.currentNode.dna.palette_bias}`);
-    if (context.currentNode.dna.flora_base) dnaDescriptors.push(`Flora Base: ${context.currentNode.dna.flora_base}`);
-    if (context.currentNode.dna.fauna_base) dnaDescriptors.push(`Fauna Base: ${context.currentNode.dna.fauna_base}`);
-  }
-
-  // Extract entrance element from decision.reasoning
-  // Example: "Creating interior niche based on Massive cylindrical structures (midground/background) in The Pollen Vents"
-  // Extract: "Massive cylindrical structures"
-  let entranceElement = 'this structure';
-  if (decision.reasoning) {
-    const match = decision.reasoning.match(/based on (.+?) (?:\(|in)/i);
-    if (match && match[1]) {
-      entranceElement = match[1].trim();
-    }
-  }
-
-  // Build navigation guidance based on parameter
-  let navigationGuidance = '';
-  
-  if (!navigationFeatures) {
-    // DEFAULT: Require SPECIFIC navigation features
-    navigationGuidance = `
-NAVIGATION & SPATIAL FEATURES (REQUIRED - include 3-4 SPECIFIC features):
-Be CONCRETE and DETAILED. Avoid vague descriptions.
-
-SPECIFICITY REQUIREMENTS:
-✅ Good: "3-meter-wide side corridor branching left at 45 degrees, grated metal floor visible, warm orange glow from interior"
-✅ Good: "Rusted metal ladder on right wall ascending to upper maintenance catwalk 6 meters up, with visible access hatch"
-✅ Good: "Large circular vent opening ahead-right, 2m diameter, glowing interior visible with steam wisps"
-
-❌ Bad: "narrow side passages"
-❌ Bad: "some doorways"  
-❌ Bad: "architectural details"
-
-CHOOSE 3-4 SPECIFIC FEATURES:
-- EXACT corridor/passage: Specify width, direction, angle, what's visible inside
-- EXACT platform/walkway: Specify height, side (left/right), material, destination
-- EXACT stairs/ladder: Specify location, direction (up/down), material, where it leads
-- EXACT machinery/panel: Specify size, exact position, type, condition
-- EXACT opening/vent: Specify size, shape, position, what's visible through it
-- EXACT conduits/pipes: Specify diameter, routing path, material, quantity`;
-  } else {
-    // CUSTOM: Use provided description exactly
-    navigationGuidance = `
-CUSTOM NAVIGATION FEATURES (REQUIRED):
-${navigationFeatures}
-
-Integrate these specific features into the scene naturally.`;
-  }
+  // Build navigation guidance
+  const navigationGuidance = buildNavigationGuidance(navigationFeatures);
 
   const prompt = `You are an expert at creating image prompts for FLUX image generation.
 

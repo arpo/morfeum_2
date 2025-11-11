@@ -2808,6 +2808,138 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762858819047-rz0ad7267": {
+      "id": "loc-1762858819047-rz0ad7267",
+      "type": "host",
+      "name": "The Lumina Dimension",
+      "dna": {
+        "type": "host",
+        "name": "The Lumina Dimension",
+        "description": "A realm where light behaves in peculiar and wondrous ways.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic flowing structures",
+          "cultural_tone": "A society deeply connected to natural energies and the manipulation of elemental forces. Civilization is integrated with, rather than imposed upon, the environment.",
+          "materials_base": "Emphasis on living, bioluminescent, and magically resonant materials. Structures are often grown or shaped from natural elements, imbued with inherent light or energy.",
+          "mood_baseline": "wondrous, ethereal, nurturing",
+          "palette_bias": "Dominated by soft, glowing hues and deep, saturated natural tones. Light is a primary element, influencing color perception and creating subtle gradients.",
+          "soundscape_base": "A symphony of gentle, resonant sounds. Ambient chimes, soft flowing water, and the hum of natural energies are prevalent.",
+          "flora_base": "Luxuriant and often bioluminescent plant life. Flora exhibits unusual growth patterns and possesses inherent luminous qualities.",
+          "fauna_base": "Creatures that are often symbiotic with magical energies or possess unique luminous properties. Fauna is generally passive and integrated into the ecosystem."
+        },
+        "slug": "the-lumina-dimension"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Lumina Dimension",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "38985519-d82b-45bd-a340-6739becbf17f": {
+      "id": "38985519-d82b-45bd-a340-6739becbf17f",
+      "type": "region",
+      "name": "The Lumina Dimension",
+      "dna": {
+        "type": "region",
+        "name": "The Lumina Dimension",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "serene, mystical, vibrant",
+          "palette_bias": "rich greens and blues accented by shimmering golden or ethereal light.",
+          "soundscape_base": "gentle rainfall, flowing water, soft rustling leaves, and distant, melodic natural sounds.",
+          "flora_base": "exceptionally lush and varied, with plants that actively absorb and re-emit light.",
+          "fauna_base": "small, often luminous or translucent creatures that flit through the foliage."
+        },
+        "slug": "the-lumina-dimension"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Lumina Dimension",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5d7cb8b0-99f6-4a50-92e4-38a47026ee9d": {
+      "id": "5d7cb8b0-99f6-4a50-92e4-38a47026ee9d",
+      "type": "location",
+      "name": "The Golden Downpour Gorge",
+      "dna": {
+        "type": "location",
+        "name": "The Golden Downpour Gorge",
+        "description": "A fertile gorge where rain never ceases but every drop glows faintly golden as it falls.",
+        "looks": "Steep, densely vegetated cliffs form the walls of a narrow gorge. A rocky stream flows through the center, its surface disturbed by cascading rain. The ground and cliff faces are covered in a thick layer of green foliage. Small, glowing orbs are scattered along the banks of the stream and on the lower slopes of the cliffs. The rain appears as a curtain of vertical lines.",
+        "atmosphere": "A visible mist or fog hangs in the air, particularly in the midground and background, obscuring distant details. The air appears humid, with the lush vegetation suggesting high moisture content. The rain creates a constant visual element throughout the scene.",
+        "mood": "Serene, magical, eternally nurturing",
+        "lighting": "The primary light source emanates from numerous small, warm, golden orbs scattered throughout the gorge. These orbs cast a soft, diffused glow. The overall lighting is subdued, with the dominant light interacting with the rain and mist to create a slightly hazy effect.",
+        "dominantElements": [
+          "Steep, verdant gorge walls (left and right, background)",
+          "Rocky stream with flowing water (center, midground)",
+          "Dense green foliage covering slopes (left and right, foreground/midground)",
+          "Scattered glowing golden orbs (various positions, foreground to background)",
+          "Vertical rain shafts (throughout)"
+        ],
+        "spatialLayout": "The scene is framed by the towering gorge walls that recede into the background. A stream carves a path through the center, leading the eye deeper into the gorge. The foreground is characterized by lush vegetation lining the stream banks, with glowing orbs interspersed.",
+        "uniqueIdentifiers": [
+          "Perpetual, luminous golden rain",
+          "Gorge with steep, vegetated walls",
+          "Numerous scattered golden light sources along the watercourse"
+        ],
+        "materials_primary": "Rock, dense vegetation (leaves, moss, vines)",
+        "materials_secondary": "Water (stream)",
+        "materials_accents": "Glowing orbs",
+        "colors_dominant": "Dark green (vegetation, cliffs)",
+        "colors_secondary": "Gray (sky, mist, water), brown (rocks)",
+        "colors_accents": "Golden yellow (glowing orbs, rain glow)",
+        "colors_ambient": "Muted green and gray",
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "left bank, foreground",
+            "description": "Glowing orb nestled in foliage"
+          },
+          {
+            "type": "object",
+            "position": "right bank, foreground",
+            "description": "Glowing orb on mossy ground"
+          },
+          {
+            "type": "object",
+            "position": "center, midground",
+            "description": "Stream bed with visible rocks"
+          },
+          {
+            "type": "object",
+            "position": "midground, scattered",
+            "description": "Further glowing orbs along the stream"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Fertile gorge with glowing rain. Has: stream (center), glowing orbs (left and right, midground), dense foliage (sides)",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "enchanting, perpetual, vibrant",
+          "palette_bias": "deep greens of abundant vegetation contrasted with the consistent warm golden glow of the rain and scattered orbs.",
+          "soundscape_base": "the constant, gentle patter of rain, the soft murmur of a rocky stream, and the faint, almost imperceptible hum of the glowing orbs.",
+          "flora_base": "dense, resilient foliage thriving in constant moisture, with an unusual propensity for collecting and reflecting the ambient golden light.",
+          "fauna_base": "small, unobtrusive insect-like creatures that are attracted to the light sources and water."
+        },
+        "slug": "the-golden-downpour-gorge"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/XP0a5bawFhFL-vMk3YKbc.jpg",
+      "focus": {
+        "node_id": "The Golden Downpour Gorge",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -3208,6 +3340,23 @@
             },
             {
               "id": "78f91f75-fd62-4d3e-801a-83381a08b649",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762858819047-rz0ad7267",
+      "type": "host",
+      "children": [
+        {
+          "id": "38985519-d82b-45bd-a340-6739becbf17f",
+          "type": "region",
+          "children": [
+            {
+              "id": "5d7cb8b0-99f6-4a50-92e4-38a47026ee9d",
               "type": "location",
               "children": []
             }
