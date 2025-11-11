@@ -3726,6 +3726,237 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762867099345-ddep0nu0y": {
+      "id": "loc-1762867099345-ddep0nu0y",
+      "type": "host",
+      "name": "The Golden Realm",
+      "dna": {
+        "type": "host",
+        "name": "The Golden Realm",
+        "description": "A land where nature's magic is ever-present, influencing the seasons and the landscape in wondrous ways.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic integration, natural forms",
+          "cultural_tone": "A society deeply connected to the natural world, revering its magical and transformative properties. Life revolves around respecting and harmonizing with nature's cycles and wonders.",
+          "materials_base": "Dominantly natural materials, favoring wood, stone, and living elements. Textures are often earthy and organic, embracing imperfections and growth.",
+          "mood_baseline": "enchanting, serene, wondrous",
+          "palette_bias": "Warm, earthen tones with accents of vibrant, magical hues. Embraces natural light and palettes that shift subtly with natural phenomena.",
+          "soundscape_base": "Gentle rustling leaves, distant birdsong, soft flowing water, and faint, ethereal chimes or hums.",
+          "flora_base": "Lush, abundant plant life, often with unusual colors or luminescence. Forests are ancient and possess a mystical quality, with flora playing a central role.",
+          "fauna_base": "Creatures that are often whimsical, gentle, or possess subtle magical attributes. They exist in harmony with their environment and are rarely overtly threatening."
+        },
+        "slug": "the-golden-realm"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Golden Realm",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "6244c82a-48ee-409e-9fb9-4a9e8bb415c1": {
+      "id": "6244c82a-48ee-409e-9fb9-4a9e8bb415c1",
+      "type": "region",
+      "name": "The Golden Realm",
+      "dna": {
+        "type": "region",
+        "name": "The Golden Realm",
+        "description": "",
+        "slug": "the-golden-realm"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Golden Realm",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "67fdd763-7ef8-43ec-9ab7-9fa9eeb121e9": {
+      "id": "67fdd763-7ef8-43ec-9ab7-9fa9eeb121e9",
+      "type": "location",
+      "name": "The House of Falling Leaves",
+      "dna": {
+        "type": "location",
+        "name": "The House of Falling Leaves",
+        "description": "A unique countryside retreat gracefully integrated with an ancient, ever-shedding golden-foliaged tree.",
+        "looks": "A rustic, wooden cabin is nestled beside the massive trunk of an ancient tree adorned with vibrant golden foliage. The cabin's roof is dark and appears shingled, with a visible chimney. Branches of the tree extend over and around the structure, with golden leaves blanketing the ground. Several windows of the cabin emit a warm, inviting glow from within.",
+        "atmosphere": "A gentle mist or haze is present in the background, softening the details of the distant foliage. The air appears still and carries the impression of crispness, enhanced by the visual of fallen leaves.",
+        "mood": "Serene, enchanting",
+        "lighting": "The scene is bathed in a warm, golden light that filters through the dense canopy of the tree, creating dappled patterns on the cabin and the ground. The light is soft, suggesting an overcast or late afternoon sun. Interior lights of the cabin cast a warm, inviting glow.",
+        "dominantElements": [
+          "Ancient tree with golden foliage (center-right, massive scale)",
+          "Rustic wooden cabin (midground, left)",
+          "Carpet of golden leaves (foreground, ground)"
+        ],
+        "spatialLayout": "The composition is framed by the sprawling branches of the ancient tree, with the cabin positioned to its left. The foreground is dominated by the leaf-strewn ground, leading the eye towards the midground where the cabin and tree trunk are situated. The background fades into a soft, misty forest.",
+        "uniqueIdentifiers": [
+          "Ancient tree with year-round golden foliage",
+          "Cabin integrated with tree structure",
+          "Continuous carpet of golden leaves"
+        ],
+        "materials_primary": "Wood (cabin walls, roof structure)",
+        "materials_secondary": "Stone (chimney, ground rocks)",
+        "materials_accents": "Golden foliage (tree, ground)",
+        "colors_dominant": "Golden yellow (tree foliage, fallen leaves)",
+        "colors_secondary": "Dark brown (cabin wood, tree trunk)",
+        "colors_accents": "Warm orange (interior window light)",
+        "colors_ambient": "Soft golden and diffused light",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "front of cabin, left midground",
+            "description": "Wooden door with visible planks and hinges"
+          },
+          {
+            "type": "window",
+            "position": "left side of cabin",
+            "description": "Rectangular windows emitting warm light"
+          },
+          {
+            "type": "window",
+            "position": "front of cabin",
+            "description": "Window on the covered porch area"
+          },
+          {
+            "type": "object",
+            "position": "under the porch roof",
+            "description": "Wooden table and bench on the porch"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Rustic cabin by an ancient tree. Has: wooden door (left midground), window (left side), table on porch (under porch roof)",
+        "slug": "the-house-of-falling-leaves"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/a134BMZcTz31nDQ8VHexY.jpg",
+      "focus": {
+        "node_id": "The House of Falling Leaves",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762867277629-orkwi3hkx": {
+      "id": "loc-1762867277629-orkwi3hkx",
+      "type": "host",
+      "name": "Tron",
+      "dna": {
+        "type": "host",
+        "name": "Tron",
+        "description": "A digital world of light and code.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "geometric digital futurism",
+          "cultural_tone": "A world of pure information, logic, and energy. Society is highly organized and functional, dictated by strict digital protocols and algorithms.",
+          "materials_base": "Polished, reflective surfaces are common. Metals, glass-like composites, and glowing energy conduits form the primary material palette. Textures are often smooth and seamless.",
+          "mood_baseline": "orderly, stark, electric",
+          "palette_bias": "Dominated by cool, vibrant, and often neon-like colors. High contrast between deep shadows and intense, artificial light sources.",
+          "soundscape_base": "Characterized by synthesized hums, electronic pulses, and sharp, clean digital tones. A sense of vast, empty spaces punctuated by precise sonic events.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "slug": "tron"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Tron",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "f9467381-5436-4230-9c6f-55a0c41273f8": {
+      "id": "f9467381-5436-4230-9c6f-55a0c41273f8",
+      "type": "region",
+      "name": "The Grid",
+      "dna": {
+        "type": "region",
+        "name": "The Grid",
+        "description": "The primary digital landscape.",
+        "dna": {
+          "architectural_tone": "sprawling digital infrastructure",
+          "cultural_tone": "The primary expanse where users and programs interact, built from foundational data streams and light pathways.",
+          "materials_base": "Smooth, dark, monolithic structures interspersed with a dense network of light-based pathways and conduits.",
+          "mood_baseline": "expansive, functional, flowing",
+          "palette_bias": "Primarily deep blues and blacks, with brilliant, contrasting lines of electric blue and white light defining the landscape.",
+          "soundscape_base": "A constant, low-frequency electronic hum overlaid with the sharp, distinct sounds of data flow and energy transfer.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-grid"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Grid",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "157c9736-63f3-4ecc-ba71-cc6b6c52a063": {
+      "id": "157c9736-63f3-4ecc-ba71-cc6b6c52a063",
+      "type": "location",
+      "name": "The Circuitous Gateway",
+      "dna": {
+        "type": "location",
+        "name": "The Circuitous Gateway",
+        "description": "The exterior of a central digital structure.",
+        "looks": "A grand, symmetrical structure with towering, dark architectural elements frames a blindingly bright central portal. Glowing vertical lines of light punctuate the façade, creating a sense of immense scale and digital construction. The ground level appears to be a complex network of metallic conduits and raised platforms, reflecting the dominant light source. The overall aesthetic is one of stark geometry and controlled luminescence.",
+        "atmosphere": "Wisps of ethereal blue mist drift across the scene, obscuring the base of the structures and adding a sense of depth. The air appears clear despite the atmospheric effects, suggesting a controlled digital environment.",
+        "mood": "Imposing, functional",
+        "lighting": "The scene is dominated by a powerful, cool blue light emanating from the central portal and vertical strips. This creates high contrast with the deep shadows of the surrounding architecture. Light sources are stark and directional, emphasizing the geometric forms.",
+        "dominantElements": [
+          "Central glowing portal ~50m tall, ~10m wide",
+          "Towering dark architectural columns on left and right",
+          "Vertical neon light strips on building facade",
+          "Metallic, grated pathway in foreground"
+        ],
+        "spatialLayout": "A long, straight pathway recedes into the midground, leading towards a monumental central structure. Symmetrical, imposing architecture flanks the pathway, creating a sense of a grand entrance. The composition is centered on the bright portal, drawing the viewer's eye.",
+        "uniqueIdentifiers": [
+          "Dominant central vertical light portal",
+          "Symmetrical, dark, geometric architecture",
+          "Receding pathway with metallic conduits"
+        ],
+        "materials_primary": "Dark, polished stone-like material",
+        "materials_secondary": "Metallic conduits and plating",
+        "materials_accents": "Luminous blue light strips, glowing portal core",
+        "colors_dominant": "Deep blue, emanating from the portal and light strips",
+        "colors_secondary": "Dark grey and black in the architecture",
+        "colors_accents": "Bright white-blue within the central portal",
+        "colors_ambient": "Cool, electric blue",
+        "navigableElements": [
+          {
+            "type": "portal",
+            "position": "center, background",
+            "description": "Enormous vertical portal of brilliant blue light"
+          },
+          {
+            "type": "passage",
+            "position": "center, foreground",
+            "description": "Wide, metallic pathway receding into the distance"
+          }
+        ],
+        "searchDesc": "Digital gateway with imposing architecture. Has: portal (center, background), passage (center, foreground)",
+        "dna": {
+          "architectural_tone": "monumental portal architecture",
+          "cultural_tone": "A primary access point or hub within the Grid, designed for grand entrance and exit.",
+          "materials_base": "Polished, dark, stone-like composites and highly reflective metallic plating. Structures emphasize verticality and sharp angles.",
+          "mood_baseline": "imposing, stark, awe-inspiring",
+          "palette_bias": "Dominated by deep charcoals and blacks for structure, accented by intense, cool blue and white light emanating from portals and integrated lines.",
+          "soundscape_base": "The foundational hum of the Grid is amplified by resonant, deep sonic pulses and the occasional sharp 'snap' of energy discharge.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-circuitous-gateway"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/eBU-4IrpQatIsuQ_p_K_4.jpg",
+      "focus": {
+        "node_id": "The Circuitous Gateway",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -4251,9 +4482,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762867099345-ddep0nu0y",
+      "type": "host",
+      "children": [
+        {
+          "id": "6244c82a-48ee-409e-9fb9-4a9e8bb415c1",
+          "type": "region",
+          "children": [
+            {
+              "id": "67fdd763-7ef8-43ec-9ab7-9fa9eeb121e9",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762867277629-orkwi3hkx",
+      "type": "host",
+      "children": [
+        {
+          "id": "f9467381-5436-4230-9c6f-55a0c41273f8",
+          "type": "region",
+          "children": [
+            {
+              "id": "157c9736-63f3-4ecc-ba71-cc6b6c52a063",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1762863552742-uia91wrw1"
+    "loc-1762867277629-orkwi3hkx"
   ]
 }
