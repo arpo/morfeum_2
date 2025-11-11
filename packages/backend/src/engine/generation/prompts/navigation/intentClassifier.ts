@@ -21,10 +21,54 @@ export interface IntentClassifierRequest {
 }
 
 /**
+ * Condensed version of intent classifier prompt (~45% shorter)
+ */
+function buildCondensedPrompt(contextString: string, userCommand: string): string {
+  return `Navigation intent classifier. Return JSON only.
+
+${contextString}
+
+User: "${userCommand}"
+
+INTENTS:
+1. GO_INSIDE: enter/inside/step into → buildings, vehicles, caves, structures
+2. GO_OUTSIDE: exit/leave/go out → leaving enclosed spaces
+3. GO_TO_ROOM: go to [room] → rooms, chambers, areas within structure
+4. GO_TO_PLACE: go to [place] → locations, landmarks, structures
+5. LOOK_AT: look at/examine → objects, details, features
+6. LOOK_THROUGH: look through/out → windows, openings, viewports
+7. CHANGE_VIEW: turn/look [dir] → up, down, left, right, behind
+8. GO_UP_DOWN: climb/descend → stairs, ladders, elevators, ramps
+9. ENTER_PORTAL: enter [portal] → portals, doors, gateways, passages
+10. APPROACH: move toward/closer → any object/location
+11. EXPLORE_FEATURE: follow/continue → paths, corridors, rivers, roads
+12. RELOCATE: go to [place] in [area] → travel to different region
+13. UNKNOWN: unclear intent
+
+OUTPUT: {"intent":"TYPE","target":"name or null","direction":"dir or null","newRegion":"region or null","relocationType":"macro/micro or null","spaceType":"interior/exterior/unknown or null","confidence":0.0-1.0}
+
+GO_INSIDE RULES:
+- Pick buildings/structures with windows/doors from Unique Identifiers or Visible Elements
+- Avoid water features, vegetation, furniture, decorative elements
+- spaceType: "interior" if enclosed/roofed, "exterior" if open-air, "unknown" if unclear
+
+EXAMPLES:
+"enter" + Visible="Classical resort buildings with balconies" → {"intent":"GO_INSIDE","target":"Classical resort buildings with balconies and columns","spaceType":"interior","confidence":0.95}
+"look at painting" → {"intent":"LOOK_AT","target":"painting","confidence":0.95}
+"go to kitchen" → {"intent":"GO_TO_ROOM","target":"kitchen","confidence":1.0}
+"turn around" → {"intent":"CHANGE_VIEW","direction":"behind","confidence":1.0}
+
+Classify: "${userCommand}"`;
+}
+
+/**
  * Generate intent classification prompt
  * Returns a focused prompt that asks LLM to classify navigation intent
  */
-export function intentClassifierPrompt(request: IntentClassifierRequest): string {
+export function intentClassifierPrompt(
+  request: IntentClassifierRequest,
+  mode: 'detailed' | 'condensed' = 'condensed'
+): string {
   const { userCommand, currentNode } = request;
 
   // Build context string with optional navigable elements
@@ -65,6 +109,10 @@ export function intentClassifierPrompt(request: IntentClassifierRequest): string
       .join(', ');
     
     contextString += `\n- Visible Elements: ${elements}`;
+  }
+
+  if (mode === 'condensed') {
+    return buildCondensedPrompt(contextString, userCommand);
   }
 
   return `You are a navigation intent classifier. Analyze the user's command and return ONLY a JSON object.

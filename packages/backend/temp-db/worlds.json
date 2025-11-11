@@ -3600,6 +3600,132 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762866408661-kgxilru3g": {
+      "id": "loc-1762866408661-kgxilru3g",
+      "type": "host",
+      "name": "Burma",
+      "dna": {
+        "type": "host",
+        "name": "Burma",
+        "description": "A land of ancient kingdoms and spiritual heritage.",
+        "dna": {
+          "genre": "historical",
+          "architectural_tone": "ancient spiritual monuments",
+          "cultural_tone": "A land rich with ancient kingdoms and deep spiritual heritage, characterized by devotion and historical reverence. The culture is steeped in traditions passed down through generations, emphasizing mindfulness and connection to the past.",
+          "materials_base": "Primarily fired clay bricks and carved stone, weathered by time and climate. Materials suggest enduring construction and a connection to the earth, with an emphasis on natural, durable elements that have withstood centuries.",
+          "mood_baseline": "contemplative, majestic, enduring",
+          "palette_bias": "Warm earth tones dominate, with a focus on terracotta, ochre, and muted golds. These colors evoke a sense of age, warmth, and a connection to the natural landscape.",
+          "soundscape_base": "Echoes of wind through ancient structures and distant, serene chanting. The soundscape is generally quiet, punctuated by the sounds of nature and faint spiritual observances.",
+          "flora_base": "Sparse, drought-resistant vegetation like hardy grasses and scattered acacia trees adapted to warm, dry climates. Plant life is typically low-lying and non-obtrusive.",
+          "fauna_base": "Resilient desert and plains animals, such as birds of prey, lizards, and small mammals. Wildlife is generally adapted to arid conditions and sparse resources."
+        },
+        "slug": "burma"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Burma",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "8292e8db-960e-421c-897e-3d6f3473ca4d": {
+      "id": "8292e8db-960e-421c-897e-3d6f3473ca4d",
+      "type": "region",
+      "name": "Burma",
+      "dna": {
+        "type": "region",
+        "name": "Burma",
+        "description": "",
+        "dna": {
+          "architectural_tone": "monumental brick temple complexes",
+          "cultural_tone": null,
+          "materials_base": "Extensive use of weathered, reddish-brown fired bricks forming vast temple structures and pathways. Stone is used for foundational elements and decorative carvings.",
+          "mood_baseline": null,
+          "palette_bias": "Dominant terracotta reds and warm oranges from bricks, contrasted with dusky browns of dried earth and hazy skies.",
+          "soundscape_base": "The gentle rustling of dry grasses and occasional bird calls, overlaid by the distant hum of a warm, dry environment.",
+          "flora_base": "Drought-tolerant grasses and low scrub vegetation, typical of a warm, open plain.",
+          "fauna_base": "Small birds, insects, and perhaps occasional desert rodents."
+        },
+        "slug": "burma"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Burma",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "0778cdbc-221c-4664-a46e-c60442b090e3": {
+      "id": "0778cdbc-221c-4664-a46e-c60442b090e3",
+      "type": "location",
+      "name": "The Grand Sanctuary",
+      "dna": {
+        "type": "location",
+        "name": "The Grand Sanctuary",
+        "description": "A colossal temple structure standing prominently on the plain.",
+        "looks": "A massive, multi-tiered temple complex dominates the central landscape, constructed from weathered, reddish-brown bricks. Several smaller spires and structures surround the main edifice, receding into the distance. A stone pathway, lined with low brick walls, leads towards the grand temple. The overall impression is one of immense scale and ancient architecture under a dramatic sky.",
+        "atmosphere": "The air appears hazy and indistinct, suggesting a dry, warm environment. The distant landscape is softened by atmospheric perspective, creating a sense of depth and distance.",
+        "mood": "Majestic, ancient",
+        "lighting": "The scene is illuminated by a low sun, casting a warm, golden-orange light. Dramatic sunbeams pierce through scattered clouds, creating high contrast between illuminated areas and shadows. The light emphasizes the textures of the brickwork and the vastness of the landscape.",
+        "dominantElements": [
+          "Massive brick temple complex (center-left)",
+          "Stone pathway with brick walls (foreground)",
+          "Distant temple spires (midground/background)",
+          "Setting sun with dramatic light rays (background)"
+        ],
+        "spatialLayout": "The image is composed with a leading line from the foreground pathway drawing the viewer's eye towards the massive temple in the midground. The background features a sprawling panorama of similar structures, creating a sense of a vast temple city.",
+        "uniqueIdentifiers": [
+          "Colossal multi-tiered brick temple",
+          "Leading stone pathway with parallel brick walls",
+          "Panoramic view of numerous ancient spires"
+        ],
+        "materials_primary": "Brick",
+        "materials_secondary": "Stone",
+        "materials_accents": "None visible",
+        "colors_dominant": "Orange (sky, sunlight)",
+        "colors_secondary": "Red-brown (temples, pathway, walls)",
+        "colors_accents": "Gold (sunbeams, highlights)",
+        "colors_ambient": "Warm orange and dusky brown",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, midground",
+            "description": "Stone stairs leading up to the temple entrance."
+          },
+          {
+            "type": "passage",
+            "position": "foreground",
+            "description": "Stone pathway between brick walls."
+          },
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Dark, recessed entrance to the temple."
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Ancient temple complex with pathway. Has: stone pathway (foreground), brick temple (center-left), stairs (center)",
+        "dna": {
+          "architectural_tone": "colossal, multi-tiered brick edifices",
+          "cultural_tone": "A place of immense spiritual significance, designed to inspire awe and devotion through its sheer scale and ancient design. It represents a pinnacle of religious architecture.",
+          "materials_base": "Weathered red-brown brickwork is the primary construction material, showing signs of age and texture. Low brick walls line pathways, and stone is used for foundational elements and some detailing.",
+          "mood_baseline": "awe-inspiring, ancient, vast",
+          "palette_bias": "The warm, golden-orange hues of low sunlight bathe the red-brown brick, creating a rich, earthy palette.",
+          "soundscape_base": "The profound silence of a grand, ancient site, broken only by the subtle sounds of wind and distant natural occurrences.",
+          "flora_base": "Minimal to no vegetation directly within the sanctuary grounds, focusing on the architectural expanse.",
+          "fauna_base": "Likely very sparse; perhaps birds nesting in higher, inaccessible areas."
+        },
+        "slug": "the-grand-sanctuary"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/9ORKk3JjyPzouSmzlTK2j.jpg",
+      "focus": {
+        "node_id": "The Grand Sanctuary",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -4102,6 +4228,23 @@
           "children": [
             {
               "id": "f5879e60-40fb-4927-b1f9-f81ebcad4d12",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762866408661-kgxilru3g",
+      "type": "host",
+      "children": [
+        {
+          "id": "8292e8db-960e-421c-897e-3d6f3473ca4d",
+          "type": "region",
+          "children": [
+            {
+              "id": "0778cdbc-221c-4664-a46e-c60442b090e3",
               "type": "location",
               "children": []
             }
