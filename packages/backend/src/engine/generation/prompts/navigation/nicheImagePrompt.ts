@@ -23,6 +23,13 @@ import {
   buildCompositionLayering,
   buildNavigableElementsInstructions,
   buildRequirements,
+  buildNavigationGuidanceCondensed,
+  buildCompositionLayeringCondensed,
+  buildNavigableElementsInstructionsCondensed,
+  buildPerspectiveFramingCondensed,
+  buildTransformationRulesCondensed,
+  buildRequirementsCondensed,
+  buildInteriorSpaceRulesCondensed,
 } from '../shared/promptSections';
 
 /**
@@ -33,7 +40,8 @@ export function nicheImagePrompt(
   context: NavigationContext,
   intent: IntentResult,
   decision: NavigationDecision,
-  navigationFeatures?: string
+  navigationFeatures?: string,
+  mode: 'detailed' | 'condensed' = 'condensed'
 ): string {
   // Build context using shared utilities
   const descriptors = buildLocationDescriptors(context.currentNode.data);
@@ -51,15 +59,29 @@ export function nicheImagePrompt(
   // Extract entrance element
   const entranceElement = extractEntranceElement(decision.reasoning);
   
-  // Build all prompt sections using shared utilities
+  // Build all prompt sections using shared utilities (condensed or detailed based on mode)
   const parentAnalysis = buildParentStructureAnalysis(entranceElement, context.currentNode.data.looks);
-  const interiorRules = buildInteriorSpaceRules(entranceElement);
-  const perspective = buildPerspectiveFraming();
-  const transformRules = buildTransformationRules();
-  const navigationGuidance = buildNavigationGuidance(navigationFeatures);
-  const composition = buildCompositionLayering('interior');
-  const requirements = buildRequirements();
-  const navigableInstructions = buildNavigableElementsInstructions();
+  const interiorRules = mode === 'condensed' 
+    ? buildInteriorSpaceRulesCondensed(entranceElement)
+    : buildInteriorSpaceRules(entranceElement);
+  const perspective = mode === 'condensed' 
+    ? buildPerspectiveFramingCondensed()
+    : buildPerspectiveFraming();
+  const transformRules = mode === 'condensed' 
+    ? buildTransformationRulesCondensed()
+    : buildTransformationRules();
+  const navigationGuidance = mode === 'condensed' 
+    ? buildNavigationGuidanceCondensed(navigationFeatures)
+    : buildNavigationGuidance(navigationFeatures);
+  const composition = mode === 'condensed' 
+    ? buildCompositionLayeringCondensed()
+    : buildCompositionLayering('interior');
+  const requirements = mode === 'condensed' 
+    ? buildRequirementsCondensed()
+    : buildRequirements();
+  const navigableInstructions = mode === 'condensed' 
+    ? buildNavigableElementsInstructionsCondensed()
+    : buildNavigableElementsInstructions();
 
   const prompt = `You are an expert at creating image prompts for FLUX image generation.
 
