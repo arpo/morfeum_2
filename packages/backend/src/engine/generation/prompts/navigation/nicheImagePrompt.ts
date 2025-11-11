@@ -58,17 +58,38 @@ ${decision.reasoning ? `CONTEXT: ${decision.reasoning}` : ''}
 This is an INTERIOR space - you are literally INSIDE the structure mentioned above.
 The interior architecture MUST reflect the form and nature of what you entered.
 
-ARCHITECTURAL FORM MATCHING (CRITICAL):
+PARENT STRUCTURE ANALYSIS (CRITICAL):
 You entered through: "${entranceElement}"
 
-Your interior architecture MUST match this form:
-- Cylindrical/tube-like structure → Curved cylindrical walls and ceiling (like being inside a pipe/cylinder)
-- Rectangular building → Straight walls with corners and flat ceiling
-- Dome/spherical structure → Curved ceiling overhead, circular floor plan
-- Cave/natural formation → Organic irregular rock formations
-- Arch/archway → Arched ceiling and supports
+${context.currentNode.data.looks ? `Parent structure appearance: "${context.currentNode.data.looks}"` : ''}
 
-The interior should feel like being INSIDE the specific structure type mentioned above.
+BEFORE creating the interior, analyze the parent structure's FORM:
+
+1. SHAPE ANALYSIS
+   What is the overall geometric form?
+   - Circular/round → Interior must have circular floor plan
+   - Rectangular/square → Interior must have straight walls with corners
+   - Cylindrical/tubular → Interior must have curved walls (like inside a pipe)
+   - Geodesic/faceted → Interior must show geometric framework
+   - Irregular/organic → Interior must have natural, uneven surfaces
+
+2. CEILING/ROOF ANALYSIS
+   What type of ceiling would this structure have inside?
+   - Domed roof → Domed ceiling overhead
+   - Flat roof → Flat ceiling
+   - Vaulted roof → Vaulted ceiling
+   - Peaked/pitched roof → Angled ceiling following roof line
+   - Geodesic dome → Visible geodesic framework overhead
+   - Arched structure → Arched ceiling
+
+3. SCALE & PROPORTION
+   Match the interior scale to the exterior description
+   - Compact/small → Intimate interior space
+   - Large/expansive → Spacious interior
+   - Towering/tall → High ceilings
+
+CRITICAL: The interior architecture MUST directly reflect these analyzed characteristics.
+You are literally INSIDE the structure described above.
 
 PARENT LOCATION CONTEXT (reference for materials/style only):
 Name: "${context.currentNode.name}"

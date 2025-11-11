@@ -2940,6 +2940,138 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762862091010-7gamwlum9": {
+      "id": "loc-1762862091010-7gamwlum9",
+      "type": "host",
+      "name": "Aethelgard",
+      "dna": {
+        "type": "host",
+        "name": "Aethelgard",
+        "description": "A land where ancient structures hum with arcane energy.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "ancient arcane structures",
+          "cultural_tone": "A society that venerates and harnesses ambient arcane energies, often within repurposed or ancient constructs. Their structures serve both spiritual and practical purposes, channeling unseen forces.",
+          "materials_base": "A blend of weathered, ancient stone, often with embedded crystalline or metallic conduits. Materials are chosen for their resonance with arcane energies and their ability to withstand temporal or energetic flux.",
+          "mood_baseline": "mysterious, reverent, humming",
+          "palette_bias": "Dominated by deep, ethereal blues and teals, with accents of cool, spectral purples and the muted grays of ancient stone. These colors evoke a sense of otherworldly depth and latent power.",
+          "soundscape_base": "A constant, low-frequency hum or thrum, interspersed with faint, resonant chimes or whispers. The ambient sound suggests contained energy and a palpable, unseen presence.",
+          "flora_base": "Vegetation is often resilient and adapted to energetic environments, perhaps with bioluminescent qualities or unusual crystalline growths. Think hardy mosses, glowing fungi, and vines that twist unnaturally.",
+          "fauna_base": "Creatures are often adapted to the ambient energies, possibly exhibiting minor psychic abilities, luminescence, or unusual forms. May include spectral beings, energy-infused animals, or constructs animated by arcane forces."
+        },
+        "slug": "aethelgard"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aethelgard",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "48c3d00d-7a8a-403c-9f23-cb2abea9642b": {
+      "id": "48c3d00d-7a8a-403c-9f23-cb2abea9642b",
+      "type": "region",
+      "name": "Aethelgard",
+      "dna": {
+        "type": "region",
+        "name": "Aethelgard",
+        "description": "",
+        "dna": {
+          "architectural_tone": "grand gothic spires, gothic structures infused with arcane conduits",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "foreboding, isolated, enigmatic",
+          "palette_bias": "deep teal, misty blues, dark grays, hints of warm yellow",
+          "soundscape_base": "distant hums, spectral whispers, the rustle of mist",
+          "flora_base": "dense, overgrown foliage, ancient trees",
+          "fauna_base": null
+        },
+        "slug": "aethelgard"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aethelgard",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ff42669b-df70-4c14-83e2-648fd2b8c3db": {
+      "id": "ff42669b-df70-4c14-83e2-648fd2b8c3db",
+      "type": "location",
+      "name": "The Electric Abbey",
+      "dna": {
+        "type": "location",
+        "name": "The Electric Abbey",
+        "description": "A unique monastery built around a silent, humming generator, its exterior hinting at the power within.",
+        "looks": "The Electric Abbey is a grand, ancient stone structure with multiple towering spires, characteristic of gothic architecture. Its facade is adorned with numerous tall, arched windows, some featuring intricate stained glass patterns. A large, ornate rose window is visible above the main entrance, and glowing conduits are subtly integrated into the stone, emitting faint rhythmic pulses. The building appears to be situated in a misty, somewhat overgrown landscape, with dense foliage surrounding its base. The scale is imposing, with the spires reaching high into the atmospheric sky.",
+        "atmosphere": "A heavy, visible mist permeates the air, creating a diffused haze around the structure and obscuring the background hills. The atmosphere is thick and damp, contributing to the sense of mystery and isolation.",
+        "mood": "Mysterious, powerful, revered",
+        "lighting": "The primary lighting is cool and diffused, emanating from the overcast sky and the glowing windows within the abbey. Warm, yellow light spills from the windows and exterior lamps, creating a stark contrast with the cool blue ambient light. The overall lighting is dim, with a low contrast ratio, punctuated by pockets of localized illumination.",
+        "dominantElements": [
+          "Gothic abbey structure ~100m wide with multiple spires",
+          "Towering spires reaching into the sky",
+          "Main entrance with prominent archway and steps",
+          "Large rose window above the entrance",
+          "Numerous arched windows with glowing interiors"
+        ],
+        "spatialLayout": "The abbey is presented as a central, dominant structure in the midground. Its long, imposing facade faces forward, with a wide set of steps leading to the main entrance. The foreground is occupied by a waterlogged area with surrounding foliage, and the background consists of mist-shrouded hills and trees, creating a sense of depth and enclosure.",
+        "uniqueIdentifiers": [
+          "Gothic architecture with prominent spires and rose window",
+          "Subtle glowing conduits integrated into stone",
+          "Placement within a misty, overgrown landscape"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Wood (foliage), Glass (windows)",
+        "materials_accents": "Glowing conduits, illuminated windows, exterior lamps",
+        "colors_dominant": "Deep Teal (sky and mist)",
+        "colors_secondary": "Dark Gray (stone architecture)",
+        "colors_accents": "Warm Yellow/Orange (window light, lamps, rose window)",
+        "colors_ambient": "Misty Teal",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, foreground",
+            "description": "Wide stone steps leading to the main entrance."
+          },
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Ornate, arched main entrance door."
+          },
+          {
+            "type": "window",
+            "position": "facade, midground",
+            "description": "Numerous tall, arched windows, some with stained glass."
+          },
+          {
+            "type": "window",
+            "position": "center, facade, midground",
+            "description": "Large, circular rose window above the main entrance."
+          }
+        ],
+        "searchDesc": "Gothic abbey in mist. Has: stone stairs (center, foreground), main entrance door (center, midground), rose window (center, facade, midground)",
+        "dna": {
+          "architectural_tone": "gothic monastic architecture with integrated glowing conduits",
+          "cultural_tone": "A secluded monastic order dedicated to understanding and containing a powerful, silent arcane generator. They maintain the structure and its energy, living in quiet service.",
+          "materials_base": "ancient weathered stone with subtly integrated metallic conduits and glowing elements.",
+          "mood_baseline": "solitary, functional, quietly potent",
+          "palette_bias": null,
+          "soundscape_base": "faint rhythmic pulsing, low generator hum, the occasional drip of condensation",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-electric-abbey"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/qqKPH3N9lPMC8SkI6Mlq8.jpg",
+      "focus": {
+        "node_id": "The Electric Abbey",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -3363,7 +3495,26 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762862091010-7gamwlum9",
+      "type": "host",
+      "children": [
+        {
+          "id": "48c3d00d-7a8a-403c-9f23-cb2abea9642b",
+          "type": "region",
+          "children": [
+            {
+              "id": "ff42669b-df70-4c14-83e2-648fd2b8c3db",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
-  "pinnedIds": []
+  "pinnedIds": [
+    "loc-1762862091010-7gamwlum9"
+  ]
 }
