@@ -206,3 +206,72 @@ export function buildRequirements(): string {
 4. Composition should be engaging with slight asymmetry, avoiding both extreme offset and pure symmetry
 5. MUST include separate foreground, midground, and background descriptions`;
 }
+
+/**
+ * CONDENSED VERSIONS - Token-optimized prompts
+ */
+
+/**
+ * Condensed composition layering (40% shorter)
+ */
+export function buildCompositionLayeringCondensed(): string {
+  return `COMPOSITION LAYERS (Required - describe all three):
+FOREGROUND (0-3m): Floor texture, near walls, touchable elements
+MIDGROUND (3-10m): Navigation features (corridors, stairs, platforms), architectural details
+BACKGROUND (10m+): Depth, distant lighting, where space continues/ends
+
+Describe each layer separately with clear spatial organization.`;
+}
+
+/**
+ * Condensed navigation guidance (60% shorter)
+ */
+export function buildNavigationGuidanceCondensed(customFeatures?: string): string {
+  if (customFeatures) {
+    return `\nCUSTOM NAVIGATION FEATURES: ${customFeatures}`;
+  }
+
+  return `\nNAVIGATION FEATURES (include 3-4 specific features):
+Be specific: "3m corridor left at 45°, metal grate, orange glow" not "narrow passage"
+Examples: exact corridors (width, direction, angle), stairs/ladders (location, direction), openings (size, position)`;
+}
+
+/**
+ * Condensed navigable elements instructions (70% shorter)
+ */
+export function buildNavigableElementsInstructionsCondensed(): string {
+  return `NAVIGABLE MARKING: Mark 3-4 elements as [description] (navigable: type, position)
+Types: passage, corridor, stairs, ladder, ramp, platform, walkway, opening, hatch, door, object
+Example: "Rusted ladder on left wall (navigable: ladder, left wall, midground)"`;
+}
+
+/**
+ * Condensed perspective framing (50% shorter)
+ */
+export function buildPerspectiveFramingCondensed(): string {
+  return `PERSPECTIVE: 1-2m inside entrance, straight ahead view. Wide-angle (24-35mm), eye-level. Entrance behind camera. Slight asymmetry, not tunnel-view.`;
+}
+
+/**
+ * Condensed transformation rules (45% shorter)
+ */
+export function buildTransformationRulesCondensed(): string {
+  return `TRANSFORM PARENT DETAILS FOR INTERIOR:
+✓ Include: Materials/colors on interior surfaces, architectural style, atmosphere, lighting (as interior sources)
+✗ Exclude: Exterior water/vegetation (unless logical), open landscapes, sky, weather elements
+Test: "Would this exist inside this structure?"`;
+}
+
+/**
+ * Condensed requirements (40% shorter)
+ */
+export function buildRequirementsCondensed(): string {
+  return `REQUIREMENTS: Entrance behind camera, consistent space type, logical interior elements, slight asymmetry, separate layer descriptions`;
+}
+
+/**
+ * Condensed interior space rules (45% shorter)
+ */
+export function buildInteriorSpaceRulesCondensed(entranceElement: string): string {
+  return `INTERIOR SPACE: Enclosed with ceiling, interior lighting, walls visible, no open sky (except small windows). Match form of "${entranceElement}"`;
+}

@@ -3072,6 +3072,534 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762863048950-b0v7ubob6": {
+      "id": "loc-1762863048950-b0v7ubob6",
+      "type": "host",
+      "name": "The Continent",
+      "dna": {
+        "type": "host",
+        "name": "The Continent",
+        "description": "A vast land of rolling hills and ancient forests, dotted with scattered settlements and forgotten ruins.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "ancient stoic grandeur",
+          "cultural_tone": "Respected by time, deeply tied to nature's rhythms. Societies value endurance and deep historical roots.",
+          "materials_base": "Primarily natural, enduring materials like weathered stone, ancient timber, and perhaps hints of magically infused elements. Focus on texture and age.",
+          "mood_baseline": "Ethereal, ancient, introspective",
+          "palette_bias": "Subdued, earthy tones often punctuated by pockets of intense, otherworldly color. Think deep greens, greys, and browns with sudden bursts of jewel tones.",
+          "soundscape_base": "Whispers of wind through ancient trees, the distant murmur of flowing water, and the faint echoes of forgotten songs.",
+          "flora_base": "Majestic, ancient trees with gnarled branches. Dense, moss-covered undergrowth. Luminescent fungi and wildflowers with unusual properties.",
+          "fauna_base": "Creatures that are elusive and deeply connected to the land. Perhaps ancient spirits of the forest or beasts with subtle magical auras."
+        },
+        "slug": "the-continent"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Continent",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "8c46a6a3-0d1e-4c20-82c0-4780d9388bda": {
+      "id": "8c46a6a3-0d1e-4c20-82c0-4780d9388bda",
+      "type": "region",
+      "name": "The Continent",
+      "dna": {
+        "type": "region",
+        "name": "The Continent",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-continent"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Continent",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "54186c8f-b4b4-4562-b214-30f54f4bb3d4": {
+      "id": "54186c8f-b4b4-4562-b214-30f54f4bb3d4",
+      "type": "location",
+      "name": "The Violet Gate Manor",
+      "dna": {
+        "type": "location",
+        "name": "The Violet Gate Manor",
+        "description": "A grand countryside manor whose exterior is marked by a unique, faintly humming gate.",
+        "looks": "A grand manor house constructed from rough-hewn stone sits centrally in the frame. Steeply pitched roofs with multiple dormer windows cap the structure, and a prominent stone chimney rises on the right. The house is framed by dense, dark trees on either side and a manicured hedge in front. An arched entryway features a pair of ornate, wrought-iron gates that emit a vibrant violet glow.",
+        "atmosphere": "A soft, atmospheric haze is visible, particularly in the background amongst the trees, suggesting a cool, humid evening. The air appears still, with the visual cues of low ambient light contributing to a tranquil, somewhat mysterious ambiance.",
+        "mood": "Serene, subtly magical, welcoming yet grand.",
+        "lighting": "The scene is lit by a combination of soft, ambient twilight and the intense, localized glow from the violet gates. Interior lights in the house windows cast warm, orange light, creating contrast with the cool exterior tones. The violet light from the gates casts a strong, saturated illumination on the foreground path and the surrounding foliage.",
+        "dominantElements": [
+          "Stone manor house with dark pitched roof",
+          "Ornate wrought-iron gates with violet glow",
+          "Dense forest trees framing the scene",
+          "Manicured hedge in the foreground"
+        ],
+        "spatialLayout": "The manor house is positioned in the midground, directly confronting the viewer. A paved stone pathway leads from the foreground to the central arched gateway. The surrounding vegetation forms a dense backdrop and encroaches from the sides, creating a sense of enclosure.",
+        "uniqueIdentifiers": [
+          "Violet glowing ornate iron gates",
+          "Arched stone entryway",
+          "Manor house with dark slate roof and dormer windows"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Wood (roof shingles, window frames), Hedge",
+        "materials_accents": "Wrought iron (gates), Glowing violet light",
+        "colors_dominant": "Violet (gates, foreground path)",
+        "colors_secondary": "Dark Grey (stone, roof), Deep Green (foliage)",
+        "colors_accents": "Orange (interior window light)",
+        "colors_ambient": "Deep Blue/Purple",
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center, midground",
+            "description": "Stone archway containing violet glowing gates"
+          },
+          {
+            "type": "door",
+            "position": "center, midground (behind archway)",
+            "description": "Ornate violet glowing wrought-iron gates"
+          },
+          {
+            "type": "window",
+            "position": "left and right sides of manor, midground",
+            "description": "Warmly lit rectangular windows"
+          },
+          {
+            "type": "window",
+            "position": "dormers on roof, midground",
+            "description": "Smaller, warmly lit dormer windows"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Manor house with violet glowing gates. Has: archway (center), wrought-iron gates (center), lit windows (midground)",
+        "dna": {
+          "architectural_tone": "Gothic-inspired rustic nobility",
+          "cultural_tone": "A place of deep lineage and subtle enchantment, guarding ancestral secrets.",
+          "materials_base": "Rough-hewn, grey stone that has weathered centuries. Dark timber beams. Hints of magically resonant metals.",
+          "mood_baseline": "Mysterious, tranquil, potent",
+          "palette_bias": "Dominance of cool greys and deep forest greens, sharply contrasted by the vibrant, pulsating violet.",
+          "soundscape_base": "The hum of latent energy, the rustle of manicured hedges, and the muffled sounds from within the manor.",
+          "flora_base": "Dense, dark, ancient trees framing the property. Intricately maintained, slightly overgrown hedges.",
+          "fauna_base": null
+        },
+        "slug": "the-violet-gate-manor"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/PmSiR5gs3rwYT8ZmkjPBD.jpg",
+      "focus": {
+        "node_id": "The Violet Gate Manor",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762863267259-zek7n92re": {
+      "id": "loc-1762863267259-zek7n92re",
+      "type": "host",
+      "name": "Wonkaverse",
+      "dna": {
+        "type": "host",
+        "name": "Wonkaverse",
+        "description": "A world of whimsical confectionery and delightful oddities.",
+        "dna": {
+          "genre": "whimsical fantasy",
+          "architectural_tone": "fantastical industrial, layered complexity",
+          "cultural_tone": "A realm dedicated to the joyous creation and consumption of confectionery, driven by innovation and boundless imagination.",
+          "materials_base": "A vibrant palette of polished metals, baked goods textures, and colorful, robust synthetics designed for both form and function.",
+          "mood_baseline": "joyful, wondrous, energetic",
+          "palette_bias": "Bright, saturated colors with a playful, often artificial, feel. Contrasts are sharp and deliberately eye-catching.",
+          "soundscape_base": "A symphony of whirring machinery, bubbling concoctions, cheerful jingles, and the satisfying sounds of confectioneries being made.",
+          "flora_base": "Cultivated, often genetically enhanced, edible plants that serve as ingredients and aesthetic elements. Think giant candy flowers or sugary vines.",
+          "fauna_base": "Creatures born from sugary dreams and inventive bio-engineering, ranging from whimsical helpers to sentient sweets."
+        },
+        "slug": "wonkaverse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Wonkaverse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "bba36607-98a5-41fc-ac7d-00cfae2bb24b": {
+      "id": "bba36607-98a5-41fc-ac7d-00cfae2bb24b",
+      "type": "region",
+      "name": "Confectionery Valley",
+      "dna": {
+        "type": "region",
+        "name": "Confectionery Valley",
+        "description": "A region where edible wonders are cultivated and manufactured.",
+        "dna": {
+          "architectural_tone": "industrial confectionery production, stylized structures",
+          "cultural_tone": "The heartland of sweet manufacturing, characterized by large-scale production facilities and innovative ingredient cultivation.",
+          "materials_base": "Emphasis on durable, food-safe materials like glazed ceramics, polished steel, and brightly colored, resilient polymers, alongside natural elements used as ingredients.",
+          "mood_baseline": "productive, vibrant, sweet",
+          "palette_bias": "Warm, inviting colors with a focus on edible hues like caramels, berry reds, and mint greens, accented by artificial light glows.",
+          "soundscape_base": "The hum of large-scale production lines, the clatter of packaging, distant factory whistles, and the occasional bursts of cheerful, working-class music.",
+          "flora_base": "Orchards of candy-bearing trees, fields of sugar-reeds, and rivers of flavored syrups supporting the regional confectionery needs.",
+          "fauna_base": "Laborious, candy-themed creatures tasked with cultivation and simple factory duties, such as sugar-beetle harvesters or caramel-collecting sprites."
+        },
+        "slug": "confectionery-valley"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Confectionery Valley",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ee2650e6-56ae-4c1b-81d0-24eec497cc89": {
+      "id": "ee2650e6-56ae-4c1b-81d0-24eec497cc89",
+      "type": "location",
+      "name": "Wonka's Chocolate Emporium",
+      "dna": {
+        "type": "location",
+        "name": "Wonka's Chocolate Emporium",
+        "description": "The legendary factory where dreams are spun into chocolate.",
+        "looks": "The location depicts a sprawling industrial complex with varied building heights and distinct architectural styles, characterized by steep, dark tiled roofs and brick facades. Towering chimneys punctuate the skyline, emitting vibrant pink plumes of smoke that add a whimsical touch. A body of water flows through the midground, reflecting the warm glow of lights and the pink smoke. Intricate metal balconies and walkways line some structures, suggesting a multi-layered environment. The overall scale is that of a substantial, established factory.",
+        "atmosphere": "A soft, diffused haze permeates the air, softening distant elements and contributing to a sense of depth. The atmosphere appears humid, with the water reflecting light sources, and the large plumes of smoke suggest active industrial processes.",
+        "mood": "Magical, bustling",
+        "lighting": "The lighting is predominantly warm and atmospheric, with numerous glowing yellow lights emanating from windows and lamps, creating pools of light on pathways and water. The dominant color of the artificial light is a warm orange-yellow, contrasting with the cooler, dusky purple of the ambient twilight and the bright pink of the chimney smoke. This creates a high contrast scene, especially where light meets shadow.",
+        "dominantElements": [
+          "Tall brick chimneys emitting pink smoke",
+          "Multi-story brick buildings with dark tiled roofs",
+          "Reflective water channel in the midground",
+          "Lighthouse-like structure with illuminated levels"
+        ],
+        "spatialLayout": "The scene is framed by buildings in the foreground and midground, with a body of water running through the center. Tall chimneys and other industrial structures rise behind these buildings, extending into the hazy background. The perspective draws the eye along the waterway towards the more distant, complex structures.",
+        "uniqueIdentifiers": [
+          "Vibrant pink industrial smoke",
+          "Lighthouse-like central tower",
+          "Neon sign reading 'WONKA'S CHOCOLATE RHOOLAND'"
+        ],
+        "materials_primary": "Brick",
+        "materials_secondary": "Dark roofing tiles, stone, metal railings",
+        "materials_accents": "Glowing window panes, ornate lampposts, neon sign",
+        "colors_dominant": "Brick red and dark purples",
+        "colors_secondary": "Warm orange-yellow from artificial lights, dusky pink from smoke",
+        "colors_accents": "Bright pink smoke plumes, neon sign glow",
+        "colors_ambient": "Dusky purple and hazy grey",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "midground canal",
+            "description": "Waterway reflecting lights and smoke"
+          },
+          {
+            "type": "door",
+            "position": "left foreground building",
+            "description": "Ornate wooden door with illuminated porch"
+          },
+          {
+            "type": "door",
+            "position": "right foreground building",
+            "description": "Double wooden doors under neon sign"
+          },
+          {
+            "type": "window",
+            "position": "various buildings",
+            "description": "Warmly lit windows indicating interior activity"
+          },
+          {
+            "type": "object",
+            "position": "right foreground building",
+            "description": "Neon sign: 'WONKA'S CHOCOLATE RHOOLAND'"
+          },
+          {
+            "type": "object",
+            "position": "left foreground building",
+            "description": "Balcony with railing overlooking water"
+          },
+          {
+            "type": "bridge",
+            "position": "midground over canal",
+            "description": "Dark bridge connecting structures across water"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Fantastical factory complex by a canal. Has: tall chimneys (background), neon sign (right), canal (center)",
+        "dna": {
+          "architectural_tone": "ornate, sprawling industrial complex with eclectic styles",
+          "cultural_tone": "The legendary birthplace of groundbreaking chocolate innovations, a place of wonder, experimentation, and controlled chaos.",
+          "materials_base": "Primarily robust, dark brickwork for structural integrity, accented by detailed metalwork, abundant glass for viewing, and integrated sugary elements.",
+          "mood_baseline": "mysterious, grand, whimsical",
+          "palette_bias": "A blend of earthy, industrial tones (brick reds, dark roofing) contrasted with the warm, glowing artificial lights and vibrant, unexpected plume colors.",
+          "soundscape_base": "The deep rumble of massive chocolate vats, the rhythmic clanking of intricate machinery, the hiss of steam, and the muffled echoes of whimsical experiments.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "wonka-s-chocolate-emporium"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/QI86ISes_onIDS3fTE64_.jpg",
+      "focus": {
+        "node_id": "Wonka's Chocolate Emporium",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762863404639-373b67ye6": {
+      "id": "loc-1762863404639-373b67ye6",
+      "type": "host",
+      "name": "The World",
+      "dna": {
+        "type": "host",
+        "name": "The World",
+        "description": "A vast planet with diverse environments and hidden wonders.",
+        "dna": {
+          "genre": "historical adventure",
+          "architectural_tone": "ancient monumental",
+          "cultural_tone": "Civilizations that built grand structures to honor deities or powerful rulers, often lost to time and reclaimed by nature.",
+          "materials_base": "Primarily stone in various states of weathering, complemented by natural organic elements and earth.",
+          "mood_baseline": "Mysterious, awe-inspiring, ancient",
+          "palette_bias": "Earthy tones dominate, with deep greens, greys, and muted blues, suggesting age and natural integration.",
+          "soundscape_base": "Echoes of the past, with subtle natural sounds of wind, water, and distant wildlife.",
+          "flora_base": "Lush, pervasive plant life that encroaches on structures, featuring dense foliage, vines, and moss.",
+          "fauna_base": "Small, skittish wildlife adapted to jungle environments, often unseen but present."
+        },
+        "slug": "the-world"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The World",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "53e66a47-482c-43b3-917b-959147154ccb": {
+      "id": "53e66a47-482c-43b3-917b-959147154ccb",
+      "type": "region",
+      "name": "Jungle Ruins",
+      "dna": {
+        "type": "region",
+        "name": "Jungle Ruins",
+        "description": "Overgrown ancient sites deep within dense foliage.",
+        "dna": {
+          "architectural_tone": "weathered stone ruins",
+          "cultural_tone": "Lost civilizations whose monumental architecture is being slowly consumed by the relentless jungle.",
+          "materials_base": "Primarily ancient, carved stone, heavily integrated with thick, vibrant vegetation and damp earth.",
+          "mood_baseline": "Oppressive, overgrown, forgotten",
+          "palette_bias": "Dominated by deep, saturated greens from foliage, with muted greys and blues from stone, and hints of earthy browns.",
+          "soundscape_base": "Humid, buzzing, with the constant rustle of leaves and dripping water, occasional bird calls.",
+          "flora_base": "Dense, tropical rainforest flora, including towering trees, thick vines, and copious mosses.",
+          "fauna_base": "Insects, amphibians, and small reptiles, with occasional larger jungle predators implied."
+        },
+        "slug": "jungle-ruins"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Jungle Ruins",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "364651a2-4b33-4578-8e39-cea803ab5dd8": {
+      "id": "364651a2-4b33-4578-8e39-cea803ab5dd8",
+      "type": "location",
+      "name": "The Serpent's Temple",
+      "dna": {
+        "type": "location",
+        "name": "The Serpent's Temple",
+        "description": "An ancient temple complex partially reclaimed by the jungle.",
+        "looks": "A stone temple structure, heavily overgrown with vibrant green vines, is partially obscured by dense jungle foliage. The weathered stone exhibits intricate carvings and statues, hinting at its ancient origins.  Sunlight filters through the dense canopy, creating dappled light patterns on the moss-covered stone and surrounding vegetation. A large, dark opening in the center serves as the primary entrance, framed by imposing stone pillars.",
+        "atmosphere": "A thick, humid haze permeates the air, suggesting a warm, tropical climate.  The environment feels dense and enclosed, with a visible presence of moisture clinging to surfaces and obscuring distant details.",
+        "mood": "Mysterious, overgrown, ancient",
+        "lighting": "Soft, diffused sunlight enters from the background, illuminating the entrance and creating a gentle, ethereal glow. The overall lighting is low-contrast and cool-toned, with deep shadows cast by the jungle canopy.",
+        "dominantElements": [
+          "Stone temple structure ~20m wide with a large central entrance",
+          "Dense green foliage covering the temple walls and surrounding area",
+          "Tall trees framing the scene on the left and right"
+        ],
+        "spatialLayout": "The temple is situated centrally in the midground, approached by a rocky, uneven path in the foreground. Lush vegetation flanks the path and the temple, creating a sense of enclosure. The background is filled with a dense, hazy forest, with the bright light filtering through the trees.",
+        "uniqueIdentifiers": [
+          "Serpent-like vine structures hanging from trees",
+          "Carvings of faces or heads on the temple facade",
+          "Distinctive arched entranceway with columnar supports"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Vines, foliage, earth",
+        "materials_accents": "Faint orange glow within the entrance, glinting water on rocks",
+        "colors_dominant": "Deep greens from foliage",
+        "colors_secondary": "Grey and muted blue from stone, brown from earth and rocks",
+        "colors_accents": "Orange glow, bright highlights on wet rocks",
+        "colors_ambient": "Cool, muted green-blue",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center foreground",
+            "description": "Stone steps leading up to the temple entrance"
+          },
+          {
+            "type": "archway",
+            "position": "center midground",
+            "description": "Large, imposing arched entrance to the temple"
+          },
+          {
+            "type": "passage",
+            "position": "center background, through archway",
+            "description": "Dark interior passage visible through the entrance"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Overgrown jungle temple. Has: stone stairs (center foreground), arched entrance (center midground), interior passage (center background)",
+        "dna": {
+          "architectural_tone": "intricate stone temple",
+          "cultural_tone": "A sacred site dedicated to serpentine deities, characterized by elaborate carvings and a central, imposing entrance.",
+          "materials_base": "Aged, carved stone, heavily draped with a variety of verdant vines and ground-level vegetation.",
+          "mood_baseline": "Foreboding, ancient, secretive",
+          "palette_bias": "Deep, cool greens and muted blue-greys, with dark, shadowed interiors and dappled sunlight.",
+          "soundscape_base": "Damp, still air, with the faint sounds of dripping water and the distant hum of insects.",
+          "flora_base": "Thick, clinging vines with large leaves, mosses, and ferns covering stone surfaces.",
+          "fauna_base": "Hidden insects and perhaps small snakes, adding to the sense of natural encroachment."
+        },
+        "slug": "the-serpent-s-temple"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/t-bVLOiSikBXP0eqOZhzF.jpg",
+      "focus": {
+        "node_id": "The Serpent's Temple",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762863552742-uia91wrw1": {
+      "id": "loc-1762863552742-uia91wrw1",
+      "type": "host",
+      "name": "Alien Planet Gigeresque",
+      "dna": {
+        "type": "host",
+        "name": "Alien Planet Gigeresque",
+        "description": "A world shaped by biomechanical horrors and alien artistry, inspired by the works of H.R. Giger.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "biomechanical, monolithic, alien geometry",
+          "cultural_tone": "This world is an artifact of a long-vanished, hyper-advanced civilization, characterized by awe-inspiring, often disturbing, constructions that blur the line between organic and mechanical.",
+          "materials_base": "A core palette of dark, chitinous composites, cold metallic alloys with a morbid sheen, and smooth, impossibly dense stone-like substances dominate.",
+          "mood_baseline": "ominous, awe-inspiring, desolate",
+          "palette_bias": "A primary bias towards deep, inky blacks, metallic grays, and oppressive charcoals, accented by unsettling bioluminescent hues and occasional visceral reds or sickly greens.",
+          "soundscape_base": "Echoing, resonant hums, the subtle grinding of unseen mechanisms, distant, mournful groans, and the whisper of alien winds.",
+          "flora_base": "Scant, mutated, and often bioluminescent growths that cling to surfaces, or are integrated into architectural elements, resembling fungal colonies or skeletal appendages.",
+          "fauna_base": "None explicitly indigenous to the landscape itself, hinting at former inhabitants or dormant, lurking horrors."
+        },
+        "slug": "alien-planet-gigeresque"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Alien Planet Gigeresque",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "c1feac82-cbf5-4a90-9def-1f5c2756be14": {
+      "id": "c1feac82-cbf5-4a90-9def-1f5c2756be14",
+      "type": "region",
+      "name": "Alien Planet Gigeresque",
+      "dna": {
+        "type": "region",
+        "name": "Alien Planet Gigeresque",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "alien-planet-gigeresque"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Alien Planet Gigeresque",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "f5879e60-40fb-4927-b1f9-f81ebcad4d12": {
+      "id": "f5879e60-40fb-4927-b1f9-f81ebcad4d12",
+      "type": "location",
+      "name": "The Gigeresque Sepulchre",
+      "dna": {
+        "type": "location",
+        "name": "The Gigeresque Sepulchre",
+        "description": "An imposing, alien tomb structure that blends organic and mechanical aesthetics.",
+        "looks": "Massive, imposing stone structures with sharp, angular designs dominate the landscape, resembling colossal, petrified spires. The central structure features a towering archway that emits a vibrant red glow from within. Jagged, rocky terrain with pools of reflective liquid covers the foreground and midground. The overall scale suggests monumental architecture designed to dwarf any observer.",
+        "atmosphere": "A thin, ethereal mist permeates the scene, softening the edges of the distant structures and lending an otherworldly feel. The air appears clear but cool, with a faint luminescence visible in the fog.",
+        "mood": "Foreboding, awe-inspiring, alien.",
+        "lighting": "The primary light source is the intense, crimson glow emanating from the central archway, casting long shadows and creating a stark contrast with the dark, muted surroundings. A subtle, cool blue light suffuses the upper atmosphere, providing a secondary ambient illumination.",
+        "dominantElements": [
+          "Central arched gateway with red luminescence (~30m tall)",
+          "Tall, monolithic stone spires (foreground and midground)",
+          "Rocky, uneven terrain (foreground and midground)",
+          "Single human figure (midground, left of center)"
+        ],
+        "spatialLayout": "The image is framed by dark, cavernous rock formations on the left and right, creating a natural corridor. The central structure, the tomb entrance, is positioned at the far end of this corridor, serving as the primary focal point. The ground slopes gently towards the entrance, with pools of water reflecting the red light.",
+        "uniqueIdentifiers": [
+          "Enormous, unnaturally geometric stone spires",
+          "Vibrantly glowing red archway entrance",
+          "Rough, alien terrain with reflective pools"
+        ],
+        "materials_primary": "Rough-hewn stone",
+        "materials_secondary": "Dark, compacted earth or rock",
+        "materials_accents": "Pulsating red light from within the archway, subtle atmospheric luminescence",
+        "colors_dominant": "Dark gray and black in the stone structures and terrain",
+        "colors_secondary": "Muted blues and teals in the atmospheric mist and background",
+        "colors_accents": "Vivid, intense red from the central archway",
+        "colors_ambient": "Cool blue-gray",
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center, background",
+            "description": "Imposing archway with bright red interior glow"
+          },
+          {
+            "type": "stairs",
+            "position": "center, background",
+            "description": "Stairs leading up into the glowing archway"
+          },
+          {
+            "type": "object",
+            "position": "center, background, within archway",
+            "description": "Illuminated, tree-like structure inside the tomb"
+          }
+        ],
+        "searchDesc": "Alien tomb entrance. Has: archway (center, background), stairs (center, background), illuminated object (center, background)",
+        "dna": {
+          "architectural_tone": "monumental, imposing, tomb-like",
+          "cultural_tone": null,
+          "materials_base": "rough-hewn stone, dark compacted earth/rock",
+          "mood_baseline": "somber, imposing, ancient",
+          "palette_bias": "dark grays, blacks, muted blues and teals",
+          "soundscape_base": "low resonant drones, wind in vast chambers",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-gigeresque-sepulchre"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/wu0A5jSR6K9xOfUpdWHwo.jpg",
+      "focus": {
+        "node_id": "The Gigeresque Sepulchre",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -3512,9 +4040,77 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762863048950-b0v7ubob6",
+      "type": "host",
+      "children": [
+        {
+          "id": "8c46a6a3-0d1e-4c20-82c0-4780d9388bda",
+          "type": "region",
+          "children": [
+            {
+              "id": "54186c8f-b4b4-4562-b214-30f54f4bb3d4",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762863267259-zek7n92re",
+      "type": "host",
+      "children": [
+        {
+          "id": "bba36607-98a5-41fc-ac7d-00cfae2bb24b",
+          "type": "region",
+          "children": [
+            {
+              "id": "ee2650e6-56ae-4c1b-81d0-24eec497cc89",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762863404639-373b67ye6",
+      "type": "host",
+      "children": [
+        {
+          "id": "53e66a47-482c-43b3-917b-959147154ccb",
+          "type": "region",
+          "children": [
+            {
+              "id": "364651a2-4b33-4578-8e39-cea803ab5dd8",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762863552742-uia91wrw1",
+      "type": "host",
+      "children": [
+        {
+          "id": "c1feac82-cbf5-4a90-9def-1f5c2756be14",
+          "type": "region",
+          "children": [
+            {
+              "id": "f5879e60-40fb-4927-b1f9-f81ebcad4d12",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1762862091010-7gamwlum9"
+    "loc-1762863552742-uia91wrw1"
   ]
 }
