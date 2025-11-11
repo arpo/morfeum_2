@@ -13,7 +13,8 @@ import { fluxInstructionsShort } from '../shared/constants';
 export function nicheImagePrompt(
   context: NavigationContext,
   intent: IntentResult,
-  decision: NavigationDecision
+  decision: NavigationDecision,
+  navigationFeatures?: string
 ): string {
   // Build descriptors only from non-empty values
   const descriptors: string[] = [];
@@ -83,6 +84,40 @@ export function nicheImagePrompt(
     }
   }
 
+  // Build navigation guidance based on parameter
+  let navigationGuidance = '';
+  
+  if (!navigationFeatures) {
+    // DEFAULT: Require SPECIFIC navigation features
+    navigationGuidance = `
+NAVIGATION & SPATIAL FEATURES (REQUIRED - include 3-4 SPECIFIC features):
+Be CONCRETE and DETAILED. Avoid vague descriptions.
+
+SPECIFICITY REQUIREMENTS:
+✅ Good: "3-meter-wide side corridor branching left at 45 degrees, grated metal floor visible, warm orange glow from interior"
+✅ Good: "Rusted metal ladder on right wall ascending to upper maintenance catwalk 6 meters up, with visible access hatch"
+✅ Good: "Large circular vent opening ahead-right, 2m diameter, glowing interior visible with steam wisps"
+
+❌ Bad: "narrow side passages"
+❌ Bad: "some doorways"  
+❌ Bad: "architectural details"
+
+CHOOSE 3-4 SPECIFIC FEATURES:
+- EXACT corridor/passage: Specify width, direction, angle, what's visible inside
+- EXACT platform/walkway: Specify height, side (left/right), material, destination
+- EXACT stairs/ladder: Specify location, direction (up/down), material, where it leads
+- EXACT machinery/panel: Specify size, exact position, type, condition
+- EXACT opening/vent: Specify size, shape, position, what's visible through it
+- EXACT conduits/pipes: Specify diameter, routing path, material, quantity`;
+  } else {
+    // CUSTOM: Use provided description exactly
+    navigationGuidance = `
+CUSTOM NAVIGATION FEATURES (REQUIRED):
+${navigationFeatures}
+
+Integrate these specific features into the scene naturally.`;
+  }
+
   const prompt = `You are an expert at creating image prompts for FLUX image generation.
 
 ${decision.reasoning ? `CONTEXT: ${decision.reasoning}` : ''}
@@ -146,23 +181,59 @@ HOW TO USE PARENT LOCATION DETAILS - CRITICAL TRANSFORMATION RULES:
 REASONING TEST: For each parent element, ask "Would this logically exist inside this structure?"
 
 ${fluxInstructionsShort}
+${navigationGuidance}
 
-EXPLORATION & NAVIGATION (context-dependent):
-- If space description suggests it's exploratory/transitional: show clear walkable path forward with depth
-- If space description suggests it's a dead-end/terminal room: focus on the contained space itself
-- Navigation features (doorways, passages, stairs, architectural details) should only be included IF contextually appropriate
-  * Include when: space suggests progression, multiple rooms, corridors, complexity
-  * Omit when: space is clearly a dead-end chamber, small alcove, confined terminal room
-- Create sense of depth and spatial interest appropriate to the space type
+COMPOSITION LAYERING (MANDATORY - Your output MUST include all three layers):
+
+FOREGROUND (0-3 meters from camera):
+- Immediate floor/ground surface details and texture
+- Close architectural elements within arm's reach
+- Near-side wall surfaces and details
+- Anything you could touch from the camera position
+
+MIDGROUND (3-10 meters):
+- Navigation features (corridors, stairs, platforms, passages)
+- Architectural details (machinery, panels, conduits, vents)
+- Main structural elements
+- Spatial transitions and connections
+
+BACKGROUND (10+ meters / far distance):
+- Where the space continues or ends
+- Distant lighting and atmospheric effects
+- Far end of corridor/chamber/passage
+- Depth and spatial extent
+
+CRITICAL: Each layer must be explicitly described SEPARATELY in your final output.
+Do NOT combine or skip layers. Use clear spatial organization.
 
 REQUIREMENTS:
 1. The entrance/threshold is BEHIND the camera - show the immediate entry view
 2. Maintain consistent space type (interior OR exterior, no mixing)
 3. Only include elements that would logically exist in this type of space (use transformation rules above)
 4. Composition should be engaging with slight asymmetry, avoiding both extreme offset and pure symmetry
+5. MUST include separate foreground, midground, and background descriptions
 
-OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
-The prompt should describe what we see immediately after stepping inside.`;
+NAVIGABLE ELEMENTS MARKING (Required):
+When describing navigable features in your scene, mark them inline using this natural format:
+
+[description of element] (navigable: [type], [position])
+
+TYPE OPTIONS:
+- passage, corridor, stairs, ladder, ramp, platform, walkway, opening, hatch, door, object
+
+POSITION: Natural language describing side and layer
+- Examples: "left side, midground" | "right wall, foreground" | "ahead, background" | "center, midground"
+
+EXAMPLES:
+✅ "A large circular vent, 2 meters in diameter, emits warm orange light from the right wall (navigable: opening, right wall, midground)."
+✅ "To the left, a rusted metal ladder (navigable: ladder, left wall, midground) ascends along the curved wall."
+✅ "A narrow corridor branches left at 30 degrees (navigable: corridor, left side, midground), with grated metal floor."
+✅ "The corroded metal floor features drainage grates (navigable: object, center, foreground) with bioluminescent moss."
+
+CRITICAL: Mark 3-4 navigable elements inline. These will later be extracted by an LLM to generate structured navigation data.
+Make positions consistent with your description - if you write "left", mark it "left side" or "left wall", not "right".
+
+OUTPUT: Return a detailed image prompt for FLUX with clear foreground/midground/background organization and inline navigable element markers.`;
 
   console.log(
     '\n\n-------- Prompt-----------\n', 
