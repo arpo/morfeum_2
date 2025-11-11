@@ -14,8 +14,8 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
   
   // Must be at a location (exterior) to go inside
   if (currentNode.type === 'location') {
-    // Find entrance from dominantElements
-    const entrance = findEntrance(context);
+    // Prioritize intent.target from smart selection, fall back to findEntrance helper
+    const entrance = intent.target || findEntrance(context);
     
     return {
       action: 'create_niche',

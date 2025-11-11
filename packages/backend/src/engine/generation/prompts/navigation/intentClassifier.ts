@@ -16,6 +16,7 @@ export interface IntentClassifierRequest {
       description: string;
     }>;
     dominantElements?: string[];
+    uniqueIdentifiers?: string[];
   };
 }
 
@@ -41,17 +42,20 @@ export function intentClassifierPrompt(request: IntentClassifierRequest): string
     contextString += `\n- Search Description: ${currentNode.searchDesc}`;
   }
 
-  // Add navigable elements if available
+  // Add unique identifiers if available
+  if (currentNode.uniqueIdentifiers && currentNode.uniqueIdentifiers.length > 0) {
+    const identifiers = currentNode.uniqueIdentifiers.join(', ');
+    contextString += `\n- Unique Identifiers: ${identifiers}`;
+  }
+
+  // Add navigable elements with full details if available
   if (currentNode.navigableElements && currentNode.navigableElements.length > 0) {
-    const spaces = currentNode.navigableElements
-      .map(el => el.type)
-      .filter(Boolean)
+    const elements = currentNode.navigableElements
       .slice(0, 8) // Limit to 8 to keep prompt concise
-      .join(', ');
+      .map(el => `${el.type}: ${el.description} (${el.position})`)
+      .join('; ');
     
-    if (spaces) {
-      contextString += `\n- Available Spaces: ${spaces}`;
-    }
+    contextString += `\n- Navigable Elements: ${elements}`;
   }
 
   // Add dominant elements if available (helps with LOOK_AT disambiguation)
@@ -136,6 +140,34 @@ OUTPUT FORMAT (JSON only, no markdown, no explanation):
   "confidence": 0.0-1.0
 }
 
+SMART ELEMENT SELECTION (for GO_INSIDE intent only):
+When intent is GO_INSIDE, you must select the MOST APPROPRIATE element to enter.
+
+PRIORITIZE (in order):
+1. Buildings, structures from Unique Identifiers or Visible Elements
+2. Elements with Navigable Elements type="window" or "door" (implies building with interior)
+3. Elements containing keywords: building, structure, room, house, tower, hall, chamber, temple, cabin, dwelling, resort, facility
+
+AVOID as primary entry points:
+- Water features (pool, fountain, stream, pond) - not enterable interior spaces
+- Vegetation (trees, plants, foliage, palms) - cannot enter these
+- Small objects (furniture, chairs, umbrellas, loungers) - not spaces
+- Purely decorative foreground elements
+- Terraces, patios, pathways (unless specifically entering an enclosed structure on them)
+
+EXAMPLE:
+Unique Identifiers: "Overgrown resort architecture with classical elements", "Freeform swimming pool with bright turquoise underwater lighting"
+Visible Elements: "Curving swimming pool with turquoise illumination (foreground/midground)", "Classical resort buildings with balconies and columns (midground/background)"
+Navigable Elements: window: Illuminated windows in resort structures (midground buildings)
+
+User: "enter"
+Analysis: 
+- Pool = water feature, NOT enterable interior
+- Resort buildings = actual structures with windows, CAN enter
+Result: {"intent":"GO_INSIDE","target":"Classical resort buildings with balconies and columns","spaceType":"interior","confidence":0.95}
+
+Return the selected element description in the "target" field.
+
 SPACE TYPE CLASSIFICATION (for GO_INSIDE intent only):
 When intent is GO_INSIDE, analyze the description and search description to determine what type of space the user will be entering:
 
@@ -170,8 +202,8 @@ User: "Go inside"
 {"intent":"GO_INSIDE","target":null,"direction":null,"spaceType":"unknown","confidence":1.0}
 
 User: "enter"
-Context: Search Description contains "[Location - Exterior]", Description mentions "cylindrical structures" with "openings"
-{"intent":"GO_INSIDE","target":null,"direction":null,"spaceType":"interior","confidence":1.0}
+Context: Unique Identifiers contains "Overgrown resort architecture", Visible Elements contains "Classical resort buildings with balconies and columns (midground/background)", Navigable Elements contains "window: Illuminated windows in resort structures"
+{"intent":"GO_INSIDE","target":"Classical resort buildings with balconies and columns","direction":null,"spaceType":"interior","confidence":0.95}
 
 User: "Look at the painting on the wall"
 {"intent":"LOOK_AT","target":"painting","direction":null,"confidence":0.95}

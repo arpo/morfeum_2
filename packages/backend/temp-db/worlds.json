@@ -2625,6 +2625,189 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762858416096-824etylbd": {
+      "id": "loc-1762858416096-824etylbd",
+      "type": "host",
+      "name": "Jordan",
+      "dna": {
+        "type": "host",
+        "name": "Jordan",
+        "description": "A country rich in history and ancient wonders.",
+        "dna": {
+          "genre": "historical",
+          "architectural_tone": "monumental sandstone carving, ancient grandeur",
+          "cultural_tone": "A civilization deeply connected to stone and arid landscapes, focused on enduring monuments and spiritual significance.",
+          "materials_base": "Primarily sandstone, with an emphasis on natural rock textures and the artistry of subtractive sculpting.  Think weathered stone and the earth itself as the medium.",
+          "mood_baseline": "timeless, awe-inspiring, spiritual",
+          "palette_bias": "Earthy tones dominated by warm desert hues.  Expect sun-baked ochres, deep tans, and subtle sandy beiges, all influenced by natural light.",
+          "soundscape_base": "Echoes of vast, open spaces punctuated by the whisper of wind.  A sense of quietude and the absence of modern noise.",
+          "flora_base": "Sparse desert vegetation adapted to arid conditions.  Tough, resilient plants like hardy shrubs and succulents may be present.",
+          "fauna_base": "Arid-adapted desert creatures.  Think small, resilient animals that can survive harsh, dry environments."
+        },
+        "slug": "jordan"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Jordan",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "10c6e1c4-7411-40c4-b6bb-7e0f24552a4a": {
+      "id": "10c6e1c4-7411-40c4-b6bb-7e0f24552a4a",
+      "type": "region",
+      "name": "Petra",
+      "dna": {
+        "type": "region",
+        "name": "Petra",
+        "description": "An ancient city carved into sandstone cliffs, renowned for its rock-cut architecture.",
+        "dna": {
+          "architectural_tone": "Hellenistic-influenced sandstone carving, monumental cliff-face structures",
+          "cultural_tone": "The heart of an ancient Nabataean city, known for its elaborate rock-cut architecture and its role as a crucial trade nexus.",
+          "materials_base": "Dominated by the unique, naturally colored sandstone of the region, carved into intricate facades and subterranean chambers. The rock is both the medium and the canvas.",
+          "mood_baseline": "mysterious, grand, sacred",
+          "palette_bias": "Warm, sun-drenched desert palette, with sandstone providing a base of rich oranges, tans, and sandy yellows, enhanced by the desert sun.",
+          "soundscape_base": "The murmur of wind through narrow canyons and the vast silence of stone. Distant echoes of human presence.",
+          "flora_base": "Extremely sparse, drought-resistant desert flora clinging to crevices.  Minimal vegetation due to the arid, rocky environment.",
+          "fauna_base": "Desert rodents, reptiles, and birds of prey adapted to high desert conditions.  Limited and hardy fauna."
+        },
+        "slug": "petra"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Petra",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "259008c0-49f5-4195-bbde-ad54a511b239": {
+      "id": "259008c0-49f5-4195-bbde-ad54a511b239",
+      "type": "location",
+      "name": "The Treasury",
+      "dna": {
+        "type": "location",
+        "name": "The Treasury",
+        "description": "The iconic facade carved directly into the sandstone mountain.",
+        "looks": "The image showcases an elaborate facade meticulously carved into a sandstone cliff face. Towering columns support an ornate pediment, above which intricate architectural details suggest a Hellenistic design. Sculptural figures are visible within niches, adding to the facade's complexity. The sheer scale of the structure, dwarfing the small figures at its base, emphasizes its monumental nature. The rock surrounding the carved facade exhibits natural erosion patterns, contrasting with the precise stonework.",
+        "atmosphere": "The air appears clear and dry, with a haze illuminated by the warm light sources. The vastness of the open space and the texture of the rock suggest a sun-baked environment. The scene evokes a sense of quiet grandeur, despite the presence of distant figures.",
+        "mood": "Awe-inspiring, monumental",
+        "lighting": "The scene is dramatically lit by warm, orange light, casting deep shadows and highlighting the carved textures of the sandstone. The light source appears to be at ground level, creating a strong upward illumination that accentuates the facade's features. The contrast between the illuminated areas and the dark crevices of the rock is high.",
+        "dominantElements": [
+          "Elaborate carved sandstone facade (center)",
+          "Towering columns (foreground, center)",
+          "Rock cliff face (surrounding the facade)",
+          "Line of candles (foreground, center)"
+        ],
+        "spatialLayout": "The facade is centrally positioned within the frame, set against a towering rock face. The foreground is a sandy expanse leading to the structure, framed by the dark, imposing walls of a canyon on either side. The composition creates a sense of depth, drawing the viewer's eye from the foreground towards the intricate details of the carved monument.",
+        "uniqueIdentifiers": [
+          "Rock-cut architecture",
+          "Elaborate Hellenistic facade",
+          "Canyon setting"
+        ],
+        "materials_primary": "Sandstone",
+        "materials_secondary": "Rock",
+        "materials_accents": "Flames",
+        "colors_dominant": "Orange (from illumination)",
+        "colors_secondary": "Beige, Tan (sandstone hues)",
+        "colors_accents": "Deep red, Black (shadows)",
+        "colors_ambient": "Warm, golden",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Dark, rectangular opening at the base of the facade."
+          },
+          {
+            "type": "object",
+            "position": "foreground, center",
+            "description": "Array of small, lit candles creating a glowing line."
+          }
+        ],
+        "searchDesc": "Facade carved into rock. Has: dark door (center, midground), line of candles (foreground, center)",
+        "dna": {
+          "architectural_tone": "Elaborate Hellenistic facade, meticulously carved sandstone",
+          "cultural_tone": "A monumental tomb or temple, showcasing peak Nabataean artistry and a blend of cultural influences.",
+          "materials_base": "Precisely carved sandstone, highlighting intricate details and the natural strata of the rock face.",
+          "mood_baseline": "majestic, awe-inspiring, iconic",
+          "palette_bias": "Intensified warm sandstone hues, with strong contrasts created by the sun's upward angle.",
+          "soundscape_base": "The hushed reverence of visitors, the soft echo of footsteps on stone, and the ever-present wind.",
+          "flora_base": "None directly associated with the facade, potentially sparse desert scrub at the base.",
+          "fauna_base": "None directly associated, potentially small desert insects or birds in the vicinity."
+        },
+        "slug": "the-treasury"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/6ziHXqwiGTB3bXZ_aL6qU.jpg",
+      "focus": {
+        "node_id": "The Treasury",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "92592c4c-e384-4bde-9ed1-8b6d3306b15b": {
+      "id": "92592c4c-e384-4bde-9ed1-8b6d3306b15b",
+      "type": "location",
+      "name": "The Monastery (Ad Deir)",
+      "dna": {
+        "type": "location",
+        "name": "The Monastery (Ad Deir)",
+        "description": "A massive monument carved high into the cliffs, larger than The Treasury.",
+        "looks": "Grand, imposing facade with fewer ornate carvings than The Treasury but immense scale.",
+        "atmosphere": "Wind-swept heights, panoramic views, sense of remoteness.",
+        "mood": "Majestic, serene",
+        "dna": {
+          "architectural_tone": "Massive, imposing rock-cut monument, simpler yet grander than The Treasury",
+          "cultural_tone": "A colossal structure likely used for religious gatherings or as a memorial, emphasizing scale and spiritual importance.",
+          "materials_base": "Hewn directly from the cliff face, showcasing the raw power of stone carving and the natural beauty of the sandstone.",
+          "mood_baseline": "monumental, solitary, spiritual",
+          "palette_bias": "Expansive warm sandstone tones, influenced by high-altitude desert light.",
+          "soundscape_base": "The vastness of the high desert, amplified by wind and the isolation of the location. A profound sense of quiet.",
+          "flora_base": "Sparse, hardy desert plants in the surrounding rocky terrain.",
+          "fauna_base": "High-altitude desert birds of prey, lizards, and small mammals."
+        },
+        "slug": "the-monastery-ad-deir"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Monastery (Ad Deir)",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "78f91f75-fd62-4d3e-801a-83381a08b649": {
+      "id": "78f91f75-fd62-4d3e-801a-83381a08b649",
+      "type": "location",
+      "name": "The Siq",
+      "dna": {
+        "type": "location",
+        "name": "The Siq",
+        "description": "The narrow, winding gorge that serves as the main entrance to Petra.",
+        "looks": "Towering sandstone walls, twisting path, shafts of light breaking through the narrow opening.",
+        "atmosphere": "Cool, shadowed air, the sound of footsteps echoing, anticipation building.",
+        "mood": "Mysterious, dramatic",
+        "dna": {
+          "architectural_tone": "Natural geological formation, smoothed by time and elements, with carved water channels",
+          "cultural_tone": "The primary sacred pathway leading into the city, a journey of anticipation and natural wonder.",
+          "materials_base": "Eroded sandstone walls, sculpted by water and wind, with evidence of ancient water management systems.",
+          "mood_baseline": "enveloping, mysterious, sacred",
+          "palette_bias": "Shifting, dappled desert light creating a dynamic interplay of warm, earthy tones and shadowed depths.",
+          "soundscape_base": "The amplified echoes of footsteps and voices, the rushing sound of wind in the narrow passage, and the distant sounds of the city.",
+          "flora_base": "Occasional hardy desert plants and mosses clinging to damp crevices.",
+          "fauna_base": "Small desert insects, bats in shaded areas, and possibly small rodents."
+        },
+        "slug": "the-siq"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Siq",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -3004,10 +3187,34 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762858416096-824etylbd",
+      "type": "host",
+      "children": [
+        {
+          "id": "10c6e1c4-7411-40c4-b6bb-7e0f24552a4a",
+          "type": "region",
+          "children": [
+            {
+              "id": "259008c0-49f5-4195-bbde-ad54a511b239",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "92592c4c-e384-4bde-9ed1-8b6d3306b15b",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "78f91f75-fd62-4d3e-801a-83381a08b649",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
-  "pinnedIds": [
-    "loc-1762504431455-0zjmciq3h",
-    "loc-1762524073694-9pmf6mjfl"
-  ]
+  "pinnedIds": []
 }

@@ -4,6 +4,15 @@
 The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
+- **Smart Intent Classifier** (Nov 11, 2025): Intelligent element selection for navigation
+  - Enhanced intent classifier to prioritize enterable structures over decorative elements
+  - Added `uniqueIdentifiers` to context for better decision making
+  - Navigable elements now include full details (type, description, position)
+  - Prioritizes buildings/structures with windows/doors when entering locations
+  - Avoids water features, vegetation, small objects as primary entry points
+  - Handler updated to use `intent.target` from smart selection
+  - Example: "enter" at resort now selects buildings instead of swimming pool
+
 - **Niche Image Prompt Enhancement** (Nov 11, 2025): Significantly improved FLUX prompt generation
   - Added requirement for 3-4 specific, concrete navigation features (no vague descriptions)
   - Implemented mandatory foreground/midground/background composition layering

@@ -43,6 +43,12 @@
 - [x] Console log cleanup (removed 56+ spam logs)
 - [x] Backend path resolution fix (__dirname)
 - [x] SSE error handling (prevents unhandled error crashes)
+- [x] Smart intent classifier (Nov 11, 2025)
+  - Intelligent element selection for GO_INSIDE navigation
+  - Prioritizes enterable structures over decorative elements
+  - Uses uniqueIdentifiers and navigableElements for context
+  - Avoids water features, vegetation, small objects as entry points
+  - Handler updated to respect intent.target from smart selection
 - [x] Niche image prompt system (Nov 11, 2025)
   - Specific navigation features requirement (3-4 concrete features)
   - Mandatory composition layering (foreground/midground/background)
