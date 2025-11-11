@@ -105,3 +105,104 @@ export function extractEntranceElement(reasoning?: string): string {
   
   return 'this structure';
 }
+
+/**
+ * Parent structure analysis section for interior prompts
+ */
+export function buildParentStructureAnalysis(
+  entranceElement: string,
+  looks?: string
+): string {
+  return `PARENT STRUCTURE ANALYSIS (CRITICAL):
+You entered through: "${entranceElement}"
+
+${looks ? `Parent structure appearance: "${looks}"` : ''}
+
+BEFORE creating the interior, analyze the parent structure's FORM:
+
+1. SHAPE ANALYSIS
+   What is the overall geometric form?
+   - Circular/round → Interior must have circular floor plan
+   - Rectangular/square → Interior must have straight walls with corners
+   - Cylindrical/tubular → Interior must have curved walls (like inside a pipe)
+   - Geodesic/faceted → Interior must show geometric framework
+   - Irregular/organic → Interior must have natural, uneven surfaces
+
+2. CEILING/ROOF ANALYSIS
+   What type of ceiling would this structure have inside?
+   - Domed roof → Domed ceiling overhead
+   - Flat roof → Flat ceiling
+   - Vaulted roof → Vaulted ceiling
+   - Peaked/pitched roof → Angled ceiling following roof line
+   - Geodesic dome → Visible geodesic framework overhead
+   - Arched structure → Arched ceiling
+
+3. SCALE & PROPORTION
+   Match the interior scale to the exterior description
+   - Compact/small → Intimate interior space
+   - Large/expansive → Spacious interior
+   - Towering/tall → High ceilings
+
+CRITICAL: The interior architecture MUST directly reflect these analyzed characteristics.
+You are literally INSIDE the structure described above.`;
+}
+
+/**
+ * Interior space rules section
+ */
+export function buildInteriorSpaceRules(entranceElement: string): string {
+  return `CRITICAL - THIS IS AN INTERIOR SPACE:
+- Show enclosed space with ceiling/roof overhead
+- Interior lighting (ambient, artificial light, or light from windows/vents)
+- Walls and interior architecture visible
+- No open sky visible (unless through small windows/openings)
+- Interior architecture must match the form of "${entranceElement}"`;
+}
+
+/**
+ * Perspective and framing section
+ */
+export function buildPerspectiveFraming(): string {
+  return `PERSPECTIVE & FRAMING:
+- Camera position: Just past the entrance threshold (1-2 meters inside)
+- View: Straight ahead showing the immediate entry view - what you first see when stepping in
+- Composition: Entrance-view perspective with slight asymmetry for visual interest
+  * Avoid extreme diagonal offset or purely symmetric tunnel view
+  * Main space/path visible ahead with interesting details on sides for depth
+- Camera: Wide-angle (24-35mm equivalent), eye-level
+- The entrance is BEHIND the camera - do not show it`;
+}
+
+/**
+ * Transformation rules for interior spaces
+ */
+export function buildTransformationRules(): string {
+  return `HOW TO USE PARENT LOCATION DETAILS - CRITICAL TRANSFORMATION RULES:
+
+✓ INCLUDE (transformed for interior):
+- Materials & colors → Apply to interior surfaces, walls, ceiling, floor
+- Architectural style → Adapt to interior architecture and structure
+- Atmosphere & mood → Maintain similar emotional feel
+- Lighting hints → Transform to interior light sources
+
+✗ DO NOT INCLUDE (unless contextually logical):
+- Exterior waterways/streams → Only if it's a logical interior feature (fountain, pool, drainage channel)
+- Overgrown vegetation → Only sparse interior plants if contextually appropriate (hydroponics, garden room, etc.)
+- Open landscapes → Replace with enclosed spatial elements
+- Sky/outdoor ambient light → Transform to interior lighting sources (fixtures, windows, bioluminescence)
+- Weather elements (mist, fog) → Only if it makes sense indoors (steam, smoke from vents, etc.)
+
+REASONING TEST: For each parent element, ask "Would this logically exist inside this structure?"`;
+}
+
+/**
+ * Requirements section
+ */
+export function buildRequirements(): string {
+  return `REQUIREMENTS:
+1. The entrance/threshold is BEHIND the camera - show the immediate entry view
+2. Maintain consistent space type (interior OR exterior, no mixing)
+3. Only include elements that would logically exist in this type of space (use transformation rules above)
+4. Composition should be engaging with slight asymmetry, avoiding both extreme offset and pure symmetry
+5. MUST include separate foreground, midground, and background descriptions`;
+}

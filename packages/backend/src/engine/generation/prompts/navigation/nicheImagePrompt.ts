@@ -15,7 +15,14 @@ import {
 } from '../shared/contextBuilders';
 import {
   buildNavigationGuidance,
-  extractEntranceElement
+  extractEntranceElement,
+  buildParentStructureAnalysis,
+  buildInteriorSpaceRules,
+  buildPerspectiveFraming,
+  buildTransformationRules,
+  buildCompositionLayering,
+  buildNavigableElementsInstructions,
+  buildRequirements,
 } from '../shared/promptSections';
 
 /**
@@ -44,8 +51,15 @@ export function nicheImagePrompt(
   // Extract entrance element
   const entranceElement = extractEntranceElement(decision.reasoning);
   
-  // Build navigation guidance
+  // Build all prompt sections using shared utilities
+  const parentAnalysis = buildParentStructureAnalysis(entranceElement, context.currentNode.data.looks);
+  const interiorRules = buildInteriorSpaceRules(entranceElement);
+  const perspective = buildPerspectiveFraming();
+  const transformRules = buildTransformationRules();
   const navigationGuidance = buildNavigationGuidance(navigationFeatures);
+  const composition = buildCompositionLayering('interior');
+  const requirements = buildRequirements();
+  const navigableInstructions = buildNavigableElementsInstructions();
 
   const prompt = `You are an expert at creating image prompts for FLUX image generation.
 
@@ -58,38 +72,7 @@ ${decision.reasoning ? `CONTEXT: ${decision.reasoning}` : ''}
 This is an INTERIOR space - you are literally INSIDE the structure mentioned above.
 The interior architecture MUST reflect the form and nature of what you entered.
 
-PARENT STRUCTURE ANALYSIS (CRITICAL):
-You entered through: "${entranceElement}"
-
-${context.currentNode.data.looks ? `Parent structure appearance: "${context.currentNode.data.looks}"` : ''}
-
-BEFORE creating the interior, analyze the parent structure's FORM:
-
-1. SHAPE ANALYSIS
-   What is the overall geometric form?
-   - Circular/round → Interior must have circular floor plan
-   - Rectangular/square → Interior must have straight walls with corners
-   - Cylindrical/tubular → Interior must have curved walls (like inside a pipe)
-   - Geodesic/faceted → Interior must show geometric framework
-   - Irregular/organic → Interior must have natural, uneven surfaces
-
-2. CEILING/ROOF ANALYSIS
-   What type of ceiling would this structure have inside?
-   - Domed roof → Domed ceiling overhead
-   - Flat roof → Flat ceiling
-   - Vaulted roof → Vaulted ceiling
-   - Peaked/pitched roof → Angled ceiling following roof line
-   - Geodesic dome → Visible geodesic framework overhead
-   - Arched structure → Arched ceiling
-
-3. SCALE & PROPORTION
-   Match the interior scale to the exterior description
-   - Compact/small → Intimate interior space
-   - Large/expansive → Spacious interior
-   - Towering/tall → High ceilings
-
-CRITICAL: The interior architecture MUST directly reflect these analyzed characteristics.
-You are literally INSIDE the structure described above.
+${parentAnalysis}
 
 PARENT LOCATION CONTEXT (reference for materials/style only):
 Name: "${context.currentNode.name}"
@@ -97,91 +80,20 @@ ${descriptors.join('\n')}
 
 ${dnaDescriptors.length > 0 ? `INHERITED STYLE & ATMOSPHERE (use as guidance):\n${dnaDescriptors.join('\n')}` : ''}
 
-CRITICAL - THIS IS AN INTERIOR SPACE:
-- Show enclosed space with ceiling/roof overhead
-- Interior lighting (ambient, artificial light, or light from windows/vents)
-- Walls and interior architecture visible
-- No open sky visible (unless through small windows/openings)
-- Interior architecture must match the form of "${entranceElement}"
+${interiorRules}
 
-PERSPECTIVE & FRAMING:
-- Camera position: Just past the entrance threshold (1-2 meters inside)
-- View: Straight ahead showing the immediate entry view - what you first see when stepping in
-- Composition: Entrance-view perspective with slight asymmetry for visual interest
-  * Avoid extreme diagonal offset or purely symmetric tunnel view
-  * Main space/path visible ahead with interesting details on sides for depth
-- Camera: Wide-angle (24-35mm equivalent), eye-level
-- The entrance is BEHIND the camera - do not show it
+${perspective}
 
-HOW TO USE PARENT LOCATION DETAILS - CRITICAL TRANSFORMATION RULES:
-
-✓ INCLUDE (transformed for interior):
-- Materials & colors → Apply to interior surfaces, walls, ceiling, floor
-- Architectural style → Adapt to interior architecture and structure
-- Atmosphere & mood → Maintain similar emotional feel
-- Lighting hints → Transform to interior light sources
-
-✗ DO NOT INCLUDE (unless contextually logical):
-- Exterior waterways/streams → Only if it's a logical interior feature (fountain, pool, drainage channel)
-- Overgrown vegetation → Only sparse interior plants if contextually appropriate (hydroponics, garden room, etc.)
-- Open landscapes → Replace with enclosed spatial elements
-- Sky/outdoor ambient light → Transform to interior lighting sources (fixtures, windows, bioluminescence)
-- Weather elements (mist, fog) → Only if it makes sense indoors (steam, smoke from vents, etc.)
-
-REASONING TEST: For each parent element, ask "Would this logically exist inside this structure?"
+${transformRules}
 
 ${fluxInstructionsShort}
 ${navigationGuidance}
 
-COMPOSITION LAYERING (MANDATORY - Your output MUST include all three layers):
+${composition}
 
-FOREGROUND (0-3 meters from camera):
-- Immediate floor/ground surface details and texture
-- Close architectural elements within arm's reach
-- Near-side wall surfaces and details
-- Anything you could touch from the camera position
+${requirements}
 
-MIDGROUND (3-10 meters):
-- Navigation features (corridors, stairs, platforms, passages)
-- Architectural details (machinery, panels, conduits, vents)
-- Main structural elements
-- Spatial transitions and connections
-
-BACKGROUND (10+ meters / far distance):
-- Where the space continues or ends
-- Distant lighting and atmospheric effects
-- Far end of corridor/chamber/passage
-- Depth and spatial extent
-
-CRITICAL: Each layer must be explicitly described SEPARATELY in your final output.
-Do NOT combine or skip layers. Use clear spatial organization.
-
-REQUIREMENTS:
-1. The entrance/threshold is BEHIND the camera - show the immediate entry view
-2. Maintain consistent space type (interior OR exterior, no mixing)
-3. Only include elements that would logically exist in this type of space (use transformation rules above)
-4. Composition should be engaging with slight asymmetry, avoiding both extreme offset and pure symmetry
-5. MUST include separate foreground, midground, and background descriptions
-
-NAVIGABLE ELEMENTS MARKING (Required):
-When describing navigable features in your scene, mark them inline using this natural format:
-
-[description of element] (navigable: [type], [position])
-
-TYPE OPTIONS:
-- passage, corridor, stairs, ladder, ramp, platform, walkway, opening, hatch, door, object
-
-POSITION: Natural language describing side and layer
-- Examples: "left side, midground" | "right wall, foreground" | "ahead, background" | "center, midground"
-
-EXAMPLES:
-✅ "A large circular vent, 2 meters in diameter, emits warm orange light from the right wall (navigable: opening, right wall, midground)."
-✅ "To the left, a rusted metal ladder (navigable: ladder, left wall, midground) ascends along the curved wall."
-✅ "A narrow corridor branches left at 30 degrees (navigable: corridor, left side, midground), with grated metal floor."
-✅ "The corroded metal floor features drainage grates (navigable: object, center, foreground) with bioluminescent moss."
-
-CRITICAL: Mark 3-4 navigable elements inline. These will later be extracted by an LLM to generate structured navigation data.
-Make positions consistent with your description - if you write "left", mark it "left side" or "left wall", not "right".
+${navigableInstructions}
 
 OUTPUT: Return a detailed image prompt for FLUX with clear foreground/midground/background organization and inline navigable element markers.`;
 
