@@ -211,6 +211,42 @@ Backend (nested) → extractCleanDNA → Store (clean)
 Store → getCascadedDNA → getMergedDNA → Backend LLM (merged)
 ```
 
+## Image Prompt Generation Patterns
+
+### Niche Image Prompt System
+Location: `packages/backend/src/engine/generation/prompts/navigation/nicheImagePrompt.ts`
+
+**Purpose**: Generate FLUX image prompts for interior spaces when entering locations
+
+**Key Features**:
+- **Specific Navigation Requirements**: 3-4 concrete features (no vague descriptions)
+- **Mandatory Layering**: Foreground (0-3m), Midground (3-10m), Background (10m+)
+- **Inline Navigable Markers**: `(navigable: type, position)` format
+- **Architectural Form Matching**: Interior matches entrance structure type
+
+**Marker Format**:
+```
+[description] (navigable: [type], [position])
+```
+
+**Example**:
+```
+A large circular vent, 2 meters in diameter, emits warm orange light from the right wall (navigable: opening, right wall, midground).
+```
+
+**Marker Placement**: End of description for natural flow and easy LLM extraction
+
+**Type Options**: passage, corridor, stairs, ladder, ramp, platform, walkway, opening, hatch, door, object
+
+**Position Format**: Natural language like "left wall, midground" | "center, foreground" | "ahead, background"
+
+**Flexibility**: Optional `navigationFeatures` parameter for custom or default guidance
+
+**Extraction Flow**:
+```
+FLUX Prompt with inline markers → LLM extraction → Structured JSON navigableElements
+```
+
 ## Navigation System Patterns
 
 ### Two-Step Architecture

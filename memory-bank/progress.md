@@ -43,6 +43,11 @@
 - [x] Console log cleanup (removed 56+ spam logs)
 - [x] Backend path resolution fix (__dirname)
 - [x] SSE error handling (prevents unhandled error crashes)
+- [x] Niche image prompt system (Nov 11, 2025)
+  - Specific navigation features requirement (3-4 concrete features)
+  - Mandatory composition layering (foreground/midground/background)
+  - Inline navigable element markers for LLM extraction
+  - Interior-focused with architectural form matching
 
 ## In Progress 🔄
 

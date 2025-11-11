@@ -4,6 +4,16 @@
 The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
+- **Niche Image Prompt Enhancement** (Nov 11, 2025): Significantly improved FLUX prompt generation
+  - Added requirement for 3-4 specific, concrete navigation features (no vague descriptions)
+  - Implemented mandatory foreground/midground/background composition layering
+  - Added inline navigable element markers: `(navigable: type, position)` format
+  - Markers placed at end of descriptions for natural flow
+  - Will be extracted by LLM later (no regex parsing needed)
+  - Ensures consistency between visual description and structured navigation data
+  - Interior-only focus with architectural form matching (cylindrical, rectangular, dome, etc.)
+  - Flexible `navigationFeatures` parameter for custom or default guidance
+
 - **SSE Error Handling Fix** (Nov 7, 2025): Resolved unhandled error crashes
   - Added error handlers to SSE endpoint (`spawn.ts`)
   - Added error handlers to eventEmitter service
