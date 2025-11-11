@@ -3957,6 +3957,420 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762868093071-r4fwk3f5x": {
+      "id": "loc-1762868093071-r4fwk3f5x",
+      "type": "host",
+      "name": "The Sea Realm",
+      "dna": {
+        "type": "host",
+        "name": "The Sea Realm",
+        "description": "A vast expanse of ocean and coastlines, where ancient powers manifest.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "monolithic ancient monumental",
+          "cultural_tone": "A realm where ancient, elemental forces are worshipped or embodied through immense, enduring structures. Societies are deeply tied to natural cycles and primal energies.",
+          "materials_base": "Primarily natural, colossal-scale materials like unworked stone, weathered rock formations, and vast bodies of water. Textures are rough, eroded, and deeply ingrained with time.",
+          "mood_baseline": "epic primal mystical",
+          "palette_bias": "Deep, resonant earth tones and oceanic blues, with strong contrasts between shadow and illuminated areas. Colors evoke the raw power of nature.",
+          "soundscape_base": "The constant, low rumble of natural forces – powerful winds, crashing waves, subterranean tremors. Echoes of forgotten songs and the hum of primal energy.",
+          "flora_base": "Hardy, ancient vegetation that clings to harsh surfaces – mosses, lichens, gnarled trees adapted to wind and salt spray. Massive, weathered trees.",
+          "fauna_base": "Mythical oceanic creatures, colossal sea serpents, colossal sea birds, or elemental beings tied to earth and water. Fauna are rare and awe-inspiring."
+        },
+        "slug": "the-sea-realm"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Sea Realm",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ffda2bf6-55d9-420a-8816-4b03f4955758": {
+      "id": "ffda2bf6-55d9-420a-8816-4b03f4955758",
+      "type": "region",
+      "name": "The Whispering Peninsula",
+      "dna": {
+        "type": "region",
+        "name": "The Whispering Peninsula",
+        "description": "A tropical headland where the wind carries ancient melodies.",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": "This peninsula is characterized by its unique integration of natural formations with deliberate, monumental carving, intended to channel or resonate with elemental sounds.",
+          "materials_base": "The stone of the cliffs themselves becomes the primary building material, sculpted and augmented by the relentless action of the sea and wind.",
+          "mood_baseline": "melancholy resonant haunting",
+          "palette_bias": "Subdued greens and blues, with muted stone greys and hints of seafoam white. The palette reflects a perpetual state of mist and sea spray.",
+          "soundscape_base": "The dominant sound is the wind, carrying a constant, low, melodic resonance from the carved formations. Intertwined with the persistent murmur of the sea.",
+          "flora_base": "Dense, salt-tolerant jungle flora that drapes and softens the harsh cliff faces, thriving in the humid, misty environment.",
+          "fauna_base": "Likely to include unique avian species adapted to cliff-dwelling and perhaps small, elusive amphibians or reptiles."
+        },
+        "slug": "the-whispering-peninsula"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Peninsula",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "365380d9-b341-47c1-a1dd-5686f033d1e9": {
+      "id": "365380d9-b341-47c1-a1dd-5686f033d1e9",
+      "type": "location",
+      "name": "The Singing Cliffs",
+      "dna": {
+        "type": "location",
+        "name": "The Singing Cliffs",
+        "description": "Massive cliffs adorned with statues whose mouths release a continuous low note.",
+        "looks": "Towering, jagged cliffs rise steeply from a turbulent sea, their surfaces densely covered in dark green foliage.  The cliffs are immense, dwarfing the waves crashing against their base, and recede into a misty haze in the distance.  The sea itself is a vibrant, choppy expanse, with whitecaps indicating strong currents and wind.  A lone figure stands on a dark, rocky outcropping in the foreground, silhouetted against the ocean.",
+        "atmosphere": "A pervasive mist hangs in the air, particularly around the base of the cliffs and over the water, obscuring the horizon. The air appears humid and heavy with sea spray, contributing to the soft, diffused light.",
+        "mood": "Ethereal, monumental",
+        "lighting": "The lighting is soft and diffused, suggesting an overcast sky or twilight. A cool, pale blue light dominates, with subtle hints of brighter turquoise in the turbulent water where the light penetrates. There are no harsh shadows, creating a sense of depth through atmospheric perspective.",
+        "dominantElements": [
+          "Massive, sheer cliffs covered in vegetation (left and midground)",
+          "Turbulent ocean with whitecaps (center and right)",
+          "Misty haze obscuring distant features (background)",
+          "Silhouetted human figure on rocky outcropping (right foreground)"
+        ],
+        "spatialLayout": "The scene is dominated by the imposing verticality of the cliffs on the left, which dominate the midground and extend into the background. The foreground features a rocky outcropping with a human figure, providing a sense of scale. The ocean fills the right side of the frame and extends to the horizon, which is partially obscured by mist.",
+        "uniqueIdentifiers": [
+          "Sheer, vegetation-covered sea cliffs",
+          "Vibrantly colored, choppy ocean",
+          "Pervasive atmospheric mist",
+          "Single human silhouette on a promontory"
+        ],
+        "materials_primary": "Stone (cliffs), Water (ocean)",
+        "materials_secondary": "Vegetation (foliage on cliffs), Rock (foreground outcropping)",
+        "materials_accents": "Whitecaps (sea spray), Mist",
+        "colors_dominant": "Deep blue (ocean, shadows on cliffs)",
+        "colors_secondary": "Dark green (vegetation), Light blue (sky, mist, illuminated water)",
+        "colors_accents": "Turquoise (highlighted water)",
+        "colors_ambient": "Cool blue",
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "right foreground",
+            "description": "Rocky outcropping with a solitary figure"
+          }
+        ],
+        "searchDesc": "Coastal cliffs. Has: rocky outcropping (right foreground)",
+        "dna": {
+          "architectural_tone": "carved monolithic elemental",
+          "cultural_tone": "These cliffs are ancient monuments, imbued with spiritual or historical significance, designed to interact with the wind and sea as a form of communion or warning.",
+          "materials_base": "The primary material is the dense, dark stone of the cliffs, deeply sculpted and weathered, with the sea spray constantly eroding its surfaces.",
+          "mood_baseline": "awe-inspiring ancient sorrowful",
+          "palette_bias": null,
+          "soundscape_base": "The low, resonant tones from the statues' mouths dominate, a constant, mournful chorus augmented by the distant roar of the surf.",
+          "flora_base": "Gnarled, wind-swept vegetation clinging precariously to ledges and crevices, interspersed with the stark, carved stone.",
+          "fauna_base": null
+        },
+        "slug": "the-singing-cliffs"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/gL-37Lklhw-smhd39LJrf.jpg",
+      "focus": {
+        "node_id": "The Singing Cliffs",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "d1da2402-05e8-41f7-be57-e920b5e4fc07": {
+      "id": "d1da2402-05e8-41f7-be57-e920b5e4fc07",
+      "type": "location",
+      "name": "The Cave Entrance",
+      "dna": {
+        "type": "location",
+        "name": "The Cave Entrance",
+        "description": "A natural cave opening carved into the cliffs, serving as an entrance to a temple.",
+        "looks": "Dark, natural cave mouth set into the cliff face.",
+        "atmosphere": "Cool, damp air emanating from the cave, faint echoes of the sea.",
+        "mood": "Mysterious, anticipatory",
+        "dna": {
+          "architectural_tone": "natural eroded monumental",
+          "cultural_tone": "This cave serves as a liminal space, a threshold between the natural world and a sacred or hidden interior, marked by the sculpted artifice of the peninsula.",
+          "materials_base": "Primarily natural cave rock and cliff face, smoothed by millennia of water and wind, with the sculpted elements of the Singing Cliffs subtly present at its periphery.",
+          "mood_baseline": "foreboding mysterious sacred",
+          "palette_bias": null,
+          "soundscape_base": "The echoing sound of the sea wind and distant notes are amplified within the cave's maw, creating a sense of depth and anticipation.",
+          "flora_base": "Sparse, hardy cave-dwelling mosses and fungi, with resilient coastal plants near the entrance.",
+          "fauna_base": "Perhaps bats or specialized insects that inhabit cave environments."
+        },
+        "slug": "the-cave-entrance"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Cave Entrance",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "79a5c58a-69af-4dbc-8942-aeb5362f081d": {
+      "id": "79a5c58a-69af-4dbc-8942-aeb5362f081d",
+      "type": "niche",
+      "name": "The Threshold of the Sacred",
+      "dna": {
+        "type": "niche",
+        "name": "The Threshold of the Sacred",
+        "description": "The immediate interior of the cave, leading towards the temple.",
+        "looks": "Rough, natural cave walls with signs of ancient carving and passage towards a more structured opening.",
+        "atmosphere": "Damp stone, a growing sense of stillness, subtle vibrations from the outside hum.",
+        "mood": "Foreboding, sacred",
+        "dna": {
+          "architectural_tone": "hollowed ancient organic",
+          "materials_base": "The rough, unworked stone of the cave walls, smoothed by moisture and time, possibly with traces of ancient, faded pigments or carvings near the temple entrance.",
+          "mood_baseline": "reverent hushed expectant",
+          "soundscape_base": "The sounds of the outside world are muffled, replaced by the dripping of water, the faint echo of the sea, and a palpable silence that suggests a sacred presence.",
+          "flora_base": "Minimal, perhaps only slick mosses and water-worn lichens on the inner walls.",
+          "fauna_base": "Insect life that thrives in dark, damp environments, or possibly small, timid cave-dwelling creatures."
+        },
+        "slug": "the-threshold-of-the-sacred"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Threshold of the Sacred",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762868285247-pwficjn4u": {
+      "id": "loc-1762868285247-pwficjn4u",
+      "type": "host",
+      "name": "Myst",
+      "dna": {
+        "type": "host",
+        "name": "Myst",
+        "description": "A world of intricate puzzles and advanced technology, where different Ages can be accessed.",
+        "dna": {
+          "genre": "sci-fi|puzzle",
+          "architectural_tone": "monolithic, intricate, functional",
+          "cultural_tone": "A civilization focused on advanced technology, cosmic exploration, and complex, interconnected systems. Their creations are built to last and serve specific, often arcane, purposes.",
+          "materials_base": "A combination of engineered stone, advanced alloys, and crystalline structures. Materials are often smooth, precisely fitted, and sometimes display internal luminescence or energy conduits.",
+          "mood_baseline": "mysterious, awe-inspiring, isolating",
+          "palette_bias": "Dominated by deep, cool tones such as blues, purples, and greys, often contrasted with sharp, vibrant accents of gold, cyan, or emerald from energy sources or arcane symbols.",
+          "soundscape_base": "Distant, resonant hums, subtle whirs of machinery, the faint echoes of unknown forces, and the occasional soft chime or electronic tone. Silence is often profound and heavy.",
+          "flora_base": "Minimal to non-existent in constructed areas; where it exists, it's often highly stylized or alien in form, adapted to unique environmental conditions, or carefully cultivated within enclosed biodomes.",
+          "fauna_base": "Rarely encountered and often not biological in the traditional sense. If present, creatures are typically synthetic, energy-based, or alien beings adapted to specific Ages, serving as guardians or inhabitants."
+        },
+        "slug": "myst"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Myst",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "c56bfef7-24c0-4dbb-a5a2-9a046f5af8d5": {
+      "id": "c56bfef7-24c0-4dbb-a5a2-9a046f5af8d5",
+      "type": "region",
+      "name": "Myst",
+      "dna": {
+        "type": "region",
+        "name": "Myst",
+        "description": "",
+        "slug": "myst"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Myst",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "07d71cce-1066-4236-9130-81536f9ec800": {
+      "id": "07d71cce-1066-4236-9130-81536f9ec800",
+      "type": "location",
+      "name": "The Grand Hall Entrance",
+      "dna": {
+        "type": "location",
+        "name": "The Grand Hall Entrance",
+        "description": "The imposing exterior of a large, architecturally unique complex, hinting at its advanced origins.",
+        "looks": "A colossal, darkly colored structure dominates the background, featuring intricate spires and arched windows, with a large, brightly lit archway forming its entrance. The building's facade is adorned with geometric patterns and glowing details, set against a backdrop of immense, sheer rock faces. The ground in the foreground is uneven and rocky, leading towards the structure. A lone figure walks away from the viewer towards the entrance.",
+        "atmosphere": "Thick, low-lying mist blankets the ground and creeps around the base of the structure, obscuring the immediate surroundings. The air appears still and damp, contributing to the sense of enclosure.",
+        "mood": "Mysterious, awe-inspiring, foreboding",
+        "lighting": "The scene is lit by a cool, ethereal blue light emanating from the sky and reflecting off the mist. The central archway of the structure glows with a warm, golden light, creating a strong contrast with the surrounding darkness. Soft light also emanates from windows on the building.",
+        "dominantElements": [
+          "Massive dark complex with spires and intricate facade",
+          "Large, luminous arched entranceway",
+          "Towering, textured rock walls on either side",
+          "Low-lying blue mist"
+        ],
+        "spatialLayout": "The complex is centered in the background, framed by steep, dark rock formations that recede into the distance. The foreground is occupied by a textured, uneven ground surface, with a narrow path leading towards the grand entrance.",
+        "uniqueIdentifiers": [
+          "The grand, multi-tiered architectural design of the complex",
+          "The bright, welcoming archway entrance with an apparent interior scene",
+          "The juxtaposition of the dark, imposing structure with the vast, sheer rock canyons"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Rock",
+        "materials_accents": "Glowing glyphs, luminous glass, metallic decorative elements",
+        "colors_dominant": "Dark blue (structure, rock walls)",
+        "colors_secondary": "Grey (ground, rock)",
+        "colors_accents": "Golden yellow (archway light), teal (window glass)",
+        "colors_ambient": "Cool blue",
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center background",
+            "description": "Large, brightly lit entranceway into the complex"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Grand complex entrance. Has: archway (center background)",
+        "dna": {
+          "architectural_tone": "imposing, monumental, geometrically precise",
+          "cultural_tone": null,
+          "materials_base": "Heavily relies on dark, engineered stone and dense, rough rock formations. Smooth, polished surfaces of the structure contrast with the raw, natural environment.",
+          "mood_baseline": "ominous, isolated, inviting",
+          "palette_bias": "Emphasizes dark blues and greys for the structure and natural rock, with a stark contrast from the warm, golden glow of the entrance.",
+          "soundscape_base": "Dominated by the low rumble of distant geological activity and the ethereal whisper of wind, punctuated by the ambient hum of the complex.",
+          "flora_base": "sparse, hardy, and primarily consists of low-lying, scrub-like vegetation clinging to rocky outcrops, or the absence of plant life in favor of stone and mist.",
+          "fauna_base": "None directly observed; the environment suggests isolation rather than habitation by active creatures."
+        },
+        "slug": "the-grand-hall-entrance"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/-4VazeNxLfxMDEvrxxQ6C.jpg",
+      "focus": {
+        "node_id": "The Grand Hall Entrance",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762868465954-db48s9w58": {
+      "id": "loc-1762868465954-db48s9w58",
+      "type": "host",
+      "name": "The Whispering Hills",
+      "dna": {
+        "type": "host",
+        "name": "The Whispering Hills",
+        "description": "A secluded domain where nature holds an ancient, subtle power.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "ancient, ethereal structures",
+          "cultural_tone": "A realm where nature's subtle power shapes existence, fostering traditions of reverence and harmony. Communities often reside in natural formations or structures that blend seamlessly with the environment, prioritizing sustainability and spiritual connection.",
+          "materials_base": "Organic materials such as aged wood, living stone, and naturally occurring crystalline formations are favored. Craftsmanship emphasizes natural textures and forms, respecting the inherent properties of the materials.",
+          "mood_baseline": "serene, mysterious, timeless",
+          "palette_bias": "Dominant cool tones with earthy undertones. Emphasizes muted blues, deep greens, and greys, accented by soft, warm glows that suggest hidden sources of light and energy.",
+          "soundscape_base": "A gentle symphony of natural elements. This includes rustling leaves, distant water, soft breezes, and the subtle hum of unseen natural energies.",
+          "flora_base": "Abundant, ancient, and often bioluminescent or imbued with subtle magical properties. Vegetation is diverse, ranging from towering, moss-covered trees to delicate, glowing fungi and ethereal flowering plants.",
+          "fauna_base": "Creatures that are often elusive, magical, or symbiotic with the natural environment. This can include spirits of nature, subtly enchanted beasts, and beings adapted to the specific ethereal qualities of the land."
+        },
+        "slug": "the-whispering-hills"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Hills",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "1197ef24-4b20-49b6-9234-afdfb61d0e34": {
+      "id": "1197ef24-4b20-49b6-9234-afdfb61d0e34",
+      "type": "region",
+      "name": "The Whispering Hills",
+      "dna": {
+        "type": "region",
+        "name": "The Whispering Hills",
+        "description": "",
+        "dna": {
+          "architectural_tone": "secluded hillside dwellings",
+          "cultural_tone": "null",
+          "materials_base": "natural wood and stone integrated with the terrain",
+          "mood_baseline": "isolated, tranquil",
+          "palette_bias": "deep blues and greys from mist and twilight, with warm interior glows",
+          "soundscape_base": "wind whistling through ancient trees, muffled sounds from the valley below",
+          "flora_base": "dense, old-growth forests with thick undergrowth",
+          "fauna_base": "nocturnal creatures of the deep woods"
+        },
+        "slug": "the-whispering-hills"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Hills",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "7f7aec6e-5a85-41a4-b600-9662979b1639": {
+      "id": "7f7aec6e-5a85-41a4-b600-9662979b1639",
+      "type": "location",
+      "name": "The Ethereal Villa",
+      "dna": {
+        "type": "location",
+        "name": "The Ethereal Villa",
+        "description": "A hillside villa known for its perpetual, softly glowing paper lights.",
+        "looks": "A multi-level wooden villa is perched precariously on a steep, forested hillside overlooking a misty valley. The villa features a prominent pitched roof with dark shingles and exposed wooden beams. A wide, wraparound deck extends from the main level, furnished with tables and chairs. Numerous round, glowing paper lanterns are strung along the deck's railing and under the eaves, casting a warm illumination. Large windows reveal warm interior lights and glimpses of furniture within.",
+        "atmosphere": "Wisps of dense, blue-grey fog drift across the mountain slopes and obscure the background, creating a sense of depth and mystery. The air appears cool and slightly humid, contributing to the ethereal quality of the scene.",
+        "mood": "Tranquil, enchanting",
+        "lighting": "The primary light source is the soft, warm glow emanating from the numerous paper lanterns and interior lights of the villa. This contrasts with the cool, ambient blue light of the twilight sky and the misty environment. Shadows are present but softened by the diffuse light.",
+        "dominantElements": [
+          "Villa structure with pitched roof",
+          "Wraparound deck with tables and chairs",
+          "String of paper lanterns along deck",
+          "Misty forested hillside backdrop"
+        ],
+        "spatialLayout": "The villa occupies the midground, jutting out from the hillside which forms the background. The deck is a prominent feature in the foreground and midground, extending outwards over the steep drop. The surrounding forest frames the structure.",
+        "uniqueIdentifiers": [
+          "Perpetual glowing paper lanterns",
+          "Villa built on cliff edge",
+          "Misty mountain valley setting"
+        ],
+        "materials_primary": "Wood (structure, deck, beams)",
+        "materials_secondary": "Stone (foundation, rock face below deck)",
+        "materials_accents": "Paper (lanterns)",
+        "colors_dominant": "Dark blue (mist, sky, roof shingles)",
+        "colors_secondary": "Warm orange-yellow (lanterns, interior lights, wood accents)",
+        "colors_accents": "Brown (wooden beams, window frames)",
+        "colors_ambient": "Deep blue and grey",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Wooden door with glass panels on deck"
+          },
+          {
+            "type": "window",
+            "position": "right, midground",
+            "description": "Large multi-paned window showing interior light"
+          },
+          {
+            "type": "object",
+            "position": "deck, midground",
+            "description": "Table and chairs on the deck"
+          },
+          {
+            "type": "object",
+            "position": "eaves, midground",
+            "description": "Paper lanterns strung along the eaves"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Hillside villa with deck and lanterns. Has: wooden door (center, midground), large window (right, midground), paper lanterns (eaves, midground)",
+        "dna": {
+          "architectural_tone": "multi-level wooden retreat",
+          "cultural_tone": "A place of retreat and enduring light, valued for its unique comfort and resilience.",
+          "materials_base": "exposed wooden beams and dark shingles, with stone foundations",
+          "mood_baseline": "cozy, perpetually lit",
+          "palette_bias": "warm orange-yellow light contrasting with cool ambient blues and greys",
+          "soundscape_base": "soft hum of persistent lights, occasional distant wind",
+          "flora_base": "null",
+          "fauna_base": "null"
+        },
+        "slug": "the-ethereal-villa"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/yYUieYo3NK5WffT4nAiqO.jpg",
+      "focus": {
+        "node_id": "The Ethereal Villa",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -4510,6 +4924,68 @@
           "children": [
             {
               "id": "157c9736-63f3-4ecc-ba71-cc6b6c52a063",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762868093071-r4fwk3f5x",
+      "type": "host",
+      "children": [
+        {
+          "id": "ffda2bf6-55d9-420a-8816-4b03f4955758",
+          "type": "region",
+          "children": [
+            {
+              "id": "365380d9-b341-47c1-a1dd-5686f033d1e9",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "d1da2402-05e8-41f7-be57-e920b5e4fc07",
+              "type": "location",
+              "children": [
+                {
+                  "id": "79a5c58a-69af-4dbc-8942-aeb5362f081d",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762868285247-pwficjn4u",
+      "type": "host",
+      "children": [
+        {
+          "id": "c56bfef7-24c0-4dbb-a5a2-9a046f5af8d5",
+          "type": "region",
+          "children": [
+            {
+              "id": "07d71cce-1066-4236-9130-81536f9ec800",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762868465954-db48s9w58",
+      "type": "host",
+      "children": [
+        {
+          "id": "1197ef24-4b20-49b6-9234-afdfb61d0e34",
+          "type": "region",
+          "children": [
+            {
+              "id": "7f7aec6e-5a85-41a4-b600-9662979b1639",
               "type": "location",
               "children": []
             }

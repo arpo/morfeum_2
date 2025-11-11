@@ -4,6 +4,29 @@
 The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
+- **Prompt Token Optimization** (Nov 11, 2025): Major token reduction across all LLM prompts
+  - **Niche Image Prompt**: Reduced from ~1,800 to ~1,100-1,200 tokens (35-40% reduction)
+    - Extracted all sections into reusable utility functions in `promptSections.ts`
+    - Created condensed versions of 7 prompt sections
+    - Added mode parameter ('detailed' | 'condensed', defaults to 'condensed')
+    - File size reduced from ~180 to ~99 lines (45% code reduction)
+    - All core instructions preserved, just more concise
+  - **Intent Classifier Prompt**: Reduced from ~1,200 to ~650-700 tokens (45% reduction)
+    - Created `buildCondensedPrompt()` helper function
+    - Condensed intent definitions, smart selection rules, space classification
+    - Reduced examples from 9 to 4 most critical ones
+    - Defaults to condensed mode automatically
+    - Using Gemini Flash Lite (fastest model available)
+  - **Result**: Lower costs, faster responses, same accuracy
+
+- **Parent Structure Analysis** (Nov 11, 2025): LLM-driven architectural form matching
+  - Replaced brittle string matching with natural language analysis
+  - LLM analyzes parent location's `looks` field to determine form
+  - Extracts shape (circular, rectangular, cylindrical), ceiling type (domed, flat, vaulted), scale
+  - Interior architecture automatically matches exterior form (e.g., circular building → circular floor plan + domed ceiling)
+  - Handles edge cases naturally (e.g., "partially domed", "semi-circular")
+  - No additional API calls - integrated into existing prompt
+
 - **Smart Intent Classifier** (Nov 11, 2025): Intelligent element selection for navigation
   - Enhanced intent classifier to prioritize enterable structures over decorative elements
   - Added `uniqueIdentifiers` to context for better decision making
