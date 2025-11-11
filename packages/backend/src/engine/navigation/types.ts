@@ -26,6 +26,7 @@ export interface IntentResult {
   direction: string | null;
   newRegion?: string | null;
   relocationType?: 'macro' | 'micro' | null;
+  spaceType?: 'interior' | 'exterior' | 'unknown' | null;
   confidence: number;
 }
 

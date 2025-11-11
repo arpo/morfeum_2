@@ -45,7 +45,9 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
       context.currentNode.type,
       context.currentNode.name,
       context.currentNode.data.navigableElements,
-      context.currentNode.data.dominantElements
+      context.currentNode.data.dominantElements,
+      context.currentNode.data.description,
+      context.currentNode.data.searchDesc
     );
 
     // Step 2: Route navigation using deterministic logic

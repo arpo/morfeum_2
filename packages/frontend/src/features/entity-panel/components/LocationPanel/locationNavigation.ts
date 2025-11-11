@@ -230,6 +230,7 @@ export async function findDestination(
   console.log('  Intent:', result.data.intent.intent);
   console.log('  Target:', result.data.intent.target || 'none');
   console.log('  Direction:', result.data.intent.direction || 'none');
+  console.log('  Space Type:', result.data.intent.spaceType || 'not classified');
   console.log('  Confidence:', result.data.intent.confidence);
   console.log('');
   console.log('⚡ Navigation Decision:');
@@ -265,48 +266,5 @@ export async function findDestination(
   
   return navigation;
   
-  // ORIGINAL CODE (disabled during refactor):
-  // console.log('[NavigatorAI] 🎯 Visual context:', {
-  //   dominantElements: currentLocationDetails.visualAnchors.dominantElements,
-  //   currentView: currentLocationDetails.currentView.focusTarget
-  // });
-  // 
-  // const response = await fetch('/api/mzoo/navigator/find-destination', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify({
-  //     userCommand: userCommand.trim(),
-  //     currentFocus,
-  //     currentLocationDetails,
-  //     allNodes: spatialNodes
-  //   })
-  // });
-  // 
-  // if (!response.ok) {
-  //   const error = await response.json();
-  //   
-  //   // Display user-friendly error for top-level exit attempts
-  //   if (error.error && error.error.includes("already at the top level")) {
-  //     console.log('[NavigatorAI]', error.error);
-  //     throw new Error('ALREADY_AT_TOP_LEVEL');
-  //   }
-  //   
-  //   console.error('[NavigatorAI] API error:', error);
-  //   throw new Error(`Navigation API failed: ${error.error || 'Unknown error'}`);
-  // }
-  // 
-  // const result = await response.json();
-  // const navigation = result.data;
-  // 
-  // console.log('[NavigatorAI] ✅ Navigation Result:', {
-  //   action: navigation.action,
-  //   name: navigation.name,
-  //   scale_hint: navigation.scale_hint,
-  //   relation: navigation.relation,
-  //   reason: navigation.reason
-  // });
-  // 
-  // return navigation;
+  
 }

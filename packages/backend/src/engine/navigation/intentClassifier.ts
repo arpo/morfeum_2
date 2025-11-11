@@ -24,7 +24,9 @@ export async function classifyIntent(
   currentNodeType: NodeType,
   currentNodeName: string,
   navigableElements?: Array<{ type: string; position: string; description: string }>,
-  dominantElements?: string[]
+  dominantElements?: string[],
+  description?: string,
+  searchDesc?: string
 ): Promise<IntentResult> {
   
   // Generate prompt
@@ -33,10 +35,13 @@ export async function classifyIntent(
     currentNode: {
       type: currentNodeType,
       name: currentNodeName,
+      description,
+      searchDesc,
       navigableElements,
       dominantElements
     }
   });
+  
   
   // Call LLM for intent classification
   const response = await mzooService.generateText(
@@ -71,8 +76,10 @@ export async function classifyIntent(
   // Parse JSON
   try {
     const result: IntentResult = JSON.parse(cleaned);
+    console.log('\n\n-------- Intent Classification Result -----------\n', JSON.stringify(result, null, 2), '\n-------------------------\n\n');
     return result;
   } catch (parseError) {
+    console.log('\n\n-------- Intent Classification FAILED -----------\n', 'Parse Error:', parseError, '\nRaw response:', cleaned, '\n-------------------------\n\n');
     // If parsing fails, return unknown intent
     return {
       intent: 'UNKNOWN',

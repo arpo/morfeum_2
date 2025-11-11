@@ -8,6 +8,8 @@ export interface IntentClassifierRequest {
   currentNode: {
     type: 'host' | 'region' | 'location' | 'niche' | 'detail' | 'view';
     name: string;
+    description?: string;
+    searchDesc?: string;
     navigableElements?: Array<{
       type: string;
       position: string;
@@ -28,6 +30,16 @@ export function intentClassifierPrompt(request: IntentClassifierRequest): string
   let contextString = `Current Context:
 - Node Type: ${currentNode.type}
 - Node Name: "${currentNode.name}"`;
+
+  // Add description for space type classification context
+  if (currentNode.description) {
+    contextString += `\n- Description: ${currentNode.description}`;
+  }
+  
+  // Add searchDesc if available (contains interior/exterior hints)
+  if (currentNode.searchDesc) {
+    contextString += `\n- Search Description: ${currentNode.searchDesc}`;
+  }
 
   // Add navigable elements if available
   if (currentNode.navigableElements && currentNode.navigableElements.length > 0) {
@@ -120,13 +132,46 @@ OUTPUT FORMAT (JSON only, no markdown, no explanation):
   "direction": "up/down/left/right/behind/forward or null",
   "newRegion": "district/region name or null (RELOCATE only)",
   "relocationType": "macro or micro or null (RELOCATE only)",
+  "spaceType": "interior or exterior or unknown or null (GO_INSIDE only)",
   "confidence": 0.0-1.0
 }
+
+SPACE TYPE CLASSIFICATION (for GO_INSIDE intent only):
+When intent is GO_INSIDE, analyze the description and search description to determine what type of space the user will be entering:
+
+**Analysis Process:**
+1. Check Search Description for hints (e.g., "[Location - Exterior]" means current space is outside)
+2. Look at what structures/objects are available to enter (from Description and Visible Elements)
+3. Determine if entering those structures leads to interior or exterior space
+
+**Classification:**
+- "interior" = Entering an enclosed/roofed space with ceiling overhead
+  * Examples: inside a building, inside a vehicle, inside a cave, inside a structure, inside a room
+  * Keywords: building, structure, house, hall, chamber, room, vehicle, cylinder, vent, cave, temple, cabin
+  
+- "exterior" = Entering an open-air space (no ceiling, sky visible)
+  * Examples: entering a park, entering a courtyard, entering a garden, entering a plaza
+  * Keywords: park, garden, courtyard, plaza, yard, field, grounds, square, open terrace
+  
+- "unknown" = Cannot determine from available context
+
+- null = For all other intent types (not GO_INSIDE)
+
+**Example Reasoning:**
+- Current: "The Pollen Vents" (exterior view of cylindrical structures)
+- Command: "enter"
+- Description mentions: "cylindrical structures" with "openings" and "vents"
+- Analysis: User wants to go INSIDE the cylindrical structures → entering enclosed space with ceiling
+- Result: spaceType = "interior"
 
 EXAMPLES:
 
 User: "Go inside"
-{"intent":"GO_INSIDE","target":null,"direction":null,"confidence":1.0}
+{"intent":"GO_INSIDE","target":null,"direction":null,"spaceType":"unknown","confidence":1.0}
+
+User: "enter"
+Context: Search Description contains "[Location - Exterior]", Description mentions "cylindrical structures" with "openings"
+{"intent":"GO_INSIDE","target":null,"direction":null,"spaceType":"interior","confidence":1.0}
 
 User: "Look at the painting on the wall"
 {"intent":"LOOK_AT","target":"painting","direction":null,"confidence":0.95}
