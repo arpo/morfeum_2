@@ -32,7 +32,7 @@ PARENT CONTEXT (inherit and respect these attributes):
 `
     : '';
 
-  return `Interpret the user's description into a simplified, flat DNA structure.
+  const ret = `Interpret the user's description into a simplified, flat DNA structure.
 
 OBJECTIVE: Create a single unified node profile that captures the essential visual and atmospheric qualities without hierarchical complexity.
 
@@ -100,4 +100,9 @@ RATIONALE
 - Keeps nodes lightweight and fast to merge.
 - Maintains visual consistency across regenerations.
 - Ensures user intent and naming survive each cascade.`;
+console.log('---- Prompt of for nde DNA LLM ');
+console.log(ret);
+console.log('------');
+
+  return ret;
 }

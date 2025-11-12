@@ -46,6 +46,7 @@ interface NavigationResult {
   reason: string;
   imageUrl?: string;
   imagePrompt?: string;
+  node?: any;  // Complete node from backend
 }
 
 /**
@@ -261,7 +262,8 @@ export async function findDestination(
     relation: result.data.decision.metadata?.relation,
     reason: result.data.decision.reasoning,
     imageUrl: result.data.imageUrl,
-    imagePrompt: result.data.imagePrompt
+    imagePrompt: result.data.imagePrompt,
+    node: result.data.node  // Include complete node from backend
   };
   
   return navigation;

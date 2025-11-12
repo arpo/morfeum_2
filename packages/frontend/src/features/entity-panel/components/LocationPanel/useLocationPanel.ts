@@ -90,12 +90,26 @@ export function useLocationPanel(): LocationPanelLogicReturn {
         setPreviewImage(navigation.imageUrl);
       }
       
+      console.log('\n═══════════════════════════════════════════════════════════');
+      console.log('📥 NAVIGATION RESULT RECEIVED');
+      console.log('═══════════════════════════════════════════════════════════');
+      console.log('  Action:', navigation.action);
+      console.log('  Has Node:', !!navigation.node ? '✓' : '✗');
+      console.log('  Has Image:', !!navigation.imageUrl ? '✓' : '✗');
+      console.log('═══════════════════════════════════════════════════════════\n');
+      
       // Handle navigation result
       if (navigation.action === 'move' && navigation.targetNodeId) {
         await handleMoveAction(navigation, currentFocus);
       } else if (navigation.action === 'generate') {
-        // TODO: Implement generate action - currently disabled
-        // await handleGenerateAction(navigation, currentNode, cascadedDNA);
+        // If backend returned a complete node, save it
+        if (navigation.node) {
+          console.log('✅ [FRONTEND] Using new node creation system\n');
+          await handleNodeCreation(navigation, currentNode);
+        } else {
+          console.log('⚠️ [FRONTEND] Falling back to old spawn system\n');
+          await handleGenerateAction(navigation, currentNode, cascadedDNA);
+        }
       }
       
       // Clear input
@@ -146,7 +160,55 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   }, [getNode, updateNodeFocus, setActiveEntity]);
 
   /**
-   * Handle 'generate' action - create new niche
+   * Handle node creation from backend
+   */
+  const handleNodeCreation = useCallback(async (
+    navigation: any,
+    currentNode: any
+  ) => {
+    const { node } = navigation;
+    
+    // Add node to store
+    const createNode = useLocationsStore.getState().createNode;
+    createNode(node);
+    
+    // Find which world tree contains the current node
+    const worldTree = worldTrees.find(tree => {
+      const findInTree = (treeNode: any, targetId: string): boolean => {
+        if (treeNode.id === targetId) return true;
+        return treeNode.children?.some((child: any) => findInTree(child, targetId)) || false;
+      };
+      return findInTree(tree, currentNode.id);
+    });
+    
+    if (!worldTree) {
+      console.error('[handleNodeCreation] Cannot find world tree for current node');
+      return;
+    }
+    
+    // Add to tree structure as child of current node
+    const addNodeToTree = useLocationsStore.getState().addNodeToTree;
+    addNodeToTree(worldTree.id, currentNode.id, node.id, node.type);
+    
+    // Save to backend
+    const saveToBackend = useLocationsStore.getState().saveToBackend;
+    await saveToBackend();
+    
+    // Switch to new node
+    setActiveEntity(node.id);
+    
+    console.log('\n═══════════════════════════════════════════════════════════');
+    console.log('💾 NICHE NODE SAVED SUCCESSFULLY');
+    console.log('═══════════════════════════════════════════════════════════');
+    console.log('  Name:', node.name);
+    console.log('  ID:', node.id);
+    console.log('  Added to tree: ✓');
+    console.log('  Saved to backend: ✓');
+    console.log('═══════════════════════════════════════════════════════════\n');
+  }, [setActiveEntity, worldTrees]);
+
+  /**
+   * Handle 'generate' action - create new niche (fallback to old spawn system)
    */
   const handleGenerateAction = useCallback(async (
     navigation: any,

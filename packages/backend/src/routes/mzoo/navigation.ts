@@ -56,13 +56,18 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
     // Step 3: If decision is create_niche, run image generation pipeline
     let imageUrl: string | undefined;
     let imagePrompt: string | undefined;
+    let node: any | undefined;
     
     if (decision.action === 'create_niche') {
+      console.log('\n🚀 [NAVIGATION] Running create_niche pipeline...');
       try {
         const pipelineResult = await runCreateNichePipeline(decision, context, intent, apiKey);
         imageUrl = pipelineResult.imageUrl;
         imagePrompt = pipelineResult.imagePrompt;
+        node = pipelineResult.node;
+        console.log('✅ [NAVIGATION] Pipeline complete. Node created:', !!node);
       } catch (pipelineError) {
+        console.error('\n❌ [NAVIGATION ERROR]', pipelineError);
         // Continue without image - don't fail the whole request
       }
     }
@@ -75,12 +80,14 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
       decision
     };
 
-    // Return everything including optional image
+    // Return everything including optional image and node
+    console.log('\n📤 [NAVIGATION] Returning response. Node included:', !!node ? '✓' : '✗');
     res.status(HTTP_STATUS.OK).json({
       data: {
         ...result,
         imageUrl,
-        imagePrompt
+        imagePrompt,
+        node
       }
     });
   } catch (error) {
