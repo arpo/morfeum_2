@@ -84,7 +84,16 @@ FIELD DEFINITIONS
 3–5 key elements with size/position (e.g., "Circular structure ~40m diameter with columns")
 
 [spatialLayout]  
-2–4 sentences describing geometry and framing (foreground, midground, background, subject alignment)
+2–4 sentences describing spatial composition with explicit foreground/midground/background breakdown.
+For MIDGROUND structures (main subjects), include:
+- Name/type of structure
+- Approximate scale (height, width in meters if estimable)
+- Position (left/right/center)
+- Any notable features
+
+Example: "Foreground: Rocky terrain, dark stones extending 0-10m from viewpoint. Midground: Massive cylindrical tower (est. 80-100m tall, 40m diameter) dominates center, with smaller resort buildings (15-20m tall) visible to the left. Background: Vast sky with clouds extending to horizon."
+
+This ensures interior generation can infer appropriate interior scale.
 
 [uniqueIdentifiers]  
 2–4 distinct features that make this location unmistakable
@@ -111,16 +120,37 @@ Highlights, glows, or contrasting points
 Overall light tone or environmental hue
 
 [navigableElements]  
-Array of interactive/navigable elements visible in the scene:
-- TYPE: stairs, door, corridor, passage, bridge, archway, portal, window, object, painting, key, furniture, altar, console
-- POSITION: "left/right/center", "foreground/midground/background", or specific location like "far wall", "center of room"
-- DESCRIPTION: Brief 5-10 word description
+Array of EXPLORABLE/NAVIGABLE elements that invite interaction or movement. Focus on elements that:
+- Enable movement (stairs, doors, passages, bridges, ladders, elevators, ramps)
+- Invite exploration (portals, windows to look through, hidden passages, notable objects)
+- Suggest interaction (altars, consoles, levers, ancient artifacts, mysterious objects)
+
+EXCLUDE: Purely decorative furniture (tables, chairs), background clutter, generic walls
+
+Types to include:
+- MOVEMENT: stairs, door, corridor, passage, bridge, archway, ladder, elevator, ramp, tunnel
+- PORTALS: portal, gateway, painting (if magical/enterable), mirror (if special), hole, vent
+- VIEWPOINTS: window (if lookout point), balcony, opening, viewport  
+- INTERACTIVE: altar, console, lever, pedestal, artifact, key, mysterious_object, machine
+- HIDDEN: secret_door, hidden_passage, concealed_entrance
+
+For each element:
+- TYPE: One of the above categories
+- POSITION: Precise location (e.g., "far left wall, midground", "center floor, foreground")
+- DESCRIPTION: What makes this element interesting/worthy of exploration (5-15 words)
 
 Examples:
-  { "type": "stairs", "position": "left side", "description": "Metal spiral stairs ascending to upper level" }
-  { "type": "door", "position": "far end", "description": "Heavy reinforced door with rust patterns" }
-  { "type": "portal", "position": "center wall", "description": "Glowing orange circular opening" }
-  { "type": "object", "position": "altar center", "description": "Ancient key on stone pedestal" }
+  { "type": "stairs", "position": "left wall, midground", "description": "Ancient spiral staircase disappearing into darkness above" }
+  { "type": "portal", "position": "center wall, background", "description": "Shimmering blue gateway with glowing runic inscriptions" }
+  { "type": "window", "position": "right side, midground", "description": "Cracked porthole revealing swirling cosmic void outside" }
+  { "type": "altar", "position": "center, foreground", "description": "Stone altar with pulsing crystal emanating soft light" }
+  { "type": "mysterious_object", "position": "far end, midground", "description": "Floating golden orb suspended in energy field" }
+
+Guidelines:
+- Only include elements that would be worth navigating to or interacting with
+- Prioritize unique/mysterious/magical elements over mundane ones
+- If there are 10 identical doors, mention "multiple doors" as one element rather than listing each
+- Aim for 3-8 explorable elements per scene (not exhaustive inventory)
 
 [searchDesc]  
 Concise 75-100 character summary with navigable elements.
@@ -140,5 +170,3 @@ Guidelines:
 
   return rv;
 };
-
-

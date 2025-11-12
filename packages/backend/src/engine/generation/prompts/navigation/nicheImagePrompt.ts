@@ -99,6 +99,7 @@ ${parentAnalysis}
 PARENT LOCATION CONTEXT (reference for materials/style only):
 Name: "${context.currentNode.name}"
 ${descriptors.join('\n')}
+${context.currentNode.data.spatialLayout ? `Spatial Layout: "${context.currentNode.data.spatialLayout}"` : ''}
 
 ${dnaDescriptors.length > 0 ? `INHERITED STYLE & ATMOSPHERE (use as guidance):\n${dnaDescriptors.join('\n')}` : ''}
 
