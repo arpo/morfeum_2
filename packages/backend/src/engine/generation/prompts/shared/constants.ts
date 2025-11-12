@@ -10,6 +10,8 @@ export const qualityPrompt = 'best quality, 4k, ultra-detailed, hyper-realistic,
 
 export const negativePrompt = 'lowres, bad anatomy, blurry, fuzzy, distorted, deformed, disfigured, mutated, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, fused fingers, too many fingers, long neck, ugly, tiling, poorly drawn, watermark, grainy, jpeg artifacts, low quality';
 
+export const fluxRoofFix = "CRITICAL!!!: Fully enclosed ceiling of thick, continuous solid wood/metal/stone with no gaps, holes, skylights, or open breaches to the sky";
+
 export const generalRules = `
 [WORLD RULES:] water calm and mirror-still, no flying animals, unless specified.
 IMPORTANT: no humans or animals unless specified.

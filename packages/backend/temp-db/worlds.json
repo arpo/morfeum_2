@@ -2018,6 +2018,384 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762949778284-42r0weule": {
+      "id": "loc-1762949778284-42r0weule",
+      "type": "host",
+      "name": "Geode World",
+      "dna": {
+        "type": "host",
+        "name": "Geode World",
+        "description": "A world where minerals possess sentience and emit light and sound.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organically integrated, crystalline structures",
+          "cultural_tone": "A civilization that reveres and coexists with sentient minerals, drawing power and resources from them. Their structures are extensions of the geological formations.",
+          "materials_base": "Predominantly natural crystalline formations, smooth and reflective stone, with accents of bioluminescent or internally glowing minerals. Emphasis on polished, naturally occurring surfaces.",
+          "mood_baseline": "Mysterious, awe-inspiring, resonant",
+          "palette_bias": "Rich, deep jewel tones interspersed with soft, internal glows. Contrasts between cool blues and warm oranges are common, reflecting the minerals' luminescence.",
+          "soundscape_base": "Subtle resonant hums, echoing chimes, and the gentle vibration of pulsating minerals. Sounds are amplified and carried by the crystalline environment.",
+          "flora_base": "Minimal, with bioluminescent mosses or hardy, mineral-infused fungi clinging to rock faces. Plant life is scarce and adapted to low-light, mineral-rich environments.",
+          "fauna_base": "Small, crystalline insects or small creatures with mineral-infused exoskeletons. Larger fauna would be rare, perhaps adapted for burrowing or climbing sheer rock faces."
+        },
+        "slug": "geode-world"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Geode World",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "08b97744-abd0-4418-b88b-c949f8ece16f": {
+      "id": "08b97744-abd0-4418-b88b-c949f8ece16f",
+      "type": "region",
+      "name": "Geode World",
+      "dna": {
+        "type": "region",
+        "name": "Geode World",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "geode-world"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Geode World",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "eea6b48d-1802-47ce-aeab-1246f780c68a": {
+      "id": "eea6b48d-1802-47ce-aeab-1246f780c68a",
+      "type": "location",
+      "name": "The Pulse Mine",
+      "dna": {
+        "type": "location",
+        "name": "The Pulse Mine",
+        "description": "A canyon facility built to excavate and study translucent minerals that pulse with internal light.",
+        "looks": "Sheer, towering canyon walls are densely textured with rough, uneven rock faces, creating a sense of immense scale. Integrated structures are built directly into the rock, appearing ancient and robust. Multiple entrances are discernible, marked by glowing veins of crystalline material that emit light. A prominent, large circular portal dominates the midground, emitting intense orange and pink light. Further back, a waterfall cascades down the canyon, illuminated by an ethereal blue glow.",
+        "atmosphere": "The air appears clear, with no visible fog or haze, allowing for sharp details of the environment. The atmosphere feels dry, as suggested by the rocky, barren terrain.",
+        "mood": "Ethereal, industrious",
+        "lighting": "The scene is lit by multiple strong light sources. A bright, fiery orange and pink light emanates from the central portal, casting warm shadows and highlights. Cooler blue light illuminates the waterfall and the upper reaches of the canyon. The overall lighting is high contrast, with deep shadows pooling in the crevices of the rock faces.",
+        "dominantElements": [
+          "Circular glowing portal ~15m diameter (center, midground)",
+          "Cascading waterfall with blue light emission (background)",
+          "Sheer canyon walls, tens of meters high (left and right, background)",
+          "Rocky, uneven ground with scattered boulders (foreground and midground)"
+        ],
+        "spatialLayout": "The foreground consists of a rocky, uneven path littered with stones. The midground is defined by the wide, imposing canyon opening featuring a massive, glowing circular portal. The background reveals a breathtaking waterfall descending from a high point in the canyon, surrounded by more sheer rock faces that recede into the distance.",
+        "uniqueIdentifiers": [
+          "Gigantic circular portal emitting intense orange light",
+          "Waterfall illuminated with supernatural blue luminescence",
+          "Canyon walls with integrated structures and glowing crystalline veins"
+        ],
+        "materials_primary": "Rock, stone",
+        "materials_secondary": "Water",
+        "materials_accents": "Crystalline veins, glowing portal",
+        "colors_dominant": "Orange (from the portal)",
+        "colors_secondary": "Blue (from the waterfall and upper canyon), deep grays and browns (rock)",
+        "colors_accents": "Pink (from the portal's glow), white (waterfall spray)",
+        "colors_ambient": "Cool blue and faint orange hues from the light sources",
+        "navigableElements": [
+          {
+            "type": "portal",
+            "position": "center, midground",
+            "description": "Large, circular gateway emitting intense orange and pink light"
+          },
+          {
+            "type": "passage",
+            "position": "center, background",
+            "description": "Path leading towards the waterfall and beyond the portal"
+          },
+          {
+            "type": "window",
+            "position": "left wall, midground",
+            "description": "Crystalline veins pulsing with light integrated into the canyon wall"
+          },
+          {
+            "type": "window",
+            "position": "right wall, midground",
+            "description": "Crystalline veins pulsing with light integrated into the canyon wall"
+          }
+        ],
+        "searchDesc": "Canyon facility with a glowing portal. Has: circular portal (center, midground), passage (center, background), crystalline veins (left wall, midground)",
+        "dna": {
+          "architectural_tone": "canyon-carved, functional mining outposts",
+          "cultural_tone": "Focused on extraction and study of valuable pulsating minerals. The culture is pragmatic yet respectful of the potent energies within the mine.",
+          "materials_base": "Rough-hewn stone mixed with processed crystalline materials. Integrated glowing veins serve as both structural elements and light sources.",
+          "mood_baseline": "Industrial, powerful, echoing",
+          "palette_bias": "Strong contrast between earthy rock tones and vibrant, glowing mineral colors. Sharp distinctions between cool blues and fiery oranges are prominent.",
+          "soundscape_base": "Amplified echoes of mining tools, resonating mineral pulses, and the distinct sound of cascading water with a crystalline ring.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-pulse-mine"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/KEKvYmIoePqZ7KbJc26B4.jpg",
+      "focus": {
+        "node_id": "The Pulse Mine",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762950540950-i8y7xj3rq": {
+      "id": "loc-1762950540950-i8y7xj3rq",
+      "type": "host",
+      "name": "The Aetherium",
+      "dna": {
+        "type": "host",
+        "name": "The Aetherium",
+        "description": "A realm where magic and technology intertwine.",
+        "dna": {
+          "genre": "sci-fi|fantasy",
+          "architectural_tone": "ancient-futuristic synthesis, sacred geometry with functional elements",
+          "cultural_tone": "A realm where remnants of advanced technology are revered and integrated with spiritual practices. Knowledge is a blend of arcane lore and scientific understanding.",
+          "materials_base": "A palette of ancient, weathered stone intertwined with smooth, self-repairing alloys and pulsating crystalline structures. Materials speak of both immense age and ongoing, subtle energy.",
+          "mood_baseline": "mysterious, awe-inspiring, serene",
+          "palette_bias": "Dominated by cool, ethereal tones of blues and cyans, accented by muted earth tones and the occasional sharp, energetic glow. The overall feel is tranquil yet charged.",
+          "soundscape_base": "A low, resonant hum of ambient energy punctuated by distant, echoing chimes and subtle, almost imperceptible technological whispers. Silence is a canvas for these subtle sonic textures.",
+          "flora_base": "Bioluminescent flora that responds to energy flows, hardy mosses and lichens that thrive in low-light conditions, and ancient, gnarled trees that seem to absorb ambient magic.",
+          "fauna_base": "Creatures adapted to high-energy environments, often with crystalline or metallic exoskeletons, and entities that exist partially in the energy spectrum."
+        },
+        "slug": "the-aetherium"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Aetherium",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "3cabe168-c593-46ea-be4a-05331010d723": {
+      "id": "3cabe168-c593-46ea-be4a-05331010d723",
+      "type": "region",
+      "name": "The Aetherium",
+      "dna": {
+        "type": "region",
+        "name": "The Aetherium",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-aetherium"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Aetherium",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "d12ab65e-2d26-4a9f-a348-204b5271b4bb": {
+      "id": "d12ab65e-2d26-4a9f-a348-204b5271b4bb",
+      "type": "location",
+      "name": "The Silent Abbey",
+      "dna": {
+        "type": "location",
+        "name": "The Silent Abbey",
+        "description": "A monastic complex constructed around a powerful, silent energy generator. Its architecture suggests a blend of old-world sanctity and nascent technological integration.",
+        "looks": "A stone monastic building with two prominent towers flanking a central structure. The architecture is gothic in style, with arched doorways and windows. The towers are tall and slender, capped with spires. The central facade features a large arched entrance and a smaller arched window above. The building is surrounded by dense, misty forest, with bare trees visible in the background.",
+        "atmosphere": "A thick, blue-tinged mist envelops the scene, obscuring distant details and creating a sense of depth and mystery. The air appears heavy and damp, contributing to the ethereal quality of the location.",
+        "mood": "Ethereal, mysterious, reverent.",
+        "lighting": "The primary light source emanates from the main arched doorway, casting a warm, golden glow onto the stone pathway. Secondary light sources are visible as faint yellow glows from windows on the facade and within the towers. The overall lighting is dim, with low contrast, and a cool, ethereal tone dominates the scene.",
+        "dominantElements": [
+          "Central monastic building with gothic architecture",
+          "Two flanking spired towers",
+          "Arched main entrance with warm illumination",
+          "Stone pathway leading to the entrance"
+        ],
+        "spatialLayout": "The foreground consists of a wet, stone-paved pathway that curves towards the central structure. The midground is dominated by the imposing stone monastic building, approximately 20-30 meters in height, with its distinctive towers. The background is filled with a dense, misty forest, its trees fading into the atmospheric haze.",
+        "uniqueIdentifiers": [
+          "Gothic monastery with twin spired towers",
+          "Warm, inviting light from the main entrance",
+          "Surrounded by a dense, misty forest"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Cobblestone",
+        "materials_accents": "Warm light glow",
+        "colors_dominant": "Misty blue and grey in the atmosphere and stone.",
+        "colors_secondary": "Dark greens and browns of the surrounding foliage.",
+        "colors_accents": "Warm golden yellow light from the entrance and windows.",
+        "colors_ambient": "Ethereal blue-cyan hue.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Large, arched wooden door emanating a strong golden light, suggesting entry."
+          },
+          {
+            "type": "window",
+            "position": "left facade, midground",
+            "description": "Small, arched window with a subtle yellow glow from within."
+          },
+          {
+            "type": "window",
+            "position": "right facade, midground",
+            "description": "Small, arched window with a subtle yellow glow from within."
+          },
+          {
+            "type": "window",
+            "position": "central facade, upper midground",
+            "description": "Oval-shaped window with a faint yellow light radiating from within."
+          }
+        ],
+        "searchDesc": "Gothic monastery in misty forest. Has: arched door (center, midground), arched window (left facade, midground), oval window (central facade, upper midground)",
+        "dna": {
+          "architectural_tone": "gothic monastic forms with integrated technological conduits",
+          "cultural_tone": "A secluded order dedicated to the study and maintenance of silent energy sources, blending monastic austerity with advanced engineering.",
+          "materials_base": "primarily weathered stone and aged metal, with subtle crystalline inlays that pulse faintly.",
+          "mood_baseline": "contemplative, isolated, humming",
+          "palette_bias": "muted blues and greys, contrasted with warm, golden light emanating from within.",
+          "soundscape_base": "a soft, rhythmic thrumming from the generator, overlaid by the ambient mist and distant, almost imperceptible hums.",
+          "flora_base": "dense, misty forest with ancient, bare trees and hardy, low-lying mosses.",
+          "fauna_base": "None observed"
+        },
+        "slug": "the-silent-abbey"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/7bFTKHp-5jLBgVBaYAcjN.jpg",
+      "focus": {
+        "node_id": "The Silent Abbey",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762950687611-fu5z8kdh7": {
+      "id": "loc-1762950687611-fu5z8kdh7",
+      "type": "host",
+      "name": "The Aetherium Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Aetherium Expanse",
+        "description": "A realm where reality bends and celestial bodies shimmer with unusual hues.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "gravity-defying monumental",
+          "cultural_tone": "A civilization focused on cosmic observation and arcane studies, where structure often defies natural laws. Their creations are built to awe and to house esoteric knowledge.",
+          "materials_base": "Polished obsidian, iridescent crystalline structures, and magically reinforced stone form the foundation of this realm's architecture. Materials are often chosen for their ability to interact with light and planar energies.",
+          "mood_baseline": "Mysterious, awe-inspiring, serene",
+          "palette_bias": "Dominated by deep, celestial blues, vibrant purples, and shimmering silver and gold accents. Colors evoke the vastness of space and the otherworldly glow of nebulae.",
+          "soundscape_base": "A gentle hum of ambient arcane energy, punctuated by distant chimes and the soft whoosh of celestial winds. Sounds are often ethereal and resonant.",
+          "flora_base": "Luminescent, bioluminescent, and crystalline plant life that thrives on ambient magical energies. Flora might resemble star-charts or celestial phenomena.",
+          "fauna_base": "Ethereal beings, celestial spirits, and creatures adapted to low-gravity or extra-dimensional environments. Fauna often possess shimmering or translucent qualities."
+        },
+        "slug": "the-aetherium-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Aetherium Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "d55908ce-da41-4554-afc3-697d6fac5b71": {
+      "id": "d55908ce-da41-4554-afc3-697d6fac5b71",
+      "type": "region",
+      "name": "The Aetherium Expanse",
+      "dna": {
+        "type": "region",
+        "name": "The Aetherium Expanse",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": "Primarily vast expanses of polished, reflective obsidian and magically hardened earth. Structures often incorporate naturally occurring crystalline veins.",
+          "mood_baseline": "Vast, contemplative, ethereal",
+          "palette_bias": "A dominant palette of deep violets and magentas, reflecting the unusual atmospheric conditions and celestial light.",
+          "soundscape_base": "Distant echoes of cosmic phenomena and a pervasive, low resonant hum. Occasional soft, resonant chimes.",
+          "flora_base": "Sparse, hardy flora adapted to low light and high energy. May include crystalline growths and bioluminescent mosses.",
+          "fauna_base": "Rare, elusive creatures that navigate the ethereal plains, often adapted to extreme altitudes and varying gravity."
+        },
+        "slug": "the-aetherium-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Aetherium Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "3d157b7d-c936-4c99-80d1-6ae16dd6d694": {
+      "id": "3d157b7d-c936-4c99-80d1-6ae16dd6d694",
+      "type": "location",
+      "name": "The Fracture Observatory",
+      "dna": {
+        "type": "location",
+        "name": "The Fracture Observatory",
+        "description": "An observatory of stone and mirror, precariously balanced.",
+        "looks": "A massive, weathered stone tower with a domed top rises from a rocky, water-logged landscape. The structure is ancient, with visible carvings and architectural details around a large central archway. The tower leans slightly, contributing to an unsettling yet majestic appearance. Reflective surfaces are not visible, contradicting the prompt's description of mirrors. The overall impression is of a monumental, possibly extraterrestrial structure.",
+        "atmosphere": "A pervasive, soft haze obscures the distant horizon, creating a sense of vastness and mystery. The air appears thin and still, with a visible saturation of purple light. The ground reflects the ambient light, suggesting moisture or a liquid surface.",
+        "mood": "Dizzying, awe-inspiring",
+        "lighting": "The scene is bathed in a soft, diffused violet and magenta light, emanating from the sky and the glowing portal. The contrast is low, with gentle gradients in color and illumination. The light source is not directly visible but appears to be the sky and the interior of the structure.",
+        "dominantElements": [
+          "Massive stone tower with domed top (midground, center)",
+          "Glowing pink portal within the tower's archway (midground, center)",
+          "Jagged, dark rocks in foreground and midground",
+          "Violet and magenta cloudy sky (background)"
+        ],
+        "spatialLayout": "The foreground is dominated by dark, wet rocks and shallow water reflecting the ambient light. In the midground, the immense stone tower stands as the central focal point, appearing to be a VERTICAL STRUCTURE with a width roughly half its apparent height. The background is an expanse of hazy sky with dramatic clouds.",
+        "uniqueIdentifiers": [
+          "Leaning, domed stone tower",
+          "Bright pink, otherworldly portal entrance",
+          "Violet and magenta atmospheric lighting"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Water, rock",
+        "materials_accents": "Glowing portal energy",
+        "colors_dominant": "Violet (sky, atmosphere, ground)",
+        "colors_secondary": "Magenta (sky, clouds, portal)",
+        "colors_accents": "Bright pink (portal)",
+        "colors_ambient": "Soft violet and magenta hues",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Enormous archway housing a brightly glowing, ethereal pink portal"
+          }
+        ],
+        "searchDesc": "Stone tower with glowing portal. Has: portal (center, midground)",
+        "dna": {
+          "architectural_tone": "precariously leaning monolithic",
+          "cultural_tone": null,
+          "materials_base": "Ancient, weathered stone with integrated, but currently absent, mirror-like surfaces. The structure emphasizes raw, monumental construction.",
+          "mood_baseline": "Unsettling, majestic, ancient",
+          "palette_bias": null,
+          "soundscape_base": "The subtle groaning of ancient stone and the whisper of thin, high-altitude air.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-fracture-observatory"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/H-vz8d2BuVJgbMkJV5U7Y.jpg",
+      "focus": {
+        "node_id": "The Fracture Observatory",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -2298,7 +2676,60 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762949778284-42r0weule",
+      "type": "host",
+      "children": [
+        {
+          "id": "08b97744-abd0-4418-b88b-c949f8ece16f",
+          "type": "region",
+          "children": [
+            {
+              "id": "eea6b48d-1802-47ce-aeab-1246f780c68a",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762950540950-i8y7xj3rq",
+      "type": "host",
+      "children": [
+        {
+          "id": "3cabe168-c593-46ea-be4a-05331010d723",
+          "type": "region",
+          "children": [
+            {
+              "id": "d12ab65e-2d26-4a9f-a348-204b5271b4bb",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762950687611-fu5z8kdh7",
+      "type": "host",
+      "children": [
+        {
+          "id": "d55908ce-da41-4554-afc3-697d6fac5b71",
+          "type": "region",
+          "children": [
+            {
+              "id": "3d157b7d-c936-4c99-80d1-6ae16dd6d694",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
-  "pinnedIds": []
+  "pinnedIds": [
+    "loc-1762949778284-42r0weule"
+  ]
 }

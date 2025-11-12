@@ -1,4 +1,4 @@
-import { generalRules, morfeumVibes, qualityPrompt } from "./constants";
+import { fluxRoofFix, generalRules, morfeumVibes, qualityPrompt } from "./constants";
 
 export function generalPromptFix(prompt: string): string {
     const fix = `
@@ -9,6 +9,8 @@ export function generalPromptFix(prompt: string): string {
     ${generalRules}
     
     ${qualityPrompt}
+
+    ${fluxRoofFix}
 
     `;
     return fix
