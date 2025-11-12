@@ -2396,6 +2396,133 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762950847929-5v75mmp45": {
+      "id": "loc-1762950847929-5v75mmp45",
+      "type": "host",
+      "name": "Aetherial Expanse",
+      "dna": {
+        "type": "host",
+        "name": "Aetherial Expanse",
+        "description": "A realm of unbound energies and impossible geometries.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "grand ethereal constructs, impossible geometry",
+          "cultural_tone": "A realm where physical laws bend to the will of immense, often forgotten, powers. Societies are shaped by the manipulation of ambient energies and the pursuit of arcane knowledge.",
+          "materials_base": "Primarily constructs of solidified light, shimmering energy, and materials that defy conventional physics. There's a sense of otherworldliness and a subtle inherent glow to most surfaces.",
+          "mood_baseline": "awe-inspiring, mysterious, wondrous",
+          "palette_bias": "Dominated by iridescent and luminescent hues, with a strong presence of cool blues, violets, and silvers. Colors are often vibrant and otherworldly, with a soft, diffused glow.",
+          "soundscape_base": "A constant hum of ambient energy, with faint celestial chimes and the whisper of unseen currents. Sounds are often ethereal and resonant.",
+          "flora_base": "Rare and exotic flora that thrives on raw magical energy, often bioluminescent or crystalline in nature. Plants may exhibit impossible growth patterns or ethereal forms.",
+          "fauna_base": "Creatures composed of pure energy, celestial beings, or beings adapted to environments with fluctuating physical laws. They are often majestic or unsettling, embodying the realm's energies."
+        },
+        "slug": "aetherial-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aetherial Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "0841b8ce-6f0c-4979-933a-8eddde261930": {
+      "id": "0841b8ce-6f0c-4979-933a-8eddde261930",
+      "type": "region",
+      "name": "The Anchored Isles",
+      "dna": {
+        "type": "region",
+        "name": "The Anchored Isles",
+        "description": "Regions where reality's fabric is temporarily stabilized, often by grand constructs.",
+        "dna": {
+          "architectural_tone": "stabilized planar structures, colossal anchors",
+          "cultural_tone": "Inhabitants here have learned to harness and anchor ambient energies, creating stable territories within the boundless expanse. Their societies are often hierarchical, built around the maintenance of these grand stabilizing constructs.",
+          "materials_base": "A blend of the host's ethereal materials with more terrestrial elements like magically reinforced stone and resilient, glowing metals. Structures are robust and designed to withstand dimensional flux.",
+          "mood_baseline": "stable, formidable, awe-inspiring",
+          "palette_bias": "Rich blues and deep purples are prominent, often accented by the warm, golden glow of containment fields and energy conduits. A sense of grounded power within the ethereal.",
+          "soundscape_base": "The resonant hum of stabilized energy, punctuated by the deep thrum of colossal anchor mechanisms and the occasional deep gong of temporal shifts.",
+          "flora_base": "Sturdy, crystalline flora that draws sustenance from anchored energies. May include glowing mosses and resilient, sky-reaching lumina-trees.",
+          "fauna_base": "Creatures adapted to semi-stable environments, often possessing a tougher, more physical presence than those in unbound zones. Guardians of anchor points and energy conduits."
+        },
+        "slug": "the-anchored-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Anchored Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "95d91a18-8d16-4d22-baaf-ef90032e442f": {
+      "id": "95d91a18-8d16-4d22-baaf-ef90032e442f",
+      "type": "location",
+      "name": "The Shimmering Citadel",
+      "dna": {
+        "type": "location",
+        "name": "The Shimmering Citadel",
+        "description": "A magnificent fortress that floats freely, yet is bound by ethereal chains.",
+        "looks": "A grand, multi-tiered citadel with ornate spires and arched windows rises from a rocky island in a calm body of water. Numerous glowing lines, resembling ethereal chains, descend from the unseen ceiling of a vast cavern towards the citadel's upper levels. The structure exhibits a gothic architectural style with intricate carvings and detailed facades. Its base is surrounded by a rugged, uneven terrain that extends to the water's edge. The citadel's reflection is clearly visible, shimmering on the surface of the water below, distorted by gentle ripples.",
+        "atmosphere": "A light, ethereal mist permeates the cavern, obscuring the upper reaches of the space. The air appears clear enough to discern the distant opening and the details of the citadel. A subtle diffusion of light suggests an ambient magical presence.",
+        "mood": "Majestic, ethereal, grounded",
+        "lighting": "The primary light source emanates from a bright, circular opening high above, casting a cool, blue-toned light downwards. The citadel itself features a warm, orange-yellow glow from its central arched entrance and accent lights on its exterior. The water reflects both the cool ambient light and the warmer internal glow, creating a contrast.",
+        "dominantElements": [
+          "Citadel (est. 80m tall, 50m wide, VERTICAL STRUCTURE) center, midground",
+          "Ethereal chains (numerous, thin, glowing) descending from background",
+          "Cavern opening (circular, bright, blue light) background",
+          "Water body (calm, reflective) foreground/midground",
+          "Rocky island base foreground/midground"
+        ],
+        "spatialLayout": "The foreground consists of dark, rocky terrain and the edge of a tranquil water body. The midground is dominated by the citadel, situated on a rocky island, surrounded by the water. Behind the citadel, numerous faint, glowing lines extend upwards towards the background, which is defined by the cavernous ceiling and a bright, circular opening casting light.",
+        "uniqueIdentifiers": [
+          "Citadel tethered by ethereal light chains",
+          "Floating fortress reflection in water",
+          "Cavernous environment with overhead light source"
+        ],
+        "materials_primary": "Stone (citadel, island, cavern walls)",
+        "materials_secondary": "Water",
+        "materials_accents": "Light chains, glowing entrance light, accent lights",
+        "colors_dominant": "Deep blue (ambient light, water, mist)",
+        "colors_secondary": "Dark grey and brown (rocky terrain, citadel exterior)",
+        "colors_accents": "Bright orange-yellow (citadel entrance, accent lights), bright white (ethereal chains, overhead opening)",
+        "colors_ambient": "Cool blue",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, midground",
+            "description": "Grand stone staircase leading to the glowing entrance of the citadel"
+          },
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Large arched doorway radiating warm, inviting light"
+          },
+          {
+            "type": "passage",
+            "position": "background",
+            "description": "Ethereal, glowing chains suggesting a connection to the upper realm"
+          }
+        ],
+        "searchDesc": "[Location - Interior] Mysterious citadel on an island in a cavern lake. Has: stairs (center), glowing door (center), ethereal chains (background)",
+        "dna": {
+          "architectural_tone": "gothic, ornate spires, suspended structures",
+          "cultural_tone": "A center of arcane governance and celestial observation, where powerful entities maintain the balance of the Anchored Isles. It is a place of great knowledge and formidable defense.",
+          "materials_base": "Primarily constructs of dense, glowing stone and interwoven ribbons of solidified light. Features intricate carvings and highly polished surfaces that reflect ambient light.",
+          "mood_baseline": "majestic, serene, imposing",
+          "palette_bias": "Cool blues and deep greys form the base, contrasted by the warm, inviting orange-yellow glow emanating from within. Reflections on water add a shimmering, distorted quality.",
+          "soundscape_base": "A gentle, resonant hum of contained energies, interspersed with the faint echoes of distant celestial harmonies and the soft lapping of water.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-shimmering-citadel"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/R4KrjSeGA8WWiF3-cH7oI.jpg",
+      "focus": {
+        "node_id": "The Shimmering Citadel",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -2727,9 +2854,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762950847929-5v75mmp45",
+      "type": "host",
+      "children": [
+        {
+          "id": "0841b8ce-6f0c-4979-933a-8eddde261930",
+          "type": "region",
+          "children": [
+            {
+              "id": "95d91a18-8d16-4d22-baaf-ef90032e442f",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1762949778284-42r0weule"
+    "loc-1762949778284-42r0weule",
+    "loc-1762950847929-5v75mmp45"
   ]
 }
