@@ -1368,631 +1368,6 @@
         "distance": "medium"
       }
     },
-    "loc-1762937330036-s3adfwthk": {
-      "id": "loc-1762937330036-s3adfwthk",
-      "type": "host",
-      "name": "The Verdant Expanse",
-      "dna": {
-        "type": "host",
-        "name": "The Verdant Expanse",
-        "description": "A world teeming with colossal flora and organic architecture.",
-        "dna": {
-          "genre": "fantasy",
-          "architectural_tone": "colossal organic sculpting",
-          "cultural_tone": "A world shaped by nature's immense power and artistic flourish. Civilizations exist in harmony with, or as extensions of, the living world.",
-          "materials_base": "Primarily derived from living and petrified flora. Emphasis on growth patterns, interwoven structures, and natural textures. Stone and soil are foundational.",
-          "mood_baseline": "awe-inspiring, ancient, serene",
-          "palette_bias": "Dominated by deep, earthy greens and browns. Accents of vibrant floral hues and mineral tones. Overall a rich, verdant, and sometimes earthy palette.",
-          "soundscape_base": "Ambient sounds of colossal growth, rustling megaflora, and distant, natural phenomena. A sense of vastness and slow, powerful life.",
-          "flora_base": "Gigantic, sentient, or highly adaptable plant life. Trees grow to impossible scales, with roots and branches forming intricate, living architecture.",
-          "fauna_base": "Creatures adapted to colossal, verdant environments. Could range from symbiotic organisms to majestic, nature-bound beasts."
-        },
-        "slug": "the-verdant-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Verdant Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "a2a1a097-652b-4b44-b1f6-fbbad21fe33e": {
-      "id": "a2a1a097-652b-4b44-b1f6-fbbad21fe33e",
-      "type": "region",
-      "name": "The Whispering Grove",
-      "dna": {
-        "type": "region",
-        "name": "The Whispering Grove",
-        "description": "An ancient forest where trees grow to impossible sizes and their roots interweave to form natural structures.",
-        "dna": {
-          "architectural_tone": "interwoven root architecture",
-          "cultural_tone": "Communities residing within the heart of ancient, colossal forests, utilizing the natural structures for shelter and pathways.",
-          "materials_base": "Dominated by immense, woody root systems and ancient bark. Natural pathways are formed by compacted soil and moss.",
-          "mood_baseline": "enclosed, verdant, mysterious",
-          "palette_bias": "Intense shades of forest green and rich, dark earth tones. Occasional dappled sunlight casts golden hues.",
-          "soundscape_base": "A constant hum of life, the creak of ancient wood, and the gentle rustle of enormous leaves. Echoes are softened by dense foliage.",
-          "flora_base": "Ancient, towering trees with complex, interwoven root networks. Dense undergrowth and hanging vines are common.",
-          "fauna_base": "Small, agile forest dwellers, insects with bioluminescent qualities, and elusive, larger creatures that navigate the dense canopy."
-        },
-        "slug": "the-whispering-grove"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Whispering Grove",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "63eeb228-cae8-43d9-8d1e-295debdf32f5": {
-      "id": "63eeb228-cae8-43d9-8d1e-295debdf32f5",
-      "type": "location",
-      "name": "The Bloom Cathedral",
-      "dna": {
-        "type": "location",
-        "name": "The Bloom Cathedral",
-        "description": "A magnificent natural amphitheater shaped by the colossal roots of ancient banyan trees, crowned by a living canopy.",
-        "looks": "Massive, interwoven banyan tree roots form arched walls and a vaulted ceiling, creating a natural amphitheater. The ground is paved with uneven stone slabs that appear wet and reflective. Dense green foliage lines the sides of the pathway, with some vegetation hanging from the root structures above. Sunlight filters through a dense canopy of leaves, creating dappled light across the scene.",
-        "atmosphere": "The air appears thick with humidity, visible as a slight haze in the distance. Patches of mist cling to the lower areas, suggesting a damp and verdant environment.",
-        "mood": "Sacred, awe-inspiring",
-        "lighting": "Soft, dappled sunlight streams from an unseen source above, creating a high-contrast interplay of light and shadow. The light is warm, illuminating the pathway and the upper parts of the root structures, while the deeper recesses remain in shadow.",
-        "dominantElements": [
-          "Massive banyan root walls forming an amphitheater",
-          "Vaulted ceiling of living leaves",
-          "Stone-paved pathway",
-          "Dense green foliage"
-        ],
-        "spatialLayout": "The foreground consists of a winding, stone-paved pathway leading into the midground, which is dominated by the colossal, interwoven banyan root structure forming the walls and ceiling of a large, open amphitheater. The background recedes into a misty, verdant expanse, with more root structures visible in the distance.",
-        "uniqueIdentifiers": [
-          "Natural amphitheater formed by banyan roots",
-          "Living leaf canopy ceiling",
-          "Stone-paved path within a forest structure"
-        ],
-        "materials_primary": "Banyan roots, stone slabs",
-        "materials_secondary": "Leaves, soil",
-        "materials_accents": "Hanging vines, moss",
-        "colors_dominant": "Deep browns and grays of the root structures",
-        "colors_secondary": "Vibrant greens of the foliage and canopy, light tan of the stone path",
-        "colors_accents": "Golden highlights from the dappled sunlight",
-        "colors_ambient": "Warm, dappled green and golden hues",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, midground/background",
-            "description": "A continuous, shadowed passage leads deeper into the root structure."
-          },
-          {
-            "type": "passage",
-            "position": "left, midground",
-            "description": "An arched opening suggests a branching passage to the left."
-          },
-          {
-            "type": "passage",
-            "position": "right, midground",
-            "description": "A further opening to the right suggests another path."
-          }
-        ],
-        "searchDesc": "Natural amphitheater with banyan roots. Has: passage (center, midground/background), passage (left, midground), passage (right, midground)",
-        "dna": {
-          "architectural_tone": "banyan root amphitheater",
-          "cultural_tone": "A sacred gathering place, a natural amphitheater formed by colossal banyan roots, suggesting spiritual or communal significance.",
-          "materials_base": "Primarily the gnarled, ancient banyan roots forming walls and ceiling. Ground surfaces are natural stone, appearing worn and ancient.",
-          "mood_baseline": "sacred, resonant, dappled",
-          "palette_bias": "Deep browns and grays of the root structures are balanced by vibrant greens from the living canopy. Ambient light introduces warm, golden-green tones.",
-          "soundscape_base": "The echoing resonance of the amphitheater is softened by ambient humidity and the gentle drip of moisture. Distant sounds are muted by the dense foliage.",
-          "flora_base": "Dense, hanging foliage from the canopy and roots, with patches of moss and small, specialized plants growing from root crevices.",
-          "fauna_base": "Likely small, transient fauna that might inhabit humid, sheltered environments, such as specialized insects or small amphibians."
-        },
-        "slug": "the-bloom-cathedral"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/rabbit/Zoj0_khgz6r1zIZ5lg-Yq.jpg",
-      "focus": {
-        "node_id": "The Bloom Cathedral",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "loc-1762937391028-k5odqgmkp": {
-      "id": "loc-1762937391028-k5odqgmkp",
-      "type": "host",
-      "name": "Coastal Metropolis",
-      "dna": {
-        "type": "host",
-        "name": "Coastal Metropolis",
-        "description": "A vast city built along the edge of the sea, facing the constant threat of rising tides.",
-        "dna": {
-          "genre": "post-apocalyptic|sci-fi",
-          "architectural_tone": "brutalist decay|neo-gothic ruin",
-          "cultural_tone": "A once-thriving, advanced civilization now grappling with the remnants of its past, where survival and adaptation are paramount in the face of environmental collapse and societal breakdown.",
-          "materials_base": "Constructed from heavy, durable materials like reinforced concrete and corroded metals, often showing signs of extreme weathering, rust, and water damage. Structures are built to withstand harsh conditions, but are now succumbing to them.",
-          "mood_baseline": "melancholy|resilient|eerie",
-          "palette_bias": "Dominated by desaturated, oceanic blues and grays, with accents of rust-orange and weathered concrete tones. There's a pervasive sense of muted, water-logged colors with occasional stark, artificial light contrasts.",
-          "soundscape_base": "The constant, heavy presence of the sea with crashing waves, echoing drips, and the groan of stressed structures. Intermittent sounds of mechanical failure, distant alarms, and the wind whistling through broken edifices.",
-          "flora_base": "Salt-tolerant, mutated coastal vegetation. Sparse, hardy grasses, tough sea vines, and algae clinging to submerged surfaces. Some genetically altered or naturally resilient plant life adapted to saline and toxic environments.",
-          "fauna_base": "Marine and amphibious creatures adapted to polluted waters and derelict structures. Scavenging seabirds, mutated fish, resilient insects, and perhaps larger, water-dwelling predators. Signs of decay also attract vermin and resourceful survivors."
-        },
-        "slug": "coastal-metropolis"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Coastal Metropolis",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "6fb1ac1e-2c22-4774-bb41-a140838f870f": {
-      "id": "6fb1ac1e-2c22-4774-bb41-a140838f870f",
-      "type": "region",
-      "name": "Coastal Metropolis",
-      "dna": {
-        "type": "region",
-        "name": "Coastal Metropolis",
-        "description": "",
-        "dna": {
-          "architectural_tone": "brutalist decay|neo-gothic ruin",
-          "cultural_tone": "null",
-          "materials_base": "null",
-          "mood_baseline": "melancholy|resilient|eerie",
-          "palette_bias": "null",
-          "soundscape_base": "null",
-          "flora_base": "null",
-          "fauna_base": "null"
-        },
-        "slug": "coastal-metropolis"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Coastal Metropolis",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "f7ffeeac-0d9a-42f5-9aea-820ebdce87c2": {
-      "id": "f7ffeeac-0d9a-42f5-9aea-820ebdce87c2",
-      "type": "location",
-      "name": "The Meridian Beacon",
-      "dna": {
-        "type": "location",
-        "name": "The Meridian Beacon",
-        "description": "A once-opulent hotel, now a crumbling edifice half-swallowed by the ocean.",
-        "looks": "A colossal, decaying skyscraper leans precariously over the dark, churning ocean. Its lower sections are submerged and obscured by dark water, while the upper levels are heavily damaged but largely intact, showing numerous windows and structural elements. The building's facade is a dark, textured material, with visible signs of rust and decay. The very top of the skyscraper emits a bright, ethereal cyan glow, illuminating the surrounding clouds.",
-        "atmosphere": "The air appears thick and heavy, with visible haze and mist obscuring distant details and softening the edges of the structure. The scene is dominated by a palpable sense of dampness and the vastness of the sea.",
-        "mood": "Melancholy grandeur, post-apocalyptic beauty",
-        "lighting": "The primary light source emanates from the top of the skyscraper, casting a vibrant, cool cyan glow upwards and outwards. This is contrasted by numerous warm, yellow lights from windows and lamps scattered across the lower, visible sections of the building. The overall lighting is dramatic, with high contrast between the illuminated upper levels and the shadowed lower parts.",
-        "dominantElements": [
-          "Decaying skyscraper ~200m tall, VERTICAL STRUCTURE, center",
-          "Ocean with visible waves, foreground/midground",
-          "Cyan glowing beacon at the top of the skyscraper, center, background"
-        ],
-        "spatialLayout": "The foreground is dominated by the dark, choppy surface of the ocean with visible waves. The midground is occupied by the massive, partially submerged skyscraper, leaning significantly to the right. Its lower visible sections rest on a broad, flat base that appears to be a submerged structure. The background consists of a dark, cloudy sky illuminated by the glowing apex of the skyscraper.",
-        "uniqueIdentifiers": [
-          "Half-collapsed skyscraper in the ocean",
-          "Bright cyan glowing beacon at the summit",
-          "Contrast between submerged lower floors and intact upper floors"
-        ],
-        "materials_primary": "Concrete, corroded metal",
-        "materials_secondary": "Water, debris",
-        "materials_accents": "Glowing cyan lights, yellow window lights",
-        "colors_dominant": "Dark teal/blue (ocean and sky)",
-        "colors_secondary": "Dark gray/brown (building facade)",
-        "colors_accents": "Bright cyan (top beacon), yellow (window lights)",
-        "colors_ambient": "Muted, dark teal",
-        "navigableElements": [
-          {
-            "type": "window",
-            "position": "midground, scattered on building facade",
-            "description": "Numerous illuminated windows suggesting interior spaces"
-          },
-          {
-            "type": "object",
-            "position": "base of the building, midground",
-            "description": "A wide, flat deck-like structure with railings and visible lights"
-          },
-          {
-            "type": "object",
-            "position": "top of the skyscraper, background",
-            "description": "The bright, glowing beacon structure at the very apex"
-          }
-        ],
-        "searchDesc": "Decaying skyscraper in ocean. Has: illuminated windows (midground), deck structure (midground), glowing beacon (background)",
-        "dna": {
-          "architectural_tone": "grand edifice decay|vertical ruin",
-          "cultural_tone": "Once a symbol of luxury and aspiration, now a decaying monument to lost grandeur, its upper reaches offering a precarious beacon of hope or a warning.",
-          "materials_base": "Emphasis on corroded, water-stained concrete and rusted structural steel, juxtaposed with remnants of opulent, now decaying, interior finishes.",
-          "mood_baseline": "melancholy|eerie|hauntingly beautiful",
-          "palette_bias": "null",
-          "soundscape_base": "null",
-          "flora_base": "null",
-          "fauna_base": "null"
-        },
-        "slug": "the-meridian-beacon"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/rZQoi6VKd-7trw98YtQ0s.jpg",
-      "focus": {
-        "node_id": "The Meridian Beacon",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "loc-1762938015418-ve54mio8i": {
-      "id": "loc-1762938015418-ve54mio8i",
-      "type": "host",
-      "name": "Architectural Marvels",
-      "dna": {
-        "type": "host",
-        "name": "Architectural Marvels",
-        "description": "A realm defined by towering structures and engineering feats.",
-        "dna": {
-          "genre": "fantasy",
-          "architectural_tone": "monumental, monolithic, archaic",
-          "cultural_tone": "A society deeply reverent of power, scale, and the unknowable. Their structures are testaments to ancient, formidable forces and a pursuit of transcendence.",
-          "materials_base": "Primarily massive, dark, unworked stone. Secondary elements suggest the presence of rare, luminous minerals or magically imbued materials.",
-          "mood_baseline": "awe-inspiring, mysterious, ancient",
-          "palette_bias": "Dominated by deep, cool tones like obsidian, slate, and abyssal blues. Accents of ethereal light sources are common.",
-          "soundscape_base": "Echoes of immense scale, the subtle hum of dormant power, and the whisper of unseen forces. Sounds are deep, resonant, and often distant.",
-          "flora_base": "Extremely sparse and resilient; hardy mosses, ancient lichens, or strange, bioluminescent fungi that can survive in harsh, elevated environments.",
-          "fauna_base": "Rare, often solitary creatures adapted to extreme altitudes or to guard ancient structures. Think shadow-dwelling beasts or elemental manifestations."
-        },
-        "slug": "architectural-marvels"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Architectural Marvels",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "7d223096-a3f3-434e-80ee-81dda738ee8d": {
-      "id": "7d223096-a3f3-434e-80ee-81dda738ee8d",
-      "type": "region",
-      "name": "The Skyward Reach",
-      "dna": {
-        "type": "region",
-        "name": "The Skyward Reach",
-        "description": "An expanse dominated by immense vertical constructions, reaching towards the heavens.",
-        "dna": {
-          "architectural_tone": "vertical, gravity-defying, spire-like",
-          "cultural_tone": null,
-          "materials_base": "Expanses of dark, weathered stone and precipitous rocky outcrops. Structures integrate with the natural sheer heights.",
-          "mood_baseline": "isolated, exposed, majestic",
-          "palette_bias": "muted blues, grays, and blacks with the occasional stark white of cloud formations or mist.",
-          "soundscape_base": "The constant rush of wind at high altitudes, the distant calls of soaring creatures, and the faint echo of geological processes.",
-          "flora_base": "Scraping, wind-battered alpine vegetation and hardy, clinging mosses on exposed rock faces.",
-          "fauna_base": "Avian predators adapted to extreme winds, and hardy mountain-dwelling creatures capable of traversing treacherous terrain."
-        },
-        "slug": "the-skyward-reach"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Skyward Reach",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "cec6267b-a82c-4a36-a123-36062ed60b00": {
-      "id": "cec6267b-a82c-4a36-a123-36062ed60b00",
-      "type": "location",
-      "name": "The Zenith Spire",
-      "dna": {
-        "type": "location",
-        "name": "The Zenith Spire",
-        "description": "A colossal tower that pierces the clouds, an awe-inspiring monument to ambition.",
-        "looks": "A colossal, impossibly tall, and slender tower dominates the center of the frame, its dark, monolithic stone construction disappearing into the swirling clouds above. Jagged, spire-like protrusions adorn its upper reaches, suggesting a complex and alien architecture. The tower emits a powerful, ethereal blue light that illuminates the surrounding mist. In the foreground, a dark, rocky shoreline meets a calm, reflective body of water, with smaller, shadowed landmasses visible on either side.",
-        "atmosphere": "Dense, swirling mist and clouds envelop the upper portions of the tower and the surrounding terrain. The air appears thin and cool, with the visible cloud formations suggesting extreme altitudes. A sense of vast, open space is conveyed by the atmospheric conditions.",
-        "mood": "Awe-inspiring, daunting",
-        "lighting": "The primary light source emanates from the tower itself, casting a brilliant, cool blue glow. This light creates high contrast against the dark stone of the tower and the muted blues and grays of the surrounding environment. The light reflects softly on the water's surface in the foreground.",
-        "dominantElements": [
-          "Colossal tower (est. 300m+ height, VERTICAL STRUCTURE) dominating center",
-          "Dark, rocky shoreline with fragmented landmasses (foreground)",
-          "Calm, reflective body of water (foreground/midground)",
-          "Swirling mist and clouds (background/midground)"
-        ],
-        "spatialLayout": "The foreground features a dark, rocky terrain bordering a body of water, with smaller landforms extending into the midground. The dominant element, a colossal tower, rises from the midground and extends into the background, piercing the clouds. Massive, shadowed cliffs flank the scene on the left and right, creating a sense of enclosure and framing the immense verticality of the tower.",
-        "uniqueIdentifiers": [
-          "Impossibly tall, slender, dark monolithic tower",
-          "Piercing blue light emanating from the tower's peak",
-          "Surrounding environment of dark, rocky terrain and mist-filled sky"
-        ],
-        "materials_primary": "Monolithic stone",
-        "materials_secondary": "Rock, water, mist",
-        "materials_accents": "Luminous blue light",
-        "colors_dominant": "Deep blues and dark grays",
-        "colors_secondary": "Subtle lighter grays and whites in clouds",
-        "colors_accents": "Intense, bright blue light at the tower's peak and base",
-        "colors_ambient": "Cool, ethereal blue",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "base of tower, midground",
-            "description": "Illuminated base of the colossal tower, suggesting an entrance or source of light"
-          },
-          {
-            "type": "window",
-            "position": "upper sections of tower, midground/background",
-            "description": "Numerous narrow, vertical openings piercing the tower's structure"
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Colossal tower pierces clouds. Has: illuminated passage (tower base), vertical windows (tower midground/background)",
-        "dna": {
-          "architectural_tone": "impossibly tall, monolithic, jagged spire",
-          "cultural_tone": null,
-          "materials_base": "Primarily colossal, dark monolithic stone, presenting a seamless, almost fused appearance.",
-          "mood_baseline": "dominating, formidable, solitary",
-          "palette_bias": "Deep blues and dark grays are primary, with ethereal blue light emanating from within.",
-          "soundscape_base": "A profound silence punctuated by the subtle resonance of the spire itself and the thin whistle of wind.",
-          "flora_base": "None directly on the spire; perhaps hardy, shadowed vegetation in the immediate, low-lying rocky areas.",
-          "fauna_base": "None directly associated with the spire's immediate structure, suggesting it is beyond the reach of most life."
-        },
-        "slug": "the-zenith-spire"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/HLOonWDyT1BTMRQKC2jEh.jpg",
-      "focus": {
-        "node_id": "The Zenith Spire",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "loc-1762938082767-62txnw053": {
-      "id": "loc-1762938082767-62txnw053",
-      "type": "host",
-      "name": "Spiritual Realm",
-      "dna": {
-        "type": "host",
-        "name": "Spiritual Realm",
-        "description": "A realm of divine influence and ethereal landscapes.",
-        "dna": {
-          "genre": "spiritual fantasy",
-          "architectural_tone": "divine grandeur, ethereal structures",
-          "cultural_tone": "A realm of divine beings and spiritual devotion, focused on enlightenment and cosmic harmony.",
-          "materials_base": "Materials possess an otherworldly quality, often shimmering, translucent, or imbued with celestial light. They suggest permanence and divine craftsmanship.",
-          "mood_baseline": "serene, contemplative, awe-inspiring",
-          "palette_bias": "Dominated by cool, luminous tones and iridescent hues that evoke the celestial. Subtle gradients and soft glows are common.",
-          "soundscape_base": "Ethereal choral music, gentle chimes, and the hum of divine energy. Sounds are often resonant and echoey.",
-          "flora_base": "Luminous, glowing flora with crystalline or petal-like structures. Plants may possess healing or spiritual properties.",
-          "fauna_base": "Celestial beings, divine messengers, and creatures imbued with spiritual essence. Animals often exhibit grace and otherworldly beauty."
-        },
-        "slug": "spiritual-realm"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Spiritual Realm",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "a208584d-1e47-4d11-944a-a9e8230298db": {
-      "id": "a208584d-1e47-4d11-944a-a9e8230298db",
-      "type": "region",
-      "name": "The Azure Domain",
-      "dna": {
-        "type": "region",
-        "name": "The Azure Domain",
-        "description": "A forgotten corner of the spiritual plane, touched by celestial art.",
-        "dna": {
-          "architectural_tone": "forgotten celestial art, weathered divine forms",
-          "cultural_tone": "A place where the divine touch has faded, leaving behind artistic legacies and a sense of lost reverence.",
-          "materials_base": "Primarily ancient stone that has been sculpted into divine imagery, often featuring weathered blue pigments and overgrown with natural elements.",
-          "mood_baseline": "melancholy, forgotten, serene",
-          "palette_bias": "Deep blues and muted grays dominate, accented by the encroaching greens of nature. Cool, desaturated tones prevail.",
-          "soundscape_base": "Echoes of distant celestial hymns, the gentle lapping of water, and the rustling of ancient foliage.",
-          "flora_base": "Luxuriant, overgrown vegetation that has reclaimed celestial structures. Water-loving plants and ancient vines are prevalent.",
-          "fauna_base": "Creatures that have adapted to or are drawn to the decaying divine presence, often with a regal or mystical quality."
-        },
-        "slug": "the-azure-domain"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Azure Domain",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "09a18dc4-b29a-43a3-bc4b-8aac8cd3e406": {
-      "id": "09a18dc4-b29a-43a3-bc4b-8aac8cd3e406",
-      "type": "location",
-      "name": "The Garden of Vishnu",
-      "dna": {
-        "type": "location",
-        "name": "The Garden of Vishnu",
-        "description": "An overgrown compound dedicated to the deity, Vishnu.",
-        "looks": "The scene depicts an overgrown, ancient compound dominated by crumbling blue architecture and lush vegetation. Large, weathered stone pillars line a central pathway, leading towards an arched opening. Overgrown plants cascade down the structures, and lily pads float on a shallow pool in the foreground. A serene, ethereal atmosphere is conveyed through the diffuse light and misty surroundings. The overall impression is one of forgotten grandeur and natural reclamation.",
-        "atmosphere": "A pervasive, soft mist hangs in the air, obscuring distant details and contributing to a sense of depth and mystery. The humidity is palpable, enhancing the lushness of the overgrowth and the ancient feel of the stone.",
-        "mood": "Serene, melancholic, ancient",
-        "lighting": "The lighting is soft and diffuse, appearing to emanate from the background and overhead canopy. It casts a cool, blue-toned glow throughout the scene, with minimal harsh shadows. The overall light is subdued, suggesting a perpetual twilight or a very misty day.",
-        "dominantElements": [
-          "Crumbling blue pillars lining the pathway",
-          "Overgrown lush vegetation",
-          "A central, mist-shrouded archway",
-          "A large, blue stone statue atop the central structure"
-        ],
-        "spatialLayout": "The foreground is occupied by a shallow pool with lily pads and a stone pathway on its left edge. The midground features a colonnade of crumbling blue pillars on either side, leading to a raised set of stairs and a central arched opening. The background is heavily obscured by mist and foliage, suggesting further depths to the compound.",
-        "uniqueIdentifiers": [
-          "Crumbling blue architectural elements",
-          "Abundant, overgrown vegetation entwined with structures",
-          "A prominent blue stone statue overlooking the scene"
-        ],
-        "materials_primary": "Stone",
-        "materials_secondary": "Vines, foliage",
-        "materials_accents": "Water, lily pads",
-        "colors_dominant": "Deep blue",
-        "colors_secondary": "Green, gray",
-        "colors_accents": "Light blue (from mist/light)",
-        "colors_ambient": "Cool blue",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, midground",
-            "description": "A wide, mist-shrouded opening beyond the stairs, hinting at further exploration"
-          },
-          {
-            "type": "stairs",
-            "position": "center, midground",
-            "description": "Stone steps leading up to the central archway"
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Overgrown temple compound. Has: stone stairs (center, midground), mist-shrouded passage (center, midground)",
-        "dna": {
-          "architectural_tone": "crumbling blue statues, overgrowth",
-          "cultural_tone": "A sacred space once dedicated to Vishnu, now a wild sanctuary where nature and divine remnants coexist.",
-          "materials_base": "Cracked and weathered stone, interwoven with thick, verdant vines and lush foliage. Evidence of ancient blue pigment remains.",
-          "mood_baseline": "overgrown, mystical, tranquil",
-          "palette_bias": "Deep blues and vibrant greens intermingle, with earthy grays and subtle hints of decay. A sense of vibrant life reclaiming aged beauty.",
-          "soundscape_base": "The calls of exotic birds, the soft whirring of intricate mechanisms, and the gentle flow of water.",
-          "flora_base": "Intricately detailed mechanical lotuses, dense overgrowth of ancient trees and flowering plants.",
-          "fauna_base": "Majestic peacocks and autonomous, biomechanical lotus creatures."
-        },
-        "slug": "the-garden-of-vishnu"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/nedhiNm7A1ZrnINufxK9S.jpg",
-      "focus": {
-        "node_id": "The Garden of Vishnu",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "loc-1762938116284-c231uy0ot": {
-      "id": "loc-1762938116284-c231uy0ot",
-      "type": "host",
-      "name": "Underground Network",
-      "dna": {
-        "type": "host",
-        "name": "Underground Network",
-        "description": "A vast, interconnected subterranean world.",
-        "dna": {
-          "genre": "sci-fi",
-          "architectural_tone": "brutalist utilitarian",
-          "cultural_tone": "A network built for survival and transit, characterized by robust, functional design and a pervasive sense of contained existence.",
-          "materials_base": "Dominated by reinforced concrete, aged steel, and utilitarian composites. Focus on durability and resilience over aesthetics, with surfaces often bearing the marks of extensive use and repair.",
-          "mood_baseline": "functional, isolated, enduring",
-          "palette_bias": "Anchored in muted grays, deep industrial blues, and utilitarian earth tones. Accents of warning colors or functional illumination provide contrast, but the overall feel is somber and grounded.",
-          "soundscape_base": "A constant hum of machinery, echoing ventilation systems, and distant, indistinguishable transit sounds. The acoustics amplify the sense of vast, enclosed spaces and perpetual activity.",
-          "flora_base": "Primarily industrial hydroponics or hardy, genetically engineered mosses and fungi adapted to low light and artificial environments. Natural flora is rare and highly specialized.",
-          "fauna_base": "Engineered for utility, such as maintenance drones, vermin adapted to waste processing, or security automatons. Wild or naturally occurring fauna is virtually nonexistent."
-        },
-        "slug": "underground-network"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Underground Network",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "a5855c90-4dde-42e8-a95e-a6ee0e1115ce": {
-      "id": "a5855c90-4dde-42e8-a95e-a6ee0e1115ce",
-      "type": "region",
-      "name": "The Deep Tracks",
-      "dna": {
-        "type": "region",
-        "name": "The Deep Tracks",
-        "description": "A section of the network known for its disused transit infrastructure.",
-        "dna": {
-          "architectural_tone": "disused transit infrastructure",
-          "cultural_tone": "A forgotten stratum of the network, where remnants of grand transit projects lie dormant, repurposed by necessity into ad-hoc shelters and functional zones.",
-          "materials_base": "A blend of original grand-scale transit materials like large-span concrete and aged steel, overlaid with salvaged scrap and makeshift construction. The underlying infrastructure is imposing, but its current state is one of decay and improvisation.",
-          "mood_baseline": "decaying, spectral, repurposed",
-          "palette_bias": "Dominant cool blues and teals from ambient atmospheric effects, contrasted with the dark, weathered tones of aged concrete, oxidized metals, and the faded hues of old signage.",
-          "soundscape_base": "Echoes of past transit, the drip of water, the hum of failing systems, and the soft hiss of lingering atmospheric mist. Sounds are often muffled and distorted by the vastness and decay.",
-          "flora_base": "Minimal, perhaps hardy, dark mosses clinging to damp surfaces, or bioluminescent fungi that feed on decay.",
-          "fauna_base": "Scavengers adapted to the dark and damp, such as specialized insects, or automated maintenance units that have gone rogue."
-        },
-        "slug": "the-deep-tracks"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Deep Tracks",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "3a4d7025-0b15-45e6-84c2-8570659d3242": {
-      "id": "3a4d7025-0b15-45e6-84c2-8570659d3242",
-      "type": "location",
-      "name": "The Onyx Station",
-      "dna": {
-        "type": "location",
-        "name": "The Onyx Station",
-        "description": "A subterranean train terminal that has been repurposed as a refuge.",
-        "looks": "The image depicts a vast, cavernous subterranean train terminal with a high, arched ceiling and rows of pillars supporting the structure. The walls are adorned with numerous old, flickering advertisements, casting a spectral glow. A set of train tracks runs through the center of the station, leading into a misty, distant background. The scale suggests a grand, imposing public space that has fallen into disuse and been repurposed.",
-        "atmosphere": "A thick, pervasive mist hangs in the air, obscuring visibility into the distance and lending a damp, heavy quality to the atmosphere. The surfaces appear wet and reflective, indicating high humidity within the enclosed space.",
-        "mood": "Melancholy, resilient",
-        "lighting": "The lighting is predominantly cool and artificial, emanating from long, fluorescent fixtures mounted on the walls and ceiling. These lights create a stark contrast between illuminated areas and deep shadows. The distant end of the station is bathed in a bright, ethereal blue light that fades into the mist, creating a sense of depth and mystery.",
-        "dominantElements": [
-          "Arched ceiling with exposed pipes, extending indefinitely into the background",
-          "Rows of stone pillars supporting the ceiling structure",
-          "Train tracks running down the center of the platform",
-          "Flickering advertisements plastered on the walls",
-          "Artificial fluorescent lighting fixtures along the walls"
-        ],
-        "spatialLayout": "The foreground shows the rough, debris-strewn platform beside the train tracks. The midground is characterized by the repeating pattern of pillars and plastered walls lining the platform, with doors visible between some pillars. The background recedes into a tunnel, characterized by a strong perspective pull towards a bright, misty haze and the diminishing lights.",
-        "uniqueIdentifiers": [
-          "Spectral, flickering advertisements on station walls",
-          "Arched, cavernous ceiling of a disused train station",
-          "Subterranean setting with train tracks"
-        ],
-        "materials_primary": "Stone (pillars, walls)",
-        "materials_secondary": "Metal (pipes, tracks), concrete/plaster (walls, ceiling)",
-        "materials_accents": "Flickering light from advertisements, artificial light fixtures",
-        "colors_dominant": "Deep blues and teals, especially in the mist and lighting",
-        "colors_secondary": "Dark grays and blacks of the stone and metal structures",
-        "colors_accents": "Pale yellow or white from the fluorescent lights",
-        "colors_ambient": "Cool, bluish-green hue cast by the mist and lighting",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, background",
-            "description": "Endless tunnel vanishing into a bright, misty haze"
-          },
-          {
-            "type": "door",
-            "position": "left wall, midground",
-            "description": "Dark wooden door set between stone pillars"
-          },
-          {
-            "type": "door",
-            "position": "right wall, midground",
-            "description": "Dark wooden door set between stone pillars"
-          },
-          {
-            "type": "object",
-            "position": "wall, midground",
-            "description": "Numerous flickering advertisements covering the walls"
-          }
-        ],
-        "searchDesc": "[Location - Interior] Subterranean train station tunnel. Has: passage (center, background), door (left wall, midground), door (right wall, midground), advertisements (wall, midground)",
-        "dna": {
-          "architectural_tone": "subterranean terminal turned refuge",
-          "cultural_tone": "A place of temporary sanctuary for those living within the Deep Tracks, its past grandeur now serving as a shell for survival, marked by the lingering presence of forgotten commerce.",
-          "materials_base": "Primarily worn stone and concrete from the original terminal, augmented with salvaged metal, scavenged paneling, and crude, functional repairs. The history of its former life is visible in decaying advertisements and worn fixtures.",
-          "mood_baseline": "nostalgic, desolate, functional refuge",
-          "palette_bias": "Deep blues and teals from atmospheric effects and ghost-like advertising projections, set against the dark grays and blacks of the stone and metal structures. Faded, spectral remnants of brighter commercial colors may still be visible.",
-          "soundscape_base": "Distant, echoing train sounds or whispers of ventilation, overlaid with the faint, spectral flicker of old advertisements. The general ambiance is one of a vast, occupied but silent space.",
-          "flora_base": "None",
-          "fauna_base": "None"
-        },
-        "slug": "the-onyx-station"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/panda/meMYb_wUkYZW-pmkC34Ob.jpg",
-      "focus": {
-        "node_id": "The Onyx Station",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
     "loc-1762938140139-esz39969j": {
       "id": "loc-1762938140139-esz39969j",
       "type": "host",
@@ -2255,257 +1630,6 @@
         "distance": "medium"
       }
     },
-    "loc-1762940116092-f2c3qpzs9": {
-      "id": "loc-1762940116092-f2c3qpzs9",
-      "type": "host",
-      "name": "The Frozen Expanse",
-      "dna": {
-        "type": "host",
-        "name": "The Frozen Expanse",
-        "description": "A desolate and frigid world where time seems to stand still.",
-        "dna": {
-          "genre": "post-apocalyptic",
-          "architectural_tone": "brutalist industrial decay",
-          "cultural_tone": "Remnants of a forgotten industrial era, now reclaimed by nature and time. Functionality has long ceased, leaving behind monumental, imposing structures.",
-          "materials_base": "Vast expanses of weathered concrete form the primary structural elements. Expect exposed rebar, large-scale metal components showing signs of rust and disuse, and surfaces worn smooth by time and elements.",
-          "mood_baseline": "desolate, frozen, monumental",
-          "palette_bias": "Dominated by cool blues and grays reflecting an icy environment and muted concrete. Accents of dull rust and dark ferrous tones suggest the passage of time and neglect.",
-          "soundscape_base": "The overwhelming silence is punctuated by the vastness of the environment. Occasional groans of stressed metal, the whisper of wind across frozen surfaces, and distant, almost imperceptible industrial hums.",
-          "flora_base": "Minimal to non-existent. Sparse, hardy mosses or lichens might cling to sheltered surfaces, but the overwhelming impression is one of barrenness.",
-          "fauna_base": "Extremely rare. Small, cold-adapted scavengers or insects that can survive in extreme conditions might be present in sheltered pockets, but large fauna is unlikely."
-        },
-        "slug": "the-frozen-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Frozen Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "dc9fff72-08e5-433e-b709-028a3d893e86": {
-      "id": "dc9fff72-08e5-433e-b709-028a3d893e86",
-      "type": "region",
-      "name": "The Frozen Expanse",
-      "dna": {
-        "type": "region",
-        "name": "The Frozen Expanse",
-        "description": "",
-        "dna": {
-          "architectural_tone": null,
-          "cultural_tone": null,
-          "materials_base": "Emphasis on reinforced concrete and unadorned, heavy industrial metals, often showing the effects of severe cold like frost and ice accretion.",
-          "mood_baseline": "stark, static, isolating",
-          "palette_bias": "Deep blues and cyans dominate, with stark whites from snow and ice. Limited tonal variation, emphasizing the oppressive cold.",
-          "soundscape_base": "The sound of wind howling over vast, open spaces. The creak and groan of ice-laden structures. Distant, muffled impacts suggest settling ice or debris.",
-          "flora_base": "Effectively absent. Any organic matter is frozen solid and inert, with no visible signs of life.",
-          "fauna_base": "None visible. Any potential life would be deep underground or in preserved states."
-        },
-        "slug": "the-frozen-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Frozen Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "165c5863-3475-43ef-8ad5-d1acfd4deeff": {
-      "id": "165c5863-3475-43ef-8ad5-d1acfd4deeff",
-      "type": "location",
-      "name": "The Frozen Expanse",
-      "dna": {
-        "type": "location",
-        "name": "The Frozen Expanse",
-        "description": "",
-        "dna": {
-          "architectural_tone": "monolithic structures with immense scale",
-          "cultural_tone": null,
-          "materials_base": "Primarily unpainted, raw concrete and large, thick steel beams. Surfaces are heavily weathered by frost and potential ice damage.",
-          "mood_baseline": "oppressive, silent, grand",
-          "palette_bias": "Cool ambient light refracts through atmospheric ice particles, casting an ethereal blue-gray. Small, functional warm lights offer stark, isolated points of contrast.",
-          "soundscape_base": "The low drone of immense, silent machinery. Echoes of wind amplified by the vast, enclosed space. The occasional drip or crack of ice.",
-          "flora_base": null,
-          "fauna_base": null
-        },
-        "slug": "the-frozen-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Frozen Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "036709ab-6df3-451c-9072-d7b0fd3e8e3c": {
-      "id": "036709ab-6df3-451c-9072-d7b0fd3e8e3c",
-      "type": "niche",
-      "name": "The Frozen Mechanism",
-      "dna": {
-        "type": "niche",
-        "name": "The Frozen Mechanism",
-        "description": "The interior of the factory where all activity has ceased mid-motion, preserved by the extreme cold.",
-        "looks": "The scene depicts a vast, cavernous interior space of an industrial factory, stretching far into the distance. Colossal concrete pillars and multi-story structures line the sides, creating a sense of immense scale. A central pathway, likely a road, is flanked by large snowdrifts and extends towards a brightly lit, arched opening in the background. Exposed pipes and industrial elements are visible along the walls and ceilings.",
-        "atmosphere": "A thick, pervasive mist or fog hangs in the air, obscuring details and contributing to the desolate atmosphere. The air appears still and cold, with the visual cues of snow and ice reinforcing the frigid environment.",
-        "mood": "Eerie, preserved, melancholic",
-        "lighting": "The lighting is predominantly cool and ethereal, with a bright, diffused light emanating from the arched opening at the far end of the hall. Small, warm orange lights are spaced at intervals along the side walls, providing a stark contrast and casting localized pools of illumination.",
-        "dominantElements": [
-          "Massive concrete structure (HORIZONTAL STRUCTURE), extending infinitely into the background",
-          "Snowdrifts (filling the foreground and midground)",
-          "Arched opening with bright light (background)",
-          "Rows of industrial lights (midground, sides)"
-        ],
-        "spatialLayout": "The foreground is dominated by a paved path with tire tracks, bordered by substantial snowdrifts that reach up to the base of the factory walls. The midground consists of the extended interior hall, characterized by repeating structural bays, pipes, and intermittently lit wall sconces. The background features a bright, hazy arched doorway, acting as a focal point and indicating an exit or further area.",
-        "uniqueIdentifiers": [
-          "Frozen road leading into a vast industrial hall",
-          "Symmetrical rows of industrial architecture",
-          "Archway at the far end emitting bright light",
-          "Juxtaposition of industrial elements with snow and ice"
-        ],
-        "materials_primary": "concrete",
-        "materials_secondary": "snow, ice, asphalt",
-        "materials_accents": "metal pipes, light fixtures",
-        "colors_dominant": "blue (ambient light, mist)",
-        "colors_secondary": "gray (concrete structure), white (snow)",
-        "colors_accents": "orange (wall lights)",
-        "colors_ambient": "cyan",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, foreground",
-            "description": "Paved road leading through snowdrifts into the factory's depths"
-          },
-          {
-            "type": "door",
-            "position": "center, background",
-            "description": "Large, arched doorway radiating a brilliant, misty light"
-          },
-          {
-            "type": "window",
-            "position": "sides, midground",
-            "description": "Numerous evenly spaced industrial windows or openings along the upper levels"
-          },
-          {
-            "type": "object",
-            "position": "sides, midground",
-            "description": "Exposed pipes and conduits running along the concrete walls"
-          }
-        ],
-        "searchDesc": "Industrial factory interior. Has: paved road (center, foreground), arched door (center, background), industrial lights (sides, midground)",
-        "slug": "the-frozen-mechanism"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/zebra/elKPt4PB_TiRnOQURilnf.jpg",
-      "focus": {
-        "node_id": "The Frozen Mechanism",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "loc-1762940164621-0aq0meuxg": {
-      "id": "loc-1762940164621-0aq0meuxg",
-      "type": "host",
-      "name": "Veridian Expanse",
-      "dna": {
-        "type": "host",
-        "name": "Veridian Expanse",
-        "description": "A world teeming with bioluminescent flora and fauna.",
-        "dna": {
-          "genre": "fantasy",
-          "architectural_tone": "organic, nature-integrated structures",
-          "cultural_tone": "Societies deeply connected to natural cycles and mystical energies. Emphasis on harmony with the environment.",
-          "materials_base": "Natural, earth-derived materials like living wood, woven vines, and stone smoothed by time. Use of naturally luminescent elements is common.",
-          "mood_baseline": "Ethereal, tranquil, wondrous",
-          "palette_bias": "Rich greens and earthy browns form the base, accented by glowing blues, soft yellows, and vibrant floral hues. A palette that evokes life and gentle illumination.",
-          "soundscape_base": "Gentle rustling of leaves, distant chirping of unseen creatures, and soft, melodic natural tones. A calming auditory environment.",
-          "flora_base": "Abundant and diverse plant life, often with bioluminescent properties or unusual growth patterns. Vegetation is integral to structures and pathways.",
-          "fauna_base": "Small, often shy creatures, some with bioluminescent markings or symbiotic relationships with flora. Fauna is generally peaceful and integrated into the ecosystem."
-        },
-        "slug": "veridian-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Veridian Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "b5e90f09-8490-485e-b4d9-67d37e466191": {
-      "id": "b5e90f09-8490-485e-b4d9-67d37e466191",
-      "type": "region",
-      "name": "Veridian Expanse",
-      "dna": {
-        "type": "region",
-        "name": "Veridian Expanse",
-        "description": "",
-        "slug": "veridian-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Veridian Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "62e55392-b1db-4e24-b399-836bd0240ddf": {
-      "id": "62e55392-b1db-4e24-b399-836bd0240ddf",
-      "type": "location",
-      "name": "The Grove of Lantern Seeds",
-      "dna": {
-        "type": "location",
-        "name": "The Grove of Lantern Seeds",
-        "description": "A tranquil clearing in the Whispering Jungle, illuminated by the soft glow of its unique flora.",
-        "looks": "A circular, thatched-roof structure with a peaked top sits in a forest clearing. The building has a wide, overhanging roof supported by posts. Intricate, lattice-like window frames surround the building, through which a warm, yellow light emanates. A pathway of dark, irregular stones leads to the structure's entrance, flanked by dense foliage. Numerous glowing, egg-shaped lanterns are scattered along the pathway and the edges of the clearing.",
-        "atmosphere": "The air appears thick and humid, with a discernible mist or haze shrouding the background jungle. The overall atmosphere suggests a cool, damp environment.",
-        "mood": "Magical, serene, wondrous",
-        "lighting": "The scene is illuminated by a soft, warm glow emanating from within the structure and the surrounding lanterns. This creates a low-contrast environment with gentle shadows. The ambient light has a cool, bluish tint due to the time of day or environmental conditions, contrasting with the warm light sources.",
-        "dominantElements": [
-          "Thatched-roof structure (center, midground)",
-          "Glowing egg-shaped lanterns (foreground and midground)",
-          "Dense forest foliage (surrounding)",
-          "Stone pathway (foreground and midground)"
-        ],
-        "spatialLayout": "The foreground is dominated by a stone pathway and lush, dark green foliage. In the midground, the circular, thatched-roof building is the central focal point. The background consists of dense, dark trees fading into a misty blue haze, indicating deep forest cover.",
-        "uniqueIdentifiers": [
-          "Thatched-roof circular building",
-          "Egg-shaped glowing lanterns",
-          "Lattice-patterned windows"
-        ],
-        "materials_primary": "Thatch (roof), Stone (pathway), Wood (structure frame and doors)",
-        "materials_secondary": "Foliage, Moss",
-        "materials_accents": "Glowing lanterns, Internal light",
-        "colors_dominant": "Deep Blue (foliage, mist, ambient light)",
-        "colors_secondary": "Earthy Browns (structure, pathway), Dark Green (foliage)",
-        "colors_accents": "Warm Yellow/Orange (lanterns, interior light)",
-        "colors_ambient": "Cool Blue",
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center, midground",
-            "description": "Double wooden doors set within the structure's facade, glowing from within."
-          },
-          {
-            "type": "passage",
-            "position": "foreground/midground",
-            "description": "Stone pathway leading towards the central structure, lined with glowing lanterns."
-          }
-        ],
-        "searchDesc": "Forest clearing with a thatched building. Has: double doors (center, midground), stone pathway (foreground/midground)",
-        "slug": "the-grove-of-lantern-seeds"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/koala/ehzc8Rsx7pStwcRhhRybI.jpg",
-      "focus": {
-        "node_id": "The Grove of Lantern Seeds",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
     "loc-1762940546941-0h7wjtbkk": {
       "id": "loc-1762940546941-0h7wjtbkk",
       "type": "host",
@@ -2752,6 +1876,148 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "loc-1762945694400-p7nymkao5": {
+      "id": "loc-1762945694400-p7nymkao5",
+      "type": "host",
+      "name": "The Sealed World",
+      "dna": {
+        "type": "host",
+        "name": "The Sealed World",
+        "description": "A world built for absolute containment and survival beneath the surface.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "brutalist utilitarian containment",
+          "cultural_tone": "A society focused on survival, resource management, and strict adherence to protocols in a world demanding absolute isolation.",
+          "materials_base": "Reinforced concrete, industrial metals, and synthetic polymers are the foundation of this world's structures, designed for durability and defense.",
+          "mood_baseline": "oppressive, sterile, functional",
+          "palette_bias": "Dominated by cool, desaturated tones like greys, muted blues, and industrial greens, accented by stark, utilitarian whites.",
+          "soundscape_base": "A constant hum of life support systems, distant machinery, and the occasional metallic echo defines the ambient sound.",
+          "flora_base": "Engineered hydroponic systems and synthetic nutrient paste provide sustenance. Natural flora is absent or strictly controlled within contained bio-domes.",
+          "fauna_base": "Genetically modified organisms for labor or sustenance, or carefully managed companion animals. Wild or untamed fauna is nonexistent."
+        },
+        "slug": "the-sealed-world"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Sealed World",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "3edae5ac-6627-4bf6-bd45-7c6aaee23fff": {
+      "id": "3edae5ac-6627-4bf6-bd45-7c6aaee23fff",
+      "type": "region",
+      "name": "The Sealed World",
+      "dna": {
+        "type": "region",
+        "name": "The Sealed World",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "Engineered hydroponic systems and synthetic nutrient paste provide sustenance. Natural flora is absent or strictly controlled within contained bio-domes.",
+          "fauna_base": "Genetically modified organisms for labor or sustenance, or carefully managed companion animals. Wild or untamed fauna is nonexistent."
+        },
+        "slug": "the-sealed-world"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Sealed World",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "b3479552-48bf-4161-85fc-70755aac2fbc": {
+      "id": "b3479552-48bf-4161-85fc-70755aac2fbc",
+      "type": "location",
+      "name": "The Concrete Vault",
+      "dna": {
+        "type": "location",
+        "name": "The Concrete Vault",
+        "description": "A stark and utilitarian bunker, designed for complete isolation.",
+        "looks": "Thick, seamless concrete ceiling with no external openings. Reinforced metal walls and a cold stone floor. The structure is entirely self-contained.",
+        "atmosphere": "Stale, recirculated air with a constant, low hum of machinery. The fluorescent lights cast a harsh, unwavering glow.",
+        "mood": "Claustrophobic, utilitarian, secure",
+        "dna": {
+          "architectural_tone": "brutalist reinforced structures",
+          "cultural_tone": "A stark and utilitarian bunker, designed for complete isolation and functional survival.",
+          "materials_base": "Thick, unadorned concrete and heavy-duty industrial metals are paramount, prioritizing resilience and containment.",
+          "mood_baseline": "claustrophobic, isolated, functional",
+          "palette_bias": "Dominated by cool greys and muted blues from artificial lighting, with accents of dark metallic tones.",
+          "soundscape_base": "The low hum of ventilation systems and the metallic clink of sparse furnishings.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-concrete-vault"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Concrete Vault",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "b4f7f76b-06e5-4c18-a3da-67cfbb6be4ff": {
+      "id": "b4f7f76b-06e5-4c18-a3da-67cfbb6be4ff",
+      "type": "niche",
+      "name": "The Central Hub",
+      "dna": {
+        "type": "niche",
+        "name": "The Central Hub",
+        "description": "The primary living and working area within the bunker, furnished for basic function.",
+        "looks": "The space is a long, rectangular room with a low, oppressive ceiling formed by thick concrete beams. The walls are constructed from large, interlocking metal plates, showing signs of wear and staining. A long, dark metal table with numerous matching chairs occupies the central area of the floor. The overall scale suggests a functional, utilitarian space designed for containment rather than comfort.",
+        "atmosphere": "The air appears clear but dense with the oppressive atmosphere of an enclosed, artificial environment. The lack of external visual cues contributes to a feeling of deep isolation.",
+        "mood": "Functional, stark, isolated",
+        "lighting": "The scene is illuminated by cool, blue-toned fluorescent lights mounted in rows on the ceiling. The light casts harsh shadows and creates a stark contrast between illuminated areas and the dark corners of the room.",
+        "dominantElements": [
+          "Long metal table with chairs (center, midground)",
+          "Arcing concrete ceiling beams (overhead)",
+          "Reinforced metal walls (left and right walls, midground)"
+        ],
+        "spatialLayout": "The foreground is the floor of the bunker, showing cracked concrete texture and leading towards the central furniture. The midground is dominated by the long table and chairs, flanked by the textured metal walls and archways leading further into darkness. The background fades into shadow, with the far end of the room becoming obscured.",
+        "uniqueIdentifiers": [
+          "Row of fluorescent ceiling lights",
+          "Long, dark metal conference table with chairs",
+          "Reinforced, panelled metal walls"
+        ],
+        "materials_primary": "Concrete",
+        "materials_secondary": "Metal",
+        "materials_accents": "Yellow warning label on door",
+        "colors_dominant": "Teal",
+        "colors_secondary": "Grey, Black",
+        "colors_accents": "Bright white from lights",
+        "colors_ambient": "Cool blue-green",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "right wall, midground",
+            "description": "A dark, solid metal door with a handle and a prominent yellow warning sign"
+          }
+        ],
+        "searchDesc": "[Location - Interior] Dim bunker room. Has: metal table and chairs (center), metal door (right wall)",
+        "dna": {
+          "architectural_tone": null,
+          "materials_base": "The primary living and working area within the bunker, furnished for basic function with cold stone floors and reinforced metal walls.",
+          "mood_baseline": "utilitarian, basic, functional",
+          "soundscape_base": "The sterile hum of fluorescent lights and the echo of footsteps on stone."
+        },
+        "slug": "the-central-hub"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/_BoulZuhngskvOZkR8kUx.jpg",
+      "focus": {
+        "node_id": "The Central Hub",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -2943,91 +2209,6 @@
       ]
     },
     {
-      "id": "loc-1762937330036-s3adfwthk",
-      "type": "host",
-      "children": [
-        {
-          "id": "a2a1a097-652b-4b44-b1f6-fbbad21fe33e",
-          "type": "region",
-          "children": [
-            {
-              "id": "63eeb228-cae8-43d9-8d1e-295debdf32f5",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762937391028-k5odqgmkp",
-      "type": "host",
-      "children": [
-        {
-          "id": "6fb1ac1e-2c22-4774-bb41-a140838f870f",
-          "type": "region",
-          "children": [
-            {
-              "id": "f7ffeeac-0d9a-42f5-9aea-820ebdce87c2",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762938015418-ve54mio8i",
-      "type": "host",
-      "children": [
-        {
-          "id": "7d223096-a3f3-434e-80ee-81dda738ee8d",
-          "type": "region",
-          "children": [
-            {
-              "id": "cec6267b-a82c-4a36-a123-36062ed60b00",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762938082767-62txnw053",
-      "type": "host",
-      "children": [
-        {
-          "id": "a208584d-1e47-4d11-944a-a9e8230298db",
-          "type": "region",
-          "children": [
-            {
-              "id": "09a18dc4-b29a-43a3-bc4b-8aac8cd3e406",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762938116284-c231uy0ot",
-      "type": "host",
-      "children": [
-        {
-          "id": "a5855c90-4dde-42e8-a95e-a6ee0e1115ce",
-          "type": "region",
-          "children": [
-            {
-              "id": "3a4d7025-0b15-45e6-84c2-8570659d3242",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1762938140139-esz39969j",
       "type": "host",
       "children": [
@@ -3054,46 +2235,6 @@
           "children": [
             {
               "id": "94e698e1-02df-47a1-8639-24d88a743196",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762940116092-f2c3qpzs9",
-      "type": "host",
-      "children": [
-        {
-          "id": "dc9fff72-08e5-433e-b709-028a3d893e86",
-          "type": "region",
-          "children": [
-            {
-              "id": "165c5863-3475-43ef-8ad5-d1acfd4deeff",
-              "type": "location",
-              "children": [
-                {
-                  "id": "036709ab-6df3-451c-9072-d7b0fd3e8e3c",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762940164621-0aq0meuxg",
-      "type": "host",
-      "children": [
-        {
-          "id": "b5e90f09-8490-485e-b4d9-67d37e466191",
-          "type": "region",
-          "children": [
-            {
-              "id": "62e55392-b1db-4e24-b399-836bd0240ddf",
               "type": "location",
               "children": []
             }
@@ -3134,7 +2275,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762945694400-p7nymkao5",
+      "type": "host",
+      "children": [
+        {
+          "id": "3edae5ac-6627-4bf6-bd45-7c6aaee23fff",
+          "type": "region",
+          "children": [
+            {
+              "id": "b3479552-48bf-4161-85fc-70755aac2fbc",
+              "type": "location",
+              "children": [
+                {
+                  "id": "b4f7f76b-06e5-4c18-a3da-67cfbb6be4ff",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
-  "pinnedIds": []
+  "pinnedIds": [
+    "loc-1762940621303-u5zbncoza"
+  ]
 }

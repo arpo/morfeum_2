@@ -163,10 +163,11 @@ You are literally INSIDE the structure described above.`;
  */
 export function buildInteriorSpaceRules(entranceElement: string): string {
   return `CRITICAL - THIS IS AN INTERIOR SPACE:
-- Show enclosed space with ceiling/roof overhead
+- Show enclosed space with solid ceiling/roof overhead
 - Interior lighting (ambient, artificial light, or light from windows/vents)
 - Walls and interior architecture visible
-- No open sky visible (unless through small windows/openings)
+- Solid ceiling/roof overhead - no open sky visible
+- If small windows/openings exist, they are in WALLS, not in the ceiling
 - Interior architecture must match the form of "${entranceElement}"`;
 }
 
@@ -306,5 +307,5 @@ export function buildRequirementsCondensed(): string {
  * Condensed interior space rules (45% shorter)
  */
 export function buildInteriorSpaceRulesCondensed(entranceElement: string): string {
-  return `INTERIOR SPACE: Enclosed with ceiling, interior lighting, walls visible, no open sky (except small windows). Match form of "${entranceElement}"`;
+  return `INTERIOR SPACE: Fully enclosed with solid ceiling/roof above, walls surrounding, interior lighting. No open sky visible. Match form of "${entranceElement}"`;
 }

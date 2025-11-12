@@ -91,6 +91,8 @@ ${decision.reasoning ? `CONTEXT: ${decision.reasoning}` : ''}
 🎯 YOU ARE INSIDE: ${entranceElement}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+DEFAULT ASSUMPTION: This is a fully enclosed interior with solid ceiling overhead.
+
 This is an INTERIOR space - you are literally INSIDE the structure mentioned above.
 The interior architecture MUST reflect the form and nature of what you entered.
 
