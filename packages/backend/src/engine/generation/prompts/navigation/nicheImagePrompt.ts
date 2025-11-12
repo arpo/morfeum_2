@@ -30,6 +30,8 @@ import {
   buildTransformationRulesCondensed,
   buildRequirementsCondensed,
   buildInteriorSpaceRulesCondensed,
+  buildCameraSpecifications,
+  buildCameraSpecificationsCondensed,
 } from '../shared/promptSections';
 
 /**
@@ -82,6 +84,9 @@ export function nicheImagePrompt(
   const navigableInstructions = mode === 'condensed' 
     ? buildNavigableElementsInstructionsCondensed()
     : buildNavigableElementsInstructions();
+  const cameraSpecs = mode === 'condensed'
+    ? buildCameraSpecificationsCondensed()
+    : buildCameraSpecifications();
 
   const prompt = `You are an expert at creating image prompts for FLUX image generation.
 
@@ -109,24 +114,7 @@ ${interiorRules}
 
 ${perspective}
 
-CAMERA SPECIFICATIONS FOR FLUX OUTPUT (CRITICAL):
-Your final FLUX prompt MUST include camera/lens specs appropriate for the space scale:
-
-Small spaces (< 15m ceiling):
-- Standard wide-angle: 28-35mm lens, eye-level
-- Example: "28mm lens, eye-level perspective"
-
-Medium spaces (15-50m ceiling):
-- Wide-angle: 20-28mm lens, slight upward tilt if tall ceilings
-- Example: "24mm lens, slight upward angle showing 12m vaulted ceiling"
-
-Vast/colossal spaces (> 50m ceiling):
-- Ultra-wide angle: 14-20mm lens, upward tilt to emphasize ceiling height
-- Deep depth of field (foreground to background sharpness)
-- Emphasize perspective and vanishing point
-- Example: "16mm ultra-wide lens, 10° upward tilt revealing soaring 50m ceiling, deep depth of field from foreground to 80m depth, dramatic wide-angle perspective with prominent vanishing point"
-
-Include these camera specs in your final FLUX prompt to ensure proper scale capture.
+${cameraSpecs}
 
 ${transformRules}
 
