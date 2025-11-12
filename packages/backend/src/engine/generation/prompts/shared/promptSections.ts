@@ -137,11 +137,22 @@ BEFORE creating the interior, analyze the parent structure's FORM:
    - Geodesic dome → Visible geodesic framework overhead
    - Arched structure → Arched ceiling
 
-3. SCALE & PROPORTION
-   Match the interior scale to the exterior description
-   - Compact/small → Intimate interior space
-   - Large/expansive → Spacious interior
-   - Towering/tall → High ceilings
+3. SCALE & PROPORTION (CRITICAL)
+   Extract dimensions from Spatial Layout if provided (e.g., "80-100m tall, 40m diameter")
+   Apply proportional interior scale:
+   
+   - Compact/small (< 15m) → Intimate interior (3-5m ceilings, walls 3-8m apart)
+   - Large/expansive (15-50m) → Spacious interior (8-15m ceilings, walls 10-20m apart)
+   - Towering/colossal (> 50m) → Vast interior (20m+ ceilings, walls 20m+ apart, visible depth 40m+)
+   
+   MANDATORY for colossal structures (> 50m):
+   - Specify ceiling height in meters (e.g., "vaulted ceiling soaring 40m overhead")
+   - Specify wall distances (e.g., "walls stretching 25m to either side")
+   - Include massive structural elements (e.g., "8m tall stone blocks," "towering 15m columns")
+   - Emphasize depth and distance (e.g., "passage extending 50m into darkness")
+   - Use scale-reinforcing language: "towering," "vast," "immense," "soaring," "colossal"
+   
+   If structure dimensions are provided (e.g., "80m tall"), interior ceiling should be 40-60% of total height.
 
 CRITICAL: The interior architecture MUST directly reflect these analyzed characteristics.
 You are literally INSIDE the structure described above.`;
@@ -216,11 +227,25 @@ export function buildRequirements(): string {
  */
 export function buildCompositionLayeringCondensed(): string {
   return `COMPOSITION LAYERS (Required - describe all three):
-FOREGROUND (0-3m): Floor texture, near walls, touchable elements
-MIDGROUND (3-10m): Navigation features (corridors, stairs, platforms), architectural details
-BACKGROUND (10m+): Depth, distant lighting, where space continues/ends
 
-Describe each layer separately with clear spatial organization.`;
+CRITICAL: Check Spatial Layout for STRUCTURE FORM to determine composition priority:
+
+VERTICAL STRUCTURE (towers, spires): PRIORITIZE UPWARD SPACE
+- Foreground: Circular/curved floor plan with massive elements
+- Midground: Vertical structural elements (columns, buttresses) with heights
+- Background: PRIMARY FOCUS - Ceiling soaring overhead (specify height in meters), visible vertical shaft/levels extending upward
+
+HORIZONTAL STRUCTURE (halls, corridors): PRIORITIZE EXTENDING DEPTH
+- Foreground: Entry area floor texture
+- Midground: Side features and structural elements
+- Background: PRIMARY FOCUS - Passage extending into distance (specify depth in meters), far ceiling
+
+WIDE STRUCTURE (domes, arenas): PRIORITIZE CIRCULAR EXPANSE
+- Foreground: Curved floor plan details
+- Midground: PRIMARY FOCUS - Circular wall distance (specify diameter), surrounding features
+- Background: Domed ceiling overhead, far curved walls
+
+For colossal spaces: Include dimensions (e.g., "ceiling 60m above," "passage 50m deep," "diameter 40m").`;
 }
 
 /**
@@ -249,7 +274,15 @@ Example: "Rusted ladder on left wall (navigable: ladder, left wall, midground)"`
  * Condensed perspective framing (50% shorter)
  */
 export function buildPerspectiveFramingCondensed(): string {
-  return `PERSPECTIVE: 1-2m inside entrance, straight ahead view. Wide-angle (24-35mm), eye-level. Entrance behind camera. Slight asymmetry, not tunnel-view.`;
+  return `PERSPECTIVE: 1-2m inside entrance, straight ahead view. Wide-angle (24-35mm), eye-level. Entrance behind camera. Slight asymmetry, not tunnel-view.
+
+CRITICAL - ENTRANCE EXCLUSION:
+The entrance/doorway/threshold is BEHIND the camera and OUT OF FRAME.
+DO NOT describe, mention, or include the entrance in your output.
+DO NOT write: "entrance visible," "doorway ahead," "through the entrance," "from the entrance"
+Your description starts INSIDE the space, looking AWAY from where you entered.
+
+Think: You've stepped inside and turned to face the interior. The entrance is now behind you, unseen.`;
 }
 
 /**

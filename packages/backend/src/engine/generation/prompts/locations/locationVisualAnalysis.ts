@@ -88,12 +88,17 @@ FIELD DEFINITIONS
 For MIDGROUND structures (main subjects), include:
 - Name/type of structure
 - Approximate scale (height, width in meters if estimable)
+- STRUCTURE FORM (critical for interior generation - choose one):
+  * VERTICAL STRUCTURE: height >> width/length (towers, spires, chimneys) - interior will emphasize soaring vertical space
+  * HORIZONTAL STRUCTURE: length >> height/width (halls, corridors, bridges) - interior will emphasize extending passages
+  * WIDE STRUCTURE: width/diameter >> height (domes, arenas, plazas) - interior will emphasize circular expanse
+  * CUBIC STRUCTURE: similar dimensions (rooms, chambers, boxes) - interior will balance all dimensions
 - Position (left/right/center)
 - Any notable features
 
-Example: "Foreground: Rocky terrain, dark stones extending 0-10m from viewpoint. Midground: Massive cylindrical tower (est. 80-100m tall, 40m diameter) dominates center, with smaller resort buildings (15-20m tall) visible to the left. Background: Vast sky with clouds extending to horizon."
+Example: "Foreground: Rocky terrain, dark stones extending 0-10m from viewpoint. Midground: Massive cylindrical tower (est. 80-100m tall, 40m diameter, VERTICAL STRUCTURE) dominates center, with smaller resort buildings (15-20m tall, HORIZONTAL STRUCTURE) visible to the left. Background: Vast sky with clouds extending to horizon."
 
-This ensures interior generation can infer appropriate interior scale.
+This ensures interior generation can infer both appropriate scale AND spatial emphasis (vertical vs horizontal vs wide).
 
 [uniqueIdentifiers]  
 2–4 distinct features that make this location unmistakable
