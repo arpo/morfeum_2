@@ -1,37 +1,28 @@
 /**
  * Location image generation from hierarchy nodes
  * Pure function - generates Flux image prompts from node chains
+ * 
+ * Uses centralized camera configuration for consistent transitions
  */
 
-import { qualityPrompt } from '../shared';
 import type { HierarchyNode } from '../../../hierarchyAnalysis/types';
-import { generalRules } from '../shared/constants';
 import { generalPromptFix } from '../shared/generalPromptFix';
-
-const morfeumVibes = 'Morfeum aesthetic — hyper-realistic, high-contrast visuals with sharp light, glowing bioluminescence, and richly saturated tones. Surfaces feel alive; darkness holds depth, not gloom. Reality, one notch brighter.';
+import { OVERVIEW_SHOT, EXTERIOR_SHOT, INTERIOR_SHOT } from '../shared/cameraConfig';
 
 /**
  * Shot instructions based on node type
+ * Uses centralized camera configuration
  */
 function getLocationShotInstructions(nodeType: string) {
   if (nodeType === 'host') {
     // Overview shots for large areas
-    return {
-      shot: 'elevated oblique, aerial 45° tilt, wide composition with layered depth, diagonal framing, asymmetrical layout',
-      light: 'diffused key with parallax through haze, environmental motion (mist, wind, smoke)'
-    };
+    return OVERVIEW_SHOT;
   } else if (nodeType === 'location' || nodeType === 'region') {
     // Exterior ground-level for locations
-    return {
-      shot: 'elevated oblique 3/4 view, diagonal approach angle, foreground occlusion from natural elements, off-axis composition with cropped edges, layered depth',
-      light: 'directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds)'
-    };
+    return EXTERIOR_SHOT;
   } else {
     // Interior shots for niches
-    return {
-      shot: 'medium elevated offset angle, diagonal composition through doorway or partial wall, foreground intrusion from architectural elements',
-      light: 'hard sidelight cutting through space, atmospheric depth with environmental motion (steam, dust motes)'
-    };
+    return INTERIOR_SHOT;
   }
 }
 
@@ -81,6 +72,7 @@ const prompt = `Original user description: "${originalPrompt}"
 ${targetNode.name}, ${shotInstructions.shot}.
 
 [LIGHT:] ${shotInstructions.light}
+[LENS:] ${shotInstructions.lens}
 
 [SCENE:]
 ${contextText}${sceneDescription}`;

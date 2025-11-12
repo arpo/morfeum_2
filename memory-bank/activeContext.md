@@ -4,6 +4,27 @@
 The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
+- **Centralized Camera Configuration** (Nov 12, 2025): Unified camera system for smooth scene transitions
+  - Created `shared/cameraConfig.ts` - single source of truth for all camera angles and lens specs
+  - **Centered Composition**: Changed from asymmetric to centered, aligned camera positions
+    - Exteriors: Camera faces entrance directly, centered composition
+    - Interiors: Centered view into space from entrance
+    - Smooth zoom-in transition: exterior entrance → interior space
+  - **Structure-Aware Composition**: Added STRUCTURE FORM classification to visual analysis
+    - VERTICAL STRUCTURE (towers): Prioritizes soaring ceiling, vertical shaft emphasis
+    - HORIZONTAL STRUCTURE (halls): Prioritizes passage extending into distance
+    - WIDE STRUCTURE (domes): Prioritizes circular expanse
+  - **Lens Specifications**: Added to all location prompts
+    - Overview: 16-35mm wide-angle
+    - Exterior: 24-35mm wide-angle, centered on entrance
+    - Interior: 14-35mm depending on space scale (small/medium/colossal)
+  - **Files Updated**: 
+    - `locationImageGeneration.ts` - now uses centralized config
+    - `nodeImageGeneration.ts` - includes lens specs
+    - `promptSections.ts` - centered composition, entrance exclusion
+    - `locationVisualAnalysis.ts` - structure form field
+  - **Result**: Consistent, aligned camera angles across all scenes for seamless transitions
+
 - **Prompt Token Optimization** (Nov 11, 2025): Major token reduction across all LLM prompts
   - **Niche Image Prompt**: Reduced from ~1,800 to ~1,100-1,200 tokens (35-40% reduction)
     - Extracted all sections into reusable utility functions in `promptSections.ts`

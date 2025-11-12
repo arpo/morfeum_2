@@ -274,7 +274,7 @@ Example: "Rusted ladder on left wall (navigable: ladder, left wall, midground)"`
  * Condensed perspective framing (50% shorter)
  */
 export function buildPerspectiveFramingCondensed(): string {
-  return `PERSPECTIVE: 1-2m inside entrance, straight ahead view. Wide-angle (24-35mm), eye-level. Entrance behind camera. Slight asymmetry, not tunnel-view.
+  return `PERSPECTIVE: 1-2m inside entrance, straight ahead view. Wide-angle (24-35mm), eye-level. Entrance behind camera. Centered, balanced composition.
 
 CRITICAL - ENTRANCE EXCLUSION:
 The entrance/doorway/threshold is BEHIND the camera and OUT OF FRAME.

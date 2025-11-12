@@ -43,6 +43,13 @@
 - [x] Console log cleanup (removed 56+ spam logs)
 - [x] Backend path resolution fix (__dirname)
 - [x] SSE error handling (prevents unhandled error crashes)
+- [x] Centralized camera configuration (Nov 12, 2025)
+  - Created shared/cameraConfig.ts as single source of truth
+  - Centered, aligned camera positions for smooth transitions
+  - Structure-aware composition (VERTICAL/HORIZONTAL/WIDE)
+  - Lens specifications added to all location prompts
+  - Exterior camera positioned facing entrance directly
+  - Entrance exclusion instructions for interior prompts
 - [x] Smart intent classifier (Nov 11, 2025)
   - Intelligent element selection for GO_INSIDE navigation
   - Prioritizes enterable structures over decorative elements

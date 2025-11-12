@@ -4,36 +4,33 @@
  * 
  * Host/Region → Overview (aerial, panoramic)
  * Location/Niche → First-person (immersive)
+ * 
+ * Uses centralized camera configuration for consistent transitions
  */
 
 import { qualityPrompt } from '../shared';
+import { OVERVIEW_SHOT, EXTERIOR_SHOT, INTERIOR_SHOT } from '../shared/cameraConfig';
 import type { HierarchyNode, NodeDNA } from '../../../hierarchyAnalysis/types';
 
 /**
  * Overview shot instructions (Host/Region)
+ * Imported from centralized camera config
  */
-const overviewShotInstructions = {
-  shot: 'elevated oblique, aerial 45° tilt, wide composition with layered depth, diagonal framing, asymmetrical layout, foreground occlusion (not symmetrical)',
-  light: 'diffused key with parallax through haze, environmental motion (mist, wind, smoke)'
-};
+const overviewShotInstructions = OVERVIEW_SHOT;
 
 /**
  * First-person EXTERIOR shot instructions (Location)
- * Dynamic outdoor perspective with depth and asymmetry
+ * Centered outdoor perspective with balanced composition
+ * Imported from centralized camera config
  */
-const firstPersonExteriorInstructions = {
-  shot: 'elevated oblique 3/4 view, diagonal approach angle, foreground occlusion from natural elements (branches, rocks, structures), off-axis composition with cropped edges, layered depth showing near/mid/far, asymmetrical framing (not centered, not symmetrical)',
-  light: 'directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions'
-};
+const firstPersonExteriorInstructions = EXTERIOR_SHOT;
 
 /**
  * First-person INTERIOR shot instructions (Niche)
- * Dynamic indoor perspective with depth and asymmetry
+ * Centered indoor perspective with balanced composition
+ * Imported from centralized camera config
  */
-const firstPersonInteriorInstructions = {
-  shot: 'medium elevated offset angle, diagonal composition through doorway or partial wall, foreground intrusion from architectural elements (beams, pillars, furniture edges), off-axis framing with cropped geometry, layered depth (not corridor symmetry)',
-  light: 'hard sidelight cutting through space, atmospheric depth with environmental motion (steam, dust motes, flickering sources), mixed lighting temperature creating visual texture'
-};
+const firstPersonInteriorInstructions = INTERIOR_SHOT;
 
 /**
  * Build DNA-based image prompt using all fields except searchDesc and sounds
@@ -41,13 +38,14 @@ const firstPersonInteriorInstructions = {
 function buildDNAPrompt(
   name: string,
   dna: NodeDNA,
-  shotInstructions: { shot: string; light: string },
+  shotInstructions: { shot: string; light: string; lens?: string },
   originalPrompt?: string
 ): string {
   return `${name}
 
 [SHOT:] ${shotInstructions.shot}
 [LIGHT:] ${shotInstructions.light}
+${shotInstructions.lens ? `[LENS:] ${shotInstructions.lens}` : ''}
 
 [SCENE:]
 ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
@@ -78,13 +76,14 @@ ${qualityPrompt}
 function buildBasicPrompt(
   name: string,
   description: string,
-  shotInstructions: { shot: string; light: string },
+  shotInstructions: { shot: string; light: string; lens?: string },
   originalPrompt?: string
 ): string {
   return `${name}
 
 [SHOT:] ${shotInstructions.shot}
 [LIGHT:] ${shotInstructions.light}
+${shotInstructions.lens ? `[LENS:] ${shotInstructions.lens}` : ''}
 
 [SCENE:]
 ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
