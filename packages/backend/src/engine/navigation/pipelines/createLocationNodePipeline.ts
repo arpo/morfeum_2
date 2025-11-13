@@ -16,6 +16,8 @@ export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
 export interface CreateNodeOptions {
   nodeType?: NavigationNodeType;
   generateImage?: boolean;
+  style?: string;        // NEW: Visual style from registry
+  perspective?: string;  // NEW: Perspective (interior/exterior)
 }
 
 /**
@@ -34,13 +36,17 @@ export async function runCreateLocationNodePipeline(
   const nodeType = options?.nodeType || 'niche';
   const shouldGenerateImage = options?.generateImage !== false;
   
+  // Get style and perspective from decision or options
+  const style = options?.style || decision.style || intent.style || 'default';
+  const perspective = options?.perspective || decision.perspective || intent.spaceType || 'interior';
+  
   // Step 1: Generate image prompt using shared module
   const imagePrompt = await generateImagePromptForNode(
     context,
     intent,
     decision,
     apiKey,
-    { nodeType }
+    { nodeType, style, perspective }
   );
 
   // Step 2: Generate FLUX image using shared module

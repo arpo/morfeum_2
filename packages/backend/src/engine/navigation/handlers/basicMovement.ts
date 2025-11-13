@@ -22,6 +22,8 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
       parentNodeId: currentNode.id,
       newNodeType: 'niche',
       newNodeName: `Interior of ${currentNode.name}`,
+      style: intent.style || 'default',               // NEW: Pass style from intent
+      perspective: intent.spaceType || 'interior',    // NEW: Pass perspective from intent
       metadata: {
         relation: 'child',
         entrance: entrance
@@ -37,6 +39,8 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
       parentNodeId: currentNode.id,
       newNodeType: 'niche',
       newNodeName: `Inside ${intent.target}`,
+      style: intent.style || 'default',               // NEW: Pass style from intent
+      perspective: intent.spaceType || 'interior',    // NEW: Pass perspective from intent
       metadata: {
         relation: 'child'
       },

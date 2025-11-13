@@ -6,10 +6,13 @@
 import { generateText } from '../../../services/mzoo';
 import { AI_MODELS } from '../../../config/constants';
 import { nicheImagePrompt } from '../prompts/navigation/nicheImagePrompt';
+import { getStylePrompt } from '../prompts/navigation/styles/registry';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../../navigation/types';
 
 export interface ImagePromptOptions {
   nodeType?: 'niche' | 'feature' | 'detail' | 'location' | 'host' | 'region';
+  style?: string;        // NEW: Visual style from registry
+  perspective?: string;  // NEW: Perspective (interior/exterior)
 }
 
 /**
@@ -31,33 +34,14 @@ export async function generateImagePromptForNode(
   options?: ImagePromptOptions
 ): Promise<string> {
   const nodeType = options?.nodeType || 'niche';
+  const style = options?.style || 'default';
   
-  // Select appropriate prompt template based on node type
-  let systemPrompt: string;
+  // Get style prompt function from registry
+  // Currently only GO_INSIDE is registered, others fall back to default
+  const promptFunction = getStylePrompt(intent.intent, style);
   
-  switch (nodeType) {
-    case 'niche':
-      systemPrompt = nicheImagePrompt(context, intent, decision);
-      break;
-    
-    case 'feature':
-      // TODO: Add feature-specific prompt when implementing EXPLORE_FEATURE
-      systemPrompt = nicheImagePrompt(context, intent, decision);
-      break;
-    
-    case 'detail':
-      // TODO: Add detail-specific prompt when implementing APPROACH
-      systemPrompt = nicheImagePrompt(context, intent, decision);
-      break;
-    
-    case 'location':
-      // TODO: Add location-specific prompt for other intents
-      systemPrompt = nicheImagePrompt(context, intent, decision);
-      break;
-    
-    default:
-      systemPrompt = nicheImagePrompt(context, intent, decision);
-  }
+  // Generate system prompt using the registered prompt function
+  const systemPrompt = promptFunction(context, intent, decision);
 
   const messages = [
     { role: 'system', content: systemPrompt },

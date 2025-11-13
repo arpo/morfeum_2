@@ -290,117 +290,6 @@
         "distance": "close"
       }
     },
-    "loc-1762958771238-dqg7frtgm": {
-      "id": "loc-1762958771238-dqg7frtgm",
-      "type": "host",
-      "name": "The Verdant Expanse",
-      "dna": {
-        "type": "host",
-        "name": "The Verdant Expanse",
-        "description": "A world where nature's magic is ever-present.",
-        "dna": {
-          "genre": "fantasy",
-          "architectural_tone": "organic integration, living structures",
-          "cultural_tone": "A world deeply connected to nature's cycles, where inhabitants live in harmony with the environment and draw sustenance and magic from it.",
-          "materials_base": "Elements drawn directly from nature, emphasizing natural growth, living wood, stone, and earth. Structures appear to be grown rather than built.",
-          "mood_baseline": "enchanting, serene, harmonious",
-          "palette_bias": "Rich, earthy tones complemented by vibrant natural hues. Favors greens, browns, and the colors of seasonal changes, with an emphasis on natural light.",
-          "soundscape_base": "Gentle natural sounds dominate: rustling leaves, flowing water, birdsong, and the subtle hum of natural energies.",
-          "flora_base": "Abundant and varied plant life, often imbued with magical properties. Forests, meadows, and unique botanical wonders are commonplace.",
-          "fauna_base": "Diverse and often fantastical creatures that coexist with nature. Animals may possess unique abilities or be integral to the magical balance of the world."
-        },
-        "slug": "the-verdant-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Verdant Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "fc45f543-3d3b-4b5a-bae0-996fcc50fe4f": {
-      "id": "fc45f543-3d3b-4b5a-bae0-996fcc50fe4f",
-      "type": "region",
-      "name": "The Verdant Expanse",
-      "dna": {
-        "type": "region",
-        "name": "The Verdant Expanse",
-        "description": "",
-        "slug": "the-verdant-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Verdant Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "0ab69b7c-1743-4aab-8dda-b68287d1121d": {
-      "id": "0ab69b7c-1743-4aab-8dda-b68287d1121d",
-      "type": "location",
-      "name": "The Golden Canopy",
-      "dna": {
-        "type": "location",
-        "name": "The Golden Canopy",
-        "description": "A unique retreat integrated with an ancient, eternally golden-leaved tree.",
-        "looks": "A rustic, cabin-like structure is seamlessly integrated with the base of a colossal, ancient tree, its thick trunk forming a central architectural element. The building features a sloping, moss-covered roof and walls that appear to be constructed from living wood and woven branches, blending organically with the tree. Large, arched windows flank the central entrance, glowing with a warm, internal light. The surrounding area is covered in a thick carpet of golden leaves, with lush green foliage and several large stones dotting the landscape. The overall impression is one of natural harmony and enchantment.",
-        "atmosphere": "The air appears clear, with a visible haze in the background suggesting a serene, perhaps slightly humid environment. A gentle glow emanates from the scene, hinting at a peaceful and tranquil atmosphere.",
-        "mood": "Enchanting, tranquil, timeless",
-        "lighting": "Soft, warm light floods the scene, primarily originating from within the structure and filtering through the golden canopy overhead. This creates a gentle, diffused illumination with soft shadows, contributing to a cozy and inviting mood. The light interaction between the golden leaves and the structure enhances the ethereal quality of the location.",
-        "dominantElements": [
-          "Colossal ancient tree with golden foliage, center",
-          "Cabin-like structure integrated with tree trunk, center",
-          "Path paved with stone slabs covered in golden leaves, foreground",
-          "Lush green undergrowth and bushes, foreground and midground"
-        ],
-        "spatialLayout": "In the foreground, a winding path of stone slabs covered in golden leaves leads towards the structure. The midground is dominated by the organic integration of a cabin-like building with a massive tree trunk at its center. The tree's branches extend overhead, supporting a green, mossy roof that curves over the building's eaves. The background consists of dense foliage and a hazy, sunlit forest, creating depth.",
-        "uniqueIdentifiers": [
-          "Ancient tree with perpetually golden foliage",
-          "Structure organically grown into a tree trunk",
-          "Carpet of golden leaves year-round"
-        ],
-        "materials_primary": "Wood, Living tree bark, Foliage",
-        "materials_secondary": "Moss, Stone",
-        "materials_accents": "Golden leaves, Internal light glow",
-        "colors_dominant": "Golden-orange (leaves, light)",
-        "colors_secondary": "Deep brown (tree bark, wood structure), Green (foliage, mossy roof)",
-        "colors_accents": "Warm yellow (window light, lanterns)",
-        "colors_ambient": "Warm, golden hue",
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center, midground",
-            "description": "Wooden door set into the natural curve of the tree trunk."
-          },
-          {
-            "type": "window",
-            "position": "left side, midground",
-            "description": "Arched window with glowing interior light."
-          },
-          {
-            "type": "window",
-            "position": "right side, midground",
-            "description": "Arched window with glowing interior light."
-          },
-          {
-            "type": "passage",
-            "position": "foreground",
-            "description": "Stone path winding through golden leaves towards the entrance."
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Rustic cabin built into a golden-leaved tree. Has: door (center, midground), window (left side, midground), window (right side, midground), passage (foreground)",
-        "slug": "the-golden-canopy"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/lion/oH2ScFcqrFnekSuGjMM7J.jpg",
-      "focus": {
-        "node_id": "The Golden Canopy",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
     "loc-1762958802118-d13hpt0z4": {
       "id": "loc-1762958802118-d13hpt0z4",
       "type": "host",
@@ -904,211 +793,6 @@
         "distance": "close"
       }
     },
-    "loc-1763021396915-35gpqjscp": {
-      "id": "loc-1763021396915-35gpqjscp",
-      "type": "host",
-      "name": "The Gloaming Sea",
-      "dna": {
-        "type": "host",
-        "name": "The Gloaming Sea",
-        "description": "A realm shrouded in perpetual twilight and strange oceanic phenomena.",
-        "dna": {
-          "genre": "post-apocalyptic|fantasy|sci-fi",
-          "architectural_tone": "decaying monolithic structures, functional remnants",
-          "cultural_tone": "A society clinging to survival in a world reshaped by environmental collapse or a forgotten catastrophe. Resources are scarce, and remnants of past civilizations serve as essential but often hazardous habitats.",
-          "materials_base": "Heavy, weathered concrete and rusted industrial metals dominate the landscape, often juxtaposed with salvaged organic elements or resilient, mutated flora. Signs of past functionality are present but heavily degraded.",
-          "mood_baseline": "melancholy, resilient, haunting",
-          "palette_bias": "Dominated by cool, muted tones with occasional vibrant, phosphorescent accents. Think deep teals, bruised purples, and spectral blues, punctuated by bioluminescent glows or the dull gleam of tarnished metals.",
-          "soundscape_base": "A perpetual low hum of residual machinery, the distant mournful cry of wind through broken structures, and the ever-present lapping of dark, unknown waters. Occasional metallic groans and the echoing drip of water.",
-          "flora_base": "Resilient, mutated, or deep-sea adapted plant life that thrives in low-light, humid, or saline conditions. Often phosphorescent or exhibiting unusual growth patterns due to environmental stressors.",
-          "fauna_base": "Creatures adapted to low-light, damp environments, possibly mutated or possessing bioluminescent qualities. Aquatic or amphibious life is common, alongside scavengers and adapted marine life."
-        },
-        "slug": "the-gloaming-sea"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Gloaming Sea",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "b2aeb1e2-c686-45a0-a2fc-2520e41af254": {
-      "id": "b2aeb1e2-c686-45a0-a2fc-2520e41af254",
-      "type": "region",
-      "name": "The Gloaming Sea",
-      "dna": {
-        "type": "region",
-        "name": "The Gloaming Sea",
-        "description": "",
-        "dna": {
-          "architectural_tone": "submerged ruins and skeletal maritime infrastructure",
-          "cultural_tone": "Communities that have adapted to life on and within the skeletal remains of pre-disaster maritime infrastructure, relying on salvaged technology and an understanding of the treacherous, twilight-shrouded waters.",
-          "materials_base": "Heavily water-damaged concrete, barnacle-encrusted metal, and rotting wooden structures. Materials are frequently slick with brine and algae.",
-          "mood_baseline": "isolated, submerged, ethereal",
-          "palette_bias": "Subtle shifts towards deeper, more saturated aquatic blues and greens, with the dominant cool tones of the host amplified by the pervasive, luminous fog.",
-          "soundscape_base": "The omnipresent sound of water: gentle lapping, occasional distant echoes of ship horns or creaking metal, and the soft hiss of phosphorescent mist.",
-          "flora_base": "Minimal terrestrial flora, replaced by persistent algae, bioluminescent sea mosses, and perhaps hardy, salt-tolerant coastal scrub clinging to higher structures.",
-          "fauna_base": "Amphibious creatures and hardy sea life adapted to the murky, low-light conditions. May include bioluminescent plankton blooms and scavenging marine birds."
-        },
-        "slug": "the-gloaming-sea"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Gloaming Sea",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "e4de28b4-1622-4f75-b422-334bc319dd64": {
-      "id": "e4de28b4-1622-4f75-b422-334bc319dd64",
-      "type": "location",
-      "name": "The Skeletal Marina",
-      "dna": {
-        "type": "location",
-        "name": "The Skeletal Marina",
-        "description": "A desolate marina, appearing as a collection of ancient, half-submerged structures and decaying docks.",
-        "looks": "Dilapidated wooden piers, skeletal remains of vessels, constant swaying of decrepit boats, thick phosphorescent fog obscuring vision.",
-        "atmosphere": "Chilly, damp air, the scent of salt and decay, the faint creak of old wood, the eerie glow from the fog.",
-        "mood": "Melancholy, abandoned, spectral",
-        "dna": {
-          "architectural_tone": "ruined docks and waterlogged industrial hulks",
-          "cultural_tone": "A collection of abandoned or barely functioning maritime structures, where the line between the sea and the land has blurred. Survival here is about navigating treacherous walkways and utilizing the few remaining operational systems.",
-          "materials_base": "Exposed, rebar-laden concrete, heavily rusted metal gantries, and waterlogged, splintered wood pilings. Surfaces are often slick with a constant dampness.",
-          "mood_baseline": "desolate, precarious, forgotten",
-          "palette_bias": "Leans into the dark grey and brown tones of decaying concrete and wood, with the teal glow of the fog acting as the primary ambient color.",
-          "soundscape_base": "The gentle slosh of water against decaying structures, the creak and groan of metal under strain, and the occasional metallic clang as debris shifts.",
-          "flora_base": "None",
-          "fauna_base": "Scavenging aquatic birds, perhaps small, resilient crabs or barnacle life clinging to submerged structures."
-        },
-        "slug": "the-skeletal-marina"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Skeletal Marina",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "53be13cc-59bd-4f8f-807e-fee5cb215e7b": {
-      "id": "53be13cc-59bd-4f8f-807e-fee5cb215e7b",
-      "type": "niche",
-      "name": "The Flickering Terminal",
-      "dna": {
-        "type": "niche",
-        "name": "The Flickering Terminal",
-        "description": "The last functional part of the marina, a hub of residual activity amidst the decay.",
-        "looks": "The scene depicts a decaying marina with water reflecting the teal fog. Massive, weathered concrete structures with visible support columns rise from the murky water.  Dilapidated docks and walkways are interspersed with industrial elements like smokestacks and pipes, shrouded in a thick, luminous fog.  A singular terminal building is partially visible on the right, marked by a warm, flickering light.  The overall impression is one of abandonment and a lingering, faint presence of activity.",
-        "atmosphere": "A dense, luminous teal fog permeates the entire scene, obscuring distant details and creating an ethereal, underwater-like quality. The air appears heavy and humid, dampening sounds and creating a sense of isolation.",
-        "mood": "Lingering hope, residual function",
-        "lighting": "The primary light source is an eerie, cool teal glow emanating from the fog itself and a few distant industrial lights. This is contrasted by warm, yellow, flickering lights from the terminal building, casting a localized, inviting glow. The overall lighting is low-contrast and diffused.",
-        "dominantElements": [
-          "Murky water filling the canal",
-          "Massive, decaying concrete dock structures",
-          "Luminous teal fog",
-          "Distant industrial smokestacks and pipes",
-          "Flickering terminal building"
-        ],
-        "spatialLayout": "Foreground: The water of the canal takes up the lower portion, with the left bank and its support columns visible. Midground: The main dock structures and walkways extend along both sides of the canal, leading towards more distant industrial elements and the terminal building. Background: Industrial towers and the terminal building recede into the dense fog.",
-        "uniqueIdentifiers": [
-          "Skeletal marina structures",
-          "Phosphorescent fog",
-          "Flickering terminal light"
-        ],
-        "materials_primary": "Concrete, Water",
-        "materials_secondary": "Metal (pipes, railings), Stone (docks)",
-        "materials_accents": "Flickering warm light, Luminous fog glow",
-        "colors_dominant": "Teal (fog, water, ambient light)",
-        "colors_secondary": "Dark grey (structures), Brown (wood accents)",
-        "colors_accents": "Yellow (terminal lights)",
-        "colors_ambient": "Teal",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "right wall, midground",
-            "description": "A paved walkway leading towards the terminal building"
-          },
-          {
-            "type": "door",
-            "position": "right wall, midground",
-            "description": "A weathered wooden door with a glowing light above it"
-          },
-          {
-            "type": "passage",
-            "position": "left wall, midground",
-            "description": "Darkened passage beneath the elevated walkway"
-          },
-          {
-            "type": "window",
-            "position": "right wall, midground",
-            "description": "Small, grimy window on the terminal building"
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Skeletal marina in fog. Has: walkway (right), weathered door (right), passage (left), window (right)",
-        "dna": {
-          "architectural_tone": null,
-          "cultural_tone": "The last vestige of active operation within the marina, a place of temporary refuge and residual purpose. It represents a small pocket of controlled energy and light against the pervasive decay.",
-          "materials_base": null,
-          "mood_baseline": "faint hope, residual warmth, isolated activity",
-          "soundscape_base": "The persistent hum of aging electronics, the crackle of faulty wiring, and the muffled sounds of movement within the structure, contrasting with the external silence.",
-          "flora_base": null,
-          "fauna_base": null
-        },
-        "slug": "the-flickering-terminal"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/koala/u3wq1GXMPDY7Z0yXiaoix.jpg",
-      "focus": {
-        "node_id": "The Flickering Terminal",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "niche-1763021449294-103m1tuz8": {
-      "id": "niche-1763021449294-103m1tuz8",
-      "type": "niche",
-      "name": "Interior of The Flickering Terminal",
-      "dna": {
-        "looks": "A vast, enclosed concrete industrial terminal interior with immense walls, colossal support pillars, and a towering ceiling. The space is characterized by its raw, brutalist architecture and a palpable sense of decay. Visible structural elements like pipes and rebar are prominent.",
-        "colorsAndLighting": "The dominant colors are muted grays and dark browns of aged concrete, accented by the warm, flickering glow of incandescent bulbs. Patches of luminous teal fog provide an ethereal ambient glow.",
-        "atmosphere": "The air is heavy, damp, and carries a faint metallic tang, evoking a sense of profound desolation and forgotten function. Long, wavering shadows are cast by the intermittent light, creating a dynamic and slightly unsettling environment.",
-        "architectural_tone": "Brutalist Industrial",
-        "cultural_tone": "A forgotten industrial behemoth, hinting at past maritime operations and enduring decay.",
-        "materials": "The primary materials are rough, weathered concrete showing aggregate and rebar. The floor is a dark, uneven slab with puddles, and splintered wood debris is present in the foreground. Metal gantry walkways and thick conduit pipes are also visible.",
-        "mood": "Melancholy and imposing, a monument to a bygone era of industrial might now succumbing to time and neglect.",
-        "sounds": "Dripping water, distant echoes, low hum, creaking metal, faint wind.",
-        "dominantElementsDescriptors": [
-          "Colossal concrete support pillars",
-          "Flickering incandescent bulbs",
-          "Network of exposed conduit pipes",
-          "Puddles of stagnant water"
-        ],
-        "spatialLayout": "A colossal, rectangular enclosed space with immense width and height, featuring a flat ceiling and walls punctuated by regular support pillars. Navigable pathways include a gantry walkway, a dark passage, and a cavernous opening.",
-        "primary_surfaces": "Concrete walls, concrete floor, concrete ceiling.",
-        "secondary_surfaces": "Exposed rebar, conduit pipes, waterlogged wood debris, metal gantry.",
-        "accent_features": "Luminous teal fog seeping in from gaps, wavering shadows, flickering light.",
-        "dominant": "Gray (concrete walls, ceiling, floor)",
-        "secondary": "Dark Brown (concrete texture, water)",
-        "accent": "Warm Yellow/Orange (light), Teal (fog)",
-        "ambient": "Warm",
-        "uniqueIdentifiers": [
-          "Massive concrete structure with colossal pillars",
-          "Warm, flickering incandescent lighting",
-          "Teal fog seeping into the damp interior",
-          "Brutalist utilitarian architecture"
-        ],
-        "searchDesc": "Decaying concrete industrial terminal interior with colossal pillars, flickering lights, and teal fog."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/wKHGffcEf38_BzHVR4XB3.jpg",
-      "focus": {
-        "node_id": "niche-1763021449294-103m1tuz8",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
     "loc-1763023469636-ytrslr39j": {
       "id": "loc-1763023469636-ytrslr39j",
       "type": "host",
@@ -1278,6 +962,159 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "loc-1763027027191-cfpb8go00": {
+      "id": "loc-1763027027191-cfpb8go00",
+      "type": "host",
+      "name": "Mars",
+      "dna": {
+        "type": "host",
+        "name": "Mars",
+        "description": "A desolate planet with a thin atmosphere and breathtaking, rust-colored landscapes. Subject to violent dust storms and extreme temperature shifts.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "utilitarian, robust, modular",
+          "cultural_tone": "Pioneering and survival-oriented, focused on resourcefulness and adaptation to harsh environments. A pragmatic approach to existence.",
+          "materials_base": "Engineered composites and reinforced alloys designed for extreme conditions. Emphasis on durability and functional form over aesthetics, often with a metallic or synthetic sheen.",
+          "mood_baseline": "isolated, resilient, austere",
+          "palette_bias": "Earthy and muted with stark contrasts. Dominated by rust reds, ochres, and deep grays, punctuated by the occasional harsh, artificial light.",
+          "soundscape_base": "Vast silence broken by the whisper of thin winds and the hum of essential machinery. Occasional mechanical groans of structures under stress.",
+          "flora_base": "None, or highly engineered, bio-domed vegetation for life support. Minimal natural plant life is expected.",
+          "fauna_base": "None, or extremely specialized, engineered organisms for research or specific ecological roles. Primarily robotic or synthetic life."
+        },
+        "slug": "mars"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Mars",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "6daa4641-6424-446b-a5f4-79c915efd9bf": {
+      "id": "6daa4641-6424-446b-a5f4-79c915efd9bf",
+      "type": "region",
+      "name": "Mars",
+      "dna": {
+        "type": "region",
+        "name": "Mars",
+        "description": "",
+        "dna": {
+          "architectural_tone": "nomadic, partially buried, storm-resistant",
+          "cultural_tone": null,
+          "materials_base": "Reinforced ceramics and self-healing composites designed to withstand extreme dust abrasion and temperature fluctuations. Exposed elements often show weathering and sand accumulation.",
+          "mood_baseline": null,
+          "palette_bias": "Deepening shades of red and orange, reflecting the pervasive dust and mineral content of the terrain. Subtle metallic reflections from exposed equipment.",
+          "soundscape_base": "Constant, low-frequency wind howl and the dry rustle of sand particles. Distant, muffled sounds of atmospheric phenomena.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "slug": "mars"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Mars",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "fbf37745-6cc7-452f-a923-0ee352838939": {
+      "id": "fbf37745-6cc7-452f-a923-0ee352838939",
+      "type": "location",
+      "name": "The Crimson Abode",
+      "dna": {
+        "type": "location",
+        "name": "The Crimson Abode",
+        "description": "A lonely dwelling on a Martian plateau, its exterior weathered by constant storms and the harsh red sunlight.",
+        "looks": "A low, rectangular dwelling is situated on a flat, sandy plateau. The structure has a simple, box-like form with a flat roof supporting several solar panels, some partially obscured by red sand drifts. A prominent feature is a brightly lit, rectangular doorway at the center of the facade, emitting a strong red glow. To the left of the entrance, a dark, rectangular window is set into the wall. The building's exterior appears weathered and appears to be constructed from a monolithic, earth-toned material. The surrounding terrain is desolate, with rocky outcroppings and rolling hills in the distance, all under a hazy, orange sky.",
+        "atmosphere": "The air is thick with fine dust particles, creating a hazy and diffused atmosphere. Visibility is moderate, with distant geological formations softened by the pervasive dust and the warm ambient light.",
+        "mood": "Isolated, resilient",
+        "lighting": "The lighting is dominated by a warm, orange glow, characteristic of a Martian dawn or dusk. The light is soft and diffused due to atmospheric dust. The central doorway emits a bright, artificial red light that contrasts sharply with the ambient illumination.",
+        "dominantElements": [
+          "Rectangular dwelling with solar panels (midground)",
+          "Glowing red doorway (center, midground)",
+          "Rocky terrain and distant mountains (background)"
+        ],
+        "spatialLayout": "The foreground consists of a sandy path leading towards the dwelling. The midground is occupied by the single-story, rectangular dwelling. The background reveals a vast, desolate Martian landscape with eroded mountains and a hazy sky.",
+        "uniqueIdentifiers": [
+          "The Crimson Abode dwelling",
+          "Half-buried solar panels",
+          "Brightly glowing red doorway"
+        ],
+        "materials_primary": "Red sand, rocky earth composites",
+        "materials_secondary": "Solar panels",
+        "materials_accents": "Red light from doorway",
+        "colors_dominant": "Red (terrain, sky, doorway)",
+        "colors_secondary": "Orange (sky, ambient light)",
+        "colors_accents": "Bright red (doorway glow)",
+        "colors_ambient": "Warm orange hue",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "A brightly lit rectangular doorway emitting a vibrant red glow."
+          },
+          {
+            "type": "window",
+            "position": "left side, midground",
+            "description": "A dark, rectangular window offering a glimpse into the dwelling's interior."
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Lonely Martian dwelling. Has: glowing red doorway (center, midground), dark window (left side, midground)",
+        "dna": {
+          "architectural_tone": "low-profile, monolithic, integrated with terrain",
+          "cultural_tone": "A singular, isolated outpost focused on self-sufficiency and long-term survival. The dwelling represents a fragile bastion against the vastness.",
+          "materials_base": "A primary composite that mimics local earth tones, fused and weathered by atmospheric conditions. Solar panels and integrated power systems are key functional components.",
+          "mood_baseline": "solitary, enduring, watchful",
+          "palette_bias": "The dominant warm, dusty reds and oranges of the plateau are accented by the stark, functional glow of internal lighting and functional external lights.",
+          "soundscape_base": "The omnipresent wind and occasional creaking of the structure under atmospheric pressure. The faint, internal hum of life support systems.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-crimson-abode"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/Am6zajaG4zP7XBDYPb3R7.jpg",
+      "focus": {
+        "node_id": "The Crimson Abode",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763027070241-mvklzepwf": {
+      "id": "niche-1763027070241-mvklzepwf",
+      "type": "niche",
+      "name": "Interior of The Crimson Abode",
+      "dna": {
+        "looks": "A compact, rectangular interior with straight, low walls and a flat ceiling. A narrow corridor extends forward, flanked by textured walls and containing functional alcoves and control panels. The space evokes a sense of enduring solitude and self-sufficiency.",
+        "colorsAndLighting": "Dominated by warm, dusty reds and oranges from the monolithic composite walls and floor. Stark, functional internal lighting casts a warm, ambient orange glow.",
+        "atmosphere": "The air feels still and enclosed, hinting at a controlled, life-sustaining environment. The persistent low hum suggests ongoing functional operation. It is a solitary and enduring space, built for resilience against external harshness.",
+        "architectural_tone": "Monolithic Integrated",
+        "cultural_tone": "A singular, isolated outpost focused on self-sufficiency and long-term survival.",
+        "materials": "Constructed from a fused, weathered monolithic composite that mimics earth tones. The floor is a seamless, poured composite with faint scuff marks. Metal surfaces on utilitarian equipment show signs of weathering.",
+        "mood": "Solitary and enduring. The compact, functional space inspires a sense of quiet resilience and self-reliance.",
+        "sounds": "Low humming, faint scuffing sounds implied.",
+        "dominantElementsDescriptors": "Monolithic composite walls, narrow corridor, utilitarian alcove, control panel.",
+        "spatialLayout": "A rectangular interior with a compact scale and low ceilings. A central 2m wide corridor extends forward, narrowing into the background. The ceiling is a continuous flat plane approximately 3.5 meters overhead.",
+        "primary_surfaces": "Monolithic composite (walls, floor), flat composite (ceiling).",
+        "secondary_surfaces": "Weathered metal (equipment).",
+        "accent_features": "Faint geometric patterns on left wall, glowing red indicators on control panel.",
+        "dominant": "Red-Orange (walls, floor).",
+        "secondary": "Darker Red-Orange (floor).",
+        "accent": "Glowing Red (control panel indicators).",
+        "ambient": "Warm.",
+        "uniqueIdentifiers": "Monolithic earth-toned composite, narrow functional corridor, low integrated ceiling.",
+        "searchDesc": "Interior of a compact, monolithic dwelling with a red-orange palette, narrow corridor, and functional alcoves."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/8fcpKQB7esPH54cRl3QmR.jpg",
+      "focus": {
+        "node_id": "niche-1763027070241-mvklzepwf",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -1317,23 +1154,6 @@
                   "children": []
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1762958771238-dqg7frtgm",
-      "type": "host",
-      "children": [
-        {
-          "id": "fc45f543-3d3b-4b5a-bae0-996fcc50fe4f",
-          "type": "region",
-          "children": [
-            {
-              "id": "0ab69b7c-1743-4aab-8dda-b68287d1121d",
-              "type": "location",
-              "children": []
             }
           ]
         }
@@ -1409,35 +1229,6 @@
       ]
     },
     {
-      "id": "loc-1763021396915-35gpqjscp",
-      "type": "host",
-      "children": [
-        {
-          "id": "b2aeb1e2-c686-45a0-a2fc-2520e41af254",
-          "type": "region",
-          "children": [
-            {
-              "id": "e4de28b4-1622-4f75-b422-334bc319dd64",
-              "type": "location",
-              "children": [
-                {
-                  "id": "53be13cc-59bd-4f8f-807e-fee5cb215e7b",
-                  "type": "niche",
-                  "children": [
-                    {
-                      "id": "niche-1763021449294-103m1tuz8",
-                      "type": "niche",
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1763023469636-ytrslr39j",
       "type": "host",
       "children": [
@@ -1459,9 +1250,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763027027191-cfpb8go00",
+      "type": "host",
+      "children": [
+        {
+          "id": "6daa4641-6424-446b-a5f4-79c915efd9bf",
+          "type": "region",
+          "children": [
+            {
+              "id": "fbf37745-6cc7-452f-a923-0ee352838939",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763027070241-mvklzepwf",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763023469636-ytrslr39j"
+    "loc-1763027027191-cfpb8go00"
   ]
 }

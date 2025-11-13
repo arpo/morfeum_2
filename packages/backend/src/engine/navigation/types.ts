@@ -27,6 +27,7 @@ export interface IntentResult {
   newRegion?: string | null;
   relocationType?: 'macro' | 'micro' | null;
   spaceType?: 'interior' | 'exterior' | 'unknown' | null;
+  style?: string | null;  // NEW: Visual style selected from registry
   confidence: number;
 }
 
@@ -113,6 +114,8 @@ export interface NavigationDecision {
   newNodeType?: NodeType;
   newNodeName?: string;
   nodeSpecs?: NodeSpec[];
+  style?: string;        // NEW: Visual style to use for generation
+  perspective?: string;  // NEW: Perspective (interior/exterior)
   metadata?: {
     relation?: 'child' | 'sibling' | 'parent' | 'distant';
     elevation?: 'up' | 'down';
