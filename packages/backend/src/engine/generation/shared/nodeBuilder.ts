@@ -5,7 +5,7 @@
 
 import type { NodeDNA } from '../../hierarchyAnalysis/types';
 
-export type LayerType = 'host' | 'region' | 'location' | 'niche';
+export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'feature' | 'detail';
 
 export interface FocusConfig {
   node_id: string;

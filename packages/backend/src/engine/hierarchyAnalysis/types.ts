@@ -6,7 +6,7 @@
  * Host → Region → Location → Niche → Detail
  */
 
-export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'detail';
+export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'detail' | 'feature';
 
 /**
  * Node DNA - Simplified, flat visual and atmospheric profile

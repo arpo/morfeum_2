@@ -1,70 +1,60 @@
 /**
- * Create Niche Node Pipeline
- * Generates image for stepping inside a location (GO_INSIDE intent)
+ * Create Location Node Pipeline
+ * Generates images and DNA for creating any type of location node
+ * Used by navigation intents that need to create new nodes
  */
 
-import { generateText } from '../../../services/mzoo';
-import { AI_MODELS } from '../../../config/constants';
-import { nicheImagePrompt } from '../../generation/prompts/navigation/nicheImagePrompt';
 import { generateNodeDNA, extractParentContext } from '../../hierarchyAnalysis/nodeDNAGenerator';
 import { generateLocationImage } from '../../generation/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
+import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
 
-/**
- * Generate image prompt for stepping inside using LLM
- */
-async function generateNicheImagePrompt(
-  context: NavigationContext,
-  intent: IntentResult,
-  decision: NavigationDecision,
-  apiKey: string
-): Promise<string> {
-  const prompt = nicheImagePrompt(context, intent, decision);
+// Navigation-specific node types (excludes host/region which are created by spawn system)
+export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
 
-  const messages = [
-    { role: 'system', content: prompt },
-    { role: 'user', content: `Generate image prompt for stepping inside: ${context.currentNode.name}` }
-  ];
-
-  const result = await generateText(
-    apiKey,
-    messages,
-    AI_MODELS.SEED_GENERATION
-  );
-
-  if (result.error || !result.data) {
-    throw new Error(result.error || 'No image prompt returned from LLM');
-  }
-  return result.data.text.trim();
+export interface CreateNodeOptions {
+  nodeType?: NavigationNodeType;
+  generateImage?: boolean;
 }
 
-
 /**
- * Run the complete niche image generation pipeline
+ * Run the complete location node generation pipeline
+ * 
+ * Generic pipeline that works for any node type (niche, feature, detail, location)
+ * Used by navigation intents like GO_INSIDE, EXPLORE_FEATURE, APPROACH, etc.
  */
-export async function runCreateNichePipeline(
+export async function runCreateLocationNodePipeline(
   decision: NavigationDecision,
   context: NavigationContext,
   intent: IntentResult,
-  apiKey: string
+  apiKey: string,
+  options?: CreateNodeOptions
 ): Promise<{ imageUrl: string; imagePrompt: string; node: any }> {
-  // Step 1: Generate image prompt using LLM with full context
-  const imagePrompt = await generateNicheImagePrompt(
+  const nodeType = options?.nodeType || 'niche';
+  const shouldGenerateImage = options?.generateImage !== false;
+  
+  // Step 1: Generate image prompt using shared module
+  const imagePrompt = await generateImagePromptForNode(
     context,
     intent,
     decision,
-    apiKey
+    apiKey,
+    { nodeType }
   );
 
   // Step 2: Generate FLUX image using shared module
-  const { imageUrl, imagePrompt: fixedPrompt } = await generateLocationImage(
-    apiKey,
-    imagePrompt
-  );
+  let imageUrl: string;
+  
+  if (shouldGenerateImage) {
+    const result = await generateLocationImage(apiKey, imagePrompt);
+    imageUrl = result.imageUrl;
+  } else {
+    imageUrl = ''; // No image for this node type
+  }
 
   // Step 3: Generate DNA for the node
-  console.log('\n🧬 [PIPELINE] Generating DNA for niche node...');
+  console.log(`\n🧬 [PIPELINE] Generating DNA for ${nodeType} node...`);
   
   const nodeName = decision.newNodeName || 'Unnamed Niche';
   
@@ -78,7 +68,7 @@ export async function runCreateNichePipeline(
     apiKey,
     imagePrompt,
     nodeName,
-    'niche',
+    nodeType,
     imagePrompt,
     parentContext
   );
@@ -86,7 +76,7 @@ export async function runCreateNichePipeline(
   console.log('✅ [PIPELINE] DNA generated successfully. Fields:', Object.keys(dna).join(', '));
 
   // Step 4: Build complete node using shared builder
-  const node = buildNode('niche', nodeName, dna, imageUrl);
+  const node = buildNode(nodeType, nodeName, dna, imageUrl);
 
   console.log('\n═══════════════════════════════════════════════════════════');
   console.log('✅ NODE CREATED SUCCESSFULLY');

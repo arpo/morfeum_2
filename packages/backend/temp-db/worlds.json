@@ -1108,6 +1108,176 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "loc-1763023469636-ytrslr39j": {
+      "id": "loc-1763023469636-ytrslr39j",
+      "type": "host",
+      "name": "The Whispering Isles",
+      "dna": {
+        "type": "host",
+        "name": "The Whispering Isles",
+        "description": "A realm where dreams manifest and flow like water.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, ancient, integrated",
+          "cultural_tone": "A realm deeply connected to natural cycles and flowing energies, where structures are extensions of the environment.",
+          "materials_base": "Elements that feel weathered and alive, suggesting a blend of stone, living wood, and naturally occurring organic matter. A palette that speaks of time and nature's gentle reclamation.",
+          "mood_baseline": "ethereal, tranquil, mysterious",
+          "palette_bias": "Soft, muted tones with a prevalence of natural greens and blues, accented by warm, earthy browns and grays. Colors often appear filtered through mist or dappled light.",
+          "soundscape_base": "The constant gentle murmur of flowing water, punctuated by the rustling of leaves and distant, unidentifiable murmurs that hint at unseen forces.",
+          "flora_base": "Abundant, luxuriant plant life that actively integrates with structures, featuring deep mosses, trailing vines, and ancient, gnarled trees.",
+          "fauna_base": "Subtle and often unseen creatures that move with the currents or blend into the foliage, suggesting a gentle, almost symbiotic relationship with the environment."
+        },
+        "slug": "the-whispering-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "64e7d7a7-6185-4bcd-ac11-a8e6dd9e5be3": {
+      "id": "64e7d7a7-6185-4bcd-ac11-a8e6dd9e5be3",
+      "type": "region",
+      "name": "The Whispering Isles",
+      "dna": {
+        "type": "region",
+        "name": "The Whispering Isles",
+        "description": "",
+        "dna": {
+          "architectural_tone": "fluid, sinuous, echoing water",
+          "cultural_tone": "Areas where dream energy coalesces and is channeled through natural conduits, influencing the flow of both water and consciousness.",
+          "materials_base": "Smooth, water-worn stones and dense, water-loving flora form the base, with accents of naturally hardened dream residue or bio-luminescent elements.",
+          "mood_baseline": "serene, flowing, contemplative",
+          "palette_bias": "Dominated by deep blues and aquamarines of water, with rich, shadowed greens and occasional pearlescent highlights. A cooler, more aquatic feel.",
+          "soundscape_base": "The pervasive sound of slow-moving water, from gentle eddies to deeper currents, often overlaid with faint, melodic whispers carried on the mist.",
+          "flora_base": "Water-adapted plants thrive, including luminous algae, reedy growths, and trees with roots that delve directly into the flowing streams.",
+          "fauna_base": "Aquatic or semi-aquatic creatures adapted to slow currents and misty environments, often with iridescent scales or a translucent appearance."
+        },
+        "slug": "the-whispering-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ba5d6c03-f978-482f-ba5d-26881e55a758": {
+      "id": "ba5d6c03-f978-482f-ba5d-26881e55a758",
+      "type": "location",
+      "name": "The Somnolent Spindle",
+      "dna": {
+        "type": "location",
+        "name": "The Somnolent Spindle",
+        "description": "A grand, moss-clad complex dedicated to the harnessing of dream energy, its immense wheels perpetually in motion.",
+        "looks": "A substantial, ancient stone building is heavily adorned with vibrant green moss and clinging ivy. Large, weathered wooden waterwheels are integrated into its side, driven by the adjacent river. The structure features steeply pitched roofs, multiple windows with warm interior light, and a prominent stone chimney. Overgrown vegetation surrounds the base of the building, blurring the lines between architecture and nature.",
+        "atmosphere": "A light mist hangs in the air, particularly around the waterwheel and the background forest, suggesting a damp environment. The clarity of the air is slightly reduced by this ambient haze.",
+        "mood": "Serene, mystical",
+        "lighting": "Soft, diffused light permeates the scene, with warm, golden light emanating from the interior windows. Shadows are gentle, and contrast is moderate, creating a tranquil and somewhat muted palette.",
+        "dominantElements": [
+          "Ancient stone mill building ~20m tall",
+          "Large wooden waterwheel ~15m diameter",
+          "Slow-moving river",
+          "Dense forest surrounding the location"
+        ],
+        "spatialLayout": "The foreground features a rocky riverbank with clear, flowing water. The midground is dominated by the moss-covered stone mill, which appears to be approximately 20 meters tall and a CUBIC STRUCTURE. The river passes directly beside the mill, powering its large waterwheel. The background consists of a dense, misty forest that slopes upwards.",
+        "uniqueIdentifiers": [
+          "Moss-clad stone mill building",
+          "Integrated large waterwheel",
+          "River flowing directly beside building"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Wood, Moss, Ivy",
+        "materials_accents": "Warm interior light",
+        "colors_dominant": "Green (from moss and foliage)",
+        "colors_secondary": "Gray (stone), Brown (wood, earth), Blue (water)",
+        "colors_accents": "Golden (window light)",
+        "colors_ambient": "Muted greens and grays",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, foreground",
+            "description": "Stone steps leading up to an arched entrance"
+          },
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Wooden arched doorway with warm light spilling out"
+          },
+          {
+            "type": "window",
+            "position": "multiple, midground",
+            "description": "Rectangular windows with visible warm interior light"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Moss-covered mill by river. Has: stone stairs (center, foreground), wooden door (center, midground), windows (midground)",
+        "dna": {
+          "architectural_tone": "ancient, monumental, water-driven",
+          "cultural_tone": "A place of ancient craftsmanship and elemental engineering, dedicated to harnessing the subtle power of dream currents.",
+          "materials_base": "Massive, time-worn stone blocks are heavily softened by thick moss and ivy. Durable, weathered wood is used for large-scale mechanical elements.",
+          "mood_baseline": "tranquil, industrious, ancient",
+          "palette_bias": "Earthy greens and grays dominate, with muted browns from wood and subtle blues from the adjacent river. Warm light emanates from within, creating a cozy contrast.",
+          "soundscape_base": "The deep, rhythmic thrum of large waterwheels, accompanied by the constant rush of the river and the soft creak of ancient wood.",
+          "flora_base": "Vibrant, thick moss blankets the stone, with tenacious ivy clinging to every surface. Overgrown, natural vegetation surrounds the base, blurring the lines with the wild.",
+          "fauna_base": "Small, persistent insects and moss-dwelling creatures that are part of the organic overgrowth, rarely seen but contributing to the sense of life."
+        },
+        "slug": "the-somnolent-spindle"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/6FS2aDoD1bXZv8D2drVgl.jpg",
+      "focus": {
+        "node_id": "The Somnolent Spindle",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763023496668-fai155itg": {
+      "id": "niche-1763023496668-fai155itg",
+      "type": "niche",
+      "name": "Interior of The Somnolent Spindle",
+      "dna": {
+        "looks": "Massive, cubic stone interior with moss-covered walls and uneven flagstone floors. Features include a low archway, wooden machinery, a staircase, and a large circular opening to a deeper chamber.",
+        "colorsAndLighting": "Warm, diffused light casts a gentle glow on textured stone surfaces. The dominant colors are muted earth tones from stone and vibrant greens from moss and ivy.",
+        "atmosphere": "The air is cool and carries a faint, earthy scent of damp stone and moss. There is a palpable sense of ancient stillness, with the implied presence of unseen water-driven mechanisms.",
+        "architectural_tone": "ancient stone",
+        "cultural_tone": "Ancient craftsmanship harnessing subtle dream currents.",
+        "materials": "The primary materials are time-worn, rough-hewn stone blocks forming the walls and uneven flagstones for the floor. These are heavily softened by vibrant green moss and tenacious ivy.",
+        "mood": "A sense of solid, ancient grandeur and enduring strength.",
+        "sounds": "Drip, echo, faint hum, rustle, ancient quiet.",
+        "dominantElementsDescriptors": [
+          "Massive stone walls",
+          "Moss and ivy",
+          "Damp flagstone floor",
+          "Wooden machinery",
+          "Circular opening"
+        ],
+        "spatialLayout": "A large, cubic interior space with a high, flat stone ceiling. Entry points include a low archway on the left and a wider circular opening at the far wall, with a staircase ascending on the right.",
+        "primary_surfaces": "stone blocks, flagstones, moss",
+        "secondary_surfaces": "weathered wood",
+        "accent_features": "Integrated wooden machinery, persistent pools of water.",
+        "dominant": "earth tones, walls and floor",
+        "secondary": "vibrant green, moss and ivy",
+        "accent": "darker stone, darker interior passages",
+        "ambient": "warm",
+        "uniqueIdentifiers": [
+          "cubic stone architecture",
+          "ubiquitous moss and ivy",
+          "integrated waterwheel-like machinery",
+          "large circular background opening"
+        ],
+        "searchDesc": "Ancient stone interior with moss, water features, and integrated machinery. Navigable passages."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/yzwFL5tjSnzI3MqfSdmzG.jpg",
+      "focus": {
+        "node_id": "niche-1763023496668-fai155itg",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -1266,9 +1436,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763023469636-ytrslr39j",
+      "type": "host",
+      "children": [
+        {
+          "id": "64e7d7a7-6185-4bcd-ac11-a8e6dd9e5be3",
+          "type": "region",
+          "children": [
+            {
+              "id": "ba5d6c03-f978-482f-ba5d-26881e55a758",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763023496668-fai155itg",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763021396915-35gpqjscp"
+    "loc-1763023469636-ytrslr39j"
   ]
 }

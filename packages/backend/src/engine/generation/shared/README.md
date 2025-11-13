@@ -4,6 +4,31 @@ This directory contains reusable modules for location node generation, used acro
 
 ## Modules
 
+### `imagePromptGeneration.ts`
+Generates LLM prompts for creating images for different node types.
+
+**Exports:**
+- `generateImagePromptForNode(context, intent, decision, apiKey, options?)` - Generate image prompt using LLM
+- `ImagePromptOptions` - Optional configuration (nodeType)
+
+**Features:**
+- Supports multiple node types: niche, feature, detail, location
+- Uses appropriate prompt templates per type
+- Extensible for new intent-specific prompts
+
+**Usage:**
+```typescript
+import { generateImagePromptForNode } from './shared/imagePromptGeneration';
+
+const imagePrompt = await generateImagePromptForNode(
+  context,
+  intent,
+  decision,
+  apiKey,
+  { nodeType: 'niche' }
+);
+```
+
 ### `imageGeneration.ts`
 Centralized image generation for all location nodes.
 
@@ -96,6 +121,36 @@ When implementing new navigation intents that need to create nodes:
 2. Use `generateNodeDNA()` for DNA generation
 3. Use `buildNode()` for node construction
 4. See `createNicheNodePipeline.ts` for complete example
+
+## Phase 2 Additions
+
+**New in Phase 2:**
+- `imagePromptGeneration.ts` - Shared module for generating image prompts
+- `createLocationNodePipeline.ts` - Renamed and generalized from createNicheNodePipeline
+- Generic pipeline supports any navigation node type (niche, feature, detail, location)
+- Easy to implement new intents: just call the pipeline with appropriate options
+
+**Example - Implementing a new intent:**
+```typescript
+// Any intent handler can now create nodes easily:
+import { runCreateLocationNodePipeline } from '../pipelines/createLocationNodePipeline';
+
+export async function handleExploreFeature(intent, context, apiKey) {
+  const result = await runCreateLocationNodePipeline(
+    decision,
+    context, 
+    intent,
+    apiKey,
+    { nodeType: 'feature' }  // Specify the node type
+  );
+  
+  return {
+    action: 'create_node',
+    node: result.node,
+    reasoning: 'Created feature node'
+  };
+}
+```
 
 ## Migration Notes
 

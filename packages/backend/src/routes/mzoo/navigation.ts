@@ -7,7 +7,7 @@ import { Router, Request, Response } from 'express';
 import { asyncHandler } from '../../middleware/errorHandler';
 import { HTTP_STATUS } from '../../config';
 import { classifyIntent, routeNavigation } from '../../engine/navigation';
-import { runCreateNichePipeline } from '../../engine/navigation/pipelines/createNicheNodePipeline';
+import { runCreateLocationNodePipeline } from '../../engine/navigation/pipelines/createLocationNodePipeline';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 
 const router = Router();
@@ -61,7 +61,7 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
     if (decision.action === 'create_niche') {
       console.log('\n🚀 [NAVIGATION] Running create_niche pipeline...');
       try {
-        const pipelineResult = await runCreateNichePipeline(decision, context, intent, apiKey);
+        const pipelineResult = await runCreateLocationNodePipeline(decision, context, intent, apiKey);
         imageUrl = pipelineResult.imageUrl;
         imagePrompt = pipelineResult.imagePrompt;
         node = pipelineResult.node;
