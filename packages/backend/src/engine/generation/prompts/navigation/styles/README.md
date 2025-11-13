@@ -1,164 +1,192 @@
-# Style System Documentation
+# Navigation Styles System: 2-Layer Architecture
 
-The style system allows different visual variations for navigation intents without duplicating code.
+This directory implements the 2-layer architecture for niche generation: **Foundation + Adaptation**.
 
-## Architecture
+## Architecture Overview
 
-**Registry-based**: All styles are registered in `registry.ts`  
-**Intent-specific**: Each intent can have its own set of styles  
-**Fallback**: Unknown styles default to 'default' style  
-**Backward compatible**: No style specified = uses 'default'
+```
+styles/
+├── registry.ts          # Central registry mapping intents to adaptations/styles
+└── go-inside/          # Adaptations for GO_INSIDE intent
+    └── interior.ts     # Interior adaptation (wraps foundation)
+```
 
-## Current Styles
+## The 2-Layer System
+
+**Layer 1: Foundation** (`nicheImagePrompt.ts`)
+- Generic, reusable prompt structure
+- Parent context analysis
+- DNA descriptors (PRIMARY style driver)
+- Materials, colors, spatial layout
+- Composition layering
+- Navigation features, camera specs
+- NO headers (adaptations provide those)
+
+**Layer 2: Adaptation** (`interior.ts`, etc.)
+- Wraps the foundation
+- Adds structural/perspective rules
+- Interior: "YOU ARE INSIDE" header, interior space rules, perspective framing
+- Future: Exterior adaptation for open-air niches
+- DNA still drives visual style
+
+## How It Works
+
+```
+User: "go inside cathedral"
+→ Intent Classifier: { intent: "GO_INSIDE", style: "interior" }
+→ Registry: Gets style="interior" → interiorAdaptation
+→ Interior Adaptation:
+   1. Adds structural headers and rules
+   2. Calls nicheImagePrompt (foundation)
+   3. Returns combined prompt
+→ LLM generates interior scene (DNA-driven style)
+```
+
+## Current Adaptations
 
 ### GO_INSIDE
-- **default**: Standard interior view (current nicheImagePrompt behavior)
+- **interior** (default): Enclosed interior spaces with structural rules
 
-## Adding New Styles
+## Adding New Adaptations
 
-### 1. Create Style Prompt File
+### Example: Exterior Adaptation
 
-Create a new file for your style:
+1. **Create adaptation file** (`go-inside/exterior.ts`):
 
 ```typescript
-// styles/go-inside/haunted.ts
-import type { NavigationIntent, IntentResult, NavigationContext, NavigationDecision } from '../../../../navigation/types';
+import { nicheImagePrompt } from '../../nicheImagePrompt';
+import { extractEntranceElement } from '../../../shared/promptSections';
 
-/**
- * Haunted interior style
- * Dark, gothic atmosphere with supernatural elements
- */
-export function hauntedInteriorPrompt(
+export function exteriorAdaptation(
   context: NavigationContext,
   intent: IntentResult,
   decision: NavigationDecision,
-  navigationFeatures?: string,
-  mode: 'detailed' | 'condensed' = 'condensed'
+  navigationFeatures?: string
 ): string {
-  // Your custom prompt here
-  // Can reuse sections from shared/promptSections.ts
-  // Can reference parent prompt for structure
+  const entranceElement = extractEntranceElement(decision.reasoning);
   
-  return `Your custom prompt for haunted interiors...`;
+  // Exterior-specific sections
+  const header = `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 OPEN AIR SPACE: ${entranceElement}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+  
+  const exteriorRules = `EXTERIOR SPACE: Open-air niche within parent location. Sky visible above. Natural/ambient lighting. Match scale and form of "${entranceElement}"`;
+  
+  // Call foundation
+  const foundation = nicheImagePrompt(context, intent, decision, navigationFeatures);
+  
+  return `You are an expert at creating image prompts for FLUX image generation.
+
+${decision.reasoning ? `CONTEXT: ${decision.reasoning}` : ''}
+
+${header}
+
+${exteriorRules}
+
+${foundation}`;
 }
 ```
 
-### 2. Register Style
-
-Add to `registry.ts`:
+2. **Register in `registry.ts`**:
 
 ```typescript
-import { hauntedInteriorPrompt } from './go-inside/haunted';
+import { exteriorAdaptation } from './go-inside/exterior';
 
-export const STYLE_REGISTRY = {
-  GO_INSIDE: {
-    default: {
-      name: 'default',
-      description: 'Standard interior view',
-      prompt: nicheImagePrompt
-    },
-    haunted: {  // NEW!
-      name: 'haunted',
-      description: 'Dark, gothic, spooky interior with supernatural atmosphere',
-      prompt: hauntedInteriorPrompt
-    }
+GO_INSIDE: {
+  default: { name: 'interior', prompt: interiorAdaptation },
+  exterior: { 
+    name: 'exterior', 
+    description: 'Open-air outdoor niches within location',
+    prompt: exteriorAdaptation 
   }
-};
+}
 ```
 
-### 3. That's It!
+3. **Intent classifier automatically includes it** - LLM selects based on location context
 
-The style is now available. Users can trigger it by using style-related words:
+## Adding DNA-Driven Style Variations
 
-**User**: "go inside the haunted mansion"  
-→ Intent classifier detects "haunted" keywords  
-→ Adds `style: "haunted"` to IntentResult  
-→ Handler passes to pipeline  
-→ Pipeline uses haunted prompt from registry
+DNA-driven styles can layer on top of any adaptation:
 
-## Style Detection
+```typescript
+export function enhancedStyleAdapter(
+  context: NavigationContext,
+  intent: IntentResult,
+  decision: NavigationDecision,
+  navigationFeatures?: string
+): string {
+  // Get base adaptation (interior or exterior)
+  const baseAdaptation = interiorAdaptation(context, intent, decision, navigationFeatures);
+  
+  // Read DNA fields
+  const mood = context.currentNode.dna?.mood_baseline;
+  const tone = context.currentNode.dna?.architectural_tone;
+  const cultural = context.currentNode.dna?.cultural_tone;
+  
+  // Build DNA-driven enhancements
+  const styleHints = buildAtmosphereEnhancement(mood, tone, cultural);
+  
+  return `${baseAdaptation}
 
-The intent classifier (future enhancement) will detect style keywords from user commands:
+${styleHints}`;
+}
+```
 
-- "haunted", "spooky", "dark" → `style: "haunted"`
-- "burning man", "festival" → `style: "burning_man"`
-- No keywords → `style: "default"`
+**Key principle**: Read DNA fields, don't hardcode style rules.
+
+## Adaptation vs Style
+
+**Adaptation** = Structural/perspective (interior vs exterior)
+- Interior: enclosed, ceiling overhead, walls around
+- Exterior: open-air, sky visible, natural space
+
+**Style** = Aesthetic/atmosphere (DNA-driven)
+- Driven by DNA fields: architectural_tone, mood_baseline, cultural_tone
+- Can apply to any adaptation
+- No hardcoded visual rules
+
+## Benefits
+
+- **DNA-driven**: Visual style comes from DNA fields
+- **Extensible**: Easy to add adaptations and style variations
+- **Clean separation**: Structure (adaptation) vs Style (DNA)
+- **Maintainable**: Clear, layered architecture
+- **Language-agnostic**: Semantic descriptions for LLM
+- **Token-efficient**: Condensed versions only
 
 ## File Organization
 
 ```
-styles/
-  ├── registry.ts              # Central registry (edit this to add styles)
-  ├── go-inside/              # Styles for GO_INSIDE intent
-  │   ├── default.ts          # (future) Extracted default prompt
-  │   ├── haunted.ts          # Haunted interior
-  │   └── burning-man.ts      # Festival art style
-  ├── enter-portal/           # Styles for ENTER_PORTAL intent
-  │   ├── default.ts
-  │   └── mystical.ts
-  └── README.md               # This file
+prompts/navigation/
+├── nicheImagePrompt.ts       # Foundation (generic)
+├── styles/
+│   ├── registry.ts          # Maps intents → adaptations
+│   ├── go-inside/
+│   │   └── interior.ts      # Interior adaptation
+│   └── README.md            # This file
+└── shared/
+    └── promptSections.ts    # Reusable sections (condensed)
 ```
 
-## Intent-Specific Styles
+## Testing
 
-Not all intents need styles. Current support:
+```bash
+# Test interior generation
+User: "go inside cathedral"
+→ Should use interior adaptation
+→ Should show "YOU ARE INSIDE" in logs
+→ Should create enclosed space with ceiling
 
-- ✅ **GO_INSIDE**: Creates interior nodes (supports styles)
-- ❌ **GO_OUTSIDE**: Just navigation (no styles needed)
-- ❌ **LOOK_AT**: View change (no styles needed)
-
-To add style support for a new intent:
-
-1. Add intent to STYLE_REGISTRY with default style
-2. Create style-specific prompts as needed
-3. Intent classifier will handle style detection
-
-## Testing New Styles
-
-```typescript
-// Manual test:
-const decision = { 
-  action: 'create_niche',
-  style: 'haunted',  // Force your style
-  // ...
-};
-
-await runCreateLocationNodePipeline(decision, context, intent, apiKey);
+# Test with custom style (future)
+User: "go into the mystical temple"
+→ Should use interior adaptation
+→ DNA should drive mystical atmosphere
 ```
-
-## Phase 4: Prompt Refactoring (Future)
-
-Currently, the `nicheImagePrompt` is hardcoded for interiors. In Phase 4, we'll refactor prompts to be more generic and accept style/perspective parameters directly.
-
-**Phase 3 (Current)**: Infrastructure in place, prompts unchanged  
-**Phase 4 (Future)**: Refactor prompts to be style-aware and generic
 
 ## Best Practices
 
-1. **Reuse shared sections**: Use functions from `../shared/promptSections.ts`
-2. **Keep prompts focused**: Each style should have a clear visual identity
-3. **Document clearly**: Add description in registry for intent classifier
-4. **Test thoroughly**: Ensure style produces expected visuals
-5. **Consider context**: Styles should respect parent node context
-
-## Examples
-
-**Default Interior** (current behavior):
-```
-User: "go inside"
-Style: default
-Result: Standard interior with parent context
-```
-
-**Haunted Interior** (future):
-```
-User: "go inside the haunted library"
-Style: haunted
-Result: Dark, gothic library with supernatural atmosphere
-```
-
-**Burning Man Art** (future):
-```
-User: "step inside the burning man art installation"
-Style: burning_man
-Result: Festival art style with interactive elements
+1. **Adaptations handle structure** - Interior/exterior rules
+2. **DNA handles style** - Read DNA fields, don't hardcode
+3. **Reuse foundation** - Call nicheImagePrompt for core content
+4. **Keep condensed** - Token efficiency matters
+5. **Document clearly** - Registry descriptions guide LLM selection

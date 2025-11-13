@@ -37,8 +37,12 @@ export async function generateLocationImage(
     safetyFilter = 'none'
   } = options || {};
 
+ 
   // Apply general prompt fixes
   const fixedPrompt = generalPromptFix(imagePrompt);
+  console.log('......... fixedPrompt..........');
+  console.log(fixedPrompt);
+  console.log('..............');
 
   // Generate image via MZOO service
   const result = await generateImage(

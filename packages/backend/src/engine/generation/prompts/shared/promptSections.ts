@@ -1,94 +1,8 @@
 /**
- * Reusable Prompt Sections
- * Shared sections used across different prompt types
+ * Reusable Prompt Sections (Condensed)
+ * Token-optimized shared sections used across different prompt types
+ * All sections use condensed versions for efficiency
  */
-
-/**
- * Composition layering instructions
- */
-export function buildCompositionLayering(type: 'interior' | 'exterior'): string {
-  return `COMPOSITION LAYERING (MANDATORY - Your output MUST include all three layers):
-
-FOREGROUND (0-3 meters from camera):
-- Immediate floor/ground surface details and texture
-- Close architectural elements within arm's reach
-- Near-side wall surfaces and details
-- Anything you could touch from the camera position
-
-MIDGROUND (3-10 meters):
-- Navigation features (corridors, stairs, platforms, passages)
-- Architectural details (machinery, panels, conduits, vents)
-- Main structural elements
-- Spatial transitions and connections
-
-BACKGROUND (10+ meters / far distance):
-- Where the space continues or ends
-- Distant lighting and atmospheric effects
-- Far end of corridor/chamber/passage
-- Depth and spatial extent
-
-CRITICAL: Each layer must be explicitly described SEPARATELY in your final output.
-Do NOT combine or skip layers. Use clear spatial organization.`;
-}
-
-/**
- * Navigation guidance instructions
- */
-export function buildNavigationGuidance(customFeatures?: string): string {
-  if (customFeatures) {
-    return `
-CUSTOM NAVIGATION FEATURES (REQUIRED):
-${customFeatures}
-
-Integrate these specific features into the scene naturally.`;
-  }
-
-  return `
-NAVIGATION & SPATIAL FEATURES (REQUIRED - include 3-4 SPECIFIC features):
-Be CONCRETE and DETAILED. Avoid vague descriptions.
-
-SPECIFICITY REQUIREMENTS:
-✅ Good: "3-meter-wide side corridor branching left at 45 degrees, grated metal floor visible, warm orange glow from interior"
-✅ Good: "Rusted metal ladder on right wall ascending to upper maintenance catwalk 6 meters up, with visible access hatch"
-✅ Good: "Large circular vent opening ahead-right, 2m diameter, glowing interior visible with steam wisps"
-
-❌ Bad: "narrow side passages"
-❌ Bad: "some doorways"  
-❌ Bad: "architectural details"
-
-CHOOSE 3-4 SPECIFIC FEATURES:
-- EXACT corridor/passage: Specify width, direction, angle, what's visible inside
-- EXACT platform/walkway: Specify height, side (left/right), material, destination
-- EXACT stairs/ladder: Specify location, direction (up/down), material, where it leads
-- EXACT machinery/panel: Specify size, exact position, type, condition
-- EXACT opening/vent: Specify size, shape, position, what's visible through it
-- EXACT conduits/pipes: Specify diameter, routing path, material, quantity`;
-}
-
-/**
- * Navigable elements marking instructions
- */
-export function buildNavigableElementsInstructions(): string {
-  return `NAVIGABLE ELEMENTS MARKING (Required):
-When describing navigable features in your scene, mark them inline using this natural format:
-
-[description of element] (navigable: [type], [position])
-
-TYPE OPTIONS:
-- passage, corridor, stairs, ladder, ramp, platform, walkway, opening, hatch, door, object
-
-POSITION: Natural language describing side and layer
-- Examples: "left side, midground" | "right wall, foreground" | "ahead, background" | "center, midground"
-
-EXAMPLES:
-✅ "A large circular vent, 2 meters in diameter, emits warm orange light from the right wall (navigable: opening, right wall, midground)."
-✅ "To the left, a rusted metal ladder (navigable: ladder, left wall, midground) ascends along the curved wall."
-✅ "A narrow corridor branches left at 30 degrees (navigable: corridor, left side, midground), with grated metal floor."
-✅ "The corroded metal floor features drainage grates (navigable: object, center, foreground) with bioluminescent moss."
-
-CRITICAL: Mark 3-4 navigable elements inline. These will later be extracted by an LLM to generate structured navigation data.
-Make positions consistent with your description - if you write "left", mark it "left side" or "left wall", not "right".`;
-}
 
 /**
  * Extract entrance element from decision reasoning
@@ -158,70 +72,6 @@ CRITICAL: The interior architecture MUST directly reflect these analyzed charact
 You are literally INSIDE the structure described above.`;
 }
 
-/**
- * Interior space rules section
- */
-export function buildInteriorSpaceRules(entranceElement: string): string {
-  return `CRITICAL - THIS IS AN INTERIOR SPACE:
-- Show enclosed space with solid ceiling/roof overhead
-- Interior lighting (ambient, artificial light, or light from windows/vents)
-- Walls and interior architecture visible
-- Solid ceiling/roof overhead - no open sky visible
-- If small windows/openings exist, they are in WALLS, not in the ceiling
-- Interior architecture must match the form of "${entranceElement}"`;
-}
-
-/**
- * Perspective and framing section
- */
-export function buildPerspectiveFraming(): string {
-  return `PERSPECTIVE & FRAMING:
-- Camera position: Just past the entrance threshold (1-2 meters inside)
-- View: Straight ahead showing the immediate entry view - what you first see when stepping in
-- Composition: Entrance-view perspective with slight asymmetry for visual interest
-  * Avoid extreme diagonal offset or purely symmetric tunnel view
-  * Main space/path visible ahead with interesting details on sides for depth
-- Camera: Wide-angle (24-35mm equivalent), eye-level
-- The entrance is BEHIND the camera - do not show it`;
-}
-
-/**
- * Transformation rules for interior spaces
- */
-export function buildTransformationRules(): string {
-  return `HOW TO USE PARENT LOCATION DETAILS - CRITICAL TRANSFORMATION RULES:
-
-✓ INCLUDE (transformed for interior):
-- Materials & colors → Apply to interior surfaces, walls, ceiling, floor
-- Architectural style → Adapt to interior architecture and structure
-- Atmosphere & mood → Maintain similar emotional feel
-- Lighting hints → Transform to interior light sources
-
-✗ DO NOT INCLUDE (unless contextually logical):
-- Exterior waterways/streams → Only if it's a logical interior feature (fountain, pool, drainage channel)
-- Overgrown vegetation → Only sparse interior plants if contextually appropriate (hydroponics, garden room, etc.)
-- Open landscapes → Replace with enclosed spatial elements
-- Sky/outdoor ambient light → Transform to interior lighting sources (fixtures, windows, bioluminescence)
-- Weather elements (mist, fog) → Only if it makes sense indoors (steam, smoke from vents, etc.)
-
-REASONING TEST: For each parent element, ask "Would this logically exist inside this structure?"`;
-}
-
-/**
- * Requirements section
- */
-export function buildRequirements(): string {
-  return `REQUIREMENTS:
-1. The entrance/threshold is BEHIND the camera - show the immediate entry view
-2. Maintain consistent space type (interior OR exterior, no mixing)
-3. Only include elements that would logically exist in this type of space (use transformation rules above)
-4. Composition should be engaging with slight asymmetry, avoiding both extreme offset and pure symmetry
-5. MUST include separate foreground, midground, and background descriptions`;
-}
-
-/**
- * CONDENSED VERSIONS - Token-optimized prompts
- */
 
 /**
  * Condensed composition layering (40% shorter)
@@ -310,33 +160,6 @@ export function buildInteriorSpaceRulesCondensed(entranceElement: string): strin
   return `INTERIOR SPACE: Fully enclosed with solid ceiling/roof above, walls surrounding, interior lighting. No open sky visible. Match form of "${entranceElement}"`;
 }
 
-/**
- * Camera specifications for FLUX output
- */
-export function buildCameraSpecifications(): string {
-  return `CAMERA SPECIFICATIONS FOR FLUX OUTPUT (CRITICAL):
-Your final FLUX prompt MUST include camera/lens specs appropriate for the space scale:
-
-Small spaces (< 15m ceiling):
-- Standard wide-angle: 28-35mm lens, eye-level
-- Example: "28mm lens, eye-level perspective"
-
-Medium spaces (15-50m ceiling):
-- Wide-angle: 20-28mm lens, slight upward tilt if tall ceilings
-- Example: "24mm lens, slight upward angle showing 12m vaulted ceiling"
-
-Vast/colossal spaces (> 50m ceiling):
-- Ultra-wide angle: 14-20mm lens, upward tilt to emphasize ceiling height
-- Deep depth of field (foreground to background sharpness)
-- Emphasize perspective and vanishing point
-- Example: "16mm ultra-wide lens, 10° upward tilt revealing soaring 50m ceiling, deep depth of field from foreground to 80m depth, dramatic wide-angle perspective with prominent vanishing point"
-
-Include these camera specs in your final FLUX prompt to ensure proper scale capture.`;
-}
-
-/**
- * Condensed camera specifications (60% shorter)
- */
 export function buildCameraSpecificationsCondensed(): string {
   return `CAMERA SPECS: Include in final FLUX prompt based on space scale:
 Small (<15m): 28-35mm lens, eye-level

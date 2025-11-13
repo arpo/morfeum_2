@@ -415,54 +415,6 @@
         "distance": "medium"
       }
     },
-    "niche-1762958913533-lm7pgdclo": {
-      "id": "niche-1762958913533-lm7pgdclo",
-      "type": "niche",
-      "name": "Interior of The Valley of Whispering Light",
-      "dna": {
-        "looks": "A vast, ancient stone hall is entered, its interior carved from monolithic, weathered stone. Towering fluted columns punctuate the space, leading towards a grand mural adorning the far wall, illuminated by otherworldly pigments.",
-        "colorsAndLighting": "Luminous pigments cast vibrant blues, golds, and violets across the hall, mixed with dappled light filtering from above. A soft amber glow emanates from a corridor to the right, while a passage glows emerald to the left.",
-        "atmosphere": "The air is thick with a reverent, ancient atmosphere, contrasting with the outside jungle. A faint, ethereal mist hovers just above the smooth, worn stone floor, imbued with a forgotten divine energy.",
-        "architectural_tone": "ancient stone",
-        "cultural_tone": "A sacred nexus for forgotten divine worship, adorned with luminous murals depicting cosmic events.",
-        "materials": "Massive, irregularly fitted stone blocks form the floor, worn smooth by time. Dark, veined stone is used for the immense fluted columns. The walls are of the same monolithic, weathered stone as the exterior.",
-        "mood": "Vast and awe-inspiring, this sacred space evokes a sense of reverent antiquity and divine presence.",
-        "sounds": "echoing silence, faint hum, subtle stone grinding",
-        "dominantElementsDescriptors": [
-          "luminous mural",
-          "immense fluted columns",
-          "vaulted ceiling",
-          "stone floor"
-        ],
-        "spatialLayout": "The space is vast and awe-inspiring, entered from an unseen opening. A central focus is the far wall's mural, with a downward sloping passage to the left and an ascending staircase and corridor to the right.",
-        "primary_surfaces": "stone (walls, ceiling, floor)",
-        "secondary_surfaces": "carved stone (columns, mural)",
-        "accent_features": [
-          "otherworldly pigments",
-          "celestial event mural",
-          "emerald glowing passage",
-          "amber glowing corridor"
-        ],
-        "dominant": "stone (vast majority)",
-        "secondary": "glowing pigments (mural, accents)",
-        "accent": "emerald (passage), amber (corridor), blues, golds, violets (mural)",
-        "ambient": "neutral",
-        "uniqueIdentifiers": [
-          "Luminous celestial mural on far wall",
-          "Immense fluted columns",
-          "Ethereal mist on stone floor",
-          "Multi-colored glowing passages"
-        ],
-        "searchDesc": "Ancient stone hall interior with luminous murals, grand columns, and glowing passages."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/rabbit/BFEeAKjM1bNSK8fATTkDr.jpg",
-      "focus": {
-        "node_id": "niche-1762958913533-lm7pgdclo",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
     "loc-1762959960966-pkg6dwk2e": {
       "id": "loc-1762959960966-pkg6dwk2e",
       "type": "host",
@@ -1239,34 +1191,346 @@
         "distance": "medium"
       }
     },
-    "niche-1763030137319-5t41wybid": {
-      "id": "niche-1763030137319-5t41wybid",
-      "type": "niche",
-      "name": "Interior of The Whispering Manor",
+    "loc-1763034691958-077av8ibr": {
+      "id": "loc-1763034691958-077av8ibr",
+      "type": "host",
+      "name": "Industrial Wasteland",
       "dna": {
-        "looks": "A decaying Victorian Gothic interior defined by sharp right angles and oppressive verticality. Dark, weathered wood paneling and peeling wallpaper line the walls, broken by a dilapidated staircase and a shadowed oil painting.",
-        "colorsAndLighting": "Dim, flickering gas lamps cast long, dancing shadows, bathing the space in an uneven, oppressive gloom. Dark, muted tones dominate, with hints of former opulence barely visible.",
-        "atmosphere": "A palpable sense of abandonment and decay permeates the air, thick with the scent of dust. The atmosphere is deeply unsettling, with an oppressive enclosure that suggests unseen presences.",
-        "architectural_tone": "Victorian Gothic decay",
-        "cultural_tone": "A site of intense lingering trauma and spectral activity.",
-        "materials": "Dark, weathered wood paneling and peeling damask wallpaper form the walls. The floor is covered in thick dust hiding a dark, polished wood. Cobwebs adorn the ceiling beams.",
-        "mood": "Somber and deeply unsettling, evoking a sense of dread and lost grandeur.",
-        "sounds": "Silence, creaking wood, faint whispers",
-        "dominantElementsDescriptors": "Decaying wood paneling, peeling wallpaper, dilapidated staircase, flickering gas lamps, vaulted ceiling",
-        "spatialLayout": "The interior suggests the manor's cubic exterior form with sharp ninety-degree angles. A corridor recedes left, a staircase ascends right, and a broad doorway beckons centrally into gloom.",
-        "primary_surfaces": "Wood paneling, wallpaper, dusty floor",
-        "secondary_surfaces": "Wooden banister, cracked painting frame",
-        "accent_features": "Flickering gas lamps, peeling damask wallpaper, desiccated leaves",
-        "dominant": "Dark brown (wood paneling)",
-        "secondary": "Muted grey/beige (wallpaper)",
-        "accent": "Yellow/orange (gas light, shadows)",
-        "ambient": "Cool (shadows) / Warm (gas light)",
-        "uniqueIdentifiers": "Sharp right-angle architecture, pervasive dust and decay, dancing gas lamp shadows, Victorian Gothic styling",
-        "searchDesc": "Decaying Victorian Gothic manor interior with dark wood, peeling wallpaper, and flickering gas lamps."
+        "type": "host",
+        "name": "Industrial Wasteland",
+        "description": "A realm choked with the remnants of forgotten industry.",
+        "dna": {
+          "genre": "post-apocalyptic",
+          "architectural_tone": "brutal industrial monoliths",
+          "cultural_tone": "Echoes of a forgotten industrial age, where function dictated form and scale was paramount. Society has collapsed, leaving behind monumental structures of overwhelming size and complexity, now slowly succumbing to the elements and entropy.",
+          "materials_base": "Dominantly heavy, weathered metals like iron and steel, reinforced concrete, and aged brickwork. Expect signs of rust, corrosion, and erosion as primary visual cues, hinting at immense durability and subsequent decay.",
+          "mood_baseline": "melancholy, imposing, desolate",
+          "palette_bias": "A palette of deep, oxidized browns and rust reds, contrasted with muted grays of concrete and corroded steel. Undertones of deep greens from encroaching nature and the occasional hint of ochre or faded industrial paint.",
+          "soundscape_base": "The pervasive hum of wind whistling through metal structures, the groan of stressed metal, the distant drip of water, and the subtle creaks of decaying machinery. Occasional industrial echoes or animal sounds. Silence punctuated by the sounds of nature's slow reclamation.",
+          "flora_base": "Hardy, opportunistic vegetation that thrives in polluted or disturbed environments. Think tenacious vines, mosses, lichens, and hardy shrubs that can anchor themselves in cracks and crevices of metal and concrete.",
+          "fauna_base": "Scavengers and small, resilient creatures that can adapt to harsh, abandoned environments. Birds nesting in machinery, insects adapted to rust and decay, and perhaps larger scavengers that roam the industrial ruins."
+        },
+        "slug": "industrial-wasteland"
       },
-      "imagePath": "https://v3b.fal.media/files/b/lion/OQmVLisWnF3mdXqjhF4rE.jpg",
+      "imagePath": "",
       "focus": {
-        "node_id": "niche-1763030137319-5t41wybid",
+        "node_id": "Industrial Wasteland",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "fed871db-261b-40a5-b580-f8f81de5f6c7": {
+      "id": "fed871db-261b-40a5-b580-f8f81de5f6c7",
+      "type": "region",
+      "name": "The Rustlands",
+      "dna": {
+        "type": "region",
+        "name": "The Rustlands",
+        "description": "A sprawling expanse of corroded metal and decaying structures.",
+        "dna": {
+          "architectural_tone": "sun-bleached metal ruins",
+          "cultural_tone": "A vast, desolate expanse where the remnants of immense industrial complexes have been relentlessly battered by time and the elements, creating landscapes of corroded metal and collapsing structures. Survival is a constant struggle against the harsh, arid conditions and the ever-present decay.",
+          "materials_base": "predominantly rust-eaten steel and iron, warped and twisted by heat and corrosion. Eroded concrete structures and scattered, broken machinery parts are common.",
+          "mood_baseline": "grim, expansive, arid",
+          "palette_bias": "rich rust oranges and deep browns, desaturated grays of corroded metal, and the muted tones of dry earth and dust.",
+          "soundscape_base": "the mournful howl of wind across open metal plains, the distant clanging of loose debris, and the unsettling silence of abandonment.",
+          "flora_base": "sparse, hardy desert flora, mutated succulents, and tough, wire-like weeds that cling to any available moisture and soil.",
+          "fauna_base": "desert-adapted scavengers, large insects, and hardy rodents that can survive the arid conditions and scarce resources."
+        },
+        "slug": "the-rustlands"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Rustlands",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "f67539b2-5424-4ed7-93af-8bd175d1e076": {
+      "id": "f67539b2-5424-4ed7-93af-8bd175d1e076",
+      "type": "location",
+      "name": "The Iron Orchard",
+      "dna": {
+        "type": "location",
+        "name": "The Iron Orchard",
+        "description": "A vast, decaying factory complex where machinery has become overgrown and reclaimed by nature.",
+        "looks": "The scene depicts a decaying industrial complex with towering brick structures on either side. Overgrown vegetation, including dense bushes and vines, encroaches upon the crumbling brickwork and a central, muddy pathway. The overall architecture suggests a large, multi-story factory. At the end of the pathway, a wide, arched opening reveals a bright, misty expanse with streetlights, creating a stark contrast with the shadowed foreground. Intricate metal scaffolding and pipes are visible attached to the buildings, hinting at complex machinery that once operated here.",
+        "atmosphere": "A thick, damp mist hangs in the air, obscuring details in the background and contributing to the sense of decay. The air feels heavy and still, broken only by the implied sounds of nature and the distant glow of artificial lights. The overall atmosphere is one of abandonment and the slow reclamation of industry by the natural world.",
+        "mood": "Melancholy, overgrown, forgotten",
+        "lighting": "The lighting is dim and diffused, with a cool, overcast sky providing the primary ambient light. A warm, artificial glow emanates from an opening in the midground, casting reflections on the wet ground and creating a focal point. The contrast between the dark, shadowed foreground and the brighter, misty background is pronounced.",
+        "dominantElements": [
+          "Crumbling brick factory buildings (left and right, midground-background)",
+          "Overgrown vegetation and foliage (foreground-midground)",
+          "Central muddy pathway (foreground-midground)",
+          "Large arched opening with distant lights (center, midground)"
+        ],
+        "spatialLayout": "The foreground is dominated by a muddy pathway flanked by dense, overgrown vegetation. The midground features the imposing facades of brick buildings lining the pathway, with a large, dark arched opening in the center. The background is a misty, illuminated area beyond the archway, with faint shapes of streetlights.",
+        "uniqueIdentifiers": [
+          "Decaying brick factory architecture",
+          "Overgrown vegetation reclaiming industrial structures",
+          "Central arched opening leading to an illuminated, misty area"
+        ],
+        "materials_primary": "brick",
+        "materials_secondary": "metal, earth, foliage",
+        "materials_accents": "glowing streetlights",
+        "colors_dominant": "dark brown (brick)",
+        "colors_secondary": "deep green (foliage), grey (sky, mist)",
+        "colors_accents": "yellow/orange (lights)",
+        "colors_ambient": "cool grey-blue",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "A large, dark archway leading into a brightly lit, misty area"
+          },
+          {
+            "type": "passage",
+            "position": "left wall, midground",
+            "description": "Dimly lit opening in the brickwork with visible interior detail"
+          },
+          {
+            "type": "passage",
+            "position": "right wall, midground",
+            "description": "Dark opening within the brick structure, partially obscured by foliage"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Decaying factory yard with overgrown path. Has: archway passage (center, midground), building opening (left wall, midground)",
+        "dna": {
+          "architectural_tone": "overgrown industrial behemoths",
+          "cultural_tone": "A vast, decaying factory complex where towering machinery has been transformed into arboreal structures, choked by rampant vegetation. Nature has aggressively reclaimed the industrial skeleton, creating an eerie forest of metal and plant life, a testament to the relentless power of natural entropy.",
+          "materials_base": "a fusion of heavily corroded, dark iron machinery and brick structures, intertwined with dense, vibrant green foliage and earthy ground cover.",
+          "mood_baseline": "eerie, verdant, decaying",
+          "palette_bias": "deep, oxidized browns and greens of nature's reclamation, with accents of muted brick reds and the occasional glint of still-intact, dark metal.",
+          "soundscape_base": "the rustling of leaves and vines, the chirping and calls of nesting birds, the constant dripping of moisture, and the low hum of unseen insects. Occasional creaks of metal under the weight of vegetation.",
+          "flora_base": "dense, overgrown vines, thick mosses, large ferns, and resilient bushes that have rooted themselves within and around the machinery.",
+          "fauna_base": "numerous bird species nesting and perching within the metal structures, insects crawling over rust and foliage, and small rodents or reptiles taking refuge in the shadowed interiors."
+        },
+        "slug": "the-iron-orchard"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/4ofiTDZstfTZpHQtgE3xk.jpg",
+      "focus": {
+        "node_id": "The Iron Orchard",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763035099272-izqjxz6s0": {
+      "id": "niche-1763035099272-izqjxz6s0",
+      "type": "niche",
+      "name": "Interior of The Iron Orchard",
+      "dna": {
+        "looks": "A colossal, enclosed industrial chamber with crumbling brick walls supporting a high, arched ceiling. Heavy, corroded iron pipes and conduits snake across the surfaces, intertwined with thick, vibrant green vines and large ferns. The floor is a rough, uneven expanse of packed earth and rubble.",
+        "colorsAndLighting": "Dominant dark greens and rust-browns create an oppressive atmosphere, dimly illuminated by a diffused orange-yellow glow from a distant, misty archway. Long, eerie shadows stretch across the space.",
+        "atmosphere": "The air is heavy with dampness and the scent of decay and vegetation. A palpable sense of abandonment and nature's relentless reclamation pervades the vast, cavernous space.",
+        "architectural_tone": "overgrown industrial",
+        "cultural_tone": "A vast, decaying factory complex where towering machinery has been transformed into arboreal structures, choked by rampant vegetation.",
+        "materials": "Crumbling brick, heavily encrusted with dark green moss and dense, trailing vines. Corroded dark iron pipes, conduits, and dangling scaffolding. Rough, damp packed earth and scattered rubble on the floor.",
+        "mood": "Eerie and oppressive, with a sense of nature's overwhelming power and the desolation of industrial decay.",
+        "sounds": "Dripping water, rustling leaves, distant hum.",
+        "dominantElementsDescriptors": "Colossal arched doorway, crumbling brick walls, thick hanging vines, corroded iron pipes.",
+        "spatialLayout": "A vast, cavernous chamber with rectilinear walls and a soaring, solid arched ceiling. A colossal arched opening is the primary focal point, with navigable elements leading to other areas.",
+        "primary_surfaces": "Crumbling brick walls, packed earth and rubble floor, solid arched ceiling.",
+        "secondary_surfaces": "Corroded iron pipes, conduits, metal beams, rusted machinery fragments, metal grating walkway, metal rungs ladder.",
+        "accent_features": "Thick vine clusters hanging from the ceiling, moss and weed clumps on the floor.",
+        "dominant": "Dark green (70%) - walls, vines, moss.",
+        "secondary": "Brown (20%) - brick, earth, rust.",
+        "accent": "Orange-yellow (10%) - distant light glow.",
+        "ambient": "Warm",
+        "uniqueIdentifiers": "Overgrown industrial niche, colossal arched opening, nature reclamation, decaying brick factory.",
+        "searchDesc": "Overgrown industrial niche inside a decaying factory with a colossal archway and hanging vines."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/AvTHRL4RNKNESBTDUTrx1.jpg",
+      "focus": {
+        "node_id": "niche-1763035099272-izqjxz6s0",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "niche-1763035353358-l060d7wx0": {
+      "id": "niche-1763035353358-l060d7wx0",
+      "type": "niche",
+      "name": "Interior of The Valley of Whispering Light",
+      "dna": {
+        "looks": "A vast, monolithic stone chamber with intricately carved, luminescent murals depicting cosmic events and deities. The space features a high, arched ceiling and a circular floor plan, with dramatic interplay of light and shadow.",
+        "colorsAndLighting": "Vibrant, otherworldly pigments in the murals cast an ethereal glow. Deep shadows contrast with radiant light, creating a dramatic, luminous effect.",
+        "atmosphere": "The air feels reverent and ancient, imbued with a sense of sacred history. There is a palpable stillness, broken only by the subtle hum of the luminous carvings.",
+        "architectural_tone": "ancient stone",
+        "cultural_tone": "A sacred nexus for forgotten divine worship with luminous, narrative murals.",
+        "materials": "Ancient, weathered stone forms the walls and floor, intricately carved and adorned with self-illuminating pigments. The stone is time-worn and monumental.",
+        "mood": "Awe-inspiring and sacred, evoking a sense of deep history and profound mystery.",
+        "sounds": "subtle hum, echoing stillness, ancient whispers",
+        "dominantElementsDescriptors": "luminous murals, monolithic chamber, vaulted ceiling, carved stone altar",
+        "spatialLayout": "A vast, roughly circular monolithic chamber with a soaring, arched ceiling approximately 40 meters high. Walls curve out approximately 25 meters. A recessed alcove is a focal point on the far wall, and a staircase ascends from the left.",
+        "primary_surfaces": "carved stone, luminescent murals",
+        "secondary_surfaces": "stone flagstones, carved stone altar",
+        "accent_features": "self-illuminating pigments, recessed golden alcove, ascending stone staircase",
+        "dominant": "earthy browns and grays (stone)",
+        "secondary": "ethereal glow (luminescent pigments)",
+        "accent": "golden light (alcove)",
+        "ambient": "neutral",
+        "uniqueIdentifiers": "pulsing luminescent murals, monolithic scale, cosmic/deity carvings",
+        "searchDesc": "Monolithic stone chamber with luminescent cosmic murals, sacred altar, and vaulted ceiling."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/uw1WJfUrF7NOH1o7RrEGN.jpg",
+      "focus": {
+        "node_id": "niche-1763035353358-l060d7wx0",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763035498009-1zhu334t9": {
+      "id": "loc-1763035498009-1zhu334t9",
+      "type": "host",
+      "name": "The Azure Coast",
+      "dna": {
+        "type": "host",
+        "name": "The Azure Coast",
+        "description": "A land where the sky meets the sea, and observation takes many forms.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "functional, modular, clean-lined",
+          "cultural_tone": "Driven by scientific inquiry and technological advancement, with an emphasis on exploration and data acquisition.",
+          "materials_base": "Polished metals, reinforced composites, and resilient polymers are common. Surfaces are often smooth and seamless, designed for durability and ease of maintenance.",
+          "mood_baseline": "curious, detached, observant",
+          "palette_bias": "Cool, muted tones dominate, often reflecting the sky or water. Accents of artificial light provide contrast.",
+          "soundscape_base": "Low hum of machinery, subtle electronic pulses, and the distant calls of the environment. Sounds are often processed or filtered for clarity.",
+          "flora_base": "Engineered or cultivated resilient plant life, adapted to various atmospheric conditions. Hydroponic systems may be present.",
+          "fauna_base": "Highly adapted or genetically engineered creatures, or synthetic lifeforms for research and environmental monitoring."
+        },
+        "slug": "the-azure-coast"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Coast",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "e7116011-4eb8-4db6-bef3-9d83d96bd081": {
+      "id": "e7116011-4eb8-4db6-bef3-9d83d96bd081",
+      "type": "region",
+      "name": "The Azure Coast",
+      "dna": {
+        "type": "region",
+        "name": "The Azure Coast",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "Dominant blues and cool grays, with occasional earthy greens from coastal vegetation.",
+          "soundscape_base": "The constant murmur of waves, the cry of seabirds, and the whisper of coastal winds.",
+          "flora_base": "Salt-tolerant grasses, hardy coastal shrubs, and occasional hardy trees clinging to rocky outcrops.",
+          "fauna_base": "Marine birds, amphibious creatures, and small, resilient coastal dwelling animals."
+        },
+        "slug": "the-azure-coast"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Coast",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "aaf96e86-5209-4ee6-909b-f552af94f6eb": {
+      "id": "aaf96e86-5209-4ee6-909b-f552af94f6eb",
+      "type": "location",
+      "name": "The Azure Dome Observatory",
+      "dna": {
+        "type": "location",
+        "name": "The Azure Dome Observatory",
+        "description": "A unique observatory situated atop a hill, its dome a beacon of its unusual purpose.",
+        "looks": "A large, polished blue dome structure sits atop a verdant hill, its surface segmented by faint lines suggesting panels. A pathway constructed of stone slabs leads directly to the observatory's entrance. The base of the dome is a cylindrical structure with visible architectural details, including what appear to be small balconies or viewing platforms. The overall appearance is one of monumental scale and smooth, reflective surfaces. The dome is topped with a slender antenna.",
+        "atmosphere": "A pervasive blue haze or fog obscures the distant horizon, suggesting a humid or misty environment. The air appears thick, contributing to the muted visibility of the background elements.",
+        "mood": "Anticipatory, watchful",
+        "lighting": "The scene is illuminated by a cool, ambient blue light, likely from the sky and diffused through the atmospheric haze. A warm, golden light emanates from within the observatory's entrance, creating a strong contrast with the exterior's cool tones. The lighting is soft, with minimal harsh shadows.",
+        "dominantElements": [
+          "Polished blue dome structure (~30m diameter, WIDE STRUCTURE) dominating the midground",
+          "Stone pathway leading to the entrance (midground)",
+          "Cylindrical base of the observatory (midground)",
+          "Warmly lit arched entrance (midground)"
+        ],
+        "spatialLayout": "The foreground features a gently sloping, grassy hillside bordered by a stone-lined pathway. The midground is dominated by the prominent blue dome observatory situated centrally on the hilltop. The background consists of a vast, hazy expanse of sky meeting the indistinct horizon, with a hint of the sea visible to the right.",
+        "uniqueIdentifiers": [
+          "Polished blue dome observatory",
+          "Pathway leading directly to a brightly lit arched entrance",
+          "Hilltop location overlooking a hazy horizon"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Grass",
+        "materials_accents": "Polished metal (dome surface)",
+        "colors_dominant": "Blue (dome, sky, haze)",
+        "colors_secondary": "Green (hillside, grass)",
+        "colors_accents": "Gold (interior lighting)",
+        "colors_ambient": "Cool blue",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Arched doorway glowing with warm interior light, inviting entry"
+          },
+          {
+            "type": "passage",
+            "position": "center, foreground to midground",
+            "description": "Stone pathway leading towards the observatory entrance"
+          }
+        ],
+        "searchDesc": "[Observatory Exterior] Blue dome observatory on a hill. Has: arched door (center, midground), stone pathway (center, foreground)",
+        "slug": "the-azure-dome-observatory"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/vNGJ78hh3cMVl-3tYGrH4.jpg",
+      "focus": {
+        "node_id": "The Azure Dome Observatory",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763035536601-0doo11kp6": {
+      "id": "niche-1763035536601-0doo11kp6",
+      "type": "niche",
+      "name": "Interior of The Azure Dome Observatory",
+      "dna": {
+        "looks": "A vast, circular observatory chamber features a dominant, deeply curved, polished blue domed ceiling. Smooth, matte white composite walls are accented with brushed aluminum, leading the eye towards a large holographic display unit in the midground. A subtly textured dark gray floor grounds the expansive space.",
+        "colorsAndLighting": "The space is illuminated by a combination of soft, ethereal cool blue from the holographic display and focused, technological golden glows from the console. The deep blue dome contributes to the overall cool color palette.",
+        "atmosphere": "The air feels detached and cool, evoking a sense of immense scale and scientific detachment. There is a subtle hum of advanced technology, a gentle flow of filtered air, and the quiet presence of vastness. The atmosphere is one of detached curiosity and immense scale.",
+        "architectural_tone": "futuristic modular",
+        "cultural_tone": "A hub for scientific inquiry and data acquisition, driven by advanced technology and exploration.",
+        "materials": "The primary materials are seamless, matte white composite panels for the walls, contrasted with sections of brushed aluminum. The floor is a cool, dark gray with a subtle traction texture, and the ceiling is a polished, deep blue material.",
+        "mood": "Anticipatory and watchful, fostering a sense of profound curiosity and the excitement of potential discovery.",
+        "sounds": "low hum, faint data processing, subtle air circulation",
+        "dominantElementsDescriptors": [
+          "vast blue domed ceiling",
+          "holographic star chart display",
+          "console station with gold interface",
+          "curving white composite walls"
+        ],
+        "spatialLayout": "A large, circular chamber with smoothly curving walls. A prominent ramp leads upwards to an arched opening in the background, serving as an entry point to further exploration. The central midground is a focal point with the holographic display.",
+        "primary_surfaces": "polished blue dome ceiling, matte white composite walls, textured dark gray floor",
+        "secondary_surfaces": "brushed aluminum wall accents, console station housing",
+        "accent_features": "glowing gold interface panels on console, intricate holographic star charts",
+        "dominant": "blue (ceiling)",
+        "secondary": "white (walls)",
+        "accent": "gold (console interfaces)",
+        "ambient": "cool",
+        "uniqueIdentifiers": [
+          "deep blue polished dome",
+          "blue holographic star charts",
+          "gold interface console"
+        ],
+        "searchDesc": "Observatory interior with blue dome, holographic display, and gold console. Scientific exploration space."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/JfMLTJn3oPcG0b1fPSxph.jpg",
+      "focus": {
+        "node_id": "niche-1763035536601-0doo11kp6",
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
@@ -1286,13 +1550,7 @@
             {
               "id": "10128f5a-3b1e-4a20-9649-5e303347ba7e",
               "type": "location",
-              "children": [
-                {
-                  "id": "niche-1763030137319-5t41wybid",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
+              "children": []
             }
           ]
         }
@@ -1334,7 +1592,7 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1762958913533-lm7pgdclo",
+                  "id": "niche-1763035353358-l060d7wx0",
                   "type": "niche",
                   "children": []
                 }
@@ -1452,10 +1710,55 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763034691958-077av8ibr",
+      "type": "host",
+      "children": [
+        {
+          "id": "fed871db-261b-40a5-b580-f8f81de5f6c7",
+          "type": "region",
+          "children": [
+            {
+              "id": "f67539b2-5424-4ed7-93af-8bd175d1e076",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763035099272-izqjxz6s0",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763035498009-1zhu334t9",
+      "type": "host",
+      "children": [
+        {
+          "id": "e7116011-4eb8-4db6-bef3-9d83d96bd081",
+          "type": "region",
+          "children": [
+            {
+              "id": "aaf96e86-5209-4ee6-909b-f552af94f6eb",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763035536601-0doo11kp6",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763027798536-8hd7xc26j",
-    "loc-1762957281060-fubzyjwnl"
+    "loc-1763035498009-1zhu334t9"
   ]
 }

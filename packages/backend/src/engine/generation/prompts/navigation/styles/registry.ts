@@ -5,6 +5,7 @@
 
 import type { NavigationIntent, IntentResult, NavigationContext, NavigationDecision } from '../../../../navigation/types';
 import { nicheImagePrompt } from '../nicheImagePrompt';
+import { interiorAdaptation } from './go-inside/interior';
 
 /**
  * Style prompt function signature
@@ -14,8 +15,7 @@ export type StylePromptFunction = (
   context: NavigationContext,
   intent: IntentResult,
   decision: NavigationDecision,
-  navigationFeatures?: string,
-  mode?: 'detailed' | 'condensed'
+  navigationFeatures?: string
 ) => string;
 
 /**
@@ -37,12 +37,13 @@ export interface StyleDefinition {
 export const STYLE_REGISTRY: Record<string, Record<string, StyleDefinition>> = {
   GO_INSIDE: {
     default: {
-      name: 'default',
-      description: 'Standard interior view',
-      prompt: nicheImagePrompt  // Current working prompt, unchanged
+      name: 'interior',
+      description: 'Enclosed interior spaces - DNA-driven style within structural interior rules',
+      prompt: interiorAdaptation  // Interior adaptation wraps foundation
     }
-    // Future: Add more styles here
-    // haunted: { name: 'haunted', description: '...', prompt: hauntedInteriorPrompt }
+    // Future adaptations and DNA-driven style variations:
+    // exterior: { description: 'Open-air outdoor niches', prompt: exteriorAdaptation }
+    // DNA-driven styles can layer on top of any adaptation
   }
   // Future intents can be added here
   // GO_OUTSIDE: { ... }
