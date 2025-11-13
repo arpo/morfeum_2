@@ -289,6 +289,825 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "loc-1762958771238-dqg7frtgm": {
+      "id": "loc-1762958771238-dqg7frtgm",
+      "type": "host",
+      "name": "The Verdant Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Verdant Expanse",
+        "description": "A world where nature's magic is ever-present.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic integration, living structures",
+          "cultural_tone": "A world deeply connected to nature's cycles, where inhabitants live in harmony with the environment and draw sustenance and magic from it.",
+          "materials_base": "Elements drawn directly from nature, emphasizing natural growth, living wood, stone, and earth. Structures appear to be grown rather than built.",
+          "mood_baseline": "enchanting, serene, harmonious",
+          "palette_bias": "Rich, earthy tones complemented by vibrant natural hues. Favors greens, browns, and the colors of seasonal changes, with an emphasis on natural light.",
+          "soundscape_base": "Gentle natural sounds dominate: rustling leaves, flowing water, birdsong, and the subtle hum of natural energies.",
+          "flora_base": "Abundant and varied plant life, often imbued with magical properties. Forests, meadows, and unique botanical wonders are commonplace.",
+          "fauna_base": "Diverse and often fantastical creatures that coexist with nature. Animals may possess unique abilities or be integral to the magical balance of the world."
+        },
+        "slug": "the-verdant-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "fc45f543-3d3b-4b5a-bae0-996fcc50fe4f": {
+      "id": "fc45f543-3d3b-4b5a-bae0-996fcc50fe4f",
+      "type": "region",
+      "name": "The Verdant Expanse",
+      "dna": {
+        "type": "region",
+        "name": "The Verdant Expanse",
+        "description": "",
+        "slug": "the-verdant-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "0ab69b7c-1743-4aab-8dda-b68287d1121d": {
+      "id": "0ab69b7c-1743-4aab-8dda-b68287d1121d",
+      "type": "location",
+      "name": "The Golden Canopy",
+      "dna": {
+        "type": "location",
+        "name": "The Golden Canopy",
+        "description": "A unique retreat integrated with an ancient, eternally golden-leaved tree.",
+        "looks": "A rustic, cabin-like structure is seamlessly integrated with the base of a colossal, ancient tree, its thick trunk forming a central architectural element. The building features a sloping, moss-covered roof and walls that appear to be constructed from living wood and woven branches, blending organically with the tree. Large, arched windows flank the central entrance, glowing with a warm, internal light. The surrounding area is covered in a thick carpet of golden leaves, with lush green foliage and several large stones dotting the landscape. The overall impression is one of natural harmony and enchantment.",
+        "atmosphere": "The air appears clear, with a visible haze in the background suggesting a serene, perhaps slightly humid environment. A gentle glow emanates from the scene, hinting at a peaceful and tranquil atmosphere.",
+        "mood": "Enchanting, tranquil, timeless",
+        "lighting": "Soft, warm light floods the scene, primarily originating from within the structure and filtering through the golden canopy overhead. This creates a gentle, diffused illumination with soft shadows, contributing to a cozy and inviting mood. The light interaction between the golden leaves and the structure enhances the ethereal quality of the location.",
+        "dominantElements": [
+          "Colossal ancient tree with golden foliage, center",
+          "Cabin-like structure integrated with tree trunk, center",
+          "Path paved with stone slabs covered in golden leaves, foreground",
+          "Lush green undergrowth and bushes, foreground and midground"
+        ],
+        "spatialLayout": "In the foreground, a winding path of stone slabs covered in golden leaves leads towards the structure. The midground is dominated by the organic integration of a cabin-like building with a massive tree trunk at its center. The tree's branches extend overhead, supporting a green, mossy roof that curves over the building's eaves. The background consists of dense foliage and a hazy, sunlit forest, creating depth.",
+        "uniqueIdentifiers": [
+          "Ancient tree with perpetually golden foliage",
+          "Structure organically grown into a tree trunk",
+          "Carpet of golden leaves year-round"
+        ],
+        "materials_primary": "Wood, Living tree bark, Foliage",
+        "materials_secondary": "Moss, Stone",
+        "materials_accents": "Golden leaves, Internal light glow",
+        "colors_dominant": "Golden-orange (leaves, light)",
+        "colors_secondary": "Deep brown (tree bark, wood structure), Green (foliage, mossy roof)",
+        "colors_accents": "Warm yellow (window light, lanterns)",
+        "colors_ambient": "Warm, golden hue",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Wooden door set into the natural curve of the tree trunk."
+          },
+          {
+            "type": "window",
+            "position": "left side, midground",
+            "description": "Arched window with glowing interior light."
+          },
+          {
+            "type": "window",
+            "position": "right side, midground",
+            "description": "Arched window with glowing interior light."
+          },
+          {
+            "type": "passage",
+            "position": "foreground",
+            "description": "Stone path winding through golden leaves towards the entrance."
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Rustic cabin built into a golden-leaved tree. Has: door (center, midground), window (left side, midground), window (right side, midground), passage (foreground)",
+        "slug": "the-golden-canopy"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/oH2ScFcqrFnekSuGjMM7J.jpg",
+      "focus": {
+        "node_id": "The Golden Canopy",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1762958802118-d13hpt0z4": {
+      "id": "loc-1762958802118-d13hpt0z4",
+      "type": "host",
+      "name": "World of Aethelgard",
+      "dna": {
+        "type": "host",
+        "name": "World of Aethelgard",
+        "description": "A realm where ancient magic infuses the very landscape.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "ancient, mystical ruins, overgrown",
+          "cultural_tone": "A world steeped in forgotten deities and powerful, nature-infused magic. Civilizations rise and fall, leaving behind echoes of their devotion in the land itself.",
+          "materials_base": "Primarily natural materials like stone, wood, and dense foliage, often weathered or imbued with subtle energies. Structures are typically monolithic and organically integrated with the environment.",
+          "mood_baseline": "awe-inspiring, mysterious, ancient, potent",
+          "palette_bias": "Rich, earthy tones are foundational, often contrasted with vibrant, unnatural luminescence. Expect deep greens, mossy browns, and stone grays, punctuated by magical hues like vibrant blues, radiant golds, and ethereal purples.",
+          "soundscape_base": "The ambient soundscape is dominated by the sounds of nature: rustling leaves, flowing water, distant animal calls. These are often layered with faint, melodic hums or whispers that suggest lingering magical presences.",
+          "flora_base": "Luxuriant and diverse plant life that thrives with magical vitality. Expect giant ferns, bioluminescent fungi, ancient trees with glowing sap, and vines that weave through ruins.",
+          "fauna_base": "Creatures that are often adapted to magical environments, ranging from elusive, spirit-like beings to beasts with enchanted qualities. Some may be benevolent guardians, while others are primal forces of nature."
+        },
+        "slug": "world-of-aethelgard"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "World of Aethelgard",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "9a4a8d92-cd45-4f5d-b4b2-c02845310a5e": {
+      "id": "9a4a8d92-cd45-4f5d-b4b2-c02845310a5e",
+      "type": "region",
+      "name": "The Emerald Expanse",
+      "dna": {
+        "type": "region",
+        "name": "The Emerald Expanse",
+        "description": "A dense and vibrant jungle teeming with hidden wonders and potent energies.",
+        "dna": {
+          "architectural_tone": "hidden, naturally integrated structures",
+          "cultural_tone": "This region is a vast, untamed jungle where ancient secrets and potent magical energies are carefully guarded by nature itself. Tribes or ancient orders may inhabit hidden enclaves.",
+          "materials_base": "Emphasis on moss-covered stone, dense, ancient wood, and living flora as integral building components. Materials are often weathered and appear as extensions of the jungle.",
+          "mood_baseline": "enigmatic, vibrant, primal",
+          "palette_bias": "Deep greens dominate, complemented by earthy browns and the vibrant, often unnatural, hues of magical flora and fauna. Accents of glowing mineral deposits or mystical energy are common.",
+          "soundscape_base": "A dense symphony of jungle sounds: cacophony of unseen creatures, dense rustling, constant dripping water, and the hum of latent magical energy.",
+          "flora_base": "Hyper-lush, dense jungle flora with an emphasis on large, ancient trees, thick undergrowth, and creeping vines. Luminescent mosses and glowing fungi are prevalent.",
+          "fauna_base": "Abundant and diverse wildlife, often adapted to the dense jungle. This includes large, potentially dangerous predators, as well as smaller, more elusive creatures that may possess magical traits."
+        },
+        "slug": "the-emerald-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Emerald Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "38288e7c-4594-4ec8-8e7e-332152e5a0de": {
+      "id": "38288e7c-4594-4ec8-8e7e-332152e5a0de",
+      "type": "location",
+      "name": "The Valley of Whispering Light",
+      "dna": {
+        "type": "location",
+        "name": "The Valley of Whispering Light",
+        "description": "A sacred valley where nature and divine art intertwine, illuminated by otherworldly pigments.",
+        "looks": "Sheer jungle cliffs covered in dense foliage enclose a valley floor with a rocky stream. A grand, ancient stone structure, possibly a shrine or temple, stands as the focal point in the midground. This structure features a large, arched entrance that glows intensely from within. Elaborate stonework adorns the structure, with pillars and decorative carvings visible. The surrounding jungle is lush and overgrown, with trees forming a canopy overhead, allowing dappled light to filter through.",
+        "atmosphere": "The air appears thick with mist or haze, suggesting high humidity and a sense of enclosure. Pockets of fog drift near the ground and around the stone structure, softening the edges of the environment.",
+        "mood": "Sacred, awe-inspiring",
+        "lighting": "The lighting is dim and atmospheric, dominated by the intense, golden-yellow glow emanating from the arched entrance of the structure. This internal light casts soft illumination on the immediate surroundings, while the rest of the scene is in deep shadow, creating a high contrast. The ambient light is cool and bluish-green, typical of a dense jungle environment.",
+        "dominantElements": [
+          "Stone structure with glowing archway (midground, center)",
+          "Dense jungle foliage (surrounding, background)",
+          "Rocky stream bed (foreground, center)"
+        ],
+        "spatialLayout": "The foreground is occupied by a rocky stream bed, wet and reflective, leading towards the midground. The midground is dominated by the ancient stone structure, positioned centrally, with a wide set of stairs leading up to its entrance. The background consists of sheer, vegetation-covered cliffs and dense jungle canopy.",
+        "uniqueIdentifiers": [
+          "Glowing archway within ancient stone structure",
+          "Lush jungle valley setting",
+          "Rocky stream with reflections"
+        ],
+        "materials_primary": "Stone (structure)",
+        "materials_secondary": "Rock (stream bed), foliage (cliffs and surroundings)",
+        "materials_accents": "Luminous pigment (within archway)",
+        "colors_dominant": "Green (foliage)",
+        "colors_secondary": "Grey/tan (stone structure), blue/teal (ambient light)",
+        "colors_accents": "Golden yellow (glowing archway)",
+        "colors_ambient": "Misty green-blue",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, midground",
+            "description": "Wide stone staircase leading up to the glowing archway"
+          },
+          {
+            "type": "archway",
+            "position": "center, midground",
+            "description": "Large, glowing archway with a silhouette figure within"
+          },
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "The illuminated interior visible through the archway"
+          }
+        ],
+        "searchDesc": "Jungle shrine with glowing archway. Has: stairs (center, midground), archway (center, midground), passage (center, midground)",
+        "dna": {
+          "architectural_tone": "monolithic, mural-adorned stone",
+          "cultural_tone": "A sacred and revered valley, serving as a nexus for forgotten divine worship. The very walls of the valley are canvases for ancient, luminous murals that tell tales of gods and cosmic events.",
+          "materials_base": "Ancient, weathered stone forms the core structures, intricately carved and often integrated with natural rock formations. The stone itself may react to or absorb the luminous pigments.",
+          "mood_baseline": "reverent, ancient, illuminating",
+          "palette_bias": "The base palette of jungle greens and stone grays is dramatically overlaid with the vibrant, self-illuminating pigments of the murals, creating striking contrasts of deep shadow and radiant light.",
+          "soundscape_base": "A hushed, echoing atmosphere with the constant sound of flowing water, punctuated by the subtle resonance of divine whispers or the gentle hum of the luminous murals.",
+          "flora_base": "Contained within the valley are pockets of unique flora, possibly influenced by the pigments and energies, alongside the surrounding dense jungle.",
+          "fauna_base": "Likely a more serene or spiritual presence, perhaps small, glowing insects or ethereal, almost spectral, remnants of ancient guardians."
+        },
+        "slug": "the-valley-of-whispering-light"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/fFpl6aDizba_sD0dxeP7x.jpg",
+      "focus": {
+        "node_id": "The Valley of Whispering Light",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1762958913533-lm7pgdclo": {
+      "id": "niche-1762958913533-lm7pgdclo",
+      "type": "niche",
+      "name": "Interior of The Valley of Whispering Light",
+      "dna": {
+        "looks": "A vast, ancient stone hall is entered, its interior carved from monolithic, weathered stone. Towering fluted columns punctuate the space, leading towards a grand mural adorning the far wall, illuminated by otherworldly pigments.",
+        "colorsAndLighting": "Luminous pigments cast vibrant blues, golds, and violets across the hall, mixed with dappled light filtering from above. A soft amber glow emanates from a corridor to the right, while a passage glows emerald to the left.",
+        "atmosphere": "The air is thick with a reverent, ancient atmosphere, contrasting with the outside jungle. A faint, ethereal mist hovers just above the smooth, worn stone floor, imbued with a forgotten divine energy.",
+        "architectural_tone": "ancient stone",
+        "cultural_tone": "A sacred nexus for forgotten divine worship, adorned with luminous murals depicting cosmic events.",
+        "materials": "Massive, irregularly fitted stone blocks form the floor, worn smooth by time. Dark, veined stone is used for the immense fluted columns. The walls are of the same monolithic, weathered stone as the exterior.",
+        "mood": "Vast and awe-inspiring, this sacred space evokes a sense of reverent antiquity and divine presence.",
+        "sounds": "echoing silence, faint hum, subtle stone grinding",
+        "dominantElementsDescriptors": [
+          "luminous mural",
+          "immense fluted columns",
+          "vaulted ceiling",
+          "stone floor"
+        ],
+        "spatialLayout": "The space is vast and awe-inspiring, entered from an unseen opening. A central focus is the far wall's mural, with a downward sloping passage to the left and an ascending staircase and corridor to the right.",
+        "primary_surfaces": "stone (walls, ceiling, floor)",
+        "secondary_surfaces": "carved stone (columns, mural)",
+        "accent_features": [
+          "otherworldly pigments",
+          "celestial event mural",
+          "emerald glowing passage",
+          "amber glowing corridor"
+        ],
+        "dominant": "stone (vast majority)",
+        "secondary": "glowing pigments (mural, accents)",
+        "accent": "emerald (passage), amber (corridor), blues, golds, violets (mural)",
+        "ambient": "neutral",
+        "uniqueIdentifiers": [
+          "Luminous celestial mural on far wall",
+          "Immense fluted columns",
+          "Ethereal mist on stone floor",
+          "Multi-colored glowing passages"
+        ],
+        "searchDesc": "Ancient stone hall interior with luminous murals, grand columns, and glowing passages."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/BFEeAKjM1bNSK8fATTkDr.jpg",
+      "focus": {
+        "node_id": "niche-1762958913533-lm7pgdclo",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1762959960966-pkg6dwk2e": {
+      "id": "loc-1762959960966-pkg6dwk2e",
+      "type": "host",
+      "name": "Arcadia",
+      "dna": {
+        "type": "host",
+        "name": "Arcadia",
+        "description": "A sprawling, futuristic metropolis experiencing a gradual ecological reclamation.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "neo-brutalist, utilitarian decay",
+          "cultural_tone": "A vast, highly organized metropolis that is slowly succumbing to entropy and natural encroachment.",
+          "materials_base": "Reinforced concrete, exposed metal alloys, composite polymers. Functional, robust materials showing signs of wear and neglect.",
+          "mood_baseline": "melancholy, resilient, overgrown",
+          "palette_bias": "Dominant industrial grays and muted earth tones, with occasional bursts of vibrant, unnatural light from still-functioning tech.",
+          "soundscape_base": "Distant, echoing city hums, the occasional mechanical groan, and the ever-present sounds of nature reclaiming urban spaces.",
+          "flora_base": "Aggressively growing, fast-spreading vines, mosses, and opportunistic, mutated flora adapted to urban conditions.",
+          "fauna_base": "Urban scavengers, genetically modified pests, and resilient wild animals that have adapted to the metropolitan environment."
+        },
+        "slug": "arcadia"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Arcadia",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "0c103240-4774-4818-9def-56df89c65976": {
+      "id": "0c103240-4774-4818-9def-56df89c65976",
+      "type": "region",
+      "name": "Arcadia",
+      "dna": {
+        "type": "region",
+        "name": "Arcadia",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "Dense, pervasive vegetation actively consuming structures.",
+          "fauna_base": null
+        },
+        "slug": "arcadia"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Arcadia",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "76ab91b4-4239-4417-9722-3ae309738e9b": {
+      "id": "76ab91b4-4239-4417-9722-3ae309738e9b",
+      "type": "location",
+      "name": "The Verdant Terminus",
+      "dna": {
+        "type": "location",
+        "name": "The Verdant Terminus",
+        "description": "An overgrown monorail terminal, a relic of past transit systems now claimed by nature.",
+        "looks": "The scene depicts an abandoned monorail terminal partially consumed by overgrown vegetation. Thick vines drape over concrete structures, obscuring parts of the architecture. A prominent sign above an entrance reads 'TCHEGIHT STBHEAW', illuminated by a soft, warm light from within. Windows on either side of the entrance reveal dimly lit interiors with indistinct figures. The ground is a wet, gravelly path reflecting the ambient light.",
+        "atmosphere": "A dense, humid atmosphere is suggested by the lush foliage and the wet ground, creating a sense of dampness and natural decay. The air appears still, with the overwhelming presence of plant life muffling any distant sounds.",
+        "mood": "Nostalgic, reclaimed",
+        "lighting": "Soft, warm light emanates from the interior of the terminal, casting a golden hue on the wet ground and nearby structures. The exterior is cast in cooler, diffused light, creating a gentle contrast between the interior and exterior spaces. Shadows are present but soft, indicating an overcast or deeply shaded environment.",
+        "dominantElements": [
+          "Overgrown concrete structure with hanging vines",
+          "Central building entrance with illuminated sign",
+          "Wet, reflective pathway"
+        ],
+        "spatialLayout": "The foreground consists of a wet, gravelly path leading towards a central building structure. The midground is dominated by the terminal building, with its entrance and flanking windows. The background reveals dense green foliage and trees, suggesting a thick forest surrounding the structure.",
+        "uniqueIdentifiers": [
+          "Overgrown monorail terminal architecture",
+          "Illuminated sign with unreadable text",
+          "Juxtaposition of urban decay and rampant nature"
+        ],
+        "materials_primary": "Concrete",
+        "materials_secondary": "Gravel, foliage, wood",
+        "materials_accents": "Illuminated sign",
+        "colors_dominant": "Green (foliage)",
+        "colors_secondary": "Gray (concrete), brown (wood)",
+        "colors_accents": "Golden yellow (interior light)",
+        "colors_ambient": "Muted green and gray",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Open entrance passage leading into the terminal building"
+          },
+          {
+            "type": "window",
+            "position": "left, midground",
+            "description": "Window offering a view into a dimly lit interior space"
+          },
+          {
+            "type": "window",
+            "position": "right, midground",
+            "description": "Window offering a view into a dimly lit interior space"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Overgrown monorail terminal with vines. Has: passage (center, midground), window (left, midground)",
+        "dna": {
+          "architectural_tone": "weathered concrete, remnants of signage",
+          "cultural_tone": "A forgotten nexus of past transit, now surrendered to the elements and plant life.",
+          "materials_base": "Chipped concrete, rusted metal fixtures, gravel paths, decaying ticket machines.",
+          "mood_baseline": "nostalgic, damp, quietly decaying",
+          "palette_bias": "Muted greens and grays are dominant, with warm, inviting light bleeding from within.",
+          "soundscape_base": "The soft rustle of leaves, dripping water, and faint echoes of distant machinery.",
+          "flora_base": "Thick, climbing vines, dense foliage, nesting birds.",
+          "fauna_base": "Pigeons, small urban rodents."
+        },
+        "slug": "the-verdant-terminus"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/tX6NZ6GFmrc02t5OukIoK.jpg",
+      "focus": {
+        "node_id": "The Verdant Terminus",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1762959992052-vuouskdu1": {
+      "id": "niche-1762959992052-vuouskdu1",
+      "type": "niche",
+      "name": "Interior of The Verdant Terminus",
+      "dna": {
+        "looks": "A vast, dimly lit, rectangular passage within a monorail terminal. Weathered concrete walls and a high, flat ceiling define the expansive interior, marked by decay and creeping vines. Rusted fixtures and chipped surfaces reveal past use and present neglect.",
+        "colorsAndLighting": "The dominant palette is muted greens and grays from concrete and foliage, subtly warmed by pooling, ambient light. Light emanates softly from unseen sources ahead, creating pools and deepening shadows.",
+        "atmosphere": "The air is heavy with dampness and a profound sense of quiet decay, echoing with a nostalgic stillness. A subtle scent of wet concrete and organic growth pervades the space, evoking a forgotten era.",
+        "architectural_tone": "weathered concrete",
+        "cultural_tone": "A forgotten nexus of past transit, now surrendered to the elements and plant life.",
+        "materials": "The primary material is weathered, damp concrete, showing cracks and water stains. Rusted metal fixtures and partially collapsed shelving add textural contrast, alongside the soft, trailing forms of pale vines.",
+        "mood": "Nostalgic and quietly decaying, with a sense of vastness and forgotten purpose.",
+        "sounds": "damp drips, distant echoes, rustling vines, settling concrete",
+        "dominantElementsDescriptors": [
+          "weathered concrete passage",
+          "creeping vines",
+          "rusted metal fixtures",
+          "flat concrete ceiling"
+        ],
+        "spatialLayout": "A large, enclosed, rectangular passage extending forward, with solid walls and a high, flat ceiling. Openings to a narrow corridor on the left and an alcove on the right punctuate the midground, with the passage fading into shadow in the background.",
+        "primary_surfaces": "concrete (walls, floor, ceiling)",
+        "secondary_surfaces": "rusted metal (shelving, fixtures)",
+        "accent_features": "pale, creeping vines, low arched alcove, maintenance hatch",
+        "dominant": "gray (concrete, walls, floor, ceiling)",
+        "secondary": "green (vines, moss)",
+        "accent": "warm light (pooling ahead)",
+        "ambient": "warm",
+        "uniqueIdentifiers": [
+          "abandoned monorail passage",
+          "damp concrete and vines",
+          "nostalgic decaying atmosphere"
+        ],
+        "searchDesc": "Interior of an abandoned monorail passage, weathered concrete and vines, damp and nostalgic."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/gBnQ1UNL0d-upB-gt8nS5.jpg",
+      "focus": {
+        "node_id": "niche-1762959992052-vuouskdu1",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1762979506045-fna6fs9m0": {
+      "id": "loc-1762979506045-fna6fs9m0",
+      "type": "host",
+      "name": "Geode World",
+      "dna": {
+        "type": "host",
+        "name": "Geode World",
+        "description": "A realm where geological formations possess unique luminescence and resonant properties.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "geological formations, natural growth",
+          "cultural_tone": "A realm where natural geological phenomena are revered and integrated into society, emphasizing resonance and light manipulation.",
+          "materials_base": "Crystalline structures, petrified minerals, resonating stones, organic geological formations.",
+          "mood_baseline": "mystical, awe-inspiring, resonant",
+          "palette_bias": "Dominated by cool, ethereal tones; luminescent blues, deep purples, and soft, glowing whites. Accents of mineral-rich earth tones.",
+          "soundscape_base": "Subtle hums, deep resonant echoes, crystalline chimes, and the ambient resonance of geological activity.",
+          "flora_base": "Bioluminescent mosses, crystalline growths that mimic plant life, rare mineral-infused fungi.",
+          "fauna_base": "Creatures adapted to mineral-rich environments, possibly crystalline or energy-based life forms, subterranean dwellers."
+        },
+        "slug": "geode-world"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Geode World",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "c2ad441d-ca71-45e6-a81c-c9d26065bd30": {
+      "id": "c2ad441d-ca71-45e6-a81c-c9d26065bd30",
+      "type": "region",
+      "name": "The Resonant Canyons",
+      "dna": {
+        "type": "region",
+        "name": "The Resonant Canyons",
+        "description": "Vast canyons carved into the earth, filled with mineral deposits that react to sound and light.",
+        "dna": {
+          "architectural_tone": "eroded canyons, sculpted by sonic forces",
+          "cultural_tone": "Nomadic or settled communities that harness the natural resonance of the canyons for communication, energy, and defense.",
+          "materials_base": "Carved rock, mineral veins, naturally resonant stone formations, weathered geological strata.",
+          "mood_baseline": "vast, echoing, powerful",
+          "palette_bias": "Deep earth tones contrasted with vibrant mineral hues, reflecting the geological strata and luminescent veins.",
+          "soundscape_base": "Amplified echoes, wind whistling through canyons, the deep thrum of geological resonance, occasional sonic bursts.",
+          "flora_base": "Sparse, hardy desert flora, mosses clinging to rock faces, plants that absorb ambient sonic energy.",
+          "fauna_base": "Creatures adapted to canyon environments, agile climbers, sound-sensitive predators."
+        },
+        "slug": "the-resonant-canyons"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Resonant Canyons",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "04aed7ab-2c99-49bf-ba32-e43da9fcb4e5": {
+      "id": "04aed7ab-2c99-49bf-ba32-e43da9fcb4e5",
+      "type": "location",
+      "name": "The Crystalline Mine",
+      "dna": {
+        "type": "location",
+        "name": "The Crystalline Mine",
+        "description": "An excavated facility within a canyon, notable for its glowing mineral veins.",
+        "looks": "The scene depicts the interior of a rough-hewn canyon tunnel opening into a larger cavern. The walls are uneven and textured, with visible rock formations and scattered debris. A paved pathway leads into the midground, illuminated by a powerful light source ahead. The scale suggests a naturally formed or heavily excavated space, open and cavernous at the far end.",
+        "atmosphere": "A light haze or mist is visible, particularly around the glowing portal, suggesting a cool, possibly damp environment. The air appears thick with fine particles, consistent with a cavern or mine.",
+        "mood": "Prismatic, resonant",
+        "lighting": "The primary light source is a brilliant, cool blue glow emanating from a rectangular portal in the background. This light casts strong, sharp shadows and creates a high contrast between the illuminated portal and the darker tunnel walls. The overall lighting is cool and prismatic.",
+        "dominantElements": [
+          "Rough-hewn canyon walls (sides, background)",
+          "Paved pathway (foreground, midground)",
+          "Rectangular glowing portal (center, background)"
+        ],
+        "spatialLayout": "The foreground features a paved pathway leading into the scene. The midground is dominated by the tunnel walls narrowing slightly before opening into a wider cavern space. The background is marked by a large, luminous rectangular portal and the opening of the cavern.",
+        "uniqueIdentifiers": [
+          "Glowing blue rectangular portal",
+          "Rough-hewn canyon tunnel interior",
+          "Paved pathway leading to light"
+        ],
+        "materials_primary": "Rock, Stone",
+        "materials_secondary": "Gravel, Dust",
+        "materials_accents": "Luminous crystalline mineral within the portal",
+        "colors_dominant": "Deep blue (tunnel walls, portal light)",
+        "colors_secondary": "Grey (pathway, rock debris)",
+        "colors_accents": "Bright, electric blue (portal glow)",
+        "colors_ambient": "Cool blue",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Tunnel passage leading towards a glowing portal and open cavern"
+          },
+          {
+            "type": "portal",
+            "position": "center, background",
+            "description": "Large, brightly glowing blue portal emanating light and energy"
+          }
+        ],
+        "searchDesc": "Canyon tunnel interior. Has: passage (center, midground), glowing portal (center, background)",
+        "dna": {
+          "architectural_tone": "excavated tunnels, natural cavern expansion",
+          "cultural_tone": "A functional site for extracting luminescent minerals, with a focus on safe excavation and the study of their properties.",
+          "materials_base": "Rough-hewn stone, exposed crystalline veins, compacted earth, processed mineral fragments.",
+          "mood_baseline": "industrial, mysterious, humming",
+          "palette_bias": "Deep blues and greys from the rock, punctuated by the internal glow of blue and white crystalline veins.",
+          "soundscape_base": "Dripping water, crunching gravel, the faint hum of resonating minerals, echoing footsteps.",
+          "flora_base": "Minimal, primarily subterranean fungi or moisture-dependent growths in less disturbed areas.",
+          "fauna_base": "Small cave-dwelling insects, perhaps rodents adapted to mining environments, or creatures attracted to the mineral luminescence."
+        },
+        "slug": "the-crystalline-mine"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/7p_PFkUJku-GPktalDAMu.jpg",
+      "focus": {
+        "node_id": "The Crystalline Mine",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763018143696-2wsvf0fs1": {
+      "id": "niche-1763018143696-2wsvf0fs1",
+      "type": "niche",
+      "name": "Interior of The Crystalline Mine",
+      "dna": {
+        "looks": "A rough-hewn canyon tunnel interior with jagged rock surfaces mirroring natural cavern expansion. Crystalline veins pulse with internal light, contrasting the deep blues and greys of the stone. The space is enclosed with a substantial yet intimate scale.",
+        "colorsAndLighting": "Dominant deep blues and greys of the rock are dramatically punctuated by the internal glow of blue and white crystalline veins. The distant glowing blue portal casts long, dramatic shadows.",
+        "atmosphere": "The air is filled with a mysterious, humming atmosphere, suggesting a functional site for mineral extraction. A sense of subterranean enclosure pervades, with a subtle chill from the stone and faint mineral dust.",
+        "architectural_tone": "excavated tunnels",
+        "cultural_tone": "Functional site for extracting luminescent minerals.",
+        "materials": "Rough-hewn rock surfaces dominate, textured with striations and crystalline outcrops. The floor is compacted earth and gravel. Veins of glowing minerals are embedded within the rock and ceiling.",
+        "mood": "Industrial and mysterious, evoking a sense of hidden depths and subtle power.",
+        "sounds": "Humming atmosphere, faint mineral dust settling.",
+        "dominantElementsDescriptors": [
+          "Jagged rock walls",
+          "Glowing crystalline veins",
+          "Compacted earth floor",
+          "Glowing blue portal"
+        ],
+        "spatialLayout": "An enclosed, rough-hewn tunnel opening into a wider cavern. It features a solid ceiling about 8 meters high and is navigable via a ventral passage and right-wall stairs.",
+        "primary_surfaces": "Rough-hewn rock, compacted earth, gravel, crystalline veins",
+        "secondary_surfaces": "Phosphorescent fungi, mineral dust",
+        "accent_features": "Phosphorescent fungi emitting green light, unpolished blue crystals inlaid in floor, narrow unlit passage.",
+        "dominant": "Deep blue (tunnel walls, portal light)",
+        "secondary": "Grey (stone)",
+        "accent": "White (crystalline veins), Green (fungi)",
+        "ambient": "Cool",
+        "uniqueIdentifiers": [
+          "Internal glow of blue and white crystalline veins",
+          "Rough-hewn canyon tunnel architecture",
+          "Distant glowing blue portal",
+          "Phosphorescent fungi accents"
+        ],
+        "searchDesc": "Crystalline mine interior with rough rock walls, glowing veins, and a blue portal. Humming, industrial mood."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/D51Vta8pqZiaejFPwhtX1.jpg",
+      "focus": {
+        "node_id": "niche-1763018143696-2wsvf0fs1",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763021396915-35gpqjscp": {
+      "id": "loc-1763021396915-35gpqjscp",
+      "type": "host",
+      "name": "The Gloaming Sea",
+      "dna": {
+        "type": "host",
+        "name": "The Gloaming Sea",
+        "description": "A realm shrouded in perpetual twilight and strange oceanic phenomena.",
+        "dna": {
+          "genre": "post-apocalyptic|fantasy|sci-fi",
+          "architectural_tone": "decaying monolithic structures, functional remnants",
+          "cultural_tone": "A society clinging to survival in a world reshaped by environmental collapse or a forgotten catastrophe. Resources are scarce, and remnants of past civilizations serve as essential but often hazardous habitats.",
+          "materials_base": "Heavy, weathered concrete and rusted industrial metals dominate the landscape, often juxtaposed with salvaged organic elements or resilient, mutated flora. Signs of past functionality are present but heavily degraded.",
+          "mood_baseline": "melancholy, resilient, haunting",
+          "palette_bias": "Dominated by cool, muted tones with occasional vibrant, phosphorescent accents. Think deep teals, bruised purples, and spectral blues, punctuated by bioluminescent glows or the dull gleam of tarnished metals.",
+          "soundscape_base": "A perpetual low hum of residual machinery, the distant mournful cry of wind through broken structures, and the ever-present lapping of dark, unknown waters. Occasional metallic groans and the echoing drip of water.",
+          "flora_base": "Resilient, mutated, or deep-sea adapted plant life that thrives in low-light, humid, or saline conditions. Often phosphorescent or exhibiting unusual growth patterns due to environmental stressors.",
+          "fauna_base": "Creatures adapted to low-light, damp environments, possibly mutated or possessing bioluminescent qualities. Aquatic or amphibious life is common, alongside scavengers and adapted marine life."
+        },
+        "slug": "the-gloaming-sea"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Gloaming Sea",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "b2aeb1e2-c686-45a0-a2fc-2520e41af254": {
+      "id": "b2aeb1e2-c686-45a0-a2fc-2520e41af254",
+      "type": "region",
+      "name": "The Gloaming Sea",
+      "dna": {
+        "type": "region",
+        "name": "The Gloaming Sea",
+        "description": "",
+        "dna": {
+          "architectural_tone": "submerged ruins and skeletal maritime infrastructure",
+          "cultural_tone": "Communities that have adapted to life on and within the skeletal remains of pre-disaster maritime infrastructure, relying on salvaged technology and an understanding of the treacherous, twilight-shrouded waters.",
+          "materials_base": "Heavily water-damaged concrete, barnacle-encrusted metal, and rotting wooden structures. Materials are frequently slick with brine and algae.",
+          "mood_baseline": "isolated, submerged, ethereal",
+          "palette_bias": "Subtle shifts towards deeper, more saturated aquatic blues and greens, with the dominant cool tones of the host amplified by the pervasive, luminous fog.",
+          "soundscape_base": "The omnipresent sound of water: gentle lapping, occasional distant echoes of ship horns or creaking metal, and the soft hiss of phosphorescent mist.",
+          "flora_base": "Minimal terrestrial flora, replaced by persistent algae, bioluminescent sea mosses, and perhaps hardy, salt-tolerant coastal scrub clinging to higher structures.",
+          "fauna_base": "Amphibious creatures and hardy sea life adapted to the murky, low-light conditions. May include bioluminescent plankton blooms and scavenging marine birds."
+        },
+        "slug": "the-gloaming-sea"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Gloaming Sea",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "e4de28b4-1622-4f75-b422-334bc319dd64": {
+      "id": "e4de28b4-1622-4f75-b422-334bc319dd64",
+      "type": "location",
+      "name": "The Skeletal Marina",
+      "dna": {
+        "type": "location",
+        "name": "The Skeletal Marina",
+        "description": "A desolate marina, appearing as a collection of ancient, half-submerged structures and decaying docks.",
+        "looks": "Dilapidated wooden piers, skeletal remains of vessels, constant swaying of decrepit boats, thick phosphorescent fog obscuring vision.",
+        "atmosphere": "Chilly, damp air, the scent of salt and decay, the faint creak of old wood, the eerie glow from the fog.",
+        "mood": "Melancholy, abandoned, spectral",
+        "dna": {
+          "architectural_tone": "ruined docks and waterlogged industrial hulks",
+          "cultural_tone": "A collection of abandoned or barely functioning maritime structures, where the line between the sea and the land has blurred. Survival here is about navigating treacherous walkways and utilizing the few remaining operational systems.",
+          "materials_base": "Exposed, rebar-laden concrete, heavily rusted metal gantries, and waterlogged, splintered wood pilings. Surfaces are often slick with a constant dampness.",
+          "mood_baseline": "desolate, precarious, forgotten",
+          "palette_bias": "Leans into the dark grey and brown tones of decaying concrete and wood, with the teal glow of the fog acting as the primary ambient color.",
+          "soundscape_base": "The gentle slosh of water against decaying structures, the creak and groan of metal under strain, and the occasional metallic clang as debris shifts.",
+          "flora_base": "None",
+          "fauna_base": "Scavenging aquatic birds, perhaps small, resilient crabs or barnacle life clinging to submerged structures."
+        },
+        "slug": "the-skeletal-marina"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Skeletal Marina",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "53be13cc-59bd-4f8f-807e-fee5cb215e7b": {
+      "id": "53be13cc-59bd-4f8f-807e-fee5cb215e7b",
+      "type": "niche",
+      "name": "The Flickering Terminal",
+      "dna": {
+        "type": "niche",
+        "name": "The Flickering Terminal",
+        "description": "The last functional part of the marina, a hub of residual activity amidst the decay.",
+        "looks": "The scene depicts a decaying marina with water reflecting the teal fog. Massive, weathered concrete structures with visible support columns rise from the murky water.  Dilapidated docks and walkways are interspersed with industrial elements like smokestacks and pipes, shrouded in a thick, luminous fog.  A singular terminal building is partially visible on the right, marked by a warm, flickering light.  The overall impression is one of abandonment and a lingering, faint presence of activity.",
+        "atmosphere": "A dense, luminous teal fog permeates the entire scene, obscuring distant details and creating an ethereal, underwater-like quality. The air appears heavy and humid, dampening sounds and creating a sense of isolation.",
+        "mood": "Lingering hope, residual function",
+        "lighting": "The primary light source is an eerie, cool teal glow emanating from the fog itself and a few distant industrial lights. This is contrasted by warm, yellow, flickering lights from the terminal building, casting a localized, inviting glow. The overall lighting is low-contrast and diffused.",
+        "dominantElements": [
+          "Murky water filling the canal",
+          "Massive, decaying concrete dock structures",
+          "Luminous teal fog",
+          "Distant industrial smokestacks and pipes",
+          "Flickering terminal building"
+        ],
+        "spatialLayout": "Foreground: The water of the canal takes up the lower portion, with the left bank and its support columns visible. Midground: The main dock structures and walkways extend along both sides of the canal, leading towards more distant industrial elements and the terminal building. Background: Industrial towers and the terminal building recede into the dense fog.",
+        "uniqueIdentifiers": [
+          "Skeletal marina structures",
+          "Phosphorescent fog",
+          "Flickering terminal light"
+        ],
+        "materials_primary": "Concrete, Water",
+        "materials_secondary": "Metal (pipes, railings), Stone (docks)",
+        "materials_accents": "Flickering warm light, Luminous fog glow",
+        "colors_dominant": "Teal (fog, water, ambient light)",
+        "colors_secondary": "Dark grey (structures), Brown (wood accents)",
+        "colors_accents": "Yellow (terminal lights)",
+        "colors_ambient": "Teal",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "right wall, midground",
+            "description": "A paved walkway leading towards the terminal building"
+          },
+          {
+            "type": "door",
+            "position": "right wall, midground",
+            "description": "A weathered wooden door with a glowing light above it"
+          },
+          {
+            "type": "passage",
+            "position": "left wall, midground",
+            "description": "Darkened passage beneath the elevated walkway"
+          },
+          {
+            "type": "window",
+            "position": "right wall, midground",
+            "description": "Small, grimy window on the terminal building"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Skeletal marina in fog. Has: walkway (right), weathered door (right), passage (left), window (right)",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": "The last vestige of active operation within the marina, a place of temporary refuge and residual purpose. It represents a small pocket of controlled energy and light against the pervasive decay.",
+          "materials_base": null,
+          "mood_baseline": "faint hope, residual warmth, isolated activity",
+          "soundscape_base": "The persistent hum of aging electronics, the crackle of faulty wiring, and the muffled sounds of movement within the structure, contrasting with the external silence.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-flickering-terminal"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/u3wq1GXMPDY7Z0yXiaoix.jpg",
+      "focus": {
+        "node_id": "The Flickering Terminal",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763021449294-103m1tuz8": {
+      "id": "niche-1763021449294-103m1tuz8",
+      "type": "niche",
+      "name": "Interior of The Flickering Terminal",
+      "dna": {
+        "looks": "A vast, enclosed concrete industrial terminal interior with immense walls, colossal support pillars, and a towering ceiling. The space is characterized by its raw, brutalist architecture and a palpable sense of decay. Visible structural elements like pipes and rebar are prominent.",
+        "colorsAndLighting": "The dominant colors are muted grays and dark browns of aged concrete, accented by the warm, flickering glow of incandescent bulbs. Patches of luminous teal fog provide an ethereal ambient glow.",
+        "atmosphere": "The air is heavy, damp, and carries a faint metallic tang, evoking a sense of profound desolation and forgotten function. Long, wavering shadows are cast by the intermittent light, creating a dynamic and slightly unsettling environment.",
+        "architectural_tone": "Brutalist Industrial",
+        "cultural_tone": "A forgotten industrial behemoth, hinting at past maritime operations and enduring decay.",
+        "materials": "The primary materials are rough, weathered concrete showing aggregate and rebar. The floor is a dark, uneven slab with puddles, and splintered wood debris is present in the foreground. Metal gantry walkways and thick conduit pipes are also visible.",
+        "mood": "Melancholy and imposing, a monument to a bygone era of industrial might now succumbing to time and neglect.",
+        "sounds": "Dripping water, distant echoes, low hum, creaking metal, faint wind.",
+        "dominantElementsDescriptors": [
+          "Colossal concrete support pillars",
+          "Flickering incandescent bulbs",
+          "Network of exposed conduit pipes",
+          "Puddles of stagnant water"
+        ],
+        "spatialLayout": "A colossal, rectangular enclosed space with immense width and height, featuring a flat ceiling and walls punctuated by regular support pillars. Navigable pathways include a gantry walkway, a dark passage, and a cavernous opening.",
+        "primary_surfaces": "Concrete walls, concrete floor, concrete ceiling.",
+        "secondary_surfaces": "Exposed rebar, conduit pipes, waterlogged wood debris, metal gantry.",
+        "accent_features": "Luminous teal fog seeping in from gaps, wavering shadows, flickering light.",
+        "dominant": "Gray (concrete walls, ceiling, floor)",
+        "secondary": "Dark Brown (concrete texture, water)",
+        "accent": "Warm Yellow/Orange (light), Teal (fog)",
+        "ambient": "Warm",
+        "uniqueIdentifiers": [
+          "Massive concrete structure with colossal pillars",
+          "Warm, flickering incandescent lighting",
+          "Teal fog seeping into the damp interior",
+          "Brutalist utilitarian architecture"
+        ],
+        "searchDesc": "Decaying concrete industrial terminal interior with colossal pillars, flickering lights, and teal fog."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/wKHGffcEf38_BzHVR4XB3.jpg",
+      "focus": {
+        "node_id": "niche-1763021449294-103m1tuz8",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -332,9 +1151,124 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1762958771238-dqg7frtgm",
+      "type": "host",
+      "children": [
+        {
+          "id": "fc45f543-3d3b-4b5a-bae0-996fcc50fe4f",
+          "type": "region",
+          "children": [
+            {
+              "id": "0ab69b7c-1743-4aab-8dda-b68287d1121d",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762958802118-d13hpt0z4",
+      "type": "host",
+      "children": [
+        {
+          "id": "9a4a8d92-cd45-4f5d-b4b2-c02845310a5e",
+          "type": "region",
+          "children": [
+            {
+              "id": "38288e7c-4594-4ec8-8e7e-332152e5a0de",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1762958913533-lm7pgdclo",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762959960966-pkg6dwk2e",
+      "type": "host",
+      "children": [
+        {
+          "id": "0c103240-4774-4818-9def-56df89c65976",
+          "type": "region",
+          "children": [
+            {
+              "id": "76ab91b4-4239-4417-9722-3ae309738e9b",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1762959992052-vuouskdu1",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1762979506045-fna6fs9m0",
+      "type": "host",
+      "children": [
+        {
+          "id": "c2ad441d-ca71-45e6-a81c-c9d26065bd30",
+          "type": "region",
+          "children": [
+            {
+              "id": "04aed7ab-2c99-49bf-ba32-e43da9fcb4e5",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763018143696-2wsvf0fs1",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763021396915-35gpqjscp",
+      "type": "host",
+      "children": [
+        {
+          "id": "b2aeb1e2-c686-45a0-a2fc-2520e41af254",
+          "type": "region",
+          "children": [
+            {
+              "id": "e4de28b4-1622-4f75-b422-334bc319dd64",
+              "type": "location",
+              "children": [
+                {
+                  "id": "53be13cc-59bd-4f8f-807e-fee5cb215e7b",
+                  "type": "niche",
+                  "children": [
+                    {
+                      "id": "niche-1763021449294-103m1tuz8",
+                      "type": "niche",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1762957281060-fubzyjwnl"
+    "loc-1763021396915-35gpqjscp"
   ]
 }
