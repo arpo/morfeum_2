@@ -67,6 +67,9 @@ export function locationImageGeneration(
   // Use appropriate shot instructions based on target node type
   const shotInstructions = getLocationShotInstructions(targetNode.type);
   
+  // Infer space type from node type
+  const spaceType = targetNode.type === 'niche' ? 'interior' : 'exterior';
+  
 const prompt = `Original user description: "${originalPrompt}"
 
 ${targetNode.name}, ${shotInstructions.shot}.
@@ -77,7 +80,7 @@ ${targetNode.name}, ${shotInstructions.shot}.
 [SCENE:]
 ${contextText}${sceneDescription}`;
 
-const rv = generalPromptFix(prompt)
+const rv = generalPromptFix(prompt, spaceType)
 // console.log(rv);
   return rv;
 }

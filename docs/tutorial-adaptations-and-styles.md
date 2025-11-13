@@ -40,11 +40,16 @@ Create: `packages/backend/src/engine/generation/prompts/navigation/styles/go-ins
 
 import type { IntentResult, NavigationContext, NavigationDecision } from '../../../../../navigation/types';
 import { nicheImagePrompt } from '../../nicheImagePrompt';
-import { extractEntranceElement } from '../../../shared/promptSections';
+import {
+  extractEntranceElement,
+  buildParentStructureAnalysisExterior,
+  buildTransformationRulesCondensedExterior,
+  buildCompositionLayeringCondensedExterior
+} from '../../../shared/promptSections';
 
 /**
  * Exterior adaptation - adds structural rules for open-air spaces
- * Wraps the generic foundation
+ * Uses exterior-specific prompt sections from promptSections.ts
  */
 export function exteriorAdaptation(
   context: NavigationContext,
@@ -52,7 +57,7 @@ export function exteriorAdaptation(
   decision: NavigationDecision,
   navigationFeatures?: string
 ): string {
-  // Extract entrance element for exterior-specific sections
+  // Extract entrance element from decision reasoning
   const entranceElement = extractEntranceElement(decision.reasoning);
   
   // Build exterior-specific structural sections
@@ -60,9 +65,12 @@ export function exteriorAdaptation(
 🎯 OPEN AIR SPACE: ${entranceElement}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
   
-  const exteriorRules = `EXTERIOR SPACE: Open-air niche within parent location. Sky visible above. Natural/ambient lighting. No ceiling overhead. Match scale and form of "${entranceElement}"`;
+  // Use exterior-specific prompt sections (open-air, sky visible, natural lighting)
+  const parentAnalysis = buildParentStructureAnalysisExterior(context, entranceElement);
+  const transformRules = buildTransformationRulesCondensedExterior();
+  const compositionRules = buildCompositionLayeringCondensedExterior();
   
-  // Call generic foundation (DNA-driven)
+  // Call generic foundation (DNA-driven, space-type neutral)
   const foundation = nicheImagePrompt(context, intent, decision, navigationFeatures);
   
   // Combine: Exterior structure + foundation
@@ -72,7 +80,11 @@ ${decision.reasoning ? `CONTEXT: ${decision.reasoning}` : ''}
 
 ${header}
 
-${exteriorRules}
+${parentAnalysis}
+
+${transformRules}
+
+${compositionRules}
 
 ${foundation}`;
 }

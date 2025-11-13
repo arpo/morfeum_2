@@ -1,6 +1,14 @@
 import { fluxRoofFix, generalRules, morfeumVibes, qualityPrompt } from "./constants";
 
-export function generalPromptFix(prompt: string): string {
+/**
+ * Apply general prompt fixes and rules
+ * @param prompt - The base prompt to enhance
+ * @param spaceType - Type of space ('interior' or 'exterior'), determines if ceiling rule applies
+ */
+export function generalPromptFix(prompt: string, spaceType: 'interior' | 'exterior' | 'unknown' = 'unknown'): string {
+    // Only apply ceiling rule for interior spaces
+    const roofRule = spaceType === 'interior' ? fluxRoofFix : '';
+    
     const fix = `
     ${morfeumVibes}
 
@@ -10,8 +18,8 @@ export function generalPromptFix(prompt: string): string {
     
     ${qualityPrompt}
 
-    ${fluxRoofFix}
+    ${roofRule}
 
     `;
-    return fix
+    return fix;
 }

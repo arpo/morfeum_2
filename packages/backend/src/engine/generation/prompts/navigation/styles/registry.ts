@@ -6,6 +6,7 @@
 import type { NavigationIntent, IntentResult, NavigationContext, NavigationDecision } from '../../../../navigation/types';
 import { nicheImagePrompt } from '../nicheImagePrompt';
 import { interiorAdaptation } from './go-inside/interior';
+import { exteriorAdaptation } from './go-inside/exterior';
 
 /**
  * Style prompt function signature
@@ -40,10 +41,13 @@ export const STYLE_REGISTRY: Record<string, Record<string, StyleDefinition>> = {
       name: 'interior',
       description: 'Enclosed interior spaces - DNA-driven style within structural interior rules',
       prompt: interiorAdaptation  // Interior adaptation wraps foundation
+    },
+    exterior: {
+      name: 'exterior',
+      description: 'Open-air outdoor niches within location - sky visible above, natural lighting, no enclosed ceiling',
+      prompt: exteriorAdaptation  // Exterior adaptation wraps foundation
     }
-    // Future adaptations and DNA-driven style variations:
-    // exterior: { description: 'Open-air outdoor niches', prompt: exteriorAdaptation }
-    // DNA-driven styles can layer on top of any adaptation
+    // Future DNA-driven style variations can layer on top of any adaptation
   }
   // Future intents can be added here
   // GO_OUTSIDE: { ... }

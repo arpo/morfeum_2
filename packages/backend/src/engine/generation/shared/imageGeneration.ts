@@ -10,6 +10,7 @@ export interface ImageGenerationOptions {
   aspectRatio?: string;
   numImages?: number;
   safetyFilter?: string;
+  spaceType?: 'interior' | 'exterior' | 'unknown';
 }
 
 export interface ImageGenerationResult {
@@ -34,12 +35,13 @@ export async function generateLocationImage(
   const {
     aspectRatio = 'landscape_16_9',
     numImages = 1,
-    safetyFilter = 'none'
+    safetyFilter = 'none',
+    spaceType = 'unknown'
   } = options || {};
 
  
-  // Apply general prompt fixes
-  const fixedPrompt = generalPromptFix(imagePrompt);
+  // Apply general prompt fixes (space-type aware)
+  const fixedPrompt = generalPromptFix(imagePrompt, spaceType);
   console.log('......... fixedPrompt..........');
   console.log(fixedPrompt);
   console.log('..............');

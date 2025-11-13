@@ -13,6 +13,9 @@ export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'detail' | 'f
  * Generated per-node to capture essential qualities without hierarchical complexity
  */
 export interface NodeDNA {
+  // Identity
+  name?: string;                    // LLM-generated descriptive name (3-6 words)
+  
   // Visual Description (4 fields)
   looks: string;                    // 2-4 sentences describing what is seen
   colorsAndLighting: string;        // 1-3 sentences on colors and light
