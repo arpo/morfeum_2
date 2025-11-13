@@ -1115,6 +1115,162 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "loc-1763027798536-8hd7xc26j": {
+      "id": "loc-1763027798536-8hd7xc26j",
+      "type": "host",
+      "name": "Metropolis",
+      "dna": {
+        "type": "host",
+        "name": "Metropolis",
+        "description": "A vast urban expanse.",
+        "dna": {
+          "genre": "modern",
+          "architectural_tone": "sleek urban infrastructure",
+          "cultural_tone": "A society focused on progress and public amenity, valuing art and green spaces within its dense urban fabric.",
+          "materials_base": "A palette dominated by engineered materials like concrete, steel, and glass, often presented with a polished or refined finish.",
+          "mood_baseline": "aspirational, curated, sophisticated",
+          "palette_bias": "Neutral base tones of grey and white, accented by the vibrant greens of meticulously maintained vegetation and the occasional bold color from art installations.",
+          "soundscape_base": "A hum of distant traffic, interspersed with the sounds of nature in designated green areas, and the subtle echoes of urban activity.",
+          "flora_base": "Formal, cultivated plant life such as manicured trees, sculpted hedges, and carefully arranged flower beds, emphasizing order and design.",
+          "fauna_base": "Minimal, primarily urban birds and small rodents, with a focus on creating environments where human presence is dominant."
+        },
+        "slug": "metropolis"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Metropolis",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5b675e1e-6467-4da7-8c5d-a65d51e4811c": {
+      "id": "5b675e1e-6467-4da7-8c5d-a65d51e4811c",
+      "type": "region",
+      "name": "Central Gardens",
+      "dna": {
+        "type": "region",
+        "name": "Central Gardens",
+        "description": "The green heart of the city, known for its public art.",
+        "dna": {
+          "architectural_tone": "organic urban integration",
+          "cultural_tone": "This district serves as the city's cultural and recreational heart, prioritizing public art and accessible natural environments.",
+          "materials_base": "Blends urban materials with a greater emphasis on natural elements and the textures of artistic mediums.",
+          "mood_baseline": "tranquil, inspiring, serene",
+          "palette_bias": "Warm greys and natural stone tones complement lush greens, with brighter accents from the varied art pieces.",
+          "soundscape_base": "More pronounced natural sounds like birdsong and rustling leaves, layered with the distant murmur of city life.",
+          "flora_base": "Expansive, diverse flora creating lush, park-like settings, with an emphasis on mature trees and flowing greenery.",
+          "fauna_base": "A greater variety of urban wildlife, including more bird species and smaller mammals, contributing to a livelier natural ambiance."
+        },
+        "slug": "central-gardens"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Central Gardens",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ae43ae3f-c0ce-48cf-a445-220f3ac169cc": {
+      "id": "ae43ae3f-c0ce-48cf-a445-220f3ac169cc",
+      "type": "location",
+      "name": "The Sculpture Garden",
+      "dna": {
+        "type": "location",
+        "name": "The Sculpture Garden",
+        "description": "An outdoor area dedicated to artistic installations.",
+        "looks": "This is an outdoor sculpture garden featuring a long, paved pathway flanked by manicured greenery and large, abstract concrete structures. The pathway is wet, reflecting the sunlight and surrounding foliage. Numerous trees and sculpted bushes create a lush, verdant environment. The overall scene conveys a sense of spaciousness and curated natural beauty, with architectural elements framing views into the distance. Sunlight filters through the leaves, casting dappled shadows on the path.",
+        "atmosphere": "The air appears clear with a slight haze in the distance, suggesting a bright, possibly humid day. The lush greenery and the wet pathway contribute to a fresh, natural atmosphere. Sunlight filtering through the trees creates a soft, diffused lighting environment.",
+        "mood": "Peaceful, contemplative",
+        "lighting": "The lighting is bright and natural, with the sun positioned high in the sky and casting long shadows. Light is directional, coming from the right side of the frame, creating a high-contrast scene with illuminated areas and deep shadows. The overall light quality is warm, emphasizing the greens of the foliage and the grey tones of the concrete.",
+        "dominantElements": [
+          "Paved pathway ~4m wide",
+          "Concrete entryway archways ~10m tall",
+          "Lush green trees and bushes",
+          "Sculpture of a human figure ~2m tall",
+          "Sculpted spherical bushes"
+        ],
+        "spatialLayout": "The foreground features a wide, wet paved pathway leading into the midground, bordered by dense green grass and low, sculpted bushes. In the midground, monumental concrete structures with large rectangular openings create an architectural corridor, framing further pathways and greenery. The background consists of more trees and vegetation, receding into a soft haze, with more framed archways suggesting depth.",
+        "uniqueIdentifiers": [
+          "Series of monumental concrete archways",
+          "Wet, reflective paved pathway",
+          "Sculpture of a lone figure on the left",
+          "Precisely manicured spherical bushes"
+        ],
+        "materials_primary": "Concrete",
+        "materials_secondary": "Stone paving",
+        "materials_accents": "Sunlight reflections",
+        "colors_dominant": "Green (foliage)",
+        "colors_secondary": "Grey (concrete)",
+        "colors_accents": "White (sculpture, distant sky)",
+        "colors_ambient": "Warm daylight",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "A long paved pathway leading through a series of concrete archways into the distance."
+          },
+          {
+            "type": "object",
+            "position": "left, foreground",
+            "description": "A minimalist sculpture of a standing human figure."
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Sculpture garden pathway. Has: paved pathway (center), concrete archway (midground), human sculpture (left)",
+        "dna": {
+          "architectural_tone": "minimalist artistic display",
+          "cultural_tone": "A dedicated public space designed for the contemplation and appreciation of sculptural art amidst controlled nature.",
+          "materials_base": "Features prevalent use of concrete and stone paving, serving as a neutral backdrop for artistic forms.",
+          "mood_baseline": "contemplative, spacious, artistic",
+          "palette_bias": "Dominant greens and greys, with the inherent colors of the sculptures providing focal points.",
+          "soundscape_base": "The gentle sounds of flowing water or wind chimes may be present, alongside the amplified quietude of the space.",
+          "flora_base": "Precisely sculpted bushes and trees that frame views and complement the sculptures, rather than overwhelming them.",
+          "fauna_base": "None specifically encouraged, maintaining a focus on the art and environment."
+        },
+        "slug": "the-sculpture-garden"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/99SgD6pe0R7EkDh3WomWF.jpg",
+      "focus": {
+        "node_id": "The Sculpture Garden",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763030137319-5t41wybid": {
+      "id": "niche-1763030137319-5t41wybid",
+      "type": "niche",
+      "name": "Interior of The Whispering Manor",
+      "dna": {
+        "looks": "A decaying Victorian Gothic interior defined by sharp right angles and oppressive verticality. Dark, weathered wood paneling and peeling wallpaper line the walls, broken by a dilapidated staircase and a shadowed oil painting.",
+        "colorsAndLighting": "Dim, flickering gas lamps cast long, dancing shadows, bathing the space in an uneven, oppressive gloom. Dark, muted tones dominate, with hints of former opulence barely visible.",
+        "atmosphere": "A palpable sense of abandonment and decay permeates the air, thick with the scent of dust. The atmosphere is deeply unsettling, with an oppressive enclosure that suggests unseen presences.",
+        "architectural_tone": "Victorian Gothic decay",
+        "cultural_tone": "A site of intense lingering trauma and spectral activity.",
+        "materials": "Dark, weathered wood paneling and peeling damask wallpaper form the walls. The floor is covered in thick dust hiding a dark, polished wood. Cobwebs adorn the ceiling beams.",
+        "mood": "Somber and deeply unsettling, evoking a sense of dread and lost grandeur.",
+        "sounds": "Silence, creaking wood, faint whispers",
+        "dominantElementsDescriptors": "Decaying wood paneling, peeling wallpaper, dilapidated staircase, flickering gas lamps, vaulted ceiling",
+        "spatialLayout": "The interior suggests the manor's cubic exterior form with sharp ninety-degree angles. A corridor recedes left, a staircase ascends right, and a broad doorway beckons centrally into gloom.",
+        "primary_surfaces": "Wood paneling, wallpaper, dusty floor",
+        "secondary_surfaces": "Wooden banister, cracked painting frame",
+        "accent_features": "Flickering gas lamps, peeling damask wallpaper, desiccated leaves",
+        "dominant": "Dark brown (wood paneling)",
+        "secondary": "Muted grey/beige (wallpaper)",
+        "accent": "Yellow/orange (gas light, shadows)",
+        "ambient": "Cool (shadows) / Warm (gas light)",
+        "uniqueIdentifiers": "Sharp right-angle architecture, pervasive dust and decay, dancing gas lamp shadows, Victorian Gothic styling",
+        "searchDesc": "Decaying Victorian Gothic manor interior with dark wood, peeling wallpaper, and flickering gas lamps."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/OQmVLisWnF3mdXqjhF4rE.jpg",
+      "focus": {
+        "node_id": "niche-1763030137319-5t41wybid",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -1130,7 +1286,13 @@
             {
               "id": "10128f5a-3b1e-4a20-9649-5e303347ba7e",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1763030137319-5t41wybid",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -1273,9 +1435,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763027798536-8hd7xc26j",
+      "type": "host",
+      "children": [
+        {
+          "id": "5b675e1e-6467-4da7-8c5d-a65d51e4811c",
+          "type": "region",
+          "children": [
+            {
+              "id": "ae43ae3f-c0ce-48cf-a445-220f3ac169cc",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763027027191-cfpb8go00"
+    "loc-1763027798536-8hd7xc26j",
+    "loc-1762957281060-fubzyjwnl"
   ]
 }

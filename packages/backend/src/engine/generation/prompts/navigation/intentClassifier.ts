@@ -3,6 +3,9 @@
  * LLM-based classification of user navigation commands
  */
 
+import { getAvailableStyles } from './styles/registry';
+import type { NavigationIntent } from '../../../navigation/types';
+
 export interface IntentClassifierRequest {
   userCommand: string;
   currentNode: {
@@ -23,7 +26,7 @@ export interface IntentClassifierRequest {
 /**
  * Condensed version of intent classifier prompt (~45% shorter)
  */
-function buildCondensedPrompt(contextString: string, userCommand: string): string {
+function buildCondensedPrompt(contextString: string, userCommand: string, styleOptions: string): string {
   return `Navigation intent classifier. Return JSON only.
 
 ${contextString}
@@ -45,7 +48,9 @@ INTENTS:
 12. RELOCATE: go to [place] in [area] → travel to different region
 13. UNKNOWN: unclear intent
 
-OUTPUT: {"intent":"TYPE","target":"name or null","direction":"dir or null","newRegion":"region or null","relocationType":"macro/micro or null","spaceType":"interior/exterior/unknown or null","confidence":0.0-1.0}
+OUTPUT: {"intent":"TYPE","target":"name or null","direction":"dir or null","newRegion":"region or null","relocationType":"macro/micro or null","spaceType":"interior/exterior/unknown or null","style":"style_name or null","confidence":0.0-1.0}
+
+${styleOptions}
 
 GO_INSIDE RULES:
 - Pick buildings/structures with windows/doors from Unique Identifiers or Visible Elements
@@ -59,6 +64,23 @@ EXAMPLES:
 "turn around" → {"intent":"CHANGE_VIEW","direction":"behind","confidence":1.0}
 
 Classify: "${userCommand}"`;
+}
+
+/**
+ * Build style selection section for prompt
+ */
+function buildStyleSection(intent: NavigationIntent): string {
+  const availableStyles = getAvailableStyles(intent);
+  
+  if (availableStyles.length === 0) {
+    return '';
+  }
+  
+  const styleList = availableStyles
+    .map(style => `  - "${style.name}": ${style.description}`)
+    .join('\n');
+  
+  return `\nSTYLE SELECTION (for ${intent} intent):\nAnalyze the location's characteristics and select the most appropriate visual style:\n${styleList}\n\nBase style on location type, architectural tone, and cultural context. Include "style" field in JSON response.\nIf uncertain, use "default".`;
 }
 
 /**
@@ -111,8 +133,12 @@ export function intentClassifierPrompt(
     contextString += `\n- Visible Elements: ${elements}`;
   }
 
+  // For condensed mode, we need to estimate intent first to get styles
+  // For now, just include GO_INSIDE styles as it's the most common
+  const styleSection = buildStyleSection('GO_INSIDE');
+  
   if (mode === 'condensed') {
-    return buildCondensedPrompt(contextString, userCommand);
+    return buildCondensedPrompt(contextString, userCommand, styleSection);
   }
 
   return `You are a navigation intent classifier. Analyze the user's command and return ONLY a JSON object.
@@ -185,8 +211,11 @@ OUTPUT FORMAT (JSON only, no markdown, no explanation):
   "newRegion": "district/region name or null (RELOCATE only)",
   "relocationType": "macro or micro or null (RELOCATE only)",
   "spaceType": "interior or exterior or unknown or null (GO_INSIDE only)",
+  "style": "style_name or null (if styles available for this intent)",
   "confidence": 0.0-1.0
 }
+
+${styleSection}
 
 SMART ELEMENT SELECTION (for GO_INSIDE intent only):
 When intent is GO_INSIDE, you must select the MOST APPROPRIATE element to enter.
