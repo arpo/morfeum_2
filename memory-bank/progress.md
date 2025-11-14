@@ -84,6 +84,11 @@
   - Added new helpers for exterior prompts
   - Created dispatcher for selecting preset builder by spaceType
   - Updated prompt generator to use dispatcher
+- [x] Navigation features parameter fix (Nov 14, 2025)
+  - Fixed critical bug where "interior" was passed as navigationFeatures instead of spaceType
+  - Removed unused navigationFeatures parameter from entire function chain
+  - Interior scenes now properly generate with correct instructions
+  - Cleaner API without unnecessary parameters
 
 ## In Progress 🔄
 

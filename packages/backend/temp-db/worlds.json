@@ -2036,34 +2036,363 @@
         "distance": "medium"
       }
     },
-    "niche-1763125595669-mbrhpi9cq": {
-      "id": "niche-1763125595669-mbrhpi9cq",
+    "niche-1763127557687-2cgx7n4vv": {
+      "id": "niche-1763127557687-2cgx7n4vv",
       "type": "niche",
       "name": "interior of Blackwood Manor",
       "dna": {
-        "looks": "A vast, dimly lit drawing-room with soaring, peaked ceilings and straight, expansive walls. The space is dominated by dark, aged wood and heavy draperies, with ornate architectural features and scattered antique furniture.",
-        "colorsAndLighting": "Deep blues and desaturated grays dominate, accented by spectral glows from brass sconces. Light is dim, flickering, and mixed in temperature, casting long, distorted shadows.",
-        "atmosphere": "The air is heavy, carrying an essence of melancholic decay and haunting stillness. A faint, almost imperceptible motion from dust motes and spectral light adds an eerie, ethereal quality.",
+        "looks": "A vast, wide interior hall with a rectangular/square footprint and steeply angled ceilings. The space is grand and expansive, featuring tall walls and generous ceiling heights, dominated by the sheer width of the main hall.",
+        "colorsAndLighting": "Dominated by deep blues, grays, and desaturated earth tones, with a spectral ember glow providing a warm highlight. Lighting is a mix of cool, diffused twilight from a distant window and unseen ambient light, creating long shadows.",
+        "atmosphere": "A profoundly melancholy, eerie, and haunting atmosphere pervades the space. A faint, cool draft stirs, and spectral dust motes dance in shafts of light, suggesting a presence of lingering spirits and perpetual dusk.",
         "architectural_tone": "Gothic Revival",
-        "cultural_tone": "A realm of lingering emotions and unfinished business.",
-        "materials": "Aged, weathered dark oak planks form the floor, alongside worn, dusty indigo carpet. Ornate dark mahogany wainscoting with unsettling patterns lines the walls, complemented by heavy, faded sapphire velvet draperies.",
-        "mood": "Foreboding and melancholic, evoking opulent decay and forgotten histories.",
-        "sounds": "Silence, faint creaks, distant whispers, spectral hum.",
-        "dominantElementsDescriptors": "Peaked timber beam ceiling, ornate mahogany wainscoting, colossal gothic fireplace, faded velvet draperies.",
-        "spatialLayout": "A large, expansive rectangular space with high, peaked ceilings and straight walls, emphasizing width and depth. An implied distance to the far wall lost in shadow.",
-        "primary_surfaces": "Dark oak floor, desaturated stormy gray walls, dark timber ceiling.",
-        "secondary_surfaces": "Mahogany wainscoting, velvet draperies, tarnished brass sconces.",
-        "accent_features": "Intricately carved wainscoting patterns, gothic fireplace motifs, spectral glows.",
-        "dominant": "Deep blues (walls, carpet, draperies)",
-        "secondary": "Dark grays (walls, timber)",
-        "accent": "Spectral glows (sconces)",
-        "ambient": "Mixed",
-        "uniqueIdentifiers": "Soaring peaked timber ceiling, ornate unsettling wainscoting, spectral light shafts, vast echoing space.",
-        "searchDesc": "Gothic Revival manor interior with peaked ceiling, ornate wainscoting, and spectral lighting."
+        "cultural_tone": "A place of lingering emotions and unfinished business.",
+        "materials": "Aged dark oak floorboards, dark mahogany wainscoting, rough-hewn stone, faded velvet tapestries, aged plaster, and dark exposed wooden beams form the core textures. Clouded glass on the window adds to the decay.",
+        "mood": "Foreboding and melancholic, evoking a sense of forgotten histories and echoes of past traumas.",
+        "sounds": "Whispering drafts, faint crackle of embers, distant groans.",
+        "dominantElementsDescriptors": "Grand hall, angled wooden beamed ceiling, ornate staircase, stone fireplace.",
+        "spatialLayout": "A wide, rectangular main hall with tall, angled ceilings. The space extends significantly in width, with a notable corridor and staircase serving as navigational features. The primary view is straight ahead from near the entrance.",
+        "primary_surfaces": "Dark oak floorboards, dark mahogany wainscoting, aged plaster, dark exposed wood beams.",
+        "secondary_surfaces": "Rough-hewn stone, faded velvet tapestries.",
+        "accent_features": "Flickering ember glow, motionless grandfather clock pendulum, cobweb-draped beams, clouded arched window.",
+        "dominant": "Grays, 60%",
+        "secondary": "Deep blues, 25%",
+        "accent": "Warm ember glow, 5%",
+        "ambient": "Cool",
+        "uniqueIdentifiers": "Angled, dark wooden beamed ceiling; spectral dust motes in light shafts; narrow corridor angling off at 45 degrees.",
+        "searchDesc": "Victorian manor grand hall with dark wood, angled ceilings, and haunting atmosphere."
       },
-      "imagePath": "https://v3b.fal.media/files/b/lion/NLxHCh9EZZ29Ef_943_7w.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/zebra/N1kRlmNf-fkcZ8KvgE9eT.jpg",
       "focus": {
-        "node_id": "niche-1763125595669-mbrhpi9cq",
+        "node_id": "niche-1763127557687-2cgx7n4vv",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763127703225-qxi6rybcl": {
+      "id": "loc-1763127703225-qxi6rybcl",
+      "type": "host",
+      "name": "The Horizon Lands",
+      "dna": {
+        "type": "host",
+        "name": "The Horizon Lands",
+        "description": "A realm where architecture defines the view.",
+        "dna": {
+          "genre": "modern",
+          "architectural_tone": "minimalist geometric estates",
+          "cultural_tone": "Emphasizes clean lines and the harmonious integration of human-made structures with natural vistas. Functionality and aesthetic purity are paramount.",
+          "materials_base": "Primarily smooth, light-colored concrete or stucco, polished stone, and glass. Focus is on materials that reflect light and create a sense of openness and vastness.",
+          "mood_baseline": "Serene, aspirational, expansive",
+          "palette_bias": "Dominated by cool whites, soft grays, and natural blues and greens. Emphasis on high contrast between architecture and environment.",
+          "soundscape_base": "Characterized by the gentle sounds of nature - wind, distant water, and birdsong. Architectural elements create subtle echoes and resonances.",
+          "flora_base": "Manicured, sculptural plant life, often accentuating architectural lines or providing soft natural contrast to hard surfaces.",
+          "fauna_base": "Minimal, perhaps small birds or insects that do not detract from the overall serenity."
+        },
+        "slug": "the-horizon-lands"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Horizon Lands",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "a3b79648-b44a-4b7b-904e-902da5591e36": {
+      "id": "a3b79648-b44a-4b7b-904e-902da5591e36",
+      "type": "region",
+      "name": "White Arch Province",
+      "dna": {
+        "type": "region",
+        "name": "White Arch Province",
+        "description": "A region characterized by expansive, arch-shaped structures.",
+        "dna": {
+          "architectural_tone": "curving, monumental arches",
+          "cultural_tone": null,
+          "materials_base": "Smooth, unblemished white stucco or composite materials are favored for their clean, monolithic appearance.",
+          "mood_baseline": "majestic, open",
+          "palette_bias": "Saturated whites are primary, with sharp contrasts to deep blues and vibrant greens.",
+          "soundscape_base": "The vastness of the arches creates a unique acoustic effect, amplifying gentle breezes and distant sounds.",
+          "flora_base": "Lush, verdant foliage often planted within courtyards or at the base of structures, creating a stark contrast to the white architecture.",
+          "fauna_base": null
+        },
+        "slug": "white-arch-province"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "White Arch Province",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "daed1cd1-6e3d-4cd7-9b35-6053837c0d86": {
+      "id": "daed1cd1-6e3d-4cd7-9b35-6053837c0d86",
+      "type": "location",
+      "name": "The Arc House",
+      "dna": {
+        "type": "location",
+        "name": "The Arc House",
+        "description": "A geometric estate of white arches, each framing a different horizon.",
+        "looks": "The structure is a sprawling estate composed of numerous interconnected white arches, arranged in repeating geometric patterns. The arches are smooth and curved, with textured white surfaces. Lush green foliage and palm trees are interspersed around the base of the structures and within courtyard-like spaces. The ground is paved with large, light-colored marble tiles, reflecting the bright sky and architecture. Each archway offers a framed view of the serene blue ocean and horizon beyond.",
+        "atmosphere": "The air appears crisp and clear, with no visible haze or fog. The bright sunlight suggests a dry environment, possibly with a gentle sea breeze implied by the clear horizon. The overall atmosphere is clean and open.",
+        "mood": "Serene, expansive, architectural wonder",
+        "lighting": "The lighting is bright and natural, originating from a high, clear sky. The light is hard, creating strong shadows on the marble floor and accentuating the geometric forms of the arches. The dominant light color is a cool white, with subtle blue hues reflected from the sky and ocean.",
+        "dominantElements": [
+          "Series of white arched structures (~5-8m tall, ~3-5m wide each)",
+          "Marble tiled pathway (extending across foreground and midground)",
+          "Ocean and horizon (visible through central arch, background)"
+        ],
+        "spatialLayout": "The foreground consists of a wide, marble-tiled pathway leading into the midground. The midground is dominated by a series of interconnected white arched structures forming a courtyard or walkway. The background is defined by the open expanse of the ocean, framed by a large central archway.",
+        "uniqueIdentifiers": [
+          "Geometric arrangement of white arches",
+          "Framed views of the ocean through each arch",
+          "White stucco textured architecture"
+        ],
+        "materials_primary": "Stucco",
+        "materials_secondary": "Marble",
+        "materials_accents": "Glass (in window)",
+        "colors_dominant": "White (architecture)",
+        "colors_secondary": "Blue (sky and ocean), Green (foliage)",
+        "colors_accents": "Light grey/beige (marble floor)",
+        "colors_ambient": "Bright white/light blue",
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center, background",
+            "description": "Large archway framing a clear view of the ocean and horizon."
+          },
+          {
+            "type": "archway",
+            "position": "left, midground",
+            "description": "Opening between white stucco walls, leading further into the estate."
+          },
+          {
+            "type": "archway",
+            "position": "right, midground",
+            "description": "Similar archway to the left, suggesting continuity of the pathway."
+          },
+          {
+            "type": "window",
+            "position": "right wall, midground",
+            "description": "Tall, arched window offering a glimpse into a space beyond."
+          }
+        ],
+        "searchDesc": "White arch estate. Has: large archway (center, background), archway (left, midground), window (right wall, midground)",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": "A private estate designed for contemplation and appreciation of the surrounding horizon, where architecture serves as a frame for nature's art.",
+          "materials_base": null,
+          "mood_baseline": "tranquil, contemplative",
+          "palette_bias": null,
+          "soundscape_base": "Subtle maritime sounds, the gentle rustle of palm leaves.",
+          "flora_base": "Strategically placed palm trees and manicured shrubs that enhance the framed views.",
+          "fauna_base": null
+        },
+        "slug": "the-arc-house"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/Er-uFJeM6gRoJouEeDIau.jpg",
+      "focus": {
+        "node_id": "The Arc House",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763127736961-hcj87xcju": {
+      "id": "niche-1763127736961-hcj87xcju",
+      "type": "niche",
+      "name": "exterior of The Arc House",
+      "dna": {
+        "looks": "A broad marble pathway leads to monumental, repeating white stucco arches forming a geometric pattern. Lush green foliage and palm trees contrast with the clean architecture. Archways frame a tranquil blue ocean and distant horizon.",
+        "colorsAndLighting": "Bright, saturated sky illuminates luminous marble tiles. The scene is clean and well-lit, with the white arches dominating.",
+        "atmosphere": "The air feels serene and tranquil, suggesting a peaceful contemplation of nature. A gentle breeze might stir the palm fronds. The temperature is likely pleasant, ideal for appreciating the view.",
+        "architectural_tone": "monumental arches",
+        "cultural_tone": "A private estate designed for contemplation and appreciation of the surrounding horizon, where architecture serves as a frame for nature's art.",
+        "materials": "Smooth, textured white stucco covers the curving arches. Large, luminous light-colored marble tiles pave the broad pathway. Lush green foliage adds a natural element.",
+        "mood": "Serene and contemplative, with a sense of ordered beauty that frames natural elements.",
+        "sounds": "gentle waves, distant birds, soft breeze",
+        "dominantElementsDescriptors": "monumental white arches, luminous marble pathway, lush green foliage, serene blue ocean",
+        "spatialLayout": "A wide pathway draws the eye towards a central, large archway entrance, with flanking openings and side pathways creating flow. The space is open, with architecture acting as framing elements.",
+        "primary_surfaces": "white stucco, light marble tile",
+        "secondary_surfaces": "green foliage, palm fronds",
+        "accent_features": "archway framing ocean views, repeating geometric pattern",
+        "dominant": "white (architecture)",
+        "secondary": "green (foliage)",
+        "accent": "blue (ocean)",
+        "ambient": "neutral",
+        "uniqueIdentifiers": "repeating monumental white arches, marble pathway, ocean framing",
+        "searchDesc": "Estate entrance with repeating white arches, marble path, and ocean views."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/qc5qTwiw3oiGz6N_Favhs.jpg",
+      "focus": {
+        "node_id": "niche-1763127736961-hcj87xcju",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763128072341-5nk4hv3q1": {
+      "id": "loc-1763128072341-5nk4hv3q1",
+      "type": "host",
+      "name": "The Azure Depths",
+      "dna": {
+        "type": "host",
+        "name": "The Azure Depths",
+        "description": "A vast and ancient ocean world teeming with vibrant life and mysterious currents.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "ancient, mystical, fluid",
+          "cultural_tone": "Deep reverence for nature's patterns and hidden energies. Civilizations that coexist symbiotically with the ocean's cycles.",
+          "materials_base": "Primarily bioluminescent organic matter, polished coral, solidified seafoam, and crystalline formations that resonate with ambient energy.",
+          "mood_baseline": "mysterious, serene, ancient",
+          "palette_bias": "Dominated by deep oceanic blues, vibrant aquamarines, and shimmering iridescent hues. Accents of ethereal light in cool tones.",
+          "soundscape_base": "Subtle, resonant hums of deep currents, distant whale song, and the gentle, rhythmic pulse of unseen energies.",
+          "flora_base": "Luminous kelp forests, coral gardens sculpted by unknown forces, and bioluminescent algae blooms.",
+          "fauna_base": "Creatures adapted to deep-sea luminescence, possessing intricate patterns and a natural glow."
+        },
+        "slug": "the-azure-depths"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Depths",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "d5c32a76-6b7d-4020-bb7e-2a6dde2caf43": {
+      "id": "d5c32a76-6b7d-4020-bb7e-2a6dde2caf43",
+      "type": "region",
+      "name": "The Azure Depths",
+      "dna": {
+        "type": "region",
+        "name": "The Azure Depths",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-azure-depths"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Azure Depths",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "d314bedb-7e83-4151-87dd-018b95df9847": {
+      "id": "d314bedb-7e83-4151-87dd-018b95df9847",
+      "type": "location",
+      "name": "The Lumina Atoll",
+      "dna": {
+        "type": "location",
+        "name": "The Lumina Atoll",
+        "description": "A unique, circular coral atoll meticulously carved into sacred geometric patterns.",
+        "looks": "A colossal, circular, glowing mandala-like structure dominates the center of the frame, intricately carved with concentric geometric patterns. It appears to be made of light or energy, emanating a strong blue luminescence. The structure rests upon a raised, circular platform that is partially submerged in dark, rippling water. The background consists of dark, rough-textured cave walls, creating a stark contrast with the radiant central element. The overall impression is one of immense scale and otherworldly design.",
+        "atmosphere": "The scene is enclosed, with the dark cave walls suggesting a cavernous or deep-sea environment. The water surface exhibits a gentle ripple, indicating calm conditions within the space. A faint, atmospheric haze or mist seems to be present, interacting with the light from the mandala.",
+        "mood": "Sacred, serene, mystical",
+        "lighting": "The primary light source is the brilliant, cool blue glow emanating from the central mandala, casting a strong, ethereal illumination on the immediate surroundings. This light is intense and diffused, creating soft shadows on the cave walls. The water reflects the blue light, creating shimmering patterns. The overall lighting is high contrast, with the bright mandala set against dark, shadowed backgrounds.",
+        "dominantElements": [
+          "Massive glowing circular mandala ~30m diameter, center",
+          "Submerged circular platform ~10m diameter, center foreground",
+          "Dark, textured cave walls, left and right background"
+        ],
+        "spatialLayout": "Foreground: Dark, rippling water extends from the bottom edge of the frame, with reflections of the central light. Midground: A circular platform supports a massive, glowing mandala. The mandala is the clear focal point. Background: Dark, cavernous walls rise on either side, framing the central display and suggesting depth within a confined space.",
+        "uniqueIdentifiers": [
+          "Intricately carved luminous geometric mandala",
+          "Submerged circular platform in dark water",
+          "Cave-like enclosure with glowing centerpiece"
+        ],
+        "materials_primary": "Light/Energy (mandala)",
+        "materials_secondary": "Stone (cave walls)",
+        "materials_accents": "Water (reflective surface)",
+        "colors_dominant": "Bright Cyan/Electric Blue (mandala and its illumination)",
+        "colors_secondary": "Dark Grey/Black (cave walls)",
+        "colors_accents": "Deep Blue/Aqua (water reflections)",
+        "colors_ambient": "Dark Teal/Deep Blue",
+        "navigableElements": [
+          {
+            "type": "portal",
+            "position": "center, midground",
+            "description": "Gigantic, glowing geometric mandala emitting light, appears to be a gateway."
+          },
+          {
+            "type": "passage",
+            "position": "left wall, background",
+            "description": "Dark, textured opening in cave wall suggesting a passage."
+          },
+          {
+            "type": "passage",
+            "position": "right wall, background",
+            "description": "Dark, textured opening in cave wall suggesting a passage."
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Glowing circular portal in a cave. Has: portal (center), passage (left wall), passage (right wall)",
+        "dna": {
+          "architectural_tone": "geometric, sculpted, luminous",
+          "cultural_tone": "A nexus of ancient knowledge and cosmic alignment, where natural formations are understood and enhanced.",
+          "materials_base": "Carved coral infused with internal light, bio-organic crystalline structures, and water channels that conduct energy.",
+          "mood_baseline": "sacred, awe-inspiring, tranquil",
+          "palette_bias": "Intensified cool blues and electric cyans, with the ethereal glow of inner light. Dark, contrasting backgrounds emphasize luminescence.",
+          "soundscape_base": "Echoes of flowing water, subtle harmonic resonances from the carved patterns, and a pervasive, low hum of contained energy.",
+          "flora_base": "None directly apparent, but the structure itself seems to foster a unique energetic resonance.",
+          "fauna_base": "None directly apparent, suggesting a place of contemplation rather than habitation."
+        },
+        "slug": "the-lumina-atoll"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/lCOsxRiXeJoY7213OcPzx.jpg",
+      "focus": {
+        "node_id": "The Lumina Atoll",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763128120437-expyuli0u": {
+      "id": "niche-1763128120437-expyuli0u",
+      "type": "niche",
+      "name": "interior of The Lumina Atoll",
+      "dna": {
+        "looks": "A colossal, circular chamber dominated by a massive, geometrically carved mandala of electric cyan light. Dark, rough cave walls rise steeply on either side, framing the luminous centerpiece. The foreground features dark, rippling water reflecting the cyan glow.",
+        "colorsAndLighting": "Intense electric cyan light emanates from the central mandala, casting a cool, dominant blue luminescence throughout the space. Deep greys and blacks of the cave walls provide stark contrast.",
+        "atmosphere": "The air is filled with a palpable ancient energy, creating a sacred and awe-inspiring ambiance. Subtle energetic currents disturb the water's surface, and ethereal reflections dance on the dark liquid.",
+        "architectural_tone": "Geometric luminous",
+        "cultural_tone": "Nexus of ancient knowledge",
+        "materials": "The central mandala is composed of pure, luminous energy. The surrounding cave walls are rough-textured stone in deep greys and blacks. The submerged platform is smooth and obsidian-like.",
+        "mood": "Sacred and awe-inspiring, evoking a sense of tranquil wonder at the immense, glowing centerpiece.",
+        "sounds": "Faint hum of energy, gentle water ripples",
+        "dominantElementsDescriptors": [
+          "Colossal circular mandala",
+          "Dark rough cave walls",
+          "Rippling water surface"
+        ],
+        "spatialLayout": "A large, circular chamber with a dominant central mandala, approximately 30m in diameter, hovering above a submerged platform. The space recedes dramatically due to towering side walls, creating immense depth.",
+        "primary_surfaces": "Cave walls, Water",
+        "secondary_surfaces": "Luminous mandala, Circular platform",
+        "accent_features": "Pulsing cyan lines on passage floor, Crystalline spires with internal white glow, Cascade of blue energy particles, Narrow crevice.",
+        "dominant": "Cyan (70%)",
+        "secondary": "Dark grey/black (25%)",
+        "accent": "White (3%), Teal (2%)",
+        "ambient": "Cool",
+        "uniqueIdentifiers": [
+          "Electric cyan mandala centerpiece",
+          "Dark cavernous enclosure",
+          "Reflective water foreground"
+        ],
+        "searchDesc": "Fantasy cavern interior with a colossal glowing cyan mandala, dark walls, and reflective water."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/GyNXd_2SE8MqUMDPDhpmW.jpg",
+      "focus": {
+        "node_id": "niche-1763128120437-expyuli0u",
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
@@ -2361,7 +2690,53 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763125595669-mbrhpi9cq",
+                  "id": "niche-1763127557687-2cgx7n4vv",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763127703225-qxi6rybcl",
+      "type": "host",
+      "children": [
+        {
+          "id": "a3b79648-b44a-4b7b-904e-902da5591e36",
+          "type": "region",
+          "children": [
+            {
+              "id": "daed1cd1-6e3d-4cd7-9b35-6053837c0d86",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763127736961-hcj87xcju",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763128072341-5nk4hv3q1",
+      "type": "host",
+      "children": [
+        {
+          "id": "d5c32a76-6b7d-4020-bb7e-2a6dde2caf43",
+          "type": "region",
+          "children": [
+            {
+              "id": "d314bedb-7e83-4151-87dd-018b95df9847",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763128120437-expyuli0u",
                   "type": "niche",
                   "children": []
                 }
@@ -2373,7 +2748,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763118887574-1q2nre8j4",
-    "loc-1763125549918-hhpnv2ty2"
+    "loc-1763128072341-5nk4hv3q1"
   ]
 }

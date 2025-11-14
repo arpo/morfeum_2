@@ -16,7 +16,6 @@ export function nicheImagePrompt(
   context: NavigationContext,
   intent: IntentResult,
   decision: NavigationDecision,
-  navigationFeatures?: string,
   spaceType: 'interior' | 'exterior' = 'interior'
 ): string {
   const basePrompt = buildNichePromptBase(context);
@@ -24,7 +23,6 @@ export function nicheImagePrompt(
     context,
     intent,
     decision,
-    navigationFeatures,
     spaceType
   );
 

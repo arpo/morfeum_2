@@ -17,8 +17,7 @@ import type { IntentResult, NavigationDecision } from '../../../../navigation/ty
 export function buildInteriorPresetSections(
   context: NavigationContext,
   intent: IntentResult,
-  decision: NavigationDecision,
-  navigationFeatures?: string
+  decision: NavigationDecision
 ): string {
   const entranceElement = extractEntranceElement(decision.reasoning);
   const locationLooks = context.currentNode.data.looks;
@@ -31,7 +30,7 @@ export function buildInteriorPresetSections(
   const transformationRules = buildTransformationRulesCondensed();
   const requirements = buildRequirementsCondensed();
   const interiorSpaceRules = buildInteriorSpaceRulesCondensed(entranceElement);
-  const navigationGuidance = buildNavigationGuidanceCondensed(navigationFeatures);
+  const navigationGuidance = buildNavigationGuidanceCondensed();
 
   return `${structureAnalysis}
 

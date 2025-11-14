@@ -13,14 +13,13 @@ import type { IntentResult, NavigationDecision } from '../../../../navigation/ty
 export function buildExteriorPresetSections(
   context: NavigationContext,
   intent: IntentResult,
-  decision: NavigationDecision,
-  navigationFeatures?: string
+  decision: NavigationDecision
 ): string {
   const entranceElement = extractEntranceElement(decision.reasoning);
   const locationLooks = context.currentNode.data.looks;
   const approachNote = buildExteriorApproachNote(locationLooks);
   const exteriorRules = buildExteriorSpaceRulesCondensed(entranceElement);
-  const navigationGuidance = buildNavigationGuidanceCondensed(navigationFeatures);
+  const navigationGuidance = buildNavigationGuidanceCondensed();
 
   return `${approachNote}
 

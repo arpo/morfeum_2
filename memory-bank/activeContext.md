@@ -4,6 +4,13 @@
 The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
+- **Navigation Features Parameter Fix (Nov 14, 2025):**
+  - Fixed critical bug where "interior" was being passed as navigationFeatures instead of spaceType
+  - Removed unused navigationFeatures parameter entirely from the function chain
+  - Updated nicheImagePrompt, imagePromptGeneration, and all preset functions
+  - Interior scenes now correctly generate with proper interior-specific instructions
+  - Cleaner code without unnecessary undefined parameters
+
 - **Prompt Preset Refactor (Nov 14, 2025):**  
   - Removed all hard-coded narrative from both interior and exterior prompt presets.
   - Interior and exterior presets now assemble their output using only shared, reusable prompt sections from `promptSections.ts` and context/DNA data.
@@ -16,7 +23,7 @@ The Morfeum application is in active development with core systems operational.
   - [See previous entries for details on camera config, "Go Inside" pipeline, token optimization, parent structure analysis, and navigation classifier improvements.]
 
 ### Core Systems Status
-- **Prompt Generation:** All narrative blocks now context-driven, using shared builders and node DNA.
+- **Prompt Generation:** All narrative blocks now context-driven, using shared builders and node DNA. Fixed parameter ordering issue.
 - **Navigation System:** NavigatorAI for spatial movement (frontend generate action still disabled).
 - **Tree-Based Architecture:** Nodes (flat storage) + World Trees (nested structure).
 - **Event System:** SSE for real-time spawn updates.
