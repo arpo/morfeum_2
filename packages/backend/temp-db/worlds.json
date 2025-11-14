@@ -1701,34 +1701,194 @@
         "distance": "medium"
       }
     },
-    "niche-1763108339640-jb9nj9hji": {
-      "id": "niche-1763108339640-jb9nj9hji",
+    "loc-1763110577126-jqt3c71lb": {
+      "id": "loc-1763110577126-jqt3c71lb",
+      "type": "host",
+      "name": "Tatooine",
+      "dna": {
+        "type": "host",
+        "name": "Tatooine",
+        "description": "A desert planet with twin suns and harsh, arid landscapes.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "utilitarian, weathered construction",
+          "cultural_tone": "A harsh frontier society focused on survival and resourcefulness, with a nomadic or semi-nomadic lifestyle due to extreme environmental conditions.",
+          "materials_base": "Primarily sourced from local, arid geological formations and salvaged industrial components. Expect rough, natural textures blended with hardened, resilient synthetic materials.",
+          "mood_baseline": "austere, resilient, isolated",
+          "palette_bias": "Dominated by earthy tones reflecting the arid environment. Hues of ochre, sand, and muted browns are prevalent, punctuated by the harsh glare of twin suns leading to desaturated, warm shades.",
+          "soundscape_base": "The dominant sound is the ceaseless, abrasive whisper of wind, often carrying fine grit. Occasional mechanical hums or distant, echoing impacts break the natural silence.",
+          "flora_base": "Extremely sparse, consisting of hardy, drought-resistant desert plants like scrub brush, hardy succulents, and tough, low-lying grasses adapted to extreme heat and minimal water.",
+          "fauna_base": "Adapted to extreme desert survival, featuring resilient insectoids, burrowing creatures, and hardy reptilian or avian life forms with low metabolic rates."
+        },
+        "slug": "tatooine"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Tatooine",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "cbf76bc9-0ad8-41f7-b144-41a44eb280da": {
+      "id": "cbf76bc9-0ad8-41f7-b144-41a44eb280da",
+      "type": "region",
+      "name": "Tatooine",
+      "dna": {
+        "type": "region",
+        "name": "Tatooine",
+        "description": "",
+        "dna": {
+          "architectural_tone": "low-profile, earth-integrated structures",
+          "cultural_tone": "A culture deeply ingrained with the cycles of the twin suns and the omnipresent desert. Settlements are often built for resilience and shade, serving as vital hubs for trade and survival.",
+          "materials_base": "Reliance on adobe, packed earth, and stone quarried from desert mesas, augmented by salvaged metal for reinforcement and functional components. The aesthetic favors blending with the landscape.",
+          "mood_baseline": "oppressive heat, resilient spirit",
+          "palette_bias": "Warm, sun-baked colors dominate. Sandy beiges, burnt oranges, and dusty reds are characteristic, with stark contrasts due to intense sunlight. Hazy skies mute distant colors.",
+          "soundscape_base": "The constant, omnipresent hum of wind is punctuated by the scuttling of desert creatures and the distant cries of sand-dwelling avians. The rare sound of machinery adds a layer of artificiality.",
+          "flora_base": "Sparse, tough desert flora such as thorny scrub, sand-worn grasses, and hardy, low-profile succulents that can withstand prolonged drought and intense solar radiation.",
+          "fauna_base": "Creatures are adapted to burrowing, heat resistance, and scavenging. Expect diverse insectoid life, hardy desert reptiles, and scavengers with excellent heat tolerance."
+        },
+        "slug": "tatooine"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Tatooine",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "0090b8bf-537e-4145-8de5-1649e681b38b": {
+      "id": "0090b8bf-537e-4145-8de5-1649e681b38b",
+      "type": "location",
+      "name": "The Oasis Outpost",
+      "dna": {
+        "type": "location",
+        "name": "The Oasis Outpost",
+        "description": "A solitary, weathered structure offering respite from the desert.",
+        "looks": "The structure is made of rough, sandy adobe, appearing weathered and sun-baked. Its surfaces are textured with sandblasted imperfections. A central, arched entryway leads to a simple wooden door, flanked by two small, barred windows. The architecture is low and sprawling, suggesting a single-story building integrated into the arid landscape. The edges of the roofline are uneven, contributing to a primitive aesthetic.",
+        "atmosphere": "The air appears dry and dusty, with a hazy quality suggesting heat. Swirling sand is subtly implied by the texture of the ground and the overall environment. The distant sky is a muted, hazy orange.",
+        "mood": "Desolate, enduring",
+        "lighting": "Warm, orange light emanates from two lanterns flanking the central doorway, casting deep shadows. The overall scene is bathed in a soft, dusky light from the setting or rising sun. Contrast is moderate, with highlights on the building's facade and soft gradations in the sandy terrain.",
+        "dominantElements": [
+          "Central building with arched doorway (est. 5m tall, 10m wide)",
+          "Wooden door (est. 2m tall, 1m wide)",
+          "Arched entryway with decorative carvings",
+          "Desert terrain with sand and sparse vegetation",
+          "Lanterns (two, flanking doorway)"
+        ],
+        "spatialLayout": "The foreground consists of sandy ground with low-lying desert scrub and scattered rocks. The midground is dominated by the Oasis Outpost structure, a roughly rectangular building with a prominent central entrance. The structure appears to be horizontally oriented, with wings extending to the left and right. The background is the open desert and a hazy sky.",
+        "uniqueIdentifiers": [
+          "Crude adobe construction",
+          "Arched entryway with ornate carvings",
+          "Solitary desert outpost appearance"
+        ],
+        "materials_primary": "Adobe",
+        "materials_secondary": "Wood",
+        "materials_accents": "Metal door handle, hanging lantern",
+        "colors_dominant": "Sandy brown, appearing on the building and ground",
+        "colors_secondary": "Orange, from the lighting and sky",
+        "colors_accents": "Muted blue/grey on window shutters",
+        "colors_ambient": "Dusky orange/brown",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Simple wooden door set within an arched entryway, lit by lanterns"
+          },
+          {
+            "type": "window",
+            "position": "left side, midground",
+            "description": "Small, barred window with weathered shutters"
+          },
+          {
+            "type": "window",
+            "position": "right side, midground",
+            "description": "Small, barred window with weathered shutters"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Desert outpost with adobe structure. Has: door (center, midground), window (left side, midground), window (right side, midground)",
+        "dna": {
+          "architectural_tone": "solitary, weathered adobe structure",
+          "cultural_tone": "A functional outpost providing essential refuge and services to travelers and local inhabitants navigating the vast desert. It embodies a simple, no-frills approach to survival.",
+          "materials_base": "Primarily rough, sun-baked adobe and local stone, with utilitarian wooden elements for doors and basic fixtures. Surfaces show the wear of sandstorms and intense sun.",
+          "mood_baseline": "isolated respite, weathered solitude",
+          "palette_bias": "Muted sandy browns and earthy ochres form the base, enhanced by the warm, dusky orange glow of ambient lighting and the hazy sky. Subtle textural variations create depth.",
+          "soundscape_base": "The gentle, rhythmic whisper of wind against adobe walls, occasional creaks from wooden elements, and the distant, faint sounds of desert life. A sense of quietude prevails.",
+          "flora_base": "None immediately visible, emphasizing the extreme aridness of the immediate surroundings.",
+          "fauna_base": "Likely limited to small, resilient desert insects or rodents seeking shelter within the structure's shaded areas."
+        },
+        "slug": "the-oasis-outpost"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/Jp5Dqd0OdsligrgV8QevC.jpg",
+      "focus": {
+        "node_id": "The Oasis Outpost",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763110668482-bxm9o062d": {
+      "id": "niche-1763110668482-bxm9o062d",
+      "type": "niche",
+      "name": "interior of The Oasis Outpost",
+      "dna": {
+        "looks": "The interior of a desert outpost with rough adobe walls and ceiling. A sandy earth floor is present, with a wooden bench to the left and an alcove with jugs on the right. A dark passage leads further in, and a large wooden door is central in the background.",
+        "colorsAndLighting": "Illuminated by a warm, dusky orange glow from interior lanterns, the walls display variations in sandy brown tones. The overall light is warm and diffused.",
+        "atmosphere": "The air feels still and dry, carrying the faint scent of dust and baked earth. There's a palpable sense of isolated respite, a functional refuge built from the desert itself. The temperature is likely warm from the enclosed space and lantern glow.",
+        "architectural_tone": "primitive adobe",
+        "cultural_tone": "A functional outpost providing essential refuge and services to travelers and local inhabitants navigating the vast desert.",
+        "materials": "Dominated by rough adobe walls and a packed sandy earth floor. Scattered pebbles add texture. A rough-hewn wooden bench and a heavy, splintered wooden door with metal straps are key features.",
+        "mood": "Peaceful solitude and functional refuge.",
+        "sounds": "muffled wind, creaking wood, subtle echo",
+        "dominantElementsDescriptors": "adobe walls, sandy floor, wooden bench, water jugs, wooden door",
+        "spatialLayout": "A single, enclosed space with a continuing packed earth floor. The layout features immediate left and right wall elements, a central background door, and a passage to the left midground.",
+        "primary_surfaces": "adobe, packed earth",
+        "secondary_surfaces": "rough wood, ceramic",
+        "accent_features": "recessed alcove with water jugs, heavy metal ring door handle",
+        "dominant": "sandy brown (walls, floor)",
+        "secondary": "orange (lantern light)",
+        "accent": "dark metal (door straps)",
+        "ambient": "warm",
+        "uniqueIdentifiers": "rough adobe construction, dusky orange lantern glow, central heavy wooden door",
+        "searchDesc": "Desert outpost interior with adobe walls, sandy floor, and warm lantern light. Functional refuge."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/TdWBs9afbIJjNjnAPSWuU.jpg",
+      "focus": {
+        "node_id": "niche-1763110668482-bxm9o062d",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "niche-1763113965930-hedufpp8i": {
+      "id": "niche-1763113965930-hedufpp8i",
       "type": "niche",
       "name": "interior of The Nomad Station",
       "dna": {
-        "looks": "A compact, rectangular interior built from weathered corrugated shipping containers, featuring exposed conduits and reinforced wood. The space is filled with focused yellow light, casting sharp shadows and highlighting utilitarian equipment and a narrow passage. Shelving and a cot suggest a living/working module at the rear.",
-        "colorsAndLighting": "Dominated by warm, intense yellow light from overhead industrial lamps, creating a bright pool contrasted with dimmer ambient light. Walls display rust brown and faded industrial gray.",
-        "atmosphere": "An atmosphere of isolated resourcefulness pervades this functional, modular space. The air feels contained and purposeful, with the focused lighting suggesting a controlled environment. Subtle sensory cues hint at constant activity and diligent maintenance.",
+        "looks": "The interior is a rectangular, compact space defined by straight, unadorned walls of corrugated steel, creating a sense of enclosure. Exposed conduits and reinforced wood elements are visible. The scene is functional and utilitarian, with objects suggesting a workspace or storage.",
+        "colorsAndLighting": "Muted rust browns and faded grays dominate the corrugated steel walls, illuminated by sharp, warm yellow interior lighting. This light casts a stark glow on the functional elements.",
+        "atmosphere": "The air feels isolated and resourceful, hinting at a self-sufficient outpost. There's a sense of contained, functional activity within the narrow confines, with no indication of external weather.",
         "architectural_tone": "modular container construction",
-        "cultural_tone": "A self-sufficient, mobile outpost prioritizing practicality and resource management.",
-        "materials": "Weathered corrugated steel forms the primary structure, showing seams and rivets. Reinforced wooden elements are used for workbenches and storage. The floor is practical, worn concrete or composite.",
-        "mood": "Resourceful and utilitarian, evoking a sense of self-reliance in isolation.",
-        "sounds": "humming machinery, blinking lights, distant clanking",
-        "dominantElementsDescriptors": "corrugated steel walls, reinforced wooden workbench, blinking control panels, overhead industrial lamps",
-        "spatialLayout": "A compact, rectangular interior defined by container walls. A narrow passage recedes into the right midground. The entrance is out of frame behind the viewer.",
-        "primary_surfaces": "corrugated steel, concrete",
-        "secondary_surfaces": "wood, metal",
-        "accent_features": "blinking lights on control panels, ventilation grate with orange glow",
-        "dominant": "yellow (overhead lighting)",
-        "secondary": "rust brown (walls)",
-        "accent": "orange (ventilation grate light)",
+        "cultural_tone": "A self-sufficient, mobile outpost for traders, prospectors, or researchers, prioritizing practicality and resource management.",
+        "materials": "The primary materials are weathered corrugated steel for walls and ceiling, and reinforced wood for structural elements and workbenches. Utilitarian concrete or metal plating forms the floor. Exposed conduits and pipes are also prominent.",
+        "mood": "The mood is functional and isolated, evoking a sense of practical necessity and resilience in a confined environment.",
+        "sounds": "hum of machinery, faint clinking, intermittent electronic beeps, subtle ventilation hiss",
+        "dominantElementsDescriptors": "Corrugated steel walls, workbench with tools, control panels, weathered wooden crate",
+        "spatialLayout": "The space is strictly rectangular and narrow, with straight walls approximately 3.5 meters apart and a ceiling height of around 4 meters. The layout emphasizes depth with a functional recess in the background, creating a sense of a functional, enclosed environment.",
+        "primary_surfaces": "corrugated steel, concrete/metal plating",
+        "secondary_surfaces": "reinforced wood, metal panels",
+        "accent_features": "hydroponic unit with desert plants, flickering yellow indicator lights, slightly ajar metal cabinet",
+        "dominant": "gray, walls",
+        "secondary": "brown, walls",
+        "accent": "yellow, lighting and indicator lights",
         "ambient": "warm",
-        "uniqueIdentifiers": "corrugated container walls, focused yellow industrial lighting, exposed conduits, utilitarian workspace",
-        "searchDesc": "Interior of a compact shipping container station, functional and lit by intense yellow light."
+        "uniqueIdentifiers": "corrugated steel interior, visible conduits, functional workbench, hydroponic niche",
+        "searchDesc": "Shipping container interior, functional workspace with tools, yellow lighting, corrugated steel."
       },
-      "imagePath": "https://v3b.fal.media/files/b/zebra/XYlM70YduuBthgir13fZB.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/penguin/byzNOP4OH3ThRc8Obk4Th.jpg",
       "focus": {
-        "node_id": "niche-1763108339640-jb9nj9hji",
+        "node_id": "niche-1763113965930-hedufpp8i",
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
@@ -1974,7 +2134,30 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763108339640-jb9nj9hji",
+                  "id": "niche-1763113965930-hedufpp8i",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763110577126-jqt3c71lb",
+      "type": "host",
+      "children": [
+        {
+          "id": "cbf76bc9-0ad8-41f7-b144-41a44eb280da",
+          "type": "region",
+          "children": [
+            {
+              "id": "0090b8bf-537e-4145-8de5-1649e681b38b",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763110668482-bxm9o062d",
                   "type": "niche",
                   "children": []
                 }

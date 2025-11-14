@@ -1,3 +1,5 @@
+import { fluxRoofFix, fluxInstructionsShort } from './constants';
+
 /**
  * Reusable Prompt Sections (Condensed)
  * Token-optimized shared sections used across different prompt types
@@ -170,4 +172,12 @@ export function buildCameraSpecificationsCondensed(): string {
 Small (<15m): 28-35mm lens, eye-level
 Medium (15-50m): 20-28mm lens, slight upward tilt
 Colossal (>50m): 14-20mm ultra-wide, upward tilt, deep depth of field, emphasize perspective`;
+}
+
+export function buildFluxRoofFixSection(): string {
+  return fluxRoofFix;
+}
+
+export function buildFluxInstructionsShortSection(): string {
+  return fluxInstructionsShort;
 }
