@@ -3,7 +3,6 @@
  * LLM-based classification of user navigation commands
  */
 
-import { getAvailableStyles } from './styles/registry';
 import type { NavigationIntent } from '../../../navigation/types';
 
 export interface IntentClassifierRequest {
@@ -69,18 +68,8 @@ Classify: "${userCommand}"`;
 /**
  * Build style selection section for prompt
  */
-function buildStyleSection(intent: NavigationIntent): string {
-  const availableStyles = getAvailableStyles(intent);
-  
-  if (availableStyles.length === 0) {
-    return '';
-  }
-  
-  const styleList = availableStyles
-    .map(style => `  - "${style.name}": ${style.description}`)
-    .join('\n');
-  
-  return `\nSTYLE SELECTION (for ${intent} intent):\nAnalyze the location's characteristics and select the most appropriate visual style:\n${styleList}\n\nBase style on location type, architectural tone, and cultural context. Include "style" field in JSON response.\nIf uncertain, use "default".`;
+function buildStyleSection(): string {
+  return '';
 }
 
 /**
@@ -133,12 +122,8 @@ export function intentClassifierPrompt(
     contextString += `\n- Visible Elements: ${elements}`;
   }
 
-  // For condensed mode, we need to estimate intent first to get styles
-  // For now, just include GO_INSIDE styles as it's the most common
-  const styleSection = buildStyleSection('GO_INSIDE');
-  
   if (mode === 'condensed') {
-    return buildCondensedPrompt(contextString, userCommand, styleSection);
+    return buildCondensedPrompt(contextString, userCommand, '');
   }
 
   return `You are a navigation intent classifier. Analyze the user's command and return ONLY a JSON object.
@@ -146,7 +131,7 @@ export function intentClassifierPrompt(
 ${contextString}
 
 User Command: "${userCommand}"
-
+       
 INTENT TYPES (genre-agnostic):
 
 1. GO_INSIDE - User wants to enter an enclosed space
@@ -214,8 +199,6 @@ OUTPUT FORMAT (JSON only, no markdown, no explanation):
   "style": "style_name or null (if styles available for this intent)",
   "confidence": 0.0-1.0
 }
-
-${styleSection}
 
 SMART ELEMENT SELECTION (for GO_INSIDE intent only):
 When intent is GO_INSIDE, you must select the MOST APPROPRIATE element to enter.

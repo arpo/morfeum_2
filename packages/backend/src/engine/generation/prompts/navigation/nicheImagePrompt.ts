@@ -53,7 +53,6 @@ export function nicheImagePrompt(
   const navigableInstructions = buildNavigableElementsInstructionsCondensed();
   const cameraSpecs = buildCameraSpecificationsCondensed();
 
-  // Assemble prompt - DNA-driven foundation (NO header - adaptations provide that)
   const prompt = `${parentAnalysis}
 
 PARENT LOCATION CONTEXT:

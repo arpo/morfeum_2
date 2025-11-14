@@ -1568,6 +1568,171 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "loc-1763107357770-1oaenws89": {
+      "id": "loc-1763107357770-1oaenws89",
+      "type": "host",
+      "name": "Arid Expanse",
+      "dna": {
+        "type": "host",
+        "name": "Arid Expanse",
+        "description": "Vast, sun-baked desert landscapes.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "utilitarian modularity, salvaged function",
+          "cultural_tone": "Nomadic survivalists and resourceful pioneers focused on self-sufficiency and adaptation to harsh environments.",
+          "materials_base": "Predominantly salvaged and repurposed industrial materials, emphasizing durability and ease of transport. Think weathered metals, reinforced composites, and robust sealants.",
+          "mood_baseline": "resilient, functional, isolated",
+          "palette_bias": "Earthy and desaturated tones dominate, with accents of stark industrial metallics and functional warning colors. Focus on muted ochres, dusty browns, and muted grays.",
+          "soundscape_base": "A low hum of active machinery, punctuated by the vast silence of the open environment. Occasional wind gusts and the metallic creak of structures.",
+          "flora_base": "Sparse, hardy desert vegetation adapted to extreme conditions. Drought-resistant succulents, tough grasses, and wind-swept scrub.",
+          "fauna_base": "Scavenging creatures and hardy desert dwellers. Insects, desert rodents, birds of prey, and resilient reptilian life."
+        },
+        "slug": "arid-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Arid Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "dbdeffef-3dd9-408f-b7db-45143f2955dd": {
+      "id": "dbdeffef-3dd9-408f-b7db-45143f2955dd",
+      "type": "region",
+      "name": "Arid Expanse",
+      "dna": {
+        "type": "region",
+        "name": "Arid Expanse",
+        "description": "",
+        "dna": {
+          "architectural_tone": "sun-baked utility, improvised shelters",
+          "cultural_tone": "Nomadic tribes and solitary outposts adapted to extreme heat and scarcity, prioritizing mobility and resource conservation.",
+          "materials_base": "primarily sand-blasted metals, hardened plastics, and reinforced canvas. Recycled components are common.",
+          "mood_baseline": "austere, enduring, exposed",
+          "palette_bias": "Dominated by shades of sand, ochre, and muted terracotta, with stark contrasts from the intense sun and deep shadows.",
+          "soundscape_base": "The pervasive sound of wind, both gentle and fierce, carries dust and sand. Distant animal cries and the faint hum of distant technology.",
+          "flora_base": "Hardy desert flora that survives with minimal water. Cacti, thorny shrubs, and resilient grasses adapted to extreme aridity.",
+          "fauna_base": "Small, quick-moving desert creatures and larger scavengers. Desert foxes, venomous insects, and hardy desert birds."
+        },
+        "slug": "arid-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Arid Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "b0fd3296-b1e9-4d7d-971c-34ef0d2142c7": {
+      "id": "b0fd3296-b1e9-4d7d-971c-34ef0d2142c7",
+      "type": "location",
+      "name": "The Nomad Station",
+      "dna": {
+        "type": "location",
+        "name": "The Nomad Station",
+        "description": "A modular desert complex assembled from repurposed shipping containers.",
+        "looks": "The Nomad Station is a compact, rectangular structure constructed from corrugated shipping containers, appearing weathered and functional. Two windows with warm, glowing interiors flank a central, open doorway that also emits a bright yellow light. A small wooden platform extends from the entrance, and sparse desert vegetation surrounds the base of the building. An elevated cylindrical apparatus with a tall, thin pipe extends vertically from one end of the container.",
+        "atmosphere": "The air appears clear, with no visible haze or fog. The surrounding environment suggests dry, arid conditions. The overall impression is one of stillness and isolation.",
+        "mood": "Resilient, functional, isolated",
+        "lighting": "The primary light source is the intense, warm yellow glow emanating from the interior of the structure. This creates a strong contrast with the dim, overcast sky and the muted tones of the desert landscape. The light casts warm highlights on the wooden platform and surrounding ground.",
+        "dominantElements": [
+          "Shipping container structure ~12m long, horizontal structure",
+          "Open doorway emitting bright yellow light, center",
+          "Tall cylindrical apparatus with pipe, left side, background",
+          "Window with glowing interior light, left side, midground",
+          "Window with glowing interior light, right side, midground"
+        ],
+        "spatialLayout": "Foreground: Sandy ground with sparse desert shrubs and a single rock. Midground: The primary structure, a shipping container, occupies the central area, featuring a wooden platform, an open doorway, and two lit windows. Background: Rolling desert dunes and distant hills are visible under a cloudy sky.",
+        "uniqueIdentifiers": [
+          "Repurposed shipping container construction",
+          "Bright, interior yellow light spilling from doorway and windows",
+          "Vertical pipe and cylindrical apparatus on container's exterior"
+        ],
+        "materials_primary": "Corrugated steel shipping container",
+        "materials_secondary": "Wood (platform), sand, rock",
+        "materials_accents": "Glowing interior light",
+        "colors_dominant": "Rust brown (container)",
+        "colors_secondary": "Yellow (interior light), beige/tan (sand, dunes), gray/blue (sky, clouds)",
+        "colors_accents": "Orange/red (vegetation highlights)",
+        "colors_ambient": "Dusk gray",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Open doorway with bright yellow light, leading into the structure"
+          },
+          {
+            "type": "window",
+            "position": "left, midground",
+            "description": "Window emitting bright yellow light, offering a view into the interior"
+          },
+          {
+            "type": "window",
+            "position": "right, midground",
+            "description": "Window emitting bright yellow light, offering a view into the interior"
+          },
+          {
+            "type": "object",
+            "position": "far left, background",
+            "description": "Vertical pipe and apparatus, potentially an antenna or vent system"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Desert outpost made of containers. Has: open door (center), lit window (left), lit window (right), vertical pipe (background)",
+        "dna": {
+          "architectural_tone": "modular container construction, functional assembly",
+          "cultural_tone": "A self-sufficient, mobile outpost for traders, prospectors, or researchers, prioritizing practicality and resource management.",
+          "materials_base": "Repurposed corrugated steel shipping containers, with reinforced wooden platforms and exposed conduits. Weathered surfaces are common.",
+          "mood_baseline": "isolated, resourceful, functional",
+          "palette_bias": "Rust browns and faded industrial grays of the containers, with sharp, warm yellow interior lighting creating focal points.",
+          "soundscape_base": "The distinct, low hum of solar power generators and ventilation systems. Occasional metallic creaks from the structure contracting or expanding with temperature.",
+          "flora_base": "Minimal, hardy desert plants are intentionally cultivated or found naturally near the structure's base.",
+          "fauna_base": "Common desert insects attracted to the slight warmth and potential resources, with occasional visits from scavenging desert animals."
+        },
+        "slug": "the-nomad-station"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/RAc4KrxCrD31mC3VI61Or.jpg",
+      "focus": {
+        "node_id": "The Nomad Station",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763107406866-neigek971": {
+      "id": "niche-1763107406866-neigek971",
+      "type": "niche",
+      "name": "Interior of The Nomad Station",
+      "dna": {
+        "looks": "This is the interior of a modular, container-like structure with corrugated steel walls and exposed conduits.  A reinforced wooden platform extends from the left, and a utilitarian corridor recedes into the background, bathed in yellow light.",
+        "colorsAndLighting": "Stark, warm yellow interior lighting dominates, casting deep shadows. The corrugated steel surfaces reflect this light, contributing to the overall tone.",
+        "atmosphere": "The air feels contained and functional, with a sense of isolation. The space evokes resourcefulness born from a harsh environment.  A dry, gritty texture is palpable from the sandy floor.",
+        "architectural_tone": "functional modular",
+        "cultural_tone": "A self-sufficient, mobile outpost for traders, prospectors, or researchers, prioritizing practicality and resource management.",
+        "materials": "Predominantly corrugated steel forms the walls and ceiling, showing signs of weathering.  Reinforced wooden platforms are integrated into the structure.  The floor is a textured sandy grit.",
+        "mood": "Evokes a mood of isolation and resourcefulness, characterized by functional grit and stark lighting.",
+        "sounds": "faint hum, distant clanks, gritty underfoot, low ventilation",
+        "dominantElementsDescriptors": "corrugated steel walls, exposed conduits, reinforced wooden platform, narrow yellow-lit corridor",
+        "spatialLayout": "A compact, rectangular space with a centered corridor leading deeper into the structure. The entrance is implied to be behind the viewer, with a balanced composition within the main compartment.",
+        "primary_surfaces": "corrugated steel, sandy grit",
+        "secondary_surfaces": "reinforced wood",
+        "accent_features": "glowing sealed windows, hardy desert plants, weathered rock",
+        "dominant": "yellow (interior light)",
+        "secondary": "grey (corrugated steel)",
+        "accent": "brown (wood), green (plants)",
+        "ambient": "warm",
+        "uniqueIdentifiers": "repurposed shipping container interior, stark yellow lighting, corrugated steel walls, sandy grit floor",
+        "searchDesc": "Modular sci-fi station interior with corrugated steel, yellow light, and wooden platforms. Functional, isolated feel."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/ASNQSCAD6WvuKyuDBziZ6.jpg",
+      "focus": {
+        "node_id": "niche-1763107406866-neigek971",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -1795,9 +1960,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763107357770-1oaenws89",
+      "type": "host",
+      "children": [
+        {
+          "id": "dbdeffef-3dd9-408f-b7db-45143f2955dd",
+          "type": "region",
+          "children": [
+            {
+              "id": "b0fd3296-b1e9-4d7d-971c-34ef0d2142c7",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763107406866-neigek971",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763027798536-8hd7xc26j"
+    "loc-1763107357770-1oaenws89"
   ]
 }

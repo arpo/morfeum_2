@@ -6,7 +6,6 @@
 import { generateText } from '../../../services/mzoo';
 import { AI_MODELS } from '../../../config/constants';
 import { nicheImagePrompt } from '../prompts/navigation/nicheImagePrompt';
-import { getStylePrompt } from '../prompts/navigation/styles/registry';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../../navigation/types';
 
 export interface ImagePromptOptions {
@@ -34,14 +33,7 @@ export async function generateImagePromptForNode(
   options?: ImagePromptOptions
 ): Promise<string> {
   const nodeType = options?.nodeType || 'niche';
-  const style = options?.style || 'default';
-  
-  // Get style prompt function from registry
-  // Currently only GO_INSIDE is registered, others fall back to default
-  const promptFunction = getStylePrompt(intent.intent, style);
-  
-  // Generate system prompt using the registered prompt function
-  const systemPrompt = promptFunction(context, intent, decision);
+  const systemPrompt = nicheImagePrompt(context, intent, decision);
 
   const messages = [
     { role: 'system', content: systemPrompt },
