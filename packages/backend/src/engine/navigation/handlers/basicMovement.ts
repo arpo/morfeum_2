@@ -21,14 +21,14 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
       action: 'create_niche',
       parentNodeId: currentNode.id,
       newNodeType: 'niche',
-      newNodeName: `Interior of ${currentNode.name}`,
+      newNodeName: `${intent.spaceType} of ${currentNode.name}`,
       style: intent.style || 'default',               // NEW: Pass style from intent
       perspective: intent.spaceType || 'interior',    // NEW: Pass perspective from intent
       metadata: {
         relation: 'child',
         entrance: entrance
       },
-      reasoning: `Creating interior niche based on ${entrance} in ${currentNode.name}`
+      reasoning: `Creating ${intent.spaceType} niche based on ${entrance} in ${currentNode.name}`
     };
   }
   

@@ -58,6 +58,11 @@ BEFORE creating the interior, analyze the parent structure's FORM:
    - Compact/small (< 15m) → Intimate interior (3-5m ceilings, walls 3-8m apart)
    - Large/expansive (15-50m) → Spacious interior (8-15m ceilings, walls 10-20m apart)
    - Towering/colossal (> 50m) → Vast interior (20m+ ceilings, walls 20m+ apart, visible depth 40m+)
+
+   Dimensional Guidelines:
+   Witch dimension is the largest? Depth / Height / Width?
+   If a building is very tall, interior height should reflect that.
+   If a building is very wide, interior width should reflect that.
    
    MANDATORY for colossal structures (> 50m):
    - Specify ceiling height in meters (e.g., "vaulted ceiling soaring 40m overhead")
