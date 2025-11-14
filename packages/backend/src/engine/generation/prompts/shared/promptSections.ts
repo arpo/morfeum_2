@@ -1,4 +1,5 @@
 import { fluxRoofFix, fluxInstructionsShort } from './constants';
+import { ALIGNMENT, INTERIOR_CAMERA_SPECS, INTERIOR_SHOT } from './cameraConfig';
 
 /**
  * Reusable Prompt Sections (Condensed)
@@ -168,10 +169,10 @@ export function buildInteriorSpaceRulesCondensed(entranceElement: string): strin
 }
 
 export function buildCameraSpecificationsCondensed(): string {
-  return `CAMERA SPECS: Include in final FLUX prompt based on space scale:
-Small (<15m): 28-35mm lens, eye-level
-Medium (15-50m): 20-28mm lens, slight upward tilt
-Colossal (>50m): 14-20mm ultra-wide, upward tilt, deep depth of field, emphasize perspective`;
+  return `CAMERA SPECS: ${ALIGNMENT.CENTERED}. ${INTERIOR_SHOT.shot} ${INTERIOR_SHOT.light}. Lens guidance:
+- Small (<15m): ${INTERIOR_CAMERA_SPECS.SMALL}
+- Medium (15-50m): ${INTERIOR_CAMERA_SPECS.MEDIUM}
+- Colossal (>50m): ${INTERIOR_CAMERA_SPECS.COLOSSAL}`;
 }
 
 export function buildFluxRoofFixSection(): string {

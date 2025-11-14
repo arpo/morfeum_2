@@ -7,7 +7,6 @@
 import type { IntentResult, NavigationContext, NavigationDecision } from '../../../navigation/types';
 import { buildNichePromptBase } from './nichePromptBase';
 import { applySpaceTypePreset } from './presets/interiorPreset';
-import { buildLocationDescriptors, buildMaterialsDescription, buildColorsDescription, buildDNADescriptors } from '../shared/contextBuilders';
 
 /**
  * Generate prompt for LLM to create FLUX image description
@@ -21,7 +20,7 @@ export function nicheImagePrompt(
   spaceType: 'interior' | 'exterior' = 'interior'
 ): string {
   const basePrompt = buildNichePromptBase(context);
-  const { preContext, postContext } = applySpaceTypePreset(
+  const presetNarrative = applySpaceTypePreset(
     context,
     intent,
     decision,
@@ -29,25 +28,9 @@ export function nicheImagePrompt(
     spaceType
   );
 
-  const descriptors = buildLocationDescriptors(context.currentNode.data);
-  const materials = buildMaterialsDescription(context.currentNode.data);
-  const colors = buildColorsDescription(context.currentNode.data);
-  const dnaDescriptors = buildDNADescriptors(context.currentNode.dna);
-
-  const prompt = `${preContext}
-
-PARENT LOCATION CONTEXT:
-Name: "${context.currentNode.name}"
-${descriptors.join('\n')}
-${materials ? `\n${materials}` : ''}
-${colors ? `\n${colors}` : ''}
-${context.currentNode.data.spatialLayout ? `\nSpatial Layout: "${context.currentNode.data.spatialLayout}"` : ''}
-
-${dnaDescriptors.length > 0 ? `DNA GUIDANCE (PRIMARY - use this to drive style & atmosphere):\n${dnaDescriptors.join('\n')}` : ''}
+  const prompt = `${presetNarrative}
 
 ${basePrompt}
-
-${postContext}
 
 OUTPUT: Return a detailed image prompt for FLUX with clear foreground/midground/background organization and inline navigable element markers.`;
   

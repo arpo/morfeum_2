@@ -72,6 +72,13 @@
   - Inline navigable element markers for LLM extraction
   - Interior-focused with architectural form matching
 
+### Prompt System Improvements
+- [x] Prompt camera alignment unification (Nov 14, 2025)
+  - All prompt generators (niche/location) use centralized, centered camera config
+  - Imports and prompt assembly reference the same config for seamless transitions
+  - TypeScript errors resolved for camera config imports
+  - Consistent, aligned camera instructions in all generated prompts
+
 ## In Progress 🔄
 
 ### Navigation Enhancement

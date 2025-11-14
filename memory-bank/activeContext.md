@@ -4,6 +4,13 @@
 The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
+- **Prompt Camera Alignment Unification** (Nov 14, 2025): All prompt generators now use the centralized, centered camera configuration.
+  - Updated `nicheImagePrompt.ts` and `locationImageGeneration.ts` to use `ALIGNMENT.CENTERED` and shared lens/shot specs from `cameraConfig.ts`
+  - Ensured both niche and location prompts include explicit centered/eye-level camera narrative
+  - Imports and prompt assembly now reference the same config for seamless transitions
+  - TypeScript errors resolved for camera config imports
+  - **Result**: All generated prompts (interior and exterior) now have consistent, aligned camera instructions
+
 - **Complete "Go Inside" Pipeline** (Nov 12, 2025): Full end-to-end niche node creation
   - **Backend DNA Generation**: Creates complete node with LLM-generated DNA
     - Uses `nodeDNAGeneration.ts` prompt (same as location creation)

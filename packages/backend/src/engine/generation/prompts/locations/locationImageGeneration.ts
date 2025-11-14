@@ -7,7 +7,7 @@
 
 import type { HierarchyNode } from '../../../hierarchyAnalysis/types';
 import { generalPromptFix } from '../shared/generalPromptFix';
-import { OVERVIEW_SHOT, EXTERIOR_SHOT, INTERIOR_SHOT } from '../shared/cameraConfig';
+import { OVERVIEW_SHOT, EXTERIOR_SHOT, INTERIOR_SHOT, ALIGNMENT } from '../shared/cameraConfig';
 
 /**
  * Shot instructions based on node type
@@ -71,6 +71,7 @@ const prompt = `Original user description: "${originalPrompt}"
 
 ${targetNode.name}, ${shotInstructions.shot}.
 
+[CAMERA ALIGNMENT:] ${ALIGNMENT.CENTERED}
 [LIGHT:] ${shotInstructions.light}
 [LENS:] ${shotInstructions.lens}
 
