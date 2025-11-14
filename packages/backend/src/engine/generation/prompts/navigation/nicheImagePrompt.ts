@@ -6,7 +6,7 @@
 
 import type { IntentResult, NavigationContext, NavigationDecision } from '../../../navigation/types';
 import { buildNichePromptBase } from './nichePromptBase';
-import { applySpaceTypePreset } from './presets/interiorPreset';
+import { buildSpaceTypePresetSections } from './presets/spaceTypePresets';
 
 /**
  * Generate prompt for LLM to create FLUX image description
@@ -20,7 +20,7 @@ export function nicheImagePrompt(
   spaceType: 'interior' | 'exterior' = 'interior'
 ): string {
   const basePrompt = buildNichePromptBase(context);
-  const presetNarrative = applySpaceTypePreset(
+  const presetNarrative = buildSpaceTypePresetSections(
     context,
     intent,
     decision,

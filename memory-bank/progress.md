@@ -78,6 +78,12 @@
   - Imports and prompt assembly reference the same config for seamless transitions
   - TypeScript errors resolved for camera config imports
   - Consistent, aligned camera instructions in all generated prompts
+- [x] Prompt preset refactor (Nov 14, 2025)
+  - Removed all hard-coded narrative from both interior and exterior prompt presets
+  - Presets now assemble output using only shared, reusable prompt sections and context/DNA data
+  - Added new helpers for exterior prompts
+  - Created dispatcher for selecting preset builder by spaceType
+  - Updated prompt generator to use dispatcher
 
 ## In Progress 🔄
 

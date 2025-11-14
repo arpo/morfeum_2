@@ -1,135 +1,5 @@
 {
   "nodes": {
-    "loc-1762957281060-fubzyjwnl": {
-      "id": "loc-1762957281060-fubzyjwnl",
-      "type": "host",
-      "name": "The Spectral Realm",
-      "dna": {
-        "type": "host",
-        "name": "The Spectral Realm",
-        "description": "A dimension steeped in fear and phantom energy.",
-        "dna": {
-          "genre": "horror|supernatural",
-          "architectural_tone": "decaying grandeur, gothic silhouettes",
-          "cultural_tone": "A realm saturated with lingering emotions, where the past refuses to die. It is a place of forgotten stories and eternal echoes.",
-          "materials_base": "A palette emphasizing aged, textured surfaces. Think weathered stone, darkened wood, tarnished metals, and ethereal, translucent forms.",
-          "mood_baseline": "oppressive, melancholic, chilling",
-          "palette_bias": "Dominated by deep, desaturated tones. Cool blues, greys, and muted purples form the base, accented by spectral whites and occasional, unsettling warm glows.",
-          "soundscape_base": "A pervasive stillness punctuated by distant whispers, faint moans, and the unsettling creaks of unseen movements. An ambient hum of spectral energy.",
-          "flora_base": "Sparse, gnarled, and spectral vegetation. Think skeletal trees, withered vines, and fungi that glow with an unearthly light.",
-          "fauna_base": "Entities bound to the spectral realm. Phantoms, specters, and lingering spiritual imprints. No corporeal or biological life as understood elsewhere."
-        },
-        "slug": "the-spectral-realm"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Spectral Realm",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "60cb6ded-c177-4da7-ab54-41950ed4c22e": {
-      "id": "60cb6ded-c177-4da7-ab54-41950ed4c22e",
-      "type": "region",
-      "name": "The Shadowlands",
-      "dna": {
-        "type": "region",
-        "name": "The Shadowlands",
-        "description": "A desolate expanse where spectral entities roam.",
-        "dna": {
-          "architectural_tone": null,
-          "cultural_tone": null,
-          "materials_base": null,
-          "mood_baseline": "desolate, foreboding, haunted",
-          "palette_bias": "Leans towards oppressive blues and greys, with deeper shadows and occasional glimmers of pale, spectral light.",
-          "soundscape_base": "Echoes of mournful cries and the rustling of unseen, spectral entities. The wind carries faint, distorted sounds.",
-          "flora_base": "Withered, skeletal trees and spectral mist-shrouded flora. Vegetation is scarce and appears perpetually dying or dead.",
-          "fauna_base": "Wandering spectral entities and shadow-formed creatures. Minimal distinct forms, mostly ephemeral presence."
-        },
-        "slug": "the-shadowlands"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Shadowlands",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "10128f5a-3b1e-4a20-9649-5e303347ba7e": {
-      "id": "10128f5a-3b1e-4a20-9649-5e303347ba7e",
-      "type": "location",
-      "name": "The Whispering Manor",
-      "dna": {
-        "type": "location",
-        "name": "The Whispering Manor",
-        "description": "An old, abandoned manor notorious for its hauntings.",
-        "looks": "A two-and-a-half-story Victorian manor stands centrally, constructed of dark, weathered wood. Its steep, dark grey roof features dormer windows, and a prominent central gable is topped with a cross-like finial. Shutters flank several windows, some of which emit a warm, yellow glow, suggesting interior light. A dark, wooden fence with pointed pickets encloses the property, with an opening suggesting a gate. Bare trees with skeletal branches frame the house and line the path leading to its entrance. The overall structure appears aged but intact, with a palpable sense of abandonment.",
-        "atmosphere": "A thick, blue-grey mist permeates the scene, obscuring details in the background and lending a damp, cool quality to the air. The ground appears wet and reflective, suggesting recent rain or perpetual dampness.",
-        "mood": "Terrifying, unsettling",
-        "lighting": "The primary light source emanates from the central doorway and the illuminated windows of the manor, casting a warm, golden-yellow hue. This contrasts sharply with the cool, dark blue ambient light of the environment, creating a high-contrast scene. Shadows are deep and indistinct due to the atmospheric haze.",
-        "dominantElements": [
-          "Victorian manor (est. 15m tall, 20m wide)",
-          "Dark wooden fence",
-          "Bare trees"
-        ],
-        "spatialLayout": "The foreground consists of a dark, leaf-strewn ground leading to a wet, reflective pathway towards the manor. The midground is dominated by the Whispering Manor, a substantial, CUBIC STRUCTURE, with a wooden fence and gate providing a barrier. The background is a dense, misty expanse with the silhouettes of bare trees and foliage.",
-        "uniqueIdentifiers": [
-          "Victorian manor with cross finial",
-          "Warm light emanating from windows",
-          "Skeletal bare trees framing the scene"
-        ],
-        "materials_primary": "wood",
-        "materials_secondary": "shingle",
-        "materials_accents": "glass",
-        "colors_dominant": "dark blue (sky, mist, shadows)",
-        "colors_secondary": "dark grey (roof, fence), brown (wood of manor, trees)",
-        "colors_accents": "warm yellow (window and door light)",
-        "colors_ambient": "cool blue",
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center, midground",
-            "description": "Ornate wooden door bathed in warm light, suggesting entry"
-          },
-          {
-            "type": "window",
-            "position": "multiple, midground",
-            "description": "Windows emitting warm light, offering glimpses into the manor"
-          },
-          {
-            "type": "passage",
-            "position": "center, foreground",
-            "description": "Wet, reflective pathway leading directly to the manor entrance"
-          },
-          {
-            "type": "archway",
-            "position": "center, midground",
-            "description": "Entrance through the fence created by a gate opening"
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Abandoned Victorian manor in mist. Has: door (center, midground), multiple windows (midground), passage (center, foreground)",
-        "dna": {
-          "architectural_tone": "Victorian Gothic, decaying, brooding",
-          "cultural_tone": "A site of intense lingering trauma and tragic events. The manor is a focal point for spectral activity.",
-          "materials_base": "Weathered wood, dark shingles, aged stone foundations, and spectral emanations.",
-          "mood_baseline": "ominous, unsettling, sorrowful",
-          "palette_bias": "Dark blues and greys are dominant, with contrasting warm, inviting glows from within windows, and the muted brown of aged wood.",
-          "soundscape_base": "Distant whispers, faint creaks, and the occasional subtle spectral sigh. The wind sounds mournful around the structure.",
-          "flora_base": "Skeletal trees framing the property, with sparse, dead undergrowth. Minimal signs of healthy plant life.",
-          "fauna_base": "Specific lingering spirits tied to the manor's history. Manifestations are more defined than in the wider Shadowlands."
-        },
-        "slug": "the-whispering-manor"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/kbe9F7dlPAEtTt98zlBij.jpg",
-      "focus": {
-        "node_id": "The Whispering Manor",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
     "loc-1762958029655-dpqfatu6a": {
       "id": "loc-1762958029655-dpqfatu6a",
       "type": "host",
@@ -700,49 +570,6 @@
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
-      }
-    },
-    "niche-1763018143696-2wsvf0fs1": {
-      "id": "niche-1763018143696-2wsvf0fs1",
-      "type": "niche",
-      "name": "Interior of The Crystalline Mine",
-      "dna": {
-        "looks": "A rough-hewn canyon tunnel interior with jagged rock surfaces mirroring natural cavern expansion. Crystalline veins pulse with internal light, contrasting the deep blues and greys of the stone. The space is enclosed with a substantial yet intimate scale.",
-        "colorsAndLighting": "Dominant deep blues and greys of the rock are dramatically punctuated by the internal glow of blue and white crystalline veins. The distant glowing blue portal casts long, dramatic shadows.",
-        "atmosphere": "The air is filled with a mysterious, humming atmosphere, suggesting a functional site for mineral extraction. A sense of subterranean enclosure pervades, with a subtle chill from the stone and faint mineral dust.",
-        "architectural_tone": "excavated tunnels",
-        "cultural_tone": "Functional site for extracting luminescent minerals.",
-        "materials": "Rough-hewn rock surfaces dominate, textured with striations and crystalline outcrops. The floor is compacted earth and gravel. Veins of glowing minerals are embedded within the rock and ceiling.",
-        "mood": "Industrial and mysterious, evoking a sense of hidden depths and subtle power.",
-        "sounds": "Humming atmosphere, faint mineral dust settling.",
-        "dominantElementsDescriptors": [
-          "Jagged rock walls",
-          "Glowing crystalline veins",
-          "Compacted earth floor",
-          "Glowing blue portal"
-        ],
-        "spatialLayout": "An enclosed, rough-hewn tunnel opening into a wider cavern. It features a solid ceiling about 8 meters high and is navigable via a ventral passage and right-wall stairs.",
-        "primary_surfaces": "Rough-hewn rock, compacted earth, gravel, crystalline veins",
-        "secondary_surfaces": "Phosphorescent fungi, mineral dust",
-        "accent_features": "Phosphorescent fungi emitting green light, unpolished blue crystals inlaid in floor, narrow unlit passage.",
-        "dominant": "Deep blue (tunnel walls, portal light)",
-        "secondary": "Grey (stone)",
-        "accent": "White (crystalline veins), Green (fungi)",
-        "ambient": "Cool",
-        "uniqueIdentifiers": [
-          "Internal glow of blue and white crystalline veins",
-          "Rough-hewn canyon tunnel architecture",
-          "Distant glowing blue portal",
-          "Phosphorescent fungi accents"
-        ],
-        "searchDesc": "Crystalline mine interior with rough rock walls, glowing veins, and a blue portal. Humming, industrial mood."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/rabbit/D51Vta8pqZiaejFPwhtX1.jpg",
-      "focus": {
-        "node_id": "niche-1763018143696-2wsvf0fs1",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
       }
     },
     "loc-1763023469636-ytrslr39j": {
@@ -1536,39 +1363,6 @@
         "distance": "close"
       }
     },
-    "niche-1763046874245-25jl5i6c8": {
-      "id": "niche-1763046874245-25jl5i6c8",
-      "type": "niche",
-      "name": "Interior of The Whispering Manor",
-      "dna": {
-        "looks": "A narrow, winding corridor recedes into dimness, flanked by dark, weathered wood-paneled walls. The space is sparsely furnished, dominated by stark architectural lines and decaying details.",
-        "colorsAndLighting": "Dim, spectral warm yellow light emanates from unseen sources, casting long shadows. Dark, weathered wood tones and grey hues dominate the scene.",
-        "atmosphere": "A faint, unsettling draft carries the scent of dust and decay. The air feels heavy with a palpable sense of abandonment and lingering trauma.",
-        "architectural_tone": "Victorian Gothic, decaying",
-        "cultural_tone": "A site of intense lingering trauma and spectral activity.",
-        "materials": "Dark, weathered wood paneling with ornate but decaying trim forms the walls. The floor is a thick layer of decaying leaves and dust over damp, dark wood.",
-        "mood": "Brooding, melancholic, and deeply unsettling, evoking a sense of dread and forgotten tragedy.",
-        "sounds": "Silence, creaking, faint draft, distant faint light",
-        "dominantElementsDescriptors": "Dark wood paneling, angled ceiling with exposed beams, grandfather clock, partially opened door.",
-        "spatialLayout": "A narrow, winding corridor, approximately 2 meters wide, angles slightly to the right and recedes into darkness. The ceiling is angled, following the pitched roofline.",
-        "primary_surfaces": "Dark wood paneling, decaying leaf and dust-covered floor, angled wooden ceiling.",
-        "secondary_surfaces": "Decaying Victorian trim, exposed aged wooden beams.",
-        "accent_features": "Warped and discolored door, tarnished grandfather clock, small grimy window with flickering light.",
-        "dominant": "Dark brown (wood paneling)",
-        "secondary": "Dark grey (roofline implied)",
-        "accent": "Warm yellow (light glow)",
-        "ambient": "warm",
-        "uniqueIdentifiers": "Spectral warm yellow light, dark decaying wood, winding corridor, grandfather clock.",
-        "searchDesc": "Victorian Gothic manor interior: dimly lit, decaying wood, winding corridor, eerie atmosphere."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/UTwA4Oh9ZNYqSecC2OGHm.jpg",
-      "focus": {
-        "node_id": "niche-1763046874245-25jl5i6c8",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
     "loc-1763107357770-1oaenws89": {
       "id": "loc-1763107357770-1oaenws89",
       "type": "host",
@@ -1893,33 +1687,391 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "niche-1763118383387-9k5mhdfu3": {
+      "id": "niche-1763118383387-9k5mhdfu3",
+      "type": "niche",
+      "name": "interior of The Crystalline Mine",
+      "dna": {
+        "looks": "A rough-hewn canyon tunnel opens into a large, cavernous space dominated by a luminous rectangular portal. A paved grey stone pathway leads from the foreground into the expansive interior, with uneven, textured rock walls on either side.",
+        "colorsAndLighting": "The scene is lit by a powerful, electric blue light emanating from a large portal in the background. Faint cool blue light also emanates from crystalline veins in the walls, casting sharp shadows.",
+        "atmosphere": "The air is thick with the cool, mineral-rich scent of subterranean rock. A sense of mystery and industrial activity pervades the spacious, cavernous interior.",
+        "architectural_tone": "excavated tunnels",
+        "cultural_tone": "A functional site for extracting luminescent minerals.",
+        "materials": "The primary materials are rough-hewn, textured rock and tightly packed grey stone. Veins of faintly glowing blue crystalline minerals are interspersed within the rock.",
+        "mood": "Mysterious and awe-inspiring, with a sense of deep excavation.",
+        "sounds": "drip, echo, rumble, scrape, faint hum",
+        "dominantElementsDescriptors": [
+          "Luminous rectangular portal",
+          "Rough-hewn canyon walls",
+          "Paved stone pathway",
+          "Veins of blue crystalline minerals"
+        ],
+        "spatialLayout": "The space begins as a tunnel and dramatically opens into a large, expansive cavern. The pathway leads towards the focal point of the background portal.",
+        "primary_surfaces": "Rock walls, stone floor, shadowed vaulted ceiling",
+        "secondary_surfaces": "Crystalline mineral veins",
+        "accent_features": "Veins of glowing blue crystalline minerals, tool marks on walls",
+        "dominant": "blue (luminous portal and mineral veins)",
+        "secondary": "grey (pathway)",
+        "accent": "dark rock (walls)",
+        "ambient": "cool",
+        "uniqueIdentifiers": [
+          "Electric blue luminous portal",
+          "Crystalline mineral veins",
+          "Rough-hewn cavern"
+        ],
+        "searchDesc": "Interior of a crystalline mine tunnel with a blue luminous portal and mineral veins."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/FGs2vubNC2REN9BQF80X-.jpg",
+      "focus": {
+        "node_id": "niche-1763118383387-9k5mhdfu3",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "niche-1763118477231-zs1dpgi88": {
+      "id": "niche-1763118477231-zs1dpgi88",
+      "type": "niche",
+      "name": "exterior of The Sculpture Garden",
+      "dna": {
+        "looks": "A vast, enclosed interior space defined by monumental concrete structures. Geometric lines and large openings create a sense of immense scale and depth, with a soaring vaulted ceiling overhead. The layout suggests grand architectural corridors leading into the distance.",
+        "colorsAndLighting": "Dominant shades of grey from raw concrete and dark stone paving, with diffused, cool-toned internal lighting casting soft shadows. Accent lighting provides pockets of warmth.",
+        "atmosphere": "The air feels cool and still within this minimalist, artistic sanctuary. Subtle atmospheric effects like dust motes or faint mist enhance the sense of contemplative spaciousness and austere beauty. A profound feeling of quietude pervades.",
+        "architectural_tone": "minimalist concrete",
+        "cultural_tone": "A dedicated public space designed for the contemplation and appreciation of sculptural art amidst controlled nature.",
+        "materials": "Raw, textured concrete forms the primary structural elements, complemented by dark, polished stone paving underfoot. Surfaces exhibit subtle variations in tone and finish, emphasizing their monolithic nature.",
+        "mood": "Contemplative and spacious, evoking a sense of awe and artistic immersion.",
+        "sounds": "Echoing footsteps, distant hum, soft ventilation.",
+        "dominantElementsDescriptors": [
+          "Monumental concrete pillars",
+          "Grand arched passageways",
+          "Soaring vaulted ceiling",
+          "Polished stone floor"
+        ],
+        "spatialLayout": "A vast, expansive interior space with a strong sense of verticality and receding depth. Large rectangular and arched openings draw the eye through monumental corridors towards distant, softly lit expanses.",
+        "primary_surfaces": "Textured concrete walls and vaulted ceiling, polished dark stone floor.",
+        "secondary_surfaces": "Subtle architectural bases, integrated low planters.",
+        "accent_features": "Integrated minimalist light fixtures, subtle ceiling ribbing or coffering, atmospheric haze.",
+        "dominant": "Grey (80%)",
+        "secondary": "Dark Grey (15%)",
+        "accent": "Cool White, Subtle Warm Tones (5%)",
+        "ambient": "Cool",
+        "uniqueIdentifiers": [
+          "Monumental poured concrete architecture",
+          "Vast scale and soaring verticality",
+          "Geometric openings and deep corridors",
+          "Diffused, atmospheric interior lighting"
+        ],
+        "searchDesc": "Vast concrete interior space with monumental forms, minimalist style, and diffused lighting."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/bhyYddFaKhfTurAbwHrSe.jpg",
+      "focus": {
+        "node_id": "niche-1763118477231-zs1dpgi88",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763118887574-1q2nre8j4": {
+      "id": "loc-1763118887574-1q2nre8j4",
+      "type": "host",
+      "name": "Nevada Desert",
+      "dna": {
+        "type": "host",
+        "name": "Nevada Desert",
+        "description": "Vast arid expanse known for extreme conditions and ephemeral events.",
+        "dna": {
+          "genre": "sci-fi|post-apocalyptic",
+          "architectural_tone": "ephemeral, modular, adaptable",
+          "cultural_tone": "Nomadic communities focused on self-expression, survival, and technological innovation in harsh environments. Emphasis on temporary structures and artistic endeavors.",
+          "materials_base": "Durable, weather-resistant synthetics, salvaged industrial components, and lightweight, often reflective or translucent materials. Emphasis on materials that can withstand extreme temperatures and dust.",
+          "mood_baseline": "resourceful, experimental, vibrant, resilient",
+          "palette_bias": "Bold, contrasting colors that stand out against natural muted tones. Often features neon, electric blues, vibrant purples, and energetic oranges alongside metallic silvers and deep blacks.",
+          "soundscape_base": "A constant hum of generator power, distant electronic music, wind whipping across open spaces, and the occasional percussive sounds of construction or art activation.",
+          "flora_base": "Sparse, hardy desert vegetation; drought-resistant succulents and scrub brush adapted to arid conditions. Some artificial or genetically modified flora for aesthetic or functional purposes.",
+          "fauna_base": "Hardy desert-adapted creatures; insects, reptiles, and birds. Potential for bio-engineered or robotic companions suited to the environment."
+        },
+        "slug": "nevada-desert"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Nevada Desert",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "02e46c72-4701-49b2-a3c3-cf8c428572de": {
+      "id": "02e46c72-4701-49b2-a3c3-cf8c428572de",
+      "type": "region",
+      "name": "Nevada Desert",
+      "dna": {
+        "type": "region",
+        "name": "Nevada Desert",
+        "description": "",
+        "dna": {
+          "architectural_tone": "austere, functional, modular with artistic embellishments",
+          "cultural_tone": "Established temporary settlements or outposts designed for prolonged stays, focusing on infrastructure for survival and communal events amidst vast, untamed wilderness.",
+          "materials_base": "Primarily corrugated metal, reinforced plastics, and earth-packed structures. Incorporates windbreaks and shaded coverings. A preference for materials that can be scavenged or easily transported.",
+          "mood_baseline": "isolated, contemplative, resilient",
+          "palette_bias": "Earthy tones of sand, rock, and muted desert flora, contrasted by the stark, often weathered metallic finishes of structures. Occasional bursts of vibrant color from practical markings or personal adornments.",
+          "soundscape_base": "The omnipresent sound of wind, punctuated by the calls of desert birds and the distant hum of vehicles or generators. Evokes a sense of vast emptiness and natural forces.",
+          "flora_base": "Drought-resistant desert flora such as creosote bushes, sagebrush, and hardy cacti. Minimal cultivated areas focusing on survival needs.",
+          "fauna_base": "Native desert wildlife like coyotes, rabbits, various reptiles, and insects. Adaptations for heat and scarcity are key."
+        },
+        "slug": "nevada-desert"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Nevada Desert",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "f98f64d1-aabf-4eb2-95da-704e4a5320f5": {
+      "id": "f98f64d1-aabf-4eb2-95da-704e4a5320f5",
+      "type": "location",
+      "name": "The Art Oasis",
+      "dna": {
+        "type": "location",
+        "name": "The Art Oasis",
+        "description": "A prominent area within Black Rock City dedicated to large-scale art installations.",
+        "looks": "The scene depicts an expansive, flat desert landscape at twilight, dominated by a large, ornate art installation. The structure resembles an elaborate gateway or temple, adorned with spiky, crystalline formations that emit vibrant neon light. The ground is a textured, sandy expanse, and the sky above is a deep indigo, dotted with stars. Rays of light emanate from the art piece, piercing the dusky air and illuminating the immediate surroundings.",
+        "atmosphere": "The air appears clear and dry, typical of a desert environment. A faint haze may be present, catching the light from the installation and the distant sky.",
+        "mood": "Creative, expansive, awe-inspiring",
+        "lighting": "The primary light source is the art installation itself, emitting a strong, vibrant glow. The light is predominantly warm oranges and intense purples, creating a high contrast with the dark sky. Light rays are visible, suggesting a diffused but powerful illumination.",
+        "dominantElements": [
+          "Central arched gateway structure (est. 30m wide, 20m tall, WIDE STRUCTURE) with intricate crystalline spires",
+          "Left section of the art installation with crystalline formations and purple light",
+          "Right section of the art installation with crystalline formations and purple light",
+          "Expansive, textured desert floor in the foreground"
+        ],
+        "spatialLayout": "The foreground consists of the textured desert floor, stretching out towards the art installation. The midground is dominated by the massive, symmetrical art structure, which spans a significant portion of the view. The background shows the vast, dark desert sky filled with stars and a hint of the horizon.",
+        "uniqueIdentifiers": [
+          "Elaborate, symmetrical crystalline art structure",
+          "Central arched portal emitting bright light",
+          "Vibrant neon illumination in purples and oranges"
+        ],
+        "materials_primary": "Crystal-like structures, possibly translucent or reflective",
+        "materials_secondary": "Textured ground, likely sand or dust",
+        "materials_accents": "Internal light sources, glowing elements within the art",
+        "colors_dominant": "Vibrant purple, emitted by the crystalline structures",
+        "colors_secondary": "Warm orange and red tones at the base of the structure, and a bright white/purple glow from the central portal",
+        "colors_accents": "Tiny points of light in the starry sky",
+        "colors_ambient": "Deep indigo and twilight hues in the sky",
+        "navigableElements": [
+          {
+            "type": "portal",
+            "position": "center, midground",
+            "description": "A large, brightly glowing arched portal inviting entry into the structure"
+          }
+        ],
+        "searchDesc": "[Exterior Art Installation] Desert gateway with luminous crystalline spires. Has: glowing portal (center, midground)",
+        "dna": {
+          "architectural_tone": "sculptural, interactive, experimental",
+          "cultural_tone": "A hub for large-scale, temporary art installations that push creative boundaries, often designed to be experienced and explored. Fosters a sense of wonder and communal artistic appreciation.",
+          "materials_base": "A wide array of salvaged metals, treated woods, plastics, and increasingly, translucent and light-reactive materials. Structures are often temporary but engineered for visual impact.",
+          "mood_baseline": "awe-inspiring, vibrant, experimental",
+          "palette_bias": "Dominated by the vibrant, often artificial light sources emanating from the art. Contrasts deep twilight blues and indigos with intense neons, glowing purples, fiery oranges, and stark whites.",
+          "soundscape_base": "A focal point of ambient sound, often featuring curated electronic soundscapes or sonic art installations. Interspersed with the murmurs of crowds interacting with the art.",
+          "flora_base": "Generally 'None' in favor of artistic structures, though small pockets of hardy desert plants might be preserved or integrated into installations.",
+          "fauna_base": "Primarily visitor fauna; humans and their interactions. Minimal native fauna due to dense activity and light pollution."
+        },
+        "slug": "the-art-oasis"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/djN54mhdJFzimKivmkppw.jpg",
+      "focus": {
+        "node_id": "The Art Oasis",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763118939892-6ywf6txx3": {
+      "id": "niche-1763118939892-6ywf6txx3",
+      "type": "niche",
+      "name": "exterior of The Art Oasis",
+      "dna": {
+        "looks": "A colossal, awe-inspiring interior space dominated by towering, interconnected crystalline formations. The architecture is sculptural and experimental, featuring massive, glowing pillars and jagged crystalline surfaces that refract light.",
+        "colorsAndLighting": "Vibrant neon purples, oranges, and stark whites emanate from the crystalline structures, creating a dynamic, pulsating glow. Deep indigo hues fill the shadowed areas, contrasting sharply with the intense neon.",
+        "atmosphere": "The air is thick with a sense of wonder and vibrant energy, subtly infused with luminous vapor. A constant, low hum emanates from the glowing architecture, and the neon lights flicker rhythmically, creating a dynamic visual texture.",
+        "architectural_tone": "experimental sculptural",
+        "cultural_tone": "A hub for visionary, large-scale art installations and communal artistic appreciation.",
+        "materials": "The primary materials are transformed crystalline formations, appearing as sculpted, translucent blocks and jagged spires. These are complemented by salvaged metals and light-reactive plastics, creating a highly experimental and luminous environment.",
+        "mood": "Awe-inspiring and experimental, fostering a profound sense of wonder and artistic immersion.",
+        "sounds": "low hum, soft pulses, subtle shimmer, faint echoes",
+        "dominantElementsDescriptors": [
+          "Towering crystalline formations",
+          "Massive sculpted pillars",
+          "Vaulted crystalline ceiling",
+          "Pulsing neon light sources"
+        ],
+        "spatialLayout": "A vast, circular expanse with a soaring vaulted ceiling. Walls stretch 20-25m to either side, composed of intricate crystalline structures that imply immense depth and passage. The scale is colossal, with a ceiling at least 35m overhead.",
+        "primary_surfaces": "crystalline formations, polished aggregate floor",
+        "secondary_surfaces": "salvaged metals, treated woods, light-reactive plastics",
+        "accent_features": "Subtle wisps of luminous vapor, crystalline dust shimmering on the floor.",
+        "dominant": "purple neon (50%)",
+        "secondary": "indigo (30%)",
+        "accent": "orange neon (15%), white neon (5%)",
+        "ambient": "cool",
+        "uniqueIdentifiers": [
+          "Colossal crystalline architecture",
+          "Vibrant neon lighting from formations",
+          "Soaring vaulted ceiling resembling crystal spires"
+        ],
+        "searchDesc": "Vast interior of an art oasis featuring colossal crystalline architecture and vibrant neon lighting."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/1LmCn_o-wZOqOWNs6bOsP.jpg",
+      "focus": {
+        "node_id": "niche-1763118939892-6ywf6txx3",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763125549918-hhpnv2ty2": {
+      "id": "loc-1763125549918-hhpnv2ty2",
+      "type": "host",
+      "name": "The Spectral Realm",
+      "dna": {
+        "type": "host",
+        "name": "The Spectral Realm",
+        "description": "A dimension where lingering spirits manifest and interact with the living world.",
+        "dna": {
+          "genre": "supernatural|horror",
+          "architectural_tone": "Gothic Revival, Victorian decay",
+          "cultural_tone": "A realm defined by lingering emotions and unfinished business, where the veil between life and death is thin. It harbors forgotten histories and echoes of past traumas.",
+          "materials_base": "A palette of aged, weathered materials reflecting time and neglect. Think decaying wood, crumbling stone, and the spectral sheen of ethereal substances. Emphasizes texture and the feeling of age.",
+          "mood_baseline": "Melancholy, eerie, haunting",
+          "palette_bias": "Dominated by cool, muted tones that evoke twilight and shadow. Deep blues, grays, and desaturated earth tones create an atmosphere of perpetual dusk, with occasional, spectral highlights.",
+          "soundscape_base": "Subtle ambient sounds of creaking wood, distant whispers, rustling unseen drapery, and the faint echo of sorrowful sighs. The absence of sound is as prominent as its presence.",
+          "flora_base": "Twisted, skeletal trees; shadowy, overgrown vines; and pale, spectral fungi. Vegetation is often dead or appears unnaturally dark and withered, contributing to a sense of decay and neglect.",
+          "fauna_base": "Manifestations of spectral energy, ethereal wisps, shadowy figures, and creatures born of fear and memory. No conventional, corporeal animals are present."
+        },
+        "slug": "the-spectral-realm"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Spectral Realm",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "e9dcd921-f96e-4105-b46a-670019f0d719": {
+      "id": "e9dcd921-f96e-4105-b46a-670019f0d719",
+      "type": "region",
+      "name": "The Spectral Realm",
+      "dna": {
+        "type": "region",
+        "name": "The Spectral Realm",
+        "description": "",
+        "slug": "the-spectral-realm"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Spectral Realm",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "8ffc84b2-0be8-44f1-a707-4e92861c01ca": {
+      "id": "8ffc84b2-0be8-44f1-a707-4e92861c01ca",
+      "type": "location",
+      "name": "Blackwood Manor",
+      "dna": {
+        "type": "location",
+        "name": "Blackwood Manor",
+        "description": "An old, decaying manor house rumored to be inhabited by restless spirits.",
+        "looks": "The image depicts a large, dark, Victorian-era manor house shrouded in twilight. Its wooden facade appears weathered and aged, with steeply pitched roofs and multiple gables. Many windows are illuminated from within, casting a warm, inviting glow against the exterior's somber tones. A wraparound porch extends across the front, supported by ornate columns, and leads to a central, inviting doorway. The surrounding grounds are overgrown with dark foliage and large, bare trees, contributing to a sense of isolation and neglect.",
+        "atmosphere": "A faint mist or haze hangs in the air, obscuring the distant trees and adding depth to the scene. The overall atmosphere is quiet and still, with the dim light suggesting the onset of night or a very overcast day.",
+        "mood": "Foreboding, melancholic",
+        "lighting": "The lighting is dim and cool, dominated by the deep blues and grays of twilight. Small points of warm, yellow light emanate from the windows and a single porch lamp, creating a stark contrast with the surrounding darkness. Shadows are deep and prevalent, obscuring details in the foreground and background.",
+        "dominantElements": [
+          "Blackwood Manor (est. 20m tall, 30m wide, WIDE STRUCTURE)",
+          "Wraparound porch with columns (foreground/midground)",
+          "Stone pathway (foreground)"
+        ],
+        "spatialLayout": "The foreground consists of a stone pathway winding through dark grass and fallen leaves, leading towards the manor. The midground is dominated by the imposing Blackwood Manor, a multi-story structure with a prominent porch. The background is filled with dark, silhouetted trees and the encroaching twilight sky, creating a sense of depth and surrounding wilderness.",
+        "uniqueIdentifiers": [
+          "Victorian architecture",
+          "Steeply pitched roofs with multiple gables",
+          "Wraparound porch with ornate columns"
+        ],
+        "materials_primary": "wood",
+        "materials_secondary": "stone",
+        "materials_accents": "glass, brick",
+        "colors_dominant": "dark blue",
+        "colors_secondary": "gray, brown",
+        "colors_accents": "warm yellow",
+        "colors_ambient": "deep blue/gray",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Wooden front door beneath an arched entryway with a lit lamp above"
+          },
+          {
+            "type": "window",
+            "position": "multiple, front facade",
+            "description": "Illuminated windows offering glimpses into the manor's interior"
+          },
+          {
+            "type": "passage",
+            "position": "under porch, midground",
+            "description": "Darkened archways leading under the porch structure"
+          }
+        ],
+        "searchDesc": "Haunted manor. Has: wooden front door (center, midground), illuminated windows (front facade), passage under porch (midground)",
+        "slug": "blackwood-manor"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/flHDKyOxtTrFsuq6rhL42.jpg",
+      "focus": {
+        "node_id": "Blackwood Manor",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763125595669-mbrhpi9cq": {
+      "id": "niche-1763125595669-mbrhpi9cq",
+      "type": "niche",
+      "name": "interior of Blackwood Manor",
+      "dna": {
+        "looks": "A vast, dimly lit drawing-room with soaring, peaked ceilings and straight, expansive walls. The space is dominated by dark, aged wood and heavy draperies, with ornate architectural features and scattered antique furniture.",
+        "colorsAndLighting": "Deep blues and desaturated grays dominate, accented by spectral glows from brass sconces. Light is dim, flickering, and mixed in temperature, casting long, distorted shadows.",
+        "atmosphere": "The air is heavy, carrying an essence of melancholic decay and haunting stillness. A faint, almost imperceptible motion from dust motes and spectral light adds an eerie, ethereal quality.",
+        "architectural_tone": "Gothic Revival",
+        "cultural_tone": "A realm of lingering emotions and unfinished business.",
+        "materials": "Aged, weathered dark oak planks form the floor, alongside worn, dusty indigo carpet. Ornate dark mahogany wainscoting with unsettling patterns lines the walls, complemented by heavy, faded sapphire velvet draperies.",
+        "mood": "Foreboding and melancholic, evoking opulent decay and forgotten histories.",
+        "sounds": "Silence, faint creaks, distant whispers, spectral hum.",
+        "dominantElementsDescriptors": "Peaked timber beam ceiling, ornate mahogany wainscoting, colossal gothic fireplace, faded velvet draperies.",
+        "spatialLayout": "A large, expansive rectangular space with high, peaked ceilings and straight walls, emphasizing width and depth. An implied distance to the far wall lost in shadow.",
+        "primary_surfaces": "Dark oak floor, desaturated stormy gray walls, dark timber ceiling.",
+        "secondary_surfaces": "Mahogany wainscoting, velvet draperies, tarnished brass sconces.",
+        "accent_features": "Intricately carved wainscoting patterns, gothic fireplace motifs, spectral glows.",
+        "dominant": "Deep blues (walls, carpet, draperies)",
+        "secondary": "Dark grays (walls, timber)",
+        "accent": "Spectral glows (sconces)",
+        "ambient": "Mixed",
+        "uniqueIdentifiers": "Soaring peaked timber ceiling, ornate unsettling wainscoting, spectral light shafts, vast echoing space.",
+        "searchDesc": "Gothic Revival manor interior with peaked ceiling, ornate wainscoting, and spectral lighting."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/NLxHCh9EZZ29Ef_943_7w.jpg",
+      "focus": {
+        "node_id": "niche-1763125595669-mbrhpi9cq",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
   "worldTrees": [
-    {
-      "id": "loc-1762957281060-fubzyjwnl",
-      "type": "host",
-      "children": [
-        {
-          "id": "60cb6ded-c177-4da7-ab54-41950ed4c22e",
-          "type": "region",
-          "children": [
-            {
-              "id": "10128f5a-3b1e-4a20-9649-5e303347ba7e",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1763046874245-25jl5i6c8",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "loc-1762958029655-dpqfatu6a",
       "type": "host",
@@ -2002,7 +2154,7 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763018143696-2wsvf0fs1",
+                  "id": "niche-1763118383387-9k5mhdfu3",
                   "type": "niche",
                   "children": []
                 }
@@ -2069,7 +2221,13 @@
             {
               "id": "ae43ae3f-c0ce-48cf-a445-220f3ac169cc",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1763118477231-zs1dpgi88",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -2166,9 +2324,56 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763118887574-1q2nre8j4",
+      "type": "host",
+      "children": [
+        {
+          "id": "02e46c72-4701-49b2-a3c3-cf8c428572de",
+          "type": "region",
+          "children": [
+            {
+              "id": "f98f64d1-aabf-4eb2-95da-704e4a5320f5",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763118939892-6ywf6txx3",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763125549918-hhpnv2ty2",
+      "type": "host",
+      "children": [
+        {
+          "id": "e9dcd921-f96e-4105-b46a-670019f0d719",
+          "type": "region",
+          "children": [
+            {
+              "id": "8ffc84b2-0be8-44f1-a707-4e92861c01ca",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763125595669-mbrhpi9cq",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763107357770-1oaenws89"
+    "loc-1763118887574-1q2nre8j4",
+    "loc-1763125549918-hhpnv2ty2"
   ]
 }

@@ -182,3 +182,12 @@ export function buildFluxRoofFixSection(): string {
 export function buildFluxInstructionsShortSection(): string {
   return fluxInstructionsShort;
 }
+
+export function buildExteriorApproachNote(locationLook?: string): string {
+  const subject = locationLook ? `"${locationLook}"` : 'the structure';
+  return `EXTERIOR APPROACH (3-5m outside, centered on ${subject}): Capture the entrance, facade, and immediate approach path with a wide-angle (24-35mm) frame. Keep the camera eye-level, facing directly toward the building while ensuring the entrance/threshold remains the central anchor of the composition.`;
+}
+
+export function buildExteriorSpaceRulesCondensed(entranceElement: string): string {
+  return `EXTERIOR SPACE: Emphasize the entrance element (${entranceElement}) and surrounding materials while remaining outdoors; avoid describing interior-only details. Highlight the approach path, facade textures, and environmental hints that support the parent form.`;
+}
