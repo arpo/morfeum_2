@@ -34,17 +34,11 @@ export async function generateImagePromptForNode(
   options?: ImagePromptOptions
 ): Promise<string> {
   const nodeType = options?.nodeType || 'niche';
+  const style = options?.style || 'default';
   
-  // Use spaceType/perspective to select adaptation (not style!)
-  // perspective comes from intent.spaceType via pipeline options
-  const perspective = options?.perspective || 'interior';
-  
-  // Map perspective to adaptation name
-  const adaptationName = perspective === 'exterior' ? 'exterior' : 'default';
-  
-  // Get adaptation prompt function from registry
-  // 'default' = interior adaptation, 'exterior' = exterior adaptation
-  const promptFunction = getStylePrompt(intent.intent, adaptationName);
+  // Get style prompt function from registry
+  // Currently only GO_INSIDE is registered, others fall back to default
+  const promptFunction = getStylePrompt(intent.intent, style);
   
   // Generate system prompt using the registered prompt function
   const systemPrompt = promptFunction(context, intent, decision);

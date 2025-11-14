@@ -47,7 +47,6 @@ ${originalPrompt}
 OUTPUT JSON STRUCTURE:
 
 {
-  "name": "Concise, evocative name (2-5 words) that sounds like a place name. Avoid meta-words like 'niche', 'space', 'area'. Use articles like 'The' when appropriate. Examples: 'The Sunlit Courtyard', 'Garden Alcove', 'Archway Hall', 'Sculpture Plaza', 'The Reflection Pool'",
   "looks": "2-4 sentences describing what is seen — key forms, layout, and notable features.",
   "colorsAndLighting": "1-3 sentences on dominant colors and light behavior.",
   "atmosphere": "2-4 sentences on air, temperature, motion, weather, and sensory feel.",
@@ -90,7 +89,7 @@ ${parentContext ? '   - INHERIT parent context attributes (architectural_tone, c
    - 75–100 characters max.
    - Start with type or function.
    - End with 1–2 defining visual traits.  
-     *Example:* "Weathered stone lighthouse on cliff with spiral stairs."
+     *Example:* "Weathered stone lighthouse on cliff with spiral interior stairs."
 
 5. **Output Rules**
    - Flat JSON only.

@@ -15,7 +15,10 @@ import {
   buildMaterialsDescription,
 } from '../shared/contextBuilders';
 import {
+  extractEntranceElement,
+  buildParentStructureAnalysis,
   buildNavigationGuidanceCondensed,
+  buildCompositionLayeringCondensed,
   buildNavigableElementsInstructionsCondensed,
   buildRequirementsCondensed,
   buildCameraSpecificationsCondensed,
@@ -38,16 +41,22 @@ export function nicheImagePrompt(
   
   // DNA descriptors are the PRIMARY DRIVER of style/atmosphere
   const dnaDescriptors = buildDNADescriptors(context.currentNode.dna);
+
+  // Extract entrance element from decision reasoning
+  const entranceElement = extractEntranceElement(decision.reasoning);
   
-  // Build generic sections (space-type neutral)
+  // Build all sections (always condensed)
+  const parentAnalysis = buildParentStructureAnalysis(entranceElement, context.currentNode.data.looks);
   const navigationGuidance = buildNavigationGuidanceCondensed(navigationFeatures);
+  const composition = buildCompositionLayeringCondensed();
   const requirements = buildRequirementsCondensed();
   const navigableInstructions = buildNavigableElementsInstructionsCondensed();
   const cameraSpecs = buildCameraSpecificationsCondensed();
 
-  // Assemble prompt - DNA-driven foundation (space-type NEUTRAL)
-  // Adaptations provide: header, parent analysis, composition, transformation rules
-  const prompt = `PARENT LOCATION CONTEXT:
+  // Assemble prompt - DNA-driven foundation (NO header - adaptations provide that)
+  const prompt = `${parentAnalysis}
+
+PARENT LOCATION CONTEXT:
 Name: "${context.currentNode.name}"
 ${descriptors.join('\n')}
 ${materials ? `\n${materials}` : ''}
@@ -61,6 +70,8 @@ ${cameraSpecs}
 ${fluxInstructionsShort}
 
 ${navigationGuidance}
+
+${composition}
 
 ${requirements}
 

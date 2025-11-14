@@ -11,8 +11,6 @@ import {
   buildInteriorSpaceRulesCondensed,
   buildPerspectiveFramingCondensed,
   buildTransformationRulesCondensed,
-  buildParentStructureAnalysis,
-  buildCompositionLayeringCondensed,
 } from '../../../shared/promptSections';
 
 /**
@@ -35,16 +33,12 @@ export function interiorAdaptation(
   
   const interiorRules = buildInteriorSpaceRulesCondensed(entranceElement);
   const perspective = buildPerspectiveFramingCondensed();
-  
-  // Use interior-specific prompt sections
-  const parentAnalysis = buildParentStructureAnalysis(entranceElement, context.currentNode.data.looks);
   const transformRules = buildTransformationRulesCondensed();
-  const composition = buildCompositionLayeringCondensed();
   
-  // Call generic foundation (DNA-driven, space-type neutral)
+  // Call generic foundation (DNA-driven)
   const foundation = nicheImagePrompt(context, intent, decision, navigationFeatures);
   
-  // Combine: Interior structure + interior-specific sections + foundation
+  // Combine: Interior structure + foundation
   return `You are an expert at creating image prompts for FLUX image generation.
 
 ${decision.reasoning ? `CONTEXT: ${decision.reasoning}` : ''}
@@ -55,11 +49,7 @@ ${interiorRules}
 
 ${perspective}
 
-${parentAnalysis}
-
 ${transformRules}
-
-${composition}
 
 ${foundation}`;
 }
