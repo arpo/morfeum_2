@@ -2391,327 +2391,114 @@
         "distance": "close"
       }
     },
-    "loc-1763247339519-peb7ughal": {
-      "id": "loc-1763247339519-peb7ughal",
+    "loc-1763373513292-vsd9ew9aw": {
+      "id": "loc-1763373513292-vsd9ew9aw",
       "type": "host",
-      "name": "The Expanse",
+      "name": "The Crimson Wastes",
       "dna": {
         "type": "host",
-        "name": "The Expanse",
-        "description": "A vast, nebulae-filled void where gravity is a suggestion and technology reigns.",
+        "name": "The Crimson Wastes",
+        "description": "A vast, sun-scorched desert planet.",
         "dna": {
           "genre": "sci-fi",
-          "architectural_tone": "utilitarian megastructures, modular construction",
-          "cultural_tone": "A society driven by resourcefulness and adaptation in the void. Technology is paramount for survival and progress, often repurposed from salvaged materials.",
-          "materials_base": "Primarily salvaged and repurposed metals, reinforced composites, and resilient alloys. Emphasis on functionality over aesthetics, with surfaces often showing signs of wear and modification.",
-          "mood_baseline": "resourceful, functional, vast",
-          "palette_bias": "Dominated by industrial greys and metallic sheens. Accents of vibrant, functional lighting in blues, reds, and oranges are common, used for navigation and status indication.",
-          "soundscape_base": "Echoes of machinery, distant hums of power conduits, and the faint, omnipresent hiss of life support systems. Occasional clangs and metallic groans indicate ongoing structural stress or repairs.",
-          "flora_base": "Minimal to non-existent within constructed environments. Any organic matter would be carefully cultivated in controlled, artificial biomes for sustenance, likely engineered for efficiency.",
-          "fauna_base": "Artificial constructs and highly adapted, resilient organisms. Expect maintenance drones, utility bots, and potentially bio-engineered creatures designed for specific environmental tasks or sustenance."
+          "architectural_tone": "brutalist alien industrial",
+          "cultural_tone": "A forgotten, desolate world where remnants of advanced, possibly militaristic, alien civilizations are slowly succumbing to the harsh environment.",
+          "materials_base": "Primarily weathered and corroded metals, stark composites, and mineral-rich, eroded rock. Surfaces bear the marks of extreme environmental decay, with heavy emphasis on textures suggesting age and neglect.",
+          "mood_baseline": "desolate, ancient, decaying",
+          "palette_bias": "Dominated by muted, sun-bleached earth tones, deep rusts, and oxidized metallic grays. Accents of faded, utilitarian colors might appear, hinting at past functionality.",
+          "soundscape_base": "Echoes of immense, empty spaces, the low hum of residual energy, wind whistling through skeletal structures, and the distant creak of stressed metal.",
+          "flora_base": "Sparse, hardy, and mutated desert flora adapted to extreme heat and radiation. Cacti-like growths, leathery shrubs, and crystalline mineral formations are typical.",
+          "fauna_base": "Scavenging, resilient, or dormant alien creatures. Expect insectoids, desert-dwelling reptiles, or airborne predators adapted to arid, low-oxygen conditions."
         },
-        "slug": "the-expanse"
+        "slug": "the-crimson-wastes"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "The Expanse",
+        "node_id": "The Crimson Wastes",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "c7cfd7ff-1f2a-4ce8-89d4-4707e474156c": {
-      "id": "c7cfd7ff-1f2a-4ce8-89d4-4707e474156c",
+    "06f30af2-1cad-4ddd-86fc-bab42c9bf87a": {
+      "id": "06f30af2-1cad-4ddd-86fc-bab42c9bf87a",
       "type": "region",
-      "name": "Orbital Junkyard",
+      "name": "The Shifting Sands",
       "dna": {
         "type": "region",
-        "name": "Orbital Junkyard",
-        "description": "A sprawling expanse of discarded spacecraft and derelict stations, repurposed for new purposes.",
-        "dna": {
-          "architectural_tone": "ad-hoc, scavenged constructions, repurposed derelicts",
-          "cultural_tone": "A frontier mentality prevails, with independent factions and opportunistic salvagers claiming territory. Infrastructure is often jury-rigged and constantly evolving.",
-          "materials_base": "Heavily reliant on salvaged ship hulls, scrap metal, and repurposed station components. Surfaces are often a patchwork of different metallic textures and weathered composites.",
-          "mood_baseline": "gritty, chaotic, industrial",
-          "palette_bias": "Shades of rust, dull metallics, and muted blues punctuated by functional, often flickering, warning lights. The palette reflects the decay and opportunistic repairs.",
-          "soundscape_base": "Creaking metal, the clang of tools, intermittent bursts of welding, and the low thrum of repurposed engines. The ambient sound is a constant reminder of precarious existence.",
-          "flora_base": "None within the core junkyard areas. Any plant life would be confined to highly protected, self-sustaining biodomes or personal hydroponic units.",
-          "fauna_base": "Scavenger drones, automated repair units, and hardy, vermin-like creatures adapted to low-resource environments and metallic debris."
-        },
-        "slug": "orbital-junkyard"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Orbital Junkyard",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "61e903c9-be6a-4186-b9d3-423e2b651356": {
-      "id": "61e903c9-be6a-4186-b9d3-423e2b651356",
-      "type": "location",
-      "name": "The Drift Garage",
-      "dna": {
-        "type": "location",
-        "name": "The Drift Garage",
-        "description": "A massive, open-air hangar designed for the maintenance and storage of unconventional aerial vehicles.",
-        "looks": "An immense, cavernous structure with no discernible floor, composed of interwoven metallic girders and energy fields. Vast openings reveal the starfield beyond.",
-        "atmosphere": "The hum of latent energy, the faint scent of ozone, and the occasional clang of metal.",
-        "mood": "Functional, chaotic, awe-inspiring",
-        "dna": {
-          "architectural_tone": "spacious, open-frame hangar, suspension infrastructure",
-          "cultural_tone": "A hub for vehicle customization, repair, and illicit modifications. A place where the lines between functional maintenance and performance tuning blur.",
-          "materials_base": "Reinforced metallic flooring and framework, with extensive use of cables, winches, and magnetic anchors. Exposed conduits and industrial lighting fixtures are prevalent.",
-          "mood_baseline": "functional, active, expansive",
-          "palette_bias": "Predominantly cool blues and greys from ambient lighting, contrasted with sharp, functional reds from status and warning lights. Metallic reflections are key.",
-          "soundscape_base": "The hum of anti-gravity stabilizers, the whirring of tool attachments, occasional engine test ignitions, and the soft chatter of automated diagnostics.",
-          "flora_base": "None. The focus is entirely on the vehicles and their maintenance.",
-          "fauna_base": "Specialized maintenance drones, robotic arms, and possibly small, agile repair bots that navigate the suspended vehicles."
-        },
-        "slug": "the-drift-garage"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Drift Garage",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "5af9d06f-dfad-4762-8b67-255d9cd07bb8": {
-      "id": "5af9d06f-dfad-4762-8b67-255d9cd07bb8",
-      "type": "niche",
-      "name": "The Drone Swarm",
-      "dna": {
-        "type": "niche",
-        "name": "The Drone Swarm",
-        "description": "The interior space teems with activity as maintenance drones navigate the airborne vehicles.",
-        "looks": "The scene depicts a vast, cavernous interior of a hangar with a high, arched ceiling. Numerous unidentifiable vehicles are suspended in the air by thin cables. Rows of glowing red lights line the upper walls, while square, white lights are spaced along the lower sections. The floor is a metallic, possibly grimy, surface with tracks or channels. A bright, diffused light emanates from the far end of the hangar, creating a strong visual pull. Several terrestrial vehicles are parked on the floor, suggesting a dual-purpose facility.",
-        "atmosphere": "A visible haze or mist permeates the air, particularly in the midground and background, softening the edges of distant objects. The air appears clear enough for the suspended vehicles and lighting to be distinctly visible.",
-        "mood": "Busy, intricate, vital",
-        "lighting": "The lighting is a mix of cool, ambient blue from the far end and the overhead structures, contrasted by warm, vibrant red from the numerous strip lights along the walls and ceiling. The red lights cast sharp reflections on the floor and suspended vehicles. The overall lighting creates a high-contrast environment.",
-        "dominantElements": [
-          "Suspended vehicles (various sizes, in midground and background)",
-          "Arched ceiling structure with red lights (background)",
-          "Rows of white square lights along walls (midground/background)",
-          "Bright light source at far end (background)",
-          "Tracked floor surface (foreground/midground)"
-        ],
-        "spatialLayout": "The spatial layout is that of a long, open hangar with a strong sense of depth created by the receding lines of the walls, the arrangement of suspended vehicles, and the bright light source at the far end. The foreground is occupied by parked terrestrial vehicles and the tracked floor. The midground features more suspended vehicles and the lower sections of the hangar walls with white lights. The background is dominated by the arched ceiling, upper wall lighting, and the bright, luminous exit.",
-        "uniqueIdentifiers": [
-          "Suspended vehicles tethered by light cables",
-          "Concentric rows of red and white lights along hangar walls",
-          "Bright, luminous exit at the far end"
-        ],
-        "materials_primary": "Metal",
-        "materials_secondary": "Concrete",
-        "materials_accents": "Light cables, glowing lights",
-        "colors_dominant": "Blue (ambient light, background)",
-        "colors_secondary": "Red (wall and ceiling lights)",
-        "colors_accents": "White (wall lights), metallic grays and dark tones",
-        "colors_ambient": "Cool blue with red undertones",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "far end, background",
-            "description": "Brightly lit passage or exit leading out of the hangar"
-          },
-          {
-            "type": "object",
-            "position": "center, foreground",
-            "description": "Small, dark box-like object on the floor tracks"
-          },
-          {
-            "type": "object",
-            "position": "right side, foreground",
-            "description": "Partially visible mechanical structure beside parked vehicle"
-          }
-        ],
-        "searchDesc": "[Hangar - Interior] Vast hangar with suspended vehicles. Has: lit passage (far end), box object (center foreground), mechanical structure (right foreground)",
+        "name": "The Shifting Sands",
+        "description": "Endless dunes and ancient, buried secrets.",
         "dna": {
           "architectural_tone": null,
-          "materials_base": null,
-          "mood_baseline": "busy, intricate, dynamic",
-          "soundscape_base": "A constant, low hum of countless tiny motors, the faint clicks and whirs of articulated joints, and the occasional soft beeps of communication signals.",
-          "flora_base": null,
-          "fauna_base": null
+          "cultural_tone": "Ancient burial grounds and forgotten outposts of a long-gone alien race, slowly being consumed by the encroaching desert.",
+          "materials_base": "Rust-eaten metal, sand-scoured alloys, petrified mineral deposits, and eroded rocky outcrops. The materials are heavily degraded by abrasive winds and extreme temperature fluctuations.",
+          "mood_baseline": "forgotten, desolate, buried",
+          "palette_bias": "Primarily warm, earthy browns, ochres, and sandy yellows, with streaks of deep rust and dull, oxidized metallic grays. The palette is heavily influenced by sand and corrosion.",
+          "soundscape_base": "The omnipresent whisper and roar of wind, the soft grinding of sand against surfaces, and the occasional metallic groan from unseen structures.",
+          "flora_base": "Extremely sparse, drought-resistant desert flora; hardy, low-lying shrubs, and scattered, wind-sculpted rock formations that mimic organic shapes.",
+          "fauna_base": "Small, burrowing desert creatures, resilient insectoids, and perhaps nomadic, sand-dwelling scavengers. Life here is adapted to extreme aridity and buried existence."
         },
-        "slug": "the-drone-swarm"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/panda/0aAT50N8EtNR0wamgm6ST.jpg",
-      "focus": {
-        "node_id": "The Drone Swarm",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "niche-1763247376803-tgmt4b7cn": {
-      "id": "niche-1763247376803-tgmt4b7cn",
-      "type": "niche",
-      "name": "interior of The Drone Swarm",
-      "dna": {
-        "looks": "A vast, cavernous hangar with a colossal, arched ceiling soaring over 40 meters high. The space is filled with numerous vehicles suspended by glowing cables, creating layered depth and a sense of immense scale. Heavy industrial structures and functional elements dominate the view.",
-        "colorsAndLighting": "A mix of cool ambient blues from the distant exit and functional reds and whites from wall fixtures create visual texture. Bright, diffused light emanates from the far end, contrasting with the darker metallic tones of the interior.",
-        "atmosphere": "The air feels vast and industrial, possibly carrying faint metallic dust motes dancing in light beams. Subtle environmental motion from maintenance drones and flickering lights suggests ongoing activity. The atmosphere is one of immense scale and utilitarian purpose.",
-        "architectural_tone": "futuristic hangar",
-        "cultural_tone": "A hub for vehicle customization, repair, and illicit modifications, where maintenance blurs with performance tuning.",
-        "materials": "The primary materials are textured, metallic, and slightly grimy. Exposed conduits, reinforced metal beams, and heavy-duty tracks are visible, showing subtle, functional wear. A faint sheen reflects the overhead lighting on metallic surfaces.",
-        "mood": "Awe-inspiring and functional, evoking a sense of immense industrial power and hidden potential.",
-        "sounds": "humming machinery, distant clanks, whirring drones, air circulation",
-        "dominantElementsDescriptors": [
-          "colossal arched ceiling",
-          "suspended vehicles",
-          "industrial lighting",
-          "heavy duty tracks"
-        ],
-        "spatialLayout": "The primary space is rectangular with a high, arched ceiling, emphasizing height and depth on a colossal scale. A strong visual pull draws the eye towards a distant, bright exit 50 meters away. Walls are approximately 25 meters apart.",
-        "primary_surfaces": "metal floor, metal walls, arched metal ceiling",
-        "secondary_surfaces": "glowing light cables, exposed conduits, structural beams",
-        "accent_features": [
-          "glowing red status lights",
-          "articulated robotic arm",
-          "grated metal floor corridor"
-        ],
-        "dominant": "dark metallics (90%)",
-        "secondary": "blue and red light (5%)",
-        "accent": "white and orange light (5%)",
-        "ambient": "cool",
-        "uniqueIdentifiers": [
-          "arched hangar ceiling",
-          "suspended vehicles on light cables",
-          "massive scale and depth",
-          "industrial red lighting accents"
-        ],
-        "searchDesc": "Industrial hangar interior with colossal arched ceiling, suspended vehicles, and industrial lighting."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/monkey/e-IKCegPcSvoSK_cJmD_L.jpg",
-      "focus": {
-        "node_id": "niche-1763247376803-tgmt4b7cn",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
-    "loc-1763372186264-01vvvz1t7": {
-      "id": "loc-1763372186264-01vvvz1t7",
-      "type": "host",
-      "name": "The Crimson Expanse",
-      "dna": {
-        "type": "host",
-        "name": "The Crimson Expanse",
-        "description": "A vast, arid planet perpetually covered in red sand and subject to extreme solar flares.",
-        "dna": {
-          "genre": "sci-fi",
-          "architectural_tone": "decaying alien technology",
-          "cultural_tone": "This is a world shaped by advanced, but long-gone, alien civilizations whose creations now lie in ruin and disuse. A sense of profound abandonment pervades.",
-          "materials_base": "A focus on weathered, non-terrestrial metals, crystalline structures, and strange, resilient polymers. Surfaces are often pitted, scarred, or showing signs of extreme environmental wear.",
-          "mood_baseline": "desolate, mysterious, ancient",
-          "palette_bias": "Dominated by deep, muted tones reflecting a world of dust and shadow. Unexpected bursts of alien energy or bioluminescence can punctuate the otherwise somber palette.",
-          "soundscape_base": "Whispering winds through decaying structures, the hum of residual alien machinery, and the vast silence of an empty world. Occasional strange atmospheric phenomena.",
-          "flora_base": "Scant, hardy, and often mutated alien flora adapted to extreme arid conditions or surviving in sheltered, forgotten biomes. May include metallic-sheened fungi or crystalline plant-like growths.",
-          "fauna_base": "Small, resilient scavengers or adapted desert life. May include mutated insects, hardy reptilian creatures, or elusive, energy-based entities that feed on residual power."
-        },
-        "slug": "the-crimson-expanse"
+        "slug": "the-shifting-sands"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "The Crimson Expanse",
+        "node_id": "The Shifting Sands",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "7d63c2c6-4153-425f-ac5c-0b59d8483eec": {
-      "id": "7d63c2c6-4153-425f-ac5c-0b59d8483eec",
-      "type": "region",
-      "name": "The Crimson Expanse",
-      "dna": {
-        "type": "region",
-        "name": "The Crimson Expanse",
-        "description": "",
-        "dna": {
-          "architectural_tone": null,
-          "cultural_tone": null,
-          "materials_base": "Predominantly oxidized, iron-rich alloys and coarse, abrasive mineral sands. Surfaces are heavily textured by aeons of dust storms.",
-          "mood_baseline": "oppressive, exposed, harsh",
-          "palette_bias": "Emphasizing deep rust oranges, ochres, and muted reds due to pervasive mineral dust. Shadows are deep and stark.",
-          "soundscape_base": "Constant, low-pitched whine of wind carrying fine grit, occasional metallic groans from settling debris, and the sifting of sand.",
-          "flora_base": "Extremely rare, deeply rooted, low-lying desert scrub with tough, leathery leaves. May exhibit metallic sheens for protection against radiation.",
-          "fauna_base": "Small, burrowing creatures, hardy insectoids, and scavenging avian life adapted to extreme heat and sandstorms. Minimal complex life."
-        },
-        "slug": "the-crimson-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Crimson Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "5bf4e2e8-405d-4456-8754-32e214c63988": {
-      "id": "5bf4e2e8-405d-4456-8754-32e214c63988",
+    "159f21c1-18b4-44f5-b91a-f6c6aedd78b8": {
+      "id": "159f21c1-18b4-44f5-b91a-f6c6aedd78b8",
       "type": "location",
       "name": "The Sunken Starship",
       "dna": {
         "type": "location",
         "name": "The Sunken Starship",
-        "description": "An colossal, alien vessel half-swallowed by the desert's embrace, its metallic hide pitted and rusted by eons of exposure.",
-        "looks": "A colossal, alien spaceship, approximately 100-150 meters long, is half-submerged in a vast desert landscape. Its asymmetrical hull is predominantly dark grey, heavily textured with pitting and rust. Sections of the vessel disappear into the sandy terrain, with only its upper curvature and a fractured engine nacelle visible above the surface. Numerous rectangular window-like openings are present along the visible hull. A prominent, vertical structure emitting a vibrant orange light is visible at the center of the ship's underside.",
-        "atmosphere": "The air is thick with fine dust particles, creating a hazy, diffused atmosphere. The dry wind appears to be subtly shifting the sand around the base of the ship.",
-        "mood": "Desolate, forgotten, enigmatic",
-        "lighting": "The scene is illuminated by a warm, orange light, likely from a low-hanging sun or atmospheric conditions. This light creates harsh shadows and a high contrast across the rust-colored terrain and the spaceship's metallic surface. The glowing vertical structure at the ship's base provides a concentrated, vibrant light source.",
+        "description": "An enormous, alien vessel half-swallowed by the desert.",
+        "looks": "A colossal, ovular alien spaceship is half-submerged in sand, its weathered metallic hull showing extensive rust streaks. The vessel's surface is segmented with visible panel lines and rivets. A large, dark circular opening dominates the visible front of the ship, suggesting an entrance. The surrounding environment consists of arid desert terrain with rocky outcrops and sand dunes sculpted by wind. Sunlight glints off the upper portions of the exposed hull.",
+        "atmosphere": "The air is thick with swirling dust and fine sand, obscuring distant details and creating a hazy environment. Visibility is limited by the kicked-up sand, giving the scene a muted and desolate feel.",
+        "mood": "Desolate, mysterious, forgotten",
+        "lighting": "The scene is illuminated by bright, direct sunlight, casting harsh shadows and creating high contrast. The light is warm, emphasizing the sandy and rusty tones of the environment and the ship.",
         "dominantElements": [
-          "Colossal alien spaceship (est. 100-150m long, horizontal structure) embedded in sand, center",
-          "Red, rocky desert terrain, foreground and midground",
-          "Glowing vertical portal emitting orange light, center bottom of spaceship"
+          "Massive ovular spaceship hull (est. 100-150m width, HORIZONTAL STRUCTURE) dominating center midground",
+          "Circular entrance portal (est. 20-30m diameter) on the front of the spaceship",
+          "Sandy desert terrain with rocky formations in foreground and background"
         ],
-        "spatialLayout": "The foreground consists of uneven, rocky desert ground with scattered boulders. The midground is dominated by the immense, half-buried alien spaceship, its hull extending from the left foreground towards the right background. The background is a vast, hazy expanse of desert and sky. The spaceship itself is a HORIZONTAL STRUCTURE, emphasizing its elongated form.",
+        "spatialLayout": "The foreground features a sandy path and loose sand with scattered rocks, leading towards the main subject. The midground is dominated by the immense, partially buried alien spaceship. The background consists of vast, eroded desert mountains and a hazy sky. The spaceship is positioned centrally, emerging from the sand dunes.",
         "uniqueIdentifiers": [
           "Half-buried alien spaceship",
-          "Vibrant orange glowing vertical portal",
-          "Crimson desert landscape"
+          "Circular, dark entrance portal",
+          "Extensive rust streaking on metallic hull"
         ],
-        "materials_primary": "rusted metal",
-        "materials_secondary": "sand",
-        "materials_accents": "glowing energy",
-        "colors_dominant": "deep orange (rust and sky)",
-        "colors_secondary": "dark grey (ship hull)",
-        "colors_accents": "vibrant orange (glowing portal)",
-        "colors_ambient": "warm orange",
+        "materials_primary": "Metal",
+        "materials_secondary": "Sand",
+        "materials_accents": "Rust",
+        "colors_dominant": "Brown (sand, rocks, rust)",
+        "colors_secondary": "Grey (ship hull)",
+        "colors_accents": "Darkness (inside the portal)",
+        "colors_ambient": "Orange-brown haze",
         "navigableElements": [
           {
-            "type": "portal",
+            "type": "door",
             "position": "center, midground",
-            "description": "Vertical orange portal glowing intensely at the base of the sunken ship"
-          },
-          {
-            "type": "window",
-            "position": "left side, midground",
-            "description": "Rectangular, dark openings along the visible hull of the spaceship"
-          },
-          {
-            "type": "window",
-            "position": "right side, midground",
-            "description": "Rectangular, dark openings along the visible hull of the spaceship"
+            "description": "Large, dark circular opening into the alien vessel"
           }
         ],
-        "searchDesc": "[Location - Exterior] Sunken alien starship in desert. Has: glowing portal (center, midground), windows (left side, midground), windows (right side, midground)",
+        "searchDesc": "[Location - Exterior] Sunken alien spaceship in desert. Has: circular entrance (center, midground)",
         "dna": {
-          "architectural_tone": "hulking, derelict spacecraft",
+          "architectural_tone": "hulking alien vessel, partially buried",
           "cultural_tone": null,
-          "materials_base": "Heavily oxidized, alien metal alloys with significant pitting and corrosion. Interspersed with compacted, mineral-rich desert sand.",
-          "mood_baseline": "forgotten, monumental, silent",
-          "palette_bias": "Deep rust tones dominate, contrasted with dark, unreflective alien alloys. Ambient light is often filtered through dust, creating a warm, hazy glow.",
-          "soundscape_base": "The abrasive whisper of sand against metal, the subtle creak of structural stress, and the profound silence of a dead machine.",
-          "flora_base": "None, only microscopic life within rust formations.",
-          "fauna_base": "Tiny, sand-dwelling arthropods that feed on metallic corrosion."
+          "materials_base": "Heavily oxidized and rusted alien alloys, segmented metallic plating, exposed structural elements, and significant sand inundation.",
+          "mood_baseline": "abandoned, colossal, decaying",
+          "palette_bias": "Dominated by deep rust browns, muted grays of corroded metal, and the warm tones of desert sand.",
+          "soundscape_base": "The creak and groan of stressed metal under sand pressure, the distant howl of desert winds, and the faint, ambient hum of residual alien technology.",
+          "flora_base": "None specific to the ship itself, but may be encroaching desert flora on exposed sections.",
+          "fauna_base": "Potential for small desert creatures or scavengers seeking shelter within any accessible crevices."
         },
         "slug": "the-sunken-starship"
       },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/mHe_m1Xq3dF6ikf1Tw9bH.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/tiger/A4T1Iil2mIS4p-7WX5P2p.jpg",
       "focus": {
         "node_id": "The Sunken Starship",
         "perspective": "exterior",
@@ -3068,44 +2855,15 @@
       ]
     },
     {
-      "id": "loc-1763247339519-peb7ughal",
+      "id": "loc-1763373513292-vsd9ew9aw",
       "type": "host",
       "children": [
         {
-          "id": "c7cfd7ff-1f2a-4ce8-89d4-4707e474156c",
+          "id": "06f30af2-1cad-4ddd-86fc-bab42c9bf87a",
           "type": "region",
           "children": [
             {
-              "id": "61e903c9-be6a-4186-b9d3-423e2b651356",
-              "type": "location",
-              "children": [
-                {
-                  "id": "5af9d06f-dfad-4762-8b67-255d9cd07bb8",
-                  "type": "niche",
-                  "children": [
-                    {
-                      "id": "niche-1763247376803-tgmt4b7cn",
-                      "type": "niche",
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1763372186264-01vvvz1t7",
-      "type": "host",
-      "children": [
-        {
-          "id": "7d63c2c6-4153-425f-ac5c-0b59d8483eec",
-          "type": "region",
-          "children": [
-            {
-              "id": "5bf4e2e8-405d-4456-8754-32e214c63988",
+              "id": "159f21c1-18b4-44f5-b91a-f6c6aedd78b8",
               "type": "location",
               "children": []
             }
