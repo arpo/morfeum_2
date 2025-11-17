@@ -12,12 +12,7 @@ export const negativePrompt = 'lowres, bad anatomy, blurry, fuzzy, distorted, de
 
 export const fluxRoofFix = "CRITICAL!!!: Fully enclosed ceiling of thick, continuous solid wood/metal/stone with no gaps, holes, skylights, or open breaches to the sky";
 
-export const generalRules = `
-
-[FILTER: MirrorWaterWorld]
-[ENV:] mirror-still water, glassy reflections, zero wind
-[NEG:] flying animals, birds, airborne creatures, splashes, ripples, wake lines
-
+export const NoCreatures = `
 [FILTER: NoLivingSubjects]
 [NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, logo, signature, text.
 

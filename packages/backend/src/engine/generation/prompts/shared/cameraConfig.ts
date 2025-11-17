@@ -29,10 +29,10 @@ export const OVERVIEW_SHOT = {
  * Camera positioned directly facing entrance for smooth transitions
  */
 export const EXTERIOR_SHOT = {
-  shot: 'camera positioned directly in front of entrance/building, elevated perspective with 45° downward tilt, wide-angle straight-on view facing the entrance, centered composition with entrance as focal point, natural foreground elements framing the approach, layered depth showing near/mid/far, balanced framing',
+  shot: 'camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context',
   light: 'directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions',
-  lens: '16-35mm wide-angle lens, elevated perspective, centered on entrance',
-  position: 'Camera on approach path, directly facing entrance from elevated position (45° downward angle). Entrance/doorway/building facade centered in frame as main focal point. Wide-angle perspective captures environmental context. Creates alignment for smooth zoom-in transition to interior view.',
+  lens: '12-24mm ultra-wide lens, elevated perspective, expansive framing',
+  position: 'Camera on approach path, facing entrance from elevated position (25-30° downward angle). Entrance visible within wide environmental context. Ultra-wide perspective captures extensive surroundings while maintaining entrance visibility. Creates alignment for smooth zoom-in transition to interior view.',
 };
 
 /**
