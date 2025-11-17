@@ -100,7 +100,6 @@ RATIONALE
 - Keeps nodes lightweight and fast to merge.
 - Maintains visual consistency across regenerations.
 - Ensures user intent and naming survive each cascade.`;
-
 console.log('---- Prompt of for nde DNA LLM ');
 console.log(ret);
 console.log('------');
