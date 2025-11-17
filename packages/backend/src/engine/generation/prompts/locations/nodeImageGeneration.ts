@@ -10,6 +10,7 @@
 
 import type { HierarchyNode, NodeDNA } from '../../../hierarchyAnalysis/types';
 import { EXTERIOR_SHOT, INTERIOR_SHOT, OVERVIEW_SHOT } from '../shared/cameraConfig';
+import { generalRules } from '../shared/constants';
 
 /**
  * Overview shot instructions (Host/Region)
@@ -62,7 +63,7 @@ ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
 [COLOR PALETTE:] dominant ${dna.dominant}; secondary ${dna.secondary}; accent ${dna.accent}; ambient ${dna.ambient}
 [IDENTIFIERS:] ${dna.uniqueIdentifiers}
 
-`;
+${generalRules}`;
 }
 
 /**
@@ -84,7 +85,8 @@ ${shotInstructions.lens ? `[LENS:] ${shotInstructions.lens}` : ''}
 ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
 
 ${description}
-`;
+
+${generalRules}`;
 }
 
 /**

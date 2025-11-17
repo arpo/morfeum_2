@@ -2391,52 +2391,52 @@
         "distance": "close"
       }
     },
-    "loc-1763373513292-vsd9ew9aw": {
-      "id": "loc-1763373513292-vsd9ew9aw",
+    "loc-1763375078872-w3dl9876t": {
+      "id": "loc-1763375078872-w3dl9876t",
       "type": "host",
-      "name": "The Crimson Wastes",
+      "name": "Planet Xylos",
       "dna": {
         "type": "host",
-        "name": "The Crimson Wastes",
-        "description": "A vast, sun-scorched desert planet.",
+        "name": "Planet Xylos",
+        "description": "A vast, arid world known for its sprawling deserts and ancient alien relics.",
         "dna": {
           "genre": "sci-fi",
-          "architectural_tone": "brutalist alien industrial",
-          "cultural_tone": "A forgotten, desolate world where remnants of advanced, possibly militaristic, alien civilizations are slowly succumbing to the harsh environment.",
-          "materials_base": "Primarily weathered and corroded metals, stark composites, and mineral-rich, eroded rock. Surfaces bear the marks of extreme environmental decay, with heavy emphasis on textures suggesting age and neglect.",
-          "mood_baseline": "desolate, ancient, decaying",
-          "palette_bias": "Dominated by muted, sun-bleached earth tones, deep rusts, and oxidized metallic grays. Accents of faded, utilitarian colors might appear, hinting at past functionality.",
-          "soundscape_base": "Echoes of immense, empty spaces, the low hum of residual energy, wind whistling through skeletal structures, and the distant creak of stressed metal.",
-          "flora_base": "Sparse, hardy, and mutated desert flora adapted to extreme heat and radiation. Cacti-like growths, leathery shrubs, and crystalline mineral formations are typical.",
-          "fauna_base": "Scavenging, resilient, or dormant alien creatures. Expect insectoids, desert-dwelling reptiles, or airborne predators adapted to arid, low-oxygen conditions."
+          "architectural_tone": "colossal, monolithic, functional",
+          "cultural_tone": "A civilization focused on grand-scale engineering and interstellar travel, now mostly forgotten.",
+          "materials_base": "Durable, weathered alloys, unknown composites, crystalline structures, and bio-engineered substances that have degraded over time.",
+          "mood_baseline": "ancient, vast, desolate",
+          "palette_bias": "Dominated by muted, earthy tones reflecting a mature, arid planet, with accents of deep blues and metallic sheens.",
+          "soundscape_base": "Low, resonant hums, echoing winds, and distant, metallic groans.",
+          "flora_base": "Sparse, hardy desert vegetation adapted to extreme dryness and radiation. Crystalline plant formations are also present.",
+          "fauna_base": "Scavenging, resilient creatures with metallic exoskeletons or leathery hides, adapted to arid conditions."
         },
-        "slug": "the-crimson-wastes"
+        "slug": "planet-xylos"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "The Crimson Wastes",
+        "node_id": "Planet Xylos",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "06f30af2-1cad-4ddd-86fc-bab42c9bf87a": {
-      "id": "06f30af2-1cad-4ddd-86fc-bab42c9bf87a",
+    "b4e388d5-ddfa-4e18-b23e-4e2e6a3b2cf8": {
+      "id": "b4e388d5-ddfa-4e18-b23e-4e2e6a3b2cf8",
       "type": "region",
       "name": "The Shifting Sands",
       "dna": {
         "type": "region",
         "name": "The Shifting Sands",
-        "description": "Endless dunes and ancient, buried secrets.",
+        "description": "An endless expanse of rust-colored dunes, sculpted by relentless winds.",
         "dna": {
           "architectural_tone": null,
-          "cultural_tone": "Ancient burial grounds and forgotten outposts of a long-gone alien race, slowly being consumed by the encroaching desert.",
-          "materials_base": "Rust-eaten metal, sand-scoured alloys, petrified mineral deposits, and eroded rocky outcrops. The materials are heavily degraded by abrasive winds and extreme temperature fluctuations.",
-          "mood_baseline": "forgotten, desolate, buried",
-          "palette_bias": "Primarily warm, earthy browns, ochres, and sandy yellows, with streaks of deep rust and dull, oxidized metallic grays. The palette is heavily influenced by sand and corrosion.",
-          "soundscape_base": "The omnipresent whisper and roar of wind, the soft grinding of sand against surfaces, and the occasional metallic groan from unseen structures.",
-          "flora_base": "Extremely sparse, drought-resistant desert flora; hardy, low-lying shrubs, and scattered, wind-sculpted rock formations that mimic organic shapes.",
-          "fauna_base": "Small, burrowing desert creatures, resilient insectoids, and perhaps nomadic, sand-dwelling scavengers. Life here is adapted to extreme aridity and buried existence."
+          "cultural_tone": null,
+          "materials_base": "Primarily sand-scoured metallic alloys and hardened, eroded composites.",
+          "mood_baseline": "isolating, exposed",
+          "palette_bias": "Emphasizes rust oranges, ochres, and deep desert browns, with the bleached tones of ancient metal.",
+          "soundscape_base": "Constant whisper of wind, occasional clangs of shifting metal debris.",
+          "flora_base": "Extremely sparse, low-lying, wind-resistant desert scrub and occasional heat-hardened root systems.",
+          "fauna_base": "Small, burrowing creatures and hardy insects adapted to extreme heat and wind."
         },
         "slug": "the-shifting-sands"
       },
@@ -2448,59 +2448,59 @@
         "distance": "medium"
       }
     },
-    "159f21c1-18b4-44f5-b91a-f6c6aedd78b8": {
-      "id": "159f21c1-18b4-44f5-b91a-f6c6aedd78b8",
+    "76c12ae0-0214-448a-8a0d-707501fc74ee": {
+      "id": "76c12ae0-0214-448a-8a0d-707501fc74ee",
       "type": "location",
-      "name": "The Sunken Starship",
+      "name": "The Sunken Vessel",
       "dna": {
         "type": "location",
-        "name": "The Sunken Starship",
-        "description": "An enormous, alien vessel half-swallowed by the desert.",
-        "looks": "A colossal, ovular alien spaceship is half-submerged in sand, its weathered metallic hull showing extensive rust streaks. The vessel's surface is segmented with visible panel lines and rivets. A large, dark circular opening dominates the visible front of the ship, suggesting an entrance. The surrounding environment consists of arid desert terrain with rocky outcrops and sand dunes sculpted by wind. Sunlight glints off the upper portions of the exposed hull.",
-        "atmosphere": "The air is thick with swirling dust and fine sand, obscuring distant details and creating a hazy environment. Visibility is limited by the kicked-up sand, giving the scene a muted and desolate feel.",
-        "mood": "Desolate, mysterious, forgotten",
-        "lighting": "The scene is illuminated by bright, direct sunlight, casting harsh shadows and creating high contrast. The light is warm, emphasizing the sandy and rusty tones of the environment and the ship.",
+        "name": "The Sunken Vessel",
+        "description": "A colossal, derelict alien spaceship half-swallowed by the desert.",
+        "looks": "A colossal, dome-shaped structure with a massive arched opening dominates the scene, half-buried in reddish-brown sand. Its surface is heavily pitted, corroded, and shows significant signs of rust. Rectangular window-like indentations are visible on its sides, some appearing damaged. The sheer scale of the object suggests it was once a significant vessel or building. The environment around it is barren, with low, rocky hills in the background.",
+        "atmosphere": "A thick, dusty haze permeates the air, obscuring distant details and softening the overall environment. The air appears dry and warm, consistent with a desert landscape. The haze creates a sense of isolation and vastness.",
+        "mood": "Desolate, mysterious, ancient",
+        "lighting": "The scene is illuminated by a warm, low-angled light, likely from a setting sun, casting long shadows and bathing the landscape in golden hues. The contrast between the brightly lit surfaces and the deep shadows within the arched opening is pronounced. The light quality is soft due to atmospheric diffusion.",
         "dominantElements": [
-          "Massive ovular spaceship hull (est. 100-150m width, HORIZONTAL STRUCTURE) dominating center midground",
-          "Circular entrance portal (est. 20-30m diameter) on the front of the spaceship",
-          "Sandy desert terrain with rocky formations in foreground and background"
+          "Massive, rusted, dome-shaped alien vessel (center, midground)",
+          "Sandy desert terrain with rocky outcrops (foreground, left, right)",
+          "Distant, arid mountain range (background)"
         ],
-        "spatialLayout": "The foreground features a sandy path and loose sand with scattered rocks, leading towards the main subject. The midground is dominated by the immense, partially buried alien spaceship. The background consists of vast, eroded desert mountains and a hazy sky. The spaceship is positioned centrally, emerging from the sand dunes.",
+        "spatialLayout": "The foreground consists of uneven, sandy terrain with scattered rocks. The midground is dominated by the half-buried alien vessel, occupying the central portion of the frame. The background features low, eroded hills stretching towards the horizon under a hazy sky. The vessel's considerable size dwarfs the surrounding landscape.",
         "uniqueIdentifiers": [
-          "Half-buried alien spaceship",
-          "Circular, dark entrance portal",
-          "Extensive rust streaking on metallic hull"
+          "Half-buried, rust-colored alien spaceship",
+          "Massive arched entranceway",
+          "Pitted and corroded metallic hull"
         ],
-        "materials_primary": "Metal",
-        "materials_secondary": "Sand",
-        "materials_accents": "Rust",
-        "colors_dominant": "Brown (sand, rocks, rust)",
-        "colors_secondary": "Grey (ship hull)",
-        "colors_accents": "Darkness (inside the portal)",
-        "colors_ambient": "Orange-brown haze",
+        "materials_primary": "Sand, rock",
+        "materials_secondary": "Corroded metal",
+        "materials_accents": "Dust, faint light from within the opening",
+        "colors_dominant": "Orange (sand, rust, sky)",
+        "colors_secondary": "Brown (rocks, vessel)",
+        "colors_accents": "Dark interior of the opening",
+        "colors_ambient": "Golden-orange",
         "navigableElements": [
           {
             "type": "door",
             "position": "center, midground",
-            "description": "Large, dark circular opening into the alien vessel"
+            "description": "A large, dark, arched opening leading into the vessel."
           }
         ],
-        "searchDesc": "[Location - Exterior] Sunken alien spaceship in desert. Has: circular entrance (center, midground)",
+        "searchDesc": "[Location - Exterior] Rusty, half-buried alien spaceship in desert. Has: arched entrance (center, midground)",
         "dna": {
-          "architectural_tone": "hulking alien vessel, partially buried",
+          "architectural_tone": "massive, derelict, partially buried forms",
           "cultural_tone": null,
-          "materials_base": "Heavily oxidized and rusted alien alloys, segmented metallic plating, exposed structural elements, and significant sand inundation.",
-          "mood_baseline": "abandoned, colossal, decaying",
-          "palette_bias": "Dominated by deep rust browns, muted grays of corroded metal, and the warm tones of desert sand.",
-          "soundscape_base": "The creak and groan of stressed metal under sand pressure, the distant howl of desert winds, and the faint, ambient hum of residual alien technology.",
-          "flora_base": "None specific to the ship itself, but may be encroaching desert flora on exposed sections.",
-          "fauna_base": "Potential for small desert creatures or scavengers seeking shelter within any accessible crevices."
+          "materials_base": "Heavily corroded, pitted, and rusted alien alloys, fused with compacted sand.",
+          "mood_baseline": "forgotten, imposing",
+          "palette_bias": "Intensified rust colors and sandy browns, with dark, shadowed interiors.",
+          "soundscape_base": "Distant groaning of stressed metal, faint echoes within the buried structure.",
+          "flora_base": "None, apart from sand accumulation.",
+          "fauna_base": "Likely scavenging desert insects or small burrowing animals seeking shelter."
         },
-        "slug": "the-sunken-starship"
+        "slug": "the-sunken-vessel"
       },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/A4T1Iil2mIS4p-7WX5P2p.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/-TS_N2VCaTccma0eQbElX.jpg",
       "focus": {
-        "node_id": "The Sunken Starship",
+        "node_id": "The Sunken Vessel",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
@@ -2855,15 +2855,15 @@
       ]
     },
     {
-      "id": "loc-1763373513292-vsd9ew9aw",
+      "id": "loc-1763375078872-w3dl9876t",
       "type": "host",
       "children": [
         {
-          "id": "06f30af2-1cad-4ddd-86fc-bab42c9bf87a",
+          "id": "b4e388d5-ddfa-4e18-b23e-4e2e6a3b2cf8",
           "type": "region",
           "children": [
             {
-              "id": "159f21c1-18b4-44f5-b91a-f6c6aedd78b8",
+              "id": "76c12ae0-0214-448a-8a0d-707501fc74ee",
               "type": "location",
               "children": []
             }
