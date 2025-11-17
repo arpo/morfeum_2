@@ -592,39 +592,6 @@
         "distance": "medium"
       }
     },
-    "niche-1763394297486-lf5vlehlh": {
-      "id": "niche-1763394297486-lf5vlehlh",
-      "type": "niche",
-      "name": "interior of The Verdant Spire",
-      "dna": {
-        "looks": "A colossal, spiraling interior chamber where organic wood structures merge seamlessly with polished, iridescent metal. Smooth wooden floors inlaid with mossy patterns lead into the cavernous space, which curves upwards into an unseen, dense canopy.",
-        "colorsAndLighting": "The space is bathed in an ethereal, diffuse green light emanating from the structure itself. Veins of iridescent metal and patches of luminescent flora provide subtle glows.",
-        "atmosphere": "The air is thick with the scent of damp earth and ancient wood, carrying a sense of deep, awe-inspiring space. Mist drifts through the upper reaches, catching the light and creating a mystical ambiance.",
-        "architectural_tone": "organic-metallic fusion",
-        "cultural_tone": "A sanctuary where nature's magic is woven with advanced, organic technology.",
-        "materials": "Walls are a fusion of undulating, living bark-like wood and polished, humming metallic plating. The floor is smooth, polished wood with inlaid mossy patterns.",
-        "mood": "Awe-inspiring and mystical, evoking a sense of ancient, living grandeur and profound natural power.",
-        "sounds": "subtle hum, dripping water, soft rustling foliage",
-        "dominantElementsDescriptors": "undulating bark-like walls, colossal gnarled wood beams, polished iridescent metal veins, bioluminescent pool, glowing fungi",
-        "spatialLayout": "A vast, cavernous cylindrical interior that spirals upwards with immense implied height. A clear central path leads forward, with navigable openings to the right and upwards.",
-        "primary_surfaces": "wood, polished metal, stone",
-        "secondary_surfaces": "moss, luminescent flora, foliage",
-        "accent_features": "bioluminescent pool with ripples, glowing fungi cluster, organically shaped alcoves with flora",
-        "dominant": "green (ambient light)",
-        "secondary": "brown (wood textures)",
-        "accent": "iridescent hues (metal), golden light (archway)",
-        "ambient": "cool",
-        "uniqueIdentifiers": "undulating organic-metallic walls, dense luminescent canopy ceiling, bioluminescent pool",
-        "searchDesc": "Verdant Spire interior: organic-metallic fusion, spiraling cavern, bioluminescent glow."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/bgPquDfhxOnwjw3Um6xtf.jpg",
-      "focus": {
-        "node_id": "niche-1763394297486-lf5vlehlh",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
     "loc-1763394777170-39keowksf": {
       "id": "loc-1763394777170-39keowksf",
       "type": "host",
@@ -746,44 +713,233 @@
         "distance": "medium"
       }
     },
-    "niche-1763394813621-ve9u54ka9": {
-      "id": "niche-1763394813621-ve9u54ka9",
+    "niche-1763395113544-u72ua6rs0": {
+      "id": "niche-1763395113544-u72ua6rs0",
       "type": "niche",
       "name": "interior of The Violet Nebula",
       "dna": {
-        "looks": "An immense, perfectly spherical chamber with a vast, seamless interior. Gently curving, illuminated pathways lead into the distance, disappearing around unseen bends, suggesting further exploration within the station. The walls feature subtle geometric etchings and recessed doorways.",
-        "colorsAndLighting": "The dominant color is an iridescent violet sheen that subtly shifts in color and intensity. Soft, ethereal bioluminescence emanates from etched patterns and recessed channels, casting a gentle glow.",
-        "atmosphere": "Profound mystery and advanced scientific purpose permeate the air. The atmosphere feels cool and still, with a sense of infinite expanse. There is no discernible weather or motion, only a hushed, contemplative stillness.",
+        "looks": "An immense, cavernous circular interior space with a colossal domed ceiling. Polished obsidian floors reflect violet light, leading to a pulsating energy platform center. Sleek metallic walkways span the vast expanse at varying heights.",
+        "colorsAndLighting": "Dominant deep violets and indigos permeate the space, with subtle blue light accents. Ambient violet light is diffused by mist, creating a mysterious glow.",
+        "atmosphere": "A palpable sense of immense scale and contained power pervades. The air is still, filled with a faint ethereal violet mist, enhancing mystery and depth. The atmosphere feels cool and controlled.",
         "architectural_tone": "Neo-futuristic",
-        "cultural_tone": "A highly advanced, self-contained research laboratory or an observation hub of immense significance.",
-        "materials": "The primary material is a curved, seamless super-alloy with an iridescent violet sheen. Polished, darker composite material forms the walkways and floor. Subtle structural elements are faint lines of light.",
-        "mood": "Evokes a sense of awe, wonder, and intellectual curiosity. The vastness and advanced design inspire contemplation and a desire to explore.",
-        "sounds": "Faint hum, soft glow, distant whispers, gentle pulse.",
-        "dominantElementsDescriptors": [
-          "Seamless spherical chamber",
-          "Iridescent violet walls",
-          "Illuminated pathways",
-          "Recessed doorways"
-        ],
-        "spatialLayout": "A vast, perfectly spherical chamber with an infinite expanse. The space curves away in all directions from a central entry point. Pathways guide the eye and suggest branching exploration.",
-        "primary_surfaces": "Iridescent violet super-alloy walls, dark composite floor, seamless enclosed ceiling.",
-        "secondary_surfaces": "Polished dark composite walkways.",
-        "accent_features": "Subtle geometric etchings with bioluminescence, softly glowing violet markers, recessed doorways with pale violet light.",
-        "dominant": "Violet (walls, pathways, markers, doorway edges, floor channels)",
-        "secondary": "Dark composite (floor, walkways)",
-        "accent": "Pale violet (doorway edges), faint linear light (structural elements)",
+        "cultural_tone": "A highly advanced, self-contained research laboratory or observation hub of immense significance.",
+        "materials": "Polished obsidian-like floor, iridescent wall panels, and sleek metallic walkways. The console panel is matte white with etched glyphs.",
+        "mood": "Mysterious and awe-inspiring, evoking a sense of advanced technology and unfathomable scale.",
+        "sounds": "Low hum, faint pulsating energy, distant echoes, soft ambient tones.",
+        "dominantElementsDescriptors": "Circular vaulted dome, pulsating energy platform, diagonal metallic walkway, iridescent wall panels.",
+        "spatialLayout": "A wide, circular interior with a colossal domed ceiling, over 50 meters high. The main entry is narrow, opening into a vast expanse with a focal energy platform center.",
+        "primary_surfaces": "Polished obsidian floor, iridescent wall panels, solid domed ceiling.",
+        "secondary_surfaces": "Matte white console panel, metallic walkways.",
+        "accent_features": "Pulsating violet energy platform, complex glyphs on console, violet-glowing walkways.",
+        "dominant": "Violet (walls, lighting, mist)",
+        "secondary": "Indigo (walls)",
+        "accent": "Blue (console light)",
         "ambient": "Cool",
-        "uniqueIdentifiers": [
-          "Seamless, immense spherical interior",
-          "Iridescent violet shifting sheen",
-          "Bioluminescent geometric etchings",
-          "Illuminated dark composite pathways"
-        ],
-        "searchDesc": "Interior of a research station: immense spherical chamber, iridescent violet walls, glowing pathways, advanced."
+        "uniqueIdentifiers": "Colossal circular vaulted dome, pulsating violet energy platform, iridescent violet-indigo walls.",
+        "searchDesc": "Vast circular nebula interior with pulsating violet energy platform and futuristic walkways."
       },
-      "imagePath": "https://v3b.fal.media/files/b/koala/DKIIvGX4P-sDbvg0H1mbG.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/penguin/klqM0_dhK86Nh1Go__FZ5.jpg",
       "focus": {
-        "node_id": "niche-1763394813621-ve9u54ka9",
+        "node_id": "niche-1763395113544-u72ua6rs0",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "niche-1763395543363-vvzavfc1j": {
+      "id": "niche-1763395543363-vvzavfc1j",
+      "type": "niche",
+      "name": "interior of The Verdant Spire",
+      "dna": {
+        "looks": "A vast, circular chamber dominated by immense, spiraling walls of gnarled living wood fused with glowing metal. Massive wooden columns rise through the space, supporting an unseen, misty ceiling far above.",
+        "colorsAndLighting": "Soft, ethereal green glow emanates from bioluminescent mosses and vines clinging to the organic walls. Accents of warm golden light spill from passages and pulsing blue light outlines archways.",
+        "atmosphere": "The air is thick with the scent of damp earth and blooming flora, suggesting a deep, natural enclosure. A gentle, misty haze pervades the upper reaches, hinting at immense verticality within this enclosed space.",
+        "architectural_tone": "Organic-metallic fusion",
+        "cultural_tone": "A realm of intertwined nature magic and advanced organic technology, revering natural cycles.",
+        "materials": "The primary structure is formed from gnarled living wood and iridescent metal plating. The floor is a mosaic of polished, interlocking stone slabs and rich, dark soil. Woven roots frame passages and entwine with glowing vines.",
+        "mood": "Mysterious and awe-inspiring, evoking a sense of ancient, living architecture imbued with arcane or advanced technology.",
+        "sounds": "Damp earth, blooming flora, faint hum, distant echoes.",
+        "dominantElementsDescriptors": "Spiraling living wood walls, massive wooden columns, bioluminescent flora, grand archway.",
+        "spatialLayout": "A vast, circular chamber with immense verticality. Entries include a navigable passage to the left and a grand archway in the center, with platforms to the far right.",
+        "primary_surfaces": "Gnarled living wood, iridescent metal plating, polished stone slabs, rich soil.",
+        "secondary_surfaces": "Woven roots, glowing vines, bioluminescent moss.",
+        "accent_features": "Softly pulsing blue light on archway edges, warm golden light from passages, faint glowing geometric patterns in mist.",
+        "dominant": "Green (bioluminescent glow on walls and moss)",
+        "secondary": "Wood brown (gnarled wood structure)",
+        "accent": "Blue (archway light), Gold (passage light), Iridescent (metal plating)",
+        "ambient": "Neutral",
+        "uniqueIdentifiers": "Living wood and metal fusion, immense spiraling interior, bioluminescent ethereal glow.",
+        "searchDesc": "Circular spire interior with living wood, metal, and bioluminescent flora. Organic-tech fusion."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/4Wbi8UFkoUwa4ZMBBDV8n.jpg",
+      "focus": {
+        "node_id": "niche-1763395543363-vvzavfc1j",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763395658205-ylx5ev9uk": {
+      "id": "loc-1763395658205-ylx5ev9uk",
+      "type": "host",
+      "name": "Oceanic Expanse",
+      "dna": {
+        "type": "host",
+        "name": "Oceanic Expanse",
+        "description": "A boundless world of water and submerged wonders.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, submerged structures",
+          "cultural_tone": "Ancient civilizations connected to the sea, valuing preservation and the natural flow of water and life. Their structures are often integrated with the environment.",
+          "materials_base": "Seafloor minerals, calcified biological matter, and elements that thrive in aquatic or humid environments. Materials are often textured by water erosion and organic growth.",
+          "mood_baseline": "Mysterious, serene, ancient",
+          "palette_bias": "Dominated by cool, deep blues and greens, with occasional iridescent or bioluminescent accents. Colors evoke depth, water, and faint, natural light.",
+          "soundscape_base": "Subdued aquatic sounds, distant resonating tones, and the gentle hum of unseen life. Echoes and reverberations are common.",
+          "flora_base": "Abundant, diverse aquatic flora, including bioluminescent algae, nutrient-rich seaweeds, and resilient underwater plant life adapted to low light.",
+          "fauna_base": "A variety of aquatic creatures, from small, shimmering schooling fish to larger, ancient beings. Fauna often exhibits bioluminescence or unique adaptations to oceanic life."
+        },
+        "slug": "oceanic-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Oceanic Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "dcd27576-193d-497c-b1b3-2a5be7c51397": {
+      "id": "dcd27576-193d-497c-b1b3-2a5be7c51397",
+      "type": "region",
+      "name": "Oceanic Expanse",
+      "dna": {
+        "type": "region",
+        "name": "Oceanic Expanse",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "oceanic-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Oceanic Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "be54448d-7d4d-4c6b-8453-adc720c47895": {
+      "id": "be54448d-7d4d-4c6b-8453-adc720c47895",
+      "type": "location",
+      "name": "The Coral Steps",
+      "dna": {
+        "type": "location",
+        "name": "The Coral Steps",
+        "description": "An oceanfront terrace constructed from bleached coral, exposed to the sea air.",
+        "looks": "A weathered, pale stone terrace and steps carved directly into a rocky cliff face, leading to an arched entryway. The structure appears ancient and is partially adorned with clusters of vibrant purple and pink flowers, along with patches of soft, glowing moss. The stone itself is textured, with visible erosion from sea air and water. Small, arched openings are set into the cliff face further along the terrace, emitting a soft, warm light. The scene is set against a backdrop of the deep blue ocean and misty, distant mountains.",
+        "atmosphere": "A palpable sense of sea spray hangs in the air, though it is not visually depicted as a dense fog. The humidity is suggested by the soft, diffused light and the lushness of the vegetation clinging to the rocks. The overall atmosphere is calm and serene, with an otherworldly quality.",
+        "mood": "Serene, otherworldly",
+        "lighting": "The primary light source appears to be warm and artificial, emanating from within the arched entryway and the smaller window openings. This creates a contrast with the cooler, ambient blue light of the twilight sky and ocean. The light is soft and diffused, casting gentle glows rather than harsh shadows.",
+        "dominantElements": [
+          "Arched entryway with a visible wooden door (midground, left)",
+          "Stone steps leading to the entryway (foreground, left)",
+          "Ocean coastline with rocky outcrops (background, right)",
+          "Terrace carved into the cliff face (midground, center)",
+          "Arched window openings (midground, right)"
+        ],
+        "spatialLayout": "In the foreground, a textured, pale path or terrace leads the eye towards the midground. The midground is dominated by a cliff face into which an arched entryway and several smaller arched openings are carved. Steps are visible leading up to the main entryway. The background features the expanse of the ocean meeting a hazy, mountainous coastline under a twilight sky.",
+        "uniqueIdentifiers": [
+          "Terrace carved from bleached coral-like stone",
+          "Arched entryway with warm interior light",
+          "Luminous moss and vibrant flowering plants on cliff face",
+          "Oceanfront cliffside location"
+        ],
+        "materials_primary": "Stone (bleached coral-like)",
+        "materials_secondary": "Wood (door)",
+        "materials_accents": "Glowing moss, flowering plants",
+        "colors_dominant": "Pale white/off-white (stone)",
+        "colors_secondary": "Deep blue (ocean, sky), purple and pink (flowers), green (foliage)",
+        "colors_accents": "Warm yellow/orange (interior light), soft luminescence (moss)",
+        "colors_ambient": "Cool blue",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "foreground, left",
+            "description": "Stone steps leading upwards to a glowing arched doorway"
+          },
+          {
+            "type": "door",
+            "position": "midground, center",
+            "description": "Wooden door set within a warmly lit arched entryway in the cliff"
+          },
+          {
+            "type": "window",
+            "position": "midground, right",
+            "description": "Small arched window openings emitting a soft, warm light"
+          },
+          {
+            "type": "passage",
+            "position": "midground, center",
+            "description": "Arched entryway suggesting a passage into the cliffside structure"
+          }
+        ],
+        "searchDesc": "Oceanfront terrace with carved stone. Has: stairs (foreground, left), door (midground, center), window (midground, right)",
+        "dna": {
+          "architectural_tone": "weathered, carved stone with organic integration",
+          "cultural_tone": "A sacred or ceremonial site for an ancient aquatic civilization, designed for contemplation and interaction with the surface world.",
+          "materials_base": "Calcified coral-like stone, eroded by sea and air, often adorned with living, luminescent growth.",
+          "mood_baseline": "Ethereal, tranquil, exposed",
+          "palette_bias": "Pale, sun-bleached stone tones with vibrant, naturally occurring accents of bioluminescent flora.",
+          "soundscape_base": "Faint choral tones, the gentle lapping of waves, and the soft hum of moss.",
+          "flora_base": "Luminous mosses and resilient, colorful flowering plants that thrive in coastal, humid conditions.",
+          "fauna_base": null
+        },
+        "slug": "the-coral-steps"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/BpxSqr852zk3eFkNQehmH.jpg",
+      "focus": {
+        "node_id": "The Coral Steps",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763395707048-m7gyjoe4v": {
+      "id": "niche-1763395707048-m7gyjoe4v",
+      "type": "niche",
+      "name": "interior of The Coral Steps",
+      "dna": {
+        "looks": "A transitional interior niche of weathered coral-like stone, featuring a gently sloping floor and softly rounded surfaces. A low stone plinth with ancient carvings sits to the left, while bioluminescent flora illuminates the textured stone.",
+        "colorsAndLighting": "The scene is dominated by pale stone tones, accented by vibrant bioluminescent purples and pinks from flora and warm golden light from a background passage.",
+        "atmosphere": "The air is thick with the scent of sea spray and ancient stone, creating an ethereal and tranquil atmosphere. A subtle mossy bioluminescence glows at the floor's edges.",
+        "architectural_tone": "organic carved stone",
+        "cultural_tone": "Sacred site for an ancient aquatic civilization, designed for contemplation.",
+        "materials": "The primary material is eroded, coral-like stone with intricate patterns. Accents include living bioluminescent flora and mother-of-pearl inlays.",
+        "mood": "Ethereal, tranquil, and sacred, fostering a contemplative mood.",
+        "sounds": "gentle water, ancient stone, soft hum",
+        "dominantElementsDescriptors": "weathered coral-like stone, bioluminescent flora, stone plinth, mother-of-pearl alcove",
+        "spatialLayout": "A transitional interior niche with a gently upward sloping floor, leading to an alcove on the left and a passage in the background.",
+        "primary_surfaces": "weathered coral-like stone",
+        "secondary_surfaces": "mother-of-pearl inlays",
+        "accent_features": "bioluminescent flora, ancient carvings, spiraling water-like etchings",
+        "dominant": "pale stone",
+        "secondary": "deep purple and pink",
+        "accent": "soft green, warm golden light",
+        "ambient": "soft atmospheric",
+        "uniqueIdentifiers": "coral-like stone texture, mossy bioluminescence, mother-of-pearl alcove",
+        "searchDesc": "Interior niche of weathered coral stone with bioluminescent flora and mother-of-pearl alcove, sacred aquatic site."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/XPnHg45S7rm1iqIIkxAlm.jpg",
+      "focus": {
+        "node_id": "niche-1763395707048-m7gyjoe4v",
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
@@ -874,7 +1030,7 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763394297486-lf5vlehlh",
+                  "id": "niche-1763395543363-vvzavfc1j",
                   "type": "niche",
                   "children": []
                 }
@@ -897,7 +1053,30 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763394813621-ve9u54ka9",
+                  "id": "niche-1763395113544-u72ua6rs0",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763395658205-ylx5ev9uk",
+      "type": "host",
+      "children": [
+        {
+          "id": "dcd27576-193d-497c-b1b3-2a5be7c51397",
+          "type": "region",
+          "children": [
+            {
+              "id": "be54448d-7d4d-4c6b-8453-adc720c47895",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763395707048-m7gyjoe4v",
                   "type": "niche",
                   "children": []
                 }
@@ -909,8 +1088,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763383500556-yi5z183jh",
-    "loc-1763383658536-w0xsrsulf",
-    "loc-1763393622578-ijpcg758x"
+    "loc-1763393622578-ijpcg758x",
+    "loc-1763395658205-ylx5ev9uk"
   ]
 }

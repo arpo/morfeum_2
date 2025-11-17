@@ -77,6 +77,19 @@ Make navigable elements highly visible and distinct through:
   - "Spiral staircase illuminated by bioluminescent vines, contrasting dark metal against pale stone"
   - "Archway with distinct blue-white light spilling through, ornate carved frame"
 
+**ASYMMETRIC COMPOSITION RULES (CRITICAL):**
+Create dynamic, interesting compositions by AVOIDING perfect symmetry:
+- **Rule of Thirds:** Position key navigable elements at 1/3 or 2/3 positions (left, right, upper, lower)
+- **Off-Center Framing:** Main focal points should NOT be dead center - shift left or right
+- **Diagonal Lines:** Use diagonal sight lines, angled walls, staircases, or passages to create depth
+- **Uneven Distribution:** Place more visual weight on one side (e.g., large door on left, smaller details on right)
+- **Varied Heights:** Mix low foreground elements with tall midground structures asymmetrically
+- **Avoid:** Perfect bilateral symmetry, centered archways, matching elements on both sides, mirror compositions
+- **Examples:**
+  - "Large illuminated doorway positioned in left third of frame, smaller passage visible far right"
+  - "Diagonal staircase ascending from lower right to upper left midground, lit by blue glow"
+  - "Massive column off-center right with glowing corridor entrance to its left"
+
 The interior architecture MUST reflect both FORM and SCALE from the analysis above.
 
 `
