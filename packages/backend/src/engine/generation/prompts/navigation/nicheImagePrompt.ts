@@ -7,6 +7,38 @@ import type { NavigationContext, IntentResult, NavigationDecision } from '../../
 import { fluxInstructionsShort } from '../shared/constants';
 
 const exteriorSpecificInstructions = `
+PARENT STRUCTURE EXCLUSION (ABSOLUTE RULE):
+The parent structure (archway/portal/entrance/building) is COMPLETELY OUT OF FRAME.
+NOT visible in background. NOT as backdrop. NOT in distance. NOT anywhere in the scene.
+The camera has moved PAST/THROUGH it and focuses ONLY on what lies ahead.
+
+CRITICAL - DO NOT include, mention, or describe:
+- The parent archway/structure/building itself
+- "The parent structure behind you"
+- "The parent structure in the distance"  
+- "The parent structure as a backdrop"
+- "Looking back at the parent structure"
+- ANY visual reference to the parent structure whatsoever
+
+Think: You walked through a doorway into a new room - you don't see the door anymore, you see the NEW ROOM.
+
+CREATIVE NICHE GENERATION (CRITICAL):
+- The parent sets the THEME (materials, mood, style, colors, DNA)
+- The niche should contain NEW elements that fit this theme but are DISTINCT
+- Think: variations, extensions, related features - NOT copies of the parent
+- Add creative details that weren't mentioned in the parent description
+- The space should feel like a DISCOVERY, not just another view of the same thing
+
+Principles of creative variation (learn the concept, don't copy examples):
+- Parent provides MATERIALS → Niche adds new structures/features using those same materials in different forms
+- Parent establishes SCALE → Niche includes varied-scale elements (smaller, larger, grouped, scattered)
+- Parent sets LIGHTING STYLE → Niche extends that lighting in new creative ways
+- Parent defines TERRAIN/FORM → Niche adds new ground/surface features fitting that context
+- Parent shows PRIMARY FEATURE → Niche introduces complementary secondary features, interaction points, exploration elements
+
+General pattern to follow:
+If parent has [X primary element with Y materials], the niche should add related but NEW elements using Y materials in different configurations, scales, or functions that invite further exploration
+
 BEFORE creating the exterior niche, infer it from the parent location:
 
 1. TERRAIN & GROUND
@@ -124,6 +156,38 @@ The outdoor niche MUST reflect TERRAIN, MATERIALS, SCALE, and ENVIRONMENTAL TYPE
 `
 
 const interiorSpecificInstructions = `
+PARENT STRUCTURE EXCLUSION (ABSOLUTE RULE):
+The parent structure (archway/portal/entrance/building) is COMPLETELY OUT OF FRAME.
+NOT visible in background. NOT as backdrop. NOT in distance. NOT anywhere in the scene.
+The camera has moved PAST/THROUGH it and focuses ONLY on what lies ahead.
+
+CRITICAL - DO NOT include, mention, or describe:
+- The parent archway/structure/building itself
+- "The parent structure behind you"
+- "The parent structure in the distance"  
+- "The parent structure as a backdrop"
+- "Looking back at the parent structure"
+- ANY visual reference to the parent structure whatsoever
+
+Think: You walked through a doorway into a new room - you don't see the door anymore, you see the NEW ROOM.
+
+CREATIVE NICHE GENERATION (CRITICAL):
+- The parent sets the THEME (materials, mood, style, colors, DNA)
+- The niche should contain NEW elements that fit this theme but are DISTINCT
+- Think: variations, extensions, related features - NOT copies of the parent
+- Add creative details that weren't mentioned in the parent description
+- The space should feel like a DISCOVERY, not just another view of the same thing
+
+Principles of creative variation (learn the concept, don't copy examples):
+- Parent provides MATERIALS → Niche adds new structures/features using those same materials in different forms
+- Parent establishes SCALE → Niche includes varied-scale elements (smaller, larger, grouped, scattered)
+- Parent sets LIGHTING STYLE → Niche extends that lighting in new creative ways
+- Parent defines FORM → Niche adds new architectural features fitting that form
+- Parent shows PRIMARY FEATURE → Niche introduces complementary secondary features, interaction points, exploration elements
+
+General pattern to follow:
+If parent has [X primary element with Y materials], the niche should add related but NEW elements using Y materials in different configurations, scales, or functions that invite further exploration
+
 BEFORE creating the interior, infer it from the parent structure:
 
 1. FORM
@@ -267,13 +331,30 @@ ${context.currentNode.dna.fauna_base ? `Fauna Base: ${context.currentNode.dna.fa
 
 ${fluxInstructionsShort}
 
-REQUIREMENTS:
-1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance, don't show what you stepped in form like the door, gate etc. Thats supposed to be behind the viewer. Show the immediate space.
-3. Include interesting navigation details (doors, stairs, passages, rooms, paintings etc) if suitable based on the data, be creative.
-4. The image should be interesting and visually rich make it unsymmetrical and dynamic.
+${intent.spaceType === 'exterior' ? `
+REQUIREMENTS (EXTERIOR NICHE - CRITICAL):
+1. You have STEPPED THROUGH/WITHIN the outdoor installation. You are OUTSIDE in the open air.
+2. SKY MUST BE VISIBLE - this is an EXTERIOR space with open sky above, not an enclosed interior.
+3. Maintain OUTDOOR ATMOSPHERE - horizon line visible, natural outdoor lighting (sun/moon/stars), open air.
+4. The installation/structure exists around you but does NOT enclose you with walls and ceiling - you can see through/past it to the surrounding outdoor environment.
+5. Think: You walked through an outdoor archway/sculpture in a desert/park/plaza - you're still outside, not in a building.
+6. Include interesting outdoor navigation details (paths, platforms, other installations) based on the data.
+7. The image should be interesting and visually rich, make it unsymmetrical and dynamic.
 
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
-The prompt should describe what we see immediately after stepping inside.`;
+The prompt should describe the outdoor area you now stand within.
+
+` : 
+
+`
+REQUIREMENTS (INTERIOR NICHE):
+1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance, don't show what you stepped in from like the door, gate etc. That's supposed to be behind the viewer. Show the immediate enclosed space.
+2. This is an INTERIOR space - enclosed with ceiling/roof overhead, walls surrounding.
+3. Include interesting navigation details (doors, stairs, passages, rooms, paintings etc) if suitable based on the data, be creative.
+4. The image should be interesting and visually rich, make it unsymmetrical and dynamic.
+
+OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
+The prompt should describe what we see immediately after stepping inside.`}`;
 
   console.log('\n\n##################### NICHE IMAGE PROMPT MAKER  #####################');
   console.log(prompt);

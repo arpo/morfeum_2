@@ -912,177 +912,6 @@
         "distance": "close"
       }
     },
-    "niche-1763396024197-giy4vtpmu": {
-      "id": "niche-1763396024197-giy4vtpmu",
-      "type": "niche",
-      "name": "interior of The Rusting Leviathan",
-      "dna": {
-        "looks": "An immense, cavernous alien starship interior featuring a fractured, sand-strewn metal floor and towering, corroded walls. A colossal arched opening glows with ethereal blue light on the right, while distant structures recede into dust and dim light.",
-        "colorsAndLighting": "Dominant dark, mottled metallic tones are broken by the rust-colored sand and a faint, flickering internal light pool. An ethereal blue light emanates from a large opening, contrasting with the pervasive dimness.",
-        "atmosphere": "The air is likely still and heavy with dust, carrying the scent of decay and ancient metals. A faint, almost imperceptible hum suggests dormant, vast systems within the derelict. The scale inspires awe and a sense of profound isolation.",
-        "architectural_tone": "monumental derelict vessel",
-        "cultural_tone": "An alien monument to a long-vanished civilization, now a husk slowly being reclaimed by the desert.",
-        "materials": "The primary materials are heavily corroded, mottled alien metal plating for the floor and walls, showing extreme wear. Fine, rust-colored sand has accumulated in drifts, obscuring sections of the floor.",
-        "mood": "Evokes a sense of awe, mystery, and melancholic grandeur. The overwhelming scale and decay suggest a lost, advanced civilization.",
-        "sounds": "faint hum, echoing emptiness, settling dust",
-        "dominantElementsDescriptors": [
-          "fractured metal floor",
-          "towering corroded walls",
-          "monolithic support beams",
-          "glowing arched opening"
-        ],
-        "spatialLayout": "A vast, cavernous interior with a strong sense of depth. The space is dominated by verticality and width, with a clear focal point in the glowing arched opening on the right. The enclosed ceiling is implied by the sheer scale and enclosed nature.",
-        "primary_surfaces": "corroded alien metal, dust, sand",
-        "secondary_surfaces": "scattered ship fragments",
-        "accent_features": [
-          "alien glyphs on floor",
-          "dim ethereal blue light"
-        ],
-        "dominant": "dark metal",
-        "secondary": "rust-colored sand",
-        "accent": "ethereal blue light",
-        "ambient": "neutral",
-        "uniqueIdentifiers": [
-          "colossal scale of alien starship interior",
-          "rust-colored sand drifts",
-          "glowing blue arched opening"
-        ],
-        "searchDesc": "Alien starship interior with fractured metal floor, sand drifts, and a glowing blue archway."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/monkey/9fnC2C3h95ecsMwJHmQ42.jpg",
-      "focus": {
-        "node_id": "niche-1763396024197-giy4vtpmu",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
-    "loc-1763396570121-7yhwz89wj": {
-      "id": "loc-1763396570121-7yhwz89wj",
-      "type": "host",
-      "name": "The Verdant Expanse",
-      "dna": {
-        "type": "host",
-        "name": "The Verdant Expanse",
-        "description": "A world teeming with vibrant flora and fauna.",
-        "dna": {
-          "genre": "fantasy",
-          "architectural_tone": "organic, naturalistic",
-          "cultural_tone": "A world deeply intertwined with nature, where life flourishes in abundance and harmony. Societies often revere or coexist symbiotically with the natural world.",
-          "materials_base": "Primarily living organic matter, sculpted earth, and naturally occurring crystalline structures. Emphasizes growth, flow, and integration rather than static construction.",
-          "mood_baseline": "vibrant, mystical, alive",
-          "palette_bias": "Dominated by rich, saturated greens and blues, with earthy browns and occasional bursts of bioluminescence or floral color. A palette that speaks of life, water, and deep, verdant growth.",
-          "soundscape_base": "A symphony of natural sounds: flowing water, rustling leaves, a chorus of diverse creature calls, and the hum of ambient magical energies. Dynamic and ever-present.",
-          "flora_base": "Exotic, overgrown, and often bioluminescent plant life. Vines, giant ferns, luminescent mosses, and flowering trees that exhibit unusual growth patterns and vibrant colors.",
-          "fauna_base": "Diverse and fantastical creatures, ranging from iridescent insects to large, majestic beasts. Animals are often integrated into the ecosystem and may exhibit magical properties or symbiotic relationships with flora."
-        },
-        "slug": "the-verdant-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Verdant Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "1d583813-5b4e-4c17-a538-686448fa3988": {
-      "id": "1d583813-5b4e-4c17-a538-686448fa3988",
-      "type": "region",
-      "name": "The Verdant Expanse",
-      "dna": {
-        "type": "region",
-        "name": "The Verdant Expanse",
-        "description": "",
-        "dna": {
-          "architectural_tone": null,
-          "cultural_tone": null,
-          "materials_base": null,
-          "mood_baseline": null,
-          "palette_bias": null,
-          "soundscape_base": null,
-          "flora_base": null,
-          "fauna_base": null
-        },
-        "slug": "the-verdant-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Verdant Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "39918fc2-c398-489b-b819-4fbcc789854e": {
-      "id": "39918fc2-c398-489b-b819-4fbcc789854e",
-      "type": "location",
-      "name": "The Eden Run",
-      "dna": {
-        "type": "location",
-        "name": "The Eden Run",
-        "description": "The exterior of the natural amphitheater.",
-        "looks": "A wide river canyon is densely overgrown with deep green vines that drape from the towering walls. The water in the river flows over mossy rocks, reflecting the lush foliage. A natural archway, also covered in vines and dripping vegetation, spans the canyon in the background. Small, scattered points of golden light are visible amongst the greenery on the canyon walls.",
-        "atmosphere": "The air appears slightly hazy, particularly in the background, suggesting a moist environment. The dense vegetation hints at high humidity and the presence of a natural water source.",
-        "mood": "Alive, ethereal",
-        "lighting": "The lighting is soft and diffused, creating a mystical ambiance. The dominant light color is a pale, slightly cool green, emanating from the overall foliage and ambient light. Contrast is low, with gentle shadows pooling in the denser areas of vegetation.",
-        "dominantElements": [
-          "River canyon walls covered in deep green vines (sides, background)",
-          "Flowing river (center, midground)",
-          "Natural vine-covered archway (background)",
-          "Scattered points of golden light (sides, midground)"
-        ],
-        "spatialLayout": "The foreground features the rocky riverbed and flowing water, with dense green undergrowth on the immediate banks. The midground opens into the wider canyon, showcasing the full height of the vine-covered walls and the river's path. The background is dominated by the natural archway and receding misty, verdant landscape.",
-        "uniqueIdentifiers": [
-          "Vine-covered natural archway spanning canyon",
-          "River flowing through densely vegetated canyon",
-          "Scattered golden bioluminescent lights"
-        ],
-        "materials_primary": "Rock, water, dense vegetation (vines, leaves)",
-        "materials_secondary": "Moss, damp earth",
-        "materials_accents": "Golden glowing lights",
-        "colors_dominant": "Deep green (vegetation)",
-        "colors_secondary": "Mottled brown and gray (rocks), turquoise and emerald (water)",
-        "colors_accents": "Golden yellow (lights)",
-        "colors_ambient": "Soft, diffused green haze",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, midground",
-            "description": "The river flows into a misty passage beyond the archway."
-          },
-          {
-            "type": "bridge",
-            "position": "center, background",
-            "description": "A natural archway overgrown with vines, spanning the canyon."
-          },
-          {
-            "type": "mysterious_object",
-            "position": "left and right sides, midground",
-            "description": "Numerous small, scattered golden lights within the foliage."
-          }
-        ],
-        "searchDesc": "[Location - Exterior] River canyon with dense vines and a natural arch. Has: passage (center, midground), bridge (center, background), mysterious_object (sides, midground)",
-        "dna": {
-          "architectural_tone": "natural amphitheater",
-          "cultural_tone": null,
-          "materials_base": "rock, water, dense vegetation",
-          "mood_baseline": "mystical, awe-inspiring",
-          "palette_bias": "deep greens, water hues, ambient green haze",
-          "soundscape_base": "echoing water sounds, rustling vines, distant natural music",
-          "flora_base": "dense vine growth, dripping vegetation",
-          "fauna_base": "glowing butterflies"
-        },
-        "slug": "the-eden-run"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/panda/JEm-WrAfi_ZAPmFUkdow5.jpg",
-      "focus": {
-        "node_id": "The Eden Run",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
     "loc-1763409673202-4bytdp25v": {
       "id": "loc-1763409673202-4bytdp25v",
       "type": "host",
@@ -1203,6 +1032,82 @@
         "viewpoint": "default world view",
         "distance": "medium"
       }
+    },
+    "niche-1763413407828-ed4g8d1q7": {
+      "id": "niche-1763413407828-ed4g8d1q7",
+      "type": "niche",
+      "name": "interior of The Rusting Leviathan",
+      "dna": {
+        "looks": "The immense, cavernous interior of a derelict alien vessel, characterized by grand decay and colossal structures. Overlapping, oxidized metal plates form curved walls, streaked with verdigris, while a massive, rusted support beam descends dramatically. Fine ochre sand infiltrates the cracked, rust-colored plating of the floor, scattered with metallic fragments.",
+        "colorsAndLighting": "Dominant colors are rust oranges, coppers, and sandy beiges, complemented by muted metallic greys. Cinematic lighting casts deep shadows, highlighting the textures of decay, with cool blue accents from an archway and subtle red glows from distant conduits.",
+        "atmosphere": "A pervasive, thick, dusty atmosphere fills the vast space, creating a hazy, indeterminate distance. The air feels heavy with the stillness of ages, carrying the scent of ancient rust and fine desert sand. There is no perceivable motion, just the silent weight of monumental decay.",
+        "architectural_tone": "monumental derelict vessel",
+        "cultural_tone": "An alien monument to a long-vanished civilization, now a husk slowly being reclaimed by the desert.",
+        "materials": "The primary materials are immense, overlapping plates of oxidized alien metal, exhibiting extensive rust and verdigris. The floor is a mosaic of cracked plating, intermingled with fine ochre sand. Scattered metallic fragments suggest remnants of internal mechanisms.",
+        "mood": "Evokes a sense of awe and desolation, a profound feeling of isolation and the grandeur of a lost, colossal civilization.",
+        "sounds": "Silence, faint creaks, distant hum, dusty echoes, wind whispers.",
+        "dominantElementsDescriptors": "Corroded metal walls, colossal rusted support beam, sand-infiltrated floor.",
+        "spatialLayout": "A vast, cavernous, cylindrical or hall-like interior space with curving walls receding into haze. The ceiling is lost in gloom, suggesting immense height. Key points of interest include a floor hatch, a glowing archway, and distant, pulsing lights.",
+        "primary_surfaces": "Oxidized alien metal (walls), cracked rust-colored plating (floor), solid metal/stone (ceiling).",
+        "secondary_surfaces": "Sand drifts, metallic fragments.",
+        "accent_features": "Arched opening with cool blue glow, recessed conduits with pulsing red light.",
+        "dominant": "Rust Orange (walls, floor plating)",
+        "secondary": "Sandy Beige (sand)",
+        "accent": "Cool Blue (archway), Subtle Red (conduits)",
+        "ambient": "Cool",
+        "uniqueIdentifiers": "Massive scale of derelict alien ship interior, sand infiltration, contrasting cool blue and red glows.",
+        "searchDesc": "Alien derelict ship interior with sand, rust, and colossal decaying structures, bathed in atmospheric dust."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/xjt3ENaurRKbK-kv5jmF_.jpg",
+      "focus": {
+        "node_id": "niche-1763413407828-ed4g8d1q7",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "niche-1763413435736-ivl1z5124": {
+      "id": "niche-1763413435736-ivl1z5124",
+      "type": "niche",
+      "name": "exterior of The Metal Serpent",
+      "dna": {
+        "looks": "A vast desert playa is dominated by a colossal, spiraling metal serpent installation glowing with warm lights. Skeletal metalwork branches and an ancient, cracked earth path complement the arid landscape.",
+        "colorsAndLighting": "The scene is defined by the stark contrast between the deep blue of the twilight sky and the warm, golden-orange luminescence emanating from the metal serpent. Fading sunlight touches the foreground.",
+        "atmosphere": "The air is dusty and still, carrying the faint glow of distant warmth. A profound sense of isolation and immense scale pervades the arid expanse under the deep twilight sky.",
+        "architectural_tone": "organic sculptural",
+        "cultural_tone": "A focal point of awe and contemplation, this installation embodies ambitious artistic creation.",
+        "materials": "The serpent is crafted from oxidized copper and dark steel, interwoven with wire mesh. The ground is dry, cracked earth, and skeletal branches are integrated with weathered metalwork.",
+        "mood": "Awe-inspiring and mystical beauty, evoking a sense of wonder in a post-apocalyptic setting.",
+        "sounds": "wind, distant hum, crackling earth, faint echoes",
+        "dominantElementsDescriptors": [
+          "Colossal metal serpent installation",
+          "Dusty desert playa",
+          "Skeletal metalwork branches",
+          "Ancient cracked earth path",
+          "Deep twilight sky with mountains"
+        ],
+        "spatialLayout": "The scene features a wide, open playa with a path leading from the foreground to the midground serpent installation. The background is defined by the horizon and distant mountains.",
+        "primary_surfaces": "Dry earth, oxidized copper, dark steel",
+        "secondary_surfaces": "Wire mesh, weathered metalwork",
+        "accent_features": "Thousands of small, warm LED lights cradled in wire mesh, intricate filigree.",
+        "dominant": "Deep blue (sky)",
+        "secondary": "Orange and gold (serpent luminescence)",
+        "accent": "Warm white (LED lights)",
+        "ambient": "Cool (sky) and warm (installation)",
+        "uniqueIdentifiers": [
+          "Colossal spiraling metal serpent",
+          "Desert twilight with glowing installation",
+          "Skeletal metalwork integration"
+        ],
+        "searchDesc": "Desert installation: Colossal metal serpent glows under twilight sky amidst skeletal metalwork and ancient path."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/W6FE2ULup9ANL35enIw_Q.jpg",
+      "focus": {
+        "node_id": "niche-1763413435736-ivl1z5124",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -1220,7 +1125,7 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763396024197-giy4vtpmu",
+                  "id": "niche-1763413407828-ed4g8d1q7",
                   "type": "niche",
                   "children": []
                 }
@@ -1346,23 +1251,6 @@
       ]
     },
     {
-      "id": "loc-1763396570121-7yhwz89wj",
-      "type": "host",
-      "children": [
-        {
-          "id": "1d583813-5b4e-4c17-a538-686448fa3988",
-          "type": "region",
-          "children": [
-            {
-              "id": "39918fc2-c398-489b-b819-4fbcc789854e",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1763409673202-4bytdp25v",
       "type": "host",
       "children": [
@@ -1373,7 +1261,13 @@
             {
               "id": "e2a8bb10-0351-4497-9ea9-35bbe72b3a1d",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1763413435736-ivl1z5124",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -1381,7 +1275,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763393622578-ijpcg758x",
-    "loc-1763409673202-4bytdp25v"
+    "loc-1763409673202-4bytdp25v",
+    "loc-1763383500556-yi5z183jh"
   ]
 }

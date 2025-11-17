@@ -54,7 +54,11 @@ ${styleOptions}
 GO_INSIDE RULES:
 - Pick buildings/structures with windows/doors from Unique Identifiers or Visible Elements
 - Avoid water features, vegetation, furniture, decorative elements
-- spaceType: "interior" if enclosed/roofed, "exterior" if open-air, "unknown" if unclear
+- spaceType classification (IN ORDER):
+  1. Check Search Description for "[Exterior]" or "[Interior]" marker (most reliable)
+  2. "interior" = enclosed space with roof/ceiling (building, cave, vehicle, room)
+  3. "exterior" = open-air with sky visible (park, courtyard, plaza, outdoor installation, archway, portal, sculpture)
+  4. "unknown" if cannot determine
 
 EXAMPLES:
 "enter" + Visible="Classical resort buildings with balconies" → {"intent":"GO_INSIDE","target":"Classical resort buildings with balconies and columns","spaceType":"interior","confidence":0.95}
@@ -231,30 +235,55 @@ Return the selected element description in the "target" field.
 SPACE TYPE CLASSIFICATION (for GO_INSIDE intent only):
 When intent is GO_INSIDE, analyze the description and search description to determine what type of space the user will be entering:
 
-**Analysis Process:**
-1. Check Search Description for hints (e.g., "[Location - Exterior]" means current space is outside)
-2. Look at what structures/objects are available to enter (from Description and Visible Elements)
-3. Determine if entering those structures leads to interior or exterior space
+**Analysis Process (IN THIS ORDER):**
+1. **PRIORITY: Check Search Description FIRST** 
+   - If searchDesc contains "[Exterior]" → spaceType = "exterior"
+   - If searchDesc contains "[Interior]" → spaceType = "interior"
+   - This is the most reliable indicator
+   
+2. If no clear marker in searchDesc, analyze the structure being entered:
+   - Look at Description, Visible Elements, and Unique Identifiers
+   - Determine if entering leads to an enclosed space with roof/ceiling OR open-air space
 
 **Classification:**
-- "interior" = Entering an enclosed/roofed space with ceiling overhead
-  * Examples: inside a building, inside a vehicle, inside a cave, inside a structure, inside a room
-  * Keywords: building, structure, house, hall, chamber, room, vehicle, cylinder, vent, cave, temple, cabin
+- "interior" = Entering an ENCLOSED space with ROOF/CEILING overhead (sky NOT visible)
+  * Examples: inside a building, inside a vehicle, inside a cave, inside a room with ceiling
+  * Keywords: building, house, hall, chamber, room, vehicle, cave, temple, cabin, dome
+  * Must have: walls AND ceiling/roof creating enclosed volume
   
-- "exterior" = Entering an open-air space (no ceiling, sky visible)
-  * Examples: entering a park, entering a courtyard, entering a garden, entering a plaza
+- "exterior" = Entering an OPEN-AIR space (sky visible, no ceiling/roof)
+  * Examples: entering a park, courtyard, garden, plaza, passing through outdoor installation
   * Keywords: park, garden, courtyard, plaza, yard, field, grounds, square, open terrace
+  * OUTDOOR INSTALLATIONS (Burning Man style): archway, portal, gateway, sculpture, installation, monument, art piece
+  * Key test: Can you see the sky when standing inside/within it?
   
 - "unknown" = Cannot determine from available context
 
 - null = For all other intent types (not GO_INSIDE)
 
 **Example Reasoning:**
-- Current: "The Pollen Vents" (exterior view of cylindrical structures)
-- Command: "enter"
-- Description mentions: "cylindrical structures" with "openings" and "vents"
-- Analysis: User wants to go INSIDE the cylindrical structures → entering enclosed space with ceiling
+
+Example 1 (Outdoor Installation):
+- Current: "The Metal Serpent" 
+- searchDesc: "[Exterior] Glowing metal archway in desert"
+- Description: "monumental archway", "portal"
+- Analysis: searchDesc says [Exterior] → this is definitive
+- Also: archway/portal are outdoor installations with no roof
+- Result: spaceType = "exterior"
+
+Example 2 (Enclosed Structure):
+- Current: "The Pollen Vents" 
+- searchDesc: "[Exterior] cylindrical structures"
+- Description: "cylindrical structures" with "openings" and "vents"
+- Analysis: searchDesc says [Exterior] currently, but entering cylindrical structure with walls
+- cylinders/vents are enclosed structures with ceilings
 - Result: spaceType = "interior"
+
+Example 3 (Courtyard):
+- Current: "Garden Entrance"
+- Description: "enclosed courtyard with open sky"
+- Analysis: "open sky" explicitly mentioned → no roof
+- Result: spaceType = "exterior"
 
 EXAMPLES:
 
