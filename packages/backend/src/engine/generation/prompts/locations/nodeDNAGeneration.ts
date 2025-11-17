@@ -50,7 +50,7 @@ OUTPUT JSON STRUCTURE:
   "looks": "2-4 sentences describing what is seen — key forms, layout, and notable features.",
   "colorsAndLighting": "1-3 sentences on dominant colors and light behavior.",
   "atmosphere": "2-4 sentences on air, temperature, motion, weather, and sensory feel.",
-  "architectural_tone": "Short phrase (10-20 characters) naming architectural style or era (e.g. 'futuristic metal', 'ancient stone').",
+  "architectural_tone": "Short phrase (10-20 characters) naming architectural style or era (e.g. 'futuristic metal', 'ancient stone'). Roman or Gothic, Victorian, Modernist, Brutalist, Cyberpunk, Organic, Minimalist, Baroque, Art Deco, Rustic, Industrial, Neo-futuristic.",
   "cultural_tone": "1 sentence on the social or functional identity (e.g. 'financial district', 'artisan quarter', 'market zone').",
   "materials": "1-3 sentences naming main materials and textures, their condition and finish.",
   "mood": "1-2 sentences on the emotional tone this place evokes.",

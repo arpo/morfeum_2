@@ -320,6 +320,315 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "loc-1763390012512-tcpwtm6v3": {
+      "id": "loc-1763390012512-tcpwtm6v3",
+      "type": "host",
+      "name": "The Dust Plains",
+      "dna": {
+        "type": "host",
+        "name": "The Dust Plains",
+        "description": "A desolate expanse under a pale, alien sky.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "brutal industrial megastructures",
+          "cultural_tone": "A civilization focused on technological advancement and resource extraction, with little regard for aesthetics or natural preservation.",
+          "materials_base": "Heavy use of reinforced concrete, dark ferrous alloys, and hardened composites. Materials are functional and built for extreme durability and environmental resistance.",
+          "mood_baseline": "desolate, imposing, functional",
+          "palette_bias": "Dominated by deep grays, blacks, and muted metallics, often punctuated by artificial, cold-toned lighting. Earth tones are present but subdued by industrial elements.",
+          "soundscape_base": "A low hum of distant machinery, echoing wind, and the occasional clank of metal. A sense of vast emptiness and mechanical operation.",
+          "flora_base": "Sparse, hardy, and often mutated plant life adapted to arid or irradiated conditions. Primarily tough grasses, stunted, leathery shrubs, and fungal growths.",
+          "fauna_base": "Scavenging creatures and resilient, often genetically modified organisms. Adapted to harsh environments and scarcity, exhibiting a survivalist nature."
+        },
+        "slug": "the-dust-plains"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Dust Plains",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "461e9a16-77a0-467a-a273-80a49ffcba11": {
+      "id": "461e9a16-77a0-467a-a273-80a49ffcba11",
+      "type": "region",
+      "name": "The Scarred Highlands",
+      "dna": {
+        "type": "region",
+        "name": "The Scarred Highlands",
+        "description": "A region pockmarked by ancient impact craters and strange geological formations.",
+        "dna": {
+          "architectural_tone": "scarred, cratered landscapes",
+          "cultural_tone": "null",
+          "materials_base": "rock, hardened dust, weathered metallic remnants",
+          "mood_baseline": "barren, harsh, ancient",
+          "palette_bias": "ochre, deep reds, muted greys, metallic rust",
+          "soundscape_base": "howling winds, shifting scree, distant echoes",
+          "flora_base": "sparse, desiccation-resistant desert flora",
+          "fauna_base": "hardy scavengers, subterranean dwellers"
+        },
+        "slug": "the-scarred-highlands"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Scarred Highlands",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "beb99e6d-f381-4e83-9cc7-e4ca69d4db77": {
+      "id": "beb99e6d-f381-4e83-9cc7-e4ca69d4db77",
+      "type": "location",
+      "name": "The Obsidian Maw",
+      "dna": {
+        "type": "location",
+        "name": "The Obsidian Maw",
+        "description": "A colossal, half-submerged research bunker, a scar of black metal and concrete against the ochre dust.",
+        "looks": "A massive, dark structure is partially buried into a rocky, reddish landscape. The structure's facade is composed of large, dark metal panels and concrete, showing signs of age and weathering. A colossal, open entry hatch dominates the center of the facade, revealing a long, deep corridor within. The scale is immense, dwarfing the surrounding terrain. The overall impression is one of a colossal, abandoned industrial facility, heavily integrated into the natural environment.",
+        "atmosphere": "The air appears dry and dusty, with a fine particulate haze obscuring distant details. The atmosphere is clear enough to discern the structure and the sky, but suggests a lack of moisture and organic life. The environment feels desolate and arid.",
+        "mood": "Foreboding, industrial",
+        "lighting": "The primary light source is a striking, cold blue luminescence emanating from the interior of the structure. This light casts sharp contrasts against the dark facade and illuminates the dusty ground leading into the entrance. The ambient sky light is pale and diffused, creating a muted backdrop.",
+        "dominantElements": [
+          "Massive black metal and concrete bunker facade (approx. 50m wide, 30m tall)",
+          "Colossal open entry hatch (approx. 20m wide, 25m tall)",
+          "Reddish-brown, eroded rock formations on either side of the bunker",
+          "Bright blue internal light source (vertical bar)"
+        ],
+        "spatialLayout": "The foreground consists of a dusty, dirt path leading towards the structure. The midground is dominated by the imposing facade of the half-buried bunker, carved into the landscape. The bunker presents as a HORIZONTAL STRUCTURE, its width significantly greater than its height in the visible section. The background is the opening of the bunker, revealing a deep, luminous corridor stretching into the darkness.",
+        "uniqueIdentifiers": [
+          "Half-buried, dark metal and concrete sci-fi bunker",
+          "Colossal, open reinforced entry hatch",
+          "Intense, vertical blue light emanating from within"
+        ],
+        "materials_primary": "black metal, concrete",
+        "materials_secondary": "ochre dust, reddish rock",
+        "materials_accents": "blue light source",
+        "colors_dominant": "dark grey (bunker facade)",
+        "colors_secondary": "ochre (ground and rock formations)",
+        "colors_accents": "vivid blue (interior light)",
+        "colors_ambient": "pale white-blue (sky)",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground/background",
+            "description": "Wide, deep passage illuminated by a vertical blue light source"
+          },
+          {
+            "type": "door",
+            "position": "left side, midground",
+            "description": "Small, dark, reinforced door set into the bunker facade"
+          },
+          {
+            "type": "door",
+            "position": "right side, midground",
+            "description": "Small, dark, reinforced door set into the bunker facade"
+          }
+        ],
+        "searchDesc": "Massive sci-fi bunker entrance. Has: passage (center, midground/background), door (left side, midground), door (right side, midground)",
+        "dna": {
+          "architectural_tone": "monolithic, partially buried industrial complex",
+          "cultural_tone": "null",
+          "materials_base": "black metal, reinforced concrete, dust-encrusted rock",
+          "mood_baseline": "ominous, functional, forgotten",
+          "palette_bias": "dark greys, blacks, ochre dust, pale blue artificial light",
+          "soundscape_base": "low hum from within, external silence, wind",
+          "flora_base": "null",
+          "fauna_base": "null"
+        },
+        "slug": "the-obsidian-maw"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/zRS0kK8MJJq_Z8CHjof1n.jpg",
+      "focus": {
+        "node_id": "The Obsidian Maw",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763390139631-manel40i7": {
+      "id": "niche-1763390139631-manel40i7",
+      "type": "niche",
+      "name": "interior of The Obsidian Maw",
+      "dna": {
+        "looks": "A colossal, monolithic industrial bunker interior is entered. The foreground features a rough concrete floor with ochre grit, leading into a vast, straight corridor. Towering, weathered black metal and concrete walls define the immense scale, lined with recessed panels and conduits.",
+        "colorsAndLighting": "Dominant tones are deep greys and blacks from the industrial materials, contrasted by a searingly bright, pale blue light pulsing from the corridor's depth.",
+        "atmosphere": "The air feels still and cool, carrying the scent of dust and cold metal. There's a profound sense of immense scale and forgotten purpose, a silent, unmoving vastness.",
+        "architectural_tone": "brutalist sci-fi",
+        "cultural_tone": "null",
+        "materials": "The interior is constructed from rough concrete and weathered black metal. The concrete floor is gritty with ochre dust. Thick concrete beams reinforce the metal walls.",
+        "mood": "Imposing and awe-inspiring, with a hint of mystery due to the unknown purpose of the facility.",
+        "sounds": "Silence, faint hum, distant echo, dripping water, wind.",
+        "dominantElementsDescriptors": "colossal bunker interior, vast straight corridor, towering metal walls, pulsing blue light",
+        "spatialLayout": "A broad, straight corridor of immense scale stretches into darkness from the entry point. The space is deep and wide, navigable towards the center.",
+        "primary_surfaces": "concrete floor, black metal walls, concrete beams, enclosed ceiling",
+        "secondary_surfaces": "recessed panels, conduits",
+        "accent_features": "searingly bright vertical bar of pale blue light",
+        "dominant": "dark grey (walls, floor)",
+        "secondary": "black (metal, shadows)",
+        "accent": "pale blue (light bar)",
+        "ambient": "cool",
+        "uniqueIdentifiers": "colossal scale, brutalist industrial aesthetic, pulsing pale blue light bar",
+        "searchDesc": "Industrial bunker interior with concrete floor, metal walls, and a deep corridor lit by a pale blue light."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/RmyNWA_iY9IwHFXLXfrrx.jpg",
+      "focus": {
+        "node_id": "niche-1763390139631-manel40i7",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763390294222-ucce34l8q": {
+      "id": "loc-1763390294222-ucce34l8q",
+      "type": "host",
+      "name": "Aridian Expanse",
+      "dna": {
+        "type": "host",
+        "name": "Aridian Expanse",
+        "description": "A vast, arid desert landscape stretching to the horizon.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "monumental, alien, functional",
+          "cultural_tone": "This is a world shaped by advanced, possibly ancient, civilizations with a focus on large-scale engineering and the exploitation of harsh environments.",
+          "materials_base": "Primarily synthetic and engineered materials. Expect smooth, seamless surfaces, often metallic or ceramic, designed for extreme durability and environmental resistance.",
+          "mood_baseline": "awe-inspiring, desolate, mysterious",
+          "palette_bias": "A base of muted, earthy tones is accented by artificial, often vibrant, energy signatures. Cool blues and greens often contrast with warm, arid landscapes.",
+          "soundscape_base": "Dominated by the subtle hum of unseen technology, vast silences punctuated by the whisper of wind, and the occasional drone of automated systems.",
+          "flora_base": "Minimal and resilient. Expect sparse, hardy desert vegetation that has adapted to extreme aridity and potentially altered atmospheric conditions.",
+          "fauna_base": "Scarce and specialized. Any fauna would be adapted to harsh, arid conditions, possibly with cybernetic or bio-engineered enhancements."
+        },
+        "slug": "aridian-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aridian Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5236e255-1a71-4fd8-993b-0c6f07d50ae1": {
+      "id": "5236e255-1a71-4fd8-993b-0c6f07d50ae1",
+      "type": "region",
+      "name": "The Crimson Sands",
+      "dna": {
+        "type": "region",
+        "name": "The Crimson Sands",
+        "description": "A region of rolling dunes known for its stark beauty and extreme temperatures.",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": "Reinforced, heat-resistant composites and weathered metallic alloys are common, designed to withstand extreme thermal fluctuations.",
+          "mood_baseline": "intense heat, stark beauty",
+          "palette_bias": "Dominant hues of ochre, burnt sienna, and deep reds from mineral-rich sands, contrasted with the stark blues of the sky.",
+          "soundscape_base": "The constant hiss of wind carrying fine sand and the occasional creak of expanding and contracting structures.",
+          "flora_base": "Extremely sparse, consisting of low-lying, drought-resistant succulents and hardy scrub bushes that have adapted to extreme sand accumulation.",
+          "fauna_base": "Burrowing creatures and small, tough insects are prevalent, alongside larger scavengers adapted to heat and scarcity."
+        },
+        "slug": "the-crimson-sands"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Crimson Sands",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "f3ccb31c-b809-48c1-9d05-93add3719fb0": {
+      "id": "f3ccb31c-b809-48c1-9d05-93add3719fb0",
+      "type": "location",
+      "name": "The Lumina Spire",
+      "dna": {
+        "type": "location",
+        "name": "The Lumina Spire",
+        "description": "A colossal metallic spire piercing the desert sky, its base marked by an unusual entrance.",
+        "looks": "A colossal, impossibly smooth metallic spire dominates the landscape, its form tapering upwards to pierce the sky. Its broad base curves outwards before narrowing into a sleek, impossibly smooth conical shape. A distinct circular opening at its base emanates a soft, vibrant cyan glow. The surrounding terrain is barren and rocky, with rolling hills and distant mountains under a vast sky.",
+        "atmosphere": "The air appears dry and clear, with a slight haze obscuring the distant mountains. Wispy, salmon-colored clouds drift across the sky, suggesting a warm, arid environment.",
+        "mood": "Mysterious, awe-inspiring, alien",
+        "lighting": "The scene is illuminated by a warm, ambient light from the setting sun, casting reddish hues on the terrain and clouds. The spire itself is also a source of cool cyan light emanating from its base and its peak.",
+        "dominantElements": [
+          "Colossal metallic spire (est. 200-300m tall, VERTICAL STRUCTURE) dominating the center",
+          "Rolling desert dunes and rocky outcrops (foreground/midground)",
+          "Circular glowing entrance at spire base (center, midground)",
+          "Distant mountain ranges (background)",
+          "Wispy, colorful clouds (sky)"
+        ],
+        "spatialLayout": "The foreground consists of barren, reddish-brown desert terrain with scattered rocks and a narrow, reflective wet path leading towards the spire. The midground is dominated by the massive metallic spire, which rises from the desert floor and forms the central focal point. The background is filled with a range of hazy, reddish-brown mountains and a vast expanse of sky.",
+        "uniqueIdentifiers": [
+          "Colossal metallic spire",
+          "Circular cyan glowing entrance",
+          "Desert landscape with reddish hues"
+        ],
+        "materials_primary": "Metal",
+        "materials_secondary": "Rock",
+        "materials_accents": "Glowing cyan light",
+        "colors_dominant": "Reddish-brown (terrain, rocks)",
+        "colors_secondary": "Teal (sky)",
+        "colors_accents": "Cyan (spire glow)",
+        "colors_ambient": "Warm, sunset tones",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Circular entrance emitting a bright cyan glow, inviting entry."
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Desert spire. Has: circular glowing entrance (center, midground)",
+        "dna": {
+          "architectural_tone": "impossibly smooth, monolithic, self-illuminating",
+          "cultural_tone": null,
+          "materials_base": "Polished, seamless mega-alloys and advanced composites that absorb and re-emit light. The base is integrated with the native rock strata.",
+          "mood_baseline": "enigmatic, otherworldly, inviting",
+          "palette_bias": "A stark contrast between the warm desert tones and the cool, vibrant cyan energy emanating from its entrance.",
+          "soundscape_base": "A low, resonant hum originating from within the spire, subtly overlaying the desert wind.",
+          "flora_base": "None directly on the spire structure, but hardy desert plants might cling to the rocky terrain at its base.",
+          "fauna_base": "Likely absent due to the spire's influence, or highly specialized, non-native creatures attracted to its energy."
+        },
+        "slug": "the-lumina-spire"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/SyDmmfeJrDWsYZVNZKpjo.jpg",
+      "focus": {
+        "node_id": "The Lumina Spire",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763390454825-cpjw04xat": {
+      "id": "niche-1763390454825-cpjw04xat",
+      "type": "niche",
+      "name": "interior of The Lumina Spire",
+      "dna": {
+        "looks": "A vast, cavernous chamber with impossibly smooth, curving metallic walls rising to an unseen apex. Colossal structural beams segment the walls, and recessed archways offer glimpses into further passages. A slender, elevated cyan pathway recedes into the immense, hazy background.",
+        "colorsAndLighting": "The interior is dominated by a soft, cool cyan illumination emanating from recessed panels and the distant pathway. This glow subtly reflects off the polished metallic surfaces.",
+        "atmosphere": "The air feels still and cool, echoing the implied vastness of the space. There is a sense of immense scale and quietude, a profound stillness within this engineered monument.",
+        "architectural_tone": "Neo-futuristic monolithic",
+        "cultural_tone": "A monument to advanced, possibly ancient, large-scale engineering.",
+        "materials": "Polished, seamless mega-alloy forms the floor and walls, with large, smooth metallic structural beams. The surfaces are impeccably clean and reflect light. A continuous solid material forms the enclosed ceiling.",
+        "mood": "Awe-inspiring and immense, with a hint of mystery due to the unexplored depths.",
+        "sounds": "Distant hum, faint echo, subtle resonance, immense silence, vast emptiness.",
+        "dominantElementsDescriptors": "Mega-alloy floor, towering metallic walls, colossal structural beams, elevated cyan pathway.",
+        "spatialLayout": "A vast, cavernous chamber with a gently curving floor leading to a monumental upward expansion. The layout suggests immense verticality and depth, with symmetrical navigation points.",
+        "primary_surfaces": "Mega-alloy, seamless metal, solid enclosed ceiling.",
+        "secondary_surfaces": "Smooth metallic structural beams.",
+        "accent_features": "Pulsing geometric patterns on a recessed floor panel, soft cyan illuminated archways, slender glowing cyan pathway.",
+        "dominant": "Cyan (dominant glow)",
+        "secondary": "Metallic silver (surfaces)",
+        "accent": "Pulsing cyan (panel)",
+        "ambient": "Cool",
+        "uniqueIdentifiers": "Seamless mega-alloy floor, colossal segmented walls, elevated cyan pathway, total enclosure.",
+        "searchDesc": "Interior of Lumina Spire: vast metallic chamber with cyan glow, colossal scale, and seamless design."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/8rKbnsfxfZzjSTHbBq8ze.jpg",
+      "focus": {
+        "node_id": "niche-1763390454825-cpjw04xat",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -361,6 +670,52 @@
               "children": [
                 {
                   "id": "niche-1763384885600-6kdbr9pvh",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763390012512-tcpwtm6v3",
+      "type": "host",
+      "children": [
+        {
+          "id": "461e9a16-77a0-467a-a273-80a49ffcba11",
+          "type": "region",
+          "children": [
+            {
+              "id": "beb99e6d-f381-4e83-9cc7-e4ca69d4db77",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763390139631-manel40i7",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763390294222-ucce34l8q",
+      "type": "host",
+      "children": [
+        {
+          "id": "5236e255-1a71-4fd8-993b-0c6f07d50ae1",
+          "type": "region",
+          "children": [
+            {
+              "id": "f3ccb31c-b809-48c1-9d05-93add3719fb0",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763390454825-cpjw04xat",
                   "type": "niche",
                   "children": []
                 }

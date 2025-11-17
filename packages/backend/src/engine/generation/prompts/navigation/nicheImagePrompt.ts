@@ -6,6 +6,71 @@
 import type { NavigationContext, IntentResult, NavigationDecision } from '../../../navigation/types';
 import { fluxInstructionsShort } from '../shared/constants';
 
+const interiorSpecificInstructions = `
+BEFORE creating the interior, infer it from the parent structure:
+
+1. FORM
+- Match interior shape to exterior geometry:
+  round → circular plan
+  rectangular → straight walls + corners
+  cylindrical/tubular → curved walls
+  faceted/geodesic → geometric framework
+  organic → uneven/natural surfaces
+  arched/gothic/roman → interior echoes arch style
+
+2. CEILING
+- Match ceiling to roof type:
+  domed → domed ceiling
+  flat → flat ceiling
+  vaulted → vaulted arches
+  pitched/peaked → angled ceiling
+  geodesic → faceted overhead structure
+
+3. SCALE
+- Use exterior size + Spatial Layout to set interior volume:
+  small (<15m): 3–5m ceilings
+  large (15–50m): 8–15m ceilings
+  colossal (>50m): 20m+ ceilings, huge spans, deep distance
+- Reflect the dominant dimension (height/width/depth).
+- If exterior dimensions are known, interior height = 40–60% of total.
+- For houses: infer realistic interior style (flooring, materials, furniture) from exterior cues.
+
+4. STRUCTURE TYPE (affects how you fill foreground/midground/background):
+- Vertical (towers/spires): emphasize height, upward depth, towering vertical elements.
+- Horizontal (halls/corridors): emphasize long linear depth and receding perspective.
+- Wide (domes/arenas): emphasize circular expanse, open span, and roof curvature.
+
+5. COMPOSITION (ONE unified block)
+Create **ONE** Foreground / Midground / Background description, influenced by the structure type above:
+
+[COMPOSITION:]
+- **Foreground:**  
+  Floor textures, entry-level elements, bases of structures, or first navigable element.  
+  Include 1 navigable element here if appropriate (e.g., “stone steps rising left [navigable: stairs, left]”).
+
+- **Midground:**  
+  Primary architectural features shaped by FORM + SCALE: columns, walls, curvature, shafts, arches, side features.  
+  Add 1 navigable element if suitable (e.g., “arched doorway on right [navigable: door, right wall]”).
+
+- **Background:**  
+  The dominant spatial cue based on structure type:  
+    • Vertical → soaring ceiling + visible height (specify meters)  
+    • Horizontal → long passage or corridor depth (specify meters)  
+    • Wide → far curved walls or domed ceiling (specify diameter/height)  
+  Add 1 navigable element here if suitable (e.g., “distant platform [navigable: platform, far center]”).
+
+CRITICAL::
+6. NAVIGABLE ELEMENTS (required)
+- Include 2-3 very clearly visible navigable elements across foreground/midground/background.
+- Allowed types: passage, corridor, stairs, ladder, ramp, platform, walkway, opening, hatch, door, object.
+- Always write them with clear tags:
+  (navigable: type, position)
+
+The interior architecture MUST directly reflect FORM and SCALE from the analysis above.
+
+
+`
+
 /**
  * Generate prompt for LLM to create FLUX image description
  * for stepping inside a location
@@ -25,51 +90,9 @@ You entered through: "${decision.reasoning}"
 
 ${context.currentNode.data.looks ? `Parent structure appearance: "${context.currentNode.data.looks}"` : ''}
 
-BEFORE creating the interior, analyze the parent structure's FORM:
-
-1. SHAPE ANALYSIS
-   What is the overall geometric form?
-   - Circular/round → Interior must have circular floor plan
-   - Rectangular/square → Interior must have straight walls with corners
-   - Cylindrical/tubular → Interior must have curved walls (like inside a pipe)
-   - Geodesic/faceted → Interior must show geometric framework
-   - Irregular/organic → Interior must have natural, uneven surfaces
-
-2. CEILING/ROOF ANALYSIS
-   What type of ceiling would this structure have inside?
-   - Domed roof → Domed ceiling overhead
-   - Flat roof → Flat ceiling
-   - Vaulted roof → Vaulted ceiling
-   - Peaked/pitched roof → Angled ceiling following roof line
-   - Geodesic dome → Visible geodesic framework overhead
-   - Arched structure → Arched ceiling
-
-3. SCALE & PROPORTION (CRITICAL)
-   Extract dimensions from Spatial Layout if provided (e.g., "80-100m tall, 40m diameter")
-   Apply proportional interior scale:
-   
-   - Compact/small (< 15m) → Intimate interior (3-5m ceilings, walls 3-8m apart)
-   - Large/expansive (15-50m) → Spacious interior (8-15m ceilings, walls 10-20m apart)
-   - Towering/colossal (> 50m) → Vast interior (20m+ ceilings, walls 20m+ apart, visible depth 40m+)
-
-   Dimensional Guidelines:
-   Witch dimension is the largest? Depth / Height / Width?
-   If a building is very tall, interior height should reflect that.
-   If a building is very wide, interior width should reflect that.
-   
-   MANDATORY for colossal structures (> 50m):
-   - Specify ceiling height in meters (e.g., "vaulted ceiling soaring 40m overhead")
-   - Specify wall distances (e.g., "walls stretching 25m to either side")
-   - Include massive structural elements (e.g., "8m tall stone blocks," "towering 15m columns")
-   - Emphasize depth and distance (e.g., "passage extending 50m into darkness")
-   - Use scale-reinforcing language: "towering," "vast," "immense," "soaring," "colossal"
-   
-   If structure dimensions are provided (e.g., "80m tall"), interior ceiling should be 40-60% of total height.
-
-CRITICAL: The interior architecture MUST directly reflect these analyzed characteristics.
-You are literally INSIDE the structure described above.
-
-You should create a niche inside ${context.currentNode.name} that has the following features:
+${intent.spaceType === 'interior' ? interiorSpecificInstructions : ''}
+  
+You should create a ${intent.spaceType} niche inside ${context.currentNode.name} that has the following features:
 
 ${context.currentNode.data.description ? `Description: ${context.currentNode.data.description}` : ''}
 ${context.currentNode.data.looks ? `Looks: ${context.currentNode.data.looks}` : ''}
@@ -105,9 +128,8 @@ ${context.currentNode.dna.fauna_base ? `Fauna Base: ${context.currentNode.dna.fa
 ${fluxInstructionsShort}
 
 REQUIREMENTS:
-1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance, don't show what you stepped in form like the door, gate etc. Thats supposed to be behind the viewer. Show the immediate interior space.
+1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance, don't show what you stepped in form like the door, gate etc. Thats supposed to be behind the viewer. Show the immediate space.
 3. Include interesting navigation details (doors, stairs, passages, rooms, paintings etc) if suitable based on the data, be creative.
-4. If the description describes an interior space make sure its an interior space, the same for exterior spaces, Don't mix them and create a hybrid unless the description explicitly calls for it.
 
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should describe what we see immediately after stepping inside.`;

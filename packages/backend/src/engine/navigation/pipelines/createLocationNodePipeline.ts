@@ -9,7 +9,7 @@ import { generateLocationImage } from '../../generation/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
 import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
-import { NICHE_SHOT_EXTERIOR } from '../../generation/prompts/shared/cameraConfig';
+import { NICHE_CAMERA, NICHE_SHOT_EXTERIOR } from '../../generation/prompts/shared/cameraConfig';
 import { fluxRoofFix } from '../../generation/prompts/shared/constants';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
@@ -59,13 +59,13 @@ export async function runCreateLocationNodePipeline(
   if (intent.spaceType === 'exterior') {
     imagePrompt += `
         
-    ${NICHE_SHOT_EXTERIOR.lens} 
+    ${NICHE_CAMERA} 
     
 `
   } else {
     imagePrompt += `
         
-    ${NICHE_SHOT_EXTERIOR.lens} 
+    ${NICHE_CAMERA}
     
     ${fluxRoofFix}
     

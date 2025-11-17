@@ -65,6 +65,17 @@ export const NICHE_SHOT_EXTERIOR = {
 };
 
 
+// Niche camera
+export const NICHE_CAMERA = `
+[CAMERA:]
+centered one-point perspective, strict symmetry on vertical axis, eye-level height,
+no tilt, no cant, no lean, straight horizon,
+architectural alignment maintained, central vanishing point locked,
+no diagonal framing, no side-weighted composition
+[LENS:] 18mm f/4, ultra-wide, centered one-point perspective
+`;
+
+
 /**
  * Depth of field settings
  */

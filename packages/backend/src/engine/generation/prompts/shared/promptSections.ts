@@ -85,7 +85,9 @@ You are literally INSIDE the structure described above.`;
  * Condensed composition layering (40% shorter)
  */
 export function buildCompositionLayeringCondensed(): string {
-  return `COMPOSITION LAYERS (Required - describe all three):
+  return `
+  
+COMPOSITION LAYERS (Required - describe all three):
 
 CRITICAL: Check Spatial Layout for STRUCTURE FORM to determine composition priority:
 
