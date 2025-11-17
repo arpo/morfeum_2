@@ -255,39 +255,6 @@
         "distance": "medium"
       }
     },
-    "niche-1763384857751-9yp65beaw": {
-      "id": "niche-1763384857751-9yp65beaw",
-      "type": "niche",
-      "name": "interior of The Rusting Leviathan",
-      "dna": {
-        "looks": "A colossal, cylindrical starship interior with immense, curved bulkheads soaring overhead. Corroded alloys and thick, rusted piping form a complex, vaulted ceiling. Irregularly shaped, pitted metallic plates compose the walls, interspersed with hexagonal panels and dormant alien consoles.",
-        "colorsAndLighting": "Dominant colors are muted earth tones of rust and decay, with occasional sickly green glows from dormant consoles. Faint ambient light filters from unseen cracks, supplemented by flickering emergency lights.",
-        "atmosphere": "The air is thick with a perpetual, dusty haze, carrying the scent of ancient decay. A heavy, melancholic stillness pervades, broken only by the faint hum of dormant machinery. The atmosphere feels monumental and somber.",
-        "architectural_tone": "monumental derelict vessel",
-        "cultural_tone": "An alien monument to a long-vanished civilization, now a husk slowly being reclaimed by the desert.",
-        "materials": "The primary materials are heavily corroded, ancient alien alloys and rusted metals, showing millennia of decay. The floor is a mix of rust, sand, and shattered debris, creating a hazardous texture.",
-        "mood": "Melancholy and monumental decay permeate the space, evoking a sense of awe and loss for a bygone era.",
-        "sounds": "Distant hum, creaking metal, faint electrical crackle, settling dust, echoing silence.",
-        "dominantElementsDescriptors": "curved bulkheads, vaulted ceiling, arched passageway, rusted piping",
-        "spatialLayout": "A vast, cylindrical space with a soaring 40-meter high vaulted ceiling. Walls stretch 25 meters wide, leading to a grand 15-meter wide arched passageway receding into deep shadow. Smaller, dark doorways are visible on the walls.",
-        "primary_surfaces": "Corroded metallic bulkheads, rusted floor, thick vaulted ceiling.",
-        "secondary_surfaces": "Hexagonal access panels, dormant alien consoles, shattered debris, sand.",
-        "accent_features": "Flickering emergency lights, glowing dormant alien consoles, grand arched passageway.",
-        "dominant": "Brown (rust, decay, sand)",
-        "secondary": "Grey (corroded metal)",
-        "accent": "Sickly green (dormant consoles)",
-        "ambient": "neutral",
-        "uniqueIdentifiers": "colossal ancient alien starship interior, vaulted corroded ceiling, grand shadowed passageway",
-        "searchDesc": "Alien starship interior, monumental derelict vessel with vaulted ceiling and shadowed passageway."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/3Aky0vzKTzfFWtGjsLf9e.jpg",
-      "focus": {
-        "node_id": "niche-1763384857751-9yp65beaw",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
     "niche-1763384885600-6kdbr9pvh": {
       "id": "niche-1763384885600-6kdbr9pvh",
       "type": "niche",
@@ -944,6 +911,298 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "niche-1763396024197-giy4vtpmu": {
+      "id": "niche-1763396024197-giy4vtpmu",
+      "type": "niche",
+      "name": "interior of The Rusting Leviathan",
+      "dna": {
+        "looks": "An immense, cavernous alien starship interior featuring a fractured, sand-strewn metal floor and towering, corroded walls. A colossal arched opening glows with ethereal blue light on the right, while distant structures recede into dust and dim light.",
+        "colorsAndLighting": "Dominant dark, mottled metallic tones are broken by the rust-colored sand and a faint, flickering internal light pool. An ethereal blue light emanates from a large opening, contrasting with the pervasive dimness.",
+        "atmosphere": "The air is likely still and heavy with dust, carrying the scent of decay and ancient metals. A faint, almost imperceptible hum suggests dormant, vast systems within the derelict. The scale inspires awe and a sense of profound isolation.",
+        "architectural_tone": "monumental derelict vessel",
+        "cultural_tone": "An alien monument to a long-vanished civilization, now a husk slowly being reclaimed by the desert.",
+        "materials": "The primary materials are heavily corroded, mottled alien metal plating for the floor and walls, showing extreme wear. Fine, rust-colored sand has accumulated in drifts, obscuring sections of the floor.",
+        "mood": "Evokes a sense of awe, mystery, and melancholic grandeur. The overwhelming scale and decay suggest a lost, advanced civilization.",
+        "sounds": "faint hum, echoing emptiness, settling dust",
+        "dominantElementsDescriptors": [
+          "fractured metal floor",
+          "towering corroded walls",
+          "monolithic support beams",
+          "glowing arched opening"
+        ],
+        "spatialLayout": "A vast, cavernous interior with a strong sense of depth. The space is dominated by verticality and width, with a clear focal point in the glowing arched opening on the right. The enclosed ceiling is implied by the sheer scale and enclosed nature.",
+        "primary_surfaces": "corroded alien metal, dust, sand",
+        "secondary_surfaces": "scattered ship fragments",
+        "accent_features": [
+          "alien glyphs on floor",
+          "dim ethereal blue light"
+        ],
+        "dominant": "dark metal",
+        "secondary": "rust-colored sand",
+        "accent": "ethereal blue light",
+        "ambient": "neutral",
+        "uniqueIdentifiers": [
+          "colossal scale of alien starship interior",
+          "rust-colored sand drifts",
+          "glowing blue arched opening"
+        ],
+        "searchDesc": "Alien starship interior with fractured metal floor, sand drifts, and a glowing blue archway."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/9fnC2C3h95ecsMwJHmQ42.jpg",
+      "focus": {
+        "node_id": "niche-1763396024197-giy4vtpmu",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763396570121-7yhwz89wj": {
+      "id": "loc-1763396570121-7yhwz89wj",
+      "type": "host",
+      "name": "The Verdant Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Verdant Expanse",
+        "description": "A world teeming with vibrant flora and fauna.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, naturalistic",
+          "cultural_tone": "A world deeply intertwined with nature, where life flourishes in abundance and harmony. Societies often revere or coexist symbiotically with the natural world.",
+          "materials_base": "Primarily living organic matter, sculpted earth, and naturally occurring crystalline structures. Emphasizes growth, flow, and integration rather than static construction.",
+          "mood_baseline": "vibrant, mystical, alive",
+          "palette_bias": "Dominated by rich, saturated greens and blues, with earthy browns and occasional bursts of bioluminescence or floral color. A palette that speaks of life, water, and deep, verdant growth.",
+          "soundscape_base": "A symphony of natural sounds: flowing water, rustling leaves, a chorus of diverse creature calls, and the hum of ambient magical energies. Dynamic and ever-present.",
+          "flora_base": "Exotic, overgrown, and often bioluminescent plant life. Vines, giant ferns, luminescent mosses, and flowering trees that exhibit unusual growth patterns and vibrant colors.",
+          "fauna_base": "Diverse and fantastical creatures, ranging from iridescent insects to large, majestic beasts. Animals are often integrated into the ecosystem and may exhibit magical properties or symbiotic relationships with flora."
+        },
+        "slug": "the-verdant-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "1d583813-5b4e-4c17-a538-686448fa3988": {
+      "id": "1d583813-5b4e-4c17-a538-686448fa3988",
+      "type": "region",
+      "name": "The Verdant Expanse",
+      "dna": {
+        "type": "region",
+        "name": "The Verdant Expanse",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-verdant-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "39918fc2-c398-489b-b819-4fbcc789854e": {
+      "id": "39918fc2-c398-489b-b819-4fbcc789854e",
+      "type": "location",
+      "name": "The Eden Run",
+      "dna": {
+        "type": "location",
+        "name": "The Eden Run",
+        "description": "The exterior of the natural amphitheater.",
+        "looks": "A wide river canyon is densely overgrown with deep green vines that drape from the towering walls. The water in the river flows over mossy rocks, reflecting the lush foliage. A natural archway, also covered in vines and dripping vegetation, spans the canyon in the background. Small, scattered points of golden light are visible amongst the greenery on the canyon walls.",
+        "atmosphere": "The air appears slightly hazy, particularly in the background, suggesting a moist environment. The dense vegetation hints at high humidity and the presence of a natural water source.",
+        "mood": "Alive, ethereal",
+        "lighting": "The lighting is soft and diffused, creating a mystical ambiance. The dominant light color is a pale, slightly cool green, emanating from the overall foliage and ambient light. Contrast is low, with gentle shadows pooling in the denser areas of vegetation.",
+        "dominantElements": [
+          "River canyon walls covered in deep green vines (sides, background)",
+          "Flowing river (center, midground)",
+          "Natural vine-covered archway (background)",
+          "Scattered points of golden light (sides, midground)"
+        ],
+        "spatialLayout": "The foreground features the rocky riverbed and flowing water, with dense green undergrowth on the immediate banks. The midground opens into the wider canyon, showcasing the full height of the vine-covered walls and the river's path. The background is dominated by the natural archway and receding misty, verdant landscape.",
+        "uniqueIdentifiers": [
+          "Vine-covered natural archway spanning canyon",
+          "River flowing through densely vegetated canyon",
+          "Scattered golden bioluminescent lights"
+        ],
+        "materials_primary": "Rock, water, dense vegetation (vines, leaves)",
+        "materials_secondary": "Moss, damp earth",
+        "materials_accents": "Golden glowing lights",
+        "colors_dominant": "Deep green (vegetation)",
+        "colors_secondary": "Mottled brown and gray (rocks), turquoise and emerald (water)",
+        "colors_accents": "Golden yellow (lights)",
+        "colors_ambient": "Soft, diffused green haze",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "The river flows into a misty passage beyond the archway."
+          },
+          {
+            "type": "bridge",
+            "position": "center, background",
+            "description": "A natural archway overgrown with vines, spanning the canyon."
+          },
+          {
+            "type": "mysterious_object",
+            "position": "left and right sides, midground",
+            "description": "Numerous small, scattered golden lights within the foliage."
+          }
+        ],
+        "searchDesc": "[Location - Exterior] River canyon with dense vines and a natural arch. Has: passage (center, midground), bridge (center, background), mysterious_object (sides, midground)",
+        "dna": {
+          "architectural_tone": "natural amphitheater",
+          "cultural_tone": null,
+          "materials_base": "rock, water, dense vegetation",
+          "mood_baseline": "mystical, awe-inspiring",
+          "palette_bias": "deep greens, water hues, ambient green haze",
+          "soundscape_base": "echoing water sounds, rustling vines, distant natural music",
+          "flora_base": "dense vine growth, dripping vegetation",
+          "fauna_base": "glowing butterflies"
+        },
+        "slug": "the-eden-run"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/JEm-WrAfi_ZAPmFUkdow5.jpg",
+      "focus": {
+        "node_id": "The Eden Run",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1763409673202-4bytdp25v": {
+      "id": "loc-1763409673202-4bytdp25v",
+      "type": "host",
+      "name": "Black Rock City",
+      "dna": {
+        "type": "host",
+        "name": "Black Rock City",
+        "description": "A temporary metropolis on the Black Rock Desert playa, known for its radical self-expression and self-reliance.",
+        "dna": {
+          "genre": "post-apocalyptic",
+          "architectural_tone": "nomadic, utilitarian, salvaged",
+          "cultural_tone": "Radical self-expression and self-reliance are paramount, fostering a culture of innovation, community, and temporary artistic endeavors. Emphasis on individual contribution and collective experience.",
+          "materials_base": "Predominantly salvaged and repurposed materials, with a strong emphasis on metal in various states of wear. Expect a palette of weathered steel, rusted iron, and functional, industrial components.",
+          "mood_baseline": "resilient, creative, ephemeral",
+          "palette_bias": "A base of earthy tones with stark contrasts. Think muted desert sands, deep sky blues, punctuated by vibrant, functional pops of color from artistic elements and warning signals.",
+          "soundscape_base": "The pervasive sounds of wind, distant machinery, and the occasional hum of generators. Music and human voices rise and fall, creating a dynamic, temporary acoustic environment.",
+          "flora_base": "Sparse, resilient desert vegetation adapted to arid conditions, possibly with mutated or artificial growths introduced by inhabitants.",
+          "fauna_base": "Hardy desert wildlife, scavengers, and potentially bio-engineered or robotic creatures adapted to extreme environments."
+        },
+        "slug": "black-rock-city"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Black Rock City",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ebc79d14-41e7-4e42-b4ca-d1b551e8ba04": {
+      "id": "ebc79d14-41e7-4e42-b4ca-d1b551e8ba04",
+      "type": "region",
+      "name": "Black Rock City",
+      "dna": {
+        "type": "region",
+        "name": "Black Rock City",
+        "description": "",
+        "dna": {
+          "architectural_tone": "temporary, experimental, modular",
+          "cultural_tone": "A concentrated hub of artistic manifestation and community gathering, where functional infrastructure supports a vibrant, temporary society built on shared principles and creative output.",
+          "materials_base": "A blend of salvaged industrial metals and lightweight, temporary construction materials. Focus on structures that can be erected and dismantled, often incorporating elements of light and kinetic art.",
+          "mood_baseline": "vibrant, experimental, communal",
+          "palette_bias": "Dominated by the stark natural palette of the desert, but enlivened by an explosion of artificial lights and vibrant pigments used in art installations. Muted earth tones provide a backdrop to intense chromatic expression.",
+          "soundscape_base": "A complex tapestry of music, spoken word, laughter, and the underlying hum of activity. The vastness of the playa amplifies sounds, creating an immersive auditory experience.",
+          "flora_base": "Minimal native desert flora, with intentional artistic plantings or sculptural representations of plant life integrated into the urban fabric.",
+          "fauna_base": "Primarily the domesticated or companion animals of residents, alongside hardy desert insects and birds."
+        },
+        "slug": "black-rock-city"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Black Rock City",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "e2a8bb10-0351-4497-9ea9-35bbe72b3a1d": {
+      "id": "e2a8bb10-0351-4497-9ea9-35bbe72b3a1d",
+      "type": "location",
+      "name": "The Metal Serpent",
+      "dna": {
+        "type": "location",
+        "name": "The Metal Serpent",
+        "description": "A large-scale art installation resembling a colossal metal serpent, intricately crafted with spiraling forms.",
+        "looks": "A monumental archway crafted from intertwined metal forms creates a glowing portal against the twilight sky.  The structure is composed of multiple concentric arcs, illuminated by thousands of small, warm lights.  Bare, skeletal branches are woven into the metalwork, suggesting an organic, tree-like form.  The ground in front is a sandy, dusty plain, leading towards the illuminated entrance.  The overall impression is one of ethereal beauty and a welcoming, fiery embrace.",
+        "atmosphere": "The air appears clear and dry, typical of a desert environment. The scene is bathed in the warm glow of the installation, with no visible dust motes or haze. The deep blue of the darkening sky contrasts sharply with the fiery illumination.",
+        "mood": "Majestic, awe-inspiring",
+        "lighting": "The primary light source is the intricate network of warm, orange-toned lights embedded within the metal structure. This creates a strong, internal glow that illuminates the surrounding area with an orange cast. The light is hard-edged against the dark sky but softly diffuses on the sandy ground. The setting sun has just dipped below the horizon, leaving a deep blue twilight.",
+        "dominantElements": [
+          "Concentric illuminated archway (approx. 15m tall, 20m wide, WIDE STRUCTURE)",
+          "Bare, organic branch-like structures",
+          "Sandy desert ground",
+          "Distant horizon line with faint mountain silhouettes"
+        ],
+        "spatialLayout": "The foreground consists of a flat, sandy expanse leading towards the central art installation. The midground is dominated by the massive, glowing archway which appears to form a tunnel or passage. The background shows a distant horizon line under a deep blue sky, with faint, dark shapes suggesting mountains.",
+        "uniqueIdentifiers": [
+          "Concentric glowing archway",
+          "Integrated bare branches",
+          "Desert playa setting at twilight"
+        ],
+        "materials_primary": "Metal",
+        "materials_secondary": "Wire mesh, branches",
+        "materials_accents": "Small LED lights",
+        "colors_dominant": "Orange (from lights)",
+        "colors_secondary": "Dark blue (sky), brown (ground)",
+        "colors_accents": "No specific accents, the entire structure is the accent.",
+        "colors_ambient": "Deep blue and dusky orange",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "A luminous, arched passage inviting entry into the illuminated structure."
+          },
+          {
+            "type": "archway",
+            "position": "center, midground",
+            "description": "Large, multi-ringed metal archway with integrated lights."
+          }
+        ],
+        "searchDesc": "[Exterior] Glowing metal archway in desert. Has: luminous passage (center), multi-ringed archway (center).",
+        "dna": {
+          "architectural_tone": "organic, sculptural, monumental",
+          "cultural_tone": "A focal point of awe and contemplation, this installation embodies the spirit of ambitious artistic creation and the integration of natural forms into man-made structures.",
+          "materials_base": "Primarily constructed from intricately worked metals, exhibiting a range of finishes from polished to rusted, intertwined with natural elements like dried branches. The emphasis is on metallic sheen and structural form.",
+          "mood_baseline": "awe-inspiring, mystical, organic",
+          "palette_bias": "Warm, fiery oranges and golds emanating from internal light sources, contrasted with the deep blues and purples of the twilight sky and the earthy browns of the surrounding playa.",
+          "soundscape_base": "A subtle hum or resonant vibration from the structure itself, perhaps with wind chimes or low ambient music designed to complement the visual experience.",
+          "flora_base": "Integrated skeletal branches suggesting organic forms, possibly enhanced with metallic or illuminated artificial flora.",
+          "fauna_base": "None explicitly, but the serpentine form can evoke a sense of ancient, powerful presence."
+        },
+        "slug": "the-metal-serpent"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/p-tkWtv7LE-Ill1iGQSDR.jpg",
+      "focus": {
+        "node_id": "The Metal Serpent",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -961,7 +1220,7 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763384857751-9yp65beaw",
+                  "id": "niche-1763396024197-giy4vtpmu",
                   "type": "niche",
                   "children": []
                 }
@@ -1085,10 +1344,44 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763396570121-7yhwz89wj",
+      "type": "host",
+      "children": [
+        {
+          "id": "1d583813-5b4e-4c17-a538-686448fa3988",
+          "type": "region",
+          "children": [
+            {
+              "id": "39918fc2-c398-489b-b819-4fbcc789854e",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763409673202-4bytdp25v",
+      "type": "host",
+      "children": [
+        {
+          "id": "ebc79d14-41e7-4e42-b4ca-d1b551e8ba04",
+          "type": "region",
+          "children": [
+            {
+              "id": "e2a8bb10-0351-4497-9ea9-35bbe72b3a1d",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1763393622578-ijpcg758x",
-    "loc-1763395658205-ylx5ev9uk"
+    "loc-1763409673202-4bytdp25v"
   ]
 }
