@@ -321,165 +321,6 @@
         "distance": "close"
       }
     },
-    "loc-1763390012512-tcpwtm6v3": {
-      "id": "loc-1763390012512-tcpwtm6v3",
-      "type": "host",
-      "name": "The Dust Plains",
-      "dna": {
-        "type": "host",
-        "name": "The Dust Plains",
-        "description": "A desolate expanse under a pale, alien sky.",
-        "dna": {
-          "genre": "sci-fi",
-          "architectural_tone": "brutal industrial megastructures",
-          "cultural_tone": "A civilization focused on technological advancement and resource extraction, with little regard for aesthetics or natural preservation.",
-          "materials_base": "Heavy use of reinforced concrete, dark ferrous alloys, and hardened composites. Materials are functional and built for extreme durability and environmental resistance.",
-          "mood_baseline": "desolate, imposing, functional",
-          "palette_bias": "Dominated by deep grays, blacks, and muted metallics, often punctuated by artificial, cold-toned lighting. Earth tones are present but subdued by industrial elements.",
-          "soundscape_base": "A low hum of distant machinery, echoing wind, and the occasional clank of metal. A sense of vast emptiness and mechanical operation.",
-          "flora_base": "Sparse, hardy, and often mutated plant life adapted to arid or irradiated conditions. Primarily tough grasses, stunted, leathery shrubs, and fungal growths.",
-          "fauna_base": "Scavenging creatures and resilient, often genetically modified organisms. Adapted to harsh environments and scarcity, exhibiting a survivalist nature."
-        },
-        "slug": "the-dust-plains"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Dust Plains",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "461e9a16-77a0-467a-a273-80a49ffcba11": {
-      "id": "461e9a16-77a0-467a-a273-80a49ffcba11",
-      "type": "region",
-      "name": "The Scarred Highlands",
-      "dna": {
-        "type": "region",
-        "name": "The Scarred Highlands",
-        "description": "A region pockmarked by ancient impact craters and strange geological formations.",
-        "dna": {
-          "architectural_tone": "scarred, cratered landscapes",
-          "cultural_tone": "null",
-          "materials_base": "rock, hardened dust, weathered metallic remnants",
-          "mood_baseline": "barren, harsh, ancient",
-          "palette_bias": "ochre, deep reds, muted greys, metallic rust",
-          "soundscape_base": "howling winds, shifting scree, distant echoes",
-          "flora_base": "sparse, desiccation-resistant desert flora",
-          "fauna_base": "hardy scavengers, subterranean dwellers"
-        },
-        "slug": "the-scarred-highlands"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Scarred Highlands",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "beb99e6d-f381-4e83-9cc7-e4ca69d4db77": {
-      "id": "beb99e6d-f381-4e83-9cc7-e4ca69d4db77",
-      "type": "location",
-      "name": "The Obsidian Maw",
-      "dna": {
-        "type": "location",
-        "name": "The Obsidian Maw",
-        "description": "A colossal, half-submerged research bunker, a scar of black metal and concrete against the ochre dust.",
-        "looks": "A massive, dark structure is partially buried into a rocky, reddish landscape. The structure's facade is composed of large, dark metal panels and concrete, showing signs of age and weathering. A colossal, open entry hatch dominates the center of the facade, revealing a long, deep corridor within. The scale is immense, dwarfing the surrounding terrain. The overall impression is one of a colossal, abandoned industrial facility, heavily integrated into the natural environment.",
-        "atmosphere": "The air appears dry and dusty, with a fine particulate haze obscuring distant details. The atmosphere is clear enough to discern the structure and the sky, but suggests a lack of moisture and organic life. The environment feels desolate and arid.",
-        "mood": "Foreboding, industrial",
-        "lighting": "The primary light source is a striking, cold blue luminescence emanating from the interior of the structure. This light casts sharp contrasts against the dark facade and illuminates the dusty ground leading into the entrance. The ambient sky light is pale and diffused, creating a muted backdrop.",
-        "dominantElements": [
-          "Massive black metal and concrete bunker facade (approx. 50m wide, 30m tall)",
-          "Colossal open entry hatch (approx. 20m wide, 25m tall)",
-          "Reddish-brown, eroded rock formations on either side of the bunker",
-          "Bright blue internal light source (vertical bar)"
-        ],
-        "spatialLayout": "The foreground consists of a dusty, dirt path leading towards the structure. The midground is dominated by the imposing facade of the half-buried bunker, carved into the landscape. The bunker presents as a HORIZONTAL STRUCTURE, its width significantly greater than its height in the visible section. The background is the opening of the bunker, revealing a deep, luminous corridor stretching into the darkness.",
-        "uniqueIdentifiers": [
-          "Half-buried, dark metal and concrete sci-fi bunker",
-          "Colossal, open reinforced entry hatch",
-          "Intense, vertical blue light emanating from within"
-        ],
-        "materials_primary": "black metal, concrete",
-        "materials_secondary": "ochre dust, reddish rock",
-        "materials_accents": "blue light source",
-        "colors_dominant": "dark grey (bunker facade)",
-        "colors_secondary": "ochre (ground and rock formations)",
-        "colors_accents": "vivid blue (interior light)",
-        "colors_ambient": "pale white-blue (sky)",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, midground/background",
-            "description": "Wide, deep passage illuminated by a vertical blue light source"
-          },
-          {
-            "type": "door",
-            "position": "left side, midground",
-            "description": "Small, dark, reinforced door set into the bunker facade"
-          },
-          {
-            "type": "door",
-            "position": "right side, midground",
-            "description": "Small, dark, reinforced door set into the bunker facade"
-          }
-        ],
-        "searchDesc": "Massive sci-fi bunker entrance. Has: passage (center, midground/background), door (left side, midground), door (right side, midground)",
-        "dna": {
-          "architectural_tone": "monolithic, partially buried industrial complex",
-          "cultural_tone": "null",
-          "materials_base": "black metal, reinforced concrete, dust-encrusted rock",
-          "mood_baseline": "ominous, functional, forgotten",
-          "palette_bias": "dark greys, blacks, ochre dust, pale blue artificial light",
-          "soundscape_base": "low hum from within, external silence, wind",
-          "flora_base": "null",
-          "fauna_base": "null"
-        },
-        "slug": "the-obsidian-maw"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/rabbit/zRS0kK8MJJq_Z8CHjof1n.jpg",
-      "focus": {
-        "node_id": "The Obsidian Maw",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "niche-1763390139631-manel40i7": {
-      "id": "niche-1763390139631-manel40i7",
-      "type": "niche",
-      "name": "interior of The Obsidian Maw",
-      "dna": {
-        "looks": "A colossal, monolithic industrial bunker interior is entered. The foreground features a rough concrete floor with ochre grit, leading into a vast, straight corridor. Towering, weathered black metal and concrete walls define the immense scale, lined with recessed panels and conduits.",
-        "colorsAndLighting": "Dominant tones are deep greys and blacks from the industrial materials, contrasted by a searingly bright, pale blue light pulsing from the corridor's depth.",
-        "atmosphere": "The air feels still and cool, carrying the scent of dust and cold metal. There's a profound sense of immense scale and forgotten purpose, a silent, unmoving vastness.",
-        "architectural_tone": "brutalist sci-fi",
-        "cultural_tone": "null",
-        "materials": "The interior is constructed from rough concrete and weathered black metal. The concrete floor is gritty with ochre dust. Thick concrete beams reinforce the metal walls.",
-        "mood": "Imposing and awe-inspiring, with a hint of mystery due to the unknown purpose of the facility.",
-        "sounds": "Silence, faint hum, distant echo, dripping water, wind.",
-        "dominantElementsDescriptors": "colossal bunker interior, vast straight corridor, towering metal walls, pulsing blue light",
-        "spatialLayout": "A broad, straight corridor of immense scale stretches into darkness from the entry point. The space is deep and wide, navigable towards the center.",
-        "primary_surfaces": "concrete floor, black metal walls, concrete beams, enclosed ceiling",
-        "secondary_surfaces": "recessed panels, conduits",
-        "accent_features": "searingly bright vertical bar of pale blue light",
-        "dominant": "dark grey (walls, floor)",
-        "secondary": "black (metal, shadows)",
-        "accent": "pale blue (light bar)",
-        "ambient": "cool",
-        "uniqueIdentifiers": "colossal scale, brutalist industrial aesthetic, pulsing pale blue light bar",
-        "searchDesc": "Industrial bunker interior with concrete floor, metal walls, and a deep corridor lit by a pale blue light."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/elephant/RmyNWA_iY9IwHFXLXfrrx.jpg",
-      "focus": {
-        "node_id": "niche-1763390139631-manel40i7",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
     "loc-1763390294222-ucce34l8q": {
       "id": "loc-1763390294222-ucce34l8q",
       "type": "host",
@@ -629,6 +470,324 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "loc-1763393622578-ijpcg758x": {
+      "id": "loc-1763393622578-ijpcg758x",
+      "type": "host",
+      "name": "Aethelgard",
+      "dna": {
+        "type": "host",
+        "name": "Aethelgard",
+        "description": "A realm where nature and artifice intertwine.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic integration, living structures",
+          "cultural_tone": "A realm where ancient nature magic is intertwined with advanced, albeit often organic, technology. Societies likely revere natural cycles and seek harmony between the wild and the built.",
+          "materials_base": "A strong emphasis on living, grown materials, combined with rare, perhaps alchemically treated metals. Textures are likely to be a mix of rough, natural growths and smooth, polished, or intricately worked metallic surfaces.",
+          "mood_baseline": "mysterious, wondrous, ancient",
+          "palette_bias": "Dominated by deep, verdant greens and earthy browns, accented by cool, ethereal blues and occasional metallic sheens. Colors evoke a sense of deep forests and clear, mist-laden skies.",
+          "soundscape_base": "A rich tapestry of natural sounds - wind rustling through immense foliage, distant calls of unseen creatures, and the subtle hum of arcane energies. Mechanical sounds are likely to be organic or subtly integrated, not jarring.",
+          "flora_base": "Enormous, ancient trees, bioluminescent fungi, and a vast array of symbiotic plant life that might serve structural or functional purposes. Vegetation is likely to be highly diverse and possess unusual properties.",
+          "fauna_base": "Creatures adapted to a world of magic and integrated nature, ranging from majestic, intelligent beasts to small, mystical insects. Wildlife is likely to be integrated into the ecosystem and potentially interact with constructed elements."
+        },
+        "slug": "aethelgard"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aethelgard",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "b8b992c4-f489-4457-ad5b-7585e4b75b04": {
+      "id": "b8b992c4-f489-4457-ad5b-7585e4b75b04",
+      "type": "region",
+      "name": "Aethelgard",
+      "dna": {
+        "type": "region",
+        "name": "Aethelgard",
+        "description": "",
+        "dna": {
+          "architectural_tone": "colossal, spiraling, integrated growth",
+          "cultural_tone": null,
+          "materials_base": "living wood fused with polished, bio-metallic alloys",
+          "mood_baseline": "awe-inspiring, ethereal",
+          "palette_bias": "luminous greens, misty blues, faint gold accents",
+          "soundscape_base": "whispering winds, distant chimes, low resonant hums",
+          "flora_base": "towering, symbiotic flora, luminous pollen clouds",
+          "fauna_base": "rare, high-altitude avian or insectoid life"
+        },
+        "slug": "aethelgard"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aethelgard",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "c214d036-fa22-4338-a9d1-6a35d8299e23": {
+      "id": "c214d036-fa22-4338-a9d1-6a35d8299e23",
+      "type": "location",
+      "name": "The Verdant Spire",
+      "dna": {
+        "type": "location",
+        "name": "The Verdant Spire",
+        "description": "A colossal tower grown from living wood and integrated with gleaming metal, it spirals endlessly upward into the heavens, leaving behind a trail of vibrant pollen and ethereal light.",
+        "looks": "A colossal, organic tower spirals upwards, its exterior a fusion of gnarled living wood and integrated metal plating. Lush green foliage heavily entwines the structure, obscuring its upper reaches which disappear into a hazy atmosphere. The tower's base features a prominent, brightly lit archway, suggesting an entrance. Steep, verdant cliffs flank the tower, creating a dramatic canyon-like setting. The ground in the foreground is a path made of irregularly shaped stone slabs, surrounded by dense vegetation.",
+        "atmosphere": "A thick, humid mist envelops the scene, obscuring details in the distance and softening the edges of the landscape. The air appears moist, with a hazy quality that diffuses light and creates an ethereal glow.",
+        "mood": "Majestic, awe-inspiring, serene",
+        "lighting": "Soft, diffused light filters through the atmosphere, casting a gentle, even illumination across the scene. The dominant light source appears to be from the entrance of the tower, which emits a bright, otherworldly green glow. The overall lighting is cool and atmospheric, with subtle variations in brightness.",
+        "dominantElements": [
+          "Colossal Verdant Spire (center, midground)",
+          "Steep, verdant cliffs (left and right, midground)",
+          "Glowing archway entrance (center, base of spire)",
+          "Stone pathway (center, foreground)"
+        ],
+        "spatialLayout": "The scene is composed with the Verdant Spire as the central focal point, positioned in the midground. Towering, lush cliffs rise on either side, framing the spire and creating a sense of depth. A path of stone slabs leads from the foreground directly towards the spire's entrance in the midground. The background is filled with the atmospheric haze and implied sky.",
+        "uniqueIdentifiers": [
+          "Spiral tower of living wood and metal",
+          "Overgrown with dense vegetation",
+          "Brightly glowing archway entrance"
+        ],
+        "materials_primary": "Living wood, rock, stone",
+        "materials_secondary": "Foliage, earth",
+        "materials_accents": "Iridescent metal plating (implied), glowing light",
+        "colors_dominant": "Green (vegetation, mist, light)",
+        "colors_secondary": "Gray (rock), light blue (sky, clouds)",
+        "colors_accents": "Bright yellow-green (entrance light)",
+        "colors_ambient": "Misty green",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, foreground",
+            "description": "Stone slab pathway leading towards the tower's entrance."
+          },
+          {
+            "type": "archway",
+            "position": "center, base of spire, midground",
+            "description": "Large, brightly glowing archway inviting entry into the tower."
+          }
+        ],
+        "searchDesc": "Verdant Spire in a misty canyon. Has: pathway (center, foreground), glowing archway (center, midground)",
+        "dna": {
+          "architectural_tone": "organic-metallic fusion, spiraling upward",
+          "cultural_tone": null,
+          "materials_base": "gnarled living wood, integrated gleaming metal plating, dense foliage",
+          "mood_baseline": "majestic, humid, ancient",
+          "palette_bias": "dominant greens, muted grays, soft azure",
+          "soundscape_base": "ambient mist, occasional distant echoes, subtle organic creaking",
+          "flora_base": "thick, entwining vegetation, mosses",
+          "fauna_base": "null"
+        },
+        "slug": "the-verdant-spire"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/iAFbevd33gGUa-TCyGre_.jpg",
+      "focus": {
+        "node_id": "The Verdant Spire",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763394297486-lf5vlehlh": {
+      "id": "niche-1763394297486-lf5vlehlh",
+      "type": "niche",
+      "name": "interior of The Verdant Spire",
+      "dna": {
+        "looks": "A colossal, spiraling interior chamber where organic wood structures merge seamlessly with polished, iridescent metal. Smooth wooden floors inlaid with mossy patterns lead into the cavernous space, which curves upwards into an unseen, dense canopy.",
+        "colorsAndLighting": "The space is bathed in an ethereal, diffuse green light emanating from the structure itself. Veins of iridescent metal and patches of luminescent flora provide subtle glows.",
+        "atmosphere": "The air is thick with the scent of damp earth and ancient wood, carrying a sense of deep, awe-inspiring space. Mist drifts through the upper reaches, catching the light and creating a mystical ambiance.",
+        "architectural_tone": "organic-metallic fusion",
+        "cultural_tone": "A sanctuary where nature's magic is woven with advanced, organic technology.",
+        "materials": "Walls are a fusion of undulating, living bark-like wood and polished, humming metallic plating. The floor is smooth, polished wood with inlaid mossy patterns.",
+        "mood": "Awe-inspiring and mystical, evoking a sense of ancient, living grandeur and profound natural power.",
+        "sounds": "subtle hum, dripping water, soft rustling foliage",
+        "dominantElementsDescriptors": "undulating bark-like walls, colossal gnarled wood beams, polished iridescent metal veins, bioluminescent pool, glowing fungi",
+        "spatialLayout": "A vast, cavernous cylindrical interior that spirals upwards with immense implied height. A clear central path leads forward, with navigable openings to the right and upwards.",
+        "primary_surfaces": "wood, polished metal, stone",
+        "secondary_surfaces": "moss, luminescent flora, foliage",
+        "accent_features": "bioluminescent pool with ripples, glowing fungi cluster, organically shaped alcoves with flora",
+        "dominant": "green (ambient light)",
+        "secondary": "brown (wood textures)",
+        "accent": "iridescent hues (metal), golden light (archway)",
+        "ambient": "cool",
+        "uniqueIdentifiers": "undulating organic-metallic walls, dense luminescent canopy ceiling, bioluminescent pool",
+        "searchDesc": "Verdant Spire interior: organic-metallic fusion, spiraling cavern, bioluminescent glow."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/bgPquDfhxOnwjw3Um6xtf.jpg",
+      "focus": {
+        "node_id": "niche-1763394297486-lf5vlehlh",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763394777170-39keowksf": {
+      "id": "loc-1763394777170-39keowksf",
+      "type": "host",
+      "name": "The Celestial Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Celestial Expanse",
+        "description": "The vast emptiness of space where impossible structures drift.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "vast, alien megastructures",
+          "cultural_tone": "Driven by advanced, unknown purposes, these structures are centers of profound scientific or existential exploration.",
+          "materials_base": "Smooth, reflective, and impossibly durable exotic alloys with an inherent luminescence are common. Crystalline structures and solidified energy fields are also prevalent.",
+          "mood_baseline": "awe-inspiring, enigmatic, isolated",
+          "palette_bias": "Deep, cosmic blues and purples dominate, often accented by vibrant, artificial light sources. Contrast between darkness and intense illumination is key.",
+          "soundscape_base": "Low, resonant hums of immense machinery, subtle energetic crackles, and the vast silence of the void.",
+          "flora_base": "None, or highly artificial, bio-engineered plant-like structures designed for sterile environments.",
+          "fauna_base": "None, or highly specialized artificial constructs or energy beings, suited for deep space or vacuum."
+        },
+        "slug": "the-celestial-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Celestial Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5d6adfe6-dbd3-4a61-b0c8-6d2372401538": {
+      "id": "5d6adfe6-dbd3-4a61-b0c8-6d2372401538",
+      "type": "region",
+      "name": "Orbital Drift",
+      "dna": {
+        "type": "region",
+        "name": "Orbital Drift",
+        "description": "A region of space characterized by stable, slow-moving celestial bodies and artificial constructs.",
+        "dna": {
+          "architectural_tone": "stable orbital constructs, monolithic stations",
+          "cultural_tone": "Established outposts dedicated to long-term research, resource processing, or inter-dimensional observation.",
+          "materials_base": "Primarily polished, dark, and subtly iridescent metals, with occasional crystalline reinforcing elements.",
+          "mood_baseline": "serene, methodical, vast",
+          "palette_bias": "Muted cosmic purples and deep blues, with secondary tones of soft, cool artificial light.",
+          "soundscape_base": "Distant, rhythmic pulses of power generation, gentle atmospheric circulation, and the faint echo of inter-station communications.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "slug": "orbital-drift"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Orbital Drift",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "f8634660-0062-4a3b-934b-a2ed19049b70": {
+      "id": "f8634660-0062-4a3b-934b-a2ed19049b70",
+      "type": "location",
+      "name": "The Violet Nebula",
+      "dna": {
+        "type": "location",
+        "name": "The Violet Nebula",
+        "description": "An immense, spherical research station, a marvel of extraterrestrial engineering.",
+        "looks": "An immense, perfectly spherical structure dominates the midground, appearing to be a research station of colossal scale. Its surface is seamless and possesses an iridescent quality, reflecting the ambient light. A single, narrow vertical slit pierces the sphere's surface, serving as an entrance and emitting a vivid violet glow. Jagged, dark rocky formations flank a wet, paved path leading towards the sphere in the foreground. Wisps of purple mist swirl around the base of the sphere and the surrounding terrain.",
+        "atmosphere": "The scene is characterized by a dramatic, ethereal atmosphere. A fine, purple haze or mist is present, particularly around the base of the spherical structure and settling into the foreground landscape. The air appears clear enough to reveal distant stars in the background.",
+        "mood": "Awe-inspiring, mysterious, serene",
+        "lighting": "The primary light source is a bright, vertical violet beam emanating from the slit entrance of the sphere, casting a strong, saturated glow. This light creates high contrast against the dark surroundings and illuminates the mist with an intense luminescence. The ambient light suggests a twilight or dusky environment with soft purple hues.",
+        "dominantElements": [
+          "Colossal spherical structure (midground)",
+          "Vertical violet light beam entrance (center, midground)",
+          "Paved pathway (foreground)",
+          "Rocky terrain formations (foreground, left and right)"
+        ],
+        "spatialLayout": "The foreground is occupied by a wet, paved pathway extending towards a massive spherical structure in the midground. To the left and right of the pathway, dark, jagged rocky formations rise. The spherical structure itself is the focal point, dwarfing the surrounding landscape. The background consists of a deep purple sky filled with distant stars and subtle cloud formations.",
+        "uniqueIdentifiers": [
+          "Enormous, seamless spherical structure",
+          "Vertical slit entrance emitting violet light",
+          "Paved, wet pathway leading to the entrance"
+        ],
+        "materials_primary": "Stone (rocky formations)",
+        "materials_secondary": "Paved surface (pathway)",
+        "materials_accents": "Violet light (entrance, mist)",
+        "colors_dominant": "Violet (light beam, sky, mist)",
+        "colors_secondary": "Dark grey/purple (rocky formations, sphere surface)",
+        "colors_accents": "Iridescent sheen (sphere surface), white (distant stars)",
+        "colors_ambient": "Deep purple, soft pinkish hues",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "A narrow vertical slit entrance emitting strong violet light into the sphere."
+          },
+          {
+            "type": "passage",
+            "position": "foreground, leading center",
+            "description": "A wet, paved pathway suggesting a route towards the main structure."
+          }
+        ],
+        "searchDesc": "Exterior of a colossal spherical station. Has: vertical violet light passage (center, midground), paved pathway (foreground)",
+        "dna": {
+          "architectural_tone": "singular, immense, seamless sphere",
+          "cultural_tone": "A highly advanced, self-contained research laboratory or an observation hub of immense significance.",
+          "materials_base": "Iridescent, seamless super-alloys, with a focus on light manipulation and energy containment.",
+          "mood_baseline": "mysterious, alluring, focused",
+          "palette_bias": "Dominant violet hues from internal light sources, contrasted with the dark, reflective exterior.",
+          "soundscape_base": "Low, pulsing hum of contained energy, intermittent whirs of internal systems, and the external silence of space.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "slug": "the-violet-nebula"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/ZWc2FXE5amNeqNhKPye3r.jpg",
+      "focus": {
+        "node_id": "The Violet Nebula",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763394813621-ve9u54ka9": {
+      "id": "niche-1763394813621-ve9u54ka9",
+      "type": "niche",
+      "name": "interior of The Violet Nebula",
+      "dna": {
+        "looks": "An immense, perfectly spherical chamber with a vast, seamless interior. Gently curving, illuminated pathways lead into the distance, disappearing around unseen bends, suggesting further exploration within the station. The walls feature subtle geometric etchings and recessed doorways.",
+        "colorsAndLighting": "The dominant color is an iridescent violet sheen that subtly shifts in color and intensity. Soft, ethereal bioluminescence emanates from etched patterns and recessed channels, casting a gentle glow.",
+        "atmosphere": "Profound mystery and advanced scientific purpose permeate the air. The atmosphere feels cool and still, with a sense of infinite expanse. There is no discernible weather or motion, only a hushed, contemplative stillness.",
+        "architectural_tone": "Neo-futuristic",
+        "cultural_tone": "A highly advanced, self-contained research laboratory or an observation hub of immense significance.",
+        "materials": "The primary material is a curved, seamless super-alloy with an iridescent violet sheen. Polished, darker composite material forms the walkways and floor. Subtle structural elements are faint lines of light.",
+        "mood": "Evokes a sense of awe, wonder, and intellectual curiosity. The vastness and advanced design inspire contemplation and a desire to explore.",
+        "sounds": "Faint hum, soft glow, distant whispers, gentle pulse.",
+        "dominantElementsDescriptors": [
+          "Seamless spherical chamber",
+          "Iridescent violet walls",
+          "Illuminated pathways",
+          "Recessed doorways"
+        ],
+        "spatialLayout": "A vast, perfectly spherical chamber with an infinite expanse. The space curves away in all directions from a central entry point. Pathways guide the eye and suggest branching exploration.",
+        "primary_surfaces": "Iridescent violet super-alloy walls, dark composite floor, seamless enclosed ceiling.",
+        "secondary_surfaces": "Polished dark composite walkways.",
+        "accent_features": "Subtle geometric etchings with bioluminescence, softly glowing violet markers, recessed doorways with pale violet light.",
+        "dominant": "Violet (walls, pathways, markers, doorway edges, floor channels)",
+        "secondary": "Dark composite (floor, walkways)",
+        "accent": "Pale violet (doorway edges), faint linear light (structural elements)",
+        "ambient": "Cool",
+        "uniqueIdentifiers": [
+          "Seamless, immense spherical interior",
+          "Iridescent violet shifting sheen",
+          "Bioluminescent geometric etchings",
+          "Illuminated dark composite pathways"
+        ],
+        "searchDesc": "Interior of a research station: immense spherical chamber, iridescent violet walls, glowing pathways, advanced."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/DKIIvGX4P-sDbvg0H1mbG.jpg",
+      "focus": {
+        "node_id": "niche-1763394813621-ve9u54ka9",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -680,29 +839,6 @@
       ]
     },
     {
-      "id": "loc-1763390012512-tcpwtm6v3",
-      "type": "host",
-      "children": [
-        {
-          "id": "461e9a16-77a0-467a-a273-80a49ffcba11",
-          "type": "region",
-          "children": [
-            {
-              "id": "beb99e6d-f381-4e83-9cc7-e4ca69d4db77",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1763390139631-manel40i7",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1763390294222-ucce34l8q",
       "type": "host",
       "children": [
@@ -724,10 +860,57 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763393622578-ijpcg758x",
+      "type": "host",
+      "children": [
+        {
+          "id": "b8b992c4-f489-4457-ad5b-7585e4b75b04",
+          "type": "region",
+          "children": [
+            {
+              "id": "c214d036-fa22-4338-a9d1-6a35d8299e23",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763394297486-lf5vlehlh",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763394777170-39keowksf",
+      "type": "host",
+      "children": [
+        {
+          "id": "5d6adfe6-dbd3-4a61-b0c8-6d2372401538",
+          "type": "region",
+          "children": [
+            {
+              "id": "f8634660-0062-4a3b-934b-a2ed19049b70",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763394813621-ve9u54ka9",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1763383500556-yi5z183jh",
-    "loc-1763383658536-w0xsrsulf"
+    "loc-1763383658536-w0xsrsulf",
+    "loc-1763393622578-ijpcg758x"
   ]
 }
