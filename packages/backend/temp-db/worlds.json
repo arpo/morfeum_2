@@ -2232,167 +2232,688 @@
         "distance": "close"
       }
     },
-    "loc-1763128072341-5nk4hv3q1": {
-      "id": "loc-1763128072341-5nk4hv3q1",
+    "loc-1763130154220-lm8p7jzkf": {
+      "id": "loc-1763130154220-lm8p7jzkf",
       "type": "host",
-      "name": "The Azure Depths",
+      "name": "Arrakis",
       "dna": {
         "type": "host",
-        "name": "The Azure Depths",
-        "description": "A vast and ancient ocean world teeming with vibrant life and mysterious currents.",
+        "name": "Arrakis",
+        "description": "A vast desert planet under twin suns, known for its unforgiving climate and scarce resources.",
         "dna": {
-          "genre": "fantasy",
-          "architectural_tone": "ancient, mystical, fluid",
-          "cultural_tone": "Deep reverence for nature's patterns and hidden energies. Civilizations that coexist symbiotically with the ocean's cycles.",
-          "materials_base": "Primarily bioluminescent organic matter, polished coral, solidified seafoam, and crystalline formations that resonate with ambient energy.",
-          "mood_baseline": "mysterious, serene, ancient",
-          "palette_bias": "Dominated by deep oceanic blues, vibrant aquamarines, and shimmering iridescent hues. Accents of ethereal light in cool tones.",
-          "soundscape_base": "Subtle, resonant hums of deep currents, distant whale song, and the gentle, rhythmic pulse of unseen energies.",
-          "flora_base": "Luminous kelp forests, coral gardens sculpted by unknown forces, and bioluminescent algae blooms.",
-          "fauna_base": "Creatures adapted to deep-sea luminescence, possessing intricate patterns and a natural glow."
+          "genre": "sci-fi",
+          "architectural_tone": "utilitarian metallic structures",
+          "cultural_tone": "Harsh survival and resource scarcity define all life. Functionality and resilience are paramount.",
+          "materials_base": "Predominantly industrial metals, often weathered or showing signs of wear. Natural elements like rock and sand are integrated due to scarcity.",
+          "mood_baseline": "Desolate, resilient, utilitarian",
+          "palette_bias": "Dominated by earthy tones and muted metallics. Warm hues often come from the twin suns, casting long shadows.",
+          "soundscape_base": "A constant hum of environmental machinery, punctuated by the harsh sounds of wind and sand.",
+          "flora_base": "Extremely sparse, hardy desert vegetation adapted to arid conditions and minimal water.",
+          "fauna_base": "Tough, adapted creatures that can survive extreme temperatures and scarcity, often with exoskeletons or specialized adaptations."
         },
-        "slug": "the-azure-depths"
+        "slug": "arrakis"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "The Azure Depths",
+        "node_id": "Arrakis",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "d5c32a76-6b7d-4020-bb7e-2a6dde2caf43": {
-      "id": "d5c32a76-6b7d-4020-bb7e-2a6dde2caf43",
+    "7fab5b7f-50d4-427a-a889-4c932a16e66b": {
+      "id": "7fab5b7f-50d4-427a-a889-4c932a16e66b",
       "type": "region",
-      "name": "The Azure Depths",
+      "name": "Arrakis",
       "dna": {
         "type": "region",
-        "name": "The Azure Depths",
+        "name": "Arrakis",
         "description": "",
+        "dna": {
+          "architectural_tone": "sun-scorched ruins, weathered structures",
+          "cultural_tone": null,
+          "materials_base": "rusting metal hulls, eroded rock formations, pervasive sand",
+          "mood_baseline": "isolated, decaying, enduring",
+          "palette_bias": "rich ochre sands, deep rust tones, muted greys of aged metal",
+          "soundscape_base": "whispering winds, the crunch of sand, distant groans of metal",
+          "flora_base": "xerophytic plants clinging to life, hardy desert scrub",
+          "fauna_base": "wind-scoured desert insects, scavengers adapted to harsh conditions"
+        },
+        "slug": "arrakis"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Arrakis",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "29217127-f72b-4af5-bba1-9758d65d501b": {
+      "id": "29217127-f72b-4af5-bba1-9758d65d501b",
+      "type": "location",
+      "name": "The Rusting Husk",
+      "dna": {
+        "type": "location",
+        "name": "The Rusting Husk",
+        "description": "A derelict and abandoned starship, its metallic hull pitted and corroded by eons of exposure.",
+        "looks": "A colossal, cylindrical structure, partially submerged in sandy terrain, presents a gaping, dark maw leading into its interior. Its outer shell is heavily corroded, showing signs of immense age and exposure. The metallic plating is textured with rust and debris, and the overall form suggests a large, derelict vessel or a vast tunnel entrance. Rocky, eroded cliffs rise steeply on either side, framing the entrance and emphasizing its scale.",
+        "atmosphere": "Fine dust particles are visible suspended in the air, stirred by unseen movements. The air appears dry and perhaps hazy, contributing to a sense of desolation. A profound silence seems to pervade the scene, amplifying the isolation.",
+        "mood": "Desolate, forgotten, melancholic",
+        "lighting": "The scene is illuminated by a warm, bright light, likely from a sun. The light casts distinct shadows, particularly within the structure's entrance, creating a high contrast between illuminated areas and the deep darkness within. The metallic surfaces reflect the warm light.",
+        "dominantElements": [
+          "Cylindrical entrance structure (est. 40-60m diameter, HORIZONTAL STRUCTURE)",
+          "Eroded rocky cliffs (varying heights, background/sides)",
+          "Sandy ground with scattered rocks (foreground)"
+        ],
+        "spatialLayout": "The foreground consists of a dirt path leading towards the main subject. The midground is dominated by the immense, rusty cylindrical structure, appearing half-buried in the sand and flanked by steep, reddish-brown cliffs. The background is characterized by the continuing eroded landscape and a bright, possibly hazy sky.",
+        "uniqueIdentifiers": [
+          "Half-buried, colossal rusty cylinder",
+          "Deep, dark, circular entrance",
+          "Eroded desert canyon setting"
+        ],
+        "materials_primary": "Metal (corroded, rusty)",
+        "materials_secondary": "Sand, Rock (eroded)",
+        "materials_accents": "Reflective rust patches, dust particles",
+        "colors_dominant": "Orange (sand, cliffs, rust)",
+        "colors_secondary": "Brown (rock, rust), Grey (metal plating)",
+        "colors_accents": "Bright highlights on metal, dark interior",
+        "colors_ambient": "Warm, dusty orange",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Dark, circular passage into the rusty structure"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Rusty derelict in a desert canyon. Has: passage (center, midground)",
+        "dna": {
+          "architectural_tone": "colossal derelict vessel fragment",
+          "cultural_tone": null,
+          "materials_base": "heavily corroded, pitted metal plating, embedded debris",
+          "mood_baseline": "abandoned, silent, ancient",
+          "palette_bias": "warm dusty oranges, rusty browns, weathered grey-browns",
+          "soundscape_base": "eerie silence, faint metallic creaks, dust stirred by unseen currents",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-rusting-husk"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/6yaEcsN3pLrwkqpn-48Kn.jpg",
+      "focus": {
+        "node_id": "The Rusting Husk",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763140105571-jv7mzo8v2": {
+      "id": "niche-1763140105571-jv7mzo8v2",
+      "type": "niche",
+      "name": "interior of The Rusting Husk",
+      "dna": {
+        "looks": "A vast, cylindrical interior passage stretches into deep darkness, characterized by immense, curved walls of corroded metal. Colossal structural ribs arc overhead, disappearing into shadow. Navigational elements like a maintenance conduit and broken railing are visible.",
+        "colorsAndLighting": "The scene is dominated by warm, rusty browns and weathered greys, punctuated by flickering amber and red emergency lights. A low-key, ambient orange light creates a dusty, atmospheric glow.",
+        "atmosphere": "The air is heavy with ancient dust and the faint scent of decay. A profound silence pervades, occasionally broken by the almost imperceptible hum of dying machinery. The atmosphere feels abandoned and forgotten, imbued with a sense of immense scale.",
+        "architectural_tone": "colossal derelict vessel",
+        "cultural_tone": "Harsh survival and resource scarcity define all life. Functionality and resilience are paramount.",
+        "materials": "Heavily corroded and pitted metal plating forms the primary surfaces, coated in thick dust and rust streaks. Grime and oil stains are present, along with embedded debris.",
+        "mood": "Evokes a sense of awe at its colossal scale, tinged with the melancholy of abandonment and the harsh reality of a survivalist environment.",
+        "sounds": "Silence, faint machinery hum, distant drips",
+        "dominantElementsDescriptors": "Curved metal walls, colossal structural ribs, deep cylindrical passage",
+        "spatialLayout": "A wide, cylindrical tunnel extending approximately 60 meters into darkness, with a ceiling height of around 40 meters. The view is from 1-2 meters inside the entrance, looking straight ahead.",
+        "primary_surfaces": "corroded metal plating, dust, rust",
+        "secondary_surfaces": "exposed wiring bundles, grime, oil streaks",
+        "accent_features": "flickering emergency lights, maintenance conduit, broken railing",
+        "dominant": "rust brown (70%)",
+        "secondary": "weathered grey (20%)",
+        "accent": "amber and red (10%)",
+        "ambient": "warm",
+        "uniqueIdentifiers": "colossal cylindrical derelict, rusting metal, deep atmospheric darkness, functional industrial sci-fi",
+        "searchDesc": "Derelict starship interior: vast cylindrical passage, rusted metal, deep darkness, flickering lights."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/WfQvnCg5Co_vHBaN_ZfjT.jpg",
+      "focus": {
+        "node_id": "niche-1763140105571-jv7mzo8v2",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763145372574-g92gk04oy": {
+      "id": "loc-1763145372574-g92gk04oy",
+      "type": "host",
+      "name": "Earth",
+      "dna": {
+        "type": "host",
+        "name": "Earth",
+        "description": "A world of technological marvels and natural beauty.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "functional brutalism, grand scale",
+          "cultural_tone": "A society that once reached for the stars, now grappling with the remnants of advanced, large-scale technological endeavors.",
+          "materials_base": "Reinforced concrete, weathered steel, utilitarian composites dominate infrastructure.",
+          "mood_baseline": "contemplative, decaying grandeur, quiet hope",
+          "palette_bias": "Cool, desaturated tones with occasional points of warm, utilitarian light. Greys, muted blues, and earth tones are prevalent.",
+          "soundscape_base": "Distant, low hums of dormant machinery, the subtle creaks of metal, and the encroaching sounds of nature reclaiming.",
+          "flora_base": "Resilient, hardy vegetation that can thrive in degraded or artificially maintained environments.",
+          "fauna_base": "Adaptive, often opportunistic species that have found niches within human-made structures or the fringes of their influence."
+        },
+        "slug": "earth"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Earth",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "70946a00-e4aa-4ee9-a38a-394d01830d0b": {
+      "id": "70946a00-e4aa-4ee9-a38a-394d01830d0b",
+      "type": "region",
+      "name": "The Verdant Plains",
+      "dna": {
+        "type": "region",
+        "name": "The Verdant Plains",
+        "description": "Expansive fields where nature reclaims industrial remnants.",
         "dna": {
           "architectural_tone": null,
           "cultural_tone": null,
           "materials_base": null,
-          "mood_baseline": null,
-          "palette_bias": null,
-          "soundscape_base": null,
-          "flora_base": null,
-          "fauna_base": null
+          "mood_baseline": "nostalgic, serene decay",
+          "palette_bias": "Earthy greens and muted floral tones contrast with industrial grey.",
+          "soundscape_base": "Louder natural sounds, wind through grass, insect hums, softened industrial whispers.",
+          "flora_base": "Abundant, diverse wildflowers and grasses actively encroaching on and softening industrial structures.",
+          "fauna_base": "Small to medium-sized wild animals and abundant insect life."
         },
-        "slug": "the-azure-depths"
+        "slug": "the-verdant-plains"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "The Azure Depths",
+        "node_id": "The Verdant Plains",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "d314bedb-7e83-4151-87dd-018b95df9847": {
-      "id": "d314bedb-7e83-4151-87dd-018b95df9847",
+    "4b7a5f0e-415f-4c62-95da-c8acdf19fd66": {
+      "id": "4b7a5f0e-415f-4c62-95da-c8acdf19fd66",
       "type": "location",
-      "name": "The Lumina Atoll",
+      "name": "The Halcyon Reactor",
       "dna": {
         "type": "location",
-        "name": "The Lumina Atoll",
-        "description": "A unique, circular coral atoll meticulously carved into sacred geometric patterns.",
-        "looks": "A colossal, circular, glowing mandala-like structure dominates the center of the frame, intricately carved with concentric geometric patterns. It appears to be made of light or energy, emanating a strong blue luminescence. The structure rests upon a raised, circular platform that is partially submerged in dark, rippling water. The background consists of dark, rough-textured cave walls, creating a stark contrast with the radiant central element. The overall impression is one of immense scale and otherworldly design.",
-        "atmosphere": "The scene is enclosed, with the dark cave walls suggesting a cavernous or deep-sea environment. The water surface exhibits a gentle ripple, indicating calm conditions within the space. A faint, atmospheric haze or mist seems to be present, interacting with the light from the mandala.",
-        "mood": "Sacred, serene, mystical",
-        "lighting": "The primary light source is the brilliant, cool blue glow emanating from the central mandala, casting a strong, ethereal illumination on the immediate surroundings. This light is intense and diffused, creating soft shadows on the cave walls. The water reflects the blue light, creating shimmering patterns. The overall lighting is high contrast, with the bright mandala set against dark, shadowed backgrounds.",
+        "name": "The Halcyon Reactor",
+        "description": "A decommissioned fusion plant, now a silent giant.",
+        "looks": "The Halcyon Reactor is a massive, circular concrete structure with four imposing cooling towers, forming the core of the facility. These towers, each appearing to be several stories tall, taper upwards and are partially obscured by overgrowth. A grand, arched entryway with intricate stonework is situated between two of the cooling towers, leading into a dimly lit interior. The surrounding landscape is a vast field of wildflowers, creating a stark contrast with the industrial architecture. The overall impression is one of colossal scale and nature's reclamation.",
+        "atmosphere": "A thick, atmospheric haze blankets the scene, softening distant details and lending an ethereal quality to the towering structures. The air appears humid and still, contributing to a sense of quiet desolation.",
+        "mood": "Melancholy, peaceful, grand",
+        "lighting": "The lighting is diffused and cool, primarily emanating from the overcast sky, casting a uniform, soft light across the entire scene. A singular, warm orange light source is visible deep within the arched entryway, creating a focal point and a strong contrast with the cool ambient tones.",
         "dominantElements": [
-          "Massive glowing circular mandala ~30m diameter, center",
-          "Submerged circular platform ~10m diameter, center foreground",
-          "Dark, textured cave walls, left and right background"
+          "Four large, conical cooling towers (est. 80-100m tall each)",
+          "Large, arched entryway with ornate stonework",
+          "Expansive field of wildflowers in the foreground",
+          "Gravel pathway leading to the entryway"
         ],
-        "spatialLayout": "Foreground: Dark, rippling water extends from the bottom edge of the frame, with reflections of the central light. Midground: A circular platform supports a massive, glowing mandala. The mandala is the clear focal point. Background: Dark, cavernous walls rise on either side, framing the central display and suggesting depth within a confined space.",
+        "spatialLayout": "The foreground is dominated by a dense field of wildflowers. A clear, gravel pathway cuts through this field, leading towards the midground where the Halcyon Reactor's central structure resides. This midground features a massive, arched gateway framed by the bases of two cooling towers. The background consists of the remaining cooling towers and the hazy expanse of the sky.",
         "uniqueIdentifiers": [
-          "Intricately carved luminous geometric mandala",
-          "Submerged circular platform in dark water",
-          "Cave-like enclosure with glowing centerpiece"
+          "The combination of industrial cooling towers and a wildflower field",
+          "The grand, arched entrance with internal warm lighting",
+          "The overgrown, abandoned aesthetic of the reactor"
         ],
-        "materials_primary": "Light/Energy (mandala)",
-        "materials_secondary": "Stone (cave walls)",
-        "materials_accents": "Water (reflective surface)",
-        "colors_dominant": "Bright Cyan/Electric Blue (mandala and its illumination)",
-        "colors_secondary": "Dark Grey/Black (cave walls)",
-        "colors_accents": "Deep Blue/Aqua (water reflections)",
-        "colors_ambient": "Dark Teal/Deep Blue",
+        "materials_primary": "Concrete",
+        "materials_secondary": "Stone, gravel",
+        "materials_accents": "Vines and foliage",
+        "colors_dominant": "Muted blue-grey (sky, towers)",
+        "colors_secondary": "Green and various subtle floral colors (field)",
+        "colors_accents": "Warm orange (interior light)",
+        "colors_ambient": "Cool, overcast blue",
         "navigableElements": [
           {
-            "type": "portal",
+            "type": "passage",
             "position": "center, midground",
-            "description": "Gigantic, glowing geometric mandala emitting light, appears to be a gateway."
+            "description": "A large, dimly lit arched entryway with a pathway leading inwards"
           },
           {
-            "type": "passage",
-            "position": "left wall, background",
-            "description": "Dark, textured opening in cave wall suggesting a passage."
+            "type": "stairs",
+            "position": "center, background (interior)",
+            "description": "Steps visible within the arched passage, leading further into darkness"
           },
           {
-            "type": "passage",
-            "position": "right wall, background",
-            "description": "Dark, textured opening in cave wall suggesting a passage."
+            "type": "window",
+            "position": "left and right sides, midground",
+            "description": "Small, dark openings on the elevated platforms around the base of the towers"
           }
         ],
-        "searchDesc": "[Location - Exterior] Glowing circular portal in a cave. Has: portal (center), passage (left wall), passage (right wall)",
+        "searchDesc": "[Location - Exterior] Decommissioned reactor with cooling towers. Has: arched passage (center), stairs (interior), windows (sides)",
         "dna": {
-          "architectural_tone": "geometric, sculpted, luminous",
-          "cultural_tone": "A nexus of ancient knowledge and cosmic alignment, where natural formations are understood and enhanced.",
-          "materials_base": "Carved coral infused with internal light, bio-organic crystalline structures, and water channels that conduct energy.",
-          "mood_baseline": "sacred, awe-inspiring, tranquil",
-          "palette_bias": "Intensified cool blues and electric cyans, with the ethereal glow of inner light. Dark, contrasting backgrounds emphasize luminescence.",
-          "soundscape_base": "Echoes of flowing water, subtle harmonic resonances from the carved patterns, and a pervasive, low hum of contained energy.",
-          "flora_base": "None directly apparent, but the structure itself seems to foster a unique energetic resonance.",
-          "fauna_base": "None directly apparent, suggesting a place of contemplation rather than habitation."
+          "architectural_tone": "monolithic concrete, monumental scale",
+          "cultural_tone": "A colossal, now inert, fusion power plant, a testament to past ambition now yielding to nature's cycle.",
+          "materials_base": "Primarily weathered concrete and exposed, rusted metal detailing. Stone and gravel from access pathways.",
+          "mood_baseline": "quiet desolation, colossal stillness",
+          "palette_bias": "Dominant cool greys and blues, punctuated by subtle, scattered floral colors and a single, isolated warm light source.",
+          "soundscape_base": "Faint, low hums from dormant systems, the soft whisper of wind around massive structures, and distant natural sounds.",
+          "flora_base": "Overgrown with a dense carpet of wildflowers and creeping vines on the lower levels.",
+          "fauna_base": "Minimal visible fauna, suggesting a focus on the plant life's dominance."
         },
-        "slug": "the-lumina-atoll"
+        "slug": "the-halcyon-reactor"
       },
-      "imagePath": "https://v3b.fal.media/files/b/monkey/lCOsxRiXeJoY7213OcPzx.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/penguin/BxjoF5Ky-mDG42B5p1mC8.jpg",
       "focus": {
-        "node_id": "The Lumina Atoll",
+        "node_id": "The Halcyon Reactor",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "niche-1763128120437-expyuli0u": {
-      "id": "niche-1763128120437-expyuli0u",
+    "niche-1763145432349-bmwy4k5kf": {
+      "id": "niche-1763145432349-bmwy4k5kf",
       "type": "niche",
-      "name": "interior of The Lumina Atoll",
+      "name": "interior of The Halcyon Reactor",
       "dna": {
-        "looks": "A colossal, circular chamber dominated by a massive, geometrically carved mandala of electric cyan light. Dark, rough cave walls rise steeply on either side, framing the luminous centerpiece. The foreground features dark, rippling water reflecting the cyan glow.",
-        "colorsAndLighting": "Intense electric cyan light emanates from the central mandala, casting a cool, dominant blue luminescence throughout the space. Deep greys and blacks of the cave walls provide stark contrast.",
-        "atmosphere": "The air is filled with a palpable ancient energy, creating a sacred and awe-inspiring ambiance. Subtle energetic currents disturb the water's surface, and ethereal reflections dance on the dark liquid.",
-        "architectural_tone": "Geometric luminous",
-        "cultural_tone": "Nexus of ancient knowledge",
-        "materials": "The central mandala is composed of pure, luminous energy. The surrounding cave walls are rough-textured stone in deep greys and blacks. The submerged platform is smooth and obsidian-like.",
-        "mood": "Sacred and awe-inspiring, evoking a sense of tranquil wonder at the immense, glowing centerpiece.",
-        "sounds": "Faint hum of energy, gentle water ripples",
-        "dominantElementsDescriptors": [
-          "Colossal circular mandala",
-          "Dark rough cave walls",
-          "Rippling water surface"
-        ],
-        "spatialLayout": "A large, circular chamber with a dominant central mandala, approximately 30m in diameter, hovering above a submerged platform. The space recedes dramatically due to towering side walls, creating immense depth.",
-        "primary_surfaces": "Cave walls, Water",
-        "secondary_surfaces": "Luminous mandala, Circular platform",
-        "accent_features": "Pulsing cyan lines on passage floor, Crystalline spires with internal white glow, Cascade of blue energy particles, Narrow crevice.",
-        "dominant": "Cyan (70%)",
-        "secondary": "Dark grey/black (25%)",
-        "accent": "White (3%), Teal (2%)",
-        "ambient": "Cool",
-        "uniqueIdentifiers": [
-          "Electric cyan mandala centerpiece",
-          "Dark cavernous enclosure",
-          "Reflective water foreground"
-        ],
-        "searchDesc": "Fantasy cavern interior with a colossal glowing cyan mandala, dark walls, and reflective water."
+        "looks": "The colossal interior of a decommissioned fusion plant's central core, dominated by immense, weathered concrete structures and a soaring vaulted ceiling. Massive structural elements and large-scale navigation features create a sense of awe-inspiring scale.",
+        "colorsAndLighting": "Warm orange light emanates from unseen sources, casting long shadows, contrasted by cool ambient blue light from below. The muted tones of weathered concrete are dominant.",
+        "atmosphere": "The air is still, with faint wisps of steam and slowly drifting dust motes. A palpable sense of desolation and abandoned grandeur fills the vast, silent space.",
+        "architectural_tone": "monolithic concrete",
+        "cultural_tone": "A colossal, now inert, fusion power plant, a testament to past ambition now yielding to nature's cycle.",
+        "materials": "Massive, weathered concrete forms the primary structure, showing the texture of poured sections. Rusted metal detailing is visible on structural supports and doors.",
+        "mood": "Awe-inspiring and desolate, evoking a sense of lost ambition and nature's reclamation.",
+        "sounds": "Distant hum, faint steam hiss, dripping water, echo.",
+        "dominantElementsDescriptors": "colossal concrete pillar, vaulted ceiling, metal grate floor, riveted steel doors",
+        "spatialLayout": "A vast, cylindrical space with a towering height. The circular floor plan opens into immense depths, with prominent vertical and horizontal navigation features.",
+        "primary_surfaces": "Weathered concrete walls, floor, and vaulted ceiling.",
+        "secondary_surfaces": "Heavy-duty metal grate floor sections, riveted steel doors.",
+        "accent_features": "Creeping muted green vines, streaks of rust on door hinges.",
+        "dominant": "Grey (concrete)",
+        "secondary": "Orange (interior light)",
+        "accent": "Blue (from grate), Green (vines)",
+        "ambient": "Warm",
+        "uniqueIdentifiers": "Colossal scale, fusion plant interior, towering concrete pillar, metal grate revealing blue light.",
+        "searchDesc": "Interior of a colossal, decommissioned fusion plant with towering concrete and a vast vaulted ceiling."
       },
-      "imagePath": "https://v3b.fal.media/files/b/koala/GyNXd_2SE8MqUMDPDhpmW.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/elephant/F_TYe4E-y0B2SIMfee690.jpg",
       "focus": {
-        "node_id": "niche-1763128120437-expyuli0u",
+        "node_id": "niche-1763145432349-bmwy4k5kf",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763145779586-wamfdkd7l": {
+      "id": "loc-1763145779586-wamfdkd7l",
+      "type": "host",
+      "name": "The Verdant Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Verdant Expanse",
+        "description": "A vast and ancient rainforest teeming with life and mystical energies.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic integration with nature, monumental",
+          "cultural_tone": "A civilization deeply connected to natural cycles and spiritual reverence for elemental forces, particularly water and growth.",
+          "materials_base": "Ancient, living earth structures, rich mineral deposits, and naturally occurring luminous elements. A sense of time and deep natural formation.",
+          "mood_baseline": "mystical, tranquil, awe-inspiring",
+          "palette_bias": "Earthy greens, deep mossy tones, rich browns, and subtle, ethereal luminescence. A palette that evokes dense, vibrant life and hidden light.",
+          "soundscape_base": "The pervasive sound of flowing water, gentle breezes through dense foliage, and distant, resonant natural hums. A symphony of natural tranquility.",
+          "flora_base": "Massive, ancient trees with intricate root systems, luminous mosses, oversized ferns, and plants that exhibit unusual bioluminescent properties.",
+          "fauna_base": "Creatures adapted to dense, humid environments, often exhibiting symbiotic relationships with flora or possessing subtle, magical attributes. Think unseen movements and soft calls."
+        },
+        "slug": "the-verdant-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Verdant Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "3f97d663-a4b2-4ab8-9397-4f669a8e9343": {
+      "id": "3f97d663-a4b2-4ab8-9397-4f669a8e9343",
+      "type": "region",
+      "name": "Canopy Heights",
+      "dna": {
+        "type": "region",
+        "name": "Canopy Heights",
+        "description": "The upper, sun-drenched layers of the rainforest, where life thrives amongst the towering trees.",
+        "dna": {
+          "architectural_tone": "structures woven into living trees, elevated pathways",
+          "cultural_tone": "Guardians and caretakers of the upper rainforest, focused on harvesting celestial energies and maintaining the balance of the canopy.",
+          "materials_base": "Polished woods, woven vines, naturally occurring crystalline formations, and smooth, water-worn stones. A blend of living structures and refined natural elements.",
+          "mood_baseline": "serene, elevated, vibrant",
+          "palette_bias": "Bright greens, sun-drenched yellows, sky blues, and pearlescent highlights. A palette that captures the sunlit upper reaches.",
+          "soundscape_base": "Rustling leaves, bird calls, the distant sound of waterfalls, and the gentle hum of energy transfer.",
+          "flora_base": "Vibrant epiphytes, blooming aerial plants, and trees with broad, sun-catching leaves. Air plants and hanging gardens are common.",
+          "fauna_base": "Arboreal creatures, large insects with iridescent wings, and birds with vibrant plumage. Small, agile, and often seen flitting through the leaves."
+        },
+        "slug": "canopy-heights"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Canopy Heights",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "a7033625-e558-4c02-9dea-7793a8bd0cd9": {
+      "id": "a7033625-e558-4c02-9dea-7793a8bd0cd9",
+      "type": "location",
+      "name": "The Lumina Sanctuary",
+      "dna": {
+        "type": "location",
+        "name": "The Lumina Sanctuary",
+        "description": "A sacred clearing within the rainforest canopy, dedicated to the collection and transformation of celestial rain.",
+        "looks": "Massive, moss-covered earth structures form a central cavern entrance, flanked by colossal, ancient trees. Polished golden hands, appearing to grow from the earth and trees, are prominently displayed. The ground features shallow water with scattered rocks and lush green foliage. The overall scale suggests a place of significant natural and mystical importance.",
+        "atmosphere": "The air appears thick with moisture, with visible water droplets or mist falling. A pervasive humidity suggests a lush, tropical environment. The atmosphere is calm, with a faint, ethereal shimmer.",
+        "mood": "Serene, awe-inspiring, mystical",
+        "lighting": "Warm, golden light emanates from the central arched doorway, creating strong contrast with the shadowed surrounding jungle. Smaller, glowing golden hands scatter soft, warm light across the mossy ground.",
+        "dominantElements": [
+          "Central cavern entrance with arched doorway (approx. 20m tall, WIDE STRUCTURE)",
+          "Giant golden hands emerging from mounds (approx. 10m tall)",
+          "Colossal ancient trees forming the perimeter"
+        ],
+        "spatialLayout": "The foreground consists of a shallow, reflective water body with scattered rocks and dense green foliage. The midground is dominated by the central, cave-like entrance carved into a large, rounded mound covered in moss. Two massive golden hands are positioned on either side of the central entrance at mid-height, with two smaller golden hands flanking the foreground on mossy outcrops. The background is obscured by dense, dark green jungle foliage and the upper parts of the colossal trees.",
+        "uniqueIdentifiers": [
+          "Giant golden hands emerging from organic mounds",
+          "Central, luminous arched doorway within a moss-covered structure",
+          "Water feature with reflective surface in the foreground"
+        ],
+        "materials_primary": "Moss, earth, rock",
+        "materials_secondary": "Water, dense foliage",
+        "materials_accents": "Polished gold, glowing mist/light",
+        "colors_dominant": "Deep greens from foliage and moss",
+        "colors_secondary": "Browns and grays from earth and rocks",
+        "colors_accents": "Vibrant gold from the hands and the central light",
+        "colors_ambient": "Muted greens and browns, illuminated by warm golden light",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Large, luminous arched doorway leading into a brightly lit interior space"
+          },
+          {
+            "type": "mysterious_object",
+            "position": "left foreground, midground",
+            "description": "Glowing golden hand resting on a mossy outcrop"
+          },
+          {
+            "type": "mysterious_object",
+            "position": "right foreground, midground",
+            "description": "Glowing golden hand resting on a mossy outcrop"
+          },
+          {
+            "type": "mysterious_object",
+            "position": "left midground, background",
+            "description": "Giant golden hand emerging from a moss-covered mound"
+          },
+          {
+            "type": "mysterious_object",
+            "position": "right midground, background",
+            "description": "Giant golden hand emerging from a moss-covered mound"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Sacred rainforest sanctuary with golden hands. Has: passage (center, midground), mysterious_object (left foreground, midground), mysterious_object (right foreground, midground)",
+        "dna": {
+          "architectural_tone": "Monumental, earth-integrated forms with celestial-aligned features",
+          "cultural_tone": "A sacred site for rain collection and ritualistic transformation, revered for its connection to celestial bounty.",
+          "materials_base": "Moss-covered earth, ancient stone formations, and polished, luminous metals. The emphasis is on natural sculpting and infused elements.",
+          "mood_baseline": "sacred, transformative, ethereal",
+          "palette_bias": "Deep emerald greens, earthy browns, stone grays, and intense, warm golden light with a subtle, misty shimmer.",
+          "soundscape_base": "The gentle, consistent sound of falling water, soft mist, and a low, resonant hum of gathered energy.",
+          "flora_base": "Dense mosses, ancient ferns, and large, resilient foliage adapted to humid, shadowed areas surrounding water features.",
+          "fauna_base": "None explicitly present, focus is on the sanctuary's purpose."
+        },
+        "slug": "the-lumina-sanctuary"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/0jtl-b9j1yRIFo5DUDQjJ.jpg",
+      "focus": {
+        "node_id": "The Lumina Sanctuary",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763145814082-8zvqa1jlk": {
+      "id": "niche-1763145814082-8zvqa1jlk",
+      "type": "niche",
+      "name": "interior of The Lumina Sanctuary",
+      "dna": {
+        "looks": "A colossal, dimly lit cavern interior with organically sculpted earth and petrified wood walls. A wide passage extends into a misty, golden-lit distance, guarded by massive golden hands. Vaulted ceilings soar overhead, lost in shadow.",
+        "colorsAndLighting": "Dominant earthy browns and deep greens are illuminated by a soft, diffused golden light that originates from the background, creating a warm, ethereal glow. Flecks of luminescence add depth.",
+        "atmosphere": "The air is thick with a soft, golden mist, feeling sacred, ancient, and awe-inspiring. Subtle movement comes from luminous motes. A sense of immense depth and transformative energy permeates the space.",
+        "architectural_tone": "Monumental Earth-Integrated",
+        "cultural_tone": "Sacred site for transformation and celestial bounty rituals.",
+        "materials": "The primary materials are moss-covered earth and ancient stone, with a rough, textured finish. Polished gold accents gleam softly. Ambient mist adds a soft, damp texture.",
+        "mood": "Ethereal and sacred, evoking awe and a sense of profound mystery and transformation.",
+        "sounds": "Distant dripping, soft ethereal hum, gentle wind.",
+        "dominantElementsDescriptors": [
+          "Colossal Earth Walls",
+          "Golden Hands",
+          "Extending Passage",
+          "Vaulted Ceiling"
+        ],
+        "spatialLayout": "A vast, cavernous space with a primary passage extending 50 meters deep. The scale is colossal, with implied heights of at least 40 meters. Navigation includes a main passage, a side opening, and steps.",
+        "primary_surfaces": "Moss-covered earth walls, dark earth and stone floor, implied vaulted earth ceiling.",
+        "secondary_surfaces": "Polished gold hands, low-lying moss patches.",
+        "accent_features": "Colossal golden hands, small inset glowing golden hand motifs, luminous dust motes.",
+        "dominant": "Earthy Browns (Walls, Floor)",
+        "secondary": "Deep Greens (Moss on Walls)",
+        "accent": "Vibrant Gold (Hands, Accents), Stone Grey (Floor Stones)",
+        "ambient": "Warm",
+        "uniqueIdentifiers": [
+          "Giant Polished Gold Hands emerging from organic walls",
+          "Misty, golden-lit passage extending into darkness",
+          "Colossal scale with vaulted earth ceilings"
+        ],
+        "searchDesc": "Sacred cavern interior with colossal earth walls, golden hands, and a misty, golden-lit passage."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/Pw_VKSI22056GokFzKCEs.jpg",
+      "focus": {
+        "node_id": "niche-1763145814082-8zvqa1jlk",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763247339519-peb7ughal": {
+      "id": "loc-1763247339519-peb7ughal",
+      "type": "host",
+      "name": "The Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Expanse",
+        "description": "A vast, nebulae-filled void where gravity is a suggestion and technology reigns.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "utilitarian megastructures, modular construction",
+          "cultural_tone": "A society driven by resourcefulness and adaptation in the void. Technology is paramount for survival and progress, often repurposed from salvaged materials.",
+          "materials_base": "Primarily salvaged and repurposed metals, reinforced composites, and resilient alloys. Emphasis on functionality over aesthetics, with surfaces often showing signs of wear and modification.",
+          "mood_baseline": "resourceful, functional, vast",
+          "palette_bias": "Dominated by industrial greys and metallic sheens. Accents of vibrant, functional lighting in blues, reds, and oranges are common, used for navigation and status indication.",
+          "soundscape_base": "Echoes of machinery, distant hums of power conduits, and the faint, omnipresent hiss of life support systems. Occasional clangs and metallic groans indicate ongoing structural stress or repairs.",
+          "flora_base": "Minimal to non-existent within constructed environments. Any organic matter would be carefully cultivated in controlled, artificial biomes for sustenance, likely engineered for efficiency.",
+          "fauna_base": "Artificial constructs and highly adapted, resilient organisms. Expect maintenance drones, utility bots, and potentially bio-engineered creatures designed for specific environmental tasks or sustenance."
+        },
+        "slug": "the-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "c7cfd7ff-1f2a-4ce8-89d4-4707e474156c": {
+      "id": "c7cfd7ff-1f2a-4ce8-89d4-4707e474156c",
+      "type": "region",
+      "name": "Orbital Junkyard",
+      "dna": {
+        "type": "region",
+        "name": "Orbital Junkyard",
+        "description": "A sprawling expanse of discarded spacecraft and derelict stations, repurposed for new purposes.",
+        "dna": {
+          "architectural_tone": "ad-hoc, scavenged constructions, repurposed derelicts",
+          "cultural_tone": "A frontier mentality prevails, with independent factions and opportunistic salvagers claiming territory. Infrastructure is often jury-rigged and constantly evolving.",
+          "materials_base": "Heavily reliant on salvaged ship hulls, scrap metal, and repurposed station components. Surfaces are often a patchwork of different metallic textures and weathered composites.",
+          "mood_baseline": "gritty, chaotic, industrial",
+          "palette_bias": "Shades of rust, dull metallics, and muted blues punctuated by functional, often flickering, warning lights. The palette reflects the decay and opportunistic repairs.",
+          "soundscape_base": "Creaking metal, the clang of tools, intermittent bursts of welding, and the low thrum of repurposed engines. The ambient sound is a constant reminder of precarious existence.",
+          "flora_base": "None within the core junkyard areas. Any plant life would be confined to highly protected, self-sustaining biodomes or personal hydroponic units.",
+          "fauna_base": "Scavenger drones, automated repair units, and hardy, vermin-like creatures adapted to low-resource environments and metallic debris."
+        },
+        "slug": "orbital-junkyard"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Orbital Junkyard",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "61e903c9-be6a-4186-b9d3-423e2b651356": {
+      "id": "61e903c9-be6a-4186-b9d3-423e2b651356",
+      "type": "location",
+      "name": "The Drift Garage",
+      "dna": {
+        "type": "location",
+        "name": "The Drift Garage",
+        "description": "A massive, open-air hangar designed for the maintenance and storage of unconventional aerial vehicles.",
+        "looks": "An immense, cavernous structure with no discernible floor, composed of interwoven metallic girders and energy fields. Vast openings reveal the starfield beyond.",
+        "atmosphere": "The hum of latent energy, the faint scent of ozone, and the occasional clang of metal.",
+        "mood": "Functional, chaotic, awe-inspiring",
+        "dna": {
+          "architectural_tone": "spacious, open-frame hangar, suspension infrastructure",
+          "cultural_tone": "A hub for vehicle customization, repair, and illicit modifications. A place where the lines between functional maintenance and performance tuning blur.",
+          "materials_base": "Reinforced metallic flooring and framework, with extensive use of cables, winches, and magnetic anchors. Exposed conduits and industrial lighting fixtures are prevalent.",
+          "mood_baseline": "functional, active, expansive",
+          "palette_bias": "Predominantly cool blues and greys from ambient lighting, contrasted with sharp, functional reds from status and warning lights. Metallic reflections are key.",
+          "soundscape_base": "The hum of anti-gravity stabilizers, the whirring of tool attachments, occasional engine test ignitions, and the soft chatter of automated diagnostics.",
+          "flora_base": "None. The focus is entirely on the vehicles and their maintenance.",
+          "fauna_base": "Specialized maintenance drones, robotic arms, and possibly small, agile repair bots that navigate the suspended vehicles."
+        },
+        "slug": "the-drift-garage"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Drift Garage",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5af9d06f-dfad-4762-8b67-255d9cd07bb8": {
+      "id": "5af9d06f-dfad-4762-8b67-255d9cd07bb8",
+      "type": "niche",
+      "name": "The Drone Swarm",
+      "dna": {
+        "type": "niche",
+        "name": "The Drone Swarm",
+        "description": "The interior space teems with activity as maintenance drones navigate the airborne vehicles.",
+        "looks": "The scene depicts a vast, cavernous interior of a hangar with a high, arched ceiling. Numerous unidentifiable vehicles are suspended in the air by thin cables. Rows of glowing red lights line the upper walls, while square, white lights are spaced along the lower sections. The floor is a metallic, possibly grimy, surface with tracks or channels. A bright, diffused light emanates from the far end of the hangar, creating a strong visual pull. Several terrestrial vehicles are parked on the floor, suggesting a dual-purpose facility.",
+        "atmosphere": "A visible haze or mist permeates the air, particularly in the midground and background, softening the edges of distant objects. The air appears clear enough for the suspended vehicles and lighting to be distinctly visible.",
+        "mood": "Busy, intricate, vital",
+        "lighting": "The lighting is a mix of cool, ambient blue from the far end and the overhead structures, contrasted by warm, vibrant red from the numerous strip lights along the walls and ceiling. The red lights cast sharp reflections on the floor and suspended vehicles. The overall lighting creates a high-contrast environment.",
+        "dominantElements": [
+          "Suspended vehicles (various sizes, in midground and background)",
+          "Arched ceiling structure with red lights (background)",
+          "Rows of white square lights along walls (midground/background)",
+          "Bright light source at far end (background)",
+          "Tracked floor surface (foreground/midground)"
+        ],
+        "spatialLayout": "The spatial layout is that of a long, open hangar with a strong sense of depth created by the receding lines of the walls, the arrangement of suspended vehicles, and the bright light source at the far end. The foreground is occupied by parked terrestrial vehicles and the tracked floor. The midground features more suspended vehicles and the lower sections of the hangar walls with white lights. The background is dominated by the arched ceiling, upper wall lighting, and the bright, luminous exit.",
+        "uniqueIdentifiers": [
+          "Suspended vehicles tethered by light cables",
+          "Concentric rows of red and white lights along hangar walls",
+          "Bright, luminous exit at the far end"
+        ],
+        "materials_primary": "Metal",
+        "materials_secondary": "Concrete",
+        "materials_accents": "Light cables, glowing lights",
+        "colors_dominant": "Blue (ambient light, background)",
+        "colors_secondary": "Red (wall and ceiling lights)",
+        "colors_accents": "White (wall lights), metallic grays and dark tones",
+        "colors_ambient": "Cool blue with red undertones",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "far end, background",
+            "description": "Brightly lit passage or exit leading out of the hangar"
+          },
+          {
+            "type": "object",
+            "position": "center, foreground",
+            "description": "Small, dark box-like object on the floor tracks"
+          },
+          {
+            "type": "object",
+            "position": "right side, foreground",
+            "description": "Partially visible mechanical structure beside parked vehicle"
+          }
+        ],
+        "searchDesc": "[Hangar - Interior] Vast hangar with suspended vehicles. Has: lit passage (far end), box object (center foreground), mechanical structure (right foreground)",
+        "dna": {
+          "architectural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "busy, intricate, dynamic",
+          "soundscape_base": "A constant, low hum of countless tiny motors, the faint clicks and whirs of articulated joints, and the occasional soft beeps of communication signals.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-drone-swarm"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/0aAT50N8EtNR0wamgm6ST.jpg",
+      "focus": {
+        "node_id": "The Drone Swarm",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763247376803-tgmt4b7cn": {
+      "id": "niche-1763247376803-tgmt4b7cn",
+      "type": "niche",
+      "name": "interior of The Drone Swarm",
+      "dna": {
+        "looks": "A vast, cavernous hangar with a colossal, arched ceiling soaring over 40 meters high. The space is filled with numerous vehicles suspended by glowing cables, creating layered depth and a sense of immense scale. Heavy industrial structures and functional elements dominate the view.",
+        "colorsAndLighting": "A mix of cool ambient blues from the distant exit and functional reds and whites from wall fixtures create visual texture. Bright, diffused light emanates from the far end, contrasting with the darker metallic tones of the interior.",
+        "atmosphere": "The air feels vast and industrial, possibly carrying faint metallic dust motes dancing in light beams. Subtle environmental motion from maintenance drones and flickering lights suggests ongoing activity. The atmosphere is one of immense scale and utilitarian purpose.",
+        "architectural_tone": "futuristic hangar",
+        "cultural_tone": "A hub for vehicle customization, repair, and illicit modifications, where maintenance blurs with performance tuning.",
+        "materials": "The primary materials are textured, metallic, and slightly grimy. Exposed conduits, reinforced metal beams, and heavy-duty tracks are visible, showing subtle, functional wear. A faint sheen reflects the overhead lighting on metallic surfaces.",
+        "mood": "Awe-inspiring and functional, evoking a sense of immense industrial power and hidden potential.",
+        "sounds": "humming machinery, distant clanks, whirring drones, air circulation",
+        "dominantElementsDescriptors": [
+          "colossal arched ceiling",
+          "suspended vehicles",
+          "industrial lighting",
+          "heavy duty tracks"
+        ],
+        "spatialLayout": "The primary space is rectangular with a high, arched ceiling, emphasizing height and depth on a colossal scale. A strong visual pull draws the eye towards a distant, bright exit 50 meters away. Walls are approximately 25 meters apart.",
+        "primary_surfaces": "metal floor, metal walls, arched metal ceiling",
+        "secondary_surfaces": "glowing light cables, exposed conduits, structural beams",
+        "accent_features": [
+          "glowing red status lights",
+          "articulated robotic arm",
+          "grated metal floor corridor"
+        ],
+        "dominant": "dark metallics (90%)",
+        "secondary": "blue and red light (5%)",
+        "accent": "white and orange light (5%)",
+        "ambient": "cool",
+        "uniqueIdentifiers": [
+          "arched hangar ceiling",
+          "suspended vehicles on light cables",
+          "massive scale and depth",
+          "industrial red lighting accents"
+        ],
+        "searchDesc": "Industrial hangar interior with colossal arched ceiling, suspended vehicles, and industrial lighting."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/e-IKCegPcSvoSK_cJmD_L.jpg",
+      "focus": {
+        "node_id": "niche-1763247376803-tgmt4b7cn",
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
@@ -2724,21 +3245,96 @@
       ]
     },
     {
-      "id": "loc-1763128072341-5nk4hv3q1",
+      "id": "loc-1763130154220-lm8p7jzkf",
       "type": "host",
       "children": [
         {
-          "id": "d5c32a76-6b7d-4020-bb7e-2a6dde2caf43",
+          "id": "7fab5b7f-50d4-427a-a889-4c932a16e66b",
           "type": "region",
           "children": [
             {
-              "id": "d314bedb-7e83-4151-87dd-018b95df9847",
+              "id": "29217127-f72b-4af5-bba1-9758d65d501b",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763128120437-expyuli0u",
+                  "id": "niche-1763140105571-jv7mzo8v2",
                   "type": "niche",
                   "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763145372574-g92gk04oy",
+      "type": "host",
+      "children": [
+        {
+          "id": "70946a00-e4aa-4ee9-a38a-394d01830d0b",
+          "type": "region",
+          "children": [
+            {
+              "id": "4b7a5f0e-415f-4c62-95da-c8acdf19fd66",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763145432349-bmwy4k5kf",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763145779586-wamfdkd7l",
+      "type": "host",
+      "children": [
+        {
+          "id": "3f97d663-a4b2-4ab8-9397-4f669a8e9343",
+          "type": "region",
+          "children": [
+            {
+              "id": "a7033625-e558-4c02-9dea-7793a8bd0cd9",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763145814082-8zvqa1jlk",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763247339519-peb7ughal",
+      "type": "host",
+      "children": [
+        {
+          "id": "c7cfd7ff-1f2a-4ce8-89d4-4707e474156c",
+          "type": "region",
+          "children": [
+            {
+              "id": "61e903c9-be6a-4186-b9d3-423e2b651356",
+              "type": "location",
+              "children": [
+                {
+                  "id": "5af9d06f-dfad-4762-8b67-255d9cd07bb8",
+                  "type": "niche",
+                  "children": [
+                    {
+                      "id": "niche-1763247376803-tgmt4b7cn",
+                      "type": "niche",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -2748,6 +3344,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763128072341-5nk4hv3q1"
+    "loc-1763130154220-lm8p7jzkf",
+    "loc-1763145779586-wamfdkd7l"
   ]
 }

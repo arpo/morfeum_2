@@ -33,6 +33,7 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
   }
   
   // Already inside? Create deeper niche
+  // TODO, not sure about this one. All new nodes should be based in the same location parent and should be siblings?
   if (currentNode.type === 'niche' && intent.target) {
     return {
       action: 'create_niche',
