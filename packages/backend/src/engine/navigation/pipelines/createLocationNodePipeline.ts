@@ -9,6 +9,8 @@ import { generateLocationImage } from '../../generation/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
 import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
+import { NICHE_SHOT_EXTERIOR } from '../../generation/prompts/shared/cameraConfig';
+import { fluxRoofFix } from '../../generation/prompts/shared/constants';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
 export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
@@ -35,13 +37,13 @@ export async function runCreateLocationNodePipeline(
 ): Promise<{ imageUrl: string; imagePrompt: string; node: any }> {
   const nodeType = options?.nodeType || 'niche';
   const shouldGenerateImage = options?.generateImage !== false;
-  
+
   // Get style and perspective from decision or options
   const style = options?.style || decision.style || intent.style || 'default';
   const perspective = options?.perspective || decision.perspective || intent.spaceType || 'interior';
-  
+
   // Step 1: Generate image prompt using shared module
-  const imagePrompt = await generateImagePromptForNode(
+  let imagePrompt = await generateImagePromptForNode(
     context,
     intent,
     decision,
@@ -51,7 +53,27 @@ export async function runCreateLocationNodePipeline(
 
   // Step 2: Generate FLUX image using shared module
   let imageUrl: string;
-  
+
+
+  // Add camera style and perspective if provided
+  if (intent.spaceType === 'exterior') {
+    imagePrompt += `
+        
+    ${NICHE_SHOT_EXTERIOR.lens} 
+    
+`
+  } else {
+    imagePrompt += `
+        
+    ${NICHE_SHOT_EXTERIOR.lens} 
+    
+    ${fluxRoofFix}
+    
+`
+  }
+
+
+
   if (shouldGenerateImage) {
     const result = await generateLocationImage(apiKey, imagePrompt);
     imageUrl = result.imageUrl;
@@ -61,14 +83,14 @@ export async function runCreateLocationNodePipeline(
 
   // Step 3: Generate DNA for the node
   console.log(`\n🧬 [PIPELINE] Generating DNA for ${nodeType} node...`);
-  
+
   const nodeName = decision.newNodeName || 'Unnamed Niche';
-  
+
   // Extract parent context from current node
-  const parentContext = context.currentNode.dna 
+  const parentContext = context.currentNode.dna
     ? extractParentContext(context.currentNode.dna)
     : undefined;
-  
+
   // Use centralized DNA generator
   const dna = await generateNodeDNA(
     apiKey,
@@ -78,7 +100,7 @@ export async function runCreateLocationNodePipeline(
     imagePrompt,
     parentContext
   );
-  
+
   console.log('✅ [PIPELINE] DNA generated successfully. Fields:', Object.keys(dna).join(', '));
 
   // Step 4: Build complete node using shared builder

@@ -14,6 +14,15 @@ export const ALIGNMENT = {
 };
 
 /**
+ * Interior camera specifications by space scale
+ */
+export const NICHE_CAMERA_SPECS = {
+  SMALL: '28-35mm lens, eye-level, centered perspective',
+  MEDIUM: '20-28mm lens, eye-level to slight upward tilt (5°), centered',
+  COLOSSAL: '14-20mm ultra-wide lens, upward tilt (10-15°), centered perspective',
+ };
+
+/**
  * Overview shot configuration (Host/Region)
  * Aerial/elevated perspective
  */
@@ -28,7 +37,7 @@ export const OVERVIEW_SHOT = {
  * Ground-level outdoor perspective
  * Camera positioned directly facing entrance for smooth transitions
  */
-export const EXTERIOR_SHOT = {
+export const LOCATION_SHOT = {
   shot: 'camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context',
   light: 'directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions',
   lens: '12-24mm ultra-wide lens, elevated perspective, expansive framing',
@@ -39,20 +48,22 @@ export const EXTERIOR_SHOT = {
  * First-person INTERIOR shot (Niche)
  * Inside enclosed spaces
  */
-export const INTERIOR_SHOT = {
+export const NICHE_SHOT_INTERIOR = {
   shot: 'eye-level, centered view into space, architectural elements frame the view, layered depth, balanced composition',
   light: 'interior lighting with atmospheric depth, environmental motion (steam, dust motes, flickering sources), mixed lighting temperature creating visual texture',
-  lens: 'varies by space scale - see INTERIOR_CAMERA_SPECS',
+  lens: NICHE_CAMERA_SPECS.SMALL
 };
 
 /**
- * Interior camera specifications by space scale
+ * First-person EXTERIOR shot (Niche)
+ * Inside enclosed spaces
  */
-export const INTERIOR_CAMERA_SPECS = {
-  SMALL: '28-35mm lens, eye-level, centered perspective',
-  MEDIUM: '20-28mm lens, eye-level to slight upward tilt (5°), centered',
-  COLOSSAL: '14-20mm ultra-wide lens, upward tilt (10-15°), centered perspective',
+export const NICHE_SHOT_EXTERIOR = {
+  shot: 'eye-level, centered view into space, architectural elements frame the view, layered depth, balanced composition',
+  light: 'interior lighting with atmospheric depth, environmental motion (steam, dust motes, flickering sources), mixed lighting temperature creating visual texture',
+  lens: NICHE_CAMERA_SPECS.SMALL
 };
+
 
 /**
  * Depth of field settings
@@ -67,10 +78,10 @@ export const DEPTH_OF_FIELD = {
  */
 export function getInteriorCameraSpec(ceilingHeight: number): string {
   if (ceilingHeight < 15) {
-    return INTERIOR_CAMERA_SPECS.SMALL;
+    return NICHE_CAMERA_SPECS.SMALL;
   } else if (ceilingHeight < 50) {
-    return INTERIOR_CAMERA_SPECS.MEDIUM;
+    return NICHE_CAMERA_SPECS.MEDIUM;
   } else {
-    return INTERIOR_CAMERA_SPECS.COLOSSAL;
+    return NICHE_CAMERA_SPECS.COLOSSAL;
   }
 }

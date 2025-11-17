@@ -33,8 +33,7 @@ export async function generateImagePromptForNode(
   options?: ImagePromptOptions
 ): Promise<string> {
   const nodeType = options?.nodeType || 'niche';
-  const perspective = options?.perspective || decision.perspective || intent.spaceType || 'interior';
-  const systemPrompt = nicheImagePrompt(context, intent, decision, perspective as 'interior' | 'exterior');
+  const systemPrompt = nicheImagePrompt(context, intent, decision);
 
   const messages = [
     { role: 'system', content: systemPrompt },

@@ -1,5 +1,5 @@
 import { fluxRoofFix, fluxInstructionsShort } from './constants';
-import { ALIGNMENT, INTERIOR_CAMERA_SPECS, INTERIOR_SHOT } from './cameraConfig';
+import { ALIGNMENT, NICHE_CAMERA_SPECS, NICHE_SHOT_INTERIOR } from './cameraConfig';
 
 /**
  * Reusable Prompt Sections (Condensed)
@@ -169,10 +169,10 @@ export function buildInteriorSpaceRulesCondensed(entranceElement: string): strin
 }
 
 export function buildCameraSpecificationsCondensed(): string {
-  return `CAMERA SPECS: ${ALIGNMENT.CENTERED}. ${INTERIOR_SHOT.shot} ${INTERIOR_SHOT.light}. Lens guidance:
-- Small (<15m): ${INTERIOR_CAMERA_SPECS.SMALL}
-- Medium (15-50m): ${INTERIOR_CAMERA_SPECS.MEDIUM}
-- Colossal (>50m): ${INTERIOR_CAMERA_SPECS.COLOSSAL}`;
+  return `CAMERA SPECS: ${ALIGNMENT.CENTERED}. ${NICHE_SHOT_INTERIOR.shot} ${NICHE_SHOT_INTERIOR.light}. Lens guidance:
+- Small (<15m): ${NICHE_CAMERA_SPECS.SMALL}
+- Medium (15-50m): ${NICHE_CAMERA_SPECS.MEDIUM}
+- Colossal (>50m): ${NICHE_CAMERA_SPECS.COLOSSAL}`;
 }
 
 export function buildFluxRoofFixSection(): string {

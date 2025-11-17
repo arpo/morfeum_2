@@ -9,7 +9,7 @@
  */
 
 import type { HierarchyNode, NodeDNA } from '../../../hierarchyAnalysis/types';
-import { EXTERIOR_SHOT, INTERIOR_SHOT, OVERVIEW_SHOT } from '../shared/cameraConfig';
+import { LOCATION_SHOT, NICHE_SHOT_INTERIOR, OVERVIEW_SHOT } from '../shared/cameraConfig';
 
 /**
  * Overview shot instructions (Host/Region)
@@ -22,14 +22,14 @@ const overviewShotInstructions = OVERVIEW_SHOT;
  * Centered outdoor perspective with balanced composition
  * Imported from centralized camera config
  */
-const firstPersonExteriorInstructions = EXTERIOR_SHOT;
+const firstPersonExteriorInstructions = LOCATION_SHOT;
 
 /**
  * First-person INTERIOR shot instructions (Niche)
  * Centered indoor perspective with balanced composition
  * Imported from centralized camera config
  */
-const firstPersonInteriorInstructions = INTERIOR_SHOT;
+const firstPersonInteriorInstructions = NICHE_SHOT_INTERIOR;
 
 /**
  * Build DNA-based image prompt using all fields except searchDesc and sounds

@@ -1,51 +1,51 @@
 {
   "nodes": {
-    "loc-1763376240726-qg9lb34jh": {
-      "id": "loc-1763376240726-qg9lb34jh",
+    "loc-1763383500556-yi5z183jh": {
+      "id": "loc-1763383500556-yi5z183jh",
       "type": "host",
-      "name": "The Vast Expanse",
+      "name": "The Crimson Expanse",
       "dna": {
         "type": "host",
-        "name": "The Vast Expanse",
-        "description": "An arid world of endless deserts and forgotten valleys.",
+        "name": "The Crimson Expanse",
+        "description": "Vast, arid planetscape under twin suns.",
         "dna": {
           "genre": "sci-fi",
-          "architectural_tone": "grand, utilitarian, monolithic",
-          "cultural_tone": "A once-advanced civilization, now largely absent or transformed. Focus on remnants of their grand designs and the struggle for survival.",
-          "materials_base": "Vast, durable materials like reinforced alloys, processed stone, and energy-infused composites. Emphasis on functionality and resilience against harsh environments.",
-          "mood_baseline": "isolation, mystery, ancient",
-          "palette_bias": "Muted, earthy tones accented by hints of metallic sheen and atmospheric dust. A palette that speaks of age and exposure.",
-          "soundscape_base": "Echoes of ancient machinery, low atmospheric hums, and the pervasive silence of desolation. The sounds of a world slowly decaying.",
-          "flora_base": "Hardy, adapted plant life that can survive extreme conditions. Cacti, resilient mosses, and hardy desert shrubs, possibly with alien adaptations.",
-          "fauna_base": "Creatures adapted to arid, desolate landscapes. Scavengers, hardy insects, and resilient desert dwellers. Potential for mutated or engineered organisms."
+          "architectural_tone": "monolithic industrial",
+          "cultural_tone": "A vast, uncaring expanse where ancient, forgotten technologies and harsh natural forces dominate.",
+          "materials_base": "Dominance of weathered, utilitarian metals and dense, arid geological formations. Structures are built for extreme durability and function.",
+          "mood_baseline": "desolate, imposing, ancient",
+          "palette_bias": "Warm, dusty earth tones and muted metallics. Scarce, harsh light casts long shadows.",
+          "soundscape_base": "Deep, resonant hums of dormant machinery, punctuated by the abrasive whisper of wind and geological shifts.",
+          "flora_base": "Extremely sparse, hardy desert flora adapted to extreme heat and aridity, often with metallic or crystalline properties.",
+          "fauna_base": "Resilient, often bio-mechanical or crystalline creatures adapted to extreme conditions, scavenging or dormant."
         },
-        "slug": "the-vast-expanse"
+        "slug": "the-crimson-expanse"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "The Vast Expanse",
+        "node_id": "The Crimson Expanse",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "8f47a078-36d4-4d16-a4d1-309f8ed2ef76": {
-      "id": "8f47a078-36d4-4d16-a4d1-309f8ed2ef76",
+    "045f8266-652e-4121-b131-301a78d7ca89": {
+      "id": "045f8266-652e-4121-b131-301a78d7ca89",
       "type": "region",
       "name": "The Sunken Valley",
       "dna": {
         "type": "region",
         "name": "The Sunken Valley",
-        "description": "A vast, eroded valley floor where ancient structures lie buried.",
+        "description": "A colossal geological depression scarred by ancient impact craters and wind erosion.",
         "dna": {
-          "architectural_tone": "subterranean, eroded structures",
-          "cultural_tone": "A place where colossal structures are reclaimed by the earth, hinting at a history of geological upheaval or deliberate burial.",
-          "materials_base": "Primarily sand-eroded metals and stone composites, mixed with geological sediment. The remnants of advanced technology weathered by time and elements.",
-          "mood_baseline": "forgotten, buried, vast",
-          "palette_bias": "Deep oranges, rusty browns, and earthy ochres dominate, reflecting the mineral content of the land and the decay of materials.",
-          "soundscape_base": "The whisper of shifting sands, distant echoes of wind through canyons, and the creak of stressed metal buried deep.",
-          "flora_base": "Sparse, deep-rooted desert flora that anchors itself in the sands. Hardy scrub and subterranean root systems.",
-          "fauna_base": "Burrowing creatures, sand-dwelling insects, and opportunistic scavengers that thrive in buried environments."
+          "architectural_tone": "geological scars and weathered structures",
+          "cultural_tone": "A colossal depression where the planet's fury has scoured away much, leaving behind remnants of past impacts and wind-worn monuments.",
+          "materials_base": "Primarily eroded rock and sand, interspersed with heavily corroded metallic debris from celestial events.",
+          "mood_baseline": "oppressive, forgotten, vast",
+          "palette_bias": "Dominated by muted ochres, deep earth browns, and pale sandy hues, reflecting a history of impact and erosion.",
+          "soundscape_base": "Low, echoing winds whistling through massive geological formations, the distant rumble of shifting sands.",
+          "flora_base": "None",
+          "fauna_base": "Subterranean creatures and wind-borne scavengers."
         },
         "slug": "the-sunken-valley"
       },
@@ -57,97 +57,265 @@
         "distance": "medium"
       }
     },
-    "5f66869d-7e94-4c29-a1a1-e2fd2c56e8eb": {
-      "id": "5f66869d-7e94-4c29-a1a1-e2fd2c56e8eb",
+    "9ccf63e0-dd9a-4942-81d0-75d9d51dcd65": {
+      "id": "9ccf63e0-dd9a-4942-81d0-75d9d51dcd65",
       "type": "location",
-      "name": "The Crimson Comet",
+      "name": "The Rusting Leviathan",
       "dna": {
         "type": "location",
-        "name": "The Crimson Comet",
-        "description": "An alien, abandoned, rusty spaceship, half buried in desert sand.",
-        "looks": "A colossal, ovular spaceship is half-submerged in soft, orange sand, its metallic hull exhibiting deep corrosion and pitting. The structure's weathered exterior glows with a dull, rusty sheen under the desert sun, with large portions obscured by encroaching dunes. A wide, dark entryway is visible on its left side, flanked by a short set of stairs leading up from the sand. The vessel tapers to a pointed end on its right, disappearing into the hazy desert landscape.",
-        "atmosphere": "The air is thick with fine, airborne sand particles, creating a visible haze that softens distant features. The dry, arid environment is palpable, suggesting extreme temperatures and a lack of moisture.",
-        "mood": "Desolate, forgotten, mysterious",
-        "lighting": "The lighting is warm and diffused, casting soft shadows and highlighting the rusty tones of the spaceship and surrounding terrain. The sun appears to be high in the sky, creating a gentle, even illumination.",
+        "name": "The Rusting Leviathan",
+        "description": "An enormous, alien starship, its metallic hull corroded by millennia of desert storms, partially entombed in drifting sands.",
+        "looks": "An enormous, elongated starship, heavily weathered and showing significant rust, is partially buried in a sandy terrain. Its metallic hull is pockmarked and corroded, with visible seams and plating. The ship's immense scale is evident, with sections disappearing into the sand dunes. Intricate external machinery, pipes, and structural elements are visible along its length, hinting at its former complexity. The sand adheres to its surfaces, obscuring some details and emphasizing its integration with the desert.",
+        "atmosphere": "The air is thick with fine sand particles, creating a hazy, arid atmosphere that partially obscures distant features. A sense of dry heat and stillness permeates the scene, punctuated only by the implied whisper of wind.",
+        "mood": "Desolate, mysterious, ancient",
+        "lighting": "The lighting is warm and diffused, casting long shadows and highlighting the sandy texture of the environment and the rust on the ship. The light source appears to be high and slightly to the right, creating a gentle illumination with moderate contrast.",
         "dominantElements": [
-          "Massive, corroded spaceship hull (center, midground)",
-          "Orange desert sand dunes (foreground/midground)",
-          "Red rock formations and canyon walls (left and right, background)"
+          "Massive alien spaceship (midground, center)",
+          "Sand dunes and rocky terrain (foreground, midground, background)",
+          "Dust and atmospheric haze (atmosphere)"
         ],
-        "spatialLayout": "The foreground is dominated by undulating sand dunes and a rough track. In the midground, the massive spaceship rests partially buried, with its entrance facing the viewer's left. The background consists of imposing, rocky canyon walls that rise sharply from the desert floor, creating a sense of enclosure within the vast expanse.",
+        "spatialLayout": "The foreground is dominated by sandy ground and scattered rocks, leading towards the midground where the colossal, partially buried alien spaceship resides. The ship's massive hull takes up a significant portion of the midground, with its forward section and a large segment of its flank exposed. The background shows eroded, rocky hillsides and a hazy sky, suggesting the ship is situated within a valley or canyon.",
         "uniqueIdentifiers": [
-          "Alien spaceship, half-buried",
-          "Rusty, pitted metallic hull",
-          "Desert canyon environment"
+          "Massive, rusty, half-buried alien spaceship",
+          "Arid desert landscape with rocky formations",
+          "Visible external hull plating and modular sections"
         ],
-        "materials_primary": "metal",
-        "materials_secondary": "sand",
-        "materials_accents": "rock",
-        "colors_dominant": "orange (spaceship hull, sand, rocks)",
-        "colors_secondary": "brown (corrosion on spaceship, rocks)",
-        "colors_accents": "dark (interior of spaceship)",
-        "colors_ambient": "warm yellow-orange",
+        "materials_primary": "Metal (ship hull)",
+        "materials_secondary": "Sand, rock (terrain)",
+        "materials_accents": "None visible",
+        "colors_dominant": "Rust-orange (ship hull, terrain)",
+        "colors_secondary": "Beige, tan (sand, sky)",
+        "colors_accents": "Darker metallic hues (ship details)",
+        "colors_ambient": "Warm, dusty yellow",
         "navigableElements": [
           {
-            "type": "door",
-            "position": "left side, midground",
-            "description": "Large, dark, circular entrance into the spaceship"
+            "type": "passage",
+            "position": "lower section of hull, midground",
+            "description": "A dark, yawning opening into the ship's buried lower hull"
           },
           {
-            "type": "stairs",
-            "position": "left side, midground",
-            "description": "Stone steps leading up to the spaceship's entrance"
+            "type": "door",
+            "position": "mid-section of hull, midground",
+            "description": "A large, weathered hatch integrated into the ship's flank"
+          },
+          {
+            "type": "window",
+            "position": "forward section of hull, midground",
+            "description": "Dark, slit-like openings suggesting former viewports or sensor arrays"
           }
         ],
-        "searchDesc": "[Location - Exterior] Rusty alien spaceship half-buried in desert. Has: door (left, midground), stairs (left, midground)",
+        "searchDesc": "[Location - Exterior] Rusty alien spaceship half-buried in sand. Has: passage (lower hull, midground), door (mid-section, midground), window (forward hull, midground)",
         "dna": {
-          "architectural_tone": "degraded alien vessel",
-          "cultural_tone": "A testament to a lost alien journey, now a silent, rusting monument partially consumed by the desert.",
-          "materials_base": "Heavily corroded alien alloys, sand-blasted hull plating, and exposed, aged internal components.",
-          "mood_baseline": "abandoned, derelict, alien",
-          "palette_bias": "Intensified rusty oranges and deep browns from advanced corrosion, contrasted with the pervasive desert sand hues.",
-          "soundscape_base": "The low groan of stressed metal, the soft hiss of sand settling, and an oppressive silence broken only by the wind.",
-          "flora_base": "None, or possibly invasive, mutated desert growth clinging to exposed metal.",
-          "fauna_base": "Small, resilient desert creatures finding shelter within its decaying structure."
+          "architectural_tone": "monumental derelict vessel",
+          "cultural_tone": "An alien monument to a long-vanished civilization, now a husk slowly being reclaimed by the desert.",
+          "materials_base": "Heavily corroded, alien alloys and metals, partially obscured by adhering desert sands and mineral deposits.",
+          "mood_baseline": "melancholy, monumental, decaying",
+          "palette_bias": "Intense rust oranges and coppers, with sandy beiges and dull metallic greys.",
+          "soundscape_base": "Creaking metal under thermal stress, the hiss of wind-blown sand against its hull, occasional internal groans.",
+          "flora_base": "None",
+          "fauna_base": "None"
         },
-        "slug": "the-crimson-comet"
+        "slug": "the-rusting-leviathan"
       },
-      "imagePath": "https://v3b.fal.media/files/b/koala/3kDvmWpeFivoFKw0twYQv.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/lion/ccfPM_icGI0mgBxgHf_HX.jpg",
       "focus": {
-        "node_id": "The Crimson Comet",
+        "node_id": "The Rusting Leviathan",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "niche-1763377044002-korao3ohd": {
-      "id": "niche-1763377044002-korao3ohd",
-      "type": "niche",
-      "name": "interior of The Crimson Comet",
+    "loc-1763383658536-w0xsrsulf": {
+      "id": "loc-1763383658536-w0xsrsulf",
+      "type": "host",
+      "name": "The Gloaming Realm",
       "dna": {
-        "looks": "The interior of a colossal, ovular alien spaceship, characterized by massive, curved bulkheads and a soaring vaulted ceiling. Prominent structural ribs and shadowed passages emphasize the immense scale and depth of the derelict vessel.",
-        "colorsAndLighting": "A dominant palette of intensified rusty oranges and deep browns from advanced corrosion is illuminated by a warm yellow-orange ambient light, creating atmospheric depth and spectral shadows.",
-        "atmosphere": "The air is thick with ancient dust motes and faint wisps of condensation, suggesting a long period of abandonment. A profound sense of silence and decay permeates the vast, enclosed space, hinting at a lost alien journey.",
-        "architectural_tone": "degraded alien vessel",
-        "cultural_tone": "A testament to a lost alien journey, now a silent, rusting monument partially consumed by the desert.",
-        "materials": "The primary surfaces are heavily corroded alien alloys with a pitted, sand-blasted finish. Secondary surfaces include aged internal components and rough sand drifts. The materials convey extreme age and decay.",
-        "mood": "Evokes feelings of awe, desolation, and profound mystery, underscoring the monumental scale of the abandoned alien craft.",
-        "sounds": "silence, distant hum, faint creaking, wind whispers",
-        "dominantElementsDescriptors": "colossal ovular ceiling, massive corroded bulkheads, towering structural ribs",
-        "spatialLayout": "The interior is a vast, ovular enclosure with a highly vaulted ceiling, stretching immense distances to the sides and into deep, shadowed passages. Entry points are implied but not explicitly shown, focusing on the central expanse.",
-        "primary_surfaces": "corroded alien alloy, pitted hull plating, sand",
-        "secondary_surfaces": "dormant alien conduits, metal grates, aged internal components",
-        "accent_features": "faint pulsing amber lights, descending ramp in distance, dark apertures",
-        "dominant": "rusty orange (80%)",
-        "secondary": "deep brown (15%)",
-        "accent": "amber (5%)",
-        "ambient": "warm",
-        "uniqueIdentifiers": "colossal ovular alien spaceship interior, degraded alien technology, vast scale, monumental architecture",
-        "searchDesc": "Colossal ovular alien spaceship interior, heavily corroded with immense scale and vaulted ceiling."
+        "type": "host",
+        "name": "The Gloaming Realm",
+        "description": "A realm where twilight perpetually reigns and spectral energies are commonplace.",
+        "dna": {
+          "genre": "gothic horror",
+          "architectural_tone": "imposing historical structures",
+          "cultural_tone": "a realm steeped in ancient, lingering sorrows and spectral remnants, where the veil between life and death is thin.",
+          "materials_base": "aged stone, dark hardwoods, iron, and ethereal spectral energies, suggesting durability and decay.",
+          "mood_baseline": "melancholy, eerie, foreboding",
+          "palette_bias": "deep, desaturated blues, muted grays, and occasional melancholic purples, with an emphasis on shadow and low light.",
+          "soundscape_base": "whispers of the past, distant mournful cries, the rustling of unseen things, and an pervasive, unnatural stillness.",
+          "flora_base": "sparse, gnarled, and skeletal trees, tenacious mosses, and fungi adapted to perpetual twilight and dampness.",
+          "fauna_base": "spectral entities, shadowy creatures, nocturnal scavengers, and bioluminescent insects."
+        },
+        "slug": "the-gloaming-realm"
       },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/DaGOzWBYl6y6uGKcROaoE.jpg",
+      "imagePath": "",
       "focus": {
-        "node_id": "niche-1763377044002-korao3ohd",
+        "node_id": "The Gloaming Realm",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "02e63c9f-06b6-413f-97a6-8848f4ebf7f3": {
+      "id": "02e63c9f-06b6-413f-97a6-8848f4ebf7f3",
+      "type": "region",
+      "name": "Shadowfen Moors",
+      "dna": {
+        "type": "region",
+        "name": "Shadowfen Moors",
+        "description": "A desolate expanse of mist-shrouded bogs and ancient, gnarled trees.",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": "bog iron, petrified wood, mired stone, and dense, damp vegetation.",
+          "mood_baseline": "oppressive, isolating, damp",
+          "palette_bias": "deep teals, swampy greens, muddy browns, and charcoal grays, with a pervasive blueish tint.",
+          "soundscape_base": "slowly dripping water, croaking of unseen amphibians, the mournful calls of marsh birds, and the sucking sound of mire.",
+          "flora_base": "ancient, gnarled trees with drooping branches, thick mosses, reeds, and spectral glowing fungi.",
+          "fauna_base": "swamp dwelling insects, spectral marsh wisps, and large, slow-moving amphibians."
+        },
+        "slug": "shadowfen-moors"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Shadowfen Moors",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "084351f7-b783-4892-a65f-8cf27793059d": {
+      "id": "084351f7-b783-4892-a65f-8cf27793059d",
+      "type": "location",
+      "name": "The Ethereal Manor",
+      "dna": {
+        "type": "location",
+        "name": "The Ethereal Manor",
+        "description": "A once grand, now decaying manor house rumored to be a haunt for restless spirits.",
+        "looks": "A substantial, multi-story gothic manor house stands as the central structure, featuring a prominent rounded tower on the left and a steep, gabled roof. The stonework appears aged and textured, with numerous windows, some of which are illuminated from within. A covered porch with railing extends across the front facade, leading to a central entrance. Bare, skeletal trees with intricate branches frame the structure on either side, their dark forms stark against the dim sky. A stone pathway, glistening with moisture, leads directly to the manor's entrance.",
+        "atmosphere": "A pervasive mist or fog hangs low to the ground, obscuring the distance and softening the edges of the landscape. The air appears still and heavy, contributing to a sense of isolation and quietude. The overall visual impression is one of dampness and an oppressive, unmoving atmosphere.",
+        "mood": "Foreboding, spectral",
+        "lighting": "The primary light source is a warm, orange glow emanating from the entrance and a few upper windows of the manor, creating pools of illumination on the pathway. The ambient light is a cool, deep blue, characteristic of twilight or a moonless night, with low contrast overall. The illuminated windows offer a stark contrast to the dark exterior.",
+        "dominantElements": [
+          "Ethereal Manor house (approx. 30m wide, 25m tall, CUBIC STRUCTURE) with rounded tower",
+          "Stone pathway (approx. 5m wide) leading to manor",
+          "Bare, gnarled trees framing the scene (variable height)"
+        ],
+        "spatialLayout": "The foreground consists of a wet, stone pathway leading towards the imposing manor house in the midground. The manor, estimated to be around 25 meters tall and 30 meters wide, dominates the central space. In the background, dense, dark trees fade into the misty expanse, suggesting a deeper forest beyond the immediate clearing.",
+        "uniqueIdentifiers": [
+          "Rounded gothic tower on manor",
+          "Glistening, illuminated stone pathway",
+          "Silhouetted, bare trees against dark sky"
+        ],
+        "materials_primary": "Stone (manor walls, pathway)",
+        "materials_secondary": "Wood (porch railings, window frames, roof shingles)",
+        "materials_accents": "Warm light (windows, entrance lamp)",
+        "colors_dominant": "Deep blue (sky, shadows)",
+        "colors_secondary": "Gray (stone, tree branches)",
+        "colors_accents": "Orange/Yellow (window light, entrance lamp)",
+        "colors_ambient": "Deep teal blue",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, foreground",
+            "description": "Stone pathway leading directly to the main entrance"
+          },
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Warmly lit red door centrally positioned on the manor facade"
+          },
+          {
+            "type": "window",
+            "position": "various, midground",
+            "description": "Several windows glowing with internal light"
+          },
+          {
+            "type": "archway",
+            "position": "front porch, midground",
+            "description": "Covered porch extending as an archway around the entrance"
+          }
+        ],
+        "searchDesc": "Gothic manor at night. Has: stone pathway (center, foreground), red door (center, midground), glowing windows (various, midground)",
+        "dna": {
+          "architectural_tone": "decaying gothic grandeur",
+          "cultural_tone": "a former seat of influence now a spectral sanctuary, echoing with past tragedies and lingering presences.",
+          "materials_base": "weathered stone blocks, dark, warped timber, leaded glass windows, and the occasional spectral manifestation.",
+          "mood_baseline": "haunted, decaying, forlorn",
+          "palette_bias": "dominantly deep blues and grays, accented by warm, ethereal orange light from within and the stark black of skeletal trees.",
+          "soundscape_base": "creaking timbers, distant echoes of footsteps, faint, disembodied voices, and the whistling of wind through broken panes.",
+          "flora_base": "skeletal, bare trees framing the structure, hardy, dark mosses clinging to stone.",
+          "fauna_base": "none explicitly visible, but a palpable sense of spectral presence."
+        },
+        "slug": "the-ethereal-manor"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/GqOwzNUNSZg-0w1rZRCgG.jpg",
+      "focus": {
+        "node_id": "The Ethereal Manor",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763384857751-9yp65beaw": {
+      "id": "niche-1763384857751-9yp65beaw",
+      "type": "niche",
+      "name": "interior of The Rusting Leviathan",
+      "dna": {
+        "looks": "A colossal, cylindrical starship interior with immense, curved bulkheads soaring overhead. Corroded alloys and thick, rusted piping form a complex, vaulted ceiling. Irregularly shaped, pitted metallic plates compose the walls, interspersed with hexagonal panels and dormant alien consoles.",
+        "colorsAndLighting": "Dominant colors are muted earth tones of rust and decay, with occasional sickly green glows from dormant consoles. Faint ambient light filters from unseen cracks, supplemented by flickering emergency lights.",
+        "atmosphere": "The air is thick with a perpetual, dusty haze, carrying the scent of ancient decay. A heavy, melancholic stillness pervades, broken only by the faint hum of dormant machinery. The atmosphere feels monumental and somber.",
+        "architectural_tone": "monumental derelict vessel",
+        "cultural_tone": "An alien monument to a long-vanished civilization, now a husk slowly being reclaimed by the desert.",
+        "materials": "The primary materials are heavily corroded, ancient alien alloys and rusted metals, showing millennia of decay. The floor is a mix of rust, sand, and shattered debris, creating a hazardous texture.",
+        "mood": "Melancholy and monumental decay permeate the space, evoking a sense of awe and loss for a bygone era.",
+        "sounds": "Distant hum, creaking metal, faint electrical crackle, settling dust, echoing silence.",
+        "dominantElementsDescriptors": "curved bulkheads, vaulted ceiling, arched passageway, rusted piping",
+        "spatialLayout": "A vast, cylindrical space with a soaring 40-meter high vaulted ceiling. Walls stretch 25 meters wide, leading to a grand 15-meter wide arched passageway receding into deep shadow. Smaller, dark doorways are visible on the walls.",
+        "primary_surfaces": "Corroded metallic bulkheads, rusted floor, thick vaulted ceiling.",
+        "secondary_surfaces": "Hexagonal access panels, dormant alien consoles, shattered debris, sand.",
+        "accent_features": "Flickering emergency lights, glowing dormant alien consoles, grand arched passageway.",
+        "dominant": "Brown (rust, decay, sand)",
+        "secondary": "Grey (corroded metal)",
+        "accent": "Sickly green (dormant consoles)",
+        "ambient": "neutral",
+        "uniqueIdentifiers": "colossal ancient alien starship interior, vaulted corroded ceiling, grand shadowed passageway",
+        "searchDesc": "Alien starship interior, monumental derelict vessel with vaulted ceiling and shadowed passageway."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/3Aky0vzKTzfFWtGjsLf9e.jpg",
+      "focus": {
+        "node_id": "niche-1763384857751-9yp65beaw",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "niche-1763384885600-6kdbr9pvh": {
+      "id": "niche-1763384885600-6kdbr9pvh",
+      "type": "niche",
+      "name": "interior of The Ethereal Manor",
+      "dna": {
+        "looks": "A grand, decaying foyer with massive, weathered stone walls and a steeply pitched angled ceiling. Dominant rectangular forms define the space, with a large archway leading to further dimly lit halls. Faded tapestries and spectral orange light add to the desolation.",
+        "colorsAndLighting": "Deep blues and grays dominate, reflecting a dim sky. Faint, ethereal orange light filters through leaded glass windows, casting long, spectral shadows.",
+        "atmosphere": "The air is thick with a forlorn, haunted atmosphere, heavy and damp. A palpable sense of depth suggests the foyer extends further, echoing with spectral presences and past tragedies.",
+        "architectural_tone": "decaying gothic grandeur",
+        "cultural_tone": "A former seat of influence now a spectral sanctuary, echoing with past tragedies and lingering presences.",
+        "materials": "Massive, weathered stone blocks form the walls, damp flagstone covers the floor, and a grand staircase is crafted from dark, warped timber. Faded tapestries hang limply, their colors muted by decay.",
+        "mood": "A profound sense of desolation and haunting melancholy pervades the space, evoking feelings of loss and spectral unease.",
+        "sounds": "faint echoes, spectral whispers, creaking wood",
+        "dominantElementsDescriptors": "Massive stone walls, steeply pitched angled ceiling, grand archway, sweeping timber staircase",
+        "spatialLayout": "A rectangular foyer with a soaring angled ceiling, estimated 15-20 meters high, suggesting a 25-meter building height. A grand archway approximately 8 meters high and 6 meters wide serves as a focal point, leading into further depths.",
+        "primary_surfaces": "weathered stone (walls), damp flagstone (floor), thick continuous wood/metal/stone (ceiling)",
+        "secondary_surfaces": "dark warped timber (staircase)",
+        "accent_features": "intricately carved skeletal motifs on staircase railing, faded tapestries",
+        "dominant": "Blue (walls, atmosphere)",
+        "secondary": "Gray (walls, atmosphere)",
+        "accent": "Ethereal orange (window light, shadows)",
+        "ambient": "cool",
+        "uniqueIdentifiers": "Massive weathered stone blocks, ethereal orange light, skeletal staircase motifs, fully enclosed angled ceiling",
+        "searchDesc": "Grand decaying gothic foyer with massive stone walls, angled ceiling, and spectral orange light."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/TxAwDFb1hoxc4pAQ60lQi.jpg",
+      "focus": {
+        "node_id": "niche-1763384885600-6kdbr9pvh",
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
@@ -157,19 +325,42 @@
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1763376240726-qg9lb34jh",
+      "id": "loc-1763383500556-yi5z183jh",
       "type": "host",
       "children": [
         {
-          "id": "8f47a078-36d4-4d16-a4d1-309f8ed2ef76",
+          "id": "045f8266-652e-4121-b131-301a78d7ca89",
           "type": "region",
           "children": [
             {
-              "id": "5f66869d-7e94-4c29-a1a1-e2fd2c56e8eb",
+              "id": "9ccf63e0-dd9a-4942-81d0-75d9d51dcd65",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763377044002-korao3ohd",
+                  "id": "niche-1763384857751-9yp65beaw",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763383658536-w0xsrsulf",
+      "type": "host",
+      "children": [
+        {
+          "id": "02e63c9f-06b6-413f-97a6-8848f4ebf7f3",
+          "type": "region",
+          "children": [
+            {
+              "id": "084351f7-b783-4892-a65f-8cf27793059d",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763384885600-6kdbr9pvh",
                   "type": "niche",
                   "children": []
                 }
@@ -181,6 +372,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763376240726-qg9lb34jh"
+    "loc-1763383500556-yi5z183jh",
+    "loc-1763383658536-w0xsrsulf"
   ]
 }

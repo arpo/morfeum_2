@@ -7,7 +7,7 @@
 
 import type { HierarchyNode } from '../../../hierarchyAnalysis/types';
 import { generalPromptFix } from '../shared/generalPromptFix';
-import { OVERVIEW_SHOT, EXTERIOR_SHOT, INTERIOR_SHOT, ALIGNMENT } from '../shared/cameraConfig';
+import { OVERVIEW_SHOT, LOCATION_SHOT, NICHE_SHOT_INTERIOR, ALIGNMENT } from '../shared/cameraConfig';
 
 /**
  * Shot instructions based on node type
@@ -19,10 +19,10 @@ function getLocationShotInstructions(nodeType: string) {
     return OVERVIEW_SHOT;
   } else if (nodeType === 'location' || nodeType === 'region') {
     // Exterior ground-level for locations
-    return EXTERIOR_SHOT;
+    return LOCATION_SHOT;
   } else {
     // Interior shots for niches
-    return INTERIOR_SHOT;
+    return NICHE_SHOT_INTERIOR;
   }
 }
 
