@@ -11,6 +11,7 @@
 import { qualityPrompt } from '../shared';
 import { OVERVIEW_SHOT, EXTERIOR_SHOT, INTERIOR_SHOT } from '../shared/cameraConfig';
 import type { HierarchyNode, NodeDNA } from '../../../hierarchyAnalysis/types';
+import { generalRules } from '../shared/constants';
 
 /**
  * Overview shot instructions (Host/Region)
@@ -65,7 +66,7 @@ ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
 
 [WORLD RULES:] water calm and mirror-still
 
-IMPORTANT: no humans or animals unless specified
+${generalRules}
 ${qualityPrompt}
 `;
 }
@@ -90,7 +91,7 @@ ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
 
 ${description}
 
-[WORLD RULES:] no humans or animals unless specified; water calm and mirror-still
+${generalRules}
 
 ${qualityPrompt}
 `;

@@ -10,8 +10,6 @@ export function generalPromptFix(prompt: string): string {
     
     ${qualityPrompt}
 
-    ${fluxRoofFix}
-
     `;
     return fix
 }

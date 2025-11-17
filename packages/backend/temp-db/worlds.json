@@ -2232,154 +2232,6 @@
         "distance": "close"
       }
     },
-    "loc-1763130154220-lm8p7jzkf": {
-      "id": "loc-1763130154220-lm8p7jzkf",
-      "type": "host",
-      "name": "Arrakis",
-      "dna": {
-        "type": "host",
-        "name": "Arrakis",
-        "description": "A vast desert planet under twin suns, known for its unforgiving climate and scarce resources.",
-        "dna": {
-          "genre": "sci-fi",
-          "architectural_tone": "utilitarian metallic structures",
-          "cultural_tone": "Harsh survival and resource scarcity define all life. Functionality and resilience are paramount.",
-          "materials_base": "Predominantly industrial metals, often weathered or showing signs of wear. Natural elements like rock and sand are integrated due to scarcity.",
-          "mood_baseline": "Desolate, resilient, utilitarian",
-          "palette_bias": "Dominated by earthy tones and muted metallics. Warm hues often come from the twin suns, casting long shadows.",
-          "soundscape_base": "A constant hum of environmental machinery, punctuated by the harsh sounds of wind and sand.",
-          "flora_base": "Extremely sparse, hardy desert vegetation adapted to arid conditions and minimal water.",
-          "fauna_base": "Tough, adapted creatures that can survive extreme temperatures and scarcity, often with exoskeletons or specialized adaptations."
-        },
-        "slug": "arrakis"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Arrakis",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "7fab5b7f-50d4-427a-a889-4c932a16e66b": {
-      "id": "7fab5b7f-50d4-427a-a889-4c932a16e66b",
-      "type": "region",
-      "name": "Arrakis",
-      "dna": {
-        "type": "region",
-        "name": "Arrakis",
-        "description": "",
-        "dna": {
-          "architectural_tone": "sun-scorched ruins, weathered structures",
-          "cultural_tone": null,
-          "materials_base": "rusting metal hulls, eroded rock formations, pervasive sand",
-          "mood_baseline": "isolated, decaying, enduring",
-          "palette_bias": "rich ochre sands, deep rust tones, muted greys of aged metal",
-          "soundscape_base": "whispering winds, the crunch of sand, distant groans of metal",
-          "flora_base": "xerophytic plants clinging to life, hardy desert scrub",
-          "fauna_base": "wind-scoured desert insects, scavengers adapted to harsh conditions"
-        },
-        "slug": "arrakis"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Arrakis",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "29217127-f72b-4af5-bba1-9758d65d501b": {
-      "id": "29217127-f72b-4af5-bba1-9758d65d501b",
-      "type": "location",
-      "name": "The Rusting Husk",
-      "dna": {
-        "type": "location",
-        "name": "The Rusting Husk",
-        "description": "A derelict and abandoned starship, its metallic hull pitted and corroded by eons of exposure.",
-        "looks": "A colossal, cylindrical structure, partially submerged in sandy terrain, presents a gaping, dark maw leading into its interior. Its outer shell is heavily corroded, showing signs of immense age and exposure. The metallic plating is textured with rust and debris, and the overall form suggests a large, derelict vessel or a vast tunnel entrance. Rocky, eroded cliffs rise steeply on either side, framing the entrance and emphasizing its scale.",
-        "atmosphere": "Fine dust particles are visible suspended in the air, stirred by unseen movements. The air appears dry and perhaps hazy, contributing to a sense of desolation. A profound silence seems to pervade the scene, amplifying the isolation.",
-        "mood": "Desolate, forgotten, melancholic",
-        "lighting": "The scene is illuminated by a warm, bright light, likely from a sun. The light casts distinct shadows, particularly within the structure's entrance, creating a high contrast between illuminated areas and the deep darkness within. The metallic surfaces reflect the warm light.",
-        "dominantElements": [
-          "Cylindrical entrance structure (est. 40-60m diameter, HORIZONTAL STRUCTURE)",
-          "Eroded rocky cliffs (varying heights, background/sides)",
-          "Sandy ground with scattered rocks (foreground)"
-        ],
-        "spatialLayout": "The foreground consists of a dirt path leading towards the main subject. The midground is dominated by the immense, rusty cylindrical structure, appearing half-buried in the sand and flanked by steep, reddish-brown cliffs. The background is characterized by the continuing eroded landscape and a bright, possibly hazy sky.",
-        "uniqueIdentifiers": [
-          "Half-buried, colossal rusty cylinder",
-          "Deep, dark, circular entrance",
-          "Eroded desert canyon setting"
-        ],
-        "materials_primary": "Metal (corroded, rusty)",
-        "materials_secondary": "Sand, Rock (eroded)",
-        "materials_accents": "Reflective rust patches, dust particles",
-        "colors_dominant": "Orange (sand, cliffs, rust)",
-        "colors_secondary": "Brown (rock, rust), Grey (metal plating)",
-        "colors_accents": "Bright highlights on metal, dark interior",
-        "colors_ambient": "Warm, dusty orange",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, midground",
-            "description": "Dark, circular passage into the rusty structure"
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Rusty derelict in a desert canyon. Has: passage (center, midground)",
-        "dna": {
-          "architectural_tone": "colossal derelict vessel fragment",
-          "cultural_tone": null,
-          "materials_base": "heavily corroded, pitted metal plating, embedded debris",
-          "mood_baseline": "abandoned, silent, ancient",
-          "palette_bias": "warm dusty oranges, rusty browns, weathered grey-browns",
-          "soundscape_base": "eerie silence, faint metallic creaks, dust stirred by unseen currents",
-          "flora_base": null,
-          "fauna_base": null
-        },
-        "slug": "the-rusting-husk"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/zebra/6yaEcsN3pLrwkqpn-48Kn.jpg",
-      "focus": {
-        "node_id": "The Rusting Husk",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "niche-1763140105571-jv7mzo8v2": {
-      "id": "niche-1763140105571-jv7mzo8v2",
-      "type": "niche",
-      "name": "interior of The Rusting Husk",
-      "dna": {
-        "looks": "A vast, cylindrical interior passage stretches into deep darkness, characterized by immense, curved walls of corroded metal. Colossal structural ribs arc overhead, disappearing into shadow. Navigational elements like a maintenance conduit and broken railing are visible.",
-        "colorsAndLighting": "The scene is dominated by warm, rusty browns and weathered greys, punctuated by flickering amber and red emergency lights. A low-key, ambient orange light creates a dusty, atmospheric glow.",
-        "atmosphere": "The air is heavy with ancient dust and the faint scent of decay. A profound silence pervades, occasionally broken by the almost imperceptible hum of dying machinery. The atmosphere feels abandoned and forgotten, imbued with a sense of immense scale.",
-        "architectural_tone": "colossal derelict vessel",
-        "cultural_tone": "Harsh survival and resource scarcity define all life. Functionality and resilience are paramount.",
-        "materials": "Heavily corroded and pitted metal plating forms the primary surfaces, coated in thick dust and rust streaks. Grime and oil stains are present, along with embedded debris.",
-        "mood": "Evokes a sense of awe at its colossal scale, tinged with the melancholy of abandonment and the harsh reality of a survivalist environment.",
-        "sounds": "Silence, faint machinery hum, distant drips",
-        "dominantElementsDescriptors": "Curved metal walls, colossal structural ribs, deep cylindrical passage",
-        "spatialLayout": "A wide, cylindrical tunnel extending approximately 60 meters into darkness, with a ceiling height of around 40 meters. The view is from 1-2 meters inside the entrance, looking straight ahead.",
-        "primary_surfaces": "corroded metal plating, dust, rust",
-        "secondary_surfaces": "exposed wiring bundles, grime, oil streaks",
-        "accent_features": "flickering emergency lights, maintenance conduit, broken railing",
-        "dominant": "rust brown (70%)",
-        "secondary": "weathered grey (20%)",
-        "accent": "amber and red (10%)",
-        "ambient": "warm",
-        "uniqueIdentifiers": "colossal cylindrical derelict, rusting metal, deep atmospheric darkness, functional industrial sci-fi",
-        "searchDesc": "Derelict starship interior: vast cylindrical passage, rusted metal, deep darkness, flickering lights."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/koala/WfQvnCg5Co_vHBaN_ZfjT.jpg",
-      "focus": {
-        "node_id": "niche-1763140105571-jv7mzo8v2",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
     "loc-1763145372574-g92gk04oy": {
       "id": "loc-1763145372574-g92gk04oy",
       "type": "host",
@@ -2534,183 +2386,6 @@
       "imagePath": "https://v3b.fal.media/files/b/elephant/F_TYe4E-y0B2SIMfee690.jpg",
       "focus": {
         "node_id": "niche-1763145432349-bmwy4k5kf",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      }
-    },
-    "loc-1763145779586-wamfdkd7l": {
-      "id": "loc-1763145779586-wamfdkd7l",
-      "type": "host",
-      "name": "The Verdant Expanse",
-      "dna": {
-        "type": "host",
-        "name": "The Verdant Expanse",
-        "description": "A vast and ancient rainforest teeming with life and mystical energies.",
-        "dna": {
-          "genre": "fantasy",
-          "architectural_tone": "organic integration with nature, monumental",
-          "cultural_tone": "A civilization deeply connected to natural cycles and spiritual reverence for elemental forces, particularly water and growth.",
-          "materials_base": "Ancient, living earth structures, rich mineral deposits, and naturally occurring luminous elements. A sense of time and deep natural formation.",
-          "mood_baseline": "mystical, tranquil, awe-inspiring",
-          "palette_bias": "Earthy greens, deep mossy tones, rich browns, and subtle, ethereal luminescence. A palette that evokes dense, vibrant life and hidden light.",
-          "soundscape_base": "The pervasive sound of flowing water, gentle breezes through dense foliage, and distant, resonant natural hums. A symphony of natural tranquility.",
-          "flora_base": "Massive, ancient trees with intricate root systems, luminous mosses, oversized ferns, and plants that exhibit unusual bioluminescent properties.",
-          "fauna_base": "Creatures adapted to dense, humid environments, often exhibiting symbiotic relationships with flora or possessing subtle, magical attributes. Think unseen movements and soft calls."
-        },
-        "slug": "the-verdant-expanse"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "The Verdant Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "3f97d663-a4b2-4ab8-9397-4f669a8e9343": {
-      "id": "3f97d663-a4b2-4ab8-9397-4f669a8e9343",
-      "type": "region",
-      "name": "Canopy Heights",
-      "dna": {
-        "type": "region",
-        "name": "Canopy Heights",
-        "description": "The upper, sun-drenched layers of the rainforest, where life thrives amongst the towering trees.",
-        "dna": {
-          "architectural_tone": "structures woven into living trees, elevated pathways",
-          "cultural_tone": "Guardians and caretakers of the upper rainforest, focused on harvesting celestial energies and maintaining the balance of the canopy.",
-          "materials_base": "Polished woods, woven vines, naturally occurring crystalline formations, and smooth, water-worn stones. A blend of living structures and refined natural elements.",
-          "mood_baseline": "serene, elevated, vibrant",
-          "palette_bias": "Bright greens, sun-drenched yellows, sky blues, and pearlescent highlights. A palette that captures the sunlit upper reaches.",
-          "soundscape_base": "Rustling leaves, bird calls, the distant sound of waterfalls, and the gentle hum of energy transfer.",
-          "flora_base": "Vibrant epiphytes, blooming aerial plants, and trees with broad, sun-catching leaves. Air plants and hanging gardens are common.",
-          "fauna_base": "Arboreal creatures, large insects with iridescent wings, and birds with vibrant plumage. Small, agile, and often seen flitting through the leaves."
-        },
-        "slug": "canopy-heights"
-      },
-      "imagePath": "",
-      "focus": {
-        "node_id": "Canopy Heights",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "a7033625-e558-4c02-9dea-7793a8bd0cd9": {
-      "id": "a7033625-e558-4c02-9dea-7793a8bd0cd9",
-      "type": "location",
-      "name": "The Lumina Sanctuary",
-      "dna": {
-        "type": "location",
-        "name": "The Lumina Sanctuary",
-        "description": "A sacred clearing within the rainforest canopy, dedicated to the collection and transformation of celestial rain.",
-        "looks": "Massive, moss-covered earth structures form a central cavern entrance, flanked by colossal, ancient trees. Polished golden hands, appearing to grow from the earth and trees, are prominently displayed. The ground features shallow water with scattered rocks and lush green foliage. The overall scale suggests a place of significant natural and mystical importance.",
-        "atmosphere": "The air appears thick with moisture, with visible water droplets or mist falling. A pervasive humidity suggests a lush, tropical environment. The atmosphere is calm, with a faint, ethereal shimmer.",
-        "mood": "Serene, awe-inspiring, mystical",
-        "lighting": "Warm, golden light emanates from the central arched doorway, creating strong contrast with the shadowed surrounding jungle. Smaller, glowing golden hands scatter soft, warm light across the mossy ground.",
-        "dominantElements": [
-          "Central cavern entrance with arched doorway (approx. 20m tall, WIDE STRUCTURE)",
-          "Giant golden hands emerging from mounds (approx. 10m tall)",
-          "Colossal ancient trees forming the perimeter"
-        ],
-        "spatialLayout": "The foreground consists of a shallow, reflective water body with scattered rocks and dense green foliage. The midground is dominated by the central, cave-like entrance carved into a large, rounded mound covered in moss. Two massive golden hands are positioned on either side of the central entrance at mid-height, with two smaller golden hands flanking the foreground on mossy outcrops. The background is obscured by dense, dark green jungle foliage and the upper parts of the colossal trees.",
-        "uniqueIdentifiers": [
-          "Giant golden hands emerging from organic mounds",
-          "Central, luminous arched doorway within a moss-covered structure",
-          "Water feature with reflective surface in the foreground"
-        ],
-        "materials_primary": "Moss, earth, rock",
-        "materials_secondary": "Water, dense foliage",
-        "materials_accents": "Polished gold, glowing mist/light",
-        "colors_dominant": "Deep greens from foliage and moss",
-        "colors_secondary": "Browns and grays from earth and rocks",
-        "colors_accents": "Vibrant gold from the hands and the central light",
-        "colors_ambient": "Muted greens and browns, illuminated by warm golden light",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, midground",
-            "description": "Large, luminous arched doorway leading into a brightly lit interior space"
-          },
-          {
-            "type": "mysterious_object",
-            "position": "left foreground, midground",
-            "description": "Glowing golden hand resting on a mossy outcrop"
-          },
-          {
-            "type": "mysterious_object",
-            "position": "right foreground, midground",
-            "description": "Glowing golden hand resting on a mossy outcrop"
-          },
-          {
-            "type": "mysterious_object",
-            "position": "left midground, background",
-            "description": "Giant golden hand emerging from a moss-covered mound"
-          },
-          {
-            "type": "mysterious_object",
-            "position": "right midground, background",
-            "description": "Giant golden hand emerging from a moss-covered mound"
-          }
-        ],
-        "searchDesc": "[Location - Exterior] Sacred rainforest sanctuary with golden hands. Has: passage (center, midground), mysterious_object (left foreground, midground), mysterious_object (right foreground, midground)",
-        "dna": {
-          "architectural_tone": "Monumental, earth-integrated forms with celestial-aligned features",
-          "cultural_tone": "A sacred site for rain collection and ritualistic transformation, revered for its connection to celestial bounty.",
-          "materials_base": "Moss-covered earth, ancient stone formations, and polished, luminous metals. The emphasis is on natural sculpting and infused elements.",
-          "mood_baseline": "sacred, transformative, ethereal",
-          "palette_bias": "Deep emerald greens, earthy browns, stone grays, and intense, warm golden light with a subtle, misty shimmer.",
-          "soundscape_base": "The gentle, consistent sound of falling water, soft mist, and a low, resonant hum of gathered energy.",
-          "flora_base": "Dense mosses, ancient ferns, and large, resilient foliage adapted to humid, shadowed areas surrounding water features.",
-          "fauna_base": "None explicitly present, focus is on the sanctuary's purpose."
-        },
-        "slug": "the-lumina-sanctuary"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/monkey/0jtl-b9j1yRIFo5DUDQjJ.jpg",
-      "focus": {
-        "node_id": "The Lumina Sanctuary",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      }
-    },
-    "niche-1763145814082-8zvqa1jlk": {
-      "id": "niche-1763145814082-8zvqa1jlk",
-      "type": "niche",
-      "name": "interior of The Lumina Sanctuary",
-      "dna": {
-        "looks": "A colossal, dimly lit cavern interior with organically sculpted earth and petrified wood walls. A wide passage extends into a misty, golden-lit distance, guarded by massive golden hands. Vaulted ceilings soar overhead, lost in shadow.",
-        "colorsAndLighting": "Dominant earthy browns and deep greens are illuminated by a soft, diffused golden light that originates from the background, creating a warm, ethereal glow. Flecks of luminescence add depth.",
-        "atmosphere": "The air is thick with a soft, golden mist, feeling sacred, ancient, and awe-inspiring. Subtle movement comes from luminous motes. A sense of immense depth and transformative energy permeates the space.",
-        "architectural_tone": "Monumental Earth-Integrated",
-        "cultural_tone": "Sacred site for transformation and celestial bounty rituals.",
-        "materials": "The primary materials are moss-covered earth and ancient stone, with a rough, textured finish. Polished gold accents gleam softly. Ambient mist adds a soft, damp texture.",
-        "mood": "Ethereal and sacred, evoking awe and a sense of profound mystery and transformation.",
-        "sounds": "Distant dripping, soft ethereal hum, gentle wind.",
-        "dominantElementsDescriptors": [
-          "Colossal Earth Walls",
-          "Golden Hands",
-          "Extending Passage",
-          "Vaulted Ceiling"
-        ],
-        "spatialLayout": "A vast, cavernous space with a primary passage extending 50 meters deep. The scale is colossal, with implied heights of at least 40 meters. Navigation includes a main passage, a side opening, and steps.",
-        "primary_surfaces": "Moss-covered earth walls, dark earth and stone floor, implied vaulted earth ceiling.",
-        "secondary_surfaces": "Polished gold hands, low-lying moss patches.",
-        "accent_features": "Colossal golden hands, small inset glowing golden hand motifs, luminous dust motes.",
-        "dominant": "Earthy Browns (Walls, Floor)",
-        "secondary": "Deep Greens (Moss on Walls)",
-        "accent": "Vibrant Gold (Hands, Accents), Stone Grey (Floor Stones)",
-        "ambient": "Warm",
-        "uniqueIdentifiers": [
-          "Giant Polished Gold Hands emerging from organic walls",
-          "Misty, golden-lit passage extending into darkness",
-          "Colossal scale with vaulted earth ceilings"
-        ],
-        "searchDesc": "Sacred cavern interior with colossal earth walls, golden hands, and a misty, golden-lit passage."
-      },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/Pw_VKSI22056GokFzKCEs.jpg",
-      "focus": {
-        "node_id": "niche-1763145814082-8zvqa1jlk",
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
@@ -2917,6 +2592,131 @@
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
+      }
+    },
+    "loc-1763372186264-01vvvz1t7": {
+      "id": "loc-1763372186264-01vvvz1t7",
+      "type": "host",
+      "name": "The Crimson Expanse",
+      "dna": {
+        "type": "host",
+        "name": "The Crimson Expanse",
+        "description": "A vast, arid planet perpetually covered in red sand and subject to extreme solar flares.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "decaying alien technology",
+          "cultural_tone": "This is a world shaped by advanced, but long-gone, alien civilizations whose creations now lie in ruin and disuse. A sense of profound abandonment pervades.",
+          "materials_base": "A focus on weathered, non-terrestrial metals, crystalline structures, and strange, resilient polymers. Surfaces are often pitted, scarred, or showing signs of extreme environmental wear.",
+          "mood_baseline": "desolate, mysterious, ancient",
+          "palette_bias": "Dominated by deep, muted tones reflecting a world of dust and shadow. Unexpected bursts of alien energy or bioluminescence can punctuate the otherwise somber palette.",
+          "soundscape_base": "Whispering winds through decaying structures, the hum of residual alien machinery, and the vast silence of an empty world. Occasional strange atmospheric phenomena.",
+          "flora_base": "Scant, hardy, and often mutated alien flora adapted to extreme arid conditions or surviving in sheltered, forgotten biomes. May include metallic-sheened fungi or crystalline plant-like growths.",
+          "fauna_base": "Small, resilient scavengers or adapted desert life. May include mutated insects, hardy reptilian creatures, or elusive, energy-based entities that feed on residual power."
+        },
+        "slug": "the-crimson-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Crimson Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "7d63c2c6-4153-425f-ac5c-0b59d8483eec": {
+      "id": "7d63c2c6-4153-425f-ac5c-0b59d8483eec",
+      "type": "region",
+      "name": "The Crimson Expanse",
+      "dna": {
+        "type": "region",
+        "name": "The Crimson Expanse",
+        "description": "",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": "Predominantly oxidized, iron-rich alloys and coarse, abrasive mineral sands. Surfaces are heavily textured by aeons of dust storms.",
+          "mood_baseline": "oppressive, exposed, harsh",
+          "palette_bias": "Emphasizing deep rust oranges, ochres, and muted reds due to pervasive mineral dust. Shadows are deep and stark.",
+          "soundscape_base": "Constant, low-pitched whine of wind carrying fine grit, occasional metallic groans from settling debris, and the sifting of sand.",
+          "flora_base": "Extremely rare, deeply rooted, low-lying desert scrub with tough, leathery leaves. May exhibit metallic sheens for protection against radiation.",
+          "fauna_base": "Small, burrowing creatures, hardy insectoids, and scavenging avian life adapted to extreme heat and sandstorms. Minimal complex life."
+        },
+        "slug": "the-crimson-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Crimson Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5bf4e2e8-405d-4456-8754-32e214c63988": {
+      "id": "5bf4e2e8-405d-4456-8754-32e214c63988",
+      "type": "location",
+      "name": "The Sunken Starship",
+      "dna": {
+        "type": "location",
+        "name": "The Sunken Starship",
+        "description": "An colossal, alien vessel half-swallowed by the desert's embrace, its metallic hide pitted and rusted by eons of exposure.",
+        "looks": "A colossal, alien spaceship, approximately 100-150 meters long, is half-submerged in a vast desert landscape. Its asymmetrical hull is predominantly dark grey, heavily textured with pitting and rust. Sections of the vessel disappear into the sandy terrain, with only its upper curvature and a fractured engine nacelle visible above the surface. Numerous rectangular window-like openings are present along the visible hull. A prominent, vertical structure emitting a vibrant orange light is visible at the center of the ship's underside.",
+        "atmosphere": "The air is thick with fine dust particles, creating a hazy, diffused atmosphere. The dry wind appears to be subtly shifting the sand around the base of the ship.",
+        "mood": "Desolate, forgotten, enigmatic",
+        "lighting": "The scene is illuminated by a warm, orange light, likely from a low-hanging sun or atmospheric conditions. This light creates harsh shadows and a high contrast across the rust-colored terrain and the spaceship's metallic surface. The glowing vertical structure at the ship's base provides a concentrated, vibrant light source.",
+        "dominantElements": [
+          "Colossal alien spaceship (est. 100-150m long, horizontal structure) embedded in sand, center",
+          "Red, rocky desert terrain, foreground and midground",
+          "Glowing vertical portal emitting orange light, center bottom of spaceship"
+        ],
+        "spatialLayout": "The foreground consists of uneven, rocky desert ground with scattered boulders. The midground is dominated by the immense, half-buried alien spaceship, its hull extending from the left foreground towards the right background. The background is a vast, hazy expanse of desert and sky. The spaceship itself is a HORIZONTAL STRUCTURE, emphasizing its elongated form.",
+        "uniqueIdentifiers": [
+          "Half-buried alien spaceship",
+          "Vibrant orange glowing vertical portal",
+          "Crimson desert landscape"
+        ],
+        "materials_primary": "rusted metal",
+        "materials_secondary": "sand",
+        "materials_accents": "glowing energy",
+        "colors_dominant": "deep orange (rust and sky)",
+        "colors_secondary": "dark grey (ship hull)",
+        "colors_accents": "vibrant orange (glowing portal)",
+        "colors_ambient": "warm orange",
+        "navigableElements": [
+          {
+            "type": "portal",
+            "position": "center, midground",
+            "description": "Vertical orange portal glowing intensely at the base of the sunken ship"
+          },
+          {
+            "type": "window",
+            "position": "left side, midground",
+            "description": "Rectangular, dark openings along the visible hull of the spaceship"
+          },
+          {
+            "type": "window",
+            "position": "right side, midground",
+            "description": "Rectangular, dark openings along the visible hull of the spaceship"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Sunken alien starship in desert. Has: glowing portal (center, midground), windows (left side, midground), windows (right side, midground)",
+        "dna": {
+          "architectural_tone": "hulking, derelict spacecraft",
+          "cultural_tone": null,
+          "materials_base": "Heavily oxidized, alien metal alloys with significant pitting and corrosion. Interspersed with compacted, mineral-rich desert sand.",
+          "mood_baseline": "forgotten, monumental, silent",
+          "palette_bias": "Deep rust tones dominate, contrasted with dark, unreflective alien alloys. Ambient light is often filtered through dust, creating a warm, hazy glow.",
+          "soundscape_base": "The abrasive whisper of sand against metal, the subtle creak of structural stress, and the profound silence of a dead machine.",
+          "flora_base": "None, only microscopic life within rust formations.",
+          "fauna_base": "Tiny, sand-dwelling arthropods that feed on metallic corrosion."
+        },
+        "slug": "the-sunken-starship"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/mHe_m1Xq3dF6ikf1Tw9bH.jpg",
+      "focus": {
+        "node_id": "The Sunken Starship",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
       }
     }
   },
@@ -3245,29 +3045,6 @@
       ]
     },
     {
-      "id": "loc-1763130154220-lm8p7jzkf",
-      "type": "host",
-      "children": [
-        {
-          "id": "7fab5b7f-50d4-427a-a889-4c932a16e66b",
-          "type": "region",
-          "children": [
-            {
-              "id": "29217127-f72b-4af5-bba1-9758d65d501b",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1763140105571-jv7mzo8v2",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1763145372574-g92gk04oy",
       "type": "host",
       "children": [
@@ -3281,29 +3058,6 @@
               "children": [
                 {
                   "id": "niche-1763145432349-bmwy4k5kf",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1763145779586-wamfdkd7l",
-      "type": "host",
-      "children": [
-        {
-          "id": "3f97d663-a4b2-4ab8-9397-4f669a8e9343",
-          "type": "region",
-          "children": [
-            {
-              "id": "a7033625-e558-4c02-9dea-7793a8bd0cd9",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1763145814082-8zvqa1jlk",
                   "type": "niche",
                   "children": []
                 }
@@ -3341,10 +3095,24 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763372186264-01vvvz1t7",
+      "type": "host",
+      "children": [
+        {
+          "id": "7d63c2c6-4153-425f-ac5c-0b59d8483eec",
+          "type": "region",
+          "children": [
+            {
+              "id": "5bf4e2e8-405d-4456-8754-32e214c63988",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
-  "pinnedIds": [
-    "loc-1763130154220-lm8p7jzkf",
-    "loc-1763145779586-wamfdkd7l"
-  ]
+  "pinnedIds": []
 }

@@ -14,7 +14,7 @@ export const fluxRoofFix = "CRITICAL!!!: Fully enclosed ceiling of thick, contin
 
 export const generalRules = `
 [WORLD RULES:] water calm and mirror-still, no flying animals, unless specified.
-IMPORTANT: no humans or animals unless specified.
+IMPORTANT: no characters or animals unless specified.
 No watermarks, logos, or signatures.`;
 
 export const fluxInstructionsShort = `
