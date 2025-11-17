@@ -32,9 +32,9 @@ ${basePrompt}
 
 OUTPUT: Return a detailed image prompt for FLUX with clear foreground/midground/background organization and inline navigable element markers.`;
   
-  console.log('##################### LLM prompt #####################');
+  console.log('\n\n##################### NICHE IMAGE PROMPT MAKER  #####################');
   console.log(prompt);
-  console.log('##################### LLM prompt End #####################');
+  console.log('##################### NICHE IMAGE PROMPT MAKER END  #####################\n\n');
 
   return prompt;
 }
