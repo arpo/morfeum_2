@@ -1215,6 +1215,698 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "niche-1763452433316-qwizavl60": {
+      "id": "niche-1763452433316-qwizavl60",
+      "type": "niche",
+      "name": "interior of The Rusting Leviathan",
+      "dna": {
+        "looks": "A vast, cavernous interior hall with colossal, corroded metal structures creating a skeletal, ribcage-like support system. The floor is a chaotic mix of sand and debris, with illuminated trenches and portals hinting at dormant technology. Extreme verticality and immense scale dominate the view.",
+        "colorsAndLighting": "Weak, amber light filters through unseen breaches, illuminating dust motes. Contrasting glows of pulsating cyan from a trench and crackling deep violet from a portal add to the eerie illumination.",
+        "atmosphere": "The air is thick with dust, creating a hazy, atmospheric veil that accentuates the immense scale. A sense of ancient abandonment and dormant, incomprehensible power pervades the space, with a faint coolness from the metallic expanse.",
+        "architectural_tone": "monumental derelict vessel",
+        "cultural_tone": "An alien monument to a long-vanished civilization, now a husk slowly being reclaimed by the desert.",
+        "materials": "Massive, corroded metal bulkheads and support structures form the primary materials, scarred with alien script. The floor is a chaotic layer of compacted sand, rust-colored metallic fragments, fallen debris, and fused slag.",
+        "mood": "Evokes a sense of awe at the immense, lost technology and a profound feeling of isolation and decay.",
+        "sounds": "Distant groans, settling debris, faint hum, crackling energy.",
+        "dominantElementsDescriptors": "Colossal skeletal support structure, vast cavernous hall, glowing power conduits and portals, corroded alien metal.",
+        "spatialLayout": "An immense, cavernous hall with extreme verticality and depth. Navigable elements include a lower left trench, a right wall portal, and an upper left wall hatch, leading to deeper parts of the vessel.",
+        "primary_surfaces": "Corroded metal, sand, debris, fused slag.",
+        "secondary_surfaces": "Alien script, non-functional conduits, skeletal ribcage structures.",
+        "accent_features": "Pulsating cyan trench glow, crackling deep violet portal discharge, glowing orange perimeter markers on hatch.",
+        "dominant": "Browns and rust tones across bulkheads and debris.",
+        "secondary": "Grey in shadows and haze.",
+        "accent": "Cyan and violet at portals, orange on hatch.",
+        "ambient": "warm",
+        "uniqueIdentifiers": "Skeletal ribcage support, cavernous scale, dual glowing portal/trench.",
+        "searchDesc": "Derelict alien spaceship interior, vast hall with skeletal supports, sand, and glowing energy portals."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/gona_c_ljeqC60mm_C2t0.jpg",
+      "focus": {
+        "node_id": "niche-1763452433316-qwizavl60",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763452509320-e0eky4tii": {
+      "id": "loc-1763452509320-e0eky4tii",
+      "type": "host",
+      "name": "Barcelona",
+      "dna": {
+        "type": "host",
+        "name": "Barcelona",
+        "description": "A vibrant city known for its art, architecture, and lively atmosphere.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, whimsical, decorative",
+          "cultural_tone": "A city that celebrates artistic expression and fantastical design, blending historical influences with a playful, imaginative spirit.",
+          "materials_base": "Smooth, sculpted stone and vibrant, mosaic-like tiles are primary. Embellishments often incorporate wrought iron with ornate detailing.",
+          "mood_baseline": "Enchanting, vibrant, eclectic",
+          "palette_bias": "Rich, earthy tones are accented by jewel-like colors found in decorative elements. Warm lighting is a key atmospheric component.",
+          "soundscape_base": "A gentle hum of city life interwoven with artistic performances and the echoes of nature, suggesting a place of both commerce and creative spirit.",
+          "flora_base": "Lush, well-tended gardens with a focus on ornamental plants and manicured hedges, designed to complement architectural forms.",
+          "fauna_base": "Domesticated birds and small, charming animals that contribute to a whimsical and slightly enchanted atmosphere."
+        },
+        "slug": "barcelona"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Barcelona",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "fb7d0555-88da-48d3-9449-26a3dcf486d8": {
+      "id": "fb7d0555-88da-48d3-9449-26a3dcf486d8",
+      "type": "region",
+      "name": "Barcelona",
+      "dna": {
+        "type": "region",
+        "name": "Barcelona",
+        "description": "",
+        "slug": "barcelona"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Barcelona",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "304a9c06-5fb9-4a35-9434-af461a6507a0": {
+      "id": "304a9c06-5fb9-4a35-9434-af461a6507a0",
+      "type": "location",
+      "name": "Parc Güell Entrance",
+      "dna": {
+        "type": "location",
+        "name": "Parc Güell Entrance",
+        "description": "The main public entrance to the iconic Parc Güell, a public park showcasing Gaudí's architectural masterpieces.",
+        "looks": "The main entrance features ornate, dark iron gates framed by two whimsical, turret-like structures, resembling fairytale gatehouses. The undulating rooflines are highlighted with warm, artificial light that accentuates the textured, mosaic-like tiling on the building's facade. Lush green bushes and manicured hedges flank the entrance, leading the eye towards the imposing gates. The ground is paved with reddish-brown bricks arranged in a detailed pattern, reflecting the ambient light. The overall impression is one of a fantastical, inviting portal into another realm.",
+        "atmosphere": "The air appears clear, with no visible mist or haze. The scene is illuminated by artificial lighting and the fading twilight, creating a slightly subdued yet vibrant ambiance.",
+        "mood": "Excited, picturesque",
+        "lighting": "The lighting is predominantly warm and artificial, emanating from lanterns and accentuating the architectural features. The light creates a high contrast between the illuminated facade and the dark, silhouetted trees in the background. The ground also reflects this warm light, giving it a luminous quality.",
+        "dominantElements": [
+          "Ornate iron gates (center, midground)",
+          "Whimsical gatehouse structures (left and right, midground)",
+          "Undulating roofline with mosaic detail (center, midground)",
+          "Paved walkway (foreground)"
+        ],
+        "spatialLayout": "The foreground is dominated by a paved pathway leading towards the central entrance. The midground is occupied by the main entrance structure, comprising ornate gates flanked by two smaller, turret-like buildings. The scale of the entrance suggests it is a substantial structure, likely around 15-20 meters wide and 10-15 meters tall, with a WIDE STRUCTURE form emphasizing its frontal presence. The background is filled with dark, dense trees and the twilight sky.",
+        "uniqueIdentifiers": [
+          "Gaudí-esque architecture",
+          "Ornate wrought iron gates",
+          "Turret-like gatehouses",
+          "Mosaic tile detailing"
+        ],
+        "materials_primary": "Stone, Tile",
+        "materials_secondary": "Brick, Iron",
+        "materials_accents": "Mosaic fragments",
+        "colors_dominant": "Warm orange-yellow (from lighting on facade and ground)",
+        "colors_secondary": "Dark blue-grey (roofs, gates), deep green (foliage), reddish-brown (brick paving)",
+        "colors_accents": "Glimmers of light on mosaic tiles",
+        "colors_ambient": "Twilight blue",
+        "navigableElements": [
+          {
+            "type": "portal",
+            "position": "center, midground",
+            "description": "Large, ornate iron gates providing passage into a lit interior space."
+          },
+          {
+            "type": "window",
+            "position": "left side, midground",
+            "description": "Arched window with decorative ironwork, revealing interior light."
+          },
+          {
+            "type": "window",
+            "position": "right side, midground",
+            "description": "Arched window with decorative ironwork, revealing interior light."
+          }
+        ],
+        "searchDesc": "[Entrance] Whimsical park entrance. Has: ornate iron gates (center), arched window (left), arched window (right)",
+        "dna": {
+          "architectural_tone": "surreal, fairytale gatehouse",
+          "cultural_tone": "A welcoming, almost theatrical portal designed to immediately immerse visitors in a fantastical world.",
+          "materials_base": "Dominated by textured, mosaic-clad structures and dark, ornate ironwork, juxtaposed with natural stone.",
+          "mood_baseline": "Mystical, inviting, playful",
+          "palette_bias": "Warm, artificial light casts an inviting golden glow on deep blues and greens, with earthy red-browns underfoot.",
+          "soundscape_base": "Muffled city sounds are replaced by the ambient sounds of well-kept gardens and the distant murmur of visitors entering.",
+          "flora_base": "Formal hedges and bushes that frame the entrance, guiding the eye and suggesting curated natural beauty.",
+          "fauna_base": "None"
+        },
+        "slug": "parc-g-ell-entrance"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/4LmnDf6yylwn7igZfkGpH.jpg",
+      "focus": {
+        "node_id": "Parc Güell Entrance",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763452755881-b58f8zb3b": {
+      "id": "niche-1763452755881-b58f8zb3b",
+      "type": "niche",
+      "name": "exterior of Parc Güell Entrance",
+      "dna": {
+        "looks": "Colossal, jagged bioluminescent crystal formations of amethyst and emerald erupt from phosphorescent sand. Delicate, iridescent fiber optic archways and turrets weave between the crystals, shimmering with shifting colors. Lush, alien flora with copper leaves and pulsing flowers flank a glowing sand path.",
+        "colorsAndLighting": "Ethereal glow emanates from bioluminescent crystals and phosphorescent sand, mimicking warm artificial lights. Shifting colors from fiber optics add dynamic luminescence.",
+        "atmosphere": "A dreamlike, otherworldly atmosphere pervades, thickened by a gentle, stardust-like haze that refracts light. The air feels cool and serene in the twilight desert.",
+        "architectural_tone": "Surreal, fairytale gatehouse",
+        "cultural_tone": "A theatrical portal to a fantastical world.",
+        "materials": "Translucent, jagged crystal shards (amethyst, emerald) dominate, interwoven with iridescent fiber optics. The ground is fine, phosphorescent sand. Alien flora features hammered copper-like leaves.",
+        "mood": "Whimsical and fantastical, evoking wonder and a sense of entering an alien dreamscape.",
+        "sounds": "Gentle hum, faint shimmering, soft pulsing lights.",
+        "dominantElementsDescriptors": "Bioluminescent crystal formations, iridescent fiber optic structures, phosphorescent sand path, alien flora.",
+        "spatialLayout": "An expansive vista with a central vanishing point drawing the eye inward. The layout is symmetrical and ordered, suggesting a grand entrance through towering formations.",
+        "primary_surfaces": "Phosphorescent sand (ground), crystal (formations).",
+        "secondary_surfaces": "Fiber optics (archways, turrets), alien flora (foliage).",
+        "accent_features": "Pulsing flowers, swirling patterns in sand, nebulae in sky.",
+        "dominant": "Amethyst and Emerald (large formations)",
+        "secondary": "Iridescent (fiber optics)",
+        "accent": "Phosphorescent Yellow/White (sand, flora light)",
+        "ambient": "Warm, ethereal glow",
+        "uniqueIdentifiers": "Bioluminescent crystals, fiber optic architecture, phosphorescent sand, alien desert flora.",
+        "searchDesc": "Alien Parc Güell entrance with bioluminescent crystals, fiber optics, and glowing sand in a twilight desert."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/pRy9s2kvnj63ft3U0W2Bm.jpg",
+      "focus": {
+        "node_id": "niche-1763452755881-b58f8zb3b",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "niche-1763452903665-qxqt3dsp3": {
+      "id": "niche-1763452903665-qxqt3dsp3",
+      "type": "niche",
+      "name": "exterior of Parc Güell Entrance",
+      "dna": {
+        "looks": "A surreal, fantastical gatehouse entrance with ornate iron gates and mosaic-clad turrets. A winding brick path leads towards the structure, framed by manicured hedges and a stone platform with abstract sculptures. Silhouetted trees form a dense background.",
+        "colorsAndLighting": "Warm golden light emanates from the gatehouses, contrasting with the deep indigo and soft purple twilight sky. Reddish-brown bricks and vibrant mosaic tiles create a rich palette.",
+        "atmosphere": "The air feels enchanted and slightly mysterious, with a sense of stepping into a dreamscape. A gentle coolness from the twilight settles, hinting at a magical, otherworldly glow.",
+        "architectural_tone": "Surreal Fairytale",
+        "cultural_tone": "A welcoming, theatrical portal immersing visitors in a fantastical world.",
+        "materials": "Intricately patterned reddish-brown bricks with mossy crevices form the pathway. The gatehouses are clad in vibrant, textured mosaic tiles of deep blue, emerald green, and gold. Ornate dark iron forms the gates. The platform is weathered grey stone.",
+        "mood": "Enchanting and wondrous, creating a theatrical and dreamlike entrance.",
+        "sounds": "Gentle breeze, distant crickets, soft echoes.",
+        "dominantElementsDescriptors": "Ornate iron gates, mosaic gatehouses, winding brick path.",
+        "spatialLayout": "A clear path leads to a central, symmetrical entrance focal point. The space opens slightly to the sides on a stone platform, with a deep background suggesting more beyond.",
+        "primary_surfaces": "Mosaic tiles, brickwork, weathered stone.",
+        "secondary_surfaces": "Dark iron, dark green hedges.",
+        "accent_features": "Intricate scrollwork on gates, undulating rooflines, abstract mosaic sculptures.",
+        "dominant": "Deep blue and emerald green (mosaic gatehouses).",
+        "secondary": "Golden yellow (gatehouse glow, mosaic accents).",
+        "accent": "Reddish-brown (pathway), grey (stone platform).",
+        "ambient": "Warm.",
+        "uniqueIdentifiers": "Whimsical mosaic gatehouses, ornate ironwork, undulating roofline.",
+        "searchDesc": "Parc Güell entrance, surreal gatehouse with mosaic, ornate iron gates, twilight sky."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/0Pb2tMx-Ycc767e2zdZZv.jpg",
+      "focus": {
+        "node_id": "niche-1763452903665-qxqt3dsp3",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763454264635-kjzstxpvf": {
+      "id": "loc-1763454264635-kjzstxpvf",
+      "type": "host",
+      "name": "Aridian Expanse",
+      "dna": {
+        "type": "host",
+        "name": "Aridian Expanse",
+        "description": "A vast desert world with forgotten civilizations.",
+        "dna": {
+          "genre": "ancient fantasy",
+          "architectural_tone": "monumental, weathered, grand",
+          "cultural_tone": "A civilization that valued colossal structures and grand ceremonies, now long past. Their legacy is one of monumental scale and lost purpose.",
+          "materials_base": "Primarily colossal stone blocks, shaped by immense labor but now eroded by time and the elements. Textures are rough, fractured, and showing the wear of centuries.",
+          "mood_baseline": "melancholy, epic, forgotten",
+          "palette_bias": "Dominated by warm, earthy tones that evoke sand, sun-baked earth, and ancient, faded frescoes. Hues are generally desaturated and muted by dust and age.",
+          "soundscape_base": "The pervasive sound is that of wind – a constant, sighing, and sometimes mournful presence that whistles through ruins and across open spaces.",
+          "flora_base": "Scarce and hardy desert plants clinging to life. Think tough, drought-resistant grasses, small thorny bushes, and perhaps ancient, petrified trees.",
+          "fauna_base": "Desert-dwelling creatures adapted to harsh conditions. This could include large insects, scavenging birds, small burrowing mammals, and perhaps larger, sand-dwelling predators."
+        },
+        "slug": "aridian-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aridian Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "86710dbc-675b-4566-8a38-d09fe37e9a6c": {
+      "id": "86710dbc-675b-4566-8a38-d09fe37e9a6c",
+      "type": "region",
+      "name": "The Shifting Dunes",
+      "dna": {
+        "type": "region",
+        "name": "The Shifting Dunes",
+        "description": "Endless sands dotted with ancient ruins and sculpted by relentless winds.",
+        "dna": {
+          "architectural_tone": "subsumed by nature, broken forms",
+          "cultural_tone": null,
+          "materials_base": "Sandstone and conglomerate rock, heavily eroded and smoothed by wind and sand. Structures are frequently half-buried.",
+          "mood_baseline": "desolate, awe-inspiring, lonely",
+          "palette_bias": "Shades of ochre, tan, and pale gold, with occasional darker earth tones where shadows pool. The palette is very sandy and sun-bleached.",
+          "soundscape_base": "The dominant sound is the sifting and rushing of sand, punctuated by the mournful cry of wind through eroded rock formations.",
+          "flora_base": "Extremely sparse, resilient desert scrub and hardy, low-lying ground cover that anchors the shifting sands where possible.",
+          "fauna_base": "Small, quick desert rodents, sand-dwelling reptiles, and large, chitinous insects that thrive in arid environments."
+        },
+        "slug": "the-shifting-dunes"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Shifting Dunes",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "430b0a81-3fee-4180-b853-5854c1db9acd": {
+      "id": "430b0a81-3fee-4180-b853-5854c1db9acd",
+      "type": "location",
+      "name": "The Basilica of Echoes",
+      "dna": {
+        "type": "location",
+        "name": "The Basilica of Echoes",
+        "description": "A colossal, ancient ruin situated amidst the desolate dunes.",
+        "looks": "The Basilica of Echoes is a colossal, ancient ruin constructed from weathered stone blocks. Rows of tall, segmented columns support a series of collapsed archways, creating a rhythmic yet broken facade. The structure spans a wide area, with its outer walls partially crumbled, revealing gaps and darker interiors. A central, sunlit path leads towards a distant opening that frames a view of the surrounding desert.",
+        "atmosphere": "The air appears dry and hazy, possibly filled with fine sand particles. A light diffusion of light suggests a consistent, warm atmosphere throughout the ruins.",
+        "mood": "Melancholy, awe-inspiring",
+        "lighting": "The lighting is warm and diffused, casting long shadows and creating a high-contrast scene. Sunlight streams in from the background opening, illuminating the central path, while the sides of the ruin are in shadow.",
+        "dominantElements": [
+          "Crumbling stone walls with arched openings",
+          "Series of ancient columns",
+          "Sandy pathway leading into the distance",
+          "Distant sunlit portal framing desert view"
+        ],
+        "spatialLayout": "The foreground consists of sandy terrain littered with rocks and debris, leading to a worn stone path. The midground is dominated by the imposing, symmetrical ruins of the Basilica, featuring repeating archways and columns that flank the central path and recede into the distance. The background is a bright, sunlit opening, revealing a glimpse of the desert beyond, suggesting the structure's placement within a vast, open landscape.",
+        "uniqueIdentifiers": [
+          "Grand scale of ruined architecture",
+          "Repetitive collapsed archways",
+          "Central pathway through the ruins"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Sand, Gravel",
+        "materials_accents": "None visible",
+        "colors_dominant": "Golden-orange (stone structures)",
+        "colors_secondary": "Sandy-yellow (ground and haze)",
+        "colors_accents": "Bright white (distant sky/light)",
+        "colors_ambient": "Warm ochre",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground/background",
+            "description": "Central pathway leading through the ruins towards a distant opening"
+          },
+          {
+            "type": "archway",
+            "position": "left/right, midground",
+            "description": "Numerous crumbling archways with shadowed interiors"
+          },
+          {
+            "type": "portal",
+            "position": "center, background",
+            "description": "Bright opening revealing desert landscape beyond"
+          }
+        ],
+        "searchDesc": "[Ruins - Exterior] Ruined Basilica in desert. Has: passage (center), archways (left/right), portal (background)",
+        "dna": {
+          "architectural_tone": "crumbling grandeur, skeletal arches",
+          "cultural_tone": "The remnants of a society that built for eternity, now humbled by the relentless forces of nature and the passage of eons.",
+          "materials_base": "Massive, weathered sandstone blocks, with visible layering and significant erosion. Crumbled sections reveal internal structures and the accumulation of sand.",
+          "mood_baseline": "haunting, majestic, ruinous",
+          "palette_bias": "Dominated by warm, golden-orange hues of aged stone, contrasted with the sandy-yellow of dust and haze. Ambient warmth is significant.",
+          "soundscape_base": "The wind creates an ethereal 'choir' effect as it passes through the broken arches and empty chambers, mingling with the faint crunch of sand underfoot.",
+          "flora_base": "None visible in the immediate vicinity, though hints of sparse desert vegetation may be present at the edges.",
+          "fauna_base": "Likely the domain of scavenging desert birds and small creatures that inhabit sheltered, sandy hollows."
+        },
+        "slug": "the-basilica-of-echoes"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/lYs0XreVtoeu2BSN_6esy.jpg",
+      "focus": {
+        "node_id": "The Basilica of Echoes",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763454291803-nw4vopaiu": {
+      "id": "niche-1763454291803-nw4vopaiu",
+      "type": "niche",
+      "name": "interior of The Basilica of Echoes",
+      "dna": {
+        "looks": "A vast, ancient sandstone ruin with towering, segmented columns disappearing into sand. A broken stone vault ceiling allows warm, golden-orange light shafts to pierce the gloom, illuminating swirling dust motes. Descending ramps, archways, and shadowed alcoves suggest deep recesses and hidden chambers.",
+        "colorsAndLighting": "Dominant warm earthy tones of sandstone are accented by shafts of golden-orange light, casting deep shadows. The light interacts with dust motes, creating a hazy, ethereal glow.",
+        "atmosphere": "The air is thick with ancient dust, stirred by subtle drafts from unseen passages. A profound sense of stillness pervades, broken only by the imagined echoes of millennia. The temperature is likely warm and dry, typical of desert ruins.",
+        "architectural_tone": "crumbling grandeur",
+        "cultural_tone": "The remnants of a society that built for eternity, now humbled by the relentless forces of nature and the passage of eons.",
+        "materials": "The primary material is weathered sandstone, appearing in massive blocks, eroded columns, and cracked stone walls. Fine sand accumulates in drifts, covering debris and obscuring details.",
+        "mood": "Evokes a profound sense of awe and mystery, tinged with melancholy for a lost civilization.",
+        "sounds": "Distant wind, faint dust settling, echoing silence.",
+        "dominantElementsDescriptors": "Towering segmented columns, broken stone vault, descending sand ramp",
+        "spatialLayout": "An enclosed interior space with a downward-sloping central ramp and navigable openings to the left and right. A grand portal in the far distance draws the eye deeper into the immense scale of the structure.",
+        "primary_surfaces": "Sandstone, packed sand, gravel",
+        "secondary_surfaces": "Stone debris, fallen masonry",
+        "accent_features": "Intricate geometric patterns on archway, faint ancient symbols on ramp, soft internal luminescence from arched opening",
+        "dominant": "Earthy sandstone (90%)",
+        "secondary": "Golden-orange light (8%)",
+        "accent": "Soft internal glow (2%)",
+        "ambient": "warm",
+        "uniqueIdentifiers": "Sand-filled ruined basilica, shafts of light through broken ceiling, descending sand ramp",
+        "searchDesc": "Ancient ruined basilica interior with sandstone columns, broken vault, and sand-filled passages."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/XLKIPtxEGB9kQCBIO_m2S.jpg",
+      "focus": {
+        "node_id": "niche-1763454291803-nw4vopaiu",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "loc-1763456358444-hq275hwva": {
+      "id": "loc-1763456358444-hq275hwva",
+      "type": "host",
+      "name": "Xylos",
+      "dna": {
+        "type": "host",
+        "name": "Xylos",
+        "description": "A desolate planet with harsh, arid environments and ancient celestial phenomena.",
+        "dna": {
+          "genre": "sci-fi",
+          "architectural_tone": "ancient alien megastructures, functional decay",
+          "cultural_tone": "A civilization that valued grand scale and advanced, yet ultimately transient, technology. Hints of lost purpose and forgotten rituals.",
+          "materials_base": "Exotic, weathered alloys and composites that resist extreme conditions, often exhibiting a dull sheen or deep, pitted textures. A sense of immense, aged resilience.",
+          "mood_baseline": "vast, desolate, forgotten",
+          "palette_bias": "Dominant deep blues, muted purples, and stark metallic grays, accented by unnatural, luminescent glows or the deep black of void.",
+          "soundscape_base": "Low, resonant hums of ancient, dormant machinery, punctuated by the vast silence of space or the creak of stressed structures.",
+          "flora_base": "None, or extremely sparse, resilient crystalline growths adapted to inorganic environments.",
+          "fauna_base": "None, or microscopic, non-organic lifeforms, or remnants of engineered biological constructs."
+        },
+        "slug": "xylos"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Xylos",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "8511edb5-f984-4fd4-b542-e6d164dd8026": {
+      "id": "8511edb5-f984-4fd4-b542-e6d164dd8026",
+      "type": "region",
+      "name": "The Whispering Valley",
+      "dna": {
+        "type": "region",
+        "name": "The Whispering Valley",
+        "description": "A vast, arid valley known for its strange geological formations and the constant, low hum of unseen energies.",
+        "dna": {
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": "Expansive geological formations of stratified rock and mineral deposits. Weathered, eons-old surfaces.",
+          "mood_baseline": "eerie, isolated, humming",
+          "palette_bias": "Earthy tones of ochre, sienna, and muted browns, interspersed with streaks of mineral-rich blues and greens. A pervasive dry, dusty haze.",
+          "soundscape_base": "Constant, low-frequency hum suggesting subterranean energies, amplified by echoing canyons and the whisper of fine, wind-blown sand.",
+          "flora_base": "Sparse, hardy desert flora with leathery or crystalline textures, adapted to extreme aridity and mineral-rich soil.",
+          "fauna_base": "Small, adapted desert creatures with exoskeletons or burrowing habits, highly attuned to vibration and scarce resources."
+        },
+        "slug": "the-whispering-valley"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Whispering Valley",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "5f8593fc-2689-4c23-b218-7b73e75b3a2e": {
+      "id": "5f8593fc-2689-4c23-b218-7b73e75b3a2e",
+      "type": "location",
+      "name": "The Sunken Starship",
+      "dna": {
+        "type": "location",
+        "name": "The Sunken Starship",
+        "description": "A colossal, derelict alien spaceship, partially swallowed by the shifting sands of the valley.",
+        "looks": "A colossal, crescent-shaped alien spaceship, largely rusted, is half-buried in orange sand dunes. Its massive hull curves from left to right, with a large, dark circular opening dominating the center. Intricate, square-shaped patterns are embossed on the exposed upper plating, suggesting alien architecture. The scale appears immense, dwarfing the surrounding rocky desert landscape.",
+        "atmosphere": "The air is filled with fine, airborne sand particles, creating a hazy, arid environment. A dry wind appears to be actively shifting the sand around the derelict vessel.",
+        "mood": "Desolate, mysterious, forgotten",
+        "lighting": "The lighting is warm and diffuse, casting a yellowish glow across the entire scene. Shadows are soft, indicating an overcast sky or a sun low on the horizon, with minimal harsh contrast.",
+        "dominantElements": [
+          "Rusted alien spaceship hull (estimated 100m+ length, HORIZONTAL STRUCTURE)",
+          "Large circular opening/entrance (estimated 20m diameter, center)",
+          "Orange sand dunes (foreground, midground, background)"
+        ],
+        "spatialLayout": "Foreground consists of rocky desert terrain and sandy paths leading towards the spaceship. The midground is dominated by the immense, sand-engulfed hull of the alien spaceship, with its large central opening. The background shows distant desert mountains under a hazy sky.",
+        "uniqueIdentifiers": [
+          "Half-buried, crescent-shaped alien spaceship",
+          "Large circular opening in spaceship hull",
+          "Embossed square patterns on hull plating"
+        ],
+        "materials_primary": "Rusted metal (spaceship)",
+        "materials_secondary": "Sand, rock",
+        "materials_accents": "Embossed hull patterns",
+        "colors_dominant": "Orange (sand, spaceship hull)",
+        "colors_secondary": "Browns and grays (rust, rocks)",
+        "colors_accents": "Dark interior of spaceship opening",
+        "colors_ambient": "Yellowish-orange, hazy",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Large, dark circular opening into the spaceship's interior"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Desert alien spaceship. Has: large circular passage (center, midground)",
+        "dna": {
+          "architectural_tone": "colossal, derelict, partially buried structures",
+          "cultural_tone": "The remnants of advanced alien transit, now a monument to its own abandonment, claimed by the natural forces of the planet.",
+          "materials_base": "Heavily rusted, colossal metallic hull plating, fused with the surrounding sand and rock. Textures of pitting, warping, and granular accretion.",
+          "mood_baseline": "melancholy, monumental, weathered",
+          "palette_bias": "Dominant warm oranges and rust tones, reflecting the decay of metal and the color of the surrounding sands. Secondary dark, oxidized browns and grays.",
+          "soundscape_base": "The grating scrape and whistle of wind moving over vast metal surfaces, the soft hiss of shifting sand, and the distant, unsettling hum of the valley.",
+          "flora_base": "None, solely inorganic elements.",
+          "fauna_base": "None, solely inorganic elements."
+        },
+        "slug": "the-sunken-starship"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/gdiF9Febq6yMA-bkrA3Vu.jpg",
+      "focus": {
+        "node_id": "The Sunken Starship",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "loc-1763456450999-3qup3heki": {
+      "id": "loc-1763456450999-3qup3heki",
+      "type": "host",
+      "name": "The Bloom Isles",
+      "dna": {
+        "type": "host",
+        "name": "The Bloom Isles",
+        "description": "Scattered tropical islands where soft coral reefs rise to form natural stages, dancers moving knee-deep in glowing tide.",
+        "dna": {
+          "genre": "fantasy",
+          "architectural_tone": "organic, spiritual, ancient",
+          "cultural_tone": "A vibrant, deeply spiritual culture that reveres nature and the interconnectedness of life, expressed through elaborate rituals and artistic creation.",
+          "materials_base": "Ethereal, naturally occurring materials that are both sturdy and luminous. Focus on materials that hold or reflect light, suggesting a living or enchanted quality.",
+          "mood_baseline": "Enchanting, serene, mystical",
+          "palette_bias": "Rich, vibrant jewel tones contrasted with soft, luminous pastels. Emphasizes bioluminescence and the play of light on surfaces.",
+          "soundscape_base": "Gentle, resonant natural sounds blended with ethereal, melodic chimes and faint, harmonious vocalizations. Echoes of flowing water and soft breezes.",
+          "flora_base": "Lush, exotic tropical vegetation with an emphasis on vibrant colors and glowing elements. Think bioluminescent flowers, large-leafed plants, and abundant, otherworldly growth.",
+          "fauna_base": "Small, whimsical, and often bioluminescent creatures that contribute to the magical atmosphere. May include shimmering insects, exotic birds with melodic calls, and small, gentle aquatic life."
+        },
+        "slug": "the-bloom-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Bloom Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "462dcc0c-10d9-47ed-8f02-f8a54de5c786": {
+      "id": "462dcc0c-10d9-47ed-8f02-f8a54de5c786",
+      "type": "region",
+      "name": "The Bloom Isles",
+      "dna": {
+        "type": "region",
+        "name": "The Bloom Isles",
+        "description": "",
+        "dna": {
+          "architectural_tone": "natural formations enhanced by spiritual artistry",
+          "cultural_tone": "A culture deeply integrated with the sea and its bounty, where spiritual practices are woven into daily life and celebrations.",
+          "materials_base": "Primarily coral structures, polished shells, woven sea-grasses, and smooth, water-worn stones, infused with subtle glowing elements.",
+          "mood_baseline": "Tranquil, vibrant, harmonious",
+          "palette_bias": "Dominated by blues, teals, and greens of the ocean, punctuated by vibrant coral pinks, oranges, and soft, glowing purples and golds.",
+          "soundscape_base": "The constant gentle lapping of waves, the calls of exotic seabirds, and the distant, harmonious hum of life within the coral reefs.",
+          "flora_base": "Abundant, diverse coral formations that act as both landscape and habitat. Interspersed with hardy, salt-resistant tropical plants and floating luminescent flora.",
+          "fauna_base": "A rich marine ecosystem with small, colorful reef fish, gentle sea turtles, and bioluminescent plankton that illuminate the waters."
+        },
+        "slug": "the-bloom-isles"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "The Bloom Isles",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "ad9b8ba7-f464-47a4-af29-0041659d32df": {
+      "id": "ad9b8ba7-f464-47a4-af29-0041659d32df",
+      "type": "location",
+      "name": "The Coral Sanctuary Temple",
+      "dna": {
+        "type": "location",
+        "name": "The Coral Sanctuary Temple",
+        "description": "A large Hindu temple situated in the heart of the Bloom Isles.",
+        "looks": "A grand, ornate Hindu temple with intricate spires and detailed carvings rises from a coral base. The structure is surrounded by shallow, turquoise water that glows with an ethereal pink light. Lush green foliage and rocky outcrops frame the scene, adding to the tropical island aesthetic. The temple's architecture features multiple tiered roofs and detailed decorative elements, all bathed in a vibrant, otherworldly illumination.",
+        "atmosphere": "The air appears humid, with a soft haze obscuring the distant background and softening the edges of the landscape. The visual suggests a tranquil environment, likely warm and still, allowing the glowing waters and illuminated temple to be the focal points.",
+        "mood": "Sacred, vibrant, harmonious",
+        "lighting": "The scene is illuminated by a dual-source lighting effect: a soft, ambient twilight sky and strong, vibrant pink light emanating from decorative elements and pathways. This creates a high contrast between the cool blues of the water and the warm, glowing pinks of the temple and its surroundings.",
+        "dominantElements": [
+          "Elaborate Hindu temple structure (estimated 30-40m tall, dominating center)",
+          "Glowing pink pathway leading to the temple (foreground/midground)",
+          "Rocky island formations with dense foliage (left and right midground/background)",
+          "Shimmering turquoise water (foreground/midground)"
+        ],
+        "spatialLayout": "The foreground consists of the glowing, water-filled channel with a pathway. The midground is dominated by the large Hindu temple, positioned centrally and rising majestically. The background features blurred, mountainous islands covered in tropical vegetation, receding into a hazy sky.",
+        "uniqueIdentifiers": [
+          "Elaborate Hindu temple architecture",
+          "Glowing pink pathway and water illumination",
+          "Tropical island setting with coral formations"
+        ],
+        "materials_primary": "Stone (temple architecture), Coral (base formations)",
+        "materials_secondary": "Rock (island formations), Foliage (trees, plants)",
+        "materials_accents": "Luminous pink lights, Glowing water",
+        "colors_dominant": "Pink (temple accents, pathway lights, ambient glow)",
+        "colors_secondary": "Turquoise (water), Grey-blue (sky), Dark green (foliage)",
+        "colors_accents": "Bright pink luminescence",
+        "colors_ambient": "Soft twilight blues and purples",
+        "navigableElements": [
+          {
+            "type": "bridge",
+            "position": "center, foreground",
+            "description": "A glowing pink pathway over water leading to the temple"
+          },
+          {
+            "type": "stairs",
+            "position": "center, midground",
+            "description": "Wide, illuminated steps ascending to the temple entrance"
+          },
+          {
+            "type": "portal",
+            "position": "center of temple entrance, midground",
+            "description": "Brightly glowing portal within the main temple archway"
+          },
+          {
+            "type": "door",
+            "position": "left side of temple base, midground",
+            "description": "Ornate doorway on the temple's left flank"
+          },
+          {
+            "type": "door",
+            "position": "right side of temple base, midground",
+            "description": "Ornate doorway on the temple's right flank"
+          }
+        ],
+        "searchDesc": "[Exterior] Tropical temple on coral islands. Has: glowing bridge (center, foreground), illuminated stairs (center, midground), main portal (center, midground)",
+        "dna": {
+          "architectural_tone": "ornate, sacred, monumental stone structures integrated with living coral",
+          "cultural_tone": "The spiritual heart of the islands, a place of pilgrimage and sacred ceremony dedicated to ancient deities and the forces of nature.",
+          "materials_base": "Intricately carved, weathered stone blocks forming the temple structure, built upon and seamlessly integrated with massive, living coral foundations.",
+          "mood_baseline": "Awe-inspiring, sacred, mystical",
+          "palette_bias": "Warm, rich earth tones and stone greys are accented by vibrant, glowing pinks and golds from decorative elements and the ambient light.",
+          "soundscape_base": "A deeper resonance, with the faint echoes of chanting, the gentle trickling of water features, and the distant murmur of the ocean.",
+          "flora_base": "Minimalist flora directly integrated into the temple's stone and coral, perhaps small, hardy mosses or vines with glowing tips.",
+          "fauna_base": "Larger, more symbolic fauna, perhaps guardian spirits in animal form or ancient, revered creatures that inhabit the temple grounds."
+        },
+        "slug": "the-coral-sanctuary-temple"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/lUPBS9QRihHfKdQk_fx74.jpg",
+      "focus": {
+        "node_id": "The Coral Sanctuary Temple",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "niche-1763459020003-rcth8eih2": {
+      "id": "niche-1763459020003-rcth8eih2",
+      "type": "niche",
+      "name": "interior of The Coral Sanctuary Temple",
+      "dna": {
+        "looks": "A monumental, awe-inspiring sacred chamber carved from weathered stone and living coral. Towering, coral-textured pillars support an intricate, vaulted ceiling, leading the eye towards distant, shadowed passages and illuminated alcoves. A central sunken basin of glowing turquoise water reflects the ethereal pink light.",
+        "colorsAndLighting": "The space is bathed in an ethereal pink luminescence, creating a mystical glow. Warm stone greys contrast with vibrant pinks and cool turquoise water.",
+        "atmosphere": "The air is still and carries a sense of ancient reverence. The vastness of the space, hinted at by distant shadows and hazy depths, evokes a mystical and deeply sacred feeling.",
+        "architectural_tone": "ornate, sacred, monumental",
+        "cultural_tone": "The spiritual heart of the islands, a place of pilgrimage and sacred ceremony.",
+        "materials": "The primary materials are weathered stone and living coral, seamlessly integrated. The stone is carved with intricate details, textured like ancient coral reefs. Polished stone floors feature subtle coral inlays.",
+        "mood": "Mystical, awe-inspiring, and deeply sacred, evoking ancient pilgrimage and natural forces.",
+        "sounds": "faint echo, gentle hum, soft dripping",
+        "dominantElementsDescriptors": "Towering coral-textured pillars, vaulted fossilized coral ceiling, sunken turquoise water basin, bioluminescent flora alcove.",
+        "spatialLayout": "A chamber of monumental scale, expanding from a foreground floor that slopes upwards to a vast, vaulted ceiling. Glimpses of deeper chambers and passages suggest immense depth.",
+        "primary_surfaces": "weathered stone, living coral, polished stone",
+        "secondary_surfaces": "carved stone, coral inlay, bioluminescent flora",
+        "accent_features": "arched doorway with pink coral frame, shimmering passage of soft pink light, embedded luminous crystals.",
+        "dominant": "pink (luminescence)",
+        "secondary": "stone grey (structure)",
+        "accent": "turquoise (water basin), blue/purple haze (ceiling depth)",
+        "ambient": "warm",
+        "uniqueIdentifiers": "interior of The Coral Sanctuary Temple, stone and living coral architecture, ethereal pink luminescence, sunken glowing water basin.",
+        "searchDesc": "Sacred temple interior with stone and living coral, ethereal pink light, and a sunken water basin."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/Z3PS0FoShAfEVluM2NGX5.jpg",
+      "focus": {
+        "node_id": "niche-1763459020003-rcth8eih2",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
+    },
+    "niche-1763459042403-ctnxrgi7g": {
+      "id": "niche-1763459042403-ctnxrgi7g",
+      "type": "niche",
+      "name": "interior of The Sunken Starship",
+      "dna": {
+        "looks": "A colossal, cavernous alien spaceship interior featuring a high, domed ceiling and walls of fused metallic hull plating. The space is vast, with weathered support structures and a gantry-like walkway dominating the midground, leading towards a hazy, expansive void in the background.",
+        "colorsAndLighting": "The palette is dominated by warm oranges and rust tones, with oxidized browns and grays. Accentuated by cool blue bioluminescent algae and faint amber light from recessed panels.",
+        "atmosphere": "The air is thick with the scent of decay and the profound mystery of abandonment. A palpable sense of immense scale and melancholy pervades the enclosed, derelict space.",
+        "architectural_tone": "colossal derelict alien",
+        "cultural_tone": "Remnants of advanced alien transit, a monument to its own abandonment.",
+        "materials": "Walls are made of heavily rusted, colossal metallic hull plating fused with sand and warped rock, displaying intricate alien patterns. The floor is packed sand and grit with fractured metallic debris.",
+        "mood": "Melancholy and monumental decay, evoking the profound mystery of an abandoned alien transit.",
+        "sounds": "distant echoes, soft grit shifts, faint hum",
+        "dominantElementsDescriptors": "Domed hull plating, weathered support structures, gantry walkway, circular background opening.",
+        "spatialLayout": "A vast, cavernous interior with a soaring domed ceiling, open central space, and receding background. Features a navigable passage to the left and a walkway to the right.",
+        "primary_surfaces": "rusted alien metal hull plating, packed sand, grit",
+        "secondary_surfaces": "fractured metallic debris, rectangular consoles, recessed square panels",
+        "accent_features": "Pulsing amber light from recessed panels, cool blue bioluminescent algae on walkway, indecipherable alien glyphs on consoles.",
+        "dominant": "warm oranges and rust tones",
+        "secondary": "oxidized browns and grays",
+        "accent": "cool blue, faint amber",
+        "ambient": "warm",
+        "uniqueIdentifiers": "Colossal scale, domed alien metal interior, bioluminescent algae accents, vast background void.",
+        "searchDesc": "Alien starship interior, colossal scale, rusted metal walls, sand floor, bioluminescent algae, vast void."
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/6M54Sw_twyUNNtjIMvEkQ.jpg",
+      "focus": {
+        "node_id": "niche-1763459042403-ctnxrgi7g",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      }
     }
   },
   "views": {},
@@ -1233,6 +1925,11 @@
               "children": [
                 {
                   "id": "niche-1763413407828-ed4g8d1q7",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763452433316-qwizavl60",
                   "type": "niche",
                   "children": []
                 }
@@ -1394,10 +2091,107 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763452509320-e0eky4tii",
+      "type": "host",
+      "children": [
+        {
+          "id": "fb7d0555-88da-48d3-9449-26a3dcf486d8",
+          "type": "region",
+          "children": [
+            {
+              "id": "304a9c06-5fb9-4a35-9434-af461a6507a0",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763452755881-b58f8zb3b",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763452903665-qxqt3dsp3",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763454264635-kjzstxpvf",
+      "type": "host",
+      "children": [
+        {
+          "id": "86710dbc-675b-4566-8a38-d09fe37e9a6c",
+          "type": "region",
+          "children": [
+            {
+              "id": "430b0a81-3fee-4180-b853-5854c1db9acd",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763454291803-nw4vopaiu",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763456358444-hq275hwva",
+      "type": "host",
+      "children": [
+        {
+          "id": "8511edb5-f984-4fd4-b542-e6d164dd8026",
+          "type": "region",
+          "children": [
+            {
+              "id": "5f8593fc-2689-4c23-b218-7b73e75b3a2e",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763459042403-ctnxrgi7g",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763456450999-3qup3heki",
+      "type": "host",
+      "children": [
+        {
+          "id": "462dcc0c-10d9-47ed-8f02-f8a54de5c786",
+          "type": "region",
+          "children": [
+            {
+              "id": "ad9b8ba7-f464-47a4-af29-0041659d32df",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763459020003-rcth8eih2",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763409673202-4bytdp25v",
-    "loc-1763383500556-yi5z183jh"
+    "loc-1763456450999-3qup3heki",
+    "loc-1763456358444-hq275hwva"
   ]
 }
