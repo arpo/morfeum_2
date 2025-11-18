@@ -10,6 +10,9 @@
  * @returns Creativity-specific instruction text
  */
 export function getCreativityInstructions(level: number): string {
+
+  if(level === 0) return '';
+
   if (level < 0.3) {
     // Conservative: Stay very close to parent
     return `CREATIVE NICHE GENERATION (CONSERVATIVE - Level ${level.toFixed(1)}):
