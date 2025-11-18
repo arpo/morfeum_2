@@ -1,383 +1,250 @@
 {
   "nodes": {
-    "loc-1763498775157-x3955vty1": {
-      "id": "loc-1763498775157-x3955vty1",
+    "loc-1763500317740-jheuuhxkp": {
+      "id": "loc-1763500317740-jheuuhxkp",
       "type": "host",
-      "name": "The Spectral Plains",
+      "name": "Ice Planet Xylos",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Vast, open landscapes with unusual geological formations and an ever-present, otherworldly haze. Structures are often ancient or appear to be fading in and out of existence. The sky is a muted, perpetual twilight.",
-        "colorsAndLighting": "Dominated by cool, desaturated blues, greys, and muted purples. Lighting is dim, diffuse, and often emanates from unseen sources, creating long, distorted shadows. Highlights are scarce and often have an unnatural glow.",
-        "atmosphere": "The air is unnervingly still and carries a perpetual chill. A thin, ethereal mist frequently blankets the land, obscuring distances and creating a sense of isolation. The atmosphere is heavy with the palpable presence of the unseen.",
-        "materials": "Primarily composed of ancient, weathered stone, petrified wood, and spectral mists. Surfaces appear eroded and possess an aged, almost forgotten quality. Accents of shimmering, incorporeal energy are sometimes visible.",
-        "mood": "A pervasive sense of melancholy, mystery, and unease pervades the Spectral Plains. There's a feeling of being constantly watched and a profound sense of history and loss.",
-        "sounds": "Faint whispers, distant echoes, mournful winds, spectral hums, soft creaking.",
-        "spatialLayout": "Expansive and often disorienting, with paths that seem to lead nowhere or shift unexpectedly. Landmarks can appear and disappear, and the sense of scale can be difficult to ascertain due to atmospheric effects.",
+        "looks": "Vast, desolate landscapes dominated by ice and snow, with towering glaciers and occasional stark rock formations. The sky is often filled with ethereal auroral displays. Life, where it exists, is adapted to extreme cold.",
+        "colorsAndLighting": "A predominantly cool color palette of blues, whites, and greys. Lighting is often diffused and dim, punctuated by the vibrant, shifting colors of the aurora or the stark glare of ice.",
+        "atmosphere": "Extremely cold and thin atmosphere. Visibility can be poor due to blizzards and pervasive mist or fog. The air carries a biting chill and the stillness of a frozen world.",
+        "materials": "Dominated by ice, snow, and frost-covered rock. Any manufactured structures would be heavily weathered and show signs of extreme cold degradation.",
+        "mood": "Isolated, harsh, and awe-inspiring. A sense of grand scale and formidable natural power pervades the environment.",
+        "sounds": "Wind howling, ice cracking, distant creaks, muffled thuds, faint hums.",
+        "spatialLayout": "Expansive, open plains, deep valleys, and imposing mountain ranges. Settlements or points of interest are often few and far between, dictated by geothermal activity or strategic positioning.",
         "primary_surfaces": [
-          "weathered stone",
-          "petrified wood"
+          "Ice",
+          "Snow",
+          "Frozen rock"
         ],
         "secondary_surfaces": [
-          "spectral mist",
-          "eroded earth"
+          "Frost",
+          "Permafrost"
         ],
         "accent_features": [
-          "glowing runes",
-          "fading structures",
-          "whispering flora"
+          "Ice caves",
+          "Crystal formations",
+          "Aurora borealis"
         ],
-        "dominant": "cool blue",
-        "secondary": "muted grey",
-        "accent": "pale violet",
-        "ambient": "cool",
-        "genre": "fantasy",
-        "architectural_tone": "ancient, decaying, spectral",
-        "cultural_tone": "forgotten, mournful, spectral",
-        "materials_base": "stone, spectral energy, mist",
-        "mood_baseline": "melancholic, mysterious, eerie",
-        "palette_bias": "cool, desaturated, muted",
-        "soundscape_base": "whispers, echoes, spectral ambience",
-        "flora_base": "whispering, spectral, petrified",
-        "fauna_base": "spectral, ethereal, incorporeal"
+        "dominant": "Blue",
+        "secondary": "White",
+        "accent": "Grey",
+        "ambient": "Cool",
+        "genre": "sci-fi",
+        "architectural_tone": "functional, utilitarian, survival-focused",
+        "cultural_tone": "harsh, resilient, isolated",
+        "materials_base": "ice, weathered metals, stone",
+        "mood_baseline": "desolate, challenging, majestic",
+        "palette_bias": "cool-dominant, desaturated",
+        "soundscape_base": "sparse, wind-driven, elemental",
+        "flora_base": "cryophilic mosses, lichen, hardy fungi",
+        "fauna_base": "thick-furred predators, ice-burrowing creatures, adapted avians"
       },
       "imagePath": "",
       "navigableElements": [],
       "dominantElements": [
-        "Ethereal mist",
-        "Whispering winds",
-        "Unsettling silence"
+        "Frozen oceans",
+        "Glacial mountain ranges",
+        "Subterranean thermal vents"
       ],
       "uniqueIdentifiers": [
-        "Thin veil",
-        "Lingering spirits"
+        "Auroral sky phenomena",
+        "Unique ice crystal formations",
+        "Low atmospheric pressure"
       ],
-      "slug": "the-spectral-plains",
-      "searchDesc": "A mystical realm where the boundaries between the living and spectral worlds blur."
+      "slug": "ice-planet-xylos",
+      "searchDesc": "A frozen planet with vast snowfields, glacial mountains, and auroral skies."
     },
-    "df73a47c-05c6-4f00-abe7-d1f13c8957c4": {
-      "id": "df73a47c-05c6-4f00-abe7-d1f13c8957c4",
+    "c14dd0ac-c3cc-4a36-b5ca-6c55dac95a9f": {
+      "id": "c14dd0ac-c3cc-4a36-b5ca-6c55dac95a9f",
       "type": "region",
-      "name": "Whispering Woods",
+      "name": "Frozen Tundra",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Towering, gnarled trees with dark, twisted branches that form a dense canopy, blocking out most light. The ground is carpeted with thick, damp moss and fallen leaves. The air is thick with mist.",
-        "colorsAndLighting": "A palette of deep greens, oppressive browns, and dark greys. The lighting is perpetually dim, a deep twilight filtered through the thick canopy, with an occasional eerie glow from phosphorescent fungi.",
-        "atmosphere": "An overwhelming sense of stillness and quiet pervades the forest, broken only by the phantom sounds of the wind. The air is heavy, damp, and carries the scent of decay and damp earth, with a palpable, chilling presence.",
-        "materials": "Primarily composed of dark, ancient wood, thick moss, damp earth, and decaying leaves. Interspersed are rough-hewn stones and strange, phosphorescent growths.",
-        "mood": "Oppressive, claustrophobic, and deeply unsettling. The silence is more unnerving than noise, and the feeling of being watched is constant.",
-        "sounds": "Distant whispers, phantom rustling, creaking branches, soft dripping, unseen movement.",
-        "spatialLayout": "Dense and labyrinthine, with paths that are difficult to discern and often lead in circles. The close proximity of the trees creates a sense of enclosure and disorientation.",
+        "looks": "Vast, undulating plains covered in deep snowdrifts, punctuated by exposed rocky outcrops and sparse, hardy vegetation. The horizon is often blurred by mist and blowing snow.",
+        "colorsAndLighting": "Dominated by muted greys and whites from the snow and overcast sky, with occasional dark browns or greens from exposed rock and vegetation. Light is soft and diffused, making shadows indistinct.",
+        "atmosphere": "Bitterly cold and dry, with constant, biting winds that whip snow into blizzards. Visibility is often severely limited by fog and blowing snow, creating a sense of being lost.",
+        "materials": "Primarily packed snow and ice, with exposed, weathered rock. Any organic matter is frozen and brittle.",
+        "mood": "Bleak, isolating, and challenging. A sense of endurance and struggle against the elements.",
+        "sounds": "Wind whistling, snow crunching, distant groans of shifting ice, occasional animal cries.",
+        "spatialLayout": "Open, featureless expanses that stretch to the horizon, with subtle variations in elevation due to snowdrifts and occasional rocky terrain.",
         "primary_surfaces": [
-          "ancient wood",
-          "damp moss"
+          "Snow",
+          "Ice",
+          "Rock"
         ],
         "secondary_surfaces": [
-          "decaying leaves",
-          "dark earth"
+          "Frozen soil",
+          "Tundra vegetation"
         ],
         "accent_features": [
-          "phosphorescent fungi",
-          "gnarled roots",
-          "shadowy clearings"
+          "Wind-carved ice sculptures",
+          "Frozen animal tracks",
+          "Scattered debris"
         ],
-        "dominant": "deep green",
-        "secondary": "dark brown",
-        "accent": "muted purple",
-        "ambient": "cool",
+        "dominant": "Grey",
+        "secondary": "White",
+        "accent": "Brown",
+        "ambient": "Cool",
         "genre": null,
         "architectural_tone": null,
         "cultural_tone": null,
-        "materials_base": "dark wood, moss, earth",
-        "mood_baseline": "oppressive, claustrophobic, unnerving",
-        "palette_bias": "dark greens, deep browns, muted tones",
-        "soundscape_base": "silence, subtle rustling, phantom whispers",
-        "flora_base": "ancient trees, dense undergrowth, phosphorescent fungi",
-        "fauna_base": "shadow dwelling creatures, unseen entities"
+        "materials_base": null,
+        "mood_baseline": "harsh, survivalist",
+        "palette_bias": "muted, desaturated",
+        "soundscape_base": "wind-dominated, sparse",
+        "flora_base": "low-lying, hardy grasses, lichen, moss",
+        "fauna_base": "small, furred mammals, migratory birds"
       },
       "imagePath": "",
       "navigableElements": [],
       "dominantElements": [
-        "Twisted trees",
-        "Dense undergrowth",
-        "Perpetual twilight"
+        "Snow drifts",
+        "Rocky outcrops",
+        "Frozen soil"
       ],
       "uniqueIdentifiers": [
-        "Unnatural silence",
-        "Shadowy paths"
+        "Frequent blizzards",
+        "Sparse vegetation",
+        "Low visibility"
       ],
-      "slug": "whispering-woods",
-      "searchDesc": "An ancient forest filled with silent, unnerving trees and an atmosphere of perpetual twilight."
+      "slug": "frozen-tundra",
+      "searchDesc": "Windswept, snow-covered plains with sparse life and frequent blizzards."
     },
-    "98ea6ccf-2e55-4eaf-82f8-3842477b5306": {
-      "id": "98ea6ccf-2e55-4eaf-82f8-3842477b5306",
+    "b639b6bf-353d-4787-8383-68b6da559014": {
+      "id": "b639b6bf-353d-4787-8383-68b6da559014",
       "type": "location",
-      "name": "The Grim Manor",
+      "name": "The Sunken Vessel",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A grand, imposing mansion with sharp gables and a central tower dominates the scene. Its facade appears weathered, with dark stone or siding. Many windows are visible, some appearing dark and vacant, others emitting a faint interior light. A wide porch wraps around the lower level, supported by slender pillars. The structure exhibits classic Gothic architectural elements, including pointed arches and decorative finials atop the gables and tower. Bare tree branches frame the edges of the house and extend into the misty background.",
-        "colorsAndLighting": "The lighting is dim and cool, with the primary illumination emanating from a single warm, yellow light fixture above the front entrance. Other windows glow with a soft, diffused amber light, creating small points of warmth against the cool, blue-toned ambient light. Contrast is low due to the pervasive mist, creating a softened, diffused visual.",
-        "atmosphere": "A dense, ethereal mist permeates the environment, obscuring the edges of the scene and lending an otherworldly quality. The air appears still and heavy, suggesting a palpable chill and the faint scent of damp earth.",
-        "materials": "The primary materials are dark stone or siding for the house's facade, with secondary materials of wood for the porch and structural elements, and shingles for the roof. Decorative elements are often made of decaying wood or weathered metal.",
-        "mood": "A profound sense of decay, past grandeur, and lingering sorrow. The mansion feels abandoned yet somehow occupied, exuding an aura of tragic history and spectral presence.",
-        "sounds": "Distant creaking, faint moans, rustling wind, spectral whispers, dripping water.",
-        "spatialLayout": "The foreground features a gravel pathway leading directly towards the center of the frame. To the left and right, large, bare trees frame the approach. The midground is occupied by the Grim Manor, a substantial structure with a prominent porch. The background consists of an expanse of mist and indistinct, darker shapes of trees and foliage, creating a sense of depth and mystery.",
-        "primary_surfaces": "stone",
-        "secondary_surfaces": "wood, shingles",
-        "accent_features": "glass, gravel",
-        "dominant": "dark grey (house facade)",
-        "secondary": "dark blue (sky, mist, trees)",
-        "accent": "warm yellow/amber (interior lights)",
-        "ambient": "cool blue",
+        "looks": "A massive, elongated, cylindrical alien vessel is partially submerged in snow drifts across a desolate, frozen landscape. The vessel's hull appears heavily oxidized and encrusted with ice, displaying a weathered, metallic texture. Several circular indentations and raised sections are visible on its surface, suggesting complex alien architecture. A large, arched opening on the vessel's side emits a strong, fiery orange light, serving as the primary focal point. The scene is dominated by the sheer scale of the wreckage against the vast, featureless expanse.",
+        "colorsAndLighting": "The scene is illuminated by a cool, diffused light emanating from the sky, casting soft shadows. This ambient light is dramatically contrasted by the intense, warm orange glow radiating from an opening in the vessel. The contrast between the cold, desaturated environment and the hot, vibrant interior light creates a striking visual tension.",
+        "atmosphere": "A thick, pervasive mist or fog hangs in the air, obscuring distant details and creating a sense of isolation. The air appears clear in the immediate vicinity of the vessel but fades into a uniform haze further out. The overall impression is one of extreme cold and stillness, with the mist amplifying the feeling of mystery.",
+        "materials": "The primary material is heavily oxidized, weathered metal forming the vessel's hull. This is contrasted by the pervasive presence of snow and ice, which cling to and partially conceal the structure.",
+        "mood": "Mysterious, intriguing, and slightly ominous. The immense scale of the wreckage and the stark contrast in lighting evoke a sense of discovery and potential danger.",
+        "sounds": "Wind hissing, snow shifting, faint metallic groans, muffled echoes from within, a low, resonant hum.",
+        "spatialLayout": "The foreground is characterized by undulating snowdrifts and tire tracks suggesting a path leading towards the vessel. The midground is dominated by the immense, partially buried alien vessel, which stretches horizontally across the scene and recedes into the background. The background is an undifferentiated expanse of mist and snow, offering no discernible landmarks or depth.",
+        "primary_surfaces": "Metal (oxidized vessel hull)",
+        "secondary_surfaces": "Snow, ice",
+        "accent_features": "Internal orange light",
+        "dominant": "Grey (vessel hull, snow)",
+        "secondary": "White (snow drifts, mist)",
+        "accent": "Orange (interior light)",
+        "ambient": "Pale blue, white",
         "genre": null,
-        "architectural_tone": "Gothic, dilapidated, imposing",
-        "cultural_tone": "tragic history, forgotten aristocracy",
-        "materials_base": "stone, dark wood, aged metal",
-        "mood_baseline": "melancholic, haunting, sorrowful",
-        "palette_bias": "dark neutrals, desaturated blues, warm accents",
-        "soundscape_base": "creaks, moans, ambient whispers",
-        "flora_base": "bare, skeletal trees",
-        "fauna_base": "spectral entities, unseen presences"
+        "architectural_tone": "alien, non-terrestrial",
+        "cultural_tone": "unknown, technological",
+        "materials_base": "oxidized alloys, ice",
+        "mood_baseline": "enigmatic, imposing",
+        "palette_bias": "high contrast, desaturated primary with vibrant accent",
+        "soundscape_base": "quiet, atmospheric, with subtle mechanical undertones",
+        "flora_base": "None",
+        "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/lion/zElAwEPIb142TM3CHJEs5.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/zebra/LhFF3zOyviO5BX5Y2guuM.jpg",
       "navigableElements": [
         {
           "type": "door",
-          "position": "center of porch, midground",
-          "description": "Double wooden doors under a lit overhang."
-        },
-        {
-          "type": "stairs",
-          "position": "leading to the porch, midground",
-          "description": "Stone steps ascend to the porch."
-        },
-        {
-          "type": "window",
-          "position": "various levels of the manor, midground",
-          "description": "Rectangular windows, some showing faint interior light."
+          "position": "midground, center",
+          "description": "Large, arched opening in the vessel emitting intense orange light"
         }
       ],
       "dominantElements": [
-        "Grim Manor (est. 25m tall, 30m wide, WIDE STRUCTURE)",
-        "Tower with spire (est. 35m tall, VERTICAL STRUCTURE)",
-        "Bare trees on left and right sides (foreground/midground)",
-        "Gravel driveway (foreground)"
+        "Massive, oxidized alien vessel (extends across midground and background)",
+        "Snow drifts (foreground and obscuring vessel base)",
+        "Fiery orange interior light (visible through vessel opening, midground)"
       ],
       "uniqueIdentifiers": [
-        "Ornate central tower with spire and cross finial",
-        "Wrap-around porch with decorative pillars",
-        "Gabled rooflines with cross finials"
+        "Oxidized, partially snow-buried alien vessel",
+        "Intense internal orange glow emanating from vessel",
+        "Tire tracks on frozen tundra"
       ],
-      "slug": "the-grim-manor",
-      "searchDesc": "[Location - Exterior] Dilapidated Gothic manor. Has: front door (center, midground), stairs (midground), windows (midground)"
+      "slug": "the-sunken-vessel",
+      "searchDesc": "[Location - Exterior] Alien wreckage on frozen tundra. Has: arched opening (midground, center)"
     },
-    "niche-1763498829322-a1yvhpylk": {
-      "id": "niche-1763498829322-a1yvhpylk",
+    "niche-1763500389107-i0hyg4jlu": {
+      "id": "niche-1763500389107-i0hyg4jlu",
       "type": "niche",
-      "name": "interior of The Grim Manor",
+      "name": "interior of The Sunken Vessel",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, cavernous foyer dominated by Gothic architecture. Towering, vaulted ceilings of dark, aged wood crisscross with heavy beams, while rough-hewn dark grey stone walls feature alcoves. A grand, carved oak staircase ascends to the left, and a monumental, skeletal-etched brass archway is partially open to the right.",
-        "colorsAndLighting": "The space is rendered in desaturated blues and deep, muted earth tones, with faint shafts of light illuminating dust motes. A sliver of deep indigo darkness with a spectral glow emanates from beyond the archway, and cool blue light hints at deeper chambers.",
-        "atmosphere": "The air hangs heavy with a melancholic stillness. A profound sense of decay and past grandeur permeates the space, with dust motes dancing in faint light suggesting an untouched, abandoned stillness.",
-        "materials": "Dominant materials include dark, aged wood for the vaulted ceilings and carved oak for the staircase. Walls are of rough-hewn, dark grey stone, with a tarnished brass frame for the archway. The flagstone floor is cracked and uneven.",
-        "mood": "Sorrowful grandeur and haunting echoes of a forgotten era define the mood.",
-        "sounds": "Melancholic stillness, faint whispers of decay, dust settling.",
-        "spatialLayout": "A vast, cavernous foyer with immense height. A central hall recedes into oppressive gloom, anchored by structural elements like the vaulted ceiling and alcoves.",
-        "primary_surfaces": "Vaulted wood ceiling, rough-hewn dark grey stone walls, cracked flagstone floor.",
-        "secondary_surfaces": "Carved oak banister, tarnished brass archway frame, shrouded furniture, darkened portraits, tattered velvet runner.",
-        "accent_features": "Intricately carved oak banister, skeletal motifs on archway, spectral glow from beyond the doorway.",
-        "dominant": "dark grey (stone walls)",
-        "secondary": "dark earth tones (wood, furniture, runner)",
-        "accent": "deep indigo (beyond archway), faint cool blue light, stark gleam of aged metal",
-        "ambient": "cool",
+        "looks": "The immense cavernous interior is dominated by vast, interlocking panels of verdigris-stained oxidized alloys, forming walls that curve into a colossal, segmented dome overhead. Towering, rib-like support structures ascend from the walls, converging towards the distant ceiling, interspersed with dark openings leading into deeper vessel sections. Jagged floor plates and scattered debris litter the foreground.",
+        "colorsAndLighting": "A pervasive, low-intensity fiery orange glow emanates from recessed fixtures and etched wall patterns, casting a warm but eerie light that refracts through crystalline ice formations. Dominant grays of the metal are accented by the orange and amber luminescence.",
+        "atmosphere": "The air feels still and heavy, thick with fine dust and the faint scent of ancient metal and cold. The overwhelming scale and diffused light create a profound sense of depth and mystery, hinting at the vessel's lost purpose and immense history.",
+        "materials": "Primary materials are deeply oxidized, verdigris-stained alloys with a pitted, weathered finish, forming walls, floor plates, and structural supports. Crystalline ice formations cling to the upper reaches, contrasting with the dark, fractured metal.",
+        "mood": "Mysterious and intriguing, with an undercurrent of awe at the immense scale and a touch of ominousness due to the unknown nature of the vessel and its remnants.",
+        "sounds": "Distant drips, low hum, faint crackling ice, echoed stillness.",
+        "spatialLayout": "A vast, cavernous chamber with a high, domed ceiling and a vanishing point at immense distance. Entryways are through irregularly shaped openings and a prominent ramp in the foreground, with towering structural elements defining the midground.",
+        "primary_surfaces": "Oxidized, verdigris-stained alloy walls, floors, and ceiling segments.",
+        "secondary_surfaces": "Crystalline ice formations, alien debris fragments.",
+        "accent_features": "Recessed orange light fixtures, pulsing orange ramp lights, etched geometric patterns with amber luminescence, heat-haze effect in a portal.",
+        "dominant": "Grey (vessel hull, metal structure, floor)",
+        "secondary": "Fiery orange (lighting, recessed fixtures, ramp illumination)",
+        "accent": "Verdigris (alloy staining), amber (etched patterns), white/translucent (ice)",
+        "ambient": "Warm",
         "genre": null,
-        "architectural_tone": "Gothic, dilapidated, imposing",
-        "cultural_tone": "Tragic history, forgotten aristocracy",
-        "materials_base": "aged wood, rough stone, tarnished metal",
-        "mood_baseline": "A profound sense of decay, past grandeur, and lingering sorrow.",
-        "palette_bias": "desaturated blues, deep muted earth tones",
-        "soundscape_base": null,
+        "architectural_tone": "alien metallic monolithic",
+        "cultural_tone": "An ancient, technologically advanced civilization, with a purpose and aesthetic beyond human comprehension.",
+        "materials_base": "Heavily weathered and oxidized metals, crystalline structures.",
+        "mood_baseline": "Mysterious, intriguing, ominous, awe-inspiring.",
+        "palette_bias": "Muted industrial tones with warm, low-intensity accent lighting.",
+        "soundscape_base": "Echoey, sparsely populated ambient industrial.",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/xAPhpqety7AoXgaVqN3y5.jpg",
-      "description": "The foyer of The Grim Manor, a vast, cavernous Gothic space.",
+      "imagePath": "https://v3b.fal.media/files/b/panda/BjfDusuDnqtAjBGirFJ-P.jpg",
+      "description": "A vast, cavernous chamber within an alien vessel, characterized by oxidized metallic walls, colossal ribbed structures, and an immense, ice-laden dome.",
       "navigableElements": [
         {
-          "type": "staircase",
-          "position": "left",
-          "description": "Grand, intricately carved oak banister of a sweeping staircase with a tattered velvet runner."
+          "type": "ramp",
+          "position": "foreground, left",
+          "description": "A narrow, steeply inclined ramp constructed from oxidized alloy, ascending into the midground, softly illuminated by pulsing orange lights."
         },
         {
-          "type": "arched doorway",
-          "position": "right",
-          "description": "Monumental, arched doorway with tarnished brass frame, partially ajar, revealing indigo darkness."
+          "type": "portal",
+          "position": "midground, ahead and slightly right",
+          "description": "A large, irregularly shaped opening leading into a darker section of the vessel, displaying a shimmering heat-haze effect."
         },
         {
-          "type": "hall",
-          "position": "far center",
-          "description": "Shadowed hall receding into oppressive gloom."
+          "type": "passage",
+          "position": "midground, between ribbed structures",
+          "description": "Large, irregularly shaped openings leading into deeper, darker sections of the vessel."
         }
       ],
       "dominantElements": [
-        "Vaulted ceilings",
-        "Rough-hewn stone walls",
-        "Sweeping staircase",
-        "Arched doorway",
-        "Grandfather clock"
+        "colossal segmented dome ceiling",
+        "towering ribbed support structures",
+        "interlocking oxidized alloy wall panels",
+        "crystalline ice formations"
       ],
       "uniqueIdentifiers": [
-        "vaulted ceilings of dark, aged wood",
-        "rough-hewn, dark grey stone walls",
-        "skeletal motifs on archway frame",
-        "tattered velvet runner on staircase"
+        "verdigris-stained alloys",
+        "colossal skeletal rib-like supports",
+        "shimmering heat-haze portal",
+        "geometric etched patterns",
+        "thick crystalline ice formations"
       ],
-      "searchDesc": "Vast, cavernous Gothic foyer with dark wood ceilings, grey stone walls, and a sweeping staircase.",
-      "slug": "interior-of-the-grim-manor"
-    },
-    "niche-1763498922963-5jyua593i": {
-      "id": "niche-1763498922963-5jyua593i",
-      "type": "niche",
-      "name": "Upper level via upstairs",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, cavernous foyer with towering, vaulted ceilings of dark, aged wood. Rough-hewn dark grey stone walls feature deep, shadowy alcoves. To the left, a grand, carved oak staircase ascends into darkness, while a monumental, skeletal-etched brass archway stands partially open to the right.",
-        "colorsAndLighting": "The scene is dominated by oppressive gloom and dark grey stone, with accents of dark aged wood. Lighting is dim, casting deep shadows.",
-        "atmosphere": "The air is thick with a profound sense of decay and latent sorrow. It feels cold, still, and heavy with the weight of past grandeur.",
-        "materials": "The primary materials are rough-hewn dark grey stone for the walls and dark, aged wood for the towering vaulted ceilings and grand staircase. A skeletal-etched brass archway adds a metallic, ominous detail.",
-        "mood": "This place evokes a powerful feeling of desolation, past opulence, and lingering tragedy.",
-        "sounds": "Distant echoes, creaking wood, faint drafts.",
-        "spatialLayout": "The foyer is immense and cavernous, defined by its immense height and oppressive gloom. The central space recedes, with a grand staircase to the left and an archway to the right.",
-        "primary_surfaces": "Rough-hewn dark grey stone, dark aged wood",
-        "secondary_surfaces": "Carved oak (staircase), skeletal-etched brass (archway)",
-        "accent_features": "Monumental skeletal-etched brass archway, deep shadowy alcoves",
-        "dominant": "dark grey (walls, ~60%)",
-        "secondary": "dark wood (ceilings, staircase, ~30%)",
-        "accent": "brass (archway, ~10%)",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "Gothic, dilapidated, imposing",
-        "cultural_tone": "Tragic history, forgotten aristocracy",
-        "materials_base": "aged wood, rough stone, tarnished metal",
-        "mood_baseline": "decay, past grandeur, sorrow",
-        "palette_bias": "desaturated darks, oppressive greys",
-        "soundscape_base": "subdued, echoing, ambient",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/lion/EPkHZjqTkx5UDn02STs5G.jpg",
-      "description": "A vast, cavernous foyer of The Grim Manor, marked by oppressive gloom and decaying grandeur.",
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "left",
-          "description": "A grand, carved oak staircase ascending into darkness."
-        },
-        {
-          "type": "archway",
-          "position": "right, partially open",
-          "description": "A monumental, skeletal-etched brass archway hinting at further passages."
-        }
-      ],
-      "dominantElements": [
-        "vaulted ceilings",
-        "stone walls",
-        "oak staircase",
-        "brass archway"
-      ],
-      "uniqueIdentifiers": [
-        "skeletal-etched brass archway",
-        "rough-hewn dark grey stone walls",
-        "towering vaulted ceilings"
-      ],
-      "searchDesc": "Cavernous Gothic foyer with dark wood ceilings, grey stone walls, and a grand staircase.",
-      "slug": "upper-level-via-upstairs"
-    },
-    "niche-1763499086892-jbcpmljw4": {
-      "id": "niche-1763499086892-jbcpmljw4",
-      "type": "niche",
-      "name": "interior of Upper level via upstairs",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, oppressive hall defined by soaring, dark, time-worn wooden vaulted ceilings that disappear into shadow. Rough, dark grey stone walls are punctuated by unsettling alcoves. A grand oak staircase curves left, and a brass archway with a skeletal motif stands ahead.",
-        "colorsAndLighting": "Dominated by dark greys and deep browns, with sparse, ethereal light illuminating the staircase and a cool blue light spilling from the archway. Dust motes dance in the faint illumination.",
-        "atmosphere": "The air is heavy and melancholic, thick with a sense of profound decay and forgotten opulence. A palpable aura of tragic history and spectral presence pervades the enclosed space.",
-        "materials": "The primary materials are time-worn, dark wood for the vaulted ceiling and rough, dark grey stone for the walls and uneven floor. Polished dark oak forms the staircase banister, contrasting with the monumental brass of the archway.",
-        "mood": "Evokes a profound sense of decay, past grandeur, and lingering sorrow, with an unsettling aura of spectral presence.",
-        "sounds": "Distant creaks, faint echoes, settling dust, unseen whispers",
-        "spatialLayout": "A cavernous, enclosed hall with a strict one-point perspective vanishing point. The space stretches into an indeterminate distance, with the primary focal points being the staircase and the archway.",
-        "primary_surfaces": "Dark, time-worn wood (ceiling), Rough dark grey stone (walls, floor)",
-        "secondary_surfaces": "Polished dark oak (staircase banister), Brass (archway)",
-        "accent_features": "Intricately carved oak staircase, Skeletal motif on brass archway, Deep, unsettling alcoves",
-        "dominant": "dark grey (walls, floor)",
-        "secondary": "dark brown (ceiling, staircase)",
-        "accent": "brass (archway), cool blue light (from archway)",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "Gothic, dilapidated, imposing",
-        "cultural_tone": "Tragic history, forgotten aristocracy",
-        "materials_base": "Stone, dark wood, aged metal",
-        "mood_baseline": "Profound decay, past grandeur, lingering sorrow",
-        "palette_bias": "Desaturated, dark tones",
-        "soundscape_base": "Subtle ambient decay",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/ntn4CsU-H1ro4GKc0cr9l.jpg",
-      "description": "A grand, oppressive interior hall with vaulted ceilings, rough stone walls, and a prominent oak staircase leading upwards.",
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "left",
-          "description": "Magnificent, intricately carved oak staircase spiraling upwards."
-        },
-        {
-          "type": "archway",
-          "position": "ahead",
-          "description": "Monumental brass archway etched with a skeletal motif, partially ajar, revealing a dimly lit passage."
-        }
-      ],
-      "dominantElements": [
-        "Vaulted wooden ceiling",
-        "Rough dark grey stone walls",
-        "Oak staircase",
-        "Brass archway"
-      ],
-      "uniqueIdentifiers": [
-        "Skeletal motif on brass archway",
-        "Intricately carved oak staircase",
-        "Vaulted wooden ceiling receding into shadow"
-      ],
-      "searchDesc": "Grand, oppressive interior hall with vaulted wood ceilings, stone walls, oak stairs, and skeletal archway.",
-      "slug": "interior-of-upper-level-via-upstairs"
+      "searchDesc": "Cavernous alien vessel interior with oxidized metal, ice, orange glow, and colossal scale.",
+      "slug": "interior-of-the-sunken-vessel"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1763498775157-x3955vty1",
+      "id": "loc-1763500317740-jheuuhxkp",
       "type": "host",
       "children": [
         {
-          "id": "df73a47c-05c6-4f00-abe7-d1f13c8957c4",
+          "id": "c14dd0ac-c3cc-4a36-b5ca-6c55dac95a9f",
           "type": "region",
           "children": [
             {
-              "id": "98ea6ccf-2e55-4eaf-82f8-3842477b5306",
+              "id": "b639b6bf-353d-4787-8383-68b6da559014",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763498829322-a1yvhpylk",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1763498922963-5jyua593i",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1763499086892-jbcpmljw4",
+                  "id": "niche-1763500389107-i0hyg4jlu",
                   "type": "niche",
                   "children": []
                 }
@@ -389,6 +256,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763498775157-x3955vty1"
+    "loc-1763500317740-jheuuhxkp"
   ]
 }

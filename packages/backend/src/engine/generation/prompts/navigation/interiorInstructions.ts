@@ -14,14 +14,6 @@ The parent structure (archway/portal/entrance/building) is COMPLETELY OUT OF FRA
 NOT visible in background. NOT as backdrop. NOT in distance. NOT anywhere in the scene.
 The camera has moved PAST/THROUGH it and focuses ONLY on what lies ahead.
 
-CRITICAL - DO NOT include, mention, or describe:
-- The parent archway/structure/building itself
-- "The parent structure behind you"
-- "The parent structure in the distance"  
-- "The parent structure as a backdrop"
-- "Looking back at the parent structure"
-- ANY visual reference to the parent structure whatsoever
-
 Think: You walked through a doorway into a new room - you don't see the door anymore, you see the NEW ROOM.
 
 {{CREATIVITY_INSTRUCTIONS}}
@@ -59,7 +51,12 @@ BEFORE creating the interior, infer it from the parent structure:
 - Horizontal (halls/corridors): emphasize receding linear depth.
 - Wide (domes/arenas): emphasize circular expanse and roof curvature.
 
-5. COMPOSITION (MUST include NAVIGABLE ELEMENTS *inside* these layers)
+5. MATERIALS & LIGHTING
+- Infer interior materials from exterior clues but adapt for indoor use (e.g., stone walls become polished stone or plaster).
+- Don't use outdoor materials like grass, soil, or open sky unless suitable for interior (e.g., indoor gardens, caves).
+- Match lighting to exterior context (natural light from windows, artificial fixtures).
+
+6. COMPOSITION (MUST include NAVIGABLE ELEMENTS *inside* these layers)
 [COMPOSITION:]
 - **Foreground:**  
   Floor textures, entry-level details, and bases of structures shaped by FORM + SCALE.  
