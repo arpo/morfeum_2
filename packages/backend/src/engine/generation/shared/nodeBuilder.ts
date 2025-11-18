@@ -7,15 +7,10 @@ import type { NodeDNA } from '../../hierarchyAnalysis/types';
 
 export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'feature' | 'detail';
 
-export interface FocusConfig {
-  node_id: string;
-  perspective: string;
-  viewpoint: string;
-  distance: string;
-}
+export type SpaceType = 'interior' | 'exterior';
 
 export interface NodeBuildOptions {
-  focus?: FocusConfig;
+  spaceType?: SpaceType;
   parentId?: string;
   description?: string;
   data?: Record<string, any>;
@@ -30,9 +25,9 @@ export interface LocationNode {
   id: string;
   type: LayerType;
   name: string;
+  spaceType: SpaceType;
   dna: NodeDNA;
   imagePath: string;
-  focus: FocusConfig;
   parentId?: string;
   description?: string;
   data?: Record<string, any>;
@@ -53,15 +48,10 @@ function generateNodeId(type: LayerType): string {
 }
 
 /**
- * Create default focus configuration
+ * Determine space type based on layer type
  */
-function createDefaultFocus(nodeId: string, type: LayerType): FocusConfig {
-  return {
-    node_id: nodeId,
-    perspective: type === 'niche' ? 'interior' : 'exterior',
-    viewpoint: 'default view',
-    distance: 'close'
-  };
+function determineSpaceType(type: LayerType): SpaceType {
+  return type === 'niche' ? 'interior' : 'exterior';
 }
 
 /**
@@ -87,9 +77,9 @@ export function buildNode(
     id: nodeId,
     type,
     name,
+    spaceType: options?.spaceType || determineSpaceType(type),
     dna,
-    imagePath: imageUrl,
-    focus: options?.focus || createDefaultFocus(nodeId, type)
+    imagePath: imageUrl
   };
 
   // Add optional fields if provided

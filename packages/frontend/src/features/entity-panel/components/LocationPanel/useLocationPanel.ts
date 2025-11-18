@@ -3,7 +3,6 @@ import { useLocationsStore } from '@/store/slices/locations';
 import { useStore } from '@/store';
 import { useEntityPanelBase } from '../../hooks/useEntityPanelBase';
 import type { LocationPanelLogicReturn } from './types';
-import { updateFocus } from '@/utils/locationFocus';
 import {
   buildCurrentLocationDetails,
   buildSpatialNodes,
@@ -28,7 +27,6 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   // Store methods
   const getNode = useLocationsStore(state => state.getNode);
   const getSpatialNodes = useLocationsStore(state => state.getSpatialNodes);
-  const updateNodeFocus = useLocationsStore(state => state.updateNodeFocus);
   const getCascadedDNA = useLocationsStore(state => state.getCascadedDNA);
   const worldTrees = useLocationsStore(state => state.worldTrees);
   const startSpawn = useStore(state => state.startSpawn);
@@ -63,14 +61,6 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       // Get cascaded DNA for current node
       const cascadedDNA = getCascadedDNA(currentNode.id);
       
-      // Initialize focus if missing (for later move action)
-      const currentFocus = currentNode.focus || {
-        node_id: currentNode.name,
-        perspective: 'exterior' as const,
-        viewpoint: 'default view',
-        distance: 'medium' as const,
-      };
-      
       // Get spatially connected nodes
       const spatialNodes = getSpatialNodes(currentNode.id);
       
@@ -100,7 +90,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       
       // Handle navigation result
       if (navigation.action === 'move' && navigation.targetNodeId) {
-        await handleMoveAction(navigation, currentFocus);
+        await handleMoveAction(navigation);
       } else if (navigation.action === 'generate') {
         // If backend returned a complete node, save it
         if (navigation.node) {
@@ -129,7 +119,6 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     base.activeChatSession,
     getNode,
     getSpatialNodes,
-    updateNodeFocus,
     getCascadedDNA,
     worldTrees,
     startSpawn,
@@ -141,23 +130,16 @@ export function useLocationPanel(): LocationPanelLogicReturn {
    * Handle 'move' action - navigate to existing node
    */
   const handleMoveAction = useCallback(async (
-    navigation: any,
-    currentFocus: any
+    navigation: any
   ) => {
     const targetNode = getNode(navigation.targetNodeId);
     if (targetNode) {
-      // Update focus to target node
-      const newFocus = updateFocus(currentFocus, navigation.targetNodeId, {
-        perspective: 'exterior'
-      });
-      updateNodeFocus(navigation.targetNodeId, newFocus);
-      
       // Switch active entity to target node
       setActiveEntity(navigation.targetNodeId);
     } else {
       console.warn('[NavigatorAI] ⚠️ Target node not found:', navigation.targetNodeId);
     }
-  }, [getNode, updateNodeFocus, setActiveEntity]);
+  }, [getNode, setActiveEntity]);
 
   /**
    * Handle node creation from backend

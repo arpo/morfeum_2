@@ -5,7 +5,6 @@
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore, Node } from '@/store/slices/locations';
-import { initFocus } from '@/utils/locationFocus';
 import { parseNestedHierarchy } from '@/utils/hierarchyParser';
 
 /**
@@ -153,9 +152,9 @@ export function useSpawnEvents() {
           id: spawnId,
           type: 'host' as any, // Temporary - will be removed in full migration
           name: nodeName,
+          spaceType: 'exterior',
           dna: deepProfile, // Flat NodeDNA structure
-          imagePath: nodeImage,
-          focus: undefined
+          imagePath: nodeImage
         };
         
         createNode(node as any);
@@ -342,9 +341,9 @@ export function useSpawnEvents() {
         id: spawnId,
         type: 'niche',
         name: cleanName,
+        spaceType: 'interior',
         dna: dna,
-        imagePath: imageUrl || '',
-        focus: undefined,
+        imagePath: imageUrl || ''
       };
       
       createNode(nicheNode);
@@ -666,12 +665,9 @@ export function useSpawnEvents() {
           id: spawnId,
           type: 'host' as any,
           name: deepestNode.name,
+          spaceType: 'exterior',
           dna: hierarchy as any,
-          imagePath: imageUrl || '',
-          focus: initFocus({
-            name: deepestNode.name,
-            dna: deepestNode.dna || deepestNode
-          } as any)
+          imagePath: imageUrl || ''
         };
         
         createNode(node as any);

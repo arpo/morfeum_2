@@ -5,7 +5,6 @@
 
 import { v4 as uuidv4 } from 'uuid';
 import type { Node, NodeType, TreeNode } from '@/store/slices/locations';
-import { initFocus } from './locationFocus';
 import { extractCleanDNA } from './nodeDNAExtractor';
 
 export interface ParsedHierarchy {
@@ -32,9 +31,9 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
     id: spawnId,
     type: 'host',
     name: host.name,
+    spaceType: 'exterior',
     dna: extractHostDNA(host), // Returns just host.dna
     imagePath: host.imageUrl || '',
-    focus: initFocus({ name: host.name, dna: host.dna || host } as any),
     // Copy structural fields from backend
     navigableElements: host.navigableElements,
     dominantElements: host.dominantElements,
@@ -60,9 +59,9 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
         id: regionId,
         type: 'region',
         name: region.name,
+        spaceType: 'exterior',
         dna: extractRegionDNA(region), // Returns just region.dna
         imagePath: region.imageUrl || '',
-        focus: initFocus({ name: region.name, dna: region.dna || region } as any),
         // Copy structural fields from backend
         navigableElements: region.navigableElements,
         dominantElements: region.dominantElements,
@@ -88,9 +87,9 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
             id: locationId,
             type: 'location',
             name: location.name,
+            spaceType: 'exterior',
             dna: extractLocationDNA(location), // Returns just location.dna
             imagePath: location.imageUrl || '',
-            focus: initFocus({ name: location.name, dna: location.dna || location } as any),
             // Copy structural fields from backend
             navigableElements: location.navigableElements,
             dominantElements: location.dominantElements,
@@ -116,9 +115,9 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
                 id: nicheId,
                 type: 'niche',
                 name: niche.name,
+                spaceType: 'interior',
                 dna: extractNicheDNA(niche), // Returns just niche.dna
                 imagePath: niche.imageUrl || '',
-                focus: initFocus({ name: niche.name, dna: niche.dna || niche } as any),
                 // Copy structural fields from backend
                 navigableElements: niche.navigableElements,
                 dominantElements: niche.dominantElements,

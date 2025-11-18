@@ -1,37 +1,35 @@
 import { useEffect } from 'react';
 import type { LocationInfoModalProps, LocationInfoLogicReturn } from './types';
-import type { FocusState } from '@/store/slices/locations';
 
 /**
- * Determine which node is currently in focus based on hierarchy structure
+ * Determine which node is currently in view based on hierarchy structure
  */
-export function determineCurrentNode(focus: FocusState | null, profile: any): 'niche' | 'location' | 'region' | 'world' | null {
-  if (!focus || !profile) return null;
+export function determineCurrentNode(nodeId: string | null, profile: any): 'niche' | 'location' | 'region' | 'world' | null {
+  if (!nodeId || !profile) return null;
   
   // Check if flat structure (no hierarchy)
   const isFlat = !profile.world && !profile.region && !profile.location && !profile.niche && profile.looks;
   if (isFlat) return 'location'; // Treat flat as location
   
-  // Match focus.node_id with node names in hierarchy
-  const focusNodeId = focus.node_id;
+  // Match nodeId with node names in hierarchy
   
   // Check niche
-  if (profile.niche?.meta?.name === focusNodeId) {
+  if (profile.niche?.meta?.name === nodeId) {
     return 'niche';
   }
   
   // Check location
-  if (profile.location?.meta?.name === focusNodeId) {
+  if (profile.location?.meta?.name === nodeId) {
     return 'location';
   }
   
   // Check region
-  if (profile.region?.meta?.name === focusNodeId) {
+  if (profile.region?.meta?.name === nodeId) {
     return 'region';
   }
   
   // Check world
-  if (profile.world?.meta?.name === focusNodeId) {
+  if (profile.world?.meta?.name === nodeId) {
     return 'world';
   }
   

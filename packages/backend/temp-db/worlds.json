@@ -1,260 +1,232 @@
 {
   "nodes": {
-    "loc-1763479490120-7n4jv2jkt": {
-      "id": "loc-1763479490120-7n4jv2jkt",
+    "loc-1763484307700-miy28sdqt": {
+      "id": "loc-1763484307700-miy28sdqt",
       "type": "host",
-      "name": "Galactic Expanse",
+      "name": "Galactic Frontier",
+      "spaceType": "exterior",
       "dna": {
-        "looks": "An infinite void punctuated by distant stellar nurseries and swirling cosmic dust. Vastness is the defining characteristic, with no discernible end or center. The scale is incomprehensible, fostering a sense of awe and insignificance.",
-        "colorsAndLighting": "Dominated by deep indigos, purples, and blacks, with occasional vibrant bursts of nebular colors like emerald green and fiery orange. Distant stars provide pinpricks of white and yellow light. The overall palette is dark and cosmic.",
-        "atmosphere": "The air is non-existent in the traditional sense, a vacuum permeated by faint cosmic radiation. Temperature is absolute zero in shadowed regions, intensely hot near stars. There is no weather, only the silent, ceaseless dance of celestial bodies.",
-        "materials": "Primarily composed of vacuum, dark matter, energy fields, and the spectral remnants of stellar matter. Solid matter is rare and often exotic, found in asteroid fields or on celestial bodies.",
-        "mood": "Profoundly awe-inspiring, isolating, and mysterious. It evokes feelings of wonder at the universe's scale and a touch of existential dread regarding humanity's place within it.",
-        "sounds": "Silence, faint hum of cosmic radiation, distant stellar explosions.",
-        "spatialLayout": "An infinite, three-dimensional expanse with no defined boundaries. Navigation is based on celestial coordinates and warp drives, with pockets of stability and instability.",
-        "primary_surfaces": "Vacuum, cosmic dust",
-        "secondary_surfaces": "Nebulous gas, stellar light",
-        "accent_features": "Distant galaxies, accretion disks, black holes",
-        "dominant": "Deep blues and purples",
-        "secondary": "Black and grey",
-        "accent": "Vibrant nebular colors",
-        "ambient": "Cool and ethereal",
+        "looks": "An immense and diverse cosmic tapestry filled with swirling nebulae, distant star systems, and scattered asteroid fields. The environment is largely empty space punctuated by grand celestial phenomena.",
+        "colorsAndLighting": "Dominated by deep blues, purples, and blacks, punctuated by the bright whites and yellows of stars and the vibrant hues of nebulae. Lighting is predominantly ambient and diffuse, with occasional stark stellar illumination.",
+        "atmosphere": "Extremely thin and cold, with the vacuum of space being the primary characteristic. Cosmic dust and gas clouds are prevalent in certain areas, creating ethereal hazes. No significant weather patterns.",
+        "materials": "Primarily cosmic dust, gas, ice, and rock. Stars emit light and heat. Alien constructs, where present, often feature advanced metallic alloys or unknown crystalline structures.",
+        "mood": "Awe-inspiring, mysterious, and vast. Evokes a sense of exploration, solitude, and the unknown.",
+        "sounds": "Silence, faint cosmic radiation hum, distant stellar winds",
+        "spatialLayout": "Vast, open, and three-dimensional. Defined by the immense distances between celestial bodies and phenomena.",
+        "primary_surfaces": "Space, Nebulae, Asteroid fields",
+        "secondary_surfaces": "Cosmic dust, Gas clouds",
+        "accent_features": "Distant star systems, Galactic cores",
+        "dominant": "Blues",
+        "secondary": "Purples, Blacks",
+        "accent": "Whites, Yellows",
+        "ambient": "Cool",
         "genre": "sci-fi",
-        "architectural_tone": "N/A (natural cosmic phenomena)",
-        "cultural_tone": "Exploratory, mysterious",
-        "materials_base": "Cosmic and exotic matter",
-        "mood_baseline": "Awe-inspiring and mysterious",
-        "palette_bias": "Deep cosmic colors",
-        "soundscape_base": "Ambient cosmic silence",
+        "architectural_tone": "Cosmic, Eldritch",
+        "cultural_tone": "Nomadic, Ancient, Mysterious",
+        "materials_base": "Cosmic, Exotic Metals, Crystalline",
+        "mood_baseline": "Mysterious, Vast, Isolated",
+        "palette_bias": "Deep blues and purples with stellar highlights",
+        "soundscape_base": "Subtle cosmic hums and distant stellar phenomena",
         "flora_base": "None",
-        "fauna_base": "Extraterrestrial and cosmic entities"
+        "fauna_base": "None"
       },
       "imagePath": "",
-      "focus": {
-        "node_id": "Galactic Expanse",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      },
       "navigableElements": [],
       "dominantElements": [
         "Nebulae",
         "Star Systems",
-        "Cosmic Dust Clouds"
+        "Asteroid Fields"
       ],
       "uniqueIdentifiers": [
-        "Uncharted Territories",
-        "Interstellar Phenomena"
+        "Cosmic Anomalies",
+        "Ancient Signals"
       ],
-      "slug": "galactic-expanse",
-      "searchDesc": "Vast cosmic canvas, home to myriad worlds and unknown entities."
+      "slug": "galactic-frontier",
+      "searchDesc": "Vast, uncharted cosmic expanse with diverse celestial bodies and forgotten worlds."
     },
-    "d59c8deb-5eb4-4407-acec-235e7d1b391c": {
-      "id": "d59c8deb-5eb4-4407-acec-235e7d1b391c",
+    "88bd883b-d86d-433f-b1c4-017a81f63f2e": {
+      "id": "88bd883b-d86d-433f-b1c4-017a81f63f2e",
       "type": "region",
-      "name": "Subterranean Caverns",
+      "name": "The Cragged Peaks",
+      "spaceType": "exterior",
       "dna": {
-        "looks": "Expansive, echoing caverns with rough-hewn rock walls, adorned with dripping stalactites and stalagmites. Veins of glowing minerals and dense, alien vegetation are common. The scale varies from tight passages to colossal chambers.",
-        "colorsAndLighting": "Dominated by earthy browns and greys of rock, contrasted with vibrant, cool-toned bioluminescence in blues, greens, and purples from flora and fungi. Ambient light is dim and diffused.",
-        "atmosphere": "Damp, cool, and still air, often thick with mist or fine spray from underground water sources. Pockets of unique atmospheric compositions may exist due to geothermal activity or alien biological processes. A sense of enclosed, ancient stillness prevails.",
-        "materials": "Primarily composed of various rock types, mineral deposits, and a rich array of subterranean flora and fungi. Water is a pervasive element, creating slick surfaces and erosion.",
-        "mood": "Mysterious, ancient, and slightly claustrophobic, yet also wondrous due to the unique life forms.",
-        "sounds": "Dripping water, distant echoes, chirps of unseen creatures, faint hum of geothermal activity.",
-        "spatialLayout": "A complex network of interconnected caves, tunnels, and vast chambers. The layout is often labyrinthine, with verticality playing a significant role through shafts and chasms.",
-        "primary_surfaces": "Rock, stone, mineral veins",
-        "secondary_surfaces": "Damp earth, roots, fungal growths",
-        "accent_features": "Bioluminescent flora, crystal formations, water features",
-        "dominant": "Earthy browns and greys",
-        "secondary": "Cool blues and greens (bioluminescence)",
-        "accent": "Rich purples and teals",
-        "ambient": "Cool and damp",
+        "looks": "A landscape dominated by colossal, jagged mountain peaks that rise sharply into the sky. Deep, shadowed canyons carve through the terrain, revealing layers of ancient, weathered rock. The overall impression is one of extreme age and ruggedness.",
+        "colorsAndLighting": "Primarily muted greys, browns, and ochres, reflecting the exposed rock. Lighting is often harsh and directional, casting deep shadows within the canyons and highlighting the sharp edges of the peaks. Overcast skies lend a diffuse, cool light.",
+        "atmosphere": "Thin and crisp mountain air with a noticeable chill. The wind is a constant presence, whistling through ravines and carrying fine dust. Visibility can be reduced by occasional atmospheric haze at higher altitudes.",
+        "materials": "Primarily various forms of weathered rock, including granite, basalt, and sandstone. Loose scree and gravel cover many slopes.",
+        "mood": "Harsh, imposing, and ancient. Evokes a sense of struggle, isolation, and enduring power.",
+        "sounds": "Howling wind, rockfall echoes, creaking stone",
+        "spatialLayout": "Vertical and rugged. Characterized by steep inclines, precipitous drops, and deep, enclosed canyons.",
+        "primary_surfaces": "Rock",
+        "secondary_surfaces": "Gravel, Stone",
+        "accent_features": "Natural arches, Eroded spires",
+        "dominant": "Greys",
+        "secondary": "Browns, Ochers",
+        "accent": "Dark greys",
+        "ambient": "Cool",
         "genre": null,
-        "architectural_tone": "Natural, organic, geological",
-        "cultural_tone": "Primal, survivalist",
-        "materials_base": "Stone, rock, minerals, unique subterranean flora",
-        "mood_baseline": "Mysterious and ancient",
-        "palette_bias": "Earthy tones with bioluminescent highlights",
-        "soundscape_base": "Echoing natural sounds, dripping water",
-        "flora_base": "Bioluminescent fungi and alien subterranean plants",
-        "fauna_base": "Subterranean creatures, insectoids, fungal symbionts"
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": "Rocky, Eroded",
+        "mood_baseline": "Harsh, Rugged, Ancient",
+        "palette_bias": "Muted earth tones with cool ambient light",
+        "soundscape_base": "Wind-swept and echoing",
+        "flora_base": "Sparse, hardy mosses and lichens",
+        "fauna_base": "None"
       },
       "imagePath": "",
-      "focus": {
-        "node_id": "Subterranean Caverns",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      },
       "navigableElements": [],
       "dominantElements": [
-        "Crystal Formations",
-        "Underground Rivers",
-        "Geothermal Vents"
+        "Towering Peaks",
+        "Deep Canyons",
+        "Ancient Rock Formations"
       ],
       "uniqueIdentifiers": [
-        "Bioluminescent Ecosystems",
-        "Geological Wonders"
+        "Unstable Slopes",
+        "Echoing Winds"
       ],
-      "slug": "subterranean-caverns",
-      "searchDesc": "Vast networks of caverns filled with glowing flora, strange fauna, and geological marvels."
+      "slug": "the-cragged-peaks",
+      "searchDesc": "Desolate, treacherous mountain range with ancient rock formations and deep, echoing canyons."
     },
-    "0d34d80d-cf73-4f30-99e6-39bc1b84c8a1": {
-      "id": "0d34d80d-cf73-4f30-99e6-39bc1b84c8a1",
+    "c5dc7978-75fd-47ae-a0d3-8a6eb3640a29": {
+      "id": "c5dc7978-75fd-47ae-a0d3-8a6eb3640a29",
       "type": "location",
-      "name": "The Fungal Bloom Memorial",
+      "name": "The Sunken Vessel",
+      "spaceType": "exterior",
       "dna": {
-        "looks": "A colossal, spherical structure, approximately 30-40 meters in diameter, dominates the midground. Its surface is heavily encrusted with thick, green moss and appears to be partially integrated into the cavern walls. A large, arched opening forms a gateway into the structure's interior, revealing a bright, turquoise light beyond. The foreground features a damp, textured path leading towards the opening, flanked by lush vegetation and moss-covered rocks. The scale suggests an ancient and monumental construction, weathered by time and encroached upon by nature.",
-        "colorsAndLighting": "The primary light source emanates from the interior of the spherical structure, casting a bright, cool turquoise glow. This light is somewhat diffused by the atmosphere. Two vertical yellow-orange lights flank the entrance, providing artificial illumination. The contrast between the bright interior and the darker cavern walls creates a dramatic effect.",
-        "atmosphere": "The air appears thick with moisture, creating a hazy, diffused environment. A sense of dampness is palpable, with a visible sheen on the ground and vegetation. The overall atmosphere is cool and still, befitting an underground cavern.",
-        "materials": "The primary materials are weathered stone and rock, heavily covered by organic matter like thick moss, soil, and the pervasive, glowing bioluminescent fungi. The alien structure itself appears to be a composite of advanced, now-decaying materials.",
-        "mood": "Melancholy, mysterious, and eerily beautiful. It evokes a sense of lost grandeur and the relentless power of nature's reclamation.",
-        "sounds": "Subdued dripping, faint fungal hum, distant echoes, soft rustling of plants.",
-        "spatialLayout": "The foreground consists of a rough, damp pathway and dense, low-lying vegetation. The midground is dominated by the large, moss-covered spherical structure and its arched entrance. The background is formed by the cavern walls and the bright, luminous interior of the structure, suggesting an expansive space beyond the immediate view. The scene is framed by the dark, textured walls of the cavern.",
-        "primary_surfaces": "Stone, rock, moss",
-        "secondary_surfaces": "Soil, vegetation",
-        "accent_features": "Bioluminescent fungi (implied by glow), artificial lights",
-        "dominant": "Dark greens (moss, vegetation)",
-        "secondary": "Grey-brown (rock, path), turquoise (interior light)",
-        "accent": "Yellow-orange (vertical lights), faint orange glows on structure surface",
-        "ambient": "Muted teal and green",
+        "looks": "A colossal, toroidal alien vessel is embedded within a narrow canyon. The craft's massive circular opening is dark and foreboding, partially obscured by atmospheric haze. Its metallic surface displays signs of extreme weathering, with a patina suggesting great age. Jagged, rocky cliffs rise steeply on either side, their textures rough and eroded. The scale of the vessel is immense, dwarfing the surrounding geological formations.",
+        "colorsAndLighting": "The lighting is diffuse and cool, casting soft shadows. The overall tone suggests an overcast sky or a time of day with low ambient light. There are subtle variations in light intensity, highlighting the textures of the rock and the vessel's surface.",
+        "atmosphere": "A thin, ethereal mist or fog hangs low in the canyon, softening distant details and creating a sense of depth. The air appears clear of significant particulate matter, allowing for good visibility of the immediate surroundings.",
+        "materials": "The primary materials are rough, eroded rock and heavily weathered, ancient alien metal. Gravel and stone litter the canyon floor.",
+        "mood": "Mysterious, imposing, and ancient. A sense of lost technology and forgotten purpose.",
+        "sounds": "Distant wind, faint metallic groans, dripping water",
+        "spatialLayout": "The foreground consists of a rocky, uneven path leading into a canyon. The midground is dominated by the enormous, partially embedded alien craft, which fills a significant portion of the canyon's width. The background shows the continuation of the canyon, with receding mountainous terrain shrouded in mist.",
+        "primary_surfaces": "Rock",
+        "secondary_surfaces": "Gravel, Stone",
+        "accent_features": "Weathered metal, faint metallic sheen on the vessel",
+        "dominant": "Grey (rock and canyon walls)",
+        "secondary": "Teal and dark blue (alien vessel)",
+        "accent": "None visible",
+        "ambient": "Muted blues and greys",
         "genre": null,
-        "architectural_tone": "Ancient alien, monolithic, decaying",
-        "cultural_tone": "Memorial, sacred, forgotten",
-        "materials_base": "Organic overgrowth on ancient alien alloys and stone",
-        "mood_baseline": "Eerie beauty and melancholic decay",
-        "palette_bias": "Green and cool turquoise",
-        "soundscape_base": "Damp, echoing cavern sounds",
-        "flora_base": "Bioluminescent fungi, alien mosses, hardy subterranean plants",
-        "fauna_base": "Small cavern dwellers, insectoids adapted to fungal environments"
+        "architectural_tone": "Alien, Ancient, Functional",
+        "cultural_tone": "Lost Civilization, Technological Relic",
+        "materials_base": "Stone, Ancient Metals",
+        "mood_baseline": "Enigmatic, Monumental, Subdued",
+        "palette_bias": "Cool blues and greys with weathered metallic undertones",
+        "soundscape_base": "Ethereal mist and wind-swept sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/zebra/tQiaZ-EcDccwx8iA0uksf.jpg",
-      "focus": {
-        "node_id": "The Fungal Bloom Memorial",
-        "perspective": "exterior",
-        "viewpoint": "default world view",
-        "distance": "medium"
-      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/YIkDFDPTuHfLer5AqdqHE.jpg",
       "navigableElements": [
         {
-          "type": "archway",
+          "type": "passage",
           "position": "center, midground",
-          "description": "A large, arched gateway into the spherical structure, radiating bright turquoise light."
-        },
-        {
-          "type": "stairs",
-          "position": "center, leading into archway, midground",
-          "description": "A set of stone stairs ascending into the luminous interior."
+          "description": "Enormous dark opening into the alien vessel's interior"
         },
         {
           "type": "passage",
-          "position": "through archway, midground",
-          "description": "The interior passage beyond the stairs, filled with bright, otherworldly light."
-        },
-        {
-          "type": "mysterious_object",
-          "position": "flanking entrance, midground",
-          "description": "Two tall, thin pillars emitting a steady yellow-orange glow."
+          "position": "center, foreground",
+          "description": "Path leading into the canyon and towards the vessel's opening"
         }
       ],
       "dominantElements": [
-        "Spherical alien structure (~30-40m diameter, WIDE STRUCTURE)",
-        "Arched entrance to the structure",
-        "Lush green moss covering the structure and cavern walls",
-        "Pathway leading to the entrance"
+        "Massive toroidal alien vessel (est. 100-150m diameter, CENTER)",
+        "Steep rocky canyon walls (LEFT and RIGHT)",
+        "Rocky, uneven ground with gravel and boulders (FOREGROUND)"
       ],
       "uniqueIdentifiers": [
-        "Moss-covered spherical alien architecture",
-        "Glowing turquoise interior visible through an archway",
-        "Subterranean cavern environment"
+        "Toroidal alien spacecraft",
+        "Canyon embedding",
+        "Massive scale of the vessel"
       ],
-      "slug": "the-fungal-bloom-memorial",
-      "searchDesc": "[Location - Exterior] Moss-covered alien sphere in cavern. Has: archway (center), stairs (center), mysterious_object (midground)"
+      "slug": "the-sunken-vessel",
+      "searchDesc": "[Location - Exterior] Alien vessel embedded in a rocky canyon. Has: passage (center, midground), passage (center, foreground)"
     },
-    "niche-1763480203728-vgyqzq9nb": {
-      "id": "niche-1763480203728-vgyqzq9nb",
+    "niche-1763484401397-tg8bhess1": {
+      "id": "niche-1763484401397-tg8bhess1",
       "type": "niche",
-      "name": "interior of The Fungal Bloom Memorial",
+      "name": "interior of The Sunken Vessel",
+      "spaceType": "interior",
       "dna": {
-        "looks": "A vast, domed chamber with walls of dark, obsidian-like material interwoven with enormous, bioluminescent fungi. A monumental, multi-tiered altar with a glowing turquoise basin dominates the center, flanked by arching doorways. A slick obsidian pathway leads into gloom in the foreground, with carved steps to the right.",
-        "colorsAndLighting": "The scene is illuminated by the ethereal, pulsating glow of deep violet and vibrant emerald bioluminescent fungi, casting shifting shadows. A liquid turquoise light emanates from the altar's basin, and cool blue luminescence edges the steps.",
-        "atmosphere": "The air is thick and humid, carrying the scent of decomposition and faint floral perfume. The scale is cavernous, with a sense of immense, forgotten grandeur. The light pulses and breathes, contributing to a mysterious and serene feeling.",
-        "materials": "Primary materials are dark, obsidian-like stone, slick and worn smooth in places, and the soft, velvety texture of thick moss. Bioluminescent fungi, delicate crystalline growths, and pearlescent dew are prominent organic elements.",
-        "mood": "Melancholy and mysterious, with an eerily beautiful quality that evokes lost grandeur and nature's reclamation.",
-        "sounds": "Echoing expanse, faint hum, dripping dew, soft pulsating light.",
-        "spatialLayout": "A colossal, domed chamber with a strictly symmetrical, centered composition. The space recedes into infinite distance, with clear foreground, midground, and background elements. Focal points include the altar and the distant crystalline bloom.",
-        "primary_surfaces": "Dark, obsidian-like stone, thick moss.",
-        "secondary_surfaces": "Bioluminescent fungi, crystalline growths, dew.",
-        "accent_features": "Altar's turquoise basin, sapphire-hued fungi on archways, cool blue luminescent step edges.",
-        "dominant": "Dark greens (moss, vegetation) with significant coverage.",
-        "secondary": "Deep violets and vibrant emeralds (bioluminescent fungi).",
-        "accent": "Liquid turquoise (altar basin), sapphire blue (archway fungi, step edges).",
-        "ambient": "Cool",
+        "looks": "A colossal cavernous space with a vaulted ceiling of dark, ancient, ribbed metal plates resembling a ribcage, soaring high above. Rough-hewn stone walls, smoothed by time, line the immense chamber. The floor transitions to polished obsidian-like material veined with faint cool blue luminescent geometric patterns.",
+        "colorsAndLighting": "Dominant colors are deep greys and weathered metallic silvers, accented by striking cool blues and turquoise from luminescent floor patterns, glowing crystals, and a central portal. Ambient light is a perpetual, cool, diffused twilight.",
+        "atmosphere": "The atmosphere exudes subdued, enigmatic grandeur. A sense of immense age and lost technology pervades the cool, still air. The sheer scale of the space evokes a feeling of being dwarfed by ancient, alien craftsmanship.",
+        "materials": "Primary materials include interlocking dark, ancient metal for the ceiling and ramp, rough-hewn stone for the walls, and polished obsidian-like material for the floor. A weathered, tarnished bronze monolith features deeply etched alien glyphs.",
+        "mood": "The mood is one of mysterious, imposing, and ancient grandeur, evoking a sense of lost technology and forgotten purpose.",
+        "sounds": "Subtle hum of latent energy, faint echoes, ambient stillness.",
+        "spatialLayout": "A colossal, enclosed space with a high vaulted ceiling and vast depth. The entrance features a transition in floor material. A central monolith with an embedded portal and a spiraling ramp are key focal points in the midground.",
+        "primary_surfaces": "dark ancient metal (ceiling, ramp), rough-hewn stone (walls), polished obsidian-like (floor)",
+        "secondary_surfaces": "weathered tarnished bronze (monolith)",
+        "accent_features": "cool blue luminescent floor patterns, internal turquoise glow of crystals, ethereal cerulean portal glow, cool white illumination on ramp edges",
+        "dominant": "Grey (walls, metal)",
+        "secondary": "Metallic Silver (metal accents)",
+        "accent": "Cool Blue & Turquoise (luminescent patterns, crystals, portal)",
+        "ambient": "cool",
         "genre": null,
-        "architectural_tone": "Ancient alien, monolithic, decaying",
-        "cultural_tone": "Memorial, sacred, forgotten",
-        "materials_base": "Obsidian, organic growths",
-        "mood_baseline": "Melancholy, mysterious, eerily beautiful",
-        "palette_bias": "Deep greens, violets, emeralds, with turquoise and blue accents",
-        "soundscape_base": "Echoing, ambient, subtle organic sounds",
-        "flora_base": "Bioluminescent fungi, moss, crystalline growths",
+        "architectural_tone": "Monumental alien metallic and stone",
+        "cultural_tone": "A technological relic of a lost civilization, designed for enigmatic purpose.",
+        "materials_base": "Ancient metal, rough stone, polished dark stone, weathered bronze",
+        "mood_baseline": "Mysterious, imposing, and ancient",
+        "palette_bias": "Cool blues and greys with weathered metallic undertones",
+        "soundscape_base": "Subtle hums and echoes",
+        "flora_base": "None",
         "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/BpYC5ce0RyclZDz9t00CI.jpg",
-      "focus": {
-        "node_id": "niche-1763480203728-vgyqzq9nb",
-        "perspective": "interior",
-        "viewpoint": "default view",
-        "distance": "close"
-      },
-      "description": "The echoing expanse of a colossal, domed chamber, a fusion of organic decay and alien precision, filled with bioluminescent fungi and dark obsidian architecture.",
+      "imagePath": "https://v3b.fal.media/files/b/elephant/s0eQoYykFjqkR08BFoD_3.jpg",
+      "description": "The interior of an immense, cavernous alien vessel, characterized by ancient metal, rough-hewn stone, and enigmatic luminescent features.",
       "navigableElements": [
         {
-          "type": "stairs",
-          "position": "right",
-          "description": "shallow, carved obsidian steps ascending to a dimly lit recess with cool blue luminescence."
+          "type": "crystal cluster",
+          "position": "foreground left",
+          "description": "A cluster of roughly hewn, luminous crystal formations emitting a soft, internal turquoise glow."
         },
         {
-          "type": "archway",
-          "position": "left",
-          "description": "massive, arching doorway with sapphire-hued fungi encrustations."
+          "type": "glowing portal",
+          "position": "midground right",
+          "description": "A perfectly circular, seamlessly integrated portal glowing with an intense, ethereal cerulean light, embedded in a monolith."
         },
         {
-          "type": "archway",
-          "position": "right",
-          "description": "massive, arching doorway with sapphire-hued fungi encrustations."
+          "type": "spiraling ramp",
+          "position": "midground left",
+          "description": "A grand, gently spiraling ramp of dark, ancient metal, illuminated by faint lines of cool white light."
         }
       ],
       "dominantElements": [
-        "colossal domed chamber",
-        "monumental multi-tiered altar",
-        "enormous bioluminescent fungi"
+        "colossal vaulted ceiling",
+        "rough-hewn stone walls",
+        "obsidian-like floor with luminescent patterns",
+        "weathered bronze monolith",
+        "luminous crystal formations",
+        "spiraling ramp"
       ],
       "uniqueIdentifiers": [
-        "obsidian architecture with organic decay",
-        "bioluminescent fungi in violet and emerald",
-        "central turquoise glowing altar basin",
-        "solitary crystalline bloom in ceiling"
+        "ribcage-like metal ceiling",
+        "geometric luminescent floor patterns",
+        "alien glyphs on bronze monolith",
+        "cerulean glowing portal"
       ],
-      "searchDesc": "Vast domed chamber with obsidian and bioluminescent fungi, central altar, and alien architecture.",
-      "slug": "interior-of-the-fungal-bloom-memorial"
+      "searchDesc": "Vast alien vessel interior: colossal metal ceiling, stone walls, glowing portal and crystals.",
+      "slug": "interior-of-the-sunken-vessel"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1763479490120-7n4jv2jkt",
+      "id": "loc-1763484307700-miy28sdqt",
       "type": "host",
       "children": [
         {
-          "id": "d59c8deb-5eb4-4407-acec-235e7d1b391c",
+          "id": "88bd883b-d86d-433f-b1c4-017a81f63f2e",
           "type": "region",
           "children": [
             {
-              "id": "0d34d80d-cf73-4f30-99e6-39bc1b84c8a1",
+              "id": "c5dc7978-75fd-47ae-a0d3-8a6eb3640a29",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763480203728-vgyqzq9nb",
+                  "id": "niche-1763484401397-tg8bhess1",
                   "type": "niche",
                   "children": []
                 }
@@ -266,6 +238,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763479490120-7n4jv2jkt"
+    "loc-1763484307700-miy28sdqt"
   ]
 }

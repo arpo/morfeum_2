@@ -3,14 +3,6 @@
  * Tree-Based Architecture: Nodes (flat) + World Trees (nested)
  */
 
-// Focus state for tracking current view
-export interface FocusState {
-  node_id: string;
-  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
-  viewpoint: string;
-  distance: 'close' | 'medium' | 'far';
-  currentViewId?: string;
-}
 
 // View interface - multiple views per node
 export interface View {
@@ -25,6 +17,9 @@ export interface View {
 
 // Node types
 export type NodeType = 'host' | 'region' | 'location' | 'niche';
+
+// Space type - describes the nature of the space
+export type SpaceType = 'interior' | 'exterior';
 
 // DNA type definitions (single-layer per node)
 export interface HostNode {
@@ -232,9 +227,9 @@ export interface Node {
   id: string;
   type: NodeType;
   name: string;
+  spaceType: SpaceType;
   dna: HostNode | RegionNode | LocationNode | NicheNode;
   imagePath: string;
-  focus?: FocusState;
 }
 
 // Tree structure - stores ID references only
@@ -261,11 +256,11 @@ export interface Location {
   children: string[];
   depth_level: number;
   name: string;
+  spaceType?: SpaceType;
   dna: {
     world: HostNode;
     region?: RegionNode;
     location?: LocationNode;
   };
   imagePath: string;
-  focus?: FocusState;
 }

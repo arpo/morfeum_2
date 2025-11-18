@@ -1,15 +1,13 @@
 // LocationInfoModal Component - PURE JSX ONLY
 import { Modal, ModalContent, ModalSection } from '@/components/ui';
-import { useLocationsStore } from '@/store/slices/locations';
 import { useLocationInfoLogic } from './useLocationInfoLogic';
 import { transformProfile, isFlatDNA, renderSection } from './helpers';
 import type { LocationInfoModalProps } from './types';
 import styles from './LocationInfoModal.module.css';
 
 export function LocationInfoModal(props: LocationInfoModalProps) {
-  const { locationProfile, locationName, locationId, isOpen } = props;
+  const { locationProfile, locationName, isOpen } = props;
   const { handleClose } = useLocationInfoLogic(props);
-  const getNodeFocus = useLocationsStore(state => state.getNodeFocus);
 
   if (!locationProfile) return null;
 
@@ -18,9 +16,6 @@ export function LocationInfoModal(props: LocationInfoModalProps) {
   
   // Check if flat DNA structure
   const isFlat = isFlatDNA(profile);
-  
-  // Get focus state
-  const focus = locationId ? getNodeFocus(locationId) : null;
 
   // Render flat NodeDNA structure
   if (isFlat) {

@@ -102,9 +102,9 @@ export const useLocationsStore = create<LocationsState>()(
 export type {
   Node,
   NodeType,
+  SpaceType,
   TreeNode,
   View,
-  FocusState,
   CascadedDNA,
   HostNode,
   RegionNode,
