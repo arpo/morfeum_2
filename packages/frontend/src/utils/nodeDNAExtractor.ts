@@ -49,11 +49,17 @@ const EXCLUSIONS: Record<NodeType, string[]> = {
 const METADATA_FIELDS = ['imageUrl', 'slug'];
 
 /**
- * Extract clean DNA from a backend node, excluding nested child arrays
+ * Extract clean DNA from a backend node
  * 
- * @param nodeData - Raw node data from backend (may contain nested arrays)
- * @param nodeType - Type of node being extracted
- * @returns Clean DNA object with nested arrays removed
+ * NEW BEHAVIOR: Backend now sends correct structure with:
+ * - Root-level: type, name, description, navigableElements, etc.
+ * - dna property: The actual DNA object
+ * 
+ * This function just returns the dna property (flat DNA structure)
+ * 
+ * @param nodeData - Raw node data from backend
+ * @param nodeType - Type of node being extracted (unused, kept for compatibility)
+ * @returns DNA object
  */
 export function extractCleanDNA(
   nodeData: any,
@@ -63,27 +69,14 @@ export function extractCleanDNA(
     return {};
   }
 
-  // Get exclusion list for this node type
-  const excludedFields = [
-    ...EXCLUSIONS[nodeType],
-    ...METADATA_FIELDS
-  ];
-  
-  // Create clean object excluding nested arrays and metadata
-  const cleanDNA: any = {};
-  
-  for (const key in nodeData) {
-    if (!excludedFields.includes(key)) {
-      cleanDNA[key] = nodeData[key];
-    }
+  // Backend sends correct structure: just return the dna property
+  if (nodeData.dna && typeof nodeData.dna === 'object') {
+    return nodeData.dna;
   }
   
-  // Add slug if missing
-  if (!cleanDNA.slug && nodeData.name) {
-    cleanDNA.slug = generateSlug(nodeData.name);
-  }
-  
-  return cleanDNA;
+  // Fallback for old structure (shouldn't happen with new backend)
+  console.warn('[nodeDNAExtractor] Node missing dna property, returning empty DNA');
+  return {};
 }
 
 /**

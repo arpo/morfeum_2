@@ -42,7 +42,7 @@ export async function generateLocationImage(
   const fixedPrompt = generalPromptFix(imagePrompt);
   console.log('\n\n##################### ACTUAL NICHE IMAGE PROMPT  #####################');
   console.log(fixedPrompt);
-  console.log('##################### ACTUAL NICHE IMAGE PROMPT  #####################\n\n');
+  console.log('##################### ACTUAL NICHE IMAGE PROMPT END  #####################\n\n');
 
   // Generate image via MZOO service
   const result = await generateImage(

@@ -60,23 +60,7 @@ KEY PRINCIPLES:
 `;
   }
 
-  const rv = `Generate complete DNA for an entire location hierarchy in ONE response.
-
-🔄 CASCADE DIRECTION: You are working BACKWARDS from the deepest node! 🔄
-
-The deepest node (location/niche) has been ANALYZED and has scene details.
-Your task: INFER what DNA the parent nodes (host/region) should have, so that DNA can CASCADE DOWN.
-
-FLOW:
-1. We have the DEEPEST NODE with visual analysis (scene specifics)
-2. You generate DNA for HOST (world-level style)
-3. You generate DNA for REGION (biome-level style, refines host)
-4. You generate DNA for LOCATION (site-level style, refines region)
-5. Later, this DNA CASCADES DOWN: Host → Region → Location → Future Children
-
- DNA contains ONLY cascading STYLE/VIBE properties - NOT scene-specific details 
-Scene-specific details (looks, atmosphere, lighting, materials, colors) come from visual analysis.
-DNA defines the STYLE PALETTE that cascades to children, not the actual physical appearance.
+  const rv = `Generate complete nodes with DNA for an entire location hierarchy in ONE response.
 
 USER INPUT:
 ${originalPrompt}
@@ -99,38 +83,96 @@ ${region.locations ? region.locations.map(loc => `
 `).join('') : ''}
 `).join('')}
 ${visualAnalysisSection}
+
 OUTPUT STRUCTURE:
+
+For each node, generate:
+1. **Scene-specific fields** (what you see/sense in THIS node)
+2. **Structural fields** (navigation, search, metadata)
+3. **Cascading DNA** (inheritable style attributes)
 
 {
   "host": {
-    // FULL DNA - all 9 fields populated
-    // These are STYLE/VIBE properties that cascade to children
-    // Do NOT include scene-specific fields (looks, atmosphere, lighting, materials, colors)
-    "genre": "post-apocalyptic|fantasy|sci-fi|historical|modern|etc",
-    "architectural_tone": "2-4 words describing architectural STYLE (not specific structures)",
-    "cultural_tone": "1-2 sentences on social/functional identity",
-    "materials_base": "2-3 sentences on material PALETTE/STYLE (not specific objects)",
-    "mood_baseline": "2-3 words describing emotional tone",
-    "palette_bias": "2-3 sentences on COLOR STYLE/FAMILIES (not specific colors in scene)",
-    "soundscape_base": "2-3 sentences describing ambient SOUND STYLE",
-    "flora_base": "2-3 sentences on plant life types, or 'None'",
-    "fauna_base": "2-3 sentences on animal life types, or 'None'"
+    "name": "Host Name",
+    "description": "Host description",
+    
+    // STRUCTURAL FIELDS (at node root, NOT in DNA)
+    "navigableElements": [],  // Usually empty for host (no navigation from world view)
+    "dominantElements": ["Major landmark 1", "Major landmark 2", "Major landmark 3"],
+    "uniqueIdentifiers": ["Unique feature 1", "Unique feature 2"],
+    "searchDesc": "Short search description (75-100 chars)",
+    "slug": "kebab-case-name",
+    
+    // DNA - COMPLETE for host (all fields populated)
+    "dna": {
+      // Scene-specific visual fields (ALWAYS populated)
+      "looks": "2-4 sentences describing what is seen",
+      "colorsAndLighting": "1-3 sentences on colors and light",
+      "atmosphere": "2-4 sentences on air, temperature, weather",
+      "materials": "1-3 sentences on visible materials",
+      "mood": "1-2 sentences on emotional tone",
+      "sounds": "5-7 words listing sounds",
+      "spatialLayout": "1-3 sentences on space layout",
+      "primary_surfaces": "Main surface materials",
+      "secondary_surfaces": "Secondary surface materials",
+      "accent_features": "Decorative details",
+      "dominant": "Primary color family",
+      "secondary": "Secondary colors",
+      "accent": "Accent colors",
+      "ambient": "Light tone (warm/cool/neutral)",
+      
+      // Cascading style attributes (ONLY in host)
+      "genre": "post-apocalyptic|fantasy|sci-fi|historical|modern|etc",
+      "architectural_tone": "Architectural style",
+      "cultural_tone": "Social/functional identity",
+      "materials_base": "Material palette/style",
+      "mood_baseline": "Emotional baseline",
+      "palette_bias": "Color style/families",
+      "soundscape_base": "Ambient sound style",
+      "flora_base": "Plant life types or 'None'",
+      "fauna_base": "Animal life types or 'None'"
+    }
   },
   "regions": [
     {
       "name": "Region Name",
+      "description": "Region description",
+      
+      // STRUCTURAL FIELDS
+      "navigableElements": [],  // Usually empty for regions
+      "dominantElements": ["Regional landmark 1", "Regional landmark 2"],
+      "uniqueIdentifiers": ["Unique regional feature 1", "Unique regional feature 2"],
+      "searchDesc": "Short description (75-100 chars)",
+      "slug": "kebab-case-name",
+      
+      // DNA
       "dna": {
-        // SPARSE DNA - only fields that DIFFER from Host
-        // Set to null for fields that inherit from Host
-        // Genre is NEVER provided (always inherited from host)
-        "architectural_tone": "different style" or null,
-        "cultural_tone": "different culture" or null,
-        "materials_base": "different materials" or null,
-        "mood_baseline": "different mood" or null,
-        "palette_bias": "different colors" or null,
-        "soundscape_base": "different sounds" or null,
-        "flora_base": "different vegetation" or null,
-        "fauna_base": "different creatures" or null
+        // Scene-specific fields (ALWAYS populated)
+        "looks": "What you see",
+        "colorsAndLighting": "Colors and light",
+        "atmosphere": "Air, temperature, weather",
+        "materials": "Visible materials",
+        "mood": "Emotional tone",
+        "sounds": "Ambient sounds",
+        "spatialLayout": "Space layout",
+        "primary_surfaces": "Primary surfaces",
+        "secondary_surfaces": "Secondary surfaces",
+        "accent_features": "Accents",
+        "dominant": "Dominant colors",
+        "secondary": "Secondary colors",
+        "accent": "Accent colors",
+        "ambient": "Light tone",
+        
+        // Cascading attributes (SPARSE - null if inherited from host)
+        "genre": null,  // NEVER set - inherited from host
+        "architectural_tone": "style" or null,
+        "cultural_tone": "culture" or null,
+        "materials_base": "materials" or null,
+        "mood_baseline": "mood" or null,
+        "palette_bias": "palette" or null,
+        "soundscape_base": "sounds" or null,
+        "flora_base": "flora" or null,
+        "fauna_base": "fauna" or null
       }
     }
   ],
@@ -138,111 +180,100 @@ OUTPUT STRUCTURE:
     {
       "regionName": "Which region this belongs to",
       "name": "Location Name",
+      "description": "Location description",
+      
+      // STRUCTURAL FIELDS (CRITICAL for navigation!)
+      "navigableElements": [
+        {
+          "type": "door|passage|stairs|portal|window|bridge",
+          "position": "location in scene (left, center, right, background, etc.)",
+          "description": "What it is"
+        }
+      ],
+      "dominantElements": ["Object 1", "Object 2", "Object 3"],
+      "uniqueIdentifiers": ["Feature 1", "Feature 2"],
+      "searchDesc": "Type, function, key visuals (75-100 chars)",
+      "slug": "kebab-case-name",
+      
+      // DNA (same structure as regions)
       "dna": {
-        // SPARSE DNA - only fields that DIFFER from Host + Region
-        // Genre is NEVER provided (always inherited from host)
-        "architectural_tone": "refined style" or null,
-        "cultural_tone": "specific culture" or null,
-        "materials_base": "specific materials" or null,
-        "mood_baseline": "specific mood" or null,
-        "palette_bias": "specific colors" or null,
-        "soundscape_base": "specific sounds" or null,
-        "flora_base": "specific vegetation" or null,
-        "fauna_base": "specific creatures" or null
-      }
-    }
-  ],
-  "niches": [
-    {
-      "locationName": "Which location this belongs to",
-      "name": "Niche Name",
-      "dna": {
-        // SPARSE DNA - only fields that DIFFER from parent chain
-        // Genre is NEVER provided (always inherited from host)
-        "architectural_tone": "intimate style" or null,
-        "materials_base": "detail materials" or null,
-        "mood_baseline": "intimate mood" or null,
-        "soundscape_base": "intimate sounds" or null,
-        "flora_base": "localized vegetation" or null,
-        "fauna_base": "localized creatures" or null
+        // Scene fields (always populated)
+        "looks": "...",
+        "colorsAndLighting": "...",
+        "atmosphere": "...",
+        "materials": "...",
+        "mood": "...",
+        "sounds": "...",
+        "spatialLayout": "...",
+        "primary_surfaces": "...",
+        "secondary_surfaces": "...",
+        "accent_features": "...",
+        "dominant": "...",
+        "secondary": "...",
+        "accent": "...",
+        "ambient": "...",
+        
+        // Cascading (sparse - only if different from region)
+        "genre": null,
+        "architectural_tone": "..." or null,
+        "cultural_tone": "..." or null,
+        "materials_base": "..." or null,
+        "mood_baseline": "..." or null,
+        "palette_bias": "..." or null,
+        "soundscape_base": "..." or null,
+        "flora_base": "..." or null,
+        "fauna_base": "..." or null
       }
     }
   ]
 }
 
- CRITICAL GUIDELINES - SPARSE DNA ENFORCEMENT 
+CRITICAL GUIDELINES
 
-1. **Host DNA**: Generate ALL 9 fields with complete descriptions
-   - genre: ONLY set in host (world-level constant)
-   - All other fields: full descriptions
+1. **Node Structure** - 3 Parts per Node:
+   - Root-level fields: name, description, slug
+   - Structural fields: navigableElements, dominantElements, uniqueIdentifiers, searchDesc
+   - DNA object: scene-specific + cascading style attributes
 
-2. **Child DNA - FIELD-BY-FIELD SPARSE ENFORCEMENT**:
-   
-    FOR EACH OF THE 8 CASCADING FIELDS, YOU MUST ASK: "Is this DIFFERENT from parent?" 
-   
-   Go through EVERY field in this exact order for child nodes:
-   
-   1. architectural_tone → Different from parent? If NO → null
-   2. cultural_tone → Different from parent? If NO → null
-   3. materials_base → Different from parent? If NO → null
-   4. mood_baseline → Different from parent? If NO → null
-   5. palette_bias → Different from parent? If NO → null
-   6. soundscape_base → Different from parent? If NO → null
-   7. flora_base → Different from parent? If NO → null
-   8. fauna_base → Different from parent? If NO → null
-   
-    NEVER include "genre" in child nodes - it's always inherited from host 
-   
-   EXAMPLE - Desert Canyon region (parent: Post-Apocalyptic Earth):
-   1. architectural_tone: Desert more sun-bleached wreckage → DIFFERENT → "sun-bleached metal ruins"
-   2. cultural_tone: Same survival-focused → SAME → null
-   3. materials_base: Desert more sand-scoured → DIFFERENT → "rust-eaten metal, sand-scoured scrap"
-   4. mood_baseline: Same grim determination → SAME → null
-   5. palette_bias: Desert more rust/sand colors → DIFFERENT → "rust orange, sand yellow, dark grey"
-   6. soundscape_base: Desert wind different → DIFFERENT → "wind through metal, sand shifting"
-   7. flora_base: Desert vegetation different → DIFFERENT → "desert cacti, radiation-mutated shrubs"
-   8. fauna_base: Desert creatures different → DIFFERENT → "scorpions, vultures, sand beetles"
-   
-   RESULT: 6 fields populated, 2 null (this is correct!)
-   
-    REGIONS are biomes/climates - they should populate MORE fields 
-   Regions define climate, regional materials, regional sounds, regional flora/fauna.
-   They should have 60-80% fields populated (only 20-40% null).
-   
-    LOCATIONS refine regions - moderate sparsity 
-   Locations inherit from region and refine specific aspects.
-   They should have 40-60% fields populated (40-60% null).
-   
-    NICHES are smallest - highest sparsity 
-   Niches inherit from location and add intimate details.
-   They should have 20-40% fields populated (60-80% null).
+2. **DNA Contains BOTH Scene AND Cascading Fields**:
+   - Scene fields (14 fields - ALWAYS populated): looks, colorsAndLighting, atmosphere, materials, mood, sounds, spatialLayout, surfaces, colors
+   - Cascading fields (9 fields - sparse in children): genre, architectural_tone, cultural_tone, materials_base, mood_baseline, palette_bias, soundscape_base, flora_base, fauna_base
 
-    NEVER INCLUDE SCENE FIELDS IN DNA 
-   - NO "looks" (comes from visual analysis)
-   - NO "atmosphere" (comes from visual analysis)
-   - NO "lighting" (comes from visual analysis)
-   - NO specific materials/colors (comes from visual analysis)
-   - DNA is about STYLE/VIBE that cascades, not scene specifics
+3. **Scene Fields vs Cascading Fields**:
+   - Scene fields: THIS node's appearance (what you actually see)
+   - Cascading fields: General style that children inherit
+   - Example: Scene "chrome walls, neon signs" → Cascade "cyberpunk industrial aesthetic"
 
-3. **Genre Inheritance**:
-   - Genre is ONLY set in host DNA
-   - All children inherit genre automatically - NEVER include it in child DNA
-   - Example: Host sets "post-apocalyptic", all regions/locations/niches inherit this
+4. **Structural Fields (NOT in DNA)**:
+   - navigableElements: CRITICAL for navigation! List all doors, passages, stairs, etc.
+   - dominantElements: Major objects/landmarks in the scene (array of strings)
+   - uniqueIdentifiers: Distinctive features (array of strings)
+   - searchDesc: Short description for search (75-100 chars)
+   - slug: kebab-case-name
 
-4. **Inheritance Chain**: 
-   - Regions inherit from Host
-   - Locations inherit from Host + Region
-   - Niches inherit from Host + Region + Location
+5. **Genre Inheritance**:
+   - ONLY set "genre" in host DNA
+   - All children: "genre": null (inherited automatically)
+   - Example: Host sets "post-apocalyptic", all descendants inherit this
 
-5. **Parent References**: 
-   - Locations must specify "regionName"
-   - Niches must specify "locationName"
+6. **Cascading Sparsity** - Child DNA Cascading Fields:
+   - ALWAYS set scene fields (looks, atmosphere, etc.)
+   - ONLY set cascading fields if DIFFERENT from parent
+   - If same as parent: set to null
+   - Regions: 60-80% cascading fields populated (climate/biome differences)
+   - Locations: 40-60% cascading fields populated (site-specific refinements)
+   - Example: If region has "desert climate" and location is also desert → palette_bias: null
 
-6. **Consistency**: Maintain coherence across hierarchy
-   - Genre stays constant throughout
-   - Other fields cascade and can be refined
+7. **navigableElements - CRITICAL**:
+   - Locations MUST have navigableElements (for navigation system)
+   - Types: door, passage, stairs, portal, window, bridge, path, gate
+   - Include position (left, center, right, background, etc.)
+   - Example: {"type": "door", "position": "left wall, midground", "description": "Heavy wooden door"}
 
-7. **Output**: Flat JSON only, no markdown or comments
+8. **Output Format**:
+   - Flat JSON only
+   - No markdown, code fences, or comments
+   - All required fields must be present
 
 Generate now:`
 ;

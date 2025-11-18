@@ -9,49 +9,75 @@
 export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'detail' | 'feature';
 
 /**
- * Node DNA - Simplified, flat visual and atmospheric profile
- * Generated per-node to capture essential qualities without hierarchical complexity
+ * Node DNA - Visual and atmospheric profile with cascading style attributes
+ * 
+ * Contains two types of fields:
+ * 1. Scene-specific visual descriptions (always present in all nodes)
+ * 2. Cascading style attributes (genre in host only, others can be sparse in children)
  */
 export interface NodeDNA {
-  // Visual Description (4 fields)
+  // === SCENE-SPECIFIC VISUAL FIELDS (always present) ===
+  
+  // Core Visual Description
   looks: string;                    // 2-4 sentences describing what is seen
   colorsAndLighting: string;        // 1-3 sentences on colors and light
   atmosphere: string;               // 2-4 sentences on air, temperature, motion, weather
-  architectural_tone: string;       // 10-20 char phrase (e.g. 'futuristic metal')
-  
-  // Cultural & Material (3 fields)
-  cultural_tone: string;            // 1 sentence on social/functional identity
   materials: string;                // 1-3 sentences naming main materials
   mood: string;                     // 1-2 sentences on emotional tone
-  
-  // Sensory & Elements (3 fields)
   sounds: string;                   // 5-7 words listing ambient sounds
-  dominantElementsDescriptors: string; // 3-5 defining objects or structures
   spatialLayout: string;            // 1-3 sentences on space shape, dimensions
   
-  // Surface Materials (3 fields)
+  // Surface Materials
   primary_surfaces: string;         // Main materials on walls, floor, ceiling
   secondary_surfaces: string;       // Supporting materials on furniture
   accent_features: string;          // Decorative or striking details
   
-  // Color Mapping (4 fields)
+  // Color Mapping
   dominant: string;                 // Primary color family with coverage area
   secondary: string;                // Secondary color and placement
   accent: string;                   // Accent colors and placement
   ambient: string;                  // Overall light tone (warm/cool/neutral)
   
-  // Identity (2 fields)
-  uniqueIdentifiers: string;        // 2-4 distinctive visual features
-  searchDesc: string;               // 75-100 char search description
+  // === CASCADING STYLE ATTRIBUTES (inheritable, can be sparse) ===
+  
+  // World Identity (ONLY in Host node, never in children)
+  genre?: string;                   // e.g., 'post-apocalyptic', 'fantasy', 'sci-fi'
+  
+  // Inheritable Style Attributes (can be null in children if inherited from parent)
+  architectural_tone?: string;      // Architectural style (e.g., 'industrial metallic')
+  cultural_tone?: string;           // Social/functional identity
+  materials_base?: string;          // Material palette/style
+  mood_baseline?: string;           // Emotional baseline
+  palette_bias?: string;            // Color style/families
+  soundscape_base?: string;         // Ambient sound style
+  flora_base?: string;              // Plant life types, or 'None'
+  fauna_base?: string;              // Animal life types, or 'None'
 }
 
 /**
  * Base interface for any node in the hierarchy
+ * 
+ * Node structure separates:
+ * - Root-level metadata (id, type, name, description)
+ * - Structural/functional fields (navigableElements, slug, etc.)
+ * - DNA (visual/atmospheric profile)
  */
 export interface BaseHierarchyNode {
   name: string;
   description: string;
   dna?: NodeDNA | Partial<NodeDNA>;
+  
+  // Structural/Functional fields (NOT part of DNA)
+  navigableElements?: Array<{
+    type: string;        // door, passage, stairs, portal, window, etc.
+    position: string;    // Location in scene
+    description: string; // What it is
+  }>;
+  dominantElements?: string[];     // Positioned objects in scene
+  uniqueIdentifiers?: string[];    // Distinctive visual features
+  searchDesc?: string;             // Search metadata (75-100 chars)
+  slug?: string;                   // URL-friendly identifier
+  imageUrl?: string;               // Generated image URL
 }
 
 /**

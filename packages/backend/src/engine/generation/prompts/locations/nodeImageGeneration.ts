@@ -36,10 +36,12 @@ const firstPersonInteriorInstructions = NICHE_SHOT_INTERIOR;
  */
 function buildDNAPrompt(
   name: string,
-  dna: NodeDNA,
+  node: HierarchyNode,
   shotInstructions: { shot: string; light: string; lens?: string },
   originalPrompt?: string
 ): string {
+  const dna = node.dna!;
+  
   return `${name}
 
 [SHOT:] ${shotInstructions.shot}
@@ -52,15 +54,15 @@ ${originalPrompt ? `Original user description: "${originalPrompt}"` : ''}
 [LOOK:] ${dna.looks}
 [COLORS & LIGHT:] ${dna.colorsAndLighting}
 [ATMOSPHERE:] ${dna.atmosphere}
-[ARCHITECTURE:] ${dna.architectural_tone}
-[CULTURE:] ${dna.cultural_tone}
+[ARCHITECTURE:] ${dna.architectural_tone || 'N/A'}
+[CULTURE:] ${dna.cultural_tone || 'N/A'}
 [MATERIALS:] ${dna.materials}
 [MOOD:] ${dna.mood}
-[DOMINANT ELEMENTS:] ${dna.dominantElementsDescriptors}
+[DOMINANT ELEMENTS:] ${node.dominantElements?.join(', ') || 'N/A'}
 [SPATIAL LAYOUT:] ${dna.spatialLayout}
 [SURFACES:] primary ${dna.primary_surfaces}; secondary ${dna.secondary_surfaces}; accents ${dna.accent_features}
 [COLOR PALETTE:] dominant ${dna.dominant}; secondary ${dna.secondary}; accent ${dna.accent}; ambient ${dna.ambient}
-[IDENTIFIERS:] ${dna.uniqueIdentifiers}
+[IDENTIFIERS:] ${node.uniqueIdentifiers?.join(', ') || 'N/A'}
 
 `;
 }
@@ -119,5 +121,5 @@ export function nodeImageGeneration(
   }
   
   // Build rich DNA-based prompt
-  return buildDNAPrompt(node.name, node.dna, shotInstructions, originalPrompt);
+  return buildDNAPrompt(node.name, node, shotInstructions, originalPrompt);
 }

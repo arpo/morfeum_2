@@ -26,14 +26,22 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
   }
 
   // Create host/world node
+  // Backend sends: { type, name, description, dna, navigableElements, imageUrl, etc. }
+  // We extract: name at root, dna as separate object, imageUrl for display, structural fields
   const hostNode: Node = {
     id: spawnId,
     type: 'host',
     name: host.name,
-    dna: extractHostDNA(host),
+    dna: extractHostDNA(host), // Returns just host.dna
     imagePath: host.imageUrl || '',
-    focus: initFocus({ name: host.name, dna: host.dna || host } as any)
-  };
+    focus: initFocus({ name: host.name, dna: host.dna || host } as any),
+    // Copy structural fields from backend
+    navigableElements: host.navigableElements,
+    dominantElements: host.dominantElements,
+    uniqueIdentifiers: host.uniqueIdentifiers,
+    slug: host.slug,
+    searchDesc: host.searchDesc
+  } as Node;
   nodes.push(hostNode);
 
   const tree: TreeNode = {
@@ -52,10 +60,16 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
         id: regionId,
         type: 'region',
         name: region.name,
-        dna: extractRegionDNA(region),
+        dna: extractRegionDNA(region), // Returns just region.dna
         imagePath: region.imageUrl || '',
-        focus: initFocus({ name: region.name, dna: region.dna || region } as any)
-      };
+        focus: initFocus({ name: region.name, dna: region.dna || region } as any),
+        // Copy structural fields from backend
+        navigableElements: region.navigableElements,
+        dominantElements: region.dominantElements,
+        uniqueIdentifiers: region.uniqueIdentifiers,
+        slug: region.slug,
+        searchDesc: region.searchDesc
+      } as Node;
       nodes.push(regionNode);
 
       const regionTree: TreeNode = {
@@ -74,10 +88,16 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
             id: locationId,
             type: 'location',
             name: location.name,
-            dna: extractLocationDNA(location),
+            dna: extractLocationDNA(location), // Returns just location.dna
             imagePath: location.imageUrl || '',
-            focus: initFocus({ name: location.name, dna: location.dna || location } as any)
-          };
+            focus: initFocus({ name: location.name, dna: location.dna || location } as any),
+            // Copy structural fields from backend
+            navigableElements: location.navigableElements,
+            dominantElements: location.dominantElements,
+            uniqueIdentifiers: location.uniqueIdentifiers,
+            slug: location.slug,
+            searchDesc: location.searchDesc
+          } as Node;
           nodes.push(locationNode);
 
           const locationTree: TreeNode = {
@@ -96,10 +116,16 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
                 id: nicheId,
                 type: 'niche',
                 name: niche.name,
-                dna: extractNicheDNA(niche),
+                dna: extractNicheDNA(niche), // Returns just niche.dna
                 imagePath: niche.imageUrl || '',
-                focus: initFocus({ name: niche.name, dna: niche.dna || niche } as any)
-              };
+                focus: initFocus({ name: niche.name, dna: niche.dna || niche } as any),
+                // Copy structural fields from backend
+                navigableElements: niche.navigableElements,
+                dominantElements: niche.dominantElements,
+                uniqueIdentifiers: niche.uniqueIdentifiers,
+                slug: niche.slug,
+                searchDesc: niche.searchDesc
+              } as Node;
               nodes.push(nicheNode);
 
               const nicheTree: TreeNode = {

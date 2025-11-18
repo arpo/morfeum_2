@@ -32,9 +32,9 @@ PARENT CONTEXT (inherit and respect these attributes):
 `
     : '';
 
-  const ret = `Interpret the user's description into a simplified, flat DNA structure.
+  const ret = `Interpret the user's description into a DNA structure with cascading style attributes.
 
-OBJECTIVE: Create a single unified node profile that captures the essential visual and atmospheric qualities without hierarchical complexity.
+OBJECTIVE: Create visual/atmospheric DNA that separates scene-specific details from inheritable style attributes.
 
 NODE INFORMATION:
 Name: ${nodeName}
@@ -47,15 +47,13 @@ ${originalPrompt}
 OUTPUT JSON STRUCTURE:
 
 {
+  // === SCENE-SPECIFIC VISUAL FIELDS (always populated) ===
   "looks": "2-4 sentences describing what is seen — key forms, layout, and notable features.",
   "colorsAndLighting": "1-3 sentences on dominant colors and light behavior.",
   "atmosphere": "2-4 sentences on air, temperature, motion, weather, and sensory feel.",
-  "architectural_tone": "Short phrase (10-20 characters) naming architectural style or era (e.g. 'futuristic metal', 'ancient stone'). Roman or Gothic, Victorian, Modernist, Brutalist, Cyberpunk, Organic, Minimalist, Baroque, Art Deco, Rustic, Industrial, Neo-futuristic.",
-  "cultural_tone": "1 sentence on the social or functional identity (e.g. 'financial district', 'artisan quarter', 'market zone').",
   "materials": "1-3 sentences naming main materials and textures, their condition and finish.",
   "mood": "1-2 sentences on the emotional tone this place evokes.",
   "sounds": "5-7 words listing ambient sounds.",
-  "dominantElementsDescriptors": "3-5 defining objects or structures.",
   "spatialLayout": "1-3 sentences on space shape, dimensions, entry points, and focal centers.",
   "primary_surfaces": "Main materials on walls, floor, ceiling.",
   "secondary_surfaces": "Supporting materials on furniture or structure.",
@@ -64,42 +62,50 @@ OUTPUT JSON STRUCTURE:
   "secondary": "Secondary color and where it appears.",
   "accent": "Accent colors and placement.",
   "ambient": "Overall light tone (warm / cool / neutral).",
-  "uniqueIdentifiers": "2-4 distinctive visual features that make this place recognizable.",
-  "searchDesc": "1 concise line (≈75-100 characters) for semantic search: type, function, and key visuals."
+  
+  // === CASCADING STYLE ATTRIBUTES (optional - can be null if inherited from parent) ===
+  "genre": null,  // NEVER set genre - only host nodes have this
+  "architectural_tone": "Short phrase (e.g., 'industrial metallic', 'organic stone') OR null to inherit",
+  "cultural_tone": "1 sentence on social/functional identity OR null to inherit",
+  "materials_base": "Material palette/style (NOT specific objects) OR null to inherit",
+  "mood_baseline": "Emotional baseline OR null to inherit",
+  "palette_bias": "Color style/families (NOT specific scene colors) OR null to inherit",
+  "soundscape_base": "Ambient sound style OR null to inherit",
+  "flora_base": "Plant life types OR 'None' OR null to inherit",
+  "fauna_base": "Animal life types OR 'None' OR null to inherit"
 }
 
 CRITICAL GUIDELINES
 
-1. **Visual Anchors**
-   - Extract anchors directly from the description and user input.
-   - Note relative size, position, and proportion of key forms.
-   - These anchors guarantee scene continuity and must never be skipped.
+1. **Scene vs. Cascading Fields**
+   - Scene fields: Describe THIS specific location's appearance (looks, colors, materials visible)
+   - Cascading fields: General style that could produce similar children (architectural style, color palette bias)
+   - Example: Scene "polished chrome walls" → Cascade "industrial metallic aesthetic"
 
-2. **Clarity Over Volume**
-   - Describe only what can be seen or sensed.
-   - One field = one purpose.
-   - Avoid repetition or nested metadata.
+2. **Visual Anchors**
+   - Extract anchors directly from the description and user input
+   - Note relative size, position, and proportion of key forms
+   - These anchors guarantee scene continuity
 
-3. **Intent Fidelity**
-   - Keep all user-given names, scales, and moods intact.
-   - Honor the originating description's genre and tone when expanding DNA.
-${parentContext ? '   - INHERIT parent context attributes (architectural_tone, cultural_tone, colors, mood).\n   - Maintain visual consistency with parent node.' : ''}
+3. **Cascading Inheritance**
+   - NEVER set "genre" field (only host nodes have this)
+${parentContext ? '   - Parent provides: architectural_tone, cultural_tone, colors, mood\n   - Only override cascading fields if THIS node is distinctly different\n   - Set to null to inherit parent value\n   - Maintain visual consistency with parent' : '   - Set cascading fields only if this node has distinct style characteristics\n   - Use null to indicate no specific style override'}
 
-4. **Search Description**
-   - 75–100 characters max.
-   - Start with type or function.
-   - End with 1–2 defining visual traits.  
-     *Example:* "Weathered stone lighthouse on cliff with spiral interior stairs."
+4. **Clarity Over Volume**
+   - Describe only what can be seen or sensed
+   - One field = one purpose
+   - Avoid repetition across fields
 
 5. **Output Rules**
-   - Flat JSON only.
-   - No markdown, code fences, or comments.
-   - All schema fields required unless explicitly null.
+   - Flat JSON only (no markdown, code fences, or comments)
+   - All scene fields required
+   - Cascading fields can be null for inheritance
 
 RATIONALE
-- Keeps nodes lightweight and fast to merge.
-- Maintains visual consistency across regenerations.
-- Ensures user intent and naming survive each cascade.`;
+- Separates scene details from inheritable style
+- Enables efficient DNA cascade through hierarchy
+- Maintains visual consistency across regenerations
+- Supports sparse child DNA (only override what's different)`;
 // console.log('---- Prompt of for nde DNA LLM ');
 // console.log(ret);
 // console.log('------');

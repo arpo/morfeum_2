@@ -409,54 +409,24 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
         return;
       }
       
-      // Stage 4.5: Merge visual analysis scene fields into target node
-      // Find target node (deepest node in chain)
-      const targetNode = nodeChain[nodeChain.length - 1];
-      let targetNodeRef: any = null;
-      
-      // Navigate to target node in hierarchy
-      if (targetNode.type === 'location' && result.hierarchy.host.regions) {
-        const region = result.hierarchy.host.regions[0];
-        if (region?.locations?.[0]) {
-          targetNodeRef = region.locations[0];
-        }
-      } else if (targetNode.type === 'niche' && result.hierarchy.host.regions) {
-        const region = result.hierarchy.host.regions[0];
-        if (region?.locations?.[0]?.niches?.[0]) {
-          targetNodeRef = region.locations[0].niches[0];
-        }
-      }
-      
-      // Merge scene fields into node root (not DNA)
-      if (targetNodeRef && visualAnalysis) {
-        targetNodeRef.looks = visualAnalysis.looks;
-        targetNodeRef.atmosphere = visualAnalysis.atmosphere;
-        targetNodeRef.lighting = visualAnalysis.lighting;
-        targetNodeRef.dominantElements = visualAnalysis.dominantElements;
-        targetNodeRef.spatialLayout = visualAnalysis.spatialLayout;
-        targetNodeRef.uniqueIdentifiers = visualAnalysis.uniqueIdentifiers;
-        targetNodeRef.materials_primary = visualAnalysis.materials_primary;
-        targetNodeRef.materials_secondary = visualAnalysis.materials_secondary;
-        targetNodeRef.materials_accents = visualAnalysis.materials_accents;
-        targetNodeRef.colors_dominant = visualAnalysis.colors_dominant;
-        targetNodeRef.colors_secondary = visualAnalysis.colors_secondary;
-        targetNodeRef.colors_accents = visualAnalysis.colors_accents;
-        targetNodeRef.colors_ambient = visualAnalysis.colors_ambient;
-        targetNodeRef.navigableElements = visualAnalysis.navigableElements;
-        targetNodeRef.searchDesc = visualAnalysis.searchDesc;
-        targetNodeRef.imageUrl = imageUrl;
-      }
-      
-      // Stage 5: Batch DNA Generation for all nodes
+      // Stage 5: Batch DNA Generation for all nodes (includes visual analysis merging)
       const dnaStart = Date.now();
       
-      // Generate DNA for entire hierarchy
+      // Generate DNA for entire hierarchy (visual analysis is merged in pipeline)
       const fullHierarchy = await generateBatchDNA(
         result.hierarchy,
         visualAnalysis,
         prompt.trim(),
         apiKey
       );
+      
+      // Add imageUrl to deepest node
+      const deepestNode = nodeChain[nodeChain.length - 1];
+      if (deepestNode.type === 'location' && fullHierarchy.host.regions?.[0]?.locations?.[0]) {
+        fullHierarchy.host.regions[0].locations[0].imageUrl = imageUrl;
+      } else if (deepestNode.type === 'niche' && fullHierarchy.host.regions?.[0]?.locations?.[0]?.niches?.[0]) {
+        fullHierarchy.host.regions[0].locations[0].niches[0].imageUrl = imageUrl;
+      }
       
       timings.dnaGeneration = Date.now() - dnaStart;
       
