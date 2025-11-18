@@ -4,9 +4,9 @@
 
 export const blackListCharacterNames = `Elara, Kaelen, Zephyr, Lyra, Anya Petrova`;
 
-export const morfeumVibes = 'Morfeum aesthetic — hyper-realistic, high-contrast visuals with sharp light, glowing bioluminescence, and richly saturated tones. Surfaces feel alive; darkness holds depth, not gloom. Reality, one notch brighter.';
+export const morfeumVibes = 'living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity';
 
-export const qualityPrompt = 'best quality, 4k, ultra-detailed, hyper-realistic, vivid color grading, high contrast, glowing highlights, dynamic lighting, volumetric glow, crisp focus';
+export const qualityPrompt = 'crisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain';
 
 export const negativePrompt = 'lowres, bad anatomy, blurry, fuzzy, distorted, deformed, disfigured, mutated, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, fused fingers, too many fingers, long neck, ugly, tiling, poorly drawn, watermark, grainy, jpeg artifacts, low quality';
 
