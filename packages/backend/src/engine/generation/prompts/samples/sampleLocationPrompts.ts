@@ -3,6 +3,7 @@
  */
 
 export const sampleLocationPrompts = [
+  'outside an alien wreckage, oxidized vessel, mostly covered by snow drifts in a frozen tundra',
   "The Mirror Foundry (exterior), a derelict glassworks at the edge of the marsh, its furnaces still breathing faint light through broken panes.",
   "The Observatory of Ashes (exterior), perched on a basalt ridge, its domes cracked open to the sky like burned eyes.",
   "The House of Salt and Rain (exterior), a cliffside manor built from bleached coral, its terraces glistening with seawater and memory.",
