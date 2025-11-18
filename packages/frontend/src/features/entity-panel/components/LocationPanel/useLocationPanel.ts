@@ -148,7 +148,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     navigation: any,
     currentNode: any
   ) => {
-    const { node } = navigation;
+    const { node, parentNodeId } = navigation;
     
     // Add node to store
     const createNode = useLocationsStore.getState().createNode;
@@ -168,9 +168,13 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       return;
     }
     
-    // Add to tree structure as child of current node
+    // Use parentNodeId from backend (which correctly traverses to parent location)
+    // instead of currentNode.id (which would create niche-under-niche)
+    const correctParentId = parentNodeId || currentNode.id;
+    
+    // Add to tree structure as child of correct parent (from backend decision)
     const addNodeToTree = useLocationsStore.getState().addNodeToTree;
-    addNodeToTree(worldTree.id, currentNode.id, node.id, node.type);
+    addNodeToTree(worldTree.id, correctParentId, node.id, node.type);
     
     // Save to backend
     const saveToBackend = useLocationsStore.getState().saveToBackend;
@@ -184,6 +188,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     console.log('═══════════════════════════════════════════════════════════');
     console.log('  Name:', node.name);
     console.log('  ID:', node.id);
+    console.log('  Parent ID:', correctParentId);
     console.log('  Added to tree: ✓');
     console.log('  Saved to backend: ✓');
     console.log('═══════════════════════════════════════════════════════════\n');

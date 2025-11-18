@@ -11,6 +11,7 @@ import { generateImagePromptForNode } from '../../generation/shared/imagePromptG
 import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
 import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
 import { fluxRoofFix } from '../../generation/prompts/shared/constants';
+import { findParentLocationNode } from '../navigationHelpers';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
 export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
@@ -84,9 +85,10 @@ export async function runCreateLocationNodePipeline(
 
   const nodeName = decision.newNodeName || 'Unnamed Niche';
 
-  // Extract parent context from current node
-  const parentContext = context.currentNode.dna
-    ? extractParentContext(context.currentNode.dna)
+  // Extract parent context from parent location (traverse up if current is niche)
+  const { parentLocationDNA } = findParentLocationNode(context);
+  const parentContext = parentLocationDNA
+    ? extractParentContext(parentLocationDNA)
     : undefined;
 
   // Use centralized DNA generator (now returns { dna, name, description, navigableElements, etc. })

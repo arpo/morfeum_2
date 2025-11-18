@@ -4,6 +4,7 @@
  */
 
 import type { IntentResult, NavigationContext, NavigationDecision } from '../types';
+import { findParentLocationNode } from '../navigationHelpers';
 
 /**
  * Handle GO_INSIDE intent
@@ -32,20 +33,21 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
     };
   }
   
-  // Already inside? Create deeper niche
-  // TODO, not sure about this one. All new nodes should be based in the same location parent and should be siblings?
+  // Already inside a niche? Create sibling niche under parent location
   if (currentNode.type === 'niche' && intent.target) {
+    const { parentLocationId } = findParentLocationNode(context);
+    
     return {
       action: 'create_niche',
-      parentNodeId: currentNode.id,
+      parentNodeId: parentLocationId,
       newNodeType: 'niche',
-      newNodeName: `Inside ${intent.target}`,
-      style: intent.style || 'default',               // NEW: Pass style from intent
-      perspective: intent.spaceType || 'interior',    // NEW: Pass perspective from intent
+      newNodeName: `${intent.spaceType || 'Interior'} of ${intent.target}`,
+      style: intent.style || 'default',
+      perspective: intent.spaceType || 'interior',
       metadata: {
-        relation: 'child'
+        relation: 'sibling'
       },
-      reasoning: `Going deeper inside ${intent.target}`
+      reasoning: `Creating sibling niche under parent location for ${intent.target}`
     };
   }
   

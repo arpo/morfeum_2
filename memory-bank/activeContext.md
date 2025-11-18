@@ -5,6 +5,37 @@ The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
 
+- **Niche Nesting Bug Fix (Nov 18, 2025):**
+  - **Fixed critical bug** - Niches were being nested inside other niches instead of being siblings under parent location
+  - **Root cause identified:** Frontend was hardcoding `type: 'location'` for all nodes sent to backend
+  - **Triple fix required:**
+    1. **Backend handler (basicMovement.ts):**
+       - Created `findParentLocationNode()` helper in navigationHelpers.ts
+       - Updated `handleGoInside()` to traverse up to parent location when current is niche
+       - Now creates sibling niches under parent location instead of nested children
+    2. **Backend DNA extraction (createNodePipeline.ts):**
+       - Fixed DNA inheritance to use parent location's DNA, not current niche's DNA
+       - Uses `findParentLocationNode()` to get correct location DNA for cascading
+    3. **Frontend context building (locationNavigation.ts):**
+       - **Critical fix:** Changed `type: 'location' as const` to `type: currentNode.type`
+       - Backend now receives correct node type ('niche' vs 'location') and routes to proper handler
+       - Added `type` field to SpatialNode interface
+    4. **Frontend tree insertion (useLocationPanel.ts):**
+       - Updated to use `parentNodeId` from backend decision instead of `currentNode.id`
+       - Respects backend's correct parent location ID
+  - **Result:** Clean tree structure with niches as siblings:
+    ```
+    location
+      ├─ niche #1
+      └─ niche #2  ✅ Siblings under location
+    ```
+    Instead of broken nested structure:
+    ```
+    location
+      └─ niche #1
+          └─ niche #2  ❌ Nested (old bug)
+    ```
+
 - **Focus System Removal (Nov 18, 2025):**
   - **Removed unused focus tracking system** - Deep investigation revealed focus was never actually used
   - **Analysis findings:**

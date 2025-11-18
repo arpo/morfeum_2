@@ -4,7 +4,54 @@
  * TODO: Replace with LLM-generated descriptions in Phase 2
  */
 
-import type { NodeSpec, NodeType } from './types';
+import type { NodeSpec, NodeType, NavigationContext } from './types';
+
+/**
+ * Find parent location node from context
+ * Traverses up from niche nodes to find the closest location parent
+ * @param context - Navigation context
+ * @returns Object with parentLocationId and parentLocationDNA
+ */
+export function findParentLocationNode(context: NavigationContext): {
+  parentLocationId: string;
+  parentLocationDNA: any;
+} {
+  const { currentNode, parentNode } = context;
+  
+  // If current node is a location, use it directly
+  if (currentNode.type === 'location') {
+    return {
+      parentLocationId: currentNode.id,
+      parentLocationDNA: currentNode.dna
+    };
+  }
+  
+  // If current node is a niche, traverse to parent location
+  if (currentNode.type === 'niche' && parentNode) {
+    // Parent should be a location
+    if (parentNode.type === 'location') {
+      return {
+        parentLocationId: parentNode.id,
+        parentLocationDNA: parentNode.dna
+      };
+    }
+    
+    // If parent is also a niche (shouldn't happen after our fix, but handle it)
+    // Use the parent's parent ID and DNA if available
+    if (parentNode.type === 'niche' && parentNode.dna) {
+      return {
+        parentLocationId: currentNode.parentId || currentNode.id,
+        parentLocationDNA: parentNode.dna
+      };
+    }
+  }
+  
+  // Fallback: use current node
+  return {
+    parentLocationId: currentNode.parentId || currentNode.id,
+    parentLocationDNA: currentNode.dna
+  };
+}
 
 /**
  * Create region specification (stub - will use LLM later)

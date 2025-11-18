@@ -30,6 +30,7 @@ interface CurrentLocationDetails {
 interface SpatialNode {
   id: string;
   name: string;
+  type: string;
   dna: any;
   searchDesc: string;
   depth_level: number;
@@ -130,6 +131,7 @@ export function buildSpatialNodes(
     return {
       id: node.id,
       name: node.name,
+      type: node.type,
       dna: node.dna,
       searchDesc,
       depth_level,
@@ -181,7 +183,7 @@ export async function findDestination(
   const context = {
     currentNode: {
       id: currentNode.id,
-      type: 'location' as const,
+      type: currentNode.type,  // Use actual node type, not hardcoded 'location'
       name: currentNode.name,
       parentId: currentSpatialNode?.parent_location_id || null,
       data: currentNodeDataForContext,
@@ -189,7 +191,7 @@ export async function findDestination(
     },
     parentNode: parentNodeData ? {
       id: parentNodeData.id,
-      type: 'location' as const,
+      type: 'location' as const,  // Parent is always a location in current system
       name: parentNodeData.name,
       data: parentNodeDataForContext,
       dna: parentMergedDNA
@@ -197,7 +199,7 @@ export async function findDestination(
     siblingNodes: spatialNodes.map(node => ({
       id: node.id,
       name: node.name,
-      type: 'location' as const
+      type: node.type || 'location' as const  // Use actual type if available
     }))
   };
   

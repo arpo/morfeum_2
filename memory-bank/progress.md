@@ -39,6 +39,12 @@
 - [x] Entity session cleanup on delete
 
 ### Technical Improvements
+- [x] Niche nesting bug fix (Nov 18, 2025)
+  - Fixed critical bug where niches were being nested inside other niches
+  - Root cause: Frontend was hardcoding `type: 'location'` for all nodes
+  - Backend: Created findParentLocationNode() helper, updated handlers and DNA extraction
+  - Frontend: Fixed context building to send actual node type, updated tree insertion
+  - Result: Niches now correctly created as siblings under parent location
 - [x] DNA structure cleanup (Nov 18, 2025)
   - Fixed critical double-wrapping bug in worlds.json storage
   - Backend: Moved visual analysis to worldTreePipeline, proper field separation
