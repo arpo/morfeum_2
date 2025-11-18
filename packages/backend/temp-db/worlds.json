@@ -2015,166 +2015,160 @@
         "distance": "close"
       }
     },
-    "loc-1763462402754-ex9mqokgd": {
-      "id": "loc-1763462402754-ex9mqokgd",
+    "loc-1763463803921-xuh9ln9zw": {
+      "id": "loc-1763463803921-xuh9ln9zw",
       "type": "host",
-      "name": "The Gloomlands",
+      "name": "The Geothermal Expanse",
       "dna": {
         "type": "host",
-        "name": "The Gloomlands",
-        "description": "A realm perpetually shrouded in shadow and mist, where industry churns ceaselessly.",
+        "name": "The Geothermal Expanse",
+        "description": "A vast, volatile landscape sculpted by intense geothermal activity.",
         "dna": {
-          "genre": "industrial fantasy",
-          "architectural_tone": "colossal, utilitarian, soot-stained",
-          "cultural_tone": "A realm defined by relentless industrial output and a perpetual struggle against encroaching gloom. Survival and production are paramount, fostering a resilient and often grim society.",
-          "materials_base": "Heavy, dark metals, rough-hewn stone, and dense, often contaminated, earth. Materials are chosen for durability and function over aesthetics, bearing the marks of constant use and harsh environments.",
-          "mood_baseline": "oppressive, industrious, shadowed",
-          "palette_bias": "Dominated by deep, muted tones. Grays, blacks, and steely blues form the base, with occasional stark, artificial light sources providing contrast.",
-          "soundscape_base": "A constant hum of heavy machinery, clanging metal, and distant grinding. The pervasive sounds of industry are a defining characteristic of the environment.",
-          "flora_base": "Sparse and resilient vegetation, adapted to low light and toxic soil. Think hardy mosses, stunted, gnarled trees, and resilient fungi.",
-          "fauna_base": "Creatures adapted to harsh, industrial environments. Often mutated or scavengers, they tend to be robust and utilitarian in form."
+          "genre": "fantasy",
+          "architectural_tone": "grand monolithic",
+          "cultural_tone": "Ancient civilizations that harness primal natural forces for construction and power, with a focus on enduring presence and elemental mastery.",
+          "materials_base": "Stone and mineral composites are primary, imbued with geothermal energies. Focus on density, opacity, and resistance to extreme conditions. Natural formations are integrated.",
+          "mood_baseline": "awe-inspiring, volatile, ancient",
+          "palette_bias": "Dominated by earthy tones, volcanic blacks, and deep mineral hues, with subtle iridescent highlights reflecting internal energy. Contrasts are often stark but muted by atmospheric effects.",
+          "soundscape_base": "A low, resonant hum of geological activity mixed with the percussive sounds of steam and shifting earth. Echoes of ancient mechanisms and natural forces.",
+          "flora_base": "Extremely sparse and hardy, adapted to extreme heat and mineral-rich soil. Expect crystalline growths, heat-resistant fungi, and leathery, dark-hued vegetation clinging to any stable surface.",
+          "fauna_base": "Creatures adapted to heat and sulfurous environments. Think armored insects, subterranean burrowers, and airborne organisms that thrive in steam and ash."
         },
-        "slug": "the-gloomlands"
+        "slug": "the-geothermal-expanse"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "The Gloomlands",
+        "node_id": "The Geothermal Expanse",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "3d4459e6-1abb-4a22-a183-4ba86c0458f5": {
-      "id": "3d4459e6-1abb-4a22-a183-4ba86c0458f5",
+    "bae4c8e2-c352-4a75-aa4c-50d5dcaa1230": {
+      "id": "bae4c8e2-c352-4a75-aa4c-50d5dcaa1230",
       "type": "region",
-      "name": "The Gloomlands",
+      "name": "The Geothermal Expanse",
       "dna": {
         "type": "region",
-        "name": "The Gloomlands",
+        "name": "The Geothermal Expanse",
         "description": "",
         "dna": {
           "architectural_tone": null,
-          "cultural_tone": "The heart of heavy industry, where the extraction and refinement of raw materials fuel the realm's ceaseless production. Settlements are dense, grimy, and built for maximum output.",
-          "materials_base": "Predominantly iron and steel alloys, with foundational elements of slag and packed earth. Exposed pipes and ventilation systems are ubiquitous.",
-          "mood_baseline": "relentless, smog-choked, functional",
-          "palette_bias": "Leans into dark, sooty greys and blacks, punctuated by the dull sheen of unpolished metal and the occasional glow of forge fires.",
-          "soundscape_base": "The drone of massive furnaces, the clang of hammers on anvils, and the hiss of steam are constant. The air is thick with the din of manufacturing.",
-          "flora_base": "Industrial mosses that thrive on polluted surfaces, hardy, dark-leafed weeds, and fungi that grow in damp, forgotten corners.",
-          "fauna_base": "Scavenging birds with dark plumage, hardy insects adapted to oily residues, and small, burrowing creatures that feed on industrial waste."
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "ominous, imposing",
+          "palette_bias": "muted blues and greens from atmospheric moisture, contrasted with the dark, mineral tones of the landscape.",
+          "soundscape_base": "constant hissing of steam vents and the distant rumble of geological shifts, punctuated by wind and water.",
+          "flora_base": "Scrubby, heat-tolerant plants and mosses that thrive on mineral deposits and constant moisture.",
+          "fauna_base": "Small, resilient creatures that can withstand the heat and toxic gases, often with dark, camouflaged exoskeletons."
         },
-        "slug": "the-gloomlands"
+        "slug": "the-geothermal-expanse"
       },
       "imagePath": "",
       "focus": {
-        "node_id": "The Gloomlands",
+        "node_id": "The Geothermal Expanse",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "1195ed31-60fb-4fc4-93a9-b501e42e6d53": {
-      "id": "1195ed31-60fb-4fc4-93a9-b501e42e6d53",
+    "89e2633c-3f64-4d06-8b0d-2e2d126b08f5": {
+      "id": "89e2633c-3f64-4d06-8b0d-2e2d126b08f5",
       "type": "location",
-      "name": "The Crimson Foundry",
+      "name": "The Ethereal Citadel",
       "dna": {
         "type": "location",
-        "name": "The Crimson Foundry",
-        "description": "A massive steelworks that dominates the Ironhaven skyline, its exterior a testament to relentless production.",
-        "looks": "A colossal steelworks complex sprawls across the landscape, characterized by vast, soot-stained metal structures and multiple towering chimneys. The architecture is industrial and utilitarian, with exposed piping and complex scaffolding visible. Numerous windows glow with an internal red light, and smoke billows from the chimneys, tinged with crimson. The scale is immense, suggesting a massive, active industrial operation.",
-        "atmosphere": "A thick, pervasive fog or mist obscures the lower portions of the structures and the surrounding terrain. The air is heavy with industrial haze, and the overall impression is one of perpetual twilight, making visibility limited beyond the immediate vicinity.",
-        "mood": "Grim, industrious, oppressive",
-        "lighting": "The lighting is dim and atmospheric, dominated by a deep blue-grey twilight sky. Intense red light emanates from within the facility, casting a glow on the fog and structures. This internal red light creates high contrast against the dark industrial elements and the muted ambient sky.",
+        "name": "The Ethereal Citadel",
+        "description": "A formidable fortress suspended above the steaming plains, its form constantly obscured.",
+        "looks": "A colossal fortress dominates the midground, its architecture characterized by towering spires and crenellated ramparts. The structure appears to be carved from dark, weathered stone, with massive walls seamlessly integrated into the surrounding terrain. The scale is immense, suggesting a formidable and ancient edifice. Light glints faintly from windows and openings within the fortress, hinting at internal activity. The overall impression is one of imposing grandeur and enduring strength, despite its obscured nature.",
+        "atmosphere": "A thick, pervasive mist envelopes the entire scene, significantly reducing visibility. Wisps of steam rise from the ground, contributing to the foggy, damp environment. The air appears heavy with moisture, creating a sense of enclosure and mystery.",
+        "mood": "Mysterious, imposing, ethereal",
+        "lighting": "The lighting is soft and diffused, characteristic of a heavily fogged environment. A cool, monochromatic blue-green hue permeates the scene, with faint, warm orange glows emanating from within the fortress's central archway and upper windows. Contrast is low, with details softened by the atmospheric conditions.",
         "dominantElements": [
-          "Massive industrial building complex (vast, horizontal structure)",
-          "Towering chimneys (multiple, vertical structures)",
-          "Crimson smoke and internal red glow (emanating from building and chimneys)",
-          "Scaffolding and external pipework (visible on building)",
-          "Gloomy, fog-shrouded terrain (foreground and midground)"
+          "Massive fortress with multiple spires (est. 100-150m tall, HORIZONTAL STRUCTURE)",
+          "Large central archway (est. 30m tall, HORIZONTAL STRUCTURE)",
+          "Rocky foreground terrain",
+          "Steaming ground, obscured by fog"
         ],
-        "spatialLayout": "The foreground features a dark, wet, and reflective path or stream leading towards the industrial complex. The midground is dominated by the vast steelworks, a sprawling horizontal structure with numerous vertical chimneys. The background is a hazy, indistinct expanse of sky and distant structures. The sheer scale of the industrial complex dwarfs the natural elements in the foreground.",
+        "spatialLayout": "The foreground consists of a path leading towards the central structure, flanked by rocky outcrops and sparse vegetation. The midground is occupied by the imposing fortress, its sheer size and architecture commanding attention. The background is lost in the dense fog, with only faint suggestions of mountainous or elevated terrain.",
         "uniqueIdentifiers": [
-          "Crimson-tinged smoke from chimneys",
-          "Pervasive internal red glow from windows and vents",
-          "Towering, multi-chimneyed industrial complex"
+          "Massive fortress structure",
+          "Pervasive atmospheric mist",
+          "Geothermal steam vents implied by mist"
         ],
-        "materials_primary": "Metal (soot-stained)",
-        "materials_secondary": "Stone (building foundations), concrete",
-        "materials_accents": "Glowing red lights, reflective water",
-        "colors_dominant": "Dark greys and blues (sky, structures)",
-        "colors_secondary": "Crimson red (smoke, internal lights)",
-        "colors_accents": "Orange (some internal lights), white (tips of some smoke plumes)",
-        "colors_ambient": "Muted blue-grey",
+        "materials_primary": "Stone",
+        "materials_secondary": "Earth, vegetation",
+        "materials_accents": "Faint light glows",
+        "colors_dominant": "Muted blue-green (fog, sky)",
+        "colors_secondary": "Dark gray (stone fortress)",
+        "colors_accents": "Warm orange (lights within fortress)",
+        "colors_ambient": "Cool blue-green",
         "navigableElements": [
           {
-            "type": "door",
+            "type": "archway",
             "position": "center, midground",
-            "description": "Large, brightly lit entrance door at the base of the main structure"
+            "description": "Enormous arched gateway leading into the fortress, illuminated from within"
           },
           {
             "type": "passage",
-            "position": "left, midground",
-            "description": "Conveyor belt system ascending into the main building structure"
+            "position": "center, background (through archway)",
+            "description": "Distant passage visible through the main arch, lined with faint lights"
           },
           {
             "type": "window",
-            "position": "various, midground",
-            "description": "Numerous glowing red windows offering glimpses into the interior"
-          },
-          {
-            "type": "stairs",
-            "position": "left side, midground",
-            "description": "External metal stairs leading up the side of the industrial building"
+            "position": "upper sections of fortress, midground",
+            "description": "Small, dimly lit windows scattered across the fortress facade"
           }
         ],
-        "searchDesc": "[Location - Exterior] Industrial steelworks in twilight. Has: lit entrance door (center, midground), conveyor belt passage (left, midground), glowing windows (various, midground)",
+        "searchDesc": "Misty fortress exterior. Has: large archway (center, midground), distant passage (center, background), lit windows (midground)",
         "dna": {
-          "architectural_tone": "colossal industrial complex, utilitarian structures",
-          "cultural_tone": "A nexus of intense smelting and fabrication, driven by the relentless demand for iron and steel. The workers are hardy and accustomed to hazardous conditions.",
-          "materials_base": "Soot-stained steel plating, reinforced concrete foundations, and extensive networks of iron pipes and gantries.",
-          "mood_baseline": "oppressive, fiery, perpetually dim",
-          "palette_bias": "Dark, weathered metals with sharp, contrasting accents of intense crimson from internal furnaces and smoke.",
-          "soundscape_base": "The deep roar of furnaces, the rhythmic pounding of machinery, and the whoosh of steam vents. Intermittent cries of metal on metal.",
-          "flora_base": "null",
-          "fauna_base": "null"
+          "architectural_tone": "fortified, colossal",
+          "cultural_tone": null,
+          "materials_base": "primary stone, weathered and scarred by steam and minerals.",
+          "mood_baseline": "mysterious, formidable",
+          "palette_bias": "dominated by cool, desaturated blues and grays of mist, with occasional, faint warm glows from within.",
+          "soundscape_base": "muffled by fog, with the pervasive sound of distant steam and the occasional, deep resonant tone of the citadel's structure.",
+          "flora_base": "None visible on the exterior structure.",
+          "fauna_base": "None visible on the exterior structure."
         },
-        "slug": "the-crimson-foundry"
+        "slug": "the-ethereal-citadel"
       },
-      "imagePath": "https://v3b.fal.media/files/b/koala/ieI-slY8xSid8bSKGuCtW.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/zebra/AcKWuH2QBwE175hu2plCi.jpg",
       "focus": {
-        "node_id": "The Crimson Foundry",
+        "node_id": "The Ethereal Citadel",
         "perspective": "exterior",
         "viewpoint": "default world view",
         "distance": "medium"
       }
     },
-    "niche-1763462455562-nlyy9zhxq": {
-      "id": "niche-1763462455562-nlyy9zhxq",
+    "niche-1763463838835-2pogtj8g9": {
+      "id": "niche-1763463838835-2pogtj8g9",
       "type": "niche",
-      "name": "interior of The Crimson Foundry",
+      "name": "interior of The Ethereal Citadel",
       "dna": {
-        "looks": "A vast, cavernous industrial interior dominated by colossal steel pillars and a vaulted, shadowed ceiling.  The foreground features a soot-caked concrete floor with metal drains and a cluttered workbench, while shadowed passages and arched doorways hint at further depths.",
-        "colorsAndLighting": "The scene is bathed in the infernal glow of unseen forges and machinery, casting a dominant deep crimson and orange hue. Intense heat sources create localized light and deep shadows throughout the chamber.",
-        "atmosphere": "The air is thick with oppressive heat and the metallic tang of molten iron. Condensation drips from overhead pipes, hissing upon unseen hot surfaces, contributing to a visceral, active industrial feel.",
-        "architectural_tone": "Colossal Industrial",
-        "cultural_tone": "Nexus of intense smelting and fabrication.",
-        "materials": "Rough, soot-caked concrete, scarred dark steel beams, and riveted iron elements define the space. Textures emphasize rust, grime, and the visceral feel of intense heat.",
-        "mood": "Oppressive and intensely industrial, evoking a sense of raw power and relentless operation.",
-        "sounds": "Distant forge roar, metallic clangs, hissing steam, grinding machinery.",
-        "dominantElementsDescriptors": "Colossal support pillars, shadowed central passage, cluttered workbench, iron pipe network.",
-        "spatialLayout": "A vast, cavernous chamber with a high, vaulted ceiling. The layout is asymmetric, drawing the eye into shadowed passages and active doorways.",
-        "primary_surfaces": "Soot-caked concrete walls and floor, shadowed metal ceiling.",
-        "secondary_surfaces": "Dark steel beams, riveted iron rungs, weathered steel doors, specialized tools, glowing ingots.",
-        "accent_features": "Crimson-veined ore, faint pulsing red light from doorways, sizzling condensation.",
-        "dominant": "Deep Crimson (everywhere, inferred)",
-        "secondary": "Dark Steel (pillars, pipes)",
-        "accent": "Intense Orange (machinery, light slivers)",
-        "ambient": "Warm",
-        "uniqueIdentifiers": "Infernal crimson glow, colossal scale, oppressive heat, metallic tang.",
-        "searchDesc": "Vast industrial foundry interior with infernal glow, colossal pillars, and heat."
+        "looks": "A vast, dark stone hall with imposing, irregularly carved columns reaching upwards. A glowing arched opening on the left and a shadowed, moss-lit staircase on the right dominate the midground. The floor features a shallow, mist-filled channel.",
+        "colorsAndLighting": "The space is dominated by cool, muted blue-green mist, punctuated by faint, warm orange glows emanating from openings and runes. The floor reflects ambient light.",
+        "atmosphere": "The air is thick with a cool, muted blue-green mist, hinting at moisture and the deep interior. Faint echoes suggest immense scale and a sense of deep, ancient occupancy.",
+        "architectural_tone": "ancient stone",
+        "cultural_tone": "A nexus of ancient civilizations that master primal forces.",
+        "materials": "Dark, steam-scarred stone forms the primary structure, etched with mineral deposits. Dark, patinated metal frames the grand opening. Phosphorescent moss adds glowing accents.",
+        "mood": "Evokes a sense of awe, mystery, and ancient power, with a hint of beckoning danger.",
+        "sounds": "echoing drips, distant murmurs, soft mist hiss",
+        "dominantElementsDescriptors": "colossal stone columns, grand arched opening, mist-filled floor channel, phosphorescent moss staircase",
+        "spatialLayout": "A colossal, echoing hall receding into depth. The primary focal points are an arched opening on the left and a staircase on the right, creating an asymmetrical layout.",
+        "primary_surfaces": "dark steam-scarred stone, polished stone floor",
+        "secondary_surfaces": "patinated metal frame, mineral deposits, phosphorescent moss",
+        "accent_features": "faint glowing runes, phosphorescent moss",
+        "dominant": "blue-green (mist)",
+        "secondary": "dark stone (walls, columns)",
+        "accent": "warm orange (alcoves, archway)",
+        "ambient": "cool",
+        "uniqueIdentifiers": "steam-scarred stone, blue-green mist, orange glowing alcoves, mossy stairs",
+        "searchDesc": "Colossal stone citadel hall with blue-green mist, orange glows, and an arched entryway."
       },
-      "imagePath": "https://v3b.fal.media/files/b/panda/F3yTROYP1bJo51x9eRMqe.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/monkey/Nou526R3NZ1ri_P9wFJS5.jpg",
       "focus": {
-        "node_id": "niche-1763462455562-nlyy9zhxq",
+        "node_id": "niche-1763463838835-2pogtj8g9",
         "perspective": "interior",
         "viewpoint": "default view",
         "distance": "close"
@@ -2475,19 +2469,19 @@
       ]
     },
     {
-      "id": "loc-1763462402754-ex9mqokgd",
+      "id": "loc-1763463803921-xuh9ln9zw",
       "type": "host",
       "children": [
         {
-          "id": "3d4459e6-1abb-4a22-a183-4ba86c0458f5",
+          "id": "bae4c8e2-c352-4a75-aa4c-50d5dcaa1230",
           "type": "region",
           "children": [
             {
-              "id": "1195ed31-60fb-4fc4-93a9-b501e42e6d53",
+              "id": "89e2633c-3f64-4d06-8b0d-2e2d126b08f5",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763462455562-nlyy9zhxq",
+                  "id": "niche-1763463838835-2pogtj8g9",
                   "type": "niche",
                   "children": []
                 }
@@ -2500,6 +2494,6 @@
   ],
   "pinnedIds": [
     "loc-1763461536589-rnepkn4lh",
-    "loc-1763462402754-ex9mqokgd"
+    "loc-1763463803921-xuh9ln9zw"
   ]
 }

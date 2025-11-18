@@ -11,7 +11,7 @@ export {
   runCharacterPipeline,
   generateInitialSystemPrompt,
   generateEnhancedSystemPrompt
-} from './characterPipeline';
+} from '../pipelines/characterPipeline';
 
 // Re-export prompts for testing
 export {
