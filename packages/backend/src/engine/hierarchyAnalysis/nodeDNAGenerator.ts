@@ -16,7 +16,8 @@ import { nodeDNAGeneration } from '../generation/prompts/locations/nodeDNAGenera
 import type { NodeDNA, LayerType, ParentContext } from './types';
 
 /**
- * Generate DNA for a single node
+ * Generate DNA for a single node (now includes structural fields)
+ * Returns both DNA and structural fields (navigableElements, dominantElements, etc.)
  */
 export async function generateNodeDNA(
   apiKey: string,
@@ -25,7 +26,16 @@ export async function generateNodeDNA(
   nodeType: LayerType,
   nodeDescription: string,
   parentContext?: ParentContext
-): Promise<NodeDNA> {
+): Promise<{
+  dna: NodeDNA;
+  name: string;
+  description: string;
+  navigableElements?: any[];
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
+  searchDesc?: string;
+  slug?: string;
+}> {
   // Build prompt from centralized prompts
   const prompt = nodeDNAGeneration(
     originalPrompt,
@@ -51,14 +61,23 @@ export async function generateNodeDNA(
     throw new Error(result.error || 'No DNA data returned from LLM');
   }
 
-  // Parse JSON response
-  const parsedDNA = parseJSON<NodeDNA>(result.data.text);
+  // Parse JSON response (now includes both DNA and structural fields)
+  const parsed = parseJSON<{
+    name: string;
+    description: string;
+    navigableElements?: any[];
+    dominantElements?: string[];
+    uniqueIdentifiers?: string[];
+    searchDesc?: string;
+    slug?: string;
+    dna: NodeDNA;
+  }>(result.data.text);
 
-  if (!parsedDNA) {
+  if (!parsed || !parsed.dna) {
     throw new Error('Failed to parse DNA from LLM response');
   }
 
-  return parsedDNA;
+  return parsed;
 }
 
 /**

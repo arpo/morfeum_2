@@ -19,6 +19,11 @@ export interface NodeBuildOptions {
   parentId?: string;
   description?: string;
   data?: Record<string, any>;
+  navigableElements?: any[];
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
+  searchDesc?: string;
+  slug?: string;
 }
 
 export interface LocationNode {
@@ -31,6 +36,11 @@ export interface LocationNode {
   parentId?: string;
   description?: string;
   data?: Record<string, any>;
+  navigableElements?: any[];
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
+  searchDesc?: string;
+  slug?: string;
 }
 
 /**
@@ -93,6 +103,27 @@ export function buildNode(
 
   if (options?.data) {
     node.data = options.data;
+  }
+
+  // Add structural fields if provided
+  if (options?.navigableElements) {
+    node.navigableElements = options.navigableElements;
+  }
+
+  if (options?.dominantElements) {
+    node.dominantElements = options.dominantElements;
+  }
+
+  if (options?.uniqueIdentifiers) {
+    node.uniqueIdentifiers = options.uniqueIdentifiers;
+  }
+
+  if (options?.searchDesc) {
+    node.searchDesc = options.searchDesc;
+  }
+
+  if (options?.slug) {
+    node.slug = options.slug;
   }
 
   return node;

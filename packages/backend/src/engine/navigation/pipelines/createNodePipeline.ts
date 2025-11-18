@@ -79,7 +79,7 @@ export async function runCreateLocationNodePipeline(
     imageUrl = ''; // No image for this node type
   }
 
-  // Step 3: Generate DNA for the node
+  // Step 3: Generate DNA for the node (now returns both DNA and structural fields)
   console.log(`\n🧬 [PIPELINE] Generating DNA for ${nodeType} node...`);
 
   const nodeName = decision.newNodeName || 'Unnamed Niche';
@@ -89,8 +89,8 @@ export async function runCreateLocationNodePipeline(
     ? extractParentContext(context.currentNode.dna)
     : undefined;
 
-  // Use centralized DNA generator
-  const dna = await generateNodeDNA(
+  // Use centralized DNA generator (now returns { dna, name, description, navigableElements, etc. })
+  const nodeData = await generateNodeDNA(
     apiKey,
     imagePrompt,
     nodeName,
@@ -99,10 +99,17 @@ export async function runCreateLocationNodePipeline(
     parentContext
   );
 
-  console.log('✅ [PIPELINE] DNA generated successfully. Fields:', Object.keys(dna).join(', '));
+  console.log('✅ [PIPELINE] DNA generated successfully. Fields:', Object.keys(nodeData.dna).join(', '));
 
-  // Step 4: Build complete node using shared builder
-  const node = buildNode(nodeType, nodeName, dna, imageUrl);
+  // Step 4: Build complete node using shared builder, passing structural fields
+  const node = buildNode(nodeType, nodeData.name, nodeData.dna, imageUrl, {
+    description: nodeData.description,
+    navigableElements: nodeData.navigableElements,
+    dominantElements: nodeData.dominantElements,
+    uniqueIdentifiers: nodeData.uniqueIdentifiers,
+    searchDesc: nodeData.searchDesc,
+    slug: nodeData.slug
+  });
 
   console.log('\n═══════════════════════════════════════════════════════════');
   console.log('✅ NODE CREATED SUCCESSFULLY');

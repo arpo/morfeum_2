@@ -47,32 +47,46 @@ ${originalPrompt}
 OUTPUT JSON STRUCTURE:
 
 {
-  // === SCENE-SPECIFIC VISUAL FIELDS (always populated) ===
-  "looks": "2-4 sentences describing what is seen — key forms, layout, and notable features.",
-  "colorsAndLighting": "1-3 sentences on dominant colors and light behavior.",
-  "atmosphere": "2-4 sentences on air, temperature, motion, weather, and sensory feel.",
-  "materials": "1-3 sentences naming main materials and textures, their condition and finish.",
-  "mood": "1-2 sentences on the emotional tone this place evokes.",
-  "sounds": "5-7 words listing ambient sounds.",
-  "spatialLayout": "1-3 sentences on space shape, dimensions, entry points, and focal centers.",
-  "primary_surfaces": "Main materials on walls, floor, ceiling.",
-  "secondary_surfaces": "Supporting materials on furniture or structure.",
-  "accent_features": "Decorative or striking details.",
-  "dominant": "Primary color family with coverage area.",
-  "secondary": "Secondary color and where it appears.",
-  "accent": "Accent colors and placement.",
-  "ambient": "Overall light tone (warm / cool / neutral).",
+  "name": "${nodeName}",
+  "description": "Brief description of this node",
   
-  // === CASCADING STYLE ATTRIBUTES (optional - can be null if inherited from parent) ===
-  "genre": null,  // NEVER set genre - only host nodes have this
-  "architectural_tone": "Short phrase (e.g., 'industrial metallic', 'organic stone') OR null to inherit",
-  "cultural_tone": "1 sentence on social/functional identity OR null to inherit",
-  "materials_base": "Material palette/style (NOT specific objects) OR null to inherit",
-  "mood_baseline": "Emotional baseline OR null to inherit",
-  "palette_bias": "Color style/families (NOT specific scene colors) OR null to inherit",
-  "soundscape_base": "Ambient sound style OR null to inherit",
-  "flora_base": "Plant life types OR 'None' OR null to inherit",
-  "fauna_base": "Animal life types OR 'None' OR null to inherit"
+  // === STRUCTURAL FIELDS (metadata and navigation) ===
+  "navigableElements": [
+    {"type": "door|passage|stairs|archway|portal|window", "position": "location in scene", "description": "what it is"}
+  ],
+  "dominantElements": ["List of major positioned objects/features in scene"],
+  "uniqueIdentifiers": ["List of distinctive visual features that make this place recognizable"],
+  "searchDesc": "75-100 char search-friendly description",
+  "slug": "${nodeName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}",
+  
+  // === DNA: SCENE-SPECIFIC VISUAL FIELDS (always populated) ===
+  "dna": {
+    "looks": "2-4 sentences describing what is seen — key forms, layout, and notable features.",
+    "colorsAndLighting": "1-3 sentences on dominant colors and light behavior.",
+    "atmosphere": "2-4 sentences on air, temperature, motion, weather, and sensory feel.",
+    "materials": "1-3 sentences naming main materials and textures, their condition and finish.",
+    "mood": "1-2 sentences on the emotional tone this place evokes.",
+    "sounds": "5-7 words listing ambient sounds.",
+    "spatialLayout": "1-3 sentences on space shape, dimensions, entry points, and focal centers.",
+    "primary_surfaces": "Main materials on walls, floor, ceiling.",
+    "secondary_surfaces": "Supporting materials on furniture or structure.",
+    "accent_features": "Decorative or striking details.",
+    "dominant": "Primary color family with coverage area.",
+    "secondary": "Secondary color and where it appears.",
+    "accent": "Accent colors and placement.",
+    "ambient": "Overall light tone (warm / cool / neutral).",
+    
+    // === CASCADING STYLE ATTRIBUTES (optional - can be null if inherited from parent) ===
+    "genre": null,  // NEVER set genre - only host nodes have this
+    "architectural_tone": "Short phrase (e.g., 'industrial metallic', 'organic stone') OR null to inherit",
+    "cultural_tone": "1 sentence on social/functional identity OR null to inherit",
+    "materials_base": "Material palette/style (NOT specific objects) OR null to inherit",
+    "mood_baseline": "Emotional baseline OR null to inherit",
+    "palette_bias": "Color style/families (NOT specific scene colors) OR null to inherit",
+    "soundscape_base": "Ambient sound style OR null to inherit",
+    "flora_base": "Plant life types OR 'None' OR null to inherit",
+    "fauna_base": "Animal life types OR 'None' OR null to inherit"
+  }
 }
 
 CRITICAL GUIDELINES

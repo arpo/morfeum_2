@@ -169,6 +169,74 @@
       ],
       "slug": "the-fungal-bloom-memorial",
       "searchDesc": "[Location - Exterior] Moss-covered alien sphere in cavern. Has: archway (center), stairs (center), mysterious_object (midground)"
+    },
+    "niche-1763480203728-vgyqzq9nb": {
+      "id": "niche-1763480203728-vgyqzq9nb",
+      "type": "niche",
+      "name": "interior of The Fungal Bloom Memorial",
+      "dna": {
+        "looks": "A vast, domed chamber with walls of dark, obsidian-like material interwoven with enormous, bioluminescent fungi. A monumental, multi-tiered altar with a glowing turquoise basin dominates the center, flanked by arching doorways. A slick obsidian pathway leads into gloom in the foreground, with carved steps to the right.",
+        "colorsAndLighting": "The scene is illuminated by the ethereal, pulsating glow of deep violet and vibrant emerald bioluminescent fungi, casting shifting shadows. A liquid turquoise light emanates from the altar's basin, and cool blue luminescence edges the steps.",
+        "atmosphere": "The air is thick and humid, carrying the scent of decomposition and faint floral perfume. The scale is cavernous, with a sense of immense, forgotten grandeur. The light pulses and breathes, contributing to a mysterious and serene feeling.",
+        "materials": "Primary materials are dark, obsidian-like stone, slick and worn smooth in places, and the soft, velvety texture of thick moss. Bioluminescent fungi, delicate crystalline growths, and pearlescent dew are prominent organic elements.",
+        "mood": "Melancholy and mysterious, with an eerily beautiful quality that evokes lost grandeur and nature's reclamation.",
+        "sounds": "Echoing expanse, faint hum, dripping dew, soft pulsating light.",
+        "spatialLayout": "A colossal, domed chamber with a strictly symmetrical, centered composition. The space recedes into infinite distance, with clear foreground, midground, and background elements. Focal points include the altar and the distant crystalline bloom.",
+        "primary_surfaces": "Dark, obsidian-like stone, thick moss.",
+        "secondary_surfaces": "Bioluminescent fungi, crystalline growths, dew.",
+        "accent_features": "Altar's turquoise basin, sapphire-hued fungi on archways, cool blue luminescent step edges.",
+        "dominant": "Dark greens (moss, vegetation) with significant coverage.",
+        "secondary": "Deep violets and vibrant emeralds (bioluminescent fungi).",
+        "accent": "Liquid turquoise (altar basin), sapphire blue (archway fungi, step edges).",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "Ancient alien, monolithic, decaying",
+        "cultural_tone": "Memorial, sacred, forgotten",
+        "materials_base": "Obsidian, organic growths",
+        "mood_baseline": "Melancholy, mysterious, eerily beautiful",
+        "palette_bias": "Deep greens, violets, emeralds, with turquoise and blue accents",
+        "soundscape_base": "Echoing, ambient, subtle organic sounds",
+        "flora_base": "Bioluminescent fungi, moss, crystalline growths",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/BpYC5ce0RyclZDz9t00CI.jpg",
+      "focus": {
+        "node_id": "niche-1763480203728-vgyqzq9nb",
+        "perspective": "interior",
+        "viewpoint": "default view",
+        "distance": "close"
+      },
+      "description": "The echoing expanse of a colossal, domed chamber, a fusion of organic decay and alien precision, filled with bioluminescent fungi and dark obsidian architecture.",
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "right",
+          "description": "shallow, carved obsidian steps ascending to a dimly lit recess with cool blue luminescence."
+        },
+        {
+          "type": "archway",
+          "position": "left",
+          "description": "massive, arching doorway with sapphire-hued fungi encrustations."
+        },
+        {
+          "type": "archway",
+          "position": "right",
+          "description": "massive, arching doorway with sapphire-hued fungi encrustations."
+        }
+      ],
+      "dominantElements": [
+        "colossal domed chamber",
+        "monumental multi-tiered altar",
+        "enormous bioluminescent fungi"
+      ],
+      "uniqueIdentifiers": [
+        "obsidian architecture with organic decay",
+        "bioluminescent fungi in violet and emerald",
+        "central turquoise glowing altar basin",
+        "solitary crystalline bloom in ceiling"
+      ],
+      "searchDesc": "Vast domed chamber with obsidian and bioluminescent fungi, central altar, and alien architecture.",
+      "slug": "interior-of-the-fungal-bloom-memorial"
     }
   },
   "views": {},
@@ -184,12 +252,20 @@
             {
               "id": "0d34d80d-cf73-4f30-99e6-39bc1b84c8a1",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1763480203728-vgyqzq9nb",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
       ]
     }
   ],
-  "pinnedIds": []
+  "pinnedIds": [
+    "loc-1763479490120-7n4jv2jkt"
+  ]
 }

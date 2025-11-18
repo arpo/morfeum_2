@@ -5,6 +5,27 @@ The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
 
+- **DNA Structure Cleanup (Nov 18, 2025):**
+  - **Fixed critical DNA nesting bug** - DNA was being double-wrapped in worlds.json storage
+  - **Root cause:** `nodeDNAExtractor.ts` was returning entire node instead of just `node.dna`
+  - **Backend fixes:**
+    - Moved visual analysis merging from `spawn.ts` to `worldTreePipeline.ts`
+    - Scene fields now properly go to `node.dna` (looks, atmosphere, colorsAndLighting, etc.)
+    - Structural fields go to `node` root (navigableElements, dominantElements, uniqueIdentifiers, slug, searchDesc)
+    - Added `imageUrl` to BaseHierarchyNode type
+  - **Frontend fixes:**
+    - Fixed `nodeDNAExtractor.ts` to return ONLY `node.dna` property
+    - Updated `hierarchyParser.ts` to copy structural fields from backend nodes
+  - **Navigation generation fixes:**
+    - Updated `nodeDNAGeneration.ts` prompt to generate structural fields alongside DNA
+    - Changed `generateNodeDNA()` return type to include both DNA and structural fields
+    - Updated `buildNode()` to accept structural fields as options
+    - Updated `createNodePipeline.ts` to pass structural fields through
+  - **Result:** Clean node structure in worlds.json:
+    - Root level: `type`, `name`, `navigableElements`, `dominantElements`, `uniqueIdentifiers`, `slug`, `searchDesc`
+    - `dna` property: Scene/cascading fields ONLY
+    - Works for both world tree generation AND niche creation (GO_INSIDE)
+
 - **Pipeline Architecture Refactor (Nov 18, 2025):**
   - **Unified pipeline structure** - All standalone entity generators consolidated in `engine/pipelines/`
   - **Created shared utilities** - Extracted common code to `pipelines/shared/`:

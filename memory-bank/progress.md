@@ -39,6 +39,12 @@
 - [x] Entity session cleanup on delete
 
 ### Technical Improvements
+- [x] DNA structure cleanup (Nov 18, 2025)
+  - Fixed critical double-wrapping bug in worlds.json storage
+  - Backend: Moved visual analysis to worldTreePipeline, proper field separation
+  - Frontend: Fixed nodeDNAExtractor to return only dna property
+  - Navigation: Updated prompt and pipeline to generate structural fields
+  - Result: Clean node structure (root fields + dna property) for all generation paths
 - [x] Memory bank consolidation (69% reduction)
 - [x] Terminology standardization (sublocation → niche)
 - [x] Component separation pattern
