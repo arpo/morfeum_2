@@ -2173,6 +2173,136 @@
         "viewpoint": "default view",
         "distance": "close"
       }
+    },
+    "loc-1763463944423-ghcom2s2u": {
+      "id": "loc-1763463944423-ghcom2s2u",
+      "type": "host",
+      "name": "Aridian Expanse",
+      "dna": {
+        "type": "host",
+        "name": "Aridian Expanse",
+        "description": "A sprawling desert continent with forgotten civilizations.",
+        "dna": {
+          "genre": "post-apocalyptic|fantasy",
+          "architectural_tone": "grand, weathered, colossal ruins",
+          "cultural_tone": "Echoes of a lost civilization that worshipped grand celestial phenomena and monumental architecture, now fallen into disuse and decay.",
+          "materials_base": "Primarily colossal stone blocks, smoothed by millennia of wind and sand, with remnants of intricate carvings and mosaics.",
+          "mood_baseline": "Melancholy, awe-inspiring, desolate",
+          "palette_bias": "Dominated by earthy tones of sandstone, ochre, and muted browns, with accents of pale sky blue and the warm, diffused glow of a desert sun.",
+          "soundscape_base": "The perpetual whisper of wind, the groan of shifting sands, and the distant, mournful cries of desert scavengers.",
+          "flora_base": "Sparse, resilient desert scrub, hardy succulents adapted to extreme aridity, and occasional withered, skeletal trees.",
+          "fauna_base": "Scuttling insects, desert rodents, large birds of prey, and reclusive, sand-dwelling creatures."
+        },
+        "slug": "aridian-expanse"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Aridian Expanse",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "439c2878-98b8-4095-a168-efb541737d50": {
+      "id": "439c2878-98b8-4095-a168-efb541737d50",
+      "type": "region",
+      "name": "Whispering Dunes",
+      "dna": {
+        "type": "region",
+        "name": "Whispering Dunes",
+        "description": "Vast stretches of shifting sands dotted with ancient ruins.",
+        "dna": {
+          "architectural_tone": "sun-bleached, sand-blasted stone structures",
+          "cultural_tone": "Nomadic scavengers and desert hermits inhabit these shifting sands, their lives dictated by the harsh environment and the scarce resources found within the ruins.",
+          "materials_base": "Sandstone weathered to near-uniformity, wind-smoothed rock formations, and the occasional exposed remnant of more resilient ancient materials.",
+          "mood_baseline": "Isolated, timeless, survivalist",
+          "palette_bias": "Expanses of light sand, muted yellows and pale oranges of the dunes, blending with the bleached tones of ancient stone.",
+          "soundscape_base": "The constant, pervasive hum of wind, the rustle and hiss of sand grains, and the echoing calls of unseen desert life.",
+          "flora_base": "Drought-resistant grasses, thorny scrub, and hardy, low-lying desert plants clinging to sheltered spots.",
+          "fauna_base": "Small desert mammals, venomous reptiles, large desert insects, and hardy avian scavengers."
+        },
+        "slug": "whispering-dunes"
+      },
+      "imagePath": "",
+      "focus": {
+        "node_id": "Whispering Dunes",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
+    },
+    "38b6907c-fdfc-47e1-9b68-d649bd2d0b1d": {
+      "id": "38b6907c-fdfc-47e1-9b68-d649bd2d0b1d",
+      "type": "location",
+      "name": "The Basilica of Echoes",
+      "dna": {
+        "type": "location",
+        "name": "The Basilica of Echoes",
+        "description": "A vast, ruined basilica exposed to the desert winds.",
+        "looks": "The image depicts the remnants of a grand basilica, its structure severely eroded and exposed to the elements. Crumbling stone walls rise in a semi-circular fashion, punctuated by a series of arched openings and colonnades. The architecture suggests a once-impressive structure, now in ruins, with large sections of the upper levels missing. The surrounding landscape is composed of wind-swept sand dunes that encroach upon the base of the ruins, partially burying them.",
+        "atmosphere": "The air appears hazy and dry, filled with fine sand particles stirred by the wind. A pervasive dustiness is visible, particularly around the base of the ruins and in the pathways between them.",
+        "mood": "Melancholy, grand, ancient",
+        "lighting": "The lighting is warm and diffuse, characteristic of a desert environment during the day. A bright, slightly hazy sky casts a soft glow, creating a high-contrast scene with deep shadows within the shadowed arches. The overall light appears to be coming from a high angle, suggesting midday sun.",
+        "dominantElements": [
+          "Collapsing arches forming a semi-circular wall",
+          "Wind-eroded stone columns",
+          "Sand dunes encroaching on the structure"
+        ],
+        "spatialLayout": "Foreground: Sandy, uneven terrain with small pebbles and scattered debris leading towards the main structure. Midground: The ruins of the basilica, a vast, semi-circular structure with multiple levels of arches and columns. The structure appears to be hundreds of meters wide. Background: Further arches and structures of the ruined basilica are visible receding into the hazy distance, framed by the central archway of the midground structure.",
+        "uniqueIdentifiers": [
+          "Semi-circular ruined basilica",
+          "Multiple layered arches",
+          "Desert sand dunes"
+        ],
+        "materials_primary": "Stone",
+        "materials_secondary": "Sand",
+        "materials_accents": null,
+        "colors_dominant": "Light brown (sand and stone)",
+        "colors_secondary": "Pale yellow (sky and ambient light)",
+        "colors_accents": null,
+        "colors_ambient": "Warm, sandy yellow",
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center, midground",
+            "description": "Large central archway leading deeper into the ruins"
+          },
+          {
+            "type": "archway",
+            "position": "center, background",
+            "description": "Receding archway visible through the main structure"
+          },
+          {
+            "type": "passage",
+            "position": "left side, midground",
+            "description": "Arched passage between columns, filled with sand"
+          },
+          {
+            "type": "passage",
+            "position": "right side, midground",
+            "description": "Arched passage between columns, partially obscured by sand"
+          }
+        ],
+        "searchDesc": "[Location - Exterior] Ruined basilica in sand dunes. Has: central archway (center, midground), receding archway (center, background), passage (left side, midground)",
+        "dna": {
+          "architectural_tone": "colossal, wind-scoured arches and crumbling facades",
+          "cultural_tone": "A place of reverence in ancient times, now a haunting landmark where the wind's passage through its skeletal remains creates an ethereal, choral sound.",
+          "materials_base": "Massive, weathered stone blocks forming grand arches, walls, and plazas, partially consumed by encroaching sands.",
+          "mood_baseline": "Haunting, sacred, desolate",
+          "palette_bias": "Dominated by the warm, sandy hues of the surrounding desert, with the sun's light casting sharp contrasts against deep, shadowed interiors of the ruins.",
+          "soundscape_base": "The distinctive, melodic whistling of wind through collapsed archways, creating a choir-like effect, interspersed with the soft grit of sand.",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "slug": "the-basilica-of-echoes"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/eON39RclSuOiDAZkpJj-X.jpg",
+      "focus": {
+        "node_id": "The Basilica of Echoes",
+        "perspective": "exterior",
+        "viewpoint": "default world view",
+        "distance": "medium"
+      }
     }
   },
   "views": {},
@@ -2486,6 +2616,23 @@
                   "children": []
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763463944423-ghcom2s2u",
+      "type": "host",
+      "children": [
+        {
+          "id": "439c2878-98b8-4095-a168-efb541737d50",
+          "type": "region",
+          "children": [
+            {
+              "id": "38b6907c-fdfc-47e1-9b68-d649bd2d0b1d",
+              "type": "location",
+              "children": []
             }
           ]
         }
