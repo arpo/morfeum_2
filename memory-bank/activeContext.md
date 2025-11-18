@@ -5,6 +5,34 @@ The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
 
+- **Focus System Removal (Nov 18, 2025):**
+  - **Removed unused focus tracking system** - Deep investigation revealed focus was never actually used
+  - **Analysis findings:**
+    - Focus methods existed but had zero actual usage across entire codebase
+    - `focus.node_id` was redundant (duplicated `node.name`)
+    - `focus.perspective` was misnamed - described space TYPE not navigation state
+  - **Replaced with spaceType:**
+    - Added `spaceType: 'interior' | 'exterior'` directly to Node interface
+    - Logic: 'exterior' for host/region/location, 'interior' for niche nodes
+    - Cleaner, more intuitive, describes what the space IS
+  - **Backend changes:**
+    - `nodeBuilder.ts` - Removed FocusConfig, added SpaceType
+    - Nodes now have direct `spaceType` field
+  - **Frontend changes:**
+    - Removed FocusState interface from types
+    - Removed focus methods from uiSlice (updateNodeFocus, getNodeFocus, ensureFocusInitialized)
+    - Updated legacySlice to use spaceType
+    - Deleted `locationFocus.ts` utility file
+    - Fixed 14 TypeScript errors across 5 files:
+      - hierarchyParser.ts - Uses spaceType during parsing
+      - useSpawnEvents.ts - Uses spaceType when creating nodes
+      - useLocationPanel.ts - Removed unused focus update logic
+      - LocationInfoModal files - Removed focus state dependency
+  - **Data migration:**
+    - Removed focus objects from all nodes in worlds.json
+    - Added spaceType field to all 4 existing nodes
+  - **Result:** Cleaner data model, no redundant state tracking, ~100 lines of code removed
+
 - **DNA Structure Cleanup (Nov 18, 2025):**
   - **Fixed critical DNA nesting bug** - DNA was being double-wrapped in worlds.json storage
   - **Root cause:** `nodeDNAExtractor.ts` was returning entire node instead of just `node.dna`
