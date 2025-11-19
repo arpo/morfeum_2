@@ -151,71 +151,6 @@
       "slug": "the-gilded-manor",
       "searchDesc": "[Location - Exterior] Gothic manor in mist. Has: entrance door (center, midground), stairs (center, foreground), window (various, midground)"
     },
-    "niche-1763545395905-5p1mploug": {
-      "id": "niche-1763545395905-5p1mploug",
-      "type": "niche",
-      "name": "unknown of The Gilded Manor",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A grand, yet thoroughly decaying, foyer unfolds with a sweeping, ornate staircase as the central focal point, vanishing into upper darkness. Walls are paneled in dark, water-stained oak, hung with spectral portraits, while a threadbare Persian rug softens a cracked marble floor. Arched doorways lead to unseen rooms, and shadowed corridors beckon.",
-        "colorsAndLighting": "Dominated by deep, muted tones of dark oak and faded rug colors, offset by the cool, blue-green ambient light filtering through grimy windows. Shadows are long and distorted, emphasizing the decay.",
-        "atmosphere": "The air is heavy with the palpable scent of dust, damp decay, and a lingering sorrow. Spectral motes of light dance in the gloom, and cobwebs hang like macabre decorations from the crumbling, vaulted ceiling, creating an overwhelmingly melancholy and haunted environment.",
-        "materials": "Key materials include dark, aged wood for paneling and staircase banisters, tarnished brass fixtures, cracked marble flooring, and a threadbare Persian rug. Elaborate plasterwork on the ceiling is in a state of decay.",
-        "mood": "The overwhelming mood is one of melancholy, imposing grandeur lost to time, and an ever-present sense of spectral occupation and sorrow.",
-        "sounds": "Dust motes settling, faint creaks, distant echoes, subtle drafts.",
-        "spatialLayout": "A central, imposing foyer with a grand staircase dominating the rear, flanked by shadowed passages and doorways. The space feels vast and cavernous, receding into deep shadows.",
-        "primary_surfaces": "Dark, water-stained oak paneling on walls, cracked marble floor, crumbling plasterwork on ceiling.",
-        "secondary_surfaces": "Aged wood banister, tarnished brass fixtures, threadbare Persian rug.",
-        "accent_features": "Spectral portraits with following eyes, intricate carving on banister, macabre cobweb decorations.",
-        "dominant": "Dark Grey (wood paneling, shadows)",
-        "secondary": "Muted Blues and Reds (Persian rug)",
-        "accent": "Tarnished Brass (fixtures), spectral white/grey (portraits)",
-        "ambient": "Cool",
-        "genre": null,
-        "architectural_tone": "decaying Victorian grandeur with ornate Gothic arches, weathered neoclassical columns, elaborate carved molding, and aged brass fixtures",
-        "cultural_tone": "culture of remembrance, sorrow, and eternal haunting",
-        "materials_base": null,
-        "mood_baseline": "Melancholy, imposing, and haunted. A sense of grandeur lost to decay and spectral occupation.",
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/zebra/bFQmqC4J1vcRddJGU3Rxe.jpg",
-      "description": "The decaying grandeur of a haunted manor foyer.",
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "center",
-          "description": "sweeping, ornate staircase ascending into gloom"
-        },
-        {
-          "type": "doorway",
-          "position": "left",
-          "description": "heavy, arched doorway, door ajar, hinting at a dimly lit drawing-room"
-        },
-        {
-          "type": "corridor",
-          "position": "right",
-          "description": "long, shadowed corridor stretching into darkness"
-        }
-      ],
-      "dominantElements": [
-        "grand staircase",
-        "paneled walls",
-        "spectral portraits",
-        "threadbare Persian rug"
-      ],
-      "uniqueIdentifiers": [
-        "Gilded Manor foyer",
-        "ornate decaying staircase",
-        "spectral portraits",
-        "faded Persian rug",
-        "cobweb-laden ceiling"
-      ],
-      "searchDesc": "Decaying Gilded Manor foyer with grand staircase, spectral portraits, and haunted atmosphere.",
-      "slug": "unknown-of-the-gilded-manor"
-    },
     "loc-1763545432403-wl3f5o5r6": {
       "id": "loc-1763545432403-wl3f5o5r6",
       "type": "host",
@@ -385,65 +320,6 @@
       "slug": "the-temple-of-static",
       "searchDesc": "[Building] Abandoned broadcast facility. Has: arched portal (center, midground), path (center, foreground)"
     },
-    "niche-1763545465051-vi8k9yt7e": {
-      "id": "niche-1763545465051-vi8k9yt7e",
-      "type": "niche",
-      "name": "interior of The Temple of Static",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A monumental, echoing chamber defined by crumbling concrete walls and a polished obsidian floor. Colossal, segmented pillars carved with forgotten circuitry dominate the midground, leading the eye towards a dramatically lit orange alcove on the left and a luminescent staircase on the right. The scale suggests immense, unexplored depths.",
-        "colorsAndLighting": "The scene is bathed in a low, diffused teal light that catches the particulate mist. A stark, unnatural orange glow emanates from a recessed alcove, creating a powerful focal point that pulses like static.",
-        "atmosphere": "The air is thick with a visible, fine particulate mist, catching the faint light and creating an ethereal, diffused haze. The vastness of the chamber and the crumbling decay evoke an eerie, abandoned, yet strangely active, atmosphere.",
-        "materials": "Dominant materials include weathered concrete walls and colossal pillars, stained with age and organic growth. The floor is polished, dark obsidian, cracked in places, with patches of resilient, grey-green lichen scattered across it.",
-        "mood": "Eerie and abandoned, with a sense of forgotten purpose. The glowing alcove injects an unnerving, active energy into the stillness of decay.",
-        "sounds": "Echoing emptiness, faint hum, settling dust.",
-        "spatialLayout": "A vast, echoing chamber with a monumental scale. The primary focal points are the central pillars, a left-side alcove, and a right-side staircase, all contributing to a sense of deep, obscured space.",
-        "primary_surfaces": "Crumbling concrete walls, polished obsidian floor.",
-        "secondary_surfaces": "Segmented concrete pillars, cracked concrete staircase.",
-        "accent_features": "Intricate forgotten circuitry carvings, jagged broken archway, pulsating orange light.",
-        "dominant": "Teal (ambient light, mist)",
-        "secondary": "Dark grey/black (obsidian floor, concrete)",
-        "accent": "Intense orange (alcove glow), grey-green (lichen)",
-        "ambient": "Cool",
-        "genre": null,
-        "architectural_tone": "decaying monumentalism with organic overgrowth",
-        "cultural_tone": "forgotten civilization, lost technology, nature's reclamation",
-        "materials_base": "weathered concrete, polished dark stone, organic overgrowth",
-        "mood_baseline": "Eerie and abandoned",
-        "palette_bias": "Teal dominant, with contrasting warm accents",
-        "soundscape_base": "Ambient echoes and subtle electronic hums",
-        "flora_base": "hardy moss-like growths, lichen",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/w8y3PVW0ImOEWJUrgsCS-.jpg",
-      "description": "A vast, echoing chamber within 'The Temple of Static', a monumental derelict broadcasting sanctuary.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "left alcove",
-          "description": "A narrow, dimly lit passage framed by a jagged archway."
-        },
-        {
-          "type": "stairs",
-          "position": "lower right",
-          "description": "A wide, cracked concrete staircase with luminescent edges."
-        }
-      ],
-      "dominantElements": [
-        "colossal segmented concrete pillars",
-        "recessed orange-glowing alcove",
-        "cracked obsidian floor",
-        "vaulted ceiling"
-      ],
-      "uniqueIdentifiers": [
-        "forgotten circuitry patterns on pillars",
-        "pulsing orange light",
-        "fine particulate mist",
-        "grey-green lichen"
-      ],
-      "searchDesc": "Vast, echoing chamber with crumbling concrete, obsidian floor, and glowing orange alcove.",
-      "slug": "interior-of-the-temple-of-static"
-    },
     "loc-1763545569905-ci2cztbd3": {
       "id": "loc-1763545569905-ci2cztbd3",
       "type": "host",
@@ -597,132 +473,825 @@
       "slug": "the-colossal-mechanism",
       "searchDesc": "[Location - Exterior] Giant alien sphere in desert. Has: passage (center, midground), archway (center, midground), stone pathway (center, foreground)"
     },
-    "niche-1763545610644-mmg3teqv6": {
-      "id": "niche-1763545610644-mmg3teqv6",
+    "niche-1763549085819-z1u4ea26u": {
+      "id": "niche-1763549085819-z1u4ea26u",
+      "type": "niche",
+      "name": "interior of The Gilded Manor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A grand, dimly lit foyer featuring walls of intricately carved dark grey stone and a polished dark wood floor with brass inlay. A sweeping staircase ascends to the right, while a dramatic archway on the left offers a glimpse into another room. The soaring height of the vaulted ceiling is lost in shadow.",
+        "colorsAndLighting": "Dominant dark grey stone is offset by warm, flickering yellow light from tarnished brass fixtures and a cool, pervasive blue-green ambient light. Steps on the staircase emit a faint spectral blue glow.",
+        "atmosphere": "The air is thick with the scent of aged wood and dust, carrying a pervasive coolness. Long shadows are cast by unseen light sources. Faint, distant spectral moans echo from the vaulted ceiling.",
+        "materials": "The primary materials are weathered dark grey stone for walls and steps, and polished dark wood for the floor. Aged brass is used for inlaid patterns and fixtures. The stone is intricately carved with Gothic and neoclassical detailing.",
+        "mood": "The mood is overwhelmingly melancholy, imposing, and haunted, evoking a sense of grandeur lost to decay and spectral occupation.",
+        "sounds": "faint spectral moans, unsettling whispers, creaking wood",
+        "spatialLayout": "A large, imposing foyer with a central vanishing point, emphasizing its height and depth. Asymmetrical composition with focal points on the staircase and the parlor doorway.",
+        "primary_surfaces": "weathered dark grey stone, polished dark wood",
+        "secondary_surfaces": "aged brass",
+        "accent_features": "Gothic carvings, spectral blue glow on steps, spectral figures on newel posts, gargoyle archway",
+        "dominant": "dark grey (walls, stone)",
+        "secondary": "dark wood (floor)",
+        "accent": "warm yellow (light pockets), spectral blue (step edges), aged brass (inlays, fixtures)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "decaying Victorian grandeur with ornate Gothic arches, weathered neoclassical columns, elaborate carved molding, and aged brass fixtures",
+        "cultural_tone": "culture of remembrance, sorrow, and eternal haunting",
+        "materials_base": "aged stone, dark wood, tarnished metal",
+        "mood_baseline": "Melancholy, imposing, and haunted. A sense of grandeur lost to decay and spectral occupation.",
+        "palette_bias": "dark, muted tones with cool ambient and warm accent lighting",
+        "soundscape_base": "echoes and spectral ambient noises",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/uCOvgMk79NRY7dw65Vdrh.jpg",
+      "description": "The grand, dimly lit foyer of a decaying Victorian manor, imbued with a melancholic and haunted atmosphere.",
+      "navigableElements": [
+        {
+          "type": "doorway",
+          "position": "midground left",
+          "description": "towering, arch-topped doorway with grotesque gargoyles"
+        },
+        {
+          "type": "corridor",
+          "position": "midground right",
+          "description": "long, shadowed corridor receding into depth"
+        },
+        {
+          "type": "stairs",
+          "position": "foreground lower right",
+          "description": "grand, sweeping staircase with spectral figures on newel posts"
+        }
+      ],
+      "dominantElements": [
+        "dark grey stone walls",
+        "polished dark wood floor with brass inlay",
+        "grand staircase",
+        "arch-topped doorway"
+      ],
+      "uniqueIdentifiers": [
+        "ornate Gothic detailing",
+        "aged brass fixtures",
+        "spectral blue glow on steps",
+        "grotesque gargoyle carvings",
+        "mournful spectral newel posts"
+      ],
+      "searchDesc": "Dimly lit Gothic foyer of a haunted manor, dark stone, aged brass, and spectral light.",
+      "slug": "interior-of-the-gilded-manor"
+    },
+    "niche-1763549184558-8a3d4u4v9": {
+      "id": "niche-1763549184558-8a3d4u4v9",
+      "type": "niche",
+      "name": "interior of The Gilded Manor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A grand, decaying reception hall featuring a worn dark oak floor and dark wood paneling. An ornate, Gothic-styled staircase dominates the midground, leading into shadows, flanked by tall, leaded arched windows. A large, tarnished candelabra stands in the foreground.",
+        "colorsAndLighting": "Dominated by dark greys and browns, illuminated by a weak, cool blue-green ambient light that struggles against pervasive gloom. Pockets of warm yellow light suggest distant areas.",
+        "atmosphere": "The air is heavy with the scent of aged stone and damp wood. A pervasive gloom and melancholy settle over the space, hinting at a spectral presence. The air feels still and cold, despite the hint of distant warmth.",
+        "materials": "Worn dark oak for the floor and staircase, decaying dark wood paneling on the walls, and rough-hewn stone. Aged brass fixtures are present, notably a tarnished candelabra.",
+        "mood": "Melancholy and imposing, evoking a sense of lost grandeur and spectral occupation within a decaying manor.",
+        "sounds": "Damp wood, aged stone, faint drafts, creaking, distant echoes.",
+        "spatialLayout": "A grand reception hall with a strong central vanishing point from the ultra-wide lens. The space recedes into atmospheric depth with shadowed arches and corridors, featuring a dominant central staircase.",
+        "primary_surfaces": "Dark oak floor, decaying dark wood walls, rough-hewn stone wall section.",
+        "secondary_surfaces": "Dark weathered oak staircase and banister, leaded window panes, aged brass candelabra, weathered stone fireplace.",
+        "accent_features": "Intricately carved forgotten crest on the floor, Gothic motifs on the banister, elaborate carvings on the fireplace.",
+        "dominant": "Dark grey (walls, stone)",
+        "secondary": "Dark brown (wood)",
+        "accent": "Cool blue-green (ambient light), faint yellow (distant light), tarnished brass (candelabra).",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "decaying Victorian grandeur with ornate Gothic arches, weathered neoclassical columns, elaborate carved molding, and aged brass fixtures",
+        "cultural_tone": "culture of remembrance, sorrow, and eternal haunting",
+        "materials_base": "aged wood, rough stone, tarnished brass",
+        "mood_baseline": "Melancholy, imposing, and haunted",
+        "palette_bias": "dark, desaturated colors with cool ambient light",
+        "soundscape_base": "ambient echoes and decay sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/spcwJx5sGoKfZH5oxvBqF.jpg",
+      "description": "The grand, decaying reception hall of The Gilded Manor, filled with the scent of aged stone and damp wood under weak, cool blue-green light.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "background",
+          "description": "Shadowed arches leading to unseen corridors"
+        },
+        {
+          "type": "window",
+          "position": "midground",
+          "description": "Tall, arched windows with leaded panes"
+        },
+        {
+          "type": "fireplace",
+          "position": "midground",
+          "description": "Grand, imposing fireplace on the far wall"
+        },
+        {
+          "type": "doorway",
+          "position": "midground",
+          "description": "Distant, unseen doorway on the far right"
+        },
+        {
+          "type": "stairs",
+          "position": "midground",
+          "description": "Sweeping, ornate staircase crafted from dark, weathered oak"
+        }
+      ],
+      "dominantElements": [
+        "Ornate staircase",
+        "Paneled walls",
+        "Leaded windows",
+        "Fireplace",
+        "Candelabra"
+      ],
+      "uniqueIdentifiers": [
+        "Worn dark oak floor with forgotten crest",
+        "Tarnished brass candelabra",
+        "Exposed rough-hewn stone wall section"
+      ],
+      "searchDesc": "Decaying Gilded Manor reception hall: ornate, haunted, shadowed, with Gothic arches and dim blue-green light.",
+      "slug": "interior-of-the-gilded-manor"
+    },
+    "niche-1763549229340-w2flszdzq": {
+      "id": "niche-1763549229340-w2flszdzq",
       "type": "niche",
       "name": "interior of The Colossal Mechanism",
       "spaceType": "interior",
       "dna": {
-        "looks": "A colossal, circular chamber clad in dark, polished metallic alloy panels with intricate recessed circular motifs. Thin, pulsating turquoise energy conduits segment the walls, casting an ethereal glow. The floor is a polished expanse reflecting these conduits. The scale suggests a monumental, unseen overhead structure.",
-        "colorsAndLighting": "The chamber is bathed in a soft, ambient turquoise glow from energy conduits, complemented by sharp, high-contrast daylight filtering from above. The dominant colors are dark metallic and pulsing turquoise, with subtle blue accents on foreground elements.",
-        "atmosphere": "The air is still and cool, with a palpable sense of immense scale and profound mystery. The soft hum of crystalline data units and the rhythmic pulse of distant apertures create an ambient sonic texture, contributing to an otherworldly feel.",
-        "materials": "The primary material is a dark, polished metallic alloy, forming seamless geometric panels on walls and floor, and constructing platforms and consoles. Integrated soft blue light illuminates edges, while cyan glyphs glow on touch-sensitive panels. Crystalline data units shimmer with internal light.",
-        "mood": "Imposing, enigmatic, and awe-inspiring. The sheer scale and alien design evoke a sense of profound mystery and potential power, alien to human understanding.",
-        "sounds": "Soft hum, rhythmic pulse, faint energy crackle.",
-        "spatialLayout": "A vast, circular chamber with curving walls that recede into immense distance. The layout emphasizes scale, with a low platform in the foreground leading to a central console in the midground, flanked by alcoves and an off-center arched doorway. The background emphasizes distance and smaller architectural details.",
-        "primary_surfaces": "Dark polished metallic alloy (walls, floor)",
-        "secondary_surfaces": "Matte dark metallic alloy (door frame), crystalline (data units)",
-        "accent_features": "Pulsating turquoise energy conduits, glowing cyan glyphs on console, integrated soft blue platform lighting, crystalline data units, circular apertures with turquoise pulses.",
-        "dominant": "Dark metallic alloy (approx. 70% coverage)",
-        "secondary": "Turquoise glow (prominent accent, approx. 20% visual impact)",
-        "accent": "Cyan glyphs, soft blue light, shimmering crystalline (minor accent)",
+        "looks": "A vast, enclosed chamber with walls of interlocking dark metallic alloy panels. A segmented ramp inlaid with turquoise energy conduits ascends from the lower left, while a central holographic projection displays intricate alien schematics. The architecture is monumental and geometric, with recessed circular elements glowing softly.",
+        "colorsAndLighting": "The scene is dominated by the deep, reflective dark metallic alloy, illuminated by the ethereal glow of recessed circular structures and intense, pulsating turquoise energy conduits. This creates sharp, dynamic shadows and highlights.",
+        "atmosphere": "The air holds a faint, dry haze that refracts the internal light, contributing to the ethereal and enigmatic feel. The ambient light is a mix of soft, ambient glows and sharp, energetic luminescence.",
+        "materials": "The primary materials are a seamless, polished dark metallic alloy and integrated energy systems. The alloy is meticulously detailed and reflective, contrasting with the luminous energy conduits and glowing circular structures.",
+        "mood": "The atmosphere is enigmatic and awe-inspiring, evoking a sense of profound mystery and advanced, alien technology.",
+        "sounds": "Low hum, subtle energy pulse, soft ambient glow.",
+        "spatialLayout": "A vast, enclosed chamber with a profound depth. The walls curve inward, forming a monumental enclosure. Entry points are suggested by the ascending ramp and the beckoning doorway.",
+        "primary_surfaces": "Polished dark metallic alloy (floor, walls), solid enclosed ceiling.",
+        "secondary_surfaces": "Inlaid energy conduits, recessed glowing structures, holographic projection.",
+        "accent_features": "Pulsating turquoise energy conduits, holographic alien schematics, recessed circular ethereal lights.",
+        "dominant": "Dark metallic (floor, walls, ramp, doorway framing)",
+        "secondary": "Turquoise (energy conduits, doorway luminescence)",
+        "accent": "Ethereal internal light (recessed structures), vibrant turquoise (conduits)",
         "ambient": "Cool",
         "genre": null,
         "architectural_tone": "Monumental alien geometric design with integrated energy systems",
         "cultural_tone": "Mysterious, ancient, and technologically advanced, implying a civilization that operates on principles alien to human understanding.",
-        "materials_base": "Polished metallic alloys, glowing energy conduits, crystalline structures",
+        "materials_base": "Polished metallic alloys, integrated energy systems, luminous elements",
         "mood_baseline": "Imposing, enigmatic, and awe-inspiring",
-        "palette_bias": "Cool tones with strong azure and cyan accents",
-        "soundscape_base": "Low hums and subtle energetic pulses",
+        "palette_bias": "Cool, dark tones with vibrant azure/turquoise accents",
+        "soundscape_base": "Subtle technological hum and ambient energy sounds",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/uQfF70pxH4WuYcfQYh1a6.jpg",
-      "description": "A vast, circular chamber within The Colossal Mechanism, featuring polished metallic alloy walls with recessed circular motifs and pulsating turquoise energy conduits. A multi-tiered platform leads to a central console array with glowing glyphs, an arched doorway emitting turquoise light, and alcoves with crystalline data storage units.",
+      "imagePath": "https://v3b.fal.media/files/b/lion/JHX7ClOZYdeGPn-utPNLX.jpg",
+      "description": "An awe-inspiring interior chamber within 'The Colossal Mechanism,' characterized by monumental alien geometric design and pulsating energy conduits.",
       "navigableElements": [
         {
-          "type": "archway",
-          "position": "midground right",
-          "description": "Wide, arched doorway framed in matte dark alloy, emitting an intense turquoise beam, hinting at further depths."
+          "type": "ramp",
+          "position": "lower left",
+          "description": "Complex, segmented ramp of dark metallic alloy with pulsating turquoise energy conduits."
         },
         {
-          "type": "passage",
-          "position": "background",
-          "description": "Numerous smaller, circular apertures pulsing with subtle turquoise light along the receding walls."
+          "type": "doorway",
+          "position": "right",
+          "description": "Ornate, arching doorway framed by geometric paneling, emitting soft turquoise luminescence."
         }
       ],
       "dominantElements": [
-        "Vast circular chamber",
-        "Dark metallic alloy walls with recessed circular motifs",
-        "Pulsating turquoise energy conduits",
-        "Three-tiered console array with glowing cyan glyphs",
-        "Multi-tiered platform"
+        "vast interlocking geometric panels",
+        "pulsating turquoise energy conduits",
+        "holographic projection"
       ],
       "uniqueIdentifiers": [
-        "Seamlessly interlocking geometric panels",
-        "Recessed circular motifs",
-        "Pulsating turquoise energy conduits",
-        "Complex three-tiered console array with cyan glyphs",
-        "Arched doorway with intense turquoise light"
+        "dark metallic alloy",
+        "turquoise energy conduits",
+        "recessed circular glowing structures",
+        "holographic schematics"
       ],
-      "searchDesc": "Vast metallic chamber with glowing conduits, central console, and enigmatic doorways.",
+      "searchDesc": "Monumental alien chamber with dark metallic alloy, turquoise energy conduits, and holographic schematics.",
       "slug": "interior-of-the-colossal-mechanism"
     },
-    "niche-1763545657703-0gor1v29q": {
-      "id": "niche-1763545657703-0gor1v29q",
+    "niche-1763549257321-zk1is5mt3": {
+      "id": "niche-1763549257321-zk1is5mt3",
+      "type": "niche",
+      "name": "interior of The Temple of Static",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This vast, echoing chamber features towering walls of weathered concrete and decaying brick, disappearing into a shadowed, vaulted ceiling. Jagged, skeletal metal conduits snake across the surfaces, some sparking with residual energy, while the floor is a mosaic of cracked dark concrete and worn dark stone tiles.",
+        "colorsAndLighting": "Dominant deep teals in the atmospheric mist contrast with the dark concrete and stone. A single, unnerving pulsating orange light spills from a midground archway, creating a stark focal point.",
+        "atmosphere": "The air is thick with a visible, low-lying mist that clings to the floor, illuminated by the spill of orange light. An eerie, abandoned stillness is punctuated by the faint, spectral glow of distant equipment and the hum of residual energy.",
+        "materials": "The primary materials are rough, weathered concrete and decaying brick, showing signs of age and wear. Skeletal metal conduits and rusted panels add industrial decay, while worn dark stone tiles form part of the floor mosaic.",
+        "mood": "Eerie and abandoned, with a sense of forgotten technology and a strangely active, ominous presence emanating from the glowing entrance.",
+        "sounds": "Echoes, faint hum, residual sparking, distant mechanical whispers.",
+        "spatialLayout": "A vast, deep chamber with high walls and a vaulted ceiling lost in shadow. The space recedes into atmospheric haze, with a clear foreground, midground, and background defined by architectural elements and light.",
+        "primary_surfaces": "Weathered concrete, decaying brick, cracked dark concrete, worn dark stone tiles.",
+        "secondary_surfaces": "Rusted metal panels, skeletal metal conduits.",
+        "accent_features": "Sparking residual energy on conduits, etched faint ancient symbols on pillars, pulsating orange light spill.",
+        "dominant": "Teal (in atmospheric mist and haze)",
+        "secondary": "Dark grey/brown (concrete, brick, stone)",
+        "accent": "Pulsating orange (doorway spill)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "decaying monumentalism with organic overgrowth, featuring grand but crumbling forms, weathered stone and concrete, and remnants of advanced or ancient engineering partially obscured by nature, specifically adapted for broadcasting functions with prominent antenna structures",
+        "cultural_tone": "forgotten civilization, lost technology, nature's reclamation",
+        "materials_base": "aged concrete, pitted stone, oxidized metal, decaying brick",
+        "mood_baseline": "Eerie, abandoned, and strangely active",
+        "palette_bias": "muted earth tones with a dominant cool atmospheric hue and stark accent",
+        "soundscape_base": "ambient echoes and industrial hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/9YXU30ZuP5FJWT1PW7EA7.jpg",
+      "description": "A vast, echoing chamber within The Temple of Static, characterized by decaying monumentalism and industrial elements.",
+      "navigableElements": [
+        {
+          "type": "tunnel entrance",
+          "position": "left foreground",
+          "description": "A single, heavy, rusted metal panel lies slightly ajar, revealing unlit service tunnels beyond."
+        },
+        {
+          "type": "archway",
+          "position": "right midground",
+          "description": "A monumental, arched doorway crafted from dark, pitted concrete, standing slightly ajar and spilling unnerving, pulsating orange light."
+        }
+      ],
+      "dominantElements": [
+        "Cracked concrete floor",
+        "Decaying concrete and brick walls",
+        "Skeletal metal conduits",
+        "Monumental arched doorway",
+        "Massive decaying concrete pillars",
+        "Skeletal antennae-like structures"
+      ],
+      "uniqueIdentifiers": [
+        "Jagged, sparking metal conduits",
+        "Pulsating orange light from doorway",
+        "Etched ancient symbols on pillars",
+        "Low-lying mist illuminated by orange light"
+      ],
+      "searchDesc": "Vast, echoing chamber, decaying concrete, sparking conduits, orange-lit archway.",
+      "slug": "interior-of-the-temple-of-static"
+    },
+    "niche-1763549336153-ntfkfb3qy": {
+      "id": "niche-1763549336153-ntfkfb3qy",
       "type": "niche",
       "name": "interior of The Colossal Mechanism",
       "spaceType": "interior",
       "dna": {
-        "looks": "An immense circular chamber interior clad in dark, polished metallic alloy. Intricate turquoise energy conduits pulse across the vast, curved walls, casting light onto the seamless floor, which features a large, recessed circular motif.",
-        "colorsAndLighting": "Dominated by the cool, pulsating glow of turquoise energy conduits, creating shifting pools of light on the dark metallic surfaces. The lighting is ethereal and ambient.",
-        "atmosphere": "A sense of immense, enclosed space with an impossibly high, unseen ceiling. The air feels still and charged with latent energy, creating an awe-inspiring and enigmatic atmosphere.",
-        "materials": "The primary material is a dark, polished metallic alloy with a smooth, complex paneling. Subtle texturing is present on the floor for grip. The conduits appear luminous and integrated into the structure.",
-        "mood": "Imposing, enigmatic, and awe-inspiring due to its colossal scale and alien, technologically advanced design.",
-        "sounds": "Low hum, subtle energy pulse, distant resonance.",
-        "spatialLayout": "A vast, circular chamber with immense scale. Curved walls recede into the distance, suggesting hidden depths. The focal point is the central perspective leading into the enigmatic space.",
-        "primary_surfaces": "Dark polished metallic alloy walls and floor.",
-        "secondary_surfaces": "Integrated luminous turquoise energy conduits.",
-        "accent_features": "Recessed circular motifs, ornate etched archway, glowing circular panels.",
-        "dominant": "Dark metallic (floor, walls)",
-        "secondary": "Turquoise (conduits, light)",
-        "accent": "Warmer turquoise (panels)",
+        "looks": "This vast, domed interior is characterized by monumental geometric architecture with smooth, integrated organic curves. Polished dark metallic alloy forms the floor and structural elements, accented by intricate turquoise energy conduits.",
+        "colorsAndLighting": "The chamber is bathed in a soft, pulsating turquoise glow from recessed circular wall panels and energy lines, creating an ethereal illumination against the dark metallic surfaces.",
+        "atmosphere": "The air feels still and charged with enigmatic energy, hinting at profound alien technology. The immense scale and low-intensity luminescence contribute to an atmosphere of profound mystery.",
+        "materials": "The primary materials are a highly polished, dark metallic alloy for the floor and architecture, with inlaid turquoise energy conduits and recessed luminous panels.",
+        "mood": "Imposing and awe-inspiring, the sheer scale and alien design evoke a sense of profound mystery and potential power.",
+        "sounds": "Low hum, faint electrical crackle, distant resonance.",
+        "spatialLayout": "An expansive, domed chamber with a central vanishing point ahead. A grand archway dominates the view forward, with stepped platforms to the right indicating verticality. The space recedes into shadow, implying immense depth.",
+        "primary_surfaces": "Dark metallic alloy (floor, walls, architecture)",
+        "secondary_surfaces": "Recessed circular wall panels, inlaid energy conduits",
+        "accent_features": "Softly illuminated geometric patterns framing the archway, pulsating turquoise glow",
+        "dominant": "Dark metallic alloy (floor, walls, structure)",
+        "secondary": "Turquoise (lighting, energy conduits, wall panels)",
+        "accent": "Subtle floor material shift at threshold",
         "ambient": "Cool",
         "genre": null,
-        "architectural_tone": "Monumental alien geometric design with integrated energy systems, featuring smooth, complex paneling, recessed circular elements, and ornate, luminous portals.",
-        "cultural_tone": "Monumental alien construct (non-residential, non-religious, non-factory) - akin to a grand, central chamber or nexus within a colossal machine.",
-        "materials_base": "Polished metals, integrated energy systems, complex paneling.",
-        "mood_baseline": "Imposing, enigmatic, awe-inspiring.",
-        "palette_bias": "Cool blues and deep grays/blacks.",
-        "soundscape_base": "Mechanical hum, energy resonance.",
+        "architectural_tone": "Monumental alien geometric design with integrated energy systems",
+        "cultural_tone": "Mysterious, ancient, and technologically advanced, implying a civilization that operates on principles alien to human understanding.",
+        "materials_base": "Dark polished metals, luminous energy conduits",
+        "mood_baseline": "Imposing, enigmatic, awe-inspiring",
+        "palette_bias": "Cool blues and dark metallics",
+        "soundscape_base": "Subtle technological hums and resonances",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/monkey/BpNYrXpms0ab8qdm6yLlJ.jpg",
-      "description": "The immense, circular interior of a colossal alien mechanism, clad in polished dark metal and illuminated by pulsating turquoise energy conduits.",
+      "imagePath": "https://v3b.fal.media/files/b/koala/QZ0QQIVptWpXEwtwCWw2m.jpg",
+      "description": "An expansive, domed interior chamber within The Colossal Mechanism, featuring a grand archway, stepped platforms, and recessed lighting.",
       "navigableElements": [
         {
           "type": "archway",
-          "position": "left midground",
-          "description": "Ornate, recessed archway with diffused turquoise light."
+          "position": "ahead",
+          "description": "grand, segmented archway of dark alloy framed by illuminated geometric patterns, leading deeper"
         },
         {
-          "type": "interface",
-          "position": "right midground",
-          "description": "Series of smaller, glowing circular panels."
-        },
-        {
-          "type": "corridor",
-          "position": "background",
-          "description": "Continuation of the polished floor leading into the distance."
+          "type": "stairs",
+          "position": "to the right",
+          "description": "series of stepped platforms of dark metallic alloy with turquoise lines, ascending to an unseen upper level"
         }
       ],
       "dominantElements": [
-        "Immense circular chamber walls",
-        "Pulsating turquoise energy conduits",
-        "Polished metallic alloy floor",
-        "Recessed circular motifs",
-        "Ornate recessed archway"
+        "domed interior chamber",
+        "grand segmented archway",
+        "stepped platforms",
+        "recessed circular wall panels",
+        "energy conduits"
       ],
       "uniqueIdentifiers": [
-        "Monumental alien geometric design",
-        "Integrated energy systems with pulsating turquoise conduits",
-        "Seamless dark polished metallic alloy cladding",
-        "Recessed circular motifs and portals",
-        "Colossal scale"
+        "pulsating turquoise glow",
+        "dark metallic alloy floor and architecture",
+        "monumental geometric design with organic curves"
       ],
-      "searchDesc": "Interior of a colossal alien mechanism with geometric design, turquoise energy conduits, and polished metal.",
+      "searchDesc": "Expansive domed chamber with turquoise glow, grand archway, and stepped platforms.",
       "slug": "interior-of-the-colossal-mechanism"
+    },
+    "loc-1763549649775-zqc1j6ard": {
+      "id": "loc-1763549649775-zqc1j6ard",
+      "type": "host",
+      "name": "Spain",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A tapestry of ancient architecture, sun-drenched coastlines, and lively city streets. Expect a blend of Moorish influences, Gothic cathedrals, and modern artistic expressions. The landscapes range from arid plains to lush mountains and vibrant urban centers.",
+        "colorsAndLighting": "Dominated by warm earthy tones, ochre, terracotta, and deep blues. Sunlight is abundant, casting strong contrasts and creating a vibrant, lively atmosphere. Evening light is often soft and golden.",
+        "atmosphere": "Generally warm and dry, with a Mediterranean breeze along the coasts. Cities can be bustling and energetic, while rural areas offer tranquility. The air carries scents of citrus, olive groves, and sea salt.",
+        "materials": "Primarily sun-baked earth, weathered stone, intricate tilework (azulejos), and rustic wood. Modern elements include polished concrete and glass in urban areas.",
+        "mood": "Passionate, lively, and steeped in tradition. A sense of history and vibrant present-day energy coexists, inviting exploration and enjoyment.",
+        "sounds": "Buzz of conversation, distant music, church bells, seagulls, fountain trickles",
+        "spatialLayout": "A mix of grand plazas, narrow winding streets, open courtyards, and expansive natural vistas. Architecture often features intricate detailing and a sense of grandeur.",
+        "primary_surfaces": "Stone, Terracotta, Plaster",
+        "secondary_surfaces": "Wood, Tile, Metal",
+        "accent_features": "Intricate tilework, wrought iron balconies, carved wooden doors, fountains, colorful mosaics",
+        "dominant": "Earthy Tones",
+        "secondary": "Blues, Greens, Whites",
+        "accent": "Golds, Reds, Oranges",
+        "ambient": "Warm",
+        "genre": "historical|modern|cultural",
+        "architectural_tone": "A fusion of Moorish arches, Gothic spires, Renaissance facades, and Baroque ornamentation. Expect rich tilework, wrought iron details, ornate balconies, and grand plazas. Includes elements of rustic simplicity and vibrant modern design.",
+        "cultural_tone": "Passionate, artistic, and deeply social. A culture that values tradition, community, and sensory experiences. Emphasis on festivals, music, dance, and culinary arts.",
+        "materials_base": "Natural stone, aged wood, vibrant ceramics, wrought iron, plaster",
+        "mood_baseline": "Festive, passionate, warm, historic",
+        "palette_bias": "Warm earth tones, terracotta, ochre, deep blues, Mediterranean greens",
+        "soundscape_base": "Lively street sounds, traditional music, natural elements",
+        "flora_base": "Olive trees, citrus groves, cypress trees, bougainvillea, Mediterranean scrub",
+        "fauna_base": "Seagulls, pigeons, lizards, domesticated animals"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Sagrada Familia",
+        "Alhambra",
+        "Prado Museum"
+      ],
+      "uniqueIdentifiers": [
+        "Tapas culture",
+        "Flamenco music",
+        "Fiesta traditions"
+      ],
+      "slug": "spain",
+      "searchDesc": "Explore Spain's rich history, vibrant culture, diverse landscapes, and iconic landmarks."
+    },
+    "2a087be1-d1d1-4bb1-841d-8234a7ebed1b": {
+      "id": "2a087be1-d1d1-4bb1-841d-8234a7ebed1b",
+      "type": "region",
+      "name": "Spain",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Varying landscapes from rugged mountain ranges to fertile plains and long coastlines. Architectural styles reflect regional history and climate, from fortified castles to whitewashed coastal villages.",
+        "colorsAndLighting": "A broad spectrum, from the cool blues of the northern coast and mountain snow to the warm yellows and oranges of the southern plains. Sunlight is often intense, creating bright highlights and deep shadows.",
+        "atmosphere": "Highly variable, from crisp mountain air and humid coastal breezes to dry inland heat. Weather can change dramatically across the region.",
+        "materials": "Includes granite and slate in mountainous areas, limestone and sandstone in plains, and various woods for rustic construction.",
+        "mood": "Diverse, ranging from rugged and majestic in the mountains to relaxed and sun-drenched on the coasts.",
+        "sounds": "Wind, flowing water, distant sheep bells, crashing waves, bustling markets",
+        "spatialLayout": "Expansive natural vistas, traditional village layouts, and significant river valleys influencing settlement patterns.",
+        "primary_surfaces": "Stone, Earth, Sand",
+        "secondary_surfaces": "Wood, Vegetation, Water",
+        "accent_features": "Natural rock formations, riverbeds, coastal cliffs, historic windmills",
+        "dominant": "Earth Tones",
+        "secondary": "Blues, Greens, Grays",
+        "accent": "Yellows, Reds",
+        "ambient": "Variable (Warm to Cool)",
+        "genre": null,
+        "architectural_tone": "Regional adaptations of historical styles, incorporating local stone, wood, and climate considerations. Mountainous areas may feature robust, defensible structures, while coastal regions might have lighter, more open designs. Still adheres to the broad Moorish, Gothic, Renaissance, and Baroque influences from the host.",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": "Influenced by regional geography: blues and grays for mountains/coast, earthy tones and greens for plains and valleys.",
+        "soundscape_base": "Natural sounds dominate, with regional human activity layered on top.",
+        "flora_base": "Pine forests, oak woodlands, riverine vegetation, coastal flora",
+        "fauna_base": "Mountain goats, wild boar, diverse birdlife, marine life"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Pyrenees Mountains",
+        "Ebro River",
+        "Mediterranean Coastline"
+      ],
+      "uniqueIdentifiers": [
+        "Diverse climates",
+        "Regional cuisines",
+        "Unique dialects"
+      ],
+      "slug": "spain-region",
+      "searchDesc": "The diverse region of Spain, featuring mountain ranges, major rivers, and extensive coastlines."
+    },
+    "2cb7d9d9-1e3d-4bc1-a60c-eb14c8c15c7a": {
+      "id": "2cb7d9d9-1e3d-4bc1-a60c-eb14c8c15c7a",
+      "type": "location",
+      "name": "The Barcelona Artscape",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An expansive park unfolds with a paved walkway leading towards a striking, illuminated archway structure. Mature trees with dense foliage line both sides of the path, casting shadows and creating a sense of enclosure. The ground is a mosaic of stone tiles, reflecting the ambient light. The archway itself is densely covered in small, glowing lights, creating a warm, inviting entrance. In the distance, the park continues with more trees and subtle ground lighting, hinting at a larger, cultivated space.",
+        "colorsAndLighting": "The lighting is predominantly warm, emanating from the illuminated archway and scattered ground lamps. This creates a high contrast between the brightly lit central feature and the darker, natural surroundings. The light is soft, diffusing through the atmospheric haze.",
+        "atmosphere": "A soft, diffused haze hangs in the air, lending a slightly ethereal quality to the scene. The clarity of the air is moderate, with the distant elements appearing softened by the atmospheric conditions.",
+        "materials": "Smooth stone or concrete for the walkway, complemented by the organic textures of tree bark and foliage. The archway itself is covered in a multitude of small light fixtures.",
+        "mood": "Magical, inviting, and serene, with a touch of urban sophistication.",
+        "sounds": "Muted city hum, gentle rustling leaves, distant soft music",
+        "spatialLayout": "The foreground features a wide, paved stone walkway curving gently. The midground is dominated by a large, arched installation that appears to be a series of connected arches, with a lone figure standing within the central one. Dense bushes and trees flank the walkway and the installation. The background reveals a continuation of the tree-lined park with more subtle ground lights.",
+        "primary_surfaces": "Stone (walkway)",
+        "secondary_surfaces": "Vegetation (trees, bushes)",
+        "accent_features": "LED lights (archway, ground lamps)",
+        "dominant": "Orange (illuminated archway, ground lamps)",
+        "secondary": "Blue (sky), Green (foliage), Gray (stone pathway)",
+        "accent": "Warm white (reflections on stone)",
+        "ambient": "Muted blue and gray",
+        "genre": null,
+        "architectural_tone": "Modern artistic installation with a focus on light and form. The archway features a contemporary, almost ethereal design due to the illumination. Paired with the host's 'rich tilework' and 'ornate balconies', this location introduces a distinct focus on modern, light-based art integrated into a traditional urban park setting. The stone pathway aligns with 'natural stone' elements.",
+        "cultural_tone": "Emphasizes contemporary art and urban leisure within a historically rich city. A space designed for aesthetic appreciation and quiet enjoyment amidst city life.",
+        "materials_base": null,
+        "mood_baseline": "Enchanting, serene, sophisticated",
+        "palette_bias": "Dominated by warm, glowing oranges and whites from the lighting, contrasted with deep greens of foliage and muted grays of paving.",
+        "soundscape_base": null,
+        "flora_base": "Ornamental trees, manicured shrubs, designed for aesthetic appeal within an urban context",
+        "fauna_base": "Urban birds (pigeons, sparrows), insects"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/6eO32rA3_w8NbfUhGi29Q.jpg",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center, midground",
+          "description": "A grand, illuminated archway passage with a solitary figure visible within"
+        },
+        {
+          "type": "passage",
+          "position": "center, background",
+          "description": "Deeper illuminated archways extending into the park"
+        }
+      ],
+      "dominantElements": [
+        "Illuminated archway installation (midground, center)",
+        "Mature trees lining pathway (midground/background, left/right)",
+        "Paved walkway (foreground/midground, center)"
+      ],
+      "uniqueIdentifiers": [
+        "Large, multi-arched illuminated installation",
+        "Row of evenly spaced ground lights along tree lines",
+        "Stone paved walkway with geometric patterns"
+      ],
+      "slug": "the-barcelona-artscape",
+      "searchDesc": "[Location - Exterior] Illuminated park passage. Has: illuminated archway passage (center, midground), deeper archways (center, background)"
+    },
+    "niche-1763549686557-ww4aovc2v": {
+      "id": "niche-1763549686557-ww4aovc2v",
+      "type": "niche",
+      "name": "unknown of The Barcelona Artscape",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An ethereal art installation unfolds into a contemplative interior. Smooth, cool stone floors reflect diffused LED lighting embedded in sleek wall panels, which are a mosaic of rich, textured ceramic tiles in deep blues and ochres. An arching passageway ahead beckons, while to the left a bronze sculpture rests in an alcove, and to the right, windows frame glimpses of foliage.",
+        "colorsAndLighting": "Warm, diffused glow from LED strips contrasts with the cool tones of the stone. Deep blues and ochres dominate the ceramic tiles, with the polished bronze sculpture catching ambient light. The archway is subtly illuminated from within, creating an inviting focal point.",
+        "atmosphere": "The air carries a faint scent of aged plaster, hinting at a historic urban setting. A distant, murmurous urban hum is perceptible, creating a sense of sophisticated seclusion. The overall feeling is one of serene contemplation and intriguing artistic exploration.",
+        "materials": "The primary materials are smooth, cool stone for the flooring, and sleek, contemporary wall panels featuring rich, textured ceramic tiles. A polished bronze sculpture adds a metallic element, contrasting with the dark, minimalist metal framing the windows.",
+        "mood": "Serene sophistication and intriguing artistic exploration define the emotional tone, creating a magical and inviting atmosphere for quiet enjoyment.",
+        "sounds": "aged plaster scent, distant urban hum",
+        "spatialLayout": "The interior space opens immediately from an unseen threshold, with a defined foreground of stone flooring and contemporary wall panels. A central archway serves as a focal point leading deeper, flanked by an alcove and windows.",
+        "primary_surfaces": "smooth stone (floor), textured ceramic tiles (walls)",
+        "secondary_surfaces": "polished bronze (sculpture), dark minimalist metal (window frames)",
+        "accent_features": "ethereal illuminated archway, abstract bronze sculpture, mosaic ceramic tile panels",
+        "dominant": "Blue (ceramic tiles, dominant wall surface)",
+        "secondary": "Ochre (ceramic tiles, accent wall surface)",
+        "accent": "Orange (LED strip lighting, inner archway illumination)",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/auZ-pF3oMak-sNsB4wv7P.jpg",
+      "description": "An interior art installation space in Barcelona, characterized by smooth stone flooring, contemporary ceramic tile walls, an illuminated archway, a bronze sculpture, and large windows revealing foliage. The atmosphere is serene and sophisticated.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "ahead",
+          "description": "A narrow, arching passageway subtly illuminated from within."
+        },
+        {
+          "type": "window",
+          "position": "to the right",
+          "description": "Floor-to-ceiling windows framed by dark, minimalist metal."
+        }
+      ],
+      "dominantElements": [
+        "smooth stone flooring",
+        "sleek, contemporary wall panels with ceramic tiles",
+        "illuminated archway",
+        "bronze sculpture"
+      ],
+      "uniqueIdentifiers": [
+        "mosaic of deep blues and ochres ceramic tiles",
+        "ethereal illuminated archway",
+        "polished bronze abstract sculpture"
+      ],
+      "searchDesc": "Ethereal art installation with stone floors, mosaic tiles, illuminated arch, and bronze sculpture.",
+      "slug": "unknown-of-the-barcelona-artscape"
+    },
+    "niche-1763549765817-15pdbmxe1": {
+      "id": "niche-1763549765817-15pdbmxe1",
+      "type": "niche",
+      "name": "unknown of The Barcelona Artscape",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This modern artistic pavilion presents a serene, enclosed atmosphere with a sculpted, opaque ceiling emitting a diffused warm glow. The walls feature a striking combination of smooth, cool plaster and intricate, geometric Barcelona-inspired ceramic tiles. The immediate foreground is defined by dark stone paving leading into the space, with a curving passage to the left and a concrete plinth with glowing orbs to the right.",
+        "colorsAndLighting": "Dominant warm orange light emanates from integrated ceiling fixtures and the glowing orbs, casting a diffused, inviting glow. The walls offer a sophisticated palette of cool plaster tones contrasted by the vibrant geometric patterns of the ceramic tiles.",
+        "atmosphere": "The air is calm and still, with a subtle hint of floral notes from ornamental plants. Muted city hum and gentle rustling leaves are softly amplified by the enclosed space, creating a tranquil and enclosed sensory experience.",
+        "materials": "The primary materials are smooth, cool plaster and intricately patterned, vibrant ceramic tiles. Underfoot, smooth, dark stone paving leads inward, complemented by a low, polished concrete plinth. A minimalist bench is crafted from dark, aged wood.",
+        "mood": "Enchanting and sophisticated, this space evokes a sense of urban sanctuary and quiet contemplation, perfectly blending art and serenity.",
+        "sounds": "muted city hum, rustling leaves, amplified ambient",
+        "spatialLayout": "An intimate, enclosed pavilion space with a clear focal point drawing the eye inward from the entrance. A central open area is defined, with a passage to the left and a plinth to the right, all under a fully enclosed ceiling.",
+        "primary_surfaces": "Smooth plaster, geometric ceramic tiles, dark stone paving",
+        "secondary_surfaces": "Polished concrete, aged wood",
+        "accent_features": "Intricately patterned vibrant ceramic tiles, glowing orbs, textured glass pane",
+        "dominant": "Warm orange light with significant coverage",
+        "secondary": "Cool plaster tones on walls",
+        "accent": "Vibrant colors within ceramic tile patterns",
+        "ambient": "warm",
+        "genre": null,
+        "architectural_tone": "Modern artistic installation with a focus on light and form",
+        "cultural_tone": "Contemporary art and urban leisure within a historically rich city.",
+        "materials_base": null,
+        "mood_baseline": "Magical, inviting, and serene, with a touch of urban sophistication.",
+        "palette_bias": "Warm tones and geometric patterns",
+        "soundscape_base": "Tranquil ambient soundscape",
+        "flora_base": "Ornamental plants",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/G7JoI9hHwKfwsYTzS7U_g.jpg",
+      "description": "An intimate, artfully lit pavilion extending from an illuminated archway, featuring a blend of smooth plaster and vibrant ceramic tiles, with a serene and sophisticated atmosphere.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "to the left",
+          "description": "A gently curving passage leading to a softly lit alcove."
+        },
+        {
+          "type": "archway",
+          "position": "in the background",
+          "description": "Suggests further exploration within the artistic enclave."
+        }
+      ],
+      "dominantElements": [
+        "Opaque sculpted ceiling with integrated warm lighting",
+        "Walls of smooth plaster and geometric ceramic tiles",
+        "Dark stone paving",
+        "Polished concrete plinth with glowing orbs",
+        "Minimalist wooden bench",
+        "Floor-to-ceiling textured glass pane"
+      ],
+      "uniqueIdentifiers": [
+        "Geometric Barcelona-inspired ceramic tiles",
+        "Sculpted opaque ceiling with diffused warm lighting",
+        "Glowing orbs on a concrete plinth",
+        "Textured glass view of greenery"
+      ],
+      "searchDesc": "Artistic pavilion with geometric tiles, warm lighting, and a serene, sophisticated mood.",
+      "slug": "unknown-of-the-barcelona-artscape"
+    },
+    "loc-1763549798715-mtrd5zyb9": {
+      "id": "loc-1763549798715-mtrd5zyb9",
+      "type": "host",
+      "name": "Miami",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sprawling metropolis characterized by modern high-rises and colorful, historic districts set against a backdrop of turquoise waters and sandy beaches. Lush tropical vegetation is abundant throughout.",
+        "colorsAndLighting": "Dominated by bright, sun-drenched palettes with strong blues and greens from the ocean and foliage, contrasted with the vibrant pastels and whites of its architecture. Lighting is intense and warm.",
+        "atmosphere": "A palpable sense of energy and festivity pervades the air, amplified by the warm, humid tropical climate and the salty ocean breeze. The atmosphere is generally clear and bright.",
+        "materials": "A mix of polished concrete, stucco, glass, and steel in modern areas, alongside painted plaster, terracotta tiles, and wrought iron in historic districts. Natural elements like wood and stone are also present.",
+        "mood": "Exuberant, lively, and sun-kissed, with an undercurrent of sophisticated charm and relaxed tropical vibes.",
+        "sounds": "Waves crashing, seagulls crying, distant music, traffic hum, chattering crowds",
+        "spatialLayout": "A dense urban environment with distinct districts, wide avenues, and expansive beachfronts, interspersed with lush parks and waterways.",
+        "primary_surfaces": [
+          "concrete",
+          "stucco",
+          "glass",
+          "tile"
+        ],
+        "secondary_surfaces": [
+          "steel",
+          "plaster",
+          "wrought iron",
+          "wood"
+        ],
+        "accent_features": [
+          "Art Deco ornamentation",
+          "tropical landscaping",
+          "neon lighting",
+          "balconies and terraces"
+        ],
+        "dominant": "Blue",
+        "secondary": "Green",
+        "accent": "Pastel Pink",
+        "ambient": "Warm",
+        "genre": "modern",
+        "architectural_tone": "A blend of Art Deco exuberance with sleek, contemporary tropical modernism, featuring clean lines, geometric patterns, pastel color palettes, and integration with natural light and tropical flora.",
+        "cultural_tone": "Vibrant and cosmopolitan, influenced by Latin American and Caribbean cultures, emphasizing outdoor living, entertainment, and a sophisticated yet relaxed lifestyle.",
+        "materials_base": "Polished concrete, stucco, glass, steel, brightly painted plaster, terracotta, with significant use of tropical hardwoods and decorative metals.",
+        "mood_baseline": "Festive, energetic, and stylish, with an underlying sense of tropical relaxation.",
+        "palette_bias": "Bright and high-contrast, with dominant blues and greens offset by vibrant pastels and clean whites, reflecting the tropical environment and architectural styles.",
+        "soundscape_base": "A dynamic mix of urban sounds, coastal ambient noise, and a constant hum of social activity and music.",
+        "flora_base": "Tropical palms, flamboyant flowering trees, vibrant bougainvillea, dense hedges",
+        "fauna_base": "Seabirds, tropical songbirds, small lizards, domestic animals"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Miami skyline",
+        "Atlantic Ocean coastline",
+        "Art Deco district"
+      ],
+      "uniqueIdentifiers": [
+        "Tropical climate",
+        "Spanish influence",
+        "Biscayne Bay"
+      ],
+      "slug": "miami",
+      "searchDesc": "Vibrant coastal city in Florida, known for beaches, nightlife, and Art Deco architecture."
+    },
+    "fceffadd-8f6a-4a91-bed3-c15428cd9c05": {
+      "id": "fceffadd-8f6a-4a91-bed3-c15428cd9c05",
+      "type": "region",
+      "name": "South Beach",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A strip of pastel-colored Art Deco buildings with distinctive geometric shapes and ornate detailing, lining wide avenues with manicured green spaces and leading to a famous sandy beach and clear turquoise ocean.",
+        "colorsAndLighting": "Dominated by soft pastel hues of pink, blue, and yellow on building facades, contrasted with the crisp white of decorative elements and the vibrant greens of landscaping. Lighting is bright and airy, with sharp shadows.",
+        "atmosphere": "A high-energy, glamorous, and sun-drenched atmosphere with a constant buzz of activity. The air is warm and carries the scent of salt and tropical blossoms.",
+        "materials": "Primarily painted stucco, polished concrete, chrome accents, and glass. Natural materials like wood and tile are used for accents and flooring.",
+        "mood": "Glamorous, chic, and perpetually energetic, with a celebratory and visually striking aesthetic.",
+        "sounds": "Upbeat music, laughter, distant traffic, waves lapping, stylized chatter",
+        "spatialLayout": "A linear arrangement of wide avenues and pedestrian-friendly promenades, with buildings set back by lush landscaping, all oriented towards the expansive oceanfront.",
+        "primary_surfaces": [
+          "painted stucco",
+          "concrete",
+          "tile"
+        ],
+        "secondary_surfaces": [
+          "chrome",
+          "glass",
+          "wood"
+        ],
+        "accent_features": [
+          "Ornate geometric facades",
+          "neon signage",
+          "tropical plantings",
+          "chrome detailing"
+        ],
+        "dominant": "Pastel Pink",
+        "secondary": "Turquoise",
+        "accent": "Chrome",
+        "ambient": "Bright",
+        "genre": null,
+        "architectural_tone": "Deco tropical modernism with a focus on pastel color palettes, geometric patterns, curved forms, ornate detailing, stylized ornamentation, and the integration of lush tropical landscaping.",
+        "cultural_tone": "Glamorous, fashionable, and entertainment-focused, embodying a high-energy urban beach lifestyle with a strong emphasis on design and social interaction.",
+        "materials_base": "Painted stucco with vibrant pastel hues, polished concrete, decorative metalwork (often chrome or brass), and glass, complemented by natural stone and tile accents.",
+        "mood_baseline": "Electrifying, stylish, and playful, with an inherent sense of glamour and celebration.",
+        "palette_bias": "Pastel and vibrant, with a strong emphasis on soft pinks, blues, yellows, and greens, balanced by crisp whites and metallic accents.",
+        "soundscape_base": "A lively blend of stylish lounge music, energetic beats, ambient beach sounds, and the murmur of sophisticated crowds.",
+        "flora_base": "Palm trees, oleander, hibiscus, ornamental grasses, manicured hedges",
+        "fauna_base": "Seagulls, small tropical birds, domesticated pets"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Ocean Drive",
+        "Art Deco hotels",
+        "South Pointe Park Pier"
+      ],
+      "uniqueIdentifiers": [
+        "Iconic Art Deco architecture",
+        "Vibrant nightlife",
+        "Famous beaches"
+      ],
+      "slug": "south-beach",
+      "searchDesc": "Iconic Miami district renowned for its Art Deco architecture, lively beaches, and bustling social scene."
+    },
+    "d88095d9-675b-4998-b684-01f0667f16f6": {
+      "id": "d88095d9-675b-4998-b684-01f0667f16f6",
+      "type": "location",
+      "name": "The Oceanfront Park Entrance",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Lush palm trees with feathery fronds flank a wide, tiled pathway leading towards a grand, rectangular white archway. Beyond the arch, a clear view opens to a vibrant turquoise ocean meeting a bright blue sky. Immediately to the left and right of the path are meticulously manicured green hedges, with modern, multi-story white buildings visible behind the foliage. The sunlight casts distinct shadows of palm fronds onto the pathway, creating a dappled effect.",
+        "colorsAndLighting": "The lighting is bright and natural, characteristic of midday sunshine. The light is warm and casts sharp, defined shadows, indicating a high sun angle. The sky is a dominant source of light, contributing to the overall clarity and brilliance of the scene.",
+        "atmosphere": "The air appears clear and bright, with no visible haze or mist. The scene suggests a warm, coastal environment likely filled with the scent of salt and tropical flora.",
+        "materials": "Dominated by smooth, cool tile on the pathway, and solid, likely concrete or stucco, for the archway and surrounding modern buildings. Dense foliage forms natural barriers.",
+        "mood": "Open, refreshing, and serene, conveying a sense of arrival to a beautiful coastal paradise.",
+        "sounds": "Gentle ocean surf, distant seabirds, soft breeze through palms",
+        "spatialLayout": "The foreground is dominated by a wide, tiled pathway leading the eye inward. The midground features a large white archway that frames the scene beyond. Flanking the pathway and midground arch are numerous palm trees and neatly trimmed hedges, with modern buildings set back on either side. The background is a vast expanse of ocean and sky, clearly visible through the archway.",
+        "primary_surfaces": "Tile (pathway), concrete (archway and buildings), water (ocean)",
+        "secondary_surfaces": "Hedges, foliage, sand (implied)",
+        "accent_features": "Glass (building windows)",
+        "dominant": "Blue (sky and ocean)",
+        "secondary": "Green (foliage and hedges), white (archway and buildings), terracotta (pathway)",
+        "accent": "Yellow/gold (sunlight on palm fronds)",
+        "ambient": "Bright, sunny daylight",
+        "genre": null,
+        "architectural_tone": "Modern tropical with clean geometric lines, large-scale elements, and a crisp white palette, designed to maximize natural light and integrate with the surrounding coastal environment. The archway is a monumental, stylized feature.",
+        "cultural_tone": "Public recreational and welcoming, emphasizing access to nature and leisure activities within a sophisticated urban setting.",
+        "materials_base": "Polished concrete, smooth stucco, large format tiles, and glass, designed for durability and a clean, modern aesthetic in a high-sun environment.",
+        "mood_baseline": "Invigorating, spacious, and visually clean, fostering a sense of calm and appreciation for the natural beauty and curated design.",
+        "palette_bias": "High contrast with dominant blues and whites, grounded by earthy terracotta and lush greens, reflecting a clear, sunny coastal day.",
+        "soundscape_base": "Natural coastal sounds like the ocean and wind, subtly enhanced by the distant urban ambiance of the city.",
+        "flora_base": "Tall, mature palm trees with feathery fronds, dense, neatly trimmed hedges.",
+        "fauna_base": "Seagulls, small urban birds"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/xQ4feCsBa2qAJ8NkpjlFV.jpg",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center, midground",
+          "description": "Large white archway leading to the ocean view beyond"
+        },
+        {
+          "type": "passage",
+          "position": "center, foreground",
+          "description": "Wide tiled pathway extending towards the ocean"
+        }
+      ],
+      "dominantElements": [
+        "White rectangular archway (approx. 6m tall, 8m wide)",
+        "Palm trees (foreground and midground, varying heights)",
+        "Turquoise ocean (background)",
+        "Modern white buildings (midground, left and right)"
+      ],
+      "uniqueIdentifiers": [
+        "Grand white rectangular archway framing the ocean view",
+        "Symmetrical planting of palm trees and hedges",
+        "Modern architectural style of buildings"
+      ],
+      "slug": "the-oceanfront-park-entrance",
+      "searchDesc": "Park entrance with archway. Has: archway (center, midground), pathway (center, foreground)"
+    },
+    "niche-1763549838570-pyxdqzell": {
+      "id": "niche-1763549838570-pyxdqzell",
+      "type": "niche",
+      "name": "exterior of The Oceanfront Park Entrance",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A geometrically clean, monumental white stucco archway dominates the midground, framing a vast expanse of ocean and sky. A weathered terracotta tiled pathway, dappled with shadows, leads the eye from the foreground. Meticulously manicured emerald green hedges flank the path, with glimpses of modern resort buildings behind them.",
+        "colorsAndLighting": "The scene is bathed in bright, high-angle midday sun, casting sharp shadows. Dominant colors are the vibrant turquoise of the ocean and the clear blue of the sky, contrasted by the crisp white of the archway and buildings.",
+        "atmosphere": "The air is crisp and invigorating, carrying the faint scent of salt and tropical flora. This creates an atmosphere of serene spaciousness and modern tropical elegance, feeling open and refreshing.",
+        "materials": "Key materials include weathered terracotta tiles with mossy cracks on the pathway, smooth stucco for the archway, oxidized metal for a sculpture, sun-bleached wood for a viewing platform, and dense, manicured hedges.",
+        "mood": "Evokes a sense of arrival to a beautiful coastal paradise, with an open, refreshing, and serene emotional tone.",
+        "sounds": "Gentle ocean waves, distant seabirds, soft breeze rustling leaves.",
+        "spatialLayout": "Expansive and open, with a clear horizon line. The layout guides the eye through a central pathway towards a focal monumental archway that opens to a grand vista.",
+        "primary_surfaces": "Terracotta tiles (path), stucco (archway), glass (buildings)",
+        "secondary_surfaces": "Manicured hedges, oxidized metal (sculpture), sun-bleached wood (platform)",
+        "accent_features": "Abstract oxidized metal sculpture, mossy cracks on tiles, dappled shadows",
+        "dominant": "Blue (sky and ocean, vast coverage)",
+        "secondary": "White (archway, buildings, significant coverage)",
+        "accent": "Terracotta (path, moderate coverage), Emerald Green (hedges, moderate coverage)",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": "Modern tropical with clean geometric lines, monumental elements",
+        "cultural_tone": "Public recreational and welcoming, emphasizing access to nature and leisure.",
+        "materials_base": "Smooth stucco, weathered terracotta, metal, wood, dense foliage",
+        "mood_baseline": "Serene, spacious, modern elegance",
+        "palette_bias": "Crisp whites and blues, with natural earthy accents",
+        "soundscape_base": "Coastal ambient",
+        "flora_base": "Tropical flora",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/yUtuuN9lMLzQ38Y5Hk_iw.jpg",
+      "description": "The grand entrance to a modern tropical park, featuring a monumental archway leading to an ocean vista.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center of midground",
+          "description": "Monumental white stucco archway framing the ocean"
+        },
+        {
+          "type": "pathway",
+          "position": "foreground",
+          "description": "Weathered terracotta tiled pathway curving left"
+        },
+        {
+          "type": "platform",
+          "position": "right of archway base",
+          "description": "Small weathered wooden viewing platform"
+        }
+      ],
+      "dominantElements": [
+        "Monumental white archway",
+        "Terracotta tiled pathway",
+        "Emerald green hedges",
+        "Turquoise ocean and blue sky"
+      ],
+      "uniqueIdentifiers": [
+        "Monumental white archway",
+        "Terracotta tiled pathway with mossy cracks",
+        "Abstract oxidized metal sculpture"
+      ],
+      "searchDesc": "Modern tropical park entrance with a white archway, terracotta path, and ocean vista.",
+      "slug": "exterior-of-the-oceanfront-park-entrance"
     }
   },
   "views": {},
@@ -740,7 +1309,12 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763545395905-5p1mploug",
+                  "id": "niche-1763549085819-z1u4ea26u",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763549184558-8a3d4u4v9",
                   "type": "niche",
                   "children": []
                 }
@@ -763,7 +1337,7 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763545465051-vi8k9yt7e",
+                  "id": "niche-1763549257321-zk1is5mt3",
                   "type": "niche",
                   "children": []
                 }
@@ -786,12 +1360,63 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763545610644-mmg3teqv6",
+                  "id": "niche-1763549229340-w2flszdzq",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1763545657703-0gor1v29q",
+                  "id": "niche-1763549336153-ntfkfb3qy",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763549649775-zqc1j6ard",
+      "type": "host",
+      "children": [
+        {
+          "id": "2a087be1-d1d1-4bb1-841d-8234a7ebed1b",
+          "type": "region",
+          "children": [
+            {
+              "id": "2cb7d9d9-1e3d-4bc1-a60c-eb14c8c15c7a",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763549686557-ww4aovc2v",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763549765817-15pdbmxe1",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763549798715-mtrd5zyb9",
+      "type": "host",
+      "children": [
+        {
+          "id": "fceffadd-8f6a-4a91-bed3-c15428cd9c05",
+          "type": "region",
+          "children": [
+            {
+              "id": "d88095d9-675b-4998-b684-01f0667f16f6",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1763549838570-pyxdqzell",
                   "type": "niche",
                   "children": []
                 }
@@ -804,7 +1429,8 @@
   ],
   "pinnedIds": [
     "loc-1763544754758-vy2ixcrie",
-    "loc-1763545432403-wl3f5o5r6",
-    "loc-1763545569905-ci2cztbd3"
+    "loc-1763545569905-ci2cztbd3",
+    "loc-1763549649775-zqc1j6ard",
+    "loc-1763549798715-mtrd5zyb9"
   ]
 }
