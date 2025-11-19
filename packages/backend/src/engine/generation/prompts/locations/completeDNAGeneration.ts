@@ -230,7 +230,37 @@ For each node, generate:
 
 CRITICAL GUIDELINES
 
-1. **Node Structure** - 3 Parts per Node:
+1. **JSON NULL vs STRING "null" (CRITICAL)**:
+   - ALWAYS use actual JSON null, NEVER the string "null"
+   - ❌ WRONG: "cultural_tone": "null"
+   - ✓ CORRECT: "cultural_tone": null
+   - When a cascading field is null, it will automatically inherit from parent
+   - Only use null when you want inheritance - otherwise provide a specific value
+
+2. **Architectural Consistency (CRITICAL)**:
+   - architectural_tone is THE PRIMARY DRIVER of all architectural details
+   - This includes: windows, doors, arches, pillars, columns, trim, molding, ceiling details, floor finishes
+   - BE DETAILED AND SPECIFIC - include multiple architectural characteristics:
+   
+   **Examples of RICH architectural_tone (use this level of detail):**
+   - ❌ TOO SPARSE: "decaying grandeur"
+   - ✓ GOOD: "decaying Victorian grandeur with ornate Gothic arches, weathered neoclassical columns, elaborate carved molding, and aged brass fixtures"
+   
+   - ❌ TOO SPARSE: "rustic"
+   - ✓ GOOD: "rustic handcrafted aesthetic with exposed timber beams, rough-hewn stone walls, hand-forged iron details, and weathered wood paneling"
+   
+   - ❌ TOO SPARSE: "modern minimalist"
+   - ✓ GOOD: "modern minimalist design with clean geometric lines, floor-to-ceiling glass panels, polished concrete surfaces, and integrated steel fixtures"
+   
+   - ❌ TOO SPARSE: "industrial"
+   - ✓ GOOD: "industrial aesthetic with exposed steel girders, riveted metal panels, large factory windows, and raw concrete floors"
+   
+   - ALL architectural elements must reflect the architectural_tone consistently
+   - Interior spaces MUST match exterior architectural complexity and style
+   - If parent has arched windows, child interiors should have arched doorways/passages
+   - Material quality and finish MUST match architectural_tone (basic = simple finishes, ornate = refined details)
+
+2. **Node Structure** - 3 Parts per Node:
    - Root-level fields: name, description, slug
    - Structural fields: navigableElements, dominantElements, uniqueIdentifiers, searchDesc
    - DNA object: scene-specific + cascading style attributes
@@ -259,18 +289,27 @@ CRITICAL GUIDELINES
 6. **Cascading Sparsity** - Child DNA Cascading Fields:
    - ALWAYS set scene fields (looks, atmosphere, etc.)
    - ONLY set cascading fields if DIFFERENT from parent
-   - If same as parent: set to null
+   - If same as parent: set to actual JSON null (not string "null")
    - Regions: 60-80% cascading fields populated (climate/biome differences)
    - Locations: 40-60% cascading fields populated (site-specific refinements)
    - Example: If region has "desert climate" and location is also desert → palette_bias: null
+   - IMPORTANT: architectural_tone should rarely change - it defines the fundamental style of the entire world
+   - When you DO set a cascading field, make it RICH and DETAILED (see architectural_tone examples above)
 
-7. **navigableElements - CRITICAL**:
+7. **Flora/Fauna in DNA (IMPORTANT)**:
+   - flora_base and fauna_base are STYLE GUIDANCE, not literal placement
+   - These indicate what types of vegetation/wildlife COULD exist in outdoor areas
+   - Interior spaces should NOT have outdoor vegetation unless explicitly an indoor garden/atrium
+   - Use flora_base as inspiration for: color palettes, decorative motifs, carved patterns, painted themes
+   - Do NOT interpret flora_base as "put plants everywhere" - it's a style cue
+
+8. **navigableElements - CRITICAL**:
    - Locations MUST have navigableElements (for navigation system)
    - Types: door, passage, stairs, portal, window, bridge, path, gate
    - Include position (left, center, right, background, etc.)
    - Example: {"type": "door", "position": "left wall, midground", "description": "Heavy wooden door"}
 
-8. **Output Format**:
+9. **Output Format**:
    - Flat JSON only
    - No markdown, code fences, or comments
    - All required fields must be present

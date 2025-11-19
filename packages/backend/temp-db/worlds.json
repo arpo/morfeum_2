@@ -1,987 +1,746 @@
 {
   "nodes": {
-    "loc-1763501406452-q9ejqoxdu": {
-      "id": "loc-1763501406452-q9ejqoxdu",
+    "loc-1763544754758-vy2ixcrie": {
+      "id": "loc-1763544754758-vy2ixcrie",
       "type": "host",
-      "name": "Roger Dean's Imaginarium",
+      "name": "The Spectral Plains",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Vast, dreamlike vistas with organically shaped landforms and structures that defy conventional physics. Buildings often merge with the natural environment, resembling colossal plants or geological extrusions. Think of flowing lines, improbable curves, and a sense of gentle, ancient growth.",
-        "colorsAndLighting": "A palette dominated by rich, saturated colors. Deep blues and purples form the base, accented by vibrant greens, oranges, and pinks. Light sources are often internal, casting warm, diffused glows that highlight the organic textures.",
-        "atmosphere": "Air is thick with an ethereal mist or haze, softening distant details and creating a sense of depth and wonder. The atmosphere feels alive, carrying the scent of strange flora and the hum of unseen energies. Temperature is generally mild and pleasant.",
-        "materials": "Predominantly naturalistic materials that mimic organic substances: polished stone, leathery membranes, crystalline formations, and fibrous plant matter. These are often fused with elements that suggest alien technology, like glowing conduits or impossibly smooth surfaces.",
-        "mood": "A sense of awe, wonder, and peaceful exploration. The environments evoke a feeling of discovery in a beautiful, alien, and slightly mysterious world.",
-        "sounds": "Gentle wind, distant chimes, soft hums, alien creature calls, flowing water",
-        "spatialLayout": "Expansive and often non-Euclidean, with a sense of vastness. Organic forms create naturalistic, flowing pathways and hidden recesses. Structures are integrated into the landscape rather than imposed upon it.",
-        "primary_surfaces": "Organic stone, crystalline formations, leathery membranes",
-        "secondary_surfaces": "Glow-infused conduits, polished alien metals, fibrous plant matter",
-        "accent_features": "Bioluminescent veins, spiraling towers, impossibly balanced rock formations",
-        "dominant": "Blues, Greens, Purples",
-        "secondary": "Oranges, Pinks, Golds",
-        "accent": "Iridescent hues, internal glows",
-        "ambient": "Warm and ethereal",
-        "genre": "psychedelic-fantasy",
-        "architectural_tone": "organic-futurism",
-        "cultural_tone": "harmonious-alien",
-        "materials_base": "biomorphic-organic-surreal",
-        "mood_baseline": "awe-inspiring-tranquil",
-        "palette_bias": "vibrant-saturated-contrasting",
-        "soundscape_base": "naturalistic-ethereal",
-        "flora_base": "bioluminescent-exotic-large-scale",
-        "fauna_base": "unseen-mysterious-ambient"
+        "looks": "Vast, ethereal landscapes with an otherworldly glow. Forms are often translucent or semi-corporeal, defined by shifting mists and faint light sources. The overall impression is one of faded grandeur and eternal twilight.",
+        "colorsAndLighting": "Dominated by cool, muted tones with an ambient, diffused light that struggles to penetrate the pervasive haze. Pockets of warmer light may appear but are quickly absorbed by the gloom.",
+        "atmosphere": "The air is perpetually heavy, damp, and chilled, carrying the faint scent of decay and ancient dust. A pervasive silence is often broken by faint, disembodied whispers and distant, sorrowful echoes.",
+        "materials": "Primarily composed of intangible essences, spectral energies, and decaying remnants of past structures. Surfaces appear weathered, aged, and often partially obscured by mist or spectral phenomena.",
+        "mood": "Melancholy, haunting, and introspective. A sense of profound loss and endless waiting pervades the realm.",
+        "sounds": "Whispers, sighs, faint echoes, distant mournful cries, spectral rustling.",
+        "spatialLayout": "Expansive and often disorienting, with shifting boundaries and ill-defined horizons. Structures appear ancient and forgotten, their original forms suggested rather than clearly delineated.",
+        "primary_surfaces": "Ethereal mist, spectral residue, aged stone, weathered wood",
+        "secondary_surfaces": "Fading tapestries, spectral echoes, decaying metal",
+        "accent_features": "Ghostly apparitions, spectral artifacts, flickering lights",
+        "dominant": "Cool blues and greens",
+        "secondary": "Muted greys and browns",
+        "accent": "Faint yellows and whites",
+        "ambient": "Cool",
+        "genre": "supernatural",
+        "architectural_tone": "decaying gothic grandeur with spectral ornamentation, crumbling masonry, arched passages, and weathered stone facades",
+        "cultural_tone": "culture of remembrance, sorrow, and eternal haunting",
+        "materials_base": "aged stone, weathered wood, spectral energy, decaying metal",
+        "mood_baseline": "melancholy, haunting, regretful",
+        "palette_bias": "muted blues, greens, greys, and browns with hints of spectral white",
+        "soundscape_base": "whispers, sighs, echoes, spectral ambience",
+        "flora_base": "withered trees, spectral moss, pale ghostly flowers",
+        "fauna_base": "spectral creatures, ethereal insects, lost spirits"
       },
       "imagePath": "",
       "navigableElements": [],
       "dominantElements": [
-        "Impossible geological formations",
-        "Organic structures",
-        "Vibrant, otherworldly flora"
+        "Whispering Woods",
+        "The Sunken City",
+        "The Obsidian Peaks"
       ],
       "uniqueIdentifiers": [
-        "Bioluminescent flora",
-        "Floating landmasses",
-        "Crystaline growths"
+        "Ethereal Mist",
+        "Lingering Echoes",
+        "Ghostly Apparitions"
       ],
-      "slug": "roger-dean-imaginarium",
-      "searchDesc": "Surreal alien worlds with organic architecture and vibrant, impossible forms."
+      "slug": "the-spectral-plains",
+      "searchDesc": "A spectral realm of lingering spirits and persistent memories, shrouded in mist."
     },
-    "8557e90c-3739-49c6-9709-25b9a3736222": {
-      "id": "8557e90c-3739-49c6-9709-25b9a3736222",
+    "19e3d370-d54b-461c-9fdf-b6fedc91b3b7": {
+      "id": "19e3d370-d54b-461c-9fdf-b6fedc91b3b7",
       "type": "region",
-      "name": "Roger Dean's Imaginarium",
+      "name": "Whispering Woods",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Expansive vistas dominated by immense, naturally sculpted rock formations and colossal, plant-like or fungal structures that seamlessly integrate with the terrain. The ground is often uneven, with deep valleys and towering plateaus.",
-        "colorsAndLighting": "The scene is bathed in a soft, diffused light filtered through a pervasive pinkish mist. Dominant colors are deep blues and purples on the rock and main structures, with internal light sources casting warm oranges and pinks. The mist itself lends a softer, ambient tone.",
-        "atmosphere": "A dense, humid, and slightly opaque mist blankets the landscape, obscuring distant features and creating a sense of depth and mystery. The air feels thick and charged, with a subtle hum.",
-        "materials": "The primary materials are rough, textured, stone-like surfaces that appear almost leathery, interspersed with areas of glowing, organic matter. Some metallic scaffolding is visible, hinting at ancient or alien construction.",
-        "mood": "Mysterious, awe-inspiring, and slightly foreboding due to the obscuring mist and colossal scale.",
-        "sounds": "Distant echoes, the sigh of wind, subtle organic creaks, low ambient hum",
-        "spatialLayout": "Vast, open expanses broken by immense verticality. Natural pathways wind through rocky outcrops and around the bases of gigantic structures.",
-        "primary_surfaces": "Textured, rock-like organic material, leathery membranes",
-        "secondary_surfaces": "Ancient metallic scaffolding, bioluminescent fissures",
-        "accent_features": "Root-like structural supports, glowing apertures",
-        "dominant": "Deep Blues, Purples",
-        "secondary": "Oranges, Pinks",
-        "accent": "Internal glows, metallic accents",
-        "ambient": "Soft, diffused pink and grey",
+        "looks": "A dense, ancient forest where trees are gnarled and their branches are bare, reaching like skeletal fingers. The ground is carpeted with fallen leaves and patches of untended vegetation.",
+        "colorsAndLighting": "Dominated by dark, muted greens and browns, with a pervasive cool, blue-green ambient light filtered through a thick canopy and mist.",
+        "atmosphere": "The air is heavy with the scent of damp earth and decaying leaves. An unnatural silence is punctuated by faint, ceaseless whispers that seem to emanate from the very trees.",
+        "materials": " Primarily decaying wood, moss-covered stone, and damp earth. Foliage appears withered and spectral.",
+        "mood": "Foreboding, isolated, and claustrophobic. A sense of being watched and subtly guided by unseen forces.",
+        "sounds": "Soft whispers, rustling leaves, creaking branches, distant muffled cries.",
+        "spatialLayout": "Dense and overgrown, with narrow, winding paths obscured by thick undergrowth and low-hanging branches. Visibility is limited by the mist and dense foliage.",
+        "primary_surfaces": "Decaying wood, damp earth, fallen leaves",
+        "secondary_surfaces": "Moss, spectral undergrowth, gnarled branches",
+        "accent_features": "Whispering shadows, pale spectral fungi, ethereal mist tendrils",
+        "dominant": "Dark greens and browns",
+        "secondary": "Muted greys and blues",
+        "accent": "Pale, spectral white",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "foreboding, isolated, watchful",
+        "palette_bias": "muted earthy tones with spectral cool ambient light",
+        "soundscape_base": "whispers, rustling, creaking, ambient forest sounds",
+        "flora_base": "ancient gnarled trees, spectral moss, decaying undergrowth",
+        "fauna_base": "shadowy spectral creatures, unseen whispers"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "The Gilded Manor",
+        "Ancient Oak Grove",
+        "Murmuring Stream"
+      ],
+      "uniqueIdentifiers": [
+        "Constant Whispers",
+        "Shadowy Trees",
+        "Unsettling Silence"
+      ],
+      "slug": "whispering-woods",
+      "searchDesc": "An ancient, shadowy forest filled with eerie silence and unsettling whispers, home to spectral remnants."
+    },
+    "adc865bd-e82a-4c9d-ba10-7f2b02c9609b": {
+      "id": "adc865bd-e82a-4c9d-ba10-7f2b02c9609b",
+      "type": "location",
+      "name": "The Gilded Manor",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The Gilded Manor is a large, imposing Gothic structure with a dark, weathered facade.  Its many gabled roofs and turrets suggest a complex history and grand scale.  The architecture features ornate detailing, including decorative stonework and multiple bay windows.  Overgrown trees with bare branches frame the house, encroaching on its decaying presence.  The ground is covered in fallen leaves and a patchy, untended lawn, emphasizing neglect.",
+        "colorsAndLighting": "The lighting is dim and atmospheric, with a cool, blue-green ambient hue pervading the scene.  Warm, yellow light emanates from a few windows and the entrance, creating pockets of contrast against the pervasive gloom.",
+        "atmosphere": "A thick, ethereal mist envelops the scene, obscuring distant trees and lending an otherworldly quality.  The air appears heavy and still, imbued with a sense of dampness and age.",
+        "materials": "Primarily weathered stone for the facade, with decaying wood for accents and tile for roofing. The ground is covered in fallen leaves and untended grass.",
+        "mood": "Melancholy, imposing, and haunted. A sense of grandeur lost to decay and spectral occupation.",
+        "sounds": "Distant whispers, creaking wood, rustling leaves, faint spectral moans.",
+        "spatialLayout": "In the foreground, a winding stone pathway leads through a leaf-strewn, overgrown yard. The midground is dominated by the Gilded Manor, a large, multi-story structure with a wide porch and imposing presence. The background consists of a dense, misty forest that gradually fades into the hazy atmosphere.",
+        "primary_surfaces": "stone",
+        "secondary_surfaces": "wood, tile",
+        "accent_features": "glowing window panes, illuminated doorway",
+        "dominant": "dark grey (manor facade, trees)",
+        "secondary": "muted green (ground cover), brown (fallen leaves)",
+        "accent": "warm yellow (window and door lights)",
+        "ambient": "cool blue-green (mist and sky)",
+        "genre": null,
+        "architectural_tone": "decaying Victorian grandeur with ornate Gothic arches, weathered neoclassical columns, elaborate carved molding, and aged brass fixtures",
+        "cultural_tone": null,
+        "materials_base": "aged stone, weathered wood, decaying tile, aged glass",
+        "mood_baseline": "haunted, imposing, desolate",
+        "palette_bias": "dark greys, muted greens, browns with cool ambient lighting and pockets of warm yellow",
+        "soundscape_base": "creaking, whispering, rustling, distant spectral sounds",
+        "flora_base": "withered trees, spectral moss, overgrown untended lawn",
+        "fauna_base": "spectral insects, unseen rustling in the undergrowth"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/J2n00oNs2hl1ICTnIqjaX.jpg",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center entrance, midground",
+          "description": "A large, dark wooden door beneath an arched entryway, emitting a warm glow."
+        },
+        {
+          "type": "stairs",
+          "position": "center, foreground",
+          "description": "A wide set of stone steps leading up to the manor's porch."
+        },
+        {
+          "type": "window",
+          "position": "various, midground",
+          "description": "Multiple bay windows and smaller panes, some emitting faint, inviting light."
+        }
+      ],
+      "dominantElements": [
+        "Gothic manor house (est. 25m tall, 40m wide, CUBIC STRUCTURE)",
+        "Bare, silhouetted trees (varied heights, framing the scene)",
+        "Stone pathway leading to the entrance (foreground)"
+      ],
+      "uniqueIdentifiers": [
+        "Gothic architecture with multiple gables and turrets",
+        "Ornate stone carvings around the entrance and porch",
+        "Warm, isolated light sources within a cool, misty environment"
+      ],
+      "slug": "the-gilded-manor",
+      "searchDesc": "[Location - Exterior] Gothic manor in mist. Has: entrance door (center, midground), stairs (center, foreground), window (various, midground)"
+    },
+    "niche-1763545395905-5p1mploug": {
+      "id": "niche-1763545395905-5p1mploug",
+      "type": "niche",
+      "name": "unknown of The Gilded Manor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A grand, yet thoroughly decaying, foyer unfolds with a sweeping, ornate staircase as the central focal point, vanishing into upper darkness. Walls are paneled in dark, water-stained oak, hung with spectral portraits, while a threadbare Persian rug softens a cracked marble floor. Arched doorways lead to unseen rooms, and shadowed corridors beckon.",
+        "colorsAndLighting": "Dominated by deep, muted tones of dark oak and faded rug colors, offset by the cool, blue-green ambient light filtering through grimy windows. Shadows are long and distorted, emphasizing the decay.",
+        "atmosphere": "The air is heavy with the palpable scent of dust, damp decay, and a lingering sorrow. Spectral motes of light dance in the gloom, and cobwebs hang like macabre decorations from the crumbling, vaulted ceiling, creating an overwhelmingly melancholy and haunted environment.",
+        "materials": "Key materials include dark, aged wood for paneling and staircase banisters, tarnished brass fixtures, cracked marble flooring, and a threadbare Persian rug. Elaborate plasterwork on the ceiling is in a state of decay.",
+        "mood": "The overwhelming mood is one of melancholy, imposing grandeur lost to time, and an ever-present sense of spectral occupation and sorrow.",
+        "sounds": "Dust motes settling, faint creaks, distant echoes, subtle drafts.",
+        "spatialLayout": "A central, imposing foyer with a grand staircase dominating the rear, flanked by shadowed passages and doorways. The space feels vast and cavernous, receding into deep shadows.",
+        "primary_surfaces": "Dark, water-stained oak paneling on walls, cracked marble floor, crumbling plasterwork on ceiling.",
+        "secondary_surfaces": "Aged wood banister, tarnished brass fixtures, threadbare Persian rug.",
+        "accent_features": "Spectral portraits with following eyes, intricate carving on banister, macabre cobweb decorations.",
+        "dominant": "Dark Grey (wood paneling, shadows)",
+        "secondary": "Muted Blues and Reds (Persian rug)",
+        "accent": "Tarnished Brass (fixtures), spectral white/grey (portraits)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "decaying Victorian grandeur with ornate Gothic arches, weathered neoclassical columns, elaborate carved molding, and aged brass fixtures",
+        "cultural_tone": "culture of remembrance, sorrow, and eternal haunting",
+        "materials_base": null,
+        "mood_baseline": "Melancholy, imposing, and haunted. A sense of grandeur lost to decay and spectral occupation.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/bFQmqC4J1vcRddJGU3Rxe.jpg",
+      "description": "The decaying grandeur of a haunted manor foyer.",
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "center",
+          "description": "sweeping, ornate staircase ascending into gloom"
+        },
+        {
+          "type": "doorway",
+          "position": "left",
+          "description": "heavy, arched doorway, door ajar, hinting at a dimly lit drawing-room"
+        },
+        {
+          "type": "corridor",
+          "position": "right",
+          "description": "long, shadowed corridor stretching into darkness"
+        }
+      ],
+      "dominantElements": [
+        "grand staircase",
+        "paneled walls",
+        "spectral portraits",
+        "threadbare Persian rug"
+      ],
+      "uniqueIdentifiers": [
+        "Gilded Manor foyer",
+        "ornate decaying staircase",
+        "spectral portraits",
+        "faded Persian rug",
+        "cobweb-laden ceiling"
+      ],
+      "searchDesc": "Decaying Gilded Manor foyer with grand staircase, spectral portraits, and haunted atmosphere.",
+      "slug": "unknown-of-the-gilded-manor"
+    },
+    "loc-1763545432403-wl3f5o5r6": {
+      "id": "loc-1763545432403-wl3f5o5r6",
+      "type": "host",
+      "name": "The Shrouded Plains",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A desolate and expansive landscape characterized by vast, untamed terrain. Ancient, weathered remnants of past civilizations are scattered throughout, slowly being consumed by persistent, wild vegetation. The overall impression is one of profound age and stillness, punctuated by subtle hints of a forgotten past.",
+        "colorsAndLighting": "The color palette is dominated by muted, earthy tones with desaturated greens and browns. Ambient light is often diffused, cast by an overcast sky or a perpetual twilight, leading to low-contrast scenes with a prevalence of cool, desaturated hues. Subtle, unnatural light sources may emanate from within ancient structures.",
+        "atmosphere": "The air is thick with a sense of stillness and decay, often carrying a palpable weight. A persistent haze or mist can obscure distant vistas, contributing to a feeling of isolation. The temperature is generally cool and damp, with the possibility of sudden environmental shifts or subtle atmospheric anomalies.",
+        "materials": "Visible materials include weathered stone, crumbling concrete, aged wood, and abundant, untamed flora. Remnants of metallic structures, rusted and decayed, are also present. The textures are predominantly rough, worn, and organic.",
+        "mood": "A pervasive sense of melancholy, mystery, and forgotten grandeur. There is an underlying feeling of isolation and the weight of history, with a touch of eerie tranquility.",
+        "sounds": "Whispers, rustling leaves, distant echoes, faint static, distant hums",
+        "spatialLayout": "Vast, open plains punctuated by monolithic or sprawling ancient structures. The layout emphasizes horizontal expanse, with vertical elements often being ruins or natural formations. Navigation is often indirect, following obscured paths or natural landforms.",
+        "primary_surfaces": [
+          "Weathered stone",
+          "Crumbling concrete",
+          "Dense vegetation"
+        ],
+        "secondary_surfaces": [
+          "Rusted metal",
+          "Aged wood",
+          "Dust",
+          "Mist"
+        ],
+        "accent_features": [
+          "Intricate carvings",
+          "Subtle atmospheric anomalies",
+          "Lingering energy signatures"
+        ],
+        "dominant": "Muted Greens",
+        "secondary": "Desaturated Browns and Grays",
+        "accent": "Faint Oranges or Blues",
+        "ambient": "Cool",
+        "genre": "post-apocalyptic",
+        "architectural_tone": "decaying monumentalism with organic overgrowth, featuring grand but crumbling forms, weathered stone and concrete, and remnants of advanced or ancient engineering partially obscured by nature",
+        "cultural_tone": "forgotten civilization, lost technology, nature's reclamation",
+        "materials_base": "aged stone, weathered concrete, rusted metals, dense, hardy flora",
+        "mood_baseline": "melancholic, mysterious, isolated, tranquil yet unsettling",
+        "palette_bias": "desaturated earth tones with cool ambient light and occasional spectral accents",
+        "soundscape_base": "environmental ambient with subtle, distant artificial or spectral interference",
+        "flora_base": "overgrown vines, tall grasses, gnarled trees, hardy scrub",
+        "fauna_base": "small, skittish wildlife, or rare, unusual creatures adapted to the environment"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Abandoned structures",
+        "Overgrown wilderness",
+        "Lingering atmospheric phenomena"
+      ],
+      "uniqueIdentifiers": [
+        "Whispering broadcasts",
+        "Dormant ancient sites"
+      ],
+      "slug": "the-shrouded-plains",
+      "searchDesc": "Vast, overgrown lands with dormant ancient structures and lingering whispers of forgotten broadcasts."
+    },
+    "110b46d8-d3af-43a3-8f37-a5f9db1bdd60": {
+      "id": "110b46d8-d3af-43a3-8f37-a5f9db1bdd60",
+      "type": "region",
+      "name": "The Shrouded Plains",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Rolling plains covered in tall, wild grasses and scattered, weathered structures that are partially consumed by vegetation. The horizon is often obscured by a persistent, low-lying mist or haze.",
+        "colorsAndLighting": "The colors are primarily muted greens and browns, with a diffused, cool light from an overcast sky. The mist and haze create soft shadows and a low-contrast environment, with occasional glints of faint, artificial light from hidden sources.",
+        "atmosphere": "The air is damp and still, carrying the scent of earth and decay. A pervasive mist often clings to the ground, reducing visibility and creating a sense of isolation. The temperature is consistently cool.",
+        "materials": "Dominated by tall, dry grasses, weathered stone, and crumbling concrete. Remnants of metallic antennae or broadcasting equipment may be visible, heavily rusted and overgrown.",
+        "mood": "A quiet desolation, with a sense of being lost or forgotten. The vastness of the plains can be both beautiful and intimidating.",
+        "sounds": "Rustling tall grass, distant wind, faint static hums, bird calls",
+        "spatialLayout": "Broad, open plains with gently rolling terrain. Structures are often isolated landmarks within this expanse. Pathways are natural and often obscured by the dense flora.",
+        "primary_surfaces": [
+          "Tall grasses",
+          "Weathered stone",
+          "Cracked concrete"
+        ],
+        "secondary_surfaces": [
+          "Rusted metal",
+          "Earth",
+          "Mist"
+        ],
+        "accent_features": [
+          "Partially exposed structural elements",
+          "Wind-swept formations"
+        ],
+        "dominant": "Muted Greens",
+        "secondary": "Desaturated Browns and Grays",
+        "accent": "Faint, spectral Oranges",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "decaying monumentalism with organic overgrowth, featuring grand but crumbling forms, weathered stone and concrete, and remnants of advanced or ancient engineering partially obscured by nature",
+        "cultural_tone": null,
+        "materials_base": "aged stone, weathered concrete, rusted metals, dense, hardy flora",
+        "mood_baseline": "melancholic, mysterious, isolated, tranquil yet unsettling",
+        "palette_bias": "desaturated earth tones with cool ambient light and occasional spectral accents",
+        "soundscape_base": "environmental ambient with subtle, distant artificial or spectral interference",
+        "flora_base": "tall, dry grasses, hardy scrub brush, gnarled, wind-battered trees",
+        "fauna_base": "small ground-dwelling animals, occasional larger, elusive creatures"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Ancient ruins",
+        "Dense vegetation",
+        "Atmospheric disturbances"
+      ],
+      "uniqueIdentifiers": [
+        "Scattered broadcast remnants",
+        "Hidden pathways"
+      ],
+      "slug": "the-shrouded-plains-region",
+      "searchDesc": "Expansive plains dotted with ancient, nature-reclaimed ruins and persistent atmospheric whispers."
+    },
+    "7e430f9b-5b39-4ce9-884c-e992118a04dd": {
+      "id": "7e430f9b-5b39-4ce9-884c-e992118a04dd",
+      "type": "location",
+      "name": "The Temple of Static",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, rectangular broadcast facility rises from a field of tall, dry grass. Its facade is constructed from dark, weathered brick and concrete, showing signs of decay. Several skeletal antennae and communication towers are mounted on its roof and flanks, reaching towards the overcast sky. A wide, arched entryway dominates the center of the structure, glowing with an intense, unnatural orange light. The base of the facility is partially obscured by a low-lying mist.",
+        "colorsAndLighting": "The primary light source appears to be the strong, saturated orange glow emanating from the central archway, casting reflections on the wet path. The ambient light is diffused and cool, consistent with dusk or an overcast sky, creating a low-contrast scene.",
+        "atmosphere": "The air appears hazy, with a visible mist clinging to the ground around the structure. The clarity of the background is reduced, suggesting a damp or dusty environment.",
+        "materials": "The primary materials are dark, weathered brick and concrete. Secondary materials include rusted metal for the numerous antennae and towers. The ground is covered in tall, dry grass and damp earth.",
+        "mood": "Eerie, abandoned, and strangely active. The glowing entrance creates an inviting yet ominous focal point, contrasting with the decay and stillness.",
+        "sounds": "Faint static, low hums, distant wind, rustling grass, unsettling silence",
+        "spatialLayout": "The foreground is occupied by a field of tall, dry grass leading to a slightly wet, reflective path. The midground is dominated by the imposing broadcast facility, a large, cubic structure with prominent vertical elements in the form of antennae towers. The background consists of a hazy sky with soft cloud formations.",
+        "primary_surfaces": "Brick, Concrete",
+        "secondary_surfaces": "Metal (antennae)",
+        "accent_features": "Glowing orange light",
+        "dominant": "Teal (sky, mist)",
+        "secondary": "Brown (grass, brick), Gray (concrete)",
+        "accent": "Bright orange (archway glow)",
+        "ambient": "Muted teal and gray",
+        "genre": null,
+        "architectural_tone": "decaying monumentalism with organic overgrowth, featuring grand but crumbling forms, weathered stone and concrete, and remnants of advanced or ancient engineering partially obscured by nature, specifically adapted for broadcasting functions with prominent antenna structures",
+        "cultural_tone": null,
+        "materials_base": "aged stone, weathered concrete, rusted metals, dense, hardy flora",
+        "mood_baseline": "melancholic, mysterious, isolated, tranquil yet unsettling",
+        "palette_bias": "desaturated earth tones with cool ambient light and occasional spectral accents, with a strong contrasting accent from artificial light sources",
+        "soundscape_base": "environmental ambient with subtle, distant artificial or spectral interference, with a focus on static and humming sounds",
+        "flora_base": "tall, dry grasses, hardy scrub brush, possibly creeping vines on structure",
+        "fauna_base": "null"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/bhStL_GlnTzMOxP1J-4L5.jpg",
+      "navigableElements": [
+        {
+          "type": "portal",
+          "position": "center, midground",
+          "description": "Large arched gateway with an intense, glowing orange interior"
+        },
+        {
+          "type": "passage",
+          "position": "center, midground",
+          "description": "A wet, muddy path leading directly to the structure's entrance"
+        }
+      ],
+      "dominantElements": [
+        "Broadcast facility structure (est. 50-70m tall, wide structure)",
+        "Central arched entryway with orange glow (est. 20m tall, center)",
+        "Multiple antennae and communication towers (various heights, on roof and sides)",
+        "Tall, dry grass field (foreground)"
+      ],
+      "uniqueIdentifiers": [
+        "Arched entryway with intense orange glow",
+        "Skeletal communication towers on a brick building",
+        "Overgrown field of dry grass leading to the structure"
+      ],
+      "slug": "the-temple-of-static",
+      "searchDesc": "[Building] Abandoned broadcast facility. Has: arched portal (center, midground), path (center, foreground)"
+    },
+    "niche-1763545465051-vi8k9yt7e": {
+      "id": "niche-1763545465051-vi8k9yt7e",
+      "type": "niche",
+      "name": "interior of The Temple of Static",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A monumental, echoing chamber defined by crumbling concrete walls and a polished obsidian floor. Colossal, segmented pillars carved with forgotten circuitry dominate the midground, leading the eye towards a dramatically lit orange alcove on the left and a luminescent staircase on the right. The scale suggests immense, unexplored depths.",
+        "colorsAndLighting": "The scene is bathed in a low, diffused teal light that catches the particulate mist. A stark, unnatural orange glow emanates from a recessed alcove, creating a powerful focal point that pulses like static.",
+        "atmosphere": "The air is thick with a visible, fine particulate mist, catching the faint light and creating an ethereal, diffused haze. The vastness of the chamber and the crumbling decay evoke an eerie, abandoned, yet strangely active, atmosphere.",
+        "materials": "Dominant materials include weathered concrete walls and colossal pillars, stained with age and organic growth. The floor is polished, dark obsidian, cracked in places, with patches of resilient, grey-green lichen scattered across it.",
+        "mood": "Eerie and abandoned, with a sense of forgotten purpose. The glowing alcove injects an unnerving, active energy into the stillness of decay.",
+        "sounds": "Echoing emptiness, faint hum, settling dust.",
+        "spatialLayout": "A vast, echoing chamber with a monumental scale. The primary focal points are the central pillars, a left-side alcove, and a right-side staircase, all contributing to a sense of deep, obscured space.",
+        "primary_surfaces": "Crumbling concrete walls, polished obsidian floor.",
+        "secondary_surfaces": "Segmented concrete pillars, cracked concrete staircase.",
+        "accent_features": "Intricate forgotten circuitry carvings, jagged broken archway, pulsating orange light.",
+        "dominant": "Teal (ambient light, mist)",
+        "secondary": "Dark grey/black (obsidian floor, concrete)",
+        "accent": "Intense orange (alcove glow), grey-green (lichen)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "decaying monumentalism with organic overgrowth",
+        "cultural_tone": "forgotten civilization, lost technology, nature's reclamation",
+        "materials_base": "weathered concrete, polished dark stone, organic overgrowth",
+        "mood_baseline": "Eerie and abandoned",
+        "palette_bias": "Teal dominant, with contrasting warm accents",
+        "soundscape_base": "Ambient echoes and subtle electronic hums",
+        "flora_base": "hardy moss-like growths, lichen",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/w8y3PVW0ImOEWJUrgsCS-.jpg",
+      "description": "A vast, echoing chamber within 'The Temple of Static', a monumental derelict broadcasting sanctuary.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "left alcove",
+          "description": "A narrow, dimly lit passage framed by a jagged archway."
+        },
+        {
+          "type": "stairs",
+          "position": "lower right",
+          "description": "A wide, cracked concrete staircase with luminescent edges."
+        }
+      ],
+      "dominantElements": [
+        "colossal segmented concrete pillars",
+        "recessed orange-glowing alcove",
+        "cracked obsidian floor",
+        "vaulted ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "forgotten circuitry patterns on pillars",
+        "pulsing orange light",
+        "fine particulate mist",
+        "grey-green lichen"
+      ],
+      "searchDesc": "Vast, echoing chamber with crumbling concrete, obsidian floor, and glowing orange alcove.",
+      "slug": "interior-of-the-temple-of-static"
+    },
+    "loc-1763545569905-ci2cztbd3": {
+      "id": "loc-1763545569905-ci2cztbd3",
+      "type": "host",
+      "name": "Moebius Inspired World",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The world is characterized by impossible geometry, vast alien structures that defy earthly physics, and a dreamlike, often fluid, landscape. Surfaces can shift and undulate, creating a sense of constant, subtle motion. Crystalline formations and organic-like growths intermingle with monolithic artificial constructs.",
+        "colorsAndLighting": "A high-saturation palette dominates, with electric blues, vibrant oranges, deep violets, and emerald greens. Lighting is often dramatic and surreal, with multiple light sources casting sharp, distinct shadows or bathing entire vistas in an ethereal glow, sometimes from unseen celestial bodies.",
+        "atmosphere": "The air is often thin and carries a palpable sense of alienness. Ethereal mists, strange gaseous clouds, or shimmering heat hazes are common. Weather patterns are unpredictable and visually striking, ranging from silent electrical storms to serene skies with multiple suns or moons.",
+        "materials": "Materials range from polished, unnaturally smooth metals and glowing crystalline substances to porous, organic-looking rock and textured, fibrous growths. There's a blend of the synthetic and the hyper-organic, often indistinguishable.",
+        "mood": "Mysterious, awe-inspiring, and slightly disorienting. There's a sense of profound discovery, wonder, and the sheer alienness of existence.",
+        "sounds": "Subtle hums, resonant chimes, low drones, atmospheric whispers, distant echoes",
+        "spatialLayout": "Vast, open vistas are punctuated by immense, gravity-defying structures. The sense of scale is often overwhelming, with pathways and formations creating intricate, labyrinthine networks within larger, incomprehensible forms.",
+        "primary_surfaces": "Polished exotic metals, smooth alien stone, crystalline structures",
+        "secondary_surfaces": "Textured organic growths, fibrous materials, glowing conduits",
+        "accent_features": "Impossible geometric patterns, pulsating energy fields, floating debris, light-bending refractions",
+        "dominant": "Electric blue",
+        "secondary": "Vibrant orange",
+        "accent": "Deep violet",
+        "ambient": "Surreal, high-contrast daylight",
+        "genre": "sci-fi",
+        "architectural_tone": "Alien, geometric, and often impossible, with flowing lines and monumental scale, incorporating elements of biomorphic and crystalline design.",
+        "cultural_tone": "Mysterious, ancient, and technologically advanced, implying a civilization that operates on principles alien to human understanding.",
+        "materials_base": "Polished metals, exotic stones, crystalline composites, bio-luminescent organics",
+        "mood_baseline": "Awe-inspiring, enigmatic, and transcendental",
+        "palette_bias": "High-saturation, complementary color schemes with frequent use of electric blues, vibrant oranges, and deep purples.",
+        "soundscape_base": "Ambient, resonant, and subtly electronic with ethereal tones",
+        "flora_base": "Bio-luminescent fungi, crystalline plant-like structures, energy-absorbing flora",
+        "fauna_base": "Energy-based lifeforms, geometrically precise creatures, silicon-based organisms"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Gigantic alien machines",
+        "Surreal rock formations",
+        "Unusual atmospheric phenomena"
+      ],
+      "uniqueIdentifiers": [
+        "Geometric landscapes",
+        "Vibrant color palettes",
+        "Unconventional physics"
+      ],
+      "slug": "moebius-inspired-world",
+      "searchDesc": "Surreal, geometric world with vibrant, otherworldly colors and bizarre alien machinery."
+    },
+    "0d42acd1-2c0b-4029-8b2d-a5d0f95a49ff": {
+      "id": "0d42acd1-2c0b-4029-8b2d-a5d0f95a49ff",
+      "type": "region",
+      "name": "The Azure Desert",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Endless dunes of fine, electric blue sand stretch to the horizon. Jagged, eroded rock formations, some exhibiting strange geometric regularity, punctuate the landscape. The sky is a vibrant azure, illuminated by the distinct glow of two suns, casting dual shadows.",
+        "colorsAndLighting": "Dominant azure hues from the sand and sky, contrasted with the warm, varied tones of the rocky terrain. The twin suns create a high-contrast environment with sharp, dual shadows.",
+        "atmosphere": "The air is thin, dry, and very still, with occasional, almost imperceptible, shimmering heat hazes. The aridness is profound, and the clarity of the air allows for extreme visibility across the vast distances.",
+        "materials": "Primarily fine azure sand and weathered, stony rock. Some outcrops may show faint, embedded metallic veins or crystalline inclusions.",
+        "mood": "Vast, silent, and starkly beautiful, with an underlying sense of desolation and immense age.",
+        "sounds": "Whispering winds, crunching sand, distant rockfalls, faint solar hums",
+        "spatialLayout": "An immense, flat expanse broken by undulating sand dunes and scattered rock formations, leading the eye towards distant, indistinct geological features and the colossal silhouettes of alien machinery.",
+        "primary_surfaces": "Fine azure sand, weathered rock",
+        "secondary_surfaces": "Embedded crystalline fragments, faint metallic veins",
+        "accent_features": "Dual shadows, shimmering heat hazes, geometric rock erosion patterns",
+        "dominant": "Azure blue",
+        "secondary": "Sandy ochre",
+        "accent": "Reddish-brown",
+        "ambient": "Bright, dual-sun daylight",
         "genre": null,
         "architectural_tone": null,
         "cultural_tone": null,
         "materials_base": null,
         "mood_baseline": null,
-        "palette_bias": null,
+        "palette_bias": "Dominant azure and sandy tones with warm mineral accents.",
         "soundscape_base": null,
-        "flora_base": null,
-        "fauna_base": null
+        "flora_base": "Sparse, resilient crystalline desert growths, heat-resistant bio-luminescent lichens",
+        "fauna_base": "Sand-skimming silicon-based creatures, burrowing crystalline insects"
       },
       "imagePath": "",
       "navigableElements": [],
       "dominantElements": [
-        "Towering rock formations",
-        "Organic monolithic structures",
-        "Dense, misty valleys"
+        "Gigantic alien machines",
+        "Azure sand dunes",
+        "Rocky outcrops"
       ],
       "uniqueIdentifiers": [
-        "Whispering winds",
-        "Rainbow-hued mist",
-        "Echoing caverns"
+        "Azure sand",
+        "Twin suns",
+        "Arid landscape"
       ],
-      "slug": "roger-dean-imaginarium-region",
-      "searchDesc": "Surreal, mist-shrouded alien landscapes with colossal organic structures and vibrant colors."
+      "slug": "the-azure-desert",
+      "searchDesc": "Expansive desert of vibrant azure sand under a twin-sun sky, dotted with colossal alien structures."
     },
-    "b162950f-d76b-4334-9dc9-0cb906333af1": {
-      "id": "b162950f-d76b-4334-9dc9-0cb906333af1",
+    "fee77c53-21ec-4a5f-9831-24751f8ffb86": {
+      "id": "fee77c53-21ec-4a5f-9831-24751f8ffb86",
       "type": "location",
-      "name": "The Chroma Foundry",
+      "name": "The Colossal Mechanism",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Massive, organic structures rise from a misty landscape, dominated by a central, bulbous building resembling a colossal mushroom or jellyfish. This main structure is supported by thick, root-like appendages that form cavernous openings. Numerous tall, cylindrical towers with intricate scaffolding are visible in the background and to the sides. The surfaces of the structures exhibit a textured, almost leathery appearance, with sections glowing from within.",
-        "colorsAndLighting": "The primary light source appears to be internal to the structures, casting a warm, vibrant glow from openings and surfaces. The dominant lighting colors are deep oranges, pinks, and purples, creating a stark contrast with the cooler, ambient light from the overcast sky. Light spills out from apertures in the rock formations and towers.",
-        "atmosphere": "The scene is shrouded in a thick, pinkish mist that softens distant elements and creates a sense of depth and mystery. The air appears humid and dense, obscuring the lower portions of the structures and the terrain.",
-        "materials": "The main construction is a rough, textured, stone-like material that appears organic and leathery. Metallic scaffolding, weathered and interwoven, forms intricate patterns on the towers. Glowing veins or conduits are visible beneath the surface.",
-        "mood": "Industrial, alien, imposing, yet with a strange, pulsating vitality.",
-        "sounds": "Distant, rhythmic clanking, low operational hums, echoing drips, faint steam hisses",
-        "spatialLayout": "Foreground consists of a wet, reflective ground and sparse vegetation. The midground is dominated by the monumental, organic architecture of the factory, with its cavernous openings and central structure. The background reveals more industrial towers and the hazy sky, suggesting a vast, sprawling complex.",
-        "primary_surfaces": "Stone-like, organic material",
-        "secondary_surfaces": "Metallic scaffolding, industrial plating",
-        "accent_features": "Luminous signage, glowing internal lights, molten-like vents",
-        "dominant": "Deep purples and blues on the central structure and rock formations",
-        "secondary": "Oranges and pinks emanating from internal light sources and fissures",
-        "accent": "Bright, glowing alien script on the central dome, small orange lights within caverns",
-        "ambient": "Soft, diffused pink and grey from the mist and sky",
+        "looks": "A colossal, spherical alien machine, estimated to be several hundred meters in diameter, dominates the landscape. Its surface is a complex arrangement of geometric panels and recessed circular structures, with visible energy conduits pulsating with internal light. A large, ornate gateway is centered on its visible face, emitting an intense turquoise glow. The machine's immense scale dwarfs the surrounding desert terrain, which consists of rocky outcrops and a stone pathway leading towards the structure.",
+        "colorsAndLighting": "The scene is illuminated by the dual suns of the alien sky, creating a bright, high-contrast environment. The dominant light source is high and slightly diffused, casting soft shadows. A strong, vibrant turquoise light emanates from the central gateway and its immediate surroundings, serving as a focal point.",
+        "atmosphere": "The air appears thin and dry, with wisps of ethereal mist or vapor obscuring the base of the colossal machine. Distant mountains are softened by a light atmospheric haze, suggesting a vast, open desert environment.",
+        "materials": "The primary material of the machine is an unknown, dark, polished metallic alloy. The surrounding terrain is composed of rough, weathered stone.",
+        "mood": "Imposing, enigmatic, and awe-inspiring. The sheer scale and alien design evoke a sense of profound mystery and potential power.",
+        "sounds": "Low resonant hum, faint energy crackles, distant atmospheric whispers, echoing footsteps",
+        "spatialLayout": "The foreground is characterized by rough, textured desert ground with a worn stone pathway stretching towards the center. The midground is dominated by the immense spherical alien machine, its detailed facade presenting a clear entrance. The background reveals a vast, hazy expanse of desert landscape with distant mountain ranges under a bright sky.",
+        "primary_surfaces": "Stone (pathway and terrain)",
+        "secondary_surfaces": "Unknown metallic alloys (machine)",
+        "accent_features": "Pulsating turquoise energy conduits and light",
+        "dominant": "Azure blue (sky)",
+        "secondary": "Sandy ochre and reddish-brown (desert terrain)",
+        "accent": "Intense turquoise (gateway glow)",
+        "ambient": "Bright, almost white daylight with a slight cyan tint",
         "genre": null,
-        "architectural_tone": "biomechanical-industrial",
-        "cultural_tone": "functional-alien-manufacturing",
-        "materials_base": "organic-metallic-fusion",
-        "mood_baseline": "imposing-vital",
-        "palette_bias": null,
-        "soundscape_base": "industrial-ambient-echoing",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "architectural_tone": "Monumental alien geometric design with integrated energy systems, featuring smooth, complex paneling, recessed circular elements, and ornate, luminous portals.",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": "Dark, reflective metallic tones offset by intense, high-saturation blues and turquoises.",
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
       },
-      "imagePath": "https://v3b.fal.media/files/b/panda/toisu7PiBRxo-haioIt8u.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/monkey/26soSeAdOVbuUWnK4I_ga.jpg",
       "navigableElements": [
         {
           "type": "passage",
           "position": "center, midground",
-          "description": "Large, brightly lit fiery opening within the root-like structure"
+          "description": "An arched passage leading into the colossal machine, filled with intense turquoise light."
         },
         {
-          "type": "passage",
-          "position": "left, midground",
-          "description": "Dark, cavernous opening within the organic rock formations"
+          "type": "archway",
+          "position": "center, midground",
+          "description": "The main circular entrance to the machine, framed by intricate geometric designs."
         },
         {
-          "type": "passage",
-          "position": "right, midground",
-          "description": "Illuminated rectangular opening in the rock face, resembling a window or door"
-        },
-        {
-          "type": "window",
-          "position": "right, background",
-          "description": "Multiple small, glowing rectangular windows visible on a tower"
-        },
-        {
-          "type": "passage",
-          "position": "multiple, background",
-          "description": "Various openings and pathways visible on the industrial towers"
-        }
-      ],
-      "dominantElements": [
-        "Central bulbous structure with glowing signage, ~150m diameter",
-        "Thick, root-like appendages forming arches and caverns",
-        "Tall, cylindrical industrial towers with scaffolding, ~200m height",
-        "Rocky, organic landscape with glowing fissures"
-      ],
-      "uniqueIdentifiers": [
-        "Bulbous central structure with alien signage",
-        "Organic, root-like supporting structures forming arches",
-        "Combination of organic and industrial architecture"
-      ],
-      "slug": "the-chroma-foundry",
-      "searchDesc": "[Alien Factory] Colossal organic factory complex. Has: fiery passage (center), cavernous opening (left), illuminated window (right)"
-    },
-    "niche-1763501603321-0thuvhqnm": {
-      "id": "niche-1763501603321-0thuvhqnm",
-      "type": "niche",
-      "name": "interior of The Chroma Foundry",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, cavernous interior with a domed ceiling formed by fused organic matter and metallic scaffolding. Walls undulate with a leathery texture, interspersed with vibrant, pulsating bioluminescent sections of emerald green, sapphire blue, and amethyst purple.",
-        "colorsAndLighting": "Dominated by deep, saturated bioluminescent colors against darker organic-metallic surfaces. The lighting is dynamic and internal, with pools of vibrant light reflecting off the wet ground.",
-        "atmosphere": "The air hums with latent energy, creating an imposing yet vital atmosphere. The space feels alive, with a sense of immense scale and alien industrial function.",
-        "materials": "The primary materials are a textured, leathery organic matter fused with riveted metallic plates and a wet, reflective metallic-organic ground. Crystalline flora sprout from cracks.",
-        "mood": "Industrial, alien, and imposing, yet with a strange, pulsating vitality that draws one in.",
-        "sounds": "Humming energy, distant industrial echoes, faint crystalline chimes.",
-        "spatialLayout": "A colossal, echoing cavity with a domed ceiling. The space is organized around navigable pathways and alcoves formed by massive root-like structures. The composition is intentionally asymmetric.",
-        "primary_surfaces": "Leathery organic matter, metallic scaffolding, bioluminescent panels.",
-        "secondary_surfaces": "Riveted metallic plates, polished bronze frames, crystalline structures.",
-        "accent_features": "Pulsating bioluminescent sections, crystalline flora, illuminated passages.",
-        "dominant": "Deep purples and blues from bioluminescent panels and organic textures.",
-        "secondary": "Emerald greens and sapphire blues from bioluminescent panels.",
-        "accent": "Warm, pulsating orange from the main illuminated passage.",
-        "ambient": "Neutral, with localized warm and cool light sources.",
-        "genre": null,
-        "architectural_tone": "biomechanical-industrial",
-        "cultural_tone": "functional-alien-manufacturing",
-        "materials_base": "organic-metallic fusion, leathery textures, riveted metal",
-        "mood_baseline": "Industrial, alien, imposing, vital",
-        "palette_bias": "saturated contrasting colors (greens, blues, purples), with warm orange accents",
-        "soundscape_base": "subtle industrial hums and echoes",
-        "flora_base": "crystalline, alien",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/lion/Ko256ohL2OzLOkG-iahJQ.jpg",
-      "description": "The awe-inspiring biomechanical-industrial interior of The Chroma Foundry, a cavernous space with organic, bulbous architecture and a domed ceiling of fused organic matter and metallic scaffolding. It pulses with latent energy and a vital, imposing mood.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "lower left towards center-right",
-          "description": "An illuminated passage bathed in warm, pulsating orange glow with a polished bronze frame."
-        },
-        {
-          "type": "stairs",
-          "position": "left midground",
-          "description": "Uneven, leathery steps rising organically, softly highlighted by internal luminescence."
-        }
-      ],
-      "dominantElements": [
-        "domed ceiling of fused organic matter and metallic scaffolding",
-        "undulating walls with bioluminescent sections",
-        "massive, root-like structures anchoring the ceiling",
-        "illuminated orange passage",
-        "organic, leathery steps"
-      ],
-      "uniqueIdentifiers": [
-        "fused leathery organic matter and metallic scaffolding ceiling",
-        "pulsing bioluminescent walls",
-        "root-like ceiling anchors",
-        "wet, reflective metallic-organic fusion ground"
-      ],
-      "searchDesc": "Cavernous biomechanical-industrial foundry interior with pulsing bioluminescence and organic-metallic fusion.",
-      "slug": "interior-of-the-chroma-foundry"
-    },
-    "loc-1763501628443-o7qmi2jjb": {
-      "id": "loc-1763501628443-o7qmi2jjb",
-      "type": "host",
-      "name": "Galactic Expanse",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "An immeasurable void punctuated by swirling nebulae, distant star clusters, and the faint glow of countless galaxies. The vastness is awe-inspiring, hinting at infinite possibilities and cosmic mysteries.",
-        "colorsAndLighting": "A deep, pervasive darkness broken by vibrant, diverse nebulae colors. Starlight provides a cool, distant illumination. Ambient light is a gentle, pervasive cosmic glow.",
-        "atmosphere": "Near-vacuum conditions prevail, with pockets of breathable atmosphere found only on habitable celestial bodies. Cosmic radiation is a constant factor. Extreme temperature variations are common.",
-        "materials": "Primarily composed of cosmic dust, gas, dark matter, and the exotic elements that form stars and planets. Metallic structures are rare and often alien in origin.",
-        "mood": "A sense of profound isolation and immense scale, tempered by the wonder of cosmic beauty. It evokes feelings of exploration and the unknown.",
-        "sounds": "Silence, faint stellar winds, distant cosmic hums, occasional gravitational distortions.",
-        "spatialLayout": "An infinitely expanding three-dimensional space, with celestial bodies and phenomena distributed throughout. Navigation is complex and often relies on hyperspace or warp technologies.",
-        "primary_surfaces": [
-          "Cosmic Dust",
-          "Stellar Gas",
-          "Void"
-        ],
-        "secondary_surfaces": [
-          "Rocky Planetoids",
-          "Icy Moons",
-          "Metallic Asteroids"
-        ],
-        "accent_features": [
-          "Supernovae Remnants",
-          "Gravitational Lenses",
-          "Pulsars"
-        ],
-        "dominant": "Deep blues and purples",
-        "secondary": "Vibrant pinks, oranges, and whites",
-        "accent": "Ethereal greens and yellows",
-        "ambient": "Cool",
-        "genre": "sci-fi",
-        "architectural_tone": "Cosmic scale, alien structures, functional survival",
-        "cultural_tone": "Exploration, survival, scientific discovery, interspecies interaction",
-        "materials_base": "Exotic metals, alien alloys, crystalline structures, organic composites, unknown elements",
-        "mood_baseline": "Wonder, isolation, danger, discovery",
-        "palette_bias": "Deep space tones with vibrant nebulae highlights",
-        "soundscape_base": "Ambient cosmic hums, stellar radiation, gravitational shifts",
-        "flora_base": "None",
-        "fauna_base": "Exotic extraterrestrial lifeforms, energy beings, cosmic entities"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Nebulae",
-        "Asteroid Fields",
-        "Distant Galaxies"
-      ],
-      "uniqueIdentifiers": [
-        "Cosmic Phenomena",
-        "Uncharted Territories"
-      ],
-      "slug": "galactic-expanse",
-      "searchDesc": "A boundless cosmic frontier teeming with celestial wonders and unexplored regions."
-    },
-    "893ce22d-4b49-4b75-9a83-752ecb352f75": {
-      "id": "893ce22d-4b49-4b75-9a83-752ecb352f75",
-      "type": "region",
-      "name": "Galactic Expanse",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A seemingly endless expanse of deep space, dotted with distant stars and illuminated by swirling, multi-colored nebulae. Gravitational anomalies and cosmic dust clouds are common.",
-        "colorsAndLighting": "Dominated by deep blues and blacks, with vibrant splashes of color from nebulae. Light is diffuse and originates from stars and nebulae, creating a low-contrast environment.",
-        "atmosphere": "Near-vacuum conditions, with pockets of extreme cold. Stellar winds and radiation are prevalent. Regions may contain nebulae with varying atmospheric densities.",
-        "materials": "Cosmic dust, interstellar gas, hydrogen, helium, exotic particles. Surfaces are primarily void, gas clouds, and occasional asteroid formations.",
-        "mood": "Vastness, quiet, potential for both danger and discovery. The scale inspires awe and a sense of insignificance.",
-        "sounds": "Faint stellar hums, cosmic background radiation, distant gravitational whispers.",
-        "spatialLayout": "An infinite, three-dimensional canvas where celestial bodies are scattered. Navigation is primarily through hyperspace jumps between systems or along established hyperspace lanes.",
-        "primary_surfaces": [
-          "Void",
-          "Nebula Gas"
-        ],
-        "secondary_surfaces": [
-          "Asteroid Fields",
-          "Cosmic Dust Clouds"
-        ],
-        "accent_features": [
-          "Pulsar Flares",
-          "Dark Matter Concentrations"
-        ],
-        "dominant": "Deep blues and purples",
-        "secondary": "Vibrant pinks and oranges",
-        "accent": "Ethereal greens",
-        "ambient": "Cool",
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": null,
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": null,
-        "fauna_base": null
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Nebula Clouds",
-        "Dense Star Fields",
-        "Hyperspace Lanes"
-      ],
-      "uniqueIdentifiers": [
-        "Cosmic Anomalies",
-        "Interstellar Trade Routes"
-      ],
-      "slug": "galactic-expanse-region",
-      "searchDesc": "The vast expanse of the galaxy, featuring nebulae, star systems, and pathways for interstellar travel."
-    },
-    "a662eef0-1e58-498f-8c42-446d0f7697d5": {
-      "id": "a662eef0-1e58-498f-8c42-446d0f7697d5",
-      "type": "location",
-      "name": "The Oxidized Husk",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A colossal, distorted metal structure, its surface a patchwork of rust and ice, is partially buried in snowdrifts. The vessel's form is bulbous and elongated, with visible seams and paneling on its exterior. Snow clings to its contours, creating a frozen shroud that obscures much of its original detail and form. Jagged ice formations surround the base of the wreck, suggesting harsh environmental conditions. The sheer scale of the wreckage is emphasized by the desolate, frozen landscape it occupies.",
-        "colorsAndLighting": "The lighting is diffused and cool, casting soft shadows and illuminating the scene with a pale, ethereal glow. A bright, hazy light source appears to be overhead, likely the sun or a similar celestial body, diffused by atmospheric conditions. The contrast is low, contributing to the overall muted and desolate mood.",
-        "atmosphere": "The air appears thin and cold, with a visible haze that softens distant elements. The scene evokes a sense of biting wind and extreme low temperatures, as if frozen in time. Clarity is reduced by the atmospheric conditions, adding to the mystique of the location.",
-        "materials": "Heavily oxidized metal, with significant coverage of ice and compacted snow. Jagged ice formations are prominent around the base.",
-        "mood": "Desolate, mysterious, ancient, frozen in time. Evokes a sense of loss and the passage of immense time.",
-        "sounds": "Wind whistling, ice groaning, muffled creaks of metal.",
-        "spatialLayout": "The foreground consists of a clear, snow-covered path leading towards the main subject. The midground is dominated by the massive, snow-encrusted alien wreckage, which appears to be the primary focus. The background is a hazy, expansive frozen landscape fading into the pale sky, suggesting a vast, uninhabited expanse.",
-        "primary_surfaces": "Metal (oxidized)",
-        "secondary_surfaces": "Snow, ice",
-        "accent_features": "Visible seams and paneling on the vessel",
-        "dominant": "Orange-brown (on the vessel)",
-        "secondary": "White and pale blue (snow, ice, sky, haze)",
-        "accent": "Darker metallic tones on the vessel's surface",
-        "ambient": "Pale, cool blue with hints of white",
-        "genre": null,
-        "architectural_tone": "Alien, functional, derelict",
-        "cultural_tone": "Unknown alien civilization, disaster, abandonment",
-        "materials_base": "Corroded alloys, ice, permafrost",
-        "mood_baseline": "Desolation, mystery, forgotten",
-        "palette_bias": "Muted earth tones and cold blues",
-        "soundscape_base": "Harsh, elemental sounds",
-        "flora_base": "None",
-        "fauna_base": "None (likely, due to extreme cold)"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/koala/BZeH9P4PVzonObd9yzQTf.jpg",
-      "navigableElements": [
-        {
-          "type": "passage",
+          "type": "object",
           "position": "center, foreground",
-          "description": "A cleared snow path leading towards the massive wreckage"
-        },
-        {
-          "type": "window",
-          "position": "upper hull, midground",
-          "description": "A small, dark opening on the vessel's curved surface"
+          "description": "A stone pathway inviting approach to the machine's entrance."
         }
       ],
       "dominantElements": [
-        "Oxidized alien vessel (massive scale, center, partially buried)",
-        "Snowdrifts (covering the vessel and landscape)",
-        "Frozen tundra terrain (foreground and midground)"
+        "Colossal spherical alien machine (hundreds of meters diameter, center)",
+        "Central glowing turquoise gateway (midground, center)",
+        "Stone pathway leading to the machine (foreground, center)",
+        "Rocky desert terrain (foreground and midground, left and right)",
+        "Distant hazy mountains (background)"
       ],
       "uniqueIdentifiers": [
-        "Oxidized, snow-covered alien wreckage",
-        "Frozen tundra environment",
-        "Distinctive bulbous ship hull shape"
+        "Colossal spherical alien machine",
+        "Central turquoise glowing entrance",
+        "Twin-sun sky"
       ],
-      "slug": "the-oxidized-husk",
-      "searchDesc": "[Location - Exterior] Oxidized alien wreckage in frozen tundra. Has: snow path (center, foreground), opening (upper hull, midground)"
+      "slug": "the-colossal-mechanism",
+      "searchDesc": "[Location - Exterior] Giant alien sphere in desert. Has: passage (center, midground), archway (center, midground), stone pathway (center, foreground)"
     },
-    "niche-1763501931298-vy1vo02nu": {
-      "id": "niche-1763501931298-vy1vo02nu",
+    "niche-1763545610644-mmg3teqv6": {
+      "id": "niche-1763545610644-mmg3teqv6",
       "type": "niche",
-      "name": "interior of The Oxidized Husk",
+      "name": "interior of The Colossal Mechanism",
       "spaceType": "interior",
       "dna": {
-        "looks": "The colossal, bulbous interior is a cavernous, dimly lit chamber. Immense, curving panels of deeply corroded, oxidized metal form the walls, textured with frozen moisture and jagged ice. The primary structure curves upwards, revealing immense scale, with massive, bolted seams crusted with verdigris-like frost. The architecture feels functional yet impossibly ancient.",
-        "colorsAndLighting": "Dominated by muted earth tones of corrosion and cold blues from atmospheric ice and lighting. Diffused, cold light filters from unseen cracks, casting deep shadows, with an eerie blue glow from ground conduits and a subtle crimson pulse from a partially open hatchway.",
-        "atmosphere": "The air is heavy and intensely cold, suggesting permafrost has seeped into the vessel's structure. A palpable sense of desolation and deep mystery pervades the frozen, ancient space, echoing a chilling monument to disaster.",
-        "materials": "The primary materials are deeply corroded, oxidized alloys, fused permafrost, and frozen moisture. Textures range from rough, scaled corrosion to smooth, frosted metal and jagged ice formations.",
-        "mood": "A stark, alien, and deeply derelict mood, evoking desolation, mystery, and the immense passage of time within a forgotten alien civilization.",
-        "sounds": "Distant echoes, faint hum, crackling ice, dripping moisture.",
-        "spatialLayout": "A vast, cavernous chamber with curving walls that recede into oppressive darkness. The floor is low and irregular, with a steep ramp on the left leading upwards into the midground, and a warped hatchway on the right providing an exit to deeper darkness.",
-        "primary_surfaces": "Corroded oxidized metal, fused permafrost, jagged ice formations.",
-        "secondary_surfaces": "Metallic debris, frosted metal ramp, scarred warped hatchway, exposed conduits.",
-        "accent_features": "Eerie blue glow from conduits, verdigris-like frost on seams, sliver of pulsating crimson light from hatchway, distant phosphorescent lights.",
-        "dominant": "Orange-brown (corroded metal)",
-        "secondary": "Cold blue (ice, ambient light)",
-        "accent": "Verdigris (frost), phosphorescent light (distant points), crimson (hatchway interior)",
-        "ambient": "cool",
+        "looks": "A colossal, circular chamber clad in dark, polished metallic alloy panels with intricate recessed circular motifs. Thin, pulsating turquoise energy conduits segment the walls, casting an ethereal glow. The floor is a polished expanse reflecting these conduits. The scale suggests a monumental, unseen overhead structure.",
+        "colorsAndLighting": "The chamber is bathed in a soft, ambient turquoise glow from energy conduits, complemented by sharp, high-contrast daylight filtering from above. The dominant colors are dark metallic and pulsing turquoise, with subtle blue accents on foreground elements.",
+        "atmosphere": "The air is still and cool, with a palpable sense of immense scale and profound mystery. The soft hum of crystalline data units and the rhythmic pulse of distant apertures create an ambient sonic texture, contributing to an otherworldly feel.",
+        "materials": "The primary material is a dark, polished metallic alloy, forming seamless geometric panels on walls and floor, and constructing platforms and consoles. Integrated soft blue light illuminates edges, while cyan glyphs glow on touch-sensitive panels. Crystalline data units shimmer with internal light.",
+        "mood": "Imposing, enigmatic, and awe-inspiring. The sheer scale and alien design evoke a sense of profound mystery and potential power, alien to human understanding.",
+        "sounds": "Soft hum, rhythmic pulse, faint energy crackle.",
+        "spatialLayout": "A vast, circular chamber with curving walls that recede into immense distance. The layout emphasizes scale, with a low platform in the foreground leading to a central console in the midground, flanked by alcoves and an off-center arched doorway. The background emphasizes distance and smaller architectural details.",
+        "primary_surfaces": "Dark polished metallic alloy (walls, floor)",
+        "secondary_surfaces": "Matte dark metallic alloy (door frame), crystalline (data units)",
+        "accent_features": "Pulsating turquoise energy conduits, glowing cyan glyphs on console, integrated soft blue platform lighting, crystalline data units, circular apertures with turquoise pulses.",
+        "dominant": "Dark metallic alloy (approx. 70% coverage)",
+        "secondary": "Turquoise glow (prominent accent, approx. 20% visual impact)",
+        "accent": "Cyan glyphs, soft blue light, shimmering crystalline (minor accent)",
+        "ambient": "Cool",
         "genre": null,
-        "architectural_tone": "Alien functional derelict",
-        "cultural_tone": "Unknown alien civilization, disaster, abandonment.",
-        "materials_base": "Corroded alloys, ice, permafrost, frozen moisture.",
-        "mood_baseline": "Desolate, mysterious, ancient, frozen in time.",
-        "palette_bias": "Muted earth tones, cold blues, hints of verdigris, deep shadows.",
-        "soundscape_base": "Ambient, echoing, cold.",
+        "architectural_tone": "Monumental alien geometric design with integrated energy systems",
+        "cultural_tone": "Mysterious, ancient, and technologically advanced, implying a civilization that operates on principles alien to human understanding.",
+        "materials_base": "Polished metallic alloys, glowing energy conduits, crystalline structures",
+        "mood_baseline": "Imposing, enigmatic, and awe-inspiring",
+        "palette_bias": "Cool tones with strong azure and cyan accents",
+        "soundscape_base": "Low hums and subtle energetic pulses",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/panda/rQ-LfPao5fztXXOr4PLx9.jpg",
-      "description": "The vast, dimly lit, cavernous interior of a derelict alien vessel, characterized by corroded metal, ice, and a sense of immense, forgotten scale.",
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "left foreground",
-          "description": "A steep, narrow ramp of frosted metal ascending sharply, its edges outlined with icy crystals."
-        },
-        {
-          "type": "door",
-          "position": "right midground",
-          "description": "A large, segmented hatchway, its metal warped and scarred, sitting slightly ajar."
-        }
-      ],
-      "dominantElements": [
-        "Corroded metal hull panels",
-        "Fused permafrost and metallic debris floor",
-        "Exposed conduits with blue glow",
-        "Massive bolted seams",
-        "Segmented hatchway"
-      ],
-      "uniqueIdentifiers": [
-        "Corroded, oxidized metal walls",
-        "Jagged ice formations and frozen moisture texture",
-        "Verdigris-like frost on seams",
-        "Eerie blue glow from conduits",
-        "Sliver of crimson light from hatchway",
-        "Distant phosphorescent lights"
-      ],
-      "searchDesc": "Colossal, dimly lit derelict chamber of corroded metal and ice, with glowing conduits and a warped hatchway.",
-      "slug": "interior-of-the-oxidized-husk"
-    },
-    "niche-1763501964883-6n806p89h": {
-      "id": "niche-1763501964883-6n806p89h",
-      "type": "niche",
-      "name": "interior of The Chroma Foundry",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This is a vast, circular, cavernous chamber whose uneven, leathery walls echo the exterior's organic form. Colossal scale is emphasized by ceilings extending upwards, creating an immense interior volume. The space is wide and expansive, inviting exploration of its circular expanse.",
-        "colorsAndLighting": "Surfaces are a fusion of organic-metallic materials, with leathery textures interspersed with sections glowing from within with vibrant, saturated, contrasting colors like electric blues, vivid magentas, and neon greens. Integrated biomechanical-industrial lighting fixtures cast pools of light and highlight textures.",
-        "atmosphere": "The air is thick with an imposing and vital mood. The immense scale and organic-metallic fusion create an atmosphere that is both alien and functional, with a pulsating, almost living energy throughout. The enclosed space feels secure yet vast.",
-        "materials": "Predominantly organic-metallic-fusion materials form the textured, leathery walls and ceiling. Reflective, almost metallic surfaces define the floor, sparsely adorned with crystalline growths. Intricate metallic scaffolding weaves across walls, complementing the core organic structures.",
-        "mood": "The mood is imposing and vital, with an underlying sense of alien, functional manufacturing and a pulsating, almost psychedelic vitality.",
-        "sounds": "low hum, pulsing light, distant echoes, metallic creaks",
-        "spatialLayout": "A wide, circular, cavernous chamber with a domed ceiling, featuring a monumental arched opening on the right and a smaller recessed opening on the left. The floor is a reflective metallic surface with scattered crystalline growths and a prominent root-like structure on the lower left.",
-        "primary_surfaces": "Leathery organic-metallic walls, reflective metallic floor, domed textured ceiling.",
-        "secondary_surfaces": "Polished metallic alloy framing passages, intricate metallic scaffolding, crystalline mineral formations.",
-        "accent_features": "Bio-luminescent patterns pulsing with vibrant psychedelic hues, internal glowing of metallic alloys, sparse crystalline growths, organic root structure.",
-        "dominant": "Deep purples and blues (inheriting from parent)",
-        "secondary": "Vibrant saturated colors (electric blues, vivid magentas, neon greens) from bioluminescence",
-        "accent": "Amber glow from arched passage, violet luminescence from recessed opening",
-        "ambient": "Neutral, leaning cool due to blues and purples, but warmed by internal glows",
-        "genre": null,
-        "architectural_tone": "biomechanical-industrial",
-        "cultural_tone": "Functional alien manufacturing processes are evident in the interwoven organic and industrial structures.",
-        "materials_base": "organic-metallic fusion, leathery textures, polished metals",
-        "mood_baseline": "imposing, vital",
-        "palette_bias": "vibrant-saturated-contrasting",
-        "soundscape_base": "industrial hum, subtle mechanical noises",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/zebra/PZ13LplfS3gBSnuEZoqtl.jpg",
-      "description": "A colossal, circular chamber with leathery, organic-metallic walls, pulsing with vibrant bioluminescent patterns and illuminated by biomechanical-industrial fixtures.",
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/uQfF70pxH4WuYcfQYh1a6.jpg",
+      "description": "A vast, circular chamber within The Colossal Mechanism, featuring polished metallic alloy walls with recessed circular motifs and pulsating turquoise energy conduits. A multi-tiered platform leads to a central console array with glowing glyphs, an arched doorway emitting turquoise light, and alcoves with crystalline data storage units.",
       "navigableElements": [
         {
           "type": "archway",
           "position": "midground right",
-          "description": "A monumental arched opening framed with polished, amber-glowing metallic alloy, hinting at a deeper passage."
+          "description": "Wide, arched doorway framed in matte dark alloy, emitting an intense turquoise beam, hinting at further depths."
         },
-        {
-          "type": "opening",
-          "position": "background left",
-          "description": "A secondary, smaller, recessed opening marked by faint violet luminescence, beckoning further investigation."
-        }
-      ],
-      "dominantElements": [
-        "bulbous organic walls",
-        "domed ceiling",
-        "glowing arched passage",
-        "bio-luminescent patterns",
-        "metallic scaffolding structures",
-        "crystalline growths",
-        "root-like structure"
-      ],
-      "uniqueIdentifiers": [
-        "leathery, organic-metallic fusion materials",
-        "pulsating bioluminescent patterns",
-        "biomechanical-industrial lighting fixtures",
-        "colossal, circular, cavernous form"
-      ],
-      "searchDesc": "Colossal, organic-metallic foundry interior with pulsating bioluminescence and biomechanical industrial lighting.",
-      "slug": "interior-of-the-chroma-foundry"
-    },
-    "loc-1763502194850-ocxjj7pot": {
-      "id": "loc-1763502194850-ocxjj7pot",
-      "type": "host",
-      "name": "The Verdant Expanse",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Vast landscapes where natural elements are dominant, often overwhelming remnants of past civilizations. Expect thick vegetation, crumbling architecture reclaimed by plant life, and a pervasive sense of untamed wilderness.",
-        "colorsAndLighting": "The palette is dominated by rich greens of foliage, earthy browns and grays of stone and soil. Lighting is often diffused and dappled, filtered through dense canopies, creating atmospheric play of light and shadow.",
-        "atmosphere": "The air is thick with humidity and the scent of damp earth and decaying leaves. A sense of quiet stillness pervades, punctuated only by natural sounds, hinting at a world slowly returning to its wild state.",
-        "materials": "Primary materials are stone, earth, and an abundance of plant life. Structures are often dilapidated, with materials actively being broken down and integrated by organic forces.",
-        "mood": "A blend of melancholy for lost civilization and awe for nature's resilience. There's a sense of peaceful decay and untamed beauty.",
-        "sounds": "Rustling leaves, distant bird calls, dripping water, insect hum",
-        "spatialLayout": "Open, expansive natural areas interspersed with the ruins of former human endeavors. Spaces often feel overgrown and challenging to navigate due to dense vegetation.",
-        "primary_surfaces": "Stone, Earth, Vegetation",
-        "secondary_surfaces": "Wood, Ancient debris",
-        "accent_features": "Flowering plants, mosses, creeping vines",
-        "dominant": "Green",
-        "secondary": "Brown, Grey",
-        "accent": "Earthy tones",
-        "ambient": "Warm",
-        "genre": "post-apocalyptic",
-        "architectural_tone": "ruined",
-        "cultural_tone": "forgotten",
-        "materials_base": "natural materials, weathered stone, ancient debris",
-        "mood_baseline": "melancholy, serene, resilient",
-        "palette_bias": "earthy and verdant",
-        "soundscape_base": "natural, quiet, ambient",
-        "flora_base": "lush, overgrown, wild",
-        "fauna_base": "wildlife"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Overgrown ruins",
-        "Wild natural landscapes",
-        "Forgotten structures"
-      ],
-      "uniqueIdentifiers": [
-        "Nature's reclamation",
-        "Post-civilization flora"
-      ],
-      "slug": "the-verdant-expanse",
-      "searchDesc": "A world where nature reclaims forgotten structures, creating a wild and overgrown environment."
-    },
-    "1bb5ac33-9b92-4b29-9c85-462b0b841c30": {
-      "id": "1bb5ac33-9b92-4b29-9c85-462b0b841c30",
-      "type": "region",
-      "name": "The Verdant Expanse",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Dominantly green, with ancient stone structures partially or fully consumed by a riot of plant life. Pathways are often obscured by foliage, and the sky is frequently filtered by thick canopies.",
-        "colorsAndLighting": "Deep greens and rich earth tones dominate, with dappled sunlight creating a soft, diffused light. Shadows are deep and enveloping.",
-        "atmosphere": "Humid and heavy with the scent of vegetation and damp earth. The air feels still and alive with the sounds of nature.",
-        "materials": "Primarily stone, earth, and a dense array of flora. Weathered stonework is a constant, often softened by moss and vines.",
-        "mood": "Tranquil yet imposing, with a sense of enduring natural power.",
-        "sounds": "Constant rustling, chirping, buzzing, distant water",
-        "spatialLayout": "Interconnected areas of dense vegetation, clearings within ruins, and winding, overgrown paths.",
-        "primary_surfaces": "Vegetation, Stone",
-        "secondary_surfaces": "Earth, Moss",
-        "accent_features": "Flowering vines, ancient carvings",
-        "dominant": "Green",
-        "secondary": "Brown, Grey",
-        "accent": "Earthy",
-        "ambient": "Warm",
-        "genre": null,
-        "architectural_tone": "overgrown",
-        "cultural_tone": null,
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "dense, varied, climbing",
-        "fauna_base": "small to medium wild animals"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Overgrown ancient ruins",
-        "Dense forests",
-        "Reclaimed stone structures"
-      ],
-      "uniqueIdentifiers": [
-        "Nature's dominance",
-        "Echoes of the past"
-      ],
-      "slug": "the-verdant-expanse-region",
-      "searchDesc": "A vast region of overgrown ruins and dense forests, where nature dominates."
-    },
-    "17924241-1fe7-4ccb-9283-02e8fc059d95": {
-      "id": "17924241-1fe7-4ccb-9283-02e8fc059d95",
-      "type": "location",
-      "name": "The Stone Conservatory",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A path paved with irregular stones leads through dense foliage toward a stone structure with arched openings. The building's walls are constructed from weathered, massive stone blocks, with arched colonnades supporting the upper sections. Thick vines and abundant greenery climb the walls and spill over the edges of the open roof, which is partially covered by a skeletal glass structure and overhead branches. Large-leafed plants and smaller ground cover create a lush, overgrown environment on either side of the path.",
-        "colorsAndLighting": "The lighting is soft and diffused, with warm sunlight filtering through the glass roof and foliage. This creates areas of bright illumination and deep shadow, highlighting the textures of the stone and plants.",
-        "atmosphere": "The air appears humid, with the visual density of the foliage suggesting a damp environment. Sunlight filters through the overgrown canopy, creating dappled light and shadow.",
-        "materials": "Massive stone blocks form the walls, interspersed with earth and a profusion of plant life. Remnants of glass architecture are visible within the tangled greenery.",
-        "mood": "Serene, ancient, and intensely alive with botanical growth.",
-        "sounds": "Gentle rustling, birdsong, distant buzzing, soft wind",
-        "spatialLayout": "The foreground is dominated by a stone path flanked by lush vegetation. The midground features the main stone structure, characterized by its arched colonnades and open, roofless sections, with a central passage leading through it. The background is comprised of the distant exterior and sky visible through the central opening.",
-        "primary_surfaces": "Stone",
-        "secondary_surfaces": "Earth, Vegetation",
-        "accent_features": "Glass (roof structure)",
-        "dominant": "Green (foliage)",
-        "secondary": "Brown and grey (stone, path)",
-        "accent": "White (light filtering through foliage)",
-        "ambient": "Warm, earthy tones",
-        "genre": null,
-        "architectural_tone": "ruined, overgrown",
-        "cultural_tone": "lost purpose",
-        "materials_base": "weathered stone, abundant vegetation",
-        "mood_baseline": "peaceful, enduring",
-        "palette_bias": "lush greens, earthy neutrals",
-        "soundscape_base": "quiet, natural, ambient",
-        "flora_base": "highly diverse, dense, climbing",
-        "fauna_base": "small birds, insects"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/SsM1FworYqDVV8cTxb8qs.jpg",
-      "navigableElements": [
         {
           "type": "passage",
-          "position": "center, midground",
-          "description": "A stone-paved passage leading through arched openings and out of the structure."
-        },
-        {
-          "type": "door",
-          "position": "center, background",
-          "description": "An open, tall wooden door revealing an exit into bright greenery."
-        },
-        {
-          "type": "archway",
-          "position": "left and right, midground",
-          "description": "Multiple stone archways offering glimpses into darker, enclosed spaces."
+          "position": "background",
+          "description": "Numerous smaller, circular apertures pulsing with subtle turquoise light along the receding walls."
         }
       ],
       "dominantElements": [
-        "Stone walls with arched colonnades (est. 10-15m height)",
-        "Overgrown path of irregular stone slabs",
-        "Abundant green foliage and vines",
-        "Partially collapsed glass roof structure"
+        "Vast circular chamber",
+        "Dark metallic alloy walls with recessed circular motifs",
+        "Pulsating turquoise energy conduits",
+        "Three-tiered console array with glowing cyan glyphs",
+        "Multi-tiered platform"
       ],
       "uniqueIdentifiers": [
-        "Collapsed conservatory roof with exposed structure",
-        "Stone fortress-like architecture overtaken by nature",
-        "Central arched passage leading to an exit"
+        "Seamlessly interlocking geometric panels",
+        "Recessed circular motifs",
+        "Pulsating turquoise energy conduits",
+        "Complex three-tiered console array with cyan glyphs",
+        "Arched doorway with intense turquoise light"
       ],
-      "slug": "the-stone-conservatory",
-      "searchDesc": "[Location - Exterior] Overgrown stone conservatory with collapsed roof. Has: passage (center, midground), door (center, background), archways (left and right, midground)"
+      "searchDesc": "Vast metallic chamber with glowing conduits, central console, and enigmatic doorways.",
+      "slug": "interior-of-the-colossal-mechanism"
     },
-    "niche-1763502226044-79wzqv016": {
-      "id": "niche-1763502226044-79wzqv016",
+    "niche-1763545657703-0gor1v29q": {
+      "id": "niche-1763545657703-0gor1v29q",
       "type": "niche",
-      "name": "interior of The Stone Conservatory",
+      "name": "interior of The Colossal Mechanism",
       "spaceType": "interior",
       "dna": {
-        "looks": "Massive, rough-hewn stone walls curve gently, supporting a partially reconstructed vaulted ceiling of stone arches and moss-covered timber. Thick vines cascade down like natural chandeliers, creating a grand yet enclosed atmosphere with a radial layout of central space and branching alcoves.",
-        "colorsAndLighting": "Dominant deep greens from dense vegetation are illuminated by soft, diffused daylight and warm, golden bioluminescence from moss and fungi, casting a serene glow.",
-        "atmosphere": "The air is cool and carries the scent of damp earth and ancient stone. A palpable sense of serenity and ancient life permeates the enclosed, grand volume, enhanced by the ambient glow.",
-        "materials": "Weathered, massive stone blocks form the primary structure, juxtaposed with a profusion of diverse, dense vegetation. The stone exhibits a rough, ancient texture, while plant life is lush and abundant.",
-        "mood": "The space evokes a mood of serene, ancient majesty, intensely alive with untamed botanical growth.",
-        "sounds": "Dripping water, rustling leaves, faint insect hum.",
-        "spatialLayout": "A grand, enclosed central space with approximately 8-10 meter ceiling height, featuring a radial layout of branching alcoves and passages, emphasizing verticality and interior depth.",
-        "primary_surfaces": [
-          "weathered stone",
-          "dense vegetation"
-        ],
-        "secondary_surfaces": [
-          "moss-covered timber",
-          "flagstones",
-          "piles of fallen leaves",
-          "gnarled roots"
-        ],
-        "accent_features": [
-          "bioluminescent moss and fungi",
-          "ancient pottery shards",
-          "natural chandeliers of vines"
-        ],
-        "dominant": "Green (foliage, moss)",
-        "secondary": "Gray (stone)",
-        "accent": "Golden (bioluminescence)",
-        "ambient": "warm",
+        "looks": "An immense circular chamber interior clad in dark, polished metallic alloy. Intricate turquoise energy conduits pulse across the vast, curved walls, casting light onto the seamless floor, which features a large, recessed circular motif.",
+        "colorsAndLighting": "Dominated by the cool, pulsating glow of turquoise energy conduits, creating shifting pools of light on the dark metallic surfaces. The lighting is ethereal and ambient.",
+        "atmosphere": "A sense of immense, enclosed space with an impossibly high, unseen ceiling. The air feels still and charged with latent energy, creating an awe-inspiring and enigmatic atmosphere.",
+        "materials": "The primary material is a dark, polished metallic alloy with a smooth, complex paneling. Subtle texturing is present on the floor for grip. The conduits appear luminous and integrated into the structure.",
+        "mood": "Imposing, enigmatic, and awe-inspiring due to its colossal scale and alien, technologically advanced design.",
+        "sounds": "Low hum, subtle energy pulse, distant resonance.",
+        "spatialLayout": "A vast, circular chamber with immense scale. Curved walls recede into the distance, suggesting hidden depths. The focal point is the central perspective leading into the enigmatic space.",
+        "primary_surfaces": "Dark polished metallic alloy walls and floor.",
+        "secondary_surfaces": "Integrated luminous turquoise energy conduits.",
+        "accent_features": "Recessed circular motifs, ornate etched archway, glowing circular panels.",
+        "dominant": "Dark metallic (floor, walls)",
+        "secondary": "Turquoise (conduits, light)",
+        "accent": "Warmer turquoise (panels)",
+        "ambient": "Cool",
         "genre": null,
-        "architectural_tone": "ruined, overgrown",
-        "cultural_tone": "lost purpose",
-        "materials_base": "ancient stone, natural growth",
-        "mood_baseline": "Serene, ancient, intensely alive",
-        "palette_bias": "Earthy greens and grays with golden accents",
-        "soundscape_base": "Subtle, natural ambient sounds",
-        "flora_base": "Dense, diverse vines and foliage",
+        "architectural_tone": "Monumental alien geometric design with integrated energy systems, featuring smooth, complex paneling, recessed circular elements, and ornate, luminous portals.",
+        "cultural_tone": "Monumental alien construct (non-residential, non-religious, non-factory) - akin to a grand, central chamber or nexus within a colossal machine.",
+        "materials_base": "Polished metals, integrated energy systems, complex paneling.",
+        "mood_baseline": "Imposing, enigmatic, awe-inspiring.",
+        "palette_bias": "Cool blues and deep grays/blacks.",
+        "soundscape_base": "Mechanical hum, energy resonance.",
+        "flora_base": "None",
         "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/lion/VE4Vt-sN68CGA3WVSIC7_.jpg",
-      "description": "The cool, earthy interior of a grand, overgrown stone conservatory, dimly lit by diffused daylight and bioluminescent flora.",
+      "imagePath": "https://v3b.fal.media/files/b/monkey/BpNYrXpms0ab8qdm6yLlJ.jpg",
+      "description": "The immense, circular interior of a colossal alien mechanism, clad in polished dark metal and illuminated by pulsating turquoise energy conduits.",
       "navigableElements": [
         {
-          "type": "alcove",
-          "position": "left foreground",
-          "description": "A low, arched stone alcove dimly lit by glowing fungi, containing ancient pottery shards."
+          "type": "archway",
+          "position": "left midground",
+          "description": "Ornate, recessed archway with diffused turquoise light."
         },
         {
-          "type": "stairs",
-          "position": "center-left",
-          "description": "Winding, vine-covered stone staircases ascending towards unseen upper levels."
-        },
-        {
-          "type": "passage",
+          "type": "interface",
           "position": "right midground",
-          "description": "A shadowed passage framed by rough stone and dense foliage, receding into darkness."
+          "description": "Series of smaller, glowing circular panels."
+        },
+        {
+          "type": "corridor",
+          "position": "background",
+          "description": "Continuation of the polished floor leading into the distance."
         }
       ],
       "dominantElements": [
-        "Rough-hewn stone walls and pillars",
-        "Dense, trailing vines",
-        "Vaulted stone and timber ceiling",
-        "Moss-kissed flagstone floor"
+        "Immense circular chamber walls",
+        "Pulsating turquoise energy conduits",
+        "Polished metallic alloy floor",
+        "Recessed circular motifs",
+        "Ornate recessed archway"
       ],
       "uniqueIdentifiers": [
-        "Bioluminescent moss and fungi",
-        "Partially reconstructed vaulted ceiling with timber framework",
-        "Vine-covered staircases"
+        "Monumental alien geometric design",
+        "Integrated energy systems with pulsating turquoise conduits",
+        "Seamless dark polished metallic alloy cladding",
+        "Recessed circular motifs and portals",
+        "Colossal scale"
       ],
-      "searchDesc": "Overgrown Stone Conservatory interior with ancient stone, dense vines, and bioluminescent light.",
-      "slug": "interior-of-the-stone-conservatory"
-    },
-    "loc-1763502694937-jz0zn7pnu": {
-      "id": "loc-1763502694937-jz0zn7pnu",
-      "type": "host",
-      "name": "Underground Network",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Expansive, dimly lit tunnels and caverns stretching into darkness. Evidence of past civilizations and recent, crude constructions are interwoven throughout.",
-        "colorsAndLighting": "Dominated by deep shadows and pockets of artificial light, often with a cool, industrial tint. Color palettes are muted and utilitarian, with occasional flashes of raw material.",
-        "atmosphere": "The air is often still, heavy with the scent of damp earth, stagnant water, and residual industrial fumes. A pervasive sense of enclosure and potential danger lingers.",
-        "materials": "Primarily rough-hewn rock, aged concrete, rusting metal, and scavenged materials forming crude structures and support systems.",
-        "mood": "A blend of oppressive survival and hidden resilience. The environment is stark and unforgiving, yet hints at communities carved out of necessity.",
-        "sounds": "Dripping water, distant echoes, faint machinery hums, scuttling sounds, wind drafts.",
-        "spatialLayout": "A labyrinthine network of natural caverns, carved tunnels, and repurposed industrial conduits. Spaces vary from cramped passages to vast, echoing chambers.",
-        "primary_surfaces": [
-          "rock",
-          "concrete"
-        ],
-        "secondary_surfaces": [
-          "metal",
-          "earth"
-        ],
-        "accent_features": [
-          "scavenged signs",
-          "makeshift lighting",
-          "pipework"
-        ],
-        "dominant": "grey",
-        "secondary": "brown",
-        "accent": "metallic",
-        "ambient": "cool",
-        "genre": "post-apocalyptic",
-        "architectural_tone": "utilitarian",
-        "cultural_tone": "survivalist",
-        "materials_base": "recycled industrial",
-        "mood_baseline": "oppressive",
-        "palette_bias": "muted earthy",
-        "soundscape_base": "echoing industrial",
-        "flora_base": "None",
-        "fauna_base": "scavenging creatures"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Tunnel Systems",
-        "Subterranean Ruins",
-        "Makeshift Settlements"
-      ],
-      "uniqueIdentifiers": [
-        "Echoing Passages",
-        "Recycled Infrastructure",
-        "Limited Light Sources"
-      ],
-      "slug": "underground-network",
-      "searchDesc": "Vast, interconnected subterranean world with echoing passages and recycled infrastructure."
-    },
-    "1eaa4d5c-e039-4adf-abd4-0634eaf69324": {
-      "id": "1eaa4d5c-e039-4adf-abd4-0634eaf69324",
-      "type": "region",
-      "name": "The Deep Lines",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Long, arched corridors lined with tiled or metallic surfaces, bearing the scars of their former purpose. Faded signage and defunct infrastructure are common.",
-        "colorsAndLighting": "Predominantly cool, artificial lighting casts long shadows across grimy surfaces. Color palettes lean towards desaturated industrial tones with hints of rust and decay.",
-        "atmosphere": "A stale, recycled air with a noticeable haze or dust motes dancing in the light. The atmosphere feels heavy and damp, carrying the faint scent of oil and metal.",
-        "materials": "Grime-covered tiles, rusting metal panels, exposed concrete, and decaying insulation form the primary textures.",
-        "mood": "A melancholic stillness pervades, a sense of lost purpose and forgotten journeys. There's an underlying tension from the disuse and potential hidden dangers.",
-        "sounds": "Distant train groans, dripping water, hum of aging electronics, wind whistling through vents.",
-        "spatialLayout": "Linear, often expansive corridors and platforms, with branching service tunnels and access points to smaller rooms or defunct machinery.",
-        "primary_surfaces": [
-          "tiled walls",
-          "concrete"
-        ],
-        "secondary_surfaces": [
-          "metal",
-          "grime"
-        ],
-        "accent_features": [
-          "faded advertisements",
-          "rusted fixtures",
-          "grimy signage"
-        ],
-        "dominant": "teal",
-        "secondary": "brown",
-        "accent": "grey",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "decayed transit infrastructure",
-        "cultural_tone": "abandoned thoroughfare",
-        "materials_base": "worn transit materials",
-        "mood_baseline": "melancholic stillness",
-        "palette_bias": "cool desaturated",
-        "soundscape_base": "echoing transit",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Abandoned Tracks",
-        "Service Tunnels",
-        "Collapsed Stations"
-      ],
-      "uniqueIdentifiers": [
-        "Ghostly Remnants of Travel",
-        "Subterranean Navigation Hubs",
-        "Echoes of Commuters"
-      ],
-      "slug": "the-deep-lines",
-      "searchDesc": "Forgotten transit routes repurposed as havens, with abandoned tracks and service tunnels."
-    },
-    "077e0851-0d51-45c4-9e90-6e8d91b7fdc1": {
-      "id": "077e0851-0d51-45c4-9e90-6e8d91b7fdc1",
-      "type": "location",
-      "name": "The Onyx Station",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The scene depicts a long, arched subterranean corridor with a tiled floor that appears wet and reflective. The walls are constructed from large, grimy, square panels, some showing signs of rust and discoloration. Protruding concrete buttresses support the arched ceiling, from which industrial lighting fixtures hang. Faded advertisements are visible on some wall sections, their text obscured by grime and age. The overall impression is one of disuse and decay within a utilitarian architectural framework.",
-        "colorsAndLighting": "The primary light source comes from long, fluorescent-style tubes running along the ceiling, emitting a cool, greenish-blue glow. This lighting creates strong highlights on the wet floor and casts sharp shadows. The light interaction is generally harsh, with areas of deep shadow contrasting with brightly lit sections, emphasizing the gritty texture of the environment.",
-        "atmosphere": "A noticeable haze or dust permeates the air, contributing to a slightly obscured visual depth. The atmosphere feels heavy and recycled, typical of an enclosed, long-unventilated underground space.",
-        "materials": "Primary materials include grimy tiles and concrete panels. Secondary materials are visible in metal pipes, fixtures, and door frames.",
-        "mood": "A palpable sense of decay and disuse, overlaid with a haunting nostalgia from the ghost-like advertisements. The atmosphere is heavy and oppressive.",
-        "sounds": "Dripping water, faint ventilation hum, distant echoes, scuttling.",
-        "spatialLayout": "The scene is framed as a symmetrical corridor receding into the background. The foreground shows the tiled floor leading away from the viewer. The midground is dominated by the station architecture, including the walls, buttresses, and signs. The background culminates in a set of double doors and further signage, suggesting an end or further passage.",
-        "primary_surfaces": "Concrete panels, tiles",
-        "secondary_surfaces": "Metal (pipes, fixtures, door frames), concrete (buttresses)",
-        "accent_features": "Glowing neon signs, red emergency light",
-        "dominant": "Teal/green from lighting and wall grime",
-        "secondary": "Browns and yellows from rust and dirt, dark greys",
-        "accent": "White from light tubes, red from emergency light",
-        "ambient": "Cool, greenish-blue",
-        "genre": null,
-        "architectural_tone": "decayed utilitarian",
-        "cultural_tone": "forgotten transit hub",
-        "materials_base": "worn industrial",
-        "mood_baseline": "haunting decay",
-        "palette_bias": "cool, muted",
-        "soundscape_base": "damp echoes",
-        "flora_base": null,
-        "fauna_base": null
-      },
-      "imagePath": "https://v3b.fal.media/files/b/rabbit/Dw2nEqu8atnM0t-4nM1Un.jpg",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center, background",
-          "description": "Large, metal double doors at the end of the corridor"
-        },
-        {
-          "type": "passage",
-          "position": "center, midground",
-          "description": "The main corridor of the station leading into the distance"
-        },
-        {
-          "type": "window",
-          "position": "center, background",
-          "description": "Small windows on the double doors offering a limited view"
-        }
-      ],
-      "dominantElements": [
-        "Arched ceiling structure extending into background",
-        "Tiled floor with reflective wetness",
-        "Paneled walls with signs of decay",
-        "Industrial lighting fixtures overhead"
-      ],
-      "uniqueIdentifiers": [
-        "Flickering neon advertisements on walls",
-        "Distinctive concrete buttresses supporting the arch",
-        "Double doors at the far end of the corridor"
-      ],
-      "slug": "the-onyx-station",
-      "searchDesc": "[Subterranean Station] Grimy corridor with glowing signs. Has: double doors (background), main corridor (midground), windows on doors (background)"
-    },
-    "niche-1763502741674-9da8vr0x8": {
-      "id": "niche-1763502741674-9da8vr0x8",
-      "type": "niche",
-      "name": "interior of The Onyx Station",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A massive, circular chamber unfolds beneath a domed ceiling of tarnished, overlapping metal plates. Decayed concrete buttresses form segmented walls, creating alcoves. The floor is a wet, reflective surface, mirroring the diffused cool light from numerous industrial fixtures.",
-        "colorsAndLighting": "The dominant colors are teal/green hues cast by industrial lighting and wall grime, pooling on the wet floor. The light is diffused and cool, creating shadows in recessed areas.",
-        "atmosphere": "The air feels thick with dust and the phantom scent of decay. A palpable sense of disuse and abandonment permeates the space, with a haunting nostalgia hinted at by faded markings.",
-        "materials": "The primary materials are grimy, decayed concrete and oxidized metal. Surfaces are wet and reflective, with tattered, overlapping metal plates forming the dome and rough concrete buttresses defining the walls.",
-        "mood": "A profound sense of decay and abandonment weighs heavily, overlaid with a ghostly echo of past function.",
-        "sounds": "Dripping water, faint hum, distant echoes, groaning metal.",
-        "spatialLayout": "The space is a vast, circular chamber with a high, domed ceiling. The central area is dominated by a colossal pillar, with navigable elements to the left and right in the midground, and an immense expanse stretching upwards in the background.",
-        "primary_surfaces": "decayed concrete, tarnished metal plates",
-        "secondary_surfaces": "oxidized metal (carts, pillar details)",
-        "accent_features": "sickly green glowing archway, etched diagrams on central pillar, flickering distant lights",
-        "dominant": "teal/green (lighting, grime)",
-        "secondary": "grey (concrete, metal)",
-        "accent": "rust (carts, metal), sickly green (archway)",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "decayed utilitarian",
-        "cultural_tone": "forgotten transit hub",
-        "materials_base": "concrete, oxidized metal, tarnished metal",
-        "mood_baseline": "palpable sense of decay and disuse, overlaid with a haunting nostalgia",
-        "palette_bias": "muted teal and green tones with metallic and concrete greys",
-        "soundscape_base": "ambient industrial decay",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/penguin/W1csrE9CeRgChFQddB3AX.jpg",
-      "description": "A vast, circular chamber within The Onyx Station, characterized by decaying utilitarian architecture and a haunting sense of disuse.",
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "midground left",
-          "description": "recessed archway glowing with a faint, sickly green light"
-        },
-        {
-          "type": "stairs",
-          "position": "midground right, ascending upwards",
-          "description": "steep, winding staircase made of rough concrete and metal panels, slick with moisture"
-        }
-      ],
-      "dominantElements": [
-        "colossal central pillar",
-        "domed ceiling",
-        "rusted maintenance carts"
-      ],
-      "uniqueIdentifiers": [
-        "tarnished overlapping metal plates on domed ceiling",
-        "sickly green glowing archway",
-        "colossal concrete pillar with etched diagrams"
-      ],
-      "searchDesc": "Vast circular chamber, tarnished metal dome, wet floors, colossal pillar, green archway, decaying concrete.",
-      "slug": "interior-of-the-onyx-station"
+      "searchDesc": "Interior of a colossal alien mechanism with geometric design, turquoise energy conduits, and polished metal.",
+      "slug": "interior-of-the-colossal-mechanism"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1763501406452-q9ejqoxdu",
+      "id": "loc-1763544754758-vy2ixcrie",
       "type": "host",
       "children": [
         {
-          "id": "8557e90c-3739-49c6-9709-25b9a3736222",
+          "id": "19e3d370-d54b-461c-9fdf-b6fedc91b3b7",
           "type": "region",
           "children": [
             {
-              "id": "b162950f-d76b-4334-9dc9-0cb906333af1",
+              "id": "adc865bd-e82a-4c9d-ba10-7f2b02c9609b",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763501964883-6n806p89h",
+                  "id": "niche-1763545395905-5p1mploug",
                   "type": "niche",
                   "children": []
                 }
@@ -992,19 +751,19 @@
       ]
     },
     {
-      "id": "loc-1763501628443-o7qmi2jjb",
+      "id": "loc-1763545432403-wl3f5o5r6",
       "type": "host",
       "children": [
         {
-          "id": "893ce22d-4b49-4b75-9a83-752ecb352f75",
+          "id": "110b46d8-d3af-43a3-8f37-a5f9db1bdd60",
           "type": "region",
           "children": [
             {
-              "id": "a662eef0-1e58-498f-8c42-446d0f7697d5",
+              "id": "7e430f9b-5b39-4ce9-884c-e992118a04dd",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763501931298-vy1vo02nu",
+                  "id": "niche-1763545465051-vi8k9yt7e",
                   "type": "niche",
                   "children": []
                 }
@@ -1015,42 +774,24 @@
       ]
     },
     {
-      "id": "loc-1763502194850-ocxjj7pot",
+      "id": "loc-1763545569905-ci2cztbd3",
       "type": "host",
       "children": [
         {
-          "id": "1bb5ac33-9b92-4b29-9c85-462b0b841c30",
+          "id": "0d42acd1-2c0b-4029-8b2d-a5d0f95a49ff",
           "type": "region",
           "children": [
             {
-              "id": "17924241-1fe7-4ccb-9283-02e8fc059d95",
+              "id": "fee77c53-21ec-4a5f-9831-24751f8ffb86",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1763502226044-79wzqv016",
+                  "id": "niche-1763545610644-mmg3teqv6",
                   "type": "niche",
                   "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1763502694937-jz0zn7pnu",
-      "type": "host",
-      "children": [
-        {
-          "id": "1eaa4d5c-e039-4adf-abd4-0634eaf69324",
-          "type": "region",
-          "children": [
-            {
-              "id": "077e0851-0d51-45c4-9e90-6e8d91b7fdc1",
-              "type": "location",
-              "children": [
+                },
                 {
-                  "id": "niche-1763502741674-9da8vr0x8",
+                  "id": "niche-1763545657703-0gor1v29q",
                   "type": "niche",
                   "children": []
                 }
@@ -1062,8 +803,8 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763501406452-q9ejqoxdu",
-    "loc-1763501628443-o7qmi2jjb",
-    "loc-1763502694937-jz0zn7pnu"
+    "loc-1763544754758-vy2ixcrie",
+    "loc-1763545432403-wl3f5o5r6",
+    "loc-1763545569905-ci2cztbd3"
   ]
 }

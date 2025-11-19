@@ -8,6 +8,7 @@ import { fluxInstructionsShort } from '../shared/constants';
 import { getCreativityInstructions } from './creativityInstructions';
 import { exteriorInstructionsTemplate } from './exteriorInstructions';
 import { interiorInstructionsTemplate } from './interiorInstructions';
+import { mergeDNA } from '../../../hierarchyAnalysis/dnaMerge';
 
 /**
  * Generate prompt for LLM to create FLUX image description
@@ -34,6 +35,12 @@ export function nicheImagePrompt(
     dynamicCreativityInstructions
   );
   
+  // Merge parent DNA with current node DNA to get complete cascaded values
+  // This ensures null values inherit from parent (e.g., cultural_tone from host)
+  const mergedDNA = (context.parentNode?.dna && context.currentNode.dna)
+    ? mergeDNA(context.parentNode.dna as any, context.currentNode.dna as any)
+    : (context.currentNode.dna || {}) as any;
+  
   const prompt = `
 You are an expert at creating image prompts for FLUX image generation.
 
@@ -42,42 +49,55 @@ TASK: Create an image prompt for ${intent.intent} "${context.currentNode.name}".
 PARENT STRUCTURE ANALYSIS (CRITICAL):
 You entered through: "${decision.reasoning}"
 
+FUNCTIONAL CONTEXT: Infer from name/desc (e.g., "Residential/Manor", "Religious/Temple", "Industrial/Factory", "Commercial/Shop").
+If it is a House/Manor/Cottage, enforce RESIDENTIAL scale (foyers, halls, not naves/caverns).
+
 ${context.currentNode.data.looks ? `Parent structure appearance: "${context.currentNode.data.looks}"` : ''}
 
 ${intent.spaceType === 'interior' ? interiorInstructions : intent.spaceType === 'exterior' ? exteriorInstructions : ''}
   
 You should create a ${intent.spaceType} niche ${intent.spaceType === 'exterior' ? 'within' : 'inside'} ${context.currentNode.name} that has the following features:
 
-${context.currentNode.data.description ? `Description: ${context.currentNode.data.description}` : ''}
-${context.currentNode.data.looks ? `Looks: ${context.currentNode.data.looks}` : ''}
-${context.currentNode.data.dominantElements ? `Dominant elements of : ${context.currentNode.data.dominantElements.join(', ')}` : ''}
-${context.currentNode.data.spatialLayout ? `Spatial Layout: ${context.currentNode.data.spatialLayout}` : ''}
-${context.currentNode.data.uniqueIdentifiers ? `Unique Identifiers: ${context.currentNode.data.uniqueIdentifiers.join(', ')}` : ''}
-Materials: ${[
-    context.currentNode.data.materials_primary,
-    context.currentNode.data.materials_secondary,
-    context.currentNode.data.materials_accents
-  ]
-    .filter(Boolean)
-    .join(', ') || context.currentNode.dna.materials_base || ''}
-    
-Colors: ${[
-    context.currentNode.data.colors_dominant,
-    context.currentNode.data.colors_secondary,
-    context.currentNode.data.colors_accents,
-    context.currentNode.data.colors_ambient 
-  ]
-    .filter(Boolean)
-    .join(', ') || context.currentNode.dna.palette_bias || ''}
+${context.currentNode.data?.description ? `Description: ${context.currentNode.data.description}` : ''}
+${context.currentNode.data?.dominantElements?.length ? `Dominant elements: ${context.currentNode.data.dominantElements.join(', ')}` : ''}
+${context.currentNode.data?.uniqueIdentifiers?.length ? `Unique Identifiers: ${context.currentNode.data.uniqueIdentifiers.join(', ')}` : ''}
 
-${context.currentNode.dna.genre ? `Genre: ${context.currentNode.dna.genre}` : ''}
-${context.currentNode.dna.architectural_tone ? `Architectural Tone: ${context.currentNode.dna.architectural_tone}` : ''}
-${context.currentNode.dna.cultural_tone ? `Cultural Tone: ${context.currentNode.dna.cultural_tone}` : ''}
-${context.currentNode.dna.materials_base ? `Materials Base: ${context.currentNode.dna.materials_base}` : ''}
-${context.currentNode.dna.mood_baseline ? `Mood Baseline: ${context.currentNode.dna.mood_baseline}` : ''}
-${context.currentNode.dna.palette_bias ? `Palette Bias: ${context.currentNode.dna.palette_bias}` : ''}
-${context.currentNode.dna.flora_base ? `Flora Base: ${context.currentNode.dna.flora_base}` : ''}
-${context.currentNode.dna.fauna_base ? `Fauna Base: ${context.currentNode.dna.fauna_base}` : ''}
+=== SCENE-SPECIFIC DETAILS (from merged DNA) ===
+
+${mergedDNA.looks ? `Looks: ${mergedDNA.looks}` : ''}
+${mergedDNA.spatialLayout ? `Spatial Layout: ${mergedDNA.spatialLayout}` : ''}
+${mergedDNA.atmosphere ? `Atmosphere: ${mergedDNA.atmosphere}` : ''}
+${mergedDNA.colorsAndLighting ? `Colors & Lighting: ${mergedDNA.colorsAndLighting}` : ''}
+${mergedDNA.materials ? `Materials: ${mergedDNA.materials}` : ''}
+${mergedDNA.mood ? `Mood: ${mergedDNA.mood}` : ''}
+${mergedDNA.sounds ? `Sounds: ${mergedDNA.sounds}` : ''}
+
+Material Surface Breakdown:
+${mergedDNA.primary_surfaces ? `Primary Surfaces: ${mergedDNA.primary_surfaces}` : ''}
+${mergedDNA.secondary_surfaces ? `Secondary Surfaces: ${mergedDNA.secondary_surfaces}` : ''}
+${mergedDNA.accent_features ? `Accent Features: ${mergedDNA.accent_features}` : ''}
+
+Color Palette Breakdown:
+${mergedDNA.dominant ? `Dominant Colors: ${mergedDNA.dominant}` : ''}
+${mergedDNA.secondary ? `Secondary Colors: ${mergedDNA.secondary}` : ''}
+${mergedDNA.accent ? `Accent Colors: ${mergedDNA.accent}` : ''}
+${mergedDNA.ambient ? `Ambient Light: ${mergedDNA.ambient}` : ''}
+
+=== CASCADING STYLE ATTRIBUTES ===
+
+${mergedDNA.genre ? `Genre: ${mergedDNA.genre}` : ''}
+
+${mergedDNA.architectural_tone ? `
+ARCHITECTURAL TONE (CRITICAL - MUST MATCH EXACTLY): ${mergedDNA.architectural_tone}
+${intent.spaceType === 'interior' ? 'The interior MUST reflect this architectural complexity level in ALL details (windows, doors, arches, pillars, trim, finishes).' : 'The exterior niche MUST reflect this architectural style consistently.'}` : ''}
+
+${mergedDNA.cultural_tone ? `Cultural Tone: ${mergedDNA.cultural_tone}` : ''}
+${mergedDNA.mood_baseline ? `Mood Baseline: ${mergedDNA.mood_baseline}` : ''}
+${mergedDNA.materials_base ? `Materials Base Style: ${mergedDNA.materials_base}` : ''}
+${mergedDNA.palette_bias ? `Palette Bias Style: ${mergedDNA.palette_bias}` : ''}
+${mergedDNA.soundscape_base ? `Soundscape Base: ${mergedDNA.soundscape_base}` : ''}
+${mergedDNA.flora_base ? `Flora Base: ${mergedDNA.flora_base}` : ''}
+${mergedDNA.fauna_base ? `Fauna Base: ${mergedDNA.fauna_base}` : ''}
 
 ${fluxInstructionsShort}
 

@@ -20,6 +20,45 @@ Think: You walked through a doorway into a new room - you don't see the door any
 
 BEFORE creating the interior, infer it from the parent structure:
 
+FUNCTIONAL IDENTITY (CRITICAL - THE ABSOLUTE PRIORITY):
+- Determine the PARENT STRUCTURE'S FUNCTIONAL IDENTITY (Manor, Factory, Temple, Bunker, Shop, etc.)
+- The interior MUST behave and look like that functional space first, regardless of style.
+- House/Manor/Cottage → RESIDENTIAL/DOMESTIC (foyers, halls, parlors, living spaces, not cavernous voids)
+- Castle/Palace → MONUMENTAL/GRAND (throne rooms, great halls, vast galleries)
+- Temple/Cathedral → RELIGIOUS/CEREMONIAL (naves, altars, soaring vaults, rows of pillars)
+- Bunker/Prison → UTILITARIAN/CONFINED (corridors, cells, control rooms, low ceilings)
+- Cave/Grotto → NATURAL/ORGANIC (rock formations, uneven floors, pools)
+
+ANTI-DRIFT RULES (PREVENT STYLE FROM OVERRIDING FUNCTION):
+- If it's a HOUSE (even a Gothic one), it should NOT look like a Church or Cathedral.
+  - AVOID: "Nave-like", "Cathedral ceiling", "Temple scale", "Altars", "Pews"
+  - USE: "Grand Foyer", "Staircase Hall", "Entryway", "Parlor", "Reception Room"
+- If it's a FACTORY, it should NOT look like a Dungeon.
+  - AVOID: "Medieval stonework", "Torches", "Cell blocks"
+  - USE: "Machinery", "Assembly floor", "Catwalks", "Industrial lighting"
+
+ARCHITECTURAL CONSISTENCY (CRITICAL - MUST FOLLOW):
+- Match architectural complexity to parent's architectural_tone:
+  • basic/simple/utilitarian → minimal ornamentation, functional design, simple fixtures
+  • ornate/decorative/elaborate → rich details, decorative elements, sophisticated craftsmanship
+  • rustic/traditional → handcrafted feel, traditional craftsmanship, weathered character
+  • modern/contemporary → clean lines, minimal decoration, sleek finishes
+  • industrial → exposed structure, raw finishes, functional aesthetic
+  
+- ARCHITECTURAL ELEMENTS MUST MATCH EXTERIOR STYLE (CRITICAL):
+  • Windows: If exterior has arched windows → interior arches/doorways echo this curve style
+  • Doorways: Match arch style (rounded/pointed/flat/squared) from exterior architecture
+  • Columns/Pillars: Interior columns must match exterior column style, proportion, and material
+  • Trim/Molding: Match complexity level from exterior (simple vs ornate)
+  • Ceiling Details: Reflect exterior roof complexity (simple flat vs elaborate coffers/vaults)
+  
+- FLORA/FAUNA EXCLUSION FOR ENCLOSED INTERIORS (CRITICAL):
+  • NO outdoor vegetation (trees, bushes, grass, wildflowers, vines growing freely) in enclosed spaces
+  • NO fauna_base elements inside enclosed buildings
+  • Acceptable indoor greenery ONLY: potted plants, cultivated indoor species, deliberate indoor gardens/atriums
+  • If flora_base exists in DNA: interpret as color palette inspiration or decorative motifs (carved patterns, painted themes), NOT literal living plants
+  • Exception: Open-air structures (courtyards, pavilions with no walls) may have controlled landscaping
+
 1. FORM
 - Match interior shape to exterior geometry:
   round → circular plan
@@ -66,7 +105,26 @@ BEFORE creating the interior, infer it from the parent structure:
   - Polished vs rough (same base material)
   - Paneled vs exposed (same base material)
   - Integrated fixtures in same material family
-- Don't use outdoor materials like grass, soil, or open sky unless suitable for interior (e.g., indoor gardens, caves)
+
+- INTERIOR MATERIAL TRANSFORMATIONS (how exterior materials appear inside):
+  • Exterior stone → interior: polished stone floors, plastered/exposed stone walls, stone accents
+  • Exterior wood → interior: wood paneling, flooring, ceiling beams, trim details
+  • Exterior metal → interior: metal fixtures, railings, decorative elements, structural supports
+  • Exterior glass → interior: windows, partitions, skylights, decorative panels
+  • Exterior brick → interior: exposed brick walls, brick flooring, painted brick
+  • Exterior concrete → interior: polished concrete floors, concrete walls (smooth or textured)
+
+- QUALITY LEVEL must match architectural_tone:
+  • Basic/utilitarian exterior → simple finishes, practical materials, minimal decoration
+  • High-quality/ornate exterior → refined finishes, premium materials, decorative details
+  • Rustic exterior → weathered finishes, handcrafted elements, natural imperfections
+  • Modern exterior → clean finishes, precise details, contemporary materials
+
+- NO OUTDOOR GROUND MATERIALS in enclosed interiors:
+  • NO grass, soil, dirt, sand (unless deliberately an indoor garden feature)
+  • NO outdoor vegetation spreading across floors/walls
+  • Use proper flooring: wood, stone, tile, carpet, metal, concrete, etc.
+
 - Match lighting fixtures to material context (technological fixtures for tech materials, organic sources for natural materials)
 
 6. COMPOSITION (MUST include NAVIGABLE ELEMENTS *inside* these layers)
