@@ -52,9 +52,22 @@ BEFORE creating the interior, infer it from the parent structure:
 - Wide (domes/arenas): emphasize circular expanse and roof curvature.
 
 5. MATERIALS & LIGHTING
-- Infer interior materials from exterior clues but adapt for indoor use (e.g., stone walls become polished stone or plaster).
-- Don't use outdoor materials like grass, soil, or open sky unless suitable for interior (e.g., indoor gardens, caves).
-- Match lighting to exterior context (natural light from windows, artificial fixtures).
+- PRESERVE exact material types from parent - DO NOT substitute with different material categories
+- Adaptation means CONFIGURATION/FINISH, not material replacement:
+  - Oxidized metal → interior panels/walls/floors of oxidized metal (NOT wood/stone/plaster)
+  - Ice → interior ice formations/structures (NOT converted to glass/crystal unless parent specifies)
+  - Synthetic materials → keep synthetic (NOT replaced with natural materials)
+  - Stone → interior stone surfaces (polished/rough variations acceptable, same material)
+- Genre determines material vocabulary:
+  - Sci-fi/alien → metallic alloys, synthetics, technological materials stay dominant
+  - Fantasy → magical materials stay magical
+  - Natural → organic materials stay organic
+- Interior finish variations (acceptable within same material):
+  - Polished vs rough (same base material)
+  - Paneled vs exposed (same base material)
+  - Integrated fixtures in same material family
+- Don't use outdoor materials like grass, soil, or open sky unless suitable for interior (e.g., indoor gardens, caves)
+- Match lighting fixtures to material context (technological fixtures for tech materials, organic sources for natural materials)
 
 6. COMPOSITION (MUST include NAVIGABLE ELEMENTS *inside* these layers)
 [COMPOSITION:]

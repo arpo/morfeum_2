@@ -59,7 +59,7 @@ Materials: ${[
     context.currentNode.data.materials_accents
   ]
     .filter(Boolean)
-    .join(', ') || ''}
+    .join(', ') || context.currentNode.dna.materials_base || ''}
     
 Colors: ${[
     context.currentNode.data.colors_dominant,
@@ -68,7 +68,7 @@ Colors: ${[
     context.currentNode.data.colors_ambient 
   ]
     .filter(Boolean)
-    .join(', ') || ''}
+    .join(', ') || context.currentNode.dna.palette_bias || ''}
 
 ${context.currentNode.dna.genre ? `Genre: ${context.currentNode.dna.genre}` : ''}
 ${context.currentNode.dna.architectural_tone ? `Architectural Tone: ${context.currentNode.dna.architectural_tone}` : ''}
