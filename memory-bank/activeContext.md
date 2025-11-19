@@ -5,6 +5,36 @@ The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
 
+- **Architectural Consistency & DNA Enrichment (Nov 19, 2025):**
+  - **Fixed major inconsistency** where exterior/interior didn't match:
+    - Wood manor exteriors generated stone cathedral interiors
+    - Architectural style (Gothic) overrode functional identity (Residential)
+    - Missing DNA fields caused incomplete context
+  - **Key Changes:**
+    1. **Functional Identity Enforcement** (`interiorInstructions.ts`):
+       - Added FUNCTIONAL IDENTITY rules (highest priority)
+       - Function > Style: "Gothic Manor" = Manor first, Gothic second
+       - Anti-Drift rules: Prevent church vocabulary for houses
+       - Generic solution works for any structure type (Manor, Factory, Temple, etc.)
+    2. **Complete DNA Passing** (`nicheImagePrompt.ts`):
+       - Fixed missing scene fields (atmosphere, colorsAndLighting, mood, sounds)
+       - Fixed missing material/color breakdowns (primary_surfaces, dominant, ambient)
+       - Reorganized into "Scene-Specific Details" vs "Cascading Style Attributes"
+       - Added Functional Context injection to guide LLM on building type
+    3. **DNA Cascading** (mergeDNA integration):
+       - Implemented proper parent→child DNA inheritance using mergeDNA
+       - Fixed string "null" vs JSON null issue in completeDNAGeneration.ts
+       - cultural_tone and other cascading fields now inherit properly
+    4. **Rich DNA Descriptions** (`completeDNAGeneration.ts`):
+       - Added examples of detailed architectural_tone
+       - "decaying grandeur" → "decaying Victorian grandeur with ornate Gothic arches, weathered neoclassical columns, elaborate carved molding"
+       - Fixed JSON null vs string "null" guidance
+  - **Files Modified:**
+    - `packages/backend/src/engine/generation/prompts/navigation/interiorInstructions.ts`
+    - `packages/backend/src/engine/generation/prompts/navigation/nicheImagePrompt.ts`
+    - `packages/backend/src/engine/generation/prompts/locations/completeDNAGeneration.ts`
+  - **Result:** Interiors now properly reflect exterior function AND style while maintaining consistency
+
 - **Niche Nesting Bug Fix (Nov 18, 2025):**
   - **Fixed critical bug** - Niches were being nested inside other niches instead of being siblings under parent location
   - **Root cause identified:** Frontend was hardcoding `type: 'location'` for all nodes sent to backend

@@ -39,6 +39,15 @@
 - [x] Entity session cleanup on delete
 
 ### Technical Improvements
+- [x] Architectural consistency & DNA enrichment (Nov 19, 2025)
+  - Fixed major inconsistency where exterior/interior didn't match
+  - Functional Identity enforcement (houses look like houses, not churches)
+  - Complete DNA field passing (all scene-specific and cascading attributes)
+  - DNA inheritance/cascading (parent DNA merges with child DNA using mergeDNA)
+  - Rich architectural_tone examples (detailed style descriptions)
+  - Material consistency (exterior materials properly transform to interior)
+  - Fixed string "null" vs JSON null in DNA generation
+  - Impact: Interiors now properly reflect exterior function AND style while maintaining consistency
 - [x] Niche nesting bug fix (Nov 18, 2025)
   - Fixed critical bug where niches were being nested inside other niches
   - Root cause: Frontend was hardcoding `type: 'location'` for all nodes
