@@ -10,7 +10,6 @@ import { buildNode } from '../../generation/shared/nodeBuilder';
 import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
 import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
-import { fluxRoofFix } from '../../generation/prompts/shared/constants';
 import { findParentLocationNode } from '../navigationHelpers';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
@@ -54,24 +53,7 @@ export async function runCreateLocationNodePipeline(
 
   // Step 2: Generate FLUX image using shared module
   let imageUrl: string;
-
-
-  // Add camera style and perspective if provided
-  if (intent.spaceType === 'exterior') {
-    imagePrompt += `
-        
-    ${NICHE_CAMERA} 
-    
-`
-  } else {
-    imagePrompt += `
-        
-    ${NICHE_CAMERA}
-    
-    ${fluxRoofFix}
-    
-`
-  }
+  imagePrompt += `${NICHE_CAMERA} `
 
   if (shouldGenerateImage) {
     const result = await generateLocationImage(apiKey, imagePrompt);

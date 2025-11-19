@@ -1,6 +1,4 @@
-import { IntentResult } from "../../../navigation";
-import { NICHE_SHOT_EXTERIOR } from "./cameraConfig";
-import { fluxRoofFix, NoCreatures, morfeumVibes, qualityPrompt } from "./constants";
+import { morfeumVibes, NoCreatures, qualityPrompt } from "./constants";
 
 export function generalPromptFix(prompt: string): string {
 
@@ -13,7 +11,7 @@ ${NoCreatures}
 
 ${qualityPrompt}
 
-    `;
+`;
 
     return res
 }

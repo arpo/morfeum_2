@@ -11,10 +11,6 @@
 export const interiorInstructionsTemplate = `
 IMMERSIVE INTERIOR PERSPECTIVE (ABSOLUTE RULE):
 
-CAMERA POSITION: The camera is DEEP INSIDE the room.
-
-ABSOLUTELY NO: "Dollhouse" views, Cross-sections, "Cutaway" views, or "Half-Indoor/Half-Outdoor" compositions.
-
 WALLS: The scene must be enclosed by walls/boundaries on all sides (unless specifically an open-air courtyard).
 
 SKY: No open sky visible except through defined architectural openings (windows, skylights, cracks in ruins).
@@ -69,8 +65,6 @@ Flooring: MUST be built material (Wood, Tile, Stone) UNLESS structure is Cave/Ru
 
 COMPOSITION (CENTERED BUT ASYMMETRIC):
 
-Camera: Central perspective (1-point) looking into depth allowed.
-
 Asymmetric Content (CRITICAL): Content must NOT be mirrored.
 
 If a heavy element (staircase) is on LEFT, the RIGHT must be open or different.
@@ -81,7 +75,7 @@ NAVIGABLE ELEMENTS (MANDATORY):
 
 MUST include 2-3 navigable elements inside the layers.
 
-Types: Passage, corridor, stairs, ladder, ramp, platform, door.
+Types: Passage, corridor, stairs, ladder, ramp, platform, door, elevator, door, arch, portal
 
 Visibility: Highlight via Lighting (glow/spots) or Material Contrast.
 
