@@ -8,8 +8,6 @@ export const morfeumVibes = 'living-surface sheen, sharp highlights, deep detail
 
 export const qualityPrompt = 'crisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain';
 
-export const negativePrompt = 'lowres, bad anatomy, blurry, fuzzy, distorted, deformed, disfigured, mutated, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, fused fingers, too many fingers, long neck, ugly, tiling, poorly drawn, watermark, grainy, jpeg artifacts, low quality';
-
 export const fluxRoofFix = "CRITICAL!!!: This is an interior scene. Fully enclosed ceiling of thick, continuous solid wood/metal/stone with no gaps, holes, skylights, or open breaches to the sky";
 
 export const NoCreatures = `

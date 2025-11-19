@@ -43,16 +43,11 @@ export function nicheImagePrompt(
   
   const prompt = `
 You are an expert at creating image prompts for FLUX image generation.
-
-TASK: Create an image prompt for ${intent.intent} "${context.currentNode.name}".
-
 PARENT STRUCTURE ANALYSIS (CRITICAL):
 You entered through: "${decision.reasoning}"
 
 ${context.currentNode.data.looks ? `Parent structure appearance: "${context.currentNode.data.looks}"` : ''}
-
 ${intent.spaceType === 'interior' ? interiorInstructions : exteriorInstructions}
-  
 You should create a ${intent.spaceType} niche ${intent.spaceType === 'exterior' ? 'within' : 'inside'} ${context.currentNode.name} that has the following features:
 
 ${context.currentNode.data?.description ? `Description: ${context.currentNode.data.description}` : ''}
@@ -60,7 +55,6 @@ ${context.currentNode.data?.dominantElements?.length ? `Dominant elements: ${con
 ${context.currentNode.data?.uniqueIdentifiers?.length ? `Unique Identifiers: ${context.currentNode.data.uniqueIdentifiers.join(', ')}` : ''}
 
 === SCENE-SPECIFIC DETAILS (from merged DNA) ===
-
 ${mergedDNA.looks ? `Looks: ${mergedDNA.looks}` : ''}
 ${mergedDNA.spatialLayout ? `Spatial Layout: ${mergedDNA.spatialLayout}` : ''}
 ${mergedDNA.atmosphere ? `Atmosphere: ${mergedDNA.atmosphere}` : ''}

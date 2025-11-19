@@ -3,6 +3,7 @@
  */
 
 export const sampleLocationPrompts = [
+  'An alien otherworldly planet, with floating islands, alien structures, abandoned machines,, inspired by Roger Dean , Purple sky, visible sky desert, dunes, abandoned  building, organic tentacles',
   'Outside an alien wreckage, oxidized vessel, mostly covered by snow drifts in a frozen tundra',
   "The Mirror Foundry (exterior), a derelict glassworks at the edge of the marsh, its furnaces still breathing faint light through broken panes.",
   "The Observatory of Ashes (exterior), perched on a basalt ridge, its domes cracked open to the sky like burned eyes.",

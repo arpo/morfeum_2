@@ -13,33 +13,13 @@ IMMERSIVE INTERIOR PERSPECTIVE (ABSOLUTE RULE):
 
 WALLS: The scene must be enclosed by walls/boundaries on all sides (unless specifically an open-air courtyard).
 
-SKY: No open sky visible except through defined architectural openings (windows, skylights, cracks in ruins).
-
 PARENT EXCLUSION: The entrance/door you came through is OUT OF FRAME behind the camera. Focus forward.
 
 {{CREATIVITY_INSTRUCTIONS}}
 
-FUNCTIONAL IDENTITY (THE PRIORITY):
-
-Determine PARENT FUNCTION (Manor, Factory, Temple, Bunker, etc.) -> Interior MUST behave like that space.
-
-House/Cottage → RESIDENTIAL (foyers, halls, parlors; not cavernous voids).
-
-Castle/Palace → MONUMENTAL (throne rooms, great halls, galleries).
-
-Temple/Cathedral → RELIGIOUS (naves, altars, soaring vaults).
-
-Bunker/Prison → UTILITARIAN (corridors, cells, low ceilings).
-
-Cave/Grotto → NATURAL (rock formations, uneven floors).
-
 BIOME & OVERGROWTH LOGIC (CONDITIONAL): Analyze the implied CONDITION to determine nature level:
 
 IF Clean/Inhabited (e.g., Modern Lab, Occupied Manor):
-
-STRICT CONTAINMENT: NO wild vines, ivy, or grass indoors. Floors must be built materials.
-
-ALLOWED: Potted plants, vases, deliberate indoor gardens only.
 
 IF Ruined/Abandoned (e.g., Ancient Ruins, Dungeon):
 
@@ -57,17 +37,9 @@ CEILING: Match roof (domed→dome; flat→flat; vaulted→arches).
 
 SCALE: Small (<15m)=3–5m ceilings; Large (>15m)=8–15m ceilings.
 
-MATERIALS: PRESERVE EXTERIOR MATERIALS.
-
-Stone→Stone; Wood→Wood; Metal→Metal; Concrete→Concrete.
-
-Flooring: MUST be built material (Wood, Tile, Stone) UNLESS structure is Cave/Ruined.
-
 COMPOSITION (CENTERED BUT ASYMMETRIC):
 
 Asymmetric Content (CRITICAL): Content must NOT be mirrored.
-
-If a heavy element (staircase) is on LEFT, the RIGHT must be open or different.
 
 AVOID: Bilateral symmetry, matching columns on both sides.
 
