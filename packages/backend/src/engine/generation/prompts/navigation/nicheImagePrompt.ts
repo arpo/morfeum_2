@@ -49,12 +49,9 @@ TASK: Create an image prompt for ${intent.intent} "${context.currentNode.name}".
 PARENT STRUCTURE ANALYSIS (CRITICAL):
 You entered through: "${decision.reasoning}"
 
-FUNCTIONAL CONTEXT: Infer from name/desc (e.g., "Residential/Manor", "Religious/Temple", "Industrial/Factory", "Commercial/Shop").
-If it is a House/Manor/Cottage, enforce RESIDENTIAL scale (foyers, halls, not naves/caverns).
-
 ${context.currentNode.data.looks ? `Parent structure appearance: "${context.currentNode.data.looks}"` : ''}
 
-${intent.spaceType === 'interior' ? interiorInstructions : intent.spaceType === 'exterior' ? exteriorInstructions : ''}
+${intent.spaceType === 'interior' ? interiorInstructions : exteriorInstructions}
   
 You should create a ${intent.spaceType} niche ${intent.spaceType === 'exterior' ? 'within' : 'inside'} ${context.currentNode.name} that has the following features:
 
@@ -82,8 +79,6 @@ ${mergedDNA.dominant ? `Dominant Colors: ${mergedDNA.dominant}` : ''}
 ${mergedDNA.secondary ? `Secondary Colors: ${mergedDNA.secondary}` : ''}
 ${mergedDNA.accent ? `Accent Colors: ${mergedDNA.accent}` : ''}
 ${mergedDNA.ambient ? `Ambient Light: ${mergedDNA.ambient}` : ''}
-
-=== CASCADING STYLE ATTRIBUTES ===
 
 ${mergedDNA.genre ? `Genre: ${mergedDNA.genre}` : ''}
 
@@ -115,7 +110,6 @@ OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should describe the outdoor area you now stand within.
 
 ` : 
-
 `
 REQUIREMENTS (INTERIOR NICHE):
 1. Imagine what it looks like when we JUST STEPPED INSIDE through the entrance, don't show what you stepped in from like the door, gate etc. That's supposed to be behind the viewer. Show the immediate enclosed space.
