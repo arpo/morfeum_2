@@ -9,66 +9,89 @@
  * with the appropriate creativity level instructions
  */
 export const interiorInstructionsTemplate = `
-PARENT STRUCTURE EXCLUSION (ABSOLUTE RULE):
-The parent structure (entry/doorway/portal) is COMPLETELY OUT OF FRAME behind the camera.
-Camera focuses ONLY on the new room ahead.
-DO NOT render the door you just entered.
+IMMERSIVE INTERIOR PERSPECTIVE (ABSOLUTE RULE):
+
+CAMERA POSITION: The camera is DEEP INSIDE the room.
+
+ABSOLUTELY NO: "Dollhouse" views, Cross-sections, "Cutaway" views, or "Half-Indoor/Half-Outdoor" compositions.
+
+WALLS: The scene must be enclosed by walls/boundaries on all sides (unless specifically an open-air courtyard).
+
+SKY: No open sky visible except through defined architectural openings (windows, skylights, cracks in ruins).
+
+PARENT EXCLUSION: The entrance/door you came through is OUT OF FRAME behind the camera. Focus forward.
 
 {{CREATIVITY_INSTRUCTIONS}}
 
-FUNCTIONAL IDENTITY & ANTI-DRIFT (STRICT PRIORITY):
-1. Detect Parent Function: Manor, Factory, Temple, Bunker, etc.
-2. Interior MUST behave like that function regardless of style.
-   - House/Manor → DOMESTIC (Foyers, halls, parlors). NEVER cavernous voids/cathedral-like.
-     (NO: Naves, Pews, Altars. YES: Staircase Hall, Reception Room).
-   - Factory/Bunker → UTILITARIAN/INDUSTRIAL. NEVER dungeon-like.
-     (NO: Medieval stonework/torches. YES: Machinery, catwalks, assembly floor).
-   - Castle/Palace → MONUMENTAL (Throne rooms, galleries).
-   - Cave → NATURAL (Uneven floors, organic rock).
+FUNCTIONAL IDENTITY (THE PRIORITY):
 
-ARCHITECTURAL CONSISTENCY (STYLE MIRRORING):
-match architectural_complexity: (Basic→Minimal | Ornate→Detailed | Rustic→Weathered | Modern→Sleek).
-* ELEMENTS MUST MATCH EXTERIOR STYLE:
-  - Windows: Echo exterior curvature (arched/square/slit).
-  - Doorways: Match arch style of parent (rounded/pointed/flat).
-  - Columns/Pillars: Interior columns must match exterior style, proportion, and material.
-  - Trim/Molding: Match exterior complexity level.
-  - Ceiling Details: Reflect exterior roof complexity (flat vs vaulted vs coffered).
-* FLORA EXCLUSION: NO outdoor vegetation (grass/trees/vines) on floors/walls. Potted plants ONLY.
+Determine PARENT FUNCTION (Manor, Factory, Temple, Bunker, etc.) -> Interior MUST behave like that space.
 
-GEOMETRY & SCALE:
-1. FORM: Match interior shape to exterior geometry (Round→Circular plan | Rectangular→Corners | Gothic→Arched).
-2. CEILING: Match roof type (Domed→Dome | Flat→Flat | Pitched→Angled).
-3. SCALE:
-   - Small (<15m): 3–5m ceilings.
-   - Large/Colossal: 8–20m+ ceilings.
-   - Structure Type: Vertical (Towers) → Upward depth. Horizontal (Halls) → Linear depth. Wide (Arenas) → Radial.
+House/Cottage → RESIDENTIAL (foyers, halls, parlors; not cavernous voids).
 
-MATERIALS & LIGHTING (ADAPTATION RULE):
-PRESERVE material family. ADAPT finish for interior.
-- Stone Ext. → Interior: Polished stone floors, plastered/exposed stone walls.
-- Wood Ext. → Interior: Paneling, beams, wood flooring.
-- Metal Ext. → Interior: Metal fixtures, grates, structural supports.
-- Sci-Fi/Synths → Keep synthetic. DO NOT replace with natural materials.
-- GROUND RULE: NO outdoor ground (dirt/sand/grass) inside. Use built flooring (tile/wood/concrete).
+Castle/Palace → MONUMENTAL (throne rooms, great halls, galleries).
 
-COMPOSITION (ASYMMETRIC & NAVIGABLE):
-RULES:
-- NO perfect symmetry. Use Rule of Thirds. Offset focal points.
-- MUST include 2-3 "Navigable Elements" total (passages, stairs, ramps, doors).
-- VISUAL PROMINENCE: Navigable elements must be highlighted via Light (glow/spots), Contrast (material), or Color.
+Temple/Cathedral → RELIGIOUS (naves, altars, soaring vaults).
 
-[COMPOSITION LAYERS]
-- **Foreground:**
-  Floor textures + 1 Navigable Element with visual prominence.
-  (e.g., "illuminated stone steps rising left [navigable: stairs, left]").
+Bunker/Prison → UTILITARIAN (corridors, cells, low ceilings).
 
-- **Midground:**
-  Core architectural structures (columns, walls, arches) echoing FORM.
-  MUST include 1-2 Navigable Elements (HIGH VISIBILITY).
-  (e.g., "spotlit arched doorway on right, metal frame [navigable: door, right]").
+Cave/Grotto → NATURAL (rock formations, uneven floors).
 
-- **Background:**
-  Dominant spatial cue (Depth/Height).
-  MAY include 1 distant navigable element.
+BIOME & OVERGROWTH LOGIC (CONDITIONAL): Analyze the implied CONDITION to determine nature level:
+
+IF Clean/Inhabited (e.g., Modern Lab, Occupied Manor):
+
+STRICT CONTAINMENT: NO wild vines, ivy, or grass indoors. Floors must be built materials.
+
+ALLOWED: Potted plants, vases, deliberate indoor gardens only.
+
+IF Ruined/Abandoned (e.g., Ancient Ruins, Dungeon):
+
+OVERGROWTH ALLOWED: Ivy on walls, roots breaking floors, debris are acceptable.
+
+IF Nature-Themed (e.g., Elven Hall, Druid Hut):
+
+INTEGRATION: Living wood, flowered vines, and woven branches are acceptable structural elements.
+
+ARCHITECTURAL LOGIC:
+
+FORM: Match interior plan to exterior (round→circular; rectangular→corners).
+
+CEILING: Match roof (domed→dome; flat→flat; vaulted→arches).
+
+SCALE: Small (<15m)=3–5m ceilings; Large (>15m)=8–15m ceilings.
+
+MATERIALS: PRESERVE EXTERIOR MATERIALS.
+
+Stone→Stone; Wood→Wood; Metal→Metal; Concrete→Concrete.
+
+Flooring: MUST be built material (Wood, Tile, Stone) UNLESS structure is Cave/Ruined.
+
+COMPOSITION (CENTERED BUT ASYMMETRIC):
+
+Camera: Central perspective (1-point) looking into depth allowed.
+
+Asymmetric Content (CRITICAL): Content must NOT be mirrored.
+
+If a heavy element (staircase) is on LEFT, the RIGHT must be open or different.
+
+AVOID: Bilateral symmetry, matching columns on both sides.
+
+NAVIGABLE ELEMENTS (MANDATORY):
+
+MUST include 2-3 navigable elements inside the layers.
+
+Types: Passage, corridor, stairs, ladder, ramp, platform, door.
+
+Visibility: Highlight via Lighting (glow/spots) or Material Contrast.
+
+POSITIONING: You MUST explicitly state the position of every navigable element in the output prompt using format: [navigable: item type, specific position].
+
+[COMPOSITION LAYERS:]
+
+Foreground: Floor textures/entry details. MUST include 1 navigable element. (e.g., "polished tile steps rising on the left [navigable: steps, foreground left]").
+
+Midground: Core structures (columns, walls). MUST include 1-2 visible navigable elements. (e.g., "open archway on right wall leading to dark room [navigable: archway, midground right]").
+
+Background: Dominant spatial cue (height/depth). MAY include 1 element. (e.g., "distant elevator door at end of hall [navigable: elevator, background center]").
 `;
