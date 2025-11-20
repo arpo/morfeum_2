@@ -6,68 +6,65 @@
 export const interiorInstructionsTemplate = `
 IMMERSIVE INTERIOR PERSPECTIVE (ABSOLUTE RULE):
 
-WALLS: The scene must be enclosed by walls/boundaries on all sides (unless specifically an open-air courtyard).
+WALLS: The scene must be enclosed by walls/boundaries on all sides.
+(Exception: If "Glass" structure, walls are transparent panels revealing sky/light, but MUST have visible structural framing).
 
 PARENT EXCLUSION: The entrance/door you came through is OUT OF FRAME behind the camera. Focus forward.
 
 {{CREATIVITY_INSTRUCTIONS}}
 
-BIOME & OVERGROWTH LOGIC (CONDITIONAL): Analyze the implied CONDITION to determine nature level:
+ICE PREVENTION PROTOCOL (CRITICAL FOR GLASS/CRYSTAL PARENTS):
+If the structure is Glass/Crystal/Blue-toned:
+1.  **ENFORCE STRUCTURAL GRID:** You MUST describe the **Metal/Steel/Composite framework** (mullions, struts, geodesic grid) holding the panels. Glass is NOT self-supporting.
+2.  **FLOOR CONTRAST:** The floor MUST be a distinct, solid material (Polished Concrete, Dark Metal, Dark Stone). DO NOT match the floor color to the glass color (avoids "whiteout" effect).
+3.  **BAN:** "Ice," "Frost," "Frozen," "Glacier," "Snow," "Cloudy Crystal."
 
-IF Clean/Inhabited (e.g., Modern Lab, Occupied Manor):
-STRICT CONTAINMENT: NO wild vines, ivy, or grass indoors. Floors must be built materials.
-ALLOWED: Potted plants, vases, deliberate indoor gardens only.
-
-IF Ruined/Abandoned (e.g., Ancient Ruins, Dungeon):
-OVERGROWTH ALLOWED: Ivy on walls, roots breaking floors, debris are acceptable.
-
-IF Nature-Themed (e.g., Elven Hall, Druid Hut):
-INTEGRATION: Living wood, flowered vines, and woven branches are acceptable structural elements.
+BIOME & OVERGROWTH LOGIC (CONDITIONAL):
+IF Clean/Inhabited: STRICT CONTAINMENT (No wild vines/grass). Built floors only.
+IF Ruined/Abandoned: OVERGROWTH ALLOWED (Ivy, debris).
+IF Nature-Themed: INTEGRATION (Living wood structures allowed).
 
 ARCHITECTURAL LOGIC:
 
-FORM: Match interior plan to exterior (round→circular; rectangular→corners; globe/orb→spherical glass enclosure).
+FORM: Match interior plan to exterior.
+• Round → Circular plan.
+• Globe/Sphere → **Geodesic/Ribbed Dome** (Show the grid).
+• Rectangular → Straight walls.
 
 CEILING: Match roof (domed→dome; flat→flat; vaulted→arches).
 
 SCALE: Small (<15m)=3–5m ceilings; Large (>15m)=8–15m ceilings.
 
 MATERIAL TRANSLATION LOGIC (CRITICAL):
-PRESERVE material category but REFINE the finish for interior use:
-• Ext. Stone → Int. Polished Stone Floors / Plastered Walls / Masonry Accents.
-• Ext. Wood → Int. Wood Paneling / Floorboards / Exposed Beams.
-• Ext. Metal → Int. Structural Supports / Grating / Wall Plating.
-• Ext. Concrete → Int. Smooth Industrial / Polished finish.
-• Ext. Brick → Int. Painted Brick / Exposed Loft Style.
-• Ext. Glass/Crystal → Int. Transparent Glass Walls / Faceted Domes / Visible Structural Frame.
-
-FLOORING RULE: Floors must be CONSTRUCTED (Tile, Wood, Carpet, Stone, Glass).
-ABSOLUTELY NO raw dirt, grass, or mud (unless "Ruined" condition applies).
+Translate Exterior Materials into INTERIOR FINISHES.
+• Ext. Glass/Crystal → **Int. ARCHITECTURAL GLAZING (High-Tech Atrium style)**.
+  - *Texture:* Transparent, Reflective, Thin panels (NOT solid blocks).
+  - *Detail:* Visible joining hardware, metal struts, ventilation ducts.
+• Ext. Stone → Int. Polished Stone / Plaster / Masonry (Warm or Dark tones if room is blue).
+• Ext. Wood → Int. Paneling / Beams.
+• Ext. Metal → Int. Supports / Grating / Plating.
+• Ext. Concrete → Int. Smooth Industrial.
 
 COMPOSITION (CENTERED BUT ASYMMETRIC):
-
 Asymmetric Content (CRITICAL): Content must NOT be mirrored.
-
-AVOID: Bilateral symmetry, matching columns on both sides.
+AVOID: Bilateral symmetry.
 
 NAVIGABLE ELEMENTS (MANDATORY):
-
 MUST include 2-3 navigable elements inside the layers.
-
-Types: Passage, corridor, stairs, ladder, ramp, platform, door, elevator, door, arch, portal
-
-Visibility: Highlight via Lighting (glow/spots) or Material Contrast.
-
-POSITIONING: You MUST explicitly state the position of every navigable element in the output prompt using format: [navigable: item type, specific position].
+Types: Passage, corridor, stairs, ladder, ramp, platform, door, elevator, arch.
+Visibility: Highlight via Lighting or Material Contrast.
+POSITIONING: MUST state position: [navigable: item type, specific position].
 
 [COMPOSITION LAYERS:]
 
-Foreground: Floor textures/entry details. MUST include 1 navigable element. (e.g., "polished tile steps rising on the left [navigable: steps, foreground left]").
+Foreground: Floor textures/entry details. MUST include 1 navigable element.
+(e.g., "dark polished stone platform with metal railing [navigable: platform, foreground center]").
 
-Midground: Core structures (columns, walls). MUST include 1-2 visible navigable elements. (e.g., "open archway on right wall leading to dark room [navigable: archway, midground right]").
+Midground: Core structures (columns, walls). MUST include 1-2 visible navigable elements.
+(e.g., "glass-paneled partition with steel frame on right [navigable: partition, midground right]").
 
-Background: Dominant spatial cue (height/depth). MAY include 1 element. (e.g., "distant elevator door at end of hall [navigable: elevator, background center]").
-
+Background: Dominant spatial cue. MAY include 1 element.
+(e.g., "curved glass wall looking out to sky [navigable: window, background]").
 `;
 
 // Old longer prompt

@@ -4855,426 +4855,279 @@
       "searchDesc": "Circular science outpost interior with wood paneling, metal accents, and a view of a misty rainforest.",
       "slug": "interior-of-canopy-strider-outpost"
     },
-    "loc-1763625555816-3b9ly7xnk": {
-      "id": "loc-1763625555816-3b9ly7xnk",
+    "loc-1763627946292-mqwzvc1r8": {
+      "id": "loc-1763627946292-mqwzvc1r8",
       "type": "host",
-      "name": "The Sol System",
+      "name": "World",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A vast expanse of cosmic dust and nebulae punctuated by the brilliant light of stars and the diverse forms of planets, moons, and artificial constructs. The visual landscape is a tapestry of celestial bodies and advanced engineering.",
-        "colorsAndLighting": "The primary palette is dictated by stellar radiation and cosmic phenomena, ranging from the stark whites and blues of young stars to the deep reds and oranges of older ones, interspersed with the muted tones of nebulae. Lighting is often dramatic and high-contrast.",
-        "atmosphere": "The vacuum of space is the dominant atmosphere, punctuated by localized, controlled environments on celestial bodies or within stations. Where atmospheres exist, they can range from thin and alien to rich and Earth-like, but are generally clean and unpolluted within advanced sectors.",
-        "materials": "Dominant materials include advanced alloys, exotic composites, crystalline structures, and engineered organic matter. Natural materials like stone and rare earth metals are also utilized, often in highly refined forms.",
-        "mood": "A sense of awe, exploration, and advanced technological achievement permeates the system. There's an underlying feeling of potential and mystery, with both serene beauty and the starkness of the void.",
-        "sounds": "Silence of space, hum of engines, distant transmissions, faint cosmic radiation",
-        "spatialLayout": "Vast, three-dimensional environments defined by orbital mechanics and technological infrastructure. Linear travel corridors and spherical habitats are common.",
-        "primary_surfaces": "Exotic alloys, polished composites, hardened crystalline structures",
-        "secondary_surfaces": "Engineered organic materials, refined stone, energy fields",
-        "accent_features": "Holographic displays, glowing conduits, integrated lighting, gravity plating",
-        "dominant": "Blues, Whites, Cosmic Violets",
-        "secondary": "Oranges, Reds, Silvers",
-        "accent": "Gold, Electric Cyan",
-        "ambient": "Neutral, with variations based on stellar proximity",
-        "genre": "sci-fi",
-        "architectural_tone": "Sleek, functional, and advanced with a focus on geometric precision, integrated systems, and efficient use of space. Materials are often high-tech and polished, with a tendency towards modularity and modular design.",
-        "cultural_tone": "Driven by scientific advancement, exploration, and resource management. Societies are often highly organized and collaborative, with a strong emphasis on progress and innovation.",
-        "materials_base": "Advanced alloys, engineered composites, reinforced glass, polished polymers",
-        "mood_baseline": "Optimistic, exploratory, technologically driven",
-        "palette_bias": "Cool spectrum with vibrant accents, high contrast",
-        "soundscape_base": "Technological hums, synthesized tones, clean ambient sound",
-        "flora_base": "Engineered bioluminescent flora, genetically modified nutrient-rich plants, hydroponic crops",
-        "fauna_base": "Genetically engineered or cybernetically enhanced creatures, native alien species adapted to unique environments, synthetic lifeforms"
+        "looks": "A vibrant sphere showcasing diverse landscapes from arid deserts and lush forests to icy tundras and vast oceans. Natural geological formations like mountains, canyons, and plains are prominent. Celestial bodies such as moons and distant stars are visible in the sky.",
+        "colorsAndLighting": "A rich palette of natural colors, with dynamic lighting influenced by a sun, creating gradients of light and shadow across varied terrains. Ambient light varies from warm sunlight to cool moonlight.",
+        "atmosphere": "A breathable atmosphere supporting a wide range of life. Weather patterns are dynamic, ranging from clear skies and gentle breezes to dramatic storms and snowfalls. Temperature varies significantly across regions.",
+        "materials": "Primarily natural materials including rock, soil, water, ice, and organic matter. Some regions may feature rare crystalline formations or metallic ores.",
+        "mood": "A sense of awe and wonder at the planet's natural beauty and immense scale. It evokes feelings of exploration and discovery.",
+        "sounds": "Wind, water, distant animal calls, rustling leaves, geological rumbles",
+        "spatialLayout": "Vast, open landscapes with significant verticality from mountains and canyons, and expansive horizontal plains and oceans. Natural formations dictate the flow of space.",
+        "primary_surfaces": "Earth, rock, water, ice",
+        "secondary_surfaces": "Vegetation, sand, geological deposits",
+        "accent_features": "Celestial bodies, atmospheric phenomena, unique geological formations",
+        "dominant": "Natural earth tones, blues, greens",
+        "secondary": "Grays, whites, browns",
+        "accent": "Vibrant blues, deep greens, fiery oranges",
+        "ambient": "Natural light, ranging from warm to cool",
+        "genre": "fantasy",
+        "architectural_tone": "Nature-inspired and ancient, with structures that harmonize with the environment or are lost to time. Emphasizes natural forms and geological integration.",
+        "cultural_tone": "Primitive to highly advanced, with cultures deeply connected to nature or the cosmos. Can range from nomadic tribes to ancient civilizations.",
+        "materials_base": "Natural, organic, and geological materials, with occasional use of refined minerals or magically enhanced substances.",
+        "mood_baseline": "Mysterious, awe-inspiring, and untamed.",
+        "palette_bias": "Earthy tones with vibrant natural accents.",
+        "soundscape_base": "Natural ambient sounds, often punctuated by primal or elemental phenomena.",
+        "flora_base": "Diverse and robust, ranging from towering ancient trees and glowing fungi to hardy desert plants and resilient alpine vegetation.",
+        "fauna_base": "Varied and often majestic, including massive beasts, agile predators, and exotic creatures adapted to specific biomes."
       },
       "imagePath": "",
       "navigableElements": [],
       "dominantElements": [
-        "Star",
-        "Planetary Bodies",
-        "Space Stations"
+        "Geological formations",
+        "Large bodies of water",
+        "Varying climates"
       ],
       "uniqueIdentifiers": [
-        "Vastness of Space",
-        "Gravitational Dynamics"
+        "Diverse biomes",
+        "Planetary atmosphere"
       ],
-      "slug": "the-sol-system",
-      "searchDesc": "A diverse star system featuring advanced civilizations, alien flora and fauna, and unique cosmic phenomena."
+      "slug": "world",
+      "searchDesc": "A diverse planet with varied biomes, climates, and geological formations."
     },
-    "57b17e5d-3780-4472-a0a9-2463d1861081": {
-      "id": "57b17e5d-3780-4472-a0a9-2463d1861081",
+    "27c02739-a29c-46e9-a96c-ab87f1e4e10c": {
+      "id": "27c02739-a29c-46e9-a96c-ab87f1e4e10c",
       "type": "region",
-      "name": "The Sol System",
+      "name": "The Glasslands",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A diverse collection of planetary bodies, from gas giants to rocky terrestrial worlds, each with unique geological formations and atmospheric conditions. Orbiting stations and asteroid mining operations are visible, hinting at extensive system-wide activity.",
-        "colorsAndLighting": "The color palette is a blend of natural planetary hues – blues, greens, reds, browns – against the stark black of space, illuminated by the sun's steady yellow light. Artificial lighting from stations and ships adds points of color.",
-        "atmosphere": "The vacuum of space is the overarching atmosphere, with localized atmospheric conditions present on individual planets and moons. Some planets may have thin, exotic atmospheres, while others boast dense, life-supporting envelopes.",
-        "materials": "A mix of natural planetary crusts (rock, ice, metallic ores) and sophisticated manufactured materials from orbital infrastructure.",
-        "mood": "A sense of established order and interconnectedness, with a blend of natural beauty and persistent technological presence.",
-        "sounds": "Distant engine hums, faint radio chatter, subtle solar wind interactions",
-        "spatialLayout": "Vast distances between celestial bodies, with defined orbital paths and transit corridors. Habitats are often spherical or cylindrical.",
-        "primary_surfaces": "Natural planetary surfaces (rock, ice, regolith), metallic alloys, reinforced polymers",
-        "secondary_surfaces": "Exotic crystalline structures, bio-engineered coatings, energy shielding",
-        "accent_features": "Orbital construction, transit lanes, planetary atmospheric effects",
-        "dominant": "Natural planetary colors (blues, greens, browns)",
-        "secondary": "Cosmic Black, Stellar Yellow",
-        "accent": "Artificial lighting hues",
-        "ambient": "Neutral, with warm undertones from the sun",
+        "looks": "A surreal landscape where natural geological formations blend seamlessly with advanced, glass-like architecture. The terrain features smooth, undulating hills and polished rock surfaces that reflect the sky and surrounding structures.",
+        "colorsAndLighting": "Dominated by cool, bright blues and silvers, with sunlight scattering and reflecting intensely off the crystalline surfaces. The lighting is sharp and highlights the prismatic nature of the region.",
+        "atmosphere": "Clear, crisp air with a noticeable absence of dust or debris. The temperature is temperate and stable, creating an environment of pristine clarity. A faint, almost imperceptible shimmering effect can sometimes be observed.",
+        "materials": "Predominantly advanced, translucent, and reflective materials akin to glass, fused with smooth, polished stone and natural crystalline deposits.",
+        "mood": "Serene, futuristic, and slightly ethereal. It evokes a sense of sophisticated design and harmonious coexistence between nature and artifice.",
+        "sounds": "Soft echoes, gentle chimes, subtle hums, faint reflections",
+        "spatialLayout": "Open and flowing, with smooth transitions between natural terrain and architectural elements. Structures are often integrated into the landscape, creating a sense of unified design.",
+        "primary_surfaces": "Glass, polished stone",
+        "secondary_surfaces": "Crystalline formations, smooth earth",
+        "accent_features": "Light refractions, prismatic effects, highly reflective surfaces",
+        "dominant": "Light blue, silver",
+        "secondary": "White, clear, pale gray",
+        "accent": "Iridescent hues, deep indigo",
+        "ambient": "Cool and bright",
         "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": "Multicultural and diverse, with established trade routes and federated governance structures. A balance between natural preservation and technological expansion.",
-        "materials_base": "Natural planetary materials augmented by industrial-grade alloys and composites.",
-        "mood_baseline": "Established, interconnected, industrious",
-        "palette_bias": "Natural terrestrial palettes with stark black and yellow solar contrast",
-        "soundscape_base": "Functional ambient sounds of travel and commerce",
-        "flora_base": "Indigenous terrestrial flora on habitable planets, or specialized hydroponic and bio-engineered flora within settlements.",
-        "fauna_base": "Indigenous terrestrial fauna, or genetically modified/synthetically created fauna for specific purposes."
+        "architectural_tone": "Futuristic crystalline architecture with seamless integration into the landscape. Characterized by smooth, curved forms, large transparent panels, and a focus on light manipulation.",
+        "cultural_tone": "Advanced and contemplative, with a focus on aesthetics, scientific observation, and harmonious living.",
+        "materials_base": "Advanced composites, engineered glass, polished minerals.",
+        "mood_baseline": "Calm, enlightened, and sophisticated.",
+        "palette_bias": "Cool blues, silvers, and iridescent pastels.",
+        "soundscape_base": "Subtle, resonant sounds with a focus on clarity and reflection.",
+        "flora_base": "Minimal and highly stylized, appearing as sculpted or bioluminescent forms that complement the crystalline architecture rather than appearing wild.",
+        "fauna_base": "Rare and ethereal, perhaps small, light-bending creatures or energy-based life forms that are more perceived than seen."
       },
       "imagePath": "",
       "navigableElements": [],
       "dominantElements": [
-        "Planets",
-        "Asteroid Belts",
-        "Orbital Habitats"
+        "Crystalline structures",
+        "Sculpted landscapes",
+        "Reflective surfaces"
       ],
       "uniqueIdentifiers": [
-        "Terrestrial Bodies",
-        "Interplanetary Travel Routes"
+        "Geodesic formations",
+        "Light-refracting terrain"
       ],
-      "slug": "the-sol-system",
-      "searchDesc": "The Sol System: a diverse collection of planets, moons, and asteroid fields, interlinked by advanced technology and natural cosmic forces."
+      "slug": "the-glasslands",
+      "searchDesc": "A region of crystalline structures and light-refracting terrain, known for its unique architectural wonders."
     },
-    "750d59f2-b8e1-451d-9fae-630dacf3848d": {
-      "id": "750d59f2-b8e1-451d-9fae-630dacf3848d",
+    "f830e1b5-9ce0-4a6e-861b-14b5364734ed": {
+      "id": "f830e1b5-9ce0-4a6e-861b-14b5364734ed",
       "type": "location",
-      "name": "The Mercury Orchard",
+      "name": "The Crystal Observatory",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Rows of meticulously trimmed metallic fruit trees, their structures glinting under ambient light, surround a large, geodesic glass dome. A paved walkway, bordered by accent lighting, leads to the dome's visible entrance.",
-        "colorsAndLighting": "The scene is illuminated by a cool, blue-white internal glow from the glass dome, contrasted with warm orange and yellow accent lighting beneath the walkway and around the trees. The dominant color is blue from the dome, with secondary greens from minimal vegetation and grey from the pathway.",
-        "atmosphere": "The air is clear, still, and serene, creating a controlled and pristine environment. There is no visible mist or fog.",
-        "materials": "Primary materials are glass for the central structure and stone tiles for the walkway. Secondary materials include metallic alloys for the trees and carefully manicured low-lying vegetation.",
-        "mood": "A mood of sterile beauty, technological advancement, and quiet efficiency. The atmosphere is one of controlled nature and precise design.",
-        "sounds": "Soft hum of machinery, subtle rustling of metallic leaves, distant ambient tones",
-        "spatialLayout": "Organized rows of trees define pathways leading to a central, commanding structure. The layout is symmetrical and deliberate, emphasizing order.",
-        "primary_surfaces": "Glass, polished metallic alloys",
-        "secondary_surfaces": "Stone tiles, manicured synthetic foliage",
-        "accent_features": "Integrated pathway lighting, illuminated tree cores, reflective dome panels",
-        "dominant": "Blue",
-        "secondary": "Green, Grey, Metallic Silver",
-        "accent": "Orange, Yellow",
-        "ambient": "Cool blue with warm orange undertones",
+        "looks": "A colossal spherical structure, approximately 50-70 meters in diameter, dominates the midground, its entire exterior composed of transparent, faceted glass panels. Sunlight glints off the curved surfaces, creating bright highlights and reflecting the surrounding environment. An arched entranceway at the base of the sphere leads into a brightly lit interior. The building rests on a raised, circular platform, accessible by a wide, stone pathway. The overall impression is one of immense scale and delicate, crystalline construction.",
+        "colorsAndLighting": "Bright sunlight illuminates the scene from the upper right, casting distinct shadows and creating high contrast on the glass structure. The light is cool in tone, emphasizing the blue hues of the glass. The interior of the sphere glows with an internal, cool-toned light.",
+        "atmosphere": "The air appears clear with a slight haze visible in the distance between the mountain ranges. The sky is bright and sunny, suggesting a dry and temperate climate. No visible atmospheric phenomena like fog or mist are present.",
+        "materials": "The primary material is glass, with secondary use of stone for the platform and pathway.",
+        "mood": "A sense of awe, grandeur, and scientific wonder.",
+        "sounds": "Faint echoes, ambient hum, distant wind",
+        "spatialLayout": "The foreground consists of a wet-looking stone pathway that leads towards the central midground. The midground is dominated by the massive spherical glass building situated on a circular platform. The background is filled with imposing, steep mountain ranges on either side, with a vast sky above.",
+        "primary_surfaces": "Glass",
+        "secondary_surfaces": "Stone",
+        "accent_features": "Reflective surfaces",
+        "dominant": "Light blue (glass structure, interior glow)",
+        "secondary": "Gray (pathway, platform, mountain rock), Green (vegetation)",
+        "accent": "Bright white (sunlight highlights)",
+        "ambient": "Pale blue (sky, reflections)",
         "genre": null,
-        "architectural_tone": "Modern minimalist geodesic architecture with integrated smart systems. Clean geometric lines, expansive glass surfaces, and polished metallic structural elements. The design prioritizes functionality and visual purity, reflecting advanced scientific principles.",
-        "cultural_tone": "Focused on advanced research, bio-engineering, and sustainable resource extraction. A highly specialized and methodical environment, likely managed by a dedicated scientific or corporate entity.",
-        "materials_base": "High-strength glass composites, refined metallic alloys, polished ceramic composites",
-        "mood_baseline": "Focused, precise, aesthetically advanced",
-        "palette_bias": "Cool industrial palette with warm accent lighting",
-        "soundscape_base": "Subtle technological hums and automated environmental controls",
-        "flora_base": "Engineered metallic flora with self-sustaining energy cores, designed for optimal resource yield.",
-        "fauna_base": "None present in this controlled environment, though surveillance drones or maintenance automatons are plausible."
-      },
-      "imagePath": "",
-      "navigableElements": [
-        {
-          "type": "entrance",
-          "position": "center, background",
-          "description": "Entrance to the central glass laboratory"
-        }
-      ],
-      "dominantElements": [
-        "Metallic Fruit Trees",
-        "Central Glass Laboratory",
-        "Paved Walkway"
-      ],
-      "uniqueIdentifiers": [
-        "Metallic Flora",
-        "Geodesic Dome Structure"
-      ],
-      "slug": "the-mercury-orchard",
-      "searchDesc": "An experimental orchard of metallic fruit trees surrounding a central glass laboratory, featuring illuminated pathways and a geodesic dome."
-    },
-    "8c6a5a90-4d1d-4281-84af-88721c542e16": {
-      "id": "8c6a5a90-4d1d-4281-84af-88721c542e16",
-      "type": "niche",
-      "name": "The Lumina Laboratory Entrance",
-      "spaceType": "interior",
-      "dna": {},
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/fBCMUiio-CX4SvUJrkn90.jpg"
-    },
-    "loc-1763627256090-mp0qz3cl6": {
-      "id": "loc-1763627256090-mp0qz3cl6",
-      "type": "host",
-      "name": "Metropolis Prime",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A colossal, layered cityscape stretching infinitely upwards and outwards. Buildings are immense, often interconnected structures, featuring a mix of advanced materials and monumental designs. Automated vehicles and transit systems weave through the urban fabric.",
-        "colorsAndLighting": "Dominated by a palette of metallic grays, deep blues, and vibrant technological lights. Lighting is often artificial and dynamic, with stark contrasts between illuminated areas and deep shadows, reflecting the city's advanced infrastructure.",
-        "atmosphere": "The air is often crisp and filtered, with a constant hum of activity. Depending on the stratum, it can range from clean and sterile to somewhat industrial. Weather is largely managed within sealed districts.",
-        "materials": "Primarily composed of advanced alloys, reinforced composites, smart glass, and polished synthetic stone. Exposed structural elements like conduits and support beams are common.",
-        "mood": "A sense of awe-inspiring scale and relentless progress, tinged with the potential for both utopian order and overwhelming complexity.",
-        "sounds": "Distant hums, whirs, automated announcements, faint echoes, distant traffic.",
-        "spatialLayout": "Extremely vertical and densely packed, with distinct horizontal strata. Spaces range from vast, open plazas to tightly engineered corridors and transit tubes.",
-        "primary_surfaces": "Polished composite alloys, smart glass, reinforced concrete",
-        "secondary_surfaces": "Exposed structural metals, dark synthetic panels",
-        "accent_features": "Integrated LED lighting, holographic displays, automated panels",
-        "dominant": "Metallic gray",
-        "secondary": "Deep blue, black",
-        "accent": "Vibrant technological lights (cyan, magenta, white)",
-        "ambient": "Cool, artificial",
-        "genre": "sci-fi",
-        "architectural_tone": "Monumental brutalist futurism with functionalist metallic elements, characterized by immense scale, stark geometric forms, exposed structural components, integrated automated systems, and a pervasive sense of advanced engineering.",
-        "cultural_tone": "Techno-bureaucratic society focused on efficiency, order, and technological advancement, with a strong emphasis on social stratification.",
-        "materials_base": "High-performance alloys, reinforced polymers, smart glass, polished concrete",
-        "mood_baseline": "Awe-inspiring, ordered, complex, awe",
-        "palette_bias": "Cool metallics, deep blues, artificial neons",
-        "soundscape_base": "Mechanized, ambient, controlled",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Towering skyscrapers",
-        "Automated transit networks",
-        "Interconnected skybridges"
-      ],
-      "uniqueIdentifiers": [
-        "Advanced AI governance",
-        "Vertical farming districts",
-        "Stratified societal zones"
-      ],
-      "slug": "metropolis-prime",
-      "searchDesc": "A vast, technologically advanced city with layered architecture and integrated transit systems."
-    },
-    "c623469d-bb6b-459b-bc93-7ed359a0aace": {
-      "id": "c623469d-bb6b-459b-bc93-7ed359a0aace",
-      "type": "region",
-      "name": "Metropolis Prime",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Expansive city blocks featuring towering structures with clean, imposing lines. Grand avenues are wide and lined with monumental architecture, often incorporating advanced metallic and stone elements. Elevators and transit tubes are prominently integrated into building facades.",
-        "colorsAndLighting": "A blend of cool grays and deep blues dominate, accented by the warm golden glow of structural lighting and the sharp, bright lights of transit systems. Shadows are deep and defined, creating a sense of dramatic scale.",
-        "atmosphere": "The air is noticeably cleaner and more regulated, with a constant, low hum of city activity. The atmosphere is one of ordered, sophisticated urban living.",
-        "materials": "Polished composite alloys, treated stone blocks, reinforced smart glass, and gleaming brass accents are prevalent.",
-        "mood": "Imposing grandeur and sophisticated order, reflecting the organized might of the metropolis.",
-        "sounds": "Echoing footsteps, distant whirs, automated guidance calls, faint traffic hum.",
-        "spatialLayout": "Broad avenues create a grid-like pattern, interspersed with massive, vertically oriented buildings. Public spaces are monumental and designed for large flows of people.",
-        "primary_surfaces": "Treated stone, polished composite alloys",
-        "secondary_surfaces": "Smart glass, brass fixtures",
-        "accent_features": "Intricate metalwork, recessed lighting, public art installations",
-        "dominant": "Metallic gray",
-        "secondary": "Deep blue, gold",
-        "accent": "Warm golden light",
-        "ambient": "Cool, regulated",
-        "genre": null,
-        "architectural_tone": "Monumental brutalist futurism with functionalist metallic elements, characterized by immense scale, stark geometric forms, exposed structural components, integrated automated systems, and a pervasive sense of advanced engineering. Refined with classical proportions and grand metallic detailing.",
-        "cultural_tone": "Techno-bureaucratic society focused on efficiency, order, and technological advancement, with a strong emphasis on social stratification. Public spaces are designed for civic display and controlled interaction.",
-        "materials_base": "High-performance alloys, treated stone, smart glass, brass",
-        "mood_baseline": "Awe-inspiring, ordered, sophisticated",
-        "palette_bias": "Cool metallics, deep blues, warm golden accents",
-        "soundscape_base": "Mechanized, echoing, controlled",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Central spire",
-        "Grand avenues",
-        "Mass transit hubs"
-      ],
-      "uniqueIdentifiers": [
-        "Primary governmental sectors",
-        "Major commercial centers",
-        "High-density residential zones"
-      ],
-      "slug": "metropolis-prime-region",
-      "searchDesc": "The central urban core of Metropolis Prime, featuring grand avenues and mass transit."
-    },
-    "47934a51-a62d-476f-ae25-754feec4d908": {
-      "id": "47934a51-a62d-476f-ae25-754feec4d908",
-      "type": "location",
-      "name": "The Grand Orrery Block",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The structure is an immense, multi-story building with a dark, intricately patterned facade contrasted by gleaming golden architectural elements. Fluted columns run vertically along the exterior, supporting arched openings that lead to shadowed interiors. Arched windows punctuate the upper levels, reflecting the ambient light.  The scale is monumental, suggesting a towering vertical city block, with a wide, vaulted entrance at the street level.",
-        "colorsAndLighting": "The lighting is bright and directional, casting strong shadows and creating high contrast. Warm, golden light reflects off the metallic elements, while the darker facade absorbs light, creating deep shadows. The overall scene is bathed in sunlight, with a golden hue.",
-        "atmosphere": "The air appears clear and still, with no visible haze or fog. The atmosphere conveys a sense of immense scale and opulent design, with sunlight glinting off polished surfaces.",
-        "materials": "Primarily stone for structural elements, with a dark patterned facade material and prominent brass for decorative and functional components.",
-        "mood": "Awe-inspiring, grand, mysterious, opulent.",
-        "sounds": "Distant hum, faint metallic creaks, muffled echoes.",
-        "spatialLayout": "Foreground features a wide, paved walkway with yellow directional lines and planters containing small trees. The midground is dominated by the massive facade of the building, characterized by rows of golden columns and deep archways, creating a sense of a grand, imposing structure. The background shows a continuation of the architectural structure, leading to a distant, bright opening.",
-        "primary_surfaces": "Stone",
-        "secondary_surfaces": "Dark patterned facade material",
-        "accent_features": "Polished brass/gold columns and detailing",
-        "dominant": "Gold on columns and decorative elements",
-        "secondary": "Dark grey/black on facade and stonework",
-        "accent": "Yellow lines on pavement",
-        "ambient": "Warm, golden sunlight",
-        "genre": null,
-        "architectural_tone": "Schuiten-inspired monumental architecture with a blend of art deco and art nouveau influences, characterized by grand scale, verticality, intricate detailing, ornate fluted columns, large arched openings, metallic decorative elements (especially brass), and a sense of steampunk-esque mechanical integration.",
-        "cultural_tone": "A hub of advanced vertical living and transit, designed to impress and facilitate movement within the stratified metropolis. A place of both functional necessity and aesthetic wonder.",
-        "materials_base": "Dark patterned stone composites, polished brass, treated stone",
-        "mood_baseline": "Grand, ornate, mechanical, awe",
-        "palette_bias": "Dark and metallic with warm golden highlights",
-        "soundscape_base": "Mechanized, echoing, subtle",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/tiger/psFF8RCyTNrV-QvtKsqQV.jpg",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center, background",
-          "description": "A large, deeply recessed, multi-arched vaulted entrance leading into the structure"
-        },
-        {
-          "type": "archway",
-          "position": "left and right sides, midground",
-          "description": "Numerous tall, ornate archways providing access to shadowed interiors"
-        },
-        {
-          "type": "window",
-          "position": "upper levels, background",
-          "description": "Arched windows offering glimpses into higher floors"
-        }
-      ],
-      "dominantElements": [
-        "Towering dark building facade with ornate gold detailing",
-        "Vertical fluted gold columns lining the structure",
-        "Grand vaulted entrance at street level",
-        "Multiple arched windows on upper floors"
-      ],
-      "uniqueIdentifiers": [
-        "Schuiten-inspired architectural style",
-        "Prominent use of contrasting dark facade and polished gold elements",
-        "Grand, multi-arched vaulted entrance"
-      ],
-      "slug": "the-grand-orrery-block",
-      "searchDesc": "[Location - Exterior] Grand architectural block. Has: vaulted entrance (center, background), archways (left and right, midground), windows (upper levels, background)"
-    },
-    "niche-1763627353392-50ay3046a": {
-      "id": "niche-1763627353392-50ay3046a",
-      "type": "niche",
-      "name": "interior of The Grand Orrery Block",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A monumental atrium defined by immense, polished brass fluted columns that stretch into the shadows of a high vaulted ceiling. The floor is a complex pattern of dark stone composite tiles, and colossal arched doorways, edged with glimmering gold, punctuate the walls.",
-        "colorsAndLighting": "Dominant gold accents on brass columns and doorway trim, set against dark stone. The scene is bathed in warm, directional light from unseen sources, casting long, dramatic shadows.",
-        "atmosphere": "The air is thick with the scent of ozone and aged metal, with a palpable sense of awe-inspiring opulence and mechanical grandeur. A distant, echoing hum permeates the vast space.",
-        "materials": "The primary materials are polished brass, dark stone composite tiles with intricate patterns, and metallic trim. Surfaces gleam under directional lighting, highlighting their opulent and aged quality.",
-        "mood": "Evokes a profound sense of awe, mystery, and opulent grandeur, hinting at advanced mechanical integration.",
-        "sounds": "Distant hum, echoing, metallic resonance, ozone crackle",
-        "spatialLayout": "A vast, dimly lit atrium with a high vaulted ceiling. Colossal columns create verticality, and large arched openings and recessed portals draw the eye, suggesting depth and further exploration.",
-        "primary_surfaces": "Dark, intricately patterned stone composite tiles (floor), shadowy expanse of vaulted ceiling.",
-        "secondary_surfaces": "Polished brass fluted columns, glimmering golden trim.",
-        "accent_features": "Glowing, amber-hued portals, ornate brass railing overlooking a lower level.",
-        "dominant": "Gold (on columns and trim)",
-        "secondary": "Dark stone composite (floor)",
-        "accent": "Amber (on portals)",
-        "ambient": "Warm",
-        "genre": null,
-        "architectural_tone": "Schuiten-inspired monumental architecture with art deco and art nouveau influences",
-        "cultural_tone": "A hub of advanced vertical living and transit, designed to impress and facilitate movement within the stratified metropolis.",
-        "materials_base": "Polished metals, intricate stonework, grand architectural elements",
-        "mood_baseline": "Awe-inspiring, grand, mysterious, opulent",
-        "palette_bias": "Rich metallics with dark contrasts",
-        "soundscape_base": "Industrial hum, echoing spaces, subtle mechanical sounds",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/anNWKbM0dWgm7Xy-qp0zu.jpg",
-      "description": "A vast, dimly lit atrium within a monumental Schuiten-inspired structure, echoing with a distant hum.",
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "midground right",
-          "description": "Colossal arched doorway promising mystery."
-        },
-        {
-          "type": "portal",
-          "position": "midground right",
-          "description": "Glowing, amber-hued portals beckoning passage."
-        },
-        {
-          "type": "railing",
-          "position": "midground left",
-          "description": "Wide, ornate brass railing overlooking a lower level."
-        }
-      ],
-      "dominantElements": [
-        "Polished brass fluted columns",
-        "Intricately patterned stone composite floor",
-        "Colossal arched doorways",
-        "Vaulted ceiling"
-      ],
-      "uniqueIdentifiers": [
-        "Schuiten-inspired structure",
-        "Brass fluted columns as wide as ancient trees",
-        "Golden trim on doorways",
-        "Amber-hued portals"
-      ],
-      "searchDesc": "Dimly lit grand atrium with brass columns, patterned floor, and amber portals.",
-      "slug": "interior-of-the-grand-orrery-block"
-    },
-    "niche-1763627869416-egyzl7s7f": {
-      "id": "niche-1763627869416-egyzl7s7f",
-      "type": "niche",
-      "name": "unknown of The Mercury Orchard",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This research chamber is filled with meticulously cultivated metallic flora that shimmer with internal blue light. Crystalline pathways weave through the space, and oxidized metallic conduits snake along the curved walls. A recessed observation alcove overlooks a central specimen tank containing an intricate metallic fruit.",
-        "colorsAndLighting": "The scene is bathed in the cool, ethereal glow of bio-luminescent flora, primarily blues from the flora and conduits, contrasted by subtle warm yellow light from recessed floor panels creating dynamic shadows.",
-        "atmosphere": "The air is still and cool, with faint ambient hums and the whisper of climate control, creating an atmosphere of quiet, focused scientific inquiry and sterile beauty.",
-        "materials": "Polished grey composite flooring etched with geometric patterns, polished ceramic composites framing the alcove, and shimmering metallic flora and oxidized metallic conduits are prominent. Surfaces are clean and highly detailed, reflecting a photorealistic sci-fi aesthetic.",
-        "mood": "A mood of quiet, focused scientific inquiry and sterile, technologically advanced beauty is evoked.",
-        "sounds": "Ambient hums, climate control whispers, faint artificial sounds.",
-        "spatialLayout": "The chamber features an asymmetrical composition with a clear visual flow towards a midground observation alcove. Curved walls and suspended pathways define the space, leading the eye to a central illuminated specimen tank.",
-        "primary_surfaces": "Polished grey composite floor, curved walls.",
-        "secondary_surfaces": "Polished ceramic composites (alcove frame), metallic conduits.",
-        "accent_features": "Bio-luminescent engineered flora, crystalline pathways, illuminated specimen tank with metallic fruit.",
-        "dominant": "Blue (flora, conduits, pathways)",
-        "secondary": "Grey (floor, general surfaces)",
-        "accent": "Warm yellow (floor lighting), metallic sheen (flora, fruit)",
-        "ambient": "Cool",
-        "genre": null,
-        "architectural_tone": null,
+        "architectural_tone": "futuristic crystalline architecture with seamless integration into the landscape, characterized by smooth, curved forms, large transparent panels, and a focus on light manipulation.",
         "cultural_tone": null,
         "materials_base": null,
         "mood_baseline": null,
         "palette_bias": null,
         "soundscape_base": null,
-        "flora_base": "Engineered metallic flora, bio-luminescent.",
-        "fauna_base": "None"
+        "flora_base": null,
+        "fauna_base": null
       },
-      "imagePath": "https://v3b.fal.media/files/b/zebra/n1Xr4Few1dpjccjlbncyL.jpg",
-      "description": "Interior of a bio-luminescent research chamber.",
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/sRcKl3F1O-ZI7aLOje01D.jpg",
       "navigableElements": [
         {
           "type": "passage",
-          "position": "midground",
-          "description": "Recessed observation alcove."
+          "position": "center, midground",
+          "description": "Arched gateway with bright interior leading into the sphere"
+        },
+        {
+          "type": "door",
+          "position": "left and right of entrance, midground",
+          "description": "Small, dark openings on the circular platform"
+        },
+        {
+          "type": "window",
+          "position": "surface of the sphere, midground",
+          "description": "Numerous glass panels forming the sphere's exterior"
         }
       ],
       "dominantElements": [
-        "engineered flora",
-        "crystalline pathways",
-        "metallic flora",
-        "metallic conduits",
-        "observation alcove",
-        "specimen tank",
-        "metallic fruit",
-        "composite floor"
+        "Gigantic spherical glass building (~50-70m diameter, WIDE STRUCTURE) at center",
+        "Stone pathway leading to the building, foreground/midground",
+        "Rocky mountain formations, background",
+        "Arched entranceway to the sphere, midground"
       ],
       "uniqueIdentifiers": [
-        "bio-luminescent flora",
-        "metallic flora",
-        "crystalline pathways",
-        "metallic fruit",
-        "oxidized metallic conduits"
+        "Colossal spherical glass architecture",
+        "Arched entrance portal",
+        "Mountainous desert terrain"
       ],
-      "searchDesc": "Bio-luminescent research chamber with metallic flora and crystalline pathways.",
-      "slug": "unknown-of-the-mercury-orchard"
+      "slug": "the-crystal-observatory",
+      "searchDesc": "[Building] Gigantic glass sphere. Has: arched passage (center, midground), windows (surface of sphere, midground)"
+    },
+    "niche-1763628431947-78pwg2i3s": {
+      "id": "niche-1763628431947-78pwg2i3s",
+      "type": "niche",
+      "name": "interior of The Crystal Observatory",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, geodesic dome interior with a complex silver geodesic grid supporting transparent crystalline ceiling panels. Walls are seamless high-tech glazing revealing the sky, contrasting with a stark, polished dark concrete floor. Slender vertical supports rise towards the domed ceiling, where holographic celestial data shimmers.",
+        "colorsAndLighting": "Bathed in cool, diffused light that refracts through the crystalline ceiling. Soft blue LED strips accent a central circular platform, providing a gentle, ethereal glow.",
+        "atmosphere": "Vast and echoing, with a palpable sense of serene scientific contemplation. The air feels clean and still, imbued with a luminous elegance.",
+        "materials": "Dominated by high-tech transparent architectural glazing and a delicate silver-toned composite framework. The floor is stark, polished dark concrete, and a dark metal ramp adds reflective contrast.",
+        "mood": "Evokes awe, grandeur, and scientific wonder, combined with a feeling of serene luminosity.",
+        "sounds": "Echoing, subtle hum, faint digital chimes.",
+        "spatialLayout": "A large, open geodesic dome with a defined foreground focal point (circular platform), entryways to the left and right, and vertical elements ascending to the ceiling.",
+        "primary_surfaces": "Transparent architectural glazing (walls), crystalline panels (ceiling), polished dark concrete (floor).",
+        "secondary_surfaces": "Silver-toned composite framework, dark polished metal (ramp).",
+        "accent_features": "Soft blue LED strips on the foreground platform, shimmering holographic displays on the ceiling.",
+        "dominant": "Light blue (interior glow, crystalline panels, LEDs) - 60%",
+        "secondary": "Silver (framework) - 20%",
+        "accent": "Dark grey/black (floor, ramp) - 15%, White/iridescent (holograms) - 5%",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "futuristic crystalline architecture with seamless integration into the landscape",
+        "cultural_tone": "Advanced and contemplative, with a focus on aesthetics, scientific observation, and harmonious living.",
+        "materials_base": "Polished composite, large transparent panels, reflective metals, smooth concrete.",
+        "mood_baseline": "Serene, wondrous, contemplative",
+        "palette_bias": "Cool blues, silvers, greys, with subtle iridescent accents.",
+        "soundscape_base": "Echoing, subtle technological ambience.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/EH0K2qP7ffbc5XctuSfD_.jpg",
+      "description": "The interior of a vast, echoing geodesic dome observatory, featuring transparent crystalline ceilings and high-tech glazing.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "to the left",
+          "description": "Seamless, curved archway leading into a dimly lit secondary chamber."
+        },
+        {
+          "type": "ramp",
+          "position": "to the right",
+          "description": "Gently sloping ramp of polished dark metal ascending to a higher level."
+        }
+      ],
+      "dominantElements": [
+        "Geodesic dome structure",
+        "Transparent architectural glazing",
+        "Silver-toned composite framework",
+        "Low, circular metal platform with LED strips",
+        "Polished dark concrete floor",
+        "Slender vertical supports",
+        "Holographic displays"
+      ],
+      "uniqueIdentifiers": [
+        "Geodesic grid pattern",
+        "Crystalline ceiling panels",
+        "Silver composite framework",
+        "Circular foreground platform with blue LEDs"
+      ],
+      "searchDesc": "Vast geodesic dome observatory with crystalline ceiling, transparent walls, and blue LED accents.",
+      "slug": "interior-of-the-crystal-observatory"
+    },
+    "niche-1763628449310-b7aum58s0": {
+      "id": "niche-1763628449310-b7aum58s0",
+      "type": "niche",
+      "name": "interior of The Crystal Observatory",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, geodesic dome with walls of interlocking, transparent glass panels supported by a complex hexagonal framework of polished silver struts. Sunlight diffuses through the dome, illuminating the interior. In the foreground, an obsidian viewing console sits off-center, while a luminous ramp ascends to the midground right.",
+        "colorsAndLighting": "Cool, internal light refracts through the glass, complemented by soft, diffused sunlight from above. A dark, polished floor contrasts with the luminous walls.",
+        "atmosphere": "The air is clear with a subtle shimmer, suggesting a pristine, controlled environment. The vastness of the space and the light create an ethereal, awe-inspiring feel.",
+        "materials": "Transparent glass panels and polished silver metal form the primary structure. The floor is a dark, highly polished composite, and the viewing console is crafted from iridescent obsidian.",
+        "mood": "Evokes a profound sense of awe, grandeur, and scientific wonder, fitting for advanced exploration.",
+        "sounds": "Subtle hum, soft ambient light shimmer, distant echoes.",
+        "spatialLayout": "A large, domed space with a complex, structural framework. Entry points are implied by the ramp and the open nature of the console area. The background offers a distorted view outwards.",
+        "primary_surfaces": "Transparent glass panels (walls), dark polished composite (floor).",
+        "secondary_surfaces": "Polished silver metal (framework), iridescent obsidian (console).",
+        "accent_features": "Hexagonal framework, integrated ramp lighting, iridescent obsidian console, distorted alien sky view.",
+        "dominant": "Light blue (glass structure, interior glow, ambient light).",
+        "secondary": "Silver (framework).",
+        "accent": "Dark composite (floor), iridescent obsidian (console).",
+        "ambient": "Cool.",
+        "genre": null,
+        "architectural_tone": "futuristic crystalline architecture with seamless integration into the landscape",
+        "cultural_tone": "Advanced and contemplative, with a focus on aesthetics, scientific observation, and harmonious living.",
+        "materials_base": "glass, polished metal, composite, obsidian",
+        "mood_baseline": "Awe, grandeur, scientific wonder",
+        "palette_bias": "cool color palette with light blue dominance",
+        "soundscape_base": "ambient, technological hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/p2w5upmilNtZpOtmqH3Qf.jpg",
+      "description": "The interior of a vast, geodesic dome observatory constructed from futuristic crystalline architecture.",
+      "navigableElements": [
+        {
+          "type": "ramp",
+          "position": "midground right",
+          "description": "A gently sloping ramp with integrated lighting strips ascending to a higher level."
+        },
+        {
+          "type": "viewing console",
+          "position": "foreground left",
+          "description": "A sleek, low-profile viewing console made of iridescent obsidian."
+        }
+      ],
+      "dominantElements": [
+        "geodesic dome interior",
+        "interlocking transparent glass panels",
+        "hexagonal silver framework",
+        "viewing console",
+        "sloping ramp",
+        "alien sky view"
+      ],
+      "uniqueIdentifiers": [
+        "geodesic dome",
+        "crystalline architecture",
+        "hexagonal silver framework",
+        "iridescent obsidian console",
+        "alien sky view"
+      ],
+      "searchDesc": "Futuristic crystal geodesic dome observatory with silver framework and alien sky views.",
+      "slug": "interior-of-the-crystal-observatory"
     }
   },
   "views": {},
@@ -5766,47 +5619,24 @@
       ]
     },
     {
-      "id": "loc-1763625555816-3b9ly7xnk",
+      "id": "loc-1763627946292-mqwzvc1r8",
       "type": "host",
       "children": [
         {
-          "id": "57b17e5d-3780-4472-a0a9-2463d1861081",
+          "id": "27c02739-a29c-46e9-a96c-ab87f1e4e10c",
           "type": "region",
           "children": [
             {
-              "id": "750d59f2-b8e1-451d-9fae-630dacf3848d",
+              "id": "f830e1b5-9ce0-4a6e-861b-14b5364734ed",
               "type": "location",
               "children": [
                 {
-                  "id": "8c6a5a90-4d1d-4281-84af-88721c542e16",
+                  "id": "niche-1763628431947-78pwg2i3s",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1763627869416-egyzl7s7f",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1763627256090-mp0qz3cl6",
-      "type": "host",
-      "children": [
-        {
-          "id": "c623469d-bb6b-459b-bc93-7ed359a0aace",
-          "type": "region",
-          "children": [
-            {
-              "id": "47934a51-a62d-476f-ae25-754feec4d908",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1763627353392-50ay3046a",
+                  "id": "niche-1763628449310-b7aum58s0",
                   "type": "niche",
                   "children": []
                 }
@@ -5818,7 +5648,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763625555816-3b9ly7xnk",
-    "loc-1763627256090-mp0qz3cl6"
+    "loc-1763627946292-mqwzvc1r8"
   ]
 }
