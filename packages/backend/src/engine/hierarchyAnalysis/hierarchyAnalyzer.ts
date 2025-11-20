@@ -137,11 +137,13 @@ function normalizeHierarchy(hierarchy: HierarchyStructure): void {
  * 
  * @param userPrompt - User's description of place/scene
  * @param apiKey - MZOO API key
+ * @param spawnId - Unique spawn identifier for event tracking
  * @returns Structured hierarchy with metadata and imageUrl
  */
 export async function analyzeHierarchy(
   userPrompt: string, 
-  apiKey: string
+  apiKey: string,
+  spawnId: string
 ): Promise<HierarchyAnalysisResult> {
   // Build prompt from centralized prompts
   const prompt = hierarchyCategorization(userPrompt);
@@ -202,7 +204,10 @@ export async function analyzeHierarchy(
   // Emit classification complete event
   eventEmitter.emit({
     type: 'hierarchy:classification-complete',
-    data: { hierarchy: parsedHierarchy }
+    data: { 
+      hierarchy: parsedHierarchy,
+      spawnId
+    }
   });
 
   // Generate metadata

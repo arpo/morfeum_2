@@ -4956,64 +4956,212 @@
       "slug": "the-lunar-echo",
       "searchDesc": "Amphitheatre Exterior. Has: stairs (center, midground), passage (center, background), corridor (upper rim, midground)"
     },
-    "niche-1763624293180-un7zu0k61": {
-      "id": "niche-1763624293180-un7zu0k61",
+    "niche-1763624430326-0id7g0ueq": {
+      "id": "niche-1763624430326-0id7g0ueq",
       "type": "niche",
-      "name": "interior of The Lunar Echo",
+      "name": "interior of Canopy Strider Outpost",
       "spaceType": "interior",
       "dna": {
-        "looks": "An expansive, cool-toned interior chamber defined by monumental classical architecture. A grand, sweeping staircase dominates the midground, its risers subtly illuminated. Repeating slender columns line the left, supporting a high, vaulted ceiling.",
-        "colorsAndLighting": "The space is bathed in an ethereal, low-angle glow from a distant moon, casting stark, elongated shadows. The dominant color is cool white stone, accented by glowing lunar elements.",
-        "atmosphere": "The air is still and resonant, carrying the faint echo of unseen spaces. The moonlight imbues the chamber with an otherworldly, serene, and mysterious ambiance.",
-        "materials": "Polished white stone forms the primary structure, with a floor of intricately fitted dark grey stone tiles. Surfaces are highly reflective, enhancing the cool, luminous effect.",
-        "mood": "Serene, majestic, and hauntingly beautiful, evoking a sense of ancient mystery and otherworldly presence.",
-        "sounds": "Resonant echoes, faint ambient hum, stillness.",
-        "spatialLayout": "An immense, cavernous chamber with a grand, central staircase leading into the midground and a curved wall punctuated by doorways in the background.",
-        "primary_surfaces": "Polished white stone walls and ceiling, dark grey stone tile floor.",
-        "secondary_surfaces": "Polished white stone staircase.",
-        "accent_features": "Glowing lunar accents on staircase risers, subtle glowing lunar symbols framing doorways.",
-        "dominant": "White (90% of visible surface area)",
-        "secondary": "Dark grey (floor mosaic)",
-        "accent": "Pale blue/silver (lunar glow)",
-        "ambient": "Cool",
+        "looks": "A circular, functional science outpost interior defined by weathered, dark wood paneling and utilitarian metal accents. A smooth, dark wood domed ceiling curves overhead, supported by a central, exposed metal beam. The polished dark wood floor grounds the space, creating a sense of grounded utility within the aerial environment.",
+        "colorsAndLighting": "Soft, diffused warm yellow light emanates from recessed fixtures, casting a gentle glow across the dark wood and metal. The dominant color is the deep, rich tone of the wood, complemented by the muted tones of metal and the distant greens seen through the observation window.",
+        "atmosphere": "The air is slightly humid, carrying a faint scent of ozone and damp wood, hinting at the surrounding rainforest. The mood is one of quiet observation and scientific curiosity, with a subtle sense of isolation.",
+        "materials": "The primary materials are weathered, dark wood paneling and smooth, dark wood for the ceiling, paired with utilitarian, dark metal accents. The floor is polished dark wood, offering a clean, functional finish. Metal is used for structural elements and fixtures.",
+        "mood": "Curious, observational, and functional, reflecting an expeditionary research focus. There's a sense of quiet dedication to scientific exploration.",
+        "sounds": "faint hum, distant drips, soft ventilation, subtle creaks",
+        "spatialLayout": "The interior is circular, with a domed ceiling and a central support beam. Navigable elements are positioned in the midground, leading to different areas or levels. The observation window acts as a focal point towards the exterior.",
+        "primary_surfaces": "weathered dark wood paneling, smooth dark wood ceiling, polished dark wood floor",
+        "secondary_surfaces": "dark metal accents, reinforced glass observation window",
+        "accent_features": "glowing yellow ladder rungs, curving central metal support beam",
+        "dominant": "dark wood (walls, ceiling, floor)",
+        "secondary": "dark metal (accents, structure)",
+        "accent": "warm yellow (lighting, ladder rungs)",
+        "ambient": "warm",
         "genre": null,
-        "architectural_tone": "monumental classical with celestial influence, grand arches, slender columns, repetitive rhythmic facade",
-        "cultural_tone": "ceremonial, performance, ancient gatherings",
-        "materials_base": "polished stone, reflective surfaces",
-        "mood_baseline": "Serene, majestic, haunting",
-        "palette_bias": "Cool tones, monochromatic with glowing accents",
-        "soundscape_base": "Echoing resonance, ambient stillness",
-        "flora_base": "None",
+        "architectural_tone": "functional scientific post with integrated natural materials, clean lines for visibility and utility, and robust construction for aerial conditions",
+        "cultural_tone": "expeditionary, research-focused, pragmatic",
+        "materials_base": "dark wood, utilitarian metal, glass",
+        "mood_baseline": "Functional, exploratory, slightly isolated, serene, scientific",
+        "palette_bias": "deep greens, warm yellows, dark woods, muted metallics",
+        "soundscape_base": "functional hum, subtle environmental sounds",
+        "flora_base": null,
         "fauna_base": "None"
       },
-      "imagePath": "https://v3b.fal.media/files/b/koala/1e5b8LeKPSifdGXD6cIPt.jpg",
-      "description": "An immense, cool-toned interior chamber with monumental classical architecture, illuminated by the ethereal glow of a distant moon.",
+      "imagePath": "https://v3b.fal.media/files/b/penguin/BdMA_7_fkW8248IU46B36.jpg",
+      "description": "The functional, circular interior of a science outpost, featuring dark wood paneling and metal accents, illuminated by warm yellow light.",
       "navigableElements": [
         {
-          "type": "archway",
+          "type": "ladder",
           "position": "midground left",
-          "description": "A narrow, recessed archway between slender columns, hinting at a deeper passage."
+          "description": "Sturdy metal ladder with glowing yellow rungs ascending to an unseen upper level."
         },
         {
-          "type": "doorway",
-          "position": "background center",
-          "description": "A dark, recessed doorway framed by glowing lunar symbols, creating a sense of depth and mystery."
+          "type": "archway",
+          "position": "midground right",
+          "description": "Open, arched doorway framed with dark metal leading into a dimly lit laboratory."
         }
       ],
       "dominantElements": [
-        "sweeping staircase",
-        "slender columns",
-        "vaulted ceiling",
-        "luminous orb"
+        "Domed wood ceiling",
+        "Central metal support beam",
+        "Observation window",
+        "Metal ladder",
+        "Arched doorway"
       ],
       "uniqueIdentifiers": [
-        "polished white stone",
-        "ethereal low-angle moonlight",
-        "glowing lunar accents",
-        "lunar symbols"
+        "Circular layout",
+        "Domed dark wood ceiling",
+        "Curving central metal support",
+        "Observation window overlooking rainforest",
+        "Glowing yellow ladder rungs"
       ],
-      "searchDesc": "Immense cool-toned lunar chamber, monumental classical architecture, ethereal moonlight, grand staircase.",
-      "slug": "interior-of-the-lunar-echo"
+      "searchDesc": "Circular science outpost interior with wood paneling, metal accents, and a view of a misty rainforest.",
+      "slug": "interior-of-canopy-strider-outpost"
+    },
+    "loc-1763625555816-3b9ly7xnk": {
+      "id": "loc-1763625555816-3b9ly7xnk",
+      "type": "host",
+      "name": "The Sol System",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast expanse of cosmic dust and nebulae punctuated by the brilliant light of stars and the diverse forms of planets, moons, and artificial constructs. The visual landscape is a tapestry of celestial bodies and advanced engineering.",
+        "colorsAndLighting": "The primary palette is dictated by stellar radiation and cosmic phenomena, ranging from the stark whites and blues of young stars to the deep reds and oranges of older ones, interspersed with the muted tones of nebulae. Lighting is often dramatic and high-contrast.",
+        "atmosphere": "The vacuum of space is the dominant atmosphere, punctuated by localized, controlled environments on celestial bodies or within stations. Where atmospheres exist, they can range from thin and alien to rich and Earth-like, but are generally clean and unpolluted within advanced sectors.",
+        "materials": "Dominant materials include advanced alloys, exotic composites, crystalline structures, and engineered organic matter. Natural materials like stone and rare earth metals are also utilized, often in highly refined forms.",
+        "mood": "A sense of awe, exploration, and advanced technological achievement permeates the system. There's an underlying feeling of potential and mystery, with both serene beauty and the starkness of the void.",
+        "sounds": "Silence of space, hum of engines, distant transmissions, faint cosmic radiation",
+        "spatialLayout": "Vast, three-dimensional environments defined by orbital mechanics and technological infrastructure. Linear travel corridors and spherical habitats are common.",
+        "primary_surfaces": "Exotic alloys, polished composites, hardened crystalline structures",
+        "secondary_surfaces": "Engineered organic materials, refined stone, energy fields",
+        "accent_features": "Holographic displays, glowing conduits, integrated lighting, gravity plating",
+        "dominant": "Blues, Whites, Cosmic Violets",
+        "secondary": "Oranges, Reds, Silvers",
+        "accent": "Gold, Electric Cyan",
+        "ambient": "Neutral, with variations based on stellar proximity",
+        "genre": "sci-fi",
+        "architectural_tone": "Sleek, functional, and advanced with a focus on geometric precision, integrated systems, and efficient use of space. Materials are often high-tech and polished, with a tendency towards modularity and modular design.",
+        "cultural_tone": "Driven by scientific advancement, exploration, and resource management. Societies are often highly organized and collaborative, with a strong emphasis on progress and innovation.",
+        "materials_base": "Advanced alloys, engineered composites, reinforced glass, polished polymers",
+        "mood_baseline": "Optimistic, exploratory, technologically driven",
+        "palette_bias": "Cool spectrum with vibrant accents, high contrast",
+        "soundscape_base": "Technological hums, synthesized tones, clean ambient sound",
+        "flora_base": "Engineered bioluminescent flora, genetically modified nutrient-rich plants, hydroponic crops",
+        "fauna_base": "Genetically engineered or cybernetically enhanced creatures, native alien species adapted to unique environments, synthetic lifeforms"
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Star",
+        "Planetary Bodies",
+        "Space Stations"
+      ],
+      "uniqueIdentifiers": [
+        "Vastness of Space",
+        "Gravitational Dynamics"
+      ],
+      "slug": "the-sol-system",
+      "searchDesc": "A diverse star system featuring advanced civilizations, alien flora and fauna, and unique cosmic phenomena."
+    },
+    "57b17e5d-3780-4472-a0a9-2463d1861081": {
+      "id": "57b17e5d-3780-4472-a0a9-2463d1861081",
+      "type": "region",
+      "name": "The Sol System",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A diverse collection of planetary bodies, from gas giants to rocky terrestrial worlds, each with unique geological formations and atmospheric conditions. Orbiting stations and asteroid mining operations are visible, hinting at extensive system-wide activity.",
+        "colorsAndLighting": "The color palette is a blend of natural planetary hues – blues, greens, reds, browns – against the stark black of space, illuminated by the sun's steady yellow light. Artificial lighting from stations and ships adds points of color.",
+        "atmosphere": "The vacuum of space is the overarching atmosphere, with localized atmospheric conditions present on individual planets and moons. Some planets may have thin, exotic atmospheres, while others boast dense, life-supporting envelopes.",
+        "materials": "A mix of natural planetary crusts (rock, ice, metallic ores) and sophisticated manufactured materials from orbital infrastructure.",
+        "mood": "A sense of established order and interconnectedness, with a blend of natural beauty and persistent technological presence.",
+        "sounds": "Distant engine hums, faint radio chatter, subtle solar wind interactions",
+        "spatialLayout": "Vast distances between celestial bodies, with defined orbital paths and transit corridors. Habitats are often spherical or cylindrical.",
+        "primary_surfaces": "Natural planetary surfaces (rock, ice, regolith), metallic alloys, reinforced polymers",
+        "secondary_surfaces": "Exotic crystalline structures, bio-engineered coatings, energy shielding",
+        "accent_features": "Orbital construction, transit lanes, planetary atmospheric effects",
+        "dominant": "Natural planetary colors (blues, greens, browns)",
+        "secondary": "Cosmic Black, Stellar Yellow",
+        "accent": "Artificial lighting hues",
+        "ambient": "Neutral, with warm undertones from the sun",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": "Multicultural and diverse, with established trade routes and federated governance structures. A balance between natural preservation and technological expansion.",
+        "materials_base": "Natural planetary materials augmented by industrial-grade alloys and composites.",
+        "mood_baseline": "Established, interconnected, industrious",
+        "palette_bias": "Natural terrestrial palettes with stark black and yellow solar contrast",
+        "soundscape_base": "Functional ambient sounds of travel and commerce",
+        "flora_base": "Indigenous terrestrial flora on habitable planets, or specialized hydroponic and bio-engineered flora within settlements.",
+        "fauna_base": "Indigenous terrestrial fauna, or genetically modified/synthetically created fauna for specific purposes."
+      },
+      "imagePath": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Planets",
+        "Asteroid Belts",
+        "Orbital Habitats"
+      ],
+      "uniqueIdentifiers": [
+        "Terrestrial Bodies",
+        "Interplanetary Travel Routes"
+      ],
+      "slug": "the-sol-system",
+      "searchDesc": "The Sol System: a diverse collection of planets, moons, and asteroid fields, interlinked by advanced technology and natural cosmic forces."
+    },
+    "750d59f2-b8e1-451d-9fae-630dacf3848d": {
+      "id": "750d59f2-b8e1-451d-9fae-630dacf3848d",
+      "type": "location",
+      "name": "The Mercury Orchard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Rows of meticulously trimmed metallic fruit trees, their structures glinting under ambient light, surround a large, geodesic glass dome. A paved walkway, bordered by accent lighting, leads to the dome's visible entrance.",
+        "colorsAndLighting": "The scene is illuminated by a cool, blue-white internal glow from the glass dome, contrasted with warm orange and yellow accent lighting beneath the walkway and around the trees. The dominant color is blue from the dome, with secondary greens from minimal vegetation and grey from the pathway.",
+        "atmosphere": "The air is clear, still, and serene, creating a controlled and pristine environment. There is no visible mist or fog.",
+        "materials": "Primary materials are glass for the central structure and stone tiles for the walkway. Secondary materials include metallic alloys for the trees and carefully manicured low-lying vegetation.",
+        "mood": "A mood of sterile beauty, technological advancement, and quiet efficiency. The atmosphere is one of controlled nature and precise design.",
+        "sounds": "Soft hum of machinery, subtle rustling of metallic leaves, distant ambient tones",
+        "spatialLayout": "Organized rows of trees define pathways leading to a central, commanding structure. The layout is symmetrical and deliberate, emphasizing order.",
+        "primary_surfaces": "Glass, polished metallic alloys",
+        "secondary_surfaces": "Stone tiles, manicured synthetic foliage",
+        "accent_features": "Integrated pathway lighting, illuminated tree cores, reflective dome panels",
+        "dominant": "Blue",
+        "secondary": "Green, Grey, Metallic Silver",
+        "accent": "Orange, Yellow",
+        "ambient": "Cool blue with warm orange undertones",
+        "genre": null,
+        "architectural_tone": "Modern minimalist geodesic architecture with integrated smart systems. Clean geometric lines, expansive glass surfaces, and polished metallic structural elements. The design prioritizes functionality and visual purity, reflecting advanced scientific principles.",
+        "cultural_tone": "Focused on advanced research, bio-engineering, and sustainable resource extraction. A highly specialized and methodical environment, likely managed by a dedicated scientific or corporate entity.",
+        "materials_base": "High-strength glass composites, refined metallic alloys, polished ceramic composites",
+        "mood_baseline": "Focused, precise, aesthetically advanced",
+        "palette_bias": "Cool industrial palette with warm accent lighting",
+        "soundscape_base": "Subtle technological hums and automated environmental controls",
+        "flora_base": "Engineered metallic flora with self-sustaining energy cores, designed for optimal resource yield.",
+        "fauna_base": "None present in this controlled environment, though surveillance drones or maintenance automatons are plausible."
+      },
+      "imagePath": "",
+      "navigableElements": [
+        {
+          "type": "entrance",
+          "position": "center, background",
+          "description": "Entrance to the central glass laboratory"
+        }
+      ],
+      "dominantElements": [
+        "Metallic Fruit Trees",
+        "Central Glass Laboratory",
+        "Paved Walkway"
+      ],
+      "uniqueIdentifiers": [
+        "Metallic Flora",
+        "Geodesic Dome Structure"
+      ],
+      "slug": "the-mercury-orchard",
+      "searchDesc": "An experimental orchard of metallic fruit trees surrounding a central glass laboratory, featuring illuminated pathways and a geodesic dome."
+    },
+    "8c6a5a90-4d1d-4281-84af-88721c542e16": {
+      "id": "8c6a5a90-4d1d-4281-84af-88721c542e16",
+      "type": "niche",
+      "name": "The Lumina Laboratory Entrance",
+      "spaceType": "interior",
+      "dna": {},
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/fBCMUiio-CX4SvUJrkn90.jpg"
     }
   },
   "views": {},
@@ -5280,6 +5428,11 @@
                   "id": "niche-1763618074404-3shcujlm9",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1763624430326-0id7g0ueq",
+                  "type": "niche",
+                  "children": []
                 }
               ]
             }
@@ -5510,9 +5663,26 @@
             {
               "id": "e1e5ec31-784e-49e2-b0bf-8a8406c32eb7",
               "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763625555816-3b9ly7xnk",
+      "type": "host",
+      "children": [
+        {
+          "id": "57b17e5d-3780-4472-a0a9-2463d1861081",
+          "type": "region",
+          "children": [
+            {
+              "id": "750d59f2-b8e1-451d-9fae-630dacf3848d",
+              "type": "location",
               "children": [
                 {
-                  "id": "niche-1763624293180-un7zu0k61",
+                  "id": "8c6a5a90-4d1d-4281-84af-88721c542e16",
                   "type": "niche",
                   "children": []
                 }
@@ -5523,5 +5693,8 @@
       ]
     }
   ],
-  "pinnedIds": []
+  "pinnedIds": [
+    "loc-1763623596393-om0zoenp3",
+    "loc-1763623855173-w88tnre1u"
+  ]
 }

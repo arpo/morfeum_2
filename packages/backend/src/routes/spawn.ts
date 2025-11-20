@@ -326,7 +326,7 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       
       // Stage 1: Hierarchy Classification
       const classificationStart = Date.now();
-      const result = await analyzeHierarchy(prompt.trim(), apiKey);
+      const result = await analyzeHierarchy(prompt.trim(), apiKey, spawnId);
       timings.hierarchyClassification = Date.now() - classificationStart;
       
       // Check if cancelled
