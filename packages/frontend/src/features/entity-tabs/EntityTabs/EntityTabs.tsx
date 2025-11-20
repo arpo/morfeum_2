@@ -29,49 +29,16 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
   const [infoModalOpen, setInfoModalOpen] = useState<string | null>(null);
 
   // Convert Map to array for rendering with location depth data
-  const entitiesArray = Array.from(entities.entries()).map(([spawnId, entity]) => {
-    // Check if this is a saved location node to get depth info from tree
-    const node = entity.entityType === 'location' ? getNode(spawnId) : null;
-    
-    // Calculate depth from tree structure
-    let depthLevel = 0;
-    let isNiche = false;
-    
-    if (node) {
-      // Find which world tree this node belongs to
-      const findDepth = (treeNode: any, targetId: string, currentDepth: number): number | null => {
-        if (treeNode.id === targetId) {
-          return currentDepth;
-        }
-        
-        if (treeNode.children) {
-          for (const child of treeNode.children) {
-            const found = findDepth(child, targetId, currentDepth + 1);
-            if (found !== null) return found;
-          }
-        }
-        
-        return null;
+  const entitiesArray = Array.from(entities.entries())
+    .filter(([_, entity]) => entity.entityType !== 'location') // Hide locations (shown in WorldTreesPanel)
+    .map(([spawnId, entity]) => {
+      return {
+        ...entity,
+        spawnId,
+        depthLevel: 0,
+        isNiche: false
       };
-      
-      // Search all world trees for this node
-      for (const tree of worldTrees) {
-        const depth = findDepth(tree, spawnId, 0);
-        if (depth !== null) {
-          depthLevel = depth;
-          isNiche = depth > 0; // Anything beyond the world root
-          break;
-        }
-      }
-    }
-    
-    return {
-      ...entity,
-      spawnId,
-      depthLevel,
-      isNiche
-    };
-  });
+    });
 
   const handleTabClick = (spawnId: string) => {
     setActiveEntity(spawnId);
@@ -156,7 +123,7 @@ export function EntityTabs({ onOpenSavedEntities }: EntityTabsProps) {
         <button
           className={styles.headerButton}
           onClick={onOpenSavedEntities}
-          title="Browse saved locations"
+          title="Browse saved entities"
         >
           <IconBookmark size={18} />
         </button>

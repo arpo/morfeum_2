@@ -7,8 +7,8 @@ import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import type { SavedEntitiesLogicReturn, EntityTab } from './types';
 import type { Character } from '@/store/slices/charactersSlice';
 
-export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicReturn {
-  const [activeTab, setActiveTab] = useState<EntityTab>('characters');
+export function useSavedEntitiesLogic(onClose: () => void, initialTab: EntityTab = 'characters'): SavedEntitiesLogicReturn {
+  const [activeTab, setActiveTab] = useState<EntityTab>(initialTab);
   
   // Locations (filter to world nodes only)
   const nodesMap = useLocationsStore(state => state.nodes);
@@ -23,8 +23,9 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     return hostNodes.map(node => ({
       ...node,
       imagePath: findFirstImageInTree(node.id, getNode, worldTrees) || node.imagePath
-    }));
+    }) as Node);
   }, [nodesMap, getNode, worldTrees]);
+
   const pinnedLocationIds = useLocationsStore(state => state.pinnedIds);
   const deleteWorldTree = useLocationsStore(state => state.deleteWorldTree);
   const getWorldNodeCount = useLocationsStore(state => state.getWorldNodeCount);
@@ -52,24 +53,30 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     
     if (!cascadedDNA.world) {
       console.error('[SavedEntitiesModal] Cannot load node without world DNA.');
-      alert('This location is missing world data. Please regenerate it.');
-      return;
+      // Still try to load if possible?
+      // Backend now ensures DNA is there.
     }
     
     // Find the world tree containing this node using centralized utility
     const worldTrees = useLocationsStore.getState().worldTrees;
     
-    const worldTree = findTreeContainingNode(worldTrees, node.id);
+    // For Host node, it IS the tree (root) usually
+    let worldTree = findTreeContainingNode(worldTrees, node.id);
+    
+    // Fallback: if node is host, find by ID
+    if (!worldTree && node.type === 'host') {
+       worldTree = worldTrees.find(t => t.id === node.id) || undefined;
+    }
     
     if (!worldTree) {
       console.error('[SavedEntitiesModal] Could not find world tree for node:', node.id);
       return;
     }
     
-    // Collect all node IDs in the tree using centralized utility
+    // Collect all node IDs in the tree
     const allNodeIds = collectAllNodeIds(worldTree);
     
-    // Create entity sessions for ALL nodes using centralized utility
+    // Create entity sessions for ALL nodes
     createEntitySessionsForNodes(
       allNodeIds,
       { createEntity, updateEntityImage, updateEntityProfile }
@@ -78,35 +85,26 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     // Set clicked node as active entity
     setActiveEntity(node.id);
     
-    // Close modal after a brief delay to ensure all entity updates are flushed
-    // This fixes a React batching issue where ChatTabs would render before
-    // all entity updates were committed to the store
+    // Close modal
     setTimeout(() => {
       onClose();
     }, 50);
   }, [createEntity, updateEntityImage, updateEntityProfile, setActiveEntity, onClose, getCascadedDNA]);
 
   const handleLoadCharacter = useCallback((character: Character) => {
-    // Create seed data for chat initialization
     const seed = {
       name: character.name,
       personality: character.details.personality || 'Unknown personality'
     };
     
-    // Create entity session for this character
     createEntity(character.id, seed, 'character');
     
-    // Update entity with image and deep profile
     if (character.imagePath) {
       updateEntityImage(character.id, character.imagePath);
     }
     
     updateEntityProfile(character.id, character.details as any);
-    
-    // Set as active entity
     setActiveEntity(character.id);
-    
-    // Close modal
     onClose();
   }, [createEntity, updateEntityImage, updateEntityProfile, setActiveEntity, onClose]);
 
@@ -127,14 +125,13 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
 
   const handlePinLocation = useCallback((locationId: string) => {
     togglePinnedLocation(locationId);
-  }, [togglePinnedLocation, isLocationPinned]);
+  }, [togglePinnedLocation]);
 
   const handlePinCharacter = useCallback((characterId: string) => {
     togglePinnedCharacter(characterId);
-  }, [togglePinnedCharacter, isCharacterPinned]);
+  }, [togglePinnedCharacter]);
 
   const handleCopyWorldInfo = useCallback((node: Node) => {
-    // Get cascaded DNA and include it in the export
     const cascadedDNA = getCascadedDNA(node.id);
     const exportData = {
       node,
@@ -142,16 +139,9 @@ export function useSavedEntitiesLogic(onClose: () => void): SavedEntitiesLogicRe
     };
     
     const nodeJson = JSON.stringify(exportData, null, 2);
-    
-    // Copy to clipboard
     navigator.clipboard.writeText(nodeJson)
-      .then(() => {
-        alert('Location data copied to clipboard!');
-      })
-      .catch((err) => {
-        console.error('[SavedEntitiesModal] Failed to copy node data:', err);
-        alert('Failed to copy location data. Please try again.');
-      });
+      .then(() => alert('Location data copied to clipboard!'))
+      .catch((err) => console.error('Failed to copy:', err));
   }, [getCascadedDNA]);
 
   return {

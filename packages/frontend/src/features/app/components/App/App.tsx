@@ -10,7 +10,8 @@ import { ChatPanel } from '@/features/chat/components/ChatPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { ActiveSpawnsPanel } from '@/features/spawn-panel/ActiveSpawnsPanel';
 import { EntityTabs } from '@/features/entity-tabs/EntityTabs';
-import { SavedEntitiesModal } from '@/features/saved-locations/SavedLocationsModal';
+import { SavedEntitiesModal } from '@/features/saved-entities/SavedEntitiesModal';
+import { WorldTreesPanel } from '@/features/world-trees-panel';
 import { Card, ThemeToggle, Button } from '@/components/ui';
 import { useSpawnEvents } from '@/hooks/useSpawnEvents';
 import { collectAllNodeIds } from '@/utils/treeUtils';
@@ -20,6 +21,7 @@ import styles from './App.module.css';
 
 export function App() {
   const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
+  const [savedEntitiesInitialTab, setSavedEntitiesInitialTab] = useState<'characters' | 'locations'>('characters');
   
   // Initialize SSE connection for spawn events
   useSpawnEvents();
@@ -144,7 +146,10 @@ export function App() {
       {/* Column 1 - Left Sidebar (Controls) */}
       <aside className={styles.sidebar}>
         <ActiveSpawnsPanel />
-        <EntityTabs onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
+        <EntityTabs onOpenSavedEntities={() => {
+          setSavedEntitiesInitialTab('characters');
+          setIsSavedEntitiesModalOpen(true);
+        }} />
       </aside>
       
       {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
@@ -173,10 +178,19 @@ export function App() {
       {/* Column 3 - Chat History (Collapsible) / Image Prompt Panel */}
       {activeEntitySession && (
         <aside className={styles.historyPanel}>
-          {/* Hide chat history for locations */}
+          {/* Show Chat History for Characters */}
           {activeEntitySession.entityType !== 'location' && (
             <ChatHistoryViewer messages={activeEntitySession.messages} />
           )}
+          
+          {/* Show World Trees Panel for Locations */}
+          {activeEntitySession.entityType === 'location' && (
+            <WorldTreesPanel onOpenSavedWorlds={() => {
+              setSavedEntitiesInitialTab('locations');
+              setIsSavedEntitiesModalOpen(true);
+            }} />
+          )}
+
           {/* Always show image prompt panel */}
           {activeEntitySession.imagePrompt && (
             <ImagePromptPanel imagePrompt={activeEntitySession.imagePrompt} />
@@ -203,6 +217,7 @@ export function App() {
       <SavedEntitiesModal 
         isOpen={isSavedEntitiesModalOpen}
         onClose={() => setIsSavedEntitiesModalOpen(false)}
+        initialTab={savedEntitiesInitialTab}
       />
     </div>
   );

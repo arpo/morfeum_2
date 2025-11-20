@@ -4,33 +4,9 @@
 
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store';
-import { useLocationsStore, Node } from '@/store/slices/locations';
-import { parseNestedHierarchy } from '@/utils/hierarchyParser';
-
-/**
- * Helper function to find the deepest node in a hierarchy
- */
-function findDeepestNode(hierarchy: any) {
-  const host = hierarchy.host;
-  
-  // Check for niches in locations
-  if (host.regions?.[0]?.locations?.[0]?.niches?.[0]) {
-    return host.regions[0].locations[0].niches[0];
-  }
-  
-  // Check for locations in regions
-  if (host.regions?.[0]?.locations?.[0]) {
-    return host.regions[0].locations[0];
-  }
-  
-  // Check for regions
-  if (host.regions?.[0]) {
-    return host.regions[0];
-  }
-  
-  // Default to host
-  return host;
-}
+import { useLocationsStore } from '@/store/slices/locations';
+import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
+import { collectAllNodeIds } from '@/utils/treeUtils';
 
 export function useSpawnEvents() {
   const eventSourceRef = useRef<EventSource | null>(null);
@@ -43,12 +19,9 @@ export function useSpawnEvents() {
   const removeSpawn = useStore(state => state.removeSpawn);
   const setActiveEntity = useStore(state => state.setActiveEntity);
   
-  // New tree-based methods
-  const createNode = useLocationsStore(state => state.createNode);
-  const getNode = useLocationsStore(state => state.getNode);
+  // Tree-based methods
+  const setCompleteWorldTree = useLocationsStore(state => state.setCompleteWorldTree);
   const updateNode = useLocationsStore(state => state.updateNode);
-  const addNodeToTree = useLocationsStore(state => state.addNodeToTree);
-  const getCascadedDNA = useLocationsStore(state => state.getCascadedDNA);
 
   useEffect(() => {
     // Connect to SSE endpoint
@@ -60,15 +33,18 @@ export function useSpawnEvents() {
       console.error('[SSE] Connection error:', error);
     };
 
+    // ========================================================================
+    // CHARACTER SPAWN EVENTS
+    // ========================================================================
+
     // Listen for seed complete event
     eventSource.addEventListener('spawn:seed-complete', (e) => {
       const { spawnId, seed, systemPrompt } = JSON.parse(e.data);
       
-      // Detect entity type from seed structure
-      // Locations have 'atmosphere', characters have 'personality' as discriminator
-      const entityType: 'character' | 'location' = seed.atmosphere ? 'location' : 'character';
+      // Create entity session - Character only (locations use new pipeline)
+      // Only handle characters here
+      const entityType = 'character';
       
-      // Create entity session
       if (createEntity) {
         createEntity(spawnId, seed, entityType);
       }
@@ -84,7 +60,7 @@ export function useSpawnEvents() {
       }
     });
 
-    // Listen for image complete event
+    // Listen for image complete event (Characters)
     eventSource.addEventListener('spawn:image-complete', (e) => {
       const { spawnId, imageUrl, imagePrompt } = JSON.parse(e.data);
       
@@ -96,20 +72,6 @@ export function useSpawnEvents() {
       // Update entity with image prompt
       if (updateEntityImagePrompt && imagePrompt) {
         updateEntityImagePrompt(spawnId, imagePrompt);
-      }
-      
-      // Update host node image (host node uses spawnId as its ID)
-      const hostNode = getNode(spawnId);
-      if (hostNode && hostNode.type === 'host') {
-        updateNode(spawnId, { imagePath: imageUrl });
-      }
-      
-      // For location nodes, update the imagePath in the location node
-      // The location node ID should be spawnId-location based on tree creation logic
-      const locationNodeId = `${spawnId}-location`;
-      const locationNode = getNode(locationNodeId);
-      if (locationNode) {
-        updateNode(locationNodeId, { imagePath: imageUrl });
       }
       
       // Update spawn status
@@ -132,555 +94,21 @@ export function useSpawnEvents() {
     eventSource.addEventListener('spawn:profile-complete', (e) => {
       const { spawnId, deepProfile, enhancedSystemPrompt, entityType } = JSON.parse(e.data);
       
-      // NEW: Simplified single node creation (no hierarchical splitting)
-      if (entityType === 'location') {
-        
-        // Get image from entity session (already stored by image-complete event)
-        const entities = useStore.getState().entities;
-        const entitySession = entities.get(spawnId);
-        const nodeImage = entitySession?.entityImage || '';
-        
-        // Extract name from deep profile - try multiple sources
-        const nodeName = (deepProfile as any).name ||
-                        (deepProfile as any).meta?.name ||
-                        deepProfile.searchDesc?.split('] ')[1] || // Extract from "[World] Name"
-                        entitySession?.entityName ||
-                        'Unknown Location';
-        
-        // Create single node with flat NodeDNA (simplified for now - keep old structure temporarily)
-        const node: Partial<Node> = {
-          id: spawnId,
-          type: 'host' as any, // Temporary - will be removed in full migration
-          name: nodeName,
-          spaceType: 'exterior',
-          dna: deepProfile, // Flat NodeDNA structure
-          imagePath: nodeImage
-        };
-        
-        createNode(node as any);
-        addNodeToTree(spawnId, null, spawnId, 'host' as any);
-        
-        // Store simplified DNA in deep profile
+      if (entityType === 'character') {
         if (updateEntityProfile && deepProfile) {
           updateEntityProfile(spawnId, deepProfile);
         }
-      } else {
-        // Character entity - store deep profile normally
-        if (updateEntityProfile && deepProfile) {
-          updateEntityProfile(spawnId, deepProfile);
-        }
-      }
-      
-      // Update system prompt with enhanced version from deep profile
-      if (updateEntitySystemPrompt && enhancedSystemPrompt) {
-        updateEntitySystemPrompt(spawnId, enhancedSystemPrompt);
-      }
-      
-      // Update spawn status and remove from active list
-      if (updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'completed');
-      }
-      // Remove from active spawns after a short delay
-      setTimeout(() => {
-        if (removeSpawn) {
-          removeSpawn(spawnId);
-        }
-      }, 2000);
-    });
-
-    // Listen for spawn cancelled event
-    eventSource.addEventListener('spawn:cancelled', (e) => {
-      const { spawnId } = JSON.parse(e.data);
-      
-      // Remove from active spawns
-      if (removeSpawn) {
-        removeSpawn(spawnId);
-      }
-    });
-
-    // Listen for spawn error event
-    eventSource.addEventListener('spawn:error', (e) => {
-      const { spawnId, error } = JSON.parse(e.data);
-      console.error('[SSE] Spawn error:', { spawnId, error });
-      
-      // Remove from active spawns
-      if (removeSpawn) {
-        removeSpawn(spawnId);
-      }
-    });
-
-    // Listen for hierarchy cancelled event
-    eventSource.addEventListener('hierarchy:cancelled', (e) => {
-      const { spawnId } = JSON.parse(e.data);
-      
-      // Remove from active spawns
-      if (removeSpawn) {
-        removeSpawn(spawnId);
-      }
-    });
-
-    // Listen for hierarchy error event
-    eventSource.addEventListener('hierarchy:error', (e) => {
-      const { spawnId, error } = JSON.parse(e.data);
-      console.error('[SSE] Hierarchy error:', { spawnId, error });
-      
-      // Remove from active spawns
-      if (removeSpawn) {
-        removeSpawn(spawnId);
-      }
-    });
-
-    // Listen for niche DNA complete event
-    eventSource.addEventListener('spawn:niche-dna-complete', (e) => {
-      const { spawnId, dna, parentNodeId } = JSON.parse(e.data);
-      // console.log('[SSE] 🧬 Sublocation DNA generated:', spawnId);
-      
-      // Get parent node to build cascaded DNA for preview
-      const parentNode = getNode(parentNodeId);
-      if (!parentNode) {
-        console.error('[SSE] ❌ Parent node not found:', parentNodeId);
-        return;
-      }
-      
-      // console.log('[SSE] 🔍 Getting cascaded DNA from parent:', parentNodeId);
-      
-      // Get cascaded DNA from tree traversal
-      const cascadedDNA = getCascadedDNA(parentNodeId);
-      
-      // Build complete inherited DNA structure for preview
-      const inheritedDNA = {
-        ...cascadedDNA,
-        niche: dna
-      };
-      
-      // console.log('[SSE] ✅ Preview DNA has world node:', !!inheritedDNA.world);
-      
-      // Create preview immediately with DNA (no image yet)
-      // This switches the preview panel to show the new niche
-      if (createEntity) {
-        const cleanName = dna.meta.name.split(' (')[0];
-        const seed = {
-          name: cleanName,
-          looks: dna.profile.looks,
-          atmosphere: dna.profile.atmosphere,
-          mood: dna.profile.mood
-        };
-        createEntity(spawnId, seed, 'location');
-      }
-      
-      // Store complete inherited DNA in deep profile
-      if (updateEntityProfile) {
-        updateEntityProfile(spawnId, inheritedDNA as any);
-      }
-      
-      // Switch to this entity immediately
-      if (setActiveEntity) {
-        setActiveEntity(spawnId);
-        // console.log('[SSE] 🎯 Preview switched to niche:', spawnId);
-      }
-      
-      if (updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'generating_flux_prompt');
-      }
-    });
-
-    // Listen for niche image prompt complete event
-    eventSource.addEventListener('spawn:niche-image-prompt-complete', (e) => {
-      const { spawnId, imagePrompt } = JSON.parse(e.data);
-      
-      // Store the image prompt
-      if (updateEntityImagePrompt) {
-        updateEntityImagePrompt(spawnId, imagePrompt);
-      }
-      
-      // Update status to show we're now generating the actual image
-      if (updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'generating_image');
-      }
-    });
-
-    // Listen for niche image complete event
-    eventSource.addEventListener('spawn:niche-image-complete', (e) => {
-      const { spawnId, imageUrl } = JSON.parse(e.data);
-      // console.log('[SSE] 🎨 Niche image generated:', imageUrl);
-      
-      // Update the preview with the image
-      if (updateEntityImage) {
-        updateEntityImage(spawnId, imageUrl);
-      }
-      
-      if (updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'completed');
-      }
-    });
-
-    // Listen for niche complete event
-    eventSource.addEventListener('spawn:niche-complete', (e) => {
-      const { spawnId, dna, imageUrl, parentNodeId } = JSON.parse(e.data);
-      // console.log('[SSE] ✅ Niche generation complete:', spawnId);
-      
-      // Get parent node
-      const parentNode = getNode(parentNodeId);
-      if (!parentNode) {
-        console.error('[SSE] ❌ Parent node not found:', parentNodeId);
-        return;
-      }
-      
-      // Find host ID by traversing tree
-      const cascadedDNA = getCascadedDNA(parentNodeId);
-      if (!cascadedDNA.world) {
-        console.error('[SSE] ❌ Could not find world DNA for parent:', parentNodeId);
-        return;
-      }
-      
-      // Extract clean name (remove the hierarchical suffix)
-      const cleanName = dna.meta.name.split(' (')[0];
-      
-      // Create niche node
-      const nicheNode: Node = {
-        id: spawnId,
-        type: 'niche',
-        name: cleanName,
-        spaceType: 'interior',
-        dna: dna,
-        imagePath: imageUrl || ''
-      };
-      
-      createNode(nicheNode);
-      
-      // Find host ID from cascaded DNA
-      // The host node ID is the first node in any tree path
-      const hostId = Object.values(useLocationsStore.getState().nodes)
-        .find(node => node.type === 'host' && node.dna === cascadedDNA.world)?.id;
-      
-      if (!hostId) {
-        console.error('[SSE] ❌ Could not find host ID for niche');
-        return;
-      }
-      
-      // Add to tree under parent
-      addNodeToTree(hostId, parentNodeId, spawnId, 'niche');
-      
-      // Update entity deep profile with cascaded DNA for display
-      const fullCascadedDNA = {
-        ...cascadedDNA,
-        niche: dna
-      };
-      
-      if (updateEntityProfile) {
-        updateEntityProfile(spawnId, fullCascadedDNA as any);
-      }
-      
-      // Switch active entity to new niche
-      if (setActiveEntity) {
-        setActiveEntity(spawnId);
-      }
-      
-      // Remove from active spawns after delay
-      setTimeout(() => {
-        if (removeSpawn) {
-          removeSpawn(spawnId);
-        }
-      }, 2000);
-    });
-
-    // Listen for hierarchy classification complete event
-    eventSource.addEventListener('hierarchy:classification-complete', (e) => {
-      const { hierarchy } = JSON.parse(e.data);
-      console.log('[Hierarchy] Classification Complete:');
-      console.log(hierarchy);
-      
-      // Update status for all active location spawns
-      const activeSpawns = useStore.getState().activeSpawns;
-      activeSpawns.forEach((spawn, spawnId) => {
-        if (spawn.entityType === 'location' && updateSpawnStatus) {
-          updateSpawnStatus(spawnId, 'classifying');
-        }
-      });
-    });
-
-    // Listen for hierarchy image prompt generated event
-    eventSource.addEventListener('hierarchy:image-prompt-generated', (e) => {
-      const { spawnId, imagePrompt, nodeChain } = JSON.parse(e.data);
-      console.log('[Hierarchy] Image Prompt Generated:');
-      console.log(imagePrompt);
-      console.log('Node Chain:', nodeChain);
-      
-      // Create entity session with enriched data from deepest node
-      if (createEntity && nodeChain && nodeChain.length > 0) {
-        const targetNode = nodeChain[nodeChain.length - 1];
-        const seed = {
-          name: targetNode.name,
-          looks: targetNode.looks || targetNode.description,
-          atmosphere: targetNode.atmosphere || '',
-          mood: targetNode.mood || ''
-        };
-        createEntity(spawnId, seed, 'location');
-      }
-      
-      // Store image prompt
-      if (updateEntityImagePrompt) {
-        updateEntityImagePrompt(spawnId, imagePrompt);
-      }
-      
-      // Update status to generating image
-      if (updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'generating_image');
-      }
-    });
-
-    // Listen for hierarchy host DNA complete event
-    eventSource.addEventListener('hierarchy:host-dna-complete', (e) => {
-      const { nodeName, dna } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Host DNA Complete: ${nodeName}`);
-      console.log(dna);
-      
-      // Update status to DNA generation
-      const activeSpawns = useStore.getState().activeSpawns;
-      activeSpawns.forEach((spawn, spawnId) => {
-        if (spawn.entityType === 'location' && updateSpawnStatus) {
-          updateSpawnStatus(spawnId, 'generating_dna');
-        }
-      });
-    });
-
-    // Listen for hierarchy region DNA complete event
-    eventSource.addEventListener('hierarchy:region-dna-complete', (e) => {
-      const { nodeName, dna } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Region DNA Complete: ${nodeName}`);
-      console.log(dna);
-    });
-
-    // Listen for hierarchy location DNA complete event
-    eventSource.addEventListener('hierarchy:location-dna-complete', (e) => {
-      const { nodeName, dna } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Location DNA Complete: ${nodeName}`);
-      console.log(dna);
-    });
-
-    // Listen for hierarchy niche DNA complete event
-    eventSource.addEventListener('hierarchy:niche-dna-complete', (e) => {
-      const { nodeName, dna } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Niche DNA Complete: ${nodeName}`);
-      console.log(dna);
-    });
-
-    // Listen for hierarchy detail DNA complete event
-    eventSource.addEventListener('hierarchy:detail-dna-complete', (e) => {
-      const { nodeName, dna } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Detail DNA Complete: ${nodeName}`);
-      console.log(dna);
-    });
-
-    // Listen for all image prompts complete event
-    eventSource.addEventListener('hierarchy:all-image-prompts-complete', (e) => {
-      const { totalNodes } = JSON.parse(e.data);
-      console.log(`[Hierarchy] All Image Prompts Complete (${totalNodes} nodes)`);
-    });
-
-    // Listen for hierarchy image generation started event
-    eventSource.addEventListener('hierarchy:image-generation-started', (e) => {
-      const { nodeType, nodeName, prompt } = JSON.parse(e.data);
-      if (nodeType && nodeName) {
-        console.log(`[Hierarchy] Image Generation Started [${nodeType.toUpperCase()}]: ${nodeName}`);
-      }
-      
-      // Update status to image generation
-      const activeSpawns = useStore.getState().activeSpawns;
-      activeSpawns.forEach((spawn, spawnId) => {
-        if (spawn.entityType === 'location' && updateSpawnStatus) {
-          updateSpawnStatus(spawnId, 'generating_image');
-        }
-      });
-    });
-
-    // Listen for hierarchy image complete event
-    eventSource.addEventListener('hierarchy:image-complete', (e) => {
-      const { spawnId, nodeType, nodeName, imageUrl, imagePrompt } = JSON.parse(e.data);
-      if (nodeType && nodeName) {
-        console.log(`[Hierarchy] Image Complete [${nodeType.toUpperCase()}]: ${nodeName}`);
-      } else {
-        console.log('[Hierarchy] Image Complete');
-      }
-      console.log('Image URL:', imageUrl);
-      
-      // Update preview entity (spawnId) with image for instant display
-      // This is the temporary entity session that shows the preview
-      // It will be replaced by proper nodes in hierarchy:complete
-      if (spawnId && updateEntityImage) {
-        updateEntityImage(spawnId, imageUrl);
-      }
-      
-      // Update entity with image prompt for reference
-      if (spawnId && updateEntityImagePrompt && imagePrompt) {
-        updateEntityImagePrompt(spawnId, imagePrompt);
-      }
-      
-      // Update spawn status to analyzing
-      if (spawnId && updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'analyzing');
-      }
-    });
-
-    // Listen for hierarchy visual analysis complete event
-    eventSource.addEventListener('hierarchy:visual-analysis-complete', (e) => {
-      const { spawnId, visualAnalysis, enrichedNode } = JSON.parse(e.data);
-      console.log('[Hierarchy] Visual Analysis Complete');
-      console.log('Visual Analysis:', visualAnalysis);
-      console.log('Enriched Node:', enrichedNode);
-      
-      // Update spawn status to DNA generation
-      if (spawnId && updateSpawnStatus) {
-        updateSpawnStatus(spawnId, 'generating_dna');
-      }
-    });
-
-    // Listen for hierarchy complete event (FINAL - displays result)
-    eventSource.addEventListener('hierarchy:complete', (e) => {
-      const { spawnId, hierarchy, metadata, imageUrl, entityType } = JSON.parse(e.data);
-      console.log(`[Hierarchy] Complete!`);
-      console.log('Hierarchy:', hierarchy);
-      console.log('Metadata:', metadata);
-      console.log('Image URL:', imageUrl);
-      
-      try {
-        // Parse nested hierarchy into flat nodes + tree structure
-        const parsed = parseNestedHierarchy(hierarchy, spawnId, imageUrl);
-        console.log(`[Hierarchy] Parsed into ${parsed.nodes.length} nodes`);
-        console.log('[Hierarchy] Tree structure:', parsed.tree);
         
-        // Create all nodes in flat storage
-        parsed.nodes.forEach(node => {
-          createNode(node);
-          console.log(`[Hierarchy] Created node: ${node.name} (${node.type})`);
-          
-          // Create entity session for each node
-          if (createEntity) {
-            const seed = {
-              name: node.name,
-              looks: (node.dna as any)?.profile?.looks || node.name,
-              atmosphere: (node.dna as any)?.profile?.atmosphere || (node.dna as any)?.semantic?.atmosphere || '',
-              mood: (node.dna as any)?.profile?.mood || (node.dna as any)?.semantic?.mood || ''
-            };
-            createEntity(node.id, seed, 'location');
-          }
-          
-          // Set image if available
-          if (updateEntityImage && node.imagePath) {
-            updateEntityImage(node.id, node.imagePath);
-          }
-        });
-        
-        // Add tree structure to worldTrees
-        addNodeToTree(spawnId, null, spawnId, 'host');
-        
-        // Manually build tree structure for child nodes
-        const buildTreeRecursive = (treeNode: any, parentId: string) => {
-          treeNode.children.forEach((child: any) => {
-            addNodeToTree(spawnId, parentId, child.id, child.type as any);
-            if (child.children && child.children.length > 0) {
-              buildTreeRecursive(child, child.id);
-            }
-          });
-        };
-        
-        buildTreeRecursive(parsed.tree, spawnId);
-        console.log('[Hierarchy] Tree structure built successfully');
-        
-        // FIX: Populate deepProfile for ALL nodes AFTER tree is built
-        // This ensures getCascadedDNA can walk the complete tree path
-        parsed.nodes.forEach(node => {
-          if (updateEntityProfile) {
-            const cascadedDNA = getCascadedDNA(node.id);
-            updateEntityProfile(node.id, cascadedDNA as any);
-            console.log(`[Hierarchy] Set deepProfile for node: ${node.name}`);
-          }
-        });
-        
-        // Get the deepest node to update its image and profile
-        const deepestNode = parsed.nodes.find(n => n.id === parsed.deepestNodeId);
-        
-        if (!deepestNode) {
-          console.error('[Hierarchy] Could not find deepest node');
-          return;
-        }
-        
-        // Entity session already created in loop above - just update image if needed
-        // Update entity with image (use deepest node's image if available)
-        if (updateEntityImage && deepestNode.imagePath) {
-          updateEntityImage(parsed.deepestNodeId, deepestNode.imagePath);
-        }
-        
-        // Store cascaded DNA as deep profile for deepest node
-        if (updateEntityProfile) {
-          const cascadedDNA = getCascadedDNA(parsed.deepestNodeId);
-          updateEntityProfile(parsed.deepestNodeId, cascadedDNA as any);
-        }
-        
-        // Switch to deepest node entity
-        if (setActiveEntity) {
-          setActiveEntity(parsed.deepestNodeId);
+        // Update system prompt with enhanced version from deep profile
+        if (updateEntitySystemPrompt && enhancedSystemPrompt) {
+          updateEntitySystemPrompt(spawnId, enhancedSystemPrompt);
         }
         
         // Update spawn status and remove from active list
         if (updateSpawnStatus) {
           updateSpawnStatus(spawnId, 'completed');
         }
-        
-        setTimeout(() => {
-          if (removeSpawn) {
-            removeSpawn(spawnId);
-          }
-        }, 2000);
-        
-      } catch (error) {
-        console.error('[Hierarchy] Failed to parse hierarchy:', error);
-        
-        // Fallback to old behavior if parsing fails
-        const deepestNode = findDeepestNode(hierarchy);
-        
-        if (createEntity && hierarchy.host) {
-          const seed = {
-            name: deepestNode.name,
-            looks: deepestNode.looks || deepestNode.dna?.looks || deepestNode.description,
-            atmosphere: deepestNode.atmosphere || deepestNode.dna?.atmosphere || '',
-            mood: deepestNode.mood || deepestNode.dna?.mood || ''
-          };
-          createEntity(spawnId, seed, 'location');
-        }
-        
-        if (updateEntityImage && imageUrl) {
-          updateEntityImage(spawnId, imageUrl);
-        }
-        
-        if (updateEntityProfile) {
-          updateEntityProfile(spawnId, {
-            hierarchy,
-            metadata,
-            imageUrl
-          } as any);
-        }
-        
-        const node: Partial<Node> = {
-          id: spawnId,
-          type: 'host' as any,
-          name: deepestNode.name,
-          spaceType: 'exterior',
-          dna: hierarchy as any,
-          imagePath: imageUrl || ''
-        };
-        
-        createNode(node as any);
-        addNodeToTree(spawnId, null, spawnId, 'host' as any);
-        
-        if (setActiveEntity) {
-          setActiveEntity(spawnId);
-        }
-        
-        if (updateSpawnStatus) {
-          updateSpawnStatus(spawnId, 'completed');
-        }
-        
+        // Remove from active spawns after a short delay
         setTimeout(() => {
           if (removeSpawn) {
             removeSpawn(spawnId);
@@ -688,6 +116,121 @@ export function useSpawnEvents() {
         }, 2000);
       }
     });
+
+    // Listen for spawn cancelled event
+    eventSource.addEventListener('spawn:cancelled', (e) => {
+      const { spawnId } = JSON.parse(e.data);
+      if (removeSpawn) removeSpawn(spawnId);
+    });
+
+    // Listen for spawn error event
+    eventSource.addEventListener('spawn:error', (e) => {
+      const { spawnId, error } = JSON.parse(e.data);
+      console.error('[SSE] Spawn error:', { spawnId, error });
+      if (removeSpawn) removeSpawn(spawnId);
+    });
+
+    // ========================================================================
+    // WORLD / LOCATION SPAWN EVENTS (NEW PIPELINE)
+    // ========================================================================
+
+    // Status update
+    eventSource.addEventListener('world:status', (e) => {
+      const { spawnId, status } = JSON.parse(e.data);
+      if (updateSpawnStatus) {
+        updateSpawnStatus(spawnId, status);
+      }
+    });
+
+    // Image ready (preview)
+    eventSource.addEventListener('world:image-ready', (e) => {
+      const { spawnId, imageUrl, prompt } = JSON.parse(e.data);
+      
+      // We don't have a permanent node yet, but we can update the active spawn session
+      // Is there an entity session for the spawnId itself?
+      
+      // For locations, the 'spawnId' is currently just tracking progress.
+      // We could create a temporary placeholder entity if we wanted to show preview.
+      // But the current UI just shows progress bar. 
+      // If we want to show the image in the progress row, we'd need to update the store.
+      
+      // For now, simply logging or updating status is fine.
+      // The status update to 'analyzing' happens next.
+    });
+
+    // World Generation Complete
+    eventSource.addEventListener('world:complete', (e) => {
+      const { spawnId, worldTree } = JSON.parse(e.data);
+      
+      console.log('[World] Generation Complete:', worldTree.name);
+      console.log('Tree:', worldTree);
+      
+      // 1. Store the complete tree structure
+      // This handles creating nodes, tree structure, and pinning
+      setCompleteWorldTree(worldTree.rootNode);
+      
+      // 2. Create entity sessions for all nodes so they can be chatted with
+      const rootNode = worldTree.rootNode;
+      const allNodeIds = collectAllNodeIds(rootNode);
+      
+      createEntitySessionsForNodes(
+        allNodeIds,
+        { createEntity, updateEntityImage, updateEntityProfile }
+      );
+
+      // 3. Set active entity to the root (Host)
+      if (setActiveEntity) {
+        setActiveEntity(rootNode.id);
+      }
+
+      // 4. Cleanup spawn progress
+      if (updateSpawnStatus) {
+        updateSpawnStatus(spawnId, 'completed');
+      }
+      
+      setTimeout(() => {
+        if (removeSpawn) {
+          removeSpawn(spawnId);
+        }
+      }, 2000);
+    });
+
+    // Legacy Hierarchy events cleanup
+    // We keep listeners but with minimal logic or logging if needed, 
+    // or remove them if we are sure they aren't used.
+    // Since we updated the backend endpoint, new spawns use world:* events.
+    // Old events might still fire if there are lingering processes but they will just log errors.
+    
+    const legacyEvents = [
+      'hierarchy:classification-complete',
+      'hierarchy:image-prompt-generated',
+      'hierarchy:host-dna-complete',
+      'hierarchy:region-dna-complete',
+      'hierarchy:location-dna-complete',
+      'hierarchy:niche-dna-complete',
+      'hierarchy:detail-dna-complete',
+      'hierarchy:all-image-prompts-complete',
+      'hierarchy:image-generation-started',
+      'hierarchy:image-complete',
+      'hierarchy:visual-analysis-complete',
+      'hierarchy:complete',
+      'hierarchy:cancelled',
+      'hierarchy:error'
+    ];
+
+    legacyEvents.forEach(eventType => {
+        eventSource.addEventListener(eventType, (e) => {
+            // Consume and ignore legacy events to prevent errors
+            // console.debug('[Legacy SSE]', eventType);
+            
+            // Handle cancellation/error to clean up spawns
+            if (eventType === 'hierarchy:cancelled' || eventType === 'hierarchy:error') {
+                 const { spawnId } = JSON.parse(e.data);
+                 if (removeSpawn) removeSpawn(spawnId);
+            }
+        });
+    });
+
 
     // Cleanup on unmount
     return () => {

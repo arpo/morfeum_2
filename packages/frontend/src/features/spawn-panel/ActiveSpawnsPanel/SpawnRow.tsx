@@ -36,6 +36,8 @@ export function SpawnRow({ spawnId, prompt, status, entityType = 'character' }: 
         return 80;
       case 'enriching':
         return 90;
+      case 'building':
+        return 95;
       case 'completed':
         return 100;
       default:
@@ -60,6 +62,8 @@ export function SpawnRow({ spawnId, prompt, status, entityType = 'character' }: 
         return 'Analyzing...';
       case 'enriching':
         return 'Enriching profile...';
+      case 'building':
+        return 'Building world tree...';
       case 'completed':
         return 'Complete';
       default:

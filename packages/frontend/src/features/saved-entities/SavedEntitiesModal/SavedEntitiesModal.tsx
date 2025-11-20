@@ -1,10 +1,10 @@
 import { Modal, ModalHeader, ModalContent } from '@/components/ui/Modal';
 import { IconTrash, IconPin, IconPinFilled, IconCopy } from '@/icons';
-import { useSavedEntitiesLogic } from './useSavedLocationsLogic';
+import { useSavedEntitiesLogic } from './useSavedEntitiesLogic';
 import type { SavedEntitiesModalProps } from './types';
-import styles from './SavedLocationsModal.module.css';
+import styles from './SavedEntitiesModal.module.css';
 
-export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps) {
+export function SavedEntitiesModal({ isOpen, onClose, initialTab = 'characters' }: SavedEntitiesModalProps) {
   const { 
     activeTab, 
     setActiveTab, 
@@ -20,7 +20,7 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
     handlePinCharacter,
     handleCopyWorldInfo,
     getWorldNodeCount
-  } = useSavedEntitiesLogic(onClose);
+  } = useSavedEntitiesLogic(onClose, initialTab);
 
   const entities = activeTab === 'characters' ? characters : locations;
   const handleLoadEntity = activeTab === 'characters' ? handleLoadCharacter : handleLoadLocation;
@@ -43,14 +43,18 @@ export function SavedEntitiesModal({ isOpen, onClose }: SavedEntitiesModalProps)
             className={`${styles.tab} ${activeTab === 'locations' ? styles.activeTab : ''}`}
             onClick={() => setActiveTab('locations')}
           >
-            Locations ({locations.length})
+            Worlds ({locations.length})
           </button>
         </div>
 
         {entities.length === 0 ? (
           <div className={styles.emptyState}>
-            <p>No saved {activeTab} yet.</p>
-            <p className={styles.emptyHint}>Generate and save {activeTab} to see them here.</p>
+            <p>No saved {activeTab === 'locations' ? 'worlds' : 'characters'} yet.</p>
+            <p className={styles.emptyHint}>
+              {activeTab === 'locations' 
+                ? 'Generate and save worlds to see them here.'
+                : 'Generate and save characters to see them here.'}
+            </p>
           </div>
         ) : (
           <div className={styles.grid}>

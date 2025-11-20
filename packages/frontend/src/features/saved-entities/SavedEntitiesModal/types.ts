@@ -6,6 +6,7 @@ export type EntityTab = 'characters' | 'locations';
 export interface SavedEntitiesModalProps {
   isOpen: boolean;
   onClose: () => void;
+  initialTab?: EntityTab;
 }
 
 export interface SavedEntitiesLogicReturn {

@@ -20,6 +20,7 @@ export interface TreesSlice {
   deleteWorldTree: (worldId: string) => void;
   deleteNodeWithChildren: (nodeId: string) => void;
   getWorldNodeCount: (worldId: string) => number;
+  setCompleteWorldTree: (rootNode: any) => void;
 }
 
 // Tree traversal utilities
@@ -281,4 +282,72 @@ export const createTreesSlice: StateCreator<
     traverse(tree);
     return count;
   },
+
+  setCompleteWorldTree: (rootNode) => {
+    const { nodes, worldTrees, pinnedIds } = get() as any;
+    const newNodes = { ...nodes };
+    const flatNodes: any[] = [];
+
+    // Helper to flatten and convert to consistent format if needed
+    // Backend TreeNode -> Frontend Node + Tree Structure
+    // We assume backend format matches compatible structure
+    
+    const traverseAndFlatten = (node: any) => {
+      // Add to flat nodes list
+      // Ensure required fields for Node type
+      const flatNode = {
+        id: node.id,
+        type: node.type,
+        name: node.name,
+        spaceType: node.spaceType || (node.type === 'niche' ? 'interior' : 'exterior'),
+        dna: node.dna,
+        imagePath: node.imagePath || '',
+        description: node.description || '',
+        // Inherit any other props
+        ...node
+      };
+      
+      // Remove children from flat node storage
+      delete flatNode.children;
+      
+      flatNodes.push(flatNode);
+      
+      // Process children
+      if (node.children && Array.isArray(node.children)) {
+        node.children.forEach((child: any) => traverseAndFlatten(child));
+      }
+    };
+
+    traverseAndFlatten(rootNode);
+
+    // Update map
+    flatNodes.forEach(node => {
+      newNodes[node.id] = node;
+    });
+
+    // Add to world trees list (replacing if exists)
+    const existingIndex = worldTrees.findIndex((t: any) => t.id === rootNode.id);
+    let newWorldTrees = [...worldTrees];
+    
+    if (existingIndex >= 0) {
+      newWorldTrees[existingIndex] = rootNode;
+    } else {
+      newWorldTrees.push(rootNode);
+    }
+
+    // Auto-pin the new world
+    let newPinnedIds = [...pinnedIds];
+    if (!pinnedIds.includes(rootNode.id)) {
+      newPinnedIds.push(rootNode.id);
+    }
+
+    set({
+      nodes: newNodes,
+      worldTrees: newWorldTrees,
+      pinnedIds: newPinnedIds
+    });
+    
+    // Save to backend after state update
+    (get() as any).saveToBackend?.();
+  }
 });

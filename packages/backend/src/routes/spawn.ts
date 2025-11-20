@@ -9,6 +9,7 @@ import { validateMzooApiKey } from '../middleware/mzooAuth';
 import { createSpawnManager, SpawnProcess } from '../services/spawn';
 import { eventEmitter } from '../services/eventEmitter';
 import { runCharacterPipeline } from '../engine/generation';
+import { WorldTreeBuilder } from '../services/worldTree/builder';
 import type { HierarchyStructure, HierarchyNode } from '../engine/hierarchyAnalysis/types';
 
 const router = Router();
@@ -325,6 +326,11 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       const { AI_MODELS } = await import('../config/constants');
       
       // Stage 1: Hierarchy Classification
+      eventEmitter.emit({
+        type: 'world:status',
+        data: { spawnId, status: 'classifying' }
+      });
+
       const classificationStart = Date.now();
       const result = await analyzeHierarchy(prompt.trim(), apiKey, spawnId);
       timings.hierarchyClassification = Date.now() - classificationStart;
@@ -335,21 +341,16 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
         return;
       }
       
-      // Stage 2: Build node chain and generate image prompt
+      // Stage 2: Generate image prompt and image
+      eventEmitter.emit({
+        type: 'world:status',
+        data: { spawnId, status: 'generating_image' }
+      });
+
+      // Build node chain and generate image prompt
       const nodeChain = buildNodeChain(result.hierarchy);
       const imagePrompt = locationImageGeneration(prompt.trim(), nodeChain);
       
-      // Emit image prompt generated event
-      eventEmitter.emit({
-        type: 'hierarchy:image-prompt-generated',
-        data: {
-          spawnId,
-          imagePrompt,
-          nodeChain
-        }
-      });
-      
-      // Stage 3: Generate image
       const imageStart = Date.now();
       console.log(imagePrompt);
       const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
@@ -367,17 +368,22 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       
       const imageUrl = imageResult.data.images[0].url;
       
-      // Emit image complete event
+      // Emit image ready event (lightweight)
       eventEmitter.emit({
-        type: 'hierarchy:image-complete',
+        type: 'world:image-ready',
         data: {
           spawnId,
           imageUrl,
-          imagePrompt
+          prompt: imagePrompt
         }
       });
 
-      // Stage 4: Visual Analysis
+      // Stage 3: Visual Analysis
+      eventEmitter.emit({
+        type: 'world:status',
+        data: { spawnId, status: 'analyzing' }
+      });
+
       const analysisStart = Date.now();
       
       // Fetch image as base64
@@ -409,7 +415,12 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
         return;
       }
       
-      // Stage 5: Batch DNA Generation for all nodes (includes visual analysis merging)
+      // Stage 4: DNA Generation
+      eventEmitter.emit({
+        type: 'world:status',
+        data: { spawnId, status: 'generating_dna' }
+      });
+
       const dnaStart = Date.now();
       
       // Generate DNA for entire hierarchy (visual analysis is merged in pipeline)
@@ -435,15 +446,22 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
         console.log(`[LocationPipeline] ${spawnId} cancelled after DNA generation`);
         return;
       }
-      
-      // Emit complete hierarchy with all DNA
+
+      // Stage 5: Build World Tree (BACKEND HEAVY LIFTING)
       eventEmitter.emit({
-        type: 'hierarchy:complete',
+        type: 'world:status',
+        data: { spawnId, status: 'building' }
+      });
+
+      // Build complete tree
+      const worldTree = WorldTreeBuilder.build(spawnId, fullHierarchy, imageUrl);
+      
+      // Emit complete event with pre-built tree
+      eventEmitter.emit({
+        type: 'world:complete',
         data: {
           spawnId,
-          hierarchy: fullHierarchy,
-          metadata: result.metadata,
-          imageUrl
+          worldTree
         }
       });
 
