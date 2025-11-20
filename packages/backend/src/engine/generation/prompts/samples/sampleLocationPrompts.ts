@@ -46,7 +46,6 @@ export const sampleLocationPrompts = [
   "location. exterior, Monumental dreaming stones arranged in organic crescents, central cavern mouth pulsing with inner light",
 
   // Simon Stålenhag – suburban-meets-sci-fi, eerie nostalgia
-
   "location. exterior, Stålenhag-style rural field with half-collapsed telecom tower, cables humming in the air, a service hatch still unlocked",
   "location. exterior, Foggy Swedish lakeside suburb, abandoned mech half-submerged near a boathouse with a broken sliding door",
   "location. exterior, Snowy parking lot outside a 1980s mall overgrown with moss, a glowing lab access door hidden behind old vents",

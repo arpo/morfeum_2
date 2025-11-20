@@ -26,7 +26,7 @@ INTEGRATION: Living wood, flowered vines, and woven branches are acceptable stru
 
 ARCHITECTURAL LOGIC:
 
-FORM: Match interior plan to exterior (round→circular; rectangular→corners).
+FORM: Match interior plan to exterior (round→circular; rectangular→corners; globe/orb→spherical glass enclosure).
 
 CEILING: Match roof (domed→dome; flat→flat; vaulted→arches).
 
@@ -39,8 +39,9 @@ PRESERVE material category but REFINE the finish for interior use:
 • Ext. Metal → Int. Structural Supports / Grating / Wall Plating.
 • Ext. Concrete → Int. Smooth Industrial / Polished finish.
 • Ext. Brick → Int. Painted Brick / Exposed Loft Style.
+• Ext. Glass/Crystal → Int. Transparent Glass Walls / Faceted Domes / Visible Structural Frame.
 
-FLOORING RULE: Floors must be CONSTRUCTED (Tile, Wood, Carpet, Stone).
+FLOORING RULE: Floors must be CONSTRUCTED (Tile, Wood, Carpet, Stone, Glass).
 ABSOLUTELY NO raw dirt, grass, or mud (unless "Ruined" condition applies).
 
 COMPOSITION (CENTERED BUT ASYMMETRIC):
