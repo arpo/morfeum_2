@@ -5,13 +5,86 @@ import { useStore } from '@/store';
 import { Tabs, TreeView, TreeItem } from '@/components/ui';
 import { IconWorld, IconMapPin, IconInfoCircle } from '@/icons';
 import { TreeNode } from '@/store/slices/locations/types';
+import { findNodeInTree } from '@/utils/treeUtils';
 
 export const EntityExplorer: React.FC = () => {
-  // Data Stores
+  // Data Stores - Locations
   const worldTrees = useLocationsStore(state => state.worldTrees);
-  const nodes = useLocationsStore(state => state.nodes);
-  const charactersMap = useCharactersStore(state => state.characters);
-  const characters = useMemo(() => Object.values(charactersMap), [charactersMap]);
+  const locationNodes = useLocationsStore(state => state.nodes);
+  const locationPinnedIds = useLocationsStore(state => state.pinnedIds);
+  
+  // Resolve pinned locations to their tree structures (if available) or flat nodes
+  const locationTreeData = useMemo(() => {
+    if (!worldTrees || worldTrees.length === 0) return [];
+
+    // Internal Recursive Mapper
+    const mapNode = (treeNode: any): TreeItem => {
+      // Look up full node data from nodes map using the ID from the tree
+      const fullNode = locationNodes[treeNode.id];
+      // Fallback to treeNode properties if fullNode is missing (safety)
+      const label = fullNode?.name || treeNode.name || 'Unknown Location';
+      const type = fullNode?.type || treeNode.type;
+      // Try to get image from fullNode (root) or dna
+      const image = fullNode?.imagePath || (fullNode as any)?.dna?.imagePath || treeNode.imagePath;
+
+      return {
+        id: treeNode.id,
+        label: label,
+        icon: type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
+        image: image,
+        children: treeNode.children?.map(mapNode)
+      };
+    };
+
+    return locationPinnedIds
+      .map(id => {
+        // 1. Try to find the node in the hierarchy (to get children)
+        let treeNode: any = null;
+        
+        // Search each root tree
+        for (const root of worldTrees) {
+          const found = findNodeInTree(root, id);
+          if (found) {
+            treeNode = found;
+            break;
+          }
+        }
+
+        // 2. If found in tree, use the tree structure (recursive)
+        if (treeNode) {
+          return mapNode(treeNode);
+        }
+
+        // 3. If not found in tree (orphaned or flat), use data directly from nodes map
+        const node = locationNodes[id];
+        if (!node) return null;
+
+        return {
+          id: node.id,
+          label: node.name,
+          icon: node.type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
+          image: node.imagePath || (node as any).dna?.imagePath,
+          children: undefined // No children known
+        };
+      })
+      .filter(Boolean) as TreeItem[];
+  }, [worldTrees, locationNodes, locationPinnedIds]);
+
+  // Data Stores - Characters
+  const characterMap = useCharactersStore(state => state.characters);
+  const characterPinnedIds = useCharactersStore(state => state.pinnedIds);
+
+  const characterTreeData = useMemo(() => {
+    return characterPinnedIds
+      .map(id => characterMap[id])
+      .filter(Boolean)
+      .map(char => ({
+        id: char.id,
+        label: char.name,
+        icon: <IconInfoCircle size={16} />,
+        image: char.imagePath,
+      }));
+  }, [characterMap, characterPinnedIds]);
   
   // Action Stores
   const setActiveEntity = useStore(state => state.setActiveEntity);
@@ -23,33 +96,22 @@ export const EntityExplorer: React.FC = () => {
   const handleSelect = React.useCallback((item: TreeItem, type: 'location' | 'character') => {
     const id = item.id;
     
-    // Check if item requires session creation (simplified logic based on App.tsx)
-    // We assume if it's in the store, we can just set it active.
-    // However, useStore.entities might not have a session for it yet if it wasn't pinned.
-    // So we should ensure a session exists.
-    
     const state = useStore.getState();
     if (!state.entities.get(id)) {
       // Create session
       if (type === 'location') {
-        // Fetch full node data to get seed/DNA
-        // We can rely on useLocationsStore to get the node details
+        // Fetch full node data
         const node = useLocationsStore.getState().getNode(id);
         if (node) {
            const seed = {
             name: node.name,
-            // We might need cascaded DNA, but for now simple name is enough to start
             atmosphere: 'Loading...' 
           };
-          createEntity(id, seed, 'location'); // Basic creation
+          createEntity(id, seed, 'location'); 
           
-          // If we have image, update it
           if ((node as any).imagePath) {
              updateEntityImage(id, (node as any).imagePath);
           }
-          
-          // We should probably trigger a full profile update/load here similar to App.tsx
-          // But for navigation, setting active serves the immediate purpose if session exists
         }
       } else {
         // Character
@@ -71,38 +133,6 @@ export const EntityExplorer: React.FC = () => {
     setActiveEntity(id);
   }, [createEntity, setActiveEntity, updateEntityImage, updateEntityProfile]);
 
-  // Memoized Data Mapping
-  const locationTreeData = useMemo(() => {
-    const mapNode = (treeNode: any): TreeItem => {
-      // Look up full node data from nodes map using the ID from the tree
-      const fullNode = nodes[treeNode.id];
-      // Fallback to treeNode properties if fullNode is missing (safety)
-      const label = fullNode?.name || treeNode.name || 'Unknown Location';
-      const type = fullNode?.type || treeNode.type;
-      // Try to get image from fullNode (root) or dna
-      const image = fullNode?.imagePath || (fullNode as any)?.dna?.imagePath || treeNode.imagePath;
-
-      return {
-        id: treeNode.id,
-        label: label,
-        icon: type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
-        image: image,
-        children: treeNode.children?.map(mapNode)
-      };
-    };
-    return worldTrees.map(mapNode);
-  }, [worldTrees, nodes]);
-
-  const characterTreeData = useMemo(() => {
-    return characters.map(char => ({
-      id: char.id,
-      label: char.name,
-      icon: <IconInfoCircle size={16} />,
-      image: char.imagePath,
-      // Flat list for characters
-    }));
-  }, [characters]);
-
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <Tabs
@@ -123,7 +153,7 @@ export const EntityExplorer: React.FC = () => {
           {
             id: 'characters',
             label: 'Characters',
-            icon: <IconInfoCircle size={16} />, // Using Info as placeholder for User
+            icon: <IconInfoCircle size={16} />, 
             content: (
               <TreeView 
                 data={characterTreeData} 
