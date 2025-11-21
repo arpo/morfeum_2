@@ -26,5 +26,11 @@ export type { DraggablePanelProps, Position, Size } from './DraggablePanel';
 export { Checkbox } from './Checkbox';
 export type { CheckboxProps } from './Checkbox';
 
+export { TreeView } from './TreeView';
+export type { TreeItem } from './TreeView';
+
+export { Tabs } from './Tabs';
+export type { TabItem } from './Tabs';
+
 // Re-export icons for convenience
 export * from '@/icons';

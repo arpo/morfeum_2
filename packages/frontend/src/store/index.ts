@@ -6,6 +6,11 @@ import { createEntityManagerSlice, type EntityManagerSlice } from './slices/enti
 // Combined store interface
 export interface CombinedStore extends EntityManagerSlice {
   // Theme is handled by separate useThemeStore for persistence
+  
+  // Temporary stubs for missing spawn slice
+  startSpawn: (prompt: string, entityType?: any, useNewEngine?: boolean) => Promise<any>;
+  cancelSpawn: (id: string) => void;
+  activeSpawns: any[];
 }
 
 // Create the store with slices
@@ -14,6 +19,11 @@ export const useStore = create<CombinedStore>()(
     (...a) => ({
       // Entity manager slice
       ...createEntityManagerSlice(...a),
+      
+      // Temporary stubs implementation
+      startSpawn: async () => { console.log('startSpawn stub'); return 'stub-id'; },
+      cancelSpawn: () => console.log('cancelSpawn stub'),
+      activeSpawns: [],
     }),
     {
       name: 'morfeum-store',

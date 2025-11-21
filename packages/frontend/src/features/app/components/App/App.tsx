@@ -9,6 +9,7 @@ import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { ChatPanel } from '@/features/chat/components/ChatPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { SavedEntitiesModal } from '@/features/saved-entities/SavedEntitiesModal';
+import { EntityExplorer } from '@/features/app/components/EntityExplorer/EntityExplorer';
 import { Card, ThemeToggle, Button } from '@/components/ui';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
@@ -145,6 +146,11 @@ export function App() {
       <div className={styles.themeToggleContainer}>
         <ThemeToggle className="compact" />
       </div>
+
+      {/* Column 1 - Sidebar (Entity Explorer) */}
+      <aside className={styles.sidebar}>
+        <EntityExplorer />
+      </aside>
       
       {/* Column 2 - Entity Panel (Character or Location) */}
       {activeEntitySession && (
