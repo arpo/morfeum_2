@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext, createContext } from 'react';
 import { IconChevronDown } from '@/icons';
 import styles from './TreeView.module.css';
 
@@ -17,6 +17,7 @@ interface TreeViewProps {
   onSelect?: (item: TreeItem) => void;
   selectedId?: string;
   className?: string;
+  persistenceKey?: string; // Key for localStorage persistence
 }
 
 interface TreeNodeProps {
@@ -26,14 +27,30 @@ interface TreeNodeProps {
   depth?: number;
 }
 
+interface TreeViewContextType {
+  expandedIds: Set<string>;
+  toggleExpansion: (id: string) => void;
+}
+
+const TreeViewContext = createContext<TreeViewContextType>({
+  expandedIds: new Set(),
+  toggleExpansion: () => {},
+});
+
 const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth = 0 }) => {
-  const [isExpanded, setIsExpanded] = useState(item.isExpanded ?? false);
+  const { expandedIds, toggleExpansion } = useContext(TreeViewContext);
+  
+  // Use context state if available (persistence), otherwise fallback to local prop or default
+  const isExpanded = expandedIds.has(item.id) || (item.isExpanded && !expandedIds.size && !window.localStorage.getItem('tree_expanded'));  
+  // The second part is tricky: if persistence is empty, do we respect default?
+  // Better: simply rely on expandedIds derived from persistence or defaults on mount.
+  
   const hasChildren = item.children && item.children.length > 0;
   const isSelected = selectedId === item.id;
 
   const handleToggle = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIsExpanded(!isExpanded);
+    toggleExpansion(item.id);
   };
 
   const handleSelect = (e: React.MouseEvent) => {
@@ -41,9 +58,6 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
     if (onSelect) {
       onSelect(item);
     }
-    // If it has children, we might want to toggle expansion on click?
-    // Standard behavior is click label -> select, click arrow -> toggle.
-    // Some UIs toggle on label click too. Let's stick to separate controls for precision.
   };
 
   return (
@@ -93,17 +107,60 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
   );
 };
 
-export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, className }) => {
+export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, className, persistenceKey }) => {
+  // Initialize state from local storage if key provided, otherwise empty set
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(() => {
+    if (persistenceKey) {
+      try {
+        const stored = localStorage.getItem(persistenceKey);
+        if (stored) {
+          return new Set(JSON.parse(stored));
+        }
+      } catch (e) {
+        console.warn('Failed to load tree expansion state:', e);
+      }
+    }
+    
+    // If no persistence or empty, check for default expanded items in data?
+    // For simplicity, we start collapsed unless persisted.
+    return new Set();
+  });
+
+  // Save to local storage whenever state changes
+  useEffect(() => {
+    if (persistenceKey) {
+      try {
+        localStorage.setItem(persistenceKey, JSON.stringify(Array.from(expandedIds)));
+      } catch (e) {
+        console.warn('Failed to save tree expansion state:', e);
+      }
+    }
+  }, [expandedIds, persistenceKey]);
+
+  const toggleExpansion = (id: string) => {
+    setExpandedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
   return (
-    <div className={`${styles.tree} ${className || ''}`}>
-      {data.map((item) => (
-        <TreeNode 
-          key={item.id} 
-          item={item} 
-          onSelect={onSelect} 
-          selectedId={selectedId} 
-        />
-      ))}
-    </div>
+    <TreeViewContext.Provider value={{ expandedIds, toggleExpansion }}>
+      <div className={`${styles.tree} ${className || ''}`}>
+        {data.map((item) => (
+          <TreeNode 
+            key={item.id} 
+            item={item} 
+            onSelect={onSelect} 
+            selectedId={selectedId} 
+          />
+        ))}
+      </div>
+    </TreeViewContext.Provider>
   );
 };

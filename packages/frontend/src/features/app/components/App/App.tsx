@@ -125,8 +125,11 @@ export function App() {
       }
     });
     
-    // Set the last loaded entity as active
-    if (lastLoadedId) {
+    // Set the last loaded entity as active, preferring saved state
+    const savedActiveId = localStorage.getItem('lastActiveEntityId');
+    if (savedActiveId && useStore.getState().entities.get(savedActiveId)) {
+        setActiveEntity(savedActiveId);
+    } else if (lastLoadedId) {
       setActiveEntity(lastLoadedId);
     }
     };

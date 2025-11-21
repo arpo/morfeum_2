@@ -87,6 +87,7 @@ export const EntityExplorer: React.FC = () => {
   }, [characterMap, characterPinnedIds]);
   
   // Action Stores
+  const activeEntity = useStore(state => state.activeEntity);
   const setActiveEntity = useStore(state => state.setActiveEntity);
   const createEntity = useStore(state => state.createEntity);
   const updateEntityImage = useStore(state => state.updateEntityImage);
@@ -131,6 +132,7 @@ export const EntityExplorer: React.FC = () => {
     }
     
     setActiveEntity(id);
+    localStorage.setItem('lastActiveEntityId', id);
   }, [createEntity, setActiveEntity, updateEntityImage, updateEntityProfile]);
 
   return (
@@ -146,7 +148,9 @@ export const EntityExplorer: React.FC = () => {
               <TreeView 
                 data={locationTreeData} 
                 onSelect={(item) => handleSelect(item, 'location')} 
+                selectedId={activeEntity || undefined}
                 className="p-2"
+                persistenceKey="entity-explorer-locations"
               />
             )
           },
@@ -158,7 +162,9 @@ export const EntityExplorer: React.FC = () => {
               <TreeView 
                 data={characterTreeData} 
                 onSelect={(item) => handleSelect(item, 'character')} 
+                selectedId={activeEntity || undefined}
                 className="p-2"
+                persistenceKey="entity-explorer-characters"
               />
             )
           }
