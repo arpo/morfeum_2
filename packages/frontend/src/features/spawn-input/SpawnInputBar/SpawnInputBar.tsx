@@ -5,10 +5,14 @@
 
 import { useState } from 'react';
 import { useSpawnInputLogic } from './useSpawnInputLogic';
-import { IconDice, IconChevronDown, IconChevronUp } from '@/icons';
+import { IconDice, IconChevronDown, IconChevronUp, IconBookmark } from '@/icons';
 import styles from './SpawnInputBar.module.css';
 
-export function SpawnInputBar() {
+interface SpawnInputBarProps {
+  onOpenSavedEntities?: () => void;
+}
+
+export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const { state, handlers } = useSpawnInputLogic();
   const [isMinimized, setIsMinimized] = useState(false);
 
@@ -68,19 +72,28 @@ export function SpawnInputBar() {
           />
           <div className={styles.buttonRow}>
             <button
-              className={styles.shuffleButton}
-              onClick={handlers.handleShuffle}
-              title="Random example"
-            >
-              <IconDice size={18} />
-            </button>
-            <button
               className={styles.generateButton}
               onClick={handlers.handleGenerate}
               disabled={!state.textPrompt.trim()}
             >
               Generate
             </button>
+            <button
+              className={styles.shuffleButton}
+              onClick={handlers.handleShuffle}
+              title="Random example"
+            >
+              <IconDice size={18} />
+            </button>
+            {onOpenSavedEntities && (
+              <button
+                className={styles.shuffleButton} // Reusing shuffle button style for now
+                onClick={onOpenSavedEntities}
+                title="Saved Entities"
+              >
+                <IconBookmark size={18} />
+              </button>
+            )}
           </div>
         </div>
       </div>

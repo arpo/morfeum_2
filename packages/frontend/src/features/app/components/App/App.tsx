@@ -139,7 +139,7 @@ export function App() {
       
       {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
       <div className={styles.spawnInputContainer}>
-        <SpawnInputBar />
+        <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
       </div>
       
       {/* Theme Toggle - Bottom Right Corner */}
