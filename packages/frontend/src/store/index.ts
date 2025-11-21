@@ -1,11 +1,10 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import type { StateCreator } from 'zustand';
-import { createSpawnManagerSlice, type SpawnManagerSlice } from './slices/spawnManagerSlice';
 import { createEntityManagerSlice, type EntityManagerSlice } from './slices/entityManagerSlice';
 
 // Combined store interface
-export interface CombinedStore extends SpawnManagerSlice, EntityManagerSlice {
+export interface CombinedStore extends EntityManagerSlice {
   // Theme is handled by separate useThemeStore for persistence
 }
 
@@ -13,9 +12,6 @@ export interface CombinedStore extends SpawnManagerSlice, EntityManagerSlice {
 export const useStore = create<CombinedStore>()(
   devtools(
     (...a) => ({
-      // Spawn manager slice
-      ...createSpawnManagerSlice(...a),
-      
       // Entity manager slice
       ...createEntityManagerSlice(...a),
     }),

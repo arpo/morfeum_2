@@ -4883,6 +4883,300 @@
       ],
       "searchDesc": "Rugged stone keep interior with torchlight, sea view, and pirate remnants.",
       "slug": "interior-of-the-crimson-keep"
+    },
+    "loc-1763650727171-5p144dch6": {
+      "id": "loc-1763650727171-5p144dch6",
+      "type": "host",
+      "name": "The Symbiotic Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Symbiotic Expanse",
+        "description": "A world where organic and technological life forms intertwine.",
+        "dna": {
+          "looks": "A world where the boundaries between organic life and advanced technology have dissolved, creating landscapes of hybrid forms. Structures and ecosystems are deeply integrated, blurring the lines between the natural and the artificial.",
+          "colorsAndLighting": "A palette of deep, saturated colors often contrasted with vibrant bioluminescent hues. Lighting can range from the cool, diffused glow of symbiotic organisms to the sharp, artificial light of advanced tech.",
+          "atmosphere": "The air is often thick with bio-luminescent spores or energetic particles, carrying a scent that is a mix of ozone, damp earth, and a faint, sweet floral note. The atmosphere feels alive and constantly shifting.",
+          "materials": "Materials are a blend of living, fibrous organic matter, chiseled bio-luminescent rock, and seamlessly integrated metallic alloys. Expect textures that range from smooth, polished composites to rough, bark-like surfaces.",
+          "mood": "A sense of awe and unsettling beauty pervades. There's an underlying feeling of constant flux and adaptation, a wild, untamed evolution.",
+          "sounds": "Chirps, hums, clicks, synthesized pulses, organic rustling",
+          "spatialLayout": "Organics and technology merge in fluid, often irregular patterns. Structures grow and adapt, defying conventional geometry. Spaces can be both cavernous and claustrophobic, natural and engineered.",
+          "primary_surfaces": [
+            "Bio-luminescent chitin",
+            "Living metal alloys",
+            "Fungal growth"
+          ],
+          "secondary_surfaces": [
+            "Hardened resin",
+            "Vascular tissue",
+            "Crystalline structures"
+          ],
+          "accent_features": [
+            "Bioluminescent nodes",
+            "Whispering tendrils",
+            "Energy conduits"
+          ],
+          "dominant": "Deep greens, vibrant blues, bioluminescent oranges",
+          "secondary": "Earthy browns, metallic greys, muted purples",
+          "accent": "Electric yellows, sharp reds, pure whites",
+          "ambient": "Varies, often with a cool, otherworldly cast from bioluminescence",
+          "genre": "symbiotic-sci-fi",
+          "architectural_tone": "bio-mechanical fusion with organic growth, adaptive structures, flowing lines, and integrated energy systems",
+          "cultural_tone": "deeply integrated societies focused on symbiosis and adaptation, reverence for life cycles",
+          "materials_base": "living organic composites, advanced bio-metals, self-repairing polymers",
+          "mood_baseline": "awe-inspiring, slightly unsettling, perpetually evolving",
+          "palette_bias": "vibrant, contrasting, with strong bioluminescent elements",
+          "soundscape_base": "complex organic and synthesized soundscapes, dynamic and responsive",
+          "flora_base": "bioluminescent fungi, symbiotic vines, crystalline plants, sentient flora",
+          "fauna_base": "bio-mechanical creatures, energy-based lifeforms, augmented animals"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Bio-mechanical spires",
+          "Intertwined organic-tech landscapes",
+          "Living cities"
+        ],
+        "uniqueIdentifiers": [
+          "Symbiotic integration",
+          "Mutating ecosystems",
+          "Sentient flora and fauna"
+        ],
+        "searchDesc": "World where organic and technological life forms intertwine.",
+        "slug": "the-symbiotic-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Symbiotic Expanse",
+          "looks": "A world where organic and technological life forms intertwine.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/6dsFyxQ-omzopCc2ERGgs.jpg",
+      "description": "A world where organic and technological life forms intertwine."
+    },
+    "ab05217c-7813-4aac-8823-f3ebd2eeb444": {
+      "id": "ab05217c-7813-4aac-8823-f3ebd2eeb444",
+      "type": "region",
+      "name": "The Symbiotic Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Symbiotic Expanse",
+        "description": "The primary region where the intertwined nature of organic and technological life is most pronounced.",
+        "dna": {
+          "looks": "Vast landscapes dominated by colossal, integrated bio-mechanical forms that rise towards the sky. These structures are alive with flowing energy and interconnected organic growths.",
+          "colorsAndLighting": "Dominated by deep, resonant metallic tones and the pulsing glow of internal bio-luminescence. The lighting is often a dramatic interplay of cool ambient light and intensely warm, focused sources.",
+          "atmosphere": "The air is heavy and charged, often filled with a fine, shimmering mist or energized particles that hum with latent power. There's a constant sense of vibrant, almost palpable, life.",
+          "materials": "A fusion of dark, resilient metallic alloys and dense, fibrous organic matter. Surfaces are often textured with growths, veins, and interlocking plates.",
+          "mood": "Imposing, awe-inspiring, and brimming with a sense of ancient, powerful life.",
+          "sounds": "Deep resonant hums, crackling energy, organic pulses, distant mechanical whirs",
+          "spatialLayout": "Expansive and monumental, with structures that dwarf any organic element. Verticality is a key feature, with immense towers and interconnected platforms.",
+          "primary_surfaces": [
+            "Dark, textured metal alloys",
+            "Living, fibrous membranes",
+            "Hardened chitinous plates"
+          ],
+          "secondary_surfaces": [
+            "Bio-luminescent veins",
+            "Crystalline conduits",
+            "Resilient bio-polymers"
+          ],
+          "accent_features": [
+            "Pulsing energy nodes",
+            "Whispering organic tendrils",
+            "Integrated sensor arrays"
+          ],
+          "dominant": "Dark greys, metallic blacks, deep greens",
+          "secondary": "Bioluminescent oranges, vibrant blues, earthy browns",
+          "accent": "Electric amber, pulsing violet",
+          "ambient": "Cool and diffused, with pockets of intense warmth",
+          "genre": null,
+          "architectural_tone": "colossal bio-mechanical fusion with interlocking vertebral structures, integrated vascular systems, and energy-conducting channels",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "sentient bio-luminescent fungi, colossal symbiotic vines, mineral-infused mosses",
+          "fauna_base": "large bio-mechanical predators, airborne energy feeders, symbiotic guardian organisms"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Massive bio-mechanical structures",
+          "Interconnected energy conduits",
+          "Densely populated bio-luminescent flora"
+        ],
+        "uniqueIdentifiers": [
+          "High concentration of bio-mechanical integration",
+          "Energetic atmospheric phenomena",
+          "Visible life force energy"
+        ],
+        "searchDesc": "The central region of the Symbiotic Expanse, known for its massive bio-mechanical structures.",
+        "slug": "the-symbiotic-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Symbiotic Expanse",
+          "looks": "The primary region where the intertwined nature of organic and technological life is most pronounced.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "The primary region where the intertwined nature of organic and technological life is most pronounced."
+    },
+    "5ababff5-49ce-4d1f-82f9-b5c66a134f3b": {
+      "id": "5ababff5-49ce-4d1f-82f9-b5c66a134f3b",
+      "type": "location",
+      "name": "The Vertebral Spire",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Vertebral Spire",
+        "description": "A colossal tower formed from dark metallic vertebrae, its surface adorned with bio-mechanical cables resembling tendons. A recessed, skeletal gateway provides entry.",
+        "looks": "Towering structure of interlocking dark metallic segments resembling a spinal column. Thick, pulsating cables drape like tendons. The entrance is a recessed, bone-like archway.",
+        "atmosphere": "A low, constant thrumming sound emanates from within. The air carries a faint metallic tang and a subtle, organic musk.",
+        "mood": "Foreboding, alien, imposing",
+        "dna": {
+          "looks": "A colossal, dark metallic tower rises, its structure resembling a colossal spine formed from interlocking segments. Thick, dark cables drape like tendons along its vast surface. Numerous small, glowing amber lights are embedded in the tower's surface, appearing like bioluminescent organs. A gaping, recessed gateway dominates the lower midsection of the tower, emitting a bright, warm light from within.",
+          "colorsAndLighting": "The scene is lit by the pervasive ambient light of the mist, which is cool and diffused. This is contrasted sharply by the intense, warm, golden-orange light emanating from the recessed gateway, creating a strong focal point. Small amber lights scattered across the tower provide localized points of warm illumination.",
+          "atmosphere": "A thick, ethereal mist hangs low around the base of the tower, obscuring the ground and creating a sense of depth and mystery. The air appears heavy and damp, with a hazy quality that softens distant details.",
+          "materials": "Primarily dark, textured metallic alloys forming the vertebral segments. Secondary materials include tough, bio-mechanical cabling and what appears to be organic growth like moss or fine vines in some crevices.",
+          "mood": "Imposing, mysterious, ancient, and slightly foreboding, yet with an inviting warmth from the gateway.",
+          "sounds": "Distant mechanical groans, soft organic rustling, faint energy hum",
+          "spatialLayout": "The foreground consists of a rocky, debris-strewn path leading towards the massive tower. The midground is occupied by the imposing presence of the biomechanical tower, with its entrance gateway prominently featured. The background is filled with the misty, receding forms of a dense, overgrown landscape and more distant hills, shrouded in atmospheric haze.",
+          "primary_surfaces": "Dark, textured metal",
+          "secondary_surfaces": "Organic growth (vines, moss)",
+          "accent_features": "Glowing amber lights",
+          "dominant": "Dark grey (tower)",
+          "secondary": "Misty blue-green (atmosphere, landscape)",
+          "accent": "Bright gold/orange (gateway light)",
+          "ambient": "Cool blue-green",
+          "genre": null,
+          "architectural_tone": "colossal bio-mechanical vertebral architecture with articulated segments, flowing tendon-like conduits, and a skeletal, arching entrance",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "minimal, hardy mosses and lichens clinging to surfaces",
+          "fauna_base": "null"
+        },
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center, midground",
+            "description": "A recessed, bone-like archway that leads into a brightly lit passage"
+          }
+        ],
+        "dominantElements": [
+          "Colossal biomechanical tower (est. 100-150m tall, VERTICAL STRUCTURE) dominating center",
+          "Recessed skeletal gateway (center, midground)",
+          "Draping dark cables across the tower surface",
+          "Scattered amber lights on the tower's surface"
+        ],
+        "uniqueIdentifiers": [
+          "Biomechanically segmented tower resembling vertebrae",
+          "Cables resembling tendons draped over the structure",
+          "Skeletal, recessed gateway emitting intense light"
+        ],
+        "searchDesc": "[Location - Exterior] Colossal biomech tower. Has: skeletal archway (center, midground)",
+        "slug": "the-vertebral-spire",
+        "imageUrl": "https://v3b.fal.media/files/b/panda/6dsFyxQ-omzopCc2ERGgs.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Vertebral Spire",
+          "looks": "A colossal tower formed from dark metallic vertebrae, its surface adorned with bio-mechanical cables resembling tendons. A recessed, skeletal gateway provides entry.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/6dsFyxQ-omzopCc2ERGgs.jpg",
+      "description": "A colossal tower formed from dark metallic vertebrae, its surface adorned with bio-mechanical cables resembling tendons. A recessed, skeletal gateway provides entry."
+    },
+    "niche-1763650825822-choiqg8gg": {
+      "id": "niche-1763650825822-choiqg8gg",
+      "type": "niche",
+      "name": "unknown of The Vertebral Spire",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior of a massive, curved chamber formed by colossal, interlocking dark metallic vertebral segments. Thick, pulsating bio-mechanical cables resembling tendons run along the vaulted ceiling and walls, which are further detailed with oxidised metal plating, moss, and dark vines. Numerous small amber lights are scattered across the surfaces.",
+        "colorsAndLighting": "Dominant cool, diffused ambient light from above contrasts with the warm, organic luminescence of scattered amber lights and the lingering golden-orange glow from a gateway. Dark greys form the base of the metallic structure.",
+        "atmosphere": "A pervasive, ethereal mist softens distant details, creating a sense of depth and mystery. The air feels ancient and thick, evoking a feeling of awe and slight unease. The overall temperature is not specified but implied to be cool.",
+        "materials": "The primary materials are dark, interlocking metal forming vertebral segments and fractured debris, contrasted with polished stone pathways. Hardy moss and fine dark vines cling to these surfaces, alongside oxidised metal plating.",
+        "mood": "Ancient, awe-inspiring symbiosis, perpetually evolving and slightly unsettling, yet with an inviting warmth from internal light sources.",
+        "sounds": "Distant hum, subtle organic pulses, echoing mist.",
+        "spatialLayout": "A vast, cavernous space with a curved, vaulted ceiling and expansive walls. Narrow, branching stone pathways lead into shadowed areas, with bone-like platforms ascending vertically to higher levels. The perspective is off-center one-point, emphasized by an ultra-wide lens.",
+        "primary_surfaces": "Dark metallic vertebral segments, oxidised metal plating, gritty damp earth.",
+        "secondary_surfaces": "Polished stone pathways, moss, fine dark vines, bone-like platforms.",
+        "accent_features": "Pulsating bio-mechanical cables, small glowing amber lights, shadowed archways and alcoves.",
+        "dominant": "Dark grey (metallic architecture)",
+        "secondary": "Amber (glowing lights)",
+        "accent": "Golden-orange (gateway glow), earthy greens (moss), dark browns (vines).",
+        "ambient": "Cool, diffused ambient light with warm internal accents.",
+        "genre": null,
+        "architectural_tone": "colossal bio-mechanical vertebral architecture with articulated segments, flowing tendon-like conduits, and a skeletal, arching entrance",
+        "cultural_tone": "deeply integrated societies focused on symbiosis and adaptation, reverence for life cycles",
+        "materials_base": null,
+        "mood_baseline": "Imposing, mysterious, ancient, and slightly foreboding, yet with an inviting warmth from the gateway.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "Moss, vines",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/elephant/ylOjMjzvttIW2mgB_xqoG.jpg",
+      "description": "A vast, cavernous interior chamber characterized by colossal, interlocking dark metallic vertebral segments, bio-mechanical conduits, and scattered amber lights, with a network of stone pathways leading into shadowed depths.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "behind viewer (out of frame)",
+          "description": "Lingering golden-orange glow from the gateway just traversed."
+        },
+        {
+          "type": "archway",
+          "position": "midground, deeper into chamber",
+          "description": "Shadowed archways hinting at further exploration."
+        },
+        {
+          "type": "stairs",
+          "position": "left, ascending vertically",
+          "description": "Staggered, bone-like platforms suggesting access to higher levels."
+        }
+      ],
+      "dominantElements": [
+        "Colossal interlocking vertebral segments",
+        "Pulsating bio-mechanical cables",
+        "Polished stone pathways",
+        "Bone-like platforms"
+      ],
+      "uniqueIdentifiers": [
+        "Colossal vertebral architecture",
+        "Pulsating bio-mechanical tendons",
+        "Scattered amber glowing lights",
+        "Ethereal mist"
+      ],
+      "searchDesc": "Vast bio-mechanical vertebral chamber with amber lights and winding stone paths.",
+      "slug": "unknown-of-the-vertebral-spire"
     }
   },
   "views": {},
@@ -5365,12 +5659,253 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763650727171-5p144dch6",
+      "type": "host",
+      "name": "The Symbiotic Expanse",
+      "description": "A world where organic and technological life forms intertwine.",
+      "dna": {
+        "type": "host",
+        "name": "The Symbiotic Expanse",
+        "description": "A world where organic and technological life forms intertwine.",
+        "dna": {
+          "looks": "A world where the boundaries between organic life and advanced technology have dissolved, creating landscapes of hybrid forms. Structures and ecosystems are deeply integrated, blurring the lines between the natural and the artificial.",
+          "colorsAndLighting": "A palette of deep, saturated colors often contrasted with vibrant bioluminescent hues. Lighting can range from the cool, diffused glow of symbiotic organisms to the sharp, artificial light of advanced tech.",
+          "atmosphere": "The air is often thick with bio-luminescent spores or energetic particles, carrying a scent that is a mix of ozone, damp earth, and a faint, sweet floral note. The atmosphere feels alive and constantly shifting.",
+          "materials": "Materials are a blend of living, fibrous organic matter, chiseled bio-luminescent rock, and seamlessly integrated metallic alloys. Expect textures that range from smooth, polished composites to rough, bark-like surfaces.",
+          "mood": "A sense of awe and unsettling beauty pervades. There's an underlying feeling of constant flux and adaptation, a wild, untamed evolution.",
+          "sounds": "Chirps, hums, clicks, synthesized pulses, organic rustling",
+          "spatialLayout": "Organics and technology merge in fluid, often irregular patterns. Structures grow and adapt, defying conventional geometry. Spaces can be both cavernous and claustrophobic, natural and engineered.",
+          "primary_surfaces": [
+            "Bio-luminescent chitin",
+            "Living metal alloys",
+            "Fungal growth"
+          ],
+          "secondary_surfaces": [
+            "Hardened resin",
+            "Vascular tissue",
+            "Crystalline structures"
+          ],
+          "accent_features": [
+            "Bioluminescent nodes",
+            "Whispering tendrils",
+            "Energy conduits"
+          ],
+          "dominant": "Deep greens, vibrant blues, bioluminescent oranges",
+          "secondary": "Earthy browns, metallic greys, muted purples",
+          "accent": "Electric yellows, sharp reds, pure whites",
+          "ambient": "Varies, often with a cool, otherworldly cast from bioluminescence",
+          "genre": "symbiotic-sci-fi",
+          "architectural_tone": "bio-mechanical fusion with organic growth, adaptive structures, flowing lines, and integrated energy systems",
+          "cultural_tone": "deeply integrated societies focused on symbiosis and adaptation, reverence for life cycles",
+          "materials_base": "living organic composites, advanced bio-metals, self-repairing polymers",
+          "mood_baseline": "awe-inspiring, slightly unsettling, perpetually evolving",
+          "palette_bias": "vibrant, contrasting, with strong bioluminescent elements",
+          "soundscape_base": "complex organic and synthesized soundscapes, dynamic and responsive",
+          "flora_base": "bioluminescent fungi, symbiotic vines, crystalline plants, sentient flora",
+          "fauna_base": "bio-mechanical creatures, energy-based lifeforms, augmented animals"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Bio-mechanical spires",
+          "Intertwined organic-tech landscapes",
+          "Living cities"
+        ],
+        "uniqueIdentifiers": [
+          "Symbiotic integration",
+          "Mutating ecosystems",
+          "Sentient flora and fauna"
+        ],
+        "searchDesc": "World where organic and technological life forms intertwine.",
+        "slug": "the-symbiotic-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Symbiotic Expanse",
+          "looks": "A world where organic and technological life forms intertwine.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/6dsFyxQ-omzopCc2ERGgs.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "ab05217c-7813-4aac-8823-f3ebd2eeb444",
+          "type": "region",
+          "name": "The Symbiotic Expanse",
+          "description": "The primary region where the intertwined nature of organic and technological life is most pronounced.",
+          "dna": {
+            "type": "region",
+            "name": "The Symbiotic Expanse",
+            "description": "The primary region where the intertwined nature of organic and technological life is most pronounced.",
+            "dna": {
+              "looks": "Vast landscapes dominated by colossal, integrated bio-mechanical forms that rise towards the sky. These structures are alive with flowing energy and interconnected organic growths.",
+              "colorsAndLighting": "Dominated by deep, resonant metallic tones and the pulsing glow of internal bio-luminescence. The lighting is often a dramatic interplay of cool ambient light and intensely warm, focused sources.",
+              "atmosphere": "The air is heavy and charged, often filled with a fine, shimmering mist or energized particles that hum with latent power. There's a constant sense of vibrant, almost palpable, life.",
+              "materials": "A fusion of dark, resilient metallic alloys and dense, fibrous organic matter. Surfaces are often textured with growths, veins, and interlocking plates.",
+              "mood": "Imposing, awe-inspiring, and brimming with a sense of ancient, powerful life.",
+              "sounds": "Deep resonant hums, crackling energy, organic pulses, distant mechanical whirs",
+              "spatialLayout": "Expansive and monumental, with structures that dwarf any organic element. Verticality is a key feature, with immense towers and interconnected platforms.",
+              "primary_surfaces": [
+                "Dark, textured metal alloys",
+                "Living, fibrous membranes",
+                "Hardened chitinous plates"
+              ],
+              "secondary_surfaces": [
+                "Bio-luminescent veins",
+                "Crystalline conduits",
+                "Resilient bio-polymers"
+              ],
+              "accent_features": [
+                "Pulsing energy nodes",
+                "Whispering organic tendrils",
+                "Integrated sensor arrays"
+              ],
+              "dominant": "Dark greys, metallic blacks, deep greens",
+              "secondary": "Bioluminescent oranges, vibrant blues, earthy browns",
+              "accent": "Electric amber, pulsing violet",
+              "ambient": "Cool and diffused, with pockets of intense warmth",
+              "genre": null,
+              "architectural_tone": "colossal bio-mechanical fusion with interlocking vertebral structures, integrated vascular systems, and energy-conducting channels",
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": "sentient bio-luminescent fungi, colossal symbiotic vines, mineral-infused mosses",
+              "fauna_base": "large bio-mechanical predators, airborne energy feeders, symbiotic guardian organisms"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Massive bio-mechanical structures",
+              "Interconnected energy conduits",
+              "Densely populated bio-luminescent flora"
+            ],
+            "uniqueIdentifiers": [
+              "High concentration of bio-mechanical integration",
+              "Energetic atmospheric phenomena",
+              "Visible life force energy"
+            ],
+            "searchDesc": "The central region of the Symbiotic Expanse, known for its massive bio-mechanical structures.",
+            "slug": "the-symbiotic-expanse",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Symbiotic Expanse",
+              "looks": "The primary region where the intertwined nature of organic and technological life is most pronounced.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "5ababff5-49ce-4d1f-82f9-b5c66a134f3b",
+              "type": "location",
+              "name": "The Vertebral Spire",
+              "description": "A colossal tower formed from dark metallic vertebrae, its surface adorned with bio-mechanical cables resembling tendons. A recessed, skeletal gateway provides entry.",
+              "dna": {
+                "type": "location",
+                "name": "The Vertebral Spire",
+                "description": "A colossal tower formed from dark metallic vertebrae, its surface adorned with bio-mechanical cables resembling tendons. A recessed, skeletal gateway provides entry.",
+                "looks": "Towering structure of interlocking dark metallic segments resembling a spinal column. Thick, pulsating cables drape like tendons. The entrance is a recessed, bone-like archway.",
+                "atmosphere": "A low, constant thrumming sound emanates from within. The air carries a faint metallic tang and a subtle, organic musk.",
+                "mood": "Foreboding, alien, imposing",
+                "dna": {
+                  "looks": "A colossal, dark metallic tower rises, its structure resembling a colossal spine formed from interlocking segments. Thick, dark cables drape like tendons along its vast surface. Numerous small, glowing amber lights are embedded in the tower's surface, appearing like bioluminescent organs. A gaping, recessed gateway dominates the lower midsection of the tower, emitting a bright, warm light from within.",
+                  "colorsAndLighting": "The scene is lit by the pervasive ambient light of the mist, which is cool and diffused. This is contrasted sharply by the intense, warm, golden-orange light emanating from the recessed gateway, creating a strong focal point. Small amber lights scattered across the tower provide localized points of warm illumination.",
+                  "atmosphere": "A thick, ethereal mist hangs low around the base of the tower, obscuring the ground and creating a sense of depth and mystery. The air appears heavy and damp, with a hazy quality that softens distant details.",
+                  "materials": "Primarily dark, textured metallic alloys forming the vertebral segments. Secondary materials include tough, bio-mechanical cabling and what appears to be organic growth like moss or fine vines in some crevices.",
+                  "mood": "Imposing, mysterious, ancient, and slightly foreboding, yet with an inviting warmth from the gateway.",
+                  "sounds": "Distant mechanical groans, soft organic rustling, faint energy hum",
+                  "spatialLayout": "The foreground consists of a rocky, debris-strewn path leading towards the massive tower. The midground is occupied by the imposing presence of the biomechanical tower, with its entrance gateway prominently featured. The background is filled with the misty, receding forms of a dense, overgrown landscape and more distant hills, shrouded in atmospheric haze.",
+                  "primary_surfaces": "Dark, textured metal",
+                  "secondary_surfaces": "Organic growth (vines, moss)",
+                  "accent_features": "Glowing amber lights",
+                  "dominant": "Dark grey (tower)",
+                  "secondary": "Misty blue-green (atmosphere, landscape)",
+                  "accent": "Bright gold/orange (gateway light)",
+                  "ambient": "Cool blue-green",
+                  "genre": null,
+                  "architectural_tone": "colossal bio-mechanical vertebral architecture with articulated segments, flowing tendon-like conduits, and a skeletal, arching entrance",
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": "minimal, hardy mosses and lichens clinging to surfaces",
+                  "fauna_base": "null"
+                },
+                "navigableElements": [
+                  {
+                    "type": "archway",
+                    "position": "center, midground",
+                    "description": "A recessed, bone-like archway that leads into a brightly lit passage"
+                  }
+                ],
+                "dominantElements": [
+                  "Colossal biomechanical tower (est. 100-150m tall, VERTICAL STRUCTURE) dominating center",
+                  "Recessed skeletal gateway (center, midground)",
+                  "Draping dark cables across the tower surface",
+                  "Scattered amber lights on the tower's surface"
+                ],
+                "uniqueIdentifiers": [
+                  "Biomechanically segmented tower resembling vertebrae",
+                  "Cables resembling tendons draped over the structure",
+                  "Skeletal, recessed gateway emitting intense light"
+                ],
+                "searchDesc": "[Location - Exterior] Colossal biomech tower. Has: skeletal archway (center, midground)",
+                "slug": "the-vertebral-spire",
+                "imageUrl": "https://v3b.fal.media/files/b/panda/6dsFyxQ-omzopCc2ERGgs.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Vertebral Spire",
+                  "looks": "A colossal tower formed from dark metallic vertebrae, its surface adorned with bio-mechanical cables resembling tendons. A recessed, skeletal gateway provides entry.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/panda/6dsFyxQ-omzopCc2ERGgs.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1763650825822-choiqg8gg",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1763628727196-4meodwmfj",
     "loc-1763570178929-is7khrj3v",
     "loc-1763583302373-k6pem7hwa",
-    "loc-1763566759048-fx5m1xcqw"
+    "loc-1763566759048-fx5m1xcqw",
+    "loc-1763650727171-5p144dch6"
   ]
 }

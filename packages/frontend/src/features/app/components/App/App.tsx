@@ -8,12 +8,8 @@ import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer'
 import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { ChatPanel } from '@/features/chat/components/ChatPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
-import { ActiveSpawnsPanel } from '@/features/spawn-panel/ActiveSpawnsPanel';
-import { EntityTabs } from '@/features/entity-tabs/EntityTabs';
 import { SavedEntitiesModal } from '@/features/saved-entities/SavedEntitiesModal';
-import { WorldTreesPanel } from '@/features/world-trees-panel';
 import { Card, ThemeToggle, Button } from '@/components/ui';
-import { useSpawnEvents } from '@/hooks/useSpawnEvents';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import { useEffect, useState } from 'react';
@@ -22,9 +18,6 @@ import styles from './App.module.css';
 export function App() {
   const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
   const [savedEntitiesInitialTab, setSavedEntitiesInitialTab] = useState<'characters' | 'locations'>('characters');
-  
-  // Initialize SSE connection for spawn events
-  useSpawnEvents();
   
   // Initialize theme on mount
   const { setTheme, theme } = useThemeStore();
@@ -143,15 +136,6 @@ export function App() {
   return (
     <div className={styles.container}>
       
-      {/* Column 1 - Left Sidebar (Controls) */}
-      <aside className={styles.sidebar}>
-        <ActiveSpawnsPanel />
-        <EntityTabs onOpenSavedEntities={() => {
-          setSavedEntitiesInitialTab('characters');
-          setIsSavedEntitiesModalOpen(true);
-        }} />
-      </aside>
-      
       {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
       <div className={styles.spawnInputContainer}>
         <SpawnInputBar />
@@ -181,14 +165,6 @@ export function App() {
           {/* Show Chat History for Characters */}
           {activeEntitySession.entityType !== 'location' && (
             <ChatHistoryViewer messages={activeEntitySession.messages} />
-          )}
-          
-          {/* Show World Trees Panel for Locations */}
-          {activeEntitySession.entityType === 'location' && (
-            <WorldTreesPanel onOpenSavedWorlds={() => {
-              setSavedEntitiesInitialTab('locations');
-              setIsSavedEntitiesModalOpen(true);
-            }} />
           )}
 
           {/* Always show image prompt panel */}

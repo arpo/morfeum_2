@@ -5,7 +5,6 @@
 ### Core Systems
 - [x] Character generation pipeline (new engine)
 - [x] Location generation (hierarchy system)
-- [x] SSE event system for spawns
 - [x] Tree-based location storage
 - [x] Cascaded DNA inheritance
 - [x] Navigation system (NavigatorAI)
@@ -20,8 +19,6 @@
 ### UI Components
 - [x] Character panel with chat
 - [x] Location panel with navigation
-- [x] Active spawns panel
-- [x] Entity tabs system (always visible with browse button)
 - [x] Theme toggle (light/dark)
 - [x] Image fullscreen viewer
 - [x] Chat history viewer

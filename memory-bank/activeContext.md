@@ -5,6 +5,41 @@ The Morfeum application is in active development with core systems operational.
 
 ### Recent Work Completed
 
+- **Development Features Cleanup (Nov 20, 2025):**
+  - **Removed all development-only UI and SSE infrastructure** - Complete cleanup of temporary dev features
+  - **What was removed:**
+    1. **SSE (Server-Sent Events) System:**
+       - Frontend: Deleted `useSpawnEvents` hook entirely
+       - Backend: Removed `/events` SSE endpoint
+       - Backend: Deleted `eventEmitter.ts` service
+       - Backend: Removed all 14 `eventEmitter.emit()` calls from spawn routes
+       - No more real-time progress updates
+    2. **UI Components:**
+       - Deleted `world-trees-panel/` directory (pinned worlds tree view)
+       - Deleted `spawn-panel/` directory (ActiveSpawnsPanel with progress bars)
+       - Deleted `entity-tabs/` directory (entity navigation tabs)
+       - Removed entire left sidebar from App.tsx
+    3. **State Management:**
+       - Deleted `spawnManagerSlice.ts` (spawn tracking state)
+       - Updated store index to remove spawn manager slice
+  - **Impact:**
+    - ~500+ lines of development-only code removed
+    - Cleaner codebase focused on core custom experiences
+    - Spawn functionality still works via direct API calls
+    - No progress tracking UI or real-time updates
+  - **Files Modified:**
+    - `packages/frontend/src/features/app/components/App/App.tsx` (removed imports and sidebar)
+    - `packages/frontend/src/store/index.ts` (removed spawn manager slice)
+    - `packages/backend/src/routes/spawn.ts` (removed SSE endpoint and emit calls)
+  - **Files Deleted:**
+    - `packages/frontend/src/hooks/useSpawnEvents.ts`
+    - `packages/frontend/src/features/world-trees-panel/` (entire directory)
+    - `packages/frontend/src/features/spawn-panel/` (entire directory)
+    - `packages/frontend/src/features/entity-tabs/` (entire directory)
+    - `packages/frontend/src/store/slices/spawnManagerSlice.ts`
+    - `packages/backend/src/services/eventEmitter.ts`
+  - **Result:** Streamlined application without development UI clutter
+
 - **Architectural Consistency & DNA Enrichment (Nov 19, 2025):**
   - **Fixed major inconsistency** where exterior/interior didn't match:
     - Wood manor exteriors generated stone cathedral interiors

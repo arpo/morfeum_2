@@ -63,7 +63,6 @@ Morfeum is a demonstration project showcasing modern React development patterns 
 - **Navigation System**: AI-powered spatial navigation with 13 intent types
 - **DNA System**: Inheritance-based property system for consistent world-building
 - **Image Generation**: FLUX integration for visual content
-- **Real-time Updates**: SSE for live spawn progress
 
 ## Target Users
 

@@ -7,7 +7,6 @@ import { HTTP_STATUS } from '../config';
 import { asyncHandler } from '../middleware';
 import { validateMzooApiKey } from '../middleware/mzooAuth';
 import { createSpawnManager, SpawnProcess } from '../services/spawn';
-import { eventEmitter } from '../services/eventEmitter';
 import { runCharacterPipeline } from '../engine/generation';
 import { WorldTreeBuilder } from '../services/worldTree/builder';
 import type { HierarchyStructure, HierarchyNode } from '../engine/hierarchyAnalysis/types';
@@ -61,38 +60,6 @@ function getSpawnManager(apiKey: string): ReturnType<typeof createSpawnManager> 
   }
   return spawnManagers.get(apiKey)!;
 }
-
-/**
- * SSE endpoint - Server-Sent Events stream for spawn updates
- */
-router.get('/events', (req: Request, res: Response) => {
-  // Set SSE headers
-  res.setHeader('Content-Type', 'text/event-stream');
-  res.setHeader('Cache-Control', 'no-cache');
-  res.setHeader('Connection', 'keep-alive');
-  res.setHeader('X-Accel-Buffering', 'no'); // Disable buffering in nginx
-
-  // Generate client ID
-  const clientId = `client-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-
-  // Add error handler to prevent unhandled error crashes
-  res.on('error', (error) => {
-    console.error(`[SSE] Error on client ${clientId}:`, error.message);
-    eventEmitter.removeClient(clientId);
-  });
-
-  // Register client
-  eventEmitter.addClient(clientId, res);
-
-  // Send initial connection message
-  res.write(`data: ${JSON.stringify({ type: 'connected', clientId })}\n\n`);
-
-  // Handle client disconnect
-  req.on('close', () => {
-    eventEmitter.removeClient(clientId);
-    res.end();
-  });
-});
 
 /**
  * POST /api/spawn/engine/start - NEW ENGINE: Start character spawn with new pipeline
@@ -167,16 +134,6 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       // Generate initial system prompt from seed
       const systemPrompt = generateInitialSystemPrompt(seed);
       
-      // Emit seed complete event
-      eventEmitter.emit({
-        type: 'spawn:seed-complete',
-        data: {
-          spawnId,
-          seed,
-          systemPrompt
-        }
-      });
-      
       // Step 2: Generate image
       const imageStartTime = Date.now();
       const { imageUrl, imagePrompt } = await generateCharacterImage(seed, apiKey);
@@ -187,16 +144,6 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
         console.log(`[CharacterPipeline] ${spawnId} cancelled after image generation`);
         return;
       }
-      
-      // Emit image complete event
-      eventEmitter.emit({
-        type: 'spawn:image-complete',
-        data: {
-          spawnId,
-          imageUrl,
-          imagePrompt
-        }
-      });
       
       // Step 3: Analyze image
       const analysisStartTime = Date.now();
@@ -223,23 +170,6 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       // Generate enhanced system prompt from deep profile
       const enhancedSystemPrompt = generateEnhancedSystemPrompt(deepProfile);
       
-      // Emit profile complete event
-      eventEmitter.emit({
-        type: 'spawn:profile-complete',
-        data: {
-          spawnId,
-          deepProfile: {
-            ...deepProfile,
-            imageUrl,
-            imagePrompt,
-            seed,
-            visualAnalysis
-          },
-          enhancedSystemPrompt,
-          entityType: 'character'
-        }
-      });
-
       // Log completion with timing breakdown
       const totalTime = Date.now() - pipelineStartTime;
       console.log(`\n[CharacterPipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
@@ -254,20 +184,8 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
     } catch (error: any) {
       if (abortController.signal.aborted) {
         console.log(`[CharacterPipeline] ${spawnId} cancelled`);
-        eventEmitter.emit({
-          type: 'spawn:cancelled',
-          data: { spawnId }
-        });
       } else {
         console.error('[Engine Route] Pipeline failed:', error);
-        eventEmitter.emit({
-          type: 'spawn:error',
-          data: {
-            spawnId,
-            error: error.message || 'Unknown error',
-            stage: 'pipeline'
-          }
-        });
       }
     } finally {
       // Clean up abort controller
@@ -326,11 +244,6 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       const { AI_MODELS } = await import('../config/constants');
       
       // Stage 1: Hierarchy Classification
-      eventEmitter.emit({
-        type: 'world:status',
-        data: { spawnId, status: 'classifying' }
-      });
-
       const classificationStart = Date.now();
       const result = await analyzeHierarchy(prompt.trim(), apiKey, spawnId);
       timings.hierarchyClassification = Date.now() - classificationStart;
@@ -342,11 +255,6 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       }
       
       // Stage 2: Generate image prompt and image
-      eventEmitter.emit({
-        type: 'world:status',
-        data: { spawnId, status: 'generating_image' }
-      });
-
       // Build node chain and generate image prompt
       const nodeChain = buildNodeChain(result.hierarchy);
       const imagePrompt = locationImageGeneration(prompt.trim(), nodeChain);
@@ -368,22 +276,7 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       
       const imageUrl = imageResult.data.images[0].url;
       
-      // Emit image ready event (lightweight)
-      eventEmitter.emit({
-        type: 'world:image-ready',
-        data: {
-          spawnId,
-          imageUrl,
-          prompt: imagePrompt
-        }
-      });
-
       // Stage 3: Visual Analysis
-      eventEmitter.emit({
-        type: 'world:status',
-        data: { spawnId, status: 'analyzing' }
-      });
-
       const analysisStart = Date.now();
       
       // Fetch image as base64
@@ -416,11 +309,6 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       }
       
       // Stage 4: DNA Generation
-      eventEmitter.emit({
-        type: 'world:status',
-        data: { spawnId, status: 'generating_dna' }
-      });
-
       const dnaStart = Date.now();
       
       // Generate DNA for entire hierarchy (visual analysis is merged in pipeline)
@@ -448,23 +336,10 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       }
 
       // Stage 5: Build World Tree (BACKEND HEAVY LIFTING)
-      eventEmitter.emit({
-        type: 'world:status',
-        data: { spawnId, status: 'building' }
-      });
-
+      // Build complete tree
       // Build complete tree
       const worldTree = WorldTreeBuilder.build(spawnId, fullHierarchy, imageUrl);
       
-      // Emit complete event with pre-built tree
-      eventEmitter.emit({
-        type: 'world:complete',
-        data: {
-          spawnId,
-          worldTree
-        }
-      });
-
       // Log timing breakdown
       const totalTime = Date.now() - pipelineStartTime;
       console.log(`\n[LocationPipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
@@ -479,20 +354,8 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
     } catch (error: any) {
       if (abortController.signal.aborted) {
         console.log(`[LocationPipeline] ${spawnId} cancelled`);
-        eventEmitter.emit({
-          type: 'hierarchy:cancelled',
-          data: { spawnId }
-        });
       } else {
         console.error('[LocationPipeline] Pipeline failed:', error);
-        eventEmitter.emit({
-          type: 'hierarchy:error',
-          data: {
-            spawnId,
-            error: error.message || 'Unknown error',
-            stage: 'location-pipeline'
-          }
-        });
       }
     } finally {
       // Clean up abort controller
