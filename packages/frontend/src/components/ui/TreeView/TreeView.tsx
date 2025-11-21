@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
 import { IconChevronDown } from '@/icons';
+import { useLocationsStore } from '@/store/slices/locations';
 import styles from './TreeView.module.css';
 
 export interface TreeItem {
@@ -121,8 +122,16 @@ function findPathToNode(items: TreeItem[], targetId: string, currentPath: string
 }
 
 export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, className, persistenceKey }) => {
-  // Initialize state from local storage if key provided, otherwise empty set
+  // Get expansion state from locations store
+  const storeExpandedIds = useLocationsStore((state) => state.expandedNodeIds || []);
+  
+  // Initialize state from store or local storage
   const [expandedIds, setExpandedIds] = useState<Set<string>>(() => {
+    // Prefer store state
+    if (storeExpandedIds.length > 0) {
+      return new Set(storeExpandedIds);
+    }
+    // Fallback to localStorage
     if (persistenceKey) {
       try {
         const stored = localStorage.getItem(persistenceKey);
@@ -135,6 +144,13 @@ export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, 
     }
     return new Set();
   });
+
+  // Sync with store changes
+  useEffect(() => {
+    if (storeExpandedIds.length > 0) {
+      setExpandedIds(new Set(storeExpandedIds));
+    }
+  }, [storeExpandedIds]);
 
   // Save to local storage whenever state changes
   useEffect(() => {
@@ -175,6 +191,11 @@ export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, 
       } else {
         next.add(id);
       }
+      
+      // Also update store
+      const locationsStore = useLocationsStore.getState();
+      locationsStore.setExpandedNodes(Array.from(next));
+      
       return next;
     });
   };

@@ -9,11 +9,18 @@ import { NodesSlice } from './nodesSlice';
 
 export interface UISlice {
   pinnedIds: string[];
+  expandedNodeIds: string[];
   
   // Pin operations
   togglePinned: (id: string) => void;
   isPinned: (id: string) => boolean;
   getPinnedNodes: () => Node[];
+  
+  // Expansion operations
+  expandNode: (id: string) => void;
+  collapseNode: (id: string) => void;
+  setExpandedNodes: (ids: string[]) => void;
+  isExpanded: (id: string) => boolean;
   
   // Bulk operations
   clearAll: () => void;
@@ -26,6 +33,7 @@ export const createUISlice: StateCreator<
   UISlice
 > = (set, get) => ({
   pinnedIds: [],
+  expandedNodeIds: [],
   
   togglePinned: (id) => {
     const node = get().getNode(id);
@@ -59,7 +67,30 @@ export const createUISlice: StateCreator<
       .filter(Boolean) as Node[];
   },
   
+  expandNode: (id) => {
+    set((state) => {
+      if (!state.expandedNodeIds.includes(id)) {
+        return { expandedNodeIds: [...state.expandedNodeIds, id] };
+      }
+      return state;
+    });
+  },
+  
+  collapseNode: (id) => {
+    set((state) => ({
+      expandedNodeIds: state.expandedNodeIds.filter(nodeId => nodeId !== id)
+    }));
+  },
+  
+  setExpandedNodes: (ids) => {
+    set({ expandedNodeIds: ids });
+  },
+  
+  isExpanded: (id) => {
+    return get().expandedNodeIds.includes(id);
+  },
+  
   clearAll: () => {
-    set({ nodes: {}, views: {}, worldTrees: [], pinnedIds: [] } as any);
+    set({ nodes: {}, views: {}, worldTrees: [], pinnedIds: [], expandedNodeIds: [] } as any);
   },
 });

@@ -1,6 +1,32 @@
 # Active Context
 
 ## Recent Changes (2025-11-21)
+
+### Unified Utility Architecture (Nov 21, 2025)
+- **Created comprehensive utility modules** to eliminate all duplicate logic across spawn management, tree navigation, and entity sessions
+- **Backend utilities** (`packages/backend/src/engine/pipelines/shared/`):
+  - `pipelineHelpers.ts` - PipelineHelper class for unified SSE events, timing, and logging
+  - `entityPersistence.ts` - Unified save/pin logic for all entity types
+- **Frontend utilities** (`packages/frontend/src/utils/`):
+  - `spawn/sseConnection.ts` - Unified SSE setup for all entity types
+  - `spawn/completionHandlers.ts` - Unified completion logic (characters & locations)
+  - `tree/navigation.ts` - Tree traversal functions (findDeepestNodeId, getAncestors, findNodeInTree)
+  - `tree/expansion.ts` - Tree expansion management (expandTreeToNode, collapseTree)
+  - `entity/sessionManager.ts` - Entity session creation and activation
+- **Refactored all three pipelines** to use PipelineHelper:
+  - `characterPipeline.ts` - Now uses PipelineHelper (~190 lines removed)
+  - `worldTreePipeline.ts` - Now uses PipelineHelper (~100 lines removed)
+  - `createNodePipeline.ts` - Now uses PipelineHelper (~80 lines removed)
+- **Fixed tree unfolding bug**:
+  - Added `expandedNodeIds` state to locations store (uiSlice)
+  - Updated expansion utility to trigger store updates (not just localStorage)
+  - Updated TreeView to listen to store changes and re-render
+  - New world trees now automatically unfold to deepest node ✅
+- **Code reduction:** ~470 lines of duplicate code eliminated
+- **Consistent timing logs:** All pipelines now show formatted timing breakdown
+- **Result:** Single source of truth for all spawn/tree/entity operations
+
+### Earlier Changes
 - TreeView now persists expanded/collapsed state in localStorage (`persistenceKey`).
 - EntityExplorer highlights the selected node with a distinct color.
 - Last selected entity is saved to localStorage and restored on app load.

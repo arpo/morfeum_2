@@ -15,7 +15,7 @@ import { locationImageGeneration } from '../generation/prompts/locations/locatio
 import { locationVisualAnalysisPrompt } from '../generation/prompts';
 import { fetchImageAsBase64 } from '../../services/spawn/shared/pipelineCommon';
 import { WorldTreeBuilder } from '../../services/worldTree/builder';
-import { sseService } from '../../services/SSEService';
+import { PipelineHelper } from './shared/pipelineHelpers';
 
 /**
  * Helper: Build node chain from hierarchy
@@ -50,52 +50,23 @@ export async function runWorldTreePipeline(
   apiKey: string,
   signal: AbortSignal
 ): Promise<void> {
-  const pipelineStartTime = Date.now();
-  const timings = {
-    hierarchyClassification: 0,
-    imageGeneration: 0,
-    visualAnalysis: 0,
-    dnaGeneration: 0
-  };
+  const helper = new PipelineHelper(spawnId, 'WorldTreePipeline');
 
   try {
-    console.log(`[WorldTreePipeline] Starting pipeline for ${spawnId}`);
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'started', 
-      message: 'Starting World Tree generation...' 
-    });
+    helper.started('Starting World Tree generation...');
 
     // Stage 1: Hierarchy Classification
-    const classificationStart = Date.now();
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'hierarchy_classification', 
-      message: 'Analyzing hierarchy structure...' 
-    });
-    
+    helper.startStage('hierarchy_classification', 'Analyzing hierarchy structure...');
     const result = await analyzeHierarchy(prompt, apiKey, spawnId);
-    timings.hierarchyClassification = Date.now() - classificationStart;
-    
-    console.log(`[WorldTreePipeline] ${spawnId} Hierarchy analysis complete`);
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'hierarchy_complete', 
-      message: 'Hierarchy structure analyzed',
-      data: { hierarchy: result.hierarchy } 
-    });
+    helper.completeStage('hierarchy_classification', 'Hierarchy structure analyzed', { hierarchy: result.hierarchy });
 
     if (signal.aborted) throw new Error('Aborted');
 
     // Stage 2: Image Generation
-    const imageStart = Date.now();
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'image_generation', 
-      message: 'Generating visual representation...' 
-    });
-
+    helper.startStage('image_generation', 'Generating visual representation...');
     const nodeChain = buildNodeChain(result.hierarchy);
     const imagePrompt = locationImageGeneration(prompt, nodeChain);
-    
     const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
-    timings.imageGeneration = Date.now() - imageStart;
 
     if (signal.aborted) throw new Error('Aborted');
 
@@ -104,20 +75,10 @@ export async function runWorldTreePipeline(
     }
 
     const imageUrl = imageResult.data.images[0].url;
-    console.log(`[WorldTreePipeline] ${spawnId} Image generation complete`);
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'image_complete', 
-      message: 'Visual representation generated',
-      data: { imageUrl } 
-    });
+    helper.completeStage('image_generation', 'Visual representation generated', { imageUrl });
 
     // Stage 3: Visual Analysis
-    const analysisStart = Date.now();
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'visual_analysis', 
-      message: 'Analyzing visual context...' 
-    });
-
+    helper.startStage('visual_analysis', 'Analyzing visual context...');
     const base64Image = await fetchImageAsBase64(imageUrl);
     const analysisPrompt = locationVisualAnalysisPrompt(prompt, nodeChain);
     
@@ -134,24 +95,12 @@ export async function runWorldTreePipeline(
     }
 
     const visualAnalysis = parseJSON(analysisResult.data.text);
-    timings.visualAnalysis = Date.now() - analysisStart;
-
-    console.log(`[WorldTreePipeline] ${spawnId} Visual analysis complete`);
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'analysis_complete', 
-      message: 'Visual context analyzed',
-      data: { analysis: visualAnalysis } 
-    });
+    helper.completeStage('visual_analysis', 'Visual context analyzed', { analysis: visualAnalysis });
 
     if (signal.aborted) throw new Error('Aborted');
 
     // Stage 4: DNA Generation
-    const dnaStart = Date.now();
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'dna_generation', 
-      message: 'generating DNA for all nodes...' 
-    });
-
+    helper.startStage('dna_generation', 'Generating DNA for all nodes...');
     const fullHierarchy = await generateBatchDNA(
       result.hierarchy,
       visualAnalysis,
@@ -161,12 +110,7 @@ export async function runWorldTreePipeline(
 
     // Attach image to deepest node
     const deepestNode = nodeChain[nodeChain.length - 1];
-    // Logic to find and attach imageUrl specifically within the fullHierarchy execution
-    // Since logic is complex, let's replicate the finding logic slightly more robustly or simply accept that generateBatchDNA modifies object ref
-    // Re-traverse to be safe or rely on object reference
     if (fullHierarchy.host.regions?.[0]?.locations?.[0]) {
-        // Simple heuristic: attach to location/niche if available
-        // We can refine this if needed, but matching the exact logic from spawn.ts:
         if (deepestNode.type === 'location') {
              fullHierarchy.host.regions[0].locations[0].imageUrl = imageUrl;
         } else if (deepestNode.type === 'niche' && fullHierarchy.host.regions[0].locations[0].niches?.[0]) {
@@ -174,52 +118,21 @@ export async function runWorldTreePipeline(
         }
     }
 
-
-    timings.dnaGeneration = Date.now() - dnaStart;
-
-    console.log(`[WorldTreePipeline] ${spawnId} DNA generation complete`);
-    sseService.sendEvent(spawnId, 'progress', { 
-      stage: 'dna_complete', 
-      message: 'DNA generated for all nodes' 
-    });
+    helper.completeStage('dna_generation', 'DNA generated for all nodes');
 
     if (signal.aborted) throw new Error('Aborted');
 
     // Stage 5: Build World Tree
     const worldTree = WorldTreeBuilder.build(spawnId, fullHierarchy, imageUrl);
 
-    const totalTime = Date.now() - pipelineStartTime;
-    
-    console.log(`\n[WorldTreePipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
-    console.log(`  Entity Type: location`);
-    console.log(`  Stage Timings:`);
-    console.log(`    - Hierarchy Classification: ${(timings.hierarchyClassification / 1000).toFixed(2)}s`);
-    console.log(`    - Image Generation:         ${(timings.imageGeneration / 1000).toFixed(2)}s`);
-    console.log(`    - Visual Analysis:          ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
-    console.log(`    - DNA Generation:           ${(timings.dnaGeneration / 1000).toFixed(2)}s`);
-    console.log(`  Total:                        ${(totalTime / 1000).toFixed(2)}s\n`);
-
-    sseService.sendEvent(spawnId, 'completed', { 
-      message: 'World Tree created successfully',
-      worldTree,
-      timings
-    });
-    
-    // Close connection after completion
-    setTimeout(() => sseService.closeConnection(spawnId), 1000);
+    helper.completed('World Tree created successfully', { worldTree });
 
   } catch (error: any) {
     if (signal.aborted) {
-      console.log(`[WorldTreePipeline] ${spawnId} cancelled`);
-      sseService.sendEvent(spawnId, 'cancelled', { message: 'Pipeline cancelled' });
+      helper.cancelled();
     } else {
-      console.error(`[WorldTreePipeline] Pipeline failed:`, error);
-      sseService.sendEvent(spawnId, 'error', { 
-        message: 'Pipeline failed', 
-        error: error.message 
-      });
+      helper.error(error);
     }
-    sseService.closeConnection(spawnId);
   }
 }
 

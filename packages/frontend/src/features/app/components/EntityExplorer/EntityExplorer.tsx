@@ -142,7 +142,7 @@ export const EntityExplorer: React.FC = () => {
         items={[
           {
             id: 'locations',
-            label: 'Locations',
+            label: 'Host',
             icon: <IconWorld size={16} />,
             content: (
               <TreeView 

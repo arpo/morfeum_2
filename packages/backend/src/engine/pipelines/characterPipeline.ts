@@ -17,10 +17,9 @@ import { characterDeepProfilePrompt } from '../generation/prompts/characters/cha
 // Import shared utilities
 import { generateImage } from './shared/imageGeneration';
 import { analyzeImageWithPrompt } from './shared/visualAnalysis';
-import { PipelineTimer } from './shared/pipelineLogger';
+import { PipelineHelper } from './shared/pipelineHelpers';
+import { saveAndPinEntity, buildCharacterEntity } from './shared/entityPersistence';
 import * as mzooService from '../../services/mzoo';
-import { sseService } from '../../services/SSEService';
-import { storageService } from '../../services/storage/storageService';
 
 /**
  * Generate character seed
@@ -180,200 +179,68 @@ export async function runCharacterPipeline(
   visualAnalysis: VisualAnalysis;
   deepProfile: DeepProfile;
 }> {
-  const pipelineStartTime = Date.now();
-  const timings = {
-    seedGeneration: 0,
-    imageGeneration: 0,
-    visualAnalysis: 0,
-    profileEnrichment: 0
-  };
+  const helper = spawnId ? new PipelineHelper(spawnId, 'CharacterPipeline') : null;
 
   try {
-    console.log(`[CharacterPipeline] Starting pipeline for ${spawnId || 'character'}`);
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'started', 
-        message: 'Starting character generation...' 
-      });
+    if (helper) {
+      helper.started('Starting character generation...');
     }
 
     // Step 1: Generate seed
-    const seedStart = Date.now();
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'seed_generation', 
-        message: 'Generating character seed...' 
-      });
+    if (helper) {
+      helper.startStage('seed_generation', 'Generating character seed...');
     }
     const seed = await generateCharacterSeed(userPrompt, apiKey, signal);
-    timings.seedGeneration = Date.now() - seedStart;
-
-    console.log(`[CharacterPipeline] ${spawnId || 'character'} Seed generation complete`);
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'seed_complete', 
-        message: 'Character seed generated',
-        data: { seed } 
-      });
+    if (helper) {
+      helper.completeStage('seed_generation', 'Character seed generated', { seed });
     }
     
     // Step 2: Generate image
-    const imageStart = Date.now();
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'image_generation', 
-        message: 'Generating character image...' 
-      });
+    if (helper) {
+      helper.startStage('image_generation', 'Generating character image...');
     }
     const { imageUrl, imagePrompt } = await generateCharacterImage(seed, apiKey, signal);
-    timings.imageGeneration = Date.now() - imageStart;
-
-    console.log(`[CharacterPipeline] ${spawnId || 'character'} Image generation complete`);
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'image_complete', 
-        message: 'Character image generated',
-        data: { imageUrl } 
-      });
+    if (helper) {
+      helper.completeStage('image_generation', 'Character image generated', { imageUrl });
     }
     
     // Step 3: Analyze image
-    const analysisStart = Date.now();
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'visual_analysis', 
-        message: 'Analyzing character appearance...' 
-      });
+    if (helper) {
+      helper.startStage('visual_analysis', 'Analyzing character appearance...');
     }
     const visualAnalysis = await analyzeCharacterImage(imageUrl, seed, apiKey, signal);
-    timings.visualAnalysis = Date.now() - analysisStart;
-
-    console.log(`[CharacterPipeline] ${spawnId || 'character'} Visual analysis complete`);
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'analysis_complete', 
-        message: 'Character appearance analyzed',
-        data: { analysis: visualAnalysis } 
-      });
+    if (helper) {
+      helper.completeStage('visual_analysis', 'Character appearance analyzed', { analysis: visualAnalysis });
     }
     
     // Step 4: Enrich profile
-    const enrichStart = Date.now();
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'profile_enrichment', 
-        message: 'Enriching character profile...' 
-      });
+    if (helper) {
+      helper.startStage('profile_enrichment', 'Enriching character profile...');
     }
     const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey, signal);
-    timings.profileEnrichment = Date.now() - enrichStart;
-
-    console.log(`[CharacterPipeline] ${spawnId || 'character'} Profile enrichment complete`);
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'progress', { 
-        stage: 'profile_complete', 
-        message: 'Character profile enriched' 
-      });
+    if (helper) {
+      helper.completeStage('profile_enrichment', 'Character profile enriched');
     }
 
-    const totalTime = Date.now() - pipelineStartTime;
-
-    // Log completion with timing breakdown
-    console.log(`\n[CharacterPipeline] ${spawnId || 'character'} completed in ${(totalTime / 1000).toFixed(2)}s`);
-    console.log(`  Entity Type: character`);
-    console.log(`  Stage Timings:`);
-    console.log(`    - Seed Generation:     ${(timings.seedGeneration / 1000).toFixed(2)}s`);
-    console.log(`    - Image Generation:    ${(timings.imageGeneration / 1000).toFixed(2)}s`);
-    console.log(`    - Visual Analysis:     ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
-    console.log(`    - Profile Enrichment:  ${(timings.profileEnrichment / 1000).toFixed(2)}s`);
-    console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
-
-    if (spawnId) {
-      // Auto-save character to backend storage
+    // Save and pin character (if spawnId provided)
+    if (spawnId && helper) {
       try {
-        console.log(`[CharacterPipeline] Saving character to backend: ${spawnId}`);
-        
-        // Load existing characters
-        const existingData = await storageService.loadCharacters() || {
-          characters: {},
-          pinnedIds: []
-        };
+        const character = buildCharacterEntity(
+          spawnId,
+          seed,
+          visualAnalysis,
+          deepProfile,
+          imageUrl,
+          imagePrompt
+        );
 
-        // Build character object matching characters.json format
-        const character = {
-          id: spawnId,
-          name: seed.name,
-          details: {
-            name: seed.name,
-            looks: seed.looks,
-            wearing: seed.wearing || '',
-            face: visualAnalysis.face || '',
-            body: visualAnalysis.body || '',
-            hair: visualAnalysis.hair || '',
-            specificDetails: visualAnalysis.specificDetails || '',
-            style: deepProfile.style || '',
-            personality: seed.personality || deepProfile.personality || '',
-            voice: deepProfile.voice || '',
-            speechStyle: deepProfile.speechStyle || '',
-            gender: deepProfile.gender || '',
-            nationality: deepProfile.nationality || '',
-            fictional: deepProfile.fictional || true,
-            copyright: deepProfile.copyright || false,
-            tags: deepProfile.tags || '',
-            imageUrl,
-            imagePrompt,
-            seed,
-            visualAnalysis
-          },
-          imagePath: imageUrl
-        };
+        await saveAndPinEntity('character', character);
 
-        // Save to backend storage and pin character
-        existingData.characters[spawnId] = character;
-        
-        // Add to pinnedIds if not already there
-        if (!existingData.pinnedIds.includes(spawnId)) {
-          existingData.pinnedIds.push(spawnId);
-        }
-        
-        await storageService.saveCharacters(existingData);
-        
-        console.log(`[CharacterPipeline] Character saved and pinned successfully: ${spawnId}`);
-
-        // Send completed event with saved character
-        sseService.sendEvent(spawnId, 'completed', { 
-          message: 'Character created and saved successfully',
-          character,
-          timings
-        });
-
+        helper.completed('Character created and saved successfully', { character });
       } catch (saveError) {
-        console.error(`[CharacterPipeline] Failed to save character:`, saveError);
-        
-        // Still send completed event even if save fails
-        sseService.sendEvent(spawnId, 'completed', { 
-          message: 'Character created (save failed)',
-          character: {
-            id: spawnId,
-            name: seed.name,
-            details: {
-              name: seed.name,
-              looks: seed.looks,
-              imageUrl,
-              imagePrompt,
-              seed,
-              visualAnalysis,
-              deepProfile
-            },
-            imagePath: imageUrl
-          },
-          timings,
-          saveError: saveError instanceof Error ? saveError.message : 'Unknown error'
-        });
+        console.error('[CharacterPipeline] Save failed:', saveError);
+        helper.error(saveError as Error);
       }
-
-      // Close connection after completion
-      setTimeout(() => sseService.closeConnection(spawnId), 1000);
     }
 
     return {
@@ -384,13 +251,12 @@ export async function runCharacterPipeline(
       deepProfile
     };
   } catch (error: any) {
-    console.error(`[CharacterPipeline] Pipeline failed:`, error);
-    if (spawnId) {
-      sseService.sendEvent(spawnId, 'error', { 
-        message: 'Pipeline failed', 
-        error: error.message 
-      });
-      sseService.closeConnection(spawnId);
+    if (helper) {
+      if (signal?.aborted) {
+        helper.cancelled();
+      } else {
+        helper.error(error);
+      }
     }
     throw error;
   }
