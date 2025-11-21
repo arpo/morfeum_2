@@ -2,15 +2,11 @@ import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import type { StateCreator } from 'zustand';
 import { createEntityManagerSlice, type EntityManagerSlice } from './slices/entityManagerSlice';
+import { createSpawnSlice, type SpawnSlice } from './slices/spawnSlice';
 
 // Combined store interface
-export interface CombinedStore extends EntityManagerSlice {
+export interface CombinedStore extends EntityManagerSlice, SpawnSlice {
   // Theme is handled by separate useThemeStore for persistence
-  
-  // Temporary stubs for missing spawn slice
-  startSpawn: (prompt: string, entityType?: any, useNewEngine?: boolean) => Promise<any>;
-  cancelSpawn: (id: string) => void;
-  activeSpawns: any[];
 }
 
 // Create the store with slices
@@ -20,10 +16,8 @@ export const useStore = create<CombinedStore>()(
       // Entity manager slice
       ...createEntityManagerSlice(...a),
       
-      // Temporary stubs implementation
-      startSpawn: async () => { console.log('startSpawn stub'); return 'stub-id'; },
-      cancelSpawn: () => console.log('cancelSpawn stub'),
-      activeSpawns: [],
+      // Spawn slice
+      ...createSpawnSlice(...a),
     }),
     {
       name: 'morfeum-store',

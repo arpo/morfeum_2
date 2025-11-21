@@ -1,8 +1,8 @@
 import { randomUUID } from 'crypto';
-import type { WorldTree, TreeNode, NodeDNA } from './types';
+import type { TreeNode, NodeDNA } from './types';
 
 export class WorldTreeBuilder {
-  static build(spawnId: string, hierarchy: any, imageUrl?: string): WorldTree {
+  static build(spawnId: string, hierarchy: any, imageUrl?: string): TreeNode {
     const host = hierarchy.host;
     if (!host) {
       throw new Error('Hierarchy must have a host node');
@@ -16,14 +16,10 @@ export class WorldTreeBuilder {
       rootNode.imagePath = imageUrl;
     }
 
-    return {
-      id: spawnId,
-      name: host.name,
-      type: 'world',
-      createdAt: new Date().toISOString(),
-      imageUrl,
-      rootNode
-    };
+    // Ensure creation metadata is preserved if needed (can be in DNA or extra prop if types allow)
+    // For now, sticking to TreeNode structure which is clean.
+
+    return rootNode;
   }
 
   private static buildNode(

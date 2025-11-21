@@ -5177,6 +5177,217 @@
       ],
       "searchDesc": "Vast bio-mechanical vertebral chamber with amber lights and winding stone paths.",
       "slug": "unknown-of-the-vertebral-spire"
+    },
+    "loc-1763723266602-05irq7osi": {
+      "id": "loc-1763723266602-05irq7osi",
+      "type": "host",
+      "name": "The Celestial Canopy",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Celestial Canopy",
+        "description": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
+        "dna": {
+          "looks": "Vast, ethereal expanses of cloud and sky, punctuated by colossal, ancient plant life. Islands of dense foliage and organic structures drift serenely. Sunlight filters through atmospheric layers, creating a dreamlike panorama.",
+          "colorsAndLighting": "A perpetually shifting palette of soft pastels and vibrant natural hues. Light is diffused and radiant, with gentle glows emanating from celestial bodies and bio-luminescent flora.",
+          "atmosphere": "The air is thin, cool, and incredibly clean, carrying the faint scent of ozone and exotic blossoms. Gentle atmospheric currents dictate movement, and occasional soft mists drift through.",
+          "materials": "Primarily organic: colossal wood, living bark, dense mosses, and vibrant, resilient foliage. Structures are often integrated with or grown from these natural elements.",
+          "mood": "Serene, majestic, and profoundly ancient. A sense of awe and peaceful contemplation pervades the environment.",
+          "sounds": "Whispering winds, distant celestial hums, rustling leaves, soft chimes.",
+          "spatialLayout": "Vast, open skies with clusters of massive, interconnected organic structures. Verticality is a key element, with life thriving at various altitudes.",
+          "primary_surfaces": "Living wood, bark, dense moss",
+          "secondary_surfaces": "Ethereal mist, light, atmospheric gases",
+          "accent_features": "Bio-luminescent patterns, swirling cloud formations, floating crystalline structures",
+          "dominant": "Ethereal blues and greens",
+          "secondary": "Soft purples and golds",
+          "accent": "Bio-luminescent yellows and whites",
+          "ambient": "Soft, diffused, and slightly cool",
+          "genre": "fantasy",
+          "architectural_tone": "Organic, bio-integrated, gravity-defying architecture grown from colossal flora, with an emphasis on smooth, flowing lines and natural forms.",
+          "cultural_tone": "Ancient wisdom, symbiotic existence with nature, spiritual reverence for life.",
+          "materials_base": "Living organic matter, bio-luminescence, polished natural wood",
+          "mood_baseline": "Serene transcendence",
+          "palette_bias": "Soft, nature-inspired, with luminous accents",
+          "soundscape_base": "Gentle, natural atmospheric sounds",
+          "flora_base": "Colossal, ancient trees and sky-dwelling plants, bioluminescent organisms",
+          "fauna_base": "Aerial and arboreal creatures adapted to high altitudes"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "World-tree",
+          "Atmospheric currents",
+          "Sky-islands"
+        ],
+        "uniqueIdentifiers": [
+          "Floating continents",
+          "Bio-engineered ecosystems",
+          "Solar-powered flora"
+        ],
+        "searchDesc": "World of floating flora and atmospheric life, high in the sky.",
+        "slug": "the-celestial-canopy",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Celestial Canopy",
+          "looks": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
+      "description": "A realm where life flourishes in the upper atmosphere, supported by colossal flora."
+    },
+    "183eb246-d685-4115-873f-4dc01f3da817": {
+      "id": "183eb246-d685-4115-873f-4dc01f3da817",
+      "type": "region",
+      "name": "The Great Boughs",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Great Boughs",
+        "description": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
+        "dna": {
+          "looks": "Immense, gnarled branches of ancient trees, thick as mountains, stretch outwards, forming natural platforms and thoroughfares. Lush mosses and verdant foliage cling to their surfaces, while colossal root systems descend into the mists below.",
+          "colorsAndLighting": "Dominated by deep, rich greens of moss and foliage, interspersed with the earthy browns and greys of ancient bark. Light is dappled, filtering through the dense canopy above, creating pockets of shadow and soft illumination.",
+          "atmosphere": "Humid and earthy, with a constant gentle breeze rustling through the leaves. The air smells of damp soil, decaying leaves, and exotic floral notes.",
+          "materials": "Predominantly colossal, textured bark and thick, resilient mosses. Smaller flora and exposed, aged wood are also prevalent.",
+          "mood": "Sturdy, grounded (despite being aerial), and ancient. A sense of immense natural power and resilience.",
+          "sounds": "Constant rustling leaves, creaking wood, distant bird calls, dripping water.",
+          "spatialLayout": "A labyrinthine network of sprawling, interconnected branches forming natural avenues and vast open spaces. Significant verticality exists between the boughs.",
+          "primary_surfaces": "Massive tree bark, dense moss",
+          "secondary_surfaces": "Vines, hanging roots, exposed wood",
+          "accent_features": "Fungal growths, rare flowering epiphytes",
+          "dominant": "Deep greens",
+          "secondary": "Earthy browns and greys",
+          "accent": "Subtle floral colors",
+          "ambient": "Dappled, natural light with cool shadows",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": "Pragmatic, nature-reverent, focused on sustenance and communal living.",
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "Giant ancient trees, thick mosses, epiphytic plants, air-filtering flora",
+          "fauna_base": "Arboreal insects, gliding mammals, large avian species"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Titan tree branches",
+          "Aerial pathways",
+          "Hanging root systems"
+        ],
+        "uniqueIdentifiers": [
+          "Interconnected branch network",
+          "Sky-root systems",
+          "Wind-carved canyons between boughs"
+        ],
+        "searchDesc": "Vast, ancient tree branches forming the pathways and foundations of sky settlements.",
+        "slug": "the-great-boughs",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Great Boughs",
+          "looks": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements."
+    },
+    "3ac0c9f0-d882-4a46-a757-13e824c92c3f": {
+      "id": "3ac0c9f0-d882-4a46-a757-13e824c92c3f",
+      "type": "location",
+      "name": "The Lumina Sanctuary",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Lumina Sanctuary",
+        "description": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
+        "looks": "A sprawling temple intricately woven into and built upon massive, interwoven tree branches, adorned with glowing bioluminescent runes that pulse with gentle light.",
+        "atmosphere": "Warm, humid air carrying the scent of exotic blossoms and damp earth. The ambient glow from the runes creates a soft, ethereal light.",
+        "mood": "Serene, mystical, ancient",
+        "dna": {
+          "looks": "A massive, ancient tree forms the foundation of a temple, its colossal branches interwoven and supporting the structure. The temple appears carved directly into the wood and moss, with an ornate, arched entrance. Bioluminescent runes glow along the pathways and parts of the temple, illuminating the scene with an ethereal light. The scale suggests immense, almost unimaginable growth and age of the flora.",
+          "colorsAndLighting": "Soft, diffused light emanates from the glowing bioluminescent runes, creating a gentle, ethereal glow that illuminates the immediate surroundings. The light is warm and inviting, casting minimal shadows and enhancing the mystical mood.",
+          "atmosphere": "A soft, luminous mist permeates the air, obscuring distant details and contributing to the mystical ambiance. The humidity is palpable, suggesting a lush and verdant environment.",
+          "materials": "Primarily living tree bark, ancient wood, and dense, vibrant mosses. Stone elements are subtly integrated, appearing as if naturally formed within the wood.",
+          "mood": "Sacred, serene, and welcoming. A feeling of spiritual peace and ancient reverence.",
+          "sounds": "Soft, pulsing hum of runes, gentle dripping, distant ethereal melodies.",
+          "spatialLayout": "The foreground features a textured stone pathway winding through dense, green foliage and moss-covered rocks. The midground is dominated by the colossal, ancient tree, its thick branches supporting the temple structure and framing a central, glowing entrance. The background is softly obscured by mist and foliage, with more massive tree branches receding into the distance.",
+          "primary_surfaces": "Tree bark, moss, stone",
+          "secondary_surfaces": "Dense foliage, earth",
+          "accent_features": "Bioluminescent runes",
+          "dominant": "Deep greens, verdant mosses",
+          "secondary": "Earth tones in the pathway, glowing yellow-green light from the entrance",
+          "accent": "Pulsing blue and gold from the bioluminescent runes",
+          "ambient": "Soft, ethereal green glow",
+          "genre": null,
+          "architectural_tone": "Organic temple architecture seamlessly integrated with colossal flora, featuring smooth, flowing lines, natural archways carved from wood, and subtle stone accents. The style emphasizes reverence for the natural forms and is illuminated by naturally occurring bio-luminescence.",
+          "cultural_tone": "Spiritual devotion, nature worship, pilgrimage site.",
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "Bioluminescent mosses, ancient tree flora",
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "An open, glowing arched entrance into the temple structure"
+          },
+          {
+            "type": "bridge",
+            "position": "foreground to midground",
+            "description": "A stone pathway leading towards the temple entrance"
+          }
+        ],
+        "dominantElements": [
+          "Massive, ancient tree with interwoven branches",
+          "Ornate temple entrance carved into the tree",
+          "Glowing bioluminescent runes",
+          "Stone pathway leading to the entrance"
+        ],
+        "uniqueIdentifiers": [
+          "Temple carved into a colossal tree",
+          "Bioluminescent runes guiding the path",
+          "Glowingly bright, ethereal entrance"
+        ],
+        "searchDesc": "[Location - Exterior] Verdant sky-temple on massive tree. Has: arched entrance (center, midground), stone pathway (foreground to midground)",
+        "slug": "the-lumina-sanctuary",
+        "imageUrl": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Lumina Sanctuary",
+          "looks": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
+      "description": "A sacred temple constructed amidst the verdant embrace of giant tree branches."
     }
   },
   "views": {},
@@ -5899,6 +6110,221 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763723266602-05irq7osi",
+      "type": "host",
+      "name": "The Celestial Canopy",
+      "description": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
+      "dna": {
+        "type": "host",
+        "name": "The Celestial Canopy",
+        "description": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
+        "dna": {
+          "looks": "Vast, ethereal expanses of cloud and sky, punctuated by colossal, ancient plant life. Islands of dense foliage and organic structures drift serenely. Sunlight filters through atmospheric layers, creating a dreamlike panorama.",
+          "colorsAndLighting": "A perpetually shifting palette of soft pastels and vibrant natural hues. Light is diffused and radiant, with gentle glows emanating from celestial bodies and bio-luminescent flora.",
+          "atmosphere": "The air is thin, cool, and incredibly clean, carrying the faint scent of ozone and exotic blossoms. Gentle atmospheric currents dictate movement, and occasional soft mists drift through.",
+          "materials": "Primarily organic: colossal wood, living bark, dense mosses, and vibrant, resilient foliage. Structures are often integrated with or grown from these natural elements.",
+          "mood": "Serene, majestic, and profoundly ancient. A sense of awe and peaceful contemplation pervades the environment.",
+          "sounds": "Whispering winds, distant celestial hums, rustling leaves, soft chimes.",
+          "spatialLayout": "Vast, open skies with clusters of massive, interconnected organic structures. Verticality is a key element, with life thriving at various altitudes.",
+          "primary_surfaces": "Living wood, bark, dense moss",
+          "secondary_surfaces": "Ethereal mist, light, atmospheric gases",
+          "accent_features": "Bio-luminescent patterns, swirling cloud formations, floating crystalline structures",
+          "dominant": "Ethereal blues and greens",
+          "secondary": "Soft purples and golds",
+          "accent": "Bio-luminescent yellows and whites",
+          "ambient": "Soft, diffused, and slightly cool",
+          "genre": "fantasy",
+          "architectural_tone": "Organic, bio-integrated, gravity-defying architecture grown from colossal flora, with an emphasis on smooth, flowing lines and natural forms.",
+          "cultural_tone": "Ancient wisdom, symbiotic existence with nature, spiritual reverence for life.",
+          "materials_base": "Living organic matter, bio-luminescence, polished natural wood",
+          "mood_baseline": "Serene transcendence",
+          "palette_bias": "Soft, nature-inspired, with luminous accents",
+          "soundscape_base": "Gentle, natural atmospheric sounds",
+          "flora_base": "Colossal, ancient trees and sky-dwelling plants, bioluminescent organisms",
+          "fauna_base": "Aerial and arboreal creatures adapted to high altitudes"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "World-tree",
+          "Atmospheric currents",
+          "Sky-islands"
+        ],
+        "uniqueIdentifiers": [
+          "Floating continents",
+          "Bio-engineered ecosystems",
+          "Solar-powered flora"
+        ],
+        "searchDesc": "World of floating flora and atmospheric life, high in the sky.",
+        "slug": "the-celestial-canopy",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Celestial Canopy",
+          "looks": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "183eb246-d685-4115-873f-4dc01f3da817",
+          "type": "region",
+          "name": "The Great Boughs",
+          "description": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
+          "dna": {
+            "type": "region",
+            "name": "The Great Boughs",
+            "description": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
+            "dna": {
+              "looks": "Immense, gnarled branches of ancient trees, thick as mountains, stretch outwards, forming natural platforms and thoroughfares. Lush mosses and verdant foliage cling to their surfaces, while colossal root systems descend into the mists below.",
+              "colorsAndLighting": "Dominated by deep, rich greens of moss and foliage, interspersed with the earthy browns and greys of ancient bark. Light is dappled, filtering through the dense canopy above, creating pockets of shadow and soft illumination.",
+              "atmosphere": "Humid and earthy, with a constant gentle breeze rustling through the leaves. The air smells of damp soil, decaying leaves, and exotic floral notes.",
+              "materials": "Predominantly colossal, textured bark and thick, resilient mosses. Smaller flora and exposed, aged wood are also prevalent.",
+              "mood": "Sturdy, grounded (despite being aerial), and ancient. A sense of immense natural power and resilience.",
+              "sounds": "Constant rustling leaves, creaking wood, distant bird calls, dripping water.",
+              "spatialLayout": "A labyrinthine network of sprawling, interconnected branches forming natural avenues and vast open spaces. Significant verticality exists between the boughs.",
+              "primary_surfaces": "Massive tree bark, dense moss",
+              "secondary_surfaces": "Vines, hanging roots, exposed wood",
+              "accent_features": "Fungal growths, rare flowering epiphytes",
+              "dominant": "Deep greens",
+              "secondary": "Earthy browns and greys",
+              "accent": "Subtle floral colors",
+              "ambient": "Dappled, natural light with cool shadows",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": "Pragmatic, nature-reverent, focused on sustenance and communal living.",
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": "Giant ancient trees, thick mosses, epiphytic plants, air-filtering flora",
+              "fauna_base": "Arboreal insects, gliding mammals, large avian species"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Titan tree branches",
+              "Aerial pathways",
+              "Hanging root systems"
+            ],
+            "uniqueIdentifiers": [
+              "Interconnected branch network",
+              "Sky-root systems",
+              "Wind-carved canyons between boughs"
+            ],
+            "searchDesc": "Vast, ancient tree branches forming the pathways and foundations of sky settlements.",
+            "slug": "the-great-boughs",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Great Boughs",
+              "looks": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "3ac0c9f0-d882-4a46-a757-13e824c92c3f",
+              "type": "location",
+              "name": "The Lumina Sanctuary",
+              "description": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
+              "dna": {
+                "type": "location",
+                "name": "The Lumina Sanctuary",
+                "description": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
+                "looks": "A sprawling temple intricately woven into and built upon massive, interwoven tree branches, adorned with glowing bioluminescent runes that pulse with gentle light.",
+                "atmosphere": "Warm, humid air carrying the scent of exotic blossoms and damp earth. The ambient glow from the runes creates a soft, ethereal light.",
+                "mood": "Serene, mystical, ancient",
+                "dna": {
+                  "looks": "A massive, ancient tree forms the foundation of a temple, its colossal branches interwoven and supporting the structure. The temple appears carved directly into the wood and moss, with an ornate, arched entrance. Bioluminescent runes glow along the pathways and parts of the temple, illuminating the scene with an ethereal light. The scale suggests immense, almost unimaginable growth and age of the flora.",
+                  "colorsAndLighting": "Soft, diffused light emanates from the glowing bioluminescent runes, creating a gentle, ethereal glow that illuminates the immediate surroundings. The light is warm and inviting, casting minimal shadows and enhancing the mystical mood.",
+                  "atmosphere": "A soft, luminous mist permeates the air, obscuring distant details and contributing to the mystical ambiance. The humidity is palpable, suggesting a lush and verdant environment.",
+                  "materials": "Primarily living tree bark, ancient wood, and dense, vibrant mosses. Stone elements are subtly integrated, appearing as if naturally formed within the wood.",
+                  "mood": "Sacred, serene, and welcoming. A feeling of spiritual peace and ancient reverence.",
+                  "sounds": "Soft, pulsing hum of runes, gentle dripping, distant ethereal melodies.",
+                  "spatialLayout": "The foreground features a textured stone pathway winding through dense, green foliage and moss-covered rocks. The midground is dominated by the colossal, ancient tree, its thick branches supporting the temple structure and framing a central, glowing entrance. The background is softly obscured by mist and foliage, with more massive tree branches receding into the distance.",
+                  "primary_surfaces": "Tree bark, moss, stone",
+                  "secondary_surfaces": "Dense foliage, earth",
+                  "accent_features": "Bioluminescent runes",
+                  "dominant": "Deep greens, verdant mosses",
+                  "secondary": "Earth tones in the pathway, glowing yellow-green light from the entrance",
+                  "accent": "Pulsing blue and gold from the bioluminescent runes",
+                  "ambient": "Soft, ethereal green glow",
+                  "genre": null,
+                  "architectural_tone": "Organic temple architecture seamlessly integrated with colossal flora, featuring smooth, flowing lines, natural archways carved from wood, and subtle stone accents. The style emphasizes reverence for the natural forms and is illuminated by naturally occurring bio-luminescence.",
+                  "cultural_tone": "Spiritual devotion, nature worship, pilgrimage site.",
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": "Bioluminescent mosses, ancient tree flora",
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "passage",
+                    "position": "center, midground",
+                    "description": "An open, glowing arched entrance into the temple structure"
+                  },
+                  {
+                    "type": "bridge",
+                    "position": "foreground to midground",
+                    "description": "A stone pathway leading towards the temple entrance"
+                  }
+                ],
+                "dominantElements": [
+                  "Massive, ancient tree with interwoven branches",
+                  "Ornate temple entrance carved into the tree",
+                  "Glowing bioluminescent runes",
+                  "Stone pathway leading to the entrance"
+                ],
+                "uniqueIdentifiers": [
+                  "Temple carved into a colossal tree",
+                  "Bioluminescent runes guiding the path",
+                  "Glowingly bright, ethereal entrance"
+                ],
+                "searchDesc": "[Location - Exterior] Verdant sky-temple on massive tree. Has: arched entrance (center, midground), stone pathway (foreground to midground)",
+                "slug": "the-lumina-sanctuary",
+                "imageUrl": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Lumina Sanctuary",
+                  "looks": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
+              "spaceType": "exterior",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -5906,6 +6332,7 @@
     "loc-1763583302373-k6pem7hwa",
     "loc-1763566759048-fx5m1xcqw",
     "loc-1763650727171-5p144dch6",
-    "loc-1763623855173-w88tnre1u"
+    "loc-1763623855173-w88tnre1u",
+    "loc-1763723266602-05irq7osi"
   ]
 }

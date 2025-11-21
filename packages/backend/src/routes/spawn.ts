@@ -9,6 +9,8 @@ import { validateMzooApiKey } from '../middleware/mzooAuth';
 import { createSpawnManager, SpawnProcess } from '../services/spawn';
 import { runCharacterPipeline } from '../engine/generation';
 import { WorldTreeBuilder } from '../services/worldTree/builder';
+import { runWorldTreePipeline } from '../engine/pipelines/worldTreePipeline';
+import { sseService } from '../services/SSEService';
 import type { HierarchyStructure, HierarchyNode } from '../engine/hierarchyAnalysis/types';
 
 const router = Router();
@@ -21,35 +23,6 @@ const spawnManagers = new Map<string, ReturnType<typeof createSpawnManager>>();
 
 // Track active pipeline abort controllers by spawnId
 const activeAbortControllers = new Map<string, AbortController>();
-
-/**
- * Build node chain from hierarchy (deepest node + all parents)
- * Returns complete node objects to preserve visual enrichment fields
- */
-function buildNodeChain(hierarchy: HierarchyStructure): HierarchyNode[] {
-  const chain: HierarchyNode[] = [];
-  
-  // Start with host (complete object)
-  chain.push(hierarchy.host);
-  
-  // Find deepest node path and push complete objects
-  if (hierarchy.host.regions && hierarchy.host.regions.length > 0) {
-    const region = hierarchy.host.regions[0]; // Take first region
-    chain.push(region);
-    
-    if (region.locations && region.locations.length > 0) {
-      const location = region.locations[0]; // Take first location
-      chain.push(location);
-      
-      if (location.niches && location.niches.length > 0) {
-        const niche = location.niches[0]; // Take first niche
-        chain.push(niche);
-      }
-    }
-  }
-  
-  return chain;
-}
 
 /**
  * Get or create spawn manager for the current API key
@@ -195,7 +168,7 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
 }));
 
 /**
- * POST /api/spawn/location/start - NEW: Start hierarchy-based location spawn
+ * POST /api/spawn/location/start - Start hierarchy-based location spawn with SSE
  */
 router.post('/location/start', asyncHandler(async (req: Request, res: Response) => {
   const { prompt } = req.body;
@@ -219,149 +192,32 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
   // Send immediate response
   res.status(HTTP_STATUS.OK).json({
     message: 'Location spawn started (hierarchy system)',
-    data: { spawnId, entityType: 'location', engine: 'hierarchy' },
+    data: { spawnId, entityType: 'location', engine: 'hierarchy', eventsUrl: `/api/spawn/events/${spawnId}` },
     timestamp: new Date().toISOString(),
   });
 
   // Run hierarchy analysis asynchronously with SSE events
-  (async () => {
-    const pipelineStartTime = Date.now();
-    const timings = {
-      hierarchyClassification: 0,
-      imageGeneration: 0,
-      visualAnalysis: 0,
-      dnaGeneration: 0
-    };
-
-    try {
-      // Import hierarchy analyzer and image generation
-      const { analyzeHierarchy, generateBatchDNA } = await import('../engine/hierarchyAnalysis');
-      const { generateImage, analyzeImage } = await import('../services/mzoo');
-      const { locationImageGeneration } = await import('../engine/generation/prompts/locations/locationImageGeneration');
-      const { locationVisualAnalysisPrompt } = await import('../engine/generation/prompts');
-      const { parseJSON } = await import('../engine/utils/parseJSON');
-      const { fetchImageAsBase64 } = await import('../services/spawn/shared/pipelineCommon');
-      const { AI_MODELS } = await import('../config/constants');
-      
-      // Stage 1: Hierarchy Classification
-      const classificationStart = Date.now();
-      const result = await analyzeHierarchy(prompt.trim(), apiKey, spawnId);
-      timings.hierarchyClassification = Date.now() - classificationStart;
-      
-      // Check if cancelled
-      if (abortController.signal.aborted) {
-        console.log(`[LocationPipeline] ${spawnId} cancelled after hierarchy classification`);
-        return;
-      }
-      
-      // Stage 2: Generate image prompt and image
-      // Build node chain and generate image prompt
-      const nodeChain = buildNodeChain(result.hierarchy);
-      const imagePrompt = locationImageGeneration(prompt.trim(), nodeChain);
-      
-      const imageStart = Date.now();
-      console.log(imagePrompt);
-      const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
-      timings.imageGeneration = Date.now() - imageStart;
-      
-      // Check if cancelled
-      if (abortController.signal.aborted) {
-        console.log(`[LocationPipeline] ${spawnId} cancelled after image generation`);
-        return;
-      }
-      
-      if (imageResult.error || !imageResult.data?.images?.[0]?.url) {
-        throw new Error(imageResult.error || 'Image URL not found in response');
-      }
-      
-      const imageUrl = imageResult.data.images[0].url;
-      
-      // Stage 3: Visual Analysis
-      const analysisStart = Date.now();
-      
-      // Fetch image as base64
-      const base64Image = await fetchImageAsBase64(imageUrl);
-      
-      // Generate visual analysis prompt
-      const analysisPrompt = locationVisualAnalysisPrompt(prompt.trim(), nodeChain);
-      
-      // Analyze image
-      const analysisResult = await analyzeImage(
-        apiKey,
-        base64Image,
-        analysisPrompt,
-        'image/jpeg',
-        AI_MODELS.VISUAL_ANALYSIS
-      );
-      
-      if (analysisResult.error || !analysisResult.data) {
-        console.error('[LocationPipeline] Visual analysis API error:', analysisResult.error);
-        throw new Error(analysisResult.error || 'No data returned from visual analysis');
-      }
-      
-      const visualAnalysis = parseJSON(analysisResult.data.text);
-      timings.visualAnalysis = Date.now() - analysisStart;
-      
-      // Check if cancelled
-      if (abortController.signal.aborted) {
-        console.log(`[LocationPipeline] ${spawnId} cancelled after visual analysis`);
-        return;
-      }
-      
-      // Stage 4: DNA Generation
-      const dnaStart = Date.now();
-      
-      // Generate DNA for entire hierarchy (visual analysis is merged in pipeline)
-      const fullHierarchy = await generateBatchDNA(
-        result.hierarchy,
-        visualAnalysis,
-        prompt.trim(),
-        apiKey
-      );
-      
-      // Add imageUrl to deepest node
-      const deepestNode = nodeChain[nodeChain.length - 1];
-      if (deepestNode.type === 'location' && fullHierarchy.host.regions?.[0]?.locations?.[0]) {
-        fullHierarchy.host.regions[0].locations[0].imageUrl = imageUrl;
-      } else if (deepestNode.type === 'niche' && fullHierarchy.host.regions?.[0]?.locations?.[0]?.niches?.[0]) {
-        fullHierarchy.host.regions[0].locations[0].niches[0].imageUrl = imageUrl;
-      }
-      
-      timings.dnaGeneration = Date.now() - dnaStart;
-      
-      // Check if cancelled
-      if (abortController.signal.aborted) {
-        console.log(`[LocationPipeline] ${spawnId} cancelled after DNA generation`);
-        return;
-      }
-
-      // Stage 5: Build World Tree (BACKEND HEAVY LIFTING)
-      // Build complete tree
-      // Build complete tree
-      const worldTree = WorldTreeBuilder.build(spawnId, fullHierarchy, imageUrl);
-      
-      // Log timing breakdown
-      const totalTime = Date.now() - pipelineStartTime;
-      console.log(`\n[LocationPipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
-      console.log(`  Entity Type: location`);
-      console.log(`  Stage Timings:`);
-      console.log(`    - Hierarchy Classification: ${(timings.hierarchyClassification / 1000).toFixed(2)}s`);
-      console.log(`    - Image Generation:         ${(timings.imageGeneration / 1000).toFixed(2)}s`);
-      console.log(`    - Visual Analysis:          ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
-      console.log(`    - DNA Generation:           ${(timings.dnaGeneration / 1000).toFixed(2)}s`);
-      console.log(`  Total:                        ${(totalTime / 1000).toFixed(2)}s\n`);
-
-    } catch (error: any) {
-      if (abortController.signal.aborted) {
-        console.log(`[LocationPipeline] ${spawnId} cancelled`);
-      } else {
-        console.error('[LocationPipeline] Pipeline failed:', error);
-      }
-    } finally {
-      // Clean up abort controller
+  // The new runWorldTreePipeline handles all steps and SSE events
+  runWorldTreePipeline(spawnId, prompt.trim(), apiKey, abortController.signal)
+    .finally(() => {
       activeAbortControllers.delete(spawnId);
-    }
-  })();
+    });
+}));
+
+/**
+ * GET /api/spawn/events/:spawnId - SSE Stream for spawn events
+ */
+router.get('/events/:spawnId', asyncHandler(async (req: Request, res: Response) => {
+  const { spawnId } = req.params;
+  
+  if (!spawnId) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Spawn ID is required',
+    });
+    return;
+  }
+
+  sseService.addConnection(spawnId, res);
 }));
 
 /**
@@ -384,6 +240,10 @@ router.delete('/:spawnId', asyncHandler(async (req: Request, res: Response) => {
   if (abortController) {
     abortController.abort();
     activeAbortControllers.delete(spawnId);
+    
+    // Also close SSE connection
+    sseService.closeConnection(spawnId);
+    
     console.log(`[Spawn] Cancelled active pipeline: ${spawnId}`);
   }
 

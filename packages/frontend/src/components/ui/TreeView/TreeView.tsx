@@ -42,8 +42,6 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
   
   // Use context state if available (persistence), otherwise fallback to local prop or default
   const isExpanded = expandedIds.has(item.id) || (item.isExpanded && !expandedIds.size && !window.localStorage.getItem('tree_expanded'));  
-  // The second part is tricky: if persistence is empty, do we respect default?
-  // Better: simply rely on expandedIds derived from persistence or defaults on mount.
   
   const hasChildren = item.children && item.children.length > 0;
   const isSelected = selectedId === item.id;
@@ -107,6 +105,21 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
   );
 };
 
+// Helper to find path to a node
+function findPathToNode(items: TreeItem[], targetId: string, currentPath: string[] = []): string[] | null {
+  for (const item of items) {
+    if (item.id === targetId) {
+      return currentPath; // Return ancestors (not including self usually, or verify if self needed)
+      // Self doesn't need expanding, but its parents do.
+    }
+    if (item.children) {
+      const path = findPathToNode(item.children, targetId, [...currentPath, item.id]);
+      if (path) return path;
+    }
+  }
+  return null;
+}
+
 export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, className, persistenceKey }) => {
   // Initialize state from local storage if key provided, otherwise empty set
   const [expandedIds, setExpandedIds] = useState<Set<string>>(() => {
@@ -120,9 +133,6 @@ export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, 
         console.warn('Failed to load tree expansion state:', e);
       }
     }
-    
-    // If no persistence or empty, check for default expanded items in data?
-    // For simplicity, we start collapsed unless persisted.
     return new Set();
   });
 
@@ -136,6 +146,26 @@ export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, 
       }
     }
   }, [expandedIds, persistenceKey]);
+
+  // Auto-expand to select node
+  useEffect(() => {
+    if (selectedId && data.length > 0) {
+      const ancestors = findPathToNode(data, selectedId);
+      if (ancestors && ancestors.length > 0) {
+        setExpandedIds(prev => {
+          const next = new Set(prev);
+          let changed = false;
+          ancestors.forEach(id => {
+            if (!next.has(id)) {
+              next.add(id);
+              changed = true;
+            }
+          });
+          return changed ? next : prev;
+        });
+      }
+    }
+  }, [selectedId, data]);
 
   const toggleExpansion = (id: string) => {
     setExpandedIds(prev => {
