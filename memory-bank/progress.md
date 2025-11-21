@@ -2,6 +2,12 @@
 
 ## Completed Features ✅
 
+### UI & Persistence (Nov 21, 2025)
+- [x] TreeView expanded/collapsed state is now persisted in localStorage (per panel).
+- [x] Selected node in EntityExplorer is visually highlighted using the `.selected` class.
+- [x] Last selected entity is saved to localStorage and restored on app load.
+- [x] App.tsx initialization prefers restoring last selected entity from localStorage if available.
+
 ### Core Systems
 - [x] Character generation pipeline (new engine)
 - [x] Location generation (hierarchy system)

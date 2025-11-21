@@ -1,5 +1,12 @@
 # Active Context
 
+## Recent Changes (2025-11-21)
+- TreeView now persists expanded/collapsed state in localStorage (`persistenceKey`).
+- EntityExplorer highlights the selected node with a distinct color.
+- Last selected entity is saved to localStorage and restored on app load.
+- App.tsx initialization prefers restoring last selected entity from localStorage.
+- No breaking changes to store or API.
+
 ## Current State (Nov 2025)
 The Morfeum application is in active development with core systems operational.
 
