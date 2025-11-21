@@ -1,8 +1,9 @@
 import type { StateCreator } from 'zustand';
 import { worldStorageService } from '../../services/worldStorage.service';
 import { useLocationsStore } from './locations';
+import { useCharactersStore } from './charactersSlice';
 // Avoid circular dependency with index.ts by not importing CombinedStore if possible or using any
-// import type { CombinedStore } from '../index'; 
+// import type { CombinedStore } from '../index';
 
 export interface SpawnStage {
   name: string;
@@ -102,7 +103,17 @@ export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get
         eventSource.addEventListener('completed', (event: MessageEvent) => {
           const data = JSON.parse(event.data);
           console.log(`[Spawn ${spawnId}] Completed:`, data);
-          get().completeSpawn(spawnId, data.worldTree);
+          
+          // Handle location spawns
+          if (data.worldTree) {
+            get().completeSpawn(spawnId, data.worldTree);
+          }
+          
+          // Handle character spawns
+          if (data.character) {
+            handleCharacterComplete(spawnId, data.character, get);
+          }
+          
           eventSource.close();
         });
 
@@ -245,6 +256,12 @@ function calculateProgress(stage: string): number {
     case 'dna_generation': return 80;
     case 'dna_complete': return 95;
     
+    // Character Pipeline stages (characterPipeline)
+    case 'seed_generation': return 20;
+    case 'seed_complete': return 25;
+    case 'profile_enrichment': return 75;
+    case 'profile_complete': return 95;
+    
     // Navigation Pipeline stages (createNodePipeline)
     case 'prompt_generation': return 25;
     case 'prompt_complete': return 30;
@@ -318,4 +335,54 @@ function findNodeInObject(tree: any, targetId: string): any {
     if (found) return found;
   }
   return null;
+}
+
+/**
+ * Handle character completion - pin, load, create session, and select
+ */
+function handleCharacterComplete(spawnId: string, character: any, get: any) {
+  console.log(`[Spawn] Handling character completion: ${character.name}`);
+  
+  // Mark spawn as completed
+  get().updateSpawnProgress(spawnId, { 
+    status: 'completed', 
+    progress: 100, 
+    result: character, 
+    currentStage: 'Completed' 
+  });
+  
+  // Character is already saved and pinned on backend
+  // Just need to reload from backend to sync frontend state
+  useCharactersStore.getState().loadFromBackend().then(() => {
+    console.log(`[Spawn] Characters reloaded from backend`);
+    
+    // Get the main store to create entity session and switch tabs
+    const store = get();
+    
+    // Create entity session (this makes it appear in tabs)
+    store.createEntity(character.id, {
+      name: character.name,
+      personality: character.details.personality || ''
+    }, 'character');
+    
+    console.log(`[Spawn] Entity session created for ${character.name}`);
+    
+    // Update entity with image
+    if (character.imagePath) {
+      store.updateEntityImage(character.id, character.imagePath);
+    }
+    
+    // Update with image prompt
+    if (character.details.imagePrompt) {
+      store.updateEntityImagePrompt(character.id, character.details.imagePrompt);
+    }
+    
+    // Set as active entity (switches to character tab)
+    store.setActiveEntity(character.id);
+    localStorage.setItem('lastActiveEntityId', character.id);
+    
+    console.log(`[Spawn] Character ${character.name} selected and active`);
+  }).catch((error) => {
+    console.error('[Spawn] Failed to reload characters from backend:', error);
+  });
 }

@@ -5640,6 +5640,70 @@
       ],
       "searchDesc": "Circular Cogwork Citadel interior: brick, iron, gaslight, spiraling stairs, abandoned industry.",
       "slug": "interior-of-the-cogwork-citadel"
+    },
+    "niche-1763732326848-9yephqmqm": {
+      "id": "niche-1763732326848-9yephqmqm",
+      "type": "niche",
+      "name": "interior of The Lunar Echo",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, 30-meter high interior chamber with a deeply coffered vaulted ceiling. Walls of seamless, polished white stone are punctuated by recessed archways framed by slender, fluted columns. The dark, matte obsidian floor features intricate, repeating geometric patterns.",
+        "colorsAndLighting": "The space is bathed in the cool, ethereal glow of simulated moonlight, casting sharp highlights and deep shadows. White stone dominates the structure, contrasting with the dark obsidian floor.",
+        "atmosphere": "The air is still and cool, carrying a profound sense of quiet majesty and hushed mystery. The simulated moonlight imbues the chamber with an otherworldly beauty.",
+        "materials": "The primary materials are seamless, polished white stone for the walls and ceiling, and dark, matte obsidian for the floor. Minimalist stone planters contain small desert succulents in the foreground.",
+        "mood": "This space evokes a feeling of serene majesty, profound mystery, and ancient ceremonial significance.",
+        "sounds": "Hushed silence, faint echoes, subtle ethereal hum.",
+        "spatialLayout": "An expansive, monumental chamber with a high, vaulted ceiling. The layout is organized around a central raised dais and features recessed archways and distinct passages and staircases.",
+        "primary_surfaces": "Polished white stone (walls, ceiling), matte obsidian (floor).",
+        "secondary_surfaces": "Stone (columns, lectern, planters).",
+        "accent_features": "Deeply coffered ceiling, celestial chart patterns on floor, ornate stone lectern, intensely lit archway.",
+        "dominant": "White (90% of visible structure)",
+        "secondary": "Black (10% floor)",
+        "accent": "None prominent in the description, but light edges created by moonlight could be considered.",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "monumental classical with celestial influence, grand arches, slender columns, repetitive rhythmic facade",
+        "cultural_tone": "ceremonial, performance, ancient gatherings",
+        "materials_base": null,
+        "mood_baseline": "Serene, majestic, and perhaps a little haunting. The moonlight imbues the structure with a sense of otherworldly beauty and ancient mystery.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "desert succulents",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/R9JiMy9MBfPNsd046UsrX.jpg",
+      "description": "A monumental, celestial-inspired classical amphitheater interior bathed in ethereal moonlight.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground left",
+          "description": "A narrow, shadowed passage leading to unseen chambers, framed by an intensely lit archway."
+        },
+        {
+          "type": "steps",
+          "position": "midground right",
+          "description": "Shallow stone steps ascending to an unseen upper level, sharply defined by moonlight."
+        },
+        {
+          "type": "archway",
+          "position": "interior vista",
+          "description": "A grand, arched opening beckoning deeper into the echoing depths."
+        }
+      ],
+      "dominantElements": [
+        "coffered vaulted ceiling",
+        "recessed archways with fluted columns",
+        "raised circular dais with lectern",
+        "obsidian stone floor with geometric patterns"
+      ],
+      "uniqueIdentifiers": [
+        "simulated moonlight glow",
+        "celestial chart etched floor patterns",
+        "seamless polished white stone",
+        "dark matte obsidian floor"
+      ],
+      "searchDesc": "Monumental lunar amphitheater interior, white stone, obsidian floor, moonlight glow.",
+      "slug": "interior-of-the-lunar-echo"
     }
   },
   "views": {},
@@ -6069,6 +6133,11 @@
               "children": [
                 {
                   "id": "niche-1763730433341-5r7qo96po",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763732326848-9yephqmqm",
                   "type": "niche",
                   "children": []
                 }
@@ -6604,6 +6673,7 @@
   "pinnedIds": [
     "loc-1763566759048-fx5m1xcqw",
     "loc-1763623855173-w88tnre1u",
-    "loc-1763587525220-pxp3ykzyj"
+    "loc-1763587525220-pxp3ykzyj",
+    "loc-1763583302373-k6pem7hwa"
   ]
 }

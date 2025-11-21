@@ -68,103 +68,15 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
   // Send immediate response
   res.status(HTTP_STATUS.OK).json({
     message: 'Character spawn started (new engine)',
-    data: { spawnId, entityType, engine: 'new' },
+    data: { spawnId, entityType, engine: 'new', eventsUrl: `/api/spawn/events/${spawnId}` },
     timestamp: new Date().toISOString(),
   });
 
-  // Run pipeline asynchronously with SSE events (emitting intermediate events)
-  (async () => {
-    const pipelineStartTime = Date.now();
-    const timings = {
-      seedGeneration: 0,
-      imageGeneration: 0,
-      visualAnalysis: 0,
-      profileEnrichment: 0
-    };
-
-    try {
-      // Import individual pipeline functions for step-by-step execution
-      const { 
-        generateCharacterSeed, 
-        generateCharacterImage, 
-        analyzeCharacterImage, 
-        enrichCharacterProfile,
-        generateInitialSystemPrompt,
-        generateEnhancedSystemPrompt
-      } = await import('../engine/generation');
-      
-      // Step 1: Generate seed
-      const seedStartTime = Date.now();
-      const seed = await generateCharacterSeed(prompt.trim(), apiKey);
-      timings.seedGeneration = Date.now() - seedStartTime;
-      
-      // Check if cancelled
-      if (abortController.signal.aborted) {
-        console.log(`[CharacterPipeline] ${spawnId} cancelled after seed generation`);
-        return;
-      }
-      
-      // Generate initial system prompt from seed
-      const systemPrompt = generateInitialSystemPrompt(seed);
-      
-      // Step 2: Generate image
-      const imageStartTime = Date.now();
-      const { imageUrl, imagePrompt } = await generateCharacterImage(seed, apiKey);
-      timings.imageGeneration = Date.now() - imageStartTime;
-      
-      // Check if cancelled
-      if (abortController.signal.aborted) {
-        console.log(`[CharacterPipeline] ${spawnId} cancelled after image generation`);
-        return;
-      }
-      
-      // Step 3: Analyze image
-      const analysisStartTime = Date.now();
-      const visualAnalysis = await analyzeCharacterImage(imageUrl, seed, apiKey);
-      timings.visualAnalysis = Date.now() - analysisStartTime;
-      
-      // Check if cancelled
-      if (abortController.signal.aborted) {
-        console.log(`[CharacterPipeline] ${spawnId} cancelled after visual analysis`);
-        return;
-      }
-      
-      // Step 4: Enrich profile
-      const enrichStartTime = Date.now();
-      const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey);
-      timings.profileEnrichment = Date.now() - enrichStartTime;
-      
-      // Check if cancelled
-      if (abortController.signal.aborted) {
-        console.log(`[CharacterPipeline] ${spawnId} cancelled after profile enrichment`);
-        return;
-      }
-      
-      // Generate enhanced system prompt from deep profile
-      const enhancedSystemPrompt = generateEnhancedSystemPrompt(deepProfile);
-      
-      // Log completion with timing breakdown
-      const totalTime = Date.now() - pipelineStartTime;
-      console.log(`\n[CharacterPipeline] ${spawnId} completed in ${(totalTime / 1000).toFixed(2)}s`);
-      console.log(`  Entity Type: character`);
-      console.log(`  Stage Timings:`);
-      console.log(`    - Seed Generation:     ${(timings.seedGeneration / 1000).toFixed(2)}s`);
-      console.log(`    - Image Generation:    ${(timings.imageGeneration / 1000).toFixed(2)}s`);
-      console.log(`    - Visual Analysis:     ${(timings.visualAnalysis / 1000).toFixed(2)}s`);
-      console.log(`    - Profile Enrichment:  ${(timings.profileEnrichment / 1000).toFixed(2)}s`);
-      console.log(`  Total:                   ${(totalTime / 1000).toFixed(2)}s\n`);
-
-    } catch (error: any) {
-      if (abortController.signal.aborted) {
-        console.log(`[CharacterPipeline] ${spawnId} cancelled`);
-      } else {
-        console.error('[Engine Route] Pipeline failed:', error);
-      }
-    } finally {
-      // Clean up abort controller
+  // Run character pipeline asynchronously with SSE events
+  runCharacterPipeline(prompt.trim(), apiKey, abortController.signal, spawnId)
+    .finally(() => {
       activeAbortControllers.delete(spawnId);
-    }
-  })();
+    });
 }));
 
 /**
