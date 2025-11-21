@@ -251,7 +251,81 @@ export async function findDestination(
   console.log('  Dominant Elements:', result.data.context.currentNode.data.dominantElements);
   console.log(' ═══════════════════════════════════════════════════');
   
-  // Convert to legacy format for compatibility
+  // If eventsUrl is provided, establish SSE connection for pipeline progress
+  if (result.data.eventsUrl && result.data.navigationId) {
+    console.log('');
+    console.log('🔌 [Navigation SSE] Establishing connection...');
+    console.log('   Navigation ID:', result.data.navigationId);
+    console.log('   Events URL:', result.data.eventsUrl);
+    
+    // Return a promise that resolves when pipeline completes
+    return new Promise<NavigationResult>((resolve, reject) => {
+      const eventSource = new EventSource(result.data.eventsUrl);
+      let pipelineNode: any = undefined;
+      let pipelineImageUrl: string | undefined = undefined;
+      let pipelineImagePrompt: string | undefined = undefined;
+      
+      eventSource.addEventListener('progress', (event: MessageEvent) => {
+        const data = JSON.parse(event.data);
+        console.log(`📡 [Navigation ${result.data.navigationId}] ${data.stage}:`, data.message);
+        if (data.data) {
+          console.log('   Data:', data.data);
+          // Capture imageUrl and imagePrompt when they arrive
+          if (data.data.imageUrl) pipelineImageUrl = data.data.imageUrl;
+          if (data.data.imagePrompt) pipelineImagePrompt = data.data.imagePrompt;
+        }
+      });
+      
+      eventSource.addEventListener('completed', (event: MessageEvent) => {
+        const data = JSON.parse(event.data);
+        console.log(`✅ [Navigation ${result.data.navigationId}] COMPLETED`);
+        console.log('   Message:', data.message);
+        if (data.timings) {
+          console.log('   Timings:', data.timings);
+        }
+        if (data.node) {
+          console.log('   Node:', data.node);
+          pipelineNode = data.node;
+        }
+        eventSource.close();
+        
+        // Resolve with complete navigation result
+        const navigation: NavigationResult = {
+          action: 'generate',
+          targetNodeId: result.data.decision.targetNodeId,
+          parentNodeId: result.data.decision.parentNodeId,
+          name: result.data.decision.newNodeName,
+          scale_hint: result.data.decision.newNodeType,
+          relation: result.data.decision.metadata?.relation,
+          reason: result.data.decision.reasoning,
+          imageUrl: pipelineImageUrl,
+          imagePrompt: pipelineImagePrompt,
+          node: pipelineNode
+        };
+        
+        resolve(navigation);
+      });
+      
+      eventSource.addEventListener('error', (event: MessageEvent) => {
+        const data = JSON.parse(event.data);
+        console.error(`❌ [Navigation ${result.data.navigationId}] ERROR:`, data.message);
+        if (data.error) {
+          console.error('   Error:', data.error);
+        }
+        eventSource.close();
+        reject(new Error(data.message || 'Pipeline failed'));
+      });
+      
+      eventSource.onerror = (err) => {
+        if (eventSource.readyState === EventSource.CLOSED) return;
+        console.error('❌ [Navigation SSE] Connection error:', err);
+        eventSource.close();
+        reject(new Error('SSE connection failed'));
+      };
+    });
+  }
+  
+  // Convert to legacy format for compatibility (non-pipeline actions)
   const navigation: NavigationResult = {
     action: result.data.decision.action === 'create_niche' || 
             result.data.decision.action === 'create_detail' ||
@@ -265,7 +339,7 @@ export async function findDestination(
     reason: result.data.decision.reasoning,
     imageUrl: result.data.imageUrl,
     imagePrompt: result.data.imagePrompt,
-    node: result.data.node  // Include complete node from backend
+    node: result.data.node
   };
   
   return navigation;

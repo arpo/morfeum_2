@@ -234,6 +234,7 @@ export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get
 
 function calculateProgress(stage: string): number {
   switch (stage) {
+    // World Tree Pipeline stages
     case 'started': return 5;
     case 'hierarchy_classification': return 10;
     case 'hierarchy_complete': return 25;
@@ -243,6 +244,13 @@ function calculateProgress(stage: string): number {
     case 'analysis_complete': return 70;
     case 'dna_generation': return 80;
     case 'dna_complete': return 95;
+    
+    // Navigation Pipeline stages (createNodePipeline)
+    case 'prompt_generation': return 25;
+    case 'prompt_complete': return 30;
+    case 'node_building': return 90;
+    
+    // Common stages
     case 'completed': return 100;
     default: return 0;
   }

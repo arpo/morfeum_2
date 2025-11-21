@@ -9,6 +9,7 @@ import { HTTP_STATUS } from '../../config';
 import { classifyIntent, routeNavigation } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
+import { sseService } from '../../services/SSEService';
 
 const router = Router();
 
@@ -53,26 +54,7 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
     // Step 2: Route navigation using deterministic logic
     const decision = routeNavigation(intent, context);
 
-    // Step 3: If decision is create_niche, run image generation pipeline
-    let imageUrl: string | undefined;
-    let imagePrompt: string | undefined;
-    let node: any | undefined;
-    
-    if (decision.action === 'create_niche') {
-      console.log('\n🚀 [NAVIGATION] Running create_niche pipeline...');
-      try {
-        const pipelineResult = await runCreateNodePipeline(decision, context, intent, apiKey);
-        imageUrl = pipelineResult.imageUrl;
-        imagePrompt = pipelineResult.imagePrompt;
-        node = pipelineResult.node;
-        console.log('✅ [NAVIGATION] Pipeline complete. Node created:', !!node);
-      } catch (pipelineError) {
-        console.error('\n❌ [NAVIGATION ERROR]', pipelineError);
-        // Continue without image - don't fail the whole request
-      }
-    }
-
-    // Step 4: Build complete response for frontend
+    // Step 3: Build response for frontend
     const result: NavigationAnalysisResult = {
       userCommand,
       context,
@@ -80,15 +62,48 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
       decision
     };
 
-    // Return everything including optional image and node
-    console.log('\n📤 [NAVIGATION] Returning response. Node included:', !!node ? '✓' : '✗');
+    // Step 4: If decision is create_niche, return immediately and run pipeline asynchronously
+    let navigationId: string | undefined;
+    let eventsUrl: string | undefined;
+    
+    if (decision.action === 'create_niche') {
+      // Generate unique navigation ID
+      navigationId = `nav-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      eventsUrl = `/api/mzoo/navigation/events/${navigationId}`;
+      
+      console.log('\n🚀 [NAVIGATION] Starting create_niche pipeline...');
+      console.log(`[NAVIGATION] Navigation ID: ${navigationId}`);
+      console.log(`[NAVIGATION] Events URL: ${eventsUrl}`);
+      
+      // Return response immediately
+      res.status(HTTP_STATUS.OK).json({
+        data: {
+          ...result,
+          navigationId,
+          eventsUrl
+        }
+      });
+
+      // Run pipeline asynchronously (don't await) - results sent via SSE
+      (async () => {
+        try {
+          const pipelineResult = await runCreateNodePipeline(decision, context, intent, apiKey, undefined, navigationId);
+          console.log('✅ [NAVIGATION] Pipeline complete. Node created:', !!pipelineResult.node);
+          
+          // Results are already sent via SSE events in the pipeline
+          // The completed event includes the node data
+        } catch (pipelineError) {
+          console.error('\n❌ [NAVIGATION ERROR]', pipelineError);
+          // Error already sent via SSE in pipeline
+        }
+      })();
+      
+      return; // Exit early since we already sent response
+    }
+
+    // For non-pipeline actions, return standard response
     res.status(HTTP_STATUS.OK).json({
-      data: {
-        ...result,
-        imageUrl,
-        imagePrompt,
-        node
-      }
+      data: result
     });
   } catch (error) {
     res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
@@ -96,6 +111,22 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
     });
     return;
   }
+}));
+
+/**
+ * GET /api/mzoo/navigation/events/:navigationId - SSE Stream for navigation events
+ */
+router.get('/events/:navigationId', asyncHandler(async (req: Request, res: Response) => {
+  const { navigationId } = req.params;
+  
+  if (!navigationId) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      message: 'Navigation ID is required',
+    });
+    return;
+  }
+
+  sseService.addConnection(navigationId, res);
 }));
 
 export { router as navigationRouter };

@@ -275,6 +275,167 @@ Modular handlers under 300 lines each:
 - special.ts - GO_UP_DOWN, ENTER_PORTAL, etc.
 - exploration.ts - EXPLORE_FEATURE, RELOCATE
 
+## Server-Sent Events (SSE) Patterns
+
+### Critical Race Condition Pattern
+
+**Problem**: SSE events sent before frontend establishes connection are lost forever.
+
+**Symptoms**:
+- Backend logs show events being sent
+- Frontend establishes SSE connection
+- No events appear in browser console
+- Pipeline completes but no progress updates shown
+
+**Root Cause**: Synchronous pipeline execution blocks response, events sent before EventSource connects.
+
+### Correct Implementation Pattern
+
+#### Backend Route (Asynchronous Execution)
+```typescript
+router.post('/api/endpoint', async (req, res) => {
+  // 1. Generate unique ID for this operation
+  const operationId = `prefix-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  const eventsUrl = `/api/events/${operationId}`;
+  
+  // 2. Return response IMMEDIATELY with eventsUrl
+  res.status(200).json({
+    data: { operationId, eventsUrl }
+  });
+  
+  // 3. Run pipeline ASYNCHRONOUSLY (don't await in route)
+  (async () => {
+    try {
+      await runPipeline(operationId, ...params);
+    } catch (error) {
+      console.error('Pipeline error:', error);
+    }
+  })();
+  
+  return; // Exit route handler
+});
+
+// SSE connection endpoint
+router.get('/api/events/:operationId', (req, res) => {
+  const { operationId } = req.params;
+  sseService.addConnection(operationId, res);
+});
+```
+
+#### Pipeline (SSE Event Emission)
+```typescript
+export async function runPipeline(operationId: string, ...params) {
+  try {
+    // Send start event
+    sseService.sendEvent(operationId, 'progress', { 
+      stage: 'started', 
+      message: 'Starting operation...' 
+    });
+    
+    // Step 1
+    sseService.sendEvent(operationId, 'progress', { 
+      stage: 'step1', 
+      message: 'Processing step 1...' 
+    });
+    await doStep1();
+    
+    // Step 2
+    sseService.sendEvent(operationId, 'progress', { 
+      stage: 'step2', 
+      message: 'Processing step 2...' 
+    });
+    await doStep2();
+    
+    // Completion
+    sseService.sendEvent(operationId, 'completed', { 
+      message: 'Operation complete',
+      result: data,
+      timings: {...}
+    });
+    
+    setTimeout(() => sseService.closeConnection(operationId), 1000);
+  } catch (error) {
+    sseService.sendEvent(operationId, 'error', { 
+      message: 'Operation failed', 
+      error: error.message 
+    });
+    sseService.closeConnection(operationId);
+  }
+}
+```
+
+#### Frontend (Promise-based SSE Handling)
+```typescript
+async function callAPI() {
+  const response = await fetch('/api/endpoint', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  });
+  
+  const result = await response.json();
+  
+  // If SSE URL provided, wait for pipeline completion
+  if (result.data.eventsUrl) {
+    return new Promise((resolve, reject) => {
+      const eventSource = new EventSource(result.data.eventsUrl);
+      let capturedData = {};
+      
+      eventSource.addEventListener('progress', (event) => {
+        const data = JSON.parse(event.data);
+        console.log(`[Operation ${result.data.operationId}] ${data.stage}:`, data.message);
+        // Capture intermediate data
+        if (data.data) Object.assign(capturedData, data.data);
+      });
+      
+      eventSource.addEventListener('completed', (event) => {
+        const data = JSON.parse(event.data);
+        console.log(`[Operation ${result.data.operationId}] COMPLETED`);
+        eventSource.close();
+        resolve({ ...capturedData, ...data });
+      });
+      
+      eventSource.addEventListener('error', (event) => {
+        const data = JSON.parse(event.data);
+        console.error(`[Operation ${result.data.operationId}] ERROR:`, data.message);
+        eventSource.close();
+        reject(new Error(data.message));
+      });
+      
+      eventSource.onerror = (err) => {
+        if (eventSource.readyState === EventSource.CLOSED) return;
+        eventSource.close();
+        reject(new Error('SSE connection failed'));
+      };
+    });
+  }
+  
+  return result.data; // Non-SSE operations
+}
+```
+
+### Key Rules
+
+1. **Always return response BEFORE starting async work**
+2. **Use IIFE pattern** for async operations: `(async () => { ... })()`
+3. **Frontend must wait** for SSE events via Promise
+4. **Capture intermediate data** during progress events
+5. **Close EventSource** after completion/error
+6. **Add unique operation ID** for tracking
+
+### Examples in Codebase
+
+- ✅ **Working**: `worldTreePipeline.ts` + `spawn.ts` (Generate button)
+- ✅ **Working**: `createNodePipeline.ts` + `navigation.ts` (Travel button)
+
+### Anti-Pattern (Causes Race Condition)
+```typescript
+// ❌ WRONG - Events sent before connection exists
+router.post('/api/endpoint', async (req, res) => {
+  const result = await runPipeline(...); // Blocks here
+  res.json({ result }); // Response comes AFTER events sent
+});
+```
+
 ## Development Guidelines
 
 ### File Size Limits
