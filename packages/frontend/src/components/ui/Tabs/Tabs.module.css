@@ -55,18 +55,22 @@
 
 .content {
   flex-grow: 1;
-  overflow: hidden; /* Allow content to manage its own scroll if needed */
+  overflow: hidden;
   background-color: var(--color-bg, transparent);
   display: flex;
   flex-direction: column;
+  min-height: 0; /* Important for nested flex containers to allow shrinking */
 }
 
 .contentPanel {
   flex-grow: 1;
-  height: 100%;
+  /* Remove explicit height: 100% to rely on flex growth, prevents overflow issues */
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.2s ease;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden;
+  min-height: 0; /* Important for nested flex containers to allow shrinking */
 }
 
 @keyframes fadeIn {
