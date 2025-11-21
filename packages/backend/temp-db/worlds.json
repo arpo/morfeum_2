@@ -735,173 +735,6 @@
       "searchDesc": "Monumental alien interior, dark metal, turquoise energy, mist, alien console and archway.",
       "slug": "interior-of-the-colossal-mechanism"
     },
-    "loc-1763564855458-wbmni5jka": {
-      "id": "loc-1763564855458-wbmni5jka",
-      "type": "host",
-      "name": "The Wastes",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A sprawling, desolate world where nature has aggressively reclaimed man-made structures. Remnants of past habitation are skeletal and crumbling, often half-swallowed by vegetation.",
-        "colorsAndLighting": "Dominated by muted, earthy tones and the cool, diffused light of overcast skies or perpetual twilight. Occasional pops of vibrant, unnatural color might signify strange growths or residual energies.",
-        "atmosphere": "The air is often still, thick with the scent of damp earth and decaying organic matter. A pervasive sense of quiet desolation and the hum of unseen life prevails.",
-        "materials": "Primarily rough, natural materials like stone, earth, and dense vegetation. Where structures remain, expect rusted metal, cracked concrete, and weathered wood.",
-        "mood": "Melancholy, awe-inspiring, and slightly ominous. A sense of profound loss and the overwhelming power of nature.",
-        "sounds": "Rustling leaves, distant animal calls, wind, creaking metal, dripping water",
-        "spatialLayout": "Expansive and often disorienting, with natural elements obscuring paths and landmarks. Structures are typically fragmented and partially collapsed.",
-        "primary_surfaces": [
-          "earth",
-          "stone",
-          "overgrown vegetation"
-        ],
-        "secondary_surfaces": [
-          "rusted metal",
-          "cracked concrete",
-          "weathered wood"
-        ],
-        "accent_features": [
-          "skeletal ruins",
-          "gnarled trees",
-          "unusual geological formations"
-        ],
-        "dominant": "earth tones",
-        "secondary": "muted greens",
-        "accent": "varied natural hues",
-        "ambient": "cool",
-        "genre": "post-apocalyptic",
-        "architectural_tone": "decaying brutalist and industrial with heavy organic overgrowth, featuring exposed concrete, rusted steel supports, and crumbling facades, often partially consumed by vines and earth.",
-        "cultural_tone": "remnants of a utilitarian, possibly industrial society, now lost and forgotten.",
-        "materials_base": "rough-hewn stone, corroded metal, dense plant matter, fractured concrete",
-        "mood_baseline": "melancholy desolation",
-        "palette_bias": "earthy neutrals with cool ambient light",
-        "soundscape_base": "ambient natural sounds with occasional mechanical groans",
-        "flora_base": "dense, hardy, and overgrown vegetation",
-        "fauna_base": "scavenging wildlife and mutated creatures"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Overgrown ruins",
-        "Shattered highways",
-        "Vast, untamed wilderness"
-      ],
-      "uniqueIdentifiers": [
-        "Eerie silence",
-        "Signs of past conflict",
-        "Dominance of nature"
-      ],
-      "slug": "the-wastes",
-      "searchDesc": "A forgotten, overgrown world where nature has reclaimed civilization, filled with ruins and vast wilderness."
-    },
-    "0f7862dd-f9f6-4f45-88bb-2e57396f56ca": {
-      "id": "0f7862dd-f9f6-4f45-88bb-2e57396f56ca",
-      "type": "region",
-      "name": "The Wastes",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Expansive, open plains covered in tall, coarse grasses that sway in the wind. Horizons are often blurred by atmospheric haze or distant, monolithic structures.",
-        "colorsAndLighting": "Soft, diffused teal light permeates the scene at dusk, casting long shadows. The dominant colors are the dark greens of the grass against the muted, hazy sky.",
-        "atmosphere": "A damp, humid atmosphere with still air. The tall grass suggests a ground that retains moisture, contributing to a sense of a quiet, almost heavy, environment.",
-        "materials": "The primary visible materials are dense, tall grass and exposed earth or rock.",
-        "mood": "Quietly foreboding and vast, with a touch of melancholic beauty.",
-        "sounds": "Whispering grass, distant wind, occasional animal rustles",
-        "spatialLayout": "Predominantly flat and open, with a strong sense of distance and a lack of defined paths.",
-        "primary_surfaces": [
-          "tall grass",
-          "damp earth"
-        ],
-        "secondary_surfaces": [
-          "scattered rocks",
-          "weathered debris"
-        ],
-        "accent_features": [
-          "swaying grass",
-          "hazy horizon"
-        ],
-        "dominant": "dark green",
-        "secondary": "teal",
-        "accent": "grey",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": null,
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": "cool, muted, and earthy tones",
-        "soundscape_base": null,
-        "flora_base": "tall, hardy grasses and scrub",
-        "fauna_base": null
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Open plains",
-        "Scattered debris",
-        "Distant ruined structures"
-      ],
-      "uniqueIdentifiers": [
-        "Sense of scale",
-        "Wind-swept vistas",
-        "Horizon dotted with remnants"
-      ],
-      "slug": "the-wastes-region",
-      "searchDesc": "A vast, open landscape within the Wastes, marked by wind and scattered signs of a forgotten era."
-    },
-    "365dd5b2-e73a-4898-9a2d-757924e5a91d": {
-      "id": "365dd5b2-e73a-4898-9a2d-757924e5a91d",
-      "type": "location",
-      "name": "The Whispering Spire",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A towering, skeletal broadcast facility rises prominently from a field of tall, dark grass. The structure is a lattice of dark metal, intricately detailed with numerous antennae and scaffolding elements. A bright, artificial light emanates from an opening near its base, illuminating a wet, rocky path leading towards it. The overall impression is one of a colossal, abandoned machine.",
-        "colorsAndLighting": "The scene is lit by the ambient, cool teal light of dusk, creating a low-contrast environment. A strong, artificial, cool cyan light emanates from a central point low on the broadcast tower, casting a glow onto the path.",
-        "atmosphere": "A thick, teal-tinted haze envelops the scene, softening distant details and lending a diffused quality to the light. The air appears still, with the tall grass suggesting a damp or humid environment.",
-        "materials": "The primary material is dark, weathered metal, forming the intricate structure of the tower. The secondary material is the dense, tall grass.",
-        "mood": "Imposing, eerie, and industrial, with a touch of technological mystery.",
-        "sounds": "Distant static, wind through metal, hum of power",
-        "spatialLayout": "The foreground is dominated by dense, tall grass obscuring the ground. A wet, rocky path cuts through the grass and leads into the midground. The midground is occupied by the colossal broadcast tower, a complex vertical structure that dominates the composition. The background consists of a hazy sky with obscured clouds.",
-        "primary_surfaces": "metal",
-        "secondary_surfaces": "grass",
-        "accent_features": "glowing light",
-        "dominant": "teal",
-        "secondary": "dark green",
-        "accent": "cyan",
-        "ambient": "teal",
-        "genre": null,
-        "architectural_tone": "industrial lattice-work tower with complex, exposed metal framework, numerous antennae arrays, and utilitarian access points. The design emphasizes height and functionality over aesthetics, with a raw, exposed structural integrity.",
-        "cultural_tone": "functional broadcast and communication hub of a past era.",
-        "materials_base": "corroded steel, exposed iron girders, riveted metal panels, concrete foundations",
-        "mood_baseline": "ominous technological sentinel",
-        "palette_bias": "contrasting cool ambient light with intense artificial accents",
-        "soundscape_base": "static hums and mechanical groans",
-        "flora_base": null,
-        "fauna_base": null
-      },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/02bIzsL38QRj_77KBAj_n.jpg",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center, midground",
-          "description": "Brightly lit opening at the base of the tower"
-        },
-        {
-          "type": "object",
-          "position": "center, foreground",
-          "description": "Wet, rocky path leading towards the tower entrance"
-        }
-      ],
-      "dominantElements": [
-        "Broadcast tower structure (est. 100-150m tall, VERTICAL STRUCTURE), center, with complex antennae array",
-        "Tall, dark grass covering foreground and midground",
-        "Wet, rocky path leading to tower entrance, center foreground"
-      ],
-      "uniqueIdentifiers": [
-        "Skeletal broadcast tower structure",
-        "Bright cyan light emanating from tower base",
-        "Tall, dark grass field"
-      ],
-      "slug": "the-whispering-spire",
-      "searchDesc": "[Location - Exterior] Abandoned tower in grass. Has: passage (center, midground), object (center, foreground)"
-    },
     "loc-1763565944644-7fzqqox6d": {
       "id": "loc-1763565944644-7fzqqox6d",
       "type": "host",
@@ -1372,59 +1205,6 @@
       "searchDesc": "Decaying Gilded Manor foyer: dim blue-green light, Victorian grandeur, spectral moss, grand decaying staircase.",
       "slug": "interior-of-the-gilded-manor"
     },
-    "niche-1763566662736-q05epx0dp": {
-      "id": "niche-1763566662736-q05epx0dp",
-      "type": "niche",
-      "name": "unknown of The Whispering Spire",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Colossal abandoned broadcast control room with oxidized dark metal lattice-work walls and an unseen ceiling choked with cables. A massive central console bank with cracked screens dominates the space, while a rusted metal catwalk traverses the midground. The floor is a patchwork of concrete and debris.",
-        "colorsAndLighting": "A stark, cool cyan glow emanates from the central console, contrasting with an oppressive teal haze filtering through grimy observation ports. Dust motes are illuminated within this artificial light.",
-        "atmosphere": "The air is heavy with the scent of ozone and decay. Dust motes dance in the artificial light, creating a palpable sense of abandonment and disuse. The atmosphere is cool and oppressive.",
-        "materials": "Oxidized dark metal lattice-work forms the walls, showing significant wear and rust. The console features cracked screens and weathered metal panels. The floor is cracked concrete with scattered dark metal debris. A massive reel-to-reel tape machine in the foreground is etched with time.",
-        "mood": "Imposing, eerie, and industrial, with a pervasive sense of technological decay and mystery.",
-        "sounds": "Silent, faint hum, distant creaking.",
-        "spatialLayout": "A colossal, vertically oriented space defined by lattice-work walls. A massive console is the focal point, with a catwalk providing midground depth. An opening on the right offers an exit or entry point.",
-        "primary_surfaces": "Oxidized dark metal lattice-work walls, cracked concrete floor.",
-        "secondary_surfaces": "Weathered metal control panels, cracked screens, scattered dark metal debris.",
-        "accent_features": "Massive central console bank with cyan glow, rusted metal catwalk, lone massive reel-to-reel tape machine, dust motes.",
-        "dominant": "Teal (haze, ambient light)",
-        "secondary": "Cyan (console glow)",
-        "accent": "Dark metal (walls, debris), Rusted metal (catwalk, machine)",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "industrial lattice-work tower with complex, exposed metal framework, numerous antennae arrays, and utilitarian access points. The design emphasizes height and functionality over aesthetics, with a raw, exposed structural integrity.",
-        "cultural_tone": "functional broadcast and communication hub of a past era.",
-        "materials_base": "oxidized metals, concrete, cracked plastics",
-        "mood_baseline": "Imposing, eerie, and industrial, with a touch of technological mystery.",
-        "palette_bias": "cool tones, cyan, teal, dark metallics",
-        "soundscape_base": "low hum, metallic groans, electronic decay",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/YoxkmTYE-dp1ARaQ60CU5.jpg",
-      "description": "Interior of a colossal, abandoned broadcast control room, filled with defunct technology and a pervasive sense of decay.",
-      "navigableElements": [
-        {
-          "type": "opening",
-          "position": "midground right",
-          "description": "dimly lit opening on the right"
-        }
-      ],
-      "dominantElements": [
-        "massive central console bank",
-        "rusted metal catwalk",
-        "lone massive reel-to-reel tape machine"
-      ],
-      "uniqueIdentifiers": [
-        "cracked dark screens",
-        "hanging cables",
-        "oxidized dark metal lattice-work",
-        "dust motes in teal haze"
-      ],
-      "searchDesc": "Abandoned broadcast control room, cyan glow, metal lattice, cables, catwalk, dust, reel-to-reel.",
-      "slug": "unknown-of-the-whispering-spire"
-    },
     "niche-1763566734423-zzh0ie9c1": {
       "id": "niche-1763566734423-zzh0ie9c1",
       "type": "niche",
@@ -1851,69 +1631,6 @@
       ],
       "searchDesc": "Dimly lit, grand hall of The Gilded Manor with dusty decay, blue-green light, and haunted Gothic architecture.",
       "slug": "interior-of-the-gilded-manor"
-    },
-    "niche-1763567060664-c2h14bfun": {
-      "id": "niche-1763567060664-c2h14bfun",
-      "type": "niche",
-      "name": "unknown of The Whispering Spire",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A long, narrow corridor with a slick, stained concrete floor stretches ahead, flanked by walls of corroded, riveted steel panels. Bare bulbs flicker overhead, casting harsh, unsteady shadows and highlighting a spiraling metal staircase to the left and a heavily bolted steel door to the right.",
-        "colorsAndLighting": "The scene is dominated by the cool, teal-tinted haze of dusk, with flickering, bare bulbs providing intermittent, sharp illumination. Rust stains and oil slicks add darker, muted tones to the concrete floor.",
-        "atmosphere": "The air is thick with a low, resonant static hum, punctuated by the faint groaning of stressed metal. A sense of dampness and decay permeates the enclosed space.",
-        "materials": "The primary materials are slick, worn concrete for the floor and heavily corroded steel panels for the walls and staircase. Oxidized metal and rust are prominent textural elements.",
-        "mood": "Imposing and eerie, the space evokes a feeling of industrial decay and forgotten purpose, tinged with technological mystery.",
-        "sounds": "low static hum, groaning metal, door closing",
-        "spatialLayout": "A utilitarian, straight corridor forms the primary space, with a spiraling staircase and a solid steel door serving as secondary focal points. The ultra-wide lens emphasizes the length and narrowness.",
-        "primary_surfaces": "corroded steel panels, worn concrete",
-        "secondary_surfaces": "oxidized metal railings, rust stains, oil slicks",
-        "accent_features": "skeletal lattice-work railings, flickering bare bulbs, deep scratches on steel door",
-        "dominant": "teal (haze, ambient light)",
-        "secondary": "dark grey/brown (steel, concrete, rust)",
-        "accent": "yellow/white (bulb flicker)",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": null,
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/elephant/GOnU8jLLRSBa4plJJV2ZP.jpg",
-      "description": "A dark, utilitarian corridor within a desolate industrial structure.",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "ahead",
-          "description": "a starkly utilitarian corridor"
-        },
-        {
-          "type": "stairs",
-          "position": "to the left",
-          "description": "a narrow, spiraling staircase of oxidized metal"
-        },
-        {
-          "type": "door",
-          "position": "to the right",
-          "description": "a heavy, bolted steel door"
-        }
-      ],
-      "dominantElements": [
-        "corridor",
-        "staircase",
-        "steel door",
-        "bare bulbs"
-      ],
-      "uniqueIdentifiers": [
-        "skeletal lattice-work railings",
-        "corroded steel panels",
-        "rust and oil stains"
-      ],
-      "searchDesc": "Industrial corridor with rusty steel, flickering lights, and a spiral staircase.",
-      "slug": "unknown-of-the-whispering-spire"
     },
     "loc-1763570178929-is7khrj3v": {
       "id": "loc-1763570178929-is7khrj3v",
@@ -3504,70 +3221,6 @@
       ],
       "searchDesc": "Cavernous interior, monolithic architecture, alien organic growths, purple light, ancient stone.",
       "slug": "unknown-of-the-silent-sentinel"
-    },
-    "niche-1763618204946-arqd34z34": {
-      "id": "niche-1763618204946-arqd34z34",
-      "type": "niche",
-      "name": "interior of The Whispering Spire",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The scene is dominated by towering, intricate metal scaffolding forming the walls, crisscrossed with dense networks of pipes and junction boxes. A polished concrete floor with scattered corroded grates leads to angular consoles and cantilevered platforms. A colossal antenna array descends from the unseen ceiling.",
-        "colorsAndLighting": "Pervasive diffused teal ambient light softens the dark metal surfaces, contrasted by sharp, focused beams of cool cyan light from conduits and platforms, with intermittent stark red glows from an access hatch.",
-        "atmosphere": "The air is heavy with the smell of ozone and damp metal. The enclosed space feels vast yet claustrophobic, echoing an imposing industrial nature, pervaded by a sense of dormant power and forgotten functionality.",
-        "materials": "Dominated by dark, heavily corroded steel and iron with exposed rivets and welded seams, complemented by polished concrete and grimy metal grates. Glowing cyan and intermittent red lights add technological detail.",
-        "mood": "Ominous, technological, abandoned, functional, and mysterious.",
-        "sounds": "Faint hum, echoing depths, mechanical hum",
-        "spatialLayout": "A vast, upward expanse with immense verticality, the ceiling lost in shadow. The primary structure is defined by dense metal framework, with entry points and navigable elements suggesting deeper exploration.",
-        "primary_surfaces": "dark concrete, corroded metal grates, steel scaffolding",
-        "secondary_surfaces": "riveted steel plates, exposed pipes and conduits, junction boxes",
-        "accent_features": "cryptic symbols, glowing cyan conduit, red blinking lights, massive antenna array",
-        "dominant": "teal (ambient light)",
-        "secondary": "cyan (artificial lights)",
-        "accent": "red (hatch)",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "industrial lattice-work, complex exposed metal framework, utilitarian access points, raw structural integrity, dense piping and conduit networks, riveted and welded metal construction, angular consoles",
-        "cultural_tone": "functional broadcast and communication hub of a past era",
-        "materials_base": "corroded steel and iron, concrete, grimy metal",
-        "mood_baseline": "Imposing, eerie, and industrial, with a touch of technological mystery",
-        "palette_bias": "muted metal tones with contrasting bright artificial lights",
-        "soundscape_base": "industrial hums and echoes",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/lion/pkB3kF8l_8LmCWxC6eT6K.jpg",
-      "description": "The internal structure of a colossal, abandoned industrial broadcast facility, characterized by complex metal scaffolding and an ominous, technological atmosphere.",
-      "navigableElements": [
-        {
-          "type": "console panel",
-          "position": "left side",
-          "description": "A low, angular console panel etched with cryptic symbols."
-        },
-        {
-          "type": "access hatch",
-          "position": "right wall",
-          "description": "A large, rectangular access hatch, partially ajar, revealing a shadowed passage."
-        },
-        {
-          "type": "metal platforms",
-          "position": "midground left",
-          "description": "A series of cantilevered metal platforms ascending in a staggered pattern."
-        }
-      ],
-      "dominantElements": [
-        "metal scaffolding",
-        "exposed pipes and conduits",
-        "console panel",
-        "antenna array"
-      ],
-      "uniqueIdentifiers": [
-        "vast upward expanse",
-        "massive antenna array jutting down",
-        "riveted steel plates",
-        "cryptic symbols on console"
-      ],
-      "searchDesc": "Interior of a colossal abandoned industrial broadcast facility with teal lighting and metal scaffolding.",
-      "slug": "interior-of-the-whispering-spire"
     },
     "niche-1763618238635-ujmzty373": {
       "id": "niche-1763618238635-ujmzty373",
@@ -6145,6 +5798,291 @@
       ],
       "searchDesc": "Organic cavern citadel with amber arches, veridian pillars, and glowing sky-roots.",
       "slug": "interior-of-the-sky-root-citadel"
+    },
+    "niche-1763734731856-i641rntou": {
+      "id": "niche-1763734731856-i641rntou",
+      "type": "niche",
+      "name": "interior of The Sky Root Citadel",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a vast, subterranean grotto carved from living, bioluminescent turquoise stone. Curved vaults of solidified amber sap form majestic arches overhead, supporting the cavernous space. Luminescent azure vines cascade from above, weaving through the air and pooling on the polished obsidian floor.",
+        "colorsAndLighting": "The scene is illuminated by the soft, internal glow of the turquoise stone and the sapphire water, casting a serene, ambient light. Luminescent azure vines and scattered jade flora add pops of vibrant color, with faint amethyst runes on veridian pillars providing subtle accents.",
+        "atmosphere": "The air is humid, carrying the subtle scent of damp earth and exotic blossoms. A faint hum of latent magic permeates the space, contributing to an ancient and mystical aura. The ultra-wide lens captures the expansive, gravity-defying nature of the grotto.",
+        "materials": "Primary materials include living, bioluminescent turquoise stone, solidified amber sap, polished obsidian, and crystalline growths. The veridian stone pillars appear colossal and are etched with faint amethyst runes. The textures are varied, from smooth, polished surfaces to rough, natural formations.",
+        "mood": "The atmosphere evokes a sense of ancient majesty and mystical serenity, a place of deep natural reverence and magical harmony.",
+        "sounds": "Subtle hum of magic, dripping water, soft flora rustle.",
+        "spatialLayout": "A large, subterranean grotto with vaulted ceilings and colossal pillars. The space is defined by its curving forms and organic layout, with distinct navigable areas in the midground left, foreground center, and midground right. The background recedes into shadow, suggesting deeper caverns.",
+        "primary_surfaces": "Bioluminescent turquoise stone, solidified amber sap, obsidian floor.",
+        "secondary_surfaces": "Living roots, crystalline growths, veridian stone pillars.",
+        "accent_features": "Luminescent azure vines, scattered jade flora, amethyst runes, glowing quartz formations, sapphire-hued water basin.",
+        "dominant": "Veridian (pillars, stone)",
+        "secondary": "Azure (vines, water)",
+        "accent": "Amethyst (runes), Jade (flora), Turquoise (stone glow)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "organic, sculpted by nature and magic, integrated with living elements, gravity-defying structures, fluid and unforced lines",
+        "cultural_tone": "deep reverence for nature, symbiotic relationship with the environment, emphasis on magical balance and harmony",
+        "materials_base": "stone, amber, obsidian, crystalline, flora",
+        "mood_baseline": "Majestic, ancient, mystical",
+        "palette_bias": "Veridian, Azure, Amethyst",
+        "soundscape_base": "ambient nature, subtle magic",
+        "flora_base": "Luminescent vines, exotic blossoms, jade flora",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/cBc58i-vs2qZLm6T5tqmQ.jpg",
+      "description": "A subterranean grotto with bioluminescent stone, amber arches, and flowing azure vines.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground left",
+          "description": "A naturalistic archway of intertwined living roots and crystalline growths leading to a dimly lit passage."
+        },
+        {
+          "type": "formation cluster",
+          "position": "foreground center",
+          "description": "A cluster of glowing, quartz-like formations emitting a gentle, pulsing light."
+        },
+        {
+          "type": "alcove with basin",
+          "position": "midground right",
+          "description": "A recessed alcove containing a large, sculpted basin overflowing with sapphire-hued water, bordered by shimmering mineral veins."
+        }
+      ],
+      "dominantElements": [
+        "Vaulted arches",
+        "Colossal veridian stone pillars",
+        "Azure vines",
+        "Glowing quartz formations"
+      ],
+      "uniqueIdentifiers": [
+        "Bioluminescent turquoise stone",
+        "Solidified amber sap arches",
+        "Amethyst runic etchings",
+        "Luminescent azure vines"
+      ],
+      "searchDesc": "Subterranean grotto, bioluminescent stone, amber arches, azure vines, veridian pillars.",
+      "slug": "interior-of-the-sky-root-citadel"
+    },
+    "loc-1763735358194-f9pjw8y5h": {
+      "id": "loc-1763735358194-f9pjw8y5h",
+      "type": "host",
+      "name": "Moebius-like Pastel Desert",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Moebius-like Pastel Desert",
+        "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+        "dna": {
+          "looks": "A vast, undulating landscape sculpted into soft, flowing dunes that defy gravity and conventional geology. The terrain is rendered in impossible pastel hues, creating a dreamlike and disorienting visual experience. Sparse, delicate flora might emerge from the smooth surfaces.",
+          "colorsAndLighting": "The scene is bathed in a soft, diffused, ethereal light, casting subtle gradients and minimal shadows. The palette is dominated by a symphony of muted pastels, primarily soft pinks, pale whites, and gentle turquoises, creating a tranquil and otherworldly atmosphere.",
+          "atmosphere": "The air is still and appears unnaturally clear, with a subtle shimmer that suggests extreme dryness and a lack of conventional atmospheric phenomena. There is a profound sense of quiet and stillness, an almost palpable lack of wind or sound, contributing to an otherworldly tranquility.",
+          "materials": "The primary visible materials are smooth, seamless, and almost liquid-looking surfaces that form both the dunes and any monolithic structures. These materials possess a matte, soft finish, suggesting they are composed of something other than earth or stone.",
+          "mood": "Tranquil, serene, and profoundly alien. There is a sense of peaceful isolation and a quiet, contemplative beauty that borders on the surreal.",
+          "sounds": "Silence, soft ambient hum, gentle atmospheric shimmer",
+          "spatialLayout": "Expansive and open, with a sense of limitless horizon. The landscape features rolling, organic forms with gradual slopes and sweeping curves, creating a feeling of vastness and gentle undulation.",
+          "primary_surfaces": [
+            "Smooth, seamless pastel dunes",
+            "Softly curved monolithic surfaces"
+          ],
+          "secondary_surfaces": [
+            "Sandy terrain (subtle)"
+          ],
+          "accent_features": [
+            "Subtle color shifts in light",
+            "Delicate, sparse flora"
+          ],
+          "dominant": "Pastel Pink",
+          "secondary": "Pale White",
+          "accent": "Pale Turquoise",
+          "ambient": "Cool and ethereal",
+          "genre": "sci-fi",
+          "architectural_tone": "monolithic organic curves, seamless construction, smooth matte finishes, integrated forms, absence of sharp edges or discernible joints",
+          "cultural_tone": "alien artifact, ancient observatory, natural anomaly",
+          "materials_base": "otherworldly seamless composites, matte and soft textures, dust-like particulates",
+          "mood_baseline": "serene isolation, alien tranquility, contemplative wonder",
+          "palette_bias": "soft pastel gradients, cool tones with warm undertones",
+          "soundscape_base": "minimalist ambient tones, subtle atmospheric hums",
+          "flora_base": "sparse, delicate, otherworldly crystalline or fiber-like structures",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Impossible geometric dunes",
+          "Ethereal sky formations",
+          "Absence of conventional landmarks"
+        ],
+        "uniqueIdentifiers": [
+          "Otherworldly pastel palette",
+          "Surreal, flowing landscapes",
+          "Lack of sharp angles"
+        ],
+        "searchDesc": "A surreal, pastel desert plateau with impossible geometry and flowing, organic forms.",
+        "slug": "moebius-like-pastel-desert",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Moebius-like Pastel Desert",
+          "looks": "A surreal, pastel-hued desert plateau with impossible geometry.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+      "description": "A surreal, pastel-hued desert plateau with impossible geometry."
+    },
+    "acd7b9bd-155d-475a-8e2c-401f98010caf": {
+      "id": "acd7b9bd-155d-475a-8e2c-401f98010caf",
+      "type": "region",
+      "name": "Moebius-like Pastel Desert",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "Moebius-like Pastel Desert",
+        "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+        "dna": {
+          "looks": "Expansive, softly sculpted desert dunes in a range of impossible pastel shades. The landscape features sweeping curves and flowing lines, with occasional subtly out-of-place geological formations. The horizon is vast and often indistinct due to atmospheric effects.",
+          "colorsAndLighting": "Dominated by soft, diffused light that enhances the pastel palette of pale pinks, whites, and turquoises. Gentle gradients define the shapes of the dunes, with a subtle shimmer in the air. The light feels diffuse and cool.",
+          "atmosphere": "Arid and still, with a subtle visual distortion suggesting a unique atmospheric composition. The air is clear, and there is a profound sense of quiet, contributing to the region's alien and tranquil character.",
+          "materials": "Primarily composed of finely granulated material that forms smooth, seamless dunes. Any rock-like formations are smooth and rounded, lacking sharp edges. The overall impression is of a soft, yielding, yet solid surface.",
+          "mood": "Peaceful, isolated, and dreamlike, with an underlying sense of ancient stillness.",
+          "sounds": "Whispering dust, faint atmospheric hums, distant silence",
+          "spatialLayout": "Open and seemingly endless, characterized by rolling hills and sweeping plains. The layout emphasizes gradual slopes and organic curves, creating a sense of gentle vastness.",
+          "primary_surfaces": [
+            "Smooth, pastel-colored sand dunes"
+          ],
+          "secondary_surfaces": [
+            "Undulating desert terrain"
+          ],
+          "accent_features": [
+            "Subtle color variations in sand",
+            "Occasional smooth rock outcrops"
+          ],
+          "dominant": "Pale Pink",
+          "secondary": "Pale White",
+          "accent": "Pale Turquoise",
+          "ambient": "Cool",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": "fine-grained desert composite, smooth, matte texture",
+          "mood_baseline": "serene isolation, alien calm",
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "sparse, fibrous, crystalline growths",
+          "fauna_base": null
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Vast undulating pastel dunes",
+          "Unusual geological formations",
+          "Distant monolithic structures"
+        ],
+        "uniqueIdentifiers": [
+          "Flowing geometric dunes",
+          "Pervasive pastel color scheme"
+        ],
+        "searchDesc": "A vast expanse of surreal, pastel-colored desert dunes with flowing, impossible geometry and a sense of profound alien tranquility.",
+        "slug": "moebius-like-pastel-desert-region",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Moebius-like Pastel Desert",
+          "looks": "A surreal, pastel-hued desert plateau with impossible geometry.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A surreal, pastel-hued desert plateau with impossible geometry."
+    },
+    "4d1f26b6-9333-4d73-81a1-a387f7223ecb": {
+      "id": "4d1f26b6-9333-4d73-81a1-a387f7223ecb",
+      "type": "location",
+      "name": "The Solitary Spire",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Solitary Spire",
+        "description": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
+        "looks": "Smooth, undulating exterior walls in soft pastel shades, tapering upwards. The base is distinguished by a vividly colored, narrow entrance.",
+        "atmosphere": "Still, dry air with a faint shimmer of heat haze. The silence is profound, broken only by the whisper of the wind across the plateau.",
+        "mood": "Otherworldly, enigmatic",
+        "dna": {
+          "looks": "A surreal, pastel desert plateau stretches across the landscape, sculpted into soft, undulating dunes.  Dominating the midground is a tall, monolithic tower with smooth, curved walls that taper to a point. The tower's base is carved with a narrow, glowing entry slit.  Scattered across the terrain are sparse, delicate trees and soft, cotton-like formations. The overall impression is one of smooth, organic forms and a tranquil, otherworldly environment.",
+          "colorsAndLighting": "The scene is illuminated by a soft, diffused light, casting gentle highlights and minimal shadows. The overall tone is cool and ethereal, with the sky transitioning from a pale turquoise near the horizon to a softer hue overhead.  The turquoise entry slit emits its own vibrant glow, providing a stark contrast.",
+          "atmosphere": "The air appears clear and still, with a subtle visual shimmer suggesting a dry, arid environment.  The absence of discernible wind or atmospheric disturbance contributes to a profound sense of quiet.",
+          "materials": "The tower is constructed from a single, seamless material with a smooth, matte finish, indistinguishable from the surrounding desert's primary surface. The entry slit appears to be made of a luminous crystalline material or solidified energy.",
+          "mood": "Mysterious, inviting, and awe-inspiring. The spire feels like an ancient, purposeful artifact within the desolate landscape.",
+          "sounds": "Faint humming from entry slit, distant desert silence",
+          "spatialLayout": "The foreground consists of a gently sloping, sandy terrain with subtle textures. In the midground, the prominent monolithic tower rises directly from this plateau. The background features a vast, pastel-colored sky with soft, ethereal clouds, and distant, sparse vegetation.",
+          "primary_surfaces": "Smooth, seemingly seamless material forming the tower and dunes",
+          "secondary_surfaces": "Sandy terrain",
+          "accent_features": "Glowing turquoise light from entry slit",
+          "dominant": "Pale white and soft pink (dunes, tower, clouds)",
+          "secondary": "Pale turquoise (sky, entry slit)",
+          "accent": "Vibrant turquoise (entry slit)",
+          "ambient": "Soft pastel hues of pink and turquoise",
+          "genre": null,
+          "architectural_tone": "monolithic organic curves, seamless construction, smooth matte finishes, integrated forms, absence of sharp edges or discernible joints, luminous material for openings",
+          "cultural_tone": "ancient alien monument, solitary sanctuary",
+          "materials_base": "otherworldly seamless composites, smooth matte finish, luminous crystalline material",
+          "mood_baseline": "solitary mystery, alien allure",
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center base, midground",
+            "description": "A glowing turquoise entry slit carved into the monolithic tower's base."
+          }
+        ],
+        "dominantElements": [
+          "Monolithic curved tower ~60m tall, VERTICAL STRUCTURE, center, midground",
+          "Pastel desert plateau terrain, foreground/midground",
+          "Turquoise entry slit, base of tower, midground",
+          "Sparse delicate trees, scattered, background/midground",
+          "Soft pastel clouds, sky, background"
+        ],
+        "uniqueIdentifiers": [
+          "Monolithic curved tower",
+          "Single turquoise entry slit",
+          "Pastel desert plateau landscape"
+        ],
+        "searchDesc": "[Location - Exterior] Pastel desert plateau with a curved tower. Has: turquoise entry slit (midground)",
+        "slug": "the-solitary-spire",
+        "imageUrl": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Solitary Spire",
+          "looks": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+      "description": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit."
     }
   },
   "views": {},
@@ -6239,39 +6177,6 @@
                 },
                 {
                   "id": "niche-1763560177982-fiedro9p1",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1763564855458-wbmni5jka",
-      "type": "host",
-      "children": [
-        {
-          "id": "0f7862dd-f9f6-4f45-88bb-2e57396f56ca",
-          "type": "region",
-          "children": [
-            {
-              "id": "365dd5b2-e73a-4898-9a2d-757924e5a91d",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1763566662736-q05epx0dp",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1763567060664-c2h14bfun",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1763618204946-arqd34z34",
                   "type": "niche",
                   "children": []
                 }
@@ -7256,8 +7161,238 @@
                   "id": "niche-1763734483315-1sqj71fdj",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1763734731856-i641rntou",
+                  "type": "niche",
+                  "children": []
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763735358194-f9pjw8y5h",
+      "type": "host",
+      "name": "Moebius-like Pastel Desert",
+      "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+      "dna": {
+        "type": "host",
+        "name": "Moebius-like Pastel Desert",
+        "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+        "dna": {
+          "looks": "A vast, undulating landscape sculpted into soft, flowing dunes that defy gravity and conventional geology. The terrain is rendered in impossible pastel hues, creating a dreamlike and disorienting visual experience. Sparse, delicate flora might emerge from the smooth surfaces.",
+          "colorsAndLighting": "The scene is bathed in a soft, diffused, ethereal light, casting subtle gradients and minimal shadows. The palette is dominated by a symphony of muted pastels, primarily soft pinks, pale whites, and gentle turquoises, creating a tranquil and otherworldly atmosphere.",
+          "atmosphere": "The air is still and appears unnaturally clear, with a subtle shimmer that suggests extreme dryness and a lack of conventional atmospheric phenomena. There is a profound sense of quiet and stillness, an almost palpable lack of wind or sound, contributing to an otherworldly tranquility.",
+          "materials": "The primary visible materials are smooth, seamless, and almost liquid-looking surfaces that form both the dunes and any monolithic structures. These materials possess a matte, soft finish, suggesting they are composed of something other than earth or stone.",
+          "mood": "Tranquil, serene, and profoundly alien. There is a sense of peaceful isolation and a quiet, contemplative beauty that borders on the surreal.",
+          "sounds": "Silence, soft ambient hum, gentle atmospheric shimmer",
+          "spatialLayout": "Expansive and open, with a sense of limitless horizon. The landscape features rolling, organic forms with gradual slopes and sweeping curves, creating a feeling of vastness and gentle undulation.",
+          "primary_surfaces": [
+            "Smooth, seamless pastel dunes",
+            "Softly curved monolithic surfaces"
+          ],
+          "secondary_surfaces": [
+            "Sandy terrain (subtle)"
+          ],
+          "accent_features": [
+            "Subtle color shifts in light",
+            "Delicate, sparse flora"
+          ],
+          "dominant": "Pastel Pink",
+          "secondary": "Pale White",
+          "accent": "Pale Turquoise",
+          "ambient": "Cool and ethereal",
+          "genre": "sci-fi",
+          "architectural_tone": "monolithic organic curves, seamless construction, smooth matte finishes, integrated forms, absence of sharp edges or discernible joints",
+          "cultural_tone": "alien artifact, ancient observatory, natural anomaly",
+          "materials_base": "otherworldly seamless composites, matte and soft textures, dust-like particulates",
+          "mood_baseline": "serene isolation, alien tranquility, contemplative wonder",
+          "palette_bias": "soft pastel gradients, cool tones with warm undertones",
+          "soundscape_base": "minimalist ambient tones, subtle atmospheric hums",
+          "flora_base": "sparse, delicate, otherworldly crystalline or fiber-like structures",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Impossible geometric dunes",
+          "Ethereal sky formations",
+          "Absence of conventional landmarks"
+        ],
+        "uniqueIdentifiers": [
+          "Otherworldly pastel palette",
+          "Surreal, flowing landscapes",
+          "Lack of sharp angles"
+        ],
+        "searchDesc": "A surreal, pastel desert plateau with impossible geometry and flowing, organic forms.",
+        "slug": "moebius-like-pastel-desert",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Moebius-like Pastel Desert",
+          "looks": "A surreal, pastel-hued desert plateau with impossible geometry.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "acd7b9bd-155d-475a-8e2c-401f98010caf",
+          "type": "region",
+          "name": "Moebius-like Pastel Desert",
+          "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+          "dna": {
+            "type": "region",
+            "name": "Moebius-like Pastel Desert",
+            "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+            "dna": {
+              "looks": "Expansive, softly sculpted desert dunes in a range of impossible pastel shades. The landscape features sweeping curves and flowing lines, with occasional subtly out-of-place geological formations. The horizon is vast and often indistinct due to atmospheric effects.",
+              "colorsAndLighting": "Dominated by soft, diffused light that enhances the pastel palette of pale pinks, whites, and turquoises. Gentle gradients define the shapes of the dunes, with a subtle shimmer in the air. The light feels diffuse and cool.",
+              "atmosphere": "Arid and still, with a subtle visual distortion suggesting a unique atmospheric composition. The air is clear, and there is a profound sense of quiet, contributing to the region's alien and tranquil character.",
+              "materials": "Primarily composed of finely granulated material that forms smooth, seamless dunes. Any rock-like formations are smooth and rounded, lacking sharp edges. The overall impression is of a soft, yielding, yet solid surface.",
+              "mood": "Peaceful, isolated, and dreamlike, with an underlying sense of ancient stillness.",
+              "sounds": "Whispering dust, faint atmospheric hums, distant silence",
+              "spatialLayout": "Open and seemingly endless, characterized by rolling hills and sweeping plains. The layout emphasizes gradual slopes and organic curves, creating a sense of gentle vastness.",
+              "primary_surfaces": [
+                "Smooth, pastel-colored sand dunes"
+              ],
+              "secondary_surfaces": [
+                "Undulating desert terrain"
+              ],
+              "accent_features": [
+                "Subtle color variations in sand",
+                "Occasional smooth rock outcrops"
+              ],
+              "dominant": "Pale Pink",
+              "secondary": "Pale White",
+              "accent": "Pale Turquoise",
+              "ambient": "Cool",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": "fine-grained desert composite, smooth, matte texture",
+              "mood_baseline": "serene isolation, alien calm",
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": "sparse, fibrous, crystalline growths",
+              "fauna_base": null
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Vast undulating pastel dunes",
+              "Unusual geological formations",
+              "Distant monolithic structures"
+            ],
+            "uniqueIdentifiers": [
+              "Flowing geometric dunes",
+              "Pervasive pastel color scheme"
+            ],
+            "searchDesc": "A vast expanse of surreal, pastel-colored desert dunes with flowing, impossible geometry and a sense of profound alien tranquility.",
+            "slug": "moebius-like-pastel-desert-region",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "Moebius-like Pastel Desert",
+              "looks": "A surreal, pastel-hued desert plateau with impossible geometry.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "4d1f26b6-9333-4d73-81a1-a387f7223ecb",
+              "type": "location",
+              "name": "The Solitary Spire",
+              "description": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
+              "dna": {
+                "type": "location",
+                "name": "The Solitary Spire",
+                "description": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
+                "looks": "Smooth, undulating exterior walls in soft pastel shades, tapering upwards. The base is distinguished by a vividly colored, narrow entrance.",
+                "atmosphere": "Still, dry air with a faint shimmer of heat haze. The silence is profound, broken only by the whisper of the wind across the plateau.",
+                "mood": "Otherworldly, enigmatic",
+                "dna": {
+                  "looks": "A surreal, pastel desert plateau stretches across the landscape, sculpted into soft, undulating dunes.  Dominating the midground is a tall, monolithic tower with smooth, curved walls that taper to a point. The tower's base is carved with a narrow, glowing entry slit.  Scattered across the terrain are sparse, delicate trees and soft, cotton-like formations. The overall impression is one of smooth, organic forms and a tranquil, otherworldly environment.",
+                  "colorsAndLighting": "The scene is illuminated by a soft, diffused light, casting gentle highlights and minimal shadows. The overall tone is cool and ethereal, with the sky transitioning from a pale turquoise near the horizon to a softer hue overhead.  The turquoise entry slit emits its own vibrant glow, providing a stark contrast.",
+                  "atmosphere": "The air appears clear and still, with a subtle visual shimmer suggesting a dry, arid environment.  The absence of discernible wind or atmospheric disturbance contributes to a profound sense of quiet.",
+                  "materials": "The tower is constructed from a single, seamless material with a smooth, matte finish, indistinguishable from the surrounding desert's primary surface. The entry slit appears to be made of a luminous crystalline material or solidified energy.",
+                  "mood": "Mysterious, inviting, and awe-inspiring. The spire feels like an ancient, purposeful artifact within the desolate landscape.",
+                  "sounds": "Faint humming from entry slit, distant desert silence",
+                  "spatialLayout": "The foreground consists of a gently sloping, sandy terrain with subtle textures. In the midground, the prominent monolithic tower rises directly from this plateau. The background features a vast, pastel-colored sky with soft, ethereal clouds, and distant, sparse vegetation.",
+                  "primary_surfaces": "Smooth, seemingly seamless material forming the tower and dunes",
+                  "secondary_surfaces": "Sandy terrain",
+                  "accent_features": "Glowing turquoise light from entry slit",
+                  "dominant": "Pale white and soft pink (dunes, tower, clouds)",
+                  "secondary": "Pale turquoise (sky, entry slit)",
+                  "accent": "Vibrant turquoise (entry slit)",
+                  "ambient": "Soft pastel hues of pink and turquoise",
+                  "genre": null,
+                  "architectural_tone": "monolithic organic curves, seamless construction, smooth matte finishes, integrated forms, absence of sharp edges or discernible joints, luminous material for openings",
+                  "cultural_tone": "ancient alien monument, solitary sanctuary",
+                  "materials_base": "otherworldly seamless composites, smooth matte finish, luminous crystalline material",
+                  "mood_baseline": "solitary mystery, alien allure",
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "door",
+                    "position": "center base, midground",
+                    "description": "A glowing turquoise entry slit carved into the monolithic tower's base."
+                  }
+                ],
+                "dominantElements": [
+                  "Monolithic curved tower ~60m tall, VERTICAL STRUCTURE, center, midground",
+                  "Pastel desert plateau terrain, foreground/midground",
+                  "Turquoise entry slit, base of tower, midground",
+                  "Sparse delicate trees, scattered, background/midground",
+                  "Soft pastel clouds, sky, background"
+                ],
+                "uniqueIdentifiers": [
+                  "Monolithic curved tower",
+                  "Single turquoise entry slit",
+                  "Pastel desert plateau landscape"
+                ],
+                "searchDesc": "[Location - Exterior] Pastel desert plateau with a curved tower. Has: turquoise entry slit (midground)",
+                "slug": "the-solitary-spire",
+                "imageUrl": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Solitary Spire",
+                  "looks": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+              "spaceType": "exterior",
+              "children": []
             }
           ]
         }
@@ -7269,6 +7404,7 @@
     "loc-1763623855173-w88tnre1u",
     "loc-1763587150824-el9l8zki2",
     "loc-1763570178929-is7khrj3v",
-    "loc-1763733616900-gv881kq63"
+    "loc-1763733616900-gv881kq63",
+    "loc-1763735358194-f9pjw8y5h"
   ]
 }

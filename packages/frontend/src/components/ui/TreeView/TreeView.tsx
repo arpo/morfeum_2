@@ -184,6 +184,7 @@ export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, 
   }, [selectedId, data]);
 
   const toggleExpansion = (id: string) => {
+    // Use functional update to ensure we have the latest state
     setExpandedIds(prev => {
       const next = new Set(prev);
       if (next.has(id)) {
@@ -192,13 +193,22 @@ export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, 
         next.add(id);
       }
       
-      // Also update store
-      const locationsStore = useLocationsStore.getState();
-      locationsStore.setExpandedNodes(Array.from(next));
-      
       return next;
     });
   };
+
+  // Sync local state changes to store (side effect, outside render phase)
+  useEffect(() => {
+    const locationsStore = useLocationsStore.getState();
+    const currentStoreIds = new Set(locationsStore.expandedNodeIds || []);
+    const localIds = Array.from(expandedIds);
+    
+    // Only update store if different to avoid loops
+    if (currentStoreIds.size !== expandedIds.size || 
+        localIds.some(id => !currentStoreIds.has(id))) {
+      locationsStore.setExpandedNodes(localIds);
+    }
+  }, [expandedIds]);
 
   return (
     <TreeViewContext.Provider value={{ expandedIds, toggleExpansion }}>
