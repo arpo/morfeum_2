@@ -5,6 +5,8 @@
 
 import { Node } from '@/store/slices/locations';
 import { getMergedDNA } from '@/utils/nodeDNAExtractor';
+import { useStore } from '@/store';
+import type { SpawnProcess } from '@/store/slices/spawnSlice';
 
 interface FocusState {
   node_id: string;
@@ -264,10 +266,47 @@ export async function findDestination(
       let pipelineNode: any = undefined;
       let pipelineImageUrl: string | undefined = undefined;
       let pipelineImagePrompt: string | undefined = undefined;
+      let spawnAdded = false;
       
       eventSource.addEventListener('progress', (event: MessageEvent) => {
         const data = JSON.parse(event.data);
         console.log(`📡 [Navigation ${result.data.navigationId}] ${data.stage}:`, data.message);
+        
+        // On first event with config, add spawn to tracking
+        if (!spawnAdded && data.pipelineType && data.steps) {
+          const newSpawn: SpawnProcess = {
+            id: result.data.navigationId,
+            prompt: userCommand,
+            entityType: 'location',
+            status: 'processing',
+            progress: 0,
+            currentStage: data.message,
+            logs: [data.message],
+            stages: [],
+            eventsUrl: result.data.eventsUrl,
+            pipelineType: data.pipelineType,
+            steps: data.steps,
+            currentStepIndex: -1
+          };
+          
+          useStore.setState((state) => ({
+            activeSpawns: [...state.activeSpawns, newSpawn]
+          }));
+          
+          spawnAdded = true;
+          console.log('🎯 [Navigation] Added to spawn tracking with progress bar');
+        } else if (spawnAdded) {
+          // Update progress on subsequent events
+          const spawn = useStore.getState().activeSpawns.find(s => s.id === result.data.navigationId);
+          if (spawn?.steps) {
+            const stepIndex = spawn.steps.findIndex(step => step.id === data.stage);
+            useStore.getState().updateSpawnProgress(result.data.navigationId, {
+              currentStage: data.message,
+              currentStepIndex: stepIndex >= 0 ? stepIndex : spawn.currentStepIndex
+            });
+          }
+        }
+        
         if (data.data) {
           console.log('   Data:', data.data);
           // Capture imageUrl and imagePrompt when they arrive
@@ -287,6 +326,25 @@ export async function findDestination(
           console.log('   Node:', data.node);
           pipelineNode = data.node;
         }
+        
+        // Mark spawn as completed and remove after delay
+        if (spawnAdded) {
+          const spawn = useStore.getState().activeSpawns.find(s => s.id === result.data.navigationId);
+          if (spawn?.steps) {
+            useStore.getState().updateSpawnProgress(result.data.navigationId, {
+              status: 'completed',
+              progress: 100,
+              currentStepIndex: spawn.steps.length - 1,
+              currentStage: 'Completed'
+            });
+          }
+          
+          // Remove spawn after 2 seconds
+          setTimeout(() => {
+            useStore.getState().removeSpawn(result.data.navigationId);
+          }, 2000);
+        }
+        
         eventSource.close();
         
         // Resolve with complete navigation result
@@ -312,6 +370,20 @@ export async function findDestination(
         if (data.error) {
           console.error('   Error:', data.error);
         }
+        
+        // Mark spawn as failed
+        if (spawnAdded) {
+          useStore.getState().updateSpawnProgress(result.data.navigationId, {
+            status: 'failed',
+            error: data.message || 'Pipeline failed'
+          });
+          
+          // Remove spawn after 5 seconds
+          setTimeout(() => {
+            useStore.getState().removeSpawn(result.data.navigationId);
+          }, 5000);
+        }
+        
         eventSource.close();
         reject(new Error(data.message || 'Pipeline failed'));
       });
@@ -319,6 +391,20 @@ export async function findDestination(
       eventSource.onerror = (err) => {
         if (eventSource.readyState === EventSource.CLOSED) return;
         console.error('❌ [Navigation SSE] Connection error:', err);
+        
+        // Mark spawn as failed
+        if (spawnAdded) {
+          useStore.getState().updateSpawnProgress(result.data.navigationId, {
+            status: 'failed',
+            error: 'SSE connection failed'
+          });
+          
+          // Remove spawn after 5 seconds
+          setTimeout(() => {
+            useStore.getState().removeSpawn(result.data.navigationId);
+          }, 5000);
+        }
+        
         eventSource.close();
         reject(new Error('SSE connection failed'));
       };

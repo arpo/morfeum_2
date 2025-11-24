@@ -6268,6 +6268,547 @@
       },
       "imagePath": "https://v3b.fal.media/files/b/zebra/xKmOYTsm04nu_qGuQDogi.jpg",
       "description": "A massive, carved shell-doorway embedded within a hovering cliff face, part of the Roger Dean-inspired archlands."
+    },
+    "niche-1763982548601-6ll1rynq7": {
+      "id": "niche-1763982548601-6ll1rynq7",
+      "type": "niche",
+      "name": "interior of The Lunar Echo",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, polished white stone interior with seamlessly curving walls, intricately carved with rhythmic patterns of grand arches and slender columns. Ascending tiers of seating rise towards unseen upper levels, all bathed in a cool blue light. A path of dark gray stone slabs leads deeper into the chamber, bordered by sculpted benches.",
+        "colorsAndLighting": "Dominant white stone reflects the ethereal, cool blue glow of unseen moonlight filtering from above. Deep, resonant shadows are cast by the architectural features.",
+        "atmosphere": "The air is still and cool, carrying an aura of serene majesty and ancient mystery. There's a palpable sense of quiet grandeur, ideal for contemplation or observation.",
+        "materials": "The primary material is smooth, polished white stone with intricate carvings. The floor features irregular dark gray stone slabs. Materials appear ancient and impeccably maintained.",
+        "mood": "Evokes a feeling of serene majesty, ancient mystery, and otherworldly beauty.",
+        "sounds": "Echoing silence, faint celestial hum, distant whispers.",
+        "spatialLayout": "A monumental, enclosed space with inwardly curving walls, suggesting a vast dome above. A central path leads to ascending seating tiers, creating a focal point towards the unseen zenith.",
+        "primary_surfaces": "Polished white stone",
+        "secondary_surfaces": "Dark gray stone slabs, sculpted stone benches",
+        "accent_features": "Intricate carvings of arches and columns, ceremonial pedestals in alcoves",
+        "dominant": "White (90%)",
+        "secondary": "Cool Blue (10%, lighting)",
+        "accent": "Dark Gray (pathway)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "monumental classical with celestial influence, grand arches, slender columns, repetitive rhythmic facade",
+        "cultural_tone": "ceremonial, performance, ancient gatherings",
+        "materials_base": "polished stone, carved stone",
+        "mood_baseline": "Serene, majestic, ancient mystery",
+        "palette_bias": "Monochromatic with cool accent",
+        "soundscape_base": "Reverberant silence, celestial resonance",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/SS4_VChWDgmiBgYA6kVgE.jpg",
+      "description": "The grand, white stone interior of a lunar amphitheater, illuminated by ethereal blue moonlight.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "foreground left",
+          "description": "Tall, narrow archway with inset columns leading to a dimly lit antechamber."
+        },
+        {
+          "type": "alcove",
+          "position": "midground right",
+          "description": "Recessed alcove in the stone wall, possibly containing a ceremonial pedestal."
+        }
+      ],
+      "dominantElements": [
+        "Inwardly curving white stone walls",
+        "Repeating patterns of grand arches and slender columns",
+        "Ascending tiers of internal seating",
+        "Path of dark gray stone slabs",
+        "Low, sculpted stone benches"
+      ],
+      "uniqueIdentifiers": [
+        "Lunar blue glow",
+        "Monumental classical architecture",
+        "Seamless stone construction",
+        "Rhythmic carved patterns",
+        "Vast unseen dome ceiling"
+      ],
+      "searchDesc": "Grand white stone lunar amphitheater with blue moonlight and classical architecture.",
+      "slug": "interior-of-the-lunar-echo"
+    },
+    "niche-1763982680787-qhxo0qlbm": {
+      "id": "niche-1763982680787-qhxo0qlbm",
+      "type": "niche",
+      "name": "interior of The Lunar Echo",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Interconnected high-ceilinged chambers of stark white stone, featuring a dark basalt path leading inward. Slender columns support ribbed vaults interspersed with crystalline glazing. The background is dominated by a luminous opalescent wall with embedded dark recesses.",
+        "colorsAndLighting": "Dominated by luminous white stone with deep shadows and a cool, ethereal blue ambient light from an unseen moon, creating high contrast.",
+        "atmosphere": "A serene and hushed reverence permeates the air, cool and still, imbued with a sense of ancient mystery and cosmic contemplation.",
+        "materials": "Rough white stone walls contrast with smooth, cool dark basalt floor slabs. Polished white stone columns support ribbed vaults with advanced crystalline glazing. The background wall is translucent and opalescent.",
+        "mood": "Majestic and serene, evoking hushed reverence and otherworldly beauty.",
+        "sounds": "Silence, faint echoes, subtle hum.",
+        "spatialLayout": "A series of interconnected, high-ceilinged chambers with a central path, flanked by columns and leading to further passages and a grand staircase.",
+        "primary_surfaces": "Stark white stone (walls, columns, vaults), dark basalt (path).",
+        "secondary_surfaces": "Crystalline glazing (vaults), brushed silver alloy (background wall framework), polished obsidian (archway frame).",
+        "accent_features": "Bas-relief celestial carvings in alcoves, illuminated staircase treads, star-patterned railing, rectangular recesses in background wall.",
+        "dominant": "White (stone structure)",
+        "secondary": "Dark Grey/Black (basalt path, obsidian archway)",
+        "accent": "Cool Blue (ambient light), Silver (framework), Opalescent hues (background wall)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "monumental classical with celestial influence, grand arches, slender columns, repetitive rhythmic facade",
+        "cultural_tone": "ceremonial, performance, ancient gatherings",
+        "materials_base": null,
+        "mood_baseline": "Serene, majestic, and perhaps a little haunting. The moonlight imbues the structure with a sense of otherworldly beauty and ancient mystery.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/SdzoxDCqXzbpwXVf03Gwd.jpg",
+      "description": "The monumental, moonlit interior of The Lunar Echo, a series of interconnected chambers carved from stark white stone.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground right",
+          "description": "Archway framed by darker, polished obsidian stone, serving as a clear passage."
+        },
+        {
+          "type": "stairs",
+          "position": "midground center",
+          "description": "Grand, circular staircase with illuminated treads and intricately designed star-patterned railing."
+        }
+      ],
+      "dominantElements": [
+        "White stone columns",
+        "Ribbed vaults with crystalline glazing",
+        "Basalt slab path",
+        "Translucent opalescent background wall",
+        "Recessed alcoves with bas-relief carvings"
+      ],
+      "uniqueIdentifiers": [
+        "Stark white stone construction",
+        "Ethereal lunar glow",
+        "Basalt path",
+        "Crystalline ceiling glazing",
+        "Opalescent background wall"
+      ],
+      "searchDesc": "Monumental white stone interior, moonlit, basalt path, crystalline vaults, opalescent wall.",
+      "slug": "interior-of-the-lunar-echo"
+    },
+    "niche-1763988778958-afewif7dz": {
+      "id": "niche-1763988778958-afewif7dz",
+      "type": "niche",
+      "name": "interior of The Cogwork Citadel",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The scene is dominated by towering, rough-hewn brick walls covered in grime and rust streaks. Massive, interlocking iron gears are deeply embedded into the wall structure, some serving as load-bearing supports. The floor is cracked concrete with scattered metal debris, leading into the space from a murky, stagnant water trough in the foreground. Small, oxidized maintenance hatches and a slightly ajar iron door on the left, with a crude metal staircase on the right, add detail.",
+        "colorsAndLighting": "The dominant colors are browns and muted rusts across the brickwork and iron. A single, warm-toned industrial lamp casts an amber glow, creating strong contrasts between illuminated areas and deep, cool shadows.",
+        "atmosphere": "An oppressive and abandoned atmosphere pervades, hinting at forgotten industrial might. The air feels thick with dust and the metallic tang of dampness, evoking a sense of desolation and echoing silence.",
+        "materials": "Heavily weathered brick, rusted iron, cracked concrete, and aged composites form the primary materials. Textures are rough, corroded, and grimy, reflecting long neglect and heavy use.",
+        "mood": "A profound sense of melancholy and awe is evoked, mingled with a feeling of desolation and the silent, imposing power of lost technology.",
+        "sounds": "Dripping water, distant echoes, metallic groans.",
+        "spatialLayout": "The space is a colossal, enclosed interior. The immediate foreground is occupied by a water trough, leading to the vast, gear-adorned walls of the midground. The background is obscured by dense pipework, creating a sense of depth and mystery.",
+        "primary_surfaces": "Heavily weathered brick walls, cracked concrete floor.",
+        "secondary_surfaces": "Rusted iron gears, riveted iron trough, metal door, metal staircase, iron pipes.",
+        "accent_features": "Colossal exposed gears, circular maintenance hatches, single warm industrial spotlight.",
+        "dominant": "Browns and muted rusts (walls, gears, iron elements)",
+        "secondary": "Cool grays (shadows, deeper recesses)",
+        "accent": "Warm amber (industrial lamp glow)",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/EUsf67m1jdN2zWq35dr4G.jpg",
+      "description": "The grimy, cracked concrete floor is littered with debris and bisected by a stagnant, murky iron trough. Towering brick walls, stained with grime and rust, are embedded with colossal, corroded gears. Ajar iron doors and a bolted metal staircase punctuate the walls, while rusted pipes and broken glass obscure the background.",
+      "navigableElements": [
+        {
+          "type": "trough",
+          "position": "foreground center",
+          "description": "A low, riveted iron trough filled with stagnant, murky water."
+        },
+        {
+          "type": "door",
+          "position": "midground left",
+          "description": "A heavy, hinged iron door, its surface a patchwork of rust and dull gray metal, stands slightly ajar."
+        },
+        {
+          "type": "stairs",
+          "position": "midground right",
+          "description": "A crude, bolted metal staircase ascends upwards, its steps coated in a fine layer of dust."
+        }
+      ],
+      "dominantElements": [
+        "cracked concrete floor",
+        "murky water trough",
+        "towering grimy brick walls",
+        "colossal rusted iron gears",
+        "rusted iron pipes",
+        "industrial lamp"
+      ],
+      "uniqueIdentifiers": [
+        "integrated colossal gears",
+        "murky foreground trough",
+        "single warm industrial spotlight"
+      ],
+      "searchDesc": "Abandoned brutalist industrial citadel interior with colossal gears and murky water.",
+      "slug": "interior-of-the-cogwork-citadel"
+    },
+    "loc-1763988793225-o12qx2w3s": {
+      "id": "loc-1763988793225-o12qx2w3s",
+      "type": "host",
+      "name": "Frozen Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Frozen Expanse",
+        "description": "A vast, desolate landscape of ice and snow.",
+        "dna": {
+          "looks": "A boundless, monochromatic world dominated by stark white snow and vast, frozen plains. Jagged ice formations rise like frozen waves, and in the distance, the ethereal glow of the aurora borealis often paints the sky. The landscape feels ancient and untouched, sculpted by immense natural forces.",
+          "colorsAndLighting": "The palette is overwhelmingly cool and muted, with dominant whites, pale blues, and greys. Lighting is often diffused and soft due to overcast skies or the low angle of the sun, creating subtle, long shadows across the snow.",
+          "atmosphere": "The air is thin, crisp, and bitingly cold, carrying the biting sting of wind-driven ice. A pervasive sense of isolation and immense scale hangs over the land, with visibility often hampered by blizzards or dense fog.",
+          "materials": "Primary materials are ice and compacted snow, forming a landscape of sharp edges and smooth, undulating surfaces. Occasional exposed rock or frozen earth might break the monotony. Metal and processed materials are extremely rare and would stand out dramatically.",
+          "mood": "A sense of profound isolation, awe, and survival. The environment evokes feelings of vulnerability against nature's raw power, but also a quiet, stark beauty.",
+          "sounds": "Whispering winds, creaking ice, distant avalanches, crunching snow underfoot.",
+          "spatialLayout": "Expansive and open, with a strong sense of horizon and distance. The terrain can be relatively flat across plains or dramatically sculpted by glacial features and cliffs.",
+          "primary_surfaces": [
+            "ice",
+            "snow"
+          ],
+          "secondary_surfaces": [
+            "rock"
+          ],
+          "accent_features": [
+            "aurora borealis",
+            "ice crystals"
+          ],
+          "dominant": "White",
+          "secondary": "Pale blue",
+          "accent": "None",
+          "ambient": "Cool",
+          "genre": "survival|exploration|fantasy",
+          "architectural_tone": "Functionally robust against extreme cold, often incorporating natural ice formations, heat-retaining designs, and sturdy, insulated materials. Any artificial structures would likely be stark, utilitarian, and built for resilience.",
+          "cultural_tone": "Nomadic, hardy, and resourceful cultures focused on survival, community, and respect for the harsh environment. Emphasis on practicality, durability, and resourcefulness.",
+          "materials_base": "Ice, stone, animal hides, insulated metals, resilient synthetics.",
+          "mood_baseline": "Serene desolation, enduring resilience, quiet awe.",
+          "palette_bias": "Monochromatic cool with subtle atmospheric color shifts.",
+          "soundscape_base": "Dominant natural ambient sounds of wind, ice, and snow.",
+          "flora_base": "None",
+          "fauna_base": "Hardy arctic animals, possibly mythical ice-dwelling creatures."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ice plains",
+          "Glacial formations",
+          "Aurora borealis"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme cold",
+          "Limited visibility",
+          "Harsh winds"
+        ],
+        "searchDesc": "Vast, desolate ice and snow landscape with extreme cold and limited visibility.",
+        "slug": "frozen-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Frozen Expanse",
+          "looks": "A vast, desolate landscape of ice and snow.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/ROm-hQPGC5z-JgQvz6r7q.jpg",
+      "description": "A vast, desolate landscape of ice and snow."
+    },
+    "d923815a-054f-4108-a0f9-2ae4eca136ce": {
+      "id": "d923815a-054f-4108-a0f9-2ae4eca136ce",
+      "type": "region",
+      "name": "Tundra Cliffs",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "Tundra Cliffs",
+        "description": "Harsh, windswept cliffs bordering the frozen plains.",
+        "dna": {
+          "looks": "Towering, jagged cliffs of rock and ice, perpetually battered by strong winds. Snow clings precariously to ledges and crevices, creating a stark, textured appearance. The sheer drops offer daunting vistas of the frozen expanse below.",
+          "colorsAndLighting": "Dominated by the grey-brown of exposed rock and the bright white of snow and ice. Lighting is often harsh and direct when the sun breaks through, casting deep shadows, or diffused and soft during snow squalls.",
+          "atmosphere": "The air is biting, amplified by the relentless wind that whips snow and ice particles. The feeling is one of exposure and precariousness, with a constant sense of danger from the height and the elements.",
+          "materials": "Primarily rough-hewn rock and solid ice. Exposed metallic veins or mineral deposits might be visible. Any structures would be carved into or built directly onto the cliff face.",
+          "mood": "Foreboding, exposed, and challenging. A sense of peril is ever-present, balanced by the raw, majestic beauty of the dramatic landscape.",
+          "sounds": "Howling winds, the crack of ice, the distant rumble of rockfall, the shriek of arctic birds.",
+          "spatialLayout": "Vertical and dramatic, characterized by sheer drops, overhangs, and narrow, windswept paths or ledges.",
+          "primary_surfaces": [
+            "rock",
+            "ice"
+          ],
+          "secondary_surfaces": [
+            "snow"
+          ],
+          "accent_features": [
+            "wind-carved formations",
+            "mineral veins"
+          ],
+          "dominant": "Grey",
+          "secondary": "White",
+          "accent": "Brown",
+          "ambient": "Cool",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "Earthy tones contrasting with stark white.",
+          "soundscape_base": "Amplified wind and geological sounds.",
+          "flora_base": "Sparse, hardy mosses and lichens clinging to rock.",
+          "fauna_base": "Cliff-dwelling birds, mountain goats (if applicable to genre)."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Sheer cliff faces",
+          "Icy ledges",
+          "Wind-scoured rock"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme elevation changes",
+          "Gusting winds",
+          "Slippery surfaces"
+        ],
+        "searchDesc": "Windswept, icy cliffs with sheer drops and treacherous surfaces.",
+        "slug": "tundra-cliffs",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Tundra Cliffs",
+          "looks": "Harsh, windswept cliffs bordering the frozen plains.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Harsh, windswept cliffs bordering the frozen plains."
+    },
+    "289c6125-1635-4b77-b303-24256521bace": {
+      "id": "289c6125-1635-4b77-b303-24256521bace",
+      "type": "location",
+      "name": "The Silver Bastion",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Silver Bastion",
+        "description": "A reflective metallic citadel perched precariously on tundra cliffs.",
+        "looks": "Polished, seamless metallic structure reflecting the icy environment, situated atop jagged cliffs.",
+        "atmosphere": "Bitterly cold wind, the distant cry of arctic birds, faint metallic resonance.",
+        "mood": "Imposing, isolated, guarded",
+        "dna": {
+          "looks": "A monumental, highly reflective metallic citadel rises majestically, its polished surfaces mirroring the stark, icy surroundings. The structure is adorned with intricate carvings and capped by tall, pointed spires, giving it an imposing, almost ethereal appearance. Jagged, snow-covered cliffs frame the citadel, emphasizing its isolated and guarded nature. The main gate, a grand arched opening, is depicted as partially ajar, hinting at passage within.",
+          "colorsAndLighting": "The lighting is cool and diffused, emanating from an overcast sky with hints of bright sunlight breaking through. Shadows are soft, and the overall illumination creates a high contrast between the bright sky and the darker shadowed areas of the citadel and cliffs.",
+          "atmosphere": "The air appears thin and crisp, with a pervasive sense of cold. A light mist or haze softens the distant landscape, contributing to the atmosphere of isolation. Visibility is moderate, with the sky partially obscured by diffused light.",
+          "materials": "The primary material is a highly polished, reflective metal. Secondary materials include snow and ice encrusting the lower portions of the structure and the surrounding cliffs. Intricate carvings might be etched into the metal.",
+          "mood": "Imposing, majestic, and mysterious. The citadel suggests advanced technology and a guarded presence, a stark anomaly against the raw natural environment.",
+          "sounds": "Subtle hum of internal machinery, distant wind whistling around spires, the faint creak of the partially open gate.",
+          "spatialLayout": "The foreground is dominated by a wide, snow-covered path leading towards the central structure. The midground features the impressive Silver Bastion, a large metallic citadel flanked by massive, snow-laden cliffs. The background consists of a hazy, mountainous landscape disappearing into the sky.",
+          "primary_surfaces": "Metal",
+          "secondary_surfaces": "Snow",
+          "accent_features": "Polished surfaces",
+          "dominant": "White (snow, haze)",
+          "secondary": "Silver (citadel)",
+          "accent": "Bright white (sky highlights)",
+          "ambient": "Pale blue",
+          "genre": null,
+          "architectural_tone": "Sleek, highly reflective metallic architecture with sharp, geometric lines and possibly crystalline or spire-like elements. Features ornate etched details and polished surfaces, evoking an advanced, alien, or highly refined aesthetic. Arches, if present, would be perfectly formed and integrated seamlessly into the metal.",
+          "cultural_tone": "A highly advanced, possibly reclusive or guardian society. Emphasis on precision, protection, and a detached aesthetic. Cultural practices would likely revolve around maintaining the citadel and its purpose.",
+          "materials_base": [
+            "advanced alloys",
+            "reflective metals",
+            "reinforced ceramics"
+          ],
+          "mood_baseline": "Cold majesty, guarded power, ethereal isolation.",
+          "palette_bias": "High contrast, metallic sheen with cool ambient tones.",
+          "soundscape_base": "Subtle technological hums blended with natural wind sounds.",
+          "flora_base": "None",
+          "fauna_base": "None (or highly specialized, non-biological constructs)."
+        },
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Main gate of the citadel, half ajar, revealing bright light beyond"
+          }
+        ],
+        "dominantElements": [
+          "Reflective metallic citadel (midground)",
+          "Snow-covered jagged cliffs (left and right, midground/background)",
+          "Wide arched main gate (center, midground)",
+          "Snowy path leading to the gate (foreground)"
+        ],
+        "uniqueIdentifiers": [
+          "Reflective metallic citadel architecture",
+          "Tundra cliff setting",
+          "Large, central arched gateway"
+        ],
+        "searchDesc": "[Location - Exterior] Metallic citadel on tundra cliffs. Has: main gate (center, midground)",
+        "slug": "the-silver-bastion",
+        "imageUrl": "https://v3b.fal.media/files/b/tiger/ROm-hQPGC5z-JgQvz6r7q.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Silver Bastion",
+          "looks": "A reflective metallic citadel perched precariously on tundra cliffs.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/ROm-hQPGC5z-JgQvz6r7q.jpg",
+      "description": "A reflective metallic citadel perched precariously on tundra cliffs."
+    },
+    "niche-1763988836290-xnejardd4": {
+      "id": "niche-1763988836290-xnejardd4",
+      "type": "niche",
+      "name": "interior of The Silver Bastion",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, vaulted chamber characterized by seamless, polished silver alloy walls that curve upwards to a complex geodesic dome ceiling. The ceiling is illuminated by cool, pale blue light from crystalline conduits. Sections of the walls are large, angular panels of shimmering architectural glazing, framing distorted views of an icy tundra, separated by razor-thin, dark metallic struts.",
+        "colorsAndLighting": "The dominant color is the stark, reflective silver of the architecture, contrasted by the matte black obsidian floor. Cool, pale blue light emanates from the crystalline conduits in the ceiling, casting a subtle glow.",
+        "atmosphere": "The air is cool and still, with faint wisps of mist occasionally emitted from seamlessly integrated ventilation grilles. The sheer scale and reflective surfaces create an echoing, majestic, and somewhat austere environment.",
+        "materials": "The primary material is a highly polished, seamless silver alloy, giving a stark, reflective finish. The floor is matte black, polished obsidian, with subtle inlaid silver geometric patterns. Architectural glazing and dark metallic struts are also prominent.",
+        "mood": "Imposing and mysterious, with a sense of advanced, detached elegance. The vastness and stark reflectivity evoke a feeling of awe and guardedness.",
+        "sounds": "Echoes, faint hum of conduits, subtle ventilation hiss.",
+        "spatialLayout": "A vast, open chamber with a high, domed ceiling. The space feels expansive, drawing the eye upwards and deeper into the structure via a monumental archway. Navigable points are recessed or set into the walls.",
+        "primary_surfaces": "Polished silver alloy (walls, ceiling), matte black obsidian (floor).",
+        "secondary_surfaces": "Dark metallic struts, architectural glazing.",
+        "accent_features": "Illuminated crystalline conduits, inlaid silver geometric patterns on the floor, holographic readouts on the console.",
+        "dominant": "Silver (walls, ceiling, struts, inlays) - extensive coverage",
+        "secondary": "Black (floor) - significant coverage",
+        "accent": "Pale Blue (conduit light), Dark Metallic (struts) - accent details",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/a2KYKEL_nL9TWynKPX1qR.jpg",
+      "description": "The interior of a vast, vaulted chamber made of polished silver alloy, featuring a geodesic dome ceiling with illuminated blue crystalline conduits and large glazed panels offering distorted views of a tundra outside.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center midground",
+          "description": "A monumental, arching passage carved from silver alloy."
+        },
+        {
+          "type": "alcove",
+          "position": "left midground",
+          "description": "A recessed alcove housing a console with holographic readouts."
+        },
+        {
+          "type": "wall section",
+          "position": "background right",
+          "description": "A glazed wall section offering views of the tundra."
+        }
+      ],
+      "dominantElements": [
+        "Geodesic dome ceiling",
+        "Polished silver alloy walls",
+        "Glazed wall panels",
+        "Console"
+      ],
+      "uniqueIdentifiers": [
+        "Seamless silver alloy construction",
+        "Geodesic dome ceiling with crystalline conduits",
+        "Matte black obsidian floor with silver inlays",
+        "Angular glazed wall sections"
+      ],
+      "searchDesc": "Vast silver bastion interior, geodesic dome, blue light conduits, obsidian floor, tundra views.",
+      "slug": "interior-of-the-silver-bastion"
+    },
+    "niche-1763988962973-wcsn60jyu": {
+      "id": "niche-1763988962973-wcsn60jyu",
+      "type": "niche",
+      "name": "interior of The Silver Bastion",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Vast, vaulted chamber with seamless, polished silver alloy walls curving to a geodesic dome. Angular architectural glazing panels offer distorted views of an icy tundra, framed by dark metallic struts. The floor features an inlaid geometric pattern.",
+        "colorsAndLighting": "Dominant cool, pale blue light emanates from crystalline conduits in the ceiling and accents on the floor pattern and console. Polished silver surfaces reflect this light, creating a pristine and ethereal glow.",
+        "atmosphere": "The air is cool and still, filled with a sense of immense scale and advanced, pristine construction. The polished surfaces and diffused light evoke a detached, almost sterile, yet majestic environment.",
+        "materials": "Primary materials are seamless, highly polished silver alloy for walls and structures, and high-tech architectural glazing for viewing panels. Accents include dark metallic struts and subtly glowing geometric floor inlays.",
+        "mood": "Imposing and mysterious, conveying a sense of advanced technology, immense scale, and guarded presence.",
+        "sounds": "Subtle hum, faint crystalline resonance, distant echo.",
+        "spatialLayout": "A grand, vaulted chamber with curving walls that ascend to a geodesic apex. Entry points include a main archway and visually defined areas around a console and alcoves.",
+        "primary_surfaces": "Polished silver alloy, architectural glazing.",
+        "secondary_surfaces": "Dark metallic struts, inlaid geometric floor pattern.",
+        "accent_features": "Softly pulsing blue indicator lights, slender crystalline artifacts emitting luminescence, complex geodesic dome.",
+        "dominant": "Silver (90%) - walls, ceiling structure, floor.",
+        "secondary": "Pale Blue (5%) - ceiling illumination, indicator lights, floor inlay.",
+        "accent": "Dark Metallic (3%) - struts, archway interior; Luminescent Blue (2%) - artifacts.",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "Sleek, highly reflective metallic architecture with sharp, geometric lines and crystalline elements.",
+        "cultural_tone": "A highly advanced, detached society focused on precision, protection, and maintaining their citadel.",
+        "materials_base": "Polished metals, high-tech glazing, crystalline structures.",
+        "mood_baseline": "Imposing, majestic, and mysterious.",
+        "palette_bias": "Cool metallic with pale blue accents.",
+        "soundscape_base": "Subtle electronic and resonant ambient sounds.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/89-pZqFPSxP29cYnDnXtk.jpg",
+      "description": "The entrance chamber of a vast, vaulted silver citadel, featuring polished alloy walls, a geodesic dome, and views of an icy tundra.",
+      "navigableElements": [
+        {
+          "type": "console",
+          "position": "foreground left",
+          "description": "A sleek, vertical silver alloy console with softly pulsing blue indicator lights."
+        },
+        {
+          "type": "archway",
+          "position": "midground right",
+          "description": "A massive, arched doorway of polished silver alloy, darker than surrounding walls."
+        },
+        {
+          "type": "architectural glazing panel",
+          "position": "midground left",
+          "description": "A large, angular panel of shimmering architectural glazing revealing a distorted view of an icy tundra."
+        }
+      ],
+      "dominantElements": [
+        "Polished silver alloy walls",
+        "Geodesic dome ceiling",
+        "Architectural glazing panels",
+        "Crystalline artifacts"
+      ],
+      "uniqueIdentifiers": [
+        "Seamless polished silver alloy",
+        "Geodesic dome with crystalline conduits",
+        "Angular architectural glazing panels",
+        "Distorted icy tundra views"
+      ],
+      "searchDesc": "Vast silver citadel entrance: polished walls, geodesic dome, icy tundra views, blue light.",
+      "slug": "interior-of-the-silver-bastion"
     }
   },
   "views": {},
@@ -6625,6 +7166,11 @@
                   "id": "niche-1763730634449-qwgp717du",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1763988778958-afewif7dz",
+                  "type": "niche",
+                  "children": []
                 }
               ]
             }
@@ -6651,6 +7197,16 @@
                 },
                 {
                   "id": "niche-1763732326848-9yephqmqm",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763982548601-6ll1rynq7",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763982680787-qhxo0qlbm",
                   "type": "niche",
                   "children": []
                 }
@@ -7818,10 +8374,253 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763988793225-o12qx2w3s",
+      "type": "host",
+      "name": "Frozen Expanse",
+      "description": "A vast, desolate landscape of ice and snow.",
+      "dna": {
+        "type": "host",
+        "name": "Frozen Expanse",
+        "description": "A vast, desolate landscape of ice and snow.",
+        "dna": {
+          "looks": "A boundless, monochromatic world dominated by stark white snow and vast, frozen plains. Jagged ice formations rise like frozen waves, and in the distance, the ethereal glow of the aurora borealis often paints the sky. The landscape feels ancient and untouched, sculpted by immense natural forces.",
+          "colorsAndLighting": "The palette is overwhelmingly cool and muted, with dominant whites, pale blues, and greys. Lighting is often diffused and soft due to overcast skies or the low angle of the sun, creating subtle, long shadows across the snow.",
+          "atmosphere": "The air is thin, crisp, and bitingly cold, carrying the biting sting of wind-driven ice. A pervasive sense of isolation and immense scale hangs over the land, with visibility often hampered by blizzards or dense fog.",
+          "materials": "Primary materials are ice and compacted snow, forming a landscape of sharp edges and smooth, undulating surfaces. Occasional exposed rock or frozen earth might break the monotony. Metal and processed materials are extremely rare and would stand out dramatically.",
+          "mood": "A sense of profound isolation, awe, and survival. The environment evokes feelings of vulnerability against nature's raw power, but also a quiet, stark beauty.",
+          "sounds": "Whispering winds, creaking ice, distant avalanches, crunching snow underfoot.",
+          "spatialLayout": "Expansive and open, with a strong sense of horizon and distance. The terrain can be relatively flat across plains or dramatically sculpted by glacial features and cliffs.",
+          "primary_surfaces": [
+            "ice",
+            "snow"
+          ],
+          "secondary_surfaces": [
+            "rock"
+          ],
+          "accent_features": [
+            "aurora borealis",
+            "ice crystals"
+          ],
+          "dominant": "White",
+          "secondary": "Pale blue",
+          "accent": "None",
+          "ambient": "Cool",
+          "genre": "survival|exploration|fantasy",
+          "architectural_tone": "Functionally robust against extreme cold, often incorporating natural ice formations, heat-retaining designs, and sturdy, insulated materials. Any artificial structures would likely be stark, utilitarian, and built for resilience.",
+          "cultural_tone": "Nomadic, hardy, and resourceful cultures focused on survival, community, and respect for the harsh environment. Emphasis on practicality, durability, and resourcefulness.",
+          "materials_base": "Ice, stone, animal hides, insulated metals, resilient synthetics.",
+          "mood_baseline": "Serene desolation, enduring resilience, quiet awe.",
+          "palette_bias": "Monochromatic cool with subtle atmospheric color shifts.",
+          "soundscape_base": "Dominant natural ambient sounds of wind, ice, and snow.",
+          "flora_base": "None",
+          "fauna_base": "Hardy arctic animals, possibly mythical ice-dwelling creatures."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ice plains",
+          "Glacial formations",
+          "Aurora borealis"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme cold",
+          "Limited visibility",
+          "Harsh winds"
+        ],
+        "searchDesc": "Vast, desolate ice and snow landscape with extreme cold and limited visibility.",
+        "slug": "frozen-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Frozen Expanse",
+          "looks": "A vast, desolate landscape of ice and snow.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/ROm-hQPGC5z-JgQvz6r7q.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "d923815a-054f-4108-a0f9-2ae4eca136ce",
+          "type": "region",
+          "name": "Tundra Cliffs",
+          "description": "Harsh, windswept cliffs bordering the frozen plains.",
+          "dna": {
+            "type": "region",
+            "name": "Tundra Cliffs",
+            "description": "Harsh, windswept cliffs bordering the frozen plains.",
+            "dna": {
+              "looks": "Towering, jagged cliffs of rock and ice, perpetually battered by strong winds. Snow clings precariously to ledges and crevices, creating a stark, textured appearance. The sheer drops offer daunting vistas of the frozen expanse below.",
+              "colorsAndLighting": "Dominated by the grey-brown of exposed rock and the bright white of snow and ice. Lighting is often harsh and direct when the sun breaks through, casting deep shadows, or diffused and soft during snow squalls.",
+              "atmosphere": "The air is biting, amplified by the relentless wind that whips snow and ice particles. The feeling is one of exposure and precariousness, with a constant sense of danger from the height and the elements.",
+              "materials": "Primarily rough-hewn rock and solid ice. Exposed metallic veins or mineral deposits might be visible. Any structures would be carved into or built directly onto the cliff face.",
+              "mood": "Foreboding, exposed, and challenging. A sense of peril is ever-present, balanced by the raw, majestic beauty of the dramatic landscape.",
+              "sounds": "Howling winds, the crack of ice, the distant rumble of rockfall, the shriek of arctic birds.",
+              "spatialLayout": "Vertical and dramatic, characterized by sheer drops, overhangs, and narrow, windswept paths or ledges.",
+              "primary_surfaces": [
+                "rock",
+                "ice"
+              ],
+              "secondary_surfaces": [
+                "snow"
+              ],
+              "accent_features": [
+                "wind-carved formations",
+                "mineral veins"
+              ],
+              "dominant": "Grey",
+              "secondary": "White",
+              "accent": "Brown",
+              "ambient": "Cool",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": "Earthy tones contrasting with stark white.",
+              "soundscape_base": "Amplified wind and geological sounds.",
+              "flora_base": "Sparse, hardy mosses and lichens clinging to rock.",
+              "fauna_base": "Cliff-dwelling birds, mountain goats (if applicable to genre)."
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Sheer cliff faces",
+              "Icy ledges",
+              "Wind-scoured rock"
+            ],
+            "uniqueIdentifiers": [
+              "Extreme elevation changes",
+              "Gusting winds",
+              "Slippery surfaces"
+            ],
+            "searchDesc": "Windswept, icy cliffs with sheer drops and treacherous surfaces.",
+            "slug": "tundra-cliffs",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "Tundra Cliffs",
+              "looks": "Harsh, windswept cliffs bordering the frozen plains.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "289c6125-1635-4b77-b303-24256521bace",
+              "type": "location",
+              "name": "The Silver Bastion",
+              "description": "A reflective metallic citadel perched precariously on tundra cliffs.",
+              "dna": {
+                "type": "location",
+                "name": "The Silver Bastion",
+                "description": "A reflective metallic citadel perched precariously on tundra cliffs.",
+                "looks": "Polished, seamless metallic structure reflecting the icy environment, situated atop jagged cliffs.",
+                "atmosphere": "Bitterly cold wind, the distant cry of arctic birds, faint metallic resonance.",
+                "mood": "Imposing, isolated, guarded",
+                "dna": {
+                  "looks": "A monumental, highly reflective metallic citadel rises majestically, its polished surfaces mirroring the stark, icy surroundings. The structure is adorned with intricate carvings and capped by tall, pointed spires, giving it an imposing, almost ethereal appearance. Jagged, snow-covered cliffs frame the citadel, emphasizing its isolated and guarded nature. The main gate, a grand arched opening, is depicted as partially ajar, hinting at passage within.",
+                  "colorsAndLighting": "The lighting is cool and diffused, emanating from an overcast sky with hints of bright sunlight breaking through. Shadows are soft, and the overall illumination creates a high contrast between the bright sky and the darker shadowed areas of the citadel and cliffs.",
+                  "atmosphere": "The air appears thin and crisp, with a pervasive sense of cold. A light mist or haze softens the distant landscape, contributing to the atmosphere of isolation. Visibility is moderate, with the sky partially obscured by diffused light.",
+                  "materials": "The primary material is a highly polished, reflective metal. Secondary materials include snow and ice encrusting the lower portions of the structure and the surrounding cliffs. Intricate carvings might be etched into the metal.",
+                  "mood": "Imposing, majestic, and mysterious. The citadel suggests advanced technology and a guarded presence, a stark anomaly against the raw natural environment.",
+                  "sounds": "Subtle hum of internal machinery, distant wind whistling around spires, the faint creak of the partially open gate.",
+                  "spatialLayout": "The foreground is dominated by a wide, snow-covered path leading towards the central structure. The midground features the impressive Silver Bastion, a large metallic citadel flanked by massive, snow-laden cliffs. The background consists of a hazy, mountainous landscape disappearing into the sky.",
+                  "primary_surfaces": "Metal",
+                  "secondary_surfaces": "Snow",
+                  "accent_features": "Polished surfaces",
+                  "dominant": "White (snow, haze)",
+                  "secondary": "Silver (citadel)",
+                  "accent": "Bright white (sky highlights)",
+                  "ambient": "Pale blue",
+                  "genre": null,
+                  "architectural_tone": "Sleek, highly reflective metallic architecture with sharp, geometric lines and possibly crystalline or spire-like elements. Features ornate etched details and polished surfaces, evoking an advanced, alien, or highly refined aesthetic. Arches, if present, would be perfectly formed and integrated seamlessly into the metal.",
+                  "cultural_tone": "A highly advanced, possibly reclusive or guardian society. Emphasis on precision, protection, and a detached aesthetic. Cultural practices would likely revolve around maintaining the citadel and its purpose.",
+                  "materials_base": [
+                    "advanced alloys",
+                    "reflective metals",
+                    "reinforced ceramics"
+                  ],
+                  "mood_baseline": "Cold majesty, guarded power, ethereal isolation.",
+                  "palette_bias": "High contrast, metallic sheen with cool ambient tones.",
+                  "soundscape_base": "Subtle technological hums blended with natural wind sounds.",
+                  "flora_base": "None",
+                  "fauna_base": "None (or highly specialized, non-biological constructs)."
+                },
+                "navigableElements": [
+                  {
+                    "type": "door",
+                    "position": "center, midground",
+                    "description": "Main gate of the citadel, half ajar, revealing bright light beyond"
+                  }
+                ],
+                "dominantElements": [
+                  "Reflective metallic citadel (midground)",
+                  "Snow-covered jagged cliffs (left and right, midground/background)",
+                  "Wide arched main gate (center, midground)",
+                  "Snowy path leading to the gate (foreground)"
+                ],
+                "uniqueIdentifiers": [
+                  "Reflective metallic citadel architecture",
+                  "Tundra cliff setting",
+                  "Large, central arched gateway"
+                ],
+                "searchDesc": "[Location - Exterior] Metallic citadel on tundra cliffs. Has: main gate (center, midground)",
+                "slug": "the-silver-bastion",
+                "imageUrl": "https://v3b.fal.media/files/b/tiger/ROm-hQPGC5z-JgQvz6r7q.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Silver Bastion",
+                  "looks": "A reflective metallic citadel perched precariously on tundra cliffs.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/tiger/ROm-hQPGC5z-JgQvz6r7q.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1763988836290-xnejardd4",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763988962973-wcsn60jyu",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763623855173-w88tnre1u",
-    "loc-1763981592554-e2du1t0y3"
+    "loc-1763981592554-e2du1t0y3",
+    "loc-1763628727196-4meodwmfj",
+    "loc-1763587525220-pxp3ykzyj",
+    "loc-1763988793225-o12qx2w3s"
   ]
 }

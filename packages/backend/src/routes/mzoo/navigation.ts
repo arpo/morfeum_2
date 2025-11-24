@@ -10,8 +10,12 @@ import { classifyIntent, routeNavigation } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
+import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
 
 const router = Router();
+
+// Track pipeline configurations for SSE initialization
+const pipelineConfigs = new Map<string, { pipelineType: string; steps: any[] }>();
 
 /**
  * POST /api/mzoo/navigation/analyze
@@ -75,6 +79,18 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
       console.log(`[NAVIGATION] Navigation ID: ${navigationId}`);
       console.log(`[NAVIGATION] Events URL: ${eventsUrl}`);
       
+      // Store pipeline configuration for SSE initialization
+      const steps = getStepsForPipeline('navigation');
+      pipelineConfigs.set(navigationId, {
+        pipelineType: 'navigation',
+        steps: steps.map((step, index) => ({
+          index,
+          id: step.id,
+          name: step.name,
+          duration: step.duration
+        }))
+      });
+      
       // Return response immediately
       res.status(HTTP_STATUS.OK).json({
         data: {
@@ -95,6 +111,9 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
         } catch (pipelineError) {
           console.error('\n❌ [NAVIGATION ERROR]', pipelineError);
           // Error already sent via SSE in pipeline
+        } finally {
+          // Clean up config
+          pipelineConfigs.delete(navigationId);
         }
       })();
       
@@ -126,7 +145,10 @@ router.get('/events/:navigationId', asyncHandler(async (req: Request, res: Respo
     return;
   }
 
-  sseService.addConnection(navigationId, res);
+  // Get pipeline config if available
+  const config = pipelineConfigs.get(navigationId);
+  
+  sseService.addConnection(navigationId, res, config);
 }));
 
 export { router as navigationRouter };
