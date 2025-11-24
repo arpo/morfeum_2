@@ -46,8 +46,8 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background-color: var(--color-border);
-  opacity: 0.2; /* Almost invisible */
+  background-color: var(--color-text-secondary);
+  opacity: 0.4; 
   transform: translateX(-50%);
   z-index: 1;
 }
