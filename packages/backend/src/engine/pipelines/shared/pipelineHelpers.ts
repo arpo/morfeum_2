@@ -38,11 +38,18 @@ export class PipelineHelper {
 
   /**
    * Send pipeline started event
-   * Note: Step configuration is now sent by SSEService when connection establishes
+   * This creates an initial progress event that allows the UI to show the progress bar
+   * at 0% before the first step begins animating
    */
-  started(message: string = 'Starting pipeline...') {
+  started(message: string = 'Initializing...') {
     console.log(`[${this.pipelineName}] Starting pipeline for ${this.spawnId}`);
-    // Configuration is sent by SSEService.addConnection, so we don't send it here
+    this.currentStageStart = Date.now();
+    
+    // Send started event to allow progress bar to appear at 0%
+    sseService.sendEvent(this.spawnId, 'progress', {
+      stage: 'started',
+      message
+    });
   }
 
   /**

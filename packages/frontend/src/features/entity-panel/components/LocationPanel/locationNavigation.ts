@@ -7,6 +7,7 @@ import { Node } from '@/store/slices/locations';
 import { getMergedDNA } from '@/utils/nodeDNAExtractor';
 import { useStore } from '@/store';
 import type { SpawnProcess } from '@/store/slices/spawnSlice';
+import { setupSSEConnection, getStepIndexFromStage } from '@/utils/spawn/sseConnection';
 
 interface FocusState {
   node_id: string;
@@ -262,152 +263,119 @@ export async function findDestination(
     
     // Return a promise that resolves when pipeline completes
     return new Promise<NavigationResult>((resolve, reject) => {
-      const eventSource = new EventSource(result.data.eventsUrl);
       let pipelineNode: any = undefined;
       let pipelineImageUrl: string | undefined = undefined;
       let pipelineImagePrompt: string | undefined = undefined;
       let spawnAdded = false;
       
-      eventSource.addEventListener('progress', (event: MessageEvent) => {
-        const data = JSON.parse(event.data);
-        console.log(`📡 [Navigation ${result.data.navigationId}] ${data.stage}:`, data.message);
-        
-        // On first event with config, add spawn to tracking
-        if (!spawnAdded && data.pipelineType && data.steps) {
-          const newSpawn: SpawnProcess = {
-            id: result.data.navigationId,
-            prompt: userCommand,
-            entityType: 'location',
-            status: 'processing',
-            progress: 0,
-            currentStage: data.message,
-            logs: [data.message],
-            stages: [],
-            eventsUrl: result.data.eventsUrl,
-            pipelineType: data.pipelineType,
-            steps: data.steps,
-            currentStepIndex: -1
-          };
-          
-          useStore.setState((state) => ({
-            activeSpawns: [...state.activeSpawns, newSpawn]
-          }));
-          
-          spawnAdded = true;
-          console.log('🎯 [Navigation] Added to spawn tracking with progress bar');
-        } else if (spawnAdded) {
-          // Update progress on subsequent events
-          const spawn = useStore.getState().activeSpawns.find(s => s.id === result.data.navigationId);
-          if (spawn?.steps) {
-            const stepIndex = spawn.steps.findIndex(step => step.id === data.stage);
-            useStore.getState().updateSpawnProgress(result.data.navigationId, {
+      // Use standard SSE connection utility
+      setupSSEConnection(result.data.eventsUrl, result.data.navigationId, {
+        onProgress: (id, data) => {
+          // On first event with config, add spawn to tracking
+          if (!spawnAdded && data.pipelineType && data.steps) {
+            const newSpawn: SpawnProcess = {
+              id: result.data.navigationId,
+              prompt: userCommand,
+              entityType: 'location',
+              status: 'processing',
+              progress: 0,
               currentStage: data.message,
-              currentStepIndex: stepIndex >= 0 ? stepIndex : spawn.currentStepIndex
-            });
-          }
-        }
-        
-        if (data.data) {
-          console.log('   Data:', data.data);
-          // Capture imageUrl and imagePrompt when they arrive
-          if (data.data.imageUrl) pipelineImageUrl = data.data.imageUrl;
-          if (data.data.imagePrompt) pipelineImagePrompt = data.data.imagePrompt;
-        }
-      });
-      
-      eventSource.addEventListener('completed', (event: MessageEvent) => {
-        const data = JSON.parse(event.data);
-        console.log(`✅ [Navigation ${result.data.navigationId}] COMPLETED`);
-        console.log('   Message:', data.message);
-        if (data.timings) {
-          console.log('   Timings:', data.timings);
-        }
-        if (data.node) {
-          console.log('   Node:', data.node);
-          pipelineNode = data.node;
-        }
-        
-        // Mark spawn as completed and remove after delay
-        if (spawnAdded) {
-          const spawn = useStore.getState().activeSpawns.find(s => s.id === result.data.navigationId);
-          if (spawn?.steps) {
-            useStore.getState().updateSpawnProgress(result.data.navigationId, {
-              status: 'completed',
-              progress: 100,
-              currentStepIndex: spawn.steps.length - 1,
-              currentStage: 'Completed'
-            });
+              logs: [data.message],
+              stages: [],
+              eventsUrl: result.data.eventsUrl,
+              pipelineType: data.pipelineType,
+              steps: data.steps,
+              currentStepIndex: 0 // Assume first step started since pipeline starts immediately
+            };
+            
+            useStore.setState((state) => ({
+              activeSpawns: [...state.activeSpawns, newSpawn]
+            }));
+            
+            spawnAdded = true;
+            console.log('🎯 [Navigation] Added to spawn tracking with progress bar');
+          } else if (spawnAdded) {
+            // Update progress on subsequent events
+            const spawn = useStore.getState().activeSpawns.find(s => s.id === id);
+            if (spawn?.steps) {
+              const stepIndex = getStepIndexFromStage(data.stage, spawn.steps);
+              useStore.getState().updateSpawnProgress(id, {
+                currentStage: data.message,
+                currentStepIndex: stepIndex
+              });
+            }
           }
           
-          // Remove spawn after 2 seconds
-          setTimeout(() => {
-            useStore.getState().removeSpawn(result.data.navigationId);
-          }, 2000);
-        }
+          // Capture data for final result
+          if (data.data?.imageUrl) pipelineImageUrl = data.data.imageUrl;
+          if (data.data?.imagePrompt) pipelineImagePrompt = data.data.imagePrompt;
+        },
         
-        eventSource.close();
-        
-        // Resolve with complete navigation result
-        const navigation: NavigationResult = {
-          action: 'generate',
-          targetNodeId: result.data.decision.targetNodeId,
-          parentNodeId: result.data.decision.parentNodeId,
-          name: result.data.decision.newNodeName,
-          scale_hint: result.data.decision.newNodeType,
-          relation: result.data.decision.metadata?.relation,
-          reason: result.data.decision.reasoning,
-          imageUrl: pipelineImageUrl,
-          imagePrompt: pipelineImagePrompt,
-          node: pipelineNode
-        };
-        
-        resolve(navigation);
-      });
-      
-      eventSource.addEventListener('error', (event: MessageEvent) => {
-        const data = JSON.parse(event.data);
-        console.error(`❌ [Navigation ${result.data.navigationId}] ERROR:`, data.message);
-        if (data.error) {
-          console.error('   Error:', data.error);
-        }
-        
-        // Mark spawn as failed
-        if (spawnAdded) {
-          useStore.getState().updateSpawnProgress(result.data.navigationId, {
-            status: 'failed',
-            error: data.message || 'Pipeline failed'
-          });
+        onCompleted: (id, data) => {
+          if (data.node) pipelineNode = data.node;
           
-          // Remove spawn after 5 seconds
-          setTimeout(() => {
-            useStore.getState().removeSpawn(result.data.navigationId);
-          }, 5000);
-        }
-        
-        eventSource.close();
-        reject(new Error(data.message || 'Pipeline failed'));
-      });
-      
-      eventSource.onerror = (err) => {
-        if (eventSource.readyState === EventSource.CLOSED) return;
-        console.error('❌ [Navigation SSE] Connection error:', err);
-        
-        // Mark spawn as failed
-        if (spawnAdded) {
-          useStore.getState().updateSpawnProgress(result.data.navigationId, {
-            status: 'failed',
-            error: 'SSE connection failed'
-          });
+          // Mark spawn as completed and remove after delay
+          if (spawnAdded) {
+            const spawn = useStore.getState().activeSpawns.find(s => s.id === id);
+            if (spawn?.steps) {
+              useStore.getState().updateSpawnProgress(id, {
+                status: 'completed',
+                progress: 100,
+                currentStepIndex: spawn.steps.length - 1,
+                currentStage: 'Completed'
+              });
+            }
+            
+            setTimeout(() => {
+              useStore.getState().removeSpawn(id);
+            }, 2000);
+          }
           
-          // Remove spawn after 5 seconds
-          setTimeout(() => {
-            useStore.getState().removeSpawn(result.data.navigationId);
-          }, 5000);
-        }
+          // Resolve with complete navigation result
+          resolve({
+            action: 'generate',
+            targetNodeId: result.data.decision.targetNodeId,
+            parentNodeId: result.data.decision.parentNodeId,
+            name: result.data.decision.newNodeName,
+            scale_hint: result.data.decision.newNodeType,
+            relation: result.data.decision.metadata?.relation,
+            reason: result.data.decision.reasoning,
+            imageUrl: pipelineImageUrl,
+            imagePrompt: pipelineImagePrompt,
+            node: pipelineNode
+          });
+        },
         
-        eventSource.close();
-        reject(new Error('SSE connection failed'));
-      };
+        onError: (id, data) => {
+          // Mark spawn as failed
+          if (spawnAdded) {
+            useStore.getState().updateSpawnProgress(id, {
+              status: 'failed',
+              error: data.message || 'Pipeline failed'
+            });
+            
+            setTimeout(() => {
+              useStore.getState().removeSpawn(id);
+            }, 5000);
+          }
+          
+          reject(new Error(data.message || 'Pipeline failed'));
+        },
+        
+        onCancelled: (id) => {
+          if (spawnAdded) {
+            useStore.getState().updateSpawnProgress(id, {
+              status: 'cancelled'
+            });
+            
+            setTimeout(() => {
+              useStore.getState().removeSpawn(id);
+            }, 2000);
+          }
+          
+          reject(new Error('Navigation cancelled'));
+        }
+      });
     });
   }
   

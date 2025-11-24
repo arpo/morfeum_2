@@ -2,41 +2,43 @@
 
 ## Recent Changes (2025-11-24)
 
-### ProgressBar Component Implementation (Nov 24, 2025)
-- **Created minimalistic step-based progress bar component** for spawn operations
-- **Component Architecture (follows strict separation rules):**
-  - `ProgressBar.tsx` - Pure JSX component (96 lines)
-  - `useProgressBar.ts` - All state management and logic (79 lines)
-  - `useProgressAnimation.ts` - Animation calculations with step durations
-  - `types.ts` - Comprehensive TypeScript interfaces with JSDoc
-  - `ProgressBar.module.css` - Minimal styling (4px height)
-  - `index.ts` - Clean exports
-- **Key Features:**
-  - Step-based animation where each step has its own duration
-  - Dynamic color transition from purple (0%) to blue (100%)
-  - Hover tooltips showing step names
-  - Subtle step divider lines
-  - Starts at -1 step index for smooth initial animation
-  - Caps last step at 95% to leave room for completion animation
-  - Auto-removes 2 seconds after completion
-- **Animation Logic:**
-  - Triggers on step START, not completion
-  - Each step animates to its END position over its specified duration
-  - Smooth CSS transitions with cubic-bezier easing
-- **Test Harness:**
-  - Added clean test button to SpawnInputBar for demonstration
-  - Test generates different steps for characters vs locations
-  - Properly cleans up timeouts on unmount
+### Progress Bar Bugfix & Animation Improvements (Nov 24, 2025)
+- **Bug Fixed:** Progress bar now appears immediately and animates smoothly for all pipelines (character, location, navigation).
+- **Root Cause:** Race condition between backend pipeline start and frontend SSE connection caused the first step's progress event to be missed, so the bar was hidden or static.
+- **Frontend Fixes:**
+  - `spawnSlice.ts` and `locationNavigation.ts`: Now initialize `currentStepIndex` to `0` (not `-1`) when pipeline config is received, ensuring the bar is visible from the start.
+  - `useProgressAnimation.ts`: Now uses `useState`/`useEffect` to animate from 0% to the target progress on mount, so the bar animates smoothly instead of jumping.
+- **Backend/Config:** No changes needed; pipeline step config and SSE events already correct.
+- **Result:** Progress bar is visible and animates correctly for all spawn/generation actions, including navigation "generate" (create niche).
+
+### Pipeline Progress Bar Integration (Nov 24, 2025)
+- **Fully integrated progress bars for all three pipelines** - Character, Location, and Navigation spawns now show real-time progress
+- **Single Source of Truth:** Created `pipelineConfig.ts` for centralized pipeline configuration
+  - All step definitions (names, IDs, durations) in one place
+  - Navigation intent registry maps intents to pipeline types
+  - Easy to update timings and add new pipelines
+- **Backend Integration:**
+  - Updated all routes (`/spawn/engine/start`, `/spawn/location/start`, `/mzoo/navigation/analyze`)
+  - Routes store config in SSEService before starting pipelines
+  - SSEService sends config in first SSE event with `pipelineType` and `steps`
+  - All three pipelines use PipelineHelper for consistent SSE events
+- **Frontend Integration:**
+  - Character & Location: Already working via spawnSlice
+  - Navigation: Refactored `locationNavigation.ts` to use `setupSSEConnection()` utility
+  - Removed ~80 lines of duplicate manual SSE handling code
+  - All spawns now follow same pattern: detect config in first event → add to spawn tracking → update progress
+- **Progress Bar Component:**
+  - Step-based animation with individual step durations
+  - Dynamic color transition (purple → blue)
+  - Hover tooltips with step names
+  - Auto-removes after completion (2s) or error (5s)
+  - Component follows strict separation rules (TSX = JSX only)
 - **Code Quality:**
-  - Follows project's strict separation rules (TSX = JSX only)
-  - All hooks and logic in separate .ts files
-  - Comprehensive JSDoc documentation
-  - Component under 300 lines limit (96 lines)
-  - Removed all unused code (label prop, progressBarRef, currentStepProgress)
-- **Ready for Integration:**
-  - Can be integrated with SSE events from spawn pipelines
-  - Simply pass currentStep index from SSE updates
-  - Component handles all animation and timing internally
+  - Consistent architecture across all three pipelines
+  - Single SSE utility (`setupSSEConnection`) used by all
+  - No code duplication
+  - Clean, maintainable, follows .clinerules
+- **Result:** Beautiful animated progress bars for all spawn operations! 🎉
 
 ## Recent Changes (2025-11-21)
 

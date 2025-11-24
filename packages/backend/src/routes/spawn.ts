@@ -65,11 +65,7 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
   const spawnId = `char-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const apiKey = (req as any).mzooApiKey;
 
-  // Create abort controller for this spawn
-  const abortController = new AbortController();
-  activeAbortControllers.set(spawnId, abortController);
-
-  // Store pipeline configuration for SSE initialization
+  // Store pipeline configuration for SSE initialization (BEFORE sending response)
   const steps = getStepsForPipeline('character');
   pipelineConfigs.set(spawnId, {
     pipelineType: 'character',
@@ -80,6 +76,10 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
       duration: step.duration
     }))
   });
+
+  // Create abort controller for this spawn
+  const abortController = new AbortController();
+  activeAbortControllers.set(spawnId, abortController);
 
   // Send immediate response
   res.status(HTTP_STATUS.OK).json({
@@ -114,11 +114,7 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
   const spawnId = `loc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const apiKey = (req as any).mzooApiKey;
 
-  // Create abort controller for this spawn
-  const abortController = new AbortController();
-  activeAbortControllers.set(spawnId, abortController);
-
-  // Store pipeline configuration for SSE initialization
+  // Store pipeline configuration for SSE initialization (BEFORE sending response)
   const steps = getStepsForPipeline('worldTree');
   pipelineConfigs.set(spawnId, {
     pipelineType: 'worldTree',
@@ -129,6 +125,10 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
       duration: step.duration
     }))
   });
+
+  // Create abort controller for this spawn
+  const abortController = new AbortController();
+  activeAbortControllers.set(spawnId, abortController);
 
   // Send immediate response
   res.status(HTTP_STATUS.OK).json({

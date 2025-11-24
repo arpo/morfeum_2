@@ -42,6 +42,29 @@
 - [x] Entity session cleanup on delete
 
 ### Technical Improvements
+- [x] Progress bar bugfix & animation improvements (Nov 24, 2025)
+  - Progress bar now appears immediately and animates smoothly for all pipelines (character, location, navigation)
+  - Fixed race condition and initial state logic in both spawnSlice and locationNavigation
+  - useProgressAnimation now animates from 0% to target on mount for smooth entry
+  - All spawn/generate actions now have consistent, animated progress tracking
+- [x] Pipeline progress bar integration (Nov 24, 2025)
+  - Created centralized pipelineConfig.ts for all pipeline configurations
+  - Single source of truth for step definitions, durations, and intent mappings
+  - Integrated backend SSE to send config in first event
+  - Refactored navigation handler to use setupSSEConnection utility
+  - Removed ~80 lines of duplicate SSE code
+  - All three pipelines (character, location, navigation) show real-time progress
+  - Step-based animation with individual durations
+  - Auto-cleanup after completion/error
+  - Clean, consistent architecture across all spawns
+- [x] Unified utility architecture (Nov 21, 2025)
+  - Created comprehensive utility modules to eliminate duplicate logic
+  - Backend: PipelineHelper class, entityPersistence utilities
+  - Frontend: setupSSEConnection, completionHandlers, tree navigation/expansion
+  - Refactored all three pipelines to use PipelineHelper
+  - Fixed tree unfolding bug with expandedNodeIds state
+  - ~470 lines of duplicate code eliminated
+  - Single source of truth for spawn/tree/entity operations
 - [x] Architectural consistency & DNA enrichment (Nov 19, 2025)
   - Fixed major inconsistency where exterior/interior didn't match
   - Functional Identity enforcement (houses look like houses, not churches)

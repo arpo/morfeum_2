@@ -79,7 +79,7 @@ router.post('/analyze', asyncHandler(async (req: Request, res: Response) => {
       console.log(`[NAVIGATION] Navigation ID: ${navigationId}`);
       console.log(`[NAVIGATION] Events URL: ${eventsUrl}`);
       
-      // Store pipeline configuration for SSE initialization
+      // Store pipeline configuration for SSE initialization (BEFORE sending response)
       const steps = getStepsForPipeline('navigation');
       pipelineConfigs.set(navigationId, {
         pipelineType: 'navigation',

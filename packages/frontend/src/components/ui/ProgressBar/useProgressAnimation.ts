@@ -3,7 +3,7 @@
  * Calculates the target progress and animation duration based on current step
  */
 
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import type { UseProgressAnimationProps, AnimationResult, ProgressStep } from './types';
 
 /**
@@ -16,9 +16,11 @@ export function useProgressAnimation({
   currentStep,
   isComplete,
 }: UseProgressAnimationProps): AnimationResult {
+  // Use state for the displayed progress value (starts at 0)
+  const [displayedProgress, setDisplayedProgress] = useState(0);
   
   // Calculate the target progress and duration
-  const result = useMemo(() => {
+  const target = useMemo(() => {
     // Complete state: animate to 100%
     if (isComplete) {
       return { 
@@ -45,13 +47,7 @@ export function useProgressAnimation({
     }
     
     // Calculate the target progress as percentage of total
-    let targetProgress = (targetDuration / totalDuration) * 100;
-    
-    // Cap last step at 95% to leave room for completion animation
-    const isLastStep = currentStep === steps.length - 1;
-    if (isLastStep && targetProgress > 95) {
-      targetProgress = 95;
-    }
+    const targetProgress = (targetDuration / totalDuration) * 100;
     
     // Use current step's duration for animation, with fallback
     const animationDuration = currentStep >= 0 && currentStep < steps.length 
@@ -63,6 +59,22 @@ export function useProgressAnimation({
       currentStepDuration: animationDuration
     };
   }, [steps, currentStep, isComplete]);
+
+  // Sync displayed progress to target using useEffect
+  // This ensures that when the component mounts, it starts at 0 (initial state)
+  // and then transitions to the target value, triggering the CSS animation
+  useEffect(() => {
+    if (currentStep < 0 && !isComplete) {
+      setDisplayedProgress(0);
+      return;
+    }
+    
+    // Simple state update triggers re-render, allowing CSS transition to animate the change
+    setDisplayedProgress(target.progress);
+  }, [target.progress, currentStep, isComplete]);
   
-  return result;
+  return {
+    progress: displayedProgress,
+    currentStepDuration: target.currentStepDuration
+  };
 }

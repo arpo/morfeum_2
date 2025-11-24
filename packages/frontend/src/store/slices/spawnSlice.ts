@@ -96,7 +96,7 @@ export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get
               get().updateSpawnProgress(id, {
                 pipelineType: data.pipelineType,
                 steps: data.steps,
-                currentStepIndex: -1,
+                currentStepIndex: 0, // Assume first step started since pipeline starts immediately
                 currentStage: data.message
               });
             } else if (spawn && spawn.steps) {
