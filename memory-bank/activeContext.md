@@ -1,5 +1,43 @@
 # Active Context
 
+## Recent Changes (2025-11-24)
+
+### ProgressBar Component Implementation (Nov 24, 2025)
+- **Created minimalistic step-based progress bar component** for spawn operations
+- **Component Architecture (follows strict separation rules):**
+  - `ProgressBar.tsx` - Pure JSX component (96 lines)
+  - `useProgressBar.ts` - All state management and logic (79 lines)
+  - `useProgressAnimation.ts` - Animation calculations with step durations
+  - `types.ts` - Comprehensive TypeScript interfaces with JSDoc
+  - `ProgressBar.module.css` - Minimal styling (4px height)
+  - `index.ts` - Clean exports
+- **Key Features:**
+  - Step-based animation where each step has its own duration
+  - Dynamic color transition from purple (0%) to blue (100%)
+  - Hover tooltips showing step names
+  - Subtle step divider lines
+  - Starts at -1 step index for smooth initial animation
+  - Caps last step at 95% to leave room for completion animation
+  - Auto-removes 2 seconds after completion
+- **Animation Logic:**
+  - Triggers on step START, not completion
+  - Each step animates to its END position over its specified duration
+  - Smooth CSS transitions with cubic-bezier easing
+- **Test Harness:**
+  - Added clean test button to SpawnInputBar for demonstration
+  - Test generates different steps for characters vs locations
+  - Properly cleans up timeouts on unmount
+- **Code Quality:**
+  - Follows project's strict separation rules (TSX = JSX only)
+  - All hooks and logic in separate .ts files
+  - Comprehensive JSDoc documentation
+  - Component under 300 lines limit (96 lines)
+  - Removed all unused code (label prop, progressBarRef, currentStepProgress)
+- **Ready for Integration:**
+  - Can be integrated with SSE events from spawn pipelines
+  - Simply pass currentStep index from SSE updates
+  - Component handles all animation and timing internally
+
 ## Recent Changes (2025-11-21)
 
 ### Unified Utility Architecture (Nov 21, 2025)
@@ -252,11 +290,23 @@ prompts/navigation/
 └── interiorInstructions.ts    # Interior rules
 ```
 
+**UI Components:**
+```
+components/ui/ProgressBar/
+├── ProgressBar.tsx            # Pure JSX component
+├── useProgressBar.ts          # State management
+├── useProgressAnimation.ts    # Animation logic
+├── types.ts                   # TypeScript interfaces
+├── ProgressBar.module.css     # Styles
+└── index.ts                   # Exports
+```
+
 ### Known Issues
 - Navigation generate action still disabled in frontend.
 - Some backend route naming inconsistencies in compiled files.
 
 ### Next Steps
+- Integrate ProgressBar with real SSE events from spawn pipelines.
 - Enable navigation generate action in frontend.
 - Implement additional navigation intents (GO_OUTSIDE, GO_TO_ROOM, GO_UP_DOWN) using createNodePipeline
 - Enhance saved entities browser functionality.

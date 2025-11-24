@@ -50,7 +50,7 @@ export async function runWorldTreePipeline(
   apiKey: string,
   signal: AbortSignal
 ): Promise<void> {
-  const helper = new PipelineHelper(spawnId, 'WorldTreePipeline');
+  const helper = new PipelineHelper(spawnId, 'WorldTreePipeline', 'worldTree');
 
   try {
     helper.started('Starting World Tree generation...');

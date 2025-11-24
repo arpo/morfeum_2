@@ -4,6 +4,7 @@
  */
 
 import { sseService } from '../../../services/SSEService';
+import { getStepsForPipeline, type PipelineType, type PipelineStep } from './pipelineConfig';
 
 export interface PipelineTimings {
   [stage: string]: number;
@@ -21,25 +22,27 @@ export interface PipelineStage {
 export class PipelineHelper {
   private spawnId: string;
   private pipelineName: string;
+  private pipelineType: PipelineType;
+  private steps: readonly PipelineStep[];
   private startTime: number;
   private timings: PipelineTimings = {};
   private currentStageStart: number = 0;
 
-  constructor(spawnId: string, pipelineName: string) {
+  constructor(spawnId: string, pipelineName: string, pipelineType: PipelineType) {
     this.spawnId = spawnId;
     this.pipelineName = pipelineName;
+    this.pipelineType = pipelineType;
+    this.steps = getStepsForPipeline(pipelineType);
     this.startTime = Date.now();
   }
 
   /**
    * Send pipeline started event
+   * Note: Step configuration is now sent by SSEService when connection establishes
    */
   started(message: string = 'Starting pipeline...') {
     console.log(`[${this.pipelineName}] Starting pipeline for ${this.spawnId}`);
-    sseService.sendEvent(this.spawnId, 'progress', {
-      stage: 'started',
-      message
-    });
+    // Configuration is sent by SSEService.addConnection, so we don't send it here
   }
 
   /**

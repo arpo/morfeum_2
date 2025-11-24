@@ -11,7 +11,7 @@ class SSEService {
   /**
    * Add a new SSE connection for a specific spawn ID
    */
-  addConnection(spawnId: string, res: Response) {
+  addConnection(spawnId: string, res: Response, pipelineConfig?: { pipelineType: string; steps: any[] }) {
     // Set headers for SSE
     res.writeHead(200, {
       'Content-Type': 'text/event-stream',
@@ -25,6 +25,17 @@ class SSEService {
 
     const connection = { id: spawnId, res };
     this.connections.set(spawnId, connection);
+
+    // Send pipeline configuration immediately if available
+    if (pipelineConfig) {
+      res.write(`event: progress\n`);
+      res.write(`data: ${JSON.stringify({
+        stage: 'started',
+        message: 'Starting pipeline...',
+        pipelineType: pipelineConfig.pipelineType,
+        steps: pipelineConfig.steps
+      })}\n\n`);
+    }
 
     // Remove connection on close
     res.on('close', () => {

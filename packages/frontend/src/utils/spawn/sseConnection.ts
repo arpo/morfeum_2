@@ -5,6 +5,13 @@
 
 import type { SpawnProcess } from '../../store/slices/spawnSlice';
 
+export interface PipelineStep {
+  index: number;
+  id: string;
+  name: string;
+  duration: number;
+}
+
 export interface SSEHandlers {
   onProgress: (spawnId: string, data: any) => void;
   onCompleted: (spawnId: string, data: any) => void;
@@ -22,7 +29,7 @@ export function setupSSEConnection(
 ): EventSource {
   const eventSource = new EventSource(eventsUrl);
 
-  // Progress events
+  // Progress events (first event includes pipeline step configuration)
   eventSource.addEventListener('progress', (event: MessageEvent) => {
     const data = JSON.parse(event.data);
     console.log(`[Spawn ${spawnId}] Progress:`, data.message, data);
@@ -60,37 +67,26 @@ export function setupSSEConnection(
 }
 
 /**
- * Progress calculation for different pipeline stages
+ * Map stage name to step index
+ * Returns the index of the step that corresponds to the stage
  */
-export function calculateProgress(stage: string): number {
-  const progressMap: Record<string, number> = {
-    // Common
-    'started': 5,
-    'completed': 100,
-    
-    // World Tree Pipeline
-    'hierarchy_classification': 10,
-    'hierarchy_complete': 25,
-    
-    // Character Pipeline  
-    'seed_generation': 20,
-    'seed_complete': 25,
-    'profile_enrichment': 75,
-    'profile_complete': 95,
-    
-    // Navigation Pipeline
-    'prompt_generation': 25,
-    'prompt_complete': 30,
-    'node_building': 90,
-    
-    // Shared stages
-    'image_generation': 30,
-    'image_complete': 50,
-    'visual_analysis': 60,
-    'analysis_complete': 70,
-    'dna_generation': 80,
-    'dna_complete': 95,
-  };
-
-  return progressMap[stage] || 0;
+export function getStepIndexFromStage(stage: string, steps: PipelineStep[]): number {
+  // Handle completion stages (e.g., 'hierarchy_classification_complete')
+  const stageId = stage.replace('_complete', '');
+  
+  // Find step index by matching stage ID
+  const stepIndex = steps.findIndex(step => step.id === stageId);
+  
+  // Return -1 for 'started', actual index for stages
+  if (stage === 'started') return -1;
+  if (stepIndex >= 0) return stepIndex;
+  
+  // Fallback: try to find partial match
+  for (let i = 0; i < steps.length; i++) {
+    if (stageId.includes(steps[i].id) || steps[i].id.includes(stageId)) {
+      return i;
+    }
+  }
+  
+  return -1;
 }

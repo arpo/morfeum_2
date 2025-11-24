@@ -179,7 +179,7 @@ export async function runCharacterPipeline(
   visualAnalysis: VisualAnalysis;
   deepProfile: DeepProfile;
 }> {
-  const helper = spawnId ? new PipelineHelper(spawnId, 'CharacterPipeline') : null;
+  const helper = spawnId ? new PipelineHelper(spawnId, 'CharacterPipeline', 'character') : null;
 
   try {
     if (helper) {

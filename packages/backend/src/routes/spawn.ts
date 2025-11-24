@@ -11,6 +11,7 @@ import { runCharacterPipeline } from '../engine/generation';
 import { WorldTreeBuilder } from '../services/worldTree/builder';
 import { runWorldTreePipeline } from '../engine/pipelines/worldTreePipeline';
 import { sseService } from '../services/SSEService';
+import { getStepsForPipeline } from '../engine/pipelines/shared/pipelineConfig';
 import type { HierarchyStructure, HierarchyNode } from '../engine/hierarchyAnalysis/types';
 
 const router = Router();
@@ -23,6 +24,9 @@ const spawnManagers = new Map<string, ReturnType<typeof createSpawnManager>>();
 
 // Track active pipeline abort controllers by spawnId
 const activeAbortControllers = new Map<string, AbortController>();
+
+// Track pipeline configurations for SSE initialization
+const pipelineConfigs = new Map<string, { pipelineType: string; steps: any[] }>();
 
 /**
  * Get or create spawn manager for the current API key
@@ -65,6 +69,18 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
   const abortController = new AbortController();
   activeAbortControllers.set(spawnId, abortController);
 
+  // Store pipeline configuration for SSE initialization
+  const steps = getStepsForPipeline('character');
+  pipelineConfigs.set(spawnId, {
+    pipelineType: 'character',
+    steps: steps.map((step, index) => ({
+      index,
+      id: step.id,
+      name: step.name,
+      duration: step.duration
+    }))
+  });
+
   // Send immediate response
   res.status(HTTP_STATUS.OK).json({
     message: 'Character spawn started (new engine)',
@@ -72,10 +88,11 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
     timestamp: new Date().toISOString(),
   });
 
-  // Run character pipeline asynchronously with SSE events
+  // Start pipeline (SSE will send config when connection establishes)
   runCharacterPipeline(prompt.trim(), apiKey, abortController.signal, spawnId)
     .finally(() => {
       activeAbortControllers.delete(spawnId);
+      pipelineConfigs.delete(spawnId);
     });
 }));
 
@@ -101,6 +118,18 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
   const abortController = new AbortController();
   activeAbortControllers.set(spawnId, abortController);
 
+  // Store pipeline configuration for SSE initialization
+  const steps = getStepsForPipeline('worldTree');
+  pipelineConfigs.set(spawnId, {
+    pipelineType: 'worldTree',
+    steps: steps.map((step, index) => ({
+      index,
+      id: step.id,
+      name: step.name,
+      duration: step.duration
+    }))
+  });
+
   // Send immediate response
   res.status(HTTP_STATUS.OK).json({
     message: 'Location spawn started (hierarchy system)',
@@ -108,11 +137,11 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
     timestamp: new Date().toISOString(),
   });
 
-  // Run hierarchy analysis asynchronously with SSE events
-  // The new runWorldTreePipeline handles all steps and SSE events
+  // Start pipeline (SSE will send config when connection establishes)
   runWorldTreePipeline(spawnId, prompt.trim(), apiKey, abortController.signal)
     .finally(() => {
       activeAbortControllers.delete(spawnId);
+      pipelineConfigs.delete(spawnId);
     });
 }));
 
@@ -129,7 +158,10 @@ router.get('/events/:spawnId', asyncHandler(async (req: Request, res: Response) 
     return;
   }
 
-  sseService.addConnection(spawnId, res);
+  // Get pipeline config if available
+  const config = pipelineConfigs.get(spawnId);
+  
+  sseService.addConnection(spawnId, res, config);
 }));
 
 /**

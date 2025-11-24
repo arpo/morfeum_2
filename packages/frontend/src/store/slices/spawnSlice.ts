@@ -1,5 +1,5 @@
 import type { StateCreator } from 'zustand';
-import { setupSSEConnection, calculateProgress } from '../../utils/spawn/sseConnection';
+import { setupSSEConnection, getStepIndexFromStage, type PipelineStep } from '../../utils/spawn/sseConnection';
 import { handleSpawnCompletion } from '../../utils/spawn/completionHandlers';
 
 export interface SpawnStage {
@@ -20,6 +20,10 @@ export interface SpawnProcess {
   result?: any;
   eventsUrl?: string;
   error?: string;
+  // Progress bar fields
+  pipelineType?: string;
+  steps?: PipelineStep[];
+  currentStepIndex?: number;
 }
 
 export interface SpawnSlice {
@@ -85,19 +89,39 @@ export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get
       if (eventsUrl) {
         setupSSEConnection(eventsUrl, spawnId, {
           onProgress: (id, data) => {
-            get().updateSpawnProgress(id, {
-              currentStage: data.message,
-              progress: calculateProgress(data.stage)
-            });
+            const spawn = get().activeSpawns.find((s: SpawnProcess) => s.id === id);
+            
+            // If this progress event includes steps, store them (happens on first event)
+            if (data.steps && data.pipelineType) {
+              get().updateSpawnProgress(id, {
+                pipelineType: data.pipelineType,
+                steps: data.steps,
+                currentStepIndex: -1,
+                currentStage: data.message
+              });
+            } else if (spawn && spawn.steps) {
+              // Calculate current step index from stage name
+              const stepIndex = getStepIndexFromStage(data.stage, spawn.steps);
+              get().updateSpawnProgress(id, {
+                currentStage: data.message,
+                currentStepIndex: stepIndex
+              });
+            } else {
+              get().updateSpawnProgress(id, {
+                currentStage: data.message
+              });
+            }
             get().addSpawnLog(id, data.message);
           },
           onCompleted: (id, data) => {
             // Mark spawn as completed
+            const spawn = get().activeSpawns.find((s: SpawnProcess) => s.id === id);
             get().updateSpawnProgress(id, {
               status: 'completed',
               progress: 100,
               result: data.worldTree || data.character,
-              currentStage: 'Completed'
+              currentStage: 'Completed',
+              currentStepIndex: spawn?.steps ? spawn.steps.length - 1 : undefined
             });
             
             // Handle entity-specific completion

@@ -2542,76 +2542,6 @@
       "slug": "the-sunken-pod",
       "searchDesc": "Exterior of a derelict escape pod in a jungle. Has: emergency door (center, midground), interior passage (center, midground)"
     },
-    "loc-1763587410578-819xotp9a": {
-      "id": "loc-1763587410578-819xotp9a",
-      "type": "host",
-      "name": "The Frozen Expanse",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A world dominated by immense frozen landscapes, crystalline structures, and ethereal light phenomena. Jagged ice formations and endless snowfields stretch to the horizon, punctuated by magical auroras that paint the sky with otherworldly colors.",
-        "colorsAndLighting": "The palette is dominated by cool blues, whites, and silvers, with vibrant, shifting colors from auroras. Lighting is often dim and diffused by snow, with occasional brilliant glows from magical sources or the aurora itself.",
-        "atmosphere": "The air is perpetually frigid, sharp, and still. A biting wind may occasionally sweep across the plains, carrying snow. Visibility can range from crystal clear to obscured by blizzards or mist.",
-        "materials": "Predominantly ice in various forms: solid glaciers, delicate frost, sharp icicles, and powdery snow. Subterranean elements might include permafrost and mineral veins.",
-        "mood": "Serene, awe-inspiring, and potentially dangerous. A sense of isolation and ancient power pervades the environment.",
-        "sounds": "Whispering winds, creaking ice, distant howls, crackling magic, muffled silence",
-        "spatialLayout": "Expansive, open vistas with vast plains, towering ice formations, and deep ravines. Structures tend to be monolithic and integrated with the natural ice formations.",
-        "primary_surfaces": [
-          "ice",
-          "snow"
-        ],
-        "secondary_surfaces": [
-          "frozen rock",
-          "frost"
-        ],
-        "accent_features": [
-          "glowing runes",
-          "ice crystals",
-          "aurora patterns"
-        ],
-        "dominant": "blue",
-        "secondary": "white",
-        "accent": "cyan",
-        "ambient": "cool",
-        "genre": "fantasy",
-        "architectural_tone": "crystalline geometric, sharp angles, organic integration with ice, monolithic",
-        "cultural_tone": "survivalist, mystical, isolationist",
-        "materials_base": "ice-based, crystalline, mineral",
-        "mood_baseline": "melancholy, wondrous, sublime",
-        "palette_bias": "cool, high-contrast, ethereal",
-        "soundscape_base": "quiet, naturalistic, echoing",
-        "flora_base": "None",
-        "fauna_base": "ice-adapted creatures, ethereal spirits"
-      },
-      "imagePath": "",
-      "navigableElements": [],
-      "dominantElements": [
-        "Glacial Peaks",
-        "Aurora Borealis",
-        "Frozen Seas"
-      ],
-      "uniqueIdentifiers": [
-        "Ancient Ice Formations",
-        "Permafrost Structures"
-      ],
-      "slug": "the-frozen-expanse",
-      "searchDesc": "A vast, desolate world of ice and snow, where magic and nature intertwine. Features glacial peaks, aurora borealis, and frozen seas."
-    },
-    "48b31f39-2532-4746-ba3e-2d2ce7f0da63": {
-      "id": "48b31f39-2532-4746-ba3e-2d2ce7f0da63",
-      "type": "region",
-      "name": "The Frozen Expanse",
-      "spaceType": "exterior",
-      "dna": {},
-      "imagePath": ""
-    },
-    "3e82977b-cb68-4255-8356-9148cb9876d9": {
-      "id": "3e82977b-cb68-4255-8356-9148cb9876d9",
-      "type": "location",
-      "name": "The Aurora Citadel",
-      "spaceType": "exterior",
-      "dna": {},
-      "imagePath": "https://v3b.fal.media/files/b/elephant/-f5Sfdnoc2n4exf1zbUg0.jpg"
-    },
     "niche-1763587502682-5m8v3tpvv": {
       "id": "niche-1763587502682-5m8v3tpvv",
       "type": "niche",
@@ -2960,69 +2890,6 @@
       ],
       "searchDesc": "Cavernous brutalist-industrial steampunk interior with colossal gears and hazy, warm-lit atmosphere.",
       "slug": "interior-of-the-cogwork-citadel"
-    },
-    "niche-1763618041102-hlt0w3h0x": {
-      "id": "niche-1763618041102-hlt0w3h0x",
-      "type": "niche",
-      "name": "interior of The Aurora Citadel",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior is defined by monolithic, crystalline geometric ice structures with sharp angles and organic integration. A smooth, polished ice floor with glowing cyan aurora veins stretches across the foreground, reflecting the cool blue ambient light. Towering, faceted translucent ice walls rise in the midground, leading to a grand, impossibly smooth ice archway that spills a deeper cyan glow.",
-        "colorsAndLighting": "The dominant color palette is a cool blue, with subtle cyan veins in the floor and a vibrant, pulsating cyan light emanating from the archway. Volumetric lighting creates an atmospheric, high-contrast effect.",
-        "atmosphere": "Ethereal mist drifts low across the polished ice floor, creating a sense of depth and mystery. The air feels cold and still, contributing to an atmosphere of melancholy wonder and sublime isolation.",
-        "materials": "The primary material is ice in various forms: polished and smooth for the floor, translucent and faceted for the walls, and carved into intricate geometric patterns. The ice exhibits a crystalline quality, with sharp angles and monolithic forms.",
-        "mood": "This place evokes a sense of melancholy wonder and sublime isolation, with an undercurrent of ancient, potentially dangerous power.",
-        "sounds": "faint ethereal hum, distant crystal chimes, soft mist whispers",
-        "spatialLayout": "The niche is vast, with a vaulted ice ceiling at least 30 meters high. The layout progresses from the foreground floor, through the midground walls and central archway, to a deep background expanse. Focal points include a pedestal on the left, the central archway, and a spiral staircase on the far left.",
-        "primary_surfaces": "ice (polished, translucent, faceted, carved)",
-        "secondary_surfaces": "crystalline formations",
-        "accent_features": "glowing ice artifact, fractured ice shards, aurora-like light patterns",
-        "dominant": "blue (60%)",
-        "secondary": "cyan (30%)",
-        "accent": "white (10%)",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "crystalline geometric, sharp angles, organic integration with ice, monolithic",
-        "cultural_tone": "survivalist, mystical, isolationist",
-        "materials_base": "ice, crystal",
-        "mood_baseline": "Serene, awe-inspiring, and potentially dangerous. A sense of isolation and ancient power pervades the environment.",
-        "palette_bias": "cool blue and cyan spectrum",
-        "soundscape_base": "ambient, ethereal, resonant",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/lion/2webcXgr7OqH90kqCBKJ3.jpg",
-      "description": "A breathtaking interior niche within the Aurora Citadel, featuring crystalline geometric architecture and a cool blue, aurora-inspired lighting scheme.",
-      "navigableElements": [
-        {
-          "type": "pedestal",
-          "position": "foreground left",
-          "description": "A crystalline pedestal displaying a small, glowing ice artifact."
-        },
-        {
-          "type": "archway",
-          "position": "midground center",
-          "description": "A grand, smooth ice archway with deeper cyan light spilling through."
-        },
-        {
-          "type": "stairs",
-          "position": "background far left",
-          "description": "A narrow, ice-carved spiral staircase ascending the far left wall."
-        }
-      ],
-      "dominantElements": [
-        "polished ice floor with aurora veins",
-        "towering faceted ice walls",
-        "grand smooth ice archway",
-        "vaulted ice expanse ceiling"
-      ],
-      "uniqueIdentifiers": [
-        "crystalline geometric architecture",
-        "aurora-patterned ice veins",
-        "glowing cyan light from archway"
-      ],
-      "searchDesc": "Aurora Citadel interior: ice architecture, aurora veins, cyan glow, misty, awe-inspiring.",
-      "slug": "interior-of-the-aurora-citadel"
     },
     "niche-1763618074404-3shcujlm9": {
       "id": "niche-1763618074404-3shcujlm9",
@@ -4831,343 +4698,6 @@
       "searchDesc": "Vast bio-mechanical vertebral chamber with amber lights and winding stone paths.",
       "slug": "unknown-of-the-vertebral-spire"
     },
-    "loc-1763723266602-05irq7osi": {
-      "id": "loc-1763723266602-05irq7osi",
-      "type": "host",
-      "name": "The Celestial Canopy",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "host",
-        "name": "The Celestial Canopy",
-        "description": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
-        "dna": {
-          "looks": "Vast, ethereal expanses of cloud and sky, punctuated by colossal, ancient plant life. Islands of dense foliage and organic structures drift serenely. Sunlight filters through atmospheric layers, creating a dreamlike panorama.",
-          "colorsAndLighting": "A perpetually shifting palette of soft pastels and vibrant natural hues. Light is diffused and radiant, with gentle glows emanating from celestial bodies and bio-luminescent flora.",
-          "atmosphere": "The air is thin, cool, and incredibly clean, carrying the faint scent of ozone and exotic blossoms. Gentle atmospheric currents dictate movement, and occasional soft mists drift through.",
-          "materials": "Primarily organic: colossal wood, living bark, dense mosses, and vibrant, resilient foliage. Structures are often integrated with or grown from these natural elements.",
-          "mood": "Serene, majestic, and profoundly ancient. A sense of awe and peaceful contemplation pervades the environment.",
-          "sounds": "Whispering winds, distant celestial hums, rustling leaves, soft chimes.",
-          "spatialLayout": "Vast, open skies with clusters of massive, interconnected organic structures. Verticality is a key element, with life thriving at various altitudes.",
-          "primary_surfaces": "Living wood, bark, dense moss",
-          "secondary_surfaces": "Ethereal mist, light, atmospheric gases",
-          "accent_features": "Bio-luminescent patterns, swirling cloud formations, floating crystalline structures",
-          "dominant": "Ethereal blues and greens",
-          "secondary": "Soft purples and golds",
-          "accent": "Bio-luminescent yellows and whites",
-          "ambient": "Soft, diffused, and slightly cool",
-          "genre": "fantasy",
-          "architectural_tone": "Organic, bio-integrated, gravity-defying architecture grown from colossal flora, with an emphasis on smooth, flowing lines and natural forms.",
-          "cultural_tone": "Ancient wisdom, symbiotic existence with nature, spiritual reverence for life.",
-          "materials_base": "Living organic matter, bio-luminescence, polished natural wood",
-          "mood_baseline": "Serene transcendence",
-          "palette_bias": "Soft, nature-inspired, with luminous accents",
-          "soundscape_base": "Gentle, natural atmospheric sounds",
-          "flora_base": "Colossal, ancient trees and sky-dwelling plants, bioluminescent organisms",
-          "fauna_base": "Aerial and arboreal creatures adapted to high altitudes"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "World-tree",
-          "Atmospheric currents",
-          "Sky-islands"
-        ],
-        "uniqueIdentifiers": [
-          "Floating continents",
-          "Bio-engineered ecosystems",
-          "Solar-powered flora"
-        ],
-        "searchDesc": "World of floating flora and atmospheric life, high in the sky.",
-        "slug": "the-celestial-canopy",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Celestial Canopy",
-          "looks": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "imagePath": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
-      "description": "A realm where life flourishes in the upper atmosphere, supported by colossal flora."
-    },
-    "183eb246-d685-4115-873f-4dc01f3da817": {
-      "id": "183eb246-d685-4115-873f-4dc01f3da817",
-      "type": "region",
-      "name": "The Great Boughs",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "region",
-        "name": "The Great Boughs",
-        "description": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
-        "dna": {
-          "looks": "Immense, gnarled branches of ancient trees, thick as mountains, stretch outwards, forming natural platforms and thoroughfares. Lush mosses and verdant foliage cling to their surfaces, while colossal root systems descend into the mists below.",
-          "colorsAndLighting": "Dominated by deep, rich greens of moss and foliage, interspersed with the earthy browns and greys of ancient bark. Light is dappled, filtering through the dense canopy above, creating pockets of shadow and soft illumination.",
-          "atmosphere": "Humid and earthy, with a constant gentle breeze rustling through the leaves. The air smells of damp soil, decaying leaves, and exotic floral notes.",
-          "materials": "Predominantly colossal, textured bark and thick, resilient mosses. Smaller flora and exposed, aged wood are also prevalent.",
-          "mood": "Sturdy, grounded (despite being aerial), and ancient. A sense of immense natural power and resilience.",
-          "sounds": "Constant rustling leaves, creaking wood, distant bird calls, dripping water.",
-          "spatialLayout": "A labyrinthine network of sprawling, interconnected branches forming natural avenues and vast open spaces. Significant verticality exists between the boughs.",
-          "primary_surfaces": "Massive tree bark, dense moss",
-          "secondary_surfaces": "Vines, hanging roots, exposed wood",
-          "accent_features": "Fungal growths, rare flowering epiphytes",
-          "dominant": "Deep greens",
-          "secondary": "Earthy browns and greys",
-          "accent": "Subtle floral colors",
-          "ambient": "Dappled, natural light with cool shadows",
-          "genre": null,
-          "architectural_tone": null,
-          "cultural_tone": "Pragmatic, nature-reverent, focused on sustenance and communal living.",
-          "materials_base": null,
-          "mood_baseline": null,
-          "palette_bias": null,
-          "soundscape_base": null,
-          "flora_base": "Giant ancient trees, thick mosses, epiphytic plants, air-filtering flora",
-          "fauna_base": "Arboreal insects, gliding mammals, large avian species"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Titan tree branches",
-          "Aerial pathways",
-          "Hanging root systems"
-        ],
-        "uniqueIdentifiers": [
-          "Interconnected branch network",
-          "Sky-root systems",
-          "Wind-carved canyons between boughs"
-        ],
-        "searchDesc": "Vast, ancient tree branches forming the pathways and foundations of sky settlements.",
-        "slug": "the-great-boughs",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Great Boughs",
-          "looks": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "imagePath": "",
-      "description": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements."
-    },
-    "3ac0c9f0-d882-4a46-a757-13e824c92c3f": {
-      "id": "3ac0c9f0-d882-4a46-a757-13e824c92c3f",
-      "type": "location",
-      "name": "The Lumina Sanctuary",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "location",
-        "name": "The Lumina Sanctuary",
-        "description": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
-        "looks": "A sprawling temple intricately woven into and built upon massive, interwoven tree branches, adorned with glowing bioluminescent runes that pulse with gentle light.",
-        "atmosphere": "Warm, humid air carrying the scent of exotic blossoms and damp earth. The ambient glow from the runes creates a soft, ethereal light.",
-        "mood": "Serene, mystical, ancient",
-        "dna": {
-          "looks": "A massive, ancient tree forms the foundation of a temple, its colossal branches interwoven and supporting the structure. The temple appears carved directly into the wood and moss, with an ornate, arched entrance. Bioluminescent runes glow along the pathways and parts of the temple, illuminating the scene with an ethereal light. The scale suggests immense, almost unimaginable growth and age of the flora.",
-          "colorsAndLighting": "Soft, diffused light emanates from the glowing bioluminescent runes, creating a gentle, ethereal glow that illuminates the immediate surroundings. The light is warm and inviting, casting minimal shadows and enhancing the mystical mood.",
-          "atmosphere": "A soft, luminous mist permeates the air, obscuring distant details and contributing to the mystical ambiance. The humidity is palpable, suggesting a lush and verdant environment.",
-          "materials": "Primarily living tree bark, ancient wood, and dense, vibrant mosses. Stone elements are subtly integrated, appearing as if naturally formed within the wood.",
-          "mood": "Sacred, serene, and welcoming. A feeling of spiritual peace and ancient reverence.",
-          "sounds": "Soft, pulsing hum of runes, gentle dripping, distant ethereal melodies.",
-          "spatialLayout": "The foreground features a textured stone pathway winding through dense, green foliage and moss-covered rocks. The midground is dominated by the colossal, ancient tree, its thick branches supporting the temple structure and framing a central, glowing entrance. The background is softly obscured by mist and foliage, with more massive tree branches receding into the distance.",
-          "primary_surfaces": "Tree bark, moss, stone",
-          "secondary_surfaces": "Dense foliage, earth",
-          "accent_features": "Bioluminescent runes",
-          "dominant": "Deep greens, verdant mosses",
-          "secondary": "Earth tones in the pathway, glowing yellow-green light from the entrance",
-          "accent": "Pulsing blue and gold from the bioluminescent runes",
-          "ambient": "Soft, ethereal green glow",
-          "genre": null,
-          "architectural_tone": "Organic temple architecture seamlessly integrated with colossal flora, featuring smooth, flowing lines, natural archways carved from wood, and subtle stone accents. The style emphasizes reverence for the natural forms and is illuminated by naturally occurring bio-luminescence.",
-          "cultural_tone": "Spiritual devotion, nature worship, pilgrimage site.",
-          "materials_base": null,
-          "mood_baseline": null,
-          "palette_bias": null,
-          "soundscape_base": null,
-          "flora_base": "Bioluminescent mosses, ancient tree flora",
-          "fauna_base": null
-        },
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center, midground",
-            "description": "An open, glowing arched entrance into the temple structure"
-          },
-          {
-            "type": "bridge",
-            "position": "foreground to midground",
-            "description": "A stone pathway leading towards the temple entrance"
-          }
-        ],
-        "dominantElements": [
-          "Massive, ancient tree with interwoven branches",
-          "Ornate temple entrance carved into the tree",
-          "Glowing bioluminescent runes",
-          "Stone pathway leading to the entrance"
-        ],
-        "uniqueIdentifiers": [
-          "Temple carved into a colossal tree",
-          "Bioluminescent runes guiding the path",
-          "Glowingly bright, ethereal entrance"
-        ],
-        "searchDesc": "[Location - Exterior] Verdant sky-temple on massive tree. Has: arched entrance (center, midground), stone pathway (foreground to midground)",
-        "slug": "the-lumina-sanctuary",
-        "imageUrl": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Lumina Sanctuary",
-          "looks": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "imagePath": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
-      "description": "A sacred temple constructed amidst the verdant embrace of giant tree branches."
-    },
-    "niche-1763725647086-kupv652e7": {
-      "id": "niche-1763725647086-kupv652e7",
-      "type": "niche",
-      "name": "interior of The Lumina Sanctuary",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This sacred interior is a vast cavity within an ancient tree, its organic, flowing walls a blend of living mossy bark and smooth, dark wood. Organic archways punctuate the space, with a polished earth path interwoven with luminous moss leading inward. The vaulted ceiling of interwoven branches filters diffused green light.",
-        "colorsAndLighting": "The space is bathed in the pulsing, ethereal glow of bioluminescent runes, casting a soft green light that mixes with a distant golden shimmer. Deep greens from mosses are dominant, contrasted by the dark earth and wood.",
-        "atmosphere": "The air is still and serene, carrying a sense of ancient reverence and peace. A gentle, natural warmth emanates from the living tree and the soft glow of the runes.",
-        "materials": "The primary materials are living, moss-covered bark and smooth, polished dark wood. The floor is polished dark earth with luminous moss accents, and stone artifacts are smoothly polished.",
-        "mood": "This place evokes profound spiritual peace and ancient reverence, feeling both sacred and welcoming.",
-        "sounds": "Soft hum, gentle glow, rustling moss, distant chimes.",
-        "spatialLayout": "A cavernous, organic space within a colossal tree, featuring flowing lines and natural archways. A central chamber is hinted at, with navigable passages to the left and right.",
-        "primary_surfaces": "Living moss-covered bark, smooth polished dark wood, polished dark earth.",
-        "secondary_surfaces": "Interwoven tree branches (ceiling), gnarled roots (archway framing).",
-        "accent_features": "Pulsing bioluminescent runes, luminous moss, polished stone artifacts, naturally hollowed branch conduits.",
-        "dominant": "Deep greens (mosses, rune light) - covering walls and accents.",
-        "secondary": "Dark browns and blacks (polished wood, earth floor) - covering large surface areas.",
-        "accent": "Golden shimmer (distant altar) - a subtle, distant highlight.",
-        "ambient": "Neutral (leaning cool from green rune light)",
-        "genre": null,
-        "architectural_tone": "Organic temple architecture seamlessly integrated with colossal flora, featuring smooth, flowing lines, natural archways carved from wood, and subtle stone accents.",
-        "cultural_tone": "Spiritual devotion, nature worship, pilgrimage site.",
-        "materials_base": "Natural, organic, living materials; polished wood and stone.",
-        "mood_baseline": "Sacred, serene, welcoming.",
-        "palette_bias": "Earthy greens and deep natural tones, with luminescent highlights.",
-        "soundscape_base": "Natural ambient sounds, subtle mystical hums.",
-        "flora_base": "Ancient tree, mosses, luminous fungi.",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/QGRCtJP1K_PVopu0eSlxM.jpg",
-      "description": "A sacred interior space carved within a colossal, ancient tree, illuminated by the pulsing, ethereal glow of bioluminescent runes.",
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "foreground left",
-          "description": "Low, broad archway framed by thick, gnarled roots and softly glowing runes, leading to a deeper sanctuary."
-        },
-        {
-          "type": "archway",
-          "position": "midground right",
-          "description": "Series of gently illuminated alcoves integrated into a smooth wooden wall, each holding a polished stone artifact."
-        }
-      ],
-      "dominantElements": [
-        "colossal ancient tree interior",
-        "bioluminescent runes",
-        "polished dark earth path with luminous moss",
-        "gnarled roots",
-        "polished stone artifacts",
-        "interwoven branches ceiling",
-        "hollowed branch ventilation conduits"
-      ],
-      "uniqueIdentifiers": [
-        "tree sanctuary interior",
-        "bioluminescent rune illumination",
-        "living bark and polished wood fusion"
-      ],
-      "searchDesc": "Sacred tree interior, glowing runes, mossy bark walls, polished wood arches.",
-      "slug": "interior-of-the-lumina-sanctuary"
-    },
-    "niche-1763729888304-js7ce4prj": {
-      "id": "niche-1763729888304-js7ce4prj",
-      "type": "niche",
-      "name": "interior of The Lumina Sanctuary",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior of a colossal ancient tree, featuring organic architecture seamlessly integrated with living flora. Interwoven wooden surfaces and smooth stone accents are illuminated by gently pulsing bioluminescent runes. Walls display a tapestry of deep green moss, ancient tree bark, and polished wood, while the ceiling forms a vaulted canopy of branches.",
-        "colorsAndLighting": "Dominant deep greens from moss and flora are bathed in the soft, ethereal glow of bioluminescent runes. The lighting is ambient and pulsing, creating an otherworldly illumination.",
-        "atmosphere": "The air is thick with palpable humidity, carrying the soft, pulsing hum of runes and distant ethereal melodies. A sense of serene transcendence and spiritual devotion pervades the space.",
-        "materials": "Primary materials include ancient tree bark, deep green moss, and polished, flowing wood. Smooth, naturally formed stone accents are also present, textured and integrated into the organic structure.",
-        "mood": "Sacred, serene, and welcoming, evoking spiritual peace and ancient reverence.",
-        "sounds": "Pulsing rune hum, ethereal melodies, distant echoes.",
-        "spatialLayout": "A high, cathedral-like space formed by interwoven branches. A polished wood floor leads from the entrance towards carved archways and alcoves, suggesting further chambers.",
-        "primary_surfaces": "Deep green moss, ancient tree bark, polished flowing wood, naturally formed stone.",
-        "secondary_surfaces": "Interwoven branches, living wood framing.",
-        "accent_features": "Bioluminescent runes, intricate natural wood carvings depicting celestial motifs.",
-        "dominant": "Deep greens - walls and flora",
-        "secondary": "Ethereal glow - runes and moss",
-        "accent": "Dark polished wood - floor and accents",
-        "ambient": "Neutral",
-        "genre": null,
-        "architectural_tone": "Organic temple architecture seamlessly integrated with colossal flora, featuring smooth, flowing lines, natural archways carved from wood, and subtle stone accents. The style emphasizes reverence for the natural forms and is illuminated by naturally occurring bio-luminescence.",
-        "cultural_tone": "Spiritual devotion, nature worship, pilgrimage site.",
-        "materials_base": "Natural wood, stone, moss, living flora",
-        "mood_baseline": "Sacred, serene, and welcoming. A feeling of spiritual peace and ancient reverence.",
-        "palette_bias": "Deep greens and ethereal luminescence",
-        "soundscape_base": "Ambient hum and melodic echoes",
-        "flora_base": "Abundant living flora, bioluminescent moss",
-        "fauna_base": "None"
-      },
-      "imagePath": "https://v3b.fal.media/files/b/kangaroo/0lVAbVmBVF8i8TJzu9MU7.jpg",
-      "description": "A sanctuary interior within a colossal ancient tree, blending organic architecture with living flora, illuminated by bioluminescent runes.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "midground right",
-          "description": "A winding, dimly lit passage framed by living wood."
-        },
-        {
-          "type": "archway",
-          "position": "foreground center",
-          "description": "A carved wooden archway beckoning deeper exploration."
-        },
-        {
-          "type": "alcove",
-          "position": "midground left",
-          "description": "A textured stone alcove with wood carvings."
-        }
-      ],
-      "dominantElements": [
-        "colossal ancient tree structure",
-        "bioluminescent runes",
-        "interwoven branches",
-        "moss-covered walls",
-        "polished wood floor"
-      ],
-      "uniqueIdentifiers": [
-        "carved into colossal ancient tree",
-        "glowing rune-adorned entrance",
-        "bioluminescent moss",
-        "celestial motif wood carvings"
-      ],
-      "searchDesc": "Ancient tree sanctuary with glowing runes, moss, and organic architecture.",
-      "slug": "interior-of-the-lumina-sanctuary"
-    },
     "niche-1763730433341-5r7qo96po": {
       "id": "niche-1763730433341-5r7qo96po",
       "type": "niche",
@@ -5863,61 +5393,116 @@
       "searchDesc": "Subterranean grotto, bioluminescent stone, amber arches, azure vines, veridian pillars.",
       "slug": "interior-of-the-sky-root-citadel"
     },
-    "loc-1763735358194-f9pjw8y5h": {
-      "id": "loc-1763735358194-f9pjw8y5h",
+    "niche-1763979512687-bgh2kwxr9": {
+      "id": "niche-1763979512687-bgh2kwxr9",
+      "type": "niche",
+      "name": "interior of The Solace Pavilion",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Elegantly draped white fabric panels form the curving walls and domed ceiling, supported by a delicate white composite beam grid. A sweeping floor-to-ceiling glass facade offers an expansive view of the ocean sunset. The foreground features a dark polished concrete floor with a pale wood meditation platform.",
+        "colorsAndLighting": "The interior is bathed in the warm, golden light of the sunset, creating a soft, ethereal glow. The dominant color is white from the fabric panels, contrasted by the dark concrete floor.",
+        "atmosphere": "A palpable sense of peaceful inspiration permeates the space. The air feels light and airy, carrying the subtle scent of the ocean. The gentle glow creates a tranquil and contemplative ambiance.",
+        "materials": "The primary materials are translucent, sailcloth-like fabric panels, polished white composite beams, dark polished concrete, and smooth pale wood. A thin dark metal frames the glass facade, and brushed aluminum frames the interior partition.",
+        "mood": "Serene, tranquil, and inspiring, evoking a sense of connection to the natural environment.",
+        "sounds": "Gentle ocean waves, soft ambient hum, subtle fabric rustle.",
+        "spatialLayout": "An open, fluid interior space with curving walls and a domed ceiling. The focal point is a large curved glass facade at the rear. A recessed channel leads into the space, and an archway opens to an alcove.",
+        "primary_surfaces": "Draped white fabric panels (walls and ceiling), polished concrete (floor).",
+        "secondary_surfaces": "Polished white composite beams (structure), pale wood (meditation platform), thin dark metal (glass facade border), brushed aluminum (partition frame).",
+        "accent_features": "Circular meditation platform, recessed floor channel, organically shaped archway, translucent glass partition.",
+        "dominant": "White (fabric panels, ceiling, beams)",
+        "secondary": "Dark concrete (floor)",
+        "accent": "Golden sunset light, pale wood, dark metal, brushed aluminum.",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": "organic, fluid, and lightweight",
+        "cultural_tone": "A place of contemplation, artistic inspiration, and peaceful retreat, valuing sustainability and innovative use of reclaimed materials.",
+        "materials_base": "Translucent and reflective materials, polished composites",
+        "mood_baseline": "Serene, tranquil, and inspiring",
+        "palette_bias": "White, warm golden hues",
+        "soundscape_base": "Natural, calm",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/zAc5vihg7N3Y7IrPfst1o.jpg",
+      "description": "The serene and light-filled interior of The Solace Pavilion, characterized by flowing, draped fabric walls and a domed ceiling, opening onto a breathtaking ocean sunset view.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "foreground left",
+          "description": "Subtle recessed channel in the concrete floor leading towards the midground."
+        },
+        {
+          "type": "archway",
+          "position": "midground right",
+          "description": "Slender, organically shaped archway leading to an alcove."
+        },
+        {
+          "type": "partition",
+          "position": "midground center",
+          "description": "Subtly angled translucent glass partition."
+        }
+      ],
+      "dominantElements": [
+        "Draped white fabric panels",
+        "Curved glass facade",
+        "Polished concrete floor",
+        "Composite beam framework"
+      ],
+      "uniqueIdentifiers": [
+        "Sailcloth-like fabric walls",
+        "Curving interior architecture",
+        "Ocean sunset view through glass facade"
+      ],
+      "searchDesc": "Serene Solace Pavilion interior with draped white fabric, ocean sunset view, and concrete floor.",
+      "slug": "interior-of-the-solace-pavilion"
+    },
+    "loc-1763981592554-e2du1t0y3": {
+      "id": "loc-1763981592554-e2du1t0y3",
       "type": "host",
-      "name": "Moebius-like Pastel Desert",
+      "name": "Xylos",
       "spaceType": "exterior",
       "dna": {
         "type": "host",
-        "name": "Moebius-like Pastel Desert",
-        "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+        "name": "Xylos",
+        "description": "An alien otherworldly planet characterized by its surreal landscapes and bizarre flora.",
         "dna": {
-          "looks": "A vast, undulating landscape sculpted into soft, flowing dunes that defy gravity and conventional geology. The terrain is rendered in impossible pastel hues, creating a dreamlike and disorienting visual experience. Sparse, delicate flora might emerge from the smooth surfaces.",
-          "colorsAndLighting": "The scene is bathed in a soft, diffused, ethereal light, casting subtle gradients and minimal shadows. The palette is dominated by a symphony of muted pastels, primarily soft pinks, pale whites, and gentle turquoises, creating a tranquil and otherworldly atmosphere.",
-          "atmosphere": "The air is still and appears unnaturally clear, with a subtle shimmer that suggests extreme dryness and a lack of conventional atmospheric phenomena. There is a profound sense of quiet and stillness, an almost palpable lack of wind or sound, contributing to an otherworldly tranquility.",
-          "materials": "The primary visible materials are smooth, seamless, and almost liquid-looking surfaces that form both the dunes and any monolithic structures. These materials possess a matte, soft finish, suggesting they are composed of something other than earth or stone.",
-          "mood": "Tranquil, serene, and profoundly alien. There is a sense of peaceful isolation and a quiet, contemplative beauty that borders on the surreal.",
-          "sounds": "Silence, soft ambient hum, gentle atmospheric shimmer",
-          "spatialLayout": "Expansive and open, with a sense of limitless horizon. The landscape features rolling, organic forms with gradual slopes and sweeping curves, creating a feeling of vastness and gentle undulation.",
-          "primary_surfaces": [
-            "Smooth, seamless pastel dunes",
-            "Softly curved monolithic surfaces"
-          ],
-          "secondary_surfaces": [
-            "Sandy terrain (subtle)"
-          ],
-          "accent_features": [
-            "Subtle color shifts in light",
-            "Delicate, sparse flora"
-          ],
-          "dominant": "Pastel Pink",
-          "secondary": "Pale White",
-          "accent": "Pale Turquoise",
-          "ambient": "Cool and ethereal",
+          "looks": "A bizarre and vibrant alien world with gravity-defying landmasses and enigmatic constructions. The landscape is a blend of natural formations and ancient, possibly derelict, technology.",
+          "colorsAndLighting": "The sky is a dominant, saturated purple, casting an ethereal glow. Lighting conditions are often dramatic, with strong contrasts and otherworldly hues.",
+          "atmosphere": "The atmosphere is thin and alien, carrying faint, unidentifiable scents. Unpredictable atmospheric phenomena, such as shimmering heat hazes or localized nebulae, are common.",
+          "materials": "A mix of organic, crystalline, and unknown metallic alloys. Surfaces can range from smooth, reflective alien metals to rough, porous geological formations.",
+          "mood": "A sense of profound mystery, ancient isolation, and awe-inspiring strangeness. There's an underlying feeling of discovery and potential danger.",
+          "sounds": "Distant hums, chimes, alien winds, faint mechanical whirs",
+          "spatialLayout": "Vast, open expanses interspersed with towering, alien architecture and colossal natural formations. Verticality is a key characteristic, with floating elements.",
+          "primary_surfaces": "Unknown alien metals, crystalline rock, hardened organic matter",
+          "secondary_surfaces": "Worn stone, dust, faint energy fields",
+          "accent_features": "Bioluminescent flora, strange energy conduits, weathered alien glyphs",
+          "dominant": "Purple",
+          "secondary": "Teal, Magenta",
+          "accent": "Metallic Silver, Electric Blue",
+          "ambient": "Ethereal and otherworldly",
           "genre": "sci-fi",
-          "architectural_tone": "monolithic organic curves, seamless construction, smooth matte finishes, integrated forms, absence of sharp edges or discernible joints",
-          "cultural_tone": "alien artifact, ancient observatory, natural anomaly",
-          "materials_base": "otherworldly seamless composites, matte and soft textures, dust-like particulates",
-          "mood_baseline": "serene isolation, alien tranquility, contemplative wonder",
-          "palette_bias": "soft pastel gradients, cool tones with warm undertones",
-          "soundscape_base": "minimalist ambient tones, subtle atmospheric hums",
-          "flora_base": "sparse, delicate, otherworldly crystalline or fiber-like structures",
+          "architectural_tone": "organic alien futurism with influences of biomorphic design and monumental scale, featuring sweeping curves, integrated crystalline structures, and weathered, advanced alloys",
+          "cultural_tone": "ancient, enigmatic, and lost civilizations",
+          "materials_base": "advanced alloys, bio-engineered compounds, exotic crystals, weathered stone",
+          "mood_baseline": "mysterious, awe-inspiring, solitary",
+          "palette_bias": "vibrant, saturated, and otherworldly color palettes with a strong emphasis on purples, magentas, and blues",
+          "soundscape_base": "ambient electronic drones, subtle chimes, wind-like atmospheric effects",
+          "flora_base": "Bioluminescent, crystalline, or tentacled alien plants",
           "fauna_base": "None"
         },
         "navigableElements": [],
         "dominantElements": [
-          "Impossible geometric dunes",
-          "Ethereal sky formations",
-          "Absence of conventional landmarks"
+          "Floating Islands",
+          "Alien Structures",
+          "Abandoned Machines",
+          "Purple Sky"
         ],
         "uniqueIdentifiers": [
-          "Otherworldly pastel palette",
-          "Surreal, flowing landscapes",
-          "Lack of sharp angles"
+          "Otherworldly Flora",
+          "Surreal Topography"
         ],
-        "searchDesc": "A surreal, pastel desert plateau with impossible geometry and flowing, organic forms.",
-        "slug": "moebius-like-pastel-desert",
+        "searchDesc": "An alien planet with floating islands, strange structures, abandoned tech, and vibrant skies.",
+        "slug": "xylos",
         "semantic": {
           "atmosphere": "",
           "mood": ""
@@ -5927,68 +5512,62 @@
           "style": ""
         },
         "profile": {
-          "name": "Moebius-like Pastel Desert",
-          "looks": "A surreal, pastel-hued desert plateau with impossible geometry.",
+          "name": "Xylos",
+          "looks": "An alien otherworldly planet characterized by its surreal landscapes and bizarre flora.",
           "atmosphere": "",
           "mood": ""
         }
       },
-      "imagePath": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
-      "description": "A surreal, pastel-hued desert plateau with impossible geometry."
+      "imagePath": "https://v3b.fal.media/files/b/lion/cU5mzPpMZc11Y_xxmOwNh.jpg",
+      "description": "An alien otherworldly planet characterized by its surreal landscapes and bizarre flora."
     },
-    "acd7b9bd-155d-475a-8e2c-401f98010caf": {
-      "id": "acd7b9bd-155d-475a-8e2c-401f98010caf",
+    "ad6e5960-bf3d-4f64-830d-ac5f473f29f8": {
+      "id": "ad6e5960-bf3d-4f64-830d-ac5f473f29f8",
       "type": "region",
-      "name": "Moebius-like Pastel Desert",
+      "name": "Xylos",
       "spaceType": "exterior",
       "dna": {
         "type": "region",
-        "name": "Moebius-like Pastel Desert",
-        "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+        "name": "Xylos",
+        "description": "The primary surface region of Xylos, characterized by vast deserts, rolling dunes, and scattered alien structures.",
         "dna": {
-          "looks": "Expansive, softly sculpted desert dunes in a range of impossible pastel shades. The landscape features sweeping curves and flowing lines, with occasional subtly out-of-place geological formations. The horizon is vast and often indistinct due to atmospheric effects.",
-          "colorsAndLighting": "Dominated by soft, diffused light that enhances the pastel palette of pale pinks, whites, and turquoises. Gentle gradients define the shapes of the dunes, with a subtle shimmer in the air. The light feels diffuse and cool.",
-          "atmosphere": "Arid and still, with a subtle visual distortion suggesting a unique atmospheric composition. The air is clear, and there is a profound sense of quiet, contributing to the region's alien and tranquil character.",
-          "materials": "Primarily composed of finely granulated material that forms smooth, seamless dunes. Any rock-like formations are smooth and rounded, lacking sharp edges. The overall impression is of a soft, yielding, yet solid surface.",
-          "mood": "Peaceful, isolated, and dreamlike, with an underlying sense of ancient stillness.",
-          "sounds": "Whispering dust, faint atmospheric hums, distant silence",
-          "spatialLayout": "Open and seemingly endless, characterized by rolling hills and sweeping plains. The layout emphasizes gradual slopes and organic curves, creating a sense of gentle vastness.",
-          "primary_surfaces": [
-            "Smooth, pastel-colored sand dunes"
-          ],
-          "secondary_surfaces": [
-            "Undulating desert terrain"
-          ],
-          "accent_features": [
-            "Subtle color variations in sand",
-            "Occasional smooth rock outcrops"
-          ],
-          "dominant": "Pale Pink",
-          "secondary": "Pale White",
-          "accent": "Pale Turquoise",
-          "ambient": "Cool",
+          "looks": "Vast, undulating sand dunes stretch towards a horizon punctuated by alien structures and massive, floating islands. The terrain is sculpted by alien winds and unknown geological processes.",
+          "colorsAndLighting": "A pervasive purple hue from the sky saturates the landscape, with sands appearing in shades of ochre, rose, and pale violet. Shadows are deep and sharp.",
+          "atmosphere": "Dry and arid, with a constant whisper of alien wind moving across the dunes. The air might carry fine particulate matter that catches the unusual light.",
+          "materials": "Predominantly eroded sandstone, compacted alien dust, and weathered remnants of metallic structures. Some areas may feature exposed crystalline veins.",
+          "mood": "Solitary, desolate, and vast. A sense of forgotten history and immense scale pervades the region.",
+          "sounds": "Whispering winds, distant rumble, occasional metallic creaking",
+          "spatialLayout": "Open plains and rolling dunes broken by colossal, naturally formed rock spires and the bases of immense alien constructions. The sky is a constant, dominant presence.",
+          "primary_surfaces": "Compacted alien dust, eroded sandstone",
+          "secondary_surfaces": "Weathered alien metals, exposed crystalline formations",
+          "accent_features": "Scattered metallic debris, strange rock formations",
+          "dominant": "Purple",
+          "secondary": "Ochre, Rose",
+          "accent": "Metallic grey, Pale violet",
+          "ambient": "Ethereal and alien",
           "genre": null,
           "architectural_tone": null,
           "cultural_tone": null,
-          "materials_base": "fine-grained desert composite, smooth, matte texture",
-          "mood_baseline": "serene isolation, alien calm",
-          "palette_bias": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "earthy tones with dominant purple overtones, desert-like palette",
           "soundscape_base": null,
-          "flora_base": "sparse, fibrous, crystalline growths",
+          "flora_base": "Hardy, low-lying alien desert plants, crystalline growths",
           "fauna_base": null
         },
         "navigableElements": [],
         "dominantElements": [
-          "Vast undulating pastel dunes",
-          "Unusual geological formations",
-          "Distant monolithic structures"
+          "Floating Island Chains",
+          "Dune Seas",
+          "Towering Rock Formations",
+          "Abandoned Alien Structures"
         ],
         "uniqueIdentifiers": [
-          "Flowing geometric dunes",
-          "Pervasive pastel color scheme"
+          "Visible Sky Desert",
+          "Exotic Geology"
         ],
-        "searchDesc": "A vast expanse of surreal, pastel-colored desert dunes with flowing, impossible geometry and a sense of profound alien tranquility.",
-        "slug": "moebius-like-pastel-desert-region",
+        "searchDesc": "Expansive desert landscapes with floating islands and ancient alien ruins under a purple sky.",
+        "slug": "xylos-region",
         "semantic": {
           "atmosphere": "",
           "mood": ""
@@ -5998,47 +5577,44 @@
           "style": ""
         },
         "profile": {
-          "name": "Moebius-like Pastel Desert",
-          "looks": "A surreal, pastel-hued desert plateau with impossible geometry.",
+          "name": "Xylos",
+          "looks": "The primary surface region of Xylos, characterized by vast deserts, rolling dunes, and scattered alien structures.",
           "atmosphere": "",
           "mood": ""
         }
       },
       "imagePath": "",
-      "description": "A surreal, pastel-hued desert plateau with impossible geometry."
+      "description": "The primary surface region of Xylos, characterized by vast deserts, rolling dunes, and scattered alien structures."
     },
-    "4d1f26b6-9333-4d73-81a1-a387f7223ecb": {
-      "id": "4d1f26b6-9333-4d73-81a1-a387f7223ecb",
+    "4372c941-5c0c-402a-a56d-a6bd7bc569af": {
+      "id": "4372c941-5c0c-402a-a56d-a6bd7bc569af",
       "type": "location",
-      "name": "The Solitary Spire",
+      "name": "Xylos",
       "spaceType": "exterior",
       "dna": {
         "type": "location",
-        "name": "The Solitary Spire",
-        "description": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
-        "looks": "Smooth, undulating exterior walls in soft pastel shades, tapering upwards. The base is distinguished by a vividly colored, narrow entrance.",
-        "atmosphere": "Still, dry air with a faint shimmer of heat haze. The silence is profound, broken only by the whisper of the wind across the plateau.",
-        "mood": "Otherworldly, enigmatic",
+        "name": "Xylos",
+        "description": "A specific desolate area within the Xylos region, featuring an abandoned alien building partially reclaimed by organic growth.",
         "dna": {
-          "looks": "A surreal, pastel desert plateau stretches across the landscape, sculpted into soft, undulating dunes.  Dominating the midground is a tall, monolithic tower with smooth, curved walls that taper to a point. The tower's base is carved with a narrow, glowing entry slit.  Scattered across the terrain are sparse, delicate trees and soft, cotton-like formations. The overall impression is one of smooth, organic forms and a tranquil, otherworldly environment.",
-          "colorsAndLighting": "The scene is illuminated by a soft, diffused light, casting gentle highlights and minimal shadows. The overall tone is cool and ethereal, with the sky transitioning from a pale turquoise near the horizon to a softer hue overhead.  The turquoise entry slit emits its own vibrant glow, providing a stark contrast.",
-          "atmosphere": "The air appears clear and still, with a subtle visual shimmer suggesting a dry, arid environment.  The absence of discernible wind or atmospheric disturbance contributes to a profound sense of quiet.",
-          "materials": "The tower is constructed from a single, seamless material with a smooth, matte finish, indistinguishable from the surrounding desert's primary surface. The entry slit appears to be made of a luminous crystalline material or solidified energy.",
-          "mood": "Mysterious, inviting, and awe-inspiring. The spire feels like an ancient, purposeful artifact within the desolate landscape.",
-          "sounds": "Faint humming from entry slit, distant desert silence",
-          "spatialLayout": "The foreground consists of a gently sloping, sandy terrain with subtle textures. In the midground, the prominent monolithic tower rises directly from this plateau. The background features a vast, pastel-colored sky with soft, ethereal clouds, and distant, sparse vegetation.",
-          "primary_surfaces": "Smooth, seemingly seamless material forming the tower and dunes",
-          "secondary_surfaces": "Sandy terrain",
-          "accent_features": "Glowing turquoise light from entry slit",
-          "dominant": "Pale white and soft pink (dunes, tower, clouds)",
-          "secondary": "Pale turquoise (sky, entry slit)",
-          "accent": "Vibrant turquoise (entry slit)",
-          "ambient": "Soft pastel hues of pink and turquoise",
+          "looks": "A vast, open desert landscape with rolling dunes under a vibrant purple sky. In the midground, a solitary, imposing abandoned alien building stands as a stark silhouette against the horizon.",
+          "colorsAndLighting": "The dominant purple of the sky creates a surreal, twilight-like illumination. The building itself is shadowed, hinting at decay. Distant floating islands catch the light in unusual ways.",
+          "atmosphere": "Dry, arid desert air, with the faint scent of ozone and alien minerals. A sense of stillness and abandonment is palpable.",
+          "materials": "The building appears to be constructed from a dark, matte alien alloy or weathered stone. The surrounding ground is composed of fine, alien sand and dust.",
+          "mood": "Desolate, mysterious, and melancholic. The abandoned structure evokes a sense of lost purpose and the passage of immense time.",
+          "sounds": "Distant wind, faint mechanical hum, settling dust",
+          "spatialLayout": "A wide, expansive desert plain leading to a solitary, imposing structure. The horizon is defined by the sky and distant floating islands.",
+          "primary_surfaces": "Alien sand, weathered stone or alloy",
+          "secondary_surfaces": "Dust, scattered metallic debris",
+          "accent_features": "Geometric alien architecture, faint external glyphs",
+          "dominant": "Purple",
+          "secondary": "Brown, Grey",
+          "accent": "Deep Blue, Metallic Silver",
+          "ambient": "Ethereal and alien",
           "genre": null,
-          "architectural_tone": "monolithic organic curves, seamless construction, smooth matte finishes, integrated forms, absence of sharp edges or discernible joints, luminous material for openings",
-          "cultural_tone": "ancient alien monument, solitary sanctuary",
-          "materials_base": "otherworldly seamless composites, smooth matte finish, luminous crystalline material",
-          "mood_baseline": "solitary mystery, alien allure",
+          "architectural_tone": "monumental alien architecture with severe geometric forms, weathered advanced alloys, and a sense of imposing, ancient construction",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
           "palette_bias": null,
           "soundscape_base": null,
           "flora_base": null,
@@ -6046,26 +5622,23 @@
         },
         "navigableElements": [
           {
-            "type": "door",
-            "position": "center base, midground",
-            "description": "A glowing turquoise entry slit carved into the monolithic tower's base."
+            "type": "passage",
+            "position": "center of background",
+            "description": "A gaping, dark entrance to the abandoned building."
           }
         ],
         "dominantElements": [
-          "Monolithic curved tower ~60m tall, VERTICAL STRUCTURE, center, midground",
-          "Pastel desert plateau terrain, foreground/midground",
-          "Turquoise entry slit, base of tower, midground",
-          "Sparse delicate trees, scattered, background/midground",
-          "Soft pastel clouds, sky, background"
+          "Abandoned Alien Building",
+          "Sand Dunes",
+          "Floating Islands in the distance"
         ],
         "uniqueIdentifiers": [
-          "Monolithic curved tower",
-          "Single turquoise entry slit",
-          "Pastel desert plateau landscape"
+          "Visible sky desert",
+          "Dunes",
+          "Abandoned Building"
         ],
-        "searchDesc": "[Location - Exterior] Pastel desert plateau with a curved tower. Has: turquoise entry slit (midground)",
-        "slug": "the-solitary-spire",
-        "imageUrl": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+        "searchDesc": "An abandoned alien building nestled within desert dunes, under a vibrant purple sky.",
+        "slug": "xylos-location",
         "semantic": {
           "atmosphere": "",
           "mood": ""
@@ -6075,14 +5648,626 @@
           "style": ""
         },
         "profile": {
-          "name": "The Solitary Spire",
-          "looks": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
+          "name": "Xylos",
+          "looks": "A specific desolate area within the Xylos region, featuring an abandoned alien building partially reclaimed by organic growth.",
           "atmosphere": "",
           "mood": ""
         }
       },
-      "imagePath": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
-      "description": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit."
+      "imagePath": "",
+      "description": "A specific desolate area within the Xylos region, featuring an abandoned alien building partially reclaimed by organic growth."
+    },
+    "5e7a5688-e82e-4273-88c6-0492e71c95b9": {
+      "id": "5e7a5688-e82e-4273-88c6-0492e71c95b9",
+      "type": "niche",
+      "name": "The Tentacle Grove",
+      "spaceType": "interior",
+      "dna": {
+        "type": "niche",
+        "name": "The Tentacle Grove",
+        "description": "The interior space of the abandoned building, now overgrown and dominated by massive, writhing organic tentacles.",
+        "looks": "Cavernous spaces within the spire, where massive, leathery tentacles snake through broken doorways and across floors. Small, abandoned alien machines are scattered amongst the growth, some still emitting faint, erratic lights.",
+        "atmosphere": "A cloying, humid air thick with a strange, organic musk. The pulsating light from the tentacles creates shifting patterns of shadow and luminescence.",
+        "mood": "Eerie, alien, decayed",
+        "imageUrl": "https://v3b.fal.media/files/b/lion/cU5mzPpMZc11Y_xxmOwNh.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Tentacle Grove",
+          "looks": "The interior space of the abandoned building, now overgrown and dominated by massive, writhing organic tentacles.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/cU5mzPpMZc11Y_xxmOwNh.jpg",
+      "description": "The interior space of the abandoned building, now overgrown and dominated by massive, writhing organic tentacles."
+    },
+    "niche-1763981664878-j5dusm9yf": {
+      "id": "niche-1763981664878-j5dusm9yf",
+      "type": "niche",
+      "name": "interior of The Tentacle Grove",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Massive, leathery tentacles writhe and snake through a cavernous alien interior, draped across immense, geometrically severe structures and towering pillars. The walls are dark, weathered alien alloy with intricate panels and glowing blue conduits. Abandoned alien machines are scattered amongst the organic growth.",
+        "colorsAndLighting": "Dominant purple light from the desert sky filters through colossal viewports, casting long, distorted shadows. Deep blue light emanates erratically from conduits and the veins of the tentacles, creating a disorienting luminescence.",
+        "atmosphere": "The air is thick with the scent of ozone and alien minerals. The space is cavernous and echoing, suggesting a vast, abandoned, and ancient place. A sense of oppressive, yet mysterious, organic presence pervades.",
+        "materials": "Walls and structures are made of dark, weathered alien alloy with intricate, interlocking plates and severe geometric forms. The floor is dark, polished stone, fractured by alien sand. Tentacles have a disturbing blend of leathery hide and bio-luminescent veins.",
+        "mood": "The abandoned structure evokes a sense of lost purpose and the passage of immense time, contributing to a desolate and melancholic atmosphere.",
+        "sounds": "Echoing, organic writhes, faint hums, mineral scent.",
+        "spatialLayout": "A cavernous, echoing interior with colossal structures. Entry points are suggested by an arched passageway and a visible staircase leading to a platform. The space is dominated by verticality and expansive, shadowed crevices.",
+        "primary_surfaces": "Dark, weathered alien alloy walls and floors.",
+        "secondary_surfaces": "Polished stone floor, metallic barriers and railings.",
+        "accent_features": "Leathery, bio-luminescent tentacles, deep blue glowing conduits, etched alien glyphs on pillars.",
+        "dominant": "Purple (dominant in sky filter and distant dunes).",
+        "secondary": "Deep Blue (conduits, tentacle veins, railing luminescence).",
+        "accent": "Dark Grey/Black (alloy structures, floor).",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "monumental alien architecture with severe geometric forms, weathered advanced alloys, and a sense of imposing, ancient construction",
+        "cultural_tone": "ancient, enigmatic, and lost civilizations",
+        "materials_base": "weathered advanced alloys, dark stone, bio-luminescent organic matter",
+        "mood_baseline": "Desolate, mysterious, and melancholic. The abandoned structure evokes a sense of lost purpose and the passage of immense time.",
+        "palette_bias": "Dominant purple with deep blue accents",
+        "soundscape_base": "Echoing, subterranean, industrial hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/QUt6rYUX1EVdX2WwkIUeB.jpg",
+      "description": "A monumental alien interior filled with writhing tentacles and severe geometric structures, illuminated by deep blue and purple light.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "foreground left",
+          "description": "A gaping, arched passageway leading into darkness."
+        },
+        {
+          "type": "staircase",
+          "position": "midground right",
+          "description": "A stark, metallic staircase ascending diagonally."
+        },
+        {
+          "type": "platform",
+          "position": "midground right",
+          "description": "A raised platform partially obscured by a tentacle."
+        }
+      ],
+      "dominantElements": [
+        "massive leathery tentacles",
+        "geometrically severe structures",
+        "colossal segmented viewports",
+        "angular pillars"
+      ],
+      "uniqueIdentifiers": [
+        "writhing tentacles",
+        "alien alloy construction",
+        "deep blue glowing conduits",
+        "purple desert sky filtering through viewports"
+      ],
+      "searchDesc": "Monumental alien interior with writhing tentacles, severe geometry, and purple/blue light.",
+      "slug": "interior-of-the-tentacle-grove"
+    },
+    "loc-1763981695689-q6xif9eqa": {
+      "id": "loc-1763981695689-q6xif9eqa",
+      "type": "host",
+      "name": "The Cybernetic Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Cybernetic Expanse",
+        "description": "A world where organic life and advanced technology have fused into a single, evolving entity.",
+        "dna": {
+          "looks": "A dynamic landscape where colossal biomechanical entities interweave with synthetic flora and pulsing energy conduits. Structures often mimic organic forms scaled to immense proportions, reflecting a world built by and for integrated life.",
+          "colorsAndLighting": "Dominated by cool, metallic blues, deep purples, and vibrant bioluminescent greens and oranges. Lighting is often diffused, emanating from internal energy sources and the hazy atmosphere, creating an ethereal glow.",
+          "atmosphere": "The air is thick with a fine, mineral-rich mist that carries faint electric charges. A subtle hum of latent energy pervades, and the temperature is consistently moderate, regardless of external conditions.",
+          "materials": "Primary materials are dark, obsidian-like metals, interwoven with fibrous bio-polymers and crystalline structures. Surfaces are often smooth and polished, interspersed with intricate, etched patterns.",
+          "mood": "A sense of awe, mystery, and alienness, tinged with a quiet, pervasive power. The world feels ancient and alive, both beautiful and intimidating.",
+          "sounds": "Low hums, soft whirs, faint chimes, organic clicks, subtle static.",
+          "spatialLayout": "Vast, interconnected spaces that blend natural and artificial topography. Elevated pathways and fluid, non-Euclidean geometries are common.",
+          "primary_surfaces": "Dark, polished metallic alloys, bio-luminescent organic polymers.",
+          "secondary_surfaces": "Crystalline formations, synthetic fibrous materials, etched metal plating.",
+          "accent_features": "Pulsing energy veins, bioluminescent patterns, integrated crystalline growths.",
+          "dominant": "Dark blues, deep purples, metallic greys.",
+          "secondary": "Bioluminescent greens, electric oranges, stark whites.",
+          "accent": "Deep reds, sharp cyans.",
+          "ambient": "Cool, diffused glow with internal light sources.",
+          "genre": "sci-fi",
+          "architectural_tone": "biomechanical fusion aesthetic with organic growth patterns, integrated energy conduits, and smooth, often dark metallic surfaces; structures mimic skeletal, vertebral, or crystalline forms with fluid, non-linear elements",
+          "cultural_tone": "post-biological integration; a society where the distinction between life and machine has blurred, leading to unique forms of existence and societal organization centered around shared consciousness and energy.",
+          "materials_base": "Dark, advanced alloys, bio-integrated polymers, crystalline structures, polished composites.",
+          "mood_baseline": "Mysterious, awe-inspiring, alien, powerful.",
+          "palette_bias": "Cool, dark tones with sharp, vibrant bioluminescent accents.",
+          "soundscape_base": "Subtle, ambient electronic hums and organic synthesis.",
+          "flora_base": "Bio-engineered crystalline flora, metallic vines, bioluminescent fungi.",
+          "fauna_base": "Synthetic organisms, bio-mechanical constructs, sentient energy forms."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Vast biomechanical structures",
+          "Networked energy conduits",
+          "Bio-integrated flora"
+        ],
+        "uniqueIdentifiers": [
+          "World-spanning nanite network",
+          "Sentient planetary consciousness"
+        ],
+        "searchDesc": "A fused world of organic and technological life, filled with biomechanical wonders.",
+        "slug": "the-cybernetic-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Cybernetic Expanse",
+          "looks": "A world where organic life and advanced technology have fused into a single, evolving entity.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/ejfkCIH_BzLOucb2DM8tQ.jpg",
+      "description": "A world where organic life and advanced technology have fused into a single, evolving entity."
+    },
+    "4dfaab0b-1f03-4234-bbe9-aaae2a3858f3": {
+      "id": "4dfaab0b-1f03-4234-bbe9-aaae2a3858f3",
+      "type": "region",
+      "name": "The Cybernetic Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Cybernetic Expanse",
+        "description": "The primary biome of The Cybernetic Expanse, characterized by vast, interconnected systems and colossal biomechanical formations that dictate the landscape.",
+        "dna": {
+          "looks": "The landscape is dominated by immense, dark, vertebral-like structures rising from a misty, ground-level plane. Thick, cable-like tendrils snake across the surfaces of these colossal formations, suggesting an organic yet artificial presence.",
+          "colorsAndLighting": "A muted palette of dark greys and deep charcoals for the structures, softened by a pervasive, light grey mist. Occasional faint, warm light emanates from recessed areas, creating a subtle contrast.",
+          "atmosphere": "A dense, cool mist blankets the region, obscuring visibility beyond short distances. The air feels heavy and damp, carrying a faint, metallic scent and a low, resonant hum.",
+          "materials": "Predominantly dark, textured metallic alloys, with hints of weathered stone and hardy, bio-integrated vegetation clinging to surfaces.",
+          "mood": "Foreboding, mysterious, and ancient. The sheer scale of the structures evokes a sense of insignificance and awe.",
+          "sounds": "Distant, low thrumming, occasional metallic groans, soft sighing of wind through cables.",
+          "spatialLayout": "Vast, open plains punctuated by colossal, imposing structures. The ground plane is often uneven, formed from aggregated metallic debris and overgrown synthetic flora.",
+          "primary_surfaces": "Dark, textured metallic alloys.",
+          "secondary_surfaces": "Weathered stone, bio-integrated fibrous materials.",
+          "accent_features": "Thick, coiled cables resembling tendons, subtle internal lighting.",
+          "dominant": "Dark greys, charcoals.",
+          "secondary": "Muted greens, light greys.",
+          "accent": "Faint warm oranges, deep blues.",
+          "ambient": "Cool, diffused glow with a focal point of warm light.",
+          "genre": null,
+          "architectural_tone": "biomechanical vertebral architecture with massive, segmented structures, integrated musculature-like cabling, and skeletal entrances; surfaces are rough-hewn and dark, suggesting ancient organic growth.",
+          "cultural_tone": null,
+          "materials_base": "Dark, weathered metallic alloys, petrified bio-matter, rough stone.",
+          "mood_baseline": "Foreboding, ancient, imposing.",
+          "palette_bias": "Monochromatic dark greys with minimal muted accents.",
+          "soundscape_base": "Deep, resonant ambient hums and organic groans.",
+          "flora_base": "Hardy, metallic-sheened mosses, low-lying synthetic scrub, bio-integrated vines."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "The Vertebral Citadel",
+          "Energy Nexus arteries",
+          "Scattered biomechanical outcroppings"
+        ],
+        "uniqueIdentifiers": [
+          "Primary energy distribution hub",
+          "Dense mist formations"
+        ],
+        "searchDesc": "The vast central biome of The Cybernetic Expanse, featuring massive biomechanical towers and energy conduits.",
+        "slug": "the-cybernetic-expanse-region",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Cybernetic Expanse",
+          "looks": "The primary biome of The Cybernetic Expanse, characterized by vast, interconnected systems and colossal biomechanical formations that dictate the landscape.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "The primary biome of The Cybernetic Expanse, characterized by vast, interconnected systems and colossal biomechanical formations that dictate the landscape."
+    },
+    "934c1cad-9bd0-4a68-8c39-42c5131bd58e": {
+      "id": "934c1cad-9bd0-4a68-8c39-42c5131bd58e",
+      "type": "location",
+      "name": "The Vertebral Citadel",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Vertebral Citadel",
+        "description": "A formidable biomechanical tower, its form reminiscent of colossal, dark metallic vertebrae, with cable-like structures acting as tendons. A recessed skeletal gateway leads inward.",
+        "looks": "A towering structure composed of interlocking, dark metallic segments resembling vertebrae. Thick, cable-like appendages are draped along its surface like tendons. A skeletal gateway, recessed into the base, serves as the entrance.",
+        "atmosphere": "A faint, resonating hum emanates from within, and the air carries a metallic tang with a subtle electrical charge.",
+        "mood": "Intimidating, functional, alien",
+        "dna": {
+          "looks": "A colossal, dark metallic structure dominates the landscape, resembling a monstrous, segmented vertebral column. Thick, cable-like appendages extend from its surface, draped like organic tendons. The central facade features a gaping, skeletal maw with sharp, metallic teeth and a recessed gateway at its base. The scale is immense, dwarfing the surrounding environment and suggesting a powerful, ancient entity.",
+          "colorsAndLighting": "The lighting is dim and moody, with a cool, diffused glow emanating from the hazy atmosphere. A faint, warm light spills from the recessed gateway, creating a focal point and suggesting an interior space. The contrast is low, contributing to the somber and alien feel of the location.",
+          "atmosphere": "A pervasive, soft mist blankets the scene, obscuring distant details and creating an ethereal, slightly damp environment. The air appears thick with a subtle haze, lending an otherworldly and mysterious quality to the atmosphere.",
+          "materials": "The primary materials are rough, dark metallic alloys, with some areas showing hints of weathered stone. The 'tendon' cables appear to be a dense, fibrous composite.",
+          "mood": "Imposing, mysterious, and ancient. The skeletal gateway suggests both entry and a sense of being consumed.",
+          "sounds": "Distant low hum, soft dripping, subtle metallic creaks.",
+          "spatialLayout": "The foreground consists of a rough stone pathway winding through low-lying, green vegetation and patches of tall grass. The midground is dominated by the immense biomechanical structure, which rises steeply from the landscape. The background features a misty, mountainous terrain with faint silhouettes of flying creatures and dense foliage clinging to the cliff faces.",
+          "primary_surfaces": "Dark, textured metal",
+          "secondary_surfaces": "Stone, vegetation",
+          "accent_features": "Glowing light within gateway, sharp metallic teeth",
+          "dominant": "Dark grey (structure)",
+          "secondary": "Muted greens (vegetation), light grey (mist)",
+          "accent": "Warm yellow/orange (gateway light)",
+          "ambient": "Cool, diffused blue-grey",
+          "genre": null,
+          "architectural_tone": "colossal biomechanical vertebral architecture, with massive, interlocking segments resembling vertebrae; exterior details include thick, rope-like cables acting as structural tendons and skeletal-themed entrances; surfaces are rough and imposing, emphasizing raw power.",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "A recessed, arched gateway leading into the structure, illuminated from within."
+          },
+          {
+            "type": "stairs",
+            "position": "center, midground",
+            "description": "A set of dark, metallic stairs ascending within the skeletal maw, leading towards a bright light."
+          }
+        ],
+        "dominantElements": [
+          "Biomechanical tower resembling vertebrae (center, background)",
+          "Skeletal gateway entrance (center, midground)",
+          "Cable-like appendages (surface, midground)",
+          "Jagged metallic teeth (center, midground)",
+          "Stone pathway leading to entrance (foreground)"
+        ],
+        "uniqueIdentifiers": [
+          "Vertebral structure",
+          "Skeletal maw entrance",
+          "Draped cable appendages"
+        ],
+        "searchDesc": "[Location - Exterior] Biomechanical tower with skeletal maw. Has: recessed gateway (center, midground), stairs (center, midground)",
+        "slug": "the-vertebral-citadel",
+        "imageUrl": "https://v3b.fal.media/files/b/rabbit/ejfkCIH_BzLOucb2DM8tQ.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Vertebral Citadel",
+          "looks": "A formidable biomechanical tower, its form reminiscent of colossal, dark metallic vertebrae, with cable-like structures acting as tendons. A recessed skeletal gateway leads inward.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/ejfkCIH_BzLOucb2DM8tQ.jpg",
+      "description": "A formidable biomechanical tower, its form reminiscent of colossal, dark metallic vertebrae, with cable-like structures acting as tendons. A recessed skeletal gateway leads inward."
+    },
+    "niche-1763981819080-z1pa4nel5": {
+      "id": "niche-1763981819080-z1pa4nel5",
+      "type": "niche",
+      "name": "interior of The Vertebral Citadel",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Rough, dark metallic walls curve inward, forming a cylindrical space with a vaulted ceiling of massive, ribbed metallic segments. Thick, intricate cable-like appendages pulse with faint warm light. Jagged metallic teeth protrude from upper walls. The floor is a mosaic of dark stone tiles and textured metal plating.",
+        "colorsAndLighting": "Dominant dark grey structure is dimly lit by a cool, diffused blue-grey mist. A contrasting warm golden light emanates from a skeletal archway.",
+        "atmosphere": "The air is thick with a cool, diffused blue-grey mist, lending an ethereal, ancient, and imposing feel. Ambient light is dim, creating sharp shadows from protruding teeth.",
+        "materials": "Surfaces are primarily rough, dark metal and dark polished stone tiles with deeply textured matte metal plating. Cable appendages are dense and intricate.",
+        "mood": "Imposing, mysterious, and ancient, with an inviting yet consuming element suggested by the skeletal archway.",
+        "sounds": "Distant hum, metallic echoes, soft mist whispers.",
+        "spatialLayout": "A colossal, cylindrical biomechanical interior with a vaulted ceiling. Entryways include a deep archway, a descending shaft, and ascending platforms.",
+        "primary_surfaces": "Rough dark metallic walls and ceiling, dark polished stone and textured matte metal floor.",
+        "secondary_surfaces": "Intricate cable-like appendages woven into walls.",
+        "accent_features": "Jagged sharpened metallic teeth, pulsing warm light from appendages, skeletal archway with golden glow.",
+        "dominant": "Dark grey (structure and walls)",
+        "secondary": "Blue-grey (mist atmosphere)",
+        "accent": "Golden (skeletal archway light)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "colossal biomechanical vertebral architecture",
+        "cultural_tone": "post-biological integration; society centered around shared consciousness and energy.",
+        "materials_base": "rough metallic, stone, textured plating",
+        "mood_baseline": "imposing, mysterious, ancient",
+        "palette_bias": "dark greys, muted blues with warm accents",
+        "soundscape_base": "industrial and ethereal ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/IxJ5_0YC3ARPSAo8xa4pZ.jpg",
+      "description": "The imposing, biomechanical interior of The Vertebral Citadel, resembling the dark, interlocking vertebrae of its namesake.",
+      "navigableElements": [
+        {
+          "type": "shaft",
+          "position": "midground left",
+          "description": "A narrow, vertical shaft descending, lined with sharp metallic gratings."
+        },
+        {
+          "type": "archway",
+          "position": "immediate foreground",
+          "description": "A recessed, skeletal archway glowing with soft, inviting golden light, beckoning deeper."
+        },
+        {
+          "type": "platforms and ladder",
+          "position": "midground right",
+          "description": "Staggered, dark metal platforms accessed by a spiraling metal ladder, ascending towards the vaulted ceiling."
+        }
+      ],
+      "dominantElements": [
+        "colossal biomechanical walls",
+        "vaulted ceiling",
+        "cable-like appendages",
+        "jagged metallic teeth",
+        "skeletal archway",
+        "navigable shaft",
+        "navigable platforms and ladder"
+      ],
+      "uniqueIdentifiers": [
+        "vertebrae-like structure",
+        "pulsing warm light from cables",
+        "jagged metallic teeth",
+        "skeletal archway",
+        "blue-grey mist"
+      ],
+      "searchDesc": "Colossal biomechanical citadel interior, vertebrae-like architecture, pulsing cables, golden archway, blue-grey mist.",
+      "slug": "interior-of-the-vertebral-citadel"
+    },
+    "loc-1763981921349-z2gifzsmh": {
+      "id": "loc-1763981921349-z2gifzsmh",
+      "type": "host",
+      "name": "The Aethelian Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Aethelian Expanse",
+        "description": "A realm of impossible landscapes and vibrant, alien flora.",
+        "dna": {
+          "looks": "Vast, surreal landscapes characterized by gravity-defying rock formations, organic curves, and abundant, otherworldly plant life.  Elements often appear to float or hang precariously.",
+          "colorsAndLighting": "A vibrant yet ethereal palette dominated by lush greens and glowing blues, with warm, diffused sunlight creating a mystical ambiance.  Light sources are often integrated into the landscape.",
+          "atmosphere": "Thick and humid air, carrying a sense of otherworldly calm and ancient mystery.  A gentle, pervasive mist often softens distant features, enhancing the dreamlike quality.",
+          "materials": "Dominantly organic, natural materials like moss-covered stone, weathered rock, and dense, alien vegetation.  Surfaces exhibit a sense of age and integration with the environment.",
+          "mood": "Dreamlike, serene, and awe-inspiring, evoking a sense of wonder and exploration into the unknown.",
+          "sounds": "Distant chimes, gentle water flow, rustling alien foliage, faint ethereal hum",
+          "spatialLayout": "Expansive, open vistas with dramatic verticality.  Floating platforms, archways, and natural bridges create a non-linear, multi-layered sense of space.",
+          "primary_surfaces": [
+            "Moss-covered stone",
+            "Weathered rock"
+          ],
+          "secondary_surfaces": [
+            "Luminous water",
+            "Alien vegetation"
+          ],
+          "accent_features": [
+            "Luminous flora",
+            "Crystal formations",
+            "Carved natural structures"
+          ],
+          "dominant": "Green",
+          "secondary": "Blue",
+          "accent": "Gold",
+          "ambient": "Warm, ethereal",
+          "genre": "fantasy",
+          "architectural_tone": "Organic, sculpted natural forms inspired by organic growth and impossible geological phenomena.  Features carved stone, integrated living plant life, and gravity-defying structures.",
+          "cultural_tone": "Ancient, mysterious, and harmonious with nature.  Suggests a civilization that coexists with and shapes its environment through natural means.",
+          "materials_base": "Naturalistic and organic, with an emphasis on stone, moss, wood, and living flora.  Finishes are weathered, aged, and integrated.",
+          "mood_baseline": "Serene wonder",
+          "palette_bias": "Vibrant natural palette with strong emphasis on greens and blues, accented by luminous and warm tones.",
+          "soundscape_base": "Naturalistic ambient sounds with subtle, ethereal musical undertones.",
+          "flora_base": "Lush, alien, bioluminescent flora with large, organic leaf structures and glowing elements.",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating islands",
+          "Massive natural formations",
+          "Luminous water bodies"
+        ],
+        "uniqueIdentifiers": [
+          "Roger Dean-inspired art style",
+          "Anti-gravity geology"
+        ],
+        "searchDesc": "A realm of impossible landscapes, floating stone arches, alien flora, and luminous pools.",
+        "slug": "the-aethelian-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Aethelian Expanse",
+          "looks": "A realm of impossible landscapes and vibrant, alien flora.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/xKmOYTsm04nu_qGuQDogi.jpg",
+      "description": "A realm of impossible landscapes and vibrant, alien flora."
+    },
+    "32bdad78-7618-43a3-98ca-d7bf217498c4": {
+      "id": "32bdad78-7618-43a3-98ca-d7bf217498c4",
+      "type": "region",
+      "name": "The Aethelian Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Aethelian Expanse",
+        "description": "",
+        "dna": {
+          "looks": "A breathtaking vista of colossal stone arches that seem to defy gravity, interspersed with verdant terraces carpeted in thick moss.  Gleaming, luminous pools of water are scattered throughout the landscape.",
+          "colorsAndLighting": "Dominated by deep greens of moss and foliage, contrasted with the cool blues and silvers of the luminous water.  Warm, golden light filters through the arches and illuminates the terraces.",
+          "atmosphere": "The air is humid and carries the fresh scent of damp earth and exotic blossoms. A constant gentle mist hangs over the water, lending an ethereal quality to the region.",
+          "materials": "Primarily weathered, ancient stone forming the archways and terraces, densely covered in vibrant, soft moss.  The pools are filled with clear, faintly glowing water.",
+          "mood": "Serene, tranquil, and awe-inspiring, inviting contemplation and exploration.",
+          "sounds": "Gentle dripping water, soft mossy growth, distant resonant tones, occasional soft sighs of wind",
+          "spatialLayout": "A sprawling, multi-tiered environment with a strong sense of verticality.  The stone arches create sweeping, natural corridors and elevated pathways.",
+          "primary_surfaces": [
+            "Moss-covered stone",
+            "Natural rock"
+          ],
+          "secondary_surfaces": [
+            "Luminous water",
+            "Dense vegetation"
+          ],
+          "accent_features": [
+            "Carved stone details",
+            "Bioluminescent moss",
+            "Smooth, reflective water"
+          ],
+          "dominant": "Green",
+          "secondary": "Blue",
+          "accent": "Gold",
+          "ambient": "Warm, diffused",
+          "genre": null,
+          "architectural_tone": "Organic, sculpted natural forms inspired by organic growth and impossible geological phenomena. Features carved stone, integrated living plant life, and gravity-defying structures.",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "Lush, alien, bioluminescent flora with large, organic leaf structures and glowing elements.",
+          "fauna_base": null
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating stone archlands",
+          "Moss terraces",
+          "Luminous pools"
+        ],
+        "uniqueIdentifiers": [
+          "Roger Dean-inspired motifs",
+          "Terraced landscapes"
+        ],
+        "searchDesc": "Roger Dean-inspired floating stone archlands with lush moss terraces and luminous pools.",
+        "slug": "the-aethelian-expanse-region",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Aethelian Expanse",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": ""
+    },
+    "2b6b93b0-dbfa-40c5-9660-fc40764434a2": {
+      "id": "2b6b93b0-dbfa-40c5-9660-fc40764434a2",
+      "type": "location",
+      "name": "The Whispering Gateway",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Whispering Gateway",
+        "description": "A massive, carved shell-doorway embedded within a hovering cliff face, part of the Roger Dean-inspired archlands.",
+        "looks": "Gigantic, iridescent shell-doorway set into a sheer, moss-covered cliff that floats serenely amidst vast stone archways. Luminous pools shimmer around the base.",
+        "atmosphere": "Humid air carrying the scent of exotic blossoms and damp earth, a soft, ethereal glow emanates from the pools and surrounding flora.",
+        "mood": "Mystical, awe-inspiring",
+        "dna": {
+          "looks": "A colossal shell-shaped opening is carved into a massive, moss-covered cliff that appears to float. Luminescent water surrounds the base of the cliff and is dotted with irregular stone pathways. Tall, verdant foliage and trees crown the tops of sheer rock faces, creating a sense of immense scale. Sunlight streams down, illuminating the scene with an ethereal glow.",
+          "colorsAndLighting": "The lighting is soft and diffused, with strong directional rays of light piercing through the haze from above and to the left. The dominant light is warm and golden, highlighting the interior of the shell-doorway and reflecting off the water.",
+          "atmosphere": "The air appears thick and humid, with a visible haze softening the distant rock formations. A gentle mist seems to hang over the water's surface, contributing to the mystical ambiance.",
+          "materials": "The cliff is composed of weathered, ancient stone, heavily adorned with lush, vibrant moss. Stone pathways are visible near the water's edge.",
+          "mood": "Mysterious, inviting, and ancient, hinting at hidden depths and forgotten passages.",
+          "sounds": "Soft water lapping, faint echo of dripping, rustling leaves, gentle hum of luminescence",
+          "spatialLayout": "In the foreground, clear turquoise pools are bordered by lush moss and stone pathways that curve through the landscape. The midground is dominated by a colossal, shell-shaped doorway set into a sheer, hovering cliff face. In the background, other sheer cliffs and verdant foliage rise steeply, reaching towards a bright, hazy sky.",
+          "primary_surfaces": "Rock, Moss",
+          "secondary_surfaces": "Stone (pathways)",
+          "accent_features": "Luminous water, Ethereal light",
+          "dominant": "Green (moss, vegetation)",
+          "secondary": "Turquoise (water), Gray (rock), Warm gold (interior of shell)",
+          "accent": "Bright white/gold light shafts",
+          "ambient": "Soft, ethereal glow with hints of turquoise and gold",
+          "genre": null,
+          "architectural_tone": "Organic, sculpted natural forms inspired by organic growth and impossible geological phenomena. Features carved stone, integrated living plant life, and gravity-defying structures.",
+          "cultural_tone": "Ancient, mysterious, and harmonious with nature. Suggests a civilization that coexists with and shapes its environment through natural means.",
+          "materials_base": "Naturalistic and organic, with an emphasis on stone, moss, wood, and living flora. Finishes are weathered, aged, and integrated.",
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "Lush, alien, bioluminescent flora with large, organic leaf structures and glowing elements.",
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "leading into shell-doorway, midground",
+            "description": "Stone steps ascending into the luminous shell-doorway."
+          },
+          {
+            "type": "passage",
+            "position": "within shell-doorway, midground",
+            "description": "A glowing, cavernous passage shaped like a conch shell."
+          },
+          {
+            "type": "archway",
+            "position": "implied by landscape context",
+            "description": "Vast stone arch formations suggesting interconnected pathways."
+          },
+          {
+            "type": "door",
+            "position": "within cliff face, midground",
+            "description": "Massive, organically shaped shell-doorway providing entrance."
+          }
+        ],
+        "dominantElements": [
+          "Gigantic shell-shaped doorway (Midground, Center)",
+          "Massive hovering cliff face (Midground, Center)",
+          "Luminous turquoise pools (Foreground/Midground)",
+          "Stone pathways (Foreground/Midground)",
+          "Lush moss and vegetation (Throughout)"
+        ],
+        "uniqueIdentifiers": [
+          "Gigantic, iridescent shell-doorway",
+          "Hovering cliff face",
+          "Luminous turquoise pools",
+          "Roger Dean-inspired stone archlands (implied by context)"
+        ],
+        "searchDesc": "[Location - Exterior] Mystical landscape with shell-doorway. Has: stairs (midground), passage (midground), door (midground)",
+        "slug": "the-whispering-gateway",
+        "imageUrl": "https://v3b.fal.media/files/b/zebra/xKmOYTsm04nu_qGuQDogi.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Whispering Gateway",
+          "looks": "A massive, carved shell-doorway embedded within a hovering cliff face, part of the Roger Dean-inspired archlands.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/xKmOYTsm04nu_qGuQDogi.jpg",
+      "description": "A massive, carved shell-doorway embedded within a hovering cliff face, part of the Roger Dean-inspired archlands."
     }
   },
   "views": {},
@@ -6240,6 +6425,11 @@
                   "id": "niche-1763566900405-s3q17n5eb",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1763979512687-bgh2kwxr9",
+                  "type": "niche",
+                  "children": []
                 }
               ]
             }
@@ -6395,29 +6585,6 @@
                 },
                 {
                   "id": "niche-1763623422783-oogmtwt83",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1763587410578-819xotp9a",
-      "type": "host",
-      "children": [
-        {
-          "id": "48b31f39-2532-4746-ba3e-2d2ce7f0da63",
-          "type": "region",
-          "children": [
-            {
-              "id": "3e82977b-cb68-4255-8356-9148cb9876d9",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1763618041102-hlt0w3h0x",
                   "type": "niche",
                   "children": []
                 }
@@ -6790,232 +6957,6 @@
       ]
     },
     {
-      "id": "loc-1763723266602-05irq7osi",
-      "type": "host",
-      "name": "The Celestial Canopy",
-      "description": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
-      "dna": {
-        "type": "host",
-        "name": "The Celestial Canopy",
-        "description": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
-        "dna": {
-          "looks": "Vast, ethereal expanses of cloud and sky, punctuated by colossal, ancient plant life. Islands of dense foliage and organic structures drift serenely. Sunlight filters through atmospheric layers, creating a dreamlike panorama.",
-          "colorsAndLighting": "A perpetually shifting palette of soft pastels and vibrant natural hues. Light is diffused and radiant, with gentle glows emanating from celestial bodies and bio-luminescent flora.",
-          "atmosphere": "The air is thin, cool, and incredibly clean, carrying the faint scent of ozone and exotic blossoms. Gentle atmospheric currents dictate movement, and occasional soft mists drift through.",
-          "materials": "Primarily organic: colossal wood, living bark, dense mosses, and vibrant, resilient foliage. Structures are often integrated with or grown from these natural elements.",
-          "mood": "Serene, majestic, and profoundly ancient. A sense of awe and peaceful contemplation pervades the environment.",
-          "sounds": "Whispering winds, distant celestial hums, rustling leaves, soft chimes.",
-          "spatialLayout": "Vast, open skies with clusters of massive, interconnected organic structures. Verticality is a key element, with life thriving at various altitudes.",
-          "primary_surfaces": "Living wood, bark, dense moss",
-          "secondary_surfaces": "Ethereal mist, light, atmospheric gases",
-          "accent_features": "Bio-luminescent patterns, swirling cloud formations, floating crystalline structures",
-          "dominant": "Ethereal blues and greens",
-          "secondary": "Soft purples and golds",
-          "accent": "Bio-luminescent yellows and whites",
-          "ambient": "Soft, diffused, and slightly cool",
-          "genre": "fantasy",
-          "architectural_tone": "Organic, bio-integrated, gravity-defying architecture grown from colossal flora, with an emphasis on smooth, flowing lines and natural forms.",
-          "cultural_tone": "Ancient wisdom, symbiotic existence with nature, spiritual reverence for life.",
-          "materials_base": "Living organic matter, bio-luminescence, polished natural wood",
-          "mood_baseline": "Serene transcendence",
-          "palette_bias": "Soft, nature-inspired, with luminous accents",
-          "soundscape_base": "Gentle, natural atmospheric sounds",
-          "flora_base": "Colossal, ancient trees and sky-dwelling plants, bioluminescent organisms",
-          "fauna_base": "Aerial and arboreal creatures adapted to high altitudes"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "World-tree",
-          "Atmospheric currents",
-          "Sky-islands"
-        ],
-        "uniqueIdentifiers": [
-          "Floating continents",
-          "Bio-engineered ecosystems",
-          "Solar-powered flora"
-        ],
-        "searchDesc": "World of floating flora and atmospheric life, high in the sky.",
-        "slug": "the-celestial-canopy",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Celestial Canopy",
-          "looks": "A realm where life flourishes in the upper atmosphere, supported by colossal flora.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "imagePath": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
-      "spaceType": "exterior",
-      "children": [
-        {
-          "id": "183eb246-d685-4115-873f-4dc01f3da817",
-          "type": "region",
-          "name": "The Great Boughs",
-          "description": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
-          "dna": {
-            "type": "region",
-            "name": "The Great Boughs",
-            "description": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
-            "dna": {
-              "looks": "Immense, gnarled branches of ancient trees, thick as mountains, stretch outwards, forming natural platforms and thoroughfares. Lush mosses and verdant foliage cling to their surfaces, while colossal root systems descend into the mists below.",
-              "colorsAndLighting": "Dominated by deep, rich greens of moss and foliage, interspersed with the earthy browns and greys of ancient bark. Light is dappled, filtering through the dense canopy above, creating pockets of shadow and soft illumination.",
-              "atmosphere": "Humid and earthy, with a constant gentle breeze rustling through the leaves. The air smells of damp soil, decaying leaves, and exotic floral notes.",
-              "materials": "Predominantly colossal, textured bark and thick, resilient mosses. Smaller flora and exposed, aged wood are also prevalent.",
-              "mood": "Sturdy, grounded (despite being aerial), and ancient. A sense of immense natural power and resilience.",
-              "sounds": "Constant rustling leaves, creaking wood, distant bird calls, dripping water.",
-              "spatialLayout": "A labyrinthine network of sprawling, interconnected branches forming natural avenues and vast open spaces. Significant verticality exists between the boughs.",
-              "primary_surfaces": "Massive tree bark, dense moss",
-              "secondary_surfaces": "Vines, hanging roots, exposed wood",
-              "accent_features": "Fungal growths, rare flowering epiphytes",
-              "dominant": "Deep greens",
-              "secondary": "Earthy browns and greys",
-              "accent": "Subtle floral colors",
-              "ambient": "Dappled, natural light with cool shadows",
-              "genre": null,
-              "architectural_tone": null,
-              "cultural_tone": "Pragmatic, nature-reverent, focused on sustenance and communal living.",
-              "materials_base": null,
-              "mood_baseline": null,
-              "palette_bias": null,
-              "soundscape_base": null,
-              "flora_base": "Giant ancient trees, thick mosses, epiphytic plants, air-filtering flora",
-              "fauna_base": "Arboreal insects, gliding mammals, large avian species"
-            },
-            "navigableElements": [],
-            "dominantElements": [
-              "Titan tree branches",
-              "Aerial pathways",
-              "Hanging root systems"
-            ],
-            "uniqueIdentifiers": [
-              "Interconnected branch network",
-              "Sky-root systems",
-              "Wind-carved canyons between boughs"
-            ],
-            "searchDesc": "Vast, ancient tree branches forming the pathways and foundations of sky settlements.",
-            "slug": "the-great-boughs",
-            "semantic": {
-              "atmosphere": "",
-              "mood": ""
-            },
-            "visual": {
-              "prompt": "",
-              "style": ""
-            },
-            "profile": {
-              "name": "The Great Boughs",
-              "looks": "A network of ancient, titan-sized tree branches forming the foundation for aerial settlements.",
-              "atmosphere": "",
-              "mood": ""
-            }
-          },
-          "spaceType": "exterior",
-          "children": [
-            {
-              "id": "3ac0c9f0-d882-4a46-a757-13e824c92c3f",
-              "type": "location",
-              "name": "The Lumina Sanctuary",
-              "description": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
-              "dna": {
-                "type": "location",
-                "name": "The Lumina Sanctuary",
-                "description": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
-                "looks": "A sprawling temple intricately woven into and built upon massive, interwoven tree branches, adorned with glowing bioluminescent runes that pulse with gentle light.",
-                "atmosphere": "Warm, humid air carrying the scent of exotic blossoms and damp earth. The ambient glow from the runes creates a soft, ethereal light.",
-                "mood": "Serene, mystical, ancient",
-                "dna": {
-                  "looks": "A massive, ancient tree forms the foundation of a temple, its colossal branches interwoven and supporting the structure. The temple appears carved directly into the wood and moss, with an ornate, arched entrance. Bioluminescent runes glow along the pathways and parts of the temple, illuminating the scene with an ethereal light. The scale suggests immense, almost unimaginable growth and age of the flora.",
-                  "colorsAndLighting": "Soft, diffused light emanates from the glowing bioluminescent runes, creating a gentle, ethereal glow that illuminates the immediate surroundings. The light is warm and inviting, casting minimal shadows and enhancing the mystical mood.",
-                  "atmosphere": "A soft, luminous mist permeates the air, obscuring distant details and contributing to the mystical ambiance. The humidity is palpable, suggesting a lush and verdant environment.",
-                  "materials": "Primarily living tree bark, ancient wood, and dense, vibrant mosses. Stone elements are subtly integrated, appearing as if naturally formed within the wood.",
-                  "mood": "Sacred, serene, and welcoming. A feeling of spiritual peace and ancient reverence.",
-                  "sounds": "Soft, pulsing hum of runes, gentle dripping, distant ethereal melodies.",
-                  "spatialLayout": "The foreground features a textured stone pathway winding through dense, green foliage and moss-covered rocks. The midground is dominated by the colossal, ancient tree, its thick branches supporting the temple structure and framing a central, glowing entrance. The background is softly obscured by mist and foliage, with more massive tree branches receding into the distance.",
-                  "primary_surfaces": "Tree bark, moss, stone",
-                  "secondary_surfaces": "Dense foliage, earth",
-                  "accent_features": "Bioluminescent runes",
-                  "dominant": "Deep greens, verdant mosses",
-                  "secondary": "Earth tones in the pathway, glowing yellow-green light from the entrance",
-                  "accent": "Pulsing blue and gold from the bioluminescent runes",
-                  "ambient": "Soft, ethereal green glow",
-                  "genre": null,
-                  "architectural_tone": "Organic temple architecture seamlessly integrated with colossal flora, featuring smooth, flowing lines, natural archways carved from wood, and subtle stone accents. The style emphasizes reverence for the natural forms and is illuminated by naturally occurring bio-luminescence.",
-                  "cultural_tone": "Spiritual devotion, nature worship, pilgrimage site.",
-                  "materials_base": null,
-                  "mood_baseline": null,
-                  "palette_bias": null,
-                  "soundscape_base": null,
-                  "flora_base": "Bioluminescent mosses, ancient tree flora",
-                  "fauna_base": null
-                },
-                "navigableElements": [
-                  {
-                    "type": "passage",
-                    "position": "center, midground",
-                    "description": "An open, glowing arched entrance into the temple structure"
-                  },
-                  {
-                    "type": "bridge",
-                    "position": "foreground to midground",
-                    "description": "A stone pathway leading towards the temple entrance"
-                  }
-                ],
-                "dominantElements": [
-                  "Massive, ancient tree with interwoven branches",
-                  "Ornate temple entrance carved into the tree",
-                  "Glowing bioluminescent runes",
-                  "Stone pathway leading to the entrance"
-                ],
-                "uniqueIdentifiers": [
-                  "Temple carved into a colossal tree",
-                  "Bioluminescent runes guiding the path",
-                  "Glowingly bright, ethereal entrance"
-                ],
-                "searchDesc": "[Location - Exterior] Verdant sky-temple on massive tree. Has: arched entrance (center, midground), stone pathway (foreground to midground)",
-                "slug": "the-lumina-sanctuary",
-                "imageUrl": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
-                "semantic": {
-                  "atmosphere": "",
-                  "mood": ""
-                },
-                "visual": {
-                  "prompt": "",
-                  "style": ""
-                },
-                "profile": {
-                  "name": "The Lumina Sanctuary",
-                  "looks": "A sacred temple constructed amidst the verdant embrace of giant tree branches.",
-                  "atmosphere": "",
-                  "mood": ""
-                }
-              },
-              "imagePath": "https://v3b.fal.media/files/b/koala/f2v9k1NSIZjQDHdriN-k5.jpg",
-              "spaceType": "exterior",
-              "children": [
-                {
-                  "id": "niche-1763725647086-kupv652e7",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1763729888304-js7ce4prj",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1763733616900-gv881kq63",
       "type": "host",
       "name": "World of Aethelgard",
@@ -7174,60 +7115,52 @@
       ]
     },
     {
-      "id": "loc-1763735358194-f9pjw8y5h",
+      "id": "loc-1763981592554-e2du1t0y3",
       "type": "host",
-      "name": "Moebius-like Pastel Desert",
-      "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+      "name": "Xylos",
+      "description": "An alien otherworldly planet characterized by its surreal landscapes and bizarre flora.",
       "dna": {
         "type": "host",
-        "name": "Moebius-like Pastel Desert",
-        "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+        "name": "Xylos",
+        "description": "An alien otherworldly planet characterized by its surreal landscapes and bizarre flora.",
         "dna": {
-          "looks": "A vast, undulating landscape sculpted into soft, flowing dunes that defy gravity and conventional geology. The terrain is rendered in impossible pastel hues, creating a dreamlike and disorienting visual experience. Sparse, delicate flora might emerge from the smooth surfaces.",
-          "colorsAndLighting": "The scene is bathed in a soft, diffused, ethereal light, casting subtle gradients and minimal shadows. The palette is dominated by a symphony of muted pastels, primarily soft pinks, pale whites, and gentle turquoises, creating a tranquil and otherworldly atmosphere.",
-          "atmosphere": "The air is still and appears unnaturally clear, with a subtle shimmer that suggests extreme dryness and a lack of conventional atmospheric phenomena. There is a profound sense of quiet and stillness, an almost palpable lack of wind or sound, contributing to an otherworldly tranquility.",
-          "materials": "The primary visible materials are smooth, seamless, and almost liquid-looking surfaces that form both the dunes and any monolithic structures. These materials possess a matte, soft finish, suggesting they are composed of something other than earth or stone.",
-          "mood": "Tranquil, serene, and profoundly alien. There is a sense of peaceful isolation and a quiet, contemplative beauty that borders on the surreal.",
-          "sounds": "Silence, soft ambient hum, gentle atmospheric shimmer",
-          "spatialLayout": "Expansive and open, with a sense of limitless horizon. The landscape features rolling, organic forms with gradual slopes and sweeping curves, creating a feeling of vastness and gentle undulation.",
-          "primary_surfaces": [
-            "Smooth, seamless pastel dunes",
-            "Softly curved monolithic surfaces"
-          ],
-          "secondary_surfaces": [
-            "Sandy terrain (subtle)"
-          ],
-          "accent_features": [
-            "Subtle color shifts in light",
-            "Delicate, sparse flora"
-          ],
-          "dominant": "Pastel Pink",
-          "secondary": "Pale White",
-          "accent": "Pale Turquoise",
-          "ambient": "Cool and ethereal",
+          "looks": "A bizarre and vibrant alien world with gravity-defying landmasses and enigmatic constructions. The landscape is a blend of natural formations and ancient, possibly derelict, technology.",
+          "colorsAndLighting": "The sky is a dominant, saturated purple, casting an ethereal glow. Lighting conditions are often dramatic, with strong contrasts and otherworldly hues.",
+          "atmosphere": "The atmosphere is thin and alien, carrying faint, unidentifiable scents. Unpredictable atmospheric phenomena, such as shimmering heat hazes or localized nebulae, are common.",
+          "materials": "A mix of organic, crystalline, and unknown metallic alloys. Surfaces can range from smooth, reflective alien metals to rough, porous geological formations.",
+          "mood": "A sense of profound mystery, ancient isolation, and awe-inspiring strangeness. There's an underlying feeling of discovery and potential danger.",
+          "sounds": "Distant hums, chimes, alien winds, faint mechanical whirs",
+          "spatialLayout": "Vast, open expanses interspersed with towering, alien architecture and colossal natural formations. Verticality is a key characteristic, with floating elements.",
+          "primary_surfaces": "Unknown alien metals, crystalline rock, hardened organic matter",
+          "secondary_surfaces": "Worn stone, dust, faint energy fields",
+          "accent_features": "Bioluminescent flora, strange energy conduits, weathered alien glyphs",
+          "dominant": "Purple",
+          "secondary": "Teal, Magenta",
+          "accent": "Metallic Silver, Electric Blue",
+          "ambient": "Ethereal and otherworldly",
           "genre": "sci-fi",
-          "architectural_tone": "monolithic organic curves, seamless construction, smooth matte finishes, integrated forms, absence of sharp edges or discernible joints",
-          "cultural_tone": "alien artifact, ancient observatory, natural anomaly",
-          "materials_base": "otherworldly seamless composites, matte and soft textures, dust-like particulates",
-          "mood_baseline": "serene isolation, alien tranquility, contemplative wonder",
-          "palette_bias": "soft pastel gradients, cool tones with warm undertones",
-          "soundscape_base": "minimalist ambient tones, subtle atmospheric hums",
-          "flora_base": "sparse, delicate, otherworldly crystalline or fiber-like structures",
+          "architectural_tone": "organic alien futurism with influences of biomorphic design and monumental scale, featuring sweeping curves, integrated crystalline structures, and weathered, advanced alloys",
+          "cultural_tone": "ancient, enigmatic, and lost civilizations",
+          "materials_base": "advanced alloys, bio-engineered compounds, exotic crystals, weathered stone",
+          "mood_baseline": "mysterious, awe-inspiring, solitary",
+          "palette_bias": "vibrant, saturated, and otherworldly color palettes with a strong emphasis on purples, magentas, and blues",
+          "soundscape_base": "ambient electronic drones, subtle chimes, wind-like atmospheric effects",
+          "flora_base": "Bioluminescent, crystalline, or tentacled alien plants",
           "fauna_base": "None"
         },
         "navigableElements": [],
         "dominantElements": [
-          "Impossible geometric dunes",
-          "Ethereal sky formations",
-          "Absence of conventional landmarks"
+          "Floating Islands",
+          "Alien Structures",
+          "Abandoned Machines",
+          "Purple Sky"
         ],
         "uniqueIdentifiers": [
-          "Otherworldly pastel palette",
-          "Surreal, flowing landscapes",
-          "Lack of sharp angles"
+          "Otherworldly Flora",
+          "Surreal Topography"
         ],
-        "searchDesc": "A surreal, pastel desert plateau with impossible geometry and flowing, organic forms.",
-        "slug": "moebius-like-pastel-desert",
+        "searchDesc": "An alien planet with floating islands, strange structures, abandoned tech, and vibrant skies.",
+        "slug": "xylos",
         "semantic": {
           "atmosphere": "",
           "mood": ""
@@ -7237,68 +7170,62 @@
           "style": ""
         },
         "profile": {
-          "name": "Moebius-like Pastel Desert",
-          "looks": "A surreal, pastel-hued desert plateau with impossible geometry.",
+          "name": "Xylos",
+          "looks": "An alien otherworldly planet characterized by its surreal landscapes and bizarre flora.",
           "atmosphere": "",
           "mood": ""
         }
       },
-      "imagePath": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+      "imagePath": "https://v3b.fal.media/files/b/lion/cU5mzPpMZc11Y_xxmOwNh.jpg",
       "spaceType": "exterior",
       "children": [
         {
-          "id": "acd7b9bd-155d-475a-8e2c-401f98010caf",
+          "id": "ad6e5960-bf3d-4f64-830d-ac5f473f29f8",
           "type": "region",
-          "name": "Moebius-like Pastel Desert",
-          "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+          "name": "Xylos",
+          "description": "The primary surface region of Xylos, characterized by vast deserts, rolling dunes, and scattered alien structures.",
           "dna": {
             "type": "region",
-            "name": "Moebius-like Pastel Desert",
-            "description": "A surreal, pastel-hued desert plateau with impossible geometry.",
+            "name": "Xylos",
+            "description": "The primary surface region of Xylos, characterized by vast deserts, rolling dunes, and scattered alien structures.",
             "dna": {
-              "looks": "Expansive, softly sculpted desert dunes in a range of impossible pastel shades. The landscape features sweeping curves and flowing lines, with occasional subtly out-of-place geological formations. The horizon is vast and often indistinct due to atmospheric effects.",
-              "colorsAndLighting": "Dominated by soft, diffused light that enhances the pastel palette of pale pinks, whites, and turquoises. Gentle gradients define the shapes of the dunes, with a subtle shimmer in the air. The light feels diffuse and cool.",
-              "atmosphere": "Arid and still, with a subtle visual distortion suggesting a unique atmospheric composition. The air is clear, and there is a profound sense of quiet, contributing to the region's alien and tranquil character.",
-              "materials": "Primarily composed of finely granulated material that forms smooth, seamless dunes. Any rock-like formations are smooth and rounded, lacking sharp edges. The overall impression is of a soft, yielding, yet solid surface.",
-              "mood": "Peaceful, isolated, and dreamlike, with an underlying sense of ancient stillness.",
-              "sounds": "Whispering dust, faint atmospheric hums, distant silence",
-              "spatialLayout": "Open and seemingly endless, characterized by rolling hills and sweeping plains. The layout emphasizes gradual slopes and organic curves, creating a sense of gentle vastness.",
-              "primary_surfaces": [
-                "Smooth, pastel-colored sand dunes"
-              ],
-              "secondary_surfaces": [
-                "Undulating desert terrain"
-              ],
-              "accent_features": [
-                "Subtle color variations in sand",
-                "Occasional smooth rock outcrops"
-              ],
-              "dominant": "Pale Pink",
-              "secondary": "Pale White",
-              "accent": "Pale Turquoise",
-              "ambient": "Cool",
+              "looks": "Vast, undulating sand dunes stretch towards a horizon punctuated by alien structures and massive, floating islands. The terrain is sculpted by alien winds and unknown geological processes.",
+              "colorsAndLighting": "A pervasive purple hue from the sky saturates the landscape, with sands appearing in shades of ochre, rose, and pale violet. Shadows are deep and sharp.",
+              "atmosphere": "Dry and arid, with a constant whisper of alien wind moving across the dunes. The air might carry fine particulate matter that catches the unusual light.",
+              "materials": "Predominantly eroded sandstone, compacted alien dust, and weathered remnants of metallic structures. Some areas may feature exposed crystalline veins.",
+              "mood": "Solitary, desolate, and vast. A sense of forgotten history and immense scale pervades the region.",
+              "sounds": "Whispering winds, distant rumble, occasional metallic creaking",
+              "spatialLayout": "Open plains and rolling dunes broken by colossal, naturally formed rock spires and the bases of immense alien constructions. The sky is a constant, dominant presence.",
+              "primary_surfaces": "Compacted alien dust, eroded sandstone",
+              "secondary_surfaces": "Weathered alien metals, exposed crystalline formations",
+              "accent_features": "Scattered metallic debris, strange rock formations",
+              "dominant": "Purple",
+              "secondary": "Ochre, Rose",
+              "accent": "Metallic grey, Pale violet",
+              "ambient": "Ethereal and alien",
               "genre": null,
               "architectural_tone": null,
               "cultural_tone": null,
-              "materials_base": "fine-grained desert composite, smooth, matte texture",
-              "mood_baseline": "serene isolation, alien calm",
-              "palette_bias": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": "earthy tones with dominant purple overtones, desert-like palette",
               "soundscape_base": null,
-              "flora_base": "sparse, fibrous, crystalline growths",
+              "flora_base": "Hardy, low-lying alien desert plants, crystalline growths",
               "fauna_base": null
             },
             "navigableElements": [],
             "dominantElements": [
-              "Vast undulating pastel dunes",
-              "Unusual geological formations",
-              "Distant monolithic structures"
+              "Floating Island Chains",
+              "Dune Seas",
+              "Towering Rock Formations",
+              "Abandoned Alien Structures"
             ],
             "uniqueIdentifiers": [
-              "Flowing geometric dunes",
-              "Pervasive pastel color scheme"
+              "Visible Sky Desert",
+              "Exotic Geology"
             ],
-            "searchDesc": "A vast expanse of surreal, pastel-colored desert dunes with flowing, impossible geometry and a sense of profound alien tranquility.",
-            "slug": "moebius-like-pastel-desert-region",
+            "searchDesc": "Expansive desert landscapes with floating islands and ancient alien ruins under a purple sky.",
+            "slug": "xylos-region",
             "semantic": {
               "atmosphere": "",
               "mood": ""
@@ -7308,8 +7235,8 @@
               "style": ""
             },
             "profile": {
-              "name": "Moebius-like Pastel Desert",
-              "looks": "A surreal, pastel-hued desert plateau with impossible geometry.",
+              "name": "Xylos",
+              "looks": "The primary surface region of Xylos, characterized by vast deserts, rolling dunes, and scattered alien structures.",
               "atmosphere": "",
               "mood": ""
             }
@@ -7317,37 +7244,34 @@
           "spaceType": "exterior",
           "children": [
             {
-              "id": "4d1f26b6-9333-4d73-81a1-a387f7223ecb",
+              "id": "4372c941-5c0c-402a-a56d-a6bd7bc569af",
               "type": "location",
-              "name": "The Solitary Spire",
-              "description": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
+              "name": "Xylos",
+              "description": "A specific desolate area within the Xylos region, featuring an abandoned alien building partially reclaimed by organic growth.",
               "dna": {
                 "type": "location",
-                "name": "The Solitary Spire",
-                "description": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
-                "looks": "Smooth, undulating exterior walls in soft pastel shades, tapering upwards. The base is distinguished by a vividly colored, narrow entrance.",
-                "atmosphere": "Still, dry air with a faint shimmer of heat haze. The silence is profound, broken only by the whisper of the wind across the plateau.",
-                "mood": "Otherworldly, enigmatic",
+                "name": "Xylos",
+                "description": "A specific desolate area within the Xylos region, featuring an abandoned alien building partially reclaimed by organic growth.",
                 "dna": {
-                  "looks": "A surreal, pastel desert plateau stretches across the landscape, sculpted into soft, undulating dunes.  Dominating the midground is a tall, monolithic tower with smooth, curved walls that taper to a point. The tower's base is carved with a narrow, glowing entry slit.  Scattered across the terrain are sparse, delicate trees and soft, cotton-like formations. The overall impression is one of smooth, organic forms and a tranquil, otherworldly environment.",
-                  "colorsAndLighting": "The scene is illuminated by a soft, diffused light, casting gentle highlights and minimal shadows. The overall tone is cool and ethereal, with the sky transitioning from a pale turquoise near the horizon to a softer hue overhead.  The turquoise entry slit emits its own vibrant glow, providing a stark contrast.",
-                  "atmosphere": "The air appears clear and still, with a subtle visual shimmer suggesting a dry, arid environment.  The absence of discernible wind or atmospheric disturbance contributes to a profound sense of quiet.",
-                  "materials": "The tower is constructed from a single, seamless material with a smooth, matte finish, indistinguishable from the surrounding desert's primary surface. The entry slit appears to be made of a luminous crystalline material or solidified energy.",
-                  "mood": "Mysterious, inviting, and awe-inspiring. The spire feels like an ancient, purposeful artifact within the desolate landscape.",
-                  "sounds": "Faint humming from entry slit, distant desert silence",
-                  "spatialLayout": "The foreground consists of a gently sloping, sandy terrain with subtle textures. In the midground, the prominent monolithic tower rises directly from this plateau. The background features a vast, pastel-colored sky with soft, ethereal clouds, and distant, sparse vegetation.",
-                  "primary_surfaces": "Smooth, seemingly seamless material forming the tower and dunes",
-                  "secondary_surfaces": "Sandy terrain",
-                  "accent_features": "Glowing turquoise light from entry slit",
-                  "dominant": "Pale white and soft pink (dunes, tower, clouds)",
-                  "secondary": "Pale turquoise (sky, entry slit)",
-                  "accent": "Vibrant turquoise (entry slit)",
-                  "ambient": "Soft pastel hues of pink and turquoise",
+                  "looks": "A vast, open desert landscape with rolling dunes under a vibrant purple sky. In the midground, a solitary, imposing abandoned alien building stands as a stark silhouette against the horizon.",
+                  "colorsAndLighting": "The dominant purple of the sky creates a surreal, twilight-like illumination. The building itself is shadowed, hinting at decay. Distant floating islands catch the light in unusual ways.",
+                  "atmosphere": "Dry, arid desert air, with the faint scent of ozone and alien minerals. A sense of stillness and abandonment is palpable.",
+                  "materials": "The building appears to be constructed from a dark, matte alien alloy or weathered stone. The surrounding ground is composed of fine, alien sand and dust.",
+                  "mood": "Desolate, mysterious, and melancholic. The abandoned structure evokes a sense of lost purpose and the passage of immense time.",
+                  "sounds": "Distant wind, faint mechanical hum, settling dust",
+                  "spatialLayout": "A wide, expansive desert plain leading to a solitary, imposing structure. The horizon is defined by the sky and distant floating islands.",
+                  "primary_surfaces": "Alien sand, weathered stone or alloy",
+                  "secondary_surfaces": "Dust, scattered metallic debris",
+                  "accent_features": "Geometric alien architecture, faint external glyphs",
+                  "dominant": "Purple",
+                  "secondary": "Brown, Grey",
+                  "accent": "Deep Blue, Metallic Silver",
+                  "ambient": "Ethereal and alien",
                   "genre": null,
-                  "architectural_tone": "monolithic organic curves, seamless construction, smooth matte finishes, integrated forms, absence of sharp edges or discernible joints, luminous material for openings",
-                  "cultural_tone": "ancient alien monument, solitary sanctuary",
-                  "materials_base": "otherworldly seamless composites, smooth matte finish, luminous crystalline material",
-                  "mood_baseline": "solitary mystery, alien allure",
+                  "architectural_tone": "monumental alien architecture with severe geometric forms, weathered advanced alloys, and a sense of imposing, ancient construction",
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
                   "palette_bias": null,
                   "soundscape_base": null,
                   "flora_base": null,
@@ -7355,26 +7279,23 @@
                 },
                 "navigableElements": [
                   {
-                    "type": "door",
-                    "position": "center base, midground",
-                    "description": "A glowing turquoise entry slit carved into the monolithic tower's base."
+                    "type": "passage",
+                    "position": "center of background",
+                    "description": "A gaping, dark entrance to the abandoned building."
                   }
                 ],
                 "dominantElements": [
-                  "Monolithic curved tower ~60m tall, VERTICAL STRUCTURE, center, midground",
-                  "Pastel desert plateau terrain, foreground/midground",
-                  "Turquoise entry slit, base of tower, midground",
-                  "Sparse delicate trees, scattered, background/midground",
-                  "Soft pastel clouds, sky, background"
+                  "Abandoned Alien Building",
+                  "Sand Dunes",
+                  "Floating Islands in the distance"
                 ],
                 "uniqueIdentifiers": [
-                  "Monolithic curved tower",
-                  "Single turquoise entry slit",
-                  "Pastel desert plateau landscape"
+                  "Visible sky desert",
+                  "Dunes",
+                  "Abandoned Building"
                 ],
-                "searchDesc": "[Location - Exterior] Pastel desert plateau with a curved tower. Has: turquoise entry slit (midground)",
-                "slug": "the-solitary-spire",
-                "imageUrl": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+                "searchDesc": "An abandoned alien building nestled within desert dunes, under a vibrant purple sky.",
+                "slug": "xylos-location",
                 "semantic": {
                   "atmosphere": "",
                   "mood": ""
@@ -7384,13 +7305,513 @@
                   "style": ""
                 },
                 "profile": {
-                  "name": "The Solitary Spire",
-                  "looks": "A monolithic, curved tower rising from the desert floor, featuring a single, striking turquoise entry slit.",
+                  "name": "Xylos",
+                  "looks": "A specific desolate area within the Xylos region, featuring an abandoned alien building partially reclaimed by organic growth.",
                   "atmosphere": "",
                   "mood": ""
                 }
               },
-              "imagePath": "https://v3b.fal.media/files/b/lion/tNnr2_iH6p-ssUW-ZfCoI.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "5e7a5688-e82e-4273-88c6-0492e71c95b9",
+                  "type": "niche",
+                  "name": "The Tentacle Grove",
+                  "description": "The interior space of the abandoned building, now overgrown and dominated by massive, writhing organic tentacles.",
+                  "dna": {
+                    "type": "niche",
+                    "name": "The Tentacle Grove",
+                    "description": "The interior space of the abandoned building, now overgrown and dominated by massive, writhing organic tentacles.",
+                    "looks": "Cavernous spaces within the spire, where massive, leathery tentacles snake through broken doorways and across floors. Small, abandoned alien machines are scattered amongst the growth, some still emitting faint, erratic lights.",
+                    "atmosphere": "A cloying, humid air thick with a strange, organic musk. The pulsating light from the tentacles creates shifting patterns of shadow and luminescence.",
+                    "mood": "Eerie, alien, decayed",
+                    "imageUrl": "https://v3b.fal.media/files/b/lion/cU5mzPpMZc11Y_xxmOwNh.jpg",
+                    "semantic": {
+                      "atmosphere": "",
+                      "mood": ""
+                    },
+                    "visual": {
+                      "prompt": "",
+                      "style": ""
+                    },
+                    "profile": {
+                      "name": "The Tentacle Grove",
+                      "looks": "The interior space of the abandoned building, now overgrown and dominated by massive, writhing organic tentacles.",
+                      "atmosphere": "",
+                      "mood": ""
+                    }
+                  },
+                  "imagePath": "https://v3b.fal.media/files/b/lion/cU5mzPpMZc11Y_xxmOwNh.jpg",
+                  "spaceType": "interior",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763981664878-j5dusm9yf",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763981695689-q6xif9eqa",
+      "type": "host",
+      "name": "The Cybernetic Expanse",
+      "description": "A world where organic life and advanced technology have fused into a single, evolving entity.",
+      "dna": {
+        "type": "host",
+        "name": "The Cybernetic Expanse",
+        "description": "A world where organic life and advanced technology have fused into a single, evolving entity.",
+        "dna": {
+          "looks": "A dynamic landscape where colossal biomechanical entities interweave with synthetic flora and pulsing energy conduits. Structures often mimic organic forms scaled to immense proportions, reflecting a world built by and for integrated life.",
+          "colorsAndLighting": "Dominated by cool, metallic blues, deep purples, and vibrant bioluminescent greens and oranges. Lighting is often diffused, emanating from internal energy sources and the hazy atmosphere, creating an ethereal glow.",
+          "atmosphere": "The air is thick with a fine, mineral-rich mist that carries faint electric charges. A subtle hum of latent energy pervades, and the temperature is consistently moderate, regardless of external conditions.",
+          "materials": "Primary materials are dark, obsidian-like metals, interwoven with fibrous bio-polymers and crystalline structures. Surfaces are often smooth and polished, interspersed with intricate, etched patterns.",
+          "mood": "A sense of awe, mystery, and alienness, tinged with a quiet, pervasive power. The world feels ancient and alive, both beautiful and intimidating.",
+          "sounds": "Low hums, soft whirs, faint chimes, organic clicks, subtle static.",
+          "spatialLayout": "Vast, interconnected spaces that blend natural and artificial topography. Elevated pathways and fluid, non-Euclidean geometries are common.",
+          "primary_surfaces": "Dark, polished metallic alloys, bio-luminescent organic polymers.",
+          "secondary_surfaces": "Crystalline formations, synthetic fibrous materials, etched metal plating.",
+          "accent_features": "Pulsing energy veins, bioluminescent patterns, integrated crystalline growths.",
+          "dominant": "Dark blues, deep purples, metallic greys.",
+          "secondary": "Bioluminescent greens, electric oranges, stark whites.",
+          "accent": "Deep reds, sharp cyans.",
+          "ambient": "Cool, diffused glow with internal light sources.",
+          "genre": "sci-fi",
+          "architectural_tone": "biomechanical fusion aesthetic with organic growth patterns, integrated energy conduits, and smooth, often dark metallic surfaces; structures mimic skeletal, vertebral, or crystalline forms with fluid, non-linear elements",
+          "cultural_tone": "post-biological integration; a society where the distinction between life and machine has blurred, leading to unique forms of existence and societal organization centered around shared consciousness and energy.",
+          "materials_base": "Dark, advanced alloys, bio-integrated polymers, crystalline structures, polished composites.",
+          "mood_baseline": "Mysterious, awe-inspiring, alien, powerful.",
+          "palette_bias": "Cool, dark tones with sharp, vibrant bioluminescent accents.",
+          "soundscape_base": "Subtle, ambient electronic hums and organic synthesis.",
+          "flora_base": "Bio-engineered crystalline flora, metallic vines, bioluminescent fungi.",
+          "fauna_base": "Synthetic organisms, bio-mechanical constructs, sentient energy forms."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Vast biomechanical structures",
+          "Networked energy conduits",
+          "Bio-integrated flora"
+        ],
+        "uniqueIdentifiers": [
+          "World-spanning nanite network",
+          "Sentient planetary consciousness"
+        ],
+        "searchDesc": "A fused world of organic and technological life, filled with biomechanical wonders.",
+        "slug": "the-cybernetic-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Cybernetic Expanse",
+          "looks": "A world where organic life and advanced technology have fused into a single, evolving entity.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/ejfkCIH_BzLOucb2DM8tQ.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "4dfaab0b-1f03-4234-bbe9-aaae2a3858f3",
+          "type": "region",
+          "name": "The Cybernetic Expanse",
+          "description": "The primary biome of The Cybernetic Expanse, characterized by vast, interconnected systems and colossal biomechanical formations that dictate the landscape.",
+          "dna": {
+            "type": "region",
+            "name": "The Cybernetic Expanse",
+            "description": "The primary biome of The Cybernetic Expanse, characterized by vast, interconnected systems and colossal biomechanical formations that dictate the landscape.",
+            "dna": {
+              "looks": "The landscape is dominated by immense, dark, vertebral-like structures rising from a misty, ground-level plane. Thick, cable-like tendrils snake across the surfaces of these colossal formations, suggesting an organic yet artificial presence.",
+              "colorsAndLighting": "A muted palette of dark greys and deep charcoals for the structures, softened by a pervasive, light grey mist. Occasional faint, warm light emanates from recessed areas, creating a subtle contrast.",
+              "atmosphere": "A dense, cool mist blankets the region, obscuring visibility beyond short distances. The air feels heavy and damp, carrying a faint, metallic scent and a low, resonant hum.",
+              "materials": "Predominantly dark, textured metallic alloys, with hints of weathered stone and hardy, bio-integrated vegetation clinging to surfaces.",
+              "mood": "Foreboding, mysterious, and ancient. The sheer scale of the structures evokes a sense of insignificance and awe.",
+              "sounds": "Distant, low thrumming, occasional metallic groans, soft sighing of wind through cables.",
+              "spatialLayout": "Vast, open plains punctuated by colossal, imposing structures. The ground plane is often uneven, formed from aggregated metallic debris and overgrown synthetic flora.",
+              "primary_surfaces": "Dark, textured metallic alloys.",
+              "secondary_surfaces": "Weathered stone, bio-integrated fibrous materials.",
+              "accent_features": "Thick, coiled cables resembling tendons, subtle internal lighting.",
+              "dominant": "Dark greys, charcoals.",
+              "secondary": "Muted greens, light greys.",
+              "accent": "Faint warm oranges, deep blues.",
+              "ambient": "Cool, diffused glow with a focal point of warm light.",
+              "genre": null,
+              "architectural_tone": "biomechanical vertebral architecture with massive, segmented structures, integrated musculature-like cabling, and skeletal entrances; surfaces are rough-hewn and dark, suggesting ancient organic growth.",
+              "cultural_tone": null,
+              "materials_base": "Dark, weathered metallic alloys, petrified bio-matter, rough stone.",
+              "mood_baseline": "Foreboding, ancient, imposing.",
+              "palette_bias": "Monochromatic dark greys with minimal muted accents.",
+              "soundscape_base": "Deep, resonant ambient hums and organic groans.",
+              "flora_base": "Hardy, metallic-sheened mosses, low-lying synthetic scrub, bio-integrated vines."
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "The Vertebral Citadel",
+              "Energy Nexus arteries",
+              "Scattered biomechanical outcroppings"
+            ],
+            "uniqueIdentifiers": [
+              "Primary energy distribution hub",
+              "Dense mist formations"
+            ],
+            "searchDesc": "The vast central biome of The Cybernetic Expanse, featuring massive biomechanical towers and energy conduits.",
+            "slug": "the-cybernetic-expanse-region",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Cybernetic Expanse",
+              "looks": "The primary biome of The Cybernetic Expanse, characterized by vast, interconnected systems and colossal biomechanical formations that dictate the landscape.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "934c1cad-9bd0-4a68-8c39-42c5131bd58e",
+              "type": "location",
+              "name": "The Vertebral Citadel",
+              "description": "A formidable biomechanical tower, its form reminiscent of colossal, dark metallic vertebrae, with cable-like structures acting as tendons. A recessed skeletal gateway leads inward.",
+              "dna": {
+                "type": "location",
+                "name": "The Vertebral Citadel",
+                "description": "A formidable biomechanical tower, its form reminiscent of colossal, dark metallic vertebrae, with cable-like structures acting as tendons. A recessed skeletal gateway leads inward.",
+                "looks": "A towering structure composed of interlocking, dark metallic segments resembling vertebrae. Thick, cable-like appendages are draped along its surface like tendons. A skeletal gateway, recessed into the base, serves as the entrance.",
+                "atmosphere": "A faint, resonating hum emanates from within, and the air carries a metallic tang with a subtle electrical charge.",
+                "mood": "Intimidating, functional, alien",
+                "dna": {
+                  "looks": "A colossal, dark metallic structure dominates the landscape, resembling a monstrous, segmented vertebral column. Thick, cable-like appendages extend from its surface, draped like organic tendons. The central facade features a gaping, skeletal maw with sharp, metallic teeth and a recessed gateway at its base. The scale is immense, dwarfing the surrounding environment and suggesting a powerful, ancient entity.",
+                  "colorsAndLighting": "The lighting is dim and moody, with a cool, diffused glow emanating from the hazy atmosphere. A faint, warm light spills from the recessed gateway, creating a focal point and suggesting an interior space. The contrast is low, contributing to the somber and alien feel of the location.",
+                  "atmosphere": "A pervasive, soft mist blankets the scene, obscuring distant details and creating an ethereal, slightly damp environment. The air appears thick with a subtle haze, lending an otherworldly and mysterious quality to the atmosphere.",
+                  "materials": "The primary materials are rough, dark metallic alloys, with some areas showing hints of weathered stone. The 'tendon' cables appear to be a dense, fibrous composite.",
+                  "mood": "Imposing, mysterious, and ancient. The skeletal gateway suggests both entry and a sense of being consumed.",
+                  "sounds": "Distant low hum, soft dripping, subtle metallic creaks.",
+                  "spatialLayout": "The foreground consists of a rough stone pathway winding through low-lying, green vegetation and patches of tall grass. The midground is dominated by the immense biomechanical structure, which rises steeply from the landscape. The background features a misty, mountainous terrain with faint silhouettes of flying creatures and dense foliage clinging to the cliff faces.",
+                  "primary_surfaces": "Dark, textured metal",
+                  "secondary_surfaces": "Stone, vegetation",
+                  "accent_features": "Glowing light within gateway, sharp metallic teeth",
+                  "dominant": "Dark grey (structure)",
+                  "secondary": "Muted greens (vegetation), light grey (mist)",
+                  "accent": "Warm yellow/orange (gateway light)",
+                  "ambient": "Cool, diffused blue-grey",
+                  "genre": null,
+                  "architectural_tone": "colossal biomechanical vertebral architecture, with massive, interlocking segments resembling vertebrae; exterior details include thick, rope-like cables acting as structural tendons and skeletal-themed entrances; surfaces are rough and imposing, emphasizing raw power.",
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "passage",
+                    "position": "center, midground",
+                    "description": "A recessed, arched gateway leading into the structure, illuminated from within."
+                  },
+                  {
+                    "type": "stairs",
+                    "position": "center, midground",
+                    "description": "A set of dark, metallic stairs ascending within the skeletal maw, leading towards a bright light."
+                  }
+                ],
+                "dominantElements": [
+                  "Biomechanical tower resembling vertebrae (center, background)",
+                  "Skeletal gateway entrance (center, midground)",
+                  "Cable-like appendages (surface, midground)",
+                  "Jagged metallic teeth (center, midground)",
+                  "Stone pathway leading to entrance (foreground)"
+                ],
+                "uniqueIdentifiers": [
+                  "Vertebral structure",
+                  "Skeletal maw entrance",
+                  "Draped cable appendages"
+                ],
+                "searchDesc": "[Location - Exterior] Biomechanical tower with skeletal maw. Has: recessed gateway (center, midground), stairs (center, midground)",
+                "slug": "the-vertebral-citadel",
+                "imageUrl": "https://v3b.fal.media/files/b/rabbit/ejfkCIH_BzLOucb2DM8tQ.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Vertebral Citadel",
+                  "looks": "A formidable biomechanical tower, its form reminiscent of colossal, dark metallic vertebrae, with cable-like structures acting as tendons. A recessed skeletal gateway leads inward.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/rabbit/ejfkCIH_BzLOucb2DM8tQ.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1763981819080-z1pa4nel5",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1763981921349-z2gifzsmh",
+      "type": "host",
+      "name": "The Aethelian Expanse",
+      "description": "A realm of impossible landscapes and vibrant, alien flora.",
+      "dna": {
+        "type": "host",
+        "name": "The Aethelian Expanse",
+        "description": "A realm of impossible landscapes and vibrant, alien flora.",
+        "dna": {
+          "looks": "Vast, surreal landscapes characterized by gravity-defying rock formations, organic curves, and abundant, otherworldly plant life.  Elements often appear to float or hang precariously.",
+          "colorsAndLighting": "A vibrant yet ethereal palette dominated by lush greens and glowing blues, with warm, diffused sunlight creating a mystical ambiance.  Light sources are often integrated into the landscape.",
+          "atmosphere": "Thick and humid air, carrying a sense of otherworldly calm and ancient mystery.  A gentle, pervasive mist often softens distant features, enhancing the dreamlike quality.",
+          "materials": "Dominantly organic, natural materials like moss-covered stone, weathered rock, and dense, alien vegetation.  Surfaces exhibit a sense of age and integration with the environment.",
+          "mood": "Dreamlike, serene, and awe-inspiring, evoking a sense of wonder and exploration into the unknown.",
+          "sounds": "Distant chimes, gentle water flow, rustling alien foliage, faint ethereal hum",
+          "spatialLayout": "Expansive, open vistas with dramatic verticality.  Floating platforms, archways, and natural bridges create a non-linear, multi-layered sense of space.",
+          "primary_surfaces": [
+            "Moss-covered stone",
+            "Weathered rock"
+          ],
+          "secondary_surfaces": [
+            "Luminous water",
+            "Alien vegetation"
+          ],
+          "accent_features": [
+            "Luminous flora",
+            "Crystal formations",
+            "Carved natural structures"
+          ],
+          "dominant": "Green",
+          "secondary": "Blue",
+          "accent": "Gold",
+          "ambient": "Warm, ethereal",
+          "genre": "fantasy",
+          "architectural_tone": "Organic, sculpted natural forms inspired by organic growth and impossible geological phenomena.  Features carved stone, integrated living plant life, and gravity-defying structures.",
+          "cultural_tone": "Ancient, mysterious, and harmonious with nature.  Suggests a civilization that coexists with and shapes its environment through natural means.",
+          "materials_base": "Naturalistic and organic, with an emphasis on stone, moss, wood, and living flora.  Finishes are weathered, aged, and integrated.",
+          "mood_baseline": "Serene wonder",
+          "palette_bias": "Vibrant natural palette with strong emphasis on greens and blues, accented by luminous and warm tones.",
+          "soundscape_base": "Naturalistic ambient sounds with subtle, ethereal musical undertones.",
+          "flora_base": "Lush, alien, bioluminescent flora with large, organic leaf structures and glowing elements.",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating islands",
+          "Massive natural formations",
+          "Luminous water bodies"
+        ],
+        "uniqueIdentifiers": [
+          "Roger Dean-inspired art style",
+          "Anti-gravity geology"
+        ],
+        "searchDesc": "A realm of impossible landscapes, floating stone arches, alien flora, and luminous pools.",
+        "slug": "the-aethelian-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Aethelian Expanse",
+          "looks": "A realm of impossible landscapes and vibrant, alien flora.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/zebra/xKmOYTsm04nu_qGuQDogi.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "32bdad78-7618-43a3-98ca-d7bf217498c4",
+          "type": "region",
+          "name": "The Aethelian Expanse",
+          "description": "",
+          "dna": {
+            "type": "region",
+            "name": "The Aethelian Expanse",
+            "description": "",
+            "dna": {
+              "looks": "A breathtaking vista of colossal stone arches that seem to defy gravity, interspersed with verdant terraces carpeted in thick moss.  Gleaming, luminous pools of water are scattered throughout the landscape.",
+              "colorsAndLighting": "Dominated by deep greens of moss and foliage, contrasted with the cool blues and silvers of the luminous water.  Warm, golden light filters through the arches and illuminates the terraces.",
+              "atmosphere": "The air is humid and carries the fresh scent of damp earth and exotic blossoms. A constant gentle mist hangs over the water, lending an ethereal quality to the region.",
+              "materials": "Primarily weathered, ancient stone forming the archways and terraces, densely covered in vibrant, soft moss.  The pools are filled with clear, faintly glowing water.",
+              "mood": "Serene, tranquil, and awe-inspiring, inviting contemplation and exploration.",
+              "sounds": "Gentle dripping water, soft mossy growth, distant resonant tones, occasional soft sighs of wind",
+              "spatialLayout": "A sprawling, multi-tiered environment with a strong sense of verticality.  The stone arches create sweeping, natural corridors and elevated pathways.",
+              "primary_surfaces": [
+                "Moss-covered stone",
+                "Natural rock"
+              ],
+              "secondary_surfaces": [
+                "Luminous water",
+                "Dense vegetation"
+              ],
+              "accent_features": [
+                "Carved stone details",
+                "Bioluminescent moss",
+                "Smooth, reflective water"
+              ],
+              "dominant": "Green",
+              "secondary": "Blue",
+              "accent": "Gold",
+              "ambient": "Warm, diffused",
+              "genre": null,
+              "architectural_tone": "Organic, sculpted natural forms inspired by organic growth and impossible geological phenomena. Features carved stone, integrated living plant life, and gravity-defying structures.",
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": "Lush, alien, bioluminescent flora with large, organic leaf structures and glowing elements.",
+              "fauna_base": null
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Floating stone archlands",
+              "Moss terraces",
+              "Luminous pools"
+            ],
+            "uniqueIdentifiers": [
+              "Roger Dean-inspired motifs",
+              "Terraced landscapes"
+            ],
+            "searchDesc": "Roger Dean-inspired floating stone archlands with lush moss terraces and luminous pools.",
+            "slug": "the-aethelian-expanse-region",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Aethelian Expanse",
+              "looks": "",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "2b6b93b0-dbfa-40c5-9660-fc40764434a2",
+              "type": "location",
+              "name": "The Whispering Gateway",
+              "description": "A massive, carved shell-doorway embedded within a hovering cliff face, part of the Roger Dean-inspired archlands.",
+              "dna": {
+                "type": "location",
+                "name": "The Whispering Gateway",
+                "description": "A massive, carved shell-doorway embedded within a hovering cliff face, part of the Roger Dean-inspired archlands.",
+                "looks": "Gigantic, iridescent shell-doorway set into a sheer, moss-covered cliff that floats serenely amidst vast stone archways. Luminous pools shimmer around the base.",
+                "atmosphere": "Humid air carrying the scent of exotic blossoms and damp earth, a soft, ethereal glow emanates from the pools and surrounding flora.",
+                "mood": "Mystical, awe-inspiring",
+                "dna": {
+                  "looks": "A colossal shell-shaped opening is carved into a massive, moss-covered cliff that appears to float. Luminescent water surrounds the base of the cliff and is dotted with irregular stone pathways. Tall, verdant foliage and trees crown the tops of sheer rock faces, creating a sense of immense scale. Sunlight streams down, illuminating the scene with an ethereal glow.",
+                  "colorsAndLighting": "The lighting is soft and diffused, with strong directional rays of light piercing through the haze from above and to the left. The dominant light is warm and golden, highlighting the interior of the shell-doorway and reflecting off the water.",
+                  "atmosphere": "The air appears thick and humid, with a visible haze softening the distant rock formations. A gentle mist seems to hang over the water's surface, contributing to the mystical ambiance.",
+                  "materials": "The cliff is composed of weathered, ancient stone, heavily adorned with lush, vibrant moss. Stone pathways are visible near the water's edge.",
+                  "mood": "Mysterious, inviting, and ancient, hinting at hidden depths and forgotten passages.",
+                  "sounds": "Soft water lapping, faint echo of dripping, rustling leaves, gentle hum of luminescence",
+                  "spatialLayout": "In the foreground, clear turquoise pools are bordered by lush moss and stone pathways that curve through the landscape. The midground is dominated by a colossal, shell-shaped doorway set into a sheer, hovering cliff face. In the background, other sheer cliffs and verdant foliage rise steeply, reaching towards a bright, hazy sky.",
+                  "primary_surfaces": "Rock, Moss",
+                  "secondary_surfaces": "Stone (pathways)",
+                  "accent_features": "Luminous water, Ethereal light",
+                  "dominant": "Green (moss, vegetation)",
+                  "secondary": "Turquoise (water), Gray (rock), Warm gold (interior of shell)",
+                  "accent": "Bright white/gold light shafts",
+                  "ambient": "Soft, ethereal glow with hints of turquoise and gold",
+                  "genre": null,
+                  "architectural_tone": "Organic, sculpted natural forms inspired by organic growth and impossible geological phenomena. Features carved stone, integrated living plant life, and gravity-defying structures.",
+                  "cultural_tone": "Ancient, mysterious, and harmonious with nature. Suggests a civilization that coexists with and shapes its environment through natural means.",
+                  "materials_base": "Naturalistic and organic, with an emphasis on stone, moss, wood, and living flora. Finishes are weathered, aged, and integrated.",
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": "Lush, alien, bioluminescent flora with large, organic leaf structures and glowing elements.",
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "stairs",
+                    "position": "leading into shell-doorway, midground",
+                    "description": "Stone steps ascending into the luminous shell-doorway."
+                  },
+                  {
+                    "type": "passage",
+                    "position": "within shell-doorway, midground",
+                    "description": "A glowing, cavernous passage shaped like a conch shell."
+                  },
+                  {
+                    "type": "archway",
+                    "position": "implied by landscape context",
+                    "description": "Vast stone arch formations suggesting interconnected pathways."
+                  },
+                  {
+                    "type": "door",
+                    "position": "within cliff face, midground",
+                    "description": "Massive, organically shaped shell-doorway providing entrance."
+                  }
+                ],
+                "dominantElements": [
+                  "Gigantic shell-shaped doorway (Midground, Center)",
+                  "Massive hovering cliff face (Midground, Center)",
+                  "Luminous turquoise pools (Foreground/Midground)",
+                  "Stone pathways (Foreground/Midground)",
+                  "Lush moss and vegetation (Throughout)"
+                ],
+                "uniqueIdentifiers": [
+                  "Gigantic, iridescent shell-doorway",
+                  "Hovering cliff face",
+                  "Luminous turquoise pools",
+                  "Roger Dean-inspired stone archlands (implied by context)"
+                ],
+                "searchDesc": "[Location - Exterior] Mystical landscape with shell-doorway. Has: stairs (midground), passage (midground), door (midground)",
+                "slug": "the-whispering-gateway",
+                "imageUrl": "https://v3b.fal.media/files/b/zebra/xKmOYTsm04nu_qGuQDogi.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Whispering Gateway",
+                  "looks": "A massive, carved shell-doorway embedded within a hovering cliff face, part of the Roger Dean-inspired archlands.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/zebra/xKmOYTsm04nu_qGuQDogi.jpg",
               "spaceType": "exterior",
               "children": []
             }
@@ -7400,11 +7821,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1763566759048-fx5m1xcqw",
     "loc-1763623855173-w88tnre1u",
-    "loc-1763587150824-el9l8zki2",
-    "loc-1763570178929-is7khrj3v",
-    "loc-1763733616900-gv881kq63",
-    "loc-1763735358194-f9pjw8y5h"
+    "loc-1763981592554-e2du1t0y3"
   ]
 }

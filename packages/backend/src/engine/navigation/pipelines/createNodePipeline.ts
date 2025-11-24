@@ -12,6 +12,7 @@ import type { NavigationDecision, NavigationContext, IntentResult } from '../typ
 import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
 import { findParentLocationNode } from '../navigationHelpers';
 import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
+import { getPipelineTypeForIntent } from '../../pipelines/shared/pipelineConfig';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
 export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
@@ -37,7 +38,9 @@ export async function runCreateLocationNodePipeline(
   options?: CreateNodeOptions,
   navigationId?: string
 ): Promise<{ imageUrl: string; imagePrompt: string; node: any }> {
-  const helper = navigationId ? new PipelineHelper(navigationId, 'CreateNodePipeline') : null;
+  // Auto-detect pipeline type from intent
+  const pipelineType = getPipelineTypeForIntent(intent.intent);
+  const helper = navigationId ? new PipelineHelper(navigationId, 'CreateNodePipeline', pipelineType) : null;
 
   try {
     const nodeType = options?.nodeType || 'niche';
