@@ -147,7 +147,7 @@ export async function runCreateLocationNodePipeline(
     console.log('═══════════════════════════════════════════════════════════\n');
 
     if (helper) {
-      helper.completed('Node created successfully', { node });
+      helper.completed('Node created successfully', { node, imageUrl, imagePrompt });
     }
 
     return {

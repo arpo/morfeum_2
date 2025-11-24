@@ -6,10 +6,12 @@
 - **Bug Fixed:** Progress bar now appears immediately and animates smoothly for all pipelines (character, location, navigation).
 - **Root Cause:** Race condition between backend pipeline start and frontend SSE connection caused the first step's progress event to be missed, so the bar was hidden or static.
 - **Frontend Fixes:**
-  - `spawnSlice.ts` and `locationNavigation.ts`: Now initialize `currentStepIndex` to `0` (not `-1`) when pipeline config is received, ensuring the bar is visible from the start.
-  - `useProgressAnimation.ts`: Now uses `useState`/`useEffect` to animate from 0% to the target progress on mount, so the bar animates smoothly instead of jumping.
-- **Backend/Config:** No changes needed; pipeline step config and SSE events already correct.
-- **Result:** Progress bar is visible and animates correctly for all spawn/generation actions, including navigation "generate" (create niche).
+  - `spawnSlice.ts`: Consolidated SSE logic into `monitorSpawnProgress` helper.
+  - `locationNavigation.ts`: Removed manual SSE handling logic. Now calls `spawnSlice.registerExternalSpawn()` to delegate progress tracking.
+  - `useProgressAnimation.ts`: Now uses `useState`/`useEffect` to animate from 0% to the target progress on mount.
+- **Backend/Config:**
+  - `createNodePipeline.ts`: Updated to return full data (`imageUrl`, `imagePrompt`, `node`) in the completion event, ensuring frontend receives all context via the unified callback.
+- **Result:** Progress bar is visible and animates correctly for all pipelines. Navigation logic is now aligned with the rest of the app (no duplicate SSE code).
 
 ### Pipeline Progress Bar Integration (Nov 24, 2025)
 - **Fully integrated progress bars for all three pipelines** - Character, Location, and Navigation spawns now show real-time progress
@@ -24,9 +26,9 @@
   - All three pipelines use PipelineHelper for consistent SSE events
 - **Frontend Integration:**
   - Character & Location: Already working via spawnSlice
-  - Navigation: Refactored `locationNavigation.ts` to use `setupSSEConnection()` utility
-  - Removed ~80 lines of duplicate manual SSE handling code
-  - All spawns now follow same pattern: detect config in first event → add to spawn tracking → update progress
+  - Navigation: Refactored `locationNavigation.ts` to delegate SSE handling to `spawnSlice` via `registerExternalSpawn`.
+  - Removed all manual SSE handling code from navigation logic.
+  - All spawns now use the exact same `monitorSpawnProgress` logic in `spawnSlice`.
 - **Progress Bar Component:**
   - Step-based animation with individual step durations
   - Dynamic color transition (purple → blue)

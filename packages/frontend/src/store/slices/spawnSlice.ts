@@ -30,6 +30,14 @@ export interface SpawnSlice {
   activeSpawns: SpawnProcess[];
   
   startSpawn: (prompt: string, entityType?: 'character' | 'location' | 'niche', options?: any) => Promise<string>;
+  registerExternalSpawn: (
+    id: string, 
+    eventsUrl: string, 
+    prompt: string, 
+    entityType: 'character' | 'location' | 'niche',
+    onComplete?: (data: any) => void,
+    onError?: (error: any) => void
+  ) => void;
   cancelSpawn: (spawnId: string) => Promise<void>;
   updateSpawnProgress: (spawnId: string, update: Partial<SpawnProcess>) => void;
   addSpawnLog: (spawnId: string, message: string) => void;
@@ -37,6 +45,70 @@ export interface SpawnSlice {
   failSpawn: (spawnId: string, error: string) => void;
   removeSpawn: (spawnId: string) => void;
 }
+
+// Helper to manage SSE callbacks and store updates
+const monitorSpawnProgress = (
+    spawnId: string,
+    eventsUrl: string,
+    get: () => SpawnSlice,
+    callbacks?: { onComplete?: (data: any) => void; onError?: (err: any) => void }
+) => {
+    setupSSEConnection(eventsUrl, spawnId, {
+        onProgress: (id, data) => {
+            const spawn = get().activeSpawns.find((s) => s.id === id);
+            
+            // If this progress event includes steps, store them (happens on first event)
+            if (data.steps && data.pipelineType) {
+                get().updateSpawnProgress(id, {
+                    pipelineType: data.pipelineType,
+                    steps: data.steps,
+                    // Initialize at 0 so progress bar appears immediately (instead of -1 which hides it)
+                    currentStepIndex: 0, 
+                    currentStage: data.message
+                });
+            } else if (spawn && spawn.steps) {
+                // Calculate current step index from stage name
+                const stepIndex = getStepIndexFromStage(data.stage, spawn.steps);
+                get().updateSpawnProgress(id, {
+                    currentStage: data.message,
+                    currentStepIndex: stepIndex
+                });
+            } else {
+                get().updateSpawnProgress(id, {
+                    currentStage: data.message
+                });
+            }
+            get().addSpawnLog(id, data.message);
+        },
+        onCompleted: (id, data) => {
+            const spawn = get().activeSpawns.find((s) => s.id === id);
+            get().updateSpawnProgress(id, {
+                status: 'completed',
+                progress: 100,
+                result: data.worldTree || data.character || data.node,
+                currentStage: 'Completed',
+                currentStepIndex: spawn?.steps ? spawn.steps.length - 1 : undefined
+            });
+            
+            // Handle entity-specific completion (routing, cleanup, etc)
+            handleSpawnCompletion(id, data, get());
+
+            // External callback if provided
+            if (callbacks?.onComplete) {
+                callbacks.onComplete(data);
+            }
+        },
+        onError: (id, data) => {
+            get().failSpawn(id, data.message || 'Unknown error');
+            if (callbacks?.onError) {
+                callbacks.onError(data);
+            }
+        },
+        onCancelled: (id) => {
+            get().updateSpawnProgress(id, { status: 'cancelled' });
+        }
+    });
+};
 
 export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get) => ({
   activeSpawns: [],
@@ -85,55 +157,9 @@ export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get
         activeSpawns: [...state.activeSpawns, newProcess]
       }));
 
-      // Establish SSE connection if eventsUrl is provided
+      // Establish SSE connection using shared helper
       if (eventsUrl) {
-        setupSSEConnection(eventsUrl, spawnId, {
-          onProgress: (id, data) => {
-            const spawn = get().activeSpawns.find((s: SpawnProcess) => s.id === id);
-            
-            // If this progress event includes steps, store them (happens on first event)
-            if (data.steps && data.pipelineType) {
-              get().updateSpawnProgress(id, {
-                pipelineType: data.pipelineType,
-                steps: data.steps,
-                currentStepIndex: 0, // Assume first step started since pipeline starts immediately
-                currentStage: data.message
-              });
-            } else if (spawn && spawn.steps) {
-              // Calculate current step index from stage name
-              const stepIndex = getStepIndexFromStage(data.stage, spawn.steps);
-              get().updateSpawnProgress(id, {
-                currentStage: data.message,
-                currentStepIndex: stepIndex
-              });
-            } else {
-              get().updateSpawnProgress(id, {
-                currentStage: data.message
-              });
-            }
-            get().addSpawnLog(id, data.message);
-          },
-          onCompleted: (id, data) => {
-            // Mark spawn as completed
-            const spawn = get().activeSpawns.find((s: SpawnProcess) => s.id === id);
-            get().updateSpawnProgress(id, {
-              status: 'completed',
-              progress: 100,
-              result: data.worldTree || data.character,
-              currentStage: 'Completed',
-              currentStepIndex: spawn?.steps ? spawn.steps.length - 1 : undefined
-            });
-            
-            // Handle entity-specific completion
-            handleSpawnCompletion(id, data, get());
-          },
-          onError: (id, data) => {
-            get().failSpawn(id, data.message || 'Unknown error');
-          },
-          onCancelled: (id) => {
-            get().updateSpawnProgress(id, { status: 'cancelled' });
-          }
-        });
+        monitorSpawnProgress(spawnId, eventsUrl, get);
       }
 
       return spawnId;
@@ -141,6 +167,34 @@ export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get
       console.error('Start spawn failed:', error);
       throw error;
     }
+  },
+
+  registerExternalSpawn: (
+    id: string, 
+    eventsUrl: string, 
+    prompt: string, 
+    entityType: 'character' | 'location' | 'niche',
+    onComplete?: (data: any) => void,
+    onError?: (error: any) => void
+  ) => {
+    const newProcess: SpawnProcess = {
+        id,
+        prompt,
+        entityType,
+        status: 'processing',
+        progress: 0,
+        currentStage: 'Initializing...',
+        logs: ['External spawn registered'],
+        stages: [],
+        eventsUrl
+    };
+
+    set((state: any) => ({
+        activeSpawns: [...state.activeSpawns, newProcess]
+    }));
+
+    // Establish SSE connection using shared helper
+    monitorSpawnProgress(id, eventsUrl, get, { onComplete, onError });
   },
 
   cancelSpawn: async (spawnId: string) => {
@@ -197,4 +251,3 @@ export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get
   }
 });
 
-// All helper functions moved to utils/spawn, utils/tree, and utils/entity

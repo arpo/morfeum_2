@@ -7,7 +7,6 @@ import { Node } from '@/store/slices/locations';
 import { getMergedDNA } from '@/utils/nodeDNAExtractor';
 import { useStore } from '@/store';
 import type { SpawnProcess } from '@/store/slices/spawnSlice';
-import { setupSSEConnection, getStepIndexFromStage } from '@/utils/spawn/sseConnection';
 
 interface FocusState {
   node_id: string;
@@ -257,81 +256,26 @@ export async function findDestination(
   // If eventsUrl is provided, establish SSE connection for pipeline progress
   if (result.data.eventsUrl && result.data.navigationId) {
     console.log('');
-    console.log('🔌 [Navigation SSE] Establishing connection...');
+    console.log('🔌 [Navigation SSE] Handing off to SpawnSlice...');
     console.log('   Navigation ID:', result.data.navigationId);
-    console.log('   Events URL:', result.data.eventsUrl);
     
     // Return a promise that resolves when pipeline completes
     return new Promise<NavigationResult>((resolve, reject) => {
-      let pipelineNode: any = undefined;
-      let pipelineImageUrl: string | undefined = undefined;
-      let pipelineImagePrompt: string | undefined = undefined;
-      let spawnAdded = false;
-      
-      // Use standard SSE connection utility
-      setupSSEConnection(result.data.eventsUrl, result.data.navigationId, {
-        onProgress: (id, data) => {
-          // On first event with config, add spawn to tracking
-          if (!spawnAdded && data.pipelineType && data.steps) {
-            const newSpawn: SpawnProcess = {
-              id: result.data.navigationId,
-              prompt: userCommand,
-              entityType: 'location',
-              status: 'processing',
-              progress: 0,
-              currentStage: data.message,
-              logs: [data.message],
-              stages: [],
-              eventsUrl: result.data.eventsUrl,
-              pipelineType: data.pipelineType,
-              steps: data.steps,
-              currentStepIndex: 0 // Assume first step started since pipeline starts immediately
-            };
-            
-            useStore.setState((state) => ({
-              activeSpawns: [...state.activeSpawns, newSpawn]
-            }));
-            
-            spawnAdded = true;
-            console.log('🎯 [Navigation] Added to spawn tracking with progress bar');
-          } else if (spawnAdded) {
-            // Update progress on subsequent events
-            const spawn = useStore.getState().activeSpawns.find(s => s.id === id);
-            if (spawn?.steps) {
-              const stepIndex = getStepIndexFromStage(data.stage, spawn.steps);
-              useStore.getState().updateSpawnProgress(id, {
-                currentStage: data.message,
-                currentStepIndex: stepIndex
-              });
-            }
-          }
+      useStore.getState().registerExternalSpawn(
+        result.data.navigationId!,
+        result.data.eventsUrl!,
+        userCommand,
+        'location', // Shows up as location type in spawn list (generic)
+        (data) => {
+          console.log('✅ [Navigation] Pipeline completed via SpawnSlice');
           
-          // Capture data for final result
-          if (data.data?.imageUrl) pipelineImageUrl = data.data.imageUrl;
-          if (data.data?.imagePrompt) pipelineImagePrompt = data.data.imagePrompt;
-        },
-        
-        onCompleted: (id, data) => {
-          if (data.node) pipelineNode = data.node;
-          
-          // Mark spawn as completed and remove after delay
-          if (spawnAdded) {
-            const spawn = useStore.getState().activeSpawns.find(s => s.id === id);
-            if (spawn?.steps) {
-              useStore.getState().updateSpawnProgress(id, {
-                status: 'completed',
-                progress: 100,
-                currentStepIndex: spawn.steps.length - 1,
-                currentStage: 'Completed'
-              });
-            }
-            
-            setTimeout(() => {
-              useStore.getState().removeSpawn(id);
-            }, 2000);
-          }
+          // Auto-remove spawn after delay
+          setTimeout(() => {
+            useStore.getState().removeSpawn(result.data.navigationId!);
+          }, 2000);
           
           // Resolve with complete navigation result
+          // Data from completion event should contain all fields populated by backend
           resolve({
             action: 'generate',
             targetNodeId: result.data.decision.targetNodeId,
@@ -340,42 +284,22 @@ export async function findDestination(
             scale_hint: result.data.decision.newNodeType,
             relation: result.data.decision.metadata?.relation,
             reason: result.data.decision.reasoning,
-            imageUrl: pipelineImageUrl,
-            imagePrompt: pipelineImagePrompt,
-            node: pipelineNode
+            imageUrl: data.imageUrl,
+            imagePrompt: data.imagePrompt,
+            node: data.node
           });
         },
-        
-        onError: (id, data) => {
-          // Mark spawn as failed
-          if (spawnAdded) {
-            useStore.getState().updateSpawnProgress(id, {
-              status: 'failed',
-              error: data.message || 'Pipeline failed'
-            });
-            
-            setTimeout(() => {
-              useStore.getState().removeSpawn(id);
-            }, 5000);
-          }
+        (error) => {
+          console.error('❌ [Navigation] Pipeline failed via SpawnSlice:', error);
+           
+          // Auto-remove spawn after delay
+          setTimeout(() => {
+            useStore.getState().removeSpawn(result.data.navigationId!);
+          }, 5000);
           
-          reject(new Error(data.message || 'Pipeline failed'));
-        },
-        
-        onCancelled: (id) => {
-          if (spawnAdded) {
-            useStore.getState().updateSpawnProgress(id, {
-              status: 'cancelled'
-            });
-            
-            setTimeout(() => {
-              useStore.getState().removeSpawn(id);
-            }, 2000);
-          }
-          
-          reject(new Error('Navigation cancelled'));
+          reject(new Error(error.message || 'Pipeline failed'));
         }
-      });
+      );
     });
   }
   

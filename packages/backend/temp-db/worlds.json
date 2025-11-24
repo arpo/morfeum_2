@@ -6478,6 +6478,302 @@
       ],
       "searchDesc": "Dilapidated windmill interior, stone walls, encroaching grass, pale turquoise light, mystery, decay.",
       "slug": "interior-of-the-whispering-mill"
+    },
+    "loc-1763994876664-643qmsnex": {
+      "id": "loc-1763994876664-643qmsnex",
+      "type": "host",
+      "name": "Industrial Wasteland",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Industrial Wasteland",
+        "description": "A realm choked by rust and forgotten industry, where the remnants of past civilizations loom as colossal, decaying monuments to human endeavor.",
+        "dna": {
+          "looks": "Vast, desolate landscapes dominated by immense, derelict structures of metal and concrete. The horizon is often obscured by smog or dust, with skeletal remains of machinery jutting into the sky. Nature struggles to reclaim the land, with sparse, hardy vegetation clinging to ruins.",
+          "colorsAndLighting": "The palette is dominated by muted browns, grays, and ochres, reflecting rust, concrete, and dust. Lighting is often dim, diffused, and overcast, with occasional stark contrasts from industrial remnants or distant, unseen light sources.",
+          "atmosphere": "The air is thick with the smell of decay, ozone, and metallic tang. A pervasive haze or smog hangs heavy, creating a sense of oppression and mystery. Temperatures are generally moderate but can feel damp and chilly due to the lack of shelter.",
+          "materials": "Primarily visible are vast expanses of rusted steel, crumbling concrete, weathered brick, and exposed, decaying wiring. Debris, scavenged metals, and remnants of past manufacturing processes litter the ground.",
+          "mood": "A profound sense of abandonment, loss, and melancholic grandeur pervades the environment. There is an underlying tension of danger and the quiet resilience of nature's slow reclamation.",
+          "sounds": "Distant creaking metal, groaning structures, wind whistling through ruins, faint echoes, dripping water",
+          "spatialLayout": "Expansive, often flat or gently undulating plains punctuated by towering, monolithic industrial structures. Open spaces are vast and exposed, while interiors are cavernous and labyrinthine.",
+          "primary_surfaces": [
+            "rusted metal",
+            "crumbling concrete",
+            "weathered brick"
+          ],
+          "secondary_surfaces": [
+            "shattered glass",
+            "exposed rebar",
+            "debris piles"
+          ],
+          "accent_features": [
+            "broken machinery",
+            "overgrown pipes",
+            "fading signage"
+          ],
+          "dominant": "Brown",
+          "secondary": "Gray",
+          "accent": "Orange",
+          "ambient": "Cool",
+          "genre": "post-apocalyptic",
+          "architectural_tone": "brutalist industrial behemoths with exposed steel frameworks, massive riveted plates, utilitarian forms, and immense scale, showing signs of extreme decay and weathering",
+          "cultural_tone": "remnants of a highly industrialized, now collapsed, global civilization; a focus on function over form, now serving as monuments to past ambition",
+          "materials_base": "heavily weathered and decaying industrial materials; emphasis on rust, concrete dust, and exposed structural elements",
+          "mood_baseline": "melancholic, desolate, awe-inspiringly bleak, with a sense of past grandeur",
+          "palette_bias": "desaturated earth tones, muted industrial grays, and rusty hues",
+          "soundscape_base": "ambient sounds of decay, wind, and distant industrial groans",
+          "flora_base": "sparse, hardy, and resilient vegetation adapted to polluted soil, such as tough grasses, mosses, and tenacious weeds",
+          "fauna_base": "scavenging creatures and hardy insects adapted to industrial environments"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Rusting factories",
+          "Skeletal cranes",
+          "Polluted skies"
+        ],
+        "uniqueIdentifiers": [
+          "Pervasive decay",
+          "Echoes of industry"
+        ],
+        "searchDesc": "A desolate world of abandoned industry, rust, and pollution, dominated by decaying mega-structures.",
+        "slug": "industrial-wasteland",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Industrial Wasteland",
+          "looks": "A realm choked by rust and forgotten industry, where the remnants of past civilizations loom as colossal, decaying monuments to human endeavor.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/4icG8QGNId6_w_QlysMxM.jpg",
+      "description": "A realm choked by rust and forgotten industry, where the remnants of past civilizations loom as colossal, decaying monuments to human endeavor."
+    },
+    "7a206672-d92c-4594-8a29-d9e1a232daf9": {
+      "id": "7a206672-d92c-4594-8a29-d9e1a232daf9",
+      "type": "region",
+      "name": "The Rust Belt",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Rust Belt",
+        "description": "Vast expanses of decaying manufacturing facilities, stretching across what were once the industrial heartlands, now silent and corroded.",
+        "dna": {
+          "looks": "Expansive plains covered by a dense network of interconnected, decaying factories. Skeletal remains of machinery, rusted train tracks, and crumbling infrastructure are everywhere. Sparse, struggling vegetation attempts to grow in cracks and on weathered surfaces.",
+          "colorsAndLighting": "Dominated by the ubiquitous rust-browns of corroded metal and the muted grays of concrete and smog. Lighting is typically dim and diffused, with overcast skies casting a perpetual twilight.",
+          "atmosphere": "The air is heavy with the smell of iron oxide and stagnant water. A persistent haze limits visibility, creating a claustrophobic yet expansive feel. The silence is broken only by the wind whistling through broken structures.",
+          "materials": "Predominantly rusted steel, weathered concrete, and broken brick. Exposed pipes, corroded gears, and piles of industrial debris are common.",
+          "mood": "A profound sense of industrial ruin and a lingering echo of past productivity. The vastness emphasizes the scale of decay and the futility of past efforts.",
+          "sounds": "Wind through metal, distant metallic groans, dripping water, settling debris",
+          "spatialLayout": "A sprawling, interconnected landscape of industrial behemoths. Open factory floors, vast assembly halls, and narrow, debris-strewn access corridors characterize the space.",
+          "primary_surfaces": [
+            "rusted steel plating",
+            "weathered concrete",
+            "corroded brickwork"
+          ],
+          "secondary_surfaces": [
+            "exposed pipes",
+            "industrial debris",
+            "shattered windows"
+          ],
+          "accent_features": [
+            "broken conveyor belts",
+            "rusted machinery",
+            "fading warning signs"
+          ],
+          "dominant": "Brown",
+          "secondary": "Gray",
+          "accent": "Ochre",
+          "ambient": "Cool",
+          "genre": null,
+          "architectural_tone": "massive, utilitarian industrial structures with colossal scale, featuring exposed steel beams, riveted panels, large factory windows, and extensive pipe networks, all heavily eroded and rusted",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "hardy, ground-covering weeds and persistent mosses growing in cracks",
+          "fauna_base": null
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Massive factory complexes",
+          "Silent assembly lines",
+          "Corroded infrastructure"
+        ],
+        "uniqueIdentifiers": [
+          "Dense industrial decay",
+          "Scattered ruins"
+        ],
+        "searchDesc": "The Rust Belt is a region of vast, decaying factory complexes and corroded industrial infrastructure, choked by rust.",
+        "slug": "the-rust-belt",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Rust Belt",
+          "looks": "Vast expanses of decaying manufacturing facilities, stretching across what were once the industrial heartlands, now silent and corroded.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Vast expanses of decaying manufacturing facilities, stretching across what were once the industrial heartlands, now silent and corroded."
+    },
+    "269a0cc7-0d27-4ace-be61-da3d96f9344b": {
+      "id": "269a0cc7-0d27-4ace-be61-da3d96f9344b",
+      "type": "location",
+      "name": "The Cogwork Mausoleum",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Cogwork Mausoleum",
+        "description": "An abandoned factory, once a behemoth of gears and steam, now stands as a silent tomb to its former glory.",
+        "looks": "Towering structure of weathered steel, colossal gears visible through grimy windows, numerous steam stacks reaching towards a perpetually overcast sky. The main workshop door is heavily rusted but appears accessible.",
+        "atmosphere": "A pervasive scent of oil and decay, the faint groaning of stressed metal.",
+        "mood": "Melancholy, derelict",
+        "dna": {
+          "looks": "A colossal, circular structure dominates the center of the frame, featuring a massive, segmented gear-like facade. Flanking this central feature are long, multi-story buildings with arched windows and weathered brickwork. Several tall, cylindrical steam stacks rise above the buildings, silhouetted against a hazy sky. The foreground consists of a desolate, rocky path littered with debris and overgrown with sparse vegetation. Light emanates from within the central structure, suggesting an accessible interior.",
+          "colorsAndLighting": "The lighting is dim and diffused, originating primarily from within the central doorway, casting a warm, inviting glow onto the immediate path. Ambient light is cool and muted, reflecting the overcast sky. Contrast is present between the brightly lit interior and the darker exterior structures.",
+          "atmosphere": "A thick, pervasive haze hangs in the air, obscuring distant details and lending a sense of depth and mystery. The overall air quality appears heavy and damp, consistent with an abandoned industrial environment.",
+          "materials": "Primary materials include aged brickwork, rusted steel, and remnants of concrete. Secondary materials like scattered stone and debris contribute to the derelict aesthetic.",
+          "mood": "A mood of forgotten power and latent potential. The accessible entrance and interior light offer a glimmer of hope or intrigue within the pervasive decay.",
+          "sounds": "Distant structural groans, faint dripping, hum of unseen machinery",
+          "spatialLayout": "The foreground is a rough, uneven ground leading towards the midground, where the main factory structures are situated. The central structure is wide and imposing, with flanking buildings extending horizontally. The background is dominated by the sky and distant, hazy industrial elements like steam stacks and scaffolding.",
+          "primary_surfaces": "Brick, Steel",
+          "secondary_surfaces": "Stone, Concrete, Rusted metal",
+          "accent_features": "Glowing lights within doorway",
+          "dominant": "Brown (weathered brick, rust)",
+          "secondary": "Gray (steel, haze, sky), Orange (interior light)",
+          "accent": "Glow from doorway",
+          "ambient": "Muted gray-blue",
+          "genre": null,
+          "architectural_tone": "colossal, functional industrial architecture with an imposing, gear-inspired central facade; featuring massive arched windows, exposed steel structural elements, and towering steam stacks, all in a state of advanced decay and rust",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "A large, arched main workshop door with glowing interior light, appearing accessible."
+          },
+          {
+            "type": "window",
+            "position": "left and right walls, midground",
+            "description": "Numerous arched windows offering glimpses into darker interiors."
+          }
+        ],
+        "dominantElements": [
+          "Massive circular gear facade (center, background)",
+          "Flanking brick buildings with arched windows (left and right, midground)",
+          "Tall cylindrical steam stacks (background)",
+          "Main workshop entrance archway (center, midground)"
+        ],
+        "uniqueIdentifiers": [
+          "Giant circular gear motif on facade",
+          "Rows of arched windows on flanking buildings",
+          "Prominent steam stacks"
+        ],
+        "searchDesc": "[Location - Exterior] Abandoned factory courtyard. Has: main workshop door (center, midground), arched windows (left and right, midground)",
+        "slug": "the-cogwork-mausoleum",
+        "imageUrl": "https://v3b.fal.media/files/b/tiger/4icG8QGNId6_w_QlysMxM.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Cogwork Mausoleum",
+          "looks": "An abandoned factory, once a behemoth of gears and steam, now stands as a silent tomb to its former glory.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/4icG8QGNId6_w_QlysMxM.jpg",
+      "description": "An abandoned factory, once a behemoth of gears and steam, now stands as a silent tomb to its former glory."
+    },
+    "niche-1763994920304-6e4ewrjss": {
+      "id": "niche-1763994920304-6e4ewrjss",
+      "type": "niche",
+      "name": "interior of The Cogwork Mausoleum",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, dimly lit cavernous space characterized by colossal, weathered steel support beams and scattered industrial debris. A prominent, warm-glowing arched passageway dominates the midground, drawing the eye deeper into the gloom. The foreground features a textured concrete floor strewn with large gears and rusted pipes, while the background hints at immense scale with glimpses of a segmented gear-like facade.",
+        "colorsAndLighting": "The space is predominantly illuminated by diffused, muted ambient light filtering from above, creating a somber atmosphere. A warm, orange glow emanates from the central arched passageway, providing a stark and inviting contrast. The overall palette is desaturated earth tones and muted industrial grays.",
+        "atmosphere": "The air is thick with a pervasive haze, lending a palpable sense of age and disuse. A melancholic stillness pervades the atmosphere, punctuated by the faint suggestion of forgotten power. The immense scale inspires awe, tempered by a bleak and industrial aesthetic.",
+        "materials": "Rough-hewn concrete forms the textured floor, scattered with industrial debris. Colossal steel support beams display advanced rust and structural decay, complemented by rusted pipes and large-scale steel gears. Walls feature riveted steel plates and exposed ventilation ducts.",
+        "mood": "A mood of melancholic awe and forgotten power pervades, with the warm light of the passageway offering a faint glimmer of intrigue.",
+        "sounds": "Distant hum, creaking metal, muffled echoes, faint rustling.",
+        "spatialLayout": "A cavernous, multi-tiered interior space with immense verticality. The foreground is a cluttered floor, the midground defined by imposing structural elements and a central focal passageway, and the background recedes into obscurity. Entry is immediately beyond a workshop door.",
+        "primary_surfaces": "concrete floor, weathered steel beams and walls",
+        "secondary_surfaces": "rusted pipes, discarded steel gears, riveted steel plates, ventilation ducts",
+        "accent_features": "warm orange glow from arched passageway, hardy moss patches on floor",
+        "dominant": "muted industrial grays",
+        "secondary": "desaturated earth tones",
+        "accent": "warm orange",
+        "ambient": "neutral",
+        "genre": null,
+        "architectural_tone": "colossal, functional industrial architecture with imposing, gear-inspired elements in advanced decay",
+        "cultural_tone": "remnants of a collapsed global civilization focused on function, now monuments to past ambition",
+        "materials_base": "rusted steel, concrete, industrial decay",
+        "mood_baseline": "forgotten power and latent potential, with a melancholic and bleak undertone",
+        "palette_bias": "desaturated earth tones, muted industrial grays, rust accents",
+        "soundscape_base": "ambient industrial decay",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/xl292909YCMNjKXC7BCuC.jpg",
+      "description": "The dimly lit, cavernous interior of The Cogwork Mausoleum, a space of forgotten industrial might.",
+      "navigableElements": [
+        {
+          "type": "ladder",
+          "position": "foreground left",
+          "description": "reinforced steel ladder ascending into darkness"
+        },
+        {
+          "type": "door",
+          "position": "midground right",
+          "description": "smaller, heavy steel door with a prominent locking mechanism"
+        },
+        {
+          "type": "archway",
+          "position": "midground center",
+          "description": "large, central arched passageway leading deeper into the structure"
+        }
+      ],
+      "dominantElements": [
+        "colossal steel support beams",
+        "large arched passageway",
+        "scattered industrial debris",
+        "segmented gear-like facade"
+      ],
+      "uniqueIdentifiers": [
+        "colossal gear-like facade",
+        "rusted industrial debris",
+        "arched passageway with warm glow"
+      ],
+      "searchDesc": "Dimly lit mausoleum interior with rusted gears, colossal beams, and an inviting archway.",
+      "slug": "interior-of-the-cogwork-mausoleum"
     }
   },
   "views": {},
@@ -8548,6 +8844,249 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763994876664-643qmsnex",
+      "type": "host",
+      "name": "Industrial Wasteland",
+      "description": "A realm choked by rust and forgotten industry, where the remnants of past civilizations loom as colossal, decaying monuments to human endeavor.",
+      "dna": {
+        "type": "host",
+        "name": "Industrial Wasteland",
+        "description": "A realm choked by rust and forgotten industry, where the remnants of past civilizations loom as colossal, decaying monuments to human endeavor.",
+        "dna": {
+          "looks": "Vast, desolate landscapes dominated by immense, derelict structures of metal and concrete. The horizon is often obscured by smog or dust, with skeletal remains of machinery jutting into the sky. Nature struggles to reclaim the land, with sparse, hardy vegetation clinging to ruins.",
+          "colorsAndLighting": "The palette is dominated by muted browns, grays, and ochres, reflecting rust, concrete, and dust. Lighting is often dim, diffused, and overcast, with occasional stark contrasts from industrial remnants or distant, unseen light sources.",
+          "atmosphere": "The air is thick with the smell of decay, ozone, and metallic tang. A pervasive haze or smog hangs heavy, creating a sense of oppression and mystery. Temperatures are generally moderate but can feel damp and chilly due to the lack of shelter.",
+          "materials": "Primarily visible are vast expanses of rusted steel, crumbling concrete, weathered brick, and exposed, decaying wiring. Debris, scavenged metals, and remnants of past manufacturing processes litter the ground.",
+          "mood": "A profound sense of abandonment, loss, and melancholic grandeur pervades the environment. There is an underlying tension of danger and the quiet resilience of nature's slow reclamation.",
+          "sounds": "Distant creaking metal, groaning structures, wind whistling through ruins, faint echoes, dripping water",
+          "spatialLayout": "Expansive, often flat or gently undulating plains punctuated by towering, monolithic industrial structures. Open spaces are vast and exposed, while interiors are cavernous and labyrinthine.",
+          "primary_surfaces": [
+            "rusted metal",
+            "crumbling concrete",
+            "weathered brick"
+          ],
+          "secondary_surfaces": [
+            "shattered glass",
+            "exposed rebar",
+            "debris piles"
+          ],
+          "accent_features": [
+            "broken machinery",
+            "overgrown pipes",
+            "fading signage"
+          ],
+          "dominant": "Brown",
+          "secondary": "Gray",
+          "accent": "Orange",
+          "ambient": "Cool",
+          "genre": "post-apocalyptic",
+          "architectural_tone": "brutalist industrial behemoths with exposed steel frameworks, massive riveted plates, utilitarian forms, and immense scale, showing signs of extreme decay and weathering",
+          "cultural_tone": "remnants of a highly industrialized, now collapsed, global civilization; a focus on function over form, now serving as monuments to past ambition",
+          "materials_base": "heavily weathered and decaying industrial materials; emphasis on rust, concrete dust, and exposed structural elements",
+          "mood_baseline": "melancholic, desolate, awe-inspiringly bleak, with a sense of past grandeur",
+          "palette_bias": "desaturated earth tones, muted industrial grays, and rusty hues",
+          "soundscape_base": "ambient sounds of decay, wind, and distant industrial groans",
+          "flora_base": "sparse, hardy, and resilient vegetation adapted to polluted soil, such as tough grasses, mosses, and tenacious weeds",
+          "fauna_base": "scavenging creatures and hardy insects adapted to industrial environments"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Rusting factories",
+          "Skeletal cranes",
+          "Polluted skies"
+        ],
+        "uniqueIdentifiers": [
+          "Pervasive decay",
+          "Echoes of industry"
+        ],
+        "searchDesc": "A desolate world of abandoned industry, rust, and pollution, dominated by decaying mega-structures.",
+        "slug": "industrial-wasteland",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Industrial Wasteland",
+          "looks": "A realm choked by rust and forgotten industry, where the remnants of past civilizations loom as colossal, decaying monuments to human endeavor.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/4icG8QGNId6_w_QlysMxM.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "7a206672-d92c-4594-8a29-d9e1a232daf9",
+          "type": "region",
+          "name": "The Rust Belt",
+          "description": "Vast expanses of decaying manufacturing facilities, stretching across what were once the industrial heartlands, now silent and corroded.",
+          "dna": {
+            "type": "region",
+            "name": "The Rust Belt",
+            "description": "Vast expanses of decaying manufacturing facilities, stretching across what were once the industrial heartlands, now silent and corroded.",
+            "dna": {
+              "looks": "Expansive plains covered by a dense network of interconnected, decaying factories. Skeletal remains of machinery, rusted train tracks, and crumbling infrastructure are everywhere. Sparse, struggling vegetation attempts to grow in cracks and on weathered surfaces.",
+              "colorsAndLighting": "Dominated by the ubiquitous rust-browns of corroded metal and the muted grays of concrete and smog. Lighting is typically dim and diffused, with overcast skies casting a perpetual twilight.",
+              "atmosphere": "The air is heavy with the smell of iron oxide and stagnant water. A persistent haze limits visibility, creating a claustrophobic yet expansive feel. The silence is broken only by the wind whistling through broken structures.",
+              "materials": "Predominantly rusted steel, weathered concrete, and broken brick. Exposed pipes, corroded gears, and piles of industrial debris are common.",
+              "mood": "A profound sense of industrial ruin and a lingering echo of past productivity. The vastness emphasizes the scale of decay and the futility of past efforts.",
+              "sounds": "Wind through metal, distant metallic groans, dripping water, settling debris",
+              "spatialLayout": "A sprawling, interconnected landscape of industrial behemoths. Open factory floors, vast assembly halls, and narrow, debris-strewn access corridors characterize the space.",
+              "primary_surfaces": [
+                "rusted steel plating",
+                "weathered concrete",
+                "corroded brickwork"
+              ],
+              "secondary_surfaces": [
+                "exposed pipes",
+                "industrial debris",
+                "shattered windows"
+              ],
+              "accent_features": [
+                "broken conveyor belts",
+                "rusted machinery",
+                "fading warning signs"
+              ],
+              "dominant": "Brown",
+              "secondary": "Gray",
+              "accent": "Ochre",
+              "ambient": "Cool",
+              "genre": null,
+              "architectural_tone": "massive, utilitarian industrial structures with colossal scale, featuring exposed steel beams, riveted panels, large factory windows, and extensive pipe networks, all heavily eroded and rusted",
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": "hardy, ground-covering weeds and persistent mosses growing in cracks",
+              "fauna_base": null
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Massive factory complexes",
+              "Silent assembly lines",
+              "Corroded infrastructure"
+            ],
+            "uniqueIdentifiers": [
+              "Dense industrial decay",
+              "Scattered ruins"
+            ],
+            "searchDesc": "The Rust Belt is a region of vast, decaying factory complexes and corroded industrial infrastructure, choked by rust.",
+            "slug": "the-rust-belt",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Rust Belt",
+              "looks": "Vast expanses of decaying manufacturing facilities, stretching across what were once the industrial heartlands, now silent and corroded.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "269a0cc7-0d27-4ace-be61-da3d96f9344b",
+              "type": "location",
+              "name": "The Cogwork Mausoleum",
+              "description": "An abandoned factory, once a behemoth of gears and steam, now stands as a silent tomb to its former glory.",
+              "dna": {
+                "type": "location",
+                "name": "The Cogwork Mausoleum",
+                "description": "An abandoned factory, once a behemoth of gears and steam, now stands as a silent tomb to its former glory.",
+                "looks": "Towering structure of weathered steel, colossal gears visible through grimy windows, numerous steam stacks reaching towards a perpetually overcast sky. The main workshop door is heavily rusted but appears accessible.",
+                "atmosphere": "A pervasive scent of oil and decay, the faint groaning of stressed metal.",
+                "mood": "Melancholy, derelict",
+                "dna": {
+                  "looks": "A colossal, circular structure dominates the center of the frame, featuring a massive, segmented gear-like facade. Flanking this central feature are long, multi-story buildings with arched windows and weathered brickwork. Several tall, cylindrical steam stacks rise above the buildings, silhouetted against a hazy sky. The foreground consists of a desolate, rocky path littered with debris and overgrown with sparse vegetation. Light emanates from within the central structure, suggesting an accessible interior.",
+                  "colorsAndLighting": "The lighting is dim and diffused, originating primarily from within the central doorway, casting a warm, inviting glow onto the immediate path. Ambient light is cool and muted, reflecting the overcast sky. Contrast is present between the brightly lit interior and the darker exterior structures.",
+                  "atmosphere": "A thick, pervasive haze hangs in the air, obscuring distant details and lending a sense of depth and mystery. The overall air quality appears heavy and damp, consistent with an abandoned industrial environment.",
+                  "materials": "Primary materials include aged brickwork, rusted steel, and remnants of concrete. Secondary materials like scattered stone and debris contribute to the derelict aesthetic.",
+                  "mood": "A mood of forgotten power and latent potential. The accessible entrance and interior light offer a glimmer of hope or intrigue within the pervasive decay.",
+                  "sounds": "Distant structural groans, faint dripping, hum of unseen machinery",
+                  "spatialLayout": "The foreground is a rough, uneven ground leading towards the midground, where the main factory structures are situated. The central structure is wide and imposing, with flanking buildings extending horizontally. The background is dominated by the sky and distant, hazy industrial elements like steam stacks and scaffolding.",
+                  "primary_surfaces": "Brick, Steel",
+                  "secondary_surfaces": "Stone, Concrete, Rusted metal",
+                  "accent_features": "Glowing lights within doorway",
+                  "dominant": "Brown (weathered brick, rust)",
+                  "secondary": "Gray (steel, haze, sky), Orange (interior light)",
+                  "accent": "Glow from doorway",
+                  "ambient": "Muted gray-blue",
+                  "genre": null,
+                  "architectural_tone": "colossal, functional industrial architecture with an imposing, gear-inspired central facade; featuring massive arched windows, exposed steel structural elements, and towering steam stacks, all in a state of advanced decay and rust",
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "door",
+                    "position": "center, midground",
+                    "description": "A large, arched main workshop door with glowing interior light, appearing accessible."
+                  },
+                  {
+                    "type": "window",
+                    "position": "left and right walls, midground",
+                    "description": "Numerous arched windows offering glimpses into darker interiors."
+                  }
+                ],
+                "dominantElements": [
+                  "Massive circular gear facade (center, background)",
+                  "Flanking brick buildings with arched windows (left and right, midground)",
+                  "Tall cylindrical steam stacks (background)",
+                  "Main workshop entrance archway (center, midground)"
+                ],
+                "uniqueIdentifiers": [
+                  "Giant circular gear motif on facade",
+                  "Rows of arched windows on flanking buildings",
+                  "Prominent steam stacks"
+                ],
+                "searchDesc": "[Location - Exterior] Abandoned factory courtyard. Has: main workshop door (center, midground), arched windows (left and right, midground)",
+                "slug": "the-cogwork-mausoleum",
+                "imageUrl": "https://v3b.fal.media/files/b/tiger/4icG8QGNId6_w_QlysMxM.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Cogwork Mausoleum",
+                  "looks": "An abandoned factory, once a behemoth of gears and steam, now stands as a silent tomb to its former glory.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/tiger/4icG8QGNId6_w_QlysMxM.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1763994920304-6e4ewrjss",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -8556,6 +9095,7 @@
     "loc-1763990917359-msam3nv0s",
     "loc-1763992990858-q39lf2oa4",
     "loc-1763993299519-519m0gld6",
-    "loc-1763993917225-g12t5gd13"
+    "loc-1763993917225-g12t5gd13",
+    "loc-1763994876664-643qmsnex"
   ]
 }
