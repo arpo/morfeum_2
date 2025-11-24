@@ -30,7 +30,6 @@ export interface PromptTemplates {
   chatCharacterImpersonation: (entityData: string) => string;
   sampleCharacterPrompts: string[];
   sampleLocationPrompts: string[];
-  navigatorSemanticNodeSelector: (userCommand: string, currentFocus: any, currentLocationDetails: any, allNodes: any[]) => string;
   characterProfileGenerationUserMessage: string;
   locationProfileGenerationUserMessage: string;
   basicEntityDataFormatting: (name: string, looks: string, wearing: string, personality: string) => string;

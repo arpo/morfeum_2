@@ -8,7 +8,6 @@ import { chatSystemMessage } from '../chat/chatSystemMessage';
 import { chatCharacterImpersonation } from '../chat/chatCharacterImpersonation';
 import { sampleCharacterPrompts } from '../samples/sampleCharacterPrompts';
 import { sampleLocationPrompts } from '../samples/sampleLocationPrompts';
-import { navigatorSemanticNodeSelector } from '../navigation/navigatorSemanticNodeSelector';
 import { characterProfileGenerationUserMessage, locationProfileGenerationUserMessage } from '../chat/profileGenerationUserMessages';
 import { basicEntityDataFormatting, enhancedEntityDataFormatting } from '../chat/entityDataFormatting';
 
@@ -23,7 +22,6 @@ export const en: PromptTemplates = {
   chatCharacterImpersonation,
   sampleCharacterPrompts,
   sampleLocationPrompts,
-  navigatorSemanticNodeSelector,
   characterProfileGenerationUserMessage,
   locationProfileGenerationUserMessage,
   basicEntityDataFormatting,

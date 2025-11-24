@@ -6952,6 +6952,297 @@
       ],
       "searchDesc": "Vast, cathedral-like interior of a decaying industrial mausoleum with colossal gears.",
       "slug": "interior-of-the-cogwork-mausoleum"
+    },
+    "loc-1763997442835-hl8brqkxc": {
+      "id": "loc-1763997442835-hl8brqkxc",
+      "type": "host",
+      "name": "The Eternal Archives",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Eternal Archives",
+        "description": "A realm dedicated to the preservation and study of all knowledge, past and present.",
+        "dna": {
+          "looks": "This realm manifests as an impossible, grand architectural construct, stretching across horizons. Structures of immense scale and intricate design suggest a purpose far beyond mortal comprehension, built to house and protect the entirety of existence's accumulated wisdom.",
+          "colorsAndLighting": "The dominant palette is a symphony of deep, rich earth tones and aged metallics, contrasted by ethereal, soft illumination. Light often emanates from within, casting long shadows and highlighting colossal forms.",
+          "atmosphere": "A profound sense of stillness and immense age pervades the air, cool and dry. A subtle, almost imperceptible hum of latent energy or ancient magic can be felt, speaking to the vastness of stored information.",
+          "materials": "Primarily constructed from colossal blocks of dark, weathered stone and ancient, petrified wood. Gleaming, often patinated, metallic accents such as bronze, copper, and obsidian are integrated into structural and decorative elements.",
+          "mood": "Awe-inspiring, contemplative, and profoundly ancient. A sense of immutable permanence and the weight of history.",
+          "sounds": "Distant echoes, faint whispers, rustling parchment, faint hum",
+          "spatialLayout": "Vast, monumental scale with seemingly endless expanses. Architecture often defies conventional physics, with towering structures and interconnected, sprawling complexes.",
+          "primary_surfaces": "Dark stone, weathered brick",
+          "secondary_surfaces": "Aged copper, polished obsidian, petrified wood",
+          "accent_features": "Intricate filigree, runic inscriptions, glowing glyphs, colossal statues",
+          "dominant": "Deep grays and blacks",
+          "secondary": "Earthy browns and bronzes",
+          "accent": "Ornate metallic hues, soft ambient golds",
+          "ambient": "Cool, diffused ambient light with pockets of warm, glowing sources",
+          "genre": "epic-fantasy",
+          "architectural_tone": "monumental gothic-scholasticism with elements of celestial-observatory design, characterized by immense scale, soaring arches, intricate stonework, weathered dark brick, aged copper filigree, and integrated celestial motifs. Features include towering spires, buttressed walls, grand staircases, and colossal entryways, all designed to convey permanence and the weight of ancient knowledge.",
+          "cultural_tone": "scholarly, custodial, ancient, detached, reverent",
+          "materials_base": "ancient stone, dark brick, patinated copper, obsidian, aged metals",
+          "mood_baseline": "contemplative, awe-inspiring, solemn",
+          "palette_bias": "deep, muted tones with metallic accents and ethereal ambient light",
+          "soundscape_base": "echoing vastness, ambient hum, hushed movement",
+          "flora_base": "none",
+          "fauna_base": "none"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Great Spires",
+          "Knowledge Vaults",
+          "Astral Orrery"
+        ],
+        "uniqueIdentifiers": [
+          "Boundless Libraries",
+          "Chronicle Towers"
+        ],
+        "searchDesc": "A vast realm of preserved knowledge, housing infinite libraries and ancient lore.",
+        "slug": "the-eternal-archives",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Eternal Archives",
+          "looks": "A realm dedicated to the preservation and study of all knowledge, past and present.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/rEEj1r34veMxyDQAoEcHf.jpg",
+      "description": "A realm dedicated to the preservation and study of all knowledge, past and present."
+    },
+    "a751f411-7fc8-403b-a54b-df7060da864b": {
+      "id": "a751f411-7fc8-403b-a54b-df7060da864b",
+      "type": "region",
+      "name": "The Eternal Archives",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Eternal Archives",
+        "description": "The primary nexus of The Eternal Archives, a grand region housing its most significant edifices.",
+        "dna": {
+          "looks": "Expansive courtyards and grand avenues connect monumental structures. The architecture remains consistent with the realm's overarching style, but begins to exhibit more localized thematic variations.",
+          "colorsAndLighting": "The dominant dark stone and brick are further accentuated by the warm glow of strategically placed lanterns and the cool, muted tones of the ambient haze.",
+          "atmosphere": "The air is cool and still, carrying a faint, dry scent of ancient paper and stone dust. A soft, diffuse haze often settles, lending an ethereal quality.",
+          "materials": "The primary materials of dark brick and aged copper filigree are prevalent, interspersed with paved stone pathways and courtyards.",
+          "mood": "Grand, imposing, and scholarly. A sense of quiet industry and deep contemplation.",
+          "sounds": "Distant footsteps, gentle wind, faint echoes of voices",
+          "spatialLayout": "Open courtyards leading to immense buildings, connected by broad, well-maintained pathways and grand staircases.",
+          "primary_surfaces": "Dark brick, weathered stone",
+          "secondary_surfaces": "Aged copper, polished stone",
+          "accent_features": "Ornate lanterns, sculpted reliefs, grand fountains",
+          "dominant": "Dark grays and browns",
+          "secondary": "Bronze and gold accents",
+          "accent": "Warm lantern light",
+          "ambient": "Cool, diffused gray-blue",
+          "genre": null,
+          "architectural_tone": "monumental gothic-scholasticism with elements of celestial-observatory design, characterized by immense scale, soaring arches, intricate stonework, weathered dark brick, aged copper filigree, and integrated celestial motifs. Features include towering spires, buttressed walls, grand staircases, and colossal entryways, all designed to convey permanence and the weight of ancient knowledge.",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "The Citadel of Lore",
+          "The Whispering Halls",
+          "The Lumina Spires"
+        ],
+        "uniqueIdentifiers": [
+          "Sentient Scrolls",
+          "Memory Weavers"
+        ],
+        "searchDesc": "The central region of The Eternal Archives, dominated by colossal knowledge fortresses and echoing halls.",
+        "slug": "the-eternal-archives",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Eternal Archives",
+          "looks": "The primary nexus of The Eternal Archives, a grand region housing its most significant edifices.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "The primary nexus of The Eternal Archives, a grand region housing its most significant edifices."
+    },
+    "f9ad1213-1281-4548-874a-2d64272da72b": {
+      "id": "f9ad1213-1281-4548-874a-2d64272da72b",
+      "type": "location",
+      "name": "The Citadel of Lore",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Citadel of Lore",
+        "description": "A colossal library-fortress, a testament to the power of knowledge and its defense.",
+        "looks": "Massive structure constructed from dark brick, adorned with intricate copper filigree. Grand staircases spiral upwards, leading to a monumental arched doorway.",
+        "atmosphere": "The scent of aged paper and a faint metallic tang from the copper.",
+        "mood": "Imposing, intellectual, vigilant",
+        "dna": {
+          "looks": "A colossal structure constructed from dark, weathered brick rises imposingly, its facades adorned with intricate, aged copper filigree. Grand, wide staircases with ornate balustrades ascend in parallel, leading towards a massive, shadowed archway at the building's center. Lush greenery spills over ledges and climbs sections of the architecture, softening its severe lines. Numerous ornate lanterns with warm, flickering light are mounted along the staircases and building walls, casting a dramatic glow.",
+          "colorsAndLighting": "The lighting is predominantly low-key and atmospheric, characterized by a warm, orangey glow emanating from numerous lanterns. This warm light contrasts sharply with the cool, dark tones of the brick and stone architecture, creating areas of deep shadow and dramatic highlights. The light source is primarily artificial, with a subtle, diffused ambient light from an unseen overcast sky.",
+          "atmosphere": "A soft, diffuse haze hangs in the air, obscuring the farthest reaches of the courtyards and lending an ethereal quality to the scene. The air appears still, carrying a faint coolness.",
+          "materials": "The primary construction material is dark, weathered brick, complemented by intricate aged copper filigree. The staircases feature stone balustrades.",
+          "mood": "Imposing, ancient, and protective. A sense of formidable guardianship over vast knowledge.",
+          "sounds": "Distant echoes, soft rustling of leaves, faint hum of lanterns",
+          "spatialLayout": "The foreground is dominated by a wide, wet stone courtyard and the base of two grand, symmetrical staircases. The midground features the extensive structure of the library-fortress, including arcaded walkways and the monumental central arched doorway. The background recedes into atmospheric haze, suggesting further vastness within the structure and beyond.",
+          "primary_surfaces": "Dark brick",
+          "secondary_surfaces": "Stone (courtyard, balustrades)",
+          "accent_features": "Copper filigree, glass (lanterns)",
+          "dominant": "Dark gray (brickwork)",
+          "secondary": "Brown (aged copper, weathered brick), black (shadows)",
+          "accent": "Orange/Yellow (lantern light)",
+          "ambient": "Cool gray/blue (haze, sky)",
+          "genre": null,
+          "architectural_tone": "monumental gothic-scholasticism with elements of celestial-observatory design, characterized by immense scale, soaring arches, intricate stonework, weathered dark brick, aged copper filigree, and integrated celestial motifs. Features include towering spires, buttressed walls, grand staircases, and colossal entryways, all designed to convey permanence and the weight of ancient knowledge.",
+          "cultural_tone": "custodial, scholarly, fortified",
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "ornamental, climbing vines",
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, foreground",
+            "description": "Wide, ornate stone staircases ascending to a monumental arched doorway"
+          },
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Massive arched doorway with warm light emanating from within"
+          },
+          {
+            "type": "passage",
+            "position": "center, background",
+            "description": "Visible passage extending beyond the main archway, bathed in warm light"
+          },
+          {
+            "type": "stairs",
+            "position": "left, midground",
+            "description": "Upper level stairs leading to arcaded walkways"
+          },
+          {
+            "type": "stairs",
+            "position": "right, midground",
+            "description": "Upper level stairs leading to arcaded walkways"
+          }
+        ],
+        "dominantElements": [
+          "Colossal brick structure ~50m+ tall, center",
+          "Grand dual staircases with balustrades, center foreground",
+          "Massive arched doorway, center midground",
+          "Numerous ornate lanterns, scattered on walls and stairs"
+        ],
+        "uniqueIdentifiers": [
+          "Colossal library-fortress architecture",
+          "Dual spiraling grand staircases",
+          "Massive central arched doorway"
+        ],
+        "searchDesc": "[Location - Exterior] Colossal library-fortress. Has: dual grand stairs (center foreground), massive archway (center midground), visible inner passage (background)",
+        "slug": "the-citadel-of-lore",
+        "imageUrl": "https://v3b.fal.media/files/b/koala/rEEj1r34veMxyDQAoEcHf.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Citadel of Lore",
+          "looks": "A colossal library-fortress, a testament to the power of knowledge and its defense.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/rEEj1r34veMxyDQAoEcHf.jpg",
+      "description": "A colossal library-fortress, a testament to the power of knowledge and its defense."
+    },
+    "niche-1763997519236-0t0ule7mn": {
+      "id": "niche-1763997519236-0t0ule7mn",
+      "type": "niche",
+      "name": "interior of The Citadel of Lore",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal, dark chamber with a towering vaulted ceiling lost in haze, supported by immense ribbed arches. Dark brick walls are intricately inlaid with aged copper filigree. Ahead, a grand alcove beckons through an imposing arch, while a spiral staircase ascends to the left and a massive bookshelf dominates the right wall.",
+        "colorsAndLighting": "Dominant dark grays of the brick are punctuated by the warm, flickering orange light from ornate copper lanterns and a subtle ambient glow from unseen high windows. The polished obsidian floor reflects these lights, creating a sense of depth.",
+        "atmosphere": "The air feels ancient, cool, and heavy with the scent of old paper and dust. A profound stillness pervades the space, broken only by the faint echoes of immense scale. The atmosphere is one of hushed reverence and formidable protection.",
+        "materials": "Walls are of dark, weathered brick with intricate inlays of aged copper filigree. The floor is composed of large, dark, polished obsidian tiles. A spiral staircase is made of dark metal and stone, and ancient tomes are bound in leather and dark cloth.",
+        "mood": "Imposing and ancient, evoking a sense of formidable guardianship over vast knowledge and deep history.",
+        "sounds": "Echoes, faint whispers, crackling light.",
+        "spatialLayout": "A massive, high-ceilinged chamber with clear focal points: an alcove ahead, a staircase to the left, and a bookshelf to the right. The immense scale is emphasized by the vanishing point of the arches into atmospheric haze.",
+        "primary_surfaces": "Dark weathered brick (walls), polished obsidian tiles (floor).",
+        "secondary_surfaces": "Aged copper filigree (inlays), dark metal and stone (staircase), dark wood (lecterns).",
+        "accent_features": "Ornate copper lanterns, ancient tomes, carved bookshelf.",
+        "dominant": "Dark gray (brickwork, ~70%)",
+        "secondary": "Dark brown/black (obsidian, ~20%)",
+        "accent": "Aged copper/orange (filigree, lanterns, ~10%)",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/sARLVNDLXQ-ewx7HnX9Vo.jpg",
+      "description": "The vast, echoing interior of a scholarly fortress, blending gothic grandeur with a celestial observatory's reverence for knowledge.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "midground center",
+          "description": "A grand alcove framed by a smaller, imposing stone archway, hinting at further chambers."
+        },
+        {
+          "type": "stairs",
+          "position": "midground left",
+          "description": "A spiral staircase of dark metal and stone ascending into the haze."
+        },
+        {
+          "type": "bookshelf",
+          "position": "midground right",
+          "description": "A towering, floor-to-ceiling bookshelf carved directly into the brick."
+        }
+      ],
+      "dominantElements": [
+        "Towering vaulted ceiling",
+        "Colossal ribbed arches",
+        "Dark weathered brick walls",
+        "Aged copper filigree",
+        "Spiral staircase",
+        "Bookshelf",
+        "Obsidian floor tiles"
+      ],
+      "uniqueIdentifiers": [
+        "Intricate copper filigree on brick",
+        "Colossal ribbed arches reaching into haze",
+        "Obsidian floor reflecting light",
+        "Carved floor-to-ceiling bookshelf"
+      ],
+      "searchDesc": "Massive gothic-scholastic interior with copper filigree, towering arches, and obsidian floors.",
+      "slug": "interior-of-the-citadel-of-lore"
     }
   },
   "views": {},
@@ -9281,6 +9572,240 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763997442835-hl8brqkxc",
+      "type": "host",
+      "name": "The Eternal Archives",
+      "description": "A realm dedicated to the preservation and study of all knowledge, past and present.",
+      "dna": {
+        "type": "host",
+        "name": "The Eternal Archives",
+        "description": "A realm dedicated to the preservation and study of all knowledge, past and present.",
+        "dna": {
+          "looks": "This realm manifests as an impossible, grand architectural construct, stretching across horizons. Structures of immense scale and intricate design suggest a purpose far beyond mortal comprehension, built to house and protect the entirety of existence's accumulated wisdom.",
+          "colorsAndLighting": "The dominant palette is a symphony of deep, rich earth tones and aged metallics, contrasted by ethereal, soft illumination. Light often emanates from within, casting long shadows and highlighting colossal forms.",
+          "atmosphere": "A profound sense of stillness and immense age pervades the air, cool and dry. A subtle, almost imperceptible hum of latent energy or ancient magic can be felt, speaking to the vastness of stored information.",
+          "materials": "Primarily constructed from colossal blocks of dark, weathered stone and ancient, petrified wood. Gleaming, often patinated, metallic accents such as bronze, copper, and obsidian are integrated into structural and decorative elements.",
+          "mood": "Awe-inspiring, contemplative, and profoundly ancient. A sense of immutable permanence and the weight of history.",
+          "sounds": "Distant echoes, faint whispers, rustling parchment, faint hum",
+          "spatialLayout": "Vast, monumental scale with seemingly endless expanses. Architecture often defies conventional physics, with towering structures and interconnected, sprawling complexes.",
+          "primary_surfaces": "Dark stone, weathered brick",
+          "secondary_surfaces": "Aged copper, polished obsidian, petrified wood",
+          "accent_features": "Intricate filigree, runic inscriptions, glowing glyphs, colossal statues",
+          "dominant": "Deep grays and blacks",
+          "secondary": "Earthy browns and bronzes",
+          "accent": "Ornate metallic hues, soft ambient golds",
+          "ambient": "Cool, diffused ambient light with pockets of warm, glowing sources",
+          "genre": "epic-fantasy",
+          "architectural_tone": "monumental gothic-scholasticism with elements of celestial-observatory design, characterized by immense scale, soaring arches, intricate stonework, weathered dark brick, aged copper filigree, and integrated celestial motifs. Features include towering spires, buttressed walls, grand staircases, and colossal entryways, all designed to convey permanence and the weight of ancient knowledge.",
+          "cultural_tone": "scholarly, custodial, ancient, detached, reverent",
+          "materials_base": "ancient stone, dark brick, patinated copper, obsidian, aged metals",
+          "mood_baseline": "contemplative, awe-inspiring, solemn",
+          "palette_bias": "deep, muted tones with metallic accents and ethereal ambient light",
+          "soundscape_base": "echoing vastness, ambient hum, hushed movement",
+          "flora_base": "none",
+          "fauna_base": "none"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Great Spires",
+          "Knowledge Vaults",
+          "Astral Orrery"
+        ],
+        "uniqueIdentifiers": [
+          "Boundless Libraries",
+          "Chronicle Towers"
+        ],
+        "searchDesc": "A vast realm of preserved knowledge, housing infinite libraries and ancient lore.",
+        "slug": "the-eternal-archives",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Eternal Archives",
+          "looks": "A realm dedicated to the preservation and study of all knowledge, past and present.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/rEEj1r34veMxyDQAoEcHf.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "a751f411-7fc8-403b-a54b-df7060da864b",
+          "type": "region",
+          "name": "The Eternal Archives",
+          "description": "The primary nexus of The Eternal Archives, a grand region housing its most significant edifices.",
+          "dna": {
+            "type": "region",
+            "name": "The Eternal Archives",
+            "description": "The primary nexus of The Eternal Archives, a grand region housing its most significant edifices.",
+            "dna": {
+              "looks": "Expansive courtyards and grand avenues connect monumental structures. The architecture remains consistent with the realm's overarching style, but begins to exhibit more localized thematic variations.",
+              "colorsAndLighting": "The dominant dark stone and brick are further accentuated by the warm glow of strategically placed lanterns and the cool, muted tones of the ambient haze.",
+              "atmosphere": "The air is cool and still, carrying a faint, dry scent of ancient paper and stone dust. A soft, diffuse haze often settles, lending an ethereal quality.",
+              "materials": "The primary materials of dark brick and aged copper filigree are prevalent, interspersed with paved stone pathways and courtyards.",
+              "mood": "Grand, imposing, and scholarly. A sense of quiet industry and deep contemplation.",
+              "sounds": "Distant footsteps, gentle wind, faint echoes of voices",
+              "spatialLayout": "Open courtyards leading to immense buildings, connected by broad, well-maintained pathways and grand staircases.",
+              "primary_surfaces": "Dark brick, weathered stone",
+              "secondary_surfaces": "Aged copper, polished stone",
+              "accent_features": "Ornate lanterns, sculpted reliefs, grand fountains",
+              "dominant": "Dark grays and browns",
+              "secondary": "Bronze and gold accents",
+              "accent": "Warm lantern light",
+              "ambient": "Cool, diffused gray-blue",
+              "genre": null,
+              "architectural_tone": "monumental gothic-scholasticism with elements of celestial-observatory design, characterized by immense scale, soaring arches, intricate stonework, weathered dark brick, aged copper filigree, and integrated celestial motifs. Features include towering spires, buttressed walls, grand staircases, and colossal entryways, all designed to convey permanence and the weight of ancient knowledge.",
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": null,
+              "fauna_base": null
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "The Citadel of Lore",
+              "The Whispering Halls",
+              "The Lumina Spires"
+            ],
+            "uniqueIdentifiers": [
+              "Sentient Scrolls",
+              "Memory Weavers"
+            ],
+            "searchDesc": "The central region of The Eternal Archives, dominated by colossal knowledge fortresses and echoing halls.",
+            "slug": "the-eternal-archives",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Eternal Archives",
+              "looks": "The primary nexus of The Eternal Archives, a grand region housing its most significant edifices.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "f9ad1213-1281-4548-874a-2d64272da72b",
+              "type": "location",
+              "name": "The Citadel of Lore",
+              "description": "A colossal library-fortress, a testament to the power of knowledge and its defense.",
+              "dna": {
+                "type": "location",
+                "name": "The Citadel of Lore",
+                "description": "A colossal library-fortress, a testament to the power of knowledge and its defense.",
+                "looks": "Massive structure constructed from dark brick, adorned with intricate copper filigree. Grand staircases spiral upwards, leading to a monumental arched doorway.",
+                "atmosphere": "The scent of aged paper and a faint metallic tang from the copper.",
+                "mood": "Imposing, intellectual, vigilant",
+                "dna": {
+                  "looks": "A colossal structure constructed from dark, weathered brick rises imposingly, its facades adorned with intricate, aged copper filigree. Grand, wide staircases with ornate balustrades ascend in parallel, leading towards a massive, shadowed archway at the building's center. Lush greenery spills over ledges and climbs sections of the architecture, softening its severe lines. Numerous ornate lanterns with warm, flickering light are mounted along the staircases and building walls, casting a dramatic glow.",
+                  "colorsAndLighting": "The lighting is predominantly low-key and atmospheric, characterized by a warm, orangey glow emanating from numerous lanterns. This warm light contrasts sharply with the cool, dark tones of the brick and stone architecture, creating areas of deep shadow and dramatic highlights. The light source is primarily artificial, with a subtle, diffused ambient light from an unseen overcast sky.",
+                  "atmosphere": "A soft, diffuse haze hangs in the air, obscuring the farthest reaches of the courtyards and lending an ethereal quality to the scene. The air appears still, carrying a faint coolness.",
+                  "materials": "The primary construction material is dark, weathered brick, complemented by intricate aged copper filigree. The staircases feature stone balustrades.",
+                  "mood": "Imposing, ancient, and protective. A sense of formidable guardianship over vast knowledge.",
+                  "sounds": "Distant echoes, soft rustling of leaves, faint hum of lanterns",
+                  "spatialLayout": "The foreground is dominated by a wide, wet stone courtyard and the base of two grand, symmetrical staircases. The midground features the extensive structure of the library-fortress, including arcaded walkways and the monumental central arched doorway. The background recedes into atmospheric haze, suggesting further vastness within the structure and beyond.",
+                  "primary_surfaces": "Dark brick",
+                  "secondary_surfaces": "Stone (courtyard, balustrades)",
+                  "accent_features": "Copper filigree, glass (lanterns)",
+                  "dominant": "Dark gray (brickwork)",
+                  "secondary": "Brown (aged copper, weathered brick), black (shadows)",
+                  "accent": "Orange/Yellow (lantern light)",
+                  "ambient": "Cool gray/blue (haze, sky)",
+                  "genre": null,
+                  "architectural_tone": "monumental gothic-scholasticism with elements of celestial-observatory design, characterized by immense scale, soaring arches, intricate stonework, weathered dark brick, aged copper filigree, and integrated celestial motifs. Features include towering spires, buttressed walls, grand staircases, and colossal entryways, all designed to convey permanence and the weight of ancient knowledge.",
+                  "cultural_tone": "custodial, scholarly, fortified",
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": "ornamental, climbing vines",
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "stairs",
+                    "position": "center, foreground",
+                    "description": "Wide, ornate stone staircases ascending to a monumental arched doorway"
+                  },
+                  {
+                    "type": "door",
+                    "position": "center, midground",
+                    "description": "Massive arched doorway with warm light emanating from within"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "center, background",
+                    "description": "Visible passage extending beyond the main archway, bathed in warm light"
+                  },
+                  {
+                    "type": "stairs",
+                    "position": "left, midground",
+                    "description": "Upper level stairs leading to arcaded walkways"
+                  },
+                  {
+                    "type": "stairs",
+                    "position": "right, midground",
+                    "description": "Upper level stairs leading to arcaded walkways"
+                  }
+                ],
+                "dominantElements": [
+                  "Colossal brick structure ~50m+ tall, center",
+                  "Grand dual staircases with balustrades, center foreground",
+                  "Massive arched doorway, center midground",
+                  "Numerous ornate lanterns, scattered on walls and stairs"
+                ],
+                "uniqueIdentifiers": [
+                  "Colossal library-fortress architecture",
+                  "Dual spiraling grand staircases",
+                  "Massive central arched doorway"
+                ],
+                "searchDesc": "[Location - Exterior] Colossal library-fortress. Has: dual grand stairs (center foreground), massive archway (center midground), visible inner passage (background)",
+                "slug": "the-citadel-of-lore",
+                "imageUrl": "https://v3b.fal.media/files/b/koala/rEEj1r34veMxyDQAoEcHf.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Citadel of Lore",
+                  "looks": "A colossal library-fortress, a testament to the power of knowledge and its defense.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/koala/rEEj1r34veMxyDQAoEcHf.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1763997519236-0t0ule7mn",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -9290,6 +9815,7 @@
     "loc-1763992990858-q39lf2oa4",
     "loc-1763993299519-519m0gld6",
     "loc-1763993917225-g12t5gd13",
-    "loc-1763994876664-643qmsnex"
+    "loc-1763994876664-643qmsnex",
+    "loc-1763997442835-hl8brqkxc"
   ]
 }

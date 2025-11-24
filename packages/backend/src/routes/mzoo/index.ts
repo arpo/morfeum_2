@@ -7,7 +7,6 @@ import { Router } from 'express';
 import { validateMzooApiKey } from '../../middleware/mzooAuth';
 import { promptsRouter } from './prompts';
 import { aiRouter } from './ai';
-import { navigatorRouter } from './navigator';
 import { navigationRouter } from './navigation';
 import locationsRouter from './locations';
 import hierarchyRouter from './hierarchy';
@@ -19,7 +18,6 @@ router.use(validateMzooApiKey);
 
 // Mount route modules
 router.use('/prompts', promptsRouter);
-router.use('/navigator', navigatorRouter);
 router.use('/navigation', navigationRouter);
 router.use('/locations', locationsRouter);
 router.use('/hierarchy', hierarchyRouter);
