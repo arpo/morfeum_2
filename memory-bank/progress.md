@@ -42,6 +42,14 @@
 - [x] Entity session cleanup on delete
 
 ### Technical Improvements
+- [x] Old navigation system removal (Nov 24, 2025)
+  - Investigated and removed unused navigationDecision.ts file
+  - Discovered two parallel navigation systems running (/navigator old, /navigation new)
+  - Removed entire deprecated navigator service directory
+  - Deleted 500+ line navigatorSemanticNodeSelector.ts prompt
+  - Cleaned up all references in routes, exports, and type definitions
+  - Zero TypeScript errors after cleanup
+  - Result: Single, clean navigation architecture (intent classifier + deterministic routing)
 - [x] Progress bar bugfix & animation improvements (Nov 24, 2025)
   - Progress bar now appears immediately and animates smoothly for all pipelines (character, location, navigation)
   - Fixed race condition and initial state logic in both spawnSlice and locationNavigation

@@ -2,6 +2,31 @@
 
 ## Recent Changes (2025-11-24)
 
+### Old Navigation System Removal (Nov 24, 2025)
+- **Removed deprecated LLM-based navigation system** - Complete cleanup of legacy navigator service
+- **Investigation findings:**
+  - Discovered `navigationDecision.ts` was completely unused (types existed elsewhere, function never called)
+  - Found `navigatorSemanticNodeSelector.ts` used only in deprecated `/navigator` service
+  - Two parallel navigation systems running: `/navigator` (old) and `/navigation` (new)
+  - Old system: Single LLM prompt for all decisions
+  - New system: Intent classifier + deterministic routing
+- **Complete removal:**
+  - Deleted `services/navigator/` directory (5 files: index, types, config, processors)
+  - Deleted `navigator.service.ts` re-export file
+  - Deleted `routes/mzoo/navigator.ts` endpoint
+  - Deleted `engine/generation/prompts/navigation/navigatorSemanticNodeSelector.ts` (500+ line prompt)
+  - Removed `/navigator` route registration from mzoo router
+- **Updated references:**
+  - `routes/mzoo/index.ts` - Removed navigator route import and registration
+  - `prompts/navigation/index.ts` - Removed navigatorSemanticNodeSelector export
+  - `prompts/languages/en.ts` - Removed import and export
+  - `prompts/types.ts` - Removed from PromptTemplates interface
+- **Result:** 
+  - Clean architecture with single navigation system (engine-based)
+  - Only `/mzoo/navigation` endpoint remains
+  - Zero TypeScript errors after cleanup
+  - Clearer codebase aligned with REASSEMBLY_PLAN.md intent
+
 ### Progress Bar Bugfix & Animation Improvements (Nov 24, 2025)
 - **Bug Fixed:** Progress bar now appears immediately and animates smoothly for all pipelines (character, location, navigation).
 - **Root Cause:** Race condition between backend pipeline start and frontend SSE connection caused the first step's progress event to be missed, so the bar was hidden or static.
