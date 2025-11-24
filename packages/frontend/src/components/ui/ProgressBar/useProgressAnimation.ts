@@ -1,28 +1,25 @@
+/**
+ * Progress Bar animation hook
+ * Calculates the target progress and animation duration based on current step
+ */
+
 import { useMemo } from 'react';
-import type { ProgressStep } from './ProgressBar';
+import type { UseProgressAnimationProps, AnimationResult, ProgressStep } from './types';
 
-interface UseProgressAnimationProps {
-  steps: ProgressStep[];
-  currentStep: number;
-  currentStepProgress: number;
-  isComplete: boolean;
-  onComplete?: () => void;
-}
-
-interface AnimationResult {
-  progress: number;
-  currentStepDuration: number;
-}
-
+/**
+ * Hook that calculates animated progress values for the ProgressBar
+ * @param props - Animation configuration
+ * @returns Object containing progress percentage and animation duration
+ */
 export function useProgressAnimation({
   steps,
   currentStep,
-  currentStepProgress,
   isComplete,
 }: UseProgressAnimationProps): AnimationResult {
   
   // Calculate the target progress and duration
   const result = useMemo(() => {
+    // Complete state: animate to 100%
     if (isComplete) {
       return { 
         progress: 100,
@@ -30,37 +27,36 @@ export function useProgressAnimation({
       };
     }
     
-    // If currentStep is -1 (not started), return 0%
+    // Not started state: stay at 0%
     if (currentStep < 0) {
       return { progress: 0, currentStepDuration: 0 };
     }
     
-    // Calculate total duration
+    // Calculate total duration across all steps
     const totalDuration = steps.reduce((sum, step) => sum + step.duration, 0);
     if (totalDuration === 0) {
       return { progress: 0, currentStepDuration: 0 };
     }
     
-    // When a step starts, we want to animate TO the end of that step
     // Calculate cumulative duration up to and including current step
     let targetDuration = 0;
     for (let i = 0; i <= currentStep && i < steps.length; i++) {
       targetDuration += steps[i].duration;
     }
     
-    // The target progress is the END position of the current step
+    // Calculate the target progress as percentage of total
     let targetProgress = (targetDuration / totalDuration) * 100;
     
-    // If this is the last step, cap it at 95% so there's room for completion animation
+    // Cap last step at 95% to leave room for completion animation
     const isLastStep = currentStep === steps.length - 1;
     if (isLastStep && targetProgress > 95) {
       targetProgress = 95;
     }
     
-    // The animation duration is the current step's duration
+    // Use current step's duration for animation, with fallback
     const animationDuration = currentStep >= 0 && currentStep < steps.length 
       ? steps[currentStep].duration 
-      : 500; // Default duration if out of bounds
+      : 500;
     
     return {
       progress: targetProgress,

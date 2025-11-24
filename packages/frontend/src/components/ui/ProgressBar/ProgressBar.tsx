@@ -1,74 +1,52 @@
-import { useEffect, useRef, useState, useMemo } from 'react';
+/**
+ * ProgressBar Component
+ * A minimalistic progress bar with step-based animations and color transitions
+ * @component
+ */
 
 import styles from './ProgressBar.module.css';
-import { useProgressAnimation } from './useProgressAnimation';
+import { useProgressBar } from './useProgressBar';
+import type { ProgressBarProps } from './types';
 
-export interface ProgressStep {
-  name: string;
-  duration: number; // duration in milliseconds for this step
-}
-
-export interface ProgressBarProps {
-  steps: ProgressStep[];
-  currentStep: number;
-  currentStepProgress?: number; // 0-100 within current step
-  isComplete?: boolean;
-  onComplete?: () => void;
-  label?: string; // Optional label to show what's being generated
-}
-
-export function ProgressBar({
-  steps,
-  currentStep,
-  currentStepProgress = 0,
-  isComplete = false,
-  onComplete,
-  label
-}: ProgressBarProps) {
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-  const progressBarRef = useRef<HTMLDivElement>(null);
-  
-  // Calculate animated progress and get current step duration
-  const { progress: animatedProgress, currentStepDuration } = useProgressAnimation({
-    steps,
-    currentStep,
-    currentStepProgress,
-    isComplete,
-    onComplete
-  });
-
-  // Calculate step positions from durations
-  const stepPositions = useMemo(() => {
-    const totalDuration = steps.reduce((sum, step) => sum + step.duration, 0);
-    let cumulativeDuration = 0;
-    
-    return steps.map((step) => {
-      const start = (cumulativeDuration / totalDuration) * 100;
-      cumulativeDuration += step.duration;
-      const end = (cumulativeDuration / totalDuration) * 100;
-      
-      return {
-        start,
-        end,
-        name: step.name
-      };
-    });
-  }, [steps]);
-
-  // Handle completion animation
-  useEffect(() => {
-    if (isComplete && onComplete) {
-      // Wait for animation to reach 100% before calling onComplete
-      const timer = setTimeout(() => {
-        onComplete();
-      }, 800); // Slightly longer for smoother feel
-      return () => clearTimeout(timer);
-    }
-  }, [isComplete, onComplete]);
+/**
+ * Progress bar component with step-based animation
+ * 
+ * Features:
+ * - Smooth animations based on step durations
+ * - Color transition from purple to blue as progress increases
+ * - Hover tooltips showing step names
+ * - Subtle step markers
+ * - Completion callback
+ * 
+ * @example
+ * ```tsx
+ * const steps = [
+ *   { name: 'Loading', duration: 2000 },
+ *   { name: 'Processing', duration: 3000 },
+ *   { name: 'Finalizing', duration: 1000 }
+ * ];
+ * 
+ * <ProgressBar
+ *   steps={steps}
+ *   currentStep={1}
+ *   isComplete={false}
+ *   onComplete={() => console.log('Done!')}
+ * />
+ * ```
+ */
+export function ProgressBar(props: ProgressBarProps) {
+  const {
+    animatedProgress,
+    currentStepDuration,
+    stepPositions,
+    hoveredStep,
+    handleStepMouseEnter,
+    handleStepMouseLeave
+  } = useProgressBar(props);
 
   return (
     <div className={styles.container}>
-      <div className={styles.progressBar} ref={progressBarRef}>
+      <div className={styles.progressBar}>
         {/* Background track */}
         <div className={styles.track} />
         
@@ -92,8 +70,8 @@ export function ProgressBar({
               left: `${step.start}%`,
               width: `${step.end - step.start}%`
             }}
-            onMouseEnter={() => setHoveredStep(index)}
-            onMouseLeave={() => setHoveredStep(null)}
+            onMouseEnter={() => handleStepMouseEnter(index)}
+            onMouseLeave={handleStepMouseLeave}
           />
         ))}
         

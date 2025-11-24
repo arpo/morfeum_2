@@ -3,7 +3,7 @@
  * Simplified input for triggering entity spawn processes
  */
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useSpawnInputLogic } from './useSpawnInputLogic';
 import { IconDice, IconChevronDown, IconChevronUp, IconBookmark } from '@/icons';
 import { ProgressBar, type ProgressStep } from '@/components/ui/ProgressBar';
@@ -13,13 +13,11 @@ interface SpawnInputBarProps {
   onOpenSavedEntities?: () => void;
 }
 
-// Test progress state interface
+// Test interface for progress simulation
 interface TestProgress {
   id: string;
-  label: string;
   steps: ProgressStep[];
   currentStep: number;
-  currentStepProgress: number;
   isComplete: boolean;
 }
 
@@ -27,21 +25,22 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const { state, handlers } = useSpawnInputLogic();
   const [isMinimized, setIsMinimized] = useState(false);
   
-  // Test harness state
-  const [testProgressBars, setTestProgressBars] = useState<TestProgress[]>([]);
-  const progressIntervals = useRef<Map<string, NodeJS.Timeout>>(new Map());
+  // Test state for progress bar demonstration
+  const [testProgresses, setTestProgresses] = useState<TestProgress[]>([]);
+  const timeouts = useRef<Map<string, NodeJS.Timeout>>(new Map());
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && state.textPrompt.trim()) {
-      handlers.handleGenerate();
-    }
-  };
+  // Clean up timeouts on unmount
+  useEffect(() => {
+    return () => {
+      timeouts.current.forEach(timeout => clearTimeout(timeout));
+    };
+  }, []);
 
-  // Test function to create sample progress bars
+  // Test function to demonstrate progress bar
   const startTestProgress = () => {
     const progressId = `test-${Date.now()}`;
     
-    // Define test steps with different durations
+    // Create test steps based on entity type
     const steps: ProgressStep[] = state.entityType === 'character' 
       ? [
           { name: 'Generating seed', duration: 2000 },
@@ -60,68 +59,52 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
           { name: 'Completing', duration: 1000 }
         ];
     
-    const newProgress: TestProgress = {
+    // Add new progress to state
+    setTestProgresses(prev => [...prev, {
       id: progressId,
-      label: '', // No longer displaying labels for minimal design
       steps,
-      currentStep: -1, // Start with -1 so first step animates from 0%
-      currentStepProgress: 0,
+      currentStep: -1, // Start at -1 for initial animation
       isComplete: false
-    };
+    }]);
     
-    setTestProgressBars(prev => [...prev, newProgress]);
-    
-    // Simulate step progression - trigger on START
-    let currentStepIndex = -1;
-    
-    // Function to advance to next step
+    // Simulate step progression
+    let stepIndex = -1;
     const advanceStep = () => {
-      currentStepIndex++;
+      stepIndex++;
       
-      if (currentStepIndex >= steps.length) {
-        // All steps done - mark as complete
-        setTestProgressBars(prev => prev.map(bar => 
-          bar.id === progressId 
-            ? { ...bar, isComplete: true }
-            : bar
+      if (stepIndex >= steps.length) {
+        // Mark as complete
+        setTestProgresses(prev => prev.map(p => 
+          p.id === progressId ? { ...p, isComplete: true } : p
         ));
         
-        // Remove after 2 seconds
-        setTimeout(() => {
-          setTestProgressBars(p => p.filter(b => b.id !== progressId));
+        // Remove after delay
+        const removeTimeout = setTimeout(() => {
+          setTestProgresses(prev => prev.filter(p => p.id !== progressId));
+          timeouts.current.delete(`${progressId}-remove`);
         }, 2000);
+        timeouts.current.set(`${progressId}-remove`, removeTimeout);
       } else {
-        // Move to next step - this triggers the animation
-        setTestProgressBars(prev => prev.map(bar => 
-          bar.id === progressId 
-            ? { ...bar, currentStep: currentStepIndex }
-            : bar
+        // Update current step
+        setTestProgresses(prev => prev.map(p => 
+          p.id === progressId ? { ...p, currentStep: stepIndex } : p
         ));
         
-        // Schedule next step after current step's duration
-        const timeout = setTimeout(advanceStep, steps[currentStepIndex].duration);
-        progressIntervals.current.set(`${progressId}-${currentStepIndex}`, timeout);
+        // Schedule next step
+        const stepTimeout = setTimeout(advanceStep, steps[stepIndex].duration);
+        timeouts.current.set(`${progressId}-${stepIndex}`, stepTimeout);
       }
     };
     
-    // Start the first step after a brief delay to show initial state
-    const initTimeout = setTimeout(() => {
-      advanceStep(); // This will set currentStep to 0 and trigger first animation
-    }, 100);
-    progressIntervals.current.set(`${progressId}-init`, initTimeout);
+    // Start first step after brief delay
+    const startTimeout = setTimeout(advanceStep, 100);
+    timeouts.current.set(`${progressId}-start`, startTimeout);
   };
-  
-  // Cleanup intervals on unmount
-  useEffect(() => {
-    return () => {
-      progressIntervals.current.forEach(interval => clearInterval(interval));
-    };
-  }, []);
 
   return (
     <div data-component="spawn-input-bar">
-      {/* Test Progress Bars - Display above the input */}
-      {testProgressBars.length > 0 && (
+      {/* Test Progress Bars Display */}
+      {testProgresses.length > 0 && (
         <div style={{
           marginBottom: 'var(--spacing-sm)',
           padding: 'var(--spacing-md)',
@@ -132,16 +115,12 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
           border: '1px solid var(--color-border)',
           boxShadow: 'var(--shadow-md)',
         }}>
-          {testProgressBars.map(progress => (
+          {testProgresses.map(progress => (
             <ProgressBar
               key={progress.id}
               steps={progress.steps}
               currentStep={progress.currentStep}
-              currentStepProgress={progress.currentStepProgress}
               isComplete={progress.isComplete}
-              onComplete={() => {
-                // Progress bar will auto-remove after 2 seconds
-              }}
             />
           ))}
         </div>
@@ -187,6 +166,12 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
             className={styles.textarea}
             value={state.textPrompt}
             onChange={(e) => handlers.setTextPrompt(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
+                e.preventDefault();
+                handlers.handleGenerate();
+              }
+            }}
             placeholder={state.entityType === 'character' 
               ? "Describe a character to spawn..."
               : "Describe a location to spawn..."
@@ -202,7 +187,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
               Generate
             </button>
             
-            {/* TEST BUTTON - Temporary for testing progress bars */}
+            {/* TEST BUTTON - For testing progress bars */}
             <button
               style={{
                 padding: 'var(--spacing-sm) var(--spacing-md)',
@@ -229,7 +214,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
             </button>
             {onOpenSavedEntities && (
               <button
-                className={styles.shuffleButton} // Reusing shuffle button style for now
+                className={styles.shuffleButton}
                 onClick={onOpenSavedEntities}
                 title="Saved Entities"
               >
