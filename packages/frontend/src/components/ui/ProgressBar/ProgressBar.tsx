@@ -72,12 +72,14 @@ export function ProgressBar({
         {/* Background track */}
         <div className={styles.track} />
         
-        {/* Animated progress fill with dynamic transition duration */}
+        {/* Animated progress fill with dynamic transition duration and color */}
         <div
           className={styles.fill}
           style={{
             width: `${animatedProgress}%`,
-            transition: `width ${currentStepDuration}ms cubic-bezier(0.4, 0, 0.2, 1)`
+            transition: `width ${currentStepDuration}ms cubic-bezier(0.4, 0, 0.2, 1)`,
+            // Interpolate color from purple (270°) to blue (240°) based on progress
+            background: `hsl(${270 - (animatedProgress * 0.3)}deg, 70%, 60%)`
           }}
         />
         
