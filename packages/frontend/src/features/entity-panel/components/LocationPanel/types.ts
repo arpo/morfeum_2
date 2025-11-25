@@ -5,6 +5,7 @@ export interface LocationPanelState extends EntityPanelBaseState {
   isMoving: boolean;
   createImage: boolean;
   previewImage: string | null;
+  errorMessage: string | null;
 }
 
 export interface LocationPanelHandlers extends EntityPanelBaseHandlers {
@@ -13,6 +14,7 @@ export interface LocationPanelHandlers extends EntityPanelBaseHandlers {
   saveLocation: () => void;
   setCreateImage: (value: boolean) => void;
   clearPreviewImage: () => void;
+  handleInvalidCommand: (command: string) => void;
 }
 
 export interface LocationPanelLogicReturn {

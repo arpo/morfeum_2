@@ -8,6 +8,7 @@ interface SlashCommandInputProps {
   placeholder?: string;
   disabled?: boolean;
   onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  onInvalidCommand?: (command: string) => void;
   className?: string;
 }
 
@@ -18,14 +19,37 @@ export function SlashCommandInput({
   placeholder,
   disabled,
   onKeyPress,
+  onInvalidCommand,
   className
 }: SlashCommandInputProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [filteredCommands, setFilteredCommands] = useState<string[]>([]);
+  const [isInvalid, setIsInvalid] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  /**
+   * Validate if the current input contains a valid command
+   */
+  const validateCommand = (input: string): { isValid: boolean; command: string | null } => {
+    if (!input.startsWith('/')) {
+      return { isValid: true, command: null }; // Not a command yet
+    }
+
+    const spaceIndex = input.indexOf(' ');
+    const command = spaceIndex > 0 
+      ? input.substring(1, spaceIndex).toUpperCase()
+      : input.substring(1).toUpperCase();
+
+    if (!command) {
+      return { isValid: true, command: null }; // Just typed /
+    }
+
+    const isValid = commands.some(cmd => cmd.toUpperCase() === command);
+    return { isValid, command };
+  };
 
   // Handle outside click
   useEffect(() => {
@@ -106,6 +130,22 @@ export function SlashCommandInput({
         setIsOpen(false);
       }
     } else {
+      // Validate command before allowing Enter
+      if (e.key === 'Enter') {
+        const validation = validateCommand(value);
+        if (!validation.isValid && validation.command) {
+          e.preventDefault();
+          setIsInvalid(true);
+          if (onInvalidCommand) {
+            onInvalidCommand(validation.command);
+          }
+          // Reset invalid state after 2 seconds
+          setTimeout(() => setIsInvalid(false), 2000);
+          return;
+        }
+        setIsInvalid(false);
+      }
+      
       if (onKeyPress) {
         onKeyPress(e);
       }
@@ -134,7 +174,7 @@ export function SlashCommandInput({
       <input
         ref={inputRef}
         type="text"
-        className={`${styles.input} ${className || ''}`}
+        className={`${styles.input} ${isInvalid ? styles.invalid : ''} ${className || ''}`}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={handleKeyDown}

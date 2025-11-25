@@ -27,6 +27,21 @@
   cursor: not-allowed;
 }
 
+.input.invalid {
+  border-color: #ef4444;
+  animation: shake 0.3s ease;
+}
+
+.input.invalid:focus {
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
 .dropdown {
   position: absolute;
   bottom: 100%;

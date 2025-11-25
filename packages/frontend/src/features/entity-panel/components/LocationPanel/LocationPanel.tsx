@@ -84,12 +84,18 @@ export function LocationPanel() {
         <p className={styles.travelDescription}>
           Type / to see navigation commands.
         </p>
+        {state.errorMessage && (
+          <div className={styles.errorMessage}>
+            {state.errorMessage}
+          </div>
+        )}
         <div className={styles.movementSection}>
           <SlashCommandInput
             className={styles.movementInput}
             value={state.movementInput}
             onChange={handlers.setMovementInput}
             commands={NAVIGATION_COMMANDS}
+            onInvalidCommand={handlers.handleInvalidCommand}
             onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => {
               if (e.key === 'Enter' && !state.isMoving) {
                 e.preventDefault();

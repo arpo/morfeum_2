@@ -63,6 +63,7 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   const [isMoving, setIsMoving] = useState(false);
   const [createImage, setCreateImage] = useState(true);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   
   // Store methods
   const getNode = useLocationsStore(state => state.getNode);
@@ -227,7 +228,17 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       const result = await response.json();
       
       if (!response.ok) {
+        // Extract command for user-friendly error message
+        const errorMsg = result.error || 'Navigation failed';
+        const friendlyMessage = errorMsg.includes('Unknown navigation command')
+          ? `Command '/${command}' is not available yet. Only /GO_INSIDE is currently implemented.`
+          : errorMsg;
+        
+        setErrorMessage(friendlyMessage);
         console.error('[useLocationPanel] Navigation command failed:', result.error);
+        
+        // Clear error message after 5 seconds
+        setTimeout(() => setErrorMessage(null), 5000);
         return;
       }
       
@@ -349,13 +360,23 @@ export function useLocationPanel(): LocationPanelLogicReturn {
     }
   }, [base]);
 
+  const handleInvalidCommand = useCallback((command: string) => {
+    const message = `Command '/${command}' is not available yet. Only /GO_INSIDE is currently implemented.`;
+    setErrorMessage(message);
+    console.warn('[useLocationPanel] Invalid command attempted:', command);
+    
+    // Clear error message after 5 seconds
+    setTimeout(() => setErrorMessage(null), 5000);
+  }, []);
+
   return {
     state: {
       ...base,
       movementInput,
       isMoving,
       createImage,
-      previewImage
+      previewImage,
+      errorMessage
     },
     handlers: {
       openModal: base.openModal,
@@ -366,7 +387,8 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       handleMove,
       saveLocation,
       setCreateImage,
-      clearPreviewImage: () => setPreviewImage(null)
+      clearPreviewImage: () => setPreviewImage(null),
+      handleInvalidCommand
     }
   };
 }

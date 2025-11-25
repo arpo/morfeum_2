@@ -51,6 +51,28 @@
   margin: 0 0 var(--spacing-sm) 0;
 }
 
+.errorMessage {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: 0 0 var(--spacing-sm) 0;
+  color: #ef4444;
+  font-size: var(--text-sm);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Movement Section override for location (no bottom margin, no rounded corners) */
 .movementSection {
   composes: movementSection from '../shared/EntityPanelShared.module.css';
