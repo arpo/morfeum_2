@@ -4,24 +4,14 @@
  */
 
 import type { IntentResult, NavigationContext, NavigationDecision } from './types';
-import {
-  handleGoInside,
-  handleGoOutside,
-  handleGoToRoom,
-  handleGoToPlace,
-  handleLookAt,
-  handleLookThrough,
-  handleChangeView,
-  handleGoUpDown,
-  handleEnterPortal,
-  handleApproach,
-  handleExploreFeature,
-  handleRelocate
-} from './handlers';
+import { handleGoInside } from './handlers';
 
 /**
  * Route navigation based on intent and context
  * Uses deterministic logic - no LLM calls
+ * 
+ * Currently only GO_INSIDE is implemented.
+ * Other commands will be added as development progresses.
  */
 export function routeNavigation(
   intent: IntentResult,
@@ -32,43 +22,24 @@ export function routeNavigation(
     case 'GO_INSIDE':
       return handleGoInside(intent, context);
     
-    case 'GO_OUTSIDE':
-      return handleGoOutside(intent, context);
-    
-    case 'GO_TO_ROOM':
-      return handleGoToRoom(intent, context);
-    
-    case 'GO_TO_PLACE':
-      return handleGoToPlace(intent, context);
-    
-    case 'LOOK_AT':
-      return handleLookAt(intent, context);
-    
-    case 'LOOK_THROUGH':
-      return handleLookThrough(intent, context);
-    
-    case 'CHANGE_VIEW':
-      return handleChangeView(intent, context);
-    
-    case 'GO_UP_DOWN':
-      return handleGoUpDown(intent, context);
-    
-    case 'ENTER_PORTAL':
-      return handleEnterPortal(intent, context);
-    
-    case 'APPROACH':
-      return handleApproach(intent, context);
-    
-    case 'EXPLORE_FEATURE':
-      return handleExploreFeature(intent, context);
-    
-    case 'RELOCATE':
-      return handleRelocate(intent, context);
+    // TODO: Implement these handlers
+    // case 'GO_OUTSIDE':
+    // case 'GO_TO_ROOM':
+    // case 'GO_TO_PLACE':
+    // case 'LOOK_AT':
+    // case 'LOOK_THROUGH':
+    // case 'CHANGE_VIEW':
+    // case 'GO_UP_DOWN':
+    // case 'ENTER_PORTAL':
+    // case 'APPROACH':
+    // case 'EXPLORE_FEATURE':
+    // case 'RELOCATE':
     
     default:
+      console.log(`[NavigationRouter] Command not implemented: ${intent.intent}`);
       return {
-        action: 'unknown',
-        reasoning: `Cannot handle intent: ${intent.intent}`
+        action: 'not_implemented',
+        reasoning: `Command "${intent.intent}" is not yet implemented`
       };
   }
 }

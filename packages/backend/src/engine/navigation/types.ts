@@ -94,6 +94,7 @@ export type NavigationAction =
   | 'create_view'
   | 'create_hierarchy'
   | 'teleport'
+  | 'not_implemented'
   | 'unknown';
 
 export interface NodeSpec {

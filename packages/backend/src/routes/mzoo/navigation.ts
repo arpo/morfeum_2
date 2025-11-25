@@ -190,6 +190,19 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       decision
     };
 
+    // Handle not implemented commands
+    if (decision.action === 'not_implemented') {
+      console.log(`[NAVIGATION] Command not implemented: ${command}`);
+      res.status(HTTP_STATUS.OK).json({
+        data: {
+          ...result,
+          notImplemented: true,
+          message: decision.reasoning
+        }
+      });
+      return;
+    }
+
     // If decision is create_niche, return immediately and run pipeline asynchronously
     let navigationId: string | undefined;
     let eventsUrl: string | undefined;

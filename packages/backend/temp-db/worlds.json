@@ -5770,6 +5770,132 @@
       ],
       "searchDesc": "Cavernous chitinous niche with warm light, obsidian floor, and bioluminescent fungi.",
       "slug": "interior-of-the-ossified-citadel"
+    },
+    "niche-1764068843621-mreb64lu0": {
+      "id": "niche-1764068843621-mreb64lu0",
+      "type": "niche",
+      "name": "Test",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An IMMERSIVE INTERIOR PERSPECTIVE from a just-entered circular chamber. Reinforced, brutalist metallic walls curve inward, interspersed with high-tensile glazing revealing a stark, frozen mountain landscape under diffused blue-white light. The foreground features an entrance hatch segment with stark red operational lighting illuminating a low, angular console. The floor is dark composite hexagonal plates.",
+        "colorsAndLighting": "Dominant metallic grey and dark composite hexagonal plates are illuminated by diffused, cool blue-white ambient light. A stark red operational accent emanates from the entrance hatch lighting.",
+        "atmosphere": "The air is taut with silence, broken only by a subtle, almost imperceptible hum of operational machinery. The environment feels cold, functional, and remote.",
+        "materials": "Reinforced metallic alloys form the brutalist walls, contrasted by high-tensile architectural glazing. The floor is composed of dark, composite hexagonal plates, showing a functional and hardened finish.",
+        "mood": "Vigilant isolation and remote functionality define the mood, evoking a sense of survivalist observation.",
+        "sounds": "Subtle machinery hum, taut silence.",
+        "spatialLayout": "A medium-sized circular chamber with an approximately 8-10m ceiling height. Entry is from a hatch in the foreground, with a reinforced door prominent to the right and a continuing tunnel in the background.",
+        "primary_surfaces": "Reinforced metallic alloys, high-tensile architectural glazing, composite hexagonal floor plates.",
+        "secondary_surfaces": "Structural steel mullions, joining hardware, ventilation ducts.",
+        "accent_features": "Stark red operational lighting on the console and entrance hatch.",
+        "dominant": "Metallic grey",
+        "secondary": "Blue-white (ambient light)",
+        "accent": "Stark red (operational lighting)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "brutalist, hardened metallic, survivalist",
+        "cultural_tone": "functional, survivalist, observational",
+        "materials_base": "reinforced metallic alloys, high-tensile architectural glazing, composite hexagonal floor plates",
+        "mood_baseline": "Isolated, watchful",
+        "palette_bias": "cool, desaturated",
+        "soundscape_base": "functional ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/fHdbFiOQzS2TqU5IjOAn-.jpg",
+      "description": "Circular Frostwatch Outpost Chamber entrance.",
+      "navigableElements": [
+        {
+          "type": "console",
+          "position": "foreground center",
+          "description": "Low, angular console with glowing diagnostic readouts."
+        },
+        {
+          "type": "door",
+          "position": "midground right",
+          "description": "Sealed, reinforced door with robust structural steel mullions."
+        },
+        {
+          "type": "passage",
+          "position": "background",
+          "description": "Continuation of the reinforced metallic tunnel."
+        }
+      ],
+      "dominantElements": [
+        "Reinforced metallic walls",
+        "High-tensile architectural glazing",
+        "Entrance hatch console",
+        "Reinforced door"
+      ],
+      "uniqueIdentifiers": [
+        "Circular chamber",
+        "Brutalist metallic architecture",
+        "Frozen mountain landscape view through glazing",
+        "Stark red operational lighting"
+      ],
+      "searchDesc": "Brutalist metallic outpost chamber with frozen mountain views and red operational lighting.",
+      "slug": "test"
+    },
+    "niche-1764068945503-vybyxhbdh": {
+      "id": "niche-1764068945503-vybyxhbdh",
+      "type": "niche",
+      "name": "New Room",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A circular brutalist chamber defined by curving reinforced metallic alloy walls and expansive, sharp-edged architectural glazing. The hexagonal composite floor plates in the foreground are dark and matte, bearing faint scuff marks. Metal struts integrate with ventilation grilles and conduits along the curved walls, supporting the glazing.",
+        "colorsAndLighting": "The scene is bathed in a diffused, cool blue-white light filtering through the glazing, illuminating the desolate mountain landscape beyond. A subtle, low-level red operational light emanates from the partially open steel door.",
+        "atmosphere": "The atmosphere is one of taut silence and vigilant isolation, with a faint, almost imperceptible hum of unseen machinery. The air feels cool and still, emphasizing the chamber's enclosed and watchful nature.",
+        "materials": "Primary materials are reinforced metallic alloys for walls and ceiling, and high-tensile architectural glazing. The floor is composed of hexagonal composite plates with a matte finish, showing signs of wear. The steel door is robust and angular.",
+        "mood": "The pervading mood is one of isolation and vigilance, evoking a sense of being a secure but solitary outpost.",
+        "sounds": "faint hum, taut silence, unseen machinery",
+        "spatialLayout": "A medium-scale (8-10m) circular chamber with gently sloping inward ceiling. The space is characterized by its curved walls and integrated structural elements, with an opening to a corridor on the right.",
+        "primary_surfaces": "reinforced metallic alloys, high-tensile architectural glazing",
+        "secondary_surfaces": "hexagonal composite floor plates, steel door",
+        "accent_features": "sharp-edged glazing, visible locking mechanisms on door, internal red operational light, metal struts, ventilation grilles, conduits",
+        "dominant": "cool blue-white (lighting)",
+        "secondary": "dark matte (floor plates)",
+        "accent": "red (door light)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "brutalist metallic",
+        "cultural_tone": null,
+        "materials_base": "metallic alloys, high-tensile glass, composite",
+        "mood_baseline": "Isolated, watchful",
+        "palette_bias": null,
+        "soundscape_base": "minimalist ambient machinery",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/HhVSHtbiGyccT0Q3mUtXv.jpg",
+      "description": "An immersive brutalist chamber with metallic alloys and expansive glazing, offering a stark view of a desolate mountain landscape.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "midground right",
+          "description": "A robust, angular steel door, slightly ajar, revealing a shadowed corridor."
+        },
+        {
+          "type": "passage",
+          "position": "background",
+          "description": "A continuing tunnel beyond the door."
+        }
+      ],
+      "dominantElements": [
+        "circular brutalist chamber",
+        "reinforced metallic alloys",
+        "high-tensile architectural glazing",
+        "desolate mountain landscape",
+        "hexagonal composite floor plates",
+        "angular steel door"
+      ],
+      "uniqueIdentifiers": [
+        "brutalist metallic chamber",
+        "curving metallic walls with glazing",
+        "desolate mountain vista",
+        "hexagonal floor plates",
+        "angular steel door ajar"
+      ],
+      "searchDesc": "Brutalist metallic chamber with mountain view, ajar steel door, 8-10m height.",
+      "slug": "new-room"
     }
   },
   "views": {},
@@ -6653,6 +6779,16 @@
                 },
                 {
                   "id": "niche-1764066607281-d8idu7qij",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764068843621-mreb64lu0",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764068945503-vybyxhbdh",
                   "type": "niche",
                   "children": []
                 }
