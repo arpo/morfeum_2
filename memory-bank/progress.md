@@ -19,6 +19,26 @@
   - Maintains consistent progress tracking across all entity generation types
   - Follows the same pattern established for locationNavigation.ts (Nov 24)
 
+### SpawnInputBar Navigate Tab (Nov 25, 2025)
+- [x] Added Navigate tab to SpawnInputBar
+  - Three-tab interface: Character, Location, Navigate
+  - Navigation functionality moved from LocationPanel
+  - Shows message when no location active
+  - SlashCommandInput + "Go" button when location selected
+- [x] Created useNavigationLogic hook
+  - Extracted all navigation logic from useLocationPanel
+  - Handles movement input, slash commands, API calls
+  - Manages navigation state (isMoving, errorMessage, activeEntity)
+- [x] Simplified LocationPanel
+  - Removed travel section UI completely
+  - Removed navigation state/handlers from hook
+  - Simplified types (only base panel + saveLocation)
+  - Removed travel section CSS
+  - Focuses purely on display and info modal
+- [x] Result: Unified command center
+  - All entity generation and navigation in SpawnInputBar
+  - Clean separation: display (LocationPanel) vs interaction (SpawnInputBar)
+
 ### Slash Command Input & Navigation Centralization (Nov 25, 2025)
 - [x] Created reusable SlashCommandInput component
   - Type `/` to show dropdown of navigation commands
@@ -33,14 +53,6 @@
   - Updated tsconfig.json and vite.config.ts
   - Frontend imports from `@backend/config/navigation`
   - Browser-safe imports (avoids Node.js-specific files)
-- [x] Updated Location Panel UI
-  - "Travel" button → "Go" button
-  - Removed "Create image" checkbox
-  - Integrated SlashCommandInput component
-  - handleMove parses slash command format (`/COMMAND text`)
-- [x] Fixed CSS layout issues
-  - SlashCommandInput uses flex: 1 for proper layout
-  - box-sizing: border-box prevents overflow
 
 ### Entity Explorer Panel - Draggable UI (Nov 25, 2025)
 - [x] Moved sidebar to draggable, resizable panel

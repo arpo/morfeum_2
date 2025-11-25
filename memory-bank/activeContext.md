@@ -38,15 +38,36 @@
   - `intentClassifier.ts` prompt updated to reflect only `GO_INSIDE` as implemented
 - **Result:** Codebase is now clean, with a single source of truth for navigation commands and no dead code
 
+### SpawnInputBar Navigate Tab Implementation (Nov 25, 2025)
+- **Added Navigate tab to SpawnInputBar** - Navigation functionality now lives alongside Character and Location generation
+- **Three-tab interface**: Character, Location, Navigate
+- **Navigation logic extracted**:
+  - Created `useNavigationLogic.ts` hook with all navigation state/handlers
+  - Moved from `useLocationPanel.ts` to centralized location
+  - Handles movement input, slash commands, navigation API calls
+  - Manages navigation state (isMoving, errorMessage, activeEntity)
+- **Navigate tab features**:
+  - Shows "Select or generate a location to navigate" when no location active
+  - Displays SlashCommandInput and "Go" button when location selected
+  - Shows error messages for invalid commands
+  - Includes navigation description ("Type / to see navigation commands")
+- **LocationPanel cleanup**:
+  - Removed travel section UI completely
+  - Removed all navigation state/handlers from hook
+  - Simplified types to only include base entity panel + saveLocation
+  - Removed travel section CSS styles
+  - Now focuses purely on location display and info modal
+- **Result**: Unified input interface with all entity generation and navigation in one place
+
 ## Current Focus
-- Entity Explorer panel provides flexible, movable navigation
-- Position persistence ensures consistent user experience
-- Clean 2-column layout maximizes content space
-- Modal z-index hierarchy properly maintained
+- SpawnInputBar now serves as the central command center for entity generation and navigation
+- Navigation moved from LocationPanel to SpawnInputBar for better UX
+- LocationPanel simplified to focus on display only
+- Clean separation of concerns: display vs. interaction
 
 ## Next Steps
-- Consider adding panel minimize/maximize functionality
-- Explore additional draggable panels for other features
-- Potential keyboard shortcuts for toggle button
+- Consider adding more navigation commands beyond GO_INSIDE
+- Potential tab state persistence across sessions
+- Explore keyboard shortcuts for tab switching
 
 ## Previous Context (see below for earlier changes)
