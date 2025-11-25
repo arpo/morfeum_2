@@ -2,16 +2,15 @@ import { useStore } from '@/store';
 import { useThemeStore } from '@/store/slices/themeSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
-import { CharacterPanel } from '@/features/entity-panel/components/CharacterPanel';
-import { LocationPanel } from '@/features/entity-panel/components/LocationPanel';
 import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer';
 import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { ChatPanel } from '@/features/chat/components/ChatPanel';
+import { CharacterInfoModal } from '@/features/chat/components/CharacterInfoModal';
+import { LocationInfoModal } from '@/features/chat/components/LocationInfoModal';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { SavedEntitiesModal } from '@/features/saved-entities/SavedEntitiesModal';
 import { EntityExplorerPanel } from '@/features/app/components/EntityExplorer/EntityExplorerPanel';
-import { EntityExplorerToggle } from '@/features/app/components/EntityExplorerToggle';
-import { Card, ThemeToggle, Button } from '@/components/ui';
+import { TopButtonRow } from '@/features/app/components/TopButtonRow';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import { useEffect, useState } from 'react';
@@ -19,10 +18,11 @@ import styles from './App.module.css';
 
 export function App() {
   const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
-  const [savedEntitiesInitialTab, setSavedEntitiesInitialTab] = useState<'characters' | 'locations'>('characters');
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
   
   // Initialize theme on mount
-  const { setTheme, theme } = useThemeStore();
+  const { theme } = useThemeStore();
   
   const activeEntity = useStore(state => state.activeEntity);
   const entities = useStore(state => state.entities);
@@ -32,11 +32,24 @@ export function App() {
   const updateEntityProfile = useStore(state => state.updateEntityProfile);
   const entityPanelOpen = useStore(state => state.entityPanelOpen);
   const closeEntityPanel = useStore(state => state.closeEntityPanel);
+  const openEntityPanel = useStore(state => state.openEntityPanel);
   const entityExplorerPanelOpen = useStore(state => state.entityExplorerPanelOpen);
   const toggleEntityExplorerPanel = useStore(state => state.toggleEntityExplorerPanel);
   
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
+  const entityImage = activeEntitySession?.entityImage || null;
+  const deepProfile = activeEntitySession?.deepProfile || null;
+  const isCharacter = activeEntitySession?.entityType === 'character';
+
+  // Reset loading state when image URL changes
+  useEffect(() => {
+    if (entityImage) {
+      setImageLoading(true);
+    } else {
+      setImageLoading(true);
+    }
+  }, [entityImage]);
 
   // Initialize theme on component mount
   useEffect(() => {
@@ -140,38 +153,62 @@ export function App() {
     initializeData();
   }, []); // Only run on mount
 
+  // Handlers for TopButtonRow
+  const handleOpenInfo = () => {
+    setIsInfoModalOpen(true);
+  };
+
+  const handleCloseInfo = () => {
+    setIsInfoModalOpen(false);
+  };
+
+  const handleOpenChat = () => {
+    if (activeEntity) {
+      openEntityPanel(activeEntity);
+    }
+  };
+
   return (
     <div className={styles.container}>
       
-      {/* Entity Explorer Toggle Button - Top Left */}
-      <EntityExplorerToggle onClick={toggleEntityExplorerPanel} />
+      {/* Fullscreen Entity Background Image */}
+      {activeEntitySession && (
+        <div className={styles.entityBackground}>
+          {(!entityImage || imageLoading) && (
+            <div className={styles.backgroundSkeleton}>
+              <div className={styles.skeletonBreathing} />
+            </div>
+          )}
+          {entityImage && (
+            <img 
+              src={entityImage} 
+              alt={activeEntitySession.entityName || 'Entity'}
+              className={styles.entityBackgroundImage}
+              onLoad={() => setImageLoading(false)}
+              style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease-in' }}
+            />
+          )}
+        </div>
+      )}
+      
+      {/* Top Button Row - Toggle, Info, Chat */}
+      <TopButtonRow
+        onToggleSidebar={toggleEntityExplorerPanel}
+        onOpenInfo={handleOpenInfo}
+        onOpenChat={handleOpenChat}
+        isCharacter={isCharacter}
+        infoDisabled={!deepProfile}
+        chatDisabled={!deepProfile}
+      />
       
       {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
       <div className={styles.spawnInputContainer}>
         <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
       </div>
-      
-      {/* Theme Toggle - Bottom Right Corner */}
-      {/* <div className={styles.themeToggleContainer}>
-        <ThemeToggle className="compact" />
-      </div> */}
 
       {/* Entity Explorer Panel - Draggable */}
       {entityExplorerPanelOpen && (
         <EntityExplorerPanel onClose={toggleEntityExplorerPanel} />
-      )}
-      
-      {/* Column 1 - Entity Panel (Character or Location) */}
-      {activeEntitySession && (
-        <section className={styles.entitySection}>
-          <Card>
-            {activeEntitySession.entityType === 'character' ? (
-              <CharacterPanel />
-            ) : (
-              <LocationPanel />
-            )}
-          </Card>
-        </section>
       )}
       
       {/* Column 2 - Chat History (Collapsible) / Image Prompt Panel */}
@@ -204,11 +241,32 @@ export function App() {
         );
       })}
 
+      {/* Character Info Modal */}
+      {isCharacter && (
+        <CharacterInfoModal 
+          deepProfile={deepProfile as any}
+          characterName={activeEntitySession?.entityName || 'Unknown'}
+          isOpen={isInfoModalOpen}
+          onClose={handleCloseInfo}
+        />
+      )}
+
+      {/* Location Info Modal */}
+      {!isCharacter && activeEntitySession && (
+        <LocationInfoModal
+          locationProfile={deepProfile as any}
+          locationName={activeEntitySession?.entityName || 'Unknown'}
+          locationId={activeEntity || undefined}
+          isOpen={isInfoModalOpen}
+          onClose={handleCloseInfo}
+        />
+      )}
+
       {/* Saved Entities Modal - Rendered at App level for proper centering */}
       <SavedEntitiesModal 
         isOpen={isSavedEntitiesModalOpen}
         onClose={() => setIsSavedEntitiesModalOpen(false)}
-        initialTab={savedEntitiesInitialTab}
+        initialTab="characters"
       />
     </div>
   );

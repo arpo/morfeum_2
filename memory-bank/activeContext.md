@@ -2,6 +2,33 @@
 
 ## Recent Changes (2025-11-25)
 
+### UI Layout Refactor - Fullscreen Background Images (Nov 25, 2025)
+- **Removed entitySection** - Eliminated Card wrapper containing CharacterPanel/LocationPanel from main layout
+- **Fullscreen Background Image** - Entity images now display behind all UI elements as full viewport backgrounds
+- **Responsive Letterbox Behavior** - Implemented aspect-ratio media query for optimal image display:
+  - Narrow/tall viewports (≤16:9): `object-fit: contain` - letterbox only above/below
+  - Wide viewports (>16:9): `object-fit: cover` - fills completely, no letterbox
+  - Ensures 16:9 images only have vertical letterbox, never horizontal pillarbox
+- **TopButtonRow Component** - New fixed top-left button row replacing EntityExplorerToggle:
+  - Sidebar toggle button (IconLayoutSidebar)
+  - Info button (works for both characters and locations, disabled until deepProfile loads)
+  - Chat button (characters only, disabled until deepProfile loads)
+- **Modal State Lifted to App Level**:
+  - CharacterInfoModal and LocationInfoModal now managed by App.tsx
+  - Single `isInfoModalOpen` state controls both modals
+  - Info button now works for location nodes (was previously broken)
+- **Files Modified**:
+  - `packages/frontend/src/icons/index.ts` - Added IconMessageCircle
+  - `packages/frontend/src/features/app/components/TopButtonRow/` - New component (3 files)
+  - `packages/frontend/src/features/app/components/App/App.tsx` - Major layout refactor
+  - `packages/frontend/src/features/app/components/App/App.module.css` - Fullscreen image styles
+- **Components Now Unused** (preserved for reference):
+  - CharacterPanel - image display and button functionality moved to App.tsx
+  - LocationPanel - image display and button functionality moved to App.tsx
+  - EntityExplorerToggle - replaced by TopButtonRow
+- **Result**: Cleaner, more immersive UI with entity images as fullscreen backgrounds
+
+
 ### Entity Explorer Panel - Draggable UI Refactor (Nov 25, 2025)
 - **Moved sidebar to draggable panel** - Entity Explorer (Host/Characters tabs) now lives in a draggable, resizable panel
 - **Toggle button in top-left corner** - Uses `IconLayoutSidebar` to show/hide the panel

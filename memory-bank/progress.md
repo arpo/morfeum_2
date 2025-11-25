@@ -2,6 +2,18 @@
 
 ## Completed Features ✅
 
+### UI Layout Refactor - Fullscreen Background Images (Nov 25, 2025)
+- [x] Removed entitySection Card wrapper from main layout
+- [x] Implemented fullscreen entity background images behind all UI
+- [x] Created TopButtonRow component (sidebar toggle, info button, chat button)
+- [x] Added responsive aspect-ratio media query for optimal letterbox behavior
+  - Narrow/tall viewports (≤16:9): object-fit contain - letterbox above/below only
+  - Wide viewports (>16:9): object-fit cover - fills completely
+- [x] Lifted modal state to App level (CharacterInfoModal, LocationInfoModal)
+- [x] Fixed info button for location nodes (was previously broken)
+- [x] Added IconMessageCircle icon for chat button
+- [x] Components now unused but preserved: CharacterPanel, LocationPanel, EntityExplorerToggle
+
 ### Navigation Command Cleanup & Centralization (Nov 25, 2025)
 - [x] Removed all dummy navigation commands and handlers
   - Only `GO_INSIDE` is implemented and exported
