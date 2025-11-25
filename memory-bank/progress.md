@@ -2,6 +2,15 @@
 
 ## Completed Features ✅
 
+### Navigation Command Cleanup & Centralization (Nov 25, 2025)
+- [x] Removed all dummy navigation commands and handlers
+  - Only `GO_INSIDE` is implemented and exported
+  - Centralized navigation intent registry in `pipelineConfig.ts`
+  - Cleaned up types, config, and handlers
+  - Deleted all dummy handler files
+  - Updated router and prompt to reflect only implemented commands
+- [x] Codebase now has a single source of truth for navigation commands and no dead code
+
 ### Progress Bar Fix for Navigation Slash Commands (Nov 25, 2025)
 - [x] Fixed missing progress bar for new slash command navigation
   - Identified bypass of the activeSpawns store in useLocationPanel.ts
