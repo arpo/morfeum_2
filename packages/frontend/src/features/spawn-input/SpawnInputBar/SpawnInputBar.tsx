@@ -3,11 +3,14 @@
  * Simplified input for triggering entity spawn processes
  */
 
-import { useState } from 'react';
+import { useState, KeyboardEvent } from 'react';
 import { useSpawnInputLogic } from './useSpawnInputLogic';
+import { useNavigationLogic } from './useNavigationLogic';
 import { useStore } from '@/store';
 import { IconDice, IconChevronDown, IconChevronUp, IconBookmark } from '@/icons';
 import { ProgressBar } from '@/components/ui/ProgressBar';
+import { Tabs, Button, SlashCommandInput } from '@/components/ui';
+import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
 import styles from './SpawnInputBar.module.css';
 
 interface SpawnInputBarProps {
@@ -16,7 +19,9 @@ interface SpawnInputBarProps {
 
 export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const { state, handlers } = useSpawnInputLogic();
+  const navigation = useNavigationLogic();
   const [isMinimized, setIsMinimized] = useState(false);
+  const [activeTab, setActiveTab] = useState('character');
   
   // Get active spawns from store
   const activeSpawns = useStore(state => state.activeSpawns);
@@ -72,20 +77,6 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
         {/* Expanded Content */}
         <div className={styles.expandedContent}>
           <div className={styles.topRow}>
-            <div className={styles.toggleGroup}>
-              <button
-                className={`${styles.toggleButton} ${state.entityType === 'character' ? styles.active : ''}`}
-                onClick={() => handlers.setEntityType('character')}
-              >
-                Character
-              </button>
-              <button
-                className={`${styles.toggleButton} ${state.entityType === 'location' ? styles.active : ''}`}
-                onClick={() => handlers.setEntityType('location')}
-              >
-                Location
-              </button>
-            </div>
             <button
               className={styles.minimizeButton}
               onClick={() => setIsMinimized(true)}
@@ -94,48 +85,162 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
               <IconChevronDown size={18} />
             </button>
           </div>
-          <textarea
-            className={styles.textarea}
-            value={state.textPrompt}
-            onChange={(e) => handlers.setTextPrompt(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
-                e.preventDefault();
-                handlers.handleGenerate();
+          
+          <Tabs
+            activeTabId={activeTab}
+            onChange={(tabId) => {
+              setActiveTab(tabId);
+              if (tabId === 'character') {
+                handlers.setEntityType('character');
+              } else if (tabId === 'location') {
+                handlers.setEntityType('location');
               }
             }}
-            placeholder={state.entityType === 'character' 
-              ? "Describe a character to spawn..."
-              : "Describe a location to spawn..."
-            }
-            rows={3}
+            items={[
+              {
+                id: 'character',
+                label: 'Character',
+                content: (
+                  <div className={styles.tabContent}>
+                    <textarea
+                      className={styles.textarea}
+                      value={state.textPrompt}
+                      onChange={(e) => handlers.setTextPrompt(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
+                          e.preventDefault();
+                          handlers.handleGenerate();
+                        }
+                      }}
+                      placeholder="Describe a character to spawn..."
+                      rows={3}
+                    />
+                    <div className={styles.buttonRow}>
+                      <button
+                        className={styles.generateButton}
+                        onClick={handlers.handleGenerate}
+                        disabled={!state.textPrompt.trim()}
+                      >
+                        Generate
+                      </button>
+                      
+                      <button
+                        className={styles.shuffleButton}
+                        onClick={handlers.handleShuffle}
+                        title="Random example"
+                      >
+                        <IconDice size={18} />
+                      </button>
+                      {onOpenSavedEntities && (
+                        <button
+                          className={styles.shuffleButton}
+                          onClick={onOpenSavedEntities}
+                          title="Saved Entities"
+                        >
+                          <IconBookmark size={18} />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                )
+              },
+              {
+                id: 'location',
+                label: 'Location',
+                content: (
+                  <div className={styles.tabContent}>
+                    <textarea
+                      className={styles.textarea}
+                      value={state.textPrompt}
+                      onChange={(e) => handlers.setTextPrompt(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
+                          e.preventDefault();
+                          handlers.handleGenerate();
+                        }
+                      }}
+                      placeholder="Describe a location to spawn..."
+                      rows={3}
+                    />
+                    <div className={styles.buttonRow}>
+                      <button
+                        className={styles.generateButton}
+                        onClick={handlers.handleGenerate}
+                        disabled={!state.textPrompt.trim()}
+                      >
+                        Generate
+                      </button>
+                      
+                      <button
+                        className={styles.shuffleButton}
+                        onClick={handlers.handleShuffle}
+                        title="Random example"
+                      >
+                        <IconDice size={18} />
+                      </button>
+                      {onOpenSavedEntities && (
+                        <button
+                          className={styles.shuffleButton}
+                          onClick={onOpenSavedEntities}
+                          title="Saved Entities"
+                        >
+                          <IconBookmark size={18} />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                )
+              },
+              {
+                id: 'navigate',
+                label: 'Navigate',
+                content: (
+                  <div className={styles.tabContent}>
+                    {!navigation.state.activeEntity ? (
+                      <p className={styles.noLocationMessage}>
+                        Select or generate a location to navigate
+                      </p>
+                    ) : (
+                      <>
+                        <p className={styles.navigationDescription}>
+                          Type / to see navigation commands.
+                        </p>
+                        {navigation.state.errorMessage && (
+                          <div className={styles.errorMessage}>
+                            {navigation.state.errorMessage}
+                          </div>
+                        )}
+                        <div className={styles.navigationSection}>
+                          <SlashCommandInput
+                            className={styles.navigationInput}
+                            value={navigation.state.movementInput}
+                            onChange={navigation.handlers.setMovementInput}
+                            commands={NAVIGATION_COMMANDS}
+                            onInvalidCommand={navigation.handlers.handleInvalidCommand}
+                            onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => {
+                              if (e.key === 'Enter' && !navigation.state.isMoving) {
+                                e.preventDefault();
+                                navigation.handlers.handleMove();
+                              }
+                            }}
+                            placeholder="Describe where you want to go..."
+                            disabled={navigation.state.isMoving}
+                          />
+                          <Button
+                            onClick={navigation.handlers.handleMove}
+                            disabled={navigation.state.isMoving || !navigation.state.movementInput.trim()}
+                            loading={navigation.state.isMoving}
+                          >
+                            Go
+                          </Button>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )
+              }
+            ]}
           />
-          <div className={styles.buttonRow}>
-            <button
-              className={styles.generateButton}
-              onClick={handlers.handleGenerate}
-              disabled={!state.textPrompt.trim()}
-            >
-              Generate
-            </button>
-            
-            <button
-              className={styles.shuffleButton}
-              onClick={handlers.handleShuffle}
-              title="Random example"
-            >
-              <IconDice size={18} />
-            </button>
-            {onOpenSavedEntities && (
-              <button
-                className={styles.shuffleButton}
-                onClick={onOpenSavedEntities}
-                title="Saved Entities"
-              >
-                <IconBookmark size={18} />
-              </button>
-            )}
-          </div>
         </div>
       </div>
       

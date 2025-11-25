@@ -206,3 +206,33 @@
   font-size: var(--text-sm);
   margin-top: var(--spacing-xs);
 }
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.navigationDescription {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 10px 0;
+}
+
+.noLocationMessage {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: var(--spacing-md);
+  margin: 0;
+}
+
+.navigationSection {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+}
+
+.navigationInput {
+  flex: 1;
+}

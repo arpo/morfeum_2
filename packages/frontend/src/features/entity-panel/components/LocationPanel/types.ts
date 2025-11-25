@@ -1,20 +1,9 @@
 import type { EntityPanelBaseState, EntityPanelBaseHandlers } from '../../types';
 
-export interface LocationPanelState extends EntityPanelBaseState {
-  movementInput: string;
-  isMoving: boolean;
-  createImage: boolean;
-  previewImage: string | null;
-  errorMessage: string | null;
-}
+export interface LocationPanelState extends EntityPanelBaseState {}
 
 export interface LocationPanelHandlers extends EntityPanelBaseHandlers {
-  setMovementInput: (value: string) => void;
-  handleMove: () => Promise<void>;
   saveLocation: () => void;
-  setCreateImage: (value: boolean) => void;
-  clearPreviewImage: () => void;
-  handleInvalidCommand: (command: string) => void;
 }
 
 export interface LocationPanelLogicReturn {

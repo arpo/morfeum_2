@@ -1,10 +1,8 @@
-import { useState, useEffect, KeyboardEvent } from 'react';
+import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Button, Checkbox, SlashCommandInput } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
 import { LocationInfoModal } from '../../../chat/components/LocationInfoModal';
 import { useLocationPanel } from './useLocationPanel';
-import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
 import styles from './LocationPanel.module.css';
 
 export function LocationPanel() {
@@ -24,14 +22,14 @@ export function LocationPanel() {
   return (
     <div className={styles.container} data-component="location-panel">
       <div className={styles.imageContainer}>
-        {((!state.entityImage && !state.previewImage) || imageLoading) && (
+        {(!state.entityImage || imageLoading) && (
           <div className={styles.imageSkeleton}>
             <div className={styles.skeletonBreathing} />
           </div>
         )}
-        {(state.previewImage || state.entityImage) && (
+        {state.entityImage && (
           <img 
-            src={(state.previewImage || state.entityImage) || ''} 
+            src={state.entityImage} 
             alt={state.entityName || 'Location'}
             className={styles.locationHeaderImage}
             onLoad={() => setImageLoading(false)}
@@ -79,43 +77,7 @@ export function LocationPanel() {
         </div>
       )}
 
-      {/* Travel Section */}
-      <div className={styles.travelSection}>
-        <p className={styles.travelDescription}>
-          Type / to see navigation commands.
-        </p>
-        {state.errorMessage && (
-          <div className={styles.errorMessage}>
-            {state.errorMessage}
-          </div>
-        )}
-        <div className={styles.movementSection}>
-          <SlashCommandInput
-            className={styles.movementInput}
-            value={state.movementInput}
-            onChange={handlers.setMovementInput}
-            commands={NAVIGATION_COMMANDS}
-            onInvalidCommand={handlers.handleInvalidCommand}
-            onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => {
-              if (e.key === 'Enter' && !state.isMoving) {
-                e.preventDefault();
-                handlers.handleMove();
-              }
-            }}
-            placeholder="Describe where you want to go..."
-            disabled={state.isMoving}
-          />
-          <Button
-            onClick={handlers.handleMove}
-            disabled={state.isMoving || !state.movementInput.trim()}
-            loading={state.isMoving}
-          >
-            Go
-          </Button>
-        </div>
-      </div>
-
-      <LocationInfoModal 
+      <LocationInfoModal
         locationProfile={state.deepProfile as any}
         locationName={state.entityName || 'Unknown'}
         locationId={state.activeChat || undefined}
