@@ -4,7 +4,7 @@ import styles from './SlashCommandInput.module.css';
 interface SlashCommandInputProps {
   value: string;
   onChange: (value: string) => void;
-  commands: string[];
+  commands: readonly string[];
   placeholder?: string;
   disabled?: boolean;
   onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;

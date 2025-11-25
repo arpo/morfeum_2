@@ -1,18 +1,13 @@
-import { useState, useCallback } from 'react';
-import { useLocationsStore } from '@/store/slices/locations';
 import { useStore } from '@/store';
+import { useLocationsStore } from '@/store/slices/locations';
+import { useCallback, useState } from 'react';
 import { useEntityPanelBase } from '../../hooks/useEntityPanelBase';
-import type { LocationPanelLogicReturn } from './types';
-import {
-  buildCurrentLocationDetails,
-  buildSpatialNodes,
-  findDestination
-} from './locationNavigation';
 import {
   buildCascadedContext,
   validateParentNode
 } from './locationCascading';
 import { startSublocationSpawn } from './locationSpawn';
+import type { LocationPanelLogicReturn } from './types';
 
 /**
  * Location-specific panel logic - extends base entity panel with travel functionality

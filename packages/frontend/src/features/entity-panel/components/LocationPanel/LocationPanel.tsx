@@ -4,22 +4,8 @@ import { Button, Checkbox, SlashCommandInput } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
 import { LocationInfoModal } from '../../../chat/components/LocationInfoModal';
 import { useLocationPanel } from './useLocationPanel';
+import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
 import styles from './LocationPanel.module.css';
-
-const NAVIGATION_COMMANDS = [
-  'GO_INSIDE',
-  'GO_OUTSIDE',
-  'GO_TO_ROOM',
-  'GO_TO_PLACE',
-  'LOOK_AT',
-  'LOOK_THROUGH',
-  'CHANGE_VIEW',
-  'GO_UP_DOWN',
-  'ENTER_PORTAL',
-  'APPROACH',
-  'EXPLORE_FEATURE',
-  'RELOCATE'
-];
 
 export function LocationPanel() {
   const { state, handlers } = useLocationPanel();
@@ -95,9 +81,8 @@ export function LocationPanel() {
 
       {/* Travel Section */}
       <div className={styles.travelSection}>
-        <h3 className={styles.travelTitle}>Travel</h3>
         <p className={styles.travelDescription}>
-          Where would you like to go from here?
+          Type / to see navigation commands.
         </p>
         <div className={styles.movementSection}>
           <SlashCommandInput
