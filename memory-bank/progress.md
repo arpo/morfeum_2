@@ -2,6 +2,29 @@
 
 ## Completed Features ✅
 
+### Slash Command Input & Navigation Centralization (Nov 25, 2025)
+- [x] Created reusable SlashCommandInput component
+  - Type `/` to show dropdown of navigation commands
+  - Keyboard navigation (Up/Down/Enter/Escape)
+  - Auto-scrolling active items into view
+  - Dark theme styling with white text
+- [x] Centralized navigation commands in backend config
+  - `packages/backend/src/config/navigation.ts` as single source of truth
+  - NAVIGATION_COMMANDS array (12 intents)
+  - Both frontend and backend import from same location
+- [x] Configured monorepo imports (@backend/* path alias)
+  - Updated tsconfig.json and vite.config.ts
+  - Frontend imports from `@backend/config/navigation`
+  - Browser-safe imports (avoids Node.js-specific files)
+- [x] Updated Location Panel UI
+  - "Travel" button → "Go" button
+  - Removed "Create image" checkbox
+  - Integrated SlashCommandInput component
+  - handleMove parses slash command format (`/COMMAND text`)
+- [x] Fixed CSS layout issues
+  - SlashCommandInput uses flex: 1 for proper layout
+  - box-sizing: border-box prevents overflow
+
 ### UI & Persistence (Nov 21, 2025)
 - [x] TreeView expanded/collapsed state is now persisted in localStorage (per panel).
 - [x] Selected node in EntityExplorer is visually highlighted using the `.selected` class.

@@ -1,5 +1,47 @@
 # Active Context
 
+## Recent Changes (2025-11-25)
+
+### Slash Command Input & Navigation Centralization (Nov 25, 2025)
+- **Created reusable SlashCommandInput component** - Modern command palette-style input for navigation
+- **Component Features:**
+  - Type `/` to show dropdown of navigation commands
+  - Keyboard navigation (Up/Down arrows, Enter to select, Escape to close)
+  - Auto-scrolling active items into view
+  - Dark theme styling with white text and light overlay for hover/active states
+  - Format: `/COMMAND text` (e.g., `/GO_TO_ROOM go to kitchen`)
+  - Props: `commands: readonly string[]`, `value`, `onChange`, `placeholder`, `disabled`, `onKeyPress`, `className`
+- **Centralized Navigation Commands:**
+  - Created `packages/backend/src/config/navigation.ts` as single source of truth
+  - Exported NAVIGATION_COMMANDS array (12 intents: GO_INSIDE, GO_OUTSIDE, GO_TO_ROOM, etc.)
+  - Both frontend and backend can import the same constants
+- **Monorepo Import Configuration:**
+  - Added `@backend/*` path alias to `packages/frontend/tsconfig.json`
+  - Added `@backend` alias to `packages/frontend/vite.config.ts`
+  - Frontend imports from: `import { NAVIGATION_COMMANDS } from '@backend/config/navigation'`
+  - Imports directly from navigation file (browser-safe) to avoid Node.js-specific files
+- **Location Panel Updates:**
+  - Replaced "Travel" button with "Go"
+  - Removed "Create image" checkbox
+  - Updated `handleMove` to parse slash command format (`/COMMAND text`)
+  - Logs command and text separately to console for debugging
+  - Input field uses new SlashCommandInput component
+- **CSS Fixes:**
+  - SlashCommandInput container uses `flex: 1` for proper flexbox layout
+  - Input has `box-sizing: border-box` to prevent overflow with padding
+  - Clean layout without wrapper issues
+- **Files Created:**
+  - `packages/frontend/src/components/ui/SlashCommandInput/SlashCommandInput.tsx`
+  - `packages/frontend/src/components/ui/SlashCommandInput/SlashCommandInput.module.css`
+  - `packages/backend/src/config/navigation.ts`
+- **Files Modified:**
+  - `packages/frontend/tsconfig.json` (added @backend path alias)
+  - `packages/frontend/vite.config.ts` (added @backend alias)
+  - `packages/frontend/src/features/entity-panel/components/LocationPanel/LocationPanel.tsx`
+  - `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts`
+  - `packages/backend/src/config/index.ts` (exports navigation)
+- **Result:** Modern command interface with centralized command definitions accessible to both frontend and backend
+
 ## Recent Changes (2025-11-24)
 
 ### Old Navigation System Removal (Nov 24, 2025)
