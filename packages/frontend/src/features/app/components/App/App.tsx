@@ -152,9 +152,9 @@ export function App() {
       </div>
       
       {/* Theme Toggle - Bottom Right Corner */}
-      <div className={styles.themeToggleContainer}>
+      {/* <div className={styles.themeToggleContainer}>
         <ThemeToggle className="compact" />
-      </div>
+      </div> */}
 
       {/* Entity Explorer Panel - Draggable */}
       {entityExplorerPanelOpen && (

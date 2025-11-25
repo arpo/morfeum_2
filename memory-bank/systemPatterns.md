@@ -58,6 +58,37 @@ ComponentName/
 - Cross-slice communication via get()/getState()
 - **No persist middleware** - persistence handled by backend storage service
 
+#### UI State Persistence Pattern
+For UI-specific state (panel positions, visibility), use localStorage directly:
+```typescript
+// Custom hook for panel state persistence
+export function usePanelState() {
+  const [position, setPosition] = useState<Position>(() => {
+    const stored = localStorage.getItem('panelPosition');
+    return stored ? JSON.parse(stored) : DEFAULT_POSITION;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('panelPosition', JSON.stringify(position));
+  }, [position]);
+
+  return { position, setPosition };
+}
+```
+
+#### DraggablePanel Callback Pattern
+DraggablePanels support position/size change callbacks for parent tracking:
+```typescript
+<DraggablePanel
+  initialPosition={position}
+  initialSize={size}
+  onPositionChange={setPosition}  // Called after drag completes
+  onSizeChange={setSize}           // Called after resize completes
+>
+  {children}
+</DraggablePanel>
+```
+
 ### Deletion Pattern
 Cascading deletes maintain data integrity:
 
@@ -114,6 +145,37 @@ const loadFromBackend = async () => {
 import { Button } from '@/components/ui';
 import { IconLoader2 } from '@/icons';
 ```
+
+### UI Layout Patterns
+
+#### Draggable Panel System
+- **Base z-index**: DraggablePanel starts at 1000, increments on click (bringToFront)
+- **Modal z-index**: Modal overlay at 9999 to ensure modals appear above all panels
+- **Panel persistence**: Position/size saved to localStorage via callbacks
+- **Toggle pattern**: Fixed-position button to show/hide panel
+- **Layout flexibility**: Panels can be positioned anywhere, no fixed sidebar needed
+
+#### Grid Layout Pattern
+```typescript
+// App.tsx - Flexible grid without fixed sidebar
+.container {
+  display: grid;
+  grid-template-columns: minmax(400px, 600px) 350px; // Main + Side
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
+// Responsive breakpoints
+@media (max-width: 1600px) {
+  grid-template-columns: minmax(350px, 500px) 320px;
+}
+```
+
+#### Fixed UI Elements
+- **Toggle buttons**: Fixed position, high z-index (1000)
+- **Spawn input bar**: Fixed bottom-center, z-index 900
+- **Theme toggle**: Fixed bottom-right, z-index 1000
+- **Modals**: Fixed overlay, z-index 9999
 
 ## Backend Architecture
 

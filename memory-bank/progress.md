@@ -42,6 +42,18 @@
   - SlashCommandInput uses flex: 1 for proper layout
   - box-sizing: border-box prevents overflow
 
+### Entity Explorer Panel - Draggable UI (Nov 25, 2025)
+- [x] Moved sidebar to draggable, resizable panel
+- [x] Added toggle button in top-left corner with IconLayoutSidebar
+- [x] Panel position persists to localStorage (survives toggles and refreshes)
+- [x] Panel visibility state persists to localStorage
+- [x] Enhanced DraggablePanel with onPositionChange/onSizeChange callbacks
+- [x] Fixed z-index hierarchy (Modal overlay at 9999, panels start at 1000)
+- [x] Updated App layout from 3-column to 2-column grid
+- [x] Created EntityExplorerPanel, EntityExplorerToggle components
+- [x] Created useEntityExplorerPanel hook for position persistence
+- [x] Updated responsive breakpoints for new layout
+
 ### UI & Persistence (Nov 21, 2025)
 - [x] TreeView expanded/collapsed state is now persisted in localStorage (per panel).
 - [x] Selected node in EntityExplorer is visually highlighted using the `.selected` class.
