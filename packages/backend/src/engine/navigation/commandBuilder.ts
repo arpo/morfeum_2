@@ -39,10 +39,9 @@ function deriveSpaceType(
   switch (command) {
     case 'GO_INSIDE':
       return 'interior';
-    case 'GO_OUTSIDE':
-      return 'exterior';
+    // Add new command cases here as they are implemented
     default:
-      // For other commands, derive from current node type
+      // Derive from current node type
       if (currentNodeType === 'location') {
         return 'exterior';
       } else if (currentNodeType === 'niche') {

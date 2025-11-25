@@ -22,18 +22,7 @@ export function routeNavigation(
     case 'GO_INSIDE':
       return handleGoInside(intent, context);
     
-    // TODO: Implement these handlers
-    // case 'GO_OUTSIDE':
-    // case 'GO_TO_ROOM':
-    // case 'GO_TO_PLACE':
-    // case 'LOOK_AT':
-    // case 'LOOK_THROUGH':
-    // case 'CHANGE_VIEW':
-    // case 'GO_UP_DOWN':
-    // case 'ENTER_PORTAL':
-    // case 'APPROACH':
-    // case 'EXPLORE_FEATURE':
-    // case 'RELOCATE':
+    // Add new command cases here as they are implemented
     
     default:
       console.log(`[NavigationRouter] Command not implemented: ${intent.intent}`);

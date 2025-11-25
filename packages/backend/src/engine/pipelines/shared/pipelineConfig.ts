@@ -44,17 +44,6 @@ export const PIPELINE_STEPS = {
  */
 export const NAVIGATION_INTENT_REGISTRY = {
   'GO_INSIDE': 'navigation',
-  'GO_OUTSIDE': 'navigation',
-  'GO_TO_ROOM': 'navigation',
-  'GO_TO_PLACE': 'navigation',
-  'LOOK_AT': 'navigation',
-  'LOOK_THROUGH': 'navigation',
-  'CHANGE_VIEW': 'navigation',
-  'GO_UP_DOWN': 'navigation',
-  'ENTER_PORTAL': 'navigation',
-  'APPROACH': 'navigation',
-  'EXPLORE_FEATURE': 'navigation',
-  'RELOCATE': 'navigation'
 } as const;
 
 export type PipelineType = keyof typeof PIPELINE_STEPS;

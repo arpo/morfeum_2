@@ -5896,6 +5896,72 @@
       ],
       "searchDesc": "Brutalist metallic chamber with mountain view, ajar steel door, 8-10m height.",
       "slug": "new-room"
+    },
+    "niche-1764069725835-auvousun7": {
+      "id": "niche-1764069725835-auvousun7",
+      "type": "niche",
+      "name": "interior of The Serene Ascent Monastery",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This ancient stone chamber is characterized by rough-hewn, crumbling walls and a worn stone floor. Faded prayer flags hang loosely, adding a touch of tattered color. A low alcove contains a brazier with smoldering embers, while passages and a partially open door invite further exploration into the monastery's depths.",
+        "colorsAndLighting": "The dominant palette consists of muted grays and earthy browns from the stone, accented by the warm, flickering orange-red glow of embers. Shafts of cold, ethereal light pierce the gloom from above, illuminating dancing dust motes.",
+        "atmosphere": "The air is thin and cold, carrying the distant, resonant hum of chanting and the faint, spiritual aroma of incense. Gentle drafts cause the prayer flags to flutter, contributing to a sense of profound antiquity and serene isolation.",
+        "materials": "The primary materials are crumbling, rough-hewn stone and aged plaster for the walls, with a worn stone floor. A tarnished brass brazier and a carved wooden door add secondary textures, both showing signs of age and use.",
+        "mood": "The overwhelming mood is one of profound antiquity, spiritual devotion, and serene isolation, fostering a sense of contemplative peace.",
+        "sounds": "distant chanting, faint hum, crackling embers",
+        "spatialLayout": "The chamber is a roughly rectangular space with a vaulted stone ceiling. Entry is implied from behind the viewer, with navigable passages and a door leading further into the structure, and a focal point on the carved stone relief in the background.",
+        "primary_surfaces": "crumbling stone, rough plaster, worn stone floor",
+        "secondary_surfaces": "tarnished brass, carved wood",
+        "accent_features": "faded prayer flags, smoldering brazier embers, carved stone relief, ethereal light shafts",
+        "dominant": "stone gray (70%)",
+        "secondary": "earthy brown (20%)",
+        "accent": "warm ember glow (5%), faded prayer flag colors (5%)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "ancient monastic stone",
+        "cultural_tone": "A place of deep spiritual practice and historical reverence.",
+        "materials_base": "aged stone, worn wood, tarnished metal",
+        "mood_baseline": "contemplative and serene",
+        "palette_bias": "muted earth tones with cool ambient light",
+        "soundscape_base": "resonant and distant spiritual sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/Amft_NKDCviB7sbCEOuza.jpg",
+      "description": "A dimly lit, ancient stone chamber within The Serene Ascent Monastery, exuding profound antiquity and spiritual devotion.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground right",
+          "description": "A narrow, dimly lit passage framed by rough stone, receding into the midground."
+        },
+        {
+          "type": "door",
+          "position": "midground back",
+          "description": "A sturdy, carved wooden door set into the back wall, slightly ajar."
+        },
+        {
+          "type": "opening",
+          "position": "background",
+          "description": "Narrow, arched openings in the rear wall allowing shafts of light."
+        }
+      ],
+      "dominantElements": [
+        "crumbling stone walls",
+        "faded prayer flags",
+        "stone floor",
+        "brass brazier",
+        "stone relief",
+        "arched openings"
+      ],
+      "uniqueIdentifiers": [
+        "faded prayer flags fluttering",
+        "smoldering embers in brazier",
+        "intricately carved stone relief of monks",
+        "shafts of cold, ethereal light"
+      ],
+      "searchDesc": "Ancient monastery stone chamber, dimly lit, prayer flags, brazier glow, ethereal light.",
+      "slug": "interior-of-the-serene-ascent-monastery"
     }
   },
   "views": {},
@@ -7747,6 +7813,11 @@
                 },
                 {
                   "id": "niche-1764066382331-vf99q3gli",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764069725835-auvousun7",
                   "type": "niche",
                   "children": []
                 }

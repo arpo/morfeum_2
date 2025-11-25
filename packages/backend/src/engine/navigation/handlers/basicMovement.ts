@@ -1,6 +1,8 @@
 /**
  * Basic Movement Handlers
- * Handles GO_INSIDE, GO_OUTSIDE, GO_TO_ROOM, GO_TO_PLACE intents
+ * Handles GO_INSIDE intent
+ * 
+ * Add new movement handlers here as they are implemented.
  */
 
 import type { IntentResult, NavigationContext, NavigationDecision } from '../types';
@@ -23,8 +25,8 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
       parentNodeId: currentNode.id,
       newNodeType: 'niche',
       newNodeName: `${intent.spaceType} of ${currentNode.name}`,
-      style: intent.style || 'default',               // NEW: Pass style from intent
-      perspective: intent.spaceType || 'interior',    // NEW: Pass perspective from intent
+      style: intent.style || 'default',
+      perspective: intent.spaceType || 'interior',
       metadata: {
         relation: 'child',
         entrance: entrance
@@ -54,98 +56,6 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
   return {
     action: 'unknown',
     reasoning: `Cannot go inside from ${currentNode.type}`
-  };
-}
-
-/**
- * Handle GO_OUTSIDE intent
- * User wants to exit/leave current location
- */
-export function handleGoOutside(intent: IntentResult, context: NavigationContext): NavigationDecision {
-  const { currentNode, parentNode } = context;
-  
-  // Must be at a niche (interior) to go outside
-  if (currentNode.type === 'niche' && parentNode) {
-    return {
-      action: 'move',
-      targetNodeId: parentNode.id,
-      metadata: {
-        relation: 'parent'
-      },
-      reasoning: `Exiting to ${parentNode.name}`
-    };
-  }
-  
-  return {
-    action: 'unknown',
-    reasoning: `Cannot go outside from ${currentNode.type} (no parent found)`
-  };
-}
-
-/**
- * Handle GO_TO_ROOM intent
- * User wants to go to specific room/space (sibling niche)
- */
-export function handleGoToRoom(intent: IntentResult, context: NavigationContext): NavigationDecision {
-  const { currentNode } = context;
-  const roomName = intent.target || 'New Room';
-  
-  // At a niche? Create sibling niche
-  if (currentNode.type === 'niche' && currentNode.parentId) {
-    return {
-      action: 'create_niche',
-      parentNodeId: currentNode.parentId,
-      newNodeType: 'niche',
-      newNodeName: roomName,
-      metadata: {
-        relation: 'sibling'
-      },
-      reasoning: `Going to ${roomName} (sibling niche under same parent)`
-    };
-  }
-  
-  // At a location? Create child niche
-  if (currentNode.type === 'location') {
-    return {
-      action: 'create_niche',
-      parentNodeId: currentNode.id,
-      newNodeType: 'niche',
-      newNodeName: roomName,
-      metadata: {
-        relation: 'child'
-      },
-      reasoning: `Going to ${roomName} inside ${currentNode.name}`
-    };
-  }
-  
-  return {
-    action: 'unknown',
-    reasoning: `Cannot navigate to room from ${currentNode.type}`
-  };
-}
-
-/**
- * Handle GO_TO_PLACE intent
- * User wants to go to a location/structure
- */
-export function handleGoToPlace(intent: IntentResult, context: NavigationContext): NavigationDecision {
-  const { currentNode } = context;
-  const placeName = intent.target || 'New Location';
-  
-  // Create new location as sibling or under parent
-  const parentId = currentNode.type === 'location' 
-    ? currentNode.parentId || currentNode.id
-    : currentNode.id;
-  
-  return {
-    action: 'create_niche',
-    parentNodeId: parentId,
-    newNodeType: 'location',
-    newNodeName: placeName,
-    metadata: {
-      relation: 'sibling'
-    },
-    reasoning: `Going to ${placeName} (new location)`
   };
 }
 

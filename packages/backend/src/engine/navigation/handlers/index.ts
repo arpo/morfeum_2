@@ -1,28 +1,9 @@
 /**
  * Navigation Handlers
  * Exports all handler functions
+ * 
+ * Only implemented handlers are exported here.
+ * Add new handlers as they are implemented.
  */
 
-export {
-  handleGoInside,
-  handleGoOutside,
-  handleGoToRoom,
-  handleGoToPlace
-} from './basicMovement';
-
-export {
-  handleLookAt,
-  handleLookThrough,
-  handleChangeView
-} from './viewing';
-
-export {
-  handleGoUpDown,
-  handleEnterPortal,
-  handleApproach
-} from './special';
-
-export {
-  handleExploreFeature,
-  handleRelocate
-} from './exploration';
+export { handleGoInside } from './basicMovement';

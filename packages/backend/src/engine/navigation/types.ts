@@ -5,19 +5,12 @@
 
 export type NodeType = 'host' | 'region' | 'location' | 'niche' | 'detail' | 'view';
 
+/**
+ * Navigation intents - only implemented commands
+ * See NAVIGATION_INTENT_REGISTRY in pipelineConfig.ts for the source of truth
+ */
 export type NavigationIntent = 
   | 'GO_INSIDE'
-  | 'GO_OUTSIDE'
-  | 'GO_TO_ROOM'
-  | 'GO_TO_PLACE'
-  | 'LOOK_AT'
-  | 'LOOK_THROUGH'
-  | 'CHANGE_VIEW'
-  | 'GO_UP_DOWN'
-  | 'ENTER_PORTAL'
-  | 'APPROACH'
-  | 'EXPLORE_FEATURE'
-  | 'RELOCATE'
   | 'UNKNOWN';
 
 export interface IntentResult {
