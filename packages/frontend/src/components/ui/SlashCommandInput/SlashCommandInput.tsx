@@ -113,7 +113,7 @@ export function SlashCommandInput({
   };
 
   return (
-    <div className={`${styles.container} ${className || ''}`} ref={containerRef}>
+    <div className={styles.container} ref={containerRef}>
       {isOpen && (
         <div className={styles.dropdown} ref={dropdownRef}>
           {filteredCommands.map((cmd, index) => (
@@ -134,7 +134,7 @@ export function SlashCommandInput({
       <input
         ref={inputRef}
         type="text"
-        className={styles.input}
+        className={`${styles.input} ${className || ''}`}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={handleKeyDown}
