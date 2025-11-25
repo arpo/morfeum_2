@@ -74,6 +74,20 @@ export function handleLocationCompletion(
 }
 
 /**
+ * Handle navigation completion (niche creation)
+ * Note: Navigation spawns use custom callbacks in useLocationPanel.ts
+ * This handler is a no-op since the callback handles node creation
+ */
+export function handleNavigationCompletion(
+  spawnId: string,
+  completionData: any,
+  store: any
+) {
+  // Navigation completions are handled by custom callbacks in useLocationPanel
+  // This is intentionally a no-op to avoid duplicate handling
+}
+
+/**
  * Unified completion dispatcher
  */
 export function handleSpawnCompletion(
@@ -86,6 +100,10 @@ export function handleSpawnCompletion(
     return handleCharacterCompletion(spawnId, completionData.character, store);
   } else if (completionData.worldTree) {
     return handleLocationCompletion(spawnId, completionData.worldTree, store);
+  } else if (completionData.node || (completionData.imageUrl && completionData.imagePrompt)) {
+    // Navigation/niche spawns - handled by custom callback
+    // Check for node property OR imageUrl+imagePrompt combo (navigation pipeline signature)
+    return handleNavigationCompletion(spawnId, completionData, store);
   }
 
   console.warn('[CompletionHandler] Unknown completion type:', completionData);

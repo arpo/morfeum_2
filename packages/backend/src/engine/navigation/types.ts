@@ -23,12 +23,13 @@ export type NavigationIntent =
 export interface IntentResult {
   intent: NavigationIntent;
   target: string | null;
-  direction: string | null;
+  spaceType?: 'interior' | 'exterior' | 'unknown' | null;
+  // Legacy props - kept for backward compatibility, rarely used
+  direction?: string | null;
   newRegion?: string | null;
   relocationType?: 'macro' | 'micro' | null;
-  spaceType?: 'interior' | 'exterior' | 'unknown' | null;
-  style?: string | null;  // NEW: Visual style selected from registry
-  confidence: number;
+  style?: string | null;
+  confidence?: number;
 }
 
 export interface NavigationContext {

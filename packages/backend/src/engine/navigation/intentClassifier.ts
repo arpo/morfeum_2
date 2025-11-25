@@ -1,6 +1,10 @@
 /**
  * Intent Classifier Service
  * Uses LLM to classify user navigation commands
+ * 
+ * @deprecated This module is being phased out in favor of direct slash commands.
+ * Use buildIntentFromCommand() from ./commandBuilder.ts instead.
+ * The /api/mzoo/navigation/command endpoint handles slash commands without LLM classification.
  */
 
 import * as mzooService from '../../services/mzoo.service';

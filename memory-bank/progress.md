@@ -2,6 +2,14 @@
 
 ## Completed Features ✅
 
+### Progress Bar Fix for Navigation Slash Commands (Nov 25, 2025)
+- [x] Fixed missing progress bar for new slash command navigation
+  - Identified bypass of the activeSpawns store in useLocationPanel.ts
+  - Replaced manual EventSource with registerExternalSpawn call
+  - Progress bar now shows and animates through all 4 steps
+  - Maintains consistent progress tracking across all entity generation types
+  - Follows the same pattern established for locationNavigation.ts (Nov 24)
+
 ### Slash Command Input & Navigation Centralization (Nov 25, 2025)
 - [x] Created reusable SlashCommandInput component
   - Type `/` to show dropdown of navigation commands

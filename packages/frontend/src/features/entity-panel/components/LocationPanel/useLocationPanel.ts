@@ -1,6 +1,6 @@
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useRef } from 'react';
 import { useEntityPanelBase } from '../../hooks/useEntityPanelBase';
 import {
   buildCascadedContext,
@@ -8,6 +8,51 @@ import {
 } from './locationCascading';
 import { startSublocationSpawn } from './locationSpawn';
 import type { LocationPanelLogicReturn } from './types';
+import type { TreeNode, LocationNode, NicheNode } from '@/store/slices/locations';
+
+/**
+ * Helper: Find parent ID from tree structure
+ */
+function findParentId(worldTrees: TreeNode[], nodeId: string): string | null {
+  for (const tree of worldTrees) {
+    const result = findParentInTree(tree, nodeId, null);
+    if (result !== undefined) return result;
+  }
+  return null;
+}
+
+function findParentInTree(node: TreeNode, targetId: string, parentId: string | null): string | null | undefined {
+  if (node.id === targetId) return parentId;
+  for (const child of node.children) {
+    const result = findParentInTree(child, targetId, node.id);
+    if (result !== undefined) return result;
+  }
+  return undefined;
+}
+
+/**
+ * Helper: Extract description/looks from DNA based on node type
+ */
+function extractNodeData(node: any): { description?: string; looks?: string; dominantElements?: string[]; navigableElements?: any[]; searchDesc?: string } {
+  const dna = node.dna;
+  if (!dna) return {};
+  
+  // Handle nested dna structure from backend
+  const innerDNA = dna.dna || dna;
+  
+  if (node.type === 'location' || node.type === 'niche') {
+    const profile = (innerDNA as LocationNode | NicheNode)?.profile;
+    return {
+      description: profile?.looks || '',
+      looks: profile?.looks || '',
+      searchDesc: profile?.searchDesc || '',
+      dominantElements: [], // Would need visual analysis data
+      navigableElements: []
+    };
+  }
+  
+  return {};
+}
 
 /**
  * Location-specific panel logic - extends base entity panel with travel functionality
@@ -24,45 +69,9 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   const getSpatialNodes = useLocationsStore(state => state.getSpatialNodes);
   const getCascadedDNA = useLocationsStore(state => state.getCascadedDNA);
   const worldTrees = useLocationsStore(state => state.worldTrees);
+  const findNodeInTree = useLocationsStore(state => state.findNodeInTree);
   const startSpawn = useStore(state => state.startSpawn);
   const setActiveEntity = useStore(state => state.setActiveEntity);
-
-  const handleMove = useCallback(async () => {
-    if (!movementInput.trim()) {
-      console.warn('[useLocationPanel] Cannot travel: missing input');
-      return;
-    }
-    
-    // Parse slash command format: /COMMAND text
-    const trimmedInput = movementInput.trim();
-    
-    // Check if input starts with /
-    if (trimmedInput.startsWith('/')) {
-      // Find the first space after the /
-      const spaceIndex = trimmedInput.indexOf(' ');
-      
-      if (spaceIndex > 0) {
-        // Extract command (without the /) and text
-        const command = trimmedInput.substring(1, spaceIndex);
-        const text = trimmedInput.substring(spaceIndex + 1).trim();
-        
-        console.log('Command:', command);
-        console.log('Text:', text);
-      } else {
-        // No space found, entire input is the command
-        const command = trimmedInput.substring(1);
-        console.log('Command:', command);
-        console.log('Text:', '');
-      }
-    } else {
-      // Not a slash command format
-      console.log('Command:', '');
-      console.log('Text:', trimmedInput);
-    }
-    
-    // Clear input
-    setMovementInput('');
-  }, [movementInput]);
 
   /**
    * Handle 'move' action - navigate to existing node
@@ -72,10 +81,9 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   ) => {
     const targetNode = getNode(navigation.targetNodeId);
     if (targetNode) {
-      // Switch active entity to target node
       setActiveEntity(navigation.targetNodeId);
     } else {
-      console.warn('[NavigatorAI] ⚠️ Target node not found:', navigation.targetNodeId);
+      console.warn('[useLocationPanel] Target node not found:', navigation.targetNodeId);
     }
   }, [getNode, setActiveEntity]);
 
@@ -88,12 +96,11 @@ export function useLocationPanel(): LocationPanelLogicReturn {
   ) => {
     const { node, parentNodeId } = navigation;
     
-    // Add node to store
     const createNode = useLocationsStore.getState().createNode;
     createNode(node);
     
-    // Find which world tree contains the current node
-    const worldTree = worldTrees.find(tree => {
+    const currentWorldTrees = useLocationsStore.getState().worldTrees;
+    const worldTree = currentWorldTrees.find(tree => {
       const findInTree = (treeNode: any, targetId: string): boolean => {
         if (treeNode.id === targetId) return true;
         return treeNode.children?.some((child: any) => findInTree(child, targetId)) || false;
@@ -106,31 +113,171 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       return;
     }
     
-    // Use parentNodeId from backend (which correctly traverses to parent location)
-    // instead of currentNode.id (which would create niche-under-niche)
     const correctParentId = parentNodeId || currentNode.id;
     
-    // Add to tree structure as child of correct parent (from backend decision)
     const addNodeToTree = useLocationsStore.getState().addNodeToTree;
     addNodeToTree(worldTree.id, correctParentId, node.id, node.type);
     
-    // Save to backend
     const saveToBackend = useLocationsStore.getState().saveToBackend;
     await saveToBackend();
     
-    // Switch to new node
     setActiveEntity(node.id);
+  }, [setActiveEntity]);
+
+  const handleMove = useCallback(async () => {
+    if (!movementInput.trim()) {
+      console.warn('[useLocationPanel] Cannot travel: missing input');
+      return;
+    }
     
-    console.log('\n═══════════════════════════════════════════════════════════');
-    console.log('💾 NICHE NODE SAVED SUCCESSFULLY');
-    console.log('═══════════════════════════════════════════════════════════');
-    console.log('  Name:', node.name);
-    console.log('  ID:', node.id);
-    console.log('  Parent ID:', correctParentId);
-    console.log('  Added to tree: ✓');
-    console.log('  Saved to backend: ✓');
-    console.log('═══════════════════════════════════════════════════════════\n');
-  }, [setActiveEntity, worldTrees]);
+    // Parse slash command format: /COMMAND text
+    const trimmedInput = movementInput.trim();
+    
+    // Check if input starts with /
+    if (!trimmedInput.startsWith('/')) {
+      console.warn('[useLocationPanel] Input must start with / (slash command)');
+      setMovementInput('');
+      return;
+    }
+    
+    // Find the first space after the /
+    const spaceIndex = trimmedInput.indexOf(' ');
+    let command: string;
+    let text: string | undefined;
+    
+    if (spaceIndex > 0) {
+      command = trimmedInput.substring(1, spaceIndex);
+      text = trimmedInput.substring(spaceIndex + 1).trim() || undefined;
+    } else {
+      command = trimmedInput.substring(1);
+      text = undefined;
+    }
+    
+    // Get current node from active entity
+    const activeEntityId = useStore.getState().activeEntity;
+    if (!activeEntityId) {
+      console.warn('[useLocationPanel] No active entity');
+      setMovementInput('');
+      return;
+    }
+    
+    const currentNode = getNode(activeEntityId);
+    if (!currentNode) {
+      console.warn('[useLocationPanel] Current node not found');
+      setMovementInput('');
+      return;
+    }
+    
+    // Find parent ID from tree structure
+    const currentWorldTrees = useLocationsStore.getState().worldTrees;
+    const parentId = findParentId(currentWorldTrees, currentNode.id);
+    const parentNode = parentId ? getNode(parentId) : undefined;
+    
+    // Get spatial nodes for siblings
+    const spatialNodes = getSpatialNodes(currentNode.id);
+    const siblingNodes = spatialNodes
+      .filter(n => {
+        const nodeParentId = findParentId(currentWorldTrees, n.id);
+        return nodeParentId === parentId && n.id !== currentNode.id;
+      })
+      .map(n => ({ id: n.id, name: n.name, type: n.type }));
+    
+    // Extract data from DNA
+    const currentNodeData = extractNodeData(currentNode);
+    const parentNodeData = parentNode ? extractNodeData(parentNode) : {};
+    
+    const context = {
+      currentNode: {
+        id: currentNode.id,
+        type: currentNode.type,
+        name: currentNode.name,
+        parentId: parentId,
+        data: {
+          description: currentNodeData.description,
+          looks: currentNodeData.looks,
+          dominantElements: currentNodeData.dominantElements,
+          navigableElements: currentNodeData.navigableElements,
+          searchDesc: currentNodeData.searchDesc
+        },
+        dna: currentNode.dna
+      },
+      parentNode: parentNode ? {
+        id: parentNode.id,
+        type: parentNode.type,
+        name: parentNode.name,
+        data: {
+          description: parentNodeData.description,
+          looks: parentNodeData.looks
+        },
+        dna: parentNode.dna
+      } : undefined,
+      siblingNodes
+    };
+    
+    setIsMoving(true);
+    
+    try {
+      // Call new /command endpoint
+      const response = await fetch('/api/mzoo/navigation/command', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ command, text, context })
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        console.error('[useLocationPanel] Navigation command failed:', result.error);
+        return;
+      }
+      
+      const { data } = result;
+      
+      // Handle different navigation actions
+      if (data.decision.action === 'move') {
+        await handleMoveAction(data.decision);
+      } else if (data.decision.action === 'create_niche' && data.eventsUrl && data.navigationId) {
+        // Use registerExternalSpawn to properly integrate with progress bar system
+        // This adds the spawn to activeSpawns store, enabling the progress bar to show
+        const registerExternalSpawn = useStore.getState().registerExternalSpawn;
+        const capturedCurrentNode = currentNode; // Capture for callback
+        const capturedParentNodeId = data.decision.parentNodeId;
+        
+        registerExternalSpawn(
+          data.navigationId,
+          data.eventsUrl,
+          `/${command}${text ? ' ' + text : ''}`,
+          'niche',
+          async (completedData: any) => {
+            // onComplete callback
+            if (completedData.node) {
+              await handleNodeCreation(
+                { node: completedData.node, parentNodeId: capturedParentNodeId },
+                capturedCurrentNode
+              );
+            }
+            setIsMoving(false);
+          },
+          (error: any) => {
+            // onError callback
+            console.error('[useLocationPanel] Navigation error:', error);
+            setIsMoving(false);
+          }
+        );
+        
+        // Don't set isMoving to false here - wait for SSE to complete
+        setMovementInput('');
+        return;
+      }
+    } catch (error) {
+      console.error('[useLocationPanel] Navigation error:', error);
+    } finally {
+      setIsMoving(false);
+    }
+    
+    // Clear input
+    setMovementInput('');
+  }, [movementInput, getNode, getSpatialNodes, handleMoveAction, handleNodeCreation]);
 
   /**
    * Handle 'generate' action - create new niche (fallback to old spawn system)

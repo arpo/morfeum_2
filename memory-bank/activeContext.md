@@ -2,6 +2,26 @@
 
 ## Recent Changes (2025-11-25)
 
+### Progress Bar Fix for Navigation Slash Commands (Nov 25, 2025)
+- **Fixed missing progress bar for new slash command navigation** - Progress indicators now properly show for `/GO_INSIDE` and other slash commands
+- **Root Cause:** 
+  - The new slash command implementation in `useLocationPanel.ts` was using manual `EventSource` instead of the unified spawn tracking system
+  - This bypassed the `activeSpawns` store that the SpawnInputBar reads from to display progress bars
+- **Solution:**
+  - Replaced manual EventSource handling with `registerExternalSpawn` call
+  - This properly adds navigation commands to the spawn store
+  - Now follows the same pattern established on Nov 24 for `locationNavigation.ts`
+- **Benefits:**
+  - Progress bar now shows and animates through all 4 steps
+  - First SSE event delivers `steps` and `pipelineType` from backend
+  - Complete integration with shared spawn tracking system
+  - Maintains consistent progress tracking across all entity generation
+- **Files Modified:**
+  - `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts`
+- **Result:** Unified progress tracking for all navigation, regardless of whether using LLM classification or direct slash commands
+
+## Recent Changes (2025-11-25)
+
 ### Slash Command Input & Navigation Centralization (Nov 25, 2025)
 - **Created reusable SlashCommandInput component** - Modern command palette-style input for navigation
 - **Component Features:**
