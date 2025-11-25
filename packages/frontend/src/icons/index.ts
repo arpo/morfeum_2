@@ -25,7 +25,8 @@ export {
   IconSquareCheckFilled,
   IconWorld,
   IconMapPin,
-  IconHome
+  IconHome,
+  IconLayoutSidebar
 } from '@tabler/icons-react';
 
 // Icon type for string references

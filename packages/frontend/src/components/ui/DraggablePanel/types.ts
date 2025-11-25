@@ -18,6 +18,8 @@ export interface DraggablePanelProps {
   minHeight?: number;
   maxWidth?: number;
   maxHeight?: number;
+  onPositionChange?: (position: Position) => void;
+  onSizeChange?: (size: Size) => void;
 }
 
 export interface DraggablePanelLogicReturn {

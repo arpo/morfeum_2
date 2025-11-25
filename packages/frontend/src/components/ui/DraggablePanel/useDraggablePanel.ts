@@ -10,6 +10,8 @@ export function useDraggablePanel({
   minHeight = 200,
   maxWidth,
   maxHeight,
+  onPositionChange,
+  onSizeChange,
 }: Partial<DraggablePanelProps>): DraggablePanelLogicReturn {
   const [position, setPosition] = useState<Position>(initialPosition);
   const [size, setSize] = useState<Size>(initialSize);
@@ -58,10 +60,12 @@ export function useDraggablePanel({
         const maxX = window.innerWidth - size.width;
         const maxY = window.innerHeight - size.height;
 
-        setPosition({
+        const newPosition = {
           x: Math.max(0, Math.min(newX, maxX)),
           y: Math.max(0, Math.min(newY, maxY)),
-        });
+        };
+        
+        setPosition(newPosition);
       }
 
       if (isResizing && resizeDirection.current) {
@@ -107,9 +111,20 @@ export function useDraggablePanel({
     };
 
     const handleMouseUp = () => {
+      const wasDragging = isDragging;
+      const wasResizing = isResizing;
+      
       setIsDragging(false);
       setIsResizing(false);
       resizeDirection.current = null;
+      
+      // Notify parent of final position/size when drag/resize ends
+      if (wasDragging && onPositionChange) {
+        onPositionChange(position);
+      }
+      if (wasResizing && onSizeChange) {
+        onSizeChange(size);
+      }
     };
 
     if (isDragging || isResizing) {
@@ -125,7 +140,7 @@ export function useDraggablePanel({
         document.body.style.userSelect = '';
       };
     }
-  }, [isDragging, isResizing, position, size, minWidth, minHeight, maxWidth, maxHeight]);
+  }, [isDragging, isResizing, position, size, minWidth, minHeight, maxWidth, maxHeight, onPositionChange, onSizeChange]);
 
   return {
     position,

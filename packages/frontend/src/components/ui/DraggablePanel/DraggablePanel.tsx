@@ -13,6 +13,8 @@ export function DraggablePanel({
   minHeight,
   maxWidth,
   maxHeight,
+  onPositionChange,
+  onSizeChange,
 }: DraggablePanelProps) {
   const {
     position,
@@ -29,6 +31,8 @@ export function DraggablePanel({
     minHeight,
     maxWidth,
     maxHeight,
+    onPositionChange,
+    onSizeChange,
   });
 
   return (

@@ -49,6 +49,7 @@ export interface EntityManagerSlice {
   entities: Map<string, EntityData>;
   activeEntity: string | null;
   entityPanelOpen: Map<string, boolean>;
+  entityExplorerPanelOpen: boolean;
 
   createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => void;
   updateEntityImage: (spawnId: string, imageUrl: string) => void;
@@ -63,12 +64,14 @@ export interface EntityManagerSlice {
   openEntityPanel: (entityId: string) => void;
   closeEntityPanel: (entityId: string) => void;
   isEntityPanelOpen: (entityId: string) => boolean;
+  toggleEntityExplorerPanel: () => void;
 }
 
 export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, get) => ({
   entities: new Map(),
   activeEntity: null,
   entityPanelOpen: new Map(),
+  entityExplorerPanelOpen: localStorage.getItem('entityExplorerPanelOpen') !== 'false',
 
   createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => {
     const systemMessage: ChatMessage = {
@@ -327,5 +330,13 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
 
   isEntityPanelOpen: (entityId: string) => {
     return get().entityPanelOpen.get(entityId) || false;
+  },
+
+  toggleEntityExplorerPanel: () => {
+    set((state) => {
+      const newState = !state.entityExplorerPanelOpen;
+      localStorage.setItem('entityExplorerPanelOpen', String(newState));
+      return { entityExplorerPanelOpen: newState };
+    });
   }
 });

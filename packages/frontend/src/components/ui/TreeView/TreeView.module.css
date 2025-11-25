@@ -54,7 +54,7 @@
 }
 
 .placeholderToggle {
-  width: 20px;
+  width: 10px;
   height: 20px;
   margin-right: var(--spacing-xs, 4px);
 }
@@ -96,7 +96,7 @@
 .children {
   display: flex;
   flex-direction: column;
-  padding-left: 24px; /* indentation */
+  padding-left: 14px; /* indentation */
   border-left: 1px solid var(--color-border-subtle, rgba(255, 255, 255, 0.05));
   margin-left: 10px;
 }

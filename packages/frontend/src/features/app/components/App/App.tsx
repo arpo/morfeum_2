@@ -9,7 +9,8 @@ import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { ChatPanel } from '@/features/chat/components/ChatPanel';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { SavedEntitiesModal } from '@/features/saved-entities/SavedEntitiesModal';
-import { EntityExplorer } from '@/features/app/components/EntityExplorer/EntityExplorer';
+import { EntityExplorerPanel } from '@/features/app/components/EntityExplorer/EntityExplorerPanel';
+import { EntityExplorerToggle } from '@/features/app/components/EntityExplorerToggle';
 import { Card, ThemeToggle, Button } from '@/components/ui';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
@@ -31,6 +32,8 @@ export function App() {
   const updateEntityProfile = useStore(state => state.updateEntityProfile);
   const entityPanelOpen = useStore(state => state.entityPanelOpen);
   const closeEntityPanel = useStore(state => state.closeEntityPanel);
+  const entityExplorerPanelOpen = useStore(state => state.entityExplorerPanelOpen);
+  const toggleEntityExplorerPanel = useStore(state => state.toggleEntityExplorerPanel);
   
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
@@ -140,6 +143,9 @@ export function App() {
   return (
     <div className={styles.container}>
       
+      {/* Entity Explorer Toggle Button - Top Left */}
+      <EntityExplorerToggle onClick={toggleEntityExplorerPanel} />
+      
       {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
       <div className={styles.spawnInputContainer}>
         <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
@@ -150,12 +156,12 @@ export function App() {
         <ThemeToggle className="compact" />
       </div>
 
-      {/* Column 1 - Sidebar (Entity Explorer) */}
-      <aside className={styles.sidebar}>
-        <EntityExplorer />
-      </aside>
+      {/* Entity Explorer Panel - Draggable */}
+      {entityExplorerPanelOpen && (
+        <EntityExplorerPanel onClose={toggleEntityExplorerPanel} />
+      )}
       
-      {/* Column 2 - Entity Panel (Character or Location) */}
+      {/* Column 1 - Entity Panel (Character or Location) */}
       {activeEntitySession && (
         <section className={styles.entitySection}>
           <Card>
@@ -168,7 +174,7 @@ export function App() {
         </section>
       )}
       
-      {/* Column 3 - Chat History (Collapsible) / Image Prompt Panel */}
+      {/* Column 2 - Chat History (Collapsible) / Image Prompt Panel */}
       {activeEntitySession && (
         <aside className={styles.historyPanel}>
           {/* Show Chat History for Characters */}
