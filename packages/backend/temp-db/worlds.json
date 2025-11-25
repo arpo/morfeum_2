@@ -4285,6 +4285,830 @@
       ],
       "searchDesc": "Colossal library-fortress interior with dark brick, copper filigree, gothic arches, and celestial reliefs.",
       "slug": "interior-of-the-citadel-of-lore"
+    },
+    "niche-1763998901070-fn3ctk4zl": {
+      "id": "niche-1763998901070-fn3ctk4zl",
+      "type": "niche",
+      "name": "interior of The Frostwatch Outpost",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This space is a rugged, excavated chamber where raw, unworked rock is heavily integrated with dark gray reinforced metal plating and exposed conduits. Massive, angular metal beams support a low, arched rock vault ceiling. A narrow passage is recessed to the left, and a metal console is built into the rock to the right.",
+        "colorsAndLighting": "The dominant color is the cool, monochromatic palette of grays and whites from the concrete floor, rock, and metal. This is broken by subtle, cool blue indicators on the console and a lingering red glow from an unseen entrance.",
+        "atmosphere": "The air feels cold and contained, evoking a sense of claustrophobic, vigilant isolation. The structural integrity against the frozen environment is palpable, creating a feeling of being deep within a hardened bastion.",
+        "materials": "Primary materials are rough-hewn rock and dark gray reinforced metal plating with exposed conduits. The floor is dark, polished concrete. The overall finish is utilitarian and rugged, designed for extreme conditions.",
+        "mood": "This place evokes a mood of advanced, hidden technology juxtaposed with stark natural elements, fostering a sense of silent vigilance and remote isolation.",
+        "sounds": "low hum, distant wind, metallic creaks, faint clicks",
+        "spatialLayout": "The space opens ahead from a constrained entrance, featuring a low, arched ceiling and solid, integrated walls. Entry points are defined by a passage to the left and a console to the right, with a focal viewport in the background.",
+        "primary_surfaces": "rough-hewn rock, dark polished concrete",
+        "secondary_surfaces": "dark gray reinforced metal plating, exposed conduits, massive angular metal beams",
+        "accent_features": "glowing cool blue alien geometric control panels, circular viewport with hexagonal struts and alien glyphs, stark spotlight",
+        "dominant": "gray (50%)",
+        "secondary": "white (30%)",
+        "accent": "cool blue (5%), red (2%)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "brutalist, utilitarian, and hardened",
+        "cultural_tone": "functional, survivalist, and oriented towards observation in hostile environments",
+        "materials_base": "reinforced metallic alloys, unworked rock",
+        "mood_baseline": "vigilant containment and remote isolation",
+        "palette_bias": "monochromatic with cool accents",
+        "soundscape_base": "industrial ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/Pn_AI0wmEyDjq2vJtv4FV.jpg",
+      "description": "The utilitarian interior of a brutalist listening post, featuring a rugged excavated chamber with integrated rock and metal.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "left midground",
+          "description": "A narrow, recessed passage disappearing into the rock, illuminated by a stark spotlight."
+        },
+        {
+          "type": "console",
+          "position": "right midground",
+          "description": "A low-profile, reinforced metal console built into the rock wall with alien control panels."
+        }
+      ],
+      "dominantElements": [
+        "rough-hewn rock walls",
+        "dark gray reinforced metal plating",
+        "exposed conduits",
+        "massive angular metal beams",
+        "circular viewport",
+        "alien geometric control panels"
+      ],
+      "uniqueIdentifiers": [
+        "integrated rock and metal structure",
+        "glowing blue alien control panels",
+        "circular viewport with hexagonal struts",
+        "stark spotlight illumination"
+      ],
+      "searchDesc": "Brutalist listening post interior with rock, metal, blue console, and icy mountain viewport.",
+      "slug": "interior-of-the-frostwatch-outpost"
+    },
+    "niche-1763998952627-ogr6qd5p1": {
+      "id": "niche-1763998952627-ogr6qd5p1",
+      "type": "niche",
+      "name": "interior of The Frostwatch Outpost",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A stark, brutalist interior defined by utilitarian design and metallic alloys. A grated dark metal floor leads towards a partially open doorway on the left and an armored conduit on the right. Textured dark composite walls feature recessed alcoves with alien instrumentation. A central ice-bound stone pillar with geometric etchings supports a vaulted ceiling with metal struts and grates.",
+        "colorsAndLighting": "The dominant color palette is cool and monochromatic, with faint cool ambient light reflecting off the dark metal floor. Recessed alcoves emit a low, internal red light from alien instrumentation, providing subtle contrast.",
+        "atmosphere": "The air is likely cold and still, reflecting the frozen mountain environment. There's a palpable sense of advanced, yet rugged technology designed for survival in extreme conditions. The overall feel is one of silent vigilance and deep isolation.",
+        "materials": "Reinforced metallic alloys, dark composite panels, rough-hewn ice-bound stone, and reinforced crystalline glass form the primary materials. The metal exhibits a utilitarian, hardened finish, while the stone is natural and elemental.",
+        "mood": "Evokes a mood of advanced, hidden technology juxtaposed with stark natural beauty, creating a sense of silent vigilance and remote isolation.",
+        "sounds": "Low hum, faint air circulation, distant wind.",
+        "spatialLayout": "The space is characterized by a utilitarian layout with clear pathways. The ultra-wide lens emphasizes the depth and integration into the natural mountain ridge, with a central stone pillar as a focal point.",
+        "primary_surfaces": "Dark metallic alloys, textured dark composite panels, ice-bound stone.",
+        "secondary_surfaces": "Interlocking metal struts, ventilation grates, reinforced crystalline viewport.",
+        "accent_features": "Recessed alcoves with unidentifiable alien instrumentation humming with red light, geometric patterns etched into the ice-bound stone pillar.",
+        "dominant": "White (snow and sky in viewport, implied cold)",
+        "secondary": "Dark grey/metallic (floor, walls, structural elements)",
+        "accent": "Red (alien instrumentation)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "brutalist, utilitarian, integrated",
+        "cultural_tone": "Functional, survivalist, oriented towards observation in hostile environments.",
+        "materials_base": "reinforced metallic alloys, composite materials, natural stone, reinforced glass",
+        "mood_baseline": "silent vigilance, remote isolation",
+        "palette_bias": "monochromatic, cool tones with red accents",
+        "soundscape_base": "functional ambient hums and mechanical sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/l3r5Y11IVaeBDOWlOPzH4.jpg",
+      "description": "The interior of a brutalist, utilitarian outpost integrated into a frozen mountain.",
+      "navigableElements": [
+        {
+          "type": "doorway",
+          "position": "midground left",
+          "description": "Partially open metal doorway revealing a dimly lit secondary chamber."
+        },
+        {
+          "type": "conduit",
+          "position": "midground right",
+          "description": "Thick, armored conduit snaking along the wall."
+        },
+        {
+          "type": "viewport",
+          "position": "background",
+          "description": "Curved, reinforced crystalline viewport showing a mountain vista."
+        }
+      ],
+      "dominantElements": [
+        "grated dark metal floor",
+        "textured dark composite wall panels",
+        "ice-bound stone pillar",
+        "interlocking metal struts and ventilation grates",
+        "reinforced crystalline viewport"
+      ],
+      "uniqueIdentifiers": [
+        "alien instrumentation humming with red light",
+        "geometric patterns on ice-bound pillar",
+        "curved crystalline viewport"
+      ],
+      "searchDesc": "Brutalist metallic outpost interior with icy stone pillar and mountain viewport.",
+      "slug": "interior-of-the-frostwatch-outpost"
+    },
+    "niche-1763998987795-o80x8lict": {
+      "id": "niche-1763998987795-o80x8lict",
+      "type": "niche",
+      "name": "interior of The Frostwatch Outpost",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A compact, circular chamber with smooth, reinforced metallic walls that seamlessly blend into the surrounding icy rock. Visible ventilation conduits snake across the domed ceiling, supported by thick, ribbed metallic struts. A stark red emergency light softly illuminates a reinforced composite door in the midground.",
+        "colorsAndLighting": "Dominated by cool, diffused ambient light filtering from above, creating a stark contrast with the dark, polished composite floor. The metallic surfaces reflect this cool tone, emphasizing the harsh environment.",
+        "atmosphere": "The air is still and cold, carrying a faint hum from unseen machinery. The atmosphere is one of profound isolation and silent, vigilant readiness, befitting a remote outpost.",
+        "materials": "Reinforced metallic alloys form the primary structure, featuring smooth, polished finishes on the walls and a dark, composite material for the floor. The ceiling is adorned with thick, ribbed metallic struts, with visible ventilation conduits.",
+        "mood": "Evokes a sense of advanced, hidden technology integrated into stark natural beauty, fostering a mood of silent vigilance and remote isolation.",
+        "sounds": "Faint machinery hum, distant air circulation.",
+        "spatialLayout": "A compact, circular chamber with a domed ceiling. The space opens inward, drawing focus towards the midground where key navigational elements are located. The ultra-wide lens exaggerates the sense of enclosure.",
+        "primary_surfaces": "Reinforced metallic alloys (walls, ceiling), icy rock (integration), polished composite (floor).",
+        "secondary_surfaces": "Ribbed metallic struts, ventilation conduits, grated metal (platform).",
+        "accent_features": "Stark red emergency light, diagnostic readouts, cryptic alien symbols.",
+        "dominant": "Cool tones (white, grey, blue) with significant coverage.",
+        "secondary": "Dark composite (floor, accents).",
+        "accent": "Stark red (emergency light).",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "brutalist, utilitarian, and hardened by extreme conditions; integrated into natural forms with reinforced metallic alloys, visible structural components, and an emphasis on defense and survival",
+        "cultural_tone": "functional, survivalist, and oriented towards resource extraction or observation in hostile environments",
+        "materials_base": "reinforced metallic alloys, composite, ice",
+        "mood_baseline": "Silent vigilance and remote isolation",
+        "palette_bias": "cool tones, high contrast",
+        "soundscape_base": "minimal, mechanical hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/65dXl00ZYzMRxFsfFyHUY.jpg",
+      "description": "The brutalist interior of a frozen mountain listening post.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "midground center",
+          "description": "Reinforced composite door with a stark red emergency light."
+        },
+        {
+          "type": "platform",
+          "position": "midground left",
+          "description": "Grated metal platform with a low railing offering a vantage point."
+        }
+      ],
+      "dominantElements": [
+        "circular chamber",
+        "reinforced metallic walls",
+        "ventilation conduits",
+        "ribbed metallic struts",
+        "reinforced composite door",
+        "grated metal platform",
+        "metallic wall panel"
+      ],
+      "uniqueIdentifiers": [
+        "circular chamber",
+        "metallic walls merging with icy rock",
+        "domed ceiling with ribbed struts",
+        "red emergency light",
+        "alien symbols on wall panel"
+      ],
+      "searchDesc": "Brutalist listening post interior, circular, metallic, icy rock integration, red emergency light.",
+      "slug": "interior-of-the-frostwatch-outpost"
+    },
+    "niche-1763999118878-j54th6f61": {
+      "id": "niche-1763999118878-j54th6f61",
+      "type": "niche",
+      "name": "unknown of The Colossal Mechanism",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a vast, enclosed chamber immediately beyond a breached gateway. Polished dark metallic alloy walls are traced with intricate geometric patterns from dormant energy conduits. Recessed circular structures, some dark, others shimmering, dot the seamless surfaces. The floor is made of interlocking obsidian-like tiles, leading to asymmetric platforms and descending staircases.",
+        "colorsAndLighting": "The scene is primarily illuminated by the pulsating turquoise glow of dormant energy conduits. Accents of residual energy shimmer on some structures, and a soft violet light emanates from one doorway, contrasting with the deep shadow of another. The overall light tone is cool.",
+        "atmosphere": "An ethereal mist clings to the lower sections, carrying the scent of ozone and ancient dust, hinting at immense, unexplored depths. The air feels cool and charged with dormant power. The scale of the chamber suggests artificial, hazy lighting in the distant expanse of the ceiling.",
+        "materials": "The primary materials are polished, dark metallic alloy for walls and structures, and interlocking obsidian-like tiles for the floor. These materials have a smooth, seamless finish, conveying an advanced and exotic nature.",
+        "mood": "The mood is imposing, enigmatic, and awe-inspiring, evoking a sense of profound mystery and immense, unexplored power due to the scale and alien design.",
+        "sounds": "Dormant hum, distant echoes, faint ozone crackle, ancient dust settling.",
+        "spatialLayout": "A vast, enclosed chamber with a sense of immense scale. Entry is through a breached gateway. The central area features complex, asymmetric raised platforms and descending staircases. A curved wall in the midground reveals a colossal inscription and two doorways.",
+        "primary_surfaces": "Polished dark metallic alloy (walls), interlocking obsidian-like tiles (floor)",
+        "secondary_surfaces": "Shimmering residual energy (on structures), artificial haze (ceiling)",
+        "accent_features": "Pulsating turquoise energy conduits, recessed circular structures, colossal glowing inscription, arching doorways with colored light.",
+        "dominant": "Dark metallic alloy (walls, structures)",
+        "secondary": "Turquoise (energy conduits)",
+        "accent": "Obsidian (floor), Violet (doorway light), Shimmering energy (structures)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "Monumental alien geometric design with integrated energy systems, featuring smooth, complex paneling, recessed circular elements, and ornate, luminous portals.",
+        "cultural_tone": "Mysterious, ancient, and technologically advanced, implying a civilization that operates on principles alien to human understanding.",
+        "materials_base": null,
+        "mood_baseline": "Imposing, enigmatic, and awe-inspiring. The sheer scale and alien design evoke a sense of profound mystery and potential power.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/tiger/X4n8VqU7OV--QdNnph0_N.jpg",
+      "description": "A vast, enclosed chamber with a dark metallic alloy interior, marked by pulsating turquoise energy conduits, recessed circular structures, and obsidian-like flooring.",
+      "navigableElements": [
+        {
+          "type": "gateway",
+          "position": "entrance",
+          "description": "recently breached ornate gateway"
+        },
+        {
+          "type": "platforms",
+          "position": "leading towards center",
+          "description": "complex, asymmetric arrangement of raised platforms"
+        },
+        {
+          "type": "staircases",
+          "position": "leading towards center",
+          "description": "descending staircases"
+        },
+        {
+          "type": "doorway",
+          "position": "midground wall",
+          "description": "narrow, arching doorway emitting soft violet light"
+        },
+        {
+          "type": "doorway",
+          "position": "midground wall",
+          "description": "narrow, arching doorway shrouded in deep shadow"
+        }
+      ],
+      "dominantElements": [
+        "pulsating turquoise energy conduits",
+        "polished, dark metallic alloy walls",
+        "recessed circular structures",
+        "interlocking obsidian-like tiles",
+        "colossal glowing inscription"
+      ],
+      "uniqueIdentifiers": [
+        "pulsating turquoise energy conduits",
+        "recessed circular structures",
+        "colossal glowing inscription",
+        "obsidian-like tiles"
+      ],
+      "searchDesc": "Vast alien chamber with turquoise conduits, dark metal, obsidian floors, and colossal inscription.",
+      "slug": "unknown-of-the-colossal-mechanism"
+    },
+    "loc-1763999380177-xe9gssdl0": {
+      "id": "loc-1763999380177-xe9gssdl0",
+      "type": "host",
+      "name": "The Astral Sea",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Astral Sea",
+        "description": "A realm of nebulae and ethereal oceans where the veil between worlds is thin.",
+        "dna": {
+          "looks": "Vast expanses of swirling nebulae in vibrant blues, purples, and golds, punctuated by luminous cosmic dust. Ethereal oceans of shimmering, liquid light flow across the void, carrying faint starlight. Unfathomable cosmic structures drift in the distance, hinting at unseen realities.",
+          "colorsAndLighting": "Dominated by cool, deep blues and vibrant purples, with accents of luminous gold and ethereal white. Light sources are diffuse and otherworldly, emanating from nebulae, cosmic dust, and the very fabric of the realm.",
+          "atmosphere": "The air is thin and charged with cosmic energy, carrying a faint hum and a sense of infinite possibility. Temperature is cool and stable, with no discernible weather patterns beyond the ebb and flow of cosmic currents. A pervasive sense of mystery and wonder pervades the environment.",
+          "materials": "Primarily composed of swirling cosmic gases, condensed nebulae, and shimmering, liquid light that forms ethereal oceans. Solid matter is rare and often appears as crystalline formations or impossibly smooth, alien geometries.",
+          "mood": "Mysterious, awe-inspiring, and profoundly peaceful, with an undercurrent of boundless potential and cosmic significance.",
+          "sounds": "Subtle cosmic hum, distant stellar winds, ethereal currents, faint chimes, resonant echoes",
+          "spatialLayout": "An immense, boundless expanse with no fixed horizon or up/down. Landscapes are fluid and ever-shifting, defined by cosmic currents and nebulae formations. Structures appear as though organically grown or manifested from pure energy.",
+          "primary_surfaces": "Cosmic gas, liquid light, nebulae",
+          "secondary_surfaces": "Crystalline formations, energy fields",
+          "accent_features": "Luminous cosmic dust, distant star clusters, fleeting dimensional rifts",
+          "dominant": "Blue, Purple",
+          "secondary": "Gold, White",
+          "accent": "Luminous Yellow",
+          "ambient": "Cool",
+          "genre": "Cosmic Fantasy",
+          "architectural_tone": "Otherworldly and fluid, influenced by cosmic forces; structures appear to be grown or manifested from energy, with organic curves and luminous, unearthly materials.",
+          "cultural_tone": "Enigmatic and transcendent, reflecting a realm where the physical laws of lesser worlds do not apply.",
+          "materials_base": "Ethereal, energetic, crystalline, cosmic gas, liquid light",
+          "mood_baseline": "Mysterious, awe-inspiring, serene",
+          "palette_bias": "Deep blues, purples, and vibrant celestial hues with luminous accents",
+          "soundscape_base": "Subtle, resonant, and ambient cosmic sounds",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ethereal oceans",
+          "Nebulae",
+          "Shifting cosmic currents"
+        ],
+        "uniqueIdentifiers": [
+          "Veil between worlds",
+          "Cosmic phenomena"
+        ],
+        "searchDesc": "A cosmic realm of nebulae and ethereal oceans, a gateway between dimensions.",
+        "slug": "the-astral-sea",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Astral Sea",
+          "looks": "A realm of nebulae and ethereal oceans where the veil between worlds is thin.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/Xqe40Oj4a3hEckYT0c7Or.jpg",
+      "description": "A realm of nebulae and ethereal oceans where the veil between worlds is thin."
+    },
+    "667b34c7-c6f4-4eaf-8866-37312bff78ef": {
+      "id": "667b34c7-c6f4-4eaf-8866-37312bff78ef",
+      "type": "region",
+      "name": "The Astral Sea",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Astral Sea",
+        "description": "Vast expanses of nebulae and ethereal oceans where dimensional energies converge.",
+        "dna": {
+          "looks": "Sweeping vistas of dense, swirling nebulae in shades of deep violet and electric blue. Vast, calm oceans of shimmering, liquid violet mist stretch to the horizon, occasionally broken by luminous currents.",
+          "colorsAndLighting": "Dominated by deep violets and electric blues from the nebulae and mist, with soft, diffused starlight as the primary illumination. Occasional pulses of brighter light emanate from distant cosmic phenomena.",
+          "atmosphere": "The atmosphere is thick with a cool, damp violet mist that obscures distant views and lends a mysterious, ethereal quality. The air is still and carries a faint, resonant hum.",
+          "materials": "Primarily composed of condensed violet mist, forming the ethereal oceans. The nebulae appear as vast, gaseous formations, with occasional solid-looking, but ultimately ephemeral, rocky outcrops.",
+          "mood": "Mysterious, serene, and slightly melancholic, evoking a sense of dreaming or being suspended in a timeless void.",
+          "sounds": "Soft, continuous mist whispers, distant resonant hum, faint ethereal currents, gentle lapping of mist-seas",
+          "spatialLayout": "An expansive, open environment with a low horizon created by the mist. The scale feels immense, with a lack of distinct landmarks except for the colossal nebulae formations.",
+          "primary_surfaces": "Violet mist, ethereal ocean water",
+          "secondary_surfaces": "Nebulous gas, ephemeral rock",
+          "accent_features": "Luminous cosmic dust trails, distant nebulae structures",
+          "dominant": "Violet",
+          "secondary": "Blue",
+          "accent": "Luminous White",
+          "ambient": "Cool",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "Deep violet and muted blue spectrum with ethereal highlights",
+          "soundscape_base": null,
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Nebulae clouds",
+          "Ethereal ocean currents",
+          "Cosmic anomalies"
+        ],
+        "uniqueIdentifiers": [
+          "Interdimensional currents",
+          "Stellar dust formations"
+        ],
+        "searchDesc": "Expansive nebulae and shimmering oceans within the Astral Sea, filled with cosmic wonders.",
+        "slug": "the-astral-sea-region",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Astral Sea",
+          "looks": "Vast expanses of nebulae and ethereal oceans where dimensional energies converge.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Vast expanses of nebulae and ethereal oceans where dimensional energies converge."
+    },
+    "30903776-d05f-4bd3-ae42-15d1c0643e54": {
+      "id": "30903776-d05f-4bd3-ae42-15d1c0643e54",
+      "type": "location",
+      "name": "The Cobalt Cipher",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Cobalt Cipher",
+        "description": "A striking cobalt island formed from giant, curved rock formations, housing an ancient portal.",
+        "looks": "An island of deep blue rock, sculpted into enormous, sinuous curves. It rises dramatically from swirling violet mists. At its heart, an ancient portal is embedded within intricate, spiraling geological formations.",
+        "atmosphere": "A palpable sense of ancient power, charged air, and the faint hum of energies from the portal. The mist lends a cool, damp feel.",
+        "mood": "Mysterious, awe-inspiring, ancient.",
+        "dna": {
+          "looks": "A massive, cobalt-colored island dominates the scene, its surface textured with large, curving rock formations. This colossal landmass rises from a sea of swirling violet mist. Embedded within the heart of the island's spiraling geological structures is a brilliantly glowing, circular portal. The rock faces are heavily eroded, suggesting immense age and exposure to the elements.",
+          "colorsAndLighting": "The primary light source is an intensely bright, glowing blue portal, casting a cool, vibrant illumination. This light reflects strongly off the surrounding water and the mist, creating a dramatic contrast with the darker rock faces.",
+          "atmosphere": "The air is thick with a pervasive violet mist, obscuring the lower portions of the rock formations and creating a sense of depth and mystery. The mist appears to be very dense, lending a damp and cool quality to the environment.",
+          "materials": "The primary material is a dense, ancient cobalt-colored rock. Secondary materials include the omnipresent violet mist and the faint energy emanations from the portal.",
+          "mood": "Mysterious, powerful, and ancient, with a sense of profound forgotten purpose.",
+          "sounds": "Echoing drips, faint portal hum, swirling mist, distant cosmic resonance",
+          "spatialLayout": "The foreground features a calm, reflective body of water. The midground is dominated by the enormous cobalt island, carved with sinuous curves and swirling formations, with the bright blue portal at its core. The background consists of more rock formations receding into the pervasive violet mist and faint hints of a cloudy sky above.",
+          "primary_surfaces": "Rock",
+          "secondary_surfaces": "Water, Mist",
+          "accent_features": "Glowing energy (portal)",
+          "dominant": "Cobalt (island)",
+          "secondary": "Violet (mist, sky)",
+          "accent": "Bright blue (portal glow)",
+          "ambient": "Cool blue and violet tones",
+          "genre": null,
+          "architectural_tone": "Ancient and naturally formed, characterized by colossal, organic curves and immense scale. The rock formations mimic impossible geological processes, shaped by elemental forces rather than deliberate construction.",
+          "cultural_tone": null,
+          "materials_base": "Dense, ancient stone; energetic emanations",
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [
+          {
+            "type": "portal",
+            "position": "center, midground",
+            "description": "Brightly glowing circular portal embedded in swirling rock formations."
+          }
+        ],
+        "dominantElements": [
+          "Cobalt island with curved rock-forms (center, background)",
+          "Violet mist sea (foreground, midground)",
+          "Glowing blue portal (center, midground)"
+        ],
+        "uniqueIdentifiers": [
+          "Cobalt island",
+          "Violet mist sea",
+          "Giant curved rock-forms",
+          "Ancient portal"
+        ],
+        "searchDesc": "[Location - Exterior] Cobalt island in mist. Has: glowing portal (center, midground)",
+        "slug": "the-cobalt-cipher",
+        "imageUrl": "https://v3b.fal.media/files/b/monkey/Xqe40Oj4a3hEckYT0c7Or.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Cobalt Cipher",
+          "looks": "A striking cobalt island formed from giant, curved rock formations, housing an ancient portal.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/Xqe40Oj4a3hEckYT0c7Or.jpg",
+      "description": "A striking cobalt island formed from giant, curved rock formations, housing an ancient portal."
+    },
+    "loc-1764008292155-0knty61xa": {
+      "id": "loc-1764008292155-0knty61xa",
+      "type": "host",
+      "name": "Himalayan Peaks",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Himalayan Peaks",
+        "description": "Towering mountains and secluded spiritual sites.",
+        "dna": {
+          "looks": "A majestic and awe-inspiring landscape of colossal, snow-dusted mountain peaks that pierce the sky. Canyons and valleys wind between them, often shrouded in mist. Scattered throughout are isolated, ancient structures of stone and wood, reflecting centuries of spiritual dedication. The overall impression is one of immense scale, isolation, and profound spiritual resonance.",
+          "colorsAndLighting": "Dominated by cool blues and greys of stone and ice, with muted earthy tones of rock and sparse vegetation. Sunlight can be harsh and direct, creating stark contrasts, or diffused through mist and clouds, casting soft, ethereal light. Shadows are deep and dramatic.",
+          "atmosphere": "The air is thin, crisp, and bitingly cold, carrying the scent of snow and ancient stone. A palpable sense of peace and solitude pervades, broken only by the whisper of the wind or the distant echo of prayer chants. Weather can shift rapidly, from clear, bright days to sudden blizzards.",
+          "materials": "Primarily weathered stone, rough-hewn timber, ice, and snow. Textures are rough and natural, showing the marks of time and extreme elements. Some structures may feature intricate carvings or colorful, faded painted details.",
+          "mood": "Serene, spiritual, awe-inspiring, isolated, ancient, resilient.",
+          "sounds": "Wind whistling, distant bells, faint chanting, crunching snow, echoing silence.",
+          "spatialLayout": "Expansive, vertical, and rugged. Vast open spaces dominate, interspersed with narrow passes and steep inclines. Structures are often built into or upon the mountainside, emphasizing their integration with the natural environment.",
+          "primary_surfaces": [
+            "Stone",
+            "Rock",
+            "Ice"
+          ],
+          "secondary_surfaces": [
+            "Wood",
+            "Earth"
+          ],
+          "accent_features": [
+            "Prayer flags",
+            "Statues",
+            "Carvings",
+            "Incense smoke"
+          ],
+          "dominant": "Grey",
+          "secondary": "Blue",
+          "accent": "Muted Red",
+          "ambient": "Cool",
+          "genre": "historical",
+          "architectural_tone": "Ancient monastic architecture with heavy stone construction, simple geometric forms, sloping tiled roofs, and integrated natural elements. Features include thick walls, small windows, arched doorways, and exposed timber beams, adapted for harsh climates and spiritual retreat.",
+          "cultural_tone": "Devout, ascetic, traditional, communal (within monastic orders), deeply spiritual.",
+          "materials_base": "Weathered stone, rough-hewn wood, natural fibers, aged metals.",
+          "mood_baseline": "Tranquil, contemplative, enduring.",
+          "palette_bias": "Cool, muted, earthy, with occasional bursts of vibrant accent colors.",
+          "soundscape_base": "Natural ambient sounds, occasional spiritual incantations or music.",
+          "flora_base": "Hardy mountain mosses, lichens, sparse alpine grasses, prayer flags.",
+          "fauna_base": "None (or very rarely, mountain goats, snow leopards, birds of prey)"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Jagged mountain ranges",
+          "Isolated temples",
+          "Ancient stupas"
+        ],
+        "uniqueIdentifiers": [
+          "Thin mountain air",
+          "Spiritual aura",
+          "Harsh weather"
+        ],
+        "searchDesc": "Vast, snow-capped mountains and remote spiritual retreats, echoing with ancient chants.",
+        "slug": "himalayan-peaks",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Himalayan Peaks",
+          "looks": "Towering mountains and secluded spiritual sites.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/tjjd458eRXFPmJzBXScHh.jpg",
+      "description": "Towering mountains and secluded spiritual sites."
+    },
+    "69f35492-e0ed-40f3-afd9-a07a0912f5c1": {
+      "id": "69f35492-e0ed-40f3-afd9-a07a0912f5c1",
+      "type": "region",
+      "name": "Himalayan Peaks",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "Himalayan Peaks",
+        "description": "The majestic, imposing mountain range serving as a backdrop to isolated spiritual sites.",
+        "dna": {
+          "looks": "Expansive vistas of colossal, snow-covered mountains, their peaks disappearing into the clouds. Rocky slopes are interspersed with patches of resilient alpine vegetation. Glacial rivers carve through deep valleys, and the sky is a brilliant, deep blue on clear days.",
+          "colorsAndLighting": "Dominated by stark whites of snow, deep blues of the sky and shadows, and earthy browns and greys of exposed rock. Lighting is often intense and sharp, with strong contrasts between sunlit areas and deep shade, or soft and diffused during misty conditions.",
+          "atmosphere": "Extremely cold and thin air. The wind is a constant companion, often carrying snow or dust. The atmosphere is one of isolation, vastness, and raw natural power. Days can be brilliantly clear, while nights are frigid and star-filled.",
+          "materials": "Predominantly rock, scree, ice, and sparse, hardy vegetation. The surfaces are rough, uneven, and shaped by geological forces and extreme weather.",
+          "mood": "Majestic, desolate, formidable, awe-inspiring, wild.",
+          "sounds": "Howling wind, creaking glaciers, distant avalanches, bird calls (if any), absolute silence.",
+          "spatialLayout": "Vast, open, and vertical. Immense scale with extreme elevation changes. Areas are characterized by sheer cliffs, broad valleys, and narrow, winding passes.",
+          "primary_surfaces": [
+            "Rock",
+            "Snow",
+            "Ice"
+          ],
+          "secondary_surfaces": [
+            "Earth",
+            "Boulder fields"
+          ],
+          "accent_features": [
+            "Wind-sculpted rock formations",
+            "Patches of hardy alpine flowers",
+            "Glacial ice formations"
+          ],
+          "dominant": "White",
+          "secondary": "Blue",
+          "accent": "Grey",
+          "ambient": "Cool",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "Cool, high-contrast, with blues, whites, and greys.",
+          "soundscape_base": "Predominantly natural, wind-driven sounds.",
+          "flora_base": "Hardy alpine grasses, mosses, lichens, low-lying shrubs.",
+          "fauna_base": "Rare, resilient mountain wildlife (e.g., ibex, snow leopards)."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Towering snow-capped peaks",
+          "Deep glacial valleys",
+          "Winding mountain passes"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme altitude",
+          "Monsoon and winter storms",
+          "High-altitude flora"
+        ],
+        "searchDesc": "Immense mountain ranges with treacherous passes, home to hardy life and ancient spiritual traditions.",
+        "slug": "himalayan-peaks-region",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Himalayan Peaks",
+          "looks": "The majestic, imposing mountain range serving as a backdrop to isolated spiritual sites.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "The majestic, imposing mountain range serving as a backdrop to isolated spiritual sites."
+    },
+    "8ed40c02-c8e1-4657-a801-07de4e5d910c": {
+      "id": "8ed40c02-c8e1-4657-a801-07de4e5d910c",
+      "type": "location",
+      "name": "The Serene Ascent Monastery",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Serene Ascent Monastery",
+        "description": "An ancient monastery perched high in the Himalayas, weathered by time and wind.",
+        "looks": "Crumbling stone walls, faded prayer flags fluttering in the wind, a grand stone archway marking the entrance.",
+        "atmosphere": "Thin, cold air, the distant sound of chanting, the scent of incense.",
+        "mood": "Ancient, spiritual, isolated",
+        "dna": {
+          "looks": "The monastery features substantial stone construction with layered, tiled roofs characteristic of Himalayan architecture. A central, grand archway provides passage into the structure, flanked by smaller wings. Weathered stone walls and a tiled roof with ornate eaves suggest age and exposure to the elements. Prayer flags, some appearing torn, are strung along the eaves, adding a splash of color. The surrounding terrain is rugged, with rocky outcrops and sparse vegetation leading up to the entrance.",
+          "colorsAndLighting": "The scene is illuminated by diffused daylight, creating soft shadows and a cool overall tone. There are no harsh highlights, suggesting overcast conditions or the soft light of early morning or late afternoon. The light source appears to be from above and slightly to the right.",
+          "atmosphere": "A light haze or mist is present in the background, softening the distant mountain peaks and creating a sense of depth. The air appears clear around the monastery itself, with sharp details visible on the stonework and vegetation.",
+          "materials": "Primary materials are rough-hewn and weathered stone for the walls and structure, with layered, possibly clay or slate, roof tiles. Secondary materials include aged wood for decorative elements like eaves and window frames, and fabric for prayer flags.",
+          "mood": "Ancient, spiritual, peaceful, weathered, resilient, contemplative.",
+          "sounds": "Gentle wind, rustling prayer flags, distant mountain sounds, faint echo of bells.",
+          "spatialLayout": "Foreground: A stone-paved pathway, approximately 5-10 meters wide, curves gently towards the monastery. Midground: The monastery complex is a stone structure with a prominent central building and flanking wings, approximately 20-25 meters in height, positioned centrally. The main structure is a WIDE STRUCTURE, with a significant roof span. Background: Steep, rocky mountainsides covered in sparse vegetation and distant, cloud-shrouded peaks fade into the horizon.",
+          "primary_surfaces": "Stone",
+          "secondary_surfaces": "Roof tiles, wood (decorative elements)",
+          "accent_features": "Prayer flags, decorative carvings on the roof",
+          "dominant": "Grey (stone walls)",
+          "secondary": "Brown (vegetation, pathway stones), muted reds and blues (roof decorations)",
+          "accent": "Colorful prayer flags, gold finial on the central roof",
+          "ambient": "Cool, diffused daylight",
+          "genre": null,
+          "architectural_tone": "Ancient monastic architecture with heavy, weathered stone construction, thick walls, and gently sloping, multi-layered tiled roofs with ornate, carved wooden eaves. Features include imposing, rounded stone archways for entrances and smaller, recessed windows. The overall style emphasizes resilience, spiritual purpose, and integration with a harsh natural environment.",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center, midground",
+            "description": "Grand stone archway offering passage inside the monastery building"
+          },
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Dark interior visible through the archway, suggesting a path beyond"
+          },
+          {
+            "type": "window",
+            "position": "sides of main building, midground",
+            "description": "Small, barred windows on the monastery wings"
+          }
+        ],
+        "dominantElements": [
+          "Stone monastery building with ornate roof (~20m tall, HORIZONTAL STRUCTURE)",
+          "Grand stone archway entrance (center, midground)",
+          "Stone pathway leading to entrance (foreground)"
+        ],
+        "uniqueIdentifiers": [
+          "Himalayan architecture with tiered, pagoda-style roof",
+          "Torn prayer flags along eaves",
+          "Stone archway entrance with figure passing through"
+        ],
+        "searchDesc": "[Location - Exterior] Ancient Himalayan monastery. Has: stone archway (center, midground), prayer flags (eaves, midground), stone pathway (foreground)",
+        "slug": "the-serene-ascent-monastery",
+        "imageUrl": "https://v3b.fal.media/files/b/monkey/tjjd458eRXFPmJzBXScHh.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Serene Ascent Monastery",
+          "looks": "An ancient monastery perched high in the Himalayas, weathered by time and wind.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/tjjd458eRXFPmJzBXScHh.jpg",
+      "description": "An ancient monastery perched high in the Himalayas, weathered by time and wind."
+    },
+    "niche-1764008334324-idvpxfu2u": {
+      "id": "niche-1764008334324-idvpxfu2u",
+      "type": "niche",
+      "name": "interior of The Serene Ascent Monastery",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This interior niche presents as a weathered stone sanctuary with crumbling walls that echo rough-hewn textures. Faded prayer flags are draped across dark wooden beams forming a partial vaulted ceiling. The floor is a mosaic of dark, uneven flagstones interspersed with moss and lichen.",
+        "colorsAndLighting": "The dominant color is grey from the stone, with accents of muted colors from the thangka and prayer flags. Lighting is cool, diffused, and soft, creating gentle shadows.",
+        "atmosphere": "The air carries the faint scent of mountain winds from the prayer flags, mixed with the dampness of moss. The atmosphere is still, quiet, and imbued with a sense of deep spiritual solitude, hinting at abandonment or seclusion.",
+        "materials": "The primary materials are rough-hewn, weathered stone for walls and a pillar, and dark, aged wood for beams and furniture. The floor consists of smooth, uneven flagstones with patches of hardy alpine moss and lichen.",
+        "mood": "The mood is one of profound tranquility, enduring spirituality, and a quiet testament to the passage of time.",
+        "sounds": "Distant wind, soft echoes, creaking wood, faint whispers.",
+        "spatialLayout": "The space is a contained niche with a partial vaulted ceiling. A central pillar anchors the midground, with distinct foreground and background elements suggesting depth and further exploration.",
+        "primary_surfaces": "Crumbling stone walls, uneven flagstone floor.",
+        "secondary_surfaces": "Dark wooden beams, carved wooden lectern, rough-hewn stone pillar.",
+        "accent_features": "Faded prayer flags, carvings of mandalas and spiritual motifs, faded thangka painting, clay prayer bowls, dried herbs.",
+        "dominant": "Grey (stone walls and floor, 70%)",
+        "secondary": "Dark Brown (wood elements, 20%)",
+        "accent": "Muted earth tones (thangka, prayer flags, moss, 10%)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "Ancient monastic stone construction",
+        "cultural_tone": "Devout, ascetic, deeply spiritual",
+        "materials_base": "Weathered stone, aged wood, natural elements",
+        "mood_baseline": "Contemplative, peaceful, ancient",
+        "palette_bias": "Monochromatic greys with muted earth tones",
+        "soundscape_base": "Quiet, echoing, natural ambient",
+        "flora_base": "Moss and lichen",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/R1H_-gPoAwCp-GJWhlDLf.jpg",
+      "description": "A weathered stone sanctuary within a secluded monastery, offering a glimpse into ancient spiritual practices.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "foreground left",
+          "description": "Dark, heavy wooden door, studded with aged iron fittings, slightly ajar, leading to a dimly lit corridor."
+        },
+        {
+          "type": "archway",
+          "position": "background center",
+          "description": "Archway opening onto a more expansive chamber, hinted at by brighter, cooler light."
+        }
+      ],
+      "dominantElements": [
+        "crumbling stone walls",
+        "dark wooden beams",
+        "uneven flagstone floor",
+        "carved wooden lectern",
+        "rough-hewn stone pillar",
+        "faded thangka painting"
+      ],
+      "uniqueIdentifiers": [
+        "faded prayer flags",
+        "alpine moss and lichen patches on floor",
+        "carvings of mandalas on pillar",
+        "clay prayer bowls and dried herbs on shelves"
+      ],
+      "searchDesc": "Weathered stone sanctuary with faded prayer flags, wooden lectern, and ancient carvings.",
+      "slug": "interior-of-the-serene-ascent-monastery"
+    },
+    "niche-1764008429863-pabgecm9a": {
+      "id": "niche-1764008429863-pabgecm9a",
+      "type": "niche",
+      "name": "interior of The Serene Ascent Monastery",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is dominated by massive, weathered grey stone walls and a high vaulted ceiling supported by rough-hewn wooden beams. Faded Tibetan thangka paintings depicting intricate mandalas and bodhisattvas adorn the walls. Diffused, cool daylight streams through high, recessed arched windows, illuminating the space.",
+        "colorsAndLighting": "The dominant color is grey, emanating from the stone walls. Cool, diffused daylight creates a somber and spiritual lighting scheme. Subtle warmth comes from the glowing embers in the foreground brazier.",
+        "atmosphere": "The air is cool and still, carrying the faint scent of aged wood and perhaps incense. There is a profound sense of peace and timelessness, a palpable spiritual aura pervading the ancient stone.",
+        "materials": "The primary materials are rough, weathered grey stone for the walls and a rough-hewn wooden ceiling. Accents include aged cast iron for the brazier and faded pigment on the thangka paintings.",
+        "mood": "The scene evokes a deep sense of ancient spirituality, peaceful contemplation, and resilient serenity.",
+        "sounds": "Distant echoes, soft shuffling, faint embers crackling.",
+        "spatialLayout": "A grand, cavernous space with a high vaulted ceiling. The layout is defined by the central open area, with a narrow passage leading left and a circular staircase ascending to the right. A low altar is visible in the background.",
+        "primary_surfaces": "weathered grey stone walls, rough-hewn wooden ceiling",
+        "secondary_surfaces": "cast iron brazier, stone altar",
+        "accent_features": "faded Tibetan thangka paintings, glowing embers in brazier",
+        "dominant": "grey (stone walls, 80%)",
+        "secondary": "brown (wooden beams, 10%)",
+        "accent": "faded ochre and blue (thangkas), red/orange (embers), 5%",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "Ancient monastic architecture with heavy, weathered stone construction, thick walls, and gently sloping, multi-layered tiled roofs with ornate, carved wooden eaves. Features include imposing, rounded stone archways for entrances and smaller, recessed windows. The overall style emphasizes resilience, spiritual purpose, and integration with a harsh natural environment.",
+        "cultural_tone": "Devout, ascetic, traditional, communal (within monastic orders), deeply spiritual.",
+        "materials_base": "stone, aged wood, cast iron",
+        "mood_baseline": "Ancient, spiritual, peaceful, weathered, resilient, contemplative.",
+        "palette_bias": "muted earth tones, greys, desaturated colors",
+        "soundscape_base": "reverberant silence, ambient echoes",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/F8_ElqXwGpzHqwNVqYFA5.jpg",
+      "description": "The ancient, weathered interior of a monastic sanctuary with a high vaulted ceiling and diffused natural light.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground left",
+          "description": "narrow stone passage leading deeper into the monastery"
+        },
+        {
+          "type": "staircase",
+          "position": "midground right",
+          "description": "circular stone staircase spiraling upwards"
+        }
+      ],
+      "dominantElements": [
+        "weathered grey stone walls",
+        "vaulted wooden ceiling",
+        "Tibetan thangka paintings",
+        "cast iron brazier"
+      ],
+      "uniqueIdentifiers": [
+        "faded Tibetan thangka paintings",
+        "cast iron brazier with glowing embers",
+        "circular stone staircase"
+      ],
+      "searchDesc": "Ancient monastic interior with grey stone, wooden beams, thangka art, and diffused light.",
+      "slug": "interior-of-the-serene-ascent-monastery"
     }
   },
   "views": {},
@@ -4346,6 +5170,11 @@
                 },
                 {
                   "id": "niche-1763566734423-zzh0ie9c1",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763999118878-j54th6f61",
                   "type": "niche",
                   "children": []
                 }
@@ -5145,6 +5974,21 @@
                   "id": "niche-1763992175409-qy24rgjye",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1763998901070-fn3ctk4zl",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763998952627-ogr6qd5p1",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1763998987795-o80x8lict",
+                  "type": "niche",
+                  "children": []
                 }
               ]
             }
@@ -5638,12 +6482,476 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1763999380177-xe9gssdl0",
+      "type": "host",
+      "name": "The Astral Sea",
+      "description": "A realm of nebulae and ethereal oceans where the veil between worlds is thin.",
+      "dna": {
+        "type": "host",
+        "name": "The Astral Sea",
+        "description": "A realm of nebulae and ethereal oceans where the veil between worlds is thin.",
+        "dna": {
+          "looks": "Vast expanses of swirling nebulae in vibrant blues, purples, and golds, punctuated by luminous cosmic dust. Ethereal oceans of shimmering, liquid light flow across the void, carrying faint starlight. Unfathomable cosmic structures drift in the distance, hinting at unseen realities.",
+          "colorsAndLighting": "Dominated by cool, deep blues and vibrant purples, with accents of luminous gold and ethereal white. Light sources are diffuse and otherworldly, emanating from nebulae, cosmic dust, and the very fabric of the realm.",
+          "atmosphere": "The air is thin and charged with cosmic energy, carrying a faint hum and a sense of infinite possibility. Temperature is cool and stable, with no discernible weather patterns beyond the ebb and flow of cosmic currents. A pervasive sense of mystery and wonder pervades the environment.",
+          "materials": "Primarily composed of swirling cosmic gases, condensed nebulae, and shimmering, liquid light that forms ethereal oceans. Solid matter is rare and often appears as crystalline formations or impossibly smooth, alien geometries.",
+          "mood": "Mysterious, awe-inspiring, and profoundly peaceful, with an undercurrent of boundless potential and cosmic significance.",
+          "sounds": "Subtle cosmic hum, distant stellar winds, ethereal currents, faint chimes, resonant echoes",
+          "spatialLayout": "An immense, boundless expanse with no fixed horizon or up/down. Landscapes are fluid and ever-shifting, defined by cosmic currents and nebulae formations. Structures appear as though organically grown or manifested from pure energy.",
+          "primary_surfaces": "Cosmic gas, liquid light, nebulae",
+          "secondary_surfaces": "Crystalline formations, energy fields",
+          "accent_features": "Luminous cosmic dust, distant star clusters, fleeting dimensional rifts",
+          "dominant": "Blue, Purple",
+          "secondary": "Gold, White",
+          "accent": "Luminous Yellow",
+          "ambient": "Cool",
+          "genre": "Cosmic Fantasy",
+          "architectural_tone": "Otherworldly and fluid, influenced by cosmic forces; structures appear to be grown or manifested from energy, with organic curves and luminous, unearthly materials.",
+          "cultural_tone": "Enigmatic and transcendent, reflecting a realm where the physical laws of lesser worlds do not apply.",
+          "materials_base": "Ethereal, energetic, crystalline, cosmic gas, liquid light",
+          "mood_baseline": "Mysterious, awe-inspiring, serene",
+          "palette_bias": "Deep blues, purples, and vibrant celestial hues with luminous accents",
+          "soundscape_base": "Subtle, resonant, and ambient cosmic sounds",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ethereal oceans",
+          "Nebulae",
+          "Shifting cosmic currents"
+        ],
+        "uniqueIdentifiers": [
+          "Veil between worlds",
+          "Cosmic phenomena"
+        ],
+        "searchDesc": "A cosmic realm of nebulae and ethereal oceans, a gateway between dimensions.",
+        "slug": "the-astral-sea",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Astral Sea",
+          "looks": "A realm of nebulae and ethereal oceans where the veil between worlds is thin.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/Xqe40Oj4a3hEckYT0c7Or.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "667b34c7-c6f4-4eaf-8866-37312bff78ef",
+          "type": "region",
+          "name": "The Astral Sea",
+          "description": "Vast expanses of nebulae and ethereal oceans where dimensional energies converge.",
+          "dna": {
+            "type": "region",
+            "name": "The Astral Sea",
+            "description": "Vast expanses of nebulae and ethereal oceans where dimensional energies converge.",
+            "dna": {
+              "looks": "Sweeping vistas of dense, swirling nebulae in shades of deep violet and electric blue. Vast, calm oceans of shimmering, liquid violet mist stretch to the horizon, occasionally broken by luminous currents.",
+              "colorsAndLighting": "Dominated by deep violets and electric blues from the nebulae and mist, with soft, diffused starlight as the primary illumination. Occasional pulses of brighter light emanate from distant cosmic phenomena.",
+              "atmosphere": "The atmosphere is thick with a cool, damp violet mist that obscures distant views and lends a mysterious, ethereal quality. The air is still and carries a faint, resonant hum.",
+              "materials": "Primarily composed of condensed violet mist, forming the ethereal oceans. The nebulae appear as vast, gaseous formations, with occasional solid-looking, but ultimately ephemeral, rocky outcrops.",
+              "mood": "Mysterious, serene, and slightly melancholic, evoking a sense of dreaming or being suspended in a timeless void.",
+              "sounds": "Soft, continuous mist whispers, distant resonant hum, faint ethereal currents, gentle lapping of mist-seas",
+              "spatialLayout": "An expansive, open environment with a low horizon created by the mist. The scale feels immense, with a lack of distinct landmarks except for the colossal nebulae formations.",
+              "primary_surfaces": "Violet mist, ethereal ocean water",
+              "secondary_surfaces": "Nebulous gas, ephemeral rock",
+              "accent_features": "Luminous cosmic dust trails, distant nebulae structures",
+              "dominant": "Violet",
+              "secondary": "Blue",
+              "accent": "Luminous White",
+              "ambient": "Cool",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": "Deep violet and muted blue spectrum with ethereal highlights",
+              "soundscape_base": null,
+              "flora_base": "None",
+              "fauna_base": "None"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Nebulae clouds",
+              "Ethereal ocean currents",
+              "Cosmic anomalies"
+            ],
+            "uniqueIdentifiers": [
+              "Interdimensional currents",
+              "Stellar dust formations"
+            ],
+            "searchDesc": "Expansive nebulae and shimmering oceans within the Astral Sea, filled with cosmic wonders.",
+            "slug": "the-astral-sea-region",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Astral Sea",
+              "looks": "Vast expanses of nebulae and ethereal oceans where dimensional energies converge.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "30903776-d05f-4bd3-ae42-15d1c0643e54",
+              "type": "location",
+              "name": "The Cobalt Cipher",
+              "description": "A striking cobalt island formed from giant, curved rock formations, housing an ancient portal.",
+              "dna": {
+                "type": "location",
+                "name": "The Cobalt Cipher",
+                "description": "A striking cobalt island formed from giant, curved rock formations, housing an ancient portal.",
+                "looks": "An island of deep blue rock, sculpted into enormous, sinuous curves. It rises dramatically from swirling violet mists. At its heart, an ancient portal is embedded within intricate, spiraling geological formations.",
+                "atmosphere": "A palpable sense of ancient power, charged air, and the faint hum of energies from the portal. The mist lends a cool, damp feel.",
+                "mood": "Mysterious, awe-inspiring, ancient.",
+                "dna": {
+                  "looks": "A massive, cobalt-colored island dominates the scene, its surface textured with large, curving rock formations. This colossal landmass rises from a sea of swirling violet mist. Embedded within the heart of the island's spiraling geological structures is a brilliantly glowing, circular portal. The rock faces are heavily eroded, suggesting immense age and exposure to the elements.",
+                  "colorsAndLighting": "The primary light source is an intensely bright, glowing blue portal, casting a cool, vibrant illumination. This light reflects strongly off the surrounding water and the mist, creating a dramatic contrast with the darker rock faces.",
+                  "atmosphere": "The air is thick with a pervasive violet mist, obscuring the lower portions of the rock formations and creating a sense of depth and mystery. The mist appears to be very dense, lending a damp and cool quality to the environment.",
+                  "materials": "The primary material is a dense, ancient cobalt-colored rock. Secondary materials include the omnipresent violet mist and the faint energy emanations from the portal.",
+                  "mood": "Mysterious, powerful, and ancient, with a sense of profound forgotten purpose.",
+                  "sounds": "Echoing drips, faint portal hum, swirling mist, distant cosmic resonance",
+                  "spatialLayout": "The foreground features a calm, reflective body of water. The midground is dominated by the enormous cobalt island, carved with sinuous curves and swirling formations, with the bright blue portal at its core. The background consists of more rock formations receding into the pervasive violet mist and faint hints of a cloudy sky above.",
+                  "primary_surfaces": "Rock",
+                  "secondary_surfaces": "Water, Mist",
+                  "accent_features": "Glowing energy (portal)",
+                  "dominant": "Cobalt (island)",
+                  "secondary": "Violet (mist, sky)",
+                  "accent": "Bright blue (portal glow)",
+                  "ambient": "Cool blue and violet tones",
+                  "genre": null,
+                  "architectural_tone": "Ancient and naturally formed, characterized by colossal, organic curves and immense scale. The rock formations mimic impossible geological processes, shaped by elemental forces rather than deliberate construction.",
+                  "cultural_tone": null,
+                  "materials_base": "Dense, ancient stone; energetic emanations",
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": "None",
+                  "fauna_base": "None"
+                },
+                "navigableElements": [
+                  {
+                    "type": "portal",
+                    "position": "center, midground",
+                    "description": "Brightly glowing circular portal embedded in swirling rock formations."
+                  }
+                ],
+                "dominantElements": [
+                  "Cobalt island with curved rock-forms (center, background)",
+                  "Violet mist sea (foreground, midground)",
+                  "Glowing blue portal (center, midground)"
+                ],
+                "uniqueIdentifiers": [
+                  "Cobalt island",
+                  "Violet mist sea",
+                  "Giant curved rock-forms",
+                  "Ancient portal"
+                ],
+                "searchDesc": "[Location - Exterior] Cobalt island in mist. Has: glowing portal (center, midground)",
+                "slug": "the-cobalt-cipher",
+                "imageUrl": "https://v3b.fal.media/files/b/monkey/Xqe40Oj4a3hEckYT0c7Or.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Cobalt Cipher",
+                  "looks": "A striking cobalt island formed from giant, curved rock formations, housing an ancient portal.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/monkey/Xqe40Oj4a3hEckYT0c7Or.jpg",
+              "spaceType": "exterior",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764008292155-0knty61xa",
+      "type": "host",
+      "name": "Himalayan Peaks",
+      "description": "Towering mountains and secluded spiritual sites.",
+      "dna": {
+        "type": "host",
+        "name": "Himalayan Peaks",
+        "description": "Towering mountains and secluded spiritual sites.",
+        "dna": {
+          "looks": "A majestic and awe-inspiring landscape of colossal, snow-dusted mountain peaks that pierce the sky. Canyons and valleys wind between them, often shrouded in mist. Scattered throughout are isolated, ancient structures of stone and wood, reflecting centuries of spiritual dedication. The overall impression is one of immense scale, isolation, and profound spiritual resonance.",
+          "colorsAndLighting": "Dominated by cool blues and greys of stone and ice, with muted earthy tones of rock and sparse vegetation. Sunlight can be harsh and direct, creating stark contrasts, or diffused through mist and clouds, casting soft, ethereal light. Shadows are deep and dramatic.",
+          "atmosphere": "The air is thin, crisp, and bitingly cold, carrying the scent of snow and ancient stone. A palpable sense of peace and solitude pervades, broken only by the whisper of the wind or the distant echo of prayer chants. Weather can shift rapidly, from clear, bright days to sudden blizzards.",
+          "materials": "Primarily weathered stone, rough-hewn timber, ice, and snow. Textures are rough and natural, showing the marks of time and extreme elements. Some structures may feature intricate carvings or colorful, faded painted details.",
+          "mood": "Serene, spiritual, awe-inspiring, isolated, ancient, resilient.",
+          "sounds": "Wind whistling, distant bells, faint chanting, crunching snow, echoing silence.",
+          "spatialLayout": "Expansive, vertical, and rugged. Vast open spaces dominate, interspersed with narrow passes and steep inclines. Structures are often built into or upon the mountainside, emphasizing their integration with the natural environment.",
+          "primary_surfaces": [
+            "Stone",
+            "Rock",
+            "Ice"
+          ],
+          "secondary_surfaces": [
+            "Wood",
+            "Earth"
+          ],
+          "accent_features": [
+            "Prayer flags",
+            "Statues",
+            "Carvings",
+            "Incense smoke"
+          ],
+          "dominant": "Grey",
+          "secondary": "Blue",
+          "accent": "Muted Red",
+          "ambient": "Cool",
+          "genre": "historical",
+          "architectural_tone": "Ancient monastic architecture with heavy stone construction, simple geometric forms, sloping tiled roofs, and integrated natural elements. Features include thick walls, small windows, arched doorways, and exposed timber beams, adapted for harsh climates and spiritual retreat.",
+          "cultural_tone": "Devout, ascetic, traditional, communal (within monastic orders), deeply spiritual.",
+          "materials_base": "Weathered stone, rough-hewn wood, natural fibers, aged metals.",
+          "mood_baseline": "Tranquil, contemplative, enduring.",
+          "palette_bias": "Cool, muted, earthy, with occasional bursts of vibrant accent colors.",
+          "soundscape_base": "Natural ambient sounds, occasional spiritual incantations or music.",
+          "flora_base": "Hardy mountain mosses, lichens, sparse alpine grasses, prayer flags.",
+          "fauna_base": "None (or very rarely, mountain goats, snow leopards, birds of prey)"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Jagged mountain ranges",
+          "Isolated temples",
+          "Ancient stupas"
+        ],
+        "uniqueIdentifiers": [
+          "Thin mountain air",
+          "Spiritual aura",
+          "Harsh weather"
+        ],
+        "searchDesc": "Vast, snow-capped mountains and remote spiritual retreats, echoing with ancient chants.",
+        "slug": "himalayan-peaks",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Himalayan Peaks",
+          "looks": "Towering mountains and secluded spiritual sites.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/tjjd458eRXFPmJzBXScHh.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "69f35492-e0ed-40f3-afd9-a07a0912f5c1",
+          "type": "region",
+          "name": "Himalayan Peaks",
+          "description": "The majestic, imposing mountain range serving as a backdrop to isolated spiritual sites.",
+          "dna": {
+            "type": "region",
+            "name": "Himalayan Peaks",
+            "description": "The majestic, imposing mountain range serving as a backdrop to isolated spiritual sites.",
+            "dna": {
+              "looks": "Expansive vistas of colossal, snow-covered mountains, their peaks disappearing into the clouds. Rocky slopes are interspersed with patches of resilient alpine vegetation. Glacial rivers carve through deep valleys, and the sky is a brilliant, deep blue on clear days.",
+              "colorsAndLighting": "Dominated by stark whites of snow, deep blues of the sky and shadows, and earthy browns and greys of exposed rock. Lighting is often intense and sharp, with strong contrasts between sunlit areas and deep shade, or soft and diffused during misty conditions.",
+              "atmosphere": "Extremely cold and thin air. The wind is a constant companion, often carrying snow or dust. The atmosphere is one of isolation, vastness, and raw natural power. Days can be brilliantly clear, while nights are frigid and star-filled.",
+              "materials": "Predominantly rock, scree, ice, and sparse, hardy vegetation. The surfaces are rough, uneven, and shaped by geological forces and extreme weather.",
+              "mood": "Majestic, desolate, formidable, awe-inspiring, wild.",
+              "sounds": "Howling wind, creaking glaciers, distant avalanches, bird calls (if any), absolute silence.",
+              "spatialLayout": "Vast, open, and vertical. Immense scale with extreme elevation changes. Areas are characterized by sheer cliffs, broad valleys, and narrow, winding passes.",
+              "primary_surfaces": [
+                "Rock",
+                "Snow",
+                "Ice"
+              ],
+              "secondary_surfaces": [
+                "Earth",
+                "Boulder fields"
+              ],
+              "accent_features": [
+                "Wind-sculpted rock formations",
+                "Patches of hardy alpine flowers",
+                "Glacial ice formations"
+              ],
+              "dominant": "White",
+              "secondary": "Blue",
+              "accent": "Grey",
+              "ambient": "Cool",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": "Cool, high-contrast, with blues, whites, and greys.",
+              "soundscape_base": "Predominantly natural, wind-driven sounds.",
+              "flora_base": "Hardy alpine grasses, mosses, lichens, low-lying shrubs.",
+              "fauna_base": "Rare, resilient mountain wildlife (e.g., ibex, snow leopards)."
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Towering snow-capped peaks",
+              "Deep glacial valleys",
+              "Winding mountain passes"
+            ],
+            "uniqueIdentifiers": [
+              "Extreme altitude",
+              "Monsoon and winter storms",
+              "High-altitude flora"
+            ],
+            "searchDesc": "Immense mountain ranges with treacherous passes, home to hardy life and ancient spiritual traditions.",
+            "slug": "himalayan-peaks-region",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "Himalayan Peaks",
+              "looks": "The majestic, imposing mountain range serving as a backdrop to isolated spiritual sites.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "8ed40c02-c8e1-4657-a801-07de4e5d910c",
+              "type": "location",
+              "name": "The Serene Ascent Monastery",
+              "description": "An ancient monastery perched high in the Himalayas, weathered by time and wind.",
+              "dna": {
+                "type": "location",
+                "name": "The Serene Ascent Monastery",
+                "description": "An ancient monastery perched high in the Himalayas, weathered by time and wind.",
+                "looks": "Crumbling stone walls, faded prayer flags fluttering in the wind, a grand stone archway marking the entrance.",
+                "atmosphere": "Thin, cold air, the distant sound of chanting, the scent of incense.",
+                "mood": "Ancient, spiritual, isolated",
+                "dna": {
+                  "looks": "The monastery features substantial stone construction with layered, tiled roofs characteristic of Himalayan architecture. A central, grand archway provides passage into the structure, flanked by smaller wings. Weathered stone walls and a tiled roof with ornate eaves suggest age and exposure to the elements. Prayer flags, some appearing torn, are strung along the eaves, adding a splash of color. The surrounding terrain is rugged, with rocky outcrops and sparse vegetation leading up to the entrance.",
+                  "colorsAndLighting": "The scene is illuminated by diffused daylight, creating soft shadows and a cool overall tone. There are no harsh highlights, suggesting overcast conditions or the soft light of early morning or late afternoon. The light source appears to be from above and slightly to the right.",
+                  "atmosphere": "A light haze or mist is present in the background, softening the distant mountain peaks and creating a sense of depth. The air appears clear around the monastery itself, with sharp details visible on the stonework and vegetation.",
+                  "materials": "Primary materials are rough-hewn and weathered stone for the walls and structure, with layered, possibly clay or slate, roof tiles. Secondary materials include aged wood for decorative elements like eaves and window frames, and fabric for prayer flags.",
+                  "mood": "Ancient, spiritual, peaceful, weathered, resilient, contemplative.",
+                  "sounds": "Gentle wind, rustling prayer flags, distant mountain sounds, faint echo of bells.",
+                  "spatialLayout": "Foreground: A stone-paved pathway, approximately 5-10 meters wide, curves gently towards the monastery. Midground: The monastery complex is a stone structure with a prominent central building and flanking wings, approximately 20-25 meters in height, positioned centrally. The main structure is a WIDE STRUCTURE, with a significant roof span. Background: Steep, rocky mountainsides covered in sparse vegetation and distant, cloud-shrouded peaks fade into the horizon.",
+                  "primary_surfaces": "Stone",
+                  "secondary_surfaces": "Roof tiles, wood (decorative elements)",
+                  "accent_features": "Prayer flags, decorative carvings on the roof",
+                  "dominant": "Grey (stone walls)",
+                  "secondary": "Brown (vegetation, pathway stones), muted reds and blues (roof decorations)",
+                  "accent": "Colorful prayer flags, gold finial on the central roof",
+                  "ambient": "Cool, diffused daylight",
+                  "genre": null,
+                  "architectural_tone": "Ancient monastic architecture with heavy, weathered stone construction, thick walls, and gently sloping, multi-layered tiled roofs with ornate, carved wooden eaves. Features include imposing, rounded stone archways for entrances and smaller, recessed windows. The overall style emphasizes resilience, spiritual purpose, and integration with a harsh natural environment.",
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "archway",
+                    "position": "center, midground",
+                    "description": "Grand stone archway offering passage inside the monastery building"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "center, midground",
+                    "description": "Dark interior visible through the archway, suggesting a path beyond"
+                  },
+                  {
+                    "type": "window",
+                    "position": "sides of main building, midground",
+                    "description": "Small, barred windows on the monastery wings"
+                  }
+                ],
+                "dominantElements": [
+                  "Stone monastery building with ornate roof (~20m tall, HORIZONTAL STRUCTURE)",
+                  "Grand stone archway entrance (center, midground)",
+                  "Stone pathway leading to entrance (foreground)"
+                ],
+                "uniqueIdentifiers": [
+                  "Himalayan architecture with tiered, pagoda-style roof",
+                  "Torn prayer flags along eaves",
+                  "Stone archway entrance with figure passing through"
+                ],
+                "searchDesc": "[Location - Exterior] Ancient Himalayan monastery. Has: stone archway (center, midground), prayer flags (eaves, midground), stone pathway (foreground)",
+                "slug": "the-serene-ascent-monastery",
+                "imageUrl": "https://v3b.fal.media/files/b/monkey/tjjd458eRXFPmJzBXScHh.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Serene Ascent Monastery",
+                  "looks": "An ancient monastery perched high in the Himalayas, weathered by time and wind.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/monkey/tjjd458eRXFPmJzBXScHh.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764008334324-idvpxfu2u",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764008429863-pabgecm9a",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1763628727196-4meodwmfj",
     "loc-1763990091894-znnq51ts4",
     "loc-1763994876664-643qmsnex",
-    "loc-1763997442835-hl8brqkxc"
+    "loc-1763997442835-hl8brqkxc",
+    "loc-1763545569905-ci2cztbd3",
+    "loc-1763999380177-xe9gssdl0",
+    "loc-1764008292155-0knty61xa"
   ]
 }

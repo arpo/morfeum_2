@@ -1,10 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, KeyboardEvent } from 'react';
 import { createPortal } from 'react-dom';
-import { Button, Checkbox } from '@/components/ui';
+import { Button, Checkbox, SlashCommandInput } from '@/components/ui';
 import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
 import { LocationInfoModal } from '../../../chat/components/LocationInfoModal';
 import { useLocationPanel } from './useLocationPanel';
 import styles from './LocationPanel.module.css';
+
+const NAVIGATION_COMMANDS = [
+  'GO_INSIDE',
+  'GO_OUTSIDE',
+  'GO_TO_ROOM',
+  'GO_TO_PLACE',
+  'LOOK_AT',
+  'LOOK_THROUGH',
+  'CHANGE_VIEW',
+  'GO_UP_DOWN',
+  'ENTER_PORTAL',
+  'APPROACH',
+  'EXPLORE_FEATURE',
+  'RELOCATE'
+];
 
 export function LocationPanel() {
   const { state, handlers } = useLocationPanel();
@@ -85,12 +100,12 @@ export function LocationPanel() {
           Where would you like to go from here?
         </p>
         <div className={styles.movementSection}>
-          <input
-            type="text"
+          <SlashCommandInput
             className={styles.movementInput}
             value={state.movementInput}
-            onChange={(e) => handlers.setMovementInput(e.target.value)}
-            onKeyPress={(e) => {
+            onChange={handlers.setMovementInput}
+            commands={NAVIGATION_COMMANDS}
+            onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => {
               if (e.key === 'Enter' && !state.isMoving) {
                 e.preventDefault();
                 handlers.handleMove();

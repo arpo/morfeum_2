@@ -32,5 +32,7 @@ export type { TreeItem } from './TreeView';
 export { Tabs } from './Tabs';
 export type { TabItem } from './Tabs';
 
+export { SlashCommandInput } from './SlashCommandInput/SlashCommandInput';
+
 // Re-export icons for convenience
 export * from '@/icons';
