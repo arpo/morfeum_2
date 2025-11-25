@@ -119,15 +119,9 @@ export function LocationPanel() {
             disabled={state.isMoving || !state.movementInput.trim()}
             loading={state.isMoving}
           >
-            Travel
+            Go
           </Button>
         </div>
-        <Checkbox
-          checked={state.createImage}
-          onChange={handlers.setCreateImage}
-          disabled={state.isMoving}
-          label="Create image"
-        />
       </div>
 
       <LocationInfoModal 

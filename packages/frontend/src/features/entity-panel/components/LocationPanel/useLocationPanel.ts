@@ -38,93 +38,36 @@ export function useLocationPanel(): LocationPanelLogicReturn {
       return;
     }
     
-    if (!base.activeChat) {
-      console.warn('[useLocationPanel] Cannot travel: no active location');
-      return;
+    // Parse slash command format: /COMMAND text
+    const trimmedInput = movementInput.trim();
+    
+    // Check if input starts with /
+    if (trimmedInput.startsWith('/')) {
+      // Find the first space after the /
+      const spaceIndex = trimmedInput.indexOf(' ');
+      
+      if (spaceIndex > 0) {
+        // Extract command (without the /) and text
+        const command = trimmedInput.substring(1, spaceIndex);
+        const text = trimmedInput.substring(spaceIndex + 1).trim();
+        
+        console.log('Command:', command);
+        console.log('Text:', text);
+      } else {
+        // No space found, entire input is the command
+        const command = trimmedInput.substring(1);
+        console.log('Command:', command);
+        console.log('Text:', '');
+      }
+    } else {
+      // Not a slash command format
+      console.log('Command:', '');
+      console.log('Text:', trimmedInput);
     }
     
-    try {
-      setIsMoving(true);
-      
-      // Get current node
-      let currentNode = getNode(base.activeChat);
-      if (!currentNode && base.activeChatSession?.deepProfile) {
-        saveLocation();
-        currentNode = getNode(base.activeChat);
-      }
-      
-      if (!currentNode) {
-        console.warn('[useLocationPanel] Cannot travel: current node not found');
-        return;
-      }
-      
-      // Get cascaded DNA for current node
-      const cascadedDNA = getCascadedDNA(currentNode.id);
-      
-      // Get spatially connected nodes
-      const spatialNodes = getSpatialNodes(currentNode.id);
-      
-      // Build spatial nodes with tree traversal data
-      const spatialNodesWithTree = buildSpatialNodes(spatialNodes, worldTrees);
-      
-      // Call NavigatorAI to find destination
-      const navigation = await findDestination(
-        movementInput,
-        currentNode,
-        spatialNodesWithTree,
-        getCascadedDNA
-      );
-      
-      // If image was generated, display it
-      if (navigation.imageUrl) {
-        setPreviewImage(navigation.imageUrl);
-      }
-      
-      console.log('\n═══════════════════════════════════════════════════════════');
-      console.log('📥 NAVIGATION RESULT RECEIVED');
-      console.log('═══════════════════════════════════════════════════════════');
-      console.log('  Action:', navigation.action);
-      console.log('  Has Node:', !!navigation.node ? '✓' : '✗');
-      console.log('  Has Image:', !!navigation.imageUrl ? '✓' : '✗');
-      console.log('═══════════════════════════════════════════════════════════\n');
-      
-      // Handle navigation result
-      if (navigation.action === 'move' && navigation.targetNodeId) {
-        await handleMoveAction(navigation);
-      } else if (navigation.action === 'generate') {
-        // If backend returned a complete node, save it
-        if (navigation.node) {
-          console.log('✅ [FRONTEND] Using new node creation system\n');
-          await handleNodeCreation(navigation, currentNode);
-        } else {
-          console.log('⚠️ [FRONTEND] Falling back to old spawn system\n');
-          await handleGenerateAction(navigation, currentNode, cascadedDNA);
-        }
-      }
-      
-      // Clear input
-      setMovementInput('');
-    } catch (error) {
-      if (error instanceof Error && error.message === 'ALREADY_AT_TOP_LEVEL') {
-        // User-friendly error already logged, just return
-        return;
-      }
-      console.error('[NavigatorAI] Navigation failed:', error);
-    } finally {
-      setIsMoving(false);
-    }
-  }, [
-    movementInput,
-    base.activeChat,
-    base.activeChatSession,
-    getNode,
-    getSpatialNodes,
-    getCascadedDNA,
-    worldTrees,
-    startSpawn,
-    setActiveEntity,
-    createImage
-  ]);
+    // Clear input
+    setMovementInput('');
+  }, [movementInput]);
 
   /**
    * Handle 'move' action - navigate to existing node

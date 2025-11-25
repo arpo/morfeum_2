@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  width: 100%;
+  flex: 1;
 }
 
 .input {
@@ -13,6 +13,7 @@
   font-family: inherit;
   font-size: var(--text-sm);
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .input:focus {
