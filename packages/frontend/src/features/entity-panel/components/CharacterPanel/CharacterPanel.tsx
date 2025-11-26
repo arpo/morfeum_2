@@ -34,7 +34,6 @@ export function CharacterPanel() {
             alt={state.entityName || 'Character'}
             className={styles.characterHeaderImage}
             onLoad={() => setImageLoading(false)}
-            style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease-in' }}
           />
         )}
         {/* Always show image buttons, positioned over skeleton or image */}

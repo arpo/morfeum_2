@@ -186,11 +186,11 @@ export function App() {
           )}
           {entityImage && (
             <img 
+              key={entityImage}
               src={entityImage} 
               alt={activeEntitySession.entityName || 'Entity'}
               className={styles.entityBackgroundImage}
               onLoad={() => setImageLoading(false)}
-              style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease-in' }}
             />
           )}
         </div>
