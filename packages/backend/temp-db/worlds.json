@@ -6197,6 +6197,73 @@
       },
       "imagePath": "https://v3b.fal.media/files/b/rabbit/aMG5mlRAvhMH0zjl-5MbD.jpg",
       "description": "The exterior of a sunken techno-temple, seamlessly integrated into the living coral cliffs."
+    },
+    "niche-1764153918694-33tbhayym": {
+      "id": "niche-1764153918694-33tbhayym",
+      "type": "niche",
+      "name": "interior of The Cogwork Mausoleum",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, cavernous interior chamber dominated by immense, riveted steel support columns and complex interlocking girders. Grimy reinforced glass panels offer glimpses into adjoining spaces filled with massive, static gears. The floor is a mix of dark steel plating and oil-stained concrete, with a low, rusted railing along a collapsed walkway. Industrial pipework and vents adorn the vaulted ceiling.",
+        "colorsAndLighting": "The scene is dimly lit with a diffused, faint light emanating from unseen sources, casting long, dramatic shadows. Dominant colors are muted greys and browns of aged steel and concrete, with dark, grimy tones.",
+        "atmosphere": "The air is thick with the palpable scent of oil and decay, underscored by the faint groaning of stressed metal. A profound sense of abandonment and disuse permeates the space, creating a heavy, melancholic ambiance.",
+        "materials": "The primary materials are heavily weathered, dark steel plating and beams, alongside grimy, oil-stained concrete. Riveted steel girders and grimy reinforced glass form structural and partition elements. Textures are rough, rusted, and aged.",
+        "mood": "The overall mood is one of deep melancholy and dereliction, evoking the feeling of a colossal, forgotten place frozen in time.",
+        "sounds": "Faint groaning of stressed metal, echoing silence.",
+        "spatialLayout": "A vast, enclosed chamber with a low ceiling structure. The entrance is behind the viewer, leading into a space with a clear foreground, midground, and cavernous background. Focal points are the immense columns and the glimpses into machinery-filled adjacencies.",
+        "primary_surfaces": "Heavily weathered dark steel plating, grimy oil-stained concrete, vaulted blackened steel beams, corrugated metal panels.",
+        "secondary_surfaces": "Riveted steel girders, grimy reinforced glass, rusted metal railing, industrial pipework, industrial-style vents.",
+        "accent_features": "Partially collapsed walkway, slightly ajar glass partition revealing a catwalk, massive immobile gears.",
+        "dominant": "Dark greys (steel, concrete)",
+        "secondary": "Muted browns (rust, grime)",
+        "accent": "Deep blacks (shadows, unlit areas)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "industrial metallic, derelict machinery",
+        "cultural_tone": "Null",
+        "materials_base": "aged steel, concrete, glass",
+        "mood_baseline": "melancholy, derelict",
+        "palette_bias": "muted industrial colors",
+        "soundscape_base": "industrial ambient sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/xbWptHMkN7_RIax7u1G0R.jpg",
+      "description": "The dimly lit interior of a forgotten, colossal workshop, filled with the scent of oil and decay and the groaning of stressed metal.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "foreground left",
+          "description": "A dark, yawning passage beyond a partially collapsed walkway."
+        },
+        {
+          "type": "catwalk",
+          "position": "midground center",
+          "description": "A narrow catwalk visible through a slightly ajar glass partition."
+        },
+        {
+          "type": "pipework",
+          "position": "background ceiling",
+          "description": "Industrial-style vents and pipework crisscrossing the high ceiling."
+        }
+      ],
+      "dominantElements": [
+        "towering support columns",
+        "riveted steel girders",
+        "grimy reinforced glass partitions",
+        "massive immobile gears",
+        "industrial vents and pipework"
+      ],
+      "uniqueIdentifiers": [
+        "Cogwork Mausoleum interior",
+        "colossal forgotten workshop",
+        "riveted steel columns",
+        "grimy reinforced glass",
+        "immobile gears",
+        "oil and decay scent"
+      ],
+      "searchDesc": "Vast, dimly lit workshop interior with steel, glass, and gears. Melancholy, derelict.",
+      "slug": "interior-of-the-cogwork-mausoleum"
     }
   },
   "views": {},
@@ -7338,6 +7405,11 @@
                 },
                 {
                   "id": "niche-1763996016407-zz8r1yxpq",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764153918694-33tbhayym",
                   "type": "niche",
                   "children": []
                 }

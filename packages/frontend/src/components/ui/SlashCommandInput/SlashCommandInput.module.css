@@ -70,9 +70,13 @@
   gap: var(--spacing-sm);
 }
 
-.commandItem:hover,
-.commandItem.active {
+.commandItem:hover {
   background-color: var(--overlay-light);
+}
+
+.commandItem.active {
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .commandName {
