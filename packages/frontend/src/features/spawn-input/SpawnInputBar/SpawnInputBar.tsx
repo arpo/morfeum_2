@@ -71,7 +71,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
           title="Click to expand"
         >
           <IconChevronUp size={16} />
-          <span className={styles.minimizedText}>Generate</span>
+          <span className={styles.minimizedText}></span>
         </div>
         
         {/* Expanded Content */}
