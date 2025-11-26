@@ -2,29 +2,21 @@
 
 ## Completed Features ✅
 
+### Pipeline & Image Streaming Improvements (Nov 26, 2025)
+- [x] Images from all pipelines (character, worldTree, createNode) now display in the entity background as soon as the image is generated, before the full pipeline completes.
+- [x] Tree expansion logic updated to support both legacy and new node formats, ensuring correct node selection and unfolding.
+- [x] Duplicate image update logic added to reduce unnecessary re-renders (partial fix for flicker).
+
 ### Keyboard Shortcuts & Focus Mode Implementation (Nov 26, 2025)
-- [x] Added centralized keyboard shortcut system for UI toggles
-  - Key `1`: Toggle spawn input (minimize/expand)
-  - Key `2`: Toggle entity explorer panel
-  - Space: Toggle focus mode (hide all UI elements)
-- [x] Created focus mode for distraction-free image viewing
-  - Hides all UI components
-  - Temporary hint that fades after 3 seconds
-  - Automatic exit when other shortcuts are used
-- [x] Implemented centralized configuration file
-  - Created `packages/frontend/src/config.ts`
-  - Organized by sections (keyboard shortcuts, app settings)
-  - Designed for future extensibility
-- [x] Added focus mode state management in entityManagerSlice
-- [x] Created reusable useKeyboardShortcuts hook
+- [x] Centralized keyboard shortcut system for UI toggles and focus mode.
+- [x] Focus mode for distraction-free image viewing.
+- [x] Centralized configuration and state management improvements.
 
 ### UI Layout Refactor - Fullscreen Background Images (Nov 25, 2025)
 - [x] Removed entitySection Card wrapper from main layout
 - [x] Implemented fullscreen entity background images behind all UI
 - [x] Created TopButtonRow component (sidebar toggle, info button, chat button)
 - [x] Added responsive aspect-ratio media query for optimal letterbox behavior
-  - Narrow/tall viewports (≤16:9): object-fit contain - letterbox above/below only
-  - Wide viewports (>16:9): object-fit cover - fills completely
 - [x] Lifted modal state to App level (CharacterInfoModal, LocationInfoModal)
 - [x] Fixed info button for location nodes (was previously broken)
 - [x] Added IconMessageCircle icon for chat button
@@ -32,55 +24,28 @@
 
 ### Navigation Command Cleanup & Centralization (Nov 25, 2025)
 - [x] Removed all dummy navigation commands and handlers
-  - Only `GO_INSIDE` is implemented and exported
-  - Centralized navigation intent registry in `pipelineConfig.ts`
-  - Cleaned up types, config, and handlers
-  - Deleted all dummy handler files
-  - Updated router and prompt to reflect only implemented commands
-- [x] Codebase now has a single source of truth for navigation commands and no dead code
+- [x] Only `GO_INSIDE` is implemented and exported
+- [x] Centralized navigation intent registry in `pipelineConfig.ts`
+- [x] Cleaned up types, config, and handlers
+- [x] Deleted all dummy handler files
+- [x] Updated router and prompt to reflect only implemented commands
 
 ### Progress Bar Fix for Navigation Slash Commands (Nov 25, 2025)
 - [x] Fixed missing progress bar for new slash command navigation
-  - Identified bypass of the activeSpawns store in useLocationPanel.ts
-  - Replaced manual EventSource with registerExternalSpawn call
-  - Progress bar now shows and animates through all 4 steps
-  - Maintains consistent progress tracking across all entity generation types
-  - Follows the same pattern established for locationNavigation.ts (Nov 24)
+- [x] Progress bar now shows and animates through all 4 steps
+- [x] Maintains consistent progress tracking across all entity generation types
 
 ### SpawnInputBar Navigate Tab (Nov 25, 2025)
 - [x] Added Navigate tab to SpawnInputBar
-  - Three-tab interface: Character, Location, Navigate
-  - Navigation functionality moved from LocationPanel
-  - Shows message when no location active
-  - SlashCommandInput + "Go" button when location selected
-- [x] Created useNavigationLogic hook
-  - Extracted all navigation logic from useLocationPanel
-  - Handles movement input, slash commands, API calls
-  - Manages navigation state (isMoving, errorMessage, activeEntity)
-- [x] Simplified LocationPanel
-  - Removed travel section UI completely
-  - Removed navigation state/handlers from hook
-  - Simplified types (only base panel + saveLocation)
-  - Removed travel section CSS
-  - Focuses purely on display and info modal
-- [x] Result: Unified command center
-  - All entity generation and navigation in SpawnInputBar
-  - Clean separation: display (LocationPanel) vs interaction (SpawnInputBar)
+- [x] Three-tab interface: Character, Location, Navigate
+- [x] Navigation functionality moved from LocationPanel
+- [x] Shows message when no location active
+- [x] SlashCommandInput + "Go" button when location selected
 
 ### Slash Command Input & Navigation Centralization (Nov 25, 2025)
 - [x] Created reusable SlashCommandInput component
-  - Type `/` to show dropdown of navigation commands
-  - Keyboard navigation (Up/Down/Enter/Escape)
-  - Auto-scrolling active items into view
-  - Dark theme styling with white text
 - [x] Centralized navigation commands in backend config
-  - `packages/backend/src/config/navigation.ts` as single source of truth
-  - NAVIGATION_COMMANDS array (12 intents)
-  - Both frontend and backend import from same location
 - [x] Configured monorepo imports (@backend/* path alias)
-  - Updated tsconfig.json and vite.config.ts
-  - Frontend imports from `@backend/config/navigation`
-  - Browser-safe imports (avoids Node.js-specific files)
 
 ### Entity Explorer Panel - Draggable UI (Nov 25, 2025)
 - [x] Moved sidebar to draggable, resizable panel
@@ -109,10 +74,10 @@
 - [x] Visual analysis integration
 - [x] Niche generation support
 - [x] Complete "go inside" pipeline (Nov 12, 2025)
-  - Backend DNA generation with LLM
-  - Complete node structure creation
-  - Frontend automatic saving and tree management
-  - Enhanced logging with visual separators
+- [x] Backend DNA generation with LLM
+- [x] Complete node structure creation
+- [x] Frontend automatic saving and tree management
+- [x] Enhanced logging with visual separators
 
 ### UI Components
 - [x] Character panel with chat
@@ -135,57 +100,12 @@
 
 ### Technical Improvements
 - [x] Old navigation system removal (Nov 24, 2025)
-  - Investigated and removed unused navigationDecision.ts file
-  - Discovered two parallel navigation systems running (/navigator old, /navigation new)
-  - Removed entire deprecated navigator service directory
-  - Deleted 500+ line navigatorSemanticNodeSelector.ts prompt
-  - Cleaned up all references in routes, exports, and type definitions
-  - Zero TypeScript errors after cleanup
-  - Result: Single, clean navigation architecture (intent classifier + deterministic routing)
 - [x] Progress bar bugfix & animation improvements (Nov 24, 2025)
-  - Progress bar now appears immediately and animates smoothly for all pipelines (character, location, navigation)
-  - Fixed race condition and initial state logic in both spawnSlice and locationNavigation
-  - useProgressAnimation now animates from 0% to target on mount for smooth entry
-  - All spawn/generate actions now have consistent, animated progress tracking
 - [x] Pipeline progress bar integration (Nov 24, 2025)
-  - Created centralized pipelineConfig.ts for all pipeline configurations
-  - Single source of truth for step definitions, durations, and intent mappings
-  - Integrated backend SSE to send config in first event
-  - Refactored navigation handler to use setupSSEConnection utility
-  - Removed ~80 lines of duplicate SSE code
-  - All three pipelines (character, location, navigation) show real-time progress
-  - Step-based animation with individual durations
-  - Auto-cleanup after completion/error
-  - Clean, consistent architecture across all spawns
 - [x] Unified utility architecture (Nov 21, 2025)
-  - Created comprehensive utility modules to eliminate duplicate logic
-  - Backend: PipelineHelper class, entityPersistence utilities
-  - Frontend: setupSSEConnection, completionHandlers, tree navigation/expansion
-  - Refactored all three pipelines to use PipelineHelper
-  - Fixed tree unfolding bug with expandedNodeIds state
-  - ~470 lines of duplicate code eliminated
-  - Single source of truth for spawn/tree/entity operations
 - [x] Architectural consistency & DNA enrichment (Nov 19, 2025)
-  - Fixed major inconsistency where exterior/interior didn't match
-  - Functional Identity enforcement (houses look like houses, not churches)
-  - Complete DNA field passing (all scene-specific and cascading attributes)
-  - DNA inheritance/cascading (parent DNA merges with child DNA using mergeDNA)
-  - Rich architectural_tone examples (detailed style descriptions)
-  - Material consistency (exterior materials properly transform to interior)
-  - Fixed string "null" vs JSON null in DNA generation
-  - Impact: Interiors now properly reflect exterior function AND style while maintaining consistency
 - [x] Niche nesting bug fix (Nov 18, 2025)
-  - Fixed critical bug where niches were being nested inside other niches
-  - Root cause: Frontend was hardcoding `type: 'location'` for all nodes
-  - Backend: Created findParentLocationNode() helper, updated handlers and DNA extraction
-  - Frontend: Fixed context building to send actual node type, updated tree insertion
-  - Result: Niches now correctly created as siblings under parent location
 - [x] DNA structure cleanup (Nov 18, 2025)
-  - Fixed critical double-wrapping bug in worlds.json storage
-  - Backend: Moved visual analysis to worldTreePipeline, proper field separation
-  - Frontend: Fixed nodeDNAExtractor to return only dna property
-  - Navigation: Updated prompt and pipeline to generate structural fields
-  - Result: Clean node structure (root fields + dna property) for all generation paths
 - [x] Memory bank consolidation (69% reduction)
 - [x] Terminology standardization (sublocation → niche)
 - [x] Component separation pattern
@@ -196,48 +116,19 @@
 - [x] Backend path resolution fix (__dirname)
 - [x] SSE error handling (prevents unhandled error crashes)
 - [x] Enhanced debug logging (Nov 12, 2025)
-  - Clear visual separators with ═══ characters
-  - Emojis for quick section identification
-  - Consistent formatting across backend and frontend
-  - Comprehensive flow tracking from API to database
 - [x] Centralized camera configuration (Nov 12, 2025)
-  - Created shared/cameraConfig.ts as single source of truth
-  - Centered, aligned camera positions for smooth transitions
-  - Structure-aware composition (VERTICAL/HORIZONTAL/WIDE)
-  - Lens specifications added to all location prompts
-  - Exterior camera positioned facing entrance directly
-  - Entrance exclusion instructions for interior prompts
 - [x] Smart intent classifier (Nov 11, 2025)
-  - Intelligent element selection for GO_INSIDE navigation
-  - Prioritizes enterable structures over decorative elements
-  - Uses uniqueIdentifiers and navigableElements for context
-  - Avoids water features, vegetation, small objects as entry points
-  - Handler updated to respect intent.target from smart selection
 - [x] Niche image prompt system (Nov 11, 2025)
-  - Specific navigation features requirement (3-4 concrete features)
-  - Mandatory composition layering (foreground/midground/background)
-  - Inline navigable element markers for LLM extraction
-  - Interior-focused with architectural form matching
 
 ### Prompt System Improvements
 - [x] Prompt camera alignment unification (Nov 14, 2025)
-  - All prompt generators (niche/location) use centralized, centered camera config
-  - Imports and prompt assembly reference the same config for seamless transitions
-  - TypeScript errors resolved for camera config imports
-  - Consistent, aligned camera instructions in all generated prompts
 - [x] Prompt preset refactor (Nov 14, 2025)
-  - Removed all hard-coded narrative from both interior and exterior prompt presets
-  - Presets now assemble output using only shared, reusable prompt sections and context/DNA data
-  - Added new helpers for exterior prompts
-  - Created dispatcher for selecting preset builder by spaceType
-  - Updated prompt generator to use dispatcher
 - [x] Navigation features parameter fix (Nov 14, 2025)
-  - Fixed critical bug where "interior" was passed as navigationFeatures instead of spaceType
-  - Removed unused navigationFeatures parameter from entire function chain
-  - Interior scenes now properly generate with correct instructions
-  - Cleaner API without unnecessary parameters
 
 ## In Progress 🔄
+
+### Image Flicker Issue
+- [ ] There is still a flicker when an image/node is selected and the same image is set again. Further logic is needed to prevent redundant image updates and ensure flicker-free UI.
 
 ### Navigation Enhancement
 - [x] Enable generate action in frontend (completed Nov 12, 2025 - full pipeline working)
