@@ -2,6 +2,22 @@
 
 ## Completed Features ✅
 
+### Keyboard Shortcuts & Focus Mode Implementation (Nov 26, 2025)
+- [x] Added centralized keyboard shortcut system for UI toggles
+  - Key `1`: Toggle spawn input (minimize/expand)
+  - Key `2`: Toggle entity explorer panel
+  - Space: Toggle focus mode (hide all UI elements)
+- [x] Created focus mode for distraction-free image viewing
+  - Hides all UI components
+  - Temporary hint that fades after 3 seconds
+  - Automatic exit when other shortcuts are used
+- [x] Implemented centralized configuration file
+  - Created `packages/frontend/src/config.ts`
+  - Organized by sections (keyboard shortcuts, app settings)
+  - Designed for future extensibility
+- [x] Added focus mode state management in entityManagerSlice
+- [x] Created reusable useKeyboardShortcuts hook
+
 ### UI Layout Refactor - Fullscreen Background Images (Nov 25, 2025)
 - [x] Removed entitySection Card wrapper from main layout
 - [x] Implemented fullscreen entity background images behind all UI

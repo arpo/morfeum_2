@@ -1,5 +1,35 @@
 # Active Context
 
+## Recent Changes (2025-11-26)
+
+### Keyboard Shortcuts & Focus Mode Implementation (Nov 26, 2025)
+- **Centralized keyboard shortcuts system**:
+  - Added global keyboard shortcut handling for UI toggles
+  - Key `1`: Toggle spawn input (minimize/expand)
+  - Key `2`: Toggle entity explorer panel (hide/show)
+  - Space: Toggle focus mode (hide all UI to view image)
+  - Shortcuts only trigger when not typing in input fields
+- **Focus mode feature**:
+  - Hides all UI elements when activated (TopButtonRow, SpawnInputBar, EntityExplorer, panels)
+  - Shows only the entity background image for distraction-free viewing
+  - Displays a temporary hint that fades after 3 seconds
+  - Pill-shaped semi-transparent hint with smooth animation
+- **Centralized configuration**:
+  - Created `packages/frontend/src/config.ts` as centralized application configuration
+  - Organized by sections (keyboard shortcuts, app settings)
+  - Designed for extensibility (future app-wide configurations)
+- **State management**:
+  - Added `focusModeEnabled` state to entityManagerSlice
+  - Added `toggleFocusMode()` action
+  - Each shortcut key automatically exits focus mode when pressed
+- **Files created/modified**:
+  - `packages/frontend/src/config.ts` - New centralized config file
+  - `packages/frontend/src/hooks/useKeyboardShortcuts.ts` - New keyboard handling hook
+  - `packages/frontend/src/hooks/index.ts` - Updated exports
+  - `packages/frontend/src/store/slices/entityManagerSlice.ts` - Added focus mode state
+  - `packages/frontend/src/features/app/components/App/App.tsx` - Updated to support focus mode
+  - `packages/frontend/src/features/app/components/App/App.module.css` - Added focus mode hint styles
+
 ## Recent Changes (2025-11-25)
 
 ### UI Layout Refactor - Fullscreen Background Images (Nov 25, 2025)
@@ -95,6 +125,7 @@
 ## Next Steps
 - Consider adding more navigation commands beyond GO_INSIDE
 - Potential tab state persistence across sessions
+- Consider adding more keyboard shortcuts for common actions
 - Explore keyboard shortcuts for tab switching
 
 ## Previous Context (see below for earlier changes)

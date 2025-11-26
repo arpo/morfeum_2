@@ -5962,6 +5962,241 @@
       ],
       "searchDesc": "Ancient monastery stone chamber, dimly lit, prayer flags, brazier glow, ethereal light.",
       "slug": "interior-of-the-serene-ascent-monastery"
+    },
+    "loc-1764147514302-2qklu269h": {
+      "id": "loc-1764147514302-2qklu269h",
+      "type": "host",
+      "name": "Oceanic Depths",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Oceanic Depths",
+        "description": "A vast and mysterious underwater realm teeming with alien life and forgotten structures.",
+        "dna": {
+          "looks": "A boundless, dark ocean filled with immense geological formations and remnants of advanced, unknown civilizations. Strange bioluminescent organisms provide ethereal light sources, illuminating alien flora and ancient, weathered structures.",
+          "colorsAndLighting": "The environment is dominated by deep blues and blacks, punctuated by vibrant, otherworldly bioluminescent glows. Light is scarce, diffused, and often colored by the light-emitting organisms.",
+          "atmosphere": "The atmosphere is one of immense pressure and profound silence, broken only by the faint sounds of currents and distant, unknown creatures. The water is cold and carries an unsettling stillness.",
+          "materials": "The dominant materials are rough, ancient stone, unknown metallic alloys encrusted with oceanic growth, and pulsating organic matter. Water is the pervasive medium, shaping all surfaces.",
+          "mood": "Mysterious, awe-inspiring, and slightly unnerving. There's a sense of profound history and undiscovered secrets.",
+          "sounds": "Deep rumbling, distant clicks, faint sonar pings, flowing water, muffled impacts",
+          "spatialLayout": "Vast, open abyssal plains interspersed with towering, sunken architectural ruins and deep, cavernous trenches. Verticality is pronounced with immense depths and towering structures.",
+          "primary_surfaces": [
+            "rock",
+            "coral",
+            "ancient stone"
+          ],
+          "secondary_surfaces": [
+            "weathered metal",
+            "bioluminescent organisms",
+            "algae"
+          ],
+          "accent_features": [
+            "glowing flora",
+            "intricate carvings",
+            "alien symbols"
+          ],
+          "dominant": "Deep Blue",
+          "secondary": "Black",
+          "accent": "Cyan",
+          "ambient": "Cool",
+          "genre": "sci-fi",
+          "architectural_tone": "ancient alien megastructures with organic integration, featuring massive scale, geometric complexity, weathered surfaces, and seamless fusion with natural formations",
+          "cultural_tone": "lost civilization, advanced but unknown purpose, reverence for the deep",
+          "materials_base": "corroded alloys, unknown composites, natural geological formations, bioluminescent organic matter",
+          "mood_baseline": "existential wonder, profound isolation, latent discovery",
+          "palette_bias": "cool-toned, high contrast, bioluminescent highlights",
+          "soundscape_base": "ambient oceanic, distant echoes, subtle alien vocalisations",
+          "flora_base": "bioluminescent kelp forests, crystalline growths, pulsing anemones",
+          "fauna_base": "abyssal predators, schooling bio-luminescent creatures, colossal deep-sea leviathans"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Sunken civilizations",
+          "Bioluminescent flora",
+          "Abyssal trenches"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme pressure",
+          "Uncharted territories",
+          "Alien ecosystems"
+        ],
+        "searchDesc": "Vast underwater realm of alien life and ancient, forgotten structures.",
+        "slug": "oceanic-depths",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Oceanic Depths",
+          "looks": "A vast and mysterious underwater realm teeming with alien life and forgotten structures.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/aMG5mlRAvhMH0zjl-5MbD.jpg",
+      "description": "A vast and mysterious underwater realm teeming with alien life and forgotten structures."
+    },
+    "cc0dd32d-827d-4431-bdfd-82756a6503d8": {
+      "id": "cc0dd32d-827d-4431-bdfd-82756a6503d8",
+      "type": "region",
+      "name": "Oceanic Depths",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "Oceanic Depths",
+        "description": "",
+        "dna": {
+          "looks": "A segment of the oceanic depths characterized by sprawling, vibrant coral formations intertwined with the remnants of ancient structures. Visibility varies, with areas of clarity giving way to denser, kelp-filled expanses.",
+          "colorsAndLighting": "A dominance of deep blues and greens, with vibrant pops of color from coral and bioluminescent life. Light is diffused, with shafts of illumination penetrating from above or glowing from within organisms.",
+          "atmosphere": "A cool, heavy atmosphere of immense underwater pressure. Gentle currents flow through the region, carrying the scent of salt and the faint hum of unseen life.",
+          "materials": "Primarily living coral, ancient weathered stone, calcified organic matter, and pockets of advanced, eroded metallic alloys.",
+          "mood": "Enigmatic, naturally beautiful, and ancient. A sense of undisturbed, timeless existence.",
+          "sounds": "Gentle water flow, distant whale song, clicking crustaceans, subtle hums",
+          "spatialLayout": "A mix of open underwater plains, dense coral gardens, and networks of submerged caves and passages. The layout emphasizes organic flow and hidden depths.",
+          "primary_surfaces": [
+            "coral",
+            "stone"
+          ],
+          "secondary_surfaces": [
+            "metal",
+            "algae",
+            "marine growth"
+          ],
+          "accent_features": [
+            "bioluminescent coral",
+            "intricate rock formations",
+            "ancient carvings"
+          ],
+          "dominant": "Teal",
+          "secondary": "Dark Grey/Green",
+          "accent": "Cyan",
+          "ambient": "Cool",
+          "genre": null,
+          "architectural_tone": "ancient alien megastructures with organic integration, featuring massive scale, geometric complexity, weathered surfaces, and seamless fusion with natural formations",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "bioluminescent kelp forests, crystalline growths, pulsing anemones",
+          "fauna_base": "schools of iridescent fish, reef-dwelling invertebrates, slow-moving benthic creatures"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Coral reefs",
+          "Sunken ruins",
+          "Abyssal currents"
+        ],
+        "uniqueIdentifiers": [
+          "High mineral content",
+          "Varied marine life",
+          "Submerged caverns"
+        ],
+        "searchDesc": "Submerged realm with vibrant coral, ancient ruins, and deep, mysterious caverns.",
+        "slug": "oceanic-depths",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Oceanic Depths",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": ""
+    },
+    "44e15a05-bf55-4791-8beb-c190765c03f8": {
+      "id": "44e15a05-bf55-4791-8beb-c190765c03f8",
+      "type": "location",
+      "name": "The Sunken Sanctum",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Sunken Sanctum",
+        "description": "The exterior of a sunken techno-temple, seamlessly integrated into the living coral cliffs.",
+        "looks": "An otherworldly structure of bio-luminescent coral and advanced metallic alloys, sculpted to merge with the surrounding reef. A circular, ornate entrance is carved into the cliff face, with water constantly trickling from its edges.",
+        "atmosphere": "The muffled sounds of the deep ocean, the gentle current, and the faint hum of unseen technology.",
+        "mood": "Ancient, awe-inspiring, and enigmatic",
+        "dna": {
+          "looks": "A colossal, circular structure is carved into a rocky, coral-encrusted cliff face, appearing as an ancient, sunken temple. Water trickles down from the ornate rim of the circular entrance, pooling in the foreground. The architecture is a fusion of organic coral formations and what appears to be advanced, weathered metallic alloys. The sheer scale of the entrance suggests a significant, imposing structure within. The surrounding environment is dark and cavernous, illuminated by a faint, ethereal glow emanating from beyond the entrance.",
+          "colorsAndLighting": "The lighting is predominantly cool and diffused, characteristic of an underwater environment. A soft, cyan glow emanates from the opening in the background, creating a strong contrast with the darker, textured rock surfaces in the foreground and midground. The overall illumination is dim, with highlights catching the wet surfaces and the intricate details of the carved entrance.",
+          "atmosphere": "The image conveys an underwater environment, with a sense of immense pressure and silence. Visible water droplets suggest moisture and an aquatic setting. The limited visibility beyond the main entrance hints at the vastness of the submerged realm.",
+          "materials": "The primary materials are rough, ancient stone and living coral. Secondary materials include water, algae, and weathered metallic alloys.",
+          "mood": "Imposing, ancient, and mysterious. Hints of forgotten power and advanced technology.",
+          "sounds": "Dripping water, faint currents, distant echoes",
+          "spatialLayout": "Foreground: A shallow, clear turquoise body of water fills the immediate area, with scattered dark rocks and coral formations along its edges. Midground: The dominant feature is the enormous, intricately carved circular entrance set into a dark, textured cliff face, occupying the central portion of the image. Background: Beyond the circular entrance, a lighter, hazy aquatic expanse is visible, suggesting depth and a larger underwater space.",
+          "primary_surfaces": "Rock, Coral",
+          "secondary_surfaces": "Water, Algae",
+          "accent_features": "Metallic alloys (implied in structure), Water droplets",
+          "dominant": "Teal (water, ambient glow)",
+          "secondary": "Dark Grey/Green (rock and coral)",
+          "accent": "White (water droplets)",
+          "ambient": "Muted Teal/Blue",
+          "genre": null,
+          "architectural_tone": "ancient alien megastructures with organic integration, featuring massive scale, geometric complexity, weathered surfaces, and seamless fusion with natural formations, specifically incorporating elaborate carved circular motifs and integrated metallic elements",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Large, ornate circular opening leading into darkness"
+          },
+          {
+            "type": "stairs",
+            "position": "center, foreground",
+            "description": "Submerged, multi-tiered steps leading towards the circular entrance"
+          }
+        ],
+        "dominantElements": [
+          "Massive circular entrance ~30m diameter, center",
+          "Textured, coral-encrusted cliff face, extending from foreground to background",
+          "Shallow body of water, foreground",
+          "Dripping water strands, within the entrance"
+        ],
+        "uniqueIdentifiers": [
+          "Sunken techno-temple entrance",
+          "Circular, carved entryway",
+          "Integrated coral cliff architecture",
+          "Underwater dripping water effect"
+        ],
+        "searchDesc": "[Location - Exterior] Sunken temple entrance carved into coral cliff. Has: circular passage (center), submerged stairs (center)",
+        "slug": "the-sunken-sanctum",
+        "imageUrl": "https://v3b.fal.media/files/b/rabbit/aMG5mlRAvhMH0zjl-5MbD.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sunken Sanctum",
+          "looks": "The exterior of a sunken techno-temple, seamlessly integrated into the living coral cliffs.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/aMG5mlRAvhMH0zjl-5MbD.jpg",
+      "description": "The exterior of a sunken techno-temple, seamlessly integrated into the living coral cliffs."
     }
   },
   "views": {},
@@ -8064,12 +8299,252 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764147514302-2qklu269h",
+      "type": "host",
+      "name": "Oceanic Depths",
+      "description": "A vast and mysterious underwater realm teeming with alien life and forgotten structures.",
+      "dna": {
+        "type": "host",
+        "name": "Oceanic Depths",
+        "description": "A vast and mysterious underwater realm teeming with alien life and forgotten structures.",
+        "dna": {
+          "looks": "A boundless, dark ocean filled with immense geological formations and remnants of advanced, unknown civilizations. Strange bioluminescent organisms provide ethereal light sources, illuminating alien flora and ancient, weathered structures.",
+          "colorsAndLighting": "The environment is dominated by deep blues and blacks, punctuated by vibrant, otherworldly bioluminescent glows. Light is scarce, diffused, and often colored by the light-emitting organisms.",
+          "atmosphere": "The atmosphere is one of immense pressure and profound silence, broken only by the faint sounds of currents and distant, unknown creatures. The water is cold and carries an unsettling stillness.",
+          "materials": "The dominant materials are rough, ancient stone, unknown metallic alloys encrusted with oceanic growth, and pulsating organic matter. Water is the pervasive medium, shaping all surfaces.",
+          "mood": "Mysterious, awe-inspiring, and slightly unnerving. There's a sense of profound history and undiscovered secrets.",
+          "sounds": "Deep rumbling, distant clicks, faint sonar pings, flowing water, muffled impacts",
+          "spatialLayout": "Vast, open abyssal plains interspersed with towering, sunken architectural ruins and deep, cavernous trenches. Verticality is pronounced with immense depths and towering structures.",
+          "primary_surfaces": [
+            "rock",
+            "coral",
+            "ancient stone"
+          ],
+          "secondary_surfaces": [
+            "weathered metal",
+            "bioluminescent organisms",
+            "algae"
+          ],
+          "accent_features": [
+            "glowing flora",
+            "intricate carvings",
+            "alien symbols"
+          ],
+          "dominant": "Deep Blue",
+          "secondary": "Black",
+          "accent": "Cyan",
+          "ambient": "Cool",
+          "genre": "sci-fi",
+          "architectural_tone": "ancient alien megastructures with organic integration, featuring massive scale, geometric complexity, weathered surfaces, and seamless fusion with natural formations",
+          "cultural_tone": "lost civilization, advanced but unknown purpose, reverence for the deep",
+          "materials_base": "corroded alloys, unknown composites, natural geological formations, bioluminescent organic matter",
+          "mood_baseline": "existential wonder, profound isolation, latent discovery",
+          "palette_bias": "cool-toned, high contrast, bioluminescent highlights",
+          "soundscape_base": "ambient oceanic, distant echoes, subtle alien vocalisations",
+          "flora_base": "bioluminescent kelp forests, crystalline growths, pulsing anemones",
+          "fauna_base": "abyssal predators, schooling bio-luminescent creatures, colossal deep-sea leviathans"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Sunken civilizations",
+          "Bioluminescent flora",
+          "Abyssal trenches"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme pressure",
+          "Uncharted territories",
+          "Alien ecosystems"
+        ],
+        "searchDesc": "Vast underwater realm of alien life and ancient, forgotten structures.",
+        "slug": "oceanic-depths",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Oceanic Depths",
+          "looks": "A vast and mysterious underwater realm teeming with alien life and forgotten structures.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/aMG5mlRAvhMH0zjl-5MbD.jpg",
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "cc0dd32d-827d-4431-bdfd-82756a6503d8",
+          "type": "region",
+          "name": "Oceanic Depths",
+          "description": "",
+          "dna": {
+            "type": "region",
+            "name": "Oceanic Depths",
+            "description": "",
+            "dna": {
+              "looks": "A segment of the oceanic depths characterized by sprawling, vibrant coral formations intertwined with the remnants of ancient structures. Visibility varies, with areas of clarity giving way to denser, kelp-filled expanses.",
+              "colorsAndLighting": "A dominance of deep blues and greens, with vibrant pops of color from coral and bioluminescent life. Light is diffused, with shafts of illumination penetrating from above or glowing from within organisms.",
+              "atmosphere": "A cool, heavy atmosphere of immense underwater pressure. Gentle currents flow through the region, carrying the scent of salt and the faint hum of unseen life.",
+              "materials": "Primarily living coral, ancient weathered stone, calcified organic matter, and pockets of advanced, eroded metallic alloys.",
+              "mood": "Enigmatic, naturally beautiful, and ancient. A sense of undisturbed, timeless existence.",
+              "sounds": "Gentle water flow, distant whale song, clicking crustaceans, subtle hums",
+              "spatialLayout": "A mix of open underwater plains, dense coral gardens, and networks of submerged caves and passages. The layout emphasizes organic flow and hidden depths.",
+              "primary_surfaces": [
+                "coral",
+                "stone"
+              ],
+              "secondary_surfaces": [
+                "metal",
+                "algae",
+                "marine growth"
+              ],
+              "accent_features": [
+                "bioluminescent coral",
+                "intricate rock formations",
+                "ancient carvings"
+              ],
+              "dominant": "Teal",
+              "secondary": "Dark Grey/Green",
+              "accent": "Cyan",
+              "ambient": "Cool",
+              "genre": null,
+              "architectural_tone": "ancient alien megastructures with organic integration, featuring massive scale, geometric complexity, weathered surfaces, and seamless fusion with natural formations",
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": "bioluminescent kelp forests, crystalline growths, pulsing anemones",
+              "fauna_base": "schools of iridescent fish, reef-dwelling invertebrates, slow-moving benthic creatures"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Coral reefs",
+              "Sunken ruins",
+              "Abyssal currents"
+            ],
+            "uniqueIdentifiers": [
+              "High mineral content",
+              "Varied marine life",
+              "Submerged caverns"
+            ],
+            "searchDesc": "Submerged realm with vibrant coral, ancient ruins, and deep, mysterious caverns.",
+            "slug": "oceanic-depths",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "Oceanic Depths",
+              "looks": "",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "44e15a05-bf55-4791-8beb-c190765c03f8",
+              "type": "location",
+              "name": "The Sunken Sanctum",
+              "description": "The exterior of a sunken techno-temple, seamlessly integrated into the living coral cliffs.",
+              "dna": {
+                "type": "location",
+                "name": "The Sunken Sanctum",
+                "description": "The exterior of a sunken techno-temple, seamlessly integrated into the living coral cliffs.",
+                "looks": "An otherworldly structure of bio-luminescent coral and advanced metallic alloys, sculpted to merge with the surrounding reef. A circular, ornate entrance is carved into the cliff face, with water constantly trickling from its edges.",
+                "atmosphere": "The muffled sounds of the deep ocean, the gentle current, and the faint hum of unseen technology.",
+                "mood": "Ancient, awe-inspiring, and enigmatic",
+                "dna": {
+                  "looks": "A colossal, circular structure is carved into a rocky, coral-encrusted cliff face, appearing as an ancient, sunken temple. Water trickles down from the ornate rim of the circular entrance, pooling in the foreground. The architecture is a fusion of organic coral formations and what appears to be advanced, weathered metallic alloys. The sheer scale of the entrance suggests a significant, imposing structure within. The surrounding environment is dark and cavernous, illuminated by a faint, ethereal glow emanating from beyond the entrance.",
+                  "colorsAndLighting": "The lighting is predominantly cool and diffused, characteristic of an underwater environment. A soft, cyan glow emanates from the opening in the background, creating a strong contrast with the darker, textured rock surfaces in the foreground and midground. The overall illumination is dim, with highlights catching the wet surfaces and the intricate details of the carved entrance.",
+                  "atmosphere": "The image conveys an underwater environment, with a sense of immense pressure and silence. Visible water droplets suggest moisture and an aquatic setting. The limited visibility beyond the main entrance hints at the vastness of the submerged realm.",
+                  "materials": "The primary materials are rough, ancient stone and living coral. Secondary materials include water, algae, and weathered metallic alloys.",
+                  "mood": "Imposing, ancient, and mysterious. Hints of forgotten power and advanced technology.",
+                  "sounds": "Dripping water, faint currents, distant echoes",
+                  "spatialLayout": "Foreground: A shallow, clear turquoise body of water fills the immediate area, with scattered dark rocks and coral formations along its edges. Midground: The dominant feature is the enormous, intricately carved circular entrance set into a dark, textured cliff face, occupying the central portion of the image. Background: Beyond the circular entrance, a lighter, hazy aquatic expanse is visible, suggesting depth and a larger underwater space.",
+                  "primary_surfaces": "Rock, Coral",
+                  "secondary_surfaces": "Water, Algae",
+                  "accent_features": "Metallic alloys (implied in structure), Water droplets",
+                  "dominant": "Teal (water, ambient glow)",
+                  "secondary": "Dark Grey/Green (rock and coral)",
+                  "accent": "White (water droplets)",
+                  "ambient": "Muted Teal/Blue",
+                  "genre": null,
+                  "architectural_tone": "ancient alien megastructures with organic integration, featuring massive scale, geometric complexity, weathered surfaces, and seamless fusion with natural formations, specifically incorporating elaborate carved circular motifs and integrated metallic elements",
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "passage",
+                    "position": "center, midground",
+                    "description": "Large, ornate circular opening leading into darkness"
+                  },
+                  {
+                    "type": "stairs",
+                    "position": "center, foreground",
+                    "description": "Submerged, multi-tiered steps leading towards the circular entrance"
+                  }
+                ],
+                "dominantElements": [
+                  "Massive circular entrance ~30m diameter, center",
+                  "Textured, coral-encrusted cliff face, extending from foreground to background",
+                  "Shallow body of water, foreground",
+                  "Dripping water strands, within the entrance"
+                ],
+                "uniqueIdentifiers": [
+                  "Sunken techno-temple entrance",
+                  "Circular, carved entryway",
+                  "Integrated coral cliff architecture",
+                  "Underwater dripping water effect"
+                ],
+                "searchDesc": "[Location - Exterior] Sunken temple entrance carved into coral cliff. Has: circular passage (center), submerged stairs (center)",
+                "slug": "the-sunken-sanctum",
+                "imageUrl": "https://v3b.fal.media/files/b/rabbit/aMG5mlRAvhMH0zjl-5MbD.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Sunken Sanctum",
+                  "looks": "The exterior of a sunken techno-temple, seamlessly integrated into the living coral cliffs.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/rabbit/aMG5mlRAvhMH0zjl-5MbD.jpg",
+              "spaceType": "exterior",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1763990091894-znnq51ts4",
     "loc-1764008292155-0knty61xa",
     "loc-1764067403710-usy8uiqki",
-    "loc-1763994876664-643qmsnex"
+    "loc-1763994876664-643qmsnex",
+    "loc-1764147514302-2qklu269h"
   ]
 }
