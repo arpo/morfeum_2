@@ -14,12 +14,16 @@ import { TopButtonRow } from '@/features/app/components/TopButtonRow';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import { useEffect, useState } from 'react';
+import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import styles from './App.module.css';
 
 export function App() {
   const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
+  
+  // Global keyboard shortcuts (1 = spawn input, 2 = entity explorer)
+  useKeyboardShortcuts();
   
   // Initialize theme on mount
   const { theme } = useThemeStore();
@@ -35,6 +39,7 @@ export function App() {
   const openEntityPanel = useStore(state => state.openEntityPanel);
   const entityExplorerPanelOpen = useStore(state => state.entityExplorerPanelOpen);
   const toggleEntityExplorerPanel = useStore(state => state.toggleEntityExplorerPanel);
+  const focusModeEnabled = useStore(state => state.focusModeEnabled);
   
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
@@ -191,55 +196,67 @@ export function App() {
         </div>
       )}
       
-      {/* Top Button Row - Toggle, Info, Chat */}
-      <TopButtonRow
-        onToggleSidebar={toggleEntityExplorerPanel}
-        onOpenInfo={handleOpenInfo}
-        onOpenChat={handleOpenChat}
-        isCharacter={isCharacter}
-        infoDisabled={!deepProfile}
-        chatDisabled={!deepProfile}
-      />
-      
-      {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
-      <div className={styles.spawnInputContainer}>
-        <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
-      </div>
-
-      {/* Entity Explorer Panel - Draggable */}
-      {entityExplorerPanelOpen && (
-        <EntityExplorerPanel onClose={toggleEntityExplorerPanel} />
+      {/* Focus mode hint */}
+      {focusModeEnabled && (
+        <div className={styles.focusModeHint}>
+          Press spacebar to display UI
+        </div>
       )}
       
-      {/* Column 2 - Chat History (Collapsible) / Image Prompt Panel */}
-      {activeEntitySession && (
-        <aside className={styles.historyPanel}>
-          {/* Show Chat History for Characters */}
-          {activeEntitySession.entityType !== 'location' && (
-            <ChatHistoryViewer messages={activeEntitySession.messages} />
-          )}
-
-          {/* Always show image prompt panel */}
-          {activeEntitySession.imagePrompt && (
-            <ImagePromptPanel imagePrompt={activeEntitySession.imagePrompt} />
-          )}
-        </aside>
-      )}
-
-      {/* Draggable Chat Panels */}
-      {Array.from(entities.entries()).map(([entityId, entity]) => {
-        const isPanelOpen = entityPanelOpen.get(entityId);
-        if (!isPanelOpen || entity.entityType !== 'character') return null;
-        
-        return (
-          <ChatPanel
-            key={entityId}
-            entityId={entityId}
-            entityName={entity.entityName}
-            onClose={() => closeEntityPanel(entityId)}
+      {/* UI Elements - Hidden in focus mode (press Space to toggle) */}
+      {!focusModeEnabled && (
+        <>
+          {/* Top Button Row - Toggle, Info, Chat */}
+          <TopButtonRow
+            onToggleSidebar={toggleEntityExplorerPanel}
+            onOpenInfo={handleOpenInfo}
+            onOpenChat={handleOpenChat}
+            isCharacter={isCharacter}
+            infoDisabled={!deepProfile}
+            chatDisabled={!deepProfile}
           />
-        );
-      })}
+          
+          {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
+          <div className={styles.spawnInputContainer}>
+            <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
+          </div>
+
+          {/* Entity Explorer Panel - Draggable */}
+          {entityExplorerPanelOpen && (
+            <EntityExplorerPanel onClose={toggleEntityExplorerPanel} />
+          )}
+          
+          {/* Column 2 - Chat History (Collapsible) / Image Prompt Panel */}
+          {activeEntitySession && (
+            <aside className={styles.historyPanel}>
+              {/* Show Chat History for Characters */}
+              {activeEntitySession.entityType !== 'location' && (
+                <ChatHistoryViewer messages={activeEntitySession.messages} />
+              )}
+
+              {/* Always show image prompt panel */}
+              {activeEntitySession.imagePrompt && (
+                <ImagePromptPanel imagePrompt={activeEntitySession.imagePrompt} />
+              )}
+            </aside>
+          )}
+
+          {/* Draggable Chat Panels */}
+          {Array.from(entities.entries()).map(([entityId, entity]) => {
+            const isPanelOpen = entityPanelOpen.get(entityId);
+            if (!isPanelOpen || entity.entityType !== 'character') return null;
+            
+            return (
+              <ChatPanel
+                key={entityId}
+                entityId={entityId}
+                entityName={entity.entityName}
+                onClose={() => closeEntityPanel(entityId)}
+              />
+            );
+          })}
+        </>
+      )}
 
       {/* Character Info Modal */}
       {isCharacter && (

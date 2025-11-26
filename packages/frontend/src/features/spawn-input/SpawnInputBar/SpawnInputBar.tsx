@@ -20,8 +20,11 @@ interface SpawnInputBarProps {
 export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const { state, handlers } = useSpawnInputLogic();
   const navigation = useNavigationLogic();
-  const [isMinimized, setIsMinimized] = useState(false);
   const [activeTab, setActiveTab] = useState('character');
+  
+  // Get spawn input state from store
+  const isMinimized = useStore(state => state.spawnInputMinimized);
+  const toggleSpawnInput = useStore(state => state.toggleSpawnInput);
   
   // Get active spawns from store
   const activeSpawns = useStore(state => state.activeSpawns);
@@ -67,8 +70,8 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
         {/* Minimized Tab */}
         <div 
           className={styles.minimizedTab}
-          onClick={() => setIsMinimized(false)}
-          title="Click to expand"
+          onClick={toggleSpawnInput}
+          title="Click to expand (or press 1)"
         >
           <IconChevronUp size={16} />
           <span className={styles.minimizedText}></span>
@@ -79,8 +82,8 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
           <div className={styles.topRow}>
             <button
               className={styles.minimizeButton}
-              onClick={() => setIsMinimized(true)}
-              title="Minimize"
+              onClick={toggleSpawnInput}
+              title="Minimize (or press 1)"
             >
               <IconChevronDown size={18} />
             </button>

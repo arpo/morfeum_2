@@ -136,3 +136,40 @@
     width: 300px;
   }
 }
+
+/* Focus mode hint */
+.focusModeHint {
+  position: fixed;
+  top: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-sm);
+  z-index: 10;
+  animation: fadeInOutHint 3.5s ease-out forwards;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+@keyframes fadeInOutHint {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  14% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  86% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+  }
+}

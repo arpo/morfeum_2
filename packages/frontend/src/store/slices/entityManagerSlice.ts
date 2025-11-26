@@ -50,6 +50,8 @@ export interface EntityManagerSlice {
   activeEntity: string | null;
   entityPanelOpen: Map<string, boolean>;
   entityExplorerPanelOpen: boolean;
+  spawnInputMinimized: boolean;
+  focusModeEnabled: boolean;
 
   createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => void;
   updateEntityImage: (spawnId: string, imageUrl: string) => void;
@@ -65,6 +67,8 @@ export interface EntityManagerSlice {
   closeEntityPanel: (entityId: string) => void;
   isEntityPanelOpen: (entityId: string) => boolean;
   toggleEntityExplorerPanel: () => void;
+  toggleSpawnInput: () => void;
+  toggleFocusMode: () => void;
 }
 
 export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, get) => ({
@@ -72,6 +76,8 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
   activeEntity: null,
   entityPanelOpen: new Map(),
   entityExplorerPanelOpen: localStorage.getItem('entityExplorerPanelOpen') !== 'false',
+  spawnInputMinimized: localStorage.getItem('spawnInputMinimized') === 'true',
+  focusModeEnabled: false,
 
   createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => {
     const systemMessage: ChatMessage = {
@@ -338,5 +344,17 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       localStorage.setItem('entityExplorerPanelOpen', String(newState));
       return { entityExplorerPanelOpen: newState };
     });
+  },
+
+  toggleSpawnInput: () => {
+    set((state) => {
+      const newState = !state.spawnInputMinimized;
+      localStorage.setItem('spawnInputMinimized', String(newState));
+      return { spawnInputMinimized: newState };
+    });
+  },
+
+  toggleFocusMode: () => {
+    set((state) => ({ focusModeEnabled: !state.focusModeEnabled }));
   }
 });
