@@ -5841,6 +5841,875 @@
       ],
       "searchDesc": "Orbital station engineering niche, chrome, dark composite, cyan lights, functional, isolated.",
       "slug": "interior-of-the-orbital-relay-station"
+    },
+    "loc-1764169132460-zog6ulons": {
+      "id": "loc-1764169132460-zog6ulons",
+      "type": "host",
+      "name": "The Verdant Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Verdant Expanse",
+        "description": "A realm of untamed jungles and forgotten civilizations.",
+        "dna": {
+          "looks": "Vast, untamed wilderness dominated by colossal, ancient trees and dense, multi-layered jungle foliage. Scattered throughout are remnants of lost civilizations, partially reclaimed by nature, featuring intricate stonework and decaying grandeur. The air is thick with life and mystery.",
+          "colorsAndLighting": "Dominantly deep greens and earthy browns, punctuated by vibrant flashes of exotic flora. Lighting is dappled and diffused, filtered through thick canopies, creating an atmospheric, low-light environment with pockets of intense sunlight.",
+          "atmosphere": "Humid and warm, with a constant scent of damp earth, decaying vegetation, and exotic flowers. The air often carries a fine mist or haze, especially in lower-lying areas, contributing to a sense of mystery and primordial wilderness.",
+          "materials": "Predominantly natural materials like ancient stone, moss-covered wood, and vibrant, varied plant life. Metallic elements are rare and often heavily corroded or integrated into the natural environment.",
+          "mood": "A sense of awe, wonder, and subtle danger. The pervasive feeling is one of immense age and the overwhelming power of nature reclaiming what was once built.",
+          "sounds": "Chirping insects, distant animal calls, rustling leaves, flowing water, dripping condensation, crumbling stone.",
+          "spatialLayout": "Expansive and vertical, with dense undergrowth creating labyrinthine paths. Structures are often integrated into natural formations like cliffs and caves, with a sense of being swallowed by the environment.",
+          "primary_surfaces": [
+            "ancient stone",
+            "dense foliage",
+            "rotting wood"
+          ],
+          "secondary_surfaces": [
+            "earth",
+            "vines",
+            "moss"
+          ],
+          "accent_features": [
+            "exotic flowers",
+            "carved stonework",
+            "glowing fungi"
+          ],
+          "dominant": "green",
+          "secondary": "brown",
+          "accent": "vibrant floral colors",
+          "ambient": "diffused natural light",
+          "genre": "fantasy-jungle-exploration",
+          "architectural_tone": "ancient, overgrown, and integrated with nature; featuring weathered stone, intricate carving partially obscured by moss and vines, robust timber structures with organic shapes, and a general sense of being absorbed by the jungle.",
+          "cultural_tone": "lost civilizations, primal societies, forgotten rituals",
+          "materials_base": "stone, wood, natural fibers, heavy vegetation",
+          "mood_baseline": "mysterious, ancient, adventurous",
+          "palette_bias": "earthy greens and browns with vibrant, exotic accents",
+          "soundscape_base": "dense jungle ambiance with exotic wildlife",
+          "flora_base": "dense, multi-layered jungle flora; giant trees, thick vines, exotic flowering plants",
+          "fauna_base": "tropical birds, large insects, primates, reptiles, elusive large mammals"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ancient Ruins",
+          "Impenetrable Jungles",
+          "Mysterious Structures"
+        ],
+        "uniqueIdentifiers": [
+          "Lost Technology",
+          "Overgrown Architecture",
+          "Hidden Dangers"
+        ],
+        "searchDesc": "A world of overgrown ancient ruins, dense jungles, and mysterious lost civilizations.",
+        "slug": "the-verdant-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Verdant Expanse",
+          "looks": "A realm of untamed jungles and forgotten civilizations.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A realm of untamed jungles and forgotten civilizations."
+    },
+    "adf9389a-39ca-4c21-8b75-f4726d9ba332": {
+      "id": "adf9389a-39ca-4c21-8b75-f4726d9ba332",
+      "type": "region",
+      "name": "Emerald Cliffs",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "Emerald Cliffs",
+        "description": "Towering vertical cliffs draped in dense, ancient jungle foliage.",
+        "dna": {
+          "looks": "Imposing sheer cliff faces covered in a vibrant tapestry of dense jungle vegetation. Waterfalls cascade down the rock, feeding the lush growth. The scale is immense, with the jungle seeming to cling precariously to the vertical surfaces.",
+          "colorsAndLighting": "Dominated by a spectrum of greens, from deep emerald to bright lime, contrasted by grey rock and white water. Lighting is often dim and filtered by the overhanging canopy, with shafts of sunlight occasionally piercing through, highlighting the mist from waterfalls.",
+          "atmosphere": "Thick with moisture and the spray from waterfalls, creating a perpetual dampness. The air is heavy and humid, carrying the scent of wet earth and exotic blossoms. A sense of height and exposure is palpable.",
+          "materials": "Primarily ancient, weathered stone, thick moss, clinging vines, and tough jungle roots. Some areas may feature remnants of crude, reinforced pathways or handholds carved into the rock.",
+          "mood": "Awe-inspiring, challenging, and somewhat precarious. The environment emphasizes the raw power of nature and the difficulty of traversal.",
+          "sounds": "Roaring waterfalls, echoing bird calls, dripping water, the hum of insects, wind through dense foliage.",
+          "spatialLayout": "Strictly vertical, with limited horizontal space. The primary movement is up or down, following the contours of the cliffs and the paths forged by nature or past inhabitants.",
+          "primary_surfaces": [
+            "sheer rock face",
+            "dense jungle foliage",
+            "moss and vines"
+          ],
+          "secondary_surfaces": [
+            "waterfalls",
+            "earthy deposits",
+            "exposed roots"
+          ],
+          "accent_features": [
+            "rare colorful orchids",
+            "unique rock formations",
+            "water-carved alcoves"
+          ],
+          "dominant": "green",
+          "secondary": "grey",
+          "accent": "white (water)",
+          "ambient": "cool, humid",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "challenging, majestic",
+          "palette_bias": "predominantly greens and greys with water highlights",
+          "soundscape_base": "powerful water features and amplified natural sounds",
+          "flora_base": "hardy, clinging jungle vegetation adapted to vertical surfaces; vines, mosses, epiphytes",
+          "fauna_base": "cliff-dwelling birds, arboreal reptiles, insects adapted to moist environments"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Sheer Cliffs",
+          "Cascading Waterfalls",
+          "Jungle Canopy"
+        ],
+        "uniqueIdentifiers": [
+          "Vertical Ecosystems",
+          "Hidden Caves",
+          "Perilous Ascents"
+        ],
+        "searchDesc": "Vertical jungle-covered cliffs with hidden passages and perilous ascents.",
+        "slug": "emerald-cliffs",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Emerald Cliffs",
+          "looks": "Towering vertical cliffs draped in dense, ancient jungle foliage.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Towering vertical cliffs draped in dense, ancient jungle foliage."
+    },
+    "7e92765a-e493-4ce0-b620-2f6fa638e0fd": {
+      "id": "7e92765a-e493-4ce0-b620-2f6fa638e0fd",
+      "type": "location",
+      "name": "The Sunken Ascent",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Sunken Ascent",
+        "description": "An abandoned funicular station carved into a vertical jungle cliff.",
+        "looks": "Weathered wooden structure with crumbling facade, cables dangling precariously, warped wooden doors.",
+        "atmosphere": "Damp, humid air, distant calls of exotic birds, the faint creak of aging metal.",
+        "mood": "Decaying, mysterious",
+        "dna": {
+          "looks": "The image depicts an abandoned wooden funicular station embedded into a sheer, jungle-covered cliff face. Its facade is weathered, with the wood showing signs of decay and warping, yet the structure remains standing. Hanging cables are visible, suggesting past functionality and a precarious present. The entrance is dominated by large, warped wooden doors, with two rustic lanterns flanking the doorway, casting a warm glow.",
+          "colorsAndLighting": "The lighting is dim and atmospheric, with warm, soft light emanating from the two lanterns beside the entrance. This artificial light contrasts with the diffused, cool natural light filtering through the dense jungle canopy, creating pockets of light and shadow.",
+          "atmosphere": "The air appears heavy and humid, with a noticeable haze obscuring the distant jungle depths and cliff faces. The dense foliage suggests a moist environment, likely contributing to the weathered appearance of the wooden structure.",
+          "materials": "Primary materials are heavily weathered wood and the natural stone of the cliff face. Secondary materials include aged metal for the cables and lantern fixtures.",
+          "mood": "Melancholy, mysterious, and a touch eerie. A sense of forgotten purpose and encroaching nature.",
+          "sounds": "Dripping water, creaking wood, distant jungle hum, wind whistling through cables.",
+          "spatialLayout": "The foreground consists of a rough path leading to the funicular station, which is the central element in the midground. The station is carved into the base of a massive, vertical jungle cliff that extends into the background, creating a sense of depth and immersion in the dense vegetation.",
+          "primary_surfaces": "wood",
+          "secondary_surfaces": "stone, foliage, metal",
+          "accent_features": "glass (lanterns)",
+          "dominant": "green (foliage)",
+          "secondary": "brown (wood, earth), grey (stone)",
+          "accent": "warm yellow (lanterns)",
+          "ambient": "muted green and grey",
+          "genre": null,
+          "architectural_tone": "functional, utilitarian, and heavily weathered; featuring rough-hewn timber construction, simple geometric shapes, exposed structural elements, and a strong integration with the natural cliff face. Details include warped planks, exposed joints, and hand-forged metal fittings.",
+          "cultural_tone": "industrial remnants, forgotten transport",
+          "materials_base": null,
+          "mood_baseline": "melancholic, forgotten",
+          "palette_bias": "muted browns and greens with warm, artificial light accents",
+          "soundscape_base": "decaying structural sounds and distant natural ambiance",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Large, warped wooden double doors serving as the entrance"
+          },
+          {
+            "type": "passage",
+            "position": "left, midground",
+            "description": "A rough path leading past the station into the jungle"
+          }
+        ],
+        "dominantElements": [
+          "Weathered wooden funicular station (midground)",
+          "Vertical jungle cliff face (background)",
+          "Dense jungle foliage (surrounding structure)"
+        ],
+        "uniqueIdentifiers": [
+          "Funicular station carved into cliff",
+          "Warped wooden doors with lanterns",
+          "Dangling cables"
+        ],
+        "searchDesc": "Abandoned funicular station in jungle. Has: double doors (center, midground), passage (left, midground)",
+        "slug": "the-sunken-ascent",
+        "imageUrl": "https://v3b.fal.media/files/b/lion/lJ6Wubhnz6Xiz3xBHhPnA.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sunken Ascent",
+          "looks": "An abandoned funicular station carved into a vertical jungle cliff.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/lJ6Wubhnz6Xiz3xBHhPnA.jpg",
+      "description": "An abandoned funicular station carved into a vertical jungle cliff."
+    },
+    "niche-1764169189110-j6uuzu1h6": {
+      "id": "niche-1764169189110-j6uuzu1h6",
+      "type": "niche",
+      "name": "interior of The Sunken Ascent",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A dimly lit, weathered wooden chamber featuring crumbling plaster walls and a vaulted, low timbered ceiling. The floor is dark, worn cobblestone. Warped wooden plank walls with missing sections line the midground, with thick, ropy vines snaking across surfaces and precariously dangling electrical cables.",
+        "colorsAndLighting": "Dominant tones are dark browns and grays from aged wood and plaster. A single tarnished brass lantern casts a flickering, warm light, creating dramatic shadows and illuminating the immediate area.",
+        "atmosphere": "The air is damp and humid, with a palpable sense of decay and mystery. Distant, exotic bird calls and the faint creak of aging metal suggest an abandoned, overgrown environment. The overall feel is oppressive yet intriguing.",
+        "materials": "Key materials include weathered, aged wood in beams and plank walls, crumbling plaster, and dark, worn cobblestones. Ropy vines and thick electrical cables add a texture of overgrowth and disarray. The brass lantern is intricate and tarnished.",
+        "mood": "The mood is one of profound decay and deep mystery, with an underlying sense of foreboding and forgotten history.",
+        "sounds": "Distant exotic birds, creaking metal, dripping water, faint hum",
+        "spatialLayout": "The space is a chamber with a low, vaulted ceiling. A prominent wooden beam in the foreground partially hides a winding staircase. The midground has irregular walls, and the background is dominated by a large cracked wall section. The perspective is off-center, drawing the eye inward.",
+        "primary_surfaces": "crumbling plaster walls, worn cobblestone floor, timbered ceiling",
+        "secondary_surfaces": "weathered wooden beams, warped wooden plank walls",
+        "accent_features": "tarnished brass lantern, ropy vines, dangling electrical cables",
+        "dominant": "dark browns: majority of wood and floor surfaces",
+        "secondary": "grays: plaster walls and shadows",
+        "accent": "warm brass: lantern and its light pool",
+        "ambient": "warm",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "Decaying, mysterious",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "vines",
+        "fauna_base": "'exotic birds'"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/QRBLoTwArIwuznii3O8pu.jpg",
+      "description": "A dimly lit, weathered wooden chamber with crumbling plaster walls, exuding a decaying, mysterious mood.",
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "foreground left",
+          "description": "Narrow, winding stone staircase disappearing into shadows"
+        },
+        {
+          "type": "door",
+          "position": "midground left",
+          "description": "Half-open, warped wooden door slightly ajar"
+        },
+        {
+          "type": "passage",
+          "position": "midground",
+          "description": "Implied behind missing wall sections"
+        }
+      ],
+      "dominantElements": [
+        "cracked plaster wall",
+        "tarnished brass lantern",
+        "moss-covered wooden beam",
+        "warped wooden plank walls",
+        "vaulted timbered ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "tarnished brass lantern",
+        "roped vines on cobblestones",
+        "dangling electrical cables"
+      ],
+      "searchDesc": "Dim, decaying wooden chamber with crumbling plaster, vines, and a tarnished brass lantern.",
+      "slug": "interior-of-the-sunken-ascent"
+    },
+    "loc-1764169371839-jh2y2bruf": {
+      "id": "loc-1764169371839-jh2y2bruf",
+      "type": "host",
+      "name": "The Ethereal Sea",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Ethereal Sea",
+        "description": "A boundless expanse where sky meets an ocean of dreams.",
+        "dna": {
+          "looks": "A surreal, boundless horizon where the sky blends seamlessly with a vast, tranquil ocean. Strange, colossal rock formations drift like islands, hinting at ancient, forgotten life.  An pervasive, soft glow emanates from unseen sources, painting the world in muted, otherworldly tones.",
+          "colorsAndLighting": "Dominated by cool, muted blues, grays, and ethereal teals, with occasional soft, pulsing bioluminescence. Lighting is ambient and diffused, creating an otherworldly, dreamlike atmosphere.",
+          "atmosphere": "The air is thick with a gentle, luminous mist, carrying the faint scent of ozone and unknown flora. The atmosphere is serene, quiet, and profoundly vast, evoking a sense of peaceful isolation and wonder.  Temperature feels neutral, neither warm nor cold.",
+          "materials": "Primarily appears to be composed of colossal, weathered stone formations, interspersed with crystalline growths and organic, bioluminescent elements. The sea itself seems to be made of light and dreams.",
+          "mood": "Serene, mystical, awe-inspiring, and slightly melancholic, encouraging introspection and a sense of grand discovery.",
+          "sounds": "Soft ambient hum, distant ethereal chimes, gentle lapping water, faint whispers",
+          "spatialLayout": "An infinite, open expanse with colossal, scattered rock formations.  Depth perception is often distorted by mist and ambient light, creating a sense of immense scale and undefined boundaries.",
+          "primary_surfaces": "Stone, crystalline structures",
+          "secondary_surfaces": "Bioluminescent organic matter",
+          "accent_features": "Pulsing lights, iridescent sheen, drifting motes of light",
+          "dominant": "Blues, Grays",
+          "secondary": "Teals, Ethereal Whites",
+          "accent": "Bioluminescent Greens, Soft Purples",
+          "ambient": "Cool, ethereal",
+          "genre": "fantasy",
+          "architectural_tone": "naturalistic monumental forms with organic bioluminescent accents, suggesting ancient, colossal, and inherently magical structures shaped by primordial forces rather than direct construction",
+          "cultural_tone": "Nomadic, introspective, ancient, spiritual",
+          "materials_base": "Weathered stone, crystal, organic light emitters",
+          "mood_baseline": "Wonder, contemplation, serene mystery",
+          "palette_bias": "Cool, muted, ethereal",
+          "soundscape_base": "Ambient hum, naturalistic but softened, melodic whispers",
+          "flora_base": "Bioluminescent fungi, ethereal mosses, crystal-like plants",
+          "fauna_base": "Colossal, slow-moving sea creatures, wisps of light"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating rock formations",
+          "Mystical mist",
+          "Unseen depths"
+        ],
+        "uniqueIdentifiers": [
+          "Dream ocean",
+          "Sky-sea convergence"
+        ],
+        "searchDesc": "A mystical, boundless expanse where the sky merges with a dreamlike ocean.",
+        "slug": "the-ethereal-sea",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Ethereal Sea",
+          "looks": "A boundless expanse where sky meets an ocean of dreams.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A boundless expanse where sky meets an ocean of dreams."
+    },
+    "d98bed1c-ad59-4d66-9465-c06d1c91eb89": {
+      "id": "d98bed1c-ad59-4d66-9465-c06d1c91eb89",
+      "type": "region",
+      "name": "The Ethereal Sea",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Ethereal Sea",
+        "description": "",
+        "dna": {
+          "looks": "A sprawling archipelago composed of gargantuan, whale-shaped rock formations suspended in the misty expanse. These 'rock-whales' are covered in textured, craggy stone and a profusion of large, bioluminescent barnacles that pulse with a soft, internal light.  Below them, a turbulent, dark blue sea churns.",
+          "colorsAndLighting": "The dominant colors are deep blues and grays of the rock and water, punctuated by the cool turquoise and teal glow of the barnacles and internal cavern light. The overall lighting is dim and atmospheric, with shadows defining the immense scale of the formations.",
+          "atmosphere": "The air is heavy with a pervasive mist, lending a sense of mystery and dampness to the environment. The atmosphere is humid and cool, with the constant presence of the turbulent sea contributing to a sense of raw, untamed power.",
+          "materials": "Primarily stone, with significant crystalline growths and abundant, naturally occurring bioluminescent organic matter (barnacles). The water appears dense and viscous.",
+          "mood": "Mysterious, awe-inspiring, slightly foreboding due to the turbulent water, yet also beautiful and wondrous.",
+          "sounds": "Crashing waves, echoing drips, low groans of stone, soft pulsing hums",
+          "spatialLayout": "A scattered arrangement of immense, irregularly shaped rock formations, creating a labyrinthine navigable space between them.  The sheer size of the formations dominates the view.",
+          "primary_surfaces": "Craggy stone, crystalline growths",
+          "secondary_surfaces": "Bioluminescent barnacles, dark water",
+          "accent_features": "Pulsing barnacle lights, mist veils",
+          "dominant": "Deep blues, Grays",
+          "secondary": "Turquoise, Teal",
+          "accent": "Bioluminescent glow",
+          "ambient": "Cool, atmospheric",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "Cool, oceanic, bioluminescent",
+          "soundscape_base": "Aquatic, resonant, ambient",
+          "flora_base": "Bioluminescent algae, mineralized growths",
+          "fauna_base": "Giant, sessile filter feeders (barnacles), unseen leviathans"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Archipelago of floating rock-whales",
+          "Bioluminescent barnacles",
+          "Turbulent dark blue water"
+        ],
+        "uniqueIdentifiers": [
+          "Floating rock formations",
+          "Bioluminescent marine life"
+        ],
+        "searchDesc": "An archipelago of immense, floating rock formations resembling whales, encrusted with glowing barnacles.",
+        "slug": "the-ethereal-sea-region",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Ethereal Sea",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": ""
+    },
+    "765f32c6-f59a-4257-a3da-ecb4b14c905b": {
+      "id": "765f32c6-f59a-4257-a3da-ecb4b14c905b",
+      "type": "location",
+      "name": "The Great Leviathan's Maw",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Great Leviathan's Maw",
+        "description": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+        "looks": "A gargantuan, whale-shaped landmass composed of weathered stone and crystalline formations. Bioluminescent barnacles pulse with soft light across its surface. The entrance is a vast, dark opening on its flank, resembling a colossal mouth.",
+        "atmosphere": "Misty air carrying the scent of ozone and ancient stone, punctuated by the faint hum of biological energy and the distant calls of ethereal creatures.",
+        "mood": "Majestic, awe-inspiring, foreboding",
+        "dna": {
+          "looks": "A colossal, whale-shaped rock formation dominates the scene, its surface textured with craggy stone and crystalline growths. Large, bioluminescent barnacles dot its exterior, emitting a soft, pulsing light. A vast, cavernous opening, resembling a gaping maw, is situated on the flank of this structure. The surrounding environment consists of jagged, mist-shrouded cliffs and a turbulent, dark blue body of water. The scale is immense, dwarfing the solitary figure standing on the foreground path.",
+          "colorsAndLighting": "The primary light source appears to be the bioluminescent barnacles and an internal glow emanating from the cavernous opening, casting a cool, ethereal light. This creates areas of soft illumination contrasting with deep shadows on the rock formations. The overall lighting is dim and atmospheric, with a slight turquoise hue.",
+          "atmosphere": "The air is thick with a pervasive mist, obscuring distant details and softening the overall scene. The atmosphere suggests a humid, possibly cold environment, with the mist contributing to a sense of mystery and isolation.",
+          "materials": "The primary material is rugged, weathered stone. Secondary materials include glittering crystalline formations and the soft, organic texture of the bioluminescent barnacles.",
+          "mood": "Mysterious, awe-inspiring, slightly daunting, and ancient, evoking a sense of venturing into the unknown.",
+          "sounds": "Distant echo of the sea, low thrumming, faint dripping, wind whistling",
+          "spatialLayout": "The foreground features a weathered stone pathway leading towards the water, bordered by rugged, dark rocks on the left. The midground is dominated by the immense, whale-like landmass with its prominent blowhole entrance, situated directly ahead and partially submerged in the water. The background is filled with towering, mist-obscured rock formations and a cloudy sky, creating a sense of depth and vastness.",
+          "primary_surfaces": "Stone",
+          "secondary_surfaces": "Crystalline formations",
+          "accent_features": "Bioluminescent barnacles",
+          "dominant": "Deep blues and grays of the rock and water",
+          "secondary": "Turquoise and teal from the ambient light and water",
+          "accent": "Pulsing turquoise and cyan light from the barnacles and the opening",
+          "ambient": "Cool, muted turquoise and gray overall",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "Vast, dark opening in the whale-shaped landmass, glowing with inner light."
+          },
+          {
+            "type": "door",
+            "position": "left flank, midground",
+            "description": "Smaller dark openings visible on the side of the main structure."
+          },
+          {
+            "type": "pathway",
+            "position": "foreground",
+            "description": "Stone pathway leading towards the water's edge."
+          }
+        ],
+        "dominantElements": [
+          "Colossal whale-shaped rock formation (midground)",
+          "Cavernous blowhole entrance (midground)",
+          "Jagged rock cliffs (background and sides)",
+          "Figure on pathway (foreground)"
+        ],
+        "uniqueIdentifiers": [
+          "Whale-shaped floating island",
+          "Cavernous blowhole entrance",
+          "Bioluminescent barnacles"
+        ],
+        "searchDesc": "[Location - Exterior] Whale-shaped landmass with blowhole entrance. Has: passage (center, midground), door (left flank, midground), pathway (foreground)",
+        "slug": "the-great-leviathans-maw",
+        "imageUrl": "https://v3b.fal.media/files/b/koala/7D4D29dwfDeY9eWNb5Hwi.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Great Leviathan's Maw",
+          "looks": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/7D4D29dwfDeY9eWNb5Hwi.jpg",
+      "description": "The cavernous blowhole entrance on the largest of the floating rock-whales."
+    },
+    "niche-1764169460977-noeut61hq": {
+      "id": "niche-1764169460977-noeut61hq",
+      "type": "niche",
+      "name": "interior of The Great Leviathan's Maw",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is an awe-inspiring, cavernous interior space. Rough-hewn stone walls are lit by pulsing bioluminescent barnacles and crystalline formations refract light. A prominent archway is in the foreground left, and sapphire crystal panels with a metal-framed ramp are in the midground right.",
+        "colorsAndLighting": "The primary light source is the soft, pulsing glow of bioluminescent elements, creating an ethereal and uneven illumination. Dominant colors are deep grays and blues from the stone and crystal, punctuated by the vibrant glow of the bioluminescence.",
+        "atmosphere": "The air is thick with a misty atmosphere, carrying the faint scent of ozone and ancient stone. An underlying hum of biological energy pervades the space, contributing to a sense of immense, living scale.",
+        "materials": "The main surfaces are rough-hewn, weathered stone and large, translucent sapphire-like crystal panels. Metal framework and grated metal flooring add an industrial counterpoint. Jagged crystalline formations are abundant.",
+        "mood": "Majestic and awe-inspiring, yet with a subtle undercurrent of foreboding due to the immense scale and dim, otherworldly lighting.",
+        "sounds": "Soft pulsing hum, faint echoes, distant drips.",
+        "spatialLayout": "A vast, vaulted chamber with rough, organic contours. Entry points are an archway in the foreground left and a crystalline wall in the background center, with a midground ramp on the right suggesting lower levels.",
+        "primary_surfaces": "Rough-hewn stone, translucent sapphire-like crystal, jagged crystal formations.",
+        "secondary_surfaces": "Dark metal framework, dark grated metal flooring.",
+        "accent_features": "Intensely glowing bioluminescent flora lining the archway, clustered bioluminescent formations on walls.",
+        "dominant": "Deep gray (stone), with significant coverage.",
+        "secondary": "Deep sapphire blue (crystal panels), noticeable presence.",
+        "accent": "Ethereal bioluminescent glow (various cool to warm tones) in patches and lines, highlighting features.",
+        "ambient": "Cool, with pockets of warmer bioluminescent light.",
+        "genre": null,
+        "architectural_tone": "Organic, cavernous, ancient",
+        "cultural_tone": null,
+        "materials_base": "Stone, crystal, bioluminescent organic matter",
+        "mood_baseline": "Majestic, awe-inspiring, foreboding",
+        "palette_bias": "Cool tones with vibrant luminous accents",
+        "soundscape_base": "Subtle organic hums and echoes",
+        "flora_base": "Bioluminescent flora",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/WDFBM9I0xExOs06GluDQQ.jpg",
+      "description": "The immense, cavernous interior of a colossal whale-like landmass, characterized by rough-hewn stone, pulsing bioluminescence, and crystalline formations.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "foreground left",
+          "description": "A rough-hewn stone archway leading to a darker passage, lined with intensely glowing bioluminescent flora."
+        },
+        {
+          "type": "ramp",
+          "position": "midground right",
+          "description": "A narrow, angled ramp of dark grated metal descending towards a lower level."
+        },
+        {
+          "type": "passage",
+          "position": "background center",
+          "description": "A vast, curved crystalline wall revealing a dimly lit vista, suggesting passage or view into the leviathan's ecosystem."
+        }
+      ],
+      "dominantElements": [
+        "rough-hewn stone walls",
+        "bioluminescent barnacles and flora",
+        "jagged crystalline formations",
+        "sapphire-like crystal panels",
+        "vast curved crystalline wall"
+      ],
+      "uniqueIdentifiers": [
+        "colossal whale-shaped landmass interior",
+        "pulsing bioluminescent glow",
+        "jagged refracting crystals",
+        "integrated sapphire crystal panels"
+      ],
+      "searchDesc": "Cavernous interior of a colossal whale-landmass with bioluminescence, crystals, and rough stone.",
+      "slug": "interior-of-the-great-leviathan-s-maw"
+    },
+    "loc-1764169499145-0c1qg3tpv": {
+      "id": "loc-1764169499145-0c1qg3tpv",
+      "type": "host",
+      "name": "The Astral Plane",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Astral Plane",
+        "description": "A realm of shifting colors and boundless dimensions.",
+        "dna": {
+          "looks": "A non-corporeal expanse where reality bends and logic is fluid. Shifting geometric forms, impossible structures, and landscapes composed of pure thought manifest and dissipate. Colors bleed into one another in ways unseen in material existence.",
+          "colorsAndLighting": "Vibrant, saturated hues clash and meld, creating an otherworldly palette. Light sources are often intrinsic, emanating from surfaces or conceptual points, casting dynamic and unpredictable shadows. The overall impression is one of luminous, ever-changing visual phenomena.",
+          "atmosphere": "The atmosphere is charged with psychic energy, feeling both exhilarating and disorienting. There is no discernible temperature, gravity, or weather, as these are subject to the whims of consciousness. It feels vast, open, and infinite, with an undercurrent of profound mystery.",
+          "materials": "Materials are conceptual or ephemeral, manifesting as light, energy, or shifting forms rather than tangible substances. Expect surfaces that behave like liquid, solid, or pure light simultaneously. Textures can range from impossibly smooth to complexly fractal.",
+          "mood": "Enigmatic, awe-inspiring, and potentially overwhelming. A sense of boundless potential and infinite possibility is balanced by the profound unfamiliarity of the space.",
+          "sounds": "Whispers, hums, chimes, cosmic sighs, ethereal melodies, silence.",
+          "spatialLayout": "Space is not bound by conventional physics. Dimensions can fold, stretch, and merge. Views extend infinitely in all directions, often with multiple perspectives available simultaneously. Architectural elements are conceptual and fluid, defying stable form.",
+          "primary_surfaces": [
+            "Energy",
+            "Light",
+            "Conceptual Forms"
+          ],
+          "secondary_surfaces": [
+            "Shifting Color Fields",
+            "Dreamlike Textures"
+          ],
+          "accent_features": [
+            "Impossible Geometry",
+            "Manifested Thoughts",
+            "Conceptual Light Sculptures"
+          ],
+          "dominant": "Iridescent",
+          "secondary": "Prismatic",
+          "accent": "Luminous White",
+          "ambient": "Ethereal Glow",
+          "genre": "Astral Fantasy",
+          "architectural_tone": "Conceptual and fluid, defying stable form. Manifestations of pure thought and energy, with impossible geometry and constantly shifting structures. Elements may appear as solidified light, energetic fields, or dreamlike constructs.",
+          "cultural_tone": "Existential and introspective. A realm where consciousness is paramount and the fundamental nature of reality is explored.",
+          "materials_base": "Ephemeral and energetic, manifesting as light, pure force, or shifting conceptual substances. Less about traditional material properties and more about the interplay of energy and form.",
+          "mood_baseline": "Profound wonder and existential introspection, tinged with a sense of the alien and incomprehensible.",
+          "palette_bias": "Extremely vibrant and diverse, utilizing the full spectrum of visible and conceptual colors, often in non-traditional combinations and transitions.",
+          "soundscape_base": "Harmonious yet dissonant ethereal sounds, with moments of profound silence and cosmic resonance.",
+          "flora_base": "None",
+          "fauna_base": "Manifestations of pure thought or energy."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Infinite Color Spectrum",
+          "Boundless Dimensions",
+          "Conceptual Architecture"
+        ],
+        "uniqueIdentifiers": [
+          "Non-Euclidean Geometry",
+          "Dreamlike Realities"
+        ],
+        "searchDesc": "A realm of shifting colors, boundless dimensions, and conceptual architecture.",
+        "slug": "the-astral-plane",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Astral Plane",
+          "looks": "A realm of shifting colors and boundless dimensions.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A realm of shifting colors and boundless dimensions."
+    },
+    "c36b56db-ef96-46bd-9dc9-7e6711168764": {
+      "id": "c36b56db-ef96-46bd-9dc9-7e6711168764",
+      "type": "region",
+      "name": "The Teal Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Teal Expanse",
+        "description": "A vast, tranquil plateau of shimmering teal, holding cosmic secrets.",
+        "dna": {
+          "looks": "An immense, flat, and unbroken expanse stretching to an impossibly distant horizon. The entire surface is composed of a vibrant, shimmering teal material that reflects the surrounding cosmic energies. Subtle undulations might suggest hidden movement beneath the surface.",
+          "colorsAndLighting": "Dominated by a single, rich, and luminous teal hue. The light is diffused and soft, originating from the Astral Plane itself, casting no harsh shadows. Occasional faint pulses of brighter light might ripple across the surface.",
+          "atmosphere": "The air is still, calm, and possesses a palpable tranquility. It feels vast and open, with a gentle, almost imperceptible pressure. There's a sense of profound peace and ancient stillness, undisturbed by conventional environmental factors.",
+          "materials": "The primary material is a smooth, almost liquid-like teal substance that possesses an inherent luminosity. It feels cool to the touch and incredibly uniform in its composition. Subtle textural variations may appear as fleeting patterns.",
+          "mood": "Serene, vast, and contemplative. Evokes a sense of peaceful isolation and profound quietude, inviting introspection.",
+          "sounds": "Deep hums, gentle whispers, faint cosmic tones, profound silence.",
+          "spatialLayout": "An almost infinite, flat plane with no discernible features or obstructions, extending to a perfect, unbroken horizon. The scale is immense, creating a feeling of being a single point within an unending vista.",
+          "primary_surfaces": [
+            "Luminous Teal Substance",
+            "Reflective Plane"
+          ],
+          "secondary_surfaces": [
+            "Subtle Energy Ripples"
+          ],
+          "accent_features": [
+            "Horizonless Vista",
+            "Cosmic Reflections"
+          ],
+          "dominant": "Teal",
+          "secondary": "Silver",
+          "accent": "Deep Indigo",
+          "ambient": "Soft Luminescence",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": "Ancient and serene. A place of contemplation and observation rather than active civilization.",
+          "materials_base": "Smooth, luminous, and subtly energetic. The primary material feels almost liquid but holds a stable planar form.",
+          "mood_baseline": "Tranquil vastness and existential peace.",
+          "palette_bias": "Monochromatic teal with subtle silver and indigo accents, maintaining a cool and serene visual theme.",
+          "soundscape_base": "Extremely subdued, characterized by low-frequency hums and ethereal echoes, emphasizing the vastness and stillness.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Vast Teal Plateau",
+          "Cosmic Vistas",
+          "Unseen Depths"
+        ],
+        "uniqueIdentifiers": [
+          "Perfectly Flat Horizon",
+          "Shimmering Surface"
+        ],
+        "searchDesc": "A tranquil plateau of shimmering teal with a flat horizon, hinting at cosmic secrets and unseen depths.",
+        "slug": "the-teal-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Teal Expanse",
+          "looks": "A vast, tranquil plateau of shimmering teal, holding cosmic secrets.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A vast, tranquil plateau of shimmering teal, holding cosmic secrets."
+    },
+    "85ebeed8-a6bf-4e29-998c-d014e78f7e2a": {
+      "id": "85ebeed8-a6bf-4e29-998c-d014e78f7e2a",
+      "type": "location",
+      "name": "The Shadowed Nexus",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Shadowed Nexus",
+        "description": "A perfect circle of deep shadow upon the teal plateau, hinting at depths unknown.",
+        "looks": "Vast, flat expanse of teal color, broken by a stark, perfectly circular area of absolute darkness.",
+        "atmosphere": "Still, silent air, carrying a faint, almost imperceptible hum.",
+        "mood": "Mysterious, contemplative",
+        "dna": {
+          "looks": "The scene depicts a vast, cavernous interior with a wide, flat floor and arched alcoves along the walls. A grand, semicircular staircase occupies the central midground, ascending towards an arched opening that leads to a brightly lit area. The ceiling above the staircase is a large, circular opening with a textured, glowing surface. The overall scale suggests a monumental structure, with the architecture feeling ancient and imposing.",
+          "colorsAndLighting": "The primary light source emanates from the arched opening in the background and the circular ceiling feature above the stairs. This light is bright and diffuse, casting a soft glow that illuminates the central area. The surrounding walls and alcoves are in shadow, creating a high contrast between the illuminated focal points and the darker periphery.",
+          "atmosphere": "The air appears still and heavy, with a subtle haze or mist present, particularly around the arched opening and staircase. This atmospheric effect contributes to the sense of depth and mystery within the space.",
+          "materials": "The primary material of the shadow itself is pure light absorption. The ramp appears to be constructed from ancient, dark stone, worn smooth by countless unseen passages. Subtle atmospheric haze might be present near the light source below.",
+          "mood": "Mysterious, intriguing, and ominous. The stark contrast and the descent into the unknown create a potent sense of foreboding and curiosity.",
+          "sounds": "Distant echoes, faint hums, soft wind, encroaching silence.",
+          "spatialLayout": "The foreground consists of a flat, tiled floor stretching from the viewer towards the midground. The midground is dominated by the large semicircular staircase, which serves as a focal point. Flanking the staircase are imposing arched alcoves within the walls, receding into the midground. The background features a large arched portal leading to a brighter, illuminated area, with the circular ceiling feature directly above the staircase in the far background.",
+          "primary_surfaces": "stone",
+          "secondary_surfaces": "textured plaster",
+          "accent_features": "glowing light",
+          "dominant": "teal",
+          "secondary": "dark grey, bright cyan",
+          "accent": "glowing white/cyan",
+          "ambient": "teal",
+          "genre": null,
+          "architectural_tone": "Monumental and ancient, with a focus on geometric precision. Features a grand, semicircular staircase or ramp, arched alcoves, and a large, circular opening in the ceiling above. The construction implies immense scale and a robust, imposing presence. Materials are primarily stone with textured plaster elements, conveying a sense of age and permanence.",
+          "cultural_tone": "Ritualistic and enigmatic. Suggests a place of passage, transition, or descent into deeper, perhaps sacred, mysteries.",
+          "materials_base": "Rough-hewn, aged stone for primary structural elements and floors. Textured plaster or a similar material for walls, often with an aged or weathered finish. Accents might include ancient, dark metals.",
+          "mood_baseline": "Intriguing mystery and a sense of foreboding, balanced by the promise of discovery.",
+          "palette_bias": "Heavily weighted towards dark tones, with sharp contrasts. Teal and muted grey form the base, with bright cyan as a stark, illuminating accent color, predominantly originating from the light source.",
+          "soundscape_base": "Muffled echoes and faint, distant sounds, creating an oppressive yet expectant auditory environment.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, midground",
+            "description": "Expansive semicircular staircase leading upwards to an arched passage"
+          },
+          {
+            "type": "passage",
+            "position": "center, background",
+            "description": "Large arched passage illuminated with bright light, promising a new area"
+          }
+        ],
+        "dominantElements": [
+          "Grand semicircular staircase (est. 20m wide, WIDE STRUCTURE), center, midground",
+          "Arched opening (est. 15m tall, ARCHWAY), center, background",
+          "Circular ceiling feature (est. 10m diameter, WIDE STRUCTURE), center, background",
+          "Arched alcoves (est. 8m tall, HORIZONTAL STRUCTURE), flanking walls, midground"
+        ],
+        "uniqueIdentifiers": [
+          "Grand semicircular staircase",
+          "Circular textured ceiling illumination",
+          "High-contrast shadow play"
+        ],
+        "searchDesc": "Interior cavernous space. Has: semicircular stairs (center, midground), arched passage (center, background)",
+        "slug": "the-shadowed-nexus",
+        "imageUrl": "https://v3b.fal.media/files/b/rabbit/dsDWMbUlXUaGrD8WDTTx4.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Shadowed Nexus",
+          "looks": "A perfect circle of deep shadow upon the teal plateau, hinting at depths unknown.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/dsDWMbUlXUaGrD8WDTTx4.jpg",
+      "description": "A perfect circle of deep shadow upon the teal plateau, hinting at depths unknown."
+    },
+    "niche-1764169553837-kulgatv8l": {
+      "id": "niche-1764169553837-kulgatv8l",
+      "type": "niche",
+      "name": "interior of The Shadowed Nexus",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This high-tech atrium features a vast, flat expanse of polished concrete flooring that recedes into darkness. Immense transparent glazing panels, held by a stark brushed steel geodesic grid, form the walls. The ceiling mirrors the geodesic structure, fitted with cool-toned indirect lighting.",
+        "colorsAndLighting": "Dominant colors are deep teals and blacks, contrasted by the cool, sharp shadows cast by recessed ceiling lights. Subtle geometric light inlays break the dark flooring.",
+        "atmosphere": "The air vibrates with a faint, almost imperceptible hum from unseen systems. The overall feel is one of vast, silent mystery and deep contemplation.",
+        "materials": "Polished, deep teal concrete forms the floor, transitioning to absolute darkness. The structural elements are comprised of stark, brushed steel, and large transparent architectural glazing panels.",
+        "mood": "The scene evokes a profound sense of mystery and quiet contemplation, inviting exploration into the unknown.",
+        "sounds": "Faint hum, subtle vibration, unseen systems.",
+        "spatialLayout": "A grand, wide atrium with a receding floor plane and towering walls defined by a geodesic grid. Entry points are visible as an archway and a suspended walkway.",
+        "primary_surfaces": "Polished concrete, transparent glazing panels, brushed steel grid.",
+        "secondary_surfaces": "Recessed lighting fixtures.",
+        "accent_features": "Geometric light inlays on the floor, glowing archway edges, cyan diagnostic light.",
+        "dominant": "Black (flooring depth, void)",
+        "secondary": "Midnight-teal (flooring)",
+        "accent": "Deep violet (archway edges), Cyan (access panel light), Cool white (lighting)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "stark geodesic futurism",
+        "cultural_tone": null,
+        "materials_base": "polished concrete, brushed steel, transparent architectural glass",
+        "mood_baseline": "Mysterious, contemplative",
+        "palette_bias": "Cool, dark tones with vibrant light accents",
+        "soundscape_base": "Subtle ambient hum and industrial resonance",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/kangaroo/wBARAc9eX1rZ47PB6muov.jpg",
+      "description": "A high-tech atrium interior within The Shadowed Nexus, characterized by vast, dark expanses and stark architectural elements.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "foreground center",
+          "description": "A towering, obsidian-black archway with softly glowing deep violet edges."
+        },
+        {
+          "type": "walkway",
+          "position": "midground left",
+          "description": "A slender, polished metal walkway suspended at mid-height, curving into the distance."
+        },
+        {
+          "type": "access panel",
+          "position": "midground right",
+          "description": "A reinforced glazing section marked with a bright, cyan diagnostic light."
+        }
+      ],
+      "dominantElements": [
+        "polished concrete flooring",
+        "geodesic steel grid",
+        "transparent glazing panels",
+        "recessed ceiling lighting"
+      ],
+      "uniqueIdentifiers": [
+        "midnight-teal concrete flooring with light inlays",
+        "stark brushed steel geodesic grid",
+        "deep violet glowing archway",
+        "cyan diagnostic light panel"
+      ],
+      "searchDesc": "High-tech atrium of The Shadowed Nexus with dark concrete, steel grid, and violet archway.",
+      "slug": "interior-of-the-shadowed-nexus"
     }
   },
   "views": {},
@@ -7761,12 +8630,714 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764169132460-zog6ulons",
+      "type": "host",
+      "name": "The Verdant Expanse",
+      "description": "A realm of untamed jungles and forgotten civilizations.",
+      "dna": {
+        "type": "host",
+        "name": "The Verdant Expanse",
+        "description": "A realm of untamed jungles and forgotten civilizations.",
+        "dna": {
+          "looks": "Vast, untamed wilderness dominated by colossal, ancient trees and dense, multi-layered jungle foliage. Scattered throughout are remnants of lost civilizations, partially reclaimed by nature, featuring intricate stonework and decaying grandeur. The air is thick with life and mystery.",
+          "colorsAndLighting": "Dominantly deep greens and earthy browns, punctuated by vibrant flashes of exotic flora. Lighting is dappled and diffused, filtered through thick canopies, creating an atmospheric, low-light environment with pockets of intense sunlight.",
+          "atmosphere": "Humid and warm, with a constant scent of damp earth, decaying vegetation, and exotic flowers. The air often carries a fine mist or haze, especially in lower-lying areas, contributing to a sense of mystery and primordial wilderness.",
+          "materials": "Predominantly natural materials like ancient stone, moss-covered wood, and vibrant, varied plant life. Metallic elements are rare and often heavily corroded or integrated into the natural environment.",
+          "mood": "A sense of awe, wonder, and subtle danger. The pervasive feeling is one of immense age and the overwhelming power of nature reclaiming what was once built.",
+          "sounds": "Chirping insects, distant animal calls, rustling leaves, flowing water, dripping condensation, crumbling stone.",
+          "spatialLayout": "Expansive and vertical, with dense undergrowth creating labyrinthine paths. Structures are often integrated into natural formations like cliffs and caves, with a sense of being swallowed by the environment.",
+          "primary_surfaces": [
+            "ancient stone",
+            "dense foliage",
+            "rotting wood"
+          ],
+          "secondary_surfaces": [
+            "earth",
+            "vines",
+            "moss"
+          ],
+          "accent_features": [
+            "exotic flowers",
+            "carved stonework",
+            "glowing fungi"
+          ],
+          "dominant": "green",
+          "secondary": "brown",
+          "accent": "vibrant floral colors",
+          "ambient": "diffused natural light",
+          "genre": "fantasy-jungle-exploration",
+          "architectural_tone": "ancient, overgrown, and integrated with nature; featuring weathered stone, intricate carving partially obscured by moss and vines, robust timber structures with organic shapes, and a general sense of being absorbed by the jungle.",
+          "cultural_tone": "lost civilizations, primal societies, forgotten rituals",
+          "materials_base": "stone, wood, natural fibers, heavy vegetation",
+          "mood_baseline": "mysterious, ancient, adventurous",
+          "palette_bias": "earthy greens and browns with vibrant, exotic accents",
+          "soundscape_base": "dense jungle ambiance with exotic wildlife",
+          "flora_base": "dense, multi-layered jungle flora; giant trees, thick vines, exotic flowering plants",
+          "fauna_base": "tropical birds, large insects, primates, reptiles, elusive large mammals"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ancient Ruins",
+          "Impenetrable Jungles",
+          "Mysterious Structures"
+        ],
+        "uniqueIdentifiers": [
+          "Lost Technology",
+          "Overgrown Architecture",
+          "Hidden Dangers"
+        ],
+        "searchDesc": "A world of overgrown ancient ruins, dense jungles, and mysterious lost civilizations.",
+        "slug": "the-verdant-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Verdant Expanse",
+          "looks": "A realm of untamed jungles and forgotten civilizations.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "adf9389a-39ca-4c21-8b75-f4726d9ba332",
+          "type": "region",
+          "name": "Emerald Cliffs",
+          "description": "Towering vertical cliffs draped in dense, ancient jungle foliage.",
+          "dna": {
+            "type": "region",
+            "name": "Emerald Cliffs",
+            "description": "Towering vertical cliffs draped in dense, ancient jungle foliage.",
+            "dna": {
+              "looks": "Imposing sheer cliff faces covered in a vibrant tapestry of dense jungle vegetation. Waterfalls cascade down the rock, feeding the lush growth. The scale is immense, with the jungle seeming to cling precariously to the vertical surfaces.",
+              "colorsAndLighting": "Dominated by a spectrum of greens, from deep emerald to bright lime, contrasted by grey rock and white water. Lighting is often dim and filtered by the overhanging canopy, with shafts of sunlight occasionally piercing through, highlighting the mist from waterfalls.",
+              "atmosphere": "Thick with moisture and the spray from waterfalls, creating a perpetual dampness. The air is heavy and humid, carrying the scent of wet earth and exotic blossoms. A sense of height and exposure is palpable.",
+              "materials": "Primarily ancient, weathered stone, thick moss, clinging vines, and tough jungle roots. Some areas may feature remnants of crude, reinforced pathways or handholds carved into the rock.",
+              "mood": "Awe-inspiring, challenging, and somewhat precarious. The environment emphasizes the raw power of nature and the difficulty of traversal.",
+              "sounds": "Roaring waterfalls, echoing bird calls, dripping water, the hum of insects, wind through dense foliage.",
+              "spatialLayout": "Strictly vertical, with limited horizontal space. The primary movement is up or down, following the contours of the cliffs and the paths forged by nature or past inhabitants.",
+              "primary_surfaces": [
+                "sheer rock face",
+                "dense jungle foliage",
+                "moss and vines"
+              ],
+              "secondary_surfaces": [
+                "waterfalls",
+                "earthy deposits",
+                "exposed roots"
+              ],
+              "accent_features": [
+                "rare colorful orchids",
+                "unique rock formations",
+                "water-carved alcoves"
+              ],
+              "dominant": "green",
+              "secondary": "grey",
+              "accent": "white (water)",
+              "ambient": "cool, humid",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": "challenging, majestic",
+              "palette_bias": "predominantly greens and greys with water highlights",
+              "soundscape_base": "powerful water features and amplified natural sounds",
+              "flora_base": "hardy, clinging jungle vegetation adapted to vertical surfaces; vines, mosses, epiphytes",
+              "fauna_base": "cliff-dwelling birds, arboreal reptiles, insects adapted to moist environments"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Sheer Cliffs",
+              "Cascading Waterfalls",
+              "Jungle Canopy"
+            ],
+            "uniqueIdentifiers": [
+              "Vertical Ecosystems",
+              "Hidden Caves",
+              "Perilous Ascents"
+            ],
+            "searchDesc": "Vertical jungle-covered cliffs with hidden passages and perilous ascents.",
+            "slug": "emerald-cliffs",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "Emerald Cliffs",
+              "looks": "Towering vertical cliffs draped in dense, ancient jungle foliage.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "7e92765a-e493-4ce0-b620-2f6fa638e0fd",
+              "type": "location",
+              "name": "The Sunken Ascent",
+              "description": "An abandoned funicular station carved into a vertical jungle cliff.",
+              "dna": {
+                "type": "location",
+                "name": "The Sunken Ascent",
+                "description": "An abandoned funicular station carved into a vertical jungle cliff.",
+                "looks": "Weathered wooden structure with crumbling facade, cables dangling precariously, warped wooden doors.",
+                "atmosphere": "Damp, humid air, distant calls of exotic birds, the faint creak of aging metal.",
+                "mood": "Decaying, mysterious",
+                "dna": {
+                  "looks": "The image depicts an abandoned wooden funicular station embedded into a sheer, jungle-covered cliff face. Its facade is weathered, with the wood showing signs of decay and warping, yet the structure remains standing. Hanging cables are visible, suggesting past functionality and a precarious present. The entrance is dominated by large, warped wooden doors, with two rustic lanterns flanking the doorway, casting a warm glow.",
+                  "colorsAndLighting": "The lighting is dim and atmospheric, with warm, soft light emanating from the two lanterns beside the entrance. This artificial light contrasts with the diffused, cool natural light filtering through the dense jungle canopy, creating pockets of light and shadow.",
+                  "atmosphere": "The air appears heavy and humid, with a noticeable haze obscuring the distant jungle depths and cliff faces. The dense foliage suggests a moist environment, likely contributing to the weathered appearance of the wooden structure.",
+                  "materials": "Primary materials are heavily weathered wood and the natural stone of the cliff face. Secondary materials include aged metal for the cables and lantern fixtures.",
+                  "mood": "Melancholy, mysterious, and a touch eerie. A sense of forgotten purpose and encroaching nature.",
+                  "sounds": "Dripping water, creaking wood, distant jungle hum, wind whistling through cables.",
+                  "spatialLayout": "The foreground consists of a rough path leading to the funicular station, which is the central element in the midground. The station is carved into the base of a massive, vertical jungle cliff that extends into the background, creating a sense of depth and immersion in the dense vegetation.",
+                  "primary_surfaces": "wood",
+                  "secondary_surfaces": "stone, foliage, metal",
+                  "accent_features": "glass (lanterns)",
+                  "dominant": "green (foliage)",
+                  "secondary": "brown (wood, earth), grey (stone)",
+                  "accent": "warm yellow (lanterns)",
+                  "ambient": "muted green and grey",
+                  "genre": null,
+                  "architectural_tone": "functional, utilitarian, and heavily weathered; featuring rough-hewn timber construction, simple geometric shapes, exposed structural elements, and a strong integration with the natural cliff face. Details include warped planks, exposed joints, and hand-forged metal fittings.",
+                  "cultural_tone": "industrial remnants, forgotten transport",
+                  "materials_base": null,
+                  "mood_baseline": "melancholic, forgotten",
+                  "palette_bias": "muted browns and greens with warm, artificial light accents",
+                  "soundscape_base": "decaying structural sounds and distant natural ambiance",
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "door",
+                    "position": "center, midground",
+                    "description": "Large, warped wooden double doors serving as the entrance"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "left, midground",
+                    "description": "A rough path leading past the station into the jungle"
+                  }
+                ],
+                "dominantElements": [
+                  "Weathered wooden funicular station (midground)",
+                  "Vertical jungle cliff face (background)",
+                  "Dense jungle foliage (surrounding structure)"
+                ],
+                "uniqueIdentifiers": [
+                  "Funicular station carved into cliff",
+                  "Warped wooden doors with lanterns",
+                  "Dangling cables"
+                ],
+                "searchDesc": "Abandoned funicular station in jungle. Has: double doors (center, midground), passage (left, midground)",
+                "slug": "the-sunken-ascent",
+                "imageUrl": "https://v3b.fal.media/files/b/lion/lJ6Wubhnz6Xiz3xBHhPnA.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Sunken Ascent",
+                  "looks": "An abandoned funicular station carved into a vertical jungle cliff.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/lion/lJ6Wubhnz6Xiz3xBHhPnA.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764169189110-j6uuzu1h6",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764169371839-jh2y2bruf",
+      "type": "host",
+      "name": "The Ethereal Sea",
+      "description": "A boundless expanse where sky meets an ocean of dreams.",
+      "dna": {
+        "type": "host",
+        "name": "The Ethereal Sea",
+        "description": "A boundless expanse where sky meets an ocean of dreams.",
+        "dna": {
+          "looks": "A surreal, boundless horizon where the sky blends seamlessly with a vast, tranquil ocean. Strange, colossal rock formations drift like islands, hinting at ancient, forgotten life.  An pervasive, soft glow emanates from unseen sources, painting the world in muted, otherworldly tones.",
+          "colorsAndLighting": "Dominated by cool, muted blues, grays, and ethereal teals, with occasional soft, pulsing bioluminescence. Lighting is ambient and diffused, creating an otherworldly, dreamlike atmosphere.",
+          "atmosphere": "The air is thick with a gentle, luminous mist, carrying the faint scent of ozone and unknown flora. The atmosphere is serene, quiet, and profoundly vast, evoking a sense of peaceful isolation and wonder.  Temperature feels neutral, neither warm nor cold.",
+          "materials": "Primarily appears to be composed of colossal, weathered stone formations, interspersed with crystalline growths and organic, bioluminescent elements. The sea itself seems to be made of light and dreams.",
+          "mood": "Serene, mystical, awe-inspiring, and slightly melancholic, encouraging introspection and a sense of grand discovery.",
+          "sounds": "Soft ambient hum, distant ethereal chimes, gentle lapping water, faint whispers",
+          "spatialLayout": "An infinite, open expanse with colossal, scattered rock formations.  Depth perception is often distorted by mist and ambient light, creating a sense of immense scale and undefined boundaries.",
+          "primary_surfaces": "Stone, crystalline structures",
+          "secondary_surfaces": "Bioluminescent organic matter",
+          "accent_features": "Pulsing lights, iridescent sheen, drifting motes of light",
+          "dominant": "Blues, Grays",
+          "secondary": "Teals, Ethereal Whites",
+          "accent": "Bioluminescent Greens, Soft Purples",
+          "ambient": "Cool, ethereal",
+          "genre": "fantasy",
+          "architectural_tone": "naturalistic monumental forms with organic bioluminescent accents, suggesting ancient, colossal, and inherently magical structures shaped by primordial forces rather than direct construction",
+          "cultural_tone": "Nomadic, introspective, ancient, spiritual",
+          "materials_base": "Weathered stone, crystal, organic light emitters",
+          "mood_baseline": "Wonder, contemplation, serene mystery",
+          "palette_bias": "Cool, muted, ethereal",
+          "soundscape_base": "Ambient hum, naturalistic but softened, melodic whispers",
+          "flora_base": "Bioluminescent fungi, ethereal mosses, crystal-like plants",
+          "fauna_base": "Colossal, slow-moving sea creatures, wisps of light"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating rock formations",
+          "Mystical mist",
+          "Unseen depths"
+        ],
+        "uniqueIdentifiers": [
+          "Dream ocean",
+          "Sky-sea convergence"
+        ],
+        "searchDesc": "A mystical, boundless expanse where the sky merges with a dreamlike ocean.",
+        "slug": "the-ethereal-sea",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Ethereal Sea",
+          "looks": "A boundless expanse where sky meets an ocean of dreams.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "d98bed1c-ad59-4d66-9465-c06d1c91eb89",
+          "type": "region",
+          "name": "The Ethereal Sea",
+          "description": "",
+          "dna": {
+            "type": "region",
+            "name": "The Ethereal Sea",
+            "description": "",
+            "dna": {
+              "looks": "A sprawling archipelago composed of gargantuan, whale-shaped rock formations suspended in the misty expanse. These 'rock-whales' are covered in textured, craggy stone and a profusion of large, bioluminescent barnacles that pulse with a soft, internal light.  Below them, a turbulent, dark blue sea churns.",
+              "colorsAndLighting": "The dominant colors are deep blues and grays of the rock and water, punctuated by the cool turquoise and teal glow of the barnacles and internal cavern light. The overall lighting is dim and atmospheric, with shadows defining the immense scale of the formations.",
+              "atmosphere": "The air is heavy with a pervasive mist, lending a sense of mystery and dampness to the environment. The atmosphere is humid and cool, with the constant presence of the turbulent sea contributing to a sense of raw, untamed power.",
+              "materials": "Primarily stone, with significant crystalline growths and abundant, naturally occurring bioluminescent organic matter (barnacles). The water appears dense and viscous.",
+              "mood": "Mysterious, awe-inspiring, slightly foreboding due to the turbulent water, yet also beautiful and wondrous.",
+              "sounds": "Crashing waves, echoing drips, low groans of stone, soft pulsing hums",
+              "spatialLayout": "A scattered arrangement of immense, irregularly shaped rock formations, creating a labyrinthine navigable space between them.  The sheer size of the formations dominates the view.",
+              "primary_surfaces": "Craggy stone, crystalline growths",
+              "secondary_surfaces": "Bioluminescent barnacles, dark water",
+              "accent_features": "Pulsing barnacle lights, mist veils",
+              "dominant": "Deep blues, Grays",
+              "secondary": "Turquoise, Teal",
+              "accent": "Bioluminescent glow",
+              "ambient": "Cool, atmospheric",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": "Cool, oceanic, bioluminescent",
+              "soundscape_base": "Aquatic, resonant, ambient",
+              "flora_base": "Bioluminescent algae, mineralized growths",
+              "fauna_base": "Giant, sessile filter feeders (barnacles), unseen leviathans"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Archipelago of floating rock-whales",
+              "Bioluminescent barnacles",
+              "Turbulent dark blue water"
+            ],
+            "uniqueIdentifiers": [
+              "Floating rock formations",
+              "Bioluminescent marine life"
+            ],
+            "searchDesc": "An archipelago of immense, floating rock formations resembling whales, encrusted with glowing barnacles.",
+            "slug": "the-ethereal-sea-region",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Ethereal Sea",
+              "looks": "",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "765f32c6-f59a-4257-a3da-ecb4b14c905b",
+              "type": "location",
+              "name": "The Great Leviathan's Maw",
+              "description": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+              "dna": {
+                "type": "location",
+                "name": "The Great Leviathan's Maw",
+                "description": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+                "looks": "A gargantuan, whale-shaped landmass composed of weathered stone and crystalline formations. Bioluminescent barnacles pulse with soft light across its surface. The entrance is a vast, dark opening on its flank, resembling a colossal mouth.",
+                "atmosphere": "Misty air carrying the scent of ozone and ancient stone, punctuated by the faint hum of biological energy and the distant calls of ethereal creatures.",
+                "mood": "Majestic, awe-inspiring, foreboding",
+                "dna": {
+                  "looks": "A colossal, whale-shaped rock formation dominates the scene, its surface textured with craggy stone and crystalline growths. Large, bioluminescent barnacles dot its exterior, emitting a soft, pulsing light. A vast, cavernous opening, resembling a gaping maw, is situated on the flank of this structure. The surrounding environment consists of jagged, mist-shrouded cliffs and a turbulent, dark blue body of water. The scale is immense, dwarfing the solitary figure standing on the foreground path.",
+                  "colorsAndLighting": "The primary light source appears to be the bioluminescent barnacles and an internal glow emanating from the cavernous opening, casting a cool, ethereal light. This creates areas of soft illumination contrasting with deep shadows on the rock formations. The overall lighting is dim and atmospheric, with a slight turquoise hue.",
+                  "atmosphere": "The air is thick with a pervasive mist, obscuring distant details and softening the overall scene. The atmosphere suggests a humid, possibly cold environment, with the mist contributing to a sense of mystery and isolation.",
+                  "materials": "The primary material is rugged, weathered stone. Secondary materials include glittering crystalline formations and the soft, organic texture of the bioluminescent barnacles.",
+                  "mood": "Mysterious, awe-inspiring, slightly daunting, and ancient, evoking a sense of venturing into the unknown.",
+                  "sounds": "Distant echo of the sea, low thrumming, faint dripping, wind whistling",
+                  "spatialLayout": "The foreground features a weathered stone pathway leading towards the water, bordered by rugged, dark rocks on the left. The midground is dominated by the immense, whale-like landmass with its prominent blowhole entrance, situated directly ahead and partially submerged in the water. The background is filled with towering, mist-obscured rock formations and a cloudy sky, creating a sense of depth and vastness.",
+                  "primary_surfaces": "Stone",
+                  "secondary_surfaces": "Crystalline formations",
+                  "accent_features": "Bioluminescent barnacles",
+                  "dominant": "Deep blues and grays of the rock and water",
+                  "secondary": "Turquoise and teal from the ambient light and water",
+                  "accent": "Pulsing turquoise and cyan light from the barnacles and the opening",
+                  "ambient": "Cool, muted turquoise and gray overall",
+                  "genre": null,
+                  "architectural_tone": null,
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "passage",
+                    "position": "center, midground",
+                    "description": "Vast, dark opening in the whale-shaped landmass, glowing with inner light."
+                  },
+                  {
+                    "type": "door",
+                    "position": "left flank, midground",
+                    "description": "Smaller dark openings visible on the side of the main structure."
+                  },
+                  {
+                    "type": "pathway",
+                    "position": "foreground",
+                    "description": "Stone pathway leading towards the water's edge."
+                  }
+                ],
+                "dominantElements": [
+                  "Colossal whale-shaped rock formation (midground)",
+                  "Cavernous blowhole entrance (midground)",
+                  "Jagged rock cliffs (background and sides)",
+                  "Figure on pathway (foreground)"
+                ],
+                "uniqueIdentifiers": [
+                  "Whale-shaped floating island",
+                  "Cavernous blowhole entrance",
+                  "Bioluminescent barnacles"
+                ],
+                "searchDesc": "[Location - Exterior] Whale-shaped landmass with blowhole entrance. Has: passage (center, midground), door (left flank, midground), pathway (foreground)",
+                "slug": "the-great-leviathans-maw",
+                "imageUrl": "https://v3b.fal.media/files/b/koala/7D4D29dwfDeY9eWNb5Hwi.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Great Leviathan's Maw",
+                  "looks": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/koala/7D4D29dwfDeY9eWNb5Hwi.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764169460977-noeut61hq",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764169499145-0c1qg3tpv",
+      "type": "host",
+      "name": "The Astral Plane",
+      "description": "A realm of shifting colors and boundless dimensions.",
+      "dna": {
+        "type": "host",
+        "name": "The Astral Plane",
+        "description": "A realm of shifting colors and boundless dimensions.",
+        "dna": {
+          "looks": "A non-corporeal expanse where reality bends and logic is fluid. Shifting geometric forms, impossible structures, and landscapes composed of pure thought manifest and dissipate. Colors bleed into one another in ways unseen in material existence.",
+          "colorsAndLighting": "Vibrant, saturated hues clash and meld, creating an otherworldly palette. Light sources are often intrinsic, emanating from surfaces or conceptual points, casting dynamic and unpredictable shadows. The overall impression is one of luminous, ever-changing visual phenomena.",
+          "atmosphere": "The atmosphere is charged with psychic energy, feeling both exhilarating and disorienting. There is no discernible temperature, gravity, or weather, as these are subject to the whims of consciousness. It feels vast, open, and infinite, with an undercurrent of profound mystery.",
+          "materials": "Materials are conceptual or ephemeral, manifesting as light, energy, or shifting forms rather than tangible substances. Expect surfaces that behave like liquid, solid, or pure light simultaneously. Textures can range from impossibly smooth to complexly fractal.",
+          "mood": "Enigmatic, awe-inspiring, and potentially overwhelming. A sense of boundless potential and infinite possibility is balanced by the profound unfamiliarity of the space.",
+          "sounds": "Whispers, hums, chimes, cosmic sighs, ethereal melodies, silence.",
+          "spatialLayout": "Space is not bound by conventional physics. Dimensions can fold, stretch, and merge. Views extend infinitely in all directions, often with multiple perspectives available simultaneously. Architectural elements are conceptual and fluid, defying stable form.",
+          "primary_surfaces": [
+            "Energy",
+            "Light",
+            "Conceptual Forms"
+          ],
+          "secondary_surfaces": [
+            "Shifting Color Fields",
+            "Dreamlike Textures"
+          ],
+          "accent_features": [
+            "Impossible Geometry",
+            "Manifested Thoughts",
+            "Conceptual Light Sculptures"
+          ],
+          "dominant": "Iridescent",
+          "secondary": "Prismatic",
+          "accent": "Luminous White",
+          "ambient": "Ethereal Glow",
+          "genre": "Astral Fantasy",
+          "architectural_tone": "Conceptual and fluid, defying stable form. Manifestations of pure thought and energy, with impossible geometry and constantly shifting structures. Elements may appear as solidified light, energetic fields, or dreamlike constructs.",
+          "cultural_tone": "Existential and introspective. A realm where consciousness is paramount and the fundamental nature of reality is explored.",
+          "materials_base": "Ephemeral and energetic, manifesting as light, pure force, or shifting conceptual substances. Less about traditional material properties and more about the interplay of energy and form.",
+          "mood_baseline": "Profound wonder and existential introspection, tinged with a sense of the alien and incomprehensible.",
+          "palette_bias": "Extremely vibrant and diverse, utilizing the full spectrum of visible and conceptual colors, often in non-traditional combinations and transitions.",
+          "soundscape_base": "Harmonious yet dissonant ethereal sounds, with moments of profound silence and cosmic resonance.",
+          "flora_base": "None",
+          "fauna_base": "Manifestations of pure thought or energy."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Infinite Color Spectrum",
+          "Boundless Dimensions",
+          "Conceptual Architecture"
+        ],
+        "uniqueIdentifiers": [
+          "Non-Euclidean Geometry",
+          "Dreamlike Realities"
+        ],
+        "searchDesc": "A realm of shifting colors, boundless dimensions, and conceptual architecture.",
+        "slug": "the-astral-plane",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Astral Plane",
+          "looks": "A realm of shifting colors and boundless dimensions.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "c36b56db-ef96-46bd-9dc9-7e6711168764",
+          "type": "region",
+          "name": "The Teal Expanse",
+          "description": "A vast, tranquil plateau of shimmering teal, holding cosmic secrets.",
+          "dna": {
+            "type": "region",
+            "name": "The Teal Expanse",
+            "description": "A vast, tranquil plateau of shimmering teal, holding cosmic secrets.",
+            "dna": {
+              "looks": "An immense, flat, and unbroken expanse stretching to an impossibly distant horizon. The entire surface is composed of a vibrant, shimmering teal material that reflects the surrounding cosmic energies. Subtle undulations might suggest hidden movement beneath the surface.",
+              "colorsAndLighting": "Dominated by a single, rich, and luminous teal hue. The light is diffused and soft, originating from the Astral Plane itself, casting no harsh shadows. Occasional faint pulses of brighter light might ripple across the surface.",
+              "atmosphere": "The air is still, calm, and possesses a palpable tranquility. It feels vast and open, with a gentle, almost imperceptible pressure. There's a sense of profound peace and ancient stillness, undisturbed by conventional environmental factors.",
+              "materials": "The primary material is a smooth, almost liquid-like teal substance that possesses an inherent luminosity. It feels cool to the touch and incredibly uniform in its composition. Subtle textural variations may appear as fleeting patterns.",
+              "mood": "Serene, vast, and contemplative. Evokes a sense of peaceful isolation and profound quietude, inviting introspection.",
+              "sounds": "Deep hums, gentle whispers, faint cosmic tones, profound silence.",
+              "spatialLayout": "An almost infinite, flat plane with no discernible features or obstructions, extending to a perfect, unbroken horizon. The scale is immense, creating a feeling of being a single point within an unending vista.",
+              "primary_surfaces": [
+                "Luminous Teal Substance",
+                "Reflective Plane"
+              ],
+              "secondary_surfaces": [
+                "Subtle Energy Ripples"
+              ],
+              "accent_features": [
+                "Horizonless Vista",
+                "Cosmic Reflections"
+              ],
+              "dominant": "Teal",
+              "secondary": "Silver",
+              "accent": "Deep Indigo",
+              "ambient": "Soft Luminescence",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": "Ancient and serene. A place of contemplation and observation rather than active civilization.",
+              "materials_base": "Smooth, luminous, and subtly energetic. The primary material feels almost liquid but holds a stable planar form.",
+              "mood_baseline": "Tranquil vastness and existential peace.",
+              "palette_bias": "Monochromatic teal with subtle silver and indigo accents, maintaining a cool and serene visual theme.",
+              "soundscape_base": "Extremely subdued, characterized by low-frequency hums and ethereal echoes, emphasizing the vastness and stillness.",
+              "flora_base": "None",
+              "fauna_base": "None"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Vast Teal Plateau",
+              "Cosmic Vistas",
+              "Unseen Depths"
+            ],
+            "uniqueIdentifiers": [
+              "Perfectly Flat Horizon",
+              "Shimmering Surface"
+            ],
+            "searchDesc": "A tranquil plateau of shimmering teal with a flat horizon, hinting at cosmic secrets and unseen depths.",
+            "slug": "the-teal-expanse",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Teal Expanse",
+              "looks": "A vast, tranquil plateau of shimmering teal, holding cosmic secrets.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "85ebeed8-a6bf-4e29-998c-d014e78f7e2a",
+              "type": "location",
+              "name": "The Shadowed Nexus",
+              "description": "A perfect circle of deep shadow upon the teal plateau, hinting at depths unknown.",
+              "dna": {
+                "type": "location",
+                "name": "The Shadowed Nexus",
+                "description": "A perfect circle of deep shadow upon the teal plateau, hinting at depths unknown.",
+                "looks": "Vast, flat expanse of teal color, broken by a stark, perfectly circular area of absolute darkness.",
+                "atmosphere": "Still, silent air, carrying a faint, almost imperceptible hum.",
+                "mood": "Mysterious, contemplative",
+                "dna": {
+                  "looks": "The scene depicts a vast, cavernous interior with a wide, flat floor and arched alcoves along the walls. A grand, semicircular staircase occupies the central midground, ascending towards an arched opening that leads to a brightly lit area. The ceiling above the staircase is a large, circular opening with a textured, glowing surface. The overall scale suggests a monumental structure, with the architecture feeling ancient and imposing.",
+                  "colorsAndLighting": "The primary light source emanates from the arched opening in the background and the circular ceiling feature above the stairs. This light is bright and diffuse, casting a soft glow that illuminates the central area. The surrounding walls and alcoves are in shadow, creating a high contrast between the illuminated focal points and the darker periphery.",
+                  "atmosphere": "The air appears still and heavy, with a subtle haze or mist present, particularly around the arched opening and staircase. This atmospheric effect contributes to the sense of depth and mystery within the space.",
+                  "materials": "The primary material of the shadow itself is pure light absorption. The ramp appears to be constructed from ancient, dark stone, worn smooth by countless unseen passages. Subtle atmospheric haze might be present near the light source below.",
+                  "mood": "Mysterious, intriguing, and ominous. The stark contrast and the descent into the unknown create a potent sense of foreboding and curiosity.",
+                  "sounds": "Distant echoes, faint hums, soft wind, encroaching silence.",
+                  "spatialLayout": "The foreground consists of a flat, tiled floor stretching from the viewer towards the midground. The midground is dominated by the large semicircular staircase, which serves as a focal point. Flanking the staircase are imposing arched alcoves within the walls, receding into the midground. The background features a large arched portal leading to a brighter, illuminated area, with the circular ceiling feature directly above the staircase in the far background.",
+                  "primary_surfaces": "stone",
+                  "secondary_surfaces": "textured plaster",
+                  "accent_features": "glowing light",
+                  "dominant": "teal",
+                  "secondary": "dark grey, bright cyan",
+                  "accent": "glowing white/cyan",
+                  "ambient": "teal",
+                  "genre": null,
+                  "architectural_tone": "Monumental and ancient, with a focus on geometric precision. Features a grand, semicircular staircase or ramp, arched alcoves, and a large, circular opening in the ceiling above. The construction implies immense scale and a robust, imposing presence. Materials are primarily stone with textured plaster elements, conveying a sense of age and permanence.",
+                  "cultural_tone": "Ritualistic and enigmatic. Suggests a place of passage, transition, or descent into deeper, perhaps sacred, mysteries.",
+                  "materials_base": "Rough-hewn, aged stone for primary structural elements and floors. Textured plaster or a similar material for walls, often with an aged or weathered finish. Accents might include ancient, dark metals.",
+                  "mood_baseline": "Intriguing mystery and a sense of foreboding, balanced by the promise of discovery.",
+                  "palette_bias": "Heavily weighted towards dark tones, with sharp contrasts. Teal and muted grey form the base, with bright cyan as a stark, illuminating accent color, predominantly originating from the light source.",
+                  "soundscape_base": "Muffled echoes and faint, distant sounds, creating an oppressive yet expectant auditory environment.",
+                  "flora_base": "None",
+                  "fauna_base": "None"
+                },
+                "navigableElements": [
+                  {
+                    "type": "stairs",
+                    "position": "center, midground",
+                    "description": "Expansive semicircular staircase leading upwards to an arched passage"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "center, background",
+                    "description": "Large arched passage illuminated with bright light, promising a new area"
+                  }
+                ],
+                "dominantElements": [
+                  "Grand semicircular staircase (est. 20m wide, WIDE STRUCTURE), center, midground",
+                  "Arched opening (est. 15m tall, ARCHWAY), center, background",
+                  "Circular ceiling feature (est. 10m diameter, WIDE STRUCTURE), center, background",
+                  "Arched alcoves (est. 8m tall, HORIZONTAL STRUCTURE), flanking walls, midground"
+                ],
+                "uniqueIdentifiers": [
+                  "Grand semicircular staircase",
+                  "Circular textured ceiling illumination",
+                  "High-contrast shadow play"
+                ],
+                "searchDesc": "Interior cavernous space. Has: semicircular stairs (center, midground), arched passage (center, background)",
+                "slug": "the-shadowed-nexus",
+                "imageUrl": "https://v3b.fal.media/files/b/rabbit/dsDWMbUlXUaGrD8WDTTx4.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Shadowed Nexus",
+                  "looks": "A perfect circle of deep shadow upon the teal plateau, hinting at depths unknown.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/rabbit/dsDWMbUlXUaGrD8WDTTx4.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764169553837-kulgatv8l",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1763994876664-643qmsnex",
-    "loc-1763583302373-k6pem7hwa",
-    "loc-1764163238646-okad0b4sr",
-    "loc-1763990091894-znnq51ts4"
+    "loc-1764169132460-zog6ulons",
+    "loc-1764169371839-jh2y2bruf",
+    "loc-1764169499145-0c1qg3tpv"
   ]
 }
