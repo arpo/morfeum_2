@@ -1,30 +1,50 @@
 /**
  * Tree Navigation Utilities
  * Reusable functions for traversing and finding nodes in tree structures
+ * Supports both formats:
+ * - New format: { id, children: [...] }
+ * - Legacy format: { regions: [...], locations: [...], niches: [...] }
  */
 
 /**
+ * Get children from a node (supports both new and legacy formats)
+ */
+function getNodeChildren(node: any): any[] {
+  if (!node) return [];
+  
+  // New format: unified children array
+  if (node.children && Array.isArray(node.children)) {
+    return node.children;
+  }
+  
+  // Legacy format: separate arrays by type
+  return [
+    ...(node.regions || []),
+    ...(node.locations || []),
+    ...(node.niches || [])
+  ];
+}
+
+/**
  * Find the deepest node ID in a world tree hierarchy
+ * Traverses down the first child branch to find the deepest node
  */
 export function findDeepestNodeId(worldTree: any): string | null {
   if (!worldTree) return null;
 
-  if (worldTree.regions && worldTree.regions.length > 0) {
-    const region = worldTree.regions[0];
-    if (region.locations && region.locations.length > 0) {
-      const location = region.locations[0];
-      if (location.niches && location.niches.length > 0) {
-        return location.niches[0].id || location.niches[0].slug;
-      }
-      return location.id || location.slug;
-    }
-    return region.id || region.slug;
+  const children = getNodeChildren(worldTree);
+  
+  // If has children, recurse into first child
+  if (children.length > 0) {
+    return findDeepestNodeId(children[0]);
   }
-  return worldTree.id || worldTree.slug;
+  
+  // No children, this is the deepest node
+  return worldTree.id || worldTree.slug || null;
 }
 
 /**
- * Get all ancestor IDs for a target node
+ * Get all ancestor IDs for a target node (not including the target itself)
  */
 export function getAncestors(tree: any, targetId: string | null): string[] {
   if (!targetId || !tree) return [];
@@ -32,19 +52,18 @@ export function getAncestors(tree: any, targetId: string | null): string[] {
   const ancestors: string[] = [];
 
   const search = (node: any, path: string[]): boolean => {
-    if (node.id === targetId || node.slug === targetId) {
+    const nodeId = node.id || node.slug;
+    
+    if (nodeId === targetId) {
+      // Found target - add all ancestors from path
       path.forEach(p => ancestors.push(p));
       return true;
     }
 
-    const children = [
-      ...(node.regions || []),
-      ...(node.locations || []),
-      ...(node.niches || [])
-    ];
+    const children = getNodeChildren(node);
 
     for (const child of children) {
-      if (search(child, [...path, node.id || node.slug])) {
+      if (search(child, [...path, nodeId])) {
         return true;
       }
     }
@@ -62,11 +81,7 @@ export function getAncestors(tree: any, targetId: string | null): string[] {
 export function findNodeInTree(tree: any, targetId: string): any {
   if (tree.id === targetId || tree.slug === targetId) return tree;
 
-  const children = [
-    ...(tree.regions || []),
-    ...(tree.locations || []),
-    ...(tree.niches || [])
-  ];
+  const children = getNodeChildren(tree);
 
   for (const child of children) {
     const found = findNodeInTree(child, targetId);

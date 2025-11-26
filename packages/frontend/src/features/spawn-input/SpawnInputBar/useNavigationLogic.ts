@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
+import { createEntitySession } from '@/utils/entity/sessionManager';
 
 /**
  * Helper: Find parent ID from tree structure
@@ -68,8 +69,8 @@ export function useNavigationLogic() {
   const handleNodeCreation = useCallback(async (navigation: any, currentNode: any) => {
     const { node, parentNodeId } = navigation;
     
-    const createNode = useLocationsStore.getState().createNode;
-    createNode(node);
+    const createNodeInStore = useLocationsStore.getState().createNode;
+    createNodeInStore(node);
     
     const currentWorldTrees = useLocationsStore.getState().worldTrees;
     const worldTree = currentWorldTrees.find(tree => {
@@ -93,8 +94,15 @@ export function useNavigationLogic() {
     const saveToBackend = useLocationsStore.getState().saveToBackend;
     await saveToBackend();
     
-    setActiveEntity(node.id);
-  }, [setActiveEntity]);
+    // Create entity session with image (instead of just setActiveEntity)
+    // This ensures the image persists in the WorldView after pipeline completion
+    createEntitySession(useStore.getState(), {
+      id: node.id,
+      name: node.name,
+      type: 'location',
+      imagePath: node.imagePath
+    });
+  }, []);
 
   const handleMove = useCallback(async () => {
     if (!movementInput.trim()) {

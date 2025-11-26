@@ -111,6 +111,11 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       const entity = state.entities.get(spawnId);
       if (!entity) return state;
 
+      // Skip update if image is already the same (prevents flicker)
+      if (entity.entityImage === imageUrl) {
+        return state;
+      }
+
       const newEntities = new Map(state.entities);
       newEntities.set(spawnId, {
         ...entity,

@@ -19,6 +19,7 @@ export interface SpawnProcess {
   stages: SpawnStage[];
   result?: any;
   eventsUrl?: string;
+  imageUrl?: string;
   error?: string;
   // Progress bar fields
   pipelineType?: string;
@@ -57,27 +58,30 @@ const monitorSpawnProgress = (
         onProgress: (id, data) => {
             const spawn = get().activeSpawns.find((s) => s.id === id);
             
+            // Build update object - always start with current stage message
+            const update: Partial<SpawnProcess> = {
+                currentStage: data.message
+            };
+            
+            // Check for image URL on EVERY progress event (not just in else branch)
+            // SSE payload structure: { stage, message, data: { imageUrl: ... } }
+            if (data.data && typeof data.data === 'object' && 'imageUrl' in data.data) {
+                update.imageUrl = data.data.imageUrl;
+            }
+            
             // If this progress event includes steps, store them (happens on first event)
             if (data.steps && data.pipelineType) {
-                get().updateSpawnProgress(id, {
-                    pipelineType: data.pipelineType,
-                    steps: data.steps,
-                    // Initialize at 0 so progress bar appears immediately (instead of -1 which hides it)
-                    currentStepIndex: 0, 
-                    currentStage: data.message
-                });
+                update.pipelineType = data.pipelineType;
+                update.steps = data.steps;
+                // Initialize at 0 so progress bar appears immediately (instead of -1 which hides it)
+                update.currentStepIndex = 0;
             } else if (spawn && spawn.steps) {
                 // Calculate current step index from stage name
                 const stepIndex = getStepIndexFromStage(data.stage, spawn.steps);
-                get().updateSpawnProgress(id, {
-                    currentStage: data.message,
-                    currentStepIndex: stepIndex
-                });
-            } else {
-                get().updateSpawnProgress(id, {
-                    currentStage: data.message
-                });
+                update.currentStepIndex = stepIndex;
             }
+            
+            get().updateSpawnProgress(id, update);
             get().addSpawnLog(id, data.message);
         },
         onCompleted: (id, data) => {
@@ -250,4 +254,3 @@ export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get
     }));
   }
 });
-

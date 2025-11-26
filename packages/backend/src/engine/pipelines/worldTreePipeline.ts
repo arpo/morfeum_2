@@ -110,11 +110,15 @@ export async function runWorldTreePipeline(
 
     // Attach image to deepest node
     const deepestNode = nodeChain[nodeChain.length - 1];
+    let imageAssignedToChild = false;
+
     if (fullHierarchy.host.regions?.[0]?.locations?.[0]) {
         if (deepestNode.type === 'location') {
              fullHierarchy.host.regions[0].locations[0].imageUrl = imageUrl;
+             imageAssignedToChild = true;
         } else if (deepestNode.type === 'niche' && fullHierarchy.host.regions[0].locations[0].niches?.[0]) {
              fullHierarchy.host.regions[0].locations[0].niches[0].imageUrl = imageUrl;
+             imageAssignedToChild = true;
         }
     }
 
@@ -123,7 +127,13 @@ export async function runWorldTreePipeline(
     if (signal.aborted) throw new Error('Aborted');
 
     // Stage 5: Build World Tree
-    const worldTree = WorldTreeBuilder.build(spawnId, fullHierarchy, imageUrl);
+    // Only pass imageUrl to builder if it wasn't assigned to a child node
+    // This prevents the image from being duplicated on the root node when it belongs to a specific location/niche
+    const worldTree = WorldTreeBuilder.build(
+      spawnId, 
+      fullHierarchy, 
+      imageAssignedToChild ? undefined : imageUrl
+    );
 
     helper.completed('World Tree created successfully', { worldTree });
 

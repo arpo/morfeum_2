@@ -37,8 +37,14 @@ export function createEntitySession(
   store.createEntity(data.id, seed, data.type);
 
   // Update entity with image if provided
+  // Check if image is different to prevent unnecessary re-renders (flicker)
   if (data.imagePath) {
-    store.updateEntityImage(data.id, data.imagePath);
+    const currentEntity = store.entitySessions?.[data.id];
+    const currentImage = currentEntity?.entityImage;
+    
+    if (currentImage !== data.imagePath) {
+      store.updateEntityImage(data.id, data.imagePath);
+    }
   }
 
   // Update with image prompt if provided

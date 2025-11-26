@@ -11,6 +11,7 @@ import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
 import { SavedEntitiesModal } from '@/features/saved-entities/SavedEntitiesModal';
 import { EntityExplorerPanel } from '@/features/app/components/EntityExplorer/EntityExplorerPanel';
 import { TopButtonRow } from '@/features/app/components/TopButtonRow';
+import { WorldView } from '@/features/app/components/WorldView/WorldView';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import { useEffect, useState } from 'react';
@@ -20,7 +21,6 @@ import styles from './App.module.css';
 export function App() {
   const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
-  const [imageLoading, setImageLoading] = useState(true);
   
   // Global keyboard shortcuts (1 = spawn input, 2 = entity explorer)
   useKeyboardShortcuts();
@@ -43,18 +43,8 @@ export function App() {
   
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
-  const entityImage = activeEntitySession?.entityImage || null;
   const deepProfile = activeEntitySession?.deepProfile || null;
   const isCharacter = activeEntitySession?.entityType === 'character';
-
-  // Reset loading state when image URL changes
-  useEffect(() => {
-    if (entityImage) {
-      setImageLoading(true);
-    } else {
-      setImageLoading(true);
-    }
-  }, [entityImage]);
 
   // Initialize theme on component mount
   useEffect(() => {
@@ -176,25 +166,8 @@ export function App() {
   return (
     <div className={styles.container}>
       
-      {/* Fullscreen Entity Background Image */}
-      {activeEntitySession && (
-        <div className={styles.entityBackground}>
-          {(!entityImage || imageLoading) && (
-            <div className={styles.backgroundSkeleton}>
-              <div className={styles.skeletonBreathing} />
-            </div>
-          )}
-          {entityImage && (
-            <img 
-              key={entityImage}
-              src={entityImage} 
-              alt={activeEntitySession.entityName || 'Entity'}
-              className={styles.entityBackgroundImage}
-              onLoad={() => setImageLoading(false)}
-            />
-          )}
-        </div>
-      )}
+      {/* Fullscreen World View (Background) */}
+      <WorldView />
       
       {/* Focus mode hint */}
       {focusModeEnabled && (

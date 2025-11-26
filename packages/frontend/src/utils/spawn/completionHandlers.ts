@@ -11,6 +11,24 @@ import { createEntitySession } from '../entity/sessionManager';
 import { expandTreeToNode } from '../tree/expansion';
 
 /**
+ * Find the deepest node in a tree structure and return its data
+ * Used to extract imagePath from worldTree before store processing
+ */
+function findDeepestNodeWithImage(node: any): { id: string; name: string; imagePath?: string } | null {
+  // Base case: no children or empty children
+  if (!node.children || node.children.length === 0) {
+    return {
+      id: node.id,
+      name: node.name,
+      imagePath: node.imagePath
+    };
+  }
+  
+  // Recursively find the deepest node in first child branch
+  return findDeepestNodeWithImage(node.children[0]);
+}
+
+/**
  * Handle character completion
  */
 export async function handleCharacterCompletion(
@@ -46,6 +64,10 @@ export function handleLocationCompletion(
 ) {
   console.log(`[CompletionHandler] Handling location: ${worldTree.name}`);
 
+  // Extract deepest node data from worldTree BEFORE store processing
+  // This ensures we have the imagePath from the backend response
+  const deepestNodeData = findDeepestNodeWithImage(worldTree);
+
   // Pin the world and update Locations Store
   useLocationsStore.getState().setCompleteWorldTree(worldTree);
 
@@ -54,21 +76,25 @@ export function handleLocationCompletion(
   if (deepId) {
     expandTreeToNode(worldTree, deepId, 'entity-explorer-locations');
 
-    // Get node data
+    // Get node data from store for name (store has processed data)
     const locationsState = useLocationsStore.getState();
     const node = locationsState.nodes[deepId];
 
-    if (node) {
-      // Create entity session
+    // Use imagePath from the original worldTree data, not from store
+    // Store may have converted undefined to empty string
+    const imagePath = deepestNodeData?.imagePath || node?.imagePath;
+
+    if (node || deepestNodeData) {
+      // Create entity session with imagePath from original data
       createEntitySession(store, {
         id: deepId,
-        name: node.name || 'New Location',
+        name: node?.name || deepestNodeData?.name || 'New Location',
         type: 'location',
         atmosphere: 'Generated',
-        imagePath: node.imagePath
+        imagePath: imagePath
       });
 
-      console.log(`[CompletionHandler] Location ${node.name} session created and active`);
+      console.log(`[CompletionHandler] Location ${node?.name || deepestNodeData?.name} session created with image: ${!!imagePath}`);
     }
   }
 }
