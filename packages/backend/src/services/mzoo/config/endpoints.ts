@@ -7,7 +7,8 @@ export const MZOO_API_BASE = 'https://www.mzoo.app/api/v1';
 export const ENDPOINTS = {
   TEXT_GENERATION: `${MZOO_API_BASE}/ai/gemini/text`,
   VISION_ANALYSIS: `${MZOO_API_BASE}/ai/vision`,
-  IMAGE_GENERATION: `${MZOO_API_BASE}/ai/fal-flux-srpo/generate`
+  IMAGE_GENERATION: `${MZOO_API_BASE}/ai/fal-flux-srpo/generate`,
+  DEPTH_MAP: `${MZOO_API_BASE}/ai/fal-depth-anything-v2/process`
 };
 
 export const DEFAULT_MODELS = {

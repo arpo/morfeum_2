@@ -63,3 +63,22 @@ export interface ImageGenerationResponse {
     height: number;
   }>;
 }
+
+export interface DepthMapRequest {
+  image_url: string;
+  output_format?: 'png' | 'jpeg';
+  high_quality?: boolean;
+}
+
+export interface DepthMapResponse {
+  depth_map_url: string;
+  depth_map_image: string | null;
+  original_image_url: string;
+  metadata: {
+    output_format: string;
+    high_quality: boolean;
+    processing_time: number;
+    model: string;
+    timestamp: string;
+  };
+}

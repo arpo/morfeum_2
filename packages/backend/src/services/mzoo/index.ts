@@ -7,6 +7,7 @@
 export { generateText } from './services/textGeneration';
 export { analyzeImage } from './services/visionAnalysis';
 export { generateImage } from './services/imageGeneration';
+export { generateDepthMap } from './services/depthMapGeneration';
 
 // Export types
 export * from './types';
