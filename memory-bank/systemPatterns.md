@@ -199,10 +199,33 @@ packages/backend/src/
 Centralized file-based storage for development:
 - Location: `packages/backend/src/services/storage/storageService.ts`
 - Storage directory: `packages/backend/temp-db/`
-- Files: `worlds.json`, `characters.json`
+- Files: `worlds.json`, `characters.json`, `media.json`
 - Purpose: Temporary storage before database migration
-- API: GET/POST/DELETE endpoints at `/api/worlds` and `/api/characters`
+- API: GET/POST/DELETE endpoints at `/api/worlds`, `/api/characters`, and `/api/media`
 - **Path Resolution**: Uses `__dirname` for reliable path resolution
+
+### Media System Pattern
+Centralized media asset management:
+- Location: `packages/backend/src/services/media/mediaService.ts`
+- Storage: `packages/backend/temp-db/media.json`
+- Purpose: Manage images/videos with metadata and entity references
+
+**Metadata Structure**:
+```typescript
+interface MediaMetadata {
+  prompt: string;           // Full generated prompt
+  originalPrompt?: string;  // User's original input
+  model: string;           // AI model used (e.g., "FLUX")
+  width?: number;
+  height?: number;
+}
+```
+
+**Key Features**:
+- Single source of truth for media URLs
+- Entity reference tracking (multiple entities can reference same media)
+- Metadata includes original user prompts for context
+- Clean separation: Character/location data in entities, media metadata here
 
 **Storage Flow:**
 ```

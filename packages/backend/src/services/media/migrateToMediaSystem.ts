@@ -130,7 +130,7 @@ function migrateCharacters(report: MigrationReport): Map<string, string> {
           metadata: {
             prompt: prompt,
             model: 'FLUX', // Default, can be updated later
-            ...(seed && { seed })
+            ...(seed?.originalPrompt && { originalPrompt: seed.originalPrompt })
           },
           entityRefs: [charId]
         };
@@ -168,7 +168,7 @@ function processWorldNode(node: any, entityToMediaMap: Map<string, string>, repo
         metadata: {
           prompt: prompt,
           model: 'FLUX',
-          ...(seed && { seed })
+          ...(seed?.originalPrompt && { originalPrompt: seed.originalPrompt })
         },
         entityRefs: [node.id]
       };
@@ -222,7 +222,7 @@ function migrateWorlds(report: MigrationReport): Map<string, string> {
           metadata: {
             prompt: prompt,
             model: 'FLUX',
-            ...(seed && { seed })
+            ...(seed?.originalPrompt && { originalPrompt: seed.originalPrompt })
           },
           entityRefs: [nodeId]
         };

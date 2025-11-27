@@ -2,6 +2,16 @@
 
 ## Completed Features ✅
 
+### Media Metadata Structure Cleanup (Nov 27, 2025)
+- [x] Removed redundant `seed` object from media metadata (was storing duplicate character data)
+- [x] Added `originalPrompt` field to MediaMetadata interface
+- [x] Created cleanup script (`cleanupMediaMetadata.ts`) to migrate existing data
+- [x] Successfully migrated 11 media items to new structure
+- [x] Updated `migrateToMediaSystem.ts` to only extract `originalPrompt` from seed
+- [x] Created backup of media.json before migration
+- [x] Documented changes in `METADATA_CLEANUP_SUMMARY.md`
+- [x] Verified no code depends on removed seed properties
+
 ### Pipeline & Image Streaming Improvements (Nov 26, 2025)
 - [x] Images from all pipelines (character, worldTree, createNode) now display in the entity background as soon as the image is generated, before the full pipeline completes.
 - [x] Tree expansion logic updated to support both legacy and new node formats, ensuring correct node selection and unfolding.

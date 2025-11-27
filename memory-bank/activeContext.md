@@ -1,5 +1,24 @@
 # Active Context
 
+## Recent Changes (2025-11-27)
+
+### Media Metadata Structure Cleanup (Nov 27, 2025)
+- **Simplified Metadata**: Removed redundant `seed` object from media metadata that was storing duplicate character information already available in entity data.
+- **Added originalPrompt**: Extracted and preserved only the user's original input as `originalPrompt` field at metadata root level.
+- **Data Migration**: Created `cleanupMediaMetadata.ts` script that successfully migrated 11 existing media items to the new structure.
+- **Type Updates**: Updated `MediaMetadata` interface to include `originalPrompt?: string` field.
+- **Migration Script Updates**: Updated `migrateToMediaSystem.ts` to only extract `originalPrompt` from seed data, not the entire object.
+- **Documentation**: Created `METADATA_CLEANUP_SUMMARY.md` documenting the changes and rationale.
+
+**Metadata structure change:**
+```typescript
+// Before: Had redundant character data
+{ prompt: "...", model: "FLUX", seed: { originalPrompt, name, looks, wearing, personality, presence, setting } }
+
+// After: Clean structure with only essential data
+{ prompt: "...", model: "FLUX", originalPrompt: "..." }
+```
+
 ## Recent Changes (2025-11-26)
 
 ### Pipeline & Image Streaming Improvements (Nov 26, 2025)

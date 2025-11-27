@@ -9,6 +9,7 @@ export type MediaType = 'image' | 'video';
 
 export interface MediaMetadata {
   prompt: string;
+  originalPrompt?: string;  // User's original input before enhancement
   model: string;
   width?: number;
   height?: number;
@@ -17,6 +18,7 @@ export interface MediaMetadata {
   fps?: number;
   codec?: string;
   // Flexible for future additions
+  // Note: 'seed' object is deprecated - use originalPrompt instead
   [key: string]: any;
 }
 

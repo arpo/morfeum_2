@@ -3061,6 +3061,297 @@
       ],
       "searchDesc": "Vast black marble chamber in The Obsidian Citadel with gold veins and imposing columns.",
       "slug": "interior-of-the-obsidian-citadel"
+    },
+    "loc-1764242279423-vwce5a12r": {
+      "id": "loc-1764242279423-vwce5a12r",
+      "type": "host",
+      "name": "Galactic Frontier",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Galactic Frontier",
+        "description": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+        "dna": {
+          "looks": "A grand canvas of cosmic wonders, featuring immense, derelict spacecraft of unknown origin and vast nebulae painted across the void. Distant celestial bodies and shimmering starlight create a backdrop of awe-inspiring scale.",
+          "colorsAndLighting": "Dominated by deep blues and purples of space, punctuated by the ethereal glow of nebulae and distant stars. Lighting is often dramatic, with stark contrasts between illuminated celestial bodies and shadowed cosmic expanses.",
+          "atmosphere": "The emptiness of space is profound, punctuated by the silent grandeur of cosmic phenomena. Temperatures are extreme, ranging from the frigid vacuum to the intense heat of stellar proximity. Cosmic dust and gas clouds drift in silent, slow motion.",
+          "materials": "Primarily composed of exotic, ancient alien alloys and metals on derelict structures, intermingled with the gaseous and particulate matter of nebulae and asteroid fields.",
+          "mood": "A sense of profound mystery, ancient grandeur, and vast, unexplored loneliness. The universe feels immense and indifferent, holding secrets of lost civilizations.",
+          "sounds": "Deep cosmic hum, distant stellar winds, faint radiation crackle",
+          "spatialLayout": "Expansive, three-dimensional environments with vast distances between points of interest. Structures are often colossal and alien in design, integrated with or dwarfed by natural cosmic formations.",
+          "primary_surfaces": [
+            "Alien alloys",
+            "Cosmic dust"
+          ],
+          "secondary_surfaces": [
+            "Nebulous gases",
+            "Stellar radiation"
+          ],
+          "accent_features": [
+            "Crystalline formations",
+            "Bioluminescent organisms"
+          ],
+          "dominant": "Deep blues",
+          "secondary": "Purples and dark grays",
+          "accent": "Ethereal whites and silvers",
+          "ambient": "Cool",
+          "genre": "sci-fi",
+          "architectural_tone": "Ancient alien megastructures with colossal scale, impossibly complex geometries, and materials unknown to modern science. Designs often feature sweeping curves, sharp angles, and a sense of organic integration with cosmic phenomena. Expect immense durability and a profound sense of age.",
+          "cultural_tone": "Civilizations long vanished, leaving behind colossal monuments and relics that speak of immense technological prowess and enigmatic purpose. A sense of forgotten history and cosmic solitude pervades.",
+          "materials_base": "Exotic, hyper-advanced alloys and composites, weathered and aged by cosmic forces. Surfaces can range from impossibly smooth to intricately textured, often with self-repairing or energy-reactive properties.",
+          "mood_baseline": "Wonder, mystery, isolation, awe",
+          "palette_bias": "Cool, deep, and muted tones with high contrast between light and shadow. Ethereal glow effects are common.",
+          "soundscape_base": "Minimalist and ambient, focusing on low hums, deep drones, and the subtle crackle of cosmic phenomena. Silence is a dominant element.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ancient starships",
+          "Nebulae",
+          "Asteroid fields"
+        ],
+        "uniqueIdentifiers": [
+          "Wormholes",
+          "Lost alien artifacts"
+        ],
+        "searchDesc": "Vast interstellar space with remnants of ancient alien civilizations.",
+        "slug": "galactic-frontier",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Galactic Frontier",
+          "looks": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Vast and untamed interstellar space, where ancient civilizations leave their marks."
+    },
+    "773cd518-d2ce-4b97-9696-e3e51f590864": {
+      "id": "773cd518-d2ce-4b97-9696-e3e51f590864",
+      "type": "region",
+      "name": "Galactic Frontier",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "Galactic Frontier",
+        "description": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+        "dna": {
+          "looks": "A grand canvas of cosmic wonders, featuring immense, derelict spacecraft of unknown origin and vast nebulae painted across the void. Distant celestial bodies and shimmering starlight create a backdrop of awe-inspiring scale.",
+          "colorsAndLighting": "Dominated by deep blues and purples of space, punctuated by the ethereal glow of nebulae and distant stars. Lighting is often dramatic, with stark contrasts between illuminated celestial bodies and shadowed cosmic expanses.",
+          "atmosphere": "The emptiness of space is profound, punctuated by the silent grandeur of cosmic phenomena. Temperatures are extreme, ranging from the frigid vacuum to the intense heat of stellar proximity. Cosmic dust and gas clouds drift in silent, slow motion.",
+          "materials": "Primarily composed of exotic, ancient alien alloys and metals on derelict structures, intermingled with the gaseous and particulate matter of nebulae and asteroid fields.",
+          "mood": "A sense of profound mystery, ancient grandeur, and vast, unexplored loneliness. The universe feels immense and indifferent, holding secrets of lost civilizations.",
+          "sounds": "Deep cosmic hum, distant stellar winds, faint radiation crackle",
+          "spatialLayout": "Expansive, three-dimensional environments with vast distances between points of interest. Structures are often colossal and alien in design, integrated with or dwarfed by natural cosmic formations.",
+          "primary_surfaces": [
+            "Alien alloys",
+            "Cosmic dust"
+          ],
+          "secondary_surfaces": [
+            "Nebulous gases",
+            "Stellar radiation"
+          ],
+          "accent_features": [
+            "Crystalline formations",
+            "Bioluminescent organisms"
+          ],
+          "dominant": "Deep blues",
+          "secondary": "Purples and dark grays",
+          "accent": "Ethereal whites and silvers",
+          "ambient": "Cool",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ancient starships",
+          "Nebulae",
+          "Asteroid fields"
+        ],
+        "uniqueIdentifiers": [
+          "Wormholes",
+          "Lost alien artifacts"
+        ],
+        "searchDesc": "Vast interstellar space with remnants of ancient alien civilizations.",
+        "slug": "galactic-frontier",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Galactic Frontier",
+          "looks": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Vast and untamed interstellar space, where ancient civilizations leave their marks."
+    },
+    "4706323f-2e13-483c-bfb0-5fdd7a2d8822": {
+      "id": "4706323f-2e13-483c-bfb0-5fdd7a2d8822",
+      "type": "location",
+      "name": "The Broken Halo",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Broken Halo",
+        "description": "A massive, ring-shaped generation ship, half-buried in frozen tundra, its structure resembling a shattered halo.",
+        "looks": "A colossal, metallic ring with a complex, segmented structure, partially submerged in snow and ice. Radiating spokes extend from the main ring like broken arms. The central hub features a door that continues to rotate slowly.",
+        "atmosphere": "Bitterly cold winds sweep across the frozen landscape, carrying ice crystals. A low, resonant hum emanates from within the damaged ship.",
+        "mood": "Desolate, ancient, mysterious",
+        "dna": {
+          "looks": "A colossal, ring-shaped spacecraft lies half-buried in a vast expanse of snow-covered terrain. Its metallic structure is segmented, with sections appearing weathered and damaged. Radiating spokes extend outwards from the main ring, resembling broken celestial appendages. The central hub of the ring reveals a large, circular opening with a door that is slowly rotating. The sheer scale of the object suggests immense size and age, dominating the frigid landscape. Its surface is textured with panel lines and protrusions, indicating complex engineering.",
+          "colorsAndLighting": "The scene is illuminated by a soft, diffused light originating from behind the ring structure. This creates a bright, ethereal glow within the opening, contrasting with the cooler tones of the landscape. The lighting is generally even, with low contrast, emphasizing the vastness of the sky and the muted colors of the environment.",
+          "atmosphere": "The air appears crisp and clear, with a pervasive sense of cold. Wisps of mist or fog occasionally rise from the snow-covered ground, lending an ethereal quality to the scene. The overall atmosphere is one of stark isolation and frozen stillness.",
+          "materials": "The primary material is a heavily weathered, aged alien metal, showing signs of immense stress and age. This is contrasted with the abundant snow and ice that have accumulated and partially buried the structure, with exposed rock formations beneath the surface.",
+          "mood": "A mood of profound desolation, ancient technological decay, and a haunting stillness. There's a sense of immense loss and the silent testament to a long-gone era of advanced civilization.",
+          "sounds": "Creaking metal, biting wind, crunching snow, distant hum",
+          "spatialLayout": "The foreground consists of a snow-covered path leading towards the central structure, with rocky outcrops on either side. The midground is dominated by the immense, ring-shaped generation ship, half-submerged in the tundra, with its spokes extending outwards. The background features gently sloping, snow-covered mountains fading into a hazy, bright sky.",
+          "primary_surfaces": "Metal",
+          "secondary_surfaces": "Snow, Ice, Rock",
+          "accent_features": "Glowing orange interior light",
+          "dominant": "Light blue (sky, snow)",
+          "secondary": "Dark blue and grey (spacecraft)",
+          "accent": "Orange (interior glow)",
+          "ambient": "Pale blue",
+          "genre": null,
+          "architectural_tone": "Ancient alien megastructure design characterized by colossal scale, impossibly complex geometric forms, and materials of unknown origin. Expect sweeping, unbroken curves juxtaposed with sharp, angular structural elements. Surfaces would be vast, subtly textured, and incredibly durable, showing signs of immense age and cosmic weathering. Integrated conduits and power systems would be visible as raised or recessed lines on the hull.",
+          "cultural_tone": "The remnants of a highly advanced, possibly extinct, spacefaring civilization focused on long-term survival and interstellar migration. The design prioritizes immense functionality, durability, and perhaps a degree of abstract, alien aesthetics over human comfort or familiarity. Their culture would have been one of immense planning and technological mastery, now frozen in time.",
+          "materials_base": "Hyperscale, ultra-durable alien alloys and composites, showing extreme age and weathering. Surfaces may exhibit subtle energy signatures or residual structural integrity fields.",
+          "mood_baseline": "Desolation, mystery, ancient grandeur, isolation",
+          "palette_bias": "Cool, muted palette dominated by blues and grays, with stark contrasts. Ethereal and diffused lighting.",
+          "soundscape_base": "Minimalist, ambient soundscape emphasizing the harshness of the environment: wind, ice, and the faint, unsettling sounds of the decaying structure.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "Large, circular door slowly rotating within the central hub"
+          },
+          {
+            "type": "passage",
+            "position": "center, midground",
+            "description": "The opening of the ring structure, leading into the spacecraft"
+          }
+        ],
+        "dominantElements": [
+          "Massive ring-shaped spacecraft (est. hundreds of meters in diameter)",
+          "Snow-covered tundra landscape",
+          "Radiating spokes of the spacecraft",
+          "Central rotating door within the ring opening"
+        ],
+        "uniqueIdentifiers": [
+          "Crashed ring-shaped generation ship",
+          "Half-buried in tundra",
+          "Spokes radiating from ring",
+          "Slowly rotating central hub door"
+        ],
+        "searchDesc": "[Location - Exterior] Crashed ring ship in tundra. Has: rotating door (center, midground), ring opening (center, midground)",
+        "slug": "the-broken-halo",
+        "imageUrl": "https://v3b.fal.media/files/b/penguin/fq_Q0vShl8MXEUTchjMN2.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Broken Halo",
+          "looks": "A massive, ring-shaped generation ship, half-buried in frozen tundra, its structure resembling a shattered halo.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/fq_Q0vShl8MXEUTchjMN2.jpg",
+      "description": "A massive, ring-shaped generation ship, half-buried in frozen tundra, its structure resembling a shattered halo."
+    },
+    "niche-1764247654155-8ntl69vm9": {
+      "id": "niche-1764247654155-8ntl69vm9",
+      "type": "niche",
+      "name": "interior of The Broken Halo",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal, segmented metallic ring interior, the space is a starkly preserved, dimly lit chamber. Exposed structural elements like conduits and segmented plating form the walls and ceiling, hinting at immense, ancient technology. The lighting creates long, dramatic shadows.",
+        "colorsAndLighting": "The dominant materials are dark, weathered metal and polished steel. Lighting is a cool, artificial glow from recessed panels and emergency strips, casting dramatic shadows. Glyphs glow in deep teal and electric blue.",
+        "atmosphere": "The atmosphere is one of a preserved, ancient chamber, cool and still, punctuated by the faint hum of machinery. There's a sense of immense scale and a deep, cold mystery preserved against an unseen external desolation.",
+        "materials": "Dominant materials are weathered, brushed dark metal and polished, cold steel. Walls are composed of massive, interlocking segments of dark, oxidized metal. The glazing is held by a geodesic framework of polished chrome struts.",
+        "mood": "The overall mood is one of desolate, ancient mystery and profound, preserved silence.",
+        "sounds": "Ambient low-frequency hum, faint machinery, distant pulsating lights.",
+        "spatialLayout": "A vast, enclosed interior space formed by a segmented metallic ring. The floor has raised platforms, walls are segmented with recessed panels, and the background is a massive architectural glazing.",
+        "primary_surfaces": "weathered dark metal, polished cold steel, segmented plating, architectural glazing",
+        "secondary_surfaces": "structural grates, conduits, chrome struts",
+        "accent_features": "illuminated recessed panels with cryptic glowing glyphs, emergency power conduit",
+        "dominant": "dark metallic (walls, floor, structure)",
+        "secondary": "polished chrome (framework)",
+        "accent": "deep teal and electric blue (glyphs)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "industrial metallic, ancient technology",
+        "cultural_tone": "null",
+        "materials_base": "null",
+        "mood_baseline": "Desolate, ancient, mysterious",
+        "palette_bias": "null",
+        "soundscape_base": "null",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/lion/-Q50LZcsdFtnaBSt2mpPw.jpg",
+      "description": "The colossal, dimly lit interior of a segmented metallic ring, a starkly preserved chamber within the 'Halo' complex.",
+      "navigableElements": [
+        {
+          "type": "platform",
+          "position": "foreground center",
+          "description": "A raised, dark, textured metal platform with a faint magnetic sheen and inlaid structural grates."
+        },
+        {
+          "type": "door",
+          "position": "midground left",
+          "description": "A heavy, blast-proof steel door, slightly ajar, revealing a sliver of deeper darkness."
+        },
+        {
+          "type": "window",
+          "position": "background",
+          "description": "A vast, curved architectural glazing pane revealing a dimly lit chamber of the Halo's interior."
+        }
+      ],
+      "dominantElements": [
+        "segmented metallic ring interior",
+        "raised metal platform",
+        "massive interlocking wall segments",
+        "curved architectural glazing"
+      ],
+      "uniqueIdentifiers": [
+        "segmented metallic ring structure",
+        "glowing cryptic glyphs",
+        "geodesic framework of chrome struts"
+      ],
+      "searchDesc": "Dimly lit colossal metallic ring interior, ancient technology, desolate mystery, glowing glyphs.",
+      "slug": "interior-of-the-broken-halo"
     }
   },
   "views": {},
@@ -5319,6 +5610,243 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764242279423-vwce5a12r",
+      "type": "host",
+      "name": "Galactic Frontier",
+      "description": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+      "dna": {
+        "type": "host",
+        "name": "Galactic Frontier",
+        "description": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+        "dna": {
+          "looks": "A grand canvas of cosmic wonders, featuring immense, derelict spacecraft of unknown origin and vast nebulae painted across the void. Distant celestial bodies and shimmering starlight create a backdrop of awe-inspiring scale.",
+          "colorsAndLighting": "Dominated by deep blues and purples of space, punctuated by the ethereal glow of nebulae and distant stars. Lighting is often dramatic, with stark contrasts between illuminated celestial bodies and shadowed cosmic expanses.",
+          "atmosphere": "The emptiness of space is profound, punctuated by the silent grandeur of cosmic phenomena. Temperatures are extreme, ranging from the frigid vacuum to the intense heat of stellar proximity. Cosmic dust and gas clouds drift in silent, slow motion.",
+          "materials": "Primarily composed of exotic, ancient alien alloys and metals on derelict structures, intermingled with the gaseous and particulate matter of nebulae and asteroid fields.",
+          "mood": "A sense of profound mystery, ancient grandeur, and vast, unexplored loneliness. The universe feels immense and indifferent, holding secrets of lost civilizations.",
+          "sounds": "Deep cosmic hum, distant stellar winds, faint radiation crackle",
+          "spatialLayout": "Expansive, three-dimensional environments with vast distances between points of interest. Structures are often colossal and alien in design, integrated with or dwarfed by natural cosmic formations.",
+          "primary_surfaces": [
+            "Alien alloys",
+            "Cosmic dust"
+          ],
+          "secondary_surfaces": [
+            "Nebulous gases",
+            "Stellar radiation"
+          ],
+          "accent_features": [
+            "Crystalline formations",
+            "Bioluminescent organisms"
+          ],
+          "dominant": "Deep blues",
+          "secondary": "Purples and dark grays",
+          "accent": "Ethereal whites and silvers",
+          "ambient": "Cool",
+          "genre": "sci-fi",
+          "architectural_tone": "Ancient alien megastructures with colossal scale, impossibly complex geometries, and materials unknown to modern science. Designs often feature sweeping curves, sharp angles, and a sense of organic integration with cosmic phenomena. Expect immense durability and a profound sense of age.",
+          "cultural_tone": "Civilizations long vanished, leaving behind colossal monuments and relics that speak of immense technological prowess and enigmatic purpose. A sense of forgotten history and cosmic solitude pervades.",
+          "materials_base": "Exotic, hyper-advanced alloys and composites, weathered and aged by cosmic forces. Surfaces can range from impossibly smooth to intricately textured, often with self-repairing or energy-reactive properties.",
+          "mood_baseline": "Wonder, mystery, isolation, awe",
+          "palette_bias": "Cool, deep, and muted tones with high contrast between light and shadow. Ethereal glow effects are common.",
+          "soundscape_base": "Minimalist and ambient, focusing on low hums, deep drones, and the subtle crackle of cosmic phenomena. Silence is a dominant element.",
+          "flora_base": "None",
+          "fauna_base": "None"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ancient starships",
+          "Nebulae",
+          "Asteroid fields"
+        ],
+        "uniqueIdentifiers": [
+          "Wormholes",
+          "Lost alien artifacts"
+        ],
+        "searchDesc": "Vast interstellar space with remnants of ancient alien civilizations.",
+        "slug": "galactic-frontier",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Galactic Frontier",
+          "looks": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "773cd518-d2ce-4b97-9696-e3e51f590864",
+          "type": "region",
+          "name": "Galactic Frontier",
+          "description": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+          "dna": {
+            "type": "region",
+            "name": "Galactic Frontier",
+            "description": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+            "dna": {
+              "looks": "A grand canvas of cosmic wonders, featuring immense, derelict spacecraft of unknown origin and vast nebulae painted across the void. Distant celestial bodies and shimmering starlight create a backdrop of awe-inspiring scale.",
+              "colorsAndLighting": "Dominated by deep blues and purples of space, punctuated by the ethereal glow of nebulae and distant stars. Lighting is often dramatic, with stark contrasts between illuminated celestial bodies and shadowed cosmic expanses.",
+              "atmosphere": "The emptiness of space is profound, punctuated by the silent grandeur of cosmic phenomena. Temperatures are extreme, ranging from the frigid vacuum to the intense heat of stellar proximity. Cosmic dust and gas clouds drift in silent, slow motion.",
+              "materials": "Primarily composed of exotic, ancient alien alloys and metals on derelict structures, intermingled with the gaseous and particulate matter of nebulae and asteroid fields.",
+              "mood": "A sense of profound mystery, ancient grandeur, and vast, unexplored loneliness. The universe feels immense and indifferent, holding secrets of lost civilizations.",
+              "sounds": "Deep cosmic hum, distant stellar winds, faint radiation crackle",
+              "spatialLayout": "Expansive, three-dimensional environments with vast distances between points of interest. Structures are often colossal and alien in design, integrated with or dwarfed by natural cosmic formations.",
+              "primary_surfaces": [
+                "Alien alloys",
+                "Cosmic dust"
+              ],
+              "secondary_surfaces": [
+                "Nebulous gases",
+                "Stellar radiation"
+              ],
+              "accent_features": [
+                "Crystalline formations",
+                "Bioluminescent organisms"
+              ],
+              "dominant": "Deep blues",
+              "secondary": "Purples and dark grays",
+              "accent": "Ethereal whites and silvers",
+              "ambient": "Cool",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": null,
+              "fauna_base": null
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Ancient starships",
+              "Nebulae",
+              "Asteroid fields"
+            ],
+            "uniqueIdentifiers": [
+              "Wormholes",
+              "Lost alien artifacts"
+            ],
+            "searchDesc": "Vast interstellar space with remnants of ancient alien civilizations.",
+            "slug": "galactic-frontier",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "Galactic Frontier",
+              "looks": "Vast and untamed interstellar space, where ancient civilizations leave their marks.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "4706323f-2e13-483c-bfb0-5fdd7a2d8822",
+              "type": "location",
+              "name": "The Broken Halo",
+              "description": "A massive, ring-shaped generation ship, half-buried in frozen tundra, its structure resembling a shattered halo.",
+              "dna": {
+                "type": "location",
+                "name": "The Broken Halo",
+                "description": "A massive, ring-shaped generation ship, half-buried in frozen tundra, its structure resembling a shattered halo.",
+                "looks": "A colossal, metallic ring with a complex, segmented structure, partially submerged in snow and ice. Radiating spokes extend from the main ring like broken arms. The central hub features a door that continues to rotate slowly.",
+                "atmosphere": "Bitterly cold winds sweep across the frozen landscape, carrying ice crystals. A low, resonant hum emanates from within the damaged ship.",
+                "mood": "Desolate, ancient, mysterious",
+                "dna": {
+                  "looks": "A colossal, ring-shaped spacecraft lies half-buried in a vast expanse of snow-covered terrain. Its metallic structure is segmented, with sections appearing weathered and damaged. Radiating spokes extend outwards from the main ring, resembling broken celestial appendages. The central hub of the ring reveals a large, circular opening with a door that is slowly rotating. The sheer scale of the object suggests immense size and age, dominating the frigid landscape. Its surface is textured with panel lines and protrusions, indicating complex engineering.",
+                  "colorsAndLighting": "The scene is illuminated by a soft, diffused light originating from behind the ring structure. This creates a bright, ethereal glow within the opening, contrasting with the cooler tones of the landscape. The lighting is generally even, with low contrast, emphasizing the vastness of the sky and the muted colors of the environment.",
+                  "atmosphere": "The air appears crisp and clear, with a pervasive sense of cold. Wisps of mist or fog occasionally rise from the snow-covered ground, lending an ethereal quality to the scene. The overall atmosphere is one of stark isolation and frozen stillness.",
+                  "materials": "The primary material is a heavily weathered, aged alien metal, showing signs of immense stress and age. This is contrasted with the abundant snow and ice that have accumulated and partially buried the structure, with exposed rock formations beneath the surface.",
+                  "mood": "A mood of profound desolation, ancient technological decay, and a haunting stillness. There's a sense of immense loss and the silent testament to a long-gone era of advanced civilization.",
+                  "sounds": "Creaking metal, biting wind, crunching snow, distant hum",
+                  "spatialLayout": "The foreground consists of a snow-covered path leading towards the central structure, with rocky outcrops on either side. The midground is dominated by the immense, ring-shaped generation ship, half-submerged in the tundra, with its spokes extending outwards. The background features gently sloping, snow-covered mountains fading into a hazy, bright sky.",
+                  "primary_surfaces": "Metal",
+                  "secondary_surfaces": "Snow, Ice, Rock",
+                  "accent_features": "Glowing orange interior light",
+                  "dominant": "Light blue (sky, snow)",
+                  "secondary": "Dark blue and grey (spacecraft)",
+                  "accent": "Orange (interior glow)",
+                  "ambient": "Pale blue",
+                  "genre": null,
+                  "architectural_tone": "Ancient alien megastructure design characterized by colossal scale, impossibly complex geometric forms, and materials of unknown origin. Expect sweeping, unbroken curves juxtaposed with sharp, angular structural elements. Surfaces would be vast, subtly textured, and incredibly durable, showing signs of immense age and cosmic weathering. Integrated conduits and power systems would be visible as raised or recessed lines on the hull.",
+                  "cultural_tone": "The remnants of a highly advanced, possibly extinct, spacefaring civilization focused on long-term survival and interstellar migration. The design prioritizes immense functionality, durability, and perhaps a degree of abstract, alien aesthetics over human comfort or familiarity. Their culture would have been one of immense planning and technological mastery, now frozen in time.",
+                  "materials_base": "Hyperscale, ultra-durable alien alloys and composites, showing extreme age and weathering. Surfaces may exhibit subtle energy signatures or residual structural integrity fields.",
+                  "mood_baseline": "Desolation, mystery, ancient grandeur, isolation",
+                  "palette_bias": "Cool, muted palette dominated by blues and grays, with stark contrasts. Ethereal and diffused lighting.",
+                  "soundscape_base": "Minimalist, ambient soundscape emphasizing the harshness of the environment: wind, ice, and the faint, unsettling sounds of the decaying structure.",
+                  "flora_base": "None",
+                  "fauna_base": "None"
+                },
+                "navigableElements": [
+                  {
+                    "type": "door",
+                    "position": "center, midground",
+                    "description": "Large, circular door slowly rotating within the central hub"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "center, midground",
+                    "description": "The opening of the ring structure, leading into the spacecraft"
+                  }
+                ],
+                "dominantElements": [
+                  "Massive ring-shaped spacecraft (est. hundreds of meters in diameter)",
+                  "Snow-covered tundra landscape",
+                  "Radiating spokes of the spacecraft",
+                  "Central rotating door within the ring opening"
+                ],
+                "uniqueIdentifiers": [
+                  "Crashed ring-shaped generation ship",
+                  "Half-buried in tundra",
+                  "Spokes radiating from ring",
+                  "Slowly rotating central hub door"
+                ],
+                "searchDesc": "[Location - Exterior] Crashed ring ship in tundra. Has: rotating door (center, midground), ring opening (center, midground)",
+                "slug": "the-broken-halo",
+                "imageUrl": "https://v3b.fal.media/files/b/penguin/fq_Q0vShl8MXEUTchjMN2.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Broken Halo",
+                  "looks": "A massive, ring-shaped generation ship, half-buried in frozen tundra, its structure resembling a shattered halo.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/penguin/fq_Q0vShl8MXEUTchjMN2.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764247654155-8ntl69vm9",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -5327,6 +5855,7 @@
     "loc-1764187096720-nc3jpxtls",
     "loc-1764163238646-okad0b4sr",
     "loc-1764241721555-6ta20woti",
-    "loc-1764242112391-ve4yxresj"
+    "loc-1764242112391-ve4yxresj",
+    "loc-1764242279423-vwce5a12r"
   ]
 }
