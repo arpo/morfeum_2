@@ -176,10 +176,10 @@ export function App() {
         </div>
       )}
       
-      {/* UI Elements - Hidden in focus mode (press Space to toggle) */}
-      {!focusModeEnabled && (
-        <>
-          {/* Top Button Row - Toggle, Info, Chat */}
+      {/* UI Elements - Hidden in focus mode with CSS (press Space to toggle) */}
+      <>
+        {/* Top Button Row - Toggle, Info, Chat */}
+        <div className={focusModeEnabled ? styles.uiHidden : ''}>
           <TopButtonRow
             onToggleSidebar={toggleEntityExplorerPanel}
             onOpenInfo={handleOpenInfo}
@@ -188,48 +188,51 @@ export function App() {
             infoDisabled={!deepProfile}
             chatDisabled={!deepProfile}
           />
-          
-          {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
-          <div className={styles.spawnInputContainer}>
-            <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
-          </div>
+        </div>
+        
+        {/* Spawn Input Bar - Bottom Center (Fixed Position) */}
+        <div className={`${styles.spawnInputContainer} ${focusModeEnabled ? styles.uiHidden : ''}`}>
+          <SpawnInputBar onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)} />
+        </div>
 
-          {/* Entity Explorer Panel - Draggable */}
-          {entityExplorerPanelOpen && (
+        {/* Entity Explorer Panel - Draggable */}
+        {entityExplorerPanelOpen && (
+          <div className={focusModeEnabled ? styles.uiHidden : ''}>
             <EntityExplorerPanel onClose={toggleEntityExplorerPanel} />
-          )}
+          </div>
+        )}
+        
+        {/* Column 2 - Chat History (Collapsible) / Image Prompt Panel */}
+        {activeEntitySession && (
+          <aside className={`${styles.historyPanel} ${focusModeEnabled ? styles.uiHidden : ''}`}>
+            {/* Show Chat History for Characters */}
+            {activeEntitySession.entityType !== 'location' && (
+              <ChatHistoryViewer messages={activeEntitySession.messages} />
+            )}
+
+            {/* Always show image prompt panel */}
+            {activeEntitySession.imagePrompt && (
+              <ImagePromptPanel imagePrompt={activeEntitySession.imagePrompt} />
+            )}
+          </aside>
+        )}
+
+        {/* Draggable Chat Panels */}
+        {Array.from(entities.entries()).map(([entityId, entity]) => {
+          const isPanelOpen = entityPanelOpen.get(entityId);
+          if (!isPanelOpen || entity.entityType !== 'character') return null;
           
-          {/* Column 2 - Chat History (Collapsible) / Image Prompt Panel */}
-          {activeEntitySession && (
-            <aside className={styles.historyPanel}>
-              {/* Show Chat History for Characters */}
-              {activeEntitySession.entityType !== 'location' && (
-                <ChatHistoryViewer messages={activeEntitySession.messages} />
-              )}
-
-              {/* Always show image prompt panel */}
-              {activeEntitySession.imagePrompt && (
-                <ImagePromptPanel imagePrompt={activeEntitySession.imagePrompt} />
-              )}
-            </aside>
-          )}
-
-          {/* Draggable Chat Panels */}
-          {Array.from(entities.entries()).map(([entityId, entity]) => {
-            const isPanelOpen = entityPanelOpen.get(entityId);
-            if (!isPanelOpen || entity.entityType !== 'character') return null;
-            
-            return (
+          return (
+            <div key={entityId} className={focusModeEnabled ? styles.uiHidden : ''}>
               <ChatPanel
-                key={entityId}
                 entityId={entityId}
                 entityName={entity.entityName}
                 onClose={() => closeEntityPanel(entityId)}
               />
-            );
-          })}
-        </>
-      )}
+            </div>
+          );
+        })}
+      </>
 
       {/* Character Info Modal */}
       {isCharacter && (

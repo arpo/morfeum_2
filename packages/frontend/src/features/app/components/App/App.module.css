@@ -173,6 +173,11 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
+/* Hide UI elements in focus mode */
+.uiHidden {
+  display: none;
+}
+
 @keyframes fadeInOutHint {
   0% {
     opacity: 0;
