@@ -1859,6 +1859,233 @@
       ],
       "searchDesc": "Dimly lit colossal metallic ring interior, ancient technology, desolate mystery, glowing glyphs.",
       "slug": "interior-of-the-broken-halo"
+    },
+    "loc-1764253601432-r2gdtdqrd": {
+      "id": "loc-1764253601432-r2gdtdqrd",
+      "type": "host",
+      "name": "Arid Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Arid Expanse",
+        "description": "Vast, sun-scorched desert planet",
+        "dna": {
+          "looks": "A desolate and unforgiving world of endless sand and rock formations. The sky is often a hazy, washed-out blue or a fiery orange at dawn and dusk. Evidence of ancient civilizations and failed colonizations are scattered across the landscape.",
+          "colorsAndLighting": "Dominated by warm, earthy tones of ochre, terracotta, and sand, with stark contrasts from the harsh overhead sun. Lighting is intense and direct, casting sharp shadows during midday and creating dramatic silhouettes during twilight.",
+          "atmosphere": "The air is thin, dry, and often filled with fine dust particles. Temperatures fluctuate wildly between scorching days and freezing nights. Occasional sandstorms can reduce visibility to near zero.",
+          "materials": "Primarily weathered rock, compressed sand, and the remnants of advanced but decaying technology. Surfaces are often rough, abrasive, and baked by the sun.",
+          "mood": "A sense of isolation, hardship, and the slow decay of ambitious endeavors. Survival is a constant struggle against the elements.",
+          "sounds": "Whispering winds, shifting sands, distant sonic booms, the crackle of static",
+          "spatialLayout": "Expansive and open, with vast, unbroken plains and towering geological formations. Structures, when present, are often isolated and weathered.",
+          "primary_surfaces": [
+            "sand",
+            "rock"
+          ],
+          "secondary_surfaces": [
+            "weathered metal",
+            "corroded composites"
+          ],
+          "accent_features": [
+            "cracked ceramics",
+            "faded signage",
+            "exposed circuitry"
+          ],
+          "dominant": "Browns",
+          "secondary": "Beiges",
+          "accent": "Oranges",
+          "ambient": "Warm",
+          "genre": "sci-fi",
+          "architectural_tone": "austere utilitarian design with weathered, exposed structural elements and heat-resistant composite plating, emphasizing functionality over aesthetics",
+          "cultural_tone": "survivalist, nomadic, and pragmatic, with a deep respect for resilience and resourcefulness",
+          "materials_base": "heat-resistant composites, weathered metals, compressed sand-ceramics",
+          "mood_baseline": "resilient survival",
+          "palette_bias": "earth tones with stark metallic accents",
+          "soundscape_base": "wind-swept, dry, and echoing",
+          "flora_base": "succulents, hardy desert shrubs, bioluminescent fungi",
+          "fauna_base": "desert-dwelling reptiles, insectoids, hardy avian scavengers"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ancient ruins",
+          "Vast deserts",
+          "Starship graveyards"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme temperatures",
+          "Bioluminescent flora",
+          "Scarce water resources"
+        ],
+        "searchDesc": "A vast, sun-scorched desert planet with extreme temperatures and scarce resources.",
+        "slug": "arid-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Arid Expanse",
+          "looks": "Vast, sun-scorched desert planet",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Vast, sun-scorched desert planet"
+    },
+    "b205fb65-9b6e-4415-ae10-23d085ae016d": {
+      "id": "b205fb65-9b6e-4415-ae10-23d085ae016d",
+      "type": "region",
+      "name": "Crimson Dunes",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "Crimson Dunes",
+        "description": "Endless stretches of shifting red sand.",
+        "dna": {
+          "looks": "A seemingly infinite landscape of rolling, deep red sand dunes. The horizon is often blurred by heat haze, creating disorienting mirages. Wind-sculpted rock formations rise sporadically from the sandy ocean.",
+          "colorsAndLighting": "The overwhelming color is a rich, saturated red, broken only by the pale beige of distant rock outcrops and the intense glare of the sun. Shadows are deep and sharp on the leeward sides of dunes.",
+          "atmosphere": "The air is thick with fine red dust that gives the light a perpetual rosy hue. Sand is constantly in motion, carried by strong, warm winds that can whip up localized dust devils.",
+          "materials": "The dominant material is fine, granular red sand, highly mobile and easily shifted. Exposed rock is layered and weathered, often displaying striations from eons of wind abrasion.",
+          "mood": "One of constant motion, subtle danger, and overwhelming scale. A feeling of being utterly alone and exposed to the elements.",
+          "sounds": "The constant hiss and sigh of wind, the whisper of shifting sand, the occasional dry creak of rock",
+          "spatialLayout": "Vast, undulating plains that stretch to the horizon, characterized by flowing curves and sharp crests of sand.",
+          "primary_surfaces": [
+            "red sand"
+          ],
+          "secondary_surfaces": [
+            "sandstone"
+          ],
+          "accent_features": [
+            "wind-carved ripples",
+            "shimmering heat haze"
+          ],
+          "dominant": "Reds",
+          "secondary": "Beiges",
+          "accent": "White",
+          "ambient": "Warm",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "warm reds and oranges, with high contrast from direct sunlight",
+          "soundscape_base": "wind-dominated, sandy, whispering",
+          "flora_base": "sparse, low-lying, hardy desert grasses",
+          "fauna_base": "burrowing insects, sand lizards"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Vast sand dunes",
+          "Ancient rock formations",
+          "Dust devils"
+        ],
+        "uniqueIdentifiers": [
+          "Deep red sand",
+          "Extreme wind erosion",
+          "Mirages"
+        ],
+        "searchDesc": "Endless, shifting dunes of deep red sand sculpted by relentless winds.",
+        "slug": "crimson-dunes",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Crimson Dunes",
+          "looks": "Endless stretches of shifting red sand.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Endless stretches of shifting red sand."
+    },
+    "7d88b83f-c6c1-4ceb-9787-ef0a24e16dfd": {
+      "id": "7d88b83f-c6c1-4ceb-9787-ef0a24e16dfd",
+      "type": "location",
+      "name": "The Stranded Vanguard",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Stranded Vanguard",
+        "description": "A derelict warship marooned in the desert.",
+        "looks": "A large, wedge-shaped warship, partially buried in red sand. Cyan running lights flicker intermittently along its hull. A boarding ramp is extended, touching the sand.",
+        "atmosphere": "Scorching heat, fine sand particles in the air, the faint hum of failing systems.",
+        "mood": "Desolate, forgotten",
+        "dna": {
+          "looks": "A massive, wedge-shaped warship rests partially embedded in undulating red desert dunes. Its hull, constructed from a light-colored, weathered material, features distinct paneling and raised sections. Along its side, a series of glowing cyan lights punctuate the otherwise uniform surface. A prominent boarding ramp extends downwards from the ship's port side, its end resting on the sand. The scale of the vessel is imposing, dwarfing the surrounding landscape and suggesting a significant technological presence marooned in this arid environment.",
+          "colorsAndLighting": "The lighting is warm and diffused, emanating from an unseen source likely overhead, casting long shadows. The dominant color of the light is a bright orange-yellow, indicative of a sun in a dusty atmosphere. Contrast is moderate, with the brightly lit sand and ship hull standing out against the hazy sky and shadowed dune faces.",
+          "atmosphere": "Fine, red sand particles are visibly suspended in the air, creating a hazy atmosphere that softens distant details. The air appears dry and potentially hot, with the sand reflecting the ambient light intensely.",
+          "materials": "The primary material is the pervasive red sand, with the ship's hull composed of a weathered, light-colored composite or metal plating.",
+          "mood": "A profound sense of abandonment, lost power, and silent testament to a past conflict or disaster. A juxtaposition of advanced technology and the raw forces of nature.",
+          "sounds": "The distant drone of wind, the faint hum of dormant systems, the soft crunch of sand",
+          "spatialLayout": "The foreground is dominated by rolling, textured red sand dunes with scattered rocks. The midground is occupied by the stranded warship, a large structure angled across the frame and partially consumed by the sand. The background consists of more distant, hazy sand dunes and a bright, featureless sky. The ship's ramp cuts diagonally from the midground into the foreground sand.",
+          "primary_surfaces": "Sand",
+          "secondary_surfaces": "Ship hull plating",
+          "accent_features": "Cyan running lights",
+          "dominant": "Red (sand dunes)",
+          "secondary": "Beige/White (warship hull)",
+          "accent": "Cyan (running lights)",
+          "ambient": "Orange-yellow (sky and light)",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "muted earth tones with artificial light accents",
+          "soundscape_base": "minimal, emphasizing ambient environmental sounds",
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "ramp",
+            "position": "left side, midground",
+            "description": "Extended ramp leading from the ship's hull to the desert floor"
+          },
+          {
+            "type": "window",
+            "position": "midsection of ship hull, midground",
+            "description": "Rectangular windows along the ship's side, some faintly illuminated"
+          }
+        ],
+        "dominantElements": [
+          "Wedge-shaped warship (midground, center)",
+          "Red sand dunes (foreground, midground, background)",
+          "Extended boarding ramp (midground, left)"
+        ],
+        "uniqueIdentifiers": [
+          "Stranded wedge-shaped warship",
+          "Extended boarding ramp in red desert sand",
+          "Cyan running lights on hull"
+        ],
+        "searchDesc": "[Location - Exterior] Stranded warship in red desert. Has: boarding ramp (left, midground), windows (midsection, midground)",
+        "slug": "the-stranded-vanguard",
+        "imageUrl": "https://v3b.fal.media/files/b/panda/Pg5EXOToRPWTUlbu4sDgu.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Stranded Vanguard",
+          "looks": "A derelict warship marooned in the desert.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/Pg5EXOToRPWTUlbu4sDgu.jpg",
+      "description": "A derelict warship marooned in the desert."
     }
   },
   "views": {},
@@ -3125,6 +3352,236 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764253601432-r2gdtdqrd",
+      "type": "host",
+      "name": "Arid Expanse",
+      "description": "Vast, sun-scorched desert planet",
+      "dna": {
+        "type": "host",
+        "name": "Arid Expanse",
+        "description": "Vast, sun-scorched desert planet",
+        "dna": {
+          "looks": "A desolate and unforgiving world of endless sand and rock formations. The sky is often a hazy, washed-out blue or a fiery orange at dawn and dusk. Evidence of ancient civilizations and failed colonizations are scattered across the landscape.",
+          "colorsAndLighting": "Dominated by warm, earthy tones of ochre, terracotta, and sand, with stark contrasts from the harsh overhead sun. Lighting is intense and direct, casting sharp shadows during midday and creating dramatic silhouettes during twilight.",
+          "atmosphere": "The air is thin, dry, and often filled with fine dust particles. Temperatures fluctuate wildly between scorching days and freezing nights. Occasional sandstorms can reduce visibility to near zero.",
+          "materials": "Primarily weathered rock, compressed sand, and the remnants of advanced but decaying technology. Surfaces are often rough, abrasive, and baked by the sun.",
+          "mood": "A sense of isolation, hardship, and the slow decay of ambitious endeavors. Survival is a constant struggle against the elements.",
+          "sounds": "Whispering winds, shifting sands, distant sonic booms, the crackle of static",
+          "spatialLayout": "Expansive and open, with vast, unbroken plains and towering geological formations. Structures, when present, are often isolated and weathered.",
+          "primary_surfaces": [
+            "sand",
+            "rock"
+          ],
+          "secondary_surfaces": [
+            "weathered metal",
+            "corroded composites"
+          ],
+          "accent_features": [
+            "cracked ceramics",
+            "faded signage",
+            "exposed circuitry"
+          ],
+          "dominant": "Browns",
+          "secondary": "Beiges",
+          "accent": "Oranges",
+          "ambient": "Warm",
+          "genre": "sci-fi",
+          "architectural_tone": "austere utilitarian design with weathered, exposed structural elements and heat-resistant composite plating, emphasizing functionality over aesthetics",
+          "cultural_tone": "survivalist, nomadic, and pragmatic, with a deep respect for resilience and resourcefulness",
+          "materials_base": "heat-resistant composites, weathered metals, compressed sand-ceramics",
+          "mood_baseline": "resilient survival",
+          "palette_bias": "earth tones with stark metallic accents",
+          "soundscape_base": "wind-swept, dry, and echoing",
+          "flora_base": "succulents, hardy desert shrubs, bioluminescent fungi",
+          "fauna_base": "desert-dwelling reptiles, insectoids, hardy avian scavengers"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ancient ruins",
+          "Vast deserts",
+          "Starship graveyards"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme temperatures",
+          "Bioluminescent flora",
+          "Scarce water resources"
+        ],
+        "searchDesc": "A vast, sun-scorched desert planet with extreme temperatures and scarce resources.",
+        "slug": "arid-expanse",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Arid Expanse",
+          "looks": "Vast, sun-scorched desert planet",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "b205fb65-9b6e-4415-ae10-23d085ae016d",
+          "type": "region",
+          "name": "Crimson Dunes",
+          "description": "Endless stretches of shifting red sand.",
+          "dna": {
+            "type": "region",
+            "name": "Crimson Dunes",
+            "description": "Endless stretches of shifting red sand.",
+            "dna": {
+              "looks": "A seemingly infinite landscape of rolling, deep red sand dunes. The horizon is often blurred by heat haze, creating disorienting mirages. Wind-sculpted rock formations rise sporadically from the sandy ocean.",
+              "colorsAndLighting": "The overwhelming color is a rich, saturated red, broken only by the pale beige of distant rock outcrops and the intense glare of the sun. Shadows are deep and sharp on the leeward sides of dunes.",
+              "atmosphere": "The air is thick with fine red dust that gives the light a perpetual rosy hue. Sand is constantly in motion, carried by strong, warm winds that can whip up localized dust devils.",
+              "materials": "The dominant material is fine, granular red sand, highly mobile and easily shifted. Exposed rock is layered and weathered, often displaying striations from eons of wind abrasion.",
+              "mood": "One of constant motion, subtle danger, and overwhelming scale. A feeling of being utterly alone and exposed to the elements.",
+              "sounds": "The constant hiss and sigh of wind, the whisper of shifting sand, the occasional dry creak of rock",
+              "spatialLayout": "Vast, undulating plains that stretch to the horizon, characterized by flowing curves and sharp crests of sand.",
+              "primary_surfaces": [
+                "red sand"
+              ],
+              "secondary_surfaces": [
+                "sandstone"
+              ],
+              "accent_features": [
+                "wind-carved ripples",
+                "shimmering heat haze"
+              ],
+              "dominant": "Reds",
+              "secondary": "Beiges",
+              "accent": "White",
+              "ambient": "Warm",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": "warm reds and oranges, with high contrast from direct sunlight",
+              "soundscape_base": "wind-dominated, sandy, whispering",
+              "flora_base": "sparse, low-lying, hardy desert grasses",
+              "fauna_base": "burrowing insects, sand lizards"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Vast sand dunes",
+              "Ancient rock formations",
+              "Dust devils"
+            ],
+            "uniqueIdentifiers": [
+              "Deep red sand",
+              "Extreme wind erosion",
+              "Mirages"
+            ],
+            "searchDesc": "Endless, shifting dunes of deep red sand sculpted by relentless winds.",
+            "slug": "crimson-dunes",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "Crimson Dunes",
+              "looks": "Endless stretches of shifting red sand.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "7d88b83f-c6c1-4ceb-9787-ef0a24e16dfd",
+              "type": "location",
+              "name": "The Stranded Vanguard",
+              "description": "A derelict warship marooned in the desert.",
+              "dna": {
+                "type": "location",
+                "name": "The Stranded Vanguard",
+                "description": "A derelict warship marooned in the desert.",
+                "looks": "A large, wedge-shaped warship, partially buried in red sand. Cyan running lights flicker intermittently along its hull. A boarding ramp is extended, touching the sand.",
+                "atmosphere": "Scorching heat, fine sand particles in the air, the faint hum of failing systems.",
+                "mood": "Desolate, forgotten",
+                "dna": {
+                  "looks": "A massive, wedge-shaped warship rests partially embedded in undulating red desert dunes. Its hull, constructed from a light-colored, weathered material, features distinct paneling and raised sections. Along its side, a series of glowing cyan lights punctuate the otherwise uniform surface. A prominent boarding ramp extends downwards from the ship's port side, its end resting on the sand. The scale of the vessel is imposing, dwarfing the surrounding landscape and suggesting a significant technological presence marooned in this arid environment.",
+                  "colorsAndLighting": "The lighting is warm and diffused, emanating from an unseen source likely overhead, casting long shadows. The dominant color of the light is a bright orange-yellow, indicative of a sun in a dusty atmosphere. Contrast is moderate, with the brightly lit sand and ship hull standing out against the hazy sky and shadowed dune faces.",
+                  "atmosphere": "Fine, red sand particles are visibly suspended in the air, creating a hazy atmosphere that softens distant details. The air appears dry and potentially hot, with the sand reflecting the ambient light intensely.",
+                  "materials": "The primary material is the pervasive red sand, with the ship's hull composed of a weathered, light-colored composite or metal plating.",
+                  "mood": "A profound sense of abandonment, lost power, and silent testament to a past conflict or disaster. A juxtaposition of advanced technology and the raw forces of nature.",
+                  "sounds": "The distant drone of wind, the faint hum of dormant systems, the soft crunch of sand",
+                  "spatialLayout": "The foreground is dominated by rolling, textured red sand dunes with scattered rocks. The midground is occupied by the stranded warship, a large structure angled across the frame and partially consumed by the sand. The background consists of more distant, hazy sand dunes and a bright, featureless sky. The ship's ramp cuts diagonally from the midground into the foreground sand.",
+                  "primary_surfaces": "Sand",
+                  "secondary_surfaces": "Ship hull plating",
+                  "accent_features": "Cyan running lights",
+                  "dominant": "Red (sand dunes)",
+                  "secondary": "Beige/White (warship hull)",
+                  "accent": "Cyan (running lights)",
+                  "ambient": "Orange-yellow (sky and light)",
+                  "genre": null,
+                  "architectural_tone": null,
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": "muted earth tones with artificial light accents",
+                  "soundscape_base": "minimal, emphasizing ambient environmental sounds",
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "ramp",
+                    "position": "left side, midground",
+                    "description": "Extended ramp leading from the ship's hull to the desert floor"
+                  },
+                  {
+                    "type": "window",
+                    "position": "midsection of ship hull, midground",
+                    "description": "Rectangular windows along the ship's side, some faintly illuminated"
+                  }
+                ],
+                "dominantElements": [
+                  "Wedge-shaped warship (midground, center)",
+                  "Red sand dunes (foreground, midground, background)",
+                  "Extended boarding ramp (midground, left)"
+                ],
+                "uniqueIdentifiers": [
+                  "Stranded wedge-shaped warship",
+                  "Extended boarding ramp in red desert sand",
+                  "Cyan running lights on hull"
+                ],
+                "searchDesc": "[Location - Exterior] Stranded warship in red desert. Has: boarding ramp (left, midground), windows (midsection, midground)",
+                "slug": "the-stranded-vanguard",
+                "imageUrl": "https://v3b.fal.media/files/b/panda/Pg5EXOToRPWTUlbu4sDgu.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Stranded Vanguard",
+                  "looks": "A derelict warship marooned in the desert.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/panda/Pg5EXOToRPWTUlbu4sDgu.jpg",
+              "spaceType": "exterior",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -3132,6 +3589,7 @@
     "loc-1764169612979-1xzvxmo0t",
     "loc-1764187096720-nc3jpxtls",
     "loc-1764163238646-okad0b4sr",
-    "loc-1764242279423-vwce5a12r"
+    "loc-1764242279423-vwce5a12r",
+    "loc-1764253601432-r2gdtdqrd"
   ]
 }
