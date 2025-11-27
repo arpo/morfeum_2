@@ -2213,6 +2213,854 @@
       "searchDesc": "Dimly lit Lumina Spire canyon interior with dark metal walls, blue neon, and a concrete platform.",
       "slug": "interior-of-the-lumina-spire-canyon",
       "primaryMedia": "media-1764238896690-ntml33clw"
+    },
+    "loc-1764241658092-wbopfg0ms": {
+      "id": "loc-1764241658092-wbopfg0ms",
+      "type": "host",
+      "name": "The Aetherial Sea",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Aetherial Sea",
+        "description": "A boundless expanse of ethereal currents and sky-ocean, home to colossal, sky-faring lifeforms.",
+        "dna": {
+          "looks": "Vast, swirling nebulae of luminous gases and crystalline structures form the backdrop of an endless sky. Gigantic, organically sculpted landmasses drift serenely, some resembling colossal, slumbering beasts. Luminescent particles drift through the air like cosmic dust.",
+          "colorsAndLighting": "The scene is dominated by deep blues, purples, and vibrant teals, interspersed with streaks of soft gold and silver. Light emanates from internal nebulae, bioluminescent organisms, and the crystalline structures, creating an ethereal and otherworldly glow.",
+          "atmosphere": "A thin, breathable atmosphere that feels almost liquid, carrying faint scents of ozone and unknown celestial flowers. Gentle, unseen currents guide the movement of celestial bodies and airborne life. The temperature is cool and constant, with no discernible weather patterns.",
+          "materials": "Primarily composed of solidified celestial gas, crystalline formations, and organic, rock-like substances that possess a natural luminescence. Surfaces can range from smooth and polished to rugged and crystalline.",
+          "mood": "Serene, majestic, and awe-inspiring. A sense of profound peace and ancient mystery pervades the environment.",
+          "sounds": "Subtle hums, distant chimes, faint whispers of wind, cosmic resonance, deep resonant tones.",
+          "spatialLayout": "An infinite three-dimensional space where scale is immense and distances are vast. Landmasses float independently, creating a natural, non-uniform distribution of usable areas.",
+          "primary_surfaces": [
+            "Celestial rock",
+            "Crystalline formations",
+            "Solidified nebulae"
+          ],
+          "secondary_surfaces": [
+            "Ethereal mist",
+            "Luminous gas"
+          ],
+          "accent_features": [
+            "Bioluminescent flora",
+            "Drifting celestial debris",
+            "Geode-like structures"
+          ],
+          "dominant": "Deep blues and purples",
+          "secondary": "Vibrant teals and golds",
+          "accent": "Silver and ethereal whites",
+          "ambient": "Cool and ethereal",
+          "genre": "Fantasy",
+          "architectural_tone": "Organic, monumental, and naturally sculpted forms. No artificial structures, only the grand designs of cosmic and biological processes. Emphasis on flowing lines, immense scale, and integration with the environment.",
+          "cultural_tone": "Ancient, spiritual, and deeply connected to natural cycles. No recorded history or civilization, only the existence of titanic lifeforms and their inherent existence.",
+          "materials_base": "Naturally occurring, luminescent, and celestial materials. Emphasis on organic textures and mineral formations. Polished to a high sheen in some areas, rough and unworked in others.",
+          "mood_baseline": "Majestic, tranquil, and mysterious.",
+          "palette_bias": "Cool, vibrant, and cosmic color palettes with a strong emphasis on blues, purples, and teals. Luminescent accents are key.",
+          "soundscape_base": "Subtle, ambient, and resonant. Characterized by deep hums, celestial echoes, and the gentle sounds of cosmic movement.",
+          "flora_base": "Bioluminescent and ethereal plant life, adapted to celestial environments. Think glowing mosses, crystalline flowers, and light-emitting vines.",
+          "fauna_base": "Colossal, sky-faring beings and smaller, bioluminescent airborne creatures. Fauna are integral to the environment's visual and thematic identity."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating Archipelagos",
+          "Sky-Whales",
+          "Ethereal Currents"
+        ],
+        "uniqueIdentifiers": [
+          "Sky-Ocean",
+          "Colossal Sky Fauna",
+          "Bioluminescent Flora"
+        ],
+        "searchDesc": "A boundless sky-ocean with colossal, sky-faring lifeforms and floating rock formations.",
+        "slug": "the-aetherial-sea",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Aetherial Sea",
+          "looks": "A boundless expanse of ethereal currents and sky-ocean, home to colossal, sky-faring lifeforms.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A boundless expanse of ethereal currents and sky-ocean, home to colossal, sky-faring lifeforms."
+    },
+    "20c22442-aee9-4279-83e2-ac652a714c9f": {
+      "id": "20c22442-aee9-4279-83e2-ac652a714c9f",
+      "type": "region",
+      "name": "The Aetherial Sea",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Aetherial Sea",
+        "description": "",
+        "dna": {
+          "looks": "A cluster of immense, island-like rock formations, resembling slumbering leviathans, drift through the sky. Their surfaces are encrusted with vibrant, pulsating bioluminescent barnacles. These 'rock-whales' vary in size, with the largest featuring a colossal, cavernous opening.",
+          "colorsAndLighting": "The rock is a deep, muted gray-blue, providing a stark contrast to the brilliant, multi-colored glow of the bioluminescent barnacles which emit blues, greens, and purples. Ambient light is soft and diffused, reflecting the distant celestial glow.",
+          "atmosphere": "Humid and slightly misty, with the air carrying a faint, salty-sweet scent. The atmosphere feels heavy, as if part of the sky-ocean itself. Gentle currents suggest movement but there's no harsh wind.",
+          "materials": "Primarily dense, weathered rock with a porous texture. The bioluminescent barnacles have a glassy, organic shell.",
+          "mood": "Mysterious, ancient, and slightly foreboding due to the sheer scale and the dark openings.",
+          "sounds": "Distant echoes, dripping water, faint bio-luminescent pulses, low resonant groans of the rock-whales.",
+          "spatialLayout": "A collection of massive, floating landmasses of varying sizes, creating natural islands and open sky between them. The largest rock-whale dominates the immediate area with its imposing blowhole.",
+          "primary_surfaces": [
+            "Dense, weathered rock",
+            "Bioluminescent barnacles"
+          ],
+          "secondary_surfaces": [
+            "Atmospheric mist",
+            "Ethereal sky"
+          ],
+          "accent_features": [
+            "Craggy rock formations",
+            "Organic textures of the rock-whales",
+            "Pulsating light patterns"
+          ],
+          "dominant": "Deep blues and grays",
+          "secondary": "Vibrant greens and purples",
+          "accent": "Pulsating white and gold",
+          "ambient": "Cool and diffused",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": "Colossal rock-whales, bioluminescent barnacle colonies, sky-plankton"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating Rock-Whales",
+          "Bioluminescent Barnacles",
+          "Vast Open Sky"
+        ],
+        "uniqueIdentifiers": [
+          "Archipelago of Rock-Whales",
+          "Blowhole Entrances",
+          "Sky-Ocean Currents"
+        ],
+        "searchDesc": "An archipelago of massive, floating rock-whales adorned with bioluminescent barnacles, featuring a grand blowhole entrance.",
+        "slug": "the-aetherial-sea",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Aetherial Sea",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": ""
+    },
+    "e146e1d8-a0f7-4d41-9d4e-b1243302f1fa": {
+      "id": "e146e1d8-a0f7-4d41-9d4e-b1243302f1fa",
+      "type": "location",
+      "name": "The Great Leviathan's Maw",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Great Leviathan's Maw",
+        "description": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+        "looks": "A colossal, gaping maw on the flank of a gargantuan rock-whale, pulsating with soft, internal bioluminescence. Barnacles the size of boulders cling to its exterior, emitting an eerie, soft glow.",
+        "atmosphere": "A gentle draft of warm, mineral-rich air emanates from within, carrying the faint scent of brine and something ancient. The hum of unseen biological processes is palpable.",
+        "mood": "Majestic, mysterious, inviting",
+        "dna": {
+          "looks": "Massive, organically sculpted rock formations create a cavernous interior. The primary focal point is a colossal archway in the background, emitting a brilliant turquoise light. The ground consists of a shallow, reflective body of water interspersed with rocky outcrops. Small, geometric structures with a warm, internal glow are visible on the rocky ledges to the left and right.",
+          "colorsAndLighting": "The scene is illuminated by two primary light sources: a vibrant, cool turquoise light emanating from the background archway and soft, warm orange light from the geometric structures on the ledges. The overall contrast is moderate, with deep shadows defining the cavern's contours.",
+          "atmosphere": "A light mist hangs in the air, obscuring distant details and softening the edges of the rock formations. The atmosphere appears humid and still, with no discernible wind.",
+          "materials": "Primarily rough, organically carved stone. The floor consists of water. The geometric structures appear to be made of an unknown, translucent material.",
+          "mood": "Enigmatic, inviting, and slightly ominous.",
+          "sounds": "Distant echoes, gentle lapping of water, faint humming from structures.",
+          "spatialLayout": "The foreground is dominated by a shallow, reflective water surface and scattered rocks. The midground features towering, textured rock walls that curve inward, forming a grand cavern. The background is defined by a massive, illuminated archway, suggesting an exit or entrance into another luminous space.",
+          "primary_surfaces": "Stone",
+          "secondary_surfaces": "Water",
+          "accent_features": "Bioluminescent light sources",
+          "dominant": "Deep blues and grays of the rock",
+          "secondary": "Reflective blues of the water",
+          "accent": "Bright turquoise from the archway, warm orange from structures",
+          "ambient": "Cool, ethereal blue",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center, background",
+            "description": "A vast, brightly lit archway leading to an unknown luminous space"
+          },
+          {
+            "type": "passage",
+            "position": "left ledge, midground",
+            "description": "A small cave entrance with a warm, inviting orange glow"
+          },
+          {
+            "type": "passage",
+            "position": "right ledge, midground",
+            "description": "A small cave entrance with a warm, inviting orange glow"
+          }
+        ],
+        "dominantElements": [
+          "Cavernous rock formations (left and right)",
+          "Colossal archway with turquoise light (background)",
+          "Shallow water body (foreground)",
+          "Geometric glowing structures (left and right ledges)"
+        ],
+        "uniqueIdentifiers": [
+          "Bioluminescent geometric structures",
+          "Colossal glowing archway",
+          "Rock formations resembling biological structures"
+        ],
+        "searchDesc": "Cave interior with water and rock formations. Has: archway (background), passage (left ledge), passage (right ledge)",
+        "slug": "the-great-leviathan-s-maw",
+        "imageUrl": "https://v3b.fal.media/files/b/koala/aSoo9_BQLm46-3-59IBQQ.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Great Leviathan's Maw",
+          "looks": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/koala/aSoo9_BQLm46-3-59IBQQ.jpg",
+      "description": "The cavernous blowhole entrance on the largest of the floating rock-whales."
+    },
+    "loc-1764241721555-6ta20woti": {
+      "id": "loc-1764241721555-6ta20woti",
+      "type": "host",
+      "name": "Earth",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Earth",
+        "description": "A verdant planet with hidden secrets.",
+        "dna": {
+          "looks": "A vibrant blue and green sphere from orbit, characterized by diverse landmasses, expansive oceans, and swirling atmospheric patterns. Features include varied terrains from mountains and deserts to forests and tundras.",
+          "colorsAndLighting": "Dominated by blues of the oceans and atmosphere, greens of vegetation, and browns/grays of land. Lighting is naturally driven by a sun, creating clear day/night cycles and varied illumination across surfaces.",
+          "atmosphere": "A breathable, nitrogen-oxygen rich atmosphere that supports a wide range of life. Weather patterns are dynamic, ranging from calm breezes to severe storms, with distinct seasonal variations across different regions.",
+          "materials": "Composed of rock, soil, water, and organic matter. Natural formations feature stone, earth, ice, and living flora. Man-made structures can utilize metal, concrete, glass, and wood.",
+          "mood": "A sense of life, vastness, and latent potential. Can range from serene and beautiful to harsh and dangerous, reflecting the planet's natural forces and the presence of hidden elements.",
+          "sounds": "Wind, water, animal calls, geological rumbles, rustling flora, distant human activity.",
+          "spatialLayout": "Vast, interconnected landscapes with natural boundaries defined by geography. Spaces can be open and expansive or enclosed and intimate, depending on the terrain and biome.",
+          "primary_surfaces": [
+            "rock",
+            "soil",
+            "water"
+          ],
+          "secondary_surfaces": [
+            "ice",
+            "sand",
+            "vegetation"
+          ],
+          "accent_features": [
+            "mountains",
+            "volcanoes",
+            "canyons",
+            "rivers",
+            "lakes"
+          ],
+          "dominant": "blue, green",
+          "secondary": "brown, gray, white",
+          "accent": "red, yellow",
+          "ambient": "natural daylight",
+          "genre": "sci-fi",
+          "architectural_tone": "diverse, ranging from primitive natural shelters to advanced, integrated technology. Can include styles such as organic, industrial, brutalist, and futuristic, depending on civilization.",
+          "cultural_tone": "diverse, with many distinct societies, belief systems, and technological advancements. Includes themes of exploration, survival, conflict, and coexistence.",
+          "materials_base": "natural and synthetic materials, with a focus on durability and environmental integration. Includes stone, wood, metal alloys, advanced composites, and bio-engineered substances.",
+          "mood_baseline": "curiosity, resilience, mystery, and the underlying tension between nature and artifice.",
+          "palette_bias": "earthy tones with vibrant accents, influenced by biomes and technological overlays. Can range from muted natural palettes to stark, high-contrast artificial schemes.",
+          "soundscape_base": "dynamic natural soundscapes augmented by the hum of technology, distant echoes of civilization, and unique ambient noises of undiscovered phenomena.",
+          "flora_base": "diverse, from common terrestrial plants to exotic and bioluminescent species. Flora can be integrated into architecture and technology.",
+          "fauna_base": "varied, including terrestrial, aquatic, and potentially extraterrestrial or genetically engineered creatures. Fauna can range from mundane to dangerous and awe-inspiring."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Continents",
+          "Oceans",
+          "Atmosphere"
+        ],
+        "uniqueIdentifiers": [
+          "Biosphere",
+          "Geological diversity",
+          "Water bodies"
+        ],
+        "searchDesc": "A living planet teeming with diverse biomes, geological formations, and a complex biosphere.",
+        "slug": "earth",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Earth",
+          "looks": "A verdant planet with hidden secrets.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A verdant planet with hidden secrets."
+    },
+    "a21cbcab-2e70-4a0d-9c2e-4fa8813e9e9f": {
+      "id": "a21cbcab-2e70-4a0d-9c2e-4fa8813e9e9f",
+      "type": "region",
+      "name": "The Verdant Plains",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Verdant Plains",
+        "description": "Vast, wild expanses where nature reclaims the forgotten.",
+        "dna": {
+          "looks": "Characterized by sweeping vistas of lush, untamed vegetation. Rolling hills are covered in dense grasses, wildflowers, and encroaching trees. Patches of moss and vines often cling to any exposed rock or remnants of ancient structures.",
+          "colorsAndLighting": "Dominated by vibrant greens and earthy browns, with occasional bursts of color from wildflowers. Lighting is typically diffused and soft, often dappled by dense tree canopies, creating a sense of natural enclosure.",
+          "atmosphere": "Humid and earthy, with the scent of damp soil and decaying leaves. The air is thick with the sounds of insects and distant wildlife. Weather can shift from gentle breezes to sudden, heavy rainfall.",
+          "materials": "Primarily composed of rich soil, dense plant matter, weathered stone, and decaying wood. Evidence of man-made materials might be found but are heavily overgrown and integrated with the natural environment.",
+          "mood": "A sense of quiet solitude, ancientness, and the overwhelming power of nature. There is a feeling of being enveloped and somewhat lost within the vastness.",
+          "sounds": "Rustling leaves, insect chirps, distant bird calls, gentle wind, occasional animal rustles.",
+          "spatialLayout": "Open and sprawling, with natural pathways formed by the terrain and vegetation. The landscape can feel immense and somewhat disorienting due to the uniformity of dense growth.",
+          "primary_surfaces": [
+            "soil",
+            "dense vegetation"
+          ],
+          "secondary_surfaces": [
+            "weathered stone",
+            "decaying wood"
+          ],
+          "accent_features": [
+            "wildflowers",
+            "ancient trees",
+            "overgrown moss"
+          ],
+          "dominant": "green",
+          "secondary": "brown, gold",
+          "accent": "vibrant floral colors",
+          "ambient": "natural daylight, diffused",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "lush terrestrial flora, including grasses, ferns, vines, wildflowers, and dense arboreal growth.",
+          "fauna_base": "small to medium-sized terrestrial wildlife, abundant insect life, and possibly larger, reclusive ground-dwelling animals."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Rolling hills",
+          "Dense foliage",
+          "Overgrown ruins"
+        ],
+        "uniqueIdentifiers": [
+          "Undulating terrain",
+          "Abundant plant life",
+          "Scattered remnants of past civilizations"
+        ],
+        "searchDesc": "Expansive natural landscapes with overgrown vegetation, rolling hills, and hints of forgotten structures.",
+        "slug": "the-verdant-plains",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Verdant Plains",
+          "looks": "Vast, wild expanses where nature reclaims the forgotten.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "Vast, wild expanses where nature reclaims the forgotten."
+    },
+    "94e0e2bc-e2ea-4b6c-969e-db1310f4dbd4": {
+      "id": "94e0e2bc-e2ea-4b6c-969e-db1310f4dbd4",
+      "type": "location",
+      "name": "The Forgotten Pitch",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Forgotten Pitch",
+        "description": "An overgrown football field concealing advanced technology.",
+        "looks": "A once-manicured field now choked with weeds and tall grass, a subtle disturbance in the earth hinting at something buried beneath.",
+        "atmosphere": "Still air, the scent of damp earth and wild flora.",
+        "mood": "Quietly uncanny, overgrown.",
+        "dna": {
+          "looks": "A once-defined football field, now utterly consumed by wild, overgrown vegetation. Tall grasses, weeds, and scattered bushes obscure the yard lines and goalposts, creating a textured, uneven landscape. In the center, a circular, metallic hatch is the focal point, set within a rough, concrete base, protruding like an old manhole cover.",
+          "colorsAndLighting": "Dominated by deep, vibrant greens from the rampant foliage, contrasted with the muted grays and browns of the earth and weathered concrete. Subtle, cool green light emanates from the hatch opening, casting an eerie glow on the surrounding mud.",
+          "atmosphere": "Humid and still, with the scent of wet earth and growing plants. A palpable sense of disuse and abandonment hangs in the air, underscored by the unusual, faint glow from the hatch.",
+          "materials": "The primary visible materials are dense vegetation, rich soil, mud, and rough, weathered concrete. The hatch itself is made of dark, aged metal, showing signs of rust around its rim.",
+          "mood": "Melancholy, mysterious, and intriguing. There's a strong sense of forgotten purpose blended with the unsettling discovery of hidden advanced technology.",
+          "sounds": "Muted rustling of grass, insect hum, distant wind, occasional drip of moisture.",
+          "spatialLayout": "A relatively flat, open area defined by the remnants of a sports field, now made uneven by overgrowth. The central hatch creates a distinct focal point, drawing attention downwards.",
+          "primary_surfaces": [
+            "dense vegetation",
+            "mud",
+            "overgrown earth"
+          ],
+          "secondary_surfaces": [
+            "weathered concrete",
+            "aged metal"
+          ],
+          "accent_features": [
+            "obscured yard lines",
+            "protruding hatch",
+            "creeping vines"
+          ],
+          "dominant": "deep green",
+          "secondary": "dark brown, gray",
+          "accent": "cool green (from hatch)",
+          "ambient": "cool, eerie",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": "overgrown terrestrial grasses, weeds, and hardy vines.",
+          "fauna_base": "common ground insects and small rodents, potentially disturbed by the hatch's presence."
+        },
+        "navigableElements": [
+          {
+            "type": "hatch",
+            "position": "center, ground level",
+            "description": "A buried, saucer-shaped lab hatch protruding like a forgotten manhole."
+          }
+        ],
+        "dominantElements": [
+          "Overgrown football field",
+          "Central hatch",
+          "Vegetation-covered structures"
+        ],
+        "uniqueIdentifiers": [
+          "Improvised playing field",
+          "Subterranean entrance",
+          "Remnants of sporting infrastructure"
+        ],
+        "searchDesc": "An overgrown, forgotten football field with a concealed, buried saucer-shaped laboratory entrance.",
+        "slug": "the-forgotten-pitch",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Forgotten Pitch",
+          "looks": "An overgrown football field concealing advanced technology.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "An overgrown football field concealing advanced technology."
+    },
+    "528f78d9-2b2b-4011-ac7d-981299ed3f66": {
+      "id": "528f78d9-2b2b-4011-ac7d-981299ed3f66",
+      "type": "niche",
+      "name": "The Subterranean Hatch",
+      "spaceType": "interior",
+      "dna": {
+        "type": "niche",
+        "name": "The Subterranean Hatch",
+        "description": "The concealed entrance to a buried, saucer-shaped laboratory.",
+        "looks": "A circular, metallic hatch, slightly rusted and camouflaged by surrounding foliage, resembling a forgotten manhole cover.",
+        "atmosphere": "A faint, metallic tang emanating from the opening, a subtle hum beneath the surface.",
+        "mood": "Secretive, technological",
+        "imageUrl": "https://v3b.fal.media/files/b/rabbit/UMBi_VUjVvdAoyAhqLo9s.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Subterranean Hatch",
+          "looks": "The concealed entrance to a buried, saucer-shaped laboratory.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/rabbit/UMBi_VUjVvdAoyAhqLo9s.jpg",
+      "description": "The concealed entrance to a buried, saucer-shaped laboratory."
+    },
+    "niche-1764241764636-6uptphw4m": {
+      "id": "niche-1764241764636-6uptphw4m",
+      "type": "niche",
+      "name": "interior of natch",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This circular laboratory interior features smooth, dark grey composite panel walls with subtle, glowing blue circuit patterns. A curved metallic console with holographic displays is built into the left wall, while a sliding panel on the right reveals an access corridor. A framed holographic schematic diagram floats centrally against the far wall.",
+        "colorsAndLighting": "Dominant dark grey is punctuated by glowing blue circuit patterns and soft holographic light. Ambient, diffused lighting originates from recessed ceiling strips and the paneling itself, creating a subtly lit environment.",
+        "atmosphere": "A low, resonant hum permeates the air, which carries a faint, clean metallic scent. The overall feeling is one of sterile, advanced technology with an underlying sense of quiet intrigue.",
+        "materials": "Walls are smooth, dark grey composite panels. The floor is dark, polished concrete with a metallic sheen. A curved metallic console unit features illuminated holographic displays.",
+        "mood": "Quietly uncanny and technologically advanced. The space feels functional yet holds a subtle mystery, amplified by the glowing circuits and floating schematic.",
+        "sounds": "Low resonant hum, faint metallic scent.",
+        "spatialLayout": "A circular laboratory space, viewed from just inside a concealed entrance. The layout is dominated by curved walls, with distinct functional areas delineated by console units and openings.",
+        "primary_surfaces": "Dark grey composite panels, polished concrete floor.",
+        "secondary_surfaces": "Metallic console, transparent panels with reinforcement struts.",
+        "accent_features": "Glowing blue circuit patterns, illuminated holographic displays, framed holographic schematic diagram.",
+        "dominant": "dark grey",
+        "secondary": "blue (glowing circuits)",
+        "accent": "metallic sheen (floor, console), shifting light (holograms)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "industrial metallic",
+        "cultural_tone": "Null",
+        "materials_base": "composite, metallic, concrete",
+        "mood_baseline": "Quietly uncanny",
+        "palette_bias": "cool neutral with bright accents",
+        "soundscape_base": "low hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/panda/b3ITQViz_koxaL_9Ew4la.jpg",
+      "description": "A high-tech, circular laboratory interior accessed through a concealed entrance.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "foreground center",
+          "description": "low-profile access hatch with a circular handle"
+        },
+        {
+          "type": "passage",
+          "position": "midground right",
+          "description": "dimly lit access corridor revealed by a sliding wall section"
+        }
+      ],
+      "dominantElements": [
+        "dark grey composite panel walls",
+        "curved metallic console unit",
+        "holographic schematic diagram"
+      ],
+      "uniqueIdentifiers": [
+        "glowing blue circuit patterns in walls",
+        "circular laboratory shape",
+        "framed holographic schematic"
+      ],
+      "searchDesc": "High-tech circular lab with dark grey panels, blue circuits, and holographic displays.",
+      "slug": "interior-of-natch"
+    },
+    "loc-1764242112391-ve4yxresj": {
+      "id": "loc-1764242112391-ve4yxresj",
+      "type": "host",
+      "name": "The Imperial Dominion",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Imperial Dominion",
+        "description": "A vast empire ruled by an iron fist, where grandeur and oppression walk hand in hand.",
+        "dna": {
+          "looks": "A colossal, imposing, and rigidly organized world. Architecture emphasizes monumental scale, dark, oppressive materials, and sharp, commanding lines. Power is displayed through overwhelming size and formidable construction.",
+          "colorsAndLighting": "Dominated by a stark palette of deep blacks, greys, and metallics, accented by oppressive gold or blood-red. Lighting is often dramatic and stark, with strong contrasts, emphasizing shadows and oppressive monumentality.",
+          "atmosphere": "The air is thick with a sense of authoritarian control and hushed reverence. A pervasive feeling of being watched and judged is palpable. Grandeur is met with an undercurrent of fear and unspoken dread.",
+          "materials": "Massive quantities of dark, polished stone, particularly obsidian and basalt, are common. Reinforced metals, often treated to appear dark or heavily patinated, feature prominently. Gold is used sparingly for accents, emphasizing power and status.",
+          "mood": "Oppressive, awe-inspiring, and grim. A sense of immense, unyielding power dominates, coupled with the weight of authoritarian rule.",
+          "sounds": "Distant trumpets, marching boots, low murmurs, echoing footsteps, stern pronouncements",
+          "spatialLayout": "Vast, ordered, and geometrically precise. Spaces are designed to overwhelm and intimidate, with clear lines of authority and restricted movement. Symmetry and imposing scale are paramount.",
+          "primary_surfaces": "Black marble, obsidian, dark granite",
+          "secondary_surfaces": "Reinforced steel, dark iron, weathered stone",
+          "accent_features": "Gargantuan statues, heraldic symbols, sharp geometric patterns, gold filigree",
+          "dominant": "Black",
+          "secondary": "Dark Grey",
+          "accent": "Gold",
+          "ambient": "Cool and authoritative",
+          "genre": "fantasy",
+          "architectural_tone": "Imperial authoritarianism with monumental scale, featuring dark, polished stone, sharp geometric forms, immense columns, imposing arches, and gilded accents. Architecture is designed to convey absolute power and control, often with a sense of oppressive grandeur.",
+          "cultural_tone": "Rigidly hierarchical, militaristic, and absolutist. Emphasis on order, discipline, and the unwavering will of the sovereign.",
+          "materials_base": "Dark, polished, and heavy materials; stone, metal, gold accents.",
+          "mood_baseline": "Imposing, awe-inspiring, and somber.",
+          "palette_bias": "High contrast with deep, dark tones and sharp metallic accents.",
+          "soundscape_base": "Echoing, resonant, and formal.",
+          "flora_base": "None (or highly stylized, inorganic)",
+          "fauna_base": "None (or highly controlled, domesticated)"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Fortified Citadels",
+          "Grand Imperial Highways",
+          "Gargantuan Statues"
+        ],
+        "uniqueIdentifiers": [
+          "Imperial Eagles",
+          "Black and Gold Banners",
+          "Strict Hierarchical Order"
+        ],
+        "searchDesc": "A vast, iron-fisted empire characterized by oppressive grandeur and monumental architecture.",
+        "slug": "the-imperial-dominion",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Imperial Dominion",
+          "looks": "A vast empire ruled by an iron fist, where grandeur and oppression walk hand in hand.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": "A vast empire ruled by an iron fist, where grandeur and oppression walk hand in hand."
+    },
+    "161d66c7-2076-4677-933f-e5a567b873f8": {
+      "id": "161d66c7-2076-4677-933f-e5a567b873f8",
+      "type": "region",
+      "name": "The Imperial Dominion",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Imperial Dominion",
+        "description": "",
+        "dna": {
+          "looks": "Expansive territories dominated by the visible presence of the empire's power. Grand, imposing structures punctuate the landscape, alongside vast, organized infrastructure and austere settlements.",
+          "colorsAndLighting": "The dominant black and gold palette of the empire is pervasive, with stark lighting that emphasizes the imposing architecture and vast, often barren, landscapes. Shadows are deep and long.",
+          "atmosphere": "A pervasive atmosphere of order, surveillance, and subdued populace. The air carries the weight of constant imperial authority, with vast distances and a sense of monumental scale.",
+          "materials": "Black marble, obsidian, reinforced steel, and dark, processed stone are the primary construction materials, reflecting the empire's core aesthetic.",
+          "mood": "Authoritative, grand, and somewhat desolate. The overwhelming presence of the empire creates a mood of both awe and intimidation.",
+          "sounds": "Distant horns, wind whistling through vast structures, marching patrols, disciplined shouts",
+          "spatialLayout": "Vast, ordered, and geometrically designed. Landscapes are sculpted to reflect imperial intent, with straight roads, massive fortifications, and clear divisions of territory.",
+          "primary_surfaces": "Black marble, obsidian, dark granite",
+          "secondary_surfaces": "Reinforced steel, dark iron, weathered stone",
+          "accent_features": "Gargantuan statues, imperial insignia, fortified walls",
+          "dominant": "Black",
+          "secondary": "Dark Grey",
+          "accent": "Gold",
+          "ambient": "Authoritative and stark",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "The Obsidian Citadel",
+          "Imperial Encampments"
+        ],
+        "uniqueIdentifiers": [
+          "Domination Banners",
+          "Patrol Routes"
+        ],
+        "searchDesc": "The heart of the empire, dominated by its monumental administrative centers and vast, controlled territories.",
+        "slug": "the-imperial-dominion",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Imperial Dominion",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "",
+      "description": ""
+    },
+    "8ce7d331-b0b7-4374-9f9a-1c4167864e8b": {
+      "id": "8ce7d331-b0b7-4374-9f9a-1c4167864e8b",
+      "type": "location",
+      "name": "The Obsidian Citadel",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Obsidian Citadel",
+        "description": "A monumental administrative palace, a symbol of the empire's power and reach.",
+        "looks": "Imposing structure of polished black marble, accented with intricate gold piping that snakes across its facade. Endless external staircases, wide and grand, spiral upwards, all converging on a single, remarkably small door at the apex.",
+        "atmosphere": "A palpable sense of authority hangs in the air, mixed with the metallic tang of the gold piping and the cool, smooth feel of the marble.",
+        "mood": "Distant, imposing, austere",
+        "dna": {
+          "looks": "A grand, multi-tiered interior space is dominated by colossal black marble columns supporting a domed ceiling. Ornate gold detailing accents the architecture along balconies and staircases. Wide, dark staircases with golden railings ascend symmetrically on either side, leading to upper levels. Lush green potted plants add contrasting organic forms to the stone and metal environment. The space feels vast and ancient, with visible wear and tear on some surfaces.",
+          "colorsAndLighting": "The primary light source emanates from arched openings in the background, casting a warm, golden glow that illuminates the central area. This creates a strong contrast with the dark marble surfaces, highlighting the gold accents. The light is relatively soft, diffused by the haze and the vastness of the space.",
+          "atmosphere": "The air appears somewhat hazy, particularly in the upper regions, suggesting a large, enclosed space with potentially limited ventilation. The overall clarity is moderate, allowing for detailed observation of the immediate surroundings.",
+          "materials": "Primarily polished black marble for the structure, with prominent, high-sheen gold piping. The doors and any visible smaller architectural elements would likely be of reinforced, dark metal.",
+          "mood": "Intimidating, awe-inspiring, and oppressive. The design is meant to convey absolute power and the difficulty of access.",
+          "sounds": "Wind whistling, distant imperial pronouncements, echoing footsteps on stone",
+          "spatialLayout": "The foreground consists of a polished marble floor with reflective qualities and decorative golden lines. The midground is dominated by the central grand staircase and the imposing columns. The background features multiple levels of balconies and large arched doorways through which bright light streams, creating a sense of depth and scale.",
+          "primary_surfaces": "black marble",
+          "secondary_surfaces": "stone",
+          "accent_features": "gold",
+          "dominant": "black (marble surfaces)",
+          "secondary": "dark grey (stone elements)",
+          "accent": "gold (piping, railings, detailing)",
+          "ambient": "warm golden",
+          "genre": null,
+          "architectural_tone": "Imperial authoritarianism with monumental scale, featuring dark, polished stone, sharp geometric forms, immense columns, imposing arches, and gilded accents. Architecture is designed to convey absolute power and control, often with a sense of oppressive grandeur. Applied externally to create a sense of insurmountable height and singular, difficult access.",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center, midground",
+            "description": "Grand symmetrical staircases with gold railings ascending to upper levels"
+          },
+          {
+            "type": "door",
+            "position": "center, background",
+            "description": "Large arched doorway emitting bright golden light"
+          },
+          {
+            "type": "door",
+            "position": "upper center, background",
+            "description": "Smaller arched doorway with golden light above the main entrance"
+          },
+          {
+            "type": "passage",
+            "position": "left and right balconies, midground",
+            "description": "Balconies with ornate railings providing access to upper walkways"
+          }
+        ],
+        "dominantElements": [
+          "Colossal black marble columns, numerous and tall",
+          "Grand symmetrical staircases with gold railings",
+          "Ornate gold architectural detailing",
+          "Large arched openings with bright golden light"
+        ],
+        "uniqueIdentifiers": [
+          "Massive black marble columns with gold accents",
+          "Symmetrical grand staircases converging upwards",
+          "Abundant ornate gold decorative piping",
+          "Central focus on a bright, golden arched entryway"
+        ],
+        "searchDesc": "[Location - Interior] Grand hall with black marble columns and gold trim. Has: grand stairs (center), arched door (background), balconies (midground)",
+        "slug": "the-obsidian-citadel",
+        "imageUrl": "https://v3b.fal.media/files/b/penguin/9_xchhPA1hsdrINuwoyEg.jpg",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Obsidian Citadel",
+          "looks": "A monumental administrative palace, a symbol of the empire's power and reach.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/penguin/9_xchhPA1hsdrINuwoyEg.jpg",
+      "description": "A monumental administrative palace, a symbol of the empire's power and reach."
+    },
+    "niche-1764242157429-p1tss1hl3": {
+      "id": "niche-1764242157429-p1tss1hl3",
+      "type": "niche",
+      "name": "interior of The Obsidian Citadel",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A commanding view of a vast chamber with towering polished black marble walls. Intricate veins of gleaming gold piping snake across the surfaces, forming circuit-like patterns. Massive segmented columns support a high, shadowed ceiling, while a colossal circular relief sculpture adorns the far wall.",
+        "colorsAndLighting": "Dominant cool tones of polished black marble are accented by gleaming gold. Soft, ambient light emanates from unseen sources, creating dramatic interplay of light and shadow.",
+        "atmosphere": "The air is charged with an austere, imposing authority. A faint metallic tang hints at the materials, and the overall tactility is smooth and cool.",
+        "materials": "Polished black marble with a subtle texture on the floor. Gleaming gold piping forms intricate patterns. The materials are pristine and cool to the touch.",
+        "mood": "The space evokes a sense of distant, imposing, and austere authority.",
+        "sounds": "Faint metallic hum, echoing silence, subtle material resonance.",
+        "spatialLayout": "A vast, enclosed chamber with monolithic marble walls. A low platform leads to an archway in the foreground, while columns define the midground. The background features a colossal relief sculpture.",
+        "primary_surfaces": "Polished black marble",
+        "secondary_surfaces": "Gleaming gold piping",
+        "accent_features": "Intricate gold piping patterns, glowing gold handholds, circular citadel relief",
+        "dominant": "Black (90%)",
+        "secondary": "Gold (10%)",
+        "accent": "None",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "Monolithic geometric",
+        "cultural_tone": "null",
+        "materials_base": "Polished stone and metallic accents",
+        "mood_baseline": "null",
+        "palette_bias": "Monochromatic with metallic highlights",
+        "soundscape_base": "Echoing, industrial ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/-MfCNEhPhdXk8bzxUeMQX.jpg",
+      "description": "An immersive interior perspective of a vast, enclosed chamber within The Obsidian Citadel.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "foreground right",
+          "description": "A dark, recessed archway leading off from an obsidian platform."
+        },
+        {
+          "type": "door",
+          "position": "midground left",
+          "description": "A meticulously crafted flush door with a thin gold seam outline."
+        },
+        {
+          "type": "passage",
+          "position": "midground right",
+          "description": "A vertical shaft with glowing gold handholds suggesting ascent."
+        }
+      ],
+      "dominantElements": [
+        "Towering black marble walls",
+        "Gleaming gold piping",
+        "Massive marble columns",
+        "Colossal circular relief sculpture"
+      ],
+      "uniqueIdentifiers": [
+        "Polished black marble with gold circuit-like veins",
+        "Flush gold-seamed doors",
+        "Glowing gold handholds",
+        "Abstract geometric citadel relief"
+      ],
+      "searchDesc": "Vast black marble chamber in The Obsidian Citadel with gold veins and imposing columns.",
+      "slug": "interior-of-the-obsidian-citadel"
     }
   },
   "views": {},
@@ -3723,12 +4571,762 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764241658092-wbopfg0ms",
+      "type": "host",
+      "name": "The Aetherial Sea",
+      "description": "A boundless expanse of ethereal currents and sky-ocean, home to colossal, sky-faring lifeforms.",
+      "dna": {
+        "type": "host",
+        "name": "The Aetherial Sea",
+        "description": "A boundless expanse of ethereal currents and sky-ocean, home to colossal, sky-faring lifeforms.",
+        "dna": {
+          "looks": "Vast, swirling nebulae of luminous gases and crystalline structures form the backdrop of an endless sky. Gigantic, organically sculpted landmasses drift serenely, some resembling colossal, slumbering beasts. Luminescent particles drift through the air like cosmic dust.",
+          "colorsAndLighting": "The scene is dominated by deep blues, purples, and vibrant teals, interspersed with streaks of soft gold and silver. Light emanates from internal nebulae, bioluminescent organisms, and the crystalline structures, creating an ethereal and otherworldly glow.",
+          "atmosphere": "A thin, breathable atmosphere that feels almost liquid, carrying faint scents of ozone and unknown celestial flowers. Gentle, unseen currents guide the movement of celestial bodies and airborne life. The temperature is cool and constant, with no discernible weather patterns.",
+          "materials": "Primarily composed of solidified celestial gas, crystalline formations, and organic, rock-like substances that possess a natural luminescence. Surfaces can range from smooth and polished to rugged and crystalline.",
+          "mood": "Serene, majestic, and awe-inspiring. A sense of profound peace and ancient mystery pervades the environment.",
+          "sounds": "Subtle hums, distant chimes, faint whispers of wind, cosmic resonance, deep resonant tones.",
+          "spatialLayout": "An infinite three-dimensional space where scale is immense and distances are vast. Landmasses float independently, creating a natural, non-uniform distribution of usable areas.",
+          "primary_surfaces": [
+            "Celestial rock",
+            "Crystalline formations",
+            "Solidified nebulae"
+          ],
+          "secondary_surfaces": [
+            "Ethereal mist",
+            "Luminous gas"
+          ],
+          "accent_features": [
+            "Bioluminescent flora",
+            "Drifting celestial debris",
+            "Geode-like structures"
+          ],
+          "dominant": "Deep blues and purples",
+          "secondary": "Vibrant teals and golds",
+          "accent": "Silver and ethereal whites",
+          "ambient": "Cool and ethereal",
+          "genre": "Fantasy",
+          "architectural_tone": "Organic, monumental, and naturally sculpted forms. No artificial structures, only the grand designs of cosmic and biological processes. Emphasis on flowing lines, immense scale, and integration with the environment.",
+          "cultural_tone": "Ancient, spiritual, and deeply connected to natural cycles. No recorded history or civilization, only the existence of titanic lifeforms and their inherent existence.",
+          "materials_base": "Naturally occurring, luminescent, and celestial materials. Emphasis on organic textures and mineral formations. Polished to a high sheen in some areas, rough and unworked in others.",
+          "mood_baseline": "Majestic, tranquil, and mysterious.",
+          "palette_bias": "Cool, vibrant, and cosmic color palettes with a strong emphasis on blues, purples, and teals. Luminescent accents are key.",
+          "soundscape_base": "Subtle, ambient, and resonant. Characterized by deep hums, celestial echoes, and the gentle sounds of cosmic movement.",
+          "flora_base": "Bioluminescent and ethereal plant life, adapted to celestial environments. Think glowing mosses, crystalline flowers, and light-emitting vines.",
+          "fauna_base": "Colossal, sky-faring beings and smaller, bioluminescent airborne creatures. Fauna are integral to the environment's visual and thematic identity."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating Archipelagos",
+          "Sky-Whales",
+          "Ethereal Currents"
+        ],
+        "uniqueIdentifiers": [
+          "Sky-Ocean",
+          "Colossal Sky Fauna",
+          "Bioluminescent Flora"
+        ],
+        "searchDesc": "A boundless sky-ocean with colossal, sky-faring lifeforms and floating rock formations.",
+        "slug": "the-aetherial-sea",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Aetherial Sea",
+          "looks": "A boundless expanse of ethereal currents and sky-ocean, home to colossal, sky-faring lifeforms.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "20c22442-aee9-4279-83e2-ac652a714c9f",
+          "type": "region",
+          "name": "The Aetherial Sea",
+          "description": "",
+          "dna": {
+            "type": "region",
+            "name": "The Aetherial Sea",
+            "description": "",
+            "dna": {
+              "looks": "A cluster of immense, island-like rock formations, resembling slumbering leviathans, drift through the sky. Their surfaces are encrusted with vibrant, pulsating bioluminescent barnacles. These 'rock-whales' vary in size, with the largest featuring a colossal, cavernous opening.",
+              "colorsAndLighting": "The rock is a deep, muted gray-blue, providing a stark contrast to the brilliant, multi-colored glow of the bioluminescent barnacles which emit blues, greens, and purples. Ambient light is soft and diffused, reflecting the distant celestial glow.",
+              "atmosphere": "Humid and slightly misty, with the air carrying a faint, salty-sweet scent. The atmosphere feels heavy, as if part of the sky-ocean itself. Gentle currents suggest movement but there's no harsh wind.",
+              "materials": "Primarily dense, weathered rock with a porous texture. The bioluminescent barnacles have a glassy, organic shell.",
+              "mood": "Mysterious, ancient, and slightly foreboding due to the sheer scale and the dark openings.",
+              "sounds": "Distant echoes, dripping water, faint bio-luminescent pulses, low resonant groans of the rock-whales.",
+              "spatialLayout": "A collection of massive, floating landmasses of varying sizes, creating natural islands and open sky between them. The largest rock-whale dominates the immediate area with its imposing blowhole.",
+              "primary_surfaces": [
+                "Dense, weathered rock",
+                "Bioluminescent barnacles"
+              ],
+              "secondary_surfaces": [
+                "Atmospheric mist",
+                "Ethereal sky"
+              ],
+              "accent_features": [
+                "Craggy rock formations",
+                "Organic textures of the rock-whales",
+                "Pulsating light patterns"
+              ],
+              "dominant": "Deep blues and grays",
+              "secondary": "Vibrant greens and purples",
+              "accent": "Pulsating white and gold",
+              "ambient": "Cool and diffused",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": null,
+              "fauna_base": "Colossal rock-whales, bioluminescent barnacle colonies, sky-plankton"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Floating Rock-Whales",
+              "Bioluminescent Barnacles",
+              "Vast Open Sky"
+            ],
+            "uniqueIdentifiers": [
+              "Archipelago of Rock-Whales",
+              "Blowhole Entrances",
+              "Sky-Ocean Currents"
+            ],
+            "searchDesc": "An archipelago of massive, floating rock-whales adorned with bioluminescent barnacles, featuring a grand blowhole entrance.",
+            "slug": "the-aetherial-sea",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Aetherial Sea",
+              "looks": "",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "e146e1d8-a0f7-4d41-9d4e-b1243302f1fa",
+              "type": "location",
+              "name": "The Great Leviathan's Maw",
+              "description": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+              "dna": {
+                "type": "location",
+                "name": "The Great Leviathan's Maw",
+                "description": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+                "looks": "A colossal, gaping maw on the flank of a gargantuan rock-whale, pulsating with soft, internal bioluminescence. Barnacles the size of boulders cling to its exterior, emitting an eerie, soft glow.",
+                "atmosphere": "A gentle draft of warm, mineral-rich air emanates from within, carrying the faint scent of brine and something ancient. The hum of unseen biological processes is palpable.",
+                "mood": "Majestic, mysterious, inviting",
+                "dna": {
+                  "looks": "Massive, organically sculpted rock formations create a cavernous interior. The primary focal point is a colossal archway in the background, emitting a brilliant turquoise light. The ground consists of a shallow, reflective body of water interspersed with rocky outcrops. Small, geometric structures with a warm, internal glow are visible on the rocky ledges to the left and right.",
+                  "colorsAndLighting": "The scene is illuminated by two primary light sources: a vibrant, cool turquoise light emanating from the background archway and soft, warm orange light from the geometric structures on the ledges. The overall contrast is moderate, with deep shadows defining the cavern's contours.",
+                  "atmosphere": "A light mist hangs in the air, obscuring distant details and softening the edges of the rock formations. The atmosphere appears humid and still, with no discernible wind.",
+                  "materials": "Primarily rough, organically carved stone. The floor consists of water. The geometric structures appear to be made of an unknown, translucent material.",
+                  "mood": "Enigmatic, inviting, and slightly ominous.",
+                  "sounds": "Distant echoes, gentle lapping of water, faint humming from structures.",
+                  "spatialLayout": "The foreground is dominated by a shallow, reflective water surface and scattered rocks. The midground features towering, textured rock walls that curve inward, forming a grand cavern. The background is defined by a massive, illuminated archway, suggesting an exit or entrance into another luminous space.",
+                  "primary_surfaces": "Stone",
+                  "secondary_surfaces": "Water",
+                  "accent_features": "Bioluminescent light sources",
+                  "dominant": "Deep blues and grays of the rock",
+                  "secondary": "Reflective blues of the water",
+                  "accent": "Bright turquoise from the archway, warm orange from structures",
+                  "ambient": "Cool, ethereal blue",
+                  "genre": null,
+                  "architectural_tone": null,
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "archway",
+                    "position": "center, background",
+                    "description": "A vast, brightly lit archway leading to an unknown luminous space"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "left ledge, midground",
+                    "description": "A small cave entrance with a warm, inviting orange glow"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "right ledge, midground",
+                    "description": "A small cave entrance with a warm, inviting orange glow"
+                  }
+                ],
+                "dominantElements": [
+                  "Cavernous rock formations (left and right)",
+                  "Colossal archway with turquoise light (background)",
+                  "Shallow water body (foreground)",
+                  "Geometric glowing structures (left and right ledges)"
+                ],
+                "uniqueIdentifiers": [
+                  "Bioluminescent geometric structures",
+                  "Colossal glowing archway",
+                  "Rock formations resembling biological structures"
+                ],
+                "searchDesc": "Cave interior with water and rock formations. Has: archway (background), passage (left ledge), passage (right ledge)",
+                "slug": "the-great-leviathan-s-maw",
+                "imageUrl": "https://v3b.fal.media/files/b/koala/aSoo9_BQLm46-3-59IBQQ.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Great Leviathan's Maw",
+                  "looks": "The cavernous blowhole entrance on the largest of the floating rock-whales.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/koala/aSoo9_BQLm46-3-59IBQQ.jpg",
+              "spaceType": "exterior",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764241721555-6ta20woti",
+      "type": "host",
+      "name": "Earth",
+      "description": "A verdant planet with hidden secrets.",
+      "dna": {
+        "type": "host",
+        "name": "Earth",
+        "description": "A verdant planet with hidden secrets.",
+        "dna": {
+          "looks": "A vibrant blue and green sphere from orbit, characterized by diverse landmasses, expansive oceans, and swirling atmospheric patterns. Features include varied terrains from mountains and deserts to forests and tundras.",
+          "colorsAndLighting": "Dominated by blues of the oceans and atmosphere, greens of vegetation, and browns/grays of land. Lighting is naturally driven by a sun, creating clear day/night cycles and varied illumination across surfaces.",
+          "atmosphere": "A breathable, nitrogen-oxygen rich atmosphere that supports a wide range of life. Weather patterns are dynamic, ranging from calm breezes to severe storms, with distinct seasonal variations across different regions.",
+          "materials": "Composed of rock, soil, water, and organic matter. Natural formations feature stone, earth, ice, and living flora. Man-made structures can utilize metal, concrete, glass, and wood.",
+          "mood": "A sense of life, vastness, and latent potential. Can range from serene and beautiful to harsh and dangerous, reflecting the planet's natural forces and the presence of hidden elements.",
+          "sounds": "Wind, water, animal calls, geological rumbles, rustling flora, distant human activity.",
+          "spatialLayout": "Vast, interconnected landscapes with natural boundaries defined by geography. Spaces can be open and expansive or enclosed and intimate, depending on the terrain and biome.",
+          "primary_surfaces": [
+            "rock",
+            "soil",
+            "water"
+          ],
+          "secondary_surfaces": [
+            "ice",
+            "sand",
+            "vegetation"
+          ],
+          "accent_features": [
+            "mountains",
+            "volcanoes",
+            "canyons",
+            "rivers",
+            "lakes"
+          ],
+          "dominant": "blue, green",
+          "secondary": "brown, gray, white",
+          "accent": "red, yellow",
+          "ambient": "natural daylight",
+          "genre": "sci-fi",
+          "architectural_tone": "diverse, ranging from primitive natural shelters to advanced, integrated technology. Can include styles such as organic, industrial, brutalist, and futuristic, depending on civilization.",
+          "cultural_tone": "diverse, with many distinct societies, belief systems, and technological advancements. Includes themes of exploration, survival, conflict, and coexistence.",
+          "materials_base": "natural and synthetic materials, with a focus on durability and environmental integration. Includes stone, wood, metal alloys, advanced composites, and bio-engineered substances.",
+          "mood_baseline": "curiosity, resilience, mystery, and the underlying tension between nature and artifice.",
+          "palette_bias": "earthy tones with vibrant accents, influenced by biomes and technological overlays. Can range from muted natural palettes to stark, high-contrast artificial schemes.",
+          "soundscape_base": "dynamic natural soundscapes augmented by the hum of technology, distant echoes of civilization, and unique ambient noises of undiscovered phenomena.",
+          "flora_base": "diverse, from common terrestrial plants to exotic and bioluminescent species. Flora can be integrated into architecture and technology.",
+          "fauna_base": "varied, including terrestrial, aquatic, and potentially extraterrestrial or genetically engineered creatures. Fauna can range from mundane to dangerous and awe-inspiring."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Continents",
+          "Oceans",
+          "Atmosphere"
+        ],
+        "uniqueIdentifiers": [
+          "Biosphere",
+          "Geological diversity",
+          "Water bodies"
+        ],
+        "searchDesc": "A living planet teeming with diverse biomes, geological formations, and a complex biosphere.",
+        "slug": "earth",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Earth",
+          "looks": "A verdant planet with hidden secrets.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "a21cbcab-2e70-4a0d-9c2e-4fa8813e9e9f",
+          "type": "region",
+          "name": "The Verdant Plains",
+          "description": "Vast, wild expanses where nature reclaims the forgotten.",
+          "dna": {
+            "type": "region",
+            "name": "The Verdant Plains",
+            "description": "Vast, wild expanses where nature reclaims the forgotten.",
+            "dna": {
+              "looks": "Characterized by sweeping vistas of lush, untamed vegetation. Rolling hills are covered in dense grasses, wildflowers, and encroaching trees. Patches of moss and vines often cling to any exposed rock or remnants of ancient structures.",
+              "colorsAndLighting": "Dominated by vibrant greens and earthy browns, with occasional bursts of color from wildflowers. Lighting is typically diffused and soft, often dappled by dense tree canopies, creating a sense of natural enclosure.",
+              "atmosphere": "Humid and earthy, with the scent of damp soil and decaying leaves. The air is thick with the sounds of insects and distant wildlife. Weather can shift from gentle breezes to sudden, heavy rainfall.",
+              "materials": "Primarily composed of rich soil, dense plant matter, weathered stone, and decaying wood. Evidence of man-made materials might be found but are heavily overgrown and integrated with the natural environment.",
+              "mood": "A sense of quiet solitude, ancientness, and the overwhelming power of nature. There is a feeling of being enveloped and somewhat lost within the vastness.",
+              "sounds": "Rustling leaves, insect chirps, distant bird calls, gentle wind, occasional animal rustles.",
+              "spatialLayout": "Open and sprawling, with natural pathways formed by the terrain and vegetation. The landscape can feel immense and somewhat disorienting due to the uniformity of dense growth.",
+              "primary_surfaces": [
+                "soil",
+                "dense vegetation"
+              ],
+              "secondary_surfaces": [
+                "weathered stone",
+                "decaying wood"
+              ],
+              "accent_features": [
+                "wildflowers",
+                "ancient trees",
+                "overgrown moss"
+              ],
+              "dominant": "green",
+              "secondary": "brown, gold",
+              "accent": "vibrant floral colors",
+              "ambient": "natural daylight, diffused",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": "lush terrestrial flora, including grasses, ferns, vines, wildflowers, and dense arboreal growth.",
+              "fauna_base": "small to medium-sized terrestrial wildlife, abundant insect life, and possibly larger, reclusive ground-dwelling animals."
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Rolling hills",
+              "Dense foliage",
+              "Overgrown ruins"
+            ],
+            "uniqueIdentifiers": [
+              "Undulating terrain",
+              "Abundant plant life",
+              "Scattered remnants of past civilizations"
+            ],
+            "searchDesc": "Expansive natural landscapes with overgrown vegetation, rolling hills, and hints of forgotten structures.",
+            "slug": "the-verdant-plains",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Verdant Plains",
+              "looks": "Vast, wild expanses where nature reclaims the forgotten.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "94e0e2bc-e2ea-4b6c-969e-db1310f4dbd4",
+              "type": "location",
+              "name": "The Forgotten Pitch",
+              "description": "An overgrown football field concealing advanced technology.",
+              "dna": {
+                "type": "location",
+                "name": "The Forgotten Pitch",
+                "description": "An overgrown football field concealing advanced technology.",
+                "looks": "A once-manicured field now choked with weeds and tall grass, a subtle disturbance in the earth hinting at something buried beneath.",
+                "atmosphere": "Still air, the scent of damp earth and wild flora.",
+                "mood": "Quietly uncanny, overgrown.",
+                "dna": {
+                  "looks": "A once-defined football field, now utterly consumed by wild, overgrown vegetation. Tall grasses, weeds, and scattered bushes obscure the yard lines and goalposts, creating a textured, uneven landscape. In the center, a circular, metallic hatch is the focal point, set within a rough, concrete base, protruding like an old manhole cover.",
+                  "colorsAndLighting": "Dominated by deep, vibrant greens from the rampant foliage, contrasted with the muted grays and browns of the earth and weathered concrete. Subtle, cool green light emanates from the hatch opening, casting an eerie glow on the surrounding mud.",
+                  "atmosphere": "Humid and still, with the scent of wet earth and growing plants. A palpable sense of disuse and abandonment hangs in the air, underscored by the unusual, faint glow from the hatch.",
+                  "materials": "The primary visible materials are dense vegetation, rich soil, mud, and rough, weathered concrete. The hatch itself is made of dark, aged metal, showing signs of rust around its rim.",
+                  "mood": "Melancholy, mysterious, and intriguing. There's a strong sense of forgotten purpose blended with the unsettling discovery of hidden advanced technology.",
+                  "sounds": "Muted rustling of grass, insect hum, distant wind, occasional drip of moisture.",
+                  "spatialLayout": "A relatively flat, open area defined by the remnants of a sports field, now made uneven by overgrowth. The central hatch creates a distinct focal point, drawing attention downwards.",
+                  "primary_surfaces": [
+                    "dense vegetation",
+                    "mud",
+                    "overgrown earth"
+                  ],
+                  "secondary_surfaces": [
+                    "weathered concrete",
+                    "aged metal"
+                  ],
+                  "accent_features": [
+                    "obscured yard lines",
+                    "protruding hatch",
+                    "creeping vines"
+                  ],
+                  "dominant": "deep green",
+                  "secondary": "dark brown, gray",
+                  "accent": "cool green (from hatch)",
+                  "ambient": "cool, eerie",
+                  "genre": null,
+                  "architectural_tone": null,
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": "overgrown terrestrial grasses, weeds, and hardy vines.",
+                  "fauna_base": "common ground insects and small rodents, potentially disturbed by the hatch's presence."
+                },
+                "navigableElements": [
+                  {
+                    "type": "hatch",
+                    "position": "center, ground level",
+                    "description": "A buried, saucer-shaped lab hatch protruding like a forgotten manhole."
+                  }
+                ],
+                "dominantElements": [
+                  "Overgrown football field",
+                  "Central hatch",
+                  "Vegetation-covered structures"
+                ],
+                "uniqueIdentifiers": [
+                  "Improvised playing field",
+                  "Subterranean entrance",
+                  "Remnants of sporting infrastructure"
+                ],
+                "searchDesc": "An overgrown, forgotten football field with a concealed, buried saucer-shaped laboratory entrance.",
+                "slug": "the-forgotten-pitch",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Forgotten Pitch",
+                  "looks": "An overgrown football field concealing advanced technology.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "528f78d9-2b2b-4011-ac7d-981299ed3f66",
+                  "type": "niche",
+                  "name": "The Subterranean Hatch",
+                  "description": "The concealed entrance to a buried, saucer-shaped laboratory.",
+                  "dna": {
+                    "type": "niche",
+                    "name": "The Subterranean Hatch",
+                    "description": "The concealed entrance to a buried, saucer-shaped laboratory.",
+                    "looks": "A circular, metallic hatch, slightly rusted and camouflaged by surrounding foliage, resembling a forgotten manhole cover.",
+                    "atmosphere": "A faint, metallic tang emanating from the opening, a subtle hum beneath the surface.",
+                    "mood": "Secretive, technological",
+                    "imageUrl": "https://v3b.fal.media/files/b/rabbit/UMBi_VUjVvdAoyAhqLo9s.jpg",
+                    "semantic": {
+                      "atmosphere": "",
+                      "mood": ""
+                    },
+                    "visual": {
+                      "prompt": "",
+                      "style": ""
+                    },
+                    "profile": {
+                      "name": "The Subterranean Hatch",
+                      "looks": "The concealed entrance to a buried, saucer-shaped laboratory.",
+                      "atmosphere": "",
+                      "mood": ""
+                    }
+                  },
+                  "imagePath": "https://v3b.fal.media/files/b/rabbit/UMBi_VUjVvdAoyAhqLo9s.jpg",
+                  "spaceType": "interior",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764241764636-6uptphw4m",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764242112391-ve4yxresj",
+      "type": "host",
+      "name": "The Imperial Dominion",
+      "description": "A vast empire ruled by an iron fist, where grandeur and oppression walk hand in hand.",
+      "dna": {
+        "type": "host",
+        "name": "The Imperial Dominion",
+        "description": "A vast empire ruled by an iron fist, where grandeur and oppression walk hand in hand.",
+        "dna": {
+          "looks": "A colossal, imposing, and rigidly organized world. Architecture emphasizes monumental scale, dark, oppressive materials, and sharp, commanding lines. Power is displayed through overwhelming size and formidable construction.",
+          "colorsAndLighting": "Dominated by a stark palette of deep blacks, greys, and metallics, accented by oppressive gold or blood-red. Lighting is often dramatic and stark, with strong contrasts, emphasizing shadows and oppressive monumentality.",
+          "atmosphere": "The air is thick with a sense of authoritarian control and hushed reverence. A pervasive feeling of being watched and judged is palpable. Grandeur is met with an undercurrent of fear and unspoken dread.",
+          "materials": "Massive quantities of dark, polished stone, particularly obsidian and basalt, are common. Reinforced metals, often treated to appear dark or heavily patinated, feature prominently. Gold is used sparingly for accents, emphasizing power and status.",
+          "mood": "Oppressive, awe-inspiring, and grim. A sense of immense, unyielding power dominates, coupled with the weight of authoritarian rule.",
+          "sounds": "Distant trumpets, marching boots, low murmurs, echoing footsteps, stern pronouncements",
+          "spatialLayout": "Vast, ordered, and geometrically precise. Spaces are designed to overwhelm and intimidate, with clear lines of authority and restricted movement. Symmetry and imposing scale are paramount.",
+          "primary_surfaces": "Black marble, obsidian, dark granite",
+          "secondary_surfaces": "Reinforced steel, dark iron, weathered stone",
+          "accent_features": "Gargantuan statues, heraldic symbols, sharp geometric patterns, gold filigree",
+          "dominant": "Black",
+          "secondary": "Dark Grey",
+          "accent": "Gold",
+          "ambient": "Cool and authoritative",
+          "genre": "fantasy",
+          "architectural_tone": "Imperial authoritarianism with monumental scale, featuring dark, polished stone, sharp geometric forms, immense columns, imposing arches, and gilded accents. Architecture is designed to convey absolute power and control, often with a sense of oppressive grandeur.",
+          "cultural_tone": "Rigidly hierarchical, militaristic, and absolutist. Emphasis on order, discipline, and the unwavering will of the sovereign.",
+          "materials_base": "Dark, polished, and heavy materials; stone, metal, gold accents.",
+          "mood_baseline": "Imposing, awe-inspiring, and somber.",
+          "palette_bias": "High contrast with deep, dark tones and sharp metallic accents.",
+          "soundscape_base": "Echoing, resonant, and formal.",
+          "flora_base": "None (or highly stylized, inorganic)",
+          "fauna_base": "None (or highly controlled, domesticated)"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Fortified Citadels",
+          "Grand Imperial Highways",
+          "Gargantuan Statues"
+        ],
+        "uniqueIdentifiers": [
+          "Imperial Eagles",
+          "Black and Gold Banners",
+          "Strict Hierarchical Order"
+        ],
+        "searchDesc": "A vast, iron-fisted empire characterized by oppressive grandeur and monumental architecture.",
+        "slug": "the-imperial-dominion",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Imperial Dominion",
+          "looks": "A vast empire ruled by an iron fist, where grandeur and oppression walk hand in hand.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "161d66c7-2076-4677-933f-e5a567b873f8",
+          "type": "region",
+          "name": "The Imperial Dominion",
+          "description": "",
+          "dna": {
+            "type": "region",
+            "name": "The Imperial Dominion",
+            "description": "",
+            "dna": {
+              "looks": "Expansive territories dominated by the visible presence of the empire's power. Grand, imposing structures punctuate the landscape, alongside vast, organized infrastructure and austere settlements.",
+              "colorsAndLighting": "The dominant black and gold palette of the empire is pervasive, with stark lighting that emphasizes the imposing architecture and vast, often barren, landscapes. Shadows are deep and long.",
+              "atmosphere": "A pervasive atmosphere of order, surveillance, and subdued populace. The air carries the weight of constant imperial authority, with vast distances and a sense of monumental scale.",
+              "materials": "Black marble, obsidian, reinforced steel, and dark, processed stone are the primary construction materials, reflecting the empire's core aesthetic.",
+              "mood": "Authoritative, grand, and somewhat desolate. The overwhelming presence of the empire creates a mood of both awe and intimidation.",
+              "sounds": "Distant horns, wind whistling through vast structures, marching patrols, disciplined shouts",
+              "spatialLayout": "Vast, ordered, and geometrically designed. Landscapes are sculpted to reflect imperial intent, with straight roads, massive fortifications, and clear divisions of territory.",
+              "primary_surfaces": "Black marble, obsidian, dark granite",
+              "secondary_surfaces": "Reinforced steel, dark iron, weathered stone",
+              "accent_features": "Gargantuan statues, imperial insignia, fortified walls",
+              "dominant": "Black",
+              "secondary": "Dark Grey",
+              "accent": "Gold",
+              "ambient": "Authoritative and stark",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": null,
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": null,
+              "soundscape_base": null,
+              "flora_base": null,
+              "fauna_base": null
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "The Obsidian Citadel",
+              "Imperial Encampments"
+            ],
+            "uniqueIdentifiers": [
+              "Domination Banners",
+              "Patrol Routes"
+            ],
+            "searchDesc": "The heart of the empire, dominated by its monumental administrative centers and vast, controlled territories.",
+            "slug": "the-imperial-dominion",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Imperial Dominion",
+              "looks": "",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "8ce7d331-b0b7-4374-9f9a-1c4167864e8b",
+              "type": "location",
+              "name": "The Obsidian Citadel",
+              "description": "A monumental administrative palace, a symbol of the empire's power and reach.",
+              "dna": {
+                "type": "location",
+                "name": "The Obsidian Citadel",
+                "description": "A monumental administrative palace, a symbol of the empire's power and reach.",
+                "looks": "Imposing structure of polished black marble, accented with intricate gold piping that snakes across its facade. Endless external staircases, wide and grand, spiral upwards, all converging on a single, remarkably small door at the apex.",
+                "atmosphere": "A palpable sense of authority hangs in the air, mixed with the metallic tang of the gold piping and the cool, smooth feel of the marble.",
+                "mood": "Distant, imposing, austere",
+                "dna": {
+                  "looks": "A grand, multi-tiered interior space is dominated by colossal black marble columns supporting a domed ceiling. Ornate gold detailing accents the architecture along balconies and staircases. Wide, dark staircases with golden railings ascend symmetrically on either side, leading to upper levels. Lush green potted plants add contrasting organic forms to the stone and metal environment. The space feels vast and ancient, with visible wear and tear on some surfaces.",
+                  "colorsAndLighting": "The primary light source emanates from arched openings in the background, casting a warm, golden glow that illuminates the central area. This creates a strong contrast with the dark marble surfaces, highlighting the gold accents. The light is relatively soft, diffused by the haze and the vastness of the space.",
+                  "atmosphere": "The air appears somewhat hazy, particularly in the upper regions, suggesting a large, enclosed space with potentially limited ventilation. The overall clarity is moderate, allowing for detailed observation of the immediate surroundings.",
+                  "materials": "Primarily polished black marble for the structure, with prominent, high-sheen gold piping. The doors and any visible smaller architectural elements would likely be of reinforced, dark metal.",
+                  "mood": "Intimidating, awe-inspiring, and oppressive. The design is meant to convey absolute power and the difficulty of access.",
+                  "sounds": "Wind whistling, distant imperial pronouncements, echoing footsteps on stone",
+                  "spatialLayout": "The foreground consists of a polished marble floor with reflective qualities and decorative golden lines. The midground is dominated by the central grand staircase and the imposing columns. The background features multiple levels of balconies and large arched doorways through which bright light streams, creating a sense of depth and scale.",
+                  "primary_surfaces": "black marble",
+                  "secondary_surfaces": "stone",
+                  "accent_features": "gold",
+                  "dominant": "black (marble surfaces)",
+                  "secondary": "dark grey (stone elements)",
+                  "accent": "gold (piping, railings, detailing)",
+                  "ambient": "warm golden",
+                  "genre": null,
+                  "architectural_tone": "Imperial authoritarianism with monumental scale, featuring dark, polished stone, sharp geometric forms, immense columns, imposing arches, and gilded accents. Architecture is designed to convey absolute power and control, often with a sense of oppressive grandeur. Applied externally to create a sense of insurmountable height and singular, difficult access.",
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": null,
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "stairs",
+                    "position": "center, midground",
+                    "description": "Grand symmetrical staircases with gold railings ascending to upper levels"
+                  },
+                  {
+                    "type": "door",
+                    "position": "center, background",
+                    "description": "Large arched doorway emitting bright golden light"
+                  },
+                  {
+                    "type": "door",
+                    "position": "upper center, background",
+                    "description": "Smaller arched doorway with golden light above the main entrance"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "left and right balconies, midground",
+                    "description": "Balconies with ornate railings providing access to upper walkways"
+                  }
+                ],
+                "dominantElements": [
+                  "Colossal black marble columns, numerous and tall",
+                  "Grand symmetrical staircases with gold railings",
+                  "Ornate gold architectural detailing",
+                  "Large arched openings with bright golden light"
+                ],
+                "uniqueIdentifiers": [
+                  "Massive black marble columns with gold accents",
+                  "Symmetrical grand staircases converging upwards",
+                  "Abundant ornate gold decorative piping",
+                  "Central focus on a bright, golden arched entryway"
+                ],
+                "searchDesc": "[Location - Interior] Grand hall with black marble columns and gold trim. Has: grand stairs (center), arched door (background), balconies (midground)",
+                "slug": "the-obsidian-citadel",
+                "imageUrl": "https://v3b.fal.media/files/b/penguin/9_xchhPA1hsdrINuwoyEg.jpg",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Obsidian Citadel",
+                  "looks": "A monumental administrative palace, a symbol of the empire's power and reach.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "imagePath": "https://v3b.fal.media/files/b/penguin/9_xchhPA1hsdrINuwoyEg.jpg",
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764242157429-p1tss1hl3",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1764008292155-0knty61xa",
     "loc-1764169612979-1xzvxmo0t",
     "loc-1764187096720-nc3jpxtls",
-    "loc-1764163238646-okad0b4sr"
+    "loc-1764163238646-okad0b4sr",
+    "loc-1764241721555-6ta20woti",
+    "loc-1764242112391-ve4yxresj"
   ]
 }

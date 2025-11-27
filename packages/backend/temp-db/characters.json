@@ -1,454 +1,204 @@
 {
   "characters": {
-    "spawn-1760619049649-bj45avn0y": {
-      "id": "spawn-1760619049649-bj45avn0y",
-      "name": "Hull Guardian",
+    "char-1764241809018-zxg3y8hpb": {
+      "id": "char-1764241809018-zxg3y8hpb",
+      "name": "Isolde Thorne",
       "details": {
-        "name": "Hull Guardian",
-        "looks": "A towering, gaunt figure of burnished, segmented metal, radiating an aura of immense age and weary resilience. Its metallic surface catches the harsh desert sun, reflecting it in blinding flashes. It stands with an upright, rigid posture, its presence marked by a low, resonant hum that seems to vibrate the very air.",
-        "wearing": "A heavy, tattered cloak of woven desert reeds and salvaged canvas, dyed a deep ochre, drapes over its form. Across its chest, a wide, tarnished bronze band is etched with intricate geometric patterns. Its feet are encased in heavy, reinforced boots, appearing to be made of compacted sand and metallic grit, designed for traversing the unforgiving desert terrain.",
-        "face": "Its head is a smooth, featureless ovoid, metallic and polished to a mirror sheen. The surface reflects the vast desert sky and the searing sunlight without any discernible features such as eyes, nose, or mouth.",
-        "body": "The figure is exceptionally tall and thin, constructed from segmented metal plates that articulate with stark precision. Its limbs are thin, rod-like structures, ending in functional, claw-like manipulators. It moves with a deliberate, almost mechanical grace, its stillness projecting a sense of ancient guardianship.",
-        "hair": "The character possesses no hair; its head is a seamless, metallic ovoid.",
-        "specificDetails": "Veins of deep rust spiderweb across the burnished metallic hide of its body, a testament to its long exposure to the elements. This organic decay contrasts sharply with the stark, manufactured form.",
-        "style": "Its aesthetic is one of ancient, stoic functionality, a blend of worn metal and earthy textiles. The silhouette is tall and imposing, softened by the rough texture of its cloak. The dominant palette is muted earth tones and the gleam of aged metal, conveying a sense of quiet endurance.",
-        "personality": "Silent and unyielding, it observes the world with a detached, ancient awareness, its very existence intrinsically tied to the integrity of its charge. Communication, when it occurs, is through subtle vibrations felt through the ground and the resonant hum of its form. It projects a profound sense of duty and an almost mournful resilience.",
-        "voice": "It possesses no audible voice in the conventional sense; its communication is felt as a low, resonant frequency, like a distant, struck gong, capable of conveying deep impressions.",
-        "speechStyle": "It does not speak in words, but communicates through a language of tactile vibrations and ambient resonance, a method of expression as ancient as the desert itself.",
-        "gender": "male",
-        "nationality": "fictional",
-        "fictional": true,
-        "copyright": false,
-        "tags": "guardian, ancient, metallic, desert, silent, stoic, resilient, protector, duty-bound, enigmatic"
-      },
-      "primaryMedia": "media-1764238896677-wmmhqi8ab"
-    },
-    "char-1761839277539-y1o5rk1lo": {
-      "id": "char-1761839277539-y1o5rk1lo",
-      "name": "Anya Petrova",
-      "details": {
-        "name": "Anya Petrova",
-        "looks": "A woman in her late twenties, Anya possesses a pale, almost translucent complexion that seems to absorb and refract the ambient light. Her luminous grey eyes hold a perpetual shimmer, mirroring the fractured spectrum that surrounds her. She moves with a quiet, deliberate grace, her presence a cool echo of stillness, like the silent hum of ancient glass.",
-        "wearing": "She is clad in a tattered cream linen shift, its hem worn thin and dusted with the remnants of the Prism Basilica. Over this, she wears overlapping panels of iridescent fabric that shift through the spectrum of light, each secured with a polished obsidian shard. Her feet are bare, seemingly accustomed to the cool, uneven stone.",
-        "face": "Her face is a canvas of pale skin, lightly dusted with freckles across the bridge of her nose and cheeks. Her eyes are wide and luminous grey, reflecting a keen, almost spectral awareness. Full lips are often slightly parted, as if caught in a silent breath, and a subtle shimmer plays across her skin, hinting at the faint hexagonal markings beneath.",
-        "body": "Anya is slender and delicate, with visibly fine shoulders. Her habitual posture is slightly stooped, conveying a sense of gentle weariness or perhaps a readiness to yield to unseen forces. Her movements are fluid and deliberate, as if tracing an invisible current within the light.",
-        "hair": "Her dark brown hair is of medium length, styled in a loose braid along the top of her head, with stray strands framing her face. It appears soft and slightly disheveled, catching the light in muted auburn tones.",
-        "specificDetails": "Faint, almost imperceptible hexagonal scars mark her skin, most notably visible on her face and shoulders, where they catch the light with a subtle, shimmering luminescence. A necklace of large, deep green stones rests against her collarbone, seeming to absorb light rather than reflect it.",
-        "style": "Her aesthetic is one of ethereal fragility and understated elegance, blending elements of the ancient and the ephemeral. She favors soft, flowing fabrics that interact with light, creating a muted yet vibrant palette. Her style communicates a serene detachment and a deep connection to the prismatic energies of her environment.",
-        "personality": "Anya is quietly observant, her gaze lingering on details others might miss. She possesses an air of gentle melancholy, content in her solitary wanderings through the Basilica's ruins, her fingers often tracing patterns in the dust. She holds an instinctual understanding of light and shadow, a silent communion that guides her movements and perceptions. Her presence inspires a sense of peaceful detachment, a lingering stillness that invites introspection rather than interaction.",
-        "voice": "Her voice is a low, melodious murmur, possessing a crystalline clarity that seems to resonate with the ambient light. It carries a gentle melancholy, like the distant chime of bells heard through thick fog.",
-        "speechStyle": "She speaks sparingly, her words chosen with deliberate care, often pausing as if gathering stray motes of light before forming a sentence. Her vocabulary tends towards the poetic and observational, rich with metaphor.",
-        "gender": "female",
-        "nationality": "fictional",
-        "fictional": true,
-        "copyright": false,
-        "tags": "ethereal, melancholic, observant, luminous, spectral, tranquil, prismatic, wanderer, mystic, ruins",
-        "seed": {
-          "originalPrompt": "The Prism Basilica, a sunlit ruin whose ceilings split light into living specters that wander the nave.",
-          "name": "Anya Petrova",
-          "looks": "A woman in her late twenties, with pale skin marked by faint, almost imperceptible hexagonal scars that shimmer subtly. Her eyes are wide, luminous grey, reflecting the fractured light around her. Her posture is habitually stooped, as if perpetually bracing against an unseen force.",
-          "wearing": "A tattered, cream-colored linen shift, frayed at the hem and stained with dust. Over this, she wears a series of overlapping, iridescent fabric panels that shift through a spectrum of colors with her movement, clasped with polished obsidian shards. Barefoot.",
-          "personality": "Quietly observant and prone to solitary wandering. She carries an air of gentle melancholy, often found tracing patterns in dust motes. Possesses a deep, almost instinctual understanding of light and shadow.",
-          "presence": "A faint, cool echo, like the quiet hum of stained glass on a windless day. One feels a sense of peaceful detachment, a lingering stillness.",
-          "setting": "Sunlight streams through fractured arches, painting the air with dancing, ethereal ribbons of color."
-        },
-        "visualAnalysis": {
-          "face": "The face is pale with a scattering of freckles across the nose and cheeks. The eyes are wide and grey. The lips are full and slightly parted. A faint shimmer is visible on the skin, suggesting subtle hexagonal markings.",
-          "hair": "The hair is dark brown, medium length, and appears somewhat dishevelled with loose strands framing the face. It is braided along the top of the head.",
-          "body": "The character is slender. Her shoulders are visible and appear delicate. Her posture is not clearly defined, but the hint of a stoop is present.",
-          "specificdetails": "Faint, shimmering hexagonal scars are visible on the skin of the face and shoulders. A necklace with large, green stones is worn around the neck."
-        }
-      },
-      "primaryMedia": "media-1764238896679-j3sa16cnq"
-    },
-    "char-1761860098312-ku54uww6d": {
-      "id": "char-1761860098312-ku54uww6d",
-      "name": "Anya",
-      "details": {
-        "name": "Anya",
-        "looks": "A vision of serene otherworldliness, Anya appears to be in her mid-twenties with a lithe, humanoid form. Her skin, like polished pearl, subtly shifts with an internal luminescence, catching and diffusing light. Deep sapphire eyes hold an ancient intelligence, and her features are delicately elongated, hinting at a heritage beyond earthly bounds. She carries herself with a profound stillness, exuding an aura of quiet curiosity and gentle observation, like a mystic beholding the mundane for the first time.",
-        "wearing": "She is draped in a gossamer wrap of woven moonlight threads, its fine texture clinging in strategic places to reveal smooth, pearlescent skin. This minimalist attire accentuates her alien-human hybrid features and captivating curves without being overtly revealing. Adorning her collarbones are faint, bioluminescent markings that pulse with a soft, internal glow, adding to her ethereal allure.",
-        "face": "Her face possesses an oval shape with subtly elongated contours, lending an otherworldly grace. The skin is smooth and pale, appearing like fine porcelain under the soft ambient light. Large, round eyes of a deep sapphire hue dominate her features, conveying a sense of profound depth. Her lips are full and slightly parted, and her nose is delicate and straight.",
-        "body": "She possesses a slender and proportionate build, standing with an upright and composed posture. Her shoulders are bare, and the upper chest is subtly revealed by her attire, highlighting smooth, pearlescent skin. Her presence is marked by a cool, calming stillness that seems to absorb ambient sound, and a faint, almost imperceptible hum of latent energy emanates from her.",
-        "hair": "Her hair is a cascading river of spun moonlight, thick and wavy, reaching past her shoulders. It possesses a luminescence that catches and reflects light, appearing as if woven from starlight itself. It falls loosely around her face and shoulders, framing her delicate features.",
-        "specificDetails": "Faint, bioluminescent markings are visible on her collarbones, pulsing with a soft, internal luminescence that shifts in intensity with her mood or ambient energy.",
-        "style": "Her aesthetic is one of minimalist, ethereal elegance, blending natural textures with otherworldly luminescence. Her silhouette is graceful and flowing, emphasizing her delicate features and slender form. The color palette tends towards cool, opalescent tones that harmonize with her internal glow, creating a serene and captivating visual identity.",
-        "personality": "Serene and deeply observant, she carries an ancient intelligence within her gaze, yet remains open and receptive to new experiences. Her demeanor is characterized by a quiet grace, and she possesses an aura of gentle curiosity about the mundane aspects of existence. She approaches interactions with a calm thoughtfulness, making those around her feel a sense of tranquility and wonder. Her curiosity often leads her to ponder the subtle nuances of everyday life, and she finds quiet fascination in the unremarked details of the world.",
-        "voice": "Her voice is a low, resonant hum with a crystalline clarity, possessing a calming timbre that seems to absorb and soften surrounding sounds. It carries a subtle, almost imperceptible melodic quality that shifts in pitch and rhythm with her emotional state, often conveying a sense of ancient wisdom.",
-        "speechStyle": "She speaks with a deliberate and measured cadence, often pausing to consider her words, her vocabulary precise and occasionally poetic, imbued with a gentle formality.",
-        "gender": "female",
-        "nationality": "Xylos",
-        "fictional": true,
-        "copyright": false,
-        "tags": "ethereal, otherworldly, serene, luminous, mystic, curious, graceful, alien, humanoid, intelligent",
-        "seed": {
-          "originalPrompt": "alien woman \"Photorealistic image of a 25-year-old woman with shimmering silver hair cascading down her back, deep blue eyes, and radiant, flawless skin that shimmers with an alien allure. She is standing gracefully in a dimly lit room with walls glowing with a soft, ethereal light. Her clothing is minimal, accentuating her alien-human hybrid features and captivating curves. Captured with a high-resolution camera showcasing intricate details, accurate lighting, and natural textures. The scene is bathed in a subtle, otherworldly glow, creating a mesmerizing atmosphere. The color palette is vibrant, emphasizing the authenticity of the environment. Ensure the composition includes elements of the ethereal room and her graceful stance to provide context and scale, making the image indistinguishable from a real photograph.\"",
-          "name": "Anya",
-          "looks": "Humanoid form, skin like polished pearl that shifts with internal luminescence. Deep sapphire eyes. Cascading hair of spun moonlight. Features are subtly elongated, suggesting an otherworldly heritage.",
-          "wearing": "A gossamer wrap of woven moonlight threads, clinging in strategic places, revealing smooth, pearlescent skin. Adorned with minimal, bioluminescent markings on her collarbones.",
-          "personality": "Serene, observant, with an ancient intelligence behind her gaze. Possesses a quiet grace and an aura of gentle curiosity about the mundane.",
-          "presence": "A cool, calming stillness that seems to absorb ambient sound. A faint, almost imperceptible hum of latent energy.",
-          "setting": "A chamber where walls pulse with soft, opalescent light, casting long, shifting shadows."
-        },
-        "visualAnalysis": {
-          "face": "The face has an oval shape with subtly elongated features. The skin appears smooth and pale. The eyes are large and round with a deep blue color. The lips are full and slightly parted. The nose is delicate and straight. There are no visible wrinkles, scars, or facial hair.",
-          "body": "The body appears to be slender and proportionate. The shoulders are bare, and the upper chest is visible, covered by a textured garment. The posture is upright and composed.",
-          "hair": "The hair is long, thick, and wavy, reaching past the shoulders. It is a very pale blonde or white color. It is styled to fall loosely around the face and shoulders.",
-          "specificdetails": "There are faint, bioluminescent markings on the collarbones."
-        }
-      },
-      "primaryMedia": "media-1764238896679-qkdrc3i5e"
-    },
-    "char-1761945198940-m108moehf": {
-      "id": "char-1761945198940-m108moehf",
-      "name": "Kael Thorion",
-      "details": {
-        "name": "Kael Thorion",
-        "looks": "He carries the presence of an ancient, serene being, appearing to be in the prime of his long life.  His tall, humanoid form radiates an otherworldly aura that draws the eye.  Light seems to softly diffuse around him, softening sharp edges and enhancing the faint greenish hue of his skin, which possesses a subtle, natural luminescence.",
-        "wearing": "Flowing robes of deep emerald and sapphire cascade around him, their light, ethereal fabric appearing to subtly shift and coalesce like mist.  Intricate, swirling patterns are woven into the material, evoking the foggy landscapes of his homeworld.  A slender silver circlet rests upon his brow, adorned with a single green gemstone that emits a soft, internal glow. His feet are bare, revealing delicate webbing between his toes.",
-        "face": "His face is sculpted with an elegant elongation, featuring high cheekbones and a straight, aquiline nose. His eyes are large and almond-shaped, with pupils that narrow into vertical slits, reminiscent of a feline. His skin is smooth and unblemished, emitting a faint, healthy sheen. Thin lips, a deeper shade of green than his skin, are set in a naturally thoughtful expression. Pointed ears curve gracefully upwards from his temples.",
-        "body": "Kael possesses a tall and slender build, with limbs that are gracefully longer than human proportions suggest, granting him an almost hypnotic fluidity of movement. He stands with an upright, lithe posture, his movements economical and imbued with an inherent, fluid grace that borders on the hypnotic.",
-        "hair": "His hair is a waterfall of silvery-white, cascading in loose waves down to his waist. It possesses a fine, soft texture with an iridescent sheen, catching light like spun moonbeams. Even in stillness, it seems to sway with a gentle, internal rhythm, as if animated by a silent breeze.",
-        "specificDetails": "A distinctive tattoo swirls across his left cheek, a vibrant, pulsing pattern that perfectly mirrors the ephemeral green fog of his home planet. This luminous mark subtly shifts in intensity, mirroring his emotional state and the surrounding environment.",
-        "style": "His aesthetic is one of ethereal flowing lines and natural, otherworldly palettes. He favors silhouettes that embrace fluidity and organic forms, evoking a sense of deep connection to the natural world, even in his alien context.",
-        "personality": "He is a being of profound quietude and unceasing curiosity, his outward reserve masking a keen and perceptive intellect. Kael approaches interactions with a calm, unwavering patience, often responding with observations that are both insightful and delivered through metaphorical or riddling language, inviting deeper contemplation from those he encounters.",
-        "voice": "His voice is a low, resonant murmur, possessing a crystalline clarity beneath its hushed tones. It carries a timbre that is both soothing and ancient, capable of shifting subtly to convey a sense of deep contemplation or gentle inquiry.",
-        "speechStyle": "He speaks with a deliberate, unhurried cadence, often pausing to choose his words with careful precision. His language is rich with metaphor and often takes on a poetic, philosophical quality.",
-        "gender": "male",
-        "nationality": "The Verdant Nebula",
-        "fictional": true,
-        "copyright": false,
-        "tags": "enigmatic, alien, serene, observant, wise, ethereal, contemplative, curious, nature-aligned, thoughtful",
-        "seed": {
-          "originalPrompt": "name\n\nKael Thorion\n\nlooks\n\nKael Thorion is an alien being with a humanoid form, standing at an impressive height. His skin has a faint greenish hue, blending with the verdant environment of his home planet. He appears to be in his prime, with an otherworldly aura that commands attention.\n\nwearing\n\nKael wears flowing robes in deep emerald and sapphire colors, adorned with intricate patterns that seem to shift and move like the fog of his planet. The fabric is light and ethereal, almost blending with the surroundings. He dons a silver circlet around his forehead, embellished with a single green gemstone that glows softly. His feet are bare, revealing a slight webbing between his toes.\n\nface\n\nHis face is elongated, with high cheekbones and a straight, aquiline nose. His eyes are large and almond-shaped, with pupils that are vertical slits like those of a cat. His skin is smooth, with no visible wrinkles or scars, and has a slight luminescence. His lips are thin and a deeper shade of green, and his ears are pointed, adding to his alien appearance.\n\nbody\n\nKael is tall and slender, with a lithe and agile build. He stands with a graceful posture, his movements fluid and almost hypnotic. His proportions are similar to those of a human, but his limbs are slightly longer, giving him an elegant and otherworldly silhouette.\n\nhair\n\nHis hair is long and silvery-white, falling down to his waist in loose waves. It seems to move with a life of its own, gently swaying even in the absence of wind. The texture is fine and soft, with a slight iridescent sheen that catches the light.\n\nspecificdetails\n\nKael has a distinctive tattoo on his left cheek, a swirling pattern that resembles the green fog of his planet. The tattoo seems to pulse with a soft light, mirroring his emotions and the environment around him.\n\ngender\n\nMale\n\nnationality\n\nThe Verdant Nebula\n\nstyle\n\nEthereal and flowing, with nature-inspired tones and intricate, otherworldly patterns.\n\npersonality\n\nKael is enigmatic and reserved, with a deep sense of curiosity and wonder. He is highly intelligent and perceptive, often speaking in riddles and metaphors. He interacts with others with a calm and patient demeanor, always seeking to understand and learn from them.",
-          "name": "Kael Thorion",
-          "looks": "Tall humanoid alien, faint greenish skin, smooth with slight luminescence, elongated face, high cheekbones, aquiline nose, large almond eyes with vertical slit pupils, thin deep green lips, pointed ears, impossibly long limbs, silvery-white waist-length hair that sways with its own life, swirling green fog tattoo on left cheek that pulses with light.",
-          "wearing": "Flowing robes of shifting emerald and sapphire, light and ethereal fabric, silver circlet with a softly glowing green gemstone, bare feet with slight webbing between toes.",
-          "personality": "Enigmatic, reserved, deeply curious, intelligent, perceptive, speaks in riddles, calm, patient, seeks understanding.",
-          "presence": "An aura of calm, otherworldly wisdom, and quiet observation.",
-          "setting": "A dense, mist-filled jungle with bioluminescent flora casting soft emerald light."
-        },
-        "visualAnalysis": {
-          "face": "The face is elongated with high cheekbones and an aquiline nose. The lips are thin and deep green. The eyes are large and almond-shaped with vertical slit pupils. The ears are pointed. The skin has a faint greenish hue and a smooth, slightly luminescent texture.",
-          "body": "The character is tall with impossibly long limbs. Their build appears slender.",
-          "hair": "The hair is silvery-white, waist-length, and appears to have a subtle movement independent of external forces.",
-          "specificdetails": "A swirling green fog tattoo is visible on the left cheek, which pulses with light. The character wears a silver circlet with a softly glowing green gemstone on their forehead. Bare feet are visible with slight webbing between the toes."
-        }
-      },
-      "primaryMedia": "media-1764238896679-xghfsotjk"
-    },
-    "char-1762012728587-n0ic50747": {
-      "id": "char-1762012728587-n0ic50747",
-      "name": "Echo",
-      "details": {
-        "name": "Echo",
-        "looks": "Appearing ageless, with a form that transcends typical human definition, the individual possesses skin like polished lapis lazuli that seems to drink in ambient light. Their eyes are pools of swirling internalized moonlight, conveying a profound, ancient melancholy. Subtle, luminous fins trail from the temples, catching the light with an ethereal grace. They project an aura of serene observation and immense, patient waiting, like the silent depths of the ocean.",
-        "wearing": "A layered gown of woven seafoam, its texture delicate and airy, is interwoven with strands of shimmering kelp that catch the light. The hemline is meticulously edged with tiny, silent pearls that seem to hold the echo of submerged chimes. The garment flows with an almost liquid movement, clinging softly to the form without constricting.",
-        "face": "The face is smooth and unlined, possessing a delicate, almost sculpted bone structure. The nose is straight and finely sculpted, with gently curved lips that hint at a perpetual, subtle expression of contemplation. The skin of the face, mirroring the body, has a faint, intrinsic shimmer, as if perpetually kissed by moonbeams. The eyes are large and deeply set, their swirling depths suggesting a universe of untold stories. No makeup is apparent.",
-        "body": "The shoulders and upper chest are slender and beautifully proportioned, conveying a natural elegance. The posture is perfectly upright and unnaturally still, embodying a profound sense of calm and control. There is a delicate, almost fragile build, yet it hints at an unseen resilience.",
-        "hair": "The hair is styled in an elegant bun, from which a few wisps escape to frame the face, appearing somewhat damp and tousled as if recently emerged from water. The color is a soft, pale blonde, catching the light with a pearlescent sheen.",
-        "specificDetails": "Subtle, translucent fins extend from the temples, shimmering with an internal luminescence. They are delicate and wing-like, catching the filtered light with an otherworldly beauty, and seem to subtly pulse with an unseen energy.",
-        "style": "The aesthetic is one of deep-sea mystique and ethereal tranquility. The silhouette is flowing and organic, dominated by cool blues, greens, and silvers. The overall impression is one of ancient wisdom and serene detachment, adapted for an aquatic realm.",
-        "personality": "Serene and deeply observant, this being carries an aura of ancient melancholy, born from immense age and quiet witness to countless epochs. They rarely speak, preferring to communicate through subtle gestures and the resonance of unheard music that seems to emanate from their very presence. Their patience is boundless, reflecting the enduring nature of the ocean itself. They are introspective, finding solace in quiet contemplation, and seem to possess a deep empathy for the slow rhythms of existence. They avoid overt displays of emotion, yet their presence evokes a profound sense of peace tinged with a beautiful sadness.",
-        "voice": "If they were to speak, their voice would be a low, resonant hum, like the distant tolling of a submerged bell, carrying the texture of deep water and ancient coral.",
-        "speechStyle": "When they do communicate, it is through a series of deliberate, almost melodic utterances, chosen with profound care. Their cadence is slow and measured, each word carrying the weight of immense knowledge and experience.",
-        "gender": "Androgynous",
-        "nationality": "Azure Spire",
-        "fictional": true,
-        "copyright": false,
-        "tags": "ethereal, ancient, oceanic, melancholic, serene, observant, mystical, tranquil, luminescent, silent",
-        "seed": {
-          "originalPrompt": "The Azure Spire, a sunken tower piercing the surface of a glassy sea, its bells still tolling beneath the waves.",
-          "name": "Echo",
-          "looks": "Androgynous, skin like polished lapis lazuli, eyes that swirl with internalized moonlight. Subtle, luminous fins trail from the temples.",
-          "wearing": "A layered gown of woven seafoam and shimmering kelp, edged with tiny, silent pearls.",
-          "personality": "Serene, observant, carries an aura of ancient melancholy. Rarely speaks, communicating through subtle gestures and the resonance of unheard music.",
-          "presence": "A profound, quiet stillness, like the deep ocean floor. A sense of immense age and patient waiting.",
-          "setting": "Dimly lit, water-filled chamber, shimmering shafts of filtered sunlight piercing the depths."
-        },
-        "visualAnalysis": {
-          "face": "The face is smooth and unlined, with a delicate bone structure. The nose is straight, and the lips are gently curved. The skin has a slight shimmer, suggesting a reflective quality. The eyes are large and deeply set. No visible makeup is apparent.",
-          "body": "The shoulders and upper chest are visible, appearing slender and proportioned. The posture is upright and still, conveying a sense of calm.",
-          "hair": "The hair is pulled up in a bun with loose strands framing the face. The color is a light blonde, and the texture appears somewhat damp and tousled.",
-          "specificdetails": "Subtle, translucent fins extend from the temples."
-        }
-      },
-      "primaryMedia": "media-1764238896680-o1skclwnx"
-    },
-    "char-1763979558226-osvtha9cw": {
-      "id": "char-1763979558226-osvtha9cw",
-      "name": "Resonance",
-      "details": {
-        "name": "Resonance",
-        "looks": "Ageless, polished obsidian plating covers the upper torso and neck, seamlessly transitioning into taut, pale skin. A subtle, internal glow emanates from a network of fine, silver filigree across the throat, pulsing faintly. Eyes are deep, molten gold, reflecting light with an unnatural depth.",
-        "wearing": "A high-collared, midnight blue jumpsuit of interwoven microfibers that shift in sheen with movement. Silver piping accents the seams and cuffs. A single, wide leather cuff with embedded sonic emitters adorns the left wrist.",
-        "face": "The face is oval-shaped with high cheekbones. The skin is pale and smooth, showing faint lines beneath the eyes. The lips are full and slightly parted. The nose is straight and well-defined. The eyebrows are dark and arched. The eyes are wide and the irises are a molten gold color.",
-        "body": "The visible portion of the upper body suggests a slender build. The character is shown from the shoulders up, with the neck and shoulders visible.",
-        "hair": "The hair is dark brown and pulled back into a bun at the nape of the neck, with a few wisps of hair framing the face.",
+        "name": "Isolde Thorne",
+        "looks": "Woman, early twenties, alabaster skin with a faint shimmer, sharp cheekbones, piercing emerald eyes that seem to hold captured starlight, a cascade of ink-black hair that flows like liquid shadow.",
+        "wearing": "A form-fitting gown of deep crimson silk that clings like a second skin, intricately embroidered with silver thread in a swirling, celestial pattern. Delicate silver chains adorn her collarbone, and impossibly high heels crafted from polished obsidian.",
+        "face": "The face is oval-shaped with high cheekbones. The skin appears smooth and pale with a subtle sheen. The lips are full and gently parted. The eyebrows are dark and arched. The eyes are large and green, with long lashes.",
+        "body": "The visible portion of the body suggests a slender build. The posture is upright, with the shoulders slightly back.",
+        "hair": "The hair is dark brown to black, thick, and wavy. It is shoulder-length and styled with loose curls framing the face.",
         "specificDetails": "",
-        "style": "Their aesthetic is one of refined futurism, blending organic contours with stark, technological elegance. A palette of deep blues, obsidian, and shimmering silver dominates, creating a silhouette that is both commanding and understated, evoking a serene yet intensely focused presence.",
-        "personality": "Introspective, intensely focused, communicates through subtle shifts in resonant hums and gestures. Deeply appreciative of pure sound and rhythm.",
-        "voice": "The character's 'voice' is a complex series of resonant frequencies, emanating from their throat. It possesses a low, pleasant thrumming quality that vibrates gently, capable of conveying a wide spectrum of subtle emotional nuance without uttering a single word.",
-        "speechStyle": "Communication is entirely non-verbal, relying on modulated hums, subtle vibrations, and precise gestures to convey meaning, requiring active listening and empathetic interpretation from others.",
-        "gender": "Female",
+        "style": "Her aesthetic is one of dark glamour and celestial allure, blending opulent materials with intricate patterns. She favors deep, rich colors that contrast with her pale skin, creating a silhouette that is both striking and sophisticated. Her style communicates an aura of confident sensuality, hinting at hidden depths and a touch of the arcane.",
+        "personality": "Confidently alluring, with a playful, teasing intelligence and an unwavering self-possession. She enjoys being the center of attention and wields her charm with effortless grace.",
+        "voice": "Her voice is a low, resonant murmur, with a smooth, velvety texture that can hold a playful lilt or deepen to a more sultry tone. The pitch is mid-range, carrying a hint of huskiness that adds to its captivating allure, often punctuated by soft, knowing chuckles.",
+        "speechStyle": "She speaks with a measured cadence, often pausing to let her words hang in the air, drawing listeners in with her deliberate phrasing. Her vocabulary tends towards the evocative and sophisticated, with a touch of lyrical flair.",
+        "gender": "female",
+        "nationality": "fictional",
+        "fictional": true,
+        "copyright": false,
+        "tags": "alluring, mysterious, sophisticated, confident, sensual, charismatic, elegant, enchanting, dark glamour",
+        "imageUrl": "https://v3b.fal.media/files/b/monkey/wYrG7QiOLNo9FeadUX5jM.jpg",
+        "imagePrompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"Extremely hot and sexy young woman\"\n\nIsolde Thorne, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Woman, early twenties, alabaster skin with a faint shimmer, sharp cheekbones, piercing emerald eyes that seem to hold captured starlight, a cascade of ink-black hair that flows like liquid shadow..\n\nWearing: A form-fitting gown of deep crimson silk that clings like a second skin, intricately embroidered with silver thread in a swirling, celestial pattern. Delicate silver chains adorn her collarbone, and impossibly high heels crafted from polished obsidian..\n\nPresence: A palpable warmth that draws others in, tinged with an exciting, almost dangerous magnetism..\n\nSetting: Bathed in the low, smoky glow of a hidden jazz club, a single spotlight catching the sheen of her gown..\n\nTheir demeanor reflects: Confidently alluring, with a playful, teasing intelligence and an unwavering self-possession. She enjoys being the center of attention and wields her charm with effortless grace..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "seed": {
+          "originalPrompt": "Extremely hot and sexy young woman",
+          "name": "Isolde Thorne",
+          "looks": "Woman, early twenties, alabaster skin with a faint shimmer, sharp cheekbones, piercing emerald eyes that seem to hold captured starlight, a cascade of ink-black hair that flows like liquid shadow.",
+          "wearing": "A form-fitting gown of deep crimson silk that clings like a second skin, intricately embroidered with silver thread in a swirling, celestial pattern. Delicate silver chains adorn her collarbone, and impossibly high heels crafted from polished obsidian.",
+          "personality": "Confidently alluring, with a playful, teasing intelligence and an unwavering self-possession. She enjoys being the center of attention and wields her charm with effortless grace.",
+          "presence": "A palpable warmth that draws others in, tinged with an exciting, almost dangerous magnetism.",
+          "setting": "Bathed in the low, smoky glow of a hidden jazz club, a single spotlight catching the sheen of her gown."
+        },
+        "visualAnalysis": {
+          "face": "The face is oval-shaped with high cheekbones. The skin appears smooth and pale with a subtle sheen. The lips are full and gently parted. The eyebrows are dark and arched. The eyes are large and green, with long lashes.",
+          "hair": "The hair is dark brown to black, thick, and wavy. It is shoulder-length and styled with loose curls framing the face.",
+          "body": "The visible portion of the body suggests a slender build. The posture is upright, with the shoulders slightly back.",
+          "specificdetails": "A delicate silver necklace with sparkling stones is visible around the collarbone."
+        }
+      },
+      "imagePath": "https://v3b.fal.media/files/b/monkey/wYrG7QiOLNo9FeadUX5jM.jpg"
+    },
+    "char-1764241884333-rf9evdsfm": {
+      "id": "char-1764241884333-rf9evdsfm",
+      "name": "Glass Weaver",
+      "details": {
+        "name": "Glass Weaver",
+        "looks": "Young adult female, alabaster skin with a faint, internal luminescence. Sculpted cheekbones, eyes like polished obsidian reflecting inner light. Her hair is spun moonlight, impossibly fine and flowing.",
+        "wearing": "A gown of woven moonlight threads, shimmering with iridescent hues that shift with her movement. Delicate, crystalline vines wrap around her forearms, ending in sharp, jewel-like points.",
+        "face": "The subject has a young adult female face with alabaster skin. Her cheekbones are sculpted, and her eyes are dark and reflective. Her lips are lightly colored and slightly parted. There is a soft blush on her cheeks. The skin appears smooth and unblemished.",
+        "body": "The subject's height and weight are not fully visible, but she appears to have a slender build. She is wearing a high-necked lace gown. Her posture is upright and still.",
+        "hair": "Her hair is a light brown color, styled in loose waves and pulled back from her face, with tendrils falling around her shoulders and face. The texture appears fine and soft.",
+        "specificDetails": "",
+        "style": "Her aesthetic is one of ethereal, crystalline elegance, characterized by luminous whites, iridescent pastels, and sharp, geometric accents. Her silhouette is flowing and otherworldly, suggesting a connection to both natural formations and otherworldly craftsmanship.",
+        "personality": "Intensely observant, speaks in measured, melodic tones. Possesses an ancient, detached curiosity about the mortal world, yet a deep well of protective instinct for the fragile. Calm, but with an undercurrent of immense power.",
+        "voice": "Her voice is a melodic, resonant alto, with a crystalline clarity that carries a subtle hum of contained energy. It is cool and serene, yet capable of conveying profound depth and ancient wisdom.",
+        "speechStyle": "She speaks in measured, lyrical phrases, often pausing to allow her words to resonate, her vocabulary elegant and precise, hinting at an existence beyond the mundane.",
+        "gender": "female",
         "nationality": "Fictional",
         "fictional": true,
         "copyright": false,
-        "tags": "cybernetic, musician, introspective, resonant, avant-garde, mystic, sound artist, futuristic, enigmatic",
+        "tags": "ethereal, crystalline, observant, serene, powerful, ancient, beautiful, mystic",
+        "imageUrl": "https://v3b.fal.media/files/b/elephant/pitAadlbLwGpSNNLsgV29.jpg",
+        "imagePrompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A petrified forest of glass trees, each trunk hollow, one tree split open revealing spiral stairs descending inside. Beautiful woman\"\n\nGlass Weaver, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Young adult female, alabaster skin with a faint, internal luminescence. Sculpted cheekbones, eyes like polished obsidian reflecting inner light. Her hair is spun moonlight, impossibly fine and flowing..\n\nWearing: A gown of woven moonlight threads, shimmering with iridescent hues that shift with her movement. Delicate, crystalline vines wrap around her forearms, ending in sharp, jewel-like points..\n\nPresence: A cool, serene stillness that emanates tranquility, like the hushed air before a snowfall. A subtle hum of contained energy..\n\nSetting: Beneath a twilight sky, where crystalline trees refract starlight into fractured rainbows..\n\nTheir demeanor reflects: Intensely observant, speaks in measured, melodic tones. Possesses an ancient, detached curiosity about the mortal world, yet a deep well of protective instinct for the fragile. Calm, but with an undercurrent of immense power..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "seed": {
-          "originalPrompt": "A cybernetic musician whose throat hums with resonant frequencies instead of words.",
-          "name": "Resonance",
-          "looks": "Ageless, polished obsidian plating covers the upper torso and neck, seamlessly transitioning into taut, pale skin. A subtle, internal glow emanates from a network of fine, silver filigree across the throat, pulsing faintly. Eyes are deep, molten gold, reflecting light with an unnatural depth.",
-          "wearing": "A high-collared, midnight blue jumpsuit of interwoven microfibers that shift in sheen with movement. Silver piping accents the seams and cuffs. A single, wide leather cuff with embedded sonic emitters adorns the left wrist.",
-          "personality": "Introspective, intensely focused, communicates through subtle shifts in resonant hums and gestures. Deeply appreciative of pure sound and rhythm.",
-          "presence": "A palpable vibration, a low, pleasant thrumming that settles into the chest and instills a sense of quiet anticipation.",
-          "setting": "A dimly lit, acoustically treated studio, bathed in the cool glow of illuminated soundboards."
+          "originalPrompt": "A petrified forest of glass trees, each trunk hollow, one tree split open revealing spiral stairs descending inside. Beautiful woman",
+          "name": "Glass Weaver",
+          "looks": "Young adult female, alabaster skin with a faint, internal luminescence. Sculpted cheekbones, eyes like polished obsidian reflecting inner light. Her hair is spun moonlight, impossibly fine and flowing.",
+          "wearing": "A gown of woven moonlight threads, shimmering with iridescent hues that shift with her movement. Delicate, crystalline vines wrap around her forearms, ending in sharp, jewel-like points.",
+          "personality": "Intensely observant, speaks in measured, melodic tones. Possesses an ancient, detached curiosity about the mortal world, yet a deep well of protective instinct for the fragile. Calm, but with an undercurrent of immense power.",
+          "presence": "A cool, serene stillness that emanates tranquility, like the hushed air before a snowfall. A subtle hum of contained energy.",
+          "setting": "Beneath a twilight sky, where crystalline trees refract starlight into fractured rainbows."
         },
         "visualAnalysis": {
-          "face": "The face is oval-shaped with high cheekbones. The skin is pale and smooth, showing faint lines beneath the eyes. The lips are full and slightly parted. The nose is straight and well-defined. The eyebrows are dark and arched. The eyes are wide and the irises are a molten gold color.",
-          "hair": "The hair is dark brown and pulled back into a bun at the nape of the neck, with a few wisps of hair framing the face.",
-          "body": "The visible portion of the upper body suggests a slender build. The character is shown from the shoulders up, with the neck and shoulders visible.",
-          "specificdetails": "A black, metallic accessory is attached to a band across the forehead and drapes down the right side of the face, featuring intricate gold detailing and a loop shape."
+          "face": "The subject has a young adult female face with alabaster skin. Her cheekbones are sculpted, and her eyes are dark and reflective. Her lips are lightly colored and slightly parted. There is a soft blush on her cheeks. The skin appears smooth and unblemished.",
+          "hair": "Her hair is a light brown color, styled in loose waves and pulled back from her face, with tendrils falling around her shoulders and face. The texture appears fine and soft.",
+          "body": "The subject's height and weight are not fully visible, but she appears to have a slender build. She is wearing a high-necked lace gown. Her posture is upright and still.",
+          "specificdetails": "Delicate, crystalline vines with jewel-like points wrap around her forearms."
         }
       },
-      "primaryMedia": "media-1764238896680-mbtfj58a6"
+      "imagePath": "https://v3b.fal.media/files/b/elephant/pitAadlbLwGpSNNLsgV29.jpg"
     },
-    "char-1763982086945-tzu3yxtxf": {
-      "id": "char-1763982086945-tzu3yxtxf",
-      "name": "Aethelred",
+    "char-1764242001145-92fk2mn69": {
+      "id": "char-1764242001145-92fk2mn69",
+      "name": "Lumian",
       "details": {
-        "name": "Aethelred",
-        "looks": "Ageless, with skin like polished obsidian that absorbs light, and eyes that shimmer with captured starlight. A faint, almost imperceptible pulse emanates from beneath the dark surface, mirroring an unseen rhythm.",
-        "wearing": "A high-collared tunic of deep violet velvet, embroidered with silver threads forming constellations. Sleeves are wide and flowing, ending in cuffs of woven moonlight. Simple, dark trousers and boots crafted from a material that resembles solidified shadow.",
-        "face": "The face is youthful with sharp features.  The skin is dark and smooth, with no visible wrinkles or scars.  The mouth is closed with full lips.  The nose is straight.  The eyes are large and expressive.",
-        "body": "The character appears to be of average height and slender build.  The posture is upright and composed.",
-        "hair": "The hair is long, dark brown, and straight, parted in the center. It falls past the shoulders.",
+        "name": "Lumian",
+        "looks": "A humanoid form composed of swirling, opalescent light, constantly shifting in intensity. Their 'face' is a soft, bright luminescence, with two points of deeper, violet light for eyes. Age indeterminate; appears ancient yet ageless.",
+        "wearing": "Gossamer veils of pure energy, shimmering with iridescent colors. Subtle patterns of starlight are woven into the ethereal fabric. No footwear, they float just above surfaces.",
+        "face": "The face is illuminated with a bright luminescence. Two deep violet points of light function as eyes. The skin texture is smooth and appears to be dusted with tiny, scattered lights resembling stars. The lips are full and have a soft pink hue.",
+        "body": "The body is humanoid and appears to be composed of swirling light, which shifts in intensity. There are no visible feet; the form floats.",
+        "hair": "The hair is long, wavy, and a pale blonde color. It appears to be styled with wisps framing the face and cascading down.",
         "specificDetails": "",
-        "style": "Their aesthetic is one of celestial elegance and profound introspection, favoring dark, rich textures interspersed with shimmering, ethereal elements. The silhouette is often flowing and dramatic, speaking of a quiet grandeur and an ancient, otherworldly origin.",
-        "personality": "Introspective and deeply empathetic, with a quiet intensity. They possess a profound sensitivity to emotional resonance, expressed through their music and subtle gestures.",
-        "voice": "Their voice is a low, resonant murmur, with a timbre that suggests ancient wisdom and a gentle melancholy. It carries a soft, almost melodic cadence, and its pitch can subtly deepen with introspection or rise with moments of shared emotional connection.",
-        "speechStyle": "They speak with a deliberate, unhurried cadence, often pausing to choose words with precision. Their language tends towards the lyrical and the evocative, hinting at a perspective shaped by vast time and deep feeling.",
-        "gender": "male",
-        "nationality": "Otherworldly",
-        "fictional": true,
-        "copyright": false,
-        "tags": "ethereal, introspective, musical, melancholic, sensitive, otherworldly, empathetic, celestial, mystic",
+        "style": "Their aesthetic is one of ethereal radiance and fluid grace, drawing from the celestial and the elemental. Silhouettes are soft and flowing, with a palette dominated by opalescent whites, pearlescent blues, and soft violet accents. Their style communicates a serene yet playful energy.",
+        "personality": "Playful, mischievous, and deeply introspective. Communicates through gestures and the subtle manipulation of light. Enjoys observing, rarely speaks aloud.",
+        "voice": "They possess no audible voice, their communication conveyed through other means.",
+        "speechStyle": "They do not speak, instead conveying meaning through gestures, the luminescence of their form, and the visible flickers of aurora that represent their laughter.",
+        "gender": "indeterminate",
+        "nationality": "ethereal",
+        "fictional": "true",
+        "copyright": "false",
+        "tags": "light-spirit, ethereal, silent, playful, introspective, luminous, ancient, wonder, mischievous, aurora",
+        "imageUrl": "https://v3b.fal.media/files/b/lion/mNt66gj6EGHdrsydJHfa_.jpg",
+        "imagePrompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A fallen light-spirit who flirts through silence — their laughter visible as flickers of aurora.\"\n\nLumian, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A humanoid form composed of swirling, opalescent light, constantly shifting in intensity. Their 'face' is a soft, bright luminescence, with two points of deeper, violet light for eyes. Age indeterminate; appears ancient yet ageless..\n\nWearing: Gossamer veils of pure energy, shimmering with iridescent colors. Subtle patterns of starlight are woven into the ethereal fabric. No footwear, they float just above surfaces..\n\nPresence: A gentle warmth, like a sunbeam on a cool day, tinged with an ethereal coolness. Evokes a sense of wonder and quiet amusement..\n\nSetting: An ancient, twilight forest clearing, dappled with moonlight and the faint glow of phosphorescent moss..\n\nTheir demeanor reflects: Playful, mischievous, and deeply introspective. Communicates through gestures and the subtle manipulation of light. Enjoys observing, rarely speaks aloud..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "seed": {
-          "originalPrompt": "A musician from another realm whose heartbeat keeps time with the person they love.",
-          "name": "Aethelred",
-          "looks": "Ageless, with skin like polished obsidian that absorbs light, and eyes that shimmer with captured starlight. A faint, almost imperceptible pulse emanates from beneath the dark surface, mirroring an unseen rhythm.",
-          "wearing": "A high-collared tunic of deep violet velvet, embroidered with silver threads forming constellations. Sleeves are wide and flowing, ending in cuffs of woven moonlight. Simple, dark trousers and boots crafted from a material that resembles solidified shadow.",
-          "personality": "Introspective and deeply empathetic, with a quiet intensity. They possess a profound sensitivity to emotional resonance, expressed through their music and subtle gestures.",
-          "presence": "A palpable aura of melancholic longing and resonant harmony, creating a sense of shared intimacy and distant connection.",
-          "setting": "A dim, cavernous space lit by bioluminescent fungi casting an ethereal blue glow."
+          "originalPrompt": "A fallen light-spirit who flirts through silence — their laughter visible as flickers of aurora.",
+          "name": "Lumian",
+          "looks": "A humanoid form composed of swirling, opalescent light, constantly shifting in intensity. Their 'face' is a soft, bright luminescence, with two points of deeper, violet light for eyes. Age indeterminate; appears ancient yet ageless.",
+          "wearing": "Gossamer veils of pure energy, shimmering with iridescent colors. Subtle patterns of starlight are woven into the ethereal fabric. No footwear, they float just above surfaces.",
+          "personality": "Playful, mischievous, and deeply introspective. Communicates through gestures and the subtle manipulation of light. Enjoys observing, rarely speaks aloud.",
+          "presence": "A gentle warmth, like a sunbeam on a cool day, tinged with an ethereal coolness. Evokes a sense of wonder and quiet amusement.",
+          "setting": "An ancient, twilight forest clearing, dappled with moonlight and the faint glow of phosphorescent moss."
         },
         "visualAnalysis": {
-          "face": "The face is youthful with sharp features.  The skin is dark and smooth, with no visible wrinkles or scars.  The mouth is closed with full lips.  The nose is straight.  The eyes are large and expressive.",
-          "body": "The character appears to be of average height and slender build.  The posture is upright and composed.",
-          "hair": "The hair is long, dark brown, and straight, parted in the center. It falls past the shoulders.",
-          "specificdetails": "The eyes shimmer with a captured starlight effect."
+          "face": "The face is illuminated with a bright luminescence. Two deep violet points of light function as eyes. The skin texture is smooth and appears to be dusted with tiny, scattered lights resembling stars. The lips are full and have a soft pink hue.",
+          "hair": "The hair is long, wavy, and a pale blonde color. It appears to be styled with wisps framing the face and cascading down.",
+          "body": "The body is humanoid and appears to be composed of swirling light, which shifts in intensity. There are no visible feet; the form floats.",
+          "specificdetails": "The entire form is covered in shimmering, iridescent lights and patterns resembling starlight. A crown-like structure of shimmering, crystalline elements adorns the top of the head."
         }
       },
-      "primaryMedia": "media-1764238896680-1jqp4m1mh"
+      "imagePath": "https://v3b.fal.media/files/b/lion/mNt66gj6EGHdrsydJHfa_.jpg"
     },
-    "char-1763989936297-xpo37544q": {
-      "id": "char-1763989936297-xpo37544q",
-      "name": "Cogsworth",
+    "char-1764242068798-uiumbc5xs": {
+      "id": "char-1764242068798-uiumbc5xs",
+      "name": "Ren",
       "details": {
-        "name": "Cogsworth",
-        "looks": "A construct of tarnished brass and aged steel, limbs articulated with exposed gears.  Its ocular lenses glow with a faint, internal amber light.  Patches of rust bloom across its metallic surface like lichen.",
-        "wearing": "A heavily worn leather apron, stained with oil and grime, hangs loosely over its chassis.  A single, oversized wrench is tucked into a loop on its hip.",
-        "face": "The face is a rounded, metallic sphere with two prominent, glowing amber ocular lenses. No discernible nose, mouth, or ears are present.",
-        "body": "The body is constructed from tarnished brass and aged steel, with exposed gears at the joints. It has articulated limbs and appears to be of average robot proportions. A worn leather apron is worn over its chassis.",
-        "hair": "No hair is visible.",
+        "name": "Ren",
+        "looks": "Face is a mosaic of features, human-like but fluid. Eyes shift from amber to sapphire. Hair blurs through shades of crimson and silver. Skin has a faint luminescence.",
+        "wearing": "A simple, ink-black kimono, cinched with a shimmering sash that seems to absorb light.",
+        "face": "The face is soft and rounded with delicate features. The skin has a pale, luminous quality. The eyes are large and prominent, glowing with an intense orange light. The lips are full and slightly parted. A small, straight nose. Ears are pointed and tipped with glowing orange.",
+        "body": "The visible portion of the body is draped in dark fabric, suggesting a kimono. The build is slender and delicate.",
+        "hair": "The hair is long and appears to be white or very pale blonde, with strands that are wispy and flyaway. It is styled with bangs that partially cover the forehead.",
         "specificDetails": "",
-        "style": "Its aesthetic is one of functional decay and melancholic grandeur, a blend of industrial utility and the poignant beauty of an object left behind. The palette leans towards muted metallics, deep ochres of rust, and the warm glow of its internal lights. The silhouette is solid and imposing, yet tinged with a quiet vulnerability.",
-        "personality": "Diligent, meticulous, and eternally focused on tasks that no longer exist.",
-        "voice": "A low, resonant hum emanates from its core, interspersed with the faint click and grind of its internal mechanisms. When it speaks, the sound is deep and gravelly, carrying the echo of countless hours of echoing work in vast, empty spaces.",
-        "speechStyle": "Its speech is deliberate and measured, each word carefully articulated as if assembling a complex mechanism. It favors direct statements, devoid of unnecessary embellishment, reflecting its task-oriented programming.",
-        "gender": "male",
+        "style": "Their aesthetic is one of understated mystery, favoring dark, rich colors that contrast with subtle, luminous accents. The silhouette is generally flowing and unrestrictive, hinting at both freedom of movement and a deliberate presentation that invites curiosity.",
+        "personality": "Cunning and playful, enjoys observing mortals and subtly influencing events. Enjoys being underestimated.",
+        "voice": "Their voice is a melodic murmur, like wind chimes touched by a gentle breeze, carrying an underlying warmth that belies their mischievous intent. It can shift from a soft purr to a crystalline clarity with effortless ease.",
+        "speechStyle": "They speak in a measured cadence, often with a hint of a playful lilt, their vocabulary elegant and occasionally sprinkled with archaic turns of phrase.",
+        "gender": "female",
         "nationality": "fictional",
         "fictional": true,
         "copyright": false,
-        "tags": [
-          "automaton",
-          "industrial",
-          "derelict",
-          "diligent",
-          "melancholic",
-          "construct",
-          "forgotten",
-          "mechanical"
-        ],
+        "tags": "kitsune, shapeshifter, mystical, cunning, playful, alluring, ancient, observer, enigmatic, shapeshifting",
+        "imageUrl": "https://v3b.fal.media/files/b/penguin/rhplRWaixF-UBxcU_BPnB.jpg",
+        "imagePrompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A kitsune shapeshifter mid-transition, with shifting hair color and a knowing smirk.\"\n\nRen, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Face is a mosaic of features, human-like but fluid. Eyes shift from amber to sapphire. Hair blurs through shades of crimson and silver. Skin has a faint luminescence..\n\nWearing: A simple, ink-black kimono, cinched with a shimmering sash that seems to absorb light..\n\nPresence: A ripple of unpredictable energy, tinged with amusement and ancient wisdom..\n\nSetting: A moonlit glade where shadows writhe with an unnatural vibrancy..\n\nTheir demeanor reflects: Cunning and playful, enjoys observing mortals and subtly influencing events. Enjoys being underestimated..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "seed": {
-          "originalPrompt": "An abandoned giant factory of gears and steam stacks, main workshop door rusted but accessible",
-          "name": "Cogsworth",
-          "looks": "A construct of tarnished brass and aged steel, limbs articulated with exposed gears.  Its ocular lenses glow with a faint, internal amber light.  Patches of rust bloom across its metallic surface like lichen.",
-          "wearing": "A heavily worn leather apron, stained with oil and grime, hangs loosely over its chassis.  A single, oversized wrench is tucked into a loop on its hip.",
-          "personality": "Diligent, meticulous, and eternally focused on tasks that no longer exist.",
-          "presence": "A low hum of perpetual, forgotten labor, tinged with melancholic stillness.",
-          "setting": "Dust motes dance in shafts of sunlight piercing the vast, cavernous gloom of a derelict industrial hall, punctuated by the silent, colossal machinery."
+          "originalPrompt": "A kitsune shapeshifter mid-transition, with shifting hair color and a knowing smirk.",
+          "name": "Ren",
+          "looks": "Face is a mosaic of features, human-like but fluid. Eyes shift from amber to sapphire. Hair blurs through shades of crimson and silver. Skin has a faint luminescence.",
+          "wearing": "A simple, ink-black kimono, cinched with a shimmering sash that seems to absorb light.",
+          "personality": "Cunning and playful, enjoys observing mortals and subtly influencing events. Enjoys being underestimated.",
+          "presence": "A ripple of unpredictable energy, tinged with amusement and ancient wisdom.",
+          "setting": "A moonlit glade where shadows writhe with an unnatural vibrancy."
         },
         "visualAnalysis": {
-          "face": "The face is a rounded, metallic sphere with two prominent, glowing amber ocular lenses. No discernible nose, mouth, or ears are present.",
-          "hair": "No hair is visible.",
-          "body": "The body is constructed from tarnished brass and aged steel, with exposed gears at the joints. It has articulated limbs and appears to be of average robot proportions. A worn leather apron is worn over its chassis.",
-          "specificdetails": "Its ocular lenses glow with a faint, internal amber light, and patches of rust bloom across its metallic surface. An oversized wrench is tucked into a loop on its hip."
+          "face": "The face is soft and rounded with delicate features. The skin has a pale, luminous quality. The eyes are large and prominent, glowing with an intense orange light. The lips are full and slightly parted. A small, straight nose. Ears are pointed and tipped with glowing orange.",
+          "hair": "The hair is long and appears to be white or very pale blonde, with strands that are wispy and flyaway. It is styled with bangs that partially cover the forehead.",
+          "body": "The visible portion of the body is draped in dark fabric, suggesting a kimono. The build is slender and delicate.",
+          "specificdetails": "The character has pointed, ear-like protrusions on top of their head that are also luminous with an orange glow."
         }
       },
-      "primaryMedia": "media-1764238896680-cl62ywi34"
+      "imagePath": "https://v3b.fal.media/files/b/penguin/rhplRWaixF-UBxcU_BPnB.jpg"
     },
-    "char-1763994943536-bnv5fxui0": {
-      "id": "char-1763994943536-bnv5fxui0",
-      "name": "Xylos",
+    "char-1764242186489-k5mvcwti9": {
+      "id": "char-1764242186489-k5mvcwti9",
+      "name": "Root-Singer",
       "details": {
-        "name": "Xylos",
-        "looks": "A bipedal being composed of interlocking, bioluminescent crystal shards. The shards pulse with a soft, internal cyan light that shifts and flows like liquid. Its form is slender, with elongated limbs and a smooth, featureless head that tapers to a point.",
-        "wearing": "A shimmering, dark iridescent cloak woven from bio-luminescent algae fibers. The cloak is fastened at the neck with a polished obsidian clasp.",
-        "face": "The face has sharp cheekbones and a slender nose. The mouth is a thin line. The skin is covered in small, bright white speckles. The head tapers to a point.",
-        "body": "The visible upper body is slender. The posture is upright and direct.",
-        "hair": "The hair is very short and spiky, appearing almost like frost.",
+        "name": "Root-Singer",
+        "looks": "The figure is carved from obsidian-like wood, smooth and polished to a mirror sheen. Luminescent moss traces intricate, vein-like patterns across its form, pulsing with a soft, internal light. Its silhouette is vaguely feline but elongated, with prehensile, root-like limbs and large, multi-faceted eyes that refract the surrounding glow like cut gemstones.",
+        "wearing": "No clothing, but adorned with swirling patterns of bioluminescent algae that shift in hue from emerald to sapphire. Small, crystalline growths resembling dew drops cling to its limbs, catching and amplifying the ambient light.",
+        "face": "The face has a feline structure with rounded ears, a small nose, and wide, multi-faceted eyes that emit a bright, emerald glow. The texture appears rough and woody, similar to bark.",
+        "body": "The body is formed from thick, gnarled roots that spread outwards from a central trunk. The overall form is sturdy and tree-like, with an elongated silhouette.",
+        "hair": "There is no discernible hair; the head is covered in a textured, bark-like material.",
         "specificDetails": "",
-        "style": "Xylos embodies an ethereal, almost alien aesthetic, characterized by its crystalline nature and the interplay of internal light with external luminescence. Its silhouette is elongated and refined, projecting an aura of profound, quiet intelligence.",
-        "personality": "Intensely curious, solitary, meticulously observant, and communicates through subtle shifts in light patterns.",
-        "voice": "No audible voice is described. Communication is through light patterns.",
-        "speechStyle": "No audible speech is described. Communication is through light patterns.",
-        "gender": "undefined",
-        "nationality": "fictional",
-        "fictional": true,
-        "copyright": false,
-        "tags": "crystalline, bioluminescent, solitary, observant, alien, serene, enigmatic, researcher, jungle-dweller, light-shifter",
-        "seed": {
-          "originalPrompt": "research dome deep in a neon jungle, glass panels cracked, faint internal glow suggesting life within",
-          "name": "Xylos",
-          "looks": "A bipedal being composed of interlocking, bioluminescent crystal shards. The shards pulse with a soft, internal cyan light that shifts and flows like liquid. Its form is slender, with elongated limbs and a smooth, featureless head that tapers to a point.",
-          "wearing": "A shimmering, dark iridescent cloak woven from bio-luminescent algae fibers. The cloak is fastened at the neck with a polished obsidian clasp.",
-          "personality": "Intensely curious, solitary, meticulously observant, and communicates through subtle shifts in light patterns.",
-          "presence": "A cool, humming stillness that vibrates with latent energy, drawing observers in with an almost hypnotic allure.",
-          "setting": "The humid, electric air of a jungle canopy, with towering flora emitting saturated neon hues."
-        },
-        "visualAnalysis": {
-          "face": "The face has sharp cheekbones and a slender nose. The mouth is a thin line. The skin is covered in small, bright white speckles. The head tapers to a point.",
-          "hair": "The hair is very short and spiky, appearing almost like frost.",
-          "body": "The visible upper body is slender. The posture is upright and direct.",
-          "specificdetails": "The entire visible form is covered in small, crystalline structures that reflect light. A dark, circular clasp is visible at the neck of the garment."
-        }
-      },
-      "primaryMedia": "media-1764238896680-k8bgz66u0"
-    },
-    "char-1764163302191-t4k837oee": {
-      "id": "char-1764163302191-t4k837oee",
-      "name": "Moss-Walker",
-      "details": {
-        "name": "Moss-Walker",
-        "looks": "Ancient, gnarled humanoid form sculpted from living stone. Veins of phosphorescent moss trace across its craggy surface, pulsing with a soft, internal light. Eyes are deep, shadowed hollows reflecting the emerald glow of its surroundings.",
-        "wearing": "A tapestry of interwoven, vibrant mosses and clinging vines, draped like a living cloak. Small, iridescent fungi sprout from its shoulders and chest.",
-        "face": "The face is deeply creased and wrinkled, with a prominent, broad nose. The mouth is a grim, downturned line. The skin texture is rough and uneven, appearing to be made of stone covered in moss. The eyes are large, round hollows filled with a glowing orange light.",
-        "body": "The visible portion of the body suggests a large, stocky build. The posture is low and crouched, with arms extended forward resting in the water. The hands have long, thick fingers.",
-        "hair": "There is no discernible hair; instead, the head is covered in dense, green moss, with small sprouts of vegetation.",
-        "specificDetails": "",
-        "style": "Its aesthetic is one of primal, organic integration. The dominant palette is deep emerald greens and earthy browns, punctuated by the soft glow of phosphorescence. Silhouettes are broad and grounded, reflecting its connection to the earth and stone. Its style is one of profound, natural stillness, unadorned and elemental.",
-        "personality": "Slow, deliberate, and possessive of its territory. Communicates through subtle shifts in its phosphorescence and the rustling of its mossy coverings. Observant and ancient.",
-        "voice": "Its voice, when it chooses to speak, is a low, resonant rumble that seems to emanate from the earth itself. The tone is deep and gravelly, carrying the weight of ages, and its cadence is slow and deliberate.",
-        "speechStyle": "It speaks in short, measured phrases, often interspersed with prolonged silences. Its vocabulary is simple and direct, yet carries an ancient, elemental quality.",
-        "gender": "male",
+        "style": "Its aesthetic is one of organic, glowing earthiness, dominated by the interplay of dark, polished wood and luminous, shifting greens and blues. The silhouette is fluid yet grounded, blending arboreal strength with a subtle, almost ethereal grace.",
+        "personality": "Quiet, observant, and possessive of the deep knowledge held within its arboreal home. Communicates through resonant hums and shifting patterns of light.",
+        "voice": "Its voice is a low, resonant hum, like the vibration of ancient roots deep within the earth, occasionally punctuated by soft, melodic chirps that echo the rustling of leaves.",
+        "speechStyle": "Communication is primarily non-verbal, through resonant hums and bioluminescent displays, but when it 'speaks' audibly, it is in slow, deliberate tones that carry the weight of ages.",
+        "gender": "indeterminate",
         "nationality": "Fictional",
         "fictional": true,
         "copyright": false,
-        "tags": "ancient, guardian, elemental, moss, stone, territorial, phosphorescent, patient, watchful",
+        "tags": "bioluminescent, arboreal, guardian, ancient, mystical, arboreal, tree-spirit, light-speaker",
+        "imageUrl": "https://v3b.fal.media/files/b/lion/9trqoP8_fPFU9_oChHpSO.jpg",
+        "imagePrompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"Bioluminescent tree-cathedral grown from a single root system, stained-glass leaves, entrance through hollow trunk\"\n\nRoot-Singer, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: The figure is carved from obsidian-like wood, smooth and polished to a mirror sheen. Luminescent moss traces intricate, vein-like patterns across its form, pulsing with a soft, internal light. Its silhouette is vaguely feline but elongated, with prehensile, root-like limbs and large, multi-faceted eyes that refract the surrounding glow like cut gemstones..\n\nWearing: No clothing, but adorned with swirling patterns of bioluminescent algae that shift in hue from emerald to sapphire. Small, crystalline growths resembling dew drops cling to its limbs, catching and amplifying the ambient light..\n\nPresence: A profound sense of ancient calm and watchful stillness, like the heart of a silent forest..\n\nSetting: Within a colossal, hollow trunk, where shafts of emerald light filter through ceiling-like stained-glass leaves..\n\nTheir demeanor reflects: Quiet, observant, and possessive of the deep knowledge held within its arboreal home. Communicates through resonant hums and shifting patterns of light..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "seed": {
-          "originalPrompt": "Roger Dean–inspired floating stone archlands, lush moss terraces and luminous pools, a carved shell-doorway set into a hovering cliff",
-          "name": "Moss-Walker",
-          "looks": "Ancient, gnarled humanoid form sculpted from living stone. Veins of phosphorescent moss trace across its craggy surface, pulsing with a soft, internal light. Eyes are deep, shadowed hollows reflecting the emerald glow of its surroundings.",
-          "wearing": "A tapestry of interwoven, vibrant mosses and clinging vines, draped like a living cloak. Small, iridescent fungi sprout from its shoulders and chest.",
-          "personality": "Slow, deliberate, and possessive of its territory. Communicates through subtle shifts in its phosphorescence and the rustling of its mossy coverings. Observant and ancient.",
-          "presence": "A quiet hum of ancient growth and cool, damp earth. A sense of deep, undisturbed peace that borders on territorial warning.",
-          "setting": "A cavernous space where emerald light filters through impossibly balanced stone arches, reflecting in pools of otherworldly luminescence."
+          "originalPrompt": "Bioluminescent tree-cathedral grown from a single root system, stained-glass leaves, entrance through hollow trunk",
+          "name": "Root-Singer",
+          "looks": "The figure is carved from obsidian-like wood, smooth and polished to a mirror sheen. Luminescent moss traces intricate, vein-like patterns across its form, pulsing with a soft, internal light. Its silhouette is vaguely feline but elongated, with prehensile, root-like limbs and large, multi-faceted eyes that refract the surrounding glow like cut gemstones.",
+          "wearing": "No clothing, but adorned with swirling patterns of bioluminescent algae that shift in hue from emerald to sapphire. Small, crystalline growths resembling dew drops cling to its limbs, catching and amplifying the ambient light.",
+          "personality": "Quiet, observant, and possessive of the deep knowledge held within its arboreal home. Communicates through resonant hums and shifting patterns of light.",
+          "presence": "A profound sense of ancient calm and watchful stillness, like the heart of a silent forest.",
+          "setting": "Within a colossal, hollow trunk, where shafts of emerald light filter through ceiling-like stained-glass leaves."
         },
         "visualAnalysis": {
-          "face": "The face is deeply creased and wrinkled, with a prominent, broad nose. The mouth is a grim, downturned line. The skin texture is rough and uneven, appearing to be made of stone covered in moss. The eyes are large, round hollows filled with a glowing orange light.",
-          "body": "The visible portion of the body suggests a large, stocky build. The posture is low and crouched, with arms extended forward resting in the water. The hands have long, thick fingers.",
-          "hair": "There is no discernible hair; instead, the head is covered in dense, green moss, with small sprouts of vegetation.",
-          "specificdetails": "Veins of phosphorescent moss are visible tracing across the stone-like surface of the body, emitting a soft glow."
+          "face": "The face has a feline structure with rounded ears, a small nose, and wide, multi-faceted eyes that emit a bright, emerald glow. The texture appears rough and woody, similar to bark.",
+          "hair": "There is no discernible hair; the head is covered in a textured, bark-like material.",
+          "body": "The body is formed from thick, gnarled roots that spread outwards from a central trunk. The overall form is sturdy and tree-like, with an elongated silhouette.",
+          "specificdetails": "The eyes are large, glowing, and multi-faceted, refracting light. Luminescent moss traces vein-like patterns across its entire surface. Small, crystalline growths resembling dew drops cling to its limbs."
         }
       },
-      "primaryMedia": "media-1764238896681-zq8er7ci7"
-    },
-    "char-1764187631025-n2gxhg0qg": {
-      "id": "char-1764187631025-n2gxhg0qg",
-      "name": "Xylos",
-      "details": {
-        "name": "Xylos",
-        "looks": "Young adult, luminous teal skin with a subtle metallic sheen. Angular jawline, large, obsidian-like eyes that absorb light, and delicate, pointed ears tipped with iridescent scales. A faint, bioluminescent pattern pulses beneath her skin.",
-        "wearing": "A form-fitting suit of woven starlight, shifting from deep indigo to violet. It's adorned with crystalline accents that catch and refract light, and short, thigh-high boots made of polished, dark obsidian.",
-        "face": "The face has an angular jawline. The skin is a luminous teal with a subtle metallic sheen. There are delicate, pointed ears. The eyes are large and obsidian-like. A faint, bioluminescent pattern is visible beneath the skin.",
-        "body": "The visible portion of the body is covered in a form-fitting suit.",
-        "hair": "Hair is not visible in the image.",
-        "specificDetails": "",
-        "style": "Her style is one of otherworldly elegance, blending celestial elements with a sharp, modern silhouette. She favors deep, rich jewel tones that complement her unique skin tone, and her attire often incorporates materials that refract light, creating an aura of mystique and allure. Her aesthetic speaks of confidence and an uninhibited embrace of the extraordinary.",
-        "personality": "Curious and bold, with a playful arrogance. She is unafraid of new experiences and often acts on impulse.  Enjoys being the center of attention.",
-        "voice": "Her voice is a melodic cascade, possessing a crystalline timbre that can shift from a playful lilt to a commanding resonance. It carries an exotic, almost musical quality, with subtle undertones that hint at her alien origins.",
-        "speechStyle": "She speaks with a clear, deliberate cadence, her phrasing often laced with a poetic sensibility. Her vocabulary is rich, though she can adopt a more direct and assertive tone when necessary.",
-        "gender": "female",
-        "nationality": "Xylosian",
-        "fictional": true,
-        "copyright": false,
-        "tags": "alien, alluring, curious, bold, luminous, iridescent, celestial, confident, playful, exotic",
-        "seed": {
-          "originalPrompt": "a hot alien babe",
-          "name": "Xylos",
-          "looks": "Young adult, luminous teal skin with a subtle metallic sheen. Angular jawline, large, obsidian-like eyes that absorb light, and delicate, pointed ears tipped with iridescent scales. A faint, bioluminescent pattern pulses beneath her skin.",
-          "wearing": "A form-fitting suit of woven starlight, shifting from deep indigo to violet. It's adorned with crystalline accents that catch and refract light, and short, thigh-high boots made of polished, dark obsidian.",
-          "personality": "Curious and bold, with a playful arrogance. She is unafraid of new experiences and often acts on impulse.  Enjoys being the center of attention.",
-          "presence": "An electric charge, a hum of exotic energy that makes the air crackle.",
-          "setting": "A nebula-painted cavern, lit by the glow of alien flora."
-        },
-        "visualAnalysis": {
-          "face": "The face has an angular jawline. The skin is a luminous teal with a subtle metallic sheen. There are delicate, pointed ears. The eyes are large and obsidian-like. A faint, bioluminescent pattern is visible beneath the skin.",
-          "hair": "Hair is not visible in the image.",
-          "body": "The visible portion of the body is covered in a form-fitting suit.",
-          "specificdetails": "The ears are tipped with iridescent scales. A faint, bioluminescent pattern pulses beneath the skin on the face."
-        }
-      },
-      "primaryMedia": "media-1764238896681-qf420y1g9"
-    },
-    "char-1764228246308-9bas5v4hy": {
-      "id": "char-1764228246308-9bas5v4hy",
-      "name": "Ember Pyrothorne",
-      "details": {
-        "name": "Ember Pyrothorne",
-        "looks": "Pale, smooth skin. Sharp, angular features. Eyes like molten gold that emit a soft light. Raven-black hair flows like liquid. Large, leathery bat-like wings, the undersides veined with crimson.",
-        "wearing": "A close-fitting, matte black leather bodysuit with strategically placed cutouts. Intricate, bioluminescent tattoos in shades of crimson and violet are visible beneath the cutouts, pulsing with a faint inner light. Pointed, ankle-high leather boots.",
-        "face": "The face has sharp, angular features and pale, smooth skin. The eyes are dark with hints of gold, and the mouth is closed. The nose is straight. There are no visible wrinkles or scars. Large, black, curved horns protrude from the head.",
-        "body": "The visible portion of the body is slender and appears toned. The posture is upright and direct.",
-        "hair": "The hair is long, straight, and raven-black, falling past the shoulders.",
-        "specificDetails": "",
-        "style": "Her aesthetic is a blend of raw demonic power and sophisticated allure, leaning towards dark, form-fitting silhouettes that emphasize her form. Her color palette is dominated by matte blacks and deep jewel tones, highlighted by the pulsating glow of her tattoos and eyes, creating an atmosphere of sensual danger.",
-        "personality": "Confident, alluring, with a hint of predatory stillness. Observant and unafraid of her surroundings.",
-        "voice": "Her voice is a low, resonant contralto, with a texture like warm embers, capable of shifting to a husky whisper or a commanding tone. It carries a subtle echo of distant, eerie whispers, hinting at the depths from which she originates.",
-        "speechStyle": "She speaks with a deliberate cadence, often pausing to let her words settle, and her vocabulary is precise, sometimes laced with an archaic, poetic quality.",
-        "gender": "female",
-        "nationality": "fictional",
-        "fictional": true,
-        "copyright": false,
-        "tags": "demon, alluring, powerful, enigmatic, fire, dark beauty, infernal, primal, confident, supernatural",
-        "seed": {
-          "originalPrompt": "A hyper-realistic, close-up portrait of a \n\nPhotorealistic image of \n\nThe 28-year-old Ember Pyrothorne, a fiery demon with raven hair cascading down her back, fiery eyes that seem to glow, and expansive bat-like wings, stands amidst the sultry depths of Tenebrae. Her pale skin contrasts sharply with her dark hair and the smoky caverns surrounding her. She's clad in a form-fitting, leather bodysuit that accentuates her curves, with intricate, glowing tattoos peeking through the cutouts. The air is thick with the scent of sulfur and the sound of distant, eerie whispers.\n\nThe scene is bathed in a warm, otherworldly glow, with shadows enhancing depth and realism. The color palette is vibrant yet natural, emphasizing the authenticity of an alien environment. Ensure the composition includes the pulsing walls and ethereal details of the chamber to provide context and scale, making the image indistinguishable from a real photograph.",
-          "name": "Ember Pyrothorne",
-          "looks": "Pale, smooth skin. Sharp, angular features. Eyes like molten gold that emit a soft light. Raven-black hair flows like liquid. Large, leathery bat-like wings, the undersides veined with crimson.",
-          "wearing": "A close-fitting, matte black leather bodysuit with strategically placed cutouts. Intricate, bioluminescent tattoos in shades of crimson and violet are visible beneath the cutouts, pulsing with a faint inner light. Pointed, ankle-high leather boots.",
-          "personality": "Confident, alluring, with a hint of predatory stillness. Observant and unafraid of her surroundings.",
-          "presence": "A palpable warmth, like a dying ember. A subtle scent of brimstone. A sense of ancient, untamed power.",
-          "setting": "Smoky, crimson-lit cavern with walls that pulse with a faint, organic light."
-        },
-        "visualAnalysis": {
-          "face": "The face has sharp, angular features and pale, smooth skin. The eyes are dark with hints of gold, and the mouth is closed. The nose is straight. There are no visible wrinkles or scars. Large, black, curved horns protrude from the head.",
-          "body": "The visible portion of the body is slender and appears toned. The posture is upright and direct.",
-          "hair": "The hair is long, straight, and raven-black, falling past the shoulders.",
-          "specificdetails": "Large, leathery, bat-like wings with crimson veining on the undersides are spread wide. Intricate, dark tattoos are visible on the chest and arms, appearing as organic or vine-like patterns. The character is wearing a low-cut, black leather top."
-        }
-      },
-      "primaryMedia": "media-1764238896681-vz4fyk69b"
+      "imagePath": "https://v3b.fal.media/files/b/lion/9trqoP8_fPFU9_oChHpSO.jpg"
     }
   },
   "pinnedIds": [
@@ -470,7 +220,10 @@
     "char-1763993980541-c2iwj1tvb",
     "char-1764160474399-8kydd9uio",
     "char-1764162265359-hgoccu2e6",
-    "char-1761839277539-y1o5rk1lo",
-    "char-1764187631025-n2gxhg0qg"
+    "char-1764241809018-zxg3y8hpb",
+    "char-1764241884333-rf9evdsfm",
+    "char-1764242001145-92fk2mn69",
+    "char-1764242068798-uiumbc5xs",
+    "char-1764242186489-k5mvcwti9"
   ]
 }
