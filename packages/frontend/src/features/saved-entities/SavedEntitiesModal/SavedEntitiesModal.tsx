@@ -1,6 +1,8 @@
+import { useMemo } from 'react';
 import { Modal, ModalHeader, ModalContent } from '@/components/ui/Modal';
 import { IconTrash, IconPin, IconPinFilled, IconCopy } from '@/icons';
 import { useSavedEntitiesLogic } from './useSavedEntitiesLogic';
+import { useEntityImages } from '@/hooks';
 import type { SavedEntitiesModalProps } from './types';
 import styles from './SavedEntitiesModal.module.css';
 
@@ -27,6 +29,10 @@ export function SavedEntitiesModal({ isOpen, onClose, initialTab = 'characters' 
   const handleDeleteEntity = activeTab === 'characters' ? handleDeleteCharacter : handleDeleteLocation;
   const handlePinEntity = activeTab === 'characters' ? handlePinCharacter : handlePinLocation;
   const pinnedEntityIds = activeTab === 'characters' ? pinnedCharacterIds : pinnedLocationIds;
+
+  // Preload all entity images using the media system (handles both imagePath and primaryMedia)
+  const allEntities = useMemo(() => [...characters, ...locations], [characters, locations]);
+  const imageMap = useEntityImages(allEntities);
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} maxWidth="lg" data-component="saved-entities-modal">
@@ -61,6 +67,8 @@ export function SavedEntitiesModal({ isOpen, onClose, initialTab = 'characters' 
             {entities.map((entity) => {
               // Get world node count for locations
               const nodeCount = activeTab === 'locations' ? getWorldNodeCount(entity.id) : 0;
+              // Get resolved image URL from media system (handles both imagePath and primaryMedia)
+              const imageUrl = imageMap.get(entity.id) || null;
               
               return (
               <div key={entity.id} className={styles.card}>
@@ -69,9 +77,9 @@ export function SavedEntitiesModal({ isOpen, onClose, initialTab = 'characters' 
                   onClick={() => handleLoadEntity(entity as any)}
                   title={`Click to load ${activeTab === 'characters' ? 'character' : 'world'}`}
                 >
-                  {entity.imagePath ? (
+                  {imageUrl ? (
                     <img 
-                      src={entity.imagePath} 
+                      src={imageUrl} 
                       alt={entity.name}
                       className={styles.image}
                     />

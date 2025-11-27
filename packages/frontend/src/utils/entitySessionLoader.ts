@@ -6,6 +6,7 @@
  */
 
 import { useLocationsStore, Node } from '@/store/slices/locations';
+import { getPrimaryMediaUrl } from '@/services/mediaService';
 
 export interface EntitySessionCallbacks {
   createEntity: (id: string, seed: any, type: 'location' | 'character') => void;
@@ -76,10 +77,19 @@ export function createEntitySessionsForNodes(
     // Create entity session
     createEntity(nodeId, seed, 'location');
     
-    // Update with image if available
+    // Update with image if available (supports both old imagePath and new primaryMedia)
+    // Check synchronously first for immediate display
     if (node.imagePath) {
       updateEntityImage(nodeId, node.imagePath);
     }
+    
+    // Then resolve via media system (handles primaryMedia)
+    // This is async but will update the image when resolved
+    getPrimaryMediaUrl(node).then(url => {
+      if (url) {
+        updateEntityImage(nodeId, url);
+      }
+    });
     
     // Just pass through the node's DNA directly - it already has everything
     // cascadedDNA provides hierarchy (world/region/location structure)

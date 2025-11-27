@@ -154,11 +154,11 @@ export function getAncestors(tree: TreeNode, targetId: string): TreeNode[] {
  * @param nodeId Root node ID to start search from
  * @param getNode Function to get a node by ID from store
  * @param worldTrees Array of all world trees
- * @returns First non-empty imagePath found, or empty string if none
+ * @returns First non-empty primaryMedia ID or imagePath found, or empty string if none
  */
 export function findFirstImageInTree(
   nodeId: string,
-  getNode: (id: string) => { imagePath?: string } | undefined,
+  getNode: (id: string) => { imagePath?: string; primaryMedia?: string } | undefined,
   worldTrees: TreeNode[]
 ): string {
   // Find tree containing this node
@@ -166,8 +166,11 @@ export function findFirstImageInTree(
   if (!tree) return '';
   
   // Traverse tree depth-first looking for first image
+  // Prefer primaryMedia (new system) over imagePath (old system)
   const checkNode = (treeNode: TreeNode): string => {
     const node = getNode(treeNode.id);
+    // Check primaryMedia first (new system), then imagePath (old system)
+    if (node?.primaryMedia) return node.primaryMedia;
     if (node?.imagePath) return node.imagePath;
     
     // Check children

@@ -229,7 +229,8 @@ export interface Node {
   name: string;
   spaceType: SpaceType;
   dna: HostNode | RegionNode | LocationNode | NicheNode;
-  imagePath: string;
+  imagePath?: string;  // Deprecated: use primaryMedia
+  primaryMedia?: string;  // ID reference to media.json
 }
 
 // Tree structure - stores ID references only

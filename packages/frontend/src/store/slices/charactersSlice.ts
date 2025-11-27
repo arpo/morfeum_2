@@ -12,7 +12,8 @@ export interface Character {
   id: string;
   name: string;
   details: Record<string, any>; // Deep profile JSON
-  imagePath: string;
+  imagePath?: string;  // Deprecated: use primaryMedia
+  primaryMedia?: string;  // ID reference to media.json
 }
 
 // Storage actions

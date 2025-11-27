@@ -3,13 +3,16 @@
  * Unified entity session creation and activation
  */
 
+import { getPrimaryMediaUrl } from '@/services/mediaService';
+
 export interface EntitySessionData {
   id: string;
   name: string;
   type: 'character' | 'location';
   personality?: string;
   atmosphere?: string;
-  imagePath?: string;
+  imagePath?: string;  // Deprecated: use primaryMedia
+  primaryMedia?: string;  // ID reference to media.json
   imagePrompt?: string;
 }
 
@@ -36,7 +39,7 @@ export function createEntitySession(
 
   store.createEntity(data.id, seed, data.type);
 
-  // Update entity with image if provided
+  // Update entity with image if provided (supports both old imagePath and new primaryMedia)
   // Check if image is different to prevent unnecessary re-renders (flicker)
   if (data.imagePath) {
     const currentEntity = store.entitySessions?.[data.id];
@@ -46,6 +49,13 @@ export function createEntitySession(
       store.updateEntityImage(data.id, data.imagePath);
     }
   }
+
+  // Resolve via media system (handles primaryMedia)
+  getPrimaryMediaUrl(data).then(url => {
+    if (url) {
+      store.updateEntityImage(data.id, url);
+    }
+  });
 
   // Update with image prompt if provided
   if (data.imagePrompt) {

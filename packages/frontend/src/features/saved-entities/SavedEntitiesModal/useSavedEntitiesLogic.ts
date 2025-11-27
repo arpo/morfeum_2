@@ -4,6 +4,7 @@ import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
 import { findTreeContainingNode, collectAllNodeIds, findFirstImageInTree } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
+import { getPrimaryMediaUrl } from '@/services/mediaService';
 import type { SavedEntitiesLogicReturn, EntityTab } from './types';
 import type { Character } from '@/store/slices/charactersSlice';
 
@@ -20,10 +21,21 @@ export function useSavedEntitiesLogic(onClose: () => void, initialTab: EntityTab
     const hostNodes = Object.values(nodesMap).filter(node => node.type === 'host');
     
     // Add computed thumbnail image for each location
-    return hostNodes.map(node => ({
-      ...node,
-      imagePath: findFirstImageInTree(node.id, getNode, worldTrees) || node.imagePath
-    }) as Node);
+    return hostNodes.map(node => {
+      const foundImage = findFirstImageInTree(node.id, getNode, worldTrees);
+      
+      // Determine if result is a media ID or a direct URL
+      // Media IDs start with "media-", URLs start with "http" or "/"
+      const isMediaId = foundImage && foundImage.startsWith('media-');
+      
+      return {
+        ...node,
+        // Set primaryMedia if we found a media ID, otherwise keep existing
+        primaryMedia: isMediaId ? foundImage : node.primaryMedia,
+        // Set imagePath if we found a URL, otherwise keep existing
+        imagePath: (!isMediaId && foundImage) ? foundImage : node.imagePath
+      } as Node;
+    });
   }, [nodesMap, getNode, worldTrees]);
 
   const pinnedLocationIds = useLocationsStore(state => state.pinnedIds);
@@ -99,9 +111,17 @@ export function useSavedEntitiesLogic(onClose: () => void, initialTab: EntityTab
     
     createEntity(character.id, seed, 'character');
     
+    // Support both old imagePath and new primaryMedia
     if (character.imagePath) {
       updateEntityImage(character.id, character.imagePath);
     }
+    
+    // Resolve via media system (handles primaryMedia)
+    getPrimaryMediaUrl(character).then(url => {
+      if (url) {
+        updateEntityImage(character.id, url);
+      }
+    });
     
     updateEntityProfile(character.id, character.details as any);
     setActiveEntity(character.id);

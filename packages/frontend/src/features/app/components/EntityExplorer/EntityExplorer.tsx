@@ -6,12 +6,40 @@ import { Tabs, TreeView, TreeItem } from '@/components/ui';
 import { IconWorld, IconMapPin, IconInfoCircle } from '@/icons';
 import { TreeNode } from '@/store/slices/locations/types';
 import { findNodeInTree } from '@/utils/treeUtils';
+import { useEntityImages } from '@/hooks';
+import { getPrimaryMediaUrl } from '@/services/mediaService';
 
 export const EntityExplorer: React.FC = () => {
   // Data Stores - Locations
   const worldTrees = useLocationsStore(state => state.worldTrees);
   const locationNodes = useLocationsStore(state => state.nodes);
   const locationPinnedIds = useLocationsStore(state => state.pinnedIds);
+  
+  // Data Stores - Characters
+  const characterMap = useCharactersStore(state => state.characters);
+  const characterPinnedIds = useCharactersStore(state => state.pinnedIds);
+  
+  // Helper to recursively collect all tree nodes
+  const collectAllTreeNodes = (trees: any[], nodes: Record<string, any>): any[] => {
+    const result: any[] = [];
+    const traverse = (node: any) => {
+      const fullNode = nodes[node.id] || node;
+      result.push(fullNode);
+      if (node.children) node.children.forEach(traverse);
+    };
+    trees.forEach(traverse);
+    return result;
+  };
+
+  // Collect ALL entities for image preloading (including nested tree nodes)
+  const allEntities = useMemo(() => {
+    const treeNodes = collectAllTreeNodes(worldTrees || [], locationNodes);
+    const characters = characterPinnedIds.map(id => characterMap[id]).filter(Boolean);
+    return [...treeNodes, ...characters];
+  }, [worldTrees, locationNodes, characterPinnedIds, characterMap]);
+  
+  // Preload all images using the new media system
+  const imageMap = useEntityImages(allEntities);
   
   // Resolve pinned locations to their tree structures (if available) or flat nodes
   const locationTreeData = useMemo(() => {
@@ -24,8 +52,8 @@ export const EntityExplorer: React.FC = () => {
       // Fallback to treeNode properties if fullNode is missing (safety)
       const label = fullNode?.name || treeNode.name || 'Unknown Location';
       const type = fullNode?.type || treeNode.type;
-      // Try to get image from fullNode (root) or dna
-      const image = fullNode?.imagePath || (fullNode as any)?.dna?.imagePath || treeNode.imagePath;
+      // Get image from preloaded imageMap
+      const image = imageMap.get(treeNode.id) || undefined;
 
       return {
         id: treeNode.id,
@@ -63,16 +91,12 @@ export const EntityExplorer: React.FC = () => {
           id: node.id,
           label: node.name,
           icon: node.type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
-          image: node.imagePath || (node as any).dna?.imagePath,
+          image: imageMap.get(node.id) || undefined,
           children: undefined // No children known
         };
       })
       .filter(Boolean) as TreeItem[];
-  }, [worldTrees, locationNodes, locationPinnedIds]);
-
-  // Data Stores - Characters
-  const characterMap = useCharactersStore(state => state.characters);
-  const characterPinnedIds = useCharactersStore(state => state.pinnedIds);
+  }, [worldTrees, locationNodes, locationPinnedIds, imageMap]);
 
   const characterTreeData = useMemo(() => {
     return characterPinnedIds
@@ -82,9 +106,9 @@ export const EntityExplorer: React.FC = () => {
         id: char.id,
         label: char.name,
         icon: <IconInfoCircle size={16} />,
-        image: char.imagePath,
+        image: imageMap.get(char.id) || undefined,
       }));
-  }, [characterMap, characterPinnedIds]);
+  }, [characterMap, characterPinnedIds, imageMap]);
   
   // Action Stores
   const activeEntity = useStore(state => state.activeEntity);
@@ -110,9 +134,17 @@ export const EntityExplorer: React.FC = () => {
           };
           createEntity(id, seed, 'location'); 
           
+          // Support both old imagePath and new primaryMedia
           if ((node as any).imagePath) {
-             updateEntityImage(id, (node as any).imagePath);
+            updateEntityImage(id, (node as any).imagePath);
           }
+          
+          // Resolve via media system (handles primaryMedia)
+          getPrimaryMediaUrl(node).then(url => {
+            if (url) {
+              updateEntityImage(id, url);
+            }
+          });
         }
       } else {
         // Character
@@ -123,9 +155,19 @@ export const EntityExplorer: React.FC = () => {
             personality: char.details?.personality || 'Unknown'
           };
           createEntity(id, seed, 'character');
+          
+          // Support both old imagePath and new primaryMedia
           if (char.imagePath) {
             updateEntityImage(id, char.imagePath);
           }
+          
+          // Resolve via media system (handles primaryMedia)
+          getPrimaryMediaUrl(char).then(url => {
+            if (url) {
+              updateEntityImage(id, url);
+            }
+          });
+          
           updateEntityProfile(id, char.details as any);
         }
       }
