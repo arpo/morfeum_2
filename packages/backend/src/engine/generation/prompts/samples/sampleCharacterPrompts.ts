@@ -40,6 +40,28 @@ export const sampleCharacterPrompts = [
   "A feminine figure woven from soft moss and living bark, delicate bioluminescent specks scattered through her hair and chest shimmering with gentle green light.",
   "A beautiful woman composed of shimmering crystal-sand, subtle light rippling across her curves and a soft blue lumen pulsing beneath.",
   "A female silhouette with flowing woodgrain patterns across smooth skin, faint amber resin glowing in her chest and hair shaped like gently curved roots.",
-  "A woman-shaped form of polished obsidian softened with warm gold veins, her inner light shining through the chest like a calm, radiant ember."
+  "A woman-shaped form of polished obsidian softened with warm gold veins, her inner light shining through the chest like a calm, radiant ember.",
+
+  "A beautiful woman with smooth chrome-steel skin, faint teal circuitry beneath the surface, and soft light pulsing from her collarbones like a living instrument panel.",
+  "A tall male silhouette formed from dark basalt and shimmering obsidian, thin electric-blue fracture lines running across his chest and jaw.",
+  "A graceful woman shaped from translucent ice-glass, soft crystal veins glowing softly within her arms and neck like frozen starlight.",
+  "A male figure with polished copper skin, intricate clockwork filaments tracing his shoulders, and a warm amber core humming beneath his sternum.",
+  "A woman with soft sandstone skin and gold dust embedded in her hairline, a calm cyan glow radiating from her chest like desert dawn.",
+  "A striking man with sculpted iron-black plating, subtle chrome conduits woven along his spine, and a deep, steady mechanical glow at his heart.",
+  "A luminous woman formed from pale moonstone, her surface rippling with silver patterns and a soft white radiance drifting from her ribs.",
+  "A male silhouette composed of storm-blue alloy, lightning-thread veins shimmering faintly beneath smooth metallic skin.",
+  "A woman with living crystal embedded in her shoulders and jawline, rose-gold light glowing through translucent layers beneath her collarbone.",
+  "A tall male figure shaped from brushed titanium, faint geometric glyphs glowing white across his face and chest.",
+  "A forest-born woman with smooth bark-patterned skin, fine moss strands woven into her hair, and warm amber luminescence beneath the sternum.",
+  "A male silhouette carved from polished marble, cracked seams glowing pale blue like ancient energy awakening.",
+  "A radiant woman formed from molten-glass textures, soft inner fires glowing behind her ribs and along her arms.",
+  "A man with obsidian-smooth skin and thin gold conduits tracing his cheekbones, a controlled ember-like glow rising from his chest.",
+  "A woman with pearlescent skin shaped like calm ocean surf, faint cyan patterns flowing beneath the surface like tides.",
+  "A male figure composed of sleek graphene-black plating with teal micro-lights scattered like distant stars across his torso.",
+  "A woman shaped from crystalline desert salt, warm peach light blooming inside her chest and radiating through translucent edges.",
+  "A man with dark iron skin softened by glowing lava threads beneath, moving with quiet tectonic weight.",
+  "A serene woman formed from pale resin and drifting pollen-glow, thin vines braided into her hair and chest shimmering softly inside.",
+  "A male silhouette built from polished steel layered with fine mechanical mesh, golden filament glow pulsing steadily from deep within."
+
 
 ];
