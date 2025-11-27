@@ -19,6 +19,16 @@ export const KEYBOARD_SHORTCUTS_DESCRIPTIONS = {
 } as const;
 
 /**
+ * UI Panel Settings
+ */
+export const PANEL_CONFIG = {
+  ENTITY_EXPLORER: {
+    DEFAULT_POSITION: { x: 20, y: 80 },
+    DEFAULT_SIZE: { width: 350, height: 400 },
+  },
+} as const;
+
+/**
  * Application Settings
  * Add other app-wide configuration here as needed
  */

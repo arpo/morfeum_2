@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { PANEL_CONFIG } from '@/config';
 
 interface Position {
   x: number;
@@ -11,8 +12,8 @@ interface Size {
 }
 
 const STORAGE_KEY = 'entityExplorerPanelPosition';
-const DEFAULT_POSITION: Position = { x: 20, y: 80 };
-const DEFAULT_SIZE: Size = { width: 350, height: 600 };
+const DEFAULT_POSITION: Position = PANEL_CONFIG.ENTITY_EXPLORER.DEFAULT_POSITION;
+const DEFAULT_SIZE: Size = PANEL_CONFIG.ENTITY_EXPLORER.DEFAULT_SIZE;
 
 export function useEntityExplorerPanel() {
   const [position, setPosition] = useState<Position>(() => {
