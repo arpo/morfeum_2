@@ -29,6 +29,33 @@ export const PANEL_CONFIG = {
 } as const;
 
 /**
+ * World View 3D Settings
+ * Controls for the depth-based 3D rendering in WorldView
+ */
+export const WORLD_VIEW_3D_CONFIG = {
+  /** Depth scale - how much the 3D should "bulge" out (0.1 = subtle, 2.0 = extreme) */
+  MESH_DEPTH: 0.33,
+  
+  /** Focus plane - depth at which objects stay still during parallax (0 = far, 1 = near) */
+  FOCUS: 0.25,
+  
+  /** Camera movement amplitude - how far the view shifts during animation */
+  CAMERA_AMPLITUDE: {
+    X: 0.6,  // Horizontal movement range
+    Y: 0.4,  // Vertical movement range
+  },
+  
+  /** Camera movement speed - lower = slower, more subtle movement */
+  CAMERA_SPEED: 0.0008,
+  
+  /** Easing factor for movement smoothness (0.01 = very smooth, 0.2 = snappy) */
+  EASING: 0.05,
+  
+  /** Mesh resolution - higher = more detailed depth geometry (performance impact) */
+  MESH_RESOLUTION: 1024,
+} as const;
+
+/**
  * Application Settings
  * Add other app-wide configuration here as needed
  */

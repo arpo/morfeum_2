@@ -1,1 +1,1 @@
-export { TopButtonRow } from './TopButtonRow';
+export { TopButtonRow, type DisplayMode } from './TopButtonRow';

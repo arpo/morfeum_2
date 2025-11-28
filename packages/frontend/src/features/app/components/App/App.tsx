@@ -18,11 +18,16 @@ import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import { useEffect, useState } from 'react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { useDepthMapLogic } from '@/features/app/components/TopButtonRow/useDepthMapLogic';
+import type { DisplayMode } from '@/features/app/components/TopButtonRow/TopButtonRow';
 import styles from './App.module.css';
 
 export function App() {
   const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+  const [displayMode, setDisplayMode] = useState<DisplayMode>(() => {
+    return (localStorage.getItem('displayMode') as DisplayMode) || 'full';
+  });
+  const [hasDepthMap, setHasDepthMap] = useState(false);
   
   // Global keyboard shortcuts (1 = spawn input, 2 = entity explorer)
   useKeyboardShortcuts();
@@ -209,6 +214,17 @@ export function App() {
     
     // Notify WorldView to check for the new depth map
     window.dispatchEvent(new CustomEvent('depthMapGenerated'));
+    
+    // Mark that we have a depth map
+    setHasDepthMap(true);
+  };
+
+  // Handle display mode change
+  const handleDisplayModeChange = (mode: DisplayMode) => {
+    setDisplayMode(mode);
+    localStorage.setItem('displayMode', mode);
+    // Notify WorldView of display mode change
+    window.dispatchEvent(new CustomEvent('displayModeChanged', { detail: { mode } }));
   };
 
   // Determine if depth map button should be disabled
@@ -248,11 +264,14 @@ export function App() {
             onOpenInfo={handleOpenInfo}
             onOpenChat={handleOpenChat}
             onGenerateDepthMap={handleGenerateDepthMap}
+            onDisplayModeChange={handleDisplayModeChange}
             isCharacter={isCharacter}
             infoDisabled={!deepProfile}
             chatDisabled={!deepProfile}
             depthMapDisabled={depthMapDisabled}
             depthMapGenerating={depthMapGenerating}
+            displayMode={displayMode}
+            hasDepthMap={hasDepthMap}
           />
         </div>
         

@@ -182,6 +182,19 @@ export function useWorldViewLogic() {
     return () => window.removeEventListener('depthMapGenerated', handleDepthMapGenerated);
   }, [checkForDepthMap]);
 
+  // Listen for display mode changes
+  useEffect(() => {
+    const handleDisplayModeChanged = (event: Event) => {
+      const customEvent = event as CustomEvent<{ mode: string }>;
+      if (rendererRef.current && customEvent.detail?.mode) {
+        rendererRef.current.setDisplayMode(customEvent.detail.mode as any);
+      }
+    };
+    
+    window.addEventListener('displayModeChanged', handleDisplayModeChanged);
+    return () => window.removeEventListener('displayModeChanged', handleDisplayModeChanged);
+  }, []);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {

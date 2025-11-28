@@ -1,17 +1,29 @@
 import { Button } from '@/components/ui';
-import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2 } from '@/icons';
+import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere } from '@/icons';
 import styles from './TopButtonRow.module.css';
+
+export type DisplayMode = 'full' | 'hsbs' | 'fsbs' | 'anaglyph';
+
+const DISPLAY_MODE_LABELS: Record<DisplayMode, string> = {
+  full: '2D',
+  hsbs: 'SBS',
+  fsbs: 'VR',
+  anaglyph: '3D'
+};
 
 interface TopButtonRowProps {
   onToggleSidebar: () => void;
   onOpenInfo: () => void;
   onOpenChat: () => void;
   onGenerateDepthMap: () => void;
+  onDisplayModeChange: (mode: DisplayMode) => void;
   isCharacter: boolean;
   infoDisabled: boolean;
   chatDisabled: boolean;
   depthMapDisabled: boolean;
   depthMapGenerating: boolean;
+  displayMode: DisplayMode;
+  hasDepthMap: boolean;
 }
 
 export function TopButtonRow({
@@ -19,12 +31,22 @@ export function TopButtonRow({
   onOpenInfo,
   onOpenChat,
   onGenerateDepthMap,
+  onDisplayModeChange,
   isCharacter,
   infoDisabled,
   chatDisabled,
   depthMapDisabled,
   depthMapGenerating,
+  displayMode,
+  hasDepthMap,
 }: TopButtonRowProps) {
+  const cycleDisplayMode = () => {
+    const modes: DisplayMode[] = ['full', 'hsbs', 'fsbs', 'anaglyph'];
+    const currentIndex = modes.indexOf(displayMode);
+    const nextIndex = (currentIndex + 1) % modes.length;
+    onDisplayModeChange(modes[nextIndex]);
+  };
+
   return (
     <div className={styles.buttonRow} data-component="top-button-row">
       <Button
@@ -67,6 +89,17 @@ export function TopButtonRow({
           <IconStack2 size={20} />
         )}
       </Button>
+
+      {hasDepthMap && (
+        <Button
+          onClick={cycleDisplayMode}
+          className={`${styles.button} ${styles.displayModeButton}`}
+          aria-label={`Display mode: ${DISPLAY_MODE_LABELS[displayMode]}`}
+        >
+          <Icon3dCubeSphere size={20} />
+          <span className={styles.displayModeLabel}>{DISPLAY_MODE_LABELS[displayMode]}</span>
+        </Button>
+      )}
     </div>
   );
 }

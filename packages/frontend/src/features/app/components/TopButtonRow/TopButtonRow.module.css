@@ -49,3 +49,14 @@
     transform: rotate(360deg);
   }
 }
+
+.displayModeButton {
+  gap: var(--spacing-xs);
+}
+
+.displayModeLabel {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
