@@ -47,13 +47,10 @@ export class WorldTreeBuilder {
       });
     }
 
-    // Extract Clean DNA (remove children arrays)
-    const dna: NodeDNA = { ...data };
-    delete dna.regions;
-    delete dna.locations;
-    delete dna.niches;
+    // Use DNA object directly (don't spread entire data object to avoid nested dna.dna)
+    const dna: NodeDNA = data.dna || {};
     
-    // Ensure standard fields exist
+    // Ensure standard fields exist on DNA
     if (!dna.semantic) dna.semantic = { atmosphere: '', mood: '' };
     if (!dna.visual) dna.visual = { prompt: '', style: '' };
     if (!dna.profile) dna.profile = { 
@@ -70,7 +67,13 @@ export class WorldTreeBuilder {
       description: data.description || '',
       dna,
       spaceType: type === 'niche' ? 'interior' : 'exterior',
-      children
+      children,
+      // Structural fields from data (not from DNA)
+      navigableElements: data.navigableElements || [],
+      dominantElements: data.dominantElements || [],
+      uniqueIdentifiers: data.uniqueIdentifiers || [],
+      searchDesc: data.searchDesc || '',
+      slug: data.slug || ''
     };
 
     // Add primaryMedia if present in data

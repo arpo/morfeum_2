@@ -1,61 +1,34 @@
 {
   "nodes": {
-    "loc-1764325866761-kob9no37h": {
-      "id": "loc-1764325866761-kob9no37h",
+    "loc-1764326597551-qet13p8u6": {
+      "id": "loc-1764326597551-qet13p8u6",
       "type": "host",
-      "name": "The Frozen Expanse",
+      "name": "Xylos",
       "spaceType": "exterior",
       "dna": {
-        "type": "host",
-        "name": "The Frozen Expanse",
-        "description": "A vast, unforgiving planet locked in perpetual ice and snow.",
-        "dna": {
-          "looks": "A world dominated by immense glaciers, snow-covered plains, and towering ice formations. The landscape is stark and grand, shaped by millennia of ice.",
-          "colorsAndLighting": "Dominated by cool, pale blues and whites, with muted greys from rock and metal. Lighting is diffuse and often low, casting long, soft shadows.",
-          "atmosphere": "A frigid, thin atmosphere that is crystal clear or hazy with ice particles. Temperatures are perpetually far below freezing. Winds can be harsh and biting.",
-          "materials": "Primarily ice and snow, with exposed rock and ancient, weathered metallic structures.",
-          "mood": "Melancholy, awe-inspiring, and profoundly desolate. A sense of immense age and quiet, crushing isolation.",
-          "sounds": "Wind whistling, ice groaning, distant echoes, silence.",
-          "spatialLayout": "Vast, open expanses broken by immense geological formations and the colossal, geometric shapes of derelict spacecraft.",
-          "primary_surfaces": [
-            "Ice",
-            "Snow"
-          ],
-          "secondary_surfaces": [
-            "Rock",
-            "Aged Metal"
-          ],
-          "accent_features": [
-            "Crystalline ice formations",
-            "Frozen debris"
-          ],
-          "dominant": "Blue",
-          "secondary": "White",
-          "accent": "Grey",
-          "ambient": "Cool",
-          "genre": "sci-fi",
-          "architectural_tone": "brutalist sci-fi with elements of decay and immense scale",
-          "cultural_tone": "none",
-          "materials_base": "weathered metal, ice, rock",
-          "mood_baseline": "desolate isolation",
-          "palette_bias": "cool, muted, monochromatic",
-          "soundscape_base": "wind-swept emptiness",
-          "flora_base": "None",
-          "fauna_base": "None"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Ice sheets",
-          "Glacial mountains",
-          "Frozen oceans"
-        ],
-        "uniqueIdentifiers": [
-          "Extreme cold",
-          "Permafrost",
-          "Aurora borealis"
-        ],
-        "searchDesc": "A frozen, desolate world with extreme cold, vast ice sheets, and glacial mountains.",
-        "slug": "the-frozen-expanse",
+        "looks": "A world characterized by extreme geological formations, vast mineral plains, and unusual atmospheric effects. The landscape is often colored by exotic mineral deposits, creating striking visual contrasts. Structures, both natural and artificial, often exhibit advanced or alien engineering principles.",
+        "colorsAndLighting": "The palette is dominated by intense, mineral-rich colors like deep reds, vibrant blues, and stark whites, often juxtaposed with metallic sheens. Lighting is frequently diffused by atmospheric haze or characterized by unusual, internal glows from geological or artificial sources.",
+        "atmosphere": "The air can be thick with mineral dust, saline vapors, or exotic gases, leading to hazy conditions and diffused light. Temperatures can vary wildly, and localized atmospheric phenomena like electrical storms or shimmering heat distortions are common.",
+        "materials": "Dominant materials include crystalline salts, hardened mineral deposits, weathered rock formations, and advanced, often metallic, alloys. Surfaces can range from rough and natural to impossibly smooth and engineered.",
+        "mood": "A sense of alien grandeur, ancient mystery, and a touch of cosmic awe. The environment feels both beautiful and potentially perilous, hinting at forgotten histories and powerful, untamed forces.",
+        "sounds": "Distant geological groans, whispering winds, crackling energy, metallic resonances, faint hums.",
+        "spatialLayout": "Vast, open plains punctuated by towering, unnatural geological spires or colossal, partially submerged structures. Scale is often immense, emphasizing the insignificance of smaller entities.",
+        "primary_surfaces": "Crystalline salt, eroded rock, metallic alloys",
+        "secondary_surfaces": "Mineral dust, hardened sediment, polished metals",
+        "accent_features": "Intricate carvings, glowing internal lights, rotating mechanisms, shimmering atmospheric effects",
+        "dominant": "Crimson",
+        "secondary": "Golden-brown, Reddish-brown",
+        "accent": "Orange",
+        "ambient": "Warm, hazy",
+        "genre": "sci-fi|fantasy",
+        "architectural_tone": "monumental alien engineering with hints of advanced, intricate clockwork mechanisms and ancient, weathered metal construction",
+        "cultural_tone": "ancient, enigmatic, technologically advanced but dormant or non-human",
+        "materials_base": "polished brass, aged copper, crystalline salts, dark ferrous metals",
+        "mood_baseline": "awe-inspiring, mysterious, ancient",
+        "palette_bias": "rich mineral hues with metallic undertones",
+        "soundscape_base": "echoing, resonant, with subtle mechanical undertones",
+        "flora_base": "None",
+        "fauna_base": "None",
         "semantic": {
           "atmosphere": "",
           "mood": ""
@@ -65,248 +38,247 @@
           "style": ""
         },
         "profile": {
-          "name": "The Frozen Expanse",
-          "looks": "A vast, unforgiving planet locked in perpetual ice and snow.",
+          "name": "Xylos",
+          "looks": "A world of bizarre geological formations and strange phenomena.",
           "atmosphere": "",
           "mood": ""
         }
       },
-      "description": "A vast, unforgiving planet locked in perpetual ice and snow."
+      "description": "A world of bizarre geological formations and strange phenomena.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Bizarre geological formations",
+        "Unusual atmospheric conditions",
+        "Exotic mineral deposits"
+      ],
+      "uniqueIdentifiers": [
+        "Crimson salt lakes",
+        "Rotating celestial bodies",
+        "Submerged ancient structures"
+      ],
+      "searchDesc": "Xylos: A world of bizarre geology, strange phenomena, and exotic mineral deposits.",
+      "slug": "xylos"
     },
-    "40a5679c-b65b-4743-803f-e743bab727d9": {
-      "id": "40a5679c-b65b-4743-803f-e743bab727d9",
+    "ec2a6290-a665-4d03-96f2-c79d1bccf869": {
+      "id": "ec2a6290-a665-4d03-96f2-c79d1bccf869",
       "type": "region",
-      "name": "The Frozen Expanse",
+      "name": "Crimson Salt Flats",
       "spaceType": "exterior",
       "dna": {
-        "type": "region",
-        "name": "The Frozen Expanse",
-        "description": "",
-        "dna": {
-          "looks": "An endless, undulating expanse of snow and ice, dotted with jagged rocky outcrops and the scattered, colossal remnants of ancient structures.",
-          "colorsAndLighting": "Predominantly pale blues and whites, with grey rock and the muted metallic tones of debris. Lighting is diffused and cool, with long, soft shadows.",
-          "atmosphere": "A thin, biting atmosphere of extreme cold and dry air. Occasional blizzards can reduce visibility to near zero. The sky is often a pale, hazy blue.",
-          "materials": "Ice, snow, exposed rock, and weathered, non-reflective metals from ship debris.",
-          "mood": "Vast, desolate, and starkly beautiful. A sense of overwhelming scale and deep, quiet solitude.",
-          "sounds": "Howling wind, crunching snow, distant groans of ice, faint metallic creaks.",
-          "spatialLayout": "Expansive, open plains interrupted by massive, partially buried geometric forms and natural rocky formations.",
-          "primary_surfaces": [
-            "Snow",
-            "Ice"
-          ],
-          "secondary_surfaces": [
-            "Rock",
-            "Dull Metal"
-          ],
-          "accent_features": [
-            "Ice ridges",
-            "Frost patterns"
-          ],
-          "dominant": "White",
-          "secondary": "Light Blue",
-          "accent": "Grey",
-          "ambient": "Cool",
-          "genre": null,
-          "architectural_tone": null,
-          "cultural_tone": null,
-          "materials_base": null,
-          "mood_baseline": null,
-          "palette_bias": "cool, muted, monochromatic",
-          "soundscape_base": "wind-swept emptiness",
-          "flora_base": null,
-          "fauna_base": null
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Ice caps",
-          "Tundra plains",
-          "Frozen wreckage"
-        ],
-        "uniqueIdentifiers": [
-          "Extreme cold",
-          "Permafrost",
-          "Sparse atmosphere"
-        ],
-        "searchDesc": "Vast, unforgiving tundra plains locked in perpetual ice and snow.",
-        "slug": "the-frozen-expanse",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Frozen Expanse",
-          "looks": "",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "description": ""
-    },
-    "5423bfb8-2af3-4dd6-8547-09effd43938d": {
-      "id": "5423bfb8-2af3-4dd6-8547-09effd43938d",
-      "type": "location",
-      "name": "The Halo of Desolation",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "location",
-        "name": "The Halo of Desolation",
-        "description": "A colossal, ring-shaped generation ship, fractured and half-submerged in the frozen tundra. Its spokes, like broken celestial arms, stretch out from the central hub.",
-        "looks": "Massive metallic ring structure, weathered and pitted, partially buried in snow and ice. Spokes are bent and twisted, resembling a shattered halo. The central hub features a large, circular door that continues its slow, ominous rotation.",
-        "atmosphere": "biting cold, thin air, the faint groan of stressed metal, wind whistling through structural gaps",
-        "mood": "desolate, awe-inspiring, melancholic",
-        "dna": {
-          "looks": "A colossal, ring-shaped generation ship dominates the landscape, partially embedded in a snow-covered terrain. Its massive structure displays signs of age and damage, with segments appearing weathered and pitted. Radiating spokes extend outwards from the central hub, resembling broken celestial arms against the sky. The snow-covered ground is uneven, with rocky outcrops dusted in white. The overall impression is one of immense scale and a stark, alien environment.",
-          "colorsAndLighting": "The scene is illuminated by a diffuse, cool light source, likely the sun obscured by clouds or atmospheric haze. Shadows are soft and elongated, indicating a low-angle light source. The overall color palette is dominated by cool tones, with subtle variations in brightness across the structure and landscape.",
-          "atmosphere": "A thin, hazy atmosphere obscures distant features, lending an ethereal quality to the scene. The air appears clear enough to discern details on the primary structure, suggesting it's a cold, dry environment. Subtle wisps of mist may be present in the far background.",
-          "materials": "Primarily aged, pitted metal for the ship's structure, with snow and ice covering much of its surface. Rocky outcrops are also visible.",
-          "mood": "Majestic decay, alien grandeur, and a profound sense of fallen purpose. The spinning door adds an unsettling touch of residual activity.",
-          "sounds": "Distant metallic groans, wind whistling through wreckage, slow mechanical hum of the door.",
-          "spatialLayout": "The foreground consists of a snow-covered track or pathway leading towards the midground, flanked by rocky, snow-dusted terrain. The midground is dominated by the colossal, ring-shaped generation ship, a HORIZONTAL STRUCTURE of immense diameter, partially buried in the tundra. The background reveals a vast, featureless expanse of snow-covered hills and mountains under a hazy sky.",
-          "primary_surfaces": "Metal",
-          "secondary_surfaces": "Snow, Ice, Rock",
-          "accent_features": "None visible",
-          "dominant": "Light Blue (sky, haze)",
-          "secondary": "Grey (structure), White (snow)",
-          "accent": "Darker Grey (structure details)",
-          "ambient": "Cool, muted blue",
-          "genre": null,
-          "architectural_tone": "brutalist sci-fi with elements of decay and immense scale, featuring massive geometric forms, exposed structural elements, and weathered metallic plating",
-          "cultural_tone": null,
-          "materials_base": "weathered metal, ice, rock",
-          "mood_baseline": "desolate isolation",
-          "palette_bias": "cool, muted, monochromatic",
-          "soundscape_base": "wind-swept emptiness with mechanical undertones",
-          "flora_base": null,
-          "fauna_base": null
-        },
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center, midground (implied on the central hub)",
-            "description": "Large, circular door on the central hub, appearing to slowly rotate."
-          },
-          {
-            "type": "passage",
-            "position": "through the ring structure, midground",
-            "description": "The immense opening within the ring structure suggests a passage or thoroughfare."
-          }
-        ],
-        "dominantElements": [
-          "Massive ring-shaped generation ship (midground)",
-          "Snow-covered tundra (foreground and midground)",
-          "Rocky outcrops with snow (foreground and sides)"
-        ],
-        "uniqueIdentifiers": [
-          "Crashed ring-shaped generation ship",
-          "Spokes radiating from central hub",
-          "Half-buried in tundra"
-        ],
-        "searchDesc": "[Location - Exterior] Crashed generation ship ring in tundra. Has: rotating door (center, midground), passage through ring (midground)",
-        "slug": "the-halo-of-desolation",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Halo of Desolation",
-          "looks": "A colossal, ring-shaped generation ship, fractured and half-submerged in the frozen tundra. Its spokes, like broken celestial arms, stretch out from the central hub.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "description": "A colossal, ring-shaped generation ship, fractured and half-submerged in the frozen tundra. Its spokes, like broken celestial arms, stretch out from the central hub.",
-      "primaryMedia": "media-1764325894136-zltq27asl"
-    },
-    "niche-1764325949657-fvcr7a2kd": {
-      "id": "niche-1764325949657-fvcr7a2kd",
-      "type": "niche",
-      "name": "interior of The Halo of Desolation",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, circular chamber is constructed from immense, weathered, dark-grey metallic plating. Segmented walls of high-tech architectural glazing offer views of a stark, icy exterior, supported by a matte black steel geodesic grid. A raised metal platform with blue LED lighting is centered in the foreground, with a heavy hatch to the left.",
-        "colorsAndLighting": "The dominant color palette consists of cool greys, deep charcoals, and stark whites, with subtle reflections from the polished concrete floor. Cold, faint internal lighting emanates from LED strips and data conduits, casting dramatic shadows from the vaulted ceiling.",
-        "atmosphere": "The air is biting cold, carrying the faint, resonant groan of stressed metal and the distant whistle of wind. The immense scale and stark materials evoke a sense of desolate awe.",
-        "materials": "Primary materials include weathered, pitted, dark-grey metallic plating and dark, polished concrete. Secondary materials feature matte black steel for the geodesic grid and thin, high-tech architectural glazing. Exposed machinery and glowing data conduits add detail.",
-        "mood": "This place evokes a mood of desolate awe and melancholic grandeur, with a sense of isolation and forgotten purpose.",
-        "sounds": "resonant groan, stressed metal, whistle of wind, distant wind",
-        "spatialLayout": "The space is a vast, circular chamber with a high, vaulted dome ceiling. Segmented walls create alcoves and recesses, and a single corridor leads towards the background, framed by archways.",
-        "primary_surfaces": "weathered metallic plating, architectural glazing, polished concrete",
-        "secondary_surfaces": "matte black steel, integrated LED strips",
-        "accent_features": "glowing data conduits, exposed machinery, cold-blue LED strips",
-        "dominant": "cool greys (metallic plating, concrete, steel)",
-        "secondary": "stark whites (glazing, ice exterior)",
-        "accent": "deep charcoals (shadows, accents), cold-blue (LED lighting)",
-        "ambient": "cool",
+        "looks": "Endless stretches of terrain covered in sharp, fractured salt crystals, all deeply stained a rich crimson hue. The ground is mostly flat, interrupted by occasional shallow pools of viscous, similarly colored brine or strange, eroded salt formations.",
+        "colorsAndLighting": "Dominated by deep crimson and shades of rust, with occasional glints of white from pure salt deposits. The light is often diffused by the fine salt dust, casting a warm, muted glow over the landscape.",
+        "atmosphere": "The air is dry and carries a pungent, mineral scent. Fine salt dust is constantly present, creating a hazy atmosphere that softens distant views. The extreme salinity likely inhibits most biological life.",
+        "materials": "Primarily crystallized salt, mineral deposits, and compacted mineral dust. The surface is sharp and abrasive.",
+        "mood": "Barren, stark, yet possessing a strange, desolate beauty. A feeling of immense age and unchanging emptiness pervades the region.",
+        "sounds": "Whispering wind, crunching salt underfoot, faint bubbling of brine.",
+        "spatialLayout": "Vast, flat, open expanses with low horizons, punctuated by distant, imposing geological features or colossal submerged structures.",
+        "primary_surfaces": "Crystallized salt",
+        "secondary_surfaces": "Mineral dust, brine",
+        "accent_features": "Salt spires, mineral veins",
+        "dominant": "Crimson",
+        "secondary": "Reddish-brown",
+        "accent": "White",
+        "ambient": "Warm, hazy",
         "genre": null,
-        "architectural_tone": "industrial metallic",
+        "architectural_tone": null,
         "cultural_tone": null,
         "materials_base": null,
-        "mood_baseline": "desolate, awe-inspiring, melancholic",
-        "palette_bias": null,
-        "soundscape_base": "ambient industrial, atmospheric wind",
+        "mood_baseline": "desolate, stark, ancient",
+        "palette_bias": "deep red and earthy tones with high contrast",
+        "soundscape_base": "sparse, environmental, wind-driven",
         "flora_base": "None",
-        "fauna_base": "None"
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Crimson Salt Flats",
+          "looks": "Vast plains of crystallized salt stained a deep crimson by mineral deposits.",
+          "atmosphere": "",
+          "mood": ""
+        }
       },
-      "primaryMedia": "media-1764325949656-m79vzhp38",
-      "description": "The interior of a vast, circular chamber within a shattered halo structure, featuring metallic plating, segmented glazing, and a cold, desolate atmosphere.",
+      "description": "Vast plains of crystallized salt stained a deep crimson by mineral deposits.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Expansive salt flats",
+        "Crimson mineral staining",
+        "Distant geological formations"
+      ],
+      "uniqueIdentifiers": [
+        "Salt crystal formations",
+        "Mineral-rich brine pools",
+        "Pristine, untouched vistas"
+      ],
+      "searchDesc": "Crimson Salt Flats: Expansive plains of deep crimson crystallized salt, with mineral-rich brine pools and stark geological formations.",
+      "slug": "crimson-salt-flats"
+    },
+    "4274c2fc-02fe-4c0d-95cd-937e83195b4a": {
+      "id": "4274c2fc-02fe-4c0d-95cd-937e83195b4a",
+      "type": "location",
+      "name": "The Celestial Orrery",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, intricately detailed brass orrery dominates the scene, half-submerged in a vivid crimson salt lake. The structure features multiple concentric rings, some of which are visibly rotating. The orrery's surface is adorned with detailed carvings and patterns. A lone humanoid figure stands on the sandy shore, dwarfed by the immense scale of the orrery. The surrounding landscape consists of steep, reddish-brown cliffs and rocky terrain.",
+        "colorsAndLighting": "The lighting is soft and diffused, casting a warm glow across the scene. The dominant light source appears to be high in the sky, possibly a sun obscured by atmospheric haze. The orrery itself emits an internal orange glow from its core, creating a contrast with the ambient light.",
+        "atmosphere": "The air appears thick and hazy, likely due to moisture from the lake and fine mineral dust. The atmosphere has a diffuse quality, softening the edges of distant formations.",
+        "materials": "The orrery is primarily constructed from weathered brass with intricate carvings. The lake is composed of crystallized crimson salt, and the surrounding land is rocky and sandy.",
+        "mood": "One of profound ancient mystery, cosmic significance, and quiet, majestic operation. It evokes a sense of wonder and the incomprehensible scale of forgotten civilizations.",
+        "sounds": "Distant hum, rhythmic creaking, faint water lapping, soft whirring.",
+        "spatialLayout": "The foreground consists of a sandy, rocky shoreline bordering a shimmering crimson lake. The midground is dominated by the massive, partially submerged brass orrery. The background features towering, eroded canyon walls that recede into a hazy distance.",
+        "primary_surfaces": "Brass",
+        "secondary_surfaces": "Salt, rock, sand",
+        "accent_features": "Glowing internal light",
+        "dominant": "Crimson (lake)",
+        "secondary": "Golden-brown (orrery), reddish-brown (landscape), pale yellow/orange (haze)",
+        "accent": "Bright orange (orrery core)",
+        "ambient": "Warm, hazy orange-yellow",
+        "genre": null,
+        "architectural_tone": "monumental alien engineering with advanced, intricate clockwork mechanisms, featuring large-scale rotating components, ornate brass detailing, and weathered metal construction.",
+        "cultural_tone": null,
+        "materials_base": "polished brass, aged copper, crystalline salts, dark ferrous metals",
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": "ambient mechanical sounds, resonant hums",
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Celestial Orrery",
+          "looks": "A colossal brass orrery, partially submerged in a vibrant crimson salt lake, its intricate planetary rings still in slow, majestic motion.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A colossal brass orrery, partially submerged in a vibrant crimson salt lake, its intricate planetary rings still in slow, majestic motion.",
       "navigableElements": [
         {
-          "type": "platform",
-          "position": "foreground center",
-          "description": "A raised, circular metal platform with a low, stark railing."
-        },
-        {
-          "type": "hatch",
-          "position": "foreground left",
-          "description": "A heavy, angular metal hatch set into the concrete floor."
-        },
-        {
           "type": "passage",
-          "position": "midground right",
-          "description": "A single, narrow, reinforced metal corridor extending towards the background."
+          "position": "center of orrery, midground",
+          "description": "Glowing, concentric passage within the orrery structure"
+        },
+        {
+          "type": "archway",
+          "position": "base of orrery, midground",
+          "description": "Apparent entrance archway at the waterline of the orrery"
+        },
+        {
+          "type": "object",
+          "position": "center of orrery, midground",
+          "description": "Small glowing orb visible within the orrery's core"
         }
       ],
       "dominantElements": [
-        "immense, weathered, dark-grey metallic plating",
-        "thin, high-tech architectural glazing",
-        "robust geodesic grid of matte black steel",
-        "raised, circular metal platform",
-        "segmented walls"
+        "Colossal brass orrery with rotating rings (center, midground)",
+        "Crimson salt lake (foreground/midground)",
+        "Reddish-brown canyon walls (background)",
+        "Lone humanoid figure (left, foreground)"
       ],
       "uniqueIdentifiers": [
-        "shattered halo motif",
-        "geodesic steel grid",
-        "weathered metallic plating",
-        "segmented architectural glazing"
+        "Titanic half-submerged brass orrery",
+        "Crimson salt lake",
+        "Intricate planetary rings in motion"
       ],
-      "searchDesc": "Vast circular chamber with weathered metal, glazing revealing icy exterior, cold and grand.",
-      "slug": "interior-of-the-halo-of-desolation"
+      "searchDesc": "Exterior location. Massive brass orrery in crimson lake. Has: passage (center of orrery, midground), archway (base of orrery, midground)",
+      "slug": "the-celestial-orrery",
+      "primaryMedia": "media-1764326617198-vtcwcx6k3"
+    },
+    "niche-1764326674542-7nr54w49y": {
+      "id": "niche-1764326674542-7nr54w49y",
+      "type": "niche",
+      "name": "interior of The Celestial Orrery",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, monumentally scaled interior dominated by intricate brass clockwork mechanisms and latticework. Curved walls offer glimpses of a crimson salt lake and orrery rings through crystalline panes, while the floor is a dark, polished metal embedded with glowing orange salt patterns. Soaring pillars and ribbed beams support a vaulted ceiling, with delicate chains holding orrery-like orbs.",
+        "colorsAndLighting": "The space is bathed in the deep crimson and amber hues of a colossal cosmic nebula window, with warm, internal glows emanating from crystalline salt patterns and hanging orbs. Light filters hazily through the atmosphere, creating an ethereal luminescence.",
+        "atmosphere": "The air is filled with a sense of profound ancient mystery and quiet, majestic operation. Distant mechanical hums and rhythmic whirring create a constant, resonant soundscape. A hazy atmosphere suggests an ancient, alien environment of immense scale.",
+        "materials": "Primary materials are aged brass, forming intricate latticework, pillars, beams, and ornate details, and dark, polished ferrous metal for the floor. Crystalline salt in crimson, amber, and orange forms panes and floor inlays, offering shimmering and glowing textures. Aged copper appears on a raised platform.",
+        "mood": "Evokes profound ancient mystery and cosmic significance, a quiet majesty that speaks of incomprehensible scale and forgotten civilizations.",
+        "sounds": "Distant mechanical hums, rhythmic whirring, resonating acoustics.",
+        "spatialLayout": "A monumental, domed interior with curved walls and a vaulted ceiling. The space is organized into foreground, midground, and background with clear entry points via a passageway and doorway, and a ramp ascending from the floor.",
+        "primary_surfaces": "Brass latticework (walls), polished ferrous metal with crystalline salt inlays (floor), ribbed brass beams (ceiling).",
+        "secondary_surfaces": "Aged copper (platform), crystalline salt panes (windows).",
+        "accent_features": "Glowing orange crystalline salt patterns, delicate glowing brass chains with orrery-like orbs, colossal circular stained-glass cosmic nebula window.",
+        "dominant": "Crimson (dominant in window, hints in lake), with significant brass elements.",
+        "secondary": "Amber (in window), dark ferrous metal (floor).",
+        "accent": "Glowing orange (salt patterns and orbs).",
+        "ambient": "Warm, with hints of diffused cool tones from distant atmosphere.",
+        "genre": null,
+        "architectural_tone": "monumental alien engineering with advanced, intricate clockwork mechanisms",
+        "cultural_tone": null,
+        "materials_base": "weathered metal construction with ornate brass detailing",
+        "mood_baseline": "profound ancient mystery, cosmic significance, and quiet, majestic operation",
+        "palette_bias": "Crimson, amber, and brass hues",
+        "soundscape_base": "mechanical ambiance",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764326674541-qnjtv6mc6",
+      "description": "The interior of a colossal, ancient clockwork dome, featuring intricate brass latticework, glowing crystalline salt, and a massive stained-glass cosmic window.",
+      "navigableElements": [
+        {
+          "type": "passageway",
+          "position": "foreground left",
+          "description": "low, arched brass passageway leading to a central chamber"
+        },
+        {
+          "type": "doorway",
+          "position": "midground center",
+          "description": "large, ornate brass doorway set into a curved wall"
+        },
+        {
+          "type": "stairs",
+          "position": "floor to midground",
+          "description": "wide, stepped ramp of dark metal ascending towards the doorway"
+        }
+      ],
+      "dominantElements": [
+        "monumental brass clockwork dome interior",
+        "vast, curved brass latticework walls",
+        "colossal circular stained-glass window",
+        "soaring brass support pillars",
+        "raised asymmetric copper platform",
+        "textured ferrous metal floor with glowing salt patterns"
+      ],
+      "uniqueIdentifiers": [
+        "interlocking brass latticework revealing crimson salt lake and orrery rings",
+        "glowing orange crystalline salt patterns on ferrous metal floor",
+        "stained-glass window depicting cosmic nebula",
+        "brass support pillars resembling planetary arms",
+        "delicate glowing brass chains holding orrery-like orbs"
+      ],
+      "searchDesc": "Monumental brass clockwork dome with crimson salt lake views and cosmic nebula window.",
+      "slug": "interior-of-the-celestial-orrery"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764325866761-kob9no37h",
+      "id": "loc-1764326597551-qet13p8u6",
       "type": "host",
       "children": [
         {
-          "id": "40a5679c-b65b-4743-803f-e743bab727d9",
+          "id": "ec2a6290-a665-4d03-96f2-c79d1bccf869",
           "type": "region",
           "children": [
             {
-              "id": "5423bfb8-2af3-4dd6-8547-09effd43938d",
+              "id": "4274c2fc-02fe-4c0d-95cd-937e83195b4a",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764325949657-fvcr7a2kd",
+                  "id": "niche-1764326674542-7nr54w49y",
                   "type": "niche",
                   "children": []
                 }
@@ -318,6 +290,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764325866761-kob9no37h"
+    "loc-1764326597551-qet13p8u6"
   ]
 }

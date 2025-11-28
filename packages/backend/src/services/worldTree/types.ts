@@ -28,6 +28,16 @@ export interface TreeNode {
   primaryMedia?: string;
   spaceType: 'exterior' | 'interior';
   children: TreeNode[];
+  // Structural fields for navigation and search
+  navigableElements?: Array<{
+    type: string;
+    position: string;
+    description: string;
+  }>;
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
+  searchDesc?: string;
+  slug?: string;
 }
 
 export interface WorldTree {
