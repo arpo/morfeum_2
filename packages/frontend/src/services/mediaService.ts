@@ -173,6 +173,35 @@ export async function deleteMediaByEntityRefs(entityIds: string[]): Promise<bool
 }
 
 /**
+ * Get depth map associated with a media item
+ * Depth maps have type 'depth-map' and parentMedia linking to the original
+ */
+export async function getDepthMapForMedia(mediaId: string): Promise<MediaItem | null> {
+  if (!mediaId) return null;
+
+  try {
+    // Fetch all media and find depth map with this parent
+    const response = await fetch('/api/media');
+    
+    if (!response.ok) {
+      return null;
+    }
+
+    const result = await response.json();
+    const allMedia = result.data || result.media || {};
+    
+    // Find depth map that references this media as parent
+    const depthMap = Object.values(allMedia).find((item: any) => 
+      item.type === 'depth-map' && item.parentMedia === mediaId
+    ) as MediaItem | undefined;
+
+    return depthMap || null;
+  } catch (error) {
+    return null;
+  }
+}
+
+/**
  * Delete media by media IDs
  * Used when deleting by primaryMedia references
  */

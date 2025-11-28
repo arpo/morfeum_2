@@ -206,6 +206,9 @@ export function App() {
     }
     
     await generateDepthMap(activeEntity, primaryMediaId);
+    
+    // Notify WorldView to check for the new depth map
+    window.dispatchEvent(new CustomEvent('depthMapGenerated'));
   };
 
   // Determine if depth map button should be disabled
