@@ -33,6 +33,8 @@ export class WorldViewRenderer {
   private cameraSpeedX: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.X;
   private cameraSpeedY: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Y;
   private cameraSpeedZ: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Z;
+  private cameraPositionX: number = WORLD_VIEW_3D_CONFIG.CAMERA_POSITION.X;
+  private cameraPositionY: number = WORLD_VIEW_3D_CONFIG.CAMERA_POSITION.Y;
   private baseCameraZ: number = 4; // Base camera Z position
 
   // Animation state
@@ -420,13 +422,16 @@ export class WorldViewRenderer {
     const animate = () => {
       this.animationId = requestAnimationFrame(animate);
       
-      // Get current camera movement position (0,0,0 for 2D mode)
-      const { x: mouseX, y: mouseY, z: cameraZ } = this.displayMode === '2d' 
-        ? { x: 0, y: 0, z: 0 } 
+      // Get current camera movement position (all zeros for 2D mode)
+      const { x: mouseX, y: mouseY, z: cameraZ, posX, posY } = this.displayMode === '2d' 
+        ? { x: 0, y: 0, z: 0, posX: 0, posY: 0 } 
         : this.getCameraMovementPosition();
       
-      // Update camera Z position for zoom effect
+      // Update camera position for tilt effect (see mesh from angle)
+      this.camera.position.x = posX;
+      this.camera.position.y = posY;
       this.camera.position.z = this.baseCameraZ + cameraZ;
+      this.camera.lookAt(0, 0, 0); // Always focus on center of image
       
       // Smooth easing toward target
       const mouseSensitivityFocusFactor = 0.3 + 0.7 * 2 * this.focus;
@@ -498,7 +503,7 @@ export class WorldViewRenderer {
   /**
    * Get camera movement position (independent circular patterns for X, Y, Z)
    */
-  private getCameraMovementPosition(): { x: number; y: number; z: number } {
+  private getCameraMovementPosition(): { x: number; y: number; z: number; posX: number; posY: number } {
     const now = Date.now();
     
     // Independent circular motion for each axis with different speeds
@@ -506,8 +511,12 @@ export class WorldViewRenderer {
     const y = Math.sin(now * this.cameraSpeedY) * this.cameraAmplitudeY;
     // Z only zooms IN (negative = closer to image), never OUT to avoid black edges
     const z = -Math.abs(Math.sin(now * this.cameraSpeedZ) * this.cameraAmplitudeZ);
+    
+    // Physical camera position for tilt effect (uses same timing as parallax)
+    const posX = Math.cos(now * this.cameraSpeedX) * this.cameraPositionX;
+    const posY = Math.sin(now * this.cameraSpeedY) * this.cameraPositionY;
 
-    return { x, y, z };
+    return { x, y, z, posX, posY };
   }
 
   /**

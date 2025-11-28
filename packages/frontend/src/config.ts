@@ -39,11 +39,17 @@ export const WORLD_VIEW_3D_CONFIG = {
   /** Focus plane - depth at which objects stay still during parallax (0 = far, 1 = near) */
   FOCUS: 0.25,
   
-  /** Camera movement amplitude - how far the view shifts during animation */
+  /** Camera movement amplitude - how far the view shifts during animation (shader parallax) */
   CAMERA_AMPLITUDE: {
     X: 0.6,   // Horizontal shift range
-    Y: 0.4,   // Vertical shift range
+    Y: 0.8,   // Vertical shift range
     Z: 0.15,  // Zoom range (camera z position offset)
+  },
+  
+  /** Camera position movement - physical camera tilt to see mesh from angle */
+  CAMERA_POSITION: {
+    X: 0.15,  // How far camera moves left/right (creates side view)
+    Y: 0.1,   // How far camera moves up/down (creates top/bottom view)
   },
   
   /** Camera movement speed - each axis has independent circular motion */

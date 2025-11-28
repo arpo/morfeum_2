@@ -280,6 +280,35 @@
         "height": 1024
       },
       "entityRefs": []
+    },
+    "media-1764340822931-3kker4qqu": {
+      "id": "media-1764340822931-3kker4qqu",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/kangaroo/BpJVoqwAp_UYXeizBev0W.jpg",
+      "createdAt": "2025-11-28T14:40:22.931Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A radiant woman formed from molten-glass textures, soft inner fires glowing behind her ribs and along her arms.\"\n\nIgnis, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A woman with a body composed of swirling, translucent molten glass that catches and refracts light. A soft, warm light emanates from within her chest and along her limbs, pulsing gently..\n\nWearing: Flowing, sheer robes the color of twilight, woven with threads that shimmer like captured starlight. Barefoot..\n\nPresence: A gentle, comforting heat and a sense of profound peace..\n\nSetting: A chamber filled with the soft glow of embers and reflected light..\n\nTheir demeanor reflects: Calm, serene, and radiating a quiet warmth that draws others in. Observant and patient..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764340797614-4lvx2je83"
+      ]
+    },
+    "media-1764340827564-l0dfz4wjw": {
+      "id": "media-1764340827564-l0dfz4wjw",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/monkey/tKk4y21pHkK9Hl70-qK9m_107d0b3024254cf68ef4586ad514406e.png",
+      "createdAt": "2025-11-28T14:40:27.564Z",
+      "metadata": {
+        "parentMedia": "media-1764340822931-3kker4qqu",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764340797614-4lvx2je83"
+      ],
+      "parentMedia": "media-1764340822931-3kker4qqu"
     }
   }
 }
