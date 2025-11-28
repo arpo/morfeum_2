@@ -34,7 +34,7 @@ export const PANEL_CONFIG = {
  */
 export const WORLD_VIEW_3D_CONFIG = {
   /** Depth scale - how much the 3D should "bulge" out (0.1 = subtle, 2.0 = extreme) */
-  MESH_DEPTH: 0.2,
+  MESH_DEPTH: 0.25,
   
   /** Focus plane - depth at which objects stay still during parallax (0 = far, 1 = near) */
   FOCUS: 0.25,
@@ -43,7 +43,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   CAMERA_AMPLITUDE: {
     X: 0.6,   // Horizontal shift range
     Y: 0.8,   // Vertical shift range
-    Z: 0.15,  // Zoom range (camera z position offset)
+    Z: 0.5,  // Zoom range (camera z position offset)
   },
   
   /** Camera position movement - physical camera tilt to see mesh from angle */
@@ -54,9 +54,10 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Camera movement speed - each axis has independent circular motion */
   CAMERA_SPEED: {
-    X: 0.0003,  // Horizontal cycle (~7.8 sec)
-    Y: 0.0006,  // Vertical cycle (~10.5 sec)
-    Z: 0.0004,  // Zoom cycle (~15.7 sec, slowest for subtle breathing)
+    MULTIPLIER: 2, // Overall speed multiplier (0.5 = half speed, 2.0 = double speed)
+    X: 0.000333,  // Horizontal cycle (~7.8 sec)
+    Y: 0.00022,  // Vertical cycle (~10.5 sec)
+    Z: 0.0001,  // Zoom cycle (~15.7 sec, slowest for subtle breathing)
   },
   
   /** Easing factor for movement smoothness (0.01 = very smooth, 0.2 = snappy) */

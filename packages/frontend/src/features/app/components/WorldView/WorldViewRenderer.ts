@@ -30,9 +30,10 @@ export class WorldViewRenderer {
   private cameraAmplitudeX: number = WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.X;
   private cameraAmplitudeY: number = WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.Y;
   private cameraAmplitudeZ: number = WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.Z;
-  private cameraSpeedX: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.X;
-  private cameraSpeedY: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Y;
-  private cameraSpeedZ: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Z;
+  private cameraSpeedMultiplier: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER;
+  private cameraSpeedX: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.X * WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER;
+  private cameraSpeedY: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Y * WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER;
+  private cameraSpeedZ: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Z * WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER;
   private cameraPositionX: number = WORLD_VIEW_3D_CONFIG.CAMERA_POSITION.X;
   private cameraPositionY: number = WORLD_VIEW_3D_CONFIG.CAMERA_POSITION.Y;
   private baseCameraZ: number = 4; // Base camera Z position
@@ -501,20 +502,39 @@ export class WorldViewRenderer {
   }
 
   /**
+   * Apply ease-in-out to a value using power curve
+   * Power > 1 creates more pronounced easing at direction changes
+   */
+  private easeInOut(value: number, power: number = 1.5): number {
+    // Preserve sign, apply power curve to absolute value
+    return Math.sign(value) * Math.pow(Math.abs(value), power);
+  }
+
+  /**
    * Get camera movement position (independent circular patterns for X, Y, Z)
    */
   private getCameraMovementPosition(): { x: number; y: number; z: number; posX: number; posY: number } {
     const now = Date.now();
     
-    // Independent circular motion for each axis with different speeds
-    const x = Math.cos(now * this.cameraSpeedX) * this.cameraAmplitudeX;
-    const y = Math.sin(now * this.cameraSpeedY) * this.cameraAmplitudeY;
-    // Z only zooms IN (negative = closer to image), never OUT to avoid black edges
-    const z = -Math.abs(Math.sin(now * this.cameraSpeedZ) * this.cameraAmplitudeZ);
+    // Raw sin/cos values (-1 to 1)
+    const rawX = Math.cos(now * this.cameraSpeedX);
+    const rawY = Math.sin(now * this.cameraSpeedY);
+    const rawZ = Math.sin(now * this.cameraSpeedZ);
     
-    // Physical camera position for tilt effect (uses same timing as parallax)
-    const posX = Math.cos(now * this.cameraSpeedX) * this.cameraPositionX;
-    const posY = Math.sin(now * this.cameraSpeedY) * this.cameraPositionY;
+    // Apply easing for smooth direction changes (slower at peaks, faster in middle)
+    const easedX = this.easeInOut(rawX);
+    const easedY = this.easeInOut(rawY);
+    const easedZ = this.easeInOut(rawZ);
+    
+    // Apply amplitude
+    const x = easedX * this.cameraAmplitudeX;
+    const y = easedY * this.cameraAmplitudeY;
+    // Z only zooms IN (negative = closer to image), never OUT to avoid black edges
+    const z = -Math.abs(easedZ * this.cameraAmplitudeZ);
+    
+    // Physical camera position for tilt effect (uses same eased values)
+    const posX = easedX * this.cameraPositionX;
+    const posY = easedY * this.cameraPositionY;
 
     return { x, y, z, posX, posY };
   }
