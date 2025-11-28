@@ -34,22 +34,20 @@ export async function handleCharacterCompletion(
   character: any,
   store: any
 ) {
-  console.log(`[CompletionHandler] Handling character: ${character.name}`);
-
   // Reload from backend to sync pinnedIds
   await useCharactersStore.getState().loadFromBackend();
 
   // Create entity session and set active
+  // Pass imageUrl from completion data to add to cache
   createEntitySession(store, {
     id: character.id,
     name: character.name,
     type: 'character',
     personality: character.details.personality || '',
     imagePrompt: character.details.imagePrompt,
-    primaryMedia: character.primaryMedia
+    primaryMedia: character.primaryMedia,
+    imageUrl: character.imageUrl  // From pipeline completion
   });
-
-  console.log(`[CompletionHandler] Character ${character.name} session created and active`);
 }
 
 /**
@@ -60,8 +58,6 @@ export function handleLocationCompletion(
   worldTree: any,
   store: any
 ) {
-  console.log(`[CompletionHandler] Handling location: ${worldTree.name}`);
-
   // Extract deepest node data from worldTree BEFORE store processing
   const deepestNodeData = findDeepestNodeData(worldTree);
 
@@ -79,15 +75,15 @@ export function handleLocationCompletion(
 
     if (node || deepestNodeData) {
       // Create entity session
+      // Pass imageUrl from worldTree completion to add to cache
       createEntitySession(store, {
         id: deepId,
         name: node?.name || deepestNodeData?.name || 'New Location',
         type: 'location',
         atmosphere: 'Generated',
-        primaryMedia: node?.primaryMedia
+        primaryMedia: node?.primaryMedia,
+        imageUrl: worldTree.imageUrl  // From pipeline completion
       });
-
-      console.log(`[CompletionHandler] Location ${node?.name || deepestNodeData?.name} session created`);
     }
   }
 }

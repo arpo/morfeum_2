@@ -2,6 +2,7 @@ import { useStore } from '@/store';
 import { useThemeStore } from '@/store/slices/themeSlice';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
+import { useMediaCacheStore, collectMediaIds } from '@/store/slices/mediaCacheSlice';
 import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer';
 import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { ChatPanel } from '@/features/chat/components/ChatPanel';
@@ -14,7 +15,6 @@ import { TopButtonRow } from '@/features/app/components/TopButtonRow';
 import { WorldView } from '@/features/app/components/WorldView/WorldView';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
-import { getPrimaryMediaUrl } from '@/services/mediaService';
 import { useEffect, useState } from 'react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import styles from './App.module.css';
@@ -68,86 +68,100 @@ export function App() {
       const initializeCharactersFromBackend = useCharactersStore.getState().initializeFromBackend;
       await initializeCharactersFromBackend();
       
-      // After data is loaded, auto-load pinned entities
+      // After data is loaded, get pinned entities
       const pinnedCharacters = useCharactersStore.getState().getPinnedCharacters();
       const pinnedLocations = useLocationsStore.getState().getPinnedNodes();
-    
-    let lastLoadedId: string | null = null;
-    
-    // Load all pinned characters
-    pinnedCharacters.forEach((character) => {
-      const seed = {
-        name: character.name,
-        personality: character.details.personality || 'Unknown personality'
-      };
+      const nodes = useLocationsStore.getState().nodes;
       
-      createEntity(character.id, seed, 'character');
-      
-      getPrimaryMediaUrl(character).then(url => {
-        if (url) {
-          updateEntityImage(character.id, url);
-        }
+      // STEP 1: Collect ALL media IDs for bulk loading
+      const allMediaIds = collectMediaIds({
+        characters: pinnedCharacters,
+        nodes: nodes
       });
       
-      updateEntityProfile(character.id, character.details as any);
-      lastLoadedId = character.id;
-    });
+      // STEP 2: Bulk load all media in a single request
+      const loadMediaBulk = useMediaCacheStore.getState().loadMediaBulk;
+      await loadMediaBulk(allMediaIds);
+      
+      // STEP 3: Now load entities using SYNC cache lookups (no async!)
+      const getMediaUrl = useMediaCacheStore.getState().getMediaUrl;
+      
+      let lastLoadedId: string | null = null;
     
-    // Load all pinned location nodes
-    const getCascadedDNA = useLocationsStore.getState().getCascadedDNA;
-    const getWorldTree = useLocationsStore.getState().getWorldTree;
-    const getNode = useLocationsStore.getState().getNode;
-    
-    pinnedLocations.forEach((node) => {
-      // Get cascaded DNA for this node
-      const cascadedDNA = getCascadedDNA(node.id);
-      
-      if (!cascadedDNA.world) {
-        console.warn('[App] Skipping node with missing world DNA:', node.id);
-        return;
-      }
-      
-      const seed = {
-        name: node.name,
-        atmosphere: cascadedDNA.world.semantic?.atmosphere || 'Unknown atmosphere'
-      };
-      
-      createEntity(node.id, seed, 'location');
-      
-      getPrimaryMediaUrl(node).then(url => {
-        if (url) {
-          updateEntityImage(node.id, url);
-        }
-      });
-      
-      updateEntityProfile(node.id, cascadedDNA as any);
-      lastLoadedId = node.id;
-      
-      // If this is a host node, also load all its children using centralized utilities
-      if (node.type === 'host') {
-        const worldTree = getWorldTree(node.id);
+      // Load all pinned characters
+      pinnedCharacters.forEach((character) => {
+        const seed = {
+          name: character.name,
+          personality: character.details.personality || 'Unknown personality'
+        };
         
-        if (worldTree) {
-          // Get all node IDs in tree (excluding root which we already loaded)
-          const allNodeIds = collectAllNodeIds(worldTree);
-          const childNodeIds = allNodeIds.slice(1); // Skip first ID (root)
-          
-          // Create entity sessions for all child nodes using centralized utility
-          createEntitySessionsForNodes(
-            childNodeIds,
-            { createEntity, updateEntityImage, updateEntityProfile }
-          );
+        createEntity(character.id, seed, 'character');
+        
+        // SYNC lookup from cache - no async!
+        const imageUrl = getMediaUrl(character.primaryMedia);
+        if (imageUrl) {
+          updateEntityImage(character.id, imageUrl);
         }
-      }
-    });
+        
+        updateEntityProfile(character.id, character.details as any);
+        lastLoadedId = character.id;
+      });
     
-    // Set the last loaded entity as active, preferring saved state
-    const savedActiveId = localStorage.getItem('lastActiveEntityId');
-    if (savedActiveId && useStore.getState().entities.get(savedActiveId)) {
-        setActiveEntity(savedActiveId);
-    } else if (lastLoadedId) {
-      setActiveEntity(lastLoadedId);
-    }
+      // Load all pinned location nodes
+      const getCascadedDNA = useLocationsStore.getState().getCascadedDNA;
+      const getWorldTree = useLocationsStore.getState().getWorldTree;
+      const getNode = useLocationsStore.getState().getNode;
+    
+      pinnedLocations.forEach((node) => {
+        // Get cascaded DNA for this node
+        const cascadedDNA = getCascadedDNA(node.id);
+        
+        if (!cascadedDNA.world) {
+          console.warn('[App] Skipping node with missing world DNA:', node.id);
+          return;
+        }
+        
+        const seed = {
+          name: node.name,
+          atmosphere: cascadedDNA.world.semantic?.atmosphere || 'Unknown atmosphere'
+        };
+        
+        createEntity(node.id, seed, 'location');
+        
+        // SYNC lookup from cache - no async!
+        const imageUrl = getMediaUrl(node.primaryMedia);
+        if (imageUrl) {
+          updateEntityImage(node.id, imageUrl);
+        }
+        
+        updateEntityProfile(node.id, cascadedDNA as any);
+        lastLoadedId = node.id;
+        
+        // If this is a host node, also load all its children using centralized utilities
+        if (node.type === 'host') {
+          const worldTree = getWorldTree(node.id);
+          
+          if (worldTree) {
+            // Get all node IDs in tree (excluding root which we already loaded)
+            const allNodeIds = collectAllNodeIds(worldTree);
+            const childNodeIds = allNodeIds.slice(1); // Skip first ID (root)
+            
+            // Create entity sessions for all child nodes using centralized utility
+            createEntitySessionsForNodes(
+              childNodeIds,
+              { createEntity, updateEntityImage, updateEntityProfile }
+            );
+          }
+        }
+      });
+    
+      // Set the last loaded entity as active, preferring saved state
+      const savedActiveId = localStorage.getItem('lastActiveEntityId');
+      if (savedActiveId && useStore.getState().entities.get(savedActiveId)) {
+          setActiveEntity(savedActiveId);
+      } else if (lastLoadedId) {
+        setActiveEntity(lastLoadedId);
+      }
     };
     
     initializeData();

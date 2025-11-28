@@ -6,7 +6,7 @@
  */
 
 import { useLocationsStore, Node } from '@/store/slices/locations';
-import { getPrimaryMediaUrl } from '@/services/mediaService';
+import { useMediaCacheStore } from '@/store/slices/mediaCacheSlice';
 
 export interface EntitySessionCallbacks {
   createEntity: (id: string, seed: any, type: 'location' | 'character') => void;
@@ -78,13 +78,12 @@ export function createEntitySessionsForNodes(
     createEntity(nodeId, seed, 'location');
     
     // Update with image if available
-    // Resolve via media system (handles primaryMedia)
-    // This is async but will update the image when resolved
-    getPrimaryMediaUrl(node).then(url => {
-      if (url) {
-        updateEntityImage(nodeId, url);
-      }
-    });
+    // SYNC lookup from cache - no async!
+    const getMediaUrl = useMediaCacheStore.getState().getMediaUrl;
+    const imageUrl = getMediaUrl(node.primaryMedia);
+    if (imageUrl) {
+      updateEntityImage(nodeId, imageUrl);
+    }
     
     // Just pass through the node's DNA directly - it already has everything
     // cascadedDNA provides hierarchy (world/region/location structure)

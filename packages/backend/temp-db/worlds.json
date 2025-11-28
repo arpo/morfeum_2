@@ -1,6 +1,540 @@
 {
-  "nodes": {},
+  "nodes": {
+    "loc-1764322819196-ta48nltve": {
+      "id": "loc-1764322819196-ta48nltve",
+      "type": "host",
+      "name": "Post-Apocalyptic Coastline",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "Post-Apocalyptic Coastline",
+        "description": "A world reshaped by environmental collapse and technological decay.",
+        "dna": {
+          "looks": "Vast, desolate landscapes dominated by the remnants of advanced civilization now succumbing to nature and time. Structures are broken, weathered, and often repurposed by survivors. Natural elements are reclaiming man-made environments.",
+          "colorsAndLighting": "A palette of muted earth tones, rust reds, desaturated blues, and washed-out greens. Lighting is often dim, diffused, and moody, with an emphasis on atmospheric conditions like fog or dust.",
+          "atmosphere": "The air is thick with the scent of decay, salt, and damp earth. A pervasive sense of melancholic quietude hangs over the land, broken only by the sounds of nature and the distant echoes of a lost era.",
+          "materials": "Dominant materials include heavily rusted metals, crumbling concrete, scavenged wood, and hardy, often mutated, vegetation. Surfaces show extreme wear, corrosion, and infestation.",
+          "mood": "Melancholy, resilience, isolation, and a pervasive sense of loss. There's an underlying tension of survival against overwhelming odds.",
+          "sounds": "Wind, distant waves, creaking metal, animal calls, dripping water, crumbling debris",
+          "spatialLayout": "Open, sprawling vistas interspersed with cluttered, hazardous ruins. Navigation often involves traversing hazardous terrain and finding safe paths through collapsed structures.",
+          "primary_surfaces": [
+            "rusted metal",
+            "crumbling concrete"
+          ],
+          "secondary_surfaces": [
+            "weathered wood",
+            "earth",
+            "vegetation"
+          ],
+          "accent_features": [
+            "scavenged debris",
+            "wild overgrowth",
+            "flickering lights"
+          ],
+          "dominant": "desaturated earth tones",
+          "secondary": "rust red, muted grey-green",
+          "accent": "off-white, dark brown",
+          "ambient": "cool",
+          "genre": "post-apocalyptic",
+          "architectural_tone": "decaying industrial and utilitarian structures with elements of makeshift survivalist modifications, showcasing rust, exposed rebar, and weathered concrete.",
+          "cultural_tone": "survivalist, scavenger, nomadic, pragmatic, resourceful, with lost echoes of pre-collapse high technology.",
+          "materials_base": "heavily corroded metals, rough concrete, scavenged wood, hardy organic growth.",
+          "mood_baseline": "melancholic, desolate, resilient, eerie.",
+          "palette_bias": "muted, desaturated, earth-toned with accents of rust and faded industrial colors.",
+          "soundscape_base": "ambient environmental sounds with the pervasive sense of decay and isolation.",
+          "flora_base": "hardy, mutated, or overgrown native vegetation, often with a dark or desaturated hue.",
+          "fauna_base": "mutated or hardy terrestrial wildlife."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ruined infrastructure",
+          "Overgrown nature",
+          "Scavenged settlements"
+        ],
+        "uniqueIdentifiers": [
+          "Widespread decay",
+          "Resource scarcity",
+          "Mutated flora and fauna"
+        ],
+        "searchDesc": "A shattered world of rusting ruins, encroaching wilds, and the struggle for survival.",
+        "slug": "post-apocalyptic-coastline",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Post-Apocalyptic Coastline",
+          "looks": "A world reshaped by environmental collapse and technological decay.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A world reshaped by environmental collapse and technological decay."
+    },
+    "8c78c63b-857d-4a4d-b0da-2d0475a125a4": {
+      "id": "8c78c63b-857d-4a4d-b0da-2d0475a125a4",
+      "type": "region",
+      "name": "The Salt-Scoured Peninsula",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Salt-Scoured Peninsula",
+        "description": "A desolate stretch of coast battered by relentless fog and sea.",
+        "dna": {
+          "looks": "A harsh, windswept coastline with eroding cliffs, treacherous rocky shores, and vast expanses of grey, choppy sea. Dense, pervasive fog is a constant feature, limiting visibility and muffling sounds.",
+          "colorsAndLighting": "Dominated by cool, desaturated blues and greys of the sea and sky, with patches of dull brown and green from exposed earth and hardy vegetation. Lighting is perpetually diffused by fog.",
+          "atmosphere": "The air is heavy with moisture, the sharp tang of salt, and the perpetual chill of the sea. A sense of isolation and being on the edge of the world pervades this region.",
+          "materials": "Salt-encrusted rocks, weathered driftwood, barnacle-covered debris, and the relentless presence of sea foam and spray.",
+          "mood": "Bleak, isolated, unforgiving, and enduring.",
+          "sounds": "Crashing waves, mournful foghorns, seabird cries, the howl of wind, dripping condensation",
+          "spatialLayout": "Open, exposed coastal terrain with sudden drops and hazardous submerged obstacles. Navigation is challenging due to poor visibility and treacherous footing.",
+          "primary_surfaces": [
+            "salt-crusted rock",
+            "sea-worn concrete"
+          ],
+          "secondary_surfaces": [
+            "driftwood",
+            "sand",
+            "coarse gravel"
+          ],
+          "accent_features": [
+            "shipwreck fragments",
+            "seaweed",
+            "coastal erosion patterns"
+          ],
+          "dominant": "grey",
+          "secondary": "desaturated blue, dull brown",
+          "accent": "off-white",
+          "ambient": "cool",
+          "genre": null,
+          "architectural_tone": "decaying industrial and utilitarian structures adapted to extreme coastal conditions, featuring exposed, corroded metal, weathered concrete with deep cracks, and rudimentary waterproofing attempts.",
+          "cultural_tone": "isolated maritime survivors, hardy fisherfolk, scavengers of the sea, pragmatic and resilient against the elements.",
+          "materials_base": "salt-resistant metals, weathered concrete, waterlogged wood, marine debris.",
+          "mood_baseline": "bleak, isolated, enduring, melancholic.",
+          "palette_bias": "cool, desaturated blues and greys with earthy undertones.",
+          "soundscape_base": "constant ambient sounds of the sea and weather, emphasizing isolation.",
+          "flora_base": "salt-tolerant, scrubby coastal plants, hardy grasses, and kelp or seaweed.",
+          "fauna_base": "seabirds, marine life, coastal rodents."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Jagged coastline",
+          "Perpetual fog banks",
+          "Shipwrecks"
+        ],
+        "uniqueIdentifiers": [
+          "Brackish atmosphere",
+          "Erosion by sea",
+          "Limited visibility"
+        ],
+        "searchDesc": "A fog-shrouded, salt-blasted coast where the sea relentlessly grinds down all in its path.",
+        "slug": "the-salt-scoured-peninsula",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Salt-Scoured Peninsula",
+          "looks": "A desolate stretch of coast battered by relentless fog and sea.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A desolate stretch of coast battered by relentless fog and sea."
+    },
+    "04ab2e6a-2c38-4187-ae63-91af8b8f2440": {
+      "id": "04ab2e6a-2c38-4187-ae63-91af8b8f2440",
+      "type": "location",
+      "name": "The Drowned Tower",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Drowned Tower",
+        "description": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
+        "looks": "Colossal, corroded metal structure leaning precariously into churning, grey water. Barnacles cling to the lower sections, and seafoam washes over exposed rebar. A solitary, weathered maintenance ladder is still attached to its side.",
+        "atmosphere": "Thick, biting sea fog, the constant roar of waves, the metallic tang of rust and salt.",
+        "mood": "Melancholy, decaying, dangerous",
+        "dna": {
+          "looks": "A colossal, cylindrical fusion reactor cooling tower leans precariously, half-submerged in the sea. Its weathered, rusted surface shows signs of decay, with patches of green algae or moss. The vast structure appears to be a remnant of industrial might, now surrendering to the elements. Small plants sprout from its upper sections, contrasting with the metallic corrosion. Barnacles encrust the submerged portions, and seafoam washes over exposed metallic elements.",
+          "colorsAndLighting": "The lighting is diffused and soft, characteristic of a foggy environment. There are no distinct shadows or strong highlights. The overall light tone is a cool, desaturated blue-green, reflecting the atmospheric conditions and the muted colors of the scene.",
+          "atmosphere": "Thick, persistent fog blankets the scene, obscuring the horizon and the full extent of the structure. The air feels heavy with moisture and the spray of the sea. Visibility is significantly reduced, contributing to the desolate and isolated atmosphere.",
+          "materials": "Heavily oxidized steel, barnacle-encrusted concrete, the salty sea, and patches of tenacious organic growth.",
+          "mood": "Decadent, imposing, melancholic, and a stark reminder of lost industrial power.",
+          "sounds": "Lapping waves, creaking metal, distant seabirds, dripping water, sea spray",
+          "spatialLayout": "The foreground consists of a wet, dark asphalt path curving to the left and a pebbled shoreline. In the midground, the massive cooling tower dominates the view, angled into the sea. The lower half of the tower is submerged in the churning water, with waves breaking against its base. The background is a hazy expanse of sea and sky, heavily obscured by fog.",
+          "primary_surfaces": "rusted metal",
+          "secondary_surfaces": "concrete, pebbles, water, organic growth",
+          "accent_features": "seafoam",
+          "dominant": "dark grey (tower, path)",
+          "secondary": "light blue-green (sky, sea)",
+          "accent": "white (seafoam, waves)",
+          "ambient": "desaturated blue-green",
+          "genre": null,
+          "architectural_tone": "decaying industrial behemoth with a focus on massive scale and structural compromise, showcasing extreme rust, exposed rebar, deep corrosion, and the encroachment of marine life.",
+          "cultural_tone": null,
+          "materials_base": "heavily rusted industrial steel, reinforced concrete weathered by salt and water, marine accretions like barnacles and algae.",
+          "mood_baseline": "imposing, desolate, awe-inspiring in its decay.",
+          "palette_bias": "dominated by rust tones and deep industrial greys, contrasted with the cool blues of the sea.",
+          "soundscape_base": "a symphony of the sea interacting with a colossal, decaying structure.",
+          "flora_base": "marine algae, barnacles, and hardy coastal plants at the upper exposed sections.",
+          "fauna_base": "marine life, coastal birds."
+        },
+        "navigableElements": [
+          {
+            "type": "ladder",
+            "position": "left side of tower, midground",
+            "description": "Weathered maintenance ladder attached to the colossal tower."
+          }
+        ],
+        "dominantElements": [
+          "Massive, rusted cooling tower half-submerged in sea (center, midground/background)",
+          "Grey, churning sea with waves (right, midground/foreground)",
+          "Foggy, muted sky (background)",
+          "Pebbled shoreline and wet asphalt path (foreground)"
+        ],
+        "uniqueIdentifiers": [
+          "Half-collapsed fusion reactor cooling tower",
+          "Rusted metallic structure partially submerged in sea",
+          "Maintenance ladder attached to the tower"
+        ],
+        "searchDesc": "Post-apocalyptic coast. Has: rusted cooling tower (midground), maintenance ladder (midground)",
+        "slug": "the-drowned-tower",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Drowned Tower",
+          "looks": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
+      "primaryMedia": "media-1764322841357-d479qzfsy"
+    },
+    "niche-1764322926607-rf1219dfs": {
+      "id": "niche-1764322926607-rf1219dfs",
+      "type": "niche",
+      "name": "interior of The Drowned Tower",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, decaying metal chamber defined by immense, salt-encrusted steel plates with exposed, rebar-like structural elements. Dim industrial lights flicker from recessed wall conduits, illuminating a damp, unpolished concrete floor littered with barnacle debris. A partially open steel hatch lies in the foreground, while a maintenance ladder ascends into the gloom midground.",
+        "colorsAndLighting": "The scene is dominated by muted, desaturated industrial tones of rust and salt-bleached steel. A dim, flickering luminescence from recessed conduits provides an eerie, low-light ambiance.",
+        "atmosphere": "The air is heavy with the metallic tang of rust and the brine of salt, thick with dampness and a palpable sense of decay. A pervasive fog-infused darkness looms in the background, hinting at the immense, oppressive scale of the structure.",
+        "materials": "Corroded steel plates, rebar-like structural elements, unpolished concrete, and salt-encrusted surfaces are the primary materials, all appearing weathered and damaged. Barnacle debris adds a biological texture to the floor.",
+        "mood": "The overwhelming mood is one of melancholy decay and inherent danger, amplified by the oppressive atmosphere and industrial ruin.",
+        "sounds": "Dripping water, distant metallic groans, faint electrical hums, echoing dampness.",
+        "spatialLayout": "A colossal, enclosed niche space with an off-center one-point perspective. Elements like a hatch and ladder create distinct foreground and midground focal points within the overwhelming, receding background darkness.",
+        "primary_surfaces": "Salt-encrusted steel plates, unpolished concrete floor.",
+        "secondary_surfaces": "Exposed rebar-like structural elements, corroded pipes, riveted steel hatch.",
+        "accent_features": "Flickering recessed conduits, barnacle debris, partially ajar access hatch.",
+        "dominant": "Dark Gray (steel, concrete)",
+        "secondary": "Rust Brown (corrosion)",
+        "accent": "Pale Yellow (flickering light)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "industrial metallic decay",
+        "cultural_tone": null,
+        "materials_base": "corroded metal, concrete, salt",
+        "mood_baseline": "Melancholy, decaying, dangerous",
+        "palette_bias": "desaturated industrial hues",
+        "soundscape_base": "industrial ruin",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764322926606-cwa0j7g96",
+      "description": "The immense, corroded interior of a colossal metal tower, filled with rust and salt.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "foreground left",
+          "description": "a heavy, riveted steel access hatch, partially ajar"
+        },
+        {
+          "type": "stairs",
+          "position": "midground center",
+          "description": "a narrow, vertical maintenance ladder disappearing into the upper gloom"
+        }
+      ],
+      "dominantElements": [
+        "salt-encrusted steel plates",
+        "exposed rebar-like structural elements",
+        "flickering, recessed conduits",
+        "textured, unpolished concrete floor",
+        "barnacle debris",
+        "riveted steel access hatch",
+        "weathered, salt-bleached steel bulkhead",
+        "maintenance ladder",
+        "corroded pipes",
+        "grimy circular outflow grate"
+      ],
+      "uniqueIdentifiers": [
+        "colossal corroded metal niche",
+        "salt-encrusted steel plates",
+        "rebar-like structural elements",
+        "flickering industrial luminescence",
+        "barnacle-strewn concrete floor",
+        "riveted steel access hatch",
+        "drip-prone pipes",
+        "fog-infused darkness"
+      ],
+      "searchDesc": "Colossal, corroded metal tower interior with rust, salt, and industrial gloom.",
+      "slug": "interior-of-the-drowned-tower"
+    }
+  },
   "views": {},
-  "worldTrees": [],
-  "pinnedIds": []
+  "worldTrees": [
+    {
+      "id": "loc-1764322819196-ta48nltve",
+      "type": "host",
+      "name": "Post-Apocalyptic Coastline",
+      "description": "A world reshaped by environmental collapse and technological decay.",
+      "dna": {
+        "type": "host",
+        "name": "Post-Apocalyptic Coastline",
+        "description": "A world reshaped by environmental collapse and technological decay.",
+        "dna": {
+          "looks": "Vast, desolate landscapes dominated by the remnants of advanced civilization now succumbing to nature and time. Structures are broken, weathered, and often repurposed by survivors. Natural elements are reclaiming man-made environments.",
+          "colorsAndLighting": "A palette of muted earth tones, rust reds, desaturated blues, and washed-out greens. Lighting is often dim, diffused, and moody, with an emphasis on atmospheric conditions like fog or dust.",
+          "atmosphere": "The air is thick with the scent of decay, salt, and damp earth. A pervasive sense of melancholic quietude hangs over the land, broken only by the sounds of nature and the distant echoes of a lost era.",
+          "materials": "Dominant materials include heavily rusted metals, crumbling concrete, scavenged wood, and hardy, often mutated, vegetation. Surfaces show extreme wear, corrosion, and infestation.",
+          "mood": "Melancholy, resilience, isolation, and a pervasive sense of loss. There's an underlying tension of survival against overwhelming odds.",
+          "sounds": "Wind, distant waves, creaking metal, animal calls, dripping water, crumbling debris",
+          "spatialLayout": "Open, sprawling vistas interspersed with cluttered, hazardous ruins. Navigation often involves traversing hazardous terrain and finding safe paths through collapsed structures.",
+          "primary_surfaces": [
+            "rusted metal",
+            "crumbling concrete"
+          ],
+          "secondary_surfaces": [
+            "weathered wood",
+            "earth",
+            "vegetation"
+          ],
+          "accent_features": [
+            "scavenged debris",
+            "wild overgrowth",
+            "flickering lights"
+          ],
+          "dominant": "desaturated earth tones",
+          "secondary": "rust red, muted grey-green",
+          "accent": "off-white, dark brown",
+          "ambient": "cool",
+          "genre": "post-apocalyptic",
+          "architectural_tone": "decaying industrial and utilitarian structures with elements of makeshift survivalist modifications, showcasing rust, exposed rebar, and weathered concrete.",
+          "cultural_tone": "survivalist, scavenger, nomadic, pragmatic, resourceful, with lost echoes of pre-collapse high technology.",
+          "materials_base": "heavily corroded metals, rough concrete, scavenged wood, hardy organic growth.",
+          "mood_baseline": "melancholic, desolate, resilient, eerie.",
+          "palette_bias": "muted, desaturated, earth-toned with accents of rust and faded industrial colors.",
+          "soundscape_base": "ambient environmental sounds with the pervasive sense of decay and isolation.",
+          "flora_base": "hardy, mutated, or overgrown native vegetation, often with a dark or desaturated hue.",
+          "fauna_base": "mutated or hardy terrestrial wildlife."
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Ruined infrastructure",
+          "Overgrown nature",
+          "Scavenged settlements"
+        ],
+        "uniqueIdentifiers": [
+          "Widespread decay",
+          "Resource scarcity",
+          "Mutated flora and fauna"
+        ],
+        "searchDesc": "A shattered world of rusting ruins, encroaching wilds, and the struggle for survival.",
+        "slug": "post-apocalyptic-coastline",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Post-Apocalyptic Coastline",
+          "looks": "A world reshaped by environmental collapse and technological decay.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "8c78c63b-857d-4a4d-b0da-2d0475a125a4",
+          "type": "region",
+          "name": "The Salt-Scoured Peninsula",
+          "description": "A desolate stretch of coast battered by relentless fog and sea.",
+          "dna": {
+            "type": "region",
+            "name": "The Salt-Scoured Peninsula",
+            "description": "A desolate stretch of coast battered by relentless fog and sea.",
+            "dna": {
+              "looks": "A harsh, windswept coastline with eroding cliffs, treacherous rocky shores, and vast expanses of grey, choppy sea. Dense, pervasive fog is a constant feature, limiting visibility and muffling sounds.",
+              "colorsAndLighting": "Dominated by cool, desaturated blues and greys of the sea and sky, with patches of dull brown and green from exposed earth and hardy vegetation. Lighting is perpetually diffused by fog.",
+              "atmosphere": "The air is heavy with moisture, the sharp tang of salt, and the perpetual chill of the sea. A sense of isolation and being on the edge of the world pervades this region.",
+              "materials": "Salt-encrusted rocks, weathered driftwood, barnacle-covered debris, and the relentless presence of sea foam and spray.",
+              "mood": "Bleak, isolated, unforgiving, and enduring.",
+              "sounds": "Crashing waves, mournful foghorns, seabird cries, the howl of wind, dripping condensation",
+              "spatialLayout": "Open, exposed coastal terrain with sudden drops and hazardous submerged obstacles. Navigation is challenging due to poor visibility and treacherous footing.",
+              "primary_surfaces": [
+                "salt-crusted rock",
+                "sea-worn concrete"
+              ],
+              "secondary_surfaces": [
+                "driftwood",
+                "sand",
+                "coarse gravel"
+              ],
+              "accent_features": [
+                "shipwreck fragments",
+                "seaweed",
+                "coastal erosion patterns"
+              ],
+              "dominant": "grey",
+              "secondary": "desaturated blue, dull brown",
+              "accent": "off-white",
+              "ambient": "cool",
+              "genre": null,
+              "architectural_tone": "decaying industrial and utilitarian structures adapted to extreme coastal conditions, featuring exposed, corroded metal, weathered concrete with deep cracks, and rudimentary waterproofing attempts.",
+              "cultural_tone": "isolated maritime survivors, hardy fisherfolk, scavengers of the sea, pragmatic and resilient against the elements.",
+              "materials_base": "salt-resistant metals, weathered concrete, waterlogged wood, marine debris.",
+              "mood_baseline": "bleak, isolated, enduring, melancholic.",
+              "palette_bias": "cool, desaturated blues and greys with earthy undertones.",
+              "soundscape_base": "constant ambient sounds of the sea and weather, emphasizing isolation.",
+              "flora_base": "salt-tolerant, scrubby coastal plants, hardy grasses, and kelp or seaweed.",
+              "fauna_base": "seabirds, marine life, coastal rodents."
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Jagged coastline",
+              "Perpetual fog banks",
+              "Shipwrecks"
+            ],
+            "uniqueIdentifiers": [
+              "Brackish atmosphere",
+              "Erosion by sea",
+              "Limited visibility"
+            ],
+            "searchDesc": "A fog-shrouded, salt-blasted coast where the sea relentlessly grinds down all in its path.",
+            "slug": "the-salt-scoured-peninsula",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Salt-Scoured Peninsula",
+              "looks": "A desolate stretch of coast battered by relentless fog and sea.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "04ab2e6a-2c38-4187-ae63-91af8b8f2440",
+              "type": "location",
+              "name": "The Drowned Tower",
+              "description": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
+              "dna": {
+                "type": "location",
+                "name": "The Drowned Tower",
+                "description": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
+                "looks": "Colossal, corroded metal structure leaning precariously into churning, grey water. Barnacles cling to the lower sections, and seafoam washes over exposed rebar. A solitary, weathered maintenance ladder is still attached to its side.",
+                "atmosphere": "Thick, biting sea fog, the constant roar of waves, the metallic tang of rust and salt.",
+                "mood": "Melancholy, decaying, dangerous",
+                "dna": {
+                  "looks": "A colossal, cylindrical fusion reactor cooling tower leans precariously, half-submerged in the sea. Its weathered, rusted surface shows signs of decay, with patches of green algae or moss. The vast structure appears to be a remnant of industrial might, now surrendering to the elements. Small plants sprout from its upper sections, contrasting with the metallic corrosion. Barnacles encrust the submerged portions, and seafoam washes over exposed metallic elements.",
+                  "colorsAndLighting": "The lighting is diffused and soft, characteristic of a foggy environment. There are no distinct shadows or strong highlights. The overall light tone is a cool, desaturated blue-green, reflecting the atmospheric conditions and the muted colors of the scene.",
+                  "atmosphere": "Thick, persistent fog blankets the scene, obscuring the horizon and the full extent of the structure. The air feels heavy with moisture and the spray of the sea. Visibility is significantly reduced, contributing to the desolate and isolated atmosphere.",
+                  "materials": "Heavily oxidized steel, barnacle-encrusted concrete, the salty sea, and patches of tenacious organic growth.",
+                  "mood": "Decadent, imposing, melancholic, and a stark reminder of lost industrial power.",
+                  "sounds": "Lapping waves, creaking metal, distant seabirds, dripping water, sea spray",
+                  "spatialLayout": "The foreground consists of a wet, dark asphalt path curving to the left and a pebbled shoreline. In the midground, the massive cooling tower dominates the view, angled into the sea. The lower half of the tower is submerged in the churning water, with waves breaking against its base. The background is a hazy expanse of sea and sky, heavily obscured by fog.",
+                  "primary_surfaces": "rusted metal",
+                  "secondary_surfaces": "concrete, pebbles, water, organic growth",
+                  "accent_features": "seafoam",
+                  "dominant": "dark grey (tower, path)",
+                  "secondary": "light blue-green (sky, sea)",
+                  "accent": "white (seafoam, waves)",
+                  "ambient": "desaturated blue-green",
+                  "genre": null,
+                  "architectural_tone": "decaying industrial behemoth with a focus on massive scale and structural compromise, showcasing extreme rust, exposed rebar, deep corrosion, and the encroachment of marine life.",
+                  "cultural_tone": null,
+                  "materials_base": "heavily rusted industrial steel, reinforced concrete weathered by salt and water, marine accretions like barnacles and algae.",
+                  "mood_baseline": "imposing, desolate, awe-inspiring in its decay.",
+                  "palette_bias": "dominated by rust tones and deep industrial greys, contrasted with the cool blues of the sea.",
+                  "soundscape_base": "a symphony of the sea interacting with a colossal, decaying structure.",
+                  "flora_base": "marine algae, barnacles, and hardy coastal plants at the upper exposed sections.",
+                  "fauna_base": "marine life, coastal birds."
+                },
+                "navigableElements": [
+                  {
+                    "type": "ladder",
+                    "position": "left side of tower, midground",
+                    "description": "Weathered maintenance ladder attached to the colossal tower."
+                  }
+                ],
+                "dominantElements": [
+                  "Massive, rusted cooling tower half-submerged in sea (center, midground/background)",
+                  "Grey, churning sea with waves (right, midground/foreground)",
+                  "Foggy, muted sky (background)",
+                  "Pebbled shoreline and wet asphalt path (foreground)"
+                ],
+                "uniqueIdentifiers": [
+                  "Half-collapsed fusion reactor cooling tower",
+                  "Rusted metallic structure partially submerged in sea",
+                  "Maintenance ladder attached to the tower"
+                ],
+                "searchDesc": "Post-apocalyptic coast. Has: rusted cooling tower (midground), maintenance ladder (midground)",
+                "slug": "the-drowned-tower",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Drowned Tower",
+                  "looks": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764322926607-rf1219dfs",
+                  "type": "niche",
+                  "children": []
+                }
+              ],
+              "primaryMedia": "media-1764322841357-d479qzfsy"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "loc-1764322819196-ta48nltve"
+  ]
 }

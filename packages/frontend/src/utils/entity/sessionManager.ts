@@ -3,7 +3,7 @@
  * Unified entity session creation and activation
  */
 
-import { getPrimaryMediaUrl } from '@/services/mediaService';
+import { useMediaCacheStore } from '@/store/slices/mediaCacheSlice';
 
 export interface EntitySessionData {
   id: string;
@@ -12,6 +12,7 @@ export interface EntitySessionData {
   personality?: string;
   atmosphere?: string;
   primaryMedia?: string;  // ID reference to media.json
+  imageUrl?: string;      // Direct URL (from pipeline)
   imagePrompt?: string;
 }
 
@@ -23,8 +24,6 @@ export function createEntitySession(
   store: any,
   data: EntitySessionData
 ): void {
-  console.log(`[SessionManager] Creating ${data.type} session: ${data.name}`);
-
   // Create entity session (appears in tabs)
   const seed: any = {
     name: data.name
@@ -38,12 +37,20 @@ export function createEntitySession(
 
   store.createEntity(data.id, seed, data.type);
 
-  // Resolve via media system (handles primaryMedia)
-  getPrimaryMediaUrl(data).then(url => {
-    if (url) {
-      store.updateEntityImage(data.id, url);
+  // If we have a direct imageUrl (from pipeline), add to cache and use it
+  if (data.imageUrl && data.primaryMedia) {
+    // Add to cache for future SYNC lookups
+    const addToCache = useMediaCacheStore.getState().addToCache;
+    addToCache(data.primaryMedia, data.imageUrl);
+    store.updateEntityImage(data.id, data.imageUrl);
+  } else if (data.primaryMedia) {
+    // SYNC lookup from cache - no async!
+    const getMediaUrl = useMediaCacheStore.getState().getMediaUrl;
+    const cachedUrl = getMediaUrl(data.primaryMedia);
+    if (cachedUrl) {
+      store.updateEntityImage(data.id, cachedUrl);
     }
-  });
+  }
 
   // Update with image prompt if provided
   if (data.imagePrompt) {
@@ -55,8 +62,6 @@ export function createEntitySession(
   
   // Persist to localStorage
   localStorage.setItem('lastActiveEntityId', data.id);
-
-  console.log(`[SessionManager] ${data.type} session created and activated: ${data.name}`);
 }
 
 /**

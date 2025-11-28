@@ -96,11 +96,13 @@ export function useNavigationLogic() {
     
     // Create entity session with image (instead of just setActiveEntity)
     // This ensures the image persists in the WorldView after pipeline completion
+    // Pass imageUrl from pipeline to add to cache
     createEntitySession(useStore.getState(), {
       id: node.id,
       name: node.name,
       type: 'location',
-      primaryMedia: node.primaryMedia
+      primaryMedia: node.primaryMedia,
+      imageUrl: node.imageUrl  // From pipeline completion
     });
   }, []);
 

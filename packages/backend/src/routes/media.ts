@@ -100,6 +100,49 @@ router.post('/cleanup', (req, res) => {
 });
 
 /**
+ * GET /api/media/bulk
+ * Get multiple media items by IDs in a single request
+ * Used for bulk loading media on app startup
+ * NOTE: Must be defined BEFORE /:id routes
+ */
+router.get('/bulk', (req, res) => {
+  try {
+    const { ids } = req.query;
+    
+    if (!ids || typeof ids !== 'string') {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'ids query parameter required (comma-separated)' 
+      });
+    }
+    
+    const mediaIds = ids.split(',').filter(Boolean);
+    
+    if (mediaIds.length === 0) {
+      return res.json({ success: true, data: {} });
+    }
+    
+    // Collect all requested media items
+    const mediaMap: Record<string, any> = {};
+    
+    mediaIds.forEach(id => {
+      const media = mediaService.getMediaById(id);
+      if (media) {
+        mediaMap[id] = media;
+      }
+    });
+    
+    res.json({ success: true, data: mediaMap });
+  } catch (error) {
+    console.error('Error getting bulk media:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Failed to retrieve bulk media' 
+    });
+  }
+});
+
+/**
  * DELETE /api/media/by-entities
  * Delete all media referenced by entity IDs
  * Used when deleting characters or world trees
