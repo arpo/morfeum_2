@@ -25,7 +25,7 @@ export interface TreeNode {
   name: string;
   description: string;
   dna: NodeDNA;
-  imagePath?: string;
+  primaryMedia?: string;
   spaceType: 'exterior' | 'interior';
   children: TreeNode[];
 }
@@ -35,6 +35,5 @@ export interface WorldTree {
   name: string;
   type: 'world';
   createdAt: string;
-  imageUrl?: string;
   rootNode: TreeNode;
 }

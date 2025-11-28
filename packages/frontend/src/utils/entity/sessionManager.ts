@@ -11,7 +11,6 @@ export interface EntitySessionData {
   type: 'character' | 'location';
   personality?: string;
   atmosphere?: string;
-  imagePath?: string;  // Deprecated: use primaryMedia
   primaryMedia?: string;  // ID reference to media.json
   imagePrompt?: string;
 }
@@ -38,17 +37,6 @@ export function createEntitySession(
   }
 
   store.createEntity(data.id, seed, data.type);
-
-  // Update entity with image if provided (supports both old imagePath and new primaryMedia)
-  // Check if image is different to prevent unnecessary re-renders (flicker)
-  if (data.imagePath) {
-    const currentEntity = store.entitySessions?.[data.id];
-    const currentImage = currentEntity?.entityImage;
-    
-    if (currentImage !== data.imagePath) {
-      store.updateEntityImage(data.id, data.imagePath);
-    }
-  }
 
   // Resolve via media system (handles primaryMedia)
   getPrimaryMediaUrl(data).then(url => {

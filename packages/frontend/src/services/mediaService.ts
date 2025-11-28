@@ -116,21 +116,6 @@ export async function getPrimaryMediaUrl(entity: any): Promise<string | null> {
     return getMediaUrl(entity.primaryMedia);
   }
   
-  // Backward compatibility: support old imagePath field
-  if (entity.imagePath) {
-    return entity.imagePath;
-  }
-  
-  // Backward compatibility: support old imageUrl in details
-  if (entity.details?.imageUrl) {
-    return entity.details.imageUrl;
-  }
-  
-  // Backward compatibility: support old imageUrl directly
-  if (entity.imageUrl) {
-    return entity.imageUrl;
-  }
-  
   return null;
 }
 

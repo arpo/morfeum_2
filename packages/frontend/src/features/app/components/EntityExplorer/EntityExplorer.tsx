@@ -134,11 +134,6 @@ export const EntityExplorer: React.FC = () => {
           };
           createEntity(id, seed, 'location'); 
           
-          // Support both old imagePath and new primaryMedia
-          if ((node as any).imagePath) {
-            updateEntityImage(id, (node as any).imagePath);
-          }
-          
           // Resolve via media system (handles primaryMedia)
           getPrimaryMediaUrl(node).then(url => {
             if (url) {
@@ -155,11 +150,6 @@ export const EntityExplorer: React.FC = () => {
             personality: char.details?.personality || 'Unknown'
           };
           createEntity(id, seed, 'character');
-          
-          // Support both old imagePath and new primaryMedia
-          if (char.imagePath) {
-            updateEntityImage(id, char.imagePath);
-          }
           
           // Resolve via media system (handles primaryMedia)
           getPrimaryMediaUrl(char).then(url => {

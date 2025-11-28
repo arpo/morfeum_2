@@ -100,7 +100,6 @@ export function useNavigationLogic() {
       id: node.id,
       name: node.name,
       type: 'location',
-      imagePath: node.imagePath
     });
   }, []);
 

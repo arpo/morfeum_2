@@ -36,7 +36,6 @@ export const createLegacySlice: StateCreator<
       name: location.dna.world.meta.name,
       spaceType: 'exterior',
       dna: location.dna.world,
-      imagePath: '',
     };
     
     // Create host node if it doesn't exist
@@ -55,7 +54,6 @@ export const createLegacySlice: StateCreator<
           name: location.dna.region.meta.name,
           spaceType: 'exterior',
           dna: location.dna.region,
-          imagePath: '',
         };
         get().createNode(regionNode);
         get().addNodeToTree(location.world_id, location.world_id, regionId, 'region');
@@ -70,7 +68,6 @@ export const createLegacySlice: StateCreator<
         name: location.name,
         spaceType: location.spaceType || 'exterior',
         dna: location.dna.location,
-        imagePath: location.imagePath,
       };
       
       get().createNode(locationNode);
@@ -109,7 +106,6 @@ export const createLegacySlice: StateCreator<
       name: node.name,
       spaceType: node.spaceType,
       dna: cascaded as any,
-      imagePath: node.imagePath,
     } as Location;
   },
   

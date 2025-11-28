@@ -2,6 +2,16 @@
 
 ## Recent Changes (2025-11-27)
 
+### Media System Migration & Cleanup (Nov 27, 2025)
+- **Removed Legacy `imagePath` & `imageUrl`**: Completely removed the deprecated `imagePath` and `imageUrl` fields from both frontend and backend persistence logic.
+- **Unified Media Handling**: All image handling now uses the centralized `mediaService` and `primaryMedia` ID references.
+- **Frontend Cleanup**: Updated `entitySessionLoader`, `useCharacterPanel`, `SavedEntitiesModal`, and documentation to use `imageUrl` (resolved from media service) or `primaryMedia` instead of direct paths.
+- **Backend Cleanup**:
+    - Updated `entityPersistence.ts` to stop writing `imageUrl` and `imagePrompt` to entity details.
+    - Implemented location storage logic in `entityPersistence.ts` to ensure worlds are saved and their media registered in `media.json`.
+    - Updated `nodeBuilder.ts`, `createNodePipeline.ts`, `worldTreePipeline.ts`, and `WorldTreeBuilder` to remove `imageUrl` passing and assignment.
+    - Updated types to reflect the removal of `imageUrl`.
+
 ### Media Metadata Structure Cleanup (Nov 27, 2025)
 - **Simplified Metadata**: Removed redundant `seed` object from media metadata that was storing duplicate character information already available in entity data.
 - **Added originalPrompt**: Extracted and preserved only the user's original input as `originalPrompt` field at metadata root level.

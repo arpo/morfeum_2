@@ -14,6 +14,7 @@ import { TopButtonRow } from '@/features/app/components/TopButtonRow';
 import { WorldView } from '@/features/app/components/WorldView/WorldView';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
+import { getPrimaryMediaUrl } from '@/services/mediaService';
 import { useEffect, useState } from 'react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import styles from './App.module.css';
@@ -82,9 +83,11 @@ export function App() {
       
       createEntity(character.id, seed, 'character');
       
-      if (character.imagePath) {
-        updateEntityImage(character.id, character.imagePath);
-      }
+      getPrimaryMediaUrl(character).then(url => {
+        if (url) {
+          updateEntityImage(character.id, url);
+        }
+      });
       
       updateEntityProfile(character.id, character.details as any);
       lastLoadedId = character.id;
@@ -111,9 +114,11 @@ export function App() {
       
       createEntity(node.id, seed, 'location');
       
-      if (node.imagePath) {
-        updateEntityImage(node.id, node.imagePath);
-      }
+      getPrimaryMediaUrl(node).then(url => {
+        if (url) {
+          updateEntityImage(node.id, url);
+        }
+      });
       
       updateEntityProfile(node.id, cascadedDNA as any);
       lastLoadedId = node.id;

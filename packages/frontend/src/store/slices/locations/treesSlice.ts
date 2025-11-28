@@ -301,7 +301,6 @@ export const createTreesSlice: StateCreator<
         name: node.name,
         spaceType: node.spaceType || (node.type === 'niche' ? 'interior' : 'exterior'),
         dna: node.dna,
-        imagePath: node.imagePath || '',
         description: node.description || '',
         // Inherit any other props
         ...node

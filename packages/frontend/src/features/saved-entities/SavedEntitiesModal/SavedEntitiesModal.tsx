@@ -30,7 +30,7 @@ export function SavedEntitiesModal({ isOpen, onClose, initialTab = 'characters' 
   const handlePinEntity = activeTab === 'characters' ? handlePinCharacter : handlePinLocation;
   const pinnedEntityIds = activeTab === 'characters' ? pinnedCharacterIds : pinnedLocationIds;
 
-  // Preload all entity images using the media system (handles both imagePath and primaryMedia)
+  // Preload all entity images using the media system
   const allEntities = useMemo(() => [...characters, ...locations], [characters, locations]);
   const imageMap = useEntityImages(allEntities);
 
@@ -67,7 +67,7 @@ export function SavedEntitiesModal({ isOpen, onClose, initialTab = 'characters' 
             {entities.map((entity) => {
               // Get world node count for locations
               const nodeCount = activeTab === 'locations' ? getWorldNodeCount(entity.id) : 0;
-              // Get resolved image URL from media system (handles both imagePath and primaryMedia)
+              // Get resolved image URL from media system
               const imageUrl = imageMap.get(entity.id) || null;
               
               return (

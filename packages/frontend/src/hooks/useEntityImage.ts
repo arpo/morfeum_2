@@ -8,7 +8,7 @@ import { getPrimaryMediaUrl } from '@/services/mediaService';
 
 /**
  * Hook to get the image URL for an entity
- * Handles both new media system (primaryMedia) and old system (imagePath) for backward compatibility
+ * Handles async media loading from the new media system
  */
 export function useEntityImage(entity: any): string | null {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
@@ -19,11 +19,11 @@ export function useEntityImage(entity: any): string | null {
       return;
     }
 
-    // Use the getPrimaryMediaUrl helper which handles both old and new formats
+    // Use the getPrimaryMediaUrl helper
     getPrimaryMediaUrl(entity).then(url => {
       setImageUrl(url);
     });
-  }, [entity?.id, entity?.primaryMedia, entity?.imagePath]);
+  }, [entity?.id, entity?.primaryMedia]);
 
   return imageUrl;
 }
@@ -35,9 +35,9 @@ export function useEntityImage(entity: any): string | null {
 export function useEntityImages(entities: any[]): Map<string, string | null> {
   const [imageMap, setImageMap] = useState<Map<string, string | null>>(new Map());
 
-  // Create a stable key based on entity IDs and their primaryMedia/imagePath values
+  // Create a stable key based on entity IDs and their primaryMedia values
   const entitiesKey = entities
-    ?.map(e => `${e?.id}:${e?.primaryMedia || e?.imagePath || ''}`)
+    ?.map(e => `${e?.id}:${e?.primaryMedia || ''}`)
     .join(',') || '';
 
   useEffect(() => {

@@ -10,7 +10,7 @@ import { getPrimaryMediaUrl } from '@/services/mediaService';
 
 export interface EntitySessionCallbacks {
   createEntity: (id: string, seed: any, type: 'location' | 'character') => void;
-  updateEntityImage: (id: string, imagePath: string) => void;
+  updateEntityImage: (id: string, imageUrl: string) => void;
   updateEntityProfile: (id: string, profile: any) => void;
 }
 
@@ -77,13 +77,8 @@ export function createEntitySessionsForNodes(
     // Create entity session
     createEntity(nodeId, seed, 'location');
     
-    // Update with image if available (supports both old imagePath and new primaryMedia)
-    // Check synchronously first for immediate display
-    if (node.imagePath) {
-      updateEntityImage(nodeId, node.imagePath);
-    }
-    
-    // Then resolve via media system (handles primaryMedia)
+    // Update with image if available
+    // Resolve via media system (handles primaryMedia)
     // This is async but will update the image when resolved
     getPrimaryMediaUrl(node).then(url => {
       if (url) {

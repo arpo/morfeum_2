@@ -21,12 +21,12 @@ export interface VisualAnchors {
 
 export interface CurrentView {
   viewKey: string;
-  imagePath: string;
+  primaryMedia: string;
   focusTarget: string;
 }
 
 export interface CachedImage {
-  imagePath: string;
+  primaryMedia: string;
   generatedAt: string;
 }
 

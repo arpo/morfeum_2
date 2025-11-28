@@ -33,7 +33,6 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
     name: host.name,
     spaceType: 'exterior',
     dna: extractHostDNA(host), // Returns just host.dna
-    imagePath: host.imageUrl || '',
     // Copy structural fields from backend
     navigableElements: host.navigableElements,
     dominantElements: host.dominantElements,
@@ -61,7 +60,6 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
         name: region.name,
         spaceType: 'exterior',
         dna: extractRegionDNA(region), // Returns just region.dna
-        imagePath: region.imageUrl || '',
         // Copy structural fields from backend
         navigableElements: region.navigableElements,
         dominantElements: region.dominantElements,
@@ -89,7 +87,6 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
             name: location.name,
             spaceType: 'exterior',
             dna: extractLocationDNA(location), // Returns just location.dna
-            imagePath: location.imageUrl || '',
             // Copy structural fields from backend
             navigableElements: location.navigableElements,
             dominantElements: location.dominantElements,
@@ -117,7 +114,6 @@ export function parseNestedHierarchy(hierarchy: any, spawnId: string, imageUrl?:
                 name: niche.name,
                 spaceType: 'interior',
                 dna: extractNicheDNA(niche), // Returns just niche.dna
-                imagePath: niche.imageUrl || '',
                 // Copy structural fields from backend
                 navigableElements: niche.navigableElements,
                 dominantElements: niche.dominantElements,

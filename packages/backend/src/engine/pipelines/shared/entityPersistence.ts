@@ -4,12 +4,13 @@
  */
 
 import { storageService } from '../../../services/storage/storageService';
+import mediaService from '../../../services/media/mediaService';
 
 export interface EntityData {
   id: string;
   name: string;
   details: Record<string, any>;
-  imagePath: string;
+  primaryMedia?: string;
 }
 
 export type EntityType = 'character' | 'location';
@@ -41,19 +42,30 @@ export async function saveAndPinEntity(
     await storageService.saveCharacters(existingData);
     
     console.log(`[EntityPersistence] Character saved and pinned: ${entity.id}`);
-  } 
-  // TODO: Add location storage when implemented
-  // else if (entityType === 'location') {
-  //   const existingData = await storageService.loadWorlds() || {
-  //     worlds: {},
-  //     pinnedIds: []
-  //   };
-  //   existingData.worlds[entity.id] = entity;
-  //   if (!existingData.pinnedIds.includes(entity.id)) {
-  //     existingData.pinnedIds.push(entity.id);
-  //   }
-  //   await storageService.saveWorlds(existingData);
-  // }
+  } else if (entityType === 'location') {
+    // Load existing worlds
+    const existingData = await storageService.loadWorlds() || {
+      nodes: {},
+      views: {},
+      worldTrees: [],
+      pinnedIds: []
+    };
+
+    // Save world tree
+    // Note: We're storing the whole tree structure as a "node" for now to match frontend expectations
+    // In the future, this should be properly split into nodes and trees
+    existingData.nodes[entity.id] = entity;
+
+    // Pin if not already pinned
+    if (!existingData.pinnedIds.includes(entity.id)) {
+      existingData.pinnedIds.push(entity.id);
+    }
+
+    // Persist to backend
+    await storageService.saveWorlds(existingData);
+    
+    console.log(`[EntityPersistence] Location saved and pinned: ${entity.id}`);
+  }
 }
 
 /**
@@ -67,6 +79,19 @@ export function buildCharacterEntity(
   imageUrl: string,
   imagePrompt: string
 ): EntityData {
+  // Create media entry for the character image
+  const media = mediaService.createMedia({
+    type: 'image',
+    url: imageUrl,
+    metadata: {
+      prompt: imagePrompt,
+      model: 'FLUX', // Assuming FLUX as per README example, or could be generic
+      width: 1024,
+      height: 1024
+    },
+    entityRefs: [spawnId]
+  });
+
   return {
     id: spawnId,
     name: seed.name,
@@ -87,12 +112,10 @@ export function buildCharacterEntity(
       fictional: deepProfile.fictional || true,
       copyright: deepProfile.copyright || false,
       tags: deepProfile.tags || '',
-      imageUrl,
-      imagePrompt,
       seed,
       visualAnalysis
     },
-    imagePath: imageUrl
+    primaryMedia: media.id
   };
 }
 
@@ -105,10 +128,23 @@ export function buildLocationEntity(
   worldTree: any,
   imageUrl: string
 ): EntityData {
+  // Create media entry for the location image
+  const media = mediaService.createMedia({
+    type: 'image',
+    url: imageUrl,
+    metadata: {
+      prompt: worldTree.imagePrompt || 'Location image',
+      model: 'FLUX',
+      width: 1024,
+      height: 1024
+    },
+    entityRefs: [spawnId]
+  });
+
   return {
     id: spawnId,
     name: worldTree.name || 'World',
     details: worldTree,
-    imagePath: imageUrl
+    primaryMedia: media.id
   };
 }

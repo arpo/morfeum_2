@@ -2,7 +2,7 @@ import { randomUUID } from 'crypto';
 import type { TreeNode, NodeDNA } from './types';
 
 export class WorldTreeBuilder {
-  static build(spawnId: string, hierarchy: any, imageUrl?: string): TreeNode {
+  static build(spawnId: string, hierarchy: any): TreeNode {
     const host = hierarchy.host;
     if (!host) {
       throw new Error('Hierarchy must have a host node');
@@ -11,10 +11,7 @@ export class WorldTreeBuilder {
     // Build the tree recursively
     const rootNode = this.buildNode(host, 'host', spawnId); // Host uses spawnId as ID
     
-    // Set the world image on the root node if provided
-    if (imageUrl) {
-      rootNode.imagePath = imageUrl;
-    }
+    // Note: Image handling is now done in entityPersistence via mediaService
 
     // Ensure creation metadata is preserved if needed (can be in DNA or extra prop if types allow)
     // For now, sticking to TreeNode structure which is clean.
@@ -72,7 +69,7 @@ export class WorldTreeBuilder {
       name: data.name,
       description: data.description || '',
       dna,
-      imagePath: data.imageUrl, // Data might already have imageUrl if populated during hierarchy processing
+      // primaryMedia: data.primaryMedia, // If data already has it
       spaceType: type === 'niche' ? 'interior' : 'exterior',
       children
     };

@@ -97,7 +97,6 @@ createEntitySession(store, {
   name: 'Character Name',
   type: 'character',
   personality: 'Friendly',
-  imagePath: 'https://...',
   imagePrompt: '...'
 });
 ```
@@ -163,6 +162,5 @@ import { createEntitySession } from '@/utils/entity/sessionManager';
 
 createEntitySession(store, {
   id, name, type,
-  imagePath: image,
   imagePrompt: prompt
 });

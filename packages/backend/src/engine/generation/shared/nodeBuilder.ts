@@ -27,7 +27,7 @@ export interface LocationNode {
   name: string;
   spaceType: SpaceType;
   dna: NodeDNA;
-  imagePath: string;
+  primaryMedia?: string;
   parentId?: string;
   description?: string;
   data?: Record<string, any>;
@@ -60,7 +60,6 @@ function determineSpaceType(type: LayerType): SpaceType {
  * @param type - Node type (host, region, location, niche)
  * @param name - Node name
  * @param dna - Node DNA object
- * @param imageUrl - Generated image URL
  * @param options - Optional configuration
  * @returns Complete node object
  */
@@ -68,7 +67,6 @@ export function buildNode(
   type: LayerType,
   name: string,
   dna: NodeDNA,
-  imageUrl: string,
   options?: NodeBuildOptions
 ): LocationNode {
   const nodeId = generateNodeId(type);
@@ -79,7 +77,7 @@ export function buildNode(
     name,
     spaceType: options?.spaceType || determineSpaceType(type),
     dna,
-    imagePath: imageUrl
+    // primaryMedia: ... // Media creation handled in entityPersistence
   };
 
   // Add optional fields if provided

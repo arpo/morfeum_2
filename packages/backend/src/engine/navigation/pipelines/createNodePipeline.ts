@@ -122,7 +122,7 @@ export async function runCreateLocationNodePipeline(
       helper.startStage('node_building', 'Building final node...');
     }
 
-    const node = buildNode(nodeType, nodeData.name, nodeData.dna, imageUrl, {
+    const node = buildNode(nodeType, nodeData.name, nodeData.dna, {
       description: nodeData.description,
       navigableElements: nodeData.navigableElements,
       dominantElements: nodeData.dominantElements,
@@ -143,7 +143,6 @@ export async function runCreateLocationNodePipeline(
     console.log('  Type:', node.type);
     console.log('  Name:', node.name);
     console.log('  Has DNA:', !!node.dna ? '✓' : '✗');
-    console.log('  Has Image:', !!node.imagePath ? '✓' : '✗');
     console.log('═══════════════════════════════════════════════════════════\n');
 
     if (helper) {

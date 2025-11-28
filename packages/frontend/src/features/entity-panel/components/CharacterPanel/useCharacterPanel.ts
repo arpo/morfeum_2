@@ -49,7 +49,6 @@ export function useCharacterPanel(): CharacterPanelLogicReturn {
       id: base.activeChat,
       name: base.activeChatSession.entityName || 'Unnamed Character',
       details: deepProfile as Record<string, any>,
-      imagePath: base.activeChatSession.entityImage || ''
     });
     
     // Save to backend file

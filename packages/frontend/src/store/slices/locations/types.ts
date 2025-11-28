@@ -8,7 +8,7 @@
 export interface View {
   id: string;
   nodeId: string;
-  imagePath?: string;
+  primaryMedia?: string;
   perspective: string;
   viewpoint: string;
   focusTarget: string;
@@ -229,7 +229,6 @@ export interface Node {
   name: string;
   spaceType: SpaceType;
   dna: HostNode | RegionNode | LocationNode | NicheNode;
-  imagePath?: string;  // Deprecated: use primaryMedia
   primaryMedia?: string;  // ID reference to media.json
 }
 
@@ -263,5 +262,5 @@ export interface Location {
     region?: RegionNode;
     location?: LocationNode;
   };
-  imagePath: string;
+  primaryMedia?: string;
 }
