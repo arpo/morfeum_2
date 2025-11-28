@@ -127,6 +127,11 @@ export class WorldViewRenderer {
     this.mesh = new THREE.Mesh(geometry, this.material);
     this.scaleMeshToFit(this.mesh, geometry);
     this.scene.add(this.mesh);
+    
+    // Refresh stereo scene if in hsbs mode
+    if (this.displayMode === 'hsbs') {
+      this.setupStereoScene();
+    }
   }
 
   /**
@@ -157,6 +162,11 @@ export class WorldViewRenderer {
     this.mesh = new THREE.Mesh(geometry, this.material);
     this.scaleMeshToFit(this.mesh, geometry);
     this.scene.add(this.mesh);
+    
+    // Refresh stereo scene if in hsbs mode
+    if (this.displayMode === 'hsbs') {
+      this.setupStereoScene();
+    }
   }
 
   /**
@@ -556,6 +566,11 @@ export class WorldViewRenderer {
     if (this.mesh && this.mesh.geometry) {
       this.scaleMeshToFit(this.mesh, this.mesh.geometry as THREE.PlaneGeometry);
     }
+    
+    // Also rescale stereo mesh if in hsbs mode
+    if (this.mesh2 && this.mesh2.geometry && this.mesh) {
+      this.mesh2.scale.copy(this.mesh.scale);
+    }
   }
 
   /**
@@ -589,7 +604,8 @@ export class WorldViewRenderer {
    * Setup second scene for stereo rendering
    */
   private setupStereoScene(): void {
-    if (this.scene2) return; // Already set up
+    // Always clean up and recreate to ensure sync with main mesh
+    this.cleanupStereoScene();
     
     this.scene2 = new THREE.Scene();
     this.scene2.background = null;
