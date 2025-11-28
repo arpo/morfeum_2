@@ -293,6 +293,339 @@
       ],
       "searchDesc": "Colossal, corroded metal tower interior with rust, salt, and industrial gloom.",
       "slug": "interior-of-the-drowned-tower"
+    },
+    "loc-1764323539675-dohpf8mlu": {
+      "id": "loc-1764323539675-dohpf8mlu",
+      "type": "host",
+      "name": "The Skyborne Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Skyborne Metropolis",
+        "description": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
+        "dna": {
+          "looks": "Vast, interconnected structures suspended in an endless sky. Buildings seem to float independently, connected by intricate, often delicate, pathways and bridges. The overall impression is one of weightlessness and impossible architecture.",
+          "colorsAndLighting": "A palette dominated by cool blues and whites from the sky and clouds, contrasted with the glowing ethereal lights of structures. Lighting is often diffused, creating a dreamlike quality.",
+          "atmosphere": "The air is thin and crisp, carrying a perpetual, gentle mist that softens distant views. A sense of serene vastness and ethereal beauty pervades the environment. Gravity is subtly manipulated, allowing for effortless movement.",
+          "materials": "Polished, iridescent metals, crystalline composites, and energy-infused materials are prevalent, often appearing seamless or impossibly smooth. Natural rock formations from shattered celestial bodies might also be integrated.",
+          "mood": "Inspiring, wondrous, and slightly detached. A sense of awe and the sublime, with an underlying feeling of advanced civilization and serene control.",
+          "sounds": "Gentle wind, distant chimes, soft hums, ethereal echoes",
+          "spatialLayout": "Open, expansive, and multi-leveled. Structures are organized in vertical and horizontal clusters, with significant empty space between them, emphasizing the aerial nature of the city.",
+          "primary_surfaces": "Polished composites, iridescent metals",
+          "secondary_surfaces": "Crystalline structures, energy fields",
+          "accent_features": "Glowing conduits, holographic displays, suspended gardens",
+          "dominant": "Cool blues, whites, silver",
+          "secondary": "Ethereal purples, soft golds",
+          "accent": "Bright, glowing cyan and magenta",
+          "ambient": "Cool and diffused",
+          "genre": "fantasy-sci-fi",
+          "architectural_tone": "Graceful, impossible anti-gravity structures with smooth, flowing lines, often incorporating bioluminescent elements and vast open spaces. Emphasis on transparency and lightness.",
+          "cultural_tone": "Enlightened, contemplative, and highly advanced society focused on governance and celestial harmony.",
+          "materials_base": "Advanced composites, luminescent alloys, energy-infused materials",
+          "mood_baseline": "Serene, awe-inspiring, and technologically advanced",
+          "palette_bias": "Cool and luminous palettes with strong contrasts between light and shadow",
+          "soundscape_base": "Ethereal ambient tones, subtle technological hums, and gentle natural sounds",
+          "flora_base": "Bioluminescent flora, aerial gardens, crystalline plant life",
+          "fauna_base": "Aerial creatures, bio-engineered avians, energy-based lifeforms"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating islands",
+          "Ethereal bridges",
+          "Cloud formations"
+        ],
+        "uniqueIdentifiers": [
+          "Anti-gravity technology",
+          "Aerial transport systems"
+        ],
+        "searchDesc": "A metropolis in the clouds, defying gravity with advanced technology and aerial structures.",
+        "slug": "the-skyborne-metropolis",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Skyborne Metropolis",
+          "looks": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds."
+    },
+    "0d136ff8-a687-4461-a22e-8b3681d7877e": {
+      "id": "0d136ff8-a687-4461-a22e-8b3681d7877e",
+      "type": "region",
+      "name": "The Upper Council",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Upper Council",
+        "description": "The highest tier of the floating city, home to its governing bodies and grand structures.",
+        "dna": {
+          "looks": "Majestic and monumental structures dominate this region, exuding authority and importance. Buildings here are grander, with more elaborate designs, often featuring elevated platforms and sweeping vistas.",
+          "colorsAndLighting": "Rich, deep blues and purples mingle with radiant golds and silvers, reflecting the importance of the region. Lighting is more directed and dramatic, highlighting key architectural features.",
+          "atmosphere": "The air is exceptionally clear, with less mist than lower regions, offering unparalleled views. A sense of gravitas and serene power is palpable. The temperature is consistently cool and pleasant.",
+          "materials": "Highly polished obsidian-like composites, gleaming gold alloys, and precisely cut luminous crystals are common, conveying prestige and permanence.",
+          "mood": "Authoritative, serene, and majestic. A feeling of deep respect and established order.",
+          "sounds": "Subtle resonant tones, distant pronouncements, harmonious chimes",
+          "spatialLayout": "Hierarchical and ordered, with large central plazas and imposing edifices arranged with deliberate symmetry. Ample open spaces are punctuated by significant architectural landmarks.",
+          "primary_surfaces": "Polished obsidian composites, gleaming gold alloys",
+          "secondary_surfaces": "Luminous crystals, smooth marble-like textures",
+          "accent_features": "Ornate filigree, elevated dais, glowing insignias",
+          "dominant": "Deep blues, purples",
+          "secondary": "Radiant gold, silver",
+          "accent": "Bright, warm white",
+          "ambient": "Cool, with focused highlights",
+          "genre": null,
+          "architectural_tone": "Majestic and imposing anti-gravity architecture, characterized by sweeping arches, grand domes, polished obsidian surfaces, intricate gold filigree, and strategically placed luminous crystal accents. Emphasizes symmetry and elevated platforms.",
+          "cultural_tone": "The seat of an ancient and wise governing body, fostering contemplation, diplomacy, and the maintenance of cosmic balance.",
+          "materials_base": "Polished obsidian, precious metals, engineered crystals",
+          "mood_baseline": "Authoritative, serene, and dignified",
+          "palette_bias": "Deep, regal colors with strong metallic accents and luminous highlights",
+          "soundscape_base": "Resonant tones, subtle authoritative pronouncements, sophisticated harmonious music",
+          "flora_base": "Cultivated aerial gardens with glowing, structured foliage; crystalline bonsai",
+          "fauna_base": "Regal aerial birds of prey, bio-engineered messenger creatures"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Grand council chambers",
+          "Observatories",
+          "Governmental spires"
+        ],
+        "uniqueIdentifiers": [
+          "Seat of power",
+          "Primary administrative hub"
+        ],
+        "searchDesc": "The highest governing tier of the Skyborne Metropolis, featuring grand structures for its leaders.",
+        "slug": "the-upper-council",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Upper Council",
+          "looks": "The highest tier of the floating city, home to its governing bodies and grand structures.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The highest tier of the floating city, home to its governing bodies and grand structures."
+    },
+    "9720a863-e276-4129-89a4-dd9d049a5f49": {
+      "id": "9720a863-e276-4129-89a4-dd9d049a5f49",
+      "type": "location",
+      "name": "The Celestial Orb",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Celestial Orb",
+        "description": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
+        "looks": "A vast, perfectly round structure of polished, luminescent material. Thick, swaying suspension bridges connect it to unknown points in the sky. A single, intensely glowing portal serves as its entrance, positioned precisely at the equator.",
+        "atmosphere": "Thin, crisp air with a faint electrical charge. The gentle hum of unseen energies permeates the space. A constant, subtle movement as the structure drifts.",
+        "mood": "Majestic, awe-inspiring, pivotal",
+        "dna": {
+          "looks": "A colossal, perfectly spherical structure dominates the midground, appearing to be a parliament. It is suspended in the air by numerous cables attached to distant points. Thick, wide suspension bridges arch gracefully, connecting to the sphere and extending towards unseen locations. The sphere's surface is textured and appears to be made of a dense, reflective material. A single, intensely bright, golden-orange light emanates from a circular opening at the equator of the sphere, serving as its sole visible entrance.",
+          "colorsAndLighting": "The primary light source is a brilliant, concentrated glow emanating from the portal on the spherical parliament. This light casts warm, golden rays and creates lens flare effects. Ambient light is cool and diffused, reflecting the overcast sky and mist. There is a stark contrast between the bright portal and the darker, shadowed rock faces.",
+          "atmosphere": "The air is thick with a light, ethereal mist that softens the edges of the surrounding rocky cliffs. Visibility is limited by the atmospheric haze, creating a sense of depth and mystery. The overall environment appears moist and slightly diffused.",
+          "materials": "The sphere itself is composed of a dense, seamless, reflective composite material. The suspension bridges are made of a dark, sturdy metal, anchored by robust cables.",
+          "mood": "Mysterious, grand, and awe-inspiring. The singular bright entrance suggests a focal point of immense importance or power within the vastness.",
+          "sounds": "Distant hum, faint wind, faint creak of bridges",
+          "spatialLayout": "The foreground consists of a rocky riverbed with sparse vegetation and flowing water, leading the eye towards the midground. The midground is dominated by the immense spherical parliament, suspended by cables and connected by a wide, horizontal suspension bridge. The background features towering, mist-shrouded cliff faces that rise on either side, framing the central structure and disappearing into the haze.",
+          "primary_surfaces": "Stone (cliffs, riverbed)",
+          "secondary_surfaces": "Metal (bridges, suspension cables)",
+          "accent_features": "Luminescent material (portal, accent lights on sphere)",
+          "dominant": "Blue-gray (mist, sphere surface)",
+          "secondary": "Dark gray and brown (cliffs, rocks)",
+          "accent": "Golden-orange (portal, sparks)",
+          "ambient": "Muted blue-cyan",
+          "genre": null,
+          "architectural_tone": "Immaculate, seamless spherical architecture with flawless, highly polished surfaces. Connecting structures are robust yet elegant suspension bridges, indicating advanced engineering for extreme environments. Internal spaces would likely be similarly spherical or seamlessly integrated.",
+          "cultural_tone": "The central nexus of governance and decision-making for the Skyborne Metropolis, signifying unity and singular focus.",
+          "materials_base": "Seamless reflective composites, high-tensile alloys",
+          "mood_baseline": "Grand, mysterious, and singularly focused",
+          "palette_bias": "Muted cool tones contrasted with a powerful, singular warm light source",
+          "soundscape_base": "Subtle ambient sounds that do not detract from the imposing silence of space",
+          "flora_base": "None directly visible, but may inspire geometric patterns or energy-infused crystalline forms internally",
+          "fauna_base": "None directly visible"
+        },
+        "navigableElements": [
+          {
+            "type": "bridge",
+            "position": "center, midground",
+            "description": "Wide, sturdy suspension bridge leading to the spherical parliament"
+          },
+          {
+            "type": "portal",
+            "position": "center of sphere, midground",
+            "description": "Intensely glowing golden-orange portal, the sole entrance"
+          },
+          {
+            "type": "passage",
+            "position": "far background, center",
+            "description": "Distant, dimly lit passage between cliff faces"
+          }
+        ],
+        "dominantElements": [
+          "Spherical parliament (est. 80-100m diameter)",
+          "Suspension bridge (est. 20-30m long)",
+          "Glowing portal entrance (mid-sphere)",
+          "Rocky cliff faces (background)",
+          "Misty atmosphere (background)"
+        ],
+        "uniqueIdentifiers": [
+          "Massive suspended spherical parliament",
+          "Equatorial glowing portal entrance",
+          "Interconnecting suspension bridges"
+        ],
+        "searchDesc": "[Location - Exterior] Suspended spherical parliament. Has: suspension bridge (center, midground), glowing portal (center of sphere, midground), distant passage (far background, center)",
+        "slug": "the-celestial-orb",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Celestial Orb",
+          "looks": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
+      "primaryMedia": "media-1764323562881-76hkbjkcm"
+    },
+    "niche-1764323583043-ufte053rv": {
+      "id": "niche-1764323583043-ufte053rv",
+      "type": "niche",
+      "name": "interior of The Celestial Orb",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast geodesic dome interior crafted from smooth, pearlescent material that emits a soft luminescence. A stark, dark grey steel framework defines a visible structural grid across the ribbed walls and the 8-meter high domed ceiling. In the foreground, a polished dark obsidian floor provides a stark material contrast.",
+        "colorsAndLighting": "Soft blue light emitters integrated into the ceiling cast an ethereal glow, complemented by the pearlescent walls' internal luminescence. The overall illumination is soft and diffused, creating a majestic ambiance.",
+        "atmosphere": "The air is crisp with a faint electrical charge, accompanied by a subtle, resonant hum. The enclosed space feels vast and grand, imbued with a sense of deep, unseen energy.",
+        "materials": "The primary material is a smooth, pearlescent substance with internal luminescence. This is contrasted by thin, high-tech architectural glazing panels and a stark, dark grey steel framework. The floor features polished, dark obsidian stone, and smaller hexagonal panels display shimmering light patterns.",
+        "mood": "Majestic and awe-inspiring, evoking a sense of wonder and the presence of powerful, unseen forces.",
+        "sounds": "Subtle resonant hum, faint electrical crackle",
+        "spatialLayout": "An expansive, domed space with a continuous, ribbed geodesic structure. The ceiling reaches 8 meters high. Entry points include a ramp in the foreground and a passage in the midground, drawing the eye deeper into the orb.",
+        "primary_surfaces": "Pearlescent luminescent material (walls, ceiling), polished dark obsidian stone (floor)",
+        "secondary_surfaces": "Dark grey steel framework, high-tech architectural glazing panels, hexagonal display panels",
+        "accent_features": "Integrated soft blue light emitters, abstract shimmering patterns on hexagonal panels",
+        "dominant": "White (pearlescent material)",
+        "secondary": "Dark Grey (steel framework, obsidian floor)",
+        "accent": "Soft Blue (light emitters), shifting colors (hexagonal panels)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "futuristic geometric",
+        "cultural_tone": null,
+        "materials_base": "advanced composites, polished stone, dark metal",
+        "mood_baseline": "Majestic, awe-inspiring",
+        "palette_bias": "cool neutral with soft luminescent highlights",
+        "soundscape_base": "ambient technological hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764323583042-lunevhljg",
+      "description": "The vast, luminous interior of a geodesic dome, echoing the Celestial Orb's structure.",
+      "navigableElements": [
+        {
+          "type": "ramp",
+          "position": "foreground left",
+          "description": "sleek, dark metal ramp sloping upwards"
+        },
+        {
+          "type": "passage",
+          "position": "midground center",
+          "description": "elegantly curved opening revealing another chamber"
+        }
+      ],
+      "dominantElements": [
+        "geodesic dome interior",
+        "pearlescent walls",
+        "dark grey steel framework",
+        "domed ceiling",
+        "dark obsidian floor"
+      ],
+      "uniqueIdentifiers": [
+        "geometrically ribbed geodesic dome",
+        "pearlescent, luminescent material",
+        "dark grey steel structural grid",
+        "soft blue light emitters",
+        "polished dark obsidian floor"
+      ],
+      "searchDesc": "Luminous geodesic dome interior with pearlescent walls, dark steel frame, and obsidian floor.",
+      "slug": "interior-of-the-celestial-orb"
+    },
+    "niche-1764323718636-9te5qnzu9": {
+      "id": "niche-1764323718636-9te5qnzu9",
+      "type": "niche",
+      "name": "interior of The Drowned Tower",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, corroded metal interior characterized by decaying dark grey steel plating and sea-worn concrete. A vaulted ceiling of rust-stained metal arches overhead, disappearing into shadow. The floor is a rough-hewn concrete platform, marked by age and grime.",
+        "colorsAndLighting": "Dominated by dark greys and rust tones, with faint, diffused light filtering from above, casting long, melancholic shadows. The surfaces are slick with condensation.",
+        "atmosphere": "The air is thick with the metallic tang of rust and salt. Seafoam washes over the lower sections of the walls, adding a damp, pervasive chill. Condensation slicks all surfaces, contributing to a sense of decay and neglect.",
+        "materials": "The primary materials are heavily corroded dark grey steel plating and rough, sea-worn concrete. Ribbed metal forms the vaulted ceiling, while the floor is a dark concrete platform. Barnacles encrust the lower wall sections.",
+        "mood": "The overall mood is one of deep melancholy and inherent danger, emphasized by the decay and the oppressive atmosphere.",
+        "sounds": "Dripping water, distant waves, creaking metal.",
+        "spatialLayout": "A colossal, high-ceilinged interior space with a vaulted structure. A prominent support beam bisects the midground, and navigable elements lead off into darkness or further passages.",
+        "primary_surfaces": "Corroded steel plating, sea-worn concrete.",
+        "secondary_surfaces": "Ribbed metal ceiling, rough concrete floor.",
+        "accent_features": "Barnacle-encrusted lower walls, warped staircase treads, gaping wall opening.",
+        "dominant": "Dark Grey (steel plating, concrete)",
+        "secondary": "Rust Red (stains on metal)",
+        "accent": "Foam White (seafoam)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "Industrial metallic decay",
+        "cultural_tone": "null",
+        "materials_base": "Corroded metals, weathered concrete, stone",
+        "mood_baseline": "Melancholy, decaying, dangerous",
+        "palette_bias": "Desaturated earth tones, metallic greys",
+        "soundscape_base": "Water, decay, industrial ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764323718635-lzct9mnbp",
+      "description": "The interior of a colossal, corroded metal tower partially submerged, with a strong scent of rust and salt.",
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "foreground left",
+          "description": "A narrow, angled metal staircase ascending sharply into darkness, its treads warped and uneven."
+        },
+        {
+          "type": "opening",
+          "position": "midground right",
+          "description": "A gaping, irregular opening in the wall, hinting at further derelict passages."
+        }
+      ],
+      "dominantElements": [
+        "corroded metal plating",
+        "sea-worn concrete",
+        "vaulted ribbed ceiling",
+        "support beam",
+        "concrete platform floor"
+      ],
+      "uniqueIdentifiers": [
+        "drowned tower interior",
+        "corroded metal and concrete",
+        "seafoam and condensation",
+        "rust-stained metal"
+      ],
+      "searchDesc": "Colossal, corroded metal tower interior; rust, salt, seafoam, decaying concrete. Melancholy atmosphere.",
+      "slug": "interior-of-the-drowned-tower"
     }
   },
   "views": {},
@@ -525,6 +858,11 @@
                   "id": "niche-1764322926607-rf1219dfs",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1764323718636-9te5qnzu9",
+                  "type": "niche",
+                  "children": []
                 }
               ],
               "primaryMedia": "media-1764322841357-d479qzfsy"
@@ -532,9 +870,233 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764323539675-dohpf8mlu",
+      "type": "host",
+      "name": "The Skyborne Metropolis",
+      "description": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
+      "dna": {
+        "type": "host",
+        "name": "The Skyborne Metropolis",
+        "description": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
+        "dna": {
+          "looks": "Vast, interconnected structures suspended in an endless sky. Buildings seem to float independently, connected by intricate, often delicate, pathways and bridges. The overall impression is one of weightlessness and impossible architecture.",
+          "colorsAndLighting": "A palette dominated by cool blues and whites from the sky and clouds, contrasted with the glowing ethereal lights of structures. Lighting is often diffused, creating a dreamlike quality.",
+          "atmosphere": "The air is thin and crisp, carrying a perpetual, gentle mist that softens distant views. A sense of serene vastness and ethereal beauty pervades the environment. Gravity is subtly manipulated, allowing for effortless movement.",
+          "materials": "Polished, iridescent metals, crystalline composites, and energy-infused materials are prevalent, often appearing seamless or impossibly smooth. Natural rock formations from shattered celestial bodies might also be integrated.",
+          "mood": "Inspiring, wondrous, and slightly detached. A sense of awe and the sublime, with an underlying feeling of advanced civilization and serene control.",
+          "sounds": "Gentle wind, distant chimes, soft hums, ethereal echoes",
+          "spatialLayout": "Open, expansive, and multi-leveled. Structures are organized in vertical and horizontal clusters, with significant empty space between them, emphasizing the aerial nature of the city.",
+          "primary_surfaces": "Polished composites, iridescent metals",
+          "secondary_surfaces": "Crystalline structures, energy fields",
+          "accent_features": "Glowing conduits, holographic displays, suspended gardens",
+          "dominant": "Cool blues, whites, silver",
+          "secondary": "Ethereal purples, soft golds",
+          "accent": "Bright, glowing cyan and magenta",
+          "ambient": "Cool and diffused",
+          "genre": "fantasy-sci-fi",
+          "architectural_tone": "Graceful, impossible anti-gravity structures with smooth, flowing lines, often incorporating bioluminescent elements and vast open spaces. Emphasis on transparency and lightness.",
+          "cultural_tone": "Enlightened, contemplative, and highly advanced society focused on governance and celestial harmony.",
+          "materials_base": "Advanced composites, luminescent alloys, energy-infused materials",
+          "mood_baseline": "Serene, awe-inspiring, and technologically advanced",
+          "palette_bias": "Cool and luminous palettes with strong contrasts between light and shadow",
+          "soundscape_base": "Ethereal ambient tones, subtle technological hums, and gentle natural sounds",
+          "flora_base": "Bioluminescent flora, aerial gardens, crystalline plant life",
+          "fauna_base": "Aerial creatures, bio-engineered avians, energy-based lifeforms"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Floating islands",
+          "Ethereal bridges",
+          "Cloud formations"
+        ],
+        "uniqueIdentifiers": [
+          "Anti-gravity technology",
+          "Aerial transport systems"
+        ],
+        "searchDesc": "A metropolis in the clouds, defying gravity with advanced technology and aerial structures.",
+        "slug": "the-skyborne-metropolis",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Skyborne Metropolis",
+          "looks": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "0d136ff8-a687-4461-a22e-8b3681d7877e",
+          "type": "region",
+          "name": "The Upper Council",
+          "description": "The highest tier of the floating city, home to its governing bodies and grand structures.",
+          "dna": {
+            "type": "region",
+            "name": "The Upper Council",
+            "description": "The highest tier of the floating city, home to its governing bodies and grand structures.",
+            "dna": {
+              "looks": "Majestic and monumental structures dominate this region, exuding authority and importance. Buildings here are grander, with more elaborate designs, often featuring elevated platforms and sweeping vistas.",
+              "colorsAndLighting": "Rich, deep blues and purples mingle with radiant golds and silvers, reflecting the importance of the region. Lighting is more directed and dramatic, highlighting key architectural features.",
+              "atmosphere": "The air is exceptionally clear, with less mist than lower regions, offering unparalleled views. A sense of gravitas and serene power is palpable. The temperature is consistently cool and pleasant.",
+              "materials": "Highly polished obsidian-like composites, gleaming gold alloys, and precisely cut luminous crystals are common, conveying prestige and permanence.",
+              "mood": "Authoritative, serene, and majestic. A feeling of deep respect and established order.",
+              "sounds": "Subtle resonant tones, distant pronouncements, harmonious chimes",
+              "spatialLayout": "Hierarchical and ordered, with large central plazas and imposing edifices arranged with deliberate symmetry. Ample open spaces are punctuated by significant architectural landmarks.",
+              "primary_surfaces": "Polished obsidian composites, gleaming gold alloys",
+              "secondary_surfaces": "Luminous crystals, smooth marble-like textures",
+              "accent_features": "Ornate filigree, elevated dais, glowing insignias",
+              "dominant": "Deep blues, purples",
+              "secondary": "Radiant gold, silver",
+              "accent": "Bright, warm white",
+              "ambient": "Cool, with focused highlights",
+              "genre": null,
+              "architectural_tone": "Majestic and imposing anti-gravity architecture, characterized by sweeping arches, grand domes, polished obsidian surfaces, intricate gold filigree, and strategically placed luminous crystal accents. Emphasizes symmetry and elevated platforms.",
+              "cultural_tone": "The seat of an ancient and wise governing body, fostering contemplation, diplomacy, and the maintenance of cosmic balance.",
+              "materials_base": "Polished obsidian, precious metals, engineered crystals",
+              "mood_baseline": "Authoritative, serene, and dignified",
+              "palette_bias": "Deep, regal colors with strong metallic accents and luminous highlights",
+              "soundscape_base": "Resonant tones, subtle authoritative pronouncements, sophisticated harmonious music",
+              "flora_base": "Cultivated aerial gardens with glowing, structured foliage; crystalline bonsai",
+              "fauna_base": "Regal aerial birds of prey, bio-engineered messenger creatures"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Grand council chambers",
+              "Observatories",
+              "Governmental spires"
+            ],
+            "uniqueIdentifiers": [
+              "Seat of power",
+              "Primary administrative hub"
+            ],
+            "searchDesc": "The highest governing tier of the Skyborne Metropolis, featuring grand structures for its leaders.",
+            "slug": "the-upper-council",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Upper Council",
+              "looks": "The highest tier of the floating city, home to its governing bodies and grand structures.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "9720a863-e276-4129-89a4-dd9d049a5f49",
+              "type": "location",
+              "name": "The Celestial Orb",
+              "description": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
+              "dna": {
+                "type": "location",
+                "name": "The Celestial Orb",
+                "description": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
+                "looks": "A vast, perfectly round structure of polished, luminescent material. Thick, swaying suspension bridges connect it to unknown points in the sky. A single, intensely glowing portal serves as its entrance, positioned precisely at the equator.",
+                "atmosphere": "Thin, crisp air with a faint electrical charge. The gentle hum of unseen energies permeates the space. A constant, subtle movement as the structure drifts.",
+                "mood": "Majestic, awe-inspiring, pivotal",
+                "dna": {
+                  "looks": "A colossal, perfectly spherical structure dominates the midground, appearing to be a parliament. It is suspended in the air by numerous cables attached to distant points. Thick, wide suspension bridges arch gracefully, connecting to the sphere and extending towards unseen locations. The sphere's surface is textured and appears to be made of a dense, reflective material. A single, intensely bright, golden-orange light emanates from a circular opening at the equator of the sphere, serving as its sole visible entrance.",
+                  "colorsAndLighting": "The primary light source is a brilliant, concentrated glow emanating from the portal on the spherical parliament. This light casts warm, golden rays and creates lens flare effects. Ambient light is cool and diffused, reflecting the overcast sky and mist. There is a stark contrast between the bright portal and the darker, shadowed rock faces.",
+                  "atmosphere": "The air is thick with a light, ethereal mist that softens the edges of the surrounding rocky cliffs. Visibility is limited by the atmospheric haze, creating a sense of depth and mystery. The overall environment appears moist and slightly diffused.",
+                  "materials": "The sphere itself is composed of a dense, seamless, reflective composite material. The suspension bridges are made of a dark, sturdy metal, anchored by robust cables.",
+                  "mood": "Mysterious, grand, and awe-inspiring. The singular bright entrance suggests a focal point of immense importance or power within the vastness.",
+                  "sounds": "Distant hum, faint wind, faint creak of bridges",
+                  "spatialLayout": "The foreground consists of a rocky riverbed with sparse vegetation and flowing water, leading the eye towards the midground. The midground is dominated by the immense spherical parliament, suspended by cables and connected by a wide, horizontal suspension bridge. The background features towering, mist-shrouded cliff faces that rise on either side, framing the central structure and disappearing into the haze.",
+                  "primary_surfaces": "Stone (cliffs, riverbed)",
+                  "secondary_surfaces": "Metal (bridges, suspension cables)",
+                  "accent_features": "Luminescent material (portal, accent lights on sphere)",
+                  "dominant": "Blue-gray (mist, sphere surface)",
+                  "secondary": "Dark gray and brown (cliffs, rocks)",
+                  "accent": "Golden-orange (portal, sparks)",
+                  "ambient": "Muted blue-cyan",
+                  "genre": null,
+                  "architectural_tone": "Immaculate, seamless spherical architecture with flawless, highly polished surfaces. Connecting structures are robust yet elegant suspension bridges, indicating advanced engineering for extreme environments. Internal spaces would likely be similarly spherical or seamlessly integrated.",
+                  "cultural_tone": "The central nexus of governance and decision-making for the Skyborne Metropolis, signifying unity and singular focus.",
+                  "materials_base": "Seamless reflective composites, high-tensile alloys",
+                  "mood_baseline": "Grand, mysterious, and singularly focused",
+                  "palette_bias": "Muted cool tones contrasted with a powerful, singular warm light source",
+                  "soundscape_base": "Subtle ambient sounds that do not detract from the imposing silence of space",
+                  "flora_base": "None directly visible, but may inspire geometric patterns or energy-infused crystalline forms internally",
+                  "fauna_base": "None directly visible"
+                },
+                "navigableElements": [
+                  {
+                    "type": "bridge",
+                    "position": "center, midground",
+                    "description": "Wide, sturdy suspension bridge leading to the spherical parliament"
+                  },
+                  {
+                    "type": "portal",
+                    "position": "center of sphere, midground",
+                    "description": "Intensely glowing golden-orange portal, the sole entrance"
+                  },
+                  {
+                    "type": "passage",
+                    "position": "far background, center",
+                    "description": "Distant, dimly lit passage between cliff faces"
+                  }
+                ],
+                "dominantElements": [
+                  "Spherical parliament (est. 80-100m diameter)",
+                  "Suspension bridge (est. 20-30m long)",
+                  "Glowing portal entrance (mid-sphere)",
+                  "Rocky cliff faces (background)",
+                  "Misty atmosphere (background)"
+                ],
+                "uniqueIdentifiers": [
+                  "Massive suspended spherical parliament",
+                  "Equatorial glowing portal entrance",
+                  "Interconnecting suspension bridges"
+                ],
+                "searchDesc": "[Location - Exterior] Suspended spherical parliament. Has: suspension bridge (center, midground), glowing portal (center of sphere, midground), distant passage (far background, center)",
+                "slug": "the-celestial-orb",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Celestial Orb",
+                  "looks": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764323583043-ufte053rv",
+                  "type": "niche",
+                  "children": []
+                }
+              ],
+              "primaryMedia": "media-1764323562881-76hkbjkcm"
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1764322819196-ta48nltve"
+    "loc-1764322819196-ta48nltve",
+    "loc-1764323539675-dohpf8mlu"
   ]
 }

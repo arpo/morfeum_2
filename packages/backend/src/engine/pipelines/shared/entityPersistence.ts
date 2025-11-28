@@ -11,6 +11,7 @@ export interface EntityData {
   name: string;
   details: Record<string, any>;
   primaryMedia?: string;
+  imageUrl?: string;  // Direct URL for frontend cache
 }
 
 export type EntityType = 'character' | 'location';
@@ -115,7 +116,8 @@ export function buildCharacterEntity(
       seed,
       visualAnalysis
     },
-    primaryMedia: media.id
+    primaryMedia: media.id,
+    imageUrl  // Include for frontend cache
   };
 }
 
@@ -145,6 +147,7 @@ export function buildLocationEntity(
     id: spawnId,
     name: worldTree.name || 'World',
     details: worldTree,
-    primaryMedia: media.id
+    primaryMedia: media.id,
+    imageUrl  // Include for frontend cache
   };
 }

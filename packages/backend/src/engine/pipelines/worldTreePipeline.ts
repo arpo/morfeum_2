@@ -168,7 +168,8 @@ export async function runWorldTreePipeline(
     const treeWithMedia = assignMediaToTreeNodes(worldTree, imageUrl, imagePrompt);
     helper.completeStage('media_assignment', 'Media assigned to tree nodes');
 
-    helper.completed('World Tree created successfully', { worldTree: treeWithMedia });
+    // Include imageUrl in completion for frontend cache
+    helper.completed('World Tree created successfully', { worldTree: treeWithMedia, imageUrl });
 
   } catch (error: any) {
     if (signal.aborted) {

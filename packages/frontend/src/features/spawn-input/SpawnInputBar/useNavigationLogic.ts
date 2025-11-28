@@ -67,7 +67,7 @@ export function useNavigationLogic() {
   }, [getNode, setActiveEntity]);
 
   const handleNodeCreation = useCallback(async (navigation: any, currentNode: any) => {
-    const { node, parentNodeId } = navigation;
+    const { node, parentNodeId, imageUrl } = navigation;
     
     const createNodeInStore = useLocationsStore.getState().createNode;
     createNodeInStore(node);
@@ -96,13 +96,13 @@ export function useNavigationLogic() {
     
     // Create entity session with image (instead of just setActiveEntity)
     // This ensures the image persists in the WorldView after pipeline completion
-    // Pass imageUrl from pipeline to add to cache
+    // Pass imageUrl from pipeline completion data to add to cache
     createEntitySession(useStore.getState(), {
       id: node.id,
       name: node.name,
       type: 'location',
       primaryMedia: node.primaryMedia,
-      imageUrl: node.imageUrl  // From pipeline completion
+      imageUrl  // From pipeline completion (top-level)
     });
   }, []);
 
@@ -230,7 +230,11 @@ export function useNavigationLogic() {
           async (completedData: any) => {
             if (completedData.node) {
               await handleNodeCreation(
-                { node: completedData.node, parentNodeId: capturedParentNodeId },
+                { 
+                  node: completedData.node, 
+                  parentNodeId: capturedParentNodeId,
+                  imageUrl: completedData.imageUrl  // Pass imageUrl from completion
+                },
                 capturedCurrentNode
               );
             }

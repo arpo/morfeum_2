@@ -56,7 +56,8 @@ export async function handleCharacterCompletion(
 export function handleLocationCompletion(
   spawnId: string,
   worldTree: any,
-  store: any
+  store: any,
+  imageUrl?: string  // Now passed from top-level completion data
 ) {
   // Extract deepest node data from worldTree BEFORE store processing
   const deepestNodeData = findDeepestNodeData(worldTree);
@@ -75,14 +76,14 @@ export function handleLocationCompletion(
 
     if (node || deepestNodeData) {
       // Create entity session
-      // Pass imageUrl from worldTree completion to add to cache
+      // Pass imageUrl from completion data to add to cache
       createEntitySession(store, {
         id: deepId,
         name: node?.name || deepestNodeData?.name || 'New Location',
         type: 'location',
         atmosphere: 'Generated',
         primaryMedia: node?.primaryMedia,
-        imageUrl: worldTree.imageUrl  // From pipeline completion
+        imageUrl  // From pipeline completion (top-level)
       });
     }
   }
@@ -114,7 +115,8 @@ export function handleSpawnCompletion(
   if (completionData.character) {
     return handleCharacterCompletion(spawnId, completionData.character, store);
   } else if (completionData.worldTree) {
-    return handleLocationCompletion(spawnId, completionData.worldTree, store);
+    // Pass imageUrl from top-level completion data
+    return handleLocationCompletion(spawnId, completionData.worldTree, store, completionData.imageUrl);
   } else if (completionData.node || (completionData.imageUrl && completionData.imagePrompt)) {
     // Navigation/niche spawns - handled by custom callback
     // Check for node property OR imageUrl+imagePrompt combo (navigation pipeline signature)
