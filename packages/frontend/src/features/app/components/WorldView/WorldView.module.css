@@ -100,3 +100,22 @@
     transform: rotate(360deg);
   }
 }
+
+/* Letterbox bars to hide distorted edges */
+.letterboxTop,
+.letterboxBottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.letterboxTop {
+  top: 0;
+}
+
+.letterboxBottom {
+  bottom: 0;
+}

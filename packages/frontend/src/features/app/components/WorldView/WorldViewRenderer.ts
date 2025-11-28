@@ -36,7 +36,7 @@ export class WorldViewRenderer {
   private cameraSpeedZ: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Z * WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER;
   private cameraPositionX: number = WORLD_VIEW_3D_CONFIG.CAMERA_POSITION.X;
   private cameraPositionY: number = WORLD_VIEW_3D_CONFIG.CAMERA_POSITION.Y;
-  private baseCameraZ: number = 4; // Base camera Z position
+  private baseCameraZ: number = WORLD_VIEW_3D_CONFIG.BASE_CAMERA_Z;
 
   // Animation state
   private targetX: number = 0;

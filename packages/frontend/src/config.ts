@@ -41,9 +41,9 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Camera movement amplitude - how far the view shifts during animation (shader parallax) */
   CAMERA_AMPLITUDE: {
-    X: 0.6,   // Horizontal shift range
-    Y: 0.8,   // Vertical shift range
-    Z: 0.5,  // Zoom range (camera z position offset)
+    X: 0.4,   // Horizontal shift range
+    Y: 0.6,   // Vertical shift range
+    Z: 0.2,  // Zoom range (camera z position offset)
   },
   
   /** Camera position movement - physical camera tilt to see mesh from angle */
@@ -52,9 +52,12 @@ export const WORLD_VIEW_3D_CONFIG = {
     Y: 0.1,   // How far camera moves up/down (creates top/bottom view)
   },
   
+  /** Base camera distance - lower = closer to image, avoids black edges (default 4) */
+  BASE_CAMERA_Z: 2.5,
+  
   /** Camera movement speed - each axis has independent circular motion */
   CAMERA_SPEED: {
-    MULTIPLIER: 2, // Overall speed multiplier (0.5 = half speed, 2.0 = double speed)
+    MULTIPLIER: 1.5, // Overall speed multiplier (0.5 = half speed, 2.0 = double speed)
     X: 0.000333,  // Horizontal cycle (~7.8 sec)
     Y: 0.00022,  // Vertical cycle (~10.5 sec)
     Z: 0.0001,  // Zoom cycle (~15.7 sec, slowest for subtle breathing)
@@ -65,6 +68,12 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Mesh resolution - higher = more detailed depth geometry (performance impact) */
   MESH_RESOLUTION: 1024,
+  
+  /** Letterbox - black bars at top/bottom to enforce 16:9 aspect ratio */
+  LETTERBOX: {
+    ENABLED: true, // Enable/disable 16:9 letterbox cropping
+    EXTRA_HEIGHT: 30, // Additional pixels to add to each bar (to cut off more edges)
+  },
 } as const;
 
 /**
