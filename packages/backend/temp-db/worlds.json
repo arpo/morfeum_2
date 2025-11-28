@@ -541,6 +541,347 @@
       ],
       "searchDesc": "Monumental mausoleum interior with marble floors, celestial mosaics, cyan energy conduit, and carved alcoves.",
       "slug": "interior-of-the-sky-tomb"
+    },
+    "loc-1764328163455-em0lventp": {
+      "id": "loc-1764328163455-em0lventp",
+      "type": "host",
+      "name": "Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A cityscape characterized by towering, architecturally diverse structures with dynamic lighting and extensive public spaces. Advanced transit systems weave through the urban fabric, and holographic advertisements shimmer.",
+        "colorsAndLighting": "A vibrant, high-contrast palette dominated by neon blues, electric purples, and stark whites, punctuated by the warm glow of countless windows and streetlights. Lighting is often artificial, dynamic, and bold.",
+        "atmosphere": "The air is charged with energy, a constant thrum of advanced technology and a dense, cosmopolitan populace. Depending on the district, the atmosphere can range from sterile and efficient to grimy and buzzing.",
+        "materials": "Predominantly polished metals, reinforced glass, smart composites, and textured concrete form the primary building materials. Accents of glowing energy conduits and digital displays are common.",
+        "mood": "Energetic, ambitious, and often overwhelming, with an underlying sense of perpetual innovation and social stratification.",
+        "sounds": "Distant sirens, automated vehicle hum, digital announcements, ambient crowd chatter, electronic music beats",
+        "spatialLayout": "Verticality is a key characteristic, with multi-tiered structures, skybridges, and extensive underground networks. Public spaces are designed for high throughput and interaction.",
+        "primary_surfaces": [
+          "Polished metal",
+          "Reinforced glass",
+          "Smart composites"
+        ],
+        "secondary_surfaces": [
+          "Textured concrete",
+          "Digital displays",
+          "Glowing energy conduits"
+        ],
+        "accent_features": [
+          "Holographic advertisements",
+          "Automated drones",
+          "Integrated lighting systems"
+        ],
+        "dominant": "Electric Blue",
+        "secondary": "Neon Pink",
+        "accent": "Bright White",
+        "ambient": "Cool",
+        "genre": "sci-fi",
+        "architectural_tone": "futuristic modernist with sleek, geometric forms, abundant use of glass and metal, integrated smart technologies, and dramatic, programmable lighting systems",
+        "cultural_tone": "cosmopolitan, avant-garde, and highly diverse, with a focus on innovation, technological advancement, and artistic expression",
+        "materials_base": "polished metals, smart composites, reinforced glass, self-healing polymers",
+        "mood_baseline": "energetic, ambitious, innovative",
+        "palette_bias": "high-contrast, neon-infused, electric blues and purples",
+        "soundscape_base": "urban electronic, hum of technology, distant synthesized sounds",
+        "flora_base": "minimal, highly cultivated, genetically engineered or artificial",
+        "fauna_base": "minimal, controlled urban wildlife, engineered companions",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Metropolis",
+          "looks": "A sprawling urban center known for its avant-garde culture.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A sprawling urban center known for its avant-garde culture.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Towering skyscrapers",
+        "Vibrant neon districts",
+        "Advanced transportation networks"
+      ],
+      "uniqueIdentifiers": [
+        "Constant hum of activity",
+        "Fusion of global styles"
+      ],
+      "searchDesc": "A vast, futuristic metropolis teeming with diverse cultures and cutting-edge design.",
+      "slug": "metropolis"
+    },
+    "8763cb50-9d20-4f72-9c25-c05f4778c88c": {
+      "id": "8763cb50-9d20-4f72-9c25-c05f4778c88c",
+      "type": "region",
+      "name": "Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A dense urban environment featuring a mix of sleek, avant-garde architecture and open-concept public spaces. Structures showcase innovative materials and artistic installations, bathed in sophisticated artificial light.",
+        "colorsAndLighting": "A palette of cool blues, sophisticated grays, and deep blacks is frequently accented by vibrant, experimental light installations and the subtle gleam of polished surfaces.",
+        "atmosphere": "The air is crisp and intellectual, filled with the low hum of creative energy and the scent of ozone from advanced fabrication processes. It feels curated and aspirational.",
+        "materials": "Predominantly polished concrete, brushed aluminum, tempered glass, and smart fabrics are used, often with seamless integration and minimalist detailing.",
+        "mood": "Sophisticated, creative, and forward-thinking, with an emphasis on aesthetic excellence and conceptual depth.",
+        "sounds": "Ambient electronic music, hushed conversations, gentle whirring of artistic machinery, subtle chimes",
+        "spatialLayout": "Open-plan areas and flexible exhibition spaces are common, with buildings often featuring dramatic cantilevers and expansive atriums designed to showcase art and design.",
+        "primary_surfaces": [
+          "Polished concrete",
+          "Brushed aluminum",
+          "Tempered glass"
+        ],
+        "secondary_surfaces": [
+          "Smart fabrics",
+          "Integrated LED panels",
+          "Textured composite materials"
+        ],
+        "accent_features": [
+          "Interactive art installations",
+          "Kinetic sculptures",
+          "Dynamic facade lighting"
+        ],
+        "dominant": "Cool Gray",
+        "secondary": "Deep Black",
+        "accent": "Electric Magenta",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "neo-futurist minimalist with clean lines, expansive glass facades, cantilevered structures, and integrated artistic elements",
+        "cultural_tone": "artistic, experimental, and design-focused, fostering a culture of innovation and aesthetic exploration",
+        "materials_base": "polished concrete, brushed aluminum, tempered glass, smart textiles",
+        "mood_baseline": "sophisticated, creative, intellectual",
+        "palette_bias": "monochromatic with vibrant, artistic accent lighting",
+        "soundscape_base": "ambient electronic, creative workshop sounds",
+        "flora_base": "sculptural, minimalist plant arrangements, possibly bio-luminescent",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Metropolis",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Central Spire",
+        "Design District",
+        "Cultural Hub"
+      ],
+      "uniqueIdentifiers": [
+        "High concentration of design firms",
+        "Avant-garde galleries"
+      ],
+      "searchDesc": "The heart of Metropolis, a district renowned for its cutting-edge design studios, galleries, and experimental spaces.",
+      "slug": "metropolis-region"
+    },
+    "aefde6d3-7f62-4073-b698-1ce0fa9aa054": {
+      "id": "aefde6d3-7f62-4073-b698-1ce0fa9aa054",
+      "type": "location",
+      "name": "The Chroma Lounge",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A modern building with large glass windows and clean lines dominates the left side of the frame. A wide, paved patio extends from the building into the foreground, reflecting the surrounding lights. Lush greenery and trees are scattered throughout the scene, some illuminated by uplighting. The architecture is minimalist, featuring smooth surfaces and an overhang that emphasizes horizontal space. A prominent neon light strip runs beneath this overhang, casting a vibrant pink glow onto the patio and surrounding plants.",
+        "colorsAndLighting": "The primary lighting is a strong, cool pink neon glow emanating from a strip beneath the building's overhang, reflecting vividly on the wet-looking patio. Warm, orange-toned lights illuminate individual trees and bushes from below, creating contrasting pools of color. The sky is a deep twilight blue, contributing to the overall cool tone, while the interior lights appear as brighter, intense pinks and oranges through the glass.",
+        "atmosphere": "A light mist or fog permeates the background, softening the edges of distant trees and creating a hazy, atmospheric effect. The air appears clear closer to the building and patio, with the mist adding depth and a slightly diffused quality to the overall scene.",
+        "materials": "Primary materials include highly polished concrete, dark lacquered wood, and expansive glass. Metal accents are used for structural elements and decorative details.",
+        "mood": "Chic, vibrant, and alluring, evoking a feeling of modern nightlife and sophisticated indulgence.",
+        "sounds": "Mellow electronic beats, clinking glasses, low murmur of conversation, subtle ice sounds",
+        "spatialLayout": "Foreground: A wide, textured patio surface occupies the lower portion of the image, wet and reflective. Midground: The main building with its glass facade and overhang is positioned on the left, with trees and landscaped bushes to its right and extending into the background. The patio leads towards the building's entrance. Background: A dense arrangement of trees recedes into a misty, blue-toned expanse, suggesting a larger outdoor area or park.",
+        "primary_surfaces": "Glass, Paving stones, Concrete",
+        "secondary_surfaces": "Metal (building structure), Dense foliage",
+        "accent_features": "Neon light tubes, Small uplights",
+        "dominant": "Pink (neon lights, reflections)",
+        "secondary": "Blue (sky, ground reflections, mist), Dark green (foliage)",
+        "accent": "Orange (uplights on trees), Bright pink/magenta (interior lights)",
+        "ambient": "Cool blue-purple twilight",
+        "genre": null,
+        "architectural_tone": "neo-futurist avant-garde with sharp angles, highly polished finishes, integrated LED lighting, and an emphasis on creating immersive visual experiences",
+        "cultural_tone": "trendsetting, sophisticated, and artistic, catering to a clientele that appreciates cutting-edge design and vibrant nightlife",
+        "materials_base": "polished concrete, dark lacquered surfaces, smoked glass, brushed metal",
+        "mood_baseline": "chic, vibrant, alluring",
+        "palette_bias": "high-contrast neon and cool ambient tones",
+        "soundscape_base": "ambient lounge music, subtle urban nightlife sounds",
+        "flora_base": "strategically placed, architecturally shaped potted plants with dramatic uplighting",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Chroma Lounge",
+          "looks": "A cutting-edge bar showcasing innovative design.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A cutting-edge bar showcasing innovative design.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center, midground",
+          "description": "Large glass doors leading into the brightly lit interior of the building"
+        },
+        {
+          "type": "passage",
+          "position": "center, foreground",
+          "description": "Wide paved patio area leading towards the building entrance"
+        },
+        {
+          "type": "window",
+          "position": "left, midground",
+          "description": "Expansive glass windows offering a view into the lounge area"
+        }
+      ],
+      "dominantElements": [
+        "Modern building with large glass windows",
+        "Paved patio reflecting neon light",
+        "Illuminated trees and bushes",
+        "Pink neon light strip"
+      ],
+      "uniqueIdentifiers": [
+        "Vibrant pink neon lighting on architecture",
+        "Wet, reflective patio surface",
+        "Juxtaposition of modern architecture and natural landscaping"
+      ],
+      "searchDesc": "[Location - Exterior] Modern bar exterior with neon lights. Has: glass doors (center), paved patio (foreground), glass windows (left)",
+      "slug": "the-chroma-lounge",
+      "primaryMedia": "media-1764328185281-ra28r3oi6"
+    },
+    "niche-1764328207514-u8sk2hv1o": {
+      "id": "niche-1764328207514-u8sk2hv1o",
+      "type": "niche",
+      "name": "interior of The Chroma Lounge",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This neo-futurist niche bar features sleek, dark lacquered walls that blend into a polished concrete floor. A sharp-angled ceiling incorporates diffused LED strips in magenta and electric blue, while architectural plants with uplighting add organic contrast. The composition is unsymmetrical and dynamic.",
+        "colorsAndLighting": "Vibrant neon pink accent lighting on the reception desk and cool electric blue and magenta LEDs in the ceiling dominate the scene, casting a sophisticated, high-contrast glow. Spotlights illuminate the plush sapphire velvet seating.",
+        "atmosphere": "The air feels sophisticated and avant-garde, with a palpable buzz of modern nightlife. The diffused LED lighting creates an immersive, alluring glow that suggests a chic and vibrant ambiance.",
+        "materials": "The primary surfaces are dark lacquered walls and polished concrete. Secondary surfaces include polished dark metal for the reception desk and brushed metal struts framing smoked glass panels for the passage and background bar view. Plush, deep sapphire velvet upholsters the seating.",
+        "mood": "This space evokes a mood of chic, vibrant, and alluring sophistication, hinting at modern nightlife and exclusive indulgence.",
+        "sounds": "Muffled music, clinking glasses, low chatter, distant bar sounds.",
+        "spatialLayout": "An enclosed interior niche with a central foreground reception desk. A curved passage leads left, a recessed alcove is to the right, and the background hints at the main bar through angular glass panels.",
+        "primary_surfaces": "dark lacquered walls, polished concrete floor, sharp-angled ceiling",
+        "secondary_surfaces": "polished dark metal, brushed metal struts, smoked glass panels, deep sapphire velvet upholstery",
+        "accent_features": "integrated diffused LED lighting strips (magenta/blue), neon pink accent lighting, architectural plants with dramatic uplighting",
+        "dominant": "Dark (walls, floor, metal)",
+        "secondary": "Magenta and Electric Blue (LED lighting)",
+        "accent": "Neon Pink (reception desk lighting), Sapphire (velvet seating)",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "neo-futurist avant-garde with sharp angles, highly polished finishes, integrated LED lighting, and an emphasis on creating immersive visual experiences",
+        "cultural_tone": "trendsetting, sophisticated, and artistic, catering to a clientele that appreciates cutting-edge design and vibrant nightlife",
+        "materials_base": null,
+        "mood_baseline": "Chic, vibrant, and alluring, evoking a feeling of modern nightlife and sophisticated indulgence.",
+        "palette_bias": "High-contrast, jewel tones, neon accents",
+        "soundscape_base": "Sophisticated lounge ambiance",
+        "flora_base": "Architectural plants",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764328207511-7zcta8tud",
+      "description": "A neo-futurist avant-garde bar interior featuring dark lacquered walls, polished concrete, and vibrant LED lighting.",
+      "navigableElements": [
+        {
+          "type": "reception desk",
+          "position": "foreground center",
+          "description": "Polished dark metal reception desk with neon pink accent lighting."
+        },
+        {
+          "type": "passage",
+          "position": "midground left",
+          "description": "Sweeping, curved passage clad in smoked glass panels, framed by brushed metal struts."
+        }
+      ],
+      "dominantElements": [
+        "reception desk",
+        "recessed alcove seating",
+        "passage"
+      ],
+      "uniqueIdentifiers": [
+        "magenta and electric blue LED ceiling",
+        "smoked glass passage",
+        "sapphire velvet seating"
+      ],
+      "searchDesc": "Neo-futurist bar with dark lacquered walls, pink/blue LEDs, and curved smoked glass.",
+      "slug": "interior-of-the-chroma-lounge"
+    },
+    "niche-1764328529963-4dpv54r7i": {
+      "id": "niche-1764328529963-4dpv54r7i",
+      "type": "niche",
+      "name": "interior of the toilett",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An avant-garde neo-futurist lounge niche featuring sharply angled dark lacquered walls and a polished concrete floor. Dynamic magenta and electric blue LED lighting slices across the ceiling, while a neon pink lit reception desk dominates the foreground. Architectural plants with dramatic uplighting add organic contrast, and smoked glass panels offer glimpses into other areas.",
+        "colorsAndLighting": "Vibrant magenta and electric blue LEDs from the ceiling cast an alluring glow, complemented by dynamic neon pink accent lighting on the reception desk. Plush sapphire velvet seating is artfully lit, creating rich jewel-toned accents.",
+        "atmosphere": "The air hums with a palpable buzz of modern nightlife and sophisticated indulgence. The atmosphere is chic, vibrant, and alluring, with a cool, polished feel punctuated by bursts of neon energy.",
+        "materials": "Dominant materials include dark lacquered walls with a high-gloss finish and smooth, polished concrete for the floor. Accents of brushed metal and smoked glass are present in partitions and framing, while plush deep sapphire velvet covers seating.",
+        "mood": "Evokes a feeling of modern nightlife and sophisticated indulgence, a trendsetting and artistic environment.",
+        "sounds": "Ambient club music, hushed conversations, clinking glasses, subtle electronic hum.",
+        "spatialLayout": "An enclosed, unsymmetrical space with sharp angles. Entry points are implied through a passage and an alcove, with the reception desk serving as a focal point in the foreground.",
+        "primary_surfaces": "Dark lacquered walls, polished concrete floor.",
+        "secondary_surfaces": "Brushed metal struts, smoked glass panels, dark metal desk.",
+        "accent_features": "Magenta and electric blue LED ceiling strip, neon pink accent lighting, dramatic uplighting on plants, deep sapphire velvet seating.",
+        "dominant": "Dark tones (walls, floor) with significant coverage.",
+        "secondary": "Magenta and Electric Blue (ceiling lighting).",
+        "accent": "Neon Pink (reception desk), Sapphire (seating).",
+        "ambient": "Cool with vibrant accents.",
+        "genre": null,
+        "architectural_tone": "neo-futurist avant-garde with sharp angles, highly polished finishes, integrated LED lighting, and an emphasis on creating immersive visual experiences",
+        "cultural_tone": "trendsetting, sophisticated, and artistic, catering to a clientele that appreciates cutting-edge design and vibrant nightlife",
+        "materials_base": null,
+        "mood_baseline": "Chic, vibrant, and alluring, evoking a feeling of modern nightlife and sophisticated indulgence.",
+        "palette_bias": "Pink (neon lights, reflections), Deep Blues and Purples (velvet seating).",
+        "soundscape_base": null,
+        "flora_base": "Architectural plants",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764328529962-ih84d1g3r",
+      "description": "A chic, avant-garde neo-futurist lounge niche with sharp angles and vibrant lighting.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground left",
+          "description": "Brushed metal strut-framed smoked glass panel partition creating a passage."
+        },
+        {
+          "type": "portal",
+          "position": "background right",
+          "description": "Recessed alcove hinting at further depth."
+        },
+        {
+          "type": "reception desk",
+          "position": "foreground center",
+          "description": "Polished dark metal reception desk with sharp angles."
+        }
+      ],
+      "dominantElements": [
+        "dark lacquered walls",
+        "polished concrete floor",
+        "reception desk",
+        "LED strip lighting",
+        "smoked glass panels",
+        "velvet seating"
+      ],
+      "uniqueIdentifiers": [
+        "sharp-angled dark lacquered walls",
+        "magenta and electric blue LED ceiling strip",
+        "neon pink illuminated reception desk",
+        "architectural plants with dramatic uplighting",
+        "brushed metal strut-framed smoked glass partitions"
+      ],
+      "searchDesc": "Neo-futurist lounge niche: sharp angles, magenta/blue LEDs, neon pink desk, velvet seating.",
+      "slug": "interior-of-the-toilett"
     }
   },
   "views": {},
@@ -590,10 +931,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764328163455-em0lventp",
+      "type": "host",
+      "children": [
+        {
+          "id": "8763cb50-9d20-4f72-9c25-c05f4778c88c",
+          "type": "region",
+          "children": [
+            {
+              "id": "aefde6d3-7f62-4073-b698-1ce0fa9aa054",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764328207514-u8sk2hv1o",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764328529963-4dpv54r7i",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1764326597551-qet13p8u6",
-    "loc-1764327104477-i23lcjpm2"
+    "loc-1764327104477-i23lcjpm2",
+    "loc-1764328163455-em0lventp"
   ]
 }
