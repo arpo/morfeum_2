@@ -50,7 +50,7 @@ export const EntityExplorer: React.FC = () => {
       // Look up full node data from nodes map using the ID from the tree
       const fullNode = locationNodes[treeNode.id];
       // Fallback to treeNode properties if fullNode is missing (safety)
-      const label = fullNode?.name || treeNode.name || 'Unknown Location';
+      const label = fullNode?.name || 'Unknown Location';
       const type = fullNode?.type || treeNode.type;
       // Get image from preloaded imageMap
       const image = imageMap.get(treeNode.id) || undefined;

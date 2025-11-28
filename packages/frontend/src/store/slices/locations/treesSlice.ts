@@ -67,6 +67,18 @@ const removeNodeFromTreeRecursive = (tree: TreeNode, targetId: string): boolean 
   return false;
 };
 
+/**
+ * Extract only tree structure (id, type, children) from a node with full data.
+ * Used to strip node data before persisting to worldTrees.
+ */
+const extractTreeStructure = (node: any): TreeNode => {
+  return {
+    id: node.id,
+    type: node.type,
+    children: node.children?.map((child: any) => extractTreeStructure(child)) || []
+  };
+};
+
 export const createTreesSlice: StateCreator<
   TreesSlice & NodesSlice & UISlice,
   [],
@@ -376,14 +388,17 @@ export const createTreesSlice: StateCreator<
       newNodes[node.id] = node;
     });
 
+    // Extract only tree structure (id, type, children) for worldTrees storage
+    const treeStructure = extractTreeStructure(rootNode);
+    
     // Add to world trees list (replacing if exists)
     const existingIndex = worldTrees.findIndex((t: any) => t.id === rootNode.id);
     let newWorldTrees = [...worldTrees];
     
     if (existingIndex >= 0) {
-      newWorldTrees[existingIndex] = rootNode;
+      newWorldTrees[existingIndex] = treeStructure;
     } else {
-      newWorldTrees.push(rootNode);
+      newWorldTrees.push(treeStructure);
     }
 
     // Auto-pin the new world

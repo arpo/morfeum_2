@@ -1,218 +1,85 @@
-# Implementation Plan: Fix Image Loading for World Trees
+# Implementation Plan
 
-## Overview
+[Overview]
+Remove redundant data from worldTrees storage so it only contains tree structure (id, type, children), while all node data (name, description, dna, spaceType, primaryMedia) is stored exclusively in the nodes map.
 
-Fix the broken image loading system for world tree nodes by ensuring all nodes have `primaryMedia` references that link to media entries in the media system, enabling synchronous image loading without async fetching.
+This change significantly reduces the size of worlds.json by eliminating duplicate storage. Currently, every node's complete data is stored twice - once in the `nodes` map and again nested in the `worldTrees` array. The worldTrees array should only track parent-child relationships, not store node data.
 
-The core issue is that while characters properly create media entries and set `primaryMedia` fields, world tree nodes do not. This causes images to disappear after pipeline completion and fail to load when navigating the tree.
+[Types]
+No type changes needed - the frontend `TreeNode` type is already correct.
 
-## Current Problem
-
-### What's Broken
-
-1. **World Tree Creation**: Images generated during world tree creation are never stored in the media system, and tree nodes never get `primaryMedia` references
-2. **Navigation Node Creation**: Images generated when navigating (creating niches/features) are never stored in the media system
-3. **Frontend Image Loading**: The `useEntityImage` hook expects `primaryMedia` fields, so without them, no images load
-4. **User Experience**: Preview images disappear when pipelines complete, clicking nodes shows skeleton loaders indefinitely
-
-### Root Causes
-
-1. **worldTreePipeline.ts**: Generates images but never creates media entries or sets `primaryMedia` on nodes
-2. **WorldTreeBuilder.buildNode**: Has `primaryMedia` commented out and doesn't accept it as a parameter
-3. **createNodePipeline.ts**: Generates images but never creates media entries or sets `primaryMedia`
-4. **nodeBuilder.ts**: Doesn't create media entries (comment says handled in entityPersistence, but it's never called)
-
-### What Works (Character System)
-
-Characters work correctly because `characterPipeline.ts`:
-1. Calls `buildCharacterEntity()` which creates media entry via `mediaService.createMedia()`
-2. Sets `primaryMedia` field on character entity
-3. Calls `saveAndPinEntity()` to persist everything
-
-## Types
-
-Update type definitions to ensure `primaryMedia` is properly supported across the system.
-
-### Backend Type Changes
-
-**File: `packages/backend/src/services/worldTree/types.ts`**
-
-- Ensure `TreeNode` interface has `primaryMedia?: string` (already present)
-- No changes needed - type already supports it
-
-**File: `packages/backend/src/engine/generation/shared/nodeBuilder.ts`**
-
-- Add `primaryMedia?: string` to `NodeBuildOptions` interface
-- Update `buildNode` function signature to accept and use `primaryMedia` from options
-
-## Files
-
-Detailed breakdown of all file modifications needed.
-
-### Backend Files to Modify
-
-1. **packages/backend/src/engine/pipelines/worldTreePipeline.ts**
-   - Add new function `assignMediaToTreeNodes()` to create media entries and set `primaryMedia`
-   - Call this function after `WorldTreeBuilder.build()` and before completing pipeline
-   - Recursively traverse tree to find deepest node (the one with the generated image)
-   - Create media entry for that node using `mediaService.createMedia()`
-   - Set `primaryMedia` on the node
-
-2. **packages/backend/src/services/worldTree/builder.ts**
-   - Uncomment and implement `primaryMedia` field in `buildNode()`
-   - Accept `primaryMedia` from data parameter: `primaryMedia: data.primaryMedia`
-   - Ensure it's included in returned TreeNode
-
-3. **packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts**
-   - After image generation and node building, create media entry
-   - Import `mediaService` from `'../../../services/media'`
-   - Call `mediaService.createMedia()` with image URL and metadata
-   - Set `primaryMedia` on the node before returning
-
-4. **packages/backend/src/engine/generation/shared/nodeBuilder.ts**
-   - Add `primaryMedia?: string` to `NodeBuildOptions` interface
-   - Add `primaryMedia` field to `LocationNode` interface (already present)
-   - Update `buildNode()` to accept and set `primaryMedia` from options
-
-5. **packages/backend/src/engine/pipelines/shared/entityPersistence.ts**
-   - Update `buildLocationEntity()` to properly handle tree structures
-   - Ensure it can recursively assign media to all nodes in a tree
-
-### Frontend Files (No changes needed)
-
-The frontend already supports `primaryMedia`:
-- `useEntityImage` hook checks for `primaryMedia` field
-- `mediaService.getPrimaryMediaUrl()` handles fetching
-- `treesSlice.setCompleteWorldTree()` preserves all fields via spread operator
-- `entitySessionLoader.ts` uses `getPrimaryMediaUrl(node)` which will work when `primaryMedia` is present
-
-## Functions
-
-### New Functions to Create
-
-**File: `packages/backend/src/engine/pipelines/worldTreePipeline.ts`**
-
+The existing type definition in `packages/frontend/src/store/slices/locations/types.ts` already defines the correct minimal structure:
 ```typescript
-/**
- * Assign media to tree nodes
- * Creates media entries and sets primaryMedia on nodes that have generated images
- */
-function assignMediaToTreeNodes(
-  tree: TreeNode, 
-  imageUrl: string, 
-  imagePrompt: string
-): TreeNode
+export interface TreeNode {
+  id: string;
+  type: NodeType;
+  children: TreeNode[];
+}
 ```
 
-Purpose: Recursively traverse tree, find deepest node, create media entry, set `primaryMedia`
+The backend type in `packages/backend/src/services/worldTree/types.ts` includes more fields (name, description, dna, etc.) which is fine for in-memory/API use, but these extra fields should be stripped when persisting to worldTrees.
 
-### Functions to Modify
+[Files]
+Four files need modification to fix the redundant storage issue.
 
-**File: `packages/backend/src/engine/pipelines/worldTreePipeline.ts`**
+**Files to Modify:**
+1. `packages/frontend/src/store/slices/locations/treesSlice.ts`
+   - Fix `setCompleteWorldTree` to extract only tree structure
+   - Ensure `addNodeToTree` only stores id, type, children
 
-- `runWorldTreePipeline()`: Add call to `assignMediaToTreeNodes()` after `WorldTreeBuilder.build()`
+2. `packages/frontend/src/utils/tree/navigation.ts`
+   - Update `findDeepestNode` to not rely on `tree.name`
 
-**File: `packages/backend/src/services/worldTree/builder.ts`**
+3. `packages/frontend/src/features/app/components/EntityExplorer/EntityExplorer.tsx`
+   - Remove fallback to `treeNode.name` (line ~51)
 
-- `buildNode()`: Uncomment and implement `primaryMedia` assignment from `data.primaryMedia`
+4. `packages/backend/src/services/worldTree/types.ts` (optional documentation)
+   - Add comment clarifying that TreeNode is for API/in-memory use, persisted worldTrees only use id/type/children
 
-**File: `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts`**
+[Functions]
+Three functions need modification.
 
-- `runCreateLocationNodePipeline()`: Add media creation after image generation, set `node.primaryMedia`
+**Modified Functions:**
 
-**File: `packages/backend/src/engine/generation/shared/nodeBuilder.ts`**
+1. `setCompleteWorldTree` in `packages/frontend/src/store/slices/locations/treesSlice.ts`
+   - Current: Stores entire rootNode object (with all data) into worldTrees
+   - Change: Extract tree structure only (id, type, children) before storing to worldTrees
+   - Add helper function `extractTreeStructure(node)` to recursively extract only id, type, children
 
-- `buildNode()`: Add support for `options.primaryMedia` parameter
+2. `findDeepestNode` in `packages/frontend/src/utils/tree/navigation.ts`
+   - Current: Returns `{ id: tree.id, name: tree.name || 'Unknown' }`
+   - Change: Return only `id` or look up name from nodes store
+   - May need to change return type or accept nodes map as parameter
 
-## Classes
+3. `mapNode` (inline in EntityExplorer.tsx around line 48)
+   - Current: Falls back to `treeNode.name` if `fullNode?.name` is missing
+   - Change: Only use `fullNode?.name`, fallback to 'Unknown' directly
 
-No new classes needed. Modifications to existing class:
+[Classes]
+No class modifications needed.
 
-**File: `packages/backend/src/services/worldTree/builder.ts`**
+[Dependencies]
+No dependency changes needed.
 
-- Class: `WorldTreeBuilder`
-- Method: `buildNode()` - Add `primaryMedia` support
+[Testing]
+Manual testing required after implementation.
 
-## Dependencies
+1. Clear the database: Delete `packages/backend/temp-db/worlds.json`
+2. Start the application
+3. Spawn a new world with locations
+4. Verify `worlds.json` structure:
+   - `nodes` map contains full node data (id, type, name, spaceType, dna, description, primaryMedia)
+   - `worldTrees` array contains only tree structure (id, type, children)
+5. Verify UI still displays location names correctly in EntityExplorer
+6. Verify tree navigation still works (expanding/collapsing nodes)
 
-No new dependencies required. All functionality uses existing modules:
+[Implementation Order]
+Implement changes in order that minimizes breaking the application during development.
 
-- `mediaService` from `'@/services/media'` (already in use for characters)
-- Existing TypeScript types and interfaces
-
-## Testing
-
-### Manual Testing Steps
-
-1. **Create New World Tree**:
-   - Spawn a new world/location
-   - Verify preview image loads during generation
-   - Verify image persists after pipeline completion
-   - Click on nodes in tree - verify images load immediately
-
-2. **Navigate Existing Trees**:
-   - Click on pinned world nodes
-   - Verify images load immediately without skeleton loaders
-   - Navigate to child nodes - verify images load
-
-3. **Create Niches via Navigation**:
-   - Navigate to a location and create a niche
-   - Verify niche image loads and persists
-
-4. **Backend Verification**:
-   - Check `temp-db/media.json` - verify media entries created for world nodes
-   - Check `temp-db/worlds.json` - verify nodes have `primaryMedia` fields
-   - Verify `primaryMedia` values match media IDs in media.json
-
-### Validation Criteria
-
-- ✅ All world tree nodes have `primaryMedia` fields after creation
-- ✅ Media entries exist in `media.json` for all generated images
-- ✅ Images load immediately when clicking tree nodes (no async fetching)
-- ✅ Preview images persist after pipeline completion
-- ✅ No console errors about missing images or primaryMedia
-- ✅ Existing characters continue to work correctly
-
-## Implementation Order
-
-Follow these steps in sequence to minimize conflicts and ensure successful integration:
-
-### Step 1: Update Type Definitions
-- Modify `nodeBuilder.ts` to add `primaryMedia` to `NodeBuildOptions`
-- Verify `TreeNode` type already has `primaryMedia?: string`
-
-### Step 2: Update Node Builder
-- Modify `buildNode()` in `nodeBuilder.ts` to accept and use `options.primaryMedia`
-- Add conditional: `if (options?.primaryMedia) { node.primaryMedia = options.primaryMedia; }`
-
-### Step 3: Update WorldTreeBuilder
-- Modify `buildNode()` in `builder.ts` to read and set `primaryMedia` from data
-- Uncomment: `primaryMedia: data.primaryMedia`
-
-### Step 4: Update World Tree Pipeline
-- Create `assignMediaToTreeNodes()` function
-- Import `mediaService`
-- Call `assignMediaToTreeNodes()` after `WorldTreeBuilder.build()`
-- Pass resulting tree to pipeline completion
-
-### Step 5: Update Navigation Pipeline
-- Import `mediaService` in `createNodePipeline.ts`
-- After image generation, create media entry
-- Set `node.primaryMedia` to media ID
-- Return node with `primaryMedia` set
-
-### Step 6: Update Entity Persistence (Optional Enhancement)
-- Enhance `buildLocationEntity()` to handle tree structures
-- Add recursive media assignment for complex trees
-
-### Step 7: Testing
-- Test new world tree creation
-- Test navigation node creation
-- Test loading existing trees
-- Verify media.json and worlds.json structure
-- Verify characters still work
-
-### Step 8: Cleanup
-- Remove any debug logging added during implementation
-- Update documentation if needed
-- Verify no TypeScript errors
+1. **Add helper function** `extractTreeStructure` in treesSlice.ts
+2. **Update `setCompleteWorldTree`** to use the helper function
+3. **Update `addNodeToTree`** to ensure it only stores minimal structure
+4. **Update EntityExplorer.tsx** to remove `treeNode.name` fallback
+5. **Update navigation.ts** `findDeepestNode` to handle missing name
+6. **Clear database** and test with fresh data
+7. **Verify** all tree operations work correctly

@@ -1,63 +1,61 @@
 {
   "nodes": {
-    "loc-1764322819196-ta48nltve": {
-      "id": "loc-1764322819196-ta48nltve",
+    "loc-1764325866761-kob9no37h": {
+      "id": "loc-1764325866761-kob9no37h",
       "type": "host",
-      "name": "Post-Apocalyptic Coastline",
+      "name": "The Frozen Expanse",
       "spaceType": "exterior",
       "dna": {
         "type": "host",
-        "name": "Post-Apocalyptic Coastline",
-        "description": "A world reshaped by environmental collapse and technological decay.",
+        "name": "The Frozen Expanse",
+        "description": "A vast, unforgiving planet locked in perpetual ice and snow.",
         "dna": {
-          "looks": "Vast, desolate landscapes dominated by the remnants of advanced civilization now succumbing to nature and time. Structures are broken, weathered, and often repurposed by survivors. Natural elements are reclaiming man-made environments.",
-          "colorsAndLighting": "A palette of muted earth tones, rust reds, desaturated blues, and washed-out greens. Lighting is often dim, diffused, and moody, with an emphasis on atmospheric conditions like fog or dust.",
-          "atmosphere": "The air is thick with the scent of decay, salt, and damp earth. A pervasive sense of melancholic quietude hangs over the land, broken only by the sounds of nature and the distant echoes of a lost era.",
-          "materials": "Dominant materials include heavily rusted metals, crumbling concrete, scavenged wood, and hardy, often mutated, vegetation. Surfaces show extreme wear, corrosion, and infestation.",
-          "mood": "Melancholy, resilience, isolation, and a pervasive sense of loss. There's an underlying tension of survival against overwhelming odds.",
-          "sounds": "Wind, distant waves, creaking metal, animal calls, dripping water, crumbling debris",
-          "spatialLayout": "Open, sprawling vistas interspersed with cluttered, hazardous ruins. Navigation often involves traversing hazardous terrain and finding safe paths through collapsed structures.",
+          "looks": "A world dominated by immense glaciers, snow-covered plains, and towering ice formations. The landscape is stark and grand, shaped by millennia of ice.",
+          "colorsAndLighting": "Dominated by cool, pale blues and whites, with muted greys from rock and metal. Lighting is diffuse and often low, casting long, soft shadows.",
+          "atmosphere": "A frigid, thin atmosphere that is crystal clear or hazy with ice particles. Temperatures are perpetually far below freezing. Winds can be harsh and biting.",
+          "materials": "Primarily ice and snow, with exposed rock and ancient, weathered metallic structures.",
+          "mood": "Melancholy, awe-inspiring, and profoundly desolate. A sense of immense age and quiet, crushing isolation.",
+          "sounds": "Wind whistling, ice groaning, distant echoes, silence.",
+          "spatialLayout": "Vast, open expanses broken by immense geological formations and the colossal, geometric shapes of derelict spacecraft.",
           "primary_surfaces": [
-            "rusted metal",
-            "crumbling concrete"
+            "Ice",
+            "Snow"
           ],
           "secondary_surfaces": [
-            "weathered wood",
-            "earth",
-            "vegetation"
+            "Rock",
+            "Aged Metal"
           ],
           "accent_features": [
-            "scavenged debris",
-            "wild overgrowth",
-            "flickering lights"
+            "Crystalline ice formations",
+            "Frozen debris"
           ],
-          "dominant": "desaturated earth tones",
-          "secondary": "rust red, muted grey-green",
-          "accent": "off-white, dark brown",
-          "ambient": "cool",
-          "genre": "post-apocalyptic",
-          "architectural_tone": "decaying industrial and utilitarian structures with elements of makeshift survivalist modifications, showcasing rust, exposed rebar, and weathered concrete.",
-          "cultural_tone": "survivalist, scavenger, nomadic, pragmatic, resourceful, with lost echoes of pre-collapse high technology.",
-          "materials_base": "heavily corroded metals, rough concrete, scavenged wood, hardy organic growth.",
-          "mood_baseline": "melancholic, desolate, resilient, eerie.",
-          "palette_bias": "muted, desaturated, earth-toned with accents of rust and faded industrial colors.",
-          "soundscape_base": "ambient environmental sounds with the pervasive sense of decay and isolation.",
-          "flora_base": "hardy, mutated, or overgrown native vegetation, often with a dark or desaturated hue.",
-          "fauna_base": "mutated or hardy terrestrial wildlife."
+          "dominant": "Blue",
+          "secondary": "White",
+          "accent": "Grey",
+          "ambient": "Cool",
+          "genre": "sci-fi",
+          "architectural_tone": "brutalist sci-fi with elements of decay and immense scale",
+          "cultural_tone": "none",
+          "materials_base": "weathered metal, ice, rock",
+          "mood_baseline": "desolate isolation",
+          "palette_bias": "cool, muted, monochromatic",
+          "soundscape_base": "wind-swept emptiness",
+          "flora_base": "None",
+          "fauna_base": "None"
         },
         "navigableElements": [],
         "dominantElements": [
-          "Ruined infrastructure",
-          "Overgrown nature",
-          "Scavenged settlements"
+          "Ice sheets",
+          "Glacial mountains",
+          "Frozen oceans"
         ],
         "uniqueIdentifiers": [
-          "Widespread decay",
-          "Resource scarcity",
-          "Mutated flora and fauna"
+          "Extreme cold",
+          "Permafrost",
+          "Aurora borealis"
         ],
-        "searchDesc": "A shattered world of rusting ruins, encroaching wilds, and the struggle for survival.",
-        "slug": "post-apocalyptic-coastline",
+        "searchDesc": "A frozen, desolate world with extreme cold, vast ice sheets, and glacial mountains.",
+        "slug": "the-frozen-expanse",
         "semantic": {
           "atmosphere": "",
           "mood": ""
@@ -67,694 +65,70 @@
           "style": ""
         },
         "profile": {
-          "name": "Post-Apocalyptic Coastline",
-          "looks": "A world reshaped by environmental collapse and technological decay.",
+          "name": "The Frozen Expanse",
+          "looks": "A vast, unforgiving planet locked in perpetual ice and snow.",
           "atmosphere": "",
           "mood": ""
         }
       },
-      "description": "A world reshaped by environmental collapse and technological decay."
+      "description": "A vast, unforgiving planet locked in perpetual ice and snow."
     },
-    "8c78c63b-857d-4a4d-b0da-2d0475a125a4": {
-      "id": "8c78c63b-857d-4a4d-b0da-2d0475a125a4",
+    "40a5679c-b65b-4743-803f-e743bab727d9": {
+      "id": "40a5679c-b65b-4743-803f-e743bab727d9",
       "type": "region",
-      "name": "The Salt-Scoured Peninsula",
+      "name": "The Frozen Expanse",
       "spaceType": "exterior",
       "dna": {
         "type": "region",
-        "name": "The Salt-Scoured Peninsula",
-        "description": "A desolate stretch of coast battered by relentless fog and sea.",
+        "name": "The Frozen Expanse",
+        "description": "",
         "dna": {
-          "looks": "A harsh, windswept coastline with eroding cliffs, treacherous rocky shores, and vast expanses of grey, choppy sea. Dense, pervasive fog is a constant feature, limiting visibility and muffling sounds.",
-          "colorsAndLighting": "Dominated by cool, desaturated blues and greys of the sea and sky, with patches of dull brown and green from exposed earth and hardy vegetation. Lighting is perpetually diffused by fog.",
-          "atmosphere": "The air is heavy with moisture, the sharp tang of salt, and the perpetual chill of the sea. A sense of isolation and being on the edge of the world pervades this region.",
-          "materials": "Salt-encrusted rocks, weathered driftwood, barnacle-covered debris, and the relentless presence of sea foam and spray.",
-          "mood": "Bleak, isolated, unforgiving, and enduring.",
-          "sounds": "Crashing waves, mournful foghorns, seabird cries, the howl of wind, dripping condensation",
-          "spatialLayout": "Open, exposed coastal terrain with sudden drops and hazardous submerged obstacles. Navigation is challenging due to poor visibility and treacherous footing.",
+          "looks": "An endless, undulating expanse of snow and ice, dotted with jagged rocky outcrops and the scattered, colossal remnants of ancient structures.",
+          "colorsAndLighting": "Predominantly pale blues and whites, with grey rock and the muted metallic tones of debris. Lighting is diffused and cool, with long, soft shadows.",
+          "atmosphere": "A thin, biting atmosphere of extreme cold and dry air. Occasional blizzards can reduce visibility to near zero. The sky is often a pale, hazy blue.",
+          "materials": "Ice, snow, exposed rock, and weathered, non-reflective metals from ship debris.",
+          "mood": "Vast, desolate, and starkly beautiful. A sense of overwhelming scale and deep, quiet solitude.",
+          "sounds": "Howling wind, crunching snow, distant groans of ice, faint metallic creaks.",
+          "spatialLayout": "Expansive, open plains interrupted by massive, partially buried geometric forms and natural rocky formations.",
           "primary_surfaces": [
-            "salt-crusted rock",
-            "sea-worn concrete"
+            "Snow",
+            "Ice"
           ],
           "secondary_surfaces": [
-            "driftwood",
-            "sand",
-            "coarse gravel"
+            "Rock",
+            "Dull Metal"
           ],
           "accent_features": [
-            "shipwreck fragments",
-            "seaweed",
-            "coastal erosion patterns"
+            "Ice ridges",
+            "Frost patterns"
           ],
-          "dominant": "grey",
-          "secondary": "desaturated blue, dull brown",
-          "accent": "off-white",
-          "ambient": "cool",
-          "genre": null,
-          "architectural_tone": "decaying industrial and utilitarian structures adapted to extreme coastal conditions, featuring exposed, corroded metal, weathered concrete with deep cracks, and rudimentary waterproofing attempts.",
-          "cultural_tone": "isolated maritime survivors, hardy fisherfolk, scavengers of the sea, pragmatic and resilient against the elements.",
-          "materials_base": "salt-resistant metals, weathered concrete, waterlogged wood, marine debris.",
-          "mood_baseline": "bleak, isolated, enduring, melancholic.",
-          "palette_bias": "cool, desaturated blues and greys with earthy undertones.",
-          "soundscape_base": "constant ambient sounds of the sea and weather, emphasizing isolation.",
-          "flora_base": "salt-tolerant, scrubby coastal plants, hardy grasses, and kelp or seaweed.",
-          "fauna_base": "seabirds, marine life, coastal rodents."
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Jagged coastline",
-          "Perpetual fog banks",
-          "Shipwrecks"
-        ],
-        "uniqueIdentifiers": [
-          "Brackish atmosphere",
-          "Erosion by sea",
-          "Limited visibility"
-        ],
-        "searchDesc": "A fog-shrouded, salt-blasted coast where the sea relentlessly grinds down all in its path.",
-        "slug": "the-salt-scoured-peninsula",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Salt-Scoured Peninsula",
-          "looks": "A desolate stretch of coast battered by relentless fog and sea.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "description": "A desolate stretch of coast battered by relentless fog and sea."
-    },
-    "04ab2e6a-2c38-4187-ae63-91af8b8f2440": {
-      "id": "04ab2e6a-2c38-4187-ae63-91af8b8f2440",
-      "type": "location",
-      "name": "The Drowned Tower",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "location",
-        "name": "The Drowned Tower",
-        "description": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
-        "looks": "Colossal, corroded metal structure leaning precariously into churning, grey water. Barnacles cling to the lower sections, and seafoam washes over exposed rebar. A solitary, weathered maintenance ladder is still attached to its side.",
-        "atmosphere": "Thick, biting sea fog, the constant roar of waves, the metallic tang of rust and salt.",
-        "mood": "Melancholy, decaying, dangerous",
-        "dna": {
-          "looks": "A colossal, cylindrical fusion reactor cooling tower leans precariously, half-submerged in the sea. Its weathered, rusted surface shows signs of decay, with patches of green algae or moss. The vast structure appears to be a remnant of industrial might, now surrendering to the elements. Small plants sprout from its upper sections, contrasting with the metallic corrosion. Barnacles encrust the submerged portions, and seafoam washes over exposed metallic elements.",
-          "colorsAndLighting": "The lighting is diffused and soft, characteristic of a foggy environment. There are no distinct shadows or strong highlights. The overall light tone is a cool, desaturated blue-green, reflecting the atmospheric conditions and the muted colors of the scene.",
-          "atmosphere": "Thick, persistent fog blankets the scene, obscuring the horizon and the full extent of the structure. The air feels heavy with moisture and the spray of the sea. Visibility is significantly reduced, contributing to the desolate and isolated atmosphere.",
-          "materials": "Heavily oxidized steel, barnacle-encrusted concrete, the salty sea, and patches of tenacious organic growth.",
-          "mood": "Decadent, imposing, melancholic, and a stark reminder of lost industrial power.",
-          "sounds": "Lapping waves, creaking metal, distant seabirds, dripping water, sea spray",
-          "spatialLayout": "The foreground consists of a wet, dark asphalt path curving to the left and a pebbled shoreline. In the midground, the massive cooling tower dominates the view, angled into the sea. The lower half of the tower is submerged in the churning water, with waves breaking against its base. The background is a hazy expanse of sea and sky, heavily obscured by fog.",
-          "primary_surfaces": "rusted metal",
-          "secondary_surfaces": "concrete, pebbles, water, organic growth",
-          "accent_features": "seafoam",
-          "dominant": "dark grey (tower, path)",
-          "secondary": "light blue-green (sky, sea)",
-          "accent": "white (seafoam, waves)",
-          "ambient": "desaturated blue-green",
-          "genre": null,
-          "architectural_tone": "decaying industrial behemoth with a focus on massive scale and structural compromise, showcasing extreme rust, exposed rebar, deep corrosion, and the encroachment of marine life.",
-          "cultural_tone": null,
-          "materials_base": "heavily rusted industrial steel, reinforced concrete weathered by salt and water, marine accretions like barnacles and algae.",
-          "mood_baseline": "imposing, desolate, awe-inspiring in its decay.",
-          "palette_bias": "dominated by rust tones and deep industrial greys, contrasted with the cool blues of the sea.",
-          "soundscape_base": "a symphony of the sea interacting with a colossal, decaying structure.",
-          "flora_base": "marine algae, barnacles, and hardy coastal plants at the upper exposed sections.",
-          "fauna_base": "marine life, coastal birds."
-        },
-        "navigableElements": [
-          {
-            "type": "ladder",
-            "position": "left side of tower, midground",
-            "description": "Weathered maintenance ladder attached to the colossal tower."
-          }
-        ],
-        "dominantElements": [
-          "Massive, rusted cooling tower half-submerged in sea (center, midground/background)",
-          "Grey, churning sea with waves (right, midground/foreground)",
-          "Foggy, muted sky (background)",
-          "Pebbled shoreline and wet asphalt path (foreground)"
-        ],
-        "uniqueIdentifiers": [
-          "Half-collapsed fusion reactor cooling tower",
-          "Rusted metallic structure partially submerged in sea",
-          "Maintenance ladder attached to the tower"
-        ],
-        "searchDesc": "Post-apocalyptic coast. Has: rusted cooling tower (midground), maintenance ladder (midground)",
-        "slug": "the-drowned-tower",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Drowned Tower",
-          "looks": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "description": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
-      "primaryMedia": "media-1764322841357-d479qzfsy"
-    },
-    "niche-1764322926607-rf1219dfs": {
-      "id": "niche-1764322926607-rf1219dfs",
-      "type": "niche",
-      "name": "interior of The Drowned Tower",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, decaying metal chamber defined by immense, salt-encrusted steel plates with exposed, rebar-like structural elements. Dim industrial lights flicker from recessed wall conduits, illuminating a damp, unpolished concrete floor littered with barnacle debris. A partially open steel hatch lies in the foreground, while a maintenance ladder ascends into the gloom midground.",
-        "colorsAndLighting": "The scene is dominated by muted, desaturated industrial tones of rust and salt-bleached steel. A dim, flickering luminescence from recessed conduits provides an eerie, low-light ambiance.",
-        "atmosphere": "The air is heavy with the metallic tang of rust and the brine of salt, thick with dampness and a palpable sense of decay. A pervasive fog-infused darkness looms in the background, hinting at the immense, oppressive scale of the structure.",
-        "materials": "Corroded steel plates, rebar-like structural elements, unpolished concrete, and salt-encrusted surfaces are the primary materials, all appearing weathered and damaged. Barnacle debris adds a biological texture to the floor.",
-        "mood": "The overwhelming mood is one of melancholy decay and inherent danger, amplified by the oppressive atmosphere and industrial ruin.",
-        "sounds": "Dripping water, distant metallic groans, faint electrical hums, echoing dampness.",
-        "spatialLayout": "A colossal, enclosed niche space with an off-center one-point perspective. Elements like a hatch and ladder create distinct foreground and midground focal points within the overwhelming, receding background darkness.",
-        "primary_surfaces": "Salt-encrusted steel plates, unpolished concrete floor.",
-        "secondary_surfaces": "Exposed rebar-like structural elements, corroded pipes, riveted steel hatch.",
-        "accent_features": "Flickering recessed conduits, barnacle debris, partially ajar access hatch.",
-        "dominant": "Dark Gray (steel, concrete)",
-        "secondary": "Rust Brown (corrosion)",
-        "accent": "Pale Yellow (flickering light)",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "industrial metallic decay",
-        "cultural_tone": null,
-        "materials_base": "corroded metal, concrete, salt",
-        "mood_baseline": "Melancholy, decaying, dangerous",
-        "palette_bias": "desaturated industrial hues",
-        "soundscape_base": "industrial ruin",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764322926606-cwa0j7g96",
-      "description": "The immense, corroded interior of a colossal metal tower, filled with rust and salt.",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "foreground left",
-          "description": "a heavy, riveted steel access hatch, partially ajar"
-        },
-        {
-          "type": "stairs",
-          "position": "midground center",
-          "description": "a narrow, vertical maintenance ladder disappearing into the upper gloom"
-        }
-      ],
-      "dominantElements": [
-        "salt-encrusted steel plates",
-        "exposed rebar-like structural elements",
-        "flickering, recessed conduits",
-        "textured, unpolished concrete floor",
-        "barnacle debris",
-        "riveted steel access hatch",
-        "weathered, salt-bleached steel bulkhead",
-        "maintenance ladder",
-        "corroded pipes",
-        "grimy circular outflow grate"
-      ],
-      "uniqueIdentifiers": [
-        "colossal corroded metal niche",
-        "salt-encrusted steel plates",
-        "rebar-like structural elements",
-        "flickering industrial luminescence",
-        "barnacle-strewn concrete floor",
-        "riveted steel access hatch",
-        "drip-prone pipes",
-        "fog-infused darkness"
-      ],
-      "searchDesc": "Colossal, corroded metal tower interior with rust, salt, and industrial gloom.",
-      "slug": "interior-of-the-drowned-tower"
-    },
-    "loc-1764323539675-dohpf8mlu": {
-      "id": "loc-1764323539675-dohpf8mlu",
-      "type": "host",
-      "name": "The Skyborne Metropolis",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "host",
-        "name": "The Skyborne Metropolis",
-        "description": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
-        "dna": {
-          "looks": "Vast, interconnected structures suspended in an endless sky. Buildings seem to float independently, connected by intricate, often delicate, pathways and bridges. The overall impression is one of weightlessness and impossible architecture.",
-          "colorsAndLighting": "A palette dominated by cool blues and whites from the sky and clouds, contrasted with the glowing ethereal lights of structures. Lighting is often diffused, creating a dreamlike quality.",
-          "atmosphere": "The air is thin and crisp, carrying a perpetual, gentle mist that softens distant views. A sense of serene vastness and ethereal beauty pervades the environment. Gravity is subtly manipulated, allowing for effortless movement.",
-          "materials": "Polished, iridescent metals, crystalline composites, and energy-infused materials are prevalent, often appearing seamless or impossibly smooth. Natural rock formations from shattered celestial bodies might also be integrated.",
-          "mood": "Inspiring, wondrous, and slightly detached. A sense of awe and the sublime, with an underlying feeling of advanced civilization and serene control.",
-          "sounds": "Gentle wind, distant chimes, soft hums, ethereal echoes",
-          "spatialLayout": "Open, expansive, and multi-leveled. Structures are organized in vertical and horizontal clusters, with significant empty space between them, emphasizing the aerial nature of the city.",
-          "primary_surfaces": "Polished composites, iridescent metals",
-          "secondary_surfaces": "Crystalline structures, energy fields",
-          "accent_features": "Glowing conduits, holographic displays, suspended gardens",
-          "dominant": "Cool blues, whites, silver",
-          "secondary": "Ethereal purples, soft golds",
-          "accent": "Bright, glowing cyan and magenta",
-          "ambient": "Cool and diffused",
-          "genre": "fantasy-sci-fi",
-          "architectural_tone": "Graceful, impossible anti-gravity structures with smooth, flowing lines, often incorporating bioluminescent elements and vast open spaces. Emphasis on transparency and lightness.",
-          "cultural_tone": "Enlightened, contemplative, and highly advanced society focused on governance and celestial harmony.",
-          "materials_base": "Advanced composites, luminescent alloys, energy-infused materials",
-          "mood_baseline": "Serene, awe-inspiring, and technologically advanced",
-          "palette_bias": "Cool and luminous palettes with strong contrasts between light and shadow",
-          "soundscape_base": "Ethereal ambient tones, subtle technological hums, and gentle natural sounds",
-          "flora_base": "Bioluminescent flora, aerial gardens, crystalline plant life",
-          "fauna_base": "Aerial creatures, bio-engineered avians, energy-based lifeforms"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Floating islands",
-          "Ethereal bridges",
-          "Cloud formations"
-        ],
-        "uniqueIdentifiers": [
-          "Anti-gravity technology",
-          "Aerial transport systems"
-        ],
-        "searchDesc": "A metropolis in the clouds, defying gravity with advanced technology and aerial structures.",
-        "slug": "the-skyborne-metropolis",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Skyborne Metropolis",
-          "looks": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "description": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds."
-    },
-    "0d136ff8-a687-4461-a22e-8b3681d7877e": {
-      "id": "0d136ff8-a687-4461-a22e-8b3681d7877e",
-      "type": "region",
-      "name": "The Upper Council",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "region",
-        "name": "The Upper Council",
-        "description": "The highest tier of the floating city, home to its governing bodies and grand structures.",
-        "dna": {
-          "looks": "Majestic and monumental structures dominate this region, exuding authority and importance. Buildings here are grander, with more elaborate designs, often featuring elevated platforms and sweeping vistas.",
-          "colorsAndLighting": "Rich, deep blues and purples mingle with radiant golds and silvers, reflecting the importance of the region. Lighting is more directed and dramatic, highlighting key architectural features.",
-          "atmosphere": "The air is exceptionally clear, with less mist than lower regions, offering unparalleled views. A sense of gravitas and serene power is palpable. The temperature is consistently cool and pleasant.",
-          "materials": "Highly polished obsidian-like composites, gleaming gold alloys, and precisely cut luminous crystals are common, conveying prestige and permanence.",
-          "mood": "Authoritative, serene, and majestic. A feeling of deep respect and established order.",
-          "sounds": "Subtle resonant tones, distant pronouncements, harmonious chimes",
-          "spatialLayout": "Hierarchical and ordered, with large central plazas and imposing edifices arranged with deliberate symmetry. Ample open spaces are punctuated by significant architectural landmarks.",
-          "primary_surfaces": "Polished obsidian composites, gleaming gold alloys",
-          "secondary_surfaces": "Luminous crystals, smooth marble-like textures",
-          "accent_features": "Ornate filigree, elevated dais, glowing insignias",
-          "dominant": "Deep blues, purples",
-          "secondary": "Radiant gold, silver",
-          "accent": "Bright, warm white",
-          "ambient": "Cool, with focused highlights",
-          "genre": null,
-          "architectural_tone": "Majestic and imposing anti-gravity architecture, characterized by sweeping arches, grand domes, polished obsidian surfaces, intricate gold filigree, and strategically placed luminous crystal accents. Emphasizes symmetry and elevated platforms.",
-          "cultural_tone": "The seat of an ancient and wise governing body, fostering contemplation, diplomacy, and the maintenance of cosmic balance.",
-          "materials_base": "Polished obsidian, precious metals, engineered crystals",
-          "mood_baseline": "Authoritative, serene, and dignified",
-          "palette_bias": "Deep, regal colors with strong metallic accents and luminous highlights",
-          "soundscape_base": "Resonant tones, subtle authoritative pronouncements, sophisticated harmonious music",
-          "flora_base": "Cultivated aerial gardens with glowing, structured foliage; crystalline bonsai",
-          "fauna_base": "Regal aerial birds of prey, bio-engineered messenger creatures"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Grand council chambers",
-          "Observatories",
-          "Governmental spires"
-        ],
-        "uniqueIdentifiers": [
-          "Seat of power",
-          "Primary administrative hub"
-        ],
-        "searchDesc": "The highest governing tier of the Skyborne Metropolis, featuring grand structures for its leaders.",
-        "slug": "the-upper-council",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Upper Council",
-          "looks": "The highest tier of the floating city, home to its governing bodies and grand structures.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "description": "The highest tier of the floating city, home to its governing bodies and grand structures."
-    },
-    "9720a863-e276-4129-89a4-dd9d049a5f49": {
-      "id": "9720a863-e276-4129-89a4-dd9d049a5f49",
-      "type": "location",
-      "name": "The Celestial Orb",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "location",
-        "name": "The Celestial Orb",
-        "description": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
-        "looks": "A vast, perfectly round structure of polished, luminescent material. Thick, swaying suspension bridges connect it to unknown points in the sky. A single, intensely glowing portal serves as its entrance, positioned precisely at the equator.",
-        "atmosphere": "Thin, crisp air with a faint electrical charge. The gentle hum of unseen energies permeates the space. A constant, subtle movement as the structure drifts.",
-        "mood": "Majestic, awe-inspiring, pivotal",
-        "dna": {
-          "looks": "A colossal, perfectly spherical structure dominates the midground, appearing to be a parliament. It is suspended in the air by numerous cables attached to distant points. Thick, wide suspension bridges arch gracefully, connecting to the sphere and extending towards unseen locations. The sphere's surface is textured and appears to be made of a dense, reflective material. A single, intensely bright, golden-orange light emanates from a circular opening at the equator of the sphere, serving as its sole visible entrance.",
-          "colorsAndLighting": "The primary light source is a brilliant, concentrated glow emanating from the portal on the spherical parliament. This light casts warm, golden rays and creates lens flare effects. Ambient light is cool and diffused, reflecting the overcast sky and mist. There is a stark contrast between the bright portal and the darker, shadowed rock faces.",
-          "atmosphere": "The air is thick with a light, ethereal mist that softens the edges of the surrounding rocky cliffs. Visibility is limited by the atmospheric haze, creating a sense of depth and mystery. The overall environment appears moist and slightly diffused.",
-          "materials": "The sphere itself is composed of a dense, seamless, reflective composite material. The suspension bridges are made of a dark, sturdy metal, anchored by robust cables.",
-          "mood": "Mysterious, grand, and awe-inspiring. The singular bright entrance suggests a focal point of immense importance or power within the vastness.",
-          "sounds": "Distant hum, faint wind, faint creak of bridges",
-          "spatialLayout": "The foreground consists of a rocky riverbed with sparse vegetation and flowing water, leading the eye towards the midground. The midground is dominated by the immense spherical parliament, suspended by cables and connected by a wide, horizontal suspension bridge. The background features towering, mist-shrouded cliff faces that rise on either side, framing the central structure and disappearing into the haze.",
-          "primary_surfaces": "Stone (cliffs, riverbed)",
-          "secondary_surfaces": "Metal (bridges, suspension cables)",
-          "accent_features": "Luminescent material (portal, accent lights on sphere)",
-          "dominant": "Blue-gray (mist, sphere surface)",
-          "secondary": "Dark gray and brown (cliffs, rocks)",
-          "accent": "Golden-orange (portal, sparks)",
-          "ambient": "Muted blue-cyan",
-          "genre": null,
-          "architectural_tone": "Immaculate, seamless spherical architecture with flawless, highly polished surfaces. Connecting structures are robust yet elegant suspension bridges, indicating advanced engineering for extreme environments. Internal spaces would likely be similarly spherical or seamlessly integrated.",
-          "cultural_tone": "The central nexus of governance and decision-making for the Skyborne Metropolis, signifying unity and singular focus.",
-          "materials_base": "Seamless reflective composites, high-tensile alloys",
-          "mood_baseline": "Grand, mysterious, and singularly focused",
-          "palette_bias": "Muted cool tones contrasted with a powerful, singular warm light source",
-          "soundscape_base": "Subtle ambient sounds that do not detract from the imposing silence of space",
-          "flora_base": "None directly visible, but may inspire geometric patterns or energy-infused crystalline forms internally",
-          "fauna_base": "None directly visible"
-        },
-        "navigableElements": [
-          {
-            "type": "bridge",
-            "position": "center, midground",
-            "description": "Wide, sturdy suspension bridge leading to the spherical parliament"
-          },
-          {
-            "type": "portal",
-            "position": "center of sphere, midground",
-            "description": "Intensely glowing golden-orange portal, the sole entrance"
-          },
-          {
-            "type": "passage",
-            "position": "far background, center",
-            "description": "Distant, dimly lit passage between cliff faces"
-          }
-        ],
-        "dominantElements": [
-          "Spherical parliament (est. 80-100m diameter)",
-          "Suspension bridge (est. 20-30m long)",
-          "Glowing portal entrance (mid-sphere)",
-          "Rocky cliff faces (background)",
-          "Misty atmosphere (background)"
-        ],
-        "uniqueIdentifiers": [
-          "Massive suspended spherical parliament",
-          "Equatorial glowing portal entrance",
-          "Interconnecting suspension bridges"
-        ],
-        "searchDesc": "[Location - Exterior] Suspended spherical parliament. Has: suspension bridge (center, midground), glowing portal (center of sphere, midground), distant passage (far background, center)",
-        "slug": "the-celestial-orb",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Celestial Orb",
-          "looks": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "description": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
-      "primaryMedia": "media-1764323562881-76hkbjkcm"
-    },
-    "niche-1764323583043-ufte053rv": {
-      "id": "niche-1764323583043-ufte053rv",
-      "type": "niche",
-      "name": "interior of The Celestial Orb",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast geodesic dome interior crafted from smooth, pearlescent material that emits a soft luminescence. A stark, dark grey steel framework defines a visible structural grid across the ribbed walls and the 8-meter high domed ceiling. In the foreground, a polished dark obsidian floor provides a stark material contrast.",
-        "colorsAndLighting": "Soft blue light emitters integrated into the ceiling cast an ethereal glow, complemented by the pearlescent walls' internal luminescence. The overall illumination is soft and diffused, creating a majestic ambiance.",
-        "atmosphere": "The air is crisp with a faint electrical charge, accompanied by a subtle, resonant hum. The enclosed space feels vast and grand, imbued with a sense of deep, unseen energy.",
-        "materials": "The primary material is a smooth, pearlescent substance with internal luminescence. This is contrasted by thin, high-tech architectural glazing panels and a stark, dark grey steel framework. The floor features polished, dark obsidian stone, and smaller hexagonal panels display shimmering light patterns.",
-        "mood": "Majestic and awe-inspiring, evoking a sense of wonder and the presence of powerful, unseen forces.",
-        "sounds": "Subtle resonant hum, faint electrical crackle",
-        "spatialLayout": "An expansive, domed space with a continuous, ribbed geodesic structure. The ceiling reaches 8 meters high. Entry points include a ramp in the foreground and a passage in the midground, drawing the eye deeper into the orb.",
-        "primary_surfaces": "Pearlescent luminescent material (walls, ceiling), polished dark obsidian stone (floor)",
-        "secondary_surfaces": "Dark grey steel framework, high-tech architectural glazing panels, hexagonal display panels",
-        "accent_features": "Integrated soft blue light emitters, abstract shimmering patterns on hexagonal panels",
-        "dominant": "White (pearlescent material)",
-        "secondary": "Dark Grey (steel framework, obsidian floor)",
-        "accent": "Soft Blue (light emitters), shifting colors (hexagonal panels)",
-        "ambient": "Cool",
-        "genre": null,
-        "architectural_tone": "futuristic geometric",
-        "cultural_tone": null,
-        "materials_base": "advanced composites, polished stone, dark metal",
-        "mood_baseline": "Majestic, awe-inspiring",
-        "palette_bias": "cool neutral with soft luminescent highlights",
-        "soundscape_base": "ambient technological hum",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764323583042-lunevhljg",
-      "description": "The vast, luminous interior of a geodesic dome, echoing the Celestial Orb's structure.",
-      "navigableElements": [
-        {
-          "type": "ramp",
-          "position": "foreground left",
-          "description": "sleek, dark metal ramp sloping upwards"
-        },
-        {
-          "type": "passage",
-          "position": "midground center",
-          "description": "elegantly curved opening revealing another chamber"
-        }
-      ],
-      "dominantElements": [
-        "geodesic dome interior",
-        "pearlescent walls",
-        "dark grey steel framework",
-        "domed ceiling",
-        "dark obsidian floor"
-      ],
-      "uniqueIdentifiers": [
-        "geometrically ribbed geodesic dome",
-        "pearlescent, luminescent material",
-        "dark grey steel structural grid",
-        "soft blue light emitters",
-        "polished dark obsidian floor"
-      ],
-      "searchDesc": "Luminous geodesic dome interior with pearlescent walls, dark steel frame, and obsidian floor.",
-      "slug": "interior-of-the-celestial-orb"
-    },
-    "niche-1764323718636-9te5qnzu9": {
-      "id": "niche-1764323718636-9te5qnzu9",
-      "type": "niche",
-      "name": "interior of The Drowned Tower",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, corroded metal interior characterized by decaying dark grey steel plating and sea-worn concrete. A vaulted ceiling of rust-stained metal arches overhead, disappearing into shadow. The floor is a rough-hewn concrete platform, marked by age and grime.",
-        "colorsAndLighting": "Dominated by dark greys and rust tones, with faint, diffused light filtering from above, casting long, melancholic shadows. The surfaces are slick with condensation.",
-        "atmosphere": "The air is thick with the metallic tang of rust and salt. Seafoam washes over the lower sections of the walls, adding a damp, pervasive chill. Condensation slicks all surfaces, contributing to a sense of decay and neglect.",
-        "materials": "The primary materials are heavily corroded dark grey steel plating and rough, sea-worn concrete. Ribbed metal forms the vaulted ceiling, while the floor is a dark concrete platform. Barnacles encrust the lower wall sections.",
-        "mood": "The overall mood is one of deep melancholy and inherent danger, emphasized by the decay and the oppressive atmosphere.",
-        "sounds": "Dripping water, distant waves, creaking metal.",
-        "spatialLayout": "A colossal, high-ceilinged interior space with a vaulted structure. A prominent support beam bisects the midground, and navigable elements lead off into darkness or further passages.",
-        "primary_surfaces": "Corroded steel plating, sea-worn concrete.",
-        "secondary_surfaces": "Ribbed metal ceiling, rough concrete floor.",
-        "accent_features": "Barnacle-encrusted lower walls, warped staircase treads, gaping wall opening.",
-        "dominant": "Dark Grey (steel plating, concrete)",
-        "secondary": "Rust Red (stains on metal)",
-        "accent": "Foam White (seafoam)",
-        "ambient": "Cool",
-        "genre": null,
-        "architectural_tone": "Industrial metallic decay",
-        "cultural_tone": "null",
-        "materials_base": "Corroded metals, weathered concrete, stone",
-        "mood_baseline": "Melancholy, decaying, dangerous",
-        "palette_bias": "Desaturated earth tones, metallic greys",
-        "soundscape_base": "Water, decay, industrial ambient",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764323718635-lzct9mnbp",
-      "description": "The interior of a colossal, corroded metal tower partially submerged, with a strong scent of rust and salt.",
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "foreground left",
-          "description": "A narrow, angled metal staircase ascending sharply into darkness, its treads warped and uneven."
-        },
-        {
-          "type": "opening",
-          "position": "midground right",
-          "description": "A gaping, irregular opening in the wall, hinting at further derelict passages."
-        }
-      ],
-      "dominantElements": [
-        "corroded metal plating",
-        "sea-worn concrete",
-        "vaulted ribbed ceiling",
-        "support beam",
-        "concrete platform floor"
-      ],
-      "uniqueIdentifiers": [
-        "drowned tower interior",
-        "corroded metal and concrete",
-        "seafoam and condensation",
-        "rust-stained metal"
-      ],
-      "searchDesc": "Colossal, corroded metal tower interior; rust, salt, seafoam, decaying concrete. Melancholy atmosphere.",
-      "slug": "interior-of-the-drowned-tower"
-    },
-    "loc-1764324736740-u3huni5xf": {
-      "id": "loc-1764324736740-u3huni5xf",
-      "type": "host",
-      "name": "The Sundered Sands",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "host",
-        "name": "The Sundered Sands",
-        "description": "A vast desert continent under a twin-sun sky.",
-        "dna": {
-          "looks": "A sprawling, arid landscape dominated by undulating sand dunes stretching to the horizon. Jagged, sun-baked mesas rise from the flat plains, their surfaces eroded into intricate patterns. Deep, shadowed canyons carve through the terrain, hinting at hidden depths. The overall impression is one of immense, ancient emptiness.",
-          "colorsAndLighting": "The scene is bathed in a relentless, warm golden light cast by two suns, creating a palette of ochre, sand, and burnt sienna. Shadows are stark and sharply defined, though softened by a pervasive atmospheric haze. Subtle shifts in hue reflect the angle of the twin suns.",
-          "atmosphere": "The air is incredibly dry and hot, thick with fine, wind-whipped sand that reduces visibility in the distance. A constant, low hum of wind is the dominant sound. The intense solar radiation creates a shimmering heat haze above the terrain.",
-          "materials": "The dominant materials are dry, granular sand and eroded, sun-bleached stone. Dust and grit coat every surface. Sparse, wind-sculpted rock formations are prevalent.",
-          "mood": "A pervasive sense of desolation, isolation, and timeless endurance. The landscape feels unforgiving yet holds an austere beauty.",
-          "sounds": "Whispering wind, gritty sand, distant echoes, dry creaking",
-          "spatialLayout": "Vast, open expanses with a strong sense of depth and scale. The terrain is predominantly flat with dramatic vertical elements like mesas and canyons, broken by rolling dune seas.",
-          "primary_surfaces": [
-            "Sand",
-            "Eroded Stone"
-          ],
-          "secondary_surfaces": [
-            "Dust",
-            "Grit"
-          ],
-          "accent_features": [
-            "Wind-sculpted rock",
-            "Shimmering heat haze"
-          ],
-          "dominant": "Ochre",
-          "secondary": "Beige",
-          "accent": "Burnt Sienna",
-          "ambient": "Warm golden",
-          "genre": "fantasy",
-          "architectural_tone": "ancient monolithic stone construction with organic, eroded forms",
-          "cultural_tone": "nomadic, survivalist, deeply spiritual connection to the harsh environment",
-          "materials_base": "primarily natural, weathered stone and earth-based composites",
-          "mood_baseline": "resilient, solitary, timeless",
-          "palette_bias": "warm earth tones with stark light and shadow contrasts",
-          "soundscape_base": "wind-swept, dry, echoing",
-          "flora_base": "drought-resistant desert scrub, sparse hardy succulents, ancient petrified trees",
-          "fauna_base": "hardy desert insects, burrowing reptiles, large sand-dwelling predators, scavenger birds"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Endless Dunes",
-          "Scorched Mesas",
-          "Sun-bleached Canyons"
-        ],
-        "uniqueIdentifiers": [
-          "Twin Sun System",
-          "Arid Climate"
-        ],
-        "searchDesc": "Vast desert continent under twin suns, characterized by dunes, mesas, and canyons.",
-        "slug": "the-sundered-sands",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Sundered Sands",
-          "looks": "A vast desert continent under a twin-sun sky.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "description": "A vast desert continent under a twin-sun sky."
-    },
-    "863a99e7-5930-4d56-a8fb-d35513159189": {
-      "id": "863a99e7-5930-4d56-a8fb-d35513159189",
-      "type": "region",
-      "name": "The Sundered Sands",
-      "spaceType": "exterior",
-      "dna": {
-        "type": "region",
-        "name": "The Sundered Sands",
-        "description": "A vast desert continent under a twin-sun sky.",
-        "dna": {
-          "looks": "Expanses of soft, rolling sand dunes that shift with the wind, broken by mesas with flat, sun-baked tops. Deep, shadowed canyons offer pockets of respite from the relentless sun, sometimes harboring sparse, hardy vegetation.",
-          "colorsAndLighting": "The palette is dominated by warm, earthy tones – various shades of sand, ochre, and muted reds. The twin suns create sharp, long shadows and a pervasive golden glow, with occasional stark white highlights on rock faces.",
-          "atmosphere": "Extremely dry and hot, with a constant, fine dust suspended in the air that softens distant views and creates a hazy, shimmering effect. Wind is a constant presence, carrying grit and shaping the dunes.",
-          "materials": "Predominantly sand and sandstone, with some harder, darker volcanic rock forming mesa caps. Evidence of wind erosion is ubiquitous, creating smoothed and sculpted surfaces.",
-          "mood": "A profound sense of isolation and vastness, where life clings precariously. The stark beauty is underscored by the harshness of the environment.",
-          "sounds": "The ever-present whisper and roar of wind, the soft crunch of sand underfoot, the distant cry of a desert creature.",
-          "spatialLayout": "Open, sweeping vistas with a low, undulating horizon, punctuated by the sheer faces of mesas and the plunging depths of canyons.",
-          "primary_surfaces": [
-            "Sand dunes",
-            "Sandstone cliffs",
-            "Rocky outcrops"
-          ],
-          "secondary_surfaces": [
-            "Gravel plains",
-            "Dust"
-          ],
-          "accent_features": [
-            "Wind-sculpted rock formations",
-            "Sparse desert flora"
-          ],
-          "dominant": "Ochre",
-          "secondary": "Sand",
-          "accent": "Terracotta",
-          "ambient": "Warm golden",
+          "dominant": "White",
+          "secondary": "Light Blue",
+          "accent": "Grey",
+          "ambient": "Cool",
           "genre": null,
           "architectural_tone": null,
-          "cultural_tone": "nomadic survivalists, stoic, deeply connected to the rhythms of the desert",
+          "cultural_tone": null,
           "materials_base": null,
           "mood_baseline": null,
-          "palette_bias": "warm, sun-baked earth tones with high contrast",
-          "soundscape_base": "wind-dominated, dry, echoing desert sounds",
-          "flora_base": "sparse, tough desert flora like hardy succulents, thorny bushes, and wind-swept scrub",
-          "fauna_base": "small, quick desert reptiles, burrowing rodents, hardy insects, and large, patient predators"
+          "palette_bias": "cool, muted, monochromatic",
+          "soundscape_base": "wind-swept emptiness",
+          "flora_base": null,
+          "fauna_base": null
         },
         "navigableElements": [],
         "dominantElements": [
-          "Endless Dunes",
-          "Scorched Mesas",
-          "Sun-bleached Canyons"
+          "Ice caps",
+          "Tundra plains",
+          "Frozen wreckage"
         ],
         "uniqueIdentifiers": [
-          "Twin Sun System",
-          "Arid Climate"
+          "Extreme cold",
+          "Permafrost",
+          "Sparse atmosphere"
         ],
-        "searchDesc": "Vast desert continent under twin suns, characterized by dunes, mesas, and canyons.",
-        "slug": "the-sundered-sands-region",
+        "searchDesc": "Vast, unforgiving tundra plains locked in perpetual ice and snow.",
+        "slug": "the-frozen-expanse",
         "semantic": {
           "atmosphere": "",
           "mood": ""
@@ -764,71 +138,75 @@
           "style": ""
         },
         "profile": {
-          "name": "The Sundered Sands",
-          "looks": "A vast desert continent under a twin-sun sky.",
+          "name": "The Frozen Expanse",
+          "looks": "",
           "atmosphere": "",
           "mood": ""
         }
       },
-      "description": "A vast desert continent under a twin-sun sky."
+      "description": ""
     },
-    "a96f3317-97e8-4cf9-a266-b2a63e11feb6": {
-      "id": "a96f3317-97e8-4cf9-a266-b2a63e11feb6",
+    "5423bfb8-2af3-4dd6-8547-09effd43938d": {
+      "id": "5423bfb8-2af3-4dd6-8547-09effd43938d",
       "type": "location",
-      "name": "The Hollow Titan",
+      "name": "The Halo of Desolation",
       "spaceType": "exterior",
       "dna": {
         "type": "location",
-        "name": "The Hollow Titan",
-        "description": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
-        "looks": "Massive, weathered stone structure of a humanoid figure, stretched out horizontally. A gaping maw serves as the primary entrance.",
-        "atmosphere": "Dry, dusty air with a faint mineral scent. Silence broken only by the wind.",
-        "mood": "Monumental, awe-inspiring, ancient",
+        "name": "The Halo of Desolation",
+        "description": "A colossal, ring-shaped generation ship, fractured and half-submerged in the frozen tundra. Its spokes, like broken celestial arms, stretch out from the central hub.",
+        "looks": "Massive metallic ring structure, weathered and pitted, partially buried in snow and ice. Spokes are bent and twisted, resembling a shattered halo. The central hub features a large, circular door that continues its slow, ominous rotation.",
+        "atmosphere": "biting cold, thin air, the faint groan of stressed metal, wind whistling through structural gaps",
+        "mood": "desolate, awe-inspiring, melancholic",
         "dna": {
-          "looks": "A colossal, weathered stone structure of a humanoid figure lies horizontally across a barren desert landscape. Its immense scale is emphasized by the small figures visible in the distance approaching its open mouth. The stone appears eroded by time and the elements, with rough textures and undulating surfaces. The mouth itself forms a vast, dark cavernous opening, suggesting a significant interior space. The overall form is monolithic and ancient, dominating the natural terrain.",
-          "colorsAndLighting": "The scene is lit by a strong, diffuse light, likely from twin suns, casting a warm, golden hue across the landscape. Shadows are soft and blended due to the atmospheric haze. The entrance to the colossus is a deep shadow, contrasting sharply with the illuminated exterior.",
-          "atmosphere": "The air is thick with dust, stirred by the wind, creating a hazy, diffused environment. Visibility is reduced, particularly around the entrance, obscuring finer details within the cavern's maw.",
-          "materials": "The primary material is immense, weathered stone. The surrounding environment consists of fine sand and grit.",
-          "mood": "Awe-inspiring, mysterious, and slightly ominous. The sheer scale and unnatural presence of the titan evoke a sense of ancient power and forgotten history.",
-          "sounds": "Muffled wind, distant grit scraping, the low hum of latent energy",
-          "spatialLayout": "The foreground consists of arid desert ground with scattered rocks and a dirt path leading towards the midground. The midground is dominated by the immense, recumbent stone colossus, its opened mouth forming a large, dark void. The background shows more desert landscape and a hazy sky with clouds. The overall spatial composition is one of immense scale against a vast, open environment.",
-          "primary_surfaces": "Stone",
-          "secondary_surfaces": "Sand, Dirt",
+          "looks": "A colossal, ring-shaped generation ship dominates the landscape, partially embedded in a snow-covered terrain. Its massive structure displays signs of age and damage, with segments appearing weathered and pitted. Radiating spokes extend outwards from the central hub, resembling broken celestial arms against the sky. The snow-covered ground is uneven, with rocky outcrops dusted in white. The overall impression is one of immense scale and a stark, alien environment.",
+          "colorsAndLighting": "The scene is illuminated by a diffuse, cool light source, likely the sun obscured by clouds or atmospheric haze. Shadows are soft and elongated, indicating a low-angle light source. The overall color palette is dominated by cool tones, with subtle variations in brightness across the structure and landscape.",
+          "atmosphere": "A thin, hazy atmosphere obscures distant features, lending an ethereal quality to the scene. The air appears clear enough to discern details on the primary structure, suggesting it's a cold, dry environment. Subtle wisps of mist may be present in the far background.",
+          "materials": "Primarily aged, pitted metal for the ship's structure, with snow and ice covering much of its surface. Rocky outcrops are also visible.",
+          "mood": "Majestic decay, alien grandeur, and a profound sense of fallen purpose. The spinning door adds an unsettling touch of residual activity.",
+          "sounds": "Distant metallic groans, wind whistling through wreckage, slow mechanical hum of the door.",
+          "spatialLayout": "The foreground consists of a snow-covered track or pathway leading towards the midground, flanked by rocky, snow-dusted terrain. The midground is dominated by the colossal, ring-shaped generation ship, a HORIZONTAL STRUCTURE of immense diameter, partially buried in the tundra. The background reveals a vast, featureless expanse of snow-covered hills and mountains under a hazy sky.",
+          "primary_surfaces": "Metal",
+          "secondary_surfaces": "Snow, Ice, Rock",
           "accent_features": "None visible",
-          "dominant": "Ochre (stone and desert)",
-          "secondary": "Beige (sky and clouds)",
-          "accent": "Dark brown/black (entrance interior)",
-          "ambient": "Warm golden",
+          "dominant": "Light Blue (sky, haze)",
+          "secondary": "Grey (structure), White (snow)",
+          "accent": "Darker Grey (structure details)",
+          "ambient": "Cool, muted blue",
           "genre": null,
-          "architectural_tone": "ancient monolithic stone construction with organic, eroded forms, carved to resemble a colossal humanoid figure",
+          "architectural_tone": "brutalist sci-fi with elements of decay and immense scale, featuring massive geometric forms, exposed structural elements, and weathered metallic plating",
           "cultural_tone": null,
-          "materials_base": null,
-          "mood_baseline": "awe-inspiring, mysterious, ancient",
-          "palette_bias": null,
-          "soundscape_base": null,
+          "materials_base": "weathered metal, ice, rock",
+          "mood_baseline": "desolate isolation",
+          "palette_bias": "cool, muted, monochromatic",
+          "soundscape_base": "wind-swept emptiness with mechanical undertones",
           "flora_base": null,
           "fauna_base": null
         },
         "navigableElements": [
           {
             "type": "door",
-            "position": "center, midground",
-            "description": "A massive, dark, cavernous opening serving as the primary entrance into the colossus."
+            "position": "center, midground (implied on the central hub)",
+            "description": "Large, circular door on the central hub, appearing to slowly rotate."
+          },
+          {
+            "type": "passage",
+            "position": "through the ring structure, midground",
+            "description": "The immense opening within the ring structure suggests a passage or thoroughfare."
           }
         ],
         "dominantElements": [
-          "Massive stone colossus lying on its side (center, midground)",
-          "Cavernous entrance (mouth of colossus, center, midground)",
-          "Desert terrain with rocky outcrops (foreground)",
-          "Dusty, hazy atmosphere (entire scene)",
-          "Distant figures on a dirt path (center, midground)"
+          "Massive ring-shaped generation ship (midground)",
+          "Snow-covered tundra (foreground and midground)",
+          "Rocky outcrops with snow (foreground and sides)"
         ],
         "uniqueIdentifiers": [
-          "Kilometer-tall stone colossus lying on its side",
-          "Open mouth forming a cavernous entrance hall"
+          "Crashed ring-shaped generation ship",
+          "Spokes radiating from central hub",
+          "Half-buried in tundra"
         ],
-        "searchDesc": "Massive stone colossus in desert. Has: cavernous entrance (center, midground)",
-        "slug": "the-hollow-titan",
+        "searchDesc": "[Location - Exterior] Crashed generation ship ring in tundra. Has: rotating door (center, midground), passage through ring (midground)",
+        "slug": "the-halo-of-desolation",
         "semantic": {
           "atmosphere": "",
           "mood": ""
@@ -838,766 +216,101 @@
           "style": ""
         },
         "profile": {
-          "name": "The Hollow Titan",
-          "looks": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
+          "name": "The Halo of Desolation",
+          "looks": "A colossal, ring-shaped generation ship, fractured and half-submerged in the frozen tundra. Its spokes, like broken celestial arms, stretch out from the central hub.",
           "atmosphere": "",
           "mood": ""
         }
       },
-      "description": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
-      "primaryMedia": "media-1764324766034-remxtkns9"
+      "description": "A colossal, ring-shaped generation ship, fractured and half-submerged in the frozen tundra. Its spokes, like broken celestial arms, stretch out from the central hub.",
+      "primaryMedia": "media-1764325894136-zltq27asl"
     },
-    "niche-1764324794879-jh71oa4vi": {
-      "id": "niche-1764324794879-jh71oa4vi",
+    "niche-1764325949657-fvcr7a2kd": {
+      "id": "niche-1764325949657-fvcr7a2kd",
       "type": "niche",
-      "name": "interior of The Hollow Titan",
+      "name": "interior of The Halo of Desolation",
       "spaceType": "interior",
       "dna": {
-        "looks": "Monumental monolithic walls of rough-hewn, ancient stone rise around a floor that slopes gently downwards. Massive arching buttresses of compacted earth and rock support an unseen ceiling, creating shadowed alcoves. The background is dominated by the immense, curving sweep of a smooth, polished stone surface, suggesting a colossal hollowed-out interior.",
-        "colorsAndLighting": "Dominant dark grey stone is dramatically highlighted by faint, ambient light from above, casting long, deep shadows.",
-        "atmosphere": "The air is dry and dusty, carrying a palpable sense of immense scale and profound antiquity. The air feels still and heavy, suggesting a long-dormant presence.",
-        "materials": "The primary material is weathered, ancient stone, ranging from rough-hewn on the floor and walls to smooth and polished on the background sweep. Compacted earth and rock form massive buttresses.",
-        "mood": "This space evokes a profound sense of monumental awe and ancient mystery, hinting at a slumbering, colossal entity.",
-        "sounds": "Silence, faint dust motes shifting, ancient stone settling.",
-        "spatialLayout": "The interior is vast and asymmetrical, with a downward-sloping floor leading to a narrow passage. Towering walls disappear into shadow, while arched buttresses create complex shadowed volumes. The space feels immense and organic, as if carved by natural forces or immense beings.",
-        "primary_surfaces": "Weathered ancient stone (rough-hewn to polished)",
-        "secondary_surfaces": "Compacted earth and rock",
-        "accent_features": "Narrow passage cut into floor, slightly ajar stone slab door",
-        "dominant": "Dark Grey (70%)",
-        "secondary": "Shadow (20%)",
-        "accent": "Faint ambient light (10%)",
-        "ambient": "Neutral",
+        "looks": "A vast, circular chamber is constructed from immense, weathered, dark-grey metallic plating. Segmented walls of high-tech architectural glazing offer views of a stark, icy exterior, supported by a matte black steel geodesic grid. A raised metal platform with blue LED lighting is centered in the foreground, with a heavy hatch to the left.",
+        "colorsAndLighting": "The dominant color palette consists of cool greys, deep charcoals, and stark whites, with subtle reflections from the polished concrete floor. Cold, faint internal lighting emanates from LED strips and data conduits, casting dramatic shadows from the vaulted ceiling.",
+        "atmosphere": "The air is biting cold, carrying the faint, resonant groan of stressed metal and the distant whistle of wind. The immense scale and stark materials evoke a sense of desolate awe.",
+        "materials": "Primary materials include weathered, pitted, dark-grey metallic plating and dark, polished concrete. Secondary materials feature matte black steel for the geodesic grid and thin, high-tech architectural glazing. Exposed machinery and glowing data conduits add detail.",
+        "mood": "This place evokes a mood of desolate awe and melancholic grandeur, with a sense of isolation and forgotten purpose.",
+        "sounds": "resonant groan, stressed metal, whistle of wind, distant wind",
+        "spatialLayout": "The space is a vast, circular chamber with a high, vaulted dome ceiling. Segmented walls create alcoves and recesses, and a single corridor leads towards the background, framed by archways.",
+        "primary_surfaces": "weathered metallic plating, architectural glazing, polished concrete",
+        "secondary_surfaces": "matte black steel, integrated LED strips",
+        "accent_features": "glowing data conduits, exposed machinery, cold-blue LED strips",
+        "dominant": "cool greys (metallic plating, concrete, steel)",
+        "secondary": "stark whites (glazing, ice exterior)",
+        "accent": "deep charcoals (shadows, accents), cold-blue (LED lighting)",
+        "ambient": "cool",
         "genre": null,
-        "architectural_tone": "organic stone",
+        "architectural_tone": "industrial metallic",
         "cultural_tone": null,
         "materials_base": null,
-        "mood_baseline": "Monumental, awe-inspiring, ancient",
+        "mood_baseline": "desolate, awe-inspiring, melancholic",
         "palette_bias": null,
-        "soundscape_base": "Silent, vast",
+        "soundscape_base": "ambient industrial, atmospheric wind",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1764324794878-pu3eb667q",
-      "description": "The immense, hollowed-out interior of a colossal, slumbering entity, carved from ancient stone.",
+      "primaryMedia": "media-1764325949656-m79vzhp38",
+      "description": "The interior of a vast, circular chamber within a shattered halo structure, featuring metallic plating, segmented glazing, and a cold, desolate atmosphere.",
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "foreground left",
-          "description": "A barely discernible, narrow passage cut into the stone floor."
+          "type": "platform",
+          "position": "foreground center",
+          "description": "A raised, circular metal platform with a low, stark railing."
         },
         {
-          "type": "door",
+          "type": "hatch",
+          "position": "foreground left",
+          "description": "A heavy, angular metal hatch set into the concrete floor."
+        },
+        {
+          "type": "passage",
           "position": "midground right",
-          "description": "A single, heavy stone slab set into the wall, slightly ajar."
+          "description": "A single, narrow, reinforced metal corridor extending towards the background."
         }
       ],
       "dominantElements": [
-        "monolithic walls",
-        "arching buttresses",
-        "curving sweep of the titan's inner form"
+        "immense, weathered, dark-grey metallic plating",
+        "thin, high-tech architectural glazing",
+        "robust geodesic grid of matte black steel",
+        "raised, circular metal platform",
+        "segmented walls"
       ],
       "uniqueIdentifiers": [
-        "carved from weathered, ancient stone",
-        "inner form of a colossal entity",
-        "faint ambient light from above",
-        "asymmetrical composition"
+        "shattered halo motif",
+        "geodesic steel grid",
+        "weathered metallic plating",
+        "segmented architectural glazing"
       ],
-      "searchDesc": "Monumental ancient stone interior with massive buttresses and a curving sweep.",
-      "slug": "interior-of-the-hollow-titan"
+      "searchDesc": "Vast circular chamber with weathered metal, glazing revealing icy exterior, cold and grand.",
+      "slug": "interior-of-the-halo-of-desolation"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764322819196-ta48nltve",
+      "id": "loc-1764325866761-kob9no37h",
       "type": "host",
-      "name": "Post-Apocalyptic Coastline",
-      "description": "A world reshaped by environmental collapse and technological decay.",
-      "dna": {
-        "type": "host",
-        "name": "Post-Apocalyptic Coastline",
-        "description": "A world reshaped by environmental collapse and technological decay.",
-        "dna": {
-          "looks": "Vast, desolate landscapes dominated by the remnants of advanced civilization now succumbing to nature and time. Structures are broken, weathered, and often repurposed by survivors. Natural elements are reclaiming man-made environments.",
-          "colorsAndLighting": "A palette of muted earth tones, rust reds, desaturated blues, and washed-out greens. Lighting is often dim, diffused, and moody, with an emphasis on atmospheric conditions like fog or dust.",
-          "atmosphere": "The air is thick with the scent of decay, salt, and damp earth. A pervasive sense of melancholic quietude hangs over the land, broken only by the sounds of nature and the distant echoes of a lost era.",
-          "materials": "Dominant materials include heavily rusted metals, crumbling concrete, scavenged wood, and hardy, often mutated, vegetation. Surfaces show extreme wear, corrosion, and infestation.",
-          "mood": "Melancholy, resilience, isolation, and a pervasive sense of loss. There's an underlying tension of survival against overwhelming odds.",
-          "sounds": "Wind, distant waves, creaking metal, animal calls, dripping water, crumbling debris",
-          "spatialLayout": "Open, sprawling vistas interspersed with cluttered, hazardous ruins. Navigation often involves traversing hazardous terrain and finding safe paths through collapsed structures.",
-          "primary_surfaces": [
-            "rusted metal",
-            "crumbling concrete"
-          ],
-          "secondary_surfaces": [
-            "weathered wood",
-            "earth",
-            "vegetation"
-          ],
-          "accent_features": [
-            "scavenged debris",
-            "wild overgrowth",
-            "flickering lights"
-          ],
-          "dominant": "desaturated earth tones",
-          "secondary": "rust red, muted grey-green",
-          "accent": "off-white, dark brown",
-          "ambient": "cool",
-          "genre": "post-apocalyptic",
-          "architectural_tone": "decaying industrial and utilitarian structures with elements of makeshift survivalist modifications, showcasing rust, exposed rebar, and weathered concrete.",
-          "cultural_tone": "survivalist, scavenger, nomadic, pragmatic, resourceful, with lost echoes of pre-collapse high technology.",
-          "materials_base": "heavily corroded metals, rough concrete, scavenged wood, hardy organic growth.",
-          "mood_baseline": "melancholic, desolate, resilient, eerie.",
-          "palette_bias": "muted, desaturated, earth-toned with accents of rust and faded industrial colors.",
-          "soundscape_base": "ambient environmental sounds with the pervasive sense of decay and isolation.",
-          "flora_base": "hardy, mutated, or overgrown native vegetation, often with a dark or desaturated hue.",
-          "fauna_base": "mutated or hardy terrestrial wildlife."
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Ruined infrastructure",
-          "Overgrown nature",
-          "Scavenged settlements"
-        ],
-        "uniqueIdentifiers": [
-          "Widespread decay",
-          "Resource scarcity",
-          "Mutated flora and fauna"
-        ],
-        "searchDesc": "A shattered world of rusting ruins, encroaching wilds, and the struggle for survival.",
-        "slug": "post-apocalyptic-coastline",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "Post-Apocalyptic Coastline",
-          "looks": "A world reshaped by environmental collapse and technological decay.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "spaceType": "exterior",
       "children": [
         {
-          "id": "8c78c63b-857d-4a4d-b0da-2d0475a125a4",
+          "id": "40a5679c-b65b-4743-803f-e743bab727d9",
           "type": "region",
-          "name": "The Salt-Scoured Peninsula",
-          "description": "A desolate stretch of coast battered by relentless fog and sea.",
-          "dna": {
-            "type": "region",
-            "name": "The Salt-Scoured Peninsula",
-            "description": "A desolate stretch of coast battered by relentless fog and sea.",
-            "dna": {
-              "looks": "A harsh, windswept coastline with eroding cliffs, treacherous rocky shores, and vast expanses of grey, choppy sea. Dense, pervasive fog is a constant feature, limiting visibility and muffling sounds.",
-              "colorsAndLighting": "Dominated by cool, desaturated blues and greys of the sea and sky, with patches of dull brown and green from exposed earth and hardy vegetation. Lighting is perpetually diffused by fog.",
-              "atmosphere": "The air is heavy with moisture, the sharp tang of salt, and the perpetual chill of the sea. A sense of isolation and being on the edge of the world pervades this region.",
-              "materials": "Salt-encrusted rocks, weathered driftwood, barnacle-covered debris, and the relentless presence of sea foam and spray.",
-              "mood": "Bleak, isolated, unforgiving, and enduring.",
-              "sounds": "Crashing waves, mournful foghorns, seabird cries, the howl of wind, dripping condensation",
-              "spatialLayout": "Open, exposed coastal terrain with sudden drops and hazardous submerged obstacles. Navigation is challenging due to poor visibility and treacherous footing.",
-              "primary_surfaces": [
-                "salt-crusted rock",
-                "sea-worn concrete"
-              ],
-              "secondary_surfaces": [
-                "driftwood",
-                "sand",
-                "coarse gravel"
-              ],
-              "accent_features": [
-                "shipwreck fragments",
-                "seaweed",
-                "coastal erosion patterns"
-              ],
-              "dominant": "grey",
-              "secondary": "desaturated blue, dull brown",
-              "accent": "off-white",
-              "ambient": "cool",
-              "genre": null,
-              "architectural_tone": "decaying industrial and utilitarian structures adapted to extreme coastal conditions, featuring exposed, corroded metal, weathered concrete with deep cracks, and rudimentary waterproofing attempts.",
-              "cultural_tone": "isolated maritime survivors, hardy fisherfolk, scavengers of the sea, pragmatic and resilient against the elements.",
-              "materials_base": "salt-resistant metals, weathered concrete, waterlogged wood, marine debris.",
-              "mood_baseline": "bleak, isolated, enduring, melancholic.",
-              "palette_bias": "cool, desaturated blues and greys with earthy undertones.",
-              "soundscape_base": "constant ambient sounds of the sea and weather, emphasizing isolation.",
-              "flora_base": "salt-tolerant, scrubby coastal plants, hardy grasses, and kelp or seaweed.",
-              "fauna_base": "seabirds, marine life, coastal rodents."
-            },
-            "navigableElements": [],
-            "dominantElements": [
-              "Jagged coastline",
-              "Perpetual fog banks",
-              "Shipwrecks"
-            ],
-            "uniqueIdentifiers": [
-              "Brackish atmosphere",
-              "Erosion by sea",
-              "Limited visibility"
-            ],
-            "searchDesc": "A fog-shrouded, salt-blasted coast where the sea relentlessly grinds down all in its path.",
-            "slug": "the-salt-scoured-peninsula",
-            "semantic": {
-              "atmosphere": "",
-              "mood": ""
-            },
-            "visual": {
-              "prompt": "",
-              "style": ""
-            },
-            "profile": {
-              "name": "The Salt-Scoured Peninsula",
-              "looks": "A desolate stretch of coast battered by relentless fog and sea.",
-              "atmosphere": "",
-              "mood": ""
-            }
-          },
-          "spaceType": "exterior",
           "children": [
             {
-              "id": "04ab2e6a-2c38-4187-ae63-91af8b8f2440",
+              "id": "5423bfb8-2af3-4dd6-8547-09effd43938d",
               "type": "location",
-              "name": "The Drowned Tower",
-              "description": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
-              "dna": {
-                "type": "location",
-                "name": "The Drowned Tower",
-                "description": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
-                "looks": "Colossal, corroded metal structure leaning precariously into churning, grey water. Barnacles cling to the lower sections, and seafoam washes over exposed rebar. A solitary, weathered maintenance ladder is still attached to its side.",
-                "atmosphere": "Thick, biting sea fog, the constant roar of waves, the metallic tang of rust and salt.",
-                "mood": "Melancholy, decaying, dangerous",
-                "dna": {
-                  "looks": "A colossal, cylindrical fusion reactor cooling tower leans precariously, half-submerged in the sea. Its weathered, rusted surface shows signs of decay, with patches of green algae or moss. The vast structure appears to be a remnant of industrial might, now surrendering to the elements. Small plants sprout from its upper sections, contrasting with the metallic corrosion. Barnacles encrust the submerged portions, and seafoam washes over exposed metallic elements.",
-                  "colorsAndLighting": "The lighting is diffused and soft, characteristic of a foggy environment. There are no distinct shadows or strong highlights. The overall light tone is a cool, desaturated blue-green, reflecting the atmospheric conditions and the muted colors of the scene.",
-                  "atmosphere": "Thick, persistent fog blankets the scene, obscuring the horizon and the full extent of the structure. The air feels heavy with moisture and the spray of the sea. Visibility is significantly reduced, contributing to the desolate and isolated atmosphere.",
-                  "materials": "Heavily oxidized steel, barnacle-encrusted concrete, the salty sea, and patches of tenacious organic growth.",
-                  "mood": "Decadent, imposing, melancholic, and a stark reminder of lost industrial power.",
-                  "sounds": "Lapping waves, creaking metal, distant seabirds, dripping water, sea spray",
-                  "spatialLayout": "The foreground consists of a wet, dark asphalt path curving to the left and a pebbled shoreline. In the midground, the massive cooling tower dominates the view, angled into the sea. The lower half of the tower is submerged in the churning water, with waves breaking against its base. The background is a hazy expanse of sea and sky, heavily obscured by fog.",
-                  "primary_surfaces": "rusted metal",
-                  "secondary_surfaces": "concrete, pebbles, water, organic growth",
-                  "accent_features": "seafoam",
-                  "dominant": "dark grey (tower, path)",
-                  "secondary": "light blue-green (sky, sea)",
-                  "accent": "white (seafoam, waves)",
-                  "ambient": "desaturated blue-green",
-                  "genre": null,
-                  "architectural_tone": "decaying industrial behemoth with a focus on massive scale and structural compromise, showcasing extreme rust, exposed rebar, deep corrosion, and the encroachment of marine life.",
-                  "cultural_tone": null,
-                  "materials_base": "heavily rusted industrial steel, reinforced concrete weathered by salt and water, marine accretions like barnacles and algae.",
-                  "mood_baseline": "imposing, desolate, awe-inspiring in its decay.",
-                  "palette_bias": "dominated by rust tones and deep industrial greys, contrasted with the cool blues of the sea.",
-                  "soundscape_base": "a symphony of the sea interacting with a colossal, decaying structure.",
-                  "flora_base": "marine algae, barnacles, and hardy coastal plants at the upper exposed sections.",
-                  "fauna_base": "marine life, coastal birds."
-                },
-                "navigableElements": [
-                  {
-                    "type": "ladder",
-                    "position": "left side of tower, midground",
-                    "description": "Weathered maintenance ladder attached to the colossal tower."
-                  }
-                ],
-                "dominantElements": [
-                  "Massive, rusted cooling tower half-submerged in sea (center, midground/background)",
-                  "Grey, churning sea with waves (right, midground/foreground)",
-                  "Foggy, muted sky (background)",
-                  "Pebbled shoreline and wet asphalt path (foreground)"
-                ],
-                "uniqueIdentifiers": [
-                  "Half-collapsed fusion reactor cooling tower",
-                  "Rusted metallic structure partially submerged in sea",
-                  "Maintenance ladder attached to the tower"
-                ],
-                "searchDesc": "Post-apocalyptic coast. Has: rusted cooling tower (midground), maintenance ladder (midground)",
-                "slug": "the-drowned-tower",
-                "semantic": {
-                  "atmosphere": "",
-                  "mood": ""
-                },
-                "visual": {
-                  "prompt": "",
-                  "style": ""
-                },
-                "profile": {
-                  "name": "The Drowned Tower",
-                  "looks": "A massive, rusted fusion reactor cooling tower, half-submerged and collapsing into the sea.",
-                  "atmosphere": "",
-                  "mood": ""
-                }
-              },
-              "spaceType": "exterior",
               "children": [
                 {
-                  "id": "niche-1764322926607-rf1219dfs",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1764323718636-9te5qnzu9",
+                  "id": "niche-1764325949657-fvcr7a2kd",
                   "type": "niche",
                   "children": []
                 }
-              ],
-              "primaryMedia": "media-1764322841357-d479qzfsy"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764323539675-dohpf8mlu",
-      "type": "host",
-      "name": "The Skyborne Metropolis",
-      "description": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
-      "dna": {
-        "type": "host",
-        "name": "The Skyborne Metropolis",
-        "description": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
-        "dna": {
-          "looks": "Vast, interconnected structures suspended in an endless sky. Buildings seem to float independently, connected by intricate, often delicate, pathways and bridges. The overall impression is one of weightlessness and impossible architecture.",
-          "colorsAndLighting": "A palette dominated by cool blues and whites from the sky and clouds, contrasted with the glowing ethereal lights of structures. Lighting is often diffused, creating a dreamlike quality.",
-          "atmosphere": "The air is thin and crisp, carrying a perpetual, gentle mist that softens distant views. A sense of serene vastness and ethereal beauty pervades the environment. Gravity is subtly manipulated, allowing for effortless movement.",
-          "materials": "Polished, iridescent metals, crystalline composites, and energy-infused materials are prevalent, often appearing seamless or impossibly smooth. Natural rock formations from shattered celestial bodies might also be integrated.",
-          "mood": "Inspiring, wondrous, and slightly detached. A sense of awe and the sublime, with an underlying feeling of advanced civilization and serene control.",
-          "sounds": "Gentle wind, distant chimes, soft hums, ethereal echoes",
-          "spatialLayout": "Open, expansive, and multi-leveled. Structures are organized in vertical and horizontal clusters, with significant empty space between them, emphasizing the aerial nature of the city.",
-          "primary_surfaces": "Polished composites, iridescent metals",
-          "secondary_surfaces": "Crystalline structures, energy fields",
-          "accent_features": "Glowing conduits, holographic displays, suspended gardens",
-          "dominant": "Cool blues, whites, silver",
-          "secondary": "Ethereal purples, soft golds",
-          "accent": "Bright, glowing cyan and magenta",
-          "ambient": "Cool and diffused",
-          "genre": "fantasy-sci-fi",
-          "architectural_tone": "Graceful, impossible anti-gravity structures with smooth, flowing lines, often incorporating bioluminescent elements and vast open spaces. Emphasis on transparency and lightness.",
-          "cultural_tone": "Enlightened, contemplative, and highly advanced society focused on governance and celestial harmony.",
-          "materials_base": "Advanced composites, luminescent alloys, energy-infused materials",
-          "mood_baseline": "Serene, awe-inspiring, and technologically advanced",
-          "palette_bias": "Cool and luminous palettes with strong contrasts between light and shadow",
-          "soundscape_base": "Ethereal ambient tones, subtle technological hums, and gentle natural sounds",
-          "flora_base": "Bioluminescent flora, aerial gardens, crystalline plant life",
-          "fauna_base": "Aerial creatures, bio-engineered avians, energy-based lifeforms"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Floating islands",
-          "Ethereal bridges",
-          "Cloud formations"
-        ],
-        "uniqueIdentifiers": [
-          "Anti-gravity technology",
-          "Aerial transport systems"
-        ],
-        "searchDesc": "A metropolis in the clouds, defying gravity with advanced technology and aerial structures.",
-        "slug": "the-skyborne-metropolis",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Skyborne Metropolis",
-          "looks": "A city built amongst the clouds, where gravity is a suggestion and architecture defies earthly bounds.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "spaceType": "exterior",
-      "children": [
-        {
-          "id": "0d136ff8-a687-4461-a22e-8b3681d7877e",
-          "type": "region",
-          "name": "The Upper Council",
-          "description": "The highest tier of the floating city, home to its governing bodies and grand structures.",
-          "dna": {
-            "type": "region",
-            "name": "The Upper Council",
-            "description": "The highest tier of the floating city, home to its governing bodies and grand structures.",
-            "dna": {
-              "looks": "Majestic and monumental structures dominate this region, exuding authority and importance. Buildings here are grander, with more elaborate designs, often featuring elevated platforms and sweeping vistas.",
-              "colorsAndLighting": "Rich, deep blues and purples mingle with radiant golds and silvers, reflecting the importance of the region. Lighting is more directed and dramatic, highlighting key architectural features.",
-              "atmosphere": "The air is exceptionally clear, with less mist than lower regions, offering unparalleled views. A sense of gravitas and serene power is palpable. The temperature is consistently cool and pleasant.",
-              "materials": "Highly polished obsidian-like composites, gleaming gold alloys, and precisely cut luminous crystals are common, conveying prestige and permanence.",
-              "mood": "Authoritative, serene, and majestic. A feeling of deep respect and established order.",
-              "sounds": "Subtle resonant tones, distant pronouncements, harmonious chimes",
-              "spatialLayout": "Hierarchical and ordered, with large central plazas and imposing edifices arranged with deliberate symmetry. Ample open spaces are punctuated by significant architectural landmarks.",
-              "primary_surfaces": "Polished obsidian composites, gleaming gold alloys",
-              "secondary_surfaces": "Luminous crystals, smooth marble-like textures",
-              "accent_features": "Ornate filigree, elevated dais, glowing insignias",
-              "dominant": "Deep blues, purples",
-              "secondary": "Radiant gold, silver",
-              "accent": "Bright, warm white",
-              "ambient": "Cool, with focused highlights",
-              "genre": null,
-              "architectural_tone": "Majestic and imposing anti-gravity architecture, characterized by sweeping arches, grand domes, polished obsidian surfaces, intricate gold filigree, and strategically placed luminous crystal accents. Emphasizes symmetry and elevated platforms.",
-              "cultural_tone": "The seat of an ancient and wise governing body, fostering contemplation, diplomacy, and the maintenance of cosmic balance.",
-              "materials_base": "Polished obsidian, precious metals, engineered crystals",
-              "mood_baseline": "Authoritative, serene, and dignified",
-              "palette_bias": "Deep, regal colors with strong metallic accents and luminous highlights",
-              "soundscape_base": "Resonant tones, subtle authoritative pronouncements, sophisticated harmonious music",
-              "flora_base": "Cultivated aerial gardens with glowing, structured foliage; crystalline bonsai",
-              "fauna_base": "Regal aerial birds of prey, bio-engineered messenger creatures"
-            },
-            "navigableElements": [],
-            "dominantElements": [
-              "Grand council chambers",
-              "Observatories",
-              "Governmental spires"
-            ],
-            "uniqueIdentifiers": [
-              "Seat of power",
-              "Primary administrative hub"
-            ],
-            "searchDesc": "The highest governing tier of the Skyborne Metropolis, featuring grand structures for its leaders.",
-            "slug": "the-upper-council",
-            "semantic": {
-              "atmosphere": "",
-              "mood": ""
-            },
-            "visual": {
-              "prompt": "",
-              "style": ""
-            },
-            "profile": {
-              "name": "The Upper Council",
-              "looks": "The highest tier of the floating city, home to its governing bodies and grand structures.",
-              "atmosphere": "",
-              "mood": ""
-            }
-          },
-          "spaceType": "exterior",
-          "children": [
-            {
-              "id": "9720a863-e276-4129-89a4-dd9d049a5f49",
-              "type": "location",
-              "name": "The Celestial Orb",
-              "description": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
-              "dna": {
-                "type": "location",
-                "name": "The Celestial Orb",
-                "description": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
-                "looks": "A vast, perfectly round structure of polished, luminescent material. Thick, swaying suspension bridges connect it to unknown points in the sky. A single, intensely glowing portal serves as its entrance, positioned precisely at the equator.",
-                "atmosphere": "Thin, crisp air with a faint electrical charge. The gentle hum of unseen energies permeates the space. A constant, subtle movement as the structure drifts.",
-                "mood": "Majestic, awe-inspiring, pivotal",
-                "dna": {
-                  "looks": "A colossal, perfectly spherical structure dominates the midground, appearing to be a parliament. It is suspended in the air by numerous cables attached to distant points. Thick, wide suspension bridges arch gracefully, connecting to the sphere and extending towards unseen locations. The sphere's surface is textured and appears to be made of a dense, reflective material. A single, intensely bright, golden-orange light emanates from a circular opening at the equator of the sphere, serving as its sole visible entrance.",
-                  "colorsAndLighting": "The primary light source is a brilliant, concentrated glow emanating from the portal on the spherical parliament. This light casts warm, golden rays and creates lens flare effects. Ambient light is cool and diffused, reflecting the overcast sky and mist. There is a stark contrast between the bright portal and the darker, shadowed rock faces.",
-                  "atmosphere": "The air is thick with a light, ethereal mist that softens the edges of the surrounding rocky cliffs. Visibility is limited by the atmospheric haze, creating a sense of depth and mystery. The overall environment appears moist and slightly diffused.",
-                  "materials": "The sphere itself is composed of a dense, seamless, reflective composite material. The suspension bridges are made of a dark, sturdy metal, anchored by robust cables.",
-                  "mood": "Mysterious, grand, and awe-inspiring. The singular bright entrance suggests a focal point of immense importance or power within the vastness.",
-                  "sounds": "Distant hum, faint wind, faint creak of bridges",
-                  "spatialLayout": "The foreground consists of a rocky riverbed with sparse vegetation and flowing water, leading the eye towards the midground. The midground is dominated by the immense spherical parliament, suspended by cables and connected by a wide, horizontal suspension bridge. The background features towering, mist-shrouded cliff faces that rise on either side, framing the central structure and disappearing into the haze.",
-                  "primary_surfaces": "Stone (cliffs, riverbed)",
-                  "secondary_surfaces": "Metal (bridges, suspension cables)",
-                  "accent_features": "Luminescent material (portal, accent lights on sphere)",
-                  "dominant": "Blue-gray (mist, sphere surface)",
-                  "secondary": "Dark gray and brown (cliffs, rocks)",
-                  "accent": "Golden-orange (portal, sparks)",
-                  "ambient": "Muted blue-cyan",
-                  "genre": null,
-                  "architectural_tone": "Immaculate, seamless spherical architecture with flawless, highly polished surfaces. Connecting structures are robust yet elegant suspension bridges, indicating advanced engineering for extreme environments. Internal spaces would likely be similarly spherical or seamlessly integrated.",
-                  "cultural_tone": "The central nexus of governance and decision-making for the Skyborne Metropolis, signifying unity and singular focus.",
-                  "materials_base": "Seamless reflective composites, high-tensile alloys",
-                  "mood_baseline": "Grand, mysterious, and singularly focused",
-                  "palette_bias": "Muted cool tones contrasted with a powerful, singular warm light source",
-                  "soundscape_base": "Subtle ambient sounds that do not detract from the imposing silence of space",
-                  "flora_base": "None directly visible, but may inspire geometric patterns or energy-infused crystalline forms internally",
-                  "fauna_base": "None directly visible"
-                },
-                "navigableElements": [
-                  {
-                    "type": "bridge",
-                    "position": "center, midground",
-                    "description": "Wide, sturdy suspension bridge leading to the spherical parliament"
-                  },
-                  {
-                    "type": "portal",
-                    "position": "center of sphere, midground",
-                    "description": "Intensely glowing golden-orange portal, the sole entrance"
-                  },
-                  {
-                    "type": "passage",
-                    "position": "far background, center",
-                    "description": "Distant, dimly lit passage between cliff faces"
-                  }
-                ],
-                "dominantElements": [
-                  "Spherical parliament (est. 80-100m diameter)",
-                  "Suspension bridge (est. 20-30m long)",
-                  "Glowing portal entrance (mid-sphere)",
-                  "Rocky cliff faces (background)",
-                  "Misty atmosphere (background)"
-                ],
-                "uniqueIdentifiers": [
-                  "Massive suspended spherical parliament",
-                  "Equatorial glowing portal entrance",
-                  "Interconnecting suspension bridges"
-                ],
-                "searchDesc": "[Location - Exterior] Suspended spherical parliament. Has: suspension bridge (center, midground), glowing portal (center of sphere, midground), distant passage (far background, center)",
-                "slug": "the-celestial-orb",
-                "semantic": {
-                  "atmosphere": "",
-                  "mood": ""
-                },
-                "visual": {
-                  "prompt": "",
-                  "style": ""
-                },
-                "profile": {
-                  "name": "The Celestial Orb",
-                  "looks": "A magnificent spherical parliament, suspended by unseen forces and linked by ethereal bridges.",
-                  "atmosphere": "",
-                  "mood": ""
-                }
-              },
-              "spaceType": "exterior",
-              "children": [
-                {
-                  "id": "niche-1764323583043-ufte053rv",
-                  "type": "niche",
-                  "children": []
-                }
-              ],
-              "primaryMedia": "media-1764323562881-76hkbjkcm"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764324736740-u3huni5xf",
-      "type": "host",
-      "name": "The Sundered Sands",
-      "description": "A vast desert continent under a twin-sun sky.",
-      "dna": {
-        "type": "host",
-        "name": "The Sundered Sands",
-        "description": "A vast desert continent under a twin-sun sky.",
-        "dna": {
-          "looks": "A sprawling, arid landscape dominated by undulating sand dunes stretching to the horizon. Jagged, sun-baked mesas rise from the flat plains, their surfaces eroded into intricate patterns. Deep, shadowed canyons carve through the terrain, hinting at hidden depths. The overall impression is one of immense, ancient emptiness.",
-          "colorsAndLighting": "The scene is bathed in a relentless, warm golden light cast by two suns, creating a palette of ochre, sand, and burnt sienna. Shadows are stark and sharply defined, though softened by a pervasive atmospheric haze. Subtle shifts in hue reflect the angle of the twin suns.",
-          "atmosphere": "The air is incredibly dry and hot, thick with fine, wind-whipped sand that reduces visibility in the distance. A constant, low hum of wind is the dominant sound. The intense solar radiation creates a shimmering heat haze above the terrain.",
-          "materials": "The dominant materials are dry, granular sand and eroded, sun-bleached stone. Dust and grit coat every surface. Sparse, wind-sculpted rock formations are prevalent.",
-          "mood": "A pervasive sense of desolation, isolation, and timeless endurance. The landscape feels unforgiving yet holds an austere beauty.",
-          "sounds": "Whispering wind, gritty sand, distant echoes, dry creaking",
-          "spatialLayout": "Vast, open expanses with a strong sense of depth and scale. The terrain is predominantly flat with dramatic vertical elements like mesas and canyons, broken by rolling dune seas.",
-          "primary_surfaces": [
-            "Sand",
-            "Eroded Stone"
-          ],
-          "secondary_surfaces": [
-            "Dust",
-            "Grit"
-          ],
-          "accent_features": [
-            "Wind-sculpted rock",
-            "Shimmering heat haze"
-          ],
-          "dominant": "Ochre",
-          "secondary": "Beige",
-          "accent": "Burnt Sienna",
-          "ambient": "Warm golden",
-          "genre": "fantasy",
-          "architectural_tone": "ancient monolithic stone construction with organic, eroded forms",
-          "cultural_tone": "nomadic, survivalist, deeply spiritual connection to the harsh environment",
-          "materials_base": "primarily natural, weathered stone and earth-based composites",
-          "mood_baseline": "resilient, solitary, timeless",
-          "palette_bias": "warm earth tones with stark light and shadow contrasts",
-          "soundscape_base": "wind-swept, dry, echoing",
-          "flora_base": "drought-resistant desert scrub, sparse hardy succulents, ancient petrified trees",
-          "fauna_base": "hardy desert insects, burrowing reptiles, large sand-dwelling predators, scavenger birds"
-        },
-        "navigableElements": [],
-        "dominantElements": [
-          "Endless Dunes",
-          "Scorched Mesas",
-          "Sun-bleached Canyons"
-        ],
-        "uniqueIdentifiers": [
-          "Twin Sun System",
-          "Arid Climate"
-        ],
-        "searchDesc": "Vast desert continent under twin suns, characterized by dunes, mesas, and canyons.",
-        "slug": "the-sundered-sands",
-        "semantic": {
-          "atmosphere": "",
-          "mood": ""
-        },
-        "visual": {
-          "prompt": "",
-          "style": ""
-        },
-        "profile": {
-          "name": "The Sundered Sands",
-          "looks": "A vast desert continent under a twin-sun sky.",
-          "atmosphere": "",
-          "mood": ""
-        }
-      },
-      "spaceType": "exterior",
-      "children": [
-        {
-          "id": "863a99e7-5930-4d56-a8fb-d35513159189",
-          "type": "region",
-          "name": "The Sundered Sands",
-          "description": "A vast desert continent under a twin-sun sky.",
-          "dna": {
-            "type": "region",
-            "name": "The Sundered Sands",
-            "description": "A vast desert continent under a twin-sun sky.",
-            "dna": {
-              "looks": "Expanses of soft, rolling sand dunes that shift with the wind, broken by mesas with flat, sun-baked tops. Deep, shadowed canyons offer pockets of respite from the relentless sun, sometimes harboring sparse, hardy vegetation.",
-              "colorsAndLighting": "The palette is dominated by warm, earthy tones – various shades of sand, ochre, and muted reds. The twin suns create sharp, long shadows and a pervasive golden glow, with occasional stark white highlights on rock faces.",
-              "atmosphere": "Extremely dry and hot, with a constant, fine dust suspended in the air that softens distant views and creates a hazy, shimmering effect. Wind is a constant presence, carrying grit and shaping the dunes.",
-              "materials": "Predominantly sand and sandstone, with some harder, darker volcanic rock forming mesa caps. Evidence of wind erosion is ubiquitous, creating smoothed and sculpted surfaces.",
-              "mood": "A profound sense of isolation and vastness, where life clings precariously. The stark beauty is underscored by the harshness of the environment.",
-              "sounds": "The ever-present whisper and roar of wind, the soft crunch of sand underfoot, the distant cry of a desert creature.",
-              "spatialLayout": "Open, sweeping vistas with a low, undulating horizon, punctuated by the sheer faces of mesas and the plunging depths of canyons.",
-              "primary_surfaces": [
-                "Sand dunes",
-                "Sandstone cliffs",
-                "Rocky outcrops"
-              ],
-              "secondary_surfaces": [
-                "Gravel plains",
-                "Dust"
-              ],
-              "accent_features": [
-                "Wind-sculpted rock formations",
-                "Sparse desert flora"
-              ],
-              "dominant": "Ochre",
-              "secondary": "Sand",
-              "accent": "Terracotta",
-              "ambient": "Warm golden",
-              "genre": null,
-              "architectural_tone": null,
-              "cultural_tone": "nomadic survivalists, stoic, deeply connected to the rhythms of the desert",
-              "materials_base": null,
-              "mood_baseline": null,
-              "palette_bias": "warm, sun-baked earth tones with high contrast",
-              "soundscape_base": "wind-dominated, dry, echoing desert sounds",
-              "flora_base": "sparse, tough desert flora like hardy succulents, thorny bushes, and wind-swept scrub",
-              "fauna_base": "small, quick desert reptiles, burrowing rodents, hardy insects, and large, patient predators"
-            },
-            "navigableElements": [],
-            "dominantElements": [
-              "Endless Dunes",
-              "Scorched Mesas",
-              "Sun-bleached Canyons"
-            ],
-            "uniqueIdentifiers": [
-              "Twin Sun System",
-              "Arid Climate"
-            ],
-            "searchDesc": "Vast desert continent under twin suns, characterized by dunes, mesas, and canyons.",
-            "slug": "the-sundered-sands-region",
-            "semantic": {
-              "atmosphere": "",
-              "mood": ""
-            },
-            "visual": {
-              "prompt": "",
-              "style": ""
-            },
-            "profile": {
-              "name": "The Sundered Sands",
-              "looks": "A vast desert continent under a twin-sun sky.",
-              "atmosphere": "",
-              "mood": ""
-            }
-          },
-          "spaceType": "exterior",
-          "children": [
-            {
-              "id": "a96f3317-97e8-4cf9-a266-b2a63e11feb6",
-              "type": "location",
-              "name": "The Hollow Titan",
-              "description": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
-              "dna": {
-                "type": "location",
-                "name": "The Hollow Titan",
-                "description": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
-                "looks": "Massive, weathered stone structure of a humanoid figure, stretched out horizontally. A gaping maw serves as the primary entrance.",
-                "atmosphere": "Dry, dusty air with a faint mineral scent. Silence broken only by the wind.",
-                "mood": "Monumental, awe-inspiring, ancient",
-                "dna": {
-                  "looks": "A colossal, weathered stone structure of a humanoid figure lies horizontally across a barren desert landscape. Its immense scale is emphasized by the small figures visible in the distance approaching its open mouth. The stone appears eroded by time and the elements, with rough textures and undulating surfaces. The mouth itself forms a vast, dark cavernous opening, suggesting a significant interior space. The overall form is monolithic and ancient, dominating the natural terrain.",
-                  "colorsAndLighting": "The scene is lit by a strong, diffuse light, likely from twin suns, casting a warm, golden hue across the landscape. Shadows are soft and blended due to the atmospheric haze. The entrance to the colossus is a deep shadow, contrasting sharply with the illuminated exterior.",
-                  "atmosphere": "The air is thick with dust, stirred by the wind, creating a hazy, diffused environment. Visibility is reduced, particularly around the entrance, obscuring finer details within the cavern's maw.",
-                  "materials": "The primary material is immense, weathered stone. The surrounding environment consists of fine sand and grit.",
-                  "mood": "Awe-inspiring, mysterious, and slightly ominous. The sheer scale and unnatural presence of the titan evoke a sense of ancient power and forgotten history.",
-                  "sounds": "Muffled wind, distant grit scraping, the low hum of latent energy",
-                  "spatialLayout": "The foreground consists of arid desert ground with scattered rocks and a dirt path leading towards the midground. The midground is dominated by the immense, recumbent stone colossus, its opened mouth forming a large, dark void. The background shows more desert landscape and a hazy sky with clouds. The overall spatial composition is one of immense scale against a vast, open environment.",
-                  "primary_surfaces": "Stone",
-                  "secondary_surfaces": "Sand, Dirt",
-                  "accent_features": "None visible",
-                  "dominant": "Ochre (stone and desert)",
-                  "secondary": "Beige (sky and clouds)",
-                  "accent": "Dark brown/black (entrance interior)",
-                  "ambient": "Warm golden",
-                  "genre": null,
-                  "architectural_tone": "ancient monolithic stone construction with organic, eroded forms, carved to resemble a colossal humanoid figure",
-                  "cultural_tone": null,
-                  "materials_base": null,
-                  "mood_baseline": "awe-inspiring, mysterious, ancient",
-                  "palette_bias": null,
-                  "soundscape_base": null,
-                  "flora_base": null,
-                  "fauna_base": null
-                },
-                "navigableElements": [
-                  {
-                    "type": "door",
-                    "position": "center, midground",
-                    "description": "A massive, dark, cavernous opening serving as the primary entrance into the colossus."
-                  }
-                ],
-                "dominantElements": [
-                  "Massive stone colossus lying on its side (center, midground)",
-                  "Cavernous entrance (mouth of colossus, center, midground)",
-                  "Desert terrain with rocky outcrops (foreground)",
-                  "Dusty, hazy atmosphere (entire scene)",
-                  "Distant figures on a dirt path (center, midground)"
-                ],
-                "uniqueIdentifiers": [
-                  "Kilometer-tall stone colossus lying on its side",
-                  "Open mouth forming a cavernous entrance hall"
-                ],
-                "searchDesc": "Massive stone colossus in desert. Has: cavernous entrance (center, midground)",
-                "slug": "the-hollow-titan",
-                "semantic": {
-                  "atmosphere": "",
-                  "mood": ""
-                },
-                "visual": {
-                  "prompt": "",
-                  "style": ""
-                },
-                "profile": {
-                  "name": "The Hollow Titan",
-                  "looks": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
-                  "atmosphere": "",
-                  "mood": ""
-                }
-              },
-              "spaceType": "exterior",
-              "children": [
-                {
-                  "id": "niche-1764324794879-jh71oa4vi",
-                  "type": "niche",
-                  "children": []
-                }
-              ],
-              "primaryMedia": "media-1764324766034-remxtkns9"
+              ]
             }
           ]
         }
@@ -1605,8 +318,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764322819196-ta48nltve",
-    "loc-1764323539675-dohpf8mlu",
-    "loc-1764324736740-u3huni5xf"
+    "loc-1764325866761-kob9no37h"
   ]
 }
