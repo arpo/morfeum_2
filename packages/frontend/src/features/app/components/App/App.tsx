@@ -15,9 +15,10 @@ import { TopButtonRow } from '@/features/app/components/TopButtonRow';
 import { WorldView } from '@/features/app/components/WorldView/WorldView';
 import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { useDepthMapLogic } from '@/features/app/components/TopButtonRow/useDepthMapLogic';
+import { getDepthMapForMedia, clearMediaCache } from '@/services/mediaService';
 import type { DisplayMode } from '@/features/app/components/TopButtonRow/TopButtonRow';
 import styles from './App.module.css';
 
@@ -227,8 +228,8 @@ export function App() {
     window.dispatchEvent(new CustomEvent('displayModeChanged', { detail: { mode } }));
   };
 
-  // Determine if depth map button should be disabled
-  const getPrimaryMediaId = () => {
+  // Get primary media ID for current entity
+  const getPrimaryMediaId = useCallback(() => {
     if (!activeEntity) return null;
     
     if (isCharacter) {
@@ -238,7 +239,26 @@ export function App() {
       const node = useLocationsStore.getState().getNode(activeEntity);
       return node?.primaryMedia || null;
     }
-  };
+  }, [activeEntity, isCharacter]);
+
+  // Check for existing depth map when active entity changes
+  useEffect(() => {
+    const checkDepthMap = async () => {
+      const primaryMediaId = getPrimaryMediaId();
+      if (!primaryMediaId) {
+        setHasDepthMap(false);
+        return;
+      }
+      
+      // Clear cache to get fresh data
+      clearMediaCache();
+      
+      const depthMap = await getDepthMapForMedia(primaryMediaId);
+      setHasDepthMap(!!depthMap);
+    };
+    
+    checkDepthMap();
+  }, [activeEntity, getPrimaryMediaId]);
 
   const depthMapDisabled = !activeEntity || !getPrimaryMediaId();
 

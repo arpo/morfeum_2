@@ -882,6 +882,284 @@
       ],
       "searchDesc": "Neo-futurist lounge niche: sharp angles, magenta/blue LEDs, neon pink desk, velvet seating.",
       "slug": "interior-of-the-toilett"
+    },
+    "loc-1764338039440-0l2yab1wl": {
+      "id": "loc-1764338039440-0l2yab1wl",
+      "type": "host",
+      "name": "Oceanic Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A boundless, deep blue ocean stretches to the horizon, often shrouded in mist or illuminated by ethereal light. Strange geological formations and colossal structures hint at forgotten eras. Anomalous phenomena are common.",
+        "colorsAndLighting": "Dominated by deep blues and teals, with occasional vibrant bioluminescence or warm, localized light sources. Lighting is often diffused by atmospheric conditions or the water itself.",
+        "atmosphere": "The air is often thick with a cool, damp haze or mist, creating a sense of vastness and mystery. Water vapor is a constant presence. The atmosphere can shift dramatically, from serene to tempestuous.",
+        "materials": "Predominantly water, with exposed rock, ancient, weathered stone, and occasional metallic or crystalline growths. Vegetation is sparse and often adapted to harsh, aquatic or coastal environments.",
+        "mood": "A sense of profound mystery, awe, and potential danger. The environment evokes feelings of isolation, wonder, and the unknown, with an undercurrent of ancient power.",
+        "sounds": "Distant waves, echoing drips, strange calls, atmospheric hums, deep rumbles.",
+        "spatialLayout": "Vast, open expanses punctuated by towering geological features, submerged structures, and floating islands. Navigation can be disorienting due to atmospheric effects and the sheer scale.",
+        "primary_surfaces": [
+          "Water",
+          "Rock"
+        ],
+        "secondary_surfaces": [
+          "Mist",
+          "Ancient stone"
+        ],
+        "accent_features": [
+          "Bioluminescent organisms",
+          "Anomalous energy signatures",
+          "Exotic mineral formations"
+        ],
+        "dominant": "Deep blues",
+        "secondary": "Teals and greys",
+        "accent": "Vibrant bioluminescent colors",
+        "ambient": "Cool and diffused",
+        "genre": "fantasy",
+        "architectural_tone": "Ancient, eroded monoliths with hints of advanced, forgotten civilizations. Organic, geological formations blended with monumental, weathered stone structures.",
+        "cultural_tone": "Mysterious, reclusive, and ancient. Societies are likely adapted to isolation and the unique challenges of the oceanic environment.",
+        "materials_base": "Stone, water, native geological formations, with occasional resilient metals or crystalline compounds.",
+        "mood_baseline": "Enigmatic and awe-inspiring",
+        "palette_bias": "Cool, deep oceanic tones with contrasting bioluminescent accents",
+        "soundscape_base": "Echoing, resonant, and subtly unsettling",
+        "flora_base": "Bioluminescent algae, hardy seaweeds, phosphorescent kelp forests",
+        "fauna_base": "Gigantic sea creatures, ethereal leviathans, bioluminescent aquatic life",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Oceanic Expanse",
+          "looks": "Vast, mysterious waters teeming with strange phenomena.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "Vast, mysterious waters teeming with strange phenomena.",
+      "navigableElements": [],
+      "dominantElements": [
+        "World-spanning ocean",
+        "Mystical atmospheric phenomena",
+        "Submerged ancient ruins"
+      ],
+      "uniqueIdentifiers": [
+        "Uncharted depths",
+        "Unique oceanic currents",
+        "Bioluminescent zones"
+      ],
+      "searchDesc": "Vast, mysterious oceanic realm with strange phenomena and uncharted depths.",
+      "slug": "oceanic-expanse"
+    },
+    "6d764607-d2ee-4340-9d5e-b0d824914c0d": {
+      "id": "6d764607-d2ee-4340-9d5e-b0d824914c0d",
+      "type": "region",
+      "name": "Oceanic Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A seemingly endless expanse of deep blue and teal water, stretching towards a misty horizon. Scattered, rugged rocky islands and outcroppings break the surface, often covered in sparse, hardy vegetation. The air is thick with a soft haze.",
+        "colorsAndLighting": "Dominated by deep blues and teals of the ocean and sky, with grey and dark brown tones for the rocky formations. The light is diffused and softened by the pervasive atmospheric haze.",
+        "atmosphere": "The air is cool and damp, carrying a perpetual mist or haze that softens distant views and creates a sense of immense scale. The sound of the sea is a constant, distant presence.",
+        "materials": "Primarily water and rock, with some weathered stone and hardy, salt-resistant vegetation on the islands.",
+        "mood": "Serene and mysterious, with an underlying sense of isolation and the vastness of nature.",
+        "sounds": "Distant waves, sea birds, wind whistling.",
+        "spatialLayout": "Vast, open water interspersed with scattered, irregular landmasses. The horizon is often obscured by atmospheric conditions.",
+        "primary_surfaces": [
+          "Water",
+          "Rock"
+        ],
+        "secondary_surfaces": [
+          "Mist",
+          "Grit"
+        ],
+        "accent_features": [
+          "Wave-worn formations",
+          "Seagull nests",
+          "Driftwood"
+        ],
+        "dominant": "Deep blues",
+        "secondary": "Teals and greys",
+        "accent": "White foam",
+        "ambient": "Cool and diffused",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "Hardy coastal shrubs",
+        "fauna_base": "Seabirds, marine life",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Oceanic Expanse",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Vast open ocean",
+        "Scattered rocky outcrops",
+        "Atmospheric haze"
+      ],
+      "uniqueIdentifiers": [
+        "Mysterious ocean currents",
+        "Isolated island chains",
+        "Bioluminescent plankton blooms"
+      ],
+      "searchDesc": "The vast, open ocean, dotted with rocky outcrops and shrouded in an atmospheric haze.",
+      "slug": "oceanic-expanse-region"
+    },
+    "d15ac6c6-5a3c-4513-bfc1-50f792430749": {
+      "id": "d15ac6c6-5a3c-4513-bfc1-50f792430749",
+      "type": "location",
+      "name": "The Sleeping Dragon Isle",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal cliff formation is sculpted to resemble a sleeping dragon, its turquoise scales intricately detailed. The dragon's head rests forward, its maw open, revealing an inviting, warmly lit cavern. A series of stone steps leads from the water's edge up to this cavern entrance. The surrounding environment consists of steep, rocky islands and a vast, misty expanse of ocean.",
+        "colorsAndLighting": "The lighting is warm and inviting, emanating from the cavern mouth, creating a strong contrast with the cooler tones of the surrounding environment. The light quality is soft, casting a gentle glow on the rock formations and water.",
+        "atmosphere": "The air appears thick with a soft, atmospheric haze that softens distant features. Water vapor or light mist is visible, creating a sense of depth and mystery in the oceanic expanse.",
+        "materials": "Primary material is rock, specifically a unique, vibrant turquoise stone. Secondary materials include water and sparse, resilient vegetation on the distant, surrounding rocky islands.",
+        "mood": "Mysterious and inviting, with a sense of ancient slumber and hidden warmth.",
+        "sounds": "Gentle lapping waves, distant sea breeze, soft cavern hum.",
+        "spatialLayout": "The foreground is dominated by the shimmering surface of the ocean, with scattered dark rocks. The midground is occupied by the magnificent turquoise dragon-shaped cliff island, its open maw and stairs forming a focal point. The background reveals layers of distant, mist-shrouded mountains and cliffs, fading into the atmospheric haze.",
+        "primary_surfaces": "Rock",
+        "secondary_surfaces": "Water, vegetation (on distant cliffs)",
+        "accent_features": "Warm light glow",
+        "dominant": "Turquoise (cliff island)",
+        "secondary": "Deep blue and teal (ocean and sky), dark grey (rocks)",
+        "accent": "Golden orange (light from cavern)",
+        "ambient": "Cool turquoise and blue hues",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None (on the immediate island)",
+        "fauna_base": "Seabirds",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sleeping Dragon Isle",
+          "looks": "A striking turquoise cliff-island that has taken the form of a colossal sleeping dragon.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A striking turquoise cliff-island that has taken the form of a colossal sleeping dragon.",
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "center, midground",
+          "description": "Stone steps ascending from the water's edge into the dragon's open maw"
+        },
+        {
+          "type": "passage",
+          "position": "center, midground",
+          "description": "The luminous opening within the dragon's maw, suggesting an interior passage"
+        }
+      ],
+      "dominantElements": [
+        "Turquoise dragon-shaped cliff island (midground, center)",
+        "Open cavern entrance with warm light (midground, center)",
+        "Stone staircase leading to cavern (midground, center)",
+        "Rugged rocky cliffs and islands (left and background)",
+        "Vast ocean surface (foreground)"
+      ],
+      "uniqueIdentifiers": [
+        "Dragon-shaped cliff formation",
+        "Luminous cavern entrance",
+        "Stone staircase from water to cavern"
+      ],
+      "searchDesc": "[Location - Exterior] Turquoise dragon-shaped cliff island. Has: stairs (center, midground), passage (center, midground)",
+      "slug": "the-sleeping-dragon-isle",
+      "primaryMedia": "media-1764338062942-qnhzxog8c"
+    },
+    "niche-1764338086478-1j4epb9ks": {
+      "id": "niche-1764338086478-1j4epb9ks",
+      "type": "niche",
+      "name": "interior of The Sleeping Dragon Isle",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, cavernous interior with smooth, polished turquoise stone walls subtly veined with darker minerals. A rough-hewn archway dominates the center, hinting at unseen depths. Intricately carved alcoves and a raised platform add textural contrast. The vaulted ceiling curves like a skull, embedded with subtly pulsing gold veins.",
+        "colorsAndLighting": "The dominant color is a glowing turquoise stone, illuminated by a warm, golden-orange light emanating from a deeper passage. This light casts dancing shadows across the polished surfaces and highlights the gold veins.",
+        "atmosphere": "The air feels ancient and still, yet inviting and warm. A sense of hidden slumber pervades the space, with the light providing a comforting glow. The smooth stone and mossy patches suggest a slightly damp, earthy environment.",
+        "materials": "The primary material is polished and rough-hewn turquoise stone, featuring natural darker mineral veins. The floor is a mosaic of water-smoothed pebbles and soft moss-like growth. Accents include fossilized ammonites and luminescent fungi.",
+        "mood": "Mysterious and inviting, evoking ancient slumber and hidden warmth.",
+        "sounds": "Distant water, soft glowing hum, faint echo of stone.",
+        "spatialLayout": "A large, cavernous space with a vaulted ceiling, roughly mimicking a dragon's maw. The primary entry is a prominent archway in the midground center, with alcoves to the left and a platform to the right in the foreground.",
+        "primary_surfaces": "Polished turquoise stone (walls, ceiling), rough-hewn turquoise rock (archway, platform), pebble and moss floor.",
+        "secondary_surfaces": "None specified, focus on geological formations.",
+        "accent_features": "Intricately carved alcoves with fossilized ammonites and luminescent fungi, pulsing gold veins in the ceiling.",
+        "dominant": "Turquoise (walls, ceiling, platform)",
+        "secondary": "Golden-orange (light source, ceiling veins)",
+        "accent": "Deep blue (water glimpsed), dark mineral veins, luminescent fungi.",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": "Organic stone cavern",
+        "cultural_tone": null,
+        "materials_base": "Stone, natural formations",
+        "mood_baseline": "Ancient, slumbering, warm",
+        "palette_bias": "Turquoise and warm earth tones",
+        "soundscape_base": "Subtle geological ambient",
+        "flora_base": "Moss-like growth, luminescent fungi",
+        "fauna_base": "Fossilized ammonites"
+      },
+      "primaryMedia": "media-1764338086477-w3dok6pva",
+      "description": "The interior of a cavernous space carved from glowing turquoise stone, resembling a dragon's maw.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "midground center",
+          "description": "Rough-hewn stone archway leading deeper into the dragon's body, revealing glimpses of shimmering, deep blue water."
+        },
+        {
+          "type": "alcove",
+          "position": "midground left",
+          "description": "Series of intricately carved, recessed alcoves showcasing fossilized ammonites and luminescent fungi."
+        },
+        {
+          "type": "platform",
+          "position": "foreground right",
+          "description": "Raised platform of rough-hewn turquoise rock."
+        }
+      ],
+      "dominantElements": [
+        "glowing turquoise stone walls",
+        "golden-orange light source",
+        "rough-hewn stone archway",
+        "recessed alcoves with fossils and fungi",
+        "mosaic pebble floor",
+        "raised platform",
+        "vaulted turquoise ceiling with gold veins"
+      ],
+      "uniqueIdentifiers": [
+        "dragon's maw carving",
+        "glowing turquoise stone",
+        "pulsing gold veins in ceiling",
+        "luminescent fungi displays"
+      ],
+      "searchDesc": "Warmly lit, cavernous turquoise interior mimicking a dragon's maw with glowing stone and golden light.",
+      "slug": "interior-of-the-sleeping-dragon-isle"
     }
   },
   "views": {},
@@ -959,11 +1237,35 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764338039440-0l2yab1wl",
+      "type": "host",
+      "children": [
+        {
+          "id": "6d764607-d2ee-4340-9d5e-b0d824914c0d",
+          "type": "region",
+          "children": [
+            {
+              "id": "d15ac6c6-5a3c-4513-bfc1-50f792430749",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764338086478-1j4epb9ks",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1764326597551-qet13p8u6",
     "loc-1764327104477-i23lcjpm2",
-    "loc-1764328163455-em0lventp"
+    "loc-1764328163455-em0lventp",
+    "loc-1764338039440-0l2yab1wl"
   ]
 }

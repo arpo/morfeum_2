@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { WORLD_VIEW_3D_CONFIG } from '@/config';
 
-export type DisplayMode = 'full' | 'hsbs' | 'fsbs' | 'anaglyph';
+export type DisplayMode = '2d' | 'full' | 'hsbs';
 
 export interface WorldViewRendererOptions {
   container: HTMLElement;
@@ -416,8 +416,10 @@ export class WorldViewRenderer {
     const animate = () => {
       this.animationId = requestAnimationFrame(animate);
       
-      // Get current camera movement position
-      const { x: mouseX, y: mouseY } = this.getCameraMovementPosition();
+      // Get current camera movement position (0,0 for 2D mode)
+      const { x: mouseX, y: mouseY } = this.displayMode === '2d' 
+        ? { x: 0, y: 0 } 
+        : this.getCameraMovementPosition();
       
       // Smooth easing toward target
       const mouseSensitivityFocusFactor = 0.3 + 0.7 * 2 * this.focus;
@@ -430,15 +432,60 @@ export class WorldViewRenderer {
         this.material.uniforms.focus.value = this.focus;
       }
 
-      // Render with scissor test for letterboxing
-      if (this.scissorWidth > 0 && this.scissorHeight > 0) {
-        this.renderer.setScissorTest(true);
-        this.renderer.setScissor(this.scissorX, this.scissorY, this.scissorWidth, this.scissorHeight);
-        this.renderer.render(this.scene, this.camera);
+      // Render based on display mode
+      if (this.displayMode === 'hsbs') {
+        this.renderStereo();
+      } else {
+        this.renderMono();
       }
     };
 
     animate();
+  }
+
+  /**
+   * Render single view (2D or full 3D)
+   */
+  private renderMono(): void {
+    if (this.scissorWidth > 0 && this.scissorHeight > 0) {
+      this.renderer.setScissorTest(true);
+      this.renderer.setScissor(this.scissorX, this.scissorY, this.scissorWidth, this.scissorHeight);
+      this.renderer.setViewport(0, 0, this.container.clientWidth, this.container.clientHeight);
+      this.renderer.render(this.scene, this.camera);
+    }
+  }
+
+  /**
+   * Render stereo side-by-side (HSBS)
+   */
+  private renderStereo(): void {
+    const width = this.container.clientWidth;
+    const height = this.container.clientHeight;
+    const halfWidth = width / 2;
+
+    // Update right eye material with offset
+    if (this.material2) {
+      // Right eye has offset for stereo separation
+      this.material2.uniforms.mouseDelta.value.set(
+        this.targetX + this.mouseXOffset * 2, 
+        -this.targetY
+      );
+      this.material2.uniforms.focus.value = this.focus;
+    }
+
+    this.renderer.setScissorTest(true);
+
+    // Left eye - left half of screen
+    this.renderer.setViewport(0, 0, halfWidth, height);
+    this.renderer.setScissor(0, 0, halfWidth, height);
+    this.renderer.render(this.scene, this.camera);
+
+    // Right eye - right half of screen
+    if (this.scene2) {
+      this.renderer.setViewport(halfWidth, 0, halfWidth, height);
+      this.renderer.setScissor(halfWidth, 0, halfWidth, height);
+      this.renderer.render(this.scene2, this.camera);
+    }
   }
 
   /**
@@ -488,7 +535,51 @@ export class WorldViewRenderer {
    */
   setDisplayMode(mode: DisplayMode): void {
     this.displayMode = mode;
-    // TODO: Implement stereo rendering modes
+    
+    // Update scissor dimensions when mode changes
+    this.updateScissorDimensions();
+    
+    // Create/destroy second scene for stereo modes
+    if (mode === 'hsbs') {
+      this.setupStereoScene();
+    } else {
+      this.cleanupStereoScene();
+    }
+  }
+
+  /**
+   * Setup second scene for stereo rendering
+   */
+  private setupStereoScene(): void {
+    if (this.scene2) return; // Already set up
+    
+    this.scene2 = new THREE.Scene();
+    this.scene2.background = null;
+    
+    // Clone the mesh for the right eye view
+    if (this.mesh && this.material) {
+      const geometry = this.mesh.geometry.clone();
+      this.material2 = this.material.clone();
+      this.mesh2 = new THREE.Mesh(geometry, this.material2);
+      this.mesh2.scale.copy(this.mesh.scale);
+      this.scene2.add(this.mesh2);
+    }
+  }
+
+  /**
+   * Cleanup stereo scene
+   */
+  private cleanupStereoScene(): void {
+    if (this.mesh2) {
+      this.scene2?.remove(this.mesh2);
+      this.mesh2.geometry.dispose();
+      this.mesh2 = null;
+    }
+    if (this.material2) {
+      this.material2.dispose();
+      this.material2 = null;
+    }
+    this.scene2 = null;
   }
 
   /**

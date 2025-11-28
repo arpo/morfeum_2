@@ -2,13 +2,12 @@ import { Button } from '@/components/ui';
 import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere } from '@/icons';
 import styles from './TopButtonRow.module.css';
 
-export type DisplayMode = 'full' | 'hsbs' | 'fsbs' | 'anaglyph';
+export type DisplayMode = '2d' | 'full' | 'hsbs';
 
 const DISPLAY_MODE_LABELS: Record<DisplayMode, string> = {
-  full: '2D',
-  hsbs: 'SBS',
-  fsbs: 'VR',
-  anaglyph: '3D'
+  '2d': '2D',
+  full: '3D',
+  hsbs: 'SBS'
 };
 
 interface TopButtonRowProps {
@@ -41,7 +40,7 @@ export function TopButtonRow({
   hasDepthMap,
 }: TopButtonRowProps) {
   const cycleDisplayMode = () => {
-    const modes: DisplayMode[] = ['full', 'hsbs', 'fsbs', 'anaglyph'];
+    const modes: DisplayMode[] = ['2d', 'full', 'hsbs'];
     const currentIndex = modes.indexOf(displayMode);
     const nextIndex = (currentIndex + 1) % modes.length;
     onDisplayModeChange(modes[nextIndex]);
@@ -77,19 +76,23 @@ export function TopButtonRow({
         </Button>
       )}
 
-      <Button
-        onClick={onGenerateDepthMap}
-        className={styles.button}
-        disabled={depthMapDisabled || depthMapGenerating}
-        aria-label="Generate depth map"
-      >
-        {depthMapGenerating ? (
-          <IconLoader2 size={20} className={styles.spinner} />
-        ) : (
-          <IconStack2 size={20} />
-        )}
-      </Button>
+      {/* Show generate depth map button only when no depth map exists */}
+      {!hasDepthMap && (
+        <Button
+          onClick={onGenerateDepthMap}
+          className={styles.button}
+          disabled={depthMapDisabled || depthMapGenerating}
+          aria-label="Generate depth map"
+        >
+          {depthMapGenerating ? (
+            <IconLoader2 size={20} className={styles.spinner} />
+          ) : (
+            <IconStack2 size={20} />
+          )}
+        </Button>
+      )}
 
+      {/* Show display mode button only when depth map exists */}
       {hasDepthMap && (
         <Button
           onClick={cycleDisplayMode}
