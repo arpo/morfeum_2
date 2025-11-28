@@ -113,7 +113,6 @@ export function buildCharacterEntity(
       fictional: deepProfile.fictional || true,
       copyright: deepProfile.copyright || false,
       tags: deepProfile.tags || '',
-      seed,
       visualAnalysis
     },
     primaryMedia: media.id,

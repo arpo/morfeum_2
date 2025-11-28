@@ -90,11 +90,43 @@
 - State management and configuration improvements.
 
 ## Current Focus
-- Media cleanup system now uses primaryMedia as single source of truth
-- All deletion operations properly clean up associated media
-- Backend build errors resolved
+- Data storage optimization complete
+- Removed redundant nested data from both worlds.json and characters.json
+- Fixed nested dna.dna issue in world tree generation
 
 ## Next Steps
-- Test media cleanup with world tree and character deletion
-- Verify navigation-created nodes (niches) are properly cleaned up
-- Monitor for any edge cases in media deletion
+- Test with fresh database to verify clean data structure
+- Monitor storage efficiency improvements
+- Consider similar cleanup for other data structures if needed
+
+### Data Storage Cleanup (Nov 28, 2025)
+- **Problem**: Redundant and nested data being saved to both `worlds.json` and `characters.json`, causing bloat and potential issues
+- **World Storage Fixes**:
+  - **worldTrees cleanup**: Previously stored full node data (name, description, dna, etc.) in tree structure - now only stores minimal structure (id, type, children)
+  - **Nested dna.dna fix**: `WorldTreeBuilder.buildNode` was spreading entire data object causing `dna.dna` nesting - now uses `data.dna` directly
+  - **Files modified**:
+    - `packages/frontend/src/store/slices/locations/treesSlice.ts` - Added `extractTreeStructure()` helper
+    - `packages/backend/src/services/worldTree/builder.ts` - Fixed DNA extraction
+    - `packages/backend/src/services/worldTree/types.ts` - Added structural fields to TreeNode interface
+- **Character Storage Fix**:
+  - Removed redundant `seed` object from character details (all fields already extracted to top level)
+  - Kept `visualAnalysis` object (contains face, body, hair details from image analysis)
+  - File modified: `packages/backend/src/engine/pipelines/shared/entityPersistence.ts`
+- **Storage Structure**:
+  - `worlds.json`: Full node data in `nodes` map, minimal tree structure in `worldTrees` array
+  - `characters.json`: Clean character data without duplicate seed information
+- **Benefits**:
+  - Reduced file size and redundancy
+  - Single source of truth for node data
+  - Fixed nested DNA structure issues
+  - Easier to maintain and debug
+
+## Current Focus
+- Data storage optimization complete
+- Removed redundant nested data from both worlds.json and characters.json
+- Fixed nested dna.dna issue in world tree generation
+
+## Next Steps
+- Test with fresh database to verify clean data structure
+- Monitor storage efficiency improvements
+- Consider similar cleanup for other data structures if needed
