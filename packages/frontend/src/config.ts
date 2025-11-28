@@ -41,12 +41,17 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Camera movement amplitude - how far the view shifts during animation */
   CAMERA_AMPLITUDE: {
-    X: 0.6,  // Horizontal movement range
-    Y: 0.4,  // Vertical movement range
+    X: 0.6,   // Horizontal shift range
+    Y: 0.4,   // Vertical shift range
+    Z: 0.15,  // Zoom range (camera z position offset)
   },
   
-  /** Camera movement speed - lower = slower, more subtle movement */
-  CAMERA_SPEED: 0.0008,
+  /** Camera movement speed - each axis has independent circular motion */
+  CAMERA_SPEED: {
+    X: 0.0003,  // Horizontal cycle (~7.8 sec)
+    Y: 0.0006,  // Vertical cycle (~10.5 sec)
+    Z: 0.0004,  // Zoom cycle (~15.7 sec, slowest for subtle breathing)
+  },
   
   /** Easing factor for movement smoothness (0.01 = very smooth, 0.2 = snappy) */
   EASING: 0.05,

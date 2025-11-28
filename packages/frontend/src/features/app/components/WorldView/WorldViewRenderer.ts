@@ -29,7 +29,11 @@ export class WorldViewRenderer {
   private meshResolution: number = WORLD_VIEW_3D_CONFIG.MESH_RESOLUTION;
   private cameraAmplitudeX: number = WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.X;
   private cameraAmplitudeY: number = WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.Y;
-  private cameraSpeed: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED;
+  private cameraAmplitudeZ: number = WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.Z;
+  private cameraSpeedX: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.X;
+  private cameraSpeedY: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Y;
+  private cameraSpeedZ: number = WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Z;
+  private baseCameraZ: number = 4; // Base camera Z position
 
   // Animation state
   private targetX: number = 0;
@@ -416,10 +420,13 @@ export class WorldViewRenderer {
     const animate = () => {
       this.animationId = requestAnimationFrame(animate);
       
-      // Get current camera movement position (0,0 for 2D mode)
-      const { x: mouseX, y: mouseY } = this.displayMode === '2d' 
-        ? { x: 0, y: 0 } 
+      // Get current camera movement position (0,0,0 for 2D mode)
+      const { x: mouseX, y: mouseY, z: cameraZ } = this.displayMode === '2d' 
+        ? { x: 0, y: 0, z: 0 } 
         : this.getCameraMovementPosition();
+      
+      // Update camera Z position for zoom effect
+      this.camera.position.z = this.baseCameraZ + cameraZ;
       
       // Smooth easing toward target
       const mouseSensitivityFocusFactor = 0.3 + 0.7 * 2 * this.focus;
@@ -489,16 +496,18 @@ export class WorldViewRenderer {
   }
 
   /**
-   * Get camera movement position (circular pattern for parallax effect)
+   * Get camera movement position (independent circular patterns for X, Y, Z)
    */
-  private getCameraMovementPosition(): { x: number; y: number } {
-    // Circular movement pattern with different speeds for organic feel
-    const time = Date.now() * this.cameraSpeed;
+  private getCameraMovementPosition(): { x: number; y: number; z: number } {
+    const now = Date.now();
     
-    const x = Math.cos(time) * this.cameraAmplitudeX;
-    const y = Math.sin(time * 0.7) * this.cameraAmplitudeY; // Different speed for Y
+    // Independent circular motion for each axis with different speeds
+    const x = Math.cos(now * this.cameraSpeedX) * this.cameraAmplitudeX;
+    const y = Math.sin(now * this.cameraSpeedY) * this.cameraAmplitudeY;
+    // Z only zooms IN (negative = closer to image), never OUT to avoid black edges
+    const z = -Math.abs(Math.sin(now * this.cameraSpeedZ) * this.cameraAmplitudeZ);
 
-    return { x, y };
+    return { x, y, z };
   }
 
   /**
