@@ -247,6 +247,12 @@ export function App() {
       const primaryMediaId = getPrimaryMediaId();
       if (!primaryMediaId) {
         setHasDepthMap(false);
+        // Switch to 2D mode when no depth map
+        if (displayMode !== '2d') {
+          setDisplayMode('2d');
+          localStorage.setItem('displayMode', '2d');
+          window.dispatchEvent(new CustomEvent('displayModeChanged', { detail: { mode: '2d' } }));
+        }
         return;
       }
       
@@ -254,11 +260,26 @@ export function App() {
       clearMediaCache();
       
       const depthMap = await getDepthMapForMedia(primaryMediaId);
-      setHasDepthMap(!!depthMap);
+      const hasDepth = !!depthMap;
+      setHasDepthMap(hasDepth);
+      
+      // Switch to 2D mode when no depth map exists
+      if (!hasDepth && displayMode !== '2d') {
+        setDisplayMode('2d');
+        localStorage.setItem('displayMode', '2d');
+        window.dispatchEvent(new CustomEvent('displayModeChanged', { detail: { mode: '2d' } }));
+      }
+      
+      // Switch to 3D mode when depth map exists and currently in 2D (keep SBS if already in SBS)
+      if (hasDepth && displayMode === '2d') {
+        setDisplayMode('full');
+        localStorage.setItem('displayMode', 'full');
+        window.dispatchEvent(new CustomEvent('displayModeChanged', { detail: { mode: 'full' } }));
+      }
     };
     
     checkDepthMap();
-  }, [activeEntity, getPrimaryMediaId]);
+  }, [activeEntity, getPrimaryMediaId, displayMode]);
 
   const depthMapDisabled = !activeEntity || !getPrimaryMediaId();
 
