@@ -2,6 +2,39 @@
 
 ## Recent Changes (2025-11-28)
 
+### Depth Map Generation Feature (Nov 28, 2025)
+- **Feature**: Added button to generate depth maps for entity primary media using FAL Depth Anything V2 API
+- **Implementation**:
+  - Created `useDepthMapLogic.ts` hook with depth map generation logic
+  - Added depth map button to TopButtonRow (IconStack2 icon)
+  - Button shows spinner while generating, disabled when no entity/primaryMedia
+  - API endpoint: `/api/mzoo/fal-depth-anything-v2/process`
+  - Stores depth maps in media.json with type `depth-map`
+- **Bug Fix**: Fixed URL extraction from API response (was looking for `data.image.url`, corrected to `data.depth_map_image.url`)
+- **Media Storage Structure**:
+  ```json
+  {
+    "id": "media-xxx-depthmap",
+    "type": "depth-map",
+    "url": "https://...",
+    "parentMedia": "media-xxx-original",
+    "metadata": {
+      "parentMedia": "media-xxx-original",
+      "originalPrompt": "...",
+      "model": "fal-depth-anything-v2"
+    },
+    "entityRefs": ["entity-id"],
+    "createdAt": "..."
+  }
+  ```
+- **API Response Format**: FAL API returns PNG despite requesting JPEG (known FAL bug)
+- **Files Modified**:
+  - `packages/frontend/src/icons/index.ts` - Added IconStack2
+  - `packages/frontend/src/features/app/components/TopButtonRow/useDepthMapLogic.ts` - New hook
+  - `packages/frontend/src/features/app/components/TopButtonRow/TopButtonRow.tsx` - Added button
+  - `packages/frontend/src/features/app/components/TopButtonRow/TopButtonRow.module.css` - Spinner animation
+  - `packages/frontend/src/features/app/components/App/App.tsx` - Integrated depth map handler
+
 ### Code Cleanup & File Size Reduction (Nov 28, 2025)
 - **Problem**: Multiple files exceeded the 300-line limit rule, code duplication across tree utilities
 - **Frontend Cleanup**:

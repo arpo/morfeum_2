@@ -62,38 +62,76 @@ export function useDepthMapLogic() {
         return { success: false, error: errorMsg };
       }
 
-      // Step 4: Store the depth map in media.json
-      const mediaResponse = await fetch('/api/media', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          type: 'depth-map',
-          url: depthMapUrl,
-          metadata: {
-            parentMedia: primaryMediaId,
-            originalPrompt: mediaItem.metadata?.originalPrompt,
-            model: 'fal-depth-anything-v2'
-          },
-          entityRefs: [entityId],
-          parentMedia: primaryMediaId
-        })
-      });
+      // Step 4: Check if depth map already exists for this primary media
+      const existingMediaResponse = await fetch(`/api/media?entityId=${entityId}`);
+      const existingMediaResult = await existingMediaResponse.json();
+      const existingDepthMap = existingMediaResult.data?.find(
+        (m: any) => m.type === 'depth-map' && m.parentMedia === primaryMediaId
+      );
 
-      if (!mediaResponse.ok) {
-        const errorMsg = 'Failed to store depth map in media database';
-        setError(errorMsg);
-        setIsGenerating(false);
-        return { success: false, error: errorMsg };
+      let mediaResult;
+      let mediaId: string;
+
+      if (existingDepthMap) {
+        // Update existing depth map
+        const updateResponse = await fetch(`/api/media/${existingDepthMap.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            url: depthMapUrl,
+            metadata: {
+              parentMedia: primaryMediaId,
+              originalPrompt: mediaItem.metadata?.originalPrompt,
+              model: 'fal-depth-anything-v2'
+            }
+          })
+        });
+
+        if (!updateResponse.ok) {
+          const errorMsg = 'Failed to update depth map in media database';
+          setError(errorMsg);
+          setIsGenerating(false);
+          return { success: false, error: errorMsg };
+        }
+
+        mediaResult = await updateResponse.json();
+        mediaId = existingDepthMap.id;
+        console.log('Updated existing depth map:', existingDepthMap.id);
+      } else {
+        // Create new depth map
+        const createResponse = await fetch('/api/media', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'depth-map',
+            url: depthMapUrl,
+            metadata: {
+              parentMedia: primaryMediaId,
+              originalPrompt: mediaItem.metadata?.originalPrompt,
+              model: 'fal-depth-anything-v2'
+            },
+            entityRefs: [entityId],
+            parentMedia: primaryMediaId
+          })
+        });
+
+        if (!createResponse.ok) {
+          const errorMsg = 'Failed to store depth map in media database';
+          setError(errorMsg);
+          setIsGenerating(false);
+          return { success: false, error: errorMsg };
+        }
+
+        mediaResult = await createResponse.json();
+        mediaId = mediaResult.data?.id;
+        console.log('Created new depth map:', mediaId);
       }
-
-      const mediaResult = await mediaResponse.json();
-      const newMediaId = mediaResult.data?.id;
 
       setIsGenerating(false);
       return {
         success: true,
         depthMapUrl,
-        mediaId: newMediaId
+        mediaId
       };
 
     } catch (err) {
