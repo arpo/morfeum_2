@@ -261,6 +261,286 @@
       ],
       "searchDesc": "Monumental brass clockwork dome with crimson salt lake views and cosmic nebula window.",
       "slug": "interior-of-the-celestial-orrery"
+    },
+    "loc-1764327104477-i23lcjpm2": {
+      "id": "loc-1764327104477-i23lcjpm2",
+      "type": "host",
+      "name": "Aetherial Plane",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast expanses of swirling nebulae and distant stars form the backdrop to scattered, gravity-defying landmasses. Structures are often crystalline or polished, appearing to be carved from light itself or advanced, unknown alloys.  Pathways are frequently ethereal bridges or glowing energy conduits connecting disparate points.",
+        "colorsAndLighting": "The primary colors are cool and luminous, dominated by celestial blues, purples, and silvers, with occasional bursts of vibrant, starlight-like yellows and golds. Lighting is diffused and pervasive, emanating from the environment itself rather than distinct sources, creating a soft, glowing ambiance.",
+        "atmosphere": "The air is thin and crisp, carrying a faint scent of ozone and distant celestial phenomena. Temperature is consistently cool, with no discernible weather patterns beyond occasional shimmering auroras or gentle cosmic dust currents. Visibility is near-infinite, revealing the grand scale of the plane.",
+        "materials": "Materials are overwhelmingly exotic and often appear translucent or self-luminous. Think polished celestial quartz, solidified starlight, advanced, seamless alloys that reflect cosmic light, and energy-infused constructs. Organic materials are rare and typically bio-luminescent.",
+        "mood": "A profound sense of awe and serenity pervades the Aetherial Plane, evoking feelings of wonder, cosmic insignificance, and spiritual transcendence.",
+        "sounds": "Whispering cosmic winds, distant ethereal chimes, soft hums, resonant energies, faint stellar crackles",
+        "spatialLayout": "The Aetherial Plane is characterized by vast, open spaces punctuated by isolated floating landmasses and colossal architectural constructs. Navigation often involves traversing between these detached areas, with no inherent ground plane.  Verticality is a significant factor, with structures extending far above and below.",
+        "primary_surfaces": [
+          "Crystalline",
+          "Polished Metal",
+          "Solidified Light"
+        ],
+        "secondary_surfaces": [
+          "Energy Fields",
+          "Nebulous Gas",
+          "Unknown Alloys"
+        ],
+        "accent_features": [
+          "Luminous Glyphs",
+          "Floating Debris",
+          "Shimmering Auroras"
+        ],
+        "dominant": "Blue",
+        "secondary": "Silver",
+        "accent": "Gold",
+        "ambient": "Cool",
+        "genre": "fantasy",
+        "architectural_tone": "celestial, ethereal, monumental, gravity-defying, sculpted from light and exotic alloys, with seamless transitions and luminous accents",
+        "cultural_tone": "ancient, spiritual, focused on ascension and remembrance, associated with celestial beings and cosmic order",
+        "materials_base": "luminescent, crystalline, polished, seamless, advanced alloys, energy constructs",
+        "mood_baseline": "serene, awe-inspiring, contemplative",
+        "palette_bias": "cool, luminous, iridescent, celestial",
+        "soundscape_base": "ambient, resonant, ethereal, with subtle cosmic undertones",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Aetherial Plane",
+          "looks": "A realm of floating islands and celestial architecture.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A realm of floating islands and celestial architecture.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Floating Islands",
+        "Celestial Structures",
+        "Interplanar Portals"
+      ],
+      "uniqueIdentifiers": [
+        "Anti-gravity physics",
+        "Ethereal light",
+        "Cosmic vistas"
+      ],
+      "searchDesc": "A realm of floating islands and celestial architecture with ethereal light and cosmic vistas.",
+      "slug": "aetherial-plane"
+    },
+    "2ba2307c-49b0-4712-81e9-5a4218dfdbbc": {
+      "id": "2ba2307c-49b0-4712-81e9-5a4218dfdbbc",
+      "type": "region",
+      "name": "Celestial Mausoleums",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Immense, elaborately constructed mausoleums drift or are anchored within the Aetherial Plane, often appearing as colossal sarcophagi or temples. They are frequently adorned with massive, stylized wings or other architectural features that suggest flight or ascension. Soft, diffused light bathes these structures.",
+        "colorsAndLighting": "Dominated by muted greys and whites of stone, accented by pale blues and the ambient glow of the Aetherial Plane. Lighting is soft and diffused, contributing to a somber yet majestic atmosphere.",
+        "atmosphere": "A palpable stillness pervades these regions, punctuated by the faint echo of cosmic winds. A cool, thin mist often clings to the lower sections, lending an air of mystery and sacredness. The air is devoid of conventional weather.",
+        "materials": "Primarily heavy, weathered stone blocks forming monumental structures. Accents may include polished marble, obsidian, or traces of celestial alloys in finer detailing.",
+        "mood": "Solemn, reverent, majestic, with a lingering sense of departed grandeur and eternal rest.",
+        "sounds": "Distant echoes, soft cosmic hums, faint creaking of stone, rustling of spectral energies",
+        "spatialLayout": "These are vast, open areas focused on colossal, static structures. Navigation is typically between these monumental tombs, with a sense of immense scale and considerable distances.",
+        "primary_surfaces": [
+          "Weathered Stone",
+          "Carved Rock"
+        ],
+        "secondary_surfaces": [
+          "Polished Marble",
+          "Obsidian Inlays"
+        ],
+        "accent_features": [
+          "Monumental Wings",
+          "Celestial Glyphs",
+          "Ornate Carvings"
+        ],
+        "dominant": "Grey",
+        "secondary": "White",
+        "accent": "Pale Blue",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "monumental celestial mausoleums featuring colossal stone construction, immense sculpted wings, grand arches, weathered facades, and intricate celestial glyphs, all echoing a sense of ancient reverence and eternal slumber",
+        "cultural_tone": "sacred, funerary, associated with celestial pantheons and the afterlife, places of deep veneration and historical record",
+        "materials_base": "heavily weathered stone, carved granite, polished marble, obsidian",
+        "mood_baseline": "solemn, reverent, majestic",
+        "palette_bias": "muted, monochromatic, with subtle celestial highlights",
+        "soundscape_base": "echoing, resonant, still",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Celestial Mausoleums",
+          "looks": "Grand resting places for celestial beings, suspended in the sky.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "Grand resting places for celestial beings, suspended in the sky.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Floating Tombs",
+        "Stone Wings",
+        "Celestial Stairways"
+      ],
+      "uniqueIdentifiers": [
+        "Gravitational anomalies",
+        "Ethereal mist",
+        "Monumental scale"
+      ],
+      "searchDesc": "Grand, sky-suspended mausoleums with monumental stone wings, often shrouded in ethereal mist.",
+      "slug": "celestial-mausoleums"
+    },
+    "346a4312-2111-44ac-b9de-040bd5f1d7e5": {
+      "id": "346a4312-2111-44ac-b9de-040bd5f1d7e5",
+      "type": "location",
+      "name": "The Sky Tomb",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal stone structure, resembling a sarcophagus with massive feathered wings, is suspended in the sky. The structure is supported by these immense stone wings, which spread outwards and upwards. Directly in front of the main structure, a grand entrance is visible, framed by intricately carved marble hands reaching out. A wide, luminous portal glows within the entrance, inviting entry. The surrounding environment consists of rocky, uneven terrain shrouded in mist.",
+        "colorsAndLighting": "The lighting is soft and diffused, emanating from the bright, cyan glow of the portal and the ambient light of the sky. There are no harsh shadows, suggesting an overcast or ethereal light source. The overall tone is cool and bright.",
+        "atmosphere": "A thin, ethereal mist blankets the lower areas of the terrain and subtly obscures the base of the central structure. The air appears clear at higher elevations, with visibility extending towards the sky.",
+        "materials": "The primary material is a heavy, weathered stone, forming the tomb and its wings. The entrance is crafted from polished, intricately detailed marble. The portal appears to be pure energy.",
+        "mood": "Mysterious, awe-inspiring, and inviting, with a sense of solemn finality yet promising passage.",
+        "sounds": "Faint hum of portal energy, distant cosmic sighs, gentle mist movement, subtle stone resonance",
+        "spatialLayout": "The foreground is dominated by rough, rocky terrain. In the midground, a grand stone structure rises, flanked by massive stone wings that suggest immense scale. A set of stone stairs leads up to the entrance, which is highlighted by a luminous portal. The background is a hazy sky with scattered clouds. The overall composition emphasizes the central structure and its imposing entrance.",
+        "primary_surfaces": "Stone",
+        "secondary_surfaces": "Marble",
+        "accent_features": "Glowing light",
+        "dominant": "Light blue (sky, mist, portal)",
+        "secondary": "White and grey (stone, marble)",
+        "accent": "Cyan glow (portal)",
+        "ambient": "Pale blue",
+        "genre": null,
+        "architectural_tone": "monumental and imposing mausoleum architecture featuring colossal stone construction, massive sculpted wings with feathered detail, and grand, hand-formed entrances carved from polished marble, all designed for celestial finality and symbolic passage",
+        "cultural_tone": "funerary, sacred, ceremonial, representing a final resting place of immense importance for celestial beings",
+        "materials_base": "ancient weathered stone, polished marble, energy",
+        "mood_baseline": "solemn, mysterious, reverent",
+        "palette_bias": "muted stone tones with a vibrant, luminous energy accent",
+        "soundscape_base": "resonant silence, subtle energetic hum",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sky Tomb",
+          "looks": "A monumental mausoleum suspended by colossal stone wings, accessible through a grand entrance between two outstretched marble hands.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A monumental mausoleum suspended by colossal stone wings, accessible through a grand entrance between two outstretched marble hands.",
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "center, midground",
+          "description": "Wide stone stairs leading up to the main entrance"
+        },
+        {
+          "type": "portal",
+          "position": "center, midground",
+          "description": "Bright cyan glowing portal within the entrance archway"
+        }
+      ],
+      "dominantElements": [
+        "Colossal stone mausoleum structure with feathered wings (midground)",
+        "Outstretched marble hands framing entrance (midground)",
+        "Glowing cyan portal (midground)",
+        "Stone stairs leading to entrance (midground)",
+        "Rocky terrain (foreground and sides)"
+      ],
+      "uniqueIdentifiers": [
+        "Massive stone wings supporting a mausoleum",
+        "Entrance framed by two outstretched marble hands",
+        "Glowing cyan portal"
+      ],
+      "searchDesc": "[Location - Exterior] Monumental mausoleum with stone wings. Has: stairs (center, midground), glowing portal (center, midground)",
+      "slug": "the-sky-tomb",
+      "primaryMedia": "media-1764327126005-9tvpazsca"
+    },
+    "niche-1764327146918-d0rtnadoq": {
+      "id": "niche-1764327146918-d0rtnadoq",
+      "type": "niche",
+      "name": "interior of The Sky Tomb",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A grand mausoleum interior dominated by towering, weathered stone walls with a feathered wing motif. Cool-toned marble floors, inlaid with celestial constellation mosaics, stretch towards a central wall featuring a softly glowing, cyan energy conduit. Spectral carvings of ancient beings are visible in recessed alcoves flanking the conduit.",
+        "colorsAndLighting": "Dominant cool-toned marble and weathered stone are accented by the soft, pulsing cyan glow of the central energy conduit and diffused pale blue light filtering into the passage. The overall lighting is dim and atmospheric.",
+        "atmosphere": "The air is still and reverent, carrying a faint, resonant hum from the energy conduit. A profound sense of mystery and celestial finality pervades the space, amplified by the cool, diffused light and resonant silence.",
+        "materials": "The primary materials are weathered stone for the walls and ceiling, and polished, cool-toned marble for the floors. Intricate mosaic patterns of celestial constellations adorn the floor, and darker stone is used for the spectral carvings.",
+        "mood": "Reverent, mysterious, and awe-inspiring, evoking a profound sense of celestial finality and sacred passage.",
+        "sounds": "Faint resonant hum, profound silence.",
+        "spatialLayout": "A vast, solemn mausoleum interior, immediately beyond an entrance. The space is defined by towering walls, a central focal point of the energy conduit, and distinct navigable passages to the left and right leading deeper into the structure.",
+        "primary_surfaces": "weathered stone walls, polished marble floors",
+        "secondary_surfaces": "mosaic tiles, darker stone carvings",
+        "accent_features": "cyan energy conduit, celestial constellation mosaics, spectral carvings, faint glowing lines on ceiling",
+        "dominant": "cool tones (marble, stone)",
+        "secondary": "cyan (energy conduit)",
+        "accent": "pale blue (light)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "monumental and imposing mausoleum architecture featuring colossal stone construction, massive sculpted wings with feathered detail, and grand, hand-formed entrances carved from polished marble, all designed for celestial finality and symbolic passage",
+        "cultural_tone": "funerary, sacred, ceremonial, representing a final resting place of immense importance for celestial beings",
+        "materials_base": "stone, polished marble, mosaic",
+        "mood_baseline": "Mysterious, awe-inspiring, and inviting, with a sense of solemn finality yet promising passage.",
+        "palette_bias": "cool-toned blues and grays",
+        "soundscape_base": "resonant silence",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764327146917-2b5plg3m1",
+      "description": "The solemn, monumental interior of a mausoleum, immediately beyond a grand marble hand entrance. Towering, weathered stone walls echo the exterior's colossal, feathered wing motif. Polished, cool-toned marble floors transition into intricate mosaic patterns of celestial constellations underfoot. A softly glowing, cyan energy conduit is embedded within the central wall. Recessed alcoves flank the conduit, showcasing spectral carvings of ancient beings. To the left, an arching stone passage beckons deeper, illuminated by diffused, pale blue light. To the right, tiered stone platforms descend to a lower level, edged with geometric patterns. The unseen ceiling is a vaulted expanse of weathered stone, broken by faint, glowing lines mimicking a star chart.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground left",
+          "description": "Grand, arching stone passage"
+        },
+        {
+          "type": "platforms",
+          "position": "midground right",
+          "description": "Tiered stone platforms descending"
+        },
+        {
+          "type": "energy conduit",
+          "position": "midground center",
+          "description": "Softly glowing, cyan energy conduit embedded within the central wall"
+        }
+      ],
+      "dominantElements": [
+        "towering weathered stone walls",
+        "marble floor with constellation mosaics",
+        "cyan energy conduit",
+        "spectral carvings in alcoves",
+        "arching stone passage",
+        "tiered stone platforms"
+      ],
+      "uniqueIdentifiers": [
+        "feathered wing motif on walls",
+        "celestial constellation floor mosaic",
+        "pulsing cyan energy conduit",
+        "spectral carvings of ancient beings",
+        "star chart pattern on ceiling"
+      ],
+      "searchDesc": "Monumental mausoleum interior with marble floors, celestial mosaics, cyan energy conduit, and carved alcoves.",
+      "slug": "interior-of-the-sky-tomb"
     }
   },
   "views": {},
@@ -287,9 +567,33 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764327104477-i23lcjpm2",
+      "type": "host",
+      "children": [
+        {
+          "id": "2ba2307c-49b0-4712-81e9-5a4218dfdbbc",
+          "type": "region",
+          "children": [
+            {
+              "id": "346a4312-2111-44ac-b9de-040bd5f1d7e5",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764327146918-d0rtnadoq",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1764326597551-qet13p8u6"
+    "loc-1764326597551-qet13p8u6",
+    "loc-1764327104477-i23lcjpm2"
   ]
 }
