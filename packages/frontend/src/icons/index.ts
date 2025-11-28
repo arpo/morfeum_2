@@ -27,7 +27,8 @@ export {
   IconMapPin,
   IconHome,
   IconLayoutSidebar,
-  IconMessageCircle
+  IconMessageCircle,
+  IconStack2
 } from '@tabler/icons-react';
 
 // Icon type for string references

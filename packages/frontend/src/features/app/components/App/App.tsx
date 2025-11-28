@@ -17,6 +17,7 @@ import { collectAllNodeIds } from '@/utils/treeUtils';
 import { createEntitySessionsForNodes } from '@/utils/entitySessionLoader';
 import { useEffect, useState } from 'react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
+import { useDepthMapLogic } from '@/features/app/components/TopButtonRow/useDepthMapLogic';
 import styles from './App.module.css';
 
 export function App() {
@@ -25,6 +26,9 @@ export function App() {
   
   // Global keyboard shortcuts (1 = spawn input, 2 = entity explorer)
   useKeyboardShortcuts();
+  
+  // Depth map generation logic
+  const { generateDepthMap, isGenerating: depthMapGenerating } = useDepthMapLogic();
   
   // Initialize theme on mount
   const { theme } = useThemeStore();
@@ -182,6 +186,43 @@ export function App() {
     }
   };
 
+  const handleGenerateDepthMap = async () => {
+    if (!activeEntity) return;
+    
+    // Get primaryMedia from either character or location
+    let primaryMediaId: string | null = null;
+    
+    if (isCharacter) {
+      const character = useCharactersStore.getState().getCharacter(activeEntity);
+      primaryMediaId = character?.primaryMedia || null;
+    } else {
+      const node = useLocationsStore.getState().getNode(activeEntity);
+      primaryMediaId = node?.primaryMedia || null;
+    }
+    
+    if (!primaryMediaId) {
+      console.warn('No primary media found for entity:', activeEntity);
+      return;
+    }
+    
+    await generateDepthMap(activeEntity, primaryMediaId);
+  };
+
+  // Determine if depth map button should be disabled
+  const getPrimaryMediaId = () => {
+    if (!activeEntity) return null;
+    
+    if (isCharacter) {
+      const character = useCharactersStore.getState().getCharacter(activeEntity);
+      return character?.primaryMedia || null;
+    } else {
+      const node = useLocationsStore.getState().getNode(activeEntity);
+      return node?.primaryMedia || null;
+    }
+  };
+
+  const depthMapDisabled = !activeEntity || !getPrimaryMediaId();
+
   return (
     <div className={styles.container}>
       
@@ -203,9 +244,12 @@ export function App() {
             onToggleSidebar={toggleEntityExplorerPanel}
             onOpenInfo={handleOpenInfo}
             onOpenChat={handleOpenChat}
+            onGenerateDepthMap={handleGenerateDepthMap}
             isCharacter={isCharacter}
             infoDisabled={!deepProfile}
             chatDisabled={!deepProfile}
+            depthMapDisabled={depthMapDisabled}
+            depthMapGenerating={depthMapGenerating}
           />
         </div>
         
