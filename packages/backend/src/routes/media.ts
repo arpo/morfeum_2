@@ -1,363 +1,129 @@
 /**
  * Media API Routes
- * 
- * Endpoints for managing media assets (images and videos)
- * 
- * IMPORTANT: Route order matters in Express!
- * Specific routes (like /cleanup, /by-entities) must come BEFORE
- * wildcard routes (like /:id) to be matched correctly.
+ * IMPORTANT: Route order matters! Specific routes must come BEFORE wildcard /:id routes
  */
 
-import { Router } from 'express';
+import { Router, Request, Response, NextFunction } from 'express';
 import { mediaService } from '../services/media';
 
 const router = Router();
 
-/**
- * GET /api/media
- * Get all media or filter by query params
- */
-router.get('/', (req, res) => {
-  try {
-    const { type, entityId } = req.query;
+// Async handler wrapper to reduce boilerplate
+const asyncHandler = (fn: (req: Request, res: Response) => any) => 
+  (req: Request, res: Response, next: NextFunction) => 
+    Promise.resolve(fn(req, res)).catch(next);
 
-    let media;
-    
-    if (type && (type === 'image' || type === 'video')) {
-      media = mediaService.getMediaByType(type);
-    } else if (entityId && typeof entityId === 'string') {
-      media = mediaService.getMediaByEntityRef(entityId);
-    } else {
-      media = mediaService.getAllMedia();
-    }
-
-    res.json({ success: true, data: media });
-  } catch (error) {
-    console.error('Error getting media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to retrieve media' 
-    });
-  }
+// Error handler middleware
+router.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  console.error('Media route error:', err);
+  res.status(500).json({ success: false, error: 'Internal server error' });
 });
 
-/**
- * POST /api/media
- * Create new media
- */
-router.post('/', (req, res) => {
-  try {
-    const { type, url, metadata, entityRefs, parentMedia, relatedMedia, transitionSequence } = req.body;
-
-    if (!type || !url || !metadata) {
-      return res.status(400).json({ 
-        success: false, 
-        error: 'Missing required fields: type, url, metadata' 
-      });
-    }
-
-    const newMedia = mediaService.createMedia({
-      type,
-      url,
-      metadata,
-      entityRefs,
-      parentMedia,
-      relatedMedia,
-      transitionSequence
-    });
-
-    res.status(201).json({ success: true, data: newMedia });
-  } catch (error) {
-    console.error('Error creating media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to create media' 
-    });
+// GET /api/media - Get all or filtered media
+router.get('/', asyncHandler((req, res) => {
+  const { type, entityId } = req.query;
+  let media;
+  
+  if (type && (type === 'image' || type === 'video')) {
+    media = mediaService.getMediaByType(type);
+  } else if (entityId && typeof entityId === 'string') {
+    media = mediaService.getMediaByEntityRef(entityId);
+  } else {
+    media = mediaService.getAllMedia();
   }
-});
+  res.json({ success: true, data: media });
+}));
 
-/**
- * POST /api/media/cleanup
- * Delete all unreferenced media
- * NOTE: Must be defined BEFORE /:id routes
- */
-router.post('/cleanup', (req, res) => {
-  try {
-    const deletedIds = mediaService.cleanupUnreferencedMedia();
-
-    res.json({ 
-      success: true, 
-      message: `Deleted ${deletedIds.length} unreferenced media items`,
-      deletedIds 
-    });
-  } catch (error) {
-    console.error('Error cleaning up media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to cleanup media' 
-    });
+// POST /api/media - Create new media
+router.post('/', asyncHandler((req, res) => {
+  const { type, url, metadata, entityRefs, parentMedia, relatedMedia, transitionSequence } = req.body;
+  if (!type || !url || !metadata) {
+    return res.status(400).json({ success: false, error: 'Missing required fields: type, url, metadata' });
   }
-});
+  const newMedia = mediaService.createMedia({ type, url, metadata, entityRefs, parentMedia, relatedMedia, transitionSequence });
+  res.status(201).json({ success: true, data: newMedia });
+}));
 
-/**
- * GET /api/media/bulk
- * Get multiple media items by IDs in a single request
- * Used for bulk loading media on app startup
- * NOTE: Must be defined BEFORE /:id routes
- */
-router.get('/bulk', (req, res) => {
-  try {
-    const { ids } = req.query;
-    
-    if (!ids || typeof ids !== 'string') {
-      return res.status(400).json({ 
-        success: false, 
-        error: 'ids query parameter required (comma-separated)' 
-      });
-    }
-    
-    const mediaIds = ids.split(',').filter(Boolean);
-    
-    if (mediaIds.length === 0) {
-      return res.json({ success: true, data: {} });
-    }
-    
-    // Collect all requested media items
-    const mediaMap: Record<string, any> = {};
-    
-    mediaIds.forEach(id => {
-      const media = mediaService.getMediaById(id);
-      if (media) {
-        mediaMap[id] = media;
-      }
-    });
-    
-    res.json({ success: true, data: mediaMap });
-  } catch (error) {
-    console.error('Error getting bulk media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to retrieve bulk media' 
-    });
+// POST /api/media/cleanup - Delete unreferenced media (must be before /:id)
+router.post('/cleanup', asyncHandler((req, res) => {
+  const deletedIds = mediaService.cleanupUnreferencedMedia();
+  res.json({ success: true, message: `Deleted ${deletedIds.length} unreferenced media items`, deletedIds });
+}));
+
+// GET /api/media/bulk - Bulk load media by IDs (must be before /:id)
+router.get('/bulk', asyncHandler((req, res) => {
+  const { ids } = req.query;
+  if (!ids || typeof ids !== 'string') {
+    return res.status(400).json({ success: false, error: 'ids query parameter required (comma-separated)' });
   }
-});
-
-/**
- * DELETE /api/media/by-entities
- * Delete all media referenced by entity IDs
- * Used when deleting characters or world trees
- * NOTE: Must be defined BEFORE /:id routes
- */
-router.delete('/by-entities', (req, res) => {
-  try {
-    const { entityIds } = req.body;
-    
-    if (!entityIds || !Array.isArray(entityIds)) {
-      return res.status(400).json({ 
-        success: false, 
-        error: 'entityIds array required' 
-      });
-    }
-    
-    const deletedIds = mediaService.deleteMediaByEntityRefs(entityIds);
-    
-    res.json({
-      success: true,
-      message: `Deleted ${deletedIds.length} media items`,
-      data: { deletedIds, count: deletedIds.length }
-    });
-  } catch (error) {
-    console.error('Error deleting media by entity refs:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to delete media' 
-    });
-  }
-});
-
-// ============================================
-// WILDCARD ROUTES BELOW - ORDER MATTERS!
-// These /:id routes must come AFTER specific routes
-// ============================================
-
-/**
- * GET /api/media/:id
- * Get media by ID
- */
-router.get('/:id', (req, res) => {
-  try {
-    const { id } = req.params;
+  const mediaIds = ids.split(',').filter(Boolean);
+  if (mediaIds.length === 0) return res.json({ success: true, data: {} });
+  
+  const mediaMap: Record<string, any> = {};
+  mediaIds.forEach(id => {
     const media = mediaService.getMediaById(id);
+    if (media) mediaMap[id] = media;
+  });
+  res.json({ success: true, data: mediaMap });
+}));
 
-    if (!media) {
-      return res.status(404).json({ 
-        success: false, 
-        error: 'Media not found' 
-      });
-    }
-
-    res.json({ success: true, data: media });
-  } catch (error) {
-    console.error('Error getting media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to retrieve media' 
-    });
+// DELETE /api/media/by-entities - Delete media by entity refs (must be before /:id)
+router.delete('/by-entities', asyncHandler((req, res) => {
+  const { entityIds } = req.body;
+  if (!entityIds || !Array.isArray(entityIds)) {
+    return res.status(400).json({ success: false, error: 'entityIds array required' });
   }
-});
+  const deletedIds = mediaService.deleteMediaByEntityRefs(entityIds);
+  res.json({ success: true, message: `Deleted ${deletedIds.length} media items`, data: { deletedIds, count: deletedIds.length } });
+}));
 
-/**
- * GET /api/media/:id/derivatives
- * Get derivative media for a parent
- */
-router.get('/:id/derivatives', (req, res) => {
-  try {
-    const { id } = req.params;
-    const derivatives = mediaService.getDerivatives(id);
+// ============ WILDCARD ROUTES (/:id) - Must be AFTER specific routes ============
 
-    res.json({ success: true, data: derivatives });
-  } catch (error) {
-    console.error('Error getting derivatives:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to retrieve derivatives' 
-    });
-  }
-});
+// GET /api/media/:id - Get single media
+router.get('/:id', asyncHandler((req, res) => {
+  const media = mediaService.getMediaById(req.params.id);
+  if (!media) return res.status(404).json({ success: false, error: 'Media not found' });
+  res.json({ success: true, data: media });
+}));
 
-/**
- * GET /api/media/:id/transitions
- * Get transition videos involving this media
- */
-router.get('/:id/transitions', (req, res) => {
-  try {
-    const { id } = req.params;
-    const transitions = mediaService.getTransitionVideos(id);
+// GET /api/media/:id/derivatives - Get derivatives
+router.get('/:id/derivatives', asyncHandler((req, res) => {
+  res.json({ success: true, data: mediaService.getDerivatives(req.params.id) });
+}));
 
-    res.json({ success: true, data: transitions });
-  } catch (error) {
-    console.error('Error getting transitions:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to retrieve transitions' 
-    });
-  }
-});
+// GET /api/media/:id/transitions - Get transitions
+router.get('/:id/transitions', asyncHandler((req, res) => {
+  res.json({ success: true, data: mediaService.getTransitionVideos(req.params.id) });
+}));
 
-/**
- * PUT /api/media/:id
- * Update existing media
- */
-router.put('/:id', (req, res) => {
-  try {
-    const { id } = req.params;
-    const updates = req.body;
+// PUT /api/media/:id - Update media
+router.put('/:id', asyncHandler((req, res) => {
+  const updatedMedia = mediaService.updateMedia(req.params.id, req.body);
+  if (!updatedMedia) return res.status(404).json({ success: false, error: 'Media not found' });
+  res.json({ success: true, data: updatedMedia });
+}));
 
-    const updatedMedia = mediaService.updateMedia(id, updates);
+// POST /api/media/:id/entity-refs - Add entity reference
+router.post('/:id/entity-refs', asyncHandler((req, res) => {
+  const { entityId } = req.body;
+  if (!entityId) return res.status(400).json({ success: false, error: 'Missing required field: entityId' });
+  const updatedMedia = mediaService.addEntityRef(req.params.id, entityId);
+  if (!updatedMedia) return res.status(404).json({ success: false, error: 'Media not found' });
+  res.json({ success: true, data: updatedMedia });
+}));
 
-    if (!updatedMedia) {
-      return res.status(404).json({ 
-        success: false, 
-        error: 'Media not found' 
-      });
-    }
+// DELETE /api/media/:id/entity-refs/:entityId - Remove entity reference
+router.delete('/:id/entity-refs/:entityId', asyncHandler((req, res) => {
+  const updatedMedia = mediaService.removeEntityRef(req.params.id, req.params.entityId);
+  if (!updatedMedia) return res.status(404).json({ success: false, error: 'Media not found' });
+  res.json({ success: true, data: updatedMedia });
+}));
 
-    res.json({ success: true, data: updatedMedia });
-  } catch (error) {
-    console.error('Error updating media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to update media' 
-    });
-  }
-});
-
-/**
- * POST /api/media/:id/entity-refs
- * Add entity reference to media
- */
-router.post('/:id/entity-refs', (req, res) => {
-  try {
-    const { id } = req.params;
-    const { entityId } = req.body;
-
-    if (!entityId) {
-      return res.status(400).json({ 
-        success: false, 
-        error: 'Missing required field: entityId' 
-      });
-    }
-
-    const updatedMedia = mediaService.addEntityRef(id, entityId);
-
-    if (!updatedMedia) {
-      return res.status(404).json({ 
-        success: false, 
-        error: 'Media not found' 
-      });
-    }
-
-    res.json({ success: true, data: updatedMedia });
-  } catch (error) {
-    console.error('Error adding entity reference:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to add entity reference' 
-    });
-  }
-});
-
-/**
- * DELETE /api/media/:id/entity-refs/:entityId
- * Remove entity reference from media
- */
-router.delete('/:id/entity-refs/:entityId', (req, res) => {
-  try {
-    const { id, entityId } = req.params;
-
-    const updatedMedia = mediaService.removeEntityRef(id, entityId);
-
-    if (!updatedMedia) {
-      return res.status(404).json({ 
-        success: false, 
-        error: 'Media not found' 
-      });
-    }
-
-    res.json({ success: true, data: updatedMedia });
-  } catch (error) {
-    console.error('Error removing entity reference:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to remove entity reference' 
-    });
-  }
-});
-
-/**
- * DELETE /api/media/:id
- * Delete media by ID
- */
-router.delete('/:id', (req, res) => {
-  try {
-    const { id } = req.params;
-    const success = mediaService.deleteMedia(id);
-
-    if (!success) {
-      return res.status(404).json({ 
-        success: false, 
-        error: 'Media not found' 
-      });
-    }
-
-    res.json({ success: true, message: 'Media deleted successfully' });
-  } catch (error) {
-    console.error('Error deleting media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to delete media' 
-    });
-  }
-});
+// DELETE /api/media/:id - Delete media
+router.delete('/:id', asyncHandler((req, res) => {
+  const success = mediaService.deleteMedia(req.params.id);
+  if (!success) return res.status(404).json({ success: false, error: 'Media not found' });
+  res.json({ success: true, message: 'Media deleted successfully' });
+}));
 
 export default router;

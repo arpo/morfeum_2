@@ -2,26 +2,7 @@ import { useCallback, useState } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
 import { createEntitySession } from '@/utils/entity/sessionManager';
-
-/**
- * Helper: Find parent ID from tree structure
- */
-function findParentId(worldTrees: any[], nodeId: string): string | null {
-  for (const tree of worldTrees) {
-    const result = findParentInTree(tree, nodeId, null);
-    if (result !== undefined) return result;
-  }
-  return null;
-}
-
-function findParentInTree(node: any, targetId: string, parentId: string | null): string | null | undefined {
-  if (node.id === targetId) return parentId;
-  for (const child of node.children) {
-    const result = findParentInTree(child, targetId, node.id);
-    if (result !== undefined) return result;
-  }
-  return undefined;
-}
+import { findParentId } from '@/utils/tree/navigation';
 
 /**
  * Helper: Extract description/looks from DNA based on node type

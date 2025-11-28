@@ -6,25 +6,9 @@
 import { useLocationsStore } from '../../store/slices/locations';
 import { useCharactersStore } from '../../store/slices/charactersSlice';
 
-import { findDeepestNodeId } from '../tree/navigation';
+import { findDeepestNodeId, findDeepestNode } from '../tree/navigation';
 import { createEntitySession } from '../entity/sessionManager';
 import { expandTreeToNode } from '../tree/expansion';
-
-/**
- * Find the deepest node in a tree structure and return its data
- */
-function findDeepestNodeData(node: any): { id: string; name: string } | null {
-  // Base case: no children or empty children
-  if (!node.children || node.children.length === 0) {
-    return {
-      id: node.id,
-      name: node.name,
-    };
-  }
-  
-  // Recursively find the deepest node in first child branch
-  return findDeepestNodeData(node.children[0]);
-}
 
 /**
  * Handle character completion
@@ -60,7 +44,7 @@ export function handleLocationCompletion(
   imageUrl?: string  // Now passed from top-level completion data
 ) {
   // Extract deepest node data from worldTree BEFORE store processing
-  const deepestNodeData = findDeepestNodeData(worldTree);
+  const deepestNodeData = findDeepestNode(worldTree);
 
   // Pin the world and update Locations Store
   useLocationsStore.getState().setCompleteWorldTree(worldTree);

@@ -2,6 +2,25 @@
 
 ## Recent Changes (2025-11-28)
 
+### Code Cleanup & File Size Reduction (Nov 28, 2025)
+- **Problem**: Multiple files exceeded the 300-line limit rule, code duplication across tree utilities
+- **Frontend Cleanup**:
+  - Consolidated duplicate tree traversal functions to shared `utils/tree/navigation.ts`
+  - Added `findDeepestNode()` (returns `{ id, name }`)
+  - Added `findParentId()` (find parent in tree hierarchy)
+  - Updated `completionHandlers.ts` (127 → 111 lines)
+  - Updated `useNavigationLogic.ts` (282 → 263 lines)
+- **Backend Route Cleanup**:
+  - Refactored `packages/backend/src/routes/media.ts` (363 → 129 lines)
+  - Created `asyncHandler` wrapper to eliminate repetitive try/catch blocks
+  - Reduced boilerplate by 64%
+- **Backend Pipeline Cleanup**:
+  - Refactored `worldTreePipeline.ts` (423 → 240 lines)
+  - Created new shared module `shared/dnaApplication.ts` (170 lines)
+  - Extracted DNA application functions: `applyHostDNA()`, `applyRegionDNA()`, `applyLocationDNA()`, `applyNicheDNA()`, `mergeVisualAnalysis()`
+  - Better separation of concerns
+- **Results**: All files now comply with 50-300 line limit, TypeScript builds successfully
+
 ### Media Cleanup Architecture Improvement (Nov 28, 2025)
 - **Root Cause Analysis**: Media cleanup wasn't working because entityRefs were empty in media.json. Navigation pipeline created media with empty entityRefs and updated in-memory object but never saved to database.
 - **Architectural Decision**: Switched from using `entityRefs` (redundant data) to using `node.primaryMedia` as single source of truth for media cleanup.

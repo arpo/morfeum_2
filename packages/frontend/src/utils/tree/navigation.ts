@@ -44,6 +44,57 @@ export function findDeepestNodeId(worldTree: any): string | null {
 }
 
 /**
+ * Find the deepest node (full object) in a tree hierarchy
+ * Returns { id, name } of the deepest node
+ */
+export function findDeepestNode(tree: any): { id: string; name: string } | null {
+  if (!tree) return null;
+
+  const children = getNodeChildren(tree);
+  
+  // If has children, recurse into first child
+  if (children.length > 0) {
+    return findDeepestNode(children[0]);
+  }
+  
+  // No children, this is the deepest node
+  return {
+    id: tree.id || tree.slug,
+    name: tree.name || 'Unknown'
+  };
+}
+
+/**
+ * Find the parent ID of a node within world trees
+ */
+export function findParentId(worldTrees: any[], nodeId: string): string | null {
+  for (const tree of worldTrees) {
+    const result = findParentInTreeHelper(tree, nodeId, null);
+    if (result !== undefined) return result;
+  }
+  return null;
+}
+
+/**
+ * Helper: Recursively search for parent in tree
+ */
+function findParentInTreeHelper(
+  node: any, 
+  targetId: string, 
+  parentId: string | null
+): string | null | undefined {
+  const nodeId = node.id || node.slug;
+  if (nodeId === targetId) return parentId;
+  
+  const children = getNodeChildren(node);
+  for (const child of children) {
+    const result = findParentInTreeHelper(child, targetId, nodeId);
+    if (result !== undefined) return result;
+  }
+  return undefined;
+}
+
+/**
  * Get all ancestor IDs for a target node (not including the target itself)
  */
 export function getAncestors(tree: any, targetId: string | null): string[] {

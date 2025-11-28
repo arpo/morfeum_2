@@ -2,6 +2,21 @@
 
 ## Completed Features ✅
 
+### Code Cleanup & File Size Reduction (Nov 28, 2025)
+- [x] Identified files exceeding 300-line limit (media.ts: 363 lines, worldTreePipeline.ts: 423 lines)
+- [x] Consolidated duplicate tree traversal functions to shared utilities
+- [x] Added `findDeepestNode()` and `findParentId()` to `utils/tree/navigation.ts`
+- [x] Updated `completionHandlers.ts` to use shared utilities (127 → 111 lines)
+- [x] Updated `useNavigationLogic.ts` to use shared utilities (282 → 263 lines)
+- [x] Refactored `packages/backend/src/routes/media.ts` (363 → 129 lines)
+- [x] Created `asyncHandler` wrapper to eliminate repetitive try/catch blocks
+- [x] Refactored `worldTreePipeline.ts` (423 → 240 lines)
+- [x] Created new shared module `shared/dnaApplication.ts` (170 lines)
+- [x] Extracted DNA application functions to shared module
+- [x] Fixed TypeScript implicit 'any' type errors
+- [x] Verified successful TypeScript compilation with `npm run build`
+- [x] All files now comply with 50-300 line limit rule
+
 ### Media Cleanup Architecture Improvement (Nov 28, 2025)
 - [x] Diagnosed root cause: entityRefs empty in media.json, not saved to database
 - [x] Switched from entityRefs to primaryMedia as single source of truth

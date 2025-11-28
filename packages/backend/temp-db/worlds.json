@@ -626,6 +626,284 @@
       ],
       "searchDesc": "Colossal, corroded metal tower interior; rust, salt, seafoam, decaying concrete. Melancholy atmosphere.",
       "slug": "interior-of-the-drowned-tower"
+    },
+    "loc-1764324736740-u3huni5xf": {
+      "id": "loc-1764324736740-u3huni5xf",
+      "type": "host",
+      "name": "The Sundered Sands",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "host",
+        "name": "The Sundered Sands",
+        "description": "A vast desert continent under a twin-sun sky.",
+        "dna": {
+          "looks": "A sprawling, arid landscape dominated by undulating sand dunes stretching to the horizon. Jagged, sun-baked mesas rise from the flat plains, their surfaces eroded into intricate patterns. Deep, shadowed canyons carve through the terrain, hinting at hidden depths. The overall impression is one of immense, ancient emptiness.",
+          "colorsAndLighting": "The scene is bathed in a relentless, warm golden light cast by two suns, creating a palette of ochre, sand, and burnt sienna. Shadows are stark and sharply defined, though softened by a pervasive atmospheric haze. Subtle shifts in hue reflect the angle of the twin suns.",
+          "atmosphere": "The air is incredibly dry and hot, thick with fine, wind-whipped sand that reduces visibility in the distance. A constant, low hum of wind is the dominant sound. The intense solar radiation creates a shimmering heat haze above the terrain.",
+          "materials": "The dominant materials are dry, granular sand and eroded, sun-bleached stone. Dust and grit coat every surface. Sparse, wind-sculpted rock formations are prevalent.",
+          "mood": "A pervasive sense of desolation, isolation, and timeless endurance. The landscape feels unforgiving yet holds an austere beauty.",
+          "sounds": "Whispering wind, gritty sand, distant echoes, dry creaking",
+          "spatialLayout": "Vast, open expanses with a strong sense of depth and scale. The terrain is predominantly flat with dramatic vertical elements like mesas and canyons, broken by rolling dune seas.",
+          "primary_surfaces": [
+            "Sand",
+            "Eroded Stone"
+          ],
+          "secondary_surfaces": [
+            "Dust",
+            "Grit"
+          ],
+          "accent_features": [
+            "Wind-sculpted rock",
+            "Shimmering heat haze"
+          ],
+          "dominant": "Ochre",
+          "secondary": "Beige",
+          "accent": "Burnt Sienna",
+          "ambient": "Warm golden",
+          "genre": "fantasy",
+          "architectural_tone": "ancient monolithic stone construction with organic, eroded forms",
+          "cultural_tone": "nomadic, survivalist, deeply spiritual connection to the harsh environment",
+          "materials_base": "primarily natural, weathered stone and earth-based composites",
+          "mood_baseline": "resilient, solitary, timeless",
+          "palette_bias": "warm earth tones with stark light and shadow contrasts",
+          "soundscape_base": "wind-swept, dry, echoing",
+          "flora_base": "drought-resistant desert scrub, sparse hardy succulents, ancient petrified trees",
+          "fauna_base": "hardy desert insects, burrowing reptiles, large sand-dwelling predators, scavenger birds"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Endless Dunes",
+          "Scorched Mesas",
+          "Sun-bleached Canyons"
+        ],
+        "uniqueIdentifiers": [
+          "Twin Sun System",
+          "Arid Climate"
+        ],
+        "searchDesc": "Vast desert continent under twin suns, characterized by dunes, mesas, and canyons.",
+        "slug": "the-sundered-sands",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sundered Sands",
+          "looks": "A vast desert continent under a twin-sun sky.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A vast desert continent under a twin-sun sky."
+    },
+    "863a99e7-5930-4d56-a8fb-d35513159189": {
+      "id": "863a99e7-5930-4d56-a8fb-d35513159189",
+      "type": "region",
+      "name": "The Sundered Sands",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "region",
+        "name": "The Sundered Sands",
+        "description": "A vast desert continent under a twin-sun sky.",
+        "dna": {
+          "looks": "Expanses of soft, rolling sand dunes that shift with the wind, broken by mesas with flat, sun-baked tops. Deep, shadowed canyons offer pockets of respite from the relentless sun, sometimes harboring sparse, hardy vegetation.",
+          "colorsAndLighting": "The palette is dominated by warm, earthy tones – various shades of sand, ochre, and muted reds. The twin suns create sharp, long shadows and a pervasive golden glow, with occasional stark white highlights on rock faces.",
+          "atmosphere": "Extremely dry and hot, with a constant, fine dust suspended in the air that softens distant views and creates a hazy, shimmering effect. Wind is a constant presence, carrying grit and shaping the dunes.",
+          "materials": "Predominantly sand and sandstone, with some harder, darker volcanic rock forming mesa caps. Evidence of wind erosion is ubiquitous, creating smoothed and sculpted surfaces.",
+          "mood": "A profound sense of isolation and vastness, where life clings precariously. The stark beauty is underscored by the harshness of the environment.",
+          "sounds": "The ever-present whisper and roar of wind, the soft crunch of sand underfoot, the distant cry of a desert creature.",
+          "spatialLayout": "Open, sweeping vistas with a low, undulating horizon, punctuated by the sheer faces of mesas and the plunging depths of canyons.",
+          "primary_surfaces": [
+            "Sand dunes",
+            "Sandstone cliffs",
+            "Rocky outcrops"
+          ],
+          "secondary_surfaces": [
+            "Gravel plains",
+            "Dust"
+          ],
+          "accent_features": [
+            "Wind-sculpted rock formations",
+            "Sparse desert flora"
+          ],
+          "dominant": "Ochre",
+          "secondary": "Sand",
+          "accent": "Terracotta",
+          "ambient": "Warm golden",
+          "genre": null,
+          "architectural_tone": null,
+          "cultural_tone": "nomadic survivalists, stoic, deeply connected to the rhythms of the desert",
+          "materials_base": null,
+          "mood_baseline": null,
+          "palette_bias": "warm, sun-baked earth tones with high contrast",
+          "soundscape_base": "wind-dominated, dry, echoing desert sounds",
+          "flora_base": "sparse, tough desert flora like hardy succulents, thorny bushes, and wind-swept scrub",
+          "fauna_base": "small, quick desert reptiles, burrowing rodents, hardy insects, and large, patient predators"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Endless Dunes",
+          "Scorched Mesas",
+          "Sun-bleached Canyons"
+        ],
+        "uniqueIdentifiers": [
+          "Twin Sun System",
+          "Arid Climate"
+        ],
+        "searchDesc": "Vast desert continent under twin suns, characterized by dunes, mesas, and canyons.",
+        "slug": "the-sundered-sands-region",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sundered Sands",
+          "looks": "A vast desert continent under a twin-sun sky.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A vast desert continent under a twin-sun sky."
+    },
+    "a96f3317-97e8-4cf9-a266-b2a63e11feb6": {
+      "id": "a96f3317-97e8-4cf9-a266-b2a63e11feb6",
+      "type": "location",
+      "name": "The Hollow Titan",
+      "spaceType": "exterior",
+      "dna": {
+        "type": "location",
+        "name": "The Hollow Titan",
+        "description": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
+        "looks": "Massive, weathered stone structure of a humanoid figure, stretched out horizontally. A gaping maw serves as the primary entrance.",
+        "atmosphere": "Dry, dusty air with a faint mineral scent. Silence broken only by the wind.",
+        "mood": "Monumental, awe-inspiring, ancient",
+        "dna": {
+          "looks": "A colossal, weathered stone structure of a humanoid figure lies horizontally across a barren desert landscape. Its immense scale is emphasized by the small figures visible in the distance approaching its open mouth. The stone appears eroded by time and the elements, with rough textures and undulating surfaces. The mouth itself forms a vast, dark cavernous opening, suggesting a significant interior space. The overall form is monolithic and ancient, dominating the natural terrain.",
+          "colorsAndLighting": "The scene is lit by a strong, diffuse light, likely from twin suns, casting a warm, golden hue across the landscape. Shadows are soft and blended due to the atmospheric haze. The entrance to the colossus is a deep shadow, contrasting sharply with the illuminated exterior.",
+          "atmosphere": "The air is thick with dust, stirred by the wind, creating a hazy, diffused environment. Visibility is reduced, particularly around the entrance, obscuring finer details within the cavern's maw.",
+          "materials": "The primary material is immense, weathered stone. The surrounding environment consists of fine sand and grit.",
+          "mood": "Awe-inspiring, mysterious, and slightly ominous. The sheer scale and unnatural presence of the titan evoke a sense of ancient power and forgotten history.",
+          "sounds": "Muffled wind, distant grit scraping, the low hum of latent energy",
+          "spatialLayout": "The foreground consists of arid desert ground with scattered rocks and a dirt path leading towards the midground. The midground is dominated by the immense, recumbent stone colossus, its opened mouth forming a large, dark void. The background shows more desert landscape and a hazy sky with clouds. The overall spatial composition is one of immense scale against a vast, open environment.",
+          "primary_surfaces": "Stone",
+          "secondary_surfaces": "Sand, Dirt",
+          "accent_features": "None visible",
+          "dominant": "Ochre (stone and desert)",
+          "secondary": "Beige (sky and clouds)",
+          "accent": "Dark brown/black (entrance interior)",
+          "ambient": "Warm golden",
+          "genre": null,
+          "architectural_tone": "ancient monolithic stone construction with organic, eroded forms, carved to resemble a colossal humanoid figure",
+          "cultural_tone": null,
+          "materials_base": null,
+          "mood_baseline": "awe-inspiring, mysterious, ancient",
+          "palette_bias": null,
+          "soundscape_base": null,
+          "flora_base": null,
+          "fauna_base": null
+        },
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center, midground",
+            "description": "A massive, dark, cavernous opening serving as the primary entrance into the colossus."
+          }
+        ],
+        "dominantElements": [
+          "Massive stone colossus lying on its side (center, midground)",
+          "Cavernous entrance (mouth of colossus, center, midground)",
+          "Desert terrain with rocky outcrops (foreground)",
+          "Dusty, hazy atmosphere (entire scene)",
+          "Distant figures on a dirt path (center, midground)"
+        ],
+        "uniqueIdentifiers": [
+          "Kilometer-tall stone colossus lying on its side",
+          "Open mouth forming a cavernous entrance hall"
+        ],
+        "searchDesc": "Massive stone colossus in desert. Has: cavernous entrance (center, midground)",
+        "slug": "the-hollow-titan",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Hollow Titan",
+          "looks": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
+      "primaryMedia": "media-1764324766034-remxtkns9"
+    },
+    "niche-1764324794879-jh71oa4vi": {
+      "id": "niche-1764324794879-jh71oa4vi",
+      "type": "niche",
+      "name": "interior of The Hollow Titan",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Monumental monolithic walls of rough-hewn, ancient stone rise around a floor that slopes gently downwards. Massive arching buttresses of compacted earth and rock support an unseen ceiling, creating shadowed alcoves. The background is dominated by the immense, curving sweep of a smooth, polished stone surface, suggesting a colossal hollowed-out interior.",
+        "colorsAndLighting": "Dominant dark grey stone is dramatically highlighted by faint, ambient light from above, casting long, deep shadows.",
+        "atmosphere": "The air is dry and dusty, carrying a palpable sense of immense scale and profound antiquity. The air feels still and heavy, suggesting a long-dormant presence.",
+        "materials": "The primary material is weathered, ancient stone, ranging from rough-hewn on the floor and walls to smooth and polished on the background sweep. Compacted earth and rock form massive buttresses.",
+        "mood": "This space evokes a profound sense of monumental awe and ancient mystery, hinting at a slumbering, colossal entity.",
+        "sounds": "Silence, faint dust motes shifting, ancient stone settling.",
+        "spatialLayout": "The interior is vast and asymmetrical, with a downward-sloping floor leading to a narrow passage. Towering walls disappear into shadow, while arched buttresses create complex shadowed volumes. The space feels immense and organic, as if carved by natural forces or immense beings.",
+        "primary_surfaces": "Weathered ancient stone (rough-hewn to polished)",
+        "secondary_surfaces": "Compacted earth and rock",
+        "accent_features": "Narrow passage cut into floor, slightly ajar stone slab door",
+        "dominant": "Dark Grey (70%)",
+        "secondary": "Shadow (20%)",
+        "accent": "Faint ambient light (10%)",
+        "ambient": "Neutral",
+        "genre": null,
+        "architectural_tone": "organic stone",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "Monumental, awe-inspiring, ancient",
+        "palette_bias": null,
+        "soundscape_base": "Silent, vast",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764324794878-pu3eb667q",
+      "description": "The immense, hollowed-out interior of a colossal, slumbering entity, carved from ancient stone.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "foreground left",
+          "description": "A barely discernible, narrow passage cut into the stone floor."
+        },
+        {
+          "type": "door",
+          "position": "midground right",
+          "description": "A single, heavy stone slab set into the wall, slightly ajar."
+        }
+      ],
+      "dominantElements": [
+        "monolithic walls",
+        "arching buttresses",
+        "curving sweep of the titan's inner form"
+      ],
+      "uniqueIdentifiers": [
+        "carved from weathered, ancient stone",
+        "inner form of a colossal entity",
+        "faint ambient light from above",
+        "asymmetrical composition"
+      ],
+      "searchDesc": "Monumental ancient stone interior with massive buttresses and a curving sweep.",
+      "slug": "interior-of-the-hollow-titan"
     }
   },
   "views": {},
@@ -1093,10 +1371,242 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764324736740-u3huni5xf",
+      "type": "host",
+      "name": "The Sundered Sands",
+      "description": "A vast desert continent under a twin-sun sky.",
+      "dna": {
+        "type": "host",
+        "name": "The Sundered Sands",
+        "description": "A vast desert continent under a twin-sun sky.",
+        "dna": {
+          "looks": "A sprawling, arid landscape dominated by undulating sand dunes stretching to the horizon. Jagged, sun-baked mesas rise from the flat plains, their surfaces eroded into intricate patterns. Deep, shadowed canyons carve through the terrain, hinting at hidden depths. The overall impression is one of immense, ancient emptiness.",
+          "colorsAndLighting": "The scene is bathed in a relentless, warm golden light cast by two suns, creating a palette of ochre, sand, and burnt sienna. Shadows are stark and sharply defined, though softened by a pervasive atmospheric haze. Subtle shifts in hue reflect the angle of the twin suns.",
+          "atmosphere": "The air is incredibly dry and hot, thick with fine, wind-whipped sand that reduces visibility in the distance. A constant, low hum of wind is the dominant sound. The intense solar radiation creates a shimmering heat haze above the terrain.",
+          "materials": "The dominant materials are dry, granular sand and eroded, sun-bleached stone. Dust and grit coat every surface. Sparse, wind-sculpted rock formations are prevalent.",
+          "mood": "A pervasive sense of desolation, isolation, and timeless endurance. The landscape feels unforgiving yet holds an austere beauty.",
+          "sounds": "Whispering wind, gritty sand, distant echoes, dry creaking",
+          "spatialLayout": "Vast, open expanses with a strong sense of depth and scale. The terrain is predominantly flat with dramatic vertical elements like mesas and canyons, broken by rolling dune seas.",
+          "primary_surfaces": [
+            "Sand",
+            "Eroded Stone"
+          ],
+          "secondary_surfaces": [
+            "Dust",
+            "Grit"
+          ],
+          "accent_features": [
+            "Wind-sculpted rock",
+            "Shimmering heat haze"
+          ],
+          "dominant": "Ochre",
+          "secondary": "Beige",
+          "accent": "Burnt Sienna",
+          "ambient": "Warm golden",
+          "genre": "fantasy",
+          "architectural_tone": "ancient monolithic stone construction with organic, eroded forms",
+          "cultural_tone": "nomadic, survivalist, deeply spiritual connection to the harsh environment",
+          "materials_base": "primarily natural, weathered stone and earth-based composites",
+          "mood_baseline": "resilient, solitary, timeless",
+          "palette_bias": "warm earth tones with stark light and shadow contrasts",
+          "soundscape_base": "wind-swept, dry, echoing",
+          "flora_base": "drought-resistant desert scrub, sparse hardy succulents, ancient petrified trees",
+          "fauna_base": "hardy desert insects, burrowing reptiles, large sand-dwelling predators, scavenger birds"
+        },
+        "navigableElements": [],
+        "dominantElements": [
+          "Endless Dunes",
+          "Scorched Mesas",
+          "Sun-bleached Canyons"
+        ],
+        "uniqueIdentifiers": [
+          "Twin Sun System",
+          "Arid Climate"
+        ],
+        "searchDesc": "Vast desert continent under twin suns, characterized by dunes, mesas, and canyons.",
+        "slug": "the-sundered-sands",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sundered Sands",
+          "looks": "A vast desert continent under a twin-sun sky.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "spaceType": "exterior",
+      "children": [
+        {
+          "id": "863a99e7-5930-4d56-a8fb-d35513159189",
+          "type": "region",
+          "name": "The Sundered Sands",
+          "description": "A vast desert continent under a twin-sun sky.",
+          "dna": {
+            "type": "region",
+            "name": "The Sundered Sands",
+            "description": "A vast desert continent under a twin-sun sky.",
+            "dna": {
+              "looks": "Expanses of soft, rolling sand dunes that shift with the wind, broken by mesas with flat, sun-baked tops. Deep, shadowed canyons offer pockets of respite from the relentless sun, sometimes harboring sparse, hardy vegetation.",
+              "colorsAndLighting": "The palette is dominated by warm, earthy tones – various shades of sand, ochre, and muted reds. The twin suns create sharp, long shadows and a pervasive golden glow, with occasional stark white highlights on rock faces.",
+              "atmosphere": "Extremely dry and hot, with a constant, fine dust suspended in the air that softens distant views and creates a hazy, shimmering effect. Wind is a constant presence, carrying grit and shaping the dunes.",
+              "materials": "Predominantly sand and sandstone, with some harder, darker volcanic rock forming mesa caps. Evidence of wind erosion is ubiquitous, creating smoothed and sculpted surfaces.",
+              "mood": "A profound sense of isolation and vastness, where life clings precariously. The stark beauty is underscored by the harshness of the environment.",
+              "sounds": "The ever-present whisper and roar of wind, the soft crunch of sand underfoot, the distant cry of a desert creature.",
+              "spatialLayout": "Open, sweeping vistas with a low, undulating horizon, punctuated by the sheer faces of mesas and the plunging depths of canyons.",
+              "primary_surfaces": [
+                "Sand dunes",
+                "Sandstone cliffs",
+                "Rocky outcrops"
+              ],
+              "secondary_surfaces": [
+                "Gravel plains",
+                "Dust"
+              ],
+              "accent_features": [
+                "Wind-sculpted rock formations",
+                "Sparse desert flora"
+              ],
+              "dominant": "Ochre",
+              "secondary": "Sand",
+              "accent": "Terracotta",
+              "ambient": "Warm golden",
+              "genre": null,
+              "architectural_tone": null,
+              "cultural_tone": "nomadic survivalists, stoic, deeply connected to the rhythms of the desert",
+              "materials_base": null,
+              "mood_baseline": null,
+              "palette_bias": "warm, sun-baked earth tones with high contrast",
+              "soundscape_base": "wind-dominated, dry, echoing desert sounds",
+              "flora_base": "sparse, tough desert flora like hardy succulents, thorny bushes, and wind-swept scrub",
+              "fauna_base": "small, quick desert reptiles, burrowing rodents, hardy insects, and large, patient predators"
+            },
+            "navigableElements": [],
+            "dominantElements": [
+              "Endless Dunes",
+              "Scorched Mesas",
+              "Sun-bleached Canyons"
+            ],
+            "uniqueIdentifiers": [
+              "Twin Sun System",
+              "Arid Climate"
+            ],
+            "searchDesc": "Vast desert continent under twin suns, characterized by dunes, mesas, and canyons.",
+            "slug": "the-sundered-sands-region",
+            "semantic": {
+              "atmosphere": "",
+              "mood": ""
+            },
+            "visual": {
+              "prompt": "",
+              "style": ""
+            },
+            "profile": {
+              "name": "The Sundered Sands",
+              "looks": "A vast desert continent under a twin-sun sky.",
+              "atmosphere": "",
+              "mood": ""
+            }
+          },
+          "spaceType": "exterior",
+          "children": [
+            {
+              "id": "a96f3317-97e8-4cf9-a266-b2a63e11feb6",
+              "type": "location",
+              "name": "The Hollow Titan",
+              "description": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
+              "dna": {
+                "type": "location",
+                "name": "The Hollow Titan",
+                "description": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
+                "looks": "Massive, weathered stone structure of a humanoid figure, stretched out horizontally. A gaping maw serves as the primary entrance.",
+                "atmosphere": "Dry, dusty air with a faint mineral scent. Silence broken only by the wind.",
+                "mood": "Monumental, awe-inspiring, ancient",
+                "dna": {
+                  "looks": "A colossal, weathered stone structure of a humanoid figure lies horizontally across a barren desert landscape. Its immense scale is emphasized by the small figures visible in the distance approaching its open mouth. The stone appears eroded by time and the elements, with rough textures and undulating surfaces. The mouth itself forms a vast, dark cavernous opening, suggesting a significant interior space. The overall form is monolithic and ancient, dominating the natural terrain.",
+                  "colorsAndLighting": "The scene is lit by a strong, diffuse light, likely from twin suns, casting a warm, golden hue across the landscape. Shadows are soft and blended due to the atmospheric haze. The entrance to the colossus is a deep shadow, contrasting sharply with the illuminated exterior.",
+                  "atmosphere": "The air is thick with dust, stirred by the wind, creating a hazy, diffused environment. Visibility is reduced, particularly around the entrance, obscuring finer details within the cavern's maw.",
+                  "materials": "The primary material is immense, weathered stone. The surrounding environment consists of fine sand and grit.",
+                  "mood": "Awe-inspiring, mysterious, and slightly ominous. The sheer scale and unnatural presence of the titan evoke a sense of ancient power and forgotten history.",
+                  "sounds": "Muffled wind, distant grit scraping, the low hum of latent energy",
+                  "spatialLayout": "The foreground consists of arid desert ground with scattered rocks and a dirt path leading towards the midground. The midground is dominated by the immense, recumbent stone colossus, its opened mouth forming a large, dark void. The background shows more desert landscape and a hazy sky with clouds. The overall spatial composition is one of immense scale against a vast, open environment.",
+                  "primary_surfaces": "Stone",
+                  "secondary_surfaces": "Sand, Dirt",
+                  "accent_features": "None visible",
+                  "dominant": "Ochre (stone and desert)",
+                  "secondary": "Beige (sky and clouds)",
+                  "accent": "Dark brown/black (entrance interior)",
+                  "ambient": "Warm golden",
+                  "genre": null,
+                  "architectural_tone": "ancient monolithic stone construction with organic, eroded forms, carved to resemble a colossal humanoid figure",
+                  "cultural_tone": null,
+                  "materials_base": null,
+                  "mood_baseline": "awe-inspiring, mysterious, ancient",
+                  "palette_bias": null,
+                  "soundscape_base": null,
+                  "flora_base": null,
+                  "fauna_base": null
+                },
+                "navigableElements": [
+                  {
+                    "type": "door",
+                    "position": "center, midground",
+                    "description": "A massive, dark, cavernous opening serving as the primary entrance into the colossus."
+                  }
+                ],
+                "dominantElements": [
+                  "Massive stone colossus lying on its side (center, midground)",
+                  "Cavernous entrance (mouth of colossus, center, midground)",
+                  "Desert terrain with rocky outcrops (foreground)",
+                  "Dusty, hazy atmosphere (entire scene)",
+                  "Distant figures on a dirt path (center, midground)"
+                ],
+                "uniqueIdentifiers": [
+                  "Kilometer-tall stone colossus lying on its side",
+                  "Open mouth forming a cavernous entrance hall"
+                ],
+                "searchDesc": "Massive stone colossus in desert. Has: cavernous entrance (center, midground)",
+                "slug": "the-hollow-titan",
+                "semantic": {
+                  "atmosphere": "",
+                  "mood": ""
+                },
+                "visual": {
+                  "prompt": "",
+                  "style": ""
+                },
+                "profile": {
+                  "name": "The Hollow Titan",
+                  "looks": "A kilometer-tall stone colossus lying on its side, its open mouth forming a cavernous entrance hall.",
+                  "atmosphere": "",
+                  "mood": ""
+                }
+              },
+              "spaceType": "exterior",
+              "children": [
+                {
+                  "id": "niche-1764324794879-jh71oa4vi",
+                  "type": "niche",
+                  "children": []
+                }
+              ],
+              "primaryMedia": "media-1764324766034-remxtkns9"
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1764322819196-ta48nltve",
-    "loc-1764323539675-dohpf8mlu"
+    "loc-1764323539675-dohpf8mlu",
+    "loc-1764324736740-u3huni5xf"
   ]
 }
