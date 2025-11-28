@@ -6,6 +6,7 @@
 import { create } from 'zustand';
 import { v4 as uuidv4 } from 'uuid';
 import { characterStorageService, CharactersData } from '@/services/characterStorage.service';
+import { deleteMediaByEntityRefs } from '@/services/mediaService';
 
 // Character interface - simple structure for metadata storage
 export interface Character {
@@ -99,8 +100,13 @@ export const useCharactersStore = create<CharactersState>()(
       deleteCharacter: (id) => {
         set((state) => {
           const { [id]: deleted, ...rest } = state.characters;
-          return { characters: rest };
+          // Also remove from pinnedIds if present
+          const newPinnedIds = state.pinnedIds.filter(pid => pid !== id);
+          return { characters: rest, pinnedIds: newPinnedIds };
         });
+        
+        // Clean up media for this character
+        deleteMediaByEntityRefs([id]);
         
         // Save to backend after state update
         get().saveToBackend();
@@ -119,8 +125,9 @@ export const useCharactersStore = create<CharactersState>()(
           const index = pinnedIds.indexOf(id);
           
           if (index > -1) {
-            // Already pinned, unpin it
+            // Already pinned, unpin it - clean up media
             pinnedIds.splice(index, 1);
+            deleteMediaByEntityRefs([id]);
           } else {
             // Not pinned, pin it
             pinnedIds.push(id);

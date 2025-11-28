@@ -19,6 +19,7 @@ export interface NodeBuildOptions {
   uniqueIdentifiers?: string[];
   searchDesc?: string;
   slug?: string;
+  primaryMedia?: string;
 }
 
 export interface LocationNode {
@@ -77,10 +78,13 @@ export function buildNode(
     name,
     spaceType: options?.spaceType || determineSpaceType(type),
     dna,
-    // primaryMedia: ... // Media creation handled in entityPersistence
   };
 
   // Add optional fields if provided
+  if (options?.primaryMedia) {
+    node.primaryMedia = options.primaryMedia;
+  }
+
   if (options?.parentId) {
     node.parentId = options.parentId;
   }

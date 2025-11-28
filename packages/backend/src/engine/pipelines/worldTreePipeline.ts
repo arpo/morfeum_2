@@ -16,6 +16,47 @@ import { locationVisualAnalysisPrompt } from '../generation/prompts';
 import { fetchImageAsBase64 } from '../../services/spawn/shared/pipelineCommon';
 import { WorldTreeBuilder } from '../../services/worldTree/builder';
 import { PipelineHelper } from './shared/pipelineHelpers';
+import mediaService from '../../services/media/mediaService';
+import type { TreeNode } from '../../services/worldTree/types';
+
+/**
+ * Assign media to tree nodes
+ * Creates media entry and sets primaryMedia on the deepest node
+ */
+function assignMediaToTreeNodes(
+  tree: TreeNode,
+  imageUrl: string,
+  imagePrompt: string
+): TreeNode {
+  // Find the deepest node in the tree
+  function findDeepestNode(node: TreeNode): TreeNode {
+    if (!node.children || node.children.length === 0) {
+      return node;
+    }
+    // Recursively find deepest in first child branch
+    return findDeepestNode(node.children[0]);
+  }
+
+  const deepestNode = findDeepestNode(tree);
+
+  // Create media entry for the image
+  const media = mediaService.createMedia({
+    type: 'image',
+    url: imageUrl,
+    metadata: {
+      prompt: imagePrompt,
+      model: 'FLUX',
+      width: 1024,
+      height: 1024
+    },
+    entityRefs: [deepestNode.id]
+  });
+
+  // Set primaryMedia on the deepest node
+  deepestNode.primaryMedia = media.id;
+
+  return tree;
+}
 
 /**
  * Helper: Build node chain from hierarchy
@@ -122,7 +163,12 @@ export async function runWorldTreePipeline(
       fullHierarchy
     );
 
-    helper.completed('World Tree created successfully', { worldTree });
+    // Stage 6: Assign media to tree nodes
+    helper.startStage('media_assignment', 'Assigning media to tree nodes...');
+    const treeWithMedia = assignMediaToTreeNodes(worldTree, imageUrl, imagePrompt);
+    helper.completeStage('media_assignment', 'Media assigned to tree nodes');
+
+    helper.completed('World Tree created successfully', { worldTree: treeWithMedia });
 
   } catch (error: any) {
     if (signal.aborted) {

@@ -146,3 +146,55 @@ export async function preloadEntityMedia(entityIds: string[]): Promise<void> {
   const promises = entityIds.map(entityId => getEntityMedia(entityId));
   await Promise.all(promises);
 }
+
+/**
+ * Delete all media for entity IDs
+ * Used when deleting characters or world trees
+ */
+export async function deleteMediaByEntityRefs(entityIds: string[]): Promise<boolean> {
+  try {
+    const response = await fetch('/api/media/by-entities', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ entityIds })
+    });
+    
+    if (response.ok) {
+      // Clear cache after deletion
+      clearMediaCache();
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error('Failed to delete media:', error);
+    return false;
+  }
+}
+
+/**
+ * Delete media by media IDs
+ * Used when deleting by primaryMedia references
+ */
+export async function deleteMediaByIds(mediaIds: string[]): Promise<boolean> {
+  try {
+    // Delete each media by ID
+    const deletePromises = mediaIds.map(id => 
+      fetch(`/api/media/${id}`, { method: 'DELETE' })
+    );
+    
+    const results = await Promise.all(deletePromises);
+    const allSucceeded = results.every(r => r.ok);
+    
+    if (allSucceeded) {
+      // Clear cache after deletion
+      clearMediaCache();
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error('Failed to delete media by IDs:', error);
+    return false;
+  }
+}

@@ -45,7 +45,8 @@ export async function handleCharacterCompletion(
     name: character.name,
     type: 'character',
     personality: character.details.personality || '',
-    imagePrompt: character.details.imagePrompt
+    imagePrompt: character.details.imagePrompt,
+    primaryMedia: character.primaryMedia
   });
 
   console.log(`[CompletionHandler] Character ${character.name} session created and active`);
@@ -83,6 +84,7 @@ export function handleLocationCompletion(
         name: node?.name || deepestNodeData?.name || 'New Location',
         type: 'location',
         atmosphere: 'Generated',
+        primaryMedia: node?.primaryMedia
       });
 
       console.log(`[CompletionHandler] Location ${node?.name || deepestNodeData?.name} session created`);

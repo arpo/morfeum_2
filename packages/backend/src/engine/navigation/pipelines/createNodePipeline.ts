@@ -13,6 +13,7 @@ import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
 import { findParentLocationNode } from '../navigationHelpers';
 import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
 import { getPipelineTypeForIntent } from '../../pipelines/shared/pipelineConfig';
+import mediaService from '../../../services/media/mediaService';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
 export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
@@ -122,14 +123,38 @@ export async function runCreateLocationNodePipeline(
       helper.startStage('node_building', 'Building final node...');
     }
 
+    // Create media entry for the node image if we have an imageUrl
+    let mediaId: string | undefined;
+    let createdMedia: any;
+    if (shouldGenerateImage && imageUrl) {
+      createdMedia = mediaService.createMedia({
+        type: 'image',
+        url: imageUrl,
+        metadata: {
+          prompt: imagePrompt,
+          model: 'FLUX',
+          width: 1024,
+          height: 1024
+        },
+        entityRefs: [] // Will be updated after node is created
+      });
+      mediaId = createdMedia.id;
+    }
+
     const node = buildNode(nodeType, nodeData.name, nodeData.dna, {
       description: nodeData.description,
       navigableElements: nodeData.navigableElements,
       dominantElements: nodeData.dominantElements,
       uniqueIdentifiers: nodeData.uniqueIdentifiers,
       searchDesc: nodeData.searchDesc,
-      slug: nodeData.slug
+      slug: nodeData.slug,
+      primaryMedia: mediaId
     });
+
+    // Update media entityRefs with the actual node ID
+    if (createdMedia && shouldGenerateImage) {
+      createdMedia.entityRefs = [node.id];
+    }
 
     if (helper) {
       helper.completeStage('node_building', 'Node built');

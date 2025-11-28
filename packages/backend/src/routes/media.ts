@@ -2,6 +2,10 @@
  * Media API Routes
  * 
  * Endpoints for managing media assets (images and videos)
+ * 
+ * IMPORTANT: Route order matters in Express!
+ * Specific routes (like /cleanup, /by-entities) must come BEFORE
+ * wildcard routes (like /:id) to be matched correctly.
  */
 
 import { Router } from 'express';
@@ -36,6 +40,102 @@ router.get('/', (req, res) => {
     });
   }
 });
+
+/**
+ * POST /api/media
+ * Create new media
+ */
+router.post('/', (req, res) => {
+  try {
+    const { type, url, metadata, entityRefs, parentMedia, relatedMedia, transitionSequence } = req.body;
+
+    if (!type || !url || !metadata) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'Missing required fields: type, url, metadata' 
+      });
+    }
+
+    const newMedia = mediaService.createMedia({
+      type,
+      url,
+      metadata,
+      entityRefs,
+      parentMedia,
+      relatedMedia,
+      transitionSequence
+    });
+
+    res.status(201).json({ success: true, data: newMedia });
+  } catch (error) {
+    console.error('Error creating media:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Failed to create media' 
+    });
+  }
+});
+
+/**
+ * POST /api/media/cleanup
+ * Delete all unreferenced media
+ * NOTE: Must be defined BEFORE /:id routes
+ */
+router.post('/cleanup', (req, res) => {
+  try {
+    const deletedIds = mediaService.cleanupUnreferencedMedia();
+
+    res.json({ 
+      success: true, 
+      message: `Deleted ${deletedIds.length} unreferenced media items`,
+      deletedIds 
+    });
+  } catch (error) {
+    console.error('Error cleaning up media:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Failed to cleanup media' 
+    });
+  }
+});
+
+/**
+ * DELETE /api/media/by-entities
+ * Delete all media referenced by entity IDs
+ * Used when deleting characters or world trees
+ * NOTE: Must be defined BEFORE /:id routes
+ */
+router.delete('/by-entities', (req, res) => {
+  try {
+    const { entityIds } = req.body;
+    
+    if (!entityIds || !Array.isArray(entityIds)) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'entityIds array required' 
+      });
+    }
+    
+    const deletedIds = mediaService.deleteMediaByEntityRefs(entityIds);
+    
+    res.json({
+      success: true,
+      message: `Deleted ${deletedIds.length} media items`,
+      data: { deletedIds, count: deletedIds.length }
+    });
+  } catch (error) {
+    console.error('Error deleting media by entity refs:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Failed to delete media' 
+    });
+  }
+});
+
+// ============================================
+// WILDCARD ROUTES BELOW - ORDER MATTERS!
+// These /:id routes must come AFTER specific routes
+// ============================================
 
 /**
  * GET /api/media/:id
@@ -97,41 +197,6 @@ router.get('/:id/transitions', (req, res) => {
     res.status(500).json({ 
       success: false, 
       error: 'Failed to retrieve transitions' 
-    });
-  }
-});
-
-/**
- * POST /api/media
- * Create new media
- */
-router.post('/', (req, res) => {
-  try {
-    const { type, url, metadata, entityRefs, parentMedia, relatedMedia, transitionSequence } = req.body;
-
-    if (!type || !url || !metadata) {
-      return res.status(400).json({ 
-        success: false, 
-        error: 'Missing required fields: type, url, metadata' 
-      });
-    }
-
-    const newMedia = mediaService.createMedia({
-      type,
-      url,
-      metadata,
-      entityRefs,
-      parentMedia,
-      relatedMedia,
-      transitionSequence
-    });
-
-    res.status(201).json({ success: true, data: newMedia });
-  } catch (error) {
-    console.error('Error creating media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to create media' 
     });
   }
 });
@@ -248,28 +313,6 @@ router.delete('/:id', (req, res) => {
     res.status(500).json({ 
       success: false, 
       error: 'Failed to delete media' 
-    });
-  }
-});
-
-/**
- * POST /api/media/cleanup
- * Delete all unreferenced media
- */
-router.post('/cleanup', (req, res) => {
-  try {
-    const deletedIds = mediaService.cleanupUnreferencedMedia();
-
-    res.json({ 
-      success: true, 
-      message: `Deleted ${deletedIds.length} unreferenced media items`,
-      deletedIds 
-    });
-  } catch (error) {
-    console.error('Error cleaning up media:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to cleanup media' 
     });
   }
 });

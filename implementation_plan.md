@@ -1,638 +1,218 @@
-# Implementation Plan: Generic Node System with Visual Context Navigation
+# Implementation Plan: Fix Image Loading for World Trees
 
-## [Overview]
+## Overview
 
-Transform Morfeum's location system from a rigid 4-level hierarchy (world/region/location/sublocation) to a flexible generic node system with unlimited depth, while adding visual context awareness to NavigatorAI for accurate spatial reasoning.
+Fix the broken image loading system for world tree nodes by ensuring all nodes have `primaryMedia` references that link to media entries in the media system, enabling synchronous image loading without async fetching.
 
-This refactoring addresses three core problems: (1) NavigatorAI can't distinguish between "the stair here" vs "stair elsewhere" due to lack of visual context, (2) rigid type constraints force AI to make structural decisions it shouldn't, and (3) slow generation times from overly complex DNA prompts. The solution removes type constraints, simplifies DNA to balance speed and detail, enhances NavigatorAI with visual context from the current location's visualAnchors, and prepares infrastructure for future multi-view support (north/south text descriptions with lazy image generation).
+The core issue is that while characters properly create media entries and set `primaryMedia` fields, world tree nodes do not. This causes images to disappear after pipeline completion and fail to load when navigating the tree.
 
-The implementation maintains the existing tree storage structure but removes type-specific logic, consolidates DNA interfaces into a single flexible structure, and adds visual awareness to navigation. This enables natural commands like "go up the stair" to correctly identify which stair based on what's visible in the current location.
+## Current Problem
 
-## [Types]
+### What's Broken
 
-Define new unified type system replacing rigid hierarchy with flexible generic nodes.
+1. **World Tree Creation**: Images generated during world tree creation are never stored in the media system, and tree nodes never get `primaryMedia` references
+2. **Navigation Node Creation**: Images generated when navigating (creating niches/features) are never stored in the media system
+3. **Frontend Image Loading**: The `useEntityImage` hook expects `primaryMedia` fields, so without them, no images load
+4. **User Experience**: Preview images disappear when pipelines complete, clicking nodes shows skeleton loaders indefinitely
 
-### Core Node Structure
+### Root Causes
 
-```typescript
-// packages/frontend/src/store/slices/locationsSlice.ts
-// packages/backend/src/services/spawn/types.ts
+1. **worldTreePipeline.ts**: Generates images but never creates media entries or sets `primaryMedia` on nodes
+2. **WorldTreeBuilder.buildNode**: Has `primaryMedia` commented out and doesn't accept it as a parameter
+3. **createNodePipeline.ts**: Generates images but never creates media entries or sets `primaryMedia`
+4. **nodeBuilder.ts**: Doesn't create media entries (comment says handled in entityPersistence, but it's never called)
 
-// Single generic node type (replaces World/Region/Location/SublocationNode)
-export interface Node {
-  id: string;
-  name: string;
-  parent_id: string | null;
-  root_id: string;  // Points to tree root
-  depth: number;    // Auto-calculated from tree position
-  
-  // Optional scale hint for image generation context
-  scale?: 'macro' | 'area' | 'site' | 'interior' | 'detail';
-  
-  // Unified DNA structure (flattened from nested hierarchy)
-  dna: NodeDNA;
-  
-  // Current view state
-  currentView: CurrentView;
-  
-  // Multi-view descriptions (prepared for future implementation)
-  viewDescriptions?: ViewDescriptions;
-  
-  // Generated images cache
-  viewImages?: Record<string, CachedImage>;
-  
-  // Navigation metadata
-  imagePath: string;
-  focus?: FocusState;
-}
+### What Works (Character System)
 
-// Simplified DNA structure (middle way: essential detail, no redundancy)
-export interface NodeDNA {
-  // Visual essentials (from visual analysis)
-  looks: string;                    // 4-6 sentences
-  colorsAndLighting: string;        // 2-4 sentences
-  atmosphere: string;               // 3-5 sentences
-  materials: string;                // 1-3 sentences
-  mood: string;                     // 2-3 sentences
-  sounds: string;                   // 5-7 words
-  
-  // Visual anchors (critical for consistency and navigation)
-  visualAnchors: VisualAnchors;
-  
-  // Navigation context
-  searchDesc: string;               // 75-100 chars for semantic matching
-  viewContext: ViewContext;
-  
-  // Metadata
-  fictional: boolean;
-  copyright: boolean;
-}
+Characters work correctly because `characterPipeline.ts`:
+1. Calls `buildCharacterEntity()` which creates media entry via `mediaService.createMedia()`
+2. Sets `primaryMedia` field on character entity
+3. Calls `saveAndPinEntity()` to persist everything
 
-// Visual anchors remain detailed (essential for re-rendering and spatial awareness)
-export interface VisualAnchors {
-  dominantElements: string[];       // 3-5 key features with size/position
-  spatialLayout: string;            // 2-4 sentences: structure, dimensions
-  surfaceMaterialMap: {
-    primary_surfaces: string;
-    secondary_surfaces: string;
-    accent_features: string;
-  };
-  colorMapping: {
-    dominant: string;
-    secondary: string;
-    accent: string;
-    ambient: string;
-  };
-  uniqueIdentifiers: string[];      // 2-4 distinctive features
-}
+## Types
 
-// View context from image analysis
-export interface ViewContext {
-  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
-  focusTarget: string;              // Main subject being viewed
-  distance: 'close' | 'medium' | 'far';
-  composition: string;              // Viewer position description
-}
+Update type definitions to ensure `primaryMedia` is properly supported across the system.
 
-// Current view tracking (which angle user is viewing from)
-export interface CurrentView {
-  viewKey: string;                  // 'default', 'north', 'south', etc.
-  imagePath: string;                // Active image for this view
-  focusTarget: string;              // What's prominent in this view
-}
+### Backend Type Changes
 
-// Multi-view text descriptions (prepared, not fully implemented yet)
-export interface ViewDescriptions {
-  [viewKey: string]: ViewDescription;
-}
+**File: `packages/backend/src/services/worldTree/types.ts`**
 
-export interface ViewDescription {
-  viewKey: string;
-  looks: string;                    // 3-5 sentences: what you see from this angle
-  focusTarget: string;              // Main subject in this direction
-  renderInstructions: string;       // Camera geometry for image generation
-  hasImage: boolean;                // Has this view been rendered?
-}
+- Ensure `TreeNode` interface has `primaryMedia?: string` (already present)
+- No changes needed - type already supports it
 
-// Cached generated images
-export interface CachedImage {
-  imagePath: string;
-  generatedAt: string;
-}
+**File: `packages/backend/src/engine/generation/shared/nodeBuilder.ts`**
 
-// Focus state (existing, keep as-is)
-export interface FocusState {
-  node_id: string;
-  perspective: 'exterior' | 'interior' | 'aerial' | 'ground-level' | 'elevated' | 'distant';
-  viewpoint: string;
-  distance: 'close' | 'medium' | 'far';
-}
+- Add `primaryMedia?: string` to `NodeBuildOptions` interface
+- Update `buildNode` function signature to accept and use `primaryMedia` from options
 
-// Tree structure (existing, keep as-is but remove type field)
-export interface TreeNode {
-  id: string;
-  children: TreeNode[];
-}
-```
+## Files
 
-### NavigatorAI Enhanced Types
+Detailed breakdown of all file modifications needed.
+
+### Backend Files to Modify
+
+1. **packages/backend/src/engine/pipelines/worldTreePipeline.ts**
+   - Add new function `assignMediaToTreeNodes()` to create media entries and set `primaryMedia`
+   - Call this function after `WorldTreeBuilder.build()` and before completing pipeline
+   - Recursively traverse tree to find deepest node (the one with the generated image)
+   - Create media entry for that node using `mediaService.createMedia()`
+   - Set `primaryMedia` on the node
+
+2. **packages/backend/src/services/worldTree/builder.ts**
+   - Uncomment and implement `primaryMedia` field in `buildNode()`
+   - Accept `primaryMedia` from data parameter: `primaryMedia: data.primaryMedia`
+   - Ensure it's included in returned TreeNode
+
+3. **packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts**
+   - After image generation and node building, create media entry
+   - Import `mediaService` from `'../../../services/media'`
+   - Call `mediaService.createMedia()` with image URL and metadata
+   - Set `primaryMedia` on the node before returning
+
+4. **packages/backend/src/engine/generation/shared/nodeBuilder.ts**
+   - Add `primaryMedia?: string` to `NodeBuildOptions` interface
+   - Add `primaryMedia` field to `LocationNode` interface (already present)
+   - Update `buildNode()` to accept and set `primaryMedia` from options
+
+5. **packages/backend/src/engine/pipelines/shared/entityPersistence.ts**
+   - Update `buildLocationEntity()` to properly handle tree structures
+   - Ensure it can recursively assign media to all nodes in a tree
+
+### Frontend Files (No changes needed)
+
+The frontend already supports `primaryMedia`:
+- `useEntityImage` hook checks for `primaryMedia` field
+- `mediaService.getPrimaryMediaUrl()` handles fetching
+- `treesSlice.setCompleteWorldTree()` preserves all fields via spread operator
+- `entitySessionLoader.ts` uses `getPrimaryMediaUrl(node)` which will work when `primaryMedia` is present
+
+## Functions
+
+### New Functions to Create
+
+**File: `packages/backend/src/engine/pipelines/worldTreePipeline.ts`**
 
 ```typescript
-// packages/backend/src/services/navigator.service.ts
-
-// Add visual context to navigation input
-export interface CurrentLocationDetails {
-  node_id: string;
-  name: string;
-  searchDesc: string;
-  
-  // Visual context from current location
-  visualAnchors: {
-    dominantElements: string[];     // What's physically in this location
-    uniqueIdentifiers: string[];
-  };
-  
-  // Optional: what's in each direction (from viewDescriptions)
-  viewDescriptions?: {
-    [viewKey: string]: {
-      looks: string;
-      focusTarget: string;
-    };
-  };
-  
-  // Current view direction
-  currentView: {
-    viewKey: string;
-    focusTarget: string;
-  };
-}
-
-// Enhanced navigation result (add scale hint)
-export interface NavigationResult {
-  action: 'move' | 'generate' | 'look';  // Add 'look' action for perspective shifts
-  
-  // For 'move' action
-  targetNodeId?: string | null;
-  
-  // For 'generate' action
-  name?: string | null;
-  parent_id?: string | null;
-  scale_hint?: 'macro' | 'area' | 'site' | 'interior' | 'detail';  // NEW
-  
-  // For 'look' action (NEW - prepare for future multi-view)
-  viewUpdate?: {
-    viewKey: string;              // 'north', 'south', 'behind', 'up', etc.
-    needsImageGeneration: boolean;
-  };
-  
-  relation?: 'child' | 'sibling' | 'parent' | 'distant' | null;
-  reason: string;
-}
+/**
+ * Assign media to tree nodes
+ * Creates media entries and sets primaryMedia on nodes that have generated images
+ */
+function assignMediaToTreeNodes(
+  tree: TreeNode, 
+  imageUrl: string, 
+  imagePrompt: string
+): TreeNode
 ```
 
-### Location Seed Updates
-
-```typescript
-// packages/backend/src/services/spawn/types.ts
-
-// Keep existing LocationSeed structure (renderInstructions already handled)
-export interface LocationSeed {
-  originalPrompt?: string;
-  name: string;
-  looks: string;
-  atmosphere: string;
-  mood: string;
-  renderInstructions: string;  // Camera geometry (keep this!)
-  scale_hint?: 'macro' | 'area' | 'site' | 'interior' | 'detail';  // NEW
-}
-```
-
-## [Files]
-
-Comprehensive file modifications across backend prompts, services, and frontend state/UI.
-
-### Files to Modify
-
-**Backend Prompts (8 files):**
-1. `packages/backend/src/prompts/languages/en/locationSeedGeneration.ts`
-   - Add scale_hint to output JSON structure
-   - Keep renderInstructions (camera geometry)
-
-2. `packages/backend/src/prompts/languages/en/locationVisualAnalysis.ts`
-   - Keep as-is (already captures visualAnchors well)
-
-3. `packages/backend/src/prompts/languages/en/locationDeepProfileEnrichment.ts`
-   - **Major simplification**: Remove world/region/location nested structure
-   - Output single flat NodeDNA structure
-   - Reduce field count from ~200 to ~15 core fields
-   - Remove redundant semantic/spatial metadata
-   - Keep visualAnchors detailed (critical)
-
-4. `packages/backend/src/prompts/languages/en/locationImageGeneration.ts`
-   - Add scale_hint parameter support
-   - Adjust framing based on scale (macro=wide, detail=close-up)
-
-5. `packages/backend/src/prompts/languages/en/navigatorSemanticNodeSelector.ts`
-   - **Major enhancement**: Add visual context section
-   - Accept currentLocationDetails with visualAnchors
-   - Add spatial reasoning rules for visible elements
-   - Add 'look' action for perspective shifts
-   - Enhanced examples for disambiguation
-
-6. **NEW FILE**: `packages/backend/src/prompts/languages/en/generateViewDescriptions.ts`
-   - Prompt for generating text descriptions of north/south views
-   - Input: seed, visualAnalysis, renderInstructions
-   - Output: ViewDescriptions with looks, focusTarget, renderInstructions per direction
-   - Fast generation (~1-2 seconds)
-
-**Backend Services (3 files):**
-7. `packages/backend/src/services/navigator.service.ts`
-   - Update `findDestinationNode()` signature to accept currentLocationDetails
-   - Update interface exports
-
-8. `packages/backend/src/routes/mzoo/navigator.ts`
-   - Update request body validation to accept currentLocationDetails
-   - Pass to service
-
-9. `packages/backend/src/services/spawn/managers/LocationSpawnManager.ts`
-   - Update `enrichProfile()` to use simplified prompt
-   - Parse simplified NodeDNA instead of hierarchical structure
-   - Optionally call generateViewDescriptions (prepare for future)
-
-**Backend Types (2 files):**
-10. `packages/backend/src/services/spawn/types.ts`
-    - Remove WorldNode, RegionNode, LocationNode interfaces
-    - Add unified NodeDNA interface
-    - Update LocationDeepProfile to just be NodeDNA
-    - Add ViewDescription interfaces
-
-11. `packages/backend/src/prompts/types.ts`
-    - Update prompt function signatures
-    - Add generateViewDescriptions export
-
-**Frontend State (2 files):**
-12. `packages/frontend/src/store/slices/locationsSlice.ts`
-    - Remove NodeType enum and separate node interfaces
-    - Add unified Node interface with NodeDNA
-    - Remove type-specific methods
-    - Update TreeNode (remove type field)
-    - Remove legacy compatibility methods (breaking change OK per user)
-    - Update all CRUD methods to work with generic nodes
-
-13. `packages/frontend/src/hooks/useSpawnEvents.ts`
-    - Update SSE event handlers to work with simplified DNA
-    - Remove world/region/location splitting logic
-    - Create single node per spawn (no nested node creation)
-    - Store viewDescriptions if present
-
-**Frontend Navigation (2 files):**
-14. `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts`
-    - Update `handleMove()` to build currentLocationDetails
-    - Extract visualAnchors from current node
-    - Extract viewDescriptions if present
-    - Pass to NavigatorAI endpoint
-
-15. `packages/frontend/src/utils/locationFocus.ts`
-    - Update to work with unified Node structure
-    - No type-specific logic
-
-**Frontend UI (3 files):**
-16. `packages/frontend/src/features/saved-locations/SavedLocationsModal/useSavedLocationsLogic.ts`
-    - Update to show root nodes (parent_id === null)
-    - Remove type-based filtering
-
-17. `packages/frontend/src/features/chat/components/LocationInfoModal/LocationInfoModal.tsx`
-    - Update to display simplified NodeDNA
-    - Single section instead of split world/location
-    - Keep visualAnchors detailed display
-
-18. `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.tsx`
-    - Update depth calculation (use node.depth directly)
-    - Remove type-based styling
-
-### Files to Delete
-
-**Backend (2 files if they exist):**
-- `packages/backend/src/prompts/languages/en/sublocationGeneration.ts` (if exists)
-- `packages/backend/src/prompts/languages/en/sublocationImageGeneration.ts` (already exists, check if obsolete)
-
-### Files to Create
-
-**Backend (1 file):**
-- `packages/backend/src/prompts/languages/en/generateViewDescriptions.ts` (multi-view text generation)
-
-## [Functions]
-
-Detailed function modifications for navigation, generation, and state management.
-
-### Backend Functions
-
-**1. navigatorSemanticNodeSelector() - MAJOR ENHANCEMENT**
-- File: `packages/backend/src/prompts/languages/en/navigatorSemanticNodeSelector.ts`
-- Current signature: `(userCommand, currentFocus, allNodes)`
-- New signature: `(userCommand, currentFocus, currentLocationDetails, allNodes)`
-- Changes:
-  - Accept `currentLocationDetails` parameter with visualAnchors
-  - Add visual context section to prompt showing dominantElements
-  - Add viewDescriptions section if present (what's north/south/etc)
-  - Add spatial reasoning rules:
-    - Prioritize visible elements in current location
-    - Use directional cues (left/right from viewDescriptions)
-    - Distance inference (no qualifier = HERE)
-  - Add 'look' action handling for perspective shifts
-  - Enhanced examples for disambiguation
-  - Return scale_hint in generate action
-
-**2. findDestinationNode() - SIGNATURE UPDATE**
-- File: `packages/backend/src/services/navigator.service.ts`
-- Current signature: `(apiKey, userCommand, currentFocus, allNodes)`
-- New signature: `(apiKey, userCommand, currentFocus, currentLocationDetails, allNodes)`
-- Changes:
-  - Accept currentLocationDetails parameter
-  - Pass to prompt generation
-  - No other logic changes
-
-**3. locationDeepProfileEnrichment() - MAJOR SIMPLIFICATION**
-- File: `packages/backend/src/prompts/languages/en/locationDeepProfileEnrichment.ts`
-- Current: Returns nested world/region/location structure (~500 lines)
-- New: Returns flat NodeDNA structure (~150 lines)
-- Changes:
-  - Remove world/region/location/sublocation branching
-  - Single JSON output with 15 core fields
-  - Keep visualAnchors detailed
-  - Remove redundant semantic/spatial metadata
-  - Faster generation (~5-10 seconds vs 15-20)
-
-**4. generateViewDescriptions() - NEW FUNCTION**
-- File: `packages/backend/src/prompts/languages/en/generateViewDescriptions.ts` (NEW)
-- Signature: `(seedJson, visualAnalysisJson, renderInstructions)`
-- Purpose: Generate text descriptions of north/south views (prepare for multi-view)
-- Output:
-  ```json
-  {
-    "default": {
-      "viewKey": "default",
-      "looks": "...",
-      "focusTarget": "...",
-      "renderInstructions": "...",
-      "hasImage": true
-    },
-    "north": {
-      "viewKey": "north",
-      "looks": "...",
-      "focusTarget": "...",
-      "renderInstructions": "...",
-      "hasImage": false
-    },
-    "south": { ... }
-  }
-  ```
-- Implementation: Call optionally in LocationSpawnManager after visual analysis
-- Timing: ~1-2 seconds (text only, no images)
-
-**5. enrichProfile() - LocationSpawnManager**
-- File: `packages/backend/src/services/spawn/managers/LocationSpawnManager.ts`
-- Changes:
-  - Use simplified locationDeepProfileEnrichment prompt
-  - Parse flat NodeDNA instead of nested structure
-  - Optionally call generateViewDescriptions (if enabled)
-  - Return simplified DeepProfile
-
-### Frontend Functions
-
-**6. handleMove() - useLocationPanel**
-- File: `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts`
-- Changes:
-  - Build `currentLocationDetails` object
-  - Extract visualAnchors from current node's DNA
-  - Extract viewDescriptions if present
-  - Extract currentView state
-  - Pass to NavigatorAI API endpoint
-  - Handle 'look' action (prepare for future)
-  - Use scale_hint from NavigationResult in spawn calls
-
-**7. SSE Event Handlers - useSpawnEvents**
-- File: `packages/frontend/src/hooks/useSpawnEvents.ts`
-- Event: `spawn:profile-complete`
-- Changes:
-  - Remove world/region/location tree building logic
-  - Create single node with simplified DNA
-  - Store viewDescriptions if present in DNA
-  - Set root_id = parent_id || self (for root nodes)
-  - Calculate depth from tree position
-
-**8. Store Methods - locationsSlice**
-- File: `packages/frontend/src/store/slices/locationsSlice.ts`
-- Methods to update:
-  - `createNode()` - accept unified Node interface
-  - `getNode()` - no changes
-  - `updateNode()` - no changes
-  - `getCascadedDNA()` - REMOVE (no longer needed)
-  - `getSpatialNodes()` - update depth calculation
-  - Remove legacy methods: `createLocation()`, `getLocation()`, `getLocationsByWorld()`
-
-## [Classes]
-
-No classes to modify - system uses functional patterns with Zustand stores.
-
-## [Dependencies]
-
-No new dependencies required. All changes use existing packages.
-
-**Existing dependencies used:**
-- zustand (state management)
-- uuid (ID generation)
-- Express types (backend)
-- React types (frontend)
-
-## [Testing]
-
-Test strategy focusing on critical navigation and DNA simplification paths.
-
-### Unit Tests (Not yet implemented, but recommended)
-
-**Backend:**
-1. `navigatorSemanticNodeSelector.test.ts`
-   - Test visual context disambiguation
-   - Test "go up the stair" with stair in visualAnchors vs elsewhere
-   - Test 'look' vs 'generate' vs 'move' action selection
-   - Test scale_hint inference
-
-2. `locationDeepProfileEnrichment.test.ts`
-   - Verify output is flat NodeDNA
-   - Verify ~15 fields instead of 200+
-   - Verify visualAnchors remain detailed
-
-3. `generateViewDescriptions.test.ts`
-   - Verify north/south text generation
-   - Verify renderInstructions format
-   - Verify timing (~1-2 seconds)
-
-**Frontend:**
-4. `locationsSlice.test.ts`
-   - Test unified Node CRUD
-   - Test tree operations without type constraints
-   - Test root node identification (parent_id === null)
-
-5. `useLocationPanel.test.ts`
-   - Test currentLocationDetails building
-   - Test visualAnchors extraction
-   - Test NavigatorAI API call structure
-
-### Integration Tests
-
-**Navigation Disambiguation:**
-- Scenario: User at room with stair to left, another room has stair elsewhere
-- Command: "Go up the stair"
-- Expected: Generates child of current room (uses visible stair)
-- Verify: NavigatorAI receives visualAnchors, matches "stair" in dominantElements
-
-**Simplified DNA Generation:**
-- Scenario: Generate new location "A lighthouse"
-- Expected: Single node created with flat NodeDNA (~15 fields)
-- Verify: Generation time < 10 seconds (vs 15-20 previously)
-- Verify: visualAnchors still detailed
-
-**Generic Node Tree:**
-- Scenario: Create root → child → grandchild (unlimited depth)
-- Expected: No type constraints enforced
-- Verify: ChatTabs shows proper indentation for any depth
-- Verify: SavedLocations shows only root nodes
-
-### Manual Testing Checklist
-
-- [ ] Generate new location, verify single node created (not world/region/location split)
-- [ ] Navigate with "go inside", verify NavigatorAI uses visual context
-- [ ] Test disambiguation: room with stair + distant stair, verify correct choice
-- [ ] Verify generation speed improved (~5-10s vs 15-20s)
-- [ ] Create deep tree (5+ levels), verify no type errors
-- [ ] Test SavedLocations shows only roots
-- [ ] Test ChatTabs shows full tree with indentation
-- [ ] Verify LocationInfoModal displays simplified DNA correctly
-
-## [Implementation Order]
-
-Logical sequence minimizing conflicts and ensuring successful integration.
-
-### Phase 1: Type System Foundation (2-3 hours)
-1. Update `packages/backend/src/services/spawn/types.ts`
-   - Remove WorldNode, RegionNode, LocationNode, SublocationNode
-   - Add unified NodeDNA interface
-   - Add ViewDescription interfaces
-   - Add scale hints
-
-2. Update `packages/frontend/src/store/slices/locationsSlice.ts`
-   - Remove NodeType enum
-   - Add unified Node interface
-   - Update TreeNode (remove type field)
-   - Update method signatures (no implementation changes yet)
-
-3. Update `packages/backend/src/prompts/types.ts`
-   - Update prompt function signatures
-   - Add generateViewDescriptions export
-
-### Phase 2: Backend DNA Simplification (3-4 hours)
-4. Simplify `packages/backend/src/prompts/languages/en/locationDeepProfileEnrichment.ts`
-   - Replace nested structure with flat NodeDNA output
-   - Reduce fields from ~200 to ~15
-   - Keep visualAnchors detailed
-   - Test with manual prompt execution
-
-5. Update `packages/backend/src/services/spawn/managers/LocationSpawnManager.ts`
-   - Update enrichProfile() to parse simplified DNA
-   - Update type assertions
-
-6. Update `packages/backend/src/prompts/languages/en/locationSeedGeneration.ts`
-   - Add scale_hint to output JSON
-
-7. Update `packages/backend/src/prompts/languages/en/locationImageGeneration.ts`
-   - Add scale_hint parameter support
-   - Adjust framing based on scale
-
-### Phase 3: NavigatorAI Visual Context (2-3 hours)
-8. Enhance `packages/backend/src/prompts/languages/en/navigatorSemanticNodeSelector.ts`
-   - Add currentLocationDetails parameter
-   - Add visual context section
-   - Add spatial reasoning rules
-   - Add 'look' action
-   - Add enhanced examples
-
-9. Update `packages/backend/src/services/navigator.service.ts`
-   - Update findDestinationNode() signature
-   - Accept currentLocationDetails
-   - Update interface exports
-
-10. Update `packages/backend/src/routes/mzoo/navigator.ts`
-    - Update request body validation
-    - Accept currentLocationDetails
-
-### Phase 4: Frontend State Integration (2-3 hours)
-11. Update `packages/frontend/src/hooks/useSpawnEvents.ts`
-    - Remove tree-building logic
-    - Create single node per spawn
-    - Store simplified DNA
-    - Handle viewDescriptions if present
-
-12. Implement locationsSlice methods:
-    - Update createNode() for unified Node
-    - Remove getCascadedDNA()
-    - Remove legacy methods
-    - Update tree operations
-
-13. Update `packages/frontend/src/utils/locationFocus.ts`
-    - Remove type-specific logic
-    - Work with unified Node
-
-### Phase 5: Frontend Navigation Integration (2 hours)
-14. Update `packages/frontend/src/features/entity-panel/components/LocationPanel/useLocationPanel.ts`
-    - Build currentLocationDetails
-    - Extract visualAnchors
-    - Extract viewDescriptions
-    - Pass to NavigatorAI
-    - Handle scale_hint in spawn
-
-15. Update navigation API calls
-    - Test NavigatorAI endpoint with new structure
-    - Verify visual context flows through
-
-### Phase 6: UI Updates (1-2 hours)
-16. Update `packages/frontend/src/features/chat/components/LocationInfoModal/LocationInfoModal.tsx`
-    - Display simplified NodeDNA
-    - Single section instead of split
-    - Keep visualAnchors detailed
-
-17. Update `packages/frontend/src/features/saved-locations/SavedLocationsModal/useSavedLocationsLogic.ts`
-    - Filter to root nodes (parent_id === null)
-    - Remove type-based logic
-
-18. Update `packages/frontend/src/features/chat-tabs/ChatTabs/ChatTabs.tsx`
-    - Use node.depth directly
-    - Remove type-based styling
-
-### Phase 7: Multi-View Preparation (1-2 hours - OPTIONAL)
-19. Create `packages/backend/src/prompts/languages/en/generateViewDescriptions.ts`
-    - Implement prompt for north/south text generation
-    - Export function
-
-20. Optionally integrate into LocationSpawnManager
-    - Call after visual analysis
-    - Store in NodeDNA as viewDescriptions
-    - Don't generate images yet (prepare for future)
-
-### Phase 8: Testing & Cleanup (2-3 hours)
-21. Manual testing of navigation disambiguation
-22. Performance testing (verify speed improvement)
-23. Delete obsolete files (sublocation prompts, locationProfile.ts)
-24. Update memory bank documentation
-25. Verify no type errors across codebase
-
-**Total Estimated Time: 15-20 hours**
-
-**Critical Path:**
-Phase 1 → Phase 2 → Phase 4 → Phase 5 (core functionality)
-Phases 3, 6, 7 can be done in parallel with Phase 5
-
-**Risk Mitigation:**
-- Phase 2 (DNA simplification) is highest risk - test manually first
-- Phase 4 (SSE events) is critical - verify with spawns immediately
-- Keep Phase 7 (multi-view) optional until core is stable
+Purpose: Recursively traverse tree, find deepest node, create media entry, set `primaryMedia`
+
+### Functions to Modify
+
+**File: `packages/backend/src/engine/pipelines/worldTreePipeline.ts`**
+
+- `runWorldTreePipeline()`: Add call to `assignMediaToTreeNodes()` after `WorldTreeBuilder.build()`
+
+**File: `packages/backend/src/services/worldTree/builder.ts`**
+
+- `buildNode()`: Uncomment and implement `primaryMedia` assignment from `data.primaryMedia`
+
+**File: `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts`**
+
+- `runCreateLocationNodePipeline()`: Add media creation after image generation, set `node.primaryMedia`
+
+**File: `packages/backend/src/engine/generation/shared/nodeBuilder.ts`**
+
+- `buildNode()`: Add support for `options.primaryMedia` parameter
+
+## Classes
+
+No new classes needed. Modifications to existing class:
+
+**File: `packages/backend/src/services/worldTree/builder.ts`**
+
+- Class: `WorldTreeBuilder`
+- Method: `buildNode()` - Add `primaryMedia` support
+
+## Dependencies
+
+No new dependencies required. All functionality uses existing modules:
+
+- `mediaService` from `'@/services/media'` (already in use for characters)
+- Existing TypeScript types and interfaces
+
+## Testing
+
+### Manual Testing Steps
+
+1. **Create New World Tree**:
+   - Spawn a new world/location
+   - Verify preview image loads during generation
+   - Verify image persists after pipeline completion
+   - Click on nodes in tree - verify images load immediately
+
+2. **Navigate Existing Trees**:
+   - Click on pinned world nodes
+   - Verify images load immediately without skeleton loaders
+   - Navigate to child nodes - verify images load
+
+3. **Create Niches via Navigation**:
+   - Navigate to a location and create a niche
+   - Verify niche image loads and persists
+
+4. **Backend Verification**:
+   - Check `temp-db/media.json` - verify media entries created for world nodes
+   - Check `temp-db/worlds.json` - verify nodes have `primaryMedia` fields
+   - Verify `primaryMedia` values match media IDs in media.json
+
+### Validation Criteria
+
+- ✅ All world tree nodes have `primaryMedia` fields after creation
+- ✅ Media entries exist in `media.json` for all generated images
+- ✅ Images load immediately when clicking tree nodes (no async fetching)
+- ✅ Preview images persist after pipeline completion
+- ✅ No console errors about missing images or primaryMedia
+- ✅ Existing characters continue to work correctly
+
+## Implementation Order
+
+Follow these steps in sequence to minimize conflicts and ensure successful integration:
+
+### Step 1: Update Type Definitions
+- Modify `nodeBuilder.ts` to add `primaryMedia` to `NodeBuildOptions`
+- Verify `TreeNode` type already has `primaryMedia?: string`
+
+### Step 2: Update Node Builder
+- Modify `buildNode()` in `nodeBuilder.ts` to accept and use `options.primaryMedia`
+- Add conditional: `if (options?.primaryMedia) { node.primaryMedia = options.primaryMedia; }`
+
+### Step 3: Update WorldTreeBuilder
+- Modify `buildNode()` in `builder.ts` to read and set `primaryMedia` from data
+- Uncomment: `primaryMedia: data.primaryMedia`
+
+### Step 4: Update World Tree Pipeline
+- Create `assignMediaToTreeNodes()` function
+- Import `mediaService`
+- Call `assignMediaToTreeNodes()` after `WorldTreeBuilder.build()`
+- Pass resulting tree to pipeline completion
+
+### Step 5: Update Navigation Pipeline
+- Import `mediaService` in `createNodePipeline.ts`
+- After image generation, create media entry
+- Set `node.primaryMedia` to media ID
+- Return node with `primaryMedia` set
+
+### Step 6: Update Entity Persistence (Optional Enhancement)
+- Enhance `buildLocationEntity()` to handle tree structures
+- Add recursive media assignment for complex trees
+
+### Step 7: Testing
+- Test new world tree creation
+- Test navigation node creation
+- Test loading existing trees
+- Verify media.json and worlds.json structure
+- Verify characters still work
+
+### Step 8: Cleanup
+- Remove any debug logging added during implementation
+- Update documentation if needed
+- Verify no TypeScript errors

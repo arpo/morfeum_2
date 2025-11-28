@@ -2,6 +2,22 @@
 
 ## Completed Features ✅
 
+### Media Cleanup Architecture Improvement (Nov 28, 2025)
+- [x] Diagnosed root cause: entityRefs empty in media.json, not saved to database
+- [x] Switched from entityRefs to primaryMedia as single source of truth
+- [x] Added `deleteMediaByIds()` function to frontend mediaService
+- [x] Updated `deleteWorldTree` to collect and delete by primaryMedia IDs
+- [x] Updated `deleteNodeWithChildren` to use same approach
+- [x] Fixed character deletion to also remove from pinnedIds array
+- [x] Removed redundant data storage (no more sync issues)
+- [x] Handles orphaned nodes correctly
+
+### Backend Build Fixes (Nov 28, 2025)
+- [x] Created missing `eventEmitter.ts` module (was referenced but didn't exist)
+- [x] Fixed Express route ordering in media.ts (specific routes before wildcards)
+- [x] Made `spawnId` parameter optional in `analyzeHierarchy` function
+- [x] Backend now builds without TypeScript errors
+
 ### Media Metadata Structure Cleanup (Nov 27, 2025)
 - [x] Removed redundant `seed` object from media metadata (was storing duplicate character data)
 - [x] Added `originalPrompt` field to MediaMetadata interface
@@ -107,6 +123,7 @@
 - [x] Auto-save on all state mutations
 - [x] Cascading delete for nodes and children
 - [x] Entity session cleanup on delete
+- [x] Media cleanup on entity deletion (using primaryMedia)
 
 ### Technical Improvements
 - [x] Old navigation system removal (Nov 24, 2025)
@@ -137,8 +154,11 @@
 
 ## In Progress 🔄
 
-### Image Flicker Issue
-- [ ] There is still a flicker when an image/node is selected and the same image is set again. Further logic is needed to prevent redundant image updates and ensure flicker-free UI.
+### Testing Media Cleanup
+- [ ] Test world tree deletion with navigation nodes
+- [ ] Test character deletion
+- [ ] Verify all media is properly cleaned up
+- [ ] Monitor for edge cases
 
 ### Navigation Enhancement
 - [x] Enable generate action in frontend (completed Nov 12, 2025 - full pipeline working)
@@ -178,6 +198,7 @@
 - [ ] DNA cascading verification
 - [x] SSE connection stability
 - [ ] Tree manipulation operations
+- [ ] Media cleanup on deletion (in progress)
 
 ## Performance Optimizations
 - [ ] Implement virtual scrolling for large entity lists

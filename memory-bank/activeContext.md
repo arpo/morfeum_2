@@ -1,5 +1,36 @@
 # Active Context
 
+## Recent Changes (2025-11-28)
+
+### Media Cleanup Architecture Improvement (Nov 28, 2025)
+- **Root Cause Analysis**: Media cleanup wasn't working because entityRefs were empty in media.json. Navigation pipeline created media with empty entityRefs and updated in-memory object but never saved to database.
+- **Architectural Decision**: Switched from using `entityRefs` (redundant data) to using `node.primaryMedia` as single source of truth for media cleanup.
+- **Implementation Changes**:
+  - Added `deleteMediaByIds(mediaIds: string[])` function to frontend mediaService
+  - Updated `deleteWorldTree` to collect primaryMedia IDs while traversing nodes
+  - Updated `deleteNodeWithChildren` to use same primaryMedia-based approach
+  - Fixed character deletion to also remove from `pinnedIds` array
+- **Benefits**:
+  - Single source of truth (node.primaryMedia is the only link)
+  - No redundancy or sync issues
+  - Simpler to maintain
+  - Handles orphaned nodes correctly
+
+**Old Approach (using entityRefs):**
+- Entity ID stored in both `node.primaryMedia` and `media.entityRefs`
+- Required maintaining sync between two places
+- Bug: entityRefs updated in-memory but not saved to DB
+
+**New Approach (using primaryMedia):**
+- `node.primaryMedia` is the ONLY link to media
+- During deletion, traverse nodes and collect their primaryMedia IDs
+- Delete media by those IDs directly
+
+### Backend Build Fixes (Nov 28, 2025)
+- **Event Emitter Module**: Created missing `eventEmitter.ts` module that was referenced but didn't exist
+- **Route Ordering Fix**: Moved `/by-entities` and `/cleanup` routes BEFORE `/:id` wildcard routes in media.ts (Express matches routes in order)
+- **Function Signature Fix**: Made `spawnId` parameter optional in `analyzeHierarchy` function (used by standalone hierarchy analysis endpoint)
+
 ## Recent Changes (2025-11-27)
 
 ### Media System Migration & Cleanup (Nov 27, 2025)
@@ -18,7 +49,6 @@
 - **Data Migration**: Created `cleanupMediaMetadata.ts` script that successfully migrated 11 existing media items to the new structure.
 - **Type Updates**: Updated `MediaMetadata` interface to include `originalPrompt?: string` field.
 - **Migration Script Updates**: Updated `migrateToMediaSystem.ts` to only extract `originalPrompt` from seed data, not the entire object.
-- **Documentation**: Created `METADATA_CLEANUP_SUMMARY.md` documenting the changes and rationale.
 
 **Metadata structure change:**
 ```typescript
@@ -34,7 +64,6 @@
 ### Pipeline & Image Streaming Improvements (Nov 26, 2025)
 - **Immediate Image Display**: All pipelines (character, worldTree, createNode) now display generated images in the entity background as soon as the image is ready, before the full pipeline completes.
 - **Tree Expansion Fix**: Tree unfolding logic updated to support both legacy (`regions`, `locations`, `niches`) and new (`children`) node formats. Ensures correct node is unfolded and selected after pipeline completion.
-- **Image Flicker Issue**: There is still a flicker when an image/node is selected and the same image is set again. This is the current focus for further improvement.
 
 ### Keyboard Shortcuts & Focus Mode Implementation (Nov 26, 2025)
 - Centralized keyboard shortcut handling for UI toggles and focus mode.
@@ -42,13 +71,11 @@
 - State management and configuration improvements.
 
 ## Current Focus
-- Resolving the image flicker issue when re-selecting a node with the same image.
-- Ensuring robust, flicker-free image updates in all entity pipelines.
+- Media cleanup system now uses primaryMedia as single source of truth
+- All deletion operations properly clean up associated media
+- Backend build errors resolved
 
 ## Next Steps
-- Implement logic to prevent redundant image updates when the image has not changed.
-- Test for edge cases in entity selection and image rendering.
-- Continue refining pipeline and UI responsiveness.
-
-## Previous Context
-(See below for earlier changes)
+- Test media cleanup with world tree and character deletion
+- Verify navigation-created nodes (niches) are properly cleaned up
+- Monitor for any edge cases in media deletion

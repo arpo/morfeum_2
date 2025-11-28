@@ -7,6 +7,7 @@ import { StateCreator } from 'zustand';
 import { TreeNode, NodeType } from './types';
 import { NodesSlice } from './nodesSlice';
 import { UISlice } from './uiSlice';
+import { deleteMediaByIds } from '@/services/mediaService';
 
 export interface TreesSlice {
   worldTrees: TreeNode[];
@@ -172,13 +173,44 @@ export const createTreesSlice: StateCreator<
       return;
     }
     
-    // Collect all node IDs in the tree (recursive)
+    // Collect node IDs and their media IDs
     const nodeIdsToDelete = new Set<string>();
-    const collectNodeIds = (treeNode: TreeNode) => {
+    const mediaIdsToDelete = new Set<string>();
+    
+    const collectNodeAndMediaIds = (treeNode: TreeNode) => {
       nodeIdsToDelete.add(treeNode.id);
-      treeNode.children?.forEach(child => collectNodeIds(child));
+      
+      // Get the node from flat map and collect its primaryMedia ID
+      const node = nodes[treeNode.id];
+      if (node?.primaryMedia) {
+        mediaIdsToDelete.add(node.primaryMedia);
+      }
+      
+      treeNode.children?.forEach(child => collectNodeAndMediaIds(child));
     };
-    collectNodeIds(worldTrees[treeIndex]);
+    
+    collectNodeAndMediaIds(worldTrees[treeIndex]);
+    
+    // Also check for orphaned nodes in flat map (nodes not in ANY tree)
+    const allTreeNodeIds = new Set<string>();
+    worldTrees.forEach((tree: TreeNode) => {
+      const collectAll = (node: TreeNode) => {
+        allTreeNodeIds.add(node.id);
+        node.children?.forEach(child => collectAll(child));
+      };
+      collectAll(tree);
+    });
+    
+    // Find orphaned nodes and their media
+    Object.keys(nodes).forEach(nodeId => {
+      if (!allTreeNodeIds.has(nodeId)) {
+        nodeIdsToDelete.add(nodeId);
+        const node = nodes[nodeId];
+        if (node?.primaryMedia) {
+          mediaIdsToDelete.add(node.primaryMedia);
+        }
+      }
+    });
     
     // Delete all nodes from nodes map
     const newNodes = { ...nodes };
@@ -189,6 +221,11 @@ export const createTreesSlice: StateCreator<
     
     // Clean up pins
     const newPinnedIds = pinnedIds.filter((id: string) => !nodeIdsToDelete.has(id));
+    
+    // Delete media by media IDs (not by entity refs)
+    if (mediaIdsToDelete.size > 0) {
+      deleteMediaByIds(Array.from(mediaIdsToDelete));
+    }
     
     set({
       nodes: newNodes,
@@ -229,13 +266,23 @@ export const createTreesSlice: StateCreator<
       return;
     }
     
-    // Collect all node IDs in the subtree (including the target node)
+    // Collect node IDs and their media IDs
     const nodeIdsToDelete = new Set<string>();
-    const collectNodeIds = (treeNode: TreeNode) => {
+    const mediaIdsToDelete = new Set<string>();
+    
+    const collectNodeAndMediaIds = (treeNode: TreeNode) => {
       nodeIdsToDelete.add(treeNode.id);
-      treeNode.children?.forEach(child => collectNodeIds(child));
+      
+      // Get the node from flat map and collect its primaryMedia ID
+      const node = nodes[treeNode.id];
+      if (node?.primaryMedia) {
+        mediaIdsToDelete.add(node.primaryMedia);
+      }
+      
+      treeNode.children?.forEach(child => collectNodeAndMediaIds(child));
     };
-    collectNodeIds(targetSubtree);
+    
+    collectNodeAndMediaIds(targetSubtree);
     
     // Delete all nodes from nodes map
     const newNodes = { ...nodes };
@@ -258,6 +305,11 @@ export const createTreesSlice: StateCreator<
     
     // Clean up pins
     const newPinnedIds = pinnedIds.filter((id: string) => !nodeIdsToDelete.has(id));
+    
+    // Delete media by media IDs (not by entity refs)
+    if (mediaIdsToDelete.size > 0) {
+      deleteMediaByIds(Array.from(mediaIdsToDelete));
+    }
     
     set({
       nodes: newNodes,

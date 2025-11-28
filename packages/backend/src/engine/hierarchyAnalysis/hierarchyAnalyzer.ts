@@ -6,6 +6,7 @@
 
 import { AI_MODELS } from '../../config/constants';
 import { eventEmitter } from '../../services/eventEmitter';
+
 import { generateText } from '../../services/mzoo';
 import { hierarchyCategorization } from '../generation/prompts/locations/hierarchyCategorization';
 import { parseJSON } from '../utils/parseJSON';
@@ -137,13 +138,13 @@ function normalizeHierarchy(hierarchy: HierarchyStructure): void {
  * 
  * @param userPrompt - User's description of place/scene
  * @param apiKey - MZOO API key
- * @param spawnId - Unique spawn identifier for event tracking
+ * @param spawnId - Unique spawn identifier for event tracking (optional)
  * @returns Structured hierarchy with metadata and imageUrl
  */
 export async function analyzeHierarchy(
   userPrompt: string, 
   apiKey: string,
-  spawnId: string
+  spawnId?: string
 ): Promise<HierarchyAnalysisResult> {
   // Build prompt from centralized prompts
   const prompt = hierarchyCategorization(userPrompt);
@@ -201,14 +202,16 @@ export async function analyzeHierarchy(
   // Normalize hierarchy (insert missing layers as passthrough nodes)
   normalizeHierarchy(parsedHierarchy);
 
-  // Emit classification complete event
-  eventEmitter.emit({
-    type: 'hierarchy:classification-complete',
-    data: { 
-      hierarchy: parsedHierarchy,
-      spawnId
-    }
-  });
+  // Emit classification complete event (only if spawnId provided)
+  if (spawnId) {
+    eventEmitter.emit({
+      type: 'hierarchy:classification-complete',
+      data: { 
+        hierarchy: parsedHierarchy,
+        spawnId
+      }
+    });
+  }
 
   // Generate metadata
   const metadata = generateMetadata(parsedHierarchy);

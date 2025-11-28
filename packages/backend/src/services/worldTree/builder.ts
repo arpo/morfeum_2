@@ -63,15 +63,21 @@ export class WorldTreeBuilder {
       mood: '' 
     };
 
-    return {
+    const node: TreeNode = {
       id,
       type,
       name: data.name,
       description: data.description || '',
       dna,
-      // primaryMedia: data.primaryMedia, // If data already has it
       spaceType: type === 'niche' ? 'interior' : 'exterior',
       children
     };
+
+    // Add primaryMedia if present in data
+    if (data.primaryMedia) {
+      node.primaryMedia = data.primaryMedia;
+    }
+
+    return node;
   }
 }

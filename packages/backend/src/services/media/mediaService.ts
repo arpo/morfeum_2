@@ -230,6 +230,30 @@ class MediaService {
 
     return deletedIds;
   }
+
+  /**
+   * Delete all media referenced by entity IDs
+   * Used when deleting characters or world trees
+   */
+  deleteMediaByEntityRefs(entityIds: string[]): string[] {
+    const db = this.readMediaDB();
+    const deletedIds: string[] = [];
+    
+    for (const [id, media] of Object.entries(db.media)) {
+      // Check if media is referenced by any of the entity IDs
+      const hasRef = media.entityRefs.some(ref => entityIds.includes(ref));
+      if (hasRef) {
+        delete db.media[id];
+        deletedIds.push(id);
+      }
+    }
+    
+    if (deletedIds.length > 0) {
+      this.writeMediaDB(db);
+    }
+    
+    return deletedIds;
+  }
 }
 
 export default new MediaService();
