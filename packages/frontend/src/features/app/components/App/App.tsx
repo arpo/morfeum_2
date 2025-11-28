@@ -218,6 +218,11 @@ export function App() {
     
     // Mark that we have a depth map
     setHasDepthMap(true);
+    
+    // Switch to 3D mode after depth map generation completes
+    setDisplayMode('full');
+    localStorage.setItem('displayMode', 'full');
+    window.dispatchEvent(new CustomEvent('displayModeChanged', { detail: { mode: 'full' } }));
   };
 
   // Handle display mode change

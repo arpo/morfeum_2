@@ -309,6 +309,35 @@
         "char-1764340797614-4lvx2je83"
       ],
       "parentMedia": "media-1764340822931-3kker4qqu"
+    },
+    "media-1764341010274-787lp4do2": {
+      "id": "media-1764341010274-787lp4do2",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/koala/0UL5rrNH19eCoJL9oyNpX.jpg",
+      "createdAt": "2025-11-28T14:43:30.274Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A male silhouette carved from polished marble, cracked seams glowing pale blue like ancient energy awakening.\"\n\nAeon, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A stark male silhouette, form outlined in gleaming, impossibly smooth white marble. Thin, jagged seams fracture across its surface, pulsing with an internal, pale blue light, like veins of trapped starlight..\n\nWearing: No clothing, the marble itself forms its entirety. The glowing seams are its only adornment..\n\nPresence: A profound, chilling silence that hums with latent power. A sense of immense age and contained energy..\n\nSetting: A twilight chamber where shadows stretch and deepen, illuminated only by the faint, internal luminescence of the marble form..\n\nTheir demeanor reflects: Stoic, observing, possessing a deep, ancient stillness. It acts with deliberate, almost glacial purpose. Communicates through subtle shifts in its internal luminescence..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764340998136-cu1ar5n5w"
+      ]
+    },
+    "media-1764341014155-0vzyjr3g0": {
+      "id": "media-1764341014155-0vzyjr3g0",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/elephant/9NhjDNvFLbJiYPAl-AlJH_ebc728c2729f4beaa0bee7629810fd00.png",
+      "createdAt": "2025-11-28T14:43:34.155Z",
+      "metadata": {
+        "parentMedia": "media-1764341010274-787lp4do2",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764340998136-cu1ar5n5w"
+      ],
+      "parentMedia": "media-1764341010274-787lp4do2"
     }
   }
 }
