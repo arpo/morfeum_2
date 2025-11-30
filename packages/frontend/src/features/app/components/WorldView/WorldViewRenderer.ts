@@ -65,7 +65,7 @@ export class WorldViewRenderer {
 
     const aspect = this.container.clientWidth / this.container.clientHeight;
     this.camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 1000);
-    this.camera.position.z = 4;
+    this.camera.position.z = this.cameraConfig.baseCameraZ;
     this.camera.lookAt(0, 0, 0);
 
     this.startAnimation();
@@ -118,10 +118,11 @@ export class WorldViewRenderer {
 
   private scaleMesh(): void {
     if (!this.mesh?.geometry) return;
+    // Use baseCameraZ for consistent scaling (not current camera.position.z which animates)
     scaleMeshToFit(
       this.mesh, this.mesh.geometry as THREE.PlaneGeometry,
       this.container.clientWidth, this.container.clientHeight,
-      this.imageAspectRatio, this.camera.position.z, this.camera.aspect
+      this.imageAspectRatio, this.cameraConfig.baseCameraZ, this.camera.aspect
     );
   }
 

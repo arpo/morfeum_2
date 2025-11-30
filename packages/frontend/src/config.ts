@@ -41,9 +41,9 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Camera movement amplitude - how far the view shifts during animation (shader parallax) */
   CAMERA_AMPLITUDE: {
-    X: 0.4,   // Horizontal shift range
+    X: 0.55,   // Horizontal shift range
     Y: 1,   // Vertical shift range
-    Z: 0.2,  // Zoom range (camera z position offset)
+    Z: 0.33,  // Zoom range (camera z position offset)
   },
   
   /** Camera position movement - physical camera tilt to see mesh from angle */
