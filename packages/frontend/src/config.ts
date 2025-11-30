@@ -72,11 +72,17 @@ export const WORLD_VIEW_3D_CONFIG = {
   /** Letterbox - black bars at top/bottom to enforce 16:9 aspect ratio */
   LETTERBOX: {
     ENABLED: true, // Enable/disable 16:9 letterbox cropping
-    EXTRA_HEIGHT: 30, // Additional pixels to add to each bar (to cut off more edges)
+    EXTRA_HEIGHT: 40, // Additional pixels to add to each bar (to cut off more edges)
   },
   
   /** Depth map expansion radius - dilates depth values to reduce edge artifacts (0 = disabled, 7 = tiefling default) */
   EXPAND_DEPTHMAP_RADIUS: 7,
+  
+  /** Depth-dependent expansion - if true, near objects get more expansion, far objects get less */
+  EXPAND_DEPTHMAP_DEPTH_SCALE: true,
+  
+  /** Minimum scale factor for far objects when depth scaling is enabled (0.0 = no expansion for far, 1.0 = full expansion for all) */
+  EXPAND_DEPTHMAP_MIN_SCALE: 0.6,
 } as const;
 
 /**

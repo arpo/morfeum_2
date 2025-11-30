@@ -2247,6 +2247,67 @@
       "searchDesc": "",
       "slug": "",
       "primaryMedia": "media-1764500804859-plemqe1gq"
+    },
+    "niche-1764534710359-l8k0zhamn": {
+      "id": "niche-1764534710359-l8k0zhamn",
+      "type": "niche",
+      "name": "interior of The Fused Necropolis",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a cavernous, Giger-esque biomechanical hive. Walls are a seamless fusion of ribbed, organic-metallic chitin and polished dark basalt, bulging and tapering like internal organs. Sharp chitinous extrusions resembling stalactites jut from surfaces. Arterial-like conduits made of tarnished alien metal weave across the walls.",
+        "colorsAndLighting": "The primary ambient light is a diffuse, pale blue-green haze. This is punctuated by a soft, warm orange glow from a low, segmented bio-luminescent vein in the foreground and from within the structure's depths.",
+        "atmosphere": "The air is thick with a sense of awe-inspiring dread and primal fear. A faint echo of viscous dripping sounds permeates the enclosed chamber. The temperature feels stagnant and enclosed.",
+        "materials": "The dominant materials are fused, ribbed organic-metallic chitin and polished dark basalt. The floor is compacted dark soil with glistening mineral deposits. Arterial conduits are made of tarnished alien metal.",
+        "mood": "This place evokes a profound sense of awe mixed with primal fear, suggesting immense, ancient, and chilling alien power.",
+        "sounds": "Viscous dripping, faint echoes, subtle hum.",
+        "spatialLayout": "The chamber is dimly lit and enclosed, with a floor sloping gently downwards. Massive curved walls create a sense of immense scale. A prominent ramp ascends towards an unseen upper level.",
+        "primary_surfaces": "Fused organic-metallic chitin, polished dark basalt",
+        "secondary_surfaces": "Compacted dark soil, glistening mineral deposits",
+        "accent_features": "Segmented bio-luminescent vein, sharp chitinous extrusions, arterial-like conduits",
+        "dominant": "Deep teal and dark green (structure and terrain)",
+        "secondary": "Pale blue-green (ambient light haze)",
+        "accent": "Warm orange (bio-luminescent vein, internal depths)",
+        "ambient": "Cool (primary), Warm (secondary accents)",
+        "genre": null,
+        "architectural_tone": "Giger-esque biomechanical fusion with ribbed, organic curves, sharp chitinous extrusions, pulsating bio-luminescent elements, gaping orifices, and a seamless integration with the surrounding terrestrial rock formations",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "Imposing, ancient, and foreboding. Evokes awe mixed with primal fear, suggesting immense power and a chilling alien purpose.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764534710356-dslz1bijp",
+      "description": "A Giger-esque biomechanical hive interior, a dimly lit, enclosed chamber with organic-metallic chitin and dark basalt walls.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "foreground left",
+          "description": "A rough-hewn passage illuminated by a segmented bio-luminescent vein."
+        },
+        {
+          "type": "ramp",
+          "position": "midground center",
+          "description": "An arterial-like conduit transforming into a ramp ascending to an upper level."
+        }
+      ],
+      "dominantElements": [
+        "fused, ribbed organic-metallic chitin walls",
+        "polished dark basalt",
+        "segmented bio-luminescent vein",
+        "arterial-like conduits",
+        "vaulted, ribbed ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "Giger-esque biomechanical fusion",
+        "ribbed organic-metallic chitin",
+        "pulsating bio-luminescent vein",
+        "arterial conduits",
+        "gaping orifice entrance motif"
+      ],
+      "searchDesc": "Giger-esque biomechanical hive interior, dimly lit, with pulsing orange light and ribbed chitin walls.",
+      "slug": "interior-of-the-fused-necropolis"
     }
   },
   "views": {},
@@ -2422,7 +2483,13 @@
             {
               "id": "2ffed8be-f9b6-4001-8750-111d2c186e76",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1764534710359-l8k0zhamn",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }

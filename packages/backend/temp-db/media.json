@@ -974,6 +974,33 @@
         "char-1764533128547-05ghv6xlu"
       ],
       "parentMedia": "media-1764533141864-f3xv3qwic"
+    },
+    "media-1764534710356-dslz1bijp": {
+      "id": "media-1764534710356-dslz1bijp",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84775e/fJXbXqhyQVHyKQgR_VWwB.jpg",
+      "createdAt": "2025-11-30T20:31:50.356Z",
+      "metadata": {
+        "prompt": "A Giger-esque biomechanical hive interior, walls of fused, ribbed organic-metallic chitin and polished dark basalt. A gaping orifice entrance is out of frame behind, revealing a dimly lit, enclosed chamber. The floor is a textured, compacted dark soil interwoven with glistening mineral deposits, sloping gently downwards. In the foreground, a low, segmented bio-luminescent vein pulses with a soft, warm orange light, illuminating a rough-hewn [navigable: passage, foreground left] leading deeper. The midground features massive, curved walls that bulge and taper like colossal internal organs, interspersed with sharp, chitinous extrusions that resemble stalactites. A series of interconnected, arterial-like conduits, made of tarnished alien metal, weave across the walls. One prominent conduit transforms into a [navigable: ramp, midground center] ascending towards an unseen upper level. The ambient light is a diffuse, pale blue-green haze, punctuated by the warmer orange glow emanating from within the structure's depths. The ceiling is a vaulted, ribbed expanse of the same biomechanical material, hinting at immense scale. The overall mood is one of awe-inspiring dread and primal fear, with viscous dripping sounds echoing faintly.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764534728268-d2ipfcsch": {
+      "id": "media-1764534728268-d2ipfcsch",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a847760/cfB3TMmGe4fIazRBTLXIV_d8280d95dc0d4506801113940e89adab.png",
+      "createdAt": "2025-11-30T20:32:08.268Z",
+      "metadata": {
+        "parentMedia": "media-1764534710356-dslz1bijp",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "niche-1764534710359-l8k0zhamn"
+      ],
+      "parentMedia": "media-1764534710356-dslz1bijp"
     }
   }
 }

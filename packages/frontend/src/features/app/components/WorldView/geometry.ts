@@ -15,31 +15,61 @@ export interface DepthGeometryOptions {
 /**
  * Expand/dilate depth map to reduce edge artifacts
  * This spreads depth values outward to fill gaps at object boundaries
- * Based on tiefling's approach
+ * Based on tiefling's approach, with optional depth-dependent scaling
+ * 
+ * @param imageData - The depth map image data
+ * @param radius - Maximum dilation radius (for nearest objects)
+ * @param depthScale - If true, scale expansion by depth (near=more, far=less)
  */
-export function expandDepthMap(imageData: ImageData, radius: number): ImageData {
+export function expandDepthMap(
+  imageData: ImageData, 
+  radius: number, 
+  depthScale: boolean = false,
+  minScale: number = 0.1
+): ImageData {
   const width = imageData.width;
   const height = imageData.height;
   const src = new Uint8ClampedArray(imageData.data);
   const dst = new Uint8ClampedArray(src);
+  
+  // Track how many iterations each pixel has been dilated
+  const dilationCount = new Uint8Array(width * height);
 
   for (let r = 0; r < radius; r++) {
     for (let y = 1; y < height - 1; y++) {
       for (let x = 1; x < width - 1; x++) {
         const idx = (y * width + x) * 4;
+        const pixelIdx = y * width + x;
         const currentDepth = src[idx];
 
         // Skip very dark pixels (far background)
         if (currentDepth < 10) continue;
 
+        // Calculate effective radius for this pixel based on its depth
+        let effectiveRadius = radius;
+        if (depthScale) {
+          // Scale radius by depth: near (255) = full radius, far (0) = minScale of radius
+          // minScale controls the floor for far objects (0.0 = no expansion, 1.0 = full)
+          const depthFactor = currentDepth / 255;
+          const scaledFactor = minScale + (1 - minScale) * depthFactor;
+          effectiveRadius = Math.max(1, Math.floor(radius * scaledFactor));
+        }
+
+        // Skip if this pixel has already been dilated enough times
+        if (dilationCount[pixelIdx] >= effectiveRadius) continue;
+
         // Simple dilation: spread to adjacent pixels
         for (let dy = -1; dy <= 1; dy++) {
           for (let dx = -1; dx <= 1; dx++) {
             const nIdx = ((y + dy) * width + (x + dx)) * 4;
+            const nPixelIdx = (y + dy) * width + (x + dx);
+            
             if (src[nIdx] < currentDepth) {
               dst[nIdx] = currentDepth;
               dst[nIdx + 1] = currentDepth;
               dst[nIdx + 2] = currentDepth;
+              // Mark neighbor as dilated from this source
+              dilationCount[nPixelIdx] = dilationCount[pixelIdx] + 1;
             }
           }
         }
@@ -70,8 +100,10 @@ export async function loadDepthMapData(depthUrl: string): Promise<ImageData> {
       
       // Apply depth map expansion to reduce edge artifacts
       const expandRadius = WORLD_VIEW_3D_CONFIG.EXPAND_DEPTHMAP_RADIUS;
+      const depthScale = WORLD_VIEW_3D_CONFIG.EXPAND_DEPTHMAP_DEPTH_SCALE;
+      const minScale = WORLD_VIEW_3D_CONFIG.EXPAND_DEPTHMAP_MIN_SCALE;
       if (expandRadius > 0) {
-        imageData = expandDepthMap(imageData, expandRadius);
+        imageData = expandDepthMap(imageData, expandRadius, depthScale, minScale);
       }
       
       resolve(imageData);
