@@ -2308,6 +2308,658 @@
       ],
       "searchDesc": "Giger-esque biomechanical hive interior, dimly lit, with pulsing orange light and ribbed chitin walls.",
       "slug": "interior-of-the-fused-necropolis"
+    },
+    "loc-1764536291494-wq4denjc8": {
+      "id": "loc-1764536291494-wq4denjc8",
+      "type": "host",
+      "name": "The Aethelgard Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A reality where massive, organically-formed structures, akin to colossal living beings, comprise the landscape. Shifting, ethereal energies flow through the 'atmosphere,' and light sources are often intrinsic to the entities themselves, casting strange, vibrant hues.",
+        "colorsAndLighting": "A palette of deep, vibrant blues and electric purples dominates, punctuated by bioluminescent greens and golds. Light sources are often pulsing or glowing from within the colossal forms, creating an otherworldly luminescence.",
+        "atmosphere": "The air is thick with an unknown, palpable energy, often manifesting as swirling mists or shimmering currents. Temperature gradients are extreme and unpredictable, fluctuating with the 'breathing' of the colossal entities. Celestial phenomena are woven into the very sky.",
+        "materials": "Primarily composed of organic, crystalline, and bio-metallic substances that resemble living tissue, bone, and hardened energy. Surfaces can be smooth and polished, or rough and textured like ancient, weathered hide.",
+        "mood": "Awe-inspiring, humbling, and slightly unsettling. A sense of immense, ancient power and the sublime presence of life on an unimaginable scale pervades.",
+        "sounds": "Deep rumbles, ethereal hums, pulsating thrums, distant cosmic whispers, echoing groans.",
+        "spatialLayout": "Vast, expansive vistas with immense scale. Structures are not built but grown, forming organic, flowing geometries that defy conventional architecture. Pathways are natural flows or carved channels within the colossal forms.",
+        "primary_surfaces": [
+          "Living rock",
+          "Bio-luminescent membranes",
+          "Crystalline growths"
+        ],
+        "secondary_surfaces": [
+          "Ethereal currents",
+          "Nebulous vapor",
+          "Exposed bio-energetic conduits"
+        ],
+        "accent_features": [
+          "Pulsing bio-luminescence",
+          "Vein-like energy channels",
+          "Crystaline outcroppings"
+        ],
+        "dominant": "Deep Blues and Purples",
+        "secondary": "Bioluminescent Greens and Golds",
+        "accent": "Electric Oranges and Pinks",
+        "ambient": "Cool and Ethereal",
+        "genre": "cosmic fantasy",
+        "architectural_tone": "organic bio-mechanical growth, colossal living structures, flowing crystalline formations, bio-luminescent illumination",
+        "cultural_tone": "primordial, awe-inspired, survivalist on a cosmic scale",
+        "materials_base": "living organic composites, crystalline structures, bio-metals, solidified energies",
+        "mood_baseline": "sublime cosmic wonder, vastness, existential awe",
+        "palette_bias": "deep blues, vibrant purples, bioluminescent greens, accented with bright energy hues",
+        "soundscape_base": "deep cosmic resonance, organic thrums, ethereal hums, echoing vastness",
+        "flora_base": "bioluminescent growths, crystalline flora, energy-infused fungi",
+        "fauna_base": "cosmic energy beings, leviathan-like bio-forms, crystalline invertebrates",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Aethelgard Expanse",
+          "looks": "A dimension where the very fabric of existence is composed of living, colossal entities.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A dimension where the very fabric of existence is composed of living, colossal entities.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Living continents",
+        "Cosmic currents",
+        "World-spanning entities"
+      ],
+      "uniqueIdentifiers": [
+        "Biomechanical landscapes",
+        "Sentient celestial bodies"
+      ],
+      "searchDesc": "A dimension woven from the essence of colossal, living entities and dynamic cosmic energies.",
+      "slug": "the-aethelgard-expanse"
+    },
+    "51a58b0d-cc9c-47af-9034-fce52c1cbb0a": {
+      "id": "51a58b0d-cc9c-47af-9034-fce52c1cbb0a",
+      "type": "region",
+      "name": "The Aethelgard Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A breathtaking vista of colossal, whale-like rock formations suspended in a vibrant, nebulae-filled expanse. These formations are covered in a rich tapestry of bioluminescent barnacles and strange, sea-like flora.",
+        "colorsAndLighting": "Dominant cool blues and teals from the surrounding cosmic sea are contrasted by the vibrant, pulsing greens and golds of the bioluminescent barnacles. Light is diffused and ethereal, with occasional shafts of intense, alien sunlight.",
+        "atmosphere": "A pervasive, damp mist hangs in the air, carrying the scent of ozone and unknown oceanic life. The temperature is cool and consistent, with gentle, flowing currents akin to oceanic tides.",
+        "materials": "The primary material is the living, sculpted rock of the whale-like entities, interspersed with massive, calcified structures of barnacles and a strange, resilient organic growth that resembles coral or kelp.",
+        "mood": "Serene, majestic, and wondrous, with an undercurrent of raw, untamed natural power and the mystery of ancient, living giants.",
+        "sounds": "Distant, gentle lapping of cosmic seas, the soft hum of bioluminescence, echoing calls of unseen oceanic life, the gentle grinding of rock.",
+        "spatialLayout": "Open, expansive spaces with colossal, floating landmasses connected by natural bridges or vast distances. Verticality is significant, with sheer drops and soaring peaks.",
+        "primary_surfaces": [
+          "Textured living rock",
+          "Dense bioluminescent barnacle clusters",
+          "Eroded organic crusts"
+        ],
+        "secondary_surfaces": [
+          "Cosmic sea spray",
+          "Nebulous mist",
+          "Slow-moving energy currents"
+        ],
+        "accent_features": [
+          "Iridescent barnacle patterns",
+          "Veins of glowing minerals",
+          "Cascading, phosphorescent flora"
+        ],
+        "dominant": "Deep Blues and Teals",
+        "secondary": "Bioluminescent Greens and Golds",
+        "accent": "Electric Oranges and Pinks",
+        "ambient": "Cool and Ethereal",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "majestic wonder, serene vastness",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "bioluminescent growths, crystalline sea-kelp, phosphorescent mosses",
+        "fauna_base": "cosmic leviathans, bio-luminescent shoals, airborne plankton",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Aethelgard Expanse",
+          "looks": "The primary region of the Aethelgard Expanse, characterized by its vast, living rock formations.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The primary region of the Aethelgard Expanse, characterized by its vast, living rock formations.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Floating rock-whales",
+        "Bioluminescent barnacle clusters",
+        "Vast ocean expanses"
+      ],
+      "uniqueIdentifiers": [
+        "Archipelago of floating landmasses",
+        "Roger Dean-inspired aesthetic"
+      ],
+      "searchDesc": "An archipelago of gargantuan, sentient rock-whales drifting through cosmic seas, adorned with vibrant life.",
+      "slug": "the-aethelgard-expanse"
+    },
+    "c1ed8567-da59-458f-9f67-62b64cc2b039": {
+      "id": "c1ed8567-da59-458f-9f67-62b64cc2b039",
+      "type": "location",
+      "name": "The Gaping Maw Cavern",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, arched opening dominates the background, revealing a swirling vortex of brilliant blue energy. The surrounding rock formations are massive and textured, suggesting organic growth or erosion. Clusters of small, bright points of light are visible within the vortex, resembling distant stars or bioluminescent organisms. The scale of the opening is immense, dwarfing the rocky outcroppings in the foreground. Water crashes against dark, jagged rocks in the immediate foreground, creating a sense of raw, natural power.",
+        "colorsAndLighting": "The primary light source is the intensely bright, cool blue energy emanating from the portal in the background. This light creates a strong contrast with the dark, shadowy rock faces in the foreground and midground. Soft ambient light, tinged with blue and green, illuminates the mist and the water.",
+        "atmosphere": "A pervasive mist or fog hangs in the air, softening the edges of the distant rock formations. The air appears humid, with a visible dampness clinging to the rocky surfaces. The overall atmosphere is one of ethereal beauty and immense, untamed power.",
+        "materials": "Primarily dark, water-worn rock with a rough, eroded texture. Patches of smaller, vibrant bioluminescent barnacles cling to the surfaces. Water and mist are prevalent.",
+        "mood": "Sublime power, raw natural beauty, mysterious allure, and a sense of immense scale.",
+        "sounds": "Roaring water, echoing spray, deep resonant hum, distant energy crackle, mist whispers.",
+        "spatialLayout": "The foreground is occupied by dark, wet, rocky terrain with water lapping against it. The midground features the towering, cavernous rock walls that frame the main feature. The background is dominated by the immense, glowing archway and the vortex of energy within it.",
+        "primary_surfaces": "Rock",
+        "secondary_surfaces": "Water, Mist",
+        "accent_features": "Bioluminescent points of light within the vortex",
+        "dominant": "Deep blues and teals from the vortex and ambient light",
+        "secondary": "Dark grays and greens from the rock formations",
+        "accent": "Brilliant white and electric blue from the energy vortex details",
+        "ambient": "Cool, ethereal blue-green",
+        "genre": null,
+        "architectural_tone": "organic erosion, colossal bio-formations, natural blowhole structures, integrated energy conduits",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Gaping Maw Cavern",
+          "looks": "The primary entrance to the largest of the rock-whales, a cavernous blowhole.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The primary entrance to the largest of the rock-whales, a cavernous blowhole.",
+      "navigableElements": [
+        {
+          "type": "portal",
+          "position": "center, background",
+          "description": "Vast, swirling vortex of luminous blue energy"
+        },
+        {
+          "type": "passage",
+          "position": "center, background",
+          "description": "The archway leading into the energy vortex"
+        },
+        {
+          "type": "object",
+          "position": "foreground",
+          "description": "Rocky shoreline with visible water flow"
+        }
+      ],
+      "dominantElements": [
+        "Cavernous archway (center background, immense scale)",
+        "Swirling blue energy vortex (within archway, background)",
+        "Jagged rock formations (left and right, midground/foreground)",
+        "Water and waves (foreground)"
+      ],
+      "uniqueIdentifiers": [
+        "Gigantic archway portal",
+        "Swirling blue energy vortex",
+        "Rock formations resembling organic structures"
+      ],
+      "searchDesc": "Cave entrance with swirling blue energy portal. Has: passage (center, background), portal (center, background), rocky shoreline (foreground)",
+      "slug": "the-gaping-maw-cavern",
+      "primaryMedia": "media-1764536315748-vfz54zah4"
+    },
+    "loc-1764536322127-opnufbd52": {
+      "id": "loc-1764536322127-opnufbd52",
+      "type": "host",
+      "name": "The Toxic Seas",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, dark ocean dotted with the skeletal remains of colossal industrial structures. The water is thick with unnatural colors and viscous textures, reflecting a grim, post-industrial reality. Unpredictable weather patterns and strange atmospheric distortions are common.",
+        "colorsAndLighting": "Dominant colors are deep, murky blues and greens, punctuated by unnatural, sickly yellows and reds from chemical slicks and hazardous lights. Lighting is often dim, diffused by toxic mists, with occasional harsh, artificial glows from derelict machinery.",
+        "atmosphere": "The air is thick with a heavy, chemical-laden mist that often obscures vision and irritates the senses. The temperature is generally damp and cool, with the constant threat of acidic precipitation or corrosive fog. The smell is a potent mix of decay and industrial effluence.",
+        "materials": "The primary materials are rusted, corroded metal from derelict ships and offshore platforms, alongside viscous, polluted water and slick, chemically-treated surfaces. Submerged debris and strange, hardened mineral deposits are also prevalent.",
+        "mood": "A pervasive sense of decay, danger, and isolation pervades this world. Hope is scarce, replaced by a grim determination to survive amidst the toxic environment.",
+        "sounds": "Distant groaning metal, lapping toxic waves, muffled industrial hums, screeching gulls, guttural alien calls, crackling static.",
+        "spatialLayout": "Vast, open ocean spaces broken by the imposing silhouettes of half-submerged structures. Navigation is treacherous, requiring passage through submerged tunnels, decaying gantries, or precarious walkways. Verticality is often present in the towering remains of industrial complexes.",
+        "primary_surfaces": [
+          "Corroded metal",
+          "Polluted water",
+          "Industrial concrete"
+        ],
+        "secondary_surfaces": [
+          "Slick oil",
+          "Hardened mineral deposits",
+          "Rusted plating"
+        ],
+        "accent_features": [
+          "Hazard stripes",
+          "Warning lights",
+          "Bioluminescent growths"
+        ],
+        "dominant": "Teal",
+        "secondary": "Dark grey-blue",
+        "accent": "Sickly yellow",
+        "ambient": "Cool",
+        "genre": "post-apocalyptic",
+        "architectural_tone": "functional industrial decay with exposed structural elements, exposed piping, riveted metal panels, corroded plating, and utilitarian design principles",
+        "cultural_tone": "survivalist and utilitarian, focused on scavenging and resourcefulness",
+        "materials_base": "rusted metals, weathered composites, toxic sludge, reinforced concrete",
+        "mood_baseline": "melancholy and perilous",
+        "palette_bias": "desaturated industrial tones with unnatural chemical highlights",
+        "soundscape_base": "damp, echoing, with industrial remnants and natural decay",
+        "flora_base": "mutated, bioluminescent algae, hardy, toxic-resistant fungi",
+        "fauna_base": "mutated aquatic life, scavenging avian creatures",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Toxic Seas",
+          "looks": "A vast expanse of mutated, hazardous waters, teeming with industrial runoff and strange, resilient life.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A vast expanse of mutated, hazardous waters, teeming with industrial runoff and strange, resilient life.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Mutated oceans",
+        "Scattered industrial husks",
+        "Unnatural atmospheric phenomena"
+      ],
+      "uniqueIdentifiers": [
+        "Toxic water",
+        "Bioluminescent algae blooms",
+        "Acid rain"
+      ],
+      "searchDesc": "A world of hazardous, mutated oceans filled with industrial remnants and toxic phenomena.",
+      "slug": "the-toxic-seas"
+    },
+    "00147095-ef82-4ec1-9857-2d525f82d6d5": {
+      "id": "00147095-ef82-4ec1-9857-2d525f82d6d5",
+      "type": "region",
+      "name": "The Oil Slick Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The water's surface is a chaotic tapestry of thick, iridescent oil slicks and floating islands of industrial refuse. Enormous, derelict refinery ships and platforms loom out of the perpetual haze, their structures a testament to failed industry.",
+        "colorsAndLighting": "Dominant colors are murky browns, greens, and greys from the oil and industrial waste, with highlights of unnatural, oily rainbows on the surface. The diffuse, hazy light casts a sickly, yellowish-green glow.",
+        "atmosphere": "The air is thick with noxious fumes and a palpable sense of chemical pollution. The humidity is high, making the air feel heavy and difficult to breathe, often carrying the sharp tang of petroleum and decay.",
+        "materials": "The primary materials are thick, viscous oil, corroded steel plating, compacted industrial waste, and dark, polluted water. Submerged structures are encrusted with solidified chemical residue.",
+        "mood": "Oppressive, stagnant, and hazardous. The environment feels choked with pollution, offering little respite and constant threat.",
+        "sounds": "Sloshing viscous fluids, creaking metal under strain, bubbling chemical reactions, distant, distorted machinery hums.",
+        "spatialLayout": "A sprawling, relatively flat expanse broken by the imposing, half-submerged silhouettes of massive industrial structures. Navigation is primarily horizontal, weaving through debris fields and around submerged obstacles.",
+        "primary_surfaces": [
+          "Viscous oil slick",
+          "Corroded industrial metal",
+          "Polluted water"
+        ],
+        "secondary_surfaces": [
+          "Compacted waste",
+          "Chemical residue",
+          "Rusted beams"
+        ],
+        "accent_features": [
+          "Iridescent sheens",
+          "Warning labels",
+          "Dripping effluence"
+        ],
+        "dominant": "Brown",
+        "secondary": "Murky green",
+        "accent": "Oily rainbow",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "oppressive and hazardous",
+        "palette_bias": "muted earth tones with chemical iridescence",
+        "soundscape_base": "viscous fluid movements and stressed metal",
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Oil Slick Expanse",
+          "looks": "A vast region of the Toxic Seas choked with industrial runoff, thick chemical slicks, and the rusting hulks of forgotten refineries.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A vast region of the Toxic Seas choked with industrial runoff, thick chemical slicks, and the rusting hulks of forgotten refineries.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Expansive chemical slicks",
+        "Floating debris fields",
+        "Half-submerged industrial platforms"
+      ],
+      "uniqueIdentifiers": [
+        "Thick oil sheen",
+        "Corrosive fumes",
+        "Debris navigation"
+      ],
+      "searchDesc": "A hazardous expanse of chemical slicks and debris-filled waters, dotted with decaying industrial structures.",
+      "slug": "the-oil-slick-expanse"
+    },
+    "d8fc47c5-0e5d-4514-a681-3d81147ddf48": {
+      "id": "d8fc47c5-0e5d-4514-a681-3d81147ddf48",
+      "type": "location",
+      "name": "The Sunken Citadel",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An enormous teal refinery ship is partially submerged in dark, choppy water. The vessel's hull is a deep teal, with a prominent red waterline. Bright yellow hazard stripes are visible along the port bow, contrasting with the muted tones of the ship and its surroundings. Numerous lights are illuminated across the ship's superstructure, suggesting activity within its abandoned state. The ship appears to be listing to one side, with a significant portion of its hull submerged.",
+        "colorsAndLighting": "The lighting is dim and diffused, with a cool, greenish-teal hue dominating the scene. Scattered warm yellow lights on the ship's superstructure create points of contrast against the pervasive ambient light.",
+        "atmosphere": "A thick, pervasive teal mist hangs in the air, obscuring details of the ship and the horizon. The water is murky and appears disturbed, with small waves creating whitecaps.",
+        "materials": "The primary materials are heavily corroded and weathered metal for the ship's hull and superstructure. The secondary materials are the dark, viscous toxic water and potentially slick, mineralized growths on the submerged sections.",
+        "mood": "Melancholy, eerie, and imposing. The ship evokes a sense of lost purpose and imminent danger, a monumental monument to industrial collapse.",
+        "sounds": "Groaning metal, lapping toxic water, distant hum of failing machinery, echoing drips, the wind whistling through broken structures.",
+        "spatialLayout": "The foreground is occupied by the dark, choppy water and a few dark rocks on the far left. The midground is dominated by the massive, partially submerged teal refinery ship, stretching across most of the frame. The background dissolves into the atmospheric mist, offering no clear definition of a horizon.",
+        "primary_surfaces": "Metal (ship hull, superstructure)",
+        "secondary_surfaces": "Water, rock",
+        "accent_features": "Glass (windows, lights), metal (antennas, rigging)",
+        "dominant": "Teal (ship hull, atmosphere)",
+        "secondary": "Dark grey-blue (water), red (waterline), white (mist)",
+        "accent": "Yellow (hazard stripes), warm yellow (ship lights)",
+        "ambient": "Teal",
+        "genre": null,
+        "architectural_tone": "functional industrial decay with exposed structural elements, exposed piping, riveted metal panels, corroded plating, and utilitarian design principles, heavily modified by submersion and decay",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "melancholy and imposing",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sunken Citadel",
+          "looks": "An enormous teal refinery ship, half-submerged in the toxic ocean, its hazard stripes still stark against the gloom.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "An enormous teal refinery ship, half-submerged in the toxic ocean, its hazard stripes still stark against the gloom.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center, midground",
+          "description": "Main crew airlock hanging open, inviting entry into the ship"
+        },
+        {
+          "type": "window",
+          "position": "midground",
+          "description": "Numerous illuminated windows across the superstructure, suggesting interior spaces"
+        }
+      ],
+      "dominantElements": [
+        "Enormous teal refinery ship (center, midground)",
+        "Submerged hull section (center, foreground)",
+        "Illuminated superstructure (center, midground)",
+        "Yellow hazard stripes (left, midground)"
+      ],
+      "uniqueIdentifiers": [
+        "Half-sunk enormous teal refinery ship",
+        "Bright yellow hazard stripes",
+        "Name 'CUTZDALS' visible on hull"
+      ],
+      "searchDesc": "[Location - Exterior] Half-sunk teal refinery ship. Has: open airlock (center, midground), illuminated windows (midground)",
+      "slug": "the-sunken-citadel",
+      "primaryMedia": "media-1764536341618-ez0bt13pq"
+    },
+    "loc-1764536360075-kkhbqt8s5": {
+      "id": "loc-1764536360075-kkhbqt8s5",
+      "type": "host",
+      "name": "The Great Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An immense, star-dusted canvas filled with cosmic phenomena and the husks of forgotten civilizations. Vast nebulae swirl with ethereal light, punctuated by the silent hulks of colossal, ancient starships. Scattered across this backdrop are the enigmatic remnants of advanced, alien architecture, hinting at once-thriving worlds.",
+        "colorsAndLighting": "Dominated by deep indigos and purples of space, with vibrant, swirling colors from nebulae in cyan, magenta, and gold. Lighting is often dramatic and volumetric, cast by distant stars and celestial bodies, creating high contrast and ethereal glows.",
+        "atmosphere": "The vacuum of space is pervasive, yet certain pockets might contain breathable atmospheres within derelict structures or exotic planetary bodies. The overall feeling is one of immense scale, profound isolation, and ancient mystery.",
+        "materials": "Primarily seen are weathered and colossal metallic alloys of starships, often scarred and pitted. Alien alloys and crystalline structures are common in ruins, contrasting with the cosmic dust and gas of nebulae.",
+        "mood": "Awe-inspiring, lonely, mysterious, and ancient. The Great Expanse evokes a sense of insignificance in the face of cosmic time and the lingering echoes of lost empires.",
+        "sounds": "Deep hums, distant echoes, cosmic silence, faint transmissions, ethereal chimes",
+        "spatialLayout": "Expansive and often disorienting. Vast open spaces of vacuum interspersed with the dense, complex geometries of derelict vessels and alien megastructures. Navigating through debris fields and asteroid clusters is common.",
+        "primary_surfaces": [
+          "weathered metal",
+          "rock",
+          "cosmic dust"
+        ],
+        "secondary_surfaces": [
+          "alien alloys",
+          "crystalline structures",
+          "glowing gas"
+        ],
+        "accent_features": [
+          "glowing engines",
+          "ancient glyphs",
+          "nebula flares"
+        ],
+        "dominant": "dark blues",
+        "secondary": "purples",
+        "accent": "vibrant nebulae colors",
+        "ambient": "variable",
+        "genre": "sci-fi",
+        "architectural_tone": "colossal alien, brutalist utilitarian, and organic growth styles; ancient, weathered, and often broken",
+        "cultural_tone": "lost civilizations, forgotten empires, and the echoes of advanced but vanished peoples",
+        "materials_base": "resilient, weathered metals, exotic alloys, stone, and crystalline composites; often showing signs of extreme age and cosmic exposure",
+        "mood_baseline": "vast emptiness, ancient grandeur, and profound mystery",
+        "palette_bias": "deep cosmic colors with vibrant nebulae accents",
+        "soundscape_base": "echoing, ambient, and often dominated by the silence of space or faint cosmic phenomena",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Great Expanse",
+          "looks": "Vast, uncharted territories with remnants of advanced civilizations.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "Vast, uncharted territories with remnants of advanced civilizations.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Wrecked Starships",
+        "Ancient Ruins",
+        "Nebulae"
+      ],
+      "uniqueIdentifiers": [
+        "Interstellar Debris Fields",
+        "Exotic Stellar Phenomena"
+      ],
+      "searchDesc": "Vast, uncharted space with alien ruins, derelict starships, and cosmic wonders.",
+      "slug": "the-great-expanse"
+    },
+    "7abeb407-9287-40c3-acd3-1c970209220d": {
+      "id": "7abeb407-9287-40c3-acd3-1c970209220d",
+      "type": "region",
+      "name": "The Great Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An immense, star-dusted canvas filled with cosmic phenomena and the husks of forgotten civilizations. Vast nebulae swirl with ethereal light, punctuated by the silent hulks of colossal, ancient starships. Scattered across this backdrop are the enigmatic remnants of advanced, alien architecture, hinting at once-thriving worlds.",
+        "colorsAndLighting": "Dominated by deep indigos and purples of space, with vibrant, swirling colors from nebulae in cyan, magenta, and gold. Lighting is often dramatic and volumetric, cast by distant stars and celestial bodies, creating high contrast and ethereal glows.",
+        "atmosphere": "The vacuum of space is pervasive, yet certain pockets might contain breathable atmospheres within derelict structures or exotic planetary bodies. The overall feeling is one of immense scale, profound isolation, and ancient mystery.",
+        "materials": "Primarily seen are weathered and colossal metallic alloys of starships, often scarred and pitted. Alien alloys and crystalline structures are common in ruins, contrasting with the cosmic dust and gas of nebulae.",
+        "mood": "Awe-inspiring, lonely, mysterious, and ancient. The Great Expanse evokes a sense of insignificance in the face of cosmic time and the lingering echoes of lost empires.",
+        "sounds": "Deep hums, distant echoes, cosmic silence, faint transmissions, ethereal chimes",
+        "spatialLayout": "Expansive and often disorienting. Vast open spaces of vacuum interspersed with the dense, complex geometries of derelict vessels and alien megastructures. Navigating through debris fields and asteroid clusters is common.",
+        "primary_surfaces": [
+          "weathered metal",
+          "rock",
+          "cosmic dust"
+        ],
+        "secondary_surfaces": [
+          "alien alloys",
+          "crystalline structures",
+          "glowing gas"
+        ],
+        "accent_features": [
+          "glowing engines",
+          "ancient glyphs",
+          "nebula flares"
+        ],
+        "dominant": "dark blues",
+        "secondary": "purples",
+        "accent": "vibrant nebulae colors",
+        "ambient": "variable",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Great Expanse",
+          "looks": "Vast, uncharted territories with remnants of advanced civilizations.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "Vast, uncharted territories with remnants of advanced civilizations.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Ancient Starship Wrecks",
+        "Cosmic Anomalies"
+      ],
+      "uniqueIdentifiers": [
+        "Nebula Fields",
+        "Debris Zones"
+      ],
+      "searchDesc": "Vast territories of cosmic dust, ancient starship graveyards, and swirling nebulae.",
+      "slug": "the-great-expanse"
+    },
+    "e1971ea8-372c-4dc4-a9d6-1f1f355ac2b5": {
+      "id": "e1971ea8-372c-4dc4-a9d6-1f1f355ac2b5",
+      "type": "location",
+      "name": "The Fallen Behemoth",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, aged freighter lies grounded within a narrow, sun-drenched canyon. Its massive yellow hull, streaked with rust and grime, dominates the scene, dwarfing the rocky canyon walls. The ship's structure features exposed sections of its dark underbelly and a complex superstructure with antennas and platforms. Cracks and openings reveal the ravaged state of its cargo bays, exposing gaping, empty spaces within.",
+        "colorsAndLighting": "Harsh, directional sunlight streams from the upper right, casting strong shadows and highlighting the textured surfaces of the canyon walls and the freighter's hull. The light is warm and golden, creating a high contrast environment with bright highlights and deep, dark shadows. The sky is a pale, washed-out blue with scattered clouds.",
+        "atmosphere": "The air appears dry and dusty, with fine particles suspended in the sunlight. Haze softens the distant canyon features and the upper portions of the freighter. A sense of stillness pervades the scene, broken only by the implied whistle of wind through the broken hull.",
+        "materials": "Primary materials are heavily weathered and scarred metal for the freighter's hull and exposed internal structures. The secondary material is the rough, eroded rock of the canyon walls and terrain.",
+        "mood": "Desolate, monumental, and a testament to catastrophic failure. A sense of stillness and abandonment hangs heavy in the air.",
+        "sounds": "Wind whistling, distant rockfalls, creaking metal, dry dust settling",
+        "spatialLayout": "The foreground consists of a dusty, rocky terrain with scattered boulders. The midground is dominated by the colossal, grounded freighter, filling a significant portion of the frame. The canyon walls rise steeply on either side, creating a sense of immense scale and enclosure. The background shows the canyon receding into a hazy distance.",
+        "primary_surfaces": "Metal (ship hull)",
+        "secondary_surfaces": "Rock (canyon walls, terrain)",
+        "accent_features": "Rust stains, grime",
+        "dominant": "Yellow (freighter hull)",
+        "secondary": "Brown (canyon walls, terrain), Dark grey/black (freighter underbelly)",
+        "accent": "Reddish-brown (rock texture)",
+        "ambient": "Pale, hazy sky tones",
+        "genre": null,
+        "architectural_tone": "brutalist utilitarian with exposed, oversized structural components, massive scale, and functional, unadorned surfaces; heavily weathered and damaged",
+        "cultural_tone": null,
+        "materials_base": "heavy industrial metals, reinforced composites, and rough-hewn rock; all aged and heavily weathered",
+        "mood_baseline": "industrial decay and monumental ruin",
+        "palette_bias": "muted earth tones and industrial yellows with strong shadow contrast",
+        "soundscape_base": "industrial echoes and environmental sounds, often with a sense of vast emptiness",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Fallen Behemoth",
+          "looks": "A massive, grounded freighter of distinct Chris Foss design, its cargo bays ravaged.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A massive, grounded freighter of distinct Chris Foss design, its cargo bays ravaged.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "lower hull, midground",
+          "description": "Large, jagged opening in the freighter's hull, offering entry"
+        },
+        {
+          "type": "passage",
+          "position": "amidships, midground",
+          "description": "Another significant breach in the hull revealing dark interior"
+        },
+        {
+          "type": "window",
+          "position": "superstructure, midground",
+          "description": "Small, dark viewport on the upper structure"
+        },
+        {
+          "type": "object",
+          "position": "fore, midground",
+          "description": "Antenna array and platforms on the freighter's bridge"
+        }
+      ],
+      "dominantElements": [
+        "Massive grounded freighter (HUGE, HORIZONTAL STRUCTURE), center, its yellow hull scarred and breached",
+        "Steep canyon walls (HIGH, VERTICAL STRUCTURE), flanking the freighter",
+        "Dust and debris kicked up around the freighter's base",
+        "Rocky, uneven ground in the foreground"
+      ],
+      "uniqueIdentifiers": [
+        "Chris Foss-style massive yellow-and-black bulk freighter",
+        "Grounded in a canyon",
+        "Cargo spines cracked open"
+      ],
+      "searchDesc": "[Location - Exterior] Grounded freighter in a canyon. Has: hull passage (midground), hull passage (midground), viewport (superstructure, midground)",
+      "slug": "the-fallen-behemoth",
+      "primaryMedia": "media-1764536384302-l9gzy6k9z"
     }
   },
   "views": {},
@@ -2517,6 +3169,57 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764536291494-wq4denjc8",
+      "type": "host",
+      "children": [
+        {
+          "id": "51a58b0d-cc9c-47af-9034-fce52c1cbb0a",
+          "type": "region",
+          "children": [
+            {
+              "id": "c1ed8567-da59-458f-9f67-62b64cc2b039",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764536322127-opnufbd52",
+      "type": "host",
+      "children": [
+        {
+          "id": "00147095-ef82-4ec1-9857-2d525f82d6d5",
+          "type": "region",
+          "children": [
+            {
+              "id": "d8fc47c5-0e5d-4514-a681-3d81147ddf48",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764536360075-kkhbqt8s5",
+      "type": "host",
+      "children": [
+        {
+          "id": "7abeb407-9287-40c3-acd3-1c970209220d",
+          "type": "region",
+          "children": [
+            {
+              "id": "e1971ea8-372c-4dc4-a9d6-1f1f355ac2b5",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -2528,6 +3231,9 @@
     "loc-1764344315065-y25fh8ml7",
     "loc-1764394404573-55zlb1q10",
     "loc-1764394503248-mxy9b5zhq",
-    "loc-1764500780583-kusiped29"
+    "loc-1764500780583-kusiped29",
+    "loc-1764536291494-wq4denjc8",
+    "loc-1764536322127-opnufbd52",
+    "loc-1764536360075-kkhbqt8s5"
   ]
 }

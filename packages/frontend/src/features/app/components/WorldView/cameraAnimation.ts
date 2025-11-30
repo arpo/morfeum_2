@@ -9,9 +9,11 @@ export interface CameraConfig {
   amplitudeX: number;
   amplitudeY: number;
   amplitudeZ: number;
+  amplitudeRoll: number;
   speedX: number;
   speedY: number;
   speedZ: number;
+  speedRoll: number;
   positionX: number;
   positionY: number;
   baseCameraZ: number;
@@ -21,6 +23,7 @@ export interface CameraMovement {
   x: number;
   y: number;
   z: number;
+  roll: number;
   posX: number;
   posY: number;
 }
@@ -33,9 +36,11 @@ export function createCameraConfig(): CameraConfig {
     amplitudeX: WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.X,
     amplitudeY: WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.Y,
     amplitudeZ: WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.Z,
+    amplitudeRoll: WORLD_VIEW_3D_CONFIG.CAMERA_AMPLITUDE.ROLL,
     speedX: WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.X * WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER,
     speedY: WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Y * WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER,
     speedZ: WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.Z * WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER,
+    speedRoll: WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.ROLL * WORLD_VIEW_3D_CONFIG.CAMERA_SPEED.MULTIPLIER,
     positionX: WORLD_VIEW_3D_CONFIG.CAMERA_POSITION.X,
     positionY: WORLD_VIEW_3D_CONFIG.CAMERA_POSITION.Y,
     baseCameraZ: WORLD_VIEW_3D_CONFIG.BASE_CAMERA_Z
@@ -61,23 +66,27 @@ export function getCameraMovementPosition(config: CameraConfig): CameraMovement 
   const rawX = Math.cos(now * config.speedX);
   const rawY = Math.sin(now * config.speedY);
   const rawZ = Math.sin(now * config.speedZ);
+  const rawRoll = Math.sin(now * config.speedRoll);
   
   // Apply easing for smooth direction changes (slower at peaks, faster in middle)
   const easedX = easeInOut(rawX);
   const easedY = easeInOut(rawY);
   const easedZ = easeInOut(rawZ);
+  const easedRoll = easeInOut(rawRoll);
   
   // Apply amplitude
   const x = easedX * config.amplitudeX;
   const y = easedY * config.amplitudeY;
   // Z only zooms IN (negative = closer to image), never OUT to avoid black edges
   const z = -Math.abs(easedZ * config.amplitudeZ);
+  // Camera roll (tilt) - rotates around Z axis for head tilt effect
+  const roll = easedRoll * config.amplitudeRoll;
   
   // Physical camera position for tilt effect (uses same eased values)
   const posX = easedX * config.positionX;
   const posY = easedY * config.positionY;
 
-  return { x, y, z, posX, posY };
+  return { x, y, z, roll, posX, posY };
 }
 
 /**

@@ -29,13 +29,15 @@ export interface ScissorDimensions {
  */
 export function updateCameraPosition(
   camera: THREE.PerspectiveCamera,
-  movement: { posX: number; posY: number; z: number },
+  movement: { posX: number; posY: number; z: number; roll: number },
   baseCameraZ: number
 ): void {
   camera.position.x = movement.posX;
   camera.position.y = movement.posY;
   camera.position.z = baseCameraZ + movement.z;
   camera.lookAt(0, 0, 0);
+  // Apply roll (Z rotation) after lookAt to create head tilt effect
+  camera.rotation.z = movement.roll;
 }
 
 /**
@@ -83,7 +85,7 @@ export function processAnimationFrame(
 ): { targetX: number; targetY: number } {
   // Get camera movement (zeros for 2D mode)
   const movement = state.displayMode === '2d' 
-    ? { x: 0, y: 0, z: 0, posX: 0, posY: 0 } 
+    ? { x: 0, y: 0, z: 0, roll: 0, posX: 0, posY: 0 } 
     : getCameraMovementPosition(cameraConfig);
   
   // Update camera position for tilt effect
