@@ -338,6 +338,599 @@
         "char-1764340998136-cu1ar5n5w"
       ],
       "parentMedia": "media-1764341010274-787lp4do2"
+    },
+    "media-1764344054616-2ld0nrqnw": {
+      "id": "media-1764344054616-2ld0nrqnw",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/koala/1dnrBDNA0PtLpx1QU5pCc.jpg",
+      "createdAt": "2025-11-28T15:34:14.616Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A female humanoid with bark-textured skin and thin roots braided into her hair, faint amber glimmers moving through her chest like flowing sap.\"\n\nRootkin, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A humanoid form with skin resembling aged oak bark, fissured and rough. Thin, fibrous roots, dark as soil, are woven into thick, matted strands of what passes for hair. Beneath the bark-like surface of her chest, faint, slow-moving amber lights pulse like viscous sap. Her eyes are dark, unblinking pools..\n\nWearing: A tunic of woven moss and fallen leaves, cinched at the waist with a belt of pliable vines. Bare feet are dark and hardened, appearing almost like roots themselves..\n\nPresence: A profound stillness, like the quiet of an ancient wood. There's a sense of deep, unhurried time emanating from her..\n\nSetting: Deep forest shadows, dappled with shafts of golden light..\n\nTheir demeanor reflects: Patient, observant, and deeply connected to the earth. She moves with a slow deliberation, her thoughts seemingly tied to the growth cycles of the forest..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764344033938-na6bo9kmq"
+      ]
+    },
+    "media-1764344063044-55afk6lyf": {
+      "id": "media-1764344063044-55afk6lyf",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/rabbit/q5_r2CCl9M6vlcmU0776R_8257ff5ab41245ccbf77accf7f36e3af.png",
+      "createdAt": "2025-11-28T15:34:23.044Z",
+      "metadata": {
+        "parentMedia": "media-1764344054616-2ld0nrqnw",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764344033938-na6bo9kmq"
+      ],
+      "parentMedia": "media-1764344054616-2ld0nrqnw"
+    },
+    "media-1764344309254-ausvsnzv0": {
+      "id": "media-1764344309254-ausvsnzv0",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/kangaroo/fxWxBHghBMLNGsPlgWk1o.jpg",
+      "createdAt": "2025-11-28T15:38:29.254Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"location. exterior, Retro-futurist dam of impossible scale, art-deco turbines, central control cathedral with vaulted doors\"\n\nThe Cathedral of Control, eye-level, centered view into space, architectural elements frame the view, layered depth, balanced composition.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] interior lighting with atmospheric depth, environmental motion (steam, dust motes, flickering sources), mixed lighting temperature creating visual texture\n[LENS:] 28-35mm lens, eye-level, centered perspective\n\n[SCENE:]\nHost World of Tomorrow: A realm where art deco aesthetics meet impossible technological advancements..\n\nRegion World of Tomorrow: .\n\nLocation The Apex Dam: A retro-futurist dam of impossible scale, its art-deco turbines humming with power..\n\nDescription: The central control hub of the dam, a grand cathedral-like structure with vaulted doors..\n\nLooks: A magnificent edifice with soaring, vaulted doors, intricate art-deco carvings, and panoramic windows offering views of the dam's operations..\n\nAtmosphere: The hushed reverence of a grand hall, punctuated by the distant hum of machinery and the soft glow of control panels..\n\nMood: Solemn, commanding, intricate.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "2231594e-afeb-48a9-b4df-0acf766a3f51"
+      ]
+    },
+    "media-1764344337542-w260yc8fz": {
+      "id": "media-1764344337542-w260yc8fz",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/rabbit/EGoV3mbhoYddDN5Mpxjgb.jpg",
+      "createdAt": "2025-11-28T15:38:57.542Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"location. exterior, A turquoise cliff-island shaped like a sleeping dragon, warm light breathing from its open maw\"\n\nThe Sleeping Dragon Isle, camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n\n[SCENE:]\nHost Oceanic Expanse: Vast, uncharted waters where islands take on peculiar forms..\n\nRegion Oceanic Expanse: .\n\nDescription: A striking cliff-island uniquely sculpted by the sea and wind into the form of a slumbering dragon..\n\nLooks: A massive, turquoise landmass rising from the sea, its contours distinctly resembling a sleeping dragon. A large opening at the 'maw' emits a warm, inviting glow..\n\nAtmosphere: The salty tang of the ocean mixes with a gentle, warm breeze emanating from the island's 'maw'. Sounds of waves lapping against stone..\n\nMood: Mysterious, serene, ancient.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "51248fcf-e383-4fea-9729-1a2719f225f0"
+      ]
+    },
+    "media-1764344340820-cyt1vckgo": {
+      "id": "media-1764344340820-cyt1vckgo",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a846927/U2SAasHQJd2xp7XRMIHh7_77568d83b6624c0aa5cd27626a1c3d5b.png",
+      "createdAt": "2025-11-28T15:39:00.820Z",
+      "metadata": {
+        "parentMedia": "media-1764344337542-w260yc8fz",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "51248fcf-e383-4fea-9729-1a2719f225f0"
+      ],
+      "parentMedia": "media-1764344337542-w260yc8fz"
+    },
+    "media-1764344407545-uhh0y8gpl": {
+      "id": "media-1764344407545-uhh0y8gpl",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/lion/b0upW1_krk5IkP_b6mohf.jpg",
+      "createdAt": "2025-11-28T15:40:07.545Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A beautiful woman composed of shimmering crystal-sand, subtle light rippling across her curves and a soft blue lumen pulsing beneath.\"\n\nLumara, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A humanoid form sculpted from countless tiny, light-refracting crystal grains. Her surface shifts with a pearlescent sheen, catching and scattering ambient light. A gentle, internal azure glow emanates from within her core..\n\nWearing: No clothing, her crystalline body serves as both form and adornment. Subtle facets and planes define her silhouette..\n\nPresence: Cool and calming, like the gentle murmur of a hidden spring..\n\nSetting: Bathed in twilight, the air thick with the scent of ozone and distant starlight..\n\nTheir demeanor reflects: Serene, introspective, and possessing a quiet, ancient wisdom..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764344395053-25a0qbuzv"
+      ]
+    },
+    "media-1764344412107-lxhtuia3z": {
+      "id": "media-1764344412107-lxhtuia3z",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/elephant/S4PES4FZSpJ195DKGfqF9_e9ec195c705345baa46e1e232fdfb5da.png",
+      "createdAt": "2025-11-28T15:40:12.107Z",
+      "metadata": {
+        "parentMedia": "media-1764344407545-uhh0y8gpl",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764344395053-25a0qbuzv"
+      ],
+      "parentMedia": "media-1764344407545-uhh0y8gpl"
+    },
+    "media-1764394252886-7v0n1a38g": {
+      "id": "media-1764394252886-7v0n1a38g",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a844080/vOlfZV_DgzoOfnsJgSKqM.jpg",
+      "createdAt": "2025-11-29T05:30:52.886Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A feminine figure with translucent crystalline skin, soft rose-colored fractures catching the light, and a serene pink glow emanating from her sternum.\"\n\nLumina, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A feminine form of clear, faceted crystal. Rose-hued internal fractures ripple and catch light. A gentle, consistent pink luminescence pulses from her chest cavity. Her features are smooth, sculpted, and ageless..\n\nWearing: Draped in shimmering, spun moonlight fabric. The gown is a cascade of iridescent silver threads, forming soft, flowing layers. Barefoot, with delicate crystalline tendrils extending from her ankles..\n\nPresence: A sense of profound peace, tinged with a cool, resonant hum that vibrates just beneath conscious perception..\n\nSetting: A twilight glade where bioluminescent flora cast an ethereal, lavender glow upon moss-covered, ancient stones..\n\nTheir demeanor reflects: Observant, calm, and radiating a gentle curiosity. She interacts with quiet grace and possesses an inherent understanding of interconnectedness..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764394242455-hsvj6jzy7"
+      ]
+    },
+    "media-1764394258406-k7x3cnaky": {
+      "id": "media-1764394258406-k7x3cnaky",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a844081/PeIHY12qsDFUrv91rFtKC_5459586151924036b8dd10ff3b766603.png",
+      "createdAt": "2025-11-29T05:30:58.406Z",
+      "metadata": {
+        "parentMedia": "media-1764394252886-7v0n1a38g",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764394242455-hsvj6jzy7"
+      ],
+      "parentMedia": "media-1764394252886-7v0n1a38g"
+    },
+    "media-1764394303168-6o51a5wet": {
+      "id": "media-1764394303168-6o51a5wet",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/monkey/EEjJE0SiB0Lfuq6ArjwiD.jpg",
+      "createdAt": "2025-11-29T05:31:43.168Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A luminous woman formed from pale moonstone, her surface rippling with silver patterns and a soft white radiance drifting from her ribs.\"\n\nSelenia, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Formed from pale moonstone, her surface is smooth and cool to the touch, with intricate, shifting silver patterns just beneath its surface. A faint white luminescence emanates from her ribcage, pulsing gently..\n\nWearing: A draped gown of woven starlight, shimmering with iridescent threads. Simple silver bangles adorn her wrists..\n\nPresence: An ethereal coolness, like moonlight on a calm night, with a hint of ancient mystery..\n\nSetting: A silent, starlit glade, where the air hums with a gentle, celestial energy..\n\nTheir demeanor reflects: Serene and observant, with a quiet grace. She communicates more through presence and subtle shifts in her luminescence than through words..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764394293094-2tz1cj3et"
+      ]
+    },
+    "media-1764394306767-eiv1hk3ne": {
+      "id": "media-1764394306767-eiv1hk3ne",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a844086/_XUiXtBVqY5jIi_RlShHP_07a007eb954f4cb6b9bba2e6d4d08c9b.png",
+      "createdAt": "2025-11-29T05:31:46.767Z",
+      "metadata": {
+        "parentMedia": "media-1764394303168-6o51a5wet",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764394293094-2tz1cj3et"
+      ],
+      "parentMedia": "media-1764394303168-6o51a5wet"
+    },
+    "media-1764394337472-n5ql3lip2": {
+      "id": "media-1764394337472-n5ql3lip2",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/elephant/pE1kP4I42eba84FPooamG.jpg",
+      "createdAt": "2025-11-29T05:32:17.472Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A radiant woman formed from molten-glass textures, soft inner fires glowing behind her ribs and along her arms.\"\n\nIgnis, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Woman, skin like shimmering, opalescent molten glass, with visible currents of soft, ember-red light pulsing beneath the surface, particularly concentrated around the chest and forearms. Her form appears fluid, perpetually on the verge of shifting..\n\nWearing: A simple, draped garment of midnight-blue silk that seems to absorb light, creating a stark contrast with her radiant form. Fine silver threads trace celestial patterns across the fabric..\n\nPresence: A gentle warmth, like standing near a hearth on a cool evening. A sense of profound stillness emanates from her..\n\nSetting: A hushed, dimly lit observatory, starlight filtering through a domed ceiling..\n\nTheir demeanor reflects: Serene, contemplative, and slow to react. She observes with quiet intensity and communicates through subtle shifts in her internal luminescence..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764394327041-yxl42l0lt"
+      ]
+    },
+    "media-1764394340914-oysh5v42c": {
+      "id": "media-1764394340914-oysh5v42c",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84408a/iWv0fbHI6_0TOTE-SymvP_45e9a9e4a68b4c61a523e7a80f86b517.png",
+      "createdAt": "2025-11-29T05:32:20.914Z",
+      "metadata": {
+        "parentMedia": "media-1764394337472-n5ql3lip2",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764394327041-yxl42l0lt"
+      ],
+      "parentMedia": "media-1764394337472-n5ql3lip2"
+    },
+    "media-1764394378705-xid2t0wn6": {
+      "id": "media-1764394378705-xid2t0wn6",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/monkey/XQM3zgqhHs6IPjtwuyF6_.jpg",
+      "createdAt": "2025-11-29T05:32:58.705Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A beautiful woman formed from polished ivory stone, subtle gold filaments tracing her collarbones and a warm amber pulse shining gently within.\"\n\nIvoria, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Sculpted from smooth, ivory-colored stone with a matte finish. Thin, coppery gold threads are inlaid along the clavicle lines. A soft, internal luminescence like trapped amber emanates from the chest..\n\nWearing: A flowing, deep indigo robe made of a material that appears to absorb light, subtly embroidered with star-like silver specks. The robe drapes to the floor, revealing only the polished stone feet..\n\nPresence: A cool, profound stillness that feels both calming and faintly awe-inspiring. A sense of deep time..\n\nSetting: A twilight chamber where shadows stretch and shift, illuminated by the amber glow from within..\n\nTheir demeanor reflects: Serene, contemplative, and ancient. Communicates through subtle shifts in light and posture rather than vocalization. Possesses an unhurried patience..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764394366832-l12c03u0j"
+      ]
+    },
+    "media-1764394382344-k43gq71ix": {
+      "id": "media-1764394382344-k43gq71ix",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84408e/Vjsqe1fcXgbaGYH8ymeRB_ead1456fac45486eaa4d0f140224ad23.png",
+      "createdAt": "2025-11-29T05:33:02.344Z",
+      "metadata": {
+        "parentMedia": "media-1764394378705-xid2t0wn6",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764394366832-l12c03u0j"
+      ],
+      "parentMedia": "media-1764394378705-xid2t0wn6"
+    },
+    "media-1764394420151-3rkxjmuur": {
+      "id": "media-1764394420151-3rkxjmuur",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a844090/VNlBmIlToKbrNetupQezE.jpg",
+      "createdAt": "2025-11-29T05:33:40.151Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"location. exterior, A horizon of soft lavender cliffs shaped like sleeping giants, one giant’s open eye forming a cavernous entrance\"\n\nThe Giant's Eye Cavern, camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n\n[SCENE:]\nHost The Dreaming Lands: A world where the landscape itself is alive with slumbering forms..\n\nRegion The Dreaming Lands: .\n\nDescription: A cavernous entrance formed by the open eye of a lavender cliff shaped like a sleeping giant..\n\nLooks: Soft lavender stone carved into the likeness of a colossal sleeping face, with one 'eye' gaping open to form a large, irregular entrance..\n\nAtmosphere: Still, cool air carrying the scent of minerals and ancient earth..\n\nMood: Mysterious, imposing.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "1674220d-cc28-4a0c-9d1c-6952936ea829"
+      ]
+    },
+    "media-1764394423899-5agnhl638": {
+      "id": "media-1764394423899-5agnhl638",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a844092/5SicAVJv_LYea04HJ5-Al_2b90d20a29344862aef4c258cc06598f.png",
+      "createdAt": "2025-11-29T05:33:43.899Z",
+      "metadata": {
+        "parentMedia": "media-1764394420151-3rkxjmuur",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "1674220d-cc28-4a0c-9d1c-6952936ea829"
+      ],
+      "parentMedia": "media-1764394420151-3rkxjmuur"
+    },
+    "media-1764394451651-z18ph5kbc": {
+      "id": "media-1764394451651-z18ph5kbc",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a844094/CbwFj_ddur_3V4YjTHx4Q.jpg",
+      "createdAt": "2025-11-29T05:34:11.651Z",
+      "metadata": {
+        "prompt": "[view of interior cavern niche, dark and mysterious, within a lavender cliff shaped like a sleeping giant's eye. The walls are rough-hewn, deep purple-toned stone, echoing the exterior's geological sculpting and natural cavernous openings, flowing lines inspired by slumbering forms. In the foreground, a textured, granular lavender stone floor transitions to polished obsidian-like rock underfoot, leading to a low, arched passage [navigable: passage, foreground center] with carved, organic swirling patterns. The midground reveals towering, naturally sculpted stone pillars with smooth, rounded forms that support an unseen, vaulted ceiling, their surfaces subtly catching faint, diffused ambient light. To the left, a recessed alcove features a cluster of crystalline formations emitting a soft, internal violet glow, hinting at subterranean mineral deposits, with a narrow, vertical fissure [navigable: fissure, midground left] leading deeper into shadow. The background is dominated by a vast, gently curving stone wall that fades into deep shadow, suggesting immense depth. The overall lighting is dim, diffused, and cool, originating from an unseen source, casting long, soft shadows and highlighting the rough textures of the stone. Architectural tone: organic geological sculpting, flowing lines. Materials: stone, crystalline inclusions. Palette: muted pastels, soft cool undertones, deep purple. Mood: mysterious, ancient, awe-inspiring. --style raw]\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764394469380-e94pzdi5n": {
+      "id": "media-1764394469380-e94pzdi5n",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/penguin/TuYgl-Ub83BEOdxTaO-02_00d9f77285cf4d27b834ea42224bcd0d.png",
+      "createdAt": "2025-11-29T05:34:29.380Z",
+      "metadata": {
+        "parentMedia": "media-1764394451651-z18ph5kbc",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "niche-1764394451654-uvqunlx2k"
+      ],
+      "parentMedia": "media-1764394451651-z18ph5kbc"
+    },
+    "media-1764394521297-tw3udnm2n": {
+      "id": "media-1764394521297-tw3udnm2n",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84409a/Ku7zO1Miz2gxAV3WjRlcy.jpg",
+      "createdAt": "2025-11-29T05:35:21.297Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"location. exterior, Giger-esque biomechanical hive fused\"\n\nThe Fused Necropolis, camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n\n[SCENE:]\nHost Xenomorph Homeworld: A desolate planet biomechanically fused with alien life..\n\nRegion The Chitinous Plains: Vast, undulating landscapes of fused organic and synthetic materials..\n\nDescription: A colossal, Giger-esque biomechanical hive structure that appears fused with the very ground..\n\nLooks: A sprawling, organic-metallic edifice with ribbed surfaces, curving spires, and gaping orifices, seamlessly integrated into the surrounding terrain..\n\nAtmosphere: Thick, humid air carrying a faint, acrid scent; a low, resonant thrumming emanates from within..\n\nMood: Foreboding, alien, ancient.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "2ffed8be-f9b6-4001-8750-111d2c186e76"
+      ]
+    },
+    "media-1764394524476-d22rs2cco": {
+      "id": "media-1764394524476-d22rs2cco",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/tiger/bxes5nHYC4Z4Nmaf3yBdS_0e0da768a0b944e6b8550529745c4849.png",
+      "createdAt": "2025-11-29T05:35:24.476Z",
+      "metadata": {
+        "parentMedia": "media-1764394521297-tw3udnm2n",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "2ffed8be-f9b6-4001-8750-111d2c186e76"
+      ],
+      "parentMedia": "media-1764394521297-tw3udnm2n"
+    },
+    "media-1764394548314-23cojdub6": {
+      "id": "media-1764394548314-23cojdub6",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84409e/0PHWOisv1KMb1X36yik9F.jpg",
+      "createdAt": "2025-11-29T05:35:48.314Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"An androgynous guide with translucent forest-glass skin, fern-like patterns beneath the surface, and a gentle green luminescence in the chest cavity.\"\n\nArbor, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Translucent, polished forest-glass skin that shifts from emerald to jade. Intricate, deep green fern patterns are visible beneath the surface, appearing to unfurl. A soft, pulsing green light emanates from within the chest cavity, subtly illuminating the surrounding glass. Features are smooth and unblemished, suggesting agelessness..\n\nWearing: A cloak woven from moonlight-spun moss, dark and velvety with embroidered constellations in silver thread. Beneath, a simple tunic of woven bark fibers, cinched with a belt of polished river stones. Barefoot..\n\nPresence: A cool, serene stillness that calms anxieties. A sense of quiet wonder, as if standing in a hidden grove..\n\nSetting: Misty twilight filtering through a dense canopy of ancient trees, dappled sunlight on damp earth..\n\nTheir demeanor reflects: Calm, observant, and possesses an innate sense of direction. Communicates through subtle gestures and shifts in their internal luminescence. Patient and guiding, with a deep connection to the natural world..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764394537940-9p4msjbcd"
+      ]
+    },
+    "media-1764394551959-hjifki45e": {
+      "id": "media-1764394551959-hjifki45e",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84409f/bF1brb856paIDJOszgXa5_569f6c2adfdf4ee1ad7cd6d9c936f6e3.png",
+      "createdAt": "2025-11-29T05:35:51.959Z",
+      "metadata": {
+        "parentMedia": "media-1764394548314-23cojdub6",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764394537940-9p4msjbcd"
+      ],
+      "parentMedia": "media-1764394548314-23cojdub6"
+    },
+    "media-1764394570027-13x0xz3j1": {
+      "id": "media-1764394570027-13x0xz3j1",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8440a0/_KkoNSSgDEntS0sznUi1Z.jpg",
+      "createdAt": "2025-11-29T05:36:10.027Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A serene woman formed from pale resin and drifting pollen-glow, thin vines braided into her hair and chest shimmering softly inside.\"\n\nLumiflora, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A form of opalescent, milky resin. Veins of light, like captured pollen, pulse gently beneath the surface. Thin, vibrant green vines are woven into the resinous strands of her 'hair' and trace patterns across her chest, emitting a soft, internal bioluminescence..\n\nWearing: Translucent, leaf-like panels of woven moonlight draped over a base layer of shimmering, gossamer-thin bark. Delicate tendrils wrap around her arms and ankles, tipped with tiny, dewdrop-like crystals..\n\nPresence: A gentle, ambient warmth, like the first light of dawn filtering through a quiet forest..\n\nSetting: A twilight glade where luminous moss carpets the ground and giant, silent flora breathe soft light..\n\nTheir demeanor reflects: Calm, nurturing, and observant. She moves with deliberate grace and her presence is felt as a quiet encouragement..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764394559527-xr4to5itz"
+      ]
+    },
+    "media-1764394614056-dt65qqdnl": {
+      "id": "media-1764394614056-dt65qqdnl",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/elephant/oCVTK5PCbe_x0gmxGm2kG.jpg",
+      "createdAt": "2025-11-29T05:36:54.056Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A feminine silhouette with smooth metallic skin resembling brushed iron, thin conduits running from spine to sternum, and a warm internal pulse like a living furnace.\"\n\nForge Heart, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Androgynous metallic form, surface textured like brushed iron, etched with hairline conduits glowing with internal amber light. Faceless, with only a central, pulsing ember..\n\nWearing: A cloak of woven copper wire, draped loosely to reveal the metallic form beneath. Simple, unadorned..\n\nPresence: A gentle, radiating warmth, like standing near a banked hearth. A feeling of contained power..\n\nSetting: A twilight forge, air thick with the scent of ozone and molten metal..\n\nTheir demeanor reflects: Observant, patient, with a slow, deliberate energy. Communicates through subtle shifts in internal light..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764394603926-e1xir90he"
+      ]
+    },
+    "media-1764394619841-j1w3lx5kh": {
+      "id": "media-1764394619841-j1w3lx5kh",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8440a5/RWQB7sqQlloxS6Tx8p2q4_a3d6019cbfdd43db88b72117a8585a54.png",
+      "createdAt": "2025-11-29T05:36:59.841Z",
+      "metadata": {
+        "parentMedia": "media-1764394614056-dt65qqdnl",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764394603926-e1xir90he"
+      ],
+      "parentMedia": "media-1764394614056-dt65qqdnl"
+    },
+    "media-1764394666076-ncyy17xph": {
+      "id": "media-1764394666076-ncyy17xph",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8440a9/KOpbkVcHbKOF-m--AVHvk.jpg",
+      "createdAt": "2025-11-29T05:37:46.076Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A woman-shaped form of polished obsidian softened with warm gold veins, her inner light shining through the chest like a calm, radiant ember.\"\n\nIgnis, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A woman-shaped form crafted from polished obsidian, shot through with intricate, warm gold veins. A soft, radiant light emanates from her chest, visible through the dark material..\n\nWearing: A simple, flowing robe of deep indigo silk, subtly embroidered with patterns that mimic constellations. Simple leather sandals..\n\nPresence: A gentle warmth and a sense of enduring calm, like standing near a hearth on a cool evening..\n\nSetting: The twilight glow of an ancient library, dust motes dancing in shafts of fading sunlight..\n\nTheir demeanor reflects: Serene, contemplative, and possessing a quiet strength. She observes more than she speaks, her reactions measured and deliberate..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764394655504-6z5lxdaaz"
+      ]
+    },
+    "media-1764394669684-1da5kt9e7": {
+      "id": "media-1764394669684-1da5kt9e7",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8440aa/-tMELtezG-mSmEr1S_gCs_c78a15cfd3624f548880fea582c7ccb0.png",
+      "createdAt": "2025-11-29T05:37:49.684Z",
+      "metadata": {
+        "parentMedia": "media-1764394666076-ncyy17xph",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764394655504-6z5lxdaaz"
+      ],
+      "parentMedia": "media-1764394666076-ncyy17xph"
+    },
+    "media-1764394751804-aa5ud51bm": {
+      "id": "media-1764394751804-aa5ud51bm",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/tiger/dNJ2KCMu8aYNHHDGT2CiI_7fbda125119d40128a7ca35b467e8ba0.png",
+      "createdAt": "2025-11-29T05:39:11.804Z",
+      "metadata": {
+        "parentMedia": "media-1764394570027-13x0xz3j1",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764394559527-xr4to5itz"
+      ],
+      "parentMedia": "media-1764394570027-13x0xz3j1"
+    },
+    "media-1764409997787-d1p4uud2i": {
+      "id": "media-1764409997787-d1p4uud2i",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8446a6/nQlitSb3oIqdJcKp86bae.jpg",
+      "createdAt": "2025-11-29T09:53:17.787Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A humanoid male figure shaped from ancient sandstone, subtle geometric carvings along his arms and face, and a muted cyan glow beneath the surface.\"\n\nStonesinger, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A humanoid form composed entirely of weathered, ochre sandstone. Intricate, low-relief geometric patterns are etched into the surface of his arms and face. A soft, internal cyan light pulses faintly through hairline fissures..\n\nWearing: None. His form is his attire..\n\nPresence: A profound stillness, like the weight of eons, with an undercurrent of quiet, cool luminescence..\n\nSetting: A vast, silent cavern, lit by phosphorescent moss..\n\nTheir demeanor reflects: Ancient, stoic, observant, slow to act but deliberate when he does..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764409977757-ycydc8vxs"
+      ]
+    },
+    "media-1764410151879-yf8rs9uj0": {
+      "id": "media-1764410151879-yf8rs9uj0",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8446b7/MXjlRUDYddgYDCDpl0ExR_6d317795d8884301af28d50a9c8b508d.png",
+      "createdAt": "2025-11-29T09:55:51.879Z",
+      "metadata": {
+        "parentMedia": "media-1764409997787-d1p4uud2i",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764409977757-ycydc8vxs"
+      ],
+      "parentMedia": "media-1764409997787-d1p4uud2i"
+    },
+    "media-1764440996330-8hgccp6wc": {
+      "id": "media-1764440996330-8hgccp6wc",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8452c2/cn_kmMqqJktETNlUS33Kc.jpg",
+      "createdAt": "2025-11-29T18:29:56.330Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A luminous woman formed from pale moonstone, her surface rippling with silver patterns and a soft white radiance drifting from her ribs.\"\n\nSelene, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A figure sculpted from polished, translucent moonstone. Her surface is a shifting tapestry of intricate silver filigree that flows like water. A soft, internal luminescence emanates from within, particularly from the gentle pulse of light that drifts from her ribcage. Her form is smooth and graceful, suggesting a timeless, ageless beauty..\n\nWearing: No clothing, but her moonstone form is adorned with delicate, self-formed bands of opalescent crystal around her wrists and ankles. Tiny, starlight-like motes of light occasionally coalesce and drift away from her shoulders..\n\nPresence: A profound and comforting coolness, like standing under a clear, starlit sky. It's a quiet presence that inspires introspection and awe..\n\nSetting: A cavern filled with echoing silence and the faint scent of ozone, illuminated by a single, spectral moonbeam..\n\nTheir demeanor reflects: Serene, observant, and possesses an almost melancholic stillness. She communicates more through subtle shifts in her luminescence than through direct interaction..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764440973191-lo2l2544t"
+      ]
+    },
+    "media-1764441014884-6v9ocqnkf": {
+      "id": "media-1764441014884-6v9ocqnkf",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8452c5/O6dtXLDedEH5ovUgd55Ql_d1fe2cffdd74433187bd890cee43c51e.png",
+      "createdAt": "2025-11-29T18:30:14.884Z",
+      "metadata": {
+        "parentMedia": "media-1764440996330-8hgccp6wc",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764440973191-lo2l2544t"
+      ],
+      "parentMedia": "media-1764440996330-8hgccp6wc"
+    },
+    "media-1764448889793-t4b0be1k7": {
+      "id": "media-1764448889793-t4b0be1k7",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8455d8/ZIBFZeaiqyn_B3ZbCHWU2.jpg",
+      "createdAt": "2025-11-29T20:41:29.793Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A tall male silhouette formed from dark basalt and shimmering obsidian, thin electric-blue fracture lines running across his chest and jaw.\"\n\nObsidian Sentinel, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Towering, monolithic male form of polished, deep black basalt. Jagged, electric-blue fissures scar his chest and jawline, pulsing with faint internal light. His surface reflects light with a glassy sheen..\n\nWearing: No discernible clothing. The obsidian itself forms a seamless, geometric covering..\n\nPresence: A palpable chill, like standing on the edge of a vast cavern. An aura of immense pressure and dormant power..\n\nSetting: A twilight cavern, illuminated by the faint, ethereal glow of phosphorescent fungi..\n\nTheir demeanor reflects: Stoic, silent, utterly observant. Possesses an ancient, unyielding resolve. Communicates through stillness and the subtle hum of its energy..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764448868642-bh6ghvjg0"
+      ]
+    },
+    "media-1764448895146-idemz5k54": {
+      "id": "media-1764448895146-idemz5k54",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8455d9/tKcQVs_5AjMYysdWh-k5B_5ab361fe90b14e75bb0be89ed80cd226.png",
+      "createdAt": "2025-11-29T20:41:35.146Z",
+      "metadata": {
+        "parentMedia": "media-1764448889793-t4b0be1k7",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764448868642-bh6ghvjg0"
+      ],
+      "parentMedia": "media-1764448889793-t4b0be1k7"
+    },
+    "media-1764448924849-xkxqefve6": {
+      "id": "media-1764448924849-xkxqefve6",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8455db/UGzixkPwU65CdB6rFhVAq.jpg",
+      "createdAt": "2025-11-29T20:42:04.849Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A feminine humanoid made of aged copper and weathered patina, fine mechanical filaments along her neck and shoulders, and a warm gold light radiating from within.\"\n\nAethel, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A feminine form of burnished, verdigris-streaked copper. Delicate, spun-gold filaments trail from hairline to collarbone. A soft, internal gold luminescence pulses faintly beneath her surface..\n\nWearing: A layered tunic of deep ochre, woven from threads that shimmer like dried reeds. Cuffs of hammered bronze clasp each wrist. A simple, dark leather belt cinches the waist..\n\nPresence: A gentle, enduring warmth, like sunlight on ancient metal..\n\nSetting: Dust motes dance in slanted rays of light within a silent, cavernous workshop..\n\nTheir demeanor reflects: Quietly observant, with a methodical and deliberate manner. She rarely initiates conversation but responds with thoughtful precision..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764448915861-2i9drb16t"
+      ]
+    },
+    "media-1764448928861-qxweuzuae": {
+      "id": "media-1764448928861-qxweuzuae",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8455dc/0wVKTBGrnHds3bZRNntt-_54b1c5d2a72f42a9986e342336d2bb5f.png",
+      "createdAt": "2025-11-29T20:42:08.861Z",
+      "metadata": {
+        "parentMedia": "media-1764448924849-xkxqefve6",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764448915861-2i9drb16t"
+      ],
+      "parentMedia": "media-1764448924849-xkxqefve6"
+    },
+    "media-1764449004923-hd68v6g4o": {
+      "id": "media-1764449004923-hd68v6g4o",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8455e3/0i0QpUy4DKhdJF2UDayo6.jpg",
+      "createdAt": "2025-11-29T20:43:24.923Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A graceful female silhouette with smooth jade-like skin, delicate leaf-vein patterns beneath the surface, and a soft emerald glow radiating from her chest.\"\n\nVeridian, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A being of smooth, polished jade, with intricate green, branching patterns subtly visible beneath its surface, as if a living network. A faint, pulsating emerald light emanates from the center of its form..\n\nWearing: A draped garment of woven moonlight threads, shimmering with iridescent blues and silvers. It flows like water, adhering to the contours of its jade form..\n\nPresence: A cool, calming aura, like the quiet shade of an ancient forest, tinged with the vibrant energy of burgeoning life..\n\nSetting: A twilight glade where luminous mosses carpet the ground and bioluminescent flora cast a soft, ethereal glow..\n\nTheir demeanor reflects: Serene, observant, and possesses a quiet, deep wisdom. It communicates through subtle shifts in its inner luminescence and gentle, rustling sounds..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764448994087-w4awy91tp"
+      ]
+    },
+    "media-1764449014360-6hgw52eua": {
+      "id": "media-1764449014360-6hgw52eua",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8455e5/MQ40XkV3jVGFQDYnAUyJR_89b6a941d1bb4b8c9af4386a12bbf3e3.png",
+      "createdAt": "2025-11-29T20:43:34.360Z",
+      "metadata": {
+        "parentMedia": "media-1764449004923-hd68v6g4o",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764448994087-w4awy91tp"
+      ],
+      "parentMedia": "media-1764449004923-hd68v6g4o"
+    },
+    "media-1764498262966-e6a2r02ar": {
+      "id": "media-1764498262966-e6a2r02ar",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a846922/fTdvyYCNpySzkeN4jUDoL_d1a0374141e749b48e0eddc2569356d8.png",
+      "createdAt": "2025-11-30T10:24:22.966Z",
+      "metadata": {
+        "parentMedia": "media-1764344309254-ausvsnzv0",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "2231594e-afeb-48a9-b4df-0acf766a3f51"
+      ],
+      "parentMedia": "media-1764344309254-ausvsnzv0"
+    },
+    "media-1764500804859-plemqe1gq": {
+      "id": "media-1764500804859-plemqe1gq",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a846a1f/GrIWUzqgYOdhS4vvRbY6x.jpg",
+      "createdAt": "2025-11-30T11:06:44.859Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"crystalline desert salt, warm peach light blooming inside her chest and radiating through translucent edges.\"\n\nThe Inner Radiance, eye-level, centered view into space, architectural elements frame the view, layered depth, balanced composition.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] interior lighting with atmospheric depth, environmental motion (steam, dust motes, flickering sources), mixed lighting temperature creating visual texture\n[LENS:] 28-35mm lens, eye-level, centered perspective\n\n[SCENE:]\nHost Aethelgard: A world of stark natural wonders and ethereal phenomena..\n\nRegion Aethelgard: .\n\nLocation The Salt Bloom Grotto: A naturally formed grotto within the Shimmering Flats, known for its peculiar internal luminescence..\n\nDescription: The core of the grotto where light manifests as a living bloom..\n\nLooks: The translucent edges of the grotto glow with a warm, peach-colored light, emanating from an unseen source within the crystalline structure..\n\nAtmosphere: A gentle, pervasive warmth that feels almost biological, a subtle vibration in the air..\n\nMood: Peaceful, radiant.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "4dcd35ab-29bc-4ed9-bf07-d6c2a2114896"
+      ]
     }
   }
 }

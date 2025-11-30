@@ -22,6 +22,11 @@ import { getDepthMapForMedia, clearMediaCache } from '@/services/mediaService';
 import type { DisplayMode } from '@/features/app/components/TopButtonRow/TopButtonRow';
 import styles from './App.module.css';
 
+// BroadcastChannel for syncing external display windows
+const externalViewChannel = typeof BroadcastChannel !== 'undefined' 
+  ? new BroadcastChannel('morfeum-external-view') 
+  : null;
+
 export function App() {
   const [isSavedEntitiesModalOpen, setIsSavedEntitiesModalOpen] = useState(false);
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
@@ -231,6 +236,8 @@ export function App() {
     localStorage.setItem('displayMode', mode);
     // Notify WorldView of display mode change
     window.dispatchEvent(new CustomEvent('displayModeChanged', { detail: { mode } }));
+    // Broadcast to external view windows
+    externalViewChannel?.postMessage({ type: 'displayModeChanged', mode });
   };
 
   // Get primary media ID for current entity
@@ -245,6 +252,18 @@ export function App() {
       return node?.primaryMedia || null;
     }
   }, [activeEntity, isCharacter]);
+
+  // Broadcast entity change to external views
+  useEffect(() => {
+    if (activeEntity) {
+      const entitySession = entities.get(activeEntity);
+      externalViewChannel?.postMessage({ 
+        type: 'entityChanged', 
+        entityId: activeEntity,
+        imageUrl: entitySession?.entityImage || null
+      });
+    }
+  }, [activeEntity, entities]);
 
   // Check for existing depth map when active entity changes
   useEffect(() => {

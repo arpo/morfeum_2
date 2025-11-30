@@ -29,7 +29,8 @@ export {
   IconLayoutSidebar,
   IconMessageCircle,
   IconStack2,
-  Icon3dCubeSphere
+  Icon3dCubeSphere,
+  IconExternalLink
 } from '@tabler/icons-react';
 
 // Icon type for string references

@@ -1,5 +1,15 @@
 # Active Context
 
+## Recent Changes (2025-11-30)
+
+### ExternalView Host Tab Sync Fix (Nov 30, 2025)
+- **Problem**: ExternalView did not update when selecting world tree child nodes from Host tab (only worked for characters/pinned locations).
+- **Root Cause**: ExternalView only initialized entity sessions for pinned locations/characters, not for world tree children.
+- **Solution**: Updated ExternalView to:
+  - For each pinned location of type "host", load all child nodes using `collectAllNodeIds` and `createEntitySessionsForNodes` (mirrors App.tsx logic).
+  - Now supports real-time sync for all entities, including Host tab children.
+- **Result**: Selecting any node (character, pinned location, or world tree child) now updates external view correctly.
+
 ## Recent Changes (2025-11-28)
 
 ### Depth Map Generation Feature (Nov 28, 2025)
@@ -121,38 +131,6 @@
 - Centralized keyboard shortcut handling for UI toggles and focus mode.
 - Focus mode hides all UI for distraction-free image viewing.
 - State management and configuration improvements.
-
-## Current Focus
-- Data storage optimization complete
-- Removed redundant nested data from both worlds.json and characters.json
-- Fixed nested dna.dna issue in world tree generation
-
-## Next Steps
-- Test with fresh database to verify clean data structure
-- Monitor storage efficiency improvements
-- Consider similar cleanup for other data structures if needed
-
-### Data Storage Cleanup (Nov 28, 2025)
-- **Problem**: Redundant and nested data being saved to both `worlds.json` and `characters.json`, causing bloat and potential issues
-- **World Storage Fixes**:
-  - **worldTrees cleanup**: Previously stored full node data (name, description, dna, etc.) in tree structure - now only stores minimal structure (id, type, children)
-  - **Nested dna.dna fix**: `WorldTreeBuilder.buildNode` was spreading entire data object causing `dna.dna` nesting - now uses `data.dna` directly
-  - **Files modified**:
-    - `packages/frontend/src/store/slices/locations/treesSlice.ts` - Added `extractTreeStructure()` helper
-    - `packages/backend/src/services/worldTree/builder.ts` - Fixed DNA extraction
-    - `packages/backend/src/services/worldTree/types.ts` - Added structural fields to TreeNode interface
-- **Character Storage Fix**:
-  - Removed redundant `seed` object from character details (all fields already extracted to top level)
-  - Kept `visualAnalysis` object (contains face, body, hair details from image analysis)
-  - File modified: `packages/backend/src/engine/pipelines/shared/entityPersistence.ts`
-- **Storage Structure**:
-  - `worlds.json`: Full node data in `nodes` map, minimal tree structure in `worldTrees` array
-  - `characters.json`: Clean character data without duplicate seed information
-- **Benefits**:
-  - Reduced file size and redundancy
-  - Single source of truth for node data
-  - Fixed nested DNA structure issues
-  - Easier to maintain and debug
 
 ## Current Focus
 - Data storage optimization complete

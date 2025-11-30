@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui';
-import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere } from '@/icons';
+import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink } from '@/icons';
 import styles from './TopButtonRow.module.css';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
@@ -103,6 +103,18 @@ export function TopButtonRow({
           <span className={styles.displayModeLabel}>{DISPLAY_MODE_LABELS[displayMode]}</span>
         </Button>
       )}
+
+      {/* Open external display window (WorldView only, no UI) */}
+      <Button
+        onClick={() => {
+          const url = `${window.location.origin}${window.location.pathname}#view`;
+          window.open(url, 'external-view', 'width=1920,height=1080,menubar=no,toolbar=no,location=no,status=no');
+        }}
+        className={styles.button}
+        aria-label="Open external display"
+      >
+        <IconExternalLink size={20} />
+      </Button>
     </div>
   );
 }

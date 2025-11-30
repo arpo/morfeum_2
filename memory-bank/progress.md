@@ -2,6 +2,11 @@
 
 ## Completed Features ✅
 
+### ExternalView Host Tab Sync Fix (Nov 30, 2025)
+- [x] Fixed: ExternalView now loads world tree child nodes for pinned "host" locations, mirroring App.tsx logic.
+- [x] Selecting any node (character, pinned location, or world tree child) now updates external view in real time.
+- [x] BroadcastChannel sync works for all entity types.
+
 ### Code Cleanup & File Size Reduction (Nov 28, 2025)
 - [x] Identified files exceeding 300-line limit (media.ts: 363 lines, worldTreePipeline.ts: 423 lines)
 - [x] Consolidated duplicate tree traversal functions to shared utilities
@@ -185,6 +190,7 @@
 
 ### Priority 1
 - [x] Session persistence (via backend file storage)
+- [x] ExternalView sync for all entity types (characters, pinned locations, world tree children)
 - [ ] Saved entities browser functionality (UI exists, needs full implementation)
 - [ ] Character-location chat switching
 - [ ] Export/import entities
