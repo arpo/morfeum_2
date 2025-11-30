@@ -4,6 +4,7 @@
  */
 
 import * as THREE from 'three';
+import { WORLD_VIEW_3D_CONFIG } from '@/config';
 
 export interface DepthGeometryOptions {
   imageAspectRatio: number;
@@ -12,7 +13,48 @@ export interface DepthGeometryOptions {
 }
 
 /**
+ * Expand/dilate depth map to reduce edge artifacts
+ * This spreads depth values outward to fill gaps at object boundaries
+ * Based on tiefling's approach
+ */
+export function expandDepthMap(imageData: ImageData, radius: number): ImageData {
+  const width = imageData.width;
+  const height = imageData.height;
+  const src = new Uint8ClampedArray(imageData.data);
+  const dst = new Uint8ClampedArray(src);
+
+  for (let r = 0; r < radius; r++) {
+    for (let y = 1; y < height - 1; y++) {
+      for (let x = 1; x < width - 1; x++) {
+        const idx = (y * width + x) * 4;
+        const currentDepth = src[idx];
+
+        // Skip very dark pixels (far background)
+        if (currentDepth < 10) continue;
+
+        // Simple dilation: spread to adjacent pixels
+        for (let dy = -1; dy <= 1; dy++) {
+          for (let dx = -1; dx <= 1; dx++) {
+            const nIdx = ((y + dy) * width + (x + dx)) * 4;
+            if (src[nIdx] < currentDepth) {
+              dst[nIdx] = currentDepth;
+              dst[nIdx + 1] = currentDepth;
+              dst[nIdx + 2] = currentDepth;
+            }
+          }
+        }
+      }
+    }
+    // Update source for next iteration
+    src.set(dst);
+  }
+  
+  return new ImageData(dst, width, height);
+}
+
+/**
  * Load depth map as ImageData from URL
+ * Applies depth map expansion if configured
  */
 export async function loadDepthMapData(depthUrl: string): Promise<ImageData> {
   return new Promise((resolve, reject) => {
@@ -24,7 +66,14 @@ export async function loadDepthMapData(depthUrl: string): Promise<ImageData> {
       canvas.height = img.height;
       const ctx = canvas.getContext('2d')!;
       ctx.drawImage(img, 0, 0);
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      
+      // Apply depth map expansion to reduce edge artifacts
+      const expandRadius = WORLD_VIEW_3D_CONFIG.EXPAND_DEPTHMAP_RADIUS;
+      if (expandRadius > 0) {
+        imageData = expandDepthMap(imageData, expandRadius);
+      }
+      
       resolve(imageData);
     };
     img.onerror = reject;

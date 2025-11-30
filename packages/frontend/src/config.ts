@@ -74,6 +74,9 @@ export const WORLD_VIEW_3D_CONFIG = {
     ENABLED: true, // Enable/disable 16:9 letterbox cropping
     EXTRA_HEIGHT: 30, // Additional pixels to add to each bar (to cut off more edges)
   },
+  
+  /** Depth map expansion radius - dilates depth values to reduce edge artifacts (0 = disabled, 7 = tiefling default) */
+  EXPAND_DEPTHMAP_RADIUS: 7,
 } as const;
 
 /**
