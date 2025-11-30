@@ -1,9 +1,11 @@
 /**
  * Entity Manager Slice
- * Manages multiple entity sessions (characters and locations)
+ * Manages entity sessions (characters and locations) - CRUD operations only
+ * UI state is handled by entityUISlice
  */
 
 import type { StateCreator } from 'zustand';
+import { EntityUISlice } from './entityUISlice';
 
 export interface ChatMessage {
   id: string;
@@ -48,10 +50,6 @@ export interface EntityData {
 export interface EntityManagerSlice {
   entities: Map<string, EntityData>;
   activeEntity: string | null;
-  entityPanelOpen: Map<string, boolean>;
-  entityExplorerPanelOpen: boolean;
-  spawnInputMinimized: boolean;
-  focusModeEnabled: boolean;
 
   createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => void;
   updateEntityImage: (spawnId: string, imageUrl: string) => void;
@@ -63,21 +61,14 @@ export interface EntityManagerSlice {
   sendMessage: (spawnId: string, content: string) => Promise<void>;
   setLoading: (spawnId: string, loading: boolean) => void;
   setError: (spawnId: string, error: string | null) => void;
-  openEntityPanel: (entityId: string) => void;
-  closeEntityPanel: (entityId: string) => void;
-  isEntityPanelOpen: (entityId: string) => boolean;
-  toggleEntityExplorerPanel: () => void;
-  toggleSpawnInput: () => void;
-  toggleFocusMode: () => void;
 }
 
-export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, get) => ({
+// Combined type for store that uses both slices
+export type EntitySlices = EntityManagerSlice & EntityUISlice;
+
+export const createEntityManagerSlice: StateCreator<EntitySlices, [], [], EntityManagerSlice> = (set, get) => ({
   entities: new Map(),
   activeEntity: null,
-  entityPanelOpen: new Map(),
-  entityExplorerPanelOpen: localStorage.getItem('entityExplorerPanelOpen') !== 'false',
-  spawnInputMinimized: localStorage.getItem('spawnInputMinimized') === 'true',
-  focusModeEnabled: false,
 
   createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => {
     const systemMessage: ChatMessage = {
@@ -101,7 +92,7 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       newEntities.set(spawnId, entityData);
       return {
         entities: newEntities,
-        activeEntity: spawnId // Automatically switch to new entity
+        activeEntity: spawnId
       };
     });
   },
@@ -111,7 +102,6 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       const entity = state.entities.get(spawnId);
       if (!entity) return state;
 
-      // Skip update if image is already the same (prevents flicker)
       if (entity.entityImage === imageUrl) {
         return state;
       }
@@ -147,7 +137,6 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       const newEntities = new Map(state.entities);
       const updatedMessages = [...entity.messages];
       
-      // Update the system message if it exists
       const systemMessageIndex = updatedMessages.findIndex(m => m.role === 'system');
       if (systemMessageIndex !== -1) {
         updatedMessages[systemMessageIndex] = {
@@ -188,7 +177,6 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       const newEntities = new Map(state.entities);
       newEntities.delete(spawnId);
       
-      // If we're closing the active entity, clear activeEntity
       const newActiveEntity = state.activeEntity === spawnId ? null : state.activeEntity;
       
       return {
@@ -207,7 +195,6 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       return;
     }
 
-    // Add user message
     const userMessage: ChatMessage = {
       id: `user-${Date.now()}`,
       role: 'user',
@@ -230,7 +217,6 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
     });
 
     try {
-      // Prepare messages for API (include system prompt and full history)
       const updatedEntity = get().entities.get(spawnId);
       if (!updatedEntity) return;
 
@@ -239,7 +225,6 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
         content: m.content
       }));
 
-      // Call backend API
       const response = await fetch('/api/mzoo/gemini/text', {
         method: 'POST',
         headers: {
@@ -257,7 +242,6 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
 
       const result = await response.json();
 
-      // Add assistant message
       const assistantMessage: ChatMessage = {
         id: `assistant-${Date.now()}`,
         role: 'assistant',
@@ -321,45 +305,5 @@ export const createEntityManagerSlice: StateCreator<EntityManagerSlice> = (set, 
       });
       return { entities: newEntities };
     });
-  },
-
-  openEntityPanel: (entityId: string) => {
-    set((state) => {
-      const newEntityPanelOpen = new Map(state.entityPanelOpen);
-      newEntityPanelOpen.set(entityId, true);
-      return { entityPanelOpen: newEntityPanelOpen };
-    });
-  },
-
-  closeEntityPanel: (entityId: string) => {
-    set((state) => {
-      const newEntityPanelOpen = new Map(state.entityPanelOpen);
-      newEntityPanelOpen.set(entityId, false);
-      return { entityPanelOpen: newEntityPanelOpen };
-    });
-  },
-
-  isEntityPanelOpen: (entityId: string) => {
-    return get().entityPanelOpen.get(entityId) || false;
-  },
-
-  toggleEntityExplorerPanel: () => {
-    set((state) => {
-      const newState = !state.entityExplorerPanelOpen;
-      localStorage.setItem('entityExplorerPanelOpen', String(newState));
-      return { entityExplorerPanelOpen: newState };
-    });
-  },
-
-  toggleSpawnInput: () => {
-    set((state) => {
-      const newState = !state.spawnInputMinimized;
-      localStorage.setItem('spawnInputMinimized', String(newState));
-      return { spawnInputMinimized: newState };
-    });
-  },
-
-  toggleFocusMode: () => {
-    set((state) => ({ focusModeEnabled: !state.focusModeEnabled }));
   }
 });

@@ -931,6 +931,49 @@
       "entityRefs": [
         "4dcd35ab-29bc-4ed9-bf07-d6c2a2114896"
       ]
+    },
+    "media-1764533103257-app1l4scs": {
+      "id": "media-1764533103257-app1l4scs",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8476be/phNkth-GJZx8Ochrr_HLb_77bd64f1c2574f33afec29e149b5e103.png",
+      "createdAt": "2025-11-30T20:05:03.257Z",
+      "metadata": {
+        "parentMedia": "media-1764338086477-w3dok6pva",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "niche-1764338086478-1j4epb9ks"
+      ],
+      "parentMedia": "media-1764338086477-w3dok6pva"
+    },
+    "media-1764533141864-f3xv3qwic": {
+      "id": "media-1764533141864-f3xv3qwic",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8476c1/ySKPgnXdnCdtGB8elobjn.jpg",
+      "createdAt": "2025-11-30T20:05:41.865Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A graceful female silhouette with smooth jade-like skin, delicate leaf-vein patterns beneath the surface, and a soft emerald glow radiating from her chest.\"\n\nVeridian, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A mature female form sculpted from polished jade. Fine, intricate patterns resembling veins of emerald leaves trace just beneath the smooth, cool surface of her skin. A gentle, pulsating emerald light emanates from the center of her chest..\n\nWearing: A flowing robe of woven moss-green silk, embroidered with silver thread in patterns of twining vines and dewdrop beads. Barefoot..\n\nPresence: A calming stillness, like the quiet heart of an ancient forest. A sense of profound, natural peace that soothes and grounds..\n\nSetting: Bathed in the dappled, verdant light of a sunlit glade, with mist swirling gently around her feet..\n\nTheir demeanor reflects: Serene, observant, and possessing an ancient, unhurried wisdom. Speaks with a measured cadence, her words carrying the weight of centuries..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764533128547-05ghv6xlu"
+      ]
+    },
+    "media-1764533146429-9iyad97ko": {
+      "id": "media-1764533146429-9iyad97ko",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8476c2/WHEx7KV29UAq2XHROLZLy_41ea5dad8005482d9bd6678d8bc5eea7.png",
+      "createdAt": "2025-11-30T20:05:46.429Z",
+      "metadata": {
+        "parentMedia": "media-1764533141864-f3xv3qwic",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764533128547-05ghv6xlu"
+      ],
+      "parentMedia": "media-1764533141864-f3xv3qwic"
     }
   }
 }
