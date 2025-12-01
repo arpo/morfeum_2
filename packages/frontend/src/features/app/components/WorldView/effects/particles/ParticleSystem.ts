@@ -1,17 +1,53 @@
 /**
  * Particle System
  * Renders floating particles (dust, snow, etc.) using Three.js Points
+ * with custom shader for soft circular particles
  */
 
 import * as THREE from 'three';
 import type { ParticleConfig, Particle } from './types';
 import { getPreset, DUST_PRESET } from './presets';
 
+// Vertex shader - passes size and opacity to fragment shader
+const vertexShader = `
+  attribute float size;
+  attribute float opacity;
+  varying float vOpacity;
+  
+  void main() {
+    vOpacity = opacity;
+    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+    gl_PointSize = size * (300.0 / -mvPosition.z);
+    gl_Position = projectionMatrix * mvPosition;
+  }
+`;
+
+// Fragment shader - creates soft circular particles with fading edges
+const fragmentShader = `
+  uniform vec3 color;
+  varying float vOpacity;
+  
+  void main() {
+    // Calculate distance from center (gl_PointCoord is 0-1 for the point)
+    vec2 center = gl_PointCoord - 0.5;
+    float dist = length(center);
+    
+    // Discard pixels outside the circle
+    if (dist > 0.5) discard;
+    
+    // Soft edge falloff - smoothstep creates gradient from center to edge
+    float alpha = 1.0 - smoothstep(0.0, 0.5, dist);
+    
+    // Apply particle opacity
+    gl_FragColor = vec4(color, alpha * vOpacity);
+  }
+`;
+
 export class ParticleSystem {
   private particles: Particle[] = [];
   private points: THREE.Points | null = null;
   private geometry: THREE.BufferGeometry | null = null;
-  private material: THREE.PointsMaterial | null = null;
+  private material: THREE.ShaderMaterial | null = null;
   private config: ParticleConfig;
   private time: number = 0;
   private bounds: { width: number; height: number; depth: number };
@@ -74,15 +110,16 @@ export class ParticleSystem {
     this.geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
     this.geometry.setAttribute('opacity', new THREE.BufferAttribute(opacities, 1));
 
-    // Create material with custom shader for varying sizes and opacity
-    this.material = new THREE.PointsMaterial({
-      color: new THREE.Color(this.config.color),
-      size: 0.05,
+    // Create custom shader material for soft circular particles
+    this.material = new THREE.ShaderMaterial({
+      uniforms: {
+        color: { value: new THREE.Color(this.config.color) },
+      },
+      vertexShader,
+      fragmentShader,
       transparent: true,
-      opacity: 0.5,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
-      sizeAttenuation: true,
     });
 
     this.points = new THREE.Points(this.geometry, this.material);
@@ -100,6 +137,7 @@ export class ParticleSystem {
 
     this.time += deltaTime;
     const positions = this.geometry.attributes.position.array as Float32Array;
+    const opacities = this.geometry.attributes.opacity.array as Float32Array;
 
     for (let i = 0; i < this.particles.length; i++) {
       const p = this.particles[i];
@@ -127,13 +165,15 @@ export class ParticleSystem {
       // Wrap around bounds
       this.wrapParticle(p);
 
-      // Update buffer
+      // Update buffers
       positions[i * 3] = p.x;
       positions[i * 3 + 1] = p.y;
       positions[i * 3 + 2] = p.z;
+      opacities[i] = p.opacity;
     }
 
     this.geometry.attributes.position.needsUpdate = true;
+    this.geometry.attributes.opacity.needsUpdate = true;
   }
 
   /**
@@ -260,7 +300,7 @@ export class ParticleSystem {
     this.geometry.setAttribute('opacity', new THREE.BufferAttribute(opacities, 1));
 
     if (this.material) {
-      this.material.color.set(this.config.color);
+      this.material.uniforms.color.value.set(this.config.color);
     }
   }
 

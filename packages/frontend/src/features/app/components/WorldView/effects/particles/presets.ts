@@ -13,7 +13,7 @@ export const DUST_PRESET: ParticlePreset = {
   config: {
     enabled: true,
     count: 40,
-    size: { min: 1, max: 3 },
+    size: { min: 0.3, max: 0.8 },  // Small dust motes
     speed: { min: 0.05, max: 0.15 },
     opacity: { min: 0.15, max: 0.4 },
     color: '#ffffff',
@@ -32,7 +32,7 @@ export const SNOW_PRESET: ParticlePreset = {
   config: {
     enabled: true,
     count: 80,
-    size: { min: 2, max: 5 },
+    size: { min: 0.5, max: 1.5 },  // Small to medium snowflakes
     speed: { min: 0.3, max: 0.8 },
     opacity: { min: 0.5, max: 0.9 },
     color: '#ffffff',
@@ -51,7 +51,7 @@ export const RAIN_PRESET: ParticlePreset = {
   config: {
     enabled: true,
     count: 150,
-    size: { min: 1, max: 2 },
+    size: { min: 0.2, max: 0.5 },  // Thin rain streaks
     speed: { min: 2, max: 4 },
     opacity: { min: 0.3, max: 0.6 },
     color: '#a0c0ff',
@@ -70,7 +70,7 @@ export const FIREFLIES_PRESET: ParticlePreset = {
   config: {
     enabled: true,
     count: 15,
-    size: { min: 3, max: 6 },
+    size: { min: 0.8, max: 1.5 },  // Small glowing dots
     speed: { min: 0.02, max: 0.08 },
     opacity: { min: 0.3, max: 1 },
     color: '#ffff80',
