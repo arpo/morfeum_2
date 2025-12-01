@@ -10,6 +10,7 @@ import { mzooRouter } from './mzoo';
 import { spawnRouter } from './spawn';
 import storageRouter from './storage';
 import mediaRouter from './media';
+import trainingDataRouter from './trainingData';
 
 /**
  * Configure all application routes
@@ -30,6 +31,9 @@ export const configureRoutes = (app: any): void => {
   // Media routes (for media assets)
   app.use(`${API_ROUTES.ROOT}/media`, mediaRouter);
   
+  // Training data routes (for AI model training)
+  app.use(`${API_ROUTES.ROOT}/training-data`, trainingDataRouter);
+  
   // Health check routes
   app.use(API_ROUTES.HEALTH, healthRouter);
 };
@@ -37,7 +41,7 @@ export const configureRoutes = (app: any): void => {
 /**
  * Export individual routers for testing or modular use
  */
-export { apiRouter, healthRouter, mzooRouter, spawnRouter, storageRouter, mediaRouter };
+export { apiRouter, healthRouter, mzooRouter, spawnRouter, storageRouter, mediaRouter, trainingDataRouter };
 
 /**
  * Get all available routes information

@@ -2,6 +2,25 @@
 
 ## Recent Changes (2025-12-01)
 
+### Training Data Export Feature (Dec 1, 2025)
+- **Feature**: Added button to export image/text pairs for AI model (LoRA) training
+- **Implementation**:
+  - New button with camera icon in TopButtonRow
+  - Downloads current WorldView image and pairs with text description
+  - Text prefixed with "A portrait of " for characters, "A scene of " for locations
+  - Files saved to `training-data/` folder in project root
+  - Filename format: `{sanitized-name}-{timestamp}.jpg` and `.txt`
+- **Files Added/Modified**:
+  - `packages/backend/src/routes/trainingData.ts` - Backend endpoint for saving files
+  - `packages/frontend/src/services/trainingDataService.ts` - Frontend service
+  - `packages/frontend/src/icons/index.ts` - Added IconCamera
+  - `packages/frontend/src/features/app/components/TopButtonRow/TopButtonRow.tsx` - Added button
+  - `packages/frontend/src/features/app/components/App/useAppLogic.ts` - Added handler
+  - `.gitignore` - Added training-data/ folder
+- **Text Sources**:
+  - Characters: `details.looks` field
+  - Locations: `description` field
+
 ### WorldView Effects System Enhancement (Dec 1, 2025)
 - **Feature**: Added comprehensive effects system for WorldView with scene presets
 - **Implementation**:

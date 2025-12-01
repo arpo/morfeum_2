@@ -43,6 +43,7 @@ export function App() {
     handleOpenChat,
     handleGenerateDepthMap,
     handleDisplayModeChange,
+    handleSaveTrainingData,
     toggleEntityExplorerPanel,
     closeEntityPanel
   } = useAppLogic();
@@ -70,6 +71,7 @@ export function App() {
             onOpenChat={handleOpenChat}
             onGenerateDepthMap={handleGenerateDepthMap}
             onDisplayModeChange={handleDisplayModeChange}
+            onSaveTrainingData={handleSaveTrainingData}
             isCharacter={isCharacter}
             infoDisabled={!deepProfile}
             chatDisabled={!deepProfile}
