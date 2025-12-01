@@ -58,7 +58,7 @@ export const DREAM_PRESET: PostProcessorPreset = {
   config: {
     enabled: false,
     type: 'dream',
-    intensity: 0.3,
+    intensity: 0.35,
     speed: 0.5,
     frequency: 2.5,
     direction: { x: 1.0, y: 1.0 },

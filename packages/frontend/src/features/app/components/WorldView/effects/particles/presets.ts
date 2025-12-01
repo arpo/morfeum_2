@@ -13,7 +13,7 @@ export const DUST_PRESET: ParticlePreset = {
   config: {
     enabled: true,
     count: 500,
-    size: { min: 0.05, max: 0.2 },  // Small dust motes
+    size: { min: 0.025, max: 0.1  },  // Small dust motes
     speed: { min: 0.05, max: 0.15 },
     opacity: { min: 0.15, max: 0.4 },
     color: '#ffffff',
