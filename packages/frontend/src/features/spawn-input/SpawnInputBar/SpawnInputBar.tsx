@@ -3,9 +3,10 @@
  * Simplified input for triggering entity spawn processes
  */
 
-import { useState, KeyboardEvent } from 'react';
+import { useState, KeyboardEvent, useCallback } from 'react';
 import { useSpawnInputLogic } from './useSpawnInputLogic';
 import { useNavigationLogic } from './useNavigationLogic';
+import { useImageDropLogic } from './useImageDropLogic';
 import { useStore } from '@/store';
 import { IconDice, IconChevronDown, IconChevronUp, IconBookmark } from '@/icons';
 import { ProgressBar } from '@/components/ui/ProgressBar';
@@ -21,6 +22,15 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const { state, handlers } = useSpawnInputLogic();
   const navigation = useNavigationLogic();
   const [activeTab, setActiveTab] = useState('character');
+  
+  // Handle image drop - append description to textarea
+  const handleDescriptionReceived = useCallback((description: string) => {
+    const currentText = state.textPrompt;
+    const newText = currentText ? `${currentText}\n\n${description}` : description;
+    handlers.setTextPrompt(newText);
+  }, [state.textPrompt, handlers]);
+  
+  const imageDrop = useImageDropLogic({ onDescriptionReceived: handleDescriptionReceived });
   
   // Get spawn input state from store
   const isMinimized = useStore(state => state.spawnInputMinimized);
@@ -105,24 +115,49 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 label: 'Character',
                 content: (
                   <div className={styles.tabContent}>
-                    <textarea
-                      className={styles.textarea}
-                      value={state.textPrompt}
-                      onChange={(e) => handlers.setTextPrompt(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
-                          e.preventDefault();
-                          handlers.handleGenerate();
-                        }
-                      }}
-                      placeholder="Describe a character to spawn..."
-                      rows={3}
-                    />
+                    <div 
+                      className={`${styles.dropZone} ${imageDrop.state.isDragging ? styles.dragging : ''}`}
+                      onDragEnter={imageDrop.handlers.handleDragEnter}
+                      onDragLeave={imageDrop.handlers.handleDragLeave}
+                      onDragOver={imageDrop.handlers.handleDragOver}
+                      onDrop={imageDrop.handlers.handleDrop}
+                    >
+                      <textarea
+                        className={styles.textarea}
+                        value={state.textPrompt}
+                        onChange={(e) => handlers.setTextPrompt(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
+                            e.preventDefault();
+                            handlers.handleGenerate();
+                          }
+                        }}
+                        onPaste={imageDrop.handlers.handlePaste}
+                        placeholder="Describe a character to spawn... (drop or paste an image)"
+                        rows={3}
+                      />
+                      {imageDrop.state.isDragging && (
+                        <div className={styles.dropOverlay}>
+                          <span className={styles.dropOverlayText}>Drop image to analyze</span>
+                        </div>
+                      )}
+                      {imageDrop.state.isAnalyzing && (
+                        <div className={styles.analyzingOverlay}>
+                          <span className={styles.analyzingText}>
+                            <span className={styles.spinner} />
+                            Analyzing image...
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    {imageDrop.state.error && (
+                      <div className={styles.errorMessage}>{imageDrop.state.error}</div>
+                    )}
                     <div className={styles.buttonRow}>
                       <button
                         className={styles.generateButton}
                         onClick={handlers.handleGenerate}
-                        disabled={!state.textPrompt.trim()}
+                        disabled={!state.textPrompt.trim() || imageDrop.state.isAnalyzing}
                       >
                         Generate
                       </button>
@@ -152,24 +187,49 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 label: 'Location',
                 content: (
                   <div className={styles.tabContent}>
-                    <textarea
-                      className={styles.textarea}
-                      value={state.textPrompt}
-                      onChange={(e) => handlers.setTextPrompt(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
-                          e.preventDefault();
-                          handlers.handleGenerate();
-                        }
-                      }}
-                      placeholder="Describe a location to spawn..."
-                      rows={3}
-                    />
+                    <div 
+                      className={`${styles.dropZone} ${imageDrop.state.isDragging ? styles.dragging : ''}`}
+                      onDragEnter={imageDrop.handlers.handleDragEnter}
+                      onDragLeave={imageDrop.handlers.handleDragLeave}
+                      onDragOver={imageDrop.handlers.handleDragOver}
+                      onDrop={imageDrop.handlers.handleDrop}
+                    >
+                      <textarea
+                        className={styles.textarea}
+                        value={state.textPrompt}
+                        onChange={(e) => handlers.setTextPrompt(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
+                            e.preventDefault();
+                            handlers.handleGenerate();
+                          }
+                        }}
+                        onPaste={imageDrop.handlers.handlePaste}
+                        placeholder="Describe a location to spawn... (drop or paste an image)"
+                        rows={3}
+                      />
+                      {imageDrop.state.isDragging && (
+                        <div className={styles.dropOverlay}>
+                          <span className={styles.dropOverlayText}>Drop image to analyze</span>
+                        </div>
+                      )}
+                      {imageDrop.state.isAnalyzing && (
+                        <div className={styles.analyzingOverlay}>
+                          <span className={styles.analyzingText}>
+                            <span className={styles.spinner} />
+                            Analyzing image...
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    {imageDrop.state.error && (
+                      <div className={styles.errorMessage}>{imageDrop.state.error}</div>
+                    )}
                     <div className={styles.buttonRow}>
                       <button
                         className={styles.generateButton}
                         onClick={handlers.handleGenerate}
-                        disabled={!state.textPrompt.trim()}
+                        disabled={!state.textPrompt.trim() || imageDrop.state.isAnalyzing}
                       >
                         Generate
                       </button>

@@ -3260,6 +3260,1796 @@
       "searchDesc": "Urban alleyway with a robot. Has: robot (center, midground), door (left wall, midground), door (right wall, midground)",
       "slug": "criss-foss-inspired-realm",
       "primaryMedia": "media-1764605664795-j3b9ouxeq"
+    },
+    "loc-1764620461600-yowpdgtsk": {
+      "id": "loc-1764620461600-yowpdgtsk",
+      "type": "host",
+      "name": "Exoplanetary Frontier",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The universe is a canvas of countless alien planets and celestial phenomena. Expect a wide array of landscapes, from desolate rocky terrains to lush, exotic ecosystems.",
+        "colorsAndLighting": "Dominated by the interplay of alien suns and atmospheric conditions, creating palettes ranging from vibrant, otherworldly hues to muted, stark tones. Lighting can be harsh, diffused, or otherworldly.",
+        "atmosphere": "Atmospheres vary wildly, from breathable and Earth-like to toxic or non-existent. Weather patterns are often extreme and unpredictable, influenced by alien celestial mechanics.",
+        "materials": "A broad spectrum of materials is encountered, including exotic ores, unknown crystalline structures, organic compounds, and advanced alien alloys.",
+        "mood": "A pervasive sense of awe, wonder, and the unknown, tinged with the thrill of discovery and the potential for danger.",
+        "sounds": "Whispers of cosmic radiation, distant celestial phenomena, alien winds, faint echoes.",
+        "spatialLayout": "Vast, open spaces punctuated by dramatic geological formations, monumental alien structures, or the wreckage of lost civilizations. Scale is often immense.",
+        "primary_surfaces": [
+          "rock",
+          "sand",
+          "soil",
+          "metal"
+        ],
+        "secondary_surfaces": [
+          "crystal",
+          "ice",
+          "organic matter"
+        ],
+        "accent_features": [
+          "glowing geological formations",
+          "unusual flora",
+          "ancient alien artifacts"
+        ],
+        "dominant": "vibrant oranges and reds",
+        "secondary": "golden yellows and earthy browns",
+        "accent": "electric blue",
+        "ambient": "warm and dusty",
+        "genre": "sci-fi",
+        "architectural_tone": "functional industrial mixed with sleek, advanced alien design",
+        "cultural_tone": "exploration and survival",
+        "materials_base": "resilient metals, weathered composites, and hardy natural elements",
+        "mood_baseline": "adventurous isolation",
+        "palette_bias": "warm desert tones with sharp, contrasting accents",
+        "soundscape_base": "sparse and environmental",
+        "flora_base": "hardy desert succulents, metallic-sheened crystalline growths",
+        "fauna_base": "scuttling insectoids, large desert predators",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Exoplanetary Frontier",
+          "looks": "A vast and diverse universe teeming with alien worlds.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A vast and diverse universe teeming with alien worlds.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Massive interstellar vessels",
+        "Diverse alien biomes",
+        "Uncharted celestial bodies"
+      ],
+      "uniqueIdentifiers": [
+        "Interstellar travel capabilities",
+        "Vast array of planetary types",
+        "Potential for discovery"
+      ],
+      "searchDesc": "Vast universe with diverse alien worlds, ripe for exploration and discovery.",
+      "slug": "exoplanetary-frontier"
+    },
+    "e20d3382-f331-40a2-a32d-8f1e65042a4d": {
+      "id": "e20d3382-f331-40a2-a32d-8f1e65042a4d",
+      "type": "region",
+      "name": "Exoplanetary Frontier",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A desolate, Mars-like desert landscape dominated by vast, undulating sand dunes. A colossal, weathered spacecraft is a prominent feature, resting at an angle on the terrain.",
+        "colorsAndLighting": "Bathed in the warm, saturated light of an alien sunset or sunrise, casting long shadows across the dunes. Dominant colors are vibrant oranges, reds, and golden yellows.",
+        "atmosphere": "A thin, dusty atmosphere with low visibility, particularly near the ground where dust or exhaust plumes may be present. The air is dry and still.",
+        "materials": "The primary material is fine red sand. The spacecraft is constructed from weathered metal plating with visible panel lines and signs of wear.",
+        "mood": "A powerful sense of isolation, vastness, and the beginning of an epic journey.",
+        "sounds": "Wind whistling, distant engine hum, crunching sand underfoot.",
+        "spatialLayout": "Expansive, open desert with rolling dunes leading to an indistinct horizon. The spacecraft occupies a significant portion of the landscape.",
+        "primary_surfaces": [
+          "red sand dunes"
+        ],
+        "secondary_surfaces": [
+          "weathered metal plating"
+        ],
+        "accent_features": [
+          "electric blue glowing vents",
+          "dark scattered rocks"
+        ],
+        "dominant": "vibrant oranges",
+        "secondary": "reds and golden yellows",
+        "accent": "cream and electric blue",
+        "ambient": "warm and dusty glow",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Exoplanetary Frontier",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Vast desert plains",
+        "Massive grounded spacecraft"
+      ],
+      "uniqueIdentifiers": [
+        "Alien desert biome",
+        "Grounded colossal spacecraft"
+      ],
+      "searchDesc": "A desolate alien desert region featuring a massive, grounded spacecraft.",
+      "slug": "exoplanetary-frontier-region"
+    },
+    "858bd995-e96b-44b4-b895-ed6da2a10317": {
+      "id": "858bd995-e96b-44b4-b895-ed6da2a10317",
+      "type": "location",
+      "name": "Exoplanetary Frontier",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Exoplanetary Frontier",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "2901907a-6ce8-464d-aa05-9ba278410004": {
+      "id": "2901907a-6ce8-464d-aa05-9ba278410004",
+      "type": "niche",
+      "name": "The Upper Deck Vista",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Upper Deck Vista",
+          "looks": "The upper deck of the grounded spacecraft, offering a vantage point over the desolate landscape.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The upper deck of the grounded spacecraft, offering a vantage point over the desolate landscape.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764620480185-zdzbvqesu"
+    },
+    "loc-1764620556989-vlbmgjpzc": {
+      "id": "loc-1764620556989-vlbmgjpzc",
+      "type": "host",
+      "name": "Aetheria",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, ancient celestial remnants dominate the sky above diverse civilizations. These structures exhibit signs of age and neglect, contrasting with vibrant, active settlements below. The overall aesthetic blends the colossal and the intricate, the ancient and the burgeoning.",
+        "colorsAndLighting": "A palette of deep, earthy greens and blues is illuminated by bright, clear daylight, casting sharp contrasts. Secondary colors emerge from urban structures and natural elements, creating a dynamic visual field under a brilliant sky.",
+        "atmosphere": "The air is clear and crisp, suggesting a generally stable and bright climate. There's a sense of immense scale and historical depth, with a palpable tension between the ancient and the modern. Weather patterns are generally favorable, allowing for clear skies and strong daylight.",
+        "materials": "Dominant materials include weathered metallic plating, textured stone, and vibrant natural elements. Evidence of long-term use and decay is visible on surfaces, indicating a rich, layered history of construction and environmental interaction.",
+        "mood": "Awe-inspiring and melancholic, with a strong undercurrent of resilience and progress. The colossal ancient structures evoke a sense of mystery and forgotten power, while the thriving cities speak of enduring life.",
+        "sounds": "Distant hum of technology, lapping water, seabird cries, faint city murmur, wind.",
+        "spatialLayout": "A layered environment with colossal structures in the sky, vast bodies of water, and sprawling urban centers. Natural landscapes often interface directly with advanced or ancient constructions, creating varied topographical interactions.",
+        "primary_surfaces": [
+          "Metallic plating",
+          "Stone",
+          "Water"
+        ],
+        "secondary_surfaces": [
+          "Concrete",
+          "Sand",
+          "Glass",
+          "Ceramics"
+        ],
+        "accent_features": [
+          "Intricate greebles",
+          "Domes",
+          "Textured plating",
+          "Vegetation overgrowth"
+        ],
+        "dominant": "Green",
+        "secondary": "Blue",
+        "accent": "Beige",
+        "ambient": "Bright daylight",
+        "genre": "retro-futuristic",
+        "architectural_tone": "A blend of colossal, ancient alien engineering and diverse human architectural styles. Features include massive, weathered metallic structures with visible greebles and damage, alongside traditional domed buildings and towering, geometrically complex modern skyscrapers. Think a fusion of brutalist monumentality with intricate, aged sci-fi elements and classic urban planning.",
+        "cultural_tone": "A civilization that has learned to coexist with colossal, ancient celestial remnants. There's a strong sense of history, adaptation, and progress, with a duality of reverence for the past and ambition for the future. Cultures vary from the builders of the modern cities to those who might inhabit or interact with the ancient structures.",
+        "materials_base": "A palette of weathered metals, rough-hewn stones, and durable, aged composites. Natural materials like wood and sand are present in specific environments. Emphasis on textures that convey age and resilience.",
+        "mood_baseline": "Awe and discovery, tinged with melancholic grandeur and the spirit of human endeavor against ancient backdrops.",
+        "palette_bias": "Earthy greens and deep blues dominate, with accents of sandy beiges and muted greys. High contrast lighting is common.",
+        "soundscape_base": "A dynamic mix of natural ambient sounds and subtle technological hums, with echoes of both ancient silence and modern activity.",
+        "flora_base": "Resilient, often hardy vegetation that can grow in varied conditions, including clinging to structures or thriving in coastal environments. Think mosses, hardy coastal plants, and stylized, geometric plant forms.",
+        "fauna_base": "Adaptable and varied, including marine life in coastal areas and potentially aerial or terrestrial creatures that have evolved alongside ancient structures. Wildlife is generally present but not overwhelming.",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Aetheria",
+          "looks": "A realm where ancient celestial remnants coexist with burgeoning civilizations.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A realm where ancient celestial remnants coexist with burgeoning civilizations.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Colossal crescent structure",
+        "Coastal city",
+        "Vibrant bay"
+      ],
+      "uniqueIdentifiers": [
+        "Moss-green orbital remnant",
+        "Retro-futuristic aesthetic",
+        "Coastal metropolis"
+      ],
+      "searchDesc": "Realm of ancient celestial remnants and vibrant civilizations, featuring colossal structures and bustling cities.",
+      "slug": "aetheria"
+    },
+    "d408a987-601c-4258-a662-8edef59cb351": {
+      "id": "d408a987-601c-4258-a662-8edef59cb351",
+      "type": "region",
+      "name": "Aetheria",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The scene is dominated by the sky, with a colossal, crescent-shaped, moss-green structure filling a significant portion. Below, a vibrant blue-green bay stretches towards a sprawling coastal city. The sky is a brilliant, clear blue.",
+        "colorsAndLighting": "Bright, clear daylight bathes the scene. Dominant colors are moss-green from the structure and a vibrant blue-green from the bay and sky. Secondary colors come from the diverse urban landscape.",
+        "atmosphere": "The atmosphere is clear and bright, with no discernible haze. The daylight suggests a warm and possibly dry climate. A sense of immense scale prevails.",
+        "materials": "Visible materials include textured metallic plating on the structure, water, and the varied materials of the urban environment below.",
+        "mood": "Awe-inspiring and expansive, with a touch of the melancholic due to the ancient structure's state.",
+        "sounds": "Distant city hum, lapping waves, seagull cries.",
+        "spatialLayout": "A vertical composition with a massive celestial object in the upper frame, a wide bay in the mid-ground, and a sprawling city along the horizon. The foreground is a beach.",
+        "primary_surfaces": [
+          "Metal",
+          "Water"
+        ],
+        "secondary_surfaces": [
+          "Stone",
+          "Concrete",
+          "Sand"
+        ],
+        "accent_features": [
+          "Greebles",
+          "Domes",
+          "Intricate plating"
+        ],
+        "dominant": "Green",
+        "secondary": "Blue",
+        "accent": "Beige",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "The colossal structure exhibits a highly complex, aged, and damaged retro-futuristic alien architectural style, characterized by textured metallic plating, intricate greebles, and prominent domes, suggesting a history of advanced construction and significant decay. The human city below blends traditional domed structures with towering, modern skyscrapers.",
+        "cultural_tone": null,
+        "materials_base": "Weathered and aged metallic alloys for the celestial remnant, with a mix of traditional and modern building materials for the city, including stone, concrete, and glass.",
+        "mood_baseline": "Majestic and ancient, contrasting with vibrant, ongoing civilization.",
+        "palette_bias": "Strong emphasis on deep moss-greens and vibrant blues, with supporting earth tones and urban grays.",
+        "soundscape_base": "Echoes of grand, ancient systems and the lively sounds of a coastal metropolis.",
+        "flora_base": "Mosses and hardy coastal plants clinging to the celestial structure, with diverse urban landscaping in the city.",
+        "fauna_base": "Marine life in the bay, seabirds, and potentially small terrestrial creatures near the shore.",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Aetheria",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [
+        "Colossal crescent structure",
+        "Coastal city"
+      ],
+      "uniqueIdentifiers": [
+        "Azure bay",
+        "Sprawling horizon"
+      ],
+      "searchDesc": "The primary region of Aetheria, characterized by a colossal celestial structure overlooking a vibrant coastal city.",
+      "slug": "aetheria-region"
+    },
+    "385a782c-fb31-40d6-9230-38ad8f2ff80c": {
+      "id": "385a782c-fb31-40d6-9230-38ad8f2ff80c",
+      "type": "location",
+      "name": "Aetheria",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Aetheria",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "b79cb8cc-a358-4221-8b37-e58cffbd4a28": {
+      "id": "b79cb8cc-a358-4221-8b37-e58cffbd4a28",
+      "type": "niche",
+      "name": "The Coastal Metropolis",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Coastal Metropolis",
+          "looks": "The bustling city beneath the colossal structure, a blend of traditional domed buildings and modern skyscrapers.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The bustling city beneath the colossal structure, a blend of traditional domed buildings and modern skyscrapers.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764620585572-icqtgvxgf"
+    },
+    "47a3f763-4af3-43e6-9cce-05ac72e536a2": {
+      "id": "47a3f763-4af3-43e6-9cce-05ac72e536a2",
+      "type": "niche",
+      "name": "The Sun-Kissed Shoreline",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sun-Kissed Shoreline",
+          "looks": "The immediate foreground, featuring a sun-drenched sandy beach with silhouetted figures observing the scene.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The immediate foreground, featuring a sun-drenched sandy beach with silhouetted figures observing the scene.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "niche-1764620666138-v9wo66chn": {
+      "id": "niche-1764620666138-v9wo66chn",
+      "type": "niche",
+      "name": "interior of building",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This high-tech atrium features a gleaming geodesic steel framework enclosing transparent glazing. A dark, polished concrete floor anchors the space, with a brushed aluminum railing defining a foreground walkway. In the midground, a translucent partition with integrated holographic displays adds a dynamic element, while a spiraling dark metal staircase ascends towards the domed ceiling.",
+        "colorsAndLighting": "The scene is dominated by cool, metallic tones from the steel and aluminum, contrasted by the deep black of the concrete. Focused beams of light highlight key features, creating a dramatic interplay of illumination and shadow.",
+        "atmosphere": "The air feels crisp and controlled, typical of a modern, enclosed environment. The vastness suggested by the domed ceiling and the expansive city view creates an open yet contained atmosphere. There's a sense of advanced technology and sophisticated design.",
+        "materials": "The primary materials are gleaming steel for the framework, polished concrete for the floor, and transparent glazing. Brushed aluminum is used for the railing, and translucent materials for the partition. The dark metal of the staircase provides a somber, structural accent.",
+        "mood": "This space evokes a sense of awe and technological advancement, with a sophisticated and slightly detached grandeur. It feels both functional and visually impressive.",
+        "sounds": "Humming machinery, faint electronic chimes, distant city hum.",
+        "spatialLayout": "A spacious, multi-level atrium with a prominent geodesic dome and expansive glass walls. The layout directs attention towards both midground technological elements and the distant cityscape.",
+        "primary_surfaces": "Transparent glazing, dark polished concrete, steel framework.",
+        "secondary_surfaces": "Brushed aluminum, translucent partition material.",
+        "accent_features": "Integrated holographic displays, spiraling staircase, ventilation conduits snaking along the framework.",
+        "dominant": "Silver/Gray (steel framework, glazing, aluminum)",
+        "secondary": "Black/Dark Gray (concrete floor, metal staircase)",
+        "accent": "Bright White/Blue (holographic displays, distant city lights)",
+        "ambient": "Neutral",
+        "genre": null,
+        "architectural_tone": "industrial metallic, futuristic geodesic",
+        "cultural_tone": "A center for innovation, commerce, or high-tech research, showcasing advanced urban development.",
+        "materials_base": "metal, glass, polished concrete",
+        "mood_baseline": "awe-inspiring, sophisticated",
+        "palette_bias": "cool metallic, high contrast",
+        "soundscape_base": "modern technological hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764620666138-4yibhqgez",
+      "description": "A high-tech atrium with a geodesic steel framework and a concrete floor.",
+      "navigableElements": [
+        {
+          "type": "walkway",
+          "position": "foreground center",
+          "description": "A low, brushed aluminum railing delineates a walkway."
+        },
+        {
+          "type": "partition",
+          "position": "midground left",
+          "description": "A sleek, translucent partition with integrated holographic displays."
+        },
+        {
+          "type": "stairs",
+          "position": "midground",
+          "description": "A spiraling staircase of dark metal ascending towards the domed ceiling."
+        }
+      ],
+      "dominantElements": [
+        "geodesic steel framework",
+        "transparent architectural glazing",
+        "dark polished concrete floor",
+        "brushed aluminum railing",
+        "translucent partition with holographic displays",
+        "spiraling dark metal staircase",
+        "curved glass wall",
+        "coastal metropolis view"
+      ],
+      "uniqueIdentifiers": [
+        "geodesic steel framework",
+        "integrated holographic displays",
+        "view of coastal metropolis"
+      ],
+      "searchDesc": "High-tech atrium with geodesic steel, concrete, holographic displays, and city view.",
+      "slug": "interior-of-building"
+    },
+    "loc-1764620702963-weskniq4f": {
+      "id": "loc-1764620702963-weskniq4f",
+      "type": "host",
+      "name": "Neo-Kyoto",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A hyper-detailed digital painting depicting a vast, futuristic urban sprawl dominated by immense, weathered cylindrical towers that pierce a clear blue sky. The lower city is a chaotic maze of multi-story structures adorned with various extensions and banners, a stark contrast to the industrial might of the towers above.",
+        "colorsAndLighting": "The scene is illuminated by bright, clear daylight casting defined shadows. Dominant colors are faded white and rust-red from the towers, with muted grays and browns of the city buildings, contrasted by vibrant reds and blues from market awnings and banners. The ambient light is neutral with a hint of warmth from ground-level illumination.",
+        "atmosphere": "A sense of perpetual activity and lived-in grit pervades the air, tinged with a slight haze that softens distant views. The atmosphere is one of functional decay, where advanced technology coexists with the wear of time and neglect, under a vast, cloud-dotted sky.",
+        "materials": "The dominant materials appear to be weathered metal plating, aged concrete, and worn steel scaffolding on the colossal towers. Lower buildings are constructed from a mix of concrete, aged brick, and various salvaged materials, with fabric awnings and wooden stalls.",
+        "mood": "The mood is a blend of awe at the monumental scale and advanced tech, juxtaposed with a pervasive sense of grit, struggle, and the overwhelming presence of a past era's grand ambition.",
+        "sounds": "Distant hum of engines, market chatter, clanging metal, vehicle swooshes, faint announcements",
+        "spatialLayout": "A vertical city with immense towers reaching for the sky, and a dense, layered urban fabric at their base. The street level is a packed, chaotic environment, while the sky is a thoroughfare for aerial vehicles.",
+        "primary_surfaces": "Aged concrete, weathered metal plating, steel girders",
+        "secondary_surfaces": "Fabric (awnings, banners), wood (stalls, extensions), asphalt (street)",
+        "accent_features": "Large tower numbering (e.g., '597', 'SU-001'), external scaffolding and pipes, makeshift building additions, vibrant market banners",
+        "dominant": "Gray, Rust-Red",
+        "secondary": "White, Blue, Brown",
+        "accent": "Red, Yellow",
+        "ambient": "Neutral",
+        "genre": "dystopian sci-fi",
+        "architectural_tone": "colossal industrial brutalism mixed with makeshift utilitarianism; monumental, weathered concrete and steel towers with heavy riveted plating and exposed structural elements, juxtaposed with lower urban structures featuring corrugated metal additions, exposed piping, and functional awnings.",
+        "cultural_tone": "hardscrabble survival and industriousness; a society that repurposes and rebuilds, valuing functionality over aesthetics, driven by the need to maintain a complex, partially decaying infrastructure.",
+        "materials_base": "weathered concrete, aged steel, riveted metal panels, salvaged industrial components, functional fabrics",
+        "mood_baseline": "perpetual activity and gritty resilience",
+        "palette_bias": "muted earth tones with strong industrial grays and deep rust, punctuated by functional, bright accent colors",
+        "soundscape_base": "constant low-level industrial hum, mechanical noises, and vocalizations of dense populations",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Neo-Kyoto",
+          "looks": "A sprawling megalopolis where advanced technology clashes with decay, shaped by decades of industrial expansion and subsequent neglect. The air hums with perpetual activity, from soaring vehicles to the murmurs of street markets, all overshadowed by the colossal remnants of a bygone era of ambition.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A sprawling megalopolis where advanced technology clashes with decay, shaped by decades of industrial expansion and subsequent neglect. The air hums with perpetual activity, from soaring vehicles to the murmurs of street markets, all overshadowed by the colossal remnants of a bygone era of ambition.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Colossal Cylindrical Towers",
+        "Dense Multi-story Architecture",
+        "Flying Vehicles"
+      ],
+      "uniqueIdentifiers": [
+        "Industrial Tower Markings",
+        "Makeshift Building Extensions",
+        "Disc-shaped Drones"
+      ],
+      "searchDesc": "Futuristic, dystopian city with colossal towers, decaying architecture, and bustling street life.",
+      "slug": "neo-kyoto"
+    },
+    "57618ff4-a566-48d5-8448-a3fc6bd3c4c3": {
+      "id": "57618ff4-a566-48d5-8448-a3fc6bd3c4c3",
+      "type": "region",
+      "name": "Neo-Kyoto",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "This region is defined by the overwhelming presence of massive, cylindrical industrial towers that dominate the sky. Below, a dense and complex urban fabric of multi-story buildings stretches out, interconnected by various walkways and platforms.",
+        "colorsAndLighting": "The lighting is a bright, clear daylight that accentuates the stark, banded colors of the towers (faded white and rust-red) and the muted tones of the surrounding urban sprawl. Ambient light is neutral.",
+        "atmosphere": "The atmosphere is one of perpetual, controlled industrial activity, with a sense of being dwarfed by the sheer scale of the infrastructure. A slight haze may obscure distant views, adding to the depth perception.",
+        "materials": "Predominantly weathered concrete, massive steel plating with visible rivets, and extensive pipework characterize the towers and large infrastructure elements. The lower buildings are a mix of aged concrete, metal, and salvaged components.",
+        "mood": "Awe-inspiring scale combined with a sense of functional, somewhat oppressive, utility.",
+        "sounds": "Distant industrial machinery hum, mechanical groans, automated announcements, wind whistling through structures",
+        "spatialLayout": "A highly vertical environment with immense towers acting as central anchors, surrounded by a dense, layered network of interconnected urban structures at their base.",
+        "primary_surfaces": "Aged concrete, heavy steel plating, exposed structural beams",
+        "secondary_surfaces": "Pipes, conduits, metal grating, weathered stone",
+        "accent_features": "Large numerical markings on towers, external maintenance scaffolding, inter-building skybridges",
+        "dominant": "Gray, Rust-Red",
+        "secondary": "White, Blue",
+        "accent": "None",
+        "ambient": "Neutral",
+        "genre": null,
+        "architectural_tone": "colossal industrial superstructures with heavy, riveted steel and weathered concrete, featuring massive cylindrical forms and exposed engineering elements, integrated with a dense, utilitarian urban sprawl of layered concrete and metal buildings.",
+        "cultural_tone": "a focus on massive-scale production and logistical management, with a population living and working within or in close proximity to these industrial giants.",
+        "materials_base": "weathered steel, reinforced concrete, industrial piping, heavy plating",
+        "mood_baseline": "monumental utility and functional scale",
+        "palette_bias": "heavy on industrial grays, deep rusts, and stark whites, with muted urban tones.",
+        "soundscape_base": "constant low-frequency hum of large machinery and occasional loud mechanical operations",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Neo-Kyoto",
+          "looks": "The primary urban expanse of Neo-Kyoto, characterized by its dense, vertical construction and the omnipresent colossal towers that define its skyline and functional zones.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The primary urban expanse of Neo-Kyoto, characterized by its dense, vertical construction and the omnipresent colossal towers that define its skyline and functional zones.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Colossal Cylindrical Towers",
+        "Dense Urban Blocks"
+      ],
+      "uniqueIdentifiers": [
+        "Tower Numbers",
+        "Sky-bridges"
+      ],
+      "searchDesc": "The main territory of Neo-Kyoto, marked by towering structures and a dense urban environment.",
+      "slug": "neo-kyoto-region"
+    },
+    "3781baef-1739-448e-9800-971f32fc5c92": {
+      "id": "3781baef-1739-448e-9800-971f32fc5c92",
+      "type": "location",
+      "name": "Neo-Kyoto",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Neo-Kyoto",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "8abac02d-2fda-4be3-8ecf-e0adbd7c83b3": {
+      "id": "8abac02d-2fda-4be3-8ecf-e0adbd7c83b3",
+      "type": "niche",
+      "name": "The Gritwalk Hub",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Gritwalk Hub",
+          "looks": "The chaotic and bustling street level beneath the colossal towers. This area is a vibrant nexus of activity, featuring a dense conglomeration of decaying multi-story buildings adorned with makeshift extensions, colorful banners, and market awnings.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The chaotic and bustling street level beneath the colossal towers. This area is a vibrant nexus of activity, featuring a dense conglomeration of decaying multi-story buildings adorned with makeshift extensions, colorful banners, and market awnings.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764620725928-0c6f9f876"
+    },
+    "loc-1764620805732-sh3hun8pm": {
+      "id": "loc-1764620805732-sh3hun8pm",
+      "type": "host",
+      "name": "The Enchanted Realm",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, flowing spaces where architectural elements mimic natural forms like trees, roots, and geological formations. Structures are alive with integrated flora and soft, enchanting lights. Think organic curves and interwoven natural materials.",
+        "colorsAndLighting": "Dominated by earthy tones, rich greens, and warm, golden ambient light that creates dappled patterns. Accents of subtle bioluminescence add a magical glow.",
+        "atmosphere": "A sense of perpetual twilight, filled with the gentle hum of nature and soft, diffused light. The air is fresh, carrying the subtle scent of damp earth and blooming flora, with a pervasive feeling of tranquility and wonder.",
+        "materials": "Primarily natural materials like aged wood, textured stone, living plant matter, and crystalline or bioluminescent growths. Finishes are organic and often feel as if they have grown into place.",
+        "mood": "Serene, magical, luxurious, and awe-inspiring. A feeling of being in a sacred, untouched natural sanctuary that has been elevated by artful design.",
+        "sounds": "Soft ambient nature sounds, gentle water flows, rustling leaves, distant ethereal melodies",
+        "spatialLayout": "Fluid, cavernous, or canopy-like spaces that emphasize height and organic flow. Pathways weave through naturalistic structures, offering a sense of discovery.",
+        "primary_surfaces": "Organic wood, textured stone, living plant matter",
+        "secondary_surfaces": "Glass canopy, crystalline formations, moss",
+        "accent_features": "Bioluminescent flora, integrated water features, carved naturalistic motifs",
+        "dominant": "Green",
+        "secondary": "Brown",
+        "accent": "Gold",
+        "ambient": "Warm",
+        "genre": "fantasy",
+        "architectural_tone": "Biomorphic organic architecture with flowing, sinuous lines, structures resembling natural growth patterns like tree roots, branches, or coral reefs. Emphasis on integration with living flora and natural materials, featuring vaulted ceilings mimicking canopies, organically shaped entrances, and textured, earth-toned surfaces.",
+        "cultural_tone": "Reverent towards nature, valuing craftsmanship, peace, and communal well-being. A society that lives in harmony with its environment, finding beauty and sustenance in the natural world.",
+        "materials_base": "A palette heavily favoring natural, textured materials: aged wood, rough-hewn stone, living plants, and elements that mimic organic growth. Textures are key, with a focus on tactile surfaces.",
+        "mood_baseline": "Tranquil, awe-inspiring, enchanting, and serene",
+        "palette_bias": "Earth tones, deep greens, warm golds, and subtle, glowing accent colors inspired by bioluminescence and twilight.",
+        "soundscape_base": "Ambient natural sounds, gentle ethereal music, and soft, flowing water elements.",
+        "flora_base": "Lush, abundant, and varied flora, including large trees, climbing vines, bioluminescent plants, and mosses.",
+        "fauna_base": "Small, non-intrusive wildlife like glowing insects, small birds, or gentle forest creatures.",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Enchanted Realm",
+          "looks": "A world where nature and architecture intertwine in breathtaking harmony, blurring the lines between the organic and the constructed.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A world where nature and architecture intertwine in breathtaking harmony, blurring the lines between the organic and the constructed.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Breathtaking vaulted ceiling",
+        "Intricate wooden lattice",
+        "Lush green foliage canopy"
+      ],
+      "uniqueIdentifiers": [
+        "Bioluminescent flora",
+        "Harmonious integration of nature and structure"
+      ],
+      "searchDesc": "A world where nature and architecture blend seamlessly, featuring biomorphic designs and enchanting light.",
+      "slug": "the-enchanted-realm"
+    },
+    "371b10b2-f2b6-4116-bdf2-1ae805fe9115": {
+      "id": "371b10b2-f2b6-4116-bdf2-1ae805fe9115",
+      "type": "region",
+      "name": "The Enchanted Realm",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Expansive natural environments seamlessly integrated with biomorphic architecture. Pathways and structures emerge organically from the landscape, creating a sense of an ancient, living world.",
+        "colorsAndLighting": "Rich greens and browns of abundant flora are illuminated by warm, ambient light sources that mimic natural phenomena like fireflies or soft moonlight. The interplay of natural and artificial light is key.",
+        "atmosphere": "A temperate, often slightly humid environment, smelling of rich soil and blossoming flowers. The air feels pure and invigorating, contributing to an overall sense of peace and vitality.",
+        "materials": "A primary use of large, textured natural stone blocks for foundational elements and walls, contrasted with intricate, organic wooden structures above. Living foliage is an integral part of the architecture.",
+        "mood": "Harmonious, majestic, and inviting. The atmosphere encourages exploration and a deep appreciation for natural beauty.",
+        "sounds": "Gentle rustling leaves, distant trickling water, soft insect hums",
+        "spatialLayout": "Open, flowing spaces that mimic natural amphitheatres or forest clearings, with architectural elements guiding movement and discovery.",
+        "primary_surfaces": "Textured natural stone, rich wooden beams",
+        "secondary_surfaces": "Glass canopy, living foliage, smoothed earth",
+        "accent_features": "Strategically placed glowing lanterns, upward-facing spotlights on flora",
+        "dominant": "Green",
+        "secondary": "Brown",
+        "accent": "Gold",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": "Biomorphic organic architecture with flowing, sinuous lines, structures resembling natural growth patterns like tree roots, branches, or coral reefs. Emphasis on integration with living flora and natural materials, featuring vaulted ceilings mimicking canopies, organically shaped entrances, and textured, earth-toned surfaces.",
+        "cultural_tone": "Reverent towards nature, valuing craftsmanship, peace, and communal well-being. A society that lives in harmony with its environment, finding beauty and sustenance in the natural world.",
+        "materials_base": "A palette heavily favoring natural, textured materials: aged wood, rough-hewn stone, living plants, and elements that mimic organic growth. Textures are key, with a focus on tactile surfaces.",
+        "mood_baseline": "Tranquil, awe-inspiring, enchanting, and serene",
+        "palette_bias": "Earth tones, deep greens, warm golds, and subtle, glowing accent colors inspired by bioluminescence and twilight.",
+        "soundscape_base": "Ambient natural sounds, gentle ethereal music, and soft, flowing water elements.",
+        "flora_base": "Lush, abundant, and varied flora, including large trees, climbing vines, bioluminescent plants, and mosses.",
+        "fauna_base": "Small, non-intrusive wildlife like glowing insects, small birds, or gentle forest creatures.",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Enchanted Realm",
+          "looks": "The overarching region where the natural world and magnificent architecture coexist, forming realms of breathtaking beauty.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The overarching region where the natural world and magnificent architecture coexist, forming realms of breathtaking beauty.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Integrated natural landscapes",
+        "Biomorphic architectural marvels"
+      ],
+      "uniqueIdentifiers": [
+        "Seamless transition between inside and outside",
+        "Magical ambient lighting"
+      ],
+      "searchDesc": "The primary region of the Enchanted Realm, characterized by magical biomorphic architecture and stunning natural integration.",
+      "slug": "the-enchanted-realm"
+    },
+    "23f609db-0e02-47ef-89ff-030769a1b6ba": {
+      "id": "23f609db-0e02-47ef-89ff-030769a1b6ba",
+      "type": "location",
+      "name": "The Verdant Canopy Hall",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A breathtaking vaulted ceiling formed by an intricate, organic lattice of rich wooden beams that curve and interlace like giant tree branches. This supports a glass canopy overhead, revealing lush green foliage. Robust side walls are constructed from large, textured natural stone blocks. On the left, large trees rise from planters, illuminated by upward lights. On the right, dark dining tables with chairs are arranged near expansive windows. A wide, smooth pathway of light-colored flagstones runs through the center.",
+        "colorsAndLighting": "Dominated by deep greens from the foliage, rich browns from the wooden beams and stone walls, and warm golden yellow from numerous twinkling lights and lanterns. The lighting is ambient and soft, creating a magical glow and gentle shadows.",
+        "atmosphere": "A serene and enchanting atmosphere, with a sense of being within a mystical forest clearing at night. The air is likely fresh and slightly humid from the foliage, creating an intimate and luxurious haven.",
+        "materials": "Primary materials include rich, polished wooden beams forming an intricate lattice, large textured natural stone blocks for walls, and smooth, light-colored flagstones for the pathway. A glass canopy allows natural light and views of foliage. Mature trees are also present.",
+        "mood": "Intimate luxury, serene natural beauty, fantastical enchantment, and tranquil repose.",
+        "sounds": "Soft rustling leaves, gentle ambient music, muted chatter from diners, soft lantern glow sounds",
+        "spatialLayout": "A wide, central pathway flanked by illuminated trees on one side and dining areas on the other, all beneath a soaring, organic vaulted ceiling. The space feels both grand and intimate.",
+        "primary_surfaces": "Rich wooden beams, textured natural stone, flagstones",
+        "secondary_surfaces": "Glass canopy, foliage, dark polished tabletops",
+        "accent_features": "Twinkling canopy lights, upward-facing tree lights, glowing lanterns of varying sizes",
+        "dominant": "Green",
+        "secondary": "Brown",
+        "accent": "Gold",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": "Biomorphic organic architecture with flowing, sinuous lines, structures resembling natural growth patterns like tree roots, branches, or coral reefs. Emphasis on integration with living flora and natural materials, featuring vaulted ceilings mimicking canopies, organically shaped entrances, and textured, earth-toned surfaces.",
+        "cultural_tone": "Reverent towards nature, valuing craftsmanship, peace, and communal well-being. A society that lives in harmony with its environment, finding beauty and sustenance in the natural world.",
+        "materials_base": "A palette heavily favoring natural, textured materials: aged wood, rough-hewn stone, living plants, and elements that mimic organic growth. Textures are key, with a focus on tactile surfaces.",
+        "mood_baseline": "Tranquil, awe-inspiring, enchanting, and serene",
+        "palette_bias": "Earth tones, deep greens, warm golds, and subtle, glowing accent colors inspired by bioluminescence and twilight.",
+        "soundscape_base": "Ambient natural sounds, gentle ethereal music, and soft, flowing water elements.",
+        "flora_base": "Lush, abundant, and varied flora, including large trees, climbing vines, bioluminescent plants, and mosses.",
+        "fauna_base": "Small, non-intrusive wildlife like glowing insects, small birds, or gentle forest creatures.",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Verdant Canopy Hall",
+          "looks": "A magnificent indoor-outdoor space where diners stroll and dine beneath a living ceiling of wood and glass, bathed in ambient night light.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A magnificent indoor-outdoor space where diners stroll and dine beneath a living ceiling of wood and glass, bathed in ambient night light.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center of the hall",
+          "description": "Wide, smooth flagstone pathway"
+        },
+        {
+          "type": "passage",
+          "position": "right side of the hall",
+          "description": "Passage leading to further interior spaces or lounge areas"
+        }
+      ],
+      "dominantElements": [
+        "Intricate vaulted wooden ceiling lattice",
+        "Glass canopy with foliage",
+        "Large textured stone side walls",
+        "Mature trees in planters",
+        "Array of glowing lanterns",
+        "Dark dining tables and chairs"
+      ],
+      "uniqueIdentifiers": [
+        "Indoor forest canopy ambiance",
+        "Ornate wooden lattice work",
+        "Contrast of rustic stone and elegant wood"
+      ],
+      "searchDesc": "An enchanting hall with a vaulted wooden canopy ceiling, lush foliage, and ambient lantern light, perfect for dining or strolling.",
+      "slug": "the-verdant-canopy-hall"
+    },
+    "bab5fd6f-df26-4ef5-b1e5-72c737a08474": {
+      "id": "bab5fd6f-df26-4ef5-b1e5-72c737a08474",
+      "type": "niche",
+      "name": "The Whispering Grove",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Whispering Grove",
+          "looks": "The left side of the hall, featuring large trees or planters with mature trees dramatically illuminated by upward-facing lights.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The left side of the hall, featuring large trees or planters with mature trees dramatically illuminated by upward-facing lights.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764620834980-ip0klzv8s"
+    },
+    "0f629ed7-3fcd-49ad-8356-cd5b279535d5": {
+      "id": "0f629ed7-3fcd-49ad-8356-cd5b279535d5",
+      "type": "niche",
+      "name": "The Gilded Table Lounge",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Gilded Table Lounge",
+          "looks": "The right side of the hall, a refined dining or lounge area with dark tables and chairs set against expansive windows.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The right side of the hall, a refined dining or lounge area with dark tables and chairs set against expansive windows.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "loc-1764620858272-9t2f8hek7": {
+      "id": "loc-1764620858272-9t2f8hek7",
+      "type": "host",
+      "name": "Celestial Plane",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, luminous vistas characterized by divine architecture, swirling celestial bodies, and an omnipresent sense of awe and wonder.",
+        "colorsAndLighting": "Dominated by soft, ethereal light sources that cast warm, golden hues and gentle shadows, with a palette of whites, golds, and deep, moody blues and blacks.",
+        "atmosphere": "The air is exceptionally clear, serene, and filled with a palpable, gentle celestial energy. A sense of profound peace and quietude pervades, suggesting a realm untouched by earthly turmoil.",
+        "materials": "Primarily composed of gleaming, polished white marble and precious metals like gold, with soft, nebulous cloud formations acting as a pervasive secondary element.",
+        "mood": "Majestic, serene, and awe-inspiring, evoking feelings of divine presence and transcendental peace.",
+        "sounds": "Whispers of celestial winds, distant chimes, gentle hum of cosmic energy",
+        "spatialLayout": "Expansive and open, with grand, structured pathways and structures seemingly floating above vast, undifferentiated expanses.",
+        "primary_surfaces": "Polished marble, celestial light",
+        "secondary_surfaces": "Cumulus clouds",
+        "accent_features": "Intricate golden patterns, ornate capitals, small glowing lanterns",
+        "dominant": "White",
+        "secondary": "Gold",
+        "accent": "Deep Blue",
+        "ambient": "Warm golden glow",
+        "genre": "fantasy",
+        "architectural_tone": "Divine celestial architecture characterized by pristine white marble, opulent gold detailing, grand scale, and a sense of eternal perfection. Features include colossal columns with intricate capitals, polished floors with subtle geometric patterns, and elegant, flowing lines.",
+        "cultural_tone": "Divine, transcendent, and serene, reflecting a realm of ultimate peace and spiritual enlightenment.",
+        "materials_base": "Polished marble, gold, celestial light, ethereal mist",
+        "mood_baseline": "Serene majesty and profound peace",
+        "palette_bias": "High contrast, with dominant whites and golds set against deep, moody blues and blacks.",
+        "soundscape_base": "Ethereal, ambient, and resonant",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Celestial Plane",
+          "looks": "A realm of ethereal beauty and otherworldly phenomena, existing beyond mortal comprehension.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A realm of ethereal beauty and otherworldly phenomena, existing beyond mortal comprehension.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Celestial pathway",
+        "Sea of clouds",
+        "Colossal moon"
+      ],
+      "uniqueIdentifiers": [
+        "Ethereal light",
+        "Infinite expanse"
+      ],
+      "searchDesc": "An otherworldly realm of celestial pathways, cloud seas, and luminous moons, a place of serene majesty.",
+      "slug": "celestial-plane"
+    },
+    "0d7b2d55-441d-46da-832d-45f8b58dbb35": {
+      "id": "0d7b2d55-441d-46da-832d-45f8b58dbb35",
+      "type": "region",
+      "name": "Celestial Plane",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An immense, open expanse of soft, fluffy cumulus clouds stretching to a distant horizon, bathed in the light of a massive celestial body.",
+        "colorsAndLighting": "Soft, diffused light with a predominant warm golden hue, illuminating the white clouds and casting gentle shadows. Deep blues and blacks define the upper atmosphere.",
+        "atmosphere": "The air is incredibly clear, still, and carries a subtle, cool temperature. A profound sense of infinite space and quiet solitude defines the environment.",
+        "materials": "Primarily composed of dense, soft cloud matter and the ambient, pervasive light from celestial bodies.",
+        "mood": "Infinite, serene, and tranquil, instilling a sense of awe at the vastness of existence.",
+        "sounds": "Distant, soft hum, gentle atmospheric currents",
+        "spatialLayout": "Vast, open, and seemingly endless, with a clear distinction between the cloud layer below and the sky above.",
+        "primary_surfaces": "Cumulus clouds",
+        "secondary_surfaces": "Celestial light",
+        "accent_features": "Horizon lines, light gradients",
+        "dominant": "White",
+        "secondary": "Deep Blue",
+        "accent": "Gold",
+        "ambient": "Warm golden glow",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": "Ambient, soft hum",
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Celestial Plane",
+          "looks": "The boundless expanse of the Celestial Plane, where pathways stretch across seas of clouds under the gaze of colossal moons.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The boundless expanse of the Celestial Plane, where pathways stretch across seas of clouds under the gaze of colossal moons.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Sea of clouds",
+        "Grand celestial pathways",
+        "Luminous moons"
+      ],
+      "uniqueIdentifiers": [
+        "Cloud horizons",
+        "Ethereal light"
+      ],
+      "searchDesc": "The vast, cloud-filled expanse of the Celestial Plane, featuring grand pathways and luminous celestial bodies.",
+      "slug": "celestial-plane-region"
+    },
+    "2b3485b4-371c-4e81-a2c7-06b934c36711": {
+      "id": "2b3485b4-371c-4e81-a2c7-06b934c36711",
+      "type": "location",
+      "name": "Celestial Plane",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Celestial Plane",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "f89a8039-afec-4235-b46b-96ddb5503e7e": {
+      "id": "f89a8039-afec-4235-b46b-96ddb5503e7e",
+      "type": "niche",
+      "name": "The Ethereal Walk",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Ethereal Walk",
+          "looks": "The central portion of the Lumina Path where a solitary figure traverses, illuminated by celestial light.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The central portion of the Lumina Path where a solitary figure traverses, illuminated by celestial light.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764620877447-srcqny9ff"
+    },
+    "niche-1764620910617-p08zmf9wi": {
+      "id": "niche-1764620910617-p08zmf9wi",
+      "type": "niche",
+      "name": "interior of building",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a vast, high-tech crystalline atrium defined by luminous, transparent panels forming walls and a subtly glowing ceiling, all supported by a delicate, interwoven geodesic framework of polished obsidian metal. Soaring, impossibly thin crystalline pillars refract the light, while the floor is stark, deep charcoal polished concrete.",
+        "colorsAndLighting": "Dominant colors are deep charcoal and stark white, contrasted by the pale gold of the ramp and the shimmering luminescence of the panels. Light is the primary architectural element, refracted and amplified, creating complex shifting patterns.",
+        "atmosphere": "The air feels serene and awe-inspiring, with a sense of immense grandeur. There is a cool, ethereal quality to the light, creating a vast and contemplative atmosphere.",
+        "materials": "Key materials include luminous, transparent crystalline panels, polished obsidian metal for the geodesic framework and archway, and stark, deep charcoal polished concrete for the floor. The ramp is made of shimmering, pale gold metal.",
+        "mood": "The mood is one of serene, awe-inspiring grandeur and inviting exploration.",
+        "sounds": "Soft hum, gentle light shimmer, distant cosmic whispers",
+        "spatialLayout": "An expansive, open atrium with a high ceiling and defined midground and foreground elements. Entry points are suggested by the navigable ramp and archway.",
+        "primary_surfaces": "Luminous crystalline panels (walls/ceiling), deep charcoal polished concrete (floor).",
+        "secondary_surfaces": "Polished obsidian metal (geodesic framework, archway), shimmering pale gold metal (ramp).",
+        "accent_features": "The infinite, star-dusted celestial expanse beyond the panels, the soaring crystalline pillars, the pale gold ramp.",
+        "dominant": "Black with 60% coverage (charcoal concrete floor, obsidian framework).",
+        "secondary": "White/Iridescent with 30% coverage (crystalline panels, pillars).",
+        "accent": "Pale Gold with 10% coverage (ramp).",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": "high-tech crystalline metallic",
+        "cultural_tone": "null",
+        "materials_base": "crystal, polished metal, concrete",
+        "mood_baseline": "awe-inspiring grandeur",
+        "palette_bias": "cool, iridescent, dark contrast",
+        "soundscape_base": "ambient technological hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764620910613-eve9i7mdg",
+      "description": "A high-tech, crystalline atrium interior.",
+      "navigableElements": [
+        {
+          "type": "ramp",
+          "position": "foreground right",
+          "description": "A single, slender ramp of shimmering, pale gold metal ascending slightly."
+        },
+        {
+          "type": "archway",
+          "position": "midground left",
+          "description": "A subtle, recessed archway of polished obsidian metal framing a glimpse into a darker chamber."
+        }
+      ],
+      "dominantElements": [
+        "crystalline panels",
+        "geodesic framework",
+        "crystalline pillars",
+        "charcoal concrete floor",
+        "pale gold ramp"
+      ],
+      "uniqueIdentifiers": [
+        "luminous crystalline panels revealing celestial expanse",
+        "interwoven polished obsidian geodesic framework",
+        "soaring crystalline pillars amplifying light",
+        "star-dusted celestial backdrop"
+      ],
+      "searchDesc": "High-tech crystalline atrium with celestial views and obsidian framework.",
+      "slug": "interior-of-building"
+    },
+    "loc-1764621146230-puknlqvdm": {
+      "id": "loc-1764621146230-puknlqvdm",
+      "type": "host",
+      "name": "Xylos Prime",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A retro-futuristic alien world rendered in early digital art style. Features vast, arid desert landscapes under a hazy, ethereal sky. Towering celestial bodies are a common sight, dominating the horizon.",
+        "colorsAndLighting": "A palette dominated by greens and ochres, with soft, ethereal lighting casting a gentle glow. The overall lighting is bright and luminous, with minimal hard shadows.",
+        "atmosphere": "The air is thick with a noticeable haze, often tinted with pale green or other atmospheric colors. Distant views are softened by this mist, creating a sense of immense scale and mystery. Temperatures are likely temperate to warm.",
+        "materials": "Visible materials include vast expanses of sand and rock, interspersed with alien flora and metallic structures. Surfaces often have a slightly matte or textured finish, characteristic of early digital rendering.",
+        "mood": "A mood of contemplative isolation and wonder. The immense scale and alien environment evoke a sense of awe and peaceful solitude, tinged with the mystery of exploration.",
+        "sounds": "Distant wind, low hums, faint atmospheric crackles, rustling alien flora",
+        "spatialLayout": "Expansive, open landscapes with a focus on vast horizontal planes broken by geological formations and colossal artificial structures. Sense of immense, unbroken horizons.",
+        "primary_surfaces": [
+          "sand",
+          "rock",
+          "alien soil"
+        ],
+        "secondary_surfaces": [
+          "worn metal",
+          "alien fabric",
+          "chitinous plant matter"
+        ],
+        "accent_features": [
+          "glowing crystalline formations",
+          "unusual rock spires",
+          "peculiar alien flora"
+        ],
+        "dominant": "Green",
+        "secondary": "Ochre",
+        "accent": "Pale Yellow",
+        "ambient": "Ethereal Light",
+        "genre": "sci-fi",
+        "architectural_tone": "retro-futuristic with an emphasis on sleek, monolithic, and geometric forms, particularly disc-shapes and large, imposing structures. Details are often stylized and slightly simplified, with a focus on smooth, often metallic or matte finishes.",
+        "cultural_tone": "exploratory and transient. Suggests advanced civilizations capable of interstellar travel, with a focus on observation and resource gathering in alien environments.",
+        "materials_base": "hardened sand, polished alloys, durable composites, resilient alien flora",
+        "mood_baseline": "wonder, isolation, exploration",
+        "palette_bias": "cool, muted tones with strong emphasis on greens and desaturated earthy colors",
+        "soundscape_base": "spacious ambient drones, subtle wind effects, low-frequency hums",
+        "flora_base": "succulent-like desert growths, bioluminescent fungi, crystalline plant structures",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Xylos Prime",
+          "looks": "A retro-futuristic alien world characterized by vast deserts, peculiar flora, and towering celestial bodies, rendered in the style of early digital art.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A retro-futuristic alien world characterized by vast deserts, peculiar flora, and towering celestial bodies, rendered in the style of early digital art.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Monumental Pale Green Planet/Moon",
+        "Colossal Disc-Shaped Spaceship",
+        "Vast Desert Plains"
+      ],
+      "uniqueIdentifiers": [
+        "Hazy Light Green Sky",
+        "Retro Sci-Fi Digital Art Style"
+      ],
+      "searchDesc": "Retro sci-fi alien world of vast deserts, peculiar flora, and towering celestial bodies.",
+      "slug": "xylos-prime"
+    },
+    "3273740a-f214-4a19-a998-e603241404cb": {
+      "id": "3273740a-f214-4a19-a998-e603241404cb",
+      "type": "region",
+      "name": "Xylos Prime",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Expansive ochre desert plains stretching to the horizon, dotted with rugged rocky outcrops. The sky is a perpetual hazy light green, softening distant views.",
+        "colorsAndLighting": "Dominated by warm ochre tones of the desert floor, contrasted with the pale green of the sky. Lighting is soft and diffused by the haze.",
+        "atmosphere": "The air is arid and hazy, giving the atmosphere a palpable thickness. Visibility is moderate, with distant features softened. Warm temperatures are prevalent.",
+        "materials": "Primarily composed of loose ochre sand, weathered rock, and a thin layer of dust. Minimal signs of plant life are visible on the open plains.",
+        "mood": "Serene desolation, vastness, and a sense of ancient, undisturbed quiet.",
+        "sounds": "Whispering wind, soft grit shifting, distant atmospheric tones",
+        "spatialLayout": "Predominantly flat, open plains with occasional elevated rocky formations. Emphasizes horizontal expanse and unobstructed views.",
+        "primary_surfaces": [
+          "ochre sand",
+          "weathered rock"
+        ],
+        "secondary_surfaces": [
+          "dust",
+          "eroded stone"
+        ],
+        "accent_features": [
+          "jagged rock formations",
+          "wind-sculpted terrain"
+        ],
+        "dominant": "Ochre",
+        "secondary": "Light Green",
+        "accent": "Sandy Brown",
+        "ambient": "Soft, Ethereal Light",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "contemplative, desolate",
+        "palette_bias": "warm earth tones with muted atmospheric greens",
+        "soundscape_base": "open-air wind textures, subtle geological shifts",
+        "flora_base": "sparse, hardy desert succulents",
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Xylos Prime",
+          "looks": "Vast, ochre-colored desert plains characteristic of Xylos Prime, marked by rocky outcrops and a hazy, light green sky.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "Vast, ochre-colored desert plains characteristic of Xylos Prime, marked by rocky outcrops and a hazy, light green sky.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Rocky Outcrops",
+        "Expansive Desert Plains",
+        "Hazy Light Green Sky"
+      ],
+      "uniqueIdentifiers": [
+        "Ochre Sand",
+        "Pale Green Atmosphere"
+      ],
+      "searchDesc": "Expansive ochre desert plains on Xylos Prime with rocky outcrops under a hazy light green sky.",
+      "slug": "xylos-prime-region"
+    },
+    "91be1589-9b36-4965-b726-211359348f61": {
+      "id": "91be1589-9b36-4965-b726-211359348f61",
+      "type": "location",
+      "name": "Xylos Prime",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Xylos Prime",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "123986f3-d210-4538-84ca-b96ab2e41837": {
+      "id": "123986f3-d210-4538-84ca-b96ab2e41837",
+      "type": "niche",
+      "name": "The Ascendant Observer",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Ascendant Observer",
+          "looks": "The slender woman standing on the rocky outcrop, her gaze fixed upon the monumental pale green planet.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The slender woman standing on the rocky outcrop, her gaze fixed upon the monumental pale green planet.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764621170517-869ge8ap1"
+    },
+    "25be031e-3f68-455e-99e8-d9ee3512ae90": {
+      "id": "25be031e-3f68-455e-99e8-d9ee3512ae90",
+      "type": "niche",
+      "name": "The Ship's Landing Zone",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Ship's Landing Zone",
+          "looks": "The area surrounding the colossal disc-shaped spaceship, populated by small figures and smaller craft, emphasizing the ship's immense scale.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The area surrounding the colossal disc-shaped spaceship, populated by small figures and smaller craft, emphasizing the ship's immense scale.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "niche-1764621276414-7dxi5g13p": {
+      "id": "niche-1764621276414-7dxi5g13p",
+      "type": "niche",
+      "name": "interior of station",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A sleek, high-tech observatory interior characterized by matte black metal walls and a ribbed geodesic dome ceiling. The space is defined by contrasting geometric forms and subtle, integrated lighting. A vast crystalline partition dominates the midground, revealing distant celestial views.",
+        "colorsAndLighting": "The scene is dimly lit, with the primary illumination emanating from soft, diffused sources and glowing interfaces. Deep shadows are cast by recessed lighting, creating a stark contrast against the matte black surfaces and polished floor. The pale green luminescence of a background panel provides a subtle focal point.",
+        "atmosphere": "The air hums with a subtle, resonant energy, suggesting advanced technology at work. The overall feel is one of quiet observation and sophisticated enclosure. The dim lighting contributes to a sense of focused introspection.",
+        "materials": "Sleek, matte black metal forms the primary wall surfaces and structural elements. A polished, obsidian-like floor offers reflective qualities. A semi-transparent crystalline partition with etched circuit patterns and a stark, geometric steel framework are prominent secondary materials.",
+        "mood": "The mood is one of sophisticated isolation and scientific wonder, evoking a sense of calm and focused observation within a technologically advanced environment.",
+        "sounds": "Subtle hum, resonant energy, faint electronic pulses.",
+        "spatialLayout": "The interior is enclosed by a geodesic dome ceiling, with walls curving inward. The layout features distinct foreground, midground, and background zones, anchored by a console, a large partition, and a focal panel, respectively. The ultra-wide lens emphasizes the expansive yet enclosed nature of the space.",
+        "primary_surfaces": "matte black metal (walls, ceiling supports), obsidian-like floor",
+        "secondary_surfaces": "steel framework (partition support), crystalline partition",
+        "accent_features": "glowing cyan console interfaces, etched circuit patterns on partition, pale green glowing panel",
+        "dominant": "black (walls, structure, floor)",
+        "secondary": "gray (steel framework)",
+        "accent": "cyan (console), pale green (panel)",
+        "ambient": "cool",
+        "genre": null,
+        "architectural_tone": "industrial metallic geodesic",
+        "cultural_tone": null,
+        "materials_base": "matte metals, polished stone, crystalline composites",
+        "mood_baseline": "calm, observant",
+        "palette_bias": "dark neutrals with cool artificial accents",
+        "soundscape_base": "low-frequency ambient hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764621276411-39b0a858r",
+      "description": "The high-tech, dimly lit interior of a space station observatory.",
+      "navigableElements": [
+        {
+          "type": "console",
+          "position": "foreground left",
+          "description": "A low, angular console with glowing cyan interfaces."
+        },
+        {
+          "type": "walkway",
+          "position": "midground right",
+          "description": "A narrow, illuminated walkway running along the base of the crystalline partition."
+        }
+      ],
+      "dominantElements": [
+        "crystalline partition",
+        "geodesic dome ceiling",
+        "circular panel"
+      ],
+      "uniqueIdentifiers": [
+        "geodesic dome ceiling",
+        "crystalline partition with nebulae glimpses",
+        "glowing cyan console"
+      ],
+      "searchDesc": "Dimly lit high-tech observatory with matte black walls, geodesic dome, and glowing cyan console.",
+      "slug": "interior-of-station"
+    },
+    "loc-1764621347153-1ao1qcw7t": {
+      "id": "loc-1764621347153-1ao1qcw7t",
+      "type": "host",
+      "name": "Galactic Federation",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Sweeping vistas of starfields, nebulae, and alien worlds. Architecture blends organic curves with sharp, functional lines. Technology is omnipresent and integrated seamlessly into the environment.",
+        "colorsAndLighting": "A palette dominated by deep cosmic blues, vibrant nebulae colors, and metallic sheens. Lighting is often ambient, emanating from technology and celestial bodies.",
+        "atmosphere": "A sense of immense scale and profound quiet, punctuated by the hum of advanced machinery. The air is clean and perhaps faintly ionized in advanced sectors. The environment feels both serene and powerful.",
+        "materials": "Predominantly polished metals, crystalline composites, and advanced polymers. Surfaces are often smooth, reflective, and integrated with glowing technological elements.",
+        "mood": "Awe-inspiring, serene, and sophisticated. A feeling of advanced civilization and boundless exploration.",
+        "sounds": "Subtle hum, distant chimes, synthesized tones, soft whirs",
+        "spatialLayout": "Expansive, often with grand central areas and clearly defined functional zones. Emphasis on clear sightlines and efficient movement through vast spaces.",
+        "primary_surfaces": [
+          "polished metallic alloys",
+          "composite crystalline structures"
+        ],
+        "secondary_surfaces": [
+          "integrated light panels",
+          "smooth, resilient polymers"
+        ],
+        "accent_features": [
+          "glowing circuitry patterns",
+          "organic swirling motifs",
+          "holographic displays"
+        ],
+        "dominant": "blue",
+        "secondary": "silver",
+        "accent": "cyan",
+        "ambient": "cool",
+        "genre": "sci-fi",
+        "architectural_tone": "futuristic sleekness with organic integration, characterized by sweeping curves, polished metallic surfaces, integrated luminous elements, and seamless technology interfaces",
+        "cultural_tone": "highly advanced, diplomatic, and technologically driven interstellar civilization",
+        "materials_base": "advanced alloys, crystalline composites, synthetic polymers",
+        "mood_baseline": "sophisticated awe",
+        "palette_bias": "cool tones with vibrant highlights",
+        "soundscape_base": "subtle technological ambience",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Galactic Federation",
+          "looks": "A vast interstellar polity governing numerous star systems, known for its advanced technology and diverse sentient species.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A vast interstellar polity governing numerous star systems, known for its advanced technology and diverse sentient species.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Federation Central Spire",
+        "Orbital Defense Grid",
+        "Xylosian Trade Routes"
+      ],
+      "uniqueIdentifiers": [
+        "Unified Galactic Law",
+        "Interstellar Diplomatic Corps",
+        "Cosmic Navigation Beacons"
+      ],
+      "searchDesc": "Vast interstellar polity, advanced tech, diverse species, governing numerous star systems.",
+      "slug": "galactic-federation"
+    },
+    "7f614159-13fd-4d6e-9b23-d03bb895a3d4": {
+      "id": "7f614159-13fd-4d6e-9b23-d03bb895a3d4",
+      "type": "region",
+      "name": "Galactic Federation",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Galactic Federation",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "c0e6618b-b792-4a9b-90e7-37a0955d1f6f": {
+      "id": "c0e6618b-b792-4a9b-90e7-37a0955d1f6f",
+      "type": "location",
+      "name": "Galactic Federation",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Galactic Federation",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "e816d404-0b03-49b8-bee4-3d2ac4571029": {
+      "id": "e816d404-0b03-49b8-bee4-3d2ac4571029",
+      "type": "niche",
+      "name": "The Earthward Vista",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Earthward Vista",
+          "looks": "The central area of the lounge dominated by massive circular panoramic windows showcasing Earth and the vastness of space, with opulent seating.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The central area of the lounge dominated by massive circular panoramic windows showcasing Earth and the vastness of space, with opulent seating.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764621360325-d9ttjz7ox"
+    },
+    "6185f123-2ff0-4158-83d9-c928e25a1972": {
+      "id": "6185f123-2ff0-4158-83d9-c928e25a1972",
+      "type": "niche",
+      "name": "The Attendant's Vigil",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Attendant's Vigil",
+          "looks": "The designated space where service androids or advanced servants stand ready to attend to guests, showcasing their advanced design and functionality.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The designated space where service androids or advanced servants stand ready to attend to guests, showcasing their advanced design and functionality.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "loc-1764621478308-rwbugmmvr": {
+      "id": "loc-1764621478308-rwbugmmvr",
+      "type": "host",
+      "name": "Indian Ocean",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Expansive, shimmering turquoise waters meeting sandy shores and lush green islands. Clear skies with occasional wispy clouds.",
+        "colorsAndLighting": "Dominant bright turquoise and deep blue of the ocean, contrasted with vibrant greens of foliage and warm sandy browns. Bright, direct sunlight creates high contrast.",
+        "atmosphere": "Warm, humid tropical air, with a gentle sea breeze. The atmosphere is clear and crisp, offering excellent visibility.",
+        "materials": "Natural elements dominate: water, sand, rock formations, and abundant vegetation. Man-made structures are typically of wood, thatch, and local stone.",
+        "mood": "Serene, idyllic, and adventurous, evoking feelings of relaxation and exploration.",
+        "sounds": "Gentle waves lapping, seabird calls, distant boat horns, rustling palm leaves.",
+        "spatialLayout": "Open vistas of water and sky, punctuated by islands and coastal features. Undulating coastlines with hidden coves and reefs.",
+        "primary_surfaces": [
+          "Water",
+          "Sand",
+          "Rock"
+        ],
+        "secondary_surfaces": [
+          "Vegetation",
+          "Wood",
+          "Thatch"
+        ],
+        "accent_features": [
+          "Coral formations",
+          "Shells",
+          "Driftwood"
+        ],
+        "dominant": "Blue",
+        "secondary": [
+          "Green",
+          "Brown",
+          "White"
+        ],
+        "accent": "Turquoise",
+        "ambient": "Warm daylight",
+        "genre": "tropical",
+        "architectural_tone": "Tropical vernacular with elements of natural integration, featuring open-air structures, natural materials like wood and thatch, and designs that embrace the surrounding environment and climate.",
+        "cultural_tone": "Leisurely, coastal, and seafaring cultures, focused on tourism, fishing, and a relaxed island lifestyle.",
+        "materials_base": "Natural materials: wood, thatch, stone, sand, water. Focus on integration with the environment.",
+        "mood_baseline": "Relaxed, adventurous, and serene, with a strong connection to nature and the sea.",
+        "palette_bias": "Vibrant blues and greens, warm sandy and earthy tones, bright whites.",
+        "soundscape_base": "Sounds of the ocean, tropical wildlife, and gentle breezes.",
+        "flora_base": "Tropical, including palm trees, lush green foliage, flowering plants, and coastal vegetation.",
+        "fauna_base": "Marine life (fish, coral, dolphins), seabirds, and small tropical land animals.",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Indian Ocean",
+          "looks": "Vast expanse of warm, turquoise waters and tropical coastlines.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "Vast expanse of warm, turquoise waters and tropical coastlines.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Vast Ocean",
+        "Tropical Islands",
+        "Coral Reefs"
+      ],
+      "uniqueIdentifiers": [
+        "Warm Currents",
+        "Diverse Marine Life",
+        "Island Archipelagos"
+      ],
+      "searchDesc": "Warm turquoise waters, tropical coastlines, vibrant marine life, island archipelagos.",
+      "slug": "indian-ocean"
+    },
+    "b91dce2a-73fe-4a09-9cbf-65813c20cac0": {
+      "id": "b91dce2a-73fe-4a09-9cbf-65813c20cac0",
+      "type": "region",
+      "name": "Indian Ocean",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Indian Ocean",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "9c062f30-ea00-4979-b5d8-8d9001ec11c6": {
+      "id": "9c062f30-ea00-4979-b5d8-8d9001ec11c6",
+      "type": "location",
+      "name": "The Rock Restaurant",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Rock Restaurant",
+          "looks": "An iconic restaurant built atop a natural rock formation in the shallow, clear turquoise waters.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "An iconic restaurant built atop a natural rock formation in the shallow, clear turquoise waters.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764621499777-8ygzn4wg5"
+    },
+    "niche-1764621515467-tv5cpx21l": {
+      "id": "niche-1764621515467-tv5cpx21l",
+      "type": "niche",
+      "name": "interior of The Rock Restaurant",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The space is a high-tech niche enclosed by curved, metallic-sheened architectural glazing supported by a dark steel geodesic framework. Polished obsidian floors reflect diffused light, contrasting with warm, textured plaster on natural rock walls. Sleek, sapphire velvet seating pods are subtly lit, and the background reveals an expansive view of turquoise waters with integrated bioluminescent art.",
+        "colorsAndLighting": "Dominant colors are deep blues of the sea and velvet seating, contrasted by the warm tones of the plaster walls and obsidian floors. Ambient, diffused light filters through the glass, enhanced by warm LED strip lighting and recessed cove lighting, creating a sophisticated glow.",
+        "atmosphere": "The air feels calm and sophisticated, with a sense of luxurious integration between natural and man-made elements. The diffused light suggests a serene, perhaps evening ambiance, with subtle warmth emanating from integrated lighting.",
+        "materials": "Primary materials include high-tech architectural glazing with a metallic sheen, dark steel for the geodesic framework, polished obsidian for the floors, and warm, textured plaster on natural rock walls. Secondary materials include deep sapphire velvet for seating pods.",
+        "mood": "The mood is one of luxurious, natural integration and understated sophistication, evoking a sense of exclusivity and serene beauty.",
+        "sounds": "Subtle ambient hum, gentle lapping water, soft murmur of conversation.",
+        "spatialLayout": "An interior niche with a clear foreground entry platform, midground seating, and a dominant background glass expanse. The space feels open yet defined by the structural elements and the curved glazing.",
+        "primary_surfaces": "Obsidian floors, textured plaster rock walls, geodesic glass panels.",
+        "secondary_surfaces": "Dark metal platform, sapphire velvet seating pods, abstract art installations.",
+        "accent_features": "Integrated warm LED strip lighting on the platform, recessed cove lighting, bioluminescent art installations.",
+        "dominant": "Deep Turquoise (sea view, accents)",
+        "secondary": "Warm Beige/Brown (plaster walls)",
+        "accent": "Deep Sapphire Blue (seating), Metallic Silver (glazing frame)",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": "High-tech organic integration",
+        "cultural_tone": "Upscale, iconic dining experience",
+        "materials_base": "Glass, stone, polished stone, metal",
+        "mood_baseline": "Sophisticated tranquility",
+        "palette_bias": "Cool blues and greens with warm earthy undertones",
+        "soundscape_base": "Refined ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764621515465-emtgywppw",
+      "description": "A breathtaking interior niche within an iconic restaurant built atop a natural rock formation.",
+      "navigableElements": [
+        {
+          "type": "platform",
+          "position": "foreground center",
+          "description": "A low, dark metal platform with integrated warm LED strip lighting."
+        },
+        {
+          "type": "corridor",
+          "position": "midground right",
+          "description": "A narrow, illuminated corridor leading deeper into the structure, revealed by a receding glass wall section."
+        }
+      ],
+      "dominantElements": [
+        "Geodesic architectural glazing",
+        "Polished obsidian floors",
+        "Natural rock walls",
+        "Minimalist seating pods",
+        "Panoramic sea view"
+      ],
+      "uniqueIdentifiers": [
+        "Restaurant built atop natural rock formation",
+        "High-tech architectural glazing with metallic sheen",
+        "Dark steel geodesic framework",
+        "Bioluminescent art installations"
+      ],
+      "searchDesc": "Iconic restaurant niche with rock formation, geodesic glazing, obsidian floors, and sea views.",
+      "slug": "interior-of-the-rock-restaurant"
     }
   },
   "views": {},
@@ -3542,6 +5332,225 @@
       "id": "loc-1764605616317-zkqk9klxq",
       "type": "host",
       "children": []
+    },
+    {
+      "id": "loc-1764620461600-yowpdgtsk",
+      "type": "host",
+      "children": [
+        {
+          "id": "e20d3382-f331-40a2-a32d-8f1e65042a4d",
+          "type": "region",
+          "children": [
+            {
+              "id": "858bd995-e96b-44b4-b895-ed6da2a10317",
+              "type": "location",
+              "children": [
+                {
+                  "id": "2901907a-6ce8-464d-aa05-9ba278410004",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764620556989-vlbmgjpzc",
+      "type": "host",
+      "children": [
+        {
+          "id": "d408a987-601c-4258-a662-8edef59cb351",
+          "type": "region",
+          "children": [
+            {
+              "id": "385a782c-fb31-40d6-9230-38ad8f2ff80c",
+              "type": "location",
+              "children": [
+                {
+                  "id": "b79cb8cc-a358-4221-8b37-e58cffbd4a28",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "47a3f763-4af3-43e6-9cce-05ac72e536a2",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764620666138-v9wo66chn",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764620702963-weskniq4f",
+      "type": "host",
+      "children": [
+        {
+          "id": "57618ff4-a566-48d5-8448-a3fc6bd3c4c3",
+          "type": "region",
+          "children": [
+            {
+              "id": "3781baef-1739-448e-9800-971f32fc5c92",
+              "type": "location",
+              "children": [
+                {
+                  "id": "8abac02d-2fda-4be3-8ecf-e0adbd7c83b3",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764620805732-sh3hun8pm",
+      "type": "host",
+      "children": [
+        {
+          "id": "371b10b2-f2b6-4116-bdf2-1ae805fe9115",
+          "type": "region",
+          "children": [
+            {
+              "id": "23f609db-0e02-47ef-89ff-030769a1b6ba",
+              "type": "location",
+              "children": [
+                {
+                  "id": "bab5fd6f-df26-4ef5-b1e5-72c737a08474",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "0f629ed7-3fcd-49ad-8356-cd5b279535d5",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764620858272-9t2f8hek7",
+      "type": "host",
+      "children": [
+        {
+          "id": "0d7b2d55-441d-46da-832d-45f8b58dbb35",
+          "type": "region",
+          "children": [
+            {
+              "id": "2b3485b4-371c-4e81-a2c7-06b934c36711",
+              "type": "location",
+              "children": [
+                {
+                  "id": "f89a8039-afec-4235-b46b-96ddb5503e7e",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764620910617-p08zmf9wi",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764621146230-puknlqvdm",
+      "type": "host",
+      "children": [
+        {
+          "id": "3273740a-f214-4a19-a998-e603241404cb",
+          "type": "region",
+          "children": [
+            {
+              "id": "91be1589-9b36-4965-b726-211359348f61",
+              "type": "location",
+              "children": [
+                {
+                  "id": "123986f3-d210-4538-84ca-b96ab2e41837",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "25be031e-3f68-455e-99e8-d9ee3512ae90",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764621276414-7dxi5g13p",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764621347153-1ao1qcw7t",
+      "type": "host",
+      "children": [
+        {
+          "id": "7f614159-13fd-4d6e-9b23-d03bb895a3d4",
+          "type": "region",
+          "children": [
+            {
+              "id": "c0e6618b-b792-4a9b-90e7-37a0955d1f6f",
+              "type": "location",
+              "children": [
+                {
+                  "id": "e816d404-0b03-49b8-bee4-3d2ac4571029",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "6185f123-2ff0-4158-83d9-c928e25a1972",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764621478308-rwbugmmvr",
+      "type": "host",
+      "children": [
+        {
+          "id": "b91dce2a-73fe-4a09-9cbf-65813c20cac0",
+          "type": "region",
+          "children": [
+            {
+              "id": "9c062f30-ea00-4979-b5d8-8d9001ec11c6",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764621515467-tv5cpx21l",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -3558,6 +5567,14 @@
     "loc-1764536322127-opnufbd52",
     "loc-1764536360075-kkhbqt8s5",
     "loc-1764573406847-nze5wzyo6",
-    "loc-1764605616317-zkqk9klxq"
+    "loc-1764605616317-zkqk9klxq",
+    "loc-1764620461600-yowpdgtsk",
+    "loc-1764620556989-vlbmgjpzc",
+    "loc-1764620702963-weskniq4f",
+    "loc-1764620805732-sh3hun8pm",
+    "loc-1764620858272-9t2f8hek7",
+    "loc-1764621146230-puknlqvdm",
+    "loc-1764621347153-1ao1qcw7t",
+    "loc-1764621478308-rwbugmmvr"
   ]
 }
