@@ -1,6 +1,6 @@
 /**
  * Post-Processor System
- * Applies image displacement effects (heat wave, underwater, etc.)
+ * Applies image displacement and color effects (heat wave, underwater, bloom, vignette, etc.)
  */
 
 import * as THREE from 'three';
@@ -17,7 +17,7 @@ const vertexShader = `
   }
 `;
 
-// Fragment shader - displacement effects
+// Fragment shader - displacement + color effects
 const fragmentShader = `
   uniform sampler2D tDiffuse;
   uniform float time;
@@ -25,6 +25,14 @@ const fragmentShader = `
   uniform float frequency;
   uniform vec2 direction;
   uniform int effectType;  // 0=heatwave, 1=underwater, 2=glitch, 3=dream
+  
+  // Color effects uniforms
+  uniform float vignette;      // 0-1 vignette strength
+  uniform vec3 tint;           // RGB tint color (1,1,1 = no tint)
+  uniform float tintStrength;  // 0-1 tint blend
+  uniform float bloom;         // 0-1 bloom strength
+  uniform float lightning;     // 0-1 lightning flash
+  uniform float desaturate;    // 0-1 desaturation amount
   
   varying vec2 vUv;
   
@@ -127,6 +135,36 @@ const fragmentShader = `
     return displacement;
   }
   
+  // Apply vignette effect
+  vec3 applyVignette(vec3 color, vec2 uv, float strength) {
+    float dist = length(uv - 0.5) * 2.0;
+    float vig = 1.0 - smoothstep(0.5, 1.5, dist) * strength;
+    return color * vig;
+  }
+  
+  // Apply color tint
+  vec3 applyTint(vec3 color, vec3 tintColor, float strength) {
+    return mix(color, color * tintColor, strength);
+  }
+  
+  // Apply bloom (fake bloom - brighten bright areas)
+  vec3 applyBloom(vec3 color, float strength) {
+    float luminance = dot(color, vec3(0.299, 0.587, 0.114));
+    float bloomFactor = smoothstep(0.5, 1.0, luminance) * strength;
+    return color + color * bloomFactor * 1.5;
+  }
+  
+  // Apply lightning flash
+  vec3 applyLightning(vec3 color, float strength) {
+    return color + vec3(strength);
+  }
+  
+  // Apply desaturation
+  vec3 applyDesaturate(vec3 color, float strength) {
+    float gray = dot(color, vec3(0.299, 0.587, 0.114));
+    return mix(color, vec3(gray), strength);
+  }
+  
   void main() {
     vec2 displacement = vec2(0.0);
     
@@ -145,7 +183,26 @@ const fragmentShader = `
     // Clamp UV to prevent sampling outside texture
     distortedUv = clamp(distortedUv, 0.0, 1.0);
     
-    gl_FragColor = texture2D(tDiffuse, distortedUv);
+    vec3 color = texture2D(tDiffuse, distortedUv).rgb;
+    
+    // Apply color effects in order
+    if (desaturate > 0.0) {
+      color = applyDesaturate(color, desaturate);
+    }
+    if (tintStrength > 0.0) {
+      color = applyTint(color, tint, tintStrength);
+    }
+    if (bloom > 0.0) {
+      color = applyBloom(color, bloom);
+    }
+    if (vignette > 0.0) {
+      color = applyVignette(color, vUv, vignette);
+    }
+    if (lightning > 0.0) {
+      color = applyLightning(color, lightning);
+    }
+    
+    gl_FragColor = vec4(color, 1.0);
   }
 `;
 
@@ -157,6 +214,25 @@ const EFFECT_TYPE_MAP: Record<string, number> = {
   dream: 3,
 };
 
+// Color effect settings (layered on top of displacement)
+export interface ColorEffects {
+  vignette: number;      // 0-1 edge darkening
+  tint: { r: number; g: number; b: number };  // RGB multiplier
+  tintStrength: number;  // 0-1 tint blend
+  bloom: number;         // 0-1 glow strength
+  lightning: number;     // 0-1 flash brightness
+  desaturate: number;    // 0-1 grayscale amount
+}
+
+const DEFAULT_COLOR_EFFECTS: ColorEffects = {
+  vignette: 0,
+  tint: { r: 1, g: 1, b: 1 },
+  tintStrength: 0,
+  bloom: 0,
+  lightning: 0,
+  desaturate: 0,
+};
+
 export class PostProcessorSystem {
   private renderTarget: THREE.WebGLRenderTarget;
   private quad: THREE.Mesh;
@@ -164,12 +240,15 @@ export class PostProcessorSystem {
   private scene: THREE.Scene;
   private camera: THREE.OrthographicCamera;
   private config: PostProcessorConfig;
+  private colorEffects: ColorEffects;
   private time: number = 0;
+  private lightningTimer: number = 0;
 
   constructor(width: number, height: number, preset: string = 'heatwave', enabled: boolean = true) {
     const presetConfig = getPostProcessorPreset(preset) ?? HEATWAVE_PRESET.config;
     // Clone config and override enabled state
     this.config = { ...presetConfig, enabled };
+    this.colorEffects = { ...DEFAULT_COLOR_EFFECTS };
 
     // Create render target to capture scene
     this.renderTarget = new THREE.WebGLRenderTarget(width, height, {
@@ -187,6 +266,13 @@ export class PostProcessorSystem {
         frequency: { value: this.config.frequency },
         direction: { value: new THREE.Vector2(this.config.direction.x, this.config.direction.y) },
         effectType: { value: EFFECT_TYPE_MAP[this.config.type] ?? 0 },
+        // Color effects
+        vignette: { value: 0 },
+        tint: { value: new THREE.Vector3(1, 1, 1) },
+        tintStrength: { value: 0 },
+        bloom: { value: 0 },
+        lightning: { value: 0 },
+        desaturate: { value: 0 },
       },
       vertexShader,
       fragmentShader,
@@ -209,6 +295,12 @@ export class PostProcessorSystem {
     if (!this.config.enabled) return;
     this.time += deltaTime * this.config.speed;
     this.material.uniforms.time.value = this.time;
+    
+    // Handle lightning decay
+    if (this.colorEffects.lightning > 0) {
+      this.colorEffects.lightning = Math.max(0, this.colorEffects.lightning - deltaTime * 3);
+      this.material.uniforms.lightning.value = this.colorEffects.lightning;
+    }
   }
 
   /**
@@ -257,6 +349,22 @@ export class PostProcessorSystem {
   }
 
   /**
+   * Update color effect uniforms
+   */
+  private updateColorUniforms(): void {
+    this.material.uniforms.vignette.value = this.colorEffects.vignette;
+    this.material.uniforms.tint.value.set(
+      this.colorEffects.tint.r,
+      this.colorEffects.tint.g,
+      this.colorEffects.tint.b
+    );
+    this.material.uniforms.tintStrength.value = this.colorEffects.tintStrength;
+    this.material.uniforms.bloom.value = this.colorEffects.bloom;
+    this.material.uniforms.lightning.value = this.colorEffects.lightning;
+    this.material.uniforms.desaturate.value = this.colorEffects.desaturate;
+  }
+
+  /**
    * Enable/disable effect
    */
   setEnabled(enabled: boolean): void {
@@ -269,6 +377,68 @@ export class PostProcessorSystem {
   setIntensity(intensity: number): void {
     this.config.intensity = Math.max(0, Math.min(1, intensity));
     this.material.uniforms.intensity.value = this.config.intensity;
+  }
+
+  /**
+   * Set vignette strength (0-1)
+   */
+  setVignette(strength: number): void {
+    this.colorEffects.vignette = Math.max(0, Math.min(1, strength));
+    this.material.uniforms.vignette.value = this.colorEffects.vignette;
+  }
+
+  /**
+   * Set color tint
+   */
+  setTint(r: number, g: number, b: number, strength: number = 1): void {
+    this.colorEffects.tint = { r, g, b };
+    this.colorEffects.tintStrength = Math.max(0, Math.min(1, strength));
+    this.material.uniforms.tint.value.set(r, g, b);
+    this.material.uniforms.tintStrength.value = this.colorEffects.tintStrength;
+  }
+
+  /**
+   * Set bloom strength (0-1)
+   */
+  setBloom(strength: number): void {
+    this.colorEffects.bloom = Math.max(0, Math.min(1, strength));
+    this.material.uniforms.bloom.value = this.colorEffects.bloom;
+  }
+
+  /**
+   * Trigger lightning flash
+   */
+  triggerLightning(intensity: number = 1): void {
+    this.colorEffects.lightning = Math.max(0, Math.min(1, intensity));
+    this.material.uniforms.lightning.value = this.colorEffects.lightning;
+  }
+
+  /**
+   * Set desaturation (0-1, 0=full color, 1=grayscale)
+   */
+  setDesaturate(amount: number): void {
+    this.colorEffects.desaturate = Math.max(0, Math.min(1, amount));
+    this.material.uniforms.desaturate.value = this.colorEffects.desaturate;
+  }
+
+  /**
+   * Apply multiple color effects at once
+   */
+  setColorEffects(effects: Partial<ColorEffects>): void {
+    if (effects.vignette !== undefined) this.colorEffects.vignette = effects.vignette;
+    if (effects.tint !== undefined) this.colorEffects.tint = effects.tint;
+    if (effects.tintStrength !== undefined) this.colorEffects.tintStrength = effects.tintStrength;
+    if (effects.bloom !== undefined) this.colorEffects.bloom = effects.bloom;
+    if (effects.desaturate !== undefined) this.colorEffects.desaturate = effects.desaturate;
+    this.updateColorUniforms();
+  }
+
+  /**
+   * Reset color effects to defaults
+   */
+  resetColorEffects(): void {
+    this.colorEffects = { ...DEFAULT_COLOR_EFFECTS };
+    this.updateColorUniforms();
   }
 
   /**

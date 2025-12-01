@@ -34,7 +34,7 @@ export const PANEL_CONFIG = {
  */
 export const WORLD_VIEW_3D_CONFIG = {
   /** Depth scale - how much the 3D should "bulge" out (0.1 = subtle, 2.0 = extreme) */
-  MESH_DEPTH: 0.4,
+  MESH_DEPTH: 0.5,
   
   /** Focus plane - depth at which objects stay still during parallax (0 = far, 1 = near) */
   FOCUS: 0.25,
@@ -97,6 +97,12 @@ export const WORLD_VIEW_3D_CONFIG = {
   POSTPROCESSOR: {
     ENABLED: false,
     PRESET: 'heatwave', // 'heatwave' | 'underwater' | 'glitch' | 'dream'
+  },
+  
+  /** Scene presets - combined particle + post-processor + color effects */
+  SCENE: {
+    ENABLED: false,  // Set to true to test scenes!
+    PRESET: 'magical', // 'sunset' | 'storm' | 'underwater' | 'haunted' | 'magical' (magical has bloom: 0.5)
   },
 } as const;
 

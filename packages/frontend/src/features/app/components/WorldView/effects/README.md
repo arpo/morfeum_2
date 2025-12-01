@@ -1,11 +1,14 @@
 # WorldView Effects System
 
-This document describes the particle and post-processor effects available in the WorldView component.
+This document describes the particle, post-processor, and scene effects available in the WorldView component.
 
 ## Table of Contents
 - [Particle System](#particle-system)
 - [Post-Processor System](#post-processor-system)
+- [Color Effects](#color-effects)
+- [Scene Presets](#scene-presets)
 - [Configuration](#configuration)
+- [Runtime API](#runtime-api)
 
 ---
 
@@ -55,24 +58,6 @@ Particles further from the camera automatically appear smaller due to perspectiv
 | `ash` | Slow falling dark particles | Post-apocalyptic, volcanic |
 | `pollen` | Yellow floating particles, gentle drift | Spring/nature scenes |
 
-### Preset Configuration Properties
-
-Each preset defines these properties:
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `count` | number | Number of particles (50-500 typical) |
-| `size` | `{min, max}` | Particle size range |
-| `speed` | `{min, max}` | Movement speed range |
-| `opacity` | `{min, max}` | Transparency range (0-1) |
-| `color` | string | Hex color (e.g., '#ffffff') |
-| `behavior` | string | Movement type: 'float', 'fall', 'rise', 'flicker' |
-| `blendMode` | string | 'normal', 'additive' (glow), 'multiply' |
-| `wind` | `{x, y}` | Constant wind force |
-| `drift` | `{x, y}` | Directional drift |
-| `turbulence` | number | Random movement intensity (0-1) |
-| `depthAware` | boolean | Whether particles respect depth |
-
 ### Behaviors
 
 - **float** — Gentle drifting with turbulence (dust, pollen)
@@ -80,29 +65,30 @@ Each preset defines these properties:
 - **rise** — Upward movement, resets at top (embers, sparks, bubbles)
 - **flicker** — Slow random movement with opacity pulsing (fireflies, stars)
 
+### Wind Gusts
+
+Particles support temporary wind gusts that push all particles in a direction:
+
+```typescript
+// Trigger a wind gust
+renderer.triggerWindGust(strengthX, strengthY, duration);
+
+// Example: Strong gust to the right lasting 2 seconds
+renderer.triggerWindGust(3, 0, 2);
+
+// Example: Diagonal gust up-right
+renderer.triggerWindGust(2, 1, 1.5);
+```
+
+Wind gusts use smooth ease-in-out timing for natural movement.
+
 ---
 
 ## Post-Processor System
 
-The post-processor applies full-screen image displacement effects like heat wave distortion, underwater refraction, glitch effects, and dream-like warping.
+The post-processor applies full-screen effects including displacement and color modifications.
 
-### Post-Processor Configuration (in `config.ts`)
-
-```typescript
-POSTPROCESSOR: {
-  ENABLED: false,     // Enable/disable post-processing
-  PRESET: 'heatwave', // Which effect to use
-}
-```
-
-### Settings Explained
-
-| Setting | Type | Description |
-|---------|------|-------------|
-| `ENABLED` | boolean | Turn post-processing on/off |
-| `PRESET` | string | Name of the effect preset to use |
-
-### Available Presets
+### Displacement Effects
 
 | Preset | Description | Visual Effect |
 |--------|-------------|---------------|
@@ -111,44 +97,113 @@ POSTPROCESSOR: {
 | `glitch` | Digital corruption effect | Horizontal bands, scan lines, chromatic split |
 | `dream` | Soft pulsing distortion | Breathing waves, organic movement |
 
-### Preset Configuration Properties
+---
 
-Each preset defines these properties:
+## Color Effects
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `type` | string | — | Effect type: 'heatwave', 'underwater', 'glitch', 'dream' |
-| `intensity` | number | 0.3-0.6 | Effect strength (0-1) |
-| `speed` | number | 0.5-1.5 | Animation speed multiplier |
-| `frequency` | number | 1-3 | Wave frequency (higher = more waves) |
-| `direction` | `{x, y}` | `{1, 1}` | Displacement direction multiplier |
+Color effects can be layered on top of displacement effects. All color effects use values from 0-1 unless otherwise noted.
 
-### Effect Details
+### Available Color Effects
 
-#### Heatwave
-- Rising shimmer effect like heat from a hot surface
-- Stronger distortion at the bottom of the screen
-- Uses noise-based displacement
-- Best for: Desert scenes, hot environments, forges
+| Effect | Range | Description |
+|--------|-------|-------------|
+| `vignette` | 0-1 | Darkens edges of the screen, draws focus to center |
+| `bloom` | 0-1 | Brightens bright areas, creates soft glow |
+| `desaturate` | 0-1 | Removes color (0 = full color, 1 = grayscale) |
+| `tint` | RGB (0-2) | Multiplies colors by RGB values |
+| `tintStrength` | 0-1 | How strongly tint is applied |
+| `lightning` | 0-1 | Bright flash that auto-decays |
 
-#### Underwater  
-- Wavy refraction like looking through water
-- Combined sine waves and noise
-- Uniform across the screen
-- Best for: Underwater scenes, aquariums, liquid views
+### Color Effect Examples
 
-#### Glitch
-- Digital corruption with horizontal bands
-- Occasional strong glitch bursts
-- Chromatic aberration-like splitting
-- Scan line effects
-- Best for: Cyberpunk, tech failure, horror
+```typescript
+// Add dark vignette
+renderer.setVignette(0.5);
 
-#### Dream
-- Soft pulsing distortion with breathing rhythm
-- Layered wave interference
-- Vignette falloff toward edges
-- Best for: Flashbacks, surreal scenes, meditation
+// Add warm orange tint
+renderer.setTint(1.2, 0.9, 0.7, 0.5);  // r, g, b, strength
+
+// Add soft glow to bright areas
+renderer.setBloom(0.4);
+
+// Desaturate for eerie look
+renderer.setDesaturate(0.6);
+
+// Trigger lightning flash
+renderer.triggerLightning(0.8);  // Auto-decays
+
+// Set multiple effects at once
+renderer.setColorEffects({
+  vignette: 0.5,
+  bloom: 0.3,
+  tint: { r: 0.8, g: 0.9, b: 1.1 },
+  tintStrength: 0.4,
+});
+
+// Reset all color effects
+renderer.resetColorEffects();
+```
+
+---
+
+## Scene Presets
+
+Scene presets combine particles, displacement effects, and color effects into themed configurations.
+
+### Available Scenes
+
+| Scene | Particles | Displacement | Color Effects | Special |
+|-------|-----------|--------------|---------------|---------|
+| `sunset` | pollen | heatwave | Warm orange tint, bloom, light vignette | — |
+| `storm` | rain | none | Cold blue-gray, dark vignette, desaturated | Wind gusts, Lightning |
+| `underwater` | bubbles | underwater | Cyan tint, light vignette | — |
+| `haunted` | fog | dream | Cold tint, heavy vignette, desaturated | — |
+| `magical` | fireflies | dream | Light green tint, bloom, vignette | — |
+
+### Scene Details
+
+#### Sunset
+- **Atmosphere:** Warm golden hour with floating pollen
+- **Effects:** Soft heat shimmer, orange tint, gentle bloom
+- **Best for:** Nature scenes, peaceful moments
+
+#### Storm
+- **Atmosphere:** Heavy rain with lightning and wind
+- **Effects:** Dark vignette, desaturated, periodic lightning flashes
+- **Special:** Auto-triggering wind gusts and lightning
+- **Best for:** Dramatic weather, tension
+
+#### Underwater
+- **Atmosphere:** Submerged view with rising bubbles
+- **Effects:** Wavy refraction, blue tint
+- **Best for:** Ocean scenes, aquariums
+
+#### Haunted
+- **Atmosphere:** Eerie fog with muted colors
+- **Effects:** Heavy vignette, strong desaturation, subtle dream distortion
+- **Best for:** Horror, abandoned locations
+
+#### Magical
+- **Atmosphere:** Enchanted forest with fireflies
+- **Effects:** Soft bloom, gentle dream distortion, green tint
+- **Best for:** Fantasy, enchanted locations
+
+### Using Scenes
+
+```typescript
+// Apply a scene preset
+renderer.setScene('storm');
+
+// Scene automatically handles:
+// - Particle preset and settings
+// - Displacement effects
+// - Color effects
+// - Auto-triggering wind gusts (storm)
+// - Auto-triggering lightning (storm)
+
+// Clear scene and reset effects
+renderer.clearScene();
+```
 
 ---
 
@@ -158,60 +213,24 @@ All settings are in `packages/frontend/src/config.ts` under `WORLD_VIEW_3D_CONFI
 
 ### Quick Start Examples
 
-**Dusty atmosphere:**
+**Using scene presets (easiest):**
+```typescript
+// In your component
+renderer.setScene('sunset');
+renderer.setScene('storm');
+renderer.setScene('underwater');
+```
+
+**Manual configuration:**
 ```typescript
 PARTICLES: {
   ENABLED: true,
   PRESET: 'dust',
   DEPTH: 4,
-}
-```
-
-**Snowy scene:**
-```typescript
-PARTICLES: {
-  ENABLED: true,
-  PRESET: 'snow',
-  DEPTH: 3,
-}
-```
-
-**Underwater scene:**
-```typescript
-PARTICLES: {
-  ENABLED: true,
-  PRESET: 'bubbles',
-  DEPTH: 5,
-},
-POSTPROCESSOR: {
-  ENABLED: true,
-  PRESET: 'underwater',
-}
-```
-
-**Campfire scene:**
-```typescript
-PARTICLES: {
-  ENABLED: true,
-  PRESET: 'embers',
-  DEPTH: 4,
 },
 POSTPROCESSOR: {
   ENABLED: true,
   PRESET: 'heatwave',
-}
-```
-
-**Cyberpunk glitch:**
-```typescript
-PARTICLES: {
-  ENABLED: true,
-  PRESET: 'sparks',
-  DEPTH: 3,
-},
-POSTPROCESSOR: {
-  ENABLED: true,
-  PRESET: 'glitch',
 }
 ```
 
@@ -222,14 +241,28 @@ POSTPROCESSOR: {
 The `WorldViewRenderer` exposes methods to change effects at runtime:
 
 ```typescript
-// Particles
+// ===== Particles =====
 renderer.setParticlePreset('snow');
 renderer.setParticlesEnabled(true);
+renderer.triggerWindGust(2, 0, 1.5);  // strengthX, strengthY, duration
 
-// Post-processor
+// ===== Displacement Effects =====
 renderer.setPostProcessorPreset('underwater');
 renderer.setPostProcessorEnabled(true);
 renderer.setPostProcessorIntensity(0.5);
+
+// ===== Color Effects =====
+renderer.setVignette(0.5);
+renderer.setBloom(0.4);
+renderer.setTint(1.2, 0.9, 0.7, 0.5);  // r, g, b, strength
+renderer.setDesaturate(0.5);
+renderer.triggerLightning(0.8);
+renderer.setColorEffects({ vignette: 0.5, bloom: 0.3 });
+renderer.resetColorEffects();
+
+// ===== Scene Presets =====
+renderer.setScene('sunset');   // sunset | storm | underwater | haunted | magical
+renderer.clearScene();
 ```
 
 ---
@@ -243,9 +276,13 @@ effects/
 │   ├── index.ts                # Exports
 │   ├── types.ts                # TypeScript interfaces
 │   ├── presets.ts              # Preset configurations
-│   └── ParticleSystem.ts       # Main particle class
-└── postprocessors/
+│   └── ParticleSystem.ts       # Main particle class (includes wind gusts)
+├── postprocessors/
+│   ├── index.ts                # Exports
+│   ├── types.ts                # TypeScript interfaces
+│   ├── presets.ts              # Preset configurations
+│   └── PostProcessorSystem.ts  # Displacement + color effects
+└── scenes/
     ├── index.ts                # Exports
-    ├── types.ts                # TypeScript interfaces
-    ├── presets.ts              # Preset configurations
-    └── PostProcessorSystem.ts  # Main post-processor class
+    ├── types.ts                # Scene preset interfaces
+    └── presets.ts              # Scene configurations (sunset, storm, etc.)

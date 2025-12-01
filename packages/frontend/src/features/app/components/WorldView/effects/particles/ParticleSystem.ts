@@ -50,6 +50,14 @@ const fragmentShader = `
   }
 `;
 
+// Wind gust configuration
+interface WindGust {
+  active: boolean;
+  strength: { x: number; y: number };
+  duration: number;
+  elapsed: number;
+}
+
 export class ParticleSystem {
   private particles: Particle[] = [];
   private points: THREE.Points | null = null;
@@ -58,6 +66,7 @@ export class ParticleSystem {
   private config: ParticleConfig;
   private time: number = 0;
   private bounds: { width: number; height: number; depth: number };
+  private windGust: WindGust = { active: false, strength: { x: 0, y: 0 }, duration: 0, elapsed: 0 };
 
   constructor(preset: string = 'dust', depth: number = 2) {
     this.config = getPreset(preset) ?? DUST_PRESET.config;
@@ -143,6 +152,21 @@ export class ParticleSystem {
     if (!this.geometry || !this.config.enabled) return;
 
     this.time += deltaTime;
+    
+    // Update wind gust
+    let gustMultiplier = 0;
+    if (this.windGust.active) {
+      this.windGust.elapsed += deltaTime;
+      if (this.windGust.elapsed >= this.windGust.duration) {
+        this.windGust.active = false;
+        this.windGust.elapsed = 0;
+      } else {
+        // Smooth ease-in-out for gust strength
+        const progress = this.windGust.elapsed / this.windGust.duration;
+        gustMultiplier = Math.sin(progress * Math.PI); // 0 -> 1 -> 0
+      }
+    }
+    
     const positions = this.geometry.attributes.position.array as Float32Array;
     const opacities = this.geometry.attributes.opacity.array as Float32Array;
 
@@ -165,9 +189,15 @@ export class ParticleSystem {
           break;
       }
 
-      // Apply wind
+      // Apply base wind
       p.x += this.config.wind.x * deltaTime;
       p.y += this.config.wind.y * deltaTime;
+      
+      // Apply wind gust if active
+      if (this.windGust.active && gustMultiplier > 0) {
+        p.x += this.windGust.strength.x * gustMultiplier * deltaTime;
+        p.y += this.windGust.strength.y * gustMultiplier * deltaTime;
+      }
 
       // Wrap around bounds
       this.wrapParticle(p);
@@ -330,6 +360,28 @@ export class ParticleSystem {
    */
   setBounds(width: number, height: number, depth: number = 2): void {
     this.bounds = { width, height, depth };
+  }
+
+  /**
+   * Trigger a wind gust
+   * @param strengthX - Horizontal gust strength (negative = left, positive = right)
+   * @param strengthY - Vertical gust strength (negative = down, positive = up)
+   * @param duration - How long the gust lasts in seconds
+   */
+  triggerWindGust(strengthX: number = 2, strengthY: number = 0, duration: number = 1.5): void {
+    this.windGust = {
+      active: true,
+      strength: { x: strengthX, y: strengthY },
+      duration,
+      elapsed: 0,
+    };
+  }
+
+  /**
+   * Check if a wind gust is currently active
+   */
+  isWindGustActive(): boolean {
+    return this.windGust.active;
   }
 
   /**

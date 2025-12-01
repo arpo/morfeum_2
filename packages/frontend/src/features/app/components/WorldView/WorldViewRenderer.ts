@@ -12,6 +12,9 @@ import { CameraConfig, createCameraConfig, calculateScissorDimensions } from './
 import { processAnimationFrame, renderFrame, ScissorDimensions } from './animationLoop';
 import { ParticleSystem } from './effects/particles';
 import { PostProcessorSystem } from './effects/postprocessors';
+import type { ColorEffects } from './effects/postprocessors';
+import { getScenePreset } from './effects/scenes';
+import type { ScenePresetConfig } from './effects/scenes';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
 
@@ -55,6 +58,10 @@ export class WorldViewRenderer {
   // Post-processor system
   private postProcessor: PostProcessorSystem | null = null;
 
+  // Scene state
+  private currentScene: ScenePresetConfig | null = null;
+  private sceneTimers: { windGust: number; lightning: number } = { windGust: 0, lightning: 0 };
+
   constructor(options: WorldViewRendererOptions) {
     this.container = options.container;
     this.focus = options.focus ?? WORLD_VIEW_3D_CONFIG.FOCUS;
@@ -90,6 +97,11 @@ export class WorldViewRenderer {
     // Initialize post-processor if enabled
     if (WORLD_VIEW_3D_CONFIG.POSTPROCESSOR?.ENABLED) {
       this.initPostProcessor(WORLD_VIEW_3D_CONFIG.POSTPROCESSOR.PRESET || 'heatwave');
+    }
+
+    // Apply scene preset if enabled (overrides individual particles/postprocessor settings)
+    if (WORLD_VIEW_3D_CONFIG.SCENE?.ENABLED) {
+      this.setScene(WORLD_VIEW_3D_CONFIG.SCENE.PRESET || 'sunset');
     }
   }
 
@@ -213,6 +225,9 @@ export class WorldViewRenderer {
         this.postProcessor.update(deltaTime);
       }
 
+      // Update scene effects (wind gusts, lightning)
+      this.updateSceneEffects(deltaTime);
+
       // Render with or without post-processing
       if (this.postProcessor && this.postProcessor.isEnabled()) {
         this.postProcessor.render(this.renderer, this.scene, this.camera);
@@ -313,6 +328,181 @@ export class WorldViewRenderer {
   setPostProcessorIntensity(intensity: number): void {
     if (this.postProcessor) {
       this.postProcessor.setIntensity(intensity);
+    }
+  }
+
+  // ===== New Color Effect Methods =====
+
+  /**
+   * Set vignette strength (0-1)
+   */
+  setVignette(strength: number): void {
+    this.ensurePostProcessor();
+    this.postProcessor?.setVignette(strength);
+  }
+
+  /**
+   * Set color tint (RGB values 0-2, strength 0-1)
+   */
+  setTint(r: number, g: number, b: number, strength: number = 1): void {
+    this.ensurePostProcessor();
+    this.postProcessor?.setTint(r, g, b, strength);
+  }
+
+  /**
+   * Set bloom strength (0-1)
+   */
+  setBloom(strength: number): void {
+    this.ensurePostProcessor();
+    this.postProcessor?.setBloom(strength);
+  }
+
+  /**
+   * Trigger lightning flash
+   */
+  triggerLightning(intensity: number = 1): void {
+    this.ensurePostProcessor();
+    this.postProcessor?.triggerLightning(intensity);
+  }
+
+  /**
+   * Set desaturation amount (0-1, 0=full color, 1=grayscale)
+   */
+  setDesaturate(amount: number): void {
+    this.ensurePostProcessor();
+    this.postProcessor?.setDesaturate(amount);
+  }
+
+  /**
+   * Set multiple color effects at once
+   */
+  setColorEffects(effects: Partial<ColorEffects>): void {
+    this.ensurePostProcessor();
+    this.postProcessor?.setColorEffects(effects);
+  }
+
+  /**
+   * Reset all color effects to defaults
+   */
+  resetColorEffects(): void {
+    this.postProcessor?.resetColorEffects();
+  }
+
+  // ===== Wind Gust Methods =====
+
+  /**
+   * Trigger a wind gust on particles
+   */
+  triggerWindGust(strengthX: number = 2, strengthY: number = 0, duration: number = 1.5): void {
+    this.particleSystem?.triggerWindGust(strengthX, strengthY, duration);
+  }
+
+  // ===== Scene Preset Methods =====
+
+  /**
+   * Apply a scene preset (sunset, storm, underwater, haunted, magical)
+   */
+  setScene(sceneName: string): void {
+    const scene = getScenePreset(sceneName);
+    if (!scene) return;
+
+    this.currentScene = scene;
+    this.sceneTimers = { windGust: 0, lightning: 0 };
+
+    // Apply particle preset
+    if (scene.particles.enabled) {
+      if (this.particleSystem) {
+        this.particleSystem.setPreset(scene.particles.preset);
+        this.particleSystem.setEnabled(true);
+      } else {
+        this.initParticles(scene.particles.preset);
+      }
+    } else {
+      this.particleSystem?.setEnabled(false);
+    }
+
+    // Apply displacement effect
+    this.ensurePostProcessor();
+    if (scene.displacement.enabled && scene.displacement.preset !== 'none') {
+      this.postProcessor?.setPreset(scene.displacement.preset);
+      this.postProcessor?.setEnabled(true);
+      if (scene.displacement.intensity !== undefined) {
+        this.postProcessor?.setIntensity(scene.displacement.intensity);
+      }
+    } else {
+      // Keep post-processor for color effects but disable displacement
+      this.postProcessor?.setIntensity(0);
+    }
+
+    // Apply color effects
+    if (scene.colorEffects) {
+      this.postProcessor?.setColorEffects(scene.colorEffects);
+    }
+  }
+
+  /**
+   * Clear current scene and reset effects
+   */
+  clearScene(): void {
+    this.currentScene = null;
+    this.sceneTimers = { windGust: 0, lightning: 0 };
+    this.postProcessor?.resetColorEffects();
+    this.postProcessor?.setIntensity(0);
+  }
+
+  /**
+   * Update scene-specific effects (wind gusts, lightning)
+   */
+  private updateSceneEffects(deltaTime: number): void {
+    if (!this.currentScene) return;
+
+    // Handle random wind gusts
+    if (this.currentScene.windGust?.enabled) {
+      this.sceneTimers.windGust += deltaTime;
+      const interval = this.currentScene.windGust.interval;
+      
+      // Add randomness to interval (±30%)
+      const variance = interval * 0.3;
+      const nextGust = interval + (Math.random() - 0.5) * 2 * variance;
+      
+      if (this.sceneTimers.windGust >= nextGust && !this.particleSystem?.isWindGustActive()) {
+        this.particleSystem?.triggerWindGust(
+          this.currentScene.windGust.strengthX,
+          this.currentScene.windGust.strengthY,
+          this.currentScene.windGust.duration
+        );
+        this.sceneTimers.windGust = 0;
+      }
+    }
+
+    // Handle random lightning
+    if (this.currentScene.lightning?.enabled) {
+      this.sceneTimers.lightning += deltaTime;
+      const interval = this.currentScene.lightning.interval;
+      
+      // Add randomness to interval (±50%)
+      const variance = interval * 0.5;
+      const nextFlash = interval + (Math.random() - 0.5) * 2 * variance;
+      
+      if (this.sceneTimers.lightning >= nextFlash) {
+        this.postProcessor?.triggerLightning(this.currentScene.lightning.intensity);
+        this.sceneTimers.lightning = 0;
+      }
+    }
+  }
+
+  /**
+   * Ensure post-processor is initialized
+   */
+  private ensurePostProcessor(): void {
+    if (!this.postProcessor) {
+      this.postProcessor = new PostProcessorSystem(
+        this.container.clientWidth,
+        this.container.clientHeight,
+        'heatwave',
+        true
+      );
+      this.postProcessor.setIntensity(0); // No displacement by default
     }
   }
 
