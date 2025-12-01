@@ -85,6 +85,12 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Minimum scale factor for far objects when depth scaling is enabled (0.0 = no expansion for far, 1.0 = full expansion for all) */
   EXPAND_DEPTHMAP_MIN_SCALE: 0.6,
+  
+  /** Particle effects - floating dust, snow, rain, etc. */
+  PARTICLES: {
+    ENABLED: true,
+    PRESET: 'dust', // 'dust' | 'snow' | 'rain' | 'fireflies'
+  },
 } as const;
 
 /**

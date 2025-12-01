@@ -10,6 +10,7 @@ import { loadDepthMapData, createDepthGeometry, scaleMeshToFit } from './geometr
 import { StereoState, createStereoState, setupStereoScene, cleanupStereoScene } from './stereoRenderer';
 import { CameraConfig, createCameraConfig, calculateScissorDimensions } from './cameraAnimation';
 import { processAnimationFrame, renderFrame, ScissorDimensions } from './animationLoop';
+import { ParticleSystem } from './effects/particles';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
 
@@ -46,6 +47,10 @@ export class WorldViewRenderer {
   private stereoState: StereoState;
   private mouseXOffset: number = 0.04;
 
+  // Particle system
+  private particleSystem: ParticleSystem | null = null;
+  private lastFrameTime: number = 0;
+
   constructor(options: WorldViewRendererOptions) {
     this.container = options.container;
     this.focus = options.focus ?? WORLD_VIEW_3D_CONFIG.FOCUS;
@@ -69,6 +74,19 @@ export class WorldViewRenderer {
     this.camera.lookAt(0, 0, 0);
 
     this.startAnimation();
+
+    // Initialize particle system if enabled
+    if (WORLD_VIEW_3D_CONFIG.PARTICLES?.ENABLED) {
+      this.initParticles(WORLD_VIEW_3D_CONFIG.PARTICLES.PRESET || 'dust');
+    }
+  }
+
+  /**
+   * Initialize particle system with a preset
+   */
+  private initParticles(preset: string): void {
+    this.particleSystem = new ParticleSystem(preset);
+    this.particleSystem.createMesh(this.scene);
   }
 
   async load(imageUrl: string, depthUrl?: string | null): Promise<void> {
@@ -139,8 +157,15 @@ export class WorldViewRenderer {
   }
 
   private startAnimation(): void {
+    this.lastFrameTime = performance.now();
+    
     const animate = () => {
       this.animationId = requestAnimationFrame(animate);
+      
+      // Calculate delta time for particle animation
+      const currentTime = performance.now();
+      const deltaTime = (currentTime - this.lastFrameTime) / 1000;
+      this.lastFrameTime = currentTime;
       
       const state = {
         targetX: this.targetX, targetY: this.targetY,
@@ -153,6 +178,11 @@ export class WorldViewRenderer {
       );
       this.targetX = smoothed.targetX;
       this.targetY = smoothed.targetY;
+
+      // Update particles
+      if (this.particleSystem) {
+        this.particleSystem.update(deltaTime);
+      }
 
       renderFrame(
         this.displayMode, this.renderer, this.scene, this.stereoState.scene2,
@@ -196,10 +226,36 @@ export class WorldViewRenderer {
 
   hasDepthMap(): boolean { return this.material?.uniforms.meshDepth.value > 0; }
 
+  /**
+   * Set particle preset (dust, snow, rain, fireflies)
+   */
+  setParticlePreset(preset: string): void {
+    if (this.particleSystem) {
+      this.particleSystem.setPreset(preset);
+    } else {
+      this.initParticles(preset);
+    }
+  }
+
+  /**
+   * Enable/disable particles
+   */
+  setParticlesEnabled(enabled: boolean): void {
+    if (this.particleSystem) {
+      this.particleSystem.setEnabled(enabled);
+    } else if (enabled) {
+      this.initParticles('dust');
+    }
+  }
+
   dispose(): void {
     if (this.animationId !== null) cancelAnimationFrame(this.animationId);
     this.cleanupMesh();
     this.stereoState = cleanupStereoScene(this.stereoState);
+    if (this.particleSystem) {
+      this.particleSystem.dispose(this.scene);
+      this.particleSystem = null;
+    }
     this.renderer.dispose();
     if (this.renderer.domElement.parentNode) {
       this.renderer.domElement.parentNode.removeChild(this.renderer.domElement);
