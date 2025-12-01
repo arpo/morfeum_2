@@ -2960,6 +2960,214 @@
       "searchDesc": "[Location - Exterior] Grounded freighter in a canyon. Has: hull passage (midground), hull passage (midground), viewport (superstructure, midground)",
       "slug": "the-fallen-behemoth",
       "primaryMedia": "media-1764536384302-l9gzy6k9z"
+    },
+    "loc-1764573406847-nze5wzyo6": {
+      "id": "loc-1764573406847-nze5wzyo6",
+      "type": "host",
+      "name": "The Ethereal Sea",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, unending vistas of swirling mist and dreamlike fluid. Islands of bizarre, colossal geological formations drift serenely.  Bioluminescent organisms provide faint, otherworldly light. The overall impression is one of immense, serene scale and a profound sense of the unknown.",
+        "colorsAndLighting": "Dominated by cool, ethereal blues and whites from the mist and ambient light.  Pockets of vibrant, bioluminescent greens, blues, and purples offer contrasting accents. Light is diffuse and soft, creating a gentle, otherworldly glow.",
+        "atmosphere": "A perpetual, cool, humid mist permeates all spaces, creating a soft visual diffusion and a sense of constant, gentle moisture. The air is still and quiet, lending an atmosphere of deep calm and mystery.  Temperature is consistently cool.",
+        "materials": "Primarily composed of immense, irregularly shaped rock formations that appear to defy gravity.  Surfaces are textured and ancient.  Bioluminescent organisms grow in patches, emitting a soft light and adding a gelatinous or crystalline texture.",
+        "mood": "Serene, mystical, awe-inspiring, and slightly melancholic.  A sense of boundless possibility and quiet contemplation.",
+        "sounds": "Distant ethereal hum, soft mist whispers, gentle water lapping.",
+        "spatialLayout": "Vast, open, and non-Euclidean. Islands float in an infinite void, connected by unseen currents of mist. Scale is colossal and disorienting, with no clear horizon.",
+        "primary_surfaces": [
+          "Ethereal rock",
+          "Dense mist"
+        ],
+        "secondary_surfaces": [
+          "Bioluminescent growth",
+          "Dream-fluid"
+        ],
+        "accent_features": [
+          "Floating geological formations",
+          "Subtle light emissions"
+        ],
+        "dominant": "Blue",
+        "secondary": "White",
+        "accent": "Bioluminescent greens and purples",
+        "ambient": "Cool",
+        "genre": "fantasy",
+        "architectural_tone": "organic-naturalistic geological formations, no artificial structures",
+        "cultural_tone": "primitive, primal, attuned to natural phenomena",
+        "materials_base": "rock, mineral, organic bioluminescent matter",
+        "mood_baseline": "serene contemplation",
+        "palette_bias": "cool, muted, ethereal",
+        "soundscape_base": "ambient natural, subtle",
+        "flora_base": "Bioluminescent flora",
+        "fauna_base": "Giant ethereal sea creatures",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Ethereal Sea",
+          "looks": "A boundless ocean of mist and dreams.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A boundless ocean of mist and dreams.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Floating rock islands",
+        "Misty expanses",
+        "Bioluminescent life"
+      ],
+      "uniqueIdentifiers": [
+        "Dream-like physics",
+        "Mysterious origins",
+        "Boundless mist"
+      ],
+      "searchDesc": "A world of floating islands in an endless, misty ocean.",
+      "slug": "the-ethereal-sea"
+    },
+    "c6a3b5d2-ad30-4c13-a380-68e717714fbf": {
+      "id": "c6a3b5d2-ad30-4c13-a380-68e717714fbf",
+      "type": "region",
+      "name": "The Ethereal Sea",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Expanses of swirling, luminous mist broken by the colossal, ancient forms of rock-whales.  Patches of vibrant bioluminescent barnacles and strange, glowing flora cling to their surfaces.  The water below is a deep, shifting azure.",
+        "colorsAndLighting": "Predominantly cool blues and whites from the mist, with vibrant pops of bioluminescent green and cyan from organisms.  Light is diffused, with deeper shadows cast by the immense rock formations.",
+        "atmosphere": "A dense, cool, and humid mist creates a constant, soft visual diffusion.  The air carries a faint, oceanic scent mixed with a peculiar, almost sweet aroma from the bioluminescent life.  Gentle currents of mist can be felt.",
+        "materials": "The primary materials are the rough, textured, and ancient surfaces of the rock-whales.  These are encrusted with hard, crystalline bioluminescent barnacles and soft, glowing mosses.",
+        "mood": "Mysterious, serene, and majestic.  A sense of journey and wonder.",
+        "sounds": "Distant whale-like calls, gentle lapping of water, soft hissing of mist.",
+        "spatialLayout": "Vast, open spaces between colossal, drifting landmasses.  A sense of immense depth and scale, with the void of mist stretching in all directions.",
+        "primary_surfaces": [
+          "Textured rock",
+          "Dense mist"
+        ],
+        "secondary_surfaces": [
+          "Bioluminescent barnacles",
+          "Ethereal water"
+        ],
+        "accent_features": [
+          "Floating geological formations",
+          "Bioluminescent growths"
+        ],
+        "dominant": "Blue",
+        "secondary": "White",
+        "accent": "Green, Cyan",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "Bioluminescent mosses and algae",
+        "fauna_base": "Giant ethereal marine life",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Ethereal Sea",
+          "looks": "A boundless ocean of mist and dreams. This region encompasses the vast expanse where the great rock-whales drift.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A boundless ocean of mist and dreams. This region encompasses the vast expanse where the great rock-whales drift.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Rock-whales",
+        "Misty voids",
+        "Bioluminescent reefs"
+      ],
+      "uniqueIdentifiers": [
+        "Gigantic floating islands",
+        "Interconnected mist currents",
+        "Life adapted to mist"
+      ],
+      "searchDesc": "The vast, misty expanse dotted with colossal floating rock-whales.",
+      "slug": "the-ethereal-sea-region"
+    },
+    "6215d54a-1f2a-449d-abe0-9892f710484e": {
+      "id": "6215d54a-1f2a-449d-abe0-9892f710484e",
+      "type": "location",
+      "name": "The Great Cetacean's Maw",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The scene depicts a colossal cavernous maw carved into a massive, floating rock formation resembling a whale. The entrance is an immense, rounded aperture framing a bright, misty expanse. Jagged, textured rock walls rise steeply on either side, adorned with sparse, glowing vegetation. The water below is a vibrant turquoise, reflecting the ambient light. The scale is overwhelming, emphasizing the colossal nature of the rock-whale and its blowhole-like entrance.",
+        "colorsAndLighting": "Soft, diffused light emanates from the opening at the far end of the cavern, creating a bright, ethereal glow. The interior rock surfaces are subtly illuminated, with the water reflecting the light, creating vibrant turquoise highlights. The contrast is moderate, with the brightest point being the distant opening.",
+        "atmosphere": "A dense, cool mist permeates the cavern, obscuring distant details and lending an ethereal quality to the environment. The air appears humid, with the water's surface generating visible vapor. The overall atmosphere is one of deep mystery and immense scale.",
+        "materials": "Primarily rough, textured stone forming the cavern walls.  The rock is encrusted with hard, shimmering bioluminescent barnacles.  The water is cool and fluid.",
+        "mood": "Awe-inspiring, mysterious, and slightly foreboding, hinting at the unknown depths within.",
+        "sounds": "Damp echoes, gentle water dripping, distant hum.",
+        "spatialLayout": "The foreground consists of the shimmering turquoise water and jagged, rocky edges. The midground is dominated by the immense, curved rock walls of the cavern and the colossal 'rock-whale' structure containing the entrance. The background is the bright, mist-filled aperture, suggesting an exit or a continuation of the environment.",
+        "primary_surfaces": "Stone",
+        "secondary_surfaces": "Water",
+        "accent_features": "Bioluminescent flora",
+        "dominant": "Blue (rock walls, water)",
+        "secondary": "White/Light Blue (mist, distant opening)",
+        "accent": "Orange (vegetation)",
+        "ambient": "Cool blue-white",
+        "genre": null,
+        "architectural_tone": "organic-naturalistic geological formations, no artificial structures",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "Sparse, glowing mosses and lichens",
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Great Cetacean's Maw",
+          "looks": "The immense cavernous entrance situated on the flank of the largest rock-whale island.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The immense cavernous entrance situated on the flank of the largest rock-whale island.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center, background",
+          "description": "Vast, mist-filled passage leading out of the cavern"
+        },
+        {
+          "type": "passage",
+          "position": "center, midground",
+          "description": "The cavern itself serves as a navigable passage through the rock-whale"
+        }
+      ],
+      "dominantElements": [
+        "Cavernous entrance ~50m wide (center, background)",
+        "Colossal rock-whale formation (midground)",
+        "Turquoise water body (foreground/midground)",
+        "Jagged rock walls (left/right, midground)"
+      ],
+      "uniqueIdentifiers": [
+        "Cavernous blowhole-like entrance",
+        "Floating rock-whale formation",
+        "Bioluminescent barnacles (implied by description, not visually explicit)"
+      ],
+      "searchDesc": "Cave interior with water. Has: passage (center, background), passage (center, midground)",
+      "slug": "the-great-cetaceans-maw",
+      "primaryMedia": "media-1764573436917-8pzu5vhhj"
     }
   },
   "views": {},
@@ -3220,6 +3428,23 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764573406847-nze5wzyo6",
+      "type": "host",
+      "children": [
+        {
+          "id": "c6a3b5d2-ad30-4c13-a380-68e717714fbf",
+          "type": "region",
+          "children": [
+            {
+              "id": "6215d54a-1f2a-449d-abe0-9892f710484e",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -3234,6 +3459,7 @@
     "loc-1764500780583-kusiped29",
     "loc-1764536291494-wq4denjc8",
     "loc-1764536322127-opnufbd52",
-    "loc-1764536360075-kkhbqt8s5"
+    "loc-1764536360075-kkhbqt8s5",
+    "loc-1764573406847-nze5wzyo6"
   ]
 }

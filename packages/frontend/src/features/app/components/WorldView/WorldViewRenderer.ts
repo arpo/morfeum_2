@@ -11,6 +11,7 @@ import { StereoState, createStereoState, setupStereoScene, cleanupStereoScene } 
 import { CameraConfig, createCameraConfig, calculateScissorDimensions } from './cameraAnimation';
 import { processAnimationFrame, renderFrame, ScissorDimensions } from './animationLoop';
 import { ParticleSystem } from './effects/particles';
+import { PostProcessorSystem } from './effects/postprocessors';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
 
@@ -51,6 +52,9 @@ export class WorldViewRenderer {
   private particleSystem: ParticleSystem | null = null;
   private lastFrameTime: number = 0;
 
+  // Post-processor system
+  private postProcessor: PostProcessorSystem | null = null;
+
   constructor(options: WorldViewRendererOptions) {
     this.container = options.container;
     this.focus = options.focus ?? WORLD_VIEW_3D_CONFIG.FOCUS;
@@ -77,15 +81,35 @@ export class WorldViewRenderer {
 
     // Initialize particle system if enabled
     if (WORLD_VIEW_3D_CONFIG.PARTICLES?.ENABLED) {
-      this.initParticles(WORLD_VIEW_3D_CONFIG.PARTICLES.PRESET || 'dust');
+      this.initParticles(
+        WORLD_VIEW_3D_CONFIG.PARTICLES.PRESET || 'dust',
+        WORLD_VIEW_3D_CONFIG.PARTICLES.DEPTH || 2
+      );
     }
+
+    // Initialize post-processor if enabled
+    if (WORLD_VIEW_3D_CONFIG.POSTPROCESSOR?.ENABLED) {
+      this.initPostProcessor(WORLD_VIEW_3D_CONFIG.POSTPROCESSOR.PRESET || 'heatwave');
+    }
+  }
+
+  /**
+   * Initialize post-processor with a preset
+   */
+  private initPostProcessor(preset: string, enabled: boolean = true): void {
+    this.postProcessor = new PostProcessorSystem(
+      this.container.clientWidth,
+      this.container.clientHeight,
+      preset,
+      enabled
+    );
   }
 
   /**
    * Initialize particle system with a preset
    */
-  private initParticles(preset: string): void {
-    this.particleSystem = new ParticleSystem(preset);
+  private initParticles(preset: string, depth: number = 2): void {
+    this.particleSystem = new ParticleSystem(preset, depth);
     this.particleSystem.createMesh(this.scene);
   }
 
@@ -184,10 +208,20 @@ export class WorldViewRenderer {
         this.particleSystem.update(deltaTime);
       }
 
-      renderFrame(
-        this.displayMode, this.renderer, this.scene, this.stereoState.scene2,
-        this.camera, this.container.clientWidth, this.container.clientHeight, this.scissor
-      );
+      // Update post-processor
+      if (this.postProcessor) {
+        this.postProcessor.update(deltaTime);
+      }
+
+      // Render with or without post-processing
+      if (this.postProcessor && this.postProcessor.isEnabled()) {
+        this.postProcessor.render(this.renderer, this.scene, this.camera);
+      } else {
+        renderFrame(
+          this.displayMode, this.renderer, this.scene, this.stereoState.scene2,
+          this.camera, this.container.clientWidth, this.container.clientHeight, this.scissor
+        );
+      }
     };
     animate();
   }
@@ -201,6 +235,9 @@ export class WorldViewRenderer {
     this.scaleMesh();
     if (this.stereoState.mesh2 && this.mesh) {
       this.stereoState.mesh2.scale.copy(this.mesh.scale);
+    }
+    if (this.postProcessor) {
+      this.postProcessor.resize(width, height);
     }
   }
 
@@ -248,6 +285,37 @@ export class WorldViewRenderer {
     }
   }
 
+  /**
+   * Set post-processor preset (heatwave, underwater, glitch, dream)
+   */
+  setPostProcessorPreset(preset: string): void {
+    if (this.postProcessor) {
+      this.postProcessor.setPreset(preset);
+    } else {
+      this.initPostProcessor(preset);
+    }
+  }
+
+  /**
+   * Enable/disable post-processor
+   */
+  setPostProcessorEnabled(enabled: boolean): void {
+    if (this.postProcessor) {
+      this.postProcessor.setEnabled(enabled);
+    } else if (enabled) {
+      this.initPostProcessor('heatwave');
+    }
+  }
+
+  /**
+   * Set post-processor intensity (0-1)
+   */
+  setPostProcessorIntensity(intensity: number): void {
+    if (this.postProcessor) {
+      this.postProcessor.setIntensity(intensity);
+    }
+  }
+
   dispose(): void {
     if (this.animationId !== null) cancelAnimationFrame(this.animationId);
     this.cleanupMesh();
@@ -255,6 +323,10 @@ export class WorldViewRenderer {
     if (this.particleSystem) {
       this.particleSystem.dispose(this.scene);
       this.particleSystem = null;
+    }
+    if (this.postProcessor) {
+      this.postProcessor.dispose();
+      this.postProcessor = null;
     }
     this.renderer.dispose();
     if (this.renderer.domElement.parentNode) {

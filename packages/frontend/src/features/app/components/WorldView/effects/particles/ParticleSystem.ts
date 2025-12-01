@@ -59,9 +59,9 @@ export class ParticleSystem {
   private time: number = 0;
   private bounds: { width: number; height: number; depth: number };
 
-  constructor(preset: string = 'dust') {
+  constructor(preset: string = 'dust', depth: number = 2) {
     this.config = getPreset(preset) ?? DUST_PRESET.config;
-    this.bounds = { width: 4, height: 3, depth: 2 };
+    this.bounds = { width: 4, height: 3, depth };
     this.initParticles();
   }
 

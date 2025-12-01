@@ -1437,6 +1437,35 @@
         "char-1764537894047-391ytvry4"
       ],
       "parentMedia": "media-1764537904507-9dji6e60d"
+    },
+    "media-1764573436917-8pzu5vhhj": {
+      "id": "media-1764573436917-8pzu5vhhj",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84867d/3NTxQKh2ZGGBruQeyG4Wr.jpg",
+      "createdAt": "2025-12-01T07:17:16.917Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"location. exterior, Roger Dean–inspired archipelago of floating rock-whales, bioluminescent barnacles, a cavernous blowhole entrance on the largest\"\n\nThe Great Cetacean's Maw, camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n\n[SCENE:]\nHost The Ethereal Sea: A boundless ocean of mist and dreams..\n\nRegion The Ethereal Sea: .\n\nDescription: The immense cavernous entrance situated on the flank of the largest rock-whale island..\n\nLooks: A vast, gaping aperture on a colossal, floating leviathan of stone and flora, its edges adorned with pulsing, bioluminescent barnacles..\n\nAtmosphere: A cool, humid air carries the scent of brine and ancient stone, with a faint, resonant hum..\n\nMood: Awes-inspiring, mysterious.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "6215d54a-1f2a-449d-abe0-9892f710484e"
+      ]
+    },
+    "media-1764573579322-rnoc1if8s": {
+      "id": "media-1764573579322-rnoc1if8s",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84868d/YyFIaI61RV5vYtFfPs2HQ_97c64c5abbde4576a1b0603097268084.png",
+      "createdAt": "2025-12-01T07:19:39.322Z",
+      "metadata": {
+        "parentMedia": "media-1764573436917-8pzu5vhhj",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "6215d54a-1f2a-449d-abe0-9892f710484e"
+      ],
+      "parentMedia": "media-1764573436917-8pzu5vhhj"
     }
   }
 }
