@@ -1509,6 +1509,64 @@
         "d8fc47c5-0e5d-4514-a681-3d81147ddf48"
       ],
       "parentMedia": "media-1764536341618-ez0bt13pq"
+    },
+    "media-1764597093598-0cafcnp97": {
+      "id": "media-1764597093598-0cafcnp97",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a848fbc/2gBvCG5O6SngeUVrnra19.jpg",
+      "createdAt": "2025-12-01T13:51:33.599Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"Schuiten-inspired vertical metropolis of brass and dark stone, external funicular cages leading to a grand arched gate\"\n\nSteward Krell, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A gaunt man, his skin like aged parchment stretched taut over sharp bone. Deep-set eyes glint with a perpetual, unsettling alertness. His hair is a shock of stark white, unnaturally stiff..\n\nWearing: A tarnished brass waistcoat, intricately engraved with geometric patterns, worn over a dark, high-collared tunic of rough-spun wool. Heavy leather gloves extend to his elbows, cinched with simple steel buckles. Polished, worn leather boots..\n\nPresence: A prickle of watchful stillness, like the air before a sudden downpour..\n\nSetting: The echoing, shadowed expanse beneath a colossal arched gate, metallic gleam reflecting off damp, dark stone..\n\nTheir demeanor reflects: Observant and meticulously organized, with a deep-seated adherence to protocol. Distrustful of spontaneity and prone to cataloging every detail..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764597066944-yut6uc9ag"
+      ]
+    },
+    "media-1764597098529-j65kkzo34": {
+      "id": "media-1764597098529-j65kkzo34",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a848fbd/5YSyrudbWip7VsDuIkwlT_ae4de85f6efe441e93590e271c878a44.png",
+      "createdAt": "2025-12-01T13:51:38.529Z",
+      "metadata": {
+        "parentMedia": "media-1764597093598-0cafcnp97",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764597066944-yut6uc9ag"
+      ],
+      "parentMedia": "media-1764597093598-0cafcnp97"
+    },
+    "media-1764597135991-pn3clssik": {
+      "id": "media-1764597135991-pn3clssik",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a848fc0/HtBF006ALOFkLut9tJFj7.jpg",
+      "createdAt": "2025-12-01T13:52:15.991Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"Retro-futurist dam of impossible scale, art-deco turbines, central control cathedral with vaulted doors\"\n\nUnit 734, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A towering automaton of polished chrome and obsidian glass, jointed with glowing emerald conduits. Its head is a simple, smooth dome with a single, pulsing crimson optical lens. Its form is impossibly slender for its height, giving the impression of immense, compressed power..\n\nWearing: Its chassis is seamless, its 'clothing' the integrated plating and gleaming surfaces. Intricate art-deco patterns are etched into the chrome, catching the light like inlaid metal..\n\nPresence: A palpable aura of immense, controlled energy and absolute stillness. The air around it feels charged, but devoid of heat..\n\nSetting: Bathed in the cool, sterile glow of the central control cathedral, amidst the hum of colossal, art-deco turbines..\n\nTheir demeanor reflects: Unwaveringly logical and efficient. Possesses an immense, cold dedication to its purpose. Communicates in precisely modulated, low-frequency hums..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764597117505-rn31dvsuc"
+      ]
+    },
+    "media-1764597142771-fg7snnh7t": {
+      "id": "media-1764597142771-fg7snnh7t",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a848fc2/Hi1aA9BH8DUGu-IgJOFh9_0e2f6a1c968f460c8aba27db37450354.png",
+      "createdAt": "2025-12-01T13:52:22.771Z",
+      "metadata": {
+        "parentMedia": "media-1764597135991-pn3clssik",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764597117505-rn31dvsuc"
+      ],
+      "parentMedia": "media-1764597135991-pn3clssik"
     }
   }
 }

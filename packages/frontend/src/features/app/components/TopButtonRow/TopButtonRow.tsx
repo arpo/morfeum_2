@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui';
-import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink } from '@/icons';
+import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera } from '@/icons';
 import styles from './TopButtonRow.module.css';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
@@ -16,6 +16,7 @@ interface TopButtonRowProps {
   onOpenChat: () => void;
   onGenerateDepthMap: () => void;
   onDisplayModeChange: (mode: DisplayMode) => void;
+  onSaveTrainingData: () => void;
   isCharacter: boolean;
   infoDisabled: boolean;
   chatDisabled: boolean;
@@ -31,6 +32,7 @@ export function TopButtonRow({
   onOpenChat,
   onGenerateDepthMap,
   onDisplayModeChange,
+  onSaveTrainingData,
   isCharacter,
   infoDisabled,
   chatDisabled,
@@ -114,6 +116,15 @@ export function TopButtonRow({
         aria-label="Open external display"
       >
         <IconExternalLink size={20} />
+      </Button>
+
+      {/* Save training data (image + description) */}
+      <Button
+        onClick={onSaveTrainingData}
+        className={styles.button}
+        aria-label="Save training data"
+      >
+        <IconCamera size={20} />
       </Button>
     </div>
   );

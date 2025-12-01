@@ -9,6 +9,7 @@
 - **Visual Effects System**: Scene presets combining particles, post-processing, and color effects
 - **Navigation System**: AI-powered spatial navigation with intent classification
 - **Media System**: Centralized image storage and depth map generation
+- **Training Data Export**: Save image/text pairs for LoRA training (camera button)
 - **External View**: Real-time sync between main app and external browser tabs
 - **Chat System**: Character conversations with entity sessions
 - **UI State Management**: Panel toggles, focus mode, entity explorers

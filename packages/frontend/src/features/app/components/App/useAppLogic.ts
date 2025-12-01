@@ -14,6 +14,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { useDepthMapLogic } from '@/features/app/components/TopButtonRow/useDepthMapLogic';
 import { getDepthMapForMedia, clearMediaCache } from '@/services/mediaService';
+import { saveTrainingData } from '@/services/trainingDataService';
 import type { DisplayMode } from '@/features/app/components/TopButtonRow/TopButtonRow';
 
 // BroadcastChannel for syncing external display windows
@@ -213,6 +214,35 @@ export function useAppLogic() {
     externalViewChannel?.postMessage({ type: 'displayModeChanged', mode });
   }, []);
 
+  const handleSaveTrainingData = useCallback(async () => {
+    if (!activeEntity || !activeEntitySession?.entityImage) return;
+    
+    let text = '';
+    let name = activeEntitySession.entityName || 'entity';
+    
+    if (isCharacter) {
+      // Get character's details.looks with "A portrait of " prefix
+      const character = useCharactersStore.getState().getCharacter(activeEntity);
+      const looks = character?.details?.looks || '';
+      text = looks ? `A portrait of ${looks}` : '';
+    } else {
+      // Get location's description with "A scene of " prefix
+      const node = useLocationsStore.getState().getNode(activeEntity);
+      const description = (node as any)?.description || '';
+      text = description ? `A scene of ${description}` : '';
+    }
+    
+    if (!text) {
+      return;
+    }
+    
+    await saveTrainingData({
+      imageUrl: activeEntitySession.entityImage,
+      text,
+      name
+    });
+  }, [activeEntity, activeEntitySession, isCharacter]);
+
   // Broadcast entity change to external views
   useEffect(() => {
     if (activeEntity) {
@@ -289,6 +319,7 @@ export function useAppLogic() {
     handleOpenChat,
     handleGenerateDepthMap,
     handleDisplayModeChange,
+    handleSaveTrainingData,
     toggleEntityExplorerPanel,
     closeEntityPanel
   };
