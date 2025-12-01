@@ -95,8 +95,8 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Post-processor effects - image displacement/distortion */
   POSTPROCESSOR: {
-    ENABLED: true,
-    PRESET: 'dream', // 'heatwave' | 'underwater' | 'glitch' | 'dream'
+    ENABLED: false,
+    PRESET: 'heatwave', // 'heatwave' | 'underwater' | 'glitch' | 'dream'
   },
 } as const;
 
