@@ -3,6 +3,7 @@
  */
 
 export type ParticleBehavior = 'float' | 'fall' | 'rise' | 'flicker';
+export type ParticleBlendMode = 'normal' | 'additive' | 'multiply';
 
 export interface ParticleConfig {
   enabled: boolean;
@@ -12,6 +13,7 @@ export interface ParticleConfig {
   opacity: { min: number; max: number };
   color: string;
   behavior: ParticleBehavior;
+  blendMode: ParticleBlendMode;  // How particles blend with background (normal, additive, multiply)
   wind: { x: number; y: number };
   drift: { x: number; y: number };  // Direction particles drift (y: positive=up, negative=down)
   turbulence: number;

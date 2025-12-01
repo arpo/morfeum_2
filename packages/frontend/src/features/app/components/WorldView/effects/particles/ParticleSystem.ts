@@ -5,8 +5,15 @@
  */
 
 import * as THREE from 'three';
-import type { ParticleConfig, Particle } from './types';
+import type { ParticleConfig, Particle, ParticleBlendMode } from './types';
 import { getPreset, DUST_PRESET } from './presets';
+
+// Map blend mode string to Three.js blending constant
+const BLEND_MODES: Record<ParticleBlendMode, THREE.Blending> = {
+  normal: THREE.NormalBlending,
+  additive: THREE.AdditiveBlending,
+  multiply: THREE.MultiplyBlending,
+};
 
 // Vertex shader - passes size and opacity to fragment shader
 const vertexShader = `
@@ -118,7 +125,7 @@ export class ParticleSystem {
       vertexShader,
       fragmentShader,
       transparent: true,
-      blending: THREE.AdditiveBlending,
+      blending: BLEND_MODES[this.config.blendMode] ?? THREE.NormalBlending,
       depthWrite: false,
     });
 
@@ -304,6 +311,7 @@ export class ParticleSystem {
 
     if (this.material) {
       this.material.uniforms.color.value.set(this.config.color);
+      this.material.blending = BLEND_MODES[this.config.blendMode] ?? THREE.NormalBlending;
     }
   }
 

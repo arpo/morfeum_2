@@ -18,6 +18,7 @@ export const DUST_PRESET: ParticlePreset = {
     opacity: { min: 0.15, max: 0.4 },
     color: '#ffffff',
     behavior: 'float',
+    blendMode: 'additive',  // Normal blending for natural look
     wind: { x: 0.02, y: -0.01 },
     drift: { x: 0, y: 0 },  // No drift - just turbulence
     turbulence: 0.3,
@@ -38,6 +39,7 @@ export const SNOW_PRESET: ParticlePreset = {
     opacity: { min: 0.5, max: 0.9 },
     color: '#ffffff',
     behavior: 'fall',
+    blendMode: 'normal',  // Normal blending for natural look
     wind: { x: 0.1, y: 0 },
     drift: { x: 0, y: 0 },  // Fall behavior handles vertical movement
     turbulence: 0.4,
@@ -58,6 +60,7 @@ export const RAIN_PRESET: ParticlePreset = {
     opacity: { min: 0.3, max: 0.6 },
     color: '#a0c0ff',
     behavior: 'fall',
+    blendMode: 'normal',  // Normal blending for natural look
     wind: { x: 0.3, y: 0 },
     drift: { x: 0, y: 0 },  // Fall behavior handles vertical movement
     turbulence: 0.1,
@@ -77,6 +80,7 @@ export const FIREFLIES_PRESET: ParticlePreset = {
     opacity: { min: 0.3, max: 1 },
     color: '#ffff80',
     behavior: 'flicker',
+    blendMode: 'additive',  // Additive for glowing effect
     wind: { x: 0, y: 0 },
     drift: { x: 0, y: 0 },  // No drift - random movement only
     turbulence: 0.5,
