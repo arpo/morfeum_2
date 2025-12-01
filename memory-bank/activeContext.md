@@ -1,5 +1,43 @@
 # Active Context
 
+## Recent Changes (2025-12-01)
+
+### WorldView Effects System Enhancement (Dec 1, 2025)
+- **Feature**: Added comprehensive effects system for WorldView with scene presets
+- **Implementation**:
+  - **Color Effects**:
+    - Added bloom effect (brightens bright areas)
+    - Added vignette effect (darkens edges)
+    - Added color tint system with strength control
+    - Added lightning flash effect with auto-decay
+    - Added desaturation control (0 = color, 1 = grayscale)
+  - **Particle Enhancements**:
+    - Added wind gust system with smooth ease-in-out
+    - Configurable strength, direction, and duration
+  - **Scene Presets**:
+    - Created 5 themed scene combinations (sunset, storm, underwater, haunted, magical)
+    - Each preset combines particles, displacement, and color effects
+    - Includes auto-triggering effects (lightning flashes, wind gusts)
+    - Easily configurable via `WORLD_VIEW_3D_CONFIG.SCENE` settings
+  - **Renderer API**:
+    - Added methods to control all effects individually
+    - Added scene preset application and management
+  - **Configuration**:
+    - Added `SCENE` option to `config.ts` for easy testing
+    - Can enable/disable and select preset via config
+- **Files Added/Modified**:
+  - New files:
+    - `effects/scenes/types.ts`: Scene preset interfaces
+    - `effects/scenes/presets.ts`: 5 scene configurations
+    - `effects/scenes/index.ts`: Scene exports
+  - Modified files:
+    - `effects/postprocessors/PostProcessorSystem.ts`: Added color effects
+    - `effects/particles/ParticleSystem.ts`: Added wind gusts
+    - `WorldViewRenderer.ts`: Added scene and effect methods
+    - `config.ts`: Added SCENE configuration option
+    - `effects/README.md`: Updated with comprehensive documentation
+- **Documentation**: Extensive README.md details all effects and usage
+
 ## Recent Changes (2025-11-30)
 
 ### ExternalView Host Tab Sync Fix (Nov 30, 2025)

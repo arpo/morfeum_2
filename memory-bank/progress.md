@@ -6,6 +6,7 @@
 - **Entity System**: Character and location creation, storage, and management
 - **World Tree System**: Hierarchical location structures (host → region → location → niche)
 - **3D World View**: WebGL-based depth rendering with stereo support (2D, full 3D, HSBS modes)
+- **Visual Effects System**: Scene presets combining particles, post-processing, and color effects
 - **Navigation System**: AI-powered spatial navigation with intent classification
 - **Media System**: Centralized image storage and depth map generation
 - **External View**: Real-time sync between main app and external browser tabs
@@ -20,9 +21,10 @@
 - **Build System**: TypeScript compilation and Vite production builds working
 - **Code Organization**: Proper feature-based folder structure
 
-### Recent Improvements (Nov 2025)
+### Recent Improvements (Nov-Dec 2025)
 - **Component Refactoring**: 5 major files reduced from 300+ to under 300 lines
 - **WorldView Modules**: Extracted 5 specialized modules (shaders, geometry, stereo, camera, animation)
+- **WorldView Effects**: Added scene presets, color effects, and particle enhancements (Dec 1)
 - **Store Architecture**: Separated entity CRUD from UI state management
 - **Navigation Utils**: Extracted context builders for better modularity
 - **App Component**: Pure JSX following zustand slice patterns

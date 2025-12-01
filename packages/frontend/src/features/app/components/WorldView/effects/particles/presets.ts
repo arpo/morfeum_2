@@ -21,7 +21,7 @@ export const DUST_PRESET: ParticlePreset = {
     blendMode: 'additive',  // Normal blending for natural look
     wind: { x: 0.02, y: -0.01 },
     drift: { x: 0, y: 0 },  // No drift - just turbulence
-    turbulence: 0.3,
+    turbulence: 0.9,
     depthAware: true,
   }
 };

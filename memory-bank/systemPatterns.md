@@ -155,6 +155,55 @@ import { IconLoader2 } from '@/icons';
 - **Toggle pattern**: Fixed-position button to show/hide panel
 - **Layout flexibility**: Panels can be positioned anywhere, no fixed sidebar needed
 
+### WorldView Effects System
+
+#### Architecture Overview
+- **Layered Design**: Post-processors, particles, and scene presets in separate modules
+- **Configuration-Driven**: All effects configurable via `WORLD_VIEW_3D_CONFIG`
+- **Composable Effects**: Color effects can layer on top of displacement effects
+
+#### Post-Processor System
+- **Base System**: Applies displacement effects using custom shaders
+- **Color Effects**: Built on top of displacement system
+- **PostProcessorSystem Class**: Manages all effects and rendering
+- **Shader Pipeline**:
+  1. Scene renders to WebGLRenderTarget
+  2. Shader applies displacement (distorts UVs)
+  3. Shader applies color effects on result
+  4. Result rendered to screen
+
+#### Particle System
+- **Flexible Behaviors**: float, fall, rise, flicker behaviors
+- **Wind System**: Base wind + temporary gusts with smooth ease-in-out
+- **Shader-Based**: Custom vertex/fragment shaders for soft particles
+- **ParticleSystem Class**: Manages creation, animation, and cleanup
+
+#### Scene Presets
+- **Combined Effects**: Each scene combines particles + displacement + color effects
+- **Auto Effects**: Scenes can trigger effects (lightning, wind) at random intervals
+- **Themed Design**: Each preset creates a consistent atmosphere
+- **ScenePreset Interface**: Documents configuration structure
+
+#### Code Organization
+```
+effects/
+├── README.md                    # Documentation
+├── particles/                   # Particle system
+│   ├── index.ts                
+│   ├── types.ts                
+│   ├── presets.ts              
+│   └── ParticleSystem.ts       
+├── postprocessors/              # Displacement + color effects
+│   ├── index.ts                
+│   ├── types.ts                
+│   ├── presets.ts              
+│   └── PostProcessorSystem.ts  
+└── scenes/                      # Combined effects presets
+    ├── index.ts                
+    ├── types.ts                
+    └── presets.ts              
+```
+
 #### Grid Layout Pattern
 ```typescript
 // App.tsx - Flexible grid without fixed sidebar
