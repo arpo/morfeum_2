@@ -87,8 +87,17 @@ export class ParticleSystem {
   /**
    * Create a single particle with random properties
    */
-  private createParticle(resetY: boolean = false): Particle {
-    const { size, speed, opacity } = this.config;
+  private createParticle(resetY: boolean = false, randomAge: boolean = true): Particle {
+    const { size, speed, opacity, lifetime } = this.config;
+    const baseOpacity = opacity.min + Math.random() * (opacity.max - opacity.min);
+    const particleLifetime = lifetime 
+      ? lifetime.min + Math.random() * (lifetime.max - lifetime.min)
+      : Infinity;
+    // Stagger initial ages so particles don't all respawn at once
+    const initialAge = randomAge && lifetime
+      ? Math.random() * particleLifetime
+      : 0;
+    
     return {
       x: (Math.random() - 0.5) * this.bounds.width,
       y: resetY 
@@ -97,9 +106,12 @@ export class ParticleSystem {
       z: (Math.random() - 0.5) * this.bounds.depth,
       size: size.min + Math.random() * (size.max - size.min),
       speed: speed.min + Math.random() * (speed.max - speed.min),
-      opacity: opacity.min + Math.random() * (opacity.max - opacity.min),
+      opacity: baseOpacity,
       angle: Math.random() * Math.PI * 2,
       turbulenceOffset: Math.random() * 1000,
+      age: initialAge,
+      lifetime: particleLifetime,
+      baseOpacity: baseOpacity,
     };
   }
 
@@ -202,6 +214,31 @@ export class ParticleSystem {
       // Wrap around bounds
       this.wrapParticle(p);
 
+      // Handle lifetime and fade in/out
+      if (this.config.lifetime) {
+        p.age += deltaTime;
+        
+        const fadeIn = this.config.fadeIn ?? 0;
+        const fadeOut = this.config.fadeOut ?? 0;
+        
+        if (p.age < fadeIn) {
+          // Fading in
+          p.opacity = p.baseOpacity * (p.age / fadeIn);
+        } else if (p.age > p.lifetime - fadeOut) {
+          // Fading out
+          const fadeProgress = Math.max(0, (p.lifetime - p.age) / fadeOut);
+          p.opacity = p.baseOpacity * fadeProgress;
+        } else {
+          // Full visibility
+          p.opacity = p.baseOpacity;
+        }
+        
+        // Respawn when dead
+        if (p.age >= p.lifetime) {
+          this.respawnParticle(p);
+        }
+      }
+
       // Update buffers
       positions[i * 3] = p.x;
       positions[i * 3 + 1] = p.y;
@@ -286,6 +323,27 @@ export class ParticleSystem {
     // Update opacity for flickering effect
     p.opacity = this.config.opacity.min + 
       (Math.sin(t * 3) * 0.5 + 0.5) * (this.config.opacity.max - this.config.opacity.min);
+  }
+
+  /**
+   * Respawn a particle at a new random position
+   */
+  private respawnParticle(p: Particle): void {
+    const { size, speed, opacity, lifetime } = this.config;
+    
+    p.x = (Math.random() - 0.5) * this.bounds.width;
+    p.y = (Math.random() - 0.5) * this.bounds.height;
+    p.z = (Math.random() - 0.5) * this.bounds.depth;
+    p.size = size.min + Math.random() * (size.max - size.min);
+    p.speed = speed.min + Math.random() * (speed.max - speed.min);
+    p.baseOpacity = opacity.min + Math.random() * (opacity.max - opacity.min);
+    p.opacity = 0; // Start invisible for fade-in
+    p.angle = Math.random() * Math.PI * 2;
+    p.turbulenceOffset = Math.random() * 1000;
+    p.age = 0;
+    p.lifetime = lifetime 
+      ? lifetime.min + Math.random() * (lifetime.max - lifetime.min)
+      : Infinity;
   }
 
   /**

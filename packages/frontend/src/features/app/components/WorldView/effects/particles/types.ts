@@ -18,6 +18,9 @@ export interface ParticleConfig {
   drift: { x: number; y: number };  // Direction particles drift (y: positive=up, negative=down)
   turbulence: number;
   depthAware: boolean;
+  lifetime?: { min: number; max: number };  // Particle lifetime in seconds before respawn
+  fadeIn?: number;   // Fade-in duration in seconds
+  fadeOut?: number;  // Fade-out duration in seconds
 }
 
 export interface Particle {
@@ -29,6 +32,9 @@ export interface Particle {
   opacity: number;
   angle: number;
   turbulenceOffset: number;
+  age: number;         // Current age in seconds
+  lifetime: number;    // Max lifetime before respawn
+  baseOpacity: number; // Original opacity (for fade calculations)
 }
 
 export interface ParticlePreset {

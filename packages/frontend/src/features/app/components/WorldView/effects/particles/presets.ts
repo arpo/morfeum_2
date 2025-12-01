@@ -12,17 +12,20 @@ export const DUST_PRESET: ParticlePreset = {
   name: 'dust',
   config: {
     enabled: true,
-    count: 500,
-    size: { min: 0.025, max: 0.1  },  // Small dust motes
-    speed: { min: 0.05, max: 0.15 },
-    opacity: { min: 0.15, max: 0.4 },
+    count: 1000,
+    size: { min: 0.05, max: 0.15 },  // Larger for better visibility
+    speed: { min: 0.0125, max: 0.025 },
+    opacity: { min: 0.15, max: 0.3 },  // More visible
     color: '#ffffff',
     behavior: 'float',
-    blendMode: 'additive',  // Normal blending for natural look
+    blendMode: 'additive',
     wind: { x: 0.02, y: -0.01 },
-    drift: { x: 0, y: 0 },  // No drift - just turbulence
-    turbulence: 0.9,
+    drift: { x: 0.1, y: 0 },
+    turbulence: 0.4,  // Reduced from 0.9 to prevent z-depth clustering
     depthAware: true,
+    lifetime: { min: 8, max: 15 },  // Particles respawn every 8-15 seconds
+    fadeIn: 1.0,   // 1 second fade in
+    fadeOut: 1.0,  // 1 second fade out
   }
 };
 
