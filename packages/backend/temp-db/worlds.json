@@ -3168,6 +3168,98 @@
       "searchDesc": "Cave interior with water. Has: passage (center, background), passage (center, midground)",
       "slug": "the-great-cetaceans-maw",
       "primaryMedia": "media-1764573436917-8pzu5vhhj"
+    },
+    "loc-1764605616317-zkqk9klxq": {
+      "id": "loc-1764605616317-zkqk9klxq",
+      "type": "host",
+      "name": "Criss Foss Inspired Realm",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The scene depicts a narrow, urban alleyway bathed in a cool, ethereal light. Tall, multi-story buildings flank the sides, their facades adorned with windows and industrial elements. A large, bipedal robot stands centrally in the midground, its metallic form detailed and weathered. Wisps of low-lying fog drift across the wet, reflective pavement, obscuring the ground in places. The overall impression is one of a slightly derelict, technologically advanced environment.",
+        "colorsAndLighting": "The lighting is predominantly cool and diffused, with a subtle blue-green hue from the atmospheric haze. Pockets of warmer, yellow light emanate from street lamps along the buildings, creating pools of illumination on the wet ground. The robot's eye glows with an intense green light, serving as a focal point.",
+        "atmosphere": "The atmosphere is thick with a palpable sense of mystery, enhanced by the low-lying mist that clings to the ground. The air appears damp, contributing to the wet sheen on the pavement and the diffused quality of the light.",
+        "materials": "Dominated by heavily weathered metal alloys, particularly steel, aluminum, and brass, often showing signs of rust, impact, and extensive use. Raw concrete, thick rubberized composites, and reinforced glass are also prevalent, emphasizing durability and functionality over aesthetics.",
+        "mood": "A powerful sense of awe and anachronistic grandeur, tinged with the melancholy of industrial decay and the hum of relentless, often impersonal, technological processes.",
+        "sounds": "Distant rumbling, mechanical hums, metallic clangs, hissing steam, warning sirens, occasional guttural engine roars.",
+        "spatialLayout": "The foreground is characterized by the wet, reflective pavement and patches of fog. The midground is dominated by the imposing robot and the lower sections of the flanking buildings. The background consists of the upper sections of the buildings receding into the atmospheric haze, with more distant lights suggesting further urban depth.",
+        "primary_surfaces": "Metal, Concrete",
+        "secondary_surfaces": "Glass, Stone",
+        "accent_features": "Glowing lights, Reflective surfaces",
+        "dominant": "Cool blue-green (atmosphere, fog)",
+        "secondary": "Muted grays and whites (robot, buildings)",
+        "accent": "Bright green (robot eye), Warm yellow (street lamps)",
+        "ambient": "Cool, hazy blue",
+        "genre": "sci-fi",
+        "architectural_tone": "Industrial retro-futurism characterized by immense scale, functional design, exposed mechanical components, robust metal alloys, and visible utilitarian construction. Features include large-scale riveted plates, massive gantry cranes, pressurized conduits, and utilitarian control panels, all bearing the patina of heavy use and the passage of time.",
+        "cultural_tone": "A pragmatic, engineering-focused society that values functionality, resilience, and monumental achievements in heavy industry and spacefaring technology. Aesthetics are secondary to purpose, leading to a world that is both awe-inspiring and slightly brutal in its utilitarian beauty.",
+        "materials_base": "Heavy industrial metals (steel, iron, brass), reinforced concrete, thick rubber, and utilitarian composites, all exhibiting a significant degree of weathering, rust, and wear. The finish is always practical and durable, prioritizing longevity and resilience.",
+        "mood_baseline": "Awe-inspiring, pragmatic, and subtly melancholic, evoking a sense of past glories and the ceaseless grind of industrial progress.",
+        "palette_bias": "A base of desaturated industrial colors, with strong influences from metallic sheens, earthy rusts, and functional warning lights. Cool, atmospheric hues often add a sense of vastness and isolation.",
+        "soundscape_base": "A constant symphony of heavy machinery, echoing industrial processes, and the ambient hum of powerful, functional technology. Sounds are often amplified by the metallic and concrete structures.",
+        "flora_base": "None",
+        "fauna_base": "None",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Criss Foss Inspired Realm",
+          "looks": "A world shaped by the visionary art of Chris Foss, featuring a unique blend of retro-futuristic technology and industrial aesthetics.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A world shaped by the visionary art of Chris Foss, featuring a unique blend of retro-futuristic technology and industrial aesthetics.",
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "center, midground",
+          "description": "Large bipedal robot with articulated limbs and glowing green eye."
+        },
+        {
+          "type": "door",
+          "position": "left wall, midground",
+          "description": "Dimly lit doorway recessed within the building facade."
+        },
+        {
+          "type": "door",
+          "position": "right wall, midground",
+          "description": "Visible entrance with a glowing yellow lamp above it."
+        },
+        {
+          "type": "passage",
+          "position": "center, background",
+          "description": "Alleyway continues into the distance, disappearing into the fog."
+        },
+        {
+          "type": "window",
+          "position": "left wall, midground",
+          "description": "Rectangular windows with visible interior lighting."
+        },
+        {
+          "type": "window",
+          "position": "right wall, midground",
+          "description": "Multiple illuminated windows stacked vertically along the building."
+        }
+      ],
+      "dominantElements": [
+        "Large bipedal robot in midground",
+        "Tall, narrow buildings flanking the scene",
+        "Low-lying atmospheric fog",
+        "Wet, reflective pavement"
+      ],
+      "uniqueIdentifiers": [
+        "Large, retro-futuristic robot with a distinct head design",
+        "Narrow urban alley with consistent architectural style",
+        "Misty, wet ground reflecting ambient light"
+      ],
+      "searchDesc": "Urban alleyway with a robot. Has: robot (center, midground), door (left wall, midground), door (right wall, midground)",
+      "slug": "criss-foss-inspired-realm",
+      "primaryMedia": "media-1764605664795-j3b9ouxeq"
     }
   },
   "views": {},
@@ -3445,6 +3537,11 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764605616317-zkqk9klxq",
+      "type": "host",
+      "children": []
     }
   ],
   "pinnedIds": [
@@ -3460,6 +3557,7 @@
     "loc-1764536291494-wq4denjc8",
     "loc-1764536322127-opnufbd52",
     "loc-1764536360075-kkhbqt8s5",
-    "loc-1764573406847-nze5wzyo6"
+    "loc-1764573406847-nze5wzyo6",
+    "loc-1764605616317-zkqk9klxq"
   ]
 }
