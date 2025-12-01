@@ -12,13 +12,14 @@ export const DUST_PRESET: ParticlePreset = {
   name: 'dust',
   config: {
     enabled: true,
-    count: 40,
-    size: { min: 0.3, max: 0.8 },  // Small dust motes
+    count: 500,
+    size: { min: 0.05, max: 0.2 },  // Small dust motes
     speed: { min: 0.05, max: 0.15 },
     opacity: { min: 0.15, max: 0.4 },
     color: '#ffffff',
     behavior: 'float',
     wind: { x: 0.02, y: -0.01 },
+    drift: { x: 0, y: 0 },  // No drift - just turbulence
     turbulence: 0.3,
     depthAware: true,
   }
@@ -38,6 +39,7 @@ export const SNOW_PRESET: ParticlePreset = {
     color: '#ffffff',
     behavior: 'fall',
     wind: { x: 0.1, y: 0 },
+    drift: { x: 0, y: 0 },  // Fall behavior handles vertical movement
     turbulence: 0.4,
     depthAware: true,
   }
@@ -57,11 +59,11 @@ export const RAIN_PRESET: ParticlePreset = {
     color: '#a0c0ff',
     behavior: 'fall',
     wind: { x: 0.3, y: 0 },
+    drift: { x: 0, y: 0 },  // Fall behavior handles vertical movement
     turbulence: 0.1,
     depthAware: false,
   }
 };
-
 /**
  * Fireflies - glowing flickering particles (for future)
  */
@@ -76,6 +78,7 @@ export const FIREFLIES_PRESET: ParticlePreset = {
     color: '#ffff80',
     behavior: 'flicker',
     wind: { x: 0, y: 0 },
+    drift: { x: 0, y: 0 },  // No drift - random movement only
     turbulence: 0.5,
     depthAware: true,
   }

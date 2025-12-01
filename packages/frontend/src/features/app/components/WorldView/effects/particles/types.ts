@@ -13,6 +13,7 @@ export interface ParticleConfig {
   color: string;
   behavior: ParticleBehavior;
   wind: { x: number; y: number };
+  drift: { x: number; y: number };  // Direction particles drift (y: positive=up, negative=down)
   turbulence: number;
   depthAware: boolean;
 }

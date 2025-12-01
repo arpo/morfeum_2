@@ -183,13 +183,15 @@ export class ParticleSystem {
     const turbulence = this.config.turbulence;
     const t = this.time + p.turbulenceOffset;
     
-    // Perlin-like noise movement
-    p.x += Math.sin(t * 0.5 + p.angle) * turbulence * deltaTime;
-    p.y += Math.cos(t * 0.3 + p.angle * 2) * turbulence * deltaTime * 0.5;
-    p.z += Math.sin(t * 0.4 + p.angle * 3) * turbulence * deltaTime * 0.3;
+    // Perlin-like noise movement scaled by particle speed
+    const speedFactor = p.speed * 2;
+    p.x += Math.sin(t * 0.5 + p.angle) * turbulence * deltaTime * speedFactor;
+    p.y += Math.cos(t * 0.3 + p.angle * 2) * turbulence * deltaTime * 0.5 * speedFactor;
+    p.z += Math.sin(t * 0.4 + p.angle * 3) * turbulence * deltaTime * 0.3 * speedFactor;
     
-    // Slight upward drift for dust
-    p.y += p.speed * deltaTime * 0.2;
+    // Apply drift direction (speed affects how fast it drifts)
+    p.x += this.config.drift.x * p.speed * deltaTime;
+    p.y += this.config.drift.y * p.speed * deltaTime;
   }
 
   /**
@@ -239,9 +241,10 @@ export class ParticleSystem {
     const turbulence = this.config.turbulence;
     const t = this.time + p.turbulenceOffset;
 
-    // Slow random movement
-    p.x += Math.sin(t * 0.2 + p.angle) * turbulence * deltaTime * 0.5;
-    p.y += Math.cos(t * 0.15 + p.angle * 2) * turbulence * deltaTime * 0.3;
+    // Slow random movement - speed affects movement rate
+    const speedFactor = p.speed * 5;
+    p.x += Math.sin(t * 0.2 + p.angle) * turbulence * deltaTime * speedFactor;
+    p.y += Math.cos(t * 0.15 + p.angle * 2) * turbulence * deltaTime * speedFactor * 0.6;
     
     // Update opacity for flickering effect
     p.opacity = this.config.opacity.min + 
