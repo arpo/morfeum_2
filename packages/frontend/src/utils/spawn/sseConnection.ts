@@ -32,7 +32,10 @@ export function setupSSEConnection(
   // Progress events (first event includes pipeline step configuration)
   eventSource.addEventListener('progress', (event: MessageEvent) => {
     const data = JSON.parse(event.data);
-    // console.log(`[Spawn ${spawnId}] Progress:`, data.message, data);
+    // Log prompts to browser console when present
+    if (data.data?.prompt) {
+      console.log(`[PROMPT - ${data.stage}]`, data.data.prompt);
+    }
     handlers.onProgress(spawnId, data);
   });
 

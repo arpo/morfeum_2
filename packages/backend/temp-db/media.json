@@ -1,20 +1,5 @@
 {
   "media": {
-    "media-1764667398797-ddbdov4qj": {
-      "id": "media-1764667398797-ddbdov4qj",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84ab31/ovB-VvYQY3fA-sD4KEtxc.jpg",
-      "createdAt": "2025-12-02T09:23:18.797Z",
-      "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A scene of the vibrant coastal city of Metropolise at sunset, bathed in a warm, golden orange glow. In the immediate foreground to the right, a magnificent, multi-story palatial villa with classical architecture, featuring numerous columns, ornate railings, and curving balconies, is perched on a lush, green hillside. Guests are visible on its upper terraces, enjoying the panoramic views. Behind the villa, silhouetted palm trees stand against the brilliant, low-hanging sun, which casts long rays and a luminous circle of light across the sky. The midground reveals a sweeping, golden sandy beach curving along a clear turquoise bay, dotted with numerous tiny figures of people enjoying the evening. Several luxurious yachts and smaller boats are moored in the calm waters, some docked at piers extending from the shore. A bustling coastal road and residential buildings line the beachfront, interspersed with more palm trees. In the distance, a sprawling modern metropolis rises majestically, dominated by a dense array of towering skyscrapers, including a distinctive, extremely tall spired building and several prominent twin towers, all appearing somewhat hazy against the light of the setting sun. Beyond the city, a range of soft, hazy mountains completes the picturesque vista, adding to the serene and opulent atmosphere of the scene.\"\n\nThe Sunset Villa, camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n\n[SCENE:]\nHost Metropolise: A vibrant coastal metropolis bathed in the warm glow of sunset..\n\nRegion Metropolise: .\n\nDescription: A magnificent, multi-story palatial villa with classical architecture, perched on a green hillside..\n\nLooks: Classical architecture with numerous columns, ornate railings, and curving balconies. Guests visible on upper terraces..\n\nAtmosphere: Warm golden orange glow, sound of distant waves and gentle conversation..\n\nMood: Opulent, serene, picturesque.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": [
-        "23ec12a0-8911-4f1b-a151-51230e18ad5e"
-      ]
-    },
     "media-1764667410940-cqfk5dozw": {
       "id": "media-1764667410940-cqfk5dozw",
       "type": "depth-map",
@@ -57,6 +42,47 @@
         "char-1764667499858-tu7s8n0nx"
       ],
       "parentMedia": "media-1764667513270-gb5udpvoi"
+    },
+    "media-1764669392345-5ixmfxib5": {
+      "id": "media-1764669392345-5ixmfxib5",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84abfb/EdpaLM5WeVy_EGJ2oQPMY_fbeb61de82c74fa6943db85afa9f5608.png",
+      "createdAt": "2025-12-02T09:56:32.345Z",
+      "metadata": {
+        "parentMedia": "media-1764669078084-kx8vuj055",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "76043ccd-40be-4196-962d-b7c52420e38d"
+      ],
+      "parentMedia": "media-1764669078084-kx8vuj055"
+    },
+    "media-1764683890202-afil1pd0v": {
+      "id": "media-1764683890202-afil1pd0v",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84b1a4/CRwFA_HRdXj3wQMRc58DE.jpg",
+      "createdAt": "2025-12-02T13:58:10.202Z",
+      "metadata": {
+        "prompt": "The Chromatic Hanger. A beacon of avant-garde fashion, this boutique is a curated space for unique clothing and accessories. Its exterior hints at the vibrant creativity found within, a stark yet inviting contrast to the surrounding urban grit.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThe Chromatic Hanger presents a modern, almost futuristic facade. Its primary structure is defined by sharp, geometric angles and vast expanses of dark, reflective glass. Polished steel and iridescent metallic panels are integrated seamlessly, catching and refracting light.\n\nMaterials and Surfaces:\nPrimary: Tinted reflective glass, polished steel panels\nSecondary: Iridescent composite, dark granite accents\nAccents: Holographic LED signage, geometric metal trim\n\nColors:\nDominant: Grey/Silver, Secondary: Iridescent tones, Accent: Saturated, clashing colors\nLight: Sharp, modern\n\nAtmosphere: The air around The Chromatic Hanger buzzes with an energetic, avant-garde vibe. The constant play of light and color from its signage creates an inviting, albeit bold, presence. It stands as a distinct statement against the weathered backdrop of the district.\nMood: This location evokes a sense of bold individuality and cutting-edge style. It feels daring, exclusive, and undeniably fashionable, attracting those who embrace the extraordinary.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "bfda549d-b852-4fca-a566-c77de02edc68"
+      ]
+    },
+    "media-1764683957802-kc2b1ivn5": {
+      "id": "media-1764683957802-kc2b1ivn5",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84b1ab/cmRrTga-qE8FHcNpc5jaw_fc332ce18cf1484b80f11a03e236a992.png",
+      "createdAt": "2025-12-02T13:59:17.802Z",
+      "metadata": {
+        "parentMedia": "media-1764683890202-afil1pd0v",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "bfda549d-b852-4fca-a566-c77de02edc68"
+      ],
+      "parentMedia": "media-1764683890202-afil1pd0v"
     }
   }
 }

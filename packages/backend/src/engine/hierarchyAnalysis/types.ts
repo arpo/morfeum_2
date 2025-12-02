@@ -158,6 +158,7 @@ export interface HierarchyAnalysisResult {
   hierarchy: HierarchyStructure;
   metadata: HierarchyMetadata;
   imageUrl?: string;
+  classificationPrompt?: string;
 }
 
 /**

@@ -46,8 +46,6 @@ function assignMediaToTreeNodes(
     metadata: {
       prompt: imagePrompt,
       model: 'FLUX',
-      width: 1024,
-      height: 1024
     },
     entityRefs: [deepestNode.id]
   });
@@ -99,14 +97,17 @@ export async function runWorldTreePipeline(
     // Stage 1: Hierarchy Classification
     helper.startStage('hierarchy_classification', 'Analyzing hierarchy structure...');
     const result = await analyzeHierarchy(prompt, apiKey, spawnId);
-    helper.completeStage('hierarchy_classification', 'Hierarchy structure analyzed', { hierarchy: result.hierarchy });
+    helper.completeStage('hierarchy_classification', 'Hierarchy structure analyzed', { 
+      hierarchy: result.hierarchy,
+      prompt: result.classificationPrompt 
+    });
 
     if (signal.aborted) throw new Error('Aborted');
 
     // Stage 2: Image Generation
-    helper.startStage('image_generation', 'Generating visual representation...');
     const nodeChain = buildNodeChain(result.hierarchy);
     const imagePrompt = locationImageGeneration(prompt, nodeChain);
+    helper.startStage('image_generation', 'Generating visual representation...', { prompt: imagePrompt });
     const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
 
     if (signal.aborted) throw new Error('Aborted');
@@ -119,9 +120,9 @@ export async function runWorldTreePipeline(
     helper.completeStage('image_generation', 'Visual representation generated', { imageUrl });
 
     // Stage 3: Visual Analysis
-    helper.startStage('visual_analysis', 'Analyzing visual context...');
     const base64Image = await fetchImageAsBase64(imageUrl);
     const analysisPrompt = locationVisualAnalysisPrompt(prompt, nodeChain);
+    helper.startStage('visual_analysis', 'Analyzing visual context...', { prompt: analysisPrompt });
     
     const analysisResult = await analyzeImage(
       apiKey,
@@ -141,13 +142,13 @@ export async function runWorldTreePipeline(
     if (signal.aborted) throw new Error('Aborted');
 
     // Stage 4: DNA Generation
-    helper.startStage('dna_generation', 'Generating DNA for all nodes...');
-    const fullHierarchy = await generateBatchDNA(
+    const { hierarchy: fullHierarchy, dnaPrompt } = await generateBatchDNA(
       result.hierarchy,
       visualAnalysis,
       prompt,
       apiKey
     );
+    helper.startStage('dna_generation', 'Generating DNA for all nodes...', { prompt: dnaPrompt });
 
     // Attach image to deepest node
     // Note: Image assignment is now handled by entityPersistence via mediaService
@@ -194,7 +195,7 @@ export async function generateBatchDNA(
   visualAnalysis: any,
   originalPrompt: string,
   apiKey: string
-): Promise<HierarchyStructure> {
+): Promise<{ hierarchy: HierarchyStructure; dnaPrompt: string }> {
   const host = hierarchy.host;
   
   // Prepare hierarchy data for single prompt
@@ -236,5 +237,5 @@ export async function generateBatchDNA(
   applyNicheDNA(host, dnaResult.niches);
   mergeVisualAnalysis(host, visualAnalysis);
   
-  return hierarchy;
+  return { hierarchy, dnaPrompt: prompt };
 }

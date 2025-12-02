@@ -147,11 +147,11 @@ export async function analyzeHierarchy(
   spawnId?: string
 ): Promise<HierarchyAnalysisResult> {
   // Build prompt from centralized prompts
-  const prompt = hierarchyCategorization(userPrompt);
+  const classificationPrompt = hierarchyCategorization(userPrompt);
   
   // Call LLM (using fast model for quick categorization)
   const messages = [
-    { role: 'system', content: prompt },
+    { role: 'system', content: classificationPrompt },
     { role: 'user', content: userPrompt }
   ];
   
@@ -220,6 +220,7 @@ export async function analyzeHierarchy(
     hierarchy: parsedHierarchy,
     metadata,
     imageUrl: undefined,  // No image generation yet - stopped after classification
+    classificationPrompt,
   };
 }
 

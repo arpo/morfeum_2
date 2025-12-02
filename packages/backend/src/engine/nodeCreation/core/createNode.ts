@@ -1,0 +1,252 @@
+/**
+ * Create Node - Core Function
+ * 
+ * Creates a single node with DNA and optional image generation.
+ * This is the foundational function used by all slash commands and LLM tools.
+ */
+
+import { v4 as uuidv4 } from 'uuid';
+import { generateText, generateImage } from '../../../services/mzoo';
+import { AI_MODELS } from '../../../config/constants';
+import { parseJSON } from '../../utils/parseJSON';
+import type { NodeDNA } from '../../hierarchyAnalysis/types';
+import type {
+  NodeType,
+  Node,
+  HostNode,
+  RegionNode,
+  LocationNode,
+  NicheNode,
+  CreateNodeOptions,
+  CreateNodeResult,
+  ParentDNAContext,
+  ScenePerspective,
+} from '../types';
+import { extractParentDNAContext, mergeDNAWithInheritance } from './dnaInheritance';
+import { getNodeDNAPrompt } from '../prompts/dna';
+import { getNodeImagePrompt } from '../prompts/image';
+
+/**
+ * Generate a slug from a name
+ */
+function generateSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+/**
+ * Create a single node with DNA
+ * 
+ * @param nodeType - Type of node to create (host, region, location, niche)
+ * @param description - User description of the node
+ * @param options - Creation options
+ * @returns Created node with optional image
+ */
+export async function createNode(
+  nodeType: NodeType,
+  description: string,
+  options: CreateNodeOptions = {}
+): Promise<CreateNodeResult> {
+  const { apiKey, parentId, parentContext: passedContext, createImage = false, perspective } = options;
+
+  if (!apiKey) {
+    throw new Error('API key is required for node creation');
+  }
+
+  // Generate node ID
+  const nodeId = uuidv4();
+
+  // Use passed parent context for DNA inheritance, or empty for root nodes
+  const parentContext: ParentDNAContext = passedContext || {};
+
+  // Step 1: Generate DNA for the node
+  const dnaResult = await generateNodeDNA(
+    apiKey,
+    description,
+    nodeType,
+    parentContext
+  );
+
+  // Step 2: Build the node
+  const node = buildNodeFromDNA(nodeId, nodeType, dnaResult);
+
+  // Step 3: Optionally generate image
+  let imageUrl: string | undefined;
+  let imagePrompt: string | undefined;
+
+  if (createImage) {
+    const imageResult = await generateNodeImage(
+      apiKey,
+      node,
+      perspective || detectPerspective(description)
+    );
+    imageUrl = imageResult.imageUrl;
+    imagePrompt = imageResult.imagePrompt;
+    node.imageUrl = imageUrl;
+  }
+
+  return {
+    node,
+    imageUrl,
+    imagePrompt,
+  };
+}
+
+/**
+ * Generate DNA for a node using LLM
+ */
+async function generateNodeDNA(
+  apiKey: string,
+  description: string,
+  nodeType: NodeType,
+  parentContext: ParentDNAContext,
+  perspective?: ScenePerspective
+): Promise<{
+  name: string;
+  description: string;
+  dna: Partial<NodeDNA>;
+  navigableElements?: any[];
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
+  searchDesc?: string;
+  slug?: string;
+}> {
+  // Build prompt based on node type using specialized prompts
+  const prompt = getNodeDNAPrompt(nodeType, description, { parentContext, perspective });
+
+  const messages = [
+    { role: 'system', content: prompt },
+    { role: 'user', content: `Generate DNA for: ${description}` }
+  ];
+
+  const result = await generateText(
+    apiKey,
+    messages,
+    AI_MODELS.SEED_GENERATION
+  );
+
+  if (result.error || !result.data) {
+    throw new Error(result.error || 'Failed to generate node DNA');
+  }
+
+  const parsed = parseJSON<any>(result.data.text);
+
+  if (!parsed || !parsed.dna) {
+    throw new Error('Failed to parse DNA from LLM response');
+  }
+
+  // Merge with parent DNA for inheritance
+  const mergedDNA = mergeDNAWithInheritance(parsed.dna, parentContext as any);
+
+  return {
+    name: parsed.name || description,
+    description: parsed.description || description,
+    dna: mergedDNA,
+    navigableElements: parsed.navigableElements,
+    dominantElements: parsed.dominantElements,
+    uniqueIdentifiers: parsed.uniqueIdentifiers,
+    searchDesc: parsed.searchDesc,
+    slug: parsed.slug || generateSlug(parsed.name || description),
+  };
+}
+
+/**
+ * Build a node object from DNA result
+ */
+function buildNodeFromDNA(
+  nodeId: string,
+  nodeType: NodeType,
+  dnaResult: {
+    name: string;
+    description: string;
+    dna: Partial<NodeDNA>;
+    navigableElements?: any[];
+    dominantElements?: string[];
+    uniqueIdentifiers?: string[];
+    searchDesc?: string;
+    slug?: string;
+  }
+): Node {
+  const baseNode = {
+    id: nodeId,
+    type: nodeType,
+    name: dnaResult.name,
+    description: dnaResult.description,
+    dna: dnaResult.dna,
+    navigableElements: dnaResult.navigableElements,
+    dominantElements: dnaResult.dominantElements,
+    uniqueIdentifiers: dnaResult.uniqueIdentifiers,
+    searchDesc: dnaResult.searchDesc,
+    slug: dnaResult.slug,
+  };
+
+  // Add type-specific empty children arrays
+  switch (nodeType) {
+    case 'host':
+      return { ...baseNode, type: 'host', regions: [] } as HostNode;
+    case 'region':
+      return { ...baseNode, type: 'region', locations: [] } as RegionNode;
+    case 'location':
+      return { ...baseNode, type: 'location', niches: [] } as LocationNode;
+    case 'niche':
+      return { ...baseNode, type: 'niche' } as NicheNode;
+    default:
+      return baseNode as Node;
+  }
+}
+
+/**
+ * Generate image for a node
+ */
+async function generateNodeImage(
+  apiKey: string,
+  node: Node,
+  perspective: ScenePerspective
+): Promise<{ imageUrl: string; imagePrompt: string }> {
+  // Use specialized image prompts based on node type
+  const imagePrompt = getNodeImagePrompt(node, perspective);
+
+  const result = await generateImage(
+    apiKey,
+    imagePrompt,
+    1,
+    'landscape_16_9',
+    'none'
+  );
+
+  if (result.error || !result.data?.images?.[0]?.url) {
+    throw new Error(result.error || 'Failed to generate image');
+  }
+
+  return {
+    imageUrl: result.data.images[0].url,
+    imagePrompt,
+  };
+}
+
+/**
+ * Detect perspective from description
+ */
+function detectPerspective(description: string): ScenePerspective {
+  const lowerDesc = description.toLowerCase();
+  
+  // Interior indicators
+  const interiorWords = ['inside', 'interior', 'room', 'hall', 'chamber', 'within', 'indoor'];
+  if (interiorWords.some(word => lowerDesc.includes(word))) {
+    return 'interior';
+  }
+
+  // Exterior indicators
+  const exteriorWords = ['outside', 'exterior', 'street', 'garden', 'rooftop', 'terrace', 'outdoor'];
+  if (exteriorWords.some(word => lowerDesc.includes(word))) {
+    return 'exterior';
+  }
+
+  // Default to exterior for most cases
+  return 'exterior';
+}
+
+// Note: buildDNAPrompt and buildImagePrompt have been replaced with 
+// specialized prompts in ../prompts/dna and ../prompts/image
