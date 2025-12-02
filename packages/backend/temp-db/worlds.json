@@ -10538,6 +10538,232 @@
       ],
       "searchDesc": "Colossal tower interior with rough stone, obsidian pathway, and a central vortex of pulsating orange-red light.",
       "slug": "interior-of-tower"
+    },
+    "loc-1764662997445-puuy0lp3v": {
+      "id": "loc-1764662997445-puuy0lp3v",
+      "type": "host",
+      "name": "The Grand Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A world characterized by colossal, deeply carved geological formations and the remnants of ancient, vast civilizations. These natural and artificial structures often intertwine, creating awe-inspiring vistas.",
+        "colorsAndLighting": "Dramatic contrasts between brightly lit upper areas and deep, serene shadows in the depths. A palette dominated by natural earth tones accented by vibrant greens and blues from flora and sky.",
+        "atmosphere": "The air is crisp and clear, suggesting high altitudes and expansive open spaces. A sense of profound age and mystery pervades, with the immensity of the environment inspiring awe.",
+        "materials": "Primarily ancient, weathered stone and bedrock form the foundational materials, often softened by pervasive, vibrant natural overgrowth.",
+        "mood": "Grand, mysterious, and awe-inspiring. A sense of immense scale and timelessness, where nature and forgotten civilizations coexist.",
+        "sounds": "Distant winds, echoes, flowing water, occasional animal calls",
+        "spatialLayout": "Vast, vertical expanses defined by deep canyons, cliffs, and grand structures integrated into the landscape. Offers both panoramic views and intimate, shadowed depths.",
+        "primary_surfaces": [
+          "rock",
+          "stone"
+        ],
+        "secondary_surfaces": [
+          "ivy",
+          "moss",
+          "foliage",
+          "blossoms"
+        ],
+        "accent_features": [
+          "arches",
+          "spires",
+          "ornate railings",
+          "flowering bushes"
+        ],
+        "dominant": "tan",
+        "secondary": "green",
+        "accent": "blue",
+        "ambient": "bright daylight",
+        "genre": "fantasy",
+        "architectural_tone": "ancient colossal stonework with massive, integrated structures, characterized by grand arches, weathered facades, and multi-tiered designs that blend seamlessly with natural geological formations.",
+        "cultural_tone": "forgotten, advanced, monumental",
+        "materials_base": "aged stone, natural rock, weathered textures",
+        "mood_baseline": "awe-inspiring",
+        "palette_bias": "earthy tones with vibrant natural accents",
+        "soundscape_base": "echoing and vast",
+        "flora_base": "lush climbing vines, mosses, flowering bushes",
+        "fauna_base": "small birds, unseen creatures",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Grand Expanse",
+          "looks": "A world of immense geological formations and forgotten civilizations.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A world of immense geological formations and forgotten civilizations.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Vast canyons",
+        "Ancient structures",
+        "Majestic bridges"
+      ],
+      "uniqueIdentifiers": [
+        "Immense scale",
+        "Civilizational remnants"
+      ],
+      "searchDesc": "Vast world of colossal canyons, ancient ruins, and dramatic geological features.",
+      "slug": "the-grand-expanse"
+    },
+    "f003f5d8-c99a-471f-9266-44d891dd188f": {
+      "id": "f003f5d8-c99a-471f-9266-44d891dd188f",
+      "type": "region",
+      "name": "The Grand Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Towering, sheer rock walls, heavily overgrown with vibrant green ivy, moss, and flowering bushes bearing pink blossoms, plunging hundreds of feet into a gorge. Immense, multi-tiered stone structures are integrated into these verdant cliffs, featuring numerous arched windows and doorways, now weathered and reclaimed by nature.",
+        "colorsAndLighting": "Sunlight illuminates the upper parts of the canyon and structures, creating bright highlights, while the depths remain in serene, deep shadow, providing high contrast. Dominant tan stone is offset by vibrant greens and touches of pink.",
+        "atmosphere": "The air is clear and crisp, hinting at a cooler, high-altitude environment. A sense of profound age and resilience of nature over civilization is palpable.",
+        "materials": "Primarily ancient, weathered stone and sheer rock faces, densely covered in vibrant mosses, thick ivy, and flowering bushes.",
+        "mood": "Grand, natural, and imposing, with an underlying sense of wild reclamation.",
+        "sounds": "Whispering winds, dripping water, rustling foliage, distant river roar",
+        "spatialLayout": "Immense vertical spaces with sheer cliff faces and deep abysses, sculpted by natural forces and augmented by massive artificial structures.",
+        "primary_surfaces": [
+          "rock",
+          "stone"
+        ],
+        "secondary_surfaces": [
+          "ivy",
+          "moss",
+          "foliage"
+        ],
+        "accent_features": [
+          "arched windows",
+          "doorways",
+          "flowering bushes",
+          "pink blossoms"
+        ],
+        "dominant": "tan",
+        "secondary": "green",
+        "accent": "pink",
+        "ambient": "bright daylight, deep shadow",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "lush, extensive climbing vines, mosses, hardy flowering bushes",
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Grand Expanse",
+          "looks": "The primary geological and architectural region of the world, defined by its immense canyons and integrated ancient structures.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The primary geological and architectural region of the world, defined by its immense canyons and integrated ancient structures.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Colossal canyons",
+        "Verdant cliffs",
+        "Integrated stone structures"
+      ],
+      "uniqueIdentifiers": [
+        "Extreme verticality",
+        "Abundant overgrowth"
+      ],
+      "searchDesc": "Vast, ancient canyons with towering, ivy-covered cliffs and integrated monumental architecture.",
+      "slug": "the-grand-expanse-region"
+    },
+    "1a61a163-3b76-45ff-bbd4-c794d75bf804": {
+      "id": "1a61a163-3b76-45ff-bbd4-c794d75bf804",
+      "type": "location",
+      "name": "The Grand Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Grand Expanse",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "37f2a118-03ed-4e65-a0ac-533650b0c05c": {
+      "id": "37f2a118-03ed-4e65-a0ac-533650b0c05c",
+      "type": "niche",
+      "name": "The Skybridge Junction",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Skybridge Junction",
+          "looks": "The upper bridge, a marvel of ancient engineering, and the connecting walkways, offering breathtaking panoramic views.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The upper bridge, a marvel of ancient engineering, and the connecting walkways, offering breathtaking panoramic views.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764663025495-jsjfj6xam"
+    },
+    "d1416c78-fec9-4784-92bd-5a41deee4686": {
+      "id": "d1416c78-fec9-4784-92bd-5a41deee4686",
+      "type": "niche",
+      "name": "The Zigzagging Nexus",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Zigzagging Nexus",
+          "looks": "A complex network of ancient stone staircases and bridges forming a central junction, alive with activity.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A complex network of ancient stone staircases and bridges forming a central junction, alive with activity.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
     }
   },
   "views": {},
@@ -11573,6 +11799,34 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764662997445-puuy0lp3v",
+      "type": "host",
+      "children": [
+        {
+          "id": "f003f5d8-c99a-471f-9266-44d891dd188f",
+          "type": "region",
+          "children": [
+            {
+              "id": "1a61a163-3b76-45ff-bbd4-c794d75bf804",
+              "type": "location",
+              "children": [
+                {
+                  "id": "37f2a118-03ed-4e65-a0ac-533650b0c05c",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "d1416c78-fec9-4784-92bd-5a41deee4686",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -11616,6 +11870,7 @@
     "loc-1764661495174-yb44v9umv",
     "loc-1764662678308-9tao1v0pw",
     "loc-1764662720427-2qtoj8639",
-    "loc-1764662808175-qeyyzg46s"
+    "loc-1764662808175-qeyyzg46s",
+    "loc-1764662997445-puuy0lp3v"
   ]
 }
