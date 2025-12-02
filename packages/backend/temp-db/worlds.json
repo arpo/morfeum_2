@@ -1,11 +1,393 @@
 {
   "nodes": {
+    "loc-1764667367244-ctyr3sc4s": {
+      "id": "loc-1764667367244-ctyr3sc4s",
+      "type": "host",
+      "name": "Metropolise",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A bustling, diverse world characterized by coastal beauty and a blend of classical and modern architectural styles. The environment features natural elements like beaches and hillsides alongside dense urban development. The visual experience is consistently influenced by dramatic, warm lighting conditions.",
+        "colorsAndLighting": "Dominated by a warm, golden-orange hue from the setting sun, casting long shadows and creating luminous skies. Secondary colors include turquoise for water and lush greens for vegetation, contrasted by the beige and stone tones of architecture.",
+        "atmosphere": "The air is clear and often hazy with the golden light of sunset, creating a serene yet vibrant atmosphere. The temperature is pleasant, typical of a coastal evening. There's a sense of opulence and lively activity across the different zones.",
+        "materials": "A mix of natural materials like sand and stone, alongside manufactured materials such as concrete, glass, and polished metals. Vegetation is abundant in natural areas and as decorative elements in urban settings.",
+        "mood": "Serene and opulent, with an underlying sense of vibrant life and dynamism. The sunset imbues the scene with a romantic and picturesque quality.",
+        "sounds": "Distant city hum, ocean waves, seagulls, gentle chatter, boat horns",
+        "spatialLayout": "A layered landscape featuring elevated coastal properties, expansive beachfronts, and dense, vertically oriented city centers, all oriented towards the sea and the setting sun.",
+        "primary_surfaces": "Stone, concrete, sand, glass",
+        "secondary_surfaces": "Wood, metal, foliage",
+        "accent_features": "Ornate railings, curving balconies, spires, twin towers, palm trees",
+        "dominant": "Golden orange",
+        "secondary": "Turquoise, green, beige",
+        "accent": "White (columns), dark silhouettes",
+        "ambient": "Warm golden",
+        "genre": "modern",
+        "architectural_tone": "A blend of classical grandeur with modern cosmopolitan design. Expect ornate details, sweeping curves, and grand proportions in historical areas, transitioning to sleek lines, towering structures, and extensive glass in modern districts. Harmonious integration of architecture with natural coastal features.",
+        "cultural_tone": "Affluent and cosmopolitan, with a focus on leisure, commerce, and sophisticated urban living. A society that appreciates both historical beauty and contemporary progress.",
+        "materials_base": "High-quality natural stone, polished concrete, expansive glass facades, warm wood accents, and decorative metals.",
+        "mood_baseline": "Optimistic and sophisticated, with a touch of romanticism inspired by the coastal setting and dramatic sunsets.",
+        "palette_bias": "Warm, vibrant palette emphasizing golden hues, oceanic blues and greens, and natural earthy tones.",
+        "soundscape_base": "A rich soundscape blending natural coastal sounds with the subtle, ambient noise of a thriving, sophisticated city.",
+        "flora_base": "Coastal palms, lush Mediterranean-style gardens, manicured hedges",
+        "fauna_base": "Seagulls, coastal birds, marine life",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Metropolise",
+          "looks": "A vibrant coastal metropolis bathed in the warm glow of sunset.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A vibrant coastal metropolis bathed in the warm glow of sunset.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Coastal cityscape",
+        "Sunset sky",
+        "Ocean bay"
+      ],
+      "uniqueIdentifiers": [
+        "Coastal geography",
+        "Sunset lighting"
+      ],
+      "searchDesc": "A vibrant coastal metropolis at sunset, featuring a diverse landscape of opulent villas, sandy beaches, and towering skyscrapers.",
+      "slug": "metropolise"
+    },
+    "5623c06d-7352-4e76-80b2-a386f30e52ce": {
+      "id": "5623c06d-7352-4e76-80b2-a386f30e52ce",
+      "type": "region",
+      "name": "Metropolise",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A dynamic coastal landscape that transitions from verdant hillsides with grand villas to sweeping golden beaches and dense urban development. Palm trees are a common sight, framing the views towards the ocean and the city.",
+        "colorsAndLighting": "Bathed in the omnipresent warm, golden light of sunset, with the turquoise of the bay providing a vibrant contrast. Greens of vegetation and beiges of sand and stone are prevalent.",
+        "atmosphere": "A pleasant, breezy coastal atmosphere, with a gentle warmth from the setting sun. The air is clear, allowing for expansive views of the city and sea.",
+        "materials": "Abundant stone and concrete for structures, natural sand for beaches, and lush vegetation. Yacht docks and piers are common near the water.",
+        "mood": "Picturesque and inviting, evoking a sense of sophisticated relaxation and natural beauty. The setting sun creates a romantic ambiance.",
+        "sounds": "Gentle surf, distant city murmurs, seabird calls",
+        "spatialLayout": "A varied layout featuring elevated areas overlooking the coast, long stretches of beachfront, and a densely packed urban core that recedes inland.",
+        "primary_surfaces": "Stone, concrete, sand",
+        "secondary_surfaces": "Wood (piers, some buildings), foliage",
+        "accent_features": "Palm trees, piers, boat moorings",
+        "dominant": "Golden orange",
+        "secondary": "Turquoise, green, beige",
+        "accent": "White",
+        "ambient": "Warm golden",
+        "genre": null,
+        "architectural_tone": "Inherits the blend of classical grandeur and modern cosmopolitan design. Architectural styles will vary, but all will harmonize with the coastal environment and the overarching aesthetic of opulence and sophistication.",
+        "cultural_tone": "Reflects the affluent and cosmopolitan nature of the host, emphasizing seaside living, leisure activities, and high-end urban experiences.",
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "Coastal palms, vibrant flowering shrubs, manicured lawns",
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Metropolise",
+          "looks": "The primary region encompassing the coastal city, its beaches, and surrounding hills.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The primary region encompassing the coastal city, its beaches, and surrounding hills.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Coastal line",
+        "Urban sprawl",
+        "Sunset vista"
+      ],
+      "uniqueIdentifiers": [
+        "Coastal city",
+        "Sunset facing"
+      ],
+      "searchDesc": "The main coastal region of Metropolise, featuring diverse environments from opulent villas to bustling city centers.",
+      "slug": "metropolise-region"
+    },
+    "23ec12a0-8911-4f1b-a151-51230e18ad5e": {
+      "id": "23ec12a0-8911-4f1b-a151-51230e18ad5e",
+      "type": "location",
+      "name": "The Sunset Villa",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A grand, multi-tiered classical villa with numerous white columns and curved balconies dominates the right side of the frame, perched on a lush green hillside. Guests are visible on its upper terraces, overlooking the scene. The structure features ornate railings and a domed roof element. Below the villa, a curving golden beach stretches out, bordered by a line of palm trees and residential buildings. Numerous boats are moored in the clear turquoise bay. The city skyline, a dense collection of modern skyscrapers, rises in the background, softened by the sunset haze.",
+        "colorsAndLighting": "The lighting is warm and golden, characteristic of sunset. The sun, low on the horizon, casts long rays and creates a luminous circle of light. There is a high contrast between the brightly lit sky and water and the shadowed areas of the hillside and buildings.",
+        "atmosphere": "The air is clear, with a visible golden haze from the setting sun. The scene is visually rich with the detail of the coastal city and the villa.",
+        "materials": "Primarily stone and concrete for the structure, with ornate metal railings and possibly decorative plasterwork. Lush greenery surrounds the villa.",
+        "mood": "Elegant and exclusive, exuding wealth and refined taste. The sunset view adds a romantic and breathtaking quality.",
+        "sounds": "Muffled chatter from guests, distant ocean sounds, gentle breeze",
+        "spatialLayout": "The foreground is occupied by the opulent classical villa on a verdant slope. The midground features a sweeping sandy beach leading to a calm turquoise bay, dotted with boats and people, and a coastal road with buildings. The background showcases a dense, modern metropolis dominated by skyscrapers, set against a mountainous horizon.",
+        "primary_surfaces": "Stone, concrete, glass",
+        "secondary_surfaces": "Wood, foliage, sand",
+        "accent_features": "Reflective water, metallic elements of boats and buildings, glowing windows",
+        "dominant": "Golden orange (sky, light)",
+        "secondary": "Turquoise (water), green (vegetation), beige (sand, villa walls)",
+        "accent": "White (columns, railings), metallic glints on boats",
+        "ambient": "Warm golden hues suffuse the entire scene.",
+        "genre": null,
+        "architectural_tone": "Magnificent classical palatial style, characterized by numerous imposing white columns (likely Doric or Ionic), elaborate entablatures, curved and sweeping balconies with ornate wrought-iron or bronze railings, arched windows, and a prominent domed roof element. The construction emphasizes symmetry, grandeur, and refined craftsmanship, with a base of polished stone and detailed moldings.",
+        "cultural_tone": "Represents peak affluence and a high appreciation for historical architectural aesthetics, suggesting a culture that values legacy, art, and opulent leisure.",
+        "materials_base": "Fine-grained limestone or marble, polished stucco, antique brass or bronze for decorative elements, dark hardwood for accents.",
+        "mood_baseline": "Grand, refined, and somewhat stately, with an underlying sense of peace and accomplishment.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "Formal gardens with manicured hedges and flowering plants, integrated with the classical architecture.",
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Sunset Villa",
+          "looks": "A magnificent, multi-story palatial villa with classical architecture, perched on a green hillside.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A magnificent, multi-story palatial villa with classical architecture, perched on a green hillside.",
+      "navigableElements": [
+        {
+          "type": "balcony",
+          "position": "right side, foreground",
+          "description": "Ornate balcony offering panoramic views of the bay and city"
+        },
+        {
+          "type": "stairs",
+          "position": "center, foreground",
+          "description": "Sweeping stone stairs leading down from the villa terrace"
+        },
+        {
+          "type": "door",
+          "position": "central section of villa, midground",
+          "description": "Apparent entrance door on the villa's lower level"
+        },
+        {
+          "type": "passage",
+          "position": "beachfront, midground",
+          "description": "Coastal road running parallel to the beach"
+        },
+        {
+          "type": "pier",
+          "position": "along the beach, midground",
+          "description": "Several piers extending into the bay for boat docking"
+        },
+        {
+          "type": "window",
+          "position": "various buildings, background",
+          "description": "Numerous windows visible on skyscrapers and beachfront buildings"
+        }
+      ],
+      "dominantElements": [
+        "Classical palatial villa (multi-story, right foreground)",
+        "Sprawling coastal city skyline with skyscrapers (background)",
+        "Golden sandy beach with turquoise bay (midground)",
+        "Setting sun casting golden light (sky)"
+      ],
+      "uniqueIdentifiers": [
+        "Classical palatial villa on a hillside",
+        "Distinctive tall spired skyscraper among others",
+        "Curving golden beach with numerous boats"
+      ],
+      "searchDesc": "Coastal city villa at sunset. Has: balcony (right, foreground), stairs (center, foreground), piers (beachfront, midground)",
+      "slug": "the-sunset-villa",
+      "primaryMedia": "media-1764667398797-ddbdov4qj"
+    },
+    "ae6b14ee-d80c-4fd9-b51d-2a3f76b99273": {
+      "id": "ae6b14ee-d80c-4fd9-b51d-2a3f76b99273",
+      "type": "location",
+      "name": "The Bayfront",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sweeping, golden sandy beach that curves along the edge of a clear, turquoise bay. The water is calm, with numerous yachts and smaller boats moored or docked at piers extending from the shore. The beachfront is lined with residential buildings and a bustling coastal road, interspersed with palm trees.",
+        "colorsAndLighting": "The golden sand reflects the warm sunset light, creating a luminous glow. The turquoise water is vibrant and clear, contrasting with the warm sky. Buildings are a mix of beige and white, with green palm fronds.",
+        "atmosphere": "Lively and relaxed, with the gentle sounds of the sea and the buzz of activity along the beachfront. The warm evening air is inviting for leisure activities.",
+        "materials": "Natural sand and water are primary, with wood for piers and some building structures. Concrete and stone are used for the coastal road and larger buildings.",
+        "mood": "Pleasant and leisurely, evoking a sense of vacation and seaside enjoyment. The sunset adds a romantic and picturesque quality.",
+        "sounds": "Gentle lapping waves, distant city traffic, human chatter, seabird calls",
+        "spatialLayout": "A linear layout following the natural curve of the bay, with the beach as the central feature, bordered by water on one side and a developed urban edge on the other.",
+        "primary_surfaces": "Sand, water, concrete (road)",
+        "secondary_surfaces": "Wood (piers, some buildings), glass (building windows)",
+        "accent_features": "Palm trees, piers, yachts, beach umbrellas",
+        "dominant": "Golden yellow",
+        "secondary": "Turquoise, beige",
+        "accent": "Green (foliage), dark wood (piers)",
+        "ambient": "Warm golden",
+        "genre": null,
+        "architectural_tone": "Beachfront architecture with a cosmopolitan flair. Buildings are generally modern, with clean lines and ample glass to maximize views of the bay. Some structures might incorporate elements of Mediterranean or tropical design, such as tiled roofs or stucco finishes, but overall lean towards contemporary coastal living. Piers are robust but functional, designed for mooring a variety of vessels.",
+        "cultural_tone": "A vibrant hub for leisure, tourism, and high-end coastal living, attracting those who enjoy seaside activities, fine dining, and vibrant nightlife.",
+        "materials_base": "Weather-resistant wood for piers and boardwalks, light-colored stucco or concrete for buildings, polished natural stone for public spaces, and extensive use of glass.",
+        "mood_baseline": "Inviting, energetic, and leisurely, with a focus on outdoor enjoyment and social interaction.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "Coastal palms, sea oats, salt-tolerant flowering plants along the beachfront.",
+        "fauna_base": "Seagulls, sandpipers, small marine life in shallow waters.",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Bayfront",
+          "looks": "A sweeping golden sandy beach curving along a clear turquoise bay.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A sweeping golden sandy beach curving along a clear turquoise bay.",
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "along the beach",
+          "description": "A sandy path following the curve of the beach."
+        },
+        {
+          "type": "bridge",
+          "position": "offshore, mid-bay",
+          "description": "A wooden pier extending from the shore to docked boats."
+        },
+        {
+          "type": "door",
+          "position": "residential buildings, beachfront",
+          "description": "Entrance doors to beachfront residences and businesses."
+        }
+      ],
+      "dominantElements": [
+        "Golden sandy beach",
+        "Turquoise bay",
+        "Boats and yachts"
+      ],
+      "uniqueIdentifiers": [
+        "Curving coastline",
+        "Calm waters"
+      ],
+      "searchDesc": "A wide, golden sandy beach on a clear turquoise bay, dotted with people, boats, and beachfront establishments.",
+      "slug": "the-bayfront"
+    },
+    "30ecede2-2a9b-4e10-a249-52934936e02c": {
+      "id": "30ecede2-2a9b-4e10-a249-52934936e02c",
+      "type": "location",
+      "name": "The Metropolis Skyline",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A dense, sprawling modern metropolis characterized by an array of towering skyscrapers of varying designs. Notable landmarks include an extremely tall spired building and several prominent twin towers. The city appears somewhat hazy against the setting sun, with long shadows cast by the immense structures.",
+        "colorsAndLighting": "The setting sun casts a warm, golden-orange glow that softens the sharp edges of the skyscrapers, creating a hazy silhouette effect. Deeper shadows are cast between the buildings, and windows catch the light.",
+        "atmosphere": "Bustling and energetic, with a sense of immense scale and constant activity. The air can be hazy due to the urban environment and the sunset light.",
+        "materials": "Predominantly glass, steel, and concrete, forming the facades of the skyscrapers. Polished metal and stone are common at ground level and in building entrances.",
+        "mood": "Ambitious and impressive, conveying a sense of progress, power, and modern achievement. The sunset adds a touch of awe and grand scale.",
+        "sounds": "Distant traffic hum, occasional sirens, wind whistling between buildings, faint city chatter",
+        "spatialLayout": "A highly dense, vertically oriented urban environment with extensive street networks and plazas at ground level, and a concentrated mass of skyscrapers reaching high into the sky.",
+        "primary_surfaces": "Glass, steel, concrete",
+        "secondary_surfaces": "Polished metal, stone, asphalt",
+        "accent_features": "Extremely tall spired building, prominent twin towers, geometric skyscraper designs",
+        "dominant": "Silhouettes against golden orange",
+        "secondary": "Grey, metallic tones, dark glass",
+        "accent": "Reflective surfaces",
+        "ambient": "Warm golden haze",
+        "genre": null,
+        "architectural_tone": "Cutting-edge modern and contemporary skyscraper architecture. This includes extremely tall, slender spires that pierce the sky, bold twin tower complexes with interconnected designs, and a variety of geometric forms utilizing vast expanses of glass and polished metal. Emphasis on verticality, sleekness, and impressive scale, with innovative structural elements and reflective facades.",
+        "cultural_tone": "The center of global commerce, finance, and innovation. It represents a society driven by progress, ambition, and cutting-edge technology, with a focus on efficiency and high-rise living and working.",
+        "materials_base": "High-performance glass curtain walls, brushed stainless steel, polished aluminum, reinforced concrete, and dark granite or basalt for foundational elements.",
+        "mood_baseline": "Ambitious, dynamic, and forward-looking, with a strong sense of urban power and scale.",
+        "palette_bias": "Cooler tones of grey, silver, and dark blues, contrasted by the warm sunset hues and the reflectivity of glass. Accents of vibrant colors may appear in signage or lighting.",
+        "soundscape_base": "A pervasive, low-frequency urban hum, punctuated by the sounds of traffic, distant construction, and the subtle whoosh of wind at high altitudes.",
+        "flora_base": "Minimal, primarily in carefully designed urban plazas or rooftop gardens, featuring hardy, modern plant species and sculptural trees.",
+        "fauna_base": "Urban-adapted birds, such as pigeons or falcons.",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Metropolis Skyline",
+          "looks": "A sprawling modern metropolis dominated by towering skyscrapers.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A sprawling modern metropolis dominated by towering skyscrapers.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "ground level, city blocks",
+          "description": "Street-level passages between buildings, leading to plazas and entrances."
+        },
+        {
+          "type": "stairs",
+          "position": "building interiors",
+          "description": "Internal stairs and escalators within skyscrapers."
+        },
+        {
+          "type": "portal",
+          "position": "building interiors, high floors",
+          "description": "High-altitude portals or observation decks."
+        }
+      ],
+      "dominantElements": [
+        "Towering skyscrapers",
+        "Spired building",
+        "Twin towers"
+      ],
+      "uniqueIdentifiers": [
+        "Dense urban fabric",
+        "Distinctive spired building"
+      ],
+      "searchDesc": "The modern heart of Metropolise, characterized by a dense cluster of towering skyscrapers and a vibrant urban atmosphere.",
+      "slug": "the-metropolis-skyline"
+    }
   },
   "views": {},
   "worldTrees": [
-    
+    {
+      "id": "loc-1764667367244-ctyr3sc4s",
+      "type": "host",
+      "children": [
+        {
+          "id": "5623c06d-7352-4e76-80b2-a386f30e52ce",
+          "type": "region",
+          "children": [
+            {
+              "id": "23ec12a0-8911-4f1b-a151-51230e18ad5e",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "ae6b14ee-d80c-4fd9-b51d-2a3f76b99273",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "30ecede2-2a9b-4e10-a249-52934936e02c",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
   ],
   "pinnedIds": [
-   
+    "loc-1764667367244-ctyr3sc4s"
   ]
 }
