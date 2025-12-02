@@ -3,6 +3,7 @@
 ## What Works ✅
 
 ### Core Application Features
+- **Slash Commands**: Contextual navigation commands (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, CREATE_IMAGE, GO_INSIDE)
 - **Entity System**: Character and location creation, storage, and management
 - **World Tree System**: Hierarchical location structures (host → region → location → niche)
 - **3D World View**: WebGL-based depth rendering with stereo support (2D, full 3D, HSBS modes)
@@ -24,6 +25,11 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Slash Commands System** (Dec 2): Full slash command implementation with contextual filtering
+  - Commands filtered based on current node type (host shows NEW_HOST/NEW_REGION, region shows NEW_LOCATION, etc.)
+  - SlashCommandInput component with dropdown autocomplete and descriptions
+  - CREATE_IMAGE command for generating images for existing nodes (creates media entry, updates primaryMedia)
+- **CSS Bug Fix** (Dec 2): Fixed dropdown clipping in Tabs component (overflow:hidden → overflow:visible)
 - **World tree pipeline refactored:** Image is now generated immediately after prompt parsing, before DNA, so user sees image ~13s faster.
 - **DNA cleanup:** Legacy fields (`semantic`, `visual`, `profile`) are no longer added to DNA in worlds.json.
 - **Bugfix:** WorldTreeBuilder no longer injects old schema fields into DNA.

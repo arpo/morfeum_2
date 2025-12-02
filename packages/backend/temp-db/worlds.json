@@ -108,7 +108,8 @@
       ],
       "searchDesc": "Vibrant London district, Camden Lock Market, street art, alternative culture, music venues.",
       "slug": "camden",
-      "locations": []
+      "locations": [],
+      "primaryMedia": "media-1764689924214-rhjatza39"
     },
     "6a9f05fc-5b2e-4758-bd3e-985d8df3999c": {
       "id": "6a9f05fc-5b2e-4758-bd3e-985d8df3999c",
@@ -172,7 +173,285 @@
       ],
       "searchDesc": "Historic financial district of London, blending ancient sites with modern skyscrapers.",
       "slug": "city-of-london",
-      "locations": []
+      "locations": [],
+      "primaryMedia": "media-1764689936810-niikrpjxy"
+    },
+    "bfab47be-f72f-475a-851a-5e2d2e4af3fd": {
+      "id": "bfab47be-f72f-475a-851a-5e2d2e4af3fd",
+      "type": "location",
+      "name": "The Neon Shaman",
+      "description": "A vibrant, underground emporium pulsating with the energy of the rave scene. This shop is a beacon for those seeking unique threads and trippy trinkets.",
+      "dna": {
+        "looks": "The exterior is a chaotic canvas of graffiti art overlaid with an array of flashing, custom-made neon signs that paint the street in kaleidoscopic hues. Metal grates and heavy-duty shutters hint at its secure nature, while glimpses through reinforced windows reveal a tantalizing, shadowy interior.",
+        "colorsAndLighting": "Dominated by electric blues, vibrant magentas, and acid greens from the neon, creating a constantly shifting and otherworldly glow. UV blacklights activate hidden pigments in the art, making the entire facade shimmer and pulse.",
+        "atmosphere": "The air crackles with an electric anticipation. A low, omnipresent bassline seems to emanate from the very foundations of the building, drawing in passersby. The scent of incense and something vaguely synthetic hangs in the air.",
+        "materials": "Constructed from a utilitarian base of rough concrete and corrugated metal, heavily layered with spray paint, stickers, and the polished surfaces of the neon tubing.",
+        "mood": "Enigmatic, exciting, and slightly illicit. It promises adventure and self-expression for those in the know.",
+        "sounds": "Distant bass, muffled music, street chatter, hissing doors, occasional laughter",
+        "spatialLayout": "A squat, imposing structure with a single, heavily reinforced main entrance centrally located. Its facade is relatively flat, acting as a canvas for its vibrant adornments, with limited visible windows.",
+        "primary_surfaces": "Graffiti-covered concrete, corrugated metal",
+        "secondary_surfaces": "Reinforced glass, neon tubing, metal grates",
+        "accent_features": "Pulsing neon signage, UV-reactive art installations, custom light fixtures",
+        "dominant": "#0000FF",
+        "secondary": "#FF00FF",
+        "accent": "#00FF00",
+        "ambient": "low-light, pulsating",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": "underground, counter-culture, rave",
+        "materials_base": "industrial, utilitarian",
+        "mood_baseline": "exciting, mysterious",
+        "palette_bias": "electric, vibrant",
+        "soundscape_base": "muffled bass, ambient street noise",
+        "flora_base": "minimal, urban weeds",
+        "fauna_base": "urban pests"
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A heavy, graffiti-covered metal door that slides open with a hiss, revealing a dimly lit, pulsating interior."
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "A large, reinforced window showcasing displays of UV-reactive clothing and glowing accessories, often obscured by swirling fog."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A narrow, unmarked alleyway running alongside the shop, potentially leading to a back entrance or a hidden loading dock."
+        }
+      ],
+      "dominantElements": [
+        "Glow-in-the-dark murals",
+        "Hanging psychedelic tapestries",
+        "Strategically placed UV blacklights",
+        "A large, flashing neon sign"
+      ],
+      "uniqueIdentifiers": [
+        "The distinctive, pulsing neon 'Shaman' sign",
+        "The ever-present haze of incense and fog",
+        "The constant thrum of distant bass music emanating from within",
+        "The eclectic collection of street art adorning its facade"
+      ],
+      "searchDesc": "A cool rave shop with neon signs, UV art, and a pulsing bassline. Find unique threads and trippy trinkets.",
+      "slug": "the-neon-shaman",
+      "niches": [],
+      "primaryMedia": "media-1764689976235-r7awmsknf"
+    },
+    "niche-1764689995104-mw43tqwpp": {
+      "id": "niche-1764689995104-mw43tqwpp",
+      "type": "niche",
+      "name": "interior of The Neon Shaman",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The space is dominated by a massive, offset cylindrical structure of corrugated metal and vibrant neon tubes. The uneven concrete floor is marked by graffiti and luminous paint puddles, leading towards a glowing blue walkway. A deep corridor recedes into the background, its end obscured by shifting neon.",
+        "colorsAndLighting": "Dominant electric blue and magenta neon tubes pulse with light, casting sharp shadows across the rough concrete surfaces. A vibrant green luminescence spills from a recessed alcove, contrasting with the overall blue and magenta hues.",
+        "atmosphere": "The air is thick with haze and the palpable hum of unseen light installations. A sense of illicit adventure and raw self-expression permeates the humid, electrically charged atmosphere.",
+        "materials": "Rough, graffiti-scarred concrete forms the primary floor and structural elements. Interwoven corrugated metal panels make up the central structure, interspersed with thick neon tubing. The overall condition is weathered and worn, indicative of a well-used underground space.",
+        "mood": "This place evokes an enigmatic and exciting mood, promising adventure and a sense of belonging for those who seek out its hidden depths.",
+        "sounds": "Humming neon, distant thumping bass, dripping, faint echoes.",
+        "spatialLayout": "The space features a dynamic, offset composition with a central, towering cylindrical form. An off-center pillar base anchors the foreground, with navigable elements leading into the midground and a receding corridor in the background. The perspective is wide and distorted by an ultra-wide lens.",
+        "primary_surfaces": "Graffiti-scarred concrete, corrugated metal panels.",
+        "secondary_surfaces": "Discarded spray cans, LED strips, rough concrete pillar, weathered metal stairs.",
+        "accent_features": "Puddles of spilled luminous paint, jagged neon framing around the alcove, small white LEDs on stairs.",
+        "dominant": "#0000FF (Electric Blue) - neon tubes, walkway edge, general ambient light.",
+        "secondary": "#FF00FF (Magenta) - neon tubes.",
+        "accent": "#00FF00 (Vibrant Green) - alcove luminescence; white - stair LEDs.",
+        "ambient": "Cool",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": "underground, counter-culture, rave",
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764689995103-vjvq5uqth",
+      "description": "The dimly lit, cavernous interior of a hidden underground establishment, alive with the pulsating glow of neon and the gritty texture of urban decay.",
+      "navigableElements": [
+        {
+          "type": "walkway",
+          "position": "lower left to midground",
+          "description": "A low, glowing blue line marking the edge of a raised walkway."
+        },
+        {
+          "type": "alcove",
+          "position": "right wall, midground",
+          "description": "A recessed, arched alcove spilling vibrant green luminescence."
+        },
+        {
+          "type": "stairs",
+          "position": "midground left",
+          "description": "A steep, narrow staircase ascending into shadows."
+        },
+        {
+          "type": "corridor",
+          "position": "far center",
+          "description": "A deep, indistinct corridor receding into darkness."
+        }
+      ],
+      "dominantElements": [
+        "Towering cylindrical structure",
+        "Graffiti-scarred concrete floor",
+        "Pulsing neon tubes"
+      ],
+      "uniqueIdentifiers": [
+        "Spilled luminous paint puddles",
+        "Corrugated metal panels",
+        "Arched alcove with green luminescence",
+        "Jagged neon framing"
+      ],
+      "searchDesc": "Underground rave den with neon, graffiti, and a towering metal structure.",
+      "slug": "interior-of-the-neon-shaman"
+    },
+    "d53d8473-932e-4a0e-8eac-d332940d55d3": {
+      "id": "d53d8473-932e-4a0e-8eac-d332940d55d3",
+      "type": "location",
+      "name": "The Gilded Serpent",
+      "description": "An exclusive club catering to the city's elite, its facade speaks of opulence and discretion. Behind its imposing doors lies a world of hushed conversations and refined indulgence.",
+      "dna": {
+        "looks": "This establishment presents a facade of understated grandeur, eschewing ostentatious displays for a more refined elegance. The architecture suggests classical influences, with clean lines and precisely carved stone elements, conveying a sense of permanence and established wealth.",
+        "colorsAndLighting": "The exterior is bathed in a soft, warm light from strategically placed sconces, highlighting the rich, dark stone and polished brass accents. Colors lean towards deep jewel tones and muted metallics.",
+        "atmosphere": "A palpable sense of exclusivity and quiet power permeates the air around The Gilded Serpent. The immediate surroundings are impeccably maintained, with no hint of casual public access.",
+        "materials": "The building is constructed from high-quality, dark granite and accented with polished brass and rich, dark wood. The windows are thick, high-grade glass, ensuring privacy and muffling external sounds.",
+        "mood": "This location evokes a feeling of sophisticated secrecy and unparalleled privilege. It promises an escape into a world of comfort and influence, far removed from the ordinary.",
+        "sounds": "Muffled conversations, distant clinking of glasses, soft jazz music, hushed footsteps, distant traffic drone",
+        "spatialLayout": "The building is a solid, imposing structure with a prominent, yet discreet, main entrance. It appears to be designed for controlled access and internal flow.",
+        "primary_surfaces": "Dark, polished granite, smooth stone facades",
+        "secondary_surfaces": "Polished brass, dark mahogany trim, tinted glass",
+        "accent_features": "Ornate, minimalist signage, discreetly placed lighting fixtures",
+        "dominant": "#333333",
+        "secondary": "#B8860B",
+        "accent": "#DAA520",
+        "ambient": "warm",
+        "genre": null,
+        "architectural_tone": "neoclassical",
+        "cultural_tone": "elite, exclusive",
+        "materials_base": "luxury, stone, metal",
+        "mood_baseline": "sophisticated, private",
+        "palette_bias": "dark jewel tones, metallics",
+        "soundscape_base": "muffled, sophisticated",
+        "flora_base": "manicured shrubs, minimal planting",
+        "fauna_base": "urban wildlife (pigeons, stray cats)",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A grand, polished brass double-door, flanked by uniformed doormen, leading into the main foyer."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "A discreet, unmarked side passage, subtly lit, likely leading to private entrances or service areas."
+          },
+          {
+            "type": "window",
+            "position": "background",
+            "description": "Tall, arched windows with thick, tinted glass, offering glimpses of opulent interiors but revealing little."
+          }
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A grand, polished brass double-door, flanked by uniformed doormen, leading into the main foyer."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A discreet, unmarked side passage, subtly lit, likely leading to private entrances or service areas."
+        },
+        {
+          "type": "window",
+          "position": "background",
+          "description": "Tall, arched windows with thick, tinted glass, offering glimpses of opulent interiors but revealing little."
+        }
+      ],
+      "dominantElements": [
+        "Ornate facade with classical detailing",
+        "Large, imposing brass double-doors",
+        "Subtly lit, tinted windows",
+        "Uniformed doormen"
+      ],
+      "uniqueIdentifiers": [
+        "Subtle, almost clandestine entrance",
+        "Air of extreme exclusivity",
+        "Glimmers of extreme wealth within",
+        "Discreet but ever-present security"
+      ],
+      "searchDesc": "The Gilded Serpent: An exclusive club for the elite, featuring opulent decor, discreet entrances, and an air of luxury.",
+      "slug": "the-gilded-serpent",
+      "niches": [],
+      "primaryMedia": "media-1764690070670-q83cvu6g2"
+    },
+    "niche-1764690090936-gbv0mjp7o": {
+      "id": "niche-1764690090936-gbv0mjp7o",
+      "type": "niche",
+      "name": "interior of The Gilded Serpent",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior presents a sophisticated neoclassical design with predominantly straight walls and defining corners. The floor is clad in large, dark, polished granite slabs. A grand, discreet arched doorway framed with dark mahogany serves as a focal point, emanating a warm amber glow. A long, receding corridor stretches into the distance, its far end softly lit.",
+        "colorsAndLighting": "The dominant color is dark granite (#333333), accented by the subtle golden glow of polished brass (#B8860B) and the warm amber light (#DAA520) from within the doorway and corridor.",
+        "atmosphere": "The air is still and hushed, carrying a sense of private sophistication. The lighting is soft, warm, and ambient, creating pools of light that enhance the feeling of understated grandeur and exclusive comfort.",
+        "materials": "Key materials include dark, polished granite for the flooring and walls, rich dark mahogany for doorway trim, and polished brass for accent elements like a low bollard. Subtle metallic threads are visible in the abstract art.",
+        "mood": "This space evokes a mood of sophisticated secrecy and unparalleled privilege, promising an exclusive escape into comfort and influence.",
+        "sounds": "Subtle ambient hum, distant echoes, soft footsteps on stone.",
+        "spatialLayout": "The layout is predominantly horizontal, emphasizing receding linear depth. Walls are straight with defined corners, leading the eye towards a central, slightly off-center arched doorway and a long corridor.",
+        "primary_surfaces": "Dark polished granite (floors and walls).",
+        "secondary_surfaces": "Rich dark mahogany (door frame), polished brass (bollard).",
+        "accent_features": "Minimalist abstract art with metallic thread accents in a recessed alcove, subtle golden glow from a low brass bollard.",
+        "dominant": "#333333 (dark granite)",
+        "secondary": "#DAA520 (warm amber glow)",
+        "accent": "#B8860B (polished brass)",
+        "ambient": "warm",
+        "genre": null,
+        "architectural_tone": "neoclassical",
+        "cultural_tone": "Elite, exclusive social and functional identity.",
+        "materials_base": "polished stone, dark woods, metallic accents",
+        "mood_baseline": "sophisticated secrecy, unparalleled privilege",
+        "palette_bias": "deep earth tones with warm metallic highlights",
+        "soundscape_base": "hushed luxury",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764690090934-sndlayrm4",
+      "description": "The neoclassical interior of a gilded serpent, featuring dark polished granite floors, rich mahogany accents, and subtle, warm lighting.",
+      "navigableElements": [
+        {
+          "type": "doorway",
+          "position": "center midground",
+          "description": "Grand, discreet arched doorway with warm amber glow, framed with dark mahogany trim."
+        },
+        {
+          "type": "alcove",
+          "position": "right midground",
+          "description": "Recessed alcove with minimalist art featuring subtle metallic thread accents, subtly lit."
+        },
+        {
+          "type": "corridor",
+          "position": "far center",
+          "description": "Long, receding corridor dimly illuminated by diffused warm light, approximately 30 meters deep."
+        }
+      ],
+      "dominantElements": [
+        "Dark polished granite floor",
+        "Arched mahogany-framed doorway",
+        "Receding granite corridor",
+        "Polished brass bollard"
+      ],
+      "uniqueIdentifiers": [
+        "Neoclassical carved stone elements",
+        "Dark polished granite and rich mahogany",
+        "Subtle, warm amber and golden lighting",
+        "Asymmetric composition with central linear depth"
+      ],
+      "searchDesc": "Neoclassical gilded serpent interior: dark granite, mahogany arch, warm amber glow, receding corridor.",
+      "slug": "interior-of-the-gilded-serpent"
     }
   },
   "views": {},
@@ -184,12 +463,36 @@
         {
           "id": "56191cab-cb57-4835-bad5-73fec1878bbc",
           "type": "region",
-          "children": []
+          "children": [
+            {
+              "id": "bfab47be-f72f-475a-851a-5e2d2e4af3fd",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764689995104-mw43tqwpp",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "6a9f05fc-5b2e-4758-bd3e-985d8df3999c",
           "type": "region",
-          "children": []
+          "children": [
+            {
+              "id": "d53d8473-932e-4a0e-8eac-d332940d55d3",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764690090936-gbv0mjp7o",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
         }
       ]
     }

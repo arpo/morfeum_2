@@ -1,19 +1,5 @@
 {
   "media": {
-    "media-1764667410940-cqfk5dozw": {
-      "id": "media-1764667410940-cqfk5dozw",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a84ab35/e_Lu15sLRXYDZezhbLJl8_6147c4c692c544fba86c459b4ae10684.png",
-      "createdAt": "2025-12-02T09:23:30.940Z",
-      "metadata": {
-        "parentMedia": "media-1764667398797-ddbdov4qj",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "23ec12a0-8911-4f1b-a151-51230e18ad5e"
-      ],
-      "parentMedia": "media-1764667398797-ddbdov4qj"
-    },
     "media-1764667513270-gb5udpvoi": {
       "id": "media-1764667513270-gb5udpvoi",
       "type": "image",
@@ -29,62 +15,6 @@
         "char-1764667499858-tu7s8n0nx"
       ]
     },
-    "media-1764667537567-5ge3w7m76": {
-      "id": "media-1764667537567-5ge3w7m76",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a84ab41/B5iNlWVgUN1RggcBXyzU1_e2d385f6949a43d2ae1cc2b0cca6fcc4.png",
-      "createdAt": "2025-12-02T09:25:37.567Z",
-      "metadata": {
-        "parentMedia": "media-1764667513270-gb5udpvoi",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "char-1764667499858-tu7s8n0nx"
-      ],
-      "parentMedia": "media-1764667513270-gb5udpvoi"
-    },
-    "media-1764669392345-5ixmfxib5": {
-      "id": "media-1764669392345-5ixmfxib5",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a84abfb/EdpaLM5WeVy_EGJ2oQPMY_fbeb61de82c74fa6943db85afa9f5608.png",
-      "createdAt": "2025-12-02T09:56:32.345Z",
-      "metadata": {
-        "parentMedia": "media-1764669078084-kx8vuj055",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "76043ccd-40be-4196-962d-b7c52420e38d"
-      ],
-      "parentMedia": "media-1764669078084-kx8vuj055"
-    },
-    "media-1764683957802-kc2b1ivn5": {
-      "id": "media-1764683957802-kc2b1ivn5",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a84b1ab/cmRrTga-qE8FHcNpc5jaw_fc332ce18cf1484b80f11a03e236a992.png",
-      "createdAt": "2025-12-02T13:59:17.802Z",
-      "metadata": {
-        "parentMedia": "media-1764683890202-afil1pd0v",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "bfda549d-b852-4fca-a566-c77de02edc68"
-      ],
-      "parentMedia": "media-1764683890202-afil1pd0v"
-    },
-    "media-1764686436391-6x2a02gvf": {
-      "id": "media-1764686436391-6x2a02gvf",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a84b2a3/MRNvm5rExNNfQnLzh5w2o_89a44a7d5e6c4962958d3b2247eee411.png",
-      "createdAt": "2025-12-02T14:40:36.391Z",
-      "metadata": {
-        "parentMedia": "media-1764686288891-8t5pjlrtj",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "25dbf26c-56a7-4464-a9d8-bfa6323f2ccf"
-      ],
-      "parentMedia": "media-1764686288891-8t5pjlrtj"
-    },
     "media-1764687599092-8uauo2bdl": {
       "id": "media-1764687599092-8uauo2bdl",
       "type": "image",
@@ -97,6 +27,110 @@
       "entityRefs": [
         "loc-1764687588822-d2zf73e48"
       ]
+    },
+    "media-1764689893781-m8hla6tbs": {
+      "id": "media-1764689893781-m8hla6tbs",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84b3fd/Je9fFpRiDUkkwnFymOLxA_25a12abcea44427ebfea6f7a52cf309a.png",
+      "createdAt": "2025-12-02T15:38:13.781Z",
+      "metadata": {
+        "parentMedia": "media-1764667513270-gb5udpvoi",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764667499858-tu7s8n0nx"
+      ],
+      "parentMedia": "media-1764667513270-gb5udpvoi"
+    },
+    "media-1764689924214-rhjatza39": {
+      "id": "media-1764689924214-rhjatza39",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84b400/gBKkZPKSvUidLiXWvuU6k.jpg",
+      "createdAt": "2025-12-02T15:38:44.214Z",
+      "metadata": {
+        "prompt": "Camden district/region. A vibrant and eclectic district known for its alternative culture, bustling markets, and lively street art. Camden offers a unique blend of historical charm and modern bohemian flair.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nA riot of color and creativity, with buildings often adorned with elaborate murals and quirky signage. The architecture ranges from Victorian industrial to modern, with a strong emphasis on independent shops and stalls.\n\nAtmosphere:\nBustling and energetic, with a constant hum of activity and a palpable sense of creativity. The air is often filled with the scent of international street food and a general buzz of diverse crowds.\n\nColors:\nDominant: multi-color, Secondary: grey\nLight: daylight\n\nArchitectural Style: \nMaterials: A rich tapestry of industrial brickwork, corrugated iron, painted wood, and the diverse materials found within market stalls, from textiles to ceramics.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "56191cab-cb57-4835-bad5-73fec1878bbc"
+      ]
+    },
+    "media-1764689936810-niikrpjxy": {
+      "id": "media-1764689936810-niikrpjxy",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84b401/hQWGS2ipj0BveSAOb972F.jpg",
+      "createdAt": "2025-12-02T15:38:56.810Z",
+      "metadata": {
+        "prompt": "City of London district/region. The historic heart of London, a bustling financial and commercial district. It is a place where ancient Roman roots meet modern skyscrapers, teeming with activity and a palpable sense of history. This area is the engine of the city's economy and a magnet for global commerce.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nA striking juxtaposition of ancient stone structures and gleaming modern towers. Cobblestone streets wind past imposing Victorian facades and cutting-edge glass and steel skyscrapers. The density of buildings is high, creating a canyon-like effect in many thoroughfares.\n\nAtmosphere:\nA constant hum of activity, especially during weekdays, with a brisk pace and a professional, driven atmosphere. The air carries the faint scent of exhaust fumes mixed with the cleaner air from nearby green spaces. It feels both grand and intensely practical.\n\nColors:\nDominant: gray, Secondary: brown\nLight: neutral\n\nArchitectural Style: \nMaterials: Predominantly stone (granite, Portland stone) for older buildings, with abundant glass and steel for contemporary structures. Pavement often consists of historic cobbles or modern paving stones.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "6a9f05fc-5b2e-4758-bd3e-985d8df3999c"
+      ]
+    },
+    "media-1764689976235-r7awmsknf": {
+      "id": "media-1764689976235-r7awmsknf",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84b405/iQEh7oJ5-d9KGS9iyjTZQ.jpg",
+      "createdAt": "2025-12-02T15:39:36.235Z",
+      "metadata": {
+        "prompt": "The Neon Shaman. A vibrant, underground emporium pulsating with the energy of the rave scene. This shop is a beacon for those seeking unique threads and trippy trinkets.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThe exterior is a chaotic canvas of graffiti art overlaid with an array of flashing, custom-made neon signs that paint the street in kaleidoscopic hues. Metal grates and heavy-duty shutters hint at its secure nature, while glimpses through reinforced windows reveal a tantalizing, shadowy interior.\n\nMaterials and Surfaces:\nPrimary: Graffiti-covered concrete, corrugated metal\nSecondary: Reinforced glass, neon tubing, metal grates\nAccents: Pulsing neon signage, UV-reactive art installations, custom light fixtures\n\nColors:\nDominant: #0000FF, Secondary: #FF00FF, Accent: #00FF00\nLight: low-light, pulsating\n\nAtmosphere: The air crackles with an electric anticipation. A low, omnipresent bassline seems to emanate from the very foundations of the building, drawing in passersby. The scent of incense and something vaguely synthetic hangs in the air.\nMood: Enigmatic, exciting, and slightly illicit. It promises adventure and self-expression for those in the know.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "bfab47be-f72f-475a-851a-5e2d2e4af3fd"
+      ]
+    },
+    "media-1764689995103-vjvq5uqth": {
+      "id": "media-1764689995103-vjvq5uqth",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84b406/2ugoyWYXk4dczHdjCXHfz.jpg",
+      "createdAt": "2025-12-02T15:39:55.103Z",
+      "metadata": {
+        "prompt": "[COMPOSITION:]\n- **Foreground:** Uneven, graffiti-scarred concrete floor punctuated by puddles of spilled, luminous paint reflecting the neon above. A scattering of discarded spray cans and blinking LED strips lie near a single, off-center pillar base, its rough concrete surface textured with faded stencils. A low, glowing blue line marks the edge of a raised walkway, leading from the lower left towards the midground [navigable: walkway, lower left].\n- **Midground:** Dominating the space is a towering, cylindrical structure composed of interwoven corrugated metal panels and thick, pulsing neon tubes in electric blue and magenta. This central form is offset to the right, creating a dynamic visual tension. Embedded within its metallic skin is a recessed, arched alcove, approximately human-height, from which spills a vibrant green luminescence, hinting at a passage beyond. The alcove's entrance is framed by a jagged arrangement of more neon tubing, catching the ambient light and casting sharp, colorful shadows. To the left, a steep, narrow staircase crafted from dark, weathered metal ascends sharply, its steps illuminated by individual, small white LEDs, disappearing into the shadows above [navigable: alcove, right wall], [navigable: stairs, midground left].\n- **Background:** The oppressive concrete ceiling is barely visible, lost in the haze of UV light and the intense glow of unseen light installations. Directly ahead, the space recedes into a deep, indistinct corridor, its far end hinted at by a faint, shifting shimmer of mixed neon colors, suggesting further unexplored depths and an unseen structure within the darkness [navigable: corridor, far center].\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764690070670-q83cvu6g2": {
+      "id": "media-1764690070670-q83cvu6g2",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84b40e/qGvEJ4kSYt2C8-I-cmVnx.jpg",
+      "createdAt": "2025-12-02T15:41:10.670Z",
+      "metadata": {
+        "prompt": "The Gilded Serpent. An exclusive club catering to the city's elite, its facade speaks of opulence and discretion. Behind its imposing doors lies a world of hushed conversations and refined indulgence.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThis establishment presents a facade of understated grandeur, eschewing ostentatious displays for a more refined elegance. The architecture suggests classical influences, with clean lines and precisely carved stone elements, conveying a sense of permanence and established wealth.\n\nMaterials and Surfaces:\nPrimary: Dark, polished granite, smooth stone facades\nSecondary: Polished brass, dark mahogany trim, tinted glass\nAccents: Ornate, minimalist signage, discreetly placed lighting fixtures\n\nColors:\nDominant: #333333, Secondary: #B8860B, Accent: #DAA520\nLight: warm\n\nAtmosphere: A palpable sense of exclusivity and quiet power permeates the air around The Gilded Serpent. The immediate surroundings are impeccably maintained, with no hint of casual public access.\nMood: This location evokes a feeling of sophisticated secrecy and unparalleled privilege. It promises an escape into a world of comfort and influence, far removed from the ordinary.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "d53d8473-932e-4a0e-8eac-d332940d55d3"
+      ]
+    },
+    "media-1764690090934-sndlayrm4": {
+      "id": "media-1764690090934-sndlayrm4",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84b410/PQNnsBnazSrsmfkNKchUg.jpg",
+      "createdAt": "2025-12-02T15:41:30.934Z",
+      "metadata": {
+        "prompt": "FORM: Neoclassical, echoing the clean lines and precisely carved stone elements of the exterior, with predominantly straight walls and defining corners.\nCEILING: Flat, creating a sense of contained grandeur and direct, focused lighting.\nSCALE: The exterior suggests a substantial building. Assuming a mid-range exterior size (15-50m), the interior volume implies 8-15m ceilings, with a potential emphasis on horizontal depth given the \"controlled access and internal flow\" described.\nSTRUCTURE TYPE: Likely horizontal, emphasizing receding linear depth within a private, exclusive setting.\nCOMPOSITION:\n\n[COMPOSITION:]\n- **Foreground:** The immediate floor is clad in large, precisely cut slabs of dark, polished granite, reflecting the warm, ambient light. To the left, a single, low, polished brass bollard emits a subtle golden glow, hinting at the materials used within. This forms the base of a subtle, off-center visual flow.\n- **Midground:** Directly ahead, a grand, yet discreet, arched doorway is carved into a granite wall, framed with rich, dark mahogany. This opening is partially lit by a warm, amber glow emanating from within, casting subtle shadows on the surrounding stone. To the right of this main passage, a recessed alcove features a framed piece of minimalist, abstract art with subtle metallic thread accents, drawing the eye subtly away from the central path.\n- **Background:** A long, receding corridor stretches into the distance, its far end dimly illuminated by a diffused, warm light. The granite walls are punctuated by discreet, recessed lighting fixtures that cast pools of soft light, creating a sense of depth and mystery. The implied depth of this passage is approximately 30 meters.\n\nNAVIGABLE ELEMENTS:\n- Arched doorway with warm amber glow, framed with dark mahogany trim [navigable: doorway, center]\n- Recessed alcove with minimalist art, subtly lit [navigable: alcove, right midground]\n- Dimly illuminated distant corridor [navigable: corridor, far center]\n\nASYMMETRIC COMPOSITION: The main arched doorway is positioned slightly off-center to the left in the midground. The alcove with art is to the right, providing visual balance but asymmetry. The foreground bollard is placed low and left, guiding the eye diagonally towards the central passage. The receding corridor in the background creates a strong sense of linear depth, extending beyond the exact center.\n\nMATERIALS: Dark, polished granite, polished brass, rich dark mahogany trim, tinted glass (implied in distant architectural elements), minimalist metallic art accents.\nCOLOR PALETTE: Dominant #333333 (dark granite), secondary #B8860B (brass accents), accent #DAA520 (warm glow).\nLIGHTING: Soft, warm ambient light from strategically placed sconces and recessed fixtures, with distinct pools of light at the doorway and in the background corridor.\nMOOD: Sophisticated, private, exclusive, understated grandeur.\nARCHITECTURAL TONE: Neoclassical.\nCULTURAL TONE: Elite, exclusive.\nSTYLE: Photo-realistic, high detail, cinematic lighting, sharp focus, 8k resolution.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
     }
   }
 }

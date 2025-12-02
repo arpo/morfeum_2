@@ -14,6 +14,10 @@ import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
 import { createNode } from '../../engine/nodeCreation/core/createNode';
 import { createHierarchy } from '../../engine/nodeCreation/core/createHierarchy';
+import { storageService } from '../../services/storage/storageService';
+import { generateImage } from '../../services/mzoo';
+import { getNodeImagePrompt } from '../../engine/nodeCreation/prompts/image';
+import mediaService from '../../services/media/mediaService';
 
 const router = Router();
 
@@ -455,22 +459,91 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
   // Run pipeline asynchronously
   (async () => {
     try {
-      // TODO: Implement image generation for existing node
-      // This will need to:
-      // 1. Load node from storage
-      // 2. Generate image prompt from node DNA
-      // 3. Call FLUX API
-      // 4. Save media and update node
+      // Step 1: Load node from storage
+      sseService.sendEvent(operationId, 'progress', {
+        stage: 'generate',
+        message: 'Loading node data...'
+      });
 
+      const worldsData = await storageService.loadWorlds();
+      if (!worldsData || !worldsData.nodes) {
+        throw new Error('No worlds data found in storage');
+      }
+
+      const node = worldsData.nodes[nodeId];
+      if (!node) {
+        throw new Error(`Node not found: ${nodeId}`);
+      }
+
+      console.log(`[CREATE-IMAGE] Found node: ${node.name} (type: ${node.type})`);
+
+      // Step 2: Generate image prompt from node DNA
       sseService.sendEvent(operationId, 'progress', {
         stage: 'generate',
         message: 'Generating image...'
       });
 
-      // For now, return a placeholder error since the full implementation 
-      // requires loading node data and image generation
-      throw new Error('CREATE_IMAGE command not fully implemented yet. Use /new-* commands with --create-image flag instead.');
+      const perspective = detectPerspectiveFromNode(node);
+      const imagePrompt = getNodeImagePrompt(node, perspective);
+      
+      console.log(`[CREATE-IMAGE] Image prompt: ${imagePrompt.substring(0, 100)}...`);
 
+      // Step 3: Call FLUX API
+      const result = await generateImage(
+        apiKey,
+        imagePrompt,
+        1,
+        'landscape_16_9',
+        'none'
+      );
+
+      if (result.error || !result.data?.images?.[0]?.url) {
+        throw new Error(result.error || 'Failed to generate image');
+      }
+
+      const imageUrl = result.data.images[0].url;
+      console.log(`[CREATE-IMAGE] Image generated: ${imageUrl.substring(0, 50)}...`);
+
+      // Step 4: Create media entry and update node
+      sseService.sendEvent(operationId, 'progress', {
+        stage: 'save',
+        message: 'Saving image...'
+      });
+
+      // Create media entry
+      const mediaEntry = mediaService.createMedia({
+        type: 'image',
+        url: imageUrl,
+        metadata: {
+          prompt: imagePrompt,
+          model: 'flux',
+          width: 1920,
+          height: 1080,
+          aspectRatio: 'landscape_16_9'
+        },
+        entityRefs: [nodeId]
+      });
+      
+      console.log(`[CREATE-IMAGE] Media entry created: ${mediaEntry.id}`);
+
+      // Update node with primaryMedia (not just imageUrl)
+      node.primaryMedia = mediaEntry.id;
+      node.imageUrl = imageUrl; // Keep for backward compatibility
+      worldsData.nodes[nodeId] = node;
+
+      // Save updated worlds data
+      await storageService.saveWorlds(worldsData);
+      console.log(`[CREATE-IMAGE] Node updated with primaryMedia: ${mediaEntry.id}`);
+
+      // Send completion event with mediaId
+      sseService.sendEvent(operationId, 'completed', {
+        message: 'Image created successfully',
+        node,
+        imageUrl,
+        mediaId: mediaEntry.id
+      });
+
+      setTimeout(() => sseService.closeConnection(operationId), 1000);
     } catch (error) {
       console.error(`\n❌ [CREATE-IMAGE ERROR]`, error);
       sseService.sendEvent(operationId, 'error', {
@@ -482,5 +555,25 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
     }
   })();
 }));
+
+/**
+ * Helper: Detect perspective from node data
+ */
+function detectPerspectiveFromNode(node: any): 'interior' | 'exterior' {
+  const description = (node.description || node.name || '').toLowerCase();
+  
+  const interiorWords = ['inside', 'interior', 'room', 'hall', 'chamber', 'within', 'indoor'];
+  if (interiorWords.some(word => description.includes(word))) {
+    return 'interior';
+  }
+
+  const exteriorWords = ['outside', 'exterior', 'street', 'garden', 'rooftop', 'terrace', 'outdoor'];
+  if (exteriorWords.some(word => description.includes(word))) {
+    return 'exterior';
+  }
+
+  // Default to exterior for most cases
+  return 'exterior';
+}
 
 export { router as navigationRouter };

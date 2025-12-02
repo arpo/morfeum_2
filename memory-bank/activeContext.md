@@ -2,6 +2,31 @@
 
 ## Recent Changes (2025-12-02)
 
+### Slash Commands System & CREATE_IMAGE Implementation (Dec 2, 2025)
+- **Feature**: Full slash commands system for navigation and node creation
+- **Implementation**:
+  - **Contextual Command Filtering**: Commands filtered based on current node type
+    - Host: NEW_HOST, NEW_REGION, CREATE_IMAGE
+    - Region: NEW_LOCATION, CREATE_IMAGE
+    - Location/Niche: NEW_NICHE, GO_INSIDE, CREATE_IMAGE
+  - **SlashCommandInput Component**: Dropdown autocomplete with descriptions
+  - **CREATE_IMAGE Command**: Generate image for existing nodes
+    - Loads node from storage
+    - Generates image prompt from node DNA using `getNodeImagePrompt()`
+    - Calls FLUX API
+    - Creates media entry in `media.json`
+    - Updates node with `primaryMedia` (not just imageUrl)
+    - Returns `mediaId` in SSE completion event
+- **CSS Bug Fix**: Fixed dropdown being clipped
+  - Root cause: `.content` and `.contentPanel` in `Tabs.module.css` had `overflow: hidden`
+  - Solution: Changed to `overflow: visible` to allow dropdown to render outside container
+- **Files Added/Modified**:
+  - `packages/backend/src/config/navigation.ts` - Command definitions with node type requirements
+  - `packages/backend/src/routes/mzoo/navigation.ts` - CREATE_IMAGE endpoint with media service integration
+  - `packages/frontend/src/components/ui/SlashCommandInput/` - New autocomplete component
+  - `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Command handling
+  - `packages/frontend/src/components/ui/Tabs/Tabs.module.css` - Fixed overflow clipping
+
 ### Full-Screen Image Drag and Drop Feature (Dec 2, 2025)
 - **Feature**: Added ability to drag and drop an image file anywhere on the app screen for AI analysis
 - **Implementation**:
