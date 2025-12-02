@@ -1,16 +1,86 @@
 /**
- * Navigation Commands
+ * Slash Commands Configuration
  * 
- * Central definition of all navigation intents supported by the system.
+ * Central definition of all slash commands supported by the system.
  * Used by both frontend UI and backend navigation router.
  * 
- * NOTE: Only add commands here that are IMPLEMENTED in the navigation router.
- * See NAVIGATION_INTENT_REGISTRY in pipelineConfig.ts for the source of truth.
+ * Commands can have:
+ * - requiresNodeType: Array of node types required to use this command (null = always available)
+ * - description: Human-readable description shown in command dropdown
+ * - category: Command category for grouping (navigation, creation, media)
  */
 
-export const NAVIGATION_COMMANDS = [
-  'GO_INSIDE',
-  // Add new commands here as they are implemented
-] as const;
+export type NodeType = 'host' | 'region' | 'location' | 'niche';
 
-export type NavigationCommand = typeof NAVIGATION_COMMANDS[number];
+export interface SlashCommandConfig {
+  requiresNodeType: NodeType[] | null;
+  description: string;
+  category: 'navigation' | 'creation' | 'media';
+}
+
+export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
+  // Navigation commands
+  GO_INSIDE: { 
+    requiresNodeType: ['location', 'niche'], 
+    description: 'Enter a location',
+    category: 'navigation'
+  },
+  
+  // Node creation commands
+  NEW_HOST: { 
+    requiresNodeType: null, 
+    description: 'Create a new host world',
+    category: 'creation'
+  },
+  NEW_REGION: { 
+    requiresNodeType: ['host'], 
+    description: 'Create region in current host',
+    category: 'creation'
+  },
+  NEW_LOCATION: { 
+    requiresNodeType: ['region'], 
+    description: 'Create location in current region',
+    category: 'creation'
+  },
+  NEW_NICHE: { 
+    requiresNodeType: ['location'], 
+    description: 'Create niche in current location',
+    category: 'creation'
+  },
+  
+  // Media commands
+  CREATE_IMAGE: { 
+    requiresNodeType: ['host', 'region', 'location', 'niche'], 
+    description: 'Generate image for current node',
+    category: 'media'
+  }
+} as const;
+
+// All command names as array (for backward compatibility)
+export const NAVIGATION_COMMANDS = Object.keys(SLASH_COMMANDS) as (keyof typeof SLASH_COMMANDS)[];
+
+export type NavigationCommand = keyof typeof SLASH_COMMANDS;
+
+// Flags supported by commands
+export const COMMAND_FLAGS = {
+  CREATE_IMAGE: '--create-image',
+  BACKGROUND_TASK: '--bgtask'
+} as const;
+
+export type CommandFlag = typeof COMMAND_FLAGS[keyof typeof COMMAND_FLAGS];
+
+/**
+ * Get available commands for a given node type
+ */
+export function getAvailableCommands(currentNodeType: NodeType | null): string[] {
+  return Object.entries(SLASH_COMMANDS)
+    .filter(([_, config]) => {
+      // Command with null requiresNodeType is always available
+      if (config.requiresNodeType === null) return true;
+      // If no current node, only show commands that don't require a node
+      if (!currentNodeType) return false;
+      // Check if current node type is allowed
+      return config.requiresNodeType.includes(currentNodeType);
+    })
+    .map(([name]) => name);
+}

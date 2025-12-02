@@ -3,6 +3,7 @@ import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
 import { createEntitySession } from '@/utils/entity/sessionManager';
 import { findParentId } from '@/utils/tree/navigation';
+import { SLASH_COMMANDS, COMMAND_FLAGS } from '@backend/config/navigation';
 
 /**
  * Helper: Extract description/looks from DNA based on node type
@@ -87,6 +88,44 @@ export function useNavigationLogic() {
     });
   }, []);
 
+  /**
+   * Parse command input to extract command, text, and flags
+   * Example: "/NEW_HOST London --create-image --bgtask"
+   * Returns: { command: "NEW_HOST", text: "London", flags: { createImage: true, backgroundTask: true } }
+   */
+  const parseCommandInput = (input: string): { 
+    command: string; 
+    text: string | undefined; 
+    flags: { createImage: boolean; backgroundTask: boolean } 
+  } => {
+    const parts = input.trim().split(/\s+/);
+    const commandPart = parts[0].substring(1); // Remove leading /
+    
+    const flags = {
+      createImage: false,
+      backgroundTask: false
+    };
+    
+    const textParts: string[] = [];
+    
+    for (let i = 1; i < parts.length; i++) {
+      const part = parts[i];
+      if (part === COMMAND_FLAGS.CREATE_IMAGE) {
+        flags.createImage = true;
+      } else if (part === COMMAND_FLAGS.BACKGROUND_TASK) {
+        flags.backgroundTask = true;
+      } else if (!part.startsWith('--')) {
+        textParts.push(part);
+      }
+    }
+    
+    return {
+      command: commandPart.toUpperCase(),
+      text: textParts.length > 0 ? textParts.join(' ') : undefined,
+      flags
+    };
+  };
+
   const handleMove = useCallback(async () => {
     if (!movementInput.trim()) {
       console.warn('[useNavigationLogic] Cannot travel: missing input');
@@ -101,28 +140,239 @@ export function useNavigationLogic() {
       return;
     }
     
-    const spaceIndex = trimmedInput.indexOf(' ');
-    let command: string;
-    let text: string | undefined;
+    // Parse command with flags
+    const { command, text, flags } = parseCommandInput(trimmedInput);
     
-    if (spaceIndex > 0) {
-      command = trimmedInput.substring(1, spaceIndex);
-      text = trimmedInput.substring(spaceIndex + 1).trim() || undefined;
-    } else {
-      command = trimmedInput.substring(1);
-      text = undefined;
+    // Check if command is a creation command (NEW_HOST, NEW_REGION, etc.)
+    const isCreationCommand = ['NEW_HOST', 'NEW_REGION', 'NEW_LOCATION', 'NEW_NICHE'].includes(command);
+    const isMediaCommand = command === 'CREATE_IMAGE';
+    
+    // Get current node (may be undefined for NEW_HOST)
+    let currentNode: ReturnType<typeof getNode> | undefined = undefined;
+    
+    // For NEW_HOST, we don't need an active entity
+    if (command !== 'NEW_HOST') {
+      const activeEntityId = useStore.getState().activeEntity;
+      if (!activeEntityId) {
+        console.warn('[useNavigationLogic] No active entity');
+        setMovementInput('');
+        return;
+      }
+      
+      currentNode = getNode(activeEntityId);
+      if (!currentNode) {
+        console.warn('[useNavigationLogic] Current node not found');
+        setMovementInput('');
+        return;
+      }
     }
     
-    const activeEntityId = useStore.getState().activeEntity;
-    if (!activeEntityId) {
-      console.warn('[useNavigationLogic] No active entity');
+    // Handle creation commands
+    if (isCreationCommand) {
+      setIsMoving(true);
+      try {
+        const apiKey = ''; // Will be handled by backend middleware
+        const response = await fetch('/api/mzoo/navigation/create-node', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            command,
+            description: text,
+            parentId: currentNode?.id,
+            flags
+          })
+        });
+        
+        const result = await response.json();
+        
+        if (!response.ok) {
+          setErrorMessage(result.error || 'Failed to create node');
+          setTimeout(() => setErrorMessage(null), 5000);
+          setIsMoving(false);
+          setMovementInput('');
+          return;
+        }
+        
+        const { data } = result;
+        
+        // If there's an events URL, we have a pipeline to monitor
+        if (data.eventsUrl && data.operationId) {
+          const registerExternalSpawn = useStore.getState().registerExternalSpawn;
+          
+          // Determine node type from command
+          const nodeTypeMap: Record<string, string> = {
+            NEW_HOST: 'host',
+            NEW_REGION: 'region',
+            NEW_LOCATION: 'location',
+            NEW_NICHE: 'niche'
+          };
+          const nodeType = nodeTypeMap[command] || 'location';
+          
+          // Map node type to valid entityType for spawn system
+          const entityTypeMap: Record<string, 'character' | 'location' | 'niche'> = {
+            host: 'location',
+            region: 'location',
+            location: 'location',
+            niche: 'niche'
+          };
+          const spawnEntityType = entityTypeMap[nodeType] || 'location';
+          
+          // Capture current node for closure
+          const capturedCurrentNode = currentNode;
+          
+          registerExternalSpawn(
+            data.operationId,
+            data.eventsUrl,
+            `/${command}${text ? ' ' + text : ''}`,
+            spawnEntityType,
+            async (completedData: any) => {
+              if (completedData.node) {
+                // Add node to store and tree
+                const createNodeInStore = useLocationsStore.getState().createNode;
+                createNodeInStore(completedData.node);
+                
+                if (completedData.node.type !== 'host') {
+                  // Add to parent's children
+                  const currentWorldTrees = useLocationsStore.getState().worldTrees;
+                  const worldTree = currentWorldTrees.find(tree => {
+                    const findInTree = (treeNode: any, targetId: string): boolean => {
+                      if (treeNode.id === targetId) return true;
+                      return treeNode.children?.some((child: any) => findInTree(child, targetId)) || false;
+                    };
+                    return capturedCurrentNode ? findInTree(tree, capturedCurrentNode.id) : false;
+                  });
+                  
+                  if (worldTree && capturedCurrentNode) {
+                    const addNodeToTree = useLocationsStore.getState().addNodeToTree;
+                    addNodeToTree(worldTree.id, capturedCurrentNode.id, completedData.node.id, completedData.node.type);
+                  }
+                }
+                
+                const saveToBackend = useLocationsStore.getState().saveToBackend;
+                await saveToBackend();
+                
+                // Create entity session
+                createEntitySession(useStore.getState(), {
+                  id: completedData.node.id,
+                  name: completedData.node.name,
+                  type: 'location',
+                  primaryMedia: completedData.node.primaryMedia,
+                  imageUrl: completedData.imageUrl
+                });
+              }
+              setIsMoving(false);
+            },
+            (error: any) => {
+              console.error('[useNavigationLogic] Creation error:', error);
+              setIsMoving(false);
+            }
+          );
+          
+          setMovementInput('');
+          return;
+        }
+        
+      } catch (error) {
+        console.error('[useNavigationLogic] Creation command error:', error);
+        setErrorMessage('Failed to create node');
+        setTimeout(() => setErrorMessage(null), 5000);
+      } finally {
+        if (!flags.backgroundTask) {
+          setIsMoving(false);
+        }
+      }
+      
       setMovementInput('');
       return;
     }
     
-    const currentNode = getNode(activeEntityId);
+    // Handle media commands
+    if (isMediaCommand) {
+      if (!currentNode) {
+        setErrorMessage('Select a node to create an image');
+        setTimeout(() => setErrorMessage(null), 5000);
+        setMovementInput('');
+        return;
+      }
+      
+      setIsMoving(true);
+      try {
+        const response = await fetch('/api/mzoo/navigation/create-image', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            nodeId: currentNode.id,
+            flags
+          })
+        });
+        
+        const result = await response.json();
+        
+        if (!response.ok) {
+          setErrorMessage(result.error || 'Failed to create image');
+          setTimeout(() => setErrorMessage(null), 5000);
+          setIsMoving(false);
+          setMovementInput('');
+          return;
+        }
+        
+        const { data } = result;
+        
+        if (data.eventsUrl && data.operationId && currentNode) {
+          const registerExternalSpawn = useStore.getState().registerExternalSpawn;
+          const capturedNode = currentNode;
+          
+          registerExternalSpawn(
+            data.operationId,
+            data.eventsUrl,
+            '/CREATE_IMAGE',
+            'location',
+            async (completedData: any) => {
+              if (completedData.imageUrl) {
+                // Update node with new image
+                const updateNode = useLocationsStore.getState().updateNode;
+                updateNode(capturedNode.id, { primaryMedia: completedData.mediaId });
+                
+                const saveToBackend = useLocationsStore.getState().saveToBackend;
+                await saveToBackend();
+                
+                // Refresh entity session
+                createEntitySession(useStore.getState(), {
+                  id: capturedNode.id,
+                  name: capturedNode.name,
+                  type: 'location',
+                  primaryMedia: completedData.mediaId,
+                  imageUrl: completedData.imageUrl
+                });
+              }
+              setIsMoving(false);
+            },
+            (error: any) => {
+              console.error('[useNavigationLogic] Image creation error:', error);
+              setIsMoving(false);
+            }
+          );
+          
+          setMovementInput('');
+          return;
+        }
+        
+      } catch (error) {
+        console.error('[useNavigationLogic] Create image error:', error);
+        setErrorMessage('Failed to create image');
+        setTimeout(() => setErrorMessage(null), 5000);
+      } finally {
+        setIsMoving(false);
+      }
+      
+      setMovementInput('');
+      return;
+    }
+    
+    // Standard navigation commands (GO_INSIDE, etc.)
     if (!currentNode) {
-      console.warn('[useNavigationLogic] Current node not found');
+      setErrorMessage('Select a location to navigate');
+      setTimeout(() => setErrorMessage(null), 5000);
       setMovementInput('');
       return;
     }

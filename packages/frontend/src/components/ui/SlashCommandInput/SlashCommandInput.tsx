@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import styles from './SlashCommandInput.module.css';
+import { SLASH_COMMANDS, getAvailableCommands, type NodeType } from '@backend/config/navigation';
 
 interface SlashCommandInputProps {
   value: string;
   onChange: (value: string) => void;
   commands: readonly string[];
+  currentNodeType?: NodeType | null;
   placeholder?: string;
   disabled?: boolean;
   onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
@@ -16,6 +18,7 @@ export function SlashCommandInput({
   value,
   onChange,
   commands,
+  currentNodeType = null,
   placeholder,
   disabled,
   onKeyPress,
@@ -29,6 +32,11 @@ export function SlashCommandInput({
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Get contextually available commands based on current node type
+  const availableCommands = useMemo(() => {
+    return getAvailableCommands(currentNodeType);
+  }, [currentNodeType]);
 
   /**
    * Validate if the current input contains a valid command
@@ -70,9 +78,11 @@ export function SlashCommandInput({
       // or if they just typed /
       const hasSpace = value.includes(' ');
       const hasOpenParen = value.includes('(');
+      const hasFlag = value.includes('--');
       
-      if (!hasSpace && !hasOpenParen) {
-        const matches = commands.filter(cmd => 
+      if (!hasSpace && !hasOpenParen && !hasFlag) {
+        // Filter by available commands (contextual) and search term
+        const matches = availableCommands.filter(cmd => 
           cmd.toUpperCase().includes(searchTerm)
         );
         
@@ -89,7 +99,7 @@ export function SlashCommandInput({
     } else {
       setIsOpen(false);
     }
-  }, [value, commands]);
+  }, [value, availableCommands]);
 
   // Scroll active item into view
   useEffect(() => {
@@ -164,6 +174,11 @@ export function SlashCommandInput({
               onMouseEnter={() => setSelectedIndex(index)}
             >
               <span className={styles.commandName}>{cmd}</span>
+              {SLASH_COMMANDS[cmd] && (
+                <span className={styles.commandDescription}>
+                  {SLASH_COMMANDS[cmd].description}
+                </span>
+              )}
             </div>
           ))}
           {filteredCommands.length === 0 && (

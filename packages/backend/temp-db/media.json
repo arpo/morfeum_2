@@ -71,17 +71,31 @@
       ],
       "parentMedia": "media-1764683890202-afil1pd0v"
     },
-    "media-1764686288891-8t5pjlrtj": {
-      "id": "media-1764686288891-8t5pjlrtj",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84b293/UosqSmfvlSDiv5Itzd7sK.jpg",
-      "createdAt": "2025-12-02T14:38:08.891Z",
+    "media-1764686436391-6x2a02gvf": {
+      "id": "media-1764686436391-6x2a02gvf",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84b2a3/MRNvm5rExNNfQnLzh5w2o_89a44a7d5e6c4962958d3b2247eee411.png",
+      "createdAt": "2025-12-02T14:40:36.391Z",
       "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A scene of an immense, awe-inspiring canyon formed by colossal, intricately carved structures, dominated by a towering monolith sculpted into a stylized human-like face. This gigantic face, central to the composition, is composed of numerous blocks and embellished with geometric patterns and what appear to be ancient glyphs or technological circuitry, predominantly in cool blue tones. Its eyes are deeply shadowed, and its broad, stoic features contribute to the grand, mysterious atmosphere. On either side, massive, angular buildings or cliff faces rise, mirroring the intricate detailing of the central face, with one side brightly illuminated by a strong, golden-white light that highlights its textured surface, contrasting sharply with the deep blue shadows on the opposing wall. A wide, flat pathway of light-colored flagstones extends into the distance, reflecting the ambient light with an ethereal glow. In the mid-ground, a solitary figure, small against the colossal architecture, stands clad in a vibrant red hooded cloak, facing away from the viewer and towards the monumental face, adding a sense of scale and quiet pilgrimage to the otherworldly environment. The dramatic lighting creates stark contrasts and deep shadows, emphasizing the immense scale and ancient, possibly alien, nature of the architecture.\"\n\nThe Monolith of the Watcher, camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n\n[SCENE:]\nHost Xylos Prime: A world dominated by colossal, ancient, and geometrically intricate architecture of unknown origin..\n\nRegion The Grand Canyon of Sculpted Titans: An immense natural canyon profoundly reshaped by unimaginably large, carved structures, centered around a monumental, stylized monolith..\n\nDescription: A towering monolith sculpted into a stylized human-like face, composed of numerous blocks embellished with geometric patterns and ancient glyphs or technological circuitry in cool blue tones. Its eyes are deeply shadowed, and its broad, stoic features dominate the canyon. Massive, angular buildings or cliff faces rise on either side, mirroring its intricate detailing..\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
-        "model": "FLUX"
+        "parentMedia": "media-1764686288891-8t5pjlrtj",
+        "model": "fal-depth-anything-v2"
       },
       "entityRefs": [
         "25dbf26c-56a7-4464-a9d8-bfa6323f2ccf"
+      ],
+      "parentMedia": "media-1764686288891-8t5pjlrtj"
+    },
+    "media-1764687599092-8uauo2bdl": {
+      "id": "media-1764687599092-8uauo2bdl",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84b317/-0AsSsymFIXAQ7xdiv6Rk.jpg",
+      "createdAt": "2025-12-02T14:59:59.092Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"London\"\n\nLondon, elevated oblique, aerial 45° tilt, wide composition with centered framing, layered depth with foreground elements.\n\n[CAMERA ALIGNMENT:] centered, straight-ahead composition\n[LIGHT:] diffused key with parallax through haze, environmental motion (mist, wind, smoke)\n[LENS:] 16-35mm wide-angle lens, centered perspective\n\n[SCENE:]\nDescription: A major global city and the capital of England..\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "loc-1764687588822-d2zf73e48"
       ]
     }
   }

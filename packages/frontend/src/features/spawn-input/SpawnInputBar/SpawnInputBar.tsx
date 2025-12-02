@@ -12,6 +12,7 @@ import { IconDice, IconChevronDown, IconChevronUp, IconBookmark } from '@/icons'
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Tabs, Button, SlashCommandInput } from '@/components/ui';
 import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
+import { useLocationsStore } from '@/store/slices/locations';
 import styles from './SpawnInputBar.module.css';
 
 interface SpawnInputBarProps {
@@ -22,6 +23,12 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const { state, handlers } = useSpawnInputLogic();
   const navigation = useNavigationLogic();
   const [activeTab, setActiveTab] = useState('character');
+  
+  // Get current node type for contextual commands
+  const activeEntityId = useStore(state => state.activeEntity);
+  const getNode = useLocationsStore(state => state.getNode);
+  const currentNode = activeEntityId ? getNode(activeEntityId) : null;
+  const currentNodeType = currentNode?.type as 'host' | 'region' | 'location' | 'niche' | null;
   
   // Handle image paste - use store's append function
   const appendSpawnInputText = useStore(state => state.appendSpawnInputText);
@@ -256,6 +263,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                             value={navigation.state.movementInput}
                             onChange={navigation.handlers.setMovementInput}
                             commands={NAVIGATION_COMMANDS}
+                            currentNodeType={currentNodeType}
                             onInvalidCommand={navigation.handlers.handleInvalidCommand}
                             onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => {
                               if (e.key === 'Enter' && !navigation.state.isMoving) {
@@ -263,7 +271,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                                 navigation.handlers.handleMove();
                               }
                             }}
-                            placeholder="Describe where you want to go..."
+                            placeholder="Type / to see commands..."
                             disabled={navigation.state.isMoving}
                           />
                           <Button
