@@ -9822,6 +9822,722 @@
       "uniqueIdentifiers": [],
       "searchDesc": "",
       "slug": ""
+    },
+    "loc-1764662678308-9tao1v0pw": {
+      "id": "loc-1764662678308-9tao1v0pw",
+      "type": "host",
+      "name": "Xylos",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An alien world dominated by a vivid green sky, illuminated by a colossal green celestial body. Surreal desert landscapes unfold, punctuated by strange geological formations and advanced alien technology.",
+        "colorsAndLighting": "A pervasive, uniform green light bathes the entire scene, casting soft shadows and creating an ethereal, otherworldly luminescence. Dominant greens are contrasted with earthy tones of red and orange.",
+        "atmosphere": "The atmosphere is thick with a hazy, uniform green glow, obscuring distant details and lending a sense of mystery and wonder. A palpable sense of alienness pervades the air, suggesting a world vastly different from Earth.",
+        "materials": "Rocky outcrops and vast sandy plains form the primary surfaces. Hints of advanced, unknown materials are suggested by the alien spacecraft.",
+        "mood": "A profound sense of awe, mystery, and isolation pervades the landscape. The scene evokes wonder at the unknown and a feeling of being a lone observer in a grand cosmic spectacle.",
+        "sounds": "Distant hum, faint wind, alien calls, low thrumming",
+        "spatialLayout": "Expansive, open vistas with a clear division between foreground, mid-ground, and background. The colossal celestial body dominates the upper atmosphere, while the landscape stretches to a hazy horizon.",
+        "primary_surfaces": [
+          "rock",
+          "sand"
+        ],
+        "secondary_surfaces": [
+          "fabric",
+          "unknown metallic alloys"
+        ],
+        "accent_features": [
+          "glowing celestial body",
+          "alien spacecraft lights",
+          "scattered crowds"
+        ],
+        "dominant": "green",
+        "secondary": "red-brown, orange-brown",
+        "accent": "bright green",
+        "ambient": "green",
+        "genre": "sci-fi",
+        "architectural_tone": "advanced alien technology with organic, flowing lines and glowing integrated elements; functional yet aesthetically alien, possibly anti-gravity influenced",
+        "cultural_tone": "mysterious, advanced, potentially observational or pre-invasion",
+        "materials_base": "smooth, reflective unknown alloys, crystalline structures, hardy desert flora adapted to harsh light",
+        "mood_baseline": "awe-inspiring, enigmatic, slightly melancholic",
+        "palette_bias": "high saturation greens, earthy reds and browns, with luminous accents",
+        "soundscape_base": "ambient electronic hums, subtle environmental sounds, occasional resonant tones",
+        "flora_base": "crystalline growths, bioluminescent fungi, hardy, low-lying desert plants",
+        "fauna_base": "small, resilient desert scavengers, airborne filter feeders",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Xylos",
+          "looks": "A planet of alien landscapes and surreal skies, bathed in the perpetual glow of its twin celestial bodies.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A planet of alien landscapes and surreal skies, bathed in the perpetual glow of its twin celestial bodies.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Colossal Green Celestial Body",
+        "Vast Desert Plains",
+        "Alien Spacecraft Fleet"
+      ],
+      "uniqueIdentifiers": [
+        "Twin Celestial Bodies",
+        "Perpetual Green Glow"
+      ],
+      "searchDesc": "Otherworldly desert planet with a vibrant green sky and colossal celestial body, featuring alien spacecraft.",
+      "slug": "xylos"
+    },
+    "bdb1619f-7bd1-463f-8a8b-f8cf0ba5c502": {
+      "id": "bdb1619f-7bd1-463f-8a8b-f8cf0ba5c502",
+      "type": "region",
+      "name": "Xylos",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Expansive, flat plains of orange-brown sand stretch towards a hazy horizon, broken by scattered reddish-brown rocky outcrops. The landscape is bathed in a uniform green light.",
+        "colorsAndLighting": "The dominant green ambient light casts a surreal hue over the orange-brown sand and reddish-brown rocks, creating soft, diffused lighting conditions. Subtle variations in rock color provide minor contrasts.",
+        "atmosphere": "The air is hazy and diffuse, creating a sense of immense distance and obscuring fine details. The pervasive green glow permeates the atmosphere, giving everything an otherworldly quality.",
+        "materials": "Predominantly composed of fine sand and rough, eroded rock. The surfaces are dry and weathered.",
+        "mood": "A sense of isolation and immensity, with an underlying feeling of anticipation.",
+        "sounds": "Whispering wind, shifting sands, distant unknown sounds",
+        "spatialLayout": "Vast, open, and largely flat, with natural formations creating localized variations in elevation and texture.",
+        "primary_surfaces": [
+          "sand",
+          "rock"
+        ],
+        "secondary_surfaces": [],
+        "accent_features": [
+          "outcrop edges",
+          "shadows cast by rocks"
+        ],
+        "dominant": "orange-brown",
+        "secondary": "reddish-brown",
+        "accent": "green",
+        "ambient": "green",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "vast, lonely, awe-inspiring",
+        "palette_bias": "earth tones with a strong green overlay",
+        "soundscape_base": "windswept, natural environmental sounds",
+        "flora_base": "sparse, hardy desert plants adapted to intense radiation and arid conditions",
+        "fauna_base": "small, burrowing creatures, hardy insectoids",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Xylos",
+          "looks": "The primary desert biome of Xylos, characterized by vast sandy plains and distinctive rock formations, all under the influence of the planet's dominant green celestial body.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The primary desert biome of Xylos, characterized by vast sandy plains and distinctive rock formations, all under the influence of the planet's dominant green celestial body.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Orange-brown sandy plains",
+        "Reddish-brown rocky outcrops",
+        "Distant hazy horizon"
+      ],
+      "uniqueIdentifiers": [
+        "Vast flat expanses",
+        "Scattered rock formations"
+      ],
+      "searchDesc": "The arid desert region of Xylos, featuring expansive sandy plains and rocky outcrops under a surreal green sky.",
+      "slug": "xylos-region"
+    },
+    "3a72c26c-42d0-41ee-9f4f-dee0bc23a65a": {
+      "id": "3a72c26c-42d0-41ee-9f4f-dee0bc23a65a",
+      "type": "location",
+      "name": "Xylos",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Xylos",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "c3400c81-cd5b-435d-948d-97fc2a0be695": {
+      "id": "c3400c81-cd5b-435d-948d-97fc2a0be695",
+      "type": "niche",
+      "name": "The Vanguard's Watch",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Vanguard's Watch",
+          "looks": "The immediate area around the lone observer, overlooking the alien panorama and the approaching fleet.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The immediate area around the lone observer, overlooking the alien panorama and the approaching fleet.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764662704142-i98su2x8e"
+    },
+    "loc-1764662720427-2qtoj8639": {
+      "id": "loc-1764662720427-2qtoj8639",
+      "type": "host",
+      "name": "Aethelgard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, ancient landscapes dotted with monumental structures and imbued with a sense of timeless magic.  Nature is abundant and often possesses an otherworldly quality.  Celestial phenomena play a significant role in the visual presentation.",
+        "colorsAndLighting": "A palette dominated by deep, mystical blues and greens, often illuminated by soft, otherworldly light sources.  Celestial bodies cast long, dramatic shadows and create ethereal glows.",
+        "atmosphere": "The air is often thick with mist, fog, or magical energies, creating an atmosphere of mystery and wonder.  Temperature can vary, but there's a pervasive sense of ancient calm and latent power.",
+        "materials": "Primarily natural materials like weathered stone, ancient wood, and crystalline formations, often enhanced or integrated with subtle magical energies.  Metals are typically aged or imbued with arcane properties.",
+        "mood": "A profound sense of awe, mystery, and ancient grandeur.  There's a feeling of stepping into a forgotten past or a world governed by different, more arcane laws.",
+        "sounds": "Whispering winds, distant chimes, faint magical hums, echoing nature sounds.",
+        "spatialLayout": "Expansive vistas with significant verticality, often featuring dramatic cliffs, deep valleys, and towering natural or constructed formations.  Paths and structures often follow natural contours.",
+        "primary_surfaces": "Stone, earth, ancient wood",
+        "secondary_surfaces": "Mist, magical energy, crystal",
+        "accent_features": "Runes, arcane symbols, celestial motifs, natural growths",
+        "dominant": "Deep blues and greens",
+        "secondary": "Ethereal purples and silvers",
+        "accent": "Warm oranges and reds (from mystical light sources)",
+        "ambient": "Ethereal and otherworldly",
+        "genre": "fantasy",
+        "architectural_tone": "ancient monolithic stone construction with celestial alignments, colossal scale, subtle arcane integration, rough-hewn textures, and weathered natural forms",
+        "cultural_tone": "wise, enigmatic, deeply connected to celestial cycles and natural forces, guardians of ancient knowledge",
+        "materials_base": "aged stone, rough-hewn blocks, natural wood, subtle crystalline integration",
+        "mood_baseline": "mysterious, awe-inspiring, ancient",
+        "palette_bias": "deep blues, mystical greens, soft purples, with celestial light accents",
+        "soundscape_base": "ethereal ambient, nature whispers, distant arcane hums",
+        "flora_base": "ancient, resilient flora adapted to high altitudes and mystical energies; glow-moss, sky-vines, starlight blossoms",
+        "fauna_base": "rare, reclusive creatures adapted to magical environments; spectral owls, stone elementals, astral moths",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Aethelgard",
+          "looks": "A realm of ancient wonders and ethereal landscapes, where magic and nature intertwine.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A realm of ancient wonders and ethereal landscapes, where magic and nature intertwine.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Mystical Towers",
+        "Ancient Ruins",
+        "Enchanted Forests"
+      ],
+      "uniqueIdentifiers": [
+        "Ley Lines",
+        "Whispering Winds",
+        "Astral Echoes"
+      ],
+      "searchDesc": "A realm of ancient wonders, ethereal landscapes, and intertwined magic and nature.",
+      "slug": "aethelgard"
+    },
+    "3a649ca7-d68b-4a1c-b949-64fdef2cc040": {
+      "id": "3a649ca7-d68b-4a1c-b949-64fdef2cc040",
+      "type": "region",
+      "name": "Aethelgard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A landscape dominated by colossal, jagged mountain peaks that pierce a sky often painted with the soft hues of dawn or dusk. Thick layers of mist and clouds obscure lower elevations, creating dramatic depth.",
+        "colorsAndLighting": "The sky displays a soft blend of pinks, purples, and light blues, casting an ethereal glow. Mountain surfaces are predominantly grey stone, softened by ambient light.",
+        "atmosphere": "A thick, swirling layer of mist or clouds blankets the lower mountain ranges and fills the valleys. The air is cool and carries a sense of profound mystery and isolation.",
+        "materials": "Rough-hewn stone blocks form the primary visible material of the mountains, with occasional patches of hardy, high-altitude vegetation.",
+        "mood": "Serene, mysterious, and awe-inspiring, with a strong sense of isolation and ancient presence.",
+        "sounds": "Distant winds, faint echoes, soft murmurs of mist.",
+        "spatialLayout": "Expansive and vertical, with steep mountain slopes, deep chasms, and cloud-filled valleys.",
+        "primary_surfaces": "Rough stone, cloud, mist",
+        "secondary_surfaces": "Hardy vegetation",
+        "accent_features": "Jagged peaks, ethereal sky colors",
+        "dominant": "Grey and muted earth tones",
+        "secondary": "Soft pinks and purples",
+        "accent": "Light blues",
+        "ambient": "Soft, diffused, and ethereal",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": "muted earth tones with celestial light hues",
+        "soundscape_base": null,
+        "flora_base": "alpine, hardy, and wind-swept flora",
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Aethelgard",
+          "looks": "The primary region of Aethelgard, characterized by its majestic mountain ranges and the pervasive, ancient atmosphere.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The primary region of Aethelgard, characterized by its majestic mountain ranges and the pervasive, ancient atmosphere.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Towering Mountains",
+        "Misty Valleys",
+        "Ancient Peaks"
+      ],
+      "uniqueIdentifiers": [
+        "Whispering Peaks",
+        "Celestial Winds"
+      ],
+      "searchDesc": "Majestic mountain ranges of Aethelgard, shrouded in mist and imbued with ancient power.",
+      "slug": "aethelgard-region"
+    },
+    "b9207623-c589-47d0-b793-a4f5aa7963ca": {
+      "id": "b9207623-c589-47d0-b793-a4f5aa7963ca",
+      "type": "location",
+      "name": "The Celestial Spire",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, cylindrical tower constructed from large, rough-hewn, light-toned stone blocks. A massive circular opening near its upper section radiates a vibrant, warm orange-red light, revealing an intricate grid-like display within.",
+        "colorsAndLighting": "The tower's stone is light-toned, contrasting with the vibrant, warm orange-red light emanating from its upper aperture. The sky casts soft ambient light across the scene.",
+        "atmosphere": "The tower stands tall amidst a thick, swirling layer of mist that blankets the surrounding landscape, creating a profound sense of depth and mystery. The immediate area around the tower is clear but atmospheric.",
+        "materials": "Primarily light-toned, rough-hewn stone blocks for the tower. The bridge is also stone, featuring railings.",
+        "mood": "Mysterious, powerful, ancient, and enigmatic, with a strong focal point of radiating light.",
+        "sounds": "Distant wind, faint hum from the aperture, soft echoes.",
+        "spatialLayout": "A monumental vertical structure set within a vast, mist-filled landscape. The tower dominates the immediate surroundings, with the bridge connecting it across a chasm.",
+        "primary_surfaces": "Rough-hewn stone",
+        "secondary_surfaces": "Mist, luminous energy",
+        "accent_features": "Massive circular aperture, intricate grid display, slender central pillar, arched bridge, silhouetted figures",
+        "dominant": "Light stone grey",
+        "secondary": "Warm orange-red (aperture light)",
+        "accent": "Soft pinks and purples (sky)",
+        "ambient": "Ethereal glow",
+        "genre": null,
+        "architectural_tone": "ancient monolithic stone construction with celestial alignments, colossal scale, subtle arcane integration, rough-hewn textures, and weathered natural forms, featuring a significant central aperture that serves as a focal point.",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": "light stone greys with vibrant, warm light accents",
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Celestial Spire",
+          "looks": "A colossal, ancient tower that pierces the misty skies of the Whispering Peaks, a beacon of mysterious power.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A colossal, ancient tower that pierces the misty skies of the Whispering Peaks, a beacon of mysterious power.",
+      "navigableElements": [
+        {
+          "type": "bridge",
+          "position": "foreground to midground, spanning chasm",
+          "description": "A sturdy stone bridge with multiple arches and railings."
+        },
+        {
+          "type": "passage",
+          "position": "base of the tower, central",
+          "description": "A massive, arched opening serving as the primary entrance."
+        }
+      ],
+      "dominantElements": [
+        "Colossal Tower",
+        "Misty Chasm",
+        "Arched Bridge"
+      ],
+      "uniqueIdentifiers": [
+        "Radiant Aperture",
+        "Celestial Chart Display"
+      ],
+      "searchDesc": "A colossal, ancient stone tower with a radiant upper aperture, connected by an arched bridge.",
+      "slug": "the-celestial-spire"
+    },
+    "1e4e7801-4b66-4b24-8954-24b96dd34515": {
+      "id": "1e4e7801-4b66-4b24-8954-24b96dd34515",
+      "type": "niche",
+      "name": "The Oracle's Aperture",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Oracle's Aperture",
+          "looks": "The upper chamber of the tower, where a luminous display reveals celestial secrets.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The upper chamber of the tower, where a luminous display reveals celestial secrets.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764662752487-x7gclepl4"
+    },
+    "b894496b-d37e-4c71-9bb9-bcdb8b2ecc03": {
+      "id": "b894496b-d37e-4c71-9bb9-bcdb8b2ecc03",
+      "type": "location",
+      "name": "The Arched Crossing",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A robust stone bridge featuring multiple graceful arches and sturdy railings, spanning a deep, mist-filled chasm.  Rocky outcrops are visible in the distance, partially obscured by fog.",
+        "colorsAndLighting": "The stone of the bridge is weathered and grey, illuminated by the soft, ambient light of the dawn/dusk sky.  The mist creates diffuse, muted tones.",
+        "atmosphere": "The air is thick with mist, obscuring the depths of the chasm and lending an ethereal, mysterious quality to the crossing.  The scale is emphasized by small, silhouetted figures traversing the bridge.",
+        "materials": "Primarily weathered stone for the bridge structure, with stone railings. The surrounding environment is dominated by mist and rock.",
+        "mood": "Adventurous, mysterious, and slightly precarious due to the mist and chasm.",
+        "sounds": "Distant wind, muffled footsteps on stone, faint echoes from the chasm.",
+        "spatialLayout": "A crucial connective element spanning a significant vertical and horizontal gap, linking the foreground to more distant, obscured areas.",
+        "primary_surfaces": "Weathered stone",
+        "secondary_surfaces": "Mist, rocky terrain",
+        "accent_features": "Multiple arches, railings, silhouetted figures, distant rocky outcrops",
+        "dominant": "Grey and muted earth tones",
+        "secondary": "Soft pinks and purples (ambient)",
+        "accent": "Light blues (ambient)",
+        "ambient": "Misty and diffused",
+        "genre": null,
+        "architectural_tone": "ancient monolithic stone construction with celestial alignments, colossal scale, subtle arcane integration, rough-hewn textures, and weathered natural forms, specifically adapted for spanning vast natural voids with sturdy, arched structures.",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": "muted earth tones with soft ambient light",
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null,
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Arched Crossing",
+          "looks": "A sturdy stone bridge spanning a misty chasm at the base of the Celestial Spire.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A sturdy stone bridge spanning a misty chasm at the base of the Celestial Spire.",
+      "navigableElements": [
+        {
+          "type": "bridge",
+          "position": "central, spanning chasm",
+          "description": "The main stone bridge connecting to the Celestial Spire."
+        },
+        {
+          "type": "path",
+          "position": "bridge ends, leading to rocky outcrops",
+          "description": "Paths leading from the bridge to distant rocky outcrops."
+        }
+      ],
+      "dominantElements": [
+        "Stone Bridge",
+        "Misty Chasm",
+        "Rocky Outcrops"
+      ],
+      "uniqueIdentifiers": [
+        "Multiple Arches",
+        "Stone Railings",
+        "Silhouetted Figures"
+      ],
+      "searchDesc": "A grand stone bridge with multiple arches crossing a misty chasm, leading to the Celestial Spire.",
+      "slug": "the-arched-crossing"
+    },
+    "loc-1764662808175-qeyyzg46s": {
+      "id": "loc-1764662808175-qeyyzg46s",
+      "type": "host",
+      "name": "Azurean Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, sun-drenched coastal metropolis sprawls beneath an immense, ancient ring structure that arcs majestically across the sky. The city features a diverse architectural landscape, blending sleek modern skyscrapers with grand domed buildings and notable spired edifices. The foreground is defined by a radiant golden beach meeting a vivid turquoise and emerald sea, dotted with small boats.",
+        "colorsAndLighting": "The scene is bathed in brilliant, direct sunlight, creating sharp highlights on metallic or stony surfaces. Dominant colors are vibrant turquoise for the sky and ocean, complemented by golden sands, lush greens, and stark whites of the city.",
+        "atmosphere": "The atmosphere is one of immense awe and wonder, charged with the warmth of bright daylight. The air is clear and crisp, with a palpable sense of grandeur and an almost fantastical aura surrounding the colossal ring and the thriving city below.",
+        "materials": "Visible materials include sand, water, concrete, glass, and potentially weathered metal or stone for the colossal ring. Architectural elements display polished finishes and intricate details, alongside natural sandy and watery textures.",
+        "mood": "A mood of awe, wonder, and aspirational grandeur. The environment evokes a sense of established civilization juxtaposed with monumental, almost alien, ancient structures.",
+        "sounds": "Gentle waves, distant city hum, seabirds, light breeze, faint echoes",
+        "spatialLayout": "A layered composition with the beach and ocean in the foreground, the city in the midground, and the colossal ring structure dominating the background. The city exhibits a dense, verticality contrasted with the horizontal sweep of the coastline.",
+        "primary_surfaces": "Sand, water, polished concrete, glass, weathered metal/stone",
+        "secondary_surfaces": "Building facades, domes, spires, foliage, boat hulls",
+        "accent_features": "Ornate building details, circular indentations on the ring, spired domes, white-capped waves",
+        "dominant": "Turquoise",
+        "secondary": "Gold, Green, White",
+        "accent": "Metallic glints, Emerald green",
+        "ambient": "Warm, bright daylight",
+        "genre": "fantasy",
+        "architectural_tone": "futuristic fantasy with classical undertones: clean lines, soaring heights, and monumental scale combined with intricate detailing and classical domed or spired elements, suggesting advanced yet culturally rich civilization.",
+        "cultural_tone": "cosmopolitan, technologically advanced, deeply appreciative of monumental heritage",
+        "materials_base": "advanced composites, polished stone, refined metals, reflective glass, natural elements",
+        "mood_baseline": "awe-inspiring, optimistic, vibrant",
+        "palette_bias": "vibrant blues and greens, bright whites, warm earth tones, metallic accents",
+        "soundscape_base": "harmonious blend of natural and urban ambient sounds, with occasional resonating echoes",
+        "flora_base": "lush, exotic coastal flora with vibrant foliage and flowering species",
+        "fauna_base": "coastal birds, marine life, possibly domesticated or ornamental urban animals",
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Azurean Metropolis",
+          "looks": "A breathtaking coastal city bathed in eternal sunlight, renowned for its architectural marvels and vibrant oceanfront.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "A breathtaking coastal city bathed in eternal sunlight, renowned for its architectural marvels and vibrant oceanfront.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Colossal ring structure",
+        "Sprawling coastal metropolis",
+        "Golden sandy beach"
+      ],
+      "uniqueIdentifiers": [
+        "Monumental arching ring",
+        "Turquoise and emerald ocean"
+      ],
+      "searchDesc": "A magnificent coastal city with a colossal ring structure, vibrant beaches, and a blend of modern and ornate architecture.",
+      "slug": "azurean-metropolis"
+    },
+    "fac52970-f2fc-469b-b79d-354bb97de443": {
+      "id": "fac52970-f2fc-469b-b79d-354bb97de443",
+      "type": "region",
+      "name": "Azurean Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Azurean Metropolis",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "dda493aa-4716-4d1a-ad6a-3b4ba54b8833": {
+      "id": "dda493aa-4716-4d1a-ad6a-3b4ba54b8833",
+      "type": "location",
+      "name": "Azurean Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "Azurean Metropolis",
+          "looks": "",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "619a558d-6431-4b27-93e7-682f51d1b24b": {
+      "id": "619a558d-6431-4b27-93e7-682f51d1b24b",
+      "type": "niche",
+      "name": "The Grand Vista Observation",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Grand Vista Observation",
+          "looks": "The area where visitors stand to observe the extraordinary coastal panorama.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The area where visitors stand to observe the extraordinary coastal panorama.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": "",
+      "primaryMedia": "media-1764662839911-r0zww61gd"
+    },
+    "e0f3d685-54c0-443c-abae-76afd38a2ef9": {
+      "id": "e0f3d685-54c0-443c-abae-76afd38a2ef9",
+      "type": "niche",
+      "name": "The Lively Strand",
+      "spaceType": "interior",
+      "dna": {
+        "semantic": {
+          "atmosphere": "",
+          "mood": ""
+        },
+        "visual": {
+          "prompt": "",
+          "style": ""
+        },
+        "profile": {
+          "name": "The Lively Strand",
+          "looks": "The bustling expanse of the beach and the surrounding waters, filled with leisurely activity.",
+          "atmosphere": "",
+          "mood": ""
+        }
+      },
+      "description": "The bustling expanse of the beach and the surrounding waters, filled with leisurely activity.",
+      "navigableElements": [],
+      "dominantElements": [],
+      "uniqueIdentifiers": [],
+      "searchDesc": "",
+      "slug": ""
+    },
+    "niche-1764662945504-fm9bltd2v": {
+      "id": "niche-1764662945504-fm9bltd2v",
+      "type": "niche",
+      "name": "interior of tower",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A grand, uneven floor of massive, rough-hewn stone blocks slopes gently, partially covered by pale grey dust. A colossal monolithic pillar stands off-center left, eroded at its base. The space opens into a vast, cylindrical chamber with curving rough stone walls and a vaulted ceiling, dominated by a monumental archway emanating a vibrant, pulsing orange-red light.",
+        "colorsAndLighting": "The scene is dominated by the warm orange-red glow from the central vortex, reflecting off the light-toned stone and dust. Soft pink and purple ambient light from above illuminates the vaulted ceiling, while a cooler blue light hints at a shadowed passage. The primary light source is intensely energetic.",
+        "atmosphere": "The air feels ancient and charged with power, carrying a faint hum from the light vortex. Fine dust motes swirl in the light beams, creating a palpable sense of deep, cavernous space. The immense scale and mysterious light foster an atmosphere of awe and enigma.",
+        "materials": "The primary material is rough-hewn, light-toned stone, showing signs of ancient erosion and monolithic construction. Smooth, polished obsidian forms a pathway, intricately etched with celestial glyphs. Fine, pale grey dust covers much of the floor and surfaces.",
+        "mood": "Mysterious and ancient, with a powerful, enigmatic presence emanating from the central light vortex. The colossal scale evokes awe and a profound sense of the unknown.",
+        "sounds": "faint hum, echoing emptiness, crackling energy",
+        "spatialLayout": "A vast, cylindrical chamber with a grand, uneven floor leading to a monumental arched focal point. The vaulted ceiling extends to an immense height, creating a profound sense of scale and depth. Entry points are suggested by pathways and shadowed passages.",
+        "primary_surfaces": "rough-hewn light-toned stone",
+        "secondary_surfaces": "polished obsidian, fine grey dust",
+        "accent_features": "vibrant pulsating orange-red light vortex, celestial glyphs",
+        "dominant": "light stone grey (approx. 70%)",
+        "secondary": "orange-red (approx. 25%)",
+        "accent": "pale grey (dust, approx. 5%); faint blue (passage)",
+        "ambient": "warm and cool tones",
+        "genre": null,
+        "architectural_tone": "ancient monolithic stone construction with celestial alignments, colossal scale, subtle arcane integration, rough-hewn textures, and weathered natural forms",
+        "cultural_tone": null,
+        "materials_base": "stone, obsidian",
+        "mood_baseline": "mysterious, powerful, ancient, enigmatic",
+        "palette_bias": "earth tones with vibrant energetic accents",
+        "soundscape_base": "echoing, resonant, hums and pulses",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764662945500-y9ptr5r2c",
+      "description": "A colossal, rough-hewn stone chamber within a tower, featuring a grand, uneven floor, a monolithic pillar, and a vast, cylindrical space culminating in a monumental archway emitting a vibrant, pulsating orange-red light.",
+      "navigableElements": [
+        {
+          "type": "pathway",
+          "position": "foreground left to midground center",
+          "description": "Illuminated pathway of smooth, polished obsidian etched with faint celestial glyphs."
+        },
+        {
+          "type": "archway",
+          "position": "midground center",
+          "description": "Monumental, arched opening filled with a swirling vortex of orange-red light."
+        },
+        {
+          "type": "passage",
+          "position": "midground right",
+          "description": "Narrow, shadowed passage framed by a rough-hewn stone archway with faint blue light bleeding from within."
+        },
+        {
+          "type": "arcane_etchings",
+          "position": "background far left",
+          "description": "Faint, discernible vertical lines of arcane energy etched into the distant stone."
+        }
+      ],
+      "dominantElements": [
+        "uneven stone floor",
+        "colossal monolithic pillar",
+        "cylindrical chamber walls",
+        "monumental arched opening",
+        "swirling orange-red light vortex"
+      ],
+      "uniqueIdentifiers": [
+        "rough-hewn monolithic stone construction",
+        "celestial glyphs on obsidian pathway",
+        "vibrant pulsating orange-red light vortex",
+        "colossal vaulted ceiling",
+        "off-center one-point perspective"
+      ],
+      "searchDesc": "Colossal tower interior with rough stone, obsidian pathway, and a central vortex of pulsating orange-red light.",
+      "slug": "interior-of-tower"
     }
   },
   "views": {},
@@ -10773,6 +11489,90 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764662678308-9tao1v0pw",
+      "type": "host",
+      "children": [
+        {
+          "id": "bdb1619f-7bd1-463f-8a8b-f8cf0ba5c502",
+          "type": "region",
+          "children": [
+            {
+              "id": "3a72c26c-42d0-41ee-9f4f-dee0bc23a65a",
+              "type": "location",
+              "children": [
+                {
+                  "id": "c3400c81-cd5b-435d-948d-97fc2a0be695",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764662720427-2qtoj8639",
+      "type": "host",
+      "children": [
+        {
+          "id": "3a649ca7-d68b-4a1c-b949-64fdef2cc040",
+          "type": "region",
+          "children": [
+            {
+              "id": "b9207623-c589-47d0-b793-a4f5aa7963ca",
+              "type": "location",
+              "children": [
+                {
+                  "id": "1e4e7801-4b66-4b24-8954-24b96dd34515",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764662945504-fm9bltd2v",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "b894496b-d37e-4c71-9bb9-bcdb8b2ecc03",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764662808175-qeyyzg46s",
+      "type": "host",
+      "children": [
+        {
+          "id": "fac52970-f2fc-469b-b79d-354bb97de443",
+          "type": "region",
+          "children": [
+            {
+              "id": "dda493aa-4716-4d1a-ad6a-3b4ba54b8833",
+              "type": "location",
+              "children": [
+                {
+                  "id": "619a558d-6431-4b27-93e7-682f51d1b24b",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "e0f3d685-54c0-443c-abae-76afd38a2ef9",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -10813,6 +11613,9 @@
     "loc-1764661108993-3eyxsl3ry",
     "loc-1764661172160-3ss3kb1xm",
     "loc-1764661422609-xy97hsjtd",
-    "loc-1764661495174-yb44v9umv"
+    "loc-1764661495174-yb44v9umv",
+    "loc-1764662678308-9tao1v0pw",
+    "loc-1764662720427-2qtoj8639",
+    "loc-1764662808175-qeyyzg46s"
   ]
 }

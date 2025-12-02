@@ -70,7 +70,6 @@ export function App() {
       {imageDrop.state.isDragging && (
         <div className={styles.dropOverlay}>
           <div className={styles.dropOverlayContent}>
-            <div className={styles.dropOverlayIcon}>📷</div>
             <div className={styles.dropOverlayText}>Drop image to analyze</div>
           </div>
         </div>
