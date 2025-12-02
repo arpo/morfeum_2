@@ -13,6 +13,7 @@
 - **External View**: Real-time sync between main app and external browser tabs
 - **Chat System**: Character conversations with entity sessions
 - **UI State Management**: Panel toggles, focus mode, entity explorers
+- **Image Analysis**: Full-screen image drag and drop for AI description generation
 
 ### Technical Architecture
 - **Component Separation**: All major components now follow strict separation patterns (JSX, logic, styles)
@@ -29,6 +30,7 @@
 - **Store Architecture**: Separated entity CRUD from UI state management
 - **Navigation Utils**: Extracted context builders for better modularity
 - **App Component**: Pure JSX following zustand slice patterns
+- **Image Drag & Drop**: Application-wide image analysis with consistent UI feedback (Dec 2)
 
 ## What's Left to Build 🚧
 
@@ -67,11 +69,13 @@
 - **App Component**: 416 → 146 lines (65% reduction)
 - **Store Slices**: Better separation with dedicated UI slice
 - **Build Performance**: Maintained fast build times through refactoring
+- **Image Analysis**: Full-screen drag and drop for seamless image description (Dec 2)
 
 ### Active Development
 - **Current Focus**: Monitoring refactored module performance
 - **Next Priority**: Continue applying separation patterns to remaining components
 - **Architecture**: Following strict clinerules guidelines for all new code
+- **UX Improvements**: Focus on seamless input methods like image drag and drop
 
 ## Known Issues 🐛
 

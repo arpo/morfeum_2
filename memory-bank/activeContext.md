@@ -1,5 +1,33 @@
 # Active Context
 
+## Recent Changes (2025-12-02)
+
+### Full-Screen Image Drag and Drop Feature (Dec 2, 2025)
+- **Feature**: Added ability to drag and drop an image file anywhere on the app screen for AI analysis
+- **Implementation**:
+  - Created shared spawn input text state in Zustand store
+  - Full-screen drop zone covers entire application
+  - Image description generated via vision AI endpoint
+  - Results automatically added to spawn input textarea
+- **Components**:
+  - App-level drop handling with visual overlays
+  - Textarea paste handling for direct image pasting
+  - Progress indicators during analysis
+- **Files Added/Modified**:
+  - `packages/backend/src/engine/generation/prompts/shared/visionDescription.ts` - Neutral image description prompt
+  - `packages/backend/src/engine/generation/prompts/shared/index.ts` - Export for vision prompt
+  - `packages/backend/src/routes/mzoo/ai.ts` - Updated to import prompt from shared location
+  - `packages/frontend/src/store/slices/spawnSlice.ts` - Added spawn input text state
+  - `packages/frontend/src/features/spawn-input/SpawnInputBar/useSpawnInputLogic.ts` - Updated to use store state
+  - `packages/frontend/src/features/app/components/App/App.tsx` - Added full-screen drop handlers
+  - `packages/frontend/src/features/app/components/App/App.module.css` - Added overlay styles
+  - `packages/frontend/src/features/spawn-input/SpawnInputBar/SpawnInputBar.tsx` - Updated for paste handling
+- **User Experience**:
+  - Visual overlay appears when dragging images anywhere
+  - Loading spinner during analysis
+  - Error handling for invalid files or failed analysis
+  - Works for both characters and locations
+
 ## Recent Changes (2025-12-01)
 
 ### Training Data Export Feature (Dec 1, 2025)
@@ -193,8 +221,10 @@
 - Data storage optimization complete
 - Removed redundant nested data from both worlds.json and characters.json
 - Fixed nested dna.dna issue in world tree generation
+- Added full-screen image drop zone for improved UX
 
 ## Next Steps
 - Test with fresh database to verify clean data structure
 - Monitor storage efficiency improvements
 - Consider similar cleanup for other data structures if needed
+- Test image drag and drop feature with different file types and sizes

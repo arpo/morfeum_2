@@ -7,6 +7,7 @@ import { Router, Request, Response } from 'express';
 import { HTTP_STATUS } from '../../config';
 import { asyncHandler } from '../../middleware';
 import * as mzooService from '../../services/mzoo.service';
+import { visionDescriptionPrompt } from '../../engine/generation/prompts/shared';
 
 const router = Router();
 
@@ -44,37 +45,6 @@ router.post('/gemini/text', asyncHandler(async (req: Request, res: Response) => 
 }));
 
 /**
- * Default prompt for general image description
- * Designed to produce spawn-ready descriptions for characters or scenes
- */
-const DEFAULT_VISION_PROMPT = `You are analyzing an image to create a detailed description suitable for generating similar content.
-
-Analyze this image and provide a comprehensive description following these rules:
-
-1. START with the appropriate prefix:
-   - For portraits/characters: "A portrait of..."
-   - For scenes/locations: "A scene of..."
-
-2. IDENTIFY famous entities:
-   - If this is a recognizable famous person, include their name (e.g., "A portrait of Albert Einstein...")
-   - If this is a recognizable famous place, include its name (e.g., "A scene of the Eiffel Tower...")
-
-3. IDENTIFY the artistic style using "in the style of...":
-   - Specific artists if recognizable (e.g., "in the style of Greg Rutkowski", "in the style of Alphonse Mucha")
-   - Art movements (e.g., "in the style of Art Nouveau", "in the style of Baroque")
-   - Media types (e.g., "in the style of digital art", "in the style of oil painting", "in the style of anime")
-
-4. DESCRIBE in detail:
-   - For characters: facial features, hair, clothing, expression, pose, distinctive traits
-   - For scenes: environment, lighting, atmosphere, key elements, mood
-
-5. FORMAT: Write as a single flowing paragraph, natural language, no bullet points or JSON.
-
-Example outputs:
-- "A portrait of a rugged warrior with battle scars across his face, in the style of Frank Frazetta, featuring dramatic lighting and a muscular build with worn leather armor..."
-- "A scene of a mystical forest at twilight, in the style of Thomas Kinkade, with glowing fireflies, ancient twisted trees, and a winding path leading to a distant cottage..."`;
-
-/**
  * MZOO Vision API endpoint - Analyzes images
  */
 router.post('/vision', asyncHandler(async (req: Request, res: Response) => {
@@ -82,7 +52,7 @@ router.post('/vision', asyncHandler(async (req: Request, res: Response) => {
     base64Image, 
     mimeType = 'image/png',
     model = 'gemini-2.5-flash',
-    prompt = DEFAULT_VISION_PROMPT
+    prompt = visionDescriptionPrompt
   } = req.body;
 
   if (!base64Image) {

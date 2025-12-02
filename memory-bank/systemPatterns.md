@@ -89,6 +89,69 @@ DraggablePanels support position/size change callbacks for parent tracking:
 </DraggablePanel>
 ```
 
+### Image Drag and Drop Pattern
+Unified full-screen drop zone with local feedback:
+
+#### Store-Based State Sharing
+Zustand slice stores shared input text state:
+```typescript
+// spawnSlice.ts
+export interface SpawnSlice {
+  // State
+  spawnInputText: string;
+  
+  // Actions
+  setSpawnInputText: (text: string) => void;
+  appendSpawnInputText: (text: string) => void;
+}
+
+export const createSpawnSlice = (set) => ({
+  spawnInputText: '',
+  setSpawnInputText: (text: string) => set({ spawnInputText: text }),
+  appendSpawnInputText: (text: string) => set((state) => ({
+    spawnInputText: state.spawnInputText 
+      ? `${state.spawnInputText}\n\n${text}` 
+      : text
+  })),
+});
+```
+
+#### Component-Specific Hooks
+The hook responsible for image analysis is component-agnostic:
+```typescript
+// useImageDropLogic.ts (shared by multiple components)
+export function useImageDropLogic({ onDescriptionReceived }) {
+  // Drop/paste handling logic
+  // Analysis state management
+  // Callback when description is ready
+  
+  return {
+    state: { isDragging, isAnalyzing, error },
+    handlers: { handleDragEnter, handleDragLeave, handleDragOver, handleDrop, handlePaste }
+  };
+}
+```
+
+#### Multi-Level Drop Zones
+- **App Level**: Full-screen drop zone captures drops anywhere
+- **Input Level**: Local drop zone in textareas handles direct pastes
+- **Visual Feedback**: Both levels share same style patterns for consistency
+
+#### Event Flow
+1. User drags image file over application
+2. App-level handlers show full-screen overlay
+3. Image dropped → App handlers process file
+4. Vision API analyzes image
+5. Result appended to spawn input via store
+6. SpawnInputBar reads from store state
+
+#### CSS Overlay Pattern
+- Fixed positioning with high z-index (9999)
+- Semi-transparent backdrop with blur
+- Centered content with visual cues
+- Status indicators (loading spinner, error messages)
+- Consistent styling between global and local overlays
+
 ### Deletion Pattern
 Cascading deletes maintain data integrity:
 

@@ -30,6 +30,11 @@ export interface SpawnProcess {
 export interface SpawnSlice {
   activeSpawns: SpawnProcess[];
   
+  // Spawn input text state (shared across components)
+  spawnInputText: string;
+  setSpawnInputText: (text: string) => void;
+  appendSpawnInputText: (text: string) => void;
+  
   startSpawn: (prompt: string, entityType?: 'character' | 'location' | 'niche', options?: any) => Promise<string>;
   registerExternalSpawn: (
     id: string, 
@@ -116,6 +121,13 @@ const monitorSpawnProgress = (
 
 export const createSpawnSlice: StateCreator<any, [], [], SpawnSlice> = (set, get) => ({
   activeSpawns: [],
+  
+  // Spawn input text state
+  spawnInputText: '',
+  setSpawnInputText: (text: string) => set({ spawnInputText: text }),
+  appendSpawnInputText: (text: string) => set((state: any) => ({
+    spawnInputText: state.spawnInputText ? `${state.spawnInputText}\n\n${text}` : text
+  })),
 
   startSpawn: async (prompt: string, entityType = 'character', options = true) => {
     // Handle niche or unsupported types gracefully or map them

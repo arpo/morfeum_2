@@ -8,7 +8,10 @@ import { useStore } from '@/store';
 import type { SpawnInputBarLogicReturn } from './types';
 
 export function useSpawnInputLogic(): SpawnInputBarLogicReturn {
-  const [textPrompt, setTextPrompt] = useState('');
+  // Use store for textPrompt so it can be set from full-screen drop zone
+  const textPrompt = useStore(state => state.spawnInputText);
+  const setTextPrompt = useStore(state => state.setSpawnInputText);
+  
   const [entityType, setEntityType] = useState<'character' | 'location'>('location');
   const [error, setError] = useState<string | null>(null);
   const [samplePrompts, setSamplePrompts] = useState<string[]>([]);

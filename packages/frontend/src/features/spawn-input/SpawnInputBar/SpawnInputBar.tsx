@@ -23,12 +23,11 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const navigation = useNavigationLogic();
   const [activeTab, setActiveTab] = useState('character');
   
-  // Handle image drop - append description to textarea
+  // Handle image paste - use store's append function
+  const appendSpawnInputText = useStore(state => state.appendSpawnInputText);
   const handleDescriptionReceived = useCallback((description: string) => {
-    const currentText = state.textPrompt;
-    const newText = currentText ? `${currentText}\n\n${description}` : description;
-    handlers.setTextPrompt(newText);
-  }, [state.textPrompt, handlers]);
+    appendSpawnInputText(description);
+  }, [appendSpawnInputText]);
   
   const imageDrop = useImageDropLogic({ onDescriptionReceived: handleDescriptionReceived });
   
@@ -115,13 +114,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 label: 'Character',
                 content: (
                   <div className={styles.tabContent}>
-                    <div 
-                      className={`${styles.dropZone} ${imageDrop.state.isDragging ? styles.dragging : ''}`}
-                      onDragEnter={imageDrop.handlers.handleDragEnter}
-                      onDragLeave={imageDrop.handlers.handleDragLeave}
-                      onDragOver={imageDrop.handlers.handleDragOver}
-                      onDrop={imageDrop.handlers.handleDrop}
-                    >
+                    <div className={styles.dropZone}>
                       <textarea
                         className={styles.textarea}
                         value={state.textPrompt}
@@ -133,14 +126,9 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                           }
                         }}
                         onPaste={imageDrop.handlers.handlePaste}
-                        placeholder="Describe a character to spawn... (drop or paste an image)"
+                        placeholder="Describe a character to spawn... (paste an image)"
                         rows={3}
                       />
-                      {imageDrop.state.isDragging && (
-                        <div className={styles.dropOverlay}>
-                          <span className={styles.dropOverlayText}>Drop image to analyze</span>
-                        </div>
-                      )}
                       {imageDrop.state.isAnalyzing && (
                         <div className={styles.analyzingOverlay}>
                           <span className={styles.analyzingText}>
@@ -157,7 +145,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                       <button
                         className={styles.generateButton}
                         onClick={handlers.handleGenerate}
-                        disabled={!state.textPrompt.trim() || imageDrop.state.isAnalyzing}
+                        disabled={!state.textPrompt.trim()}
                       >
                         Generate
                       </button>
@@ -187,13 +175,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 label: 'Location',
                 content: (
                   <div className={styles.tabContent}>
-                    <div 
-                      className={`${styles.dropZone} ${imageDrop.state.isDragging ? styles.dragging : ''}`}
-                      onDragEnter={imageDrop.handlers.handleDragEnter}
-                      onDragLeave={imageDrop.handlers.handleDragLeave}
-                      onDragOver={imageDrop.handlers.handleDragOver}
-                      onDrop={imageDrop.handlers.handleDrop}
-                    >
+                    <div className={styles.dropZone}>
                       <textarea
                         className={styles.textarea}
                         value={state.textPrompt}
@@ -205,14 +187,9 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                           }
                         }}
                         onPaste={imageDrop.handlers.handlePaste}
-                        placeholder="Describe a location to spawn... (drop or paste an image)"
+                        placeholder="Describe a location to spawn... (paste an image)"
                         rows={3}
                       />
-                      {imageDrop.state.isDragging && (
-                        <div className={styles.dropOverlay}>
-                          <span className={styles.dropOverlayText}>Drop image to analyze</span>
-                        </div>
-                      )}
                       {imageDrop.state.isAnalyzing && (
                         <div className={styles.analyzingOverlay}>
                           <span className={styles.analyzingText}>
@@ -229,7 +206,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                       <button
                         className={styles.generateButton}
                         onClick={handlers.handleGenerate}
-                        disabled={!state.textPrompt.trim() || imageDrop.state.isAnalyzing}
+                        disabled={!state.textPrompt.trim()}
                       >
                         Generate
                       </button>

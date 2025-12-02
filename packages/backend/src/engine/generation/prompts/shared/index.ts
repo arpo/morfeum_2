@@ -6,3 +6,4 @@
 export { blackListCharacterNames, morfeumVibes, qualityPrompt } from './constants';
 export { fluxFilters, getFluxFilter, getDefaultFluxFilter, type FluxFilter } from './fluxFilters';
 export { renderInstructionsGuidance } from './fluxRenderInstructions';
+export { visionDescriptionPrompt } from './visionDescription';

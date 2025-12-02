@@ -74,7 +74,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   /** Letterbox - black bars at top/bottom to enforce 16:9 aspect ratio */
   LETTERBOX: {
     ENABLED: true, // Enable/disable 16:9 letterbox cropping
-    EXTRA_HEIGHT: 40, // Additional pixels to add to each bar (to cut off more edges)
+    EXTRA_HEIGHT: 20, // Additional pixels to add to each bar (to cut off more edges)
   },
   
   /** Depth map expansion radius - dilates depth values to reduce edge artifacts (0 = disabled, 7 = tiefling default) */
@@ -88,7 +88,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Particle effects - floating dust, snow, rain, etc. */
   PARTICLES: {
-    ENABLED: true,
+    ENABLED: false,
     PRESET: 'dust', // 'dust' | 'snow' | 'rain' | 'fireflies' | 'embers' | 'fog' | 'bubbles' | 'sparks' | 'stars' | 'ash' | 'pollen'
     DEPTH: 6, // Particle depth range (2 = shallow, 4 = moderate, 6+ = deep spread with more size variation)
   },
