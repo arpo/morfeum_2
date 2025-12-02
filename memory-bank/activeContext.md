@@ -222,8 +222,20 @@
 - Removed redundant nested data from both worlds.json and characters.json
 - Fixed nested dna.dna issue in world tree generation
 - Added full-screen image drop zone for improved UX
+- **World tree pipeline refactored:** Image is now generated immediately after prompt parsing, before DNA, so user sees image ~13s faster.
+- **DNA cleanup:** Legacy fields (`semantic`, `visual`, `profile`) are no longer added to DNA in worlds.json.
+- **Bugfix:** WorldTreeBuilder no longer injects old schema fields into DNA.
+- Data storage optimization complete
+- Removed redundant nested data from both worlds.json and characters.json
+- Fixed nested dna.dna issue in world tree generation
+- Added full-screen image drop zone for improved UX
 
 ## Next Steps
+- Test with fresh database to verify clean data structure
+- Monitor storage efficiency improvements
+- Consider similar cleanup for other data structures if needed
+- Test image drag and drop feature with different file types and sizes
+- Monitor world tree pipeline for correct image timing and DNA structure
 - Test with fresh database to verify clean data structure
 - Monitor storage efficiency improvements
 - Consider similar cleanup for other data structures if needed

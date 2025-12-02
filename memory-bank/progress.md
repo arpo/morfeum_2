@@ -24,6 +24,9 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **World tree pipeline refactored:** Image is now generated immediately after prompt parsing, before DNA, so user sees image ~13s faster.
+- **DNA cleanup:** Legacy fields (`semantic`, `visual`, `profile`) are no longer added to DNA in worlds.json.
+- **Bugfix:** WorldTreeBuilder no longer injects old schema fields into DNA.
 - **Component Refactoring**: 5 major files reduced from 300+ to under 300 lines
 - **WorldView Modules**: Extracted 5 specialized modules (shaders, geometry, stereo, camera, animation)
 - **WorldView Effects**: Added scene presets, color effects, and particle enhancements (Dec 1)

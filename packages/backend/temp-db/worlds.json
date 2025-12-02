@@ -1,6 +1,200 @@
 {
-  "nodes": {},
+  "nodes": {
+    "loc-1764686269549-sjr22xxmh": {
+      "id": "loc-1764686269549-sjr22xxmh",
+      "type": "host",
+      "name": "Xylos Prime",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The visual character of Xylos Prime is dominated by monumental architecture of impossible geometric precision. Towers ascend into the heavens, vast plazas are adorned with unfathomable patterns, and every surface whispers of an alien intellect. The scale is breathtaking, dwarfing any natural feature.",
+        "colorsAndLighting": "The primary palette consists of cool, metallic grays, deep obsidian, and shimmering, iridescent blues and greens that react to the ambient light. Lighting is often ethereal and diffused, emanating from the structures themselves or a distant, unknown celestial source.",
+        "atmosphere": "The atmosphere is still and carries a faint hum of resonant energy. The air is crisp and clean, devoid of conventional pollutants, yet tinged with an undefinable, electric scent. The overall environmental feel is one of profound antiquity and quiet contemplation.",
+        "materials": "Predominant materials appear to be unknown, impossibly smooth metallics, crystalline formations that refract light, and a dark, obsidian-like stone. These materials are fused seamlessly, suggesting a construction method far beyond current understanding.",
+        "mood": "Xylos Prime evokes a profound sense of awe, mystery, and an overwhelming feeling of insignificance in the face of its immense scale and ancient power.",
+        "sounds": "Subtle hum, resonant tones, distant echoes, faint clicks, crystalline chimes",
+        "spatialLayout": "The world is characterized by immense, interconnected structures that form both vertical and horizontal cities. Pathways are often elevated or submerged, weaving through and around the colossal edifices.",
+        "primary_surfaces": "Polished metallic alloys, obsidian-like composites, crystalline structures",
+        "secondary_surfaces": "Smooth, unidentifiable stone, integrated light panels",
+        "accent_features": "Intricate geometric carvings, glowing runic symbols, shimmering energy conduits",
+        "dominant": "Cool Grays and Silvers",
+        "secondary": "Deep Blacks and Iridescent Blues",
+        "accent": "Emerald Green and Luminous White",
+        "ambient": "Cool and Neutral",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Monumental, geometric, alien, ancient. Characterized by impossible angles, vast monolithic forms, and interlocking patterns that defy terrestrial engineering. Think colossal obelisks, soaring crystalline spires, and intricate, repeating motifs that suggest advanced, non-Euclidean principles.  Materials are seamless and often possess unique light-reactive properties.",
+        "cultural_tone": "Archaic, enigmatic, observational.  The legacy of a long-gone or dormant advanced civilization. There is no apparent current culture beyond the reverence or study of the architecture itself. Any inhabitants would be explorers, researchers, or custodians, driven by curiosity and the pursuit of knowledge.",
+        "materials_base": "Unknown alloys, crystalline composites, obsidian-like stone, integrated energy conduits",
+        "mood_baseline": "Awe-inspiring mystery, profound antiquity, quiet contemplation, intellectual curiosity",
+        "palette_bias": "Cool, metallic, and iridescent hues, with a focus on deep blacks and shimmering blues.",
+        "soundscape_base": "Low-frequency hums, resonant echoes, subtle crystalline chimes, and the quiet ambiance of immense, silent spaces.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "Xylos Prime is a world shrouded in mystery, defined by the awe-inspiring presence of colossal, ancient architecture. These geometrically intricate structures rise from the landscape, their unknown origin and purpose a constant enigma.",
+      "navigableElements": [],
+      "dominantElements": [
+        "The Great Obelisks",
+        "The Crystal Spires",
+        "The Labyrinthine Under-City",
+        "The Sky-Wells",
+        "The Shifting Monoliths"
+      ],
+      "uniqueIdentifiers": [
+        "Impossibly geometric structures",
+        "Colossal scale of architecture",
+        "Unexplained, ancient construction",
+        "Intricate, interwoven designs",
+        "Harmonic resonance"
+      ],
+      "searchDesc": "Xylos Prime: A world of colossal, ancient, geometrically intricate architecture of unknown origin.",
+      "slug": "xylos-prime"
+    },
+    "31b28b86-dcae-4840-a3e7-6654a6a3371b": {
+      "id": "31b28b86-dcae-4840-a3e7-6654a6a3371b",
+      "type": "region",
+      "name": "The Sculpted Titans' Canyon",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The canyon walls are not merely eroded rock but bear the unmistakable marks of colossal, geometric sculpting. Impossibly smooth planes meet with sharp, non-Euclidean angles, interspersed with vast, etched patterns. The Great Monolith dominates the center, a seamless, stylized form that radiates an ancient, alien aesthetic.",
+        "colorsAndLighting": "Dominant cool grays and silvers define the sculpted surfaces, reflecting the ambient light. Occasional iridescent veins within the materials catch the light, casting subtle, shifting hues. Light filters down into the canyon, creating dramatic contrasts between shadowed depths and illuminated façades.",
+        "atmosphere": "The air is thin and still, carrying a profound silence broken only by the echoes of distant geological shifts. A pervasive sense of immense age and dormant power permeates the environment, fostering a feeling of deep introspection and insignificance.",
+        "materials": "The carved structures are composed of unknown, seamless alloys and obsidian-like stone, exhibiting unique light-reactive properties. Integrated energy conduits, now likely dormant, occasionally glimmer with faint internal light.",
+        "mood": "A profound sense of awe and overwhelming mystery pervades this region. The sheer scale of the sculpting instills a feeling of utter insignificance in the face of its ancient creators.",
+        "sounds": "Distant echoes, geological creaks, faint hums, wind whispers, faint crystalline resonance",
+        "spatialLayout": "The canyon is a vast, open expanse, with the sculpted walls rising in immense, terraced tiers. Pathways, where they exist, are often dictated by the colossal structural elements, forming geometric lines within the natural flow of the chasm.",
+        "primary_surfaces": [
+          "Sculpted alien alloys",
+          "Obsidian-like stone",
+          "Crystalline composites"
+        ],
+        "secondary_surfaces": [
+          "Natural canyon rock",
+          "Integrated energy conduits"
+        ],
+        "accent_features": [
+          "Etched geometric patterns",
+          "Iridescent material veins",
+          "Stylized monolithic forms"
+        ],
+        "dominant": "Cool Grays",
+        "secondary": "Silvers",
+        "accent": "Deep Blues",
+        "ambient": "Cool, diffused light",
+        "genre": null,
+        "architectural_tone": "Monumental, geometric, alien, ancient. Characterized by impossible angles, vast monolithic forms, and interlocking patterns that defy terrestrial engineering.",
+        "cultural_tone": "Archaic, enigmatic, observational. The legacy of a long-gone or dormant advanced civilization.",
+        "materials_base": "Unknown alloys, crystalline composites, obsidian-like stone, integrated energy conduits",
+        "mood_baseline": "A profound sense of awe, mystery, and an overwhelming feeling of insignificance in the face of its immense scale and ancient power.",
+        "palette_bias": "Cool, metallic, and iridescent hues, with a focus on deep blacks and shimmering blues.",
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A colossal natural chasm dramatically reshaped by titanic, carved structures of alien origin. At its heart stands a monumental, stylized monolith, a focal point of awe and enigma.",
+      "navigableElements": [],
+      "dominantElements": [
+        "The Great Monolith",
+        "Carved Canyon Walls",
+        "Titan-Scale Statuary",
+        "Geometrical Scarring"
+      ],
+      "uniqueIdentifiers": [
+        "Monumental geometric carvings on a grand scale",
+        "A central, stylized monolith as the primary landmark",
+        "The juxtaposition of natural canyon erosion with artificial sculpting",
+        "Evidence of unimaginable past construction"
+      ],
+      "searchDesc": "Immense canyon carved by titans, featuring a central monolith and alien geometric structures.",
+      "slug": "the-sculpted-titans-canyon"
+    },
+    "25dbf26c-56a7-4464-a9d8-bfa6323f2ccf": {
+      "id": "25dbf26c-56a7-4464-a9d8-bfa6323f2ccf",
+      "type": "location",
+      "name": "Monolith of the Watcher",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "This monumental monolith is sculpted into a stylized, colossal human face, its surface a tapestry of interlocking geometric blocks. Ancient glyphs and technological circuitry are seamlessly integrated into the stone, glowing with cool blue light.",
+        "colorsAndLighting": "The primary material is a dark, obsidian-like stone, contrasting sharply with the vibrant, cool blue luminescence of its etched patterns and circuitry. Light from the glyphs casts an eerie, ethereal glow.",
+        "atmosphere": "The immediate surroundings are vast and silent, dominated by the sheer scale of the monolith and the imposing angular architecture of the canyon walls. A profound sense of awe and ancient mystery permeates the air.",
+        "materials": "The exterior appears to be constructed from unknown alloys and obsidian-like stone, with integrated energy conduits forming the glowing blue patterns.",
+        "mood": "The monolith evokes a feeling of ancient watchfulness and overwhelming enigma. Its presence instills a deep sense of insignificance.",
+        "sounds": "Whispers, low hum, distant echoes, stone groans, silent winds",
+        "spatialLayout": "The monolith is a singular, massive form directly facing the viewer, with a prominent entrance at its base. The surrounding structures mirror its geometric complexity, creating a unified, monumental landscape.",
+        "primary_surfaces": "Obsidian-like stone blocks, carved stone",
+        "secondary_surfaces": "Integrated circuitry, crystalline composites",
+        "accent_features": "Glowing blue glyphs and circuitry, deeply shadowed eye sockets",
+        "dominant": "Cool Grays",
+        "secondary": "Deep Blacks",
+        "accent": "Shimmering Blues",
+        "ambient": "Ethereal Blue Glow",
+        "genre": null,
+        "architectural_tone": "Monumental, geometric, alien, ancient. Characterized by impossible angles, vast monolithic forms, and interlocking patterns.",
+        "cultural_tone": "Archaic, enigmatic, observational. The legacy of a long-gone or dormant advanced civilization.",
+        "materials_base": "Unknown alloys, crystalline composites, obsidian-like stone, integrated energy conduits",
+        "mood_baseline": "A profound sense of awe and overwhelming mystery pervades this region. The sheer scale of the sculpting instills a feeling of utter insignificance in the face of its ancient creators.",
+        "palette_bias": "Cool, metallic, and iridescent hues, with a focus on deep blacks and shimmering blues.",
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A colossal, human-like monolith carved from dark stone, its face etched with intricate geometric patterns and glowing blue circuitry. Its stoic gaze surveys the surrounding canyon, a testament to a lost civilization.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "A vast, shadowed opening at the base of the monolith, leading into its mysterious depths."
+        },
+        {
+          "type": "archway",
+          "position": "background",
+          "description": "An immense archway carved into the cliff face behind the monolith, hinting at further chambers or pathways."
+        },
+        {
+          "type": "window",
+          "position": "right",
+          "description": "A deep, recessed window-like aperture on the right side, emitting a faint blue luminescence from within."
+        }
+      ],
+      "dominantElements": [
+        "Stylized human-like face",
+        "Intricate geometric patterns",
+        "Ancient glyphs/circuitry",
+        "Deeply shadowed eyes",
+        "Massive monolithic scale"
+      ],
+      "uniqueIdentifiers": [
+        "Humanoid face carving",
+        "Integrated blue circuitry",
+        "Geometric block construction",
+        "Stoic, monumental expression",
+        "Canyon-dominating presence"
+      ],
+      "searchDesc": "A towering, human-faced monolith with blue circuitry, dominating a canyon.",
+      "slug": "monolith-of-the-watcher",
+      "primaryMedia": "media-1764686288891-8t5pjlrtj"
+    }
+  },
   "views": {},
-  "worldTrees": [],
-  "pinnedIds": []
+  "worldTrees": [
+    {
+      "id": "loc-1764686269549-sjr22xxmh",
+      "type": "host",
+      "children": [
+        {
+          "id": "31b28b86-dcae-4840-a3e7-6654a6a3371b",
+          "type": "region",
+          "children": [
+            {
+              "id": "25dbf26c-56a7-4464-a9d8-bfa6323f2ccf",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "loc-1764686269549-sjr22xxmh"
+  ]
 }

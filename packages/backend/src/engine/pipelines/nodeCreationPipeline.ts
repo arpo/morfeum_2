@@ -17,8 +17,53 @@ import { parsePromptToHierarchy } from '../nodeCreation/detection/parsePromptToH
 import { createHierarchy, createProgressConfig } from '../nodeCreation';
 import { WorldTreeBuilder } from '../../services/worldTree/builder';
 import mediaService from '../../services/media/mediaService';
+import { generateImage } from '../../services/mzoo';
+import { locationImageGeneration } from '../generation/prompts/locations/locationImageGeneration';
 import type { HierarchySpec } from '../nodeCreation/types';
 import type { TreeNode } from '../../services/worldTree/types';
+import type { HierarchyNode } from '../hierarchyAnalysis/types';
+
+/**
+ * Convert rawResponse from parsePromptToHierarchy to nodeChain format
+ * for locationImageGeneration
+ */
+function buildNodeChainFromParsed(rawResponse: any): HierarchyNode[] {
+  const chain: HierarchyNode[] = [];
+  
+  if (rawResponse.host) {
+    chain.push({
+      type: 'host',
+      name: rawResponse.host.name,
+      description: rawResponse.host.description,
+    } as HierarchyNode);
+  }
+  
+  if (rawResponse.region) {
+    chain.push({
+      type: 'region',
+      name: rawResponse.region.name,
+      description: rawResponse.region.description,
+    } as HierarchyNode);
+  }
+  
+  if (rawResponse.location) {
+    chain.push({
+      type: 'location',
+      name: rawResponse.location.name,
+      description: rawResponse.location.description,
+    } as HierarchyNode);
+  }
+  
+  if (rawResponse.niche) {
+    chain.push({
+      type: 'niche',
+      name: rawResponse.niche.name,
+      description: rawResponse.niche.description,
+    } as HierarchyNode);
+  }
+  
+  return chain;
+}
 
 /**
  * Clean unwanted DNA fields that LLM sometimes adds
@@ -179,17 +224,35 @@ export async function runNodeCreationPipeline(
 
     if (signal.aborted) throw new Error('Aborted');
 
-    // Calculate progress steps for the hierarchy
-    const progressConfig = createProgressConfig(spec, true);
+    // Stage 2: Generate IMAGE EARLY using just names/descriptions from parsing
+    // This allows user to see image ~15s earlier!
+    const nodeChain = buildNodeChainFromParsed(rawResponse);
+    const imagePrompt = locationImageGeneration(prompt, nodeChain);
     
-    // Stage 2: Create all nodes with DNA
+    helper.startStage('image_generation', 'Creating visual...', { prompt: imagePrompt });
+    
+    const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
+    
+    if (signal.aborted) throw new Error('Aborted');
+    
+    if (imageResult.error || !imageResult.data?.images?.[0]?.url) {
+      throw new Error(imageResult.error || 'Image generation failed');
+    }
+    
+    const imageUrl = imageResult.data.images[0].url;
+    helper.completeStage('image_generation', 'Visual ready', { imageUrl });
+
+    // Calculate progress steps for the hierarchy
+    const progressConfig = createProgressConfig(spec, false); // false = no image in DNA stage
+    
+    // Stage 3: Create all nodes with DNA (NO image - already generated)
     helper.startStage('dna_generation', 'Creating world structure...');
 
-    // Create hierarchy with new per-node-type DNA prompts
+    // Create hierarchy WITHOUT image generation (we already have it)
     const result = await createHierarchy(spec, {
       apiKey,
       spawnId,
-      createImage: true, // Image on deepest node
+      createImage: false, // Image already generated above
       signal,
     });
 
@@ -199,13 +262,7 @@ export async function runNodeCreationPipeline(
       nodeCount: result.nodes.length,
     });
 
-    // Image was already created by createHierarchy
-    helper.startStage('image_generation', 'Image generated');
-    helper.completeStage('image_generation', 'Visual representation ready', {
-      imageUrl: result.imageUrl,
-    });
-
-    // Stage 3: Build WorldTree structure for frontend
+    // Stage 4: Build WorldTree structure for frontend
     helper.startStage('tree_building', 'Building world tree...');
     
     // Build the proper nested hierarchy structure
@@ -218,17 +275,15 @@ export async function runNodeCreationPipeline(
     // Use WorldTreeBuilder to create proper TreeNode structure
     const worldTree = WorldTreeBuilder.build(spawnId, hierarchyStructure);
 
-    // Assign media to deepest node
-    if (result.imageUrl && result.imagePrompt) {
-      assignMediaToTree(worldTree, result.imageUrl, result.imagePrompt);
-    }
+    // Assign media to deepest node (using our early-generated image)
+    assignMediaToTree(worldTree, imageUrl, imagePrompt);
 
     helper.completeStage('tree_building', 'World tree ready');
 
-    // Stage 4: Complete - Send worldTree for frontend compatibility
+    // Stage 5: Complete - Send worldTree for frontend compatibility
     helper.completed('Location created successfully', {
       worldTree,
-      imageUrl: result.imageUrl,
+      imageUrl,
     });
 
   } catch (error: any) {
