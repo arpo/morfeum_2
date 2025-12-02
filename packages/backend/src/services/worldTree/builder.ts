@@ -50,15 +50,7 @@ export class WorldTreeBuilder {
     // Use DNA object directly (don't spread entire data object to avoid nested dna.dna)
     const dna: NodeDNA = data.dna || {};
     
-    // Ensure standard fields exist on DNA
-    if (!dna.semantic) dna.semantic = { atmosphere: '', mood: '' };
-    if (!dna.visual) dna.visual = { prompt: '', style: '' };
-    if (!dna.profile) dna.profile = { 
-      name: data.name, 
-      looks: data.description || '', 
-      atmosphere: '', 
-      mood: '' 
-    };
+    // Note: semantic, visual, profile fields removed - they were old schema leftovers
 
     const node: TreeNode = {
       id,

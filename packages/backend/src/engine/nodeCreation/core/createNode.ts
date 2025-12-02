@@ -27,6 +27,21 @@ import { getNodeDNAPrompt } from '../prompts/dna';
 import { getNodeImagePrompt } from '../prompts/image';
 
 /**
+ * Clean up unwanted/leftover DNA fields that LLM sometimes adds
+ * Removes: semantic, visual, profile (duplicates/empty)
+ */
+function cleanDNAFields(dna: any): any {
+  const cleaned = { ...dna };
+  
+  // Remove leftover empty/duplicate fields
+  delete cleaned.semantic;
+  delete cleaned.visual;
+  delete cleaned.profile;
+  
+  return cleaned;
+}
+
+/**
  * Generate a slug from a name
  */
 function generateSlug(name: string): string {
@@ -137,8 +152,11 @@ async function generateNodeDNA(
     throw new Error('Failed to parse DNA from LLM response');
   }
 
+  // Clean up leftover/unwanted DNA fields that LLM sometimes adds
+  const cleanedDNA = cleanDNAFields(parsed.dna);
+
   // Merge with parent DNA for inheritance
-  const mergedDNA = mergeDNAWithInheritance(parsed.dna, parentContext as any);
+  const mergedDNA = mergeDNAWithInheritance(cleanedDNA, parentContext as any);
 
   return {
     name: parsed.name || description,

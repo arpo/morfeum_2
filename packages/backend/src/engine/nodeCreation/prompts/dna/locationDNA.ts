@@ -41,7 +41,7 @@ ${contextSection}
 
 OUTPUT JSON:
 {
-  "name": "Evocative, memorable name for this location",
+  "name": "If a REAL landmark is mentioned (e.g., 'Big Ben', 'The British Museum'), use the EXACT name. For generic descriptions (e.g., 'a pub', 'a shop'), create an evocative, memorable name.",
   "description": "2-3 sentence description of this building/site",
   "navigableElements": [
     {"type": "door|passage|stairs|archway|portal|window|balcony|gate", "position": "location in scene (left, center, right, foreground, background)", "description": "brief description of what it is and where it leads"}

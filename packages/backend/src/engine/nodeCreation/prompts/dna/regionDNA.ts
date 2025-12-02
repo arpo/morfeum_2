@@ -40,7 +40,7 @@ ${contextSection}
 
 OUTPUT JSON:
 {
-  "name": "Evocative name for this district/biome",
+  "name": "The EXACT name if a real location is mentioned (e.g., 'Camden' stays 'Camden', 'Soho' stays 'Soho'). Only create evocative names for fictional places.",
   "description": "2-3 sentence description of this area",
   "navigableElements": [],
   "dominantElements": ["3-5 notable features or landmarks in this region"],

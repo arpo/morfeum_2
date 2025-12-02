@@ -21,6 +21,18 @@ import type { HierarchySpec } from '../nodeCreation/types';
 import type { TreeNode } from '../../services/worldTree/types';
 
 /**
+ * Clean unwanted DNA fields that LLM sometimes adds
+ */
+function cleanDNA(dna: any): any {
+  if (!dna) return dna;
+  const cleaned = { ...dna };
+  delete cleaned.semantic;
+  delete cleaned.visual;
+  delete cleaned.profile;
+  return cleaned;
+}
+
+/**
  * Build a proper hierarchy structure from our flat nodes
  * This creates the nested structure that WorldTreeBuilder expects
  */
@@ -40,7 +52,7 @@ function buildHierarchyStructure(
       type: 'host',
       name: hostNode.name,
       description: hostNode.description,
-      dna: hostNode.dna,
+      dna: cleanDNA(hostNode.dna),
       navigableElements: hostNode.navigableElements || [],
       dominantElements: hostNode.dominantElements || [],
       uniqueIdentifiers: hostNode.uniqueIdentifiers || [],
@@ -58,7 +70,7 @@ function buildHierarchyStructure(
       type: 'region',
       name: regionNode.name,
       description: regionNode.description,
-      dna: regionNode.dna,
+      dna: cleanDNA(regionNode.dna),
       navigableElements: regionNode.navigableElements || [],
       dominantElements: regionNode.dominantElements || [],
       uniqueIdentifiers: regionNode.uniqueIdentifiers || [],
@@ -73,7 +85,7 @@ function buildHierarchyStructure(
         type: 'location',
         name: locationNode.name,
         description: locationNode.description,
-        dna: locationNode.dna,
+        dna: cleanDNA(locationNode.dna),
         navigableElements: locationNode.navigableElements || [],
         dominantElements: locationNode.dominantElements || [],
         uniqueIdentifiers: locationNode.uniqueIdentifiers || [],
@@ -88,7 +100,7 @@ function buildHierarchyStructure(
           type: 'niche',
           name: nicheNode.name,
           description: nicheNode.description,
-          dna: nicheNode.dna,
+          dna: cleanDNA(nicheNode.dna),
           navigableElements: nicheNode.navigableElements || [],
           dominantElements: nicheNode.dominantElements || [],
           uniqueIdentifiers: nicheNode.uniqueIdentifiers || [],

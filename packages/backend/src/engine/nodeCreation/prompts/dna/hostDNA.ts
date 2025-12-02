@@ -27,7 +27,7 @@ ${description}
 
 OUTPUT JSON:
 {
-  "name": "Evocative name for this world/setting",
+  "name": "The EXACT place name if a real location is mentioned (e.g., 'London' stays 'London', 'Paris' stays 'Paris'). Only create evocative names for fictional/fantasy places.",
   "description": "2-3 sentence description of this place as a whole",
   "navigableElements": [],
   "dominantElements": ["3-5 major landmarks or features that define this world"],
