@@ -1,0 +1,109 @@
+/* Toggle Button Group */
+.toggleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  width: fit-content;
+}
+
+.toggleButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  border-right: 1px solid var(--color-border);
+}
+
+.toggleButton:last-child {
+  border-right: none;
+}
+
+.toggleButton:hover:not(:disabled) {
+  background-color: var(--color-bg-secondary);
+}
+
+.toggleButton.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.toggleButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Action Buttons */
+.buttonRow {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.shuffleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--text-md);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.shuffleButton:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.generateButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--text-md);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.generateButton:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.generateButton:disabled {
+  background-color: var(--color-secondary);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Minimize Button */
+.minimizeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32px;
+  padding: 0;
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border: 0px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.minimizeButton:hover {
+  color: var(--color-text);
+}

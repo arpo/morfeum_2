@@ -14,6 +14,8 @@ import { Tabs, Button, SlashCommandInput } from '@/components/ui';
 import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
 import { useLocationsStore } from '@/store/slices/locations';
 import styles from './SpawnInputBar.module.css';
+import buttonStyles from './SpawnInputButtons.module.css';
+import dropZoneStyles from './SpawnInputDropZone.module.css';
 
 interface SpawnInputBarProps {
   onOpenSavedEntities?: () => void;
@@ -97,7 +99,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
         <div className={styles.expandedContent}>
           <div className={styles.topRow}>
             <button
-              className={styles.minimizeButton}
+              className={buttonStyles.minimizeButton}
               onClick={toggleSpawnInput}
               title="Minimize (or press 1)"
             >
@@ -121,7 +123,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 label: 'Character',
                 content: (
                   <div className={styles.tabContent}>
-                    <div className={styles.dropZone}>
+                    <div className={dropZoneStyles.dropZone}>
                       <textarea
                         className={styles.textarea}
                         value={state.textPrompt}
@@ -137,9 +139,9 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                         rows={3}
                       />
                       {imageDrop.state.isAnalyzing && (
-                        <div className={styles.analyzingOverlay}>
-                          <span className={styles.analyzingText}>
-                            <span className={styles.spinner} />
+                        <div className={dropZoneStyles.analyzingOverlay}>
+                          <span className={dropZoneStyles.analyzingText}>
+                            <span className={dropZoneStyles.spinner} />
                             Analyzing image...
                           </span>
                         </div>
@@ -148,9 +150,9 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                     {imageDrop.state.error && (
                       <div className={styles.errorMessage}>{imageDrop.state.error}</div>
                     )}
-                    <div className={styles.buttonRow}>
+                    <div className={buttonStyles.buttonRow}>
                       <button
-                        className={styles.generateButton}
+                        className={buttonStyles.generateButton}
                         onClick={handlers.handleGenerate}
                         disabled={!state.textPrompt.trim()}
                       >
@@ -158,7 +160,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                       </button>
                       
                       <button
-                        className={styles.shuffleButton}
+                        className={buttonStyles.shuffleButton}
                         onClick={handlers.handleShuffle}
                         title="Random example"
                       >
@@ -166,7 +168,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                       </button>
                       {onOpenSavedEntities && (
                         <button
-                          className={styles.shuffleButton}
+                          className={buttonStyles.shuffleButton}
                           onClick={onOpenSavedEntities}
                           title="Saved Entities"
                         >
@@ -182,7 +184,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 label: 'Location',
                 content: (
                   <div className={styles.tabContent}>
-                    <div className={styles.dropZone}>
+                    <div className={dropZoneStyles.dropZone}>
                       <textarea
                         className={styles.textarea}
                         value={state.textPrompt}
@@ -198,9 +200,9 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                         rows={3}
                       />
                       {imageDrop.state.isAnalyzing && (
-                        <div className={styles.analyzingOverlay}>
-                          <span className={styles.analyzingText}>
-                            <span className={styles.spinner} />
+                        <div className={dropZoneStyles.analyzingOverlay}>
+                          <span className={dropZoneStyles.analyzingText}>
+                            <span className={dropZoneStyles.spinner} />
                             Analyzing image...
                           </span>
                         </div>
@@ -209,9 +211,9 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                     {imageDrop.state.error && (
                       <div className={styles.errorMessage}>{imageDrop.state.error}</div>
                     )}
-                    <div className={styles.buttonRow}>
+                    <div className={buttonStyles.buttonRow}>
                       <button
-                        className={styles.generateButton}
+                        className={buttonStyles.generateButton}
                         onClick={handlers.handleGenerate}
                         disabled={!state.textPrompt.trim()}
                       >
@@ -219,7 +221,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                       </button>
                       
                       <button
-                        className={styles.shuffleButton}
+                        className={buttonStyles.shuffleButton}
                         onClick={handlers.handleShuffle}
                         title="Random example"
                       >
@@ -227,7 +229,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                       </button>
                       {onOpenSavedEntities && (
                         <button
-                          className={styles.shuffleButton}
+                          className={buttonStyles.shuffleButton}
                           onClick={onOpenSavedEntities}
                           title="Saved Entities"
                         >
