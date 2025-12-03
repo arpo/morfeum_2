@@ -9,3 +9,8 @@ export { nodeImageGeneration } from './nodeImageGeneration';
 export { locationImageGeneration } from './locationImageGeneration';
 export { locationVisualAnalysisPrompt } from './locationVisualAnalysis';
 export { completeDNAGeneration } from './completeDNAGeneration';
+
+// New optimized world tree pipeline prompts
+export { deepestNodeDNAGeneration } from './deepestNodeDNA';
+export { worldTreeImagePrompt, worldTreeImagePromptContext, type WorldTreeImagePromptParams } from './worldTreeImagePrompt';
+export { parentChainDNAGeneration, type HierarchyNodeInfo } from './parentChainDNA';

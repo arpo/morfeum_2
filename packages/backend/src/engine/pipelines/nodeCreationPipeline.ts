@@ -1,69 +1,28 @@
 /**
  * Node Creation Pipeline
  * 
- * New pipeline that uses the nodeCreation system with proper SSE events.
- * Replaces worldTreePipeline with cleaner, single-branch approach.
- * 
- * Flow:
+ * DNA-FIRST pipeline for world tree creation:
  * 1. Parse prompt → HierarchySpec (detect depth, single branch)
- * 2. Create nodes with per-type DNA prompts
- * 3. Generate image on deepest node
- * 4. Build WorldTree for frontend
- * 5. Send completion
+ * 2. Generate DEEPEST NODE DNA first (rich details for image)
+ * 3. Generate IMAGE using DNA (parallel with parent DNA)
+ * 4. Generate PARENT CHAIN DNA (parallel with image)
+ * 5. Build WorldTree for frontend
+ * 
+ * Key optimization: DNA generated BEFORE image for rich prompts
  */
 
 import { PipelineHelper } from './shared/pipelineHelpers';
 import { parsePromptToHierarchy } from '../nodeCreation/detection/parsePromptToHierarchy';
-import { createHierarchy, createProgressConfig } from '../nodeCreation';
 import { WorldTreeBuilder } from '../../services/worldTree/builder';
 import mediaService from '../../services/media/mediaService';
-import { generateImage } from '../../services/mzoo';
-import { locationImageGeneration } from '../generation/prompts/locations/locationImageGeneration';
-import type { HierarchySpec } from '../nodeCreation/types';
+import { generateImage, generateText } from '../../services/mzoo';
+import { AI_MODELS } from '../../config/constants';
+import { parseJSON } from '../utils/parseJSON';
+import { deepestNodeDNAGeneration } from '../generation/prompts/locations/deepestNodeDNA';
+import { worldTreeImagePromptContext } from '../generation/prompts/locations/worldTreeImagePrompt';
+import { parentChainDNAGeneration, type HierarchyNodeInfo } from '../generation/prompts/locations/parentChainDNA';
+import { generalPromptFix } from '../generation/prompts/shared/generalPromptFix';
 import type { TreeNode } from '../../services/worldTree/types';
-import type { HierarchyNode } from '../hierarchyAnalysis/types';
-
-/**
- * Convert rawResponse from parsePromptToHierarchy to nodeChain format
- * for locationImageGeneration
- */
-function buildNodeChainFromParsed(rawResponse: any): HierarchyNode[] {
-  const chain: HierarchyNode[] = [];
-  
-  if (rawResponse.host) {
-    chain.push({
-      type: 'host',
-      name: rawResponse.host.name,
-      description: rawResponse.host.description,
-    } as HierarchyNode);
-  }
-  
-  if (rawResponse.region) {
-    chain.push({
-      type: 'region',
-      name: rawResponse.region.name,
-      description: rawResponse.region.description,
-    } as HierarchyNode);
-  }
-  
-  if (rawResponse.location) {
-    chain.push({
-      type: 'location',
-      name: rawResponse.location.name,
-      description: rawResponse.location.description,
-    } as HierarchyNode);
-  }
-  
-  if (rawResponse.niche) {
-    chain.push({
-      type: 'niche',
-      name: rawResponse.niche.name,
-      description: rawResponse.niche.description,
-    } as HierarchyNode);
-  }
-  
-  return chain;
-}
 
 /**
  * Clean unwanted DNA fields that LLM sometimes adds
@@ -78,79 +37,83 @@ function cleanDNA(dna: any): any {
 }
 
 /**
- * Build a proper hierarchy structure from our flat nodes
- * This creates the nested structure that WorldTreeBuilder expects
+ * Build hierarchy structure from parsed response + DNA data
  */
 function buildHierarchyStructure(
-  nodes: any[],
-  parsedHierarchy: any
+  parsedHierarchy: any,
+  deepestNodeDNA: any,
+  parentDNA: any,
+  deepestType: string
 ): any {
-  // Find nodes by type
-  const hostNode = nodes.find(n => n.type === 'host');
-  const regionNode = nodes.find(n => n.type === 'region');
-  const locationNode = nodes.find(n => n.type === 'location');
-  const nicheNode = nodes.find(n => n.type === 'niche');
-
-  // Build proper nested structure for WorldTreeBuilder
   const structure: any = {
-    host: hostNode ? {
-      type: 'host',
-      name: hostNode.name,
-      description: hostNode.description,
-      dna: cleanDNA(hostNode.dna),
-      navigableElements: hostNode.navigableElements || [],
-      dominantElements: hostNode.dominantElements || [],
-      uniqueIdentifiers: hostNode.uniqueIdentifiers || [],
-      searchDesc: hostNode.searchDesc || '',
-      slug: hostNode.slug || '',
-      regions: [],
-    } : null
+    host: null
   };
+
+  // Get DNA for each level
+  const hostDNA = parentDNA?.host || null;
+  const regionDNA = parentDNA?.region || null;
+  const locationDNA = parentDNA?.location || null;
+
+  // Build host
+  if (parsedHierarchy.host) {
+    structure.host = {
+      type: 'host',
+      name: hostDNA?.name || parsedHierarchy.host.name,
+      description: hostDNA?.description || parsedHierarchy.host.description,
+      dna: cleanDNA(hostDNA?.dna || (deepestType === 'host' ? deepestNodeDNA.dna : null)),
+      navigableElements: hostDNA?.navigableElements || (deepestType === 'host' ? deepestNodeDNA.navigableElements : []),
+      dominantElements: hostDNA?.dominantElements || (deepestType === 'host' ? deepestNodeDNA.dominantElements : []),
+      uniqueIdentifiers: hostDNA?.uniqueIdentifiers || (deepestType === 'host' ? deepestNodeDNA.uniqueIdentifiers : []),
+      searchDesc: hostDNA?.searchDesc || (deepestType === 'host' ? deepestNodeDNA.searchDesc : ''),
+      slug: hostDNA?.slug || (deepestType === 'host' ? deepestNodeDNA.slug : ''),
+      regions: [],
+    };
+  }
 
   if (!structure.host) return null;
 
-  // Add region
-  if (regionNode) {
+  // Build region
+  if (parsedHierarchy.region) {
     structure.host.regions = [{
       type: 'region',
-      name: regionNode.name,
-      description: regionNode.description,
-      dna: cleanDNA(regionNode.dna),
-      navigableElements: regionNode.navigableElements || [],
-      dominantElements: regionNode.dominantElements || [],
-      uniqueIdentifiers: regionNode.uniqueIdentifiers || [],
-      searchDesc: regionNode.searchDesc || '',
-      slug: regionNode.slug || '',
+      name: regionDNA?.name || parsedHierarchy.region.name,
+      description: regionDNA?.description || parsedHierarchy.region.description,
+      dna: cleanDNA(regionDNA?.dna || (deepestType === 'region' ? deepestNodeDNA.dna : null)),
+      navigableElements: regionDNA?.navigableElements || (deepestType === 'region' ? deepestNodeDNA.navigableElements : []),
+      dominantElements: regionDNA?.dominantElements || (deepestType === 'region' ? deepestNodeDNA.dominantElements : []),
+      uniqueIdentifiers: regionDNA?.uniqueIdentifiers || (deepestType === 'region' ? deepestNodeDNA.uniqueIdentifiers : []),
+      searchDesc: regionDNA?.searchDesc || (deepestType === 'region' ? deepestNodeDNA.searchDesc : ''),
+      slug: regionDNA?.slug || (deepestType === 'region' ? deepestNodeDNA.slug : ''),
       locations: [],
     }];
 
-    // Add location
-    if (locationNode) {
+    // Build location
+    if (parsedHierarchy.location) {
       structure.host.regions[0].locations = [{
         type: 'location',
-        name: locationNode.name,
-        description: locationNode.description,
-        dna: cleanDNA(locationNode.dna),
-        navigableElements: locationNode.navigableElements || [],
-        dominantElements: locationNode.dominantElements || [],
-        uniqueIdentifiers: locationNode.uniqueIdentifiers || [],
-        searchDesc: locationNode.searchDesc || '',
-        slug: locationNode.slug || '',
+        name: locationDNA?.name || parsedHierarchy.location.name,
+        description: locationDNA?.description || parsedHierarchy.location.description,
+        dna: cleanDNA(locationDNA?.dna || (deepestType === 'location' ? deepestNodeDNA.dna : null)),
+        navigableElements: locationDNA?.navigableElements || (deepestType === 'location' ? deepestNodeDNA.navigableElements : []),
+        dominantElements: locationDNA?.dominantElements || (deepestType === 'location' ? deepestNodeDNA.dominantElements : []),
+        uniqueIdentifiers: locationDNA?.uniqueIdentifiers || (deepestType === 'location' ? deepestNodeDNA.uniqueIdentifiers : []),
+        searchDesc: locationDNA?.searchDesc || (deepestType === 'location' ? deepestNodeDNA.searchDesc : ''),
+        slug: locationDNA?.slug || (deepestType === 'location' ? deepestNodeDNA.slug : ''),
         niches: [],
       }];
 
-      // Add niche
-      if (nicheNode) {
+      // Build niche
+      if (parsedHierarchy.niche) {
         structure.host.regions[0].locations[0].niches = [{
           type: 'niche',
-          name: nicheNode.name,
-          description: nicheNode.description,
-          dna: cleanDNA(nicheNode.dna),
-          navigableElements: nicheNode.navigableElements || [],
-          dominantElements: nicheNode.dominantElements || [],
-          uniqueIdentifiers: nicheNode.uniqueIdentifiers || [],
-          searchDesc: nicheNode.searchDesc || '',
-          slug: nicheNode.slug || '',
+          name: deepestNodeDNA.name || parsedHierarchy.niche.name,
+          description: deepestNodeDNA.description || parsedHierarchy.niche.description,
+          dna: cleanDNA(deepestNodeDNA.dna),
+          navigableElements: deepestNodeDNA.navigableElements || [],
+          dominantElements: deepestNodeDNA.dominantElements || [],
+          uniqueIdentifiers: deepestNodeDNA.uniqueIdentifiers || [],
+          searchDesc: deepestNodeDNA.searchDesc || '',
+          slug: deepestNodeDNA.slug || '',
         }];
       }
     }
@@ -193,7 +156,125 @@ function assignMediaToTree(
 }
 
 /**
- * Run the Node Creation Pipeline
+ * Extract parent nodes for DNA generation
+ */
+function extractParentNodes(
+  parsedHierarchy: any,
+  deepestType: string
+): HierarchyNodeInfo[] {
+  const parents: HierarchyNodeInfo[] = [];
+
+  // Add host if deepest is not host
+  if (deepestType !== 'host' && parsedHierarchy.host) {
+    parents.push({
+      type: 'host',
+      name: parsedHierarchy.host.name,
+      description: parsedHierarchy.host.description,
+    });
+  }
+
+  // Add region if deepest is location or niche
+  if ((deepestType === 'location' || deepestType === 'niche') && parsedHierarchy.region) {
+    parents.push({
+      type: 'region',
+      name: parsedHierarchy.region.name,
+      description: parsedHierarchy.region.description,
+    });
+  }
+
+  // Add location if deepest is niche
+  if (deepestType === 'niche' && parsedHierarchy.location) {
+    parents.push({
+      type: 'location',
+      name: parsedHierarchy.location.name,
+      description: parsedHierarchy.location.description,
+    });
+  }
+
+  // Return in order from deepest parent to host (bottom-up)
+  return parents.reverse();
+}
+
+/**
+ * Build parent chain for context in DNA generation
+ */
+function buildParentChain(
+  parsedHierarchy: any,
+  deepestType: string
+): Array<{ type: string; name: string; description: string }> {
+  const chain: Array<{ type: string; name: string; description: string }> = [];
+
+  if (deepestType === 'host') return chain;
+
+  if (parsedHierarchy.host) {
+    chain.push({
+      type: 'host',
+      name: parsedHierarchy.host.name,
+      description: parsedHierarchy.host.description,
+    });
+  }
+
+  if (deepestType === 'region') return chain;
+
+  if (parsedHierarchy.region) {
+    chain.push({
+      type: 'region',
+      name: parsedHierarchy.region.name,
+      description: parsedHierarchy.region.description,
+    });
+  }
+
+  if (deepestType === 'location') return chain;
+
+  if (parsedHierarchy.location) {
+    chain.push({
+      type: 'location',
+      name: parsedHierarchy.location.name,
+      description: parsedHierarchy.location.description,
+    });
+  }
+
+  return chain;
+}
+
+/**
+ * Get deepest node info from parsed hierarchy
+ */
+function getDeepestNodeInfo(parsedHierarchy: any): {
+  type: 'host' | 'region' | 'location' | 'niche';
+  name: string;
+  description: string;
+} {
+  if (parsedHierarchy.niche) {
+    return {
+      type: 'niche',
+      name: parsedHierarchy.niche.name,
+      description: parsedHierarchy.niche.description,
+    };
+  }
+  if (parsedHierarchy.location) {
+    return {
+      type: 'location',
+      name: parsedHierarchy.location.name,
+      description: parsedHierarchy.location.description,
+    };
+  }
+  if (parsedHierarchy.region) {
+    return {
+      type: 'region',
+      name: parsedHierarchy.region.name,
+      description: parsedHierarchy.region.description,
+    };
+  }
+  return {
+    type: 'host',
+    name: parsedHierarchy.host.name,
+    description: parsedHierarchy.host.description,
+  };
+}
+
+/**
+ * Run the Node Creation Pipeline (DNA-FIRST)
  * 
  * @param spawnId - Unique spawn identifier
  * @param prompt - User's location prompt
@@ -211,7 +292,9 @@ export async function runNodeCreationPipeline(
   try {
     helper.started('Starting location creation...');
 
+    // ═══════════════════════════════════════════════════════════════════════
     // Stage 1: Parse prompt into hierarchy structure
+    // ═══════════════════════════════════════════════════════════════════════
     helper.startStage('hierarchy_classification', 'Analyzing your description...');
     
     const { spec, depth, isInterior, rawResponse } = await parsePromptToHierarchy(prompt, apiKey);
@@ -224,49 +307,138 @@ export async function runNodeCreationPipeline(
 
     if (signal.aborted) throw new Error('Aborted');
 
-    // Stage 2: Generate IMAGE EARLY using just names/descriptions from parsing
-    // This allows user to see image ~15s earlier!
-    const nodeChain = buildNodeChainFromParsed(rawResponse);
-    const imagePrompt = locationImageGeneration(prompt, nodeChain);
+    // Get deepest node info
+    const deepestInfo = getDeepestNodeInfo(rawResponse);
+    const parentChain = buildParentChain(rawResponse, deepestInfo.type);
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // Stage 2: Generate DEEPEST NODE DNA (for rich image prompts)
+    // ═══════════════════════════════════════════════════════════════════════
+    helper.startStage('deepest_dna_generation', `Creating DNA for ${deepestInfo.type}...`);
+
+    const deepestDNAPrompt = deepestNodeDNAGeneration(
+      prompt,
+      deepestInfo.type,
+      deepestInfo.name,
+      deepestInfo.description,
+      {}, // No classification data available from parsing
+      parentChain
+    );
+
+    const deepestDNAResult = await generateText(
+      apiKey,
+      [{ role: 'user', content: deepestDNAPrompt }],
+      AI_MODELS.SEED_GENERATION
+    );
+
+    if (deepestDNAResult.error || !deepestDNAResult.data) {
+      throw new Error(deepestDNAResult.error || 'Failed to generate deepest node DNA');
+    }
+
+    const deepestNodeDNA = parseJSON<any>(deepestDNAResult.data.text);
     
-    helper.startStage('image_generation', 'Creating visual...', { prompt: imagePrompt });
-    
-    const imageResult = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
-    
+    helper.completeStage('deepest_dna_generation', 'DNA generated', {
+      nodeType: deepestInfo.type,
+      dna: deepestNodeDNA,
+    });
+
     if (signal.aborted) throw new Error('Aborted');
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // Stage 3: Generate IMAGE using DNA + PARALLEL: Parent Chain DNA
+    // ═══════════════════════════════════════════════════════════════════════
     
+    // Build context prompt for LLM to generate FLUX image description
+    const imageContextPrompt = worldTreeImagePromptContext({
+      nodeType: deepestInfo.type,
+      nodeName: deepestNodeDNA.name || deepestInfo.name,
+      dna: deepestNodeDNA.dna || {},
+      originalPrompt: prompt,
+      parentChain,
+    });
+
+    helper.startStage('image_generation', 'Creating visual description...');
+
+    // TWO-STEP IMAGE GENERATION:
+    // Step 1: LLM generates the actual FLUX image description from context
+    const imagePromptResult = await generateText(
+      apiKey,
+      [{ role: 'user', content: imageContextPrompt }],
+      AI_MODELS.SEED_GENERATION
+    );
+
+    if (imagePromptResult.error || !imagePromptResult.data) {
+      throw new Error(imagePromptResult.error || 'Failed to generate image prompt');
+    }
+
+    // Apply generalPromptFix for consistent styling
+    const imagePrompt = generalPromptFix(imagePromptResult.data.text.trim());
+
+    // Step 2: Use the LLM-generated prompt for image generation
+    const imagePromise = generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
+
+    // Start parent chain DNA generation in parallel (if needed)
+    const parentNodes = extractParentNodes(rawResponse, deepestInfo.type);
+    let parentDNAPromise: Promise<any> | null = null;
+
+    if (parentNodes.length > 0) {
+      const parentDNAPrompt = parentChainDNAGeneration(
+        deepestNodeDNA.dna || {},
+        deepestInfo.type,
+        parentNodes,
+        prompt
+      );
+
+      if (parentDNAPrompt) {
+        helper.startStage('parent_dna_generation', 'Building world structure (parallel)...');
+        parentDNAPromise = generateText(
+          apiKey,
+          [{ role: 'user', content: parentDNAPrompt }],
+          AI_MODELS.SEED_GENERATION
+        );
+      }
+    }
+
+    // Wait for image generation
+    const imageResult = await imagePromise;
+
+    if (signal.aborted) throw new Error('Aborted');
+
     if (imageResult.error || !imageResult.data?.images?.[0]?.url) {
       throw new Error(imageResult.error || 'Image generation failed');
     }
-    
+
     const imageUrl = imageResult.data.images[0].url;
     helper.completeStage('image_generation', 'Visual ready', { imageUrl });
 
-    // Calculate progress steps for the hierarchy
-    const progressConfig = createProgressConfig(spec, false); // false = no image in DNA stage
-    
-    // Stage 3: Create all nodes with DNA (NO image - already generated)
-    helper.startStage('dna_generation', 'Creating world structure...');
-
-    // Create hierarchy WITHOUT image generation (we already have it)
-    const result = await createHierarchy(spec, {
-      apiKey,
-      spawnId,
-      createImage: false, // Image already generated above
-      signal,
-    });
+    // Wait for parent chain DNA (if started)
+    let parentDNA: any = null;
+    if (parentDNAPromise) {
+      const parentDNAResult = await parentDNAPromise;
+      
+      if (parentDNAResult.error || !parentDNAResult.data) {
+        // Log warning but don't fail - we have the deepest node DNA
+        console.warn('Parent chain DNA generation failed:', parentDNAResult.error);
+      } else {
+        parentDNA = parseJSON<any>(parentDNAResult.data.text);
+        helper.completeStage('parent_dna_generation', 'World structure complete');
+      }
+    }
 
     if (signal.aborted) throw new Error('Aborted');
 
-    helper.completeStage('dna_generation', `Created ${result.nodes.length} nodes`, {
-      nodeCount: result.nodes.length,
-    });
-
+    // ═══════════════════════════════════════════════════════════════════════
     // Stage 4: Build WorldTree structure for frontend
+    // ═══════════════════════════════════════════════════════════════════════
     helper.startStage('tree_building', 'Building world tree...');
     
-    // Build the proper nested hierarchy structure
-    const hierarchyStructure = buildHierarchyStructure(result.nodes, rawResponse);
+    // Build the proper nested hierarchy structure with all DNA
+    const hierarchyStructure = buildHierarchyStructure(
+      rawResponse,
+      deepestNodeDNA,
+      parentDNA,
+      deepestInfo.type
+    );
     
     if (!hierarchyStructure) {
       throw new Error('Failed to build hierarchy structure');
@@ -275,7 +447,7 @@ export async function runNodeCreationPipeline(
     // Use WorldTreeBuilder to create proper TreeNode structure
     const worldTree = WorldTreeBuilder.build(spawnId, hierarchyStructure);
 
-    // Assign media to deepest node (using our early-generated image)
+    // Assign media to deepest node
     assignMediaToTree(worldTree, imageUrl, imagePrompt);
 
     helper.completeStage('tree_building', 'World tree ready');
