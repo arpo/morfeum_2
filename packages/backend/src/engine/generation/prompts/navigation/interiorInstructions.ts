@@ -3,7 +3,9 @@
  * Detailed instructions for generating interior niche spaces
  */
 
-const interiorInstructionsTemplateShorter = `
+import { navigableElementsTemplate } from "./navigableElementsTemplate";
+
+const interiorInstructionsTemplate1 = `
 IMMERSIVE INTERIOR PERSPECTIVE (ABSOLUTE RULE):
 
 WALLS: The scene must be enclosed by walls/boundaries on all sides.
@@ -68,19 +70,12 @@ Background: Dominant spatial cue. MAY include 1 element.
 `;
 
 
-const interiorInstructionsTemplateLong = `
+
+// Old longer prompt
+const interiorInstructionsTemplate2 = `
 PARENT STRUCTURE EXCLUSION (ABSOLUTE RULE):
-The parent structure (archway/portal/entrance/building) is COMPLETELY OUT OF FRAME.
 NOT visible in background. NOT as backdrop. NOT in distance. NOT anywhere in the scene.
 The camera has moved PAST/THROUGH it and focuses ONLY on what lies ahead.
-
-CRITICAL - DO NOT include, mention, or describe:
-- The parent archway/structure/building itself
-- "The parent structure behind you"
-- "The parent structure in the distance"  
-- "The parent structure as a backdrop"
-- "Looking back at the parent structure"
-- ANY visual reference to the parent structure whatsoever
 
 Think: You walked through a doorway into a new room - you don't see the door anymore, you see the NEW ROOM.
 
@@ -94,18 +89,26 @@ BEFORE creating the interior, infer it from the parent structure:
   rectangular → straight walls + corners
   cylindrical/tubular → curved walls
   faceted/geodesic → geometric framework
-  organic → uneven/natural surfaces
+  organic → uneven/natural surfaces, curved walls
   arched/gothic/roman → interior echoes arch style
+  If exterior is vast open space (e.g., dome, arena), interior should have high ceiling and wide open volume
 
 2. CEILING
-- Match ceiling to roof type:
+- Match ceiling to roof type but seen from inside:
   domed → domed ceiling
   flat → flat ceiling
   vaulted → vaulted arches
   pitched/peaked → angled ceiling
   geodesic → faceted overhead structure
 
-3. SCALE
+3. WINDOWS/OPENINGS
+- If exterior has windows/openings, interior MUST show them as well:
+  large glass panels → interior glazing with framing
+  arches/windows → interior arches/windows
+  open spaces → interior openings/passages
+  use arched/gothic/roman styles if exterior has them
+
+4. SCALE
 - Use exterior size + Spatial Layout to set interior volume:
   small (<15m): 3–5m ceilings
   large (15–50m): 8–15m ceilings
@@ -114,47 +117,32 @@ BEFORE creating the interior, infer it from the parent structure:
 - If exterior dimensions are known, interior height = 40–60% of total.
 - For houses: infer realistic interior style (flooring, wall materials, furniture) from exterior cues.
 
-4. STRUCTURE TYPE (guides composition)
+5. STRUCTURE TYPE (guides composition)
 - Vertical (towers/spires): emphasize height and upward depth.
 - Horizontal (halls/corridors): emphasize receding linear depth.
 - Wide (domes/arenas): emphasize circular expanse and roof curvature.
 
-5. COMPOSITION (MUST include NAVIGABLE ELEMENTS *inside* these layers)
-[COMPOSITION:]
-- **Foreground:**  
-  Floor textures, entry-level details, and bases of structures shaped by FORM + SCALE.  
-  MUST include 1 navigable element with visual prominence  
-  (e.g., "illuminated stone steps rising left with soft glow [navigable: stairs, left]").
+6 INTERIOR PROPERTIES:
+- Match the locations characteristics to fot the interior style:
+- If its a shop add shop shelves and counters, mannequins etc
+- If its a temple add altars, statues, candles
+- If its a residential structure add furniture like tables, chairs, beds
+- If its a castle add medieval elements like torches and banners
+- if its a futuristic structure add sci-fi elements like holograms and control panels
 
-- **Midground:**  
-  Core architectural structures influenced by FORM (columns, walls, curvature, arches).  
-  MUST include 1-2 navigable elements with clear visibility (THIS IS THE MOST VISIBLE LAYER)  
-  (e.g., "spotlit arched doorway on right, polished metal frame contrasting rough stone [navigable: door, right wall]").
+7. MATERIAL TRANSLATION LOGIC (CRITICAL):
+Translate Exterior Materials into INTERIOR FINISHES. But use interior-appropriate materials.
+• Ext. Glass/Crystal → **Int. ARCHITECTURAL GLAZING (High-Tech Atrium style)**.
+  - *Texture:* Transparent, Reflective, Thin panels (NOT solid blocks).
+  - *Detail:* Visible joining hardware, metal struts, ventilation ducts.
+• Ext. Stone → Int. Polished Stone / Plaster / Masonry (Warm or Dark tones if room is blue).
+• Ext. Wood → Int. Paneling / Beams.
+• Ext. Metal → Int. Supports / Grating / Plating.
+• Ext. Concrete → Int. Smooth Industrial.
 
-- **Background:**  
-  The dominant spatial cue based on STRUCTURE TYPE:  
-    • Vertical → soaring ceiling with stated height  
-    • Horizontal → long corridor or passage with stated depth  
-    • Wide → far curved walls or domed ceiling with stated diameter  
-  MAY include 1 navigable element if space allows  
-  (e.g., "distant glowing platform [navigable: platform, far center]").
 
-**NAVIGABLE ELEMENT REQUIREMENTS (CRITICAL):**  
-- MINIMUM: 2-3 navigable elements total across all layers
-- All navigable elements must be placed *inside Foreground, Midground, or Background*, never outside the COMPOSITION block
-- Allowed types: passage, corridor, stairs, ladder, ramp, platform, walkway, opening, hatch, door, object
 
-**VISUAL PROMINENCE FOR NAVIGABLE ELEMENTS (CRITICAL):**
-Make navigable elements highly visible and distinct through:
-- **Lighting:** Illuminate with distinct light sources (glowing edges, spotlit, pools of light, bioluminescent markers, highlighted)
-- **Material Contrast:** Use contrasting materials (polished metal vs rough stone, smooth vs textured, different finishes)
-- **Color Differentiation:** Different color/tone from surrounding surfaces (warmer glow, cooler metal, brighter accents)
-- **Spatial Position:** Well-positioned, unobstructed, clearly framed, prominent placement
-- **Scale & Clarity:** Human-scale, adequately sized to be obvious, sharply defined edges
-- **Examples:** 
-  - "Corridor entrance bathed in warm orange glow, polished bronze frame" 
-  - "Spiral staircase illuminated by bioluminescent vines, contrasting dark metal against pale stone"
-  - "Archway with distinct blue-white light spilling through, ornate carved frame"
+${navigableElementsTemplate}
 
 **ASYMMETRIC COMPOSITION RULES (CRITICAL):**
 Create dynamic, interesting compositions by AVOIDING perfect symmetry:
@@ -173,5 +161,4 @@ The interior architecture MUST reflect both FORM and SCALE from the analysis abo
 `;
 
 
-//export const interiorInstructionsTemplate = interiorInstructionsTemplateShorter;
-export const interiorInstructionsTemplate = interiorInstructionsTemplateLong;
+export const interiorInstructionsTemplate = interiorInstructionsTemplate2;

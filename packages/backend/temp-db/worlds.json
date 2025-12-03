@@ -1,233 +1,482 @@
 {
   "nodes": {
-    "loc-1764762221396-fc07vqep9": {
-      "id": "loc-1764762221396-fc07vqep9",
+    "loc-1764764017008-nswqs5dcp": {
+      "id": "loc-1764764017008-nswqs5dcp",
       "type": "host",
       "name": "London",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A complex tapestry of architectural styles, from historic grandeur to sleek modernism. The city is characterized by diverse streetscapes, famous landmarks, and a constant ebb and flow of urban life.",
-        "colorsAndLighting": "A dynamic interplay of natural light reflecting off varied surfaces and the artificial glow of city lights. Color palettes range from muted historical tones to vibrant contemporary displays.",
-        "atmosphere": "Diverse and ever-changing, from the stately calm of historical areas to the frenetic energy of commercial centers. A pervasive sense of history and global influence.",
-        "materials": "A wide array: traditional brick and stone, polished steel and glass, concrete, and a myriad of materials used in shopfronts and public spaces.",
-        "mood": "A blend of historical gravitas, contemporary dynamism, and individualistic spirit. The city offers a sense of both belonging and anonymity.",
-        "sounds": "A complex symphony of traffic, public transport, diverse languages, distant sirens, and the murmur of millions. Specific districts have their own unique sound profiles.",
-        "spatialLayout": "Varies dramatically by district, from grand boulevards and intricate historic cores to dense commercial hubs and sprawling residential areas.",
-        "primary_surfaces": "Brick, stone, concrete, glass, asphalt.",
-        "secondary_surfaces": "Metal cladding, painted surfaces, wood accents, historical decorative elements.",
-        "accent_features": "Iconic statues, elaborate bridges, historical detailing on buildings, modern art installations, public clocks.",
-        "dominant": "Grays and muted tones of stone and brick, contrasted with the blues of the sky and the greens of parks.",
-        "secondary": "Rich reds of historic buildings and transport, alongside the metallic sheens of modern architecture.",
-        "accent": "The diverse and often bold colors of signage, advertisements, and diverse cultural expressions.",
-        "ambient": "Often overcast or diffuse daylight, with vibrant, varied artificial lighting dominating the night.",
-        "genre": "Urban Exploration / Contemporary Reality",
-        "architectural_tone": "A vast eclecticism, from Gothic and Victorian to Brutalist and Post-modernist. A blend of historical preservation and modern development.",
-        "cultural_tone": "Multicultural, historical, trend-setting, individualistic, global.",
-        "materials_base": "A wide range of practical, historical, and modern materials reflecting diverse urban development.",
-        "mood_baseline": "A sense of history intertwined with constant innovation, offering both familiarity and novelty.",
-        "palette_bias": "A broad palette, from muted historical tones to the vibrant, diverse colors of global cultures and modern design.",
-        "soundscape_base": "A constant, layered urban hum punctuated by distinct sounds of transport and human activity.",
-        "flora_base": "Primarily manicured city parks, street trees, and urban vegetation.",
-        "fauna_base": "Urban wildlife: pigeons, foxes, various birds, small mammals."
+        "looks": "A dramatic fusion of historical grandeur and sleek contemporary design. Architecture ranges from gothic and Victorian to brutalist and hyper-modern, often coexisting within close proximity.",
+        "colorsAndLighting": "A palette dominated by the muted grays and browns of stone and brick, contrasted with the reflective surfaces of modern glass and steel. Lighting varies from the warm, traditional glow of streetlamps to the sharp, cool illumination of contemporary buildings.",
+        "atmosphere": "A sophisticated yet dynamic urban atmosphere, characterized by a constant hum of activity, diverse cultural influences, and an underlying sense of historical gravitas. It can feel both grand and intimate, bustling and serene.",
+        "materials": "A rich and varied material palette, including aged stone, red brick, cast iron, polished steel, vast expanses of glass, and modern composites. Materials often reflect the historical or contemporary context of a district.",
+        "mood": "Sophisticated, diverse, and ever-changing. London evokes a sense of ambition, cultural richness, and a persistent forward momentum, tempered by moments of historical reflection.",
+        "sounds": "The quintessential sounds of a major global city: traffic, distant sirens, the rumble of the Underground, diverse languages, church bells, and the murmur of millions of lives unfolding.",
+        "spatialLayout": "A sprawling, multi-layered city with distinct districts, each possessing its own character. It features grand avenues, intricate street networks, vast green spaces, and dense urban cores.",
+        "primary_surfaces": "Aged stone facades, red brickwork, and large expanses of reflective glass.",
+        "secondary_surfaces": "Cast iron elements, concrete, paved streets, and wooden accents.",
+        "accent_features": "Ornate historical detailing, modern minimalist accents, public art installations, and the ubiquitous red phone boxes.",
+        "dominant": "Muted urban tones: various shades of grey, muted browns, and deep reds from brick.",
+        "secondary": "Silver and metallic sheens from modern architecture, stone textures.",
+        "accent": "The diverse palette of lights from buildings, signage, and traffic, alongside the greens of parks.",
+        "ambient": "A cool, often overcast light quality, punctuated by the warm glow of artificial lights and the occasional brilliance of a sunny day.",
+        "genre": "Urban Explorer",
+        "architectural_tone": "Eclectic mix of historical, contemporary, and brutalist styles.",
+        "cultural_tone": "Cosmopolitan, historic, diverse, and trendsetting.",
+        "materials_base": "A blend of traditional construction materials and modern, high-tech composites and glass.",
+        "mood_baseline": "Sophisticated, ambitious, and dynamic.",
+        "palette_bias": "Neutral urban tones accented by the diverse colors of global culture and modern technology.",
+        "soundscape_base": "A constant, layered urban soundscape.",
+        "flora_base": "Parks and gardens featuring a mix of temperate trees, shrubs, and manicured flower beds.",
+        "fauna_base": "Common urban wildlife: various bird species (pigeons, sparrows, gulls), squirrels, foxes, and insects."
       },
-      "description": "A sprawling global metropolis, a melting pot of history, culture, and modernity. London is a city of contrasts, where ancient traditions meet cutting-edge innovation, and diverse neighborhoods offer unique experiences.",
-      "navigableElements": [],
+      "description": "A sprawling global metropolis where centuries of history collide with cutting-edge modernity. It is a city of diverse cultures, iconic landmarks, and constant evolution, offering a vast canvas for countless experiences.",
+      "navigableElements": [
+        "Historic landmarks",
+        "Modern districts",
+        "Parks",
+        "The Thames"
+      ],
       "dominantElements": [
-        "The Shard",
-        "Houses of Parliament",
-        "Tower Bridge"
+        "The Houses of Parliament",
+        "Tower of London",
+        "Skyscrapers of the City"
       ],
       "uniqueIdentifiers": [
         "Red double-decker buses",
-        "Iconic black cabs",
-        "The Tube"
+        "Black cabs",
+        "Distinctive architectural styles"
       ],
-      "searchDesc": "Discover London, a vast and historic city brimming with culture, iconic landmarks, and endless urban exploration.",
+      "searchDesc": "London: A historic global city blending ancient charm with modern dynamism, offering endless cultural and urban exploration.",
       "slug": "london"
     },
-    "5b18284e-eb70-4f3b-b706-d4b79f87879a": {
-      "id": "5b18284e-eb70-4f3b-b706-d4b79f87879a",
+    "5a64e82d-4b27-4c3b-8ccd-4c02f34917e9": {
+      "id": "5a64e82d-4b27-4c3b-8ccd-4c02f34917e9",
       "type": "region",
       "name": "Camden",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A chaotic yet captivating blend of historical architecture, sprawling markets, and vibrant street art. Expect eclectic storefronts, colorful murals, and a constant flow of people.",
-        "colorsAndLighting": "Diverse and dynamic. Sunlight filters through market stalls and canals, while neon signs and diverse shop lighting create pockets of intense color and shadow after dark.",
-        "atmosphere": "Energetic, bohemian, and slightly gritty. The air buzzes with music, chatter, and the aroma of global street food, fostering a sense of free expression.",
-        "materials": "A mix of weathered brick, graffiti-covered metal, repurposed wood, and diverse shop facades. Think rough textures and bold finishes.",
-        "mood": "Rebellious, creative, and individualistic. A sense of freedom and self-expression permeates the district, encouraging exploration and discovery.",
-        "sounds": "A cacophony of street performers, market chatter, diverse music genres spilling from shops, and the distant hum of London traffic.",
-        "spatialLayout": "Dense and maze-like in market areas, with wider thoroughfares and canal paths. Numerous small, independent shops are packed together.",
-        "primary_surfaces": "Brickwork, painted facades, weathered wood, corrugated metal.",
-        "secondary_surfaces": "Graffiti, street art, tiled roofs, metal shop fronts.",
-        "accent_features": "Ornate lamp posts, quirky signage, unique sculptures, elaborate market stall decorations, vibrant murals.",
-        "dominant": "Earthy browns and grays of brickwork, overlaid with the bright, saturated colors of street art and signage.",
-        "secondary": "Deep reds and blues often found in older architectural elements and signage.",
-        "accent": "Pops of electric colors from neon signs, graffiti, and eclectic shop displays.",
-        "ambient": "Varied, from bright daylight in open market spaces to moody, dimly lit alleys and intensely lit shop fronts.",
+        "looks": "A visually dynamic and somewhat chaotic mix of urban grit and creative expression. Walls are often covered in vibrant graffiti and street art, interspersed with quirky shop facades and bustling market stalls.",
+        "colorsAndLighting": "A kaleidoscope of colors from street art and market displays, with practical, often colorful, industrial lighting in market areas. Neon signs are common in entertainment venues, creating a lively nocturnal glow.",
+        "atmosphere": "Energetic, slightly gritty, and always buzzing with activity. The air is thick with the scent of diverse street food and the murmur of crowds, creating an immersive urban experience that feels alive and constantly shifting.",
+        "materials": "A diverse mix of urban materials: brick, concrete, weathered metal, painted wood, and a plethora of synthetic materials from market stalls and modern retail additions. Graffiti and posters are common surface treatments.",
+        "mood": "Exciting, bohemian, and rebelliously fashionable. A sense of freedom and individuality permeates the district, encouraging self-expression and a rejection of mainstream conformity.",
+        "sounds": "A rich tapestry of city sounds: market chatter, diverse music genres spilling from venues, distant traffic, and the general hum of a densely populated urban area. Occasional buskers add to the sonic texture.",
+        "spatialLayout": "Densely packed with narrow streets, sprawling market areas, and distinct zones like the canals and entertainment districts. It's a labyrinth of activity with a strong pedestrian focus.",
+        "primary_surfaces": "Graffiti-covered brick, weathered concrete, and painted corrugated metal.",
+        "secondary_surfaces": "Market stall canvas, glass shopfronts, and asphalt.",
+        "accent_features": "Vibrant street art murals, neon signs, eclectic market displays, and quirky sculptures.",
+        "dominant": "Muted urban tones (grays, browns, brick red) often overlaid with bright, chaotic color from street art.",
+        "secondary": "Industrial metal tones, canvas colors from stalls.",
+        "accent": "Neon brights (pinks, blues, greens) and the vibrant hues of street art.",
+        "ambient": "Variable, from the harsh daylight reflecting off concrete to the warm, saturated glow of neon at night.",
         "genre": null,
-        "architectural_tone": "Eclectic Victorian Gothic mixed with utilitarian market structures and modern street art.",
-        "cultural_tone": "Alternative, bohemian, youth culture, subcultures, artistic expression.",
-        "materials_base": "A mix of raw, weathered, and repurposed materials with bold, expressive finishes.",
-        "mood_baseline": "Energetic, rebellious, and creatively driven.",
-        "palette_bias": "Bold, clashing colors drawn from street art and diverse global influences.",
-        "soundscape_base": "A vibrant, multi-layered soundscape of human activity and diverse music.",
-        "flora_base": null,
-        "fauna_base": null
+        "architectural_tone": null,
+        "cultural_tone": "Alternative, bohemian, avant-garde, and youth-oriented.",
+        "materials_base": "Urban grit and synthetic market materials, with a strong emphasis on repurposed or weathered elements.",
+        "mood_baseline": "Rebellious, creative, and energetic.",
+        "palette_bias": "Eclectic and high-contrast, embracing both muted urban tones and vibrant, clashing colors from street art and signage.",
+        "soundscape_base": "Urban cacophony overlaid with diverse subcultures.",
+        "flora_base": "Scattered urban trees, canal-side vegetation, and minimal cultivated green spaces.",
+        "fauna_base": "Urban wildlife: pigeons, rats, stray animals, and canal-dwelling birds."
       },
-      "description": "A vibrant and eclectic district known for its unique markets, alternative subcultures, and buzzing street life. Camden pulsates with a creative energy, drawing in artists, musicians, and trendsetters.",
-      "navigableElements": [],
+      "description": "A vibrant, eclectic district in London, famous for its bustling markets, alternative culture, and diverse street art. It pulses with a unique energy that attracts artists, musicians, and fashion enthusiasts from around the globe.",
+      "navigableElements": [
+        "Markets",
+        "Street art",
+        "Canals",
+        "Music venues"
+      ],
       "dominantElements": [
-        "Camden Market",
-        "Stables Market",
-        "Camden Lock"
+        "Camden Lock Market",
+        "The Roundhouse",
+        "Street murals"
       ],
       "uniqueIdentifiers": [
-        "Street art murals",
-        "Gothic architecture",
-        "Canal towpath"
+        "Graffiti-covered walls",
+        "Unique market stalls",
+        "Alternative fashion boutiques"
       ],
-      "searchDesc": "Explore Camden, London's hub for alternative culture, vibrant markets, and eclectic street style.",
+      "searchDesc": "Explore Camden, London's vibrant hub for alternative culture, unique markets, and eclectic fashion.",
       "slug": "camden"
     },
-    "1ebbb429-104f-4861-a519-c79b10863427": {
-      "id": "1ebbb429-104f-4861-a519-c79b10863427",
+    "974689e0-2c58-4369-99fb-5669542ec0cc": {
+      "id": "974689e0-2c58-4369-99fb-5669542ec0cc",
       "type": "location",
-      "name": "LSD",
+      "name": "The Cutting Edge",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The exterior of LSD is a dazzling spectacle, dominated by a swirling, all-encompassing mural of psychedelic patterns. Ornate, Art Nouveau-inspired metalwork frames the iridescent window displays, which are alive with changing light. The entrance is a faceted mirror door, reflecting the bustling London street in a fragmented, dreamlike manner.",
-        "colorsAndLighting": "A riot of saturated, electric colors dominates, with vibrant fuchsias, electric blues, and acid greens clashing harmoniously. The primary light source is a colossal, pulsating neon sign, casting an otherworldly glow, complemented by subtle, embedded sidewalk lights that mimic starlight.",
-        "atmosphere": "The air crackles with an almost palpable energy, hinting at the vibrant nightlife and creative spirit of Camden. A faint, sweet scent, perhaps from nearby incense or air fresheners, mingles with the city's ambient perfume. The scene feels perpetually caught between twilight and dawn, imbued with a sense of ecstatic anticipation.",
-        "materials": "The facade is primarily rendered in high-gloss, weather-resistant paint with holographic and iridescent finishes. The window frames are a dark, patinated brass with intricate detailing, contrasting with the smooth, reflective surfaces of the mirrored door.",
-        "mood": "The mood is one of exhilarating escapism and boundless creativity, inviting passersby into a world of fantasy and self-expression. It evokes a feeling of playful rebellion and vibrant individuality, promising an adventure for the senses.",
-        "sounds": "Distant bass thumps, muffled crowd chatter, occasional electronic chirps, city traffic hum.",
-        "spatialLayout": "The shop front is relatively narrow, emphasizing its presence on a busy street, with a deep, inviting entrance. The large, colorful mural creates a sense of immersive depth, drawing the eye inwards.",
-        "primary_surfaces": "Saturated, swirling painted facade",
-        "secondary_surfaces": "Ornate patinated brass window frames",
-        "accent_features": "Pulsating neon sign, mirrored door, iridescent window displays",
-        "dominant": "Electric Magenta (facade mural)",
-        "secondary": "Acid Green (accents within mural, signage)",
-        "accent": "Iridescent Teal (window displays), Brass (metalwork)",
-        "ambient": "Vibrant, otherworldly glow",
+        "looks": "The exterior boasts a modern, minimalist facade with sharp geometric lines. A prominent, backlit sign in a bold sans-serif font announces the shop's name. The large display windows are framed with polished chrome, reflecting the vibrant street life of Camden.",
+        "colorsAndLighting": "The primary colors are deep black and reflective silver, creating a high-contrast look. Dynamic LED lighting strips, potentially in electric blue or neon pink, illuminate the storefront and signage, especially vibrant after dusk.",
+        "atmosphere": "The air around the shop feels charged with creative energy and urban pulse. It's a lively and exciting atmosphere, unaffected by extreme weather due to the sheltered storefront, and it emanates a sense of cool confidence.",
+        "materials": "The main materials are smooth, polished metal (chrome and brushed aluminum) and large panes of clear glass. The signage is likely made from illuminated acrylic or metal, with possibly some painted concrete or stone for the base.",
+        "mood": "The shop evokes a feeling of excitement, exclusivity, and daring self-expression. It's a place that inspires confidence and a desire to stand out from the crowd, with a palpable sense of trendsetting.",
+        "sounds": "Street sounds, distant music, chatter, footsteps, occasional car horns.",
+        "spatialLayout": "The storefront is relatively wide, designed to maximize visual impact. The interior space, glimpsed through the windows, suggests a sleek and organized retail environment with ample display areas.",
+        "primary_surfaces": "Smooth glass, polished metal, matte black panels",
+        "secondary_surfaces": "Illuminated acrylic, painted concrete",
+        "accent_features": "Chrome framing, neon LED strips, abstract sculpture",
+        "dominant": "Deep black with high coverage on facade elements",
+        "secondary": "Polished silver/chrome accents on frames and signage",
+        "accent": "Electric blue and neon pink LED lighting, abstract metallic sculpture",
+        "ambient": "Bright and artificial, with vibrant color accents",
         "genre": null,
-        "architectural_tone": "Psychedelic Art Nouveau with a modern, high-gloss finish",
-        "cultural_tone": "Youth culture, alternative fashion enthusiasts, club-goers, artists",
-        "materials_base": "High-gloss painted surfaces, metallic accents",
-        "mood_baseline": "Exhilarating, vibrant, escapist",
-        "palette_bias": "Saturated jewel tones and neons",
-        "soundscape_base": "Urban nightlife, electronic undertones",
+        "architectural_tone": "Modern minimalist with sharp geometric lines, high-contrast color blocking, and integrated LED lighting.",
+        "cultural_tone": "Fashion-forward urban youth and individuals seeking unique, statement club wear.",
+        "materials_base": "Sleek metallics, glass, and synthetic materials",
+        "mood_baseline": "Exciting, edgy, and trendsetting",
+        "palette_bias": "Blacks, silvers, and neon brights",
+        "soundscape_base": "Urban ambient with potential for club music bleed-through",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A trippy club wear shop with a psychedelic aesthetic.",
+      "description": "A cool club wear shop featuring avant-garde fashion and trendy accessories.",
       "navigableElements": [
         {
           "type": "door",
-          "position": "center",
-          "description": "A mirrored, multi-faceted door that reflects the street."
+          "position": "front",
+          "description": "A sleek, black-framed glass door"
         }
       ],
       "dominantElements": [
-        "Kaleidoscopic mural covering the entire facade",
-        "Oversized, glowing neon sign spelling 'LSD'",
-        "Iridescent window displays showcasing avant-garde clothing"
+        "Large, illuminated storefront display",
+        "Bold, geometric signage",
+        "Polished chrome accents"
       ],
       "uniqueIdentifiers": [
-        "Swirling, holographic paint effects",
-        "Art Nouveau-inspired, ornate metalwork around windows",
-        "Subtle, pulsating light patterns embedded in the sidewalk"
+        "Abstract metallic sculpture near entrance",
+        "UV-reactive paint details on facade",
+        "Flashing LED strip lighting along the eaves"
       ],
-      "searchDesc": "Psychedelic club wear shop LSD in Camden, London. Vibrant, trippy facade with neon and mirrors.",
-      "slug": "lsd",
-      "primaryMedia": "media-1764762242305-wz7kgpe4b"
+      "searchDesc": "Avant-garde club wear shop in Camden, London, featuring trendy fashion and accessories.",
+      "slug": "the-cutting-edge",
+      "primaryMedia": "media-1764764039654-nhvqpoiho"
     },
-    "niche-1764762263380-ikwizree0": {
-      "id": "niche-1764762263380-ikwizree0",
+    "niche-1764764060990-t43p79105": {
+      "id": "niche-1764764060990-t43p79105",
       "type": "niche",
-      "name": "interior of LSD",
+      "name": "interior of The Cutting Edge",
       "spaceType": "interior",
       "dna": {
-        "looks": "The scene depicts a sharply rendered, ultra-realistic interior with a distinct off-center one-point perspective. Polished dark terrazzo flooring reflects vibrant overhead lights, while curved, high-gloss walls are adorned with a psychedelic mural in electric magenta and acid green. Intricate Art Nouveau brass detailing frames alcoves and an archway, contributing to a rich, layered visual experience.",
-        "colorsAndLighting": "Dominated by electric magenta and acid green from the mural, contrasted by vibrant teal spilling from an archway and the pulsating neon lights above. Cinematic lighting creates dramatic shadows and a soft ambient glow, enhancing the high contrast and depth of field.",
-        "atmosphere": "The air crackles with an ecstatic anticipation, filled with the sensory overload of urban nightlife. A palpable sense of exhilarating escapism and boundless creativity pervades the space, inviting a journey into fantasy. The atmosphere is charged with vibrant individuality.",
-        "materials": "A modern, high-gloss finish is prominent on the walls and flooring, with polished dark terrazzo and seamless paint. Ornate brass, both sharply defined and patinated, features heavily in detailing, planters, and structural elements. The ceiling is composed of complex, faceted iridescent panels.",
-        "mood": "This space evokes a mood of exhilarating escapism and boundless creativity, promising an adventure for the senses with a playful rebellion against the mundane.",
-        "sounds": "Pulsating bass, echoing chatter, distant synth melodies, ambient hum.",
-        "spatialLayout": "The space features gently curving walls that recede into a visually deep hall, creating a sense of immense depth. The off-center composition is anchored by a focal point in the foreground, leading the eye through midground features to a distant vanishing point.",
-        "primary_surfaces": "High-gloss painted walls, polished dark terrazzo flooring, iridescent faceted ceiling panels.",
-        "secondary_surfaces": "Patinated and polished brass detailing and structural elements, abstract sculpture bases, fabric textures.",
-        "accent_features": "Recessed illuminated panel with psychedelic pattern, ornate brass archway, minimalist dark foliage plant.",
-        "dominant": "Electric Magenta",
-        "secondary": "Acid Green (on mural)",
-        "accent": "Vibrant Teal (archway light spill)",
-        "ambient": "Cool",
+        "looks": "The interior features a polished black concrete floor with geometric electric blue LED patterns leading to a low, angular reception desk. To the right, mannequins display avant-garde clothing bathed in neon pink light, while a dark passage is visible on the left. A tall aluminum pillar with blue LEDs rises in the midground.",
+        "colorsAndLighting": "Deep blacks and polished silvers dominate, punctuated by vibrant electric blue and neon pink LED lighting. Artificial, high-contrast lighting creates a dynamic and edgy ambiance.",
+        "atmosphere": "Charged with creative energy and an urban pulse, this space feels exciting, edgy, and trendsetting. The atmosphere suggests daring self-expression and exclusivity.",
+        "materials": "Predominantly smooth, polished metals like chrome and brushed aluminum, alongside matte black panels and polished black concrete. Accents of glass and illuminated acrylic add to the sleek finish.",
+        "mood": "This shop evokes excitement and exclusivity, inspiring confidence and a desire to stand out with a trendsetting, daring style.",
+        "sounds": "Subtle ambient music, hushed footsteps, distant chatter",
+        "spatialLayout": "The space opens into a wider retail area, characterized by sharp geometric lines and deliberate negative space. The layout is asymmetrical, creating visual interest and guiding the eye.",
+        "primary_surfaces": "Polished black concrete floor, matte black wall panels",
+        "secondary_surfaces": "Brushed aluminum reception desk and pillar, polished chrome stanchions",
+        "accent_features": "Embedded electric blue LED strips, neon pink backlighting, illuminated archway",
+        "dominant": "Deep black with high coverage on facade elements",
+        "secondary": "Polished silver/chrome on structural and furniture elements",
+        "accent": "Electric blue and neon pink LEDs used for dynamic lighting accents",
+        "ambient": "Cool white",
         "genre": null,
-        "architectural_tone": "Psychedelic Art Nouveau with modern high-gloss finish",
-        "cultural_tone": "Youth culture, alternative fashion enthusiasts, club-goers, artists embracing self-expression.",
-        "materials_base": "High-gloss finishes, polished stone, patinated metals, iridescent panels.",
-        "mood_baseline": "Exhilarating escapism and boundless creativity",
-        "palette_bias": "Vibrant, high-contrast electric hues with deep darks",
-        "soundscape_base": "Energetic urban nightlife ambiance",
+        "architectural_tone": "Modern minimalist with sharp geometric lines, high-contrast color blocking, and integrated LED lighting",
+        "cultural_tone": "Fashion-forward urban youth and individuals seeking unique, statement club wear.",
+        "materials_base": "Smooth polished metals, matte black surfaces, polished concrete",
+        "mood_baseline": "Excitement, exclusivity, and daring self-expression",
+        "palette_bias": "Deep black and silver base with vibrant LED color accents",
+        "soundscape_base": null,
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1764762263379-ol3ka8cxt",
-      "description": "The pulsating, high-gloss interior of a psychedelic nightclub, blending Art Nouveau ornamentation with ultra-modern finishes and vibrant, electric colors.",
+      "primaryMedia": "media-1764764060988-30pklgnuc",
+      "description": "The sleek, modern interior of a fashion boutique with minimalist design and striking LED accents.",
       "navigableElements": [
         {
-          "type": "illuminated panel",
-          "position": "bottom left",
-          "description": "Recessed panel with swirling electric magenta and acid green pattern."
+          "type": "reception desk",
+          "position": "center foreground",
+          "description": "Low, angular reception desk with brushed aluminum and matte black panels."
         },
         {
-          "type": "archway",
-          "position": "midground right",
-          "description": "Off-center archway framed with patinated brass, spilling vibrant teal light."
+          "type": "passage entrance",
+          "position": "left midground",
+          "description": "Sleek, dark passage entrance defined by a minimalist, illuminated archway."
         },
         {
-          "type": "walkway",
-          "position": "background far",
-          "description": "Subtly glowing narrow brass walkway leading into the distance."
+          "type": "recessed alcove",
+          "position": "far right background",
+          "description": "Subtle, recessed alcove with a soft internal glow, possibly a fitting room."
         }
       ],
       "dominantElements": [
-        "Polished terrazzo flooring",
-        "High-gloss painted curved walls",
-        "Art Nouveau brass detailing",
-        "Faceted iridescent ceiling",
-        "Recessed illuminated panel",
-        "Illuminated archway",
-        "Brass planter",
-        "Brass walkway"
+        "polished black concrete floor with LED strips",
+        "angular reception desk",
+        "avant-garde clothing display",
+        "faceted brushed aluminum pillar",
+        "mirrored glass wall sections"
       ],
       "uniqueIdentifiers": [
-        "Psychedelic Art Nouveau fusion",
-        "High-gloss finish",
-        "Electric magenta and acid green mural",
-        "Vibrant teal lighting spill",
-        "Iridescent faceted ceiling"
+        "geometric LED floor patterns",
+        "neon pink backlit mannequins",
+        "brushed aluminum pillar with blue LEDs",
+        "mirrored and matte black wall combination"
       ],
-      "searchDesc": "Psychedelic Art Nouveau nightclub interior with electric magenta, acid green, and teal lighting.",
-      "slug": "interior-of-lsd"
+      "searchDesc": "Modern minimalist boutique with black, silver, blue, and pink LEDs.",
+      "slug": "interior-of-the-cutting-edge"
+    },
+    "loc-1764764518991-pd8cxgp42": {
+      "id": "loc-1764764518991-pd8cxgp42",
+      "type": "host",
+      "name": "Xylos",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, arid desert landscape under a clear, bright blue sky.",
+        "colorsAndLighting": "Bright, arid daylight, dominant reddish-orange and creamy-tan, contrasted with brilliant blue sky and planet.",
+        "atmosphere": "Dry, still, hot, with a sense of ancient, alien conditions. The heat of a distant, alien sun.",
+        "materials": "Rocky, sandy terrain, hints of hardened organic compounds.",
+        "mood": "Awe, wonder, alien grandeur, isolation.",
+        "sounds": "Subtle hum of energy, dry wind, quiet.",
+        "spatialLayout": "Vast, open, with geological formations.",
+        "primary_surfaces": "Sand, rock",
+        "secondary_surfaces": "Compacted earth, bio-materials",
+        "accent_features": "Circuit-board patterns on structures, organic forms, distinct planet.",
+        "dominant": "Creamy-tan",
+        "secondary": "Reddish-orange",
+        "accent": "Vibrant blue, golden-orange",
+        "ambient": "Bright, warm alien sun.",
+        "genre": "Sci-Fi Exploration",
+        "architectural_tone": "Organic biomimicry with futuristic technology",
+        "cultural_tone": "Advanced, scholarly, symbiotic with nature",
+        "materials_base": "Polished organic compounds, hardened bio-materials, ancient rock, compacted earth",
+        "mood_baseline": "Awe and wonder, serene power",
+        "palette_bias": "Earth tones, sky blues, warm golds",
+        "soundscape_base": "Subtle ambient energy hums and natural desert sounds",
+        "flora_base": "Gnarled, leafless trees with flat canopies",
+        "fauna_base": null
+      },
+      "description": "A vast, arid desert world under a clear, bright blue sky, dominated by a large ringed planet. The landscape is shaped by harsh sunlight and wind, creating an environment of stark beauty and extreme conditions.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Ringed planet",
+        "Vast desert"
+      ],
+      "uniqueIdentifiers": [
+        "Ringed planet in sky",
+        "Arid desert"
+      ],
+      "searchDesc": "Arid desert world with a prominent ringed planet and clear blue skies.",
+      "slug": "xylos"
+    },
+    "fe56e54c-6d81-4a89-941d-fd294743801e": {
+      "id": "fe56e54c-6d81-4a89-941d-fd294743801e",
+      "type": "region",
+      "name": "The Whispering Canyons",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, arid desert landscape with natural rock formations and sandy terrain.",
+        "colorsAndLighting": "Bright, arid daylight casting sharp shadows. Dominant reddish-orange and dark brown tones with a clear blue sky.",
+        "atmosphere": "Dry and still air, heat shimmering over distant formations. A sense of profound quiet.",
+        "materials": "Weathered and ancient rocks with a rough, sandy texture; compacted dirt paths.",
+        "mood": "Timelessness, alien grandeur, quiet desolation.",
+        "sounds": "Wind whistling through canyons, subtle shifts of sand.",
+        "spatialLayout": "Open, expansive, with dramatic verticality from rock formations.",
+        "primary_surfaces": "Sand and rock",
+        "secondary_surfaces": "Compacted dirt",
+        "accent_features": "Natural erosion patterns, wind-sculpted rock.",
+        "dominant": "Reddish-orange",
+        "secondary": "Dark brown",
+        "accent": "Sky blue",
+        "ambient": "Bright, harsh daylight with sharp shadows.",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": "Ancient rock, compacted earth",
+        "mood_baseline": "Desolation, awe",
+        "palette_bias": "Earth tones, sky blues",
+        "soundscape_base": "Natural desert sounds",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A vast expanse of arid desert characterized by reddish-orange sandy terrain dotted with dark brown rocks. Towering, eroded rock formations and mesas rise dramatically from the desert floor, sculpted by millennia of wind and weather.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Towering rock formations",
+        "Mesas"
+      ],
+      "uniqueIdentifiers": [
+        "Reddish-orange sand",
+        "Dark brown rocks",
+        "Eroded formations"
+      ],
+      "searchDesc": "Arid desert region with towering rock formations and sandy terrain.",
+      "slug": "the-whispering-canyons"
+    },
+    "366b8617-d9a0-4e0f-9be5-8329eeb63a50": {
+      "id": "366b8617-d9a0-4e0f-9be5-8329eeb63a50",
+      "type": "location",
+      "name": "The Lumina Spire",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The Lumina Spire is a colossal organic structure resembling a colossal mushroom or tree, its wide, flat cap adorned with intricate circuit-board patterns and a multitude of blue-paned windows. A towering, multi-tiered, castle-like spire erupts from its center, hinting at advanced functions. The gnarled base, reminiscent of an ancient tree trunk, forms a welcoming arched entrance, grounding the ethereal structure to the alien desert.",
+        "colorsAndLighting": "Bright, arid daylight bathes the scene, casting sharp shadows from the massive structures and rock formations. The creamy-tan of the spire's cap and the reddish-orange of the desert sand dominate, contrasted by the vibrant blue of the windows and the warm golden-orange of the integrated trees. The sky is a brilliant, clear blue, punctuated by a prominent ringed planet.",
+        "atmosphere": "The air is dry and still, carrying the faint scent of sun-baked dust and exotic organic compounds from the spire's structure. A sense of profound quiet pervades, broken only by the subtle hum of internal energy processes from the building. The heat of a distant, alien sun presses down, creating a shimmering haze over the distant rock formations. A feeling of timelessness and alien grandeur hangs heavy in the atmosphere.",
+        "materials": "The main structure appears to be composed of a bio-luminescent, hardened organic material, giving it a smooth yet textured surface resembling polished wood and integrated circuitry. The rocks are weathered and ancient, with a rough, sandy texture, while the paths are compacted dirt. The leafless trees boast smooth, bark-like exteriors and flat, leathery canopies.",
+        "mood": "The Lumina Spire evokes a sense of awe and wonder, a testament to advanced, nature-integrated civilization. It inspires curiosity about its purpose and the beings who inhabit it. There's a feeling of serene power, a blend of ancient wisdom and futuristic innovation, suggesting a place of deep knowledge and sophisticated operation.",
+        "sounds": "Subtle hum, faint wind, distant metallic clicks, organic creaks.",
+        "spatialLayout": "The Lumina Spire is the overwhelming focal point, its immense scale dwarfing the surrounding desert landscape. The building's organic, upward-reaching form creates a sense of verticality, while the flat desert expanse provides a vast, horizontal counterpoint. The presence of the smaller dome and shed suggests a functional complex, with a clear, albeit long, path connecting them.",
+        "primary_surfaces": "Creamy-tan organic cap, reddish-orange sandy terrain, weathered dark brown rocks.",
+        "secondary_surfaces": "Gnarled organic base, dirt path, eroded rock formations.",
+        "accent_features": "Blue window panes, golden-orange tree canopies, circuit-board patterns.",
+        "dominant": "Creamy-tan with extensive coverage.",
+        "secondary": "Reddish-orange sand covering the ground.",
+        "accent": "Vibrant blue in windows and golden-orange on tree canopies.",
+        "ambient": "Bright, warm, slightly hazy daylight.",
+        "genre": null,
+        "architectural_tone": "Organic biomimicry with integrated futuristic technology and castle-like spire elements.",
+        "cultural_tone": "Advanced, scholarly, symbiotic with nature, research-focused.",
+        "materials_base": "Polished organic compounds, hardened bio-materials, ancient rock, compacted earth.",
+        "mood_baseline": "Awe-inspiring, serene, intelligent, ancient.",
+        "palette_bias": "Earth tones, sky blues, warm golds.",
+        "soundscape_base": "Quiet, subtly technological, natural hums.",
+        "flora_base": "Integrated leafless trees.",
+        "fauna_base": "None"
+      },
+      "description": "A massive, organic, futuristic building resembling a mushroom or tree, with a creamy-tan cap covered in circuit-board patterns and blue-paned windows, supported by a gnarled base forming an arched entrance. A multi-tiered, castle-like spire rises from its cap. Integrated leafless trees with golden-orange canopies are part of its structure and float nearby. A smaller dome-shaped building and a rectangular shed are also present.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "base",
+          "description": "A grand arched entrance at the base of the spire."
+        },
+        {
+          "type": "stairs",
+          "position": "archway",
+          "description": "Steps leading up from the archway into the spire."
+        },
+        {
+          "type": "path",
+          "position": "foreground",
+          "description": "A winding dirt path leading to the spire and other structures."
+        }
+      ],
+      "dominantElements": [
+        "Massive organic mushroom/tree-like main building",
+        "Multi-tiered castle-like spire",
+        "Integrated leafless trees with golden-orange canopies",
+        "Vast arid desert landscape",
+        "Dominant ringed planet"
+      ],
+      "uniqueIdentifiers": [
+        "Creamy-tan cap with circuit-board patterns",
+        "Blue-paned windows",
+        "Gnarled tree-trunk base",
+        "Floating leafless trees",
+        "Golden-orange canopies"
+      ],
+      "searchDesc": "Organic futuristic mushroom-tree building with spire, blue windows, golden trees in arid desert.",
+      "slug": "the-lumina-spire",
+      "primaryMedia": "media-1764764538111-4cwxxyyfc"
+    },
+    "niche-1764764574148-dy6lotxg1": {
+      "id": "niche-1764764574148-dy6lotxg1",
+      "type": "niche",
+      "name": "interior of The Lumina Spire",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior features colossal, organically curved walls transitioning from gnarled roots to smooth bio-material, adorned with fossilized tree rings and circuit-board etchings. A central golden-orange arched passage dominates, flanked by a creamy-tan structure, while a vaulted bone-white ceiling lattice with blue crystal strands soars above.  The floor is compacted reddish-orange earth with iridescent flecks and bio-luminescent roots.",
+        "colorsAndLighting": "The dominant color is creamy-tan, contrasted by reddish-orange earth and deep brown wood-like framing. Golden-orange light spills from the main arch, while the ceiling emits a gentle, diffused light from blue crystals. Cinematic lighting creates high contrast and dramatic depth.",
+        "atmosphere": "The air feels dry and still, with a profound quiet broken only by subtle technological and organic hums.  A sense of serene power and ancient wisdom permeates the vast, echoing space, suggesting immense scale and a calm, arid environment.",
+        "materials": "Polished creamy-tan bio-material forms the walls and ceiling lattice, contrasting with compacted reddish-orange earth and smooth, polished wood-like organic material.  The ceiling also incorporates polished bone-white bio-materials and thin strands of luminous blue crystal.",
+        "mood": "Evokes awe and wonder, a blend of ancient wisdom and futuristic innovation, inspiring curiosity and a sense of serene, sophisticated operation.",
+        "sounds": "Profound quiet, subtle technological hums, organic creaks, distant metallic clicks.",
+        "spatialLayout": "A vast, soaring interior space with an estimated height of 30 meters, defined by colossal, curving walls that lead to a prominent central arch. The volume expands upwards and inwards towards a vaulted ceiling.",
+        "primary_surfaces": "Polished creamy-tan organic material, compacted reddish-orange earth, polished bone-white bio-materials.",
+        "secondary_surfaces": "Polished deep brown wood-like organic material, bio-luminescent hardened organic material.",
+        "accent_features": "Faint bio-luminescent blue veins in roots, faint circuit-board etchings, luminous blue crystal strands, glowing holographic displays, shimmering energy tendrils.",
+        "dominant": "Creamy-tan (walls, organic material)",
+        "secondary": "Reddish-orange (flooring)",
+        "accent": "Golden-orange (arch light), luminous blue (crystal strands, root veins)",
+        "ambient": "Warm",
+        "genre": null,
+        "architectural_tone": "Organic biomimicry with integrated futuristic technology and castle-like spire elements",
+        "cultural_tone": "Advanced, scholarly, symbiotic with nature, research-focused",
+        "materials_base": "Polished organic compounds, hardened bio-materials, ancient rock, compacted earth materials",
+        "mood_baseline": "Awe-inspiring, serene, intelligent, ancient",
+        "palette_bias": "Earth tones, sky blues, warm golds",
+        "soundscape_base": "Quiet subtly technological natural hums",
+        "flora_base": "Integrated leafless trees flora",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764764574147-f3afxkp08",
+      "description": "The interior of the Lumina Spire, a colossal organic structure with advanced, nature-integrated technology and a scholarly, awe-inspiring mood.",
+      "navigableElements": [
+        {
+          "type": "channel",
+          "position": "right floor",
+          "description": "Shallow, recessed channel with glowing liquid"
+        },
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "Prominent, centrally located arched passage glowing golden-orange"
+        },
+        {
+          "type": "aperture",
+          "position": "left wall",
+          "description": "Rectangular aperture revealing holographic displays"
+        },
+        {
+          "type": "walkway",
+          "position": "far upper left",
+          "description": "Elevated crystalline walkway"
+        }
+      ],
+      "dominantElements": [
+        "colossal organically curved walls",
+        "vaulted ceiling lattice",
+        "centrally located arched passage"
+      ],
+      "uniqueIdentifiers": [
+        "fossilized tree ring patterns",
+        "integrated circuit-board etchings",
+        "luminous blue crystal strands in ceiling"
+      ],
+      "searchDesc": "Interior of Lumina Spire: organic walls, glowing arch, crystalline ceiling, holographic displays.",
+      "slug": "interior-of-the-lumina-spire"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764762221396-fc07vqep9",
+      "id": "loc-1764764017008-nswqs5dcp",
       "type": "host",
       "children": [
         {
-          "id": "5b18284e-eb70-4f3b-b706-d4b79f87879a",
+          "id": "5a64e82d-4b27-4c3b-8ccd-4c02f34917e9",
           "type": "region",
           "children": [
             {
-              "id": "1ebbb429-104f-4861-a519-c79b10863427",
+              "id": "974689e0-2c58-4369-99fb-5669542ec0cc",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764762263380-ikwizree0",
+                  "id": "niche-1764764060990-t43p79105",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764764518991-pd8cxgp42",
+      "type": "host",
+      "children": [
+        {
+          "id": "fe56e54c-6d81-4a89-941d-fd294743801e",
+          "type": "region",
+          "children": [
+            {
+              "id": "366b8617-d9a0-4e0f-9be5-8329eeb63a50",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764764574148-dy6lotxg1",
                   "type": "niche",
                   "children": []
                 }
@@ -239,6 +488,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764762221396-fc07vqep9"
+    "loc-1764764017008-nswqs5dcp",
+    "loc-1764764518991-pd8cxgp42"
   ]
 }
