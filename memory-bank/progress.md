@@ -25,6 +25,13 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **DNA Schema Refactoring** (Dec 3): Created shared DNA module for DRY code
+  - Created `shared/dnaSchema.ts` as single source of truth
+  - Shared structure schema (form, roofType, scale, orientation, openings, functionalType)
+  - Shared field descriptions (`DNA_SCENE_FIELDS`, `DNA_CASCADING_FIELDS`)
+  - Builder functions: `buildStructureSchemaString()`, `buildDNAFieldsString()`, `buildGuidelines()`
+  - All 3 DNA prompts now use shared module (deepestNodeDNA, parentChainDNA, nodeDNAGeneration)
+  - Future schema changes only need 1 update instead of 3
 - **Interior Generation Improvements** (Dec 3): Fixed interior-exterior consistency issues
   - Added `structure` field to all DNA generation prompts for locations (`deepestNodeDNA.ts`, `parentChainDNA.ts`)
   - Structure field includes: form, roofType, scale, orientation, openings, functionalType

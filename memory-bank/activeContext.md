@@ -2,6 +2,29 @@
 
 ## Recent Changes (2025-12-03)
 
+### DNA Schema Shared Module Refactoring (Dec 3, 2025)
+- **Problem**: Three DNA generation prompts (`deepestNodeDNA.ts`, `parentChainDNA.ts`, `nodeDNAGeneration.ts`) had duplicate code for structure schema, field descriptions, and guidelines. When the `structure` field was added, all 3 files had to be updated manually.
+- **Solution**: Created `shared/dnaSchema.ts` as single source of truth
+- **Files Created**:
+  - `packages/backend/src/engine/generation/prompts/shared/dnaSchema.ts`
+- **Files Modified**:
+  - `deepestNodeDNA.ts` - Now uses `buildDNAFieldsString()` for DNA fields
+  - `parentChainDNA.ts` - Now uses `buildStructureSchemaString()` for structure schema
+  - `nodeDNAGeneration.ts` - Now uses `buildStructureSchemaString()` for structure schema
+  - `shared/index.ts` - Added exports for all new dnaSchema functions
+- **Shared Module Exports**:
+  - `STRUCTURE_OPTIONS` - Structure schema option values (form, roofType, scale, etc.)
+  - `buildStructureSchemaString()` - Builds the structure JSON schema
+  - `buildStructureField()` - Returns structure field for specific node types
+  - `DNA_SCENE_FIELDS` & `DNA_CASCADING_FIELDS` - Field descriptions
+  - `buildDNAFieldsString()` - Builds complete DNA fields section
+  - `DNA_GUIDELINES` & `buildGuidelines()` - Shared guidelines text
+- **Benefits**:
+  - Single source of truth for DNA schema
+  - Future changes (like adding new fields) only need one update
+  - Consistent field descriptions across all prompts
+  - Easier to maintain and test
+
 ### Interior Generation Improvements (Dec 3, 2025)
 - **Problem 1**: Interior niches didn't match parent location's `structure.form` (rectangular building → circular interior)
 - **Problem 2**: Wooden houses were getting stone interior walls (LLM used foundation material instead of wall material)

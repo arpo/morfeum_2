@@ -377,6 +377,54 @@ Routes are thin layers that:
 
 ## DNA System Architecture
 
+### Shared DNA Schema Module
+Location: `packages/backend/src/engine/generation/prompts/shared/dnaSchema.ts`
+
+**Purpose**: Single source of truth for DNA structure schema, field descriptions, and prompt builders used across all DNA generation prompts.
+
+**Exports**:
+```typescript
+// Structure schema options
+export const STRUCTURE_OPTIONS = {
+  form: ['rectangular', 'round', 'cylindrical', ...],
+  roofType: ['domed', 'flat', 'vaulted', ...],
+  scale: ['small', 'medium', 'large'],
+  orientation: ['vertical', 'horizontal', 'wide', 'cubic'],
+  openings: ['large-glass', 'arched-windows', ...],
+  functionalType: ['residential', 'commercial', ...]
+};
+
+// Builder functions
+export function buildStructureSchemaString(): string;
+export function buildStructureField(nodeType: string): string;
+export function buildDNAFieldsString(options: DNATemplateOptions): string;
+export function buildGuidelines(includeStructure?: boolean): string;
+
+// Field descriptions
+export const DNA_SCENE_FIELDS = { looks, colorsAndLighting, atmosphere, ... };
+export const DNA_CASCADING_FIELDS = { genre, architectural_tone, cultural_tone, ... };
+export const DNA_GUIDELINES = { sceneVsCascading, genreRule, outputFormat, structureRule };
+```
+
+**Usage Pattern**:
+```typescript
+// In DNA prompt files (deepestNodeDNA.ts, parentChainDNA.ts, nodeDNAGeneration.ts)
+import { buildStructureSchemaString, buildDNAFieldsString } from '../shared/dnaSchema';
+
+const dnaFields = buildDNAFieldsString({
+  includeStructure: nodeType === 'location',
+  genreHandling: 'conditional',
+  descLength: 'short',
+  nodeType
+});
+```
+
+**Benefits**:
+- Single source of truth for DNA schema
+- Future changes need only 1 update instead of 3
+- Consistent field descriptions across all prompts
+- Easier to maintain and test
+
 ### Core Concept
 Separate structures for storage vs LLM usage:
 
