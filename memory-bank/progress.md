@@ -25,6 +25,12 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Image Generation Optimization** (Dec 3): Two-step LLM approach for rich exterior images
+  - Implemented LLM-synthesized FLUX prompts with composition instructions
+  - Added `image_prompt_generation` pipeline step
+  - Optimized `deepestNodeDNA.ts` prompt (150 → 90 lines, 50% faster)
+  - Fixed progress bar "backwards" issue in parallel stages
+  - Performance: DNA generation 10s → 5.18s, total pipeline 23s → 20.72s
 - **Slash Commands System** (Dec 2): Full slash command implementation with contextual filtering
   - Commands filtered based on current node type (host shows NEW_HOST/NEW_REGION, region shows NEW_LOCATION, etc.)
   - SlashCommandInput component with dropdown autocomplete and descriptions
@@ -73,6 +79,10 @@
 - **Separation Compliance**: Strict markup/logic/style separation ✅
 
 ### Recent Achievements
+- **Image Generation Optimization** (Dec 3, 2025): Two-step approach for quality exterior images
+  - Prompt optimization: 50% faster DNA generation (10s → 5.18s)
+  - Total pipeline: 3s faster (23s → 20.72s)
+  - Added proper composition instructions for architectural accuracy
 - **Major Refactoring Complete** (Nov 30, 2025): 12 new focused modules created
 - **WorldViewRenderer**: 675 → 207 lines (69% reduction)
 - **App Component**: 416 → 146 lines (65% reduction)
@@ -81,10 +91,11 @@
 - **Image Analysis**: Full-screen drag and drop for seamless image description (Dec 2)
 
 ### Active Development
-- **Current Focus**: Monitoring refactored module performance
-- **Next Priority**: Continue applying separation patterns to remaining components
+- **Current Focus**: Image quality and pipeline performance optimization
+- **Recent Win**: Two-step image generation produces rich, DNA-accurate exterior images
+- **Next Priority**: Monitor prompt optimizations and continue quality improvements
 - **Architecture**: Following strict clinerules guidelines for all new code
-- **UX Improvements**: Focus on seamless input methods like image drag and drop
+- **Performance**: Pipeline now runs at 20.72s (down from ~23s)
 
 ## Known Issues 🐛
 

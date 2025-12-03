@@ -1,5 +1,74 @@
 # Active Context
 
+## Recent Changes (2025-12-03)
+
+### Image Generation Optimization (Dec 3, 2025)
+- **Problem**: Initial world tree exterior images looked generic and didn't match DNA or interior images
+- **Root Cause**: First-step image prompt was too simple - just concatenating DNA fields without proper synthesis
+- **Solution**: Implemented two-step LLM approach (matching the successful interior image generation)
+  
+  **Two-Step Process:**
+  1. **Step 1**: LLM synthesizes rich FLUX description from DNA + composition instructions
+  2. **Step 2**: FLUX generates image from LLM-crafted description
+  
+  **Before (1-step - Generic):**
+  ```
+  DNA → Concatenate fields → FLUX image
+  ```
+  
+  **After (2-step - Rich):**
+  ```
+  DNA + Composition Instructions → LLM → Rich FLUX description → FLUX image
+  ```
+
+- **Implementation**:
+  - Created `worldTreeImagePromptContext()` in `worldTreeImagePrompt.ts`
+  - Added comprehensive composition instructions:
+    - Camera position rules (elevated 25-30° perspective)
+    - ASYMMETRIC composition requirements
+    - Facade & architectural details
+    - Foreground/Midground/Background layers
+    - Lighting & atmosphere guidance
+  - Updated `nodeCreationPipeline.ts` to use two-step generation
+  - Added new pipeline step: `image_prompt_generation` (between DNA and image)
+
+- **Prompt Optimization**:
+  - Reduced `deepestNodeDNA.ts` from ~150 lines to ~90 lines
+  - Condensed type instructions (8-10 lines → 1 line each)
+  - Compact parent context (arrow notation: `host: London → region: Camden`)
+  - Removed verbose JSON field comments
+  - Reduced guidelines from 5 sections to 3 bullet rules
+  
+- **Progress Bar Fix**:
+  - Fixed "backwards progress" issue in parallel stages
+  - Parent DNA API call starts during image generation (for speed)
+  - But progress event only emits AFTER image completes
+  - Ensures progress bar always moves forward
+
+- **Performance Results**:
+  - Deepest DNA Generation: 10s → 5.18s (50% faster!)
+  - Total Pipeline: ~23s → ~20.72s
+  - All pipeline steps now match actual timings
+
+- **Pipeline Configuration Updates**:
+  ```typescript
+  worldTree: [
+    { id: 'hierarchy_classification', duration: 2000 },   // 1.81s actual
+    { id: 'deepest_dna_generation', duration: 6000 },    // 5.18s actual (was 10000!)
+    { id: 'image_prompt_generation', duration: 3000 },   // 2.62s actual (new step)
+    { id: 'image_generation', duration: 2500 },          // 2.13s actual
+    { id: 'parent_dna_generation', duration: 9000 },     // 8.98s actual
+    { id: 'tree_building', duration: 500 }               // 0.00s actual
+  ]
+  ```
+
+- **Files Modified**:
+  - `packages/backend/src/engine/generation/prompts/locations/worldTreeImagePrompt.ts` - Added context prompt function
+  - `packages/backend/src/engine/generation/prompts/locations/deepestNodeDNA.ts` - Optimized for speed
+  - `packages/backend/src/engine/pipelines/nodeCreationPipeline.ts` - Two-step image generation
+  - `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - Updated timings & added step
+  - `packages/backend/src/engine/generation/prompts/locations/index.ts` - Added exports
+
 ## Recent Changes (2025-12-02)
 
 ### Slash Commands System & CREATE_IMAGE Implementation (Dec 2, 2025)

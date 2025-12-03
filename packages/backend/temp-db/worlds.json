@@ -1,262 +1,233 @@
 {
   "nodes": {
-    "loc-1764761851885-xsmubrcur": {
-      "id": "loc-1764761851885-xsmubrcur",
+    "loc-1764762221396-fc07vqep9": {
+      "id": "loc-1764762221396-fc07vqep9",
       "type": "host",
       "name": "London",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A grand and varied visual tapestry, ranging from historic grandeur and Victorian aesthetics to sleek, contemporary skyscrapers and modern public spaces. The city presents a sophisticated and multifaceted visual identity.",
-        "colorsAndLighting": "A complex interplay of natural light, often dramatic with changing weather, and a vast array of artificial lighting that ranges from warm, traditional streetlights to the cool, sharp illumination of modern districts. Dominant colors often lean towards muted, sophisticated urban palettes, but are punctuated by vibrant displays.",
-        "atmosphere": "Sophisticated, dynamic, and cosmopolitan. A constant ebb and flow of people and activity, with an underlying sense of historical weight and forward momentum. The air carries a mixture of sophistication and vibrant, global energy.",
-        "materials": "A rich palette of classic materials like stone, brick, and wood, combined with extensive use of glass, steel, and concrete in its modern constructions. A sense of quality and durability is prevalent.",
-        "mood": "Ambitious, cultured, and subtly dramatic. It evokes a sense of vast possibility, intellectualism, and historical significance.",
-        "sounds": "A symphony of urban life: the rumble of the Tube, distant sirens, the murmur of countless languages, street performers, and the general ambient noise of a global city.",
-        "spatialLayout": "Expansive and layered, with distinct neighborhoods, grand avenues, intricate historical cores, and sprawling modern developments. A sense of ordered chaos.",
-        "primary_surfaces": [
-          "historic stone",
-          "red brick",
-          "modern glass facades"
-        ],
-        "secondary_surfaces": [
-          "steel structures",
-          "weathered concrete",
-          "polished granite"
-        ],
-        "accent_features": [
-          "ornate stonework",
-          "iconic statues",
-          "neon signage in entertainment districts"
-        ],
-        "dominant": "Muted urban grays and earthy browns, often reflecting the prevalent stone and brick.",
-        "secondary": "A wide range of secondary colors appear in signage, cultural displays, and parkland.",
-        "accent": "Pops of color come from diverse sources: red buses, black cabs, vibrant market goods, and the lighting of entertainment areas.",
-        "ambient": "Generally subdued and sophisticated, with pockets of intense color and light.",
-        "genre": "Urban Realism / Modern Metropolis",
-        "architectural_tone": "A grand fusion of historic and contemporary styles, from Victorian and Edwardian to Brutalist and High-Tech Modernism. Characterized by scale, material diversity, and often, a sense of imposing or elegant design.",
-        "cultural_tone": "Cosmopolitan, trend-setting, and deeply historic. A fusion of global influences with a distinct British identity, valuing both tradition and innovation.",
-        "materials_base": "A sophisticated blend of classic building materials and modern industrial elements, emphasizing quality and durability.",
-        "mood_baseline": "Ambitious, cultured, and grand, with an underlying energy of constant evolution.",
-        "palette_bias": "Favors sophisticated, muted tones as a base, but readily incorporates vibrant accents through its diverse cultural and commercial activities.",
-        "soundscape_base": "A complex, layered urban soundscape that is a hallmark of a major global city.",
-        "flora_base": "Well-maintained parks and gardens featuring classic British flora, alongside street trees.",
-        "fauna_base": "Common urban wildlife such as pigeons, squirrels, and various bird species."
+        "looks": "A complex tapestry of architectural styles, from historic grandeur to sleek modernism. The city is characterized by diverse streetscapes, famous landmarks, and a constant ebb and flow of urban life.",
+        "colorsAndLighting": "A dynamic interplay of natural light reflecting off varied surfaces and the artificial glow of city lights. Color palettes range from muted historical tones to vibrant contemporary displays.",
+        "atmosphere": "Diverse and ever-changing, from the stately calm of historical areas to the frenetic energy of commercial centers. A pervasive sense of history and global influence.",
+        "materials": "A wide array: traditional brick and stone, polished steel and glass, concrete, and a myriad of materials used in shopfronts and public spaces.",
+        "mood": "A blend of historical gravitas, contemporary dynamism, and individualistic spirit. The city offers a sense of both belonging and anonymity.",
+        "sounds": "A complex symphony of traffic, public transport, diverse languages, distant sirens, and the murmur of millions. Specific districts have their own unique sound profiles.",
+        "spatialLayout": "Varies dramatically by district, from grand boulevards and intricate historic cores to dense commercial hubs and sprawling residential areas.",
+        "primary_surfaces": "Brick, stone, concrete, glass, asphalt.",
+        "secondary_surfaces": "Metal cladding, painted surfaces, wood accents, historical decorative elements.",
+        "accent_features": "Iconic statues, elaborate bridges, historical detailing on buildings, modern art installations, public clocks.",
+        "dominant": "Grays and muted tones of stone and brick, contrasted with the blues of the sky and the greens of parks.",
+        "secondary": "Rich reds of historic buildings and transport, alongside the metallic sheens of modern architecture.",
+        "accent": "The diverse and often bold colors of signage, advertisements, and diverse cultural expressions.",
+        "ambient": "Often overcast or diffuse daylight, with vibrant, varied artificial lighting dominating the night.",
+        "genre": "Urban Exploration / Contemporary Reality",
+        "architectural_tone": "A vast eclecticism, from Gothic and Victorian to Brutalist and Post-modernist. A blend of historical preservation and modern development.",
+        "cultural_tone": "Multicultural, historical, trend-setting, individualistic, global.",
+        "materials_base": "A wide range of practical, historical, and modern materials reflecting diverse urban development.",
+        "mood_baseline": "A sense of history intertwined with constant innovation, offering both familiarity and novelty.",
+        "palette_bias": "A broad palette, from muted historical tones to the vibrant, diverse colors of global cultures and modern design.",
+        "soundscape_base": "A constant, layered urban hum punctuated by distinct sounds of transport and human activity.",
+        "flora_base": "Primarily manicured city parks, street trees, and urban vegetation.",
+        "fauna_base": "Urban wildlife: pigeons, foxes, various birds, small mammals."
       },
-      "description": "A globally iconic metropolis, blending centuries of history with cutting-edge modernity. It's a city of diverse cultures, iconic landmarks, and a constant thrum of innovation and tradition.",
-      "navigableElements": [
-        "historic districts",
-        "modern business centers",
-        "parks",
-        "river Thames"
-      ],
+      "description": "A sprawling global metropolis, a melting pot of history, culture, and modernity. London is a city of contrasts, where ancient traditions meet cutting-edge innovation, and diverse neighborhoods offer unique experiences.",
+      "navigableElements": [],
       "dominantElements": [
-        "iconic architecture",
-        "cultural institutions",
-        "transportation hubs"
+        "The Shard",
+        "Houses of Parliament",
+        "Tower Bridge"
       ],
       "uniqueIdentifiers": [
-        "distinctive boroughs",
-        "underground railway system",
-        "royal heritage"
+        "Red double-decker buses",
+        "Iconic black cabs",
+        "The Tube"
       ],
-      "searchDesc": "Experience the grandeur of London, a city of historic sites, vibrant culture, and modern marvels.",
+      "searchDesc": "Discover London, a vast and historic city brimming with culture, iconic landmarks, and endless urban exploration.",
       "slug": "london"
     },
-    "a82bc8ee-b2fd-445f-b8a6-1bb2a5e17f67": {
-      "id": "a82bc8ee-b2fd-445f-b8a6-1bb2a5e17f67",
+    "5b18284e-eb70-4f3b-b706-d4b79f87879a": {
+      "id": "5b18284e-eb70-4f3b-b706-d4b79f87879a",
       "type": "region",
       "name": "Camden",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A visually stimulating mix of gritty urban textures, bold street art, and eclectic market displays. Colors are often saturated and varied, with a strong presence of contrasting elements.",
-        "colorsAndLighting": "Dynamic and often chaotic. Natural daylight is often broken by the shadows of narrow streets and the bright, artificial lights of market stalls and shopfronts. Colors are a riot of market hues, graffiti, and neon.",
-        "atmosphere": "Energetic, bustling, and slightly rebellious. A constant hum of activity, with sounds of street performers, market chatter, and distant music.",
-        "materials": "A blend of raw urban materials like brick, concrete, and metal, juxtaposed with fabrics, plastics, and repurposed items found in market stalls. Weathered textures are common.",
-        "mood": "Creative, rebellious, and independent. It evokes a sense of freedom and self-expression, with an undercurrent of edgy cool.",
-        "sounds": "A rich tapestry of urban sound: lively market chatter, buskers, diverse music genres spilling from venues, and the general hum of a busy metropolis.",
-        "spatialLayout": "Dense and labyrinthine in parts, with winding alleys and open market squares. A strong sense of organic growth and layered complexity.",
-        "primary_surfaces": [
-          "brick",
-          "concrete",
-          "weathered wood"
-        ],
-        "secondary_surfaces": [
-          "metal scaffolding",
-          "canvas awnings",
-          "graffiti"
-        ],
-        "accent_features": [
-          "vibrant street art",
-          "quirky signage",
-          "market decorations"
-        ],
-        "dominant": "Varies, but often includes earthy tones and strong primaries from street art and market goods.",
-        "secondary": "Grays and muted urban tones providing a backdrop.",
-        "accent": "Bright, saturated colors from street art, fashion, and market displays.",
-        "ambient": "Variable, often a mix of natural light and colorful artificial illumination from stalls and signage.",
+        "looks": "A chaotic yet captivating blend of historical architecture, sprawling markets, and vibrant street art. Expect eclectic storefronts, colorful murals, and a constant flow of people.",
+        "colorsAndLighting": "Diverse and dynamic. Sunlight filters through market stalls and canals, while neon signs and diverse shop lighting create pockets of intense color and shadow after dark.",
+        "atmosphere": "Energetic, bohemian, and slightly gritty. The air buzzes with music, chatter, and the aroma of global street food, fostering a sense of free expression.",
+        "materials": "A mix of weathered brick, graffiti-covered metal, repurposed wood, and diverse shop facades. Think rough textures and bold finishes.",
+        "mood": "Rebellious, creative, and individualistic. A sense of freedom and self-expression permeates the district, encouraging exploration and discovery.",
+        "sounds": "A cacophony of street performers, market chatter, diverse music genres spilling from shops, and the distant hum of London traffic.",
+        "spatialLayout": "Dense and maze-like in market areas, with wider thoroughfares and canal paths. Numerous small, independent shops are packed together.",
+        "primary_surfaces": "Brickwork, painted facades, weathered wood, corrugated metal.",
+        "secondary_surfaces": "Graffiti, street art, tiled roofs, metal shop fronts.",
+        "accent_features": "Ornate lamp posts, quirky signage, unique sculptures, elaborate market stall decorations, vibrant murals.",
+        "dominant": "Earthy browns and grays of brickwork, overlaid with the bright, saturated colors of street art and signage.",
+        "secondary": "Deep reds and blues often found in older architectural elements and signage.",
+        "accent": "Pops of electric colors from neon signs, graffiti, and eclectic shop displays.",
+        "ambient": "Varied, from bright daylight in open market spaces to moody, dimly lit alleys and intensely lit shop fronts.",
         "genre": null,
-        "architectural_tone": "Eclectic urban vernacular with strong bohemian and street-art influences. Not rigidly defined, but a blend of functional spaces adorned with creative expression.",
-        "cultural_tone": "Alternative, fashion-forward, and counter-cultural. A melting pot of subcultures and artistic expression.",
-        "materials_base": "Raw urban materials layered with found objects and brightly colored fabrics.",
-        "mood_baseline": "Energetic, slightly chaotic, and independently spirited.",
-        "palette_bias": "High contrast, with a strong tendency towards vibrant, saturated colors appearing against muted urban backdrops.",
-        "soundscape_base": "Dynamic and layered, with a strong emphasis on human activity and diverse music.",
+        "architectural_tone": "Eclectic Victorian Gothic mixed with utilitarian market structures and modern street art.",
+        "cultural_tone": "Alternative, bohemian, youth culture, subcultures, artistic expression.",
+        "materials_base": "A mix of raw, weathered, and repurposed materials with bold, expressive finishes.",
+        "mood_baseline": "Energetic, rebellious, and creatively driven.",
+        "palette_bias": "Bold, clashing colors drawn from street art and diverse global influences.",
+        "soundscape_base": "A vibrant, multi-layered soundscape of human activity and diverse music.",
         "flora_base": null,
         "fauna_base": null
       },
-      "description": "A vibrant and eclectic district in London, renowned for its bustling markets, alternative culture, and a rich history of music and art. It pulsates with a bohemian energy and a strong sense of individuality.",
-      "navigableElements": [
-        "markets",
-        "alleys",
-        "performance venues"
-      ],
+      "description": "A vibrant and eclectic district known for its unique markets, alternative subcultures, and buzzing street life. Camden pulsates with a creative energy, drawing in artists, musicians, and trendsetters.",
+      "navigableElements": [],
       "dominantElements": [
-        "street art",
-        "independent shops",
-        "market stalls"
+        "Camden Market",
+        "Stables Market",
+        "Camden Lock"
       ],
       "uniqueIdentifiers": [
-        "graffiti-covered walls",
-        "diverse street food",
-        "live music posters"
+        "Street art murals",
+        "Gothic architecture",
+        "Canal towpath"
       ],
-      "searchDesc": "Explore Camden's bohemian markets, vibrant street art, and alternative music scene.",
+      "searchDesc": "Explore Camden, London's hub for alternative culture, vibrant markets, and eclectic street style.",
       "slug": "camden"
     },
-    "59f51f86-f554-4141-a19b-33a24411e010": {
-      "id": "59f51f86-f554-4141-a19b-33a24411e010",
+    "1ebbb429-104f-4861-a519-c79b10863427": {
+      "id": "1ebbb429-104f-4861-a519-c79b10863427",
       "type": "location",
-      "name": "The Style Syndicate",
+      "name": "LSD",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The storefront is a contemporary, sleek design with a large glass facade that wraps around the corner. It features a slightly cantilevered upper level, giving it a modern, edgy silhouette. The entrance is framed by polished chrome, drawing the eye inwards.",
-        "colorsAndLighting": "The primary colors are deep charcoal and electric blue, contrasted by neon pink signage and the vibrant, colorful clothing displayed within. Lighting is predominantly bright and artificial, with spotlights highlighting the window displays and a warm, inviting glow from the interior.",
-        "atmosphere": "The air is electric and buzzy, with a palpable sense of urban cool. It feels perpetually like a Friday night, with an undercurrent of excitement and possibility. The street is usually bustling, with the sounds of distant music and chatter filtering in.",
-        "materials": "The facade primarily consists of large, seamless panes of tempered glass and brushed aluminum or polished chrome accents. The signage is made of illuminated acrylic or neon.",
-        "mood": "Confident, alluring, and playfully provocative. It evokes a sense of belonging to a fashionable, forward-thinking crowd, promising a night of unforgettable style and self-expression.",
-        "sounds": "Upbeat electronic music, street chatter, distant sirens, footsteps on pavement.",
-        "spatialLayout": "The storefront is relatively wide and shallow, with the main display area visible from the street. The entrance is centrally located, leading directly into the retail space.",
-        "primary_surfaces": "Glossy glass, polished metal, matte painted panels",
-        "secondary_surfaces": "Illuminated acrylic, brushed aluminum",
-        "accent_features": "Neon signage, dynamic mannequin poses, abstract sculptural elements",
-        "dominant": "Deep charcoal with large coverage on facade panels",
-        "secondary": "Electric blue accents around signage and window frames",
-        "accent": "Neon pink signage, pops of vibrant clothing colors in windows",
-        "ambient": "Bright, artificial, spotlighting",
+        "looks": "The exterior of LSD is a dazzling spectacle, dominated by a swirling, all-encompassing mural of psychedelic patterns. Ornate, Art Nouveau-inspired metalwork frames the iridescent window displays, which are alive with changing light. The entrance is a faceted mirror door, reflecting the bustling London street in a fragmented, dreamlike manner.",
+        "colorsAndLighting": "A riot of saturated, electric colors dominates, with vibrant fuchsias, electric blues, and acid greens clashing harmoniously. The primary light source is a colossal, pulsating neon sign, casting an otherworldly glow, complemented by subtle, embedded sidewalk lights that mimic starlight.",
+        "atmosphere": "The air crackles with an almost palpable energy, hinting at the vibrant nightlife and creative spirit of Camden. A faint, sweet scent, perhaps from nearby incense or air fresheners, mingles with the city's ambient perfume. The scene feels perpetually caught between twilight and dawn, imbued with a sense of ecstatic anticipation.",
+        "materials": "The facade is primarily rendered in high-gloss, weather-resistant paint with holographic and iridescent finishes. The window frames are a dark, patinated brass with intricate detailing, contrasting with the smooth, reflective surfaces of the mirrored door.",
+        "mood": "The mood is one of exhilarating escapism and boundless creativity, inviting passersby into a world of fantasy and self-expression. It evokes a feeling of playful rebellion and vibrant individuality, promising an adventure for the senses.",
+        "sounds": "Distant bass thumps, muffled crowd chatter, occasional electronic chirps, city traffic hum.",
+        "spatialLayout": "The shop front is relatively narrow, emphasizing its presence on a busy street, with a deep, inviting entrance. The large, colorful mural creates a sense of immersive depth, drawing the eye inwards.",
+        "primary_surfaces": "Saturated, swirling painted facade",
+        "secondary_surfaces": "Ornate patinated brass window frames",
+        "accent_features": "Pulsating neon sign, mirrored door, iridescent window displays",
+        "dominant": "Electric Magenta (facade mural)",
+        "secondary": "Acid Green (accents within mural, signage)",
+        "accent": "Iridescent Teal (window displays), Brass (metalwork)",
+        "ambient": "Vibrant, otherworldly glow",
         "genre": null,
-        "architectural_tone": "Modern commercial with minimalist clean lines, sharp angles, and extensive use of glass and metal.",
-        "cultural_tone": "Young, fashion-conscious urbanites seeking cutting-edge club wear and statement pieces.",
-        "materials_base": "Sleek, contemporary, high-sheen",
-        "mood_baseline": "Excited, glamorous, edgy",
-        "palette_bias": "Cool tones with high-contrast bright accents",
-        "soundscape_base": "Urban nightlife, electronic beats",
+        "architectural_tone": "Psychedelic Art Nouveau with a modern, high-gloss finish",
+        "cultural_tone": "Youth culture, alternative fashion enthusiasts, club-goers, artists",
+        "materials_base": "High-gloss painted surfaces, metallic accents",
+        "mood_baseline": "Exhilarating, vibrant, escapist",
+        "palette_bias": "Saturated jewel tones and neons",
+        "soundscape_base": "Urban nightlife, electronic undertones",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A cool club wear store, with trendy mannequins and vibrant window displays.",
+      "description": "A trippy club wear shop with a psychedelic aesthetic.",
       "navigableElements": [
         {
           "type": "door",
           "position": "center",
-          "description": "double glass doors"
+          "description": "A mirrored, multi-faceted door that reflects the street."
         }
       ],
       "dominantElements": [
-        "boldly lit window displays",
-        "stylized mannequins",
-        "a striking storefront facade"
+        "Kaleidoscopic mural covering the entire facade",
+        "Oversized, glowing neon sign spelling 'LSD'",
+        "Iridescent window displays showcasing avant-garde clothing"
       ],
       "uniqueIdentifiers": [
-        "fluorescent pink signage",
-        "a polished chrome awning",
-        "abstract art installation on the facade"
+        "Swirling, holographic paint effects",
+        "Art Nouveau-inspired, ornate metalwork around windows",
+        "Subtle, pulsating light patterns embedded in the sidewalk"
       ],
-      "searchDesc": "Trendy club wear store in Camden, London with vibrant window displays and stylized mannequins.",
-      "slug": "the-style-syndicate",
-      "primaryMedia": "media-1764761872603-tbbfw71ck"
+      "searchDesc": "Psychedelic club wear shop LSD in Camden, London. Vibrant, trippy facade with neon and mirrors.",
+      "slug": "lsd",
+      "primaryMedia": "media-1764762242305-wz7kgpe4b"
     },
-    "niche-1764761897948-3suc9jbxt": {
-      "id": "niche-1764761897948-3suc9jbxt",
+    "niche-1764762263380-ikwizree0": {
+      "id": "niche-1764762263380-ikwizree0",
       "type": "niche",
-      "name": "interior of The Style Syndicate",
+      "name": "interior of LSD",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior features a polished charcoal concrete floor with subtle electric blue LED strip lighting forming geometric patterns. Matte charcoal walls have sharp, angular recessions. In the midground, a recessed doorway on the right glows with soft neon pink light, framed by polished chrome. Abstract chrome sculptures are strategically placed. The background reveals a soaring, faceted ceiling of interlocking brushed aluminum panels illuminated with an electric blue glow.",
-        "colorsAndLighting": "Deep charcoal dominates the surfaces, accented by electric blue LEDs in the floor and ceiling, and a vibrant neon pink at the doorway. Dramatic, sharp lighting highlights the textures and forms.",
-        "atmosphere": "The air feels cool and refined, with a sense of polished sophistication. The lighting creates a futuristic and alluring ambiance, drawing the viewer deeper into the space.",
-        "materials": "Polished charcoal concrete, matte charcoal walls, brushed aluminum panels and display pedestal, and polished chrome accents define the primary materials, all presenting a sleek and modern finish.",
-        "mood": "Confident and alluring, this space exudes an edgy, modern, and urban sophistication, inviting exploration and indulgence.",
-        "sounds": "Subtle electronic hum, distant whispers, soft ambient music.",
-        "spatialLayout": "The space utilizes an off-center one-point perspective with an ultra-wide lens, creating a sense of depth. Geometric patterns on the floor lead inward towards a high ceiling (approx. 12 meters).",
-        "primary_surfaces": "Polished charcoal concrete floor, matte charcoal walls, brushed aluminum ceiling panels.",
-        "secondary_surfaces": "Polished chrome doorway frame.",
-        "accent_features": "Electric blue LED strip lighting, neon pink illuminated doorway, avant-garde jewelry on display, abstract chrome sculptures.",
-        "dominant": "Deep charcoal (walls, floor, ceiling structure)",
-        "secondary": "Electric blue (LED lighting, ceiling illumination)",
-        "accent": "Neon pink (doorway illumination), polished chrome (doorway frame)",
+        "looks": "The scene depicts a sharply rendered, ultra-realistic interior with a distinct off-center one-point perspective. Polished dark terrazzo flooring reflects vibrant overhead lights, while curved, high-gloss walls are adorned with a psychedelic mural in electric magenta and acid green. Intricate Art Nouveau brass detailing frames alcoves and an archway, contributing to a rich, layered visual experience.",
+        "colorsAndLighting": "Dominated by electric magenta and acid green from the mural, contrasted by vibrant teal spilling from an archway and the pulsating neon lights above. Cinematic lighting creates dramatic shadows and a soft ambient glow, enhancing the high contrast and depth of field.",
+        "atmosphere": "The air crackles with an ecstatic anticipation, filled with the sensory overload of urban nightlife. A palpable sense of exhilarating escapism and boundless creativity pervades the space, inviting a journey into fantasy. The atmosphere is charged with vibrant individuality.",
+        "materials": "A modern, high-gloss finish is prominent on the walls and flooring, with polished dark terrazzo and seamless paint. Ornate brass, both sharply defined and patinated, features heavily in detailing, planters, and structural elements. The ceiling is composed of complex, faceted iridescent panels.",
+        "mood": "This space evokes a mood of exhilarating escapism and boundless creativity, promising an adventure for the senses with a playful rebellion against the mundane.",
+        "sounds": "Pulsating bass, echoing chatter, distant synth melodies, ambient hum.",
+        "spatialLayout": "The space features gently curving walls that recede into a visually deep hall, creating a sense of immense depth. The off-center composition is anchored by a focal point in the foreground, leading the eye through midground features to a distant vanishing point.",
+        "primary_surfaces": "High-gloss painted walls, polished dark terrazzo flooring, iridescent faceted ceiling panels.",
+        "secondary_surfaces": "Patinated and polished brass detailing and structural elements, abstract sculpture bases, fabric textures.",
+        "accent_features": "Recessed illuminated panel with psychedelic pattern, ornate brass archway, minimalist dark foliage plant.",
+        "dominant": "Electric Magenta",
+        "secondary": "Acid Green (on mural)",
+        "accent": "Vibrant Teal (archway light spill)",
         "ambient": "Cool",
         "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": null,
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": null,
-        "soundscape_base": null,
+        "architectural_tone": "Psychedelic Art Nouveau with modern high-gloss finish",
+        "cultural_tone": "Youth culture, alternative fashion enthusiasts, club-goers, artists embracing self-expression.",
+        "materials_base": "High-gloss finishes, polished stone, patinated metals, iridescent panels.",
+        "mood_baseline": "Exhilarating escapism and boundless creativity",
+        "palette_bias": "Vibrant, high-contrast electric hues with deep darks",
+        "soundscape_base": "Energetic urban nightlife ambiance",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1764761897947-y7v9j312c",
-      "description": "A hyperrealistic, architecturally photographic view of a high-fashion boutique interior, characterized by dramatic lighting and sharp focus.",
+      "primaryMedia": "media-1764762263379-ol3ka8cxt",
+      "description": "The pulsating, high-gloss interior of a psychedelic nightclub, blending Art Nouveau ornamentation with ultra-modern finishes and vibrant, electric colors.",
       "navigableElements": [
         {
-          "type": "display pedestal",
-          "position": "lower-left third",
-          "description": "A low, off-center display pedestal crafted from brushed aluminum showcasing avant-garde jewelry."
+          "type": "illuminated panel",
+          "position": "bottom left",
+          "description": "Recessed panel with swirling electric magenta and acid green pattern."
         },
         {
-          "type": "doorway",
-          "position": "right wall",
-          "description": "An illuminated, recessed doorway pulsing with soft neon pink light, framed in polished chrome."
+          "type": "archway",
+          "position": "midground right",
+          "description": "Off-center archway framed with patinated brass, spilling vibrant teal light."
         },
         {
-          "type": "retail area",
-          "position": "far center",
-          "description": "The space recedes into a deeper, atmospheric retail area with a soaring, faceted ceiling."
+          "type": "walkway",
+          "position": "background far",
+          "description": "Subtly glowing narrow brass walkway leading into the distance."
         }
       ],
       "dominantElements": [
-        "polished charcoal concrete floor",
-        "matte charcoal walls",
-        "faceted brushed aluminum ceiling",
-        "abstract chrome sculptures",
-        "display pedestal",
-        "recessed doorway"
+        "Polished terrazzo flooring",
+        "High-gloss painted curved walls",
+        "Art Nouveau brass detailing",
+        "Faceted iridescent ceiling",
+        "Recessed illuminated panel",
+        "Illuminated archway",
+        "Brass planter",
+        "Brass walkway"
       ],
       "uniqueIdentifiers": [
-        "geometric LED floor lighting",
-        "pulsing neon pink doorway",
-        "soaring faceted aluminum ceiling"
+        "Psychedelic Art Nouveau fusion",
+        "High-gloss finish",
+        "Electric magenta and acid green mural",
+        "Vibrant teal lighting spill",
+        "Iridescent faceted ceiling"
       ],
-      "searchDesc": "Chic, modern boutique with charcoal, blue, and pink accents; dramatic lighting.",
-      "slug": "interior-of-the-style-syndicate"
+      "searchDesc": "Psychedelic Art Nouveau nightclub interior with electric magenta, acid green, and teal lighting.",
+      "slug": "interior-of-lsd"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764761851885-xsmubrcur",
+      "id": "loc-1764762221396-fc07vqep9",
       "type": "host",
       "children": [
         {
-          "id": "a82bc8ee-b2fd-445f-b8a6-1bb2a5e17f67",
+          "id": "5b18284e-eb70-4f3b-b706-d4b79f87879a",
           "type": "region",
           "children": [
             {
-              "id": "59f51f86-f554-4141-a19b-33a24411e010",
+              "id": "1ebbb429-104f-4861-a519-c79b10863427",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764761897948-3suc9jbxt",
+                  "id": "niche-1764762263380-ikwizree0",
                   "type": "niche",
                   "children": []
                 }
@@ -268,6 +239,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764761851885-xsmubrcur"
+    "loc-1764762221396-fc07vqep9"
   ]
 }
