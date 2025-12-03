@@ -2,6 +2,36 @@
 
 ## Recent Changes (2025-12-03)
 
+### Slash Commands Parent DNA Inheritance Fix (Dec 3, 2025)
+- **Problem**: When creating nodes via slash commands (`/NEW_REGION`, `/NEW_LOCATION`, `/NEW_NICHE`), the parent node's DNA was not being used. New locations were generated without inheriting parent's architectural style, mood, colors, etc.
+- **Root Cause**: In `navigation.ts`, the `/create-node` endpoint passed `parentId` to `createNode()` but NOT `parentContext` (parent DNA). The parent DNA was never loaded from storage.
+- **Solution**: Added parent DNA loading in `/create-node` endpoint:
+  ```typescript
+  // Load parent DNA context if parentId is provided
+  let parentContext;
+  if (parentId) {
+    const worldsData = await storageService.loadWorlds();
+    const parentNode = worldsData?.nodes?.[parentId];
+    if (parentNode?.dna) {
+      parentContext = extractParentDNAContext(parentNode.dna);
+    }
+  }
+  ```
+- **Inherited DNA Fields**:
+  - `architectural_tone` - Building style inheritance
+  - `cultural_tone` - Cultural aesthetics
+  - `dominant` - Dominant color
+  - `mood` - Atmosphere/feel
+  - `genre` - Overall genre
+  - `materials_base` - Material palette
+  - `palette_bias` - Color tendencies
+- **Files Modified**:
+  - `packages/backend/src/routes/mzoo/navigation.ts` - Added import for `extractParentDNAContext`, added parent DNA loading logic
+- **Result**: Child nodes now properly inherit visual identity from parents:
+  - `/NEW_REGION` under London → inherits London's DNA
+  - `/NEW_LOCATION` under Camden → inherits Camden's DNA  
+  - `/NEW_NICHE` under a shop → inherits the shop's DNA
+
 ### DNA Schema Shared Module Refactoring (Dec 3, 2025)
 - **Problem**: Three DNA generation prompts (`deepestNodeDNA.ts`, `parentChainDNA.ts`, `nodeDNAGeneration.ts`) had duplicate code for structure schema, field descriptions, and guidelines. When the `structure` field was added, all 3 files had to be updated manually.
 - **Solution**: Created `shared/dnaSchema.ts` as single source of truth

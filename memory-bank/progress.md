@@ -25,6 +25,11 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Slash Commands Parent DNA Inheritance** (Dec 3): Fixed child nodes not inheriting parent DNA
+  - `/NEW_REGION`, `/NEW_LOCATION`, `/NEW_NICHE` now properly inherit parent's DNA
+  - Loads parent node from storage and extracts DNA context
+  - Inherits: architectural_tone, cultural_tone, dominant, mood, genre, materials_base, palette_bias
+  - Fixed in `navigation.ts` - added `extractParentDNAContext()` call
 - **DNA Schema Refactoring** (Dec 3): Created shared DNA module for DRY code
   - Created `shared/dnaSchema.ts` as single source of truth
   - Shared structure schema (form, roofType, scale, orientation, openings, functionalType)
