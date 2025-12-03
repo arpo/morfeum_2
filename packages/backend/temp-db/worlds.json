@@ -1,459 +1,694 @@
 {
   "nodes": {
-    "loc-1764764017008-nswqs5dcp": {
-      "id": "loc-1764764017008-nswqs5dcp",
+    "loc-1764767356568-vg1petnje": {
+      "id": "loc-1764767356568-vg1petnje",
+      "type": "host",
+      "name": "Sweden",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A diverse landscape encompassing dense coniferous forests, sparkling lakes, and a dramatic, often rugged, coastline. Human settlements range from modern urban centers to traditional wooden villages.",
+        "colorsAndLighting": "Highly variable by season and region. Northern light can be ethereal in winter, while long summer days offer bright, clear illumination. Colors often lean towards natural tones, with occasional pops of vibrant hues in design.",
+        "atmosphere": "A blend of crisp, clean air with the scent of pine and fresh water. A generally calm and ordered atmosphere pervades, with a strong connection to the outdoors.",
+        "materials": "Wood is a ubiquitous natural material, complemented by stone, glass, and metal in modern constructions. A strong emphasis on sustainable and natural materials.",
+        "mood": "Understated, functional, peaceful, with an underlying appreciation for nature and simplicity.",
+        "sounds": "The rustling of leaves and wind in forests, the lapping of waves on shores, the distant calls of birds, and the quiet hum of organized modern life.",
+        "spatialLayout": "Ranges from sparse, natural expanses to densely packed, well-organized cities. A general preference for order and integration with the environment.",
+        "primary_surfaces": "Wood paneling, polished concrete, large glass windows, natural stone.",
+        "secondary_surfaces": "Metal cladding, textured plaster, linoleum, laminate.",
+        "accent_features": "Minimalist lighting fixtures, ergonomic furniture, nature-inspired art, functional design elements.",
+        "dominant": "Forest greens, lake blues, sky greys",
+        "secondary": "Wood tones, granite, white/off-white",
+        "accent": "Vibrant accent colors in textiles or design elements (e.g., yellow, red)",
+        "ambient": "Clear, often bright light, with distinct seasonal variations",
+        "genre": "Nordic Noir / Contemporary Scandinavian",
+        "architectural_tone": "Functionalism, modernism, minimalist design, with strong influences from natural materials and environments.",
+        "cultural_tone": "Emphasis on equality, social welfare, connection to nature, design consciousness, and a generally reserved yet friendly demeanor.",
+        "materials_base": "Wood, stone, glass, metal, with a focus on sustainability and natural aesthetics.",
+        "mood_baseline": "Calm, ordered, introspective, appreciating nature and functionalism.",
+        "palette_bias": "Cool, natural palettes with an appreciation for light and space; often incorporating muted earth tones with vibrant accents.",
+        "soundscape_base": "Natural sounds (wind, water, wildlife) mixed with the organized sounds of modern, clean environments.",
+        "flora_base": "Coniferous forests (pine, spruce, fir), birch trees, hardy wildflowers.",
+        "fauna_base": "Moose, reindeer, bears, foxes, various bird species, marine life along the coast."
+      },
+      "description": "A Scandinavian country characterized by its vast forests, numerous lakes, and an extensive coastline. It is known for its modern design, emphasis on nature, and a generally moderate and functional lifestyle.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Forests",
+        "Lakes",
+        "Archipelago coastlines",
+        "Modern cities"
+      ],
+      "uniqueIdentifiers": [
+        "Fika culture",
+        "Midsummer celebrations",
+        "Minimalist design"
+      ],
+      "searchDesc": "Discover Sweden, a land of forests, lakes, and a distinctive blend of modern design and natural beauty.",
+      "slug": "sweden"
+    },
+    "25e5f7fd-eef4-47d0-ac49-5d17da24e00b": {
+      "id": "25e5f7fd-eef4-47d0-ac49-5d17da24e00b",
+      "type": "region",
+      "name": "Tjörn",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A landscape dominated by windswept pine trees clinging to granite rocks, with views of the sea dotted with small islands. Scattered settlements feature traditional wooden houses.",
+        "colorsAndLighting": "The lighting is often soft and diffused, with cool, grey skies prevalent. Colors are muted, with the deep green of pines, the grey of granite, and the pale grey or weathered wood of houses.",
+        "atmosphere": "Crisp, salty air with the scent of pine needles. The sound of waves and seagulls is ever-present. The climate is temperate maritime, often breezy.",
+        "materials": "Natural, weathered materials dominate, including granite, pine wood, and slate or tile for roofing. Rough-hewn stone is common for foundations and walls.",
+        "mood": "Tranquil, resilient, and introspective. A sense of enduring simplicity in the face of the elements.",
+        "sounds": "The constant rhythm of waves, distant foghorns, seabird cries, and the rustling of pine needles in the wind.",
+        "spatialLayout": "Low density with scattered settlements. Houses are often nestled into the landscape rather than dominating it. Pathways are winding and often follow the terrain.",
+        "primary_surfaces": "Granite rock formations, weathered wood siding, and pine bark.",
+        "secondary_surfaces": "Slate roof tiles, rough stone foundations, sandy soil.",
+        "accent_features": "Small, weathered boat docks, lichen-covered rocks, wind-bent trees.",
+        "dominant": "Cool greys and deep greens",
+        "secondary": "Pale wood tones and granite grey",
+        "accent": "Brown (pine bark), natural stone",
+        "ambient": "Soft, diffused northern light",
+        "genre": null,
+        "architectural_tone": "Simple Nordic coastal vernacular, functional and unadorned wooden structures.",
+        "cultural_tone": "Maritime heritage, self-sufficient coastal living, a deep respect for nature.",
+        "materials_base": "Natural wood, stone, slate",
+        "mood_baseline": "Quiet solitude, resilience, connection to nature",
+        "palette_bias": "cool neutrals, muted earth tones, sea-inspired blues and greens",
+        "soundscape_base": "Coastal, natural, elemental",
+        "flora_base": "Pine, birch, coastal grasses, lichens",
+        "fauna_base": "Seabirds, seals, small coastal mammals"
+      },
+      "description": "A picturesque island municipality on Sweden's west coast, renowned for its rugged natural beauty, maritime heritage, and archipelago charm. It features a landscape of rocky shores, pine forests, and scattered fishing villages.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Coastal cliffs",
+        "Pine forests",
+        "Small harbors"
+      ],
+      "uniqueIdentifiers": [
+        "Rocky archipelago",
+        "Saltwater air",
+        "Traditional wooden houses"
+      ],
+      "searchDesc": "Explore Tjörn, a Swedish west coast island municipality with rugged beauty and maritime charm.",
+      "slug": "tjorn"
+    },
+    "aea3088d-273a-4bcc-81c8-df2951424831": {
+      "id": "aea3088d-273a-4bcc-81c8-df2951424831",
+      "type": "location",
+      "name": "Small House",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A small, rectangular wooden house with a steep pitched roof. The facade is clad in weathered, pale grey timber. Small, multi-paned windows are symmetrically placed, with a single, sturdy wooden door at the center. A low stone foundation anchors the structure.",
+        "colorsAndLighting": "The house features muted natural tones, dominated by the grey of the wood and the dark grey of the roof tiles. Sunlight, if present, would cast long shadows, highlighting the texture of the wood. The overall lighting is natural and diffused, typical of a Northern climate.",
+        "atmosphere": "The air is crisp and carries a faint scent of salt and pine. A gentle sea breeze might rustle the surrounding sparse vegetation. The temperature is cool, even in summer. The overall feeling is one of quiet solitude and resilience against the elements.",
+        "materials": "The primary material is weathered, horizontal timber planks, showing signs of age and exposure to the elements. The foundation is made of rough-hewn grey stone. Window frames are likely painted wood, possibly with a slightly distressed finish.",
+        "mood": "Evokes a sense of peaceful simplicity and rustic charm. It suggests a life lived in close connection with nature, free from ostentation. The mood is tranquil, understated, and enduring.",
+        "sounds": " Seagulls crying, distant waves, wind whistling softly, creaking wood.",
+        "spatialLayout": "A compact, rectangular footprint with a clear vertical emphasis due to the pitched roof. The interior space would be modest, designed for efficiency and warmth. The depth perception is relatively shallow, focusing on the immediate exterior.",
+        "primary_surfaces": "weathered wooden planks, rough grey stone",
+        "secondary_surfaces": "dark grey roof tiles, aged glass panes",
+        "accent_features": "verdigris-stained window frames, exposed timber rafters",
+        "dominant": "pale grey (wood facade)",
+        "secondary": "dark grey (roof)",
+        "accent": "bronze-green (window frames), natural stone (foundation)",
+        "ambient": "cool, diffused daylight",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "pitched",
+          "scale": "small",
+          "orientation": "horizontal",
+          "openings": "minimal",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Simple Nordic coastal vernacular, characterized by understated wooden construction, pitched roofs, and practical detailing. Features elements of functionalism with a strong connection to the natural environment.",
+        "cultural_tone": "Represents a modest dwelling for individuals or a small family seeking a life in harmony with the Swedish archipelago's environment, likely a fisherman's cottage or a seasonal retreat.",
+        "materials_base": "natural wood, stone, slate/tile",
+        "mood_baseline": "serene, humble, enduring",
+        "palette_bias": "cool neutrals, muted earth tones",
+        "soundscape_base": "maritime ambient",
+        "flora_base": "sparse coastal grasses, wind-stunted pines",
+        "fauna_base": "seagulls"
+      },
+      "description": "A modest dwelling situated on the island of Tjörn.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "a weathered wooden door"
+        },
+        {
+          "type": "path",
+          "position": "front",
+          "description": "a gravel path leading to the entrance"
+        }
+      ],
+      "dominantElements": [
+        "pitched roof",
+        "wooden facade",
+        "small windows",
+        "stone foundation"
+      ],
+      "uniqueIdentifiers": [
+        "exposed timber beams",
+        "verdigris-stained window frames",
+        "a single chimney",
+        "sea salt residue on surfaces"
+      ],
+      "searchDesc": "A small, modest house on Tjörn, Sweden. Facade view, entrance with a wooden door and gravel path.",
+      "slug": "small-house",
+      "primaryMedia": "media-1764767378141-1tbnua4zi"
+    },
+    "niche-1764767396985-djkihusyf": {
+      "id": "niche-1764767396985-djkihusyf",
+      "type": "niche",
+      "name": "interior of Small House",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior presents weathered, pale grey timber plank walls and a steeply pitched timber frame ceiling with exposed dark grey rafters. Rough-hewn grey stone forms the floor, grounding the humble space. A narrow dark wood passage is visible receding to the left, with a low wooden bench to the right.",
+        "colorsAndLighting": "Dominant colors are pale grey and various shades of grey for wood and stone. Soft, cool diffused daylight filters in, creating a serene illumination.",
+        "atmosphere": "A serene and quiet atmosphere pervades the space, carrying the faint scent of salt and pine. The air feels cool and still, suggesting a connection to the maritime environment.",
+        "materials": "Main materials are weathered timber planks, rough-hewn stone, and dark wood. The timber walls show signs of age, and the stone floor is textured and uneven, emphasizing a rustic, enduring quality.",
+        "mood": "The mood is one of peaceful simplicity, rustic charm, and enduring functionality, reflecting a life in harmony with nature.",
+        "sounds": "Quiet, faint maritime breeze, subtle wood creaks, distant sea sounds",
+        "spatialLayout": "The interior is entered into a humble space with a strong vertical emphasis from the pitched ceiling. An asymmetrical composition draws the eye into a receding passage, hinting at further modest interior depth.",
+        "primary_surfaces": "weathered pale grey timber planks (walls), rough-hewn grey stone (floor), dark grey timber rafters (ceiling)",
+        "secondary_surfaces": "worn cushions (bench), dark wood (passage)",
+        "accent_features": "exposed dark grey rafters, receding dark wood passage, low sturdy wooden bench",
+        "dominant": "pale grey (walls)",
+        "secondary": "grey (flooring and rafters)",
+        "accent": "dark wood (passage and bench details)",
+        "ambient": "cool",
+        "structure": {
+          "form": "irregular",
+          "roofType": "pitched",
+          "scale": "small",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Simple Nordic coastal vernacular",
+        "cultural_tone": "Modest dwelling for a life in harmony with the Swedish archipelago's environment.",
+        "materials_base": "weathered wood, rough stone, simple timber",
+        "mood_baseline": "Peaceful simplicity and rustic charm",
+        "palette_bias": "Shades of grey and muted natural tones",
+        "soundscape_base": "Quiet and natural",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764767396984-5jxj34n5i",
+      "description": "The humble and enduring interior of a Nordic coastal vernacular small house.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground, slightly off-center to the left",
+          "description": "A narrow, dark wood passage receding into the depth of the house."
+        }
+      ],
+      "dominantElements": [
+        "weathered pale grey timber plank walls",
+        "steeply pitched timber frame ceiling with exposed dark grey rafters",
+        "rough-hewn grey stone flooring",
+        "narrow dark wood passage",
+        "low, sturdy wooden bench with worn cushions"
+      ],
+      "uniqueIdentifiers": [
+        "weathered pale grey timber planks",
+        "exposed dark grey rafters",
+        "rough-hewn grey stone floor",
+        "receding dark wood passage",
+        "off-center one-point perspective"
+      ],
+      "searchDesc": "Humble Nordic coastal vernacular interior, pale grey timber, dark rafters, grey stone floor, narrow passage.",
+      "slug": "interior-of-small-house"
+    },
+    "loc-1764767524279-bfev9w7t5": {
+      "id": "loc-1764767524279-bfev9w7t5",
+      "type": "host",
+      "name": "General Horror Setting",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A visual aesthetic that leans towards the uncanny, the decaying, and the oppressive. This can include gothic architecture, desolate landscapes, or environments deliberately made to feel wrong. Light is often scarce and dramatic.",
+        "colorsAndLighting": "A palette dominated by dark, muted, and desaturated colors, with harsh contrasts. Lighting is typically low-key, employing shadows and selective illumination to create a sense of hidden threat and unease.",
+        "atmosphere": "Pervasive unease, a palpable sense of dread, and an oppressive stillness. The air might feel heavy, cold, or carry unsettling, faint scents associated with decay or the unnatural.",
+        "materials": "A preference for aged, decaying, or inherently unsettling materials such as weathered wood, rough stone, cold iron, and organic elements in decay. The emphasis is on textures that speak of age, neglect, and unease.",
+        "mood": "Pervasive dread, primal fear, and a deep-seated sense of malevolence. The environment actively cultivates feelings of vulnerability and terror.",
+        "sounds": "A soundscape characterized by unsettling quietude punctuated by sharp, unexpected noises. This can include distant cries, unnatural rustling, creaking, groaning, or low, ambient hums that create a sense of constant, unseen threat.",
+        "spatialLayout": "Often features labyrinthine structures, hidden passages, oppressive verticality, or vast, desolate expanses that emphasize isolation and vulnerability.",
+        "primary_surfaces": "Aged wood, crumbling stone",
+        "secondary_surfaces": "Rusted metal, decaying organic matter",
+        "accent_features": "Distorted architectural elements, unsettling natural formations, signs of decay and neglect",
+        "dominant": "Dark browns and grays",
+        "secondary": "Muted greens and blacks",
+        "accent": "Sickly yellows and pale blues",
+        "ambient": "Low-key, shadowy, with dramatic contrasts",
+        "genre": "Horror",
+        "architectural_tone": "Gothic, dilapidated, unsettling, menacing",
+        "cultural_tone": "Superstitious, fearful, isolationist, or places of dark ritual",
+        "materials_base": "Aged wood, stone, iron, decaying organic matter",
+        "mood_baseline": "Dread, fear, unease, malevolence",
+        "palette_bias": "Dark, muted earth tones with oppressive undertones",
+        "soundscape_base": "Silence, unsettling ambient noise, sharp sudden sounds",
+        "flora_base": "Gnarled trees, thorny undergrowth, fungi, plants associated with decay",
+        "fauna_base": "Nocturnal creatures, insects, creatures associated with rot or the undead"
+      },
+      "description": "A world or environment where fear is a central theme, often manifesting through supernatural phenomena, unsettling atmospheres, or the deliberate creation of terrifying experiences. This setting prioritizes the evocation of dread.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Environments conducive to fear",
+        "Places of supernatural influence"
+      ],
+      "uniqueIdentifiers": [
+        "Creepy folklore",
+        "Psychological unease",
+        "Supernatural occurrences"
+      ],
+      "searchDesc": "A setting designed to evoke fear, dread, and supernatural unease.",
+      "slug": "general-horror-setting"
+    },
+    "710a2ea3-d301-4376-8dfc-b14cfda6f194": {
+      "id": "710a2ea3-d301-4376-8dfc-b14cfda6f194",
+      "type": "region",
+      "name": "The Attraction",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The general visual presentation of an entertainment zone focused on fear, often employing temporary structures and overt thematic elements to draw attention and build anticipation. Expect a mix of grand, imposing facades for the main attraction and more utilitarian elements for infrastructure.",
+        "colorsAndLighting": "A deliberate contrast between stark, functional lighting for practical areas and dramatic, atmospheric lighting for the attraction itself. Colors tend towards the gaudy and attention-grabbing for signage, with more subdued and unsettling tones for the immediate attraction facade.",
+        "atmosphere": "Charged with anticipation and a manufactured sense of dread. The air might carry faint smells of popcorn, fog machine fluid, and an underlying, almost imperceptible metallic tang from machinery. Sounds are a cacophony of excited crowds, thematic music, and the occasional scream.",
+        "materials": "A blend of treated wood for facades, painted metal for structures and signage, and concrete for pathways. Materials emphasize a fabricated feel, designed for visual impact rather than permanence, with a focus on elements that can be easily maintained and themed.",
+        "mood": "Excitement tinged with apprehension. The overarching mood is one of playful fear and adrenaline-seeking, designed to create a memorable and thrilling experience for visitors.",
+        "sounds": "A mix of ambient crowd noise, upbeat but slightly distorted thematic music, and the occasional unsettling sound effect bleeding from the attraction.",
+        "spatialLayout": "A clear path from entry to the attraction, with designated queue areas and potentially other smaller, supporting attractions. The main attraction often has a prominent, commanding presence.",
+        "primary_surfaces": "Painted wood, corrugated metal",
+        "secondary_surfaces": "Concrete pathways, thematic plastic elements",
+        "accent_features": "Oversized, thematic props, distressed signage, fog machines",
+        "dominant": "Vibrant reds and yellows (for signage)",
+        "secondary": "Dark grays and browns (for structural elements)",
+        "accent": "Sickly greens and purples (for atmospheric effects)",
+        "ambient": "Fluctuating - bright in common areas, dim and dramatic around attraction entrances",
+        "genre": null,
+        "architectural_tone": "Themed structures and utilitarian entertainment architecture",
+        "cultural_tone": "Public entertainment, manufactured thrill-seeking",
+        "materials_base": "Painted wood, metal, concrete",
+        "mood_baseline": "Excitement, anticipation, manufactured fear",
+        "palette_bias": "High contrast, attention-grabbing colors with darker thematic accents",
+        "soundscape_base": "Crowd noise, thematic music, sound effects",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A dedicated area specifically designed for public entertainment, housing various attractions that aim to thrill and frighten. This region is characterized by its focus on curated fear experiences.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Haunted House Entrance",
+        "Queue Lines",
+        "Themed Staging Areas"
+      ],
+      "uniqueIdentifiers": [
+        "Carnival Barkers",
+        "Distorted Music",
+        "Theming Signage"
+      ],
+      "searchDesc": "A dedicated entertainment zone featuring attractions designed to scare and thrill.",
+      "slug": "the-attraction"
+    },
+    "679845f2-48cc-447e-9671-dec177096297": {
+      "id": "679845f2-48cc-447e-9671-dec177096297",
+      "type": "location",
+      "name": "The Haunter House",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The Haunter House presents a decrepit Victorian-era mansion, its once grand facade now a patchwork of decay. Twisted spires pierce the sky, and narrow, pointed windows seem to stare out like vacant eyes. Broken shutters hang precariously, and skeletal branches of ancient trees claw at the crumbling walls.",
+        "colorsAndLighting": "The color palette is dominated by deep, muted browns and grays, with hints of sickly green in shadowed areas. A single, sputtering gas lamp casts long, dancing shadows, punctuated by the faint, unsettling glow from within the upper windows.",
+        "atmosphere": "The air hangs heavy and still, carrying the faint scent of damp earth and decay. A chilling, unnatural cold seems to emanate from the structure, even on a warm night. The silence is broken only by the rustling of unseen things in the overgrown yard and the distant, unsettling creak of the house itself.",
+        "materials": "The primary materials are aged, rough-hewn wood, crumbling stone foundations, and rusted wrought iron. Textures range from splintered planks and peeling paint to moss-covered brickwork and verdigris-patinaed metal.",
+        "mood": "The overwhelming mood is one of dread and malevolence. It evokes a primal sense of unease, promising lurking horrors and a heart-pounding descent into fear.",
+        "sounds": "Creaking, groaning, distant whispers, rustling, wind, faint music",
+        "spatialLayout": "The facade is a tall, imposing structure that appears to loom over the viewer. Its depth is suggested by the receding angles of the roofline and the dark void of the entrance, hinting at unseen spaces within.",
+        "primary_surfaces": "weathered wood, crumbling stone",
+        "secondary_surfaces": "rusted iron, broken glass",
+        "accent_features": "skeletal trees, tattered sign, flickering lamp",
+        "dominant": "dark brown (70%)",
+        "secondary": "stone gray (25%)",
+        "accent": "sickly green (5%)",
+        "ambient": "dim, foreboding",
+        "structure": {
+          "form": "gothic",
+          "roofType": "pitched",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "arched-windows",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Decaying Victorian Gothic, with elements of extreme neglect and deliberate dilapidation, featuring sharp angles, imposing verticality, and an overall sense of menace.",
+        "cultural_tone": "A place of manufactured terror for public entertainment; designed to exploit fears and create thrilling experiences.",
+        "materials_base": "aged wood, stone, metal",
+        "mood_baseline": "fearful anticipation",
+        "palette_bias": "dark, muted earth tones",
+        "soundscape_base": "unsettling ambient noise",
+        "flora_base": "overgrown, skeletal trees",
+        "fauna_base": "None"
+      },
+      "description": "The exterior facade or entrance of a haunted house attraction, designed to appear ominous and unwelcoming.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A heavy, dark wooden door, slightly ajar."
+        },
+        {
+          "type": "path",
+          "position": "front",
+          "description": "A cracked, overgrown cobblestone path leading to the entrance."
+        }
+      ],
+      "dominantElements": [
+        "Gargoyle-adorned roofline",
+        "Broken-paned, dimly lit windows",
+        "Weathered, peeling paint",
+        "Twisted, skeletal trees"
+      ],
+      "uniqueIdentifiers": [
+        "A single, flickering gas lamp",
+        "A tattered 'Enter If You Dare' sign",
+        "A silhouette of a figure in an upper window"
+      ],
+      "searchDesc": "Ominous haunted house attraction facade, designed to be unwelcoming and terrifying.",
+      "slug": "the-haunter-house",
+      "primaryMedia": "media-1764767543800-61tkjyjsb"
+    },
+    "niche-1764767565259-sfwss9hd9": {
+      "id": "niche-1764767565259-sfwss9hd9",
+      "type": "niche",
+      "name": "interior of The Haunter House",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal, decaying Victorian Gothic foyer with oppressive verticality and a monumental, off-center wooden staircase. Crumbling stone steps descend into darkness in the foreground, contrasting with a massive arched doorway to the right.",
+        "colorsAndLighting": "Dominant dark browns and grays are punctuated by a sickly green light emanating from unseen sources, casting long, distorted shadows.",
+        "atmosphere": "The air is thick with dust, damp, and a sense of malevolence. It feels cold and neglected, promising lurking horrors. The oppressive scale evokes a primal sense of unease.",
+        "materials": "The primary materials are weathered, dark wood, crumbling stone, and rusted wrought iron, all exhibiting rough, splintered, cracked, and peeling textures.",
+        "mood": "Intense dread, anticipation, and overwhelming decay define the atmosphere, evoking a palpable sense of malevolence.",
+        "sounds": "Silence, imagined creaks, whispers, dust settling.",
+        "spatialLayout": "A colossal foyer with at least 20m+ ceilings, emphasizing height and upward depth. Highly asymmetric composition with diagonal architectural thrusts.",
+        "primary_surfaces": "aged dark wood paneling, crumbling plaster",
+        "secondary_surfaces": "splintered wooden beams, rusted wrought iron",
+        "accent_features": "flickering gas lamp, leaded glass windows (grime-covered)",
+        "dominant": "dark brown (70%)",
+        "secondary": "gray (20%)",
+        "accent": "sickly green light (5%), rust (5%)",
+        "ambient": "cool",
+        "structure": {
+          "form": "gothic",
+          "roofType": "vaulted",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "arched-windows, open-passages",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "decaying Victorian Gothic, extreme neglect",
+        "cultural_tone": "A public entertainment space designed for manufactured terror, exploiting fears.",
+        "materials_base": "weathered wood, crumbling stone, rusted metal",
+        "mood_baseline": "dread and malevolence",
+        "palette_bias": "dark, muted tones with sickly green accents",
+        "soundscape_base": "oppressive silence",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764767565258-nux8kylwx",
+      "description": "The grand foyer of a decaying Victorian Gothic haunted attraction.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "lower-left",
+          "description": "crumbling stone steps leading down to an uninviting passage"
+        },
+        {
+          "type": "door",
+          "position": "right",
+          "description": "massive, arched doorway receding into darkness"
+        }
+      ],
+      "dominantElements": [
+        "monumental, off-center wooden staircase",
+        "crumbling stone steps",
+        "massive arched doorway",
+        "splintered wooden beams"
+      ],
+      "uniqueIdentifiers": [
+        "oppressive verticality",
+        "sickly green light",
+        "decaying Victorian Gothic architecture",
+        "haunted attraction elements"
+      ],
+      "searchDesc": "Colossal decaying Victorian Gothic haunted foyer with a monumental staircase and oppressive verticality.",
+      "slug": "interior-of-the-haunter-house"
+    },
+    "loc-1764768440138-82r4pdpzs": {
+      "id": "loc-1764768440138-82r4pdpzs",
       "type": "host",
       "name": "London",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A dramatic fusion of historical grandeur and sleek contemporary design. Architecture ranges from gothic and Victorian to brutalist and hyper-modern, often coexisting within close proximity.",
-        "colorsAndLighting": "A palette dominated by the muted grays and browns of stone and brick, contrasted with the reflective surfaces of modern glass and steel. Lighting varies from the warm, traditional glow of streetlamps to the sharp, cool illumination of contemporary buildings.",
-        "atmosphere": "A sophisticated yet dynamic urban atmosphere, characterized by a constant hum of activity, diverse cultural influences, and an underlying sense of historical gravitas. It can feel both grand and intimate, bustling and serene.",
-        "materials": "A rich and varied material palette, including aged stone, red brick, cast iron, polished steel, vast expanses of glass, and modern composites. Materials often reflect the historical or contemporary context of a district.",
-        "mood": "Sophisticated, diverse, and ever-changing. London evokes a sense of ambition, cultural richness, and a persistent forward momentum, tempered by moments of historical reflection.",
-        "sounds": "The quintessential sounds of a major global city: traffic, distant sirens, the rumble of the Underground, diverse languages, church bells, and the murmur of millions of lives unfolding.",
-        "spatialLayout": "A sprawling, multi-layered city with distinct districts, each possessing its own character. It features grand avenues, intricate street networks, vast green spaces, and dense urban cores.",
-        "primary_surfaces": "Aged stone facades, red brickwork, and large expanses of reflective glass.",
-        "secondary_surfaces": "Cast iron elements, concrete, paved streets, and wooden accents.",
-        "accent_features": "Ornate historical detailing, modern minimalist accents, public art installations, and the ubiquitous red phone boxes.",
-        "dominant": "Muted urban tones: various shades of grey, muted browns, and deep reds from brick.",
-        "secondary": "Silver and metallic sheens from modern architecture, stone textures.",
-        "accent": "The diverse palette of lights from buildings, signage, and traffic, alongside the greens of parks.",
-        "ambient": "A cool, often overcast light quality, punctuated by the warm glow of artificial lights and the occasional brilliance of a sunny day.",
-        "genre": "Urban Explorer",
-        "architectural_tone": "Eclectic mix of historical, contemporary, and brutalist styles.",
-        "cultural_tone": "Cosmopolitan, historic, diverse, and trendsetting.",
-        "materials_base": "A blend of traditional construction materials and modern, high-tech composites and glass.",
-        "mood_baseline": "Sophisticated, ambitious, and dynamic.",
-        "palette_bias": "Neutral urban tones accented by the diverse colors of global culture and modern technology.",
-        "soundscape_base": "A constant, layered urban soundscape.",
-        "flora_base": "Parks and gardens featuring a mix of temperate trees, shrubs, and manicured flower beds.",
-        "fauna_base": "Common urban wildlife: various bird species (pigeons, sparrows, gulls), squirrels, foxes, and insects."
+        "looks": "A grand and varied urban landscape, from imposing historic architecture to sleek modern designs, with a constant hum of activity and diverse visual stimuli across its many districts.",
+        "colorsAndLighting": "A broad spectrum of colors, from the muted tones of historic stone to the vibrant palettes of modern advertising and diverse cultural districts. Lighting ranges from classic gas lamps to intense neon and contemporary LEDs.",
+        "atmosphere": "A dynamic and ever-changing atmosphere, marked by a sense of history and global influence. The city buzzes with opportunity, creativity, and a diverse array of subcultures.",
+        "materials": "Ubiquitous use of brick, stone, glass, steel, and concrete, with regional variations in material emphasis.",
+        "mood": "Ambitious, sophisticated, and endlessly surprising. A city that offers both gravitas and a vibrant pulse.",
+        "sounds": "A complex symphony of traffic, diverse accents, distant sirens, public transport announcements, and the ambient sounds of countless human activities.",
+        "spatialLayout": "Expansive and multi-layered, with distinct districts offering varied densities, from dense urban cores to sprawling residential areas and vast green spaces.",
+        "primary_surfaces": "Brick, stone, glass, concrete.",
+        "secondary_surfaces": "Metal, wood, asphalt, various plasters.",
+        "accent_features": "Iconic architecture, historical monuments, modern art installations, distinctive street furniture, and diverse public signage.",
+        "dominant": "Muted earth tones, greys, and browns, reflecting historical construction and urban patina.",
+        "secondary": "Blues and greens from parks and the sky, and metallic sheens from modern structures.",
+        "accent": "Pops of color from signage, street art, and diverse cultural elements across different boroughs.",
+        "ambient": "A varied ambient light quality, often diffused by atmospheric conditions or the dense urban environment.",
+        "genre": "Urban Adventure",
+        "architectural_tone": "A vast spectrum, from historic styles (Gothic, Victorian, Edwardian) to modern and brutalist, with significant areas of adaptation and eclectic modification.",
+        "cultural_tone": "Cosmopolitan, diverse, and historically rich. A global hub for arts, finance, fashion, and numerous subcultures.",
+        "materials_base": "Brick, stone, steel, glass, concrete, with a strong emphasis on durability and historical context.",
+        "mood_baseline": "Sophisticated, energetic, and perpetually evolving.",
+        "palette_bias": "A broad and varied palette, often leaning towards more subdued natural and urban tones in its foundational architecture, but allowing for intense bursts of color in specific cultural enclaves.",
+        "soundscape_base": "A complex, multi-layered urban soundscape that is constantly active.",
+        "flora_base": "Parks, gardens, and street trees (e.g., plane trees, lime trees).",
+        "fauna_base": "Urban wildlife (e.g., pigeons, squirrels, foxes)."
       },
-      "description": "A sprawling global metropolis where centuries of history collide with cutting-edge modernity. It is a city of diverse cultures, iconic landmarks, and constant evolution, offering a vast canvas for countless experiences.",
+      "description": "The historic and sprawling capital of England, a global city renowned for its diverse cultures, iconic landmarks, and constant evolution. London is a melting pot of old and new, tradition and innovation.",
       "navigableElements": [
-        "Historic landmarks",
-        "Modern districts",
-        "Parks",
-        "The Thames"
+        "The River Thames",
+        "Underground system",
+        "major parks"
       ],
       "dominantElements": [
-        "The Houses of Parliament",
-        "Tower of London",
-        "Skyscrapers of the City"
+        "Historic landmarks",
+        "modern skyscrapers",
+        "diverse neighborhoods"
       ],
       "uniqueIdentifiers": [
-        "Red double-decker buses",
-        "Black cabs",
-        "Distinctive architectural styles"
+        "Iconic red buses and black cabs",
+        "a blend of historical architecture and cutting-edge design"
       ],
-      "searchDesc": "London: A historic global city blending ancient charm with modern dynamism, offering endless cultural and urban exploration.",
+      "searchDesc": "London: A global metropolis blending history, culture, and innovation.",
       "slug": "london"
     },
-    "5a64e82d-4b27-4c3b-8ccd-4c02f34917e9": {
-      "id": "5a64e82d-4b27-4c3b-8ccd-4c02f34917e9",
+    "e32e47dd-b18c-48a7-a03a-4d447921943a": {
+      "id": "e32e47dd-b18c-48a7-a03a-4d447921943a",
       "type": "region",
       "name": "Camden",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A visually dynamic and somewhat chaotic mix of urban grit and creative expression. Walls are often covered in vibrant graffiti and street art, interspersed with quirky shop facades and bustling market stalls.",
-        "colorsAndLighting": "A kaleidoscope of colors from street art and market displays, with practical, often colorful, industrial lighting in market areas. Neon signs are common in entertainment venues, creating a lively nocturnal glow.",
-        "atmosphere": "Energetic, slightly gritty, and always buzzing with activity. The air is thick with the scent of diverse street food and the murmur of crowds, creating an immersive urban experience that feels alive and constantly shifting.",
-        "materials": "A diverse mix of urban materials: brick, concrete, weathered metal, painted wood, and a plethora of synthetic materials from market stalls and modern retail additions. Graffiti and posters are common surface treatments.",
-        "mood": "Exciting, bohemian, and rebelliously fashionable. A sense of freedom and individuality permeates the district, encouraging self-expression and a rejection of mainstream conformity.",
-        "sounds": "A rich tapestry of city sounds: market chatter, diverse music genres spilling from venues, distant traffic, and the general hum of a densely populated urban area. Occasional buskers add to the sonic texture.",
-        "spatialLayout": "Densely packed with narrow streets, sprawling market areas, and distinct zones like the canals and entertainment districts. It's a labyrinth of activity with a strong pedestrian focus.",
-        "primary_surfaces": "Graffiti-covered brick, weathered concrete, and painted corrugated metal.",
-        "secondary_surfaces": "Market stall canvas, glass shopfronts, and asphalt.",
-        "accent_features": "Vibrant street art murals, neon signs, eclectic market displays, and quirky sculptures.",
-        "dominant": "Muted urban tones (grays, browns, brick red) often overlaid with bright, chaotic color from street art.",
-        "secondary": "Industrial metal tones, canvas colors from stalls.",
-        "accent": "Neon brights (pinks, blues, greens) and the vibrant hues of street art.",
-        "ambient": "Variable, from the harsh daylight reflecting off concrete to the warm, saturated glow of neon at night.",
+        "looks": "A visually dense and diverse urban environment with a mix of historic architecture, vibrant street art, and a constant flow of people. Shopfronts range from quirky and colorful to darkly gothic.",
+        "colorsAndLighting": "A dynamic blend of natural daylight filtered through market awnings and the artificial glow of shop signs and streetlights, often with splashes of neon.",
+        "atmosphere": "Energetic and buzzy, with a palpable sense of creative freedom and a slightly rebellious undertone. The air buzzes with music, chatter, and the scent of diverse street food.",
+        "materials": "A mixture of weathered brick, painted wood, metal signage, textiles, and glass.",
+        "mood": "Bohemian, rebellious, and lively. A place that encourages self-expression and exploration.",
+        "sounds": "A cacophony of street performers, market hawkers, diverse music genres, and the general hum of a busy urban area.",
+        "spatialLayout": "Dense and labyrinthine in the market areas, with narrow streets and overflowing stalls, opening into wider thoroughfares lined with shops and venues.",
+        "primary_surfaces": "Painted brick, weathered wood panels, market stall canvas.",
+        "secondary_surfaces": "Metal, glass, exposed concrete, various fabrics.",
+        "accent_features": "Graffiti art, unique signage, eclectic displays in shop windows, vintage and alternative fashion.",
+        "dominant": "Varied, often reflecting the immediate storefront or street art.",
+        "secondary": "Varied, supporting dominant colors.",
+        "accent": "Bold and clashing colors from street art and signage.",
+        "ambient": "Generally bright and varied, with pockets of shadow and intense artificial light.",
         "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": "Alternative, bohemian, avant-garde, and youth-oriented.",
-        "materials_base": "Urban grit and synthetic market materials, with a strong emphasis on repurposed or weathered elements.",
-        "mood_baseline": "Rebellious, creative, and energetic.",
-        "palette_bias": "Eclectic and high-contrast, embracing both muted urban tones and vibrant, clashing colors from street art and signage.",
-        "soundscape_base": "Urban cacophony overlaid with diverse subcultures.",
-        "flora_base": "Scattered urban trees, canal-side vegetation, and minimal cultivated green spaces.",
-        "fauna_base": "Urban wildlife: pigeons, rats, stray animals, and canal-dwelling birds."
+        "architectural_tone": "Eclectic and heavily modified urban, with strong influences of Victorian industrial mixed with DIY and street art aesthetics.",
+        "cultural_tone": "Alternative, counter-culture, bohemian, and artistic. A strong emphasis on individuality and subcultures.",
+        "materials_base": "Painted and weathered urban materials, metal, textiles.",
+        "mood_baseline": "Energetic and exploratory.",
+        "palette_bias": "Bold, often clashing colors with a strong presence of neon and saturated hues.",
+        "soundscape_base": "Loud, diverse, and dynamic urban soundscape.",
+        "flora_base": null,
+        "fauna_base": null
       },
-      "description": "A vibrant, eclectic district in London, famous for its bustling markets, alternative culture, and diverse street art. It pulses with a unique energy that attracts artists, musicians, and fashion enthusiasts from around the globe.",
-      "navigableElements": [
-        "Markets",
-        "Street art",
-        "Canals",
-        "Music venues"
-      ],
+      "description": "A vibrant, eclectic neighborhood in London known for its bustling markets and strong alternative and counter-culture roots. Camden is a hub for independent fashion, music, and diverse street art.",
+      "navigableElements": [],
       "dominantElements": [
-        "Camden Lock Market",
-        "The Roundhouse",
-        "Street murals"
+        "Camden Market",
+        "street art murals",
+        "independent shops"
       ],
       "uniqueIdentifiers": [
-        "Graffiti-covered walls",
-        "Unique market stalls",
-        "Alternative fashion boutiques"
+        "Gothic and Victorian architecture mixed with modern market stalls",
+        "distinctive alternative fashion scene"
       ],
-      "searchDesc": "Explore Camden, London's vibrant hub for alternative culture, unique markets, and eclectic fashion.",
+      "searchDesc": "Camden: A London hub of alternative culture, markets, and vibrant street art.",
       "slug": "camden"
     },
-    "974689e0-2c58-4369-99fb-5669542ec0cc": {
-      "id": "974689e0-2c58-4369-99fb-5669542ec0cc",
+    "daa58c82-e70d-4dc0-ae89-6675fa4fedfb": {
+      "id": "daa58c82-e70d-4dc0-ae89-6675fa4fedfb",
       "type": "location",
-      "name": "The Cutting Edge",
+      "name": "The Psychedelic Emporium",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The exterior boasts a modern, minimalist facade with sharp geometric lines. A prominent, backlit sign in a bold sans-serif font announces the shop's name. The large display windows are framed with polished chrome, reflecting the vibrant street life of Camden.",
-        "colorsAndLighting": "The primary colors are deep black and reflective silver, creating a high-contrast look. Dynamic LED lighting strips, potentially in electric blue or neon pink, illuminate the storefront and signage, especially vibrant after dusk.",
-        "atmosphere": "The air around the shop feels charged with creative energy and urban pulse. It's a lively and exciting atmosphere, unaffected by extreme weather due to the sheltered storefront, and it emanates a sense of cool confidence.",
-        "materials": "The main materials are smooth, polished metal (chrome and brushed aluminum) and large panes of clear glass. The signage is likely made from illuminated acrylic or metal, with possibly some painted concrete or stone for the base.",
-        "mood": "The shop evokes a feeling of excitement, exclusivity, and daring self-expression. It's a place that inspires confidence and a desire to stand out from the crowd, with a palpable sense of trendsetting.",
-        "sounds": "Street sounds, distant music, chatter, footsteps, occasional car horns.",
-        "spatialLayout": "The storefront is relatively wide, designed to maximize visual impact. The interior space, glimpsed through the windows, suggests a sleek and organized retail environment with ample display areas.",
-        "primary_surfaces": "Smooth glass, polished metal, matte black panels",
-        "secondary_surfaces": "Illuminated acrylic, painted concrete",
-        "accent_features": "Chrome framing, neon LED strips, abstract sculpture",
-        "dominant": "Deep black with high coverage on facade elements",
-        "secondary": "Polished silver/chrome accents on frames and signage",
-        "accent": "Electric blue and neon pink LED lighting, abstract metallic sculpture",
-        "ambient": "Bright and artificial, with vibrant color accents",
+        "looks": "The building facade is a riot of saturated, contrasting colors, adorned with intricate paisley and floral patterns that seem to writhe and breathe. Large, distorted windows display an array of flashing lights and unusual trinkets within. The overall form is a standard commercial storefront, but its surface treatment is anything but ordinary.",
+        "colorsAndLighting": "Dominated by electric blues, acid greens, hot pinks, and sunshine yellows, applied in bold, uneven strokes. Lighting is a mixture of the internal glow from neon signs and the pulsating flicker of unseen sources, creating a dynamic and almost dizzying visual effect.",
+        "atmosphere": "The air feels thick with anticipation, a palpable hum of energy that seems to emanate from the building itself. It's a welcoming warmth, inviting passersby to step into a different dimension. The atmosphere is electric and charged, promising a night of unbridled revelry.",
+        "materials": "The primary materials are painted brick and large glass panels. The paint is applied thickly, with some areas appearing to drip or peel slightly, adding to the organic, unpolished feel. The glass windows are often smudged, hinting at the constant flow of visitors.",
+        "mood": "Exhilarating, playful, and wildly imaginative. The Emporium evokes a sense of liberation and escape from the mundane, a place where individuality is celebrated and the ordinary is left at the door. It's a call to adventure and sensory exploration.",
+        "sounds": "Distant thumping bass, echoing laughter, shimmering chimes, distant chatter, shuffling feet",
+        "spatialLayout": "The storefront is a relatively shallow but wide space, designed to draw attention from the street. The entrance is prominent and inviting, hinting at a deeper, more complex interior.",
+        "primary_surfaces": "Painted brickwork, large glass panes",
+        "secondary_surfaces": "Mirrored door, metal signage frames, concrete pavement",
+        "accent_features": "Flashing neon lights, ornate psychedelic patterns, hanging decorative elements",
+        "dominant": "Electric blue with extensive coverage across the facade",
+        "secondary": "Acid green used for outlining patterns and accents",
+        "accent": "Hot pink and sunshine yellow highlights within the murals and signage",
+        "ambient": "Vibrant and highly saturated",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "pitched",
+          "scale": "medium",
+          "orientation": "wide",
+          "openings": "large-glass",
+          "functionalType": "commercial"
+        },
         "genre": null,
-        "architectural_tone": "Modern minimalist with sharp geometric lines, high-contrast color blocking, and integrated LED lighting.",
-        "cultural_tone": "Fashion-forward urban youth and individuals seeking unique, statement club wear.",
-        "materials_base": "Sleek metallics, glass, and synthetic materials",
-        "mood_baseline": "Exciting, edgy, and trendsetting",
-        "palette_bias": "Blacks, silvers, and neon brights",
-        "soundscape_base": "Urban ambient with potential for club music bleed-through",
+        "architectural_tone": "Mid-century commercial storefront heavily modified with psychedelic graffiti art, bold color blocking, and an emphasis on overwhelming visual patterns.",
+        "cultural_tone": "Caters to ravers and fans of counter-culture, serving as a hub for alternative fashion, music, and artistic expression.",
+        "materials_base": "Painted brick, glass, metal",
+        "mood_baseline": "Ecstatic and visually stimulating",
+        "palette_bias": "High-contrast neon and jewel tones",
+        "soundscape_base": "Electronic music pulses and urban ambient noise",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A cool club wear shop featuring avant-garde fashion and trendy accessories.",
+      "description": "A super cool, trippy store catering to ravers, filled with vibrant colors and mind-bending decorations.",
       "navigableElements": [
         {
           "type": "door",
-          "position": "front",
-          "description": "A sleek, black-framed glass door"
+          "position": "center",
+          "description": "A large, circular, mirrored door that reflects the surrounding streetscape in fractured patterns."
         }
       ],
       "dominantElements": [
-        "Large, illuminated storefront display",
-        "Bold, geometric signage",
-        "Polished chrome accents"
+        "Giant, swirling psychedelic mural covering the entire facade",
+        "Hanging lava lamps and neon signs in the windows",
+        "A mismatched collection of potted, unusually colored plants"
       ],
       "uniqueIdentifiers": [
-        "Abstract metallic sculpture near entrance",
-        "UV-reactive paint details on facade",
-        "Flashing LED strip lighting along the eaves"
+        "A sign that morphs its text and colors",
+        "A series of optical illusion patterns painted directly onto the brickwork",
+        "The faint scent of incense wafting from the entrance"
       ],
-      "searchDesc": "Avant-garde club wear shop in Camden, London, featuring trendy fashion and accessories.",
-      "slug": "the-cutting-edge",
-      "primaryMedia": "media-1764764039654-nhvqpoiho"
+      "searchDesc": "Trippy, colorful rave store facade in Camden, London, with a mirrored door and swirling murals.",
+      "slug": "the-psychedelic-emporium",
+      "primaryMedia": "media-1764768461797-8c80glifi"
     },
-    "niche-1764764060990-t43p79105": {
-      "id": "niche-1764764060990-t43p79105",
+    "niche-1764768479160-khv2qmy1x": {
+      "id": "niche-1764768479160-khv2qmy1x",
       "type": "niche",
-      "name": "interior of The Cutting Edge",
+      "name": "interior of The Psychedelic Emporium",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior features a polished black concrete floor with geometric electric blue LED patterns leading to a low, angular reception desk. To the right, mannequins display avant-garde clothing bathed in neon pink light, while a dark passage is visible on the left. A tall aluminum pillar with blue LEDs rises in the midground.",
-        "colorsAndLighting": "Deep blacks and polished silvers dominate, punctuated by vibrant electric blue and neon pink LED lighting. Artificial, high-contrast lighting creates a dynamic and edgy ambiance.",
-        "atmosphere": "Charged with creative energy and an urban pulse, this space feels exciting, edgy, and trendsetting. The atmosphere suggests daring self-expression and exclusivity.",
-        "materials": "Predominantly smooth, polished metals like chrome and brushed aluminum, alongside matte black panels and polished black concrete. Accents of glass and illuminated acrylic add to the sleek finish.",
-        "mood": "This shop evokes excitement and exclusivity, inspiring confidence and a desire to stand out with a trendsetting, daring style.",
-        "sounds": "Subtle ambient music, hushed footsteps, distant chatter",
-        "spatialLayout": "The space opens into a wider retail area, characterized by sharp geometric lines and deliberate negative space. The layout is asymmetrical, creating visual interest and guiding the eye.",
-        "primary_surfaces": "Polished black concrete floor, matte black wall panels",
-        "secondary_surfaces": "Brushed aluminum reception desk and pillar, polished chrome stanchions",
-        "accent_features": "Embedded electric blue LED strips, neon pink backlighting, illuminated archway",
-        "dominant": "Deep black with high coverage on facade elements",
-        "secondary": "Polished silver/chrome on structural and furniture elements",
-        "accent": "Electric blue and neon pink LEDs used for dynamic lighting accents",
-        "ambient": "Cool white",
+        "looks": "The interior is a vibrant explosion of color and pattern, with electric blue painted brick walls heavily adorned with swirling, intricate paisley and floral designs in acid green, hot pink, and sunshine yellow. Large, distorted glass panels line the walls, offering obscured views, while an illuminated stone pathway recedes into the midground. Display racks overflow with eclectic merchandise, and avant-garde mannequins stand asymmetrically.",
+        "colorsAndLighting": "The dominant color is electric blue, aggressively covered in swirling psychedelic patterns. Lighting is dynamic, with pulsating flickers from unseen sources and internal glows from neon signs, creating a visually stimulating environment. A spotlight bathes the sales counter.",
+        "atmosphere": "The air is thick with anticipation, humming with palpable energy that promises unbridled revelry. It feels ecstatic, exhilarating, and playfully stimulating, a celebration of individuality and sensory exploration. Distant thumping bass and echoing laughter are faintly audible.",
+        "materials": "Primary surfaces are painted brick, rendered in electric blue and covered in vibrant graffiti. Distorted glass panels are smudged, and a flat, highly saturated ceiling is visible. The foreground features an illuminated stone pathway, while the sales counter is made of mirrored panels.",
+        "mood": "Exhilarating, playful, and wildly imaginative, evoking a sense of liberation and sensory exploration.",
+        "sounds": "Distant thumping bass, echoing laughter, palpable hum.",
+        "spatialLayout": "The space is viewed from an off-center one-point perspective with an ultra-wide lens. It features a receding stone pathway, a sales counter to the left, and a passage to the right, with display racks and mannequins scattered throughout.",
+        "primary_surfaces": "Painted brick (walls), flat ceiling, stone pathway (floor).",
+        "secondary_surfaces": "Mirrored panels (sales counter), vibrant metal signage frames.",
+        "accent_features": "Swirling psychedelic graffiti, distorted glass panels, off-center exposed brick archway, mannequins in avant-garde fashion.",
+        "dominant": "Electric blue (walls)",
+        "secondary": "Acid green, hot pink, sunshine yellow (graffiti patterns)",
+        "accent": "Mirrored panels (sales counter), illuminated stone.",
+        "ambient": "Neutral, with localized bright accents.",
+        "structure": {
+          "form": "irregular",
+          "roofType": "flat",
+          "scale": "medium",
+          "orientation": "wide",
+          "openings": "large-glass",
+          "functionalType": "commercial"
+        },
         "genre": null,
-        "architectural_tone": "Modern minimalist with sharp geometric lines, high-contrast color blocking, and integrated LED lighting",
-        "cultural_tone": "Fashion-forward urban youth and individuals seeking unique, statement club wear.",
-        "materials_base": "Smooth polished metals, matte black surfaces, polished concrete",
-        "mood_baseline": "Excitement, exclusivity, and daring self-expression",
-        "palette_bias": "Deep black and silver base with vibrant LED color accents",
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
         "soundscape_base": null,
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1764764060988-30pklgnuc",
-      "description": "The sleek, modern interior of a fashion boutique with minimalist design and striking LED accents.",
+      "primaryMedia": "media-1764768479159-cvswzdqbm",
+      "description": "The immediate interior of a vividly decorated, mid-century commercial storefront, pulsating with psychedelic art and bold color blocking.",
       "navigableElements": [
         {
-          "type": "reception desk",
-          "position": "center foreground",
-          "description": "Low, angular reception desk with brushed aluminum and matte black panels."
-        },
-        {
-          "type": "passage entrance",
-          "position": "left midground",
-          "description": "Sleek, dark passage entrance defined by a minimalist, illuminated archway."
-        },
-        {
-          "type": "recessed alcove",
-          "position": "far right background",
-          "description": "Subtle, recessed alcove with a soft internal glow, possibly a fitting room."
-        }
-      ],
-      "dominantElements": [
-        "polished black concrete floor with LED strips",
-        "angular reception desk",
-        "avant-garde clothing display",
-        "faceted brushed aluminum pillar",
-        "mirrored glass wall sections"
-      ],
-      "uniqueIdentifiers": [
-        "geometric LED floor patterns",
-        "neon pink backlit mannequins",
-        "brushed aluminum pillar with blue LEDs",
-        "mirrored and matte black wall combination"
-      ],
-      "searchDesc": "Modern minimalist boutique with black, silver, blue, and pink LEDs.",
-      "slug": "interior-of-the-cutting-edge"
-    },
-    "loc-1764764518991-pd8cxgp42": {
-      "id": "loc-1764764518991-pd8cxgp42",
-      "type": "host",
-      "name": "Xylos",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A vast, arid desert landscape under a clear, bright blue sky.",
-        "colorsAndLighting": "Bright, arid daylight, dominant reddish-orange and creamy-tan, contrasted with brilliant blue sky and planet.",
-        "atmosphere": "Dry, still, hot, with a sense of ancient, alien conditions. The heat of a distant, alien sun.",
-        "materials": "Rocky, sandy terrain, hints of hardened organic compounds.",
-        "mood": "Awe, wonder, alien grandeur, isolation.",
-        "sounds": "Subtle hum of energy, dry wind, quiet.",
-        "spatialLayout": "Vast, open, with geological formations.",
-        "primary_surfaces": "Sand, rock",
-        "secondary_surfaces": "Compacted earth, bio-materials",
-        "accent_features": "Circuit-board patterns on structures, organic forms, distinct planet.",
-        "dominant": "Creamy-tan",
-        "secondary": "Reddish-orange",
-        "accent": "Vibrant blue, golden-orange",
-        "ambient": "Bright, warm alien sun.",
-        "genre": "Sci-Fi Exploration",
-        "architectural_tone": "Organic biomimicry with futuristic technology",
-        "cultural_tone": "Advanced, scholarly, symbiotic with nature",
-        "materials_base": "Polished organic compounds, hardened bio-materials, ancient rock, compacted earth",
-        "mood_baseline": "Awe and wonder, serene power",
-        "palette_bias": "Earth tones, sky blues, warm golds",
-        "soundscape_base": "Subtle ambient energy hums and natural desert sounds",
-        "flora_base": "Gnarled, leafless trees with flat canopies",
-        "fauna_base": null
-      },
-      "description": "A vast, arid desert world under a clear, bright blue sky, dominated by a large ringed planet. The landscape is shaped by harsh sunlight and wind, creating an environment of stark beauty and extreme conditions.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Ringed planet",
-        "Vast desert"
-      ],
-      "uniqueIdentifiers": [
-        "Ringed planet in sky",
-        "Arid desert"
-      ],
-      "searchDesc": "Arid desert world with a prominent ringed planet and clear blue skies.",
-      "slug": "xylos"
-    },
-    "fe56e54c-6d81-4a89-941d-fd294743801e": {
-      "id": "fe56e54c-6d81-4a89-941d-fd294743801e",
-      "type": "region",
-      "name": "The Whispering Canyons",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Vast, arid desert landscape with natural rock formations and sandy terrain.",
-        "colorsAndLighting": "Bright, arid daylight casting sharp shadows. Dominant reddish-orange and dark brown tones with a clear blue sky.",
-        "atmosphere": "Dry and still air, heat shimmering over distant formations. A sense of profound quiet.",
-        "materials": "Weathered and ancient rocks with a rough, sandy texture; compacted dirt paths.",
-        "mood": "Timelessness, alien grandeur, quiet desolation.",
-        "sounds": "Wind whistling through canyons, subtle shifts of sand.",
-        "spatialLayout": "Open, expansive, with dramatic verticality from rock formations.",
-        "primary_surfaces": "Sand and rock",
-        "secondary_surfaces": "Compacted dirt",
-        "accent_features": "Natural erosion patterns, wind-sculpted rock.",
-        "dominant": "Reddish-orange",
-        "secondary": "Dark brown",
-        "accent": "Sky blue",
-        "ambient": "Bright, harsh daylight with sharp shadows.",
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": null,
-        "materials_base": "Ancient rock, compacted earth",
-        "mood_baseline": "Desolation, awe",
-        "palette_bias": "Earth tones, sky blues",
-        "soundscape_base": "Natural desert sounds",
-        "flora_base": null,
-        "fauna_base": null
-      },
-      "description": "A vast expanse of arid desert characterized by reddish-orange sandy terrain dotted with dark brown rocks. Towering, eroded rock formations and mesas rise dramatically from the desert floor, sculpted by millennia of wind and weather.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Towering rock formations",
-        "Mesas"
-      ],
-      "uniqueIdentifiers": [
-        "Reddish-orange sand",
-        "Dark brown rocks",
-        "Eroded formations"
-      ],
-      "searchDesc": "Arid desert region with towering rock formations and sandy terrain.",
-      "slug": "the-whispering-canyons"
-    },
-    "366b8617-d9a0-4e0f-9be5-8329eeb63a50": {
-      "id": "366b8617-d9a0-4e0f-9be5-8329eeb63a50",
-      "type": "location",
-      "name": "The Lumina Spire",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The Lumina Spire is a colossal organic structure resembling a colossal mushroom or tree, its wide, flat cap adorned with intricate circuit-board patterns and a multitude of blue-paned windows. A towering, multi-tiered, castle-like spire erupts from its center, hinting at advanced functions. The gnarled base, reminiscent of an ancient tree trunk, forms a welcoming arched entrance, grounding the ethereal structure to the alien desert.",
-        "colorsAndLighting": "Bright, arid daylight bathes the scene, casting sharp shadows from the massive structures and rock formations. The creamy-tan of the spire's cap and the reddish-orange of the desert sand dominate, contrasted by the vibrant blue of the windows and the warm golden-orange of the integrated trees. The sky is a brilliant, clear blue, punctuated by a prominent ringed planet.",
-        "atmosphere": "The air is dry and still, carrying the faint scent of sun-baked dust and exotic organic compounds from the spire's structure. A sense of profound quiet pervades, broken only by the subtle hum of internal energy processes from the building. The heat of a distant, alien sun presses down, creating a shimmering haze over the distant rock formations. A feeling of timelessness and alien grandeur hangs heavy in the atmosphere.",
-        "materials": "The main structure appears to be composed of a bio-luminescent, hardened organic material, giving it a smooth yet textured surface resembling polished wood and integrated circuitry. The rocks are weathered and ancient, with a rough, sandy texture, while the paths are compacted dirt. The leafless trees boast smooth, bark-like exteriors and flat, leathery canopies.",
-        "mood": "The Lumina Spire evokes a sense of awe and wonder, a testament to advanced, nature-integrated civilization. It inspires curiosity about its purpose and the beings who inhabit it. There's a feeling of serene power, a blend of ancient wisdom and futuristic innovation, suggesting a place of deep knowledge and sophisticated operation.",
-        "sounds": "Subtle hum, faint wind, distant metallic clicks, organic creaks.",
-        "spatialLayout": "The Lumina Spire is the overwhelming focal point, its immense scale dwarfing the surrounding desert landscape. The building's organic, upward-reaching form creates a sense of verticality, while the flat desert expanse provides a vast, horizontal counterpoint. The presence of the smaller dome and shed suggests a functional complex, with a clear, albeit long, path connecting them.",
-        "primary_surfaces": "Creamy-tan organic cap, reddish-orange sandy terrain, weathered dark brown rocks.",
-        "secondary_surfaces": "Gnarled organic base, dirt path, eroded rock formations.",
-        "accent_features": "Blue window panes, golden-orange tree canopies, circuit-board patterns.",
-        "dominant": "Creamy-tan with extensive coverage.",
-        "secondary": "Reddish-orange sand covering the ground.",
-        "accent": "Vibrant blue in windows and golden-orange on tree canopies.",
-        "ambient": "Bright, warm, slightly hazy daylight.",
-        "genre": null,
-        "architectural_tone": "Organic biomimicry with integrated futuristic technology and castle-like spire elements.",
-        "cultural_tone": "Advanced, scholarly, symbiotic with nature, research-focused.",
-        "materials_base": "Polished organic compounds, hardened bio-materials, ancient rock, compacted earth.",
-        "mood_baseline": "Awe-inspiring, serene, intelligent, ancient.",
-        "palette_bias": "Earth tones, sky blues, warm golds.",
-        "soundscape_base": "Quiet, subtly technological, natural hums.",
-        "flora_base": "Integrated leafless trees.",
-        "fauna_base": "None"
-      },
-      "description": "A massive, organic, futuristic building resembling a mushroom or tree, with a creamy-tan cap covered in circuit-board patterns and blue-paned windows, supported by a gnarled base forming an arched entrance. A multi-tiered, castle-like spire rises from its cap. Integrated leafless trees with golden-orange canopies are part of its structure and float nearby. A smaller dome-shaped building and a rectangular shed are also present.",
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "base",
-          "description": "A grand arched entrance at the base of the spire."
-        },
-        {
-          "type": "stairs",
-          "position": "archway",
-          "description": "Steps leading up from the archway into the spire."
-        },
-        {
-          "type": "path",
-          "position": "foreground",
-          "description": "A winding dirt path leading to the spire and other structures."
-        }
-      ],
-      "dominantElements": [
-        "Massive organic mushroom/tree-like main building",
-        "Multi-tiered castle-like spire",
-        "Integrated leafless trees with golden-orange canopies",
-        "Vast arid desert landscape",
-        "Dominant ringed planet"
-      ],
-      "uniqueIdentifiers": [
-        "Creamy-tan cap with circuit-board patterns",
-        "Blue-paned windows",
-        "Gnarled tree-trunk base",
-        "Floating leafless trees",
-        "Golden-orange canopies"
-      ],
-      "searchDesc": "Organic futuristic mushroom-tree building with spire, blue windows, golden trees in arid desert.",
-      "slug": "the-lumina-spire",
-      "primaryMedia": "media-1764764538111-4cwxxyyfc"
-    },
-    "niche-1764764574148-dy6lotxg1": {
-      "id": "niche-1764764574148-dy6lotxg1",
-      "type": "niche",
-      "name": "interior of The Lumina Spire",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior features colossal, organically curved walls transitioning from gnarled roots to smooth bio-material, adorned with fossilized tree rings and circuit-board etchings. A central golden-orange arched passage dominates, flanked by a creamy-tan structure, while a vaulted bone-white ceiling lattice with blue crystal strands soars above.  The floor is compacted reddish-orange earth with iridescent flecks and bio-luminescent roots.",
-        "colorsAndLighting": "The dominant color is creamy-tan, contrasted by reddish-orange earth and deep brown wood-like framing. Golden-orange light spills from the main arch, while the ceiling emits a gentle, diffused light from blue crystals. Cinematic lighting creates high contrast and dramatic depth.",
-        "atmosphere": "The air feels dry and still, with a profound quiet broken only by subtle technological and organic hums.  A sense of serene power and ancient wisdom permeates the vast, echoing space, suggesting immense scale and a calm, arid environment.",
-        "materials": "Polished creamy-tan bio-material forms the walls and ceiling lattice, contrasting with compacted reddish-orange earth and smooth, polished wood-like organic material.  The ceiling also incorporates polished bone-white bio-materials and thin strands of luminous blue crystal.",
-        "mood": "Evokes awe and wonder, a blend of ancient wisdom and futuristic innovation, inspiring curiosity and a sense of serene, sophisticated operation.",
-        "sounds": "Profound quiet, subtle technological hums, organic creaks, distant metallic clicks.",
-        "spatialLayout": "A vast, soaring interior space with an estimated height of 30 meters, defined by colossal, curving walls that lead to a prominent central arch. The volume expands upwards and inwards towards a vaulted ceiling.",
-        "primary_surfaces": "Polished creamy-tan organic material, compacted reddish-orange earth, polished bone-white bio-materials.",
-        "secondary_surfaces": "Polished deep brown wood-like organic material, bio-luminescent hardened organic material.",
-        "accent_features": "Faint bio-luminescent blue veins in roots, faint circuit-board etchings, luminous blue crystal strands, glowing holographic displays, shimmering energy tendrils.",
-        "dominant": "Creamy-tan (walls, organic material)",
-        "secondary": "Reddish-orange (flooring)",
-        "accent": "Golden-orange (arch light), luminous blue (crystal strands, root veins)",
-        "ambient": "Warm",
-        "genre": null,
-        "architectural_tone": "Organic biomimicry with integrated futuristic technology and castle-like spire elements",
-        "cultural_tone": "Advanced, scholarly, symbiotic with nature, research-focused",
-        "materials_base": "Polished organic compounds, hardened bio-materials, ancient rock, compacted earth materials",
-        "mood_baseline": "Awe-inspiring, serene, intelligent, ancient",
-        "palette_bias": "Earth tones, sky blues, warm golds",
-        "soundscape_base": "Quiet subtly technological natural hums",
-        "flora_base": "Integrated leafless trees flora",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764764574147-f3afxkp08",
-      "description": "The interior of the Lumina Spire, a colossal organic structure with advanced, nature-integrated technology and a scholarly, awe-inspiring mood.",
-      "navigableElements": [
-        {
-          "type": "channel",
-          "position": "right floor",
-          "description": "Shallow, recessed channel with glowing liquid"
+          "type": "door",
+          "position": "entrance",
+          "description": "The doorway immediately behind the viewer, leading outside."
         },
         {
           "type": "archway",
-          "position": "center",
-          "description": "Prominent, centrally located arched passage glowing golden-orange"
+          "position": "right side",
+          "description": "A bold, off-center archway of exposed brick framing a dimly lit passage."
         },
         {
-          "type": "aperture",
-          "position": "left wall",
-          "description": "Rectangular aperture revealing holographic displays"
-        },
-        {
-          "type": "walkway",
-          "position": "far upper left",
-          "description": "Elevated crystalline walkway"
+          "type": "passage",
+          "position": "right side, through archway",
+          "description": "A dimly lit passage inviting further exploration."
         }
       ],
       "dominantElements": [
-        "colossal organically curved walls",
-        "vaulted ceiling lattice",
-        "centrally located arched passage"
+        "illuminated stone pathway",
+        "sales counter",
+        "display racks",
+        "mannequins",
+        "psychedelic graffiti art"
       ],
       "uniqueIdentifiers": [
-        "fossilized tree ring patterns",
-        "integrated circuit-board etchings",
-        "luminous blue crystal strands in ceiling"
+        "electric blue painted brick",
+        "swirling paisley and floral patterns",
+        "acid green outlines",
+        "hot pink and sunshine yellow highlights",
+        "distorted glass panels",
+        "mirrored sales counter",
+        "off-center exposed brick archway"
       ],
-      "searchDesc": "Interior of Lumina Spire: organic walls, glowing arch, crystalline ceiling, holographic displays.",
-      "slug": "interior-of-the-lumina-spire"
+      "searchDesc": "Psychedelic storefront interior: electric blue brick with swirling neon art, a glowing stone path, and eclectic displays.",
+      "slug": "interior-of-the-psychedelic-emporium"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764764017008-nswqs5dcp",
+      "id": "loc-1764767356568-vg1petnje",
       "type": "host",
       "children": [
         {
-          "id": "5a64e82d-4b27-4c3b-8ccd-4c02f34917e9",
+          "id": "25e5f7fd-eef4-47d0-ac49-5d17da24e00b",
           "type": "region",
           "children": [
             {
-              "id": "974689e0-2c58-4369-99fb-5669542ec0cc",
+              "id": "aea3088d-273a-4bcc-81c8-df2951424831",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764764060990-t43p79105",
+                  "id": "niche-1764767396985-djkihusyf",
                   "type": "niche",
                   "children": []
                 }
@@ -464,19 +699,42 @@
       ]
     },
     {
-      "id": "loc-1764764518991-pd8cxgp42",
+      "id": "loc-1764767524279-bfev9w7t5",
       "type": "host",
       "children": [
         {
-          "id": "fe56e54c-6d81-4a89-941d-fd294743801e",
+          "id": "710a2ea3-d301-4376-8dfc-b14cfda6f194",
           "type": "region",
           "children": [
             {
-              "id": "366b8617-d9a0-4e0f-9be5-8329eeb63a50",
+              "id": "679845f2-48cc-447e-9671-dec177096297",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764764574148-dy6lotxg1",
+                  "id": "niche-1764767565259-sfwss9hd9",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764768440138-82r4pdpzs",
+      "type": "host",
+      "children": [
+        {
+          "id": "e32e47dd-b18c-48a7-a03a-4d447921943a",
+          "type": "region",
+          "children": [
+            {
+              "id": "daa58c82-e70d-4dc0-ae89-6675fa4fedfb",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764768479160-khv2qmy1x",
                   "type": "niche",
                   "children": []
                 }
@@ -488,7 +746,8 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764764017008-nswqs5dcp",
-    "loc-1764764518991-pd8cxgp42"
+    "loc-1764767356568-vg1petnje",
+    "loc-1764767524279-bfev9w7t5",
+    "loc-1764768440138-82r4pdpzs"
   ]
 }

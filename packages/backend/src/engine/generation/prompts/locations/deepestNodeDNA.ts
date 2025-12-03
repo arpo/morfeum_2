@@ -65,6 +65,14 @@ OUTPUT (JSON only, no markdown):
     "secondary": "Secondary color and placement",
     "accent": "Accent colors and placement",
     "ambient": "Overall light tone",
+    ${nodeType === 'location' ? `"structure": {
+      "form": "PICK ONE: rectangular, round, cylindrical, spherical, faceted, organic, arched, gothic, irregular",
+      "roofType": "PICK ONE: domed, flat, vaulted, pitched, geodesic, arched, open-sky",
+      "scale": "PICK ONE: small, medium, large",
+      "orientation": "PICK ONE: vertical, horizontal, wide, cubic",
+      "openings": "PICK ONE: large-glass, arched-windows, narrow-slits, open-passages, minimal, none",
+      "functionalType": "PICK ONE: residential, commercial, religious, industrial, civic, entertainment"
+    },` : ''}
     ${nodeType === 'host' ? '"genre": "World genre (cyberpunk, fantasy, etc.)",' : '"genre": null,'}
     "architectural_tone": "DETAILED style (e.g., 'weathered Victorian with Gothic arches, carved molding')",
     "cultural_tone": "Who uses this, what purpose",

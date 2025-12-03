@@ -1,4 +1,4 @@
-export const navigableElementsTemplate = `5. COMPOSITION (MUST include NAVIGABLE ELEMENTS *inside* these layers)
+const navigableElementsTemplate1 = `5. COMPOSITION (MUST include NAVIGABLE ELEMENTS *inside* these layers)
 [COMPOSITION:]
 - **Foreground:**  
   Floor textures, entry-level details, and bases of structures shaped by FORM + SCALE.  
@@ -34,3 +34,17 @@ Make navigable elements highly visible and distinct through:
   - "Corridor entrance bathed in warm orange glow, polished bronze frame" 
   - "Spiral staircase illuminated by bioluminescent vines, contrasting dark metal against pale stone"
   - "Archway with distinct blue-white light spilling through, ornate carved frame"`
+
+const navigableElementsTemplate2 = `5. COMPOSITION
+Embed 2-3 NAVIGABLE ELEMENTS total.
+ALLOWED TYPES: passage, corridor, stairs, ladder, ramp, platform, walkway, opening, hatch, door, object.
+VISIBILITY: Elements MUST be distinct via lighting (glow/spotlight), material contrast, or color pop.
+
+[COMPOSITION]
+- **Foreground:** Floor/entry details. MUST include 1 element.
+  (e.g., "illuminated stone steps [navigable: stairs, left]")
+- **Midground:** Core architecture/walls. MUST include 1-2 elements.
+  (e.g., "spotlit metal archway [navigable: door, right]")
+- **Background:** Dominant spatial cue (Vertical=Height, Horizontal=Depth, Wide=Curve). Optional element.`
+
+export const navigableElementsTemplate = navigableElementsTemplate2;

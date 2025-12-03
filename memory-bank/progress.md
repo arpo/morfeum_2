@@ -25,6 +25,12 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Interior Generation Improvements** (Dec 3): Fixed interior-exterior consistency issues
+  - Added `structure` field to all DNA generation prompts for locations (`deepestNodeDNA.ts`, `parentChainDNA.ts`)
+  - Structure field includes: form, roofType, scale, orientation, openings, functionalType
+  - Fixed form matching: rectangular exterior → rectangular interior (no more circular interiors for rectangular buildings)
+  - Fixed material translation: stone foundation ≠ stone interior walls (wood house → wood paneling interior)
+  - Niches now set structure to null and inherit from parent location
 - **Image Generation Optimization** (Dec 3): Two-step LLM approach for rich exterior images
   - Implemented LLM-synthesized FLUX prompts with composition instructions
   - Added `image_prompt_generation` pipeline step

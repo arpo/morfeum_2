@@ -76,6 +76,16 @@ OUTPUT JSON STRUCTURE:
     "accent": "Accent colors and placement.",
     "ambient": "Overall light tone (warm / cool / neutral).",
     
+    // === ARCHITECTURAL STRUCTURE (conditional - for built spaces only) ===
+    "structure": {
+      "form": "PICK ONE: rectangular, round, cylindrical, spherical, faceted, organic, arched, gothic, irregular",
+      "roofType": "PICK ONE: domed, flat, vaulted, pitched, geodesic, arched, open-sky",
+      "scale": "PICK ONE: small, medium, large",
+      "orientation": "PICK ONE: vertical, horizontal, wide, cubic",
+      "openings": "PICK ONE: large-glass, arched-windows, narrow-slits, open-passages, minimal, none",
+      "functionalType": "PICK ONE: residential, commercial, religious, industrial, civic, entertainment"
+    },  // OR null if not a built structure (natural landscapes, outdoor areas)
+    
     // === CASCADING STYLE ATTRIBUTES (optional - can be null if inherited from parent) ===
     "genre": null,  // NEVER set genre - only host nodes have this
     "architectural_tone": "Short phrase (e.g., 'industrial metallic', 'organic stone') OR null to inherit",
@@ -110,10 +120,30 @@ ${parentContext ? '   - Parent provides: architectural_tone, cultural_tone, colo
    - One field = one purpose
    - Avoid repetition across fields
 
-5. **Output Rules**
+5. **Structure Field (NODE TYPE SPECIFIC)**
+   - **LOCATIONS (type=location)**: MUST populate structure if this is a building, shop, or constructed exterior
+   - **NICHES (type=niche)**: Set structure to **null** - DO NOT create a new structure object
+     * Niches inherit structure from their PARENT location
+     * The interior form MUST match the parent's form (rectangular parent = rectangular interior)
+     * DO NOT change the form (e.g., don't make a circular interior for a rectangular building)
+   - **REGIONS/HOSTS**: Set to NULL
+   - **Natural landscapes**: Set to NULL
+   - When populated for locations, ALL sub-fields are required
+   - Form values: Match exterior geometry (round tower → round, dome → spherical, box → rectangular)
+   - Scale values: small (<15m), medium (15-50m), large (>50m) - estimate from description
+   - Orientation: vertical (towers/spires), horizontal (halls/corridors), wide (domes/arenas), cubic (balanced)
+   - functionalType: CRITICAL for interiors - determines what fixtures/furniture to include
+     * retail/commercial: shops, boutiques, stores → shelves, counters, merchandise displays
+     * residential: homes, apartments → furniture, beds, tables
+     * religious: temples, churches → altars, pews, candles
+     * entertainment: clubs, theaters → seating, stages, bars
+     * industrial: factories, warehouses → machinery, storage
+
+6. **Output Rules**
    - Flat JSON only (no markdown, code fences, or comments)
    - All scene fields required
    - Cascading fields can be null for inheritance
+   - Structure field null for non-architectural spaces
 
 RATIONALE
 - Separates scene details from inheritable style

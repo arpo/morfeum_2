@@ -81,17 +81,24 @@ Think: You walked through a doorway into a new room - you don't see the door any
 
 {{CREATIVITY_INSTRUCTIONS}}
 
-BEFORE creating the interior, infer it from the parent structure:
+BEFORE creating the interior, READ THE PARENT'S STRUCTURE DATA:
 
-1. FORM
-- Match interior shape to exterior geometry:
-  round → circular plan
-  rectangular → straight walls + corners
-  cylindrical/tubular → curved walls
-  faceted/geodesic → geometric framework
-  organic → uneven/natural surfaces, curved walls
-  arched/gothic/roman → interior echoes arch style
-  If exterior is vast open space (e.g., dome, arena), interior should have high ceiling and wide open volume
+1. FORM (MUST MATCH EXTERIOR - NO EXCEPTIONS)
+**CRITICAL: The interior form MUST match the parent's structure.form field exactly.**
+
+FORM MATCHING RULES (MANDATORY):
+- structure.form = \"rectangular\" → Interior MUST have STRAIGHT WALLS and CORNERS (NOT circular/round)
+- structure.form = \"round\" → Interior can have circular plan
+- structure.form = \"cylindrical\" → Interior has curved walls
+- structure.form = \"faceted/geodesic\" → Interior has geometric framework
+- structure.form = \"organic\" → Interior has uneven/natural surfaces
+
+**DO NOT CREATE A CIRCULAR/ROUND INTERIOR FOR A RECTANGULAR BUILDING.**
+A rectangular exterior = rectangular interior with straight walls and 90-degree corners.
+
+Examples:
+- Parent form=\"rectangular\" → \"A large rectangular hall with straight walls meeting at sharp corners...\"
+- Parent form=\"round\" → \"A circular chamber with curved walls...\"
 
 2. CEILING
 - Match ceiling to roof type but seen from inside:
@@ -122,23 +129,72 @@ BEFORE creating the interior, infer it from the parent structure:
 - Horizontal (halls/corridors): emphasize receding linear depth.
 - Wide (domes/arenas): emphasize circular expanse and roof curvature.
 
-6 INTERIOR PROPERTIES:
-- Match the locations characteristics to fot the interior style:
-- If its a shop add shop shelves and counters, mannequins etc
-- If its a temple add altars, statues, candles
-- If its a residential structure add furniture like tables, chairs, beds
-- If its a castle add medieval elements like torches and banners
-- if its a futuristic structure add sci-fi elements like holograms and control panels
+6. INTERIOR FURNISHING (MANDATORY - NOT OPTIONAL):
+Based on the functionalType from the structure data, you MUST include appropriate fixtures.
+The interior should NOT be empty - it must contain objects appropriate to its function.
+
+RETAIL/COMMERCIAL SPACES (shops, boutiques, stores):
+- MUST INCLUDE: Display racks with merchandise (5-10 throughout space)
+- MUST INCLUDE: Sales counter or checkout area in midground
+- MUST INCLUDE: Mannequins with clothing (2-4 positioned asymmetrically)
+- MUST INCLUDE: Shelving units with products
+- Add: Price tags, branded signage, fitting room entrances
+
+RESIDENTIAL SPACES (homes, apartments):
+- MUST INCLUDE: Seating (sofas, chairs, armchairs)
+- MUST INCLUDE: Tables (coffee table, dining table, side tables)
+- MUST INCLUDE: Storage furniture (cabinets, bookshelves)
+- Add: Rugs, curtains, artwork, personal items
+
+RELIGIOUS SPACES (temples, churches, shrines):
+- MUST INCLUDE: Central altar or sacred focal point
+- MUST INCLUDE: Seating or prayer areas (pews, cushions, mats)
+- MUST INCLUDE: Religious symbols, statues, or iconography
+- Add: Candles, incense, ceremonial objects
+
+ENTERTAINMENT SPACES (clubs, bars, theaters):
+- MUST INCLUDE: Seating areas (booths, lounge chairs, bar stools)
+- MUST INCLUDE: Bar counter or service area
+- MUST INCLUDE: Performance area (stage, dance floor, DJ booth)
+- Add: Atmospheric lighting, sound equipment, drink displays
+
+INDUSTRIAL SPACES (factories, warehouses, workshops):
+- MUST INCLUDE: Machinery or workstations
+- MUST INCLUDE: Storage systems (racks, pallets, shelving)
+- MUST INCLUDE: Control panels or monitoring equipment
+- Add: Safety signage, tool storage, transport equipment
+
+CIVIC SPACES (offices, libraries, museums):
+- MUST INCLUDE: Desks, workstations, or display cases
+- MUST INCLUDE: Seating for visitors
+- MUST INCLUDE: Information displays or exhibits
+- Add: Reception areas, wayfinding signage
 
 7. MATERIAL TRANSLATION LOGIC (CRITICAL):
-Translate Exterior Materials into INTERIOR FINISHES. But use interior-appropriate materials.
-• Ext. Glass/Crystal → **Int. ARCHITECTURAL GLAZING (High-Tech Atrium style)**.
-  - *Texture:* Transparent, Reflective, Thin panels (NOT solid blocks).
-  - *Detail:* Visible joining hardware, metal struts, ventilation ducts.
-• Ext. Stone → Int. Polished Stone / Plaster / Masonry (Warm or Dark tones if room is blue).
-• Ext. Wood → Int. Paneling / Beams.
-• Ext. Metal → Int. Supports / Grating / Plating.
-• Ext. Concrete → Int. Smooth Industrial.
+Identify the PRIMARY EXTERIOR WALL MATERIAL and translate it to interior finishes.
+IMPORTANT: Foundation material ≠ Wall material. A stone foundation does NOT mean stone interior walls.
+
+MATERIAL PRIORITY (read the parent's materials description):
+- If exterior walls are WOOD (clapboard, siding, timber, planks) → Interior MUST be wood paneling, wood plaster walls, or exposed timber
+- If exterior walls are STONE (full stone walls, not just foundation) → Interior can be stone/plaster/masonry
+- If exterior walls are BRICK → Interior can be exposed brick or plaster
+- Foundation material (often stone) affects FLOOR only, not walls
+
+TRANSLATION RULES:
+• Ext. Wood Clapboard/Siding → **Int. Wood Paneling, Plaster over Wood Lath, or Exposed Beams**
+  - NOT stone walls. A wooden house has wooden interior walls.
+  - Typical: whitewashed wood panels, exposed timber frame, painted wood trim
+• Ext. Timber Frame → Int. Exposed Beams + Plaster infill or Wood Paneling
+• Ext. Stone (full walls) → Int. Polished Stone / Plaster / Masonry
+• Ext. Brick → Int. Exposed Brick / Plaster / Painted Brick
+• Ext. Glass/Crystal → **Int. ARCHITECTURAL GLAZING (High-Tech Atrium style)**
+• Ext. Metal → Int. Supports / Grating / Plating
+• Ext. Concrete → Int. Smooth Industrial
+
+FOUNDATION vs WALLS (CRITICAL):
+- Stone foundation + Wood walls = Wood paneled interior, stone may appear on FLOOR only
+- Stone foundation does NOT mean stone interior walls
+- Read the "materials" field carefully - what is the PRIMARY WALL material?
 
 
 

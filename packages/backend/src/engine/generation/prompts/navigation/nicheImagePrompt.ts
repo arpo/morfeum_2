@@ -88,6 +88,51 @@ ${mergedDNA.soundscape_base ? `Soundscape Base: ${mergedDNA.soundscape_base}` : 
 ${mergedDNA.flora_base ? `Flora Base: ${mergedDNA.flora_base}` : ''}
 ${mergedDNA.fauna_base ? `Fauna Base: ${mergedDNA.fauna_base}` : ''}
 
+${mergedDNA.structure ? `
+=== ARCHITECTURAL STRUCTURE (from parent location) ===
+Form: ${mergedDNA.structure.form || 'not specified'}
+Roof/Ceiling Type: ${mergedDNA.structure.roofType || 'not specified'}
+Scale: ${mergedDNA.structure.scale || 'not specified'}
+Orientation: ${mergedDNA.structure.orientation || 'not specified'}
+Openings: ${mergedDNA.structure.openings || 'not specified'}
+
+FUNCTIONAL TYPE (CRITICAL - DETERMINES INTERIOR FIXTURES):
+This is a ${mergedDNA.structure.functionalType || 'general'} space.
+${mergedDNA.structure.functionalType === 'commercial' || mergedDNA.structure.functionalType === 'retail' ? 
+`MANDATORY FIXTURES FOR COMMERCIAL/RETAIL:
+- Display shelves and racks (multiple, positioned throughout)
+- Sales counter or checkout area
+- Merchandise on display (clothing on racks, items on shelves)
+- Mannequins or product displays (2-4 minimum)
+- Price tags, signage, branded elements
+- Fitting room entrances if clothing store` : ''}
+${mergedDNA.structure.functionalType === 'residential' ? 
+`MANDATORY FIXTURES FOR RESIDENTIAL:
+- Furniture (sofas, chairs, tables)
+- Storage (cabinets, shelves, wardrobes)
+- Decorative elements (rugs, curtains, art)
+- Lighting fixtures (lamps, chandeliers)` : ''}
+${mergedDNA.structure.functionalType === 'religious' ? 
+`MANDATORY FIXTURES FOR RELIGIOUS:
+- Altar or focal religious element
+- Pews, benches, or prayer areas
+- Religious iconography, statues, symbols
+- Candles, incense holders, ceremonial objects` : ''}
+${mergedDNA.structure.functionalType === 'entertainment' ? 
+`MANDATORY FIXTURES FOR ENTERTAINMENT:
+- Seating areas (booths, chairs, sofas)
+- Bar counter or service area
+- Stage, dance floor, or performance area
+- Lighting rigs, speakers, decorative lighting
+- Tables for drinks/food` : ''}
+${mergedDNA.structure.functionalType === 'industrial' ? 
+`MANDATORY FIXTURES FOR INDUSTRIAL:
+- Machinery, equipment, or workstations
+- Storage racks, pallets, containers
+- Control panels, gauges, monitors
+- Safety equipment, signage` : ''}
+` : ''}
+
 ${fluxInstructionsShort}
 
 ${intent.spaceType === 'exterior' ? `

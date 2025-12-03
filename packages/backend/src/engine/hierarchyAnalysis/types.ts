@@ -9,6 +9,19 @@
 export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'detail' | 'feature';
 
 /**
+ * Architectural Structure - Only for built/constructed spaces
+ * Set to null for natural landscapes, outdoor areas, open environments
+ */
+export interface ArchitecturalStructure {
+  form: string;           // round | rectangular | cylindrical | spherical | faceted | organic | arched | gothic | irregular
+  roofType: string;       // domed | flat | vaulted | pitched | geodesic | arched | open-sky
+  scale: string;          // small (<15m) | medium (15-50m) | large (>50m)
+  orientation: string;    // vertical | horizontal | wide | cubic
+  openings: string;       // large-glass | arched-windows | narrow-slits | open-passages | minimal | none
+  functionalType: string; // residential | commercial | religious | industrial | civic | entertainment | natural
+}
+
+/**
  * Node DNA - Visual and atmospheric profile with cascading style attributes
  * 
  * Contains two types of fields:
@@ -37,6 +50,11 @@ export interface NodeDNA {
   secondary: string;                // Secondary color and placement
   accent: string;                   // Accent colors and placement
   ambient: string;                  // Overall light tone (warm/cool/neutral)
+  
+  // === ARCHITECTURAL STRUCTURE (for interior generation) ===
+  
+  // Only for built/constructed spaces - null for natural landscapes, outdoor areas
+  structure?: ArchitecturalStructure | null;
   
   // === CASCADING STYLE ATTRIBUTES (inheritable, can be sparse) ===
   

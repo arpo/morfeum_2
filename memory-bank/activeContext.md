@@ -2,6 +2,59 @@
 
 ## Recent Changes (2025-12-03)
 
+### Interior Generation Improvements (Dec 3, 2025)
+- **Problem 1**: Interior niches didn't match parent location's `structure.form` (rectangular building → circular interior)
+- **Problem 2**: Wooden houses were getting stone interior walls (LLM used foundation material instead of wall material)
+- **Problem 3**: Structure field was only on niches, not on locations
+
+**Root Causes Identified:**
+1. Three different DNA generation prompts exist (`deepestNodeDNA.ts`, `parentChainDNA.ts`, `nodeDNAGeneration.ts`) - only one had structure field
+2. Niches were generating their own structure instead of setting it to null and inheriting from parent
+3. Material translation logic didn't distinguish between primary wall material and foundation material
+
+**Fixes Implemented:**
+
+1. **Added `structure` field to all DNA prompts for locations:**
+   - `deepestNodeDNA.ts` - Now includes structure object when nodeType === 'location'
+   - `parentChainDNA.ts` - Added structure object to location DNA template
+   - `nodeDNAGeneration.ts` - Already had it, but clarified niches must set it to null
+
+2. **Strengthened form matching in `interiorInstructions.ts`:**
+   ```
+   1. FORM (MUST MATCH EXTERIOR - NO EXCEPTIONS)
+   - structure.form = "rectangular" → Interior MUST have STRAIGHT WALLS and CORNERS (NOT circular/round)
+   - structure.form = "round" → Interior can have circular plan
+   **DO NOT CREATE A CIRCULAR/ROUND INTERIOR FOR A RECTANGULAR BUILDING.**
+   ```
+
+3. **Fixed material translation logic:**
+   - Added "FOUNDATION vs WALLS" rule: Stone foundation + Wood walls = Wood paneled interior
+   - Clarified that foundation material affects FLOOR only, not walls
+   - Wood clapboard/siding exterior → Wood paneling interior (NOT stone)
+
+4. **Updated niche structure rules:**
+   - Niches must set structure to **null** - DO NOT create a new structure object
+   - Interior form MUST match the parent's form (rectangular parent = rectangular interior)
+
+**Files Modified:**
+- `packages/backend/src/engine/generation/prompts/locations/deepestNodeDNA.ts`
+- `packages/backend/src/engine/generation/prompts/locations/parentChainDNA.ts`
+- `packages/backend/src/engine/generation/prompts/locations/nodeDNAGeneration.ts`
+- `packages/backend/src/engine/generation/prompts/navigation/interiorInstructions.ts`
+- `packages/backend/src/engine/generation/prompts/navigation/nicheImagePrompt.ts`
+
+**Structure Field Details:**
+```typescript
+structure: {
+  form: "rectangular | round | cylindrical | spherical | faceted | organic | arched | gothic | irregular",
+  roofType: "domed | flat | vaulted | pitched | geodesic | arched | open-sky",
+  scale: "small | medium | large",
+  orientation: "vertical | horizontal | wide | cubic",
+  openings: "large-glass | arched-windows | narrow-slits | open-passages | minimal | none",
+  functionalType: "residential | commercial | religious | industrial | civic | entertainment"
+}
+```
+
 ### Image Generation Optimization (Dec 3, 2025)
 - **Problem**: Initial world tree exterior images looked generic and didn't match DNA or interior images
 - **Root Cause**: First-step image prompt was too simple - just concatenating DNA fields without proper synthesis
