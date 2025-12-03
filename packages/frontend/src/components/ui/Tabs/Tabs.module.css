@@ -55,7 +55,7 @@
 
 .content {
   flex-grow: 1;
-  overflow: visible; /* Changed from hidden to allow dropdowns to render outside */
+  overflow: hidden;
   background-color: rgba(var(--color-bg-rgb, 0, 0, 0), 0.0);
   display: flex;
   flex-direction: column;
@@ -68,7 +68,8 @@
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.2s ease;
-  overflow: visible; /* Changed to allow dropdowns to render outside */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden;
   min-height: 0; /* Important for nested flex containers to allow shrinking */
 }
 

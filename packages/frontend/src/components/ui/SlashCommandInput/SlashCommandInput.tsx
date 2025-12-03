@@ -1,6 +1,13 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './SlashCommandInput.module.css';
 import { SLASH_COMMANDS, getAvailableCommands, type NodeType } from '@backend/config/navigation';
+
+interface DropdownPosition {
+  top: number;
+  left: number;
+  width: number;
+}
 
 interface SlashCommandInputProps {
   value: string;
@@ -29,9 +36,22 @@ export function SlashCommandInput({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [filteredCommands, setFilteredCommands] = useState<string[]>([]);
   const [isInvalid, setIsInvalid] = useState(false);
+  const [dropdownPosition, setDropdownPosition] = useState<DropdownPosition | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Calculate dropdown position based on input element
+  const updateDropdownPosition = useCallback(() => {
+    if (inputRef.current) {
+      const rect = inputRef.current.getBoundingClientRect();
+      setDropdownPosition({
+        top: rect.top, // Position above the input
+        left: rect.left,
+        width: rect.width
+      });
+    }
+  }, []);
 
   // Get contextually available commands based on current node type
   const availableCommands = useMemo(() => {
@@ -88,6 +108,7 @@ export function SlashCommandInput({
         
         if (matches.length > 0) {
           setFilteredCommands(matches);
+          updateDropdownPosition(); // Calculate position before opening
           setIsOpen(true);
           setSelectedIndex(0);
         } else {
@@ -99,7 +120,7 @@ export function SlashCommandInput({
     } else {
       setIsOpen(false);
     }
-  }, [value, availableCommands]);
+  }, [value, availableCommands, updateDropdownPosition]);
 
   // Scroll active item into view
   useEffect(() => {
@@ -162,30 +183,64 @@ export function SlashCommandInput({
     }
   };
 
+  // Calculate dropdown height for positioning above input
+  const dropdownHeight = filteredCommands.length > 0 ? Math.min(filteredCommands.length * 40, 200) : 40;
+  
+  // Calculate safe position - ensure dropdown stays on screen
+  const getDropdownStyle = () => {
+    if (!dropdownPosition) return {};
+    
+    // Try to position above input, but if that would go off-screen, position below
+    let top = dropdownPosition.top - dropdownHeight - 8;
+    if (top < 10) {
+      // Position below input instead
+      top = dropdownPosition.top + 40; // 40 is approximate input height
+    }
+    
+    return {
+      position: 'fixed' as const,
+      top,
+      left: dropdownPosition.left,
+      width: dropdownPosition.width
+    };
+  };
+
+  // Render dropdown in portal to avoid overflow clipping issues
+  const renderDropdown = () => {
+    if (!isOpen || !dropdownPosition) return null;
+    
+    return createPortal(
+      <div 
+        className={styles.dropdown} 
+        ref={dropdownRef}
+        style={getDropdownStyle()}
+      >
+        {filteredCommands.map((cmd, index) => (
+          <div
+            key={cmd}
+            className={`${styles.commandItem} ${index === selectedIndex ? styles.active : ''}`}
+            onClick={() => selectCommand(cmd)}
+            onMouseEnter={() => setSelectedIndex(index)}
+          >
+            <span className={styles.commandName}>{cmd}</span>
+            {SLASH_COMMANDS[cmd] && (
+              <span className={styles.commandDescription}>
+                {SLASH_COMMANDS[cmd].description}
+              </span>
+            )}
+          </div>
+        ))}
+        {filteredCommands.length === 0 && (
+          <div className={styles.noCommands}>No commands found</div>
+        )}
+      </div>,
+      document.body
+    );
+  };
+
   return (
     <div className={styles.container} ref={containerRef}>
-      {isOpen && (
-        <div className={styles.dropdown} ref={dropdownRef}>
-          {filteredCommands.map((cmd, index) => (
-            <div
-              key={cmd}
-              className={`${styles.commandItem} ${index === selectedIndex ? styles.active : ''}`}
-              onClick={() => selectCommand(cmd)}
-              onMouseEnter={() => setSelectedIndex(index)}
-            >
-              <span className={styles.commandName}>{cmd}</span>
-              {SLASH_COMMANDS[cmd] && (
-                <span className={styles.commandDescription}>
-                  {SLASH_COMMANDS[cmd].description}
-                </span>
-              )}
-            </div>
-          ))}
-          {filteredCommands.length === 0 && (
-            <div className={styles.noCommands}>No commands found</div>
-          )}
-        </div>
-      )}
+      {renderDropdown()}
       <input
         ref={inputRef}
         type="text"

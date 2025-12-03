@@ -43,18 +43,14 @@
 }
 
 .dropdown {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  width: 100%;
+  /* Position set inline via JS for fixed positioning */
   max-height: 200px;
   overflow-y: auto;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  z-index: 1000;
-  margin-bottom: var(--spacing-xs);
+  z-index: 9999; /* Higher z-index for fixed position dropdown */
   display: flex;
   flex-direction: column;
 }
