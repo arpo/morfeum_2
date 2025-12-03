@@ -1,244 +1,262 @@
 {
   "nodes": {
-    "loc-1764761403600-bcr0j87u4": {
-      "id": "loc-1764761403600-bcr0j87u4",
+    "loc-1764761851885-xsmubrcur": {
+      "id": "loc-1764761851885-xsmubrcur",
       "type": "host",
       "name": "London",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A cityscape of immense variety, ranging from grand Victorian and Georgian architecture to sleek modern skyscrapers and historic, weathered stone buildings. A constant hum of activity characterizes its visual presence.",
-        "colorsAndLighting": "A complex interplay of natural light, often softened by cloud cover, contrasted with the warm glow of streetlights, illuminated buildings, and neon signage, especially in entertainment districts. Dominant colors are muted greys, bricks, and stone, punctuated by vibrant lights.",
-        "atmosphere": "A dynamic and multifaceted atmosphere, from the stately calm of its historic squares to the frenetic energy of its commercial centers. The air carries the faint scent of rain, exhaust, and diverse culinary influences.",
-        "materials": "Predominantly stone, brick, concrete, glass, and steel, with a strong emphasis on durable and often aged materials. Wood is used for detailing and interiors.",
-        "mood": "A blend of historical gravitas, sophisticated urbanity, and a constant undercurrent of innovation and change. It can feel grand, exciting, gritty, or refined depending on the locale.",
-        "sounds": "A pervasive symphony of urban life: distant sirens, the rumble of the Underground, traffic, countless conversations in myriad languages, and the general murmur of millions of people.",
-        "spatialLayout": "A vast and complex network of interconnected districts, featuring grand avenues, tight alleyways, expansive parks, and densely packed urban cores. Layout reflects centuries of organic growth and planned development.",
-        "primary_surfaces": "Stone facades, red brick, concrete, and glass.",
-        "secondary_surfaces": "Asphalt, metalwork, and tiled pathways.",
-        "accent_features": "Ornamental ironwork, decorative stonework, historical statues, and modern public art installations.",
-        "dominant": "Greys, muted browns, and the deep red of brickwork.",
-        "secondary": "The metallic sheen of steel and glass, and the black of asphalt.",
-        "accent": "The golden glow of streetlights and illuminated building windows.",
-        "ambient": "Often diffused, with a characteristic urban haze and the reflective quality of wet streets.",
-        "genre": "Urban Realism",
-        "architectural_tone": "Eclectic and layered, showcasing a vast range of historical styles from Gothic and Victorian to Brutalist and contemporary high-rise, all coexisting within a dynamic urban fabric.",
-        "cultural_tone": "Multicultural, cosmopolitan, and historically significant. It's a global melting pot with a rich heritage of arts, sciences, and societal evolution.",
-        "materials_base": "Durable stone, brick, steel, glass, and aged metals.",
-        "mood_baseline": "Sophisticated, ambitious, and historically resonant.",
-        "palette_bias": "Muted, earthy tones with significant contrast from artificial lighting and colorful accents in specific districts.",
-        "soundscape_base": "A constant, diverse urban hum with underlying mechanical and human activity.",
-        "flora_base": "Parks and tree-lined streets with common temperate flora; more manicured in formal areas, wilder in older districts.",
-        "fauna_base": "Urban-adapted wildlife like pigeons, squirrels, and occasional foxes."
+        "looks": "A grand and varied visual tapestry, ranging from historic grandeur and Victorian aesthetics to sleek, contemporary skyscrapers and modern public spaces. The city presents a sophisticated and multifaceted visual identity.",
+        "colorsAndLighting": "A complex interplay of natural light, often dramatic with changing weather, and a vast array of artificial lighting that ranges from warm, traditional streetlights to the cool, sharp illumination of modern districts. Dominant colors often lean towards muted, sophisticated urban palettes, but are punctuated by vibrant displays.",
+        "atmosphere": "Sophisticated, dynamic, and cosmopolitan. A constant ebb and flow of people and activity, with an underlying sense of historical weight and forward momentum. The air carries a mixture of sophistication and vibrant, global energy.",
+        "materials": "A rich palette of classic materials like stone, brick, and wood, combined with extensive use of glass, steel, and concrete in its modern constructions. A sense of quality and durability is prevalent.",
+        "mood": "Ambitious, cultured, and subtly dramatic. It evokes a sense of vast possibility, intellectualism, and historical significance.",
+        "sounds": "A symphony of urban life: the rumble of the Tube, distant sirens, the murmur of countless languages, street performers, and the general ambient noise of a global city.",
+        "spatialLayout": "Expansive and layered, with distinct neighborhoods, grand avenues, intricate historical cores, and sprawling modern developments. A sense of ordered chaos.",
+        "primary_surfaces": [
+          "historic stone",
+          "red brick",
+          "modern glass facades"
+        ],
+        "secondary_surfaces": [
+          "steel structures",
+          "weathered concrete",
+          "polished granite"
+        ],
+        "accent_features": [
+          "ornate stonework",
+          "iconic statues",
+          "neon signage in entertainment districts"
+        ],
+        "dominant": "Muted urban grays and earthy browns, often reflecting the prevalent stone and brick.",
+        "secondary": "A wide range of secondary colors appear in signage, cultural displays, and parkland.",
+        "accent": "Pops of color come from diverse sources: red buses, black cabs, vibrant market goods, and the lighting of entertainment areas.",
+        "ambient": "Generally subdued and sophisticated, with pockets of intense color and light.",
+        "genre": "Urban Realism / Modern Metropolis",
+        "architectural_tone": "A grand fusion of historic and contemporary styles, from Victorian and Edwardian to Brutalist and High-Tech Modernism. Characterized by scale, material diversity, and often, a sense of imposing or elegant design.",
+        "cultural_tone": "Cosmopolitan, trend-setting, and deeply historic. A fusion of global influences with a distinct British identity, valuing both tradition and innovation.",
+        "materials_base": "A sophisticated blend of classic building materials and modern industrial elements, emphasizing quality and durability.",
+        "mood_baseline": "Ambitious, cultured, and grand, with an underlying energy of constant evolution.",
+        "palette_bias": "Favors sophisticated, muted tones as a base, but readily incorporates vibrant accents through its diverse cultural and commercial activities.",
+        "soundscape_base": "A complex, layered urban soundscape that is a hallmark of a major global city.",
+        "flora_base": "Well-maintained parks and gardens featuring classic British flora, alongside street trees.",
+        "fauna_base": "Common urban wildlife such as pigeons, squirrels, and various bird species."
       },
-      "description": "A sprawling metropolis steeped in history, where ancient traditions blend seamlessly with cutting-edge modernity. London is a global hub of culture, finance, and innovation, offering a diverse tapestry of experiences.",
-      "navigableElements": [],
+      "description": "A globally iconic metropolis, blending centuries of history with cutting-edge modernity. It's a city of diverse cultures, iconic landmarks, and a constant thrum of innovation and tradition.",
+      "navigableElements": [
+        "historic districts",
+        "modern business centers",
+        "parks",
+        "river Thames"
+      ],
       "dominantElements": [
-        "Iconic landmarks",
-        "historic architecture"
+        "iconic architecture",
+        "cultural institutions",
+        "transportation hubs"
       ],
       "uniqueIdentifiers": [
-        "Distinctive red telephone boxes",
-        "black cabs",
-        "the Tube"
+        "distinctive boroughs",
+        "underground railway system",
+        "royal heritage"
       ],
-      "searchDesc": "London: A global city blending history, culture, and diverse urban landscapes.",
+      "searchDesc": "Experience the grandeur of London, a city of historic sites, vibrant culture, and modern marvels.",
       "slug": "london"
     },
-    "2dbfe0f5-213a-4c6c-91ce-925e8adc40a0": {
-      "id": "2dbfe0f5-213a-4c6c-91ce-925e8adc40a0",
+    "a82bc8ee-b2fd-445f-b8a6-1bb2a5e17f67": {
+      "id": "a82bc8ee-b2fd-445f-b8a6-1bb2a5e17f67",
       "type": "region",
       "name": "Camden",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A visually diverse area with a strong street art presence, contrasting historical architecture with vibrant, modern pop-ups and market stalls. A constant flow of unique individuals defines its visual character.",
-        "colorsAndLighting": "A chaotic but exciting mix of natural daylight filtered through market awnings, punctuated by the vibrant, often neon, artificial lighting of independent shops and bars at night. Colors are bold and varied.",
-        "atmosphere": "Energetic and bustling, filled with the sounds of diverse music, chatter, and street performances. The air is thick with the scent of international street food and a palpable sense of creative freedom.",
-        "materials": "A utilitarian and eclectic mix, featuring weathered wood, corrugated metal, vibrant painted surfaces, exposed brick, and a strong presence of textiles from market stalls. Reclaimed and repurposed materials are common.",
-        "mood": "Excited, rebellious, and creatively charged. It's a mood of discovery, of finding the unexpected and embracing individuality.",
-        "sounds": "A rich tapestry of street music, market vendor calls, diverse languages, distant traffic, and the hum of a busy urban environment. Often amplified by live music from pubs and clubs.",
-        "spatialLayout": "Densely packed with narrow streets, sprawling market areas, and intimate side alleys. Layout feels organic and somewhat chaotic, designed for exploration and spontaneous encounters.",
-        "primary_surfaces": "Painted brickwork, weathered wood, corrugated metal panels, and canvas awnings.",
-        "secondary_surfaces": "Concrete paving, metal grates, posters, and signage.",
-        "accent_features": "Graffiti art, neon signs for shops and venues, unique street art installations, and colorful market stall decorations.",
-        "dominant": "A wide spectrum of bold, saturated colors from market displays and street art.",
-        "secondary": "Muted tones of brick, metal, and weathered wood.",
-        "accent": "Pulsating neon and vibrant artificial light.",
-        "ambient": "Dynamic and varied, shifting from bright daylight to the artificial glow of evening.",
+        "looks": "A visually stimulating mix of gritty urban textures, bold street art, and eclectic market displays. Colors are often saturated and varied, with a strong presence of contrasting elements.",
+        "colorsAndLighting": "Dynamic and often chaotic. Natural daylight is often broken by the shadows of narrow streets and the bright, artificial lights of market stalls and shopfronts. Colors are a riot of market hues, graffiti, and neon.",
+        "atmosphere": "Energetic, bustling, and slightly rebellious. A constant hum of activity, with sounds of street performers, market chatter, and distant music.",
+        "materials": "A blend of raw urban materials like brick, concrete, and metal, juxtaposed with fabrics, plastics, and repurposed items found in market stalls. Weathered textures are common.",
+        "mood": "Creative, rebellious, and independent. It evokes a sense of freedom and self-expression, with an undercurrent of edgy cool.",
+        "sounds": "A rich tapestry of urban sound: lively market chatter, buskers, diverse music genres spilling from venues, and the general hum of a busy metropolis.",
+        "spatialLayout": "Dense and labyrinthine in parts, with winding alleys and open market squares. A strong sense of organic growth and layered complexity.",
+        "primary_surfaces": [
+          "brick",
+          "concrete",
+          "weathered wood"
+        ],
+        "secondary_surfaces": [
+          "metal scaffolding",
+          "canvas awnings",
+          "graffiti"
+        ],
+        "accent_features": [
+          "vibrant street art",
+          "quirky signage",
+          "market decorations"
+        ],
+        "dominant": "Varies, but often includes earthy tones and strong primaries from street art and market goods.",
+        "secondary": "Grays and muted urban tones providing a backdrop.",
+        "accent": "Bright, saturated colors from street art, fashion, and market displays.",
+        "ambient": "Variable, often a mix of natural light and colorful artificial illumination from stalls and signage.",
         "genre": null,
-        "architectural_tone": "Eclectic urbanism with strong influences from street art, market culture, and post-industrial grit. Features a mix of utilitarian structures and expressive, often temporary, additions.",
-        "cultural_tone": "Alternative, bohemian, and trendsetting. It's a hub for subcultures, live music, independent fashion, and artistic expression.",
-        "materials_base": "Reclaimed industrial materials, painted wood, metal, and textiles.",
-        "mood_baseline": "Rebellious, creative, and energetic.",
-        "palette_bias": "Bold, high-contrast, and eclectic, favoring saturated colors and artificial light accents.",
-        "soundscape_base": "Diverse and cacophonous, a mix of street life, music, and human activity.",
+        "architectural_tone": "Eclectic urban vernacular with strong bohemian and street-art influences. Not rigidly defined, but a blend of functional spaces adorned with creative expression.",
+        "cultural_tone": "Alternative, fashion-forward, and counter-cultural. A melting pot of subcultures and artistic expression.",
+        "materials_base": "Raw urban materials layered with found objects and brightly colored fabrics.",
+        "mood_baseline": "Energetic, slightly chaotic, and independently spirited.",
+        "palette_bias": "High contrast, with a strong tendency towards vibrant, saturated colors appearing against muted urban backdrops.",
+        "soundscape_base": "Dynamic and layered, with a strong emphasis on human activity and diverse music.",
         "flora_base": null,
         "fauna_base": null
       },
-      "description": "A vibrant, eclectic neighborhood known for its unique shops, bustling markets, and alternative culture. Camden pulsates with a youthful, creative energy, drawing in trendsetters and subculture enthusiasts.",
-      "navigableElements": [],
+      "description": "A vibrant and eclectic district in London, renowned for its bustling markets, alternative culture, and a rich history of music and art. It pulsates with a bohemian energy and a strong sense of individuality.",
+      "navigableElements": [
+        "markets",
+        "alleys",
+        "performance venues"
+      ],
       "dominantElements": [
-        "Camden Market stalls",
-        "iconic music venues"
+        "street art",
+        "independent shops",
+        "market stalls"
       ],
       "uniqueIdentifiers": [
-        "Graffiti art",
-        "street performers",
-        "distinctive market architecture"
+        "graffiti-covered walls",
+        "diverse street food",
+        "live music posters"
       ],
-      "searchDesc": "Camden: Vibrant markets, alternative fashion, and eclectic street culture in London.",
+      "searchDesc": "Explore Camden's bohemian markets, vibrant street art, and alternative music scene.",
       "slug": "camden"
     },
-    "5899e9f7-093c-491a-b483-8fe5efeb7972": {
-      "id": "5899e9f7-093c-491a-b483-8fe5efeb7972",
+    "59f51f86-f554-4141-a19b-33a24411e010": {
+      "id": "59f51f86-f554-4141-a19b-33a24411e010",
       "type": "location",
-      "name": "The Style Haven",
+      "name": "The Style Syndicate",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The facade of The Style Haven is a striking composition of dark, textured materials, with sharp, almost geometric angles that convey an avant-garde aesthetic. Prominent, jagged metal frames enclose a large, irregularly shaped display window on the left, showcasing provocative fashion. The main entrance is a robust, industrial-style door centrally located, flanked by the building's angular structure. The overall scale feels medium-sized, designed to make a bold statement on the street.",
-        "colorsAndLighting": "The dominant exterior colors are deep charcoals and matte blacks, creating a dramatic and understated base. This is contrasted by the vibrant, pulsating interior light that spills from the display window and the subtle, cool blue glow emanating from the pathway lights. The light feels artificial and designed to highlight the fashion within.",
-        "atmosphere": "The air around The Style Haven feels charged with a subtle energy, hinting at the pulsating nightlife and creative spirit of Camden. The temperature feels neutral, neither too warm nor too cold, designed to draw people in. There's a sense of anticipation, a whisper of excitement about the unique styles hidden behind the formidable exterior.",
-        "materials": "The primary materials are rough-textured, dark brickwork or possibly blackened concrete panels, contrasted with sharp, matte black or dark brushed metal framing around the display window and door. The pathway utilizes worn cobblestones with integrated, durable LED elements. The main door appears to be solid, heavy steel with substantial brushed nickel hardware.",
-        "mood": "The mood is one of daring self-expression and confident individuality. It evokes a sense of edgy sophistication and urban coolness, appealing to those who embrace unconventional style and are unafraid to make a statement. There's an allure of exclusivity and trendsetting.",
-        "sounds": "Distant urban hum, muffled bass from interior music, street chatter, occasional metal clinks.",
-        "spatialLayout": "The building has a somewhat compact footprint with a deliberately unconventional, angular facade that juts out slightly. The primary focal point is the large, central display window and the main entrance. Depth is created by the contrast between the dark exterior and the glowing interior, and by the illuminated pathway leading to the entrance.",
-        "primary_surfaces": "Rough, dark textured brickwork; matte black metal cladding.",
-        "secondary_surfaces": "Brushed nickel hardware on the door; cobblestone paving with integrated lighting.",
-        "accent_features": "Jagged, angular metal framing; pulsating interior light visible through display window; cool blue pathway illumination.",
-        "dominant": "Deep charcoal and matte black covering approximately 70% of the facade.",
-        "secondary": "Brushed nickel on door hardware and subtle structural accents.",
-        "accent": "Vibrant, shifting neon-like interior light and cool blue pathway LEDs.",
-        "ambient": "Neutral to slightly cool white, with strategic blue accents.",
+        "looks": "The storefront is a contemporary, sleek design with a large glass facade that wraps around the corner. It features a slightly cantilevered upper level, giving it a modern, edgy silhouette. The entrance is framed by polished chrome, drawing the eye inwards.",
+        "colorsAndLighting": "The primary colors are deep charcoal and electric blue, contrasted by neon pink signage and the vibrant, colorful clothing displayed within. Lighting is predominantly bright and artificial, with spotlights highlighting the window displays and a warm, inviting glow from the interior.",
+        "atmosphere": "The air is electric and buzzy, with a palpable sense of urban cool. It feels perpetually like a Friday night, with an undercurrent of excitement and possibility. The street is usually bustling, with the sounds of distant music and chatter filtering in.",
+        "materials": "The facade primarily consists of large, seamless panes of tempered glass and brushed aluminum or polished chrome accents. The signage is made of illuminated acrylic or neon.",
+        "mood": "Confident, alluring, and playfully provocative. It evokes a sense of belonging to a fashionable, forward-thinking crowd, promising a night of unforgettable style and self-expression.",
+        "sounds": "Upbeat electronic music, street chatter, distant sirens, footsteps on pavement.",
+        "spatialLayout": "The storefront is relatively wide and shallow, with the main display area visible from the street. The entrance is centrally located, leading directly into the retail space.",
+        "primary_surfaces": "Glossy glass, polished metal, matte painted panels",
+        "secondary_surfaces": "Illuminated acrylic, brushed aluminum",
+        "accent_features": "Neon signage, dynamic mannequin poses, abstract sculptural elements",
+        "dominant": "Deep charcoal with large coverage on facade panels",
+        "secondary": "Electric blue accents around signage and window frames",
+        "accent": "Neon pink signage, pops of vibrant clothing colors in windows",
+        "ambient": "Bright, artificial, spotlighting",
         "genre": null,
-        "architectural_tone": "Post-industrial brutalism with sharp, deconstructivist angles; featuring heavy, dark textured concrete or blackened brickwork, exposed raw metal framing with a matte finish, and utilitarian-inspired industrial fixtures. Windows are often oversized and unusually shaped, prioritizing dramatic display over traditional symmetry.",
-        "cultural_tone": "This is a destination for subculture fashion enthusiasts and trendsetters, particularly those drawn to alternative and club-centric styles. It caters to a younger, urban demographic seeking unique pieces and an immersive shopping experience that reflects the vibrant, edgy spirit of Camden's creative scene.",
-        "materials_base": "Reclaimed industrial metals, raw concrete, dark stained wood, distressed leather, exposed steel, frosted or colored glass.",
-        "mood_baseline": "Urban grit, confident rebellion, expressive individuality, avant-garde cool.",
-        "palette_bias": "Deep, dark tones with high-contrast artificial lighting; punctuated by bold, often neon, accent colors.",
-        "soundscape_base": "Urban ambient noise, pulsating electronic music, industrial hums, echoing footsteps.",
+        "architectural_tone": "Modern commercial with minimalist clean lines, sharp angles, and extensive use of glass and metal.",
+        "cultural_tone": "Young, fashion-conscious urbanites seeking cutting-edge club wear and statement pieces.",
+        "materials_base": "Sleek, contemporary, high-sheen",
+        "mood_baseline": "Excited, glamorous, edgy",
+        "palette_bias": "Cool tones with high-contrast bright accents",
+        "soundscape_base": "Urban nightlife, electronic beats",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A cool club wear store, featuring edgy fashion and trendy accessories.",
+      "description": "A cool club wear store, with trendy mannequins and vibrant window displays.",
       "navigableElements": [
         {
           "type": "door",
-          "position": "center foreground",
-          "description": "A heavy, black industrial-style door with oversized, brushed nickel hardware. It's slightly ajar, revealing a sliver of vibrant interior light."
-        },
-        {
-          "type": "window",
-          "position": "left facade",
-          "description": "A large, irregularly shaped display window, bordered by jagged, matte black metal. It showcases a mannequin draped in shimmering, iridescent fabric."
-        },
-        {
-          "type": "path",
-          "position": "leading to entrance",
-          "description": "A narrow, worn cobblestone path, dimly lit by integrated LED strips that cast a cool blue glow, leading directly to the main entrance."
-        },
-        {
-          "type": "door",
-          "position": "right facade, partially obscured",
-          "description": "A smaller, unmarked metal service door, providing a more discreet entry point, set flush with the brickwork."
+          "position": "center",
+          "description": "double glass doors"
         }
       ],
       "dominantElements": [
-        "Jagged, angular facade made of dark, textured materials.",
-        "Large, provocative display window with dynamic lighting.",
-        "Industrial-style main entrance with prominent hardware.",
-        "Integrated, cool-toned pathway lighting."
+        "boldly lit window displays",
+        "stylized mannequins",
+        "a striking storefront facade"
       ],
       "uniqueIdentifiers": [
-        "Angular, almost sculptural facade.",
-        "Bold, contrasting color scheme of dark exteriors with vibrant internal glow.",
-        "Industrial-chic metalwork details around windows and doors.",
-        "Unconventional display window shapes."
+        "fluorescent pink signage",
+        "a polished chrome awning",
+        "abstract art installation on the facade"
       ],
-      "searchDesc": "Edgy club wear store in Camden, London, with industrial facade and striking display windows.",
-      "slug": "the-style-haven",
-      "primaryMedia": "media-1764761427794-ysbvbcu5q"
+      "searchDesc": "Trendy club wear store in Camden, London with vibrant window displays and stylized mannequins.",
+      "slug": "the-style-syndicate",
+      "primaryMedia": "media-1764761872603-tbbfw71ck"
     },
-    "niche-1764761452034-jtgjpiuji": {
-      "id": "niche-1764761452034-jtgjpiuji",
+    "niche-1764761897948-3suc9jbxt": {
+      "id": "niche-1764761897948-3suc9jbxt",
       "type": "niche",
-      "name": "interior of The Style Haven",
+      "name": "interior of The Style Syndicate",
       "spaceType": "interior",
       "dna": {
-        "looks": "The space is an immediate immersion into post-industrial brutalism, characterized by sharp, deconstructivist angles. Heavy, dark textured concrete forms the primary structure, accented by exposed raw metal framing with a matte finish. A dramatic, angular opening ahead frames a view into a deeper section, bathed in vibrant, neon-like light.",
-        "colorsAndLighting": "Deep charcoal and matte black dominate the surfaces, creating a somber base. Pulsating, vibrant interior light, akin to neon, emanates from the opening ahead, contrasting with the cool blue LED strip defining the passage. Focused spotlights illuminate key displays.",
-        "atmosphere": "The air feels dense and charged with an urban, edgy sophistication. A sense of controlled chaos and anticipation permeates the space, encouraging exploration into its shadowed depths and brightly lit focal points. The cool, hard surfaces contribute to a stark yet alluring environment.",
-        "materials": "Rough, dark textured concrete forms the walls and floor. Exposed raw steel beams create a complex, faceted ceiling structure. Matte black metal frames prominent openings, while polished metal accents highlight the display alcove.",
-        "mood": "The mood is one of daring self-expression and confident individuality, evoking edgy sophistication and urban coolness.",
-        "sounds": "Distant industrial hum, subtle electronic undertones, echoing footsteps.",
-        "spatialLayout": "An asymmetrical, L-shaped niche that immediately draws the eye diagonally towards a central display and a descending passage. The layout emphasizes depth and encourages exploration into different zones.",
-        "primary_surfaces": "Textured dark concrete (walls, floor), exposed raw steel beams (ceiling).",
-        "secondary_surfaces": "Matte black metal framing, polished metal for display.",
-        "accent_features": "Cool blue LED floor strip, focused spotlight on avant-garde garment.",
-        "dominant": "Deep charcoal and matte black (70%)",
-        "secondary": "Dark concrete",
-        "accent": "Pulsating vibrant interior light (neon-like), cool blue LED",
+        "looks": "The interior features a polished charcoal concrete floor with subtle electric blue LED strip lighting forming geometric patterns. Matte charcoal walls have sharp, angular recessions. In the midground, a recessed doorway on the right glows with soft neon pink light, framed by polished chrome. Abstract chrome sculptures are strategically placed. The background reveals a soaring, faceted ceiling of interlocking brushed aluminum panels illuminated with an electric blue glow.",
+        "colorsAndLighting": "Deep charcoal dominates the surfaces, accented by electric blue LEDs in the floor and ceiling, and a vibrant neon pink at the doorway. Dramatic, sharp lighting highlights the textures and forms.",
+        "atmosphere": "The air feels cool and refined, with a sense of polished sophistication. The lighting creates a futuristic and alluring ambiance, drawing the viewer deeper into the space.",
+        "materials": "Polished charcoal concrete, matte charcoal walls, brushed aluminum panels and display pedestal, and polished chrome accents define the primary materials, all presenting a sleek and modern finish.",
+        "mood": "Confident and alluring, this space exudes an edgy, modern, and urban sophistication, inviting exploration and indulgence.",
+        "sounds": "Subtle electronic hum, distant whispers, soft ambient music.",
+        "spatialLayout": "The space utilizes an off-center one-point perspective with an ultra-wide lens, creating a sense of depth. Geometric patterns on the floor lead inward towards a high ceiling (approx. 12 meters).",
+        "primary_surfaces": "Polished charcoal concrete floor, matte charcoal walls, brushed aluminum ceiling panels.",
+        "secondary_surfaces": "Polished chrome doorway frame.",
+        "accent_features": "Electric blue LED strip lighting, neon pink illuminated doorway, avant-garde jewelry on display, abstract chrome sculptures.",
+        "dominant": "Deep charcoal (walls, floor, ceiling structure)",
+        "secondary": "Electric blue (LED lighting, ceiling illumination)",
+        "accent": "Neon pink (doorway illumination), polished chrome (doorway frame)",
         "ambient": "Cool",
         "genre": null,
-        "architectural_tone": "Post-industrial brutalism with sharp, deconstructivist angles",
-        "cultural_tone": "Destination for subculture fashion enthusiasts and trendsetters seeking unique pieces.",
-        "materials_base": "Concrete, raw matte metal, industrial fixtures",
-        "mood_baseline": "Daring self-expression, confident individuality, edgy sophistication",
-        "palette_bias": "Dominant dark tones with vibrant accent lighting",
-        "soundscape_base": "Urban industrial ambient",
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1764761452033-s34zdmxm9",
-      "description": "A post-industrial brutalist interior niche immediately after entering, defined by sharp, deconstructivist angles and heavy, dark textured concrete walls.",
+      "primaryMedia": "media-1764761897947-y7v9j312c",
+      "description": "A hyperrealistic, architecturally photographic view of a high-fashion boutique interior, characterized by dramatic lighting and sharp focus.",
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "lower left",
-          "description": "Diagonal passage descending into shadow, defined by a cool blue LED strip."
+          "type": "display pedestal",
+          "position": "lower-left third",
+          "description": "A low, off-center display pedestal crafted from brushed aluminum showcasing avant-garde jewelry."
         },
         {
-          "type": "alcove",
-          "position": "center",
-          "description": "Irregular, jagged-edged display alcove with a polished metal frame."
+          "type": "doorway",
+          "position": "right wall",
+          "description": "An illuminated, recessed doorway pulsing with soft neon pink light, framed in polished chrome."
         },
         {
-          "type": "opening",
-          "position": "ahead",
-          "description": "Dramatic, angular opening to a deeper segment of the shop, framed by matte black metal."
+          "type": "retail area",
+          "position": "far center",
+          "description": "The space recedes into a deeper, atmospheric retail area with a soaring, faceted ceiling."
         }
       ],
       "dominantElements": [
-        "Heavy, dark textured concrete walls",
-        "Exposed raw metal framing",
-        "Angular opening",
-        "Jagged-edged display alcove",
-        "Faceted steel beam ceiling"
+        "polished charcoal concrete floor",
+        "matte charcoal walls",
+        "faceted brushed aluminum ceiling",
+        "abstract chrome sculptures",
+        "display pedestal",
+        "recessed doorway"
       ],
       "uniqueIdentifiers": [
-        "Deconstructivist angles",
-        "Pulsating neon-like interior light",
-        "Blue LED floor strip",
-        "Avant-garde garment display"
+        "geometric LED floor lighting",
+        "pulsing neon pink doorway",
+        "soaring faceted aluminum ceiling"
       ],
-      "searchDesc": "Brutalist niche with deconstructivist angles, dark concrete, matte metal, and vibrant neon light.",
-      "slug": "interior-of-the-style-haven"
+      "searchDesc": "Chic, modern boutique with charcoal, blue, and pink accents; dramatic lighting.",
+      "slug": "interior-of-the-style-syndicate"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764761403600-bcr0j87u4",
+      "id": "loc-1764761851885-xsmubrcur",
       "type": "host",
       "children": [
         {
-          "id": "2dbfe0f5-213a-4c6c-91ce-925e8adc40a0",
+          "id": "a82bc8ee-b2fd-445f-b8a6-1bb2a5e17f67",
           "type": "region",
           "children": [
             {
-              "id": "5899e9f7-093c-491a-b483-8fe5efeb7972",
+              "id": "59f51f86-f554-4141-a19b-33a24411e010",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764761452034-jtgjpiuji",
+                  "id": "niche-1764761897948-3suc9jbxt",
                   "type": "niche",
                   "children": []
                 }
@@ -250,6 +268,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764761403600-bcr0j87u4"
+    "loc-1764761851885-xsmubrcur"
   ]
 }

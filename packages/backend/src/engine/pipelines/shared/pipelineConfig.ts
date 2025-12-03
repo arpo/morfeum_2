@@ -16,7 +16,7 @@ export interface PipelineStep {
 export const PIPELINE_STEPS = {
   worldTree: [
     { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 2000 },
-    { id: 'deepest_dna_generation', name: 'Creating DNA', duration: 10000 },
+    { id: 'deepest_dna_generation', name: 'Creating DNA', duration: 6000 },
     { id: 'image_prompt_generation', name: 'Crafting Visual', duration: 3000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2500 },
     { id: 'parent_dna_generation', name: 'Building World', duration: 9000 },
