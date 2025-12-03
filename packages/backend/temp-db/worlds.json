@@ -1,1181 +1,253 @@
 {
   "nodes": {
-    "loc-1764687588822-d2zf73e48": {
-      "id": "loc-1764687588822-d2zf73e48",
+    "loc-1764754468707-9uohbbywy": {
+      "id": "loc-1764754468707-9uohbbywy",
       "type": "host",
       "name": "London",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A visually rich tapestry of historical and modern architectural styles. Grand Victorian and Gothic structures with intricate stone carvings and imposing facades share space with sleek, contemporary glass and steel skyscrapers. The city is characterized by a dense, often layered urban fabric, with narrow historic streets opening into grand boulevards.",
-        "colorsAndLighting": "A generally muted palette dominated by greys, browns, and deep reds of brick and stone, punctuated by the metallic sheen of modern structures. Lighting can range from the soft, diffused glow of overcast skies to the warm, inviting glow of streetlights and illuminated buildings at night.",
-        "atmosphere": "A bustling, energetic, and sometimes grimy urban atmosphere. The air carries the scent of damp stone, exhaust fumes, and occasional rain. Weather is often characterized by mild temperatures, frequent cloud cover, and the ever-present possibility of rain.",
-        "materials": "Predominantly stone, brick, and timber in older structures, with extensive use of glass, steel, and concrete in modern developments. Pavement and cobblestones are common for streets and pathways.",
-        "mood": "A blend of historical gravitas and contemporary dynamism. It evokes a sense of enduring legacy, constant activity, and a somewhat reserved yet determined spirit.",
-        "sounds": "Traffic hum, distant sirens, train rumbles, chatter, street performers, occasional chimes.",
-        "spatialLayout": "A sprawling, complex urban organism with a distinct historical core that has expanded outwards. Layers of development are evident, with subterranean transport networks and vertical growth in newer districts.",
-        "primary_surfaces": "Brick, stone, concrete, glass",
-        "secondary_surfaces": "Steel, timber, asphalt, cobblestone",
-        "accent_features": "Intricate stonework, wrought iron railings, ornate lampposts, iconic signage, red telephone boxes",
-        "dominant": "Greys and muted earth tones",
-        "secondary": "Reds, deep blues, metallic sheens",
-        "accent": "Gold, brass, bright reds",
-        "ambient": "Neutral to cool",
-        "genre": "Modern",
-        "architectural_tone": "A rich blend of Neo-Gothic, Victorian, and contemporary styles. Expect grand, imposing structures with intricate stone facades, tall arched windows, and ornate detailing in older districts. This contrasts with sleek, minimalist skyscrapers of glass and steel in the financial and modern business centers, creating a visually dynamic juxtaposition.",
-        "cultural_tone": "Diverse, cosmopolitan, and steeped in tradition. A society that values history and heritage while embracing innovation and global influences. A general sense of polite reserve often underlies a bustling and vibrant public life.",
-        "materials_base": "Primarily durable and enduring materials like various types of brick, weathered stone, robust timber, steel, and glass. The emphasis is on materials that can withstand time and urban wear, reflecting a long history of construction and adaptation.",
-        "mood_baseline": "A sense of enduring resilience and constant evolution. There's an underlying gravitas tied to its history, coupled with the energetic pulse of a global, forward-looking city.",
-        "palette_bias": "Dominated by muted, earthy tones. Think of the weathered greys of stone and concrete, the warm browns and reds of brick, and the deep greens of its parks, often offset by the metallic sheen of modern architecture and the occasional vibrant splash of red from its iconic transport.",
-        "soundscape_base": "A consistent hum of urban activity. The baseline is a blend of traffic noise, distant sirens, the rumble of underground trains, and the murmur of human activity, punctuated by more distinct sounds like chimes and announcements.",
-        "flora_base": "Managed urban parks, street trees (oaks, limes), window boxes, hardy urban shrubs",
-        "fauna_base": "Pigeons, urban foxes, squirrels, various small birds, domestic pets"
+        "looks": "A grand and varied visual character, with imposing Victorian and Edwardian structures standing alongside gleaming modern skyscrapers. Historic buildings often feature intricate stone facades, tall windows, and ornate detailing, while newer constructions showcase glass, steel, and bold geometric forms. The scale is immense, with a dense urban fabric stretching as far as the eye can see.",
+        "colorsAndLighting": "Dominated by muted, earthy tones of brick, stone, and aged metal, contrasted with the vibrant hues of modern signage and vehicles. Lighting is typically a mix of natural daylight filtered through clouds, casting soft, diffused light, and the warm glow of streetlamps and building interiors at night.",
+        "atmosphere": "A complex and dynamic atmosphere, characterized by the bustling energy of millions of people. The air can carry the faint scent of rain, exhaust fumes, and sometimes the distant aroma of street food. Weather is famously changeable, with frequent overcast skies, intermittent rain showers, and occasional bursts of sunshine.",
+        "materials": "Predominantly features aged brick, weathered stone, cast iron, and a significant presence of glass and steel in contemporary structures. Timber and slate are common in older residential areas, while bronze and copper adorn many historic monuments and fixtures.",
+        "mood": "A pervasive sense of history and tradition is overlaid with a vibrant, forward-looking energy. It evokes a feeling of both grandeur and grit, of timelessness within constant flux.",
+        "sounds": "Traffic hum, distant sirens, chatter, footsteps, chimes, pub music, bus engines",
+        "spatialLayout": "Organized into distinct boroughs and districts, each with its own character. The River Thames acts as a central artery, with major landmarks and historical areas often clustered around its banks. An intricate network of roads and underground tunnels connects the sprawling urban landscape.",
+        "primary_surfaces": "Brick, Stone, Glass, Steel",
+        "secondary_surfaces": "Cast Iron, Timber, Slate, Concrete",
+        "accent_features": "Ornate lamp posts, red telephone boxes, gilded statues, large public clocks, stained glass windows",
+        "dominant": "Browns, Grays, Muted Reds",
+        "secondary": "Greens, Blues, Whites",
+        "accent": "Gold, Brass, Vibrant Reds",
+        "ambient": "Neutral to Cool",
+        "genre": "Historical Fiction / Modern Urban",
+        "architectural_tone": "A complex fusion of historical architectural styles, including Gothic Revival, Victorian grandeur, Edwardian elegance, and modern Brutalism and Postmodernism. Expect heavy use of brick, stone, and timber in older areas, with intricate detailing like gargoyles, bay windows, and elaborate cornices. Modern districts showcase vast expanses of glass, steel, and concrete, often with sharp, geometric lines.",
+        "cultural_tone": "A cosmopolitan and multicultural melting pot, characterized by a blend of traditional British reserve and a dynamic, globalized outlook. It's a city of established institutions, a thriving arts scene, and a constant influx of diverse communities, fostering both a sense of national identity and a celebration of international influence.",
+        "materials_base": "Brick, Stone, Timber, Cast Iron, Glass, Steel",
+        "mood_baseline": "Resilient, bustling, historic, sophisticated, and sometimes melancholic due to weather and scale.",
+        "palette_bias": "Earthy neutrals (brick, stone), deep grays, muted greens, with accents of rich reds and metallic sheens.",
+        "soundscape_base": "A constant, layered symphony of urban activity: traffic, human voices, public transport, distant construction, and occasional street performers.",
+        "flora_base": "Well-maintained parks and gardens (e.g., Hyde Park, Regent's Park), street trees (plane trees, lime trees), occasional hardy urban weeds.",
+        "fauna_base": "Pigeons, Crows, Urban foxes, Domesticated pets (dogs, cats), limited variety of common urban birds."
       },
-      "description": "A sprawling metropolis that is the vibrant heart of England, a nexus of history, culture, and commerce. It's a city of ancient roots and modern ambition, where iconic landmarks stand testament to centuries of development.",
+      "description": "London is a sprawling, ancient capital city, a vibrant tapestry woven from centuries of history, culture, and innovation. Its diverse districts offer a kaleidoscope of experiences, from grand historical landmarks to bustling modern hubs, all interconnected by a palpable sense of enduring identity.",
       "navigableElements": [],
       "dominantElements": [
+        "The Houses of Parliament and Big Ben",
+        "Tower of London",
+        "Buckingham Palace",
         "The River Thames",
-        "Iconic Gothic and Victorian architecture",
-        "A dense, layered urban fabric",
-        "Ubiquitous public transport networks",
-        "Green spaces like Hyde Park and Regent's Park"
+        "Westminster Abbey"
       ],
       "uniqueIdentifiers": [
-        "Red double-decker buses",
+        "Iconic red double-decker buses",
         "Black cabs",
-        "The iconic red telephone boxes",
-        "The sound of Big Ben's chimes",
-        "The Tube (Underground railway)"
+        "The distinctive London Underground system",
+        "The ubiquitous red post boxes",
+        "A mix of historic and modern architecture"
       ],
-      "searchDesc": "Iconic capital city of England, blending historic grandeur with modern dynamism.",
-      "slug": "london",
-      "primaryMedia": "media-1764687599092-8uauo2bdl"
+      "searchDesc": "Historic capital of England, a sprawling metropolis of diverse districts and iconic landmarks.",
+      "slug": "london"
     },
-    "56191cab-cb57-4835-bad5-73fec1878bbc": {
-      "id": "56191cab-cb57-4835-bad5-73fec1878bbc",
+    "89899c7c-5e80-4e50-91d6-39d479186260": {
+      "id": "89899c7c-5e80-4e50-91d6-39d479186260",
       "type": "region",
       "name": "Camden",
-      "description": "A vibrant and eclectic district known for its alternative culture, bustling markets, and lively street art. Camden offers a unique blend of historical charm and modern bohemian flair.",
+      "spaceType": "exterior",
       "dna": {
-        "looks": "A riot of color and creativity, with buildings often adorned with elaborate murals and quirky signage. The architecture ranges from Victorian industrial to modern, with a strong emphasis on independent shops and stalls.",
-        "colorsAndLighting": "Dominated by vibrant, often contrasting colors from street art and market displays. Lighting can be a mix of natural sunlight filtering through, interspersed with the warm glow of market stalls and neon signs.",
-        "atmosphere": "Bustling and energetic, with a constant hum of activity and a palpable sense of creativity. The air is often filled with the scent of international street food and a general buzz of diverse crowds.",
-        "materials": "A rich tapestry of industrial brickwork, corrugated iron, painted wood, and the diverse materials found within market stalls, from textiles to ceramics.",
-        "mood": "Rebellious, creative, and lively. There's a sense of freedom and individuality that permeates the district.",
-        "sounds": "Laughter, market chatter, street performers, music, distant traffic, canal lapping.",
-        "spatialLayout": "A dense, walkable urban environment focused around its iconic markets and main thoroughfares, with winding side streets and canalside paths offering respite and discovery.",
-        "primary_surfaces": [
-          "brick",
-          "painted metal",
-          "wood"
-        ],
-        "secondary_surfaces": [
-          "concrete",
-          "canvas",
-          "glass"
-        ],
-        "accent_features": [
-          "murals",
-          "quirky signage",
-          "sculptures",
-          "market stalls"
-        ],
-        "dominant": "multi-color",
-        "secondary": "grey",
-        "accent": "vibrant reds",
-        "ambient": "daylight",
+        "looks": "Older brick buildings are often adorned with vibrant murals and eclectic signage, creating a lively visual tapestry. Modern additions blend seamlessly, sometimes incorporating industrial elements from the canal's past.",
+        "colorsAndLighting": "A rich tapestry of colors is evident in the market stalls and street art, contrasting with the dominant earthy tones of older brickwork. Lighting can be a mix of warm market glows and starker urban illumination.",
+        "atmosphere": "The air is thick with the aromas of global street food and the murmur of diverse crowds. It feels alive and perpetually in motion, a sensory overload of sights and sounds.",
+        "materials": "Brick, weathered timber stalls, painted metal signage, and an abundance of textiles from market vendors are prevalent.",
+        "mood": "Energetic, rebellious, and creatively charged, with a palpable sense of freedom and individuality.",
+        "sounds": "Bustling crowds, street performers, eclectic music, market chatter, distant traffic",
+        "spatialLayout": "A dense network of narrow streets and market lanes, spilling out onto the main thoroughfare, with the canal acting as a natural boundary and artery.",
+        "primary_surfaces": "Brick, painted wood, canvas",
+        "secondary_surfaces": "Metal, concrete, asphalt",
+        "accent_features": "Graffiti, elaborate market stalls, unique signage, street art installations",
+        "dominant": "Earthy Neutrals",
+        "secondary": "Muted Reds",
+        "accent": "Vibrant street art colors",
+        "ambient": "Variable, from bright daylight to warm market lights",
         "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": "Bohemian and alternative",
-        "materials_base": null,
+        "architectural_tone": "A complex fusion of historical architectural styles, including Gothic Revival, Victorian grandeur, Edwardian elegance, and modern Brutalism and Postmodernism. Expect heavy use of brick, stone, and timber in older areas, with intricate detailing like gargoyles, bay windows, and elaborate cornices. Modern districts showcase vast expanses of glass, steel, and concrete, often with sharp, geometric lines.",
+        "cultural_tone": "Known for its strong independent and alternative subcultures, a hub for artists, musicians, and counter-culture movements.",
+        "materials_base": "Brick, Stone, Timber, Cast Iron, Glass, Steel",
         "mood_baseline": null,
-        "palette_bias": "vibrant",
+        "palette_bias": "While inheriting the dominant browns, grays, and muted reds, Camden significantly amplifies with vibrant, often clashing, accent colors from street art and market wares.",
+        "soundscape_base": "Echoes of a working-class past are overlaid with the cacophony of a lively, alternative cultural hub.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "Camden is a vibrant and eclectic district, celebrated for its bustling street markets and a kaleidoscope of unique independent shops. It's a hub for alternative culture, drawing in artists, musicians, and free spirits from across the city.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Camden Lock Market",
+        "Camden High Street",
+        "The Roundhouse",
+        "Regent's Canal Towpath"
+      ],
+      "uniqueIdentifiers": [
+        "Street art and graffiti murals",
+        "Eclectic mix of independent boutiques and stalls",
+        "Live music venues and alternative performance spaces",
+        "Diverse food stalls offering global cuisine"
+      ],
+      "searchDesc": "Vibrant alternative district, street markets, unique shops, live music, Regent's Canal.",
+      "slug": "camden",
+      "primaryMedia": "media-1764754681401-ntnj4kkh3"
+    },
+    "0cad49a9-05de-4f2b-a7b6-f2c60a2a34d5": {
+      "id": "0cad49a9-05de-4f2b-a7b6-f2c60a2a34d5",
+      "type": "location",
+      "name": "Electric Threads Boutique",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The Electric Threads Boutique presents a striking facade that blends historical grit with futuristic flair. It stands as a medium-sized building, its upper floors possibly featuring Victorian-era detailing like ornate brickwork or cast-iron balconies, contrasting sharply with a dynamic, modern street-level entrance. The overall impression is one of deliberate, artistic disruption.",
+        "colorsAndLighting": "The exterior is dominated by earthy neutrals, but illuminated by an electrifying spectrum of artificial light. Neon signs in fuchsia, electric blue, and acid green fight for attention against the muted brick and concrete, creating a vibrant, eye-catching glow that cuts through the urban twilight.",
+        "atmosphere": "The air around Electric Threads hums with a palpable energy. The constant thrum of distant music can be felt, and the eclectic mix of passersby, from artists to club-goers, contributes to a feeling of creative charge and rebellious spirit. The street is often alive with colorful street art and impromptu performances.",
+        "materials": "The building's construction showcases a rough, tactile honesty. Weathered brick and exposed concrete are juxtaposed with polished steel accents and large panes of glass. Elements of salvaged timber or distressed metal might be visible, adding to the DIY, punk-influenced aesthetic.",
+        "mood": "This location evokes a sense of bold self-expression and defiant individuality. It is a place where conformity is shunned, and the embrace of the unconventional is celebrated.",
+        "sounds": "Pulsating bass, chatter, distant sirens, street performers, laughter, clatter.",
+        "spatialLayout": "The boutique occupies the ground floor of a multi-story building, its entrance prominently featured. A clear sense of accessibility is conveyed through its inviting display windows and main door, with secondary access points hinting at behind-the-scenes operations.",
+        "primary_surfaces": "Brick, Concrete, Glass",
+        "secondary_surfaces": "Steel, Timber, Cast Iron",
+        "accent_features": "Neon signage, Street art, Industrial-style metalwork, Display mannequins",
+        "dominant": "Earthy Neutrals (Gray, Brown, Muted Red)",
+        "secondary": "Black, White",
+        "accent": "Electric Blue, Fuchsia, Acid Green, Vibrant Orange",
+        "ambient": "Moderate, often colored by artificial light",
+        "genre": null,
+        "architectural_tone": "A complex fusion of historical architectural styles, including Gothic Revival, Victorian grandeur, Edwardian elegance, and modern Brutalism and Postmodernism. Expect heavy use of brick, stone, and timber in older areas, with intricate detailing like gargoyles, bay windows, and elaborate cornices. Modern districts showcase vast expanses of glass, steel, and concrete, often with sharp, geometric lines.",
+        "cultural_tone": "Alternative fashion hub, Rave scene, Artistic expression",
+        "materials_base": "Brick, Stone, Timber, Cast Iron, Glass, Steel",
+        "mood_baseline": "Energetic, Rebellious, Creatively charged",
+        "palette_bias": "While inheriting the dominant browns, grays, and muted reds, Camden significantly amplifies with vibrant, often clashing, accent colors from street art and market wares.",
         "soundscape_base": null,
         "flora_base": null,
         "fauna_base": null
       },
-      "navigableElements": [],
-      "dominantElements": [
-        "Camden Lock Market",
-        "The Roundhouse",
-        "Stables Market",
-        "Camden High Street"
-      ],
-      "uniqueIdentifiers": [
-        "Eclectic street art and murals",
-        "Diverse market stalls selling crafts and alternative fashion",
-        "Numerous music venues and performance spaces",
-        "Canalside towpaths"
-      ],
-      "searchDesc": "Vibrant London district, Camden Lock Market, street art, alternative culture, music venues.",
-      "slug": "camden",
-      "locations": [],
-      "primaryMedia": "media-1764689924214-rhjatza39"
-    },
-    "6a9f05fc-5b2e-4758-bd3e-985d8df3999c": {
-      "id": "6a9f05fc-5b2e-4758-bd3e-985d8df3999c",
-      "type": "region",
-      "name": "City of London",
-      "description": "The historic heart of London, a bustling financial and commercial district. It is a place where ancient Roman roots meet modern skyscrapers, teeming with activity and a palpable sense of history. This area is the engine of the city's economy and a magnet for global commerce.",
-      "dna": {
-        "looks": "A striking juxtaposition of ancient stone structures and gleaming modern towers. Cobblestone streets wind past imposing Victorian facades and cutting-edge glass and steel skyscrapers. The density of buildings is high, creating a canyon-like effect in many thoroughfares.",
-        "colorsAndLighting": "Dominated by the muted grays and browns of stone and concrete, punctuated by the metallic sheens of modern architecture. Natural light can be dramatic, often filtered by tall buildings, with warm artificial lighting at night accentuating business districts.",
-        "atmosphere": "A constant hum of activity, especially during weekdays, with a brisk pace and a professional, driven atmosphere. The air carries the faint scent of exhaust fumes mixed with the cleaner air from nearby green spaces. It feels both grand and intensely practical.",
-        "materials": "Predominantly stone (granite, Portland stone) for older buildings, with abundant glass and steel for contemporary structures. Pavement often consists of historic cobbles or modern paving stones.",
-        "mood": "Ambitious, driven, and historic. There's an underlying sense of gravitas and purpose, a place where significant decisions are made and history is constantly being made.",
-        "sounds": "Footsteps, traffic, distant sirens, chatter, phone calls, occasional chimes",
-        "spatialLayout": "A dense, often grid-like urban fabric with a mix of grand avenues and narrow, winding lanes. Key landmarks are often focal points, with major transport hubs connecting disparate areas.",
-        "primary_surfaces": [
-          "stone",
-          "glass",
-          "steel",
-          "concrete"
-        ],
-        "secondary_surfaces": [
-          "cobblestone",
-          "asphalt",
-          "brick"
-        ],
-        "accent_features": [
-          "ornate stonework",
-          "historic plaques",
-          "modern art installations",
-          "street furniture",
-          "bus stops"
-        ],
-        "dominant": "gray",
-        "secondary": "brown",
-        "accent": "silver",
-        "ambient": "neutral",
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": "A strong emphasis on finance, law, and historical preservation, with a globalized professional community.",
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "sparse urban greenery, occasional potted plants, manicured small squares",
-        "fauna_base": "pigeons, urban rodents, occasional domestic animals with owners"
-      },
-      "navigableElements": [],
-      "dominantElements": [
-        "St. Paul's Cathedral",
-        "The Gherkin",
-        "Tower of London",
-        "Bank of England",
-        "Leadenhall Market"
-      ],
-      "uniqueIdentifiers": [
-        "Fusion of medieval and modern architecture",
-        "High concentration of financial institutions",
-        "Remnants of Roman walls",
-        "Bustling pedestrian traffic during weekdays",
-        "Sense of historical depth amidst modernity"
-      ],
-      "searchDesc": "Historic financial district of London, blending ancient sites with modern skyscrapers.",
-      "slug": "city-of-london",
-      "locations": [],
-      "primaryMedia": "media-1764689936810-niikrpjxy"
-    },
-    "bfab47be-f72f-475a-851a-5e2d2e4af3fd": {
-      "id": "bfab47be-f72f-475a-851a-5e2d2e4af3fd",
-      "type": "location",
-      "name": "The Neon Shaman",
-      "description": "A vibrant, underground emporium pulsating with the energy of the rave scene. This shop is a beacon for those seeking unique threads and trippy trinkets.",
-      "dna": {
-        "looks": "The exterior is a chaotic canvas of graffiti art overlaid with an array of flashing, custom-made neon signs that paint the street in kaleidoscopic hues. Metal grates and heavy-duty shutters hint at its secure nature, while glimpses through reinforced windows reveal a tantalizing, shadowy interior.",
-        "colorsAndLighting": "Dominated by electric blues, vibrant magentas, and acid greens from the neon, creating a constantly shifting and otherworldly glow. UV blacklights activate hidden pigments in the art, making the entire facade shimmer and pulse.",
-        "atmosphere": "The air crackles with an electric anticipation. A low, omnipresent bassline seems to emanate from the very foundations of the building, drawing in passersby. The scent of incense and something vaguely synthetic hangs in the air.",
-        "materials": "Constructed from a utilitarian base of rough concrete and corrugated metal, heavily layered with spray paint, stickers, and the polished surfaces of the neon tubing.",
-        "mood": "Enigmatic, exciting, and slightly illicit. It promises adventure and self-expression for those in the know.",
-        "sounds": "Distant bass, muffled music, street chatter, hissing doors, occasional laughter",
-        "spatialLayout": "A squat, imposing structure with a single, heavily reinforced main entrance centrally located. Its facade is relatively flat, acting as a canvas for its vibrant adornments, with limited visible windows.",
-        "primary_surfaces": "Graffiti-covered concrete, corrugated metal",
-        "secondary_surfaces": "Reinforced glass, neon tubing, metal grates",
-        "accent_features": "Pulsing neon signage, UV-reactive art installations, custom light fixtures",
-        "dominant": "#0000FF",
-        "secondary": "#FF00FF",
-        "accent": "#00FF00",
-        "ambient": "low-light, pulsating",
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": "underground, counter-culture, rave",
-        "materials_base": "industrial, utilitarian",
-        "mood_baseline": "exciting, mysterious",
-        "palette_bias": "electric, vibrant",
-        "soundscape_base": "muffled bass, ambient street noise",
-        "flora_base": "minimal, urban weeds",
-        "fauna_base": "urban pests"
-      },
+      "description": "A beacon of alternative fashion, Electric Threads Boutique pulses with the energy of the city's vibrant counter-culture. Its facade is a testament to eclectic design, beckoning those who dare to stand out.",
       "navigableElements": [
         {
           "type": "door",
           "position": "center",
-          "description": "A heavy, graffiti-covered metal door that slides open with a hiss, revealing a dimly lit, pulsating interior."
+          "description": "A large, glass-paned door, framed by neon accents, leading into the main retail space."
         },
         {
           "type": "window",
           "position": "left",
-          "description": "A large, reinforced window showcasing displays of UV-reactive clothing and glowing accessories, often obscured by swirling fog."
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "A narrow, unmarked alleyway running alongside the shop, potentially leading to a back entrance or a hidden loading dock."
-        }
-      ],
-      "dominantElements": [
-        "Glow-in-the-dark murals",
-        "Hanging psychedelic tapestries",
-        "Strategically placed UV blacklights",
-        "A large, flashing neon sign"
-      ],
-      "uniqueIdentifiers": [
-        "The distinctive, pulsing neon 'Shaman' sign",
-        "The ever-present haze of incense and fog",
-        "The constant thrum of distant bass music emanating from within",
-        "The eclectic collection of street art adorning its facade"
-      ],
-      "searchDesc": "A cool rave shop with neon signs, UV art, and a pulsing bassline. Find unique threads and trippy trinkets.",
-      "slug": "the-neon-shaman",
-      "niches": [],
-      "primaryMedia": "media-1764689976235-r7awmsknf"
-    },
-    "niche-1764689995104-mw43tqwpp": {
-      "id": "niche-1764689995104-mw43tqwpp",
-      "type": "niche",
-      "name": "interior of The Neon Shaman",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The space is dominated by a massive, offset cylindrical structure of corrugated metal and vibrant neon tubes. The uneven concrete floor is marked by graffiti and luminous paint puddles, leading towards a glowing blue walkway. A deep corridor recedes into the background, its end obscured by shifting neon.",
-        "colorsAndLighting": "Dominant electric blue and magenta neon tubes pulse with light, casting sharp shadows across the rough concrete surfaces. A vibrant green luminescence spills from a recessed alcove, contrasting with the overall blue and magenta hues.",
-        "atmosphere": "The air is thick with haze and the palpable hum of unseen light installations. A sense of illicit adventure and raw self-expression permeates the humid, electrically charged atmosphere.",
-        "materials": "Rough, graffiti-scarred concrete forms the primary floor and structural elements. Interwoven corrugated metal panels make up the central structure, interspersed with thick neon tubing. The overall condition is weathered and worn, indicative of a well-used underground space.",
-        "mood": "This place evokes an enigmatic and exciting mood, promising adventure and a sense of belonging for those who seek out its hidden depths.",
-        "sounds": "Humming neon, distant thumping bass, dripping, faint echoes.",
-        "spatialLayout": "The space features a dynamic, offset composition with a central, towering cylindrical form. An off-center pillar base anchors the foreground, with navigable elements leading into the midground and a receding corridor in the background. The perspective is wide and distorted by an ultra-wide lens.",
-        "primary_surfaces": "Graffiti-scarred concrete, corrugated metal panels.",
-        "secondary_surfaces": "Discarded spray cans, LED strips, rough concrete pillar, weathered metal stairs.",
-        "accent_features": "Puddles of spilled luminous paint, jagged neon framing around the alcove, small white LEDs on stairs.",
-        "dominant": "#0000FF (Electric Blue) - neon tubes, walkway edge, general ambient light.",
-        "secondary": "#FF00FF (Magenta) - neon tubes.",
-        "accent": "#00FF00 (Vibrant Green) - alcove luminescence; white - stair LEDs.",
-        "ambient": "Cool",
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": "underground, counter-culture, rave",
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764689995103-vjvq5uqth",
-      "description": "The dimly lit, cavernous interior of a hidden underground establishment, alive with the pulsating glow of neon and the gritty texture of urban decay.",
-      "navigableElements": [
-        {
-          "type": "walkway",
-          "position": "lower left to midground",
-          "description": "A low, glowing blue line marking the edge of a raised walkway."
-        },
-        {
-          "type": "alcove",
-          "position": "right wall, midground",
-          "description": "A recessed, arched alcove spilling vibrant green luminescence."
-        },
-        {
-          "type": "stairs",
-          "position": "midground left",
-          "description": "A steep, narrow staircase ascending into shadows."
-        },
-        {
-          "type": "corridor",
-          "position": "far center",
-          "description": "A deep, indistinct corridor receding into darkness."
-        }
-      ],
-      "dominantElements": [
-        "Towering cylindrical structure",
-        "Graffiti-scarred concrete floor",
-        "Pulsing neon tubes"
-      ],
-      "uniqueIdentifiers": [
-        "Spilled luminous paint puddles",
-        "Corrugated metal panels",
-        "Arched alcove with green luminescence",
-        "Jagged neon framing"
-      ],
-      "searchDesc": "Underground rave den with neon, graffiti, and a towering metal structure.",
-      "slug": "interior-of-the-neon-shaman"
-    },
-    "d53d8473-932e-4a0e-8eac-d332940d55d3": {
-      "id": "d53d8473-932e-4a0e-8eac-d332940d55d3",
-      "type": "location",
-      "name": "The Gilded Serpent",
-      "description": "An exclusive club catering to the city's elite, its facade speaks of opulence and discretion. Behind its imposing doors lies a world of hushed conversations and refined indulgence.",
-      "dna": {
-        "looks": "This establishment presents a facade of understated grandeur, eschewing ostentatious displays for a more refined elegance. The architecture suggests classical influences, with clean lines and precisely carved stone elements, conveying a sense of permanence and established wealth.",
-        "colorsAndLighting": "The exterior is bathed in a soft, warm light from strategically placed sconces, highlighting the rich, dark stone and polished brass accents. Colors lean towards deep jewel tones and muted metallics.",
-        "atmosphere": "A palpable sense of exclusivity and quiet power permeates the air around The Gilded Serpent. The immediate surroundings are impeccably maintained, with no hint of casual public access.",
-        "materials": "The building is constructed from high-quality, dark granite and accented with polished brass and rich, dark wood. The windows are thick, high-grade glass, ensuring privacy and muffling external sounds.",
-        "mood": "This location evokes a feeling of sophisticated secrecy and unparalleled privilege. It promises an escape into a world of comfort and influence, far removed from the ordinary.",
-        "sounds": "Muffled conversations, distant clinking of glasses, soft jazz music, hushed footsteps, distant traffic drone",
-        "spatialLayout": "The building is a solid, imposing structure with a prominent, yet discreet, main entrance. It appears to be designed for controlled access and internal flow.",
-        "primary_surfaces": "Dark, polished granite, smooth stone facades",
-        "secondary_surfaces": "Polished brass, dark mahogany trim, tinted glass",
-        "accent_features": "Ornate, minimalist signage, discreetly placed lighting fixtures",
-        "dominant": "#333333",
-        "secondary": "#B8860B",
-        "accent": "#DAA520",
-        "ambient": "warm",
-        "genre": null,
-        "architectural_tone": "neoclassical",
-        "cultural_tone": "elite, exclusive",
-        "materials_base": "luxury, stone, metal",
-        "mood_baseline": "sophisticated, private",
-        "palette_bias": "dark jewel tones, metallics",
-        "soundscape_base": "muffled, sophisticated",
-        "flora_base": "manicured shrubs, minimal planting",
-        "fauna_base": "urban wildlife (pigeons, stray cats)",
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center",
-            "description": "A grand, polished brass double-door, flanked by uniformed doormen, leading into the main foyer."
-          },
-          {
-            "type": "passage",
-            "position": "right",
-            "description": "A discreet, unmarked side passage, subtly lit, likely leading to private entrances or service areas."
-          },
-          {
-            "type": "window",
-            "position": "background",
-            "description": "Tall, arched windows with thick, tinted glass, offering glimpses of opulent interiors but revealing little."
-          }
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center",
-          "description": "A grand, polished brass double-door, flanked by uniformed doormen, leading into the main foyer."
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "A discreet, unmarked side passage, subtly lit, likely leading to private entrances or service areas."
-        },
-        {
-          "type": "window",
-          "position": "background",
-          "description": "Tall, arched windows with thick, tinted glass, offering glimpses of opulent interiors but revealing little."
-        }
-      ],
-      "dominantElements": [
-        "Ornate facade with classical detailing",
-        "Large, imposing brass double-doors",
-        "Subtly lit, tinted windows",
-        "Uniformed doormen"
-      ],
-      "uniqueIdentifiers": [
-        "Subtle, almost clandestine entrance",
-        "Air of extreme exclusivity",
-        "Glimmers of extreme wealth within",
-        "Discreet but ever-present security"
-      ],
-      "searchDesc": "The Gilded Serpent: An exclusive club for the elite, featuring opulent decor, discreet entrances, and an air of luxury.",
-      "slug": "the-gilded-serpent",
-      "niches": [],
-      "primaryMedia": "media-1764690070670-q83cvu6g2"
-    },
-    "niche-1764690090936-gbv0mjp7o": {
-      "id": "niche-1764690090936-gbv0mjp7o",
-      "type": "niche",
-      "name": "interior of The Gilded Serpent",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior presents a sophisticated neoclassical design with predominantly straight walls and defining corners. The floor is clad in large, dark, polished granite slabs. A grand, discreet arched doorway framed with dark mahogany serves as a focal point, emanating a warm amber glow. A long, receding corridor stretches into the distance, its far end softly lit.",
-        "colorsAndLighting": "The dominant color is dark granite (#333333), accented by the subtle golden glow of polished brass (#B8860B) and the warm amber light (#DAA520) from within the doorway and corridor.",
-        "atmosphere": "The air is still and hushed, carrying a sense of private sophistication. The lighting is soft, warm, and ambient, creating pools of light that enhance the feeling of understated grandeur and exclusive comfort.",
-        "materials": "Key materials include dark, polished granite for the flooring and walls, rich dark mahogany for doorway trim, and polished brass for accent elements like a low bollard. Subtle metallic threads are visible in the abstract art.",
-        "mood": "This space evokes a mood of sophisticated secrecy and unparalleled privilege, promising an exclusive escape into comfort and influence.",
-        "sounds": "Subtle ambient hum, distant echoes, soft footsteps on stone.",
-        "spatialLayout": "The layout is predominantly horizontal, emphasizing receding linear depth. Walls are straight with defined corners, leading the eye towards a central, slightly off-center arched doorway and a long corridor.",
-        "primary_surfaces": "Dark polished granite (floors and walls).",
-        "secondary_surfaces": "Rich dark mahogany (door frame), polished brass (bollard).",
-        "accent_features": "Minimalist abstract art with metallic thread accents in a recessed alcove, subtle golden glow from a low brass bollard.",
-        "dominant": "#333333 (dark granite)",
-        "secondary": "#DAA520 (warm amber glow)",
-        "accent": "#B8860B (polished brass)",
-        "ambient": "warm",
-        "genre": null,
-        "architectural_tone": "neoclassical",
-        "cultural_tone": "Elite, exclusive social and functional identity.",
-        "materials_base": "polished stone, dark woods, metallic accents",
-        "mood_baseline": "sophisticated secrecy, unparalleled privilege",
-        "palette_bias": "deep earth tones with warm metallic highlights",
-        "soundscape_base": "hushed luxury",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764690090934-sndlayrm4",
-      "description": "The neoclassical interior of a gilded serpent, featuring dark polished granite floors, rich mahogany accents, and subtle, warm lighting.",
-      "navigableElements": [
-        {
-          "type": "doorway",
-          "position": "center midground",
-          "description": "Grand, discreet arched doorway with warm amber glow, framed with dark mahogany trim."
-        },
-        {
-          "type": "alcove",
-          "position": "right midground",
-          "description": "Recessed alcove with minimalist art featuring subtle metallic thread accents, subtly lit."
-        },
-        {
-          "type": "corridor",
-          "position": "far center",
-          "description": "Long, receding corridor dimly illuminated by diffused warm light, approximately 30 meters deep."
-        }
-      ],
-      "dominantElements": [
-        "Dark polished granite floor",
-        "Arched mahogany-framed doorway",
-        "Receding granite corridor",
-        "Polished brass bollard"
-      ],
-      "uniqueIdentifiers": [
-        "Neoclassical carved stone elements",
-        "Dark polished granite and rich mahogany",
-        "Subtle, warm amber and golden lighting",
-        "Asymmetric composition with central linear depth"
-      ],
-      "searchDesc": "Neoclassical gilded serpent interior: dark granite, mahogany arch, warm amber glow, receding corridor.",
-      "slug": "interior-of-the-gilded-serpent"
-    },
-    "loc-1764707076105-eff3sfysu": {
-      "id": "loc-1764707076105-eff3sfysu",
-      "type": "host",
-      "name": "The Azure Depths",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Structures here are less built and more grown, resembling organic crystal growths or solidified light. Scale is immense and flowing, with vast, sweeping curves and gentle, dissolving horizons. Key visual motifs include iridescence, translucence, and soft, diffused glow.",
-        "colorsAndLighting": "Dominated by shades of sapphire, teal, and violet, interspersed with pearlescent whites and pale golds. Lighting is perpetually soft and diffused, emanating from within the landscape itself, creating a gentle, otherworldly luminescence.",
-        "atmosphere": "The air is crisp, cool, and imbued with a faint, pleasant ozone scent, reminiscent of a gentle rainshower. There are no harsh winds or storms, only a constant, serene flow of subtle energy currents. The overall environmental feel is one of profound calm and stillness.",
-        "materials": "Predominantly composed of crystalline structures, solidified light, and organic, fluid-like substances that possess a jewel-like sheen. Natural formations exhibit an impossible grace and translucence.",
-        "mood": "Evokes feelings of peace, wonder, and profound tranquility. It is a place of deep introspection and ethereal escape.",
-        "sounds": "Gentle hum, distant chimes, soft resonance, whispered currents, resonant pools",
-        "spatialLayout": "The landscape unfolds in vast, open expanses with a sense of infinite depth. There are no sharp divisions, only gradual transitions between serene plains, flowing formations, and shimmering currents, creating a fluid and organic sense of space.",
-        "primary_surfaces": [
-          "Crystalline structures",
-          "Solidified light",
-          "Bioluminescent flora"
-        ],
-        "secondary_surfaces": [
-          "Liquid sapphire pools",
-          "Solidified mist"
-        ],
-        "accent_features": [
-          "Iridescent refractions",
-          "Pulsating light veins",
-          "Whispering energy tendrils"
-        ],
-        "dominant": "Blues",
-        "secondary": "Teals, Violets",
-        "accent": "Pearlescent White, Pale Gold",
-        "ambient": "Cool",
-        "genre": "Fantasy",
-        "architectural_tone": "Organic, crystalline, ethereal. Structures appear to be grown or manifested rather than built, with flowing lines, translucent surfaces, and iridescent qualities. Influenced by natural formations of crystal and solidified light, with an emphasis on seamless integration into the environment.",
-        "cultural_tone": "Peaceful, introspective, spiritual. The inhabitants, if any, would likely be beings of pure energy or serene, contemplative lifeforms who value tranquility, harmony, and abstract beauty.",
-        "materials_base": "Crystalline, light-infused, fluid-like substances with inherent luminescence and iridescence.",
-        "mood_baseline": "Serene, tranquil, awe-inspiring, otherworldly.",
-        "palette_bias": "Cool jewel tones, with a strong emphasis on blues and violets, softened by pearlescent and opalescent hues.",
-        "soundscape_base": "Subtle, resonant, and ambient. Dominated by gentle hums, distant, melodic chimes, and the soft whisper of energy currents.",
-        "flora_base": "Bioluminescent and crystalline flora that emits soft light and possesses ethereal forms.",
-        "fauna_base": "None (or purely energetic/ethereal beings)"
-      },
-      "description": "A boundless expanse of tranquil, abstract beauty, where reality dissolves into serene, otherworldly vistas. The Azure Depths evoke a sense of profound peace and ethereal wonder.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Shimmering, translucent crystalline formations",
-        "Vast, undulating fields of bioluminescent flora",
-        "Whispering, ethereal currents of light",
-        "Floating islands of solidified mist",
-        "Deep, resonant pools of liquid sapphire"
-      ],
-      "uniqueIdentifiers": [
-        "Ever-present gentle hum of resonant energy",
-        "The absence of harsh edges or defined forms",
-        "The constant, subtle play of shifting light patterns",
-        "The scent of ozone and fresh rain",
-        "The feeling of weightlessness and timelessness"
-      ],
-      "searchDesc": "Serene, otherworldly landscape of tranquil, abstract beauty, crystalline formations, bioluminescent flora.",
-      "slug": "the-azure-depths"
-    },
-    "3e4e2d00-3257-46c8-a510-5e983b371b5c": {
-      "id": "3e4e2d00-3257-46c8-a510-5e983b371b5c",
-      "type": "region",
-      "name": "The Mirrored Waters",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The primary visual characteristic is the immense, undisturbed surface of the water, creating a flawless reflection of the organic, crystalline architecture that seems to grow from it. Light refracts and dances across both the structures and their watery doppelgängers.",
-        "colorsAndLighting": "The water is a pure, vibrant blue, reflecting the cool jewel tones of the structures. Lighting is diffuse and radiant, emanating from the crystalline forms and the water itself, creating an effect of perpetual twilight and inner glow.",
-        "atmosphere": "The air is exceptionally still and humid, carrying a faint, sweet, mineral scent. The overall environmental feel is one of profound calm and undisturbed serenity, as if time itself slows within its embrace.",
-        "materials": "The predominant materials are fluid-like, light-infused crystalline substances that appear to solidify and flow simultaneously. The water itself has a luminous quality.",
-        "mood": "This region evokes deep introspection and profound peace, offering an escape into a realm of abstract beauty and ethereal tranquility.",
-        "sounds": "Gentle lapping, soft hums, faint chimes, resonant echoes, ethereal whispers, water's soft sigh",
-        "spatialLayout": "The region is largely defined by open water punctuated by the verticality of the crystalline structures. Pathways and connections would likely be formed by light bridges or submerged crystalline formations.",
-        "primary_surfaces": [
-          "Luminous Water",
-          "Crystalline Formations"
-        ],
-        "secondary_surfaces": [
-          "Translucent Facades",
-          "Iridescent Sheens"
-        ],
-        "accent_features": [
-          "Submerged Light Veins",
-          "Floating Lumina Blooms",
-          "Crystal Shard Outcroppings"
-        ],
-        "dominant": "Blues",
-        "secondary": "Violets",
-        "accent": "Pearlescent Whites",
-        "ambient": "Ethereal Glow",
-        "genre": null,
-        "architectural_tone": "Organic, crystalline, ethereal. Structures appear to be grown or manifested rather than built, with flowing lines, translucent surfaces, and iridescent qualities. Influenced by natural formations of crystal and solidified light, with an emphasis on seamless integration into the environment.",
-        "cultural_tone": "Peaceful, introspective, spiritual. The inhabitants, if any, would likely be beings of pure energy or serene, contemplative lifeforms who value tranquility, harmony, and abstract beauty.",
-        "materials_base": "Crystalline, light-infused, fluid-like substances with inherent luminescence and iridescence.",
-        "mood_baseline": "Evokes feelings of peace, wonder, and profound tranquility. It is a place of deep introspection and ethereal escape.",
-        "palette_bias": "Cool jewel tones, with a strong emphasis on blues and violets, softened by pearlescent and opalescent hues.",
-        "soundscape_base": null,
-        "flora_base": null,
-        "fauna_base": null
-      },
-      "description": "A breathtaking expanse of tranquil, sapphire waters that act as a perfect, shimmering mirror. Vibrant, crystalline structures rise directly from its depths, their luminescence casting ethereal reflections upon its surface.",
-      "navigableElements": [],
-      "dominantElements": [
-        "The Great Lumina Lake",
-        "Crystalline Spires",
-        "Reflective Shallows",
-        "Submerged Crystal Gardens"
-      ],
-      "uniqueIdentifiers": [
-        "Perfectly reflective water surface",
-        "Structures emerging from water",
-        "Submerged architecture",
-        "Vibrant blue hue of the water"
-      ],
-      "searchDesc": "Vast, calm, bright blue waters mirroring vibrant, crystalline structures.",
-      "slug": "the-mirrored-waters"
-    },
-    "8fd839ff-5c5a-47a3-9fe5-c0b62651817b": {
-      "id": "8fd839ff-5c5a-47a3-9fe5-c0b62651817b",
-      "type": "location",
-      "name": "Azure Spire Isle",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The Azure Spire Isle is characterized by a breathtakingly tall, slender spire that pierces the sky, its form a natural outgrowth of iridescent blue and golden-yellow crystalline rock. The spire's surface shimmers with an inner light. An elegant, fluid archway, seamlessly integrated into the spire's structure, extends outwards, defying gravity across the surrounding waters.",
-        "colorsAndLighting": "The spire is primarily adorned in cool jewel tones of sapphire blue and warm golden-yellow, reflecting and refracting light in a mesmerizing dance. A soft, ambient luminescence emanates from within the crystalline structures, casting gentle, ethereal light onto the island and surrounding water.",
-        "atmosphere": "This island is a place of profound tranquility and introspective beauty. The air hums with a soft, spiritual energy, and the gentle lapping of water against the shore is the dominant sound. The overall feeling is one of serene isolation and otherworldly peace.",
-        "materials": "The spire and archway appear to be composed of solidified light and naturally formed crystals, exhibiting a flawless, almost liquid-like smoothness. The blue-leafed tree, while organic, possesses an unusual crystalline sheen to its foliage.",
-        "mood": "This location evokes a deep sense of peace, wonder, and spiritual contemplation, inviting visitors to lose themselves in abstract beauty.",
-        "sounds": "Gentle water lapping, soft wind chimes, faint crystalline hum, distant ethereal whispers",
-        "spatialLayout": "A small, compact island dominated by the central spire. The archway originates from the spire's midsection and curves elegantly outwards. A narrow passage offers a singular entry point into the spire's base.",
-        "primary_surfaces": "Crystalline rock formations, translucent surfaces",
-        "secondary_surfaces": "Luminous, iridescent mineral veins",
-        "accent_features": "Blue leaves of the tree, internal spire light",
-        "dominant": "Blue",
-        "secondary": "Golden-yellow",
-        "accent": "Pearlescent white",
-        "ambient": "Ethereal luminescence",
-        "genre": null,
-        "architectural_tone": "Organic, crystalline, ethereal. Structures appear to be grown or manifested rather than built, with flowing lines, translucent surfaces, and iridescent qualities. Influenced by natural formations of crystal and solidified light, with an emphasis on seamless integration into the environment.",
-        "cultural_tone": "Peaceful, introspective, spiritual.",
-        "materials_base": "Crystalline, light-infused, fluid-like substances with inherent luminescence and iridescence.",
-        "mood_baseline": "Deep introspection and profound peace, offering an escape into a realm of abstract beauty and ethereal tranquility.",
-        "palette_bias": "Cool jewel tones, with a strong emphasis on blues and violets, softened by pearlescent and opalescent hues.",
-        "soundscape_base": null,
-        "flora_base": "Delicate, blue-leafed flora with a crystalline sheen.",
-        "fauna_base": null
-      },
-      "description": "A tranquil island dominated by a tall, crystalline spire of blue and gold rock, from which an elegant arch gracefully spans the water. A delicate, blue-leafed tree adds to the ethereal beauty of this secluded haven.",
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "A broad, sinuous archway made of shimmering blue and golden rock, extending from the spire across the water, hinting at passage to another shore."
-        },
-        {
-          "type": "passage",
-          "position": "base of spire",
-          "description": "A narrow, glowing passage at the spire's base, offering a glimpse into its crystalline interior."
-        },
-        {
-          "type": "window",
-          "position": "mid-height of spire",
-          "description": "Translucent, crystalline windows embedded within the spire, revealing internal light and unseen structures."
-        }
-      ],
-      "dominantElements": [
-        "Tall, slender spire of blue and golden-yellow rock",
-        "Elegant, sinuous archway",
-        "Delicate blue-leafed tree",
-        "Crystalline formations",
-        "Luminescent glow"
-      ],
-      "uniqueIdentifiers": [
-        "Island location",
-        "Azure Spire's unique blue and gold coloration",
-        "Archway spanning water",
-        "Blue-leafed tree",
-        "Ethereal crystalline structure"
-      ],
-      "searchDesc": "Island with a blue and gold crystalline spire and a water-spanning archway.",
-      "slug": "azure-spire-isle",
-      "primaryMedia": "media-1764707092329-xpkdbto3w"
-    },
-    "loc-1764707280410-kneujstdu": {
-      "id": "loc-1764707280410-kneujstdu",
-      "type": "host",
-      "name": "Xylos Prime",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The architecture of Xylos Prime is entirely organic, resembling colossal, sculpted organisms or towering, intertwined plant structures. Buildings seamlessly blend with the environment, featuring smooth, flowing lines and intricate biological textures. There's a sense of immense, natural growth that defines the scale and form of every structure.",
-        "colorsAndLighting": "The dominant color palette is a vibrant interplay of the bright blue sky and the ethereal glow of bioluminescent plants. Expect deep greens, pulsating blues, vibrant purples, and soft yellows emanating from the flora, creating an otherworldly and dynamic lightscape.",
-        "atmosphere": "The atmosphere is clean, pure, and invigorating, with a constant, gentle warmth. Weather patterns are mild, often manifesting as soft, luminous mists or gentle nutrient-rich dews. The air carries a faint, sweet, organic scent, indicative of the thriving biosphere.",
-        "materials": "Construction materials are entirely biological; think hardened chitin, fibrous tissues, bioluminescent sap, and resilient bio-plastics. Natural flora and fauna are not just present but are integral to the very fabric of the world's structures, providing both form and function.",
-        "mood": "The world evokes a sense of awe, wonder, and profound natural harmony. There's a feeling of peaceful coexistence and vibrant, untamed life.",
-        "sounds": "Gentle hums, rustling leaves, chirps, melodic calls, soft pulsing lights",
-        "spatialLayout": "The world is structured vertically and organically, with vast bio-structures rising to great heights, interconnected by living bridges and aerial root systems. Pathways often twist and turn, mimicking natural growth patterns, creating a sense of exploration within living landscapes.",
-        "primary_surfaces": "Bio-plastics, hardened chitin, living plant matter",
-        "secondary_surfaces": "Bioluminescent sap, fibrous tissues, crystalline growths",
-        "accent_features": "Pulsating bioluminescent patterns, nectarous pools, symbiotic fungal growths",
-        "dominant": "Green",
-        "secondary": "Blue, Purple",
-        "accent": "Yellow, Orange",
-        "ambient": "Cool, with vibrant bioluminescent highlights",
-        "genre": "Science Fiction",
-        "architectural_tone": "Bio-organic: Architecture is grown, not built, resembling colossal, living organisms or intricately woven plant structures. It features smooth, flowing lines, seamless integration with the environment, and is composed entirely of natural, bio-engineered materials.",
-        "cultural_tone": "Harmonious and symbiotic: The inhabitants live in deep connection with their environment, prioritizing natural balance and ecological integration. Their culture is likely one of respect for life and a deep understanding of biological processes.",
-        "materials_base": "Bio-engineered organic compounds, living tissues, bioluminescent flora",
-        "mood_baseline": "Awe-inspiring, harmonious, wondrous",
-        "palette_bias": "Vibrant, bioluminescent, nature-inspired",
-        "soundscape_base": "Gentle, organic, ambient biological processes",
-        "flora_base": "Vibrant, bioluminescent, highly diverse, often forming architectural elements",
-        "fauna_base": "Varied, often bioluminescent, adapted to arboreal and aerial environments"
-      },
-      "description": "Xylos Prime is a breathtaking alien world where life itself forms the very structures of civilization. Colossal organic architecture, interwoven with vibrant, bioluminescent flora, stretches towards a perpetually clear, bright blue sky.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Living, bio-engineered city-spires",
-        "Vast bioluminescent jungles",
-        "Crystal-clear atmospheric phenomena",
-        "Interconnected root and vine pathways",
-        "Sky-dwelling bioluminescent creatures"
-      ],
-      "uniqueIdentifiers": [
-        "Bioluminescent flora as primary light source",
-        "Architecture grown, not built",
-        "Absence of traditional inorganic materials",
-        "Constant, gentle hum of biological processes",
-        "Unblemished, vibrant blue skies"
-      ],
-      "searchDesc": "Alien world of colossal organic architecture and vibrant, bioluminescent flora under a blue sky.",
-      "slug": "xylos-prime"
-    },
-    "de561789-4d57-44a9-9fdc-29bab862fd75": {
-      "id": "de561789-4d57-44a9-9fdc-29bab862fd75",
-      "type": "region",
-      "name": "Spore Plains",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The visual character is dominated by an explosion of vibrant, otherworldly plant life, intermingled with jagged, crystalline geological formations. Smooth, organic curves of the flora contrast with the sharp angles of the rocks, all bathed in a soft, internal light.",
-        "colorsAndLighting": "Predominantly vibrant greens and blues, with pockets of intense, bioluminescent purples and oranges. The lighting is diffuse, emanating from the flora and the sky, creating a surreal, glowing environment.",
-        "atmosphere": "The air is thick with fine, iridescent spores that create a constant, shimmering haze. The climate is humid and warm, with a perpetual, gentle exhalation of life from the colossal plant organisms. A subtle, earthy aroma mixed with a faint, sweet perfume permeates the air.",
-        "materials": "The primary materials are bio-engineered organic compounds of immense complexity, resembling fibrous tissues and hardened sap. Strange, mineral-like crystalline structures are also prevalent, appearing to have grown organically from the earth.",
-        "mood": "The emotional tone is one of profound awe and a sense of overwhelming, untamed natural power. There's a feeling of deep, alien serenity, coupled with the mystery of the distant, unseen structures.",
-        "sounds": "Whispering spore clouds, soft pulsing, alien chirps, rustling foliage, gentle crystalline resonance",
-        "spatialLayout": "The Spore Plains are characterized by an undulating terrain, punctuated by towering floral growths and sharp geological extrusions. Paths are largely dictated by the natural growth patterns of the vegetation, with wide, open clearings interspersed with dense, vine-choked areas.",
-        "primary_surfaces": [
-          "Living plant matter",
-          "Crystalline rock"
-        ],
-        "secondary_surfaces": [
-          "Bioluminescent fungal growths",
-          "Spore-infused earth"
-        ],
-        "accent_features": [
-          "Pulsating spore sacs",
-          "Iridescent dew droplets",
-          "Veined petal structures"
-        ],
-        "dominant": "Green",
-        "secondary": "Blue",
-        "accent": "Purple, Orange",
-        "ambient": "Bioluminescent Glow",
-        "genre": null,
-        "architectural_tone": "Bio-organic: Architecture is grown, not built, resembling colossal, living organisms or intricately woven plant structures. It features smooth, flowing lines, seamless integration with the environment, and is composed entirely of natural, bio-engineered materials.",
-        "cultural_tone": "Harmonious and symbiotic: The inhabitants live in deep connection with their environment, prioritizing natural balance and ecological integration. Their culture is likely one of respect for life and a deep understanding of biological processes.",
-        "materials_base": "Bio-engineered organic compounds, living tissues, bioluminescent flora",
-        "mood_baseline": null,
-        "palette_bias": "Vibrant, bioluminescent, nature-inspired",
-        "soundscape_base": null,
-        "flora_base": "Alien, colossal fungi, pulsating spore-pods, dense vine networks",
-        "fauna_base": null
-      },
-      "description": "A sprawling foreground region defined by its overwhelming alien flora and bizarre geological protrusions. In the distance, the landscape dissolves into immense, dreamlike structures.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Colossal, bioluminescent fungi",
-        "Pulsating spore-bursting flora",
-        "Crystalline geological formations",
-        "Dense, alien vine networks",
-        "Whispering spore clouds"
-      ],
-      "uniqueIdentifiers": [
-        "Dominant alien plant life",
-        "Ethereal distant structures",
-        "Spore-infused atmosphere",
-        "Unusual crystalline geology",
-        "Intense bioluminescent displays"
-      ],
-      "searchDesc": "Alien flora, strange geology, and distant ethereal structures in the Spore Plains.",
-      "slug": "spore-plains"
-    },
-    "39668637-f023-4ad2-9f27-eb32dab9898c": {
-      "id": "39668637-f023-4ad2-9f27-eb32dab9898c",
-      "type": "location",
-      "name": "The Great Spore Bloom",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "This colossal bio-organic structure resembles a giant mushroom, with a vast, pale yellow cap that is wide and deeply frilled. Its immense stalk is grounded by an intricate, sprawling network of luminous white root-like tendrils.",
-        "colorsAndLighting": "The primary color is a soft, pale yellow, accented by the stark white of its root system. Bioluminescent flora integrated into its structure emit a gentle, ambient glow, illuminating the immediate surroundings.",
-        "atmosphere": "This landmark is a focal point of profound awe, exuding an untamed natural power. The air around it hums with a deep, alien serenity, enhanced by the sheer scale of the organism and its symbiotic relationship with the surrounding bio-organic landscape.",
-        "materials": "Constructed entirely from bio-engineered organic compounds, the exterior appears to be living tissue. The root structures are robust and fibrous, while the cap possesses a delicate, almost petal-like texture.",
-        "mood": "The Great Spore Bloom evokes a sense of deep reverence and wonder, a testament to the overwhelming, untamed power of nature and its mysterious biological processes.",
-        "sounds": "gentle hum, rustling, soft pulsing, distant chimes, bio-luminescence crackle",
-        "spatialLayout": "The mushroom-like form rises prominently from the ground. Entrances are integrated into its massive root system and visible as glowing apertures in its stalk, suggesting internal chambers.",
-        "primary_surfaces": "living tissue, fungal cap material",
-        "secondary_surfaces": "fibrous root structures, bioluminescent growths",
-        "accent_features": "frilled edges of the cap, glowing pores",
-        "dominant": "pale yellow",
-        "secondary": "white",
-        "accent": "bioluminescent green/blue",
-        "ambient": "soft, glowing",
-        "genre": null,
-        "architectural_tone": "Bio-organic: Architecture is grown, not built, resembling colossal, living organisms or intricately woven plant structures. It features smooth, flowing lines, seamless integration with the environment, and is composed entirely of natural, bio-engineered materials.",
-        "cultural_tone": "Harmonious and symbiotic: The inhabitants live in deep connection with their environment, prioritizing natural balance and ecological integration. Their culture is likely one of respect for life and a deep understanding of biological processes.",
-        "materials_base": "Bio-engineered organic compounds, living tissues, bioluminescent flora",
-        "mood_baseline": "Profound awe and a sense of overwhelming, untamed natural power. Deep, alien serenity, coupled with mystery.",
-        "palette_bias": "Vibrant, bioluminescent, nature-inspired",
-        "soundscape_base": null,
-        "flora_base": "bioluminescent flora",
-        "fauna_base": null
-      },
-      "description": "A colossal, pale yellow mushroom-like organism that serves as a prominent landmark. Its wide, frilly cap dwarfs the surroundings, supported by intricate, sprawling white root structures that anchor it firmly.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center, foreground",
-          "description": "An opening within the root structure, leading into the unknown interior."
-        },
-        {
-          "type": "window",
-          "position": "midground, left",
-          "description": "A bioluminescent opening in the stalk, hinting at internal structures."
-        },
-        {
-          "type": "window",
-          "position": "midground, right",
-          "description": "Another glowing aperture in the stalk, offering a glimpse within."
-        }
-      ],
-      "dominantElements": [
-        "colossal mushroom cap",
-        "sprawling white root system",
-        "pale yellow stalk"
-      ],
-      "uniqueIdentifiers": [
-        "frilly cap",
-        "bioluminescent pores",
-        "vast root network"
-      ],
-      "searchDesc": "The Great Spore Bloom: colossal pale yellow mushroom landmark with frilly cap and white roots.",
-      "slug": "the-great-spore-bloom",
-      "primaryMedia": "media-1764707294705-kwrpzk27k"
-    },
-    "loc-1764707405047-ryggdf8co": {
-      "id": "loc-1764707405047-ryggdf8co",
-      "type": "host",
-      "name": "Aethelgard",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Structures mimic organic forms, blending seamlessly with towering trees and geological formations. Crystalline elements refract light, creating dynamic visual displays that change with the time of day and atmospheric conditions. Scale is immense, with cities reaching towards the heavens and natural wonders extending as far as the eye can see.",
-        "colorsAndLighting": "Dominated by vibrant greens and blues from lush vegetation and clear skies, accented by the iridescent shimmer of technological components. Lighting is often soft and diffused, filtered through canopy or emitted by natural bioluminescence, creating an ethereal and inviting glow.",
-        "atmosphere": "The air is exceptionally clean and crisp, often carrying the scent of rich soil and exotic blossoms. Gentle, perpetual breezes rustle through leaves, and soft, ambient rain showers are common in many regions, ensuring the continued vitality of the landscape. The overall feel is one of serene equilibrium.",
-        "materials": "Primary construction utilizes bio-engineered composites and grown crystalline structures. Natural materials like ancient wood, polished stone, and living plant matter are also integrated, showcasing a deep respect for the environment.",
-        "mood": "A sense of awe and profound peace permeates Aethelgard, fostering a feeling of optimistic possibility and deep connection to the world.",
-        "sounds": "Chirping, rustling, humming, flowing water, gentle chimes, distant synthesized melodies",
-        "spatialLayout": "Cities are often built vertically, integrated into mountainsides, giant trees, or floating platforms, connected by elegant sky-bridges and subterranean networks. Natural areas are largely preserved, with pathways and infrastructure designed to minimize impact and enhance the beauty of the surroundings.",
-        "primary_surfaces": [
-          "Living plant matter",
-          "Bio-engineered composites",
-          "Natural stone"
-        ],
-        "secondary_surfaces": [
-          "Cultivated crystals",
-          "Polished wood",
-          "Bio-luminescent materials"
-        ],
-        "accent_features": [
-          "Kinetic sculptures that mimic plant growth",
-          "Light-channeling architectural elements",
-          "Waterfalls that flow through urban centers"
-        ],
-        "dominant": "Greens",
-        "secondary": "Blues",
-        "accent": "Iridescent white, bioluminescent purples",
-        "ambient": "Soft, diffused light",
-        "genre": "Eco-Sci-Fi",
-        "architectural_tone": "Organic bio-architecture with crystalline infill, inspired by natural growth patterns and geological formations. Buildings often appear 'grown' rather than built, with smooth, flowing lines and integrated living components.  Crystalline elements are used for structural integrity and light manipulation, creating dynamic facades.",
-        "cultural_tone": "Harmonious and enlightened, with a deep reverence for nature and a commitment to sustainable technological advancement. Societies are typically cooperative, prioritizing the well-being of both their inhabitants and the environment.",
-        "materials_base": [
-          "Living flora",
-          "Bio-engineered polymers",
-          "Cultivated crystalline structures",
-          "Polished natural stone"
-        ],
-        "mood_baseline": "Serene optimism and natural wonder",
-        "palette_bias": "Earthy greens and blues, accented by vibrant, glowing purples and iridescent whites",
-        "soundscape_base": "A gentle symphony of natural sounds interwoven with subtle, harmonious technological hums and melodies",
-        "flora_base": [
-          "Giant bioluminescent fungi",
-          "Towering, genetically enhanced trees",
-          "Air-purifying mosses and vines",
-          "Symbiotic floral networks"
-        ],
-        "fauna_base": [
-          "Genetically engineered terrestrial and avian creatures",
-          "Bio-luminescent insects",
-          "Aquatic life adapted to purified waters",
-          "Symbiotic bio-mechanical creatures"
-        ]
-      },
-      "description": "Aethelgard is a world where the pinnacle of technological advancement is not at odds with, but instead enhances, the breathtaking grandeur of its natural landscapes. Towering crystalline structures rise from verdant rainforests, and bioluminescent flora illuminates the pathways of advanced transportation networks.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Living Architecture",
-        "Atmospheric Processors",
-        "Geo-Integrated Cities",
-        "Bio-Luminescenct Flora Networks",
-        "Sky-Bridges of Crystal"
-      ],
-      "uniqueIdentifiers": [
-        "Harmonious Tech-Nature Fusion",
-        "Bioluminescent Infrastructure",
-        "Organic and Crystalline Architecture",
-        "Elevated and Integrated Transit Systems",
-        "Atmospheric Purity"
-      ],
-      "searchDesc": "A world of advanced tech seamlessly integrated with majestic nature, featuring living architecture and bioluminescent flora.",
-      "slug": "aethelgard"
-    },
-    "b7de88d0-a33b-4b09-bdad-058675d59c6a": {
-      "id": "b7de88d0-a33b-4b09-bdad-058675d59c6a",
-      "type": "region",
-      "name": "Sky-Mirror Basin",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Smooth, organically flowing structures appear to float effortlessly above the water's surface, connected by translucent bio-luminescent pathways. The cliffs are carved with intricate, naturally-inspired patterns, seamlessly integrating with the surrounding flora.",
-        "colorsAndLighting": "The basin is bathed in the soft, diffused light reflected from the vast lake, creating a shimmering, iridescent effect. Accents of vibrant bioluminescence emanate from the architecture and flora, painting the scene with ethereal purples and whites.",
-        "atmosphere": "The air is exceptionally pure and carries a faint, pleasant scent of mineral-rich water and exotic blossoms. A gentle, consistent breeze circulates, often carrying soft, melodic chimes.",
-        "materials": "Living bio-engineered flora forms the structural basis of the hovering buildings, interwoven with cultivated crystalline lattices for support and light diffusion. The surrounding cliffs are comprised of polished, mineral-rich stone.",
-        "mood": "A profound sense of serenity and wonder permeates the Sky-Mirror Basin, inviting contemplation and fostering a deep connection with the sublime.",
-        "sounds": "Gentle lapping water, soft wind chimes, distant melodic hums, rustling flora, occasional ethereal calls.",
-        "spatialLayout": "The basin features a centralized, expansive lake with architecture clustered around its edges and suspended above it, anchored to the sculpted cliffs. Pathways are often aerial or water-based.",
-        "primary_surfaces": [
-          "Cultivated crystalline structures",
-          "Polished natural stone"
-        ],
-        "secondary_surfaces": [
-          "Living flora",
-          "Bio-engineered polymers"
-        ],
-        "accent_features": [
-          "Bioluminescent veins",
-          "Integrated water features",
-          "Hanging gardens",
-          "Reflective surfaces"
-        ],
-        "dominant": "Blues",
-        "secondary": "Greens",
-        "accent": "Purples",
-        "ambient": "Soft, diffused, reflective",
-        "genre": null,
-        "architectural_tone": "Organic bio-architecture with crystalline infill, inspired by natural growth patterns and geological formations. Buildings often appear 'grown' rather than built, with smooth, flowing lines and integrated living components.  Crystalline elements are used for structural integrity and light manipulation, creating dynamic facades.",
-        "cultural_tone": "Harmonious and enlightened, with a deep reverence for nature and a commitment to sustainable technological advancement. Societies are typically cooperative, prioritizing the well-being of both their inhabitants and the environment.",
-        "materials_base": [
-          "Living flora",
-          "Bio-engineered polymers",
-          "Cultivated crystalline structures",
-          "Polished natural stone"
-        ],
-        "mood_baseline": null,
-        "palette_bias": "Earthy greens and blues, accented by vibrant, glowing purples and iridescent whites",
-        "soundscape_base": null,
-        "flora_base": null,
-        "fauna_base": null
-      },
-      "description": "A sprawling, tranquil basin dominated by a vast, impossibly reflective body of water. Its sculpted, mineral-rich cliffs cradle an ecosystem of ethereal, hovering architectural marvels.",
-      "navigableElements": [
-        "The Great Reflecting Lake",
-        "Crystal Spires",
-        "Hanging Gardens of Aethel",
-        "The Whisperwind Canals"
-      ],
-      "dominantElements": [
-        "The Great Reflecting Lake",
-        "Hovering Bio-Domes",
-        "Sculpted Cliff Dwellings",
-        "Luminary Crystal Towers"
-      ],
-      "uniqueIdentifiers": [
-        "Unparalleled water reflectivity",
-        "Gravity-defying architecture",
-        "Unique geological cliff formations",
-        "Bioluminescent flora integrated into structures"
-      ],
-      "searchDesc": "Serene basin with reflective lake, sculpted cliffs, and hovering eco-architecture.",
-      "slug": "sky-mirror-basin"
-    },
-    "079b2846-2a85-4f76-b54e-b046f29a6afc": {
-      "id": "079b2846-2a85-4f76-b54e-b046f29a6afc",
-      "type": "location",
-      "name": "The Lumina Nexus",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A towering, majestic metallic structure that appears both meticulously crafted and organically grown. Its primary body is composed of elegant silver and gold-toned components, giving it a refined, almost ethereal presence. Multiple glowing blue, crystalline spires descend from its form, lending it a distinctive and radiant silhouette.",
-        "colorsAndLighting": "The structure's metallic surfaces reflect ambient light, shimmering with silver and gold.  The primary illumination comes from the vibrant, deep blue glow of the crystalline spires, which cast an enchanting light on its surroundings.  The glass-like dome top refracts this light, creating a dazzling, otherworldly luminescence.",
-        "atmosphere": "A profound sense of serenity and wonder permeates the area around the Lumina Nexus. The air hums with a gentle energy, and the visual spectacle of the glowing spires invites contemplation and awe.  It stands as a beacon of enlightened design within its environment.",
-        "materials": "The exterior showcases a remarkable interplay between polished, bio-engineered polymers with metallic finishes and cultivated crystalline structures.  These materials are integrated seamlessly, suggesting advanced construction methods that mimic natural growth.",
-        "mood": "This structure evokes a feeling of profound peace and inspiring wonder.  It is a place of advanced, yet harmonious, existence, suggesting enlightenment and a deep connection to cosmic forces.",
-        "sounds": "Gentle hum, soft chimes, distant flowing water, light rustling, ethereal whispers",
-        "spatialLayout": "The Lumina Nexus is a central, vertical structure. Its form is complex, with flowing lines and integrated spires. A prominent grand passage at its base serves as the primary entrance, suggesting an inviting and accessible core.",
-        "primary_surfaces": "Polished metallic bio-engineered polymers, cultivated crystalline structures",
-        "secondary_surfaces": "Segmented glass-like dome, gold-toned accents",
-        "accent_features": "Glowing blue crystalline spires, internal light sources",
-        "dominant": "Silver",
-        "secondary": "Gold",
-        "accent": "Vibrant blue",
-        "ambient": "Serene blue and white light",
-        "genre": null,
-        "architectural_tone": "Organic bio-architecture with crystalline infill, featuring smooth, flowing lines and dynamic facades.",
-        "cultural_tone": "Harmonious and enlightened, prioritizing well-being and sustainable advancement.",
-        "materials_base": "Bio-engineered polymers, Cultivated crystalline structures, Polished natural stone",
-        "mood_baseline": "A profound sense of serenity and wonder.",
-        "palette_bias": "Earthy greens and blues, accented by vibrant, glowing purples and iridescent whites",
-        "soundscape_base": null,
-        "flora_base": null,
-        "fauna_base": null
-      },
-      "description": "The Lumina Nexus is a majestic metallic edifice crowned by a segmented, glass-like dome. Its elegant silver and gold-toned structure is interwoven with descending, glowing blue crystalline spires, embodying a harmonious blend of technology and natural luminescence.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center",
-          "description": "A grand, shimmering archway at the base of the structure, leading into the central chamber."
-        },
-        {
-          "type": "balcony",
-          "position": "midground",
-          "description": "Several cantilevered platforms adorned with glowing flora, offering views of the surrounding basin."
-        },
-        {
-          "type": "portal",
-          "position": "background",
-          "description": "A subtly shifting energy field near the apex of the dome, hinting at inter-dimensional access."
-        }
-      ],
-      "dominantElements": [
-        "Segmented glass-like dome",
-        "Silver and gold metallic body",
-        "Descending blue crystalline spires",
-        "Glowing crystalline accents"
-      ],
-      "uniqueIdentifiers": [
-        "Combination of metallic elegance and crystalline growth",
-        "The signature blue glow emanating from the spires",
-        "The segmented, almost iridescent dome",
-        "The impression of organic sculpture on a grand scale"
-      ],
-      "searchDesc": "Majestic metallic Nexus with a glass dome and glowing blue crystalline spires.",
-      "slug": "the-lumina-nexus",
-      "primaryMedia": "media-1764707420054-7w709kxdb"
-    },
-    "niche-1764752861002-wq2wksyit": {
-      "id": "niche-1764752861002-wq2wksyit",
-      "type": "niche",
-      "name": "interior of The Lumina Nexus",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A colossal, multi-tiered atrium interior bathed in ethereal azure light. The floor is a polished silver bio-polymer, leading to a gently sloping ramp adorned with bioluminescent moss and crystalline energy channels. Seamless walls blend silver polymers with pulsing blue crystal panels, punctuated by a grand asymmetric archway with golden accents. The immense height culminates in a faceted glass-like dome.",
-        "colorsAndLighting": "Dominated by cool, vibrant blues from the crystal panels and soft, ambient azure light, contrasted by the reflective sheen of polished silver. Golden accents provide warmth near the archway, and soft white light emanates from within the crystals and moss.",
-        "atmosphere": "The air is still and carries a gentle, humming energy, creating a palpable sense of serene wonder. The vast scale and soft luminescence inspire awe and profound peace, as if standing within a living, breathing entity.",
-        "materials": "Polished silver bio-engineered polymers form smooth, flowing surfaces. Cultivated vibrant blue crystalline structures glow with internal light. Accents of flowing gold and a segmented, glass-like dome material contribute to the intricate, high-detail textures.",
-        "mood": "Profound peace and inspiring wonder pervade this enlightened space, fostering a harmonious connection to advanced, cosmic forces.",
-        "sounds": "Gentle hum, distant resonance, subtle energy flow.",
-        "spatialLayout": "A colossal, vertically oriented atrium with a soaring height. The layout features a prominent foreground ramp, a midground archway and support pillars, and distant suspended walkways hinting at further exploration, all guiding the eye upwards.",
-        "primary_surfaces": "Polished silver bio-engineered polymers, glowing vibrant blue crystalline structures.",
-        "secondary_surfaces": "Segmented glass-like dome, flowing gold accents.",
-        "accent_features": "Bioluminescent moss tracing ramp edges, crystalline energy channels, asymmetric golden-framed archway.",
-        "dominant": "Silver (floor, walls, architectural elements)",
-        "secondary": "Vibrant blue (crystal panels, light)",
-        "accent": "Gold (archway framing), soft white (internal luminescence)",
-        "ambient": "Cool",
-        "genre": null,
-        "architectural_tone": "Organic bio-architecture with crystalline infill, smooth flowing lines, dynamic facades, intricate detailing",
-        "cultural_tone": "Harmonious and enlightened, prioritizing well-being and sustainable advancement.",
-        "materials_base": "Bio-engineered polymers, cultivated crystals, advanced composites",
-        "mood_baseline": "Profound peace, inspiring wonder, harmonious, enlightened",
-        "palette_bias": "Dominant silver and vibrant blue, accented by gold and white",
-        "soundscape_base": "Serene ambient hum, gentle energy resonance",
-        "flora_base": "Bioluminescent moss",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764752861001-39wsyi2u7",
-      "description": "The vast, multi-tiered atrium of The Lumina Nexus, characterized by soaring organic architecture, glowing crystalline elements, and a serene, awe-inspiring atmosphere.",
-      "navigableElements": [
-        {
-          "type": "ramp",
-          "position": "foreground center",
-          "description": "Illuminated ramp with integrated crystalline energy channels and bioluminescent moss."
+          "description": "A large display window showcasing avant-garde outfits and illuminated by pulsating LED lights, offering a glimpse inside."
         },
         {
           "type": "archway",
-          "position": "midground left",
-          "description": "Large, asymmetric archway framed by flowing golden accents, revealing a luminescent chamber beyond."
-        },
-        {
-          "type": "walkway",
-          "position": "midground right",
-          "description": "Suspended walkway of interwoven silver filaments, accessed by crystalline pillars."
-        },
-        {
-          "type": "walkway",
-          "position": "background upper center",
-          "description": "Distant suspended walkways in the upper reaches of the atrium."
+          "position": "right",
+          "description": "A narrow, graffiti-adorned archway to the side, suggesting a back entrance or service alley."
         }
       ],
       "dominantElements": [
-        "soaring multi-tiered atrium structure",
-        "gleaming silver bio-polymer floor and ramp",
-        "glowing vibrant blue crystal panels",
-        "faceted glass-like dome ceiling",
-        "asymmetric golden-accented archway"
+        "Bold, geometric signage with flickering neon lights",
+        "Large, artfully arranged display windows",
+        "A striking combination of weathered brick and sleek, modern paneling",
+        "Intricate metalwork reminiscent of industrial piping, integrated into the facade"
       ],
       "uniqueIdentifiers": [
-        "azure light reflections",
-        "bioluminescent moss patterns",
-        "pulsing blue crystal panels",
-        "cascading luminescence from ceiling",
-        "organic bio-architecture with crystalline infill"
+        "The 'Electric Threads' sign pulses with a vibrant, almost alive, neon glow.",
+        "A meticulously curated mannequin display that changes weekly, always pushing fashion boundaries.",
+        "Subtle but impactful street art incorporated into the building's lower levels.",
+        "The juxtaposition of raw, industrial textures with high-fashion elements."
       ],
-      "searchDesc": "Vast Lumina Nexus atrium: silver bio-polymers, glowing blue crystals, epic scale, serene wonder.",
-      "slug": "interior-of-the-lumina-nexus"
+      "searchDesc": "Trendy clothing store, rave fashion, alternative style, neon signage, eclectic facade, urban boutique.",
+      "slug": "electric-threads-boutique",
+      "primaryMedia": "media-1764754488974-otd5f8idc"
+    },
+    "niche-1764754584611-qc3ylldzl": {
+      "id": "niche-1764754584611-qc3ylldzl",
+      "type": "niche",
+      "name": "interior of Electric Threads Boutique",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The boutique features a raw industrial aesthetic with a stained concrete floor and weathered brick walls. A central, asymmetrical cast iron archway leads to a timber-lined corridor, while industrial steel catwalks recede into the background. Vibrant graffiti art adorns one wall.",
+        "colorsAndLighting": "Sharp contrasts define the lighting, with neon glows of fuchsia, acid green, and electric blue clashing against pools of warm orange from spotlights, creating deep shadows.",
+        "atmosphere": "The air hums with an energetic thrum, overlaid with muffled electronic music and chatter. A faint scent of ozone and aged timber adds to the sensory experience.",
+        "materials": "A mix of weathered brick, raw concrete, salvaged timber, distressed faux leather, industrial steel, and cast iron creates a tactile and rugged environment.",
+        "mood": "This space exudes an energetic, rebellious, and creatively charged atmosphere, encouraging bold self-expression.",
+        "sounds": "energetic thrum, distant electronic music, lively chatter",
+        "spatialLayout": "The space has an off-center one-point perspective, with a distinct foreground, midground, and background featuring a suspended catwalk. Archways and seating areas create defined zones.",
+        "primary_surfaces": "weathered brick, raw concrete, stained concrete floor",
+        "secondary_surfaces": "salvaged timber, industrial steel, distressed faux leather",
+        "accent_features": "acid-green neon tube, fuchsia lighting, electric blue catwalk glow, cast iron archway details, graffiti street art",
+        "dominant": "Earthy Neutrals (Gray, Brown, Muted Red) with significant coverage on walls and floor.",
+        "secondary": "Fuchsia, appearing on seating upholstery and interior corridor lighting.",
+        "accent": "Acid green (neon tube), Electric blue (catwalk glow), Warm orange (spotlights), appearing as vibrant highlights.",
+        "ambient": "Neutral, with strong directional color influences from neon and spotlights.",
+        "genre": null,
+        "architectural_tone": "industrial metallic with gothic and brutalist undertones",
+        "cultural_tone": "An alternative fashion hub celebrating artistic expression and rave scene aesthetics.",
+        "materials_base": "raw, weathered, and reclaimed industrial materials",
+        "mood_baseline": "bold self-expression and defiant individuality",
+        "palette_bias": "contrasting earthy neutrals with vibrant neon and jewel tones",
+        "soundscape_base": "energetic electronic and urban ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764754584610-ohs3w8mwh",
+      "description": "The interior of a fashion boutique with an industrial-chic aesthetic, featuring raw materials, neon accents, and a rebellious, artistic vibe.",
+      "navigableElements": [
+        {
+          "type": "seating area",
+          "position": "left",
+          "description": "Low modular seating unit made of salvaged timber and industrial steel with fuchsia faux leather upholstery."
+        },
+        {
+          "type": "archway",
+          "position": "right",
+          "description": "Asymmetrical archway of reclaimed cast iron with gear and lightning bolt detailing, leading to a timber-lined corridor."
+        },
+        {
+          "type": "passage",
+          "position": "right archway",
+          "description": "Richly paneled timber-lined corridor illuminated by soft fuchsia light."
+        },
+        {
+          "type": "catwalk",
+          "position": "far center",
+          "description": "Suspended industrial steel catwalk glowing with electric blue light, over a shadowy chasm."
+        }
+      ],
+      "dominantElements": [
+        "weathered brick walls",
+        "raw concrete sections",
+        "reclaimed cast iron archway",
+        "industrial steel catwalk",
+        "graffiti street art"
+      ],
+      "uniqueIdentifiers": [
+        "reclaimed cast iron archway with gears and lightning bolts",
+        "acid-green neon tube on seating",
+        "graffiti electric guitar art",
+        "suspended steel catwalk with blue glow"
+      ],
+      "searchDesc": "Industrial-chic fashion boutique with neon lights, raw materials, and rebellious art.",
+      "slug": "interior-of-electric-threads-boutique"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764687588822-d2zf73e48",
+      "id": "loc-1764754468707-9uohbbywy",
       "type": "host",
       "children": [
         {
-          "id": "56191cab-cb57-4835-bad5-73fec1878bbc",
+          "id": "89899c7c-5e80-4e50-91d6-39d479186260",
           "type": "region",
           "children": [
             {
-              "id": "bfab47be-f72f-475a-851a-5e2d2e4af3fd",
+              "id": "0cad49a9-05de-4f2b-a7b6-f2c60a2a34d5",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764689995104-mw43tqwpp",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "6a9f05fc-5b2e-4758-bd3e-985d8df3999c",
-          "type": "region",
-          "children": [
-            {
-              "id": "d53d8473-932e-4a0e-8eac-d332940d55d3",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1764690090936-gbv0mjp7o",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764707076105-eff3sfysu",
-      "type": "host",
-      "children": [
-        {
-          "id": "3e4e2d00-3257-46c8-a510-5e983b371b5c",
-          "type": "region",
-          "children": [
-            {
-              "id": "8fd839ff-5c5a-47a3-9fe5-c0b62651817b",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764707280410-kneujstdu",
-      "type": "host",
-      "children": [
-        {
-          "id": "de561789-4d57-44a9-9fdc-29bab862fd75",
-          "type": "region",
-          "children": [
-            {
-              "id": "39668637-f023-4ad2-9f27-eb32dab9898c",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764707405047-ryggdf8co",
-      "type": "host",
-      "children": [
-        {
-          "id": "b7de88d0-a33b-4b09-bdad-058675d59c6a",
-          "type": "region",
-          "children": [
-            {
-              "id": "079b2846-2a85-4f76-b54e-b046f29a6afc",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1764752861002-wq2wksyit",
+                  "id": "niche-1764754584611-qc3ylldzl",
                   "type": "niche",
                   "children": []
                 }
@@ -1187,9 +259,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764687588822-d2zf73e48",
-    "loc-1764707076105-eff3sfysu",
-    "loc-1764707280410-kneujstdu",
-    "loc-1764707405047-ryggdf8co"
+    "loc-1764754468707-9uohbbywy"
   ]
 }
