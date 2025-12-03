@@ -1,3 +1,5 @@
+import { buildStructureSchemaString } from '../shared/dnaSchema';
+
 /**
  * Parent Chain DNA Generation Prompt
  * 
@@ -153,14 +155,7 @@ OUTPUT JSON STRUCTURE:
       "ambient": "Natural light quality",
       
       // Structure field (REQUIRED for locations)
-      "structure": {
-        "form": "PICK ONE: rectangular, round, cylindrical, spherical, faceted, organic, arched, gothic, irregular",
-        "roofType": "PICK ONE: domed, flat, vaulted, pitched, geodesic, arched, open-sky",
-        "scale": "PICK ONE: small, medium, large",
-        "orientation": "PICK ONE: vertical, horizontal, wide, cubic",
-        "openings": "PICK ONE: large-glass, arched-windows, narrow-slits, open-passages, minimal, none",
-        "functionalType": "PICK ONE: residential, commercial, religious, industrial, civic, entertainment"
-      },
+      ${buildStructureSchemaString()},
       
       // Cascading fields (SPARSE - null if same as region)
       "genre": null,

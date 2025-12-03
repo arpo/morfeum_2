@@ -44,7 +44,7 @@ export const WORLD_VIEW_3D_CONFIG = {
     X: 0.55,   // Horizontal shift range
     Y: 0.5,   // Vertical shift range
     Z: 0.33,  // Zoom range (camera z position offset)
-    ROLL: 0.02,  // Camera roll/tilt amplitude in radians (~1.7 degrees)
+    ROLL: 0.0,  // Camera roll/tilt amplitude in radians (~1.7 degrees)
   },
   
   /** Camera position movement - physical camera tilt to see mesh from angle */

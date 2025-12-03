@@ -1,3 +1,5 @@
+import { buildDNAFieldsString } from '../shared/dnaSchema';
+
 /**
  * Deepest Node DNA Generation Prompt (Optimized for Speed)
  * 
@@ -34,6 +36,14 @@ export function deepestNodeDNAGeneration(
   // Compact type instruction
   const typeHint = getCompactTypeHint(nodeType);
 
+  // Build DNA fields using shared schema
+  const dnaFields = buildDNAFieldsString({
+    includeStructure: nodeType === 'location',
+    genreHandling: 'conditional',
+    descLength: 'short',
+    nodeType
+  });
+
   return `Generate DNA for a ${nodeType} named "${nodeName}".
 ${parentContext}${hintsSection}
 DESCRIPTION: ${nodeDescription}
@@ -50,38 +60,7 @@ OUTPUT (JSON only, no markdown):
   "uniqueIdentifiers": ["3-5 distinctive features"],
   "searchDesc": "75-100 char description",
   "slug": "${nodeName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}",
-  "dna": {
-    "looks": "3-5 sentences: key forms, layout, scale, notable features",
-    "colorsAndLighting": "2-3 sentences: colors, light sources, shadows, time of day",
-    "atmosphere": "3-5 sentences: air quality, temperature, motion, weather",
-    "materials": "2-3 sentences: main materials, textures, condition",
-    "mood": "2-3 sentences: emotional tone, feelings evoked",
-    "sounds": "7-10 words: ambient sounds",
-    "spatialLayout": "2-4 sentences: space shape, dimensions, depth",
-    "primary_surfaces": "Main surfaces with adjectives",
-    "secondary_surfaces": "Supporting materials",
-    "accent_features": "Decorative/eye-catching details",
-    "dominant": "Primary color with coverage area",
-    "secondary": "Secondary color and placement",
-    "accent": "Accent colors and placement",
-    "ambient": "Overall light tone",
-    ${nodeType === 'location' ? `"structure": {
-      "form": "PICK ONE: rectangular, round, cylindrical, spherical, faceted, organic, arched, gothic, irregular",
-      "roofType": "PICK ONE: domed, flat, vaulted, pitched, geodesic, arched, open-sky",
-      "scale": "PICK ONE: small, medium, large",
-      "orientation": "PICK ONE: vertical, horizontal, wide, cubic",
-      "openings": "PICK ONE: large-glass, arched-windows, narrow-slits, open-passages, minimal, none",
-      "functionalType": "PICK ONE: residential, commercial, religious, industrial, civic, entertainment"
-    },` : ''}
-    ${nodeType === 'host' ? '"genre": "World genre (cyberpunk, fantasy, etc.)",' : '"genre": null,'}
-    "architectural_tone": "DETAILED style (e.g., 'weathered Victorian with Gothic arches, carved molding')",
-    "cultural_tone": "Who uses this, what purpose",
-    "materials_base": "Material palette style",
-    "mood_baseline": "Emotional baseline",
-    "palette_bias": "Color families defining this space",
-    "soundscape_base": "Ambient sound style",
-    "flora_base": "Plant life or 'None'",
-    "fauna_base": "Animal life or 'None'"
+  "dna": {${dnaFields}
   }
 }
 

@@ -1,3 +1,5 @@
+import { buildStructureSchemaString } from '../shared/dnaSchema';
+
 /**
  * Node DNA Generation Prompt
  * 
@@ -77,14 +79,7 @@ OUTPUT JSON STRUCTURE:
     "ambient": "Overall light tone (warm / cool / neutral).",
     
     // === ARCHITECTURAL STRUCTURE (conditional - for built spaces only) ===
-    "structure": {
-      "form": "PICK ONE: rectangular, round, cylindrical, spherical, faceted, organic, arched, gothic, irregular",
-      "roofType": "PICK ONE: domed, flat, vaulted, pitched, geodesic, arched, open-sky",
-      "scale": "PICK ONE: small, medium, large",
-      "orientation": "PICK ONE: vertical, horizontal, wide, cubic",
-      "openings": "PICK ONE: large-glass, arched-windows, narrow-slits, open-passages, minimal, none",
-      "functionalType": "PICK ONE: residential, commercial, religious, industrial, civic, entertainment"
-    },  // OR null if not a built structure (natural landscapes, outdoor areas)
+    ${buildStructureSchemaString()},  // OR null if not a built structure (natural landscapes, outdoor areas)
     
     // === CASCADING STYLE ATTRIBUTES (optional - can be null if inherited from parent) ===
     "genre": null,  // NEVER set genre - only host nodes have this
