@@ -748,18 +748,48 @@
         "char-1764774082626-umcmfhv43"
       ]
     },
-    "media-1764774622620-4fq06pu8j": {
-      "id": "media-1764774622620-4fq06pu8j",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84d514/KwdGTeDIaa1JPlHL4QAUk.jpg",
-      "createdAt": "2025-12-03T15:10:22.620Z",
+    "media-1764774634080-riretwm3n": {
+      "id": "media-1764774634080-riretwm3n",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84d517/ViYYE4_VKDnPsW9imMoPF_7c70c0856b614de4a80236fae338a1e5.png",
+      "createdAt": "2025-12-03T15:10:34.080Z",
       "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA determined woman stares intensely, her striking teal-blue hair peeking from under a distressed, light blue helmet adorned with prominent rivets. Large, round goggles with bright red lenses are pushed up over her forehead. Her face is a study in grim resilience: pale skin shows subtle cracks and marks, her cheeks bear horizontal black lines accented by small metallic studs. Her intensely green eyes are heavily lined with black eyeliner and bold, bright red eyeshadow. Her full, glossy red lips are slightly parted. Around her neck, a thick, dark leather choker with a brass buckle. She wears a dark blue military-style jacket with a high collar, featuring a large gold zipper, three gold rank stripes on the collar, and round metallic buttons on the chest. A circular emblem with a bright red five-pointed star is on her left side. Broad, beige straps of a tactical harness cross her shoulders. The background is a textured, weathered light blue surface of concrete walls with darker patches and vivid red splatters, embodying a grungy, utilitarian feel. The lighting is harsh and utilitarian, casting defined shadows, highlighting the muted blues and grays of the bunker studio, punctuated by the vibrant reds of her makeup, emblem, and background splatters, with glints of brass and gold. The overall mood is one of defiant resilience. Asymmetric composition. Utilitarian Bunker with Industrial Accents. Wasteland survivor, defiant individualist, portrait subject. Resilient and defiant. Durable, worn, and utilitarian materials. Muted blues and grays with vibrant red accents. Extreme detail, cinematic lighting, octane render, hyperrealistic.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
-        "model": "FLUX"
+        "parentMedia": "media-1764774622620-4fq06pu8j",
+        "model": "fal-depth-anything-v2"
       },
       "entityRefs": [
         "541e52cf-eec7-4102-b65a-ef2186937c99"
+      ],
+      "parentMedia": "media-1764774622620-4fq06pu8j"
+    },
+    "media-1764774743654-gp27z5fxa": {
+      "id": "media-1764774743654-gp27z5fxa",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84d521/nU6xskRbbBesSIo0XBYES.jpg",
+      "createdAt": "2025-12-03T15:12:23.654Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a man with an aged, weathered face and a prominent dark handlebar mustache. His eyes are replaced by intricate clockwork mechanisms, featuring golden gears and subtle markings within circular metallic frames that serve as ocular implants. A decorative, ornate metallic emblem is situated on his forehead. His skin has an earthy, slightly leathery texture with visible lines. He has short, dark hair that appears to be styled beneath a dark, textured cap or very dense, close-cropped hair on top of his head. His neck and upper chest are extensively integrated with complex brass and metallic clockwork, including various gears, wires, and gauges, with a large, ornate golden-faced clock prominently displayed on his lower throat. He wears a dark, heavy-fabric jacket or coat with a high collar, which also features smaller clockwork components and dials integrated into the fabric around the chest.\"\n\nChronos Alchemist, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A middle-aged man with a deeply lined, leathery, earthy-toned complexion. His eyes are circular, metallic sockets housing intricate golden clockwork gears. A metallic, ornate emblem adorns his forehead. Short, dark hair is densely styled..\n\nWearing: A heavy, dark fabric coat with a high collar. Smaller clockwork dials and components are integrated into the fabric around the chest. A large, ornate golden-faced clock is prominently displayed on his lower throat, extending into his upper chest which is fused with brass gears, wires, and gauges..\n\nPresence: A faint hum of intricate machinery and a cool, measured stillness that suggests immense, contained power..\n\nSetting: Dimly lit workshop, cast in the warm glow of brass and polished metal..\n\nTheir demeanor reflects: Patient, precise, and possesses an unnerving calm. He observes the world with analytical detachment, his internal workings always ticking with purpose..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764774728670-dz1u0i3lu"
       ]
+    },
+    "media-1764774757300-3cyavtk4e": {
+      "id": "media-1764774757300-3cyavtk4e",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84d523/YbiyYQjrZzZuG9vAuXVUA_f5add1b5dd004dcb98bccfd4e1708cd2.png",
+      "createdAt": "2025-12-03T15:12:37.300Z",
+      "metadata": {
+        "parentMedia": "media-1764774743654-gp27z5fxa",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764774728670-dz1u0i3lu"
+      ],
+      "parentMedia": "media-1764774743654-gp27z5fxa"
     }
   }
 }
