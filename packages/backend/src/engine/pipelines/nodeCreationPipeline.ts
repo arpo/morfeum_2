@@ -345,7 +345,7 @@ export async function runNodeCreationPipeline(
     if (signal.aborted) throw new Error('Aborted');
 
     // ═══════════════════════════════════════════════════════════════════════
-    // Stage 3: Generate IMAGE using DNA + PARALLEL: Parent Chain DNA
+    // Stage 3: Generate IMAGE PROMPT using DNA (LLM synthesis)
     // ═══════════════════════════════════════════════════════════════════════
     
     // Build context prompt for LLM to generate FLUX image description
@@ -357,9 +357,8 @@ export async function runNodeCreationPipeline(
       parentChain,
     });
 
-    helper.startStage('image_generation', 'Creating visual description...');
+    helper.startStage('image_prompt_generation', 'Crafting visual description...');
 
-    // TWO-STEP IMAGE GENERATION:
     // Step 1: LLM generates the actual FLUX image description from context
     const imagePromptResult = await generateText(
       apiKey,
@@ -374,10 +373,18 @@ export async function runNodeCreationPipeline(
     // Apply generalPromptFix for consistent styling
     const imagePrompt = generalPromptFix(imagePromptResult.data.text.trim());
 
-    // Step 2: Use the LLM-generated prompt for image generation
-    const imagePromise = generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
+    helper.completeStage('image_prompt_generation', 'Visual description ready', { prompt: imagePrompt });
 
-    // Start parent chain DNA generation in parallel (if needed)
+    if (signal.aborted) throw new Error('Aborted');
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // Stage 4: Generate IMAGE using FLUX + PARALLEL: Parent Chain DNA
+    // ═══════════════════════════════════════════════════════════════════════
+    
+    helper.startStage('image_generation', 'Generating image...');
+
+    // Step 2: Use the LLM-generated prompt for image generation
+    // Start parent chain DNA generation in PARALLEL (silently - no progress event yet)
     const parentNodes = extractParentNodes(rawResponse, deepestInfo.type);
     let parentDNAPromise: Promise<any> | null = null;
 
@@ -390,7 +397,8 @@ export async function runNodeCreationPipeline(
       );
 
       if (parentDNAPrompt) {
-        helper.startStage('parent_dna_generation', 'Building world structure (parallel)...');
+        // Start API call in parallel, but DON'T emit progress event yet
+        // This prevents the progress bar from going backwards
         parentDNAPromise = generateText(
           apiKey,
           [{ role: 'user', content: parentDNAPrompt }],
@@ -398,6 +406,9 @@ export async function runNodeCreationPipeline(
         );
       }
     }
+
+    // Start image generation (parallel with parent DNA)
+    const imagePromise = generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none');
 
     // Wait for image generation
     const imageResult = await imagePromise;
@@ -411,14 +422,21 @@ export async function runNodeCreationPipeline(
     const imageUrl = imageResult.data.images[0].url;
     helper.completeStage('image_generation', 'Visual ready', { imageUrl });
 
-    // Wait for parent chain DNA (if started)
+    // ═══════════════════════════════════════════════════════════════════════
+    // Stage 5: Wait for Parent Chain DNA (was started in parallel)
+    // ═══════════════════════════════════════════════════════════════════════
+    
+    // Now emit progress for parent DNA (after image_generation is complete)
     let parentDNA: any = null;
     if (parentDNAPromise) {
+      helper.startStage('parent_dna_generation', 'Building world structure...');
+      
       const parentDNAResult = await parentDNAPromise;
       
       if (parentDNAResult.error || !parentDNAResult.data) {
         // Log warning but don't fail - we have the deepest node DNA
         console.warn('Parent chain DNA generation failed:', parentDNAResult.error);
+        helper.completeStage('parent_dna_generation', 'Using default structure');
       } else {
         parentDNA = parseJSON<any>(parentDNAResult.data.text);
         helper.completeStage('parent_dna_generation', 'World structure complete');
@@ -428,7 +446,7 @@ export async function runNodeCreationPipeline(
     if (signal.aborted) throw new Error('Aborted');
 
     // ═══════════════════════════════════════════════════════════════════════
-    // Stage 4: Build WorldTree structure for frontend
+    // Stage 5: Build WorldTree structure for frontend
     // ═══════════════════════════════════════════════════════════════════════
     helper.startStage('tree_building', 'Building world tree...');
     

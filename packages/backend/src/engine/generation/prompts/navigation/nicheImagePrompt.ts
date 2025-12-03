@@ -114,9 +114,9 @@ REQUIREMENTS (INTERIOR NICHE):
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should describe what we see immediately after stepping inside.`}`;
 
-  console.log('\n\n##################### NICHE IMAGE PROMPT MAKER  #####################');
-  console.log(prompt);
-  console.log('##################### NICHE IMAGE PROMPT MAKER END  #####################\n\n');
+  // console.log('\n\n##################### NICHE IMAGE PROMPT MAKER  #####################');
+  // console.log(prompt);
+  // console.log('##################### NICHE IMAGE PROMPT MAKER END  #####################\n\n');
 
   return prompt;
 }

@@ -1,562 +1,244 @@
 {
   "nodes": {
-    "loc-1764760556089-ahw40uuzl": {
-      "id": "loc-1764760556089-ahw40uuzl",
+    "loc-1764761403600-bcr0j87u4": {
+      "id": "loc-1764761403600-bcr0j87u4",
       "type": "host",
       "name": "London",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A vast tapestry of architectural styles, from ancient stone and Victorian brick to gleaming modern skyscrapers. The city is a visual dialogue between history and the future, with distinct visual characters in each borough.",
-        "colorsAndLighting": "Dominated by muted greys, earthy browns, and deep reds of brickwork, contrasted by the metallic sheen of modern structures and the varied artificial lights of a global city. Lighting ranges from foggy ambient to the sharp brilliance of urban centers.",
-        "atmosphere": "A complex and ever-present urban hum, a blend of historical gravitas and relentless forward momentum. The air is a mix of industrial elements, diverse cuisines, and the distinct character of its many districts.",
-        "materials": "Predominantly brick, stone, steel, glass, and concrete, reflecting centuries of construction and development.",
-        "mood": "A constant duality of historical weight and modern dynamism; can be grand and stately, bustling and energetic, or intimate and charming depending on the district.",
-        "sounds": "A complex symphony of traffic, public transport, distant sirens, varied musical genres, and the murmur of millions of voices.",
-        "spatialLayout": "Varies greatly by district, from dense, winding historical centers to sprawling modern developments and extensive green spaces.",
-        "primary_surfaces": "Brick, stone, concrete.",
-        "secondary_surfaces": "Steel, glass, asphalt.",
-        "accent_features": "Iconic landmarks, historical statues, public art installations, diverse signage.",
-        "dominant": "Subdued urban palette: greys, muted browns, deep reds.",
-        "secondary": "Metallic sheens from modern architecture, black from transport.",
-        "accent": "Varies by district, but often includes pops of color from parks, signage, and cultural expressions.",
-        "ambient": "Generally overcast or diffused natural light, with strong artificial lighting in urban cores.",
-        "genre": "Urban-Futuristic",
-        "architectural_tone": "A vast and eclectic mix, with strong foundations in Victorian and historical European architecture, increasingly punctuated by avant-garde and futuristic designs.",
-        "cultural_tone": "A global hub of finance, arts, fashion, and diverse subcultures. Characterized by its multiculturalism, historical depth, and constant reinvention.",
-        "materials_base": "A pragmatic and enduring blend of traditional and contemporary materials, favoring durability and aesthetic longevity, often layered and contrasted.",
-        "mood_baseline": "Dynamic and layered; a sense of historical continuity meeting relentless urban progress.",
-        "palette_bias": "A base of muted, urban tones with significant variance and high contrast introduced by specific districts and cultural expressions.",
-        "soundscape_base": "A rich and complex urban soundscape, characterized by layers of traffic, public transport, diverse human activity, and background ambient noise.",
-        "flora_base": "Managed urban parks, street trees, hardy urban-adapted plants.",
-        "fauna_base": "Urban-adapted wildlife such as pigeons, squirrels, foxes, and various bird species."
+        "looks": "A cityscape of immense variety, ranging from grand Victorian and Georgian architecture to sleek modern skyscrapers and historic, weathered stone buildings. A constant hum of activity characterizes its visual presence.",
+        "colorsAndLighting": "A complex interplay of natural light, often softened by cloud cover, contrasted with the warm glow of streetlights, illuminated buildings, and neon signage, especially in entertainment districts. Dominant colors are muted greys, bricks, and stone, punctuated by vibrant lights.",
+        "atmosphere": "A dynamic and multifaceted atmosphere, from the stately calm of its historic squares to the frenetic energy of its commercial centers. The air carries the faint scent of rain, exhaust, and diverse culinary influences.",
+        "materials": "Predominantly stone, brick, concrete, glass, and steel, with a strong emphasis on durable and often aged materials. Wood is used for detailing and interiors.",
+        "mood": "A blend of historical gravitas, sophisticated urbanity, and a constant undercurrent of innovation and change. It can feel grand, exciting, gritty, or refined depending on the locale.",
+        "sounds": "A pervasive symphony of urban life: distant sirens, the rumble of the Underground, traffic, countless conversations in myriad languages, and the general murmur of millions of people.",
+        "spatialLayout": "A vast and complex network of interconnected districts, featuring grand avenues, tight alleyways, expansive parks, and densely packed urban cores. Layout reflects centuries of organic growth and planned development.",
+        "primary_surfaces": "Stone facades, red brick, concrete, and glass.",
+        "secondary_surfaces": "Asphalt, metalwork, and tiled pathways.",
+        "accent_features": "Ornamental ironwork, decorative stonework, historical statues, and modern public art installations.",
+        "dominant": "Greys, muted browns, and the deep red of brickwork.",
+        "secondary": "The metallic sheen of steel and glass, and the black of asphalt.",
+        "accent": "The golden glow of streetlights and illuminated building windows.",
+        "ambient": "Often diffused, with a characteristic urban haze and the reflective quality of wet streets.",
+        "genre": "Urban Realism",
+        "architectural_tone": "Eclectic and layered, showcasing a vast range of historical styles from Gothic and Victorian to Brutalist and contemporary high-rise, all coexisting within a dynamic urban fabric.",
+        "cultural_tone": "Multicultural, cosmopolitan, and historically significant. It's a global melting pot with a rich heritage of arts, sciences, and societal evolution.",
+        "materials_base": "Durable stone, brick, steel, glass, and aged metals.",
+        "mood_baseline": "Sophisticated, ambitious, and historically resonant.",
+        "palette_bias": "Muted, earthy tones with significant contrast from artificial lighting and colorful accents in specific districts.",
+        "soundscape_base": "A constant, diverse urban hum with underlying mechanical and human activity.",
+        "flora_base": "Parks and tree-lined streets with common temperate flora; more manicured in formal areas, wilder in older districts.",
+        "fauna_base": "Urban-adapted wildlife like pigeons, squirrels, and occasional foxes."
       },
-      "description": "A sprawling, historic metropolis and global city, renowned for its iconic landmarks, diverse cultures, and distinct neighborhoods. London is a city of constant evolution, blending tradition with cutting-edge modernity.",
-      "navigableElements": [
-        "Tube Stations",
-        "River Thames",
-        "Parks"
-      ],
+      "description": "A sprawling metropolis steeped in history, where ancient traditions blend seamlessly with cutting-edge modernity. London is a global hub of culture, finance, and innovation, offering a diverse tapestry of experiences.",
+      "navigableElements": [],
       "dominantElements": [
-        "Palace of Westminster",
-        "Tower of London",
-        "The Shard"
+        "Iconic landmarks",
+        "historic architecture"
       ],
       "uniqueIdentifiers": [
-        "Distinctive Boroughs",
-        "Red Double-Decker Buses",
-        "Black Cabs"
+        "Distinctive red telephone boxes",
+        "black cabs",
+        "the Tube"
       ],
-      "searchDesc": "London: A global capital of culture, history, and innovation, offering endless exploration.",
+      "searchDesc": "London: A global city blending history, culture, and diverse urban landscapes.",
       "slug": "london"
     },
-    "adeff4bc-652c-45c2-9cc5-f6ec7cb45602": {
-      "id": "adeff4bc-652c-45c2-9cc5-f6ec7cb45602",
+    "2dbfe0f5-213a-4c6c-91ce-925e8adc40a0": {
+      "id": "2dbfe0f5-213a-4c6c-91ce-925e8adc40a0",
       "type": "region",
       "name": "Camden",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A dynamic mix of historic Victorian architecture interwoven with vibrant street art, market stalls, and bold, independent shopfronts. Expect a patchwork of textures and an energetic, visually stimulating environment.",
-        "colorsAndLighting": "A lively, often chaotic blend of natural daylight filtered through market canopies, punctuated by the bright, artificial glow of shop signs, neon, and holographic displays. Colors are varied and bold, reflecting the diverse offerings.",
-        "atmosphere": "Charged with a bohemian and rebellious energy, filled with the sounds of diverse music genres, street performers, and the chatter of crowds. The air carries a mix of international food smells and urban grit.",
-        "materials": "A wide array of materials, from weathered brick and old timber in market structures to modern plastics, metals, and fabrics in contemporary shops. Street art often incorporates found objects.",
-        "mood": "Energetic, rebellious, creative, and slightly gritty. A place of constant discovery and self-expression.",
-        "sounds": "A cacophony of street music, vendor calls, the murmur of crowds, traffic from nearby roads, and distinct urban ambient noise.",
-        "spatialLayout": "Densely packed with narrow streets, winding market alleys, and open market squares. A sense of organized chaos.",
-        "primary_surfaces": "Weathered brick, aged wood, concrete pavement.",
-        "secondary_surfaces": "Corrugated metal, painted signage, market stall canvas.",
-        "accent_features": "Extensive street art, vibrant murals, eclectic signage, historical architectural details.",
-        "dominant": "Earthy tones of brick and wood, mixed with vibrant, often clashing colors from street art and signage.",
-        "secondary": "Metallics from market stalls and modern shop fittings.",
-        "accent": "A wide spectrum of bright, saturated colors from art and displays.",
-        "ambient": "Varied; can be bright and bustling in markets, or dimmer in older alleys.",
+        "looks": "A visually diverse area with a strong street art presence, contrasting historical architecture with vibrant, modern pop-ups and market stalls. A constant flow of unique individuals defines its visual character.",
+        "colorsAndLighting": "A chaotic but exciting mix of natural daylight filtered through market awnings, punctuated by the vibrant, often neon, artificial lighting of independent shops and bars at night. Colors are bold and varied.",
+        "atmosphere": "Energetic and bustling, filled with the sounds of diverse music, chatter, and street performances. The air is thick with the scent of international street food and a palpable sense of creative freedom.",
+        "materials": "A utilitarian and eclectic mix, featuring weathered wood, corrugated metal, vibrant painted surfaces, exposed brick, and a strong presence of textiles from market stalls. Reclaimed and repurposed materials are common.",
+        "mood": "Excited, rebellious, and creatively charged. It's a mood of discovery, of finding the unexpected and embracing individuality.",
+        "sounds": "A rich tapestry of street music, market vendor calls, diverse languages, distant traffic, and the hum of a busy urban environment. Often amplified by live music from pubs and clubs.",
+        "spatialLayout": "Densely packed with narrow streets, sprawling market areas, and intimate side alleys. Layout feels organic and somewhat chaotic, designed for exploration and spontaneous encounters.",
+        "primary_surfaces": "Painted brickwork, weathered wood, corrugated metal panels, and canvas awnings.",
+        "secondary_surfaces": "Concrete paving, metal grates, posters, and signage.",
+        "accent_features": "Graffiti art, neon signs for shops and venues, unique street art installations, and colorful market stall decorations.",
+        "dominant": "A wide spectrum of bold, saturated colors from market displays and street art.",
+        "secondary": "Muted tones of brick, metal, and weathered wood.",
+        "accent": "Pulsating neon and vibrant artificial light.",
+        "ambient": "Dynamic and varied, shifting from bright daylight to the artificial glow of evening.",
         "genre": null,
-        "architectural_tone": "Eclectic Victorian market with strong cyberpunk-influenced independent store additions.",
-        "cultural_tone": "Hub of alternative culture, music, fashion, and independent spirit; a historically significant area for subcultures.",
-        "materials_base": "Mix of traditional and modern, with a strong emphasis on repurposed and visually striking materials.",
-        "mood_baseline": "Energetic, slightly chaotic, with an undercurrent of creative rebellion.",
-        "palette_bias": "Bold, saturated, and often contrasting colors, influenced by street art and diverse market wares.",
-        "soundscape_base": "Dynamic and layered urban soundscape with strong elements of live music and market activity.",
+        "architectural_tone": "Eclectic urbanism with strong influences from street art, market culture, and post-industrial grit. Features a mix of utilitarian structures and expressive, often temporary, additions.",
+        "cultural_tone": "Alternative, bohemian, and trendsetting. It's a hub for subcultures, live music, independent fashion, and artistic expression.",
+        "materials_base": "Reclaimed industrial materials, painted wood, metal, and textiles.",
+        "mood_baseline": "Rebellious, creative, and energetic.",
+        "palette_bias": "Bold, high-contrast, and eclectic, favoring saturated colors and artificial light accents.",
+        "soundscape_base": "Diverse and cacophonous, a mix of street life, music, and human activity.",
         "flora_base": null,
         "fauna_base": null
       },
-      "description": "A vibrant and eclectic neighborhood in North London, renowned for its bustling markets, diverse street art, and a rich history of subcultures and alternative music scenes. Camden is a melting pot of fashion, food, and artistic expression.",
+      "description": "A vibrant, eclectic neighborhood known for its unique shops, bustling markets, and alternative culture. Camden pulsates with a youthful, creative energy, drawing in trendsetters and subculture enthusiasts.",
       "navigableElements": [],
       "dominantElements": [
-        "Camden Market",
-        "Canal Lock",
-        "Street Art"
+        "Camden Market stalls",
+        "iconic music venues"
       ],
       "uniqueIdentifiers": [
-        "Stables Market",
-        "Amy Winehouse Statue",
-        "Music Venues"
+        "Graffiti art",
+        "street performers",
+        "distinctive market architecture"
       ],
-      "searchDesc": "Camden: London's hub for alternative fashion, vibrant markets, and music history.",
+      "searchDesc": "Camden: Vibrant markets, alternative fashion, and eclectic street culture in London.",
       "slug": "camden"
     },
-    "6adaea43-6dec-4801-b6de-2025b3be7b91": {
-      "id": "6adaea43-6dec-4801-b6de-2025b3be7b91",
+    "5899e9f7-093c-491a-b483-8fe5efeb7972": {
+      "id": "5899e9f7-093c-491a-b483-8fe5efeb7972",
       "type": "location",
-      "name": "The Electric Wardrobe",
+      "name": "The Style Haven",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The exterior presents a striking facade of iridescent, anodized aluminum panels that shift in color with the viewing angle, punctuated by sharp, geometric chrome accents. The main entrance is a dramatic portal framed by intensely bright, pulsating cyan neon tubes that extend upwards, almost swallowing the building's name. Large display windows, also edged in chrome, reveal eclectic mannequins draped in daring, futuristic club attire. The overall scale is that of a modern shopfront, but with an exaggerated, almost theatrical design.",
-        "colorsAndLighting": "Dominated by electric blues and vivid magentas from the neon and holographic displays, contrasting with the shifting, pearlescent tones of the facade. The lighting is intensely artificial, with sharp highlights and deep, almost black shadows. The overall feel is one of nocturnal vibrancy, even in daylight.",
-        "atmosphere": "The air feels charged with anticipation and a hint of rebellious energy. There's a subtle hum from the electronics and perhaps a faint scent of ozone mixed with distant city fumes. Despite the vibrant exterior, there's a sense of controlled chaos, hinting at the wildness within. The temperature feels cool and crisp, a deliberate contrast to the visual heat.",
-        "materials": "The primary materials are iridescent anodized aluminum for the cladding, highly polished chrome for geometric framing and accents, and robust, high-intensity neon tubing. The display glass is exceptionally clear and likely reinforced. Underlying structures might be concrete or steel, but are mostly obscured by the flamboyant surface treatments.",
-        "mood": "Exciting, daring, and undeniably cool. This store evokes a sense of liberation and self-expression, a place for those who embrace the unconventional and live for the night.",
-        "sounds": "Distant bass throb, electronic hum, occasional crackle of neon, city traffic ambiance, muffled chatter.",
-        "spatialLayout": "The storefront presents a relatively flat plane, drawing the eye directly to the central entrance. The display windows create depth on either side, and the vertical extension of the neon suggests a multi-story presence, though the focus is on the ground-level facade. The layout is designed to be visually arresting and draw pedestrians inwards.",
-        "primary_surfaces": "Iridescent anodized aluminum cladding, highly polished chrome framing",
-        "secondary_surfaces": "High-clarity display glass, matte black service door, concrete pavement",
-        "accent_features": "Pulsating cyan neon tubing, shifting holographic logo, sharp chrome geometric accents, avant-garde mannequin displays",
-        "dominant": "Iridescent pearlescent covering 60% of facade.",
-        "secondary": "Polished chrome accents on 25% of facade.",
-        "accent": "Electric cyan neon on entrance frame, vibrant magenta and electric blue in holographic displays.",
-        "ambient": "Cool, electric blue with vibrant magenta highlights.",
+        "looks": "The facade of The Style Haven is a striking composition of dark, textured materials, with sharp, almost geometric angles that convey an avant-garde aesthetic. Prominent, jagged metal frames enclose a large, irregularly shaped display window on the left, showcasing provocative fashion. The main entrance is a robust, industrial-style door centrally located, flanked by the building's angular structure. The overall scale feels medium-sized, designed to make a bold statement on the street.",
+        "colorsAndLighting": "The dominant exterior colors are deep charcoals and matte blacks, creating a dramatic and understated base. This is contrasted by the vibrant, pulsating interior light that spills from the display window and the subtle, cool blue glow emanating from the pathway lights. The light feels artificial and designed to highlight the fashion within.",
+        "atmosphere": "The air around The Style Haven feels charged with a subtle energy, hinting at the pulsating nightlife and creative spirit of Camden. The temperature feels neutral, neither too warm nor too cold, designed to draw people in. There's a sense of anticipation, a whisper of excitement about the unique styles hidden behind the formidable exterior.",
+        "materials": "The primary materials are rough-textured, dark brickwork or possibly blackened concrete panels, contrasted with sharp, matte black or dark brushed metal framing around the display window and door. The pathway utilizes worn cobblestones with integrated, durable LED elements. The main door appears to be solid, heavy steel with substantial brushed nickel hardware.",
+        "mood": "The mood is one of daring self-expression and confident individuality. It evokes a sense of edgy sophistication and urban coolness, appealing to those who embrace unconventional style and are unafraid to make a statement. There's an allure of exclusivity and trendsetting.",
+        "sounds": "Distant urban hum, muffled bass from interior music, street chatter, occasional metal clinks.",
+        "spatialLayout": "The building has a somewhat compact footprint with a deliberately unconventional, angular facade that juts out slightly. The primary focal point is the large, central display window and the main entrance. Depth is created by the contrast between the dark exterior and the glowing interior, and by the illuminated pathway leading to the entrance.",
+        "primary_surfaces": "Rough, dark textured brickwork; matte black metal cladding.",
+        "secondary_surfaces": "Brushed nickel hardware on the door; cobblestone paving with integrated lighting.",
+        "accent_features": "Jagged, angular metal framing; pulsating interior light visible through display window; cool blue pathway illumination.",
+        "dominant": "Deep charcoal and matte black covering approximately 70% of the facade.",
+        "secondary": "Brushed nickel on door hardware and subtle structural accents.",
+        "accent": "Vibrant, shifting neon-like interior light and cool blue pathway LEDs.",
+        "ambient": "Neutral to slightly cool white, with strategic blue accents.",
         "genre": null,
-        "architectural_tone": "Futuristic club-chic with influences of late-20th-century cyberpunk aesthetics. Characterized by sharp geometric lines, highly reflective and iridescent surfaces, exaggerated neon lighting integrated into the structure, and bold, almost aggressive use of polished chrome as both structural and decorative elements. Think 'Blade Runner' meets a high-fashion boutique.",
-        "cultural_tone": "This store is a beacon for London's vibrant underground club scene and alternative fashion enthusiasts. It caters to individuals seeking unique, eye-catching pieces that express personality and a love for electronic music culture. It's a place where artistry meets apparel, reflecting Camden's heritage of subculture and self-expression.",
-        "materials_base": "Anodized aluminum, polished chrome, neon glass, reinforced acrylic, black powder-coated steel",
-        "mood_baseline": "Energetic, avant-garde, rebellious, celebratory",
-        "palette_bias": "Dominantly cool, electric hues (blues, cyans, violets) with sharp, high-contrast accents of magentas, fuchsias, and occasional stark whites or blacks.",
-        "soundscape_base": "Subtle electronic hums, pulsating beats, synthesized ambient tones, occasional digital glitches or bursts of static.",
+        "architectural_tone": "Post-industrial brutalism with sharp, deconstructivist angles; featuring heavy, dark textured concrete or blackened brickwork, exposed raw metal framing with a matte finish, and utilitarian-inspired industrial fixtures. Windows are often oversized and unusually shaped, prioritizing dramatic display over traditional symmetry.",
+        "cultural_tone": "This is a destination for subculture fashion enthusiasts and trendsetters, particularly those drawn to alternative and club-centric styles. It caters to a younger, urban demographic seeking unique pieces and an immersive shopping experience that reflects the vibrant, edgy spirit of Camden's creative scene.",
+        "materials_base": "Reclaimed industrial metals, raw concrete, dark stained wood, distressed leather, exposed steel, frosted or colored glass.",
+        "mood_baseline": "Urban grit, confident rebellion, expressive individuality, avant-garde cool.",
+        "palette_bias": "Deep, dark tones with high-contrast artificial lighting; punctuated by bold, often neon, accent colors.",
+        "soundscape_base": "Urban ambient noise, pulsating electronic music, industrial hums, echoing footsteps.",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A cool raver's club wear store, featuring neon lights, holographic displays, and racks of vibrant, unconventional clothing.",
+      "description": "A cool club wear store, featuring edgy fashion and trendy accessories.",
       "navigableElements": [
         {
           "type": "door",
           "position": "center foreground",
-          "description": "A large, double-width glass door framed in pulsating cyan neon, with a holographic 'Electric Wardrobe' logo shimmering above."
+          "description": "A heavy, black industrial-style door with oversized, brushed nickel hardware. It's slightly ajar, revealing a sliver of vibrant interior light."
         },
         {
           "type": "window",
           "position": "left facade",
-          "description": "A floor-to-ceiling display window showcasing mannequins adorned in outrageous, luminescent outfits, framed by jagged, chrome-plated trim."
+          "description": "A large, irregularly shaped display window, bordered by jagged, matte black metal. It showcases a mannequin draped in shimmering, iridescent fabric."
         },
         {
           "type": "path",
           "position": "leading to entrance",
-          "description": "A slightly worn but well-trodden pavement path, illuminated by the glow of streetlights and the store's vibrant signage."
+          "description": "A narrow, worn cobblestone path, dimly lit by integrated LED strips that cast a cool blue glow, leading directly to the main entrance."
         },
         {
           "type": "door",
-          "position": "far right side",
-          "description": "A smaller, utilitarian service door, painted a matte black, with a discreet, glowing red exit sign above it."
+          "position": "right facade, partially obscured",
+          "description": "A smaller, unmarked metal service door, providing a more discreet entry point, set flush with the brickwork."
         }
       ],
       "dominantElements": [
-        "Pulsating cyan neon entrance frame",
-        "Holographic logo display",
-        "Chrome-plated window trim",
-        "Mannequins in vibrant club wear",
-        "Iridescent facade cladding"
+        "Jagged, angular facade made of dark, textured materials.",
+        "Large, provocative display window with dynamic lighting.",
+        "Industrial-style main entrance with prominent hardware.",
+        "Integrated, cool-toned pathway lighting."
       ],
       "uniqueIdentifiers": [
-        "The constantly shifting holographic logo",
-        "The angular, almost crystalline chrome accents",
-        "The intensity and saturation of the neon lighting",
-        "The provocative and futuristic clothing displays"
+        "Angular, almost sculptural facade.",
+        "Bold, contrasting color scheme of dark exteriors with vibrant internal glow.",
+        "Industrial-chic metalwork details around windows and doors.",
+        "Unconventional display window shapes."
       ],
-      "searchDesc": "Neon-drenched club wear store in Camden, London. Futuristic fashion, holographic displays, eclectic vibe.",
-      "slug": "the-electric-wardrobe",
-      "primaryMedia": "media-1764760579725-9thcnuec5"
+      "searchDesc": "Edgy club wear store in Camden, London, with industrial facade and striking display windows.",
+      "slug": "the-style-haven",
+      "primaryMedia": "media-1764761427794-ysbvbcu5q"
     },
-    "niche-1764760621292-8iqfbm0wg": {
-      "id": "niche-1764760621292-8iqfbm0wg",
+    "niche-1764761452034-jtgjpiuji": {
+      "id": "niche-1764761452034-jtgjpiuji",
       "type": "niche",
-      "name": "interior of The Electric Wardrobe",
+      "name": "interior of The Style Haven",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior is characterized by gleaming, iridescent anodized aluminum flooring and walls, interspersed with sharply defined geometric polished chrome panels. A prominent doorway, framed by pulsating cyan neon, offers a glimpse into a darker space, while a faceted chrome and acrylic ceiling diffuses electric blue light. Avant-garde mannequins are displayed under sharp spotlights.",
-        "colorsAndLighting": "Dominant cool electric blues and cyans are accented by vibrant magentas, with pearlescent shifts across aluminum surfaces. Intense, artificial lighting creates sharp highlights and deep shadows, with neon sources being prominent.",
-        "atmosphere": "The air crackles with electric energy, cool and artificial. The linear recession of the space and dramatic lighting create a sense of exciting, daring exploration within a high-tech, avant-garde environment.",
-        "materials": "Key materials include gleaming iridescent anodized aluminum, polished chrome, matte black powder-coated steel, neon glass, and reinforced acrylic. Surfaces are highly reflective and polished, contrasted with matte finishes.",
-        "mood": "Futuristic club-chic, daring, energetic, and avant-garde, evoking a sense of liberation and self-expression.",
-        "sounds": "subtle hum of electronics, distant club beat, soft hiss of neon",
-        "spatialLayout": "The space features a horizontal recession, drawing the eye inward, with a moderate ceiling height. Verticality is suggested by dramatic lighting and implied upper levels accessible via an elevated walkway.",
-        "primary_surfaces": "iridescent anodized aluminum (flooring and walls), faceted chrome and reinforced acrylic (ceiling)",
-        "secondary_surfaces": "matte black powder-coated steel (platform), polished chrome (panels, door handle, walkway)",
-        "accent_features": "pulsating cyan neon tubes, recessed cyan LED strips, blinking magenta indicator lights, avant-garde mannequins",
-        "dominant": "iridescent pearlescent (flooring and walls)",
-        "secondary": "cool electric blue and cyan (ambient light, neon)",
-        "accent": "vibrant magenta (flooring shimmer, indicator lights), electric purple (club wear)",
-        "ambient": "cool",
+        "looks": "The space is an immediate immersion into post-industrial brutalism, characterized by sharp, deconstructivist angles. Heavy, dark textured concrete forms the primary structure, accented by exposed raw metal framing with a matte finish. A dramatic, angular opening ahead frames a view into a deeper section, bathed in vibrant, neon-like light.",
+        "colorsAndLighting": "Deep charcoal and matte black dominate the surfaces, creating a somber base. Pulsating, vibrant interior light, akin to neon, emanates from the opening ahead, contrasting with the cool blue LED strip defining the passage. Focused spotlights illuminate key displays.",
+        "atmosphere": "The air feels dense and charged with an urban, edgy sophistication. A sense of controlled chaos and anticipation permeates the space, encouraging exploration into its shadowed depths and brightly lit focal points. The cool, hard surfaces contribute to a stark yet alluring environment.",
+        "materials": "Rough, dark textured concrete forms the walls and floor. Exposed raw steel beams create a complex, faceted ceiling structure. Matte black metal frames prominent openings, while polished metal accents highlight the display alcove.",
+        "mood": "The mood is one of daring self-expression and confident individuality, evoking edgy sophistication and urban coolness.",
+        "sounds": "Distant industrial hum, subtle electronic undertones, echoing footsteps.",
+        "spatialLayout": "An asymmetrical, L-shaped niche that immediately draws the eye diagonally towards a central display and a descending passage. The layout emphasizes depth and encourages exploration into different zones.",
+        "primary_surfaces": "Textured dark concrete (walls, floor), exposed raw steel beams (ceiling).",
+        "secondary_surfaces": "Matte black metal framing, polished metal for display.",
+        "accent_features": "Cool blue LED floor strip, focused spotlight on avant-garde garment.",
+        "dominant": "Deep charcoal and matte black (70%)",
+        "secondary": "Dark concrete",
+        "accent": "Pulsating vibrant interior light (neon-like), cool blue LED",
+        "ambient": "Cool",
         "genre": null,
-        "architectural_tone": "Futuristic club-chic with late-20th-century cyberpunk influences",
-        "cultural_tone": "Beacon for London's vibrant underground club scene and alternative fashion enthusiasts.",
-        "materials_base": "highly reflective metals, neon glass, reinforced acrylic",
-        "mood_baseline": "Exciting, daring, and undeniably cool.",
-        "palette_bias": "cool electric blues and cyans with magenta accents",
-        "soundscape_base": "electronic hums and artificial ambience",
+        "architectural_tone": "Post-industrial brutalism with sharp, deconstructivist angles",
+        "cultural_tone": "Destination for subculture fashion enthusiasts and trendsetters seeking unique pieces.",
+        "materials_base": "Concrete, raw matte metal, industrial fixtures",
+        "mood_baseline": "Daring self-expression, confident individuality, edgy sophistication",
+        "palette_bias": "Dominant dark tones with vibrant accent lighting",
+        "soundscape_base": "Urban industrial ambient",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1764760621290-1d0t53yhp",
-      "description": "The futuristic interior of a niche fashion boutique.",
+      "primaryMedia": "media-1764761452033-s34zdmxm9",
+      "description": "A post-industrial brutalist interior niche immediately after entering, defined by sharp, deconstructivist angles and heavy, dark textured concrete walls.",
       "navigableElements": [
-        {
-          "type": "platform",
-          "position": "lower left",
-          "description": "low, stepped platform of matte black powder-coated steel with recessed cyan LED strips"
-        },
-        {
-          "type": "doorway",
-          "position": "mid-right wall",
-          "description": "off-center doorway framed by pulsating cyan neon tubes with a polished chrome door handle"
-        },
-        {
-          "type": "walkway",
-          "position": "far distance",
-          "description": "narrow, elevated walkway of polished chrome lined with tiny, blinking magenta indicator lights"
-        }
-      ],
-      "dominantElements": [
-        "gleaming iridescent anodized aluminum flooring",
-        "iridescent aluminum clad walls",
-        "geometric polished chrome panels",
-        "pulsating cyan neon framed doorway",
-        "display case with avant-garde mannequins",
-        "faceted chrome and acrylic ceiling"
-      ],
-      "uniqueIdentifiers": [
-        "pearlescent blues and magentas shimmer",
-        "cyan and magenta neon lighting",
-        "avant-garde fashion display"
-      ],
-      "searchDesc": "Futuristic club-chic boutique with iridescent aluminum, neon lights, and chrome accents.",
-      "slug": "interior-of-the-electric-wardrobe"
-    },
-    "loc-1764760682578-pn6bj2l16": {
-      "id": "loc-1764760682578-pn6bj2l16",
-      "type": "host",
-      "name": "Neo-Veridia",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A visually stunning cityscape where towering, architecturally diverse structures are softened by abundant, integrated greenery. Parks, vertical gardens, and bio-domes are common. The overall impression is one of organized, clean futurism.",
-        "colorsAndLighting": "A blend of natural light, sophisticated artificial lighting, and the greens of abundant flora. Colors are generally vibrant and clean, with a focus on blues, greens, and metallic sheens.",
-        "atmosphere": "Clean, well-regulated air, with a low ambient noise level characteristic of advanced urban infrastructure. A sense of order and progress pervades.",
-        "materials": "A wide array of advanced materials: self-healing composites, smart glass, bio-engineered alloys, polished ceramics, and high-strength polymers.",
-        "mood": "Optimistic, progressive, and harmonious.",
-        "sounds": "The quiet hum of advanced transportation, gentle sonic cues for navigation, distant nature sounds from green zones, and organized public announcements.",
-        "spatialLayout": "A mix of dense urban cores and sprawling, integrated natural areas. Efficient and often multi-layered transport systems connect different zones.",
-        "primary_surfaces": "Smooth, often reflective building facades, clean paved pathways.",
-        "secondary_surfaces": "Extensive vertical and horizontal greenery, integrated lighting arrays.",
-        "accent_features": "Unique sculptural elements, kinetic architecture, holographic displays.",
-        "dominant": "Clear sky blues and natural greens from vegetation.",
-        "secondary": "Silvers, whites, and metallic tones from architectural materials.",
-        "accent": "Vibrant colors from specialized flora, artistic installations, and dynamic lighting.",
-        "ambient": "Clean, crisp natural light, augmented by intelligent urban illumination.",
-        "genre": "Futuristic Utopian",
-        "architectural_tone": "Eco-futuristic and adaptive; characterized by organic forms, integrated living systems, and smart materials, aiming for harmony between built and natural environments.",
-        "cultural_tone": "A society valuing innovation, sustainability, artistic expression, and communal well-being. Citizens are encouraged to engage with technology and nature.",
-        "materials_base": "Sustainable composites, bio-integrated materials, advanced alloys, responsive glass.",
-        "mood_baseline": "Hopeful progress and balanced living.",
-        "palette_bias": "A balance of cool blues, vibrant greens, and clean metallic/white tones, with accents of diverse colors.",
-        "soundscape_base": "Quiet, technologically managed urban sounds with integrated natural elements.",
-        "flora_base": "Diverse and abundant, from manicured gardens to integrated vertical ecosystems.",
-        "fauna_base": "Controlled urban wildlife, often integrated into green spaces for ecological balance."
-      },
-      "description": "A futuristic metropolis renowned for its groundbreaking architecture and seamless integration of abundant green spaces. It is a city that prioritizes innovation and sustainability.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Skyscrapers of innovative design",
-        "Extensive vertical gardens",
-        "Advanced public transport networks"
-      ],
-      "uniqueIdentifiers": [
-        "Harmonious blend of technology and nature",
-        "Sustainable urban planning",
-        "Pioneering architectural styles"
-      ],
-      "searchDesc": "Futuristic city of innovative architecture and integrated green spaces.",
-      "slug": "neo-veridia"
-    },
-    "073baf4f-24c7-4dfc-8f9f-e7b0e5f27a9a": {
-      "id": "073baf4f-24c7-4dfc-8f9f-e7b0e5f27a9a",
-      "type": "region",
-      "name": "The Lumina District",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A landscape of architecturally significant structures, interspersed with dynamic public art. Wide, clean plazas and promenades are common, often featuring integrated lighting and water features. Natural elements are carefully curated.",
-        "colorsAndLighting": "A mix of artificial lighting from structures and art, alongside ambient city light. Dominant colors are often bold and sophisticated, with strong contrasts.",
-        "atmosphere": "A sense of refined dynamism and creative energy. The air is generally clean, with a low ambient noise level, punctuated by the sounds of art installations or public spaces.",
-        "materials": "Predominantly modern materials: polished composites, glass, sculpted metals, advanced stone aggregates. Emphasis on clean lines and sophisticated finishes.",
-        "mood": "Inspiring, sophisticated, and intellectually stimulating.",
-        "sounds": "A low hum of city activity, occasional melodic chimes from art pieces, gentle water features, and muted pedestrian traffic.",
-        "spatialLayout": "Spacious, with significant open areas and well-defined architectural zones. Buildings are designed to be viewed and appreciated.",
-        "primary_surfaces": "Polished stone or composite paving, large glass facades of buildings.",
-        "secondary_surfaces": "Sculpted metal, integrated lighting elements, curated planters.",
-        "accent_features": "Dynamic public art installations, unique building facades.",
-        "dominant": "Deep blues and purples of urban twilight, contrasted with the glow of artificial lights.",
-        "secondary": "Muted grays, silvers, and sophisticated earth tones from building materials.",
-        "accent": "Vibrant colors of art installations, specific building lighting.",
-        "ambient": "Sophisticated artificial illumination mixed with twilight.",
-        "genre": null,
-        "architectural_tone": "Avant-garde and contemporary, with an emphasis on innovative forms, material expression, and integrated technology.",
-        "cultural_tone": "A hub for artists, designers, and patrons of the arts, fostering a culture of innovation and aesthetic appreciation.",
-        "materials_base": "Glass, polished metal, advanced composites, engineered stone.",
-        "mood_baseline": "Intellectual curiosity and aesthetic appreciation.",
-        "palette_bias": "Sophisticated palette of deep blues, purples, grays, with bright accents from art and lighting.",
-        "soundscape_base": "Refined urban hum with artistic accents.",
-        "flora_base": "Highly curated, often ornamental or sculpted plant life.",
-        "fauna_base": null
-      },
-      "description": "A district celebrated for its avant-garde design and captivating public art installations. This area pushes the boundaries of architectural and artistic expression.",
-      "navigableElements": [
-        {
-          "type": "path",
-          "position": "surrounding the nexus",
-          "description": "Wide, polished paths connect to the plaza of the Aurora Nexus."
-        }
-      ],
-      "dominantElements": [
-        "Landmark architectural structures",
-        "Public art installations",
-        "Wide plazas and promenades"
-      ],
-      "uniqueIdentifiers": [
-        "High concentration of innovative architecture",
-        "Artistic and design focus",
-        "Well-maintained public spaces"
-      ],
-      "searchDesc": "District of avant-garde design, art installations, and innovative architecture.",
-      "slug": "the-lumina-district"
-    },
-    "e1bc8ec1-e925-4d71-83a4-c79555d557a0": {
-      "id": "e1bc8ec1-e925-4d71-83a4-c79555d557a0",
-      "type": "location",
-      "name": "The Aurora Nexus",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A monumental, perfectly spherical building whose entire exterior is a grid of numerous, closely-set glass panels. Warm, golden-orange light spills from within, illuminating the structure. Dark, undulating bands of a metallic material, some glowing from within with a bright, internal light, wrap around the sphere in a dynamic, interwoven pattern.",
-        "colorsAndLighting": "The building emits a rich, warm golden-orange glow from its interior. The illuminated bands cast their own bright, focused light. The plaza around it reflects this light.",
-        "atmosphere": "The immediate atmosphere is one of sophisticated serenity, with a sense of clean air and a subtle hum of integrated technology.",
-        "materials": "Facade composed of large, precisely cut reinforced glass panels. Interwoven bands made of a dark, matte-finished metal with integrated luminescent elements. Plaza paved with large, seamless slabs of dark, polished material.",
-        "mood": "Serene awe, futuristic elegance, and contemplative tranquility.",
-        "sounds": "A very faint, almost imperceptible hum of internal systems, and the gentle sound of water lapping in the pool.",
-        "spatialLayout": "The building is the central focus of a wide, flat plaza, with natural elements bordering the periphery.",
-        "primary_surfaces": "Glass panels, polished dark paving slabs.",
-        "secondary_surfaces": "Matte dark metal bands, water surface.",
-        "accent_features": "Internally illuminated curvilinear bands.",
-        "dominant": "Golden-orange light from within the building.",
-        "secondary": "Deep blues and purples of the twilight sky reflected on the plaza and pool.",
-        "accent": "Brightly glowing internal band illumination.",
-        "ambient": "Soft, diffused twilight glow.",
-        "genre": null,
-        "architectural_tone": "Neo-futuristic spherical architecture, characterized by seamless geodesic or tessellated glass panel facades, dynamically integrated, internally illuminated curvilinear structural elements, and a minimalist, polished aesthetic. Emphasis on organic form and technological integration, with a sense of weightlessness despite its scale.",
-        "cultural_tone": "A landmark of avant-garde design, intended as a public gathering and contemplative space, fostering appreciation for art and architecture.",
-        "materials_base": "High-performance reinforced glass, advanced composite materials with integrated phosphorescent or OLED elements, polished dark stone or synthetic equivalents.",
-        "mood_baseline": "Peaceful introspection and appreciation of advanced design.",
-        "palette_bias": "Dominated by warm amber and golden hues, contrasted with deep blues and dark accents.",
-        "soundscape_base": "Subtle technological hums and natural water sounds.",
-        "flora_base": "Formal, dark green trees forming a backdrop.",
-        "fauna_base": null
-      },
-      "description": "A striking, spherical modern building with a facade of glass panels and interwoven curvilinear bands, standing on a wide plaza with a reflective pool.",
-      "navigableElements": [
-        {
-          "type": "entrance",
-          "position": "ground level",
-          "description": "The main entrance is a seamless, recessed opening in the spherical facade."
-        }
-      ],
-      "dominantElements": [
-        "Spherical building",
-        "Glass panel facade",
-        "Curvilinear bands",
-        "Reflective plaza pool"
-      ],
-      "uniqueIdentifiers": [
-        "Perfectly spherical form",
-        "Interwoven illuminated bands",
-        "Grid of glass panels"
-      ],
-      "searchDesc": "Striking spherical building with glass panels and glowing bands on a plaza.",
-      "slug": "the-aurora-nexus"
-    },
-    "bedb974e-a4eb-47ab-acea-c2b619d7cf5f": {
-      "id": "bedb974e-a4eb-47ab-acea-c2b619d7cf5f",
-      "type": "niche",
-      "name": "The Plaza at Twilight",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, flat expanse of smooth, dark-toned paving stretches towards a monumental, perfectly spherical building whose entire exterior is a grid of numerous, closely-set glass panels. Warm, golden-orange light spills from within, illuminating the structure. Dark, undulating bands of a metallic material, some glowing from within with a bright, internal light, wrap around the sphere in a dynamic, interwoven pattern. In the foreground, a shallow, perfectly still pool of water reflects the building's glow, its surface disturbed only by gentle, almost imperceptible ripples. A dense line of dark green, mature trees forms a natural border to the plaza on either side, receding into the background. A single, distant figure in light-colored attire walks near the far edge of the pool, dwarfed by the architectural grandeur. The overall scale is immense and precisely engineered.",
-        "colorsAndLighting": "The scene is dominated by the rich, warm glow of golden-orange emanating from the building's interior, juxtaposed against the deep, clear twilight blue of the sky. Subtle variations in the sky's hue, from deep indigo overhead to a faint warm blush near the horizon, add depth. The illuminated bands on the building cast their own bright, focused light, creating distinct luminous patterns. Shadows are soft and elongated, characteristic of twilight, adding to the serene and contemplative atmosphere.",
-        "atmosphere": "The air is still and cool, carrying a faint, clean scent of damp earth and distant, exotic flora from the parkland. The atmosphere is one of profound tranquility and awe, a peaceful hush settling over the expansive plaza. The gentle ripples on the water suggest an almost imperceptible breeze, adding a subtle dynamism to the stillness. The overall sensation is one of sophisticated serenity and gentle wonder.",
-        "materials": "The building's facade is composed of large, precisely cut glass panels, likely reinforced and highly reflective. The interwoven bands appear to be made of a dark, matte-finished metal, possibly composite, with integrated, translucent luminescent elements within. The plaza is paved with large, seamless slabs of a dark, almost black, polished material, possibly granite or a synthetic composite, providing a sophisticated and slightly reflective surface. The trees exhibit rich, dark green foliage and textured bark.",
-        "mood": "The mood is one of serene awe and futuristic elegance. The contrast between the immense, glowing structure and the tranquil natural elements evokes a sense of sublime beauty. It is a place designed for quiet contemplation and appreciation of advanced design and its harmonious integration with nature, fostering a feeling of peaceful introspection.",
-        "sounds": "Distant city hum, soft water lapping, rustling leaves, faint chimes, gentle ambient tones, distant soft music, footsteps echoing faintly, quiet contemplation.",
-        "spatialLayout": "The plaza is an expansive, flat, circular or octagonal area, centered around the colossal spherical building. The reflective pool occupies a significant portion of the foreground, acting as a visual buffer and mirror. The tree lines create a sense of enclosure and natural framing. The spatial layout emphasizes the building as the primary focal point, drawing the eye and the gaze from all directions.",
-        "primary_surfaces": "Floor: Polished, dark, large-format composite slabs. Walls: Massive grid of translucent glass panels (building facade). Ceiling: Clear, deep blue twilight sky.",
-        "secondary_surfaces": "Building facade bands: Dark, matte-finished composite with integrated luminous elements. Pool lining: Smooth, dark, seamless material.",
-        "accent_features": "Internal illumination of the curvilinear bands, gentle ripples on the reflective pool, the distant lone figure, the subtle color gradient of the twilight sky.",
-        "dominant": "Deep twilight blue covering 50% of the visible sky.",
-        "secondary": "Warm golden-orange light emanating from the building, covering 30% of the visual field from the building's glow.",
-        "accent": "Brightly glowing internal band illumination, dark greens of the trees, light clothing of the distant figure.",
-        "ambient": "Warm amber glow, tinged with cool blue.",
-        "genre": null,
-        "architectural_tone": "Neo-futuristic spherical architecture, characterized by seamless geodesic or tessellated glass panel facades, dynamically integrated, internally illuminated curvilinear structural elements, and a minimalist, polished aesthetic. Emphasis on organic form and technological integration, with a sense of weightlessness despite its scale.",
-        "cultural_tone": "This plaza serves as a public gathering and contemplative space for citizens and visitors of Neo-Veridia, particularly within the Lumina District. It's designed to be an accessible interface with the Aurora Nexus, a landmark of avant-garde design. Its purpose is to foster appreciation for art, architecture, and serene urban living, encouraging quiet reflection and social interaction in a visually stunning environment.",
-        "materials_base": "High-performance reinforced glass, advanced composite materials with integrated phosphorescent or OLED elements, polished dark stone or synthetic equivalents, treated natural wood or advanced bio-plastics for planters.",
-        "mood_baseline": "Serene, awe-inspiring, contemplative, sophisticated, futuristic, harmonious.",
-        "palette_bias": "Dominated by deep blues and purples of twilight, contrasted with warm amber and golden hues from artificial light sources. Accents of dark, muted greens and blacks ground the palette.",
-        "soundscape_base": "Subtle ambient electronic tones, gentle water features, distant, muffled urban sounds, hushed pedestrian movement, occasional synthesized chimes.",
-        "flora_base": "Dense, manicured dark green trees with broad canopies, possibly bioluminescent ground cover in specific areas (not visible here).",
-        "fauna_base": "None (intended for a controlled, public urban environment)."
-      },
-      "description": "The exterior plaza surrounding the Aurora Nexus at twilight, a tranquil expanse designed for contemplation and appreciation of the building's radiant presence. It serves as a public interface, blending urban design with natural elements to create a serene urban oasis.",
-      "navigableElements": [
-        {
-          "type": "path",
-          "position": "center foreground, leading towards the building",
-          "description": "A wide, polished obsidian pathway that seems to absorb ambient light, leading directly towards the grand structure."
-        },
         {
           "type": "passage",
-          "position": "left side, nestled between trees",
-          "description": "A discreet, tree-lined passage that curves away, hinting at further parkland or access routes."
+          "position": "lower left",
+          "description": "Diagonal passage descending into shadow, defined by a cool blue LED strip."
         },
         {
-          "type": "gate",
-          "position": "right side, beyond the trees",
-          "description": "An ornate, wrought-iron gate, subtly illuminated, suggesting an entrance to a more private or service area."
+          "type": "alcove",
+          "position": "center",
+          "description": "Irregular, jagged-edged display alcove with a polished metal frame."
         },
         {
-          "type": "window",
-          "position": "ground level of building facade, visible through glass panels",
-          "description": "Glimpses of the building's ground-floor interior, showing the warm, inviting glow from within."
+          "type": "opening",
+          "position": "ahead",
+          "description": "Dramatic, angular opening to a deeper segment of the shop, framed by matte black metal."
         }
       ],
       "dominantElements": [
-        "The spherical Aurora Nexus building",
-        "The reflective shallow pool",
-        "The dark green tree line",
-        "The wide, flat plaza surface"
+        "Heavy, dark textured concrete walls",
+        "Exposed raw metal framing",
+        "Angular opening",
+        "Jagged-edged display alcove",
+        "Faceted steel beam ceiling"
       ],
       "uniqueIdentifiers": [
-        "Spherical glass-panelled facade",
-        "Interwoven illuminated curvilinear bands",
-        "The twilight sky gradient",
-        "The shallow, rippling reflective pool"
+        "Deconstructivist angles",
+        "Pulsating neon-like interior light",
+        "Blue LED floor strip",
+        "Avant-garde garment display"
       ],
-      "searchDesc": "Twilight plaza with spherical Aurora Nexus, reflective pool, trees, and glowing interior.",
-      "slug": "the-plaza-at-twilight",
-      "primaryMedia": "media-1764760709856-esl56wp1a"
-    },
-    "niche-1764760729565-h6d6qbtby": {
-      "id": "niche-1764760729565-h6d6qbtby",
-      "type": "niche",
-      "name": "interior of house",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The scene depicts the soaring interior of a sphere, dominated by a polished, dark composite floor that reflects warm golden-orange light. The walls are a dense grid of slightly opaque, tessellated glass panels that glow softly from within, with a contrasting narrow, vertical passage of smooth, deep blue bio-plastic on the right. The ceiling is a vast, faceted dome of the same glass, stretching upwards, interspersed with illuminated curvilinear structural elements. Delicate, suspended floating platforms create a sense of immense vertical depth.",
-        "colorsAndLighting": "The dominant color is the warm golden-orange light that emanates from within the structure, casting reflections on the polished dark floor. The glass panels emit a soft internal glow, and the bio-plastic passage has a faint luminescence.",
-        "atmosphere": "The air feels still and serene, imbued with a sense of futuristic elegance and contemplative tranquility. The immense verticality and suspended platforms contribute to a feeling of weightlessness and invite exploration.",
-        "materials": "Key materials include a polished, dark composite for the floor, matte-finished dark composite for the sculpture, slightly opaque tessellated glass panels for walls and ceiling, and a smooth, deep blue bio-plastic for a passage.",
-        "mood": "The emotional tone is one of serene awe, futuristic elegance, and contemplative tranquility, fostered by the grand scale and luminous design.",
-        "sounds": "Soft ambient hum, distant gentle chimes, subtle echoing.",
-        "spatialLayout": "The interior is a vast, soaring sphere with a high, domed ceiling. Entry points include an alcove on the left and a vertical passage on the right. Focal points are the sculpture in the alcove and the suspended platforms.",
-        "primary_surfaces": "Tessellated glass panels (walls, ceiling), dark composite (floor).",
-        "secondary_surfaces": "Bio-plastic (passage).",
-        "accent_features": "Abstract sculpture, internally illuminated curvilinear structural elements, floating platforms.",
-        "dominant": "Golden-orange (ambient light).",
-        "secondary": "Dark composite (floor, sculpture).",
-        "accent": "Deep blue (passage), soft glowing light (glass panels).",
-        "ambient": "Warm",
-        "genre": null,
-        "architectural_tone": "Neo-futuristic spherical architecture",
-        "cultural_tone": "A landmark of avant-garde design, intended as a public gathering and contemplative space, fostering appreciation for art and architecture.",
-        "materials_base": "Tessellated glass, polished composites, bio-plastics.",
-        "mood_baseline": "Serene awe, futuristic elegance, contemplative tranquility.",
-        "palette_bias": "Warm ambient lighting, contrasting cool accents.",
-        "soundscape_base": "Subtle ambient hums and echoes.",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764760729564-96bvu4m6c",
-      "description": "The interior of a futuristic spherical building featuring a polished floor, glowing glass walls, and suspended platforms.",
-      "navigableElements": [
-        {
-          "type": "alcove entrance",
-          "position": "left",
-          "description": "An alcove entrance on the left side of the scene."
-        },
-        {
-          "type": "vertical passage",
-          "position": "right wall",
-          "description": "A narrow vertical passage defined by bio-plastic on the right wall."
-        },
-        {
-          "type": "floating platform",
-          "position": "upper center",
-          "description": "Delicate floating platforms suspended in the upper central area."
-        }
-      ],
-      "dominantElements": [
-        "polished dark composite floor",
-        "abstract sculpture",
-        "tessellated glass panels",
-        "deep blue bio-plastic passage",
-        "faceted glass dome ceiling",
-        "floating platforms"
-      ],
-      "uniqueIdentifiers": [
-        "spherical interior",
-        "tessellated glowing glass",
-        "suspended platforms",
-        "golden-orange ambient light"
-      ],
-      "searchDesc": "Futuristic spherical interior with glowing glass, dark composite floor, and floating platforms.",
-      "slug": "interior-of-house"
+      "searchDesc": "Brutalist niche with deconstructivist angles, dark concrete, matte metal, and vibrant neon light.",
+      "slug": "interior-of-the-style-haven"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764760556089-ahw40uuzl",
+      "id": "loc-1764761403600-bcr0j87u4",
       "type": "host",
       "children": [
         {
-          "id": "adeff4bc-652c-45c2-9cc5-f6ec7cb45602",
+          "id": "2dbfe0f5-213a-4c6c-91ce-925e8adc40a0",
           "type": "region",
           "children": [
             {
-              "id": "6adaea43-6dec-4801-b6de-2025b3be7b91",
+              "id": "5899e9f7-093c-491a-b483-8fe5efeb7972",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764760621292-8iqfbm0wg",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764760682578-pn6bj2l16",
-      "type": "host",
-      "children": [
-        {
-          "id": "073baf4f-24c7-4dfc-8f9f-e7b0e5f27a9a",
-          "type": "region",
-          "children": [
-            {
-              "id": "e1bc8ec1-e925-4d71-83a4-c79555d557a0",
-              "type": "location",
-              "children": [
-                {
-                  "id": "bedb974e-a4eb-47ab-acea-c2b619d7cf5f",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1764760729565-h6d6qbtby",
+                  "id": "niche-1764761452034-jtgjpiuji",
                   "type": "niche",
                   "children": []
                 }
@@ -568,7 +250,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764760556089-ahw40uuzl",
-    "loc-1764760682578-pn6bj2l16"
+    "loc-1764761403600-bcr0j87u4"
   ]
 }
