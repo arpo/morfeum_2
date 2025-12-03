@@ -490,7 +490,8 @@
         "a blend of historical architecture and cutting-edge design"
       ],
       "searchDesc": "London: A global metropolis blending history, culture, and innovation.",
-      "slug": "london"
+      "slug": "london",
+      "primaryMedia": "media-1764773224023-vjsrlgjy5"
     },
     "e32e47dd-b18c-48a7-a03a-4d447921943a": {
       "id": "e32e47dd-b18c-48a7-a03a-4d447921943a",
@@ -534,7 +535,8 @@
         "distinctive alternative fashion scene"
       ],
       "searchDesc": "Camden: A London hub of alternative culture, markets, and vibrant street art.",
-      "slug": "camden"
+      "slug": "camden",
+      "primaryMedia": "media-1764773066313-m73u37nsu"
     },
     "daa58c82-e70d-4dc0-ae89-6675fa4fedfb": {
       "id": "daa58c82-e70d-4dc0-ae89-6675fa4fedfb",
@@ -671,6 +673,750 @@
       ],
       "searchDesc": "Psychedelic storefront interior: electric blue brick with swirling neon art, a glowing stone path, and eclectic displays.",
       "slug": "interior-of-the-psychedelic-emporium"
+    },
+    "8f2ef984-ab00-4c01-8909-0ede7e09daa7": {
+      "id": "8f2ef984-ab00-4c01-8909-0ede7e09daa7",
+      "type": "location",
+      "name": "The Astral Bazaar",
+      "description": "A vibrant hub for esoteric goods and spiritual exploration, this new age shop is a beacon of alternative culture. Its facade bursts with color and eclectic signage, hinting at the unique treasures within.",
+      "dna": {
+        "looks": "This new age shop is a riot of color and texture, appearing as a standalone structure or a heavily customized storefront. Its architecture is a chaotic yet charming amalgamation of repurposed materials, adorned with an abundance of artistic flair and spiritual iconography.",
+        "colorsAndLighting": "The exterior is a canvas of bold, often clashing colors, with prominent neon accents and saturated hues. Light sources are varied, from the glow of fairy lights intertwined with pipes to the stark brightness of neon signs, creating a mesmerizing visual experience.",
+        "atmosphere": "The air around The Astral Bazaar hums with a bohemian and slightly rebellious energy. It's a place where self-expression is paramount, and the immediate surroundings are likely to be adorned with street art, flyers for local events, and perhaps the gentle tinkling of wind chimes.",
+        "materials": "Visible exterior materials include weathered painted wood, exposed metalwork such as pipes and corrugated sheeting, and various textiles used for banners and awnings. The overall impression is one of creative modification and an embrace of urban grit.",
+        "mood": "The building evokes a sense of wonder, curiosity, and alternative spirituality. It feels like a sanctuary for those seeking something beyond the ordinary, a place that encourages exploration and individuality.",
+        "sounds": "Chimes, distant street music, chatter, chanting, gentle bells, wind",
+        "spatialLayout": "The shop typically presents a relatively narrow facade, with its entrance prominently featured. It might feel a bit cramped, with elements spilling out onto the sidewalk, suggesting a packed interior and a desire to engage with the street.",
+        "primary_surfaces": "Painted wood, corrugated metal sheeting, brickwork",
+        "secondary_surfaces": "Glass (windows), metal piping, textiles (awnings, banners)",
+        "accent_features": "Neon signs, hand-painted murals, sculptures, wind chimes, dreamcatchers",
+        "dominant": "Varied (depends on specific mural/paint), often vibrant",
+        "secondary": "Metal (exposed pipes, signs)",
+        "accent": "Neon (pink, blue, green), gold, iridescent hues",
+        "ambient": "Varies; often colorful and energetic, with points of bright neon or fairy light glow",
+        "genre": null,
+        "architectural_tone": "Eclectic and heavily modified urban, with strong influences of Victorian industrial mixed with DIY and street art aesthetics.",
+        "cultural_tone": "Alternative, counter-culture, bohemian, and artistic. A strong emphasis on individuality and subcultures.",
+        "materials_base": "Painted and weathered urban materials, metal, textiles.",
+        "mood_baseline": "Bohemian, rebellious, and lively. A place that encourages self-expression and exploration.",
+        "palette_bias": "Bold, often clashing colors with a strong presence of neon and saturated hues.",
+        "soundscape_base": null,
+        "flora_base": "Herbs, potted plants",
+        "fauna_base": null
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A brightly painted wooden door adorned with wind chimes, leading into the main shop."
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "A large, arched display window showcasing crystals, incense, and tarot cards."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A narrow alleyway beside the shop, possibly leading to a hidden courtyard or back entrance."
+        }
+      ],
+      "dominantElements": [
+        "Kaleidoscopic mural on the facade",
+        "Hand-painted wooden signage",
+        "Exposed copper piping with fairy lights",
+        "Hanging dreamcatchers and prayer flags",
+        "Large, ornate display window"
+      ],
+      "uniqueIdentifiers": [
+        "A giant, iridescent amethyst geode sculpture above the door",
+        "Flickering neon sign in the shape of a crescent moon",
+        "Constantly changing chalk art on the sidewalk in front",
+        "The faint scent of incense and patchouli",
+        "A collection of diverse, hand-painted planter boxes overflowing with herbs"
+      ],
+      "searchDesc": "New age shop with a vibrant, eclectic exterior featuring murals, neon signs, and esoteric displays.",
+      "slug": "the-astral-bazaar",
+      "niches": [],
+      "primaryMedia": "media-1764772352775-8hiul4r6q"
+    },
+    "niche-1764772378522-phs3xvssi": {
+      "id": "niche-1764772378522-phs3xvssi",
+      "type": "niche",
+      "name": "interior of The Astral Bazaar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a chaotic yet charming mix of repurposed materials, featuring walls of weathered wood, metal sheeting, and brickwork splashed with bold colors, murals, and neon. Exposed pipes and beams support fairy lights, dreamcatchers, and wind chimes. A dense sales counter, overflowing merchandise, and potted plants contribute to the vibrant, cluttered aesthetic.",
+        "colorsAndLighting": "Walls are covered in bold, often clashing colors from murals and paint. Lighting is a mix of soft, colorful ambient light and stark, focused neon accent lights, creating a mesmerizing, energetic visual experience.",
+        "atmosphere": "The air is thick with an overwhelming sense of individuality and exploration. It feels bohemian, rebellious, and lively, evoking wonder and curiosity. Unseen breezes stir delicate wind chimes.",
+        "materials": "Walls are constructed from weathered painted wood, exposed corrugated metal sheeting, and distressed brickwork. Repurposed materials are abundant throughout. Soft textiles hang in cascades.",
+        "mood": "The overall mood is bohemian, rebellious, and lively, with an overwhelming sense of individuality and exploration. It feels welcoming to those seeking something beyond the ordinary.",
+        "sounds": "faint wind chimes tinkling, subtle ambient hum, distant murmurs",
+        "spatialLayout": "The space is viewed from an off-center one-point perspective, emphasizing depth. A foreground of rugs leads to a midground sales counter. Asymmetrical shelving fills the background, with an archway to the left and plant display to the right.",
+        "primary_surfaces": "weathered painted wood, exposed corrugated metal sheeting, distressed brickwork",
+        "secondary_surfaces": "timber beams, metal piping, shelving units, sales counter",
+        "accent_features": "hand-painted murals, neon signage fragments, fairy lights, dreamcatchers, wind chimes, vibrant textile banners, glowing blue neon archway, crystals, incense sticks, artisan jewelry, potted herbs, fuchsias, ferns",
+        "dominant": "varied (wall colors)",
+        "secondary": "earthy tones (wood, brick)",
+        "accent": "neon blues, vibrant flora colors",
+        "ambient": "mixed (warm ambient, cool neon)",
+        "structure": {
+          "form": "irregular",
+          "roofType": "pitched",
+          "scale": "medium",
+          "orientation": "wide",
+          "openings": "archway",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": "Eclectic and heavily modified urban, with strong influences of Victorian industrial mixed with DIY and street art aesthetics.",
+        "cultural_tone": "Alternative, counter-culture, bohemian, and artistic, with a strong emphasis on individuality and subcultures.",
+        "materials_base": "repurposed, distressed, industrial mixed with artisanal",
+        "mood_baseline": "wonder, curiosity, alternative spirituality, sanctuary",
+        "palette_bias": "vibrant, clashing, bold",
+        "soundscape_base": "eclectic ambient",
+        "flora_base": "herbs, flowering plants",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764772378521-aq2u4uhe6",
+      "description": "A cluttered and vibrant new-age shop interior.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "to the left",
+          "description": "Dimly lit archway with a cascade of vibrant textile banners and soft blue neon light, hinting at a deeper passage."
+        }
+      ],
+      "dominantElements": [
+        "sales counter overflowing with crystals, incense, and jewelry",
+        "asymmetrical shelving units",
+        "potted herbs and flowering plants",
+        "worn Persian rugs",
+        "fairy lights and dreamcatchers",
+        "weathered painted wood walls",
+        "exposed corrugated metal sheeting"
+      ],
+      "uniqueIdentifiers": [
+        "amalgamation of repurposed materials",
+        "bold, clashing colors on walls",
+        "hand-painted murals and neon signage fragments",
+        "intertwined fairy lights and dreamcatchers",
+        "densely packed sales counter",
+        "soft blue neon archway"
+      ],
+      "searchDesc": "Cluttered new-age bazaar with vibrant, eclectic decor, neon, and plants.",
+      "slug": "interior-of-the-astral-bazaar"
+    },
+    "1549114d-1875-4f1a-a501-238a7d6421af": {
+      "id": "1549114d-1875-4f1a-a501-238a7d6421af",
+      "type": "region",
+      "name": "City of London",
+      "description": "The historic heart and financial powerhouse of London, where ancient Roman foundations meet towering modern skyscrapers. This is a district of intense business, rich history, and surprising pockets of green.",
+      "dna": {
+        "looks": "A dramatic skyline where centuries-old stone and Gothic spires pierce the sky, often casting long shadows over sleek glass and steel monoliths. Paved streets bear the patina of ages, interspersed with modern plazas and discreet courtyards.",
+        "colorsAndLighting": "The dominant palette leans towards greys and muted stone, punctuated by the warm glow of internal lights and the occasional glint of glass. Lighting is often formal and functional, with occasional dramatic uplighting on historic structures.",
+        "atmosphere": "The air here is a mix of exhaust fumes and the crispness of ambition. While busy and bustling during the day, it can take on an almost reverent hush in the early mornings or late evenings, especially around the older landmarks.",
+        "materials": "Ancient stone foundations and Gothic brickwork form the bedrock, overlaid with the contemporary dominance of steel, glass, and polished concrete. High-quality, durable materials are evident throughout, reflecting wealth and longevity.",
+        "mood": "This district exudes an aura of serious business, immense history, and formidable power. It is a place where fortunes are made and lost, and where the weight of centuries is palpable.",
+        "sounds": "Chains rattling, distant chimes, hurried footsteps, sharp financial discussions, muffled traffic hum, the murmur of crowds, construction noises.",
+        "spatialLayout": "A dense, almost labyrinthine core of ancient streets and alleys, increasingly interwoven with wide, modern thoroughfares and vast financial plazas. Underground networks are extensive, housing both transport and historical remnants.",
+        "primary_surfaces": [
+          "stone",
+          "glass",
+          "concrete"
+        ],
+        "secondary_surfaces": [
+          "brick",
+          "steel",
+          "ancient pavement"
+        ],
+        "accent_features": [
+          "ornate stonework",
+          "gargoyles",
+          "modern sculptures",
+          "brass plaques",
+          "historical markers"
+        ],
+        "dominant": "grey",
+        "secondary": "brown",
+        "accent": "gold",
+        "ambient": "bright_overcast",
+        "genre": null,
+        "architectural_tone": "A stark contrast between historic Gothic, Victorian, and Edwardian grandeur and cutting-edge modern and brutalist skyscrapers, with areas of careful preservation and adaptive reuse.",
+        "cultural_tone": "The global epicenter of finance, law, and historic civic life. A culture of immense wealth, strict hierarchy, and deep respect for tradition, albeit with pockets of artistic and subcultural expression.",
+        "materials_base": "Brick, stone, steel, glass, concrete, with a strong emphasis on durability and historical context.",
+        "mood_baseline": null,
+        "palette_bias": "A broad and varied palette, often leaning towards more subdued natural and urban tones in its foundational architecture, but allowing for intense bursts of color in specific cultural enclaves.",
+        "soundscape_base": "The urban symphony of a major financial district: traffic, hurried footsteps, formal conversations, distant sirens, and the hum of commerce.",
+        "flora_base": "Limited to manicured small parks, rooftop gardens, and occasional street trees.",
+        "fauna_base": "Pigeons, urban foxes, squirrels in green spaces, and a high concentration of human activity."
+      },
+      "navigableElements": [
+        "Bishopsgate",
+        "Fleet Street",
+        "Cheapside",
+        "Bank Junction",
+        "Leadenhall Market"
+      ],
+      "dominantElements": [
+        "St. Paul's Cathedral",
+        "The Gherkin",
+        "Tower of London",
+        "Bank of England",
+        "Monument to the Great Fire of London"
+      ],
+      "uniqueIdentifiers": [
+        "Juxtaposition of ancient and hyper-modern architecture",
+        "Concentration of global financial institutions",
+        "Underground Roman ruins",
+        "Strictly enforced dress codes in finance districts",
+        "Historical echoes of the Great Fire"
+      ],
+      "searchDesc": "Financial hub and historic core of London, blending ancient history with modern skyscrapers.",
+      "slug": "city-of-london",
+      "locations": [],
+      "primaryMedia": "media-1764773046386-j8o97lz5e"
+    },
+    "a65324e0-220c-4f7f-9e26-f77f2a53797a": {
+      "id": "a65324e0-220c-4f7f-9e26-f77f2a53797a",
+      "type": "location",
+      "name": "The Gilded Serpent",
+      "description": "A dimly lit bar with a facade that whispers of old money and clandestine meetings. Its heavy oak doors promise refuge from the city's relentless pace.",
+      "dna": {
+        "looks": "The Gilded Serpent presents a rich, dark oak facade with intricate brass ornamentation. Its architecture subtly blends Victorian craftsmanship with a hint of Art Deco elegance, suggesting a hidden, exclusive establishment.",
+        "colorsAndLighting": "The exterior is dominated by deep browns and burnished brass. Light is minimal, with a warm, inviting amber glow emanating from within the leaded glass windows, casting long shadows.",
+        "atmosphere": "The immediate surroundings are quiet, with the low hum of city traffic muffled. A faint aroma of aged spirits and polished wood drifts from the entrance. The air feels hushed, as if secrets are being shared within.",
+        "materials": "The primary exterior material is dark, richly aged oak, complemented by heavily polished brass for accents and hardware. The windows are of thick, textured leaded glass.",
+        "mood": "This bar evokes a sense of sophisticated mystery and refined indulgence. It feels like a place to escape the ordinary and engage in quiet contemplation or discreet conversation.",
+        "sounds": "low murmur, clinking glasses, distant jazz, muted conversation, soft footfalls",
+        "spatialLayout": "The bar occupies a solid, rectangular footprint, with a prominent central entrance flanked by windows. Its mass feels grounded and substantial, hinting at the robust construction typical of the district.",
+        "primary_surfaces": "dark oak panels",
+        "secondary_surfaces": "leaded glass, brass fittings",
+        "accent_features": "gilded serpent carving, lion head knockers, ornate window frames",
+        "dominant": "deep brown",
+        "secondary": "brass",
+        "accent": "amber glow",
+        "ambient": "dimly lit",
+        "genre": null,
+        "architectural_tone": "A stark contrast between historic Gothic, Victorian, and Edwardian grandeur and cutting-edge modern and brutalist skyscrapers, with areas of careful preservation and adaptive reuse.",
+        "cultural_tone": "The global epicenter of finance, law, and historic civic life. A culture of immense wealth, strict hierarchy, and deep respect for tradition, albeit with pockets of artistic and subcultural expression.",
+        "materials_base": "Brick, stone, steel, glass, concrete, with a strong emphasis on durability and historical context.",
+        "mood_baseline": null,
+        "palette_bias": "A broad and varied palette, often leaning towards more subdued natural and urban tones in its foundational architecture, but allowing for intense bursts of color in specific cultural enclaves.",
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "Ornate, heavy oak double doors, flanked by brass lion head knockers, leading into the bar's interior."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A narrow, shadowed alleyway to the right of the main entrance, possibly leading to a service entrance or rear access."
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "Large, leaded glass windows showcasing a faint amber glow from within, offering glimpses of patrons."
+        }
+      ],
+      "dominantElements": [
+        "Dark, polished oak facade",
+        "Intricate brass detailing",
+        "Leaded glass windows",
+        "Heavy, imposing double doors"
+      ],
+      "uniqueIdentifiers": [
+        "Gilded serpent motif carved above the entrance",
+        "Brass lion head door knockers",
+        "Subtle, warm amber glow from within",
+        "Sound of low murmur and distant jazz"
+      ],
+      "searchDesc": "A sophisticated bar with dark oak facade, brass details, and leaded glass windows. Interior ambiance.",
+      "slug": "the-gilded-serpent",
+      "niches": [],
+      "primaryMedia": "media-1764773113029-8tqags1i3"
+    },
+    "niche-1764773131322-17xeba7r4": {
+      "id": "niche-1764773131322-17xeba7r4",
+      "type": "niche",
+      "name": "interior of The Gilded Serpent",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A rectangular chamber featuring dark oak paneling with intricate brass inlays, a substantial oak bar, and plush velvet seating. Warm amber light casts a glow on polished surfaces.",
+        "colorsAndLighting": "Dominated by deep browns and warm amber hues. Lighting is dim and strategic, emanating from brass sconces, creating pools of light and deep shadows.",
+        "atmosphere": "The air is thick with the rich scent of aged spirits and wood polish, creating an ambiance of refined luxury and discreet indulgence. It feels hushed and intimate.",
+        "materials": "Polished dark oak paneling and flooring provide a rich base, contrasted by gleaming brass accents on the bar, sconces, and door handles. Velvet banquettes offer plush comfort.",
+        "mood": "Evokes a sense of sophisticated mystery and refined indulgence, a sanctuary for quiet contemplation and discreet conversation.",
+        "sounds": "Low hum of conversation, clinking glasses, distant muted music.",
+        "spatialLayout": "A rectangular chamber with straight walls, featuring a prominent bar across the midground. Seating is arranged along one wall, opposite the bar, with a window and a doorway on flanking walls.",
+        "primary_surfaces": "Dark, polished oak paneling on walls and ceiling; polished hardwood floor.",
+        "secondary_surfaces": "Brass bar rail, brass sconces, brass door hardware, velvet upholstery.",
+        "accent_features": "Intricate brass inlays on wall paneling, ornate leaded glass window with serpent motifs.",
+        "dominant": "deep brown (paneling, bar, floor)",
+        "secondary": "amber (light, window hues)",
+        "accent": "brass (inlays, fixtures, rail)",
+        "ambient": "warm",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "medium",
+          "orientation": "horizontal",
+          "openings": "minimal",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764773131320-mlxr9z6dv",
+      "description": "The dimly lit, opulent interior of a high-end bar, characterized by rich wood, brass accents, and an atmosphere of sophisticated indulgence.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "left wall, midground",
+          "description": "A discreet, brass-handled doorway framed by dark oak, leading to a dimly lit passage."
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "An ornate, leaded glass window depicting stylized serpents and geometric patterns."
+        }
+      ],
+      "dominantElements": [
+        "dark oak bar with brass rail",
+        "dark oak paneling",
+        "velvet banquette",
+        "brass sconces",
+        "leaded glass window"
+      ],
+      "uniqueIdentifiers": [
+        "Gilded Serpent ornamentation",
+        "serpent motif window",
+        "aged spirits scent"
+      ],
+      "searchDesc": "Dimly lit oak and brass bar with velvet banquettes and serpent window.",
+      "slug": "interior-of-the-gilded-serpent"
+    },
+    "8cd5afd1-1c09-496a-ba90-78c951ea9116": {
+      "id": "8cd5afd1-1c09-496a-ba90-78c951ea9116",
+      "type": "location",
+      "name": "The Electric Eel Tavern",
+      "description": "A dimly lit watering hole, its facade a chaotic collage of peeling paint, salvaged metal, and vibrant street art. Neon signs flicker erratically, promising cheap drinks and loud music within.",
+      "dna": {
+        "looks": "A chaotic but strangely inviting structure, the Electric Eel Tavern appears to have grown organically from its urban surroundings. Its core is a weathered brick building, but this has been extensively modified with corrugated metal sheeting, salvaged signage, and a dizzying array of DIY additions. It's a testament to constant re-invention.",
+        "colorsAndLighting": "The exterior is a riot of bold, often clashing colors, dominated by the saturated hues of street art and the stark glow of neon. Light sources are varied and often unreliable, with flickering bulbs and pulsing neon creating a dynamic and somewhat disorienting visual effect.",
+        "atmosphere": "The air around the Electric Eel is thick with the promise of a lively night. The sounds of muffled music and distant chatter spill out, inviting those seeking an alternative experience. Graffiti adorns every available surface, and the general impression is one of uninhibited creative expression.",
+        "materials": "The building's exterior is a patchwork of urban detritus and repurposed materials. Expect to see weathered brick, rusted corrugated metal, salvaged wooden planks, and an abundance of painted surfaces, from chipped paint to vibrant murals.",
+        "mood": "This bar exudes a rebellious and fiercely independent spirit. It feels like a sanctuary for the unconventional, a place where individuality is not just tolerated but celebrated.",
+        "sounds": "Muffled bass, distant laughter, scraping metal, dripping water, street chatter, flickering neon hum",
+        "spatialLayout": "The Electric Eel is a low-slung building, its entrance prominently placed on the street. It seems to sprawl outwards with irregular additions, suggesting a history of expansion and modification. The main door is the focal point, a clear invitation into the lively interior.",
+        "primary_surfaces": "Graffiti-covered brickwork, corrugated metal sheeting",
+        "secondary_surfaces": "Weathered wood, chipped paint, salvaged signage",
+        "accent_features": "Neon beer signs, custom metalwork, overflowing bins, street art murals",
+        "dominant": "Varied, reflecting street art",
+        "secondary": "Rust, weathered grey metal",
+        "accent": "Neon pink, electric blue, toxic green",
+        "ambient": "Dim, flickering, high contrast",
+        "genre": null,
+        "architectural_tone": "Eclectic and heavily modified urban, with strong influences of Victorian industrial mixed with DIY and street art aesthetics.",
+        "cultural_tone": "Alternative, counter-culture, bohemian, and artistic. A strong emphasis on individuality and subcultures.",
+        "materials_base": "Painted and weathered urban materials, metal, textiles.",
+        "mood_baseline": "Bohemian, rebellious, and lively.",
+        "palette_bias": "Bold, often clashing colors with a strong presence of neon and saturated hues.",
+        "soundscape_base": "Loud music, boisterous conversations, urban ambient noise.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A heavy, graffiti-covered metal door, slightly ajar, with a flickering neon beer sign above it. Leads inside."
+        },
+        {
+          "type": "window",
+          "position": "right",
+          "description": "A grimy, barred window revealing a glimpse of a dimly lit interior with shadowy figures. Likely leads to a storage area or private room."
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "A narrow alleyway beside the bar, strewn with overflowing bins and marked with more street art. May lead to a back entrance or further into the district."
+        }
+      ],
+      "dominantElements": [
+        "Massive, hand-painted mural of a psychedelic serpent",
+        "Clashing neon signs for drinks and bands",
+        "A corrugated metal extension bolted to the original Victorian brickwork",
+        "A collection of mismatched, weathered street signs repurposed as decoration"
+      ],
+      "uniqueIdentifiers": [
+        "The giant, flickering neon eel sign",
+        "The distinct smell of stale beer and something vaguely industrial",
+        "The constant thrum of bass music audible from the street"
+      ],
+      "searchDesc": "A bohemian bar with eclectic urban style, known for its neon lights and street art facade.",
+      "slug": "the-electric-eel-tavern",
+      "niches": [],
+      "imageUrl": "https://v3b.fal.media/files/b/0a84d485/I0kYGfYxwZDie9z41I6yq.jpg",
+      "primaryMedia": "media-1764773187976-h8fehwcc5"
+    },
+    "niche-1764773214290-asc5vmgow": {
+      "id": "niche-1764773214290-asc5vmgow",
+      "type": "niche",
+      "name": "interior of The Electric Eel Tavern",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This cavernous space is immediately disorienting, with walls layered in graffiti-covered brick and patched corrugated metal. A strong electric blue neon light spills from a partially open metal door to the left, while a riotously colored, rickety staircase dominates the right. Scattered, mismatched seating surrounds a makeshift bar, all under a low ceiling of exposed timber and metal.",
+        "colorsAndLighting": "The lighting is primarily dim and atmospheric, punctuated by the harsh glow of electric blue neon and the warm, flickering light of Edison bulbs. The dominant colors are a mix of dark grays and browns from the brick and metal, heavily overlaid with vibrant, clashing street art hues.",
+        "atmosphere": "The air is thick with the palpable hum of neon and the distant, resonant throb of bass music, creating a chaotic yet undeniably inviting environment. It feels dense and lived-in, with a sense of concealed spaces beyond the main area.",
+        "materials": "The primary surfaces are rough, graffiti-scarred brick and corrugated metal sheeting. Supporting materials include salvaged wood and chipped formica for the bar, alongside various metal and vinyl for stools, with exposed timber in the ceiling.",
+        "mood": "This bar exudes a rebellious and fiercely independent spirit, a sanctuary for the unconventional where individuality is celebrated amidst the urban decay.",
+        "sounds": "neon hum, distant bass, clinking glasses, muffled voices",
+        "spatialLayout": "A cavernous, irregular space entered from a main opening. A prominent diagonal staircase acts as a visual and functional focal point to the right, while a mysterious alcove is glimpsed through a neon-lit door on the left.",
+        "primary_surfaces": "graffiti-covered brick, corrugated metal sheeting, cracked concrete",
+        "secondary_surfaces": "salvaged wood, chipped formica, exposed timber, metal, padded vinyl",
+        "accent_features": "electric blue neon door glow, toxic green and hot pink staircase steps, discarded graffitied drum kit",
+        "dominant": "dark grays and browns (brick, metal, concrete)",
+        "secondary": "vibrant street art colors (green, pink, etc.)",
+        "accent": "electric blue neon",
+        "ambient": "cool",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764773214289-useaak4bw",
+      "description": "The dimly lit, cavernous interior of a rebellious, counter-culture bar.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "off-center to the left",
+          "description": "A large, slightly ajar metal door bathed in electric blue neon, revealing a darker alcove."
+        },
+        {
+          "type": "stairs",
+          "position": "to the right",
+          "description": "A diagonal, rickety wooden staircase with vibrant, clashing painted steps ascending into shadow."
+        }
+      ],
+      "dominantElements": [
+        "graffiti-covered brick walls",
+        "corrugated metal sheeting",
+        "bar counter",
+        "eclctic stools",
+        "Edison bulbs",
+        "rickety wooden staircase",
+        "discarded drum kit"
+      ],
+      "uniqueIdentifiers": [
+        "graffiti-covered brick",
+        "corrugated metal",
+        "electric blue neon door",
+        "toxic green and hot pink stairs",
+        "discarded drum kit"
+      ],
+      "searchDesc": "Dimly lit bar with graffiti, neon, salvaged materials, and vibrant stairs.",
+      "slug": "interior-of-the-electric-eel-tavern"
+    },
+    "0a5aa3e3-5b59-4b6d-8c08-54a65adb1138": {
+      "id": "0a5aa3e3-5b59-4b6d-8c08-54a65adb1138",
+      "type": "location",
+      "name": "The Gilded Compass Lodge",
+      "description": "A formidable edifice of stone and ornate ironwork, this Freemasons' Lodge stands as a silent guardian of tradition and influence within the district. Its imposing facade hints at the secrets and rituals held within its walls, a blend of historic gravitas and enduring power.",
+      "dna": {
+        "looks": "The lodge presents a formidable exterior, characterized by its solid, almost fortress-like stone construction. Architectural elements lean towards Gothic and Victorian influences, with pointed arches, decorative gargoyles, and intricate relief carvings that speak of a rich history. The scale is imposing, designed to convey gravitas and permanence.",
+        "colorsAndLighting": "The primary colors are the deep greys and muted browns of weathered stone, accented by the dark sheen of wrought iron and the warm glow emanating from select windows. Lighting is often subdued, with shadows playing a significant role in accentuating the architectural details and fostering an atmosphere of mystery.",
+        "atmosphere": "The immediate surroundings are typically hushed, a pocket of quietude amidst the urban bustle. The air might carry the faint scent of old paper and polished wood, hinting at the traditions within. The atmosphere is one of solemnity and discretion, exuding an aura of quiet authority.",
+        "materials": "The primary construction material is a robust, aged stone, likely granite or sandstone, giving the building a substantial and timeless feel. This is complemented by heavy, dark timber for the main doors and intricate wrought iron for railings, gates, and decorative elements.",
+        "mood": "This building evokes a sense of deep respect, tradition, and hidden knowledge. It is a place that feels ancient and powerful, inspiring awe and perhaps a touch of apprehension in those who stand before it.",
+        "sounds": "Muffled voices, distant traffic, creaking hinges, shuffling footsteps, faint organ music",
+        "spatialLayout": "The lodge is typically a rectilinear structure, solid and grounded, with a prominent central entrance designed to command attention. External staircases or secondary passages might suggest a more complex internal layout, with different wings or levels dedicated to various functions.",
+        "primary_surfaces": "Weathered grey stone, dark timber panels",
+        "secondary_surfaces": "Wrought iron detailing, stained glass",
+        "accent_features": "Masonic symbols, brass plaque, ornate door hardware",
+        "dominant": "grey",
+        "secondary": "dark brown",
+        "accent": "brass, deep red (in stained glass)",
+        "ambient": "subdued, shadowy",
+        "genre": null,
+        "architectural_tone": "Victorian Gothic, Edwardian",
+        "cultural_tone": "Tradition, hierarchy, hidden influence",
+        "materials_base": "Stone, iron, aged wood",
+        "mood_baseline": "Solemn, authoritative, mysterious",
+        "palette_bias": "Subdued natural and urban tones with dark accents",
+        "soundscape_base": "Quiet, hushed, occasional muffled sounds",
+        "flora_base": "None prominent",
+        "fauna_base": "None prominent"
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A large, imposing double door of dark wood with elaborate brass fittings, leading into the main hall."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A narrow, arched stone passage beside the main entrance, possibly leading to service areas or a side courtyard."
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "A tall, arched window with stained glass depicting geometric patterns, offering a glimpse of the interior's grandeur."
+        },
+        {
+          "type": "stairs",
+          "position": "background",
+          "description": "A grand external stone staircase, partially obscured by shadow, leading to a less prominent upper entrance."
+        }
+      ],
+      "dominantElements": [
+        "Ornate stone facade",
+        "Grand central entrance",
+        "Intricate ironwork detailing",
+        "Tall, arched windows",
+        "Imposing scale"
+      ],
+      "uniqueIdentifiers": [
+        "Subtle Masonic symbols incorporated into the stonework",
+        "A heavy, weathered brass plaque near the main door",
+        "The specific geometric pattern of the stained glass windows",
+        "A solitary, ancient lamppost standing sentinel before the entrance",
+        "The deep, resonant echo of footsteps on the stone approach"
+      ],
+      "searchDesc": "The Gilded Compass Lodge: Historic Freemasons' building with ornate stonework and grand entrance.",
+      "slug": "the-gilded-compass-lodge",
+      "niches": [],
+      "primaryMedia": "media-1764773316939-1nk8449g8"
+    },
+    "niche-1764773340010-mlxwhq37b": {
+      "id": "niche-1764773340010-mlxwhq37b",
+      "type": "niche",
+      "name": "interior of The Gilded Compass Lodge",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This grand hall features straight walls of aged, grey stone rising to a high, vaulted ceiling with intricate carved wooden beams, echoing Gothic arches. The floor is a dark mosaic of polished stone tiles and worn brass inlays. In the midground, an ornate dark timber desk sits beneath a leaded glass window with red stained glass accents.",
+        "colorsAndLighting": "Subdued, shadowy light bathes the hall, with dominant grey stone walls and dark timber elements. Dappled light from the red-stained glass window casts warm, colored accents.",
+        "atmosphere": "The air is thick with the scent of aged paper and wood polish, creating an atmosphere of solemn tradition and hushed authority. A sense of deep respect and hidden knowledge pervades.",
+        "materials": "Aged grey stone forms the walls, complemented by dark, intricately carved timber for beams and furniture. The floor is a mosaic of dark, polished stone and worn brass, adding a touch of refined age.",
+        "mood": "This place evokes a sense of deep respect, tradition, and hidden knowledge, inspiring awe and a touch of apprehension.",
+        "sounds": "Hushed echoes, faint creaks, subtle shuffling.",
+        "spatialLayout": "A rectangular hall with high, vaulted ceilings. Entry is past a massive door (out of frame), with distinct midground focal points of a desk and a passage to the sides.",
+        "primary_surfaces": "aged grey stone, carved wood beams",
+        "secondary_surfaces": "polished stone tiles, worn brass inlays, dark timber furniture",
+        "accent_features": "leaded glass window with deep red stained glass, ornate carvings",
+        "dominant": "grey (walls, stone)",
+        "secondary": "dark timber (beams, furniture)",
+        "accent": "deep red (stained glass), brass (inlays)",
+        "ambient": "neutral",
+        "structure": {
+          "form": "gothic",
+          "roofType": "vaulted",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "arched-windows",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": "Victorian Gothic",
+        "cultural_tone": "Tradition, hierarchy, hidden influence",
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764773340009-6eeicn59v",
+      "description": "A grand, stone-paneled hall with vaulted ceilings and Gothic arches, reminiscent of a traditional lodge, featuring ornate timber and subtle brass inlays.",
+      "navigableElements": [
+        {
+          "type": "desk",
+          "position": "midground, left",
+          "description": "A large, ornately carved dark timber desk."
+        },
+        {
+          "type": "passage",
+          "position": "midground, right",
+          "description": "A dimly lit, arched passage receding into shadow."
+        },
+        {
+          "type": "window",
+          "position": "midground, left",
+          "description": "A tall, leaded glass window with deep red stained glass accents."
+        }
+      ],
+      "dominantElements": [
+        "stone-paneled walls",
+        "vaulted ceiling",
+        "ornate timber desk",
+        "leaded glass window"
+      ],
+      "uniqueIdentifiers": [
+        "aged grey stone panels",
+        "Gothic arched ceiling",
+        "dark timber and brass floor mosaic",
+        "red stained glass window"
+      ],
+      "searchDesc": "Grand stone hall, Gothic arches, ornate timber, subdued light, tradition, hidden knowledge.",
+      "slug": "interior-of-the-gilded-compass-lodge"
+    },
+    "5f8e8349-59d6-41e9-84b4-295e1da35a17": {
+      "id": "5f8e8349-59d6-41e9-84b4-295e1da35a17",
+      "type": "location",
+      "name": "The Velvet Veiled",
+      "description": "A discreet yet alluring establishment promising nights of indulgence and exploration. Its facade hints at the decadent experiences hidden within, inviting those seeking a departure from the mundane.",
+      "dna": {
+        "looks": "The building presents a facade of understated decadence. It appears as an older urban structure, heavily modified with elements of Victorian industrial charm overlaid with a distinctly counter-cultural, DIY aesthetic. Signs are more artistic installations than functional markers. The scale is moderate, fitting within the urban fabric.",
+        "colorsAndLighting": "Deep purples and blacks dominate the main facade, punctuated by the lurid glow of neon lights that cast long, distorted shadows. The lighting is designed to obscure and entice, with pockets of intense color against areas of deep shadow.",
+        "atmosphere": "The immediate surroundings are a mix of grimy urban alleyways and vibrant street art murals. The air is thick with the low hum of the city, overlaid with more intimate sounds emanating from within the club. A sense of forbidden excitement permeates the area.",
+        "materials": "The primary exterior materials are weathered brick and dark, painted metal. Accents of plush, dark velvet are visible around entrances, contrasting sharply with the rougher urban textures. Exposed piping and industrial fixtures are also present.",
+        "mood": "This location evokes a sense of rebellious exploration and sensual intrigue. It feels like a hidden sanctuary for those who embrace their desires and seek experiences beyond the ordinary.",
+        "sounds": "muffled bass music, hushed voices, distant sirens, occasional laughter, dripping water, city hum",
+        "spatialLayout": "The building is integrated into a row of other urban structures, with its entrance prominently, yet discreetly, placed at street level. It has a sense of depth, with alleys and potential secondary access points suggesting hidden spaces.",
+        "primary_surfaces": "weathered brick, dark painted metal panels",
+        "secondary_surfaces": "frosted glass, dark velvet drapes",
+        "accent_features": "wrought-iron signage with 'V' emblem, provocative neon lighting, graffiti art",
+        "dominant": "deep purple",
+        "secondary": "black",
+        "accent": "hot pink neon, electric blue neon",
+        "ambient": "dim, moody",
+        "genre": null,
+        "architectural_tone": "Eclectic and heavily modified urban, with strong influences of Victorian industrial mixed with DIY and street art aesthetics.",
+        "cultural_tone": "Alternative, counter-culture, bohemian, and artistic. A strong emphasis on individuality and subcultures.",
+        "materials_base": "Painted and weathered urban materials, metal, textiles.",
+        "mood_baseline": "Bohemian, rebellious, and lively.",
+        "palette_bias": "Bold, often clashing colors with a strong presence of neon and saturated hues.",
+        "soundscape_base": "Urban street noise mixed with muffled music and ambient activity.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A heavy, dark velvet curtain conceals a thick wooden door, hinting at the exclusive atmosphere within."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A narrow, dimly lit alleyway runs alongside, possibly leading to a service entrance or a hidden side access."
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "A single, heavily frosted window offers no view inside, shrouded in mystery and intrigue."
+        }
+      ],
+      "dominantElements": [
+        "ornate, almost gothic, wrought-iron signage",
+        "a discreet, unmarked black door",
+        "faded, peeling paint revealing layers of urban decay",
+        "graffiti art that is both provocative and artistic",
+        "dim, atmospheric neon lighting seeping from unseen sources"
+      ],
+      "uniqueIdentifiers": [
+        "the distinctive 'V' emblem subtly worked into the ironwork",
+        "the incongruous elegance of velvet drapes against rough brick",
+        "the pervasive scent of something exotic and faintly floral",
+        "the hushed sounds of muffled music and occasional laughter",
+        "the feeling of being watched from unseen vantage points"
+      ],
+      "searchDesc": "A discreet sex club with eclectic urban architecture, velvet drapes, and provocative neon.",
+      "slug": "the-velvet-veiled",
+      "niches": [],
+      "primaryMedia": "media-1764773453346-gv1bnseck"
+    },
+    "niche-1764773474904-523u8xpdb": {
+      "id": "niche-1764773474904-523u8xpdb",
+      "type": "niche",
+      "name": "interior of The Velvet Veiled",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a rectangular chamber defined by straight, dark metal walls and a ceiling of weathered brick transitioning into industrial elements. Exposed piping and patches of street art adorn the upper walls, while a velvet curtain to the left and an arched passage to the right draw the eye. The floor is a mosaic of dark concrete and stone, with a sales counter in the midground.",
+        "colorsAndLighting": "Lurid hot pink and electric blue neon signs cast distorted shadows, creating a high-contrast, moody illumination. The overall lighting is dim, emphasizing the vibrant neon accents against dark surfaces.",
+        "atmosphere": "A palpable sense of rebellious exploration and sensual intrigue permeates the air. The atmosphere is intimate and somewhat clandestine, enhanced by the muffled bass music and the feeling of a hidden bohemian sanctuary.",
+        "materials": "Dominant materials include darkly painted metal walls, weathered brick on the ceiling and counter, rough plaster bearing street art, plush dark velvet, wrought iron detailing, worn dark concrete, and polished dark grey stone flooring.",
+        "mood": "This space evokes a feeling of illicit discovery and alluring mystery, a welcoming haven for subcultures and those seeking unconventional experiences.",
+        "sounds": "muffled bass music, subtle ambient hum",
+        "spatialLayout": "A rectangular chamber with a distinct left and right focal point: a hidden alcove behind a curtain and an arched passage. The midground features a sales counter, defining the depth of the space.",
+        "primary_surfaces": "darkly painted metal walls, weathered brick ceiling, worn dark concrete and polished dark grey stone floor",
+        "secondary_surfaces": "rough plaster with street art, plush dark velvet curtain, weathered brick sales counter",
+        "accent_features": "hot pink and electric blue neon signs, exposed dark-painted piping, street art murals, wrought-iron detailing on passage, neon 'V' emblem",
+        "dominant": "deep purple",
+        "secondary": "dark grey",
+        "accent": "hot pink, electric blue",
+        "ambient": "cool",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "medium",
+          "orientation": "horizontal",
+          "openings": "arched-windows",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764773474902-bdqlim12h",
+      "description": "A dimly lit, atmospheric chamber within a counter-culture sanctuary, blending industrial and bohemian elements with a focus on sensual intrigue.",
+      "navigableElements": [
+        {
+          "type": "door|passage",
+          "position": "immediate left, partially drawn",
+          "description": "plush, dark velvet curtain hinting at a hidden alcove"
+        },
+        {
+          "type": "passage",
+          "position": "immediate right",
+          "description": "narrow, arched passage framed by wrought-iron, with a neon 'V' emblem"
+        }
+      ],
+      "dominantElements": [
+        "darkly painted metal walls",
+        "hot pink and electric blue neon signs",
+        "weathered brick ceiling",
+        "exposed dark-painted piping",
+        "street art murals",
+        "dark velvet curtain",
+        "arched passage with wrought-iron",
+        "worn dark concrete and polished dark grey stone floor",
+        "weathered brick sales counter"
+      ],
+      "uniqueIdentifiers": [
+        "lurid neon glow",
+        "velvet curtain alcove",
+        "neon 'V' emblem",
+        "street art on brick plaster",
+        "Victorian industrial modifications"
+      ],
+      "searchDesc": "Bohemian sanctuary with neon glow, velvet, street art, and industrial touches.",
+      "slug": "interior-of-the-velvet-veiled"
     }
   },
   "views": {},
@@ -735,6 +1481,67 @@
               "children": [
                 {
                   "id": "niche-1764768479160-khv2qmy1x",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8f2ef984-ab00-4c01-8909-0ede7e09daa7",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764772378522-phs3xvssi",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8cd5afd1-1c09-496a-ba90-78c951ea9116",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764773214290-asc5vmgow",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "5f8e8349-59d6-41e9-84b4-295e1da35a17",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764773474904-523u8xpdb",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1549114d-1875-4f1a-a501-238a7d6421af",
+          "type": "region",
+          "children": [
+            {
+              "id": "a65324e0-220c-4f7f-9e26-f77f2a53797a",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764773131322-17xeba7r4",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "0a5aa3e3-5b59-4b6d-8c08-54a65adb1138",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764773340010-mlxwhq37b",
                   "type": "niche",
                   "children": []
                 }

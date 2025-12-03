@@ -14,6 +14,7 @@ import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
 import { createNode } from '../../engine/nodeCreation/core/createNode';
 import { createHierarchy } from '../../engine/nodeCreation/core/createHierarchy';
+import { extractParentDNAContext } from '../../engine/nodeCreation/core/dnaInheritance';
 import { storageService } from '../../services/storage/storageService';
 import { generateImage } from '../../services/mzoo';
 import { getNodeImagePrompt } from '../../engine/nodeCreation/prompts/image';
@@ -371,12 +372,24 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
         message: `Creating ${nodeType}...`
       });
 
+      // Load parent DNA context if parentId is provided
+      let parentContext;
+      if (parentId) {
+        const worldsData = await storageService.loadWorlds();
+        const parentNode = worldsData?.nodes?.[parentId];
+        if (parentNode?.dna) {
+          parentContext = extractParentDNAContext(parentNode.dna);
+          console.log(`[CREATE-NODE] Loaded parent DNA from ${parentNode.name} (${parentNode.type})`);
+        }
+      }
+
       const result = await createNode(
         nodeType,
         description || `New ${nodeType}`,
         {
           apiKey,
           parentId,
+          parentContext,
           createImage: flags.createImage
         }
       );
