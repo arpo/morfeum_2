@@ -112,32 +112,6 @@
       ],
       "parentMedia": "media-1764763139964-nnyxz3ezv"
     },
-    "media-1764767378141-1tbnua4zi": {
-      "id": "media-1764767378141-1tbnua4zi",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84d240/eMaxct22BRAQfd4NQqeBB.jpg",
-      "createdAt": "2025-12-03T13:09:38.141Z",
-      "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA small, rectangular wooden house on Tjörn, Sweden, weathered timber facade in pale grey, steep pitched roof with dark grey tiles, small multi-paned windows with verdigris-stained frames, single sturdy wooden door at the center, low rough-hewn grey stone foundation. Photographed from street level, 25-30° downward tilt, ultra-wide view. Foreground: worn cobblestone street with a few scattered puddles reflecting the cool, diffused daylight. Midground: The house facade, slightly off-center, showcasing its weathered planks and subtle architectural details. Background: A sparse, windswept landscape of hardy coastal vegetation, the vast, cool expanse of the sky with diffused natural light and a few wispy clouds, hinting at the distant sea breeze and the faint scent of salt and pine. The lighting is natural and diffused, casting long, gentle shadows that highlight the texture of the wood. The mood is serene, humble, and enduring, evoking a sense of peaceful simplicity and rustic charm, a life lived in close connection with nature. Architectural tone: Simple Nordic coastal vernacular, understated wooden construction, functionalism, strong connection to the natural environment. Cultural tone: Modest dwelling, fisherman's cottage or seasonal retreat. Materials: Weathered horizontal timber planks, rough grey stone, dark grey roof tiles, aged glass panes, exposed timber rafters. Color Palette: Dominant pale grey, secondary dark grey, accent bronze-green and natural stone. Ambient light: Cool, diffused daylight. Asymmetric composition with more street visible on the left.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
-        "model": "FLUX"
-      },
-      "entityRefs": [
-        "aea3088d-273a-4bcc-81c8-df2951424831"
-      ]
-    },
-    "media-1764767396984-5jxj34n5i": {
-      "id": "media-1764767396984-5jxj34n5i",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84d242/-Tru2Wxp-TGFOpov7Khx0.jpg",
-      "createdAt": "2025-12-03T13:09:56.984Z",
-      "metadata": {
-        "prompt": "A simple Nordic coastal vernacular interior, stepping into a humble, enduring space immediately after entering. The immediate view showcases weathered, pale grey timber plank walls, echoing the exterior. The ceiling is a steeply pitched timber frame, visible as exposed, dark grey rafters that create a strong vertical emphasis. The flooring is rough-hewn grey stone, grounding the space. In the midground, slightly off-center to the left, a narrow, dark wood passage recedes into the depth of the house, illuminated by a soft, cool diffused daylight filtering from unseen sources. To the right, a low, sturdy wooden bench with worn cushions is positioned, providing a hint of residential comfort. The overall composition is asymmetrical, with the recessing passage drawing the eye into the dwelling's modest interior, emphasizing functionalism and a connection to the natural, maritime environment. The atmosphere is serene and quiet, carrying the faint scent of salt and pine.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
     "media-1764768609697-e74f84ix4": {
       "id": "media-1764768609697-e74f84ix4",
       "type": "depth-map",
@@ -833,100 +807,6 @@
       ],
       "parentMedia": "media-1764837117426-ttrjp60yg"
     },
-    "media-1764843838742-wty6i69pj": {
-      "id": "media-1764843838742-wty6i69pj",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f01f/_wyvikBlMH89pQBscF9sP.jpg",
-      "createdAt": "2025-12-04T10:23:58.742Z",
-      "metadata": {
-        "prompt": "A cozy, rectangular interior space with straight, wood-paneled walls, matching the exterior timber planks. The ceiling is angled, mimicking the steep pitched roof, with exposed timber rafters visible, lending a rustic charm. Natural, diffused daylight streams in from small, multi-paned windows framed with verdigris-stained wood, casting long shadows. The floor is laid with rough-hewn grey stone, reflecting the exterior foundation. In the foreground, a simple, low wooden bench sits off-center to the left. To the right midground, a slightly ajar wooden door reveals a glimpse of a darker passage. A small, framed nautical painting hangs asymmetrically on the back wall, drawing the eye further into the modest, functional space. The overall composition emphasizes a shallow depth of field, focusing on the immediate, tranquil, and enduring atmosphere of a Nordic coastal vernacular dwelling.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
-    "media-1764843857190-zd10ls20q": {
-      "id": "media-1764843857190-zd10ls20q",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f021/YiEi4wqbyrHmsZTarcFly.jpg",
-      "createdAt": "2025-12-04T10:24:17.190Z",
-      "metadata": {
-        "prompt": "A cozy, rectangular interior niche crafted from the same weathered, pale grey timber as the exterior of a Simple Nordic coastal vernacular house. The air is cool, carrying the faint scent of salt and pine, with the distant sound of seagulls and waves. Diffused, cool daylight streams through a small, multi-paned window with verdigris-stained wooden frames positioned on the midground wall. The floor is a practical, dark grey slate, slightly uneven and worn. In the foreground, a narrow, exposed timber beam runs horizontally at waist height, adorned with a few neatly coiled fishing ropes. A small, weathered wooden stool is placed off-center to the right. The midground reveals the textured timber plank walls, leading the eye towards a simple, framed doorway on the left, revealing a darker, unseen space beyond. The background is defined by the gentle slope of the timber ceiling, emphasizing the modest scale and rustic charm. [navigable: doorway, midground left], [navigable: timber beam, foreground center].\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
-    "media-1764844233405-wpa8aasya": {
-      "id": "media-1764844233405-wpa8aasya",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f046/ihevIjtD15b1gdiu-h2J7.jpg",
-      "createdAt": "2025-12-04T10:30:33.405Z",
-      "metadata": {
-        "prompt": "A cozy, rectangular interior framed by simple Nordic coastal vernacular architecture. The walls are paneled with weathered, pale grey timber planks, echoing the exterior cladding. A solid, dark grey pitched roof is visible overhead, creating angled, opaque planes of solid material. Small, multi-paned windows with verdigris-stained wooden frames are set into the walls, allowing cool, diffused daylight to illuminate the space. The floor is a robust, rough-hewn grey stone, grounding the room. In the foreground, a low, worn wooden bench sits off-center to the left, inviting repose. To the right midground, a sturdy wooden doorway, its frame slightly ajar, reveals a glimpse of a dimly lit passage. The overall composition is asymmetrical, with the light drawing the eye towards the opening, creating a sense of depth and beckoning exploration into the humble, enduring dwelling.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
-    "media-1764844425298-30e5x1q8w": {
-      "id": "media-1764844425298-30e5x1q8w",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f059/HRvDD3Gpfjj8VJeRmlQiP.jpg",
-      "createdAt": "2025-12-04T10:33:45.298Z",
-      "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA monumental, stylized human figure, \"The Man,\" crafted from weathered wood, stands ablaze with large, flickering orange and yellow flames engulfing its \"hair\" and upper body, sending plumes of smoke and fire into the deep blue and indigo twilight sky. \"The Man\" is elevated atop an intricately multi-tiered, temple-like wooden structure, glowing warmly from within, bathed in the ambient light of the playa. The camera is positioned at street level, looking slightly upwards with a 25-30° downward tilt, capturing an ultra-wide view of the expansive, dusty playa. In the foreground, the light-colored, dusty ground is textured with subtle footprints and scattered embers, reflecting the warm, flickering glow. The midground is dominated by the colossal effigy and its temple base, positioned slightly off-center to the right for asymmetric composition. Surrounding \"The Man\" is a massive, bustling crowd of participants, their unique attires adding diverse material textures, mingling amongst various art cars and mutant vehicles, including a fire-adorned modified truck on the left and a vintage bus on the right, their forms illuminated by countless light sources. In the distance, silhouetted mountains form a stark horizon line against the darkening sky, punctuated by several other ornate, glowing wooden art installations. Prominently, a Ferris wheel, bathed in vibrant pink and purple lights, is visible on both the left and right sides of the scene, adding a distinct visual element. The sky above is further animated by several fiery meteors streaking downwards and a few silhouetted figures appearing to fly with fiery trails. Smaller, ground-level fiery sculptures and spontaneous performances add to the vibrant, energetic, and surreal atmosphere, all illuminated by the warm, dynamic, and flickering glow of countless light sources against the cool, deep blues of the night sky. The overall mood is exhilarating, awe-inspiring, and transient, evoking a sense of communal celebration and raw energy.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
-        "model": "FLUX"
-      },
-      "entityRefs": [
-        "5271623e-fa5a-49b7-9561-c72c6db2d717"
-      ]
-    },
-    "media-1764844445959-th9meqgeh": {
-      "id": "media-1764844445959-th9meqgeh",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f05b/Y15-CzPvN_1cLH_9qQ24p.jpg",
-      "createdAt": "2025-12-04T10:34:05.959Z",
-      "metadata": {
-        "prompt": "A monumental interior chamber constructed entirely of massive, charred wooden beams and intricately carved timber, mirroring the exterior's improvised, large-scale wooden sculpture with temple-like elements. The form is undeniably \"rectangular\" with imposing, straight walls meeting at sharp, imposing corners, creating a sense of ancient, sacred enclosure. Above, a solid, flat ceiling of thick, dark wood panels is visible, completely blocking any hint of the sky. Large, irregularly spaced arched openings punctuate the walls, revealing glimpses of dimly lit, cavernous spaces beyond. The scale is colossal, with 20-meter high ceilings that create an immense sense of volume.\n\nIn the foreground, illuminated by a flickering, warm orange glow, a low, rough-hewn wooden platform serves as the immediate entry point, suggesting navigable stairs descending slightly to the left [navigable: stairs, left]. The midground is dominated by the sheer scale of the wooden architecture; a colossal, off-center pillar carved with stylized, fire-like motifs rises majestically, its textured, glowing surface contrasting with the surrounding charred wood. To the right of this pillar, a dimly lit, arched passage, framed by twisted timber, beckons exploration [navigable: passage, right]. Scattered throughout the space are heavy, dark wooden benches, appearing ancient and worn, suitable for prayer or contemplation. The atmosphere is thick with the palpable scent of aged wood and residual warmth, a ritualistic ambiance for a temporary desert gathering. The primary lighting emanates from the flickering orange and yellow of unseen internal fires, casting long, dramatic shadows and bathing the scene in a warm, dynamic glow, punctuated by the deep blues and indigos of the unseen night sky filtering through the distant openings. Accent features include swirling patterns of smoke rising languidly towards the ceiling and small, embedded glowing embers within the wood grain itself.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
-    "media-1764844500464-0r9d0rxlh": {
-      "id": "media-1764844500464-0r9d0rxlh",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f061/62B3N_oOiLUs4tyNFjpJY.jpg",
-      "createdAt": "2025-12-04T10:35:00.464Z",
-      "metadata": {
-        "prompt": "Serpent's Echo Amphitheater. An open-air venue carved into the earth, where the primal beats of a DJ resonate with ancient Mayan echoes. Structures crafted from sun-baked clay and woven reeds rise to meet a vast, star-dusted sky.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThe location is an open-air amphitheater with a large central DJ booth resembling a stylized serpent. Tiered seating is sculpted from sun-baked clay, and the background is dominated by towering, woven reed structures. Intricate stone carvings depicting Mayan motifs adorn archways and pillars.\n\nMaterials and Surfaces:\nPrimary: Sun-baked clay seating, Woven reed backdrops, Carved stone archways\nSecondary: Earthy ground, Torch-lit passages, Rough-hewn stone steps\nAccents: Feathered headdresses, Jade adornments, Serpent motif on DJ booth, Flickering fire pits\n\nColors:\nDominant: Pale dust tones with broad coverage, Secondary: Warm artificial lights and cool natural sky, Accent: Vibrant colors of adornments and carvings\nLight: Warm and cool contrasts\n\nAtmosphere: The air is thick with the scent of copal incense and the palpable energy of a gathering. A warm, dry breeze carries the bass-heavy beats of the DJ and the occasional murmur of the crowd. The atmosphere feels both ancient and vibrantly alive, a temporary sanctuary of sound.\nMood: This location evokes a sense of primal celebration and temporary creation. It's a space where ancient spirits meet modern rhythm, fostering a feeling of vibrant human connection and energetic release.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "709f114a-0e76-4b94-8a5b-06f4fcc3dc26"
-      ]
-    },
-    "media-1764844654474-j5hcjgc79": {
-      "id": "media-1764844654474-j5hcjgc79",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f070/EpRE_NLy4-xoy4DyPywPG.jpg",
-      "createdAt": "2025-12-04T10:37:34.475Z",
-      "metadata": {
-        "prompt": "INTERNAL VIEW ONLY. Stepping inside a small, rectangular dwelling. The immediate space is an entry nook. Walls are paneled with weathered, pale grey timber planks, mirroring the exterior. Rough-hewn grey stone forms the foundation and a low retaining wall to the left. A single, sturdy wooden beam, darkened with age, crosses the ceiling at a steep angle, suggesting the pitched roof above. Diffused, cool daylight streams from a small, multi-paned window on the right wall, casting long shadows. The floor is simple, wide-plank wood, slightly worn. To the right, a narrow, planked wooden **doorway [navigable: passage, background right]** is slightly ajar, revealing a hint of deeper, darker interior. In the foreground, a weathered wooden bench **[navigable: object, centered]** with thick, woven wool cushions in muted grey and cream offers a place to rest. The air feels cool and carries the faint scent of salt and pine.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
     "media-1764844766424-0bbuz8iko": {
       "id": "media-1764844766424-0bbuz8iko",
       "type": "depth-map",
@@ -940,96 +820,6 @@
         "niche-1764844708468-6qvpmzg1v"
       ],
       "parentMedia": "media-1764844708466-f5uefaju6"
-    },
-    "media-1764846356814-00j7ovofd": {
-      "id": "media-1764846356814-00j7ovofd",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f11b/CIqUwY4hiimQ_fGGLxaaI.jpg",
-      "createdAt": "2025-12-04T11:05:56.814Z",
-      "metadata": {
-        "prompt": "The Playa district/region. An immense, flat expanse of dry lakebed. The ground is dusty and light-colored, stretching to the horizon. It serves as the canvas for temporary structures and art.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nAn expansive, flat, and open terrain characterized by its dusty, light-colored surface. The horizon is distant, giving a sense of immense scale. Temporary, large-scale art installations and crowds populate the landscape.\n\nAtmosphere:\nThe air is dry and carries fine dust, often stirred by wind or movement. A pervasive sense of openness and exposure defines the environment, with a feeling of raw, untamed desert landscape transformed by human activity.\n\nColors:\nDominant: Pale dust tones with broad coverage, Secondary: Dark blue/purple sky\nLight: Warm and cool from artificial and celestial sources\n\nArchitectural Style: \nMaterials: The primary surface is compacted, fine-grained playa dust. Materials are predominantly temporary, ranging from wood and metal in art installations to fabrics and diverse textures from the gathered populace.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "0ee914a4-300f-4786-98ba-2148ccf959b3"
-      ]
-    },
-    "media-1764846487027-zobron1ka": {
-      "id": "media-1764846487027-zobron1ka",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f128/8BHtRpeofEqiIDK9RrvEi.jpg",
-      "createdAt": "2025-12-04T11:08:07.027Z",
-      "metadata": {
-        "prompt": "Maya Wariour Oasis. A vibrant, temporary encampment built around a pulsating DJ stage, humming with the energy of a gathering crowd. This open-air venue blends primal aesthetics with the spirit of modern celebration.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThe camp is a collection of irregular, temporary structures constructed from various salvaged materials, arranged organically around a central, elevated DJ booth. Low-slung tents and open-air stalls create a labyrinthine layout, with banners and fabrics draped between poles. The scale is human-centric, fostering a sense of intimacy within the vastness.\n\nMaterials and Surfaces:\nPrimary: Dusty ground, worn canvas tents, rough wooden structures\nSecondary: Fabric banners, metal scaffolding, scattered seating elements\nAccents: Intense stage lighting, tribal art, glowing lanterns\n\nColors:\nDominant: Pale dust tones with broad coverage, Secondary: Vibrant artificial light hues, accenting the DJ stage and pathways, Accent: Deep blues and purples on the DJ booth, fiery oranges from scattered heat sources\nLight: Warm artificial glow with cool natural sky contrast\n\nAtmosphere: The air is thick with the scent of dust, sweat, and perhaps the faint aroma of food or incense. A palpable energy of excitement and revelry permeates the space, kept warm by the collective body heat and artificial lighting. The sound of electronic music forms a constant, driving rhythm.\nMood: A primal, yet joyous and ephemeral mood of intense human connection and shared experience. It evokes a feeling of belonging and liberation within a temporary, vibrant sanctuary.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "41b50cbb-69df-4dbe-9610-54db347a5d42"
-      ]
-    },
-    "media-1764846516803-mvtxstdq4": {
-      "id": "media-1764846516803-mvtxstdq4",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f12b/_lXzgdgMiVoP_JrTEom6T.jpg",
-      "createdAt": "2025-12-04T11:08:36.803Z",
-      "metadata": {
-        "prompt": "A rectangular interior hall, transitioning from the dusty earth tones of the exterior. The walls are rough, sun-baked earth, plastered unevenly with patches of worn canvas. Overhead, a solid, flat ceiling of salvaged wood planks is illuminated by the glow of scattered lanterns, casting warm, artificial light that contrasts with the faint, cool blue hues hinting at a natural sky. In the foreground, a patch of gritty, dusty ground leads into the space. To the left, a low, winding passage, framed by rough wooden posts and draped with vibrant fabric banners in deep blues and purples, beckons further exploration. In the midground, a collection of low-slung, irregular seating arrangements, made from salvaged wood and worn canvas, are clustered informally. A focal point in the midground-right is a small, elevated platform constructed from rough timber, suggesting a functional area, perhaps for display or a smaller gathering, bathed in a spot of fiery orange light. The overall composition is asymmetrical, with darker, richer tones on the left due to the passage and its banners, and more open, warmly lit space on the right.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
-    "media-1764846542955-nomp73kxu": {
-      "id": "media-1764846542955-nomp73kxu",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f12e/u7UB-ywVZV_noZoiqMWi1.jpg",
-      "createdAt": "2025-12-04T11:09:02.955Z",
-      "metadata": {
-        "prompt": "Tjörn district/region. A picturesque island municipality on Sweden's west coast, renowned for its rugged natural beauty, maritime heritage, and archipelago charm. It features a landscape of rocky shores, pine forests, and scattered fishing villages.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nA landscape dominated by windswept pine trees clinging to granite rocks, with views of the sea dotted with small islands. Scattered settlements feature traditional wooden houses.\n\nAtmosphere:\nCrisp, salty air with the scent of pine needles. The sound of waves and seagulls is ever-present. The climate is temperate maritime, often breezy.\n\nColors:\nDominant: Cool greys and deep greens, Secondary: Pale wood tones and granite grey\nLight: Soft, diffused northern light\n\nArchitectural Style: Simple Nordic coastal vernacular, functional and unadorned wooden structures.\nMaterials: Natural, weathered materials dominate, including granite, pine wood, and slate or tile for roofing. Rough-hewn stone is common for foundations and walls.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "25e5f7fd-eef4-47d0-ac49-5d17da24e00b"
-      ]
-    },
-    "media-1764846590215-lrcne9r8l": {
-      "id": "media-1764846590215-lrcne9r8l",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f132/NXTNLQTQCOb6ElFQKVKHC.jpg",
-      "createdAt": "2025-12-04T11:09:50.215Z",
-      "metadata": {
-        "prompt": "The Salt Spray Tavern. A sturdy, weathered tavern perched precariously on the edge of the ocean. Its simple wooden structure defies the relentless sea winds, offering a refuge of warmth and camaraderie to those who brave its entrance.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThe tavern is a functional, unadorned wooden structure with a steeply pitched roof. Its walls are clad in thick, dark planks, worn smooth by years of ocean spray and wind. The windows are small and set deep within the walls, often streaked with salt and the occasional seabird droppings.\n\nMaterials and Surfaces:\nPrimary: weathered wooden planks, slate roof shingles, salt-streaked glass\nSecondary: rough stone foundation, thick timber beams, rope lashings\nAccents: crooked signage, nautical debris, steaming chimney\n\nColors:\nDominant: Cool grey with significant coverage, Secondary: Deep green accents on door and window frames, Accent: Muted brown on timber and rope\nLight: Cool and slightly diffused\n\nAtmosphere: The air is thick with the briny scent of the sea, mixed with the faint aroma of woodsmoke and drying fish. A constant, low hum of the ocean is punctuated by the cries of gulls and the creak of the wooden structure.\nMood: A sense of resilient simplicity pervades the tavern, a quiet testament to enduring the harsh coastal elements. It feels both exposed to nature and a steadfast refuge from it.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "2ebc7194-ca9a-4a73-9d9c-3e2123d59368"
-      ]
-    },
-    "media-1764846609189-ix0f5222z": {
-      "id": "media-1764846609189-ix0f5222z",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f134/nCbYwVopXRHrak-PZOiN8.jpg",
-      "createdAt": "2025-12-04T11:10:09.189Z",
-      "metadata": {
-        "prompt": "A rectangular hall crafted from dark, salt-bleached wooden planks, forming straight walls with sharp corners that meet a solid, steeply pitched wooden ceiling. The interior is dimly lit by warm, inviting pools of light emanating from unseen sources, casting long shadows. Small, deeply set wooden-framed windows, streaked with salt, punctuate the walls, offering brief, muted glimpses of a grey, turbulent sea. The air, thick with the scent of brine and woodsmoke, feels enclosed and cozy. In the midground, an asymmetrical, off-center wooden archway, its edges softened by time, serves as a passage leading into deeper recesses of the tavern, its opening highlighted by a subtle glow. To the left, in the foreground, a weathered wooden bench is positioned against the wall, partially illuminated, inviting rest. The floor is a mix of worn, dark wood and patches of rough, grey stone, reflecting the tavern's foundation. The overall impression is one of resilient simplicity, a functional refuge against the harsh coastal elements, adhering to a simple Nordic coastal vernacular.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
     },
     "media-1764847077373-semww3z73": {
       "id": "media-1764847077373-semww3z73",
@@ -1073,19 +863,6 @@
       ],
       "parentMedia": "media-1764846542955-nomp73kxu"
     },
-    "media-1764847627440-yda27gky7": {
-      "id": "media-1764847627440-yda27gky7",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f199/W8eymLJFAjnezojWyNlQk.jpg",
-      "createdAt": "2025-12-04T11:27:07.440Z",
-      "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOVERVIEW/AERIAL COMPOSITION (HOST/REGION):\n\n1. CAMERA POSITION\n- Elevated oblique angle (45° tilt)\n- Wide view, capturing the vastness and character of \"The Central Concourse\" and the Lumina Spire District beyond.\n- Significant layered depth, from the immediate foreground to the distant horizon.\n\n2. ENVIRONMENTAL CHARACTER\n- Dominant features: The colossal, smooth pale green spherical structure (\"The Great Orb of Xylos\") in the foreground, the towering, slender spires of organic retro-futuristic architecture of the Lumina Spire District in the midground, and the vibrant orange sky with multiple celestial bodies in the background.\n- Atmospheric conditions: A clear, vivid orange sky with a large, soft orange and pink orb and two smaller white spheres.\n- Scale and scope: Emphasize the immense scale of \"The Great Orb of Xylos\" and the soaring height of the city's spires.\n\n3. COMPOSITION LAYERS\n- Foreground: The massive, smooth pale green spherical structure (\"The Great Orb of Xylos\"), prominently displayed. Show its thick, flared base with arched entrances. Intricate interior workings or multi-level windows are visible on its side, revealing its complex nature.\n- Midground: The bustling retro-futuristic city of Xylos Prime, with its tall, slender spires of organic architecture. Buildings are primarily shades of teal and pale green, featuring numerous windows that glow faintly with warm light. Rounded, disc-like or spherical appendages protrude from many buildings at various levels. Sleek, streamlined, orange and pale green vehicles resembling trains or buses are parked on a wide paved surface in the concourse area. Numerous small, silhouetted figures of people are seen walking.\n- Background: The vibrant orange sky, stretching expansively. The multiple celestial bodies (one large orange/pink orb, two smaller white spheres) are clearly visible. The distant cityscape fades slightly, adding atmospheric depth.\n\n4. ATMOSPHERE & MOOD\n- Environment: Vast and open, but with a sense of sheltered grandeur within the concourse. Air is clean, slightly humid, carrying a faint hum of advanced technology. Pleasant, constant comfort.\n- Lighting: Dominated by the vibrant orange sky, casting a warm, ambient glow. Interior lighting from countless windows (warm yellow/orange) creates a soft, inviting ambiance. Subtle glows emanate from the architecture.\n- Environmental effects: Subtle atmospheric haze contributing to depth.\n- Tone: Optimistic, wondrous, connected. Advanced technology and an optimistic, yet distinctly alien, future.\n\n=== SCENE-SPECIFIC DETAILS (from DNA) ===\nLooks: Vast, open space dominated by the colossal, smooth spherical structure. Soaring organic spires reach towards a brilliant orange sky. Multi-level windows and glowing interiors on buildings and the central sphere.\nSpatial Layout: Grand, open concourse space, framed by the central sphere and distant cityscape, creating layered perspectives. Asymmetric composition.\nAtmosphere: Clean, slightly humid, faint hum of advanced technology, pleasant temperature. Palpable sense of motion and life from the city beyond.\nColors & Lighting: Primary palette of teal and pale green, contrasted by vibrant orange sky and warm interior lighting. Subtle glows from windows.\nMaterials: Smooth, polished composites, translucent organic panels, glassy window surfaces, seamless, iridescent finish of the central sphere. Intricately patterned internal mechanical components, flared structural supports, paved walkways.\nMood: Wonder and optimistic advancement, exploration, excitement of a thriving, futuristic civilization.\nSounds (for atmosphere hints): Distant city hum, faint mechanical whirs, hushed footsteps, soft ambient chimes.\n\nMaterial Surface Breakdown:\nPrimary Surfaces: Smooth, polished composites, translucent organic panels, vast expanses of glass.\nSecondary Surfaces: Intricately patterned internal mechanical components, flared structural supports, paved walkways.\nAccent Features: Warm glowing windows, rounded protruding building appendages, arched entrances.\n\nColor Palette Breakdown:\nDominant Colors: Pale Green (central sphere, building accents)\nSecondary Colors: Teal (building exteriors, walkways)\nAccent Colors: Warm Orange/Yellow (interior lighting, sky, vehicles)\nAmbient Light: Warm, inviting glow\n\nARCHITECTURAL TONE (CRITICAL - MUST MATCH EXACTLY): Organic retro-futurism with bioluminescent accents\n\nCultural Tone: A central nexus for advanced, interconnected urban life\n\nMood Baseline: Optimistic, wondrous, connected\n\nMaterials Base Style: Smooth, advanced composites with organic integration\n\nPalette Bias Style: Cool greens and teals contrasted with vibrant oranges and warm yellows\n\n**FLUX.1 Prompt:**\n\n**A breathtaking, wide-angle, elevated oblique shot (45° tilt) captures the awe-inspiring \"The Central Concourse\" of Xylos Prime. Dominating the immediate foreground is \"The Great Orb of Xylos,\" a colossal, impossibly smooth pale green spherical structure. Its thick, flared base, detailed with subtle, arched entrances, grounds the monumental form. The orb's seamless, iridescent surface reveals glimpses of intricate interior workings and multi-level windows, hinting at immense complexity within. Beyond this colossal nexus, the midground explodes with the vibrant, retro-futuristic cityscape of the Lumina Spire District. Towering, slender spires, sculpted with organic, bioluminescent accents, stretch elegantly into the vivid orange sky. These architectural marvels are primarily rendered in refreshing shades of teal and pale green, their facades punctuated by countless windows that emit a soft, warm yellow glow. Numerous rounded, disc-like and spherical appendages protrude at various levels from the buildings, adding to their alien, yet inviting, character. On a wide, paved concourse surface, sleek, streamlined orange and pale green vehicles, resembling advanced trains or buses, are parked. Silhouetted figures of numerous small people are seen walking, suggesting a lively urban hub. The background is a magnificent, perpetual twilight painted by a vibrant orange sky, featuring a large, soft orange and pink celestial orb and two smaller white spheres. The atmosphere is one of clean, slightly humid air carrying a faint hum of advanced technology, bathed in the ambient glow of the alien sky and the warm interior lights, evoking a mood of optimistic wonder and profound connection to an advanced, interconnected alien civilization.**\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
-        "model": "FLUX"
-      },
-      "entityRefs": [
-        "3c559e2e-c4e3-4678-a093-e93ca3e881e8"
-      ]
-    },
     "media-1764847632033-k8jjcrzzf": {
       "id": "media-1764847632033-k8jjcrzzf",
       "type": "depth-map",
@@ -1100,48 +877,6 @@
       ],
       "parentMedia": "media-1764847627440-yda27gky7"
     },
-    "media-1764847682257-klv8qi1s4": {
-      "id": "media-1764847682257-klv8qi1s4",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f1a0/ZIsNXNrWpnoi3Zv8Z5jjY.jpg",
-      "createdAt": "2025-12-04T11:28:02.257Z",
-      "metadata": {
-        "prompt": "The Great Orb of Xylos. A colossal, smooth pale green spherical structure serving as the central nexus of Xylos Prime. It is supported by a thick, flared base with grand arched entrances, hinting at the intricate workings and multi-level interiors visible within.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nA monumental, perfectly smooth sphere dominates the foreground, its pale green surface gleaming. Visible interior levels and complex mechanical details peek through sections of the structure, hinting at its immense scale and function. The flared base provides a strong foundation, punctuated by large, inviting arched openings.\n\nMaterials and Surfaces:\nPrimary: Smooth, seamless sphere\nSecondary: Polished base, glassy windows\nAccents: Visible interior workings, arched entrances\n\nColors:\nDominant: Pale Green, Secondary: Warm yellow/orange (interior lighting), Accent: Teal (architectural trim/details)\nLight: Soft, inviting glow\n\nAtmosphere: The immediate vicinity feels relatively calm, a stark contrast to the bustling city beyond. The air is likely clean and temperate, with a faint hum of advanced technology. A sense of awe is generated by its sheer presence.\nMood: Evokes a profound sense of wonder and optimistic advancement, standing as a beacon of a thriving, futuristic civilization.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "50860283-4ddb-4243-be00-ee30cbe1dfdb"
-      ]
-    },
-    "media-1764847707043-a82wyi161": {
-      "id": "media-1764847707043-a82wyi161",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f1a1/ii3WHk-Kaz2v9OYU_2V2B.jpg",
-      "createdAt": "2025-12-04T11:28:27.043Z",
-      "metadata": {
-        "prompt": "A colossal, echoing interior hall bathed in the ethereal glow of pale green bioluminescent lighting, immediately past a grand, flaring arched entryway. The dominant material is a seamless, polished composite that mimics iridescent bio-engineered organic matter, curving upwards to form a solid, unbroken domed ceiling. Visible within translucent panels of this composite are intricate, multi-level mechanical workings and softly glowing internal structures, hinting at the Orb's immense scale and function. A broad, polished composite floor stretches out, subtly reflecting the soft, warm yellow and orange light that emanates from these interior elements, accented by delicate teal architectural trim. To the left, a wide, gently sloped ramp [navigable: ramp, left] ascends diagonally towards a distant, softly lit opening. To the right, a complex network of smaller, glowing alcoves and passages [navigable: passage, right] are carved into the curving walls, offering glimpses into deeper recesses of the Orb. The composition emphasizes depth and wonder, with the curving forms and asymmetric placement of navigable elements drawing the eye deeper into this nexus of advanced, interconnected urban life.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
-    "media-1764847854750-szy5384o2": {
-      "id": "media-1764847854750-szy5384o2",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f1b1/g-RKHRU6V6Ybsjv7H0mma.jpg",
-      "createdAt": "2025-12-04T11:30:54.750Z",
-      "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nElevated oblique aerial shot (45° tilt) looking over the ancient Nabataean city of Petra in Jordan. Sun-baked sandstone structures, carved directly into towering cliffs, rise majestically from a vast, open desert plain. Monumental Nabataean rock-cut architecture, with hints of Roman influence in its grand columns and facades, dominates the midground. Ancient, winding paths of packed earth and loose sand snake through rocky canyons and across the dusty terrain, leading the eye towards iconic landmarks like the Treasury and the Monastery, their intricate carvings weathered but still awe-inspiring. The foreground features immediate, eroded sandstone terrain with scattered loose sand. The background reveals a hazy desert horizon under a bright, harsh desert sun, casting long, sharp shadows that accentuate the immense scale and depth. The atmosphere is dry and still, with a profound silence suggested by the visual isolation. The dominant colors are warm ochre and deep rose tones of the sandstone, illuminated by intense, warm light. Accent features include weathered Nabataean columns and faded white ancient plaster remnants. The overall mood is awe-inspiring, ancient, and serene, reflecting a rich history and Bedouin heritage.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
-        "model": "FLUX"
-      },
-      "entityRefs": [
-        "b61d3a2f-f558-434e-9d60-19b035ee8b00"
-      ]
-    },
     "media-1764847858944-7fltjo8ts": {
       "id": "media-1764847858944-7fltjo8ts",
       "type": "depth-map",
@@ -1155,61 +890,6 @@
         "b61d3a2f-f558-434e-9d60-19b035ee8b00"
       ],
       "parentMedia": "media-1764847854750-szy5384o2"
-    },
-    "media-1764847913621-d7gh9c9kh": {
-      "id": "media-1764847913621-d7gh9c9kh",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f1b7/gks3GYiTTrSxpzCUszNkB.jpg",
-      "createdAt": "2025-12-04T11:31:53.621Z",
-      "metadata": {
-        "prompt": "The Sunstone Temple. A monumental Nabataean temple carved directly into the ochre sandstone cliffs. Its Roman-influenced facade features grand colonnades and intricate relief work, exuding an aura of ancient reverence.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThis temple is a testament to ancient craftsmanship, carved directly from the living rock. Its facade is dominated by grand, colossal pillars of sandstone, flanking a monumental, deeply recessed archway. Relief carvings depicting celestial bodies and ancient deities adorn the surfaces, speaking of a forgotten cosmology.\n\nMaterials and Surfaces:\nPrimary: Ochre sandstone, carved rock\nSecondary: Eroded stone, ancient dust\nAccents: Intricate relief carvings, Roman-inspired capitals, celestial motifs\n\nColors:\nDominant: Ochre (70%), Secondary: Light tan (20%), Accent: Deep shadow browns (10%)\nLight: Warm, golden\n\nAtmosphere: The air is still and dry, carrying the scent of ancient dust and sun-baked stone. A profound silence prevails, broken only by the whisper of the desert wind, fostering an atmosphere of deep contemplation and reverence. The temperature is cool within the shadowed recesses.\nMood: Evokes a profound sense of awe and timelessness. The sheer scale and antiquity inspire a feeling of being connected to the past and the ancient forces that shaped this sacred place.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "aaf4e7c2-e208-4299-bff8-18bd25059584"
-      ]
-    },
-    "media-1764847939105-uk9i9km4o": {
-      "id": "media-1764847939105-uk9i9km4o",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f1b9/auVpzS7AbNIP2mj1s6_zO.jpg",
-      "createdAt": "2025-12-04T11:32:19.105Z",
-      "metadata": {
-        "prompt": "A vast, cavernous hall carved from ochre sandstone, its interior form mirroring the monumental Nabataean rock-cut architecture with subtle Roman influence of the exterior. The air within is cool and still, carrying the scent of ancient dust. Sunlight streams in from unseen sources, casting dramatic, long shadows across the granular surfaces, emphasizing the depth of the intricately carved celestial and deity motifs that adorn the straight, unadorned walls. The ceiling is a solid, unyielding expanse of carved sandstone, forming a flat, unbroken roof that completely blocks any view of the sky, the warm, golden light pooling on the worn floor. In the midground, a colossal, deeply recessed archway, echoing the entrance, serves as a passage, bathed in a concentrated shaft of light that highlights its depth and the worn smoothness of the stone. To the left, a smaller, off-center opening in the wall reveals a dimly lit corridor, hinting at further exploration. The floor is a mosaic of naturally eroded sandstone slabs, varying slightly in shade from light tan to deep shadow browns, with a scattering of ancient dust. The overall mood is one of profound awe and timelessness, with a dynamic, unsymmetrical composition achieved by the interplay of light, shadow, and the positioning of the passages.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
-    },
-    "media-1764848010410-f8uu5gqie": {
-      "id": "media-1764848010410-f8uu5gqie",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f1c0/Bz5TuXgq1RffN3SvNNaDm.jpg",
-      "createdAt": "2025-12-04T11:33:30.410Z",
-      "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nUltra-wide angle, street-level view with a slight downward tilt (25°) of \"The Enigmatic Sphere\" on Xylos Prime. The colossal, smooth, off-white spherical structure, a monolith of advanced alien architecture, dominates the midground, positioned slightly off-center. Numerous small indentations subtly break the seamless surface of the sphere, with a prominent, glowing crimson red, eye-like orifice featuring concentric rings centrally located. Descending from its base, complex, elongated, curving white pillars descend dramatically, revealing glimpses of internal passages illuminated by stark red lights. The foreground features rugged, cracked, reddish-orange earth, scattered with smaller dark, spherical structures that appear to be outposts. Jagged, sharp white spires and dramatic mounds rise sharply from the landscape along the horizon and in the mid-ground, creating a stark contrast with the vibrant red terrain. In the lower right of the frame, a distinctive dark, spherical sensor array with a clear domed lens sits grounded. The vast, deep blue and cyan star-filled sky looms overhead, its ethereal light casting dim, ambient illumination across the desolate alien planetscape. The atmosphere is thin and still, conveying a sense of ancient silence, profound isolation, and a palpable feeling of alienness. Environmental effects include faint ambient wind and a distant hum, hinting at underlying mechanical presence. The overall composition is asymmetric, with more of the alien terrain visible on one side, emphasizing depth and the immense scale of the structures. Materials consist of smooth off-white composites, rugged cracked earth, and crystalline spires. The mood is mysterious, awe-inspiring, and tinged with a touch of unease, suggestive of an unknown, watchful presence.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
-        "model": "FLUX"
-      },
-      "entityRefs": [
-        "747c5193-14ab-4eed-9cae-ce41bd9c9e6d"
-      ]
-    },
-    "media-1764848032742-plcrwhdkq": {
-      "id": "media-1764848032742-plcrwhdkq",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f1c2/cMn46_VGjDfcjlbHiuGNB.jpg",
-      "createdAt": "2025-12-04T11:33:52.742Z",
-      "metadata": {
-        "prompt": "A colossal, perfectly spherical interior chamber, bathed in the dim, ethereal light of a deep blue and cyan sky visible through vast, seamless obsidian glass panels that curve overhead, reflecting the stark red glow emanating from within. The interior walls are constructed from a smooth, off-white advanced composite material, mirroring the exterior, with intricate, curving white pillars descending from the domed ceiling to meet the cracked, arid reddish-orange earth floor. The chamber's colossal scale is emphasized by a soaring 30-meter ceiling, creating a sense of immense vertical depth.\n\nIn the foreground, a section of the cracked reddish-orange earth floor is dramatically illuminated by a spotlight, revealing faint, geometric patterns etched into its surface. To the left, a massive, off-center monolithic archway, fashioned from the same smooth off-white composite, glows with an intense crimson light, revealing a dimly lit passage beyond, suggesting a navigable route. This passage is framed by a series of sharp, precise angles, fitting the advanced alien monolithic architectural tone. Further back, a large, dark spherical sensor array is subtly integrated into the far wall, its presence adding to the mystery. A single, sharp diagonal line is created by a subtle ramp ascending from the lower right midground, hinting at further levels within this enigmatic structure. The overall composition is intentionally asymmetric, with the illuminated floor section and the glowing archway dominating the left two-thirds of the frame, drawing the viewer's eye into the alien depths.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": []
     },
     "media-1764848072381-odit91ndp": {
       "id": "media-1764848072381-odit91ndp",
@@ -1239,20 +919,88 @@
       ],
       "parentMedia": "media-1764848010410-f8uu5gqie"
     },
-    "media-1764848378474-7wnsdvoz0": {
-      "id": "media-1764848378474-7wnsdvoz0",
+    "media-1764857244276-mry1x3da9": {
+      "id": "media-1764857244276-mry1x3da9",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84f1e5/6Pe1OqClYCXcdSCnl5Azt.jpg",
-      "createdAt": "2025-12-04T11:39:38.474Z",
+      "url": "https://v3b.fal.media/files/b/0a84f55b/6Ykhkll3rakVt-_5gh1nj.jpg",
+      "createdAt": "2025-12-04T14:07:24.276Z",
       "metadata": {
-        "prompt": "The Great Sphere Outskirts district/region. The immediate vicinity of a colossal, monolithic alien structure. This area is defined by the complex, curving white pillars supporting the main sphere and is scattered with smaller, dark, spherical outposts.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nDominated by a massive, smooth, off-white spherical structure with numerous small indentations. Intricate, curving white pillars descend from its base towards the ground. Scattered dark, spherical structures are present, suggesting outposts.\n\nAtmosphere:\nThe air is thin and still, with a palpable sense of ancient silence and profound isolation. The environment is stark and devoid of organic life, emphasizing the alien and technological nature of the site.\n\nColors:\nDominant: Off-white (Sphere body, pillars) - High coverage, Secondary: Reddish-orange (Ground) - Moderate coverage\nLight: Dim, ethereal cool tones\n\nArchitectural Style: Advanced alien monolithic\nMaterials: The primary structure is made of a smooth, seamless off-white material, contrasting with the rugged, cracked reddish-orange earth of the ground. Supporting pillars are also white and appear to be of a similar advanced composite.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.",
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\n**Prompt:**\n\nA whimsical coastal dwelling, \"The Teal Sphere Dwelling,\" stands elevated on slender stilts on a vast, sun-drenched sandy beach under a bright azure sky peppered with soft, scattered white clouds. The camera is positioned at street level, offering an ultra-wide, slightly elevated (25° downward tilt) view that captures the entire structure within its isolated, serene environment. The main, weathered spherical building, a unique identifying feature, is painted a faded teal on its upper dome, visibly peeling away to expose a mustard yellow lower section, showcasing significant wear from exposure to the elements. Scattered across its curved facade are several circular, porthole-like windows, alongside a larger rectangular window with a distinct blue-tinted glass. Jutting from one side is a rustic wooden entrance, featuring a makeshift thatched roof and an aged wooden door, accessible by a set of worn wooden steps descending onto the light tan sand. Attached to the dwelling by thin, almost invisible lines, three large, balloon-like spheres float eerily: two in a dusky pinkish-brown hue on the left, and one vibrant orange sphere on the right, adding to the structure's peculiar charm. The foreground features the detailed texture of the light tan sand, with shallow, clear puddles reflecting the bright blue sky. The midground is dominated by the off-center dwelling, its entrance and unique windows clearly visible. The background comprises the endless expanse of the calm, greenish-brown water stretching to the horizon, under the luminous, bright daylight that casts sharp, defined shadows across the scene, enhancing a mood of whimsical solitude. The architectural tone is strictly adhered to, with all visible elements reflecting the \"whimsical coastal dwelling\" style, utilizing weathered natural materials. The overall atmosphere is one of quietude and isolation, hinted at by the gentle lapping of unseen water and the distant cries of seabirds.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "73c009a7-9654-4c31-b79b-25e197c0830c"
+      ]
+    },
+    "media-1764857344018-o58waavue": {
+      "id": "media-1764857344018-o58waavue",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84f564/5ETscoTKcYXWTVUWKXsas.jpg",
+      "createdAt": "2025-12-04T14:09:04.018Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA street-level, ultra-wide view of a classic Victorian pub in Camden, London, captured at a slight downward tilt (25-30°) and angled to reveal depth. The foreground features worn cobblestone paving with scattered puddles reflecting the warm, amber glow of the pub's interior and nearby neon signs, hinting at dusk. The midground is dominated by the pub's weathered red brick facade, featuring large, multi-paned bay windows with subtle leaded glass details, and dark, aged timber window frames accented with polished brass fittings. The prominent, ornate signage, also featuring brass elements, is slightly off-center. A solid, rectangular form with a pitched roof and hanging flower baskets adds to its charm. The pub is not flush with the street but set back slightly, emphasizing its substantial presence. The background showcases the eclectic, vibrant atmosphere of Camden, with neighboring buildings in muted tones, a hint of city grime in the air, and a soft, diffused sky. Subtle shadows play across the facade, highlighting the texture of the aged brick and timber. The overall mood is one of convivial warmth and inviting familiarity, with muffled sounds of distant traffic, laughter, and clinking glasses subtly implied by the atmosphere.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "60984162-6206-4625-a5cf-ce030ae36168"
+      ]
+    },
+    "media-1764857806322-8aeqwsfut": {
+      "id": "media-1764857806322-8aeqwsfut",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84f593/MivGeFtXIfKZjh3pQCKuI.jpg",
+      "createdAt": "2025-12-04T14:16:46.322Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\n**Exterior Building/Location Composition:**\n\n**Camera Position:** Positioned at eye-level, looking slightly upwards at a 25-degree angle, capturing the building entrance within the environmental context. An ultra-wide lens emphasizes the dramatic cantilever and the vastness of the ocean and sky.\n\n**Facade & Architectural Details:** The building's facade strictly adheres to the \"striking modernist cantilever, bold geometric forms\" architectural tone. The prominent upper level, with its smoothly rounded corners, dramatically overhangs the turquoise-green ocean. Large, floor-to-ceiling glass windows are framed by a vibrant, high-gloss orange-coral paint. The cylindrical concrete base and walls display a weathered appearance, characterized by mottled greenish discoloration and striking reddish-brown rust-like streaks, a testament to the intense coastal exposure. The building is integrated into its environment, appearing anchored to a rugged rocky outcrop on the left.\n\n**Composition Layers:**\n\n**Foreground:** Rough, textured dark grey pavement with occasional puddles reflecting the ambient daylight, subtly hinting at the \"worn cobblestone with puddles\" characteristic. A weathered curb separates the pavement from the rocky terrain.\n\n**Midground:** The \"Cantilevered Pavilion\" stands as the central subject, positioned slightly to the right of the frame for dynamic asymmetry. The entrance, a single doorway on the lower cylindrical level, is visible, leading to a simple concrete walkway that descends into the transparent water. The steps of this walkway are stained with a distinct yellowish-green hue. The vibrant orange-coral painted underside of the wide overhanging roof is a prominent visual element, as are the matching orange-coral window frames.\n\n**Background:** The incredibly clear, turquoise-green ocean water stretches to the horizon, so translucent that the rocks, sediment, and subtle hints of seabed plant life are clearly visible beneath the surface, creating a vibrant underwater landscape. The deeper ocean beyond transitions to a calm, uniform blue-green, gently merging with the pale blue, serene sky. The surrounding rocky outcrop is visible on the left, providing a grounding contrast to the floating structure.\n\n**Lighting & Atmosphere:** Bright daylight illuminates the scene, with sunlight reflecting intensely off the water's surface, casting dappled light patterns onto the lower levels of the building. The atmosphere is serene and tranquil, yet the weathered materials and bold architecture evoke a sense of sophisticated modernism and a deep connection to the raw coastal environment. The implied humidity of the coast is suggested by the clarity and vibrance of the water.\n\n**Asymmetric Composition:** The building is deliberately placed off-center, with more of the rocky foreground and surrounding ocean visible on the left side of the frame. The shot is taken at a slight angle, showcasing the depth and three-dimensional form of the cantilevered structure. The asymmetry is further enhanced by the uneven distribution of environmental elements in the foreground and the natural arrangement of the rocky outcrop.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "a4cc7059-14aa-4ef1-a7ed-943b4a7bc39e"
+      ]
+    },
+    "media-1764857828341-v5mrpuxjh": {
+      "id": "media-1764857828341-v5mrpuxjh",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84f596/Oy2bR9D8v15T_-1huHgXc.jpg",
+      "createdAt": "2025-12-04T14:17:08.342Z",
+      "metadata": {
+        "prompt": "A vast, open-plan interior hall with stark, straight concrete walls exhibiting the same weathered greenish hue and reddish-brown streaks as the exterior, forming a precisely rectangular space with sharp 90-degree corners. The ceiling is a solid, opaque expanse of smooth, pale concrete, echoing the building's form. Large, floor-to-ceiling glass panels, framed with the same vibrant, high-gloss orange-coral as the exterior, dominate the walls, offering breathtaking, uninterrupted views of the turquoise-green ocean and pale blue sky. The foundation material, implied by the exterior's rocky outcrop, subtly influences the flooring; large, irregularly shaped polished stone slabs, varying in texture and color from light grey to deep ochre, are laid across the floor, with occasional patches of darker, wet-looking aggregate suggesting the proximity to water.\n\nIn the midground, a striking, off-center console table made from a thick, polished slab of dark, veined stone rests against the right wall, its surface gleaming under focused, warm spotlights. Arranged asymmetrically on this table are a few sculptural, minimalist objects crafted from polished metal and sea-worn driftwood. To the left of the console, a subtle, illuminated passage beckons, defined by a gentle blueish glow emanating from within, hinting at further exploration within the pavilion's structure. The light sources are deliberately warm spotlights and diffused ambient light, mirroring the bright daylight and reflections from the water.\n\nThe overall composition emphasizes the bold modernist cantilever and the sophisticated connection to the coastal environment, with the orange-coral accents providing sharp, vibrant pops against the desaturated concrete and natural stone. The space is uncluttered, reflecting a mood of serene coastal elegance and architectural showcase, with the soundscape of gentle waves implied by the visual cues of the ocean panorama.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764857839911-uv0oi9i7u": {
+      "id": "media-1764857839911-uv0oi9i7u",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84f597/qVo0Iaabkm71sJgJVExhX.jpg",
+      "createdAt": "2025-12-04T14:17:19.911Z",
+      "metadata": {
+        "prompt": "Oceanfront Vista district/region. A specific coastal area characterized by exceptionally clear, vibrant turquoise-green ocean waters meeting a dramatic coastline. This region is known for its striking modernist architectural interventions that engage directly with the marine environment.\n\nAerial establishing shot. Wide panoramic view of the entire district/biome. Multi-structure composition, no single hero building. High-angle drone shot or bird's-eye view showing vast scale.\n\nVisual Character:\nExpansive views of clear, vibrant turquoise-green ocean water. Features dramatic coastal topography, such as rocky outcrops or cliffs. Modernist architectural elements are integrated into the landscape, often cantilevered over or adjacent to the water.\n\nAtmosphere:\nThe air is clean, fresh, and carries the distinct scent of salt. A sense of openness and exposure to the elements prevails, with gentle sea breezes and the sound of the ocean. The weather is typically clear and bright.\n\nColors:\nDominant: Turquoise-green (water), Secondary: Natural earth tones (rock, concrete)\nLight: Bright, sunlit\n\nArchitectural Style: Striking modernist coastal design\nMaterials: Natural coastal elements like rock and sand are prominent, juxtaposed with modern building materials such as concrete, glass, and painted metal.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.",
         "model": "flux",
         "width": 1920,
         "height": 1080,
         "aspectRatio": "landscape_16_9"
       },
       "entityRefs": [
-        "fefef6fe-3d0a-4540-99cd-37c19d03f741"
+        "34986433-065f-4129-bc36-53935aecad8c"
+      ]
+    },
+    "media-1764857881531-bedib67w9": {
+      "id": "media-1764857881531-bedib67w9",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84f59c/tWSSFAFTAQRlWeMaRSuhK.jpg",
+      "createdAt": "2025-12-04T14:18:01.531Z",
+      "metadata": {
+        "prompt": "The Azure Coast. A renowned stretch of coastline celebrated for its exceptionally clear, vibrant turquoise-green ocean waters and a landscape dotted with avant-garde modernist architecture. It offers breathtaking vistas and a serene, sun-drenched atmosphere.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nA pristine, wide expanse of incredibly clear, turquoise-green ocean water stretches towards a pale blue sky. The coastline features dramatic geological formations and is host to striking examples of modernist architecture, often integrated directly over or alongside the water.\n\nAtmosphere:\nThe air is exceptionally fresh, carrying the invigorating scent of the sea. A sense of tranquil vastness and exposure to the elements prevails, accompanied by the gentle sound of waves. The weather is consistently clear and peaceful.\n\nColors and Lighting:\nDominant: Turquoise-green (water, deep coverage), Secondary: Pale blue (sky, broad coverage), Accent: Vibrant orange-coral (architectural accents)\nLight: Bright, clear sunlight, The dominant palette is defined by the luminous turquoise-green of the ocean and the soft, serene pale blue of the sky. Sunlight is bright and intense, reflecting powerfully off the water and highlighting architectural features.\n\nGenre/Style: Contemporary Realism\nArchitectural Style: Striking modernist cantilever, bold geometric forms\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "loc-1764857780829-v8xr9k2t6"
       ]
     }
   }

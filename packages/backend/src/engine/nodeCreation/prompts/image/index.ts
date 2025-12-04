@@ -22,9 +22,9 @@ const CAMERA_CONFIGS: Record<NodeType, {
     angle: 'High aerial angle or dramatic low angle looking up',
   },
   region: {
-    style: 'Establishing shot',
-    composition: 'Wide shot showing district character, street-level context',
-    angle: 'Elevated angle showing neighborhood layout',
+    style: 'Aerial establishing shot',
+    composition: 'Wide panoramic view of the entire district/biome. Multi-structure composition, no single hero building',
+    angle: 'High-angle drone shot or bird\'s-eye view showing vast scale',
   },
   location: {
     style: 'Architectural photography',
@@ -98,6 +98,15 @@ Professional photography, detailed urban/landscape scene, atmospheric perspectiv
 export function locationImagePrompt(node: Node): string {
   const dna = node.dna || {};
   const camera = CAMERA_CONFIGS.location;
+  const structure = (dna.structure || {}) as any;
+
+  const structureDesc = [
+    structure.form ? `Form: ${structure.form}` : '',
+    structure.roofType ? `Roof: ${structure.roofType}` : '',
+    structure.scale ? `Scale: ${structure.scale}` : '',
+    structure.orientation ? `Orientation: ${structure.orientation}` : '',
+    structure.openings ? `Openings: ${structure.openings}` : ''
+  ].filter(Boolean).join(', ');
 
   return `${node.name}. ${node.description}
 
@@ -105,6 +114,7 @@ ${camera.style}. ${camera.composition}. ${camera.angle}.
 
 Building/Site Exterior:
 ${dna.looks || ''}
+${structureDesc ? `Structure Details: ${structureDesc}` : ''}
 
 Materials and Surfaces:
 Primary: ${dna.primary_surfaces || ''}

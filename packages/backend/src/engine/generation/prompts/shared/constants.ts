@@ -3,6 +3,7 @@
  */
 
 export const blackListCharacterNames = `Elara, Kaelen, Zephyr, Lyra, Anya Petrova`;
+export const blackListLocationsNames = `Xylos, Xylos Prime`;
 
 export const morfeumVibes = 'living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity';
 

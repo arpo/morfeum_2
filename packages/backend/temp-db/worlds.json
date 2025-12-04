@@ -1,1966 +1,241 @@
 {
   "nodes": {
-    "loc-1764767356568-vg1petnje": {
-      "id": "loc-1764767356568-vg1petnje",
+    "loc-1764857780829-v8xr9k2t6": {
+      "id": "loc-1764857780829-v8xr9k2t6",
       "type": "host",
-      "name": "Sweden",
+      "name": "The Azure Coast",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A diverse landscape encompassing dense coniferous forests, sparkling lakes, and a dramatic, often rugged, coastline. Human settlements range from modern urban centers to traditional wooden villages.",
-        "colorsAndLighting": "Highly variable by season and region. Northern light can be ethereal in winter, while long summer days offer bright, clear illumination. Colors often lean towards natural tones, with occasional pops of vibrant hues in design.",
-        "atmosphere": "A blend of crisp, clean air with the scent of pine and fresh water. A generally calm and ordered atmosphere pervades, with a strong connection to the outdoors.",
-        "materials": "Wood is a ubiquitous natural material, complemented by stone, glass, and metal in modern constructions. A strong emphasis on sustainable and natural materials.",
-        "mood": "Understated, functional, peaceful, with an underlying appreciation for nature and simplicity.",
-        "sounds": "The rustling of leaves and wind in forests, the lapping of waves on shores, the distant calls of birds, and the quiet hum of organized modern life.",
-        "spatialLayout": "Ranges from sparse, natural expanses to densely packed, well-organized cities. A general preference for order and integration with the environment.",
-        "primary_surfaces": "Wood paneling, polished concrete, large glass windows, natural stone.",
-        "secondary_surfaces": "Metal cladding, textured plaster, linoleum, laminate.",
-        "accent_features": "Minimalist lighting fixtures, ergonomic furniture, nature-inspired art, functional design elements.",
-        "dominant": "Forest greens, lake blues, sky greys",
-        "secondary": "Wood tones, granite, white/off-white",
-        "accent": "Vibrant accent colors in textiles or design elements (e.g., yellow, red)",
-        "ambient": "Clear, often bright light, with distinct seasonal variations",
-        "genre": "Nordic Noir / Contemporary Scandinavian",
-        "architectural_tone": "Functionalism, modernism, minimalist design, with strong influences from natural materials and environments.",
-        "cultural_tone": "Emphasis on equality, social welfare, connection to nature, design consciousness, and a generally reserved yet friendly demeanor.",
-        "materials_base": "Wood, stone, glass, metal, with a focus on sustainability and natural aesthetics.",
-        "mood_baseline": "Calm, ordered, introspective, appreciating nature and functionalism.",
-        "palette_bias": "Cool, natural palettes with an appreciation for light and space; often incorporating muted earth tones with vibrant accents.",
-        "soundscape_base": "Natural sounds (wind, water, wildlife) mixed with the organized sounds of modern, clean environments.",
-        "flora_base": "Coniferous forests (pine, spruce, fir), birch trees, hardy wildflowers.",
-        "fauna_base": "Moose, reindeer, bears, foxes, various bird species, marine life along the coast."
+        "looks": "A pristine, wide expanse of incredibly clear, turquoise-green ocean water stretches towards a pale blue sky. The coastline features dramatic geological formations and is host to striking examples of modernist architecture, often integrated directly over or alongside the water.",
+        "colorsAndLighting": "The dominant palette is defined by the luminous turquoise-green of the ocean and the soft, serene pale blue of the sky. Sunlight is bright and intense, reflecting powerfully off the water and highlighting architectural features.",
+        "atmosphere": "The air is exceptionally fresh, carrying the invigorating scent of the sea. A sense of tranquil vastness and exposure to the elements prevails, accompanied by the gentle sound of waves. The weather is consistently clear and peaceful.",
+        "materials": "Primarily showcases highly transparent water and natural rock. Architectural elements feature weathered concrete and extensive glass, often accented with bold, colorful finishes.",
+        "mood": "Evokes a profound sense of peace, sophisticated leisure, and admiration for bold design. It's a place that feels both exposed to nature's grandeur and sheltered by human ingenuity.",
+        "sounds": "Gentle waves lapping, sea breeze, occasional distant seabirds.",
+        "spatialLayout": "Characterized by vast open spaces, with a clear visual connection between the sky, the sea, and the land. The architecture often creates dynamic spatial relationships, reaching out over the water.",
+        "primary_surfaces": "Highly transparent turquoise-green ocean water",
+        "secondary_surfaces": "Weathered concrete, large glass panels",
+        "accent_features": "Vibrant orange-coral architectural details",
+        "dominant": "Turquoise-green (water, deep coverage)",
+        "secondary": "Pale blue (sky, broad coverage)",
+        "accent": "Vibrant orange-coral (architectural accents)",
+        "ambient": "Bright, clear sunlight",
+        "structure": "Coastal",
+        "genre": "Contemporary Realism",
+        "architectural_tone": "Striking modernist cantilever, bold geometric forms",
+        "cultural_tone": "Leisure and observation, architectural showcase",
+        "materials_base": "Natural coastal materials and high-modernist construction",
+        "mood_baseline": "Sophisticated tranquility",
+        "palette_bias": "Earth tones, ocean blues, vibrant coral",
+        "soundscape_base": "Serene coastal ambiance",
+        "flora_base": null,
+        "fauna_base": null
       },
-      "description": "A Scandinavian country characterized by its vast forests, numerous lakes, and an extensive coastline. It is known for its modern design, emphasis on nature, and a generally moderate and functional lifestyle.",
+      "description": "A renowned stretch of coastline celebrated for its exceptionally clear, vibrant turquoise-green ocean waters and a landscape dotted with avant-garde modernist architecture. It offers breathtaking vistas and a serene, sun-drenched atmosphere.",
       "navigableElements": [],
       "dominantElements": [
-        "Forests",
-        "Lakes",
-        "Archipelago coastlines",
-        "Modern cities"
+        "Crystal-clear turquoise-green ocean",
+        "Dramatic modernist structures",
+        "Sunny coastal skies"
       ],
       "uniqueIdentifiers": [
-        "Fika culture",
-        "Midsummer celebrations",
-        "Minimalist design"
+        "Unparalleled water clarity",
+        "Iconic cantilevered architecture"
       ],
-      "searchDesc": "Discover Sweden, a land of forests, lakes, and a distinctive blend of modern design and natural beauty.",
-      "slug": "sweden"
+      "searchDesc": "Stunning coastline with clear turquoise waters and iconic modernist buildings.",
+      "slug": "the-azure-coast",
+      "primaryMedia": "media-1764857881531-bedib67w9"
     },
-    "25e5f7fd-eef4-47d0-ac49-5d17da24e00b": {
-      "id": "25e5f7fd-eef4-47d0-ac49-5d17da24e00b",
+    "34986433-065f-4129-bc36-53935aecad8c": {
+      "id": "34986433-065f-4129-bc36-53935aecad8c",
       "type": "region",
-      "name": "Tjörn",
+      "name": "Oceanfront Vista",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A landscape dominated by windswept pine trees clinging to granite rocks, with views of the sea dotted with small islands. Scattered settlements feature traditional wooden houses.",
-        "colorsAndLighting": "The lighting is often soft and diffused, with cool, grey skies prevalent. Colors are muted, with the deep green of pines, the grey of granite, and the pale grey or weathered wood of houses.",
-        "atmosphere": "Crisp, salty air with the scent of pine needles. The sound of waves and seagulls is ever-present. The climate is temperate maritime, often breezy.",
-        "materials": "Natural, weathered materials dominate, including granite, pine wood, and slate or tile for roofing. Rough-hewn stone is common for foundations and walls.",
-        "mood": "Tranquil, resilient, and introspective. A sense of enduring simplicity in the face of the elements.",
-        "sounds": "The constant rhythm of waves, distant foghorns, seabird cries, and the rustling of pine needles in the wind.",
-        "spatialLayout": "Low density with scattered settlements. Houses are often nestled into the landscape rather than dominating it. Pathways are winding and often follow the terrain.",
-        "primary_surfaces": "Granite rock formations, weathered wood siding, and pine bark.",
-        "secondary_surfaces": "Slate roof tiles, rough stone foundations, sandy soil.",
-        "accent_features": "Small, weathered boat docks, lichen-covered rocks, wind-bent trees.",
-        "dominant": "Cool greys and deep greens",
-        "secondary": "Pale wood tones and granite grey",
-        "accent": "Brown (pine bark), natural stone",
-        "ambient": "Soft, diffused northern light",
+        "looks": "Expansive views of clear, vibrant turquoise-green ocean water. Features dramatic coastal topography, such as rocky outcrops or cliffs. Modernist architectural elements are integrated into the landscape, often cantilevered over or adjacent to the water.",
+        "colorsAndLighting": "Dominated by the bright, translucent blues and greens of the ocean, with the potential for vibrant accent colors from coastal architecture. Sunlight reflects strongly off the water's surface, creating bright highlights and dappled light patterns.",
+        "atmosphere": "The air is clean, fresh, and carries the distinct scent of salt. A sense of openness and exposure to the elements prevails, with gentle sea breezes and the sound of the ocean. The weather is typically clear and bright.",
+        "materials": "Natural coastal elements like rock and sand are prominent, juxtaposed with modern building materials such as concrete, glass, and painted metal.",
+        "mood": "Evokes a sense of awe and sophisticated interaction with nature. It is a place of serene beauty and bold architectural statements, inspiring contemplation and appreciation for both the natural and man-made.",
+        "sounds": "Gentle waves, sea breeze, distant seabirds.",
+        "spatialLayout": "Open and expansive, with a clear delineation between the water, the land, and the architectural structures. Depth is provided by the ocean, creating a sense of vastness.",
+        "primary_surfaces": "Transparent ocean water, rugged rock formations",
+        "secondary_surfaces": "Smoothly integrated architectural surfaces",
+        "accent_features": "Vividly colored architectural details",
+        "dominant": "Turquoise-green (water)",
+        "secondary": "Natural earth tones (rock, concrete)",
+        "accent": "Vibrant coral (architectural accents)",
+        "ambient": "Bright, sunlit",
+        "structure": null,
         "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular, functional and unadorned wooden structures.",
-        "cultural_tone": "Maritime heritage, self-sufficient coastal living, a deep respect for nature.",
-        "materials_base": "Natural wood, stone, slate",
-        "mood_baseline": "Quiet solitude, resilience, connection to nature",
-        "palette_bias": "cool neutrals, muted earth tones, sea-inspired blues and greens",
-        "soundscape_base": "Coastal, natural, elemental",
-        "flora_base": "Pine, birch, coastal grasses, lichens",
-        "fauna_base": "Seabirds, seals, small coastal mammals"
+        "architectural_tone": "Striking modernist coastal design",
+        "cultural_tone": "Leisure, observation, architectural appreciation",
+        "materials_base": "Natural and modern construction",
+        "mood_baseline": "Serene, awe-inspiring",
+        "palette_bias": "Ocean blues and greens, earth tones, vibrant accents",
+        "soundscape_base": "Coastal natural sounds",
+        "flora_base": null,
+        "fauna_base": null
       },
-      "description": "A picturesque island municipality on Sweden's west coast, renowned for its rugged natural beauty, maritime heritage, and archipelago charm. It features a landscape of rocky shores, pine forests, and scattered fishing villages.",
+      "description": "A specific coastal area characterized by exceptionally clear, vibrant turquoise-green ocean waters meeting a dramatic coastline. This region is known for its striking modernist architectural interventions that engage directly with the marine environment.",
       "navigableElements": [],
       "dominantElements": [
-        "Coastal cliffs",
-        "Pine forests",
-        "Small harbors"
+        "Clear, shallow ocean water",
+        "Rocky outcrops",
+        "Modernist coastal structures"
       ],
       "uniqueIdentifiers": [
-        "Rocky archipelago",
-        "Saltwater air",
-        "Traditional wooden houses"
+        "Turquoise-green water clarity",
+        "Cantilevered architecture"
       ],
-      "searchDesc": "Explore Tjörn, a Swedish west coast island municipality with rugged beauty and maritime charm.",
-      "slug": "tjorn",
-      "primaryMedia": "media-1764846542955-nomp73kxu"
+      "searchDesc": "Coastal vista with clear turquoise water and dramatic modernist buildings.",
+      "slug": "oceanfront-vista",
+      "primaryMedia": "media-1764857839911-uv0oi9i7u"
     },
-    "aea3088d-273a-4bcc-81c8-df2951424831": {
-      "id": "aea3088d-273a-4bcc-81c8-df2951424831",
+    "a4cc7059-14aa-4ef1-a7ed-943b4a7bc39e": {
+      "id": "a4cc7059-14aa-4ef1-a7ed-943b4a7bc39e",
       "type": "location",
-      "name": "Small House",
+      "name": "The Cantilevered Pavilion",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A small, rectangular wooden house with a steep pitched roof. The facade is clad in weathered, pale grey timber. Small, multi-paned windows are symmetrically placed, with a single, sturdy wooden door at the center. A low stone foundation anchors the structure.",
-        "colorsAndLighting": "The house features muted natural tones, dominated by the grey of the wood and the dark grey of the roof tiles. Sunlight, if present, would cast long shadows, highlighting the texture of the wood. The overall lighting is natural and diffused, typical of a Northern climate.",
-        "atmosphere": "The air is crisp and carries a faint scent of salt and pine. A gentle sea breeze might rustle the surrounding sparse vegetation. The temperature is cool, even in summer. The overall feeling is one of quiet solitude and resilience against the elements.",
-        "materials": "The primary material is weathered, horizontal timber planks, showing signs of age and exposure to the elements. The foundation is made of rough-hewn grey stone. Window frames are likely painted wood, possibly with a slightly distressed finish.",
-        "mood": "Evokes a sense of peaceful simplicity and rustic charm. It suggests a life lived in close connection with nature, free from ostentation. The mood is tranquil, understated, and enduring.",
-        "sounds": " Seagulls crying, distant waves, wind whistling softly, creaking wood.",
-        "spatialLayout": "A compact, rectangular footprint with a clear vertical emphasis due to the pitched roof. The interior space would be modest, designed for efficiency and warmth. The depth perception is relatively shallow, focusing on the immediate exterior.",
-        "primary_surfaces": "weathered wooden planks, rough grey stone",
-        "secondary_surfaces": "dark grey roof tiles, aged glass panes",
-        "accent_features": "verdigris-stained window frames, exposed timber rafters",
-        "dominant": "pale grey (wood facade)",
-        "secondary": "dark grey (roof)",
-        "accent": "bronze-green (window frames), natural stone (foundation)",
-        "ambient": "cool, diffused daylight",
+        "looks": "A prominent upper level with smoothly rounded corners is dramatically cantilevered over the water. Large glass windows with vibrant orange-coral frames dominate its facade. The cylindrical concrete base and walls show significant weathering, with a mottled greenish hue and reddish-brown streaks.",
+        "colorsAndLighting": "The vibrant orange-coral of the window frames and underside of the roof contrasts with the desaturated greens and browns of the concrete. Sunlight reflects brightly off the water, casting dappled light on the lower structure.",
+        "atmosphere": "The air is likely humid and carries the fresh scent of salt. The sound of gentle waves lapping against the rocks is constant, creating a tranquil yet exposed environment. The weather is clear and serene, with pale blue skies.",
+        "materials": "The primary materials are weathered concrete and large expanses of glass. Accents of a vibrant, high-gloss orange-coral paint highlight structural elements and openings.",
+        "mood": "Evokes a feeling of sophisticated modernism and a deep connection to the natural coastal environment. There's a sense of bold, almost defiant, architectural presence against the serene ocean backdrop.",
+        "sounds": "Gentle waves, distant seabirds, subtle wind",
+        "spatialLayout": "The primary space is the cantilevered upper level, seemingly floating above the ocean. A narrow cylindrical base anchors it to a rocky outcrop, with a direct connection to the water via a submerged walkway.",
+        "primary_surfaces": "Weathered concrete with greenish discoloration and rust-like streaks, large glass windows",
+        "secondary_surfaces": "Orange-coral painted underside of roof, orange-coral window frames and railings",
+        "accent_features": "Vibrant orange-coral framing and underside of the roof, visible seabed through translucent water",
+        "dominant": "Concrete (mottled green and rust)",
+        "secondary": "Turquoise-green ocean water",
+        "accent": "Vibrant orange-coral",
+        "ambient": "Bright daylight",
         "structure": {
-          "form": "rectangular",
-          "roofType": "pitched",
-          "scale": "small",
+          "form": "cylindrical",
+          "roofType": "flat",
+          "scale": "large",
           "orientation": "horizontal",
-          "openings": "minimal",
-          "functionalType": "residential"
+          "openings": "large-glass",
+          "functionalType": "entertainment"
         },
         "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular, characterized by understated wooden construction, pitched roofs, and practical detailing. Features elements of functionalism with a strong connection to the natural environment.",
-        "cultural_tone": "Represents a modest dwelling for individuals or a small family seeking a life in harmony with the Swedish archipelago's environment, likely a fisherman's cottage or a seasonal retreat.",
-        "materials_base": "natural wood, stone, slate/tile",
-        "mood_baseline": "serene, humble, enduring",
-        "palette_bias": "cool neutrals, muted earth tones",
-        "soundscape_base": "maritime ambient",
-        "flora_base": "sparse coastal grasses, wind-stunted pines",
-        "fauna_base": "seagulls"
+        "architectural_tone": "Striking modernist cantilever, bold geometric forms",
+        "cultural_tone": "Leisure and observation, architectural showcase",
+        "materials_base": "Concrete and glass with vibrant accents",
+        "mood_baseline": "Serene coastal elegance with a touch of bold modernity",
+        "palette_bias": "Earth tones, ocean blues, vibrant coral",
+        "soundscape_base": "Oceanic ambient",
+        "flora_base": "Rocky outcrop vegetation",
+        "fauna_base": "Seabirds, marine life"
       },
-      "description": "A modest dwelling situated on the island of Tjörn.",
+      "description": "A striking modernist building cantilevered over clear turquoise-green ocean water, featuring a prominent upper level with rounded corners and large glass windows framed in vibrant orange-coral, a concrete exterior with greenish discoloration and rust-like streaks, and an outdoor staircase of the same orange-coral hue ascending from a rocky outcrop.",
       "navigableElements": [
         {
+          "type": "stairs",
+          "position": "left-side",
+          "description": "orange-coral outdoor staircase"
+        },
+        {
           "type": "door",
-          "position": "center",
-          "description": "a weathered wooden door"
+          "position": "lower-level",
+          "description": "concrete doorway to walkway"
         },
         {
           "type": "path",
-          "position": "front",
-          "description": "a gravel path leading to the entrance"
+          "position": "lower-level-entrance",
+          "description": "yellowish-green stained concrete walkway into water"
         }
       ],
       "dominantElements": [
-        "pitched roof",
-        "wooden facade",
-        "small windows",
-        "stone foundation"
+        "cantilevered upper level",
+        "orange-coral accents",
+        "clear turquoise-green ocean water",
+        "concrete exterior"
       ],
       "uniqueIdentifiers": [
-        "exposed timber beams",
-        "verdigris-stained window frames",
-        "a single chimney",
-        "sea salt residue on surfaces"
+        "rounded corners on upper level",
+        "greenish discoloration on concrete",
+        "rust-like streaks on concrete",
+        "cylindrical base"
       ],
-      "searchDesc": "A small, modest house on Tjörn, Sweden. Facade view, entrance with a wooden door and gravel path.",
-      "slug": "small-house",
-      "primaryMedia": "media-1764767378141-1tbnua4zi"
+      "searchDesc": "Modernist cantilevered pavilion, oceanfront, orange-coral, clear water, concrete",
+      "slug": "the-cantilevered-pavilion",
+      "primaryMedia": "media-1764857806322-8aeqwsfut"
     },
-    "niche-1764767396985-djkihusyf": {
-      "id": "niche-1764767396985-djkihusyf",
+    "niche-1764857828344-8hp1i2ggt": {
+      "id": "niche-1764857828344-8hp1i2ggt",
       "type": "niche",
-      "name": "interior of Small House",
+      "name": "interior of The Cantilevered Pavilion",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior presents weathered, pale grey timber plank walls and a steeply pitched timber frame ceiling with exposed dark grey rafters. Rough-hewn grey stone forms the floor, grounding the humble space. A narrow dark wood passage is visible receding to the left, with a low wooden bench to the right.",
-        "colorsAndLighting": "Dominant colors are pale grey and various shades of grey for wood and stone. Soft, cool diffused daylight filters in, creating a serene illumination.",
-        "atmosphere": "A serene and quiet atmosphere pervades the space, carrying the faint scent of salt and pine. The air feels cool and still, suggesting a connection to the maritime environment.",
-        "materials": "Main materials are weathered timber planks, rough-hewn stone, and dark wood. The timber walls show signs of age, and the stone floor is textured and uneven, emphasizing a rustic, enduring quality.",
-        "mood": "The mood is one of peaceful simplicity, rustic charm, and enduring functionality, reflecting a life in harmony with nature.",
-        "sounds": "Quiet, faint maritime breeze, subtle wood creaks, distant sea sounds",
-        "spatialLayout": "The interior is entered into a humble space with a strong vertical emphasis from the pitched ceiling. An asymmetrical composition draws the eye into a receding passage, hinting at further modest interior depth.",
-        "primary_surfaces": "weathered pale grey timber planks (walls), rough-hewn grey stone (floor), dark grey timber rafters (ceiling)",
-        "secondary_surfaces": "worn cushions (bench), dark wood (passage)",
-        "accent_features": "exposed dark grey rafters, receding dark wood passage, low sturdy wooden bench",
-        "dominant": "pale grey (walls)",
-        "secondary": "grey (flooring and rafters)",
-        "accent": "dark wood (passage and bench details)",
-        "ambient": "cool",
-        "structure": {
-          "form": "irregular",
-          "roofType": "pitched",
-          "scale": "small",
-          "orientation": "cubic",
-          "openings": "minimal",
-          "functionalType": "residential"
-        },
-        "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular",
-        "cultural_tone": "Modest dwelling for a life in harmony with the Swedish archipelago's environment.",
-        "materials_base": "weathered wood, rough stone, simple timber",
-        "mood_baseline": "Peaceful simplicity and rustic charm",
-        "palette_bias": "Shades of grey and muted natural tones",
-        "soundscape_base": "Quiet and natural",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764767396984-5jxj34n5i",
-      "description": "The humble and enduring interior of a Nordic coastal vernacular small house.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "midground, slightly off-center to the left",
-          "description": "A narrow, dark wood passage receding into the depth of the house."
-        }
-      ],
-      "dominantElements": [
-        "weathered pale grey timber plank walls",
-        "steeply pitched timber frame ceiling with exposed dark grey rafters",
-        "rough-hewn grey stone flooring",
-        "narrow dark wood passage",
-        "low, sturdy wooden bench with worn cushions"
-      ],
-      "uniqueIdentifiers": [
-        "weathered pale grey timber planks",
-        "exposed dark grey rafters",
-        "rough-hewn grey stone floor",
-        "receding dark wood passage",
-        "off-center one-point perspective"
-      ],
-      "searchDesc": "Humble Nordic coastal vernacular interior, pale grey timber, dark rafters, grey stone floor, narrow passage.",
-      "slug": "interior-of-small-house"
-    },
-    "niche-1764843838743-4kqlcemfd": {
-      "id": "niche-1764843838743-4kqlcemfd",
-      "type": "niche",
-      "name": "interior of Small House",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A cozy, rectangular space characterized by straight, wood-paneled walls and an angled ceiling with exposed timber rafters. Small, multi-paned windows with verdigris-stained frames punctuate the walls, and the floor is laid with rough-hewn grey stone. A simple wooden bench is positioned to the left, and a door is slightly ajar to the right midground.",
-        "colorsAndLighting": "Diffused natural daylight streams in, casting long shadows and highlighting the wood tones and grey stone. The verdigris on the window frames adds a subtle, aged patina.",
-        "atmosphere": "The air is still and tranquil, carrying the scent of wood and perhaps sea salt from the outside. There's a sense of peaceful simplicity and enduring charm within this modest dwelling.",
-        "materials": "The primary materials are wood for the walls and ceiling, and rough-hewn grey stone for the floor. The timber rafters are exposed, and window frames show signs of verdigris weathering.",
-        "mood": "Evokes a sense of peaceful simplicity and rustic charm, suggesting a life lived in harmony with nature.",
-        "sounds": "Distant seabird calls, gentle lapping waves, creaking wood, wind.",
-        "spatialLayout": "A shallow depth of field emphasizes the immediate, functional space. The rectangular room has an angled ceiling, creating a sense of contained warmth.",
-        "primary_surfaces": "Wood-paneled walls, rough-hewn grey stone floor, exposed timber rafters.",
-        "secondary_surfaces": "Verdigris-stained wood window frames.",
-        "accent_features": "Small framed nautical painting, low wooden bench.",
-        "dominant": "Pale grey (stone floor)",
-        "secondary": "Natural wood tones (walls, rafters, bench)",
-        "accent": "Verdigris (window frames), muted colors (painting)",
-        "ambient": "Diffused daylight",
+        "looks": "A vast, open-plan hall defined by stark, precise concrete architecture. Expansive floor-to-ceiling glass walls offer uninterrupted ocean and sky views. The space is characterized by bold geometric forms and a seamless integration with the coastal landscape.",
+        "colorsAndLighting": "Dominated by desaturated concrete tones with reddish-brown streaks and weathered greenish hues. Vibrant orange-coral frames punctuate the glass. Lighting is a mix of warm spotlights and diffused ambient light, mimicking daylight and water reflections.",
+        "atmosphere": "Serene coastal elegance pervades the uncluttered space. The air feels clean and breezy, with a palpable connection to the vastness of the ocean. A mood of sophisticated modernism and architectural contemplation is present.",
+        "materials": "The primary materials are smooth, pale concrete for the ceiling and weathered concrete for the walls. Flooring consists of large, irregularly shaped polished stone slabs in shades of grey and ochre, with darker, wet-looking aggregate. Furniture and decor feature polished metal and sea-worn driftwood.",
+        "mood": "Evokes a feeling of sophisticated modernism and a deep connection to the natural coastal environment. There's a sense of bold, almost defiant, architectural presence against the serene ocean backdrop.",
+        "sounds": "gentle waves, distant ocean breeze",
+        "spatialLayout": "A precisely rectangular, open-plan hall with sharp 90-degree corners. The scale is vast, emphasizing depth through the expansive glass panels and the off-center placement of a console table.",
+        "primary_surfaces": "Stark straight concrete walls (weathered green, reddish-brown streaks), Solid opaque pale concrete ceiling",
+        "secondary_surfaces": "Large irregularly shaped polished stone floor slabs (light grey to deep ochre), patches of darker wet-looking aggregate",
+        "accent_features": "Vibrant high-gloss orange-coral framed floor-to-ceiling glass panels, polished dark veined stone console table, minimalist sculptural objects (polished metal, sea-worn driftwood), subtle illuminated blueish passage",
+        "dominant": "Concrete (mottled green and rust) with large coverage",
+        "secondary": "Natural Stone (grey to ochre) on floor",
+        "accent": "Orange-coral (frames), Blueish glow (passage)",
+        "ambient": "Bright daylight and water reflections",
         "structure": null,
         "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular, characterized by understated wooden construction, pitched roofs, and practical detailing. Features elements of functionalism with a strong connection to the natural environment.",
-        "cultural_tone": "Represents a modest dwelling for individuals or a small family seeking a life in harmony with the Swedish archipelago's environment, likely a fisherman's cottage or a seasonal retreat.",
-        "materials_base": null,
-        "mood_baseline": "Tranquil, understated, and enduring.",
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764843838742-wty6i69pj",
-      "description": "The cozy, wood-paneled interior of a small Nordic coastal dwelling.",
-      "navigableElements": [
-        {
-          "type": "window",
-          "position": "walls",
-          "description": "Small, multi-paned windows framed with verdigris-stained wood."
-        },
-        {
-          "type": "door",
-          "position": "right midground",
-          "description": "Slightly ajar wooden door revealing a darker passage."
-        }
-      ],
-      "dominantElements": [
-        "Wood-paneled walls",
-        "Angled ceiling with exposed rafters",
-        "Grey stone floor",
-        "Low wooden bench",
-        "Nautical painting"
-      ],
-      "uniqueIdentifiers": [
-        "Angled ceiling with exposed rafters",
-        "Verdigris-stained window frames",
-        "Rough-hewn grey stone floor",
-        "Asymmetrical nautical painting"
-      ],
-      "searchDesc": "Cozy Nordic cottage interior: wood panels, angled ceiling, stone floor, diffused light, rustic charm.",
-      "slug": "interior-of-small-house"
-    },
-    "niche-1764843857191-rh5bnpm3a": {
-      "id": "niche-1764843857191-rh5bnpm3a",
-      "type": "niche",
-      "name": "interior of Small House",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This cozy, rectangular niche is constructed from weathered, pale grey timber, mirroring its exterior. A practical, dark grey slate floor grounds the space, while a prominent horizontal timber beam runs across the foreground. A small, multi-paned window provides a source of diffused light.",
-        "colorsAndLighting": "The dominant color is pale grey from the timber, contrasted by the dark grey of the slate floor. Diffused, cool daylight streams in, creating soft illumination without harsh shadows.",
-        "atmosphere": "The air is cool and crisp, carrying the faint, evocative scents of salt and pine. A sense of peaceful simplicity pervades, enhanced by the distant, muted sounds of seagulls and waves.",
-        "materials": "The primary materials are weathered pale grey timber planks and a dark grey, slightly uneven slate floor. Wood shows signs of wear, contributing to its rustic charm. Fishing ropes add a tactile, utilitarian detail.",
-        "mood": "The mood is one of tranquil simplicity and enduring rustic charm, suggesting a humble dwelling in harmony with its coastal environment.",
-        "sounds": "distant seagulls, crashing waves, faint wind",
-        "spatialLayout": "The space is a cozy, rectangular niche with a gently sloping timber ceiling. The ultra-wide lens emphasizes the modest scale and creates a sense of depth.",
-        "primary_surfaces": "weathered pale grey timber walls, dark grey slate floor",
-        "secondary_surfaces": "verdigris-stained window frames, timber ceiling",
-        "accent_features": "coiled fishing ropes, small wooden stool",
-        "dominant": "pale grey (wood walls)",
-        "secondary": "dark grey (slate floor)",
-        "accent": "verdigris (window frames)",
-        "ambient": "cool daylight",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular",
-        "cultural_tone": "Modest dwelling for life in harmony with the Swedish archipelago environment",
-        "materials_base": null,
-        "mood_baseline": "peaceful simplicity and rustic charm",
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764843857190-zd10ls20q",
-      "description": "A cozy, rectangular interior niche of a Nordic coastal home, featuring weathered timber walls and a slate floor, illuminated by diffused daylight.",
-      "navigableElements": [
-        {
-          "type": "doorway",
-          "position": "midground left",
-          "description": "A simple, framed doorway revealing a darker space beyond."
-        },
-        {
-          "type": "timber beam",
-          "position": "foreground center",
-          "description": "A narrow, exposed timber beam at waist height with coiled fishing ropes."
-        }
-      ],
-      "dominantElements": [
-        "weathered pale grey timber walls",
-        "dark grey slate floor",
-        "multi-paned window",
-        "exposed timber beam",
-        "wooden stool"
-      ],
-      "uniqueIdentifiers": [
-        "weathered pale grey timber construction",
-        "verdigris-stained window frames",
-        "coiled fishing ropes on beam",
-        "uneven, worn slate floor"
-      ],
-      "searchDesc": "Cozy Nordic timber interior niche with salt-pine scent, slate floor, and diffused daylight.",
-      "slug": "interior-of-small-house"
-    },
-    "niche-1764844233407-u0s58vwn0": {
-      "id": "niche-1764844233407-u0s58vwn0",
-      "type": "niche",
-      "name": "interior of Small House",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior is a cozy, rectangular space with walls paneled in weathered pale grey timber planks. A solid, dark grey pitched roof creates angled planes overhead. The floor is robust, rough-hewn grey stone, grounding the room. An off-center worn wooden bench sits in the foreground, and a slightly ajar doorway is visible to the right midground.",
-        "colorsAndLighting": "The space is illuminated by cool, diffused daylight filtering through small, multi-paned windows. The dominant color is pale grey from the timber walls, contrasted by the dark grey roof and the deeper grey of the stone floor. Light draws the eye towards the open doorway.",
-        "atmosphere": "The air is still and cool, carrying a sense of quiet repose. The space feels grounded and enduring, with a tangible connection to the natural environment outside. There is a subtle invitation to explore deeper into the dwelling.",
-        "materials": "Primary materials are weathered pale grey timber planks for the walls and robust, rough-hewn grey stone for the floor. A worn wooden bench adds a touch of history, and the wooden window frames show signs of age and weathering.",
-        "mood": "Evokes a sense of peaceful simplicity and rustic charm. It suggests a life lived in close connection with nature, free from ostentation, tranquil and understated.",
-        "sounds": "Faint creaks of wood, distant lapping water, quiet stillness.",
-        "spatialLayout": "The interior is rectangular with an asymmetrical composition. The ultra-wide lens emphasizes the depth and openness, drawing the eye towards the slightly ajar doorway.",
-        "primary_surfaces": "weathered pale grey timber plank walls, rough-hewn grey stone floor",
-        "secondary_surfaces": "dark grey pitched roof, worn wooden bench, wooden window frames",
-        "accent_features": "verdigris-stained wooden window frames, slightly ajar doorway",
-        "dominant": "pale grey (walls)",
-        "secondary": "dark grey (roof)",
-        "accent": "verdigris (window frames)",
-        "ambient": "cool, diffused daylight",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular",
-        "cultural_tone": "Modest dwelling for individuals or small family in harmony with Swedish archipelago",
-        "materials_base": "Wood and stone construction with weathered finishes",
-        "mood_baseline": "Peaceful simplicity, rustic charm",
-        "palette_bias": "Greys and muted natural tones",
-        "soundscape_base": "Quiet, natural ambient sounds",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764844233405-wpa8aasya",
-      "description": "A cozy, rectangular interior of a small Nordic coastal dwelling, characterized by weathered timber walls and a rough stone floor.",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "right midground",
-          "description": "A sturdy wooden doorway, slightly ajar, leading to a dimly lit passage."
-        },
-        {
-          "type": "window",
-          "position": "walls",
-          "description": "Small, multi-paned windows with verdigris-stained wooden frames."
-        }
-      ],
-      "dominantElements": [
-        "weathered, pale grey timber plank walls",
-        "dark grey pitched roof",
-        "rough-hewn grey stone floor",
-        "low, worn wooden bench"
-      ],
-      "uniqueIdentifiers": [
-        "weathered pale grey timber planks",
-        "verdigris-stained window frames",
-        "rough-hewn grey stone floor",
-        "off-center worn wooden bench"
-      ],
-      "searchDesc": "Cozy Nordic coastal cottage interior with pale grey timber walls, stone floor, and a glimpse into a passage.",
-      "slug": "interior-of-small-house"
-    },
-    "loc-1764844405323-if4m4flca": {
-      "id": "loc-1764844405323-if4m4flca",
-      "type": "host",
-      "name": "Black Rock City",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A sprawling temporary city characterized by its eccentric and often monumental art installations. Structures are improvised and diverse, ranging from simple camps to elaborate themed environments. The scale can be immense, particularly around major art pieces.",
-        "colorsAndLighting": "A vibrant and chaotic mix of colors, dominated by warm, flickering light from numerous fires and artificial sources. This contrasts with the deep blues and purples of the night sky, with occasional bursts of intense color from illuminated art and vehicles.",
-        "atmosphere": "A palpable sense of energy, freedom, and community pervades the air, thick with dust and the scent of smoke. The atmosphere is dynamic, filled with music, conversation, and the constant movement of people and vehicles.",
-        "materials": "A highly eclectic mix of materials, reflecting DIY and artistic expression. Wood, metal, fabric, and salvaged components are common in structures and art. The pervasive material is dust, coating everything.",
-        "mood": "Exhilarating, awe-inspiring, surreal, and communal.",
-        "sounds": "diverse music, spoken word, laughter, fire crackling, vehicle engines",
-        "spatialLayout": "A vast, open, and improvisational urban environment with a central focus. Streets and open areas facilitate movement and interaction, while art installations create focal points and vertical interest.",
-        "primary_surfaces": "dusty ground, improvised structures",
-        "secondary_surfaces": "diverse art materials, vehicles",
-        "accent_features": "flaming sculptures, illuminated art cars, light installations",
-        "dominant": "Warm oranges and yellows from fire and light",
-        "secondary": "Deep blues and purples from the night sky",
-        "accent": "Pinks and vibrant accent colors from art installations",
-        "ambient": "Dynamic, shifting between warm and cool glows",
-        "structure": "Temporary and improvisational",
-        "genre": "Radical Self-Expression",
-        "architectural_tone": "Improvised, large-scale wooden sculpture with temple-like elements",
-        "cultural_tone": "Ritualistic art installation for a temporary desert gathering",
-        "materials_base": "Eclectic, DIY, salvaged materials",
-        "mood_baseline": "Exhilarating, awe-inspiring, transient",
-        "palette_bias": "Warm, fiery tones with cool night sky contrast",
-        "soundscape_base": "Energetic and eclectic",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A temporary metropolis built from scratch in the desert for an annual event. It is a hub of radical self-expression, art, and communal living, existing only for a short period.",
-      "navigableElements": [
-        "streets",
-        "camps",
-        "art installations",
-        "vehicles",
-        "gathering spaces"
-      ],
-      "dominantElements": [
-        "temporary structures",
-        "art cars",
-        "large-scale art pieces",
-        "crowds"
-      ],
-      "uniqueIdentifiers": [
-        "circular street layout",
-        "themed camps",
-        "massive art installations",
-        "dusty environment"
-      ],
-      "searchDesc": "Temporary desert metropolis for radical self-expression, art, and community.",
-      "slug": "black-rock-city"
-    },
-    "0ee914a4-300f-4786-98ba-2148ccf959b3": {
-      "id": "0ee914a4-300f-4786-98ba-2148ccf959b3",
-      "type": "region",
-      "name": "The Playa",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "An expansive, flat, and open terrain characterized by its dusty, light-colored surface. The horizon is distant, giving a sense of immense scale. Temporary, large-scale art installations and crowds populate the landscape.",
-        "colorsAndLighting": "The ground reflects ambient light sources, appearing pale and dusty. The dominant colors are dictated by the sky and the numerous light sources from art and fires, creating a dynamic interplay of warm and cool tones.",
-        "atmosphere": "The air is dry and carries fine dust, often stirred by wind or movement. A pervasive sense of openness and exposure defines the environment, with a feeling of raw, untamed desert landscape transformed by human activity.",
-        "materials": "The primary surface is compacted, fine-grained playa dust. Materials are predominantly temporary, ranging from wood and metal in art installations to fabrics and diverse textures from the gathered populace.",
-        "mood": "Vast, open, and primal, yet imbued with a spirit of temporary creation and vibrant human gathering.",
-        "sounds": "wind, distant music, muffled crowd noise, crackling fires",
-        "spatialLayout": "An extremely large, flat, and open space with a defined horizon. Depth is perceived through the scale of art and the dispersal of crowds.",
-        "primary_surfaces": "dusty playa",
-        "secondary_surfaces": "temporary art structures",
-        "accent_features": "glowing art, fire sculptures",
-        "dominant": "Pale dust tones with broad coverage",
-        "secondary": "Dark blue/purple sky",
-        "accent": "Orange, yellow, and pink lights",
-        "ambient": "Warm and cool from artificial and celestial sources",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": null,
+        "architectural_tone": "Striking modernist cantilever, bold geometric forms",
+        "cultural_tone": "Leisure and observation, architectural showcase",
         "materials_base": null,
         "mood_baseline": null,
-        "palette_bias": "Contrast between warm artificial lights and cool natural sky",
-        "soundscape_base": null,
+        "palette_bias": "Desaturated neutrals with vibrant pops",
+        "soundscape_base": "Coastal ambiance",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "An immense, flat expanse of dry lakebed. The ground is dusty and light-colored, stretching to the horizon. It serves as the canvas for temporary structures and art.",
-      "navigableElements": [
-        "dusty ground",
-        "open spaces",
-        "art installations",
-        "crowds"
-      ],
-      "dominantElements": [
-        "vast open space",
-        "dust",
-        "temporary art"
-      ],
-      "uniqueIdentifiers": [
-        "dry lakebed basin",
-        "dusty terrain",
-        "temporary city"
-      ],
-      "searchDesc": "Vast, dusty playa hosting temporary art and gatherings under the night sky.",
-      "slug": "the-playa",
-      "primaryMedia": "media-1764846356814-00j7ovofd"
-    },
-    "5271623e-fa5a-49b7-9561-c72c6db2d717": {
-      "id": "5271623e-fa5a-49b7-9561-c72c6db2d717",
-      "type": "location",
-      "name": "The Man",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A monumental, stylized human figure dominates the landscape, arms outstretched in a gesture of embrace or farewell. It is constructed from wood, often appearing weathered and aged, and sits atop a complex, multi-tiered structure resembling a pagoda or temple. The scale is immense, dwarfing the human crowds below.",
-        "colorsAndLighting": "The primary illumination comes from the intense, flickering orange and yellow flames consuming the 'Man', casting dramatic shadows and warm, dynamic light across the scene. The internal glow of the temple adds a softer, warm luminescence, contrasting with the deep blues of the twilight sky.",
-        "atmosphere": "The air is thick with the scent of smoke and the warmth of the fire. A palpable sense of energy and excitement permeates the atmosphere, driven by the massive gathering and the spectacle. The dry, dusty air of the playa is evident, kicked up by the crowds and the fires.",
-        "materials": "Predominantly wood for the effigy and its base structure, showing signs of being weathered by the elements. Metal elements might be present in the construction or adornment of surrounding art. Fabric and clothing of participants add a diverse material texture.",
-        "mood": "Exhilarating, awe-inspiring, and transient. It evokes a sense of communal celebration, raw energy, and the ephemeral nature of the event.",
-        "sounds": "Roaring flames, distant music, cheers, crackling wood, crowd murmur, fire effects.",
-        "spatialLayout": "The space is vast and open, defined by the expansive playa, with 'The Man' as the central, vertical focal point. Depth is created by the receding crowd, other art installations, and the distant mountain silhouettes.",
-        "primary_surfaces": "Charred, glowing wood; dusty playa ground; smoky air.",
-        "secondary_surfaces": "Woven fabric, metal art structures, illuminated surfaces.",
-        "accent_features": "Fiery meteors streaking through the sky, silhouetted flying figures with fire trails, glowing art cars, ground-level fiery sculptures.",
-        "dominant": "Orange and yellow (flames, warm light)",
-        "secondary": "Deep blue and indigo (night sky)",
-        "accent": "Pinks and purples (Ferris wheel lights), white and light grey (dusty playa)",
-        "ambient": "Warm, flickering glow",
-        "structure": {
-          "form": "organic",
-          "roofType": "open-sky",
-          "scale": "large",
-          "orientation": "vertical",
-          "openings": "open-passages",
-          "functionalType": "entertainment"
-        },
-        "genre": null,
-        "architectural_tone": "Improvised, large-scale wooden sculpture with temple-like elements",
-        "cultural_tone": "Ritualistic art installation for a temporary desert gathering",
-        "materials_base": "Wood, fire, dust",
-        "mood_baseline": "Celebratory, awe-inspiring",
-        "palette_bias": "Warm, fiery tones with cool night sky contrast",
-        "soundscape_base": "Dynamic, event-driven",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A colossal, stylized human effigy, typically made of wood, that is the central focus of the Burning Man festival and is dramatically set ablaze each year. It stands atop an intricately crafted, multi-tiered wooden temple or pagoda-like structure.",
+      "primaryMedia": "media-1764857828341-v5mrpuxjh",
+      "description": "A vast, open-plan modernist interior hall connecting to a coastal environment, featuring stark concrete, expansive glass, and natural stone flooring.",
       "navigableElements": [
         {
           "type": "passage",
-          "position": "base of the structure",
-          "description": "Entrances to the internal temple structure."
-        },
-        {
-          "type": "stairs",
-          "position": "around the base",
-          "description": "Leading up to the multi-tiered pagoda."
+          "position": "to the left of the console table",
+          "description": "A subtle, illuminated passage with a gentle blueish glow."
         }
       ],
       "dominantElements": [
-        "Colossal wooden human effigy",
-        "Multi-tiered wooden temple/pagoda",
-        "Flickering flames and smoke",
-        "Vast gathering of people",
-        "Numerous illuminated art installations"
+        "Floor-to-ceiling glass panels",
+        "Stark concrete walls and ceiling",
+        "Irregularly shaped polished stone floor slabs",
+        "Off-center console table"
       ],
       "uniqueIdentifiers": [
-        "The burning of the effigy",
-        "Stylized human form",
-        "Pagoda-like base structure",
-        "Playa dust and desert environment",
-        "Nighttime fiery spectacle"
+        "Orange-coral framed glass panels",
+        "Weathered greenish-hue concrete",
+        "Polished stone floor with aggregate patches",
+        "Console table with minimalist objects"
       ],
-      "searchDesc": "Burning Man's iconic fiery effigy and temple at night on the playa.",
-      "slug": "the-man",
-      "primaryMedia": "media-1764844425298-30e5x1q8w"
-    },
-    "niche-1764844445961-z5v7i5xnd": {
-      "id": "niche-1764844445961-z5v7i5xnd",
-      "type": "niche",
-      "name": "interior of The Man",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A colossal, rectangular interior chamber constructed from massive, charred wooden beams and intricately carved timber. Imposing straight walls with sharp corners and a solid, dark wood panel ceiling create a sense of sacred enclosure. Large, irregularly spaced arched openings reveal dimly lit, cavernous spaces beyond. The scale is immense, with 20-meter high ceilings.",
-        "colorsAndLighting": "The primary lighting is a flickering, warm orange and yellow glow emanating from unseen internal fires, casting long, dramatic shadows. Deep blues and indigos of the night sky filter through distant openings, creating a dynamic and warm, yet mysterious, ambiance.",
-        "atmosphere": "The air is thick with the palpable scent of aged wood and residual warmth, evoking a ritualistic ambiance. Swirling patterns of smoke rise languidly towards the ceiling, adding a dynamic, ethereal quality. The overall feeling is one of ancient, sacred space infused with raw energy.",
-        "materials": "The primary material is massive, charred wood, featuring intricate carvings and a rough-hewn texture. Small, embedded glowing embers within the wood grain provide accentual illumination. The materials suggest age, resilience, and a connection to fire.",
-        "mood": "Exhilarating, awe-inspiring, and transient. It evokes a sense of communal celebration and the ephemeral nature of the event, with a deep, sacred undertone.",
-        "sounds": "Crackling fires, creaking wood, distant echoes.",
-        "spatialLayout": "The space is a colossal, rectangular chamber with imposing, straight walls and sharp corners. A 20-meter high ceiling creates immense volume. The layout is dominated by a large, off-center pillar, with foreground elements and recessed passages contributing to depth.",
-        "primary_surfaces": "Massive charred wooden beams, intricately carved timber, dark wood ceiling panels",
-        "secondary_surfaces": "Rough-hewn wooden platform, twisted timber framing",
-        "accent_features": "Stylized fire-like motifs on pillar, embedded glowing embers, swirling smoke",
-        "dominant": "Orange (warm glow and flames)",
-        "secondary": "Dark wood tones, deep blues and indigos (filtered light)",
-        "accent": "Yellow (flames, embers), Charred textures",
-        "ambient": "Warm, dynamic, flickering glow",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Improvised, large-scale wooden sculpture with temple-like elements",
-        "cultural_tone": "Ritualistic art installation for a temporary desert gathering",
-        "materials_base": null,
-        "mood_baseline": "Exhilarating, awe-inspiring, and transient",
-        "palette_bias": "Warm oranges and yellows, contrasted with dark wood and blues",
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764844445959-th9meqgeh",
-      "description": "A monumental, temple-like interior chamber built from massive, charred wooden beams, featuring a colossal, fire-carved pillar and arched openings leading to dim spaces.",
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "foreground, descending slightly to the left",
-          "description": "Rough-hewn wooden platform with implied stairs."
-        },
-        {
-          "type": "passage",
-          "position": "midground, to the right of the central pillar",
-          "description": "Dimly lit, arched passage framed by twisted timber."
-        }
-      ],
-      "dominantElements": [
-        "massive charred wooden beams",
-        "colossal off-center pillar carved with fire motifs",
-        "rough-hewn wooden platform",
-        "heavy dark wooden benches"
-      ],
-      "uniqueIdentifiers": [
-        "colossal charred wooden architecture",
-        "fire-like carved pillar",
-        "temple-like enclosure",
-        "flickering orange and yellow glow"
-      ],
-      "searchDesc": "Monumental charred wood chamber with fire pillar, temple-like, warm glow, cavernous.",
-      "slug": "interior-of-the-man"
-    },
-    "709f114a-0e76-4b94-8a5b-06f4fcc3dc26": {
-      "id": "709f114a-0e76-4b94-8a5b-06f4fcc3dc26",
-      "type": "location",
-      "name": "Serpent's Echo Amphitheater",
-      "description": "An open-air venue carved into the earth, where the primal beats of a DJ resonate with ancient Mayan echoes. Structures crafted from sun-baked clay and woven reeds rise to meet a vast, star-dusted sky.",
-      "dna": {
-        "looks": "The location is an open-air amphitheater with a large central DJ booth resembling a stylized serpent. Tiered seating is sculpted from sun-baked clay, and the background is dominated by towering, woven reed structures. Intricate stone carvings depicting Mayan motifs adorn archways and pillars.",
-        "colorsAndLighting": "Dominant pale dust tones are offset by the vibrant, warm glow of artificial stage lights and numerous flickering fire pits. The cool, natural light of the sky contrasts with these intense artificial sources, creating dramatic shadows.",
-        "atmosphere": "The air is thick with the scent of copal incense and the palpable energy of a gathering. A warm, dry breeze carries the bass-heavy beats of the DJ and the occasional murmur of the crowd. The atmosphere feels both ancient and vibrantly alive, a temporary sanctuary of sound.",
-        "materials": "Primary materials are sun-baked clay for structures and seating, with woven reeds forming backdrops and partitions. Stone is used for carved details and archways. Textures are rough and earthy, with a sense of hand-crafted construction.",
-        "mood": "This location evokes a sense of primal celebration and temporary creation. It's a space where ancient spirits meet modern rhythm, fostering a feeling of vibrant human connection and energetic release.",
-        "sounds": "DJ beats, tribal drums, chanting, crowd murmur, crackling fire pits, distant nature sounds",
-        "spatialLayout": "The space is a wide, shallow amphitheater carved into a natural depression, opening to the sky. The DJ booth is central and prominent, with tiered seating arranged in a semi-circle, creating a sense of communal focus.",
-        "primary_surfaces": "Sun-baked clay seating, Woven reed backdrops, Carved stone archways",
-        "secondary_surfaces": "Earthy ground, Torch-lit passages, Rough-hewn stone steps",
-        "accent_features": "Feathered headdresses, Jade adornments, Serpent motif on DJ booth, Flickering fire pits",
-        "dominant": "Pale dust tones with broad coverage",
-        "secondary": "Warm artificial lights and cool natural sky",
-        "accent": "Vibrant colors of adornments and carvings",
-        "ambient": "Warm and cool contrasts",
-        "structure": {
-          "form": "organic",
-          "roofType": "open-sky",
-          "scale": "large",
-          "orientation": "wide",
-          "openings": "open-passages",
-          "functionalType": "entertainment"
-        },
-        "genre": null,
-        "architectural_tone": "Primal, Earth-bound, with decorative Mayan influences",
-        "cultural_tone": "A gathering for music and celebration, inspired by ancient Mayan culture and modern DJ culture",
-        "materials_base": "Earthen, Woven, Stone",
-        "mood_baseline": "Vast, open, and primal, yet imbued with a spirit of temporary creation and vibrant human gathering.",
-        "palette_bias": "Contrast between warm artificial lights and cool natural sky",
-        "soundscape_base": "Rhythmic beats mixed with ambient natural and human sounds",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center foreground",
-          "description": "A wide, carved stone archway leading into the main performance area, framed by feathered headdresses."
-        },
-        {
-          "type": "passage",
-          "position": "left midground",
-          "description": "A narrow, torch-lit passage winding between adobe structures, likely leading to backstage areas."
-        },
-        {
-          "type": "stairs",
-          "position": "right midground",
-          "description": "Rough-hewn stone steps ascending to a raised platform overlooking the central space."
-        },
-        {
-          "type": "window",
-          "position": "background",
-          "description": "Openings in woven reed walls revealing glimpses of activity within smaller structures."
-        }
-      ],
-      "dominantElements": [
-        "Large, central DJ booth shaped like a stylized serpent's head",
-        "Sun-baked clay tiered seating",
-        "Towering, woven reed backdrops",
-        "Stone carving details reminiscent of Mayan art",
-        "Flickering fire pits scattered around the perimeter"
-      ],
-      "uniqueIdentifiers": [
-        "Serpent motif on DJ booth",
-        "Rhythmic chanting mixed with electronic music",
-        "Adornments of feathers and jade",
-        "The scent of copal incense",
-        "Temporary structures that blend into the natural landscape"
-      ],
-      "searchDesc": "Open-air music camp venue with Mayan warrior theme, DJ stage, clay seating, and reed structures.",
-      "slug": "serpents-echo-amphitheater",
-      "niches": [],
-      "primaryMedia": "media-1764844500464-0r9d0rxlh"
-    },
-    "niche-1764844654477-byhm8sqfz": {
-      "id": "niche-1764844654477-byhm8sqfz",
-      "type": "niche",
-      "name": "interior of Small House",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This entry nook features walls paneled with weathered, pale grey timber planks. Rough-hewn grey stone forms the foundation, and a single sturdy, aged wooden beam crosses the ceiling steeply. Diffused, cool daylight enters from a multi-paned window, creating long shadows.",
-        "colorsAndLighting": "The palette is dominated by pale grey timber and rough grey stone. Cool daylight streams in, casting elongated shadows across the worn wooden floor.",
-        "atmosphere": "The air feels cool and carries a faint scent of salt and pine. The atmosphere is one of tranquil simplicity, suggesting a life lived in close connection with nature.",
-        "materials": "Key materials include weathered pale grey timber planks, rough-hewn grey stone, and simple, worn wide-plank wood for the floor. Cushions are thick, woven wool.",
-        "mood": "Evokes a sense of peaceful simplicity and rustic charm, tranquil and understated.",
-        "sounds": "faint salt and pine scent, soft ambient quiet",
-        "spatialLayout": "A small rectangular dwelling's entry nook, with a defined foreground and a passage leading deeper into the interior.",
-        "primary_surfaces": "weathered pale grey timber plank walls, rough-hewn grey stone foundation, simple wide-plank wood floor",
-        "secondary_surfaces": "sturdy darkened wooden ceiling beam, multi-paned window, woven wool cushions",
-        "accent_features": "steeply angled ceiling beam, ajar doorway revealing darkness",
-        "dominant": "pale grey (wood walls, stone)",
-        "secondary": "dark wood (beam), cream (cushions)",
-        "accent": "muted grey (cushions)",
-        "ambient": "cool diffused daylight",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular, characterized by understated wooden construction, pitched roofs, and practical detailing. Features elements of functionalism with a strong connection to the natural environment.",
-        "cultural_tone": "Represents a modest dwelling for individuals or a small family seeking a life in harmony with the Swedish archipelago's environment, likely a fisherman's cottage or a seasonal retreat.",
-        "materials_base": null,
-        "mood_baseline": "peaceful simplicity and rustic charm",
-        "palette_bias": "muted earth tones, pale greys",
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764844654474-j5hcjgc79",
-      "description": "The entry nook of a small, rectangular dwelling with weathered timber walls and a stone foundation.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "background right",
-          "description": "narrow, planked wooden doorway, slightly ajar"
-        }
-      ],
-      "dominantElements": [
-        "weathered pale grey timber plank walls",
-        "rough-hewn grey stone foundation",
-        "sturdy wooden beam crossing ceiling",
-        "weathered wooden bench with wool cushions"
-      ],
-      "uniqueIdentifiers": [
-        "steeply angled wooden ceiling beam",
-        "multi-paned window casting long shadows",
-        "bench with woven wool cushions"
-      ],
-      "searchDesc": "Entry nook of a small Nordic coastal dwelling with weathered timber, stone, and cool diffused light.",
-      "slug": "interior-of-small-house"
-    },
-    "41b50cbb-69df-4dbe-9610-54db347a5d42": {
-      "id": "41b50cbb-69df-4dbe-9610-54db347a5d42",
-      "type": "location",
-      "name": "Maya Wariour Oasis",
-      "description": "A vibrant, temporary encampment built around a pulsating DJ stage, humming with the energy of a gathering crowd. This open-air venue blends primal aesthetics with the spirit of modern celebration.",
-      "dna": {
-        "looks": "The camp is a collection of irregular, temporary structures constructed from various salvaged materials, arranged organically around a central, elevated DJ booth. Low-slung tents and open-air stalls create a labyrinthine layout, with banners and fabrics draped between poles. The scale is human-centric, fostering a sense of intimacy within the vastness.",
-        "colorsAndLighting": "Dominant pale dust tones are punctuated by the intense, contrasting colors of artificial stage lighting – deep blues, vibrant purples, and fiery oranges. Warm artificial lights from the stage and scattered lanterns create pockets of illumination against the cooler, natural sky overhead, casting long, dramatic shadows.",
-        "atmosphere": "The air is thick with the scent of dust, sweat, and perhaps the faint aroma of food or incense. A palpable energy of excitement and revelry permeates the space, kept warm by the collective body heat and artificial lighting. The sound of electronic music forms a constant, driving rhythm.",
-        "materials": "Predominantly rough, natural materials like sun-baked earth, worn canvas, and salvaged wood. Textures are varied, from the gritty dust underfoot to the coarse weave of fabric awnings. The condition is one of temporary, well-used construction.",
-        "mood": "A primal, yet joyous and ephemeral mood of intense human connection and shared experience. It evokes a feeling of belonging and liberation within a temporary, vibrant sanctuary.",
-        "sounds": "Pulsating electronic music, cheering crowd, laughter, spoken conversations, distant drumming.",
-        "spatialLayout": "An open, central performance area surrounded by a more cluttered, intimate arrangement of stalls and seating. The layout is deliberately informal, with winding paths and open spaces that encourage mingling and exploration.",
-        "primary_surfaces": "Dusty ground, worn canvas tents, rough wooden structures",
-        "secondary_surfaces": "Fabric banners, metal scaffolding, scattered seating elements",
-        "accent_features": "Intense stage lighting, tribal art, glowing lanterns",
-        "dominant": "Pale dust tones with broad coverage",
-        "secondary": "Vibrant artificial light hues, accenting the DJ stage and pathways",
-        "accent": "Deep blues and purples on the DJ booth, fiery oranges from scattered heat sources",
-        "ambient": "Warm artificial glow with cool natural sky contrast",
-        "structure": {
-          "form": "irregular",
-          "roofType": "open-sky",
-          "scale": "medium",
-          "orientation": "wide",
-          "openings": "open-passages",
-          "functionalType": "entertainment"
-        },
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": null,
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": "Contrast between warm artificial lights and cool natural sky",
-        "soundscape_base": "Rhythmic and percussive electronic beats",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center, foreground",
-          "description": "A wide, decorated archway serving as the main entrance, leading into the heart of the camp."
-        },
-        {
-          "type": "passage",
-          "position": "left, midground",
-          "description": "A worn, dusty path winding between temporary structures, offering glimpses into smaller gathering areas."
-        },
-        {
-          "type": "stairs",
-          "position": "right, midground",
-          "description": "Crude, makeshift wooden stairs ascending to an elevated DJ platform, a focal point of the scene."
-        },
-        {
-          "type": "passage",
-          "position": "background",
-          "description": "Dimly lit passages between tents and stalls, suggesting secondary access and hidden spaces."
-        }
-      ],
-      "dominantElements": [
-        "The central DJ stage, illuminated by dynamic lights",
-        "Clusters of makeshift tents and stalls",
-        "A bonfire or heat source casting a warm glow",
-        "Temporary seating arrangements and gathering circles"
-      ],
-      "uniqueIdentifiers": [
-        "Intricately painted tribal motifs on fabric banners",
-        "A unique, handcrafted DJ booth structure",
-        "A large, symbolic totem or effigy",
-        "The rhythmic pulse of bass from the DJ set"
-      ],
-      "searchDesc": "Temporary camp with DJ stage, vibrant lights, tribal decor, and a gathering crowd.",
-      "slug": "maya-wariour-oasis",
-      "niches": [],
-      "primaryMedia": "media-1764846487027-zobron1ka"
-    },
-    "niche-1764846516805-k80f3o78m": {
-      "id": "niche-1764846516805-k80f3o78m",
-      "type": "niche",
-      "name": "interior of Maya Wariour Oasis",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A rectangular hall with uneven, earth-plastered walls transitioning from exterior tones. A flat, salvaged wood ceiling is lit by scattered lanterns, creating warm artificial light contrasting with hints of cool blue. The space is asymmetrical, with richer tones to the left and open, lit areas to the right.",
-        "colorsAndLighting": "Dominated by dusty earth tones and warm lantern light, with accents of deep blues and purples from banners. Fiery orange light highlights a central platform, contrasting with faint, cool blue hints from above. Shadows are soft and warm.",
-        "atmosphere": "The air feels warm and dry, carrying the scent of earth and aged canvas. A sense of vibrant life and temporary sanctuary permeates the space, with an ephemeral yet joyous connection.",
-        "materials": "Walls are rough, sun-baked earth, unevenly plastered with patches of worn canvas. The ceiling is made of salvaged wood planks. Seating and framing elements are constructed from rough timber and worn canvas.",
-        "mood": "A primal, joyous, and ephemeral mood of intense human connection and belonging within a vibrant sanctuary.",
-        "sounds": "Muffled voices, rustling fabric, crackling lanterns, gentle footsteps.",
-        "spatialLayout": "A rectangular hall with an asymmetrical layout. A low, winding passage on the left leads deeper, while the midground features informal seating and a focal platform on the right. The ultra-wide lens emphasizes the depth and scale.",
-        "primary_surfaces": "Rough sun-baked earth walls, worn canvas plaster",
-        "secondary_surfaces": "Salvaged wood planks (ceiling, furniture, platform)",
-        "accent_features": "Vibrant fabric banners (deep blues and purples), fiery orange spotlit platform, scattered lanterns",
-        "dominant": "Pale dust tones with broad coverage",
-        "secondary": "Warm lantern glow, dark blues and purples on the left",
-        "accent": "Fiery orange light on the right platform",
-        "ambient": "Warm and artificial, with cool blue hints",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": null,
-        "cultural_tone": null,
-        "materials_base": null,
-        "mood_baseline": "A primal, yet joyous and ephemeral mood of intense human connection and shared experience. It evokes a feeling of belonging and liberation within a temporary, vibrant sanctuary.",
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764846516803-mvtxstdq4",
-      "description": "A rectangular interior hall with rough earth walls, worn canvas, and a salvaged wood ceiling, illuminated by lanterns and contrasting blue hues. Features a winding passage with banners and informal seating.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "left, low, winding",
-          "description": "A low, winding passage framed by rough wooden posts and draped with vibrant fabric banners."
-        }
-      ],
-      "dominantElements": [
-        "rough, sun-baked earth walls",
-        "worn canvas plaster",
-        "salvaged wood plank ceiling",
-        "scattered lanterns",
-        "vibrant fabric banners (deep blues and purples)",
-        "informal seating arrangements",
-        "elevated timber platform"
-      ],
-      "uniqueIdentifiers": [
-        "transition from dusty exterior earth tones",
-        "uneven canvas plaster patches",
-        "faint cool blue hues suggesting sky",
-        "low, winding passage with banners",
-        "asymmetrical composition with darker left and warmer right"
-      ],
-      "searchDesc": "Rough earth hall, canvas plaster, wood ceiling, lanterns, blue/purple banners, informal seating.",
-      "slug": "interior-of-maya-wariour-oasis"
-    },
-    "2ebc7194-ca9a-4a73-9d9c-3e2123d59368": {
-      "id": "2ebc7194-ca9a-4a73-9d9c-3e2123d59368",
-      "type": "location",
-      "name": "The Salt Spray Tavern",
-      "description": "A sturdy, weathered tavern perched precariously on the edge of the ocean. Its simple wooden structure defies the relentless sea winds, offering a refuge of warmth and camaraderie to those who brave its entrance.",
-      "dna": {
-        "looks": "The tavern is a functional, unadorned wooden structure with a steeply pitched roof. Its walls are clad in thick, dark planks, worn smooth by years of ocean spray and wind. The windows are small and set deep within the walls, often streaked with salt and the occasional seabird droppings.",
-        "colorsAndLighting": "Dominant cool greys and deep greens are evident in the wood stains and mossy patches. The lighting is dim and warm from within, casting inviting pools of light onto the water-stained exterior.",
-        "atmosphere": "The air is thick with the briny scent of the sea, mixed with the faint aroma of woodsmoke and drying fish. A constant, low hum of the ocean is punctuated by the cries of gulls and the creak of the wooden structure.",
-        "materials": "The primary material is rough-hewn, salt-bleached wood, giving way to patches of weathered stone at the foundation. Slate shingles form the roof, often slick with moisture.",
-        "mood": "A sense of resilient simplicity pervades the tavern, a quiet testament to enduring the harsh coastal elements. It feels both exposed to nature and a steadfast refuge from it.",
-        "sounds": "Waves crashing, wind whistling, seagulls crying, wood groaning, distant foghorn",
-        "spatialLayout": "A rectangular building with a compact footprint, designed to withstand strong winds. The entrance is centrally located, with windows providing glimpses of the turbulent sea.",
-        "primary_surfaces": "weathered wooden planks, slate roof shingles, salt-streaked glass",
-        "secondary_surfaces": "rough stone foundation, thick timber beams, rope lashings",
-        "accent_features": "crooked signage, nautical debris, steaming chimney",
-        "dominant": "Cool grey with significant coverage",
-        "secondary": "Deep green accents on door and window frames",
-        "accent": "Muted brown on timber and rope",
-        "ambient": "Cool and slightly diffused",
-        "structure": {
-          "form": "rectangular",
-          "roofType": "pitched",
-          "scale": "medium",
-          "orientation": "horizontal",
-          "openings": "minimal",
-          "functionalType": "commercial"
-        },
-        "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular, functional and unadorned wooden structures.",
-        "cultural_tone": "Maritime heritage, self-sufficient coastal living, a deep respect for nature.",
-        "materials_base": "Natural wood, stone, slate",
-        "mood_baseline": "Tranquil, resilient, and introspective. A sense of enduring simplicity in the face of the elements.",
-        "palette_bias": "cool neutrals, muted earth tones, sea-inspired blues and greens",
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "Seagulls"
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center",
-          "description": "A heavy, salt-bleached wooden door leading into the main bar area."
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "A narrow, open passage between the tavern and a smaller outbuilding, possibly storage or staff quarters."
-        },
-        {
-          "type": "stairs",
-          "position": "background",
-          "description": "A rickety set of wooden stairs descending towards a small, private dock, barely visible through the sea spray."
-        }
-      ],
-      "dominantElements": [
-        "weathered wooden exterior",
-        "salt-encrusted roof shingles",
-        "large, salt-streaked windows",
-        "rope and nautical debris decorations"
-      ],
-      "uniqueIdentifiers": [
-        "a crooked signpost depicting a kraken",
-        "a perpetually steaming chimney",
-        "a scattering of fishing nets and lobster traps",
-        "a weathered brass sextant mounted by the door"
-      ],
-      "searchDesc": "A simple Nordic coastal bar by the ocean, featuring weathered wood and sea-inspired colors.",
-      "slug": "the-salt-spray-tavern",
-      "niches": [],
-      "primaryMedia": "media-1764846590215-lrcne9r8l"
-    },
-    "niche-1764846609190-f8ka1gmt8": {
-      "id": "niche-1764846609190-f8ka1gmt8",
-      "type": "niche",
-      "name": "interior of The Salt Spray Tavern",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A rectangular hall constructed from dark, salt-bleached wooden planks with sharp corners and a steeply pitched wooden ceiling. Dim pools of warm light create long shadows, while small, salt-streaked windows offer glimpses of the sea. An off-center archway leads into deeper sections, and a weathered bench sits against the wall.",
-        "colorsAndLighting": "Dominated by the cool grey of the sea and stone, contrasted with the dark, salt-bleached wood. Dim, warm light sources create an inviting, shadowed atmosphere.",
-        "atmosphere": "The air is thick with the scent of brine and woodsmoke, fostering an enclosed and cozy feeling. A sense of resilient simplicity permeates the space, a functional refuge against the harsh coastal elements.",
-        "materials": "Primarily dark, salt-bleached wooden planks and rough grey stone. Textures are worn and weathered, reflecting age and exposure to the elements.",
-        "mood": "Resilient simplicity and steadfast refuge. The tavern evokes a feeling of cozy security against a turbulent environment.",
-        "sounds": "Creaking wood, distant waves, faint crackling fire.",
-        "spatialLayout": "A rectangular hall with straight walls and sharp corners, featuring an off-center archway creating depth and a sense of mystery.",
-        "primary_surfaces": "Walls of dark, salt-bleached wooden planks; solid, steeply pitched wooden ceiling.",
-        "secondary_surfaces": "Floor of worn dark wood and rough grey stone.",
-        "accent_features": "Asymmetrical wooden archway, weathered wooden bench, salt-streaked windows.",
-        "dominant": "Cool grey (walls, stone floor, sea views)",
-        "secondary": "Dark wood (planks, ceiling, furniture)",
-        "accent": "Warm pools of light (lighting)",
-        "ambient": "Dim and warm",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Simple Nordic coastal vernacular, functional and unadorned wooden structures.",
-        "cultural_tone": "Maritime heritage, self-sufficient coastal living, a deep respect for nature.",
-        "materials_base": null,
-        "mood_baseline": "A sense of resilient simplicity pervades the tavern, a quiet testament to enduring the harsh coastal elements. It feels both exposed to nature and a steadfast refuge from it.",
-        "palette_bias": null,
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764846609189-ix0f5222z",
-      "description": "The dim, salt-worn interior of a Nordic coastal tavern, offering a cozy refuge.",
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "midground, off-center",
-          "description": "Asymmetrical wooden archway leading to deeper recesses, highlighted by a subtle glow."
-        },
-        {
-          "type": "window",
-          "position": "walls",
-          "description": "Small, deeply set wooden-framed windows, streaked with salt, offering muted sea views."
-        }
-      ],
-      "dominantElements": [
-        "dark wooden planks",
-        "steeply pitched wooden ceiling",
-        "weathered wooden bench",
-        "wooden archway"
-      ],
-      "uniqueIdentifiers": [
-        "salt-bleached wooden planks",
-        "streaked salt windows",
-        "mix of dark wood and rough grey stone floor",
-        "off-center wooden archway"
-      ],
-      "searchDesc": "Cozy, dimly lit tavern with salt-bleached wood, ocean views, and a Nordic coastal feel.",
-      "slug": "interior-of-the-salt-spray-tavern"
-    },
-    "loc-1764847602269-4al6phq53": {
-      "id": "loc-1764847602269-4al6phq53",
-      "type": "host",
-      "name": "Xylos Prime",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A sprawling retro-futuristic city with a distinct organic architectural style, characterized by tall, slender spires and smooth, bulbous structures. The urban landscape is bathed in the warm, vibrant hues of an alien sky, punctuated by unusual celestial bodies.",
-        "colorsAndLighting": "A primary palette of teal and pale green for the architecture, sharply contrasted by a dominant, vibrant orange sky. Interior lighting is consistently warm and inviting.",
-        "atmosphere": "The air is clean and temperate, likely managed by advanced environmental systems. A constant, subtle hum of sophisticated technology permeates the environment, suggesting a highly functional and advanced society.",
-        "materials": "Predominantly smooth, polished composites and bio-engineered organic materials. Textures are often seamless, with an emphasis on polished and glassy finishes.",
-        "mood": "Optimistic, wondrous, and exciting, evoking the feeling of exploring a highly advanced and harmonious alien civilization.",
-        "sounds": "Ambient technological hum, distant urban sounds, faint atmospheric resonance",
-        "spatialLayout": "A vast, multi-layered urban expanse with significant verticality and depth, defined by towering structures and expansive skies.",
-        "primary_surfaces": "Smooth, seamless architectural surfaces",
-        "secondary_surfaces": "Polished composites, organic compounds",
-        "accent_features": "Bioluminescent architectural elements, glowing windows",
-        "dominant": "Vibrant Orange (sky)",
-        "secondary": "Teal and Pale Green (architecture)",
-        "accent": "Warm Yellow/Orange (interior lighting)",
-        "ambient": "Warm and vibrant",
-        "structure": {
-          "form": "organic",
-          "roofType": "open-sky",
-          "scale": "large",
-          "orientation": "vertical",
-          "openings": "large-glass",
-          "functionalType": "civic"
-        },
-        "genre": "Retro-futurism",
-        "architectural_tone": "Organic retro-futurism with bioluminescent accents",
-        "cultural_tone": "A central nexus for advanced, interconnected urban life on an alien world",
-        "materials_base": "Smooth composites and bio-engineered organics",
-        "mood_baseline": "Wonder and optimistic advancement",
-        "palette_bias": "Cool greens and teals contrasted with vibrant oranges and warm yellows",
-        "soundscape_base": "Subtle technological hum and distant urban ambience",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A retro-futuristic metropolis on an alien world, bathed in the perpetual glow of a unique celestial arrangement. It is a thriving urban hub where advanced technology and organic architecture coexist.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Organic-looking architecture",
-        "Advanced technology",
-        "Unique celestial bodies"
-      ],
-      "uniqueIdentifiers": [
-        "Vibrant orange sky",
-        "Multiple celestial orbs"
-      ],
-      "searchDesc": "An alien retro-futuristic city with organic spires under a unique orange sky.",
-      "slug": "xylos-prime"
-    },
-    "ccaaa4d2-2b79-4c02-a6d9-2a724ca7d4fb": {
-      "id": "ccaaa4d2-2b79-4c02-a6d9-2a724ca7d4fb",
-      "type": "region",
-      "name": "The Lumina Spire District",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A cityscape of exceptionally tall, slender spires with organic curves and flowing lines, piercing a vivid orange sky. Many structures feature rounded appendages and numerous windows that emit a warm, inviting glow. Sleek, streamlined vehicles navigate aerial pathways or are parked below.",
-        "colorsAndLighting": "Dominated by the intense orange of the sky, with buildings primarily in shades of teal and pale green. Warm light spills from countless windows, creating a dynamic, illuminated environment.",
-        "atmosphere": "Bustling and energetic, with a sense of constant motion from vehicles and silhouetted figures. The air is likely clean and pleasant, hinting at advanced atmospheric control.",
-        "materials": "Smooth composites, bio-engineered organic matter, with glassy window surfaces. Textures are generally seamless and polished.",
-        "mood": "Excitement, advanced technology, and optimistic futurism.",
-        "sounds": "Distant city hum, faint vehicle propulsion sounds, urban chatter",
-        "spatialLayout": "Vertically oriented with immense depth created by the towering spires and the expanse of the sky. The layout suggests a dense but organized urban environment.",
-        "primary_surfaces": "Slender organic spires",
-        "secondary_surfaces": "Glassy windows, disc-like appendages",
-        "accent_features": "Glowing windows, aerial vehicles",
-        "dominant": "Vibrant Orange (sky)",
-        "secondary": "Teal and Pale Green (buildings)",
-        "accent": "Warm yellow/orange (window glows)",
-        "ambient": "Brilliant and glowing",
-        "structure": {
-          "form": "organic",
-          "roofType": "open-sky",
-          "scale": "large",
-          "orientation": "vertical",
-          "openings": "large-glass",
-          "functionalType": "commercial"
-        },
-        "genre": null,
-        "architectural_tone": "Organic retro-futurism with bioluminescent accents",
-        "cultural_tone": "A bustling hub for advanced urban life",
-        "materials_base": "Smooth composites and bio-engineered organics",
-        "mood_baseline": "Optimistic advancement",
-        "palette_bias": "Cool greens and teals contrasted with vibrant oranges and warm yellows",
-        "soundscape_base": "Energetic urban hum",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "The vibrant central hub of Xylos Prime, defined by towering, slender spires of organic architecture reaching into the orange sky. Aerial thoroughfares and a lively urban presence characterize this district.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Tall, slender organic spires",
-        "Vibrant orange sky",
-        "Streamlined vehicles"
-      ],
-      "uniqueIdentifiers": [
-        "Multiple celestial bodies visible",
-        "Buildings with rounded, disc-like appendages"
-      ],
-      "searchDesc": "A bustling district of tall, organic spires under a vibrant orange sky, with flying vehicles.",
-      "slug": "the-lumina-spire-district"
-    },
-    "50860283-4ddb-4243-be00-ee30cbe1dfdb": {
-      "id": "50860283-4ddb-4243-be00-ee30cbe1dfdb",
-      "type": "location",
-      "name": "The Great Orb of Xylos",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A monumental, perfectly smooth sphere dominates the foreground, its pale green surface gleaming. Visible interior levels and complex mechanical details peek through sections of the structure, hinting at its immense scale and function. The flared base provides a strong foundation, punctuated by large, inviting arched openings.",
-        "colorsAndLighting": "Predominantly pale green with a subtle, internal glow emanating from multi-level windows. The smooth surface reflects the ambient light of the city and sky.",
-        "atmosphere": "The immediate vicinity feels relatively calm, a stark contrast to the bustling city beyond. The air is likely clean and temperate, with a faint hum of advanced technology. A sense of awe is generated by its sheer presence.",
-        "materials": "Composed of seamless, polished composite or bio-engineered organic matter. Textures are uniformly smooth and almost iridescent, with glassy window surfaces.",
-        "mood": "Evokes a profound sense of wonder and optimistic advancement, standing as a beacon of a thriving, futuristic civilization.",
-        "sounds": "Subtle hum of advanced technology, distant city sounds",
-        "spatialLayout": "A single, dominant, massive spherical form occupying significant foreground space. Its scale suggests a vast interior.",
-        "primary_surfaces": "Smooth, seamless sphere",
-        "secondary_surfaces": "Polished base, glassy windows",
-        "accent_features": "Visible interior workings, arched entrances",
-        "dominant": "Pale Green",
-        "secondary": "Warm yellow/orange (interior lighting)",
-        "accent": "Teal (architectural trim/details)",
-        "ambient": "Soft, inviting glow",
-        "structure": {
-          "form": "spherical",
-          "roofType": "domed",
-          "scale": "large",
-          "orientation": "cubic",
-          "openings": "arched-windows",
-          "functionalType": "civic"
-        },
-        "genre": null,
-        "architectural_tone": "Organic retro-futurism with bioluminescent accents",
-        "cultural_tone": "A central nexus for advanced, interconnected urban life",
-        "materials_base": "Smooth composites and bio-engineered organics",
-        "mood_baseline": "Wonder and optimistic advancement",
-        "palette_bias": "Cool greens and teals contrasted with vibrant oranges and warm yellows",
-        "soundscape_base": "Subtle technological hum",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A colossal, smooth pale green spherical structure serving as the central nexus of Xylos Prime. It is supported by a thick, flared base with grand arched entrances, hinting at the intricate workings and multi-level interiors visible within.",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "base",
-          "description": "Arched entrances leading into the Orb's interior"
-        }
-      ],
-      "dominantElements": [
-        "Massive spherical structure",
-        "Flared base with arches",
-        "Visible interior workings/windows"
-      ],
-      "uniqueIdentifiers": [
-        "Smooth, seamless pale green finish",
-        "Intricate internal details visible from exterior"
-      ],
-      "searchDesc": "A giant, smooth pale green sphere with arched entrances and visible internal mechanisms.",
-      "slug": "the-great-orb-of-xylos",
-      "primaryMedia": "media-1764847682257-klv8qi1s4"
-    },
-    "3c559e2e-c4e3-4678-a093-e93ca3e881e8": {
-      "id": "3c559e2e-c4e3-4678-a093-e93ca3e881e8",
-      "type": "niche",
-      "name": "The Central Concourse",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The space is vast and open, dominated by a colossal, smooth spherical structure in the foreground. Above and beyond, the city's slender, organic spires stretch towards a brilliant orange sky. Multi-level windows and glowing interiors are visible on buildings and the central sphere, hinting at immense complexity.",
-        "colorsAndLighting": "The primary palette is a refreshing mix of teal and pale green, contrasted sharply by the vibrant orange sky and warm interior lighting. Subtle glows emanate from countless windows, creating a soft, inviting ambiance.",
-        "atmosphere": "The air is likely clean and perhaps slightly humid, carrying the faint hum of advanced technology. The temperature is pleasant, a constant comfort within the sheltered concourse. There's a palpable sense of motion and life from the city beyond, even if the immediate concourse feels relatively calm.",
-        "materials": "Dominant materials appear to be smooth, polished composites and potentially bio-engineered organic matter. Textures range from glassy window surfaces to the seamless, almost iridescent finish of the central sphere.",
-        "mood": "A sense of wonder and optimistic advancement pervades the space. It evokes feelings of exploration and the excitement of a thriving, futuristic civilization.",
-        "sounds": "Distant city hum, faint mechanical whirs, hushed footsteps, soft ambient chimes.",
-        "spatialLayout": "The concourse is a grand, open interior space, likely with a high ceiling and significant depth. The view is framed by the foreground sphere and the distant cityscape, creating layered perspectives.",
-        "primary_surfaces": "Smooth, polished composites, translucent organic panels, vast expanses of glass.",
-        "secondary_surfaces": "Intricately patterned internal mechanical components, flared structural supports, paved walkways.",
-        "accent_features": "Warm glowing windows, rounded protruding building appendages, arched entrances.",
-        "dominant": "Pale Green (central sphere, building accents)",
-        "secondary": "Teal (building exteriors, walkways)",
-        "accent": "Warm Orange/Yellow (interior lighting, sky, vehicles)",
-        "ambient": "Warm, inviting glow",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Organic retro-futurism with bioluminescent accents",
-        "cultural_tone": "A central nexus for advanced, interconnected urban life",
-        "materials_base": "Smooth, advanced composites with organic integration",
-        "mood_baseline": "Optimistic, wondrous, connected",
-        "palette_bias": "Cool greens and teals contrasted with vibrant oranges and warm yellows",
-        "soundscape_base": "Subtle technological hum with distant urban sounds",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "This immense, multi-level hub serves as the vibrant heart of The Great Orb, connecting various districts of Xylos Prime. It offers awe-inspiring views of the bustling retro-futuristic city through its numerous panoramic windows.",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "foreground-right",
-          "description": "Large, arched entrances to the pale green spherical structure."
-        },
-        {
-          "type": "passage",
-          "position": "midground-left",
-          "description": "Pathways alongside parked vehicles."
-        },
-        {
-          "type": "stairs",
-          "position": "implied-within-structure",
-          "description": "Multi-level interior access."
-        }
-      ],
-      "dominantElements": [
-        "Massive, smooth pale green spherical structure",
-        "Intricate interior workings visible through windows",
-        "Multi-level organic spires of the city beyond",
-        "Vibrant orange sky with multiple celestial bodies",
-        "Sleek, streamlined retro-futuristic vehicles"
-      ],
-      "uniqueIdentifiers": [
-        "Glow of warm interior lights",
-        "Rounded, disc-like building appendages",
-        "Smooth, flared base of the central structure",
-        "Pale green and teal architectural palette",
-        "Silhouette figures suggesting urban activity"
-      ],
-      "searchDesc": "Retro-futuristic concourse, organic spires, orange sky, alien city views, central orb structure.",
-      "slug": "the-central-concourse",
-      "primaryMedia": "media-1764847627440-yda27gky7"
-    },
-    "niche-1764847707044-pqzy2q1h5": {
-      "id": "niche-1764847707044-pqzy2q1h5",
-      "type": "niche",
-      "name": "interior of The Great Orb of Xylos",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, echoing hall with a seamless, curving domed ceiling and floor made of polished, iridescent bio-engineered composite. Translucent panels reveal intricate, glowing internal mechanics and structures, creating a sense of immense scale and advanced function.",
-        "colorsAndLighting": "Bathed in the ethereal glow of pale green bioluminescent lighting from above, with soft, warm yellow and orange light emanating from interior elements. The floor subtly reflects these warm hues, accented by delicate teal trim.",
-        "atmosphere": "The air is still and carries a faint hum of advanced machinery. A profound sense of wonder and optimistic advancement pervades the space, like standing within a living, breathing organism of technology.",
-        "materials": "Dominantly a seamless, polished composite mimicking iridescent bio-engineered organic matter. Translucent panels are integrated, revealing complex internal workings. The floor shares this polished composite finish.",
-        "mood": "Evokes a profound sense of wonder and optimistic advancement, standing as a beacon of a thriving, futuristic civilization.",
-        "sounds": "Distant hum, soft echoes, gentle mechanical whirs.",
-        "spatialLayout": "A colossal, echoing interior hall with a dominant unbroken domed ceiling. The curving forms create a sense of depth, drawing the eye towards the distant opening and deeper recesses.",
-        "primary_surfaces": "Seamless polished composite, Iridescent bio-engineered organic matter",
-        "secondary_surfaces": "Translucent panels, Polished floor",
-        "accent_features": "Softly glowing internal structures, Delicate teal architectural trim",
-        "dominant": "Pale Green (bioluminescence)",
-        "secondary": "Warm Yellow and Orange (internal illumination)",
-        "accent": "Teal (architectural trim)",
-        "ambient": "Ethereal bioluminescent glow",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Organic retro-futurism with bioluminescent accents",
-        "cultural_tone": "A central nexus for advanced, interconnected urban life",
-        "materials_base": null,
-        "mood_baseline": "Profound sense of wonder and optimistic advancement",
-        "palette_bias": "Cool greens and vibrant warm tones",
-        "soundscape_base": "Subtle advanced technological hum",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764847707043-a82wyi161",
-      "description": "The colossal, echoing interior hall of the Great Orb of Xylos, illuminated by pale green bioluminescence and internal warm lights, showcasing advanced bio-engineered architecture.",
-      "navigableElements": [
-        {
-          "type": "ramp",
-          "position": "left",
-          "description": "A wide, gently sloped ramp ascending diagonally towards a distant, softly lit opening."
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "A complex network of smaller, glowing alcoves and passages carved into the curving walls."
-        }
-      ],
-      "dominantElements": [
-        "Seamless, polished composite walls and domed ceiling",
-        "Translucent panels revealing internal mechanical workings and glowing structures",
-        "Broad, polished composite floor",
-        "Grand, flaring arched entryway (implied entrance)",
-        "Gently sloped ramp (left)",
-        "Network of alcoves and passages (right)"
-      ],
-      "uniqueIdentifiers": [
-        "Iridescent bio-engineered organic matter material",
-        "Visible multi-level mechanical workings within translucent panels",
-        "Asymmetric placement of navigable elements",
-        "Echoing, colossal scale"
-      ],
-      "searchDesc": "Colossal bio-engineered hall with glowing mechanics, pale green bioluminescence, and warm internal lights.",
-      "slug": "interior-of-the-great-orb-of-xylos"
-    },
-    "loc-1764847840738-frztm02hz": {
-      "id": "loc-1764847840738-frztm02hz",
-      "type": "host",
-      "name": "Petra",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Monumental rock-cut architecture dominates the landscape, with structures seamlessly integrated into soaring sandstone cliffs. Grand facades and intricate carvings reveal a sophisticated ancient civilization, set against vast desert expanses and winding canyons.",
-        "colorsAndLighting": "Dominated by warm ochre and rose tones of the sandstone, intensely illuminated by a bright desert sun that creates stark, dramatic shadows.",
-        "atmosphere": "The air is dry and still, carrying the scent of dust and ancient earth. Expect extreme temperatures, from scorching heat to cool evenings, with a pervasive sense of profound silence in remote areas.",
-        "materials": "Primarily natural sandstone, exhibiting a range of textures from smooth to rough. Evidence of ancient plaster and faded paint adorns some surfaces, weathered by time.",
-        "mood": "Evokes awe, wonder, and timelessness, connecting visitors to the deep past through sheer scale and antiquity.",
-        "sounds": "Whispering wind, profound silence, distant echoes",
-        "spatialLayout": "Sprawling city carved into natural rock formations, with vast open plazas, winding canyons, and elevated structures offering expansive views.",
-        "primary_surfaces": "Carved sandstone",
-        "secondary_surfaces": "Eroded rock, ancient plaster",
-        "accent_features": "Intricate rock carvings, monumental facades",
-        "dominant": "Ochre (70%)",
-        "secondary": "Deep rose (20%)",
-        "accent": "Faded plaster whites (10%)",
-        "ambient": "Bright and harsh desert light",
-        "structure": null,
-        "genre": "Historical Fantasy",
-        "architectural_tone": "Monumental Nabataean rock-cut architecture with Roman influence",
-        "cultural_tone": "Ancient civilizations, Bedouin heritage, historical pilgrimage",
-        "materials_base": "Natural sandstone, weathered finishes",
-        "mood_baseline": "Awe-inspiring, timeless",
-        "palette_bias": "Warm earth tones, desert hues",
-        "soundscape_base": "Quiet and natural",
-        "flora_base": "Desert scrub, sparse vegetation",
-        "fauna_base": "Desert wildlife (insects, reptiles, birds)"
-      },
-      "description": "An ancient Nabataean city carved directly into sandstone cliffs in southern Jordan. Famous for its rock-cut architecture and water conduit system, it was a vital crossroads for trade routes.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Rock-cut architecture",
-        "Canyons",
-        "Plains"
-      ],
-      "uniqueIdentifiers": [
-        "The Treasury (Al-Khazneh)",
-        "The Monastery (Ad-Deir)"
-      ],
-      "searchDesc": "Ancient Nabataean city in Jordan, carved from sandstone cliffs, known for monumental architecture.",
-      "slug": "petra"
-    },
-    "b61d3a2f-f558-434e-9d60-19b035ee8b00": {
-      "id": "b61d3a2f-f558-434e-9d60-19b035ee8b00",
-      "type": "region",
-      "name": "Jordan",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Sun-baked sandstone structures rise majestically from the desert floor, showcasing intricate carvings and monumental scale. Ancient paths wind through rocky canyons and across vast, open plains, hinting at a rich history of human passage. The architecture is monumental, carved directly into the natural rock formations.",
-        "colorsAndLighting": "Warm ochre and deep rose tones dominate the sandstone, illuminated by a bright, harsh desert sun that casts long, sharp shadows. The light is intense, revealing every texture and crevice.",
-        "atmosphere": "The air is dry and still, carrying the faint scent of dust and dry earth. Temperatures can range from intensely hot during the day to cool in the evenings. A sense of profound silence pervades the more remote areas, broken only by the whisper of wind.",
-        "materials": "The primary material is natural sandstone, ranging from smooth, polished surfaces to rough, eroded textures. Some areas show signs of ancient plaster and painted finishes, now faded and weathered.",
-        "mood": "Evokes a sense of awe, wonder, and timelessness. The sheer scale and antiquity of the sites inspire contemplation and a feeling of being connected to the past.",
-        "sounds": "wind, distant echoes, camel bells, hushed voices, crunching sand",
-        "spatialLayout": "Expansive and open in the desert regions, transitioning to enclosed, canyon-like spaces within Petra. The scale is immense, designed to impress and dwarf the individual.",
-        "primary_surfaces": "Eroded sandstone, carved facades",
-        "secondary_surfaces": "Packed earth, loose sand, weathered stone",
-        "accent_features": "Intricate carvings, Nabataean columns, worn inscriptions",
-        "dominant": "Ochre (sandstone, 70%)",
-        "secondary": "Rose (sandstone highlights, 20%)",
-        "accent": "Faded white (ancient plaster, 5%), dark brown (shadows, 5%)",
-        "ambient": "Bright, desert sun",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Monumental Nabataean rock-cut architecture, Roman influence",
-        "cultural_tone": "Ancient civilizations, Bedouin heritage, historical pilgrimage",
-        "materials_base": "Natural stone, earth",
-        "mood_baseline": "Awe-inspiring, ancient, serene",
-        "palette_bias": "Warm earth tones, desert hues",
-        "soundscape_base": "Natural, quiet, echoing",
-        "flora_base": "Sparse desert scrub, date palms near oases",
-        "fauna_base": "Camels, desert lizards, birds of prey"
-      },
-      "description": "A country in the Middle East, known for its ancient sites and desert landscapes.",
-      "navigableElements": [
-        {
-          "type": "path",
-          "position": "winding desert trails",
-          "description": "worn by centuries of footsteps"
-        },
-        {
-          "type": "archway",
-          "position": "ancient Nabataean ruins",
-          "description": "carved directly into sandstone cliffs"
-        },
-        {
-          "type": "passage",
-          "position": "narrow siq",
-          "description": "leading to the Treasury"
-        }
-      ],
-      "dominantElements": [
-        "rose-red sandstone cliffs",
-        "vast desert plains",
-        "ancient stone structures",
-        "bedouin tents"
-      ],
-      "uniqueIdentifiers": [
-        "the Treasury's facade",
-        "monasteries carved into rock",
-        "vast sand dunes",
-        "Roman amphitheaters"
-      ],
-      "searchDesc": "Explore the ancient Nabataean city of Petra, wander through the desert landscapes of Wadi Rum, and discover historical sites.",
-      "slug": "jordan",
-      "primaryMedia": "media-1764847854750-szy5384o2"
-    },
-    "aaf4e7c2-e208-4299-bff8-18bd25059584": {
-      "id": "aaf4e7c2-e208-4299-bff8-18bd25059584",
-      "type": "location",
-      "name": "The Sunstone Temple",
-      "description": "A monumental Nabataean temple carved directly into the ochre sandstone cliffs. Its Roman-influenced facade features grand colonnades and intricate relief work, exuding an aura of ancient reverence.",
-      "dna": {
-        "looks": "This temple is a testament to ancient craftsmanship, carved directly from the living rock. Its facade is dominated by grand, colossal pillars of sandstone, flanking a monumental, deeply recessed archway. Relief carvings depicting celestial bodies and ancient deities adorn the surfaces, speaking of a forgotten cosmology.",
-        "colorsAndLighting": "The primary color is a rich ochre, derived from the sandstone, bathing the structure in a warm, ancient glow. Sunlight casts dramatic, long shadows, emphasizing the depth and scale of the carvings.",
-        "atmosphere": "The air is still and dry, carrying the scent of ancient dust and sun-baked stone. A profound silence prevails, broken only by the whisper of the desert wind, fostering an atmosphere of deep contemplation and reverence. The temperature is cool within the shadowed recesses.",
-        "materials": "The temple is constructed entirely from natural sandstone, showcasing its granular texture and natural erosion. The surfaces are worn smooth by millennia of exposure and touch, yet retain their majestic form.",
-        "mood": "Evokes a profound sense of awe and timelessness. The sheer scale and antiquity inspire a feeling of being connected to the past and the ancient forces that shaped this sacred place.",
-        "sounds": "Silence, wind whispers, distant echoes, faint chanting",
-        "spatialLayout": "The temple is carved into a sheer cliff face, presenting a broad, monumental facade. The main entrance is a vast, deep archway that promises immense interior spaces, with flanking passages suggesting a complex, layered structure within the rock.",
-        "primary_surfaces": "Ochre sandstone, carved rock",
-        "secondary_surfaces": "Eroded stone, ancient dust",
-        "accent_features": "Intricate relief carvings, Roman-inspired capitals, celestial motifs",
-        "dominant": "Ochre (70%)",
-        "secondary": "Light tan (20%)",
-        "accent": "Deep shadow browns (10%)",
-        "ambient": "Warm, golden",
-        "structure": {
-          "form": "arched",
-          "roofType": "open-sky",
-          "scale": "large",
-          "orientation": "wide",
-          "openings": "arched-windows",
-          "functionalType": "religious"
-        },
-        "genre": null,
-        "architectural_tone": "Monumental Nabataean rock-cut architecture with Roman influence",
-        "cultural_tone": "Ancient civilizations, Bedouin heritage, historical pilgrimage",
-        "materials_base": "Natural stone, earth",
-        "mood_baseline": "Awe, wonder, timelessness",
-        "palette_bias": "Warm earth tones, desert hues",
-        "soundscape_base": "Desert silence",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "A massive, ornately carved archway leading into the temple's shadowed interior."
-        },
-        {
-          "type": "passage",
-          "position": "left",
-          "description": "A narrow, dimly lit passage to the left of the main entrance, possibly a side altar or service route."
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "A similar passage to the right, mirroring the left, suggesting a symmetrical design."
-        },
-        {
-          "type": "window",
-          "position": "upper facade",
-          "description": "High, narrow windows carved into the rock face, allowing shafts of light to penetrate the structure."
-        }
-      ],
-      "dominantElements": [
-        "Grand rock-cut facade",
-        "Massive central archway",
-        "Flanking colonnades",
-        "Intricate relief carvings",
-        "Sheer sandstone cliffs"
-      ],
-      "uniqueIdentifiers": [
-        "Carved directly from living rock",
-        "Nabataean and Roman architectural fusion",
-        "Timeless desert sandstone hue",
-        "Monumental scale",
-        "Sacred pilgrimage site aura"
-      ],
-      "searchDesc": "Monumental Nabataean temple carved into sandstone, Roman influence, ochre hues, awe-inspiring.",
-      "slug": "the-sunstone-temple",
-      "niches": [],
-      "primaryMedia": "media-1764847913621-d7gh9c9kh"
-    },
-    "niche-1764847939107-6lz1vo72o": {
-      "id": "niche-1764847939107-6lz1vo72o",
-      "type": "niche",
-      "name": "interior of The Sunstone Temple",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, cavernous hall carved from ochre sandstone, its interior mirroring monumental Nabataean rock-cut architecture with subtle Roman influence. Intricately carved celestial and deity motifs adorn straight, unadorned walls. The ceiling is a flat, unbroken expanse of carved sandstone.",
-        "colorsAndLighting": "Warm, golden sunlight streams from unseen sources, casting dramatic, long shadows across granular surfaces and pooling on the worn floor. The dominant color is ochre, highlighted by variations in tan to deep brown sandstone.",
-        "atmosphere": "The air within is cool and still, carrying the scent of ancient dust, contributing to an atmosphere of profound awe and timelessness. There is no sense of outward weather or visible sky.",
-        "materials": "The primary material is ochre sandstone, appearing granular on walls and as worn slabs on the floor. The stone is carved and eroded, showing its age and permanence.",
-        "mood": "Evokes a profound sense of awe and timelessness, connecting the viewer to the ancient past and sacred forces.",
-        "sounds": "Silence, ancient dust settling, faint echoes.",
-        "spatialLayout": "A vast, cavernous hall with a dynamic, unsymmetrical composition achieved by the interplay of light, shadow, and the positioning of passages. Depth is emphasized by a colossal, deeply recessed archway.",
-        "primary_surfaces": "Ochre sandstone walls, carved sandstone ceiling, eroded sandstone floor slabs",
-        "secondary_surfaces": "Ancient dust",
-        "accent_features": "Intricately carved celestial and deity motifs, concentrated shaft of light in archway",
-        "dominant": "Ochre (70%)",
-        "secondary": "Tan to deep shadow browns (25%)",
-        "accent": "Golden light, deep shadows (5%)",
-        "ambient": "Warm, golden",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Monumental Nabataean rock-cut architecture with Roman influence",
-        "cultural_tone": "Ancient civilizations, Bedouin heritage, historical pilgrimage",
-        "materials_base": null,
-        "mood_baseline": "Profound awe and timelessness",
-        "palette_bias": "Earthy tones, ochre, warm browns",
-        "soundscape_base": "Silent, echoing, ancient",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764847939105-uk9i9km4o",
-      "description": "The awe-inspiring interior of a vast, cavernous hall carved from ochre sandstone, echoing Nabataean and Roman architecture.",
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "midground",
-          "description": "A colossal, deeply recessed archway serving as a passage, illuminated by a concentrated shaft of light."
-        },
-        {
-          "type": "opening",
-          "position": "left wall",
-          "description": "A smaller, off-center opening revealing a dimly lit corridor."
-        }
-      ],
-      "dominantElements": [
-        "Ochre sandstone walls with carved celestial and deity motifs",
-        "Colossal recessed archway",
-        "Flat, carved sandstone ceiling",
-        "Worn sandstone slab floor"
-      ],
-      "uniqueIdentifiers": [
-        "Monumental Nabataean rock-cut architecture with Roman influence",
-        "Intricately carved celestial and deity motifs",
-        "Dramatic interplay of sunlight and long shadows",
-        "Colossal, deeply recessed archway entrance"
-      ],
-      "searchDesc": "Vast ochre sandstone temple hall, Nabataean-Roman style, sunlit, shadowed, awe-inspiring.",
-      "slug": "interior-of-the-sunstone-temple"
-    },
-    "loc-1764847991417-r7d2pezdq": {
-      "id": "loc-1764847991417-r7d2pezdq",
-      "type": "host",
-      "name": "Xylos Prime",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A vast, open landscape defined by a rugged, cracked expanse of reddish-orange earth. Above, a deep blue and cyan sky is densely populated with stars. Several dark, spherical celestial bodies hover in the atmosphere.",
-        "colorsAndLighting": "The scene is lit by the dim, ethereal light of a star-filled sky, casting cool tones. The ground reflects a vibrant reddish-orange hue, creating a strong contrast with the sky.",
-        "atmosphere": "The air is thin and still, with a profound sense of ancient silence and isolation. The lack of visible weather suggests a stable, albeit barren, planetary environment.",
-        "materials": "The dominant ground material is arid, cracked earth. The sky is gaseous and filled with celestial bodies, implying a vast, open, and largely empty space.",
-        "mood": "Evokes a sense of profound isolation, alienness, and vastness. The desolate beauty inspires awe at the cosmic scale.",
-        "sounds": "Silence, faint cosmic radiation hum, distant stellar winds",
-        "spatialLayout": "Expansive and open, with a strong emphasis on verticality due to the vast sky and the low-lying, rugged terrain. The sense of depth is immense.",
-        "primary_surfaces": "Reddish-orange cracked earth, deep blue/cyan star-filled sky",
-        "secondary_surfaces": "Dark spherical celestial bodies",
-        "accent_features": "Stars, hovering spheres",
-        "dominant": "Reddish-orange (Ground) - High coverage",
-        "secondary": "Deep blue/cyan (Sky) - High coverage",
-        "accent": "Dark grey/black (Celestial bodies) - Low coverage",
-        "ambient": "Dim, cool, cosmic",
-        "structure": null,
-        "genre": "Sci-Fi",
-        "architectural_tone": "Harsh natural landscapes with potential for advanced alien structures",
-        "cultural_tone": "Uninhabited or sparsely populated alien world, exploration or scientific interest",
-        "materials_base": "Arid earth, cosmic gases, mineral deposits",
-        "mood_baseline": "Isolation and wonder",
-        "palette_bias": "Cool blues and cyans with warm reds and stark whites",
-        "soundscape_base": "Cosmic ambient silence",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A desolate alien planet characterized by its rugged, cracked reddish-orange landscape and a vast, star-filled deep blue and cyan sky. Celestial bodies hover in its atmosphere.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Vast Sky",
-        "Reddish-Orange Terrain",
-        "Celestial Bodies"
-      ],
-      "uniqueIdentifiers": [
-        "Deep Blue and Cyan Sky",
-        "Hovering Spherical Celestial Bodies"
-      ],
-      "searchDesc": "Desolate alien planet with cracked red terrain and a star-filled blue/cyan sky.",
-      "slug": "xylos-prime"
-    },
-    "fefef6fe-3d0a-4540-99cd-37c19d03f741": {
-      "id": "fefef6fe-3d0a-4540-99cd-37c19d03f741",
-      "type": "region",
-      "name": "The Great Sphere Outskirts",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Dominated by a massive, smooth, off-white spherical structure with numerous small indentations. Intricate, curving white pillars descend from its base towards the ground. Scattered dark, spherical structures are present, suggesting outposts.",
-        "colorsAndLighting": "The area is illuminated by the stark, red glow from the main sphere's central eye-orifice and internal passages. Ambient light from the distant star-filled sky provides a cool, dim illumination.",
-        "atmosphere": "The air is thin and still, with a palpable sense of ancient silence and profound isolation. The environment is stark and devoid of organic life, emphasizing the alien and technological nature of the site.",
-        "materials": "The primary structure is made of a smooth, seamless off-white material, contrasting with the rugged, cracked reddish-orange earth of the ground. Supporting pillars are also white and appear to be of a similar advanced composite.",
-        "mood": "A mix of awe and unease, with a strong sense of mystery due to the alien architecture and the watchful presence implied by the 'eye'.",
-        "sounds": "Distant hums, faint internal machinery noises, wind whispers",
-        "spatialLayout": "The space is dominated by the sheer scale of the central sphere, with the ground stretching out around it. The pillars create a sense of depth and complexity leading away from the main structure.",
-        "primary_surfaces": "Smooth off-white sphere, cracked reddish-orange ground",
-        "secondary_surfaces": "Curving white pillars, dark spherical outposts",
-        "accent_features": "Glowing red eye-like orifice, concentric rings, red interior lights",
-        "dominant": "Off-white (Sphere body, pillars) - High coverage",
-        "secondary": "Reddish-orange (Ground) - Moderate coverage",
-        "accent": "Deep blue/cyan (Sky), Red (Orifice, internal lights), Dark grey/black (Outposts) - Low coverage",
-        "ambient": "Dim, ethereal cool tones",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Advanced alien monolithic",
-        "cultural_tone": "Scientific or observational facility",
-        "materials_base": "Advanced composites, arid earth, crystalline minerals",
-        "mood_baseline": "Awe and unease",
-        "palette_bias": "Cool blues/cyans with warm reds and stark whites",
-        "soundscape_base": "Technological ambient hum",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "The immediate vicinity of a colossal, monolithic alien structure. This area is defined by the complex, curving white pillars supporting the main sphere and is scattered with smaller, dark, spherical outposts.",
-      "navigableElements": [],
-      "dominantElements": [
-        "Great Sphere",
-        "Supporting Pillars",
-        "Dark Spherical Outposts"
-      ],
-      "uniqueIdentifiers": [
-        "Glowing Red Eye-Orifice",
-        "Concentric Rings"
-      ],
-      "searchDesc": "Outskirts of an alien facility with a massive sphere, white pillars, and scattered dark outposts.",
-      "slug": "the-great-sphere-outskirts",
-      "primaryMedia": "media-1764848378474-7wnsdvoz0"
-    },
-    "747c5193-14ab-4eed-9cae-ce41bd9c9e6d": {
-      "id": "747c5193-14ab-4eed-9cae-ce41bd9c9e6d",
-      "type": "location",
-      "name": "The Enigmatic Sphere",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A colossal, perfectly spherical structure dominates the landscape, appearing as an advanced alien facility. Numerous small indentations mar its otherwise smooth, off-white surface. Descending from its base are intricate, curving white pillars, hinting at a complex internal structure.",
-        "colorsAndLighting": "The scene is bathed in the dim, ethereal light of a star-filled deep blue and cyan sky, punctuated by the stark red glow emanating from the sphere's central orifice and internal passages. The ground is a vibrant reddish-orange, contrasting sharply with the white spires and the sphere itself.",
-        "atmosphere": "The air is thin and still, carrying a sense of ancient silence. A palpable feeling of alienness permeates the environment, suggesting a place untouched by organic life. The vastness of the sky and the starkness of the landscape create an atmosphere of profound isolation.",
-        "materials": "The primary structure is composed of a smooth, seamless, off-white material, possibly a type of advanced composite or ceramic. The ground appears to be cracked, arid earth, while the spires are jagged and crystalline, hinting at mineral formations.",
-        "mood": "Evokes a sense of awe, mystery, and a touch of unease. The sheer scale and alien design inspire wonder at the builders' capabilities, while the desolate environment and the prominent 'eye' suggest an unknown, potentially watchful, presence.",
-        "sounds": "Distant hum, faint mechanical whirring, ambient wind.",
-        "spatialLayout": "The scene is dominated by the massive sphere, creating a strong focal point. The descending pillars lead the eye downwards to the ground plane, while the spires on the horizon add depth and a sense of immense scale. The overall layout is one of stark contrasts and imposing geometry.",
-        "primary_surfaces": "Smooth off-white sphere, rugged reddish-orange cracked earth",
-        "secondary_surfaces": "Jagged white spires and mounds, internal red-lit passages",
-        "accent_features": "Glowing red eye-like orifice, dark spherical sensor array",
-        "dominant": "Off-white (Sphere body)",
-        "secondary": "Reddish-orange (Ground)",
-        "accent": "Crimson red (Orifice and internal lights), Dark grey (Sensor array)",
-        "ambient": "Deep blue and cyan sky with starlight",
-        "structure": {
-          "form": "spherical",
-          "roofType": "domed",
-          "scale": "large",
-          "orientation": "cubic",
-          "openings": "minimal",
-          "functionalType": "industrial"
-        },
-        "genre": null,
-        "architectural_tone": "Advanced alien monolithic",
-        "cultural_tone": "Unknown advanced civilization, scientific or observational facility",
-        "materials_base": "Smooth composites, rough earth, crystalline formations",
-        "mood_baseline": "Mysterious, awe-inspiring, desolate",
-        "palette_bias": "Cool blues and cyans with warm reds and stark whites",
-        "soundscape_base": "Ethereal, minimalist",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "An enormous, smooth, off-white spherical structure, reminiscent of an advanced alien facility, featuring numerous small indentations and a prominent, centrally located, glowing red eye-like orifice with concentric rings. A complex array of elongated, curving white pillars descends from its base to the reddish-orange ground, illuminated by red lights within internal passages. Sharp, jagged white spires and mounds rise dramatically from the landscape in the mid-ground and along the horizon. A distinctive dark, spherical sensor array with a clear domed lens sits on the ground in the lower right.",
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "base of descending pillars",
-          "description": "Illuminated internal passages within the white pillars."
-        },
-        {
-          "type": "door",
-          "position": "glowing red orifice",
-          "description": "The prominent, centrally located, glowing red eye-like orifice."
-        }
-      ],
-      "dominantElements": [
-        "Enormous off-white spherical structure",
-        "Centrally located glowing red eye-like orifice",
-        "Complex array of descending white pillars",
-        "Sharp, jagged white spires on the horizon"
-      ],
-      "uniqueIdentifiers": [
-        "Smooth, off-white spherical form",
-        "Glowing red eye-like orifice with concentric rings",
-        "Elongated, curving white pillars with internal red lights",
-        "Dark, spherical sensor array with clear domed lens"
-      ],
-      "searchDesc": "Enigmatic alien sphere facility with glowing red eye and descending pillars on desolate planet.",
-      "slug": "the-enigmatic-sphere",
-      "primaryMedia": "media-1764848010410-f8uu5gqie"
-    },
-    "niche-1764848032743-wy0t44d92": {
-      "id": "niche-1764848032743-wy0t44d92",
-      "type": "niche",
-      "name": "interior of The Enigmatic Sphere",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A colossal, perfectly spherical interior dominated by smooth off-white composite walls and pillars that descend to a cracked, arid earth floor. Vast obsidian glass panels curve overhead, revealing a deep blue and cyan sky that reflects a stark red glow from within. The scale is immense, with a soaring 30-meter ceiling.",
-        "colorsAndLighting": "Dim, ethereal light emanates from the blue/cyan sky above and a stark red glow from within, illuminating the off-white surfaces and reddish-orange earth. A spotlight dramatically highlights geometric patterns on the floor, while a crimson-glowing archway offers a stark accent.",
-        "atmosphere": "The air is still and vast, carrying a sense of profound emptiness and ancient mystery. The immense scale and alien design inspire awe and a subtle unease, as if being observed from within the structure's depths. The deep blues and cyans of the sky contrast with the warm, internal red light.",
-        "materials": "Smooth, advanced off-white composite forms the walls and pillars, mirroring the exterior. The floor is cracked, arid reddish-orange earth, etched with faint geometric patterns. Large, seamless obsidian glass panels form the domed ceiling.",
-        "mood": "Evokes a sense of awe, mystery, and a touch of unease. The sheer scale and alien design inspire wonder at the builders' capabilities, while the desolate environment and prominent features suggest an unknown, potentially watchful, presence.",
-        "sounds": "Subtle hum, faint echoing, distant atmospheric shifts",
-        "spatialLayout": "A colossal, perfectly spherical interior chamber with immense vertical depth. The composition is intentionally asymmetric, with prominent features drawing the eye to specific areas, suggesting depth and hidden pathways.",
-        "primary_surfaces": "Smooth off-white composite walls and pillars, Cracked reddish-orange earth floor",
-        "secondary_surfaces": "Seamless obsidian glass ceiling panels",
-        "accent_features": "Crimson-glowing monolithic archway, Illuminated geometric patterns on floor, Dark spherical sensor array, Ascending diagonal ramp",
-        "dominant": "Off-white (Sphere body) - Extensive coverage on walls and pillars",
-        "secondary": "Reddish-orange (Earth floor) - Ground surface",
-        "accent": "Crimson (Archway glow) - Intense focal point, Deep blue/Cyan (Sky visibility) - Overhead light source",
-        "ambient": "Dim, ethereal, with contrasting internal glow",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Advanced alien monolithic",
-        "cultural_tone": "Unknown advanced civilization, scientific or observational facility",
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": "Cool blues/cyans contrasted with stark reds and muted off-whites/oranges",
-        "soundscape_base": null,
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1764848032742-plcrwhdkq",
-      "description": "The vast, spherical interior of an advanced alien structure, combining smooth, off-white composites with natural, arid earth.",
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "left midground",
-          "description": "A monolithic archway glowing crimson, leading to a dimly lit passage with sharp, angular framing."
-        },
-        {
-          "type": "ramp",
-          "position": "lower right midground",
-          "description": "A subtle ramp ascending diagonally, hinting at further levels."
-        }
-      ],
-      "dominantElements": [
-        "cracked reddish-orange earth floor with illuminated geometric patterns",
-        "monolithic off-white composite archway with crimson glow",
-        "curving white pillars descending from the domed ceiling",
-        "vast obsidian glass panels revealing blue/cyan sky and red internal glow"
-      ],
-      "uniqueIdentifiers": [
-        "colossal spherical interior",
-        "obsidian glass ceiling showing dual-toned sky and internal red light",
-        "off-white composite architecture meeting arid earth floor",
-        "crimson-glowing monolithic archway"
-      ],
-      "searchDesc": "Spherical chamber with obsidian ceiling, off-white composite, arid floor, and crimson archway.",
-      "slug": "interior-of-the-enigmatic-sphere"
+      "searchDesc": "Modernist pavilion interior with concrete, glass, ocean views, and orange-coral accents.",
+      "slug": "interior-of-the-cantilevered-pavilion"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764767356568-vg1petnje",
+      "id": "loc-1764857780829-v8xr9k2t6",
       "type": "host",
       "children": [
         {
-          "id": "25e5f7fd-eef4-47d0-ac49-5d17da24e00b",
+          "id": "34986433-065f-4129-bc36-53935aecad8c",
           "type": "region",
           "children": [
             {
-              "id": "aea3088d-273a-4bcc-81c8-df2951424831",
+              "id": "a4cc7059-14aa-4ef1-a7ed-943b4a7bc39e",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764767396985-djkihusyf",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1764843838743-4kqlcemfd",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1764843857191-rh5bnpm3a",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1764844233407-u0s58vwn0",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1764844654477-byhm8sqfz",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "id": "2ebc7194-ca9a-4a73-9d9c-3e2123d59368",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1764846609190-f8ka1gmt8",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764844405323-if4m4flca",
-      "type": "host",
-      "children": [
-        {
-          "id": "0ee914a4-300f-4786-98ba-2148ccf959b3",
-          "type": "region",
-          "children": [
-            {
-              "id": "5271623e-fa5a-49b7-9561-c72c6db2d717",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1764844445961-z5v7i5xnd",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "id": "709f114a-0e76-4b94-8a5b-06f4fcc3dc26",
-              "type": "location",
-              "children": []
-            },
-            {
-              "id": "41b50cbb-69df-4dbe-9610-54db347a5d42",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1764846516805-k80f3o78m",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764847602269-4al6phq53",
-      "type": "host",
-      "children": [
-        {
-          "id": "ccaaa4d2-2b79-4c02-a6d9-2a724ca7d4fb",
-          "type": "region",
-          "children": [
-            {
-              "id": "50860283-4ddb-4243-be00-ee30cbe1dfdb",
-              "type": "location",
-              "children": [
-                {
-                  "id": "3c559e2e-c4e3-4678-a093-e93ca3e881e8",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1764847707044-pqzy2q1h5",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764847840738-frztm02hz",
-      "type": "host",
-      "children": [
-        {
-          "id": "b61d3a2f-f558-434e-9d60-19b035ee8b00",
-          "type": "region",
-          "children": [
-            {
-              "id": "aaf4e7c2-e208-4299-bff8-18bd25059584",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1764847939107-6lz1vo72o",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1764847991417-r7d2pezdq",
-      "type": "host",
-      "children": [
-        {
-          "id": "fefef6fe-3d0a-4540-99cd-37c19d03f741",
-          "type": "region",
-          "children": [
-            {
-              "id": "747c5193-14ab-4eed-9cae-ce41bd9c9e6d",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1764848032743-wy0t44d92",
+                  "id": "niche-1764857828344-8hp1i2ggt",
                   "type": "niche",
                   "children": []
                 }
@@ -1972,10 +247,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764767356568-vg1petnje",
-    "loc-1764844405323-if4m4flca",
-    "loc-1764847602269-4al6phq53",
-    "loc-1764847840738-frztm02hz",
-    "loc-1764847991417-r7d2pezdq"
+    "loc-1764857780829-v8xr9k2t6"
   ]
 }
