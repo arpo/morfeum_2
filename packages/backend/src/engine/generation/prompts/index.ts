@@ -12,7 +12,7 @@
  */
 
 import type { PromptKey, Language, PromptTemplates } from './types';
-import { en } from './languages/en';
+import { promptTemplates } from './shared/promptTemplates';
 
 // Domain exports
 export * from './characters';
@@ -25,9 +25,9 @@ export * from './shared';
 // Type exports
 export type { PromptKey, Language } from './types';
 
-// Language map for prompt access
+// Prompt templates (single language - English only)
 const languageMap: Record<Language, PromptTemplates> = {
-  en
+  en: promptTemplates
 };
 
 /**
