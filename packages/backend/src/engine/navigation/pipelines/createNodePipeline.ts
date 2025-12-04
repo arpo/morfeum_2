@@ -5,7 +5,7 @@
  */
 
 import { generateNodeDNA, extractParentContext } from '../../hierarchyAnalysis/nodeDNAGenerator';
-import { generateLocationImage } from '../../pipelines/shared/imageGeneration';
+import { generateImage } from '../../pipelines/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
 import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
@@ -81,7 +81,10 @@ export async function runCreateLocationNodePipeline(
         helper.startStage('image_generation', 'Generating image...');
       }
 
-      const result = await generateLocationImage(apiKey, imagePrompt);
+      const result = await generateImage(apiKey, imagePrompt, 1, 'landscape_16_9', 'none', {
+        applyPromptFix: true,
+        excludeCreatures: true
+      });
       imageUrl = result.imageUrl;
 
       if (helper) {

@@ -4,12 +4,14 @@
  */
 
 import * as mzooService from '../../../services/mzoo';
-import { generalPromptFix } from '../../generation/prompts/shared/generalPromptFix';
+import { morfeumVibes, NoCreatures, qualityPrompt } from '../../generation/prompts/shared/constants';
 
 export interface ImageGenerationOptions {
   aspectRatio?: string;
   numImages?: number;
   safetyFilter?: string;
+  applyPromptFix?: boolean;
+  excludeCreatures?: boolean;
 }
 
 export interface ImageGenerationResult {
@@ -32,19 +34,53 @@ export async function fetchImageAsBase64(imageUrl: string): Promise<string> {
 }
 
 /**
+ * Apply prompt enhancements for image generation
+ * Adds styling, quality terms, and optionally creature filtering
+ */
+function applyPromptEnhancements(
+  prompt: string,
+  excludeCreatures: boolean = false
+): string {
+  let result = `${morfeumVibes}\n\n${prompt}\n\n`;
+  
+  if (excludeCreatures) {
+    result += `${NoCreatures}\n\n`;
+  }
+  
+  result += qualityPrompt;
+  
+  return result;
+}
+
+/**
  * Generate image using MZOO service
- * Returns image URL
+ * Returns image URL and the final prompt used
+ * 
+ * @param apiKey - MZOO API key
+ * @param prompt - Raw image prompt
+ * @param numImages - Number of images to generate (default: 1)
+ * @param aspectRatio - Image aspect ratio (default: 'landscape_16_9')
+ * @param safety - Safety filter level (default: 'none')
+ * @param options - Additional options for prompt enhancement
  */
 export async function generateImage(
   apiKey: string,
   prompt: string,
   numImages: number = 1,
   aspectRatio: string = 'landscape_16_9',
-  safety: string = 'none'
-): Promise<{ imageUrl: string }> {
+  safety: string = 'none',
+  options?: Pick<ImageGenerationOptions, 'applyPromptFix' | 'excludeCreatures'>
+): Promise<{ imageUrl: string; imagePrompt: string }> {
+  const { applyPromptFix = false, excludeCreatures = false } = options || {};
+  
+  // Apply prompt enhancements if requested
+  const finalPrompt = applyPromptFix 
+    ? applyPromptEnhancements(prompt, excludeCreatures)
+    : prompt;
+
   const result = await mzooService.generateImage(
     apiKey,
-    prompt,
+    finalPrompt,
     numImages,
     aspectRatio,
     safety
@@ -59,7 +95,7 @@ export async function generateImage(
     throw new Error('Image URL not found in response');
   }
 
-  return { imageUrl };
+  return { imageUrl, imagePrompt: finalPrompt };
 }
 
 /**
@@ -75,51 +111,4 @@ export async function generateAndFetchImage(
   const base64 = await fetchImageAsBase64(imageUrl);
   
   return { imageUrl, base64 };
-}
-
-/**
- * Generate image for location node
- * Applies prompt fixes and handles errors consistently
- * 
- * @param apiKey - MZOO API key
- * @param imagePrompt - Raw image prompt from LLM
- * @param options - Optional image generation parameters
- * @returns Image URL and prompt
- */
-export async function generateLocationImage(
-  apiKey: string,
-  imagePrompt: string,
-  options?: ImageGenerationOptions
-): Promise<ImageGenerationResult> {
-  const {
-    aspectRatio = 'landscape_16_9',
-    numImages = 1,
-    safetyFilter = 'none'
-  } = options || {};
-
-  // Apply general prompt fixes
-  const fixedPrompt = generalPromptFix(imagePrompt);
-
-  // Generate image via MZOO service
-  const result = await mzooService.generateImage(
-    apiKey,
-    fixedPrompt,
-    numImages,
-    aspectRatio,
-    safetyFilter
-  );
-
-  if (result.error) {
-    throw new Error(`Image generation failed: ${result.error}`);
-  }
-
-  const imageUrl = result.data?.images?.[0]?.url;
-  if (!imageUrl) {
-    throw new Error('Image URL not found in response');
-  }
-
-  return {
-    imageUrl,
-    imagePrompt: fixedPrompt
-  };
 }
