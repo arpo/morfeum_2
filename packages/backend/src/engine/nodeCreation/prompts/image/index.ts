@@ -2,102 +2,95 @@
  * Image Prompts Index
  * 
  * Context-aware image prompts for each node type.
- * Each node type has different camera style and composition.
+ * Uses Flux-friendly block format for camera/lens compliance.
+ * 
+ * Block format ensures Flux respects camera instructions:
+ * - [ENV:] Environment description
+ * - [SHOT:] Shot type and framing
+ * - [LENS:] Lens specs compatible with shot type
+ * - [LIGHT:] Lighting conditions
+ * - [COLOR:] Color palette
+ * - [STYLE:] Visual style
+ * - [NEG:] Negative prompts
  */
 
 import type { NodeType, Node, ScenePerspective } from '../../types';
 import type { NodeDNA } from '../../../hierarchyAnalysis/types';
 
 /**
- * Camera configuration per node type
- */
-const CAMERA_CONFIGS: Record<NodeType, {
-  style: string;
-  composition: string;
-  angle: string;
-}> = {
-  host: {
-    style: 'Cinematic establishing shot',
-    composition: 'Ultra-wide, epic scale, panoramic view',
-    angle: 'High aerial angle or dramatic low angle looking up',
-  },
-  region: {
-    style: 'Aerial establishing shot',
-    composition: 'Wide panoramic view of the entire district/biome. Multi-structure composition, no single hero building',
-    angle: 'High-angle drone shot or bird\'s-eye view showing vast scale',
-  },
-  location: {
-    style: 'Architectural photography',
-    composition: 'Building exterior in focus, surrounding context visible',
-    angle: 'Ground level, straight-on or slight angle to show depth',
-  },
-  niche: {
-    style: 'Interior/detail photography',
-    composition: 'Room composition showing space character',
-    angle: 'Eye-level or slightly elevated, inviting perspective',
-  },
-};
-
-/**
- * Generate image prompt for a host node
+ * Generate image prompt for a host node (high-altitude aerial overview)
  */
 export function hostImagePrompt(node: Node): string {
   const dna = node.dna || {};
-  const camera = CAMERA_CONFIGS.host;
 
-  return `${node.name}. ${node.description}
-
-${camera.style}. ${camera.composition}. ${camera.angle}.
-
-Visual Character:
+  return `[ENV: "${node.name}"]
+${node.description}
 ${dna.looks || ''}
 
-Atmosphere:
-${dna.atmosphere || ''}
+[SHOT:]
+high-altitude aerial establishing shot, drone/aircraft perspective, wide-area regional view, full coverage of terrain, coastline geometry and terrain patterns emphasized, no curvature
 
-Colors and Lighting:
-Dominant: ${dna.dominant || 'natural'}, Secondary: ${dna.secondary || ''}, Accent: ${dna.accent || ''}
-Light: ${dna.ambient || 'natural'}, ${dna.colorsAndLighting || ''}
+[LENS:]
+18mm equivalent, f/8, full-frame aerial optics, ~800m-1500m altitude, oblique 25-35° tilt for depth, natural perspective (not satellite), gentle wide-angle expansion
 
-Genre/Style: ${dna.genre || 'realistic'}
-Architectural Style: ${dna.architectural_tone || ''}
+[LIGHT:]
+${dna.colorsAndLighting || dna.ambient || 'natural daylight'}, high atmospheric clarity, crisp shadows, minimal haze
 
-Professional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.`;
+[COLOR:]
+Dominant: ${dna.dominant || 'natural tones'}, Secondary: ${dna.secondary || ''}, Accent: ${dna.accent || ''}
+${dna.palette_bias || ''}
+
+[MOOD:]
+${dna.mood || dna.atmosphere || 'expansive, sense of discovery and scale'}
+
+[STYLE:]
+${dna.genre || 'realistic'}, professional aerial geography photography, highly detailed, naturalistic, clean composition
+Architectural identity: ${dna.architectural_tone || 'varied regional styles'}
+
+[NEG:]
+orbital curvature, extreme altitude, satellite mapping look, ground-level perspective, single building focus, interior shots, people in foreground, text, watermark, borders`;
 }
 
 /**
- * Generate image prompt for a region node
+ * Generate image prompt for a region node (drone/district overview)
  */
 export function regionImagePrompt(node: Node): string {
   const dna = node.dna || {};
-  const camera = CAMERA_CONFIGS.region;
 
-  return `${node.name} district/region. ${node.description}
-
-${camera.style}. ${camera.composition}. ${camera.angle}.
-
-Visual Character:
+  return `[ENV: "${node.name}" district/region]
+${node.description}
 ${dna.looks || ''}
 
-Atmosphere:
-${dna.atmosphere || ''}
+[SHOT:]
+aerial establishing shot, high-angle drone perspective, wide panoramic view of entire district, multi-structure composition, no single hero building, vast scale visible
 
-Colors:
+[LENS:]
+24mm equivalent, f/5.6, aerial drone optics, 45° oblique tilt, mid-altitude rendering
+
+[LIGHT:]
+${dna.colorsAndLighting || dna.ambient || 'natural daylight'}, atmospheric perspective visible
+
+[COLOR:]
 Dominant: ${dna.dominant || 'natural'}, Secondary: ${dna.secondary || ''}
-Light: ${dna.ambient || 'natural'}
+${dna.palette_bias || ''}
 
+[MOOD:]
+${dna.mood || dna.atmosphere || 'expansive, contextual'}
+
+[STYLE:]
+professional urban/landscape photography, detailed scene, atmospheric depth, sense of scale
 Architectural Style: ${dna.architectural_tone || ''}
 Materials: ${dna.materials || ''}
 
-Professional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.`;
+[NEG:]
+ground-level perspective, single building close-up, interior shots, orbital/satellite view, text, watermark`;
 }
 
 /**
- * Generate image prompt for a location node
+ * Generate image prompt for a location node (ground-level building)
  */
 export function locationImagePrompt(node: Node): string {
   const dna = node.dna || {};
-  const camera = CAMERA_CONFIGS.location;
   const structure = (dna.structure || {}) as any;
 
   const structureDesc = [
@@ -108,27 +101,36 @@ export function locationImagePrompt(node: Node): string {
     structure.openings ? `Openings: ${structure.openings}` : ''
   ].filter(Boolean).join(', ');
 
-  return `${node.name}. ${node.description}
-
-${camera.style}. ${camera.composition}. ${camera.angle}.
-
-Building/Site Exterior:
+  return `[ENV: "${node.name}"]
+${node.description}
 ${dna.looks || ''}
-${structureDesc ? `Structure Details: ${structureDesc}` : ''}
+${structureDesc ? `Structure: ${structureDesc}` : ''}
 
-Materials and Surfaces:
+[SHOT:]
+architectural photography, building exterior in focus, surrounding context visible, inviting entrance visible, ground-level perspective
+
+[LENS:]
+35mm equivalent, f/2.8, standard architectural lens, eye-level to slight low angle, natural perspective distortion
+
+[LIGHT:]
+${dna.colorsAndLighting || dna.ambient || 'natural daylight'}, warm ambient lighting from windows
+
+[COLOR:]
+Dominant: ${dna.dominant || 'natural'}, Secondary: ${dna.secondary || ''}, Accent: ${dna.accent || ''}
+
+[MATERIALS:]
 Primary: ${dna.primary_surfaces || ''}
 Secondary: ${dna.secondary_surfaces || ''}
 Accents: ${dna.accent_features || ''}
 
-Colors:
-Dominant: ${dna.dominant || 'natural'}, Secondary: ${dna.secondary || ''}, Accent: ${dna.accent || ''}
-Light: ${dna.ambient || 'natural'}
+[MOOD:]
+${dna.mood || dna.atmosphere || 'welcoming, detailed'}
 
-Atmosphere: ${dna.atmosphere || ''}
-Mood: ${dna.mood || ''}
+[STYLE:]
+professional architectural photography, detailed facade, cinematic composition
 
-Architectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.`;
+[NEG:]
+aerial view, satellite view, drone shot, interior shots, text, watermark`;
 }
 
 /**
@@ -137,29 +139,36 @@ Architectural photography, building exterior in context, inviting entrance visib
 export function nicheInteriorImagePrompt(node: Node): string {
   const dna = node.dna || {};
 
-  return `${node.name}. ${node.description}
-
-Interior photography. Room composition showing character and atmosphere. Eye-level perspective, inviting and immersive.
-
-Space Layout:
-${dna.spatialLayout || ''}
-
-Visual Details:
+  return `[ENV: "${node.name}" interior]
+${node.description}
 ${dna.looks || ''}
+Layout: ${dna.spatialLayout || ''}
 
-Materials:
+[SHOT:]
+interior photography, room composition showing character and atmosphere, eye-level perspective, inviting and immersive
+
+[LENS:]
+24mm equivalent, f/4, wide interior lens, eye-level, minimal distortion
+
+[LIGHT:]
+${dna.colorsAndLighting || dna.ambient || 'warm ambient lighting'}, atmospheric interior light
+
+[COLOR:]
+Dominant: ${dna.dominant || 'warm'}, Secondary: ${dna.secondary || ''}, Accent: ${dna.accent || ''}
+
+[MATERIALS:]
 Floor/Walls: ${dna.primary_surfaces || ''}
 Furniture/Fixtures: ${dna.secondary_surfaces || ''}
 Decorative Elements: ${dna.accent_features || ''}
 
-Colors and Light:
-Dominant: ${dna.dominant || 'warm'}, Secondary: ${dna.secondary || ''}, Accent: ${dna.accent || ''}
-Lighting: ${dna.colorsAndLighting || dna.ambient || 'warm ambient'}
+[MOOD:]
+${dna.mood || dna.atmosphere || 'intimate, lived-in'}
 
-Atmosphere: ${dna.atmosphere || ''}
-Mood: ${dna.mood || ''}
+[STYLE:]
+interior design photography, detailed textures, atmospheric lighting, sense of depth and space
 
-Interior design photography, detailed textures, atmospheric lighting, sense of depth and space, lived-in quality.`;
+[NEG:]
+exterior view, aerial view, harsh shadows, empty sterile space, text, watermark`;
 }
 
 /**
@@ -168,29 +177,36 @@ Interior design photography, detailed textures, atmospheric lighting, sense of d
 export function nicheExteriorImagePrompt(node: Node): string {
   const dna = node.dna || {};
 
-  return `${node.name}. ${node.description}
-
-Exterior detail shot. Close composition of outdoor space. Eye-level, showing context and view beyond.
-
-Space Layout:
-${dna.spatialLayout || ''}
-
-Visual Details:
+  return `[ENV: "${node.name}" exterior space]
+${node.description}
 ${dna.looks || ''}
+Layout: ${dna.spatialLayout || ''}
 
-Materials:
+[SHOT:]
+exterior detail shot, close composition of outdoor space, eye-level perspective, showing context and view beyond
+
+[LENS:]
+35mm equivalent, f/4, standard lens, eye-level, natural perspective
+
+[LIGHT:]
+${dna.colorsAndLighting || dna.ambient || 'natural daylight'}, atmospheric conditions visible
+
+[COLOR:]
+Dominant: ${dna.dominant || 'natural'}, Secondary: ${dna.secondary || ''}, Accent: ${dna.accent || ''}
+
+[MATERIALS:]
 Surfaces: ${dna.primary_surfaces || ''}
 Features: ${dna.secondary_surfaces || ''}
 Details: ${dna.accent_features || ''}
 
-Colors and Light:
-Dominant: ${dna.dominant || 'natural'}, Secondary: ${dna.secondary || ''}, Accent: ${dna.accent || ''}
-Lighting: ${dna.colorsAndLighting || dna.ambient || 'natural daylight'}
+[MOOD:]
+${dna.mood || dna.atmosphere || 'open, connected to environment'}
 
-Atmosphere: ${dna.atmosphere || ''}
-View Beyond: ${node.navigableElements?.map(e => e.description).join(', ') || 'surrounding area visible'}
+[STYLE:]
+architectural photography, outdoor space detail, sense of openness, connection to larger environment
 
-Architectural photography, outdoor space detail, sense of openness, atmospheric conditions visible, connection to larger environment.`;
+[NEG:]
+aerial view, satellite view, interior shots, text, watermark`;
 }
 
 /**

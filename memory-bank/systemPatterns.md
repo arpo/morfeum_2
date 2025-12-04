@@ -464,6 +464,44 @@ Backend Node Creation → resolveAncestryDNA → LLM Context
 
 ## Image Prompt Generation Patterns
 
+### Flux Block Format System
+Location: `packages/backend/src/engine/nodeCreation/prompts/image/index.ts`
+
+**Purpose**: Use explicit block format that Flux respects for camera/lens instructions.
+
+**Block Format**:
+```
+[ENV:] Environment description
+[SHOT:] Shot type and framing
+[LENS:] Lens specs compatible with shot type
+[LIGHT:] Lighting conditions
+[COLOR:] Color palette
+[MOOD:] Atmosphere
+[STYLE:] Visual style
+[NEG:] Negative prompts (things to exclude)
+```
+
+**Why Block Format?**
+- Flux ignores camera instructions when mixed into prose
+- Contradictions (e.g., satellite view + standard lens) cause instructions to be ignored
+- Explicit blocks ensure Flux respects the settings
+
+**Camera/Lens Configurations by Node Type**:
+
+| Node Type | Lens | Altitude | Perspective |
+|-----------|------|----------|-------------|
+| **Host** | 18mm, f/8 | ~800m-1500m | High-altitude aerial (drone/aircraft) |
+| **Region** | 24mm, f/5.6 | Mid-altitude | Drone establishing shot |
+| **Location** | 35mm, f/2.8 | Ground | Eye-level architectural |
+| **Niche (Int)** | 24mm, f/4 | Room | Eye-level interior |
+| **Niche (Ext)** | 35mm, f/4 | Ground | Eye-level detail |
+
+**Key Rules**:
+- **No Orbital/Satellite for Host**: Use "high-altitude aerial drone/aircraft" instead (Flux ignores satellite mode)
+- **Explicit Negatives**: Each node type excludes incompatible perspectives in [NEG:]
+- **Altitude in Lens Block**: Specify realistic altitude (~800m-1500m) not "extreme altitude"
+- **No Curvature**: Explicitly state "no curvature" for Host to prevent satellite imagery look
+
 ### Niche Image Prompt System
 Location: `packages/backend/src/engine/generation/prompts/navigation/nicheImagePrompt.ts`
 

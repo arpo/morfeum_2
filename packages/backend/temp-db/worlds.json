@@ -1,241 +1,315 @@
 {
   "nodes": {
-    "loc-1764857780829-v8xr9k2t6": {
-      "id": "loc-1764857780829-v8xr9k2t6",
+    "loc-1764860667259-wqj10liis": {
+      "id": "loc-1764860667259-wqj10liis",
       "type": "host",
-      "name": "The Azure Coast",
+      "name": "Tropical Paradise",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A pristine, wide expanse of incredibly clear, turquoise-green ocean water stretches towards a pale blue sky. The coastline features dramatic geological formations and is host to striking examples of modernist architecture, often integrated directly over or alongside the water.",
-        "colorsAndLighting": "The dominant palette is defined by the luminous turquoise-green of the ocean and the soft, serene pale blue of the sky. Sunlight is bright and intense, reflecting powerfully off the water and highlighting architectural features.",
-        "atmosphere": "The air is exceptionally fresh, carrying the invigorating scent of the sea. A sense of tranquil vastness and exposure to the elements prevails, accompanied by the gentle sound of waves. The weather is consistently clear and peaceful.",
-        "materials": "Primarily showcases highly transparent water and natural rock. Architectural elements feature weathered concrete and extensive glass, often accented with bold, colorful finishes.",
-        "mood": "Evokes a profound sense of peace, sophisticated leisure, and admiration for bold design. It's a place that feels both exposed to nature's grandeur and sheltered by human ingenuity.",
-        "sounds": "Gentle waves lapping, sea breeze, occasional distant seabirds.",
-        "spatialLayout": "Characterized by vast open spaces, with a clear visual connection between the sky, the sea, and the land. The architecture often creates dynamic spatial relationships, reaching out over the water.",
-        "primary_surfaces": "Highly transparent turquoise-green ocean water",
-        "secondary_surfaces": "Weathered concrete, large glass panels",
-        "accent_features": "Vibrant orange-coral architectural details",
-        "dominant": "Turquoise-green (water, deep coverage)",
-        "secondary": "Pale blue (sky, broad coverage)",
-        "accent": "Vibrant orange-coral (architectural accents)",
-        "ambient": "Bright, clear sunlight",
-        "structure": "Coastal",
-        "genre": "Contemporary Realism",
-        "architectural_tone": "Striking modernist cantilever, bold geometric forms",
-        "cultural_tone": "Leisure and observation, architectural showcase",
-        "materials_base": "Natural coastal materials and high-modernist construction",
-        "mood_baseline": "Sophisticated tranquility",
-        "palette_bias": "Earth tones, ocean blues, vibrant coral",
-        "soundscape_base": "Serene coastal ambiance",
-        "flora_base": null,
-        "fauna_base": null
+        "looks": "A vibrant landscape featuring pristine sandy beaches that gently meet the turquoise ocean. Dense, lush green trees with rich foliage frame the scene, creating a sense of natural abundance and seclusion.",
+        "colorsAndLighting": "The scene is bathed in bright, warm sunlight, creating vivid contrasts between the deep greens of the foliage, the soft beige of the sand, and the brilliant blues of the ocean and sky.",
+        "atmosphere": "The air is warm and humid, thick with the sweet scent of tropical flowers and the tang of salt from the nearby ocean. A gentle, constant breeze rustles the leaves, creating a soothing natural symphony.",
+        "materials": "Natural sand, clear ocean water, and the organic textures of dense, living foliage. The overall impression is one of unspoiled natural beauty.",
+        "mood": "Peaceful, idyllic, and invigorating. It evokes feelings of escape, natural wonder, and pure relaxation.",
+        "sounds": "waves lapping shore, birds chirping, rustling leaves, buzzing insects",
+        "spatialLayout": "An expansive and open layout with a clear horizon where the ocean meets the sky. The natural elements create defined zones of beach, water, and dense vegetation.",
+        "primary_surfaces": "soft, warm sand; clear, vibrant water",
+        "secondary_surfaces": "dense, green foliage; bright blue sky",
+        "accent_features": "rocky outcrops on the horizon",
+        "dominant": "vibrant green foliage with 60% coverage",
+        "secondary": "ocean blue with 30% coverage",
+        "accent": "sandy beige with 10% coverage",
+        "ambient": "bright, warm, tropical sunlight",
+        "structure": null,
+        "genre": "Tropical",
+        "architectural_tone": "Natural and untouched",
+        "cultural_tone": "Idyllic natural retreat",
+        "materials_base": "organic, natural materials",
+        "mood_baseline": "serene and vibrant",
+        "palette_bias": "Greens, blues, earth tones",
+        "soundscape_base": "tropical nature",
+        "flora_base": "Lush tropical rainforest",
+        "fauna_base": "Tropical birds, insects"
       },
-      "description": "A renowned stretch of coastline celebrated for its exceptionally clear, vibrant turquoise-green ocean waters and a landscape dotted with avant-garde modernist architecture. It offers breathtaking vistas and a serene, sun-drenched atmosphere.",
+      "description": "A secluded tropical setting characterized by pristine sandy beaches, lush green foliage, and a vibrant natural beauty. This environment offers an idyllic escape with warm weather and stunning natural landscapes.",
       "navigableElements": [],
       "dominantElements": [
-        "Crystal-clear turquoise-green ocean",
-        "Dramatic modernist structures",
-        "Sunny coastal skies"
+        "sandy beaches",
+        "lush tropical vegetation",
+        "clear blue ocean"
       ],
       "uniqueIdentifiers": [
-        "Unparalleled water clarity",
-        "Iconic cantilevered architecture"
+        "secluded atmosphere",
+        "vibrant natural flora"
       ],
-      "searchDesc": "Stunning coastline with clear turquoise waters and iconic modernist buildings.",
-      "slug": "the-azure-coast",
-      "primaryMedia": "media-1764857881531-bedib67w9"
+      "searchDesc": "A secluded tropical paradise with sandy beaches, lush greenery, and clear blue ocean waters.",
+      "slug": "tropical-paradise",
+      "primaryMedia": "media-1764860725748-v9qj01iuj"
     },
-    "34986433-065f-4129-bc36-53935aecad8c": {
-      "id": "34986433-065f-4129-bc36-53935aecad8c",
+    "cd6dfe8b-a793-4303-bd74-e920fa2100d0": {
+      "id": "cd6dfe8b-a793-4303-bd74-e920fa2100d0",
       "type": "region",
-      "name": "Oceanfront Vista",
+      "name": "Oceanfront Estates",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Expansive views of clear, vibrant turquoise-green ocean water. Features dramatic coastal topography, such as rocky outcrops or cliffs. Modernist architectural elements are integrated into the landscape, often cantilevered over or adjacent to the water.",
-        "colorsAndLighting": "Dominated by the bright, translucent blues and greens of the ocean, with the potential for vibrant accent colors from coastal architecture. Sunlight reflects strongly off the water's surface, creating bright highlights and dappled light patterns.",
-        "atmosphere": "The air is clean, fresh, and carries the distinct scent of salt. A sense of openness and exposure to the elements prevails, with gentle sea breezes and the sound of the ocean. The weather is typically clear and bright.",
-        "materials": "Natural coastal elements like rock and sand are prominent, juxtaposed with modern building materials such as concrete, glass, and painted metal.",
-        "mood": "Evokes a sense of awe and sophisticated interaction with nature. It is a place of serene beauty and bold architectural statements, inspiring contemplation and appreciation for both the natural and man-made.",
-        "sounds": "Gentle waves, sea breeze, distant seabirds.",
-        "spatialLayout": "Open and expansive, with a clear delineation between the water, the land, and the architectural structures. Depth is provided by the ocean, creating a sense of vastness.",
-        "primary_surfaces": "Transparent ocean water, rugged rock formations",
-        "secondary_surfaces": "Smoothly integrated architectural surfaces",
-        "accent_features": "Vividly colored architectural details",
-        "dominant": "Turquoise-green (water)",
-        "secondary": "Natural earth tones (rock, concrete)",
-        "accent": "Vibrant coral (architectural accents)",
-        "ambient": "Bright, sunlit",
+        "looks": "A stretch of pristine sandy beach meeting the calm, blue ocean. Luxurious homes with modern architecture are nestled along the coastline, each designed to offer expansive views.",
+        "colorsAndLighting": "Dominated by the bright blue of the sky and ocean, contrasted with the warm beige of the sand and the natural tones of beachfront homes. Sunlight is abundant and bright.",
+        "atmosphere": "The air is fresh, carrying the scent of salt and a gentle, steady ocean breeze. The temperature is consistently warm and pleasant, indicative of a tropical climate.",
+        "materials": "Natural sand, clear ocean water, and the contemporary materials used in the surrounding residences, likely including concrete, wood, and glass.",
+        "mood": "Serene, aspirational, and exclusive. It evokes feelings of peace, luxury, and permanent vacation.",
+        "sounds": "consistent ocean waves, distant seabirds, gentle wind",
+        "spatialLayout": "An open and expansive layout defined by the vastness of the ocean and the gentle curve of the sandy shoreline. Properties are spaced to maximize views and privacy.",
+        "primary_surfaces": "soft sand, clear water",
+        "secondary_surfaces": "contemporary building exteriors, bright sky",
+        "accent_features": "tropical foliage framing properties",
+        "dominant": "ocean blue with 60% coverage",
+        "secondary": "sandy beige with 30% coverage",
+        "accent": "natural wood tones with 10% coverage",
+        "ambient": "bright, natural sunlight",
         "structure": null,
         "genre": null,
-        "architectural_tone": "Striking modernist coastal design",
-        "cultural_tone": "Leisure, observation, architectural appreciation",
-        "materials_base": "Natural and modern construction",
-        "mood_baseline": "Serene, awe-inspiring",
-        "palette_bias": "Ocean blues and greens, earth tones, vibrant accents",
-        "soundscape_base": "Coastal natural sounds",
-        "flora_base": null,
-        "fauna_base": null
+        "architectural_tone": "Luxury modern coastal",
+        "cultural_tone": "Exclusive vacation and residential enclave",
+        "materials_base": "natural coastal elements, modern construction",
+        "mood_baseline": "serene and affluent",
+        "palette_bias": "Blues, beiges, natural tones",
+        "soundscape_base": "calm ocean beach",
+        "flora_base": "tropical coastal vegetation",
+        "fauna_base": "seabirds"
       },
-      "description": "A specific coastal area characterized by exceptionally clear, vibrant turquoise-green ocean waters meeting a dramatic coastline. This region is known for its striking modernist architectural interventions that engage directly with the marine environment.",
+      "description": "Exclusive residences situated directly on the sandy shores, offering unparalleled ocean views. This area is characterized by its pristine beaches and luxurious homes designed to maximize the stunning coastal scenery.",
       "navigableElements": [],
       "dominantElements": [
-        "Clear, shallow ocean water",
-        "Rocky outcrops",
-        "Modernist coastal structures"
+        "sandy beaches",
+        "oceanfront properties",
+        "coastal vistas"
       ],
       "uniqueIdentifiers": [
-        "Turquoise-green water clarity",
-        "Cantilevered architecture"
+        "direct beach access",
+        "premium ocean views"
       ],
-      "searchDesc": "Coastal vista with clear turquoise water and dramatic modernist buildings.",
-      "slug": "oceanfront-vista",
-      "primaryMedia": "media-1764857839911-uv0oi9i7u"
+      "searchDesc": "Exclusive beachfront properties with stunning ocean views and direct sandy shore access.",
+      "slug": "oceanfront-estates",
+      "primaryMedia": "media-1764860717184-edxcetg8r"
     },
-    "a4cc7059-14aa-4ef1-a7ed-943b4a7bc39e": {
-      "id": "a4cc7059-14aa-4ef1-a7ed-943b4a7bc39e",
+    "51df1616-50da-46a8-aafe-6a9af80aef16": {
+      "id": "51df1616-50da-46a8-aafe-6a9af80aef16",
       "type": "location",
-      "name": "The Cantilevered Pavilion",
+      "name": "The Azure Vista Residence",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A prominent upper level with smoothly rounded corners is dramatically cantilevered over the water. Large glass windows with vibrant orange-coral frames dominate its facade. The cylindrical concrete base and walls show significant weathering, with a mottled greenish hue and reddish-brown streaks.",
-        "colorsAndLighting": "The vibrant orange-coral of the window frames and underside of the roof contrasts with the desaturated greens and browns of the concrete. Sunlight reflects brightly off the water, casting dappled light on the lower structure.",
-        "atmosphere": "The air is likely humid and carries the fresh scent of salt. The sound of gentle waves lapping against the rocks is constant, creating a tranquil yet exposed environment. The weather is clear and serene, with pale blue skies.",
-        "materials": "The primary materials are weathered concrete and large expanses of glass. Accents of a vibrant, high-gloss orange-coral paint highlight structural elements and openings.",
-        "mood": "Evokes a feeling of sophisticated modernism and a deep connection to the natural coastal environment. There's a sense of bold, almost defiant, architectural presence against the serene ocean backdrop.",
-        "sounds": "Gentle waves, distant seabirds, subtle wind",
-        "spatialLayout": "The primary space is the cantilevered upper level, seemingly floating above the ocean. A narrow cylindrical base anchors it to a rocky outcrop, with a direct connection to the water via a submerged walkway.",
-        "primary_surfaces": "Weathered concrete with greenish discoloration and rust-like streaks, large glass windows",
-        "secondary_surfaces": "Orange-coral painted underside of roof, orange-coral window frames and railings",
-        "accent_features": "Vibrant orange-coral framing and underside of the roof, visible seabed through translucent water",
-        "dominant": "Concrete (mottled green and rust)",
-        "secondary": "Turquoise-green ocean water",
-        "accent": "Vibrant orange-coral",
-        "ambient": "Bright daylight",
+        "looks": "A spacious, open-plan ground floor deck area extends from a modern concrete and wood house. The deck is furnished for relaxation, leading directly to a free-form swimming pool. The scale feels expansive, emphasizing outdoor living.",
+        "colorsAndLighting": "Bathed in bright, warm sunlight, the dominant colors are the natural wood tones of the deck and furniture, the vibrant turquoise of the pool water, and the deep green of the surrounding foliage. Shadows are sharp and defined.",
+        "atmosphere": "The air is warm, humid, and carries the faint scent of salt and tropical flowers. A gentle breeze might rustle the leaves of nearby trees. The overall feeling is one of calm and serene vacation.",
+        "materials": "The primary materials are weathered, warm-toned wood for the deck and furniture, smooth concrete for the pool edging, and the polished surface of the turquoise water. Accents of plush teal and white fabric are present.",
+        "mood": "Inviting and luxurious, evoking feelings of relaxation, leisure, and escapism. It's a space designed for enjoyment and unwinding.",
+        "sounds": "gentle waves, distant seabirds, rustling leaves, soft breeze",
+        "spatialLayout": "The ground floor features an open-concept living and dining area seamlessly connected to an expansive outdoor deck and pool. The upper floor contains private bedroom and kitchen spaces.",
+        "primary_surfaces": "smooth concrete walls, polished wood deck",
+        "secondary_surfaces": "glass panels, turquoise water, fabric cushions",
+        "accent_features": "teal lounge chair cushions, white outdoor sofa, bedside lamp",
+        "dominant": "warm wood tones with 50% coverage",
+        "secondary": "clear turquoise water with 30% coverage",
+        "accent": "deep green foliage with 20% coverage",
+        "ambient": "bright, warm sunlight",
         "structure": {
-          "form": "cylindrical",
+          "form": "rectangular",
           "roofType": "flat",
           "scale": "large",
           "orientation": "horizontal",
           "openings": "large-glass",
-          "functionalType": "entertainment"
+          "functionalType": "residential"
         },
         "genre": null,
-        "architectural_tone": "Striking modernist cantilever, bold geometric forms",
-        "cultural_tone": "Leisure and observation, architectural showcase",
-        "materials_base": "Concrete and glass with vibrant accents",
-        "mood_baseline": "Serene coastal elegance with a touch of bold modernity",
-        "palette_bias": "Earth tones, ocean blues, vibrant coral",
-        "soundscape_base": "Oceanic ambient",
-        "flora_base": "Rocky outcrop vegetation",
-        "fauna_base": "Seabirds, marine life"
+        "architectural_tone": "Modern tropical with natural materials",
+        "cultural_tone": "Luxury beachfront vacation home",
+        "materials_base": "natural wood and concrete",
+        "mood_baseline": "relaxed and luxurious",
+        "palette_bias": "Earth tones, blues, greens",
+        "soundscape_base": "tropical coast",
+        "flora_base": "tropical trees",
+        "fauna_base": "seabirds"
       },
-      "description": "A striking modernist building cantilevered over clear turquoise-green ocean water, featuring a prominent upper level with rounded corners and large glass windows framed in vibrant orange-coral, a concrete exterior with greenish discoloration and rust-like streaks, and an outdoor staircase of the same orange-coral hue ascending from a rocky outcrop.",
+      "description": "A luxurious two-story modern house situated directly on a sandy tropical beach. Constructed with exposed concrete and warm wooden accents, it boasts an open-concept design with expansive glass doors and a generous wooden deck overlooking the calm ocean.",
       "navigableElements": [
         {
-          "type": "stairs",
-          "position": "left-side",
-          "description": "orange-coral outdoor staircase"
+          "type": "door",
+          "position": "ground level",
+          "description": "large wooden-framed glass sliding doors leading to the deck"
         },
         {
           "type": "door",
-          "position": "lower-level",
-          "description": "concrete doorway to walkway"
+          "position": "upper level",
+          "description": "large wooden-framed glass sliding doors offering ocean views"
         },
         {
           "type": "path",
-          "position": "lower-level-entrance",
-          "description": "yellowish-green stained concrete walkway into water"
+          "position": "ground level",
+          "description": "wooden deck extending towards the beach"
         }
       ],
       "dominantElements": [
-        "cantilevered upper level",
-        "orange-coral accents",
-        "clear turquoise-green ocean water",
-        "concrete exterior"
+        "modern two-story house",
+        "expansive wooden deck",
+        "swimming pool",
+        "sandy beach",
+        "calm blue ocean"
       ],
       "uniqueIdentifiers": [
-        "rounded corners on upper level",
-        "greenish discoloration on concrete",
-        "rust-like streaks on concrete",
-        "cylindrical base"
+        "exposed concrete and wood exterior",
+        "open-concept interior",
+        "irregularly shaped pool"
       ],
-      "searchDesc": "Modernist cantilevered pavilion, oceanfront, orange-coral, clear water, concrete",
-      "slug": "the-cantilevered-pavilion",
-      "primaryMedia": "media-1764857806322-8aeqwsfut"
+      "searchDesc": "Luxurious modern beachfront house with concrete, wood, deck, pool, and ocean views.",
+      "slug": "the-azure-vista-residence",
+      "primaryMedia": "media-1764860704651-ev233ucjg"
     },
-    "niche-1764857828344-8hp1i2ggt": {
-      "id": "niche-1764857828344-8hp1i2ggt",
+    "a9eb0b45-161b-40da-9745-1d2ff4900204": {
+      "id": "a9eb0b45-161b-40da-9745-1d2ff4900204",
       "type": "niche",
-      "name": "interior of The Cantilevered Pavilion",
+      "name": "Ground Floor Deck and Poolside",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, open-plan hall defined by stark, precise concrete architecture. Expansive floor-to-ceiling glass walls offer uninterrupted ocean and sky views. The space is characterized by bold geometric forms and a seamless integration with the coastal landscape.",
-        "colorsAndLighting": "Dominated by desaturated concrete tones with reddish-brown streaks and weathered greenish hues. Vibrant orange-coral frames punctuate the glass. Lighting is a mix of warm spotlights and diffused ambient light, mimicking daylight and water reflections.",
-        "atmosphere": "Serene coastal elegance pervades the uncluttered space. The air feels clean and breezy, with a palpable connection to the vastness of the ocean. A mood of sophisticated modernism and architectural contemplation is present.",
-        "materials": "The primary materials are smooth, pale concrete for the ceiling and weathered concrete for the walls. Flooring consists of large, irregularly shaped polished stone slabs in shades of grey and ochre, with darker, wet-looking aggregate. Furniture and decor feature polished metal and sea-worn driftwood.",
-        "mood": "Evokes a feeling of sophisticated modernism and a deep connection to the natural coastal environment. There's a sense of bold, almost defiant, architectural presence against the serene ocean backdrop.",
-        "sounds": "gentle waves, distant ocean breeze",
-        "spatialLayout": "A precisely rectangular, open-plan hall with sharp 90-degree corners. The scale is vast, emphasizing depth through the expansive glass panels and the off-center placement of a console table.",
-        "primary_surfaces": "Stark straight concrete walls (weathered green, reddish-brown streaks), Solid opaque pale concrete ceiling",
-        "secondary_surfaces": "Large irregularly shaped polished stone floor slabs (light grey to deep ochre), patches of darker wet-looking aggregate",
-        "accent_features": "Vibrant high-gloss orange-coral framed floor-to-ceiling glass panels, polished dark veined stone console table, minimalist sculptural objects (polished metal, sea-worn driftwood), subtle illuminated blueish passage",
-        "dominant": "Concrete (mottled green and rust) with large coverage",
-        "secondary": "Natural Stone (grey to ochre) on floor",
-        "accent": "Orange-coral (frames), Blueish glow (passage)",
-        "ambient": "Bright daylight and water reflections",
-        "structure": null,
+        "looks": "A spacious, open-plan ground floor deck area extending from a modern concrete and wood house. The deck is furnished for relaxation, leading directly to a free-form swimming pool. The scale feels expansive, emphasizing outdoor living.",
+        "colorsAndLighting": "Bathed in bright, warm sunlight, the dominant colors are the natural wood tones of the deck and furniture, the vibrant turquoise of the pool water, and the deep green of the surrounding foliage. Shadows are sharp and defined.",
+        "atmosphere": "The air is warm, humid, and carries the faint scent of salt and tropical flowers. A gentle breeze might rustle the leaves of nearby trees. The overall feeling is one of calm and serene vacation.",
+        "materials": "The primary materials are weathered, warm-toned wood for the deck and furniture, smooth concrete for the pool edging, and the polished surface of the turquoise water. Accents of plush teal and white fabric are present.",
+        "mood": "Inviting and luxurious, evoking feelings of relaxation, leisure, and escapism. It's a space designed for enjoyment and unwinding.",
+        "sounds": "Gentle waves, distant seagulls, rustling leaves, light splashing.",
+        "spatialLayout": "The space is an extension of the interior, forming a seamless indoor-outdoor transition. The deck is wide and extends towards the pool, which is directly accessible.",
+        "primary_surfaces": "Weathered wooden deck planks, smooth concrete pool edging.",
+        "secondary_surfaces": "Clear turquoise water, plush teal and white upholstery.",
+        "accent_features": "Teal cushions, white sofa, lush green foliage.",
+        "dominant": "Warm wood tones with 50% coverage.",
+        "secondary": "Turquoise water with 30% coverage.",
+        "accent": "Vibrant green foliage and teal cushions with 20% coverage.",
+        "ambient": "Bright, warm, sunny.",
+        "structure": "Modern.",
         "genre": null,
-        "architectural_tone": "Striking modernist cantilever, bold geometric forms",
-        "cultural_tone": "Leisure and observation, architectural showcase",
-        "materials_base": null,
-        "mood_baseline": null,
-        "palette_bias": "Desaturated neutrals with vibrant pops",
-        "soundscape_base": "Coastal ambiance",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "architectural_tone": "Modern tropical with natural materials",
+        "cultural_tone": "Luxury beachfront vacation home",
+        "materials_base": "Wood, concrete, glass",
+        "mood_baseline": "Relaxed, luxurious, serene",
+        "palette_bias": "Earth tones, blues, greens",
+        "soundscape_base": "Oceanfront ambiance",
+        "flora_base": "Tropical foliage",
+        "fauna_base": null
       },
-      "primaryMedia": "media-1764857828341-v5mrpuxjh",
-      "description": "A vast, open-plan modernist interior hall connecting to a coastal environment, featuring stark concrete, expansive glass, and natural stone flooring.",
+      "description": "This area serves as the primary outdoor living and entertainment space of the Azure Vista Residence. It embodies a relaxed yet luxurious tropical resort vibe, perfect for soaking up the sun and enjoying the ocean breeze.",
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "to the left of the console table",
-          "description": "A subtle, illuminated passage with a gentle blueish glow."
+          "type": "door",
+          "position": "from interior",
+          "description": "Large wooden-framed glass sliding doors leading from the interior dining area to the deck."
+        },
+        {
+          "type": "path",
+          "position": "adjacent to deck",
+          "description": "Natural concrete edge of the swimming pool."
         }
       ],
       "dominantElements": [
-        "Floor-to-ceiling glass panels",
-        "Stark concrete walls and ceiling",
-        "Irregularly shaped polished stone floor slabs",
-        "Off-center console table"
+        "Spacious wooden deck",
+        "Irregularly shaped swimming pool",
+        "Lounge chairs with teal cushions",
+        "White outdoor sofa"
       ],
       "uniqueIdentifiers": [
-        "Orange-coral framed glass panels",
-        "Weathered greenish-hue concrete",
-        "Polished stone floor with aggregate patches",
-        "Console table with minimalist objects"
+        "Clear turquoise water of the pool",
+        "Exposed concrete and warm wood architecture",
+        "Direct oceanfront access",
+        "Lush green tropical foliage framing"
       ],
-      "searchDesc": "Modernist pavilion interior with concrete, glass, ocean views, and orange-coral accents.",
-      "slug": "interior-of-the-cantilevered-pavilion"
+      "searchDesc": "Ground floor deck and pool, tropical beach house, lounge chairs, turquoise pool.",
+      "slug": "ground-floor-deck-and-poolside",
+      "primaryMedia": "media-1764860692013-7yeb2g9gn"
+    },
+    "niche-1764860755981-igdslmg57": {
+      "id": "niche-1764860755981-igdslmg57",
+      "type": "niche",
+      "name": "interior of The Azure Vista Residence",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This open-plan living area is defined by its spaciousness and the seamless integration of modern tropical design. Smooth, straight concrete walls flow into a polished warm-toned wood floor and ceiling, creating a cohesive and expansive feel. Large glass panels blur the boundary with the outdoors, complemented by strategic placement of furniture and plants.",
+        "colorsAndLighting": "Warm wood tones dominate, with bright, warm sunlight illuminating the space. Accents of deep green from tropical plants and pops of teal and white from furniture add vibrancy. The lighting is predominantly bright and warm, with a subtle hint of cooler light from a side opening.",
+        "atmosphere": "The atmosphere is one of inviting luxury and deep relaxation, embodying a sense of escapism. The air feels fresh and naturally lit, with a sense of openness and spaciousness. It's a serene environment designed for unwinding and enjoyment.",
+        "materials": "Primary materials include smooth, straight concrete for walls and a service counter, contrasted with polished, warm-toned wood for the floor and ceiling. Plush fabrics are used for seating, and glass forms a prominent wall.",
+        "mood": "The overall mood is exceptionally inviting and luxurious, exuding feelings of relaxation, leisure, and escapism. It's a space crafted for enjoyment and unwinding.",
+        "sounds": "Gentle ambient sounds, rustling leaves, distant ocean surf.",
+        "spatialLayout": "The space is a spacious, open-plan living area with a defined midground element (counter) and distinct seating zones. The layout emphasizes flow and visual connection to the exterior through extensive glazing.",
+        "primary_surfaces": "Smooth concrete walls, polished warm wood floor, solid wood ceiling.",
+        "secondary_surfaces": "Sleek glass panels, plush fabric upholstery.",
+        "accent_features": "Asymmetric warm wood framed opening, potted tropical plants, teal lounge chair, white outdoor sofa.",
+        "dominant": "warm wood tones with 50% coverage",
+        "secondary": "concrete with 30% coverage",
+        "accent": "deep greens, teal, and white with 20% coverage",
+        "ambient": "bright, warm sunlight",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": "Modern tropical with natural materials",
+        "cultural_tone": "Luxury beachfront vacation home",
+        "materials_base": "Smooth concrete and polished wood",
+        "mood_baseline": "Inviting, luxurious, relaxing, escapist",
+        "palette_bias": "Warm earth tones, greens, blues, and whites",
+        "soundscape_base": "Natural and tranquil",
+        "flora_base": "Lush tropical plants",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764860755979-ucnis3v2b",
+      "description": "A spacious, open-plan modern tropical living area bathed in bright, warm sunlight, featuring smooth concrete walls and warm wood floors and ceiling, with large glass panels overlooking lush foliage. A low concrete counter, a warm wood-framed opening, and a teal lounge chair with a white sofa define the space.",
+      "navigableElements": [
+        {
+          "type": "opening",
+          "position": "left",
+          "description": "An asymmetric opening framed by warm wood, hinting at a passage to another space with slightly cooler light."
+        },
+        {
+          "type": "window",
+          "position": "one wall",
+          "description": "Large, sleek glass panels offering a glimpse of lush tropical foliage, blurring interior and exterior lines."
+        }
+      ],
+      "dominantElements": [
+        "Smooth concrete walls",
+        "Polished warm-toned wood floor",
+        "Warm wood ceiling",
+        "Large glass panels",
+        "Low, modern concrete counter",
+        "Plush teal lounge chair",
+        "White outdoor sofa",
+        "Potted tropical plants"
+      ],
+      "uniqueIdentifiers": [
+        "Seamless transition from concrete walls to wood floor",
+        "Wood-clad ceiling reflecting light",
+        "Blurred interior-exterior through glass panels",
+        "Asymmetric warm wood framed opening"
+      ],
+      "searchDesc": "Modern tropical living area, warm wood, concrete, glass, lush plants, inviting luxury.",
+      "slug": "interior-of-the-azure-vista-residence"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764857780829-v8xr9k2t6",
+      "id": "loc-1764860667259-wqj10liis",
       "type": "host",
       "children": [
         {
-          "id": "34986433-065f-4129-bc36-53935aecad8c",
+          "id": "cd6dfe8b-a793-4303-bd74-e920fa2100d0",
           "type": "region",
           "children": [
             {
-              "id": "a4cc7059-14aa-4ef1-a7ed-943b4a7bc39e",
+              "id": "51df1616-50da-46a8-aafe-6a9af80aef16",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1764857828344-8hp1i2ggt",
+                  "id": "a9eb0b45-161b-40da-9745-1d2ff4900204",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764860755981-igdslmg57",
                   "type": "niche",
                   "children": []
                 }
@@ -247,6 +321,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764857780829-v8xr9k2t6"
+    "loc-1764860667259-wqj10liis"
   ]
 }

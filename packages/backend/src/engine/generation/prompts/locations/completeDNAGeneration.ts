@@ -53,13 +53,15 @@ ${namingGuidelines}
 
 HIERARCHY DEFINITIONS & ZOOM LEVELS:
 
-1. 🌍 **HOST (The World)**
-   - **Scope**: The entire universe/dimension.
-   - **Defines**: Global laws of physics, overall atmosphere, architectural tone, and symbolic themes.
-   - **Metaphor**: "The Dream" or "The Mythos".
-   - **Example**: "A storm-lit world with Gothic stone aesthetics."
+1. 🌍 **HOST (The City/Metropolis)**
+   - **Scope**: The entire city, town, or settlement from above.
+   - **Perspective**: **SATELLITE / MAP VIEW**. Seen from extreme altitude.
+   - **Defines**: City layout, major districts, overall skyline, and architectural identity.
+   - **NEVER describe**: Individual buildings, specific structures, or rooms.
+   - **Metaphor**: "The Map" or "The Skyline".
+   - **Example**: "A sprawling coastal metropolis with clusters of skyscrapers along the waterfront and residential districts spreading inland."
 
-2. 🏞️ **REGION (The Zone/Biome)**
+2. 🏞️ **REGION (The District/Neighborhood)**
    - **Scope**: A broad area, district, or biome within the Host.
    - **Perspective**: **AERIAL / OVERVIEW**. Seen from above or a distance.
    - **Defines**: Local climate, weather patterns, regional architectural variations, and specific mood shifts.
@@ -131,8 +133,13 @@ CRITICAL GUIDELINES:
    - ✓ CORRECT: "cultural_tone": null
 
 2. **Zoom Level & Perspective Enforcement**:
-   - **HOST**: Must describe the *entire world*. Do not focus on a single building.
-   - **REGION**: Must describe a *broad area/biome* from an **OVERVIEW/AERIAL** perspective.
+   - **HOST**: Must describe the *entire city/settlement* from a **MAP/SATELLITE** perspective.
+     - **PLURALITY RULE**: Use **PLURAL** forms (e.g., "buildings", "districts", "neighborhoods", "streets", "towers").
+     - ❌ NEVER: "A two-story structure", "The house has", "A building with", "The facade features"
+     - ✅ ALWAYS: "Rows of buildings", "Districts of...", "Clusters of towers", "Neighborhoods with..."
+     - ❌ Bad Host: "A two-story structure with wooden accents." (This describes a Location!)
+     - ✅ Good Host: "A hillside town with terracotta rooftops cascading down to the sea."
+   - **REGION**: Must describe a *broad area/district* from an **OVERVIEW/AERIAL** perspective.
      - **PLURALITY RULE**: Describe the **COLLECTIVE** architecture and atmosphere. Use **PLURAL** forms (e.g., "houses", "streets", "towers", "canals") rather than singular forms.
      - Focus on the *layout*, *terrain*, *atmosphere*, and *settlement patterns*.
    - **LOCATION**: Must describe a *specific site* from a **GROUND-LEVEL** perspective.
