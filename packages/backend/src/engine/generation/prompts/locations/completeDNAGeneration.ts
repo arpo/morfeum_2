@@ -53,27 +53,34 @@ ${namingGuidelines}
 
 HIERARCHY DEFINITIONS & ZOOM LEVELS:
 
-1. 🌍 **HOST (The City/Metropolis)**
-   - **Scope**: The entire city, town, or settlement from above.
+1. 🌍 **HOST (The World/Realm)**
+   - **Scope**: The entire world, environment, or setting from above.
    - **Perspective**: **SATELLITE / MAP VIEW**. Seen from extreme altitude.
-   - **Defines**: City layout, major districts, overall skyline, and architectural identity.
-   - **NEVER describe**: Individual buildings, specific structures, or rooms.
-   - **Metaphor**: "The Map" or "The Skyline".
-   - **Example**: "A sprawling coastal metropolis with clusters of skyscrapers along the waterfront and residential districts spreading inland."
+   - **Defines**: Overall layout, major zones, terrain patterns, and environmental identity.
+   - **NEVER describe**: Individual structures, specific sites, or small details.
+   - **Metaphor**: "The Map" or "The Overview".
+   - **Urban Example**: "A sprawling coastal metropolis with clusters of skyscrapers along the waterfront."
+   - **Natural Example**: "An ancient forest of towering redwoods stretching across misty mountain valleys."
+   - **Fantasy Example**: "A floating archipelago of crystalline islands suspended above an endless void."
+   - **Sci-Fi Example**: "A massive asteroid habitat with domed settlements scattered across its rocky surface."
 
-2. 🏞️ **REGION (The District/Neighborhood)**
+2. 🏞️ **REGION (The Zone/Biome)**
    - **Scope**: A broad area, district, or biome within the Host.
    - **Perspective**: **AERIAL / OVERVIEW**. Seen from above or a distance.
-   - **Defines**: Local climate, weather patterns, regional architectural variations, and specific mood shifts.
+   - **Defines**: Local climate, weather patterns, terrain variations, and specific mood shifts.
    - **Metaphor**: "The Chapter" or "The Biome".
-   - **Example**: "Northern cliffs dominated by perpetual blizzards." (Inherits Gothic stone from Host, adds ice/snow).
+   - **Urban Example**: "Northern industrial district with smokestacks and warehouses."
+   - **Natural Example**: "Northern cliffs dominated by perpetual blizzards and ice caves."
+   - **Fantasy Example**: "The Shimmering Glade where bioluminescent flora casts an eternal twilight."
 
 3. 🏛️ **LOCATION (The Specific Site)**
-   - **Scope**: An exact, explorable place (building, ruin, clearing).
+   - **Scope**: An exact, explorable place (building, clearing, cave, platform).
    - **Perspective**: **GROUND LEVEL / HUMAN SCALE**. Seen from standing height.
-   - **Defines**: Specific structures, immediate surroundings, detailed materials, and local lighting.
+   - **Defines**: Specific features, immediate surroundings, detailed materials, and local lighting.
    - **Metaphor**: "The Stage" or "The Set".
-   - **Example**: "A circular stone lighthouse battered by icy winds." (Inherits blizzard from Region, Gothic stone from Host).
+   - **Urban Example**: "A weathered brick warehouse with rusted loading doors."
+   - **Natural Example**: "A moss-covered clearing with ancient standing stones."
+   - **Fantasy Example**: "A crystalline spire with spiraling ramps leading to an observation deck."
 
 HIERARCHY STRUCTURE:
 
@@ -133,17 +140,23 @@ CRITICAL GUIDELINES:
    - ✓ CORRECT: "cultural_tone": null
 
 2. **Zoom Level & Perspective Enforcement**:
-   - **HOST**: Must describe the *entire city/settlement* from a **MAP/SATELLITE** perspective.
-     - **PLURALITY RULE**: Use **PLURAL** forms (e.g., "buildings", "districts", "neighborhoods", "streets", "towers").
-     - ❌ NEVER: "A two-story structure", "The house has", "A building with", "The facade features"
-     - ✅ ALWAYS: "Rows of buildings", "Districts of...", "Clusters of towers", "Neighborhoods with..."
+   - **HOST**: Must describe the *entire world/environment* from a **MAP/SATELLITE** perspective.
+     - **PLURALITY RULE**: Use **PLURAL** forms appropriate to the environment type:
+       - Urban: "buildings", "districts", "neighborhoods", "streets", "towers"
+       - Natural: "forests", "mountains", "valleys", "rivers", "meadows"
+       - Fantasy: "floating islands", "crystal spires", "enchanted groves"
+       - Sci-Fi: "domes", "modules", "habitats", "platforms", "sectors"
+     - ❌ NEVER: "A single tree", "The house has", "A building with", "One cave"
+     - ✅ ALWAYS: "Vast expanses of...", "Clusters of...", "Networks of...", "Scattered formations of..."
      - ❌ Bad Host: "A two-story structure with wooden accents." (This describes a Location!)
-     - ✅ Good Host: "A hillside town with terracotta rooftops cascading down to the sea."
-   - **REGION**: Must describe a *broad area/district* from an **OVERVIEW/AERIAL** perspective.
-     - **PLURALITY RULE**: Describe the **COLLECTIVE** architecture and atmosphere. Use **PLURAL** forms (e.g., "houses", "streets", "towers", "canals") rather than singular forms.
-     - Focus on the *layout*, *terrain*, *atmosphere*, and *settlement patterns*.
+     - ✅ Good Host (Urban): "A hillside town with terracotta rooftops cascading down to the sea."
+     - ✅ Good Host (Natural): "Dense rainforest canopy stretching to distant volcanic peaks."
+     - ✅ Good Host (Fantasy): "Floating islands connected by luminous bridges over an endless abyss."
+   - **REGION**: Must describe a *broad area/zone* from an **OVERVIEW/AERIAL** perspective.
+     - **PLURALITY RULE**: Describe the **COLLECTIVE** features and atmosphere. Use **PLURAL** forms appropriate to the environment.
+     - Focus on the *layout*, *terrain*, *atmosphere*, and *patterns* of the zone.
    - **LOCATION**: Must describe a *specific site* from a **GROUND-LEVEL** perspective.
-     - Describe the *specific* structure the user is visiting.
+     - Describe the *specific* place the user is visiting.
    - **Differentiation**: A Region is NOT a Location. A Region is the *container* for Locations.
      - ❌ Bad Region: "A small wooden shack." (Too specific, this is a Location)
      - ✅ Good Region: "A dense, fog-shrouded forest of ancient pines." (A biome)

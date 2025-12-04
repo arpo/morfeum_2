@@ -1,315 +1,235 @@
 {
   "nodes": {
-    "loc-1764860667259-wqj10liis": {
-      "id": "loc-1764860667259-wqj10liis",
+    "loc-1764861614509-31rvkl4ew": {
+      "id": "loc-1764861614509-31rvkl4ew",
       "type": "host",
-      "name": "Tropical Paradise",
+      "name": "Xylos",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A vibrant landscape featuring pristine sandy beaches that gently meet the turquoise ocean. Dense, lush green trees with rich foliage frame the scene, creating a sense of natural abundance and seclusion.",
-        "colorsAndLighting": "The scene is bathed in bright, warm sunlight, creating vivid contrasts between the deep greens of the foliage, the soft beige of the sand, and the brilliant blues of the ocean and sky.",
-        "atmosphere": "The air is warm and humid, thick with the sweet scent of tropical flowers and the tang of salt from the nearby ocean. A gentle, constant breeze rustles the leaves, creating a soothing natural symphony.",
-        "materials": "Natural sand, clear ocean water, and the organic textures of dense, living foliage. The overall impression is one of unspoiled natural beauty.",
-        "mood": "Peaceful, idyllic, and invigorating. It evokes feelings of escape, natural wonder, and pure relaxation.",
-        "sounds": "waves lapping shore, birds chirping, rustling leaves, buzzing insects",
-        "spatialLayout": "An expansive and open layout with a clear horizon where the ocean meets the sky. The natural elements create defined zones of beach, water, and dense vegetation.",
-        "primary_surfaces": "soft, warm sand; clear, vibrant water",
-        "secondary_surfaces": "dense, green foliage; bright blue sky",
-        "accent_features": "rocky outcrops on the horizon",
-        "dominant": "vibrant green foliage with 60% coverage",
-        "secondary": "ocean blue with 30% coverage",
-        "accent": "sandy beige with 10% coverage",
-        "ambient": "bright, warm, tropical sunlight",
+        "looks": "A planet characterized by vast, arid desert landscapes. It features a variety of harsh geological formations, from jagged rocks to towering spires, and is dotted with the remnants of ancient alien structures.",
+        "colorsAndLighting": "Dominated by the warm hues of desert sands and rocks, often under a clear, bright sky. Lighting is typically harsh and direct, creating strong contrasts.",
+        "atmosphere": "The atmosphere is dry and thin, supporting vast, arid desert conditions. Extreme temperatures and powerful solar radiation are common.",
+        "materials": "Primarily natural earth materials such as sand, rock, and mineral deposits. Evidence of advanced, yet derelict, alien construction materials may also be found.",
+        "mood": "Evokes a sense of desolation, mystery, and the awe inspired by immense, ancient civilizations and harsh environments.",
+        "sounds": "Whispering winds, distant geological groans",
+        "spatialLayout": "A planet-wide scale, predominantly featuring open, desolate terrains with large geological features and scattered, monumental ruins.",
+        "primary_surfaces": "Cracked earth, weathered rock",
+        "secondary_surfaces": "Mineral deposits, wind-sculpted sand dunes",
+        "accent_features": "Colossal alien edifices, towering rock spires",
+        "dominant": "Sandy orange-brown (70%)",
+        "secondary": "Reddish-brown rock (20%)",
+        "accent": "Pale blue sky (10%)",
+        "ambient": "Bright, arid daylight",
         "structure": null,
-        "genre": "Tropical",
-        "architectural_tone": "Natural and untouched",
-        "cultural_tone": "Idyllic natural retreat",
-        "materials_base": "organic, natural materials",
-        "mood_baseline": "serene and vibrant",
-        "palette_bias": "Greens, blues, earth tones",
-        "soundscape_base": "tropical nature",
-        "flora_base": "Lush tropical rainforest",
-        "fauna_base": "Tropical birds, insects"
-      },
-      "description": "A secluded tropical setting characterized by pristine sandy beaches, lush green foliage, and a vibrant natural beauty. This environment offers an idyllic escape with warm weather and stunning natural landscapes.",
-      "navigableElements": [],
-      "dominantElements": [
-        "sandy beaches",
-        "lush tropical vegetation",
-        "clear blue ocean"
-      ],
-      "uniqueIdentifiers": [
-        "secluded atmosphere",
-        "vibrant natural flora"
-      ],
-      "searchDesc": "A secluded tropical paradise with sandy beaches, lush greenery, and clear blue ocean waters.",
-      "slug": "tropical-paradise",
-      "primaryMedia": "media-1764860725748-v9qj01iuj"
-    },
-    "cd6dfe8b-a793-4303-bd74-e920fa2100d0": {
-      "id": "cd6dfe8b-a793-4303-bd74-e920fa2100d0",
-      "type": "region",
-      "name": "Oceanfront Estates",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A stretch of pristine sandy beach meeting the calm, blue ocean. Luxurious homes with modern architecture are nestled along the coastline, each designed to offer expansive views.",
-        "colorsAndLighting": "Dominated by the bright blue of the sky and ocean, contrasted with the warm beige of the sand and the natural tones of beachfront homes. Sunlight is abundant and bright.",
-        "atmosphere": "The air is fresh, carrying the scent of salt and a gentle, steady ocean breeze. The temperature is consistently warm and pleasant, indicative of a tropical climate.",
-        "materials": "Natural sand, clear ocean water, and the contemporary materials used in the surrounding residences, likely including concrete, wood, and glass.",
-        "mood": "Serene, aspirational, and exclusive. It evokes feelings of peace, luxury, and permanent vacation.",
-        "sounds": "consistent ocean waves, distant seabirds, gentle wind",
-        "spatialLayout": "An open and expansive layout defined by the vastness of the ocean and the gentle curve of the sandy shoreline. Properties are spaced to maximize views and privacy.",
-        "primary_surfaces": "soft sand, clear water",
-        "secondary_surfaces": "contemporary building exteriors, bright sky",
-        "accent_features": "tropical foliage framing properties",
-        "dominant": "ocean blue with 60% coverage",
-        "secondary": "sandy beige with 30% coverage",
-        "accent": "natural wood tones with 10% coverage",
-        "ambient": "bright, natural sunlight",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Luxury modern coastal",
-        "cultural_tone": "Exclusive vacation and residential enclave",
-        "materials_base": "natural coastal elements, modern construction",
-        "mood_baseline": "serene and affluent",
-        "palette_bias": "Blues, beiges, natural tones",
-        "soundscape_base": "calm ocean beach",
-        "flora_base": "tropical coastal vegetation",
-        "fauna_base": "seabirds"
-      },
-      "description": "Exclusive residences situated directly on the sandy shores, offering unparalleled ocean views. This area is characterized by its pristine beaches and luxurious homes designed to maximize the stunning coastal scenery.",
-      "navigableElements": [],
-      "dominantElements": [
-        "sandy beaches",
-        "oceanfront properties",
-        "coastal vistas"
-      ],
-      "uniqueIdentifiers": [
-        "direct beach access",
-        "premium ocean views"
-      ],
-      "searchDesc": "Exclusive beachfront properties with stunning ocean views and direct sandy shore access.",
-      "slug": "oceanfront-estates",
-      "primaryMedia": "media-1764860717184-edxcetg8r"
-    },
-    "51df1616-50da-46a8-aafe-6a9af80aef16": {
-      "id": "51df1616-50da-46a8-aafe-6a9af80aef16",
-      "type": "location",
-      "name": "The Azure Vista Residence",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A spacious, open-plan ground floor deck area extends from a modern concrete and wood house. The deck is furnished for relaxation, leading directly to a free-form swimming pool. The scale feels expansive, emphasizing outdoor living.",
-        "colorsAndLighting": "Bathed in bright, warm sunlight, the dominant colors are the natural wood tones of the deck and furniture, the vibrant turquoise of the pool water, and the deep green of the surrounding foliage. Shadows are sharp and defined.",
-        "atmosphere": "The air is warm, humid, and carries the faint scent of salt and tropical flowers. A gentle breeze might rustle the leaves of nearby trees. The overall feeling is one of calm and serene vacation.",
-        "materials": "The primary materials are weathered, warm-toned wood for the deck and furniture, smooth concrete for the pool edging, and the polished surface of the turquoise water. Accents of plush teal and white fabric are present.",
-        "mood": "Inviting and luxurious, evoking feelings of relaxation, leisure, and escapism. It's a space designed for enjoyment and unwinding.",
-        "sounds": "gentle waves, distant seabirds, rustling leaves, soft breeze",
-        "spatialLayout": "The ground floor features an open-concept living and dining area seamlessly connected to an expansive outdoor deck and pool. The upper floor contains private bedroom and kitchen spaces.",
-        "primary_surfaces": "smooth concrete walls, polished wood deck",
-        "secondary_surfaces": "glass panels, turquoise water, fabric cushions",
-        "accent_features": "teal lounge chair cushions, white outdoor sofa, bedside lamp",
-        "dominant": "warm wood tones with 50% coverage",
-        "secondary": "clear turquoise water with 30% coverage",
-        "accent": "deep green foliage with 20% coverage",
-        "ambient": "bright, warm sunlight",
-        "structure": {
-          "form": "rectangular",
-          "roofType": "flat",
-          "scale": "large",
-          "orientation": "horizontal",
-          "openings": "large-glass",
-          "functionalType": "residential"
-        },
-        "genre": null,
-        "architectural_tone": "Modern tropical with natural materials",
-        "cultural_tone": "Luxury beachfront vacation home",
-        "materials_base": "natural wood and concrete",
-        "mood_baseline": "relaxed and luxurious",
-        "palette_bias": "Earth tones, blues, greens",
-        "soundscape_base": "tropical coast",
-        "flora_base": "tropical trees",
-        "fauna_base": "seabirds"
-      },
-      "description": "A luxurious two-story modern house situated directly on a sandy tropical beach. Constructed with exposed concrete and warm wooden accents, it boasts an open-concept design with expansive glass doors and a generous wooden deck overlooking the calm ocean.",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "ground level",
-          "description": "large wooden-framed glass sliding doors leading to the deck"
-        },
-        {
-          "type": "door",
-          "position": "upper level",
-          "description": "large wooden-framed glass sliding doors offering ocean views"
-        },
-        {
-          "type": "path",
-          "position": "ground level",
-          "description": "wooden deck extending towards the beach"
-        }
-      ],
-      "dominantElements": [
-        "modern two-story house",
-        "expansive wooden deck",
-        "swimming pool",
-        "sandy beach",
-        "calm blue ocean"
-      ],
-      "uniqueIdentifiers": [
-        "exposed concrete and wood exterior",
-        "open-concept interior",
-        "irregularly shaped pool"
-      ],
-      "searchDesc": "Luxurious modern beachfront house with concrete, wood, deck, pool, and ocean views.",
-      "slug": "the-azure-vista-residence",
-      "primaryMedia": "media-1764860704651-ev233ucjg"
-    },
-    "a9eb0b45-161b-40da-9745-1d2ff4900204": {
-      "id": "a9eb0b45-161b-40da-9745-1d2ff4900204",
-      "type": "niche",
-      "name": "Ground Floor Deck and Poolside",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A spacious, open-plan ground floor deck area extending from a modern concrete and wood house. The deck is furnished for relaxation, leading directly to a free-form swimming pool. The scale feels expansive, emphasizing outdoor living.",
-        "colorsAndLighting": "Bathed in bright, warm sunlight, the dominant colors are the natural wood tones of the deck and furniture, the vibrant turquoise of the pool water, and the deep green of the surrounding foliage. Shadows are sharp and defined.",
-        "atmosphere": "The air is warm, humid, and carries the faint scent of salt and tropical flowers. A gentle breeze might rustle the leaves of nearby trees. The overall feeling is one of calm and serene vacation.",
-        "materials": "The primary materials are weathered, warm-toned wood for the deck and furniture, smooth concrete for the pool edging, and the polished surface of the turquoise water. Accents of plush teal and white fabric are present.",
-        "mood": "Inviting and luxurious, evoking feelings of relaxation, leisure, and escapism. It's a space designed for enjoyment and unwinding.",
-        "sounds": "Gentle waves, distant seagulls, rustling leaves, light splashing.",
-        "spatialLayout": "The space is an extension of the interior, forming a seamless indoor-outdoor transition. The deck is wide and extends towards the pool, which is directly accessible.",
-        "primary_surfaces": "Weathered wooden deck planks, smooth concrete pool edging.",
-        "secondary_surfaces": "Clear turquoise water, plush teal and white upholstery.",
-        "accent_features": "Teal cushions, white sofa, lush green foliage.",
-        "dominant": "Warm wood tones with 50% coverage.",
-        "secondary": "Turquoise water with 30% coverage.",
-        "accent": "Vibrant green foliage and teal cushions with 20% coverage.",
-        "ambient": "Bright, warm, sunny.",
-        "structure": "Modern.",
-        "genre": null,
-        "architectural_tone": "Modern tropical with natural materials",
-        "cultural_tone": "Luxury beachfront vacation home",
-        "materials_base": "Wood, concrete, glass",
-        "mood_baseline": "Relaxed, luxurious, serene",
-        "palette_bias": "Earth tones, blues, greens",
-        "soundscape_base": "Oceanfront ambiance",
-        "flora_base": "Tropical foliage",
-        "fauna_base": null
-      },
-      "description": "This area serves as the primary outdoor living and entertainment space of the Azure Vista Residence. It embodies a relaxed yet luxurious tropical resort vibe, perfect for soaking up the sun and enjoying the ocean breeze.",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "from interior",
-          "description": "Large wooden-framed glass sliding doors leading from the interior dining area to the deck."
-        },
-        {
-          "type": "path",
-          "position": "adjacent to deck",
-          "description": "Natural concrete edge of the swimming pool."
-        }
-      ],
-      "dominantElements": [
-        "Spacious wooden deck",
-        "Irregularly shaped swimming pool",
-        "Lounge chairs with teal cushions",
-        "White outdoor sofa"
-      ],
-      "uniqueIdentifiers": [
-        "Clear turquoise water of the pool",
-        "Exposed concrete and warm wood architecture",
-        "Direct oceanfront access",
-        "Lush green tropical foliage framing"
-      ],
-      "searchDesc": "Ground floor deck and pool, tropical beach house, lounge chairs, turquoise pool.",
-      "slug": "ground-floor-deck-and-poolside",
-      "primaryMedia": "media-1764860692013-7yeb2g9gn"
-    },
-    "niche-1764860755981-igdslmg57": {
-      "id": "niche-1764860755981-igdslmg57",
-      "type": "niche",
-      "name": "interior of The Azure Vista Residence",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This open-plan living area is defined by its spaciousness and the seamless integration of modern tropical design. Smooth, straight concrete walls flow into a polished warm-toned wood floor and ceiling, creating a cohesive and expansive feel. Large glass panels blur the boundary with the outdoors, complemented by strategic placement of furniture and plants.",
-        "colorsAndLighting": "Warm wood tones dominate, with bright, warm sunlight illuminating the space. Accents of deep green from tropical plants and pops of teal and white from furniture add vibrancy. The lighting is predominantly bright and warm, with a subtle hint of cooler light from a side opening.",
-        "atmosphere": "The atmosphere is one of inviting luxury and deep relaxation, embodying a sense of escapism. The air feels fresh and naturally lit, with a sense of openness and spaciousness. It's a serene environment designed for unwinding and enjoyment.",
-        "materials": "Primary materials include smooth, straight concrete for walls and a service counter, contrasted with polished, warm-toned wood for the floor and ceiling. Plush fabrics are used for seating, and glass forms a prominent wall.",
-        "mood": "The overall mood is exceptionally inviting and luxurious, exuding feelings of relaxation, leisure, and escapism. It's a space crafted for enjoyment and unwinding.",
-        "sounds": "Gentle ambient sounds, rustling leaves, distant ocean surf.",
-        "spatialLayout": "The space is a spacious, open-plan living area with a defined midground element (counter) and distinct seating zones. The layout emphasizes flow and visual connection to the exterior through extensive glazing.",
-        "primary_surfaces": "Smooth concrete walls, polished warm wood floor, solid wood ceiling.",
-        "secondary_surfaces": "Sleek glass panels, plush fabric upholstery.",
-        "accent_features": "Asymmetric warm wood framed opening, potted tropical plants, teal lounge chair, white outdoor sofa.",
-        "dominant": "warm wood tones with 50% coverage",
-        "secondary": "concrete with 30% coverage",
-        "accent": "deep greens, teal, and white with 20% coverage",
-        "ambient": "bright, warm sunlight",
-        "structure": null,
-        "genre": null,
-        "architectural_tone": "Modern tropical with natural materials",
-        "cultural_tone": "Luxury beachfront vacation home",
-        "materials_base": "Smooth concrete and polished wood",
-        "mood_baseline": "Inviting, luxurious, relaxing, escapist",
-        "palette_bias": "Warm earth tones, greens, blues, and whites",
-        "soundscape_base": "Natural and tranquil",
-        "flora_base": "Lush tropical plants",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Derelict alien technology, colossal organic form",
+        "cultural_tone": "Unknown alien builders, current explorers",
+        "materials_base": "Natural earth materials, advanced composites",
+        "mood_baseline": "Desolate beauty, exploration",
+        "palette_bias": "Earth tones, sky blue",
+        "soundscape_base": "Environmental and geological sounds",
+        "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1764860755979-ucnis3v2b",
-      "description": "A spacious, open-plan modern tropical living area bathed in bright, warm sunlight, featuring smooth concrete walls and warm wood floors and ceiling, with large glass panels overlooking lush foliage. A low concrete counter, a warm wood-framed opening, and a teal lounge chair with a white sofa define the space.",
+      "description": "A vast, arid desert planet known for its desolate beauty and ancient alien ruins. Its surface is a testament to harsh environmental conditions and a forgotten civilization.",
+      "navigableElements": [],
+      "dominantElements": [
+        "expansive deserts",
+        "ancient alien ruins",
+        "harsh geological formations"
+      ],
+      "uniqueIdentifiers": [
+        "arid desert planet",
+        "alien ruins"
+      ],
+      "searchDesc": "Arid desert planet with desolate beauty, ancient alien ruins, and harsh geological formations.",
+      "slug": "xylos",
+      "primaryMedia": "media-1764861653457-1lgxfiq1c"
+    },
+    "06e7c371-3490-4865-bd82-d9d3495a3b15": {
+      "id": "06e7c371-3490-4865-bd82-d9d3495a3b15",
+      "type": "region",
+      "name": "The Crimson Wastes",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast expanse of arid terrain featuring prominent, jagged rock formations and scattered sandy plains. Tall, thin, spire-like geological structures punctuate the distant landscape, adding to the sense of alien topography.",
+        "colorsAndLighting": "Bathed in the harsh, bright light of a midday sun, the colors are dominated by sandy orange-browns and reddish-browns. Shadows are sharp and deep.",
+        "atmosphere": "The air is dry and still, characteristic of an arid desert. The midday sun creates a visually stark and relentless environment, amplifying the feeling of desolation.",
+        "materials": "Primarily rough, weathered rock and sand. The textures are coarse and natural, showing the effects of wind and sun over eons.",
+        "mood": "Evokes a sense of desolate beauty, isolation, and the immensity of untamed nature.",
+        "sounds": "Wind whistling, distant grit scraping",
+        "spatialLayout": "An open, expansive environment with a flat to rolling ground plane that stretches to a distant horizon, marked by geological features.",
+        "primary_surfaces": "Rough, weathered rock; dry sand",
+        "secondary_surfaces": "Exposed earth",
+        "accent_features": "Tall, thin geological spires",
+        "dominant": "Sandy orange-brown (80%)",
+        "secondary": "Reddish-brown rock (15%)",
+        "accent": "Sky blue (5%)",
+        "ambient": "Bright, harsh sunlight",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": "Natural earth materials",
+        "mood_baseline": "Isolation and vastness",
+        "palette_bias": "Earth tones, sky blue",
+        "soundscape_base": "Wind and natural erosion sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "An expansive, sun-baked desert region characterized by jagged rock formations and towering spires. This arid expanse is dominated by stark, natural beauty and a profound sense of isolation.",
+      "navigableElements": [],
+      "dominantElements": [
+        "jagged rock formations",
+        "sandy plains",
+        "spire-like geological formations"
+      ],
+      "uniqueIdentifiers": [
+        "towering spires",
+        "reddish-brown rock"
+      ],
+      "searchDesc": "Vast, arid desert with jagged rocks, towering spires, and reddish-brown terrain under a bright sky.",
+      "slug": "the-crimson-wastes",
+      "primaryMedia": "media-1764861641509-9mru9sncg"
+    },
+    "10e75125-04a3-4549-bae1-832e492be4b8": {
+      "id": "10e75125-04a3-4549-bae1-832e492be4b8",
+      "type": "location",
+      "name": "The Colossus",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The Colossus is a gargantuan, light-colored, bulbous edifice that dwarfs its surroundings. Its surface is a tapestry of exposed wires, complex paneling, and visible mechanical workings, suggesting a derelict, advanced origin. It rests upon rugged, natural rock formations, blending into the harsh desert terrain.",
+        "colorsAndLighting": "Bathed in the bright, harsh light of a midday sun, the scene is dominated by the sandy orange-brown of the desert and the reddish-brown of the rock. The Colossus itself is a pale, almost bleached color, contrasting with the vibrant blue sky.",
+        "atmosphere": "The air is dry and still, typical of an arid desert environment. The midday sun casts sharp, deep shadows, emphasizing the starkness of the landscape. There is a palpable sense of isolation and vastness.",
+        "materials": "The primary materials are rock and sand, appearing rough and weathered. The Colossus is constructed from a smooth, durable-looking material, but its exposed sections reveal complex metallic components and weathered wiring.",
+        "mood": "The mood evokes a sense of desolate beauty, immense scale, and the thrill of potential discovery. It speaks to a lost civilization and the enduring spirit of exploration.",
+        "sounds": "Wind, rustling sand, distant echoes, mechanical hum (faint)",
+        "spatialLayout": "The space is predominantly horizontal, with the Colossus forming a massive vertical interruption on the right. Depth is conveyed through the receding desert landscape and distant formations.",
+        "primary_surfaces": "Sandy desert floor, jagged rock formations",
+        "secondary_surfaces": "Metallic components, exposed wiring, smooth edifice shell",
+        "accent_features": "Blue spherical robot head, slender white tower",
+        "dominant": "Sandy orange-brown with high coverage",
+        "secondary": "Reddish-brown rock formations and structures",
+        "accent": "Pale light-colored edifice, vibrant blue sky",
+        "ambient": "Harsh midday sun, bright and clear",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "derelict alien technology, colossal organic form",
+        "cultural_tone": "unknown alien builders, current explorers",
+        "materials_base": "rock, metal, composite",
+        "mood_baseline": "desolate beauty, exploration",
+        "palette_bias": "earth tones, sky blue",
+        "soundscape_base": "natural desert ambience",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "An immense, light-colored, bulbous structure, possibly a derelict spacecraft or an ancient alien edifice, dominating the landscape.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "base",
+          "description": "A gaping maw on its lower flank, hinting at an entrance."
+        }
+      ],
+      "dominantElements": [
+        "The immense, bulbous main structure",
+        "Jagged, reddish-brown rock formations",
+        "Expansive, sandy orange-brown desert floor",
+        "Tall, thin, spire-like geological formations in the distance"
+      ],
+      "uniqueIdentifiers": [
+        "Exposed intricate mechanical components and wiring",
+        "A solitary figure with multiple long staffs",
+        "A small, unique robot with a blue spherical head",
+        "A rugged, light-colored utility vehicle",
+        "A slender white tower on the far right horizon"
+      ],
+      "searchDesc": "Giant alien edifice in a red desert. Explorers and tech visible.",
+      "slug": "the-colossus",
+      "primaryMedia": "media-1764861630517-tshez15fc"
+    },
+    "niche-1764861689770-7095za3fj": {
+      "id": "niche-1764861689770-7095za3fj",
+      "type": "niche",
+      "name": "interior of The Colossus",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal, cavernous hall with strictly rectangular FORM. Massive, straight walls are clad in segmented, pale composite paneling and feature exposed, weathered wiring. The immense scale is emphasized by the high, opaque ceiling and large recessed openings.",
+        "colorsAndLighting": "The primary color palette is dominated by pale composite materials, contrasted with darker framing around openings. Dim, artificial light emanates from within the structure, casting a cold glow, particularly noticeable with the faint blue light from the left passage.",
+        "atmosphere": "The air feels still and ancient, carrying a sense of desolate awe and the thrill of discovery. The immense height and industrial feel create an atmosphere of profound isolation within an unknown technological space.",
+        "materials": "The main materials are weathered, pale composite paneling and rough, textured grey composite flooring. Exposed wiring suggests a functional but degraded technological environment, with occasional embedded rock fragments in the floor.",
+        "mood": "Evokes a mood of desolate beauty and awe-inspiring discovery, hinting at a lost civilization and the enduring spirit of exploration.",
+        "sounds": "Low hum, distant metallic creaks, faint electrical buzz.",
+        "spatialLayout": "A vast, rectangular hall with immense height, characterized by straight walls and sharp, unseen corners. The layout is asymmetric due to a prominent alcove offset to the right.",
+        "primary_surfaces": "Massive, straight walls of segmented pale composite paneling.",
+        "secondary_surfaces": "Rough, textured grey composite floor, opaque composite ceiling.",
+        "accent_features": "Glowing alien glyphs on a control panel, faint blue light spilling from a passage.",
+        "dominant": "Pale composite paneling with high coverage.",
+        "secondary": "Grey composite flooring with rough texture.",
+        "accent": "Darker composite framing, blue light.",
+        "ambient": "Cold, artificial glow.",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": "derelict alien technology, colossal industrial form",
+        "cultural_tone": "unknown alien builders, current explorers",
+        "materials_base": "weathered composite, exposed wiring, rock fragments",
+        "mood_baseline": "desolate beauty, immense scale, potential discovery",
+        "palette_bias": "cool industrial, muted earth tones",
+        "soundscape_base": "industrial ambient, echoing spaciousness",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764861689768-tn9qbogsd",
+      "description": "The interior of a colossal, derelict alien edifice, featuring a vast, rectangular hall with exposed wiring and pale composite paneling.",
       "navigableElements": [
         {
           "type": "opening",
-          "position": "left",
-          "description": "An asymmetric opening framed by warm wood, hinting at a passage to another space with slightly cooler light."
+          "position": "walls",
+          "description": "Large, recessed openings framed by darker composite, hinting at further passages."
         },
         {
-          "type": "window",
-          "position": "one wall",
-          "description": "Large, sleek glass panels offering a glimpse of lush tropical foliage, blurring interior and exterior lines."
+          "type": "passage",
+          "position": "left foreground",
+          "description": "A narrow, partially obscured passage highlighted by a faint blue light."
         }
       ],
       "dominantElements": [
-        "Smooth concrete walls",
-        "Polished warm-toned wood floor",
-        "Warm wood ceiling",
-        "Large glass panels",
-        "Low, modern concrete counter",
-        "Plush teal lounge chair",
-        "White outdoor sofa",
-        "Potted tropical plants"
+        "exposed, weathered wiring",
+        "segmented, pale composite paneling",
+        "dimly lit alcove with control panel"
       ],
       "uniqueIdentifiers": [
-        "Seamless transition from concrete walls to wood floor",
-        "Wood-clad ceiling reflecting light",
-        "Blurred interior-exterior through glass panels",
-        "Asymmetric warm wood framed opening"
+        "immense scale of the hall",
+        "glowing alien glyphs on control panel",
+        "contrast between pale paneling and darker framing"
       ],
-      "searchDesc": "Modern tropical living area, warm wood, concrete, glass, lush plants, inviting luxury.",
-      "slug": "interior-of-the-azure-vista-residence"
+      "searchDesc": "Vast derelict alien hall with glowing glyphs, exposed wiring, and industrial scale.",
+      "slug": "interior-of-the-colossus"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764860667259-wqj10liis",
+      "id": "loc-1764861614509-31rvkl4ew",
       "type": "host",
       "children": [
         {
-          "id": "cd6dfe8b-a793-4303-bd74-e920fa2100d0",
+          "id": "06e7c371-3490-4865-bd82-d9d3495a3b15",
           "type": "region",
           "children": [
             {
-              "id": "51df1616-50da-46a8-aafe-6a9af80aef16",
+              "id": "10e75125-04a3-4549-bae1-832e492be4b8",
               "type": "location",
               "children": [
                 {
-                  "id": "a9eb0b45-161b-40da-9745-1d2ff4900204",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1764860755981-igdslmg57",
+                  "id": "niche-1764861689770-7095za3fj",
                   "type": "niche",
                   "children": []
                 }
@@ -321,6 +241,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764860667259-wqj10liis"
+    "loc-1764861614509-31rvkl4ew"
   ]
 }
