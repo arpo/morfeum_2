@@ -1160,6 +1160,130 @@
         "height": 1024
       },
       "entityRefs": []
+    },
+    "media-1764839793001-pwplrvqs0": {
+      "id": "media-1764839793001-pwplrvqs0",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84ee8b/eaJH9aK1mt5SOvfMXxqEJ_bc5b0a131ac647b8bc6c27dc4a347ae8.png",
+      "createdAt": "2025-12-04T09:16:33.001Z",
+      "metadata": {
+        "parentMedia": "media-1764837117426-ttrjp60yg",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "niche-1764837117428-wudv3gesv"
+      ],
+      "parentMedia": "media-1764837117426-ttrjp60yg"
+    },
+    "media-1764840898886-o7kppj77r": {
+      "id": "media-1764840898886-o7kppj77r",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84eef9/SddilSNjQMJGcbdCp131n.jpg",
+      "createdAt": "2025-12-04T09:34:58.886Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA street-level, slightly elevated (25-30° downward tilt) ultra-wide view looking towards the \"Ancient Temple Entrance\" in the heart of a dense, overgrown jungle. The colossal, weathered stone archway dominates the midground, flanked by massive, carved pillars with eroded surfaces overtaken by thick, cascading vines. Intricate carvings are partially obscured, hinting at forgotten grandeur. The entrance itself is a shadowed, imposing focal point, with an overgrown path leading into its depths. To the left, the street surface is depicted as worn cobblestone, slick with puddles that reflect faint, dappled sunlight filtering through the dense canopy. The surrounding environment is a rich tapestry of earthy greens and browns from the foliage and ancient stone, with golden yellow sunbeams piercing the thick jungle canopy, creating dramatic, asymmetric shadows across the scene. The air is thick with humidity, suggesting the scent of damp earth and decaying vegetation. The mood is one of awe, mystery, and the melancholic beauty of nature reclaiming man-made structures, evoking a sense of adventure and the thrill of discovery. The materials are primarily rough-hewn, ancient stone with a gritty, eroded texture, and lush, varied jungle foliage. Moss-covered earth and cracked stone paving are visible in the foreground and around the base of the monoliths. Distant jungle foliage fades into a hazy background, emphasizing the isolation of the ruins. The composition is asymmetric, with more street visible on one side, and the temple entrance is shot at a slight angle to emphasize depth and dimension, avoiding any perfectly frontal or centered shots.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "8276119b-970e-42f4-9b56-e0f7f7a5e535"
+      ]
+    },
+    "media-1764840916754-3zauwz4pt": {
+      "id": "media-1764840916754-3zauwz4pt",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84eefb/r4BO5slUIpHsOpfMN1CLV.jpg",
+      "createdAt": "2025-12-04T09:35:16.754Z",
+      "metadata": {
+        "prompt": "A vast, rectangular hall of colossal, weathered stone monoliths, seamlessly extending the ancient temple entrance's architectural tone. The interior walls are massive, rough-hewn stone blocks, echoing the exterior's eroded grandeur, with sections overgrown by dense, cascading jungle vines that drip with humidity. Dappled sunlight, piercing through unseen openings high above, casts dramatic, sharp shadows across the gritty stone floor, which is uneven with patches of moss-covered earth and cracked paving. The air is thick with the scent of damp earth and decaying vegetation, a constant jungle ambiance of drips and rustles.\n\nIn the **foreground**, an illuminated, roughly hewn stone pathway ([navigable: passage, center]) recedes into the midground, subtly guiding the viewer's eye deeper into the structure. To the **midground**, a towering, off-center stone archway ([navigable: door, left third]), partially obscured by hanging vines, reveals a glimpse of a darker, more intricate chamber beyond. Its rough-hewn surface is adorned with weathered, almost indecipherable carvings, a testament to the ancient civilization that once frequented this religious pilgrimage site. To the **background**, the immense scale of the hall is emphasized by the receding vertical depth, suggesting a monumental structure swallowed by time and nature, with the angled, faceted overhead structure of the ceiling creating a dramatic, almost vaulted effect. The overall mood is one of profound mystery and melancholic beauty, inviting further exploration.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764840944250-goh3w5i63": {
+      "id": "media-1764840944250-goh3w5i63",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84eefd/139ByxSZM21kSh8KSjZmA.jpg",
+      "createdAt": "2025-12-04T09:35:44.250Z",
+      "metadata": {
+        "prompt": "A colossal, cavernous interior chamber, its walls formed from immense, weathered, hewn stone monoliths mirroring the colossal archway just traversed. The air is heavy with humidity, carrying the scent of damp earth and the persistent murmur of jungle ambiance. Dappled golden sunlight filters through unseen openings high above, casting dramatic, deep shadows across the uneven stone floor, illuminating patches of moss-covered earth. In the foreground, a navigable element of illuminated, cracked stone paving guides the eye inward. To the midground left, a grand, arched passage, framed by rough stone and partially obscured by cascading, verdant jungle vines, beckons further exploration, its depths shrouded in mystery. To the midground right, a collection of weathered stone carvings, hinting at a lost ancient civilization, are faintly visible, adding to the religious pilgrimage site atmosphere. The overall mood is one of awe, mystery, and the melancholic beauty of nature reclaiming ancient structures.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764840963942-72bq6ymnw": {
+      "id": "media-1764840963942-72bq6ymnw",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84eeff/QKP1ayO62opCQ7-8OS7Z-.jpg",
+      "createdAt": "2025-12-04T09:36:03.942Z",
+      "metadata": {
+        "prompt": "A vast, rectangular hall opens into view, its straight, towering walls constructed from immense panels of weathered, dark grey steel, mirroring the brutalist industrial decay of the exterior. Jagged, exposed circuitry runs like veins across the surfaces, punctuated by streaks of rust and the slick sheen of coolant residue. The ceiling is a colossal flat expanse of reinforced composite, dimly lit by the pervasive cool glow of distant neon signage, casting deep, pooling shadows. High on the left wall, a colossal, glowing elevator shaft pulses with an intense electric blue light, revealing intricate, tiered mechanisms within. To the right, a narrower, dimly lit passage, framed by tarnished metal, recedes into the gloom. In the midground, a section of wall is dominated by a broken display of defunct server racks, their grates and cabling spilling onto the floor, illuminated by an off-center patch of vibrant purple neon. The floor itself is a mosaic of heavy-duty, dark composite tiles, stained with coolant spills and scarred by heavy machinery, with a faint, low hum emanating from unseen depths.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764840984151-5fhovn6vh": {
+      "id": "media-1764840984151-5fhovn6vh",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84ef01/8iyHGGe3EYixMDv4luI_L.jpg",
+      "createdAt": "2025-12-04T09:36:24.151Z",
+      "metadata": {
+        "prompt": "A vast, cathedral-like interior with sweeping, curved walls that mimic the billowing forms of colossal clouds, rendered in polished obsidian and deep amethyst stone. The ceiling is a breathtaking dome of pure, radiant cyan light, punctuated by swirling vortexes of magenta and pink that cascade downwards like ethereal waterfalls. The floor is a cool, polished expanse of deep sapphire, reflecting the vibrant hues from above. In the midground, to the right, a grand, arched passage of glowing, translucent crystal beckons, framed by intricate, swirling patterns of condensed light. To the left, a series of asymmetric, floating platforms, each crafted from shimmering vaporous material, ascend in a dynamic diagonal, hinting at further exploration. The air is alive with a gentle, pulsing glow, and the subtle sound of distant, echoing wind.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764841005595-r6y88nfvt": {
+      "id": "media-1764841005595-r6y88nfvt",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84ef03/anhcQbCZ-TvdYPWh2aZGM.jpg",
+      "createdAt": "2025-12-04T09:36:45.595Z",
+      "metadata": {
+        "prompt": "A weathered industrial art studio interior, immediately beyond the entrance. Straight, rectangular walls of exposed, richly textured brick in earthy reds dominate the scene, interspersed with sections of corrugated metal siding in muted industrial grays. Vibrant, dynamic graffiti art in bold, multicolored strokes explodes across large swathes of the brickwork, adding intense pops of accent color. The floor is a rough, utilitarian concrete, showing signs of creative wear. Overhead, a flat, industrial ceiling with visible structural beams and harsh, functional artificial lights casts a bright, even glow, supplementing the generous natural light streaming through massive, grimy industrial glass windows that punctuate the far walls, offering blurred glimpses of an exterior industrial landscape.\n\nIn the foreground, slightly off-center to the left, a low-profile workbench crafted from salvaged corrugated metal and thick wooden planks is scattered with art supplies: brushes, tubes of paint, and half-finished sketches. A single, illuminated art easel stands beside it, displaying a work-in-progress, drawing the viewer's eye. To the right midground, a wide, imposing doorway, framed with thick, dark metal, beckons into another section of the studio, its opening illuminated by a cooler, more focused spotlight, hinting at further creative spaces within. This passage is positioned towards the right third of the frame, creating an asymmetric focal point. Further into the midground, scattered across the space, are several robust metal shelving units overflowing with canvases, sculpting materials, and stacks of art books. The overall atmosphere is one of raw, energetic creativity, a functional yet inspiring haven for artistic production.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764841021032-s1dv5qicn": {
+      "id": "media-1764841021032-s1dv5qicn",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84ef05/PYdnUBNYFE8UqA0zruKIE.jpg",
+      "createdAt": "2025-12-04T09:37:01.032Z",
+      "metadata": {
+        "prompt": "Lost Ruins district/region. An unexplored area deep within the jungle, rumored to hold forgotten civilizations. This region is characterized by dense, untamed vegetation and the remnants of ancient structures slowly being reclaimed by nature.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nThe jungle encroaches upon crumbling stone structures, with vines and moss softening sharp edges. Sunlight struggles to penetrate the dense canopy, casting dappled shadows.\n\nAtmosphere:\nHeavy with humidity and the smell of damp earth, decay, and vibrant jungle life. A palpable sense of age and abandonment.\n\nColors:\nDominant: Earthy greens, Secondary: Gritty browns\nLight: Misty, diffused light with strong shadows\n\nArchitectural Style: ancient, weathered stone monoliths\nMaterials: Predominantly weathered stone, thick woody vines, and dense foliage. The stone is rough and cracked, the vegetation lush and varied.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "f21358f2-5d0f-4613-a486-7f2d578ae66e"
+      ]
+    },
+    "media-1764841035543-r2wzvdxzk": {
+      "id": "media-1764841035543-r2wzvdxzk",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84ef07/hssfgu8HbvVry-Hp_NdgJ.jpg",
+      "createdAt": "2025-12-04T09:37:15.543Z",
+      "metadata": {
+        "prompt": "The Jungle. A vast, primeval jungle world teeming with ancient mysteries and hidden dangers. This world is characterized by an overwhelming density of life, the remnants of forgotten civilizations, and a powerful sense of isolation.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nAn overwhelming expanse of vibrant, untamed nature. Colossal trees, thick undergrowth, and evidence of ancient, powerful civilizations slowly being consumed by the wild.\n\nAtmosphere:\nThick with humidity, the scent of exotic flowers, damp earth, and decay. A sense of primal energy and an ever-present awareness of the wild.\n\nColors and Lighting:\nDominant: Verdant greens, Secondary: Earthy browns, Accent: Vibrant floral colors\nLight: Dappled sunlight and deep shade, Dominant greens and browns, with vibrant splashes of color from exotic flora. Sunlight filters unevenly through dense canopies, creating areas of bright light and deep shadow.\n\nGenre/Style: Adventure\nArchitectural Style: ancient monoliths\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "loc-1764840880890-ojwh1dpq1"
+      ]
     }
   }
 }

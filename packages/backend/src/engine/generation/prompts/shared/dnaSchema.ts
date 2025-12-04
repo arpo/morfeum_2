@@ -84,26 +84,22 @@ export const DNA_CASCADING_FIELDS = {
 // DNA JSON TEMPLATE BUILDERS
 // ============================================================================
 
+export type NodeType = 'host' | 'region' | 'location' | 'niche';
+
 export interface DNATemplateOptions {
   /** Whether to include structure field (locations only) */
   includeStructure: boolean;
   /** How to handle genre: 'host' = set value, 'null' = always null, 'conditional' = based on nodeType */
   genreHandling: 'host' | 'null' | 'conditional';
-  /** Description length: 'short' for compact prompts, 'long' for detailed */
-  descLength: 'short' | 'long';
   /** Node type for conditional handling */
   nodeType?: string;
 }
 
 /**
- * Build the DNA fields section for JSON templates
+ * Build scene fields string (always the same for all node types)
  */
-export function buildDNAFieldsString(options: DNATemplateOptions): string {
-  const { includeStructure, genreHandling, descLength, nodeType } = options;
-  const short = descLength === 'short';
-  
-  // Scene fields
-  const sceneFields = short ? `
+function buildSceneFieldsString(): string {
+  return `
     "looks": "${DNA_SCENE_FIELDS.looks}",
     "colorsAndLighting": "${DNA_SCENE_FIELDS.colorsAndLighting}",
     "atmosphere": "${DNA_SCENE_FIELDS.atmosphere}",
@@ -117,66 +113,142 @@ export function buildDNAFieldsString(options: DNATemplateOptions): string {
     "dominant": "${DNA_SCENE_FIELDS.dominant}",
     "secondary": "${DNA_SCENE_FIELDS.secondary}",
     "accent": "${DNA_SCENE_FIELDS.accent}",
-    "ambient": "${DNA_SCENE_FIELDS.ambient}",` : `
-    // === SCENE-SPECIFIC VISUAL FIELDS (always populated) ===
-    "looks": "2-4 sentences describing what is seen — key forms, layout, and notable features.",
-    "colorsAndLighting": "1-3 sentences on dominant colors and light behavior.",
-    "atmosphere": "2-4 sentences on air, temperature, motion, weather, and sensory feel.",
-    "materials": "1-3 sentences naming main materials and textures, their condition and finish.",
-    "mood": "1-2 sentences on the emotional tone this place evokes.",
-    "sounds": "5-7 words listing ambient sounds.",
-    "spatialLayout": "1-3 sentences on space shape, dimensions, entry points, and focal centers.",
-    "primary_surfaces": "Main materials on walls, floor, ceiling.",
-    "secondary_surfaces": "Supporting materials on furniture or structure.",
-    "accent_features": "Decorative or striking details.",
-    "dominant": "Primary color family with coverage area.",
-    "secondary": "Secondary color and where it appears.",
-    "accent": "Accent colors and placement.",
-    "ambient": "Overall light tone (warm / cool / neutral).",`;
+    "ambient": "${DNA_SCENE_FIELDS.ambient}",`;
+}
 
-  // Structure field
+/**
+ * Build cascading fields string based on node type
+ * Host: All fields required
+ * Others: All fields nullable (for inheritance)
+ */
+function buildCascadingFieldsString(nodeType: NodeType): string {
+  if (nodeType === 'host') {
+    return `
+    "genre": "REQUIRED: ${DNA_CASCADING_FIELDS.genre}",
+    "architectural_tone": "REQUIRED: ${DNA_CASCADING_FIELDS.architectural_tone}",
+    "cultural_tone": "REQUIRED: ${DNA_CASCADING_FIELDS.cultural_tone}",
+    "materials_base": "REQUIRED: ${DNA_CASCADING_FIELDS.materials_base}",
+    "mood_baseline": "REQUIRED: ${DNA_CASCADING_FIELDS.mood_baseline}",
+    "palette_bias": "REQUIRED: ${DNA_CASCADING_FIELDS.palette_bias}",
+    "soundscape_base": "REQUIRED: ${DNA_CASCADING_FIELDS.soundscape_base}",
+    "flora_base": "${DNA_CASCADING_FIELDS.flora_base}",
+    "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base}"`;
+  }
+  
+  // For non-host nodes: genre is always null, others are nullable
+  return `
+    "genre": null,
+    "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null to inherit",
+    "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null to inherit",
+    "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null to inherit",
+    "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null to inherit",
+    "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null to inherit",
+    "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null to inherit",
+    "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null to inherit",
+    "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null to inherit"`;
+}
+
+/**
+ * Build the DNA fields section for JSON templates
+ */
+export function buildDNAFieldsString(options: DNATemplateOptions): string {
+  const { includeStructure, nodeType = 'niche' } = options;
+  
+  const sceneFields = buildSceneFieldsString();
+  
   const structureField = includeStructure 
     ? `
     ${buildStructureSchemaString()},`
     : `
     "structure": null,`;
 
-  // Genre field based on handling mode
-  let genreField: string;
-  if (genreHandling === 'host') {
-    genreField = `"genre": "World genre (cyberpunk, fantasy, etc.)",`;
-  } else if (genreHandling === 'null') {
-    genreField = `"genre": null,`;
-  } else {
-    // conditional based on nodeType
-    genreField = nodeType === 'host' 
-      ? `"genre": "World genre (cyberpunk, fantasy, etc.)",`
-      : `"genre": null,`;
-  }
-
-  // Cascading fields
-  const cascadingFields = short ? `
-    ${genreField}
-    "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone}",
-    "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone}",
-    "materials_base": "${DNA_CASCADING_FIELDS.materials_base}",
-    "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline}",
-    "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias}",
-    "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base}",
-    "flora_base": "${DNA_CASCADING_FIELDS.flora_base}",
-    "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base}"` : `
-    // === CASCADING STYLE ATTRIBUTES (optional - can be null if inherited) ===
-    ${genreField}
-    "architectural_tone": "Short phrase (e.g., 'industrial metallic', 'organic stone') OR null to inherit",
-    "cultural_tone": "1 sentence on social/functional identity OR null to inherit",
-    "materials_base": "Material palette/style (NOT specific objects) OR null to inherit",
-    "mood_baseline": "Emotional baseline OR null to inherit",
-    "palette_bias": "Color style/families (NOT specific scene colors) OR null to inherit",
-    "soundscape_base": "Ambient sound style OR null to inherit",
-    "flora_base": "Plant life types OR 'None' OR null to inherit",
-    "fauna_base": "Animal life types OR 'None' OR null to inherit"`;
+  const cascadingFields = buildCascadingFieldsString(nodeType as NodeType);
 
   return `${sceneFields}${structureField}${cascadingFields}`;
+}
+
+/**
+ * Build complete DNA JSON template for a specific node type
+ * This is the main function for generating DNA prompts
+ */
+export function buildDNAJsonTemplate(nodeType: NodeType): string {
+  const includeStructure = nodeType === 'location';
+  
+  return `{
+  "name": "Evocative name for this ${nodeType}",
+  "description": "2-3 sentence description",
+  "navigableElements": [
+    {"type": "door|passage|stairs|archway|portal|window", "position": "location in scene", "description": "what it is"}
+  ],
+  "dominantElements": ["3-5 major visual features"],
+  "uniqueIdentifiers": ["3-5 distinctive features"],
+  "searchDesc": "75-100 char search description",
+  "slug": "kebab-case-name",
+  "dna": {${buildDNAFieldsString({ includeStructure, genreHandling: 'conditional', nodeType })}
+  }
+}`;
+}
+
+/**
+ * Build parent context section for prompts
+ */
+export function buildParentContextSection(parentContext?: {
+  genre?: string;
+  architectural_tone?: string;
+  cultural_tone?: string;
+  dominant?: string;
+  mood?: string;
+  materials_base?: string;
+  palette_bias?: string;
+}): string {
+  if (!parentContext) return '';
+  
+  return `
+PARENT CONTEXT (inherit and respect these attributes):
+- Genre: ${parentContext.genre || 'Not specified'} (NEVER override genre)
+- Architectural Tone: ${parentContext.architectural_tone || 'Not specified'}
+- Cultural Tone: ${parentContext.cultural_tone || 'Not specified'}
+- Dominant Color: ${parentContext.dominant || 'Not specified'}
+- Mood: ${parentContext.mood || 'Not specified'}
+- Materials Base: ${parentContext.materials_base || 'Not specified'}
+- Palette Bias: ${parentContext.palette_bias || 'Not specified'}
+`;
+}
+
+/**
+ * Build node-type specific guidelines
+ */
+export function buildNodeTypeGuidelines(nodeType: NodeType): string {
+  const guidelines: Record<NodeType, string> = {
+    host: `
+HOST NODE GUIDELINES:
+1. **GENRE is REQUIRED**: Host is the ONLY node that sets genre. All children inherit it.
+2. **All cascading fields are REQUIRED**: Host must define ALL style attributes.
+3. **Be Foundational**: These attributes cascade to all children.
+4. **Think Scale**: Host represents the largest scope.`,
+    
+    region: `
+REGION NODE GUIDELINES:
+1. **GENRE is ALWAYS null**: Region NEVER sets genre - it inherits from host.
+2. **Sparse Cascading Fields**: Only set if DISTINCTLY different from parent.
+3. **Maintain Consistency**: Stay within the world's genre and style.`,
+    
+    location: `
+LOCATION NODE GUIDELINES:
+1. **GENRE is ALWAYS null**: Location NEVER sets genre.
+2. **NavigableElements are ESSENTIAL**: List ALL visible entrances, passages, stairs.
+3. **Exterior Focus**: Location DNA describes the OUTSIDE of a building.
+4. **Structure is REQUIRED**: Must populate structure for buildings.`,
+    
+    niche: `
+NICHE NODE GUIDELINES:
+1. **GENRE is ALWAYS null**: Niche NEVER sets genre.
+2. **ALL CASCADING FIELDS are null**: Niche fully inherits parent style.
+3. **IMMERSIVE DETAIL**: Be highly specific - this is where the user IS.
+4. **NavigableElements for Expansion**: Doors, passages that lead elsewhere.`
+  };
+  
+  return guidelines[nodeType];
 }
 
 // ============================================================================

@@ -2101,6 +2101,499 @@
       ],
       "searchDesc": "Vast, decaying server tower canyon with rusted steel, sparking circuits, and vibrant neon.",
       "slug": "interior-of-server-tower-canyon"
+    },
+    "loc-1764840880890-ojwh1dpq1": {
+      "id": "loc-1764840880890-ojwh1dpq1",
+      "type": "host",
+      "name": "The Jungle",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An overwhelming expanse of vibrant, untamed nature. Colossal trees, thick undergrowth, and evidence of ancient, powerful civilizations slowly being consumed by the wild.",
+        "colorsAndLighting": "Dominant greens and browns, with vibrant splashes of color from exotic flora. Sunlight filters unevenly through dense canopies, creating areas of bright light and deep shadow.",
+        "atmosphere": "Thick with humidity, the scent of exotic flowers, damp earth, and decay. A sense of primal energy and an ever-present awareness of the wild.",
+        "materials": "Primarily organic materials: dense wood, thick foliage, rich soil, and ancient, weathered stone.",
+        "mood": "Adventure, mystery, isolation, and the awe-inspiring power of nature.",
+        "sounds": "A constant symphony of jungle life: insect chirps, animal calls, rustling leaves, distant thunder, and the sounds of flowing water.",
+        "spatialLayout": "Dense and labyrinthine, with limited visibility. Openings are rare and often lead to further hidden depths.",
+        "primary_surfaces": "Lush vegetation",
+        "secondary_surfaces": "Eroded stone structures",
+        "accent_features": "Exotic flora, ancient carvings, natural rock formations",
+        "dominant": "Verdant greens",
+        "secondary": "Earthy browns",
+        "accent": "Vibrant floral colors",
+        "ambient": "Dappled sunlight and deep shade",
+        "genre": "Adventure",
+        "architectural_tone": "ancient monoliths",
+        "cultural_tone": "lost civilizations",
+        "materials_base": "organic and stone",
+        "mood_baseline": "discovery, isolation",
+        "palette_bias": "natural earth tones and vibrant flora",
+        "soundscape_base": "primal jungle ambiance",
+        "flora_base": "dense, tropical, and exotic",
+        "fauna_base": "diverse and untamed wildlife"
+      },
+      "description": "A vast, primeval jungle world teeming with ancient mysteries and hidden dangers. This world is characterized by an overwhelming density of life, the remnants of forgotten civilizations, and a powerful sense of isolation.",
+      "navigableElements": [
+        "Dense jungle paths",
+        "Rivers",
+        "Cave systems"
+      ],
+      "dominantElements": [
+        "Towering ancient trees",
+        "Hidden ruins",
+        "Abundant wildlife"
+      ],
+      "uniqueIdentifiers": [
+        "Uncharted territories",
+        "Pristine natural beauty",
+        "Lost cities"
+      ],
+      "searchDesc": "Primeval jungle world with ancient ruins, dense flora, and a palpable sense of mystery.",
+      "slug": "the-jungle",
+      "primaryMedia": "media-1764841035543-r2wzvdxzk"
+    },
+    "f21358f2-5d0f-4613-a486-7f2d578ae66e": {
+      "id": "f21358f2-5d0f-4613-a486-7f2d578ae66e",
+      "type": "region",
+      "name": "Lost Ruins",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The jungle encroaches upon crumbling stone structures, with vines and moss softening sharp edges. Sunlight struggles to penetrate the dense canopy, casting dappled shadows.",
+        "colorsAndLighting": "Muted earth tones and deep greens dominate, with shafts of golden sunlight piercing the gloom. Shadows are deep and abundant.",
+        "atmosphere": "Heavy with humidity and the smell of damp earth, decay, and vibrant jungle life. A palpable sense of age and abandonment.",
+        "materials": "Predominantly weathered stone, thick woody vines, and dense foliage. The stone is rough and cracked, the vegetation lush and varied.",
+        "mood": "Melancholic beauty, mystery, and the quiet grandeur of decay. A feeling of being far from civilization.",
+        "sounds": "Constant hum of insects, distant bird calls, rustling leaves, and the occasional drip of water.",
+        "spatialLayout": "Interspersed clearings dominated by ruins, surrounded by impenetrable jungle. Pathways are overgrown and discontinuous.",
+        "primary_surfaces": "Ancient, eroded stone",
+        "secondary_surfaces": "Thick, living vegetation (vines, moss, ferns)",
+        "accent_features": "Intricate, partially obscured carvings, fallen stelae",
+        "dominant": "Earthy greens",
+        "secondary": "Gritty browns",
+        "accent": "Dappled golden sunlight",
+        "ambient": "Misty, diffused light with strong shadows",
+        "genre": null,
+        "architectural_tone": "ancient, weathered stone monoliths",
+        "cultural_tone": "ancient civilization, religious pilgrimage site",
+        "materials_base": "stone and organic",
+        "mood_baseline": "melancholy, awe",
+        "palette_bias": "earth tones and greens",
+        "soundscape_base": "jungle ambiance",
+        "flora_base": "dense, tropical jungle",
+        "fauna_base": "insects, tropical birds"
+      },
+      "description": "An unexplored area deep within the jungle, rumored to hold forgotten civilizations. This region is characterized by dense, untamed vegetation and the remnants of ancient structures slowly being reclaimed by nature.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Ancient temple facades",
+        "Overgrown waterways"
+      ],
+      "uniqueIdentifiers": [
+        "Whispering statues",
+        "Moss-covered plazas"
+      ],
+      "searchDesc": "Jungle region of lost ruins, overgrown with ancient temples and secrets.",
+      "slug": "lost-ruins",
+      "primaryMedia": "media-1764841021032-s1dv5qicn"
+    },
+    "8276119b-970e-42f4-9b56-e0f7f7a5e535": {
+      "id": "8276119b-970e-42f4-9b56-e0f7f7a5e535",
+      "type": "location",
+      "name": "Ancient Temple Entrance",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The entrance is dominated by a colossal, weathered stone archway. Massive, carved pillars flank the entrance, their surfaces eroded by time and encroaching jungle. Thick vines cascade down the facade, obscuring intricate carvings and adding to the sense of decay and forgotten grandeur.",
+        "colorsAndLighting": "The palette is dominated by earthy greens and browns from the foliage and stone, accented by dappled sunlight that filters through the dense canopy, creating dramatic shadows.",
+        "atmosphere": "The air is thick with humidity and the scent of damp earth and decaying vegetation. A gentle breeze rustles the leaves, and the sounds of the jungle are ever-present, creating a sense of isolation and mystery.",
+        "materials": "The primary materials are rough-hewn, ancient stone and dense, verdant plant life. The stone exhibits a gritty texture with visible erosion, while the foliage is lush and varied.",
+        "mood": "Evokes a sense of awe, mystery, and the melancholic beauty of nature reclaiming man-made structures. It suggests adventure and the thrill of discovery.",
+        "sounds": "drip, rustle, chirp, distant calls, crackle, whisper",
+        "spatialLayout": "The entrance forms a clear focal point, with a defined, though overgrown, path leading into a shadowed, imposing archway. The scale suggests a significant structure that has been largely swallowed by its environment.",
+        "primary_surfaces": "Eroded stone blocks, dense jungle vines",
+        "secondary_surfaces": "Moss-covered earth, cracked stone paving",
+        "accent_features": "Weathered stone carvings, sunbeams piercing canopy",
+        "dominant": "earthy brown (stone)",
+        "secondary": "deep green (foliage)",
+        "accent": "golden yellow (sunlight)",
+        "ambient": "dappled sunlight",
+        "structure": {
+          "form": "irregular",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "archway",
+          "functionalType": "religious"
+        },
+        "genre": null,
+        "architectural_tone": "ancient, weathered stone monoliths",
+        "cultural_tone": "ancient civilization, religious pilgrimage site",
+        "materials_base": "stone and organic",
+        "mood_baseline": "mysterious",
+        "palette_bias": "earth tones and greens",
+        "soundscape_base": "jungle ambiance",
+        "flora_base": "dense jungle",
+        "fauna_base": "None"
+      },
+      "description": "The crumbling facade of an ancient stone temple, partially swallowed by the jungle foliage.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "A massive stone archway, partially obscured by vines."
+        },
+        {
+          "type": "path",
+          "position": "leading_into_archway",
+          "description": "A stone path, cracked and overgrown, leading towards the entrance."
+        }
+      ],
+      "dominantElements": [
+        "crumbling stone facade",
+        "lush jungle foliage",
+        "ancient stone pillars",
+        "shadowed archway"
+      ],
+      "uniqueIdentifiers": [
+        "weathered carvings on stone",
+        "thick, hanging vines",
+        "moss-covered steps",
+        "sunlight dappling through canopy"
+      ],
+      "searchDesc": "Tomb Raider-style jungle scene: ancient temple entrance, overgrown ruins, stone facade, vines, sunbeams.",
+      "slug": "ancient-temple-entrance",
+      "primaryMedia": "media-1764840898886-o7kppj77r"
+    },
+    "niche-1764840916755-mg4d7z6us": {
+      "id": "niche-1764840916755-mg4d7z6us",
+      "type": "niche",
+      "name": "interior of Ancient Temple Entrance",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A monumental, rectangular hall defined by colossal, rough-hewn stone monoliths. Dense jungle vines cascade down the walls, creating a stark contrast with the eroded grandeur of the ancient architecture. Dappled sunlight pierces the gloom, casting dramatic shadows.",
+        "colorsAndLighting": "Dominant earthy browns of the weathered stone are accentuated by the deep greens of the foliage. Light is dramatic and sharp, with high contrast between illuminated areas and deep shadows.",
+        "atmosphere": "The air is thick and humid, carrying the scent of damp earth and decaying vegetation. A constant ambiance of jungle sounds, including drips and rustles, pervades the space, creating a palpable sense of age and neglect.",
+        "materials": "The primary materials are massive, rough-hewn stone blocks, heavily weathered and showing signs of erosion. Patches of moss and earth cover the uneven stone floor, intertwined with dense, living jungle vines.",
+        "mood": "Evokes profound mystery and melancholic beauty, a powerful sense of adventure and the thrill of discovering forgotten places.",
+        "sounds": "Drips, rustles, damp earth, distant echoes",
+        "spatialLayout": "A vast, rectangular hall with immense vertical depth. The space draws the viewer inward via a central pathway and a prominent off-center archway.",
+        "primary_surfaces": "Rough-hewn stone walls and floor.",
+        "secondary_surfaces": "Moss-covered earth, cracked paving, dense jungle vines.",
+        "accent_features": "Weathered, indecipherable ancient carvings on the archway, cascading jungle vines.",
+        "dominant": "Earthy brown (stone) - extensive coverage",
+        "secondary": "Deep green (vines) - prominent on walls and obscuring features",
+        "accent": "Yellow-gold (dappled sunlight) - dramatic highlights",
+        "ambient": "Neutral, with warm highlights",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "vaulted",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "minimal",
+          "functionalType": "religious"
+        },
+        "genre": null,
+        "architectural_tone": "ancient weathered stone monoliths",
+        "cultural_tone": "ancient civilization, religious pilgrimage site",
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764840916754-3zauwz4pt",
+      "description": "The interior of a vast, ancient temple entrance hall, characterized by weathered stone monoliths and overgrown jungle elements.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center, receding into midground",
+          "description": "Illuminated, roughly hewn stone pathway"
+        },
+        {
+          "type": "door",
+          "position": "left third, partially obscured",
+          "description": "Towering stone archway revealing a darker chamber"
+        }
+      ],
+      "dominantElements": [
+        "colossal weathered stone monoliths",
+        "cascading jungle vines",
+        "dappled sunlight and sharp shadows"
+      ],
+      "uniqueIdentifiers": [
+        "rough-hewn stone monoliths",
+        "drip-laden jungle vines",
+        "indecipherable ancient carvings"
+      ],
+      "searchDesc": "Vast ancient temple interior with stone monoliths, jungle vines, and dappled light.",
+      "slug": "interior-of-ancient-temple-entrance"
+    },
+    "niche-1764840944251-um2rgowi7": {
+      "id": "niche-1764840944251-um2rgowi7",
+      "type": "niche",
+      "name": "interior of Ancient Temple Entrance",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, cavernous interior chamber defined by colossal, weathered hewn stone monoliths. The floor is uneven stone, marked by patches of moss-covered earth, with dappled golden sunlight creating dramatic shadows. Verdant jungle vines cascade from above and partially obscure a grand arched passage.",
+        "colorsAndLighting": "Dominant earthy browns of weathered stone are contrasted by the deep shadows and patches of illuminated moss. Dappled golden sunlight filters from above, creating a dramatic interplay of light and shadow.",
+        "atmosphere": "The air is heavy with humidity, carrying the scent of damp earth and the persistent murmur of jungle ambiance. A sense of ancient mystery and the melancholic beauty of nature's reclamation pervades.",
+        "materials": "Primarily composed of immense, weathered, hewn stone monoliths and uneven stone paving. Patches of moss-covered earth are visible on the floor. Rough stone frames a passage.",
+        "mood": "Evokes a sense of awe, profound mystery, and the melancholic beauty of nature reclaiming ancient man-made structures.",
+        "sounds": "Damp earth, jungle murmur, echoing drips.",
+        "spatialLayout": "A colossal, cavernous chamber with a wide, open central area. An illuminated, cracked stone path leads inward, with a grand arched passage to the midground left.",
+        "primary_surfaces": "Hewn stone monoliths (walls), uneven stone paving (floor).",
+        "secondary_surfaces": "Moss-covered earth, rough stone framing.",
+        "accent_features": "Cascading verdant jungle vines, illuminated cracked stone paving, weathered stone carvings.",
+        "dominant": "Earthy brown (stone, earth)",
+        "secondary": "Deep shadow (contrast)",
+        "accent": "Golden light (sunlight), verdant green (vines)",
+        "ambient": "Warm",
+        "structure": {
+          "form": "irregular",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "arched-windows",
+          "functionalType": "religious"
+        },
+        "genre": null,
+        "architectural_tone": "ancient, weathered stone monoliths",
+        "cultural_tone": "ancient civilization, religious pilgrimage site",
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "jungle vines, moss",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764840944250-goh3w5i63",
+      "description": "A colossal, cavernous interior chamber, ancient temple entrance.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground left",
+          "description": "A grand, arched passage framed by rough stone, partially obscured by vines."
+        }
+      ],
+      "dominantElements": [
+        "immense, weathered, hewn stone monoliths",
+        "uneven stone floor",
+        "cascading jungle vines",
+        "weathered stone carvings"
+      ],
+      "uniqueIdentifiers": [
+        "colossal cavernous chamber",
+        "hewn stone monolith walls",
+        "dappled golden sunlight and deep shadows",
+        "jungle vines obscuring passage"
+      ],
+      "searchDesc": "Cavernous ancient temple interior with hewn stone, dappled light, and jungle vines.",
+      "slug": "interior-of-ancient-temple-entrance"
+    },
+    "niche-1764840963944-56cph4my3": {
+      "id": "niche-1764840963944-56cph4my3",
+      "type": "niche",
+      "name": "interior of Server Tower Canyon",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, rectangular hall of immense, weathered dark grey steel panels. Jagged, exposed circuitry runs like veins across the walls, marked by rust and coolant residue. The ceiling is a colossal flat expanse.",
+        "colorsAndLighting": "Dimly lit by the pervasive cool glow of distant neon signage, casting deep shadows. The elevator shaft pulses with intense electric blue, while defunct server racks are illuminated by a vibrant purple neon.",
+        "atmosphere": "The air is still and heavy, carrying the faint scent of ozone and old machinery. A low hum emanates from unseen depths, creating a palpable sense of immense, dormant power and desolation.",
+        "materials": "The primary materials are weathered, dark grey steel panels for the walls and a dark composite tile for the floor. Exposed circuitry, rust, and coolant residue mar these surfaces, indicating significant decay.",
+        "mood": "Awe-inspiring and desolate, evoking a sense of lost technological grandeur and a hint of lurking danger.",
+        "sounds": "low hum, distant mechanical clicks, faint electrical crackle",
+        "spatialLayout": "A vast, rectangular hall with towering vertical walls. A massive elevator shaft dominates the left wall, a narrow passage recedes to the right, and broken server racks are a focal point in the midground.",
+        "primary_surfaces": "weathered dark grey steel panels (walls), reinforced composite (ceiling), heavy-duty dark composite tiles (floor)",
+        "secondary_surfaces": "exposed circuitry, tarnished metal frames",
+        "accent_features": "glowing electric blue elevator shaft, vibrant purple neon illuminating server racks, rust streaks, coolant residue sheen",
+        "dominant": "dark grey (walls, floor)",
+        "secondary": "dark composite (floor, ceiling)",
+        "accent": "electric blue (elevator shaft), vibrant purple (server racks), rust (streaks)",
+        "ambient": "cool",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "brutalist industrial decay with vibrant neon accents",
+        "cultural_tone": "Remnants of a hyper-advanced, now-abandoned data infrastructure.",
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764840963942-72bq6ymnw",
+      "description": "The vast, rectangular interior of a server tower canyon, characterized by brutalist industrial decay and vibrant neon accents.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "high on the left wall",
+          "description": "colossal, glowing elevator shaft pulsing with intense electric blue light"
+        },
+        {
+          "type": "passage",
+          "position": "to the right",
+          "description": "narrower, dimly lit passage receding into gloom"
+        }
+      ],
+      "dominantElements": [
+        "towering steel walls",
+        "exposed circuitry",
+        "colossal elevator shaft",
+        "defunct server racks"
+      ],
+      "uniqueIdentifiers": [
+        "jagged exposed circuitry",
+        "rust streaks",
+        "coolant residue sheen",
+        "pulsing blue elevator shaft",
+        "broken server racks with purple neon"
+      ],
+      "searchDesc": "Vast industrial server canyon with towering steel walls, exposed circuitry, a blue elevator shaft, and purple neon server racks.",
+      "slug": "interior-of-server-tower-canyon"
+    },
+    "niche-1764840984153-k2w4jawlh": {
+      "id": "niche-1764840984153-k2w4jawlh",
+      "type": "niche",
+      "name": "interior of The Shifting Cloud Formations",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, cathedral-like interior features sweeping, curved walls resembling colossal clouds. The dominant feature is a breathtaking dome of radiant cyan light, with swirling vortexes of magenta and pink cascading downwards. A grand arched passage of glowing crystal is visible on the right, while asymmetric floating platforms ascend diagonally to the left.",
+        "colorsAndLighting": "The space is illuminated by a radiant cyan dome, accented by vibrant magenta and pink vortexes. The deep sapphire floor reflects these celestial hues.",
+        "atmosphere": "The air is alive with a gentle, pulsing glow, creating a mysterious and awe-inspiring ambiance. The subtle sound of distant, echoing wind adds to the serene and transitional feel.",
+        "materials": "Walls are rendered in polished obsidian and deep amethyst stone, contrasting with a floor of cool, polished deep sapphire. A midground passage is made of glowing, translucent crystal, and floating platforms are crafted from shimmering vaporous material.",
+        "mood": "This place evokes a mood of mystery, awe-inspiring wonder, and deep serenity, inviting contemplation.",
+        "sounds": "distant, echoing wind",
+        "spatialLayout": "The interior is a vast, cathedral-like space with sweeping curved walls, creating an expansive and awe-inspiring environment. Focal points include the radiant dome, the crystal archway, and the ascending vapor platforms.",
+        "primary_surfaces": "Obsidian, amethyst stone, polished sapphire",
+        "secondary_surfaces": "Glowing translucent crystal, shimmering vaporous material",
+        "accent_features": "Swirling vortexes of magenta and pink in the ceiling, intricate swirling patterns of condensed light around the crystal archway.",
+        "dominant": "Cyan (ceiling)",
+        "secondary": "Deep blue (implied by sapphire floor and stone)",
+        "accent": "Magenta and pink (ceiling vortexes), glowing crystal (passage)",
+        "ambient": "cool",
+        "structure": {
+          "form": "organic",
+          "roofType": "domed",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "open-passages",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Ethereal and celestial cloudscape",
+        "cultural_tone": "A place of wonder and transition within a magical realm, possibly a natural phenomenon or divinely crafted.",
+        "materials_base": null,
+        "mood_baseline": "Mysterious, awe-inspiring, and deeply serene",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764840984151-5fhovn6vh",
+      "description": "The ethereal interior of a cloud-like cathedral, bathed in luminous, celestial light.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "midground, right",
+          "description": "A grand, arched passage of glowing, translucent crystal framed by swirling patterns of condensed light."
+        },
+        {
+          "type": "stairs",
+          "position": "left",
+          "description": "Asymmetric, floating platforms crafted from shimmering vaporous material ascending diagonally."
+        }
+      ],
+      "dominantElements": [
+        "Sweeping, curved walls",
+        "Radiant cyan ceiling dome",
+        "Arched crystal passage",
+        "Floating vapor platforms"
+      ],
+      "uniqueIdentifiers": [
+        "Billowing cloud-like walls",
+        "Cyan dome with magenta/pink vortexes",
+        "Crystal archway",
+        "Vapor platforms"
+      ],
+      "searchDesc": "Cathedral-like interior, cloud walls, cyan dome, crystal arch, vapor platforms.",
+      "slug": "interior-of-the-shifting-cloud-formations"
+    },
+    "niche-1764841005597-xkqy5ougg": {
+      "id": "niche-1764841005597-xkqy5ougg",
+      "type": "niche",
+      "name": "interior of Art Studio",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This industrial art studio interior features dominant walls of richly textured, earthy red brick interspersed with muted gray corrugated metal. Vibrant, multicolored graffiti art explodes across large swathes of the brickwork, creating intense pops of accent color. The space is furnished with utilitarian elements like a rough concrete floor, a workbench made of salvaged materials, and robust metal shelving units.",
+        "colorsAndLighting": "Dominant earthy red from the brick is heavily accented by bold, multicolored graffiti. Lighting is a mix of harsh, functional artificial lights from an industrial ceiling and generous natural light from grimy industrial windows, casting a bright, even glow.",
+        "atmosphere": "The air is charged with raw, energetic creativity, a functional yet inspiring haven. There's a palpable sense of potential and artistic production, a tangible feel of creative wear and tear throughout the space.",
+        "materials": "Key materials include richly textured brick, corrugated metal siding, rough concrete, and salvaged wood and metal for furniture. These materials convey a sense of industrial history and practical utility.",
+        "mood": "Inspiring and energetic, evoking a sense of raw creativity and potential. It feels like a place where boundary-pushing art is made.",
+        "sounds": "Distant city hum, faint clatter, hushed artistic concentration.",
+        "spatialLayout": "A rectangular space immediately beyond the entrance, with straight, dominant walls. Focal points include a workbench and easel in the foreground left and an imposing doorway in the right midground, creating an asymmetric composition. Massive windows on the far walls provide depth.",
+        "primary_surfaces": "exposed brick, corrugated metal siding, concrete floor",
+        "secondary_surfaces": "salvaged corrugated metal, thick wooden planks, dark metal framing",
+        "accent_features": "vibrant, dynamic graffiti art, illuminated art easel, art supplies, overflowing shelving units",
+        "dominant": "earthy red (brick walls)",
+        "secondary": "muted industrial gray (corrugated metal)",
+        "accent": "bold, multicolored strokes (graffiti)",
+        "ambient": "bright, even glow",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "large-glass, open-passages",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764841005595-r6y88nfvt",
+      "description": "The raw, functional interior of an industrial art studio, immediately inside the entrance, buzzing with creative energy.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "right midground, towards the right third of the frame",
+          "description": "A wide, imposing doorway framed with thick, dark metal, leading to further studio spaces, illuminated by a cooler, focused spotlight."
+        },
+        {
+          "type": "window",
+          "position": "far walls",
+          "description": "Massive, grimy industrial glass windows offering blurred glimpses of an exterior industrial landscape."
+        }
+      ],
+      "dominantElements": [
+        "exposed brick walls",
+        "corrugated metal siding",
+        "graffiti art",
+        "concrete floor",
+        "workbench with art supplies",
+        "illuminated art easel",
+        "metal shelving units"
+      ],
+      "uniqueIdentifiers": [
+        "vibrant graffiti on brick",
+        "workbench crafted from salvaged materials",
+        "illuminated art easel",
+        "grimy industrial windows"
+      ],
+      "searchDesc": "Industrial art studio interior with brick, graffiti, art supplies, and an easel.",
+      "slug": "interior-of-art-studio"
     }
   },
   "views": {},
@@ -2251,6 +2744,11 @@
                   "id": "niche-1764794502246-lkjtnxxfy",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1764841005597-xkqy5ougg",
+                  "type": "niche",
+                  "children": []
                 }
               ]
             }
@@ -2272,6 +2770,11 @@
               "children": [
                 {
                   "id": "niche-1764834758985-48u2ugsps",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764840984153-k2w4jawlh",
                   "type": "niche",
                   "children": []
                 }
@@ -2297,6 +2800,39 @@
                   "id": "niche-1764837117428-wudv3gesv",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1764840963944-56cph4my3",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764840880890-ojwh1dpq1",
+      "type": "host",
+      "children": [
+        {
+          "id": "f21358f2-5d0f-4613-a486-7f2d578ae66e",
+          "type": "region",
+          "children": [
+            {
+              "id": "8276119b-970e-42f4-9b56-e0f7f7a5e535",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764840916755-mg4d7z6us",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764840944251-um2rgowi7",
+                  "type": "niche",
+                  "children": []
                 }
               ]
             }
@@ -2311,6 +2847,7 @@
     "loc-1764768440138-82r4pdpzs",
     "loc-1764794472637-8o1drrz9g",
     "loc-1764834711849-eoe2fn43k",
-    "loc-1764837069530-ff3a5nyx0"
+    "loc-1764837069530-ff3a5nyx0",
+    "loc-1764840880890-ojwh1dpq1"
   ]
 }
