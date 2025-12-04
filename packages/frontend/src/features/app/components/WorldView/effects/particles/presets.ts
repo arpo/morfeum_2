@@ -13,14 +13,14 @@ export const DUST_PRESET: ParticlePreset = {
   config: {
     enabled: true,
     count: 1000,
-    size: { min: 0.05, max: 0.15 },  // Larger for better visibility
+    size: { min: 0.05, max: 0.09 },  // Larger for better visibility
     speed: { min: 0.0125, max: 0.025 },
     opacity: { min: 0.15, max: 0.3 },  // More visible
     color: '#ffffff',
     behavior: 'float',
     blendMode: 'additive',
     wind: { x: 0.02, y: -0.01 },
-    drift: { x: 0.1, y: 0 },
+    drift: { x: 0.8, y: 0 },
     turbulence: 0.4,  // Reduced from 0.9 to prevent z-depth clustering
     depthAware: true,
     lifetime: { min: 8, max: 15 },  // Particles respawn every 8-15 seconds
