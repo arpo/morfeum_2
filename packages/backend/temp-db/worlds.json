@@ -212,6 +212,229 @@
       ],
       "searchDesc": "Vast derelict alien hall with glowing glyphs, exposed wiring, and industrial scale.",
       "slug": "interior-of-the-colossus"
+    },
+    "loc-1764861906534-npeys6l3i": {
+      "id": "loc-1764861906534-npeys6l3i",
+      "type": "host",
+      "name": "Xylos",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A broad, sweeping vista featuring a vibrant blue sky dotted with diverse celestial bodies. The landscape is a rich tapestry of unique geological formations and exotic, often glowing, flora. The scale is grand and fantastical.",
+        "colorsAndLighting": "Bathed in the dual glow of a pale yellow-green celestial body and a fiery orange-red sun. The sky is a vibrant azure, occasionally streaked with swirling green and blue nebulae. Shadows are sharp and defined.",
+        "atmosphere": "The air is crisp and otherworldly, possibly carrying the faint scent of exotic flora. A gentle breeze might rustle the alien plant life. The sky is clear and expansive.",
+        "materials": "A diverse array of materials including naturally occurring rock formations, crystalline structures, and unique, organic plant matter. Textures range from smooth and organic to spiky and crystalline.",
+        "mood": "A profound sense of serene wonder pervades the scene, evoking feelings of awe and peaceful contemplation. It's a place of breathtaking beauty and alien tranquility.",
+        "sounds": "Gentle rustling flora, distant celestial hums, exotic avian calls.",
+        "spatialLayout": "Expansive and multi-layered, with a clear foreground, midground, and background. Offers vast vistas and hidden details within the alien flora and geological formations.",
+        "primary_surfaces": "Alien flora, geological formations",
+        "secondary_surfaces": "Rocky outcrops, ground cover",
+        "accent_features": "Glowing flora accents, swirling sky nebulae, diverse celestial bodies",
+        "dominant": "Pinkish-purple (mountain mass in regions), Vibrant blue (sky)",
+        "secondary": "Fiery orange-red (sun/planet), Pale yellow-green (moon/planet)",
+        "accent": "Glowing yellow orbs, abstract green and blue patterns",
+        "ambient": "Rich and saturated",
+        "structure": null,
+        "genre": "Sci-Fi Fantasy",
+        "architectural_tone": "Naturally formed, organic monumental geology",
+        "cultural_tone": "Alien civilization with an appreciation for natural wonders and cosmic phenomena.",
+        "materials_base": "Exotic organic compounds, crystalline minerals",
+        "mood_baseline": "Wonder and Serenity",
+        "palette_bias": "Purples, blues, greens, with fiery orange and bright yellow accents",
+        "soundscape_base": "Exotic natural ambience",
+        "flora_base": "Bizarre and bioluminescent alien plants",
+        "fauna_base": "Elegant, alien avian-like creatures"
+      },
+      "description": "A vibrant and otherworldly alien landscape under a bright blue sky, illuminated by multiple celestial bodies. This world teems with unique flora and fauna, bathed in a palette of rich, saturated colors.",
+      "navigableElements": [],
+      "dominantElements": [
+        "alien flora",
+        "celestial bodies"
+      ],
+      "uniqueIdentifiers": [
+        "bright blue sky",
+        "multiple celestial bodies",
+        "glowing orbs",
+        "swirling nebulae"
+      ],
+      "searchDesc": "Vibrant alien world with a blue sky, multiple suns, and exotic flora.",
+      "slug": "xylos",
+      "primaryMedia": "media-1764861956677-bxlu5qf6d"
+    },
+    "a8dd2c72-f0b8-4a26-9563-9e9d4dc7e64b": {
+      "id": "a8dd2c72-f0b8-4a26-9563-9e9d4dc7e64b",
+      "type": "region",
+      "name": "The Craggy Peaks",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Immense, sharply defined mountain ranges with organic, deeply textured surfaces. Peaks are jagged and rise dramatically, creating a sense of monumental geological formation. The scale is vast, dwarfing any surrounding elements.",
+        "colorsAndLighting": "Dominated by deep pinkish-purple hues. Lighting creates sharp, defined shadows that accentuate the rugged, craggy forms.",
+        "atmosphere": "Crisp and alien air. The atmosphere here is stark and dramatic, highlighting the raw, sculpted nature of the landforms.",
+        "materials": "Composed of naturally occurring, deeply textured rock that resembles organic material. The surface is craggy and uneven, with a mineral or crystalline quality.",
+        "mood": "Awe-inspiring and monumental. Evokes a sense of raw, untamed natural power.",
+        "sounds": "Wind whistling over rock faces, distant echoes.",
+        "spatialLayout": "Vast, open spaces punctuated by colossal geological structures. Creates a sense of deep canyons and towering heights.",
+        "primary_surfaces": "Craggy rock faces",
+        "secondary_surfaces": "Mineral veins, eroded stone",
+        "accent_features": "Sharp shadow lines, exposed crystalline facets",
+        "dominant": "Pinkish-purple (mountain mass)",
+        "secondary": "Deep shadows (contrast)",
+        "accent": null,
+        "ambient": "Sharp, high-contrast",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": "Naturally formed, organic monumental geology",
+        "cultural_tone": null,
+        "materials_base": "Crystalline rock, mineral formations",
+        "mood_baseline": "Awe",
+        "palette_bias": "Purples, blues",
+        "soundscape_base": "Wind and rock",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A dramatic expanse dominated by towering, rugged mountains of pinkish-purple hue with deeply textured and craggy surfaces. These monumental formations rise to create a striking and awe-inspiring natural architecture.",
+      "navigableElements": [],
+      "dominantElements": [
+        "towering mountains"
+      ],
+      "uniqueIdentifiers": [
+        "pinkish-purple hue",
+        "deeply textured and craggy surfaces"
+      ],
+      "searchDesc": "Alien landscape with towering, pinkish-purple, craggy mountains.",
+      "slug": "the-craggy-peaks",
+      "primaryMedia": "media-1764861943569-7rf4d49ko"
+    },
+    "bad38089-c95a-4a2b-bdae-6691257b579b": {
+      "id": "bad38089-c95a-4a2b-bdae-6691257b579b",
+      "type": "location",
+      "name": "Mount Zephyr",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A singular, massive mountain dominates the landscape, its surface a tapestry of deep, almost biological textures. The summit is flat enough to host two figures, providing a dramatic perch. The scale is immense, dwarfing the surrounding flora and fauna.",
+        "colorsAndLighting": "The scene is bathed in the dual glow of a pale yellow-green celestial body and a fiery orange-red sun. Shadows are sharp and defined, accentuating the mountain's rugged form. The overall palette is rich and saturated.",
+        "atmosphere": "The air is crisp and otherworldly, possibly carrying the faint scent of exotic flora. A gentle breeze might rustle the alien plant life. The sky is a vibrant azure, occasionally streaked with swirling green and blue nebulae.",
+        "materials": "The mountain is composed of a naturally occurring, deeply textured rock that resembles organic material, likely a crystalline or mineral formation. Flora exhibits a variety of textures, from smooth bean-like pods to spiky growths.",
+        "mood": "A profound sense of serene wonder pervades the scene, evoking feelings of awe and peaceful contemplation. It's a place of breathtaking beauty and alien tranquility.",
+        "sounds": "Gentle wind, rustling leaves, distant avian calls, faint celestial hum.",
+        "spatialLayout": "The space is characterized by a dramatic verticality, with the mountain acting as a central spire. The foreground is dense with flora, leading the eye up to the summit and the expansive sky beyond.",
+        "primary_surfaces": "Rugged, organic rock; smooth, fleshy growths; spiky, crystalline formations.",
+        "secondary_surfaces": "Swirling clouds; luminous orb accents; bird-like wings.",
+        "accent_features": "Glowing yellow accents on flora; vibrant celestial bodies; unique plant cap colors.",
+        "dominant": "Pinkish-purple (mountain)",
+        "secondary": "Azure blue (sky)",
+        "accent": "Yellow-green and orange-red (celestial bodies), glowing yellow (flora accents)",
+        "ambient": "Bright, otherworldly daylight",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "minimal",
+          "functionalType": "natural_wonder"
+        },
+        "genre": null,
+        "architectural_tone": "Naturally formed, organic monumental geology",
+        "cultural_tone": "None",
+        "materials_base": "Alien geology and bioluminescent flora",
+        "mood_baseline": "Awe-inspiring, tranquil",
+        "palette_bias": "Purples, blues, greens, with fiery orange and bright yellow accents",
+        "soundscape_base": "Natural alien ambience",
+        "flora_base": "Exotic, bioluminescent alien plants",
+        "fauna_base": "Graceful, bird-like creatures"
+      },
+      "description": "The highest peak in the region, a towering, rugged mountain of pinkish-purple hue with a deeply textured and craggy surface, appearing almost organic. Perched at the very summit are two figures, one with blonde hair in a red and blue costume, seated and looking out across the vista, with a second figure in brown and tan attire beside them.",
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "base",
+          "description": "Winding path leading up the mountain's lower slopes."
+        },
+        {
+          "type": "path",
+          "position": "summit",
+          "description": "A worn path leading to the seated figures on the peak."
+        }
+      ],
+      "dominantElements": [
+        "Towering pinkish-purple mountain",
+        "Two figures on the summit",
+        "Vibrant alien sky with multiple celestial bodies",
+        "Dense, unique alien flora",
+        "Soaring bird-like creatures"
+      ],
+      "uniqueIdentifiers": [
+        "Organic, deeply textured mountain surface",
+        "Pale yellow-green moon/planet",
+        "Fiery orange-red sun/planet",
+        "Dark blue, bean-shaped growths with glowing yellow accents",
+        "Slender-stemmed plants with inverted bell-shaped caps"
+      ],
+      "searchDesc": "Alien mountain peak with organic texture, vibrant sky, unique flora, and two figures.",
+      "slug": "mount-zephyr",
+      "primaryMedia": "media-1764861929365-oyenn408j"
+    },
+    "niche-1764861994379-cre5bzobh": {
+      "id": "niche-1764861994379-cre5bzobh",
+      "type": "niche",
+      "name": "interior of Mount Zephyr",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, organically sculpted cavern with monumental geological formations. The space is characterized by an undulating vault ceiling and gently curving rock columns. An off-center archway and a glowing passage suggest further exploration.",
+        "colorsAndLighting": "The dominant colors are deep pinkish-purple rock veined with iridescent azure and phosphorescent green. Soft, otherworldly glows emanate from mineral deposits and bioluminescent flora, casting faint yellow-green and yellow light, contrasted by sharp shadows from dual celestial bodies.",
+        "atmosphere": "A profound sense of enclosed, subterranean wonder and alien tranquility. The air is likely cool and still, with a faint, ethereal soundscape of gentle wind and distant natural ambience.",
+        "materials": "The primary material is organically sculpted rock with a mix of rough texture and smooth, fleshy growths. Accents include smooth, cool obsidian for the pathway and large, light-refracting crystalline growths.",
+        "mood": "A profound sense of serene wonder pervades the scene, evoking feelings of awe and peaceful contemplation. It's a place of breathtaking beauty and alien tranquility.",
+        "sounds": "gentle wind, distant alien ambience",
+        "spatialLayout": "A vast, enclosed cavern with a high, solid ceiling. The layout features a central pathway leading inward, flanked by monumental rock formations, with an off-center archway to the left and a passage to the mid-right, creating depth and asymmetry.",
+        "primary_surfaces": "swirling, textured pinkish-purple rock walls",
+        "secondary_surfaces": "smooth obsidian pathway, crystalline growths, fleshy rock growths",
+        "accent_features": "iridescent azure and phosphorescent green mineral veins, bioluminescent flora, archway frame, glowing passage",
+        "dominant": "pinkish-purple (mountain)",
+        "secondary": "azure and green (mineral veins and flora)",
+        "accent": "yellow (bioluminescent flora glow)",
+        "ambient": "soft, otherworldly glow with sharp shadows",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": "Naturally formed, organic monumental geology",
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "serene wonder, awe, peaceful contemplation, alien tranquility",
+        "palette_bias": "deep purples, pinks, vibrant blues, luminous greens and yellows",
+        "soundscape_base": "ethereal, natural, alien",
+        "flora_base": "bioluminescent alien plants with bean-like pods and spiky growths",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764861994378-j04e013tl",
+      "description": "A vast, organically sculpted cavern interior, a monumental geological wonder.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "to the left, off-center",
+          "description": "A monumental archway, naturally carved from pinkish-purple rock, framed by large, crystalline growths."
+        },
+        {
+          "type": "passage",
+          "position": "mid-right",
+          "description": "A gracefully curved natural passage, subtly glowing with an internal azure light."
+        }
+      ],
+      "dominantElements": [
+        "swirling pinkish-purple rock walls",
+        "undulating cavern ceiling",
+        "smooth obsidian pathway",
+        "large, curving rock formations (natural columns)",
+        "exotic bioluminescent alien plants"
+      ],
+      "uniqueIdentifiers": [
+        "iridescent azure and phosphorescent green mineral veins",
+        "bioluminescent flora illuminating pathway",
+        "crystalline growths framing archway",
+        "fleshy growths on rock formations",
+        "pulsing yellow light from alien plants",
+        "internal azure glow of a passage"
+      ],
+      "searchDesc": "Vast pinkish-purple cavern with glowing azure and green veins, obsidian path, and alien flora.",
+      "slug": "interior-of-mount-zephyr"
     }
   },
   "views": {},
@@ -238,9 +461,33 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764861906534-npeys6l3i",
+      "type": "host",
+      "children": [
+        {
+          "id": "a8dd2c72-f0b8-4a26-9563-9e9d4dc7e64b",
+          "type": "region",
+          "children": [
+            {
+              "id": "bad38089-c95a-4a2b-bdae-6691257b579b",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764861994379-cre5bzobh",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1764861614509-31rvkl4ew"
+    "loc-1764861614509-31rvkl4ew",
+    "loc-1764861906534-npeys6l3i"
   ]
 }

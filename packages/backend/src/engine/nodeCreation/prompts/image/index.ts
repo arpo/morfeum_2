@@ -28,10 +28,10 @@ ${node.description}
 ${dna.looks || ''}
 
 [SHOT:]
-high-altitude aerial establishing shot, drone/aircraft perspective, wide-area regional view, full coverage of terrain, coastline geometry and terrain patterns emphasized, no curvature
+high-altitude aerial establishing shot, bird's-eye overview, entire world/environment visible, terrain patterns and zone boundaries emphasized, features appear small and distributed, no curvature
 
 [LENS:]
-18mm equivalent, f/8, full-frame aerial optics, ~800m-1500m altitude, oblique 25-35° tilt for depth, natural perspective (not satellite), gentle wide-angle expansion
+18mm equivalent, f/8, full-frame aerial optics, ~1000-2000m altitude, oblique 50-65° tilt (near-vertical overview), natural perspective (not satellite), gentle wide-angle expansion
 
 [LIGHT:]
 ${dna.colorsAndLighting || dna.ambient || 'natural daylight'}, high atmospheric clarity, crisp shadows, minimal haze
@@ -62,10 +62,10 @@ ${node.description}
 ${dna.looks || ''}
 
 [SHOT:]
-aerial establishing shot, high-angle drone perspective, wide panoramic view of entire district, multi-structure composition, no single hero building, vast scale visible
+low-altitude drone flyover, district-level detail visible, individual features distinguishable, portion of world visible not entire world, helicopter tour perspective
 
 [LENS:]
-24mm equivalent, f/5.6, aerial drone optics, 45° oblique tilt, mid-altitude rendering
+24mm equivalent, f/5.6, aerial drone optics, ~150-400m altitude, oblique 25-35° tilt (across landscape), features have recognizable scale
 
 [LIGHT:]
 ${dna.colorsAndLighting || dna.ambient || 'natural daylight'}, atmospheric perspective visible
