@@ -10,6 +10,7 @@ import { sseService } from '../../../../services/SSEService';
 import { getStepsForPipeline } from '../../../../engine/pipelines/shared/pipelineConfig';
 import { createNode } from '../../../../engine/nodeCreation/core/createNode';
 import { extractParentDNAContext } from '../../../../engine/nodeCreation/core/dnaInheritance';
+import { getResolvedNodeDNA } from '../../../../engine/hierarchyAnalysis/dnaMerge';
 import { storageService } from '../../../../services/storage/storageService';
 import { pipelineConfigs, generateOperationId } from '../shared';
 
@@ -102,13 +103,30 @@ export async function createNodeHandler(req: Request, res: Response): Promise<vo
       });
 
       // Load parent DNA context if parentId is provided
+      // Uses getResolvedNodeDNA to walk up the entire ancestry chain (host → region → location)
+      // This ensures null values in parent DNA are filled from grandparents
       let parentContext;
       if (parentId) {
         const worldsData = await storageService.loadWorlds();
         const parentNode = worldsData?.nodes?.[parentId];
-        if (parentNode?.dna) {
-          parentContext = extractParentDNAContext(parentNode.dna);
-          console.log(`[CREATE-NODE] Loaded parent DNA from ${parentNode.name} (${parentNode.type})`);
+        
+        if (parentNode) {
+          // Get fully-resolved parent DNA (parent's DNA + nulls filled from grandparents)
+          const resolvedParentDNA = getResolvedNodeDNA(
+            parentId,
+            worldsData?.nodes || {},
+            worldsData?.worldTrees || []
+          );
+          
+          if (resolvedParentDNA) {
+            // Extract parent context from the fully-resolved parent DNA
+            parentContext = extractParentDNAContext(resolvedParentDNA);
+            console.log(`[CREATE-NODE] Loaded RESOLVED DNA for ${parentNode.name} (${parentNode.type})`);
+          } else if (parentNode.dna) {
+            // Fallback to immediate parent DNA if ancestry resolution fails
+            parentContext = extractParentDNAContext(parentNode.dna);
+            console.log(`[CREATE-NODE] Loaded parent DNA from ${parentNode.name} (${parentNode.type})`);
+          }
         }
       }
 

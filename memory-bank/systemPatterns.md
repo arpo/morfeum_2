@@ -450,10 +450,16 @@ Separate structures for storage vs LLM usage:
 - Location: `packages/frontend/src/utils/nodeDNAExtractor.ts`
 - Usage: Before sending to backend APIs
 
+#### resolveAncestryDNA (Backend)
+- Purpose: Walk up world tree to resolve full ancestry DNA
+- Location: `packages/backend/src/engine/hierarchyAnalysis/dnaMerge.ts`
+- Usage: Node creation and image generation
+
 ### Data Flow
 ```
 Backend (nested) → extractCleanDNA → Store (clean)
 Store → getCascadedDNA → getMergedDNA → Backend LLM (merged)
+Backend Node Creation → resolveAncestryDNA → LLM Context
 ```
 
 ## Image Prompt Generation Patterns

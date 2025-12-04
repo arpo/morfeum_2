@@ -1,6 +1,7 @@
 # Progress
 
 ## Completed Features
+- **DNA Ancestry Resolution:** Implemented full ancestry resolution for node creation and image generation.
 - **Navigation System Refactor:** navigation.ts split into modular handler files (commandHandler, createNodeHandler, createImageHandler, eventsHandler, perspectiveDetector, shared, index).
 - **Dead Code Removal:** Deleted /analyze endpoint, intentClassifier.ts, and all frontend/backend code referencing classifyIntent.
 - **Frontend Cleanup:** Removed unused locationNavigation.ts.

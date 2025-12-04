@@ -9,6 +9,7 @@ import { sseService } from '../../../../services/SSEService';
 import { storageService } from '../../../../services/storage/storageService';
 import { generateImage } from '../../../../services/mzoo';
 import { getNodeImagePrompt } from '../../../../engine/nodeCreation/prompts/image';
+import { getResolvedNodeDNA } from '../../../../engine/hierarchyAnalysis/dnaMerge';
 import mediaService from '../../../../services/media/mediaService';
 import { pipelineConfigs, generateOperationId } from '../shared';
 import { detectPerspectiveFromNode } from '../utils/perspectiveDetector';
@@ -87,14 +88,31 @@ export async function createImageHandler(req: Request, res: Response): Promise<v
 
       console.log(`[CREATE-IMAGE] Found node: ${node.name} (type: ${node.type})`);
 
-      // Step 2: Generate image prompt from node DNA
+      // Step 2: Resolve ancestry DNA to fill null values from ancestors
+      // This ensures the image prompt includes inherited attributes (architectural_tone, genre, etc.)
+      const resolvedDNA = getResolvedNodeDNA(
+        nodeId,
+        worldsData.nodes || {},
+        worldsData.worldTrees || []
+      );
+
+      // Create node with resolved DNA for image prompt generation
+      const nodeWithResolvedDNA = resolvedDNA 
+        ? { ...node, dna: resolvedDNA }
+        : node;
+
+      if (resolvedDNA) {
+        console.log(`[CREATE-IMAGE] Using RESOLVED DNA with ancestry for image prompt`);
+      }
+
+      // Step 3: Generate image prompt from resolved node DNA
       sseService.sendEvent(operationId, 'progress', {
         stage: 'generate',
         message: 'Generating image...'
       });
 
       const perspective = detectPerspectiveFromNode(node);
-      const imagePrompt = getNodeImagePrompt(node, perspective);
+      const imagePrompt = getNodeImagePrompt(nodeWithResolvedDNA, perspective);
       
       console.log(`[CREATE-IMAGE] Image prompt: ${imagePrompt.substring(0, 100)}...`);
 
