@@ -1862,6 +1862,245 @@
       ],
       "searchDesc": "Vast hall of light and vapor, celestial clouds, cyan and magenta light, mysterious passages.",
       "slug": "interior-of-the-shifting-cloud-formations"
+    },
+    "loc-1764837069530-ff3a5nyx0": {
+      "id": "loc-1764837069530-ff3a5nyx0",
+      "type": "host",
+      "name": "Neo-Kyoto",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A dense urban environment of towering, interconnected skyscrapers, adorned with a chaotic yet dazzling array of neon lights, holographic advertisements, and digital displays.",
+        "colorsAndLighting": "A vibrant, high-contrast palette dominated by neon blues, purples, pinks, and greens against the dark, metallic cityscape.  Artificial light sources are abundant and intense.",
+        "atmosphere": "The air is a cocktail of recycled oxygen, street food aromas, and the faint scent of ozone.  It is a constant, energetic hum of activity.",
+        "materials": "Advanced composites, polished metals, smart glass, synthetic polymers, illuminated circuitry.",
+        "mood": "Energetic, overwhelming, and exciting, with an undercurrent of social decay and alienation.",
+        "sounds": "A cacophony of vehicle propulsion, public announcements, electronic music, synthesized voices, and the general din of a massive population.",
+        "spatialLayout": "Extremely dense and vertical, with multi-layered transportation networks and sky-bridges connecting impossibly tall structures.",
+        "primary_surfaces": "Polished metal alloys, high-density polymers",
+        "secondary_surfaces": "Smart glass panels, illuminated conduits",
+        "accent_features": "Massive holographic advertisements, intricate neon signage, glowing energy conduits",
+        "dominant": "Dark grey, deep blue",
+        "secondary": "Vibrant neon purples and pinks",
+        "accent": "Electric blue, stark white",
+        "ambient": "Bright, artificial, and often pulsating",
+        "genre": "cyberpunk",
+        "architectural_tone": "futuristic mega-structures with industrial elements",
+        "cultural_tone": "A fusion of ancient traditions and hyper-advanced technology, with a strong emphasis on corporate power and societal division.",
+        "materials_base": "advanced composites, polished metals",
+        "mood_baseline": "high-energy with an undercurrent of dystopia",
+        "palette_bias": "high-contrast, vibrant neon colors",
+        "soundscape_base": "urban cacophony",
+        "flora_base": "limited, often artificial or genetically modified",
+        "fauna_base": "primarily urban, domesticated, or cybernetically augmented"
+      },
+      "description": "A sprawling cyberpunk metropolis built upon the ruins of ancient Japan, characterized by towering skyscrapers and advanced technology. Below the gleaming upper levels, forgotten districts fester with the detritus of progress.",
+      "navigableElements": [
+        "High-speed mag-lev trains",
+        "Vertical transit shafts",
+        "Data transfer networks"
+      ],
+      "dominantElements": [
+        "Mega-skyscrapers",
+        "Cybernetic enhancements"
+      ],
+      "uniqueIdentifiers": [
+        "Ubiquitous neon signage",
+        "Augmented reality overlays",
+        "Social stratification"
+      ],
+      "searchDesc": "A sprawling cyberpunk metropolis of towering skyscrapers and advanced technology, built upon ancient ruins.",
+      "slug": "neo-kyoto"
+    },
+    "25ca26b6-a31e-4dad-835f-a86cf2a9bd18": {
+      "id": "25ca26b6-a31e-4dad-835f-a86cf2a9bd18",
+      "type": "region",
+      "name": "The Data Wasteland",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A landscape of colossal, decaying server towers, choked with exposed wiring and industrial debris.  Faint, flickering neon signs cast an eerie glow.",
+        "colorsAndLighting": "Muted, grimy tones of rust and dull metal, punctuated by sporadic, dying neon lights in blues and purples. Deep shadows obscure details.",
+        "atmosphere": "The air is heavy with the scent of ozone, stagnant coolant, and decaying metal. A pervasive dampness clings to everything.",
+        "materials": "Heavily weathered steel, corroded composites, exposed and frayed wiring, concrete foundations.",
+        "mood": "Melancholy, oppressive, and forgotten. A sense of lost potential and lingering danger.",
+        "sounds": "The distant hum of failing machinery, the drip and gurgle of coolant, the groan of stressed metal, the whisper of wind through broken structures.",
+        "spatialLayout": "Vast, vertical expanses broken by colossal structures. Open spaces are often filled with debris and hazardous waste.",
+        "primary_surfaces": "Dull, corroded metal plating",
+        "secondary_surfaces": "Cracked concrete, exposed wiring bundles",
+        "accent_features": "Flickering neon signage, rusted access panels",
+        "dominant": "Dark grey, rust brown",
+        "secondary": "Muted blues and purples",
+        "accent": "Fading white (arc lights)",
+        "ambient": "Dull, diffuse light with pockets of deeper shadow",
+        "genre": null,
+        "architectural_tone": "brutalist industrial decay",
+        "cultural_tone": "Remnants of a hyper-advanced, now-abandoned data infrastructure.",
+        "materials_base": "industrial metals, composites",
+        "mood_baseline": "desolate and awe-inspiring",
+        "palette_bias": "cool colors, high contrast",
+        "soundscape_base": "industrial decay",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A decaying industrial district where obsolete technology has been left to rot, creating a hazardous and forgotten zone. Towering, defunct server monoliths dominate the skyline, their surfaces scarred by time and environmental decay.",
+      "navigableElements": [
+        "Decommissioned data conduits",
+        "Ruined maintenance gantries",
+        "Coolant overflow channels"
+      ],
+      "dominantElements": [
+        "Abandoned server towers",
+        "Industrial decay"
+      ],
+      "uniqueIdentifiers": [
+        "Scrap metal scavenging",
+        "Glow of residual energy",
+        "Hazardous coolant leaks"
+      ],
+      "searchDesc": "A vast, decaying industrial district filled with abandoned server towers and hazardous coolant.",
+      "slug": "the-data-wasteland"
+    },
+    "f77f9fd8-8a08-41d3-804c-70a825a598f3": {
+      "id": "f77f9fd8-8a08-41d3-804c-70a825a598f3",
+      "type": "location",
+      "name": "Server Tower Canyon",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The canyon is a vast, vertical expanse dominated by immense, decaying server towers that scrape the sky.  Their sheer faces are crisscrossed with defunct conduits and support beams, creating a complex, industrial geometry.  Ribbons of neon light snake across the structures, illuminating the gloom.",
+        "colorsAndLighting": "Electric blues, vibrant purples, and stark whites dominate the neon glow, casting an artificial, otherworldly light.  Deep shadows pool in the recesses between towers, contrasting with the vibrant luminescence.",
+        "atmosphere": "The air is thick with the smell of ozone and damp metal, carrying a palpable chill from the coolant.  A constant, low hum emanates from the active server cores, interspersed with the soft hiss of cascading coolant.  There is a sense of immense, silent power left to decay.",
+        "materials": "The primary materials are weathered steel, aged composite alloys, and exposed circuitry.  Surfaces are often slick with coolant residue, showing signs of rust and corrosion.",
+        "mood": "Awe-inspiring and desolate, evoking a sense of lost technological grandeur and a hint of lurking danger.",
+        "sounds": "humming, hissing, dripping, echoing, faint static",
+        "spatialLayout": "A long, deep canyon with sheer, vertical walls formed by the server towers. The scale is immense, emphasizing the depth and the height.",
+        "primary_surfaces": "weathered steel, tarnished composite, exposed circuitry",
+        "secondary_surfaces": "slick coolant residue, rust streaks, cracked plating",
+        "accent_features": "pulsating neon signage, glowing elevator shaft, cascading coolant",
+        "dominant": "dark grey (tower structures)",
+        "secondary": "neon blues and purples (signage)",
+        "accent": "electric blue (elevator shaft), white (arc lights)",
+        "ambient": "cool, artificial glow",
+        "structure": {
+          "form": "irregular",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "brutalist industrial decay with vibrant neon accents",
+        "cultural_tone": "Remnants of a hyper-advanced, now-abandoned data infrastructure.",
+        "materials_base": "industrial metals, composites",
+        "mood_baseline": "melancholy, awe",
+        "palette_bias": "cool colors, high contrast",
+        "soundscape_base": "industrial hum, natural water sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A massive, neon-lit canyon formed by towering, abandoned server towers, with visible coolant waterfalls and a central, glowing electric blue elevator shaft.",
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "canyon floor",
+          "description": "Uneven terrain littered with debris."
+        },
+        {
+          "type": "passage",
+          "position": "base of server towers",
+          "description": "Dark, echoing entryways into the abandoned structures."
+        },
+        {
+          "type": "stairs",
+          "position": "along elevator shaft",
+          "description": "Rusted emergency access stairs."
+        }
+      ],
+      "dominantElements": [
+        "Towering abandoned server structures",
+        "Neon signage and lighting",
+        "Coolant waterfalls",
+        "Glowing electric blue elevator shaft"
+      ],
+      "uniqueIdentifiers": [
+        "Massive scale of server towers",
+        "Fluorescent coolant liquid",
+        "Central, illuminated elevator core",
+        "Data Wasteland aesthetic"
+      ],
+      "searchDesc": "Neon-lit canyon of abandoned server towers, coolant waterfalls, glowing electric blue elevator shaft.",
+      "slug": "server-tower-canyon",
+      "primaryMedia": "media-1764837095323-zcdribl1b"
+    },
+    "niche-1764837117428-wudv3gesv": {
+      "id": "niche-1764837117428-wudv3gesv",
+      "type": "niche",
+      "name": "interior of Server Tower Canyon",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, rectangular chamber of weathered steel and tarnished composite walls with sharp corners. The dark, grimy ceiling is lit by stark white arc lights, creating deep shadows. Exposed circuitry spiderwebs across surfaces, slick with residue and rust.",
+        "colorsAndLighting": "Dominant cool, artificial white light from arc lamps struggles against deep shadows. Accents of electric blue shimmer from coolant and a vibrant purple neon sign.",
+        "atmosphere": "The air hums with a low industrial thrum and the faint hiss of cascading coolant. A palpable sense of desolation and lost technological grandeur permeates the cool, artificial environment.",
+        "materials": "The primary materials are weathered steel and tarnished composite, showing significant wear, rust streaks, and coolant residue. Cracked plating reveals internal structures.",
+        "mood": "Awe-inspiring desolation and a sense of lost technological grandeur, accented by the brutalist industrial decay.",
+        "sounds": "low industrial thrum, faint hiss of coolant",
+        "spatialLayout": "A vast, rectangular chamber with sharp corners. A shallow trench is in the foreground, a support pillar is midground left, and an elevator shaft is midground right.",
+        "primary_surfaces": "weathered steel, tarnished composite, grimy metal",
+        "secondary_surfaces": "exposed circuitry, cracked plating",
+        "accent_features": "dripping coolant trench, pulsating purple neon sign, glowing blue elevator shaft",
+        "dominant": "dark grey (tower structures)",
+        "secondary": "cool white (arc lights)",
+        "accent": "electric blue (coolant, elevator shaft), vibrant purple (neon sign)",
+        "ambient": "cool",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764837117426-ttrjp60yg",
+      "description": "The interior of a massive, decaying server tower, characterized by industrial grit and pulsing neon.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "left midground",
+          "description": "a narrow, dimly lit passage with a faint glow emanating from within"
+        },
+        {
+          "type": "portal",
+          "position": "right midground",
+          "description": "a glowing elevator shaft pulsing with an intense electric blue light"
+        }
+      ],
+      "dominantElements": [
+        "weathered steel and tarnished composite walls",
+        "dark, grimy metal ceiling",
+        "exposed circuitry",
+        "cracked plating",
+        "off-center support pillar",
+        "pulsating neon sign",
+        "glowing elevator shaft",
+        "shallow trench with dripping coolant"
+      ],
+      "uniqueIdentifiers": [
+        "weathered steel and composite walls",
+        "cracked plating revealing coolant trench",
+        "off-center rusted support pillar with purple neon",
+        "electric blue pulsing elevator shaft"
+      ],
+      "searchDesc": "Vast, decaying server tower canyon with rusted steel, sparking circuits, and vibrant neon.",
+      "slug": "interior-of-server-tower-canyon"
     }
   },
   "views": {},
@@ -2041,6 +2280,29 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764837069530-ff3a5nyx0",
+      "type": "host",
+      "children": [
+        {
+          "id": "25ca26b6-a31e-4dad-835f-a86cf2a9bd18",
+          "type": "region",
+          "children": [
+            {
+              "id": "f77f9fd8-8a08-41d3-804c-70a825a598f3",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764837117428-wudv3gesv",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -2048,6 +2310,7 @@
     "loc-1764767524279-bfev9w7t5",
     "loc-1764768440138-82r4pdpzs",
     "loc-1764794472637-8o1drrz9g",
-    "loc-1764834711849-eoe2fn43k"
+    "loc-1764834711849-eoe2fn43k",
+    "loc-1764837069530-ff3a5nyx0"
   ]
 }

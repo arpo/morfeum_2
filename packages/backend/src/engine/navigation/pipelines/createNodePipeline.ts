@@ -5,7 +5,7 @@
  */
 
 import { generateNodeDNA, extractParentContext } from '../../hierarchyAnalysis/nodeDNAGenerator';
-import { generateLocationImage } from '../../generation/shared/imageGeneration';
+import { generateLocationImage } from '../../pipelines/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
 import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
 import type { NavigationDecision, NavigationContext, IntentResult } from '../types';

@@ -1134,6 +1134,32 @@
       "entityRefs": [
         "loc-1764834711849-eoe2fn43k"
       ]
+    },
+    "media-1764837095323-zcdribl1b": {
+      "id": "media-1764837095323-zcdribl1b",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84ed7c/22SjtitUMUKHsIJCj4UOl.jpg",
+      "createdAt": "2025-12-04T08:31:35.323Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nStreet level exterior, a sprawling cyberpunk metropolis scene within Neo-Kyoto's Data Wasteland. Ultra-wide view, camera positioned street level, tilted 25-30° downward, capturing the immensity of a \"Server Tower Canyon.\" In the foreground, worn cobblestone street surface with puddles reflecting vibrant neon signs. The midground is dominated by the facade of immense, decaying server towers, their sheer faces crisscrossed with defunct conduits. Ribbons of electric blue, vibrant purple, and stark white neon light snake across the structures, casting an artificial, otherworldly glow. The central elevator shaft pulses with an intense electric blue light. Coolant waterfalls cascade down the weathered steel and tarnished composite alloy surfaces, leaving slick residue and rust streaks. Cracked plating and exposed circuitry are visible. Subtle signage glows with neon accents. In the background, the sky is obscured by the towering structures, with hints of distant, equally desolate neighboring buildings. The atmosphere is thick with the implied smell of ozone and damp metal, a palpable chill emanating from the coolant, with a constant, low hum and the soft hiss of cascading coolant. The lighting is high contrast, with deep shadows pooling in recesses between towers, illuminated by the dominant cool, artificial glow. The composition is asymmetric, with the canyon stretching deep into the frame, angled to show depth and dimension, more street visible on one side than the other. brutalist industrial decay with vibrant neon accents.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "f77f9fd8-8a08-41d3-804c-70a825a598f3"
+      ]
+    },
+    "media-1764837117426-ttrjp60yg": {
+      "id": "media-1764837117426-ttrjp60yg",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84ed7f/mspT3jdYxofHQP4S4GdTK.jpg",
+      "createdAt": "2025-12-04T08:31:57.426Z",
+      "metadata": {
+        "prompt": "A vast, rectangular chamber carved from weathered steel and tarnished composite, its straight walls meeting at sharp corners. The ceiling is a flat expanse of dark, grimy metal, punctuated by rows of stark white arc lights casting a cool, artificial glow that struggles against deep shadows. Exposed circuitry spiderwebs across the surfaces, slick with coolant residue and streaks of rust. The air hums with a low, industrial thrum and the faint hiss of cascading coolant. In the immediate foreground, a section of cracked plating reveals a shallow trench filled with slowly dripping coolant, casting an electric blue shimmer. To the left midground, a massive, off-center support pillar, also streaked with rust, is illuminated by a pulsating neon sign in vibrant purple, drawing the eye towards a narrow, dimly lit passage with a faint glow emanating from within. Further into the midground, to the right, a glowing elevator shaft pulses with an intense electric blue light, hinting at deeper levels within the decaying infrastructure. The overall mood is one of awe-inspiring desolation and lost technological grandeur, a brutalist industrial decay accented by vibrant neon.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
     }
   }
 }
