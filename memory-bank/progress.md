@@ -1,17 +1,16 @@
 # Progress
 
 ## Completed Features
-- Refactored backend spawn pipeline for host, region, location, niche creation
-- Split monolithic `routes/spawn.ts` into modular sub-routers
-- Removed legacy spawn manager and unused backend files
-- Centralized process tracking in `engine/pipelines/shared/processTracker.ts`
-- Consolidated image generation logic
-- All spawn-related route files now < 120 lines
-- TypeScript build passes, all routes functional
+- **DNA System Refactor:** All DNA prompt files (host, region, location, niche, node, parentChain, complete, deepest) now use centralized builder functions from `engine/generation/prompts/shared/dnaSchema.ts`.
+- **Schema Centralization:** Single source of truth for DNA field descriptions, JSON templates, and prompt guidelines.
+- **Backend Modularization:** Spawn pipeline and API routes for host, region, location, niche creation are modular and under 120 lines each.
+- **Process Tracking:** Centralized in `engine/pipelines/shared/processTracker.ts`.
+- **Legacy Cleanup:** Removed all legacy DNA prompt code and unused backend files.
+- **TypeScript Build:** Verified all routes and DNA generation functional.
 
 ## Remaining Work
-- Monitor for regressions after refactor
-- Modularize other large route files if needed
+- Monitor for regressions or missing features after DNA refactor.
+- Continue modularization for other backend features if needed.
 
 ## Known Issues
-- None detected after refactor
+- None detected after DNA system refactor.

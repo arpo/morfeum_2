@@ -2594,6 +2594,217 @@
       ],
       "searchDesc": "Industrial art studio interior with brick, graffiti, art supplies, and an easel.",
       "slug": "interior-of-art-studio"
+    },
+    "dbeab9b0-9225-491a-ad61-c4e8c2c81c76": {
+      "id": "dbeab9b0-9225-491a-ad61-c4e8c2c81c76",
+      "type": "location",
+      "name": "The Ætherium",
+      "description": "A monolithic structure of reinforced concrete and corrugated metal, hinting at its industrial past.  Massive, sound-dampening doors beckon weary revelers into its pulsating depths.",
+      "dna": {
+        "looks": "The Ætherium presents as a formidable, imposing structure built from raw, unadorned concrete and weathered corrugated metal. Sharp angles and a lack of ornamentation emphasize its industrial heritage, with subtle, almost subliminal neon lights bleeding from hidden seams and around its prominent entrance.",
+        "colorsAndLighting": "Dominant earthy reds and industrial greys form the base, punctuated by electric blues and vibrant fuchsias from the internal lighting that spills out.  The exterior lighting is minimal and functional, highlighting the raw materials.",
+        "atmosphere": "The air around The Ætherium crackles with latent energy, a palpable hum of bass resonating from within.  Despite the industrious exterior, there's a sense of contained chaos and vibrant nightlife about to erupt.  The sounds are muffled by the thick walls, promising a sonic sanctuary.",
+        "materials": "The primary materials are rough, exposed concrete and textured corrugated steel.  These are juxtaposed with the slick, almost alien sheen of neon tubing and robust steel fittings.  The surfaces bear the marks of time and the elements, adding to their authentic grit.",
+        "mood": "Inspiring in its raw power and industrious design, The Ætherium evokes a sense of vibrant, gritty authenticity. It promises an escape into a world of pulsating sound and artistic expression.",
+        "sounds": "Muffled bass, distant crowd murmur, industrial hum",
+        "spatialLayout": "The club is a monolithic block, appearing dense and substantial. Its exterior suggests a vast, cavernous interior designed for immersive sound and light experiences.",
+        "primary_surfaces": "Rough concrete, corrugated metal sheeting",
+        "secondary_surfaces": "Heavy steel plating, thick glass (limited)",
+        "accent_features": "Integrated neon lighting strips, stylized circuit board motifs",
+        "dominant": "Industrial Grey (concrete, metal)",
+        "secondary": "Earthy Red (weathered metal accents)",
+        "accent": "Electric Blue and Fuchsia (neon)",
+        "ambient": "Low, functional, highlighting texture",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Converted industrial with maritime undertones",
+        "cultural_tone": "Artistic and artisanal hub within an industrial setting",
+        "materials_base": "Raw industrial, repurposed materials",
+        "mood_baseline": "Inspiring, industrious, and vibrant, with an underlying tone of grit and authenticity.",
+        "palette_bias": "Industrial neutrals with vibrant artistic accents",
+        "soundscape_base": "Industrial ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center foreground",
+          "description": "A colossal, reinforced steel door, etched with glowing neon circuits, leading into the main club area."
+        },
+        {
+          "type": "passage",
+          "position": "left midground",
+          "description": "A narrow, graffiti-adorned alleyway that may serve as an emergency exit or a hidden entrance."
+        },
+        {
+          "type": "window",
+          "position": "right background",
+          "description": "A reinforced, grimy window offering glimpses of flashing lights and silhouettes within."
+        }
+      ],
+      "dominantElements": [
+        "Brutalist concrete facade",
+        "Industrial corrugated metal siding",
+        "Glow-in-the-dark neon signage",
+        "Heavy-duty steel doors"
+      ],
+      "uniqueIdentifiers": [
+        "Massive, sound-dampening entrance",
+        "Intermittent pulses of colored light from within",
+        "The faint thrum of sub-bass felt through the ground",
+        "Graffiti art integrated into the building's surfaces"
+      ],
+      "searchDesc": "Brutalist techno club with industrial materials, neon accents, and heavy steel doors.",
+      "slug": "the-aetherium",
+      "niches": [],
+      "primaryMedia": "media-1764841158400-t3v6nkbg6"
+    },
+    "niche-1764841175696-s8f59cwsf": {
+      "id": "niche-1764841175696-s8f59cwsf",
+      "type": "niche",
+      "name": "interior of The Ætherium",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast industrial hall interior greets the visitor, characterized by rough, exposed concrete walls and weathered corrugated metal sheeting. Electric blue and fuchsia neon strips cast a vibrant glow, highlighting raw textures. In the foreground, a heavy steel platform descends diagonally, while a steel archway in the midground leads to a deeper passage.",
+        "colorsAndLighting": "The palette is dominated by industrial grey, with electric blue and fuchsia neon providing vibrant, low-level illumination. The lighting accentuates the raw textures of the materials.",
+        "atmosphere": "The air feels cool and cavernous, thick with the implied hum of industry. The vibrant neon creates an energetic yet raw ambiance, a sensory immersion into a repurposed industrial hub.",
+        "materials": "Rough, exposed concrete and weathered corrugated metal sheeting form the primary surfaces. Heavy steel is used for structural elements like platforms and archways. The finish is raw and industrial.",
+        "mood": "Inspiring in its raw power and industrious design, The Ætherium evokes a sense of vibrant, gritty authenticity.",
+        "sounds": "Distant industrial hum, faint neon buzz, echoing footsteps.",
+        "spatialLayout": "The space is a vast, cavernous hall with a high, vaulted ceiling. An illuminated platform descends diagonally in the foreground, and an archway in the midground offers a path deeper into the structure.",
+        "primary_surfaces": "Exposed concrete, corrugated metal sheeting",
+        "secondary_surfaces": "Heavy steel (platform, archway)",
+        "accent_features": "Electric blue and fuchsia neon strips, stylized circuit board motifs",
+        "dominant": "Industrial Grey (walls, ceiling, structure)",
+        "secondary": "Electric Blue (neon strips)",
+        "accent": "Fuchsia (neon strips)",
+        "ambient": "Cool",
+        "structure": {
+          "form": "irregular",
+          "roofType": "vaulted",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "open-passages",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "industrial metallic",
+        "cultural_tone": "Artistic and artisanal hub within an industrial setting.",
+        "materials_base": "concrete, metal, neon",
+        "mood_baseline": "Inspiring, gritty authenticity, raw power",
+        "palette_bias": "Industrial Grey, vibrant neon accents",
+        "soundscape_base": "Industrial ambient, electronic hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764841175694-y6k29ugjx",
+      "description": "The entrance hall of a vast, repurposed industrial structure, bathed in neon and illuminated by industrial fixtures.",
+      "navigableElements": [
+        {
+          "type": "platform",
+          "position": "foreground, descending diagonally left",
+          "description": "An illuminated, heavy steel platform hinting at lower levels."
+        },
+        {
+          "type": "archway",
+          "position": "midground right",
+          "description": "A robust, off-center steel archway with pulsing fuchsia neon, leading to a dimly lit passage."
+        }
+      ],
+      "dominantElements": [
+        "exposed concrete walls",
+        "weathered corrugated metal sheeting",
+        "illuminated steel platform",
+        "steel archway",
+        "vaulted corrugated metal ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "electric blue and fuchsia neon strips",
+        "stylized circuit board motifs",
+        "cavernous industrial hall"
+      ],
+      "searchDesc": "Vast industrial hall interior with concrete, metal, and vibrant neon lighting.",
+      "slug": "interior-of-the-therium"
+    },
+    "40004e41-46f5-4b62-8e8c-2520b6b12238": {
+      "id": "40004e41-46f5-4b62-8e8c-2520b6b12238",
+      "type": "location",
+      "name": "The Lumina Observatory",
+      "description": "An alien laboratory, seemingly grown from the very earth, its stone monoliths shrouded in ethereal green light. It hums with an unseen energy, a testament to forgotten science and lost purpose.",
+      "dna": {
+        "looks": "The laboratory is a collection of immense, weathered stone monoliths that seem to have organically grown from the landscape.  Their surfaces are etched with intricate, otherworldly patterns and ancient glyphs, suggesting a civilization far beyond human comprehension.  Crystalline conduits weave through the stone, pulsing with a faint, otherworldly light.",
+        "colorsAndLighting": "The dominant colors are deep earthy greens and muted stone tones, illuminated by the soft, bioluminescent glow of alien flora and the subtle luminescence of the energy conduits. Shadows are deep and mysterious, hinting at unseen depths.",
+        "atmosphere": "The air is cool and carries a faint scent of ozone and damp earth. A constant, low-frequency hum resonates through the stone, creating a sense of latent power. Motes of light drift lazily in the air, adding to the alien ambiance.  It feels profoundly isolated and untouched.",
+        "materials": "The primary materials are ancient, weathered stone and strange, organic crystalline structures. The stone is rough and pitted, bearing the marks of immense age and exposure.  The crystals possess a smooth, unearthly texture.",
+        "mood": "A profound sense of melancholic beauty permeates the location, coupled with an overarching feeling of mystery and quiet grandeur in its decay. It evokes a sense of being impossibly far from any known civilization.",
+        "sounds": "Resonant hum, subtle crackling, dripping water, distant whispers",
+        "spatialLayout": "The laboratory is a sprawling complex of interconnected monolithic structures. The spaces between the monoliths are vast and cavernous, creating a sense of overwhelming scale and depth.",
+        "primary_surfaces": "weathered monoliths, ancient carved stone",
+        "secondary_surfaces": "glowing crystalline conduits, mossy accretions",
+        "accent_features": "pulsing alien glyphs, opalescent portal, floating light motes",
+        "dominant": "earthy greens",
+        "secondary": "stone grays and muted browns",
+        "accent": "opalescent white, subtle blues",
+        "ambient": "eerie, bioluminescent",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "archways, passages",
+          "functionalType": "religious"
+        },
+        "genre": null,
+        "architectural_tone": "ancient, weathered stone monoliths",
+        "cultural_tone": "ancient civilization, religious pilgrimage site",
+        "materials_base": "stone and organic",
+        "mood_baseline": "Melancholic beauty, mystery, and the quiet grandeur of decay. A feeling of being far from civilization.",
+        "palette_bias": "earth tones and greens",
+        "soundscape_base": "ambient, resonant",
+        "flora_base": "bioluminescent alien flora",
+        "fauna_base": "None"
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center, foreground",
+          "description": "A massive, moss-covered archway carved with alien glyphs, leading into a softly glowing chamber within."
+        },
+        {
+          "type": "passage",
+          "position": "right, midground",
+          "description": "A narrow, shadowed passage that disappears into the overgrown stone, hinting at hidden chambers."
+        },
+        {
+          "type": "portal",
+          "position": "left, background",
+          "description": "A shimmering, opalescent portal pulsing with an inner light, its destination unknown."
+        }
+      ],
+      "dominantElements": [
+        "Towering weathered stone monoliths",
+        "Ethereal green bioluminescent flora",
+        "Crystalline energy conduits",
+        "Intricate alien glyphs and carvings"
+      ],
+      "uniqueIdentifiers": [
+        "Unnatural geometric patterns in the stone",
+        "Subtle, resonant hum emanating from the structure",
+        "A pervasive scent of ozone and ancient earth",
+        "Floating motes of light within the atmosphere"
+      ],
+      "searchDesc": "An otherworldly laboratory of ancient stone, bathed in melancholic green light, shrouded in mystery and decay.",
+      "slug": "the-lumina-observatory",
+      "niches": [],
+      "primaryMedia": "media-1764841331404-da00n78w8"
     }
   },
   "views": {},
@@ -2751,6 +2962,17 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "id": "dbeab9b0-9225-491a-ad61-c4e8c2c81c76",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764841175696-s8f59cwsf",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -2835,6 +3057,11 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "id": "40004e41-46f5-4b62-8e8c-2520b6b12238",
+              "type": "location",
+              "children": []
             }
           ]
         }
