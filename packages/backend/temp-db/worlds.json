@@ -1417,6 +1417,231 @@
       ],
       "searchDesc": "Bohemian sanctuary with neon glow, velvet, street art, and industrial touches.",
       "slug": "interior-of-the-velvet-veiled"
+    },
+    "loc-1764794472637-8o1drrz9g": {
+      "id": "loc-1764794472637-8o1drrz9g",
+      "type": "host",
+      "name": "Göteborg",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A blend of historic maritime architecture, functional industrial zones, and modern urban development. Expect waterfronts, robust infrastructure, and distinct neighborhood aesthetics.",
+        "colorsAndLighting": "Dominated by sea-influenced grays and blues, industrial metallics, and the varied colors of urban life. Lighting ranges from the diffused glow of coastal weather to the sharp illumination of a modern city.",
+        "atmosphere": "A palpable sense of a working port city with a strong cultural undercurrent. The air can carry the scent of the sea, industry, and diverse urban life. Energetic, functional, and culturally rich.",
+        "materials": "Brick, concrete, steel, glass, maritime timber, and modern building materials.",
+        "mood": "Resilient, pragmatic, and culturally dynamic. A mood of constant activity and evolving identity.",
+        "sounds": "Ship horns, seagulls, waves, industrial machinery, traffic, and the diverse sounds of a cosmopolitan city.",
+        "spatialLayout": "A city structured around its harbor and river, with distinct industrial, residential, and cultural zones. Density varies from open port areas to urban centers.",
+        "primary_surfaces": "Brickwork, concrete, painted metal, asphalt.",
+        "secondary_surfaces": "Glass, treated wood, steel, stone.",
+        "accent_features": "Maritime motifs, industrial detailing, public art, varied architectural styles.",
+        "dominant": "Blues, greys, industrial metallics",
+        "secondary": "Earthy tones, muted greens",
+        "accent": "Vibrant urban colors, functional metallic finishes",
+        "ambient": "Variable, often overcast or diffused daylight, with dynamic city and port lighting.",
+        "genre": "Urban Realism",
+        "architectural_tone": "Maritime industrial and modern urban",
+        "cultural_tone": "Pragmatic, artistic, and forward-looking",
+        "materials_base": "Industrial and maritime-inspired",
+        "mood_baseline": "Active, evolving, resilient",
+        "palette_bias": "Cool coastal and industrial tones with diverse urban accents",
+        "soundscape_base": "Maritime and urban industrial",
+        "flora_base": "Coastal vegetation, urban parks and trees",
+        "fauna_base": "Seabirds, urban wildlife, harbor marine life"
+      },
+      "description": "Göteborg is a major port city on Sweden's west coast, renowned for its rich maritime history, a strong industrial heritage, and a thriving, diverse cultural scene. It balances its functional port activities with a dynamic urban life and a growing appreciation for arts and innovation.",
+      "navigableElements": [
+        "Harbor",
+        "Canals",
+        "Industrial zones",
+        "Cultural districts"
+      ],
+      "dominantElements": [
+        "Port and shipping infrastructure",
+        "Historic city center",
+        "Modern architectural landmarks"
+      ],
+      "uniqueIdentifiers": [
+        "West coast location",
+        "Major port city",
+        "Swedish maritime heritage",
+        "Artistic and industrial fusion"
+      ],
+      "searchDesc": "Göteborg: A major Swedish port city blending maritime heritage with a vibrant, innovative cultural and industrial landscape.",
+      "slug": "goteborg"
+    },
+    "7a644242-7d4d-45dc-8c16-72590581d8bd": {
+      "id": "7a644242-7d4d-45dc-8c16-72590581d8bd",
+      "type": "region",
+      "name": "Ringön",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A mix of weathered industrial structures and modern creative interventions. Exposed brick, corrugated metal, and large industrial windows are common, often adorned with artistic touches or functional modifications.",
+        "colorsAndLighting": "Dominantly muted industrial tones (grays, browns) contrasted with vibrant graffiti and the varied artificial lighting of studios. Natural light from large windows is significant.",
+        "atmosphere": "A tangible sense of ongoing creation and a working creative community. The air may carry faint industrial or maritime scents mixed with artistic materials. Energetic and industrious.",
+        "materials": "Corrugated metal, weathered brick, steel beams, large glass panes, concrete, and repurposed industrial materials.",
+        "mood": "Inspiring, industrious, and vibrant, with an underlying tone of grit and authenticity. A sense of potential and ongoing work.",
+        "sounds": "Distant harbor sounds, the hum of machinery from active workshops, creative chatter, occasional music, and the echo of footsteps in large spaces.",
+        "spatialLayout": "Sprawling industrial complexes broken into individual studio spaces, with open-plan areas and multi-level workshops. A sense of vastness within contained industrial footprints.",
+        "primary_surfaces": "Exposed brick walls, corrugated metal siding, concrete floors.",
+        "secondary_surfaces": "Steel beams, large glass panels, wooden structural elements.",
+        "accent_features": "Graffiti art, custom-built artistic installations, exposed pipes and conduits, functional industrial lighting.",
+        "dominant": "Earthy reds (brick), industrial greys (metal, concrete)",
+        "secondary": "Muted browns, off-whites",
+        "accent": "Multicolor (graffiti), functional metallic finishes",
+        "ambient": "Variable natural light from large windows mixed with functional, often exposed, industrial lighting.",
+        "genre": null,
+        "architectural_tone": "Converted industrial and maritime",
+        "cultural_tone": "Artistic and artisanal hub within an industrial setting",
+        "materials_base": "Raw industrial, repurposed materials",
+        "mood_baseline": "Gritty, authentic, creative",
+        "palette_bias": "Industrial neutrals with vibrant artistic accents",
+        "soundscape_base": "Working industrial and creative environment",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "Ringön is an island district in Göteborg, historically a bustling industrial and port area. It has since evolved to become a dynamic hub for creative businesses, studios, and workshops, attracting a unique blend of industry and artistry.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Converted industrial warehouses",
+        "Harbor infrastructure",
+        "Artist studios"
+      ],
+      "uniqueIdentifiers": [
+        "Island location",
+        "Former industrial architecture",
+        "Creative community"
+      ],
+      "searchDesc": "Ringön: An evolving island district in Göteborg, blending historic industrial spaces with a vibrant creative scene.",
+      "slug": "ringon",
+      "primaryMedia": "media-1764794512728-zgwlte8vt"
+    },
+    "a1f760d7-b9ae-4b98-9a72-55a5d1bdf21b": {
+      "id": "a1f760d7-b9ae-4b98-9a72-55a5d1bdf21b",
+      "type": "location",
+      "name": "Art Studio",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sturdy, rectangular industrial building with a rough-hewn character. Large, expansive windows punctuate the facade, offering glimpses of creative activity within. The overall impression is one of robust utility softened by artistic embellishment.",
+        "colorsAndLighting": "The exterior is a mix of weathered brick reds and muted industrial grays, heavily accented by bold, colorful graffiti. Natural light floods through the large windows, juxtaposed with the harsh, functional glow of industrial lighting.",
+        "atmosphere": "The air carries a faint scent of paint and perhaps a hint of sea salt from the nearby harbor. It feels alive with creative energy, a space where ideas are actively being brought to life. The atmosphere is bustling yet focused.",
+        "materials": "The primary materials are exposed, weathered brick and corrugated metal. These are complemented by large panes of industrial glass and heavy-duty metal fixtures.",
+        "mood": "Inspiring and energetic, evoking a sense of raw creativity and potential. It feels like a place where boundary-pushing art is made.",
+        "sounds": "Distant seagulls, faint industrial hum, occasional bursts of music, clatter of materials.",
+        "spatialLayout": "A straightforward, rectangular building with a functional layout designed to maximize studio space and natural light. The entrance is centrally located.",
+        "primary_surfaces": "weathered brick walls, industrial glass panes",
+        "secondary_surfaces": "corrugated metal siding, concrete floor (implied)",
+        "accent_features": "vibrant graffiti art, metal signage, sculptural elements",
+        "dominant": "earthy red (brick)",
+        "secondary": "industrial grey (metal, window frames)",
+        "accent": "multicolored (graffiti)",
+        "ambient": "bright daylight with industrial artificial light",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "large-glass",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "weathered industrial facade with vibrant graffiti art",
+        "cultural_tone": "Artists and creatives utilizing converted industrial spaces for studio work and exhibition.",
+        "materials_base": "raw industrial, utilitarian",
+        "mood_baseline": "creative, energetic, functional",
+        "palette_bias": "earth tones, greys, vibrant primaries",
+        "soundscape_base": "urban industrial with creative undertones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "An art studio located on Ringön.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "large, weathered metal door"
+        }
+      ],
+      "dominantElements": [
+        "large industrial windows",
+        "exposed brick walls",
+        "graffiti art on exterior",
+        "overhead industrial lighting fixtures"
+      ],
+      "uniqueIdentifiers": [
+        "distinctive graffiti mural",
+        "sculptural element near entrance",
+        "large, industrial signage for 'Art Studio'"
+      ],
+      "searchDesc": "Art studio on Ringön, Göteborg. Industrial facade with graffiti, large windows, and weathered door.",
+      "slug": "art-studio",
+      "primaryMedia": "media-1764794484510-tw833vou7"
+    },
+    "niche-1764794502246-lkjtnxxfy": {
+      "id": "niche-1764794502246-lkjtnxxfy",
+      "type": "niche",
+      "name": "interior of Art Studio",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a spacious, rectangular industrial space dominated by aged, earthy red brick walls interspersed with corrugated metal. Vibrant, multicolored graffiti art adds energetic accents. Large industrial windows with dark metal frames allow abundant natural light, complemented by functional overhead industrial lighting.",
+        "colorsAndLighting": "Dominant earthy red brick hues are punctuated by a riot of multicolored graffiti. The lighting is a blend of cool, abundant natural daylight and the stark, functional glow of industrial overhead lights, with a focused spotlight highlighting a workbench.",
+        "atmosphere": "The air feels charged with creative energy and a palpable sense of boundless potential. It is a utilitarian yet inspiring space, echoing the raw aesthetic of its industrial origins.",
+        "materials": "The primary surfaces are aged brick and utilitarian concrete floors marked with paint splatters. Corrugated metal sections and large industrial glass panes form secondary surfaces. Furniture and structural elements are predominantly dark, heavy-duty metal.",
+        "mood": "Inspiring and energetic, evoking a sense of raw creativity and boundless potential. It feels like a place where boundary-pushing art is made.",
+        "sounds": "Distant city hum, occasional clinks, muffled music, ambient ventilation.",
+        "spatialLayout": "A spacious, rectangular interior with high ceilings. The composition is deliberately asymmetric, with a focal point in the left foreground (workbench) and a navigational element leading to the midground right (archway).",
+        "primary_surfaces": "Exposed aged brick, concrete floor",
+        "secondary_surfaces": "Corrugated metal, industrial glass panes, exposed beams and ductwork",
+        "accent_features": "Vibrant, bold graffiti art, spotlight on art supplies",
+        "dominant": "earthy red (brick)",
+        "secondary": "grey (concrete, metal)",
+        "accent": "multicolored (graffiti)",
+        "ambient": "neutral",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "large-glass",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": "weathered industrial facade with vibrant graffiti art",
+        "cultural_tone": "Artists and creatives utilizing converted industrial spaces for studio work and exhibition.",
+        "materials_base": null,
+        "mood_baseline": "Inspiring and energetic, evoking a sense of raw creativity and potential. It feels like a place where boundary-pushing art is made.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764794502244-s33bpva3f",
+      "description": "A spacious, rectangular interior within a weathered industrial building, repurposed as an art studio.",
+      "navigableElements": [
+        {
+          "type": "workbench",
+          "position": "left foreground",
+          "description": "Low, metal-topped workbench with diverse art supplies, illuminated by a spotlight."
+        },
+        {
+          "type": "archway",
+          "position": "midground right",
+          "description": "Grand, weathered industrial metal archway leading to a dimly lit secondary studio space."
+        }
+      ],
+      "dominantElements": [
+        "Exposed brick walls",
+        "Corrugated metal panels",
+        "Industrial glass panes",
+        "Metal workbench with art supplies",
+        "Industrial archway"
+      ],
+      "uniqueIdentifiers": [
+        "Vibrant, bold graffiti art on brick",
+        "Contrast of natural daylight and industrial lighting",
+        "Asymmetric composition with foreground anchor and midground passage"
+      ],
+      "searchDesc": "Industrial art studio with exposed brick, graffiti, and a spotlighted workbench.",
+      "slug": "interior-of-art-studio"
     }
   },
   "views": {},
@@ -1550,11 +1775,35 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1764794472637-8o1drrz9g",
+      "type": "host",
+      "children": [
+        {
+          "id": "7a644242-7d4d-45dc-8c16-72590581d8bd",
+          "type": "region",
+          "children": [
+            {
+              "id": "a1f760d7-b9ae-4b98-9a72-55a5d1bdf21b",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764794502246-lkjtnxxfy",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1764767356568-vg1petnje",
     "loc-1764767524279-bfev9w7t5",
-    "loc-1764768440138-82r4pdpzs"
+    "loc-1764768440138-82r4pdpzs",
+    "loc-1764794472637-8o1drrz9g"
   ]
 }

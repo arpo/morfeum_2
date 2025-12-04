@@ -335,21 +335,6 @@
         "char-1764771776781-1q2oh5pg3"
       ]
     },
-    "media-1764771930750-fh5p2mluc": {
-      "id": "media-1764771930750-fh5p2mluc",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a84d408/EkftsMrt-DNvrUf_EvwqS.jpg",
-      "createdAt": "2025-12-03T14:25:30.750Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a young woman with a serene, contemplative expression, gazing upwards with dark eyes and a delicate mouth. Her dark, wavy hair peeks out from beneath a distinctive grey helmet adorned with large, reddish-lined mouse-like ears and integrated industrial headphones with red accents. She wears a layered, practical outfit consisting of a dark high-collared top, a dark grey or blue-grey padded jacket with segmented sleeves and orange-red trim, and dark pants with prominent black knee pads. Her forearms are covered in lighter tan padded sections, and her lower legs are encased in similar tan fabric that leads down to sturdy, tan and red combat boots with thick soles. She is crouched or kneeling on one knee on a rough, light brown ground scattered with small rocks. In her lap, she cradles a sleek black cat with bright yellow-green eyes, wearing a vibrant red collar with a small tag; the cat also looks upwards with an attentive gaze. Beside her left leg rests a dark, helmet-like piece of equipment. The background is an off-white, heavily textured surface, suggesting a weathered wall or a desolate, distant landscape under bright, diffused light.\"\n\nKira, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Young adult human female, pale skin with a faint freckling, sharp jawline, wide dark eyes, small mouth. Dark, wavy hair cascades around her shoulders. Her ears are noticeably large and subtly pointed, with delicate internal red veining..\n\nWearing: A slate-grey helmet with oversized, padded mouse-like ears featuring internal red lining. Integrated industrial headphones with bright red accents sit over her ears. Beneath, a dark, high-collared tunic. A segmented, padded jacket in charcoal grey with a vibrant orange-red trim. Dark, practical trousers with reinforced black knee pads. Forearms and lower legs are wrapped in tan-colored protective padding. Sturdy tan and red combat boots with thick, lugged soles..\n\nPresence: A calm, grounding stillness. A sense of focused readiness, like a predator at rest..\n\nSetting: A stark, off-white textured plane under an even, bright illumination. The ground is a dusty, light brown, littered with small, sharp stones..\n\nTheir demeanor reflects: Quietly observant, patient, and resourceful. Possesses a deep, almost instinctual connection to animals and a focused determination in her actions..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": [
-        "char-1764771916544-dqbqe8v6s"
-      ]
-    },
     "media-1764772036920-gj4diva58": {
       "id": "media-1764772036920-gj4diva58",
       "type": "image",
@@ -790,6 +775,307 @@
         "char-1764774728670-dz1u0i3lu"
       ],
       "parentMedia": "media-1764774743654-gp27z5fxa"
+    },
+    "media-1764774865810-8bseisg4s": {
+      "id": "media-1764774865810-8bseisg4s",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84d52e/tP4zgThpewM9bgrXNL3ZL_2dfcd4ae956e451f8d18a6b977ea354d.png",
+      "createdAt": "2025-12-03T15:14:25.810Z",
+      "metadata": {
+        "parentMedia": "media-1764773808653-detc06ti5",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764773796403-l4wcc5kuu"
+      ],
+      "parentMedia": "media-1764773808653-detc06ti5"
+    },
+    "media-1764774968138-3es7pro3b": {
+      "id": "media-1764774968138-3es7pro3b",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84d538/4pdiqlJ9eKRrCbykUzFU__d9005bb4a714470699d1c5a16b439f67.png",
+      "createdAt": "2025-12-03T15:16:08.138Z",
+      "metadata": {
+        "parentMedia": "media-1764772709273-nwk1hvg6n",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764772694989-2iea1y62c"
+      ],
+      "parentMedia": "media-1764772709273-nwk1hvg6n"
+    },
+    "media-1764785560080-lczao7ddh": {
+      "id": "media-1764785560080-lczao7ddh",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84d95b/YOM2149wMkP9iPD6heEby_350e4fb5c324416db4f6231a383523f6.png",
+      "createdAt": "2025-12-03T18:12:40.080Z",
+      "metadata": {
+        "parentMedia": "media-1764774098745-jfgkj95wi",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764774082626-umcmfhv43"
+      ],
+      "parentMedia": "media-1764774098745-jfgkj95wi"
+    },
+    "media-1764792994340-3yfilozg1": {
+      "id": "media-1764792994340-3yfilozg1",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84dc43/FkxZV6YezEsisNfJWXGD2_2fcf2aff79ed451fbac437f27b3586c8.png",
+      "createdAt": "2025-12-03T20:16:34.340Z",
+      "metadata": {
+        "parentMedia": "media-1764773738580-r6iq31tqd",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764773724156-2k5xnu2d8"
+      ],
+      "parentMedia": "media-1764773738580-r6iq31tqd"
+    },
+    "media-1764793518714-d3suh4rjv": {
+      "id": "media-1764793518714-d3suh4rjv",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84dc77/yRnlj_qBwtKbRGbVwdha6_b7aa800793ee4495b72cb70a8e84cde2.png",
+      "createdAt": "2025-12-03T20:25:18.714Z",
+      "metadata": {
+        "parentMedia": "media-1764772965643-m0k1384be",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764772952636-gtq6iopuc"
+      ],
+      "parentMedia": "media-1764772965643-m0k1384be"
+    },
+    "media-1764793769855-5zqoro5ep": {
+      "id": "media-1764793769855-5zqoro5ep",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84dc90/hJXd0STsnatrZemVL5u6t_49cbd27f73b34679bafccd257e19a6e7.png",
+      "createdAt": "2025-12-03T20:29:29.855Z",
+      "metadata": {
+        "parentMedia": "media-1764772912690-txdbhqzpl",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764772894374-48d8rsmdt"
+      ],
+      "parentMedia": "media-1764772912690-txdbhqzpl"
+    },
+    "media-1764794484510-tw833vou7": {
+      "id": "media-1764794484510-tw833vou7",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dcd8/--mjhFTrPsGXILO_qrKEJ.jpg",
+      "createdAt": "2025-12-03T20:41:24.510Z",
+      "metadata": {
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA slightly elevated, ultra-wide view from street level (25-30° downward tilt) of an art studio on Ringön, Göteborg. The weathered industrial facade of a sturdy, rectangular building, characterized by exposed, weathered red brick and corrugated metal siding, is the primary subject, positioned slightly off-center. Large, expansive panes of industrial glass punctuate the facade, hinting at creative activity within, juxtaposed with the harsh, functional glow of industrial lighting visible through some windows. Bold, multicolored graffiti art blasts across the brickwork, a vibrant accent against the earthy reds and industrial grays. A functional entrance, framed by heavy-duty metal fixtures, is visible but not dominating. In the foreground, worn cobblestones with puddles reflecting the vibrant graffiti and muted industrial lights form the ground surface, with a distinct curb. The midground is dominated by the building's detailed facade, showcasing its signage, window displays, and raw architectural elements. The background reveals the surrounding environment: other converted industrial buildings, a sliver of a hazy sky, and hints of a maritime atmosphere. The lighting is a mix of bright, natural daylight filtering through the windows and the stark, functional glow of internal industrial lamps, evoking an inspiring and energetic mood of raw creativity and potential. The overall scene is captured at a slight angle, emphasizing depth and dimension with environmental asymmetry, avoiding any perfectly frontal or centered compositions.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "a1f760d7-b9ae-4b98-9a72-55a5d1bdf21b"
+      ]
+    },
+    "media-1764794502244-s33bpva3f": {
+      "id": "media-1764794502244-s33bpva3f",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dcd9/uihitWBktGfWqo8ngWHdn.jpg",
+      "createdAt": "2025-12-03T20:41:42.244Z",
+      "metadata": {
+        "prompt": "A spacious, rectangular interior filled with the raw aesthetic of a weathered industrial art studio, immediately upon entering. The dominant walls are exposed, aged brick in earthy reds, interspersed with sections of corrugated metal, reflecting the exterior's character. Vibrant, bold graffiti art in a riot of multicolored accents adorns prominent brick sections, injecting energetic life into the utilitarian surfaces. Large industrial glass panes, framed in dark, heavy-duty metal, punctuate the walls, allowing generous natural daylight to flood the space, blending with the stark, functional glow of industrial overhead lighting. The floor is a utilitarian concrete, showing signs of wear and paint splatters.\n\nIn the foreground, to the left, a cluster of diverse art supplies is artfully arranged on a low, metal-topped workbench, illuminated by a focused spotlight, creating a distinct visual anchor and hinting at active creation. This workbench also serves as a navigable element, leading the eye into the midground. To the midground right, a grand, industrial metal archway, its frame weathered and robust, opens into a dimly lit secondary studio space, hinting at further exploration, highlighted by a faint, cool blue ambient light spilling from within. The composition is deliberately asymmetric, with the bulk of the workbench and its spotlighting anchoring the left foreground, and the striking archway drawing the gaze towards the right midground, creating dynamic lines and varied visual weight. The ceiling is a flat, industrial expanse, showing exposed beams and ductwork, consistent with the building's form and scale. The overall mood is inspiring and energetic, a palpable sense of raw creativity and boundless potential.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
+    },
+    "media-1764794512728-zgwlte8vt": {
+      "id": "media-1764794512728-zgwlte8vt",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dcdb/uD19lBIcgEkjldGDsgZLW.jpg",
+      "createdAt": "2025-12-03T20:41:52.728Z",
+      "metadata": {
+        "prompt": "Ringön district/region. Ringön is an island district in Göteborg, historically a bustling industrial and port area. It has since evolved to become a dynamic hub for creative businesses, studios, and workshops, attracting a unique blend of industry and artistry.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nA mix of weathered industrial structures and modern creative interventions. Exposed brick, corrugated metal, and large industrial windows are common, often adorned with artistic touches or functional modifications.\n\nAtmosphere:\nA tangible sense of ongoing creation and a working creative community. The air may carry faint industrial or maritime scents mixed with artistic materials. Energetic and industrious.\n\nColors:\nDominant: Earthy reds (brick), industrial greys (metal, concrete), Secondary: Muted browns, off-whites\nLight: Variable natural light from large windows mixed with functional, often exposed, industrial lighting.\n\nArchitectural Style: Converted industrial and maritime\nMaterials: Corrugated metal, weathered brick, steel beams, large glass panes, concrete, and repurposed industrial materials.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "7a644242-7d4d-45dc-8c16-72590581d8bd"
+      ]
+    },
+    "media-1764794631037-668gjqy1d": {
+      "id": "media-1764794631037-668gjqy1d",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dce6/vTt8oD16dXcHpVaDI1mg_.jpg",
+      "createdAt": "2025-12-03T20:43:51.037Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a humanoid figure with a unique blend of organic and mechanical characteristics. The face is smooth and pale, with a soft, matte finish, featuring a subtly sculpted nose and full, metallic blue-grey lips. Large, reflective oval 'eyes' are deeply set within golden-rimmed sockets, appearing entirely dark and mirror-like. Intricate golden wire-like patterns resembling circuits or filigree adorn the cheeks and forehead, accompanied by small golden circular plates. The chin is ornamented with delicate golden dangling pieces, reminiscent of intricate jewelry. The cranium is a segmented, smooth white-silver metallic dome, heavily detailed with various circular plates, bronze-colored lenses, and numerous small mechanical protrusions. Delicate white flowers with multiple petals are gracefully intertwined with the metallic structures on both sides of the head, adding a striking organic contrast to the sophisticated machinery. The neck is a dense assembly of blue-grey and bronze concentric rings, tubes, and wires, creating a flexible, ribbed appearance. The shoulders are clad in distressed, light blue-grey metallic armor plates, showing textured wear and faint rust-like patches, with a brown strap visible on the right shoulder. Beneath the armor and around the upper chest, further layers of complex wiring and mechanical components are visible, contributing to a detailed, steampunk-inspired aesthetic. The figure maintains a serene, doll-like expression, set against a softly blurred, dark background with subtle golden highlights.\"\n\nAutomaton Bloom, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Pale, matte humanoid face with a sculpted nose and metallic blue-grey lips. Mirror-like, dark oval 'eyes' in gold sockets. Golden filigree and circular plates on cheeks and forehead. Golden dangling jewelry on chin. Segmented white-silver metallic dome head with bronze lenses and mechanical protrusions. White flowers entwined with head machinery. Blue-grey and bronze concentric ringed neck..\n\nWearing: Distressed, light blue-grey metallic shoulder armor with rust patches. Visible brown strap on right shoulder. Complex wiring and mechanical components visible beneath armor around the upper chest..\n\nPresence: A quiet, almost ethereal stillness, like a carefully preserved artifact..\n\nSetting: Softly blurred dark background with subtle golden highlights..\n\nTheir demeanor reflects: Serene, impassive, and exhibits a doll-like stillness..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764794619616-0pyr4jaqw"
+      ]
+    },
+    "media-1764794648547-k9kf0e4c4": {
+      "id": "media-1764794648547-k9kf0e4c4",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84dce8/e6Y7oQ0l4o-OHw9thw4ve_e331812ee41c41b5a80e360527e37978.png",
+      "createdAt": "2025-12-03T20:44:08.547Z",
+      "metadata": {
+        "parentMedia": "media-1764794631037-668gjqy1d",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764794619616-0pyr4jaqw"
+      ],
+      "parentMedia": "media-1764794631037-668gjqy1d"
+    },
+    "media-1764794716497-h6r1jfi1t": {
+      "id": "media-1764794716497-h6r1jfi1t",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dcee/44d2Z2PqO0QAcT11Ou3cC.jpg",
+      "createdAt": "2025-12-03T20:45:16.497Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a robust, mechanical entity or an old, heavily customized diving suit, predominantly dark blue-grey in color, viewed from a slightly elevated side angle. The rounded, helmet-like head features a prominent, large, metallic circular opening on the right side, resembling an empty eye socket or a worn vent, with visible concentric rings inside. Scattered across the head and upper torso are several rectangular metallic plates bearing indecipherable raised markings or symbols, alongside various small, irregular bumps and rivets suggesting a complex construction. On the left side, two smooth, dark spheres are stacked vertically near the rounded shoulder, while a single, golden spherical component with a small central hole is positioned on the chest. The lower torso and shoulder are intricately detailed with a dense network of intertwining dark cables and various circular and cylindrical mechanical components, some appearing as rusted gears or worn dials, adding to its complex, weathered appearance. A smooth, tubular arm extends downwards on the left, partially out of view. The entire surface of the entity possesses a slightly rough, mottled texture, conveying a sense of age and heavy use. The background is softly blurred, displaying warm, light brown and beige tones with faint, abstract patterns.\"\n\nCogsworth, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A weathered, dark blue-grey metallic form with a rounded, helmet-like head. A large, circular opening with concentric rings dominates the right side of its head. Rectangular plates with unreadable symbols, small bumps, and rivets dot its surface. Two dark spheres are stacked on its left shoulder, and a golden sphere with a central hole rests on its chest. Intricate, dark cables, rusted gears, and worn dials cover its lower torso and shoulder. A smooth, tubular arm is visible on the left..\n\nWearing: Customized, heavily weathered mechanical diving suit components; dark blue-grey metal plates, thick intertwined dark cables, exposed gears and dials, brass accents..\n\nPresence: A quiet, almost somber stillness; a sense of enduring weight and history..\n\nSetting: A soft, blurred atmosphere of warm browns and muted beiges with faint, abstract patterns..\n\nTheir demeanor reflects: Stoic, functional, and perhaps melancholic due to its age and evident wear..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764794705122-5o6hgq963"
+      ]
+    },
+    "media-1764794762201-kmz2t9sye": {
+      "id": "media-1764794762201-kmz2t9sye",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dcf3/YiKX-wTsy3AWbeOctIppQ.jpg",
+      "createdAt": "2025-12-03T20:46:02.201Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a weathered, humanoid robot, constructed from an assembly of rusted and corroded metal components. Its head is a roughly spherical, reddish-brown metallic helmet featuring two large, circular goggle-like 'eyes' and a small, snout-like respirator or mouthpiece below them. Numerous thin wires, pipes, and small metallic rods protrude haphazardly from the sides and top of its head, resembling a tangled array of antennae or sensory equipment. A segmented, spine-like metallic neck connects the head to a slender torso, which is clad in faded, light blue-grey metal plating, heavily stained and pitted with large patches of reddish-brown rust. A prominent vertical seam runs down the center of the torso, secured by a series of eight horizontal metallic clasps or latches. Its shoulders are covered by rounded metal caps, and its slender arms and legs are also made of segmented, rusted metal, with exposed mechanical joints visible, particularly at the elbows. The robot's hands are distinctly skeletal, fashioned from thin metal digits, and it stands upright, facing directly forward with a neutral mechanical presence, against a muted, textured grey background that appears to be an old, possibly industrial wall, showing its own signs of peeling paint and rust.\"\n\nUnit 734, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A humanoid automaton, its form a mosaic of pitted, reddish-brown and faded blue-grey metal. A spherical helmet with large, goggle-like ocular lenses and a small snout-like respirator dominates its upper section. Tangled wires and rods sprout erratically from its head. Its segmented neck leads to a slender torso, marked by a vertical seam secured by eight latches. Skeletal metal digits form its hands. Exposed mechanical joints are visible at its elbows..\n\nWearing: Faded, light blue-grey metal plating, heavily stained with reddish-brown rust. Rounded metal caps cover its shoulders. Exposed mechanical joints on segmented limbs..\n\nPresence: A quiet, steady hum of dormant machinery. A feeling of functional stasis..\n\nSetting: A muted, textured grey wall, stained with peeling paint and rust..\n\nTheir demeanor reflects: Programmed for service, exhibiting a consistent, unvarying operational demeanor..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764794749323-s2hvkspo3"
+      ]
+    },
+    "media-1764795097653-c3dateb9r": {
+      "id": "media-1764795097653-c3dateb9r",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dd14/wo0wpFZcrEkxmumQxsR7Q.jpg",
+      "createdAt": "2025-12-03T20:51:37.653Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of Maria, the robot from Metropolis, depicted in a seated position against a stark black background. Her smooth, silvery metallic body presents a distinctly feminine form, with prominent breasts and a segmented waist. Her face is serene and stoic, featuring a prominent forehead, narrow, intent eyes, a small nose, and delicate lips. Her head is covered by a sleek, helmet-like metallic cap with ear-like protrusions, from which two thin, light-colored wires curve down to connect to white cylindrical terminals at her temples. Her arms and legs are segmented with ribbed detailing, and her articulated hands rest gently on the armrests of a dark, boxy chair. Numerous braided, light-colored wires extend from various points on her metallic body, including her shoulders, elbows, hips, and knees, plugging into white cylindrical connectors embedded along the sides of the dark chair. Her feet, resembling metallic high-heeled boots, have small rollers or mechanisms at their base, and the chair rests upon a pale blue surface. The overall impression is one of poised anticipation or dormancy, connected and powered up.\"\n\nMaria, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Smooth, silvery metallic humanoid form. Serene, stoic face with prominent forehead, narrow intent eyes, small nose, and delicate lips. Sleek metallic helmet cap with ear-like protrusions. Thin light-colored wires connect from temples to cap. Ribbed detailing on segmented arms and legs..\n\nWearing: Smooth, silvery metallic body. Articulated hands. Metallic high-heeled boot feet with base mechanisms. Braided light-colored wires extending from shoulders, elbows, hips, and knees..\n\nPresence: A quiet hum of latent power, still anticipation..\n\nSetting: Stark black background with a pale blue surface beneath a dark, boxy chair..\n\nTheir demeanor reflects: Stoic, serene, poised, dormant, connected..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764795086976-gy87qg1ak"
+      ]
+    },
+    "media-1764795103106-zkdmymc2r": {
+      "id": "media-1764795103106-zkdmymc2r",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84dd16/uQf_pQx1GQbb2tHerRhes_20e8768ef96e4f96a5c3660c62a5cf97.png",
+      "createdAt": "2025-12-03T20:51:43.106Z",
+      "metadata": {
+        "parentMedia": "media-1764795097653-c3dateb9r",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764795086976-gy87qg1ak"
+      ],
+      "parentMedia": "media-1764795097653-c3dateb9r"
+    },
+    "media-1764795183305-i4ouukqh2": {
+      "id": "media-1764795183305-i4ouukqh2",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dd1d/Abi1EzQ7cGO2cd4OTlGn4.jpg",
+      "createdAt": "2025-12-03T20:53:03.305Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a highly stylized, chrome-plated humanoid robot with a distinctly feminine form, sitting contemplatively on cracked, arid ground. The robot's head is covered by a smooth, light grey helmet featuring a broad, reflective dark red visor that obscures its eyes, leaving only a pair of full, bright red lips visible below. Its slender body is composed of highly polished, reflective chrome, revealing intricate mechanical details such as visible wires, pistons, and segmented joints around the neck, shoulders, and ribcage. The robot is posed with its left hand gently resting against the side of its head, just above the visor, while its legs are bent and crossed, with both feet on the dry earth. It wears strikingly bright red high-heeled platform shoes. The setting is a vast, desolate desert landscape, with the light brown, cracked earth stretching into the background where low, indistinct hills meet a wide, clear light blue sky with a few faint clouds. The bright daylight creates strong reflections on the robot's metallic surface, mirroring parts of the sky and the ground.\"\n\nUnit 734, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A chrome-plated humanoid automaton with a slender, feminine form. Its head is a smooth, light grey helmet with a broad, reflective dark red visor that completely hides its optical sensors. A pair of full, bright red lips are the only visible feature below the visor. Its polished chrome body reveals segmented joints and internal mechanisms at the neck, shoulders, and ribcage. Light gleams and reflects intensely off its metallic surfaces..\n\nWearing: Strikingly bright red high-heeled platform shoes. Its body is unadorned chrome..\n\nPresence: A cool, detached aura that feels both artificial and ancient. A sense of silent waiting..\n\nSetting: A sun-drenched, cracked desert floor beneath an expansive, pale blue sky..\n\nTheir demeanor reflects: Quietly introspective, with a patient stillness. It observes without revealing its internal processes..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764795173418-3v9prpbeu"
+      ]
+    },
+    "media-1764795187606-xvwkljq6r": {
+      "id": "media-1764795187606-xvwkljq6r",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84dd1e/U37laa-Hqcl3o9mqzwF7A_3fc4598d9ef8402e93e5757622305e4e.png",
+      "createdAt": "2025-12-03T20:53:07.606Z",
+      "metadata": {
+        "parentMedia": "media-1764795183305-i4ouukqh2",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764795173418-3v9prpbeu"
+      ],
+      "parentMedia": "media-1764795183305-i4ouukqh2"
+    },
+    "media-1764795388628-78io15gxl": {
+      "id": "media-1764795388628-78io15gxl",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dd31/jIl9aKkl-BYApNukN7yof.jpg",
+      "createdAt": "2025-12-03T20:56:28.628Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a person with a futuristic and sleek appearance, shown in profile facing to the right. The individual wears a highly glossy, neon lime-green helmet with integrated ear coverings and a wide, dark, reflective visor that completely obscures the eyes. The visor is framed by a black strip and features metallic accents on the sides, catching ambient light. Below the helmet, the lower part of the face is visible, revealing smooth skin, a well-defined nose, and full, glossy lips painted in a reddish-brown hue. Dark hair is visible trailing down the back, pulled back neatly from the face. The person is dressed in a matching high-collared garment made of the same vibrant, glossy material, featuring a prominent black zipper running down the front of the collar. The shoulders are bare, suggesting a sleeveless or cut-out design to the futuristic attire. The expression appears serious and composed, with a mysterious allure due to the concealed eyes. The background is a gradient of deep teal and emerald green, providing a striking contrast to the luminous neon costume and highlighting the subject.\"\n\nValeria, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Adult, smooth, pale skin, sharp jawline, aquiline nose, full reddish-brown lips, dark hair pulled back from the face..\n\nWearing: High-collared, sleeveless garment of glossy, neon lime-green material with a black front zipper. Integrated ear coverings on the helmet. Wide, dark, reflective visor framed by black with metallic side accents..\n\nPresence: Cool, enigmatic, observant..\n\nSetting: A deep teal to emerald green gradient background..\n\nTheir demeanor reflects: Reserved, focused, stoic..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764795377106-hfiebi5se"
+      ]
+    },
+    "media-1764795393924-uc9fxkost": {
+      "id": "media-1764795393924-uc9fxkost",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84dd33/CQxtS6AD0_n37ECWwsR8d_f913884408d645949aa63926e11adcc2.png",
+      "createdAt": "2025-12-03T20:56:33.924Z",
+      "metadata": {
+        "parentMedia": "media-1764795388628-78io15gxl",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764795377106-hfiebi5se"
+      ],
+      "parentMedia": "media-1764795388628-78io15gxl"
+    },
+    "media-1764795587973-zb9si4n2w": {
+      "id": "media-1764795587973-zb9si4n2w",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a84dd45/lttbU7JOOBdCWA_vv_rZT.jpg",
+      "createdAt": "2025-12-03T20:59:47.973Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a highly intricate, humanoid robot depicted in profile, facing right, from the shoulders up, showcasing a complex interplay of mechanical components. Its head is predominantly formed from light teal plating, creating a skeletal-like structure with defined ridges and a pronounced jawline. The visible right eye is a luminous light blue orb set within a bright red ring, while the left side of its head is adorned with a prominent yellow circular mechanism featuring a smaller central yellow disk, surrounded by an array of smaller metallic parts and exposed yellow cabling. A tall, multi-segmented headpiece extends upwards and backwards from the top of its head, incorporating light teal, red, and beige components. The neck area reveals a dense network of dark blue wires and flexible yellow tubes connecting to the head. Large, rounded armor plates in a salmon-red hue cover its shoulders and upper chest, beneath which more light teal and dark blue mechanical structures are visible, including another yellow circular element on the right side of the chest. The robot exudes a detailed, industrial aesthetic with numerous visible seams, bolts, and etched patterns across its various colored panels, suggesting a functional yet complex design.\"\n\nUnit 734, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A humanoid robot constructed from polished light teal metal plating, with visible skeletal-like ridges and a sharply defined jawline. Its right eye is a glowing light blue orb encircled by a stark red ring. The left side of its head features a complex yellow circular mechanism with a central disk, surrounded by exposed yellow cabling and smaller metallic components. A tall, segmented headpiece composed of light teal, red, and beige plating rises upwards and backwards. Its neck is a dense tangle of dark blue wires and yellow flexible tubing..\n\nWearing: Salmon-red, rounded shoulder and upper chest armor plates. Beneath this, intricate light teal and dark blue mechanical structures are visible, including a yellow circular component on the right chest. Seams, bolts, and etched industrial patterns are present across all colored panels..\n\nPresence: A cool, humming efficiency that feels both precise and slightly unnerving..\n\nSetting: A stark, dimly lit workshop bathed in the glow of diagnostic lights..\n\nTheir demeanor reflects: Utterly functional, driven by logic and task completion. Lacks empathy and exhibits no discernible social cues..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1764795574409-hglt4jhwm"
+      ]
+    },
+    "media-1764795593952-t1t1x9an6": {
+      "id": "media-1764795593952-t1t1x9an6",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a84dd47/4S2b2XA9mx7AGjV6bhaOn_9b7ec325718e42ff93bde81eefd0e43a.png",
+      "createdAt": "2025-12-03T20:59:53.952Z",
+      "metadata": {
+        "parentMedia": "media-1764795587973-zb9si4n2w",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1764795574409-hglt4jhwm"
+      ],
+      "parentMedia": "media-1764795587973-zb9si4n2w"
     }
   }
 }

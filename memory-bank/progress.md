@@ -25,6 +25,18 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Component Refactoring** (Dec 3): Major refactoring of large files exceeding 300-line limit
+  - **useNavigationLogic.ts** (513 → 104 lines, 80% reduction):
+    - Extracted `commandParser.ts` (84 lines) - Command parsing, flags, type detection
+    - Extracted `creationCommands.ts` (184 lines) - NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE handlers
+    - Extracted `mediaCommands.ts` (120 lines) - CREATE_IMAGE handler
+    - Extracted `navigationCommands.ts` (211 lines) - GO_INSIDE and standard navigation
+  - **WorldViewRenderer.ts** (526 → 440 lines, 16% reduction):
+    - Extracted `sceneManager.ts` (158 lines) - Scene presets, color effects, wind/lightning
+  - **SpawnInputBar.module.css** (310 → 135 lines, 56% reduction):
+    - Extracted `SpawnInputButtons.module.css` (109 lines) - Toggle, generate, shuffle buttons
+    - Extracted `SpawnInputDropZone.module.css` (67 lines) - Drop zone overlays, spinner
+  - All files now comply with 300-line limit, TypeScript builds pass
 - **Slash Commands Parent DNA Inheritance** (Dec 3): Fixed child nodes not inheriting parent DNA
   - `/NEW_REGION`, `/NEW_LOCATION`, `/NEW_NICHE` now properly inherit parent's DNA
   - Loads parent node from storage and extracts DNA context
@@ -97,6 +109,11 @@
 - **Separation Compliance**: Strict markup/logic/style separation ✅
 
 ### Recent Achievements
+- **Component Refactoring** (Dec 3, 2025): Large file cleanup
+  - useNavigationLogic.ts: 513 → 104 lines (80% reduction, 4 new modules)
+  - WorldViewRenderer.ts: 526 → 440 lines (16% reduction, 1 new module)
+  - SpawnInputBar.module.css: 310 → 135 lines (56% reduction, 2 new modules)
+  - All 7 new modules are focused and under 300 lines
 - **Image Generation Optimization** (Dec 3, 2025): Two-step approach for quality exterior images
   - Prompt optimization: 50% faster DNA generation (10s → 5.18s)
   - Total pipeline: 3s faster (23s → 20.72s)

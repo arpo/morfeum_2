@@ -2,6 +2,34 @@
 
 ## Recent Changes (2025-12-03)
 
+### Component Refactoring (Dec 3, 2025)
+- **Problem**: Several files exceeded the 300-line limit defined in clinerules
+  - `useNavigationLogic.ts`: 513 lines
+  - `WorldViewRenderer.ts`: 526 lines
+  - `SpawnInputBar.module.css`: 310 lines
+- **Solution**: Extracted focused modules from each large file
+
+**useNavigationLogic.ts (513 → 104 lines, 80% reduction):**
+- `commandParser.ts` (84 lines) - Parse slash commands, extract flags, detect command types
+- `creationCommands.ts` (184 lines) - Handle NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE
+- `mediaCommands.ts` (120 lines) - Handle CREATE_IMAGE command
+- `navigationCommands.ts` (211 lines) - Handle GO_INSIDE and standard navigation
+
+**WorldViewRenderer.ts (526 → 440 lines, 16% reduction):**
+- `sceneManager.ts` (158 lines) - Scene presets, color effects, wind/lightning effects
+
+**SpawnInputBar.module.css (310 → 135 lines, 56% reduction):**
+- `SpawnInputButtons.module.css` (109 lines) - Toggle, generate, shuffle button styles
+- `SpawnInputDropZone.module.css` (67 lines) - Drop zone overlays, spinner animation
+
+**Files Modified:**
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts`
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/SpawnInputBar.tsx`
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/SpawnInputBar.module.css`
+- `packages/frontend/src/features/app/components/WorldView/WorldViewRenderer.ts`
+
+**Result:** All files now comply with 300-line limit. TypeScript builds pass.
+
 ### Slash Commands Parent DNA Inheritance Fix (Dec 3, 2025)
 - **Problem**: When creating nodes via slash commands (`/NEW_REGION`, `/NEW_LOCATION`, `/NEW_NICHE`), the parent node's DNA was not being used. New locations were generated without inheriting parent's architectural style, mood, colors, etc.
 - **Root Cause**: In `navigation.ts`, the `/create-node` endpoint passed `parentId` to `createNode()` but NOT `parentContext` (parent DNA). The parent DNA was never loaded from storage.

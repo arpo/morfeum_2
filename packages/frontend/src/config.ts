@@ -41,7 +41,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Camera movement amplitude - how far the view shifts during animation (shader parallax) */
   CAMERA_AMPLITUDE: {
-    X: 0.55,   // Horizontal shift range
+    X: 0.4,   // Horizontal shift range
     Y: 0.5,   // Vertical shift range
     Z: 0.33,  // Zoom range (camera z position offset)
     ROLL: 0.0,  // Camera roll/tilt amplitude in radians (~1.7 degrees)
@@ -49,7 +49,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Camera position movement - physical camera tilt to see mesh from angle */
   CAMERA_POSITION: {
-    X: 0.15,  // How far camera moves left/right (creates side view)
+    X: 0.2,  // How far camera moves left/right (creates side view)
     Y: 0.1,   // How far camera moves up/down (creates top/bottom view)
   },
   
@@ -59,14 +59,14 @@ export const WORLD_VIEW_3D_CONFIG = {
   /** Camera movement speed - each axis has independent circular motion */
   CAMERA_SPEED: {
     MULTIPLIER: 1.75, // Overall speed multiplier (0.5 = half speed, 2.0 = double speed)
-    X: 0.000333,  // Horizontal cycle (~7.8 sec)
-    Y: 0.00022,  // Vertical cycle (~10.5 sec)
+    X: 0.0002,  // Horizontal cycle (~7.8 sec)
+    Y: 0.00025,  // Vertical cycle (~10.5 sec)
     Z: 0.0001,  // Zoom cycle (~15.7 sec, slowest for subtle breathing)
     ROLL: 0.00012,  // Roll cycle (~13 sec, slow head tilt)
   },
   
   /** Easing factor for movement smoothness (0.01 = very smooth, 0.2 = snappy) */
-  EASING: 0.05,
+  EASING: 0.5,
   
   /** Mesh resolution - higher = more detailed depth geometry (performance impact) */
   MESH_RESOLUTION: 2048 *2,
