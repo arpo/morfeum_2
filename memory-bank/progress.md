@@ -25,12 +25,17 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **GOTO Command** (Dec 5): New freeform navigation command for navigating within locations
+- **GOTO Command & Fixes** (Dec 5): Freeform navigation with progress bar visibility
   - `/GOTO the kitchen` - Navigate to any place within the current location
   - LLM-powered destination analysis synthesizes user prompt with parent context
   - Creates sibling niche under parent location (unlike GO_INSIDE which creates child)
-  - Determines perspective (interior/exterior), space type, atmosphere automatically
-  - 3 new files created, 10 files modified
+  - **Progress Bar Fix**: Created separate `navigationGoto` pipeline type with `destination_analysis` as first step
+    - HTTP response now sent BEFORE analysis runs
+    - User sees "Analyzing Destination..." in progress bar immediately
+    - 5-step pipeline: destination_analysis → prompt_generation → image_generation → dna_generation → node_building
+  - **Sibling Creation Fix**: Fixed niches being created as children instead of siblings
+    - Now uses `findParentLocationNode()` to get correct parent location ID
+  - Files: 3 new files created, 11+ files modified
 - **Component Refactoring** (Dec 3): Major refactoring of large files exceeding 300-line limit
   - **useNavigationLogic.ts** (513 → 104 lines, 80% reduction):
     - Extracted `commandParser.ts` (84 lines) - Command parsing, flags, type detection

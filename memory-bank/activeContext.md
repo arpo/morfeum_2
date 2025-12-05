@@ -2,7 +2,7 @@
 
 ## Recent Changes (2025-12-05)
 
-### GOTO Command Implementation (Dec 5, 2025)
+### GOTO Command Implementation & Fixes (Dec 5, 2025)
 - **Feature**: New `/GOTO` command for freeform navigation within locations
 - **Purpose**: Navigate to any place within the current location (kitchen, balcony, garden, etc.)
 - **Difference from GO_INSIDE**: 
@@ -12,41 +12,65 @@
   - LLM-powered destination analysis that synthesizes user's prompt with parent context
   - Determines perspective (interior/exterior), space type, atmosphere
   - Creates sibling niche under parent location node
-  
-**Files Created (3):**
-- `packages/backend/src/engine/generation/prompts/navigation/destinationAnalysis.ts` - LLM prompt for analyzing destination
-- `packages/backend/src/engine/navigation/analyzers/destinationAnalyzer.ts` - Analyzer that calls LLM
-- `packages/backend/src/engine/navigation/handlers/goto.ts` - GOTO command handler
 
-**Files Modified (10):**
+**Progress Bar Fix (Dec 5 - Later):**
+- **Problem**: Progress bar didn't show during destination analysis (LLM call happened before SSE connection)
+- **Solution**: Created separate `navigationGoto` pipeline type with `destination_analysis` as first step
+- **New Pipeline Steps for GOTO:**
+  ```typescript
+  navigationGoto: [
+    { id: 'destination_analysis', name: 'Analyzing Destination', duration: 3000 },  // NEW
+    { id: 'prompt_generation', name: 'Planning Scene', duration: 500 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2000 },
+    { id: 'dna_generation', name: 'Creating DNA', duration: 6000 },
+    { id: 'node_building', name: 'Building Space', duration: 1000 }
+  ]
+  ```
+- **Changes**: HTTP response now sent BEFORE analysis, analysis runs as first pipeline step with SSE visibility
+
+**Sibling Creation Fix (Dec 5 - Later):**
+- **Problem**: GOTO was creating niches as children of current niche instead of siblings under parent location
+- **Root Cause**: `parentNodeId: undefined` in initial decision, frontend defaulted to current node
+- **Solution**: Import and use `findParentLocationNode(context)` to get correct parent location ID
+- **Result**: GOTO niches now correctly created as siblings under parent location
+
+**Files Created (3):**
+- `packages/backend/src/engine/generation/prompts/navigation/destinationAnalysis.ts` - LLM prompt
+- `packages/backend/src/engine/navigation/analyzers/destinationAnalyzer.ts` - Analyzer
+- `packages/backend/src/engine/navigation/handlers/goto.ts` - Command handler
+
+**Files Modified (11+):**
 - `packages/backend/src/config/navigation.ts` - Added GOTO command config
 - `packages/backend/src/engine/navigation/types.ts` - Added DestinationAnalysis type
 - `packages/backend/src/engine/navigation/commandBuilder.ts` - Added GOTO case
-- `packages/backend/src/engine/navigation/navigationRouter.ts` - Added GOTO routing with RouteOptions
+- `packages/backend/src/engine/navigation/navigationRouter.ts` - Added GOTO routing
 - `packages/backend/src/engine/navigation/index.ts` - Exported new modules
-- `packages/backend/src/engine/navigation/handlers/index.ts` - Exported handler
-- `packages/backend/src/engine/generation/prompts/navigation/index.ts` - Exported prompt
-- `packages/backend/src/routes/mzoo/navigation.ts` - Calls analyzer for GOTO
-- `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Uses destinationAnalysis.synthesizedDescription for GOTO
+- `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - Added `navigationGoto` pipeline type
+- `packages/backend/src/routes/mzoo/navigation.ts` - GOTO sends response before analysis, uses `findParentLocationNode`
+- `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Runs destination analysis as first step for GOTO
+- `packages/frontend/src/store/slices/spawnSlice.ts` - Fixed currentStepIndex not overwritten with -1
 - `packages/frontend/src/features/spawn-input/SpawnInputBar/commandParser.ts` - Added isNavigationCommand
 - `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Updated error message
 
-**Architecture:**
+**Architecture (Updated):**
 ```
 User: /GOTO the kitchen
   ↓
 Frontend: Parse command → send to backend
   ↓
-Backend: analyzeDestination() → LLM synthesizes "kitchen" + parent context
+Backend: Send HTTP response immediately (with eventsUrl) BEFORE analysis
   ↓
-Returns: { name: "Kitchen", perspective: "interior", synthesizedDescription: "..." }
+Frontend: Connect to SSE → sees "Analyzing Destination..." (step 0)
   ↓
-Handler: Creates decision for sibling niche under parent location
+Backend Pipeline: 
+  - Step 0: destination_analysis (SSE visible!) → LLM synthesizes destination
+  - Step 1: prompt_generation (uses synthesizedDescription)
+  - Step 2: image_generation
+  - Step 3: dna_generation
+  - Step 4: node_building
   ↓
-Pipeline: Uses synthesizedDescription for image generation (not current niche context)
+Node created as sibling under parent location (not child of current niche)
 ```
-
-**Key Fix**: The pipeline now checks for `decision.metadata?.destinationAnalysis?.synthesizedDescription` and uses it for GOTO commands instead of generating from current context. This ensures GO_INSIDE continues working unchanged.
 
 ## Recent Changes (2025-12-03)
 

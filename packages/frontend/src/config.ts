@@ -34,7 +34,7 @@ export const PANEL_CONFIG = {
  */
 export const WORLD_VIEW_3D_CONFIG = {
   /** Depth scale - how much the 3D should "bulge" out (0.1 = subtle, 2.0 = extreme) */
-  MESH_DEPTH: 0.35,
+  MESH_DEPTH: 0.5,
   
   /** Focus plane - depth at which objects stay still during parallax (0 = far, 1 = near) */
   FOCUS: 0.25,
@@ -59,7 +59,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   /** Camera movement speed - each axis has independent circular motion */
   CAMERA_SPEED: {
     MULTIPLIER: 1.75, // Overall speed multiplier (0.5 = half speed, 2.0 = double speed)
-    X: 0.0002,  // Horizontal cycle (~7.8 sec)
+    X: 0.0003,  // Horizontal cycle (~7.8 sec)
     Y: 0.00025,  // Vertical cycle (~10.5 sec)
     Z: 0.0001,  // Zoom cycle (~15.7 sec, slowest for subtle breathing)
     ROLL: 0.00012,  // Roll cycle (~13 sec, slow head tilt)
