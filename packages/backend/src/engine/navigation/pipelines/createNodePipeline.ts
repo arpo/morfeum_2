@@ -55,18 +55,31 @@ export async function runCreateLocationNodePipeline(
       helper.started('Starting node creation...');
     }
 
-    // Step 1: Generate image prompt using shared module
+    // Step 1: Generate image prompt
+    // For GOTO: Use the synthesized description from destination analysis
+    // For GO_INSIDE and others: Generate from context using LLM
     if (helper) {
       helper.startStage('prompt_generation', 'Generating image prompt...');
     }
 
-    let imagePrompt = await generateImagePromptForNode(
-      context,
-      intent,
-      decision,
-      apiKey,
-      { nodeType, style, perspective }
-    );
+    let imagePrompt: string;
+    
+    // Check if we have a destination analysis (from GOTO command)
+    const destinationAnalysis = decision.metadata?.destinationAnalysis;
+    if (destinationAnalysis?.synthesizedDescription) {
+      // GOTO command: Use the pre-computed synthesized description
+      imagePrompt = destinationAnalysis.synthesizedDescription;
+      console.log(`[GOTO] Using synthesized description for image prompt: "${imagePrompt.substring(0, 100)}..."`);
+    } else {
+      // GO_INSIDE and other commands: Generate from context using LLM
+      imagePrompt = await generateImagePromptForNode(
+        context,
+        intent,
+        decision,
+        apiKey,
+        { nodeType, style, perspective }
+      );
+    }
 
     if (helper) {
       helper.completeStage('prompt_generation', 'Image prompt generated', { imagePrompt });

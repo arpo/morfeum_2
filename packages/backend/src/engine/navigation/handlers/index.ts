@@ -7,3 +7,4 @@
  */
 
 export { handleGoInside } from './basicMovement';
+export { handleGoto } from './goto';

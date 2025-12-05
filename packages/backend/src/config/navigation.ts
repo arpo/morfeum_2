@@ -25,6 +25,11 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Enter a location',
     category: 'navigation'
   },
+  GOTO: { 
+    requiresNodeType: ['niche'], 
+    description: 'Navigate to a specific place within the current location',
+    category: 'navigation'
+  },
   
   // Node creation commands
   NEW_HOST: { 

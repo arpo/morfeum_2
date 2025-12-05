@@ -46,7 +46,8 @@
         "The distant, unifying hum of generator power"
       ],
       "searchDesc": "A vibrant, sprawling carnival grounds focused on spectacle, amusement, and sensory delight.",
-      "slug": "carnival-grounds"
+      "slug": "carnival-grounds",
+      "primaryMedia": "media-1764934052567-5i5519cj9"
     },
     "e7d87816-3190-4860-b279-3facb1ef12f9": {
       "id": "e7d87816-3190-4860-b279-3facb1ef12f9",
@@ -94,7 +95,8 @@
         "Overlapping music from various attractions"
       ],
       "searchDesc": "The chaotic, vibrant midway of a carnival, filled with games, food, and excitement.",
-      "slug": "midway"
+      "slug": "midway",
+      "primaryMedia": "media-1764934040975-qkdbttyhl"
     },
     "fcc91232-8a5f-4354-b255-b1619fd11f70": {
       "id": "fcc91232-8a5f-4354-b255-b1619fd11f70",
@@ -236,6 +238,234 @@
       ],
       "searchDesc": "Disorienting fun house interior: warped red walls, neon trim, crooked pink door, eyeball window.",
       "slug": "interior-of-the-fun-house"
+    },
+    "niche-1764933817343-5bbumbwzb": {
+      "id": "niche-1764933817343-5bbumbwzb",
+      "type": "niche",
+      "name": "The Roller Coaster Cavern",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This vast, subterranean chamber is dominated by a colossal, rickety roller coaster whose candy-apple red metal tracks twist like a tangled serpent through the dim light. The rough-hewn walls are made of familiar warped, painted wood with peeling sections, stained darker and slick with moisture.",
+        "colorsAndLighting": "Dominant candy-apple red of the roller coaster tracks contrasts with the dark, damp hues of the walls. Faint, flickering carnival lights sporadically illuminate the space, casting shifting shadows and highlighting scattered glittering vinyl scraps.",
+        "atmosphere": "The air is heavy with the scent of damp earth and residual moisture, a palpable sense of hidden mechanics and decay. Distorted carnival music echoes, creating a playful yet unsettling auditory environment.",
+        "materials": "The primary materials are warped, peeling painted wood for the walls, and slick, dark, moisture-stained surfaces. The floor transitions from cracked plaster to uneven, packed earth. The roller coaster tracks are made of aged, candy-apple red metal, and glittering vinyl scraps are scattered across the ground.",
+        "mood": "The mood is a disorienting blend of childlike wonder and mischievous unease, promising fun but challenging the senses with its hidden, mechanical heart.",
+        "sounds": "Distorted carnival music, echoing emptiness, creaking metal, dripping moisture.",
+        "spatialLayout": "A vast, subterranean chamber with rough-hewn walls and a floor that gives way to packed earth. The colossal roller coaster dominates the space, its tracks creating a complex, winding layout.",
+        "primary_surfaces": "Warped painted wood, packed earth, cracked plaster.",
+        "secondary_surfaces": "Candy-apple red metal tracks, damp stained wood.",
+        "accent_features": "Glittering vinyl scraps scattered like fallen stars, flickering carnival lights.",
+        "dominant": "Candy-apple red (roller coaster tracks)",
+        "secondary": "Dark, damp hues (walls, floor)",
+        "accent": "Flickering carnival light gold/yellow (illumination)",
+        "ambient": "Cool",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764933817342-prfi96ewp",
+      "description": "A subterranean chamber housing a colossal, rickety roller coaster, beneath the main attraction.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "entrance from above",
+          "description": "Passage descending from The Fun House"
+        }
+      ],
+      "dominantElements": [
+        "Colossal, rickety roller coaster",
+        "Twisted candy-apple red metal tracks",
+        "Warped, peeling wood walls",
+        "Flickering carnival lights"
+      ],
+      "uniqueIdentifiers": [
+        "Roller coaster in subterranean cavern",
+        "Candy-apple red tracks snaking through darkness",
+        "Peeling wood stained with moisture",
+        "Glittering vinyl scraps on floor"
+      ],
+      "searchDesc": "Subterranean roller coaster cavern with peeling wood and red tracks, playful yet unnerving.",
+      "slug": "the-roller-coaster-cavern"
+    },
+    "niche-1764933838789-3puenfr1b": {
+      "id": "niche-1764933838789-3puenfr1b",
+      "type": "niche",
+      "name": "The Grimy Galley",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a deeply unsettling kitchen space, filled with warped and peeling painted wood walls stained with moisture. Cracked plaster suggests decay, while the packed earth underfoot adds to its primal feel. Slick, dark surfaces masquerade as countertops, perpetually damp.",
+        "colorsAndLighting": "Dominated by the pervasive candy-apple red of aged metal, contrasting with the muted browns and greys of the damp wood and plaster. The lighting is dim and likely uneven, casting unsettling shadows.",
+        "atmosphere": "The air is heavy and thick with the scent of damp earth and a phantom aroma of decay. A palpable sense of disquiet hangs in the air, amplified by the pervasive, distorted carnival music that seems to emanate from the very walls.",
+        "materials": "The primary materials are warped, peeling painted wood, cracked plaster, and packed earth. Aged, candy-apple red metal forms crude fixtures, showing signs of wear and rust. Vinyl scraps are scattered haphazardly.",
+        "mood": "Playful yet deeply unsettling, this space evokes a childlike wonder tainted by a sense of unease, promising a delightful challenge to one's senses.",
+        "sounds": "Distorted carnival music, creaking wood, dripping moisture, phantom aromas.",
+        "spatialLayout": "A functional kitchen space, likely enclosed but with an organic, unsettling feel. Its dimensions are difficult to ascertain due to the disorienting nature of the 'Fun House' aesthetic, but it feels cramped and oppressive.",
+        "primary_surfaces": "Warped, peeling painted wood walls; cracked plaster; packed earth floor.",
+        "secondary_surfaces": "Slick, dark, damp surfaces (countertops); aged candy-apple red metal (shelving, stove frame).",
+        "accent_features": "Scattered vinyl scraps, the overall damp sheen of surfaces.",
+        "dominant": "Candy-apple red (metal fixtures, hints on wood)",
+        "secondary": "Muted browns and greys (wood, plaster, earth)",
+        "accent": "Dark, wet sheen on surfaces.",
+        "ambient": "Neutral, likely dim and oppressive.",
+        "structure": {
+          "form": "irregular",
+          "roofType": "null",
+          "scale": "small",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764933838787-4tcnefc62",
+      "description": "A functional but unsettling kitchen space within the Fun House, characterized by damp, warped wood, cracked plaster, and aged red metal fixtures.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "implied entrance",
+          "description": "Emerges from the dizzying twists of the Roller Coaster Cavern"
+        }
+      ],
+      "dominantElements": [
+        "Warped, peeling painted wood walls",
+        "Cracked plaster",
+        "Packed earth floor",
+        "Slick, dark countertops",
+        "Aged candy-apple red metal shelving and stove frame"
+      ],
+      "uniqueIdentifiers": [
+        "Warped, peeling painted wood",
+        "Candy-apple red metal fixtures",
+        "Perpetually damp surfaces",
+        "Phantom aroma of decay"
+      ],
+      "searchDesc": "Grimy, unsettling Fun House galley with warped wood, red metal, and damp earth.",
+      "slug": "the-grimy-galley"
+    },
+    "niche-1764933886844-ru3jichei": {
+      "id": "niche-1764933886844-ru3jichei",
+      "type": "niche",
+      "name": "The Dino Perch",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A crude, warped wooden balcony juts out precariously, its bent metal railings a rusted candy-apple red. Cracked plaster hints at its unstable construction. The scene is dominated by a swirling, mist-shrouded vista of a prehistoric jungle where colossal, alien dinosaur forms lumber.",
+        "colorsAndLighting": "Dominant candy-apple red on the railings, heavily flecked with rust, contrasts with the weathered wood and cracked plaster. The lighting is likely diffused and atmospheric, filtered through the mist.",
+        "atmosphere": "The air is thick with the damp, earthy scent of a jungle mingled with phantom decay. A sense of unease permeates the space, amplified by the distant, distorted carnival music and the roars of unseen beasts.",
+        "materials": "The primary materials are warped wood, heavily rusted candy-apple red metal, and cracked plaster, all suggesting age and disrepair. The underlying structure is implied to be fragile.",
+        "mood": "Playful yet unsettling, this perch evokes a childlike sense of wonder at the alien landscape, tinged with a mischievous unease about its own precariousness.",
+        "sounds": "Distant distorted carnival music, roaring colossal beasts, damp earthy jungle ambiance, phantom decay whispers.",
+        "spatialLayout": "A narrow, extended balcony structure attached to an exterior. Its form is irregular due to warping, with an open front facing a vast, obscured vista. Entry points are implied to be from 'The Fun House'.",
+        "primary_surfaces": "wood, metal, plaster",
+        "secondary_surfaces": "none",
+        "accent_features": "bent, candy-apple red metal railings flecked with rust",
+        "dominant": "candy-apple red",
+        "secondary": "damp earth tones",
+        "accent": "rust flecks",
+        "ambient": "neutral",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764933886842-33l4l7xaz",
+      "description": "A warped wooden balcony on 'The Fun House', featuring rusty candy-apple red metal railings and cracked plaster, overlooking a mist-shrouded prehistoric jungle with alien dinosaurs.",
+      "navigableElements": [],
+      "dominantElements": [
+        "warped wooden balcony",
+        "bent, rusty candy-apple red metal railings",
+        "cracked plaster",
+        "mist-shrouded prehistoric jungle vista",
+        "colossal alien dinosaur forms"
+      ],
+      "uniqueIdentifiers": [
+        "precariously perched balcony",
+        "candy-apple red rusted railings",
+        "view of distorted prehistoric jungle",
+        "alien dinosaur shapes"
+      ],
+      "searchDesc": "Warped balcony on 'The Fun House' with rusted red railings, overlooking a misty prehistoric jungle with alien dinosaurs.",
+      "slug": "the-dino-perch"
+    },
+    "niche-1764933925192-ghmtm7uh8": {
+      "id": "niche-1764933925192-ghmtm7uh8",
+      "type": "niche",
+      "name": "The Crimson Quaff",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The bar is constructed from heavily warped wood and accented with candy-apple red rusted metal. Cracked plaster walls reveal darker layers beneath, absorbing the dim, flickering light from lamps made of dented tin toys. Rickety stools are scattered around the scuffed bar.",
+        "colorsAndLighting": "Dominant candy-apple red contrasts with the dim, flickering, warm light. Deep shadows pool in the corners, punctuated by the eerie glow from toy lamps.",
+        "atmosphere": "The air is thick with a cloying sweetness of spilled syrups and cheap perfume, layered over jungle damp and decay. Distorted carnival music, glass clinking, and hushed whispers create a disorienting ambiance.",
+        "materials": "Warped, sticky wood forms the bar, complemented by heavily rusted, candy-apple red metal. Cracked, peeling plaster walls and dented tin toy lamp casings add to the decrepit aesthetic.",
+        "mood": "Playful yet unsettling, a sense of wonder tinged with unease and the thrill of decrepitude.",
+        "sounds": "Mournful carnival music, clinking glasses, whispered conversations.",
+        "spatialLayout": "A medium-sized, irregular space focused on a central bar. Entryways are implied by the flow of the description, likely from an upper perch.",
+        "primary_surfaces": "cracked plaster",
+        "secondary_surfaces": "warped wood, rusted metal",
+        "accent_features": "repurposed tin toy lamps",
+        "dominant": "candy-apple red",
+        "secondary": "dark, peeling plaster",
+        "accent": "sticky residue brown",
+        "ambient": "warm",
+        "structure": {
+          "form": "irregular",
+          "roofType": "vaulted",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764933925190-8i9n7b3ox",
+      "description": "A decrepit carnival bar with warped wood, rusted metal, and cracked plaster, lit by repurposed toy lamps.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "main entrance",
+          "description": "an archway leading into the bar"
+        }
+      ],
+      "dominantElements": [
+        "bar counter",
+        "rickety stools",
+        "cracked plaster walls"
+      ],
+      "uniqueIdentifiers": [
+        "repurposed tin toy lamps",
+        "candy-apple red rusted metal",
+        "warped wood bar"
+      ],
+      "searchDesc": "Decrepit carnival bar with warped wood, rusted metal, and toy lamps.",
+      "slug": "the-crimson-quaff"
     }
   },
   "views": {},
@@ -254,6 +484,26 @@
               "children": [
                 {
                   "id": "niche-1764931670942-uz99rehr1",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764933817343-5bbumbwzb",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764933838789-3puenfr1b",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764933886844-ru3jichei",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764933925192-ghmtm7uh8",
                   "type": "niche",
                   "children": []
                 }

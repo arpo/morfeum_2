@@ -11,6 +11,7 @@ export type NodeType = 'host' | 'region' | 'location' | 'niche' | 'detail' | 'vi
  */
 export type NavigationIntent = 
   | 'GO_INSIDE'
+  | 'GOTO'
   | 'UNKNOWN';
 
 export interface IntentResult {
@@ -131,4 +132,23 @@ export interface NavigationAnalysisResult {
   context: NavigationContext;
   intent: IntentResult;
   decision: NavigationDecision;
+}
+
+/**
+ * Result from LLM destination analysis for GOTO command
+ * Synthesizes user's destination prompt with parent location context
+ */
+export interface DestinationAnalysis {
+  /** Refined name for the destination niche */
+  name: string;
+  /** Whether this is an interior or exterior space */
+  perspective: 'interior' | 'exterior';
+  /** Type of space (room, outdoor, hallway, cellar, etc.) */
+  spaceType: string;
+  /** Whether the space is enclosed (affects image generation) */
+  isEnclosed: boolean;
+  /** Hint for atmosphere/mood to blend with parent DNA */
+  atmosphereHint: string;
+  /** Synthesized description combining user prompt with parent context */
+  synthesizedDescription: string;
 }

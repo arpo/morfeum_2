@@ -1,5 +1,53 @@
 # Active Context
 
+## Recent Changes (2025-12-05)
+
+### GOTO Command Implementation (Dec 5, 2025)
+- **Feature**: New `/GOTO` command for freeform navigation within locations
+- **Purpose**: Navigate to any place within the current location (kitchen, balcony, garden, etc.)
+- **Difference from GO_INSIDE**: 
+  - GO_INSIDE: Creates a child niche representing "inside" the current location
+  - GOTO: Creates a sibling niche under the same parent location, for navigating to specific places
+- **Implementation**:
+  - LLM-powered destination analysis that synthesizes user's prompt with parent context
+  - Determines perspective (interior/exterior), space type, atmosphere
+  - Creates sibling niche under parent location node
+  
+**Files Created (3):**
+- `packages/backend/src/engine/generation/prompts/navigation/destinationAnalysis.ts` - LLM prompt for analyzing destination
+- `packages/backend/src/engine/navigation/analyzers/destinationAnalyzer.ts` - Analyzer that calls LLM
+- `packages/backend/src/engine/navigation/handlers/goto.ts` - GOTO command handler
+
+**Files Modified (10):**
+- `packages/backend/src/config/navigation.ts` - Added GOTO command config
+- `packages/backend/src/engine/navigation/types.ts` - Added DestinationAnalysis type
+- `packages/backend/src/engine/navigation/commandBuilder.ts` - Added GOTO case
+- `packages/backend/src/engine/navigation/navigationRouter.ts` - Added GOTO routing with RouteOptions
+- `packages/backend/src/engine/navigation/index.ts` - Exported new modules
+- `packages/backend/src/engine/navigation/handlers/index.ts` - Exported handler
+- `packages/backend/src/engine/generation/prompts/navigation/index.ts` - Exported prompt
+- `packages/backend/src/routes/mzoo/navigation.ts` - Calls analyzer for GOTO
+- `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Uses destinationAnalysis.synthesizedDescription for GOTO
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/commandParser.ts` - Added isNavigationCommand
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Updated error message
+
+**Architecture:**
+```
+User: /GOTO the kitchen
+  ↓
+Frontend: Parse command → send to backend
+  ↓
+Backend: analyzeDestination() → LLM synthesizes "kitchen" + parent context
+  ↓
+Returns: { name: "Kitchen", perspective: "interior", synthesizedDescription: "..." }
+  ↓
+Handler: Creates decision for sibling niche under parent location
+  ↓
+Pipeline: Uses synthesizedDescription for image generation (not current niche context)
+```
+
+**Key Fix**: The pipeline now checks for `decision.metadata?.destinationAnalysis?.synthesizedDescription` and uses it for GOTO commands instead of generating from current context. This ensures GO_INSIDE continues working unchanged.
+
 ## Recent Changes (2025-12-03)
 
 ### Component Refactoring (Dec 3, 2025)

@@ -7,7 +7,8 @@ import { Router, Request, Response } from 'express';
 import { asyncHandler } from '../../middleware/errorHandler';
 import { HTTP_STATUS } from '../../config';
 import { NAVIGATION_COMMANDS, SLASH_COMMANDS, type NavigationCommand, type NodeType } from '../../config/navigation';
-import { classifyIntent, routeNavigation, buildIntentFromCommand } from '../../engine/navigation';
+import { classifyIntent, routeNavigation, buildIntentFromCommand, analyzeDestination } from '../../engine/navigation';
+import type { RouteOptions } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
@@ -179,15 +180,23 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
   const apiKey = (req as any).mzooApiKey;
 
   try {
-    // Build intent from command (no LLM call)
+    // Build intent from command (no LLM call for basic commands)
     const intent = buildIntentFromCommand(
       command as NavigationCommand,
       text || null,
       context.currentNode.type
     );
 
+    // For GOTO command, run destination analysis before routing
+    let routeOptions: RouteOptions = {};
+    if (command === 'GOTO' && text) {
+      console.log(`\n🎯 [GOTO] Analyzing destination: "${text}"`);
+      const destinationAnalysis = await analyzeDestination(apiKey, text, context);
+      routeOptions.destinationAnalysis = destinationAnalysis;
+    }
+
     // Route navigation using deterministic logic
-    const decision = routeNavigation(intent, context);
+    const decision = routeNavigation(intent, context, routeOptions);
 
     // Build response
     const result: NavigationAnalysisResult = {

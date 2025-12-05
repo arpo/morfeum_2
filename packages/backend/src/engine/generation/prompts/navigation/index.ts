@@ -6,3 +6,4 @@
 export { intentClassifierPrompt } from './intentClassifier';
 export type { IntentClassifierRequest } from './intentClassifier';
 export { nicheImagePrompt } from './nicheImagePrompt';
+export { destinationAnalysisPrompt } from './destinationAnalysis';

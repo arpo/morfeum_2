@@ -58,6 +58,14 @@ export function isMediaCommand(command: string): boolean {
 }
 
 /**
+ * Check if command is a navigation command
+ * Navigation commands navigate within the world tree (GO_INSIDE, GOTO)
+ */
+export function isNavigationCommand(command: string): boolean {
+  return ['GO_INSIDE', 'GOTO'].includes(command);
+}
+
+/**
  * Get node type from creation command
  */
 export function getNodeTypeFromCommand(command: string): string {

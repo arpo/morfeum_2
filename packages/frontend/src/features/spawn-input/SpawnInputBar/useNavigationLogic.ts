@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
-import { parseCommandInput, isCreationCommand, isMediaCommand } from './commandParser';
+import { parseCommandInput, isCreationCommand, isMediaCommand, isNavigationCommand } from './commandParser';
 import { handleCreationCommand } from './creationCommands';
 import { handleMediaCommand } from './mediaCommands';
 import { handleNavigationCommand } from './navigationCommands';
@@ -81,7 +81,7 @@ export function useNavigationLogic() {
   }, [movementInput, getNode, getSpatialNodes, setActiveEntity]);
 
   const handleInvalidCommand = useCallback((command: string) => {
-    const message = `Command '/${command}' is not available yet. Only /GO_INSIDE is currently implemented.`;
+    const message = `Command '/${command}' is not available yet. Available navigation commands: /GO_INSIDE, /GOTO`;
     setErrorMessage(message);
     console.warn('[useNavigationLogic] Invalid command attempted:', command);
 

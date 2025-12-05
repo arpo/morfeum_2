@@ -31,6 +31,7 @@ export function buildIntentFromCommand(
 
 /**
  * Derive spaceType based on command and current node type
+ * Note: For GOTO, spaceType is determined by LLM analysis, not hardcoded
  */
 function deriveSpaceType(
   command: NavigationCommand,
@@ -39,7 +40,10 @@ function deriveSpaceType(
   switch (command) {
     case 'GO_INSIDE':
       return 'interior';
-    // Add new command cases here as they are implemented
+    case 'GOTO':
+      // GOTO perspective is determined by LLM analysis of the destination
+      // Return null here - the analyzer will determine the actual perspective
+      return null;
     default:
       // Derive from current node type
       if (currentNodeType === 'location') {

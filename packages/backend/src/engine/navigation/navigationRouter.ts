@@ -3,24 +3,37 @@
  * Deterministic routing logic based on classified intent and context
  */
 
-import type { IntentResult, NavigationContext, NavigationDecision } from './types';
-import { handleGoInside } from './handlers';
+import type { IntentResult, NavigationContext, NavigationDecision, DestinationAnalysis } from './types';
+import { handleGoInside, handleGoto } from './handlers';
+
+/**
+ * Options for routing that may include pre-computed analysis
+ */
+export interface RouteOptions {
+  /** Pre-computed destination analysis for GOTO command */
+  destinationAnalysis?: DestinationAnalysis;
+}
 
 /**
  * Route navigation based on intent and context
- * Uses deterministic logic - no LLM calls
+ * Uses deterministic logic - LLM calls happen before routing for commands that need them
  * 
- * Currently only GO_INSIDE is implemented.
- * Other commands will be added as development progresses.
+ * Currently implemented commands:
+ * - GO_INSIDE: Enter a location (creates interior niche)
+ * - GOTO: Navigate to specific place (requires destinationAnalysis)
  */
 export function routeNavigation(
   intent: IntentResult,
-  context: NavigationContext
+  context: NavigationContext,
+  options?: RouteOptions
 ): NavigationDecision {
   
   switch (intent.intent) {
     case 'GO_INSIDE':
       return handleGoInside(intent, context);
+    
+    case 'GOTO':
+      return handleGoto(intent, context, options?.destinationAnalysis);
     
     // Add new command cases here as they are implemented
     

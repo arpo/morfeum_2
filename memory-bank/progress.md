@@ -3,7 +3,7 @@
 ## What Works ✅
 
 ### Core Application Features
-- **Slash Commands**: Contextual navigation commands (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, CREATE_IMAGE, GO_INSIDE)
+- **Slash Commands**: Contextual navigation commands (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, CREATE_IMAGE, GO_INSIDE, GOTO)
 - **Entity System**: Character and location creation, storage, and management
 - **World Tree System**: Hierarchical location structures (host → region → location → niche)
 - **3D World View**: WebGL-based depth rendering with stereo support (2D, full 3D, HSBS modes)
@@ -25,6 +25,12 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **GOTO Command** (Dec 5): New freeform navigation command for navigating within locations
+  - `/GOTO the kitchen` - Navigate to any place within the current location
+  - LLM-powered destination analysis synthesizes user prompt with parent context
+  - Creates sibling niche under parent location (unlike GO_INSIDE which creates child)
+  - Determines perspective (interior/exterior), space type, atmosphere automatically
+  - 3 new files created, 10 files modified
 - **Component Refactoring** (Dec 3): Major refactoring of large files exceeding 300-line limit
   - **useNavigationLogic.ts** (513 → 104 lines, 80% reduction):
     - Extracted `commandParser.ts` (84 lines) - Command parsing, flags, type detection
