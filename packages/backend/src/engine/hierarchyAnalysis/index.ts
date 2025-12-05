@@ -6,5 +6,5 @@
 export * from './types';
 export * from './hierarchyAnalyzer';
 export { generateNodeDNA, extractParentContext } from './nodeDNAGenerator';
-export { mergeDNA, formatDNAForContext } from './dnaMerge';
+export { mergeDNA, formatDNAForContext, findAncestryChain, resolveAncestryDNA, getResolvedNodeDNA } from './dnaMerge';
 export { generateBatchDNA } from '../pipelines/worldTreePipeline';

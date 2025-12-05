@@ -100,15 +100,18 @@ Examples:
 - Parent form=\"rectangular\" → \"A large rectangular hall with straight walls meeting at sharp corners...\"
 - Parent form=\"round\" → \"A circular chamber with curved walls...\"
 
-2. CEILING
-- Match ceiling to roof type but seen from inside:
-  domed → domed ceiling
-  flat → flat ceiling
-  vaulted → vaulted arches
-  pitched/peaked → angled ceiling
-  geodesic → faceted overhead structure
+2. CEILING (CRITICAL: SOLIDITY & OPACITY)
+**ROOF INTEGRITY RULE: Construct a completely solid and continuous roof structure. Ensure fully enclosed opaque roofing with an unbroken roof surface.**
+**NO SKYLIGHTS OR HOLES.** The ceiling must strictly block the sky unless the material type is explicitly glass.
 
-3. WINDOWS/OPENINGS
+- Match ceiling to roof type but seen from inside:
+  domed → solid domed ceiling (opaque)
+  flat → solid flat ceiling (opaque)
+  vaulted → stone or wood vaulted arches (opaque)
+  pitched/peaked → angled solid ceiling (opaque)
+  geodesic → faceted overhead structure (solid panels)
+
+3. WINDOWS/OPENINGS (WALLS ONLY)
 - If exterior has windows/openings, interior MUST show them as well:
   large glass panels → interior glazing with framing
   arches/windows → interior arches/windows
@@ -191,12 +194,12 @@ TRANSLATION RULES:
 • Ext. Metal → Int. Supports / Grating / Plating
 • Ext. Concrete → Int. Smooth Industrial
 
+**SOLID CEILING ENFORCEMENT:** Unless the material is explicitly Glass/Crystal, the ceiling material must be **100% OPAQUE and SOLID**. Do not render transparency in wood, stone, brick, or concrete roofs.
+
 FOUNDATION vs WALLS (CRITICAL):
 - Stone foundation + Wood walls = Wood paneled interior, stone may appear on FLOOR only
 - Stone foundation does NOT mean stone interior walls
-- Read the "materials" field carefully - what is the PRIMARY WALL material?
-
-
+- Read the \"materials\" field carefully - what is the PRIMARY WALL material?
 
 ${navigableElementsTemplate}
 
