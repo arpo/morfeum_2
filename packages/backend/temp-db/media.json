@@ -864,18 +864,31 @@
         "loc-1764834711849-eoe2fn43k"
       ]
     },
-    "media-1764930782483-x9r2tmj7i": {
-      "id": "media-1764930782483-x9r2tmj7i",
+    "media-1764931641590-1nwsndv2p": {
+      "id": "media-1764931641590-1nwsndv2p",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a851215/GXCX3WJAZOGphMepHQ7Db.jpg",
-      "createdAt": "2025-12-05T10:33:02.483Z",
+      "url": "https://v3b.fal.media/files/b/0a85126b/dWB7iMVq2hJqWkTD6b3SC.jpg",
+      "createdAt": "2025-12-05T10:47:21.590Z",
       "metadata": {
-        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA street-level, slightly elevated (25-30° downward tilt) ultra-wide view captures \"The Shifting House\" in the Anomaly Zone of Neo-Veridian City. The building, an impossible geometry with bio-luminescent crystalline elements, is slightly off-center. Its facade is a chaotic amalgam of impossibly smooth, rippling obsidian and sharp, crystalline facets that twist and refract light, with protruding organic growths and razor-edged shards. Deep indigos dominate its form, accented by shimmering silver and fleeting emerald and amethyst flashes. Ethereal light emanates from within, casting warped, unfamiliar shadows. Worn cobblestone with puddles reflecting neon signs forms the foreground. In the midground, the house's entrance is visible, though not dominating, flanked by window displays showcasing shifting membranes and glowing veins. The background reveals the chrome towers and neon lights of Neo-Veridian City, with a hazy sky hinting at distant landmarks. The air around the house feels unnaturally still, carrying a faint scent of ozone, with faint, musical chimes occasionally audible. The mood is one of profound mystery and unsettling displacement. The building is shot at a slight angle to emphasize its non-linear, complex form and depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
+        "prompt": "\nliving-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\n**Prompt:**\n\nA hyper-detailed, ultra-wide street-level view, shot with a slight 25-30° downward tilt, captures the exterior of \"The Fun House\" on the bustling \"Midway\" of the \"Carnival Grounds.\" The facade, a riot of carnivalesque surrealism with distorted Victorian elements, is slightly off-center and angled to reveal its warped, multi-planar composition. Walls visibly tilt and bulge, adorned with exaggerated architectural features like oversized doorknobs and crooked window frames that play with perception. Vibrant, clashing colors dominate: large swathes of candy-apple red clash with electric blue in sharp, angular patterns, while neon yellow and lime green accent trim and unique features like a spinning eyeball. Peeling, colorful siding, corrugated metal, glitter-infused vinyl, and cracked plaster form the primary materials, all showing signs of wear and tear.\n\nIn the **foreground**, worn cobblestone streets are visible, glistening with puddles reflecting the chaotic neon glow of distant signs. The **midground** is dominated by \"The Fun House\" entrance, an inviting yet unsettling portal. Its signage is shifting and illegitable, its window displays are bulging and distorted, offering glimpses into the sensory disorientation within. Candy-striped trim frames the entrance, hinting at the playful yet unsettling mood.\n\nThe **background** features a hazy sky, illuminated by the uneven, flickering glow of unseen lights, with pockets of brightness and shadow creating an unpredictable atmosphere. Faint, distorted carnival music and distant laughter seem to emanate from the very structure, carried on a warm air that carries a subtle, sweet, and slightly artificial scent. The overall mood is one of playful unease, promising both wonder and a delightful challenge to the senses. The shot is asymmetric, with more of the vibrant, chaotic street visible on one side, emphasizing depth and dimension and avoiding any perfectly frontal or centered perspectives.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain\n\n",
         "model": "FLUX"
       },
       "entityRefs": [
-        "954ecd34-48a3-40c0-a288-e51c788dd142"
+        "fcc91232-8a5f-4354-b255-b1619fd11f70"
       ]
+    },
+    "media-1764931670937-o2lizk3gx": {
+      "id": "media-1764931670937-o2lizk3gx",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a85126e/TCZqosnJ6KcZSq9TB-zVY.jpg",
+      "createdAt": "2025-12-05T10:47:50.937Z",
+      "metadata": {
+        "prompt": "A disorienting interior chamber, immediately upon entering, reveals walls of warped, brightly painted wood in candy-apple red, peeling in places to expose underlying corrugated metal. Electric blue zig-zag patterns clash with neon yellow and lime green trim, some of which is candy-striped. An oversized, crooked doorframe, painted a garish pink, sits asymmetrically in the midground, hinting at further labyrinthine passages. In the foreground, a section of cracked plaster floor is illuminated by a flickering, hidden spotlight, revealing a scattered collection of glittering vinyl scraps. The ceiling, a low, uneven expanse of taut, patched canvas, creates pockets of deep shadow, broken by the unpredictable glow of a single, bare, bare bulb hanging precariously overhead. The air feels thick with a sweet, artificial scent and the faint, distorted strains of carnival music. A spinning eyeball motif is incorporated into a bulging window frame on the right, adding to the unsettling charm.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": []
     }
   }
 }

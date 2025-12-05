@@ -1,178 +1,263 @@
 {
   "nodes": {
-    "loc-1764930763793-wet03111q": {
-      "id": "loc-1764930763793-wet03111q",
+    "loc-1764931621292-af8p71vil": {
+      "id": "loc-1764931621292-af8p71vil",
       "type": "host",
-      "name": "Neo-Veridian City",
+      "name": "Carnival Grounds",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The city presents a sleek, hyper-modern aesthetic, characterized by towering structures of polished metal and glass, interwoven with vibrant neon and holographic displays.",
-        "colorsAndLighting": "Dominated by the cool glow of neon signs and the sharp, artificial light of advanced urban illumination, with a palette leaning towards blues, purples, and stark whites.",
-        "atmosphere": "The air hums with technological energy, a constant buzz of activity and data. It is generally clean and efficient, though can feel sterile.",
-        "materials": "Primary materials are polished chrome, reinforced glass, composite alloys, and advanced polymers, all showcasing a high-tech, manufactured sheen.",
-        "mood": "A mood of ambitious progress, efficient order, and underlying detachment from nature.",
-        "sounds": "The city is a symphony of synthesized chimes, the hum of machinery, distant traffic whooshes, and a constant undercurrent of digital alerts and announcements.",
-        "spatialLayout": "A meticulously planned, vertical urban landscape with distinct districts for commerce, residential, and industry.",
-        "primary_surfaces": "Sleek, reflective metallic surfaces and large panes of smart glass.",
-        "secondary_surfaces": "Recycled composites and high-density polymers.",
-        "accent_features": "Intricate holographic projections and dynamic LED lighting arrays.",
-        "dominant": "Cool blues and purples (40%)",
-        "secondary": "Shimmering silver and white (40%)",
-        "accent": "Vibrant neon hues (20%)",
-        "ambient": "Sharp, artificial, and highly controlled.",
-        "genre": "Cyberpunk",
-        "architectural_tone": "Futuristic megastructures and high-tech urbanism",
-        "cultural_tone": "Technologically advanced, corporate-driven society",
-        "materials_base": "Polished metals, smart glass, advanced composites",
-        "mood_baseline": "Efficient order and technological aspiration",
-        "palette_bias": "cool, sharp, metallic",
-        "soundscape_base": "Synthesized, humming, and digital",
-        "flora_base": "Minimal, often genetically engineered ornamental plants in controlled environments",
-        "fauna_base": "Synthetic or genetically modified service drones and minimal urban wildlife"
-      },
-      "description": "A sprawling metropolis of chrome towers and neon lights, where advanced technology shapes daily life. It is a monument to human ambition and technological progress, a beacon of the modern age.",
-      "navigableElements": [
-        "Sky-bridges",
-        "Mag-lev transport lines",
-        "Public plazas"
-      ],
-      "dominantElements": [
-        "Mega-skyscrapers",
-        "Holographic advertisements",
-        "Automated traffic systems"
-      ],
-      "uniqueIdentifiers": [
-        "Pervasive digital signage",
-        "Strictly regulated urban zones"
-      ],
-      "searchDesc": "A futuristic metropolis defined by towering chrome structures and vibrant neon illumination.",
-      "slug": "neo-veridian-city"
-    },
-    "87185f37-bf2f-4f15-86ea-27c1b9355fd1": {
-      "id": "87185f37-bf2f-4f15-86ea-27c1b9355fd1",
-      "type": "region",
-      "name": "The Anomaly Zone",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The visual character of this region is defined by subtle spatial distortions and an eerie stillness, with structures that appear out of place or defy natural laws.",
-        "colorsAndLighting": "Lighting is inconsistent, often tinged with unnatural hues, and colors can seem muted or oversaturated depending on localized reality fluctuations.",
-        "atmosphere": "The atmosphere is tense and unsettling, with a palpable sense of wrongness. The air is often unnaturally still and carries faint, unidentifiable scents.",
-        "materials": "Materials are a mix of the ordinary and the impossible; structures might be made of familiar substances but twisted into alien forms or exhibiting impossible properties.",
-        "mood": "A pervasive mood of mystery, unease, and slight dread.",
-        "sounds": "Ambient sounds are subdued, often punctuated by distant, unidentifiable chimes or faint whispers that seem to have no source.",
-        "spatialLayout": "The spatial layout is erratic and unpredictable, with distances and angles behaving strangely.",
-        "primary_surfaces": "Surfaces are varied but often possess a strange smoothness or unsettling texture.",
-        "secondary_surfaces": "Secondary materials are rarely consistent and can appear alien or synthetic.",
-        "accent_features": "Accent features are often subtle spatial anomalies or fleeting visual phenomena.",
-        "dominant": "Variable, often muted or unnaturally shifted.",
-        "secondary": "Variable, with occasional iridescent or otherworldly flashes.",
-        "accent": "Fleeting, disorienting visual glitches and energy flares.",
-        "ambient": "Ethereal and inconsistent, warping shadows.",
-        "genre": null,
-        "architectural_tone": "Impossible geometry with elements that defy physics",
-        "cultural_tone": null,
-        "materials_base": "Otherworldly compounds, solidified light, and warped terrestrial materials",
-        "mood_baseline": "Unsettling displacement and profound mystery",
-        "palette_bias": "cool, dark, iridescent",
-        "soundscape_base": "Subdued and punctuated by anomalous audio phenomena",
+        "looks": "A temporary, highly decorated environment designed for maximum visual impact, featuring an eclectic mix of structures, rides, and tents, all united by a festive, often exaggerated aesthetic.",
+        "colorsAndLighting": "Dominated by bright, saturated colors and a dynamic interplay of artificial lights, from steady illumination to flashing and twinkling effects, creating a lively and engaging visual landscape.",
+        "atmosphere": "A heady mix of sweet and savory food scents, the distant rumble of machinery, bursts of music, and the constant hum of human activity. It's charged with an electric sense of anticipation and fun.",
+        "materials": "A practical yet visually driven palette of painted wood, metal sheeting, canvas, plastics, and fabrics, chosen for their affordability, ease of assembly, and visual vibrancy.",
+        "mood": "Overwhelmingly joyful, exciting, and slightly surreal, designed to induce a sense of wonder, escapism, and lighthearted amusement.",
+        "sounds": "A rich tapestry of carnival music, ride mechanics, game sounds, crowd noise, and periodic announcements, creating an energetic and immersive sonic environment.",
+        "spatialLayout": "Organized into distinct zones for rides, games, food, and shows, connected by open but busy pathways. There's a deliberate design to guide visitors and create points of interest.",
+        "primary_surfaces": "Painted wood and metal sheeting",
+        "secondary_surfaces": "Canvas and plastic sheeting",
+        "accent_features": "Elaborate signage, themed decorations, and dynamic lighting installations.",
+        "dominant": "A broad range of vibrant primary colors, with a tendency towards candy and jewel tones.",
+        "secondary": "Bold, contrasting colors used for graphics and patterns.",
+        "accent": "Bright, often neon accents to highlight features and draw attention.",
+        "ambient": "Warm, lively, and saturated, with color temperatures varying from bright daylight to the vibrant glow of artificial lighting.",
+        "genre": "Carnivalesque",
+        "architectural_tone": "Exaggerated, theatrical, and functional-temporary. Structures are designed to be eye-catching and immersive rather than permanent or architecturally conventional.",
+        "cultural_tone": "A culture of spectacle, transient joy, and shared amusement. It's a space for communal escapism and embracing the extraordinary.",
+        "materials_base": "Visually impactful, affordable, and often temporary materials that prioritize spectacle over durability.",
+        "mood_baseline": "Unrelenting festivity, excitement, and a touch of escapism.",
+        "palette_bias": "Bold, saturated colors intended to be highly visible and evoke a sense of fun and energy.",
+        "soundscape_base": "Energetic, attention-grabbing, and immersive sound environment designed to enhance the festive atmosphere.",
         "flora_base": null,
         "fauna_base": null
       },
-      "description": "A peculiar district where reality seems to fray, marked by the presence of inexplicable structures. It is a pocket of the city that defies conventional urban planning and physics.",
-      "navigableElements": [],
+      "description": "A sprawling, vibrant temporary settlement dedicated to spectacle and amusement. It's a place where the mundane is suspended, and the extraordinary is everyday, offering escape and sensory delight.",
+      "navigableElements": [
+        "Main thoroughfares",
+        "Attraction zones",
+        "Service areas",
+        "Perimeter fencing"
+      ],
       "dominantElements": [
-        "The Shifting House",
-        "Intermittent reality distortions"
+        "Central Ferris wheel or big top",
+        "Themed zones"
       ],
       "uniqueIdentifiers": [
-        "Unstable spatial geometry",
-        "Anomalous energy signatures"
+        "The overarching smell of spun sugar and fried dough",
+        "The distant, unifying hum of generator power"
       ],
-      "searchDesc": "A district where reality bends, home to strange and impossible structures.",
-      "slug": "the-anomaly-zone"
+      "searchDesc": "A vibrant, sprawling carnival grounds focused on spectacle, amusement, and sensory delight.",
+      "slug": "carnival-grounds"
     },
-    "954ecd34-48a3-40c0-a288-e51c788dd142": {
-      "id": "954ecd34-48a3-40c0-a288-e51c788dd142",
-      "type": "location",
-      "name": "The Shifting House",
+    "e7d87816-3190-4860-b279-3facb1ef12f9": {
+      "id": "e7d87816-3190-4860-b279-3facb1ef12f9",
+      "type": "region",
+      "name": "Midway",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The house is a chaotic amalgam of impossibly smooth, obsidian-like surfaces and crystalline formations that twist and refract light. Its overall shape is irregular and asymmetrical, constantly undergoing subtle, unnerving shifts in its contours. Protruding elements resemble organic growths and sharp, crystalline shards.",
-        "colorsAndLighting": "The primary colors are deep indigos and shimmering silvers, accented by fleeting flashes of emerald and amethyst. Light emanates from within the structure itself, casting an ethereal, an otherworldly glow that warps shadows into unfamiliar shapes.",
-        "atmosphere": "The air around the Shifting House is unnaturally still, carrying a faint scent of ozone and something akin to distant, alien rain. A palpable sense of unease hangs heavy, as if the very fabric of reality is being stretched thin around it. Occasionally, faint, musical chimes can be heard, seeming to originate from the house's core.",
-        "materials": "The dominant materials appear to be solidified light, polished obsidian-like compounds, and vast, impossibly clear crystals. Textures range from unnervingly smooth and cool to sharply faceted and razor-edged, with no discernible signs of weathering or wear.",
-        "mood": "The mood is one of profound mystery and unsettling displacement, evoking a sense of awe mixed with an instinctual fear of the unknown. It feels ancient, alien, and utterly detached from the mundane world it occupies.",
-        "sounds": "low hum, faint chimes, distorted whispers, shifting echoes",
-        "spatialLayout": "The internal space seems to defy logical dimensions, with hallways that appear to stretch infinitely and rooms that seem to possess more than three dimensions. The external form is complex and non-linear, with no clear front or back.",
-        "primary_surfaces": "rippling obsidian, crystalline facets",
-        "secondary_surfaces": "glowing veins, shifting membranes",
-        "accent_features": "iridescent portals, twisting spires, fractal patterns",
-        "dominant": "deep indigo (70%)",
-        "secondary": "shimmering silver (20%)",
-        "accent": "emerald and amethyst flashes (10%)",
-        "ambient": "ethereal glow, warped shadows",
+        "looks": "A bustling, visually dense street with an eclectic mix of temporary structures, vibrant signage, and constant movement of people and attractions.",
+        "colorsAndLighting": "A kaleidoscope of saturated colors from banners, lights, and painted facades, with uneven and often flashing illumination from strings of bulbs and spotlights.",
+        "atmosphere": "Thick with the smell of popcorn, sugar, and novelty foods, punctuated by the din of music, laughter, and excited shouts. A feeling of joyous, slightly overwhelming stimulation.",
+        "materials": "Predominantly painted wood, corrugated metal, canvas, and cheap plastic, often showing wear but maintained for a festive appearance.",
+        "mood": "Exuberant, energetic, and overwhelmingly festive, designed to excite and entice with a sense of immediate gratification and playful chaos.",
+        "sounds": "A cacophony of competing carnival music, game sounds, barkers' calls, excited chatter, and distant screams from rides.",
+        "spatialLayout": "Dense and somewhat labyrinthine, with narrow pathways between tightly packed stalls and attractions, encouraging exploration and chance encounters.",
+        "primary_surfaces": "Painted wood",
+        "secondary_surfaces": "Corrugated metal",
+        "accent_features": "Flickering neon signs, glitter, oversized props, and spinning lights.",
+        "dominant": "Bright, saturated colors like candy-apple red and electric blue.",
+        "secondary": "Sharp, contrasting colors used in patterns and signage.",
+        "accent": "Neon yellow and lime green highlights on edges and details.",
+        "ambient": "Warm, lively, and often speckled with the varied hues of the attractions.",
+        "genre": null,
+        "architectural_tone": "Carnivalesque, temporary, and theatrical structures with a focus on visual appeal over structural integrity.",
+        "cultural_tone": "A culture of transient amusement, playful deception, and sensory indulgence, centered around immediate entertainment and spectacle.",
+        "materials_base": "Cheap, cheerful, and visually impactful carnival materials designed for temporary use.",
+        "mood_baseline": "High-energy excitement and playful disorientation.",
+        "palette_bias": "Bold primary and neon colors designed for maximum visual impact.",
+        "soundscape_base": "Layered, exciting, and attention-grabbing sound environment.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "The heart of the carnival, this vibrant and chaotic thoroughfare buzzes with energy. A sensory overload of sights, sounds, and smells, it's where the excitement truly begins.",
+      "navigableElements": [
+        "Game stalls",
+        "Food vendors",
+        "Small performance stages",
+        "Crowd pathways"
+      ],
+      "dominantElements": [
+        "Large, colorful game booths",
+        "Brightly lit food stalls"
+      ],
+      "uniqueIdentifiers": [
+        "Distinctive carnival barker calls",
+        "Overlapping music from various attractions"
+      ],
+      "searchDesc": "The chaotic, vibrant midway of a carnival, filled with games, food, and excitement.",
+      "slug": "midway"
+    },
+    "fcc91232-8a5f-4354-b255-b1619fd11f70": {
+      "id": "fcc91232-8a5f-4354-b255-b1619fd11f70",
+      "type": "location",
+      "name": "The Fun House",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior is a jumble of mismatched shapes and angles, with walls that seem to tilt and bulge. Exaggerated architectural features like oversized doorknobs and crooked window frames add to the unsettling charm. The scale feels intentionally distorted, playing with perception.",
+        "colorsAndLighting": "Vibrant, clashing colors dominate, with neon accents and patchy paintwork. The lighting is uneven, with flickering bulbs and hidden spotlights creating an unpredictable glow.",
+        "atmosphere": "The air crackles with an unseen energy, carrying faint, distorted carnival music and distant laughter. A slight warmth emanates from the structure, coupled with a subtle, sweet, and slightly artificial scent. There's a constant, almost imperceptible hum.",
+        "materials": "The primary materials are brightly painted wood and corrugated metal, showing signs of wear and tear with chipped paint and scuffs. Sections might be covered in faux-velvet or glittery vinyl, adding to the theatricality.",
+        "mood": "Playful yet unsettling, evoking a sense of childlike wonder mixed with a hint of mischievous unease. It promises fun, but also a delightful challenge to one's senses.",
+        "sounds": "Distorted carnival music, distant laughter, creaking wood, faint metallic clangs, popping sounds",
+        "spatialLayout": "The facade is an irregular, multi-planar composition, projecting outwards in odd directions. There are no clear geometric divisions, creating a visually confusing yet inviting entrance.",
+        "primary_surfaces": "Warped painted wood, peeling colorful siding",
+        "secondary_surfaces": "Corrugated metal, glitter-infused vinyl, cracked plaster",
+        "accent_features": "Spinning eyeball, bulging windows, candy-striped trim, shifting signage",
+        "dominant": "Candy-apple red with large coverage",
+        "secondary": "Electric blue in sharp, angular patterns",
+        "accent": "Neon yellow and lime green on trim and unique features",
+        "ambient": "Flickering and uneven, with pockets of brightness and shadow",
         "structure": {
           "form": "irregular",
-          "roofType": "open-sky",
-          "scale": "large",
+          "roofType": "arched",
+          "scale": "medium",
           "orientation": "cubic",
-          "openings": "open-passages",
-          "functionalType": "civic"
+          "openings": "arched-windows",
+          "functionalType": "entertainment"
         },
         "genre": null,
-        "architectural_tone": "Impossible geometry with bio-luminescent crystalline elements",
-        "cultural_tone": "Unknown alien origin, possibly a portal or observation post",
-        "materials_base": "otherworldly compounds, solidified light",
-        "mood_baseline": "unsettling mystery, alien wonder",
-        "palette_bias": "cool, dark, iridescent",
-        "soundscape_base": "subtle alien hums and ethereal tones",
+        "architectural_tone": "Carnivalesque surrealism with distorted Victorian elements",
+        "cultural_tone": "A place for amusement and sensory disorientation, frequented by thrill-seekers and families looking for a unique experience.",
+        "materials_base": "cheap and cheerful carnival materials",
+        "mood_baseline": "energetic, chaotic, playful",
+        "palette_bias": "Primary and neon colors",
+        "soundscape_base": "distorted and amplified carnival sounds",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A fantastical house that stands in stark contrast to the surrounding modern architecture, its design suggesting an origin from another dimension.",
+      "description": "An exterior facade of a fun house where anything can happen, promising disorienting and unpredictable experiences within.",
       "navigableElements": [
         {
           "type": "door",
-          "position": "center facade",
-          "description": "A swirling vortex of iridescent light where a door should be."
+          "position": "center",
+          "description": "A warped, brightly painted door that seems to breathe."
         },
         {
-          "type": "passage",
-          "position": "left side",
-          "description": "An archway that seems to shimmer and phase in and out of existence."
+          "type": "archway",
+          "position": "left",
+          "description": "An oversized, grinning mouth archway."
+        },
+        {
+          "type": "archway",
+          "position": "right",
+          "description": "A swirling vortex archway."
         }
       ],
       "dominantElements": [
-        "Walls that ripple like liquid.",
-        "Windows that show impossible skies.",
-        "A roof that seems to ascend into a non-existent space.",
-        "Sculptural elements that shift and reconfigure."
+        "Twisted, colorful facade",
+        "Exaggerated architectural features",
+        "Abrupt changes in building planes",
+        "Playful, unsettling signage"
       ],
       "uniqueIdentifiers": [
-        "Pulsating, bioluminescent textures.",
-        "Geometric forms that defy Euclidean principles.",
-        "A subtle, low hum that resonates from its core.",
-        "The air around it feels perceptibly colder."
+        "A giant, spinning eyeball decoration",
+        "Windows that appear to be bulging outward",
+        "A wobbly, candy-striped roofline",
+        "A sign that changes text seemingly at random"
       ],
-      "searchDesc": "Fantastical house from another dimension in a modern city, with shifting walls and impossible skies.",
-      "slug": "the-shifting-house",
-      "primaryMedia": "media-1764930782483-x9r2tmj7i"
+      "searchDesc": "Exterior of a disorienting and unpredictable Fun House on the Carnival Midway.",
+      "slug": "the-fun-house",
+      "primaryMedia": "media-1764931641590-1nwsndv2p"
+    },
+    "niche-1764931670942-uz99rehr1": {
+      "id": "niche-1764931670942-uz99rehr1",
+      "type": "niche",
+      "name": "interior of The Fun House",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a disorienting chamber where warped, brightly painted wood walls, peeling to reveal corrugated metal, are adorned with clashing electric blue zig-zags and neon yellow/lime green candy-striped trim. An oversized, crooked pink doorframe is asymmetrically placed, while the foreground features cracked plaster with scattered glittering vinyl scraps under a flickering spotlight.",
+        "colorsAndLighting": "Dominant candy-apple red covers much of the warped wood walls, contrasted by vibrant electric blue zig-zags and neon yellow/lime green trim. Lighting is unpredictable, with a flickering spotlight on the floor and a bare bulb overhead casting deep shadows.",
+        "atmosphere": "The air is thick with a sweet, artificial scent, punctuated by the faint, distorted strains of carnival music. The overall sensory experience is one of playful disorientation, designed to amuse and slightly unnerve.",
+        "materials": "Warped, painted wood with peeling sections revealing corrugated metal form the walls. The floor is cracked plaster, and the ceiling is taut, patched canvas. Glittering vinyl scraps are scattered on the floor.",
+        "mood": "The mood is a blend of childlike wonder and mischievous unease, promising fun but challenging the senses with its surreal and distorted environment.",
+        "sounds": "Faint, distorted carnival music, unsettling ambiance.",
+        "spatialLayout": "The chamber feels labyrinthine and disorienting, with an asymmetrically placed doorframe suggesting further passages. The low, uneven ceiling creates pockets of deep shadow.",
+        "primary_surfaces": "Warped, painted wood (walls), cracked plaster (floor), patched canvas (ceiling)",
+        "secondary_surfaces": "Corrugated metal (exposed beneath peeling paint), glittering vinyl scraps",
+        "accent_features": "Electric blue zig-zag patterns, neon yellow and lime green candy-striped trim, garish pink crooked doorframe, spinning eyeball motif, flickering spotlight.",
+        "dominant": "Candy-apple red",
+        "secondary": "Electric blue",
+        "accent": "Neon yellow, lime green, garish pink",
+        "ambient": "Irregular and unpredictable",
+        "structure": {
+          "form": "irregular",
+          "roofType": "arched",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "arched-windows",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764931670937-o2lizk3gx",
+      "description": "A disorienting interior chamber within a fun house, characterized by warped, brightly painted walls and a playful yet unsettling atmosphere.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "asymmetrically in the midground",
+          "description": "An oversized, crooked doorframe painted a garish pink, hinting at further labyrinthine passages."
+        },
+        {
+          "type": "window",
+          "position": "on the right",
+          "description": "A bulging window frame with an incorporated spinning eyeball motif."
+        }
+      ],
+      "dominantElements": [
+        "warped, brightly painted wood walls",
+        "oversized, crooked doorframe",
+        "cracked plaster floor",
+        "patched canvas ceiling",
+        "spinning eyeball window motif"
+      ],
+      "uniqueIdentifiers": [
+        "warped candy-apple red walls with peeling sections",
+        "electric blue zig-zag patterns",
+        "neon yellow and lime green candy-striped trim",
+        "garish pink crooked doorframe",
+        "spinning eyeball window"
+      ],
+      "searchDesc": "Disorienting fun house interior: warped red walls, neon trim, crooked pink door, eyeball window.",
+      "slug": "interior-of-the-fun-house"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1764930763793-wet03111q",
+      "id": "loc-1764931621292-af8p71vil",
       "type": "host",
       "children": [
         {
-          "id": "87185f37-bf2f-4f15-86ea-27c1b9355fd1",
+          "id": "e7d87816-3190-4860-b279-3facb1ef12f9",
           "type": "region",
           "children": [
             {
-              "id": "954ecd34-48a3-40c0-a288-e51c788dd142",
+              "id": "fcc91232-8a5f-4354-b255-b1619fd11f70",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1764931670942-uz99rehr1",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -180,6 +265,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1764930763793-wet03111q"
+    "loc-1764931621292-af8p71vil"
   ]
 }
