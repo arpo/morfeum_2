@@ -30,9 +30,18 @@ export const PIPELINE_STEPS = {
     { id: 'profile_enrichment', name: 'Building Profile', duration: 5000 }
   ],
   
-  // Navigation intent pipeline (generic - most intents use this)
+  // Navigation intent pipeline (generic - GO_INSIDE and similar)
   navigation: [
     { id: 'prompt_generation', name: 'Planning Scene', duration: 2000 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2000 },
+    { id: 'dna_generation', name: 'Creating DNA', duration: 6000 },
+    { id: 'node_building', name: 'Building Space', duration: 1000 }
+  ],
+  
+  // GOTO pipeline - includes destination analysis as first step
+  navigationGoto: [
+    { id: 'destination_analysis', name: 'Analyzing Destination', duration: 3000 },
+    { id: 'prompt_generation', name: 'Planning Scene', duration: 500 },  // Uses pre-computed description
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'dna_generation', name: 'Creating DNA', duration: 6000 },
     { id: 'node_building', name: 'Building Space', duration: 1000 }
@@ -46,6 +55,7 @@ export const PIPELINE_STEPS = {
  */
 export const NAVIGATION_INTENT_REGISTRY = {
   'GO_INSIDE': 'navigation',
+  'GOTO': 'navigationGoto',
 } as const;
 
 export type PipelineType = keyof typeof PIPELINE_STEPS;

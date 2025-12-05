@@ -83,7 +83,11 @@ const monitorSpawnProgress = (
             } else if (spawn && spawn.steps) {
                 // Calculate current step index from stage name
                 const stepIndex = getStepIndexFromStage(data.stage, spawn.steps);
-                update.currentStepIndex = stepIndex;
+                // Only update if we got a valid step index (not -1)
+                // This prevents 'started' events from overwriting the initial step index
+                if (stepIndex >= 0) {
+                    update.currentStepIndex = stepIndex;
+                }
             }
             
             get().updateSpawnProgress(id, update);

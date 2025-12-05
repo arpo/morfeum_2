@@ -8,12 +8,13 @@ import { generateNodeDNA, extractParentContext } from '../../hierarchyAnalysis/n
 import { generateLocationImage } from '../../generation/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
 import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
-import type { NavigationDecision, NavigationContext, IntentResult } from '../types';
+import type { NavigationDecision, NavigationContext, IntentResult, DestinationAnalysis } from '../types';
 import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
 import { findParentLocationNode } from '../navigationHelpers';
 import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
 import { getPipelineTypeForIntent } from '../../pipelines/shared/pipelineConfig';
 import mediaService from '../../../services/media/mediaService';
+import { analyzeDestination } from '../analyzers/destinationAnalyzer';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
 export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
@@ -21,8 +22,9 @@ export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
 export interface CreateNodeOptions {
   nodeType?: NavigationNodeType;
   generateImage?: boolean;
-  style?: string;        // NEW: Visual style from registry
-  perspective?: string;  // NEW: Perspective (interior/exterior)
+  style?: string;        // Visual style from registry
+  perspective?: string;  // Perspective (interior/exterior)
+  gotoText?: string;     // For GOTO: The destination text to analyze
 }
 
 /**
@@ -39,8 +41,8 @@ export async function runCreateLocationNodePipeline(
   options?: CreateNodeOptions,
   navigationId?: string
 ): Promise<{ imageUrl: string; imagePrompt: string; node: any }> {
-  // Auto-detect pipeline type from intent
-  const pipelineType = getPipelineTypeForIntent(intent.intent);
+  // Auto-detect pipeline type from intent (GOTO uses 'navigationGoto', GO_INSIDE uses 'navigation')
+  const pipelineType = options?.gotoText ? 'navigationGoto' : getPipelineTypeForIntent(intent.intent);
   const helper = navigationId ? new PipelineHelper(navigationId, 'CreateNodePipeline', pipelineType) : null;
 
   try {
@@ -48,14 +50,52 @@ export async function runCreateLocationNodePipeline(
     const shouldGenerateImage = options?.generateImage !== false;
 
     // Get style and perspective from decision or options
-    const style = options?.style || decision.style || intent.style || 'default';
-    const perspective = options?.perspective || decision.perspective || intent.spaceType || 'interior';
+    let style = options?.style || decision.style || intent.style || 'default';
+    let perspective = options?.perspective || decision.perspective || intent.spaceType || 'interior';
 
     if (helper) {
       helper.started('Starting node creation...');
     }
 
-    // Step 1: Generate image prompt
+    // For GOTO: Run destination analysis as FIRST step (with SSE visibility)
+    let destinationAnalysis: DestinationAnalysis | undefined = decision.metadata?.destinationAnalysis;
+    
+    if (options?.gotoText && !destinationAnalysis) {
+      if (helper) {
+        helper.startStage('destination_analysis', 'Analyzing destination...');
+      }
+
+      console.log(`\n🎯 [GOTO Pipeline] Analyzing destination: "${options.gotoText}"`);
+      destinationAnalysis = await analyzeDestination(apiKey, options.gotoText, context);
+      
+      // Update decision with analysis results
+      decision.newNodeName = destinationAnalysis.name;
+      decision.perspective = destinationAnalysis.perspective;
+      decision.metadata = decision.metadata || {};
+      decision.metadata.destinationAnalysis = destinationAnalysis;
+      
+      // Update perspective from analysis
+      perspective = destinationAnalysis.perspective;
+
+      console.log('\n═══════════════════════════════════════════════════════════');
+      console.log('🎯 DESTINATION ANALYSIS RESULT');
+      console.log('═══════════════════════════════════════════════════════════');
+      console.log(`  Name: ${destinationAnalysis.name}`);
+      console.log(`  Perspective: ${destinationAnalysis.perspective}`);
+      console.log(`  Space Type: ${destinationAnalysis.spaceType}`);
+      console.log(`  Enclosed: ${destinationAnalysis.isEnclosed}`);
+      console.log(`  Atmosphere: ${destinationAnalysis.atmosphereHint}`);
+      console.log('═══════════════════════════════════════════════════════════\n');
+
+      if (helper) {
+        helper.completeStage('destination_analysis', 'Destination analyzed', { 
+          name: destinationAnalysis.name,
+          perspective: destinationAnalysis.perspective 
+        });
+      }
+    }
+
+    // Step 1 (or 2 for GOTO): Generate image prompt
     // For GOTO: Use the synthesized description from destination analysis
     // For GO_INSIDE and others: Generate from context using LLM
     if (helper) {
@@ -65,7 +105,6 @@ export async function runCreateLocationNodePipeline(
     let imagePrompt: string;
     
     // Check if we have a destination analysis (from GOTO command)
-    const destinationAnalysis = decision.metadata?.destinationAnalysis;
     if (destinationAnalysis?.synthesizedDescription) {
       // GOTO command: Use the pre-computed synthesized description
       imagePrompt = destinationAnalysis.synthesizedDescription;

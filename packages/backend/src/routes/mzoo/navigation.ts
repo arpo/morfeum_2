@@ -10,6 +10,7 @@ import { NAVIGATION_COMMANDS, SLASH_COMMANDS, type NavigationCommand, type NodeT
 import { classifyIntent, routeNavigation, buildIntentFromCommand, analyzeDestination } from '../../engine/navigation';
 import type { RouteOptions } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
+import { findParentLocationNode } from '../../engine/navigation/navigationHelpers';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
@@ -187,15 +188,72 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       context.currentNode.type
     );
 
-    // For GOTO command, run destination analysis before routing
-    let routeOptions: RouteOptions = {};
+    // For GOTO: Send response immediately, run analysis in pipeline
     if (command === 'GOTO' && text) {
-      console.log(`\n🎯 [GOTO] Analyzing destination: "${text}"`);
-      const destinationAnalysis = await analyzeDestination(apiKey, text, context);
-      routeOptions.destinationAnalysis = destinationAnalysis;
+      const navigationId = `nav-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      const eventsUrl = `/api/mzoo/navigation/events/${navigationId}`;
+      
+      // Get parent location for sibling niche creation (not current niche)
+      const { parentLocationId } = findParentLocationNode(context);
+      
+      // Use navigationGoto pipeline type (includes destination_analysis step)
+      const steps = getStepsForPipeline('navigationGoto');
+      pipelineConfigs.set(navigationId, {
+        pipelineType: 'navigationGoto',
+        steps: steps.map((step, index) => ({
+          index,
+          id: step.id,
+          name: step.name,
+          duration: step.duration
+        }))
+      });
+      
+      // Build initial result (decision will be updated in pipeline after analysis)
+      const initialResult: NavigationAnalysisResult = {
+        userCommand: `/${command} ${text}`,
+        context,
+        intent,
+        decision: {
+          action: 'create_niche',
+          newNodeType: 'niche',
+          reasoning: 'GOTO command - destination analysis pending',
+          parentNodeId: parentLocationId,  // Use parent location for sibling creation
+          newNodeName: text
+        }
+      };
+      
+      // Return response immediately (BEFORE analysis)
+      res.status(HTTP_STATUS.OK).json({
+        data: {
+          ...initialResult,
+          navigationId,
+          eventsUrl
+        }
+      });
+
+      // Run pipeline asynchronously with destination analysis as first step
+      (async () => {
+        try {
+          await runCreateNodePipeline(
+            initialResult.decision,
+            context,
+            intent,
+            apiKey,
+            { gotoText: text },  // Pass text for destination analysis
+            navigationId
+          );
+        } catch (pipelineError) {
+          console.error('[GOTO COMMAND ERROR]', pipelineError);
+        } finally {
+          pipelineConfigs.delete(navigationId);
+        }
+      })();
+      
+      return;
     }
 
-    // Route navigation using deterministic logic
+    // For non-GOTO commands, run normal flow
+    const routeOptions: RouteOptions = {};
     const decision = routeNavigation(intent, context, routeOptions);
 
     // Build response
@@ -219,7 +277,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       return;
     }
 
-    // If decision is create_niche, return immediately and run pipeline asynchronously
+    // If decision is create_niche (e.g., GO_INSIDE), return immediately and run pipeline asynchronously
     let navigationId: string | undefined;
     let eventsUrl: string | undefined;
     
@@ -227,7 +285,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       navigationId = `nav-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       eventsUrl = `/api/mzoo/navigation/events/${navigationId}`;
       
-      // Store pipeline configuration for SSE initialization
+      // Store pipeline configuration for SSE initialization (GO_INSIDE uses 'navigation' pipeline)
       const steps = getStepsForPipeline('navigation');
       pipelineConfigs.set(navigationId, {
         pipelineType: 'navigation',
