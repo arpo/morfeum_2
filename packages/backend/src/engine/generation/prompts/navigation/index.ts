@@ -5,5 +5,5 @@
 
 export { intentClassifierPrompt } from './intentClassifier';
 export type { IntentClassifierRequest } from './intentClassifier';
-export { nicheImagePrompt } from './nicheImagePrompt';
+// Note: nicheImagePrompt removed - now using composeImagePrompt in createNodePipeline
 export { destinationAnalysisPrompt } from './destinationAnalysis';

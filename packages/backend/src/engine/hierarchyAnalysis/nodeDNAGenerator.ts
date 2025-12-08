@@ -45,6 +45,21 @@ export async function generateNodeDNA(
     parentContext
   );
 
+  // DEBUG: Log what we're sending to the LLM
+  console.log('\n╔══════════════════════════════════════════════════════════════════════╗');
+  console.log('║ DNA GENERATION - LLM INPUT                                           ║');
+  console.log('╚══════════════════════════════════════════════════════════════════════╝');
+  console.log('Node:', nodeName, '| Type:', nodeType);
+  console.log('Parent Context Present:', !!parentContext);
+  if (parentContext) {
+    console.log('Parent looks:', parentContext.looks?.substring(0, 100) + '...');
+    console.log('Parent materials:', parentContext.materials?.substring(0, 100) + '...');
+    console.log('Parent architectural_tone:', parentContext.architectural_tone);
+  }
+  console.log('\n--- FULL PROMPT (first 2000 chars) ---');
+  console.log(prompt.substring(0, 2000));
+  console.log('--- END PROMPT PREVIEW ---\n');
+
   // Call LLM (using fast model for text generation)
   const messages = [
     { role: 'system', content: prompt },
@@ -60,6 +75,14 @@ export async function generateNodeDNA(
   if (result.error || !result.data) {
     throw new Error(result.error || 'No DNA data returned from LLM');
   }
+
+  // DEBUG: Log what we got back from the LLM
+  console.log('\n╔══════════════════════════════════════════════════════════════════════╗');
+  console.log('║ DNA GENERATION - LLM OUTPUT                                          ║');
+  console.log('╚══════════════════════════════════════════════════════════════════════╝');
+  console.log('Raw response (first 2000 chars):');
+  console.log(result.data.text.substring(0, 2000));
+  console.log('--- END LLM OUTPUT PREVIEW ---\n');
 
   // Parse JSON response (now includes both DNA and structural fields)
   const parsed = parseJSON<{
@@ -82,16 +105,27 @@ export async function generateNodeDNA(
 
 /**
  * Extract parent context from parent node DNA
+ * Now passes ALL parent DNA for full CSS-like inheritance
  */
-export function extractParentContext(parentDNA?: NodeDNA): ParentContext {
-  if (!parentDNA) {
-    return {};
-  }
+export function extractParentContext(parentDNA?: NodeDNA): NodeDNA | undefined {
+  return parentDNA; // Pass everything, let LLM see all context
+}
 
-  return {
-    architectural_tone: parentDNA.architectural_tone,
-    cultural_tone: parentDNA.cultural_tone,
-    dominant: parentDNA.dominant,
-    mood: parentDNA.mood
-  };
+/**
+ * Merge child DNA with parent DNA (CSS-like inheritance)
+ * Any null/undefined fields in child will be filled from parent
+ */
+export function mergeDNAWithParent(childDNA: NodeDNA, parentDNA?: NodeDNA): NodeDNA {
+  if (!parentDNA) return childDNA;
+  
+  const merged = { ...childDNA };
+  
+  // Iterate through all parent keys and fill null/undefined values
+  for (const key of Object.keys(parentDNA) as (keyof NodeDNA)[]) {
+    if (merged[key] === null || merged[key] === undefined) {
+      (merged as any)[key] = parentDNA[key];
+    }
+  }
+  
+  return merged;
 }

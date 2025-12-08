@@ -181,11 +181,7 @@ export interface HierarchyAnalysisResult {
 
 /**
  * Parent context for DNA generation
- * Contains key attributes from parent node to ensure visual consistency
+ * Now accepts full NodeDNA for CSS-like inheritance
+ * Any null/undefined fields in child will be filled from parent
  */
-export interface ParentContext {
-  architectural_tone?: string;
-  cultural_tone?: string;
-  dominant?: string;
-  mood?: string;
-}
+export type ParentContext = Partial<NodeDNA>;

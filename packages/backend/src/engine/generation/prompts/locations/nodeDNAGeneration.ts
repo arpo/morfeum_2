@@ -1,15 +1,17 @@
 import { buildStructureSchemaString } from '../shared/dnaSchema';
+import type { ParentContext } from '../../../hierarchyAnalysis/types';
 
 /**
  * Node DNA Generation Prompt
  * 
  * Generates simplified, flat DNA structure for a single node
+ * Now accepts FULL parent DNA for CSS-like inheritance
  * 
  * @param originalPrompt - Original user input
  * @param nodeName - Name of the node to generate DNA for
  * @param nodeType - Type of node (host, region, location, niche, detail)
  * @param nodeDescription - Description of the node
- * @param parentContext - Optional parent context to inherit from
+ * @param parentContext - Full parent DNA to inherit from (CSS-like cascade)
  * @returns Prompt string for LLM
  */
 export function nodeDNAGeneration(
@@ -17,20 +19,50 @@ export function nodeDNAGeneration(
   nodeName: string,
   nodeType: string,
   nodeDescription: string,
-  parentContext?: {
-    architectural_tone?: string;
-    cultural_tone?: string;
-    dominant?: string;
-    mood?: string;
-  }
+  parentContext?: ParentContext
 ): string {
+  // Build comprehensive parent context section from ALL parent DNA fields
   const contextSection = parentContext 
     ? `
-PARENT CONTEXT (inherit and respect these attributes):
+PARENT CONTEXT (CSS-like inheritance - inherit ALL these attributes unless overriding):
+=== VISUAL STYLE ===
+- Looks: ${parentContext.looks || 'Not specified'}
+- Colors & Lighting: ${parentContext.colorsAndLighting || 'Not specified'}
+- Atmosphere: ${parentContext.atmosphere || 'Not specified'}
+- Materials: ${parentContext.materials || 'Not specified'}
+- Mood: ${parentContext.mood || 'Not specified'}
+
+=== SURFACES ===
+- Primary Surfaces: ${parentContext.primary_surfaces || 'Not specified'}
+- Secondary Surfaces: ${parentContext.secondary_surfaces || 'Not specified'}
+- Accent Features: ${parentContext.accent_features || 'Not specified'}
+
+=== COLORS ===
+- Dominant: ${parentContext.dominant || 'Not specified'}
+- Secondary: ${parentContext.secondary || 'Not specified'}
+- Accent: ${parentContext.accent || 'Not specified'}
+- Ambient Light: ${parentContext.ambient || 'Not specified'}
+
+=== CASCADING STYLE (MUST inherit unless distinctly different) ===
 - Architectural Tone: ${parentContext.architectural_tone || 'Not specified'}
 - Cultural Tone: ${parentContext.cultural_tone || 'Not specified'}
-- Dominant Color: ${parentContext.dominant || 'Not specified'}
-- Mood: ${parentContext.mood || 'Not specified'}
+- Materials Base: ${parentContext.materials_base || 'Not specified'}
+- Mood Baseline: ${parentContext.mood_baseline || 'Not specified'}
+- Palette Bias: ${parentContext.palette_bias || 'Not specified'}
+- Soundscape Base: ${parentContext.soundscape_base || 'Not specified'}
+- Flora Base: ${parentContext.flora_base || 'Not specified'}
+- Fauna Base: ${parentContext.fauna_base || 'Not specified'}
+
+CRITICAL MATERIAL INHERITANCE RULES:
+1. This child space MUST use the SAME MATERIALS as the parent. If parent has "weathered brick walls", child has weathered brick walls - NOT stainless steel.
+2. You are ADAPTING the parent's visual style to a new function - NOT replacing it with a generic style.
+3. A kitchen in a weathered brick building has WEATHERED BRICK walls, not sterile stainless steel.
+4. A bathroom in an industrial space has EXPOSED PIPES and CONCRETE, not white tile.
+5. The child's "looks", "materials", and "primary_surfaces" fields MUST incorporate the parent's materials.
+6. Only ADD function-specific elements (stoves, sinks) - do NOT REPLACE the parent's aesthetic.
+
+WRONG: Parent has "rough brickwork" → Child kitchen has "gleaming stainless steel walls"
+RIGHT: Parent has "rough brickwork" → Child kitchen has "rough brick walls with stainless steel prep counters"
 `
     : '';
 

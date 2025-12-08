@@ -9,10 +9,10 @@
  * - Structure stored separately from DNA at node level
  */
 
-import { generateNodeDNA, extractParentContext } from '../../hierarchyAnalysis/nodeDNAGenerator';
+import { generateNodeDNA, extractParentContext, mergeDNAWithParent } from '../../hierarchyAnalysis/nodeDNAGenerator';
 import { generateLocationImage } from '../../generation/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
-import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
+// Note: generateImagePromptForNode (legacy) removed - now using composeImagePrompt locally
 import type { NavigationDecision, NavigationContext, IntentResult, DestinationAnalysis, StructureAnalysis, Structure } from '../types';
 import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
 import { findParentLocationNode } from '../navigationHelpers';
@@ -167,7 +167,10 @@ export async function runCreateLocationNodePipeline(
     }
 
     // DNA already generated in parallel during space_analysis step
-    const nodeData = dnaResult;
+    // Now merge with parent DNA for CSS-like inheritance (fill null values from parent)
+    // Note: parentLocationDNA already declared above for image prompt
+    const mergedDNA = mergeDNAWithParent(dnaResult.dna, parentLocationDNA);
+    const nodeData = { ...dnaResult, dna: mergedDNA };
 
     // Step 4: Build complete node using shared builder, passing structural fields
     if (helper) {

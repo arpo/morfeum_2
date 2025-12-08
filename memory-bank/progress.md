@@ -25,7 +25,18 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **GOTO Image DNA Inheritance Fix** (Dec 8): Fixed niches not inheriting host visual style
+- **DNA CSS-Like Cascade & Material Inheritance** (Dec 8 - Later): Fixed child nodes ignoring parent materials
+  - Problem: Kitchen in Circuit Lounge (weathered brick) generated as "gleaming stainless steel"
+  - Root cause 1: `extractParentContext()` only passed 4 of 10 cascading fields to LLM
+  - Root cause 2: LLM saw parent context but ignored it, generating generic functional spaces
+  - Solution: 3-part fix:
+    1. `extractParentContext()` now returns FULL parent DNA (~23 fields)
+    2. Added `mergeDNAWithParent()` for CSS-like null-value filling
+    3. Added explicit "CRITICAL MATERIAL INHERITANCE RULES" in DNA generation prompt
+  - New prompt rules: "Child MUST use SAME MATERIALS as parent", WRONG/RIGHT examples
+  - Debug logging added to `nodeDNAGenerator.ts` for LLM input/output visibility
+  - Files: nodeDNAGenerator.ts, types.ts, nodeDNAGeneration.ts, createNodePipeline.ts
+- **GOTO Image DNA Inheritance Fix** (Dec 8 - Earlier): Fixed niches not inheriting host visual style
   - GOTO-created niches (e.g., "The Powder Room") now look like their parent host (Paris)
   - Updated `composeImagePrompt()` in `createNodePipeline.ts` to include parent DNA fields
   - Inherited fields: `architectural_tone`, `cultural_tone`, `palette_bias`, `mood_baseline`

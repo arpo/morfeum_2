@@ -2,7 +2,25 @@
 
 ## Recent Changes (2025-12-08)
 
-### GOTO Image DNA Inheritance Fix (Dec 8, 2025)
+### DNA CSS-Like Cascade & Material Inheritance Fix (Dec 8, 2025 - Later)
+- **Problem**: GOTO-created niches (e.g., kitchen in Circuit Lounge) generated generic materials (stainless steel) instead of inheriting parent's visual style (weathered brick, steel plating).
+- **Root Cause 1**: `extractParentContext()` only passed 4 fields to LLM, missing 6 cascading fields (materials_base, mood_baseline, palette_bias, soundscape_base, flora_base, fauna_base).
+- **Root Cause 2**: LLM saw parent context but ignored it - generated "kitchen = stainless steel" instead of applying parent's rough brickwork aesthetic.
+- **Solution (3 Parts)**:
+  1. **Full Parent Context**: `extractParentContext()` now returns entire parent DNA (all ~23 fields)
+  2. **CSS-like Merge**: Added `mergeDNAWithParent()` function to fill null values from parent after generation
+  3. **Stronger Prompt**: Added explicit material inheritance rules in `nodeDNAGeneration.ts`:
+     - "This child MUST use the SAME MATERIALS as the parent"
+     - "A kitchen in a weathered brick building has WEATHERED BRICK walls, not sterile stainless steel"
+     - Added WRONG/RIGHT examples in prompt
+- **Logging Added**: Debug logging in `nodeDNAGenerator.ts` shows LLM input/output for debugging
+- **Files Modified**:
+  - `packages/backend/src/engine/hierarchyAnalysis/nodeDNAGenerator.ts` - New `extractParentContext` (returns full DNA), new `mergeDNAWithParent`, added debug logging
+  - `packages/backend/src/engine/hierarchyAnalysis/types.ts` - `ParentContext` now accepts `Partial<NodeDNA>`
+  - `packages/backend/src/engine/generation/prompts/locations/nodeDNAGeneration.ts` - Shows full parent DNA context, added CRITICAL MATERIAL INHERITANCE RULES
+  - `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Calls `mergeDNAWithParent` after DNA generation
+
+### GOTO Image DNA Inheritance Fix (Dec 8, 2025 - Earlier)
 - **Problem**: GOTO-created niches (e.g., "The Powder Room") didn't look like their parent host (Paris). Image prompt was generic, missing Parisian architectural style.
 - **Root Cause**: `composeImagePrompt()` in `createNodePipeline.ts` only used newly generated DNA, NOT inherited ancestor DNA fields.
 - **Solution**: Updated `composeImagePrompt()` to include parent DNA fields:
