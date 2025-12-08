@@ -25,6 +25,16 @@
 - **Code Organization**: Proper feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **GOTO Image DNA Inheritance Fix** (Dec 8): Fixed niches not inheriting host visual style
+  - GOTO-created niches (e.g., "The Powder Room") now look like their parent host (Paris)
+  - Updated `composeImagePrompt()` in `createNodePipeline.ts` to include parent DNA fields
+  - Inherited fields: `architectural_tone`, `cultural_tone`, `palette_bias`, `mood_baseline`
+  - Result: Parisian restroom now looks Parisian (Haussmannian style, warm beige tones)
+- **createNode Code Path Updates** (Dec 8): Fixed slash commands saving to worldTrees
+  - Updated `buildNodeFromDNA()` to use new format with `spaceType` and `structure` object
+  - Updated `create-node` route to save nodes to `nodes` collection and `worldTrees`
+  - Host nodes added as root entries, child nodes added to parent's `children` array
+  - Migration script created for existing nodes: `migrateToStructure.ts`
 - **GOTO Command & Fixes** (Dec 5): Freeform navigation with progress bar visibility
   - `/GOTO the kitchen` - Navigate to any place within the current location
   - LLM-powered destination analysis synthesizes user prompt with parent context

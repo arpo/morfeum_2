@@ -31,17 +31,26 @@ export const PIPELINE_STEPS = {
   ],
   
   // Navigation intent pipeline (generic - GO_INSIDE and similar)
+  // Uses the new unified space analysis (Structure + DNA in parallel)
   navigation: [
-    { id: 'prompt_generation', name: 'Planning Scene', duration: 2000 },
+    { id: 'space_analysis', name: 'Analyzing Space', duration: 3000 },     // Structure + DNA in parallel
+    { id: 'image_prompt', name: 'Composing Scene', duration: 1000 },       // Uses pre-computed data
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
-    { id: 'dna_generation', name: 'Creating DNA', duration: 6000 },
     { id: 'node_building', name: 'Building Space', duration: 1000 }
   ],
   
-  // GOTO pipeline - includes destination analysis as first step
+  // GOTO pipeline - same as navigation (now unified)
+  // Kept separate for backward compatibility but uses same steps
   navigationGoto: [
-    { id: 'destination_analysis', name: 'Analyzing Destination', duration: 3000 },
-    { id: 'prompt_generation', name: 'Planning Scene', duration: 500 },  // Uses pre-computed description
+    { id: 'space_analysis', name: 'Analyzing Space', duration: 3000 },     // Structure + DNA in parallel
+    { id: 'image_prompt', name: 'Composing Scene', duration: 1000 },       // Uses pre-computed data
+    { id: 'image_generation', name: 'Generating Image', duration: 2000 },
+    { id: 'node_building', name: 'Building Space', duration: 1000 }
+  ],
+  
+  // Legacy navigation pipeline (for backward compatibility during transition)
+  navigationLegacy: [
+    { id: 'prompt_generation', name: 'Planning Scene', duration: 2000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'dna_generation', name: 'Creating DNA', duration: 6000 },
     { id: 'node_building', name: 'Building Space', duration: 1000 }

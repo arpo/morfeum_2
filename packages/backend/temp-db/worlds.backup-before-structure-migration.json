@@ -1,0 +1,1673 @@
+{
+  "nodes": {
+    "loc-1764931621292-af8p71vil": {
+      "id": "loc-1764931621292-af8p71vil",
+      "type": "host",
+      "name": "Carnival Grounds",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A temporary, highly decorated environment designed for maximum visual impact, featuring an eclectic mix of structures, rides, and tents, all united by a festive, often exaggerated aesthetic.",
+        "colorsAndLighting": "Dominated by bright, saturated colors and a dynamic interplay of artificial lights, from steady illumination to flashing and twinkling effects, creating a lively and engaging visual landscape.",
+        "atmosphere": "A heady mix of sweet and savory food scents, the distant rumble of machinery, bursts of music, and the constant hum of human activity. It's charged with an electric sense of anticipation and fun.",
+        "materials": "A practical yet visually driven palette of painted wood, metal sheeting, canvas, plastics, and fabrics, chosen for their affordability, ease of assembly, and visual vibrancy.",
+        "mood": "Overwhelmingly joyful, exciting, and slightly surreal, designed to induce a sense of wonder, escapism, and lighthearted amusement.",
+        "sounds": "A rich tapestry of carnival music, ride mechanics, game sounds, crowd noise, and periodic announcements, creating an energetic and immersive sonic environment.",
+        "spatialLayout": "Organized into distinct zones for rides, games, food, and shows, connected by open but busy pathways. There's a deliberate design to guide visitors and create points of interest.",
+        "primary_surfaces": "Painted wood and metal sheeting",
+        "secondary_surfaces": "Canvas and plastic sheeting",
+        "accent_features": "Elaborate signage, themed decorations, and dynamic lighting installations.",
+        "dominant": "A broad range of vibrant primary colors, with a tendency towards candy and jewel tones.",
+        "secondary": "Bold, contrasting colors used for graphics and patterns.",
+        "accent": "Bright, often neon accents to highlight features and draw attention.",
+        "ambient": "Warm, lively, and saturated, with color temperatures varying from bright daylight to the vibrant glow of artificial lighting.",
+        "genre": "Carnivalesque",
+        "architectural_tone": "Exaggerated, theatrical, and functional-temporary. Structures are designed to be eye-catching and immersive rather than permanent or architecturally conventional.",
+        "cultural_tone": "A culture of spectacle, transient joy, and shared amusement. It's a space for communal escapism and embracing the extraordinary.",
+        "materials_base": "Visually impactful, affordable, and often temporary materials that prioritize spectacle over durability.",
+        "mood_baseline": "Unrelenting festivity, excitement, and a touch of escapism.",
+        "palette_bias": "Bold, saturated colors intended to be highly visible and evoke a sense of fun and energy.",
+        "soundscape_base": "Energetic, attention-grabbing, and immersive sound environment designed to enhance the festive atmosphere.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A sprawling, vibrant temporary settlement dedicated to spectacle and amusement. It's a place where the mundane is suspended, and the extraordinary is everyday, offering escape and sensory delight.",
+      "navigableElements": [
+        "Main thoroughfares",
+        "Attraction zones",
+        "Service areas",
+        "Perimeter fencing"
+      ],
+      "dominantElements": [
+        "Central Ferris wheel or big top",
+        "Themed zones"
+      ],
+      "uniqueIdentifiers": [
+        "The overarching smell of spun sugar and fried dough",
+        "The distant, unifying hum of generator power"
+      ],
+      "searchDesc": "A vibrant, sprawling carnival grounds focused on spectacle, amusement, and sensory delight.",
+      "slug": "carnival-grounds",
+      "primaryMedia": "media-1764934052567-5i5519cj9"
+    },
+    "e7d87816-3190-4860-b279-3facb1ef12f9": {
+      "id": "e7d87816-3190-4860-b279-3facb1ef12f9",
+      "type": "region",
+      "name": "Midway",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A bustling, visually dense street with an eclectic mix of temporary structures, vibrant signage, and constant movement of people and attractions.",
+        "colorsAndLighting": "A kaleidoscope of saturated colors from banners, lights, and painted facades, with uneven and often flashing illumination from strings of bulbs and spotlights.",
+        "atmosphere": "Thick with the smell of popcorn, sugar, and novelty foods, punctuated by the din of music, laughter, and excited shouts. A feeling of joyous, slightly overwhelming stimulation.",
+        "materials": "Predominantly painted wood, corrugated metal, canvas, and cheap plastic, often showing wear but maintained for a festive appearance.",
+        "mood": "Exuberant, energetic, and overwhelmingly festive, designed to excite and entice with a sense of immediate gratification and playful chaos.",
+        "sounds": "A cacophony of competing carnival music, game sounds, barkers' calls, excited chatter, and distant screams from rides.",
+        "spatialLayout": "Dense and somewhat labyrinthine, with narrow pathways between tightly packed stalls and attractions, encouraging exploration and chance encounters.",
+        "primary_surfaces": "Painted wood",
+        "secondary_surfaces": "Corrugated metal",
+        "accent_features": "Flickering neon signs, glitter, oversized props, and spinning lights.",
+        "dominant": "Bright, saturated colors like candy-apple red and electric blue.",
+        "secondary": "Sharp, contrasting colors used in patterns and signage.",
+        "accent": "Neon yellow and lime green highlights on edges and details.",
+        "ambient": "Warm, lively, and often speckled with the varied hues of the attractions.",
+        "genre": null,
+        "architectural_tone": "Carnivalesque, temporary, and theatrical structures with a focus on visual appeal over structural integrity.",
+        "cultural_tone": "A culture of transient amusement, playful deception, and sensory indulgence, centered around immediate entertainment and spectacle.",
+        "materials_base": "Cheap, cheerful, and visually impactful carnival materials designed for temporary use.",
+        "mood_baseline": "High-energy excitement and playful disorientation.",
+        "palette_bias": "Bold primary and neon colors designed for maximum visual impact.",
+        "soundscape_base": "Layered, exciting, and attention-grabbing sound environment.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "The heart of the carnival, this vibrant and chaotic thoroughfare buzzes with energy. A sensory overload of sights, sounds, and smells, it's where the excitement truly begins.",
+      "navigableElements": [
+        "Game stalls",
+        "Food vendors",
+        "Small performance stages",
+        "Crowd pathways"
+      ],
+      "dominantElements": [
+        "Large, colorful game booths",
+        "Brightly lit food stalls"
+      ],
+      "uniqueIdentifiers": [
+        "Distinctive carnival barker calls",
+        "Overlapping music from various attractions"
+      ],
+      "searchDesc": "The chaotic, vibrant midway of a carnival, filled with games, food, and excitement.",
+      "slug": "midway",
+      "primaryMedia": "media-1764934040975-qkdbttyhl"
+    },
+    "fcc91232-8a5f-4354-b255-b1619fd11f70": {
+      "id": "fcc91232-8a5f-4354-b255-b1619fd11f70",
+      "type": "location",
+      "name": "The Fun House",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior is a jumble of mismatched shapes and angles, with walls that seem to tilt and bulge. Exaggerated architectural features like oversized doorknobs and crooked window frames add to the unsettling charm. The scale feels intentionally distorted, playing with perception.",
+        "colorsAndLighting": "Vibrant, clashing colors dominate, with neon accents and patchy paintwork. The lighting is uneven, with flickering bulbs and hidden spotlights creating an unpredictable glow.",
+        "atmosphere": "The air crackles with an unseen energy, carrying faint, distorted carnival music and distant laughter. A slight warmth emanates from the structure, coupled with a subtle, sweet, and slightly artificial scent. There's a constant, almost imperceptible hum.",
+        "materials": "The primary materials are brightly painted wood and corrugated metal, showing signs of wear and tear with chipped paint and scuffs. Sections might be covered in faux-velvet or glittery vinyl, adding to the theatricality.",
+        "mood": "Playful yet unsettling, evoking a sense of childlike wonder mixed with a hint of mischievous unease. It promises fun, but also a delightful challenge to one's senses.",
+        "sounds": "Distorted carnival music, distant laughter, creaking wood, faint metallic clangs, popping sounds",
+        "spatialLayout": "The facade is an irregular, multi-planar composition, projecting outwards in odd directions. There are no clear geometric divisions, creating a visually confusing yet inviting entrance.",
+        "primary_surfaces": "Warped painted wood, peeling colorful siding",
+        "secondary_surfaces": "Corrugated metal, glitter-infused vinyl, cracked plaster",
+        "accent_features": "Spinning eyeball, bulging windows, candy-striped trim, shifting signage",
+        "dominant": "Candy-apple red with large coverage",
+        "secondary": "Electric blue in sharp, angular patterns",
+        "accent": "Neon yellow and lime green on trim and unique features",
+        "ambient": "Flickering and uneven, with pockets of brightness and shadow",
+        "structure": {
+          "form": "irregular",
+          "roofType": "arched",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "arched-windows",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Carnivalesque surrealism with distorted Victorian elements",
+        "cultural_tone": "A place for amusement and sensory disorientation, frequented by thrill-seekers and families looking for a unique experience.",
+        "materials_base": "cheap and cheerful carnival materials",
+        "mood_baseline": "energetic, chaotic, playful",
+        "palette_bias": "Primary and neon colors",
+        "soundscape_base": "distorted and amplified carnival sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "An exterior facade of a fun house where anything can happen, promising disorienting and unpredictable experiences within.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A warped, brightly painted door that seems to breathe."
+        },
+        {
+          "type": "archway",
+          "position": "left",
+          "description": "An oversized, grinning mouth archway."
+        },
+        {
+          "type": "archway",
+          "position": "right",
+          "description": "A swirling vortex archway."
+        }
+      ],
+      "dominantElements": [
+        "Twisted, colorful facade",
+        "Exaggerated architectural features",
+        "Abrupt changes in building planes",
+        "Playful, unsettling signage"
+      ],
+      "uniqueIdentifiers": [
+        "A giant, spinning eyeball decoration",
+        "Windows that appear to be bulging outward",
+        "A wobbly, candy-striped roofline",
+        "A sign that changes text seemingly at random"
+      ],
+      "searchDesc": "Exterior of a disorienting and unpredictable Fun House on the Carnival Midway.",
+      "slug": "the-fun-house",
+      "primaryMedia": "media-1764931641590-1nwsndv2p"
+    },
+    "niche-1764931670942-uz99rehr1": {
+      "id": "niche-1764931670942-uz99rehr1",
+      "type": "niche",
+      "name": "interior of The Fun House",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a disorienting chamber where warped, brightly painted wood walls, peeling to reveal corrugated metal, are adorned with clashing electric blue zig-zags and neon yellow/lime green candy-striped trim. An oversized, crooked pink doorframe is asymmetrically placed, while the foreground features cracked plaster with scattered glittering vinyl scraps under a flickering spotlight.",
+        "colorsAndLighting": "Dominant candy-apple red covers much of the warped wood walls, contrasted by vibrant electric blue zig-zags and neon yellow/lime green trim. Lighting is unpredictable, with a flickering spotlight on the floor and a bare bulb overhead casting deep shadows.",
+        "atmosphere": "The air is thick with a sweet, artificial scent, punctuated by the faint, distorted strains of carnival music. The overall sensory experience is one of playful disorientation, designed to amuse and slightly unnerve.",
+        "materials": "Warped, painted wood with peeling sections revealing corrugated metal form the walls. The floor is cracked plaster, and the ceiling is taut, patched canvas. Glittering vinyl scraps are scattered on the floor.",
+        "mood": "The mood is a blend of childlike wonder and mischievous unease, promising fun but challenging the senses with its surreal and distorted environment.",
+        "sounds": "Faint, distorted carnival music, unsettling ambiance.",
+        "spatialLayout": "The chamber feels labyrinthine and disorienting, with an asymmetrically placed doorframe suggesting further passages. The low, uneven ceiling creates pockets of deep shadow.",
+        "primary_surfaces": "Warped, painted wood (walls), cracked plaster (floor), patched canvas (ceiling)",
+        "secondary_surfaces": "Corrugated metal (exposed beneath peeling paint), glittering vinyl scraps",
+        "accent_features": "Electric blue zig-zag patterns, neon yellow and lime green candy-striped trim, garish pink crooked doorframe, spinning eyeball motif, flickering spotlight.",
+        "dominant": "Candy-apple red",
+        "secondary": "Electric blue",
+        "accent": "Neon yellow, lime green, garish pink",
+        "ambient": "Irregular and unpredictable",
+        "structure": {
+          "form": "irregular",
+          "roofType": "arched",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "arched-windows",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764931670937-o2lizk3gx",
+      "description": "A disorienting interior chamber within a fun house, characterized by warped, brightly painted walls and a playful yet unsettling atmosphere.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "asymmetrically in the midground",
+          "description": "An oversized, crooked doorframe painted a garish pink, hinting at further labyrinthine passages."
+        },
+        {
+          "type": "window",
+          "position": "on the right",
+          "description": "A bulging window frame with an incorporated spinning eyeball motif."
+        }
+      ],
+      "dominantElements": [
+        "warped, brightly painted wood walls",
+        "oversized, crooked doorframe",
+        "cracked plaster floor",
+        "patched canvas ceiling",
+        "spinning eyeball window motif"
+      ],
+      "uniqueIdentifiers": [
+        "warped candy-apple red walls with peeling sections",
+        "electric blue zig-zag patterns",
+        "neon yellow and lime green candy-striped trim",
+        "garish pink crooked doorframe",
+        "spinning eyeball window"
+      ],
+      "searchDesc": "Disorienting fun house interior: warped red walls, neon trim, crooked pink door, eyeball window.",
+      "slug": "interior-of-the-fun-house"
+    },
+    "niche-1764933817343-5bbumbwzb": {
+      "id": "niche-1764933817343-5bbumbwzb",
+      "type": "niche",
+      "name": "The Roller Coaster Cavern",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This vast, subterranean chamber is dominated by a colossal, rickety roller coaster whose candy-apple red metal tracks twist like a tangled serpent through the dim light. The rough-hewn walls are made of familiar warped, painted wood with peeling sections, stained darker and slick with moisture.",
+        "colorsAndLighting": "Dominant candy-apple red of the roller coaster tracks contrasts with the dark, damp hues of the walls. Faint, flickering carnival lights sporadically illuminate the space, casting shifting shadows and highlighting scattered glittering vinyl scraps.",
+        "atmosphere": "The air is heavy with the scent of damp earth and residual moisture, a palpable sense of hidden mechanics and decay. Distorted carnival music echoes, creating a playful yet unsettling auditory environment.",
+        "materials": "The primary materials are warped, peeling painted wood for the walls, and slick, dark, moisture-stained surfaces. The floor transitions from cracked plaster to uneven, packed earth. The roller coaster tracks are made of aged, candy-apple red metal, and glittering vinyl scraps are scattered across the ground.",
+        "mood": "The mood is a disorienting blend of childlike wonder and mischievous unease, promising fun but challenging the senses with its hidden, mechanical heart.",
+        "sounds": "Distorted carnival music, echoing emptiness, creaking metal, dripping moisture.",
+        "spatialLayout": "A vast, subterranean chamber with rough-hewn walls and a floor that gives way to packed earth. The colossal roller coaster dominates the space, its tracks creating a complex, winding layout.",
+        "primary_surfaces": "Warped painted wood, packed earth, cracked plaster.",
+        "secondary_surfaces": "Candy-apple red metal tracks, damp stained wood.",
+        "accent_features": "Glittering vinyl scraps scattered like fallen stars, flickering carnival lights.",
+        "dominant": "Candy-apple red (roller coaster tracks)",
+        "secondary": "Dark, damp hues (walls, floor)",
+        "accent": "Flickering carnival light gold/yellow (illumination)",
+        "ambient": "Cool",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764933817342-prfi96ewp",
+      "description": "A subterranean chamber housing a colossal, rickety roller coaster, beneath the main attraction.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "entrance from above",
+          "description": "Passage descending from The Fun House"
+        }
+      ],
+      "dominantElements": [
+        "Colossal, rickety roller coaster",
+        "Twisted candy-apple red metal tracks",
+        "Warped, peeling wood walls",
+        "Flickering carnival lights"
+      ],
+      "uniqueIdentifiers": [
+        "Roller coaster in subterranean cavern",
+        "Candy-apple red tracks snaking through darkness",
+        "Peeling wood stained with moisture",
+        "Glittering vinyl scraps on floor"
+      ],
+      "searchDesc": "Subterranean roller coaster cavern with peeling wood and red tracks, playful yet unnerving.",
+      "slug": "the-roller-coaster-cavern"
+    },
+    "niche-1764933838789-3puenfr1b": {
+      "id": "niche-1764933838789-3puenfr1b",
+      "type": "niche",
+      "name": "The Grimy Galley",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a deeply unsettling kitchen space, filled with warped and peeling painted wood walls stained with moisture. Cracked plaster suggests decay, while the packed earth underfoot adds to its primal feel. Slick, dark surfaces masquerade as countertops, perpetually damp.",
+        "colorsAndLighting": "Dominated by the pervasive candy-apple red of aged metal, contrasting with the muted browns and greys of the damp wood and plaster. The lighting is dim and likely uneven, casting unsettling shadows.",
+        "atmosphere": "The air is heavy and thick with the scent of damp earth and a phantom aroma of decay. A palpable sense of disquiet hangs in the air, amplified by the pervasive, distorted carnival music that seems to emanate from the very walls.",
+        "materials": "The primary materials are warped, peeling painted wood, cracked plaster, and packed earth. Aged, candy-apple red metal forms crude fixtures, showing signs of wear and rust. Vinyl scraps are scattered haphazardly.",
+        "mood": "Playful yet deeply unsettling, this space evokes a childlike wonder tainted by a sense of unease, promising a delightful challenge to one's senses.",
+        "sounds": "Distorted carnival music, creaking wood, dripping moisture, phantom aromas.",
+        "spatialLayout": "A functional kitchen space, likely enclosed but with an organic, unsettling feel. Its dimensions are difficult to ascertain due to the disorienting nature of the 'Fun House' aesthetic, but it feels cramped and oppressive.",
+        "primary_surfaces": "Warped, peeling painted wood walls; cracked plaster; packed earth floor.",
+        "secondary_surfaces": "Slick, dark, damp surfaces (countertops); aged candy-apple red metal (shelving, stove frame).",
+        "accent_features": "Scattered vinyl scraps, the overall damp sheen of surfaces.",
+        "dominant": "Candy-apple red (metal fixtures, hints on wood)",
+        "secondary": "Muted browns and greys (wood, plaster, earth)",
+        "accent": "Dark, wet sheen on surfaces.",
+        "ambient": "Neutral, likely dim and oppressive.",
+        "structure": {
+          "form": "irregular",
+          "roofType": "null",
+          "scale": "small",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764933838787-4tcnefc62",
+      "description": "A functional but unsettling kitchen space within the Fun House, characterized by damp, warped wood, cracked plaster, and aged red metal fixtures.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "implied entrance",
+          "description": "Emerges from the dizzying twists of the Roller Coaster Cavern"
+        }
+      ],
+      "dominantElements": [
+        "Warped, peeling painted wood walls",
+        "Cracked plaster",
+        "Packed earth floor",
+        "Slick, dark countertops",
+        "Aged candy-apple red metal shelving and stove frame"
+      ],
+      "uniqueIdentifiers": [
+        "Warped, peeling painted wood",
+        "Candy-apple red metal fixtures",
+        "Perpetually damp surfaces",
+        "Phantom aroma of decay"
+      ],
+      "searchDesc": "Grimy, unsettling Fun House galley with warped wood, red metal, and damp earth.",
+      "slug": "the-grimy-galley"
+    },
+    "niche-1764933886844-ru3jichei": {
+      "id": "niche-1764933886844-ru3jichei",
+      "type": "niche",
+      "name": "The Dino Perch",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A crude, warped wooden balcony juts out precariously, its bent metal railings a rusted candy-apple red. Cracked plaster hints at its unstable construction. The scene is dominated by a swirling, mist-shrouded vista of a prehistoric jungle where colossal, alien dinosaur forms lumber.",
+        "colorsAndLighting": "Dominant candy-apple red on the railings, heavily flecked with rust, contrasts with the weathered wood and cracked plaster. The lighting is likely diffused and atmospheric, filtered through the mist.",
+        "atmosphere": "The air is thick with the damp, earthy scent of a jungle mingled with phantom decay. A sense of unease permeates the space, amplified by the distant, distorted carnival music and the roars of unseen beasts.",
+        "materials": "The primary materials are warped wood, heavily rusted candy-apple red metal, and cracked plaster, all suggesting age and disrepair. The underlying structure is implied to be fragile.",
+        "mood": "Playful yet unsettling, this perch evokes a childlike sense of wonder at the alien landscape, tinged with a mischievous unease about its own precariousness.",
+        "sounds": "Distant distorted carnival music, roaring colossal beasts, damp earthy jungle ambiance, phantom decay whispers.",
+        "spatialLayout": "A narrow, extended balcony structure attached to an exterior. Its form is irregular due to warping, with an open front facing a vast, obscured vista. Entry points are implied to be from 'The Fun House'.",
+        "primary_surfaces": "wood, metal, plaster",
+        "secondary_surfaces": "none",
+        "accent_features": "bent, candy-apple red metal railings flecked with rust",
+        "dominant": "candy-apple red",
+        "secondary": "damp earth tones",
+        "accent": "rust flecks",
+        "ambient": "neutral",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764933886842-33l4l7xaz",
+      "description": "A warped wooden balcony on 'The Fun House', featuring rusty candy-apple red metal railings and cracked plaster, overlooking a mist-shrouded prehistoric jungle with alien dinosaurs.",
+      "navigableElements": [],
+      "dominantElements": [
+        "warped wooden balcony",
+        "bent, rusty candy-apple red metal railings",
+        "cracked plaster",
+        "mist-shrouded prehistoric jungle vista",
+        "colossal alien dinosaur forms"
+      ],
+      "uniqueIdentifiers": [
+        "precariously perched balcony",
+        "candy-apple red rusted railings",
+        "view of distorted prehistoric jungle",
+        "alien dinosaur shapes"
+      ],
+      "searchDesc": "Warped balcony on 'The Fun House' with rusted red railings, overlooking a misty prehistoric jungle with alien dinosaurs.",
+      "slug": "the-dino-perch"
+    },
+    "niche-1764933925192-ghmtm7uh8": {
+      "id": "niche-1764933925192-ghmtm7uh8",
+      "type": "niche",
+      "name": "The Crimson Quaff",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The bar is constructed from heavily warped wood and accented with candy-apple red rusted metal. Cracked plaster walls reveal darker layers beneath, absorbing the dim, flickering light from lamps made of dented tin toys. Rickety stools are scattered around the scuffed bar.",
+        "colorsAndLighting": "Dominant candy-apple red contrasts with the dim, flickering, warm light. Deep shadows pool in the corners, punctuated by the eerie glow from toy lamps.",
+        "atmosphere": "The air is thick with a cloying sweetness of spilled syrups and cheap perfume, layered over jungle damp and decay. Distorted carnival music, glass clinking, and hushed whispers create a disorienting ambiance.",
+        "materials": "Warped, sticky wood forms the bar, complemented by heavily rusted, candy-apple red metal. Cracked, peeling plaster walls and dented tin toy lamp casings add to the decrepit aesthetic.",
+        "mood": "Playful yet unsettling, a sense of wonder tinged with unease and the thrill of decrepitude.",
+        "sounds": "Mournful carnival music, clinking glasses, whispered conversations.",
+        "spatialLayout": "A medium-sized, irregular space focused on a central bar. Entryways are implied by the flow of the description, likely from an upper perch.",
+        "primary_surfaces": "cracked plaster",
+        "secondary_surfaces": "warped wood, rusted metal",
+        "accent_features": "repurposed tin toy lamps",
+        "dominant": "candy-apple red",
+        "secondary": "dark, peeling plaster",
+        "accent": "sticky residue brown",
+        "ambient": "warm",
+        "structure": {
+          "form": "irregular",
+          "roofType": "vaulted",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764933925190-8i9n7b3ox",
+      "description": "A decrepit carnival bar with warped wood, rusted metal, and cracked plaster, lit by repurposed toy lamps.",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "main entrance",
+          "description": "an archway leading into the bar"
+        }
+      ],
+      "dominantElements": [
+        "bar counter",
+        "rickety stools",
+        "cracked plaster walls"
+      ],
+      "uniqueIdentifiers": [
+        "repurposed tin toy lamps",
+        "candy-apple red rusted metal",
+        "warped wood bar"
+      ],
+      "searchDesc": "Decrepit carnival bar with warped wood, rusted metal, and toy lamps.",
+      "slug": "the-crimson-quaff"
+    },
+    "niche-1764939692946-ytgzzkjtu": {
+      "id": "niche-1764939692946-ytgzzkjtu",
+      "type": "niche",
+      "name": "The Giggling Grotto",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The space is enclosed by warped, painted wood walls with peeling sections that reveal corrugated metal underneath. A cracked plaster floor transitions to a shallow, shimmering pool. A patched canvas ceiling overhead emits distorted carnival lights.",
+        "colorsAndLighting": "Distorted carnival lights cast a shimmering, playful glow across the pool. The dominant color palette is likely a mix of the candy-apple red inherited from the parent, offset by the bright colors of the cushions and the muted tones of the wood and plaster.",
+        "atmosphere": "An atmosphere of bubbly, disorienting calm prevails, mingling a subdued sweet, artificial scent with the faint, chlorine-tinged aroma of the pool. The air feels light and perhaps slightly humid from the pool.",
+        "materials": "The primary materials are warped, painted wood with peeling sections, cracked plaster, and a taut, patched canvas for the ceiling. Lounge areas are formed from brightly colored, slightly deflated vinyl cushions, glistening with scattered glitter.",
+        "mood": "This niche evokes a playful yet unsettling mood, a sense of childlike wonder tinged with mischievous unease, offering a delightful challenge to the senses.",
+        "sounds": "Water lapping, distant carnival music, muffled laughter, faint chlorine aroma.",
+        "spatialLayout": "An enclosed pool and relaxation area, likely rectangular or organic in its overall shape due to the warped walls. The focal point is the shimmering pool, with lounge areas arranged around its edge.",
+        "primary_surfaces": "warped painted wood, cracked plaster, patched canvas",
+        "secondary_surfaces": "vinyl cushions, corrugated metal",
+        "accent_features": "glittering vinyl cushions, distorted carnival lights, shimmering pool surface",
+        "dominant": "Candy-apple red (inherited, with accents from cushion colors)",
+        "secondary": "Muted wood tones, off-white plaster",
+        "accent": "Brightly colored (various), glitter",
+        "ambient": "Warm (from carnival lights)",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764939692942-4c8eqh1ck",
+      "description": "A surprisingly tranquil, yet askew, pool and relaxation area within The Fun House, characterized by warped wood, corrugated metal glimpses, a cracked plaster floor, a shimmering pool, and brightly colored vinyl lounge cushions.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "beyond a warping doorway",
+          "description": "The entrance from The Fun House"
+        }
+      ],
+      "dominantElements": [
+        "shimmering pool",
+        "warped wood walls",
+        "brightly colored vinyl cushions"
+      ],
+      "uniqueIdentifiers": [
+        "warping doorway entrance",
+        "giggling grotto name",
+        "corrugated metal glimpses",
+        "cracked plaster floor",
+        "deflated vinyl cushions",
+        "artificial sweet scent with chlorine undertones"
+      ],
+      "searchDesc": "Tranquil yet askew pool area with warped wood, shimmering water, and vinyl loungers.",
+      "slug": "the-giggling-grotto"
+    },
+    "loc-1764940486596-hpstamasu": {
+      "id": "loc-1764940486596-hpstamasu",
+      "type": "host",
+      "name": "London",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A complex tapestry of historical architecture from various eras, interspersed with modern skyscrapers and distinct neighborhood aesthetics. A sense of grandeur and layered history is prevalent.",
+        "colorsAndLighting": "A generally muted palette, dominated by greys, browns, and brick tones, punctuated by the vibrant lights of modern commerce and entertainment districts. Natural light is often diffused by urban density.",
+        "atmosphere": "A dynamic, fast-paced urban environment with a palpable sense of history and constant evolution. Can range from formal and grand to energetic and gritty depending on the district.",
+        "materials": "Predominantly stone, brick, steel, and glass. A strong emphasis on durable, time-tested materials alongside contemporary industrial ones.",
+        "mood": "Ambitious, sophisticated, and multifaceted. A sense of constant movement and opportunity.",
+        "sounds": "A constant symphony of urban life: traffic, public transport, distant sirens, chatter in numerous languages. Generally a robust urban hum.",
+        "spatialLayout": "Varies dramatically, from grand, wide boulevards to intricate, winding ancient streets. A dense but organized urban fabric.",
+        "primary_surfaces": [
+          "Stone",
+          "Brick",
+          "Concrete"
+        ],
+        "secondary_surfaces": [
+          "Glass",
+          "Steel",
+          "Painted Metal"
+        ],
+        "accent_features": [
+          "Historical Statues",
+          "Ornate Lampposts",
+          "Gargoyles",
+          "Modern Digital Displays"
+        ],
+        "dominant": "Greys and muted earth tones",
+        "secondary": "Reds (buses, phone boxes) and blues (sky, some signage)",
+        "accent": "Metallic finishes and diverse artificial lighting",
+        "ambient": "Often overcast or diffused daylight, with vibrant artificial light at night",
+        "genre": "Urban Metropole",
+        "architectural_tone": "Eclectic, blending historical styles with modernism",
+        "cultural_tone": "Diverse, international, traditional yet progressive",
+        "materials_base": "Classic and industrial, enduring and functional",
+        "mood_baseline": "Controlled ambition",
+        "palette_bias": "Subdued and sophisticated, with vibrant accents",
+        "soundscape_base": "Pervasive urban hum",
+        "flora_base": "Primarily urban park flora and street trees",
+        "fauna_base": "Urban wildlife (pigeons, foxes, rodents)"
+      },
+      "description": "The historic capital of England, a sprawling metropolis of diverse districts and subcultures. A global city where tradition meets innovation, offering a vast array of experiences.",
+      "navigableElements": [
+        "Tube Stations",
+        "Major Thoroughfares",
+        "Parks"
+      ],
+      "dominantElements": [
+        "Iconic Landmarks",
+        "Historic Architecture",
+        "Modern Skyscrapers"
+      ],
+      "uniqueIdentifiers": [
+        "Distinctive Neighborhood Characters",
+        "Red Double-Decker Buses",
+        "Black Cabs"
+      ],
+      "searchDesc": "London: A global metropolis blending history with modernity, offering diverse districts and vibrant subcultures.",
+      "slug": "london"
+    },
+    "8aa566cd-a2a6-4529-9578-601616804fd8": {
+      "id": "8aa566cd-a2a6-4529-9578-601616804fd8",
+      "type": "region",
+      "name": "Camden",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A visually striking patchwork of diverse architectural styles, from Victorian to modern, often adorned with vibrant street art and eclectic signage. The area feels lived-in and dynamic.",
+        "colorsAndLighting": "A varied palette with strong contrasts; vibrant market stalls and neon signs juxtapose with the often muted tones of older buildings. Lighting is functional but can be dramatic in entertainment areas.",
+        "atmosphere": "Energetic and bustling, with a constant hum of activity. The air is thick with the scent of street food and diverse cultures mingling. Can feel slightly gritty but undeniably alive.",
+        "materials": "A mix of weathered brick, corrugated iron, painted wood, and modern plastics. Industrial elements are common, especially in market structures and older venues.",
+        "mood": "Exciting, rebellious, and open-minded. A sense of freedom and individuality permeates the district.",
+        "sounds": "A cacophony of street sounds, music spilling from venues, vendor calls, and diverse languages. Lively and sometimes overwhelming.",
+        "spatialLayout": "Dense and somewhat chaotic, with narrow market alleys opening into wider streets. A mix of open public spaces and tightly packed commercial areas.",
+        "primary_surfaces": [
+          "Brick",
+          "Painted Wood",
+          "Metal"
+        ],
+        "secondary_surfaces": [
+          "Concrete",
+          "Glass",
+          "Corrugated Iron"
+        ],
+        "accent_features": [
+          "Street Art",
+          "Neon Signs",
+          "Market Stalls",
+          "Chalkboard Menus"
+        ],
+        "dominant": "Earthy tones (browns, greys) mixed with pops of market colors",
+        "secondary": "Bold primary colors from signage and art",
+        "accent": "Metallic sheens and neon glows",
+        "ambient": "Variable, from natural daylight to the artificial glow of signs and lights",
+        "genre": null,
+        "architectural_tone": "Eclectic, post-industrial, with strong street art influence",
+        "cultural_tone": "Alternative, bohemian, youth-oriented",
+        "materials_base": "Durable, often reclaimed or repurposed, with a focus on functional aesthetics",
+        "mood_baseline": "Rebellious excitement",
+        "palette_bias": "High contrast, bold and diverse",
+        "soundscape_base": "Urban cacophony",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A vibrant, eclectic neighborhood known for its alternative fashion, music venues, and bustling markets. It's a hub for creative expression and subcultures, pulsating with energy day and night.",
+      "navigableElements": [],
+      "dominantElements": [
+        "Bustling Markets",
+        "Live Music Venues",
+        "Alternative Boutiques"
+      ],
+      "uniqueIdentifiers": [
+        "Graffiti Art",
+        "Street Performers",
+        "Unique Fashion Stalls"
+      ],
+      "searchDesc": "Camden: A vibrant London district famed for alternative fashion, music, and lively markets.",
+      "slug": "camden"
+    },
+    "584be314-a163-478d-9d1e-0a07a79acb46": {
+      "id": "584be314-a163-478d-9d1e-0a07a79acb46",
+      "type": "location",
+      "name": "The Neon Jungle",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior features a faceted, almost crystalline facade, designed to catch and refract light. Geometric patterns in chrome and iridescent materials are inlaid into the walls, creating a dynamic, constantly changing appearance.  The scale feels medium, inviting but also intriguing, with a sense of depth created by overlapping holographic elements.",
+        "colorsAndLighting": "A kaleidoscope of neon blues, purples, pinks, and greens dominate, amplified by the iridescent surfaces. Light emanates from within the facade, from the pulsing signage, and from the glowing window displays, casting dynamic shadows.",
+        "atmosphere": "The air crackles with a low, electric hum, suggesting latent energy. A subtle, cool temperature prevails, with a sense of constant, subtle movement from the shifting lights and reflections.  There's no discernible weather, as the experience feels contained and artificial.",
+        "materials": "Polished chrome, iridescent acrylic panels, and mirrored surfaces are the primary materials.  These are contrasted with sections of matte black for a grounding effect, and the condition is pristine, almost otherworldly.",
+        "mood": "Exciting and otherworldly, evoking a sense of anticipation and playful escapism. The atmosphere encourages experimentation and self-expression.",
+        "sounds": "Low hum, distant bass throb, synthesized chimes, muffled chatter",
+        "spatialLayout": "The facade is relatively flat but gains apparent depth through layers of holographic projections and reflective surfaces.  The entrance is clearly defined by the central doorway, which seems to beckon the viewer into the vibrant interior.",
+        "primary_surfaces": "Iridescent, mirrored, faceted",
+        "secondary_surfaces": "Polished chrome, matte black panels",
+        "accent_features": "Holographic projections, UV reactive paint stripes, geometric neon tubes",
+        "dominant": "Iridescent purple with large coverage area",
+        "secondary": "Neon pink and blue outlining shapes and signage",
+        "accent": "Lime green and electric yellow accents on signage and subtle details",
+        "ambient": "Vibrant, multicolored glow",
+        "structure": {
+          "form": "faceted",
+          "roofType": "flat",
+          "scale": "medium",
+          "orientation": "wide",
+          "openings": "large-glass",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": "Futuristic, iridescent, geometric",
+        "cultural_tone": "Used by club-goers and fashion enthusiasts seeking unique rave attire and accessories; a destination for self-expression.",
+        "materials_base": "High-tech, reflective, synthetic",
+        "mood_baseline": "Energetic, psychedelic, alluring",
+        "palette_bias": "Electric purples, blues, and pinks with vibrant secondary highlights",
+        "soundscape_base": "Electronic ambient, subtle beat",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A trippy, raver's clubwear shop with iridescent displays and pulsating ambient lights.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A mirrored double door that reflects the neon lights."
+        }
+      ],
+      "dominantElements": [
+        "Iridescent storefront facade",
+        "Pulsating neon signage",
+        "Holographic window displays"
+      ],
+      "uniqueIdentifiers": [
+        "Shifting rainbow reflections",
+        "Futuristic, geometric shapes",
+        "UV reactive paint accents"
+      ],
+      "searchDesc": "Trippy raver clubwear shop in Camden, London with iridescent displays and pulsating neon lights.",
+      "slug": "the-neon-jungle",
+      "primaryMedia": "media-1764940508221-50ev5std3"
+    },
+    "niche-1764940527578-78zmqdbps": {
+      "id": "niche-1764940527578-78zmqdbps",
+      "type": "niche",
+      "name": "interior of The Neon Jungle",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a dazzling spectacle of geometric brilliance, with faceted, interlocking panels of deep iridescent purple forming the walls and floor. Gleaming polished chrome pillars rise to a similarly faceted ceiling, catching and refracting light. A section of the floor transitions into a pulsing lime green holographic jungle foliage projection.",
+        "colorsAndLighting": "Dominant iridescent purple shifts hue dynamically, complemented by the cool glow of neon pink, electric yellow, soft blue, electric blue, and vibrant pink accents. Light refracts off polished chrome and mirrored surfaces, creating a kaleidoscopic effect.",
+        "atmosphere": "The air hums with latent energy, feeling cool and tinged with the scent of ozone and synthetic fabrics. The overall atmosphere is one of thrilling, psychedelic allure, encouraging playful escapism and self-expression.",
+        "materials": "Key materials include faceted iridescent purple panels, polished chrome, mirrored acrylic, and matte black surfaces. Holographic projections and UV-reactive paints add dynamic visual layers.",
+        "mood": "Exciting and otherworldly, evoking anticipation and a sense of playful escapism designed for self-expression.",
+        "sounds": "Humming energy, subtle fabric rustle, distant synthetic chimes.",
+        "spatialLayout": "A medium-scale retail boutique with an open main area. A neon archway leads to a dimmer passage deeper within. A sales counter forms a focal point in the mid-right.",
+        "primary_surfaces": "Faceted iridescent purple panels (walls, floor), matte black wall panels.",
+        "secondary_surfaces": "Polished chrome pillars and shelving, mirrored acrylic sales counter.",
+        "accent_features": "Lime green holographic jungle foliage, neon pink and electric yellow archway, pulsating blue neon counter illumination, UV-reactive paint stripes.",
+        "dominant": "Iridescent purple with large coverage area.",
+        "secondary": "Polished chrome and mirrored acrylic.",
+        "accent": "Neon pink, electric yellow, lime green, electric blue, vibrant pink, soft blue.",
+        "ambient": "Cool",
+        "structure": {
+          "form": "faceted",
+          "roofType": "faceted",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "open-passages",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": "Futuristic, iridescent, geometric",
+        "cultural_tone": "Used by club-goers and fashion enthusiasts seeking unique rave attire and accessories; a destination for self-expression.",
+        "materials_base": null,
+        "mood_baseline": "Exciting and otherworldly, evoking a sense of anticipation and playful escapism. The atmosphere encourages experimentation and self-expression.",
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764940527576-y6jle5w4k",
+      "description": "A dazzling, geometric retail boutique interior with iridescent purple surfaces, polished chrome accents, and vibrant neon lighting, designed for self-expression and playful escapism.",
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "mid-left",
+          "description": "A vibrant neon pink geometric archway outlined with electric yellow, framing a dimly lit passage."
+        }
+      ],
+      "dominantElements": [
+        "faceted iridescent purple walls and floor",
+        "gleaming polished chrome pillars",
+        "asymmetrical geometric ceiling",
+        "lime green holographic jungle foliage projection",
+        "neon pink and electric yellow archway",
+        "mirrored acrylic sales counter with blue neon",
+        "sleek chrome shelving units",
+        "UV-reactive paint stripes"
+      ],
+      "uniqueIdentifiers": [
+        "iridescent purple geometric panels",
+        "holographic lime green jungle floor",
+        "pulsating blue neon counter",
+        "UV-reactive electric blue and pink stripes"
+      ],
+      "searchDesc": "Futuristic iridescent boutique with geometric purple walls, holographic jungle floor, and neon accents.",
+      "slug": "interior-of-the-neon-jungle"
+    },
+    "niche-1764940554786-8kxfv4pdb": {
+      "id": "niche-1764940554786-8kxfv4pdb",
+      "type": "niche",
+      "name": "The Quantum Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a sanctuary of sophisticated indulgence, mirroring its parent location's futuristic and geometric aesthetic. Walls are paneled with faceted iridescent purple and polished chrome, reflecting the glow of holographic projections.",
+        "colorsAndLighting": "Dominant iridescent purple, complemented by polished chrome and the vibrant, refracted colors of holographic projections. Lighting is a cool, synthesized glow.",
+        "atmosphere": "The air hums with anticipation, subtly scented with ozone and infused with synthesized notes. It's a palpable sense of playful escapism and otherworldly delight.",
+        "materials": "Faceted iridescent purple panels and polished chrome form the primary surfaces. The bar features a mirrored acrylic countertop, while seating includes matte black geometric stools and plush, UV-reactive upholstery.",
+        "mood": "Exciting and otherworldly, fostering playful escapism and self-expression with a palpable hum of anticipation.",
+        "sounds": "Anticipation hum, synthesized elixirs, subtle ozone.",
+        "spatialLayout": "An interior sanctuary, likely an enclosed space with a central bar as a focal point. The ultra-wide lens perspective suggests a generous, possibly slightly curved, main area.",
+        "primary_surfaces": "Faceted iridescent purple panels, polished chrome",
+        "secondary_surfaces": "Mirrored acrylic (bar top), matte black (stools), UV-reactive upholstery (banquettes)",
+        "accent_features": "Holographic projections, UV-reactive upholstery",
+        "dominant": "Iridescent purple with large coverage area",
+        "secondary": "Polished chrome on structural elements and bar",
+        "accent": "Vibrant refracted colors from projections, matte black on stools",
+        "ambient": "Cool",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1764940554784-rnvjth2n9",
+      "description": "An interior sanctuary for sophisticated indulgence, emerging from The Neon Jungle, featuring iridescent purple and chrome architecture, holographic projections, and UV-reactive seating.",
+      "navigableElements": [],
+      "dominantElements": [
+        "iridescent purple paneled walls",
+        "polished chrome bar",
+        "holographic projections",
+        "geometric stools",
+        "UV-reactive banquettes"
+      ],
+      "uniqueIdentifiers": [
+        "faceted iridescent purple and chrome walls",
+        "mirrored acrylic bar top",
+        "UV-reactive upholstery"
+      ],
+      "searchDesc": "Futuristic bar with iridescent purple, chrome, and holographic projections.",
+      "slug": "the-quantum-bar"
+    },
+    "dc7f1f24-6941-4288-ba1e-2c3ed295a4f8": {
+      "id": "dc7f1f24-6941-4288-ba1e-2c3ed295a4f8",
+      "type": "region",
+      "name": "City of London",
+      "description": "The historic heart of London, a global financial hub where ancient Roman roots meet towering modern skyscrapers. This district buzzes with an unparalleled energy of commerce and tradition.",
+      "dna": {
+        "looks": "A dramatic juxtaposition of centuries-old stone and glass towers, creating a visually striking urban landscape. Cobblestone alleyways weave between imposing facades of classical and contemporary design.",
+        "colorsAndLighting": "Dominant greys and muted earth tones are punctuated by the glint of glass and the occasional vibrant advertising display. Natural light is often fractured by the dense urban environment.",
+        "atmosphere": "The air carries a subtle scent of old stone and exhaust fumes, a constant hum of activity. The climate is typically temperate urban, with crisp air on clear days and a damp chill when it rains.",
+        "materials": "A foundation of enduring stone, brick, and steel is overlaid with expansive glass, polished concrete, and metallic accents in its more modern structures.",
+        "mood": "Ambitious and sophisticated, the City radiates an aura of intense focus and high stakes, balanced by a sense of deep historical permanence.",
+        "sounds": "Traffic hum, distant sirens, hurried footsteps, ringing telephones, snippets of foreign languages",
+        "spatialLayout": "A dense, grid-like structure in its older sections gives way to more organic, but still compact, arrangements around prominent modern buildings. Narrow streets contrast with grand thoroughfares.",
+        "primary_surfaces": [
+          "stone",
+          "glass",
+          "steel"
+        ],
+        "secondary_surfaces": [
+          "brick",
+          "concrete",
+          "cobblestone"
+        ],
+        "accent_features": [
+          "ornate lamp posts",
+          "historic plaques",
+          "modern art installations",
+          "flags",
+          "greenery in small planters"
+        ],
+        "dominant": "grey",
+        "secondary": "earth tones",
+        "accent": "metallic, vibrant advertising hues",
+        "ambient": "cool, diffused light",
+        "genre": null,
+        "architectural_tone": "Eclectic, blending severe classicism with stark modernist skyscrapers, punctuated by historical Romanesque and Gothic remnants.",
+        "cultural_tone": "Primarily driven by global finance and law, with a strong undercurrent of historical British tradition and a diverse, transient international presence.",
+        "materials_base": "Classic and industrial, enduring and functional, with a strong emphasis on materials that convey prestige and longevity.",
+        "mood_baseline": "Ambitious, sophisticated, and multifaceted. A sense of constant movement and opportunity, overlaid with a gravitas of history.",
+        "palette_bias": "Subdued and sophisticated, with vibrant accents in commercial displays and corporate branding.",
+        "soundscape_base": "A continuous, varied urban din, dominated by the sounds of commerce and transport.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "navigableElements": [],
+      "dominantElements": [
+        "St. Paul's Cathedral",
+        "The Gherkin",
+        "Bank of England",
+        "Tower of London",
+        "The Shard (visible from periphery)"
+      ],
+      "uniqueIdentifiers": [
+        "Historic Roman Wall remnants",
+        "Concentration of financial institutions",
+        "Mixture of ancient and cutting-edge architecture",
+        "Bustling pedestrian activity during weekdays",
+        "Occasional ceremonial processions"
+      ],
+      "searchDesc": "Historic financial district of London, a blend of ancient history and modern skyscrapers.",
+      "slug": "city-of-london",
+      "locations": [],
+      "primaryMedia": "media-1764940593605-9rtp9r6p0"
+    },
+    "2324d7d3-b28f-4529-a554-37937271405b": {
+      "id": "2324d7d3-b28f-4529-a554-37937271405b",
+      "type": "location",
+      "name": "The Sterling Tap",
+      "description": "A sophisticated establishment blending classic pub comfort with an ambitious urban edge.  It serves as a focal point for networking and unwinding amidst the city's financial pulse.",
+      "dna": {
+        "looks": "The Sterling Tap presents a facade of dark, polished wood, punctuated by large, classically arched windows. Its scale suggests a substantial, enduring presence, hinting at a venue that caters to a discerning clientele.",
+        "colorsAndLighting": "The exterior is dominated by deep, rich wood tones, accented by the cool gleam of brass. Warm light spills from the windows, creating an inviting glow against the prevalent grey of the surrounding architecture.",
+        "atmosphere": "The air around The Sterling Tap is a blend of urban sophistication and the low murmur of focused conversation.  Evening light catches the polished surfaces, reflecting the ambition and high stakes of the district.",
+        "materials": "Constructed with enduring materials, the exterior features richly polished dark wood, smooth grey stone detailing reminiscent of classic structures, and prominent brass fittings. These materials convey prestige and longevity.",
+        "mood": "This bar evokes a sense of refined conviviality, a place where deals might be struck over expertly crafted drinks. It offers a respite that is both sophisticated and deeply rooted in tradition.",
+        "sounds": "Distant traffic, hushed conversations, clinking glasses, subtle jazz music, footsteps on pavement",
+        "spatialLayout": "The bar occupies a prominent street-level position, its main entrance drawing attention from the thoroughfare. Its form is solid and grounded, with clear visual cues to its interior offerings.",
+        "primary_surfaces": "Polished dark wood, grey stone",
+        "secondary_surfaces": "Brass fixtures, glass windows",
+        "accent_features": "Brass signage, etched glass details",
+        "dominant": "grey",
+        "secondary": "dark wood",
+        "accent": "brass",
+        "ambient": "evening light",
+        "genre": null,
+        "architectural_tone": "Eclectic, blending severe classicism with stark modernist skyscrapers, punctuated by historical Romanesque and Gothic remnants.",
+        "cultural_tone": "A place for networking and discerning patrons, reflecting global finance with British tradition.",
+        "materials_base": "Classic and industrial, enduring and functional, with a strong emphasis on materials that convey prestige and longevity.",
+        "mood_baseline": "Ambitious and sophisticated, with a sense of historical permanence.",
+        "palette_bias": "Subdued and sophisticated, with vibrant accents in commercial displays and corporate branding.",
+        "soundscape_base": "urban ambiance, muted conversations",
+        "flora_base": "minimal urban planting",
+        "fauna_base": "urban birds"
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A heavy oak door with brass fittings, leading into the main bar area."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A discreet side passage, dimly lit, possibly leading to private booths or an alley entrance."
+        },
+        {
+          "type": "window",
+          "position": "foreground",
+          "description": "Large, clear windows offering glimpses of the warm interior and patrons within."
+        }
+      ],
+      "dominantElements": [
+        "Polished dark wood facade",
+        "Large arched windows",
+        "Subtle brass signage",
+        "Stone accents"
+      ],
+      "uniqueIdentifiers": [
+        "The Sterling Tap logo etched in glass",
+        "Distinctive Romanesque archway over the main entrance",
+        "Gleaming brass fixtures",
+        "Subtle hum of conversation emanating from within"
+      ],
+      "searchDesc": "Sophisticated bar with dark wood, brass, and grand windows. The Sterling Tap.",
+      "slug": "the-sterling-tap",
+      "niches": [],
+      "primaryMedia": "media-1764940624478-ix471cwyq"
+    },
+    "5956f884-a362-402c-99e7-766cd6821d56": {
+      "id": "5956f884-a362-402c-99e7-766cd6821d56",
+      "type": "location",
+      "name": "The Rusty Keg",
+      "description": "A lively, graffiti-adorned bar with a corrugated iron facade and a prominent neon sign. It's a hub for local artists and musicians, buzzing with an energetic, bohemian atmosphere.",
+      "dna": {
+        "looks": "A single-story, rectangular building constructed primarily from weathered corrugated iron. Its facade is a canvas for extensive, layered graffiti, creating a dynamic and ever-changing visual texture. Exposed metal piping runs along the exterior, adding to its post-industrial aesthetic.",
+        "colorsAndLighting": "The base colors are muted earth tones and greys of the metal, heavily overlaid with vibrant, high-contrast graffiti in market colors. The neon sign casts a warm, inviting glow, especially after dusk, creating a striking contrast with the darker exterior.",
+        "atmosphere": "The air around The Rusty Keg hums with the low thrum of music and chatter from within. Street art is everywhere, and the smell of damp concrete and stale beer hangs faintly. It feels alive and slightly chaotic, a testament to its rebellious spirit.",
+        "materials": "The exterior is dominated by patched and weathered corrugated iron sheets. Reclaimed metal, plywood, and various scrap materials are evident in its construction and any added fixtures.",
+        "mood": "This bar exudes a sense of edgy camaraderie and uninhibited self-expression. It's a place that welcomes individuality and thrives on its raw, authentic energy.",
+        "sounds": "Distant music, muffled voices, clinking glasses, sporadic laughter, footsteps on pavement.",
+        "spatialLayout": "A straightforward, rectangular building with its main entrance centrally positioned. An alleyway offers a secondary, less obvious access point. The overall impression is of a utilitarian structure repurposed with a vibrant artistic overlay.",
+        "primary_surfaces": "Corrugated iron, concrete, brick (where visible beneath graffiti)",
+        "secondary_surfaces": "Painted metal, weathered wood, glass",
+        "accent_features": "Neon signage, spray-painted murals, exposed pipes, repurposed barrel seating",
+        "dominant": "Grey",
+        "secondary": "Brown",
+        "accent": "Neon pink, electric blue, graffiti reds and yellows",
+        "ambient": "Dusk",
+        "genre": null,
+        "architectural_tone": "Eclectic, post-industrial, street art influenced",
+        "cultural_tone": "Alternative, bohemian, youth-oriented",
+        "materials_base": "Durable, reclaimed, functional aesthetics",
+        "mood_baseline": "Exciting, rebellious, open-minded",
+        "palette_bias": "High contrast, bold, diverse",
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A heavy, reclaimed metal door, spray-painted with abstract art, leading into the main bar area."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A narrow, dimly lit alleyway beside the bar, possibly leading to a smoking area or back entrance."
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "A large, grimy window offering a glimpse into the bar's interior, showcasing patrons and dim lighting."
+        }
+      ],
+      "dominantElements": [
+        "Corrugated iron exterior",
+        "Large, vibrant graffiti murals",
+        "Flickering neon sign",
+        "Exposed metal pipework"
+      ],
+      "uniqueIdentifiers": [
+        "The 'Rusty Keg' neon sign",
+        "Mural of a skeletal hand holding a pint",
+        "Outdoor seating made from repurposed barrels",
+        "Constantly changing graffiti tags"
+      ],
+      "searchDesc": "The Rusty Keg bar: graffiti-covered, corrugated iron, neon sign, alternative hangout.",
+      "slug": "the-rusty-keg",
+      "niches": [],
+      "primaryMedia": "media-1764940647540-rvou9vqkb"
+    },
+    "niche-1764940668150-i76uuy5bp": {
+      "id": "niche-1764940668150-i76uuy5bp",
+      "type": "niche",
+      "name": "interior of The Rusty Keg",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A single-story interior featuring straight, rectangular walls clad in muted grey corrugated iron, heavily layered with vibrant, chaotic spray-painted graffiti. Rusted metal pipes traverse the low, vaulted ceiling and sections of walls. Repurposed barrel tops serve as tables illuminated by industrial bulbs.",
+        "colorsAndLighting": "Dominant colors are the muted grey of the corrugated iron, sharply contrasted by vibrant neon pink, electric blue, stark red, and bold yellow graffiti. Warm, inviting pools of light from bare industrial bulbs cast dynamic shadows, catching metallic glints.",
+        "atmosphere": "The air hums with the muffled thrum of music and chatter, creating an atmosphere of edgy camaraderie. It feels alive with uninhibited self-expression, raw and authentic.",
+        "materials": "The primary materials are weathered corrugated iron for walls and ceiling, with a rugged concrete floor. Exposed, rusted metal piping adds a gritty industrial texture. Furniture includes scrap wood and metal shelving for the bar, alongside salvaged metal stools and plush, mismatched armchairs.",
+        "mood": "This bar exudes a sense of edgy camaraderie and uninhibited self-expression. It's a place that welcomes individuality and thrives on its raw, authentic energy.",
+        "sounds": "Muffled music, indistinct chatter, clinking glasses, low hum.",
+        "spatialLayout": "A single-story rectangular space with a low, vaulted corrugated iron ceiling. A central bar counter anchors the midground, with a navigable doorway to the right and seating arrangements to the left. The ultra-wide lens exaggerates the sense of contained, yet open, industrial space.",
+        "primary_surfaces": "corrugated iron (walls, ceiling), concrete (floor)",
+        "secondary_surfaces": "scrap wood (bar), metal shelving (bar, seating), repurposed metal (barrel tops)",
+        "accent_features": "vibrant neon graffiti, exposed rusted piping, barrel top tables, neon beer signs",
+        "dominant": "grey (corrugated iron)",
+        "secondary": "vibrant graffiti colors (pink, blue, red, yellow)",
+        "accent": "rust (piping, bar accents), warm yellow (lighting)",
+        "ambient": "warm",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "vaulted",
+          "scale": "medium",
+          "orientation": "horizontal",
+          "openings": "minimal",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Eclectic, post-industrial, street art influenced",
+        "cultural_tone": "Alternative, bohemian, youth-oriented",
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764940668147-1ling325q",
+      "description": "The gritty, vibrant interior of a post-industrial bar.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "right",
+          "description": "A dimly glowing, graffiti-adorned doorway."
+        }
+      ],
+      "dominantElements": [
+        "graffiti-covered walls",
+        "exposed corrugated iron",
+        "rusted metal piping",
+        "barrel-top tables",
+        "central bar counter",
+        "industrial lighting"
+      ],
+      "uniqueIdentifiers": [
+        "overlapping neon graffiti",
+        "corrugated iron ceiling",
+        "barrel top tables",
+        "exposed rusted pipes"
+      ],
+      "searchDesc": "Dimly lit bar with neon graffiti, corrugated iron, and barrel tables.",
+      "slug": "interior-of-the-rusty-keg"
+    },
+    "niche-1764940693315-00bgf4066": {
+      "id": "niche-1764940693315-00bgf4066",
+      "type": "niche",
+      "name": "The Washroom",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Corrugated iron sheets form the walls and ceiling, bearing a weathered grey patina. Exposed metal piping snakes across surfaces, integrated into the industrial charm. The floor is rugged concrete, marked by subtle stains.",
+        "colorsAndLighting": "Dominantly grey, with muted tones from the weathered metal and concrete. Lighting is utilitarian, likely casting harsh or functional shadows.",
+        "atmosphere": "The air feels slightly damp and utilitarian. There's a sense of raw, authentic grit and a subtle undercurrent of the bar's rebellious spirit. The space is functional yet possesses an edgy camaraderie.",
+        "materials": "Primary materials are weathered corrugated iron and rugged concrete, showing signs of age and use. Exposed metal pipes, likely steel or iron, are prominent.",
+        "mood": "This space evokes a feeling of uninhibited self-expression and raw authenticity, a necessary respite within an edgy environment.",
+        "sounds": "Dripping water, echoing footsteps, distant bar noise, faint ventilation hum.",
+        "spatialLayout": "A functional enclosure, likely rectangular or irregular, with a continuation of the bar's industrial aesthetic. Entry points are implied by the context of a washroom.",
+        "primary_surfaces": "Corrugated iron (walls/ceiling), Concrete (floor)",
+        "secondary_surfaces": "Exposed metal piping, salvaged metal/wood (fixtures)",
+        "accent_features": "Graffiti tags and stencil art on walls, salvaged industrial basins, mirrors framed with reclaimed materials.",
+        "dominant": "Grey (walls, floor, pipes)",
+        "secondary": "Rust/Brown tones (patina on metal, stains)",
+        "accent": "Vibrant colors (graffiti), dark metal (piping details)",
+        "ambient": "Neutral",
+        "structure": {
+          "form": "irregular",
+          "roofType": "flat",
+          "scale": "small",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764940693313-3c7lob4y9",
+      "description": "A functional, unpolished extension of The Rusty Keg's aesthetic, featuring corrugated iron walls and exposed pipes.",
+      "navigableElements": [],
+      "dominantElements": [
+        "corrugated iron walls",
+        "exposed metal piping",
+        "concrete floor",
+        "salvaged industrial sinks",
+        "graffiti/stencil art"
+      ],
+      "uniqueIdentifiers": [
+        "corrugated iron walls with graffiti",
+        "exposed snaking pipes",
+        "salvaged industrial fixtures"
+      ],
+      "searchDesc": "Gritty washroom with corrugated iron, graffiti, and exposed pipes.",
+      "slug": "the-washroom"
+    },
+    "niche-1764940716745-sy5i29u9i": {
+      "id": "niche-1764940716745-sy5i29u9i",
+      "type": "niche",
+      "name": "interior of The Sterling Tap",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A grand, dimly lit interior hall reminiscent of a historic banking hall. Rich, polished dark wood paneling covers the walls, meeting a high, vaulted ceiling with exposed dark timber beams and smooth grey plaster sections. Gleaming brass accents, from ornate sconces to window frames, punctuate the space, casting localized warm light.",
+        "colorsAndLighting": "Dominant dark woods and cool greys are illuminated by warm, localized pools of light from brass sconces and subtle integrated lighting, creating a sophisticated ambiance.",
+        "atmosphere": "The air feels still and hushed, imbued with a sense of enduring prestige. A subtle warmth emanates from the lighting and wood, contrasting with the cool plaster and stone, creating a refined and inviting, yet discreet, environment.",
+        "materials": "The primary materials are rich, polished dark wood paneling and smooth, cool grey plaster. Accents of gleaming brass are prominent, alongside dark wood planks and geometric grey stone tiles on the floor. Antique decanters and leather-bound books add texture and detail.",
+        "mood": "This space evokes sophisticated, enduring prestige and refined conviviality, a place for discreet ambition and discerning patrons.",
+        "sounds": "Muffled city sounds, subtle clinking, hushed conversations.",
+        "spatialLayout": "A long, grand hall with a high vaulted ceiling, entered from an unseen point. Key features include a prominent door to the left, display shelves to the right, and a descending staircase towards the rear.",
+        "primary_surfaces": "Dark wood paneling on walls, dark wood planks and grey stone tiles on the floor, exposed dark timber beams and grey plaster on the ceiling.",
+        "secondary_surfaces": "Polished brass for accents and railings, glass for windows, leather for books, glass for decanters.",
+        "accent_features": "Ornate brass sconces, etched glass windows, ornately carved dark wood door, brass railing, antique decanters and leather-bound books.",
+        "dominant": "dark wood",
+        "secondary": "grey",
+        "accent": "brass",
+        "ambient": "warm",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "vaulted",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "arched-windows",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": "Eclectic, blending severe classicism with stark modernist skyscrapers, punctuated by historical Romanesque and Gothic remnants.",
+        "cultural_tone": "A place for networking and discerning patrons, reflecting global finance with British tradition.",
+        "materials_base": null,
+        "mood_baseline": "refined conviviality",
+        "palette_bias": "grey",
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764940716742-erqn2f8hn",
+      "description": "The grand, dimly lit interior hall of The Sterling Tap, resembling a historic banking hall, features rich dark wood paneling, a vaulted timber ceiling, and gleaming brass accents.",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "to the left",
+          "description": "A substantial, ornately carved dark wood door framed by polished brass."
+        },
+        {
+          "type": "display_shelves",
+          "position": "to the right",
+          "description": "A continuous bank of dark wood display shelves inset with subtle brass lighting strips, holding decanters and books."
+        },
+        {
+          "type": "staircase",
+          "position": "leading towards the lower level",
+          "description": "A gently descending, asymmetrically placed staircase composed of dark wood treads and grey stone risers, disappearing into shadow."
+        }
+      ],
+      "dominantElements": [
+        "dark wood paneling",
+        "vaulted timber ceiling",
+        "brass sconces",
+        "arched windows",
+        "mosaic floor",
+        "ornate door",
+        "display shelves",
+        "staircase"
+      ],
+      "uniqueIdentifiers": [
+        "historic banking hall aesthetic",
+        "dark wood and grey plaster vaulting",
+        "etched glass windows",
+        "curated decanters and books display"
+      ],
+      "searchDesc": "Dimly lit historic banking hall interior with dark wood paneling, brass accents, and a vaulted ceiling.",
+      "slug": "interior-of-the-sterling-tap"
+    },
+    "3d90a655-4472-43ce-9506-f4f449bc6411": {
+      "id": "3d90a655-4472-43ce-9506-f4f449bc6411",
+      "type": "location",
+      "name": "Bank of England",
+      "description": "The historic headquarters of the Bank of England, a formidable edifice of neoclassical design. It stands as a symbol of British financial power and historical permanence.",
+      "dna": {
+        "looks": "The Bank of England presents a monumental neoclassical facade, characterized by its imposing scale, classical columns, and pediments. It integrates with the surrounding cityscape through its sheer mass, yet its detailed stonework hints at historical craftsmanship.",
+        "colorsAndLighting": "Its primary color is a distinguished grey, rendered in stone, which absorbs and reflects the often overcast London light. Shadows play dramatically across its architectural features, emphasizing its solid, enduring form.",
+        "atmosphere": "The immediate surroundings are often busy with financial professionals and tourists, creating an atmosphere of quiet purpose and historical weight. The air can feel charged with ambition, yet grounded by the building's timeless presence.",
+        "materials": "Constructed predominantly from enduring stone, the exterior showcases meticulous stonework, polished brass fittings on its doors, and large expanses of glass in its more modern extensions.",
+        "mood": "It evokes a powerful sense of gravitas, ambition, and deep historical permanence. The building commands respect and projects an image of unshakeable financial stability.",
+        "sounds": "Traffic hum, footsteps, hushed conversations, distant sirens, chimes",
+        "spatialLayout": "The building is a large, blocky structure with a prominent central entrance and wings extending outwards. Its orientation is formal, facing the street with a clear sense of arrival.",
+        "primary_surfaces": "Stone facade, granite base",
+        "secondary_surfaces": "Heavy wooden doors, brass fixtures, arched windows",
+        "accent_features": "Carved reliefs, decorative cornices, flagpoles",
+        "dominant": "grey",
+        "secondary": "dark stone, brass",
+        "accent": "gold (in signage/lighting), muted corporate colors",
+        "ambient": "Overcast, diffused daylight",
+        "genre": null,
+        "architectural_tone": "Severe classicism with integrated modernist elements",
+        "cultural_tone": "Global finance, historical British tradition",
+        "materials_base": "Classic, enduring, prestige materials",
+        "mood_baseline": "Ambitious, sophisticated, historical permanence",
+        "palette_bias": "Subdued and sophisticated",
+        "soundscape_base": "Urban, financial district sounds",
+        "flora_base": "Minimal, manicured planters if any",
+        "fauna_base": "Urban wildlife (pigeons, rodents)"
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A grand, imposing entrance with heavy wooden doors, leading into the main banking hall."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A discreet side passage, likely leading to administrative offices or staff entrances."
+        },
+        {
+          "type": "stairs",
+          "position": "left",
+          "description": "A visible external staircase to a raised portico, offering access to a secondary entrance."
+        },
+        {
+          "type": "window",
+          "position": "background",
+          "description": "Numerous tall, arched windows that reveal glimpses of opulent interiors or stark modernist office spaces."
+        }
+      ],
+      "dominantElements": [
+        "Grand neoclassical facade",
+        "Large central portico with columns",
+        "Intricate stone carvings",
+        "Heavy, ornate doors"
+      ],
+      "uniqueIdentifiers": [
+        "The iconic facade on Threadneedle Street",
+        "The scale and gravitas of the building",
+        "The blend of historical and modern architectural elements",
+        "Visible security features"
+      ],
+      "searchDesc": "The Bank of England: A grand neoclassical building, the heart of British finance, exuding gravitas and historical presence.",
+      "slug": "bank-of-england",
+      "niches": [],
+      "primaryMedia": "media-1764940825033-kra6nynuq"
+    },
+    "niche-1764940847324-xmlha9m21": {
+      "id": "niche-1764940847324-xmlha9m21",
+      "type": "niche",
+      "name": "interior of Bank of England",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, high-ceilinged hall defined by severe classicism. Polished grey stone forms the walls and floor, accented by darker granite at the base of colossal, fluted columns supporting a coffered stone ceiling. Monumental dark wood and brass counter and display cases add functional elegance.",
+        "colorsAndLighting": "The palette is dominated by shades of grey stone, contrasted with dark granite and warm brass. Light is a controlled mix of diffused daylight from high arched windows and warm, ambient glow from recessed brass fixtures.",
+        "atmosphere": "The air is still and cool, carrying the faint scent of old paper and polished stone. The immense scale and deliberate lighting create an atmosphere of solemn grandeur and historical weight.",
+        "materials": "Dominant materials include richly veined, polished grey stone for walls and floors, dark granite accents, and dark wood with polished brass for counters and fixtures. Display cases are brushed brass and glass.",
+        "mood": "Evokes ambitious sophistication, historical permanence, and a powerful sense of gravitas.",
+        "sounds": "Subtle echoes, hushed footsteps, distant mechanical hum.",
+        "spatialLayout": "A grand, soaring hall with immense scale. Entry points are subtle, with a prominent archway to the left and a large service counter asymmetrically placed to the right. A geometric floor pattern draws the eye inwards.",
+        "primary_surfaces": "Polished grey stone (walls, floor), Coffered stone (ceiling)",
+        "secondary_surfaces": "Dark granite (column bases), Dark wood and polished brass (counter)",
+        "accent_features": "Colossal fluted columns, arched leaded-glass windows, brass display cases with internal lighting, subtle brass directional sign.",
+        "dominant": "grey (90%)",
+        "secondary": "dark granite/wood (7%)",
+        "accent": "brass (3%)",
+        "ambient": "neutral",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "arched-windows",
+          "functionalType": "civic"
+        },
+        "genre": null,
+        "architectural_tone": "Severe classicism with integrated modernist elements",
+        "cultural_tone": "Global finance and historical British tradition",
+        "materials_base": "stone, granite, wood, brass, glass",
+        "mood_baseline": "Gravitas, ambition, historical permanence, financial stability",
+        "palette_bias": "muted stone tones, warm metallic accents",
+        "soundscape_base": "hushed and echoing",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764940847323-sb140z7r2",
+      "description": "The grand, soaring interior of the Bank of England, characterized by severe classicism and integrated modernist elements, with dominant grey stone and brass accents.",
+      "navigableElements": [
+        {
+          "type": "window",
+          "position": "high in the walls",
+          "description": "large, arched leaded-glass windows"
+        },
+        {
+          "type": "archway",
+          "position": "to the left, midground",
+          "description": "dimly lit stone archway opening into a darker corridor"
+        },
+        {
+          "type": "sign",
+          "position": "near the archway",
+          "description": "subtle brass directional sign with gold lettering"
+        }
+      ],
+      "dominantElements": [
+        "colossal, fluted columns",
+        "monumental service counter",
+        "coffered stone ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "fluted columns",
+        "coffered ceiling",
+        "leaded-glass windows",
+        "geometric floor pattern",
+        "brass display cases"
+      ],
+      "searchDesc": "Grand Bank of England interior: grey stone, fluted columns, brass accents, diffused daylight.",
+      "slug": "interior-of-bank-of-england"
+    },
+    "niche-1764940872460-h5oo3n2t0": {
+      "id": "niche-1764940872460-h5oo3n2t0",
+      "type": "niche",
+      "name": "The Vault",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A subterranean chamber defined by meticulously polished grey stone walls with stark dark granite accents, forming an imposing, impenetrable barrier. The space is dimly lit, emphasizing the sheer mass of its construction and the precious materials it holds. Minimalist, functional polished brass fixtures are integrated into the design.",
+        "colorsAndLighting": "Dominated by the cool tones of grey stone and dark granite, with the gleam of polished brass as accents. Lighting is deliberately subdued, creating deep shadows and highlighting textures.",
+        "atmosphere": "The air is noticeably cooler and stiller than above, carrying a faint, almost metallic tang indicative of immense stored value. The overall sensation is one of profound security and weighty permanence.",
+        "materials": "Walls are of meticulously polished grey stone with interspersed dark granite accents. Functional, minimalist fixtures are made of polished brass.",
+        "mood": "This space powerfully evokes gravitas, ambition, and deep historical permanence, projecting an image of unshakeable financial stability.",
+        "sounds": "stillness, faint metallic hum, muffled echoes",
+        "spatialLayout": "A subterranean chamber, appearing vast and imposing due to subdued lighting and material scale. Entry is likely through a significant transition, emphasizing depth and security.",
+        "primary_surfaces": "polished grey stone",
+        "secondary_surfaces": "dark granite",
+        "accent_features": "polished brass fixtures",
+        "dominant": "grey (90%)",
+        "secondary": "dark grey/black (granite, 10%)",
+        "accent": "brass (gleaming accents)",
+        "ambient": "cool",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "vaulted",
+          "scale": "large",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764940887466-4yu6d2ypp",
+      "description": "A subterranean chamber embodying financial stability and historical permanence, a manifestation of global finance and British tradition.",
+      "navigableElements": [],
+      "dominantElements": [
+        "polished grey stone walls",
+        "dark granite accents",
+        "subdued lighting",
+        "brass fixtures"
+      ],
+      "uniqueIdentifiers": [
+        "polished grey stone",
+        "dark granite accents",
+        "subdued lighting",
+        "metallic tang in air",
+        "brass fixtures"
+      ],
+      "searchDesc": "Subterranean gold vault: grey stone, granite, subdued light, metallic tang, brass fixtures.",
+      "slug": "the-vault"
+    },
+    "niche-1764940961160-3fk50sf9h": {
+      "id": "niche-1764940961160-3fk50sf9h",
+      "type": "niche",
+      "name": "The Global Gold Reserve Vault",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Vast quantities of gold bars are meticulously arranged on massive, dark granite plinths within a chamber of polished grey granite. Precise, focused lighting highlights the stark beauty of the materials and the immense wealth.",
+        "colorsAndLighting": "Dominated by cool grey tones from the granite, punctuated by the warm gleam of gold. Lighting is precise and focused, creating stark contrasts and emphasizing depth.",
+        "atmosphere": "The air is noticeably cooler and thick with the scent of aged paper and minerals. A profound silence pervades the space, amplifying the sense of gravitas and historical permanence.",
+        "materials": "Walls are of polished grey granite, echoing classical architecture. Dark granite plinths support countless gold bars. The materials convey solidity and enduring value.",
+        "mood": "Evokes an overwhelming sense of historical permanence and unassailable financial stability, projecting gravitas and deep respect.",
+        "sounds": "Profound silence, faint mineral scent.",
+        "spatialLayout": "A vast, subterranean chamber meticulously carved from bedrock. The scale suggests immense depth and width, with a formidable reinforced ceiling.",
+        "primary_surfaces": "Polished grey granite (walls, ceiling)",
+        "secondary_surfaces": "Dark granite (plinths)",
+        "accent_features": "Subtle markings on gold bars, focused lighting beams",
+        "dominant": "grey (walls, ceiling, plinths)",
+        "secondary": "gold (bars)",
+        "accent": "dark granite (plinths)",
+        "ambient": "cool",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "vaulted",
+          "scale": "large",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "commercial"
+        },
+        "genre": null,
+        "architectural_tone": "Severe classicism with integrated modernist elements",
+        "cultural_tone": "Global finance, historical British tradition",
+        "materials_base": "null",
+        "mood_baseline": "null",
+        "palette_bias": "null",
+        "soundscape_base": "null",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764940961156-4k4c2nphw",
+      "description": "A secure, subterranean vault filled with gold bars, carved from bedrock.",
+      "navigableElements": [],
+      "dominantElements": [
+        "gold bars",
+        "granite plinths",
+        "polished grey granite walls",
+        "reinforced ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "Global Gold Reserve Vault",
+        "Bank of England bedrock",
+        "inscribed gold bars",
+        "countless gold bars"
+      ],
+      "searchDesc": "Subterranean vault of gold bars, Bank of England bedrock, polished granite.",
+      "slug": "the-global-gold-reserve-vault"
+    },
+    "niche-1764941019875-9gdfg18q2": {
+      "id": "niche-1764941019875-9gdfg18q2",
+      "type": "niche",
+      "name": "The Observatory Lounge",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An elevated rooftop terrace characterized by severe classicism. Granite balustrades and polished brass detailing line the space, mirroring brushed brass and glass elements. The layout offers a commanding, panoramic vista of the city's financial district.",
+        "colorsAndLighting": "Dominated by muted stone tones from the interior, accented by the cool, crisp light of the city skyline. The polished brass reflects and amplifies this light, creating subtle warmth.",
+        "atmosphere": "The air is cool and crisp, carrying the faint, distant scent of urban life. Despite being open to the sky, there's a palpable sense of containment and exclusivity, an elevated atmosphere conducive to contemplation and strategic observation.",
+        "materials": "Key materials include robust granite for balustrades and a prevalent use of polished and brushed brass for detailing and fixtures. Glass is incorporated in display cases, adding a modern sheen to the classic forms.",
+        "mood": "Evokes a powerful sense of gravitas and ambition, with an atmosphere of exclusive vantage and historical strength.",
+        "sounds": "Distant urban hum, faint wind, muffled city noises.",
+        "spatialLayout": "An expansive rooftop terrace with clear sightlines to the surrounding financial district. Entry is likely via elevated stairs or a passage, leading to an open area framed by architectural elements.",
+        "primary_surfaces": "Stone tones, possibly concrete or granite on flooring and structural elements.",
+        "secondary_surfaces": "Polished and brushed brass, glass.",
+        "accent_features": "Panoramic city vista, polished brass detailing.",
+        "dominant": "Grey (stone tones)",
+        "secondary": "Brass (polished and brushed)",
+        "accent": "Glass (display cases, reflective surfaces)",
+        "ambient": "Cool",
+        "structure": {
+          "form": "irregular",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "minimal",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Severe classicism with modernist accents",
+        "cultural_tone": "Global finance and historical British tradition from an elevated, exclusive vantage.",
+        "materials_base": "Stone, brass, glass",
+        "mood_baseline": "Elevated ambition and gravitas",
+        "palette_bias": "Muted greys and cool tones with metallic accents",
+        "soundscape_base": "Urban ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1764941019873-tcxt8r118",
+      "description": "A sophisticated rooftop bar offering panoramic city views, blending historical gravitas with modern ambition.",
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "ascending from Bank of England interior",
+          "description": "Grand staircase leading to the rooftop."
+        },
+        {
+          "type": "passage",
+          "position": "leading to rooftop terrace",
+          "description": "An entrance from the interior to the open-air lounge."
+        }
+      ],
+      "dominantElements": [
+        "Granite balustrades",
+        "Polished brass detailing",
+        "Brushed brass and glass display cases",
+        "Panoramic city vista",
+        "Open-air rooftop terrace"
+      ],
+      "uniqueIdentifiers": [
+        "Rooftop terrace of Bank of England",
+        "Topless bar with severe classicism",
+        "Juxtaposition of historical permanence and financial dynamism"
+      ],
+      "searchDesc": "Sophisticated rooftop bar at Bank of England with city views, blending classicism and modern ambition.",
+      "slug": "the-observatory-lounge"
+    }
+  },
+  "views": {},
+  "worldTrees": [
+    {
+      "id": "loc-1764931621292-af8p71vil",
+      "type": "host",
+      "children": [
+        {
+          "id": "e7d87816-3190-4860-b279-3facb1ef12f9",
+          "type": "region",
+          "children": [
+            {
+              "id": "fcc91232-8a5f-4354-b255-b1619fd11f70",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764931670942-uz99rehr1",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764933817343-5bbumbwzb",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764933838789-3puenfr1b",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764933886844-ru3jichei",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764933925192-ghmtm7uh8",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764939692946-ytgzzkjtu",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1764940486596-hpstamasu",
+      "type": "host",
+      "children": [
+        {
+          "id": "8aa566cd-a2a6-4529-9578-601616804fd8",
+          "type": "region",
+          "children": [
+            {
+              "id": "584be314-a163-478d-9d1e-0a07a79acb46",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764940527578-78zmqdbps",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764940554786-8kxfv4pdb",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "5956f884-a362-402c-99e7-766cd6821d56",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764940668150-i76uuy5bp",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764940693315-00bgf4066",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dc7f1f24-6941-4288-ba1e-2c3ed295a4f8",
+          "type": "region",
+          "children": [
+            {
+              "id": "2324d7d3-b28f-4529-a554-37937271405b",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764940716745-sy5i29u9i",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "3d90a655-4472-43ce-9506-f4f449bc6411",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1764940847324-xmlha9m21",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764940872460-h5oo3n2t0",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764940961160-3fk50sf9h",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1764941019875-9gdfg18q2",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "loc-1764931621292-af8p71vil",
+    "loc-1764940486596-hpstamasu"
+  ]
+}

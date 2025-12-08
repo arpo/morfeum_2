@@ -152,3 +152,72 @@ export interface DestinationAnalysis {
   /** Synthesized description combining user prompt with parent context */
   synthesizedDescription: string;
 }
+
+/**
+ * Navigable Element - represents a door, passage, stairs, etc.
+ * Used for navigation within spaces
+ */
+export interface NavigableElement {
+  type: 'door' | 'passage' | 'corridor' | 'stairs' | 'ladder' | 'ramp' | 'platform' | 'walkway' | 'opening' | 'hatch' | 'archway' | 'window' | 'object';
+  position: string;
+  description: string;
+}
+
+/**
+ * Structure - Physical/Spatial data for a node
+ * Separate from DNA (which handles visual/atmospheric properties)
+ * Structure is node-specific while DNA can cascade down the hierarchy
+ */
+export interface Structure {
+  /** Architectural form of the space */
+  form: 'rectangular' | 'round' | 'cylindrical' | 'spherical' | 'faceted' | 'organic' | 'arched' | 'gothic' | 'irregular';
+  /** Type of roof/ceiling */
+  roofType: 'domed' | 'flat' | 'vaulted' | 'pitched' | 'geodesic' | 'arched' | 'open-sky' | null;
+  /** Scale of the space */
+  scale: 'small' | 'medium' | 'large';
+  /** Primary orientation */
+  orientation: 'vertical' | 'horizontal' | 'wide' | 'cubic';
+  /** Type of openings */
+  openings: 'large-glass' | 'arched-windows' | 'narrow-slits' | 'open-passages' | 'minimal' | 'none';
+  /** Functional purpose of the space */
+  functionalType: 'residential' | 'commercial' | 'religious' | 'industrial' | 'civic' | 'entertainment';
+  /** Spatial layout description */
+  spatialLayout?: string;
+  /** User-specified elements that must be included */
+  requiredElements?: string[];
+  /** Navigable elements (doors, passages, stairs, etc.) */
+  navigableElements?: NavigableElement[];
+  /** Dominant physical features */
+  dominantElements?: string[];
+  /** Unique identifying features */
+  uniqueIdentifiers?: string[];
+  /** Suggested fixtures based on functional type */
+  suggestedFixtures?: string[];
+}
+
+/**
+ * Result from LLM structure analysis
+ * Determines physical/spatial properties of a new space
+ */
+export interface StructureAnalysis {
+  /** Name for the space */
+  name: string;
+  /** Whether this is an interior or exterior space */
+  perspective: 'interior' | 'exterior';
+  /** Physical structure data */
+  structure: Structure;
+  /** Brief description of the space */
+  description: string;
+}
+
+/**
+ * Combined result from parallel Space Analysis (Structure + DNA)
+ */
+export interface SpaceAnalysisResult {
+  /** Structure analysis result */
+  structureAnalysis: StructureAnalysis;
+  /** DNA analysis result (visual/atmospheric) */
+  dna: any;
+  /** Synthesized image prompt */
+  imagePrompt?: string;
+}

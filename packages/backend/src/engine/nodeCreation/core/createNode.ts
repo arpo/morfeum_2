@@ -172,6 +172,7 @@ async function generateNodeDNA(
 
 /**
  * Build a node object from DNA result
+ * NEW FORMAT: Uses spaceType and structure object (no legacy children arrays)
  */
 function buildNodeFromDNA(
   nodeId: string,
@@ -187,32 +188,47 @@ function buildNodeFromDNA(
     slug?: string;
   }
 ): Node {
-  const baseNode = {
+  // Determine spaceType based on nodeType (niche = interior, others = exterior)
+  const spaceType = nodeType === 'niche' ? 'interior' : 'exterior';
+  
+  // Build structure object with structural fields
+  const structure: any = {};
+  
+  // Move spatialLayout from DNA to structure if present
+  if ((dnaResult.dna as any)?.spatialLayout) {
+    structure.spatialLayout = (dnaResult.dna as any).spatialLayout;
+    delete (dnaResult.dna as any).spatialLayout;
+  }
+  
+  // Add structural fields to structure object
+  if (dnaResult.navigableElements && dnaResult.navigableElements.length > 0) {
+    structure.navigableElements = dnaResult.navigableElements;
+  }
+  if (dnaResult.dominantElements && dnaResult.dominantElements.length > 0) {
+    structure.dominantElements = dnaResult.dominantElements;
+  }
+  if (dnaResult.uniqueIdentifiers && dnaResult.uniqueIdentifiers.length > 0) {
+    structure.uniqueIdentifiers = dnaResult.uniqueIdentifiers;
+  }
+
+  const baseNode: any = {
     id: nodeId,
     type: nodeType,
     name: dnaResult.name,
+    spaceType,  // NEW: Add spaceType field
     description: dnaResult.description,
     dna: dnaResult.dna,
-    navigableElements: dnaResult.navigableElements,
-    dominantElements: dnaResult.dominantElements,
-    uniqueIdentifiers: dnaResult.uniqueIdentifiers,
     searchDesc: dnaResult.searchDesc,
     slug: dnaResult.slug,
   };
-
-  // Add type-specific empty children arrays
-  switch (nodeType) {
-    case 'host':
-      return { ...baseNode, type: 'host', regions: [] } as HostNode;
-    case 'region':
-      return { ...baseNode, type: 'region', locations: [] } as RegionNode;
-    case 'location':
-      return { ...baseNode, type: 'location', niches: [] } as LocationNode;
-    case 'niche':
-      return { ...baseNode, type: 'niche' } as NicheNode;
-    default:
-      return baseNode as Node;
+  
+  // Add structure object if it has any fields
+  if (Object.keys(structure).length > 0) {
+    baseNode.structure = structure;
   }
+
+  // Return node without legacy children arrays (worldTrees handles hierarchy now)
+  return baseNode as Node;
 }
 
 /**

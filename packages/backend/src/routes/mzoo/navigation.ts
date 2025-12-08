@@ -306,10 +306,17 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
         }
       });
 
-      // Run pipeline asynchronously
+      // Run pipeline asynchronously - pass userPrompt for structure analysis
       (async () => {
         try {
-          await runCreateNodePipeline(decision, context, intent, apiKey, undefined, navigationId);
+          await runCreateNodePipeline(
+            decision, 
+            context, 
+            intent, 
+            apiKey, 
+            { userPrompt: text || intent.target || decision.newNodeName },  // Pass user text for structure analysis
+            navigationId
+          );
         } catch (pipelineError) {
           console.error('[NAVIGATION COMMAND ERROR]', pipelineError);
         } finally {
@@ -462,6 +469,55 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
       );
 
       console.log(`✅ [CREATE-NODE] Pipeline complete. Node: ${result.node?.name || 'unknown'}`);
+      
+      // Save node to storage and update worldTrees
+      const updatedWorldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };
+      
+      // Save node to nodes collection
+      updatedWorldsData.nodes[result.node.id] = result.node;
+      
+      // Add to worldTrees based on node type
+      if (nodeType === 'host') {
+        // Host nodes go directly into worldTrees as root entries
+        updatedWorldsData.worldTrees.push({
+          id: result.node.id,
+          type: 'host',
+          children: []
+        });
+        console.log(`[CREATE-NODE] Added host to worldTrees: ${result.node.id}`);
+      } else if (parentId) {
+        // Child nodes (region, location, niche) need to be added to their parent's children array
+        const addChildToTree = (tree: any[], targetId: string, childEntry: any): boolean => {
+          for (const node of tree) {
+            if (node.id === targetId) {
+              if (!node.children) node.children = [];
+              node.children.push(childEntry);
+              return true;
+            }
+            if (node.children && addChildToTree(node.children, targetId, childEntry)) {
+              return true;
+            }
+          }
+          return false;
+        };
+        
+        const childEntry = {
+          id: result.node.id,
+          type: nodeType,
+          children: []
+        };
+        
+        const added = addChildToTree(updatedWorldsData.worldTrees, parentId, childEntry);
+        if (added) {
+          console.log(`[CREATE-NODE] Added ${nodeType} as child of ${parentId}`);
+        } else {
+          console.log(`[CREATE-NODE] Warning: Could not find parent ${parentId} in worldTrees`);
+        }
+      }
+      
+      // Save updated data
+      await storageService.saveWorlds(updatedWorldsData);
+      console.log(`[CREATE-NODE] Saved to storage`);
       
       // Send completion event
       sseService.sendEvent(operationId, 'completed', {

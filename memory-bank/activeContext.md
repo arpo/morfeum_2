@@ -1,5 +1,42 @@
 # Active Context
 
+## Recent Changes (2025-12-08)
+
+### GOTO Image DNA Inheritance Fix (Dec 8, 2025)
+- **Problem**: GOTO-created niches (e.g., "The Powder Room") didn't look like their parent host (Paris). Image prompt was generic, missing Parisian architectural style.
+- **Root Cause**: `composeImagePrompt()` in `createNodePipeline.ts` only used newly generated DNA, NOT inherited ancestor DNA fields.
+- **Solution**: Updated `composeImagePrompt()` to include parent DNA fields:
+  - `architectural_tone` - Building style (Haussmannian, Beaux-Arts, etc.)
+  - `cultural_tone` - Cultural aesthetics (Parisian sophistication)
+  - `palette_bias` - Color tendencies (warm beige, earthy neutrals)
+  - `mood_baseline` - Atmosphere (elegant, romantic)
+- **Result**: GOTO niches now inherit visual identity from host (Paris restroom looks Parisian)
+- **Files Modified**:
+  - `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Added parentDNA parameter to composeImagePrompt, passes inherited DNA
+
+### createNode Code Path Fixes (Dec 8, 2025)
+- **Problem**: `/NEW_HOST`, `/NEW_REGION`, `/NEW_LOCATION`, `/NEW_NICHE` commands were creating nodes but not saving to worldTrees properly
+- **Solution 1**: Updated `buildNodeFromDNA()` in `createNode.ts` to use new format:
+  - Added `spaceType` field (niche = 'interior', others = 'exterior')
+  - Created `structure` object for structural fields
+  - Moved `spatialLayout` from DNA to structure
+  - Removed legacy children arrays (regions, locations, niches)
+- **Solution 2**: Updated `create-node` route in `navigation.ts` to save to storage:
+  - Saves node to `nodes` collection
+  - Adds host nodes to `worldTrees` as root entries
+  - Adds child nodes to parent's `children` array recursively
+- **Files Modified**:
+  - `packages/backend/src/engine/nodeCreation/core/createNode.ts` - New node format
+  - `packages/backend/src/routes/mzoo/navigation.ts` - Save to worldTrees
+
+### Structure Data Migration (Dec 8, 2025)
+- **Purpose**: Migrate existing nodes to new format with `structure` object
+- **Migration Script**: `packages/backend/src/services/storage/migrateToStructure.ts`
+- **Changes**:
+  - Moved structural fields from root level to `structure` object
+  - Added `spaceType` field to all nodes
+  - Preserved backward compatibility with legacy fields
+
 ## Recent Changes (2025-12-05)
 
 ### GOTO Command Implementation & Fixes (Dec 5, 2025)

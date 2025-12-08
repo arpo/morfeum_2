@@ -4,6 +4,7 @@
  */
 
 import type { NodeDNA } from '../../hierarchyAnalysis/types';
+import type { Structure } from '../../navigation/types';
 
 export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'feature' | 'detail';
 
@@ -14,6 +15,8 @@ export interface NodeBuildOptions {
   parentId?: string;
   description?: string;
   data?: Record<string, any>;
+  /** NEW: Structure data stored separately from DNA */
+  structure?: Structure;
   navigableElements?: any[];
   dominantElements?: string[];
   uniqueIdentifiers?: string[];
@@ -28,6 +31,8 @@ export interface LocationNode {
   name: string;
   spaceType: SpaceType;
   dna: NodeDNA;
+  /** NEW: Structure data stored separately from DNA */
+  structure?: Structure;
   primaryMedia?: string;
   parentId?: string;
   description?: string;
@@ -97,7 +102,12 @@ export function buildNode(
     node.data = options.data;
   }
 
-  // Add structural fields if provided
+  // NEW: Add structure data (separate from DNA)
+  if (options?.structure) {
+    node.structure = options.structure;
+  }
+
+  // Add structural fields if provided (legacy, also in structure)
   if (options?.navigableElements) {
     node.navigableElements = options.navigableElements;
   }

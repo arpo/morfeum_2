@@ -4,3 +4,4 @@
  */
 
 export { analyzeDestination } from './destinationAnalyzer';
+export { analyzeStructure } from './structureAnalyzer';
