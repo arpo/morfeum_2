@@ -136,8 +136,6 @@ export function buildLocationEntity(
     metadata: {
       prompt: worldTree.imagePrompt || 'Location image',
       model: 'FLUX',
-      width: 1024,
-      height: 1024
     },
     entityRefs: [spawnId]
   });

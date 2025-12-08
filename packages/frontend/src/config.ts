@@ -88,7 +88,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Particle effects - floating dust, snow, rain, etc. */
   PARTICLES: {
-    ENABLED: true,
+    ENABLED: false,
     PRESET: 'dust', // 'dust' | 'snow' | 'rain' | 'fireflies' | 'embers' | 'fog' | 'bubbles' | 'sparks' | 'stars' | 'ash' | 'pollen'
     DEPTH: 6, // Particle depth range (2 = shallow, 4 = moderate, 6+ = deep spread with more size variation)
   },

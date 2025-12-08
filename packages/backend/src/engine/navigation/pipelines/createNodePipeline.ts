@@ -185,8 +185,6 @@ export async function runCreateLocationNodePipeline(
         metadata: {
           prompt: imagePrompt,
           model: 'FLUX',
-          width: 1024,
-          height: 1024
         },
         entityRefs: [] // Will be updated after node is created
       });
