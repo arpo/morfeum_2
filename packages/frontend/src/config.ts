@@ -34,7 +34,7 @@ export const PANEL_CONFIG = {
  */
 export const WORLD_VIEW_3D_CONFIG = {
   /** Depth scale - how much the 3D should "bulge" out (0.1 = subtle, 2.0 = extreme) */
-  MESH_DEPTH: 0.5,
+  MESH_DEPTH: 0.4,
   
   /** Focus plane - depth at which objects stay still during parallax (0 = far, 1 = near) */
   FOCUS: 0.25,
@@ -88,7 +88,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   
   /** Particle effects - floating dust, snow, rain, etc. */
   PARTICLES: {
-    ENABLED: false,
+    ENABLED: true,
     PRESET: 'dust', // 'dust' | 'snow' | 'rain' | 'fireflies' | 'embers' | 'fog' | 'bubbles' | 'sparks' | 'stars' | 'ash' | 'pollen'
     DEPTH: 6, // Particle depth range (2 = shallow, 4 = moderate, 6+ = deep spread with more size variation)
   },
