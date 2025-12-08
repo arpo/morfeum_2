@@ -19,6 +19,17 @@ export interface NodeDNA {
   [key: string]: any;
 }
 
+export interface NodeStructure {
+  spatialLayout?: string;
+  navigableElements?: Array<{
+    type: string;
+    position: string;
+    description: string;
+  }>;
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
+}
+
 export interface TreeNode {
   id: string;
   type: 'host' | 'region' | 'location' | 'niche';
@@ -28,14 +39,8 @@ export interface TreeNode {
   primaryMedia?: string;
   spaceType: 'exterior' | 'interior';
   children: TreeNode[];
-  // Structural fields for navigation and search
-  navigableElements?: Array<{
-    type: string;
-    position: string;
-    description: string;
-  }>;
-  dominantElements?: string[];
-  uniqueIdentifiers?: string[];
+  // NEW: Structure object containing structural/navigational data
+  structure?: NodeStructure;
   searchDesc?: string;
   slug?: string;
 }

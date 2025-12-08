@@ -1,12 +1,152 @@
 {
   "nodes": {
-    
+    "loc-1765200307296-e0h981xjc": {
+      "id": "loc-1765200307296-e0h981xjc",
+      "type": "host",
+      "name": "Gothenburg, Sweden",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An aerial view reveals a city interwoven with blue canals, bordered by a mix of classic red-brick architecture and sleek, modern buildings. The scale feels substantial yet navigable, with distinct districts spreading from the central port area.",
+        "colorsAndLighting": "Cool blues dominate the waterways, contrasted by the warm reds and browns of older brickwork and the muted grays of modern concrete and glass. Natural daylight filters through, creating soft shadows, with the occasional warm glow from streetlights in the evening.",
+        "atmosphere": "The air carries a crisp, salty tang from the nearby sea, with a moderate temperature year-round. Gentle breezes often stir the canal waters, and the ambient humidity is generally low. Weather can shift from clear skies to overcast with light rain.",
+        "materials": "Dominant materials include weathered red brick, painted wood facades, polished granite for public spaces, and expansive glass for contemporary structures. Textures range from rough, aged brick to smooth, reflective glass.",
+        "mood": "The mood is one of sophisticated tranquility, blending historical gravitas with a forward-looking, clean aesthetic. It evokes a sense of organized activity and understated elegance.",
+        "sounds": "Gulls, distant ship horns, gentle lapping water, murmuring crowds, tram bells, faint music",
+        "primary_surfaces": "Cobblestone streets, red-brick facades, steel and glass buildings",
+        "secondary_surfaces": "Paved walkways, wooden boardwalks, weathered metal railings",
+        "accent_features": "Bronze statues, ornate street lamps, colorful boat awnings, vibrant public art installations",
+        "dominant": "Cool blue (canals, sky) with extensive coverage",
+        "secondary": "Warm red-brown (brick buildings) with significant placement",
+        "accent": "Muted grays and silvers (modern architecture), occasional pops of color from signage and flags",
+        "ambient": "Soft, diffused daylight",
+        "structure": null,
+        "genre": "Modern European Cityscape",
+        "architectural_tone": "Nautical industrial meets functional Scandinavian modernism",
+        "cultural_tone": "Used by locals and tourists for commerce, leisure, and daily life; embodies Scandinavian practicality and artistic flair.",
+        "materials_base": "Brick, wood, glass, metal, stone",
+        "mood_baseline": "Calm, organized, welcoming",
+        "palette_bias": "Blues, reds, grays, earth tones",
+        "soundscape_base": "Urban coastal ambient",
+        "flora_base": "Limited urban greenery, park trees, potted plants",
+        "fauna_base": "Seagulls, pigeons, small urban birds"
+      },
+      "description": "A major port city on Sweden's west coast, known for its canals, maritime history, and vibrant cultural scene.",
+      "searchDesc": "Gothenburg, Sweden: Coastal city with canals, maritime history, and modern Nordic design.",
+      "slug": "gothenburg-sweden",
+      "structure": {
+        "spatialLayout": "The city is characterized by a grid-like pattern in its older sections, intersected by the winding natural and man-made canals. Open public squares and the expansive riverfront provide a sense of depth and connection to the water.",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "canal",
+            "description": "Waterways lined with historic buildings"
+          },
+          {
+            "type": "door",
+            "position": "building facade",
+            "description": "Entrances to shops and residences"
+          },
+          {
+            "type": "path",
+            "position": "cobblestone street",
+            "description": "Winding paths through the city center"
+          }
+        ],
+        "dominantElements": [
+          "Canal system",
+          "Historic red-brick buildings",
+          "Modern architectural structures",
+          "The Göta Älv riverfront"
+        ],
+        "uniqueIdentifiers": [
+          "Liseberg amusement park",
+          "Avenyn boulevard",
+          "Feskekôrka fish market",
+          "The Älvborg Fortress"
+        ]
+      },
+      "primaryMedia": "media-1765200322693-gs3des0yq"
+    },
+    "17b7cbf2-5c47-4a0c-b9d7-d79920bfe37b": {
+      "id": "17b7cbf2-5c47-4a0c-b9d7-d79920bfe37b",
+      "type": "region",
+      "name": "Ringön",
+      "spaceType": "exterior",
+      "description": "Ringön is a vibrant island district known for its blend of historic maritime structures and modern Scandinavian design. It serves as a bustling hub for commerce, culture, and leisure, drawing both locals and visitors to its scenic waterfront.",
+      "dna": {
+        "looks": "The visual character of Ringön is defined by the juxtaposition of aged brick industrial buildings, many bearing the patina of time and sea salt, with clean-lined, contemporary structures featuring extensive glass facades that reflect the water. Exposed metalwork and wooden jetties add to its maritime industrial charm.",
+        "colorsAndLighting": "Cool blues of the canals and sky dominate, complemented by the warm reds of old brick and the metallic grays of infrastructure. Natural light is abundant, often diffused and softened by the water's surface, creating a serene and sophisticated ambiance.",
+        "atmosphere": "The air carries a crisp, briny scent from the surrounding water, mingled with the aromas of cafes and eateries. A constant, gentle breeze often rustles through the area, contributing to a sense of refreshing openness and calm, even amidst the urban activity.",
+        "materials": "Brick, weathered wood, and robust metal structures are prevalent, forming the backbone of the historic industrial elements. Modern interventions frequently incorporate large panes of glass, polished concrete, and lighter-toned woods.",
+        "mood": "Ringön exudes a sophisticated tranquility, a place where industrious history meets contemporary design. It feels organized and forward-looking, yet grounded by its connection to the sea and its heritage.",
+        "sounds": "lapping water, distant foghorns, chatter, ferry horns, seabirds, creaking wood",
+        "primary_surfaces": [
+          "brick",
+          "glass",
+          "wood"
+        ],
+        "secondary_surfaces": [
+          "metal",
+          "stone",
+          "concrete"
+        ],
+        "accent_features": [
+          "repurposed industrial elements",
+          "maritime signage",
+          "decorative lighting along waterways",
+          "small jetties and piers"
+        ],
+        "dominant": "blue",
+        "secondary": "red",
+        "accent": "gray",
+        "ambient": "natural",
+        "genre": null,
+        "architectural_tone": "Nautical industrial meets functional Scandinavian modernism with a stronger emphasis on preserved historical industrial elements and contemporary waterfront additions.",
+        "cultural_tone": "Maintains the Scandinavian practicality and artistic flair, with a local identity centered around maritime heritage and artisanal businesses.",
+        "materials_base": "Brick, wood, glass, metal, stone",
+        "mood_baseline": null,
+        "palette_bias": "Blues, reds, grays, earth tones",
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "searchDesc": "Ringön: Nautical industrial meets Scandinavian modernism, a vibrant island district of commerce and culture.",
+      "slug": "ringon",
+      "structure": {
+        "spatialLayout": "The district is bisected and defined by its network of canals, with walkways and smaller streets following their contours. Buildings are often clustered around docks and open waterfront areas, interspersed with small green spaces.",
+        "dominantElements": [
+          "Historic shipyards",
+          "Modern glass-fronted cafes",
+          "Canal-side walkways",
+          "Art studios and galleries",
+          "Ferry terminals"
+        ],
+        "uniqueIdentifiers": [
+          "Prominent canals weaving through the district",
+          "A mix of weathered brick and sleek glass architecture",
+          "Dockside cranes repurposed as public art",
+          "The scent of salt air mixed with fresh pastries",
+          "The gentle lapping of water against moored boats"
+        ]
+      },
+      "primaryMedia": "media-1765200390564-ctsuk4l73"
+    }
   },
   "views": {},
   "worldTrees": [
-    
+    {
+      "id": "loc-1765200307296-e0h981xjc",
+      "type": "host",
+      "children": [
+        {
+          "id": "17b7cbf2-5c47-4a0c-b9d7-d79920bfe37b",
+          "type": "region",
+          "children": []
+        }
+      ]
+    }
   ],
   "pinnedIds": [
-    
+    "loc-1765200307296-e0h981xjc"
   ]
 }
