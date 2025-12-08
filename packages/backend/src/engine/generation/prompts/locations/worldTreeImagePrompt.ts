@@ -15,8 +15,8 @@
  * @returns Context prompt string for LLM to create FLUX description
  */
 
-import { generalPromptFix } from '../shared/generalPromptFix';
-import { 
+import { applyMorfeumStyle } from '../../shared/applyMorfeumStyle';
+import {
   OVERVIEW_SHOT, 
   LOCATION_SHOT, 
   NICHE_SHOT_INTERIOR, 
@@ -225,7 +225,7 @@ ${atmosphereSection}
 [ARCHITECTURAL STYLE:] ${dna.architectural_tone || 'Not specified'}
 [MOOD:] ${dna.mood || dna.mood_baseline || 'Not specified'}`;
 
-  return generalPromptFix(prompt);
+  return applyMorfeumStyle(prompt);
 }
 
 /**

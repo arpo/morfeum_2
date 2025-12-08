@@ -21,7 +21,7 @@ import { parseJSON } from '../utils/parseJSON';
 import { deepestNodeDNAGeneration } from '../generation/prompts/locations/deepestNodeDNA';
 import { worldTreeImagePromptContext } from '../generation/prompts/locations/worldTreeImagePrompt';
 import { parentChainDNAGeneration, type HierarchyNodeInfo } from '../generation/prompts/locations/parentChainDNA';
-import { generalPromptFix } from '../generation/prompts/shared/generalPromptFix';
+import { applyMorfeumStyle } from '../generation/shared/applyMorfeumStyle';
 import type { TreeNode } from '../../services/worldTree/types';
 
 /**
@@ -370,8 +370,8 @@ export async function runNodeCreationPipeline(
       throw new Error(imagePromptResult.error || 'Failed to generate image prompt');
     }
 
-    // Apply generalPromptFix for consistent styling
-    const imagePrompt = generalPromptFix(imagePromptResult.data.text.trim());
+    // Apply Morfeum visual style for consistent look
+    const imagePrompt = applyMorfeumStyle(imagePromptResult.data.text.trim());
 
     helper.completeStage('image_prompt_generation', 'Visual description ready', { prompt: imagePrompt });
 

@@ -6,7 +6,7 @@
  */
 
 import type { HierarchyNode } from '../../../hierarchyAnalysis/types';
-import { generalPromptFix } from '../shared/generalPromptFix';
+import { applyMorfeumStyle } from '../../shared/applyMorfeumStyle';
 import { OVERVIEW_SHOT, LOCATION_SHOT, NICHE_SHOT_INTERIOR, ALIGNMENT } from '../shared/cameraConfig';
 
 /**
@@ -78,7 +78,7 @@ ${targetNode.name}, ${shotInstructions.shot}.
 [SCENE:]
 ${contextText}${sceneDescription}`;
 
-const rv = generalPromptFix(prompt)
+const rv = applyMorfeumStyle(prompt)
 // console.log(rv);
   return rv;
 }

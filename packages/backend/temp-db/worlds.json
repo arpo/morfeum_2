@@ -1,152 +1,435 @@
 {
   "nodes": {
-    "loc-1765200307296-e0h981xjc": {
-      "id": "loc-1765200307296-e0h981xjc",
+    "loc-1765201541386-v2o5kqw3k": {
+      "id": "loc-1765201541386-v2o5kqw3k",
       "type": "host",
-      "name": "Gothenburg, Sweden",
+      "name": "Göteborg",
       "spaceType": "exterior",
       "dna": {
-        "looks": "An aerial view reveals a city interwoven with blue canals, bordered by a mix of classic red-brick architecture and sleek, modern buildings. The scale feels substantial yet navigable, with distinct districts spreading from the central port area.",
-        "colorsAndLighting": "Cool blues dominate the waterways, contrasted by the warm reds and browns of older brickwork and the muted grays of modern concrete and glass. Natural daylight filters through, creating soft shadows, with the occasional warm glow from streetlights in the evening.",
-        "atmosphere": "The air carries a crisp, salty tang from the nearby sea, with a moderate temperature year-round. Gentle breezes often stir the canal waters, and the ambient humidity is generally low. Weather can shift from clear skies to overcast with light rain.",
-        "materials": "Dominant materials include weathered red brick, painted wood facades, polished granite for public spaces, and expansive glass for contemporary structures. Textures range from rough, aged brick to smooth, reflective glass.",
-        "mood": "The mood is one of sophisticated tranquility, blending historical gravitas with a forward-looking, clean aesthetic. It evokes a sense of organized activity and understated elegance.",
-        "sounds": "Gulls, distant ship horns, gentle lapping water, murmuring crowds, tram bells, faint music",
-        "primary_surfaces": "Cobblestone streets, red-brick facades, steel and glass buildings",
-        "secondary_surfaces": "Paved walkways, wooden boardwalks, weathered metal railings",
-        "accent_features": "Bronze statues, ornate street lamps, colorful boat awnings, vibrant public art installations",
-        "dominant": "Cool blue (canals, sky) with extensive coverage",
-        "secondary": "Warm red-brown (brick buildings) with significant placement",
-        "accent": "Muted grays and silvers (modern architecture), occasional pops of color from signage and flags",
-        "ambient": "Soft, diffused daylight",
-        "structure": null,
-        "genre": "Modern European Cityscape",
-        "architectural_tone": "Nautical industrial meets functional Scandinavian modernism",
-        "cultural_tone": "Used by locals and tourists for commerce, leisure, and daily life; embodies Scandinavian practicality and artistic flair.",
-        "materials_base": "Brick, wood, glass, metal, stone",
-        "mood_baseline": "Calm, organized, welcoming",
-        "palette_bias": "Blues, reds, grays, earth tones",
-        "soundscape_base": "Urban coastal ambient",
-        "flora_base": "Limited urban greenery, park trees, potted plants",
-        "fauna_base": "Seagulls, pigeons, small urban birds"
+        "looks": "A pragmatic and resilient cityscape, marked by a blend of historic maritime architecture, functional industrial structures, and modern urban development. The coastline and waterways are central to its visual identity.",
+        "colorsAndLighting": "Natural daylight often reflects off water, creating a bright, sometimes stark illumination. Industrial areas are characterized by functional, often harsh lighting, while older districts offer warmer, more ambient light. Dominant colors are muted, reflecting natural materials and the maritime environment.",
+        "atmosphere": "The air is often fresh and carries the scent of the sea, mixed with urban activity. A sense of industriousness and a connection to the water pervades the atmosphere, with a pragmatic and down-to-earth feel.",
+        "materials": "A base of sturdy, weather-resistant materials like brick, concrete, steel, and treated wood. The influence of maritime and industrial functions is evident in the prevalent use of metals and durable construction.",
+        "mood": "A pragmatic resilience, a sense of enduring functionality, with an undercurrent of creative adaptation and a connection to a rich history of trade and industry.",
+        "sounds": "The distant hum of port activity, the cry of gulls, the lapping of water against docks, and the general sounds of a bustling city with a strong industrial presence.",
+        "primary_surfaces": "Brick, concrete, steel",
+        "secondary_surfaces": "Corrugated metal, treated wood, painted surfaces",
+        "accent_features": "Maritime salvage, industrial fixtures, urban art, visible infrastructure",
+        "dominant": "Muted greys and blues, reflecting water and steel",
+        "secondary": "Aged red-browns of brick, earthy concrete tones",
+        "accent": "Salty blues and greens of the sea, occasional vibrant graffiti",
+        "ambient": "Bright, natural, often with a maritime haze",
+        "genre": "Industrial Maritime",
+        "architectural_tone": "Functional, utilitarian, with a strong industrial and maritime influence",
+        "cultural_tone": "Pragmatic, industrious, with a focus on trade, craftsmanship, and resilience",
+        "materials_base": "Durable, weather-resistant industrial and maritime materials",
+        "mood_baseline": "Resilient, functional, connected to history",
+        "palette_bias": "Muted earth tones, industrial neutrals, and maritime blues",
+        "soundscape_base": "Maritime and industrial ambient sounds",
+        "flora_base": "Hardy coastal vegetation, urban greenery",
+        "fauna_base": "Seabirds, urban wildlife, aquatic life"
       },
-      "description": "A major port city on Sweden's west coast, known for its canals, maritime history, and vibrant cultural scene.",
-      "searchDesc": "Gothenburg, Sweden: Coastal city with canals, maritime history, and modern Nordic design.",
-      "slug": "gothenburg-sweden",
+      "description": "A major port city on Sweden's west coast, known for its maritime history and vibrant cultural scene. Its industrial heritage and coastal location shape its unique urban character.",
+      "searchDesc": "Port city on Sweden's west coast, blending maritime history with industrial and cultural vibrancy.",
+      "slug": "goteborg",
       "structure": {
-        "spatialLayout": "The city is characterized by a grid-like pattern in its older sections, intersected by the winding natural and man-made canals. Open public squares and the expansive riverfront provide a sense of depth and connection to the water.",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "canal",
-            "description": "Waterways lined with historic buildings"
-          },
-          {
-            "type": "door",
-            "position": "building facade",
-            "description": "Entrances to shops and residences"
-          },
-          {
-            "type": "path",
-            "position": "cobblestone street",
-            "description": "Winding paths through the city center"
-          }
-        ],
+        "spatialLayout": "Characterized by a functional arrangement of ports, industrial zones, residential areas, and commercial centers, often with a significant presence of water bodies and canals shaping the urban form.",
         "dominantElements": [
-          "Canal system",
-          "Historic red-brick buildings",
-          "Modern architectural structures",
-          "The Göta Älv riverfront"
+          "Port facilities",
+          "Canals",
+          "Industrial zones"
         ],
         "uniqueIdentifiers": [
           "Liseberg amusement park",
-          "Avenyn boulevard",
-          "Feskekôrka fish market",
-          "The Älvborg Fortress"
+          "Gothia Towers",
+          "Fish Church (Feskekôrka)"
         ]
-      },
-      "primaryMedia": "media-1765200322693-gs3des0yq"
+      }
     },
-    "17b7cbf2-5c47-4a0c-b9d7-d79920bfe37b": {
-      "id": "17b7cbf2-5c47-4a0c-b9d7-d79920bfe37b",
+    "ef76908b-cd8c-4e0a-9999-e4cf8d7f5e09": {
+      "id": "ef76908b-cd8c-4e0a-9999-e4cf8d7f5e09",
       "type": "region",
       "name": "Ringön",
       "spaceType": "exterior",
-      "description": "Ringön is a vibrant island district known for its blend of historic maritime structures and modern Scandinavian design. It serves as a bustling hub for commerce, culture, and leisure, drawing both locals and visitors to its scenic waterfront.",
       "dna": {
-        "looks": "The visual character of Ringön is defined by the juxtaposition of aged brick industrial buildings, many bearing the patina of time and sea salt, with clean-lined, contemporary structures featuring extensive glass facades that reflect the water. Exposed metalwork and wooden jetties add to its maritime industrial charm.",
-        "colorsAndLighting": "Cool blues of the canals and sky dominate, complemented by the warm reds of old brick and the metallic grays of infrastructure. Natural light is abundant, often diffused and softened by the water's surface, creating a serene and sophisticated ambiance.",
-        "atmosphere": "The air carries a crisp, briny scent from the surrounding water, mingled with the aromas of cafes and eateries. A constant, gentle breeze often rustles through the area, contributing to a sense of refreshing openness and calm, even amidst the urban activity.",
-        "materials": "Brick, weathered wood, and robust metal structures are prevalent, forming the backbone of the historic industrial elements. Modern interventions frequently incorporate large panes of glass, polished concrete, and lighter-toned woods.",
-        "mood": "Ringön exudes a sophisticated tranquility, a place where industrious history meets contemporary design. It feels organized and forward-looking, yet grounded by its connection to the sea and its heritage.",
-        "sounds": "lapping water, distant foghorns, chatter, ferry horns, seabirds, creaking wood",
+        "looks": "Dominated by robust, utilitarian architecture, the island features expansive, multi-story brick structures and large, open warehouses. The scale is substantial, designed for industrial processes, with a visible network of pipes and structural beams. Modern interventions are often juxtaposed against these older forms.",
+        "colorsAndLighting": "The palette is largely muted, with the deep reds and browns of aged brick punctuated by the grey of concrete and steel. Natural light filters through large windows, casting long shadows, while industrial lighting fixtures provide stark illumination in darker areas.",
+        "atmosphere": "The air carries a faint scent of brine from the nearby water, mixed with the occasional whiff of exhaust or creative workshop smells. There's a sense of robust stillness, broken by the distant sounds of industry or the movement of gulls. The temperature can feel brisk, especially near the water.",
+        "materials": "Primary materials are weathered red brick, concrete, corrugated metal, and steel. Textures range from rough, aged brickwork to smooth, painted metal, with signs of wear and tear evident on many surfaces.",
+        "mood": "A sense of history and resilience, with an undercurrent of creative energy and future potential.",
+        "sounds": "Distant ship horns, squawking seagulls, echoing footsteps, machinery hum, faint music.",
+        "primary_surfaces": "Weathered red brick, rough concrete",
+        "secondary_surfaces": "Corrugated metal siding, painted steel beams, asphalt",
+        "accent_features": "Graffiti art, distinctive chimney stacks, remnants of old signage",
+        "dominant": "Deep red-brown (brick)",
+        "secondary": "Cool grey (concrete, metal)",
+        "accent": "Salty blue-grey (waterfront), occasional vibrant graffiti colors",
+        "ambient": "Natural daylight with industrial accent lighting",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": "Utilitarian industrial with emergent creative studio adaptations",
+        "cultural_tone": "Workers and artists in a space of production and transformation",
+        "materials_base": "Industrial palette",
+        "mood_baseline": "Gritty resilience and creative repurposing",
+        "palette_bias": "Earth tones and industrial neutrals",
+        "soundscape_base": "Maritime and industrial ambient sounds",
+        "flora_base": "None",
+        "fauna_base": "Seagulls"
+      },
+      "description": "An industrial island district in Göteborg, characterized by its historic factories, warehouses, and emerging creative hubs.",
+      "searchDesc": "Historic industrial island in Göteborg, Sweden, with factories, warehouses, and creative hubs.",
+      "slug": "ring-n",
+      "structure": {
+        "spatialLayout": "The island's layout is characterized by large, blocky industrial buildings with expansive open spaces between them. Pathways often follow logical routes for cargo and movement, with a clear division between the waterfront and the core industrial areas.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "factory facade",
+            "description": "Heavy, metal-clad industrial doors"
+          },
+          {
+            "type": "passage",
+            "position": "between warehouses",
+            "description": "Narrow, shaded alleyways"
+          },
+          {
+            "type": "path",
+            "position": "along the waterfront",
+            "description": "Cobblestone and asphalt walkways"
+          }
+        ],
+        "dominantElements": [
+          "Red brick industrial buildings",
+          "Large, multi-story warehouses",
+          "Waterfront cranes and docks",
+          "Modern studio and workshop facades"
+        ],
+        "uniqueIdentifiers": [
+          "Distinctive factory chimneys",
+          "Rusting industrial machinery",
+          "Graffiti art on brick walls",
+          "Seagulls overhead"
+        ]
+      },
+      "primaryMedia": "media-1765201562311-6puvaco9q"
+    },
+    "121a728e-a38a-41c3-bdbc-03833c3ea63f": {
+      "id": "121a728e-a38a-41c3-bdbc-03833c3ea63f",
+      "type": "location",
+      "name": "The Circuit Lounge",
+      "spaceType": "exterior",
+      "description": "A pulsating techno bar nestled within the industrial district, its exterior a testament to repurposed industrial materials.  Luminous, abstract art installations adorn its facade, hinting at the vibrant energy within.",
+      "dna": {
+        "looks": "The techno bar presents a raw, industrial exterior with elements of creative modification. Rough brickwork is interspersed with patched metal sheeting, and large, imposing windows hint at the vibrant scene within. Abstract, illuminated art pieces are integrated into the facade.",
+        "colorsAndLighting": "The dominant deep red-brown of the brick is offset by the cool, electric blues and purples of neon signage and dynamic light projections.  The overall lighting is moody and atmospheric, with occasional bursts of intense color.",
+        "atmosphere": "The immediate surroundings are gritty, filled with the faint hum of machinery and distant, rhythmic beats. The air carries a faint scent of ozone and exhaust, softened by the muffled bass thumping from within.  The sense of creative energy is palpable, even from the outside.",
+        "materials": "The primary construction materials are weathered brick and utilitarian steel plating, showing signs of industrial past.  Accents of reinforced glass and various salvaged metals are also visible, reflecting the bar's adaptive nature.",
+        "mood": "This building exudes a raw, energetic, and slightly rebellious spirit, a beacon of artistic expression within a functional industrial landscape.",
+        "sounds": "Distant bass, muffled music, street noise, occasional clanging, industrial hum",
         "primary_surfaces": [
-          "brick",
-          "glass",
-          "wood"
+          "weathered brick",
+          "steel plating"
         ],
         "secondary_surfaces": [
-          "metal",
-          "stone",
-          "concrete"
+          "reinforced glass",
+          "salvaged metal"
         ],
         "accent_features": [
-          "repurposed industrial elements",
-          "maritime signage",
-          "decorative lighting along waterways",
-          "small jetties and piers"
+          "neon signage",
+          "projected light art",
+          "external speakers"
         ],
-        "dominant": "blue",
-        "secondary": "red",
-        "accent": "gray",
-        "ambient": "natural",
+        "dominant": "deep red-brown",
+        "secondary": "industrial grey",
+        "accent": "electric blue, deep purple",
+        "ambient": "moody, atmospheric",
         "genre": null,
-        "architectural_tone": "Nautical industrial meets functional Scandinavian modernism with a stronger emphasis on preserved historical industrial elements and contemporary waterfront additions.",
-        "cultural_tone": "Maintains the Scandinavian practicality and artistic flair, with a local identity centered around maritime heritage and artisanal businesses.",
-        "materials_base": "Brick, wood, glass, metal, stone",
-        "mood_baseline": null,
-        "palette_bias": "Blues, reds, grays, earth tones",
+        "architectural_tone": "Utilitarian industrial with emergent creative studio adaptations",
+        "cultural_tone": "Workers and artists in a space of production and transformation",
+        "materials_base": "Industrial palette",
+        "mood_baseline": "A sense of history and resilience, with an undercurrent of creative energy and future potential.",
+        "palette_bias": "Earth tones and industrial neutrals",
         "soundscape_base": null,
         "flora_base": null,
         "fauna_base": null
       },
-      "searchDesc": "Ringön: Nautical industrial meets Scandinavian modernism, a vibrant island district of commerce and culture.",
-      "slug": "ringon",
+      "searchDesc": "Techno bar with industrial flair, pulsing lights, and graffiti art. Features steel doors and neon signs.",
+      "slug": "the-circuit-lounge",
       "structure": {
-        "spatialLayout": "The district is bisected and defined by its network of canals, with walkways and smaller streets following their contours. Buildings are often clustered around docks and open waterfront areas, interspersed with small green spaces.",
+        "spatialLayout": "The bar is a solid, blocky structure, likely occupying a prominent corner. The main entrance is central and imposing, with secondary access points subtly integrated into the building's periphery.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A large, reinforced steel door, pulsing with faint blue light, leading into the main bar area."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "A narrow, graffiti-covered alleyway that winds around the side, potentially leading to a service entrance or a hidden smoking area."
+          },
+          {
+            "type": "window",
+            "position": "left",
+            "description": "A large, reinforced window with tinted glass, offering glimpses of flashing lights and silhouetted figures within."
+          }
+        ],
         "dominantElements": [
-          "Historic shipyards",
-          "Modern glass-fronted cafes",
-          "Canal-side walkways",
-          "Art studios and galleries",
-          "Ferry terminals"
+          "Graffiti-art adorned brick walls",
+          "Industrial metal plating",
+          "Large, glowing neon signage",
+          "Exterior audio equipment"
         ],
         "uniqueIdentifiers": [
-          "Prominent canals weaving through the district",
-          "A mix of weathered brick and sleek glass architecture",
-          "Dockside cranes repurposed as public art",
-          "The scent of salt air mixed with fresh pastries",
-          "The gentle lapping of water against moored boats"
+          "Pulsing blue light from the main entrance",
+          "Abstract, kinetic sculptures mounted on the facade",
+          "Visible, large-scale subwoofers mounted outside",
+          "Constantly shifting, projected light patterns on the walls"
         ]
       },
-      "primaryMedia": "media-1765200390564-ctsuk4l73"
+      "primaryMedia": "media-1765201611989-5dq2mi8be"
+    },
+    "niche-1765201646560-jtd7b41pl": {
+      "id": "niche-1765201646560-jtd7b41pl",
+      "type": "niche",
+      "name": "The Circuit Lounge Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a raw, utilitarian industrial space where creative studios have emerged. Exposed conduits, metal beams, and concrete floors are softened by an array of artistic installations and makeshift workstations. Furniture is often repurposed or custom-built, reflecting a spirit of innovation.",
+        "colorsAndLighting": "Dominant deep red-brown hues are present in the raw materials and perhaps some painted accents. Lighting is dynamic and varied, with spotlights illuminating work areas and ambient colored lights contributing to the energetic, slightly rebellious atmosphere.",
+        "atmosphere": "The air buzzes with a palpable energy, a blend of focused creation and communal interaction. It feels industrious yet lively, with the faint scent of materials like wood, metal, and perhaps solvent. The space is alive with the hum of activity.",
+        "materials": "Predominantly raw, utilitarian materials like concrete, raw wood, and exposed metal are prevalent. These are often juxtaposed with softer, more pliable materials used in artistic creations. Textures are rough and tactile, reflecting their functional origins and hands-on adaptation.",
+        "mood": "This space exudes a raw, energetic, and slightly rebellious spirit, a beacon of artistic expression within a functional industrial landscape. It's a place of ongoing creation and transformation.",
+        "sounds": "Hum of machinery, chatter, music, hammering, sparks.",
+        "spatialLayout": "The space is likely a large, open industrial volume, subdivided by functional zones rather than solid walls. Entry points might be unassuming industrial doors leading into the vast, adaptable interior, with a central area serving as a focal point for gathering or performance.",
+        "primary_surfaces": "Concrete floors, exposed metal beams, raw brick or concrete walls.",
+        "secondary_surfaces": "Repurposed wood, metal sheeting, fabric draping, artistic murals.",
+        "accent_features": "Improvised lighting installations, art pieces integrated into the structure, visible tools and ongoing projects.",
+        "dominant": "deep red-brown",
+        "secondary": "gray (concrete/metal)",
+        "accent": "vibrant artistic colors (various)",
+        "ambient": "warm",
+        "structure": {
+          "form": "irregular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "open-passages",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765201646559-yr5x2g9sx",
+      "description": "The interior of The Circuit Lounge, a medium-scale, rectangular entertainment space with a flat ceiling and large glass openings, oriented cubically for balanced proportions.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "large-glass",
+        "functionalType": "entertainment",
+        "spatialLayout": "This interior space is designed for social gathering and entertainment, likely featuring areas for seating and mingling.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "bar counter",
+          "lounge seating",
+          "cocktail tables",
+          "ambient lighting fixtures",
+          "dj booth",
+          "dance floor area"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center back",
+            "description": "Main entrance/exit to the lounge."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "Passage leading to restrooms or other service areas."
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "Passage leading to kitchen or staff areas."
+          }
+        ],
+        "dominantElements": [
+          "central seating arrangement",
+          "prominent bar area",
+          "ambient lighting system",
+          "sound system integration"
+        ],
+        "uniqueIdentifiers": [
+          "design inspired by 'The Circuit'",
+          "modern lounge aesthetic",
+          "energetic atmosphere"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center back",
+          "description": "Main entrance/exit to the lounge."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "Passage leading to restrooms or other service areas."
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "Passage leading to kitchen or staff areas."
+        }
+      ],
+      "dominantElements": [
+        "central seating arrangement",
+        "prominent bar area",
+        "ambient lighting system",
+        "sound system integration"
+      ],
+      "uniqueIdentifiers": [
+        "design inspired by 'The Circuit'",
+        "modern lounge aesthetic",
+        "energetic atmosphere"
+      ],
+      "searchDesc": "Interior of The Circuit Lounge, a utilitarian industrial space adapted for artistic production and transformation.",
+      "slug": "interior-of-the-circuit-lounge"
+    },
+    "niche-1765201693915-9wpx63nsw": {
+      "id": "niche-1765201693915-9wpx63nsw",
+      "type": "niche",
+      "name": "The Circuit Lounge Bathroom",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The bathroom is a compact, functional space with a raw, unfinished aesthetic. Walls might be bare concrete or painted in a deep red-brown, punctuated by exposed plumbing and simple, utilitarian fixtures. The layout is straightforward, prioritizing utility over decoration.",
+        "colorsAndLighting": "Dominated by a deep red-brown, this space is lit by harsh, functional fluorescent lights that cast a cool, stark glow, contrasting with the warmer tones of the walls.",
+        "atmosphere": "The air feels cool and slightly damp, carrying the faint scent of cleaning products and industrial materials. There's a sense of practical utility here, devoid of pretense. The silence is broken only by the hum of the lights or the occasional drip of water.",
+        "materials": "Primary materials include rough concrete for the floor and possibly walls, with metal fixtures and exposed copper or galvanized steel pipes. Finishes are typically matte or brushed, showing signs of wear and tear.",
+        "mood": "This space evokes a feeling of raw functionality and practical resilience, fitting for a working artist's studio.",
+        "sounds": "fluorescent hum, water drip, distant machinery",
+        "spatialLayout": "A small, enclosed space with a simple, functional layout. Entry is likely through a plain door. There's a clear focal point on the utility sink and toilet.",
+        "primary_surfaces": "concrete, painted plaster",
+        "secondary_surfaces": "metal pipes, ceramic fixtures",
+        "accent_features": "exposed pipework",
+        "dominant": "deep red-brown (walls)",
+        "secondary": "grey (concrete floor)",
+        "accent": "metallic (pipes and fixtures)",
+        "ambient": "cool",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": null,
+        "palette_bias": null,
+        "soundscape_base": null,
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1765201693914-x3v97xo4h",
+      "description": "A small, essential amenity space within The Circuit Lounge, providing necessary facilities for guests.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "small",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "functionalType": "entertainment",
+        "spatialLayout": "A compact, functional space designed for guest use, featuring essential amenities. It is accessed from the main lounge area.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "toilet",
+          "sink",
+          "mirror",
+          "hand dryer",
+          "soap dispenser"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center",
+            "description": "An opening leading from The Circuit Lounge into the bathroom."
+          }
+        ],
+        "dominantElements": [
+          "walls",
+          "floor",
+          "ceiling",
+          "sink",
+          "toilet"
+        ],
+        "uniqueIdentifiers": [
+          "Compact and functional design",
+          "Minimalist fixtures",
+          "Private amenity within an entertainment venue"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "An opening leading from The Circuit Lounge into the bathroom."
+        }
+      ],
+      "dominantElements": [
+        "walls",
+        "floor",
+        "ceiling",
+        "sink",
+        "toilet"
+      ],
+      "uniqueIdentifiers": [
+        "Compact and functional design",
+        "Minimalist fixtures",
+        "Private amenity within an entertainment venue"
+      ],
+      "searchDesc": "Utilitarian industrial bathroom with red-brown tones and artistic studio adaptation.",
+      "slug": "bathroom"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765200307296-e0h981xjc",
+      "id": "loc-1765201541386-v2o5kqw3k",
       "type": "host",
       "children": [
         {
-          "id": "17b7cbf2-5c47-4a0c-b9d7-d79920bfe37b",
+          "id": "ef76908b-cd8c-4e0a-9999-e4cf8d7f5e09",
           "type": "region",
-          "children": []
+          "children": [
+            {
+              "id": "121a728e-a38a-41c3-bdbc-03833c3ea63f",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765201646560-jtd7b41pl",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765201693915-9wpx63nsw",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "pinnedIds": [
-    "loc-1765200307296-e0h981xjc"
+    "loc-1765201541386-v2o5kqw3k"
   ]
 }

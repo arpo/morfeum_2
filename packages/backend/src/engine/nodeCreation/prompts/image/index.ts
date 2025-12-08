@@ -3,10 +3,13 @@
  * 
  * Context-aware image prompts for each node type.
  * Each node type has different camera style and composition.
+ * 
+ * All prompts are wrapped with applyMorfeumStyle for consistent visual style.
  */
 
 import type { NodeType, Node, ScenePerspective } from '../../types';
 import type { NodeDNA } from '../../../hierarchyAnalysis/types';
+import { applyMorfeumStyle, type MorfeumStyleOptions } from '../../../generation/shared/applyMorfeumStyle';
 
 /**
  * Camera configuration per node type
@@ -184,28 +187,48 @@ Architectural photography, outdoor space detail, sense of openness, atmospheric 
 }
 
 /**
+ * Options for image prompt generation
+ */
+export interface NodeImagePromptOptions extends MorfeumStyleOptions {
+  // Future options can be added here
+}
+
+/**
  * Get the appropriate image prompt for a node
  * 
  * @param node - Node to generate image prompt for
  * @param perspective - For niche nodes, interior or exterior
- * @returns Image prompt string
+ * @param options - Style options (excludeCreatures defaults to true for locations)
+ * @returns Image prompt string with Morfeum style applied
  */
 export function getNodeImagePrompt(
   node: Node,
-  perspective: ScenePerspective = 'exterior'
+  perspective: ScenePerspective = 'exterior',
+  options: NodeImagePromptOptions = {}
 ): string {
+  let basePrompt: string;
+  
   switch (node.type) {
     case 'host':
-      return hostImagePrompt(node);
+      basePrompt = hostImagePrompt(node);
+      break;
     case 'region':
-      return regionImagePrompt(node);
+      basePrompt = regionImagePrompt(node);
+      break;
     case 'location':
-      return locationImagePrompt(node);
+      basePrompt = locationImagePrompt(node);
+      break;
     case 'niche':
-      return perspective === 'interior' 
+      basePrompt = perspective === 'interior' 
         ? nicheInteriorImagePrompt(node)
         : nicheExteriorImagePrompt(node);
+      break;
     default:
-      return locationImagePrompt(node);
+      basePrompt = locationImagePrompt(node);
   }
+  
+  // Apply Morfeum visual style (excludeCreatures defaults to true for locations)
+  return applyMorfeumStyle(basePrompt, { 
+    excludeCreatures: options.excludeCreatures ?? true 
+  });
 }
