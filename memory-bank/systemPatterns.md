@@ -492,6 +492,92 @@ A large circular vent, 2 meters in diameter, emits warm orange light from the ri
 FLUX Prompt with inline markers → LLM extraction → Structured JSON navigableElements
 ```
 
+## Command Flag System Pattern
+
+### Architecture Overview
+Command flags (e.g., `--furnish`) flow through the system from frontend to backend:
+
+```
+Frontend Input → commandParser → navigationCommands → Backend Route → Pipeline → Analyzer
+```
+
+### Implementation Files
+- **Config**: `packages/backend/src/config/navigation.ts` - `COMMAND_FLAGS` constant
+- **Frontend Parser**: `packages/frontend/src/features/spawn-input/SpawnInputBar/commandParser.ts`
+- **Frontend Transmitter**: `packages/frontend/src/features/spawn-input/SpawnInputBar/navigationCommands.ts`
+- **Backend Handler**: `packages/backend/src/routes/mzoo/navigation.ts`
+
+### Flag Definition Pattern
+```typescript
+// packages/backend/src/config/navigation.ts
+export const COMMAND_FLAGS = {
+  CREATE_IMAGE: '--create-image',
+  BACKGROUND_TASK: '--bgtask',
+  FURNISH: '--furnish'
+} as const;
+```
+
+### Frontend Parsing Pattern
+```typescript
+// commandParser.ts - Extract flags from user input
+export interface ParsedCommand {
+  command: string;
+  text: string | undefined;
+  flags: {
+    createImage: boolean;
+    backgroundTask: boolean;
+    furnish: boolean;  // Add new flags here
+  };
+}
+
+// Parse loop handles each flag
+if (part === COMMAND_FLAGS.FURNISH) {
+  flags.furnish = true;
+} else if (!part.startsWith('--')) {
+  textParts.push(part);
+}
+```
+
+### Frontend Transmission Pattern
+```typescript
+// navigationCommands.ts - Reconstruct text with flags for API
+let textWithFlags = text || '';
+if (flags.furnish) {
+  textWithFlags = textWithFlags ? `${textWithFlags} --furnish` : '--furnish';
+}
+
+// Send to backend
+body: JSON.stringify({ command, text: textWithFlags || undefined, context })
+```
+
+### Backend Parsing Pattern (Critical)
+```typescript
+// navigation.ts - Parse flags FIRST, before building intent
+const { cleanText, includeFurnishing } = parseCommandFlags(text);
+
+// Build intent with CLEAN text (flags removed)
+const intent = buildIntentFromCommand(command, cleanText || null, nodeType);
+
+// Pass flags to pipeline
+await runCreateNodePipeline(decision, context, intent, apiKey, { 
+  userPrompt: cleanText,
+  includeFurnishing  // Flag passed through
+});
+```
+
+### Key Rules
+1. **Parse flags at TOP of handler** - Before building intent or routing
+2. **Use clean text for intent** - Flags should not leak into userPrompt/target
+3. **Pass flags via options object** - Explicitly pass to pipeline/analyzers
+4. **Frontend reconstructs text** - Append flags back before API call
+
+### Adding New Flags
+1. Add to `COMMAND_FLAGS` in backend config
+2. Add to `ParsedCommand.flags` interface in frontend
+3. Add parsing logic in commandParser
+4. Add reconstruction in navigationCommands
+5. Handle in backend route and pass to pipeline
+
 ## Navigation System Patterns
 
 ### Two-Step Architecture

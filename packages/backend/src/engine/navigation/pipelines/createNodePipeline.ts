@@ -33,6 +33,7 @@ export interface CreateNodeOptions {
   gotoText?: string;     // For GOTO: The destination text to analyze
   userPrompt?: string;   // User's space description (used for structure analysis)
   useUnifiedPipeline?: boolean; // Enable new unified pipeline (defaults to true)
+  includeFurnishing?: boolean; // Include furnishing details in structure analysis (--furnish flag)
 }
 
 /**
@@ -80,7 +81,7 @@ export async function runCreateLocationNodePipeline(
     // Run Structure Analysis and DNA Generation in PARALLEL
     const [structureAnalysis, dnaResult] = await Promise.all([
       // Structure Analysis (determines physical/spatial properties)
-      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior'),
+      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.includeFurnishing),
       
       // DNA Generation (determines visual/atmospheric properties)
       (async () => {
@@ -332,6 +333,20 @@ function composeImagePrompt(
   // Add dominant elements
   if (structure.dominantElements && structure.dominantElements.length > 0) {
     parts.push(`Key features: ${structure.dominantElements.join(', ')}.`);
+  }
+
+  // Add furnishing details if present
+  if (structureAnalysis.furnishingDetails) {
+    const { userSpecified, suggested, placementNotes } = structureAnalysis.furnishingDetails;
+    if (userSpecified && userSpecified.length > 0) {
+      parts.push(`User-specified furnishings: ${userSpecified.join(', ')}.`);
+    }
+    if (suggested && suggested.length > 0) {
+      parts.push(`Suggested furnishings: ${suggested.join(', ')}.`);
+    }
+    if (placementNotes && placementNotes.length > 0) {
+      parts.push(`Furnishing placement notes: ${placementNotes.join('. ')}.`);
+    }
   }
 
   return parts.join(' ');

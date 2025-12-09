@@ -114,7 +114,13 @@ export async function handleNavigationCommand(
     setActiveEntity: (id: string) => void;
   }
 ): Promise<NavigationResult> {
-  const { command, text } = parsedCommand;
+  const { command, text, flags } = parsedCommand;
+  
+  // Reconstruct text with flags for backend parsing
+  let textWithFlags = text || '';
+  if (flags.furnish) {
+    textWithFlags = textWithFlags ? `${textWithFlags} --furnish` : '--furnish';
+  }
   const { setIsMoving, setErrorMessage, setMovementInput } = callbacks;
   const { getNode, getSpatialNodes, setActiveEntity } = deps;
 
@@ -145,7 +151,7 @@ export async function handleNavigationCommand(
     const response = await fetch('/api/mzoo/navigation/command', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ command, text, context })
+      body: JSON.stringify({ command, text: textWithFlags || undefined, context })
     });
 
     const result = await response.json();

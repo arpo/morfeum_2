@@ -22,13 +22,15 @@ export async function analyzeStructure(
   apiKey: string,
   userPrompt: string,
   context: NavigationContext,
-  perspective: 'interior' | 'exterior'
+  perspective: 'interior' | 'exterior',
+  includeFurnishing?: boolean
 ): Promise<StructureAnalysis> {
   // Generate the analysis prompt
   const prompt = structureAnalysisPrompt({
     userPrompt,
     context,
-    perspective
+    perspective,
+    includeFurnishing
   });
 
   // Call LLM for structure analysis

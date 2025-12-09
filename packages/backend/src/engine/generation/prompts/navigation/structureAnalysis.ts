@@ -6,28 +6,32 @@
 
 import type { NavigationContext } from '../../../navigation/types';
 
-interface StructureAnalysisInput {
+export interface StructureAnalysisInput {
   /** User's description of the space (e.g., "Parisian Café, cozy and charming...") */
   userPrompt: string;
   /** Context including current node and parent location */
   context: NavigationContext;
   /** Whether this is an interior or exterior space */
   perspective: 'interior' | 'exterior';
+  /** Whether to include furnishing instructions */
+  includeFurnishing?: boolean;
 }
 
 /**
  * Generate prompt for LLM to analyze physical structure of a space
  */
+import { furnishingInstructions } from './furnishingInstructions';
+
+/* (already exported above, remove duplicate) */
+
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
-  const { userPrompt, context, perspective } = input;
-  
-  // Get parent structure if available (using type assertion during migration period)
-  // Structure may be in dna.structure (old) or node.structure (new after migration)
+  const { userPrompt, context, perspective, includeFurnishing } = input;
+
   const parentDna = context.parentNode?.dna as any;
   const currentDna = context.currentNode.dna as any;
   const parentStructure = parentDna?.structure || currentDna?.structure;
-  
-  return `You are an expert at spatial and architectural analysis.
+
+  let prompt = `You are an expert at spatial and architectural analysis.
 
 TASK: Analyze a space description and determine its physical/structural properties.
 
@@ -94,7 +98,13 @@ IMPORTANT RULES:
 - Inherit form/scale from parent when it makes architectural sense
 - Interior spaces should logically fit within their parent structure
 - Be specific with positions (left, right, center, back, corner, etc.)
+`;
 
+  if (includeFurnishing) {
+    prompt += furnishingInstructions;
+  }
+
+  prompt += `
 OUTPUT: Return ONLY valid JSON with this exact structure:
 {
   "name": "string - concise space name",
@@ -116,7 +126,14 @@ OUTPUT: Return ONLY valid JSON with this exact structure:
     "uniqueIdentifiers": ["array of 2-4 distinctive features"]
   },
   "description": "string - brief description of the space"
+  ${includeFurnishing ? `,
+  "furnishingDetails": {
+    "userSpecified": ["array of user-specified items"],
+    "suggested": ["array of suggested furnishings"],
+    "placementNotes": ["array of placement or style notes"]
+  }` : ''}
 }`;
+  return prompt;
 }
 
 /**

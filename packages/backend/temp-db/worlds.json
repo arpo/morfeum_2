@@ -360,6 +360,154 @@
       ],
       "searchDesc": "Futuristic cockpit with a vast viewport overlooking a desert.",
       "slug": "cockpit"
+    },
+    "loc-1765284408975-f45x6c1mk": {
+      "id": "loc-1765284408975-f45x6c1mk",
+      "type": "host",
+      "name": "Veridian Valley",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A grand, expansive valley floor covered in lush green grass and dotted with numerous light-colored boulders and rocks. It is bordered by immense, towering mountains with steep, craggy grey faces.",
+        "colorsAndLighting": "Dominant greens of the valley and greys of the mountains, under a soft, diffused light from an overcast sky. Subtle warmth may emanate from scattered elements.",
+        "atmosphere": "The air is crisp, clean, and invigorating, with the scent of abundant plant life. A sense of profound natural serenity and wildness pervades, untouched by harsh elements.",
+        "materials": "Primarily natural, rugged materials: rock faces, soil, and dense vegetation. Underlying geology is ancient and weathered.",
+        "mood": "Awe-inspiring, serene, wild, and majestic.",
+        "sounds": "Wind, rustling grass, distant echoes, flowing water.",
+        "primary_surfaces": "Rough rock faces, dense green grass, scattered boulders.",
+        "secondary_surfaces": "Soil, gravel.",
+        "accent_features": "Small, shallow rocky stream.",
+        "dominant": "Green (valley floor), vast coverage.",
+        "secondary": "Grey (mountain faces), extensive coverage.",
+        "accent": "Light brown/tan (boulders), scattered placement.",
+        "ambient": "Soft, diffused, natural light.",
+        "genre": "Nature-exploration",
+        "architectural_tone": "Natural, rugged, untamed wilderness",
+        "cultural_tone": "Primal nature, secluded habitation, scientific observation post",
+        "materials_base": "Natural stone, earth, dense vegetation",
+        "mood_baseline": "Serene, majestic, wild",
+        "palette_bias": "Earthy greens, greys, and browns",
+        "soundscape_base": "Natural ambient sounds",
+        "flora_base": "Lush grass, mountain flora",
+        "fauna_base": "None"
+      },
+      "description": "A vast, verdant valley renowned for its stunning natural beauty, cradled by immense, rugged mountains. This valley is a sanctuary where untamed nature meets unexpected, advanced human habitation.",
+      "searchDesc": "Vast, verdant valley surrounded by towering, rugged mountains.",
+      "slug": "veridian-valley",
+      "structure": {
+        "spatialLayout": "Vast, open valley floor with extreme verticality from the surrounding mountain ranges, creating a sense of enclosure and immense scale.",
+        "dominantElements": [
+          "Towering rugged mountains",
+          "Vast verdant valley floor"
+        ],
+        "uniqueIdentifiers": [
+          "Immense natural scale",
+          "Unexpected technological presence"
+        ]
+      }
+    },
+    "48434e29-7a55-4eff-8e18-9c2e32f209db": {
+      "id": "48434e29-7a55-4eff-8e18-9c2e32f209db",
+      "type": "region",
+      "name": "The Spherical Enclave",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Dominated by large, spherical, retro-futuristic buildings with panoramic windows and smaller portholes. These structures are supported by substantial concrete bases with visible structural elements.",
+        "colorsAndLighting": "Buildings are predominantly bright white, contrasting with the natural green and grey surroundings. Warm interior lights are visible, and the scene is illuminated by soft, diffused light from an overcast sky.",
+        "atmosphere": "The air is crisp and clean, with a pervasive sense of serene observation and mystery. The overcast sky suggests a mild, consistent temperature, contributing to a tranquil environment.",
+        "materials": "The primary structures feature smooth, advanced composite materials or alloys. The bases are made of sturdy, textured concrete, with durable glass for windows.",
+        "mood": "Evokes awe, discovery, and contemplation, blending futuristic ingenuity with natural beauty.",
+        "sounds": "Muted environmental sounds, distant hums, gentle wind.",
+        "primary_surfaces": "Smooth white composites, textured concrete bases.",
+        "secondary_surfaces": "Durable transparent glass.",
+        "accent_features": "Warm interior lighting glowing through windows.",
+        "dominant": "White (building exteriors), extensive coverage.",
+        "secondary": "Grey (concrete bases), significant coverage.",
+        "accent": "Warm yellow/orange (interior lights), subtle placement.",
+        "ambient": "Soft, diffused, cool-toned light.",
+        "genre": null,
+        "architectural_tone": "Retro-futuristic sphere with observation elements and concrete bases",
+        "cultural_tone": "Scientific research, public observation, technological outposts",
+        "materials_base": "Smooth composites, reinforced concrete, glass",
+        "mood_baseline": "Serene, contemplative, mysterious",
+        "palette_bias": "Cool whites and greys, with warm interior accents",
+        "soundscape_base": "Quiet, natural, subtle hums",
+        "flora_base": "Lush green grass, patches of green on mountains",
+        "fauna_base": "None"
+      },
+      "description": "A secluded area within the valley, characterized by its striking retro-futuristic spherical architecture and serene atmosphere. This enclave represents a harmonious blend of advanced design and natural landscape.",
+      "searchDesc": "Secluded valley enclave with unique retro-futuristic spherical buildings.",
+      "slug": "the-spherical-enclave",
+      "structure": {
+        "spatialLayout": "Open valley floor with distinct clusters of large, rounded structures. Significant depth provided by the surrounding mountains.",
+        "dominantElements": [
+          "Retro-futuristic spherical buildings"
+        ],
+        "uniqueIdentifiers": [
+          "Unusual architectural shapes",
+          "Isolated, serene setting"
+        ]
+      }
+    },
+    "e06e802c-18a1-46d1-8042-6199d4b334e1": {
+      "id": "e06e802c-18a1-46d1-8042-6199d4b334e1",
+      "type": "location",
+      "name": "The Apex Dome & Observation Building",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A large, multi-level sphere with a distinct dome atop its apex. Its form is rounded and expansive, punctuated by numerous large, panoramic windows and smaller circular portholes. The building is anchored by a substantial concrete base with visible, robust support structures and integrated entranceways.",
+        "colorsAndLighting": "The building's primary exterior is a bright, clean white, which stands out vibrantly against the natural environment. Interior lights create a warm, inviting glow visible through the windows. Diffused, soft light from an overcast sky illuminates the scene.",
+        "atmosphere": "The air is likely crisp and clean, carrying the scent of verdant growth from the surrounding valley. A sense of serene observation pervades the atmosphere, with a touch of mystery from its isolated placement. The overcast sky suggests a mild, consistent temperature.",
+        "materials": "The main structure appears to be composed of smooth, possibly polished, composite materials or advanced alloys. The base is constructed from sturdy, textured concrete. The windows are likely made of durable, transparent glass.",
+        "mood": "This location evokes a feeling of awe and discovery, blending human ingenuity with the raw beauty of nature. It feels both futuristic and grounded, inviting contemplation and exploration.",
+        "sounds": "Distant wind, faint structural hum, occasional distant wildlife calls, soft interior activity.",
+        "primary_surfaces": "Smooth, white spherical exterior; transparent panoramic windows.",
+        "secondary_surfaces": "Textured concrete base, visible concrete support columns.",
+        "accent_features": "The apex dome, circular portholes, warm interior lighting.",
+        "dominant": "White (exterior), vast coverage.",
+        "secondary": "Grey (concrete base), significant coverage.",
+        "accent": "Warm yellow/orange (interior lights), subtle placement.",
+        "ambient": "Soft, diffused grey light.",
+        "genre": null,
+        "architectural_tone": "Retro-futuristic sphere with observation dome and concrete base",
+        "cultural_tone": "Scientific research, public observation, technological outpost.",
+        "materials_base": "Smooth composites, reinforced concrete, glass.",
+        "mood_baseline": "Serene, awe-inspiring, mysterious.",
+        "palette_bias": "Cool whites and greys, with warm interior accents.",
+        "soundscape_base": "Natural ambience with subtle technological undertones.",
+        "flora_base": "Lush green grass and sparse, hardy vegetation.",
+        "fauna_base": "None (implied isolation)"
+      },
+      "description": "The primary large, multi-level spherical building with panoramic windows, a dome on its apex, and a concrete base with visible support structures and entranceways. Located in the middle ground, closer to the viewer.",
+      "searchDesc": "Retro-futuristic spherical observation building with panoramic windows and an apex dome in a verdant valley.",
+      "slug": "the-apex-dome-observation-building",
+      "structure": {
+        "spatialLayout": "The building's spherical shape suggests a central core with radial expansion. Its multi-level design implies significant interior volume. Its placement in the middle ground creates a sense of depth and scale within the larger landscape.",
+        "navigableElements": [
+          {
+            "type": "entranceway",
+            "position": "base",
+            "description": "Subtle entrances integrated into the concrete base."
+          },
+          {
+            "type": "door",
+            "position": "base",
+            "description": "Main access doors on the concrete foundation."
+          }
+        ],
+        "dominantElements": [
+          "Multi-level spherical structure",
+          "Panoramic windows",
+          "Apex dome",
+          "Concrete base with support structures"
+        ],
+        "uniqueIdentifiers": [
+          "Retro-futuristic architectural style",
+          "White exterior contrasting with natural landscape",
+          "Circular portholes",
+          "Visible concrete supports"
+        ]
+      },
+      "primaryMedia": "media-1765284429573-3z4psto15"
     }
   },
   "views": {},
@@ -391,9 +539,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765284408975-f45x6c1mk",
+      "type": "host",
+      "children": [
+        {
+          "id": "48434e29-7a55-4eff-8e18-9c2e32f209db",
+          "type": "region",
+          "children": [
+            {
+              "id": "e06e802c-18a1-46d1-8042-6199d4b334e1",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1765276507817-8yz9eo6qa"
+    "loc-1765276507817-8yz9eo6qa",
+    "loc-1765284408975-f45x6c1mk"
   ]
 }

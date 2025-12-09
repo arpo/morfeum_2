@@ -208,6 +208,12 @@ export interface StructureAnalysis {
   structure: Structure;
   /** Brief description of the space */
   description: string;
+  /** Optional furnishing details for image prompt generation */
+  furnishingDetails?: {
+    userSpecified?: string[];
+    suggested?: string[];
+    placementNotes?: string[];
+  };
 }
 
 /**

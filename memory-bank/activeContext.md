@@ -2,26 +2,23 @@
 
 ## Recent Changes (2025-12-09)
 
-- **Memory bank fully reviewed and updated.**
-- **DNA inheritance system:** All child nodes now inherit parent materials, palette, and mood via full parent DNA context and CSS-like merge logic.
-- **Navigation pipelines:** GOTO and GO_INSIDE commands now create correct sibling/child nodes and show progress bar steps in real time.
-- **Image generation:** Two-step LLM prompt system produces rich, DNA-accurate images for both interiors and exteriors.
-- **Component separation:** All major files refactored to comply with 50-300 line limits and strict markup/logic/style separation.
-- **Design system:** Centralized tokens, icon management, and CSS Modules enforced across frontend.
-- **Backend storage:** File-based storage in temp-db/ is stable; migration to Supabase/PostgreSQL planned.
-- **Testing and CI:** Pending implementation of Vitest, Playwright, and CI/CD pipeline.
+- **`--furnish` flag implemented end-to-end:** New optional flag for GOTO and GO_INSIDE commands that triggers detailed furnishing analysis in structure analyzer. Furnishing details (suggested items, placement notes) appear in image prompts.
+- **Command flag system:** Extended COMMAND_FLAGS in backend config to support `--furnish`. Frontend commandParser now handles flag parsing and reconstructs text with flags for API transmission.
+- **Backend flag parsing refactored:** Flags are now parsed at TOP of command handler (before building intent) to ensure clean text flows through the entire pipeline without flag leakage.
+- **DNA inheritance system:** All child nodes inherit parent materials, palette, and mood via full parent DNA context and CSS-like merge logic.
+- **Navigation pipelines:** GOTO and GO_INSIDE commands create correct sibling/child nodes with real-time progress bar steps.
+- **Image generation:** Two-step LLM prompt system produces rich, DNA-accurate images for interiors and exteriors.
 
 ## Current Focus
 
-- Monitor pipeline performance and image quality.
+- Monitor `--furnish` flag behavior and image quality with furnishing details.
 - Plan database migration (Supabase/PostgreSQL).
 - Expand testing coverage (unit, integration, E2E).
 - Implement advanced navigation and media management features.
-- Maintain documentation and update .clinerules only when new patterns or decisions arise.
 
 ## Next Steps
 
+- Test `--furnish` flag with various space types and parent contexts.
 - Begin database migration planning.
 - Expand automated test coverage.
 - Continue feature development for chat, navigation, and media management.
-- Update documentation as new patterns emerge.

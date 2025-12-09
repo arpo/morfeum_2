@@ -3,7 +3,7 @@
 ## What Works ✅
 
 ### Core Application Features
-- Contextual slash commands for navigation and node creation (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, CREATE_IMAGE, GO_INSIDE, GOTO)
+- Contextual slash commands for navigation and node creation (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, CREATE_IMAGE, GO_INSIDE, GOTO) with optional `--furnish` flag
 - Entity system for character and location creation, storage, and management
 - World tree system with hierarchical location structures
 - 3D World View with depth rendering and stereo support
@@ -25,6 +25,7 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **`--furnish` command flag (Dec 9):** Optional flag for GOTO/GO_INSIDE that triggers furnishing analysis. Adds suggested furniture, placement notes to image prompts. Full end-to-end implementation across frontend (commandParser, navigationCommands) and backend (config, navigation route, structureAnalyzer).
 - DNA inheritance system fixed: child nodes inherit parent materials, palette, and mood
 - Navigation pipelines refactored: GOTO and GO_INSIDE create correct sibling/child nodes, progress bar steps visible
 - Two-step image generation: LLM prompt system for DNA-accurate images

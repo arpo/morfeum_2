@@ -146,6 +146,19 @@
         "model": "FLUX"
       },
       "entityRefs": []
+    },
+    "media-1765284429573-3z4psto15": {
+      "id": "media-1765284429573-3z4psto15",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a859c3a/WXBiLJuaZKvos4H4W1uc9.jpg",
+      "createdAt": "2025-12-09T12:47:09.573Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nAn ultra-wide exterior shot, street-level at a 28° downward angle, capturing the \"The Apex Dome & Observation Building\" nestled in Veridian Valley. The building, a large, multi-level retro-futuristic sphere with a distinct dome atop its apex, is positioned slightly off-center in the midground, its smooth, clean white composite facade contrasting with the surrounding untamed nature. Numerous large, panoramic windows reveal a warm, inviting yellow and orange interior glow, punctuated by smaller circular portholes. The building rests on a substantial, textured grey concrete base with visible, robust support columns and subtle integrated entranceways. In the immediate foreground, worn cobblestone pavement with scattered puddles reflecting the diffused grey ambient light of an overcast sky, hints at the scientific research, public observation, and technological outpost cultural tone. The background unfolds into the immense, rugged grey mountains of Veridian Valley, their steep, craggy faces showing deep fissures and folds, with patches of green blending into the rocky peaks. A second, smaller spherical building of the same retro-futuristic style is partially visible in the far distance. The atmosphere is crisp and clean, carrying a sense of serene observation and mystery, with soft, diffused light permeating the scene, suggesting a mild, consistent temperature. The composition is asymmetric, with more street visible on the left, avoiding any perfectly frontal shots or bilateral symmetry. Materials are smooth composites, reinforced concrete, and clear glass. The overall mood is awe-inspiring and contemplative, where human ingenuity blends unexpectedly with raw, verdant nature under a muted, overcast sky.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "e06e802c-18a1-46d1-8042-6199d4b334e1"
+      ]
     }
   }
 }

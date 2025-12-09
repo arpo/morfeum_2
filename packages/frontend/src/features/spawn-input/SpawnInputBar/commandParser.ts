@@ -6,6 +6,7 @@ export interface ParsedCommand {
   flags: {
     createImage: boolean;
     backgroundTask: boolean;
+    furnish: boolean;
   };
 }
 
@@ -20,7 +21,8 @@ export function parseCommandInput(input: string): ParsedCommand {
   
   const flags = {
     createImage: false,
-    backgroundTask: false
+    backgroundTask: false,
+    furnish: false
   };
   
   const textParts: string[] = [];
@@ -31,6 +33,8 @@ export function parseCommandInput(input: string): ParsedCommand {
       flags.createImage = true;
     } else if (part === COMMAND_FLAGS.BACKGROUND_TASK) {
       flags.backgroundTask = true;
+    } else if (part === COMMAND_FLAGS.FURNISH) {
+      flags.furnish = true;
     } else if (!part.startsWith('--')) {
       textParts.push(part);
     }

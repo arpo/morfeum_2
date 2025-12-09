@@ -28,6 +28,25 @@ const router = Router();
 const pipelineConfigs = new Map<string, { pipelineType: string; steps: any[] }>();
 
 /**
+ * Parse command flags from text (e.g., --furnish)
+ * @param text - The text after the command
+ * @returns Object with cleanText (flags removed) and flag values
+ */
+function parseCommandFlags(text: string | undefined): { 
+  cleanText: string | undefined; 
+  includeFurnishing: boolean;
+} {
+  if (!text) {
+    return { cleanText: undefined, includeFurnishing: false };
+  }
+  
+  const includeFurnishing = /--furnish\b/i.test(text);
+  const cleanText = text.replace(/--furnish\b/gi, '').trim() || undefined;
+  
+  return { cleanText, includeFurnishing };
+}
+
+/**
  * POST /api/mzoo/navigation/analyze
  * Analyze user's navigation command using LLM + deterministic routing
  */
@@ -181,15 +200,21 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
   const apiKey = (req as any).mzooApiKey;
 
   try {
-    // Build intent from command (no LLM call for basic commands)
+    // Parse flags from text FIRST (e.g., --furnish) - before building intent
+    const { cleanText, includeFurnishing } = parseCommandFlags(text);
+    
+    // Build intent from command with CLEAN text (flags removed)
     const intent = buildIntentFromCommand(
       command as NavigationCommand,
-      text || null,
+      cleanText || null,
       context.currentNode.type
     );
 
     // For GOTO: Send response immediately, run analysis in pipeline
-    if (command === 'GOTO' && text) {
+    if (command === 'GOTO' && cleanText) {
+      console.log(`[GOTO DEBUG] Raw text received: "${text}"`);
+      console.log(`[GOTO DEBUG] Parsed: cleanText="${cleanText}", includeFurnishing=${includeFurnishing}`);
+      
       const navigationId = `nav-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       const eventsUrl = `/api/mzoo/navigation/events/${navigationId}`;
       
@@ -218,7 +243,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
           newNodeType: 'niche',
           reasoning: 'GOTO command - destination analysis pending',
           parentNodeId: parentLocationId,  // Use parent location for sibling creation
-          newNodeName: text
+          newNodeName: cleanText
         }
       };
       
@@ -239,7 +264,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
             context,
             intent,
             apiKey,
-            { gotoText: text },  // Pass text for destination analysis
+            { gotoText: cleanText, includeFurnishing },  // Pass clean text and furnishing flag
             navigationId
           );
         } catch (pipelineError) {
@@ -306,7 +331,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
         }
       });
 
-      // Run pipeline asynchronously - pass userPrompt for structure analysis
+      // Run pipeline asynchronously - use cleanText (already parsed at top of handler)
       (async () => {
         try {
           await runCreateNodePipeline(
@@ -314,7 +339,10 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
             context, 
             intent, 
             apiKey, 
-            { userPrompt: text || intent.target || decision.newNodeName },  // Pass user text for structure analysis
+            { 
+              userPrompt: cleanText || decision.newNodeName,
+              includeFurnishing  // Already parsed at top of handler
+            },
             navigationId
           );
         } catch (pipelineError) {
