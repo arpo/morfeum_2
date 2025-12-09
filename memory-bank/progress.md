@@ -3,195 +3,79 @@
 ## What Works ✅
 
 ### Core Application Features
-- **Slash Commands**: Contextual navigation commands (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, CREATE_IMAGE, GO_INSIDE, GOTO)
-- **Entity System**: Character and location creation, storage, and management
-- **World Tree System**: Hierarchical location structures (host → region → location → niche)
-- **3D World View**: WebGL-based depth rendering with stereo support (2D, full 3D, HSBS modes)
-- **Visual Effects System**: Scene presets combining particles, post-processing, and color effects
-- **Navigation System**: AI-powered spatial navigation with intent classification
-- **Media System**: Centralized image storage and depth map generation
-- **Training Data Export**: Save image/text pairs for LoRA training (camera button)
-- **External View**: Real-time sync between main app and external browser tabs
-- **Chat System**: Character conversations with entity sessions
-- **UI State Management**: Panel toggles, focus mode, entity explorers
-- **Image Analysis**: Full-screen image drag and drop for AI description generation
+- Contextual slash commands for navigation and node creation (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, CREATE_IMAGE, GO_INSIDE, GOTO)
+- Entity system for character and location creation, storage, and management
+- World tree system with hierarchical location structures
+- 3D World View with depth rendering and stereo support
+- Visual effects system with scene presets, particles, and post-processing
+- Navigation system with AI-powered spatial navigation and intent classification
+- Centralized media system with image storage and depth map generation
+- Training data export for LoRA model training
+- Real-time external view sync
+- Chat system with entity sessions
+- UI state management (panel toggles, focus mode, explorers)
+- Full-screen image drag and drop for AI description
 
 ### Technical Architecture
-- **Component Separation**: All major components now follow strict separation patterns (JSX, logic, styles)
-- **Size Compliance**: All files under 300-line limit after major refactoring (Nov 30, 2025)
-- **Zustand State Management**: Clean slices with proper separation of concerns
-- **Design System**: Centralized icon management, CSS tokens, unified components
-- **Build System**: TypeScript compilation and Vite production builds working
-- **Code Organization**: Proper feature-based folder structure
+- Strict component separation (JSX, logic, styles)
+- All files under 300-line limit
+- Zustand state management with clean slices
+- Centralized design tokens and icon management
+- TypeScript compilation and Vite builds working
+- Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **DNA CSS-Like Cascade & Material Inheritance** (Dec 8 - Later): Fixed child nodes ignoring parent materials
-  - Problem: Kitchen in Circuit Lounge (weathered brick) generated as "gleaming stainless steel"
-  - Root cause 1: `extractParentContext()` only passed 4 of 10 cascading fields to LLM
-  - Root cause 2: LLM saw parent context but ignored it, generating generic functional spaces
-  - Solution: 3-part fix:
-    1. `extractParentContext()` now returns FULL parent DNA (~23 fields)
-    2. Added `mergeDNAWithParent()` for CSS-like null-value filling
-    3. Added explicit "CRITICAL MATERIAL INHERITANCE RULES" in DNA generation prompt
-  - New prompt rules: "Child MUST use SAME MATERIALS as parent", WRONG/RIGHT examples
-  - Debug logging added to `nodeDNAGenerator.ts` for LLM input/output visibility
-  - Files: nodeDNAGenerator.ts, types.ts, nodeDNAGeneration.ts, createNodePipeline.ts
-- **GOTO Image DNA Inheritance Fix** (Dec 8 - Earlier): Fixed niches not inheriting host visual style
-  - GOTO-created niches (e.g., "The Powder Room") now look like their parent host (Paris)
-  - Updated `composeImagePrompt()` in `createNodePipeline.ts` to include parent DNA fields
-  - Inherited fields: `architectural_tone`, `cultural_tone`, `palette_bias`, `mood_baseline`
-  - Result: Parisian restroom now looks Parisian (Haussmannian style, warm beige tones)
-- **createNode Code Path Updates** (Dec 8): Fixed slash commands saving to worldTrees
-  - Updated `buildNodeFromDNA()` to use new format with `spaceType` and `structure` object
-  - Updated `create-node` route to save nodes to `nodes` collection and `worldTrees`
-  - Host nodes added as root entries, child nodes added to parent's `children` array
-  - Migration script created for existing nodes: `migrateToStructure.ts`
-- **GOTO Command & Fixes** (Dec 5): Freeform navigation with progress bar visibility
-  - `/GOTO the kitchen` - Navigate to any place within the current location
-  - LLM-powered destination analysis synthesizes user prompt with parent context
-  - Creates sibling niche under parent location (unlike GO_INSIDE which creates child)
-  - **Progress Bar Fix**: Created separate `navigationGoto` pipeline type with `destination_analysis` as first step
-    - HTTP response now sent BEFORE analysis runs
-    - User sees "Analyzing Destination..." in progress bar immediately
-    - 5-step pipeline: destination_analysis → prompt_generation → image_generation → dna_generation → node_building
-  - **Sibling Creation Fix**: Fixed niches being created as children instead of siblings
-    - Now uses `findParentLocationNode()` to get correct parent location ID
-  - Files: 3 new files created, 11+ files modified
-- **Component Refactoring** (Dec 3): Major refactoring of large files exceeding 300-line limit
-  - **useNavigationLogic.ts** (513 → 104 lines, 80% reduction):
-    - Extracted `commandParser.ts` (84 lines) - Command parsing, flags, type detection
-    - Extracted `creationCommands.ts` (184 lines) - NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE handlers
-    - Extracted `mediaCommands.ts` (120 lines) - CREATE_IMAGE handler
-    - Extracted `navigationCommands.ts` (211 lines) - GO_INSIDE and standard navigation
-  - **WorldViewRenderer.ts** (526 → 440 lines, 16% reduction):
-    - Extracted `sceneManager.ts` (158 lines) - Scene presets, color effects, wind/lightning
-  - **SpawnInputBar.module.css** (310 → 135 lines, 56% reduction):
-    - Extracted `SpawnInputButtons.module.css` (109 lines) - Toggle, generate, shuffle buttons
-    - Extracted `SpawnInputDropZone.module.css` (67 lines) - Drop zone overlays, spinner
-  - All files now comply with 300-line limit, TypeScript builds pass
-- **Slash Commands Parent DNA Inheritance** (Dec 3): Fixed child nodes not inheriting parent DNA
-  - `/NEW_REGION`, `/NEW_LOCATION`, `/NEW_NICHE` now properly inherit parent's DNA
-  - Loads parent node from storage and extracts DNA context
-  - Inherits: architectural_tone, cultural_tone, dominant, mood, genre, materials_base, palette_bias
-  - Fixed in `navigation.ts` - added `extractParentDNAContext()` call
-- **DNA Schema Refactoring** (Dec 3): Created shared DNA module for DRY code
-  - Created `shared/dnaSchema.ts` as single source of truth
-  - Shared structure schema (form, roofType, scale, orientation, openings, functionalType)
-  - Shared field descriptions (`DNA_SCENE_FIELDS`, `DNA_CASCADING_FIELDS`)
-  - Builder functions: `buildStructureSchemaString()`, `buildDNAFieldsString()`, `buildGuidelines()`
-  - All 3 DNA prompts now use shared module (deepestNodeDNA, parentChainDNA, nodeDNAGeneration)
-  - Future schema changes only need 1 update instead of 3
-- **Interior Generation Improvements** (Dec 3): Fixed interior-exterior consistency issues
-  - Added `structure` field to all DNA generation prompts for locations (`deepestNodeDNA.ts`, `parentChainDNA.ts`)
-  - Structure field includes: form, roofType, scale, orientation, openings, functionalType
-  - Fixed form matching: rectangular exterior → rectangular interior (no more circular interiors for rectangular buildings)
-  - Fixed material translation: stone foundation ≠ stone interior walls (wood house → wood paneling interior)
-  - Niches now set structure to null and inherit from parent location
-- **Image Generation Optimization** (Dec 3): Two-step LLM approach for rich exterior images
-  - Implemented LLM-synthesized FLUX prompts with composition instructions
-  - Added `image_prompt_generation` pipeline step
-  - Optimized `deepestNodeDNA.ts` prompt (150 → 90 lines, 50% faster)
-  - Fixed progress bar "backwards" issue in parallel stages
-  - Performance: DNA generation 10s → 5.18s, total pipeline 23s → 20.72s
-- **Slash Commands System** (Dec 2): Full slash command implementation with contextual filtering
-  - Commands filtered based on current node type (host shows NEW_HOST/NEW_REGION, region shows NEW_LOCATION, etc.)
-  - SlashCommandInput component with dropdown autocomplete and descriptions
-  - CREATE_IMAGE command for generating images for existing nodes (creates media entry, updates primaryMedia)
-- **CSS Bug Fix** (Dec 2): Fixed dropdown clipping in Tabs component (overflow:hidden → overflow:visible)
-- **World tree pipeline refactored:** Image is now generated immediately after prompt parsing, before DNA, so user sees image ~13s faster.
-- **DNA cleanup:** Legacy fields (`semantic`, `visual`, `profile`) are no longer added to DNA in worlds.json.
-- **Bugfix:** WorldTreeBuilder no longer injects old schema fields into DNA.
-- **Component Refactoring**: 5 major files reduced from 300+ to under 300 lines
-- **WorldView Modules**: Extracted 5 specialized modules (shaders, geometry, stereo, camera, animation)
-- **WorldView Effects**: Added scene presets, color effects, and particle enhancements (Dec 1)
-- **Store Architecture**: Separated entity CRUD from UI state management
-- **Navigation Utils**: Extracted context builders for better modularity
-- **App Component**: Pure JSX following zustand slice patterns
-- **Image Drag & Drop**: Application-wide image analysis with consistent UI feedback (Dec 2)
+- DNA inheritance system fixed: child nodes inherit parent materials, palette, and mood
+- Navigation pipelines refactored: GOTO and GO_INSIDE create correct sibling/child nodes, progress bar steps visible
+- Two-step image generation: LLM prompt system for DNA-accurate images
+- Major component/file refactoring for separation and size compliance
+- Backend storage stable (temp-db/); migration to Supabase/PostgreSQL planned
+- Testing and CI pipeline pending
 
 ## What's Left to Build 🚧
 
 ### Feature Development
-- **Enhanced Chat Features**: Rich text, file sharing, conversation history
-- **Advanced Navigation**: Pathfinding, map view, location bookmarks
-- **Media Management**: Bulk operations, advanced filtering, metadata editing
-- **User Preferences**: Customizable UI themes, layout configurations
-- **Collaboration**: Multi-user support, shared worlds
+- Enhanced chat features (rich text, file sharing, history)
+- Advanced navigation (pathfinding, map view, bookmarks)
+- Media management (bulk ops, filtering, metadata editing)
+- User preferences (themes, layout)
+- Collaboration (multi-user, shared worlds)
 
 ### Technical Improvements
-- **Performance**: Code splitting, lazy loading, optimization
-- **Testing**: Unit tests, integration tests, E2E testing
-- **Documentation**: Component docs, API documentation
-- **Accessibility**: ARIA compliance, keyboard navigation
-- **Error Handling**: Comprehensive error boundaries, user feedback
+- Performance optimization (code splitting, lazy loading)
+- Testing (unit, integration, E2E)
+- Documentation (components, API)
+- Accessibility (ARIA, keyboard nav)
+- Error handling (boundaries, feedback)
 
 ### Architecture Enhancements
-- **Plugin System**: Extensible architecture for custom features
-- **API Versioning**: Backward compatibility management
-- **Caching**: Advanced caching strategies for performance
-- **Real-time**: WebSocket implementation for live collaboration
+- Plugin system for extensibility
+- API versioning
+- Advanced caching
+- Real-time collaboration (WebSocket)
 
 ## Current Status 📊
 
-### Code Quality Metrics
-- **File Size Compliance**: 100% of files under 300-line limit ✅
-- **TypeScript Coverage**: 100% TypeScript, no any types ✅
-- **Build Health**: All builds passing (2.76s production build) ✅
-- **Pattern Consistency**: Zustand slice patterns enforced ✅
-- **Separation Compliance**: Strict markup/logic/style separation ✅
-
-### Recent Achievements
-- **Component Refactoring** (Dec 3, 2025): Large file cleanup
-  - useNavigationLogic.ts: 513 → 104 lines (80% reduction, 4 new modules)
-  - WorldViewRenderer.ts: 526 → 440 lines (16% reduction, 1 new module)
-  - SpawnInputBar.module.css: 310 → 135 lines (56% reduction, 2 new modules)
-  - All 7 new modules are focused and under 300 lines
-- **Image Generation Optimization** (Dec 3, 2025): Two-step approach for quality exterior images
-  - Prompt optimization: 50% faster DNA generation (10s → 5.18s)
-  - Total pipeline: 3s faster (23s → 20.72s)
-  - Added proper composition instructions for architectural accuracy
-- **Major Refactoring Complete** (Nov 30, 2025): 12 new focused modules created
-- **WorldViewRenderer**: 675 → 207 lines (69% reduction)
-- **App Component**: 416 → 146 lines (65% reduction)
-- **Store Slices**: Better separation with dedicated UI slice
-- **Build Performance**: Maintained fast build times through refactoring
-- **Image Analysis**: Full-screen drag and drop for seamless image description (Dec 2)
-
-### Active Development
-- **Current Focus**: Image quality and pipeline performance optimization
-- **Recent Win**: Two-step image generation produces rich, DNA-accurate exterior images
-- **Next Priority**: Monitor prompt optimizations and continue quality improvements
-- **Architecture**: Following strict clinerules guidelines for all new code
-- **Performance**: Pipeline now runs at 20.72s (down from ~23s)
+- All files under size limits
+- 100% TypeScript coverage, no any types
+- All builds passing
+- Strict separation patterns enforced
+- Pipeline performance improved (DNA gen: 10s → 5.18s, total: 23s → 20.72s)
+- Pending: database migration, testing, CI/CD, advanced features
 
 ## Known Issues 🐛
 
-### Technical Debt
-- **Legacy Components**: Some older components may not follow latest patterns
-- **Bundle Size**: Large chunk size warning (865KB) - needs code splitting
-- **Performance**: Some Three.js operations could be optimized
-
-### Minor Issues
-- **FAL API**: Returns PNG despite JPEG request (known FAL bug)
-- **Route Ordering**: Some backend routes need careful ordering for wildcard matching
-
-### Future Considerations
-- **Code Splitting**: Implement dynamic imports for large chunks
-- **Component Auditing**: Review remaining components for pattern compliance
-- **Performance Monitoring**: Track impact of refactored modules on runtime performance
+- Legacy components may not follow latest patterns
+- Bundle size warning (865KB) - needs code splitting
+- Some Three.js ops could be optimized
+- FAL API returns PNG despite JPEG request
+- Route ordering for backend wildcards
 
 ## Development Standards 📋
 
-### Enforced Patterns
-- **File Size**: 50-300 lines per file
-- **Separation**: Markup (.tsx), Logic (.ts), Styles (.module.css)
-- **State Management**: Zustand slices with clear boundaries
-- **Icon Management**: Centralized in @/icons
-- **Design Tokens**: CSS custom properties for consistency
-
-### Quality Gates
-- ✅ TypeScript compilation success
-- ✅ All files under size limits
-- ✅ Separation pattern compliance
-- ✅ Build performance maintained
-- ✅ No console errors in development
+- File size: 50-300 lines
+- Separation: markup (.tsx), logic (.ts), styles (.module.css)
+- Zustand slices with clear boundaries
+- Centralized icons and design tokens
+- TypeScript compilation success
+- No console errors in dev

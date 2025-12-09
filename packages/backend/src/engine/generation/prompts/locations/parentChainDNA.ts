@@ -1,9 +1,11 @@
-import { buildStructureSchemaString } from '../shared/dnaSchema';
+import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../shared/dnaSchema';
 
 /**
  * Parent Chain DNA Generation Prompt
  * 
  * Generates DNA for all parent nodes in ONE LLM call, working bottom-up.
+ * 
+ * NOTE: Structure is now a separate node property, not part of DNA.
  * 
  * CASCADING DNA SYSTEM:
  * - DNA flows DOWN the tree at runtime: Host → Region → Location → Niche
@@ -139,34 +141,31 @@ OUTPUT JSON STRUCTURE:
     // DNA - can be sparse (null values inherit from region)
     "dna": {
       // Scene fields (ALWAYS populated - what you see at this location)
-      "looks": "Exterior appearance description",
-      "colorsAndLighting": "Exterior colors and natural lighting",
-      "atmosphere": "Outdoor atmosphere around this location",
-      "materials": "Exterior building materials",
-      "mood": "Emotional tone of approaching this place",
-      "sounds": "Ambient sounds near the entrance",
-      "spatialLayout": "How the building sits in its environment",
-      "primary_surfaces": "Main exterior surfaces",
-      "secondary_surfaces": "Secondary exterior elements",
-      "accent_features": "Decorative exterior details",
-      "dominant": "Dominant exterior colors",
-      "secondary": "Secondary exterior colors",
-      "accent": "Accent colors on facade",
-      "ambient": "Natural light quality",
-      
-      // Structure field (REQUIRED for locations)
-      ${buildStructureSchemaString()},
+      "looks": "${DNA_SCENE_FIELDS.looks}",
+      "colorsAndLighting": "${DNA_SCENE_FIELDS.colorsAndLighting}",
+      "atmosphere": "${DNA_SCENE_FIELDS.atmosphere}",
+      "materials": "${DNA_SCENE_FIELDS.materials}",
+      "mood": "${DNA_SCENE_FIELDS.mood}",
+      "sounds": "${DNA_SCENE_FIELDS.sounds}",
+      "spatialLayout": "${DNA_SCENE_FIELDS.spatialLayout}",
+      "primary_surfaces": "${DNA_SCENE_FIELDS.primary_surfaces}",
+      "secondary_surfaces": "${DNA_SCENE_FIELDS.secondary_surfaces}",
+      "accent_features": "${DNA_SCENE_FIELDS.accent_features}",
+      "dominant": "${DNA_SCENE_FIELDS.dominant}",
+      "secondary": "${DNA_SCENE_FIELDS.secondary}",
+      "accent": "${DNA_SCENE_FIELDS.accent}",
+      "ambient": "${DNA_SCENE_FIELDS.ambient}",
       
       // Cascading fields (SPARSE - null if same as region)
       "genre": null,
-      "architectural_tone": "Building-specific style OR null",
-      "cultural_tone": "Building's purpose/identity OR null",
-      "materials_base": "Building's material theme OR null",
-      "mood_baseline": "Building's emotional character OR null",
-      "palette_bias": "Building's color scheme OR null",
-      "soundscape_base": "Sounds around building OR null",
-      "flora_base": "Plants around building OR null",
-      "fauna_base": "Wildlife near building OR null"
+      "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null",
+      "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null",
+      "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null",
+      "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null",
+      "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null",
+      "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null",
+      "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null",
+      "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null"
     }
   },` : ''}
   ${includesRegion ? `"region": {
@@ -183,31 +182,31 @@ OUTPUT JSON STRUCTURE:
     // DNA - can be sparse (null values inherit from host)
     "dna": {
       // Scene fields (ALWAYS populated)
-      "looks": "Regional visual character",
-      "colorsAndLighting": "Regional lighting and colors",
-      "atmosphere": "Regional atmosphere and climate",
-      "materials": "Common materials in this region",
-      "mood": "Regional emotional tone",
-      "sounds": "Regional ambient sounds",
-      "spatialLayout": "Regional layout and density",
-      "primary_surfaces": "Common regional surfaces",
-      "secondary_surfaces": "Secondary regional materials",
-      "accent_features": "Regional decorative elements",
-      "dominant": "Regional dominant colors",
-      "secondary": "Regional secondary colors",
-      "accent": "Regional accent colors",
-      "ambient": "Regional light quality",
+      "looks": "${DNA_SCENE_FIELDS.looks}",
+      "colorsAndLighting": "${DNA_SCENE_FIELDS.colorsAndLighting}",
+      "atmosphere": "${DNA_SCENE_FIELDS.atmosphere}",
+      "materials": "${DNA_SCENE_FIELDS.materials}",
+      "mood": "${DNA_SCENE_FIELDS.mood}",
+      "sounds": "${DNA_SCENE_FIELDS.sounds}",
+      "spatialLayout": "${DNA_SCENE_FIELDS.spatialLayout}",
+      "primary_surfaces": "${DNA_SCENE_FIELDS.primary_surfaces}",
+      "secondary_surfaces": "${DNA_SCENE_FIELDS.secondary_surfaces}",
+      "accent_features": "${DNA_SCENE_FIELDS.accent_features}",
+      "dominant": "${DNA_SCENE_FIELDS.dominant}",
+      "secondary": "${DNA_SCENE_FIELDS.secondary}",
+      "accent": "${DNA_SCENE_FIELDS.accent}",
+      "ambient": "${DNA_SCENE_FIELDS.ambient}",
       
       // Cascading fields (SPARSE - null if same as host)
       "genre": null,
-      "architectural_tone": "Regional architectural style OR null",
-      "cultural_tone": "Regional culture/identity OR null",
-      "materials_base": "Regional material preferences OR null",
-      "mood_baseline": "Regional mood OR null",
-      "palette_bias": "Regional color preferences OR null",
-      "soundscape_base": "Regional soundscape OR null",
-      "flora_base": "Regional vegetation OR null",
-      "fauna_base": "Regional wildlife OR null"
+      "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null",
+      "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null",
+      "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null",
+      "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null",
+      "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null",
+      "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null",
+      "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null",
+      "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null"
     }
   },` : ''}
   ${includesHost ? `"host": {
@@ -224,31 +223,31 @@ OUTPUT JSON STRUCTURE:
     // DNA - FULLY populated (this is the root)
     "dna": {
       // Scene fields
-      "looks": "World-level visual character",
-      "colorsAndLighting": "World lighting and colors",
-      "atmosphere": "World atmosphere and climate",
-      "materials": "World material palette",
-      "mood": "World emotional tone",
-      "sounds": "World ambient sounds",
-      "spatialLayout": "World spatial character",
-      "primary_surfaces": "World primary materials",
-      "secondary_surfaces": "World secondary materials",
-      "accent_features": "World accent details",
-      "dominant": "World dominant colors",
-      "secondary": "World secondary colors",
-      "accent": "World accent colors",
-      "ambient": "World light quality",
+      "looks": "${DNA_SCENE_FIELDS.looks}",
+      "colorsAndLighting": "${DNA_SCENE_FIELDS.colorsAndLighting}",
+      "atmosphere": "${DNA_SCENE_FIELDS.atmosphere}",
+      "materials": "${DNA_SCENE_FIELDS.materials}",
+      "mood": "${DNA_SCENE_FIELDS.mood}",
+      "sounds": "${DNA_SCENE_FIELDS.sounds}",
+      "spatialLayout": "${DNA_SCENE_FIELDS.spatialLayout}",
+      "primary_surfaces": "${DNA_SCENE_FIELDS.primary_surfaces}",
+      "secondary_surfaces": "${DNA_SCENE_FIELDS.secondary_surfaces}",
+      "accent_features": "${DNA_SCENE_FIELDS.accent_features}",
+      "dominant": "${DNA_SCENE_FIELDS.dominant}",
+      "secondary": "${DNA_SCENE_FIELDS.secondary}",
+      "accent": "${DNA_SCENE_FIELDS.accent}",
+      "ambient": "${DNA_SCENE_FIELDS.ambient}",
       
       // Cascading fields (ALL populated for host)
-      "genre": "The world genre that produces this kind of place",
-      "architectural_tone": "World architectural style (abstracted from deepest node)",
-      "cultural_tone": "World cultural identity",
-      "materials_base": "World material aesthetic",
-      "mood_baseline": "World emotional baseline",
-      "palette_bias": "World color aesthetic",
-      "soundscape_base": "World sound character",
-      "flora_base": "World vegetation types",
-      "fauna_base": "World wildlife types"
+      "genre": "${DNA_CASCADING_FIELDS.genre}",
+      "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone}",
+      "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone}",
+      "materials_base": "${DNA_CASCADING_FIELDS.materials_base}",
+      "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline}",
+      "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias}",
+      "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base}",
+      "flora_base": "${DNA_CASCADING_FIELDS.flora_base}",
+      "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base}"
     }
   }` : ''}
 }

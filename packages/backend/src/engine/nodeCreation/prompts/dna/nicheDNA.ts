@@ -5,6 +5,7 @@
  * Niche nodes can be interior or exterior and represent the deepest navigable level.
  */
 
+import { DNA_SCENE_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
 import type { ParentDNAContext, ScenePerspective } from '../../types';
 
 /**
@@ -70,20 +71,20 @@ OUTPUT JSON:
   "searchDesc": "75-100 char search description",
   "slug": "kebab-case-name",
   "dna": {
-    "looks": "2-4 sentences describing what you SEE in this space - layout, objects, focal points",
-    "colorsAndLighting": "1-3 sentences on lighting sources, light quality, color of surfaces",
-    "atmosphere": "2-4 sentences on air quality, temperature, scent, the feel of being in this space",
-    "materials": "1-3 sentences on materials you can touch - floors, walls, furniture, objects",
-    "mood": "1-2 sentences on the emotional feeling of being here",
-    "sounds": "5-7 words listing sounds you'd hear in this space",
-    "spatialLayout": "1-3 sentences on the shape of the space, where things are positioned",
-    "primary_surfaces": "Main materials (floor, walls, ceiling)",
-    "secondary_surfaces": "Supporting materials (furniture, fixtures)",
-    "accent_features": "Decorative details and objects",
-    "dominant": "Primary color in this space",
-    "secondary": "Secondary colors",
-    "accent": "Accent colors (lights, objects, art)",
-    "ambient": "Light quality in this space",
+    "looks": "${DNA_SCENE_FIELDS.looks}",
+    "colorsAndLighting": "${DNA_SCENE_FIELDS.colorsAndLighting}",
+    "atmosphere": "${DNA_SCENE_FIELDS.atmosphere}",
+    "materials": "${DNA_SCENE_FIELDS.materials}",
+    "mood": "${DNA_SCENE_FIELDS.mood}",
+    "sounds": "${DNA_SCENE_FIELDS.sounds}",
+    "spatialLayout": "${DNA_SCENE_FIELDS.spatialLayout}",
+    "primary_surfaces": "${DNA_SCENE_FIELDS.primary_surfaces}",
+    "secondary_surfaces": "${DNA_SCENE_FIELDS.secondary_surfaces}",
+    "accent_features": "${DNA_SCENE_FIELDS.accent_features}",
+    "dominant": "${DNA_SCENE_FIELDS.dominant}",
+    "secondary": "${DNA_SCENE_FIELDS.secondary}",
+    "accent": "${DNA_SCENE_FIELDS.accent}",
+    "ambient": "${DNA_SCENE_FIELDS.ambient}",
     
     "genre": null,
     "architectural_tone": null,

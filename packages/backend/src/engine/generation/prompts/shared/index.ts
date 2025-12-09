@@ -8,11 +8,8 @@ export { fluxFilters, getFluxFilter, getDefaultFluxFilter, type FluxFilter } fro
 export { renderInstructionsGuidance } from './fluxRenderInstructions';
 export { visionDescriptionPrompt } from './visionDescription';
 
-// DNA Schema - shared structure and field definitions
+// DNA Schema - shared field definitions
 export {
-  STRUCTURE_OPTIONS,
-  buildStructureSchemaString,
-  buildStructureField,
   DNA_SCENE_FIELDS,
   DNA_CASCADING_FIELDS,
   buildDNAFieldsString,

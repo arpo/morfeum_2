@@ -56,8 +56,8 @@ export async function generateNodeDNA(
     console.log('Parent materials:', parentContext.materials?.substring(0, 100) + '...');
     console.log('Parent architectural_tone:', parentContext.architectural_tone);
   }
-  console.log('\n--- FULL PROMPT (first 2000 chars) ---');
-  console.log(prompt.substring(0, 2000));
+  console.log('\n--- FULL PROMPT ---');
+  console.log(prompt);
   console.log('--- END PROMPT PREVIEW ---\n');
 
   // Call LLM (using fast model for text generation)
@@ -80,8 +80,8 @@ export async function generateNodeDNA(
   console.log('\n╔══════════════════════════════════════════════════════════════════════╗');
   console.log('║ DNA GENERATION - LLM OUTPUT                                          ║');
   console.log('╚══════════════════════════════════════════════════════════════════════╝');
-  console.log('Raw response (first 2000 chars):');
-  console.log(result.data.text.substring(0, 2000));
+  console.log('Raw response:');
+  console.log(result.data.text);
   console.log('--- END LLM OUTPUT PREVIEW ---\n');
 
   // Parse JSON response (now includes both DNA and structural fields)

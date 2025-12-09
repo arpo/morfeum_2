@@ -38,7 +38,6 @@ export function deepestNodeDNAGeneration(
 
   // Build DNA fields using shared schema
   const dnaFields = buildDNAFieldsString({
-    includeStructure: nodeType === 'location',
     genreHandling: 'conditional',
     descLength: 'short',
     nodeType

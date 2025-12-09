@@ -5,6 +5,7 @@
  * Region nodes inherit from host and can override climate/biome aspects.
  */
 
+import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
 import type { ParentDNAContext } from '../../types';
 
 /**
@@ -48,30 +49,30 @@ OUTPUT JSON:
   "searchDesc": "75-100 char search description",
   "slug": "kebab-case-name",
   "dna": {
-    "looks": "2-4 sentences describing the visual character of this district/biome",
-    "colorsAndLighting": "1-3 sentences on local color palette and lighting",
-    "atmosphere": "2-4 sentences on local climate, air quality, environmental feel",
-    "materials": "1-3 sentences on materials common in this area",
-    "mood": "1-2 sentences on the emotional tone of this district",
-    "sounds": "5-7 words listing ambient sounds specific to this area",
-    "spatialLayout": "1-3 sentences on how this region is organized",
-    "primary_surfaces": "Main materials in this region",
-    "secondary_surfaces": "Supporting materials",
-    "accent_features": "Decorative details typical of this region",
-    "dominant": "Primary color family",
-    "secondary": "Secondary colors",
-    "accent": "Accent colors",
-    "ambient": "Typical light tone",
+    "looks": "${DNA_SCENE_FIELDS.looks}",
+    "colorsAndLighting": "${DNA_SCENE_FIELDS.colorsAndLighting}",
+    "atmosphere": "${DNA_SCENE_FIELDS.atmosphere}",
+    "materials": "${DNA_SCENE_FIELDS.materials}",
+    "mood": "${DNA_SCENE_FIELDS.mood}",
+    "sounds": "${DNA_SCENE_FIELDS.sounds}",
+    "spatialLayout": "${DNA_SCENE_FIELDS.spatialLayout}",
+    "primary_surfaces": "${DNA_SCENE_FIELDS.primary_surfaces}",
+    "secondary_surfaces": "${DNA_SCENE_FIELDS.secondary_surfaces}",
+    "accent_features": "${DNA_SCENE_FIELDS.accent_features}",
+    "dominant": "${DNA_SCENE_FIELDS.dominant}",
+    "secondary": "${DNA_SCENE_FIELDS.secondary}",
+    "accent": "${DNA_SCENE_FIELDS.accent}",
+    "ambient": "${DNA_SCENE_FIELDS.ambient}",
     
     "genre": null,
-    "architectural_tone": "Local architectural style variations, or null to inherit",
-    "cultural_tone": "Local cultural identity, or null to inherit",
-    "materials_base": "Regional material preferences, or null to inherit",
-    "mood_baseline": "Regional emotional character, or null to inherit",
-    "palette_bias": "Regional color preferences, or null to inherit",
-    "soundscape_base": "Regional sound character, or null to inherit",
-    "flora_base": "Local vegetation, or null to inherit",
-    "fauna_base": "Local wildlife, or null to inherit"
+    "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null to inherit",
+    "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null to inherit",
+    "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null to inherit",
+    "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null to inherit",
+    "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null to inherit",
+    "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null to inherit",
+    "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null to inherit",
+    "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null to inherit"
   }
 }
 

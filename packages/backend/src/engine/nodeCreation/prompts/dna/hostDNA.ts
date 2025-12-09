@@ -5,7 +5,7 @@
  * Host nodes define the genre and foundational style attributes.
  */
 
-import type { ParentDNAContext } from '../../types';
+import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
 
 /**
  * Generate DNA prompt for a host node
@@ -35,30 +35,30 @@ OUTPUT JSON:
   "searchDesc": "75-100 char search description",
   "slug": "kebab-case-name",
   "dna": {
-    "looks": "2-4 sentences describing the overall visual character - architecture, scale, key visual motifs",
-    "colorsAndLighting": "1-3 sentences on the dominant color palette and typical lighting conditions",
-    "atmosphere": "2-4 sentences on climate, weather patterns, air quality, general environmental feel",
-    "materials": "1-3 sentences on the predominant materials used in construction and nature",
-    "mood": "1-2 sentences on the emotional tone this world evokes",
-    "sounds": "5-7 words listing typical ambient sounds",
-    "spatialLayout": "1-3 sentences on how this world is organized spatially",
-    "primary_surfaces": "Main construction/natural materials",
-    "secondary_surfaces": "Supporting materials",
-    "accent_features": "Decorative or striking details typical of this world",
-    "dominant": "Primary color family",
-    "secondary": "Secondary colors",
-    "accent": "Accent colors",
-    "ambient": "Typical light tone (warm/cool/neutral)",
+    "looks": "${DNA_SCENE_FIELDS.looks}",
+    "colorsAndLighting": "${DNA_SCENE_FIELDS.colorsAndLighting}",
+    "atmosphere": "${DNA_SCENE_FIELDS.atmosphere}",
+    "materials": "${DNA_SCENE_FIELDS.materials}",
+    "mood": "${DNA_SCENE_FIELDS.mood}",
+    "sounds": "${DNA_SCENE_FIELDS.sounds}",
+    "spatialLayout": "${DNA_SCENE_FIELDS.spatialLayout}",
+    "primary_surfaces": "${DNA_SCENE_FIELDS.primary_surfaces}",
+    "secondary_surfaces": "${DNA_SCENE_FIELDS.secondary_surfaces}",
+    "accent_features": "${DNA_SCENE_FIELDS.accent_features}",
+    "dominant": "${DNA_SCENE_FIELDS.dominant}",
+    "secondary": "${DNA_SCENE_FIELDS.secondary}",
+    "accent": "${DNA_SCENE_FIELDS.accent}",
+    "ambient": "${DNA_SCENE_FIELDS.ambient}",
     
-    "genre": "REQUIRED: The genre/setting type (fantasy, sci-fi, post-apocalyptic, historical, modern, steampunk, etc.)",
-    "architectural_tone": "REQUIRED: Detailed architectural style description (e.g., 'neo-gothic industrial with brass fixtures and arched windows')",
-    "cultural_tone": "REQUIRED: Social/cultural identity of this world",
-    "materials_base": "REQUIRED: Material palette that defines this world's aesthetic",
-    "mood_baseline": "REQUIRED: Emotional baseline that permeates this world",
-    "palette_bias": "REQUIRED: Color style/families that characterize this world",
-    "soundscape_base": "REQUIRED: Ambient sound character of this world",
-    "flora_base": "Plant life types typical of this world, or 'None' if barren",
-    "fauna_base": "Animal life types typical of this world, or 'None' if lifeless"
+    "genre": "REQUIRED: ${DNA_CASCADING_FIELDS.genre}",
+    "architectural_tone": "REQUIRED: ${DNA_CASCADING_FIELDS.architectural_tone}",
+    "cultural_tone": "REQUIRED: ${DNA_CASCADING_FIELDS.cultural_tone}",
+    "materials_base": "REQUIRED: ${DNA_CASCADING_FIELDS.materials_base}",
+    "mood_baseline": "REQUIRED: ${DNA_CASCADING_FIELDS.mood_baseline}",
+    "palette_bias": "REQUIRED: ${DNA_CASCADING_FIELDS.palette_bias}",
+    "soundscape_base": "REQUIRED: ${DNA_CASCADING_FIELDS.soundscape_base}",
+    "flora_base": "${DNA_CASCADING_FIELDS.flora_base}",
+    "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base}"
   }
 }
 
