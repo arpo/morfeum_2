@@ -48,8 +48,8 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     category: 'creation'
   },
   NEW_NICHE: { 
-    requiresNodeType: ['location'], 
-    description: 'Create niche in current location',
+    requiresNodeType: ['niche'], 
+    description: 'Create nested niche in current niche',
     category: 'creation'
   },
   
@@ -68,7 +68,7 @@ export type NavigationCommand = keyof typeof SLASH_COMMANDS;
 
 // Flags supported by commands
 export const COMMAND_FLAGS = {
-  CREATE_IMAGE: '--create-image',
+  CREATE_IMAGE: '--view',
   BACKGROUND_TASK: '--bgtask',
   FURNISH: '--furnish'
 } as const;

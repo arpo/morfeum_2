@@ -12,7 +12,7 @@ export interface ParsedCommand {
 
 /**
  * Parse command input to extract command, text, and flags
- * Example: "/NEW_HOST London --create-image --bgtask"
+ * Example: "/NEW_HOST London --view --bgtask"
  * Returns: { command: "NEW_HOST", text: "London", flags: { createImage: true, backgroundTask: true } }
  */
 export function parseCommandInput(input: string): ParsedCommand {

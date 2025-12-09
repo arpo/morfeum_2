@@ -575,7 +575,7 @@ Frontend Input → commandParser → navigationCommands → Backend Route → Pi
 ```typescript
 // packages/backend/src/config/navigation.ts
 export const COMMAND_FLAGS = {
-  CREATE_IMAGE: '--create-image',
+  CREATE_IMAGE: '--view',
   BACKGROUND_TASK: '--bgtask',
   FURNISH: '--furnish'
 } as const;
