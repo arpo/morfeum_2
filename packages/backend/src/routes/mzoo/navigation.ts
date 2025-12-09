@@ -410,8 +410,7 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
   const commandToNodeType: Record<string, NodeType> = {
     NEW_HOST: 'host',
     NEW_REGION: 'region',
-    NEW_LOCATION: 'location',
-    NEW_NICHE: 'niche'
+    NEW_LOCATION: 'location'
   };
 
   const nodeType = commandToNodeType[command];

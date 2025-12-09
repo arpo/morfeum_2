@@ -15,7 +15,7 @@ interface CreationCallbacks {
 }
 
 /**
- * Handle creation commands (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE)
+ * Handle creation commands (NEW_HOST, NEW_REGION, NEW_LOCATION)
  */
 export async function handleCreationCommand(
   parsedCommand: ParsedCommand,

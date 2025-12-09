@@ -21,7 +21,7 @@ export interface SlashCommandConfig {
 export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   // Navigation commands
   GO_INSIDE: { 
-    requiresNodeType: ['location', 'niche'], 
+    requiresNodeType: ['location'], 
     description: 'Enter a location',
     category: 'navigation'
   },
@@ -45,11 +45,6 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   NEW_LOCATION: { 
     requiresNodeType: ['region'], 
     description: 'Create location in current region',
-    category: 'creation'
-  },
-  NEW_NICHE: { 
-    requiresNodeType: ['niche'], 
-    description: 'Create nested niche in current niche',
     category: 'creation'
   },
   
