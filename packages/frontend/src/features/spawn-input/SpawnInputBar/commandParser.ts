@@ -29,9 +29,9 @@ export function parseCommandInput(input: string): ParsedCommand {
   
   for (let i = 1; i < parts.length; i++) {
     const part = parts[i];
-    if (part === COMMAND_FLAGS.VIEW) {
+    if (part === COMMAND_FLAGS.VIEW || part === '-view') {
       flags.createImage = true;
-    } else if (part === COMMAND_FLAGS.BACKGROUND_TASK) {
+    } else if (part === COMMAND_FLAGS.BACKGROUND_TASK || part === '-bgtask') {
       flags.backgroundTask = true;
     } else if (part === COMMAND_FLAGS.FURNISH) {
       flags.furnish = true;
