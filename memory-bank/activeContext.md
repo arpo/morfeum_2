@@ -2,7 +2,21 @@
 
 ## Recent Changes (2025-12-09)
 
-### Scale Consistency System (NEW)
+### Full Parent Context for Slash Commands (NEW - Dec 9 PM)
+- **Problem**: Slash commands (`/NEW_REGION`, `/NEW_LOCATION`) were generating inaccurate DNA because they only passed 7 DNA fields to the LLM, missing critical parent identity info
+- **Root cause**: `extractParentDNAContext()` only extracted style attributes (genre, architectural_tone, palette_bias), not parent name/description
+- **Fix**: Extended `ParentDNAContext` to include ALL parent data:
+  - Parent identity: `name`, `description`, `type`
+  - Full DNA fields: All 23+ fields (looks, colorsAndLighting, atmosphere, materials, sounds, etc.)
+  - Structure data: `dominantElements`, `uniqueIdentifiers`, `searchDesc`
+- **Files modified**:
+  - `packages/backend/src/engine/nodeCreation/types.ts` - Extended ParentDNAContext interface
+  - `packages/backend/src/engine/nodeCreation/core/dnaInheritance.ts` - Updated extraction function
+  - `packages/backend/src/routes/mzoo/navigation.ts` - Pass full parent node data
+  - `packages/backend/src/engine/nodeCreation/prompts/dna/regionDNA.ts` - Rich parent context in prompt
+  - `packages/backend/src/engine/nodeCreation/prompts/dna/locationDNA.ts` - Rich parent context in prompt
+
+### Scale Consistency System
 - **Scale inference from descriptions:** Added `inferScaleFromDescription()` function that scans parent DNA text for size keywords:
   - Small indicators: "modest", "compact", "pod", "booth", "cabin", "cozy", "tiny"
   - Large indicators: "vast", "cathedral", "warehouse", "enormous", "massive"

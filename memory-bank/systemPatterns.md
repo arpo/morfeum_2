@@ -441,6 +441,74 @@ if (structure.openingShape) {
 
 ## DNA System Architecture
 
+### Full Parent Context Pattern
+Location: `packages/backend/src/engine/nodeCreation/core/dnaInheritance.ts`
+
+**Purpose**: Ensure child nodes receive FULL parent context for accurate DNA generation.
+
+**Problem**: Slash commands were generating inaccurate DNA because they only passed 7 style fields.
+
+**Solution**: Extended `ParentDNAContext` to include ALL parent data:
+
+```typescript
+interface ParentDNAContext {
+  // Parent identity (CRITICAL for geographic context)
+  name?: string;           // e.g., "Göteborg"
+  description?: string;    // e.g., "A major port city in Sweden..."
+  type?: NodeType;         // e.g., "host"
+  
+  // Full DNA fields (all 23+)
+  looks?: string;
+  colorsAndLighting?: string;
+  atmosphere?: string;
+  materials?: string;
+  mood?: string;
+  sounds?: string;
+  // ... all other DNA fields
+  
+  // Cascading fields
+  genre?: string;
+  architectural_tone?: string;
+  cultural_tone?: string;
+  // ... etc.
+  
+  // Structure data
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
+  searchDesc?: string;
+}
+```
+
+**Extraction Function**:
+```typescript
+export function extractParentDNAContext(
+  parentDNA?: NodeDNA,
+  parentNode?: { name, description, type, dominantElements, uniqueIdentifiers }
+): ParentDNAContext {
+  return {
+    name: parentNode?.name,
+    description: parentNode?.description,
+    type: parentNode?.type,
+    // ... all DNA and structure fields
+  };
+}
+```
+
+**DNA Prompt Usage**:
+```typescript
+// In regionDNA.ts, locationDNA.ts
+PARENT HOST: ${parentContext.name || 'Unknown'} (${parentContext.type || 'host'})
+PARENT DESCRIPTION: ${parentContext.description}
+
+PARENT VISUAL DNA:
+- Looks: ${parentContext.looks}
+- Colors & Lighting: ${parentContext.colorsAndLighting}
+- Atmosphere: ${parentContext.atmosphere}
+// ... etc.
+```
+
+**Key Rule**: Always pass the full parent node (not just DNA) when calling `extractParentDNAContext()`.
+
 ### Shared DNA Schema Module
 Location: `packages/backend/src/engine/generation/prompts/shared/dnaSchema.ts`
 

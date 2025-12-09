@@ -1,8 +1,8 @@
 /**
  * Location DNA Generation Prompt
  * 
- * Generates DNA for location nodes (buildings, sites, specific places).
- * Location nodes inherit from region and define site-specific attributes.
+ * Generates DNA for location nodes (buildings, sites, points of interest).
+ * Location nodes inherit from region/host and focus on architectural details.
  */
 
 import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
@@ -12,19 +12,34 @@ import type { ParentDNAContext } from '../../types';
  * Generate DNA prompt for a location node
  * 
  * @param description - User description of the location
- * @param parentContext - DNA context inherited from parent region
+ * @param parentContext - FULL DNA context inherited from parent region
  * @returns Prompt string for LLM
  */
 export function locationDNAPrompt(description: string, parentContext?: ParentDNAContext): string {
+  // Build rich parent context with name, description, and full DNA
   const contextSection = parentContext ? `
-PARENT REGION/HOST CONTEXT (inherit and respect these attributes):
+PARENT REGION: ${parentContext.name || 'Unknown'} (${parentContext.type || 'region'})
+${parentContext.description ? `PARENT DESCRIPTION: ${parentContext.description}` : ''}
+
+PARENT VISUAL DNA (inherit and respect these attributes):
+- Looks: ${parentContext.looks || 'Not specified'}
+- Colors & Lighting: ${parentContext.colorsAndLighting || 'Not specified'}
+- Atmosphere: ${parentContext.atmosphere || 'Not specified'}
+- Materials: ${parentContext.materials || 'Not specified'}
+- Mood: ${parentContext.mood || 'Not specified'}
+- Sounds: ${parentContext.sounds || 'Not specified'}
+
+PARENT STYLE DNA:
 - Genre: ${parentContext.genre || 'Not specified'} (NEVER override genre)
 - Architectural Tone: ${parentContext.architectural_tone || 'Not specified'}
 - Cultural Tone: ${parentContext.cultural_tone || 'Not specified'}
 - Dominant Color: ${parentContext.dominant || 'Not specified'}
-- Mood: ${parentContext.mood || 'Not specified'}
-- Materials Base: ${parentContext.materials_base || 'Not specified'}
 - Palette Bias: ${parentContext.palette_bias || 'Not specified'}
+- Materials Base: ${parentContext.materials_base || 'Not specified'}
+
+PARENT STRUCTURE:
+- Dominant Elements: ${parentContext.dominantElements?.join(', ') || 'Not specified'}
+- Unique Identifiers: ${parentContext.uniqueIdentifiers?.join(', ') || 'Not specified'}
 ` : '';
 
   return `You are creating the DNA for a LOCATION node - a specific building or site within a region.

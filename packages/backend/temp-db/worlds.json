@@ -1,271 +1,1072 @@
 {
   "nodes": {
-    "loc-1765287104442-b845p2din": {
-      "id": "loc-1765287104442-b845p2din",
+    "loc-1765298826493-vtpkm29wq": {
+      "id": "loc-1765298826493-vtpkm29wq",
       "type": "host",
-      "name": "Desolate Sandy Beach",
+      "name": "Göteborg",
       "spaceType": "exterior",
       "dna": {
-        "looks": "An immense, flat expanse of fine sand meets a calm, shallow body of water. The horizon is distant and clear, meeting a wide-open, bright blue sky. This landscape is characterized by its sheer emptiness and the broad sweep of sand.",
-        "colorsAndLighting": "The scene is dominated by the bright, direct light of a sunny day, casting sharp shadows. The palette is primarily sandy beiges and browns, contrasted by the brilliant blue of the sky and water.",
-        "atmosphere": "The air is clean, dry, and often still, creating a feeling of vastness and exposure. The weather is consistently sunny and warm, with a clear sky punctuated by occasional clouds.",
-        "materials": "The primary material is fine, loose sand, with smooth, calm water. The overall environment feels natural and elemental.",
-        "mood": "A sense of profound isolation, peaceful emptiness, and raw natural beauty. It evokes feelings of solitude and quiet contemplation.",
-        "sounds": "Gentle lapping waves, wind over sand, distant seabirds",
-        "primary_surfaces": "Fine sand, calm water",
-        "secondary_surfaces": "Air, light",
-        "accent_features": "Scattered clouds",
-        "dominant": "Sandy beige (dominant)",
-        "secondary": "Brilliant blue (sky and water)",
-        "accent": "White (clouds)",
-        "ambient": "Bright daylight",
-        "genre": "Survivalist Fiction",
-        "architectural_tone": "minimalist, utilitarian structures",
-        "cultural_tone": "nomadic peoples, isolated outposts",
-        "materials_base": "natural, raw materials",
-        "mood_baseline": "isolated, tranquil",
-        "palette_bias": "earth tones and blues",
-        "soundscape_base": "natural coastal ambiance",
-        "flora_base": "Sparse, hardy beach grasses",
-        "fauna_base": "Seagulls, small beach invertebrates"
+        "looks": "An aerial view reveals a city bisected by a network of glistening canals, reflecting the muted hues of historic brick buildings and modern concrete structures. Rooftops showcase a mix of red tiles and slate, interspersed with green spaces.",
+        "colorsAndLighting": "Dominated by muted blues of the water and sky, contrasted with the warm browns and greys of brickwork. Sunlight glints off the water and metallic structures, creating subtle highlights and deep shadows.",
+        "atmosphere": "The air carries the crisp scent of the sea and the faint aroma of industry. A moderate temperature prevails, with a gentle breeze often sweeping in from the harbor. The city hums with a steady rhythm of activity.",
+        "materials": "A blend of weathered red brick, rough-hewn stone for older structures, and polished concrete and steel for newer developments. Cobblestones pave many of the older streets, showing signs of age and wear.",
+        "mood": "A sense of industrious vitality and historical grounding. The city evokes feelings of exploration and urban charm, balanced with pragmatic functionality.",
+        "sounds": "Water lapping, distant ship horns, city traffic hum, chatter, seagulls, bells.",
+        "primary_surfaces": "Cobblestone streets, weathered brick facades, canal water",
+        "secondary_surfaces": "Red tile roofs, concrete docks, steel shipping cranes, glass windows",
+        "accent_features": "Brightly painted canal boats, colorful awnings, park greenery, ornate lampposts",
+        "dominant": "Muted blues and greys with coverage over water and sky",
+        "secondary": "Warm browns and reds on brick buildings and rooftops",
+        "accent": "Yellow and orange on signage and some building details, vibrant greens in parks",
+        "ambient": "Bright, somewhat diffused daylight",
+        "genre": "Urban Harbor City",
+        "architectural_tone": "Nautical industrial with historic brick and stone elements",
+        "cultural_tone": "Maritime trade and vibrant urban life",
+        "materials_base": "Stone, brick, metal, water",
+        "mood_baseline": "Active and historic",
+        "palette_bias": "Blues, greys, browns, and reds",
+        "soundscape_base": "Maritime and urban bustle",
+        "flora_base": "Parks and street trees",
+        "fauna_base": "Seagulls, urban birds"
       },
-      "description": "A vast, seemingly endless expanse of sand stretching to the horizon, bordered by a calm, shallow sea. The sky is a brilliant, clear blue, often dotted with fluffy white clouds, under strong, direct daylight.",
-      "searchDesc": "A vast, desolate sandy beach under a bright blue sky with calm, shallow waters.",
-      "slug": "desolate-sandy-beach",
+      "description": "A major port city in Sweden, known for its canals and vibrant cultural scene.",
+      "searchDesc": "Aerial view of Göteborg, Sweden: canals, brick buildings, cranes, and vibrant city life.",
+      "slug": "g-teborg",
       "structure": {
-        "spatialLayout": "A wide, flat, open space with a defined horizon. The scale is immense and undifferentiated, emphasizing distance and openness.",
-        "dominantElements": [
-          "Vast sand dunes",
-          "Shallow sea"
-        ],
-        "uniqueIdentifiers": [
-          "Clear blue sky",
-          "Direct sunlight",
-          "Sandy terrain"
-        ]
-      }
-    },
-    "2e01d24f-9050-4e50-8e79-62ba4c231b2d": {
-      "id": "2e01d24f-9050-4e50-8e79-62ba4c231b2d",
-      "type": "region",
-      "name": "Isolated Shoreline",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A solitary, weathered spherical dwelling stands on slender stilts above the sand. Its surface shows signs of age and wear, with distinctive attached balloon-like forms. The surrounding beach is vast and mostly featureless.",
-        "colorsAndLighting": "The scene is bathed in strong, direct daylight from a bright blue sky. Muted tones of the weathered dwelling and the sandy beach are punctuated by the reflections in the water.",
-        "atmosphere": "The air is clear and still, creating a sense of profound isolation. The bright, sunny weather suggests warmth but also exposure on this desolate shoreline.",
-        "materials": "The primary structure appears to be a composite material, painted and weathered. Natural wood is used for access. The beach is composed of fine sand.",
-        "mood": "A feeling of quiet solitude and resilient habitation. The environment evokes a sense of peaceful isolation.",
-        "sounds": "Gentle lapping waves, distant seabirds, soft wind",
-        "primary_surfaces": "Fine sand, weathered painted composite",
-        "secondary_surfaces": "Wood, murky water",
-        "accent_features": "Balloon-like spheres, reflective window panes",
-        "dominant": "Light sand (dominant)",
-        "secondary": "Faded teal-blue (dwelling)",
-        "accent": "Pale reddish-pink, orange, reflective blue, greenish-brown",
-        "ambient": "Bright daylight",
-        "genre": null,
-        "architectural_tone": "eccentric geodesic dome on stilts",
-        "cultural_tone": "solitary inhabitant, off-grid survivalist",
-        "materials_base": "weathered painted composite, natural wood",
-        "mood_baseline": "solitary, resilient",
-        "palette_bias": "blues and earth tones",
-        "soundscape_base": "natural coastal ambiance",
-        "flora_base": "None",
-        "fauna_base": "Seabirds (implied)"
-      },
-      "description": "A remote, desolate stretch of sandy beach characterized by its vast emptiness and unique, weathered structures. Scattered puddles of murky water reflect the sky, adding to the stark beauty of the environment.",
-      "searchDesc": "Desolate sandy beach with a unique spherical dwelling and scattered puddles.",
-      "slug": "isolated-shoreline",
-      "structure": {
-        "spatialLayout": "An open, expansive flat sandy area with a clear horizon. The dwelling occupies a prominent but isolated position.",
-        "dominantElements": [
-          "Weathered dwelling"
-        ],
-        "uniqueIdentifiers": [
-          "Slender stilts",
-          "Spherical architecture",
-          "Balloon-like attachments"
-        ]
-      }
-    },
-    "ab6970f2-e10a-4eb9-8e3f-ac965b4ac42a": {
-      "id": "ab6970f2-e10a-4eb9-8e3f-ac965b4ac42a",
-      "type": "location",
-      "name": "Spherical Stilt Dwelling",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A large, weathered spherical structure stands on slender stilts above a sandy beach. The sphere is adorned with a prominent rectangular window and a smaller circular porthole, with additional indentations on its upper surface. Three large, balloon-like spherical objects are attached, two on the left and one on the top right.",
-        "colorsAndLighting": "The dwelling's faded teal-blue paint contrasts with a lighter base, illuminated by strong, direct daylight under a bright blue sky. Reflections from the blue window pane and murky water puddles add visual interest.",
-        "atmosphere": "The air is clear and still, with a sense of isolation on the desolate beach. The bright, sunny weather suggests warmth, and the scattered clouds offer a subtle dynamic to the vast sky.",
-        "materials": "The primary material appears to be a painted, weathered composite for the sphere, with rustic wooden elements for the entrance and stairs. The attached spherical objects resemble deflated balloons, suggesting a flexible material.",
-        "mood": "The dwelling evokes a feeling of quirky solitude and resilient habitation. It suggests a unique individual or small group seeking refuge in an exposed environment.",
-        "sounds": "gentle waves, distant seabirds, light breeze",
-        "primary_surfaces": "weathered spherical shell, light-colored sand",
-        "secondary_surfaces": "slender stilts, rustic wooden entrance, wooden stairs",
-        "accent_features": "reflective blue window pane, pale reddish-pink balloons, orange balloon, circular indentations",
-        "dominant": "faded teal-blue (peeling)",
-        "secondary": "lighter base color (yellow or beige)",
-        "accent": "reflective blue (window), pale reddish-pink (balloons), orange (balloon), murky greenish-brown (puddles)",
-        "ambient": "bright daylight",
-        "genre": null,
-        "architectural_tone": "eccentric geodesic dome on stilts",
-        "cultural_tone": "solitary inhabitant, off-grid survivalist",
-        "materials_base": "weathered painted composite, natural wood",
-        "mood_baseline": "isolated, quirky, resilient",
-        "palette_bias": "blues and earth tones",
-        "soundscape_base": "coastal ambiance",
-        "flora_base": "None",
-        "fauna_base": "seabirds (implied)"
-      },
-      "description": "A uniquely constructed, spherical dwelling standing on slender stilts. It is heavily weathered, showing patches of peeling, faded teal-blue paint revealing a lighter base underneath. It features a wide, rectangular window with a reflective blue pane on its left side and a smaller, circular porthole-like window to its right. Several other smaller, unevenly spaced circular holes or indentations dot its upper surface. A makeshift, rustic wooden entrance juts out from the right side of the sphere, complete with a worn white door and a rudimentary set of wooden stairs descending to the sand below. Three large, spherical objects resembling deflated balloons are attached: two pale reddish-pink ones hang from the left side by thin strings, and a single, larger orange one floats higher from the top right.",
-      "searchDesc": "Spherical stilt dwelling on a sandy beach with weathered teal paint and balloon-like decorations.",
-      "slug": "spherical-stilt-dwelling",
-      "structure": {
-        "spatialLayout": "The dwelling occupies a defined vertical space on its stilts, with its main form being a large sphere. The surroundings are open and expansive, with a clear visual depth stretching to the horizon.",
+        "spatialLayout": "A relatively flat urban expanse characterized by a grid-like street pattern intersected by organic canal routes. The scale is moderately dense, with a good balance of built-up areas and open water.",
         "navigableElements": [
           {
-            "type": "door",
-            "position": "right side",
-            "description": "worn white door"
+            "type": "passage",
+            "position": "along the canals",
+            "description": "Waterways and their bordering paths"
           },
           {
-            "type": "stairs",
-            "position": "descending from door",
-            "description": "rudimentary wooden stairs"
+            "type": "archway",
+            "position": "between districts",
+            "description": "Stone arches connecting historic areas"
+          },
+          {
+            "type": "path",
+            "position": "cobblestone streets",
+            "description": "Winding city streets"
           }
         ],
         "dominantElements": [
-          "Spherical structure",
-          "Slender stilts",
-          "Rectangular window",
-          "Attached spherical objects"
+          "Canal network",
+          "Historic brick buildings",
+          "Modern shipping cranes",
+          "Lively public squares"
         ],
         "uniqueIdentifiers": [
-          "Peeling teal-blue paint",
-          "Reflective blue window pane",
-          "Porthole-like circular window",
-          "Deflated balloon-like attachments"
+          "The Fish Church (Feskekôrka)",
+          "Liseberg amusement park",
+          "Trädgårdsföreningen (Garden Society)",
+          "Shipyard cranes"
         ]
       },
-      "primaryMedia": "media-1765287129250-2tabm3f5u"
+      "primaryMedia": "media-1765298842179-oaafcd0la"
     },
-    "niche-1765287145951-9qjzbkhvy": {
-      "id": "niche-1765287145951-9qjzbkhvy",
+    "4cd4d980-3832-4a12-9cca-097437518b77": {
+      "id": "4cd4d980-3832-4a12-9cca-097437518b77",
+      "type": "region",
+      "name": "Ringön",
+      "spaceType": "exterior",
+      "description": "A dynamic island district within Göteborg, Ringön is a hub of maritime industry and creative innovation. It buzzes with the energy of workshops, shipyards, and artist studios, all set against the backdrop of the city's bustling harbor.",
+      "dna": {
+        "looks": "Ringön's aerial view showcases a gritty, functional landscape dominated by large industrial structures, shipping containers, and active dry docks. Cranes punctuate the skyline, while weathered warehouses line the water's edge, interspersed with smaller, more eclectic buildings housing studios.",
+        "colorsAndLighting": "The colors here lean towards the functional: deep greys of concrete and metal, rust-reds of weathered steel, and the muted blues and greens of the harbor water. Lighting is often functional, with harsh industrial lamps and the natural, sometimes overcast, daylight casting stark shadows.",
+        "atmosphere": "The air is thick with the scent of brine, diesel, and metal. A constant hum of industrial activity and the clang of hammers create a robust soundscape. The temperature is typically that of the open harbor, feeling cooler with a persistent breeze.",
+        "materials": "Predominantly rough concrete, corrugated steel, weathered metal plating, and aged wood. Cobblestones might appear near older dock areas, often showing signs of heavy wear and tear from vehicles and machinery.",
+        "mood": "A sense of raw, productive energy and a gritty, unpolished charm. It evokes feelings of hard work, creativity, and maritime grit.",
+        "sounds": "Ship horns, grinding metal, engine noise, water lapping, seagulls, distant traffic, chatter.",
+        "primary_surfaces": "Concrete, weathered steel, industrial metal",
+        "secondary_surfaces": "Corrugated iron, aged wood, rough stone",
+        "accent_features": "Graffiti art on warehouse walls, colorful shipping containers, eclectic signage for studios",
+        "dominant": "Muted greys and browns (industrial structures, concrete)",
+        "secondary": "Deep blues and greens (water), rust-reds (metal)",
+        "accent": "Occasional vibrant colors from graffiti or signage",
+        "ambient": "Functional and often shadowed",
+        "genre": null,
+        "architectural_tone": "Functional industrial with maritime elements and artistic overlays",
+        "cultural_tone": "Maritime trade, craftsmanship, and emerging artistic/creative industries",
+        "materials_base": "Metal, concrete, weathered wood, stone",
+        "mood_baseline": "Industrious and raw",
+        "palette_bias": "Greys, browns, blues, rust-reds",
+        "soundscape_base": "Industrial and maritime",
+        "flora_base": "None",
+        "fauna_base": "Seagulls, harbor seals (occasional)"
+      },
+      "searchDesc": "Ringön: Industrial island with shipyards, art studios, and maritime bustle.",
+      "slug": "ringon",
+      "structure": {
+        "spatialLayout": "The island's layout is utilitarian, with a focus on maximizing workspace and access to the water. Spaces are often open and industrial, with defined pathways for heavy machinery and pedestrian routes along the periphery.",
+        "navigableElements": [
+          "Waterways",
+          "Industrial jetties",
+          "Pedestrian walkways",
+          "Bicycle paths"
+        ],
+        "dominantElements": [
+          "Active shipyards and dry docks",
+          "Warehouses and industrial buildings",
+          "Artistic studios and workshops",
+          "Harbor cranes",
+          "Canal-side promenades"
+        ],
+        "uniqueIdentifiers": [
+          "The distinct blend of heavy industry with a thriving arts scene",
+          "Working shipyards juxtaposed with creative spaces",
+          "The palpable smell of industry mixed with the sea",
+          "Boat traffic and industrial machinery sounds"
+        ]
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a85a1e1/FLOcetDB5yBXUJ6nfuGI0.jpg",
+      "primaryMedia": "media-1765298900834-zmhxhm6yu"
+    },
+    "7c5f587f-5837-4101-8d22-f55bcd48ce1c": {
+      "id": "7c5f587f-5837-4101-8d22-f55bcd48ce1c",
+      "type": "location",
+      "name": "The Circuit Lounge",
+      "spaceType": "exterior",
+      "description": "A pulsating techno bar carved into a repurposed industrial shell, its exterior hinting at the sonic and visual energy within. It stands as a beacon of underground culture amidst Ringön's functional landscape.",
+      "dna": {
+        "looks": "The bar presents as a utilitarian structure, likely a converted industrial unit, with its original concrete and corrugated steel shell largely intact. It's adorned with bold, often abstract graffiti and intermittent, stark neon lighting that cuts through the grime.",
+        "colorsAndLighting": "Dominated by the dark greys of metal and concrete, punctuated by vibrant, electric blues, purples, and pinks from the neon. Lighting is stark, creating deep shadows and highlighting the grime and textures.",
+        "atmosphere": "The air is thick with the faint smell of ozone and exhaust, mingling with the usual industrial tang. A constant, low-frequency bass pulse vibrates through the ground, a palpable invitation to the energetic space within. The temperature is kept artificially cool and often humid.",
+        "materials": "Predominantly rough concrete, heavily weathered corrugated steel, and exposed metal piping. Accents of LED lighting and durable, often scratched, synthetic materials.",
+        "mood": "An edgy, underground vibe that promises intense sonic experiences and a release from the mundane.",
+        "sounds": "Deep bass throb, industrial hum, distant chatter, metallic echoes.",
+        "primary_surfaces": "Weathered corrugated steel, rough concrete walls",
+        "secondary_surfaces": "Exposed metal pipes, ventilation grates, industrial doors",
+        "accent_features": "Neon signage, graffiti murals, circuit board motifs",
+        "dominant": "Dark grey (steel and concrete)",
+        "secondary": "Rust-reds and muted blues (weathering and old paint)",
+        "accent": "Electric blues, purples, and pinks (neon)",
+        "ambient": "Harsh, shadowed",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
+        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
+        "materials_base": "Metal, concrete, industrial waste materials",
+        "mood_baseline": "Gritty, energetic",
+        "palette_bias": "Greys, blacks, electric neons",
+        "soundscape_base": "Bass-heavy, industrial pulse",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "searchDesc": "Techno bar in Ringön, features graffiti, neon, and industrial materials.",
+      "slug": "the-circuit-lounge",
+      "structure": {
+        "spatialLayout": "A relatively compact, rectangular structure with a low ceiling, emphasizing density and sound containment. The exterior offers little sense of depth, prioritizing a solid, imposing facade.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A heavy, reinforced steel door with glowing neon accents, leading into the main bar area."
+          },
+          {
+            "type": "window",
+            "position": "left",
+            "description": "A small, barred window offering a glimpse of pulsating lights and silhouettes within."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "A dimly lit, narrow passage partially obscured by corrugated metal, potentially leading to a back entrance or service area."
+          }
+        ],
+        "dominantElements": [
+          "Corrugated steel facade with graffiti art",
+          "Large, heavy industrial doors",
+          "Pulsating neon signage",
+          "Ventilation grates and exposed pipework"
+        ],
+        "uniqueIdentifiers": [
+          "An incongruous splash of vibrant, often glitch-art inspired murals on industrial plating",
+          "A low, resonant bass throb emanating from within, even when the doors are closed",
+          "A distinctive smell of ozone mixed with stale beer and sweat",
+          "A prominent, stylized circuit board motif integrated into the signage"
+        ]
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a85a1e4/bLGkP17cSURa26-cMOQ9E.jpg",
+      "primaryMedia": "media-1765298931039-4t1e40x2l"
+    },
+    "niche-1765298961054-r460id9v3": {
+      "id": "niche-1765298961054-r460id9v3",
       "type": "niche",
-      "name": "Spherical Stilt Dwelling Interior",
+      "name": "The Circuit Lounge Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior reveals a curved, weathered spherical shell. A prominent rectangular window and a smaller circular porthole are integrated into the walls. The space feels compact yet functional, shaped by its unique geodesic form.",
-        "colorsAndLighting": "Strong, direct daylight streams in, creating bright illumination and subtle shadows. The dominant faded teal-blue of the exterior is echoed internally, contrasting with a lighter base color. Reflections from the window pane add subtle highlights.",
-        "atmosphere": "The air inside is clear and still, carrying a sense of isolated habitation. The bright, sunny weather outside contributes to a feeling of warmth and exposure. Despite the simplicity, there's a resilient feel to the space.",
-        "materials": "The primary material is a weathered, painted composite forming the curved shell. Rustic wooden elements are present for structural support and potential furnishings. The attached balloon-like objects suggest a flexible material, though their interior presence is implied.",
-        "mood": "The interior evokes a feeling of quirky solitude and resilient habitation, a unique refuge built with resourcefulness.",
-        "sounds": "Muffled waves, distant seabird calls, gentle wind, creaking structure",
-        "spatialLayout": "The space is defined by the interior curvature of the spherical dwelling, creating a rounded, enclosed environment. The layout is likely efficient, adapting to the organic shape.",
-        "primary_surfaces": "weathered spherical shell interior, light-colored sand (implied floor)",
-        "secondary_surfaces": "rustic wooden supports, window frames, porthole frame",
-        "accent_features": "reflections on window pane, subtle indentations on upper surface (visible from inside)",
-        "dominant": "faded teal-blue (interior walls)",
-        "secondary": "lighter base color (interior floor/lower walls)",
-        "accent": "reflective blue (window pane)",
-        "ambient": "bright daylight",
+        "looks": "This bar is a converted industrial unit, retaining its raw concrete and corrugated steel shell. Bold, abstract graffiti adorns the surfaces, punctuated by sharp neon lights that carve through the dimness. The space feels raw and unpolished, a canvas for its patrons and performers.",
+        "colorsAndLighting": "Dominated by the deep greys of metal and concrete, the space is energized by electric blues, purples, and pinks from stark neon lighting. Shadows are deep and dramatic, highlighting textures and grime.",
+        "atmosphere": "The air carries a faint industrial tang, mingled with ozone and exhaust fumes. A constant, low-frequency bass pulse vibrates through the floor, creating a palpable sense of energy. The environment is artificially cool and often humid, enhancing the sensory experience.",
+        "materials": "The primary materials are rough, weathered concrete and heavily textured corrugated steel. Exposed metal piping and ventilation grates are common, with accents of LED lighting and durable, scratched synthetic materials.",
+        "mood": "An intense, gritty, and energetic underground vibe that offers a release from the ordinary and promises powerful sonic experiences.",
+        "sounds": "Low-frequency bass, industrial pulse, muffled crowd noise, distant machinery hum",
+        "spatialLayout": "An open, utilitarian layout suggesting a converted industrial hall. The space feels vast but enclosed by its raw materials, with a focus on a central performance or bar area. Depth is created through dramatic lighting and shadow.",
+        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floors and ceilings",
+        "secondary_surfaces": "Exposed metal pipes, ventilation grates, industrial doors, structural beams",
+        "accent_features": "Bold abstract graffiti murals, intermittent stark neon signage, circuit board motifs",
+        "dominant": "Dark grey (steel and concrete)",
+        "secondary": "Rust-reds and muted blues (weathering)",
+        "accent": "Electric blues, purples, and pinks (neon)",
+        "ambient": "Harsh, shadowed",
         "genre": null,
-        "architectural_tone": "eccentric geodesic dome on stilts",
-        "cultural_tone": "solitary inhabitant, off-grid survivalist",
-        "materials_base": "weathered painted composite, natural wood",
-        "mood_baseline": "isolated, quirky, resilient",
-        "palette_bias": "blues and earth tones",
-        "soundscape_base": "coastal ambiance",
+        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
+        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
+        "materials_base": "Metal, concrete, industrial waste materials",
+        "mood_baseline": "Gritty, energetic",
+        "palette_bias": "Greys, blacks, electric neons",
+        "soundscape_base": "Bass-heavy, industrial pulse",
         "flora_base": "None",
-        "fauna_base": "seabirds (implied)"
+        "fauna_base": "None"
       },
-      "primaryMedia": "media-1765287145950-3ds28ib2d",
-      "description": "The interior of the Spherical Stilt Dwelling features a seamless, open spherical volume with a domed ceiling. Minimal, porthole-like circular openings punctuate the curved walls, offering glimpses of the surrounding shoreline.",
+      "primaryMedia": "media-1765298961054-1ujw8u9ml",
+      "description": "The interior of The Circuit Lounge offers a welcoming and stylish entertainment space, designed for relaxation and socializing.",
       "structure": {
-        "form": "spherical",
-        "roofType": "domed",
+        "form": "rectangular",
+        "roofType": "flat",
         "scale": "medium",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "circular",
-        "functionalType": "residential",
-        "spatialLayout": "The interior is a single, open spherical volume. The space flows organically, with no distinct rooms.",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A medium-sized lounge space with distinct seating zones and a central bar area.",
         "requiredElements": [],
         "suggestedFixtures": [
-          "built-in seating",
-          "integrated storage units",
-          "central light fixture",
-          "yoga mat",
-          "small hydroponic garden"
+          "Lounge seating (sofas, armchairs)",
+          "Bar counter with stools",
+          "Cocktail tables",
+          "Ambient lighting fixtures",
+          "Sound system speakers",
+          "Decorative plants"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "back wall",
+            "description": "Passage leading to other areas of the Circuit Lounge."
+          },
+          {
+            "type": "door",
+            "position": "right wall",
+            "description": "Entrance/exit door to the exterior."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "Passage to restrooms or private areas."
+          }
+        ],
+        "dominantElements": [
+          "Central bar area",
+          "Comfortable lounge seating arrangements",
+          "Large glass windows",
+          "Dim, atmospheric lighting"
+        ],
+        "uniqueIdentifiers": [
+          "Lounge atmosphere",
+          "Circuit theme elements (implied from parent name)",
+          "Varied seating options"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "back wall",
+          "description": "Passage leading to other areas of the Circuit Lounge."
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "Entrance/exit door to the exterior."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "Passage to restrooms or private areas."
+        }
+      ],
+      "dominantElements": [
+        "Central bar area",
+        "Comfortable lounge seating arrangements",
+        "Large glass windows",
+        "Dim, atmospheric lighting"
+      ],
+      "uniqueIdentifiers": [
+        "Lounge atmosphere",
+        "Circuit theme elements (implied from parent name)",
+        "Varied seating options"
+      ],
+      "searchDesc": "Edgy industrial lounge with concrete, steel, graffiti, and electric neon.",
+      "slug": "interior-of-the-circuit-lounge"
+    },
+    "niche-1765298986774-mi4le51mb": {
+      "id": "niche-1765298986774-mi4le51mb",
+      "type": "niche",
+      "name": "The Dance Floor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a vast, open space carved out of the industrial shell, with a central, unadorned floor designed for movement. Prominent industrial lighting rigs hang from the high ceiling, casting sharp beams. A raised DJ booth, constructed from salvaged metal, is positioned to command the space.",
+        "colorsAndLighting": "The primary palette consists of dark greys from the concrete and steel, heavily contrasted by dynamic, strobing electric blues, purples, and pinks from the neon accents and lighting rigs. Shadows are deep and sharp, emphasizing the raw textures.",
+        "atmosphere": "The air hums with a palpable energy, thick with the faint scent of ozone and the ever-present, low-frequency bass pulse that resonates through the floor and walls. The temperature is deliberately kept cool and slightly humid.",
+        "materials": "The dominant materials are rough, exposed concrete walls and heavily weathered corrugated steel panels. Exposed metal piping and ventilation grates are visible throughout, interspersed with durable, scratch-marked synthetic flooring near the dance floor.",
+        "mood": "Intensely energetic and raw, evoking a sense of underground revelry and uninhibited expression.",
+        "sounds": "Pounding bass, driving rhythms, industrial hum, crowd murmur",
+        "spatialLayout": "A large, roughly rectangular open floor space dominates the area, with the DJ booth positioned at one end and potential seating or standing areas along the periphery.",
+        "primary_surfaces": "Rough concrete walls, weathered corrugated steel panels",
+        "secondary_surfaces": "Exposed metal piping, ventilation grates, industrial metal DJ booth structure",
+        "accent_features": "Stark neon lighting strips, graffiti murals, industrial spotlights",
+        "dominant": "Dark grey (60%)",
+        "secondary": "Electric blues and purples (30%)",
+        "accent": "Pinks (10%)",
+        "ambient": "Harsh, shadowed",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
+        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
+        "materials_base": "Metal, concrete, industrial waste materials",
+        "mood_baseline": "Gritty, energetic",
+        "palette_bias": "Greys, blacks, electric neons",
+        "soundscape_base": "Bass-heavy, industrial pulse",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765298986773-vciybg2b3",
+      "description": "The primary entertainment hub, this large dance area is designed for high-energy movement and immersion, featuring a vast, open floor plan and state-of-the-art sound and lighting.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A large, open rectangular area designed for dancing, with ample space for movement and a central focus on the dance floor itself.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Dance floor lighting rig",
+          "DJ booth",
+          "Sound system speakers",
+          "Bar access",
+          "Seating areas around the perimeter",
+          "Mirrored walls"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "central front",
+            "description": "Opens into the main lounge area."
+          },
+          {
+            "type": "passage",
+            "position": "rear right",
+            "description": "Leads to backstage or service areas."
+          },
+          {
+            "type": "passage",
+            "position": "rear left",
+            "description": "Leads to restrooms or other facilities."
+          }
+        ],
+        "dominantElements": [
+          "Expansive dance floor",
+          "Integrated sound system",
+          "Dynamic lighting rig",
+          "High ceiling"
+        ],
+        "uniqueIdentifiers": [
+          "Central focus on movement",
+          "Immersive audio-visual experience",
+          "Energy and vibrancy"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "central front",
+          "description": "Opens into the main lounge area."
+        },
+        {
+          "type": "passage",
+          "position": "rear right",
+          "description": "Leads to backstage or service areas."
+        },
+        {
+          "type": "passage",
+          "position": "rear left",
+          "description": "Leads to restrooms or other facilities."
+        }
+      ],
+      "dominantElements": [
+        "Expansive dance floor",
+        "Integrated sound system",
+        "Dynamic lighting rig",
+        "High ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "Central focus on movement",
+        "Immersive audio-visual experience",
+        "Energy and vibrancy"
+      ],
+      "searchDesc": "Gritty industrial dance floor with stark neon, raw concrete, and pulsing bass.",
+      "slug": "dance-area"
+    },
+    "niche-1765299020300-88tdnud85": {
+      "id": "niche-1765299020300-88tdnud85",
+      "type": "niche",
+      "name": "The Circuit Lounge Restaurant",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The restaurant occupies a large, open industrial space. The bar is a central, utilitarian structure made of rough concrete and steel, possibly with salvaged metal shelving. Seating areas are varied, some comprising rough wooden tables and metal chairs, others more modular and industrial in feel. Exposed ductwork and piping snake across the high ceilings.",
+        "colorsAndLighting": "Dominated by the dark greys of concrete and steel, punctuated by vibrant, electric blues, purples, and pinks from intermittent neon lighting. Harsh, directional lighting creates deep shadows, highlighting textures and grime.",
+        "atmosphere": "The air carries a faint, lingering industrial tang, perhaps mixed with cooking aromas. A constant, low-frequency bass pulse is felt rather than heard, contributing to an energetic and slightly edgy ambiance. The temperature is kept artificially cool.",
+        "materials": "Predominantly rough, unadorned concrete walls and floors, complemented by heavily weathered corrugated steel panels. Accents of exposed metal piping, ventilation grates, and durable, often scratched, synthetic materials for tabletops and seating.",
+        "mood": "An edgy, underground vibe that offers a distinct escape, promising a vibrant and unpretentious dining experience.",
+        "sounds": "Low-frequency bass, clatter of dishes, muffled conversation, distant industrial hum.",
+        "spatialLayout": "An open-plan layout maximizing the industrial shell, with distinct zones for the bar, dining, and kitchen access. High ceilings and a sense of raw space are prominent.",
+        "primary_surfaces": "Rough concrete walls and floors, weathered corrugated steel panels",
+        "secondary_surfaces": "Exposed metal pipes, ventilation grates, industrial doors, salvaged metal shelving",
+        "accent_features": "Bold graffiti murals, stark neon signage, circuit board motifs on select surfaces",
+        "dominant": "Dark Grey (concrete and steel)",
+        "secondary": "Rust-reds and muted blues (weathering)",
+        "accent": "Electric blues, purples, and pinks (neon signage)",
+        "ambient": "Harsh, shadowed",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
+        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
+        "materials_base": "Metal, concrete, industrial waste materials",
+        "mood_baseline": "Gritty, energetic",
+        "palette_bias": "Greys, blacks, electric neons",
+        "soundscape_base": "Bass-heavy, industrial pulse",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765299020299-23oh7aoxz",
+      "description": "A medium-scale, rectangular restaurant space with a wide orientation, featuring large glass windows and a flat ceiling. It serves as a commercial dining establishment within the Circuit Lounge.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "spatialLayout": "A medium-sized, rectangular dining area designed for patrons to eat. Tables are arranged for optimal flow and customer experience, with a clear view towards a central service area.",
+        "requiredElements": [
+          "restaurant"
+        ],
+        "suggestedFixtures": [
+          "dining tables",
+          "chairs",
+          "bar area",
+          "waitstaff station",
+          "ambient lighting",
+          "decorative plants"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "Entrance to kitchen/service areas."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "Passage towards the main 'Circuit Lounge' area."
+          },
+          {
+            "type": "door",
+            "position": "front wall",
+            "description": "Main entrance from the parent structure."
+          }
+        ],
+        "dominantElements": [
+          "dining tables and chairs",
+          "large windows",
+          "a central bar",
+          "ambient lighting"
+        ],
+        "uniqueIdentifiers": [
+          "modern, clean aesthetic",
+          "integrated ambient lighting",
+          "a prominent bar as a focal point"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "Entrance to kitchen/service areas."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "Passage towards the main 'Circuit Lounge' area."
+        },
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "Main entrance from the parent structure."
+        }
+      ],
+      "dominantElements": [
+        "dining tables and chairs",
+        "large windows",
+        "a central bar",
+        "ambient lighting"
+      ],
+      "uniqueIdentifiers": [
+        "modern, clean aesthetic",
+        "integrated ambient lighting",
+        "a prominent bar as a focal point"
+      ],
+      "searchDesc": "Underground industrial restaurant with neon and graffiti.",
+      "slug": "restaurant"
+    },
+    "niche-1765299083085-woospqb9e": {
+      "id": "niche-1765299083085-woospqb9e",
+      "type": "niche",
+      "name": "The Rooftop Terrace",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An exposed, open-air space atop the industrial structure. Rough concrete parapets are heavily tagged with graffiti, and the railings are made from weathered corrugated steel. Basic, robust seating is scattered throughout, offering unobstructed views.",
+        "colorsAndLighting": "Dominated by the grey of concrete and steel, illuminated by the stark, ambient glow from the city and intermittent neon spill from below. Deep shadows are cast by the structure itself and any minimal overhead elements.",
+        "atmosphere": "The air is cooler and more exposed than below, carrying the faint scent of rain and distant city fumes. A palpable sense of elevation and raw openness pervades, with the constant low-frequency bass pulse still resonating from the bar beneath.",
+        "materials": "The primary materials are rough, weather-beaten concrete for the parapet walls and heavily patinated corrugated steel for any barriers or seating elements. Exposed metal piping may also be present. Dirt and grime are integral to the textures.",
+        "mood": "A raw, exposed, and defiant space offering a panoramic perspective. It evokes a sense of freedom and a continuation of the underground energy.",
+        "sounds": "Distant city hum, wind, muffled bass from below",
+        "spatialLayout": "An open, flat expanse defined by the building's footprint, offering a wide, panoramic view of the surroundings.",
+        "primary_surfaces": "Graffiti-covered rough concrete parapet, weathered corrugated steel railings",
+        "secondary_surfaces": "Exposed structural metal, metal seating",
+        "accent_features": "Bold graffiti art, intermittent neon lighting spill from below",
+        "dominant": "Dark grey (concrete, steel)",
+        "secondary": "Varying shades of graffiti colors",
+        "accent": "Electric blues, purples, and pinks (from distant neon)",
+        "ambient": "Harsh, shadowed, with distant light pollution",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
+        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
+        "materials_base": "Metal, concrete, industrial waste materials",
+        "mood_baseline": "Gritty, energetic",
+        "palette_bias": "Greys, blacks, electric neons",
+        "soundscape_base": "Bass-heavy, industrial pulse",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765299083085-un9qs4hhu",
+      "description": "An open-air rooftop terrace extending from 'The Circuit Lounge', offering a spacious environment for guests to enjoy views and socialize.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "An expansive open-air space offering panoramic views, designed for mingling and relaxation.",
+        "requiredElements": [
+          "the roof top terrase"
+        ],
+        "suggestedFixtures": [
+          "comfortable seating areas",
+          "bar counter",
+          "ambient lighting",
+          "planters with greenery",
+          "overhead heaters or misters (seasonal)",
+          "music system"
         ],
         "navigableElements": [
           {
             "type": "passage",
             "position": "center",
-            "description": "An opening leading to the exterior stilt access."
+            "description": "Main entry point from the interior of The Circuit Lounge."
           },
           {
-            "type": "window",
-            "position": "curving along the interior wall",
-            "description": "Small, porthole-like windows integrated into the spherical shell."
+            "type": "stairs",
+            "position": "corner",
+            "description": "Secondary access, potentially leading to other rooftop levels or ground."
+          },
+          {
+            "type": "archway",
+            "position": "back",
+            "description": "Opening to a more secluded seating area or viewing deck."
           }
         ],
         "dominantElements": [
-          "curved interior walls",
-          "domed ceiling",
-          "smooth, continuous surfaces",
-          "integrated furniture"
+          "expansive open floor plan",
+          "unobstructed city views",
+          "outdoor seating arrangements",
+          "bar area"
         ],
         "uniqueIdentifiers": [
-          "complete spherical interior",
-          "seamless wall-to-ceiling transition",
-          "porthole windows"
+          "open-air setting",
+          "rooftop location",
+          "panoramic vistas"
         ]
       },
       "navigableElements": [
         {
           "type": "passage",
           "position": "center",
-          "description": "An opening leading to the exterior stilt access."
+          "description": "Main entry point from the interior of The Circuit Lounge."
         },
         {
-          "type": "window",
-          "position": "curving along the interior wall",
-          "description": "Small, porthole-like windows integrated into the spherical shell."
+          "type": "stairs",
+          "position": "corner",
+          "description": "Secondary access, potentially leading to other rooftop levels or ground."
+        },
+        {
+          "type": "archway",
+          "position": "back",
+          "description": "Opening to a more secluded seating area or viewing deck."
         }
       ],
       "dominantElements": [
-        "curved interior walls",
-        "domed ceiling",
-        "smooth, continuous surfaces",
-        "integrated furniture"
+        "expansive open floor plan",
+        "unobstructed city views",
+        "outdoor seating arrangements",
+        "bar area"
       ],
       "uniqueIdentifiers": [
-        "complete spherical interior",
-        "seamless wall-to-ceiling transition",
-        "porthole windows"
+        "open-air setting",
+        "rooftop location",
+        "panoramic vistas"
       ],
-      "searchDesc": "Interior of a quirky, weathered spherical stilt dwelling on a sandy beach.",
-      "slug": "interior-of-spherical-stilt-dwelling"
+      "searchDesc": "Open-air rooftop terrace with industrial bar aesthetic, concrete and steel.",
+      "slug": "the-roof-top-terrase"
+    },
+    "loc-1765299412060-hge32ft37": {
+      "id": "loc-1765299412060-hge32ft37",
+      "type": "host",
+      "name": "Göteborg",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The city presents a dynamic interplay between historical architecture and modern urban development. Large industrial structures and shipyards contrast with elegant early 20th-century buildings and contemporary design.",
+        "colorsAndLighting": "Daylight on the coast is often bright and reflective, while urban areas feature a mix of warm street lighting and the cool blues of modern illumination. Shadows can be sharp in older districts.",
+        "atmosphere": "The air is frequently crisp and carries the scent of the sea, especially near the harbor. A palpable sense of pragmatic efficiency and creative undercurrents defines the city's character.",
+        "materials": "Brick, concrete, steel, and glass are prevalent. Historical areas showcase stone and older timber, while newer developments emphasize sleek metal and expansive glass facades.",
+        "mood": "A mood of pragmatic progressiveness, with an undercurrent of robust creativity and urban sophistication.",
+        "sounds": "Seagulls, ship horns, city traffic, lively chatter, occasional industrial sounds.",
+        "primary_surfaces": "Brick, concrete, steel cladding, glass panels",
+        "secondary_surfaces": "Stone facades, wooden elements, metallic infrastructure",
+        "accent_features": "Public art installations, modern sculptures, maritime salvage",
+        "dominant": "Urban Grays (50%)",
+        "secondary": "Maritime Blues (30%)",
+        "accent": "Industrial Ochres (20%)",
+        "ambient": "Bright, often cool daylight with functional urban lighting",
+        "genre": "Modern Urban",
+        "architectural_tone": "Nautical industrial with functional modernism",
+        "cultural_tone": "Maritime workers, creatives, students, urban dwellers",
+        "materials_base": "Durable urban, maritime influences",
+        "mood_baseline": "Pragmatic, creative, slightly reserved",
+        "palette_bias": "Cool blues and grays with earthy accents",
+        "soundscape_base": "Maritime ambient, urban hum",
+        "flora_base": "Linden trees, coastal plants",
+        "fauna_base": "Seagulls, urban birds"
+      },
+      "description": "A major port city in Sweden, known for its industrial heritage and vibrant cultural scene. It offers a blend of maritime history, modern design, and a lively urban atmosphere.",
+      "searchDesc": "Göteborg: Sweden's maritime gateway, blending industrial grit with a thriving cultural and design scene.",
+      "slug": "goteborg",
+      "structure": {
+        "spatialLayout": "A mix of planned urban grids, organic historical layouts, and expansive industrial waterfronts.",
+        "navigableElements": [
+          "Canals",
+          "Harbor"
+        ],
+        "dominantElements": [
+          "Linnéstaden",
+          "Avenyn",
+          "Haga"
+        ],
+        "uniqueIdentifiers": [
+          "Swedish west coast location",
+          "Canal network"
+        ]
+      },
+      "primaryMedia": "media-1765299482609-nruarw4se"
+    },
+    "2d8ae5e1-3f22-4772-ab18-59d1b9d37520": {
+      "id": "2d8ae5e1-3f22-4772-ab18-59d1b9d37520",
+      "type": "region",
+      "name": "Ringön",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The area features a mix of imposing, functional industrial structures alongside newer, more experimental constructions. Warehouses with large loading bays and robust steel beams are common, often juxtaposed with modern artistic interventions.",
+        "colorsAndLighting": "Daylight is often diffused by the sheer scale of buildings and dockside activity. Evening lighting is functional, with streetlights casting practical glows, but many venues introduce their own vibrant, artistic illumination.",
+        "atmosphere": "The air carries the faint scent of salt and industry, a reminder of its past. A sense of gritty authenticity pervades, mingled with the buzz of creative and nocturnal activity.",
+        "materials": "Dominant materials include weathered concrete, corrugated metal, and exposed brickwork, testament to its industrial origins. Newer additions incorporate steel, glass, and often raw timber.",
+        "mood": "A mood of functional, rugged charm, tinged with the anticipation of creative discovery and vibrant nightlife.",
+        "sounds": "Distant ship horns, industrial hum, echoing footsteps, lively music from venues.",
+        "primary_surfaces": "Weathered concrete, corrugated metal cladding, exposed brickwork",
+        "secondary_surfaces": "Steel beams, large windows, loading bay doors",
+        "accent_features": "Graffiti art, neon signage from venues, repurposed industrial fixtures",
+        "dominant": "Neutral Grays (60%)",
+        "secondary": "Industrial Browns (30%)",
+        "accent": "Contrasting Neon Pops (10%)",
+        "ambient": "Functional, often stark daylight with pockets of artificial warmth",
+        "genre": null,
+        "architectural_tone": "Post-industrial with artistic interventions",
+        "cultural_tone": "Artists, makers, industrial workers, nightlife enthusiasts",
+        "materials_base": "Raw industrial, repurposed materials",
+        "mood_baseline": "Gritty authenticity, creative energy",
+        "palette_bias": "Muted industrial palette with potential for bright accents",
+        "soundscape_base": "Industrial ambient, urban noise",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "An island district in Göteborg, historically an industrial hub now transforming into a creative and cultural zone. Warehouses and factories are being repurposed for art studios, workshops, and unique nightlife venues.",
+      "searchDesc": "Ringön: Göteborg's industrial island turned creative hub with unique bars and art spaces.",
+      "slug": "ringon",
+      "structure": {
+        "spatialLayout": "Characterized by wide, open industrial spaces and a grid-like street plan, with many buildings featuring large internal volumes.",
+        "dominantElements": [
+          "Industrial heritage buildings",
+          "Waterfront access"
+        ],
+        "uniqueIdentifiers": [
+          "Island location",
+          "Post-industrial architecture"
+        ]
+      },
+      "primaryMedia": "media-1765299472741-8g9362y1e"
+    },
+    "13ca57c2-bc11-4053-8199-f8d6ff98dfbe": {
+      "id": "13ca57c2-bc11-4053-8199-f8d6ff98dfbe",
+      "type": "location",
+      "name": "The Neon Pulse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior presents a stark contrast between raw industrial architecture and vibrant, dynamic light. Geometric patterns of neon light dominate the facade, wrapping around the edges and highlighting the entrance. The scale is imposing, befitting an industrial structure, with a raw, unrefined presence softened only by the intense light.",
+        "colorsAndLighting": "Dominant colors are electric blues, deep purples, and vibrant magentas, all expressed through intensely bright, pulsating neon and LED lighting. Shadows are deep and sharp, broken by the rhythmic flashes of color.",
+        "atmosphere": "The air is cool and carries a faint, metallic tang, hinting at the industrial past of the location. A low, almost imperceptible vibration emanates from within, a tangible echo of the bass-heavy music. The constant, rhythmic pulse of light creates a sense of restless energy.",
+        "materials": "The primary material is weathered, unpainted concrete, showing the marks of industrial use. Accents are of brushed aluminum and black steel for signage and structural elements.",
+        "mood": "The mood is one of exhilarating, energetic escapism. It evokes a sense of anticipation and excitement, a portal to a world of relentless rhythm and sensory stimulation.",
+        "sounds": "Distant thumping bass, intermittent electronic glitches, hum of neon, urban industrial hum",
+        "primary_surfaces": "Rough, textured concrete; polished black steel",
+        "secondary_surfaces": "Glow of neon, diffused LED light",
+        "accent_features": "Stylized, minimalist signage, subtle smoke effects",
+        "dominant": "Electric Blue (50%)",
+        "secondary": "Deep Purple (30%)",
+        "accent": "Vibrant Magenta (20%)",
+        "ambient": "Strobe-like, high-contrast",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with dynamic light installations",
+        "cultural_tone": "Urban subculture, electronic music enthusiasts, nightlife seekers",
+        "materials_base": "Raw industrial, modern lighting",
+        "mood_baseline": "Energetic, exciting, slightly mysterious",
+        "palette_bias": "Cool neon spectrum",
+        "soundscape_base": "Electronic beats and ambient industrial",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A techno bar located on the industrial island of Ringön, characterized by its pulsating lights and electronic music.",
+      "searchDesc": "Techno bar on Ringön, Gothenburg. Pulsating neon lights, industrial facade, electronic music.",
+      "slug": "the-neon-pulse",
+      "structure": {
+        "spatialLayout": "The building appears as a solid, imposing block. The entrance is recessed slightly, creating a sense of depth that draws the eye towards the illuminated interior.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A heavy, industrial-style metal door, partially obscured by a cascade of neon lights."
+          }
+        ],
+        "dominantElements": [
+          "Geometric patterns of pulsing neon lights",
+          "Large, unadorned industrial facade",
+          "Prominent, stylized signage",
+          "Smoke/fog effect emanating from entrance"
+        ],
+        "uniqueIdentifiers": [
+          "Rhythmic, color-changing LED strips",
+          "Stenciled industrial motifs on concrete",
+          "Subtle vibration felt from within",
+          "Smell of ozone and faint industrial fumes"
+        ]
+      },
+      "primaryMedia": "media-1765299432925-y5uifymf8"
+    },
+    "niche-1765299448714-p738ps85w": {
+      "id": "niche-1765299448714-p738ps85w",
+      "type": "niche",
+      "name": "The Neon Pulse Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior of The Neon Pulse is an expansive, raw industrial space dominated by geometric patterns of intense, pulsating neon and LED light. The scale is cavernous, emphasizing the unrefined concrete structure, with vibrant light art wrapping around pillars and highlighting the central dance floor and elevated DJ booth.",
+        "colorsAndLighting": "Intensely bright, electric blues, deep purples, and vibrant magentas pulse rhythmically, creating sharp, deep shadows. The lighting is dynamic and strobe-like, bathing the space in a high-contrast, energetic glow.",
+        "atmosphere": "The air is cool with a faint metallic tang, carrying the palpable vibration of deep electronic beats. A restless energy permeates the space, fueled by the constant, rhythmic pulse of light that feels like a tangible force.",
+        "materials": "Weathered, unpainted concrete forms the primary surfaces, bearing the marks of its industrial past. Accents of brushed aluminum and black steel are visible in structural elements and signage, contrasting with the dominant neon glow.",
+        "mood": "Exhilarating, energetic escapism. The mood evokes anticipation and excitement, a portal to a world of relentless rhythm and sensory stimulation.",
+        "sounds": "Electronic beats, deep bass, industrial ambient hum, crowd murmur",
+        "spatialLayout": "A large, open main area with a central dance floor, flanked by a prominent bar and an elevated DJ booth. Higher ceilings and exposed industrial elements create a sense of immense volume and depth.",
+        "primary_surfaces": "Rough, textured concrete walls and floors",
+        "secondary_surfaces": "Glow of neon light, diffused LED panels, polished black steel bar top",
+        "accent_features": "Stylized minimalist signage illuminated by neon, subtle wisps of smoke from atmospheric machines",
+        "dominant": "Electric Blue (50%)",
+        "secondary": "Deep Purple (30%)",
+        "accent": "Vibrant Magenta (20%)",
+        "ambient": "Strobe-like, high-contrast",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with dynamic light installations",
+        "cultural_tone": "Urban subculture, electronic music enthusiasts, nightlife seekers",
+        "materials_base": "Raw industrial, modern lighting",
+        "mood_baseline": "Energetic, exciting, slightly mysterious",
+        "palette_bias": "Cool neon spectrum",
+        "soundscape_base": "Electronic beats and ambient industrial",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765299448714-knbwa21n5",
+      "description": "The interior of 'The Neon Pulse' is a medium-scale, cubic entertainment space characterized by vibrant neon lighting and large, rectangular glass openings. It is designed to foster an energetic and futuristic atmosphere.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A medium-sized, cubic space with a flat ceiling, designed for entertainment. It features large, rectangular glass openings.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "bar counter",
+          "booths",
+          "dance floor",
+          "DJ booth",
+          "ambient lighting fixtures",
+          "seating areas"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center of back wall",
+            "description": "Entrance to the main entertainment area."
+          },
+          {
+            "type": "passage",
+            "position": "left corner",
+            "description": "Passage leading to restrooms or service areas."
+          },
+          {
+            "type": "passage",
+            "position": "right corner",
+            "description": "Passage leading to a VIP section or outdoor patio."
+          }
+        ],
+        "dominantElements": [
+          "dynamic neon lighting",
+          "sound system",
+          "large glass windows",
+          "central bar area"
+        ],
+        "uniqueIdentifiers": [
+          "pulsating neon light displays",
+          "futuristic aesthetic",
+          "energetic atmosphere"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of back wall",
+          "description": "Entrance to the main entertainment area."
+        },
+        {
+          "type": "passage",
+          "position": "left corner",
+          "description": "Passage leading to restrooms or service areas."
+        },
+        {
+          "type": "passage",
+          "position": "right corner",
+          "description": "Passage leading to a VIP section or outdoor patio."
+        }
+      ],
+      "dominantElements": [
+        "dynamic neon lighting",
+        "sound system",
+        "large glass windows",
+        "central bar area"
+      ],
+      "uniqueIdentifiers": [
+        "pulsating neon light displays",
+        "futuristic aesthetic",
+        "energetic atmosphere"
+      ],
+      "searchDesc": "Interior of The Neon Pulse: Industrial venue with neon lights, electric blues, purples, and magentas.",
+      "slug": "interior-of-the-neon-pulse"
+    },
+    "niche-1765299532957-wu7y0pwzu": {
+      "id": "niche-1765299532957-wu7y0pwzu",
+      "type": "niche",
+      "name": "Neon Pulse Rooftop Terrace",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This rooftop terrace is an expansive, open-air space characterized by its raw industrial architecture. Geometric patterns of intensely bright neon light wrap around the perimeter and highlight key features, creating a dramatic visual contrast against the unrefined concrete surfaces. The scale is generous, providing a sense of open freedom against the imposing urban backdrop.",
+        "colorsAndLighting": "The space is bathed in the electric glow of blues, purples, and magentas from pulsating neon and LED strips. Shadows are deep and sharp, actively sculpted by the rhythmic flashes of color, creating a high-contrast, dynamic visual experience.",
+        "atmosphere": "The cool night air carries a faint metallic tang, a reminder of the industrial heritage. A low, almost imperceptible vibration hints at distant bass-heavy music, contributing to a palpable sense of restless, energetic anticipation.",
+        "materials": "Primary materials are weathered, unpainted concrete for flooring and low walls, accented by brushed aluminum and black steel for subtle structural elements and integrated lighting fixtures. The raw textures are prominent, emphasizing the industrial aesthetic.",
+        "mood": "The mood is one of exhilarating, energetic escapism, fostering anticipation and a feeling of being on the edge of a vibrant urban nightlife.",
+        "sounds": "Distant electronic beats, faint industrial hum, cool wind.",
+        "spatialLayout": "A broad, open rectangular space with clear sightlines to the surrounding city. The perimeter is defined by low concrete walls and the vibrant glow of light installations.",
+        "primary_surfaces": "Rough, textured concrete flooring and low walls.",
+        "secondary_surfaces": "Glow of neon and diffused LED light, brushed aluminum accents.",
+        "accent_features": "Stylized, minimalist signage integrated into the lighting design, subtle wisps of atmospheric smoke effects.",
+        "dominant": "Electric Blue (50%) - prevalent in lighting.",
+        "secondary": "Deep Purple (30%) - integrated into lighting patterns.",
+        "accent": "Vibrant Magenta (20%) - used for highlights and dynamic flashes.",
+        "ambient": "Strobe-like, high-contrast.",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with dynamic light installations",
+        "cultural_tone": "Urban subculture, electronic music enthusiasts, nightlife seekers",
+        "materials_base": "Raw industrial, modern lighting",
+        "mood_baseline": "Energetic, exciting, slightly mysterious",
+        "palette_bias": "Cool neon spectrum",
+        "soundscape_base": "Electronic beats and ambient industrial",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765299532956-8uegwa8rb",
+      "description": "The Neon Pulse Rooftop Terrace is an open-air extension of 'The Neon Pulse', designed for vibrant entertainment and social experiences.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "An open, multi-level space designed for social gathering, featuring distinct zones for seating, bar, and lounging, with unobstructed views.",
+        "requiredElements": [
+          "rooftop terrace"
+        ],
+        "suggestedFixtures": [
+          "neon signage",
+          "comfortable lounge seating",
+          "bar area",
+          "planters with greenery",
+          "ambient lighting fixtures",
+          "dj booth"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "central access point",
+            "description": "Main entrance leading from interior to the terrace."
+          },
+          {
+            "type": "stairs",
+            "position": "side of the terrace",
+            "description": "Connects to lower levels or alternative access points."
+          },
+          {
+            "type": "archway",
+            "position": "leading to a VIP section",
+            "description": "A decorative entrance to a more secluded area."
+          }
+        ],
+        "dominantElements": [
+          "expansive open area",
+          "city skyline views",
+          "neon lighting installations",
+          "varied seating arrangements"
+        ],
+        "uniqueIdentifiers": [
+          "unobstructed panoramic view",
+          "integration of neon art elements",
+          "open-air ambiance"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central access point",
+          "description": "Main entrance leading from interior to the terrace."
+        },
+        {
+          "type": "stairs",
+          "position": "side of the terrace",
+          "description": "Connects to lower levels or alternative access points."
+        },
+        {
+          "type": "archway",
+          "position": "leading to a VIP section",
+          "description": "A decorative entrance to a more secluded area."
+        }
+      ],
+      "dominantElements": [
+        "expansive open area",
+        "city skyline views",
+        "neon lighting installations",
+        "varied seating arrangements"
+      ],
+      "uniqueIdentifiers": [
+        "unobstructed panoramic view",
+        "integration of neon art elements",
+        "open-air ambiance"
+      ],
+      "searchDesc": "Industrial rooftop terrace with neon lights and city views.",
+      "slug": "the-roof-top-terrase"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765287104442-b845p2din",
+      "id": "loc-1765298826493-vtpkm29wq",
       "type": "host",
       "children": [
         {
-          "id": "2e01d24f-9050-4e50-8e79-62ba4c231b2d",
+          "id": "4cd4d980-3832-4a12-9cca-097437518b77",
           "type": "region",
           "children": [
             {
-              "id": "ab6970f2-e10a-4eb9-8e3f-ac965b4ac42a",
+              "id": "7c5f587f-5837-4101-8d22-f55bcd48ce1c",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765287145951-9qjzbkhvy",
+                  "id": "niche-1765298961054-r460id9v3",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765298986774-mi4le51mb",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765299020300-88tdnud85",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765299083085-woospqb9e",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765299412060-hge32ft37",
+      "type": "host",
+      "children": [
+        {
+          "id": "2d8ae5e1-3f22-4772-ab18-59d1b9d37520",
+          "type": "region",
+          "children": [
+            {
+              "id": "13ca57c2-bc11-4053-8199-f8d6ff98dfbe",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765299448714-p738ps85w",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765299532957-wu7y0pwzu",
                   "type": "niche",
                   "children": []
                 }
@@ -277,6 +1078,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765287104442-b845p2din"
+    "loc-1765298826493-vtpkm29wq",
+    "loc-1765299412060-hge32ft37"
   ]
 }

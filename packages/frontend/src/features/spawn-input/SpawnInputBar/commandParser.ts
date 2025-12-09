@@ -20,7 +20,7 @@ export function parseCommandInput(input: string): ParsedCommand {
   const commandPart = parts[0].substring(1); // Remove leading /
   
   const flags = {
-    createImage: false,
+    createImage: true,
     backgroundTask: false,
     furnish: false
   };
@@ -29,7 +29,9 @@ export function parseCommandInput(input: string): ParsedCommand {
   
   for (let i = 1; i < parts.length; i++) {
     const part = parts[i];
-    if (part === COMMAND_FLAGS.VIEW || part === '-view') {
+    if (part === COMMAND_FLAGS.NOVIEW || part === '-noview') {
+      flags.createImage = false;
+    } else if (part === COMMAND_FLAGS.VIEW || part === '-view') {
       flags.createImage = true;
     } else if (part === COMMAND_FLAGS.BACKGROUND_TASK || part === '-bgtask') {
       flags.backgroundTask = true;

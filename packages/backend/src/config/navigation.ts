@@ -64,6 +64,7 @@ export type NavigationCommand = keyof typeof SLASH_COMMANDS;
 // Flags supported by commands
 export const COMMAND_FLAGS = {
   VIEW: '--view',
+  NOVIEW: '--noview',
   BACKGROUND_TASK: '--bgtask',
   FURNISH: '--furnish'
 } as const;

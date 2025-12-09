@@ -12,19 +12,34 @@ import type { ParentDNAContext } from '../../types';
  * Generate DNA prompt for a region node
  * 
  * @param description - User description of the region
- * @param parentContext - DNA context inherited from parent host
+ * @param parentContext - FULL DNA context inherited from parent host
  * @returns Prompt string for LLM
  */
 export function regionDNAPrompt(description: string, parentContext?: ParentDNAContext): string {
+  // Build rich parent context with name, description, and full DNA
   const contextSection = parentContext ? `
-PARENT HOST CONTEXT (inherit and respect these attributes):
+PARENT HOST: ${parentContext.name || 'Unknown'} (${parentContext.type || 'host'})
+${parentContext.description ? `PARENT DESCRIPTION: ${parentContext.description}` : ''}
+
+PARENT VISUAL DNA (inherit and respect these attributes):
+- Looks: ${parentContext.looks || 'Not specified'}
+- Colors & Lighting: ${parentContext.colorsAndLighting || 'Not specified'}
+- Atmosphere: ${parentContext.atmosphere || 'Not specified'}
+- Materials: ${parentContext.materials || 'Not specified'}
+- Mood: ${parentContext.mood || 'Not specified'}
+- Sounds: ${parentContext.sounds || 'Not specified'}
+
+PARENT STYLE DNA:
 - Genre: ${parentContext.genre || 'Not specified'} (NEVER override genre)
 - Architectural Tone: ${parentContext.architectural_tone || 'Not specified'}
 - Cultural Tone: ${parentContext.cultural_tone || 'Not specified'}
 - Dominant Color: ${parentContext.dominant || 'Not specified'}
-- Mood: ${parentContext.mood || 'Not specified'}
-- Materials Base: ${parentContext.materials_base || 'Not specified'}
 - Palette Bias: ${parentContext.palette_bias || 'Not specified'}
+- Materials Base: ${parentContext.materials_base || 'Not specified'}
+
+PARENT STRUCTURE:
+- Dominant Elements: ${parentContext.dominantElements?.join(', ') || 'Not specified'}
+- Unique Identifiers: ${parentContext.uniqueIdentifiers?.join(', ') || 'Not specified'}
 ` : '';
 
   return `You are creating the DNA for a REGION node - a district or biome within a larger world.

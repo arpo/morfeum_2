@@ -478,9 +478,17 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
       if (parentId) {
         const worldsData = await storageService.loadWorlds();
         const parentNode = worldsData?.nodes?.[parentId];
-        if (parentNode?.dna) {
-          parentContext = extractParentDNAContext(parentNode.dna);
-          console.log(`[CREATE-NODE] Loaded parent DNA from ${parentNode.name} (${parentNode.type})`);
+        if (parentNode) {
+          // Pass FULL parent node data including name, description, structure
+          parentContext = extractParentDNAContext(parentNode.dna, {
+            name: parentNode.name,
+            description: parentNode.description,
+            type: parentNode.type,
+            dominantElements: parentNode.dominantElements || parentNode.structure?.dominantElements,
+            uniqueIdentifiers: parentNode.uniqueIdentifiers || parentNode.structure?.uniqueIdentifiers,
+            searchDesc: parentNode.searchDesc,
+          });
+          console.log(`[CREATE-NODE] Loaded FULL parent context from ${parentNode.name} (${parentNode.type})`);
         }
       }
 
@@ -496,6 +504,25 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
       );
 
       console.log(`✅ [CREATE-NODE] Pipeline complete. Node: ${result.node?.name || 'unknown'}`);
+      
+      // If image was generated, create media entry and set primaryMedia
+      if (result.imageUrl) {
+        const mediaEntry = mediaService.createMedia({
+          type: 'image',
+          url: result.imageUrl,
+          metadata: {
+            prompt: result.imagePrompt || '',
+            model: 'flux',
+            width: 1920,
+            height: 1080,
+            aspectRatio: 'landscape_16_9'
+          },
+          entityRefs: [result.node.id]
+        });
+        
+        result.node.primaryMedia = mediaEntry.id;
+        console.log(`[CREATE-NODE] Created media entry: ${mediaEntry.id}`);
+      }
       
       // Save node to storage and update worldTrees
       const updatedWorldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };

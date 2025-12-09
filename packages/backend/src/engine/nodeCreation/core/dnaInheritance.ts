@@ -12,21 +12,54 @@ import type { ParentDNAContext, Node, NodeType } from '../types';
  * Extract DNA context from a parent node for inheritance
  * 
  * @param parentDNA - Parent node's DNA
- * @returns Context object with inheritable fields
+ * @param parentNode - Optional parent node for name/description/structure
+ * @returns Context object with ALL inheritable fields
  */
-export function extractParentDNAContext(parentDNA?: NodeDNA | Partial<NodeDNA>): ParentDNAContext {
-  if (!parentDNA) {
+export function extractParentDNAContext(
+  parentDNA?: NodeDNA | Partial<NodeDNA>,
+  parentNode?: { name?: string; description?: string; type?: NodeType; dominantElements?: string[]; uniqueIdentifiers?: string[]; searchDesc?: string }
+): ParentDNAContext {
+  if (!parentDNA && !parentNode) {
     return {};
   }
 
   return {
-    architectural_tone: parentDNA.architectural_tone,
-    cultural_tone: parentDNA.cultural_tone,
-    dominant: parentDNA.dominant,
-    mood: parentDNA.mood,
-    genre: parentDNA.genre,
-    materials_base: parentDNA.materials_base,
-    palette_bias: parentDNA.palette_bias,
+    // Parent identity
+    name: parentNode?.name,
+    description: parentNode?.description,
+    type: parentNode?.type,
+    
+    // Full DNA fields (all 23+)
+    looks: parentDNA?.looks,
+    colorsAndLighting: parentDNA?.colorsAndLighting,
+    atmosphere: parentDNA?.atmosphere,
+    materials: parentDNA?.materials,
+    mood: parentDNA?.mood,
+    sounds: parentDNA?.sounds,
+    spatialLayout: parentDNA?.spatialLayout,
+    primary_surfaces: parentDNA?.primary_surfaces,
+    secondary_surfaces: parentDNA?.secondary_surfaces,
+    accent_features: parentDNA?.accent_features,
+    dominant: parentDNA?.dominant,
+    secondary: parentDNA?.secondary,
+    accent: parentDNA?.accent,
+    ambient: parentDNA?.ambient,
+    
+    // Cascading fields
+    genre: parentDNA?.genre,
+    architectural_tone: parentDNA?.architectural_tone,
+    cultural_tone: parentDNA?.cultural_tone,
+    materials_base: parentDNA?.materials_base,
+    mood_baseline: parentDNA?.mood_baseline,
+    palette_bias: parentDNA?.palette_bias,
+    soundscape_base: parentDNA?.soundscape_base,
+    flora_base: parentDNA?.flora_base,
+    fauna_base: parentDNA?.fauna_base,
+    
+    // Structure data
+    dominantElements: parentNode?.dominantElements,
+    uniqueIdentifiers: parentNode?.uniqueIdentifiers,
+    searchDesc: parentNode?.searchDesc,
   };
 }
 

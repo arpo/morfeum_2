@@ -25,6 +25,10 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Full Parent Context for Slash Commands (Dec 9):** Fixed inaccurate DNA generation in `/NEW_REGION`, `/NEW_LOCATION`:
+  - Extended `ParentDNAContext` to include ALL parent data (name, description, 23+ DNA fields, structure)
+  - Slash commands now generate geographically accurate results (e.g., "Ringön in Göteborg")
+  - DNA prompts now include rich parent context matching spawn flow behavior
 - **Scale Consistency System (Dec 9):** Improved interior/exterior size matching:
   - `inferScaleFromDescription()` detects scale from parent descriptions ("modest" → small)
   - Tighter dimension ranges: small (2-4m), medium (4-10m), large (10-30m)

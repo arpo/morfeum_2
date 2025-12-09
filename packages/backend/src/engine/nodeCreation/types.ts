@@ -245,15 +245,45 @@ export interface CreateHierarchyResult {
 
 /**
  * Parent context for DNA inheritance
+ * Includes FULL parent node data for rich child generation
  */
 export interface ParentDNAContext {
+  // Parent identity
+  name?: string;
+  description?: string;
+  type?: NodeType;
+  
+  // Full DNA fields (all 23+)
+  looks?: string;
+  colorsAndLighting?: string;
+  atmosphere?: string;
+  materials?: string;
+  mood?: string;
+  sounds?: string;
+  spatialLayout?: string;
+  primary_surfaces?: string;
+  secondary_surfaces?: string;
+  accent_features?: string;
+  dominant?: string;
+  secondary?: string;
+  accent?: string;
+  ambient?: string;
+  
+  // Cascading fields
+  genre?: string;
   architectural_tone?: string;
   cultural_tone?: string;
-  dominant?: string;
-  mood?: string;
-  genre?: string;
   materials_base?: string;
+  mood_baseline?: string;
   palette_bias?: string;
+  soundscape_base?: string;
+  flora_base?: string;
+  fauna_base?: string;
+  
+  // Structure data
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
+  searchDesc?: string;
 }
 
 /**
