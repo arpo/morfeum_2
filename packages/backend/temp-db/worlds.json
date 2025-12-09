@@ -1,366 +1,5 @@
 {
   "nodes": {
-    "loc-1765276507817-8yz9eo6qa": {
-      "id": "loc-1765276507817-8yz9eo6qa",
-      "type": "host",
-      "name": "Xylos Prime",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A desolate alien world dominated by vast, sandy, and rocky desert terrain. Steep rocky formations create dramatic landscapes, and the sky is a vibrant, almost unreal turquoise.",
-        "colorsAndLighting": "The planet is bathed in the bright light of a vibrant turquoise sky, casting sharp, defined shadows across the land. Celestial bodies include two dark, textured spherical orbs and a tiny reddish orb.",
-        "atmosphere": "The atmosphere is clear and bright, suggesting a dry environment with minimal atmospheric interference. Temperatures are likely warm to hot during the day.",
-        "materials": "The ground is primarily composed of light tan sand, scattered darker rocks, and debris. Rocky formations are abundant, forming cliffs and canyon-like structures.",
-        "mood": "Vast, alien, and potentially unforgiving, yet beautiful in its starkness.",
-        "sounds": "Wind, distant geological groans, absence of complex life sounds",
-        "primary_surfaces": "Sandy desert, rocky outcrops",
-        "secondary_surfaces": "Rocky cliffs",
-        "accent_features": "The vibrant turquoise sky and unusual celestial bodies",
-        "dominant": "Light tan (ground)",
-        "secondary": "Light brown (rock formations)",
-        "accent": "Turquoise (sky), Dark spheres (celestial), Red orb (celestial)",
-        "ambient": "Bright and clear",
-        "genre": "Sci-Fi Exploration",
-        "architectural_tone": "Minimalist alien or natural formations",
-        "cultural_tone": "Primarily uninhabited, potential for discovery",
-        "materials_base": "Natural geological elements",
-        "mood_baseline": "Isolation, wonder, stark beauty",
-        "palette_bias": "Earthy neutrals, striking sky colors",
-        "soundscape_base": "Natural, elemental",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A desolate, alien planet characterized by vast sandy deserts, rocky terrain, and unusual celestial phenomena. Its atmosphere is clear and bright, often featuring vibrant skies.",
-      "searchDesc": "Desolate alien planet with vast deserts, rocky terrain, and a vibrant turquoise sky.",
-      "slug": "xylos-prime",
-      "structure": {
-        "spatialLayout": "Expansive, open, and rugged planetary surface, characterized by wide plains and dramatic geological formations.",
-        "dominantElements": [
-          "Vast Deserts",
-          "Rocky Formations",
-          "Unusual Celestial Bodies"
-        ],
-        "uniqueIdentifiers": [
-          "Turquoise Sky",
-          "Dark Celestial Bodies",
-          "Reddish Orb"
-        ]
-      }
-    },
-    "a0b80abf-1ab7-4f0d-bb7c-26594b0f8cc9": {
-      "id": "a0b80abf-1ab7-4f0d-bb7c-26594b0f8cc9",
-      "type": "region",
-      "name": "The Great Basin",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A wide, arid basin featuring a colossal, cylindrical futuristic structure. Steep, light brown rocky cliffs or canyon walls frame the landscape, drawing the eye towards the immense edifice.",
-        "colorsAndLighting": "Bathed in the bright light of a vibrant turquoise sky, casting sharp shadows across the light tan desert floor. The dominant colors are cool blues and greys of the structure contrasted with warm desert tones.",
-        "atmosphere": "The air is clear and bright, suggesting a dry, possibly warm environment. A hint of atmospheric mist swirls around the base of the colossal structure, hinting at its scale and interaction with the atmosphere.",
-        "materials": "The ground consists of vast sandy and rocky terrain, light tan in color, with scattered darker rocks and debris. The framing elements are steep, light brown rocky formations. The colossal structure itself is made of advanced, possibly metallic or composite materials.",
-        "mood": "Awe-inspiring and vast, with a sense of isolation and the promise of monumental discovery.",
-        "sounds": "Distant wind, faint echoes, the crunch of sand",
-        "primary_surfaces": "Sandy desert floor, rock formations",
-        "secondary_surfaces": "Advanced composite plating (structure)",
-        "accent_features": "The colossal cylindrical structure",
-        "dominant": "Light tan (ground)",
-        "secondary": "Light blue-grey (structure)",
-        "accent": "Turquoise (sky), Yellow (structure cap), Red (structure accent)",
-        "ambient": "Bright and clear",
-        "genre": null,
-        "architectural_tone": "Gigantic, monolithic alien spire",
-        "cultural_tone": "Site of exploration or pilgrimage, unknown alien builders",
-        "materials_base": "Natural desert elements, advanced composites",
-        "mood_baseline": "Epic scale, mystery",
-        "palette_bias": "Cool blues and greys, warm desert tones, vibrant sky colors",
-        "soundscape_base": "Natural, ambient",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A colossal, arid basin dominated by the enigmatic 'Apex' structure, framed by steep canyon walls. The vast, sandy expanse offers a stark contrast to the towering alien edifice.",
-      "searchDesc": "Arid alien basin with a colossal cylindrical structure and towering canyon walls.",
-      "slug": "the-great-basin",
-      "structure": {
-        "spatialLayout": "An expansive, open basin defined by imposing surrounding geological formations and dominated by a singular, massive vertical structure.",
-        "dominantElements": [
-          "The Apex Structure",
-          "Canyon Walls"
-        ],
-        "uniqueIdentifiers": [
-          "Enigmatic Alien Monolith",
-          "Vast Desert Basin"
-        ]
-      }
-    },
-    "ca7d9ee5-ceb8-480e-938a-6c90d4af3dd4": {
-      "id": "ca7d9ee5-ceb8-480e-938a-6c90d4af3dd4",
-      "type": "location",
-      "name": "The Apex Monolith",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A colossal, cylindrical futuristic structure of light blue-grey, intricately detailed with panels, vents, and appendages. It is capped by a rounded yellow section with a prominent dark circular opening and features a striking red circular feature mid-section. Its base is partially obscured by atmospheric mist, emphasizing its immense scale.",
-        "colorsAndLighting": "The scene is bathed in the bright light of a vibrant turquoise sky, casting sharp shadows. The primary structure is a light blue-grey, with a distinct yellow cap and a red circular accent.",
-        "atmosphere": "The air is clear and bright, with a hint of atmospheric mist swirling around the monolith's base. The vast desert suggests a dry, possibly warm environment. The sky is clear, with two dark celestial bodies and a tiny reddish orb visible.",
-        "materials": "The monolith appears to be constructed from advanced, possibly metallic or composite materials, with a smooth but detailed surface. The desert terrain consists of sand, rocks, and debris, with rock formations forming cliffs.",
-        "mood": "Awe-inspiring and mysterious, evoking a sense of exploration and the insignificance of individual figures against a monumental backdrop.",
-        "sounds": "Wind, distant hum, crunching sand, faint footsteps",
-        "primary_surfaces": "Smooth, detailed blue-grey plating",
-        "secondary_surfaces": "Textured sandy desert, rough rocky cliffs, soft atmospheric mist",
-        "accent_features": "Yellow cap with dark opening, red circular feature",
-        "dominant": "Light blue-grey (structure)",
-        "secondary": "Light tan (ground)",
-        "accent": "Yellow (cap), Red (mid-section accent), Turquoise (sky)",
-        "ambient": "Bright, clear, vibrant",
-        "genre": null,
-        "architectural_tone": "Gigantic, monolithic alien spire",
-        "cultural_tone": "Unknown alien builders, site of pilgrimage or exploration",
-        "materials_base": "Advanced composites, natural desert elements",
-        "mood_baseline": "Wonder and insignificance",
-        "palette_bias": "Cool blues and greys, warm desert tones, vibrant sky colors",
-        "soundscape_base": "Natural and faint technological hum",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A colossal, cylindrical futuristic structure of light blue-grey, intricately detailed with panels, vents, and appendages. It is capped by a rounded yellow section with a prominent dark circular opening and features a striking red circular feature mid-section. Its base is partially obscured by atmospheric mist.",
-      "searchDesc": "Colossal blue-grey futuristic monolith on Xylos Prime, yellow cap, red accent, desert, turquoise sky.",
-      "slug": "the-apex-monolith",
-      "structure": {
-        "spatialLayout": "The monolith dominates the landscape, its immense height creating a strong sense of depth. The surrounding desert and cliffs frame the approach, guiding the eye towards the structure.",
-        "navigableElements": [
-          {
-            "type": "path",
-            "position": "base",
-            "description": "A wide, sandy path leading from the surrounding desert towards the monolith's base."
-          },
-          {
-            "type": "door|passage",
-            "position": "mid-section",
-            "description": "A dark circular opening in the yellow cap, hinting at an entrance or observation point."
-          }
-        ],
-        "dominantElements": [
-          "Colossal cylindrical structure",
-          "Vast sandy and rocky desert",
-          "Steep rocky cliffs",
-          "Vibrant turquoise sky"
-        ],
-        "uniqueIdentifiers": [
-          "Rounded yellow cap with dark circular opening",
-          "Striking red circular feature mid-section",
-          "Atmospheric mist obscuring the base",
-          "Two dark textured spherical celestial bodies"
-        ]
-      },
-      "primaryMedia": "media-1765276528704-xbf6vhcgz"
-    },
-    "niche-1765276579816-gmtvqjlz4": {
-      "id": "niche-1765276579816-gmtvqjlz4",
-      "type": "niche",
-      "name": "The Apex Monolith Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior is a massive, cylindrical space defined by smooth, light blue-grey plating. Intricate paneling, vents, and subtle appendages are visible along the walls, hinting at advanced alien engineering. The scale is immense, dwarfing any potential observer.",
-        "colorsAndLighting": "The space is illuminated by a bright, vibrant turquoise light, likely originating from an unseen source or the sky filtering in. This light casts sharp, defined shadows across the detailed surfaces, emphasizing the monolithic form.",
-        "atmosphere": "The air within is clear and bright, carrying a subtle coolness. Hints of atmospheric mist, reminiscent of the exterior, may swirl near the base of the colossal chamber, adding to the sense of vastness and mystery.",
-        "materials": "The primary material is the smooth, detailed light blue-grey plating, suggesting advanced composite or metallic construction. The underlying structure feels solid and impossibly vast, resonating with a sense of ancient, alien technology.",
-        "mood": "A profound sense of awe and mystery pervades the interior. The sheer scale evokes feelings of insignificance and wonder, befitting a site of pilgrimage or monumental alien construction.",
-        "sounds": "Faint technological hum, vast echoing silence",
-        "spatialLayout": "A vast, unbroken cylindrical chamber that extends upwards and downwards. The space feels impossibly deep and wide, emphasizing its monumental scale and alien origin.",
-        "primary_surfaces": "Smooth, detailed light blue-grey plating",
-        "secondary_surfaces": "Subtle paneling, vents, implied technological conduits",
-        "accent_features": "A striking red circular feature, possibly a control panel or insignia, is integrated into the wall.",
-        "dominant": "Light blue-grey plating across vast cylindrical walls",
-        "secondary": "Areas of subtle texture and detailing on the plating",
-        "accent": "Red circular feature, bright turquoise ambient light",
-        "ambient": "Bright, clear, vibrant turquoise",
-        "genre": null,
-        "architectural_tone": "Gigantic, monolithic alien spire",
-        "cultural_tone": "Unknown alien builders, site of pilgrimage or exploration",
-        "materials_base": "Advanced composites, natural desert elements",
-        "mood_baseline": "Wonder and insignificance",
-        "palette_bias": "Cool blues and greys, warm desert tones, vibrant sky colors",
-        "soundscape_base": "Natural and faint technological hum",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765276579815-5nntk7ha6",
-      "description": "The interior of The Apex Monolith is a grand, cylindrical chamber designed for public access and experience, emphasizing its immense verticality and monolithic form.",
-      "structure": {
-        "form": "cylindrical",
-        "roofType": "domed",
-        "scale": "large",
-        "orientation": "vertical",
-        "openings": "narrow-slits",
-        "functionalType": "civic",
-        "spatialLayout": "The interior of The Apex Monolith is a vast, cylindrical space. It emphasizes verticality, with a domed ceiling far above and narrow openings that suggest a towering structure.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "Central observation platform",
-          "Recessed alcoves",
-          "Ambient lighting fixtures",
-          "Interpretive displays",
-          "Elevator shafts",
-          "Information kiosks"
-        ],
-        "navigableElements": [
-          {
-            "type": "elevator",
-            "position": "central",
-            "description": "A central elevator system ascending through the core of the monolith."
-          },
-          {
-            "type": "passage",
-            "position": "base",
-            "description": "An entrance passage at the base of the monolith."
-          },
-          {
-            "type": "stairs",
-            "position": "peripheral",
-            "description": "Spiral staircases winding around the inner circumference."
-          }
-        ],
-        "dominantElements": [
-          "Immense cylindrical volume",
-          "Towering verticality",
-          "Domed ceiling",
-          "Narrow, slit-like openings",
-          "Smooth, monolithic interior walls"
-        ],
-        "uniqueIdentifiers": [
-          "The sheer scale of the interior volume",
-          "The feeling of being inside a colossal, ancient structure",
-          "The limited but strategically placed openings offering glimpses of the exterior"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "elevator",
-          "position": "central",
-          "description": "A central elevator system ascending through the core of the monolith."
-        },
-        {
-          "type": "passage",
-          "position": "base",
-          "description": "An entrance passage at the base of the monolith."
-        },
-        {
-          "type": "stairs",
-          "position": "peripheral",
-          "description": "Spiral staircases winding around the inner circumference."
-        }
-      ],
-      "dominantElements": [
-        "Immense cylindrical volume",
-        "Towering verticality",
-        "Domed ceiling",
-        "Narrow, slit-like openings",
-        "Smooth, monolithic interior walls"
-      ],
-      "uniqueIdentifiers": [
-        "The sheer scale of the interior volume",
-        "The feeling of being inside a colossal, ancient structure",
-        "The limited but strategically placed openings offering glimpses of the exterior"
-      ],
-      "searchDesc": "Inside the colossal Apex Monolith, a futuristic alien structure.",
-      "slug": "interior-of-the-apex-monolith"
-    },
-    "niche-1765276646126-f5swi72ol": {
-      "id": "niche-1765276646126-f5swi72ol",
-      "type": "niche",
-      "name": "Apex Monolith Cockpit",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The cockpit is a spacious, semi-spherical chamber dominated by a massive, transparent viewport. Integrated consoles with glowing displays line the curved walls. A central, ergonomic pilot's chair is the focal point.",
-        "colorsAndLighting": "The interior is illuminated by soft, ambient light emanating from the control panels and the bright turquoise sky visible through the viewport. The structure's blue-grey plating continues here, accented by the glow of the technology.",
-        "atmosphere": "The air is controlled and still, free of the external mist. The atmosphere is one of focused concentration and advanced technology, with a clear, unobstructed view of the alien landscape.",
-        "materials": "Interior surfaces appear to be smooth, advanced composites and illuminated display screens. The viewport is likely a highly durable, transparent material. Existing paneling echoes the exterior's intricate detailing.",
-        "mood": "A sense of control and distant observation, tinged with the awe of the vastness outside.",
-        "sounds": "Soft hum, faint clicks, synthesized alerts",
-        "spatialLayout": "A curved, enclosed space with a primary forward-facing viewing area. The consoles and seating are arranged ergonomically around the pilot.",
-        "primary_surfaces": "Smooth, cool composite panels, illuminated display screens",
-        "secondary_surfaces": "Transparent viewport material, padded seating surfaces",
-        "accent_features": "Glow from control panels, intricate detailing on consoles",
-        "dominant": "Light blue-grey (internal paneling)",
-        "secondary": "Soft, varied colors from display screens",
-        "accent": "Yellowish or white light from consoles",
-        "ambient": "Bright, controlled interior light",
-        "genre": null,
-        "architectural_tone": "Gigantic, monolithic alien spire",
-        "cultural_tone": "Unknown alien builders, site of pilgrimage or exploration",
-        "materials_base": "Advanced composites, natural desert elements",
-        "mood_baseline": "Wonder and insignificance",
-        "palette_bias": "Cool blues and greys, warm desert tones, vibrant sky colors",
-        "soundscape_base": "Natural and faint technological hum",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765276646125-bujfrkv8t",
-      "description": "The cockpit of the Apex Monolith, a command and control center designed for complex operations, characterized by its functional layout and integrated technology.",
-      "structure": {
-        "form": "faceted",
-        "roofType": "flat",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "functionalType": "civic",
-        "spatialLayout": "A concentrated control area designed for operation, featuring a primary console and seating arranged for optimal visibility and access to controls. The space is enclosed with limited external views.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "Control console with multiple displays",
-          "Pilot's chair",
-          "Secondary seating/observation seats",
-          "Integrated lighting system",
-          "Communication array",
-          "Navigation controls"
-        ],
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "rear",
-            "description": "A secured passage connecting to other sections of the Apex Monolith."
-          },
-          {
-            "type": "door",
-            "position": "side",
-            "description": "An access door for maintenance or emergency egress."
-          }
-        ],
-        "dominantElements": [
-          "Centralized control console",
-          "Wrap-around viewports (limited)",
-          "Ergonomic seating",
-          "Integrated instrumentation panels"
-        ],
-        "uniqueIdentifiers": [
-          "Command-center aesthetic",
-          "Focus on operational functionality",
-          "Secluded yet strategic positioning"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "rear",
-          "description": "A secured passage connecting to other sections of the Apex Monolith."
-        },
-        {
-          "type": "door",
-          "position": "side",
-          "description": "An access door for maintenance or emergency egress."
-        }
-      ],
-      "dominantElements": [
-        "Centralized control console",
-        "Wrap-around viewports (limited)",
-        "Ergonomic seating",
-        "Integrated instrumentation panels"
-      ],
-      "uniqueIdentifiers": [
-        "Command-center aesthetic",
-        "Focus on operational functionality",
-        "Secluded yet strategic positioning"
-      ],
-      "searchDesc": "Futuristic cockpit with a vast viewport overlooking a desert.",
-      "slug": "cockpit"
-    },
     "loc-1765284408975-f45x6c1mk": {
       "id": "loc-1765284408975-f45x6c1mk",
       "type": "host",
@@ -508,38 +147,168 @@
         ]
       },
       "primaryMedia": "media-1765284429573-3z4psto15"
+    },
+    "loc-1765284669387-ckq080ki4": {
+      "id": "loc-1765284669387-ckq080ki4",
+      "type": "host",
+      "name": "Neo-Veridian",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, densely packed futuristic city dominated by immense, towering cylindrical structures. At ground level, multi-layered buildings with a mix of traditional and makeshift construction line bustling streets.",
+        "colorsAndLighting": "Bright, clear daylight with distinct shadows. The overall palette is a mix of the stark colors of the mega-structures and the vibrant hues of street-level commerce.",
+        "atmosphere": "A vibrant, active atmosphere under a clear blue sky with fluffy clouds. The air feels industrial but alive with the energy of commerce, transit, and dense population.",
+        "materials": "A mix of advanced composites, weathered metals, concrete, and fabric awnings. The lower buildings show varied construction, from sleek to ramshackle.",
+        "mood": "Enduring industry and vibrant, lived-in future. A sense of ambitious human endeavor and constant activity.",
+        "sounds": "City hum, vehicle traffic, pedestrian chatter, market sounds, distant machinery.",
+        "primary_surfaces": "Mega-structure facades, multi-layered building walls, paved streets.",
+        "secondary_surfaces": "Fabric awnings, exposed piping, scaffolding, market stalls.",
+        "accent_features": "Colorful fabric awnings, signs, market displays, flying vehicles.",
+        "dominant": "White (colossal towers)",
+        "secondary": "Muted greys and browns (street buildings, general infrastructure)",
+        "accent": "Vibrant market colors, red-orange (tower accents)",
+        "ambient": "Bright daylight",
+        "genre": "Futuristic Urbanism",
+        "architectural_tone": "Mega-structure brutalist-industrial mixed with multi-layered, ramshackle urban development",
+        "cultural_tone": "Busy commercial district for traders, workers, and travelers in a highly industrialized future society.",
+        "materials_base": "Metal, composite, concrete, fabric",
+        "mood_baseline": "Enduring activity and vibrant urbanism",
+        "palette_bias": "Cool and warm neutrals with strong color accents",
+        "soundscape_base": "Active urban soundscape",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A sprawling, densely packed futuristic metropolis characterized by immense, towering cylindrical structures. It is a vibrant hub of commerce, transit, and enduring human activity.",
+      "searchDesc": "A futuristic city of immense towers and bustling street life.",
+      "slug": "neo-veridian",
+      "structure": {
+        "spatialLayout": "Extensive horizontal spread with immense verticality from the towers. Dense street-level activity contrasts with the vast open sky above.",
+        "navigableElements": [
+          "Streets",
+          "Flying Vehicle Corridors"
+        ],
+        "dominantElements": [
+          "Towering Cylindrical Structures",
+          "Bustling Streets"
+        ],
+        "uniqueIdentifiers": [
+          "City Scale",
+          "Skyline Dominance"
+        ]
+      }
+    },
+    "0f944314-716a-432b-8f2a-e9a5bf9a9ddb": {
+      "id": "0f944314-716a-432b-8f2a-e9a5bf9a9ddb",
+      "type": "region",
+      "name": "The Spire District",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Dominated by immense, cylindrical towers that pierce the sky. Complex networks of platforms, gantries, and industrial components encircle them at various heights, creating a multi-layered visual field.",
+        "colorsAndLighting": "Bright daylight with sharp shadows. The primary colors are the stark white and weathered red-orange of the colossal towers.",
+        "atmosphere": "A sense of immense scale and industrial might. The air feels functional, hinting at constant, heavy operation. The sheer verticality is a defining characteristic.",
+        "materials": "Predominantly weathered metal and grime-covered composites on the colossal structures. Industrial steel and concrete are prevalent in the connecting infrastructure.",
+        "mood": "Awe-inspiring, functional, and slightly imposing due to the monumental scale and industrial nature.",
+        "sounds": "Distant hums, machinery, wind, faint transit sounds.",
+        "primary_surfaces": "Colossal cylindrical exteriors, weathered metal platforms, industrial concrete.",
+        "secondary_surfaces": "Exposed piping, gantries, support structures.",
+        "accent_features": "Weathered red-orange paint sections on towers.",
+        "dominant": "White (colossal towers)",
+        "secondary": "Weathered red-orange (tower sections)",
+        "accent": "Grey (industrial structures)",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Colossal brutalist-industrial towers with functional infrastructure",
+        "cultural_tone": "Center for heavy industry, power generation, or vertical transit hubs.",
+        "materials_base": "Metal, composite, concrete",
+        "mood_baseline": "Functional grandeur",
+        "palette_bias": "Cool and warm neutrals with industrial accents",
+        "soundscape_base": "Industrial hums and machinery",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A district dominated by colossal, rocket-like towers and intricate industrial networks. This area signifies monumental engineering and heavy industrial function within the larger cityscape.",
+      "searchDesc": "District of giant towers and industrial platforms.",
+      "slug": "the-spire-district",
+      "structure": {
+        "spatialLayout": "Vast verticality with intricate horizontal connections. Space is defined by the immense scale of the towers and the complex infrastructure between them.",
+        "dominantElements": [
+          "Colossal Cylindrical Towers",
+          "Industrial Gantries"
+        ],
+        "uniqueIdentifiers": [
+          "Tower Scale",
+          "Interconnected Platforms"
+        ]
+      }
+    },
+    "8b6ab9d0-ea47-4493-b33c-ec02e4e84984": {
+      "id": "8b6ab9d0-ea47-4493-b33c-ec02e4e84984",
+      "type": "location",
+      "name": "Sky-Piercer Avenue",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A wide, dense urban street at the foot of two immense, cylindrical towers. The buildings exhibit a mix of sleek, advanced architecture and improvised, lived-in additions. Elevated platforms and industrial elements create a complex, multi-level visual field.",
+        "colorsAndLighting": "Bright, clear daylight with sharp shadows. The primary colors are dominated by the stark white of the colossal towers, contrasted by their weathered red-orange sections. The street level is a riot of color from market awnings and diverse building facades.",
+        "atmosphere": "A vibrant, active atmosphere under a clear blue sky with fluffy clouds. The air feels industrial but alive with the energy of commerce and transit. The immense scale of the towers creates a sense of awe, while the street bustles with enduring human activity.",
+        "materials": "The dominant materials are weathered metal, grime-covered composites, and sturdy, multi-textured construction for the lower buildings. Exposed piping and scaffolding suggest a robust, functional aesthetic, with colorful fabric awnings adding a softer texture.",
+        "mood": "A mood of enduring industry and vibrant, lived-in future. It evokes a sense of ambitious human endeavor set against a backdrop of functional, evolving urbanism.",
+        "sounds": "Chirping vehicles, distant machinery hum, market chatter, footsteps, bicycle bells, wind.",
+        "primary_surfaces": "Grime-covered composite towers, multi-layered storefronts, cobbled street",
+        "secondary_surfaces": "Weathered metal gantries, colorful fabric awnings, exposed piping",
+        "accent_features": "Rusted vintage vehicle, brightly colored market signs, intricate scaffolding",
+        "dominant": "White (colossal towers)",
+        "secondary": "Red-orange (weathered sections of towers)",
+        "accent": "Vibrant market colors (awnings, signs), grey (metal structures)",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Colossal brutalist-industrial towers with multi-layered, ramshackle lower urban development",
+        "cultural_tone": "Busy commercial district for traders, workers, and travelers in a highly industrialized future society.",
+        "materials_base": "Metal, composite, fabric, concrete",
+        "mood_baseline": "Active, enduring, slightly gritty",
+        "palette_bias": "Cool and warm neutrals with strong color accents",
+        "soundscape_base": "Urban, industrial, commercial",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A bustling street at the base of two colossal, rocket-like buildings, featuring multi-layered construction, market stalls, and visible street clutter.",
+      "searchDesc": "Bustling street at base of colossal rocket-like buildings, multi-layered construction, market stalls.",
+      "slug": "sky-piercer-avenue",
+      "structure": {
+        "spatialLayout": "The space is defined by the overwhelming verticality of the twin towers, creating a canyon-like effect at street level. The urban fabric is densely packed, with multiple layers of activity stacked upon each other, offering significant depth.",
+        "navigableElements": [
+          {
+            "type": "path",
+            "position": "ground_level",
+            "description": "Wide, bustling street with market stalls and pedestrian traffic."
+          },
+          {
+            "type": "passage",
+            "position": "mid_level",
+            "description": "Numerous elevated platforms and gantries connecting the colossal buildings."
+          },
+          {
+            "type": "archway",
+            "position": "street_level",
+            "description": "Entrances to multi-layered shops and buildings."
+          }
+        ],
+        "dominantElements": [
+          "Two colossal, rocket-like towers",
+          "Multi-layered urban sprawl",
+          "Extensive network of platforms and gantries",
+          "Bustling street-level market"
+        ],
+        "uniqueIdentifiers": [
+          "Weathered red-orange paint on towers",
+          "Exposed piping and industrial components",
+          "Colorful fabric awnings over stalls",
+          "Rusted vintage vehicle"
+        ]
+      },
+      "primaryMedia": "media-1765284694168-2jbcpwqyf"
     }
   },
   "views": {},
   "worldTrees": [
-    {
-      "id": "loc-1765276507817-8yz9eo6qa",
-      "type": "host",
-      "children": [
-        {
-          "id": "a0b80abf-1ab7-4f0d-bb7c-26594b0f8cc9",
-          "type": "region",
-          "children": [
-            {
-              "id": "ca7d9ee5-ceb8-480e-938a-6c90d4af3dd4",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765276579816-gmtvqjlz4",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765276646126-f5swi72ol",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "loc-1765284408975-f45x6c1mk",
       "type": "host",
@@ -556,10 +325,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765284669387-ckq080ki4",
+      "type": "host",
+      "children": [
+        {
+          "id": "0f944314-716a-432b-8f2a-e9a5bf9a9ddb",
+          "type": "region",
+          "children": [
+            {
+              "id": "8b6ab9d0-ea47-4493-b33c-ec02e4e84984",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1765276507817-8yz9eo6qa",
-    "loc-1765284408975-f45x6c1mk"
+    "loc-1765284408975-f45x6c1mk",
+    "loc-1765284669387-ckq080ki4"
   ]
 }
