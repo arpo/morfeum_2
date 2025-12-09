@@ -717,6 +717,3245 @@
       ],
       "searchDesc": "Industrial-themed toilette within a techno bar, featuring raw brick and exposed pipes.",
       "slug": "toilette"
+    },
+    "loc-1765209834979-tzkh7plht": {
+      "id": "loc-1765209834979-tzkh7plht",
+      "type": "host",
+      "name": "Tropical Beach Paradise",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Visually stunning tropical coastlines with vibrant natural colors, clear waters, and bright, abundant sunlight. Architectural styles are often contemporary and blend seamlessly with the environment.",
+        "colorsAndLighting": "Dominated by vivid blues of the sky and ocean, complemented by lush greens of tropical foliage and the warm tones of sand and wood. Lighting is consistently bright and sunny.",
+        "atmosphere": "Warm, inviting, and generally humid, with a pervasive sense of peace and relaxation. The air is often scented with salt and exotic flowers.",
+        "materials": "A preference for natural materials like wood, stone, bamboo, and glass. Modern synthetics are used sparingly and with aesthetic consideration.",
+        "mood": "Relaxed, blissful, escapist, and inherently luxurious.",
+        "sounds": "The constant sound of waves, tropical birdsong, gentle breezes, and occasional distant sounds of leisure.",
+        "primary_surfaces": "Sand, Wood, Water",
+        "secondary_surfaces": "Concrete, Stone, Glass",
+        "accent_features": "Abundant tropical flora, expansive decks, inviting water features",
+        "dominant": "Vibrant blues (ocean and sky)",
+        "secondary": "Earthy neutrals (sand, light stone)",
+        "accent": "Lush greens and warm wood tones",
+        "ambient": "Bright, clear, and warm sunlight throughout the day.",
+        "genre": "Tropical Resort Simulation",
+        "architectural_tone": "Contemporary tropical modern",
+        "cultural_tone": "Leisure and relaxation focused",
+        "materials_base": "Natural and light-toned",
+        "mood_baseline": "Tranquil and aspirational",
+        "palette_bias": "Bright and naturalistic",
+        "soundscape_base": "Calm and natural",
+        "flora_base": "Abundant tropical vegetation",
+        "fauna_base": "Coastal and tropical wildlife"
+      },
+      "description": "A world dedicated to idyllic coastal living, where the sun always shines brightly on pristine beaches. This paradise offers an escape from the ordinary, emphasizing natural beauty and luxurious tranquility.",
+      "searchDesc": "A serene and tranquil tropical coastal setting with endless sunshine and clear blue waters.",
+      "slug": "tropical-beach-paradise",
+      "structure": {
+        "spatialLayout": "Open, airy, and spread out, emphasizing horizontal lines and integration with the natural landscape. Generous use of open spaces and verandas.",
+        "navigableElements": [
+          "Sandy beaches",
+          "Turquoise oceans",
+          "Tropical islands"
+        ],
+        "dominantElements": [
+          "Coastal resorts",
+          "Lush tropical environments",
+          "Clear blue skies"
+        ],
+        "uniqueIdentifiers": [
+          "Year-round warm climate",
+          "Abundant natural beauty"
+        ]
+      }
+    },
+    "6b6e8a9d-78d5-4bc5-98a7-5f3280c1b4ba": {
+      "id": "6b6e8a9d-78d5-4bc5-98a7-5f3280c1b4ba",
+      "type": "region",
+      "name": "Secluded Beachfront",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A serene coastal landscape dominated by clean architectural lines and natural elements. The visual character is defined by the interplay of modern structures and the raw beauty of the beach and ocean.",
+        "colorsAndLighting": "Bright, natural daylight with distinct shadows. The palette is a harmonious blend of oceanic blues and greens, sandy beiges, and the muted tones of concrete and wood.",
+        "atmosphere": "Warm, humid, and infused with the fresh scent of salt and tropical flora. Gentle sea breezes are a constant.",
+        "materials": "Primarily raw concrete, natural stone, and sustainable wood. Glass is used extensively for transparency and views.",
+        "mood": "Peaceful, luxurious, and deeply relaxing, fostering a sense of escape and connection with nature.",
+        "sounds": "The rhythmic lapping of waves, distant seabirds, and gentle rustling of palm leaves.",
+        "primary_surfaces": "Concrete, Sand, Wood",
+        "secondary_surfaces": "Glass, Natural Stone",
+        "accent_features": "Tropical vegetation, open-air decks, custom pools",
+        "dominant": "Ocean blue and sky blue",
+        "secondary": "Sandy beige and muted concrete/stone",
+        "accent": "Rich wood tones and vibrant green foliage",
+        "ambient": "Clear, bright mid-day sunlight, creating defined contrasts.",
+        "genre": null,
+        "architectural_tone": "Contemporary minimalist coastal villa",
+        "cultural_tone": "High-end residential retreat for relaxation and enjoyment of coastal living",
+        "materials_base": "Raw and natural modern",
+        "mood_baseline": "Serene and luxurious",
+        "palette_bias": "Blues, greens, and earthy neutrals",
+        "soundscape_base": "Oceanic and natural sounds",
+        "flora_base": "Tropical trees and plants",
+        "fauna_base": "Seabirds and marine life"
+      },
+      "description": "A pristine, private stretch of soft sand leading directly to the ocean. This exclusive area is characterized by its natural beauty and the presence of high-end, modern coastal residences.",
+      "searchDesc": "Tranquil, modern villas on a secluded tropical beach with clear blue water.",
+      "slug": "secluded-beachfront",
+      "structure": {
+        "spatialLayout": "Open and expansive, with structures integrated seamlessly into the coastal environment. A sense of privacy is maintained.",
+        "navigableElements": [
+          "Sandy beach",
+          "Ocean waves",
+          "Rocky outcrops"
+        ],
+        "dominantElements": [
+          "Modern beach villas",
+          "Turquoise ocean"
+        ],
+        "uniqueIdentifiers": [
+          "Private beach access",
+          "Minimalist coastal architecture"
+        ]
+      }
+    },
+    "1c055037-09e0-4130-a5a9-796ecc06d28f": {
+      "id": "1c055037-09e0-4130-a5a9-796ecc06d28f",
+      "type": "location",
+      "name": "Modern Beachfront Villa",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A minimalist, two-story concrete and stone structure with clean lines and sharp angles. Large expanses of glass and wood create a seamless indoor-outdoor flow. The building is scaled to offer prominence without overwhelming the natural surroundings.",
+        "colorsAndLighting": "Bathed in bright, clear mid-day sunlight, casting sharp but not harsh shadows. The palette is dominated by the blues and greens of the ocean and sky, contrasted with the earthy tones of concrete, stone, and wood.",
+        "atmosphere": "The air is warm, humid, and carries the scent of salt and tropical foliage. Gentle ocean breezes rustle the palm leaves. The atmosphere is tranquil and inviting, exuding a sense of peaceful luxury and relaxation.",
+        "materials": "Primary materials include raw concrete or stone for the exterior walls, complemented by natural wood for frames, decks, and furniture. Rough stone surrounds the pool, adding a textural contrast.",
+        "mood": "The mood is serene, luxurious, and deeply connected to nature. It evokes feelings of escape, tranquility, and sophisticated relaxation.",
+        "sounds": "lapping waves, distant seabirds, rustling palm leaves, gentle breeze",
+        "primary_surfaces": "Raw concrete walls, smooth wooden deck, turquoise water, light sandy beach",
+        "secondary_surfaces": "Natural rough stone, expansive glass panels, dense green foliage",
+        "accent_features": "Teal cushions, warm bedside lamp, tall slender palm tree trunk",
+        "dominant": "Ocean blue and sky blue with extensive coverage",
+        "secondary": "Earthy concrete and stone tones, forming the primary structure",
+        "accent": "Warm wood tones on furniture and window frames, vibrant green of tropical trees",
+        "ambient": "Bright, natural daylight",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "large-glass",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Contemporary minimalist concrete and wood villa",
+        "cultural_tone": "High-end residential retreat for relaxation and enjoyment of coastal living",
+        "materials_base": "Raw and natural modern",
+        "mood_baseline": "Serene and luxurious",
+        "palette_bias": "Blues, greens, and earthy neutrals",
+        "soundscape_base": "Coastal ambiance",
+        "flora_base": "Lush tropical foliage",
+        "fauna_base": "None"
+      },
+      "description": "A tranquil, two-story modern building with a raw concrete or stone exterior, featuring large open sections and expansive wooden-framed windows and sliding doors, situated directly on a sandy tropical beach.",
+      "searchDesc": "Modern two-story beachfront villa with pool and tropical landscaping. Bright sunlight.",
+      "slug": "modern-beachfront-villa",
+      "structure": {
+        "spatialLayout": "A horizontal, elongated structure hugging the beachfront. The lower level is largely open, flowing onto a wide deck. The upper level is more enclosed, housing private living spaces.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "lower-level-front",
+            "description": "Expansive sliding wooden-framed doors leading to the deck."
+          },
+          {
+            "type": "passage",
+            "position": "lower-level-interior",
+            "description": "Open-plan interior passage revealing dining area."
+          },
+          {
+            "type": "stairs",
+            "position": "exterior-side",
+            "description": "Implied stairs to upper level, not directly visible."
+          }
+        ],
+        "dominantElements": [
+          "Modern two-story villa structure",
+          "Expansive wooden deck",
+          "Custom-shaped swimming pool",
+          "Sandy tropical beach",
+          "Calm blue-green ocean"
+        ],
+        "uniqueIdentifiers": [
+          "Raw concrete/stone exterior",
+          "Wooden-framed windows and sliding doors",
+          "Teal cushioned lounge chairs",
+          "Round wooden dining table",
+          "Two distinct upper-level living spaces with beds"
+        ]
+      },
+      "primaryMedia": "media-1765209864089-zo86403qi"
+    },
+    "niche-1765209891843-q8t8uxu27": {
+      "id": "niche-1765209891843-q8t8uxu27",
+      "type": "niche",
+      "name": "Modern Beachfront Villa Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is characterized by expansive, floor-to-ceiling glass walls that blur the lines between inside and out. Open-plan living spaces feature clean lines, minimalist furniture, and a focus on natural materials. The two-story design emphasizes verticality and open circulation.",
+        "colorsAndLighting": "Bathed in bright, natural mid-day sunlight, the space glows with a palette of oceanic blues and greens, complemented by warm wood tones and the neutral earthiness of concrete and stone. Shadows are sharp but soft, defining the architectural forms.",
+        "atmosphere": "The air is warm and humid, carrying the faint scent of salt and tropical flowers. Gentle ocean breezes can be felt drifting through the open spaces, creating an atmosphere of serene luxury and tranquil relaxation. It feels open, airy, and deeply connected to the coastal environment.",
+        "materials": "Primary materials include smooth, raw concrete walls and flooring, complemented by natural wood for furniture, accent walls, and structural elements. Large expanses of glass dominate, allowing unobstructed views of the surrounding ocean and foliage. Rough stone is used for accents.",
+        "mood": "The mood is one of serene luxury, understated elegance, and profound relaxation, fostering a deep connection with the natural beauty of the beachfront setting.",
+        "sounds": "gentle waves, distant seagulls, rustling palm leaves, soft breeze",
+        "spatialLayout": "An open-plan layout with high ceilings, emphasizing a sense of spaciousness. The primary living areas are centered around ocean views, with clear pathways leading to outdoor spaces. Entry points are discreet, often through large glass openings.",
+        "primary_surfaces": "smooth concrete walls, polished concrete floors, expansive glass panels",
+        "secondary_surfaces": "natural wood furniture, stone accent pieces, ceiling beams",
+        "accent_features": "tall slender palm tree indoors, plush teal cushions, warm bedside lamp",
+        "dominant": "Ocean blue and sky blue with extensive coverage through views",
+        "secondary": "Earthy concrete and stone tones forming walls and floors",
+        "accent": "Warm wood tones on furniture and frames, vibrant green of indoor plants",
+        "ambient": "Bright, natural daylight",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "large-glass",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Contemporary minimalist concrete and wood villa",
+        "cultural_tone": "High-end residential retreat for relaxation and enjoyment of coastal living",
+        "materials_base": "Raw and natural modern",
+        "mood_baseline": "Serene and luxurious",
+        "palette_bias": "Blues, greens, and earthy neutrals",
+        "soundscape_base": "Coastal ambiance",
+        "flora_base": "Lush tropical foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765209891842-3hpca62x1",
+      "description": "The interior of a large, modern beachfront villa, characterized by its open-plan layout and extensive glass facades offering panoramic ocean views.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "functionalType": "residential",
+        "spatialLayout": "This is a spacious, open-plan interior designed for modern living within a beachfront villa. Expansive glass walls likely provide uninterrupted views of the ocean, integrating indoor and outdoor living.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Large sectional sofa",
+          "Sleek coffee table",
+          "Modern entertainment unit",
+          "Abstract art pieces",
+          "Ambient lighting fixtures",
+          "Minimalist dining set"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "center",
+            "description": "Leads to the main living area, seamlessly connecting different zones."
+          },
+          {
+            "type": "door",
+            "position": "right rear corner",
+            "description": "Access to private quarters or utility areas."
+          },
+          {
+            "type": "passage",
+            "position": "left side",
+            "description": "Connects to other functional areas of the villa, such as kitchen or bedrooms."
+          }
+        ],
+        "dominantElements": [
+          "Expansive floor-to-ceiling glass walls",
+          "Open-plan living space",
+          "High ceilings",
+          "Modern, minimalist finishes"
+        ],
+        "uniqueIdentifiers": [
+          "Direct ocean views through glass walls",
+          "Seamless indoor-outdoor transition",
+          "Contemporary, airy aesthetic"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "center",
+          "description": "Leads to the main living area, seamlessly connecting different zones."
+        },
+        {
+          "type": "door",
+          "position": "right rear corner",
+          "description": "Access to private quarters or utility areas."
+        },
+        {
+          "type": "passage",
+          "position": "left side",
+          "description": "Connects to other functional areas of the villa, such as kitchen or bedrooms."
+        }
+      ],
+      "dominantElements": [
+        "Expansive floor-to-ceiling glass walls",
+        "Open-plan living space",
+        "High ceilings",
+        "Modern, minimalist finishes"
+      ],
+      "uniqueIdentifiers": [
+        "Direct ocean views through glass walls",
+        "Seamless indoor-outdoor transition",
+        "Contemporary, airy aesthetic"
+      ],
+      "searchDesc": "Modern beachfront villa interior with ocean views, concrete, stone, and wood.",
+      "slug": "interior-of-modern-beachfront-villa"
+    },
+    "niche-1765209950004-mq9g2yi7d": {
+      "id": "niche-1765209950004-mq9g2yi7d",
+      "type": "niche",
+      "name": "Rooftop Oasis",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is an expansive, open-air rooftop space defined by a sleek swimming pool and a dedicated BBQ area. Tall, slender palm trees punctuate the scene, their fronds rustling in the breeze. The overall impression is one of modern luxury and tropical escape.",
+        "colorsAndLighting": "The scene is illuminated by bright, direct mid-day sun, creating sharp contrasts. Dominant colors are the deep blues of the pool water and the expansive sky, complemented by the muted earth tones of the surrounding structure and the vibrant greens of the palm foliage.",
+        "atmosphere": "The air is warm and humid, carrying the fresh scent of salt from the nearby ocean and the subtle fragrance of tropical leaves. A gentle breeze stirs the palm fronds, contributing to a tranquil and inviting ambiance. The atmosphere is one of sophisticated relaxation and leisure.",
+        "materials": "The primary surfaces are dominated by smooth, cool concrete for the deck and pool surround, interspersed with the rough texture of natural stone. Smooth wood accents are present on any built-in seating or serving areas near the BBQ. The water in the pool is a vibrant turquoise.",
+        "mood": "The mood is one of serene luxury, inviting guests to unwind and enjoy the elevated coastal experience.",
+        "sounds": "Gentle waves, rustling palm leaves, distant seabirds, light breeze",
+        "spatialLayout": "A relatively open and flat rooftop space, with the pool and BBQ area serving as focal points. The layout is designed for movement and enjoyment of the panoramic views.",
+        "primary_surfaces": "Raw concrete decking, turquoise pool water, rough stone edging",
+        "secondary_surfaces": "Expansive glass panels (if any surrounding structure), dense green palm foliage",
+        "accent_features": "Tall slender palm tree trunks, integrated BBQ unit, plush cushions (if present)",
+        "dominant": "Ocean blue and sky blue with extensive coverage",
+        "secondary": "Earthy concrete and stone tones, forming the primary structure and pool surround",
+        "accent": "Vibrant green of tropical trees, warm wood tones (if any furniture)",
+        "ambient": "Bright, natural daylight",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "large-glass",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Contemporary minimalist concrete and wood villa",
+        "cultural_tone": "High-end residential retreat for relaxation and enjoyment of coastal living",
+        "materials_base": "Raw and natural modern",
+        "mood_baseline": "Serene and luxurious",
+        "palette_bias": "Blues, greens, and earthy neutrals",
+        "soundscape_base": "Coastal ambiance",
+        "flora_base": "Lush tropical foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765209950003-6vjwkk7do",
+      "description": "A luxurious rooftop entertainment area with a swimming pool, BBQ facilities, and tropical palm trees, offering an open-air experience.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "functionalType": "entertainment",
+        "spatialLayout": "An expansive, open-air space situated at the highest point of the villa, featuring recreational amenities and lush greenery.",
+        "requiredElements": [
+          "pool",
+          "BBQ",
+          "palm trees",
+          "pool and BBQ and palm trees"
+        ],
+        "suggestedFixtures": [
+          "Lounge chairs",
+          "Outdoor dining table",
+          "Bar area",
+          "Umbrellas",
+          "Pergola",
+          "Sound system"
+        ],
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "central",
+            "description": "Leading up from the main villa interior"
+          },
+          {
+            "type": "passage",
+            "position": "periphery",
+            "description": "Openings to surrounding balcony areas"
+          }
+        ],
+        "dominantElements": [
+          "Pool",
+          "BBQ area",
+          "Palm trees",
+          "Panoramic view"
+        ],
+        "uniqueIdentifiers": [
+          "Rooftop location",
+          "Integration of water and greenery",
+          "Entertainment focus"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "central",
+          "description": "Leading up from the main villa interior"
+        },
+        {
+          "type": "passage",
+          "position": "periphery",
+          "description": "Openings to surrounding balcony areas"
+        }
+      ],
+      "dominantElements": [
+        "Pool",
+        "BBQ area",
+        "Palm trees",
+        "Panoramic view"
+      ],
+      "uniqueIdentifiers": [
+        "Rooftop location",
+        "Integration of water and greenery",
+        "Entertainment focus"
+      ],
+      "searchDesc": "Luxury rooftop pool and BBQ area surrounded by palm trees with ocean views.",
+      "slug": "roof-top-area-with-pool-and-bbq-and-palm-trees"
+    },
+    "niche-1765209996190-yd7qwfcmj": {
+      "id": "niche-1765209996190-yd7qwfcmj",
+      "type": "niche",
+      "name": "Rooftop Kitchen",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The kitchen features clean, sharp lines with expansive concrete countertops that flow seamlessly into custom warm wood cabinetry. Large expanses of glass overlook the ocean, creating an open and airy workspace that blends with the outdoor environment.",
+        "colorsAndLighting": "Bathed in bright, natural daylight, the space is illuminated by the blues and greens of the exterior view. Earthy concrete tones are balanced by warm wood accents, creating a sophisticated palette.",
+        "atmosphere": "The air is warm and humid, carrying faint scents of salt and tropical foliage, mirroring the parent villa's ambiance. Gentle ocean breezes might subtly influence the open-plan space, fostering a tranquil and inviting culinary experience.",
+        "materials": "Primary materials include smooth, polished concrete for countertops and backsplashes, complemented by the natural warmth of wood for cabinets and shelving. Expansive glass panels are integral to the design, blurring the lines between interior and exterior.",
+        "mood": "The mood is one of serene luxury and effortless functionality, deeply connected to the natural coastal surroundings, promoting sophisticated relaxation.",
+        "sounds": "Gentle waves, distant seabirds, quiet appliance hum.",
+        "spatialLayout": "The kitchen is integrated into an open-plan living area, characterized by ample counter space and a focal point on the ocean view. It is designed for both functionality and aesthetic harmony with the surrounding villa.",
+        "primary_surfaces": "Polished concrete countertops, smooth wooden cabinet fronts, large glass panels.",
+        "secondary_surfaces": "Concrete flooring, minimalist cabinet hardware, integrated appliances.",
+        "accent_features": "Subtle under-cabinet lighting, a sleek minimalist faucet, potentially a unique pendant light fixture.",
+        "dominant": "Earthy concrete and stone tones, forming countertops and structural elements.",
+        "secondary": "Warm wood tones on cabinetry and integrated fixtures.",
+        "accent": "Ocean blue and sky blue from the expansive windows, vibrant green from foliage visible outside.",
+        "ambient": "Bright, natural daylight.",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "medium",
+          "orientation": "horizontal",
+          "openings": "large-glass",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Contemporary minimalist concrete and wood villa",
+        "cultural_tone": "High-end residential retreat for relaxation and enjoyment of coastal living",
+        "materials_base": "Raw and natural modern",
+        "mood_baseline": "Serene and luxurious",
+        "palette_bias": "Blues, greens, and earthy neutrals",
+        "soundscape_base": "Coastal ambiance",
+        "flora_base": "Lush tropical foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765209996189-6vj6vl8jj",
+      "description": "A spacious and modern kitchen situated on the rooftop, designed for both functionality and social gathering, with extensive views of the beachfront.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "functionalType": "residential",
+        "spatialLayout": "This expansive kitchen is designed for open-plan living, seamlessly connecting to the adjacent rooftop oasis. Its layout prioritizes a large central island for both prep and social interaction, with ample counter space and access to outdoor views.",
+        "requiredElements": [
+          "Kitcen"
+        ],
+        "suggestedFixtures": [
+          "Large central island with seating",
+          "Modern stainless steel appliances",
+          "Sleek cabinetry",
+          "Integrated sink and faucet",
+          "Bar stools",
+          "Overhead pendant lighting"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "front",
+            "description": "Opens to the main living area of the villa."
+          },
+          {
+            "type": "door",
+            "position": "back-left corner",
+            "description": "Access to a small pantry or storage area."
+          },
+          {
+            "type": "large-glass",
+            "position": "rear wall",
+            "description": "Panoramic views of the beachfront and ocean."
+          }
+        ],
+        "dominantElements": [
+          "Large central island",
+          "Expansive countertops",
+          "High-end appliances",
+          "Generous natural light",
+          "Seamless indoor-outdoor connection"
+        ],
+        "uniqueIdentifiers": [
+          "Rooftop location",
+          "Open-plan integration with oasis",
+          "Panoramic ocean views from within",
+          "Focus on social cooking and gathering"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "front",
+          "description": "Opens to the main living area of the villa."
+        },
+        {
+          "type": "door",
+          "position": "back-left corner",
+          "description": "Access to a small pantry or storage area."
+        },
+        {
+          "type": "large-glass",
+          "position": "rear wall",
+          "description": "Panoramic views of the beachfront and ocean."
+        }
+      ],
+      "dominantElements": [
+        "Large central island",
+        "Expansive countertops",
+        "High-end appliances",
+        "Generous natural light",
+        "Seamless indoor-outdoor connection"
+      ],
+      "uniqueIdentifiers": [
+        "Rooftop location",
+        "Open-plan integration with oasis",
+        "Panoramic ocean views from within",
+        "Focus on social cooking and gathering"
+      ],
+      "searchDesc": "Luxury minimalist kitchen with ocean views, concrete, wood, and glass.",
+      "slug": "kitcen"
+    },
+    "niche-1765210054741-kad4g6p2q": {
+      "id": "niche-1765210054741-kad4g6p2q",
+      "type": "niche",
+      "name": "The Beach Villa Toilette",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This toilette is a compact, exquisitely finished space. Raw concrete walls transition smoothly into a wooden vanity. A large mirror reflects the interplay of natural light and material textures, maintaining the villa's sleek, minimalist aesthetic.",
+        "colorsAndLighting": "Bathed in the same bright, clear mid-day sunlight as the exterior, with sharp but gentle shadows. The palette is a sophisticated blend of earthy neutrals from the concrete and wood, accented by the subtle blues and greens visible through a strategically placed, frosted glass panel.",
+        "atmosphere": "The air is calm and clean, carrying a faint, fresh scent. It feels private and serene, a quiet sanctuary within the larger villa. The temperature is comfortably regulated, maintaining the humid warmth of the tropical exterior.",
+        "materials": "The primary materials are the same raw concrete and natural wood as the rest of the villa. The sink might be a smooth stone basin or integrated concrete, and the fixtures are brushed metal or dark bronze, harmonizing with the wood tones.",
+        "mood": "The mood is one of quiet luxury, serene functionality, and understated elegance. It's a space designed for personal comfort and reflection, seamlessly connected to the villa's overall ambiance.",
+        "sounds": "Gentle hum of ventilation, faint echoes, water flow",
+        "spatialLayout": "A relatively small, enclosed space designed for efficient use. The layout is typically linear or L-shaped, with the toilet, sink, and mirror strategically placed for optimal flow and privacy. Entry is via a single door.",
+        "primary_surfaces": "Raw concrete walls, smooth wooden flooring or partial walls, stone or concrete sink basin.",
+        "secondary_surfaces": "Mirror, brushed metal fixtures, perhaps a small stone tile accent.",
+        "accent_features": "A small, strategically placed frosted glass panel offering a hint of the outdoors, elegant brushed metal fixtures.",
+        "dominant": "Earthy concrete and stone tones",
+        "secondary": "Warm wood tones on vanity and trim",
+        "accent": "Brushed metal or dark bronze fixtures",
+        "ambient": "Bright, natural daylight with subtle diffusion",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "large-glass",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Contemporary minimalist concrete and wood villa",
+        "cultural_tone": "High-end residential retreat for relaxation and enjoyment of coastal living",
+        "materials_base": "Raw and natural modern",
+        "mood_baseline": "Serene and luxurious",
+        "palette_bias": "Blues, greens, and earthy neutrals",
+        "soundscape_base": "Coastal ambiance",
+        "flora_base": "Lush tropical foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765210054740-ulp2pagpy",
+      "description": "A small, functional toilet room within a modern beachfront villa, designed with clean lines and essential fixtures.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "small",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "functionalType": "residential",
+        "spatialLayout": "A compact, rectangular room designed for essential functions. It is a private, enclosed space within the larger villa.",
+        "requiredElements": [
+          "toilette"
+        ],
+        "suggestedFixtures": [
+          "toilet",
+          "sink",
+          "mirror",
+          "lighting fixture",
+          "small storage cabinet"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center of one wall",
+            "description": "Access to the main villa corridor."
+          },
+          {
+            "type": "passage",
+            "position": "corner",
+            "description": "Potential small ventilation opening or service access."
+          }
+        ],
+        "dominantElements": [
+          "toilet fixture",
+          "sink",
+          "tiled walls",
+          "minimalist aesthetic"
+        ],
+        "uniqueIdentifiers": [
+          "compact and functional layout",
+          "integrated into a luxury villa",
+          "clean, modern finishes"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of one wall",
+          "description": "Access to the main villa corridor."
+        },
+        {
+          "type": "passage",
+          "position": "corner",
+          "description": "Potential small ventilation opening or service access."
+        }
+      ],
+      "dominantElements": [
+        "toilet fixture",
+        "sink",
+        "tiled walls",
+        "minimalist aesthetic"
+      ],
+      "uniqueIdentifiers": [
+        "compact and functional layout",
+        "integrated into a luxury villa",
+        "clean, modern finishes"
+      ],
+      "searchDesc": "Luxurious minimalist villa toilette with ocean views and natural materials.",
+      "slug": "toilette"
+    },
+    "loc-1765210119814-1ispwab1x": {
+      "id": "loc-1765210119814-1ispwab1x",
+      "type": "host",
+      "name": "Xylos Prime",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Surreal alien landscapes featuring rolling hills, organic rock formations, and pervasive vibrant pink flora. Architectural structures are futuristic, retro-futuristic, or whimsical, predominantly in pale pink.",
+        "colorsAndLighting": "Bathed in soft, bright daylight under clear azure skies, casting gentle shadows. Dominant colors are vibrant pinks and pale pinks, with accents of light blue and white.",
+        "atmosphere": "Serene, tranquil, with a sense of profound peace and quiet wonder. Suggests a temperate, breathable climate.",
+        "materials": "Soft, dense vegetation, smooth polished synthetic materials for structures, mineral rock formations, composite road materials.",
+        "mood": "Serene, otherworldly beauty, quiet wonder, peaceful solitude, whimsical.",
+        "sounds": "Subtle, gentle ambient sounds, possibly wind or distant natural phenomena.",
+        "primary_surfaces": "Dense, short flora (pink)",
+        "secondary_surfaces": "Smooth, polished synthetic materials, mineral rock, composite road",
+        "accent_features": "Oval blue-tinted windows, flowering bushes, sharp mountain peaks",
+        "dominant": "Vibrant pink",
+        "secondary": "Pale pink, Light blue",
+        "accent": "White, Grey",
+        "ambient": "Soft, bright daylight",
+        "genre": "Whimsical Sci-Fi",
+        "architectural_tone": "Futuristic, retro-futuristic, or whimsical with organic integration",
+        "cultural_tone": "A place for contemplation, scenic enjoyment, and possibly research or leisure.",
+        "materials_base": "Synthetic, natural vegetation, mineral rock",
+        "mood_baseline": "Serene, wondrous, peaceful",
+        "palette_bias": "Pinks and blues, with white and gray accents",
+        "soundscape_base": "Gentle, natural ambient sounds",
+        "flora_base": "Dense, short, vibrant pink moss-like vegetation, small flowering bushes",
+        "fauna_base": "Likely small, unobtrusive fauna, or none visible in such scenes"
+      },
+      "description": "A tranquil and surreal alien world known for its pervasive vibrant pink flora and a blend of futuristic and retro-futuristic whimsical architecture. Its landscapes are bathed in soft light under clear skies.",
+      "searchDesc": "Tranquil alien world with vibrant pink flora, surreal landscapes, and whimsical architecture.",
+      "slug": "xylos-prime",
+      "structure": {
+        "spatialLayout": "Expansive vistas with integrated natural and artificial structures.",
+        "dominantElements": [
+          "surreal alien landscapes",
+          "whimsical architectural structures"
+        ],
+        "uniqueIdentifiers": [
+          "world-wide pink flora",
+          "azure skies"
+        ]
+      }
+    },
+    "8d6d01ff-7e1c-48fe-93a5-cdf469e77165": {
+      "id": "8d6d01ff-7e1c-48fe-93a5-cdf469e77165",
+      "type": "region",
+      "name": "The Azure Plains",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Rolling hills and organic rock formations heavily carpeted in a short, vibrant pink, moss-like flora. A smooth, light blue road cuts through the landscape.",
+        "colorsAndLighting": "Bathed in soft, bright daylight under a clear azure sky, casting gentle shadows. Dominant color is vibrant pink with accents of light blue.",
+        "atmosphere": "Still and tranquil, with a sense of profound peace and quiet wonder. Suggests a temperate climate.",
+        "materials": "Soft, dense vegetation, mineral rock formations. The road is smooth and composite.",
+        "mood": "Serene, otherworldly beauty, quiet wonder, peaceful solitude.",
+        "sounds": null,
+        "primary_surfaces": "Dense, short flora (pink)",
+        "secondary_surfaces": "Mineral rock formations, smooth composite road",
+        "accent_features": "Scattered pale pink and white flowering bushes",
+        "dominant": "Vibrant pink",
+        "secondary": "Pale pink, Light blue",
+        "accent": "White",
+        "ambient": "Soft, bright daylight",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": "A place for contemplation and scenic enjoyment",
+        "materials_base": "Natural vegetation, mineral rock, synthetic composites",
+        "mood_baseline": "Tranquil, wondrous",
+        "palette_bias": "Pinks and blues with white accents",
+        "soundscape_base": null,
+        "flora_base": "Dense, short, moss-like pink vegetation",
+        "fauna_base": null
+      },
+      "description": "An expansive, open region characterized by rolling hills and rock formations, punctuated by a smooth, light blue road. This landscape is known for its pervasive pink vegetation.",
+      "searchDesc": "Serene alien plains with rolling pink hills, rock formations, and a blue road.",
+      "slug": "the-azure-plains",
+      "structure": {
+        "spatialLayout": "Expansive and open, with gentle, rolling topography.",
+        "navigableElements": [
+          "light blue road"
+        ],
+        "dominantElements": [
+          "rolling hills",
+          "organic rock formations"
+        ],
+        "uniqueIdentifiers": [
+          "vibrant pink flora covering landscape"
+        ]
+      }
+    },
+    "a119dfb9-6b52-45b4-87b6-090657504e77": {
+      "id": "a119dfb9-6b52-45b4-87b6-090657504e77",
+      "type": "location",
+      "name": "The Pink Ridge Vista",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The vista presents rolling hills and organic rock formations heavily carpeted in a short, vibrant pink, moss-like flora. Scattered across the terrain are sleek, bulbous structures and a larger, multi-tiered building seamlessly integrated into a rock face, all rendered in pale pink tones. A smooth, light blue road cuts through the landscape, drawing the eye towards a distant mountain range.",
+        "colorsAndLighting": "The scene is bathed in soft, bright daylight under a clear azure sky, casting gentle shadows. The dominant color is a vibrant pink, with accents of light blue, pale pink, and white from the structures and flora. The background mountains are stark white and gray.",
+        "atmosphere": "The air is still and tranquil, with a sense of profound peace and quiet wonder. The clear azure sky suggests a temperate climate, and the overall impression is one of an unblemished, dreamlike environment.",
+        "materials": "The primary surfaces appear to be soft, dense vegetation and smooth, polished synthetic materials for the structures. The rock formations suggest a porous, yet solid, mineral composition. The road is smooth and possibly composite.",
+        "mood": "Serene, otherworldly beauty, quiet wonder, and peaceful solitude.",
+        "sounds": "Gentle breeze, soft hum of structures, distant echoes, nature's quiet murmur.",
+        "primary_surfaces": "Vibrant pink vegetation, smooth pale pink structures, azure sky, snow-capped mountains",
+        "secondary_surfaces": "Light blue road, reddish central line, oval blue-tinted windows, rock faces",
+        "accent_features": "Flowering bushes, reflective windows, pointed tops on some structures",
+        "dominant": "Vibrant pink (vegetation)",
+        "secondary": "Pale pink (structures)",
+        "accent": "Light blue (road and windows), White (snow-capped mountains)",
+        "ambient": "Bright daylight, soft light",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "large-glass",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Futuristic and whimsical with organic integration",
+        "cultural_tone": "A place for contemplation and scenic enjoyment, possibly a visitor attraction or a place of leisure.",
+        "materials_base": "Synthetic, natural vegetation, mineral rock",
+        "mood_baseline": "Tranquil and awe-inspiring",
+        "palette_bias": "Pinks and blues, with white and gray accents",
+        "soundscape_base": "Minimalist ambient",
+        "flora_base": "Dense, short pink vegetation with small flowering bushes",
+        "fauna_base": "None"
+      },
+      "description": "A picturesque exterior scene featuring rolling hills and rock formations covered in dense, vibrant pink vegetation, with a winding light blue road leading into the distance, flanked by futuristic pale pink structures and a multi-tiered building integrated into a rock face.",
+      "searchDesc": "Surreal alien landscape with pink vegetation, futuristic pale pink buildings, and a light blue road.",
+      "slug": "the-pink-ridge-vista",
+      "structure": {
+        "spatialLayout": "The space is expansive and open, with a sense of depth created by the winding road and distant mountains. The rolling hills create a dynamic yet gentle topography.",
+        "navigableElements": [
+          {
+            "type": "path",
+            "position": "center",
+            "description": "A light blue road winding into the distance."
+          },
+          {
+            "type": "door|passage",
+            "position": "left",
+            "description": "Entrance to a multi-tiered building integrated into a rock face."
+          }
+        ],
+        "dominantElements": [
+          "Rolling hills covered in dense, vibrant pink vegetation",
+          "Winding light blue road",
+          "Pale pink futuristic architectural structures",
+          "Multi-tiered building integrated into a rock face",
+          "Jagged, snow-capped mountains in the background"
+        ],
+        "uniqueIdentifiers": [
+          "Vibrant pink grass-like vegetation",
+          "Light blue road with a reddish central line",
+          "Mushroom-shaped pale pink structures",
+          "Oval, blue-tinted windows",
+          "Multi-tiered building facade"
+        ]
+      },
+      "primaryMedia": "media-1765210144290-0a9wr2x88"
+    },
+    "niche-1765210205517-72u1036q6": {
+      "id": "niche-1765210205517-72u1036q6",
+      "type": "niche",
+      "name": "Pink Ridge Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The hall features smooth, curving walls that seamlessly integrate into the rock face, mimicking organic forms. Alcoves and seating areas are carved directly into the structure. Pale pink surfaces dominate, accented by the soft glow from blue-tinted windows.",
+        "colorsAndLighting": "Soft, ambient daylight filters through pale pink walls and blue-tinted windows, creating a gentle, diffused light. The primary color is pale pink, with subtle blue accents.",
+        "atmosphere": "The air is still and quiet, carrying a sense of serene warmth. The organic shapes and soft light foster an atmosphere of calm and gentle introspection, a tranquil extension of the exterior peace.",
+        "materials": "The primary materials are smooth, polished synthetic surfaces that feel organic, mimicking the texture of dense vegetation and smooth mineral rock, all rendered in pale pink tones.",
+        "mood": "Peaceful, serene, and womb-like, offering a sheltered yet connected experience to the outside world.",
+        "sounds": "Muffled ambient hum, soft echoes, gentle ventilation.",
+        "spatialLayout": "The space is fluid and open, with no sharp corners. The hall flows naturally, with integrated seating and alcoves, suggesting a moderately sized, organically shaped interior.",
+        "primary_surfaces": "Pale pink organic walls, smooth pale pink floor, pale pink ceiling.",
+        "secondary_surfaces": "Blue-tinted window surfaces, rock face integrations.",
+        "accent_features": "Carved seating nooks, smooth transitions between wall and floor.",
+        "dominant": "Pale pink (walls, floor, ceiling)",
+        "secondary": "Light blue (window tint)",
+        "accent": "White and gray (rock face integration)",
+        "ambient": "Neutral light tone.",
+        "structure": {
+          "form": "organic",
+          "roofType": "vaulted",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "large-glass",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "organic futuristic integration",
+        "cultural_tone": "A serene and contemplative living space, harmoniously integrated with its unique environment.",
+        "materials_base": "Synthetic, natural vegetation, mineral rock",
+        "mood_baseline": "Tranquil and awe-inspiring",
+        "palette_bias": "Pinks and blues, with white and gray accents",
+        "soundscape_base": "Minimalist ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765210205516-91blcvb5s",
+      "description": "An expansive, organically shaped entertainment hall within 'The Pink Ridge Vista', characterized by its dominant pink coloration and a large domed ceiling, designed to accommodate large gatherings.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "functionalType": "entertainment",
+        "spatialLayout": "A grand, organically shaped hall designed for entertainment, with ample open space for gatherings and flowing movement. Its structure suggests an integration with the surrounding landscape.",
+        "requiredElements": [
+          "pink organic house hall"
+        ],
+        "suggestedFixtures": [
+          "stage or performance area",
+          "seating arrangements (benches, lounge areas)",
+          "lighting fixtures (ambient and accent)",
+          "bar or refreshment station",
+          "decorative elements (sculptures, plant installations)",
+          "sound system"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center rear",
+            "description": "A wide, organic archway leading deeper into the structure."
+          },
+          {
+            "type": "door",
+            "position": "left side",
+            "description": "An access door, potentially leading to service areas."
+          },
+          {
+            "type": "passage",
+            "position": "right side",
+            "description": "Another opening, possibly connecting to adjacent entertainment zones."
+          }
+        ],
+        "dominantElements": [
+          "curving, organic walls",
+          "expansive open floor plan",
+          "domed ceiling",
+          "large glass openings offering views",
+          "pink structural elements"
+        ],
+        "uniqueIdentifiers": [
+          "distinctive pink hue",
+          "organic, flowing architectural form",
+          "large-scale entertainment focus",
+          "domed, cavernous ceiling"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center rear",
+          "description": "A wide, organic archway leading deeper into the structure."
+        },
+        {
+          "type": "door",
+          "position": "left side",
+          "description": "An access door, potentially leading to service areas."
+        },
+        {
+          "type": "passage",
+          "position": "right side",
+          "description": "Another opening, possibly connecting to adjacent entertainment zones."
+        }
+      ],
+      "dominantElements": [
+        "curving, organic walls",
+        "expansive open floor plan",
+        "domed ceiling",
+        "large glass openings offering views",
+        "pink structural elements"
+      ],
+      "uniqueIdentifiers": [
+        "distinctive pink hue",
+        "organic, flowing architectural form",
+        "large-scale entertainment focus",
+        "domed, cavernous ceiling"
+      ],
+      "searchDesc": "Interior of an organic pink house hall with flowing walls and blue windows.",
+      "slug": "interior-of-the-pink-ridge-vista"
+    },
+    "niche-1765210233555-be9ylqr2v": {
+      "id": "niche-1765210233555-be9ylqr2v",
+      "type": "niche",
+      "name": "The Pink Ridge Vista Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior space reflects the exterior's aesthetic, with smooth, pale pink walls and a dense, vibrant pink, moss-like flora covering the floor. Integrated seating structures emerge organically from the surfaces, designed for comfort and contemplation. Oval, blue-tinted windows offer glimpses of the surrounding landscape.",
+        "colorsAndLighting": "Soft, bright daylight filters in, bathing the space in a gentle, ambient glow. The dominant color palette is a serene blend of pale pink and vibrant pink, accented by the light blue of the windows.",
+        "atmosphere": "The air is still and tranquil, mirroring the profound peace of the exterior. A sense of quiet wonder permeates the space, with a palpable feeling of peaceful solitude and otherworldly beauty.",
+        "materials": "The primary surfaces consist of smooth, polished synthetic materials for the walls and integrated seating, contrasted with the soft, dense vegetation of the floor covering. The windows are made of smooth, tinted glass.",
+        "mood": "The interior evokes a deep sense of serenity and awe-inspiring, otherworldly beauty, fostering peaceful solitude.",
+        "sounds": "Minimalist ambient hum, gentle light filtering",
+        "spatialLayout": "The space is designed with organic curves, seamlessly blending walls, floor, and seating. It feels open yet intimate, with a clear focal point towards the windows and potential passages.",
+        "primary_surfaces": "Pale pink integrated walls and seating, vibrant pink moss-like floor covering",
+        "secondary_surfaces": "Smooth, oval blue-tinted windows",
+        "accent_features": "Flowing organic forms of integrated seating, subtle reflections in windows",
+        "dominant": "Pale Pink (walls, seating)",
+        "secondary": "Vibrant Pink (floor covering)",
+        "accent": "Light Blue (windows)",
+        "ambient": "Soft, bright daylight",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "large-glass",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Futuristic and whimsical with organic integration",
+        "cultural_tone": "A place for contemplation and scenic enjoyment, possibly a visitor attraction or a place of leisure.",
+        "materials_base": "Synthetic, natural vegetation, mineral rock",
+        "mood_baseline": "Tranquil and awe-inspiring",
+        "palette_bias": "Pinks and blues, with white and gray accents",
+        "soundscape_base": "Minimalist ambient",
+        "flora_base": "Dense, short pink vegetation with small flowering bushes",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765210233554-0olzf3adl",
+      "description": "The interior of The Pink Ridge Vista is a large, organically formed entertainment space featuring a wide orientation and expansive views through large glass panels.",
+      "structure": {
+        "form": "organic",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "functionalType": "entertainment",
+        "spatialLayout": "This large, organically shaped interior space is designed for entertainment, with a wide orientation that emphasizes expansive views and ample room for gathering.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "seating areas",
+          "a bar",
+          "stage area",
+          "dance floor",
+          "lighting rigs",
+          "sound system"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center back",
+            "description": "A wide opening leading further into the vista."
+          },
+          {
+            "type": "door",
+            "position": "left corner",
+            "description": "An access door to service areas."
+          },
+          {
+            "type": "door",
+            "position": "right corner",
+            "description": "Another access door for guests."
+          }
+        ],
+        "dominantElements": [
+          "organic curves of the walls",
+          "expansive glass panels",
+          "central open area",
+          "integrated seating"
+        ],
+        "uniqueIdentifiers": [
+          "The Pink Ridge Vista's signature organic form",
+          "sweeping panoramic views through large glass openings"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center back",
+          "description": "A wide opening leading further into the vista."
+        },
+        {
+          "type": "door",
+          "position": "left corner",
+          "description": "An access door to service areas."
+        },
+        {
+          "type": "door",
+          "position": "right corner",
+          "description": "Another access door for guests."
+        }
+      ],
+      "dominantElements": [
+        "organic curves of the walls",
+        "expansive glass panels",
+        "central open area",
+        "integrated seating"
+      ],
+      "uniqueIdentifiers": [
+        "The Pink Ridge Vista's signature organic form",
+        "sweeping panoramic views through large glass openings"
+      ],
+      "searchDesc": "Interior of The Pink Ridge Vista, bathed in soft pink light, with organic architecture.",
+      "slug": "interior-of-the-pink-ridge-vista"
+    },
+    "niche-1765210272468-tld9xfvun": {
+      "id": "niche-1765210272468-tld9xfvun",
+      "type": "niche",
+      "name": "Pink Ridge Vista Rooftop Spa",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The spa is nestled onto the rooftop, integrating seamlessly with the surrounding pale pink, bulbous structures. Relaxation loungers and tranquil water features are visible, all bathed in soft daylight. The vista of rolling hills and organic rock formations carpeted in pink flora remains a prominent backdrop.",
+        "colorsAndLighting": "Soft, bright daylight illuminates the spa, casting gentle shadows. Dominant pinks from the flora and structures are accented by the light blue of water features and the clear azure sky above.",
+        "atmosphere": "The air here is still and tranquil, echoing the profound peace of the surrounding landscape. The rooftop setting offers expansive views, enhancing the sense of quiet wonder and solitude, free from any harsh elements.",
+        "materials": "The spa utilizes smooth, polished synthetic materials for its structures, consistent with the surrounding buildings. Water features employ smooth, possibly composite materials, and integrated seating offers a comfortable, natural vegetation base. Rock formations provide a textural contrast.",
+        "mood": "Serene, otherworldly beauty and peaceful solitude are the overarching moods, amplified by the elevated, tranquil setting.",
+        "sounds": "Gentle water sounds, distant ambient wind, soft chimes",
+        "spatialLayout": "The spa occupies a significant portion of the rooftop, with various zones for relaxation and treatment. Entry is typically via a dedicated access point, and focal points include serene water areas and comfortable seating.",
+        "primary_surfaces": "Smooth pale pink synthetic surfaces (structures), light blue water, pink vegetation (integrated)",
+        "secondary_surfaces": "Smooth composite materials (pool edges, loungers), natural rock formations",
+        "accent_features": "Reflective water surfaces, subtle lighting integrated into structures, flowering bushes",
+        "dominant": "Pale pink (structures, integrated flora)",
+        "secondary": "Light blue (water features)",
+        "accent": "Vibrant pink (flora), white (distant mountains), azure (sky)",
+        "ambient": "Neutral",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "medium",
+          "orientation": "wide",
+          "openings": "open-passages",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Futuristic and whimsical with organic integration",
+        "cultural_tone": "A place for contemplation and scenic enjoyment, possibly a visitor attraction or a place of leisure.",
+        "materials_base": "Synthetic, natural vegetation, mineral rock",
+        "mood_baseline": "Tranquil and awe-inspiring",
+        "palette_bias": "Pinks and blues, with white and gray accents",
+        "soundscape_base": "Minimalist ambient",
+        "flora_base": "Dense, short pink vegetation with small flowering bushes",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765210272467-dwb9c2dsx",
+      "description": "An luxurious rooftop spa designed for entertainment and relaxation, integrated with the organic, large-scale, and wide orientation of the parent structure, offering an open-sky experience.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "functionalType": "entertainment",
+        "spatialLayout": "An expansive rooftop area with multiple tranquil zones for relaxation, featuring various water elements and lounge areas, open to the sky and the vista.",
+        "requiredElements": [
+          "spa",
+          "roof top"
+        ],
+        "suggestedFixtures": [
+          "Jacuzzi",
+          "Sauna",
+          "Steam room",
+          "Massage beds",
+          "Lounging chairs",
+          "Water features"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center",
+            "description": "An open passage leading from an interior elevator or stairwell to the main spa area."
+          },
+          {
+            "type": "passage",
+            "position": "left",
+            "description": "A pathway leading to a more secluded relaxation zone."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "A walkway connecting different water features and seating areas."
+          }
+        ],
+        "dominantElements": [
+          "Rooftop terrace",
+          "Water features (pools, fountains)",
+          "Lush landscaping",
+          "Panoramic views"
+        ],
+        "uniqueIdentifiers": [
+          "Rooftop location with a vista",
+          "Open-sky ceiling",
+          "Organic form integration"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "An open passage leading from an interior elevator or stairwell to the main spa area."
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "A pathway leading to a more secluded relaxation zone."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A walkway connecting different water features and seating areas."
+        }
+      ],
+      "dominantElements": [
+        "Rooftop terrace",
+        "Water features (pools, fountains)",
+        "Lush landscaping",
+        "Panoramic views"
+      ],
+      "uniqueIdentifiers": [
+        "Rooftop location with a vista",
+        "Open-sky ceiling",
+        "Organic form integration"
+      ],
+      "searchDesc": "Rooftop spa with pink moss, pale pink structures, and rolling hills vista.",
+      "slug": "spa-on-the-roof-top"
+    },
+    "loc-1765210325215-lyodlnn3c": {
+      "id": "loc-1765210325215-lyodlnn3c",
+      "type": "host",
+      "name": "Neo-Kyoto",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, multi-layered urban environment characterized by towering, monolithic structures interlaced with glowing neon signage and massive holographic projections. Skybridges connect massive arcologies, and traditional architectural elements are often integrated into futuristic designs.",
+        "colorsAndLighting": "Dominated by the intense, vibrant hues of neon lights and holographic displays, creating a perpetually twilight or nighttime feel. Deep blues, electric purples, and vivid greens are prevalent, often clashing with stark whites and reds.",
+        "atmosphere": "The air is thick with the scent of ozone, rain on hot pavement, and synthesized street food. A constant hum of traffic, advertising jingles, and distant industrial noise pervades.",
+        "materials": "A mix of reinforced concrete, gleaming chrome, advanced polymers, and transparent, reinforced glass. Many surfaces are dynamic, displaying information or advertisements.",
+        "mood": "Energetic and overwhelming, with an undercurrent of mystery and alienation. The city feels alive but impersonal, a place of constant stimulation and hidden dangers.",
+        "sounds": "A cacophony of hovercraft traffic, digital advertising broadcasts, public announcements, and the distant thrum of immense machinery. Occasional bursts of traditional music can be heard.",
+        "primary_surfaces": "Chrome, glass, and illuminated panels.",
+        "secondary_surfaces": "Reinforced concrete, composite alloys.",
+        "accent_features": "Holographic advertisements, neon script, dynamic architectural lighting.",
+        "dominant": "Deep cosmic blue, reflecting the night sky and pervasive lighting.",
+        "secondary": "Emerald green and vibrant electric blue from neon and holographic signage.",
+        "accent": "Pulsing white and hot pink from energy conduits and advertising highlights.",
+        "ambient": "Constantly shifting and saturated by artificial light, with strong contrasts between light and shadow.",
+        "genre": "Cyberpunk",
+        "architectural_tone": "High-tech futurism with stark, geometric forms and integrated digital displays.",
+        "cultural_tone": "A melting pot of global cultures, heavily influenced by advanced technology and corporate power.",
+        "materials_base": "Polished composites, chrome, and integrated light",
+        "mood_baseline": "Energetic, overwhelming, and mysterious.",
+        "palette_bias": "High contrast, neon-driven palette with dominant cool tones.",
+        "soundscape_base": "Ubiquitous electronic hum and digital noise.",
+        "flora_base": "Minimal and artificial, often found in enclosed hydroponic gardens or integrated into architecture.",
+        "fauna_base": "Urban wildlife adapted to pollution, cybernetically enhanced pets, and domesticated drones."
+      },
+      "description": "A sprawling, neon-drenched metropolis where ancient traditions clash with cutting-edge cybernetics, creating a city of stark contrasts and endless innovation.",
+      "searchDesc": "A high-tech metropolis where tradition meets cybernetics.",
+      "slug": "neo-kyoto",
+      "structure": {
+        "spatialLayout": "Densely packed and vertically oriented. Streets are often multi-level, with extensive underground networks and high-altitude transit systems. Public spaces are often enclosed or heavily mediated by technology.",
+        "dominantElements": [
+          "Towering skyscrapers",
+          "Holographic advertisements",
+          "Dense urban sprawl"
+        ],
+        "uniqueIdentifiers": [
+          "Fusion of ancient aesthetics and futuristic tech",
+          "Pervasive neon and holographic displays",
+          "Elevated transit systems"
+        ]
+      },
+      "primaryMedia": "media-1765210399850-e3wh1750z"
+    },
+    "77a3156a-4937-440d-902d-eecf1cd86d77": {
+      "id": "77a3156a-4937-440d-902d-eecf1cd86d77",
+      "type": "region",
+      "name": "The Automaton Gardens",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A meticulously curated landscape where polished metal structures intertwine with vibrant, genetically modified plants. Pathways are fluid and change configuration, guided by unseen forces. Structures are often ornate and functional art.",
+        "colorsAndLighting": "A spectrum of vibrant, artificial colors from the flora, complemented by the sheen of polished metals. Lighting is dynamic, often shifting to highlight different displays, with strong blues and greens as a base.",
+        "atmosphere": "The air is perfumed with exotic, synthesized floral scents, mixed with the faint ozone tang of active machinery. A constant, gentle breeze seems to be artificially generated.",
+        "materials": "Primarily polished alloys, composite resins, and bio-engineered plant matter. Many surfaces have integrated lighting or display capabilities.",
+        "mood": "Enchanting and surreal. The area evokes a sense of wonder at the harmonious blend of technology and artificial life.",
+        "sounds": "A symphony of soft chimes, gentle whirring, synthesized bird songs, and the rustling of artificial leaves.",
+        "primary_surfaces": "Polished metal and glowing bio-flora.",
+        "secondary_surfaces": "Smooth composite walkways, integrated light panels.",
+        "accent_features": "Animated mechanical sculptures, bioluminescent plant clusters.",
+        "dominant": "Deep cosmic blue and emerald green, reflecting the bio-luminescent flora.",
+        "secondary": "Silver and chrome from polished metallic structures.",
+        "accent": "Pulsing white and vibrant fuchsia from energy conduits and specific flora.",
+        "ambient": "Bright, dynamic, and ever-shifting, with a preference for cool tones.",
+        "genre": null,
+        "architectural_tone": "Bio-luminescent technological sanctuary with organic curves",
+        "cultural_tone": "A district showcasing the apex of artificial life and art, curated by unseen architects.",
+        "materials_base": "Polished composites and integrated light",
+        "mood_baseline": "Enchanting and surreal.",
+        "palette_bias": "Cool blues and greens with vibrant floral accents.",
+        "soundscape_base": "Harmonious blend of organic and synthetic sounds.",
+        "flora_base": "Bio-engineered, bioluminescent flora.",
+        "fauna_base": "Automated drones and synthetic insectoids."
+      },
+      "description": "A district dedicated to intricate mechanical art installations and bio-engineered flora, where nature and artifice merge in stunning displays.",
+      "searchDesc": "A district of mechanical art, bio-engineered plants, and automated displays.",
+      "slug": "the-automaton-gardens",
+      "structure": {
+        "spatialLayout": "Spacious with deliberate, artistic arrangements. Paths wind through curated displays, opening into clearings for larger installations.",
+        "dominantElements": [
+          "Towering mechanical sculptures",
+          "Luminous flora",
+          "Automated pathways"
+        ],
+        "uniqueIdentifiers": [
+          "Juxtaposition of metal and engineered plant life",
+          "Chiming soundscapes",
+          "Dynamic, self-rearranging landscapes"
+        ]
+      },
+      "primaryMedia": "media-1765210386414-pn08thyl6"
+    },
+    "6a192933-8b14-4fea-88fb-8fb0c3a7cf89": {
+      "id": "6a192933-8b14-4fea-88fb-8fb0c3a7cf89",
+      "type": "location",
+      "name": "The Iron Lotus",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A monumental metallic bloom, its polished steel petals slowly retracting, exposing a radiant, otherworldly inner luminescence. Intricate seam lines suggest advanced articulation.",
+        "colorsAndLighting": "Exterior is dark, brushed steel reflecting the dimming twilight. The interior emanates a strong, soft emerald and sapphire glow, with pulsing white highlights.",
+        "atmosphere": "The air around the structure is still, with a faint, metallic scent and the subtle hum of internal mechanisms. A sense of anticipation hangs in the air.",
+        "materials": "The petals are crafted from a durable, highly polished steel alloy. Visible internal components suggest a composite material integrated with light sources.",
+        "mood": "Mysterious and wondrous. The gradual opening evokes a sense of revelation and technological marvel, hinting at hidden depths.",
+        "sounds": "A low, resonant hum of advanced machinery, punctuated by the gentle, almost melodic creak of unfolding metal.",
+        "primary_surfaces": "Smooth, curved steel petals.",
+        "secondary_surfaces": "Glow-infused interior surfaces, articulated joints.",
+        "accent_features": "The edges of the opening petals, the central glowing chamber.",
+        "dominant": "Dark steel grey, reflecting twilight.",
+        "secondary": "Deep emerald green and sapphire blue from the interior glow.",
+        "accent": "Pulsing white light from the core.",
+        "ambient": "Dim, twilight illumination, dramatically contrasted by the internal light.",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "open-passages",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Bio-luminescent technological sanctuary with organic curves",
+        "cultural_tone": "Created and maintained by an advanced, unknown civilization for unknown purposes, likely energy management or control.",
+        "materials_base": "Polished composites and integrated light",
+        "mood_baseline": "Awe-inspiring and enigmatic.",
+        "palette_bias": "Cool blues and greens",
+        "soundscape_base": "Low hums and mechanical articulations.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "A colossal mechanical flower constructed from polished steel petals, currently beginning to unfurl as dusk settles, revealing a glowing interior chamber.",
+      "searchDesc": "A large, mechanical flower of steel petals opening at dusk, revealing a glowing interior.",
+      "slug": "the-iron-lotus",
+      "structure": {
+        "spatialLayout": "The structure dominates its immediate surroundings, a towering artificial flower anchored to the ground, its open petals creating a distinct threshold.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "interior",
+            "description": "The revealed glowing interior chamber entrance."
+          }
+        ],
+        "dominantElements": [
+          "The opening steel flower structure",
+          "Glowing interior"
+        ],
+        "uniqueIdentifiers": [
+          "Mechanical flower design",
+          "Petals opening at dusk",
+          "Visible glowing core"
+        ]
+      },
+      "primaryMedia": "media-1765210369638-fytd8zipz"
+    },
+    "6261fd8e-4a64-4a69-a080-a334fa688b54": {
+      "id": "6261fd8e-4a64-4a69-a080-a334fa688b54",
+      "type": "niche",
+      "name": "Interior Chamber",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A circular, cavernous space with smooth, polished walls. The scale feels immense, dominated by a large, multifaceted crystal at its center. Intricate lines of light pulse across the surfaces, outlining unseen machinery.",
+        "colorsAndLighting": "Dominated by cool blues and vibrant emeralds emanating from the crystal and circuitry. Soft, ambient light fills the space with minimal shadows.",
+        "atmosphere": "The air is crisp and clean, carrying a faint, electrical tang. A gentle, almost imperceptible warmth emanates from the core, and a subtle vibration can be felt through the floor.",
+        "materials": "The primary material appears to be a seamless, obsidian-like composite, polished to a mirror sheen. Accents of glowing, ethereal energy are integrated directly into the material.",
+        "mood": "Awe-inspiring and enigmatic. The chamber evokes a sense of profound discovery and the wonder of advanced, alien engineering.",
+        "sounds": "Low hum, soft energy pulses, faint crystalline chime",
+        "primary_surfaces": "Polished obsidian walls, smooth crystalline floor",
+        "secondary_surfaces": "Integrated glowing circuitry",
+        "accent_features": "Central pulsing crystal, floating holographic displays",
+        "dominant": "Deep cosmic blue with extensive coverage",
+        "secondary": "Emerald green tracing the circuitry",
+        "accent": "Pulsing white light from the crystal",
+        "ambient": "Soft, cool glow",
+        "structure": null,
+        "genre": null,
+        "architectural_tone": "Bio-luminescent technological sanctuary with organic curves",
+        "cultural_tone": "Created and maintained by an advanced, unknown civilization for unknown purposes, likely energy management or control.",
+        "materials_base": "Polished composites and integrated light",
+        "mood_baseline": "Serene awe",
+        "palette_bias": "Cool blues and greens",
+        "soundscape_base": "Low hum and energetic pulses",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "The luminous core of the Iron Lotus, this chamber hums with barely contained energy. It serves as the central nexus for the mechanical flower's functions, radiating an aura of intricate, advanced design.",
+      "searchDesc": "Glowing interior chamber of advanced technology, heart of a mechanical flower.",
+      "slug": "interior-chamber",
+      "structure": {
+        "spatialLayout": "A vast, circular chamber with an impossibly high ceiling. The depth is amplified by the glowing lines that recede into the walls and floor.",
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center",
+            "description": "A shimmering, translucent archway beckons deeper into the chamber."
+          }
+        ],
+        "dominantElements": [
+          "Central pulsing crystal",
+          "Intricate glowing circuitry etched into walls",
+          "Floating holographic schematics"
+        ],
+        "uniqueIdentifiers": [
+          "Humming ambient energy",
+          "The subtle scent of ozone",
+          "Soft, rhythmic pulsations from the core"
+        ]
+      },
+      "primaryMedia": "media-1765210359632-risnjy972"
+    },
+    "niche-1765210427104-whso5iden": {
+      "id": "niche-1765210427104-whso5iden",
+      "type": "niche",
+      "name": "The Iron Lotus Entrance Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a vast, curved space formed by slowly retracting polished steel petals. Intricate seam lines are visible, hinting at articulation. The overall form suggests a colossal, opening flower.",
+        "colorsAndLighting": "A strong, soft emerald and sapphire glow emanates from the inner surfaces, punctuated by pulsing white highlights from the central chamber. The ambient light is dim, creating a stark contrast.",
+        "atmosphere": "The air is still and carries a faint, metallic scent. A subtle hum of internal mechanisms pervades the space, creating a sense of anticipation and technological marvel. The gradual opening of the petals evokes a feeling of revelation.",
+        "materials": "The primary material is a durable, highly polished steel alloy, forming the curved surfaces of the petals. Visible internal components suggest a composite material integrated with light sources, glowing from within.",
+        "mood": "Mysterious and wondrous. The sheer scale and the otherworldly luminescence inspire awe, hinting at unknown depths and advanced technology.",
+        "sounds": "Faint mechanical hum, subtle articulation clicks, low resonant tones.",
+        "spatialLayout": "The space is cavernous and organic in shape, defined by the massive, curved steel petals. A central chamber acts as a focal point, drawing the eye inwards from the entrance.",
+        "primary_surfaces": "Polished steel petals, glow-infused interior surfaces.",
+        "secondary_surfaces": "Articulated joints, integrated light conduits.",
+        "accent_features": "The radiant edges of the opening petals, the pulsing white light from the central chamber.",
+        "dominant": "Deep emerald green, illuminating the interior curves.",
+        "secondary": "Sapphire blue, complementing the emerald glow.",
+        "accent": "Pulsing white light, emanating from the core.",
+        "ambient": "Cool, with strong internal illumination.",
+        "structure": {
+          "form": "organic",
+          "roofType": "arched",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "open-passages",
+          "functionalType": "civic"
+        },
+        "genre": null,
+        "architectural_tone": "Bio-luminescent technological sanctuary with organic curves",
+        "cultural_tone": "Created and maintained by an advanced, unknown civilization for unknown purposes, likely energy management or control.",
+        "materials_base": "Polished composites and integrated light",
+        "mood_baseline": "Awe-inspiring and enigmatic.",
+        "palette_bias": "Cool blues and greens",
+        "soundscape_base": "Low hums and mechanical articulations.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765210427103-xb8oi4vby",
+      "description": "The entrance hall of The Iron Lotus, a large, organically formed, vertical space that serves as the welcoming point to the Automaton Gardens, featuring a domed ceiling and open passages designed for entertainment.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "vertical",
+        "openings": "open-passages",
+        "functionalType": "entertainment",
+        "spatialLayout": "A grand, multi-story entrance hall that serves as a transitional space, drawing visitors upwards into the Automaton Gardens. Its form is organic and flowing, emphasizing verticality.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Central information desk or reception podium",
+          "Elaborate decorative sculptures or kinetic art installations",
+          "Lush, integrated plant life or artificial flora",
+          "Ambient lighting fixtures that enhance the organic forms",
+          "Seating areas with sculpted benches or loungers",
+          "Flowing water features or mist emitters"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "front center",
+            "description": "Main entrance passage leading into the hall."
+          },
+          {
+            "type": "passage",
+            "position": "rear upper level",
+            "description": "Passage leading deeper into The Automaton Gardens on an elevated platform."
+          },
+          {
+            "type": "stairs",
+            "position": "left side, curving upwards",
+            "description": "Organic, winding staircase ascending to higher levels."
+          }
+        ],
+        "dominantElements": [
+          "Flowing, organic architecture that reaches upwards",
+          "Integration of botanical elements (real or artificial)",
+          "Grand central atrium space",
+          "Visually striking kinetic or sculptural art piece"
+        ],
+        "uniqueIdentifiers": [
+          "The prominent 'Iron Lotus' motif subtly integrated into the design",
+          "The feeling of ascending into a living, breathing structure",
+          "The transition from a grand entry to the immersive 'Automaton Gardens'"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "front center",
+          "description": "Main entrance passage leading into the hall."
+        },
+        {
+          "type": "passage",
+          "position": "rear upper level",
+          "description": "Passage leading deeper into The Automaton Gardens on an elevated platform."
+        },
+        {
+          "type": "stairs",
+          "position": "left side, curving upwards",
+          "description": "Organic, winding staircase ascending to higher levels."
+        }
+      ],
+      "dominantElements": [
+        "Flowing, organic architecture that reaches upwards",
+        "Integration of botanical elements (real or artificial)",
+        "Grand central atrium space",
+        "Visually striking kinetic or sculptural art piece"
+      ],
+      "uniqueIdentifiers": [
+        "The prominent 'Iron Lotus' motif subtly integrated into the design",
+        "The feeling of ascending into a living, breathing structure",
+        "The transition from a grand entry to the immersive 'Automaton Gardens'"
+      ],
+      "searchDesc": "Entrance hall of The Iron Lotus, a metallic bloom with emerald and sapphire inner glow.",
+      "slug": "interior-of-the-iron-lotus"
+    },
+    "niche-1765210466950-231wvwkf1": {
+      "id": "niche-1765210466950-231wvwkf1",
+      "type": "niche",
+      "name": "The Iron Lotus Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This niche is the interior of a monumental metallic bloom. Polished steel petals have retracted, revealing a radiant inner space. Intricate seam lines suggest advanced articulation and a sophisticated, almost organic technological construction.",
+        "colorsAndLighting": "The interior emanates a strong, soft emerald and sapphire glow from integrated light sources within composite materials. Pulsing white highlights emanate from a central core, creating dynamic visual interest.",
+        "atmosphere": "The air within the bar is still, carrying a faint, metallic scent and the subtle hum of internal mechanisms. A pervasive sense of anticipation and wonder hangs in the air, inviting exploration of its design.",
+        "materials": "The primary materials are a durable, highly polished steel alloy for the structure, seamlessly integrated with glow-infused composite materials that serve as light sources and surfaces.",
+        "mood": "Mysterious and wondrous, the design evokes awe and technological marvel, hinting at hidden depths and curated experiences.",
+        "sounds": "Low hums, mechanical articulations, soft ambient music.",
+        "spatialLayout": "The space is an organically curved interior, likely vast given the exterior bloom's scale. The central bar counter forms a focal point, with articulated seating arranged around it.",
+        "primary_surfaces": "Glow-infused composite panels and polished steel.",
+        "secondary_surfaces": "Articulated joints, illuminated accent edges.",
+        "accent_features": "The edges of the opening petals (visible from within), the central glowing chamber, and the pulsing white core light.",
+        "dominant": "Emerald and sapphire glow (interior surfaces).",
+        "secondary": "Dark steel grey (structural elements, accents).",
+        "accent": "Pulsing white light (central core).",
+        "ambient": "Cool.",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "open-passages",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Bio-luminescent technological sanctuary with organic curves",
+        "cultural_tone": "Created and maintained by an advanced, unknown civilization for unknown purposes, likely energy management or control.",
+        "materials_base": "Polished composites and integrated light",
+        "mood_baseline": "Awe-inspiring and enigmatic.",
+        "palette_bias": "Cool blues and greens",
+        "soundscape_base": "Low hums and mechanical articulations.",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1765210466949-jb04uqamc",
+      "description": "An inviting and stylish bar within 'The Iron Lotus', characterized by its cool design and focus on entertainment.",
+      "structure": {
+        "form": "organic",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "functionalType": "entertainment",
+        "spatialLayout": "A medium-scale, organically flowing bar area designed for entertainment. It emphasizes a wide orientation, suggesting an open and accessible space.",
+        "requiredElements": [
+          "cool design bar"
+        ],
+        "suggestedFixtures": [
+          "bar counter",
+          "stools",
+          "ambient lighting",
+          "decorative shelving",
+          "lounge seating",
+          "sound system"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "central",
+            "description": "Connects to the main 'Iron Lotus Entrance Hall'."
+          },
+          {
+            "type": "door",
+            "position": "rear",
+            "description": "Leads to service areas or restrooms."
+          },
+          {
+            "type": "passage",
+            "position": "side",
+            "description": "Potential access to other areas within 'The Iron Lotus'."
+          }
+        ],
+        "dominantElements": [
+          "bar counter",
+          "seating area",
+          "lighting fixtures",
+          "decorative elements"
+        ],
+        "uniqueIdentifiers": [
+          "integrated sound system",
+          "custom bar design",
+          "ambient lighting control"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "central",
+          "description": "Connects to the main 'Iron Lotus Entrance Hall'."
+        },
+        {
+          "type": "door",
+          "position": "rear",
+          "description": "Leads to service areas or restrooms."
+        },
+        {
+          "type": "passage",
+          "position": "side",
+          "description": "Potential access to other areas within 'The Iron Lotus'."
+        }
+      ],
+      "dominantElements": [
+        "bar counter",
+        "seating area",
+        "lighting fixtures",
+        "decorative elements"
+      ],
+      "uniqueIdentifiers": [
+        "integrated sound system",
+        "custom bar design",
+        "ambient lighting control"
+      ],
+      "searchDesc": "A cool design bar with a monumental metallic bloom and emerald/sapphire glow.",
+      "slug": "the-cool-design-bar"
+    },
+    "niche-1765210613748-p98vw5c42": {
+      "id": "niche-1765210613748-p98vw5c42",
+      "type": "niche",
+      "name": "The Alien Reactor Chamber",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The chamber is dominated by a monumental, metallic bloom whose polished steel petals are slowly retracting. Intricate seam lines reveal advanced articulation, exposing a radiant, otherworldly inner luminescence. The reactor itself is a source of brilliant, soft light.",
+        "colorsAndLighting": "The exterior of the bloom is dark, brushed steel, reflecting a dim ambient light. The interior emanates a strong, soft emerald and sapphire glow, punctuated by pulsing white highlights from the reactor's core.",
+        "atmosphere": "The air within the chamber is still and heavy, carrying a faint, metallic scent and the palpable hum of powerful internal mechanisms. A profound sense of anticipation and awe pervades the space, hinting at immense, unknown power.",
+        "materials": "The primary materials are a durable, highly polished steel alloy forming the retracting petals. Visible internal components of the reactor suggest a composite material intricately integrated with light sources.",
+        "mood": "Mysterious and wondrous. The gradual unveiling of the reactor evokes a powerful sense of revelation and technological marvel, instilling awe and a touch of apprehension.",
+        "sounds": "Low hum, mechanical articulations, subtle pulsing.",
+        "spatialLayout": "The chamber is roughly spherical, with the reactor as its central focal point. The retracting petals create a dynamic opening that draws the eye inward. The entry passage is a narrow, concealed breach in the wall.",
+        "primary_surfaces": "Polished steel alloy petals forming the chamber's enclosure.",
+        "secondary_surfaces": "Glow-infused interior surfaces of the reactor, articulated joints of the petals.",
+        "accent_features": "The edges of the opening petals, the intensely glowing central reactor chamber.",
+        "dominant": "Dark steel grey (petals, exterior).",
+        "secondary": "Deep emerald green and sapphire blue (reactor interior glow).",
+        "accent": "Pulsing white light (reactor core).",
+        "ambient": "Cool, with dramatic contrast.",
+        "structure": {
+          "form": "organic",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "vertical",
+          "openings": "open-passages",
+          "functionalType": "entertainment"
+        },
+        "genre": null,
+        "architectural_tone": "Bio-luminescent technological sanctuary with organic curves",
+        "cultural_tone": "Created and maintained by an advanced, unknown civilization for unknown purposes, likely energy management or control.",
+        "materials_base": "Polished composites and integrated light",
+        "mood_baseline": "Awe-inspiring and enigmatic.",
+        "palette_bias": "Cool blues and greens",
+        "soundscape_base": "Low hums and mechanical articulations.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765210613747-q2wlokb2x",
+      "description": "A secret, large-scale chamber with an organic, vertical form, dominated by a central, otherworldly alien reactor. It serves as a unique entertainment space within The Iron Lotus.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "vertical",
+        "openings": "minimal",
+        "functionalType": "entertainment",
+        "spatialLayout": "This large, vertically oriented chamber houses a central otherworldly alien reactor. Its organic form suggests an enclosed, cavernous space that emphasizes the imposing nature of the reactor.",
+        "requiredElements": [
+          "otherworldly alien reactor",
+          "otherworldly aline reactor"
+        ],
+        "suggestedFixtures": [
+          "glowing energy conduits",
+          "control consoles",
+          "ambient lighting panels",
+          "viewing platforms",
+          "alien flora",
+          "containment field emitters"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear wall, lower section",
+            "description": "A discreet, almost hidden passage leading into the chamber, potentially disguised to maintain secrecy."
+          },
+          {
+            "type": "stairs",
+            "position": "left wall, winding upwards",
+            "description": "A spiraling staircase that ascends towards upper levels or viewing areas, emphasizing the verticality of the space."
+          },
+          {
+            "type": "door",
+            "position": "right wall, midway up",
+            "description": "A sealed, high-tech door, possibly the primary access point for personnel or maintenance."
+          }
+        ],
+        "dominantElements": [
+          "the alien reactor itself",
+          "organic, cavernous walls",
+          "vertical spatial emphasis",
+          "glowing energy sources"
+        ],
+        "uniqueIdentifiers": [
+          "otherworldly alien reactor",
+          "secret chamber",
+          "organic, vertical design"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear wall, lower section",
+          "description": "A discreet, almost hidden passage leading into the chamber, potentially disguised to maintain secrecy."
+        },
+        {
+          "type": "stairs",
+          "position": "left wall, winding upwards",
+          "description": "A spiraling staircase that ascends towards upper levels or viewing areas, emphasizing the verticality of the space."
+        },
+        {
+          "type": "door",
+          "position": "right wall, midway up",
+          "description": "A sealed, high-tech door, possibly the primary access point for personnel or maintenance."
+        }
+      ],
+      "dominantElements": [
+        "the alien reactor itself",
+        "organic, cavernous walls",
+        "vertical spatial emphasis",
+        "glowing energy sources"
+      ],
+      "uniqueIdentifiers": [
+        "otherworldly alien reactor",
+        "secret chamber",
+        "organic, vertical design"
+      ],
+      "searchDesc": "Secret chamber with a monumental, retracting metallic bloom housing an alien reactor.",
+      "slug": "the-secret-chamber-with-a-otherworldly-alien-reactor"
+    },
+    "loc-1765210748714-pbfnyi8js": {
+      "id": "loc-1765210748714-pbfnyi8js",
+      "type": "host",
+      "name": "The Whispering Jungles of Aethelgard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A world defined by overwhelmingly lush, vibrant, and often mist-laden natural environments. The visual character is dominated by deep greens, earthy browns, and muted, atmospheric lighting.",
+        "colorsAndLighting": "A dominant palette of deep greens and earthy browns, with lighting that is often diffused and subdued, contributing to a sense of depth and mystery. Occasional bursts of color from exotic flora.",
+        "atmosphere": "Characterized by high humidity, frequent mist, and a pervasive sense of natural vitality and tranquility. A feeling of ancient, untouched wilderness.",
+        "materials": "Predominantly organic materials: dense vegetation, rich soil, ancient wood, natural stone, and water elements.",
+        "mood": "A baseline mood of wonder, tranquility, and secluded beauty, with an underlying sense of the untamed and the unknown.",
+        "sounds": "A rich tapestry of natural sounds: abundant wildlife, rustling foliage, water in its various forms (rain, rivers, mist), and the gentle hum of a living ecosystem.",
+        "primary_surfaces": "Dense foliage, rich earth, ancient trees, water bodies.",
+        "secondary_surfaces": "Moss, fungi, exposed roots, rock formations.",
+        "accent_features": "Exotic flora, natural light effects filtering through mist and canopy, unique geological formations.",
+        "dominant": "Deep forest green",
+        "secondary": "Dark brown",
+        "accent": "Vibrant floral colors, subtle bioluminescence, mineral tones.",
+        "ambient": "Soft, diffused, often twilight-like lighting.",
+        "genre": "Nature-focused Fantasy",
+        "architectural_tone": "Naturalistic, organic integration, primitive functionalism",
+        "cultural_tone": "Harmony with nature, self-sufficiency, reclusion, stewardship of the wild",
+        "materials_base": "Abundant natural materials, organic and earthy",
+        "mood_baseline": "Tranquil mystery, serene seclusion",
+        "palette_bias": "Earthy greens, browns, and muted natural tones, with occasional vibrant accents",
+        "soundscape_base": "Rich natural soundscape, ambient jungle sounds, water, wildlife",
+        "flora_base": "Lush, diverse, and abundant jungle and forest vegetation",
+        "fauna_base": "Rich and varied wildlife, adapted to jungle environments"
+      },
+      "description": "A world where vast, ancient jungles dominate the landscape, often shrouded in mist and holding hidden secrets. Life thrives in vibrant, untamed ecosystems, punctuated by areas of deep seclusion and ethereal beauty.",
+      "searchDesc": "World of vast, misty jungles, rich biodiversity, hidden enclaves, natural beauty.",
+      "slug": "aethelgard-jungles",
+      "structure": {
+        "spatialLayout": "Vast, sprawling natural landscapes, with hidden pockets of unique environments. Emphasis on verticality in dense jungles and depth in valleys.",
+        "dominantElements": [
+          "Expansive jungle biomes",
+          "Misty atmospheric conditions",
+          "Abundant biodiversity",
+          "Hidden natural wonders"
+        ],
+        "uniqueIdentifiers": [
+          "Pervasive mist",
+          "Dominant jungle environments",
+          "Emphasis on natural beauty and seclusion"
+        ]
+      },
+      "primaryMedia": "media-1765210811963-yidf5z4v9"
+    },
+    "200fdf03-3891-49db-833d-808c022066a4": {
+      "id": "200fdf03-3891-49db-833d-808c022066a4",
+      "type": "region",
+      "name": "The Verdant Gorge",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A dense, vibrant jungle with towering dark green trees and thick undergrowth stretching into a hazy distance obscured by mist. The ground and exposed elements appear consistently damp.",
+        "colorsAndLighting": "Dominated by deep forest greens and earthy browns. The lighting is diffused and subdued due to the mist and canopy, creating a twilight-like ambiance.",
+        "atmosphere": "Perpetually humid and misty, with a sense of heavy, still air and dampness permeating everything.",
+        "materials": "Abundant organic matter, damp earth, decaying wood, lush vegetation.",
+        "mood": "Tranquil, secluded, and somewhat mysterious, evoking a sense of being deep within an untouched wilderness.",
+        "sounds": "Distant calls of unseen wildlife, rustling leaves, dripping water, the soft hiss of mist.",
+        "primary_surfaces": "Foliage (leaves, vines), damp soil, tree trunks.",
+        "secondary_surfaces": "Moss, ferns, exposed roots.",
+        "accent_features": "Patches of bioluminescent fungi (implied by warmth of light in description), occasional vibrant flowers.",
+        "dominant": "Deep forest green",
+        "secondary": "Dark brown",
+        "accent": "Subtle greens of moss and lichen, hints of color from unseen flora.",
+        "ambient": "Diffused, soft light, heavy with mist.",
+        "genre": null,
+        "architectural_tone": "Naturalistic integration, organic forms",
+        "cultural_tone": "Untamed wilderness, primal existence",
+        "materials_base": "Organic matter, natural earth, dense flora",
+        "mood_baseline": "Primal seclusion, natural harmony",
+        "palette_bias": "Deep greens and earthy browns, damp and muted tones",
+        "soundscape_base": "Dense jungle ambiance, water, wildlife",
+        "flora_base": "Lush, dense, multi-layered jungle vegetation",
+        "fauna_base": "Unseen jungle wildlife"
+      },
+      "description": "A deep, mist-shrouded jungle valley characterized by dense, towering foliage and a perpetually humid atmosphere. The air is thick with the scent of damp earth and decaying vegetation, creating a sense of primeval isolation.",
+      "searchDesc": "Deep jungle valley, mist-shrouded, towering trees, humid, secluded.",
+      "slug": "the-verdant-gorge",
+      "structure": {
+        "spatialLayout": "A deep valley with steep inclines, filled with dense, multi-layered vegetation.",
+        "dominantElements": [
+          "Towering ancient trees",
+          "Dense undergrowth",
+          "Deep valley floor",
+          "Persistent mist"
+        ],
+        "uniqueIdentifiers": [
+          "Valley geography",
+          "High humidity",
+          "Dense, multi-layered canopy"
+        ]
+      },
+      "primaryMedia": "media-1765210802532-izaquuyf3"
+    },
+    "431562f4-b577-43ad-98bb-8e7e39234b1b": {
+      "id": "431562f4-b577-43ad-98bb-8e7e39234b1b",
+      "type": "location",
+      "name": "The Suspended Sanctuary",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A distinctive, two-story circular house with a large, weathered metallic dome roof showing a greenish patina. Warm, inviting light shines from evenly spaced rectangular windows on both levels. A prominent wooden entrance is highlighted by an illuminated lantern. The house is supported by visible stilts and accessed by a long, elevated wooden walkway with ornate dark railings.",
+        "colorsAndLighting": "Warm, inviting light spills from windows and the lantern, creating a contrast with the surrounding dark, damp greens and browns. The metallic dome has a subtle greenish patina.",
+        "atmosphere": "Humid and misty, with the air feeling heavy and tranquil. Dampness is evident on ground and wooden structures.",
+        "materials": "Dark, weathered wood for stairs, walkways, and entrance; a weathered metallic dome roof with a greenish patina.",
+        "mood": "Serene seclusion and welcoming mystery, a hidden sanctuary.",
+        "sounds": "Distant jungle ambiance, occasional dripping water, soft creaking of wood.",
+        "primary_surfaces": "Weathered wood (walkways, stairs, entrance), metallic dome (roof).",
+        "secondary_surfaces": "Damp earth, dense foliage.",
+        "accent_features": "Illuminated lantern, ornate dark railings on walkway.",
+        "dominant": "Deep forest green (foliage), dark brown (wood structures).",
+        "secondary": "Muted grey-brown (weathered metal).",
+        "accent": "Warm yellow/orange (lantern light), subtle green (patina).",
+        "ambient": "Diffused, twilight-like lighting.",
+        "structure": {
+          "form": "round",
+          "roofType": "domed",
+          "scale": "medium",
+          "orientation": "vertical",
+          "openings": "arched-windows",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Primitive functionalist with naturalistic integration",
+        "cultural_tone": "A solitary dweller or community seeking refuge and harmony with nature.",
+        "materials_base": "Natural wood, weathered metal, organic matter",
+        "mood_baseline": "Tranquil seclusion",
+        "palette_bias": "Earthy greens and browns with warm lighting accents",
+        "soundscape_base": "Muted natural sounds, water elements",
+        "flora_base": "Dense jungle vegetation",
+        "fauna_base": null
+      },
+      "description": "A unique, circular house suspended over a deep valley by stilts, featuring a weathered metallic dome and accessed by a winding wooden walkway. Warm light emanates from its windows, offering a welcoming beacon in the dense jungle.",
+      "searchDesc": "Circular house over valley, metallic dome, wooden walkway, jungle mist, warm light.",
+      "slug": "the-suspended-sanctuary",
+      "structure": {
+        "spatialLayout": "The house is suspended over a deep valley, with its access elevated above the jungle floor.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "ground_level_access",
+            "description": "A prominent wooden entrance door with an illuminated lantern above."
+          },
+          {
+            "type": "path",
+            "position": "valley_approach",
+            "description": "A long, elevated wooden walkway with ornate dark railings, curving gently upwards through the foliage."
+          }
+        ],
+        "dominantElements": [
+          "Circular metallic dome roof",
+          "Elevated wooden walkway",
+          "Suspension stilts",
+          "Rectangular windows",
+          "Wooden entrance with lantern"
+        ],
+        "uniqueIdentifiers": [
+          "Circular architecture",
+          "Suspended over valley",
+          "Dome roof with patina",
+          "Elevated walkway access"
+        ]
+      },
+      "primaryMedia": "media-1765210792092-lliak3dyn"
+    },
+    "35571e99-5de0-4c9c-a771-297b176addc3": {
+      "id": "35571e99-5de0-4c9c-a771-297b176addc3",
+      "type": "niche",
+      "name": "The Illuminated Entrance",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The entrance is marked by a prominent wooden door, crowned by a glowing lantern. This leads up to a distinctive, circular house with a large, weathered metallic dome roof. The house is supported by visible stilts and features evenly spaced rectangular windows.",
+        "colorsAndLighting": "Warm, inviting light spills from the windows and lantern, contrasting with the dark, damp greens of the surrounding jungle. The dome roof possesses a subtle greenish patina.",
+        "atmosphere": "A humid, misty atmosphere pervades the scene, suggesting a recent rainfall or perpetual dampness. The air feels heavy and tranquil, with the mist obscuring distant elements.",
+        "materials": "The primary materials are dark, weathered wood for stairs, walkways, and entrances, and a metallic dome roof with a verdigris-like patina. The ground and wooden structures appear consistently damp.",
+        "mood": "The mood is one of serene seclusion and welcoming mystery. It evokes a sense of finding a hidden sanctuary within a vibrant, untamed environment.",
+        "sounds": "Dripping water, distant insect hum, rustling leaves, gentle wind.",
+        "primary_surfaces": "Damp wooden stairs, weathered metallic dome roof, dark green foliage.",
+        "secondary_surfaces": "Damp ground, ornate dark railings, stucco or wood siding (implied).",
+        "accent_features": "Illuminated lantern, glowing rectangular windows, greenish patina on dome.",
+        "dominant": "Deep forest green (foliage)",
+        "secondary": "Dark brown (wood structures)",
+        "accent": "Warm yellow/orange (lantern light), subtle green (patina)",
+        "ambient": "Twilight-like, diffused light",
+        "structure": "Circular, elevated dwelling",
+        "genre": null,
+        "architectural_tone": "Primitive functionalist with naturalistic integration",
+        "cultural_tone": "A solitary dweller or community seeking refuge and harmony with nature.",
+        "materials_base": "Natural wood, weathered metal, organic matter",
+        "mood_baseline": "Tranquil, secluded, welcoming",
+        "palette_bias": "Earthy greens and browns with warm lighting accents",
+        "soundscape_base": "Natural jungle ambiance",
+        "flora_base": "Lush, dense jungle foliage",
+        "fauna_base": "None"
+      },
+      "description": "This niche represents the welcoming threshold to a secluded dwelling. It embodies a sense of safety, curiosity, and a connection to the natural world.",
+      "searchDesc": "Warmly lit circular house entrance, suspended in a misty jungle.",
+      "slug": "the-illuminated-entrance",
+      "structure": {
+        "spatialLayout": "The space is defined by the approach to a central dwelling, with verticality emphasized by the stairs and the elevated structure. Depth is created by the receding mist and dense foliage.",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "foreground",
+            "description": "Sturdy wooden stairs leading up to the entrance."
+          },
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A prominent wooden door."
+          },
+          {
+            "type": "door",
+            "position": "center",
+            "description": "An illuminated lantern above the door."
+          },
+          {
+            "type": "path",
+            "position": "background",
+            "description": "An elevated wooden walkway curving through foliage."
+          }
+        ],
+        "dominantElements": [
+          "The circular house structure",
+          "The weathered metallic dome roof",
+          "The illuminated entrance with lantern",
+          "The sturdy wooden stairs",
+          "The elevated wooden walkway"
+        ],
+        "uniqueIdentifiers": [
+          "Greenish patina on dome roof",
+          "Rectangular windows with warm light",
+          "House suspended on stilts",
+          "Ornate dark railings on walkway",
+          "Damp appearance of wood and ground"
+        ]
+      },
+      "primaryMedia": "media-1765210780755-h7f3co11l"
+    },
+    "niche-1765210834477-ftgg3awkg": {
+      "id": "niche-1765210834477-ftgg3awkg",
+      "type": "niche",
+      "name": "The Suspended Sanctuary Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a two-story circular space, echoing the dome's form. Warm light emanates from rectangular windows that punctuate the curving walls, suggesting a cozy and enclosed environment. The central area likely accommodates the connection to the exterior walkway and a staircase.",
+        "colorsAndLighting": "Warm, inviting light from the windows and the external lantern bathes the interior, contrasting with the implied darker hues of natural materials. The overall lighting is diffused and warm, enhancing the tranquil mood.",
+        "atmosphere": "The air within feels humid and tranquil, carrying a sense of serene seclusion. The dampness evident from the exterior might subtly permeate the interior, adding to the naturalistic feel.",
+        "materials": "Interior surfaces would likely be consistent with the exterior's theme, featuring dark, weathered wood for any internal structures or finishes, and the curved interior of the metallic dome. The presence of ornate railings might extend into the interior.",
+        "mood": "Evokes a profound sense of serene seclusion and welcoming mystery, a private haven harmonizing with its surroundings.",
+        "sounds": "Muted natural sounds, water elements, gentle wind.",
+        "spatialLayout": "A distinctly circular interior space, rising two stories. The primary focal point is likely the central void connecting the levels and the entrance from the exterior walkway. Dimensions are implied to be generous enough for comfortable living.",
+        "primary_surfaces": "Curved interior walls likely composed of weathered wood or the interior surface of the metallic dome.",
+        "secondary_surfaces": "Wooden elements such as any internal structural supports, stair treads, or built-in features.",
+        "accent_features": "The warm light emanating from windows, potential internal continuation of ornate railings.",
+        "dominant": "Warm yellow/orange (lighting, interior glow)",
+        "secondary": "Deep forest green and dark brown (implied through materials and connection to exterior)",
+        "accent": "Muted grey-brown (metallic dome interior), subtle green (patina hint)",
+        "ambient": "Warm",
+        "structure": {
+          "form": "round",
+          "roofType": "domed",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "large-glass",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Primitive functionalist with naturalistic integration",
+        "cultural_tone": "A solitary dweller or community seeking refuge and harmony with nature.",
+        "materials_base": "Natural wood, weathered metal, organic matter",
+        "mood_baseline": "Tranquil seclusion",
+        "palette_bias": "Earthy greens and browns with warm lighting accents",
+        "soundscape_base": "Muted natural sounds, water elements",
+        "flora_base": "Dense jungle vegetation",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1765210834476-z30vbclrj",
+      "description": "The interior of The Suspended Sanctuary, a residential space characterized by its round form, domed ceiling, and expansive glass windows offering breathtaking views of the Verdant Gorge.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "vertical",
+        "openings": "large-glass",
+        "functionalType": "residential",
+        "spatialLayout": "A medium-scale, round interior space oriented vertically, featuring a domed ceiling and large glass openings. It is designed as a residential dwelling suspended within a verdant gorge.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Comfortable seating",
+          "Ambient lighting",
+          "Shelving for personal items",
+          "A small table",
+          "Sleeping area/bed",
+          "Storage cabinets"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "central",
+            "description": "A passage leading further into the sanctuary or to other sections."
+          },
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "The main entrance/exit door."
+          },
+          {
+            "type": "stairs",
+            "position": "corner",
+            "description": "Spiral staircase ascending or descending within the vertical space."
+          }
+        ],
+        "dominantElements": [
+          "The inherent round form of the structure",
+          "The domed ceiling",
+          "Expansive glass windows offering views of the gorge",
+          "Verticality of the space"
+        ],
+        "uniqueIdentifiers": [
+          "Suspended location within a gorge",
+          "Panoramic views through large glass openings",
+          "Round, vertical residential form"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "A passage leading further into the sanctuary or to other sections."
+        },
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "The main entrance/exit door."
+        },
+        {
+          "type": "stairs",
+          "position": "corner",
+          "description": "Spiral staircase ascending or descending within the vertical space."
+        }
+      ],
+      "dominantElements": [
+        "The inherent round form of the structure",
+        "The domed ceiling",
+        "Expansive glass windows offering views of the gorge",
+        "Verticality of the space"
+      ],
+      "uniqueIdentifiers": [
+        "Suspended location within a gorge",
+        "Panoramic views through large glass openings",
+        "Round, vertical residential form"
+      ],
+      "searchDesc": "Interior of a unique, circular sanctuary with warm light and natural materials.",
+      "slug": "interior-of-the-suspended-sanctuary"
+    },
+    "niche-1765210865410-qja1891x0": {
+      "id": "niche-1765210865410-qja1891x0",
+      "type": "niche",
+      "name": "The Sanctuary Dwelling",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a cozy, circular space with warm light emanating from evenly spaced rectangular windows. Visible wooden structural elements and the curve of the outer wall define the main living area. A wooden staircase leads to the upper level.",
+        "colorsAndLighting": "Warm, inviting yellow-orange light spills from the windows and an unseen central fixture, contrasting with the deep browns of the wood. The interior feels bathed in a soft, ambient glow.",
+        "atmosphere": "The air inside is tranquil and still, carrying a sense of serene seclusion. Though the exterior is misty, the interior feels protected and dry, offering a welcoming refuge.",
+        "materials": "The dominant materials are weathered wood, visible in structural beams, the staircase, and possibly interior paneling. The dome's metallic material is not visible internally, but the overall aesthetic leans towards natural, aged elements.",
+        "mood": "Evokes a feeling of cozy sanctuary and private retreat, a place of peace away from the outside world.",
+        "sounds": "Muted ambient sounds, gentle hum, faint water drips.",
+        "spatialLayout": "A two-story circular interior, likely with a central open area and rooms arranged around the perimeter. Entry is from a wooden walkway to the main level.",
+        "primary_surfaces": "Wooden walls and floors, potentially continuing the curved form of the exterior. The ceiling would follow the interior curve of the metallic dome.",
+        "secondary_surfaces": "Visible wooden beams and structural supports, furniture made of natural wood.",
+        "accent_features": "The warm glow of interior lighting and the elegant curve of the circular architecture.",
+        "dominant": "Warm yellow/orange (lighting)",
+        "secondary": "Deep brown (wood structures)",
+        "accent": "Subtle green (hint of patina on unseen exterior dome)",
+        "ambient": "Warm",
+        "structure": {
+          "form": "round",
+          "roofType": "domed",
+          "scale": "medium",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Primitive functionalist with naturalistic integration",
+        "cultural_tone": "A solitary dweller or community seeking refuge and harmony with nature.",
+        "materials_base": "Natural wood, weathered metal, organic matter",
+        "mood_baseline": "Tranquil seclusion",
+        "palette_bias": "Earthy greens and browns with warm lighting accents",
+        "soundscape_base": "Muted natural sounds, water elements",
+        "flora_base": "Dense jungle vegetation",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1765210865408-38p5s8jgs",
+      "description": "An intimate, round residential dwelling unit nestled within the 'Suspended Sanctuary', characterized by its domed ceiling and a focus on vertical, cozy living.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "vertical",
+        "openings": "minimal",
+        "functionalType": "residential",
+        "spatialLayout": "A medium-scale, round dwelling space with vertical orientation, featuring a domed ceiling and minimal openings. The interior is designed to be cozy and self-contained within the larger vertical structure.",
+        "requiredElements": [
+          "house"
+        ],
+        "suggestedFixtures": [
+          "Bed",
+          "Seating area",
+          "Storage shelving",
+          "Small table",
+          "Warm lighting",
+          "Personal artifact display"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center of the back wall",
+            "description": "A discreet, inward-opening door leading to the rest of the Sanctuary."
+          },
+          {
+            "type": "passage",
+            "position": "opposite the door",
+            "description": "A narrow passage connecting to potential ancillary spaces, integrated into the curved wall."
+          }
+        ],
+        "dominantElements": [
+          "Curving walls",
+          "Domed ceiling",
+          "Central living area",
+          "Integrated storage"
+        ],
+        "uniqueIdentifiers": [
+          "The intimate, domed interior",
+          "Seamless integration with the 'Suspended Sanctuary' form",
+          "A feeling of secluded, vertical living"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of the back wall",
+          "description": "A discreet, inward-opening door leading to the rest of the Sanctuary."
+        },
+        {
+          "type": "passage",
+          "position": "opposite the door",
+          "description": "A narrow passage connecting to potential ancillary spaces, integrated into the curved wall."
+        }
+      ],
+      "dominantElements": [
+        "Curving walls",
+        "Domed ceiling",
+        "Central living area",
+        "Integrated storage"
+      ],
+      "uniqueIdentifiers": [
+        "The intimate, domed interior",
+        "Seamless integration with the 'Suspended Sanctuary' form",
+        "A feeling of secluded, vertical living"
+      ],
+      "searchDesc": "Interior of a two-story circular house with warm light, elevated on stilts.",
+      "slug": "interior-of-the-suspended-sanctuary"
+    },
+    "niche-1765210925810-wrydwczv8": {
+      "id": "niche-1765210925810-wrydwczv8",
+      "type": "niche",
+      "name": "The Sanctuary Kitchen",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The kitchen is a functional space integrated into the dwelling's unique architecture. It features simple, sturdy wooden countertops and cabinets that match the dark, weathered wood of the exterior. A rustic hearth or stove is the focal point, emitting a warm, inviting glow.",
+        "colorsAndLighting": "Warm yellow and orange light emanates from the cooking area and any integrated lighting, casting a cozy ambiance. This contrasts gently with the dominant deep forest green and dark brown of the materials.",
+        "atmosphere": "The air feels warm and slightly humid, carrying faint, comforting aromas of woodsmoke and cooking. The space feels grounded and tranquil, a hub of quiet domestic activity.",
+        "materials": "Primary materials are dark, weathered wood for countertops, cabinets, and possibly a simple table. Accents might include weathered metal for the stove or cookware, echoing the dome's material.",
+        "mood": "Cozy functionality and rustic warmth, a place of nourishment and comfort.",
+        "sounds": "Sizzling, gentle clinking, soft murmurs, crackling fire.",
+        "spatialLayout": "A compact but efficient layout, likely centered around a hearth or stove, with accessible work surfaces and storage. Entry is likely a simple passage.",
+        "primary_surfaces": "Weathered wood (countertops, cabinets), hearth stone (if present).",
+        "secondary_surfaces": "Weathered metal (stove, cookware), dense foliage visible through openings.",
+        "accent_features": "The glow of the hearth/stove, any simple hand-carved details on wooden elements.",
+        "dominant": "Dark brown (wood structures, cabinets)",
+        "secondary": "Deep forest green (through nearby foliage, if visible)",
+        "accent": "Warm yellow/orange (hearth/stove light)",
+        "ambient": "Warm",
+        "structure": {
+          "form": "round",
+          "roofType": "domed",
+          "scale": "medium",
+          "orientation": "vertical",
+          "openings": "arched-windows",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Primitive functionalist with naturalistic integration",
+        "cultural_tone": "A solitary dweller or community seeking refuge and harmony with nature.",
+        "materials_base": "Natural wood, weathered metal, organic matter",
+        "mood_baseline": "Tranquil seclusion",
+        "palette_bias": "Earthy greens and browns with warm lighting accents",
+        "soundscape_base": "Muted natural sounds, water elements",
+        "flora_base": "Dense jungle vegetation",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1765210925808-0t8tzkebt",
+      "description": "A serene and functional kitchen designed to seamlessly blend with the rounded, suspended sanctuary. It prioritizes integrated appliances and a minimalist aesthetic for a peaceful culinary experience.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "functionalType": "residential",
+        "spatialLayout": "The kitchen is integrated into the rounded interior of the suspended dwelling. It features a central island and cabinetry arranged along the curved walls.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "central island with prep space",
+          "integrated cabinetry",
+          "sink",
+          "oven",
+          "refrigerator",
+          "minimalist shelving"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "leading from the main living area",
+            "description": "An arched opening connects the kitchen to the primary communal space."
+          },
+          {
+            "type": "door",
+            "position": "concealed within cabinetry",
+            "description": "A discreet door provides access to a small pantry or utility closet."
+          }
+        ],
+        "dominantElements": [
+          "curved, seamless cabinetry",
+          "central food preparation island",
+          "integrated, high-end appliances",
+          "soft, ambient lighting"
+        ],
+        "uniqueIdentifiers": [
+          "seamless integration into the round dwelling form",
+          "hidden ventilation and appliance integration",
+          "material palette that complements the 'Sanctuary' theme"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "leading from the main living area",
+          "description": "An arched opening connects the kitchen to the primary communal space."
+        },
+        {
+          "type": "door",
+          "position": "concealed within cabinetry",
+          "description": "A discreet door provides access to a small pantry or utility closet."
+        }
+      ],
+      "dominantElements": [
+        "curved, seamless cabinetry",
+        "central food preparation island",
+        "integrated, high-end appliances",
+        "soft, ambient lighting"
+      ],
+      "uniqueIdentifiers": [
+        "seamless integration into the round dwelling form",
+        "hidden ventilation and appliance integration",
+        "material palette that complements the 'Sanctuary' theme"
+      ],
+      "searchDesc": "A rustic, naturally lit kitchen integrated into a unique dwelling, featuring wood and weathered metal.",
+      "slug": "kitchen"
+    },
+    "niche-1765211106969-7depwxbad": {
+      "id": "niche-1765211106969-7depwxbad",
+      "type": "niche",
+      "name": "The Rooftop Sanctuary",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An open-air relaxation space situated atop a structure, characterized by the presence of several suspended hammocks, a cluster of vibrant palm trees providing shade, and a functional barbecue grill. The area likely benefits from an expansive view due to its elevated position.",
+        "colorsAndLighting": "Colors are dominated by the deep greens of palm fronds and the earthy tones of the hammocks and grill, set against the backdrop of the sky. Lighting is natural and ambient, likely warm if during sunset or twilight.",
+        "atmosphere": "The air is likely warm and breezy, carrying the scent of the outdoors and possibly faint wisps of smoke from the BBQ. It's an atmosphere of casual leisure and open-air enjoyment, a retreat from the lower levels.",
+        "materials": "Primary materials include woven fabric for hammocks, natural wood or metal for the BBQ, and the organic materials of palm trees. Ground surfaces would be consistent with the rooftop structure, perhaps weathered concrete or wood decking.",
+        "mood": "Invites tranquility, relaxation, and convivial social gathering, embodying a sense of escape and informal enjoyment.",
+        "sounds": "Gentle breeze, distant city hum, rustling leaves, crackling grill.",
+        "spatialLayout": "An open, somewhat irregular space on the rooftop, with hammocks strategically placed for comfort and palm trees adding visual interest and shade. The BBQ is positioned for practicality, likely near a prepared surface.",
+        "primary_surfaces": "Rooftop surface (weathered wood/concrete), palm fronds.",
+        "secondary_surfaces": "Woven hammock fabric, metal grill surfaces, wooden accents.",
+        "accent_features": "The contrast of lush palm trees against the sky, the inviting appearance of the hammocks.",
+        "dominant": "Deep forest green (palm foliage)",
+        "secondary": "Earthy browns and greys (hammocks, grill, roofing)",
+        "accent": "Warm natural light, potential char marks on grill",
+        "ambient": "Warm",
+        "structure": {
+          "form": "round",
+          "roofType": "domed",
+          "scale": "medium",
+          "orientation": "vertical",
+          "openings": "arched-windows",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Primitive functionalist with naturalistic integration",
+        "cultural_tone": "A solitary dweller or community seeking refuge and harmony with nature.",
+        "materials_base": "Natural wood, weathered metal, organic matter",
+        "mood_baseline": "Tranquil seclusion",
+        "palette_bias": "Earthy greens and browns with warm lighting accents",
+        "soundscape_base": "Muted natural sounds, water elements",
+        "flora_base": "Dense jungle vegetation",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1765211106967-yp2qyh5mz",
+      "description": "A medium-scale, round rooftop relaxation area with an open-sky roof. It's designed for residential use, emphasizing a wide orientation with ample space for lounging, a BBQ, and decorative palm trees.",
+      "structure": {
+        "form": "round",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "functionalType": "residential",
+        "spatialLayout": "An open-air relaxation zone situated on a rooftop, featuring a BBQ area and abundant plant life. The space is arranged to provide comfortable lounging and dining experiences under the open sky.",
+        "requiredElements": [
+          "hammocks",
+          "palm trees",
+          "bbq",
+          "hammocks and palm trees and a bbq"
+        ],
+        "suggestedFixtures": [
+          "outdoor seating",
+          "low-level tables",
+          "ambient lighting",
+          "planters",
+          "a small bar counter"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "leading from the interior of the Suspended Sanctuary",
+            "description": "An open doorway or passage providing access to the rooftop."
+          },
+          {
+            "type": "stairs",
+            "position": "central or corner",
+            "description": "Stairs for ascending to the rooftop level."
+          }
+        ],
+        "dominantElements": [
+          "hammocks",
+          "palm trees",
+          "BBQ grill",
+          "open sky view"
+        ],
+        "uniqueIdentifiers": [
+          "rooftop location",
+          "integration of natural elements (palm trees)",
+          "relaxed, open-air ambiance"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "leading from the interior of the Suspended Sanctuary",
+          "description": "An open doorway or passage providing access to the rooftop."
+        },
+        {
+          "type": "stairs",
+          "position": "central or corner",
+          "description": "Stairs for ascending to the rooftop level."
+        }
+      ],
+      "dominantElements": [
+        "hammocks",
+        "palm trees",
+        "BBQ grill",
+        "open sky view"
+      ],
+      "uniqueIdentifiers": [
+        "rooftop location",
+        "integration of natural elements (palm trees)",
+        "relaxed, open-air ambiance"
+      ],
+      "searchDesc": "Rooftop oasis with hammocks, palm trees, and BBQ for ultimate relaxation.",
+      "slug": "relax-area-on-the-roof-with-hammocks-and-palm-trees-and-a-bbq"
+    },
+    "niche-1765211146835-ph4c20h1l": {
+      "id": "niche-1765211146835-ph4c20h1l",
+      "type": "niche",
+      "name": "Rooftop Hammock Haven",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Suspended hammocks create a casual lounging area on the expansive roof. The weathered metallic dome and its greenish patina are visible, along with glimpses of the supporting stilts and the elevated walkway below. Warm light emanates from the distant house.",
+        "colorsAndLighting": "Dominant deep forest greens and dark browns from surrounding foliage contrast with the muted grey-brown of the metallic dome. Warm yellow light accents the edges of the space, creating a cozy twilight.",
+        "atmosphere": "A humid and misty air hangs heavy, fostering a sense of tranquil seclusion. The dampness suggests a recent rain or a consistently humid environment. The elevated position offers a peaceful escape above the dense vegetation.",
+        "materials": "The primary materials are weathered wood from the distant walkway and the metallic dome roof with its subtle green patina. Hammocks would likely be made of durable, weather-resistant fabric.",
+        "mood": "Serene seclusion and a sense of hidden sanctuary are amplified by the elevated, open-air setting.",
+        "sounds": "Muted distant jungle sounds, soft wind, water drip",
+        "spatialLayout": "An open, flat expanse of a rooftop, primarily defined by the presence of hammocks. The space feels expansive due to its elevated position, with the house and walkway serving as adjacent architectural features.",
+        "primary_surfaces": "Weathered metallic dome (roof), weathered wood (if any structural elements extend onto roof)",
+        "secondary_surfaces": "Fabric (hammocks), damp earth (implied below)",
+        "accent_features": "Hammocks, distant illuminated lantern",
+        "dominant": "Deep forest green (surrounding foliage)",
+        "secondary": "Muted grey-brown (metallic dome)",
+        "accent": "Warm yellow/orange (distant light), subtle green (patina)",
+        "ambient": "Warm",
+        "structure": {
+          "form": "round",
+          "roofType": "domed",
+          "scale": "medium",
+          "orientation": "vertical",
+          "openings": "arched-windows",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Primitive functionalist with naturalistic integration",
+        "cultural_tone": "A solitary dweller or community seeking refuge and harmony with nature.",
+        "materials_base": "Natural wood, weathered metal, organic matter",
+        "mood_baseline": "Tranquil seclusion",
+        "palette_bias": "Earthy greens and browns with warm lighting accents",
+        "soundscape_base": "Muted natural sounds, water elements",
+        "flora_base": "Dense jungle vegetation",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1765211146834-6jkltv8ck",
+      "description": "A medium-scale, round rooftop space designed for leisure, featuring hammocks and an open-sky roof for a relaxed, residential atmosphere.",
+      "structure": {
+        "form": "round",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "functionalType": "residential",
+        "spatialLayout": "An open-air space on the rooftop, designed for relaxation and leisure. The layout is primarily dictated by the placement of hammocks and open areas for movement.",
+        "requiredElements": [
+          "hammocks"
+        ],
+        "suggestedFixtures": [
+          "low seating",
+          "outdoor lighting",
+          "small side tables",
+          "potted plants",
+          "speaker system"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "central",
+            "description": "Main access point from the parent structure, leading to the open rooftop area."
+          },
+          {
+            "type": "passage",
+            "position": "perimeter",
+            "description": "Open edges of the rooftop offering views and potential exits."
+          }
+        ],
+        "dominantElements": [
+          "hammocks",
+          "open sky",
+          "rooftop floor",
+          "railing or low wall"
+        ],
+        "uniqueIdentifiers": [
+          "Rooftop location",
+          "Hammock-centric design",
+          "Open-air environment"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "Main access point from the parent structure, leading to the open rooftop area."
+        },
+        {
+          "type": "passage",
+          "position": "perimeter",
+          "description": "Open edges of the rooftop offering views and potential exits."
+        }
+      ],
+      "dominantElements": [
+        "hammocks",
+        "open sky",
+        "rooftop floor",
+        "railing or low wall"
+      ],
+      "uniqueIdentifiers": [
+        "Rooftop location",
+        "Hammock-centric design",
+        "Open-air environment"
+      ],
+      "searchDesc": "Rooftop hang out with hammocks, overlooking a weathered metallic dome.",
+      "slug": "roof-top-hang-out-hammocks"
+    },
+    "niche-1765211187328-kpeg5fqez": {
+      "id": "niche-1765211187328-kpeg5fqez",
+      "type": "niche",
+      "name": "The Sanctuary Bathroom",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The bathroom is a compact, humid space carved out within the main structure. Weathered wood panels, echoing the exterior walkways, line the walls and a simple basin. A metallic accent, perhaps a water vessel or catchment, subtly reflects the greenish patina of the distant dome. Warm, inviting light, similar to the exterior lantern, illuminates the area, contrasting with the inherent dampness.",
+        "colorsAndLighting": "Dominant deep forest green and dark brown from wood are softened by the muted grey-brown of metallic accents. Warm yellow light emanates from a single source, creating a cozy yet functional atmosphere.",
+        "atmosphere": "The air is thick with humidity and carries a sense of tranquil seclusion. Dampness is palpable, creating a serene, almost mist-like quality to the space. The atmosphere feels heavy, tranquil, and private.",
+        "materials": "Primarily weathered dark wood for the walls and basin, a metallic material with a subtle greenish patina for water-related fixtures, and visible signs of dampness on surfaces. The wood feels organic and aged.",
+        "mood": "Serene seclusion and functional comfort, a hidden sanctuary for personal hygiene.",
+        "sounds": "Dripping water, soft echoes, distant muted nature sounds.",
+        "spatialLayout": "A compact, enclosed space with a single entrance, likely designed to maximize the integration of water elements within the existing structure's aesthetic. The layout is functional and private.",
+        "primary_surfaces": "Weathered wood panels (walls), damp earth/stone (floor, subtly integrated).",
+        "secondary_surfaces": "Weathered metallic basin and water fixtures.",
+        "accent_features": "Warm, localized lighting source, ornate dark wood detailing if present on fixtures.",
+        "dominant": "Deep forest green and dark brown (wood paneling, earthy floor tones).",
+        "secondary": "Muted grey-brown (metallic fixtures).",
+        "accent": "Warm yellow/orange (lighting).",
+        "ambient": "Warm.",
+        "structure": {
+          "form": "irregular",
+          "roofType": "null",
+          "scale": "small",
+          "orientation": "cubic",
+          "openings": "minimal",
+          "functionalType": "residential"
+        },
+        "genre": null,
+        "architectural_tone": "Primitive functionalist with naturalistic integration",
+        "cultural_tone": "A solitary dweller or community seeking refuge and harmony with nature.",
+        "materials_base": "Natural wood, weathered metal, organic matter",
+        "mood_baseline": "Tranquil seclusion",
+        "palette_bias": "Earthy greens and browns with warm lighting accents",
+        "soundscape_base": "Muted natural sounds, water elements",
+        "flora_base": "Dense jungle vegetation",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1765211187326-nvz3nxavc",
+      "description": "A private, round bathroom with a domed ceiling, designed for relaxation and hygiene within the Suspended Sanctuary. It offers a medium scale with cubic orientation and minimal openings.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "functionalType": "residential",
+        "spatialLayout": "This is a medium-scale, round bathroom designed for residential use. It features a domed ceiling and minimal openings, creating a private and serene atmosphere.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "freestanding bathtub",
+          "rainfall showerhead",
+          "vanity with integrated sink",
+          "wall-mounted toilet",
+          "plush towels",
+          "ambient lighting fixtures"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A discreet, round-edged door providing access to the bathroom."
+          },
+          {
+            "type": "passage",
+            "position": "back wall",
+            "description": "A small, arched passage leading to a private bathing alcove."
+          }
+        ],
+        "dominantElements": [
+          "large, freestanding bathtub",
+          "central vanity unit",
+          "domed ceiling with integrated lighting",
+          "stone or tile wall finish"
+        ],
+        "uniqueIdentifiers": [
+          "curved, flowing interior lines",
+          "emphasis on natural light diffusion through the dome",
+          "a sense of enclosed tranquility"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A discreet, round-edged door providing access to the bathroom."
+        },
+        {
+          "type": "passage",
+          "position": "back wall",
+          "description": "A small, arched passage leading to a private bathing alcove."
+        }
+      ],
+      "dominantElements": [
+        "large, freestanding bathtub",
+        "central vanity unit",
+        "domed ceiling with integrated lighting",
+        "stone or tile wall finish"
+      ],
+      "uniqueIdentifiers": [
+        "curved, flowing interior lines",
+        "emphasis on natural light diffusion through the dome",
+        "a sense of enclosed tranquility"
+      ],
+      "searchDesc": "A serene, humid bathroom reflecting the dwelling's unique weathered wood and metallic dome aesthetic.",
+      "slug": "bathroom"
+    },
+    "loc-1765211680092-eh4qi49be": {
+      "id": "loc-1765211680092-eh4qi49be",
+      "type": "host",
+      "name": "Arrakis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An overwhelmingly arid world with vast expanses of sand, rocky outcrops, and extreme weather phenomena. The visual character is defined by its desolation and raw, natural power.",
+        "colorsAndLighting": "Dominated by warm, sun-drenched hues of orange, yellow, and ochre, contrasted by the deep blue of a relentless sky. Lighting is typically harsh and direct, with long, stark shadows.",
+        "atmosphere": "Dry, thin, and subject to extreme temperature fluctuations between day and night. Constant atmospheric challenges like sandstorms are common.",
+        "materials": "Sand, rock, metallic ores, hardy organic materials resistant to arid conditions.",
+        "mood": "A baseline mood of stark survival, isolation, and the overwhelming presence of nature's power.",
+        "sounds": "The omnipresent sound of wind, shifting sands, occasional distant geological rumblings, and the silence of vast emptiness.",
+        "primary_surfaces": "Sand, rock formations",
+        "secondary_surfaces": "Hardy desert vegetation, metallic deposits",
+        "accent_features": "Geological formations, vast horizons, celestial phenomena",
+        "dominant": "Orange-yellow",
+        "secondary": "Blue, Brown",
+        "accent": "White, Dark green",
+        "ambient": "Bright, direct, and often glaring sunlight",
+        "genre": "Science Fiction",
+        "architectural_tone": "Functional, survivalist, often makeshift or integrated with the natural landscape",
+        "cultural_tone": "Tribal, survivalist, resource-scarce societies",
+        "materials_base": "Natural materials, raw metals, durable synthetic composites",
+        "mood_baseline": "Isolation, harsh survival, resilience",
+        "palette_bias": "Earthy, sun-bleached tones",
+        "soundscape_base": "Wind, sand, elemental forces",
+        "flora_base": "Drought-resistant plants, sparse vegetation",
+        "fauna_base": "Resilient desert-adapted creatures"
+      },
+      "description": "A vast, desolate desert planet, characterized by its endless dunes, harsh, sun-baked environment, and scarce resources. Arrakis is a world of extreme conditions where survival is a constant challenge.",
+      "searchDesc": "A harsh, sun-baked desert planet with endless dunes and extreme environmental conditions, a world of survival.",
+      "slug": "arrakis",
+      "structure": {
+        "spatialLayout": "Expansive, open, and largely undeveloped, with pockets of habitation or activity clustered around vital resources or strategic locations.",
+        "dominantElements": [
+          "Planetary desert",
+          "Extreme climate"
+        ],
+        "uniqueIdentifiers": [
+          "Vast arid landscape",
+          "Intense solar radiation"
+        ]
+      },
+      "primaryMedia": "media-1765213170684-1kmz5xe6s"
+    },
+    "de37361f-6777-46c4-8c9f-cbb5e2b3f41f": {
+      "id": "de37361f-6777-46c4-8c9f-cbb5e2b3f41f",
+      "type": "region",
+      "name": "The Wreckage Plains",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A landscape dominated by immense, decaying metal husks of spacecraft half-buried in sand, interspersed with crude fabric shelters. The environment is harsh and exposed.",
+        "colorsAndLighting": "Harsh, bright daylight from a clear blue sky casts strong shadows, accentuating the metallic textures and dusty hues of the sand and wreckage. The palette is dominated by earth tones with stark contrasts.",
+        "atmosphere": "Dry, still, and intensely hot air. The atmosphere carries a palpable sense of desolation and the ghosts of past endeavors.",
+        "materials": "Heavily weathered industrial metal, rough, durable fabrics, and compacted sand.",
+        "mood": "Melancholy, weary, and reflective, punctuated by a sense of survival against overwhelming odds.",
+        "sounds": "The whine of wind across sand, creaking metal under stress, distant echoes of machinery, and the hushed activity of salvage operations.",
+        "primary_surfaces": "Sand dunes, metallic hulls, exposed structural components",
+        "secondary_surfaces": "Rough, durable fabric, compacted earth",
+        "accent_features": "Tangled pipes, exposed wiring, scattered debris, makeshift repairs",
+        "dominant": "Orange-yellow",
+        "secondary": "Dark brown, Cream",
+        "accent": "White, Dark green, Blue",
+        "ambient": "Bright, direct sunlight",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": "Salvage culture, transient settlements",
+        "materials_base": "Industrial metal, rough fabrics",
+        "mood_baseline": "Melancholy, weariness",
+        "palette_bias": "Earthy tones with stark contrasts",
+        "soundscape_base": "Wind, creaking metal, distant mechanical hums",
+        "flora_base": null,
+        "fauna_base": null
+      },
+      "description": "An immense, arid expanse where the skeletal remains of colossal spacecraft lie scattered across the ochre sands. This region is a testament to past conflicts and abandoned ventures, now repurposed by scavengers and survivors.",
+      "searchDesc": "Vast, desolate desert region littered with the colossal wreckage of fallen spacecraft and makeshift salvage camps.",
+      "slug": "the-wreckage-plains",
+      "structure": {
+        "spatialLayout": "Vast, open, and largely featureless plains interrupted by colossal, scattered structures. Low-density habitation around salvage sites.",
+        "dominantElements": [
+          "Crashed spacecraft husks",
+          "Makeshift shelters"
+        ],
+        "uniqueIdentifiers": [
+          "Scattered debris fields",
+          "Vast open desert"
+        ]
+      },
+      "primaryMedia": "media-1765213160223-u3xav6hjq"
+    },
+    "78fe7e0f-e5b5-4087-9a1c-02ba5d1b8d1a": {
+      "id": "78fe7e0f-e5b5-4087-9a1c-02ba5d1b8d1a",
+      "type": "location",
+      "name": "The Behemoth's Rest",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A gargantuan, broken vessel lies sprawled across the sands, its intact cream-colored foresection a stark contrast to the jagged, dark brown wreckage of its aft. Small, functional fabric shelters cluster around its base like barnacles.",
+        "colorsAndLighting": "The scene is bathed in the harsh, bright light of a clear blue sky, casting sharp shadows across the orange-yellow sands and the metallic hull.",
+        "atmosphere": "The air is dry and still, with a palpable sense of isolation. The heat of the sun beats down relentlessly on the exposed landscape.",
+        "materials": "The spacecraft is composed of heavily weathered metal, with exposed pipes and tangled structural components. The shelters are made of rough, durable fabric.",
+        "mood": "A profound sense of melancholy and weariness pervades the location, reflecting the fate of the fallen behemoth and the struggle of its inhabitants.",
+        "sounds": "Distant wind, creaking metal, indistinct chatter, chirping of multi-eyed creature",
+        "primary_surfaces": "Sandy desert, weathered metal hull",
+        "secondary_surfaces": "Durable fabric, exposed machinery, pipes",
+        "accent_features": "Circular portholes, multi-eyed creature, orange jumpsuit",
+        "dominant": "Orange-yellow (desert, sand)",
+        "secondary": "Cream (spacecraft front), Dark brown (spacecraft rear)",
+        "accent": "White (headwrap), Dark green (backpack), Blue (sky)",
+        "ambient": "Bright daylight, high contrast",
+        "structure": {
+          "form": "irregular",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "Deconstructed colossal spacecraft",
+        "cultural_tone": "Salvage camp, temporary settlement",
+        "materials_base": "Industrial metal, rough fabrics",
+        "mood_baseline": "Desolate, somber, awe-inspiring",
+        "palette_bias": "Earthy tones with stark contrasts",
+        "soundscape_base": "Natural desert ambience",
+        "flora_base": "None",
+        "fauna_base": "Multi-eyed creature"
+      },
+      "description": "The partially ruined colossal spacecraft, its intact cream-colored front contrasting with the mangled, dark brown rear, resting heavily on the sand. Small, makeshift fabric shelters dot its base, hinting at a salvage camp.",
+      "searchDesc": "A ruined colossal spacecraft rests on a desolate desert planet, a salvage camp at its base.",
+      "slug": "the-behemoth-s-rest",
+      "structure": {
+        "spatialLayout": "The spacecraft occupies a significant portion of the horizontal space, creating a sense of immense scale against the flat, expansive desert floor.",
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "base of the wreck",
+            "description": "Gaps and entry points into the mangled rear section."
+          },
+          {
+            "type": "path",
+            "position": "around the base",
+            "description": "Worn paths leading to the fabric shelters."
+          }
+        ],
+        "dominantElements": [
+          "Colossal ruined spacecraft",
+          "Vast orange-yellow desert",
+          "Makeshift fabric shelters",
+          "Clear bright blue sky"
+        ],
+        "uniqueIdentifiers": [
+          "Cream-colored intact front of spacecraft",
+          "Mangled dark brown rear of spacecraft",
+          "Multi-eyed creature",
+          "Slender figure in orange jumpsuit"
+        ]
+      },
+      "primaryMedia": "media-1765211705469-6r1tz31it"
+    },
+    "niche-1765211743667-7n8aqddkn": {
+      "id": "niche-1765211743667-7n8aqddkn",
+      "type": "niche",
+      "name": "The Wreckage Plains",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Within the cavernous, fractured interior of a gargantuan vessel, small, functional fabric shelters are clustered amidst the twisted metal. Exposed pipes and tangled structural components create a chaotic yet organized living space. The intact cream-colored foresection looms overhead, a reminder of its former grandeur.",
+        "colorsAndLighting": "Harsh daylight streams in through gaping rents in the hull, illuminating the orange-yellow sands that have infiltrated the interior. Sharp shadows are cast by the metallic debris and structural remnants, creating a high-contrast environment.",
+        "atmosphere": "The air is dry and still, thick with the scent of dust and ozone from the damaged machinery. A palpable sense of isolation and weariness hangs heavy, a consequence of living within the carcass of a fallen titan. The heat of the sun, felt even within the hull, beats down relentlessly.",
+        "materials": "The primary materials are heavily weathered, dark brown and cream-colored metal from the spacecraft's hull, exhibiting exposed pipes and tangled structural components. Functional fabric shelters are constructed from rough, durable textiles, blending into the industrial detritus.",
+        "mood": "A profound sense of melancholy and weariness pervades, amplified by the immense scale of the wreckage and the quiet struggle for survival.",
+        "sounds": "Distant wind, creaking metal, muffled voices, scurrying, mechanical hum.",
+        "spatialLayout": "The interior is vast and irregularly shaped, dictated by the shattered remains of the colossal spacecraft. Entry points are primarily through large, jagged openings in the hull. Focal points are the makeshift shelters and the exposed, utilitarian components.",
+        "primary_surfaces": "Weathered metal hull, sand-covered floor",
+        "secondary_surfaces": "Rough fabric (shelters), exposed machinery, pipes, tangled structural components",
+        "accent_features": "Circular portholes (if visible internally), remnants of interior fittings, multi-eyed creature (if present within), orange jumpsuit (if worn by an occupant)",
+        "dominant": "Orange-yellow (sand on floor, some debris)",
+        "secondary": "Cream (interior hull in foresection), Dark brown (interior hull in aft wreckage)",
+        "accent": "White (headwraps on occupants), Dark green (backpacks on occupants), Blue (visible through exterior openings)",
+        "ambient": "Bright daylight, high contrast",
+        "structure": {
+          "form": "irregular",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "Deconstructed colossal spacecraft",
+        "cultural_tone": "Salvage camp, temporary settlement",
+        "materials_base": "Industrial metal, rough fabrics",
+        "mood_baseline": "Desolate, somber, awe-inspiring",
+        "palette_bias": "Earthy tones with stark contrasts",
+        "soundscape_base": "Natural desert ambience",
+        "flora_base": "None",
+        "fauna_base": "Multi-eyed creature"
+      },
+      "primaryMedia": "media-1765211743665-1jh1gbt2g",
+      "description": "An expansive interior space resembling a vast junkyard, filled with the remnants of industrial activity, within the larger region of The Wreckage Plains.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "functionalType": "industrial",
+        "spatialLayout": "This large, industrial space is characterized by its open, sprawling layout. Its irregular form suggests a haphazard construction or a natural cavernous area adapted for industrial use.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Scrap metal piles",
+          "Industrial machinery (rusted)",
+          "Conveyor belts (broken)",
+          "Storage crates (weathered)",
+          "Workbenches with tools"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center",
+            "description": "A wide, open passage leading further into the plains."
+          },
+          {
+            "type": "passage",
+            "position": "left",
+            "description": "A narrower, debris-strewn passage into a less defined area."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "An opening leading towards a partially collapsed structure."
+          }
+        ],
+        "dominantElements": [
+          "Vast open floor space",
+          "Debris and wreckage scattered throughout",
+          "Exposed structural elements (beams, pipes)",
+          "Industrial remnants"
+        ],
+        "uniqueIdentifiers": [
+          "The sheer scale of the 'wreckage'",
+          "The feeling of being within a vast, abandoned industrial junkyard",
+          "The interplay of natural and artificial debris"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "A wide, open passage leading further into the plains."
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "A narrower, debris-strewn passage into a less defined area."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "An opening leading towards a partially collapsed structure."
+        }
+      ],
+      "dominantElements": [
+        "Vast open floor space",
+        "Debris and wreckage scattered throughout",
+        "Exposed structural elements (beams, pipes)",
+        "Industrial remnants"
+      ],
+      "uniqueIdentifiers": [
+        "The sheer scale of the 'wreckage'",
+        "The feeling of being within a vast, abandoned industrial junkyard",
+        "The interplay of natural and artificial debris"
+      ],
+      "searchDesc": "Interior of a colossal wrecked spacecraft, now a salvage camp on sands.",
+      "slug": "interior-of-the-behemoth-s-rest"
+    },
+    "niche-1765211782749-ddvp7jbbt": {
+      "id": "niche-1765211782749-ddvp7jbbt",
+      "type": "niche",
+      "name": "The Behemoth's Rest Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Inside the gargantuan, broken vessel, the space is a chaotic yet functional interior. Jagged, dark brown wreckage from the aft merges with the intact cream-colored foresection. Exposed pipes and tangled structural components create an improvised labyrinth.",
+        "colorsAndLighting": "Harsh daylight filters through gaps and portholes, casting sharp shadows across the metallic surfaces. The dominant colors are the cream of the intact hull and the dark brown of the wreckage, accented by the orange-yellow of sand dust and perhaps glimpses of blue sky.",
+        "atmosphere": "The air within the hull is dry and still, echoing the external isolation. A faint metallic tang might mingle with the dry desert air. The heat of the sun is still palpable, seeping through the metal.",
+        "materials": "The interior is primarily composed of heavily weathered metal, showing signs of immense age and stress. Exposed pipes and tangled structural components are prevalent. Rough, durable fabric is used for makeshift partitions and shelters.",
+        "mood": "A profound sense of melancholy and weariness pervades the interior, a continuation of the fallen behemoth's fate and the struggle of its inhabitants.",
+        "sounds": "Distant wind, creaking metal, muffled voices, scraping sounds",
+        "spatialLayout": "The interior is irregular, a consequence of the ship's destruction. Spaces are carved out between large structural elements, with functional areas delineated by fabric or salvaged plating. Entryways are likely jagged openings or repurposed hatches.",
+        "primary_surfaces": "Weathered metal hull plates, exposed structural beams",
+        "secondary_surfaces": "Tangled pipes, rough fabric partitions, salvaged components",
+        "accent_features": "Circular portholes (if intact), multi-eyed creature (if present within), remnants of ship controls",
+        "dominant": "Cream (intact hull sections)",
+        "secondary": "Dark brown (wrecked hull sections)",
+        "accent": "Orange-yellow (dust, sand deposits), Blue (sky visible through openings), White (worn fabric)",
+        "ambient": "Neutral (daylight, sharp contrast)",
+        "structure": {
+          "form": "irregular",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "wide",
+          "openings": "large-glass",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "Deconstructed colossal spacecraft",
+        "cultural_tone": "Salvage camp, temporary settlement",
+        "materials_base": "Industrial metal, rough fabrics",
+        "mood_baseline": "Desolate, somber, awe-inspiring",
+        "palette_bias": "Earthy tones with stark contrasts",
+        "soundscape_base": "Natural desert ambience",
+        "flora_base": "None",
+        "fauna_base": "Multi-eyed creature"
+      },
+      "primaryMedia": "media-1765211782747-q9us07327",
+      "description": "The interior of The Behemoth's Rest, a large-scale industrial space within the Wreckage Plains region. It inherits an irregular form and horizontal orientation from its parent structure, featuring a flat ceiling and ample open passages for navigation and operation.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "open-passages",
+        "functionalType": "industrial",
+        "spatialLayout": "A vast, industrial space characterized by its irregular form and expansive horizontal orientation. It serves as a large-scale functional area within a more significant industrial structure.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Industrial shelving units",
+          "Large machinery components",
+          "Workbenches",
+          "Tool racks",
+          "Conveyor belts",
+          "Storage containers"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "back wall",
+            "description": "A wide, open passage leading further into the industrial complex."
+          },
+          {
+            "type": "door",
+            "position": "left wall",
+            "description": "A heavy, industrial-grade door."
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "An opening to an adjacent section of the facility."
+          }
+        ],
+        "dominantElements": [
+          "Exposed structural beams",
+          "Large, open floor space",
+          "Industrial flooring",
+          "Massive, weathered walls"
+        ],
+        "uniqueIdentifiers": [
+          "Remnants of its 'Behemoth' namesake suggesting past grandeur or function",
+          "Industrial decay and wear",
+          "Vast, echoing space",
+          "Connection to the Wreckage Plains"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "back wall",
+          "description": "A wide, open passage leading further into the industrial complex."
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "A heavy, industrial-grade door."
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "An opening to an adjacent section of the facility."
+        }
+      ],
+      "dominantElements": [
+        "Exposed structural beams",
+        "Large, open floor space",
+        "Industrial flooring",
+        "Massive, weathered walls"
+      ],
+      "uniqueIdentifiers": [
+        "Remnants of its 'Behemoth' namesake suggesting past grandeur or function",
+        "Industrial decay and wear",
+        "Vast, echoing space",
+        "Connection to the Wreckage Plains"
+      ],
+      "searchDesc": "Interior of a giant, broken spaceship, now a salvage camp. Weathered metal and fabric.",
+      "slug": "interior-of-the-behemoth-s-rest"
+    },
+    "niche-1765213039121-teh9un3w4": {
+      "id": "niche-1765213039121-teh9un3w4",
+      "type": "niche",
+      "name": "The Behemoth's Rest Cockpit",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The cockpit is a cramped, functional space, dominated by a worn, multi-levered pilot's seat facing a large, cracked viewscreen. Control consoles with a multitude of buttons and dials are clustered around, some sparking intermittently. Exposed wiring snakes across the ceiling and walls, testament to the vessel's damaged state.",
+        "colorsAndLighting": "Dim, functional internal lighting fights against the glare from the cracked viewscreen, which shows a harsh, bright desert. Shadows are sharp within the confines of the cockpit.",
+        "atmosphere": "The air inside is recycled and faintly smells of ozone and old oil. It feels dry and somewhat claustrophobic, a stark contrast to the open desert outside. The silence is broken only by the occasional sputter of damaged electronics.",
+        "materials": "The primary materials are heavily weathered, dark grey metal for the consoles and seat structure, with rough, dark fabric for the seat cushioning. Exposed, tarnished copper wiring and grey rubberized conduits are prevalent.",
+        "mood": "A feeling of tense functionality persists, overlaid with a deep sense of obsolescence and confinement, reflecting the ship's current state.",
+        "sounds": "Humming electronics, occasional crackles, distant wind",
+        "spatialLayout": "A compact, semi-circular space designed for a pilot. The primary entry is from the aft, and the main focal point is the forward viewscreen and control consoles.",
+        "primary_surfaces": "Weathered metal panels, cracked viewscreen",
+        "secondary_surfaces": "Worn fabric, exposed wiring, plastic control buttons",
+        "accent_features": "Sparking wires, intricate control panel details, pilot's seat harness",
+        "dominant": "Dark grey (metal consoles and seat structure)",
+        "secondary": "Orange-yellow (reflected light from viewscreen)",
+        "accent": "Tarnished copper (wiring), red/blue (indicator lights)",
+        "ambient": "Neutral",
+        "structure": {
+          "form": "irregular",
+          "roofType": "open-sky",
+          "scale": "large",
+          "orientation": "horizontal",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "Deconstructed colossal spacecraft",
+        "cultural_tone": "Salvage camp, temporary settlement",
+        "materials_base": "Industrial metal, rough fabrics",
+        "mood_baseline": "Desolate, somber, awe-inspiring",
+        "palette_bias": "Earthy tones with stark contrasts",
+        "soundscape_base": "Natural desert ambience",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765213039119-qtll6a2ej",
+      "description": "A sprawling industrial cockpit, designed for commanding a colossal entity. This space is filled with an array of complex control systems and displays, all viewed through fortified, narrow openings.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "narrow-slits",
+        "functionalType": "industrial",
+        "spatialLayout": "This space is a command center, likely built into the forward section of a large vehicle or structure. It features multiple consoles and seating arrangements for operators.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Pilot seats",
+          "Control consoles",
+          "Navigation displays",
+          "Communication panels",
+          "Large central viewscreen",
+          "Diagnostic monitors"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear",
+            "description": "A robust, likely metal, passage connecting to the main body of the Behemoth."
+          },
+          {
+            "type": "door",
+            "position": "left side",
+            "description": "An access door, possibly for maintenance or emergency egress."
+          }
+        ],
+        "dominantElements": [
+          "Central command chair",
+          "Extensive control panels and screens",
+          "Reinforced viewing ports/slits",
+          "Complex wiring and conduits"
+        ],
+        "uniqueIdentifiers": [
+          "The sheer scale of the command interface",
+          "Heavy-duty, industrial design aesthetic",
+          "Commanding view through specialized openings"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear",
+          "description": "A robust, likely metal, passage connecting to the main body of the Behemoth."
+        },
+        {
+          "type": "door",
+          "position": "left side",
+          "description": "An access door, possibly for maintenance or emergency egress."
+        }
+      ],
+      "dominantElements": [
+        "Central command chair",
+        "Extensive control panels and screens",
+        "Reinforced viewing ports/slits",
+        "Complex wiring and conduits"
+      ],
+      "uniqueIdentifiers": [
+        "The sheer scale of the command interface",
+        "Heavy-duty, industrial design aesthetic",
+        "Commanding view through specialized openings"
+      ],
+      "searchDesc": "The worn, functional cockpit of a crashed gargantuan spacecraft, overlooking a desolate desert.",
+      "slug": "cockpit"
+    },
+    "niche-1765213145572-gy32ilnb8": {
+      "id": "niche-1765213145572-gy32ilnb8",
+      "type": "niche",
+      "name": "The Behemoth's Rest Cargo Hold",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This space is a compact, utilitarian area lined with sturdy, metal storage racks overflowing with various crates and salvaged equipment. Exposed conduits and pipes snake across the ceiling and walls, remnants of the vessel's former functionality. The floor is a continuation of the ship's worn metal plating.",
+        "colorsAndLighting": "The limited light sources cast a stark, functional glow, highlighting the dust motes dancing in the dry air. Dominant colors are the dark browns and grays of the metal, punctuated by the varied hues of stacked crates.",
+        "atmosphere": "The air is thick with the scent of old dust, stale air, and faint metallic tang. It feels enclosed and utilitarian, a stark contrast to the open desert outside. The silence is profound, broken only by the distant creaks of the damaged vessel.",
+        "materials": "Primarily constructed from heavily weathered, dark brown metal plating and industrial-grade steel for the storage racks. Various salvaged materials make up the contents of the crates, with exposed copper piping and gray conduit running overhead.",
+        "mood": "A feeling of contained purpose and the quiet resilience of necessary functions within a larger decay.",
+        "sounds": "hissing pipes, metallic creaks, ambient stillness",
+        "spatialLayout": "A rectangular room with walls of reinforced metal. The primary feature is the dense arrangement of storage racks, leaving narrow pathways between them. An access door is visible on one wall.",
+        "primary_surfaces": "weathered metal hull plating",
+        "secondary_surfaces": "industrial metal storage racks, exposed pipes and conduits",
+        "accent_features": "various salvaged crates, worn labeling on racks",
+        "dominant": "Dark brown (hull plating)",
+        "secondary": "Gray (conduits, metal racks)",
+        "accent": "Cream (worn labels on crates), metallic sheen of exposed pipes",
+        "ambient": "Neutral",
+        "structure": {
+          "form": "rectangular",
+          "roofType": "flat",
+          "scale": "small",
+          "orientation": "horizontal",
+          "openings": "minimal",
+          "functionalType": "industrial"
+        },
+        "genre": null,
+        "architectural_tone": "deconstructed colossal spacecraft",
+        "cultural_tone": "salvage camp, temporary settlement",
+        "materials_base": "industrial metal, rough fabrics",
+        "mood_baseline": "desolate, somber, awe-inspiring",
+        "palette_bias": "earthy tones with stark contrasts",
+        "soundscape_base": "natural desert ambience",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765213145571-sdihkhjzq",
+      "description": "A massive, irregular cargo room within The Behemoth's Rest, designed for the storage and movement of large industrial materials and goods. It is characterized by its vast, horizontal expanse and utilitarian design.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "open-passages",
+        "functionalType": "industrial",
+        "spatialLayout": "A vast, irregular space primarily dedicated to the storage and organization of goods. It features high ceilings and ample floor space for movement and placement of cargo.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Industrial shelving units",
+          "Pallet jacks",
+          "Cargo nets",
+          "Loading docks",
+          "Automated cranes",
+          "Storage containers"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "large, central opening to the main hangar",
+            "description": "Main access point from the parent structure, allowing for large item transfer."
+          },
+          {
+            "type": "door",
+            "position": "rear corner",
+            "description": "A reinforced service door for access to maintenance or adjacent smaller storage areas."
+          },
+          {
+            "type": "passage",
+            "position": "side wall",
+            "description": "A narrower passage leading to crew quarters or technical sections."
+          }
+        ],
+        "dominantElements": [
+          "Towering stacks of crates and containers",
+          "Heavy-duty industrial shelving",
+          "Overhead gantry systems",
+          "Exposed structural beams",
+          "Cargo loading mechanisms"
+        ],
+        "uniqueIdentifiers": [
+          "Massive scale of stored goods",
+          "Industrial-grade handling equipment",
+          "Functional, utilitarian aesthetic"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "large, central opening to the main hangar",
+          "description": "Main access point from the parent structure, allowing for large item transfer."
+        },
+        {
+          "type": "door",
+          "position": "rear corner",
+          "description": "A reinforced service door for access to maintenance or adjacent smaller storage areas."
+        },
+        {
+          "type": "passage",
+          "position": "side wall",
+          "description": "A narrower passage leading to crew quarters or technical sections."
+        }
+      ],
+      "dominantElements": [
+        "Towering stacks of crates and containers",
+        "Heavy-duty industrial shelving",
+        "Overhead gantry systems",
+        "Exposed structural beams",
+        "Cargo loading mechanisms"
+      ],
+      "uniqueIdentifiers": [
+        "Massive scale of stored goods",
+        "Industrial-grade handling equipment",
+        "Functional, utilitarian aesthetic"
+      ],
+      "searchDesc": "Cargo room within a broken spacecraft, filled with salvaged goods.",
+      "slug": "cargo-room"
     }
   },
   "views": {},
@@ -763,9 +4002,214 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765209834979-tzkh7plht",
+      "type": "host",
+      "children": [
+        {
+          "id": "6b6e8a9d-78d5-4bc5-98a7-5f3280c1b4ba",
+          "type": "region",
+          "children": [
+            {
+              "id": "1c055037-09e0-4130-a5a9-796ecc06d28f",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765209891843-q8t8uxu27",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765209950004-mq9g2yi7d",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765209996190-yd7qwfcmj",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210054741-kad4g6p2q",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765210119814-1ispwab1x",
+      "type": "host",
+      "children": [
+        {
+          "id": "8d6d01ff-7e1c-48fe-93a5-cdf469e77165",
+          "type": "region",
+          "children": [
+            {
+              "id": "a119dfb9-6b52-45b4-87b6-090657504e77",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765210205517-72u1036q6",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210233555-be9ylqr2v",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210272468-tld9xfvun",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765210325215-lyodlnn3c",
+      "type": "host",
+      "children": [
+        {
+          "id": "77a3156a-4937-440d-902d-eecf1cd86d77",
+          "type": "region",
+          "children": [
+            {
+              "id": "6a192933-8b14-4fea-88fb-8fb0c3a7cf89",
+              "type": "location",
+              "children": [
+                {
+                  "id": "6261fd8e-4a64-4a69-a080-a334fa688b54",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210427104-whso5iden",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210466950-231wvwkf1",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210613748-p98vw5c42",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765210748714-pbfnyi8js",
+      "type": "host",
+      "children": [
+        {
+          "id": "200fdf03-3891-49db-833d-808c022066a4",
+          "type": "region",
+          "children": [
+            {
+              "id": "431562f4-b577-43ad-98bb-8e7e39234b1b",
+              "type": "location",
+              "children": [
+                {
+                  "id": "35571e99-5de0-4c9c-a771-297b176addc3",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210834477-ftgg3awkg",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210865410-qja1891x0",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765210925810-wrydwczv8",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765211106969-7depwxbad",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765211146835-ph4c20h1l",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765211187328-kpeg5fqez",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765211680092-eh4qi49be",
+      "type": "host",
+      "children": [
+        {
+          "id": "de37361f-6777-46c4-8c9f-cbb5e2b3f41f",
+          "type": "region",
+          "children": [
+            {
+              "id": "78fe7e0f-e5b5-4087-9a1c-02ba5d1b8d1a",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765211743667-7n8aqddkn",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765211782749-ddvp7jbbt",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765213039121-teh9un3w4",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765213145572-gy32ilnb8",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1765201541386-v2o5kqw3k"
+    "loc-1765201541386-v2o5kqw3k",
+    "loc-1765209834979-tzkh7plht",
+    "loc-1765210119814-1ispwab1x",
+    "loc-1765210325215-lyodlnn3c",
+    "loc-1765210748714-pbfnyi8js",
+    "loc-1765211680092-eh4qi49be"
   ]
 }

@@ -13,8 +13,8 @@ export const DUST_PRESET: ParticlePreset = {
   config: {
     enabled: true,
     count: 1000,
-    size: { min: 0.05, max: 0.15 },  // Larger for better visibility
-    speed: { min: 0.0125, max: 0.025 },
+    size: { min: 0.02, max: 0.05 },  // Larger for better visibility
+    speed: { min: 0.002, max: 0.007 },
     opacity: { min: 0.15, max: 0.3 },  // More visible
     color: '#ffffff',
     behavior: 'float',
