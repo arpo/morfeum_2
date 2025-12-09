@@ -247,6 +247,30 @@ export async function runCreateLocationNodePipeline(
 }
 
 /**
+ * Get dimensional hints based on scale for better image generation
+ */
+function getDimensionalHints(scale: string, orientation: string, form: string): string {
+  const dimensions: Record<string, { primary: string; secondary: string; height: string }> = {
+    small: { primary: '3-6m', secondary: '3-5m', height: '2.5-4m' },
+    medium: { primary: '6-15m', secondary: '5-10m', height: '3-6m' },
+    large: { primary: '15-50m', secondary: '10-30m', height: '6-20m' }
+  };
+
+  const dim = dimensions[scale] || dimensions.medium;
+
+  // Adjust based on orientation
+  if (orientation === 'vertical') {
+    return `approximately ${dim.secondary} wide, ${dim.height} to ${dim.primary} tall`;
+  } else if (orientation === 'horizontal') {
+    return `approximately ${dim.primary} long, ${dim.secondary} wide, ${dim.height} ceiling height`;
+  } else if (orientation === 'wide') {
+    return `approximately ${dim.primary} wide, ${dim.secondary} deep, ${dim.height} ceiling height`;
+  }
+  // cubic
+  return `approximately ${dim.secondary} in each dimension`;
+}
+
+/**
  * Compose image prompt from Structure + DNA analysis results
  * Includes inherited DNA from ancestors for visual consistency
  */
@@ -270,8 +294,20 @@ function composeImagePrompt(
     parts.push(structure.spatialLayout);
   }
 
-  // Add form and scale
-  parts.push(`A ${structure.scale} ${structure.form} space.`);
+  // Add form, scale, and dimensional hints for better FLUX accuracy
+  const dimensionalHints = getDimensionalHints(structure.scale, structure.orientation, structure.form);
+  parts.push(`A ${structure.scale} ${structure.form} space (${dimensionalHints}).`);
+
+  // Add orientation hint for cylindrical/spherical forms
+  if (structure.form === 'cylindrical') {
+    if (structure.orientation === 'horizontal') {
+      parts.push('The cylinder is oriented horizontally (lying down), with a curved ceiling following the arc.');
+    } else if (structure.orientation === 'vertical') {
+      parts.push('The cylinder is oriented vertically (standing up), with curved walls and flat ceiling.');
+    }
+  } else if (structure.form === 'spherical') {
+    parts.push('Interior curves follow the sphere in all directions.');
+  }
 
   // Add DNA visual elements
   if (dna.looks) {

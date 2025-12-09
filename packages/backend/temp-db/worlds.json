@@ -1,341 +1,163 @@
 {
   "nodes": {
-    "loc-1765284408975-f45x6c1mk": {
-      "id": "loc-1765284408975-f45x6c1mk",
+    "loc-1765285769087-uch0a3ayy": {
+      "id": "loc-1765285769087-uch0a3ayy",
       "type": "host",
-      "name": "Veridian Valley",
+      "name": "Aquatic Reclamation Zone",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A grand, expansive valley floor covered in lush green grass and dotted with numerous light-colored boulders and rocks. It is bordered by immense, towering mountains with steep, craggy grey faces.",
-        "colorsAndLighting": "Dominant greens of the valley and greys of the mountains, under a soft, diffused light from an overcast sky. Subtle warmth may emanate from scattered elements.",
-        "atmosphere": "The air is crisp, clean, and invigorating, with the scent of abundant plant life. A sense of profound natural serenity and wildness pervades, untouched by harsh elements.",
-        "materials": "Primarily natural, rugged materials: rock faces, soil, and dense vegetation. Underlying geology is ancient and weathered.",
-        "mood": "Awe-inspiring, serene, wild, and majestic.",
-        "sounds": "Wind, rustling grass, distant echoes, flowing water.",
-        "primary_surfaces": "Rough rock faces, dense green grass, scattered boulders.",
-        "secondary_surfaces": "Soil, gravel.",
-        "accent_features": "Small, shallow rocky stream.",
-        "dominant": "Green (valley floor), vast coverage.",
-        "secondary": "Grey (mountain faces), extensive coverage.",
-        "accent": "Light brown/tan (boulders), scattered placement.",
-        "ambient": "Soft, diffused, natural light.",
-        "genre": "Nature-exploration",
-        "architectural_tone": "Natural, rugged, untamed wilderness",
-        "cultural_tone": "Primal nature, secluded habitation, scientific observation post",
-        "materials_base": "Natural stone, earth, dense vegetation",
-        "mood_baseline": "Serene, majestic, wild",
-        "palette_bias": "Earthy greens, greys, and browns",
-        "soundscape_base": "Natural ambient sounds",
-        "flora_base": "Lush grass, mountain flora",
-        "fauna_base": "None"
+        "looks": "Vast oceanic expanses dotted with the decaying remnants of human structures. The landscape is a blend of natural water bodies and man-made ruins, with signs of extensive environmental interaction.",
+        "colorsAndLighting": "Dominated by the blues and greens of the ocean, with natural sunlight creating bright, diffused illumination. Shadows are soft and muted, characteristic of daylight filtering through water or haze.",
+        "atmosphere": "A generally calm and humid atmosphere, with the pervasive scent of salt. Weather patterns are typical of coastal regions, with possibilities of gentle breezes and occasional mist.",
+        "materials": "A wide range of materials, from natural rock and coral to weathered composites and metals of abandoned structures. These materials show signs of extensive exposure to water and the elements.",
+        "mood": "A sense of quiet contemplation, the bittersweet beauty of nature's resilience, and the vastness of time. The mood is generally peaceful but carries an undertone of loss and abandonment.",
+        "sounds": "Oceanic ambient sounds, distant waves, wind, seabirds, natural water flow.",
+        "primary_surfaces": "Water, weathered composites, corroded metals",
+        "secondary_surfaces": "Encased in marine growth, barnacles, algae",
+        "accent_features": "Coastal flora reclaiming surfaces, underwater reefs",
+        "dominant": "Oceanic blues and greens (approx. 60%)",
+        "secondary": "Muted earth tones: rusty orange, off-white (approx. 35%)",
+        "accent": "Vibrant greens, occasional reddish-brown (approx. 5%)",
+        "ambient": "Soft, diffused daylight"
       },
-      "description": "A vast, verdant valley renowned for its stunning natural beauty, cradled by immense, rugged mountains. This valley is a sanctuary where untamed nature meets unexpected, advanced human habitation.",
-      "searchDesc": "Vast, verdant valley surrounded by towering, rugged mountains.",
-      "slug": "veridian-valley",
+      "description": "A future where humanity's coastal settlements have been abandoned due to environmental shifts. The oceans have advanced, reclaiming cities and structures, fostering new, resilient ecosystems on the ruins of civilization.",
+      "searchDesc": "A future world where oceans reclaim abandoned coastal cities, fostering new life on their ruins.",
+      "slug": "aquatic-reclamation-zone",
       "structure": {
-        "spatialLayout": "Vast, open valley floor with extreme verticality from the surrounding mountain ranges, creating a sense of enclosure and immense scale.",
+        "spatialLayout": "An open and expansive spatial layout, primarily defined by water and horizon lines. Structures create localized points of interest within the vastness.",
         "dominantElements": [
-          "Towering rugged mountains",
-          "Vast verdant valley floor"
+          "Reclaimed coastlines",
+          "Submerged infrastructure",
+          "Vast oceans"
         ],
         "uniqueIdentifiers": [
-          "Immense natural scale",
-          "Unexpected technological presence"
+          "Oceanic expansion",
+          "Ruined coastal cities",
+          "Floating ecosystems"
         ]
       }
     },
-    "48434e29-7a55-4eff-8e18-9c2e32f209db": {
-      "id": "48434e29-7a55-4eff-8e18-9c2e32f209db",
+    "07f95e76-beec-43b2-a22c-9d8f7ada6d7b": {
+      "id": "07f95e76-beec-43b2-a22c-9d8f7ada6d7b",
       "type": "region",
-      "name": "The Spherical Enclave",
+      "name": "The Drowned Coast",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Dominated by large, spherical, retro-futuristic buildings with panoramic windows and smaller portholes. These structures are supported by substantial concrete bases with visible structural elements.",
-        "colorsAndLighting": "Buildings are predominantly bright white, contrasting with the natural green and grey surroundings. Warm interior lights are visible, and the scene is illuminated by soft, diffused light from an overcast sky.",
-        "atmosphere": "The air is crisp and clean, with a pervasive sense of serene observation and mystery. The overcast sky suggests a mild, consistent temperature, contributing to a tranquil environment.",
-        "materials": "The primary structures feature smooth, advanced composite materials or alloys. The bases are made of sturdy, textured concrete, with durable glass for windows.",
-        "mood": "Evokes awe, discovery, and contemplation, blending futuristic ingenuity with natural beauty.",
-        "sounds": "Muted environmental sounds, distant hums, gentle wind.",
-        "primary_surfaces": "Smooth white composites, textured concrete bases.",
-        "secondary_surfaces": "Durable transparent glass.",
-        "accent_features": "Warm interior lighting glowing through windows.",
-        "dominant": "White (building exteriors), extensive coverage.",
-        "secondary": "Grey (concrete bases), significant coverage.",
-        "accent": "Warm yellow/orange (interior lights), subtle placement.",
-        "ambient": "Soft, diffused, cool-toned light.",
+        "looks": "A collection of decaying, modular structures partially or fully submerged in the ocean. Forms are weathered and rounded by water and time, with visible signs of structural compromise.",
+        "colorsAndLighting": "Dominant hues of muted blues and greens from the water, accented by the rust and faded whites of the structures. Light filters down through the water, creating dappled patterns and obscuring details in deeper areas.",
+        "atmosphere": "The air is heavy with moisture and carries the scent of salt and decay. Water currents are gentle around the submerged portions, with occasional surface chop from offshore breezes. The visibility is generally good in shallow areas.",
+        "materials": "Predominantly aged, rusted metals and composites, encrusted with barnacles, algae, and coral. Exposed surfaces are pitted and worn by wave action and saltwater corrosion.",
+        "mood": "A profound sense of melancholy and the weight of forgotten history. There's a peaceful stillness, punctuated only by the gentle sounds of the sea, evoking a quiet resignation to nature's power.",
+        "sounds": "Gentle lapping waves, distant seabirds, muffled underwater creaks and groans.",
+        "primary_surfaces": "Waterlogged metals and composites",
+        "secondary_surfaces": "Encased in barnacles and algae",
+        "accent_features": "Patches of vibrant seaweed and coral",
+        "dominant": "Muted turquoise and blue (water, approx. 60%)",
+        "secondary": "Faded rusty orange and mottled white-grey (structures, approx. 35%)",
+        "accent": "Vibrant green (seaweed/moss, approx. 5%)",
+        "ambient": "Soft, diffused underwater light",
         "genre": null,
-        "architectural_tone": "Retro-futuristic sphere with observation elements and concrete bases",
-        "cultural_tone": "Scientific research, public observation, technological outposts",
-        "materials_base": "Smooth composites, reinforced concrete, glass",
-        "mood_baseline": "Serene, contemplative, mysterious",
-        "palette_bias": "Cool whites and greys, with warm interior accents",
-        "soundscape_base": "Quiet, natural, subtle hums",
-        "flora_base": "Lush green grass, patches of green on mountains",
-        "fauna_base": "None"
+        "architectural_tone": "submerged modular ruins, organic decay",
+        "cultural_tone": "abandoned futuristic dwellings, lost to the sea",
+        "materials_base": "weathered metals and composites, marine encrustation",
+        "mood_baseline": "melancholy, forgotten",
+        "palette_bias": "aquatic blues and greens, muted earth tones",
+        "soundscape_base": "oceanic, serene",
+        "flora_base": "seaweed, kelp, marine algae",
+        "fauna_base": "Fish, crustaceans, mollusks"
       },
-      "description": "A secluded area within the valley, characterized by its striking retro-futuristic spherical architecture and serene atmosphere. This enclave represents a harmonious blend of advanced design and natural landscape.",
-      "searchDesc": "Secluded valley enclave with unique retro-futuristic spherical buildings.",
-      "slug": "the-spherical-enclave",
+      "description": "A desolate expanse of weathered coastal structures, now largely submerged and serving as artificial reefs. The remnants of human habitation are slowly being consumed by the encroaching ocean and its vibrant ecosystems.",
+      "searchDesc": "Submerged ruins of abandoned coastal dwellings, reclaimed by the ocean and marine life.",
+      "slug": "the-drowned-coast",
       "structure": {
-        "spatialLayout": "Open valley floor with distinct clusters of large, rounded structures. Significant depth provided by the surrounding mountains.",
+        "spatialLayout": "An expansive, horizontal landscape defined by the waterline and the seabed. Structures are scattered and semi-submerged, creating a varied underwater topography.",
         "dominantElements": [
-          "Retro-futuristic spherical buildings"
+          "Submerged architectural ruins",
+          "Marine growth"
         ],
         "uniqueIdentifiers": [
-          "Unusual architectural shapes",
-          "Isolated, serene setting"
+          "Shipwrecks",
+          "Kelp forests",
+          "Barnacle-encrusted remnants"
         ]
       }
     },
-    "e06e802c-18a1-46d1-8042-6199d4b334e1": {
-      "id": "e06e802c-18a1-46d1-8042-6199d4b334e1",
+    "0c51cef4-9147-4adc-9c31-b137987d0e84": {
+      "id": "0c51cef4-9147-4adc-9c31-b137987d0e84",
       "type": "location",
-      "name": "The Apex Dome & Observation Building",
+      "name": "The Sunken Hab-Pod Cluster",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A large, multi-level sphere with a distinct dome atop its apex. Its form is rounded and expansive, punctuated by numerous large, panoramic windows and smaller circular portholes. The building is anchored by a substantial concrete base with visible, robust support structures and integrated entranceways.",
-        "colorsAndLighting": "The building's primary exterior is a bright, clean white, which stands out vibrantly against the natural environment. Interior lights create a warm, inviting glow visible through the windows. Diffused, soft light from an overcast sky illuminates the scene.",
-        "atmosphere": "The air is likely crisp and clean, carrying the scent of verdant growth from the surrounding valley. A sense of serene observation pervades the atmosphere, with a touch of mystery from its isolated placement. The overcast sky suggests a mild, consistent temperature.",
-        "materials": "The main structure appears to be composed of smooth, possibly polished, composite materials or advanced alloys. The base is constructed from sturdy, textured concrete. The windows are likely made of durable, transparent glass.",
-        "mood": "This location evokes a feeling of awe and discovery, blending human ingenuity with the raw beauty of nature. It feels both futuristic and grounded, inviting contemplation and exploration.",
-        "sounds": "Distant wind, faint structural hum, occasional distant wildlife calls, soft interior activity.",
-        "primary_surfaces": "Smooth, white spherical exterior; transparent panoramic windows.",
-        "secondary_surfaces": "Textured concrete base, visible concrete support columns.",
-        "accent_features": "The apex dome, circular portholes, warm interior lighting.",
-        "dominant": "White (exterior), vast coverage.",
-        "secondary": "Grey (concrete base), significant coverage.",
-        "accent": "Warm yellow/orange (interior lights), subtle placement.",
-        "ambient": "Soft, diffused grey light.",
+        "looks": "Several interconnected, weathered modules forming a cluster. Cylindrical and spherical shapes dominate, with large circular openings. The scale is modest, suggesting individual or small-group dwellings.",
+        "colorsAndLighting": "Faded rusty orange and mottled white-grey colors are primary, accented by vibrant green from moss and vegetation. The lighting is soft, diffused daylight, creating no harsh shadows.",
+        "atmosphere": "The air is calm and likely humid, with a slight salt tang. The water is placid and clear, allowing visibility of the seafloor. The sky is hazy and bright, suggesting a warm, possibly tropical climate with diffused sunlight.",
+        "materials": "The primary materials appear to be aged composite or metal, now heavily weathered and stained. Moss and sparse vegetation indicate a long period of abandonment and exposure to the elements.",
+        "mood": "The mood is one of quiet desolation and peaceful natural reclamation. There is a sense of lingering mystery and the passage of time, evoking a feeling of solitude.",
+        "sounds": "Gentle lapping water, distant seabirds, rustling vegetation, muffled underwater sounds",
+        "primary_surfaces": "weathered, rusted, moss-covered, algae-streaked",
+        "secondary_surfaces": "sandy seafloor, clear water, hazy sky",
+        "accent_features": "reddish interior, rusted metal ladder, patches of green seaweed/coral",
+        "dominant": "mottled white-grey (approx. 50%)",
+        "secondary": "faded rusty orange (approx. 30%)",
+        "accent": "vibrant green (moss/vegetation, approx. 15%), deep reddish-brown (interior, approx. 5%)",
+        "ambient": "soft, diffused daylight",
         "genre": null,
-        "architectural_tone": "Retro-futuristic sphere with observation dome and concrete base",
-        "cultural_tone": "Scientific research, public observation, technological outpost.",
-        "materials_base": "Smooth composites, reinforced concrete, glass.",
-        "mood_baseline": "Serene, awe-inspiring, mysterious.",
-        "palette_bias": "Cool whites and greys, with warm interior accents.",
-        "soundscape_base": "Natural ambience with subtle technological undertones.",
-        "flora_base": "Lush green grass and sparse, hardy vegetation.",
-        "fauna_base": "None (implied isolation)"
+        "architectural_tone": "weathered modular pods with organic integration",
+        "cultural_tone": "abandoned futuristic dwelling, reclaimed by nature",
+        "materials_base": "aged composites and weathered metals",
+        "mood_baseline": "serene melancholy",
+        "palette_bias": "muted earth tones with aquatic blues and greens",
+        "soundscape_base": "aquatic ambient",
+        "flora_base": "moss and sparse vegetation",
+        "fauna_base": "None"
       },
-      "description": "The primary large, multi-level spherical building with panoramic windows, a dome on its apex, and a concrete base with visible support structures and entranceways. Located in the middle ground, closer to the viewer.",
-      "searchDesc": "Retro-futuristic spherical observation building with panoramic windows and an apex dome in a verdant valley.",
-      "slug": "the-apex-dome-observation-building",
+      "description": "An exterior scene featuring an abandoned, pod-like dwelling, partially submerged in calm, clear turquoise ocean water. The structure is composed of several interconnected, weathered cylindrical and spherical modules, primarily in faded rusty orange and mottled white-grey colors, with green moss and sparse vegetation growing across its surfaces. Large circular openings serve as windows and entrances, and one lower pod has an open section revealing a reddish interior and a rusted metal ladder extending into the water.",
+      "searchDesc": "Submerged futuristic hab-pods in clear turquoise water, overgrown with moss and vegetation.",
+      "slug": "the-sunken-hab-pod-cluster",
       "structure": {
-        "spatialLayout": "The building's spherical shape suggests a central core with radial expansion. Its multi-level design implies significant interior volume. Its placement in the middle ground creates a sense of depth and scale within the larger landscape.",
+        "spatialLayout": "The pods are clustered together, with some modules partially submerged, creating an organic spread rather than a rigid structure. The space extends vertically into the water and horizontally across the cluster.",
         "navigableElements": [
           {
-            "type": "entranceway",
-            "position": "base",
-            "description": "Subtle entrances integrated into the concrete base."
+            "type": "passage",
+            "position": "lower pod",
+            "description": "An open section in a lower pod revealing a reddish interior and a rusted metal ladder leading into the water."
           },
           {
             "type": "door",
-            "position": "base",
-            "description": "Main access doors on the concrete foundation."
+            "position": "circular openings",
+            "description": "Large circular openings serve as entrances to the pods."
           }
         ],
         "dominantElements": [
-          "Multi-level spherical structure",
-          "Panoramic windows",
-          "Apex dome",
-          "Concrete base with support structures"
+          "Interconnected cylindrical and spherical modules",
+          "Partially submerged structure",
+          "Clear turquoise ocean water",
+          "Faded rusty orange and mottled white-grey colors",
+          "Green moss and sparse vegetation"
         ],
         "uniqueIdentifiers": [
-          "Retro-futuristic architectural style",
-          "White exterior contrasting with natural landscape",
-          "Circular portholes",
-          "Visible concrete supports"
+          "Weathered cylindrical and spherical modules",
+          "Open pod with reddish interior and metal ladder",
+          "Circular window/door openings",
+          "Seaweed/coral on sandy seafloor",
+          "Hazy, bright sky"
         ]
       },
-      "primaryMedia": "media-1765284429573-3z4psto15"
-    },
-    "loc-1765284669387-ckq080ki4": {
-      "id": "loc-1765284669387-ckq080ki4",
-      "type": "host",
-      "name": "Neo-Veridian",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A vast, densely packed futuristic city dominated by immense, towering cylindrical structures. At ground level, multi-layered buildings with a mix of traditional and makeshift construction line bustling streets.",
-        "colorsAndLighting": "Bright, clear daylight with distinct shadows. The overall palette is a mix of the stark colors of the mega-structures and the vibrant hues of street-level commerce.",
-        "atmosphere": "A vibrant, active atmosphere under a clear blue sky with fluffy clouds. The air feels industrial but alive with the energy of commerce, transit, and dense population.",
-        "materials": "A mix of advanced composites, weathered metals, concrete, and fabric awnings. The lower buildings show varied construction, from sleek to ramshackle.",
-        "mood": "Enduring industry and vibrant, lived-in future. A sense of ambitious human endeavor and constant activity.",
-        "sounds": "City hum, vehicle traffic, pedestrian chatter, market sounds, distant machinery.",
-        "primary_surfaces": "Mega-structure facades, multi-layered building walls, paved streets.",
-        "secondary_surfaces": "Fabric awnings, exposed piping, scaffolding, market stalls.",
-        "accent_features": "Colorful fabric awnings, signs, market displays, flying vehicles.",
-        "dominant": "White (colossal towers)",
-        "secondary": "Muted greys and browns (street buildings, general infrastructure)",
-        "accent": "Vibrant market colors, red-orange (tower accents)",
-        "ambient": "Bright daylight",
-        "genre": "Futuristic Urbanism",
-        "architectural_tone": "Mega-structure brutalist-industrial mixed with multi-layered, ramshackle urban development",
-        "cultural_tone": "Busy commercial district for traders, workers, and travelers in a highly industrialized future society.",
-        "materials_base": "Metal, composite, concrete, fabric",
-        "mood_baseline": "Enduring activity and vibrant urbanism",
-        "palette_bias": "Cool and warm neutrals with strong color accents",
-        "soundscape_base": "Active urban soundscape",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A sprawling, densely packed futuristic metropolis characterized by immense, towering cylindrical structures. It is a vibrant hub of commerce, transit, and enduring human activity.",
-      "searchDesc": "A futuristic city of immense towers and bustling street life.",
-      "slug": "neo-veridian",
-      "structure": {
-        "spatialLayout": "Extensive horizontal spread with immense verticality from the towers. Dense street-level activity contrasts with the vast open sky above.",
-        "navigableElements": [
-          "Streets",
-          "Flying Vehicle Corridors"
-        ],
-        "dominantElements": [
-          "Towering Cylindrical Structures",
-          "Bustling Streets"
-        ],
-        "uniqueIdentifiers": [
-          "City Scale",
-          "Skyline Dominance"
-        ]
-      }
-    },
-    "0f944314-716a-432b-8f2a-e9a5bf9a9ddb": {
-      "id": "0f944314-716a-432b-8f2a-e9a5bf9a9ddb",
-      "type": "region",
-      "name": "The Spire District",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Dominated by immense, cylindrical towers that pierce the sky. Complex networks of platforms, gantries, and industrial components encircle them at various heights, creating a multi-layered visual field.",
-        "colorsAndLighting": "Bright daylight with sharp shadows. The primary colors are the stark white and weathered red-orange of the colossal towers.",
-        "atmosphere": "A sense of immense scale and industrial might. The air feels functional, hinting at constant, heavy operation. The sheer verticality is a defining characteristic.",
-        "materials": "Predominantly weathered metal and grime-covered composites on the colossal structures. Industrial steel and concrete are prevalent in the connecting infrastructure.",
-        "mood": "Awe-inspiring, functional, and slightly imposing due to the monumental scale and industrial nature.",
-        "sounds": "Distant hums, machinery, wind, faint transit sounds.",
-        "primary_surfaces": "Colossal cylindrical exteriors, weathered metal platforms, industrial concrete.",
-        "secondary_surfaces": "Exposed piping, gantries, support structures.",
-        "accent_features": "Weathered red-orange paint sections on towers.",
-        "dominant": "White (colossal towers)",
-        "secondary": "Weathered red-orange (tower sections)",
-        "accent": "Grey (industrial structures)",
-        "ambient": "Bright daylight",
-        "genre": null,
-        "architectural_tone": "Colossal brutalist-industrial towers with functional infrastructure",
-        "cultural_tone": "Center for heavy industry, power generation, or vertical transit hubs.",
-        "materials_base": "Metal, composite, concrete",
-        "mood_baseline": "Functional grandeur",
-        "palette_bias": "Cool and warm neutrals with industrial accents",
-        "soundscape_base": "Industrial hums and machinery",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A district dominated by colossal, rocket-like towers and intricate industrial networks. This area signifies monumental engineering and heavy industrial function within the larger cityscape.",
-      "searchDesc": "District of giant towers and industrial platforms.",
-      "slug": "the-spire-district",
-      "structure": {
-        "spatialLayout": "Vast verticality with intricate horizontal connections. Space is defined by the immense scale of the towers and the complex infrastructure between them.",
-        "dominantElements": [
-          "Colossal Cylindrical Towers",
-          "Industrial Gantries"
-        ],
-        "uniqueIdentifiers": [
-          "Tower Scale",
-          "Interconnected Platforms"
-        ]
-      }
-    },
-    "8b6ab9d0-ea47-4493-b33c-ec02e4e84984": {
-      "id": "8b6ab9d0-ea47-4493-b33c-ec02e4e84984",
-      "type": "location",
-      "name": "Sky-Piercer Avenue",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A wide, dense urban street at the foot of two immense, cylindrical towers. The buildings exhibit a mix of sleek, advanced architecture and improvised, lived-in additions. Elevated platforms and industrial elements create a complex, multi-level visual field.",
-        "colorsAndLighting": "Bright, clear daylight with sharp shadows. The primary colors are dominated by the stark white of the colossal towers, contrasted by their weathered red-orange sections. The street level is a riot of color from market awnings and diverse building facades.",
-        "atmosphere": "A vibrant, active atmosphere under a clear blue sky with fluffy clouds. The air feels industrial but alive with the energy of commerce and transit. The immense scale of the towers creates a sense of awe, while the street bustles with enduring human activity.",
-        "materials": "The dominant materials are weathered metal, grime-covered composites, and sturdy, multi-textured construction for the lower buildings. Exposed piping and scaffolding suggest a robust, functional aesthetic, with colorful fabric awnings adding a softer texture.",
-        "mood": "A mood of enduring industry and vibrant, lived-in future. It evokes a sense of ambitious human endeavor set against a backdrop of functional, evolving urbanism.",
-        "sounds": "Chirping vehicles, distant machinery hum, market chatter, footsteps, bicycle bells, wind.",
-        "primary_surfaces": "Grime-covered composite towers, multi-layered storefronts, cobbled street",
-        "secondary_surfaces": "Weathered metal gantries, colorful fabric awnings, exposed piping",
-        "accent_features": "Rusted vintage vehicle, brightly colored market signs, intricate scaffolding",
-        "dominant": "White (colossal towers)",
-        "secondary": "Red-orange (weathered sections of towers)",
-        "accent": "Vibrant market colors (awnings, signs), grey (metal structures)",
-        "ambient": "Bright daylight",
-        "genre": null,
-        "architectural_tone": "Colossal brutalist-industrial towers with multi-layered, ramshackle lower urban development",
-        "cultural_tone": "Busy commercial district for traders, workers, and travelers in a highly industrialized future society.",
-        "materials_base": "Metal, composite, fabric, concrete",
-        "mood_baseline": "Active, enduring, slightly gritty",
-        "palette_bias": "Cool and warm neutrals with strong color accents",
-        "soundscape_base": "Urban, industrial, commercial",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A bustling street at the base of two colossal, rocket-like buildings, featuring multi-layered construction, market stalls, and visible street clutter.",
-      "searchDesc": "Bustling street at base of colossal rocket-like buildings, multi-layered construction, market stalls.",
-      "slug": "sky-piercer-avenue",
-      "structure": {
-        "spatialLayout": "The space is defined by the overwhelming verticality of the twin towers, creating a canyon-like effect at street level. The urban fabric is densely packed, with multiple layers of activity stacked upon each other, offering significant depth.",
-        "navigableElements": [
-          {
-            "type": "path",
-            "position": "ground_level",
-            "description": "Wide, bustling street with market stalls and pedestrian traffic."
-          },
-          {
-            "type": "passage",
-            "position": "mid_level",
-            "description": "Numerous elevated platforms and gantries connecting the colossal buildings."
-          },
-          {
-            "type": "archway",
-            "position": "street_level",
-            "description": "Entrances to multi-layered shops and buildings."
-          }
-        ],
-        "dominantElements": [
-          "Two colossal, rocket-like towers",
-          "Multi-layered urban sprawl",
-          "Extensive network of platforms and gantries",
-          "Bustling street-level market"
-        ],
-        "uniqueIdentifiers": [
-          "Weathered red-orange paint on towers",
-          "Exposed piping and industrial components",
-          "Colorful fabric awnings over stalls",
-          "Rusted vintage vehicle"
-        ]
-      },
-      "primaryMedia": "media-1765284694168-2jbcpwqyf"
+      "primaryMedia": "media-1765285792255-ev22j2wg7"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765284408975-f45x6c1mk",
+      "id": "loc-1765285769087-uch0a3ayy",
       "type": "host",
       "children": [
         {
-          "id": "48434e29-7a55-4eff-8e18-9c2e32f209db",
+          "id": "07f95e76-beec-43b2-a22c-9d8f7ada6d7b",
           "type": "region",
           "children": [
             {
-              "id": "e06e802c-18a1-46d1-8042-6199d4b334e1",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1765284669387-ckq080ki4",
-      "type": "host",
-      "children": [
-        {
-          "id": "0f944314-716a-432b-8f2a-e9a5bf9a9ddb",
-          "type": "region",
-          "children": [
-            {
-              "id": "8b6ab9d0-ea47-4493-b33c-ec02e4e84984",
+              "id": "0c51cef4-9147-4adc-9c31-b137987d0e84",
               "type": "location",
               "children": []
             }
@@ -345,7 +167,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765284408975-f45x6c1mk",
-    "loc-1765284669387-ckq080ki4"
+    "loc-1765285769087-uch0a3ayy"
   ]
 }

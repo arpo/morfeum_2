@@ -29,7 +29,9 @@ export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
 
   const parentDna = context.parentNode?.dna as any;
   const currentDna = context.currentNode.dna as any;
-  const parentStructure = parentDna?.structure || currentDna?.structure;
+  // Structure is stored at node level (not inside DNA) - check node data first
+  const currentNodeData = context.currentNode.data as any;
+  const parentStructure = currentNodeData?.structure || parentDna?.structure || currentDna?.structure;
 
   let prompt = `You are an expert at spatial and architectural analysis.
 
@@ -98,6 +100,37 @@ IMPORTANT RULES:
 - Inherit form/scale from parent when it makes architectural sense
 - Interior spaces should logically fit within their parent structure
 - Be specific with positions (left, right, center, back, corner, etc.)
+
+=== CRITICAL: FORM AND ORIENTATION INHERITANCE ===
+
+**Orientation MUST be compatible with parent:**
+- Parent HORIZONTAL → Interior MUST be horizontal or wide (NEVER vertical)
+- Parent VERTICAL → Interior can be vertical, cubic, or wide
+- Parent WIDE → Interior can be wide, horizontal, or cubic
+- Parent CUBIC → Interior can be any orientation that fits
+
+**For CYLINDRICAL forms (VERY IMPORTANT):**
+- Horizontal cylinder (lying down): Interior has CURVED ceiling following the arc, floor is flat or curved
+  → Orientation MUST be "horizontal" (long corridor-like) or "wide" (tunnel-like)
+  → NEVER "vertical" - you cannot stand up tall inside a lying cylinder!
+- Vertical cylinder (standing up): Interior has flat or domed ceiling, curved walls
+  → Orientation should be "cubic" or "vertical"
+
+**For SPHERICAL forms:**
+- Interior follows the sphere curve in all directions
+- Orientation should typically be "cubic" (balanced) or "wide"
+- Scale is constrained by sphere diameter
+
+**Scale Constraints (interior vs exterior):**
+- Interior scale CANNOT exceed parent exterior scale
+- large exterior → interior can be small, medium, or large
+- medium exterior → interior can be small or medium (NOT large)
+- small exterior → interior MUST be small
+
+**Approximate Dimension Hints for Image Generation:**
+- small: ~3-6m in primary dimension (cozy, intimate spaces)
+- medium: ~6-15m in primary dimension (standard rooms, shops)
+- large: ~15-50m+ in primary dimension (halls, warehouses, cathedrals)
 `;
 
   if (includeFurnishing) {
