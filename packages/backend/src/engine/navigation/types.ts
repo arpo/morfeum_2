@@ -179,6 +179,8 @@ export interface Structure {
   orientation: 'vertical' | 'horizontal' | 'wide' | 'cubic';
   /** Type of openings */
   openings: 'large-glass' | 'arched-windows' | 'narrow-slits' | 'open-passages' | 'minimal' | 'none';
+  /** Shape of openings (windows/portholes) - must match parent exterior */
+  openingShape?: 'rectangular' | 'circular' | 'arched' | 'mixed' | 'irregular';
   /** Functional purpose of the space */
   functionalType: 'residential' | 'commercial' | 'religious' | 'industrial' | 'civic' | 'entertainment';
   /** Spatial layout description */

@@ -248,12 +248,14 @@ export async function runCreateLocationNodePipeline(
 
 /**
  * Get dimensional hints based on scale for better image generation
+ * Uses tighter, more realistic ranges especially for small spaces
  */
 function getDimensionalHints(scale: string, orientation: string, form: string): string {
+  // Tighter dimension ranges for more accurate image generation
   const dimensions: Record<string, { primary: string; secondary: string; height: string }> = {
-    small: { primary: '3-6m', secondary: '3-5m', height: '2.5-4m' },
-    medium: { primary: '6-15m', secondary: '5-10m', height: '3-6m' },
-    large: { primary: '15-50m', secondary: '10-30m', height: '6-20m' }
+    small: { primary: '2-4m', secondary: '2-3m', height: '2-3m' },
+    medium: { primary: '4-10m', secondary: '3-6m', height: '3-5m' },
+    large: { primary: '10-30m', secondary: '8-15m', height: '5-15m' }
   };
 
   const dim = dimensions[scale] || dimensions.medium;
@@ -369,6 +371,18 @@ function composeImagePrompt(
   // Add dominant elements
   if (structure.dominantElements && structure.dominantElements.length > 0) {
     parts.push(`Key features: ${structure.dominantElements.join(', ')}.`);
+  }
+
+  // Add opening shape specification (critical for window/porthole consistency)
+  if (structure.openingShape) {
+    const shapeDescriptions: Record<string, string> = {
+      rectangular: 'Windows and openings are rectangular/square-shaped.',
+      circular: 'Windows and openings are circular/round (portholes).',
+      arched: 'Windows and openings have arched tops.',
+      mixed: 'Windows include both rectangular and circular shapes.',
+      irregular: 'Windows and openings have organic, non-standard shapes.'
+    };
+    parts.push(shapeDescriptions[structure.openingShape] || '');
   }
 
   // Add furnishing details if present

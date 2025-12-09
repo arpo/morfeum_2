@@ -25,13 +25,18 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **`--furnish` command flag (Dec 9):** Optional flag for GOTO/GO_INSIDE that triggers furnishing analysis. Adds suggested furniture, placement notes to image prompts. Full end-to-end implementation across frontend (commandParser, navigationCommands) and backend (config, navigation route, structureAnalyzer).
+- **Scale Consistency System (Dec 9):** Improved interior/exterior size matching:
+  - `inferScaleFromDescription()` detects scale from parent descriptions ("modest" → small)
+  - Tighter dimension ranges: small (2-4m), medium (4-10m), large (10-30m)
+  - Critical scale rule: interior MUST be smaller than exterior
+- **Opening Shape Inheritance (Dec 9):** Windows/openings now match exterior:
+  - `extractOpeningShapesFromParent()` scans parent dominantElements for window shapes
+  - New `openingShape` field in Structure interface
+  - Image prompts include explicit window shape descriptions
+- **`--furnish` command flag (Dec 9):** Optional flag for GOTO/GO_INSIDE that triggers furnishing analysis
 - DNA inheritance system fixed: child nodes inherit parent materials, palette, and mood
-- Navigation pipelines refactored: GOTO and GO_INSIDE create correct sibling/child nodes, progress bar steps visible
+- Navigation pipelines refactored: GOTO and GO_INSIDE create correct sibling/child nodes
 - Two-step image generation: LLM prompt system for DNA-accurate images
-- Major component/file refactoring for separation and size compliance
-- Backend storage stable (temp-db/); migration to Supabase/PostgreSQL planned
-- Testing and CI pipeline pending
 
 ## What's Left to Build 🚧
 
@@ -61,7 +66,8 @@
 - 100% TypeScript coverage, no any types
 - All builds passing
 - Strict separation patterns enforced
-- Pipeline performance improved (DNA gen: 10s → 5.18s, total: 23s → 20.72s)
+- Scale consistency system implemented for interior/exterior matching
+- Opening shape inheritance for window consistency
 - Pending: database migration, testing, CI/CD, advanced features
 
 ## Known Issues 🐛

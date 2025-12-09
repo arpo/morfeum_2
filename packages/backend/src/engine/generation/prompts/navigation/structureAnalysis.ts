@@ -24,6 +24,68 @@ import { furnishingInstructions } from './furnishingInstructions';
 
 /* (already exported above, remove duplicate) */
 
+/**
+ * Extract window/opening shapes from parent's dominant elements or description
+ * Returns array of detected shapes (e.g., ['rectangular', 'circular'])
+ */
+function extractOpeningShapesFromParent(parentStructure: any, parentDna: any): string[] {
+  const shapes: string[] = [];
+  
+  // Check dominantElements and uniqueIdentifiers
+  const elements = [
+    ...(parentStructure?.dominantElements || []),
+    ...(parentStructure?.uniqueIdentifiers || []),
+    parentDna?.looks || '',
+    parentDna?.accent_features || ''
+  ].join(' ').toLowerCase();
+  
+  // Detect rectangular/square windows
+  if (/rectangular window|square window|rectangle window/.test(elements)) {
+    shapes.push('rectangular');
+  }
+  
+  // Detect circular/round windows
+  if (/circular|porthole|round window|round opening/.test(elements)) {
+    shapes.push('circular');
+  }
+  
+  // Detect arched windows
+  if (/arched window|arch window|pointed arch/.test(elements)) {
+    shapes.push('arched');
+  }
+  
+  return [...new Set(shapes)]; // Remove duplicates
+}
+
+/**
+ * Infer scale from description text when no explicit scale is set
+ * Looks for keywords indicating size
+ */
+function inferScaleFromDescription(dna: any, description?: string): 'small' | 'medium' | 'large' | null {
+  const text = [
+    dna?.looks || '',
+    dna?.description || '',
+    description || ''
+  ].join(' ').toLowerCase();
+
+  // Small indicators
+  if (/\b(modest|small|compact|intimate|cozy|tiny|cramped|narrow|pod|booth|closet|cubicle|cabin)\b/.test(text)) {
+    return 'small';
+  }
+  
+  // Large indicators
+  if (/\b(vast|immense|enormous|massive|grand|huge|cathedral|warehouse|hall|arena|stadium|expansive|towering)\b/.test(text)) {
+    return 'large';
+  }
+  
+  // Medium indicators (or default if no strong signal)
+  if (/\b(standard|regular|moderate|typical|average|room|shop|café|cafe|store)\b/.test(text)) {
+    return 'medium';
+  }
+  
+  return null; // No clear signal
+}
+
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
   const { userPrompt, context, perspective, includeFurnishing } = input;
 
@@ -32,6 +94,9 @@ export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
   // Structure is stored at node level (not inside DNA) - check node data first
   const currentNodeData = context.currentNode.data as any;
   const parentStructure = currentNodeData?.structure || parentDna?.structure || currentDna?.structure;
+  
+  // Infer scale from parent if not explicitly set
+  const inferredParentScale = parentStructure?.scale || inferScaleFromDescription(currentDna, context.currentNode.data?.description as string);
 
   let prompt = `You are an expert at spatial and architectural analysis.
 
@@ -42,12 +107,16 @@ Creating a new ${perspective} space.
 ${context.currentNode.type === 'location' ? `Parent location: "${context.currentNode.name}"` : `Current niche: "${context.currentNode.name}"`}
 ${context.parentNode ? `Parent: "${context.parentNode.name}" (${context.parentNode.type})` : ''}
 
-${parentStructure ? `=== PARENT STRUCTURE (inherit where appropriate) ===
-Form: ${parentStructure.form || 'not specified'}
-Scale: ${parentStructure.scale || 'not specified'}
-Orientation: ${parentStructure.orientation || 'not specified'}
-Functional Type: ${parentStructure.functionalType || 'not specified'}
-` : ''}
+${parentStructure || inferredParentScale ? (() => {
+  const parentWindowShapes = extractOpeningShapesFromParent(parentStructure, currentDna);
+  return `=== PARENT STRUCTURE (inherit where appropriate) ===
+Form: ${parentStructure?.form || 'not specified'}
+Scale: ${parentStructure?.scale || inferredParentScale || 'not specified'}${inferredParentScale && !parentStructure?.scale ? ' (inferred from description)' : ''}
+Orientation: ${parentStructure?.orientation || 'not specified'}
+Functional Type: ${parentStructure?.functionalType || 'not specified'}
+${parentWindowShapes.length > 0 ? `Window/Opening Shapes: ${parentWindowShapes.join(', ')} (MUST match these in interior)` : ''}
+`;
+})() : ''}
 
 === USER'S SPACE DESCRIPTION ===
 "${userPrompt}"
@@ -78,6 +147,13 @@ Analyze the description and determine:
 
 6. **Openings**: What kind of windows/openings?
    - large-glass, arched-windows, narrow-slits, open-passages, minimal, none
+
+6b. **Opening Shape**: What SHAPE are the windows/openings? (MUST match parent exterior if available)
+   - rectangular (square/rectangular windows)
+   - circular (round portholes, circular windows)
+   - arched (arched or pointed arch windows)
+   - mixed (combination of shapes)
+   - irregular (organic, non-standard shapes)
 
 7. **Functional Type**: What is this space used for?
    - residential, commercial, religious, industrial, civic, entertainment
@@ -127,10 +203,23 @@ IMPORTANT RULES:
 - medium exterior → interior can be small or medium (NOT large)
 - small exterior → interior MUST be small
 
+**Opening Shape Inheritance (CRITICAL):**
+- Interior window/opening SHAPES must match the exterior
+- If parent has "rectangular window" → interior must have rectangular windows
+- If parent has "circular porthole" → interior must have circular openings
+- If parent has "arched windows" → interior must have arched openings
+- Look for window shapes in parent's dominantElements, uniqueIdentifiers, or description
+
 **Approximate Dimension Hints for Image Generation:**
-- small: ~3-6m in primary dimension (cozy, intimate spaces)
-- medium: ~6-15m in primary dimension (standard rooms, shops)
-- large: ~15-50m+ in primary dimension (halls, warehouses, cathedrals)
+- small: ~2-4m in primary dimension (pods, booths, closets, cabins, compact rooms)
+- medium: ~4-10m in primary dimension (standard rooms, shops, cafés)
+- large: ~10-30m+ in primary dimension (halls, warehouses, cathedrals)
+
+**CRITICAL SCALE RULE FOR INTERIORS:**
+When creating an interior inside a parent structure, the interior MUST be SMALLER than the exterior.
+If parent scale is "small" (2-4m exterior), the interior dimensions should be ~1.5-3m.
+If parent scale is "medium" (4-10m exterior), the interior can be 3-8m.
+If parent scale is "large", the interior can be up to the full range.
 `;
 
   if (includeFurnishing) {
@@ -148,6 +237,7 @@ OUTPUT: Return ONLY valid JSON with this exact structure:
     "scale": "small | medium | large",
     "orientation": "vertical | horizontal | wide | cubic",
     "openings": "large-glass | arched-windows | narrow-slits | open-passages | minimal | none",
+    "openingShape": "rectangular | circular | arched | mixed | irregular",
     "functionalType": "residential | commercial | religious | industrial | civic | entertainment",
     "spatialLayout": "string - 1-2 sentence description of physical arrangement",
     "requiredElements": ["array of user-specified elements that MUST appear"],

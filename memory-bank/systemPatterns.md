@@ -375,6 +375,70 @@ Routes are thin layers that:
 - Format responses
 - 100-200 lines per route file
 
+## Structure Analysis Patterns
+
+### Scale Consistency System
+Location: `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts`
+
+**Purpose**: Ensure interior spaces have correct scale relative to their parent exterior.
+
+**Scale Inference Function**:
+```typescript
+function inferScaleFromDescription(dna: any, description?: string): 'small' | 'medium' | 'large' | null {
+  // Small indicators: modest, compact, pod, booth, cabin, cozy, tiny, cramped, narrow
+  // Large indicators: vast, immense, enormous, massive, grand, huge, cathedral, warehouse
+  // Medium indicators: standard, regular, moderate, typical, average, room, shop, café
+}
+```
+
+**Dimension Ranges**:
+- small: 2-4m (pods, booths, closets, cabins)
+- medium: 4-10m (standard rooms, shops, cafés)
+- large: 10-30m+ (halls, warehouses, cathedrals)
+
+**Scale Constraint Rules**:
+- Interior scale CANNOT exceed parent exterior scale
+- large exterior → interior can be small, medium, or large
+- medium exterior → interior can be small or medium (NOT large)
+- small exterior → interior MUST be small
+
+### Opening Shape Inheritance
+Location: `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts`
+
+**Purpose**: Ensure interior windows/openings match the shapes of exterior windows.
+
+**Shape Extraction Function**:
+```typescript
+function extractOpeningShapesFromParent(parentStructure: any, parentDna: any): string[] {
+  // Scans dominantElements, uniqueIdentifiers, looks, accent_features
+  // Detects: rectangular window, circular porthole, arched window
+  // Returns: ['rectangular', 'circular', 'arched'] (deduplicated)
+}
+```
+
+**Structure Interface Addition**:
+```typescript
+interface Structure {
+  // ... existing fields
+  openingShape?: 'rectangular' | 'circular' | 'arched' | 'mixed' | 'irregular';
+}
+```
+
+**Image Prompt Integration**:
+```typescript
+// In createNodePipeline.ts - composeImagePrompt()
+if (structure.openingShape) {
+  const shapeDescriptions = {
+    rectangular: 'Windows and openings are rectangular/square-shaped.',
+    circular: 'Windows and openings are circular/round (portholes).',
+    arched: 'Windows and openings have arched tops.',
+    mixed: 'Windows include both rectangular and circular shapes.',
+    irregular: 'Windows and openings have organic, non-standard shapes.'
+  };
+  parts.push(shapeDescriptions[structure.openingShape]);
+}
+```
+
 ## DNA System Architecture
 
 ### Shared DNA Schema Module

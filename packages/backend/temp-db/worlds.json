@@ -1,165 +1,275 @@
 {
   "nodes": {
-    "loc-1765285769087-uch0a3ayy": {
-      "id": "loc-1765285769087-uch0a3ayy",
+    "loc-1765287104442-b845p2din": {
+      "id": "loc-1765287104442-b845p2din",
       "type": "host",
-      "name": "Aquatic Reclamation Zone",
+      "name": "Desolate Sandy Beach",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Vast oceanic expanses dotted with the decaying remnants of human structures. The landscape is a blend of natural water bodies and man-made ruins, with signs of extensive environmental interaction.",
-        "colorsAndLighting": "Dominated by the blues and greens of the ocean, with natural sunlight creating bright, diffused illumination. Shadows are soft and muted, characteristic of daylight filtering through water or haze.",
-        "atmosphere": "A generally calm and humid atmosphere, with the pervasive scent of salt. Weather patterns are typical of coastal regions, with possibilities of gentle breezes and occasional mist.",
-        "materials": "A wide range of materials, from natural rock and coral to weathered composites and metals of abandoned structures. These materials show signs of extensive exposure to water and the elements.",
-        "mood": "A sense of quiet contemplation, the bittersweet beauty of nature's resilience, and the vastness of time. The mood is generally peaceful but carries an undertone of loss and abandonment.",
-        "sounds": "Oceanic ambient sounds, distant waves, wind, seabirds, natural water flow.",
-        "primary_surfaces": "Water, weathered composites, corroded metals",
-        "secondary_surfaces": "Encased in marine growth, barnacles, algae",
-        "accent_features": "Coastal flora reclaiming surfaces, underwater reefs",
-        "dominant": "Oceanic blues and greens (approx. 60%)",
-        "secondary": "Muted earth tones: rusty orange, off-white (approx. 35%)",
-        "accent": "Vibrant greens, occasional reddish-brown (approx. 5%)",
-        "ambient": "Soft, diffused daylight"
+        "looks": "An immense, flat expanse of fine sand meets a calm, shallow body of water. The horizon is distant and clear, meeting a wide-open, bright blue sky. This landscape is characterized by its sheer emptiness and the broad sweep of sand.",
+        "colorsAndLighting": "The scene is dominated by the bright, direct light of a sunny day, casting sharp shadows. The palette is primarily sandy beiges and browns, contrasted by the brilliant blue of the sky and water.",
+        "atmosphere": "The air is clean, dry, and often still, creating a feeling of vastness and exposure. The weather is consistently sunny and warm, with a clear sky punctuated by occasional clouds.",
+        "materials": "The primary material is fine, loose sand, with smooth, calm water. The overall environment feels natural and elemental.",
+        "mood": "A sense of profound isolation, peaceful emptiness, and raw natural beauty. It evokes feelings of solitude and quiet contemplation.",
+        "sounds": "Gentle lapping waves, wind over sand, distant seabirds",
+        "primary_surfaces": "Fine sand, calm water",
+        "secondary_surfaces": "Air, light",
+        "accent_features": "Scattered clouds",
+        "dominant": "Sandy beige (dominant)",
+        "secondary": "Brilliant blue (sky and water)",
+        "accent": "White (clouds)",
+        "ambient": "Bright daylight",
+        "genre": "Survivalist Fiction",
+        "architectural_tone": "minimalist, utilitarian structures",
+        "cultural_tone": "nomadic peoples, isolated outposts",
+        "materials_base": "natural, raw materials",
+        "mood_baseline": "isolated, tranquil",
+        "palette_bias": "earth tones and blues",
+        "soundscape_base": "natural coastal ambiance",
+        "flora_base": "Sparse, hardy beach grasses",
+        "fauna_base": "Seagulls, small beach invertebrates"
       },
-      "description": "A future where humanity's coastal settlements have been abandoned due to environmental shifts. The oceans have advanced, reclaiming cities and structures, fostering new, resilient ecosystems on the ruins of civilization.",
-      "searchDesc": "A future world where oceans reclaim abandoned coastal cities, fostering new life on their ruins.",
-      "slug": "aquatic-reclamation-zone",
+      "description": "A vast, seemingly endless expanse of sand stretching to the horizon, bordered by a calm, shallow sea. The sky is a brilliant, clear blue, often dotted with fluffy white clouds, under strong, direct daylight.",
+      "searchDesc": "A vast, desolate sandy beach under a bright blue sky with calm, shallow waters.",
+      "slug": "desolate-sandy-beach",
       "structure": {
-        "spatialLayout": "An open and expansive spatial layout, primarily defined by water and horizon lines. Structures create localized points of interest within the vastness.",
+        "spatialLayout": "A wide, flat, open space with a defined horizon. The scale is immense and undifferentiated, emphasizing distance and openness.",
         "dominantElements": [
-          "Reclaimed coastlines",
-          "Submerged infrastructure",
-          "Vast oceans"
+          "Vast sand dunes",
+          "Shallow sea"
         ],
         "uniqueIdentifiers": [
-          "Oceanic expansion",
-          "Ruined coastal cities",
-          "Floating ecosystems"
+          "Clear blue sky",
+          "Direct sunlight",
+          "Sandy terrain"
         ]
       }
     },
-    "07f95e76-beec-43b2-a22c-9d8f7ada6d7b": {
-      "id": "07f95e76-beec-43b2-a22c-9d8f7ada6d7b",
+    "2e01d24f-9050-4e50-8e79-62ba4c231b2d": {
+      "id": "2e01d24f-9050-4e50-8e79-62ba4c231b2d",
       "type": "region",
-      "name": "The Drowned Coast",
+      "name": "Isolated Shoreline",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A collection of decaying, modular structures partially or fully submerged in the ocean. Forms are weathered and rounded by water and time, with visible signs of structural compromise.",
-        "colorsAndLighting": "Dominant hues of muted blues and greens from the water, accented by the rust and faded whites of the structures. Light filters down through the water, creating dappled patterns and obscuring details in deeper areas.",
-        "atmosphere": "The air is heavy with moisture and carries the scent of salt and decay. Water currents are gentle around the submerged portions, with occasional surface chop from offshore breezes. The visibility is generally good in shallow areas.",
-        "materials": "Predominantly aged, rusted metals and composites, encrusted with barnacles, algae, and coral. Exposed surfaces are pitted and worn by wave action and saltwater corrosion.",
-        "mood": "A profound sense of melancholy and the weight of forgotten history. There's a peaceful stillness, punctuated only by the gentle sounds of the sea, evoking a quiet resignation to nature's power.",
-        "sounds": "Gentle lapping waves, distant seabirds, muffled underwater creaks and groans.",
-        "primary_surfaces": "Waterlogged metals and composites",
-        "secondary_surfaces": "Encased in barnacles and algae",
-        "accent_features": "Patches of vibrant seaweed and coral",
-        "dominant": "Muted turquoise and blue (water, approx. 60%)",
-        "secondary": "Faded rusty orange and mottled white-grey (structures, approx. 35%)",
-        "accent": "Vibrant green (seaweed/moss, approx. 5%)",
-        "ambient": "Soft, diffused underwater light",
+        "looks": "A solitary, weathered spherical dwelling stands on slender stilts above the sand. Its surface shows signs of age and wear, with distinctive attached balloon-like forms. The surrounding beach is vast and mostly featureless.",
+        "colorsAndLighting": "The scene is bathed in strong, direct daylight from a bright blue sky. Muted tones of the weathered dwelling and the sandy beach are punctuated by the reflections in the water.",
+        "atmosphere": "The air is clear and still, creating a sense of profound isolation. The bright, sunny weather suggests warmth but also exposure on this desolate shoreline.",
+        "materials": "The primary structure appears to be a composite material, painted and weathered. Natural wood is used for access. The beach is composed of fine sand.",
+        "mood": "A feeling of quiet solitude and resilient habitation. The environment evokes a sense of peaceful isolation.",
+        "sounds": "Gentle lapping waves, distant seabirds, soft wind",
+        "primary_surfaces": "Fine sand, weathered painted composite",
+        "secondary_surfaces": "Wood, murky water",
+        "accent_features": "Balloon-like spheres, reflective window panes",
+        "dominant": "Light sand (dominant)",
+        "secondary": "Faded teal-blue (dwelling)",
+        "accent": "Pale reddish-pink, orange, reflective blue, greenish-brown",
+        "ambient": "Bright daylight",
         "genre": null,
-        "architectural_tone": "submerged modular ruins, organic decay",
-        "cultural_tone": "abandoned futuristic dwellings, lost to the sea",
-        "materials_base": "weathered metals and composites, marine encrustation",
-        "mood_baseline": "melancholy, forgotten",
-        "palette_bias": "aquatic blues and greens, muted earth tones",
-        "soundscape_base": "oceanic, serene",
-        "flora_base": "seaweed, kelp, marine algae",
-        "fauna_base": "Fish, crustaceans, mollusks"
+        "architectural_tone": "eccentric geodesic dome on stilts",
+        "cultural_tone": "solitary inhabitant, off-grid survivalist",
+        "materials_base": "weathered painted composite, natural wood",
+        "mood_baseline": "solitary, resilient",
+        "palette_bias": "blues and earth tones",
+        "soundscape_base": "natural coastal ambiance",
+        "flora_base": "None",
+        "fauna_base": "Seabirds (implied)"
       },
-      "description": "A desolate expanse of weathered coastal structures, now largely submerged and serving as artificial reefs. The remnants of human habitation are slowly being consumed by the encroaching ocean and its vibrant ecosystems.",
-      "searchDesc": "Submerged ruins of abandoned coastal dwellings, reclaimed by the ocean and marine life.",
-      "slug": "the-drowned-coast",
+      "description": "A remote, desolate stretch of sandy beach characterized by its vast emptiness and unique, weathered structures. Scattered puddles of murky water reflect the sky, adding to the stark beauty of the environment.",
+      "searchDesc": "Desolate sandy beach with a unique spherical dwelling and scattered puddles.",
+      "slug": "isolated-shoreline",
       "structure": {
-        "spatialLayout": "An expansive, horizontal landscape defined by the waterline and the seabed. Structures are scattered and semi-submerged, creating a varied underwater topography.",
+        "spatialLayout": "An open, expansive flat sandy area with a clear horizon. The dwelling occupies a prominent but isolated position.",
         "dominantElements": [
-          "Submerged architectural ruins",
-          "Marine growth"
+          "Weathered dwelling"
         ],
         "uniqueIdentifiers": [
-          "Shipwrecks",
-          "Kelp forests",
-          "Barnacle-encrusted remnants"
+          "Slender stilts",
+          "Spherical architecture",
+          "Balloon-like attachments"
         ]
       }
     },
-    "0c51cef4-9147-4adc-9c31-b137987d0e84": {
-      "id": "0c51cef4-9147-4adc-9c31-b137987d0e84",
+    "ab6970f2-e10a-4eb9-8e3f-ac965b4ac42a": {
+      "id": "ab6970f2-e10a-4eb9-8e3f-ac965b4ac42a",
       "type": "location",
-      "name": "The Sunken Hab-Pod Cluster",
+      "name": "Spherical Stilt Dwelling",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Several interconnected, weathered modules forming a cluster. Cylindrical and spherical shapes dominate, with large circular openings. The scale is modest, suggesting individual or small-group dwellings.",
-        "colorsAndLighting": "Faded rusty orange and mottled white-grey colors are primary, accented by vibrant green from moss and vegetation. The lighting is soft, diffused daylight, creating no harsh shadows.",
-        "atmosphere": "The air is calm and likely humid, with a slight salt tang. The water is placid and clear, allowing visibility of the seafloor. The sky is hazy and bright, suggesting a warm, possibly tropical climate with diffused sunlight.",
-        "materials": "The primary materials appear to be aged composite or metal, now heavily weathered and stained. Moss and sparse vegetation indicate a long period of abandonment and exposure to the elements.",
-        "mood": "The mood is one of quiet desolation and peaceful natural reclamation. There is a sense of lingering mystery and the passage of time, evoking a feeling of solitude.",
-        "sounds": "Gentle lapping water, distant seabirds, rustling vegetation, muffled underwater sounds",
-        "primary_surfaces": "weathered, rusted, moss-covered, algae-streaked",
-        "secondary_surfaces": "sandy seafloor, clear water, hazy sky",
-        "accent_features": "reddish interior, rusted metal ladder, patches of green seaweed/coral",
-        "dominant": "mottled white-grey (approx. 50%)",
-        "secondary": "faded rusty orange (approx. 30%)",
-        "accent": "vibrant green (moss/vegetation, approx. 15%), deep reddish-brown (interior, approx. 5%)",
-        "ambient": "soft, diffused daylight",
+        "looks": "A large, weathered spherical structure stands on slender stilts above a sandy beach. The sphere is adorned with a prominent rectangular window and a smaller circular porthole, with additional indentations on its upper surface. Three large, balloon-like spherical objects are attached, two on the left and one on the top right.",
+        "colorsAndLighting": "The dwelling's faded teal-blue paint contrasts with a lighter base, illuminated by strong, direct daylight under a bright blue sky. Reflections from the blue window pane and murky water puddles add visual interest.",
+        "atmosphere": "The air is clear and still, with a sense of isolation on the desolate beach. The bright, sunny weather suggests warmth, and the scattered clouds offer a subtle dynamic to the vast sky.",
+        "materials": "The primary material appears to be a painted, weathered composite for the sphere, with rustic wooden elements for the entrance and stairs. The attached spherical objects resemble deflated balloons, suggesting a flexible material.",
+        "mood": "The dwelling evokes a feeling of quirky solitude and resilient habitation. It suggests a unique individual or small group seeking refuge in an exposed environment.",
+        "sounds": "gentle waves, distant seabirds, light breeze",
+        "primary_surfaces": "weathered spherical shell, light-colored sand",
+        "secondary_surfaces": "slender stilts, rustic wooden entrance, wooden stairs",
+        "accent_features": "reflective blue window pane, pale reddish-pink balloons, orange balloon, circular indentations",
+        "dominant": "faded teal-blue (peeling)",
+        "secondary": "lighter base color (yellow or beige)",
+        "accent": "reflective blue (window), pale reddish-pink (balloons), orange (balloon), murky greenish-brown (puddles)",
+        "ambient": "bright daylight",
         "genre": null,
-        "architectural_tone": "weathered modular pods with organic integration",
-        "cultural_tone": "abandoned futuristic dwelling, reclaimed by nature",
-        "materials_base": "aged composites and weathered metals",
-        "mood_baseline": "serene melancholy",
-        "palette_bias": "muted earth tones with aquatic blues and greens",
-        "soundscape_base": "aquatic ambient",
-        "flora_base": "moss and sparse vegetation",
-        "fauna_base": "None"
+        "architectural_tone": "eccentric geodesic dome on stilts",
+        "cultural_tone": "solitary inhabitant, off-grid survivalist",
+        "materials_base": "weathered painted composite, natural wood",
+        "mood_baseline": "isolated, quirky, resilient",
+        "palette_bias": "blues and earth tones",
+        "soundscape_base": "coastal ambiance",
+        "flora_base": "None",
+        "fauna_base": "seabirds (implied)"
       },
-      "description": "An exterior scene featuring an abandoned, pod-like dwelling, partially submerged in calm, clear turquoise ocean water. The structure is composed of several interconnected, weathered cylindrical and spherical modules, primarily in faded rusty orange and mottled white-grey colors, with green moss and sparse vegetation growing across its surfaces. Large circular openings serve as windows and entrances, and one lower pod has an open section revealing a reddish interior and a rusted metal ladder extending into the water.",
-      "searchDesc": "Submerged futuristic hab-pods in clear turquoise water, overgrown with moss and vegetation.",
-      "slug": "the-sunken-hab-pod-cluster",
+      "description": "A uniquely constructed, spherical dwelling standing on slender stilts. It is heavily weathered, showing patches of peeling, faded teal-blue paint revealing a lighter base underneath. It features a wide, rectangular window with a reflective blue pane on its left side and a smaller, circular porthole-like window to its right. Several other smaller, unevenly spaced circular holes or indentations dot its upper surface. A makeshift, rustic wooden entrance juts out from the right side of the sphere, complete with a worn white door and a rudimentary set of wooden stairs descending to the sand below. Three large, spherical objects resembling deflated balloons are attached: two pale reddish-pink ones hang from the left side by thin strings, and a single, larger orange one floats higher from the top right.",
+      "searchDesc": "Spherical stilt dwelling on a sandy beach with weathered teal paint and balloon-like decorations.",
+      "slug": "spherical-stilt-dwelling",
       "structure": {
-        "spatialLayout": "The pods are clustered together, with some modules partially submerged, creating an organic spread rather than a rigid structure. The space extends vertically into the water and horizontally across the cluster.",
+        "spatialLayout": "The dwelling occupies a defined vertical space on its stilts, with its main form being a large sphere. The surroundings are open and expansive, with a clear visual depth stretching to the horizon.",
         "navigableElements": [
           {
-            "type": "passage",
-            "position": "lower pod",
-            "description": "An open section in a lower pod revealing a reddish interior and a rusted metal ladder leading into the water."
+            "type": "door",
+            "position": "right side",
+            "description": "worn white door"
           },
           {
-            "type": "door",
-            "position": "circular openings",
-            "description": "Large circular openings serve as entrances to the pods."
+            "type": "stairs",
+            "position": "descending from door",
+            "description": "rudimentary wooden stairs"
           }
         ],
         "dominantElements": [
-          "Interconnected cylindrical and spherical modules",
-          "Partially submerged structure",
-          "Clear turquoise ocean water",
-          "Faded rusty orange and mottled white-grey colors",
-          "Green moss and sparse vegetation"
+          "Spherical structure",
+          "Slender stilts",
+          "Rectangular window",
+          "Attached spherical objects"
         ],
         "uniqueIdentifiers": [
-          "Weathered cylindrical and spherical modules",
-          "Open pod with reddish interior and metal ladder",
-          "Circular window/door openings",
-          "Seaweed/coral on sandy seafloor",
-          "Hazy, bright sky"
+          "Peeling teal-blue paint",
+          "Reflective blue window pane",
+          "Porthole-like circular window",
+          "Deflated balloon-like attachments"
         ]
       },
-      "primaryMedia": "media-1765285792255-ev22j2wg7"
+      "primaryMedia": "media-1765287129250-2tabm3f5u"
+    },
+    "niche-1765287145951-9qjzbkhvy": {
+      "id": "niche-1765287145951-9qjzbkhvy",
+      "type": "niche",
+      "name": "Spherical Stilt Dwelling Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior reveals a curved, weathered spherical shell. A prominent rectangular window and a smaller circular porthole are integrated into the walls. The space feels compact yet functional, shaped by its unique geodesic form.",
+        "colorsAndLighting": "Strong, direct daylight streams in, creating bright illumination and subtle shadows. The dominant faded teal-blue of the exterior is echoed internally, contrasting with a lighter base color. Reflections from the window pane add subtle highlights.",
+        "atmosphere": "The air inside is clear and still, carrying a sense of isolated habitation. The bright, sunny weather outside contributes to a feeling of warmth and exposure. Despite the simplicity, there's a resilient feel to the space.",
+        "materials": "The primary material is a weathered, painted composite forming the curved shell. Rustic wooden elements are present for structural support and potential furnishings. The attached balloon-like objects suggest a flexible material, though their interior presence is implied.",
+        "mood": "The interior evokes a feeling of quirky solitude and resilient habitation, a unique refuge built with resourcefulness.",
+        "sounds": "Muffled waves, distant seabird calls, gentle wind, creaking structure",
+        "spatialLayout": "The space is defined by the interior curvature of the spherical dwelling, creating a rounded, enclosed environment. The layout is likely efficient, adapting to the organic shape.",
+        "primary_surfaces": "weathered spherical shell interior, light-colored sand (implied floor)",
+        "secondary_surfaces": "rustic wooden supports, window frames, porthole frame",
+        "accent_features": "reflections on window pane, subtle indentations on upper surface (visible from inside)",
+        "dominant": "faded teal-blue (interior walls)",
+        "secondary": "lighter base color (interior floor/lower walls)",
+        "accent": "reflective blue (window pane)",
+        "ambient": "bright daylight",
+        "genre": null,
+        "architectural_tone": "eccentric geodesic dome on stilts",
+        "cultural_tone": "solitary inhabitant, off-grid survivalist",
+        "materials_base": "weathered painted composite, natural wood",
+        "mood_baseline": "isolated, quirky, resilient",
+        "palette_bias": "blues and earth tones",
+        "soundscape_base": "coastal ambiance",
+        "flora_base": "None",
+        "fauna_base": "seabirds (implied)"
+      },
+      "primaryMedia": "media-1765287145950-3ds28ib2d",
+      "description": "The interior of the Spherical Stilt Dwelling features a seamless, open spherical volume with a domed ceiling. Minimal, porthole-like circular openings punctuate the curved walls, offering glimpses of the surrounding shoreline.",
+      "structure": {
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "residential",
+        "spatialLayout": "The interior is a single, open spherical volume. The space flows organically, with no distinct rooms.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "built-in seating",
+          "integrated storage units",
+          "central light fixture",
+          "yoga mat",
+          "small hydroponic garden"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center",
+            "description": "An opening leading to the exterior stilt access."
+          },
+          {
+            "type": "window",
+            "position": "curving along the interior wall",
+            "description": "Small, porthole-like windows integrated into the spherical shell."
+          }
+        ],
+        "dominantElements": [
+          "curved interior walls",
+          "domed ceiling",
+          "smooth, continuous surfaces",
+          "integrated furniture"
+        ],
+        "uniqueIdentifiers": [
+          "complete spherical interior",
+          "seamless wall-to-ceiling transition",
+          "porthole windows"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "An opening leading to the exterior stilt access."
+        },
+        {
+          "type": "window",
+          "position": "curving along the interior wall",
+          "description": "Small, porthole-like windows integrated into the spherical shell."
+        }
+      ],
+      "dominantElements": [
+        "curved interior walls",
+        "domed ceiling",
+        "smooth, continuous surfaces",
+        "integrated furniture"
+      ],
+      "uniqueIdentifiers": [
+        "complete spherical interior",
+        "seamless wall-to-ceiling transition",
+        "porthole windows"
+      ],
+      "searchDesc": "Interior of a quirky, weathered spherical stilt dwelling on a sandy beach.",
+      "slug": "interior-of-spherical-stilt-dwelling"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765285769087-uch0a3ayy",
+      "id": "loc-1765287104442-b845p2din",
       "type": "host",
       "children": [
         {
-          "id": "07f95e76-beec-43b2-a22c-9d8f7ada6d7b",
+          "id": "2e01d24f-9050-4e50-8e79-62ba4c231b2d",
           "type": "region",
           "children": [
             {
-              "id": "0c51cef4-9147-4adc-9c31-b137987d0e84",
+              "id": "ab6970f2-e10a-4eb9-8e3f-ac965b4ac42a",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1765287145951-9qjzbkhvy",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -167,6 +277,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765285769087-uch0a3ayy"
+    "loc-1765287104442-b845p2din"
   ]
 }
