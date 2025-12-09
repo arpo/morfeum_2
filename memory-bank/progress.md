@@ -3,7 +3,7 @@
 ## What Works ✅
 
 ### Core Application Features
-- Contextual slash commands for navigation and node creation (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, CREATE_IMAGE, GO_INSIDE, GOTO) with optional `--furnish` flag
+- Contextual slash commands for navigation and node creation (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, VIEW, GO_INSIDE, GOTO) with optional `--furnish` flag
 - Entity system for character and location creation, storage, and management
 - World tree system with hierarchical location structures
 - 3D World View with depth rendering and stereo support

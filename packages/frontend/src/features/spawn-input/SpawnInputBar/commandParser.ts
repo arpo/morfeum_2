@@ -29,7 +29,7 @@ export function parseCommandInput(input: string): ParsedCommand {
   
   for (let i = 1; i < parts.length; i++) {
     const part = parts[i];
-    if (part === COMMAND_FLAGS.CREATE_IMAGE) {
+    if (part === COMMAND_FLAGS.VIEW) {
       flags.createImage = true;
     } else if (part === COMMAND_FLAGS.BACKGROUND_TASK) {
       flags.backgroundTask = true;
@@ -58,7 +58,7 @@ export function isCreationCommand(command: string): boolean {
  * Check if command is a media command
  */
 export function isMediaCommand(command: string): boolean {
-  return command === 'CREATE_IMAGE';
+  return command === 'VIEW';
 }
 
 /**

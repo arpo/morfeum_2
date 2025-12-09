@@ -54,7 +54,7 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   },
   
   // Media commands
-  CREATE_IMAGE: { 
+  VIEW: { 
     requiresNodeType: ['host', 'region', 'location', 'niche'], 
     description: 'Generate image for current node',
     category: 'media'
@@ -68,7 +68,7 @@ export type NavigationCommand = keyof typeof SLASH_COMMANDS;
 
 // Flags supported by commands
 export const COMMAND_FLAGS = {
-  CREATE_IMAGE: '--view',
+  VIEW: '--view',
   BACKGROUND_TASK: '--bgtask',
   FURNISH: '--furnish'
 } as const;

@@ -15,7 +15,7 @@ interface MediaCallbacks {
 }
 
 /**
- * Handle CREATE_IMAGE command
+ * Handle VIEW command
  */
 export async function handleMediaCommand(
   parsedCommand: ParsedCommand,
@@ -63,7 +63,7 @@ export async function handleMediaCommand(
       registerExternalSpawn(
         data.operationId,
         data.eventsUrl,
-        '/CREATE_IMAGE',
+        '/VIEW',
         'location',
         async (completedData: any) => {
           if (completedData.imageUrl) {
