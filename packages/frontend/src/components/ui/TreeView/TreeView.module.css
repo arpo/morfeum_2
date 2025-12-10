@@ -93,6 +93,17 @@
   flex-grow: 1;
 }
 
+.deleteContainer {
+  flex-shrink: 0;
+  margin-left: var(--spacing-xs, 4px);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.itemContent:hover .deleteContainer {
+  opacity: 1;
+}
+
 .children {
   display: flex;
   flex-direction: column;

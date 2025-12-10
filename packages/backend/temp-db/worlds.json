@@ -1564,134 +1564,6 @@
       "searchDesc": "Graffiti-covered industrial warehouse interior with corrugated steel and diffused light.",
       "slug": "interior-of-the-foundry-canvas"
     },
-    "niche-1765355870759-qm1m6dkmj": {
-      "id": "niche-1765355870759-qm1m6dkmj",
-      "type": "niche",
-      "name": "The Neon Pulse Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior is a cavernous space characterized by raw, unpainted concrete walls punctuated by intricate, geometric patterns of intensely bright neon and LED light. The scale is vast and industrial, softened by the dynamic, rhythmic play of color that wraps around structural elements and highlights key features like a central bar and DJ booth.",
-        "colorsAndLighting": "Dominant hues of electric blue, deep purple, and vibrant magenta emanate from pulsating neon tubes and diffused LED panels. Sharp, deep shadows are actively broken by the rhythmic flashes and sweeps of color, creating a high-contrast, strobing effect.",
-        "atmosphere": "The air feels cool and carries a subtle metallic tang, a remnant of the industrial shell. A low, almost imperceptible vibration hums through the space, a tangible echo of the bass-heavy music, fostering a constant sense of restless, energetic anticipation.",
-        "materials": "Weathered, unpainted concrete forms the primary texture, displaying the raw marks of its industrial past. Accents of brushed aluminum and black steel are utilized for the DJ booth, signage, and structural supports, providing a sleek contrast to the rough concrete.",
-        "mood": "The mood is one of exhilarating, energetic escapism, evoking a potent sense of anticipation and excitement. It's a portal to a world of relentless rhythm and sensory stimulation.",
-        "sounds": "Deep bass, pulsing electronic beats, ambient industrial hum",
-        "spatialLayout": "A grand, open-plan layout with a high ceiling, designed to accommodate a large crowd. The space is defined by the interplay of light and shadow on raw materials, creating a sense of depth and dynamic visual interest.",
-        "primary_surfaces": "Rough, textured concrete walls and floors",
-        "secondary_surfaces": "Glow of neon tubes, diffused LED light panels, polished black steel surfaces",
-        "accent_features": "Stylized, minimalist signage in neon, subtle wisps of atmospheric smoke",
-        "dominant": "Electric Blue (50%)",
-        "secondary": "Deep Purple (30%)",
-        "accent": "Vibrant Magenta (20%)",
-        "ambient": "Strobe-like, high-contrast",
-        "genre": null,
-        "architectural_tone": "Brutalist industrial with dynamic light installations",
-        "cultural_tone": "Urban subculture, electronic music enthusiasts, nightlife seekers",
-        "materials_base": "Raw industrial, modern lighting",
-        "mood_baseline": "Energetic, exciting, slightly mysterious",
-        "palette_bias": "Cool neon spectrum",
-        "soundscape_base": "Electronic beats and ambient industrial",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765355870758-sqxxc30yv",
-      "description": "The interior of The Neon Pulse, a vibrant and visually striking entertainment venue within the Ringön region. This space is designed for maximum sensory engagement, characterized by its extensive use of neon lighting and a modern, slightly cyberpunk aesthetic.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "medium",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "A medium-sized, open-plan entertainment space with a focus on visual stimulation. It features a central area for mingling and possibly a performance or service counter.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "Lounge seating areas",
-          "Bar counter",
-          "Neon signage",
-          "DJ booth",
-          "Dance floor",
-          "Ambient lighting fixtures"
-        ],
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "front",
-            "description": "Main entrance leading into the main seating area."
-          },
-          {
-            "type": "passage",
-            "position": "back",
-            "description": "Service passage leading to restrooms or staff areas."
-          },
-          {
-            "type": "archway",
-            "position": "side",
-            "description": "Opens to a secondary seating or lounge zone."
-          }
-        ],
-        "dominantElements": [
-          "Vibrant neon lighting",
-          "Sleek, modern furniture",
-          "Reflective surfaces",
-          "Large open floor space"
-        ],
-        "uniqueIdentifiers": [
-          "Pulsating neon light installations",
-          "Futuristic, cyberpunk aesthetic",
-          "Immersive audiovisual elements"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [],
-        "suggested": [
-          "Modular lounge seating (sofas, armchairs)",
-          "Illuminated bar counter",
-          "Variety of neon signs and displays",
-          "DJ console with integrated lighting",
-          "Mirrored surfaces or polished metal accents",
-          "Low-profile coffee tables"
-        ],
-        "placementNotes": [
-          "Seating arranged in clusters to encourage social interaction.",
-          "Bar counter positioned centrally or along one wall for easy access.",
-          "Neon signage strategically placed to create visual focal points and brand recognition.",
-          "Dance floor in the central or rear area.",
-          "Lighting should be atmospheric and dynamic, capable of changing color and intensity."
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front",
-          "description": "Main entrance leading into the main seating area."
-        },
-        {
-          "type": "passage",
-          "position": "back",
-          "description": "Service passage leading to restrooms or staff areas."
-        },
-        {
-          "type": "archway",
-          "position": "side",
-          "description": "Opens to a secondary seating or lounge zone."
-        }
-      ],
-      "dominantElements": [
-        "Vibrant neon lighting",
-        "Sleek, modern furniture",
-        "Reflective surfaces",
-        "Large open floor space"
-      ],
-      "uniqueIdentifiers": [
-        "Pulsating neon light installations",
-        "Futuristic, cyberpunk aesthetic",
-        "Immersive audiovisual elements"
-      ],
-      "searchDesc": "Energetic neon-lit nightclub interior, electric blues, purples, magentas. Industrial concrete.",
-      "slug": "interior-of-the-neon-pulse"
-    },
     "loc-1765357016370-x0ahb8gva": {
       "id": "loc-1765357016370-x0ahb8gva",
       "type": "host",
@@ -2056,11 +1928,6 @@
                   "id": "niche-1765299532957-wu7y0pwzu",
                   "type": "niche",
                   "children": []
-                },
-                {
-                  "id": "niche-1765355870759-qm1m6dkmj",
-                  "type": "niche",
-                  "children": []
                 }
               ]
             }
@@ -2082,6 +1949,29 @@
               "children": [
                 {
                   "id": "niche-1765357120304-1gwpznrk9",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765358109872-will6gv5p",
+      "type": "host",
+      "children": [
+        {
+          "id": "3b3e2a68-8a99-44f8-81b1-d770555f40fb",
+          "type": "region",
+          "children": [
+            {
+              "id": "89df4dd0-27ca-4354-b688-594bc098d97a",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765358155437-xoadu6bnt",
                   "type": "niche",
                   "children": []
                 }

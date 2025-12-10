@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
-import { IconChevronDown } from '@/icons';
+import { IconChevronDown, IconTrash } from '@/icons';
+import { InlineConfirm } from '@/components/ui/InlineConfirm';
 import { useLocationsStore } from '@/store/slices/locations';
 import styles from './TreeView.module.css';
 
@@ -16,6 +17,7 @@ export interface TreeItem {
 interface TreeViewProps {
   data: TreeItem[];
   onSelect?: (item: TreeItem) => void;
+  onDelete?: (item: TreeItem) => void;
   selectedId?: string;
   className?: string;
   persistenceKey?: string; // Key for localStorage persistence
@@ -24,6 +26,7 @@ interface TreeViewProps {
 interface TreeNodeProps {
   item: TreeItem;
   onSelect?: (item: TreeItem) => void;
+  onDelete?: (item: TreeItem) => void;
   selectedId?: string;
   depth?: number;
 }
@@ -31,15 +34,17 @@ interface TreeNodeProps {
 interface TreeViewContextType {
   expandedIds: Set<string>;
   toggleExpansion: (id: string) => void;
+  onDelete?: (item: TreeItem) => void;
 }
 
 const TreeViewContext = createContext<TreeViewContextType>({
   expandedIds: new Set(),
   toggleExpansion: () => {},
+  onDelete: undefined,
 });
 
 const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth = 0 }) => {
-  const { expandedIds, toggleExpansion } = useContext(TreeViewContext);
+  const { expandedIds, toggleExpansion, onDelete } = useContext(TreeViewContext);
   
   // Use context state if available (persistence), otherwise fallback to local prop or default
   const isExpanded = expandedIds.has(item.id) || (item.isExpanded && !expandedIds.size && !window.localStorage.getItem('tree_expanded'));  
@@ -87,6 +92,19 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
         <span className={styles.label} title={item.label}>
           {item.label}
         </span>
+
+        {onDelete && (
+          <div className={styles.deleteContainer}>
+            <InlineConfirm
+              onConfirm={() => onDelete(item)}
+              trigger={<IconTrash size={14} />}
+              triggerTitle="Delete node"
+              confirmTitle="Confirm delete"
+              cancelTitle="Cancel"
+              iconSize={14}
+            />
+          </div>
+        )}
       </div>
 
       {hasChildren && isExpanded && (
@@ -121,7 +139,7 @@ function findPathToNode(items: TreeItem[], targetId: string, currentPath: string
   return null;
 }
 
-export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, className, persistenceKey }) => {
+export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, onDelete, selectedId, className, persistenceKey }) => {
   // Get expansion state from locations store
   const storeExpandedIds = useLocationsStore((state) => state.expandedNodeIds || []);
   
@@ -211,7 +229,7 @@ export const TreeView: React.FC<TreeViewProps> = ({ data, onSelect, selectedId, 
   }, [expandedIds]);
 
   return (
-    <TreeViewContext.Provider value={{ expandedIds, toggleExpansion }}>
+    <TreeViewContext.Provider value={{ expandedIds, toggleExpansion, onDelete }}>
       <div className={`${styles.tree} ${className || ''}`}>
         {data.map((item) => (
           <TreeNode 

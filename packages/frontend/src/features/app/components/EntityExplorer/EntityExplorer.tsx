@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { useLocationsStore } from '@/store/slices/locations';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
@@ -110,6 +110,9 @@ export const EntityExplorer: React.FC = () => {
       }));
   }, [characterMap, characterPinnedIds, imageMap]);
   
+  // Delete action
+  const deleteNodeWithChildren = useLocationsStore(state => state.deleteNodeWithChildren);
+  
   // Action Stores
   const activeEntity = useStore(state => state.activeEntity);
   const setActiveEntity = useStore(state => state.setActiveEntity);
@@ -117,6 +120,11 @@ export const EntityExplorer: React.FC = () => {
   const updateEntityImage = useStore(state => state.updateEntityImage);
   const updateEntityProfile = useStore(state => state.updateEntityProfile);
   
+  // Handle delete for locations (with media cleanup)
+  const handleDeleteLocation = useCallback((item: TreeItem) => {
+    deleteNodeWithChildren(item.id);
+  }, [deleteNodeWithChildren]);
+
   // Helper: Activate or Create Session
   const handleSelect = React.useCallback((item: TreeItem, type: 'location' | 'character') => {
     const id = item.id;
@@ -180,6 +188,7 @@ export const EntityExplorer: React.FC = () => {
               <TreeView 
                 data={locationTreeData} 
                 onSelect={(item) => handleSelect(item, 'location')} 
+                onDelete={handleDeleteLocation}
                 selectedId={activeEntity || undefined}
                 className="p-2"
                 persistenceKey="entity-explorer-locations"
