@@ -1691,6 +1691,282 @@
       ],
       "searchDesc": "Energetic neon-lit nightclub interior, electric blues, purples, magentas. Industrial concrete.",
       "slug": "interior-of-the-neon-pulse"
+    },
+    "loc-1765357016370-x0ahb8gva": {
+      "id": "loc-1765357016370-x0ahb8gva",
+      "type": "host",
+      "name": "Aethelburg",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sprawling metropolis of impossibly tall, elegant white structures with soaring arches and intricate detailing. Vast, clean waterways weave through the city, reflecting a perpetually clear blue sky.",
+        "colorsAndLighting": "Dominated by bright daylight and the pristine white of its structures, accented by the vibrant blues of its canals and subtle metallic sheens. Shadows are soft and defined.",
+        "atmosphere": "The air is exceptionally clean and temperate, carrying a faint scent of exotic flora. A constant, gentle breeze suggests an optimized climate control system. Motion within the city is fluid and unhurried.",
+        "materials": "Primarily composed of advanced, seamless white composite materials that mimic polished stone, infused with subtle, durable golden alloys for accents. Surfaces are flawlessly smooth and self-cleaning.",
+        "mood": "An overwhelming sense of serene prosperity, advanced urban planning, and utopian existence pervades. It is a place of peace, harmony, and aspirational living.",
+        "sounds": "Harmonious city hum, gentle water flow, distant melodic chimes, soft breeze",
+        "primary_surfaces": "Seamless polished white composite materials",
+        "secondary_surfaces": "Polished golden alloys, crystal-clear water",
+        "accent_features": "Integrated vertical gardens, sculpted arches, holographic art displays",
+        "dominant": "White (structures, pathways)",
+        "secondary": "Blue/Turquoise (waterways)",
+        "accent": "Gold (accents), Green (flora)",
+        "ambient": "Bright, clear daylight",
+        "genre": "Utopian Sci-Fi",
+        "architectural_tone": "Neo-classical Futuristic Minimalism",
+        "cultural_tone": "Highly advanced, peaceful, aesthetically driven civilization that values order and leisure.",
+        "materials_base": "Advanced composites and refined metals",
+        "mood_baseline": "Optimism and serene prosperity",
+        "palette_bias": "Dominant cool spectrum with balanced warm metallic accents",
+        "soundscape_base": "Calm, harmonious, and unobtrusive",
+        "flora_base": "Abundant, meticulously curated, and integrated exotic flora",
+        "fauna_base": "Engineered, aesthetically pleasing avian species"
+      },
+      "description": "A grand, futuristic city characterized by its elegant white architecture, vibrant canals, and advanced urban design. Aethelburg embodies a utopian existence with a focus on beauty, order, and prosperity.",
+      "searchDesc": "Aethelburg: A utopian futuristic city of white architecture, vibrant canals, and advanced urban design.",
+      "slug": "aethelburg",
+      "structure": {
+        "spatialLayout": "Expansive city with grand boulevards and waterways, creating a feeling of immense scale and openness, yet meticulously organized.",
+        "navigableElements": [
+          "Canals",
+          "Skyways",
+          "Pedestrian Thoroughfares"
+        ],
+        "dominantElements": [
+          "Towering White Structures",
+          "Vast Urban Landscape"
+        ],
+        "uniqueIdentifiers": [
+          "Seamless Composite Architecture",
+          "Eco-integrated Design"
+        ]
+      }
+    },
+    "0661de2c-3759-4f62-9f21-4ca4d10f9593": {
+      "id": "0661de2c-3759-4f62-9f21-4ca4d10f9593",
+      "type": "region",
+      "name": "The Azure Canals Promenade",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Towering, elegant white structures with soaring arches and intricate golden accents line a wide, turquoise waterway. Palm trees and lush greenery sprout from balconies and planters, adding natural beauty to the pristine architecture. The city stretches endlessly in the distance.",
+        "colorsAndLighting": "Bathed in bright daylight under a clear sky, the turquoise water gleams with the reflection of the sun, illuminating the pristine white buildings and golden accents.",
+        "atmosphere": "The air is crisp and clear, suggesting a temperate climate. A gentle breeze likely rustles the palm fronds. The motion is tranquil, with sleek boats gliding on the water and people walking leisurely. The weather is consistently bright and sunny.",
+        "materials": "The primary materials are smooth, polished white stone for the buildings and promenades, complemented by gleaming golden metal accents. The boats are likely made of advanced, seamless composite materials.",
+        "mood": "The overall atmosphere is one of serene prosperity and advanced urban design, hinting at a utopian existence. It evokes feelings of peace, harmony, and aspirational living.",
+        "sounds": "Gentle water lapping, distant pleasant chatter, soft breeze",
+        "primary_surfaces": "Polished white stone facades and promenades",
+        "secondary_surfaces": "Gleaming golden metal accents, clear turquoise water",
+        "accent_features": "Lush greenery, palm trees, intricate archways",
+        "dominant": "White (buildings, promenades, boats)",
+        "secondary": "Turquoise (water)",
+        "accent": "Gold (accents), Green (foliage)",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Futuristic utopian with classical arches and ornate gold detailing",
+        "cultural_tone": "Leisurely inhabitants of an advanced civilization focused on beauty and order.",
+        "materials_base": "Polished stone and polished metal",
+        "mood_baseline": "Serene prosperity and aspirational living",
+        "palette_bias": "Cool whites and vibrant turquoises with warm gold accents",
+        "soundscape_base": "Tranquil and orderly",
+        "flora_base": "Tropical and well-maintained greenery",
+        "fauna_base": "None"
+      },
+      "description": "The central district featuring a wide, turquoise waterway flanked by towering white structures and bustling promenades. This area is characterized by its pristine, futuristic architecture and serene atmosphere.",
+      "searchDesc": "Grand futuristic city district with white architecture, canals, and golden accents under bright daylight.",
+      "slug": "the-azure-canals-promenade",
+      "structure": {
+        "spatialLayout": "Wide, open waterway with expansive promenades on either side, creating a sense of grandeur and depth.",
+        "navigableElements": [
+          "Canal",
+          "Promenades",
+          "Docks"
+        ],
+        "dominantElements": [
+          "Canal Waterway",
+          "White Towering Structures"
+        ],
+        "uniqueIdentifiers": [
+          "Turquoise Water",
+          "Golden Accents"
+        ]
+      }
+    },
+    "0485114e-2f85-4289-b857-02208026191e": {
+      "id": "0485114e-2f85-4289-b857-02208026191e",
+      "type": "location",
+      "name": "The Grand Canal Exterior",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Towering, elegant white structures with soaring arches and intricate golden accents line a wide, turquoise waterway. Palm trees and lush greenery sprout from balconies and planters, adding natural beauty to the pristine architecture. The city stretches endlessly in the distance.",
+        "colorsAndLighting": "Bathed in bright daylight under a clear sky, the turquoise water gleams with the reflection of the sun, illuminating the pristine white buildings and golden accents.",
+        "atmosphere": "The air is crisp and clear, suggesting a temperate climate. A gentle breeze likely rustles the palm fronds. The motion is tranquil, with sleek boats gliding on the water and people walking leisurely. The weather is consistently bright and sunny.",
+        "materials": "The primary materials are smooth, polished white stone for the buildings and promenades, complemented by gleaming golden metal accents. The boats are likely made of advanced, seamless composite materials.",
+        "mood": "The overall atmosphere is one of serene prosperity, advanced urban design, and a sense of utopian existence. It evokes feelings of peace, harmony, and aspirational living.",
+        "sounds": "Gentle lapping water, distant soft chatter, faint hum of unseen technology, rustling palm leaves.",
+        "primary_surfaces": "Polished white stone, gleaming golden metal",
+        "secondary_surfaces": "Seamless composite boat hulls, clear water",
+        "accent_features": "Intricate golden filigree on building facades, vibrant green foliage",
+        "dominant": "White (buildings, promenades, boats)",
+        "secondary": "Turquoise (water)",
+        "accent": "Gold (accents), Green (foliage)",
+        "ambient": "Bright, clear daylight",
+        "genre": null,
+        "architectural_tone": "Futuristic utopian with classical arches and ornate gold detailing",
+        "cultural_tone": "Advanced civilization, leisurely inhabitants, focus on beauty and order",
+        "materials_base": "Polished stone and polished metal",
+        "mood_baseline": "Serene, prosperous, utopian",
+        "palette_bias": "Cool whites and vibrant turquoises with warm gold accents",
+        "soundscape_base": "Calm water and ambient urban tranquility",
+        "flora_base": "Palm trees and lush potted greenery",
+        "fauna_base": "None"
+      },
+      "description": "An exterior scene of the main canal in Aethelburg, with elegant white buildings, golden accents, palm trees, and sleek boats moving along the turquoise water under bright daylight.",
+      "searchDesc": "Grand futuristic canal city, white buildings, gold accents, turquoise water, palm trees, bright daylight.",
+      "slug": "the-grand-canal-exterior",
+      "structure": {
+        "spatialLayout": "A wide, linear canal forms the central axis, flanked by broad promenades and towering buildings. The space feels expansive and ordered, with significant depth suggested by the distant cityscape.",
+        "navigableElements": [
+          {
+            "type": "path",
+            "position": "sides",
+            "description": "Impeccably clean white promenades"
+          },
+          {
+            "type": "passage",
+            "position": "canal",
+            "description": "Wide, turquoise waterway"
+          },
+          {
+            "type": "archway",
+            "position": "buildings",
+            "description": "Soaring arches on elegant white buildings"
+          }
+        ],
+        "dominantElements": [
+          "Elegant white buildings with soaring arches",
+          "Sleek white boats",
+          "Turquoise canal water",
+          "Palm trees and lush greenery"
+        ],
+        "uniqueIdentifiers": [
+          "Intricate golden accents on buildings",
+          "Flowing, light-colored robes of pedestrians",
+          "Reflection of sun on clear, shallow water",
+          "Endless expanse of advanced city in the distance"
+        ]
+      },
+      "primaryMedia": "media-1765357042843-ttxppqv4s"
+    },
+    "niche-1765357120304-1gwpznrk9": {
+      "id": "niche-1765357120304-1gwpznrk9",
+      "type": "niche",
+      "name": "Canal-Side Building",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior features soaring arches and intricate golden accents, reflecting the exterior's grandeur. Smooth white stone walls form the primary structure, with abundant lush greenery spilling from planters and integrated balconies. The space feels open, leading the eye towards the canal view.",
+        "colorsAndLighting": "Bathed in the bright daylight filtering through large windows, the space is illuminated by a clear, cool ambient light. The dominant white of the walls is accented by gleaming gold and the vibrant green of foliage.",
+        "atmosphere": "The air is crisp and clear, mirroring the temperate climate outside. A sense of tranquility pervades, with the distant sounds of the canal and the gentle rustle of leaves. The motion is minimal, primarily focused on the serene view.",
+        "materials": "The primary materials are smooth, polished white stone for the walls and architectural features, with polished gold used for intricate decorative accents. Planters contain rich soil supporting vibrant green foliage.",
+        "mood": "This interior evokes serenity and refined prosperity, a peaceful extension of the utopian urban design visible from the outside.",
+        "sounds": "Distant water lapping, faint urban hum, rustling leaves.",
+        "spatialLayout": "The interior is designed to feel open and expansive, with clear sightlines towards the exterior view. Archways and smooth transitions define the space.",
+        "primary_surfaces": "Polished white stone walls, polished gold detailing",
+        "secondary_surfaces": "Rich soil in planters, clear glass windows",
+        "accent_features": "Intricate golden filigree, vibrant green foliage",
+        "dominant": "White (walls, architectural elements)",
+        "secondary": "Turquoise (visible through windows)",
+        "accent": "Gold (filigree), Green (foliage)",
+        "ambient": "Bright, clear daylight",
+        "genre": null,
+        "architectural_tone": "Futuristic utopian with classical arches and ornate gold detailing",
+        "cultural_tone": "Advanced civilization, leisurely inhabitants, focus on beauty and order",
+        "materials_base": "Polished stone and polished metal",
+        "mood_baseline": "Serene, prosperous, utopian",
+        "palette_bias": "Cool whites and vibrant turquoises with warm gold accents",
+        "soundscape_base": "Calm water and ambient urban tranquility",
+        "flora_base": "Palm trees and lush potted greenery",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765357120302-y1uq5kieq",
+      "description": "An interior space within a building located to the left of the Azure Canals Promenade, featuring a large, open design with expansive views of the canal.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "spatialLayout": "This is a large, open-plan commercial space with a primary focus on expansive views. The space is designed for public access and engagement with the canal exterior.",
+        "requiredElements": [
+          "building to the left"
+        ],
+        "suggestedFixtures": [
+          "Display shelves",
+          "Seating areas",
+          "Information desk",
+          "Merchandise racks",
+          "Cashier counter",
+          "Ambient lighting"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "front",
+            "description": "Opens directly onto the Azure Canals Promenade."
+          },
+          {
+            "type": "passage",
+            "position": "back",
+            "description": "Leads to other internal areas or services."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "Connects to adjacent interior spaces if any."
+          }
+        ],
+        "dominantElements": [
+          "Large glass facade",
+          "Open floor plan",
+          "High ceilings",
+          "Polished flooring"
+        ],
+        "uniqueIdentifiers": [
+          "Direct canal view",
+          "Proximity to promenade",
+          "Modern architectural style"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "front",
+          "description": "Opens directly onto the Azure Canals Promenade."
+        },
+        {
+          "type": "passage",
+          "position": "back",
+          "description": "Leads to other internal areas or services."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "Connects to adjacent interior spaces if any."
+        }
+      ],
+      "dominantElements": [
+        "Large glass facade",
+        "Open floor plan",
+        "High ceilings",
+        "Polished flooring"
+      ],
+      "uniqueIdentifiers": [
+        "Direct canal view",
+        "Proximity to promenade",
+        "Modern architectural style"
+      ],
+      "searchDesc": "Interior of a Grand Canal building, white stone, gold accents, lush plants, canal view.",
+      "slug": "interior-of-the-grand-canal-exterior"
     }
   },
   "views": {},
@@ -1783,6 +2059,29 @@
                 },
                 {
                   "id": "niche-1765355870759-qm1m6dkmj",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765357016370-x0ahb8gva",
+      "type": "host",
+      "children": [
+        {
+          "id": "0661de2c-3759-4f62-9f21-4ca4d10f9593",
+          "type": "region",
+          "children": [
+            {
+              "id": "0485114e-2f85-4289-b857-02208026191e",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765357120304-1gwpznrk9",
                   "type": "niche",
                   "children": []
                 }

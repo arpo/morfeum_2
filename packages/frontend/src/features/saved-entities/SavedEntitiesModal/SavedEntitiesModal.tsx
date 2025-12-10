@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { Modal, ModalHeader, ModalContent } from '@/components/ui/Modal';
+import { InlineConfirm } from '@/components/ui/InlineConfirm';
 import { IconTrash, IconPin, IconPinFilled, IconCopy } from '@/icons';
 import { useSavedEntitiesLogic } from './useSavedEntitiesLogic';
 import { useEntityImages } from '@/hooks';
@@ -119,16 +120,14 @@ export function SavedEntitiesModal({ isOpen, onClose, initialTab = 'characters' 
                     >
                       {pinnedEntityIds.includes(entity.id) ? <IconPinFilled size={18} /> : <IconPin size={18} />}
                     </button>
-                    <button
-                      className={styles.deleteButton}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleDeleteEntity(entity.id);
-                      }}
-                      title={`Delete ${activeTab === 'characters' ? 'character' : 'location'}`}
-                    >
-                      <IconTrash size={18} />
-                    </button>
+                    <InlineConfirm
+                      onConfirm={() => handleDeleteEntity(entity.id)}
+                      trigger={<IconTrash size={18} />}
+                      triggerTitle={`Delete ${activeTab === 'characters' ? 'character' : 'world'}`}
+                      confirmTitle="Confirm delete"
+                      cancelTitle="Cancel"
+                      iconSize={16}
+                    />
                   </div>
                 </div>
               </div>

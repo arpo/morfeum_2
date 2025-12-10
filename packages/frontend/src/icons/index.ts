@@ -9,6 +9,7 @@ export {
   IconSettings,
   IconInfoCircle,
   IconX,
+  IconCheck,
   IconMaximize,
   IconMinimize,
   IconDeviceFloppy,

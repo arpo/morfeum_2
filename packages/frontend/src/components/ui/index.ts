@@ -34,5 +34,8 @@ export type { TabItem } from './Tabs';
 
 export { SlashCommandInput } from './SlashCommandInput/SlashCommandInput';
 
+export { InlineConfirm } from './InlineConfirm';
+export type { InlineConfirmProps } from './InlineConfirm';
+
 // Re-export icons for convenience
 export * from '@/icons';

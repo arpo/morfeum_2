@@ -118,18 +118,11 @@ export function useSavedEntitiesLogic(onClose: () => void, initialTab: EntityTab
   }, [createEntity, updateEntityImage, updateEntityProfile, setActiveEntity, onClose]);
 
   const handleDeleteLocation = useCallback((worldId: string) => {
-    const nodeCount = getWorldNodeCount(worldId);
-    const message = `Delete this world and all ${nodeCount} nodes in it?`;
-    
-    if (window.confirm(message)) {
-      deleteWorldTree(worldId);
-    }
-  }, [deleteWorldTree, getWorldNodeCount]);
+    deleteWorldTree(worldId);
+  }, [deleteWorldTree]);
 
   const handleDeleteCharacter = useCallback((characterId: string) => {
-    if (window.confirm('Are you sure you want to delete this character?')) {
-      deleteCharacter(characterId);
-    }
+    deleteCharacter(characterId);
   }, [deleteCharacter]);
 
   const handlePinLocation = useCallback((locationId: string) => {
