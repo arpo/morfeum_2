@@ -92,6 +92,11 @@ export class WorldTreeBuilder {
       node.primaryMedia = data.primaryMedia;
     }
 
+    // Add isPassThrough flag for pass-through regions
+    if (data.isPassThrough) {
+      node.isPassThrough = true;
+    }
+
     return node;
   }
 }

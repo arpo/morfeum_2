@@ -14,6 +14,8 @@ export type NodeType = 'host' | 'region' | 'location' | 'niche';
 
 export interface SlashCommandConfig {
   requiresNodeType: NodeType[] | null;
+  /** If true, command is blocked on pass-through regions */
+  blockedOnPassThrough?: boolean;
   description: string;
   category: 'navigation' | 'creation' | 'media';
 }
@@ -51,6 +53,7 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   // Media commands
   VIEW: { 
     requiresNodeType: ['host', 'region', 'location', 'niche'], 
+    blockedOnPassThrough: true,  // Pass-through regions have no unique visual
     description: 'Generate image for current node',
     category: 'media'
   }
@@ -73,14 +76,21 @@ export type CommandFlag = typeof COMMAND_FLAGS[keyof typeof COMMAND_FLAGS];
 
 /**
  * Get available commands for a given node type
+ * @param currentNodeType - Type of current node
+ * @param isPassThrough - True if current node is a pass-through region
  */
-export function getAvailableCommands(currentNodeType: NodeType | null): string[] {
+export function getAvailableCommands(
+  currentNodeType: NodeType | null,
+  isPassThrough: boolean = false
+): string[] {
   return Object.entries(SLASH_COMMANDS)
     .filter(([_, config]) => {
       // Command with null requiresNodeType is always available
       if (config.requiresNodeType === null) return true;
       // If no current node, only show commands that don't require a node
       if (!currentNodeType) return false;
+      // Block commands that are blocked on pass-through regions
+      if (isPassThrough && config.blockedOnPassThrough) return false;
       // Check if current node type is allowed
       return config.requiresNodeType.includes(currentNodeType);
     })

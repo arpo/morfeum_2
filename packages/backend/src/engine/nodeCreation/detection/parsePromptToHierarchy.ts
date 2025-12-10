@@ -20,7 +20,9 @@ import type { HierarchySpec } from '../types';
  * Prompt for hierarchy classification
  * Creates a SINGLE branch with appropriate depth
  * 
- * IMPORTANT: Niches should be RARE - only when user explicitly requests interior
+ * IMPORTANT: 
+ * - Niches should be RARE - only when user explicitly requests interior
+ * - Regions should be PASS-THROUGH unless user explicitly names a district/area
  */
 function buildClassificationPrompt(userPrompt: string): string {
   return `You are a world-building assistant. Analyze the user's location description and create a SINGLE-BRANCH hierarchy.
@@ -37,6 +39,34 @@ function buildClassificationPrompt(userPrompt: string): string {
 3. **STOP AT LOCATION by default** - Show the EXTERIOR of buildings/sites
 4. **NICHE IS RARE** - ONLY create niche when user EXPLICITLY says: "inside", "interior", "within", "in the room", "indoors", "enter"
 
+## ⚠️ PASS-THROUGH REGIONS (IMPORTANT):
+Pass-through regions are for GENERIC/UNDEFINED places where no specific known location is referenced.
+- Set "regionIsPassThrough": true
+- Region name should be just "Region"
+- Region description should be empty ""
+- Pass-through regions inherit ALL DNA from host (no unique styling)
+
+**When to use pass-through region (for generic/undefined settings):**
+- "A steampunk factory" → regionIsPassThrough: true (generic setting, no known place)
+- "A medieval castle" → regionIsPassThrough: true (generic setting, undefined location)
+- "A Victorian pub" → regionIsPassThrough: true (generic Victorian era, no specific city)
+- "A cozy cottage" → regionIsPassThrough: true (undefined location)
+- "An alien building on an alien planet" → regionIsPassThrough: true (abstract sci-fi)
+- "A crystal tower in a dream realm" → regionIsPassThrough: true (abstract fantasy)
+
+**When to use REAL region (regionIsPassThrough: false) - for KNOWN places:**
+- "A pub in London" → LLM creates a district like "Soho" or "Whitechapel" (known real city)
+- "A restaurant in Tokyo" → LLM creates a district like "Shibuya" (known real city)
+- "A pub in Camden" → real region "Camden" (explicitly named)
+- "The Shire in Middle-earth" → real region "The Shire" (known fictional universe)
+- "A hobbit hole in Middle-earth" → LLM creates "The Shire" (known fictional universe)
+- "Bag End" → uses "The Shire" in "Middle-earth" (known fictional location)
+- "Financial District tower" → real region "Financial District" (explicitly named)
+
+**Key question to determine: Is this a KNOWN place (real or established fictional)?**
+- YES (London, Tokyo, Middle-earth, Gotham City, etc.) → LLM creates/uses a region
+- NO (generic "a castle", "a factory", "an alien planet") → pass-through region
+
 ## ⚠️ NICHE RESTRICTION (VERY IMPORTANT):
 - DO NOT create a niche just because a building has interior spaces
 - DO NOT create a niche for "a pub", "a house", "a shop" - these show EXTERIOR
@@ -45,44 +75,79 @@ function buildClassificationPrompt(userPrompt: string): string {
 
 ## Depth Detection:
 - City/world only → stop at HOST (depth 1)
-- District/area mentioned → stop at REGION (depth 2)
+- District/area EXPLICITLY mentioned → stop at REGION (depth 2)
 - Building/site mentioned → stop at LOCATION (depth 3) - EXTERIOR VIEW
 - User explicitly says "inside/interior/within" → include NICHE (depth 4)
 
 ## Output JSON Format:
 {
   "host": { "name": "...", "description": "..." },
-  "region": { "name": "...", "description": "..." },  // omit if not needed
+  "region": { "name": "...", "description": "..." },  // Use name "Region" and description "" for pass-through
+  "regionIsPassThrough": true/false,                  // TRUE if no explicit district/area mentioned
   "location": { "name": "...", "description": "..." }, // omit if not needed
   "niche": { "name": "...", "description": "..." },    // ONLY if user explicitly requests interior
   "depth": 1-4,
   "isInterior": true/false
 }
 
-## Examples - NO NICHE (most common):
+## Examples - WITH PASS-THROUGH REGION (for generic/undefined settings):
+
+Input: "A steampunk factory with giant gears"
+Output: { "host": { "name": "Steampunk Metropolis", "description": "A city of brass, steam, and Victorian innovation" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "The Cog Works", "description": "A massive factory with giant exposed gears and billowing steam. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A medieval castle"
+Output: { "host": { "name": "Medieval Kingdom", "description": "A realm of knights and nobility" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "Dragonstone Keep", "description": "An imposing medieval castle with high stone walls and battlements. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A Victorian pub with ornate brass fittings"
+Output: { "host": { "name": "Victorian Era", "description": "The Victorian period with gaslit streets and ornate architecture" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "The Crown & Anchor", "description": "A traditional Victorian pub with ornate brass fittings and etched glass windows. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A cozy cottage with a roaring fireplace"
+Output: { "host": { "name": "Countryside", "description": "Rolling hills and pastoral landscapes" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "Rose Cottage", "description": "A cozy stone cottage with climbing roses and smoke curling from the chimney. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "An alien building on an alien planet"
+Output: { "host": { "name": "Xyloth Prime", "description": "A distant alien world with bizarre geometry and otherworldly physics" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "The Resonance Spire", "description": "A towering alien structure with non-Euclidean architecture. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A crystal tower in a dream realm"
+Output: { "host": { "name": "The Dreamscape", "description": "An ethereal dimension of shifting reality" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "The Prism Spire", "description": "A tower of pure crystal refracting impossible colors. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+## Examples - WITH REAL REGION (for KNOWN places - real or established fictional):
+
+Input: "A pub in London"
+Output: { "host": { "name": "London", "description": "The historic capital of England" }, "region": { "name": "Soho", "description": "A vibrant district known for its entertainment and traditional pubs" }, "regionIsPassThrough": false, "location": { "name": "The Dog and Duck", "description": "A classic London pub with Victorian character. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A restaurant in Tokyo"
+Output: { "host": { "name": "Tokyo", "description": "Japan's bustling capital of tradition and modernity" }, "region": { "name": "Shibuya", "description": "A lively district of youth culture and dining" }, "regionIsPassThrough": false, "location": { "name": "Ichiran Ramen", "description": "A traditional ramen restaurant with private booths. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A hobbit hole in Middle-earth"
+Output: { "host": { "name": "Middle-earth", "description": "Tolkien's fantasy realm of hobbits, elves, and ancient magic" }, "region": { "name": "The Shire", "description": "A peaceful pastoral region of rolling green hills and hobbit holes" }, "regionIsPassThrough": false, "location": { "name": "Hillside Burrow", "description": "A cozy hobbit hole with a round green door. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A building in Gotham City"
+Output: { "host": { "name": "Gotham City", "description": "A dark, crime-ridden metropolis of gothic architecture" }, "region": { "name": "The Narrows", "description": "A dangerous district of decay and shadows" }, "regionIsPassThrough": false, "location": { "name": "Falcone Tower", "description": "A towering gothic building looming over the streets. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+## Examples - WITH REAL REGION (when district/area is explicitly mentioned):
 
 Input: "Go to London"
 Output: { "host": { "name": "London", "description": "The historic capital of England, a sprawling metropolis of history and modernity." }, "depth": 1, "isInterior": false }
 
 Input: "Camden in London"
-Output: { "host": { "name": "London", "description": "The historic capital of England" }, "region": { "name": "Camden", "description": "A vibrant, eclectic neighborhood known for its markets and alternative culture" }, "depth": 2, "isInterior": false }
+Output: { "host": { "name": "London", "description": "The historic capital of England" }, "region": { "name": "Camden", "description": "A vibrant, eclectic neighborhood known for its markets and alternative culture" }, "regionIsPassThrough": false, "depth": 2, "isInterior": false }
 
-Input: "A Victorian pub with ornate brass fittings"
-Output: { "host": { "name": "Victorian London", "description": "London during the Victorian era, gaslit streets and ornate architecture" }, "region": { "name": "Historic District", "description": "An area of preserved Victorian architecture and traditional establishments" }, "location": { "name": "The Crown & Anchor", "description": "A traditional Victorian pub with ornate brass fittings, etched glass windows, and warm wooden interior glimpsed through the windows. EXTERIOR VIEW showing the building facade." }, "depth": 3, "isInterior": false }
+Input: "A pub in Camden, London"
+Output: { "host": { "name": "London", "description": "The historic capital of England" }, "region": { "name": "Camden", "description": "A vibrant, eclectic neighborhood known for its markets and alternative culture" }, "regionIsPassThrough": false, "location": { "name": "The Lock Tavern", "description": "A traditional Camden pub with eclectic decor. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
 
-Input: "A cozy cottage with a roaring fireplace"
-Output: { "host": { "name": "English Countryside", "description": "Rolling hills and pastoral landscapes" }, "region": { "name": "Cotswolds Village", "description": "A quaint village with honey-colored stone buildings" }, "location": { "name": "Rose Cottage", "description": "A cozy stone cottage with climbing roses and smoke curling from the chimney. EXTERIOR VIEW showing the charming facade." }, "depth": 3, "isInterior": false }
-
-Input: "A medieval castle"
-Output: { "host": { "name": "Medieval Kingdom", "description": "A realm of knights and nobility" }, "region": { "name": "Highland Province", "description": "Mountainous terrain with strategic fortifications" }, "location": { "name": "Dragonstone Keep", "description": "An imposing medieval castle with high stone walls and battlements. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+Input: "The Shire in Middle-earth"
+Output: { "host": { "name": "Middle-earth", "description": "Tolkien's fantasy realm of hobbits, elves, and ancient magic" }, "region": { "name": "The Shire", "description": "A peaceful pastoral region of rolling green hills and hobbit holes" }, "regionIsPassThrough": false, "depth": 2, "isInterior": false }
 
 ## Examples - WITH NICHE (rare - only when explicitly interior):
 
 Input: "Inside a cozy Victorian pub with a roaring fireplace"
-Output: { "host": { "name": "Victorian London", "description": "London during the Victorian era" }, "region": { "name": "Historic District", "description": "An area of traditional establishments" }, "location": { "name": "The Hearthstone Pub", "description": "A cozy Victorian pub known for its warm atmosphere" }, "niche": { "name": "The Fireside Nook", "description": "A cozy interior space dominated by a roaring fireplace, with plush seating and warm amber lighting" }, "depth": 4, "isInterior": true }
+Output: { "host": { "name": "Victorian Era", "description": "The Victorian period" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "The Hearthstone Pub", "description": "A cozy Victorian pub known for its warm atmosphere" }, "niche": { "name": "The Fireside Nook", "description": "A cozy interior space dominated by a roaring fireplace, with plush seating and warm amber lighting" }, "depth": 4, "isInterior": true }
 
 Input: "The kitchen of a farmhouse"
-Output: { "host": { "name": "Rural Countryside", "description": "Pastoral farmland" }, "region": { "name": "Valley Farm District", "description": "Fertile agricultural area" }, "location": { "name": "Oakwood Farmhouse", "description": "A traditional farmhouse" }, "niche": { "name": "The Kitchen", "description": "A rustic farmhouse kitchen with a wood-burning stove and copper pots" }, "depth": 4, "isInterior": true }
+Output: { "host": { "name": "Countryside", "description": "Pastoral farmland" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "Oakwood Farmhouse", "description": "A traditional farmhouse" }, "niche": { "name": "The Kitchen", "description": "A rustic farmhouse kitchen with a wood-burning stove and copper pots" }, "depth": 4, "isInterior": true }
+
+Input: "Inside a pub in London"
+Output: { "host": { "name": "London", "description": "The historic capital of England" }, "region": { "name": "Camden", "description": "An eclectic district of markets and music venues" }, "regionIsPassThrough": false, "location": { "name": "The Roundhouse Tavern", "description": "A classic London pub" }, "niche": { "name": "The Main Bar", "description": "A warm interior with brass fittings and wooden beams" }, "depth": 4, "isInterior": true }
 
 Now analyze this prompt:
 "${userPrompt}"`;
@@ -92,6 +157,8 @@ export interface ParsedHierarchy {
   spec: HierarchySpec;
   depth: number;
   isInterior: boolean;
+  /** True if region is a pass-through (inherits all DNA from host) */
+  regionIsPassThrough: boolean;
   rawResponse: any;
 }
 
@@ -151,6 +218,7 @@ export async function parsePromptToHierarchy(
     spec,
     depth: parsed.depth || countSpecDepth(spec),
     isInterior: parsed.isInterior || false,
+    regionIsPassThrough: parsed.regionIsPassThrough || false,
     rawResponse: parsed,
   };
 }

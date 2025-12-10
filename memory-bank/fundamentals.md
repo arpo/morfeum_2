@@ -11,7 +11,7 @@ The world is structured in **4 layers**. Not all layers are required - a world c
 | Layer | Description | Example |
 |-------|-------------|---------|
 | **Host** | World/Setting - governs tone, culture, social logic | Göteborg, Metropolis |
-| **Region** | District/Biome - defines sub-culture, local climate | Ringön, Financial District |
+| **Region** | District/Biome - defines sub-culture, local climate (can be pass-through) | Ringön, Financial District |
 | **Location** | Building/Site - specific place of activity | The Anchor Pub, Botanical Dome |
 | **Niche** | Room/Space - micro-environment (interior OR exterior) | VIP room, Rooftop terrace |
 
@@ -19,6 +19,42 @@ The world is structured in **4 layers**. Not all layers are required - a world c
 - Nodes always have a parent (except Host)
 - A world can be just one Host - layers are added as needed
 - Children inherit from parents via the DNA system
+- Regions can be "pass-through" (see below)
+
+### Pass-Through Regions
+
+Pass-through regions are for **GENERIC/UNDEFINED** places where no specific known location is referenced.
+
+| Aspect | Behavior |
+|--------|----------|
+| **Name** | Just "Region" (no specific name) |
+| **DNA** | Empty - inherits ALL from host |
+| **isPassThrough** | `true` flag on node |
+| **Purpose** | Satisfies hierarchy requirements |
+| **Commands** | `/VIEW` blocked, `/NEW_LOCATION` allowed |
+
+**When to use pass-through (generic/undefined settings):**
+- "A steampunk factory" → pass-through (generic, no known place)
+- "A medieval castle" → pass-through (generic, undefined location)
+- "A Victorian pub" → pass-through (generic era, no specific city)
+- "A cozy cottage" → pass-through (undefined location)
+- "An alien building on an alien planet" → pass-through (abstract sci-fi)
+
+**When to use REAL region (KNOWN places - real or established fictional):**
+- "A pub in London" → LLM creates "Soho" or "Whitechapel" (known city)
+- "A restaurant in Tokyo" → LLM creates "Shibuya" (known city)
+- "A hobbit hole in Middle-earth" → LLM creates "The Shire" (known universe)
+- "A building in Gotham City" → LLM creates "The Narrows" (known fictional city)
+- "A pub in Camden" → real region "Camden" (explicitly named)
+
+**Key question: Is this a KNOWN place (real or established fictional)?**
+- YES (London, Tokyo, Middle-earth, Gotham City) → LLM creates region
+- NO (generic "a castle", "a factory", "an alien planet") → pass-through
+
+**Benefits of pass-through:**
+- Faster creation (no LLM call for region DNA)
+- Can add real sibling regions later
+- DNA flows directly from host to location
 
 ---
 

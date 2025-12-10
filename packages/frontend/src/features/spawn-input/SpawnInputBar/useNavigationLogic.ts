@@ -59,6 +59,14 @@ export function useNavigationLogic() {
         setMovementInput('');
         return;
       }
+
+      // Block commands on pass-through nodes
+      if (currentNode.isPassThrough) {
+        setErrorMessage('Commands cannot be run on pass-through regions. Navigate to a location first.');
+        setMovementInput('');
+        setTimeout(() => setErrorMessage(null), 5000);
+        return;
+      }
     }
 
     // Route to appropriate command handler

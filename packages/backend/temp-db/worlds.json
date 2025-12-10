@@ -1,1021 +1,939 @@
 {
   "nodes": {
-    "loc-1765298826493-vtpkm29wq": {
-      "id": "loc-1765298826493-vtpkm29wq",
+    "loc-1765364435858-fukqdwuwv": {
+      "id": "loc-1765364435858-fukqdwuwv",
       "type": "host",
-      "name": "Göteborg",
+      "name": "Xyloth Prime",
       "spaceType": "exterior",
       "dna": {
-        "looks": "An aerial view reveals a city bisected by a network of glistening canals, reflecting the muted hues of historic brick buildings and modern concrete structures. Rooftops showcase a mix of red tiles and slate, interspersed with green spaces.",
-        "colorsAndLighting": "Dominated by muted blues of the water and sky, contrasted with the warm browns and greys of brickwork. Sunlight glints off the water and metallic structures, creating subtle highlights and deep shadows.",
-        "atmosphere": "The air carries the crisp scent of the sea and the faint aroma of industry. A moderate temperature prevails, with a gentle breeze often sweeping in from the harbor. The city hums with a steady rhythm of activity.",
-        "materials": "A blend of weathered red brick, rough-hewn stone for older structures, and polished concrete and steel for newer developments. Cobblestones pave many of the older streets, showing signs of age and wear.",
-        "mood": "A sense of industrious vitality and historical grounding. The city evokes feelings of exploration and urban charm, balanced with pragmatic functionality.",
-        "sounds": "Water lapping, distant ship horns, city traffic hum, chatter, seagulls, bells.",
-        "primary_surfaces": "Cobblestone streets, weathered brick facades, canal water",
-        "secondary_surfaces": "Red tile roofs, concrete docks, steel shipping cranes, glass windows",
-        "accent_features": "Brightly painted canal boats, colorful awnings, park greenery, ornate lampposts",
-        "dominant": "Muted blues and greys with coverage over water and sky",
-        "secondary": "Warm browns and reds on brick buildings and rooftops",
-        "accent": "Yellow and orange on signage and some building details, vibrant greens in parks",
-        "ambient": "Bright, somewhat diffused daylight",
-        "genre": "Urban Harbor City",
-        "architectural_tone": "Nautical industrial with historic brick and stone elements",
-        "cultural_tone": "Maritime trade and vibrant urban life",
-        "materials_base": "Stone, brick, metal, water",
-        "mood_baseline": "Active and historic",
-        "palette_bias": "Blues, greys, browns, and reds",
-        "soundscape_base": "Maritime and urban bustle",
-        "flora_base": "Parks and street trees",
-        "fauna_base": "Seagulls, urban birds"
+        "looks": "The planet's surface is punctuated by colossal, gravity-defying structures that twist and contort in defiance of Euclidean principles. Vast crystalline formations and organic, pulsating growths intermingle, creating a landscape of surreal beauty and unsettling alienness.",
+        "colorsAndLighting": "The sky is a perpetual twilight, dominated by deep indigos and swirling violets, occasionally pierced by streams of emerald and cyan light. Luminescence emanates from the planet's core and from its bizarre flora, casting an ethereal and shifting glow.",
+        "atmosphere": "The air is cool, charged with a palpable, low-frequency resonance that hums through the very ground. Strange, melodic whispers can be heard on imperceptible currents, suggesting an alien form of communication. Patches of the atmosphere exhibit localized distortions and energy fluctuations.",
+        "materials": "The dominant materials are unknown, obsidian-like substances that absorb and refract light in impossible ways. Crystalline structures with infinite facets and surfaces that appear to shift and ripple are common.",
+        "mood": "Awe-inspiring and bewildering, evoking a sense of profound alienness and cosmic mystery. There is a palpable feeling of ancient, incomprehensible power and an invitation to explore the unknown.",
+        "sounds": "Low resonant hum, faint melodic whispers, subtle atmospheric crackles",
+        "primary_surfaces": "Obsidian-like, fractal, light-refracting",
+        "secondary_surfaces": "Crystalline, impossibly smooth, shifting facets",
+        "accent_features": "Illusory gaps showing nebulae, pulsing emerald and cyan lights",
+        "dominant": "Deep Indigo (70%)",
+        "secondary": "Violet (25%)",
+        "accent": "Emerald and Cyan (5%)",
+        "ambient": "Ethereal luminescence",
+        "genre": "Cosmic Horror Sci-Fi",
+        "architectural_tone": "Impossible, non-Euclidean alien geometry",
+        "cultural_tone": "Alien communication hubs, sacred sites, places of profound mystery",
+        "materials_base": "Smooth, reflective, impossible",
+        "mood_baseline": "Awe-inspiring, bewildering, cosmic mystery",
+        "palette_bias": "Deep blues, purples, and glowing neons",
+        "soundscape_base": "Resonant, whispering, subtly energetic",
+        "flora_base": "Bizarre, luminescent, geometrically complex",
+        "fauna_base": "None (or entities beyond conventional understanding)"
       },
-      "description": "A major port city in Sweden, known for its canals and vibrant cultural scene.",
-      "searchDesc": "Aerial view of Göteborg, Sweden: canals, brick buildings, cranes, and vibrant city life.",
-      "slug": "g-teborg",
+      "description": "A distant alien world with bizarre geometry and otherworldly physics. Its surface is a canvas for incomprehensible structures, shaped by forces that defy earthly understanding. The very fabric of reality seems more fluid here, allowing for the existence of impossible architectures.",
+      "searchDesc": "An alien world of impossible geometry, resonant energies, and shifting, deep-indigo skies.",
+      "slug": "xyloth-prime",
       "structure": {
-        "spatialLayout": "A relatively flat urban expanse characterized by a grid-like street pattern intersected by organic canal routes. The scale is moderately dense, with a good balance of built-up areas and open water.",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "along the canals",
-            "description": "Waterways and their bordering paths"
-          },
-          {
-            "type": "archway",
-            "position": "between districts",
-            "description": "Stone arches connecting historic areas"
-          },
-          {
-            "type": "path",
-            "position": "cobblestone streets",
-            "description": "Winding city streets"
-          }
-        ],
+        "spatialLayout": "Vast, open expanses punctuated by impossibly tall and convoluted structures. The sense of scale is distorted, with illusions of depth and distance constantly shifting.",
         "dominantElements": [
-          "Canal network",
-          "Historic brick buildings",
-          "Modern shipping cranes",
-          "Lively public squares"
+          "Impossible geometric landmarks",
+          "Resonant energy fields"
         ],
         "uniqueIdentifiers": [
-          "The Fish Church (Feskekôrka)",
-          "Liseberg amusement park",
-          "Trädgårdsföreningen (Garden Society)",
-          "Shipyard cranes"
+          "Anomalous gravitational pockets",
+          "Shifting atmospheric colors"
         ]
-      },
-      "primaryMedia": "media-1765298842179-oaafcd0la"
+      }
     },
-    "4cd4d980-3832-4a12-9cca-097437518b77": {
-      "id": "4cd4d980-3832-4a12-9cca-097437518b77",
+    "e41d55ac-106c-4da8-8c8c-2b67d80087cf": {
+      "id": "e41d55ac-106c-4da8-8c8c-2b67d80087cf",
       "type": "region",
-      "name": "Ringön",
+      "name": "Region",
       "spaceType": "exterior",
-      "description": "A dynamic island district within Göteborg, Ringön is a hub of maritime industry and creative innovation. It buzzes with the energy of workshops, shipyards, and artist studios, all set against the backdrop of the city's bustling harbor.",
-      "dna": {
-        "looks": "Ringön's aerial view showcases a gritty, functional landscape dominated by large industrial structures, shipping containers, and active dry docks. Cranes punctuate the skyline, while weathered warehouses line the water's edge, interspersed with smaller, more eclectic buildings housing studios.",
-        "colorsAndLighting": "The colors here lean towards the functional: deep greys of concrete and metal, rust-reds of weathered steel, and the muted blues and greens of the harbor water. Lighting is often functional, with harsh industrial lamps and the natural, sometimes overcast, daylight casting stark shadows.",
-        "atmosphere": "The air is thick with the scent of brine, diesel, and metal. A constant hum of industrial activity and the clang of hammers create a robust soundscape. The temperature is typically that of the open harbor, feeling cooler with a persistent breeze.",
-        "materials": "Predominantly rough concrete, corrugated steel, weathered metal plating, and aged wood. Cobblestones might appear near older dock areas, often showing signs of heavy wear and tear from vehicles and machinery.",
-        "mood": "A sense of raw, productive energy and a gritty, unpolished charm. It evokes feelings of hard work, creativity, and maritime grit.",
-        "sounds": "Ship horns, grinding metal, engine noise, water lapping, seagulls, distant traffic, chatter.",
-        "primary_surfaces": "Concrete, weathered steel, industrial metal",
-        "secondary_surfaces": "Corrugated iron, aged wood, rough stone",
-        "accent_features": "Graffiti art on warehouse walls, colorful shipping containers, eclectic signage for studios",
-        "dominant": "Muted greys and browns (industrial structures, concrete)",
-        "secondary": "Deep blues and greens (water), rust-reds (metal)",
-        "accent": "Occasional vibrant colors from graffiti or signage",
-        "ambient": "Functional and often shadowed",
-        "genre": null,
-        "architectural_tone": "Functional industrial with maritime elements and artistic overlays",
-        "cultural_tone": "Maritime trade, craftsmanship, and emerging artistic/creative industries",
-        "materials_base": "Metal, concrete, weathered wood, stone",
-        "mood_baseline": "Industrious and raw",
-        "palette_bias": "Greys, browns, blues, rust-reds",
-        "soundscape_base": "Industrial and maritime",
-        "flora_base": "None",
-        "fauna_base": "Seagulls, harbor seals (occasional)"
-      },
-      "searchDesc": "Ringön: Industrial island with shipyards, art studios, and maritime bustle.",
-      "slug": "ringon",
-      "structure": {
-        "spatialLayout": "The island's layout is utilitarian, with a focus on maximizing workspace and access to the water. Spaces are often open and industrial, with defined pathways for heavy machinery and pedestrian routes along the periphery.",
-        "navigableElements": [
-          "Waterways",
-          "Industrial jetties",
-          "Pedestrian walkways",
-          "Bicycle paths"
-        ],
-        "dominantElements": [
-          "Active shipyards and dry docks",
-          "Warehouses and industrial buildings",
-          "Artistic studios and workshops",
-          "Harbor cranes",
-          "Canal-side promenades"
-        ],
-        "uniqueIdentifiers": [
-          "The distinct blend of heavy industry with a thriving arts scene",
-          "Working shipyards juxtaposed with creative spaces",
-          "The palpable smell of industry mixed with the sea",
-          "Boat traffic and industrial machinery sounds"
-        ]
-      },
-      "imageUrl": "https://v3b.fal.media/files/b/0a85a1e1/FLOcetDB5yBXUJ6nfuGI0.jpg",
-      "primaryMedia": "media-1765298900834-zmhxhm6yu"
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
     },
-    "7c5f587f-5837-4101-8d22-f55bcd48ce1c": {
-      "id": "7c5f587f-5837-4101-8d22-f55bcd48ce1c",
+    "a2e87a87-b9d2-4e15-b882-80feb9b41e57": {
+      "id": "a2e87a87-b9d2-4e15-b882-80feb9b41e57",
       "type": "location",
-      "name": "The Circuit Lounge",
+      "name": "The Resonance Spire",
       "spaceType": "exterior",
-      "description": "A pulsating techno bar carved into a repurposed industrial shell, its exterior hinting at the sonic and visual energy within. It stands as a beacon of underground culture amidst Ringön's functional landscape.",
       "dna": {
-        "looks": "The bar presents as a utilitarian structure, likely a converted industrial unit, with its original concrete and corrugated steel shell largely intact. It's adorned with bold, often abstract graffiti and intermittent, stark neon lighting that cuts through the grime.",
-        "colorsAndLighting": "Dominated by the dark greys of metal and concrete, punctuated by vibrant, electric blues, purples, and pinks from the neon. Lighting is stark, creating deep shadows and highlighting the grime and textures.",
-        "atmosphere": "The air is thick with the faint smell of ozone and exhaust, mingling with the usual industrial tang. A constant, low-frequency bass pulse vibrates through the ground, a palpable invitation to the energetic space within. The temperature is kept artificially cool and often humid.",
-        "materials": "Predominantly rough concrete, heavily weathered corrugated steel, and exposed metal piping. Accents of LED lighting and durable, often scratched, synthetic materials.",
-        "mood": "An edgy, underground vibe that promises intense sonic experiences and a release from the mundane.",
-        "sounds": "Deep bass throb, industrial hum, distant chatter, metallic echoes.",
-        "primary_surfaces": "Weathered corrugated steel, rough concrete walls",
-        "secondary_surfaces": "Exposed metal pipes, ventilation grates, industrial doors",
-        "accent_features": "Neon signage, graffiti murals, circuit board motifs",
-        "dominant": "Dark grey (steel and concrete)",
-        "secondary": "Rust-reds and muted blues (weathering and old paint)",
-        "accent": "Electric blues, purples, and pinks (neon)",
-        "ambient": "Harsh, shadowed",
+        "looks": "The Resonance Spire is an impossibly tall structure that twists and bends in ways that defy conventional understanding of geometry. Its surface is a tapestry of constantly shifting fractal patterns and impossibly sharp angles. Glimpses of alien skies and distant nebulae can be seen through illusory gaps in its form.",
+        "colorsAndLighting": "The Spire emanates a soft, internal luminescence, casting an ethereal glow. Dominant colors are deep indigos and violets, punctuated by pulsing emerald and cyan light.",
+        "atmosphere": "The air around the Spire hums with a palpable energy, a low resonant frequency that vibrates through bone. The temperature is cool and slightly charged, with faint, melodic whispers carried on imperceptible currents.",
+        "materials": "Composed of an unknown, obsidian-like material that appears to absorb and refract light simultaneously. The surface texture is smooth yet possesses an unsettling depth, giving the impression of infinite facets.",
+        "mood": "Awe-inspiring and bewildering. It evokes a sense of profound alienness and cosmic mystery, hinting at powers beyond mortal comprehension.",
+        "sounds": "Low hum, resonant vibrations, faint whispers, distant chimes",
+        "primary_surfaces": "Iridescent, shifting, obsidian-like",
+        "secondary_surfaces": "Fractal patterns, illusory planes",
+        "accent_features": "Pulsing emerald and cyan light nodes",
+        "dominant": "Deep Indigo (70%)",
+        "secondary": "Violet (25%)",
+        "accent": "Emerald and Cyan (5%)",
+        "ambient": "Ethereal, cool glow",
         "genre": null,
-        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
-        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
-        "materials_base": "Metal, concrete, industrial waste materials",
-        "mood_baseline": "Gritty, energetic",
-        "palette_bias": "Greys, blacks, electric neons",
-        "soundscape_base": "Bass-heavy, industrial pulse",
+        "architectural_tone": "Impossible, non-Euclidean alien geometry",
+        "cultural_tone": "Alien communication hub, mysterious and sacred",
+        "materials_base": "Smooth, reflective, impossible",
+        "mood_baseline": "Awe, mystery, disorientation",
+        "palette_bias": "Deep blues, purples, and glowing neons",
+        "soundscape_base": "Energetic resonance and ethereal whispers",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "searchDesc": "Techno bar in Ringön, features graffiti, neon, and industrial materials.",
-      "slug": "the-circuit-lounge",
+      "description": "A towering alien structure with non-Euclidean architecture. EXTERIOR VIEW.",
+      "searchDesc": "Towering alien spire with non-Euclidean architecture on Xyloth Prime. Shimmering entrance.",
+      "slug": "the-resonance-spire",
       "structure": {
-        "spatialLayout": "A relatively compact, rectangular structure with a low ceiling, emphasizing density and sound containment. The exterior offers little sense of depth, prioritizing a solid, imposing facade.",
+        "spatialLayout": "The Spire's spatial layout is deliberately paradoxical, appearing to occupy more space than physically possible. Its form suggests an immense, complex interior that folds in on itself.",
         "navigableElements": [
           {
+            "type": "archway",
+            "position": "base",
+            "description": "A shimmering, non-Euclidean archway that pulses with soft light."
+          },
+          {
             "type": "door",
-            "position": "center",
-            "description": "A heavy, reinforced steel door with glowing neon accents, leading into the main bar area."
-          },
-          {
-            "type": "window",
-            "position": "left",
-            "description": "A small, barred window offering a glimpse of pulsating lights and silhouettes within."
-          },
-          {
-            "type": "passage",
-            "position": "right",
-            "description": "A dimly lit, narrow passage partially obscured by corrugated metal, potentially leading to a back entrance or service area."
+            "position": "mid-spire",
+            "description": "A seamless, obsidian-like portal that phases in and out of existence."
           }
         ],
         "dominantElements": [
-          "Corrugated steel facade with graffiti art",
-          "Large, heavy industrial doors",
-          "Pulsating neon signage",
-          "Ventilation grates and exposed pipework"
+          "The impossibly twisted spire itself",
+          "Shifting geometric patterns on its surface",
+          "The entrance archway",
+          "Celestial bodies visible through gaps in its form"
         ],
         "uniqueIdentifiers": [
-          "An incongruous splash of vibrant, often glitch-art inspired murals on industrial plating",
-          "A low, resonant bass throb emanating from within, even when the doors are closed",
-          "A distinctive smell of ozone mixed with stale beer and sweat",
-          "A prominent, stylized circuit board motif integrated into the signage"
+          "Non-Euclidean geometry",
+          "Pulsating light sources",
+          "Shifting facade textures",
+          "Gravity-defying structures",
+          "Humming resonant sound"
         ]
       },
-      "imageUrl": "https://v3b.fal.media/files/b/0a85a1e4/bLGkP17cSURa26-cMOQ9E.jpg",
-      "primaryMedia": "media-1765298931039-4t1e40x2l"
+      "primaryMedia": "media-1765364451031-31i3n0rnv"
     },
-    "niche-1765298961054-r460id9v3": {
-      "id": "niche-1765298961054-r460id9v3",
+    "niche-1765365046557-3ak4xlfv3": {
+      "id": "niche-1765365046557-3ak4xlfv3",
       "type": "niche",
-      "name": "The Circuit Lounge Interior",
+      "name": "Alien Control Room",
       "spaceType": "interior",
       "dna": {
-        "looks": "This bar is a converted industrial unit, retaining its raw concrete and corrugated steel shell. Bold, abstract graffiti adorns the surfaces, punctuated by sharp neon lights that carve through the dimness. The space feels raw and unpolished, a canvas for its patrons and performers.",
-        "colorsAndLighting": "Dominated by the deep greys of metal and concrete, the space is energized by electric blues, purples, and pinks from stark neon lighting. Shadows are deep and dramatic, highlighting textures and grime.",
-        "atmosphere": "The air carries a faint industrial tang, mingled with ozone and exhaust fumes. A constant, low-frequency bass pulse vibrates through the floor, creating a palpable sense of energy. The environment is artificially cool and often humid, enhancing the sensory experience.",
-        "materials": "The primary materials are rough, weathered concrete and heavily textured corrugated steel. Exposed metal piping and ventilation grates are common, with accents of LED lighting and durable, scratched synthetic materials.",
-        "mood": "An intense, gritty, and energetic underground vibe that offers a release from the ordinary and promises powerful sonic experiences.",
-        "sounds": "Low-frequency bass, industrial pulse, muffled crowd noise, distant machinery hum",
-        "spatialLayout": "An open, utilitarian layout suggesting a converted industrial hall. The space feels vast but enclosed by its raw materials, with a focus on a central performance or bar area. Depth is created through dramatic lighting and shadow.",
-        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floors and ceilings",
-        "secondary_surfaces": "Exposed metal pipes, ventilation grates, industrial doors, structural beams",
-        "accent_features": "Bold abstract graffiti murals, intermittent stark neon signage, circuit board motifs",
-        "dominant": "Dark grey (steel and concrete)",
-        "secondary": "Rust-reds and muted blues (weathering)",
-        "accent": "Electric blues, purples, and pinks (neon)",
-        "ambient": "Harsh, shadowed",
+        "looks": "The interior is a vast, impossibly twisted space that mirrors the exterior geometry of The Resonance Spire. Complex alien apparatus occupies the space, hinting at advanced control functions and unknown purposes. Glimpses of alien skies can be seen through illusory gaps in the structure.",
+        "colorsAndLighting": "The space is bathed in a soft, internal luminescence of deep indigos and violets, punctuated by the pulsing glow of emerald and cyan light emanating from the apparatus. Shadows are deep and shifting.",
+        "atmosphere": "The air hums with a palpable energy, a low resonant frequency that vibrates through the space. The temperature is cool and slightly charged, with faint, melodic whispers carried on imperceptible currents.",
+        "materials": "The primary material is the same unknown, obsidian-like substance as the exterior, smooth yet possessing unsettling depth. The strange apparatus is constructed from similar materials, often incorporating crystalline elements and glowing conduits.",
+        "mood": "Awe-inspiring and bewildering, evoking profound alienness and cosmic mystery. The atmosphere is one of potent, controlled energy.",
+        "sounds": "Energetic resonance, faint melodic whispers, low hum",
+        "spatialLayout": "The room's shape is dictated by the spire's impossible geometry, creating vast, non-Euclidean spaces with shifting planes and a sense of infinite depth.",
+        "primary_surfaces": "Obsidian-like, shifting fractal patterns",
+        "secondary_surfaces": "Illusory planes, crystalline conduits",
+        "accent_features": "Pulsing emerald and cyan light nodes on apparatus",
+        "dominant": "Deep Indigo (70%)",
+        "secondary": "Violet (25%)",
+        "accent": "Emerald and Cyan (5%)",
+        "ambient": "Ethereal, cool glow",
         "genre": null,
-        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
-        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
-        "materials_base": "Metal, concrete, industrial waste materials",
-        "mood_baseline": "Gritty, energetic",
-        "palette_bias": "Greys, blacks, electric neons",
-        "soundscape_base": "Bass-heavy, industrial pulse",
+        "architectural_tone": "Impossible, non-Euclidean alien geometry",
+        "cultural_tone": "Alien communication hub, mysterious and sacred",
+        "materials_base": "Smooth, reflective, impossible",
+        "mood_baseline": "Awe, mystery, disorientation",
+        "palette_bias": "Deep blues, purples, and glowing neons",
+        "soundscape_base": "Energetic resonance and ethereal whispers",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765298961054-1ujw8u9ml",
-      "description": "The interior of The Circuit Lounge offers a welcoming and stylish entertainment space, designed for relaxation and socializing.",
+      "primaryMedia": "media-1765365046556-ypct2fwef",
+      "description": "An alien control room situated within the impossibly twisted structure of the Resonance Spire, filled with bizarre and unknown apparatus.",
       "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
+        "form": "irregular",
+        "roofType": "null",
         "scale": "medium",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "A medium-sized lounge space with distinct seating zones and a central bar area.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "Lounge seating (sofas, armchairs)",
-          "Bar counter with stools",
-          "Cocktail tables",
-          "Ambient lighting fixtures",
-          "Sound system speakers",
-          "Decorative plants"
-        ],
-        "navigableElements": [
-          {
-            "type": "open-passage",
-            "position": "back wall",
-            "description": "Passage leading to other areas of the Circuit Lounge."
-          },
-          {
-            "type": "door",
-            "position": "right wall",
-            "description": "Entrance/exit door to the exterior."
-          },
-          {
-            "type": "passage",
-            "position": "left wall",
-            "description": "Passage to restrooms or private areas."
-          }
-        ],
-        "dominantElements": [
-          "Central bar area",
-          "Comfortable lounge seating arrangements",
-          "Large glass windows",
-          "Dim, atmospheric lighting"
-        ],
-        "uniqueIdentifiers": [
-          "Lounge atmosphere",
-          "Circuit theme elements (implied from parent name)",
-          "Varied seating options"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "open-passage",
-          "position": "back wall",
-          "description": "Passage leading to other areas of the Circuit Lounge."
-        },
-        {
-          "type": "door",
-          "position": "right wall",
-          "description": "Entrance/exit door to the exterior."
-        },
-        {
-          "type": "passage",
-          "position": "left wall",
-          "description": "Passage to restrooms or private areas."
-        }
-      ],
-      "dominantElements": [
-        "Central bar area",
-        "Comfortable lounge seating arrangements",
-        "Large glass windows",
-        "Dim, atmospheric lighting"
-      ],
-      "uniqueIdentifiers": [
-        "Lounge atmosphere",
-        "Circuit theme elements (implied from parent name)",
-        "Varied seating options"
-      ],
-      "searchDesc": "Edgy industrial lounge with concrete, steel, graffiti, and electric neon.",
-      "slug": "interior-of-the-circuit-lounge"
-    },
-    "niche-1765298986774-mi4le51mb": {
-      "id": "niche-1765298986774-mi4le51mb",
-      "type": "niche",
-      "name": "The Dance Floor",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This is a vast, open space carved out of the industrial shell, with a central, unadorned floor designed for movement. Prominent industrial lighting rigs hang from the high ceiling, casting sharp beams. A raised DJ booth, constructed from salvaged metal, is positioned to command the space.",
-        "colorsAndLighting": "The primary palette consists of dark greys from the concrete and steel, heavily contrasted by dynamic, strobing electric blues, purples, and pinks from the neon accents and lighting rigs. Shadows are deep and sharp, emphasizing the raw textures.",
-        "atmosphere": "The air hums with a palpable energy, thick with the faint scent of ozone and the ever-present, low-frequency bass pulse that resonates through the floor and walls. The temperature is deliberately kept cool and slightly humid.",
-        "materials": "The dominant materials are rough, exposed concrete walls and heavily weathered corrugated steel panels. Exposed metal piping and ventilation grates are visible throughout, interspersed with durable, scratch-marked synthetic flooring near the dance floor.",
-        "mood": "Intensely energetic and raw, evoking a sense of underground revelry and uninhibited expression.",
-        "sounds": "Pounding bass, driving rhythms, industrial hum, crowd murmur",
-        "spatialLayout": "A large, roughly rectangular open floor space dominates the area, with the DJ booth positioned at one end and potential seating or standing areas along the periphery.",
-        "primary_surfaces": "Rough concrete walls, weathered corrugated steel panels",
-        "secondary_surfaces": "Exposed metal piping, ventilation grates, industrial metal DJ booth structure",
-        "accent_features": "Stark neon lighting strips, graffiti murals, industrial spotlights",
-        "dominant": "Dark grey (60%)",
-        "secondary": "Electric blues and purples (30%)",
-        "accent": "Pinks (10%)",
-        "ambient": "Harsh, shadowed",
-        "genre": null,
-        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
-        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
-        "materials_base": "Metal, concrete, industrial waste materials",
-        "mood_baseline": "Gritty, energetic",
-        "palette_bias": "Greys, blacks, electric neons",
-        "soundscape_base": "Bass-heavy, industrial pulse",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765298986773-vciybg2b3",
-      "description": "The primary entertainment hub, this large dance area is designed for high-energy movement and immersion, featuring a vast, open floor plan and state-of-the-art sound and lighting.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "open-passages",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "A large, open rectangular area designed for dancing, with ample space for movement and a central focus on the dance floor itself.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "Dance floor lighting rig",
-          "DJ booth",
-          "Sound system speakers",
-          "Bar access",
-          "Seating areas around the perimeter",
-          "Mirrored walls"
-        ],
-        "navigableElements": [
-          {
-            "type": "open-passage",
-            "position": "central front",
-            "description": "Opens into the main lounge area."
-          },
-          {
-            "type": "passage",
-            "position": "rear right",
-            "description": "Leads to backstage or service areas."
-          },
-          {
-            "type": "passage",
-            "position": "rear left",
-            "description": "Leads to restrooms or other facilities."
-          }
-        ],
-        "dominantElements": [
-          "Expansive dance floor",
-          "Integrated sound system",
-          "Dynamic lighting rig",
-          "High ceiling"
-        ],
-        "uniqueIdentifiers": [
-          "Central focus on movement",
-          "Immersive audio-visual experience",
-          "Energy and vibrancy"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "open-passage",
-          "position": "central front",
-          "description": "Opens into the main lounge area."
-        },
-        {
-          "type": "passage",
-          "position": "rear right",
-          "description": "Leads to backstage or service areas."
-        },
-        {
-          "type": "passage",
-          "position": "rear left",
-          "description": "Leads to restrooms or other facilities."
-        }
-      ],
-      "dominantElements": [
-        "Expansive dance floor",
-        "Integrated sound system",
-        "Dynamic lighting rig",
-        "High ceiling"
-      ],
-      "uniqueIdentifiers": [
-        "Central focus on movement",
-        "Immersive audio-visual experience",
-        "Energy and vibrancy"
-      ],
-      "searchDesc": "Gritty industrial dance floor with stark neon, raw concrete, and pulsing bass.",
-      "slug": "dance-area"
-    },
-    "niche-1765299020300-88tdnud85": {
-      "id": "niche-1765299020300-88tdnud85",
-      "type": "niche",
-      "name": "The Circuit Lounge Restaurant",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The restaurant occupies a large, open industrial space. The bar is a central, utilitarian structure made of rough concrete and steel, possibly with salvaged metal shelving. Seating areas are varied, some comprising rough wooden tables and metal chairs, others more modular and industrial in feel. Exposed ductwork and piping snake across the high ceilings.",
-        "colorsAndLighting": "Dominated by the dark greys of concrete and steel, punctuated by vibrant, electric blues, purples, and pinks from intermittent neon lighting. Harsh, directional lighting creates deep shadows, highlighting textures and grime.",
-        "atmosphere": "The air carries a faint, lingering industrial tang, perhaps mixed with cooking aromas. A constant, low-frequency bass pulse is felt rather than heard, contributing to an energetic and slightly edgy ambiance. The temperature is kept artificially cool.",
-        "materials": "Predominantly rough, unadorned concrete walls and floors, complemented by heavily weathered corrugated steel panels. Accents of exposed metal piping, ventilation grates, and durable, often scratched, synthetic materials for tabletops and seating.",
-        "mood": "An edgy, underground vibe that offers a distinct escape, promising a vibrant and unpretentious dining experience.",
-        "sounds": "Low-frequency bass, clatter of dishes, muffled conversation, distant industrial hum.",
-        "spatialLayout": "An open-plan layout maximizing the industrial shell, with distinct zones for the bar, dining, and kitchen access. High ceilings and a sense of raw space are prominent.",
-        "primary_surfaces": "Rough concrete walls and floors, weathered corrugated steel panels",
-        "secondary_surfaces": "Exposed metal pipes, ventilation grates, industrial doors, salvaged metal shelving",
-        "accent_features": "Bold graffiti murals, stark neon signage, circuit board motifs on select surfaces",
-        "dominant": "Dark Grey (concrete and steel)",
-        "secondary": "Rust-reds and muted blues (weathering)",
-        "accent": "Electric blues, purples, and pinks (neon signage)",
-        "ambient": "Harsh, shadowed",
-        "genre": null,
-        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
-        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
-        "materials_base": "Metal, concrete, industrial waste materials",
-        "mood_baseline": "Gritty, energetic",
-        "palette_bias": "Greys, blacks, electric neons",
-        "soundscape_base": "Bass-heavy, industrial pulse",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765299020299-23oh7aoxz",
-      "description": "A medium-scale, rectangular restaurant space with a wide orientation, featuring large glass windows and a flat ceiling. It serves as a commercial dining establishment within the Circuit Lounge.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "medium",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "commercial",
-        "spatialLayout": "A medium-sized, rectangular dining area designed for patrons to eat. Tables are arranged for optimal flow and customer experience, with a clear view towards a central service area.",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "industrial",
+        "spatialLayout": "This space is characterized by its non-standard, contorted geometry, filled with a complex array of alien technology. The layout is dictated by the placement of this strange apparatus.",
         "requiredElements": [
-          "restaurant"
+          "strange apparatus"
         ],
         "suggestedFixtures": [
-          "dining tables",
-          "chairs",
-          "bar area",
-          "waitstaff station",
-          "ambient lighting",
-          "decorative plants"
-        ],
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "back wall",
-            "description": "Entrance to kitchen/service areas."
-          },
-          {
-            "type": "passage",
-            "position": "left wall",
-            "description": "Passage towards the main 'Circuit Lounge' area."
-          },
-          {
-            "type": "door",
-            "position": "front wall",
-            "description": "Main entrance from the parent structure."
-          }
-        ],
-        "dominantElements": [
-          "dining tables and chairs",
-          "large windows",
-          "a central bar",
-          "ambient lighting"
-        ],
-        "uniqueIdentifiers": [
-          "modern, clean aesthetic",
-          "integrated ambient lighting",
-          "a prominent bar as a focal point"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "back wall",
-          "description": "Entrance to kitchen/service areas."
-        },
-        {
-          "type": "passage",
-          "position": "left wall",
-          "description": "Passage towards the main 'Circuit Lounge' area."
-        },
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "Main entrance from the parent structure."
-        }
-      ],
-      "dominantElements": [
-        "dining tables and chairs",
-        "large windows",
-        "a central bar",
-        "ambient lighting"
-      ],
-      "uniqueIdentifiers": [
-        "modern, clean aesthetic",
-        "integrated ambient lighting",
-        "a prominent bar as a focal point"
-      ],
-      "searchDesc": "Underground industrial restaurant with neon and graffiti.",
-      "slug": "restaurant"
-    },
-    "niche-1765299083085-woospqb9e": {
-      "id": "niche-1765299083085-woospqb9e",
-      "type": "niche",
-      "name": "The Rooftop Terrace",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "An exposed, open-air space atop the industrial structure. Rough concrete parapets are heavily tagged with graffiti, and the railings are made from weathered corrugated steel. Basic, robust seating is scattered throughout, offering unobstructed views.",
-        "colorsAndLighting": "Dominated by the grey of concrete and steel, illuminated by the stark, ambient glow from the city and intermittent neon spill from below. Deep shadows are cast by the structure itself and any minimal overhead elements.",
-        "atmosphere": "The air is cooler and more exposed than below, carrying the faint scent of rain and distant city fumes. A palpable sense of elevation and raw openness pervades, with the constant low-frequency bass pulse still resonating from the bar beneath.",
-        "materials": "The primary materials are rough, weather-beaten concrete for the parapet walls and heavily patinated corrugated steel for any barriers or seating elements. Exposed metal piping may also be present. Dirt and grime are integral to the textures.",
-        "mood": "A raw, exposed, and defiant space offering a panoramic perspective. It evokes a sense of freedom and a continuation of the underground energy.",
-        "sounds": "Distant city hum, wind, muffled bass from below",
-        "spatialLayout": "An open, flat expanse defined by the building's footprint, offering a wide, panoramic view of the surroundings.",
-        "primary_surfaces": "Graffiti-covered rough concrete parapet, weathered corrugated steel railings",
-        "secondary_surfaces": "Exposed structural metal, metal seating",
-        "accent_features": "Bold graffiti art, intermittent neon lighting spill from below",
-        "dominant": "Dark grey (concrete, steel)",
-        "secondary": "Varying shades of graffiti colors",
-        "accent": "Electric blues, purples, and pinks (from distant neon)",
-        "ambient": "Harsh, shadowed, with distant light pollution",
-        "genre": null,
-        "architectural_tone": "Brutalist industrial with avant-garde artistic overlays",
-        "cultural_tone": "Underground music scene, counter-culture enthusiasts",
-        "materials_base": "Metal, concrete, industrial waste materials",
-        "mood_baseline": "Gritty, energetic",
-        "palette_bias": "Greys, blacks, electric neons",
-        "soundscape_base": "Bass-heavy, industrial pulse",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765299083085-un9qs4hhu",
-      "description": "An open-air rooftop terrace extending from 'The Circuit Lounge', offering a spacious environment for guests to enjoy views and socialize.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "open-sky",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "open-passages",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "An expansive open-air space offering panoramic views, designed for mingling and relaxation.",
-        "requiredElements": [
-          "the roof top terrase"
-        ],
-        "suggestedFixtures": [
-          "comfortable seating areas",
-          "bar counter",
-          "ambient lighting",
-          "planters with greenery",
-          "overhead heaters or misters (seasonal)",
-          "music system"
+          "Control consoles",
+          "Holographic displays",
+          "Alien machinery",
+          "Diagnostic equipment",
+          "Power conduits",
+          "Unusual seating"
         ],
         "navigableElements": [
           {
             "type": "passage",
             "position": "center",
-            "description": "Main entry point from the interior of The Circuit Lounge."
-          },
-          {
-            "type": "stairs",
-            "position": "corner",
-            "description": "Secondary access, potentially leading to other rooftop levels or ground."
+            "description": "A winding passage leading deeper into the spire."
           },
           {
             "type": "archway",
-            "position": "back",
-            "description": "Opening to a more secluded seating area or viewing deck."
+            "position": "rear",
+            "description": "An archway hinting at further alien chambers."
           }
         ],
         "dominantElements": [
-          "expansive open floor plan",
-          "unobstructed city views",
-          "outdoor seating arrangements",
-          "bar area"
+          "Impossibly twisted spire structure",
+          "Alien control consoles",
+          "Interconnected strange apparatus",
+          "Unconventional lighting"
         ],
         "uniqueIdentifiers": [
-          "open-air setting",
-          "rooftop location",
-          "panoramic vistas"
+          "Impossible twists",
+          "Extraterrestrial technology",
+          "Alien control room designation"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "strange apparatus"
+        ],
+        "suggested": [
+          "Control consoles",
+          "Holographic displays",
+          "Alien machinery",
+          "Diagnostic equipment",
+          "Power conduits",
+          "Unusual seating"
+        ],
+        "placementNotes": [
+          "Apparatus should be intricately networked and visually complex.",
+          "Consoles and displays should emit faint, otherworldly light.",
+          "Seating should appear designed for non-humanoid forms.",
+          "Maintain a sense of cramped, alien functionality."
         ]
       },
       "navigableElements": [
         {
           "type": "passage",
           "position": "center",
-          "description": "Main entry point from the interior of The Circuit Lounge."
-        },
-        {
-          "type": "stairs",
-          "position": "corner",
-          "description": "Secondary access, potentially leading to other rooftop levels or ground."
+          "description": "A winding passage leading deeper into the spire."
         },
         {
           "type": "archway",
-          "position": "back",
-          "description": "Opening to a more secluded seating area or viewing deck."
+          "position": "rear",
+          "description": "An archway hinting at further alien chambers."
         }
       ],
       "dominantElements": [
-        "expansive open floor plan",
-        "unobstructed city views",
-        "outdoor seating arrangements",
-        "bar area"
+        "Impossibly twisted spire structure",
+        "Alien control consoles",
+        "Interconnected strange apparatus",
+        "Unconventional lighting"
       ],
       "uniqueIdentifiers": [
-        "open-air setting",
-        "rooftop location",
-        "panoramic vistas"
+        "Impossible twists",
+        "Extraterrestrial technology",
+        "Alien control room designation"
       ],
-      "searchDesc": "Open-air rooftop terrace with industrial bar aesthetic, concrete and steel.",
-      "slug": "the-roof-top-terrase"
+      "searchDesc": "Alien control room inside the impossibly twisted Resonance Spire, filled with strange apparatus.",
+      "slug": "interior-of-the-resonance-spire"
     },
-    "9ba4abd5-81e5-4ddf-8f1a-d70016e28c51": {
-      "id": "9ba4abd5-81e5-4ddf-8f1a-d70016e28c51",
-      "type": "location",
-      "name": "The Foundry Canvas",
+    "loc-1765365099317-p7waorkbt": {
+      "id": "loc-1765365099317-p7waorkbt",
+      "type": "host",
+      "name": "Aethelgard: The Shattered Peaks",
       "spaceType": "exterior",
-      "description": "A sprawling art studio housed within a weathered industrial warehouse on Ringön island. Large, graffiti-adorned doors hint at the creative energy contained within its robust, metal-clad shell.",
       "dna": {
-        "looks": "A large, rectangular warehouse structure with a prominent corrugated steel exterior. Sections are heavily adorned with colorful, contemporary graffiti art. Large industrial windows are spaced unevenly along its length, and heavy steel doors mark the main entrances.",
-        "colorsAndLighting": "Dominated by the muted greys and rust-reds of weathered metal, punctuated by the vibrant, diverse colors of graffiti. Natural light is diffused through grimy windows, with harsh industrial lighting potentially visible at night.",
-        "atmosphere": "The air carries a faint but distinct scent of oil paint and solvents, mingling with the briny, industrial aroma of Ringön. The constant hum of distant harbor activity forms the backdrop to the focused creative energy within.",
-        "materials": "Primarily rough, corrugated steel plating and exposed structural steel beams. The concrete foundation is likely rough and weathered. Graffiti adds a layer of vibrant, textured paint.",
-        "mood": "A juxtaposition of raw industrial utility and vibrant artistic expression, fostering a sense of creative freedom and productive energy.",
-        "sounds": "Distant ship horns, seagulls, faint industrial hum, wind, occasional clatter.",
-        "primary_surfaces": "Weathered corrugated steel walls, rough concrete base",
-        "secondary_surfaces": "Graffiti-covered panels, reinforced glass windows, heavy steel doors",
-        "accent_features": "Vibrant graffiti murals, exposed structural supports, visible stacks of materials through openings",
-        "dominant": "Muted greys and rust-reds (metal)",
-        "secondary": "Kaleidoscope of graffiti colors (accents)",
-        "accent": "Clean white primer (potential studio accents)",
-        "ambient": "Natural daylight, industrial lighting",
+        "looks": "Vast, imposing landscapes dominated by colossal geological formations and rugged terrain. Impossibly tall spires, deep chasms, and raw, elemental beauty define the visual identity. Structures are often integrated directly into the natural rock faces.",
+        "colorsAndLighting": "Dominated by the stark contrasts of dark earth and rock against dramatic skies. Lighting is often harsh, with deep shadows cast by towering formations and infrequent, intense sources like volcanic glows or ethereal magical lights.",
+        "atmosphere": "The air is often thin and carries the bite of elemental forces – wind, volcanic ash, or biting cold. A sense of immense scale, ancient power, and profound isolation pervades the atmosphere, punctuated by the raw sounds of nature.",
+        "materials": "Primarily raw, unworked geological materials like basalt, granite, obsidian, and crystalline formations. Textures are rough, elemental, and show signs of extreme weathering or elemental impact.",
+        "mood": "Awe-inspiring, formidable, and profoundly isolating. The landscapes evoke a sense of primal power and insignificance in the face of overwhelming natural forces.",
+        "sounds": "Howling winds, creaking stone, distant rumbling, elemental echoes, stark silence",
+        "primary_surfaces": "Sheer rock faces, jagged peaks, volcanic scree",
+        "secondary_surfaces": "Glacial ice, hardened lava flows, crystalline veins",
+        "accent_features": "Erupting geysers, glowing magma vents, ancient carvings, stark snowdrifts",
+        "dominant": "Deep grey (60%)",
+        "secondary": "Black (20%)",
+        "accent": "Icy white (10%), fiery orange (5%), obsidian sheen (5%)",
+        "ambient": "Dim, often shadowed, with strong directional light or internal luminescence",
+        "genre": "Fantasy",
+        "architectural_tone": "Brutalist mountain fortress with naturalistic spire forms",
+        "cultural_tone": "Ancient defense, isolation, formidable power",
+        "materials_base": "Volcanic rock, elemental materials",
+        "mood_baseline": "Foreboding and unyielding",
+        "palette_bias": "Monochromatic, cool tones with stark contrasts",
+        "soundscape_base": "Elemental, echoing, vast",
+        "flora_base": "Hardy, wind-battered alpine plants or petrified flora",
+        "fauna_base": "Creatures adapted to extreme environments (e.g., rock lizards, ice drakes, elemental spirits)"
+      },
+      "description": "A realm of untamed magic and ancient, colossal geology. Jagged mountains scrape a sky often choked with ash, and the very earth groans with primordial power. This is a world where colossal forces have shaped both the land and its inhabitants.",
+      "searchDesc": "Aethelgard: A realm of colossal mountains, untamed magic, and primal geological power.",
+      "slug": "aethelgard-the-shattered-peaks",
+      "structure": {
+        "spatialLayout": "Vast, vertical, and often claustrophobic in scale. Think immense vertical drops, narrow passages between colossal natural formations, and expansive, desolate plateaus.",
+        "dominantElements": [
+          "Sky-piercing mountain ranges",
+          "Volcanic formations",
+          "Immense geological structures"
+        ],
+        "uniqueIdentifiers": [
+          "Floating sky-islands",
+          "Rivers of molten rock",
+          "Magical aurorae"
+        ]
+      },
+      "primaryMedia": "media-1765365192403-u89xljbhc"
+    },
+    "30e34d68-cd2d-4bab-a490-8d51ae576813": {
+      "id": "30e34d68-cd2d-4bab-a490-8d51ae576813",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "de02adf7-3433-45a2-8fa1-5cdf6d1e21df": {
+      "id": "de02adf7-3433-45a2-8fa1-5cdf6d1e21df",
+      "type": "location",
+      "name": "Dragon's Tooth Castle",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A brutalist fortress hewn from dark, volcanic rock, resembling a monstrous, jagged tooth reaching into the sky. Its primary structure is a series of impossibly tall, sharp spires that pierce the clouds, connected by narrow, winding walkways and fortified battlements.",
+        "colorsAndLighting": "Dominated by deep greys and blacks of volcanic stone, with stark white highlights from perpetual snow on the highest peaks. Light is sparse, often casting long, deep shadows, with occasional glints from ice or distant stars.",
+        "atmosphere": "The air is thin, frigid, and bites at exposed skin, carrying the constant keen of the wind. A sense of immense isolation and ancient, brooding power permeates the space, as if the mountain itself is a slumbering beast. Occasional gusts of icy wind sweep across the desolate peak.",
+        "materials": "Primarily unworked, dark volcanic basalt and granite, showing signs of extreme erosion and elemental weathering. Iron is used sparingly for reinforcement and weaponry, appearing heavily corroded and blackened.",
+        "mood": "Foreboding and unyielding. The castle evokes a sense of awe at its raw power and a primal fear of the desolate, unforgiving environment it commands.",
+        "sounds": "howling wind, distant thunder, creaking stone, echoing cries",
+        "primary_surfaces": "jagged stone, sheer rock faces, windswept battlements",
+        "secondary_surfaces": "corroded iron, icy ledges, shadowed alcoves",
+        "accent_features": "gleaming ice crystals, wind-torn banners, gargoyle carvings",
+        "dominant": "deep grey (90%)",
+        "secondary": "black (5%)",
+        "accent": "icy white (3%), rust brown (2%)",
+        "ambient": "dim, stark, cold",
         "genre": null,
-        "architectural_tone": "Functional industrial with artistic overlay",
-        "cultural_tone": "Artist collective, creative production, independent studio",
-        "materials_base": "Metal, concrete, weathered wood, paint",
-        "mood_baseline": "Gritty, productive, creative",
-        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
-        "soundscape_base": "Industrial harbor ambient",
+        "architectural_tone": "brutalist mountain fortress with naturalistic spire forms",
+        "cultural_tone": "ancient defense, isolation, formidable power",
+        "materials_base": "volcanic rock, elemental materials",
+        "mood_baseline": "menacing, austere, majestic",
+        "palette_bias": "monochromatic, cool tones",
+        "soundscape_base": "elemental, stark",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "searchDesc": "The Foundry Canvas art studio in a Ringön warehouse. Gritty industrial exterior, graffiti art, large steel doors.",
-      "slug": "the-foundry-canvas",
+      "description": "A formidable castle with jagged spires, perched on a desolate peak. EXTERIOR VIEW.",
+      "searchDesc": "Jagged Dragon's Tooth Castle on a desolate peak, a formidable fantasy fortress with sheer stone walls and dark spires.",
+      "slug": "dragon-s-tooth-castle",
       "structure": {
-        "spatialLayout": "A vast, open-plan interior with high ceilings, typical of a warehouse. The exterior presents a solid, imposing form against the harbor landscape.",
+        "spatialLayout": "An vertical, almost organic growth from the mountain peak, with layers of interconnected platforms and impossibly tall, thin structures. The spaces are cramped and exposed, designed for defense and minimal comfort.",
         "navigableElements": [
           {
             "type": "door",
-            "position": "center",
-            "description": "A large, double industrial steel door, weathered and covered in vibrant graffiti, leading into the main studio space."
+            "position": "base",
+            "description": "massive, iron-bound oak"
           },
           {
-            "type": "door",
-            "position": "left",
-            "description": "A smaller, rusted metal service door on the side, possibly leading to storage or a back area."
+            "type": "path",
+            "position": "approach",
+            "description": "treacherous, winding stone"
           },
           {
-            "type": "window",
-            "position": "right",
-            "description": "A tall, grimy industrial window with reinforced glass, offering a glimpse of canvases and art supplies inside."
-          },
-          {
-            "type": "passage",
-            "position": "background",
-            "description": "An open loading bay door, revealing stacks of materials and unfinished sculptures within the vast interior."
+            "type": "archway",
+            "position": "gatehouse",
+            "description": "imposing, shadowed stone"
           }
         ],
         "dominantElements": [
-          "Corrugated steel walls",
-          "Graffiti art",
-          "Large industrial windows",
-          "Heavy steel doors",
-          "Exposed structural beams"
+          "Jagged spires",
+          "Sheer stone walls",
+          "Towering battlements",
+          "Bleak mountain peak"
         ],
         "uniqueIdentifiers": [
-          "Vibrant graffiti art contrasting with industrial exterior",
-          "The sheer scale of the warehouse structure",
-          "Visible creative clutter through windows",
-          "The scent of paint and solvent mixed with sea air"
+          "Tooth-like rock formations",
+          "Wind-worn gargoyles",
+          "Blackened iron ramparts",
+          "Echoing cavern entrances"
         ]
       },
-      "imageUrl": "https://v3b.fal.media/files/b/0a85b7a2/i-uRpF_CG1zGJPlNNrypK.jpg",
-      "primaryMedia": "media-1765354582561-lw8j9p9kp"
+      "primaryMedia": "media-1765365116296-p8kbvrsfd"
     },
-    "niche-1765355842283-2w9cabfj1": {
-      "id": "niche-1765355842283-2w9cabfj1",
+    "niche-1765365155996-nopt276k0": {
+      "id": "niche-1765365155996-nopt276k0",
       "type": "niche",
-      "name": "The Foundry Canvas Interior",
+      "name": "Dragon's Tooth Castle Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, rectangular open space characteristic of a warehouse, with high ceilings and exposed structural steel beams. The walls are predominantly clad in corrugated steel, generously layered with vibrant and diverse contemporary graffiti art. Large, industrial windows are scattered along the upper sections, admitting diffused natural light.",
-        "colorsAndLighting": "The base palette is dominated by the muted greys and rust-reds of weathered metal. This is dramatically contrasted by the kaleidoscope of colors from the graffiti. Natural light filters through grimy windows, creating a soft, diffused illumination.",
-        "atmosphere": "The air is thick with the distinct scents of oil paint and solvents, layered with the briny, industrial aroma of the nearby harbor. A constant, low hum of distant maritime activity serves as a backdrop to the focused creative energy within.",
-        "materials": "Rough, corrugated steel plating forms the primary wall material, resting on a weathered concrete foundation. Exposed structural steel beams add to the industrial feel. The surfaces are further textured by layers of vibrant, applied paint from the graffiti.",
-        "mood": "A dynamic blend of raw industrial utility and energetic artistic expression, fostering an environment of creative freedom and intense productivity.",
-        "sounds": "Distant harbor hum, faint creative ambient sounds",
-        "spatialLayout": "A large, open rectangular volume with high ceilings, offering a sense of expansive space ideal for artistic endeavors.",
-        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floor",
-        "secondary_surfaces": "Graffiti-covered panels, reinforced glass windows",
-        "accent_features": "Vibrant graffiti murals, exposed structural supports",
-        "dominant": "Muted greys (corrugated steel)",
-        "secondary": "Rust-reds (weathered metal)",
-        "accent": "Kaleidoscope of graffiti colors",
-        "ambient": "Diffused natural daylight",
+        "looks": "Vast, echoing halls carved from dark, unworked volcanic rock. The interior mirrors the fortress's exterior, with sharply angled walls, impossibly high ceilings that disappear into shadow, and naturalistic, jagged formations. Walkways and battlements are visible at higher levels through openings.",
+        "colorsAndLighting": "Dominated by deep greys and blacks of the volcanic stone. Light is extremely sparse, cast from unseen sources, creating deep, long shadows and stark contrasts. Glints of ice on stone surfaces are rare but striking.",
+        "atmosphere": "The air is thin, biting cold, and still, carrying a profound silence broken only by the distant, mournful keen of the wind. A pervasive sense of immense age, isolation, and slumbering, elemental power emanates from the stone itself.",
+        "materials": "Primarily unworked, dark volcanic basalt and granite, exhibiting extreme erosion and elemental weathering. Iron, where present for structural reinforcement, is heavily corroded and blackened.",
+        "mood": "Foreboding, unyielding, and awe-inspiring. The space instills a primal fear of its raw power and the unforgiving environment it inhabits.",
+        "sounds": "Distant wind, echoing silence, dripping water, stone groans",
+        "spatialLayout": "Immense, cavernous spaces with sharp, irregular angles. Verticality is emphasized by high ceilings and visible upper levels, creating a sense of oppressive scale.",
+        "primary_surfaces": "jagged volcanic stone walls, sheer rock faces, rough-hewn floors",
+        "secondary_surfaces": "corroded iron fixtures, icy patches on stone, deep shadowed alcoves",
+        "accent_features": "gleaming ice crystals, wind-smoothed rock, carved stone formations",
+        "dominant": "deep grey (90%)",
+        "secondary": "black (5%)",
+        "accent": "icy white (3%), rust brown (2%)",
+        "ambient": "dim, stark, cold",
         "genre": null,
-        "architectural_tone": "Functional industrial with artistic overlay",
-        "cultural_tone": "Artist collective, creative production, independent studio",
-        "materials_base": "Metal, concrete, weathered wood, paint",
-        "mood_baseline": "Gritty, productive, creative",
-        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
-        "soundscape_base": "Industrial harbor ambient",
+        "architectural_tone": "brutalist mountain fortress with naturalistic spire forms",
+        "cultural_tone": "ancient defense, isolation, formidable power",
+        "materials_base": "volcanic rock, elemental materials",
+        "mood_baseline": "menacing, austere, majestic",
+        "palette_bias": "monochromatic, cool tones",
+        "soundscape_base": "elemental, stark",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765355842281-s3dfql88u",
-      "description": "The interior of The Foundry Canvas, a large-scale industrial space characterized by its expansive, open layout and robust structural elements, suitable for manufacturing, workshops, or extensive storage.",
+      "primaryMedia": "media-1765365155995-as10d924p",
+      "description": "The interior of Dragon's Tooth Castle, characterized by its gothic architecture, likely serving as a main hall or living area.",
       "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "industrial",
-        "spatialLayout": "A large, open industrial space with high ceilings and significant floor area, designed for manufacturing or extensive storage. The layout emphasizes a clear, expansive work or storage zone.",
+        "form": "gothic",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "spatialLayout": "A grand central hall with high, vaulted ceilings, featuring imposing stone walls and large, arched windows that allow light to filter in.",
         "requiredElements": [],
         "suggestedFixtures": [
-          "Industrial shelving units",
-          "Workbenches with integrated tools",
-          "Heavy-duty machinery (e.g., lathes, presses)",
-          "Pallet racking systems",
-          "Overhead cranes or hoists",
-          "Storage bins and containers"
-        ],
-        "navigableElements": [
-          {
-            "type": "open-passage",
-            "position": "rear wall",
-            "description": "Large, open passage leading to other industrial areas."
-          },
-          {
-            "type": "door",
-            "position": "left wall, mid-section",
-            "description": "Standard personnel door for access and egress."
-          },
-          {
-            "type": "stairs",
-            "position": "back-right corner",
-            "description": "Staircase leading to a potential mezzanine or upper level."
-          }
-        ],
-        "dominantElements": [
-          "Exposed concrete floor",
-          "High ceilings with visible structural beams",
-          "Large industrial windows",
-          "Open, unimpeded floor space"
-        ],
-        "uniqueIdentifiers": [
-          "Raw industrial aesthetic",
-          "Vast open volume",
-          "Industrial heritage of 'The Foundry Canvas'"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [],
-        "suggested": [
-          "Industrial shelving units",
-          "Workbenches with integrated tools",
-          "Heavy-duty machinery (e.g., lathes, presses)",
-          "Pallet racking systems",
-          "Overhead cranes or hoists",
-          "Storage bins and containers"
-        ],
-        "placementNotes": [
-          "Shelving units and pallet racking should line the walls to maximize floor space.",
-          "Workbenches positioned strategically for efficient workflow, potentially in clusters.",
-          "Machinery placed for functional process flow, with ample clearance.",
-          "Overhead cranes positioned to span the main operational areas.",
-          "Storage bins organized by type or material, near relevant workstations or racking."
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "open-passage",
-          "position": "rear wall",
-          "description": "Large, open passage leading to other industrial areas."
-        },
-        {
-          "type": "door",
-          "position": "left wall, mid-section",
-          "description": "Standard personnel door for access and egress."
-        },
-        {
-          "type": "stairs",
-          "position": "back-right corner",
-          "description": "Staircase leading to a potential mezzanine or upper level."
-        }
-      ],
-      "dominantElements": [
-        "Exposed concrete floor",
-        "High ceilings with visible structural beams",
-        "Large industrial windows",
-        "Open, unimpeded floor space"
-      ],
-      "uniqueIdentifiers": [
-        "Raw industrial aesthetic",
-        "Vast open volume",
-        "Industrial heritage of 'The Foundry Canvas'"
-      ],
-      "searchDesc": "Graffiti-covered industrial warehouse interior with corrugated steel and diffused light.",
-      "slug": "interior-of-the-foundry-canvas"
-    },
-    "niche-1765358744942-84j76meki": {
-      "id": "niche-1765358744942-84j76meki",
-      "type": "niche",
-      "name": "The Foundry Kitchen",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A compact but functional kitchen area built into the warehouse structure. Features include utilitarian countertops and integrated appliances, all accented by the pervasive graffiti art. Exposed structural elements remain visible.",
-        "colorsAndLighting": "Dominant muted greys and rust-reds from the metal structure are interspersed with vibrant graffiti hues. Lighting is a mix of diffused natural light from grimy windows and functional, slightly harsh industrial task lighting.",
-        "atmosphere": "The air carries the distinct scent of oil paint and solvents from the surrounding studio, mingling with a faint metallic tang. It feels functional yet creatively charged, with the low hum of distant harbor activity as a constant backdrop.",
-        "materials": "Primary materials include weathered corrugated steel for walls and backsplashes, rough concrete flooring, and industrial-grade stainless steel for countertops and sink. Graffiti paint adds a vibrant, textured layer.",
-        "mood": "Productive and utilitarian, softened by the creative energy of the artistic environment. It's a space built for function that embraces its gritty, artistic surroundings.",
-        "sounds": "Distant harbor hum, clatter of cookware, spray paint hiss",
-        "spatialLayout": "A defined kitchenette niche within the larger warehouse space, featuring efficient linear or L-shaped configurations.",
-        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floor, stainless steel countertops",
-        "secondary_surfaces": "Graffiti-covered cabinet fronts, reinforced glass window panes, heavy steel door",
-        "accent_features": "Vibrant graffiti murals on appliances and cabinets, exposed structural supports, industrial pendant lights",
-        "dominant": "Muted grey (metal structure)",
-        "secondary": "Kaleidoscope of graffiti colors (accents on cabinets, walls)",
-        "accent": "Rust-red (metal accents)",
-        "ambient": "Industrial task lighting, diffused daylight",
-        "genre": null,
-        "architectural_tone": "Functional industrial with artistic overlay",
-        "cultural_tone": "Artist collective, creative production, independent studio",
-        "materials_base": "Metal, concrete, weathered wood, paint",
-        "mood_baseline": "Gritty, productive, creative",
-        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
-        "soundscape_base": "Industrial harbor ambient",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765358744941-03rp6dx9u",
-      "description": "This large industrial kitchen, situated within 'The Foundry Canvas', is designed for heavy-duty food production. Its expansive, wide orientation and functional, no-nonsense design reflect the parent structure's industrial heritage.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "industrial",
-        "spatialLayout": "A large, open industrial space designed for cooking and food preparation, featuring ample workspaces and industrial-grade equipment.",
-        "requiredElements": [
-          "Kitchen"
-        ],
-        "suggestedFixtures": [
-          "Industrial ovens",
-          "Large stainless steel prep tables",
-          "Commercial grade refrigerators and freezers",
-          "Industrial-grade sinks",
-          "Exhaust hoods",
-          "Pantry shelving"
+          "Large stone fireplace",
+          "Tapestries",
+          "Wooden benches",
+          "Heavy oak table",
+          "Suit of armor",
+          "Torches"
         ],
         "navigableElements": [
           {
             "type": "door",
-            "position": "back wall",
-            "description": "Large industrial door for moving supplies."
+            "position": "center back",
+            "description": "A large, ornate wooden door leading further into the castle."
           },
           {
             "type": "passage",
             "position": "left wall",
-            "description": "Passage leading to other areas of The Foundry Canvas."
+            "description": "An archway leading to a secondary chamber or corridor."
           },
           {
-            "type": "door",
-            "position": "right wall",
-            "description": "Service door for staff."
+            "type": "stairs",
+            "position": "right corner",
+            "description": "A winding stone staircase ascending to upper levels."
           }
         ],
         "dominantElements": [
-          "Industrial cooking equipment",
-          "Stainless steel surfaces",
-          "Exposed ductwork and piping",
-          "Durable concrete flooring",
-          "Industrial lighting fixtures"
+          "High, vaulted ceiling",
+          "Stone walls",
+          "Large, arched windows",
+          "Imposing fireplace",
+          "Wooden beams"
         ],
         "uniqueIdentifiers": [
-          "The robust, utilitarian aesthetic typical of a foundry",
-          "The scale and power of the cooking machinery",
-          "The inherent sense of productive labor"
+          "Dragon-tooth-like architectural features",
+          "Medieval castle ambiance",
+          "Gothic architectural style"
         ]
       },
       "furnishingDetails": {
         "userSpecified": [],
         "suggested": [
-          "Industrial ovens",
-          "Large stainless steel prep tables",
-          "Commercial grade refrigerators and freezers",
-          "Industrial-grade sinks",
-          "Exhaust hoods",
-          "Pantry shelving",
-          "Tool racks",
-          "Safety signage"
+          "Large stone fireplace",
+          "Tapestries",
+          "Wooden benches",
+          "Heavy oak table",
+          "Suit of armor",
+          "Torches"
         ],
         "placementNotes": [
-          "Central placement of large prep tables to facilitate workflow.",
-          "Refrigeration units along the back wall for efficient access.",
-          "Exhaust hoods directly above cooking stations.",
-          "Open shelving for ingredient storage."
+          "Fireplace positioned on the far wall for warmth and a focal point.",
+          "Tapestries hung on the stone walls for decoration and insulation.",
+          "Wooden benches arranged around the central area for seating.",
+          "Heavy oak table placed in the center of the hall.",
+          "Suit of armor displayed prominently near an entrance or wall.",
+          "Torches mounted on the walls at regular intervals for ambient lighting."
         ]
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "back wall",
-          "description": "Large industrial door for moving supplies."
+          "position": "center back",
+          "description": "A large, ornate wooden door leading further into the castle."
         },
         {
           "type": "passage",
           "position": "left wall",
-          "description": "Passage leading to other areas of The Foundry Canvas."
+          "description": "An archway leading to a secondary chamber or corridor."
+        },
+        {
+          "type": "stairs",
+          "position": "right corner",
+          "description": "A winding stone staircase ascending to upper levels."
+        }
+      ],
+      "dominantElements": [
+        "High, vaulted ceiling",
+        "Stone walls",
+        "Large, arched windows",
+        "Imposing fireplace",
+        "Wooden beams"
+      ],
+      "uniqueIdentifiers": [
+        "Dragon-tooth-like architectural features",
+        "Medieval castle ambiance",
+        "Gothic architectural style"
+      ],
+      "searchDesc": "Interior of Dragon's Tooth Castle: brutalist volcanic stone fortress, stark, cold, and foreboding.",
+      "slug": "interior-of-dragon-s-tooth-castle"
+    },
+    "niche-1765365243712-76auqqk4r": {
+      "id": "niche-1765365243712-76auqqk4r",
+      "type": "niche",
+      "name": "Dragon's Tooth Castle Dungeons",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "These are the bowels of the mountain fortress, a labyrinth of rough-hewn chambers and claustrophobic tunnels. The scale is oppressive, with low, vaulted ceilings and uneven floors. Shadow clings to every surface, broken only by the glint of ice or the sparse, harsh light filtering from above.",
+        "colorsAndLighting": "Dominated by the inky blackness of the deepest volcanic rock, accented by the dull gleam of corroded iron. Light is nonexistent, creating an oppressive darkness punctuated by the stark white of ice.",
+        "atmosphere": "The air is impossibly cold, still, and heavy with the scent of damp stone and ancient dust. A profound silence reigns, broken only by the drip of unseen water or the faint, chilling sigh of wind finding its way through unseen cracks.",
+        "materials": "Primarily unworked, sheer volcanic basalt and granite, slick with ice and perpetual dampness. Corroded iron bands and hinges are embedded into the stone, showing heavy signs of age and neglect.",
+        "mood": "Crushing despair and primal fear. This is a place of imprisonment, suffering, and utter abandonment.",
+        "sounds": "Drip, echo, moan of wind, scraping stone",
+        "spatialLayout": "A sprawling, uneven network of cramped chambers and narrow, twisting corridors. Depth is implied by the pervasive darkness, making true spatial awareness impossible.",
+        "primary_surfaces": "sheer rock faces, damp stone floors, low vaulted ceilings",
+        "secondary_surfaces": "corroded iron, icy ledges, shadowed alcoves",
+        "accent_features": "gleaming ice crystals, wind-torn banners, gargoyle carvings",
+        "dominant": "deep grey (70%)",
+        "secondary": "black (25%)",
+        "accent": "icy white (3%), rust brown (2%)",
+        "ambient": "dim, stark, cold",
+        "genre": null,
+        "architectural_tone": "brutalist mountain fortress with naturalistic spire forms",
+        "cultural_tone": "ancient defense, isolation, formidable power",
+        "materials_base": "volcanic rock, elemental materials",
+        "mood_baseline": "menacing, austere, majestic",
+        "palette_bias": "monochromatic, cool tones",
+        "soundscape_base": "elemental, stark",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765365243711-uf9gznxu7",
+      "description": "The dungeons of Dragon's Tooth Castle are a grim and imposing network of subterranean chambers, designed for security and despair.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "arched",
+        "functionalType": "industrial",
+        "spatialLayout": "A series of interconnected, low-ceilinged chambers and narrow corridors, primarily carved from stone. These spaces are designed for confinement and storage, featuring rough textures and minimal natural light.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "stone cells",
+          "heavy iron doors",
+          "chains",
+          "torches",
+          "storage crates",
+          "cobwebs"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center",
+            "description": "A heavy, crudely carved archway leading deeper into the dungeon complex."
+          },
+          {
+            "type": "door",
+            "position": "left",
+            "description": "A thick, banded iron door set into a stone frame, likely leading to a cell."
+          },
+          {
+            "type": "passage",
+            "position": "back",
+            "description": "A narrow, dark passage disappearing into the shadows."
+          }
+        ],
+        "dominantElements": [
+          "rough-hewn stone walls",
+          "arched ceilings",
+          "iron cell doors",
+          "torch sconces",
+          "dampness"
+        ],
+        "uniqueIdentifiers": [
+          "oppressive atmosphere",
+          "sound of dripping water",
+          "cold stone",
+          "ancient and grim"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "stone cells",
+          "heavy iron doors",
+          "chains",
+          "torches",
+          "storage crates",
+          "cobwebs",
+          "rattraps"
+        ],
+        "placementNotes": [
+          "Cells should be sparsely furnished, emphasizing their purpose of confinement.",
+          "Torches should be placed in sconces along the walls, providing dim and flickering light.",
+          "Storage crates should be stacked in less frequented areas.",
+          "Cobwebs and general disarray should be present throughout."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "A heavy, crudely carved archway leading deeper into the dungeon complex."
+        },
+        {
+          "type": "door",
+          "position": "left",
+          "description": "A thick, banded iron door set into a stone frame, likely leading to a cell."
+        },
+        {
+          "type": "passage",
+          "position": "back",
+          "description": "A narrow, dark passage disappearing into the shadows."
+        }
+      ],
+      "dominantElements": [
+        "rough-hewn stone walls",
+        "arched ceilings",
+        "iron cell doors",
+        "torch sconces",
+        "dampness"
+      ],
+      "uniqueIdentifiers": [
+        "oppressive atmosphere",
+        "sound of dripping water",
+        "cold stone",
+        "ancient and grim"
+      ],
+      "searchDesc": "Dark, brutalist volcanic dungeons with icy passages and oppressive shadows.",
+      "slug": "dungeons"
+    },
+    "loc-1765365774619-9mlqxjz7g": {
+      "id": "loc-1765365774619-9mlqxjz7g",
+      "type": "host",
+      "name": "London",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast and varied cityscape, blending grand Victorian and Edwardian structures with sleek, modern skyscrapers and historic cobblestone streets. Diverse architectural styles coexist across its many boroughs.",
+        "colorsAndLighting": "A muted palette of greys, browns, and brick reds, punctuated by the greens of parks and the glint of glass towers. Lighting ranges from the warm glow of street lamps on historic streets to the stark illumination of modern districts.",
+        "atmosphere": "A complex blend of historical gravitas and contemporary hustle. The air often carries the scent of rain, exhaust fumes, and diverse global cuisines. A constant, underlying thrum of activity defines its atmosphere.",
+        "materials": "Predominantly stone, brick, steel, and glass. Materials vary greatly by district, from aged sandstone to polished chrome.",
+        "mood": "Sophisticated, historic, and ever-changing. It evokes a sense of immense scale, endless possibility, and deep tradition.",
+        "sounds": "Traffic hum, distant sirens, train announcements, multilingual chatter, occasional chimes.",
+        "primary_surfaces": "Weathered stone and brick facades",
+        "secondary_surfaces": "Steel and glass structures, paved streets",
+        "accent_features": "Ornate detailing on historic buildings, vibrant market displays, modern art installations",
+        "dominant": "Grey stone and brick",
+        "secondary": "Clear and tinted glass",
+        "accent": "Varied colors from signage and advertisements",
+        "ambient": "Often overcast, with diffused light",
+        "genre": "Metropolitan Urban",
+        "architectural_tone": "Eclectic mix of historical styles and contemporary design",
+        "cultural_tone": "Global hub of finance, culture, arts, and politics, catering to a diverse populace",
+        "materials_base": "Stone, brick, steel, glass",
+        "mood_baseline": "Dynamic, historic, and cosmopolitan",
+        "palette_bias": "Muted earth tones with metallic and glass accents",
+        "soundscape_base": "Urban ambient noise with distinct regional variations",
+        "flora_base": "Managed urban green spaces and parks",
+        "fauna_base": "Urban wildlife (pigeons, squirrels, foxes)"
+      },
+      "description": "A sprawling global metropolis where centuries of history meet cutting-edge modernity. It's a city of diverse neighborhoods, iconic landmarks, and a vibrant cultural tapestry.",
+      "searchDesc": "Discover the historic grandeur and modern dynamism of London, a city of iconic landmarks, diverse cultures, and endless exploration.",
+      "slug": "london",
+      "structure": {
+        "spatialLayout": "A sprawling, densely packed urban environment with a central core of historic buildings and expansive surrounding residential and commercial areas.",
+        "navigableElements": [
+          "Tube stations",
+          "Borough markets",
+          "Iconic landmarks",
+          "Parks"
+        ],
+        "dominantElements": [
+          "Parliament",
+          "The Shard",
+          "Tower of London"
+        ],
+        "uniqueIdentifiers": [
+          "Red double-decker buses",
+          "Black cabs",
+          "Distinctive accent differences"
+        ]
+      },
+      "primaryMedia": "media-1765365978028-wkgwr0b18"
+    },
+    "23e88878-3d97-4375-9bd4-d38807c367b1": {
+      "id": "23e88878-3d97-4375-9bd4-d38807c367b1",
+      "type": "region",
+      "name": "Camden",
+      "spaceType": "exterior",
+      "description": "A vibrant and eclectic district known for its alternative culture, bustling markets, and live music scene. It retains a bohemian spirit amidst the grander London cityscape.",
+      "dna": {
+        "looks": "A lively, somewhat grittier urban landscape where Victorian industrial architecture meets vibrant street art. Buildings are often adorned with colourful murals and eccentric signage, especially around the market areas.",
+        "colorsAndLighting": "A more saturated palette than the parent, with vibrant splashes of colour from street art and market stalls against the familiar greys and bricks. Lighting can be eclectic, from the functional glow of market lamps to the atmospheric stage lights of music venues.",
+        "atmosphere": "Energetic and bohemian, with a palpable sense of creative freedom and a constant hum of activity. The air carries the scents of street food, diverse cultures, and a hint of damp canal water, with a younger, more rebellious vibe than central London.",
+        "materials": "A mix of weathered brick, corrugated iron, painted wood, and rough concrete, often overlaid with vibrant graffiti. The canal towpath features worn stone and metal.",
+        "mood": "Individually expressive, energetic, and slightly rebellious. It evokes a sense of creative freedom and a more accessible, down-to-earth urban experience.",
+        "sounds": "Market chatter, street performers, live music spills, canal boat horns, laughter, diverse music genres.",
+        "primary_surfaces": "Graffiti-adorned brickwork and weathered corrugated iron",
+        "secondary_surfaces": "Painted timber stalls, stone canal paths, worn concrete",
+        "accent_features": "Eclectic street art, quirky shop fronts, colourful market umbrellas, vintage signage",
+        "dominant": "Muted brick and grey with vibrant splashes of colour",
+        "secondary": "Weathered corrugated iron and painted wood",
+        "accent": "Brightly painted murals and neon signage",
+        "ambient": "Varied, from functional daylight to atmospheric stage lighting",
+        "genre": null,
+        "architectural_tone": "Eclectic industrial with prevalent street art and bohemian modifications",
+        "cultural_tone": "Alternative culture, music, independent markets, youth scene, and subcultures",
+        "materials_base": "Graffiti-covered urban materials, market stall construction",
+        "mood_baseline": "Energetic and expressive",
+        "palette_bias": "Muted urban tones punctuated by bold, vibrant colours",
+        "soundscape_base": "Lively and diverse urban hum with music and chatter",
+        "flora_base": "None",
+        "fauna_base": "Urban wildlife (pigeons, rats), canal waterfowl"
+      },
+      "searchDesc": "Bohemian London district with vibrant markets, street art, and live music venues along Regent's Canal.",
+      "slug": "camden",
+      "structure": {
+        "spatialLayout": "A more fragmented layout driven by market stalls and winding canal paths, with narrower streets opening into bustling squares and waterfront areas. Densely packed in commercial zones, with pockets of more residential areas nearby.",
+        "dominantElements": [
+          "Camden Lock Market",
+          "The Roundhouse",
+          "Camden High Street",
+          "Regent's Canal Towpath"
+        ],
+        "uniqueIdentifiers": [
+          "Graffiti and street art adorning buildings",
+          "Quirky independent shops and stalls",
+          "Distinctive canal boats and waterside ambiance",
+          "Live music venues and pubs"
+        ]
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a85bc17/v0prdN4ZFUNUGUKoi9b7F.jpg",
+      "primaryMedia": "media-1765366000327-4v99putg5"
+    },
+    "428844d8-ce0b-43b0-a99f-998d4a1073a2": {
+      "id": "428844d8-ce0b-43b0-a99f-998d4a1073a2",
+      "type": "location",
+      "name": "The Grimy Grotto",
+      "spaceType": "exterior",
+      "description": "A dimly lit, no-frills bar tucked away in a narrow alley, exuding a raw, authentic Camden vibe. Its exterior is a collage of weathered posters and peeling paint, hinting at the stories within.",
+      "dna": {
+        "looks": "A squat, two-story building with a chaotic, layered facade. The ground floor is dominated by a large, smudged window and a weathered wooden door, while the upper floor features smaller, shuttered windows. The overall form is utilitarian and unrefined.",
+        "colorsAndLighting": "Muted greys and browns of weathered brick and wood are heavily overlaid with vibrant, clashing graffiti. A single, bare neon sign casts a lurid pink glow, competing with the dim, inconsistent light from the street.",
+        "atmosphere": "The air is thick with the smell of stale beer and damp concrete. It feels enclosed and slightly claustrophobic, with a palpable sense of neglect and a rough, unvarnished charm. The sounds are muted from the street but hint at a low hum of activity within.",
+        "materials": "Primarily weathered brick and rough-hewn timber, heavily scarred with spray paint. Corrugated metal might be used for repairs or secondary structures. Textures are rough, worn, and layered with age and abuse.",
+        "mood": "Rebellious and unpretentious, offering a refuge for those seeking an authentic, unpolished experience. It evokes a sense of gritty camaraderie and defiant individuality.",
+        "sounds": "Muffled music, distant chatter, clinking glasses, dripping water, urban hum.",
+        "primary_surfaces": "Graffiti-covered brick, peeling painted wood",
+        "secondary_surfaces": "Corrugated metal sheeting, damp concrete",
+        "accent_features": "Flickering neon sign, torn band posters, hand-painted 'Bar' lettering",
+        "dominant": "Muted urban tones (grey, brown) with vibrant graffiti splashes",
+        "secondary": "Faded paintwork, rust-colored metal",
+        "accent": "Lurid pink neon light",
+        "ambient": "Dim, inconsistent street light",
+        "genre": null,
+        "architectural_tone": "Eclectic industrial with prevalent street art and bohemian modifications",
+        "cultural_tone": "Alternative culture, music, independent markets, youth scene, and subcultures",
+        "materials_base": "Graffiti-covered urban materials, market stall construction",
+        "mood_baseline": "Individually expressive, energetic, and slightly rebellious.",
+        "palette_bias": "Muted urban tones punctuated by bold, vibrant colours",
+        "soundscape_base": "Market chatter, street performers, live music spills, canal boat horns, laughter, diverse music genres.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "searchDesc": "A gritty Camden bar with a graffiti-covered facade and a flickering neon sign. Entry via a wooden door.",
+      "slug": "the-grimy-grotto",
+      "structure": {
+        "spatialLayout": "A narrow, rectangular building with a modest frontage, suggesting a deep interior space. The alleyway to the side indicates a compact footprint.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A heavy, graffiti-covered wooden door leading into the bar's main area."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "A narrow, damp alleyway that curves around the back, potentially leading to a service entrance or bin area."
+          }
+        ],
+        "dominantElements": [
+          "graffiti-covered facade",
+          "overhanging neon sign",
+          "scuffed wooden shutters",
+          "exposed brickwork"
+        ],
+        "uniqueIdentifiers": [
+          "faded band posters",
+          "a single, flickering street lamp",
+          "mismatched, hand-painted signage",
+          "the faint sound of distant music"
+        ]
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a85bc1c/8GgrUS8fFU2aoxsIYGoXB.jpg",
+      "primaryMedia": "media-1765366051028-87i6eqb83"
+    },
+    "niche-1765366071793-8jmzjj6hh": {
+      "id": "niche-1765366071793-8jmzjj6hh",
+      "type": "niche",
+      "name": "The Grimy Grotto Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A low-ceilinged, utilitarian space dominated by raw, unforgiving surfaces. The interior is a chaotic canvas of layered graffiti over exposed brick and rough-hewn timber, creating a sense of cramped authenticity.",
+        "colorsAndLighting": "Muted urban tones of grey and brown are violently interrupted by splashes of vibrant graffiti. A single, bare neon sign casts a lurid pink glow, creating stark shadows and patchy illumination.",
+        "atmosphere": "The air is thick with the pungent aroma of stale beer and damp concrete, feeling enclosed and slightly claustrophobic. A palpable sense of neglect is offset by a rough, unvarnished charm, with muted street sounds hinting at activity within.",
+        "materials": "The primary materials are graffiti-covered weathered brick and rough-hewn timber, heavily scarred and layered. Accents of corrugated metal and damp concrete contribute to the unrefined, abused aesthetic.",
+        "mood": "Rebellious and unpretentious, this space offers a refuge of gritty camaraderie and defiant individuality.",
+        "sounds": "Muted street hum, distant chatter, low music, dripping water",
+        "spatialLayout": "A relatively compact and irregularly shaped space, with low ceilings and a sense of being packed with character and the detritus of its patrons.",
+        "primary_surfaces": "Graffiti-covered weathered brick, peeling painted wood",
+        "secondary_surfaces": "Damp concrete floors, corrugated metal panels",
+        "accent_features": "Flickering pink neon sign, torn band posters, hand-painted bar lettering",
+        "dominant": "Muted urban tones (grey/brown) with vibrant graffiti splashes",
+        "secondary": "Faded paintwork, rust-colored metal",
+        "accent": "Lurid pink neon light",
+        "ambient": "Dim, inconsistent street light",
+        "genre": null,
+        "architectural_tone": "Eclectic industrial with prevalent street art and bohemian modifications",
+        "cultural_tone": "Alternative culture, music, independent markets, youth scene, and subcultures",
+        "materials_base": "Graffiti-covered urban materials, market stall construction",
+        "mood_baseline": "Individually expressive, energetic, and slightly rebellious.",
+        "palette_bias": "Muted urban tones punctuated by bold, vibrant colours",
+        "soundscape_base": "Market chatter, street performers, live music spills, canal boat horns, laughter, diverse music genres.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765366071792-zfzofuvzt",
+      "description": "The interior of The Grimy Grotto is a rough, unrefined space, characterized by its organic, cavernous form and lack of discernible architectural order. It suggests a clandestine or subterranean setting, likely for an entertainment venue.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "The Grimy Grotto interior is an irregularly shaped, cavernous space with low, uneven ceilings and rough-hewn walls. It is designed to be a dimly lit, disorienting environment, likely for a clandestine gathering or performance.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "low-level ambient lighting",
+          "makeshift seating areas",
+          "a small, central performance platform",
+          "decorative rubble and detritus",
+          "exposed pipes or structural elements"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear",
+            "description": "A narrow, uneven passage leading further into the grotto."
+          },
+          {
+            "type": "archway",
+            "position": "left wall",
+            "description": "An irregular opening into a darker recess."
+          },
+          {
+            "type": "door",
+            "position": "right wall",
+            "description": "A heavy, crudely made wooden door."
+          }
+        ],
+        "dominantElements": [
+          "irregular rock formations",
+          "damp, uneven floor",
+          "low, irregular ceiling",
+          "dim, atmospheric lighting"
+        ],
+        "uniqueIdentifiers": [
+          "cavernous, organic shape",
+          "oppressive, low ceiling",
+          "sense of disrepair and age"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "makeshift seating areas",
+          "a small, central performance platform",
+          "decorative rubble and detritus",
+          "exposed pipes or structural elements",
+          "low-level ambient lighting",
+          "worn, mismatched furniture"
+        ],
+        "placementNotes": [
+          "Seating should be scattered and informal, reflecting the rough nature of the space.",
+          "The performance platform should be central, with the lighting focused on it.",
+          "Rubble and detritus should enhance the 'grimy' aesthetic, particularly in corners and along walls.",
+          "Exposed pipes should appear as if part of the original structure or hastily added.",
+          "Lighting should be minimal, creating deep shadows and a claustrophobic atmosphere."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear",
+          "description": "A narrow, uneven passage leading further into the grotto."
+        },
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "An irregular opening into a darker recess."
         },
         {
           "type": "door",
           "position": "right wall",
-          "description": "Service door for staff."
+          "description": "A heavy, crudely made wooden door."
         }
       ],
       "dominantElements": [
-        "Industrial cooking equipment",
-        "Stainless steel surfaces",
-        "Exposed ductwork and piping",
-        "Durable concrete flooring",
-        "Industrial lighting fixtures"
+        "irregular rock formations",
+        "damp, uneven floor",
+        "low, irregular ceiling",
+        "dim, atmospheric lighting"
       ],
       "uniqueIdentifiers": [
-        "The robust, utilitarian aesthetic typical of a foundry",
-        "The scale and power of the cooking machinery",
-        "The inherent sense of productive labor"
+        "cavernous, organic shape",
+        "oppressive, low ceiling",
+        "sense of disrepair and age"
       ],
-      "searchDesc": "Graffiti-covered industrial kitchen with corrugated steel and oil paint scent.",
-      "slug": "kitchen"
+      "searchDesc": "Gritty urban bar interior with graffiti, neon light, and a defiant, unpretentious atmosphere.",
+      "slug": "interior-of-the-grimy-grotto"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765298826493-vtpkm29wq",
+      "id": "loc-1765364435858-fukqdwuwv",
       "type": "host",
       "children": [
         {
-          "id": "4cd4d980-3832-4a12-9cca-097437518b77",
+          "id": "e41d55ac-106c-4da8-8c8c-2b67d80087cf",
           "type": "region",
           "children": [
             {
-              "id": "7c5f587f-5837-4101-8d22-f55bcd48ce1c",
+              "id": "a2e87a87-b9d2-4e15-b882-80feb9b41e57",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765298961054-r460id9v3",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765298986774-mi4le51mb",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765299020300-88tdnud85",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765299083085-woospqb9e",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "id": "9ba4abd5-81e5-4ddf-8f1a-d70016e28c51",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765355842283-2w9cabfj1",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765358744942-84j76meki",
+                  "id": "niche-1765365046557-3ak4xlfv3",
                   "type": "niche",
                   "children": []
                 }
@@ -1026,24 +944,24 @@
       ]
     },
     {
-      "id": "loc-1765299412060-hge32ft37",
+      "id": "loc-1765365099317-p7waorkbt",
       "type": "host",
       "children": [
         {
-          "id": "2d8ae5e1-3f22-4772-ab18-59d1b9d37520",
+          "id": "30e34d68-cd2d-4bab-a490-8d51ae576813",
           "type": "region",
           "children": [
             {
-              "id": "13ca57c2-bc11-4053-8199-f8d6ff98dfbe",
+              "id": "de02adf7-3433-45a2-8fa1-5cdf6d1e21df",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765299448714-p738ps85w",
+                  "id": "niche-1765365155996-nopt276k0",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1765299532957-wu7y0pwzu",
+                  "id": "niche-1765365243712-76auqqk4r",
                   "type": "niche",
                   "children": []
                 }
@@ -1054,42 +972,19 @@
       ]
     },
     {
-      "id": "loc-1765357016370-x0ahb8gva",
+      "id": "loc-1765365774619-9mlqxjz7g",
       "type": "host",
       "children": [
         {
-          "id": "0661de2c-3759-4f62-9f21-4ca4d10f9593",
+          "id": "23e88878-3d97-4375-9bd4-d38807c367b1",
           "type": "region",
           "children": [
             {
-              "id": "0485114e-2f85-4289-b857-02208026191e",
+              "id": "428844d8-ce0b-43b0-a99f-998d4a1073a2",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765357120304-1gwpznrk9",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1765358109872-will6gv5p",
-      "type": "host",
-      "children": [
-        {
-          "id": "3b3e2a68-8a99-44f8-81b1-d770555f40fb",
-          "type": "region",
-          "children": [
-            {
-              "id": "89df4dd0-27ca-4354-b688-594bc098d97a",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765358155437-xoadu6bnt",
+                  "id": "niche-1765366071793-8jmzjj6hh",
                   "type": "niche",
                   "children": []
                 }
@@ -1101,6 +996,8 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765298826493-vtpkm29wq"
+    "loc-1765364435858-fukqdwuwv",
+    "loc-1765365099317-p7waorkbt",
+    "loc-1765365774619-9mlqxjz7g"
   ]
 }

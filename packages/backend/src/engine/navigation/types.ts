@@ -51,6 +51,8 @@ export interface NavigationContext {
       colors_secondary?: string;
       colors_accents?: string;
       colors_ambient?: string;
+      /** True for pass-through regions that inherit all DNA from host */
+      isPassThrough?: boolean;
     };
     dna?: any;
   };

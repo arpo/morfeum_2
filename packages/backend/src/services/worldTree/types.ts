@@ -43,6 +43,8 @@ export interface TreeNode {
   structure?: NodeStructure;
   searchDesc?: string;
   slug?: string;
+  /** True for pass-through regions that inherit all DNA from host */
+  isPassThrough?: boolean;
 }
 
 export interface WorldTree {

@@ -85,6 +85,31 @@
   color: var(--color-primary-text, #60a5fa);
 }
 
+/* Pass-through region styling */
+.passThrough {
+  opacity: 0.6;
+  font-style: italic;
+  cursor: default;
+}
+
+.passThrough .label {
+  color: var(--color-text-muted, #94a3b8);
+}
+
+.passThrough .icon {
+  opacity: 0.5;
+}
+
+.passThroughIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: var(--spacing-xs, 4px);
+  color: var(--color-text-muted, #94a3b8);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
 .label {
   font-size: var(--text-sm, 14px);
   white-space: nowrap;

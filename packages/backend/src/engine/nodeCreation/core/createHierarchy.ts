@@ -5,6 +5,7 @@
  * Handles DNA inheritance and determines which node gets the image.
  */
 
+import { v4 as uuidv4 } from 'uuid';
 import type {
   HierarchySpec,
   CreateHierarchyOptions,
@@ -97,28 +98,46 @@ export async function createHierarchy(
     if (signal?.aborted) throw new Error('Aborted');
 
     const isDeepest = deepestType === 'region';
-    const result = await createNode('region', spec.region, {
-      apiKey,
-      spawnId,
-      parentId: hostNode?.id,
-      parentContext, // Pass inherited context from host
-      createImage: isDeepest && createImage,
-    });
+    
+    // Check if this should be a pass-through region
+    if (spec.regionIsPassThrough) {
+      // Create minimal pass-through region WITHOUT LLM call
+      regionNode = createPassThroughRegion(hostNode?.id);
+      nodes.push(regionNode);
+      
+      // Attach to host
+      if (hostNode) {
+        hostNode.regions = hostNode.regions || [];
+        hostNode.regions.push(regionNode);
+      }
+      
+      // Pass-through region doesn't modify parentContext - keeps host's context
+      // (This is the key difference - DNA flows straight through)
+    } else {
+      // Create real region with LLM-generated DNA
+      const result = await createNode('region', spec.region, {
+        apiKey,
+        spawnId,
+        parentId: hostNode?.id,
+        parentContext, // Pass inherited context from host
+        createImage: isDeepest && createImage,
+      });
 
-    regionNode = result.node as RegionNode;
-    nodes.push(regionNode);
+      regionNode = result.node as RegionNode;
+      nodes.push(regionNode);
 
-    // Attach to host
-    if (hostNode) {
-      hostNode.regions = hostNode.regions || [];
-      hostNode.regions.push(regionNode);
-    }
+      // Attach to host
+      if (hostNode) {
+        hostNode.regions = hostNode.regions || [];
+        hostNode.regions.push(regionNode);
+      }
 
-    parentContext = extractParentDNAContext(regionNode.dna);
+      parentContext = extractParentDNAContext(regionNode.dna);
 
-    if (isDeepest) {
-      imageUrl = result.imageUrl;
-      imagePrompt = result.imagePrompt;
+      if (isDeepest) {
+        imageUrl = result.imageUrl;
+        imagePrompt = result.imagePrompt;
+      }
     }
   }
 
@@ -193,6 +212,23 @@ export async function createHierarchy(
     imageUrl,
     imagePrompt,
     depth: getNodeDepth(deepestType),
+  };
+}
+
+/**
+ * Create a pass-through region node without LLM call.
+ * Pass-through regions inherit all DNA from host.
+ */
+function createPassThroughRegion(parentHostId?: string): RegionNode {
+  return {
+    id: uuidv4(),
+    type: 'region',
+    name: 'Region',
+    description: '',
+    isPassThrough: true,
+    slug: 'region',
+    // No DNA - inherits everything from host via cascade
+    dna: {},
   };
 }
 

@@ -38,12 +38,14 @@ function cleanDNA(dna: any): any {
 
 /**
  * Build hierarchy structure from parsed response + DNA data
+ * @param regionIsPassThrough - If true, create minimal pass-through region
  */
 function buildHierarchyStructure(
   parsedHierarchy: any,
   deepestNodeDNA: any,
   parentDNA: any,
-  deepestType: string
+  deepestType: string,
+  regionIsPassThrough: boolean = false
 ): any {
   const structure: any = {
     host: null
@@ -74,18 +76,33 @@ function buildHierarchyStructure(
 
   // Build region
   if (parsedHierarchy.region) {
-    structure.host.regions = [{
-      type: 'region',
-      name: regionDNA?.name || parsedHierarchy.region.name,
-      description: regionDNA?.description || parsedHierarchy.region.description,
-      dna: cleanDNA(regionDNA?.dna || (deepestType === 'region' ? deepestNodeDNA.dna : null)),
-      navigableElements: regionDNA?.navigableElements || (deepestType === 'region' ? deepestNodeDNA.navigableElements : []),
-      dominantElements: regionDNA?.dominantElements || (deepestType === 'region' ? deepestNodeDNA.dominantElements : []),
-      uniqueIdentifiers: regionDNA?.uniqueIdentifiers || (deepestType === 'region' ? deepestNodeDNA.uniqueIdentifiers : []),
-      searchDesc: regionDNA?.searchDesc || (deepestType === 'region' ? deepestNodeDNA.searchDesc : ''),
-      slug: regionDNA?.slug || (deepestType === 'region' ? deepestNodeDNA.slug : ''),
-      locations: [],
-    }];
+    // Check if this should be a pass-through region
+    if (regionIsPassThrough && deepestType !== 'region') {
+      // Create minimal pass-through region (no DNA, inherits from host)
+      structure.host.regions = [{
+        type: 'region',
+        name: 'Region',
+        description: '',
+        isPassThrough: true,
+        dna: null,
+        slug: 'region',
+        locations: [],
+      }];
+    } else {
+      // Create normal region with full DNA
+      structure.host.regions = [{
+        type: 'region',
+        name: regionDNA?.name || parsedHierarchy.region.name,
+        description: regionDNA?.description || parsedHierarchy.region.description,
+        dna: cleanDNA(regionDNA?.dna || (deepestType === 'region' ? deepestNodeDNA.dna : null)),
+        navigableElements: regionDNA?.navigableElements || (deepestType === 'region' ? deepestNodeDNA.navigableElements : []),
+        dominantElements: regionDNA?.dominantElements || (deepestType === 'region' ? deepestNodeDNA.dominantElements : []),
+        uniqueIdentifiers: regionDNA?.uniqueIdentifiers || (deepestType === 'region' ? deepestNodeDNA.uniqueIdentifiers : []),
+        searchDesc: regionDNA?.searchDesc || (deepestType === 'region' ? deepestNodeDNA.searchDesc : ''),
+        slug: regionDNA?.slug || (deepestType === 'region' ? deepestNodeDNA.slug : ''),
+        locations: [],
+      }];
+    }
 
     // Build location
     if (parsedHierarchy.location) {
@@ -157,10 +174,12 @@ function assignMediaToTree(
 
 /**
  * Extract parent nodes for DNA generation
+ * @param regionIsPassThrough - If true, skip region DNA generation
  */
 function extractParentNodes(
   parsedHierarchy: any,
-  deepestType: string
+  deepestType: string,
+  regionIsPassThrough: boolean = false
 ): HierarchyNodeInfo[] {
   const parents: HierarchyNodeInfo[] = [];
 
@@ -173,8 +192,8 @@ function extractParentNodes(
     });
   }
 
-  // Add region if deepest is location or niche
-  if ((deepestType === 'location' || deepestType === 'niche') && parsedHierarchy.region) {
+  // Add region if deepest is location or niche (SKIP if pass-through)
+  if ((deepestType === 'location' || deepestType === 'niche') && parsedHierarchy.region && !regionIsPassThrough) {
     parents.push({
       type: 'region',
       name: parsedHierarchy.region.name,
@@ -297,11 +316,12 @@ export async function runNodeCreationPipeline(
     // ═══════════════════════════════════════════════════════════════════════
     helper.startStage('hierarchy_classification', 'Analyzing your description...');
     
-    const { spec, depth, isInterior, rawResponse } = await parsePromptToHierarchy(prompt, apiKey);
+    const { spec, depth, isInterior, regionIsPassThrough, rawResponse } = await parsePromptToHierarchy(prompt, apiKey);
     
     helper.completeStage('hierarchy_classification', `Structure detected: ${depth} level${depth > 1 ? 's' : ''}`, {
       depth,
       isInterior,
+      regionIsPassThrough,
       hierarchy: rawResponse,
     });
 
@@ -385,7 +405,7 @@ export async function runNodeCreationPipeline(
 
     // Step 2: Use the LLM-generated prompt for image generation
     // Start parent chain DNA generation in PARALLEL (silently - no progress event yet)
-    const parentNodes = extractParentNodes(rawResponse, deepestInfo.type);
+    const parentNodes = extractParentNodes(rawResponse, deepestInfo.type, regionIsPassThrough);
     let parentDNAPromise: Promise<any> | null = null;
 
     if (parentNodes.length > 0) {
@@ -455,7 +475,8 @@ export async function runNodeCreationPipeline(
       rawResponse,
       deepestNodeDNA,
       parentDNA,
-      deepestInfo.type
+      deepestInfo.type,
+      regionIsPassThrough
     );
     
     if (!hierarchyStructure) {

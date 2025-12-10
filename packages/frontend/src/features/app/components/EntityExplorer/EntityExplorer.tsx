@@ -52,6 +52,8 @@ export const EntityExplorer: React.FC = () => {
       // Fallback to treeNode properties if fullNode is missing (safety)
       const label = fullNode?.name || 'Unknown Location';
       const type = fullNode?.type || treeNode.type;
+      // Check if this is a pass-through region
+      const isPassThrough = fullNode?.isPassThrough || false;
       // Get image from preloaded imageMap
       const image = imageMap.get(treeNode.id) || undefined;
 
@@ -60,6 +62,7 @@ export const EntityExplorer: React.FC = () => {
         label: label,
         icon: type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
         image: image,
+        isPassThrough: isPassThrough,
         children: treeNode.children?.map(mapNode)
       };
     };

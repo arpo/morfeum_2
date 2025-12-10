@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
-import { IconChevronDown, IconTrash } from '@/icons';
+import { IconChevronDown, IconTrash, IconArrowBadgeRight } from '@/icons';
 import { InlineConfirm } from '@/components/ui/InlineConfirm';
 import { useLocationsStore } from '@/store/slices/locations';
 import styles from './TreeView.module.css';
@@ -12,6 +12,8 @@ export interface TreeItem {
   children?: TreeItem[];
   data?: any; // Original data payload
   isExpanded?: boolean; // Initial expanded state (optional)
+  /** True for pass-through regions that inherit all DNA from host */
+  isPassThrough?: boolean;
 }
 
 interface TreeViewProps {
@@ -59,6 +61,10 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
 
   const handleSelect = (e: React.MouseEvent) => {
     e.stopPropagation();
+    // Block selection of pass-through nodes (but allow expand/collapse)
+    if (item.isPassThrough) {
+      return;
+    }
     if (onSelect) {
       onSelect(item);
     }
@@ -67,8 +73,9 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
   return (
     <div className={styles.itemContainer}>
       <div 
-        className={`${styles.itemContent} ${isSelected ? styles.selected : ''}`}
+        className={`${styles.itemContent} ${isSelected ? styles.selected : ''} ${item.isPassThrough ? styles.passThrough : ''}`}
         onClick={handleSelect}
+        title={item.isPassThrough ? 'Pass-through region (inherits from host)' : undefined}
       >
         {hasChildren ? (
           <div 
@@ -93,7 +100,15 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
           {item.label}
         </span>
 
-        {onDelete && (
+        {/* Pass-through indicator icon */}
+        {item.isPassThrough && (
+          <span className={styles.passThroughIndicator} title="Pass-through region (inherits from host)">
+            <IconArrowBadgeRight size={14} />
+          </span>
+        )}
+
+        {/* Delete button - NOT shown for pass-through nodes */}
+        {onDelete && !item.isPassThrough && (
           <div className={styles.deleteContainer}>
             <InlineConfirm
               onConfirm={() => onDelete(item)}

@@ -96,9 +96,21 @@ export interface HostNode extends BaseNode {
 
 /**
  * Region node - District/biome within a host
+ * 
+ * Pass-through regions:
+ * - Have `isPassThrough: true`
+ * - Named simply "Region" with no description
+ * - Pass DNA directly from host (all DNA fields null)
+ * - Used when location is created without explicit region
+ * - Only one pass-through region per host allowed
  */
 export interface RegionNode extends BaseNode {
   type: 'region';
+  /** 
+   * Pass-through regions inherit all DNA from host without modification.
+   * They exist to satisfy hierarchy requirements when no explicit region is defined.
+   */
+  isPassThrough?: boolean;
   locations?: LocationNode[];
 }
 
@@ -170,6 +182,12 @@ export interface HierarchySpec {
   
   /** Niche description (room/space) */
   niche?: string;
+  
+  /** 
+   * If true, region is a pass-through (inherits all DNA from host).
+   * Pass-through regions have no unique DNA and exist only to satisfy hierarchy.
+   */
+  regionIsPassThrough?: boolean;
 }
 
 /**

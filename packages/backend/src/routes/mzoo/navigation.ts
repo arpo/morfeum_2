@@ -196,6 +196,14 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
     return;
   }
 
+  // Block commands on pass-through regions
+  if (context.currentNode.data?.isPassThrough) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      error: 'Commands cannot be run on pass-through regions. Navigate to a location first.'
+    });
+    return;
+  }
+
   // Get API key from middleware
   const apiKey = (req as any).mzooApiKey;
 

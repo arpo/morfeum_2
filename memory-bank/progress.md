@@ -25,6 +25,12 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Pass-Through Region System (Dec 10):** Complete protection for structural regions:
+  - Generic prompts create pass-through regions (empty DNA, name: "Region")
+  - Pass-through nodes: non-selectable, no delete, no slash commands
+  - Visual indicators: arrow icon, muted styling, default cursor
+  - Backend validation blocks commands on pass-through nodes
+  - Three-layer protection: TreeView → SpawnInput → Backend API
 - **Fixed `--furnish` Flag (Dec 10):** Complete fix for furnishing functionality:
   - Bug: `furnishingDetails` was generated but never saved to node data
   - Fix: Added `FurnishingDetails` interface and property to nodeBuilder.ts

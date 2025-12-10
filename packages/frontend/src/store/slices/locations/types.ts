@@ -230,6 +230,8 @@ export interface Node {
   spaceType: SpaceType;
   dna: HostNode | RegionNode | LocationNode | NicheNode;
   primaryMedia?: string;  // ID reference to media.json
+  /** True for pass-through regions that inherit all DNA from host */
+  isPassThrough?: boolean;
 }
 
 // Tree structure - stores ID references only
