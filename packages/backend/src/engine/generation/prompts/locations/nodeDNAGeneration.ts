@@ -56,15 +56,15 @@ PARENT CONTEXT (CSS-like inheritance - inherit ALL these attributes unless overr
 - Fauna Base: ${parentContext.fauna_base || 'Not specified'}
 
 CRITICAL MATERIAL INHERITANCE RULES:
-1. This child space MUST use the SAME MATERIALS as the parent. If parent has "weathered brick walls", child has weathered brick walls - NOT stainless steel.
+1. Child spaces MUST use the SAME WALL MATERIALS as the parent - the function changes, not the building materials.
 2. You are ADAPTING the parent's visual style to a new function - NOT replacing it with a generic style.
-3. A kitchen in a weathered brick building has WEATHERED BRICK walls, not sterile stainless steel.
-4. A bathroom in an industrial space has EXPOSED PIPES and CONCRETE, not white tile.
-5. The child's "looks", "materials", and "primary_surfaces" fields MUST incorporate the parent's materials.
-6. Only ADD function-specific elements (stoves, sinks) - do NOT REPLACE the parent's aesthetic.
+3. The child's "looks", "materials", and "primary_surfaces" fields MUST incorporate the parent's materials.
+4. Only ADD function-specific fixtures and equipment - do NOT REPLACE the parent's wall/floor/ceiling materials.
+5. The building's architectural character (materials, textures, aging) must be preserved in all child spaces.
 
-WRONG: Parent has "rough brickwork" → Child kitchen has "gleaming stainless steel walls"
-RIGHT: Parent has "rough brickwork" → Child kitchen has "rough brick walls with stainless steel prep counters"
+KEY PRINCIPLE: Function changes, building materials don't.
+WRONG: Replacing parent's wall materials with generic function-appropriate materials
+RIGHT: Adding function-specific fixtures while KEEPING the parent's wall materials
 `
     : '';
 

@@ -159,7 +159,34 @@ Two distinct property systems:
 
 ---
 
-## 7. Image Generation: Deepest Node Only
+## 7. Solid Exteriors = No Windows
+
+**CRITICAL RULE**: If the parent exterior is a solid form, the interior MUST have `openings: "none"`.
+
+| Solid Forms (use `openings: "none"`) |
+|--------------------------------------|
+| dome, mushroom, saucer, capsule, pod, sphere, organic blob |
+
+**Rules**:
+- Check parent's `looks` and `dominantElements` for any mention of windows/glass/portholes
+- If NO windows mentioned → `openings: "none"`
+- `"minimal"` is ONLY for exteriors that show SOME small openings (narrow slits, small portholes)
+- When in doubt, DEFAULT to `"none"` - you can always add internal light sources
+
+**Interior Constraint** (added to FLUX prompt when `openings: "none"`):
+```
+[CONSTRAINT:] fully enclosed interior; no openings, holes, skylights, or gaps in the roof or ceiling unless explicitly specified; maintain intact, continuous ceiling structure
+```
+
+**Lighting for windowless interiors comes from**:
+- Internal lights (lamps, panels)
+- Bioluminescence (organic structures)
+- Glowing surfaces/materials
+- Ambient electronic glow
+
+---
+
+## 8. Image Generation: Deepest Node Only
 
 When creating multiple nodes in a hierarchy:
 - Generate image ONLY on the deepest node
@@ -174,7 +201,7 @@ Creates: London (no image) → Camden (no image) → Pub (IMAGE)
 
 ---
 
-## 8. Two-Step Navigation Architecture
+## 9. Two-Step Navigation Architecture
 
 Navigation separates understanding from action:
 

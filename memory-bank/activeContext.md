@@ -2,6 +2,23 @@
 
 ## Recent Changes (2025-12-10)
 
+### Windowless/Solid Exterior System (Dec 10)
+- **Issue**: Solid exterior structures (mushroom, saucer, dome, pod) were generating interiors with windows when they shouldn't
+- **Root Cause**: LLM was choosing `openings: "minimal"` instead of `"none"` for solid forms
+- **Fix in `structureAnalysis.ts`**:
+  - Made windowless rule MUCH stricter: solid forms MUST use `openings: "none"`
+  - Added explicit list: dome, mushroom, saucer, capsule, pod, sphere, organic blob
+  - "minimal" now ONLY for exteriors that show SOME small openings
+  - DEFAULT to "none" when in doubt about solid exteriors
+- **Fix in `imagePromptGeneration.ts`**:
+  - Added enclosed interior constraint when `openings: "none"`:
+  ```
+  [CONSTRAINT:] fully enclosed interior; no openings, holes, skylights, or gaps in the roof or ceiling unless explicitly specified; maintain intact, continuous ceiling structure
+  ```
+- **Other Fixes Today**:
+  - Removed duplicate `applyMorfeumStyle()` call from `imagePromptGeneration.ts` (was being called twice)
+  - Made material inheritance rules generic in `nodeDNAGeneration.ts` (removed specific examples)
+
 ### Pass-Through Region System (Dec 10)
 - **Feature**: Generic prompts (e.g., "a building on a planet") now create pass-through regions instead of fully-generated regions
 - **Purpose**: Regions should only be created when user explicitly names a known place (e.g., "Ringön in Göteborg")

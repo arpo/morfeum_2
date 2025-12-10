@@ -179,6 +179,15 @@ IMPORTANT RULES:
 - If parent has "arched windows" → interior must have arched openings
 - Look for window shapes in parent's dominantElements, uniqueIdentifiers, or description
 
+**WINDOWLESS/SOLID EXTERIORS (CRITICAL - MUST USE openings: "none"):**
+- If the parent exterior is a SOLID FORM (dome, mushroom, saucer, capsule, pod, sphere, organic blob), use: openings: "none"
+- If the parent's "looks" and "dominantElements" mention NO windows/glass/portholes: openings: "none"
+- "none" means ZERO openings - fully enclosed interior with continuous walls and ceiling
+- Interior lighting MUST come from OTHER sources (internal lights, bioluminescence, glowing surfaces, etc.)
+- Do NOT add ANY windows, skylights, glass, or openings if the exterior doesn't show them!
+- "minimal" is ONLY for exteriors that show SOME small openings (like narrow slits or small portholes)
+- When in doubt about solid exteriors, DEFAULT to "none" - you can always add internal light sources
+
 **Approximate Dimension Hints for Image Generation:**
 - small: ~2-4m in primary dimension (pods, booths, closets, cabins, compact rooms)
 - medium: ~4-10m in primary dimension (standard rooms, shops, cafés)

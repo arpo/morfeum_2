@@ -12,7 +12,6 @@
 
 import { generateText } from '../../../services/mzoo';
 import { AI_MODELS } from '../../../config/constants';
-import { applyMorfeumStyle } from './applyMorfeumStyle';
 import { fluxInstructionsShort } from '../prompts/shared/constants';
 import type { StructureAnalysis } from '../../navigation/types';
 
@@ -47,8 +46,17 @@ function buildSystemPrompt(input: ImagePromptGenerationInput): string {
 
   // Build structure context if available (ALL analysis already done by structureAnalysis.ts)
   let structureContext = '';
+  let enclosedInteriorConstraint = '';
   if (structureAnalysis) {
     const s = structureAnalysis.structure;
+    
+    // Add enclosed interior constraint for windowless spaces
+    if (s.openings === 'none' && input.perspective === 'interior') {
+      enclosedInteriorConstraint = `
+[CONSTRAINT:] fully enclosed interior; no openings, holes, skylights, or gaps in the roof or ceiling unless explicitly specified; maintain intact, continuous ceiling structure
+`;
+    }
+    
     structureContext = `
 === STRUCTURE (Pre-analyzed by structureAnalysis.ts) ===
 Name: ${structureAnalysis.name}
@@ -61,7 +69,7 @@ Openings: ${s.openings || 'not specified'}
 Opening Shape: ${s.openingShape || 'not specified'}
 Functional Type: ${s.functionalType}
 Spatial Layout: ${s.spatialLayout || 'not specified'}
-
+${enclosedInteriorConstraint}
 ${s.requiredElements && s.requiredElements.length > 0 ? `MUST INCLUDE (User-specified): ${s.requiredElements.join(', ')}` : ''}
 ${s.suggestedFixtures && s.suggestedFixtures.length > 0 ? `Suggested Fixtures: ${s.suggestedFixtures.join(', ')}` : ''}
 ${s.navigableElements && s.navigableElements.length > 0 ? `Navigable Elements: ${s.navigableElements.map(n => `${n.type} at ${n.position}: ${n.description}`).join('; ')}` : ''}
@@ -183,6 +191,6 @@ export async function generateImagePromptForNode(
     throw new Error(result.error || 'Failed to generate image prompt');
   }
 
-  // Apply Morfeum visual style for consistent look
-  return applyMorfeumStyle(result.data.text.trim());
+  // Return raw prompt - Morfeum style is applied by imageGeneration.ts
+  return result.data.text.trim();
 }

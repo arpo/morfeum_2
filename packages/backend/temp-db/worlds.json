@@ -1,732 +1,356 @@
 {
   "nodes": {
-    "loc-1765376309037-lxlf916g5": {
-      "id": "loc-1765376309037-lxlf916g5",
+    "loc-1765379826464-k1h2e8te7": {
+      "id": "loc-1765379826464-k1h2e8te7",
       "type": "host",
-      "name": "Göteborg",
+      "name": "Aethelgard",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A cityscape characterized by a blend of historical maritime structures, functional industrial zones, and modern urban development. Buildings range from older brick edifices to sleek contemporary designs, often situated near the extensive harbor and waterways.",
-        "colorsAndLighting": "A palette of maritime blues and grays, complemented by the earthy tones of brick and concrete. City lighting is functional but can become more vibrant and atmospheric in entertainment districts and along the waterfront at night.",
-        "atmosphere": "The air is fresh and carries the scent of the sea, mixed with the urban ambiance of a bustling port city. There's a constant sense of movement and activity, from the working harbor to the lively streets.",
-        "materials": "A mix of weathered brick, sturdy concrete, glass, and steel, reflecting both its industrial past and modern growth. Elements of maritime timber and metal are also common.",
-        "mood": "A feeling of industriousness, maritime tradition, and a contemporary, forward-looking spirit. It can be both pragmatic and surprisingly artistic.",
-        "sounds": "Ship horns, seagulls, city traffic, conversation, the distant hum of a large port.",
-        "primary_surfaces": "Sturdy concrete and brick structures, modern glass and steel facades",
-        "secondary_surfaces": "Weathered maritime timber, steel beams, granite quay walls",
-        "accent_features": "Nautical motifs, public art installations, vibrant signage in commercial areas",
-        "dominant": "Grays and blues",
-        "secondary": "Earthy browns and muted industrial metallics",
-        "accent": "Occasional bright commercial signage and ambient city lights",
-        "ambient": "Bright, clean, with maritime influences",
-        "genre": "Urban Exploration",
-        "architectural_tone": "Post-industrial modern with maritime influences",
-        "cultural_tone": "Maritime hub, diverse urban culture, industrial heritage",
-        "materials_base": "Concrete, steel, brick, maritime wood",
-        "mood_baseline": "Pragmatic, robust, with underlying artistic flair",
-        "palette_bias": "Coastal blues and grays, earthy industrial tones",
-        "soundscape_base": "Maritime, urban, industrial",
-        "flora_base": "Coastal vegetation, urban parks",
-        "fauna_base": "Seabirds, urban wildlife"
+        "looks": "Landscapes of immense natural grandeur, featuring vast canyons, crystalline formations, and clear skies dotted with soft clouds. Civilizations are deeply integrated with the natural environment.",
+        "colorsAndLighting": "Dominated by natural light, with palettes favoring luminous earth tones, precious metals, and vibrant natural contrasts. Skies are clear and bright.",
+        "atmosphere": "Crisp, clear air pervades the world, often carrying a profound sense of peace and ancient calm. Gentle breezes are common.",
+        "materials": "Natural materials such as polished stone, rare minerals, and intricately worked metals are common.",
+        "mood": "Serenity, grandeur, ancient wisdom, harmonious coexistence.",
+        "sounds": "Natural ambient sounds: wind, water, distant echoes",
+        "primary_surfaces": "Smooth, natural stone; sculpted earth",
+        "secondary_surfaces": "Polished metals, crystalline inlays",
+        "accent_features": "Celestial observation points, flowing water features",
+        "dominant": "Luminous Cream (primarily rock formations and structures)",
+        "secondary": "Shimmering Gold (architectural details)",
+        "accent": "Vibrant Turquoise (rivers, sky elements)",
+        "ambient": "Bright, clear daylight",
+        "genre": "Ethereal Fantasy",
+        "architectural_tone": "Harmonious integration with nature, organic forms",
+        "cultural_tone": "Ancient civilizations focused on wisdom and celestial observation",
+        "materials_base": "Natural stone and precious metals",
+        "mood_baseline": "Peaceful and majestic",
+        "palette_bias": "Luminous earth tones, warm metallics, vibrant natural contrasts",
+        "soundscape_base": "Quiet, natural ambiance",
+        "flora_base": "None",
+        "fauna_base": "None"
       },
-      "description": "A major port city on Sweden's west coast, Göteborg boasts a rich maritime heritage and a dynamic, diverse cultural scene. It's a city that balances its industrial roots with a forward-thinking approach to art, music, and innovation.",
-      "searchDesc": "A vibrant port city in Sweden known for its maritime history and lively cultural scene.",
-      "slug": "goteborg",
+      "description": "A world of breathtaking natural beauty and advanced, harmonious civilizations. Its landscapes are sculpted by time and grace, holding ancient wisdom within their depths.",
+      "searchDesc": "A world of majestic natural beauty and advanced, harmonious civilizations.",
+      "slug": "aethelgard",
       "structure": {
-        "spatialLayout": "A coastal layout with a central urban core, branching out to industrial areas and residential districts, all defined by the presence of the harbor and archipelago. Streets are generally well-organized, with open plazas and waterfront promenades.",
+        "spatialLayout": "Vast, open spaces with dramatic vertical and horizontal elements, emphasizing scale and natural forms.",
         "dominantElements": [
-          "Harbor and canals",
-          "Maritime architecture",
-          "Modern city infrastructure"
+          "World-spanning canyons",
+          "Azure rivers",
+          "Ancient cities"
         ],
         "uniqueIdentifiers": [
-          "Coastal location",
-          "Industrial and modern mix",
-          "Swedish cultural hub"
+          "Naturally occurring crystalline formations",
+          "Sky-rivers"
         ]
       },
       "dominantElements": [
-        "Harbor and canals",
-        "Maritime architecture",
-        "Modern city infrastructure"
+        "World-spanning canyons",
+        "Azure rivers",
+        "Ancient cities"
       ],
       "uniqueIdentifiers": [
-        "Coastal location",
-        "Industrial and modern mix",
-        "Swedish cultural hub"
-      ]
+        "Naturally occurring crystalline formations",
+        "Sky-rivers"
+      ],
+      "primaryMedia": "media-1765379886012-370oj421i"
     },
-    "1673b735-989e-424a-8827-a60f0ef26cee": {
-      "id": "1673b735-989e-424a-8827-a60f0ef26cee",
+    "d0dba85a-c1bc-4580-b93b-8e3d1e3f4c4b": {
+      "id": "d0dba85a-c1bc-4580-b93b-8e3d1e3f4c4b",
       "type": "region",
-      "name": "Ringön",
+      "name": "The Azure Chasm",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A dense collection of large, utilitarian industrial structures, many of which are repurposed warehouses and factories. The architecture is predominantly functional and robust, with a mix of brick, concrete, and corrugated metal facades showing signs of age and adaptation.",
-        "colorsAndLighting": "Muted industrial tones dominate the visible exteriors, with occasional bursts of vibrant, artificial light emanating from club entrances and windows at night. Shadows are deep and industrial, interspersed with the glow of activity.",
-        "atmosphere": "The air carries a faint briny scent from the nearby water, mingled with the less pleasant, but characteristic, industrial odors of oil and damp concrete. A sense of gritty energy permeates the district, especially after dark.",
-        "materials": "Dominated by weathered brickwork, exposed concrete, corrugated metal sheeting, and robust steel beams. Many surfaces bear the marks of their industrial past, with rust and patina evident.",
-        "mood": "A potent mix of historical industrial grit and modern underground vitality. It feels authentic, raw, and a little secretive, a place where innovation happens in the shadows.",
-        "sounds": "Distant ship horns, the hum of industry, the murmur of crowds, thumping basslines.",
-        "primary_surfaces": "Massive concrete and brick industrial structures",
-        "secondary_surfaces": "Corrugated metal cladding, weathered steel beams",
-        "accent_features": "Graffiti art, salvaged industrial components, vibrant club signage",
-        "dominant": "Muted grays and earthy browns",
-        "secondary": "Rust browns on metal",
-        "accent": "Pulsing neon and colored club lights",
-        "ambient": "Dim, industrial, with pockets of intense artificial light",
+        "looks": "Towering, intricately sculpted structures integrated into smooth, pale canyon walls. A vibrant turquoise river winds through the deep chasm. Soft, fluffy clouds dot the bright sky.",
+        "colorsAndLighting": "Bathed in bright daylight, illuminated by a luminous, soft sky. Dominant colors are off-white and cream, with shimmering gold and ochre accents. Vibrant turquoise provides a striking contrast.",
+        "atmosphere": "The air is crisp and clear, with a profound sense of serenity and ancient calm. A gentle breeze might whisper through the chasm. The atmosphere is majestic and untouched.",
+        "materials": "Structures are made of a polished, stone-like substance, smooth and pale. Accented with lustrous, finely worked gold.",
+        "mood": "Serene grandeur, timeless wisdom, awe, advanced ancient civilization in harmony with nature.",
+        "sounds": "Whispering breeze, distant echoes, flowing water",
+        "primary_surfaces": "Smooth, luminous cream rock and sculpted stone",
+        "secondary_surfaces": "Shimmering gold embellishments and accents",
+        "accent_features": "Spherical blue windows, miniature buildings on platforms",
+        "dominant": "Luminous Cream (80%)",
+        "secondary": "Shimmering Gold (15%)",
+        "accent": "Vibrant Turquoise (5%)",
+        "ambient": "Bright daylight",
         "genre": null,
-        "architectural_tone": "Brutalist industrial with weathered utilitarian elements",
-        "cultural_tone": "Underground techno club scene, repurposed industrial spaces, urban nightlife",
-        "materials_base": "Raw industrial, concrete and metal",
-        "mood_baseline": "Gritty authenticity and raw energy",
-        "palette_bias": "Cool grays, earthy browns, industrial metallics",
-        "soundscape_base": "Industrial hum, distant maritime sounds, muffled bass",
+        "architectural_tone": "Organically sculpted, integrated with natural rock formations",
+        "cultural_tone": "Seat of celestial observances and ancient wisdom keepers",
+        "materials_base": "Polished stone and precious metals",
+        "mood_baseline": "Serene grandeur",
+        "palette_bias": "Light neutrals, warm metallics, vibrant cool contrast",
+        "soundscape_base": "Quiet natural ambiance",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "An industrial island district in Göteborg, characterized by its historical maritime and manufacturing past. Ringön has seen a significant resurgence, transforming into a vibrant hub for arts, culture, and a burgeoning underground techno club scene.",
-      "searchDesc": "Industrial island district in Göteborg, a hub for arts, culture, and a thriving techno club scene.",
-      "slug": "ringon",
+      "description": "A vast, luminous canyon city carved into smooth, pale rock faces. A vibrant turquoise river flows through its depths, reflecting a bright, clear sky.",
+      "searchDesc": "Ethereal canyon city with luminous cream structures, golden accents, and a turquoise river.",
+      "slug": "the-azure-chasm",
       "structure": {
-        "spatialLayout": "A grid-like layout of streets and docks, interspersed with large, blocky industrial buildings. The spaces can feel cavernous and imposing, with areas of open quayside contrasting with confined interiors.",
+        "spatialLayout": "Deep, expansive chasm with verticality emphasized by towering structures and horizontal platforms.",
         "dominantElements": [
-          "Former industrial buildings",
-          "Warehouses",
-          "Quayside infrastructure"
+          "The Celestial Citadel",
+          "Canyon walls",
+          "River"
         ],
         "uniqueIdentifiers": [
-          "Island setting",
-          "Industrial heritage",
-          "Concentration of clubs"
+          "Turquoise river",
+          "Luminous cream canyon"
         ]
       },
       "dominantElements": [
-        "Former industrial buildings",
-        "Warehouses",
-        "Quayside infrastructure"
+        "The Celestial Citadel",
+        "Canyon walls",
+        "River"
       ],
       "uniqueIdentifiers": [
-        "Island setting",
-        "Industrial heritage",
-        "Concentration of clubs"
+        "Turquoise river",
+        "Luminous cream canyon"
       ],
-      "primaryMedia": "media-1765376381456-563pry4at"
+      "primaryMedia": "media-1765379874286-l9ey0jpnh"
     },
-    "0aa6ebe5-8a19-42be-a751-0a1ff6b55af7": {
-      "id": "0aa6ebe5-8a19-42be-a751-0a1ff6b55af7",
+    "3f2ab237-09d7-40ea-bba2-1a69fcf78816": {
+      "id": "3f2ab237-09d7-40ea-bba2-1a69fcf78816",
       "type": "location",
-      "name": "The Warehouse",
+      "name": "The Celestial Citadel",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A massive, brutalist industrial structure, likely a former factory or warehouse. The scale is imposing, with a predominantly rectilinear form. Large, unadorned surfaces dominate the facade, hinting at its utilitarian past.",
-        "colorsAndLighting": "The primary colors are muted grays and rust-browns from weathered metal and concrete. Strategic, low-intensity colored lights, likely pulsing in rhythm with music, spill from behind windows or the main entrance, creating dramatic shadows.",
-        "atmosphere": "The air is likely cool and carries the faint scent of ozone and damp concrete. Shadows are deep and sharp, contrasting with the occasional burst of colored light. The surrounding area might be sparsely populated, contributing to a sense of urban isolation.",
-        "materials": "Dominant materials include rough, exposed concrete and corrugated or sheet metal, showing signs of age and industrial wear. Areas of weathered brick might be visible, alongside robust steel beams and fixtures.",
-        "mood": "The overall mood is one of gritty authenticity and raw energy. It evokes a sense of anticipation and hidden excitement, a place for underground experiences.",
-        "sounds": "Distant bass thumps, muffled music, city hum, industrial echoes, wind",
-        "primary_surfaces": "weathered concrete walls, corrugated metal panels",
-        "secondary_surfaces": "rusted steel beams, exposed piping, chain-link fence",
-        "accent_features": "graffiti murals, colored pulsing lights, faded industrial signage",
-        "dominant": "concrete gray with high coverage",
-        "secondary": "rust brown on metal cladding",
-        "accent": "deep red and electric blue from interior lights",
-        "ambient": "dark and shadowy with occasional colored light",
+        "looks": "The Celestial Citadel is a breathtaking organic complex seamlessly integrated into luminous cream canyon walls. Its scale is colossal, with fluid, sculpted forms reaching towards the sky. Golden embellishments highlight its flowing architecture, drawing the eye to the apex where a massive spherical blue window dominates the facade.",
+        "colorsAndLighting": "Bathed in bright daylight, the environment is illuminated by a luminous, soft sky. The dominant colors are off-white and cream, with shimmering gold and ochre accents. The vibrant turquoise of the river adds a striking contrast.",
+        "atmosphere": "The air is crisp and clear, carrying a profound sense of serenity and ancient calm. A gentle breeze might whisper through the chasm, stirring the soft clouds visible in the sky. The atmosphere is one of majestic, untouched beauty.",
+        "materials": "The primary materials appear to be a form of polished, stone-like substance, smooth and pale, resembling luminous cream. These are heavily accented with lustrous, finely worked gold.",
+        "mood": "The overall mood is one of serene grandeur and timeless wisdom. It evokes awe and a sense of advanced, ancient civilization in perfect harmony with nature.",
+        "sounds": "Whispering wind, distant flowing water, faint chimes",
+        "primary_surfaces": "Luminous cream stone, smooth canyon walls",
+        "secondary_surfaces": "Polished gold detailing, sculpted rock",
+        "accent_features": "Spherical blue windows, intricate golden filigree, miniature spires",
+        "dominant": "Luminous Cream (80%)",
+        "secondary": "Shimmering Gold (15%)",
+        "accent": "Vibrant Turquoise (5%)",
+        "ambient": "Bright daylight, soft sky glow",
         "genre": null,
-        "architectural_tone": "brutalist industrial with weathered utilitarian elements",
-        "cultural_tone": "underground techno club, urban nightlife, repurposed industrial space",
-        "materials_base": "raw industrial, concrete and metal",
-        "mood_baseline": "gritty, energetic, anticipation",
-        "palette_bias": "cool grays, earthy browns, industrial metallics",
-        "soundscape_base": "low-frequency hum, industrial echoes",
+        "architectural_tone": "Organic, flowing, integrated with natural rock formations",
+        "cultural_tone": "Seat of celestial observances and ancient wisdom keepers",
+        "materials_base": "Polished stone and precious metals",
+        "mood_baseline": "Awe-inspiring, serene, majestic",
+        "palette_bias": "Light neutrals, warm metallics, vibrant cool contrast",
+        "soundscape_base": "Natural and ambient tones",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A repurposed industrial building on Ringön, now a renowned techno club with pulsing lights and a raw, industrial aesthetic. EXTERIOR VIEW.",
-      "searchDesc": "Raw industrial techno club exterior on Ringön, Göteborg. Concrete, metal, and graffiti.",
-      "slug": "the-warehouse",
+      "description": "A colossal, organically shaped building complex, mostly white with golden embellishments, featuring a very large, prominent spherical blue window near its apex. EXTERIOR VIEW.",
+      "searchDesc": "Ethereal canyon city with white and gold structures, dominated by a giant blue-windowed Citadel.",
+      "slug": "the-celestial-citadel",
       "structure": {
-        "spatialLayout": "The building presents a large, flat, and imposing facade. The sense of depth is created by the interplay of shadows and light on its expansive, unadorned surfaces and the visible industrial components.",
+        "spatialLayout": "The space is a vast, vertical chasm, with structures built upwards and outwards along its walls. The Citadel itself is a towering focal point, with an expansive void below and a network of platforms and bridges creating a complex, multi-layered environment.",
         "navigableElements": [
           {
             "type": "door",
-            "position": "center",
-            "description": "Large, imposing metal entrance door"
-          }
-        ],
-        "dominantElements": [
-          "Large concrete facade",
-          "Industrial metal cladding",
-          "Overhead loading bay doors",
-          "Exterior piping and conduits"
-        ],
-        "uniqueIdentifiers": [
-          "Graffiti art on lower walls",
-          "Subtle, colored light emanating from within",
-          "Heavy-duty chain-link fencing",
-          "An old, faded industrial sign"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center",
-          "description": "Large, imposing metal entrance door"
-        }
-      ],
-      "dominantElements": [
-        "Large concrete facade",
-        "Industrial metal cladding",
-        "Overhead loading bay doors",
-        "Exterior piping and conduits"
-      ],
-      "uniqueIdentifiers": [
-        "Graffiti art on lower walls",
-        "Subtle, colored light emanating from within",
-        "Heavy-duty chain-link fencing",
-        "An old, faded industrial sign"
-      ],
-      "primaryMedia": "media-1765376337017-2m5aaorpk"
-    },
-    "niche-1765376360569-3j10y8nte": {
-      "id": "niche-1765376360569-3j10y8nte",
-      "type": "niche",
-      "name": "The Warehouse Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A cavernous industrial space characterized by a predominantly rectilinear, brutalist form. Imposing scale is defined by raw concrete walls and robust steel beams. The layout is open and utilitarian, hinting at its former industrial purpose.",
-        "colorsAndLighting": "Muted grays and rust-browns dominate, contrasted by dramatic, low-intensity pulsing lights in deep red and electric blue. Shadows are deep and sharp, creating a stark, atmospheric contrast.",
-        "atmosphere": "The air is cool, carrying the faint, metallic scent of ozone and damp concrete. Large open spaces create an echo chamber for ambient industrial sounds. A sense of urban isolation and hidden energy pervades.",
-        "materials": "Dominant materials are rough, exposed concrete and corrugated sheet metal, showing signs of significant age and industrial wear. Robust steel beams and exposed piping are prevalent throughout.",
-        "mood": "Gritty authenticity and raw, underground energy. Evokes anticipation and hidden excitement, a perfect backdrop for intense experiences.",
-        "sounds": "Low-frequency hum, industrial echoes, distant rhythmic beat",
-        "spatialLayout": "Vast, open floor plan with high ceilings. Large, unobstructed central area punctuated by structural elements like pillars and beams.",
-        "primary_surfaces": "weathered concrete walls, corrugated metal panels",
-        "secondary_surfaces": "rusted steel beams, exposed piping, chain-link fence",
-        "accent_features": "graffiti murals, colored pulsing lights, faded industrial signage",
-        "dominant": "concrete gray with high coverage",
-        "secondary": "rust brown on metal cladding",
-        "accent": "deep red and electric blue from interior lights",
-        "ambient": "dark and shadowy with occasional colored light",
-        "genre": null,
-        "architectural_tone": "brutalist industrial with weathered utilitarian elements",
-        "cultural_tone": "underground techno club, urban nightlife, repurposed industrial space",
-        "materials_base": "raw industrial, concrete and metal",
-        "mood_baseline": "gritty, energetic, anticipation",
-        "palette_bias": "cool grays, earthy browns, industrial metallics",
-        "soundscape_base": "low-frequency hum, industrial echoes",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765376360567-nv2bscy9y",
-      "description": "The interior of 'The Warehouse' is a large, open rectangular space characterized by its raw, brutalist industrial aesthetic. Its vast scale and wide orientation evoke a sense of immense volume, fitting for its repurposed function as an underground techno club.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "A vast, open rectangular space with high ceilings, defined by raw industrial materials and a sense of immense volume. The orientation emphasizes a wide, expansive feel, typical of large industrial structures.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "DJ booth",
-          "dance floor",
-          "bar counter",
-          "lounge seating",
-          "industrial lighting fixtures",
-          "sound system speakers"
-        ],
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "rear wall",
-            "description": "A large, utilitarian passage leading to other sections of the warehouse."
+            "position": "base of the main structure",
+            "description": "An immense, golden-arched gateway, shimmering with celestial energy."
           },
           {
-            "type": "door",
-            "position": "left side wall",
-            "description": "A heavy industrial door."
+            "type": "passage",
+            "position": "leading up the canyon wall",
+            "description": "Intricately carved pathways winding upwards, lined with miniature spires."
           },
           {
             "type": "archway",
-            "position": "center of the space",
-            "description": "An industrial archway creating a central pathway."
+            "position": "connecting platforms",
+            "description": "Graceful, golden arches spanning the void between structures."
           }
         ],
         "dominantElements": [
-          "exposed concrete walls",
-          "high ceiling with exposed beams",
-          "large open floor space",
-          "raw, industrial aesthetic",
-          "metal structural supports"
+          "The colossal, organically shaped Citadel building",
+          "The vibrant turquoise river below",
+          "The pale, sculpted canyon walls",
+          "The numerous sky-bridges and platforms"
         ],
         "uniqueIdentifiers": [
-          "Brutalist architectural style",
-          "Repurposed industrial character",
-          "Vast, unadorned volume"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [],
-        "suggested": [
-          "DJ booth with advanced audio equipment",
-          "expansive dance floor area",
-          "long, industrial-style bar counter",
-          "various types of lounge seating (booths, industrial sofas)",
-          "hanging industrial spotlights and strobes",
-          "large, strategically placed sound system speakers"
-        ],
-        "placementNotes": [
-          "DJ booth positioned at the back or elevated section of the space.",
-          "Dance floor centrally located to maximize visibility and flow.",
-          "Bar counter along one of the longer walls for efficient service.",
-          "Lounge seating arranged in clusters to create intimate zones within the large space.",
-          "Lighting should be dynamic and responsive to music, with atmospheric effects.",
-          "Speakers should be hung or mounted to ensure optimal sound distribution throughout the area."
+          "The prominent spherical blue 'celestial' window",
+          "Embedded spherical blue windows",
+          "Golden embellishments on white structures",
+          "Flowing, organic architectural contours"
         ]
       },
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "rear wall",
-          "description": "A large, utilitarian passage leading to other sections of the warehouse."
+          "type": "door",
+          "position": "base of the main structure",
+          "description": "An immense, golden-arched gateway, shimmering with celestial energy."
         },
         {
-          "type": "door",
-          "position": "left side wall",
-          "description": "A heavy industrial door."
+          "type": "passage",
+          "position": "leading up the canyon wall",
+          "description": "Intricately carved pathways winding upwards, lined with miniature spires."
         },
         {
           "type": "archway",
-          "position": "center of the space",
-          "description": "An industrial archway creating a central pathway."
+          "position": "connecting platforms",
+          "description": "Graceful, golden arches spanning the void between structures."
         }
       ],
       "dominantElements": [
-        "exposed concrete walls",
-        "high ceiling with exposed beams",
-        "large open floor space",
-        "raw, industrial aesthetic",
-        "metal structural supports"
+        "The colossal, organically shaped Citadel building",
+        "The vibrant turquoise river below",
+        "The pale, sculpted canyon walls",
+        "The numerous sky-bridges and platforms"
       ],
       "uniqueIdentifiers": [
-        "Brutalist architectural style",
-        "Repurposed industrial character",
-        "Vast, unadorned volume"
+        "The prominent spherical blue 'celestial' window",
+        "Embedded spherical blue windows",
+        "Golden embellishments on white structures",
+        "Flowing, organic architectural contours"
       ],
-      "searchDesc": "Vast brutalist industrial warehouse interior with pulsing colored lights and raw concrete.",
-      "slug": "interior-of-the-warehouse"
+      "primaryMedia": "media-1765379857278-vgqfgmk2t"
     },
-    "loc-1765376411741-rj4gz11p5": {
-      "id": "loc-1765376411741-rj4gz11p5",
-      "type": "host",
-      "name": "London",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A vast and varied urban tapestry, blending centuries of architectural styles from gothic cathedrals and Victorian terraces to brutalist concrete and sleek modern skyscrapers. Iconic landmarks punctuate a dense cityscape traversed by major transport arteries.",
-        "colorsAndLighting": "Daylight is often softened by atmospheric conditions, casting a diffused light. Artificial lighting ranges from the warm glow of historic streetlamps to the harsh, cool illumination of modern city centers. A palette of greys, brick reds, and deep blues dominates, punctuated by diverse signage.",
-        "atmosphere": "A constant thrum of activity, a blend of global influences, and the omnipresent hum of traffic. The air can carry the scent of rain, exhaust fumes, and diverse cuisines. It feels both historic and rapidly progressing.",
-        "materials": "Predominantly brick, stone, steel, glass, and concrete. Materials vary greatly by district and age, from ancient weathered stone to polished modern composites.",
-        "mood": "A complex mix of historical gravitas, modern dynamism, and a sense of constant change. It can feel grand, overwhelming, exciting, and sometimes melancholic.",
-        "sounds": "Traffic roar, distant sirens, public transport announcements, varied languages, ubiquitous chatter.",
-        "primary_surfaces": "Weathered brickwork, aged stone facades, vast expanses of glass",
-        "secondary_surfaces": "Cast iron railings, asphalt roads, concrete structures",
-        "accent_features": "Ornate building details, neon signs in entertainment districts, historical statues",
-        "dominant": "Various shades of grey and muted earth tones forming the bulk of structures",
-        "secondary": "Red brick and stone providing structural and historical character",
-        "accent": "Diverse signage, historical accents, and modern architectural highlights",
-        "ambient": "Neutral to slightly cool, with variations based on daylight and artificial light sources",
-        "genre": "Urban Metropolis",
-        "architectural_tone": "Eclectic, spanning historical periods with a strong modern influence",
-        "cultural_tone": "Global hub for finance, arts, fashion, and diverse subcultures",
-        "materials_base": "A rich palette of urban construction materials, from ancient stone to modern composites",
-        "mood_baseline": "Dynamic, complex, and ever-evolving",
-        "palette_bias": "Muted urban tones with strong accent colors from signage and diverse districts",
-        "soundscape_base": "Pervasive urban hum with layered sounds of traffic, transport, and human activity",
-        "flora_base": "Managed urban parks and street trees (e.g., Plane trees, Oaks)",
-        "fauna_base": "Urban adapted wildlife (e.g., Pigeons, Foxes, Squirrels)"
-      },
-      "description": "The historic capital of England, a sprawling metropolis of history and modernity. It's a global hub of culture, finance, and diverse communities, characterized by its iconic landmarks, distinct neighborhoods, and ever-evolving urban landscape.",
-      "searchDesc": "London: a historic yet modern metropolis, a global city of culture, finance, and diverse neighborhoods.",
-      "slug": "london",
-      "structure": {
-        "spatialLayout": "A sprawling, complex grid with areas of dense urbanity, wide avenues, and historic winding streets. Distinct districts create varied spatial experiences, from grand plazas to intimate mews.",
-        "navigableElements": [
-          "River Thames",
-          "Underground network",
-          "iconic bridges"
-        ],
-        "dominantElements": [
-          "Parliament",
-          "Tower of London",
-          "skyscrapers"
-        ],
-        "uniqueIdentifiers": [
-          "red double-decker buses",
-          "black cabs",
-          "distinct architectural eras"
-        ]
-      },
-      "navigableElements": [
-        "River Thames",
-        "Underground network",
-        "iconic bridges"
-      ],
-      "dominantElements": [
-        "Parliament",
-        "Tower of London",
-        "skyscrapers"
-      ],
-      "uniqueIdentifiers": [
-        "red double-decker buses",
-        "black cabs",
-        "distinct architectural eras"
-      ]
-    },
-    "c767c42e-a932-40eb-b3a8-0b401fa5eae6": {
-      "id": "c767c42e-a932-40eb-b3a8-0b401fa5eae6",
-      "type": "region",
-      "name": "Camden",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A dense urban environment with a chaotic yet organized sprawl of market stalls and venues. Architecture varies from Victorian warehouses to modern structures, all layered with a thick coat of vibrant, often political, street art. A constant flow of people creates a dynamic visual landscape.",
-        "colorsAndLighting": "Daylight is diffused by overhead coverings and building density. Artificial lighting from market stalls, shop signs, and venue marquees creates a kaleidoscope of colors, particularly vibrant in the evening. The street art itself is a major source of color.",
-        "atmosphere": "The air is thick with the scent of diverse street food, a low hum of chatter, and distant music. It feels energetic, slightly gritty, and alive with a constant flux of people. There's a palpable sense of freedom and self-expression.",
-        "materials": "A mix of weathered brick, corrugated metal roofing for stalls, exposed concrete, and vibrant painted surfaces. Worn wooden market stalls and sturdy metal signage are prevalent.",
-        "mood": "Energetic, rebellious, creative, and alive with a sense of urban exploration. It evokes curiosity and the thrill of discovery.",
-        "sounds": "Market chatter, street performers, distant music genres, traffic hum, diverse languages.",
-        "primary_surfaces": "Graffiti-covered walls, weathered brickwork, corrugated metal roofing",
-        "secondary_surfaces": "Painted shopfronts, worn wooden market stalls, exposed concrete",
-        "accent_features": "Intricate street art murals, flashing neon signs for venues, eclectic market displays",
-        "dominant": "Vibrant street art with heavy coverage on many surfaces",
-        "secondary": "Weathered brick and concrete forming the underlying structures",
-        "accent": "Brightly colored market stalls and flashing venue lights",
-        "ambient": "Varied, from daylight to the colorful glow of artificial lights",
-        "genre": null,
-        "architectural_tone": "Eclectic urban sprawl with heavy street art and functional market structures",
-        "cultural_tone": "Alternative culture, music enthusiasts, market shoppers, subculture adherents",
-        "materials_base": "Urban decay, repurposed industrial, and vibrant painted surfaces",
-        "mood_baseline": "Rebellious excitement and creative freedom",
-        "palette_bias": "High contrast with a broad spectrum of vibrant, often clashing colors",
-        "soundscape_base": "Urban cacophony with a focus on music and market sounds",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A vibrant, eclectic neighborhood known for its markets, music venues, and alternative culture. It's a melting pot of subcultures, buzzing with street art, independent shops, and diverse culinary offerings.",
-      "searchDesc": "Camden: a vibrant London district famed for its markets, alternative culture, and live music scene.",
-      "slug": "camden",
-      "structure": {
-        "spatialLayout": "A maze-like network of narrow streets and open market areas. Buildings are often multi-story, creating a sense of enclosure and verticality, with alleyways and hidden courtyards.",
-        "dominantElements": [
-          "Camden Lock Market",
-          "Roundhouse venue",
-          "street art"
-        ],
-        "uniqueIdentifiers": [
-          "eclectic street art",
-          "vibrant market stalls",
-          "live music posters"
-        ]
-      },
-      "dominantElements": [
-        "Camden Lock Market",
-        "Roundhouse venue",
-        "street art"
-      ],
-      "uniqueIdentifiers": [
-        "eclectic street art",
-        "vibrant market stalls",
-        "live music posters"
-      ],
-      "primaryMedia": "media-1765376487362-am3v0skdr"
-    },
-    "6cf7329d-a5a0-46fe-ad72-fdd90971ba9f": {
-      "id": "6cf7329d-a5a0-46fe-ad72-fdd90971ba9f",
-      "type": "location",
-      "name": "The Electra Pulse",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The exterior is a stark, brutalist concrete structure, heavily graffitied and adorned with industrial metalwork. Large, recessed panels dominate the facade, occasionally flashing with intense, synchronized light displays. The scale is imposing, suggesting a hidden, powerful interior.",
-        "colorsAndLighting": "Dominant colors are deep blacks and concrete greys, sharply contrasted by vibrant, artificial neon blues, purples, and reds that pulse and strobe. The lighting is a key feature, creating a disorienting but exciting visual cacophony.",
-        "atmosphere": "The air outside feels charged with anticipation, a palpable hum of energy radiating from the building. A slight warmth emanates from the interior, carrying the muffled thud of bass. The atmosphere is electric and slightly aggressive, fitting for a late-night venue.",
-        "materials": "Rough, exposed concrete forms the primary material, showing signs of wear and tear. Accents of weathered steel and thick, tinted glass for the entrance suggest durability and a raw, industrial aesthetic.",
-        "mood": "The mood is one of intense excitement and urban edginess. It evokes a sense of raw power and a promise of an unforgettable, high-energy experience.",
-        "sounds": "Deep bass thrum, distant crowd murmur, metallic clangs, muffled techno beats, industrial hum.",
-        "primary_surfaces": "Rough concrete, weathered steel panels, tinted glass",
-        "secondary_surfaces": "Graffiti art, industrial grates, exposed wiring conduits",
-        "accent_features": "Pulsing LED panels, neon lettering, strobe lights",
-        "dominant": "Black with heavy coverage, encompassing the base structure",
-        "secondary": "Concrete grey, forming the bulk of the facade",
-        "accent": "Electric blues and purples on LED panels, vibrant reds in neon signage",
-        "ambient": "Harsh and artificial, with deep shadows punctuated by intense light bursts",
-        "genre": null,
-        "architectural_tone": "Brutalist industrial with aggressive neon and graffiti accents",
-        "cultural_tone": "Youth culture, electronic music enthusiasts, urban nightlife seekers",
-        "materials_base": "Concrete, steel, glass, paint",
-        "mood_baseline": "Excited, edgy, intense",
-        "palette_bias": "Cool tones with high contrast vibrant accents",
-        "soundscape_base": "Industrial and electronic bass-heavy",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A buzzing techno club with pulsating lights and a heavy bass sound system. EXTERIOR VIEW.",
-      "searchDesc": "London Camden techno club exterior with pulsing lights and heavy bass. Electrifying nightlife.",
-      "slug": "the-electra-pulse",
-      "structure": {
-        "spatialLayout": "The facade is a solid block, with minimal articulation except for the recessed entrance and prominent light panels. The overall impression is one of a contained, powerful source of sound and light.",
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center",
-            "description": "A heavy, black steel door."
-          },
-          {
-            "type": "passage",
-            "position": "right",
-            "description": "A dimly lit, narrow passage."
-          }
-        ],
-        "dominantElements": [
-          "Large, pulsing LED panels",
-          "Industrial-style ventilation grates",
-          "Towering sound system speakers",
-          "Graffiti-art adorned walls"
-        ],
-        "uniqueIdentifiers": [
-          "A sign with jagged, neon-like lettering spelling 'Electra Pulse'",
-          "Flickering strobe lights visible through the entrance",
-          "The muffled, deep thrum of bass emanating from within"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center",
-          "description": "A heavy, black steel door."
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "A dimly lit, narrow passage."
-        }
-      ],
-      "dominantElements": [
-        "Large, pulsing LED panels",
-        "Industrial-style ventilation grates",
-        "Towering sound system speakers",
-        "Graffiti-art adorned walls"
-      ],
-      "uniqueIdentifiers": [
-        "A sign with jagged, neon-like lettering spelling 'Electra Pulse'",
-        "Flickering strobe lights visible through the entrance",
-        "The muffled, deep thrum of bass emanating from within"
-      ],
-      "primaryMedia": "media-1765376440774-2309niycs"
-    },
-    "niche-1765376469623-v717pv403": {
-      "id": "niche-1765376469623-v717pv403",
+    "niche-1765379916747-1ob71mj1t": {
+      "id": "niche-1765379916747-1ob71mj1t",
       "type": "niche",
-      "name": "The Electra Pulse Interior",
+      "name": "Celestial Citadel Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior is a vast, raw industrial space characterized by exposed concrete ceilings and walls, punctuated by the dynamic glow of integrated LED panels and vibrant neon signage. The layout is open, designed to accommodate a large crowd with a central dance floor and a prominent DJ booth. Seating is integrated into the architecture, often carved into concrete alcoves or featuring minimalist metal designs.",
-        "colorsAndLighting": "The primary palette consists of deep blacks and concrete greys, aggressively cut through by electric blues, purples, and reds from pulsing LEDs and neon. Lighting is intensely dynamic, creating shifting patterns and deep, dramatic shadows.",
-        "atmosphere": "The air thrums with a palpable energy, thick with the reverberations of a bass-heavy electronic soundtrack. A slight warmth, tinged with the faint scent of ozone and industrial lubricants, permeates the space. The atmosphere is electric, a disorienting yet exhilarating sensory overload.",
-        "materials": "Dominant materials include rough, unpolished concrete forming the structural elements, weathered steel for accents and fixtures, and tinted glass for bar surfaces or partitions. Graffiti art continues its presence from the exterior, integrated directly onto some concrete surfaces.",
-        "mood": "The mood is one of unbridled excitement and raw, urban edginess. It's a space that demands engagement, fostering a sense of collective intensity and primal energy.",
-        "sounds": "Industrial hum, muffled bass, electronic beats, crowd chatter, synthesized rhythms.",
-        "spatialLayout": "A large, open volume with high ceilings, creating a sense of imposing scale. The layout is designed for high-traffic flow and dynamic visual interaction with the lighting and sound systems.",
-        "primary_surfaces": "Rough concrete walls and floors, weathered steel panels, heavily tinted glass surfaces",
-        "secondary_surfaces": "Graffiti art murals, exposed wiring conduits, industrial grates",
-        "accent_features": "Pulsing LED floor tiles, custom neon light sculptures, synchronized strobe light arrays, integrated sound system elements",
-        "dominant": "Deep black, covering large structural elements and providing a canvas for light.",
-        "secondary": "Concrete grey, forming the bulk of the walls and ceiling.",
-        "accent": "Electric blues and purples on LED panels; vibrant reds and pinks in neon signage.",
-        "ambient": "Harsh and artificial, characterized by deep shadows and intense, pulsing light bursts.",
+        "looks": "The interior is an expansive, cavernous space defined by fluid, sculpted forms that blend seamlessly with the canyon walls. Colossal scale and flowing architecture create a sense of immense, natural grandeur. Golden embellishments highlight the organic curves and lead the eye towards the apex.",
+        "colorsAndLighting": "Bathed in bright daylight filtering from the soft sky, the space is predominantly luminous cream, accented by shimmering gold. A striking spherical blue window dominates one wall, casting a unique light.",
+        "atmosphere": "The air is crisp, clear, and imbued with an ancient serenity. A gentle, almost imperceptible breeze might stir the vastness, carrying echoes of timeless calm. The atmosphere evokes awe and profound peace.",
+        "materials": "The primary materials are polished, smooth, luminous cream stone, exhibiting a subtle, natural sheen. These are lavishly accented with finely worked, lustrous gold detailing in intricate patterns.",
+        "mood": "The mood is one of serene grandeur, ancient wisdom, and breathtaking majesty. It inspires awe and a deep sense of timelessness.",
+        "sounds": "Whispering breezes, distant echoes, soft ambient hum",
+        "spatialLayout": "A vast, open central chamber with high, sculpted ceilings and flowing, organic walls that merge with the natural rock. Multiple passages branch off, suggesting greater depth and complexity.",
+        "primary_surfaces": "Luminous cream stone, smooth sculpted walls",
+        "secondary_surfaces": "Polished gold detailing, flowing rock formations",
+        "accent_features": "Massive spherical blue window, intricate golden filigree, high sculpted archways",
+        "dominant": "Luminous Cream (80%)",
+        "secondary": "Shimmering Gold (15%)",
+        "accent": "Vibrant Turquoise (5%)",
+        "ambient": "Bright daylight, soft sky glow",
         "genre": null,
-        "architectural_tone": "Brutalist industrial with aggressive neon and graffiti accents",
-        "cultural_tone": "Youth culture, electronic music enthusiasts, urban nightlife seekers",
-        "materials_base": "Concrete, steel, glass, paint",
-        "mood_baseline": "Excited, edgy, intense",
-        "palette_bias": "Cool tones with high contrast vibrant accents",
-        "soundscape_base": "Industrial and electronic bass-heavy",
+        "architectural_tone": "Organic, flowing, integrated with natural rock formations",
+        "cultural_tone": "Seat of celestial observances and ancient wisdom keepers",
+        "materials_base": "Polished stone and precious metals",
+        "mood_baseline": "Awe-inspiring, serene, majestic",
+        "palette_bias": "Light neutrals, warm metallics, vibrant cool contrast",
+        "soundscape_base": "Natural and ambient tones",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765376469623-0h681o9ae",
-      "description": "The interior of The Electra Pulse is a large, raw, and industrial entertainment venue, characterized by brutalist concrete architecture, metalwork, and dynamic lighting, catering to youth culture and electronic music enthusiasts.",
+      "primaryMedia": "media-1765379916745-wic4p1ffr",
+      "description": "The interior of The Celestial Citadel is a grand, organic chamber designed for celestial observances and housing ancient wisdom keepers. Its colossal scale and flowing architectural forms create an awe-inspiring atmosphere, with a domed ceiling and minimal, circular openings that echo the Citadel's exterior.",
       "structure": {
-        "form": "irregular",
-        "roofType": "flat",
+        "form": "organic",
+        "roofType": "domed",
         "scale": "large",
-        "orientation": "wide",
+        "orientation": "cubic",
         "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "The interior is an expansive, raw space with exposed brutalist concrete walls and floors, designed to accommodate large gatherings and performances.",
+        "openingShape": "circular",
+        "functionalType": "religious",
+        "spatialLayout": "The interior is a vast, cavernous organic space, characterized by flowing walls and a grand, domed ceiling. Its expansive nature suggests it is a central chamber for celestial observances.",
         "requiredElements": [],
         "suggestedFixtures": [
-          "DJ booth with turntables and mixer",
-          "Spacious dance floor",
-          "Modular lounge seating areas",
-          "Industrial-style bar with stools",
-          "Programmable LED lighting system",
-          "Subwoofer sound system"
+          "Ornate celestial altar",
+          "Tiered seating for observers",
+          "Grand astrolabe or orrery",
+          "Floating light orbs",
+          "Carved observation platforms",
+          "Wisdom scrolls or tablets"
         ],
         "navigableElements": [
           {
             "type": "passage",
-            "position": "rear",
-            "description": "Large industrial-style double doors leading to service areas or exits."
+            "position": "center back",
+            "description": "A grand, arched passage leading deeper into the Citadel."
           },
           {
             "type": "archway",
             "position": "left wall",
-            "description": "A wide, imposing archway leading to a VIP section or additional lounge."
+            "description": "An ornate archway with golden filigree."
           },
           {
-            "type": "door",
+            "type": "archway",
             "position": "right wall",
-            "description": "An access door for staff or emergency exit."
+            "description": "Another ornate archway mirroring the left."
           }
         ],
         "dominantElements": [
-          "Exposed brutalist concrete walls and ceiling",
-          "Industrial metal framework",
-          "Integrated programmable LED lighting panels",
-          "Large, open floor space",
-          "Recessed structural elements"
+          "Flowing organic walls",
+          "Colossal domed ceiling",
+          "Large central void",
+          "Golden filigree accents"
         ],
         "uniqueIdentifiers": [
-          "Synchronized flashing light displays",
-          "Graffiti-adorned concrete surfaces",
-          "Imposing, powerful scale",
-          "Sound-system infrastructure"
+          "Integration with luminous cream canyon walls (implied)",
+          "Spherical blue window motifs (implied as openings)",
+          "Miniature spires (implied as decorative elements)"
         ]
       },
       "furnishingDetails": {
         "userSpecified": [],
         "suggested": [
-          "DJ booth with turntables and mixer",
-          "Spacious dance floor",
-          "Modular lounge seating areas",
-          "Industrial-style bar with stools",
-          "Programmable LED lighting system",
-          "Subwoofer sound system",
-          "Branded signage",
-          "Strobe lights"
+          "Central celestial altar adorned with gold and celestial symbols",
+          "Tiered seating carved into the organic walls for observers",
+          "A large, intricate astrolabe or orrery positioned centrally",
+          "Floating, soft light orbs that illuminate the space",
+          "Carved observation platforms offering views towards the apex",
+          "Ancient scrolls or carved tablets displayed on pedestals"
         ],
         "placementNotes": [
-          "DJ booth positioned centrally towards the back or on an elevated platform.",
-          "Dance floor occupying the main central area.",
-          "Lounge seating arranged around the perimeter or in designated alcoves.",
-          "Bar located along one of the main walls.",
-          "Lighting and strobe effects should be dynamic and synchronized with music."
+          "Altar should be the focal point at the front.",
+          "Seating should be arranged in semi-circular tiers facing the altar.",
+          "The astrolabe/orrery should be centrally located and prominent.",
+          "Light orbs should provide ambient, ethereal illumination.",
+          "Observation platforms can be integrated into the upper walls.",
+          "Wisdom scrolls should be placed strategically for reverence."
         ]
       },
       "navigableElements": [
         {
           "type": "passage",
-          "position": "rear",
-          "description": "Large industrial-style double doors leading to service areas or exits."
+          "position": "center back",
+          "description": "A grand, arched passage leading deeper into the Citadel."
         },
         {
           "type": "archway",
           "position": "left wall",
-          "description": "A wide, imposing archway leading to a VIP section or additional lounge."
+          "description": "An ornate archway with golden filigree."
         },
         {
-          "type": "door",
+          "type": "archway",
           "position": "right wall",
-          "description": "An access door for staff or emergency exit."
+          "description": "Another ornate archway mirroring the left."
         }
       ],
       "dominantElements": [
-        "Exposed brutalist concrete walls and ceiling",
-        "Industrial metal framework",
-        "Integrated programmable LED lighting panels",
-        "Large, open floor space",
-        "Recessed structural elements"
+        "Flowing organic walls",
+        "Colossal domed ceiling",
+        "Large central void",
+        "Golden filigree accents"
       ],
       "uniqueIdentifiers": [
-        "Synchronized flashing light displays",
-        "Graffiti-adorned concrete surfaces",
-        "Imposing, powerful scale",
-        "Sound-system infrastructure"
+        "Integration with luminous cream canyon walls (implied)",
+        "Spherical blue window motifs (implied as openings)",
+        "Miniature spires (implied as decorative elements)"
       ],
-      "searchDesc": "Inside The Electra Pulse: brutalist concrete, neon, and intense electronic music.",
-      "slug": "interior-of-the-electra-pulse"
+      "searchDesc": "Interior of The Celestial Citadel: organic cream stone, gold accents, grand blue window.",
+      "slug": "interior-of-the-celestial-citadel"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765372188621-4x7enifa2",
-      "type": "host",
-      "children": []
-    },
-    {
-      "id": "loc-1765374000902-713cqsmwd",
+      "id": "loc-1765379826464-k1h2e8te7",
       "type": "host",
       "children": [
         {
-          "id": "ccb4079a-e42c-42b8-ad8f-e2c0995433eb",
+          "id": "d0dba85a-c1bc-4580-b93b-8e3d1e3f4c4b",
           "type": "region",
           "children": [
             {
-              "id": "a7e37cd1-a742-422d-99a8-fd5ce7dc5e25",
+              "id": "3f2ab237-09d7-40ea-bba2-1a69fcf78816",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765376219460-dv5rpadcc",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1765376309037-lxlf916g5",
-      "type": "host",
-      "children": [
-        {
-          "id": "1673b735-989e-424a-8827-a60f0ef26cee",
-          "type": "region",
-          "children": [
-            {
-              "id": "0aa6ebe5-8a19-42be-a751-0a1ff6b55af7",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765376360569-3j10y8nte",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1765376411741-rj4gz11p5",
-      "type": "host",
-      "children": [
-        {
-          "id": "c767c42e-a932-40eb-b3a8-0b401fa5eae6",
-          "type": "region",
-          "children": [
-            {
-              "id": "6cf7329d-a5a0-46fe-ad72-fdd90971ba9f",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765376469623-v717pv403",
+                  "id": "niche-1765379916747-1ob71mj1t",
                   "type": "niche",
                   "children": []
                 }
@@ -738,7 +362,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765376309037-lxlf916g5",
-    "loc-1765376411741-rj4gz11p5"
+    "loc-1765379826464-k1h2e8te7"
   ]
 }

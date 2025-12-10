@@ -25,6 +25,11 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Windowless/Solid Exterior System (Dec 10):** Prevents incorrect window generation in solid structures:
+  - Solid forms (dome, mushroom, saucer, pod, capsule, sphere) now MUST use `openings: "none"`
+  - Added enclosed interior constraint for FLUX: no gaps, holes, or skylights unless specified
+  - Removed duplicate `applyMorfeumStyle()` call that was causing prompt bloat
+  - Made material inheritance rules generic (LLM-native, no hardcoded examples)
 - **Pass-Through Region System (Dec 10):** Complete protection for structural regions:
   - Generic prompts create pass-through regions (empty DNA, name: "Region")
   - Pass-through nodes: non-selectable, no delete, no slash commands
