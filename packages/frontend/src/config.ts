@@ -62,7 +62,7 @@ export const WORLD_VIEW_3D_CONFIG = {
     X: 0.0003,  // Horizontal cycle (~7.8 sec)
     Y: 0.00025,  // Vertical cycle (~10.5 sec)
     Z: 0.0001,  // Zoom cycle (~15.7 sec, slowest for subtle breathing)
-    ROLL: 0.00012,  // Roll cycle (~13 sec, slow head tilt)
+    ROLL: 0.000,  // Roll cycle (~13 sec, slow head tilt)
   },
   
   /** Easing factor for movement smoothness (0.01 = very smooth, 0.2 = snappy) */

@@ -834,6 +834,139 @@
       ],
       "searchDesc": "Graffiti-covered industrial warehouse interior with corrugated steel and diffused light.",
       "slug": "interior-of-the-foundry-canvas"
+    },
+    "niche-1765358744942-84j76meki": {
+      "id": "niche-1765358744942-84j76meki",
+      "type": "niche",
+      "name": "The Foundry Kitchen",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A compact but functional kitchen area built into the warehouse structure. Features include utilitarian countertops and integrated appliances, all accented by the pervasive graffiti art. Exposed structural elements remain visible.",
+        "colorsAndLighting": "Dominant muted greys and rust-reds from the metal structure are interspersed with vibrant graffiti hues. Lighting is a mix of diffused natural light from grimy windows and functional, slightly harsh industrial task lighting.",
+        "atmosphere": "The air carries the distinct scent of oil paint and solvents from the surrounding studio, mingling with a faint metallic tang. It feels functional yet creatively charged, with the low hum of distant harbor activity as a constant backdrop.",
+        "materials": "Primary materials include weathered corrugated steel for walls and backsplashes, rough concrete flooring, and industrial-grade stainless steel for countertops and sink. Graffiti paint adds a vibrant, textured layer.",
+        "mood": "Productive and utilitarian, softened by the creative energy of the artistic environment. It's a space built for function that embraces its gritty, artistic surroundings.",
+        "sounds": "Distant harbor hum, clatter of cookware, spray paint hiss",
+        "spatialLayout": "A defined kitchenette niche within the larger warehouse space, featuring efficient linear or L-shaped configurations.",
+        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floor, stainless steel countertops",
+        "secondary_surfaces": "Graffiti-covered cabinet fronts, reinforced glass window panes, heavy steel door",
+        "accent_features": "Vibrant graffiti murals on appliances and cabinets, exposed structural supports, industrial pendant lights",
+        "dominant": "Muted grey (metal structure)",
+        "secondary": "Kaleidoscope of graffiti colors (accents on cabinets, walls)",
+        "accent": "Rust-red (metal accents)",
+        "ambient": "Industrial task lighting, diffused daylight",
+        "genre": null,
+        "architectural_tone": "Functional industrial with artistic overlay",
+        "cultural_tone": "Artist collective, creative production, independent studio",
+        "materials_base": "Metal, concrete, weathered wood, paint",
+        "mood_baseline": "Gritty, productive, creative",
+        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
+        "soundscape_base": "Industrial harbor ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765358744941-03rp6dx9u",
+      "description": "This large industrial kitchen, situated within 'The Foundry Canvas', is designed for heavy-duty food production. Its expansive, wide orientation and functional, no-nonsense design reflect the parent structure's industrial heritage.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "A large, open industrial space designed for cooking and food preparation, featuring ample workspaces and industrial-grade equipment.",
+        "requiredElements": [
+          "Kitchen"
+        ],
+        "suggestedFixtures": [
+          "Industrial ovens",
+          "Large stainless steel prep tables",
+          "Commercial grade refrigerators and freezers",
+          "Industrial-grade sinks",
+          "Exhaust hoods",
+          "Pantry shelving"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "Large industrial door for moving supplies."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "Passage leading to other areas of The Foundry Canvas."
+          },
+          {
+            "type": "door",
+            "position": "right wall",
+            "description": "Service door for staff."
+          }
+        ],
+        "dominantElements": [
+          "Industrial cooking equipment",
+          "Stainless steel surfaces",
+          "Exposed ductwork and piping",
+          "Durable concrete flooring",
+          "Industrial lighting fixtures"
+        ],
+        "uniqueIdentifiers": [
+          "The robust, utilitarian aesthetic typical of a foundry",
+          "The scale and power of the cooking machinery",
+          "The inherent sense of productive labor"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "Industrial ovens",
+          "Large stainless steel prep tables",
+          "Commercial grade refrigerators and freezers",
+          "Industrial-grade sinks",
+          "Exhaust hoods",
+          "Pantry shelving",
+          "Tool racks",
+          "Safety signage"
+        ],
+        "placementNotes": [
+          "Central placement of large prep tables to facilitate workflow.",
+          "Refrigeration units along the back wall for efficient access.",
+          "Exhaust hoods directly above cooking stations.",
+          "Open shelving for ingredient storage."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "Large industrial door for moving supplies."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "Passage leading to other areas of The Foundry Canvas."
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "Service door for staff."
+        }
+      ],
+      "dominantElements": [
+        "Industrial cooking equipment",
+        "Stainless steel surfaces",
+        "Exposed ductwork and piping",
+        "Durable concrete flooring",
+        "Industrial lighting fixtures"
+      ],
+      "uniqueIdentifiers": [
+        "The robust, utilitarian aesthetic typical of a foundry",
+        "The scale and power of the cooking machinery",
+        "The inherent sense of productive labor"
+      ],
+      "searchDesc": "Graffiti-covered industrial kitchen with corrugated steel and oil paint scent.",
+      "slug": "kitchen"
     }
   },
   "views": {},
@@ -878,6 +1011,11 @@
               "children": [
                 {
                   "id": "niche-1765355842283-2w9cabfj1",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765358744942-84j76meki",
                   "type": "niche",
                   "children": []
                 }
