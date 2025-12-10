@@ -1006,6 +1006,691 @@
       ],
       "searchDesc": "Industrial rooftop terrace with neon lights and city views.",
       "slug": "the-roof-top-terrase"
+    },
+    "9ba4abd5-81e5-4ddf-8f1a-d70016e28c51": {
+      "id": "9ba4abd5-81e5-4ddf-8f1a-d70016e28c51",
+      "type": "location",
+      "name": "The Foundry Canvas",
+      "spaceType": "exterior",
+      "description": "A sprawling art studio housed within a weathered industrial warehouse on Ringön island. Large, graffiti-adorned doors hint at the creative energy contained within its robust, metal-clad shell.",
+      "dna": {
+        "looks": "A large, rectangular warehouse structure with a prominent corrugated steel exterior. Sections are heavily adorned with colorful, contemporary graffiti art. Large industrial windows are spaced unevenly along its length, and heavy steel doors mark the main entrances.",
+        "colorsAndLighting": "Dominated by the muted greys and rust-reds of weathered metal, punctuated by the vibrant, diverse colors of graffiti. Natural light is diffused through grimy windows, with harsh industrial lighting potentially visible at night.",
+        "atmosphere": "The air carries a faint but distinct scent of oil paint and solvents, mingling with the briny, industrial aroma of Ringön. The constant hum of distant harbor activity forms the backdrop to the focused creative energy within.",
+        "materials": "Primarily rough, corrugated steel plating and exposed structural steel beams. The concrete foundation is likely rough and weathered. Graffiti adds a layer of vibrant, textured paint.",
+        "mood": "A juxtaposition of raw industrial utility and vibrant artistic expression, fostering a sense of creative freedom and productive energy.",
+        "sounds": "Distant ship horns, seagulls, faint industrial hum, wind, occasional clatter.",
+        "primary_surfaces": "Weathered corrugated steel walls, rough concrete base",
+        "secondary_surfaces": "Graffiti-covered panels, reinforced glass windows, heavy steel doors",
+        "accent_features": "Vibrant graffiti murals, exposed structural supports, visible stacks of materials through openings",
+        "dominant": "Muted greys and rust-reds (metal)",
+        "secondary": "Kaleidoscope of graffiti colors (accents)",
+        "accent": "Clean white primer (potential studio accents)",
+        "ambient": "Natural daylight, industrial lighting",
+        "genre": null,
+        "architectural_tone": "Functional industrial with artistic overlay",
+        "cultural_tone": "Artist collective, creative production, independent studio",
+        "materials_base": "Metal, concrete, weathered wood, paint",
+        "mood_baseline": "Gritty, productive, creative",
+        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
+        "soundscape_base": "Industrial harbor ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "searchDesc": "The Foundry Canvas art studio in a Ringön warehouse. Gritty industrial exterior, graffiti art, large steel doors.",
+      "slug": "the-foundry-canvas",
+      "structure": {
+        "spatialLayout": "A vast, open-plan interior with high ceilings, typical of a warehouse. The exterior presents a solid, imposing form against the harbor landscape.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A large, double industrial steel door, weathered and covered in vibrant graffiti, leading into the main studio space."
+          },
+          {
+            "type": "door",
+            "position": "left",
+            "description": "A smaller, rusted metal service door on the side, possibly leading to storage or a back area."
+          },
+          {
+            "type": "window",
+            "position": "right",
+            "description": "A tall, grimy industrial window with reinforced glass, offering a glimpse of canvases and art supplies inside."
+          },
+          {
+            "type": "passage",
+            "position": "background",
+            "description": "An open loading bay door, revealing stacks of materials and unfinished sculptures within the vast interior."
+          }
+        ],
+        "dominantElements": [
+          "Corrugated steel walls",
+          "Graffiti art",
+          "Large industrial windows",
+          "Heavy steel doors",
+          "Exposed structural beams"
+        ],
+        "uniqueIdentifiers": [
+          "Vibrant graffiti art contrasting with industrial exterior",
+          "The sheer scale of the warehouse structure",
+          "Visible creative clutter through windows",
+          "The scent of paint and solvent mixed with sea air"
+        ]
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a85b7a2/i-uRpF_CG1zGJPlNNrypK.jpg",
+      "primaryMedia": "media-1765354582561-lw8j9p9kp"
+    },
+    "niche-1765354607048-dqbmumowa": {
+      "id": "niche-1765354607048-dqbmumowa",
+      "type": "niche",
+      "name": "The Foundry Canvas Workshop",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, open industrial space with high ceilings, echoing the corrugated steel exterior. Sections of walls are adorned with expansive, colorful graffiti murals, transforming the raw metal and concrete into a vibrant artistic canvas. Exposed structural steel beams crisscross the upper reaches of the space.",
+        "colorsAndLighting": "Dominated by the muted greys and rust-reds of weathered metal, dramatically punctuated by the kaleidoscopic, vibrant colors of graffiti art. Diffused natural light streams through grimy industrial windows, casting a soft glow that highlights the textures of paint and metal.",
+        "atmosphere": "The air is thick with the distinct scent of oil paint and solvents, a testament to the creative work happening within. This artistic aroma mingles with the faint, briny industrial scent of the nearby harbor. A low, ambient hum of distant industrial activity provides a constant backdrop.",
+        "materials": "The primary materials are rough, corrugated steel plating for the walls and a weathered concrete base. Graffiti adds a rich layer of textured paint. Exposed structural steel beams are prominent throughout.",
+        "mood": "A powerful juxtaposition of raw industrial utility and uninhibited artistic expression, fostering an atmosphere of intense creative freedom and productive energy.",
+        "sounds": "Distant harbor hum, faint industrial sounds, occasional artistic activity.",
+        "spatialLayout": "A large, rectangular warehouse layout characterized by its expansive open volume and high ceilings, designed for flexibility and large-scale artistic projects.",
+        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floor",
+        "secondary_surfaces": "Graffiti-covered panels, reinforced glass windows, heavy steel doors",
+        "accent_features": "Vibrant, large-scale graffiti murals, exposed structural steel beams",
+        "dominant": "Muted greys and rust-reds (metal)",
+        "secondary": "Kaleidoscope of graffiti colors (murals)",
+        "accent": "Clean white primer (potential studio accents)",
+        "ambient": "Diffused natural daylight",
+        "genre": null,
+        "architectural_tone": "Functional industrial with artistic overlay",
+        "cultural_tone": "Artist collective, creative production, independent studio",
+        "materials_base": "Metal, concrete, weathered wood, paint",
+        "mood_baseline": "Gritty, productive, creative",
+        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
+        "soundscape_base": "Industrial harbor ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765354607047-tuo3l5tev",
+      "description": "The interior of 'The Foundry Canvas' is a large, adaptable industrial space designed for creative production. It inherits a 'large' scale and 'wide' orientation from its parent, suggesting an expansive, horizontal layout. Its 'rectangular' form and 'flat' roof are typical for industrial structures. The space is characterized by 'large-glass' openings with 'rectangular' shapes, allowing for ample natural light. Functionally, it serves an 'industrial' purpose. The layout is open, emphasizing workflow and space for large equipment. Key features include exposed beams, concrete floors, and high ceilings, with navigable elements like loading bay doors and passages.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "A large, open industrial space with high ceilings, suitable for manufacturing or artistic creation. It features ample floor space for equipment and workspace.",
+        "requiredElements": [
+          "interior of The Foundry Canvas"
+        ],
+        "suggestedFixtures": [
+          "Industrial workbenches",
+          "Large machinery",
+          "Storage racks",
+          "Overhead cranes",
+          "Assembly lines",
+          "Tool cabinets"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "Large, industrial loading bay doors for material access."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "An open passage leading to adjacent workshop areas."
+          },
+          {
+            "type": "stairs",
+            "position": "corner, near the center",
+            "description": "A metal staircase leading to a mezzanine level for observation or office space."
+          }
+        ],
+        "dominantElements": [
+          "Exposed steel beams",
+          "Concrete flooring",
+          "High ceilings",
+          "Large, open floor plan",
+          "Industrial lighting fixtures"
+        ],
+        "uniqueIdentifiers": [
+          "Echoes of its foundry past",
+          "Raw, unfinished aesthetic",
+          "Immense scale for creation"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "Large, industrial loading bay doors for material access."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "An open passage leading to adjacent workshop areas."
+        },
+        {
+          "type": "stairs",
+          "position": "corner, near the center",
+          "description": "A metal staircase leading to a mezzanine level for observation or office space."
+        }
+      ],
+      "dominantElements": [
+        "Exposed steel beams",
+        "Concrete flooring",
+        "High ceilings",
+        "Large, open floor plan",
+        "Industrial lighting fixtures"
+      ],
+      "uniqueIdentifiers": [
+        "Echoes of its foundry past",
+        "Raw, unfinished aesthetic",
+        "Immense scale for creation"
+      ],
+      "searchDesc": "Industrial warehouse interior with graffiti art, raw metal, and creative energy.",
+      "slug": "interior-of-the-foundry-canvas"
+    },
+    "niche-1765354642328-pxtpiopah": {
+      "id": "niche-1765354642328-pxtpiopah",
+      "type": "niche",
+      "name": "The Foundry Canvas Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, open rectangular space defined by high ceilings and raw industrial architecture. Prominent corrugated steel walls are extensively covered in bold, colorful graffiti. Exposed steel beams crisscross overhead, and large, unevenly spaced industrial windows punctuate the upper sections.",
+        "colorsAndLighting": "The muted greys and rust-reds of the metal structure are vibrant with a kaleidoscope of graffiti colors. Diffused natural light filters through grimy windows, creating a soft, ambient glow.",
+        "atmosphere": "The air is a blend of artist materials—oil paint and solvents—with an underlying industrial scent. A low, constant hum from distant harbor activity is present, underscored by the focused energy of creative work.",
+        "materials": "The primary materials are weathered corrugated steel plating and rough concrete. Graffiti adds a vibrant, layered texture to the walls. Exposed structural steel beams are a consistent visual element.",
+        "mood": "A powerful fusion of raw industrial grit and dynamic artistic expression, fostering an atmosphere of boundless creative freedom and productive endeavor.",
+        "sounds": "Distant harbor hum, occasional creative sounds, faint echoes",
+        "spatialLayout": "A large, open rectangular hall with significant verticality due to the high ceilings and exposed structural elements. Ample free space for large-scale projects.",
+        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floor",
+        "secondary_surfaces": "Graffiti-covered panels, exposed structural steel beams, industrial glass windows, heavy steel doors",
+        "accent_features": "Vibrant, multi-layered graffiti murals, stacks of art supplies visible",
+        "dominant": "Muted greys and rust-reds (corrugated steel)",
+        "secondary": "Kaleidoscope of graffiti colors (wall art)",
+        "accent": "Clean white primer (potential studio accents, tools)",
+        "ambient": "Diffused natural daylight",
+        "genre": null,
+        "architectural_tone": "Functional industrial with artistic overlay",
+        "cultural_tone": "Artist collective, creative production, independent studio",
+        "materials_base": "Metal, concrete, weathered wood, paint",
+        "mood_baseline": "Gritty, productive, creative",
+        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
+        "soundscape_base": "Industrial harbor ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765354642327-rdjzzfyws",
+      "description": "The interior of The Foundry Canvas, a sprawling industrial space within the Ringön region, characterized by its raw, open layout and historical industrial features.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "This large, open interior space is characterized by its industrial heritage. It features expansive floors and high ceilings, with exposed structural elements contributing to its raw aesthetic.",
+        "requiredElements": [
+          "The Foundry Canvas"
+        ],
+        "suggestedFixtures": [
+          "Industrial machinery",
+          "Large workbenches",
+          "Overhead cranes",
+          "Storage racks",
+          "Metal fabrication tools"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "rear",
+            "description": "A wide opening leading to other industrial areas."
+          },
+          {
+            "type": "door",
+            "position": "left wall, mid-space",
+            "description": "A heavy industrial door, likely for external access."
+          },
+          {
+            "type": "stairs",
+            "position": "back-right corner",
+            "description": "A metal staircase leading to a mezzanine or upper level."
+          }
+        ],
+        "dominantElements": [
+          "Exposed steel beams",
+          "Concrete floors",
+          "High ceilings",
+          "Large industrial windows",
+          "Open floor plan"
+        ],
+        "uniqueIdentifiers": [
+          "Echoes of its foundry past",
+          "Raw, unrefined industrial aesthetic",
+          "Vast, open scale conducive to large-scale projects"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "rear",
+          "description": "A wide opening leading to other industrial areas."
+        },
+        {
+          "type": "door",
+          "position": "left wall, mid-space",
+          "description": "A heavy industrial door, likely for external access."
+        },
+        {
+          "type": "stairs",
+          "position": "back-right corner",
+          "description": "A metal staircase leading to a mezzanine or upper level."
+        }
+      ],
+      "dominantElements": [
+        "Exposed steel beams",
+        "Concrete floors",
+        "High ceilings",
+        "Large industrial windows",
+        "Open floor plan"
+      ],
+      "uniqueIdentifiers": [
+        "Echoes of its foundry past",
+        "Raw, unrefined industrial aesthetic",
+        "Vast, open scale conducive to large-scale projects"
+      ],
+      "searchDesc": "Graffiti-adorned industrial warehouse interior, a vibrant artist studio.",
+      "slug": "interior-of-the-foundry-canvas"
+    },
+    "niche-1765355245626-uq29qk5jo": {
+      "id": "niche-1765355245626-uq29qk5jo",
+      "type": "niche",
+      "name": "The Foundry Canvas Workshop",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A cavernous, rectangular warehouse space defined by soaring ceilings and bare structural steel beams. Walls are predominantly corrugated steel, interspersed with vibrant, large-scale graffiti murals. Industrial windows punctuate the facade, allowing diffused natural light to enter.",
+        "colorsAndLighting": "Dominated by the muted greys and rust-reds of the metal structure, heavily accented by the diverse, saturated colors of the graffiti. Lighting is a mix of diffused daylight and functional, possibly harsh, industrial fixtures.",
+        "atmosphere": "The air is thick with the faint scent of oil paint and solvents, layered over the distant industrial aroma of the harbor. A sense of focused, energetic creativity pervades the space, underscored by the distant hum of maritime activity.",
+        "materials": "Rough, corrugated steel plating forms the primary wall surfaces, contrasting with exposed structural steel beams. The concrete foundation is likely weathered. Graffiti adds a dynamic, textured layer of paint.",
+        "mood": "A dynamic fusion of raw industrial utility and expressive artistic freedom, fostering a productive and inspiring environment.",
+        "sounds": "Distant harbor hum, echoes, faint solvent smells, artistic activity",
+        "spatialLayout": "A large, open rectangular volume with high ceilings, providing ample space for artistic endeavors and exhibits.",
+        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floor",
+        "secondary_surfaces": "Graffiti-covered panels, reinforced glass windows, heavy steel doors, exposed steel beams",
+        "accent_features": "Vibrant graffiti murals, visible stacks of art supplies",
+        "dominant": "Muted greys (steel)",
+        "secondary": "Rust-reds (metal patina)",
+        "accent": "Kaleidoscope of graffiti colors",
+        "ambient": "Diffused daylight and industrial light",
+        "genre": null,
+        "architectural_tone": "Functional industrial with artistic overlay",
+        "cultural_tone": "Artist collective, creative production, independent studio",
+        "materials_base": "Metal, concrete, weathered wood, paint",
+        "mood_baseline": "Gritty, productive, creative",
+        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
+        "soundscape_base": "Industrial harbor ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765355245624-fiyavk44w",
+      "description": "The interior of The Foundry Canvas on Ringön, a large, industrial workshop space designed for creative and manufacturing endeavors.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "A vast, open-plan industrial space characterized by high ceilings and expansive floor area, designed for creative and manufacturing processes.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Large industrial workbenches",
+          "Heavy-duty shelving units",
+          "Overhead cranes or hoists",
+          "Industrial lighting fixtures",
+          "Tool storage cabinets",
+          "Material carts"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passages",
+            "position": "back wall",
+            "description": "Large, open passages leading to other sections of The Foundry Canvas."
+          },
+          {
+            "type": "door",
+            "position": "right wall",
+            "description": "A wide, industrial access door."
+          },
+          {
+            "type": "stairs",
+            "position": "left corner",
+            "description": "Sturdy metal stairs leading to a possible mezzanine or upper level storage."
+          }
+        ],
+        "dominantElements": [
+          "Exposed concrete floors",
+          "High ceilings with exposed ductwork",
+          "Large, open floor space",
+          "Industrial-grade lighting",
+          "Massive rectangular window walls"
+        ],
+        "uniqueIdentifiers": [
+          "The name 'The Foundry Canvas' is emblazoned on a central structural beam.",
+          "Visible remnants of its industrial past, such as aged metal fixtures or painted markings on walls."
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "Industrial workbenches with integrated vices",
+          "Modular metal shelving units",
+          "Pallet racking systems",
+          "Adjustable overhead LED work lights",
+          "Locking tool chests on wheels",
+          "Heavy-duty material dollies"
+        ],
+        "placementNotes": [
+          "Workbenches should be strategically placed to allow for clear circulation and access to materials.",
+          "Shelving units should be organized for efficient storage of tools, materials, and finished products.",
+          "Overhead lighting should provide ample, uniform illumination across the workspace.",
+          "Tool chests should be positioned near workstations for immediate access.",
+          "Consider placing larger machinery in the center or towards the back of the space for efficient workflow.",
+          "The space should feel functional and robust, reflecting its industrial purpose."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passages",
+          "position": "back wall",
+          "description": "Large, open passages leading to other sections of The Foundry Canvas."
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "A wide, industrial access door."
+        },
+        {
+          "type": "stairs",
+          "position": "left corner",
+          "description": "Sturdy metal stairs leading to a possible mezzanine or upper level storage."
+        }
+      ],
+      "dominantElements": [
+        "Exposed concrete floors",
+        "High ceilings with exposed ductwork",
+        "Large, open floor space",
+        "Industrial-grade lighting",
+        "Massive rectangular window walls"
+      ],
+      "uniqueIdentifiers": [
+        "The name 'The Foundry Canvas' is emblazoned on a central structural beam.",
+        "Visible remnants of its industrial past, such as aged metal fixtures or painted markings on walls."
+      ],
+      "searchDesc": "Industrial artist studio with graffiti art, corrugated steel walls, and diffused natural light.",
+      "slug": "interior-of-the-foundry-canvas"
+    },
+    "niche-1765355842283-2w9cabfj1": {
+      "id": "niche-1765355842283-2w9cabfj1",
+      "type": "niche",
+      "name": "The Foundry Canvas Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, rectangular open space characteristic of a warehouse, with high ceilings and exposed structural steel beams. The walls are predominantly clad in corrugated steel, generously layered with vibrant and diverse contemporary graffiti art. Large, industrial windows are scattered along the upper sections, admitting diffused natural light.",
+        "colorsAndLighting": "The base palette is dominated by the muted greys and rust-reds of weathered metal. This is dramatically contrasted by the kaleidoscope of colors from the graffiti. Natural light filters through grimy windows, creating a soft, diffused illumination.",
+        "atmosphere": "The air is thick with the distinct scents of oil paint and solvents, layered with the briny, industrial aroma of the nearby harbor. A constant, low hum of distant maritime activity serves as a backdrop to the focused creative energy within.",
+        "materials": "Rough, corrugated steel plating forms the primary wall material, resting on a weathered concrete foundation. Exposed structural steel beams add to the industrial feel. The surfaces are further textured by layers of vibrant, applied paint from the graffiti.",
+        "mood": "A dynamic blend of raw industrial utility and energetic artistic expression, fostering an environment of creative freedom and intense productivity.",
+        "sounds": "Distant harbor hum, faint creative ambient sounds",
+        "spatialLayout": "A large, open rectangular volume with high ceilings, offering a sense of expansive space ideal for artistic endeavors.",
+        "primary_surfaces": "Weathered corrugated steel walls, rough concrete floor",
+        "secondary_surfaces": "Graffiti-covered panels, reinforced glass windows",
+        "accent_features": "Vibrant graffiti murals, exposed structural supports",
+        "dominant": "Muted greys (corrugated steel)",
+        "secondary": "Rust-reds (weathered metal)",
+        "accent": "Kaleidoscope of graffiti colors",
+        "ambient": "Diffused natural daylight",
+        "genre": null,
+        "architectural_tone": "Functional industrial with artistic overlay",
+        "cultural_tone": "Artist collective, creative production, independent studio",
+        "materials_base": "Metal, concrete, weathered wood, paint",
+        "mood_baseline": "Gritty, productive, creative",
+        "palette_bias": "Greys, browns, rust-reds, with vibrant chromatic graffiti accents",
+        "soundscape_base": "Industrial harbor ambient",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765355842281-s3dfql88u",
+      "description": "The interior of The Foundry Canvas, a large-scale industrial space characterized by its expansive, open layout and robust structural elements, suitable for manufacturing, workshops, or extensive storage.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "A large, open industrial space with high ceilings and significant floor area, designed for manufacturing or extensive storage. The layout emphasizes a clear, expansive work or storage zone.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Industrial shelving units",
+          "Workbenches with integrated tools",
+          "Heavy-duty machinery (e.g., lathes, presses)",
+          "Pallet racking systems",
+          "Overhead cranes or hoists",
+          "Storage bins and containers"
+        ],
+        "navigableElements": [
+          {
+            "type": "open-passage",
+            "position": "rear wall",
+            "description": "Large, open passage leading to other industrial areas."
+          },
+          {
+            "type": "door",
+            "position": "left wall, mid-section",
+            "description": "Standard personnel door for access and egress."
+          },
+          {
+            "type": "stairs",
+            "position": "back-right corner",
+            "description": "Staircase leading to a potential mezzanine or upper level."
+          }
+        ],
+        "dominantElements": [
+          "Exposed concrete floor",
+          "High ceilings with visible structural beams",
+          "Large industrial windows",
+          "Open, unimpeded floor space"
+        ],
+        "uniqueIdentifiers": [
+          "Raw industrial aesthetic",
+          "Vast open volume",
+          "Industrial heritage of 'The Foundry Canvas'"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "Industrial shelving units",
+          "Workbenches with integrated tools",
+          "Heavy-duty machinery (e.g., lathes, presses)",
+          "Pallet racking systems",
+          "Overhead cranes or hoists",
+          "Storage bins and containers"
+        ],
+        "placementNotes": [
+          "Shelving units and pallet racking should line the walls to maximize floor space.",
+          "Workbenches positioned strategically for efficient workflow, potentially in clusters.",
+          "Machinery placed for functional process flow, with ample clearance.",
+          "Overhead cranes positioned to span the main operational areas.",
+          "Storage bins organized by type or material, near relevant workstations or racking."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "open-passage",
+          "position": "rear wall",
+          "description": "Large, open passage leading to other industrial areas."
+        },
+        {
+          "type": "door",
+          "position": "left wall, mid-section",
+          "description": "Standard personnel door for access and egress."
+        },
+        {
+          "type": "stairs",
+          "position": "back-right corner",
+          "description": "Staircase leading to a potential mezzanine or upper level."
+        }
+      ],
+      "dominantElements": [
+        "Exposed concrete floor",
+        "High ceilings with visible structural beams",
+        "Large industrial windows",
+        "Open, unimpeded floor space"
+      ],
+      "uniqueIdentifiers": [
+        "Raw industrial aesthetic",
+        "Vast open volume",
+        "Industrial heritage of 'The Foundry Canvas'"
+      ],
+      "searchDesc": "Graffiti-covered industrial warehouse interior with corrugated steel and diffused light.",
+      "slug": "interior-of-the-foundry-canvas"
+    },
+    "niche-1765355870759-qm1m6dkmj": {
+      "id": "niche-1765355870759-qm1m6dkmj",
+      "type": "niche",
+      "name": "The Neon Pulse Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a cavernous space characterized by raw, unpainted concrete walls punctuated by intricate, geometric patterns of intensely bright neon and LED light. The scale is vast and industrial, softened by the dynamic, rhythmic play of color that wraps around structural elements and highlights key features like a central bar and DJ booth.",
+        "colorsAndLighting": "Dominant hues of electric blue, deep purple, and vibrant magenta emanate from pulsating neon tubes and diffused LED panels. Sharp, deep shadows are actively broken by the rhythmic flashes and sweeps of color, creating a high-contrast, strobing effect.",
+        "atmosphere": "The air feels cool and carries a subtle metallic tang, a remnant of the industrial shell. A low, almost imperceptible vibration hums through the space, a tangible echo of the bass-heavy music, fostering a constant sense of restless, energetic anticipation.",
+        "materials": "Weathered, unpainted concrete forms the primary texture, displaying the raw marks of its industrial past. Accents of brushed aluminum and black steel are utilized for the DJ booth, signage, and structural supports, providing a sleek contrast to the rough concrete.",
+        "mood": "The mood is one of exhilarating, energetic escapism, evoking a potent sense of anticipation and excitement. It's a portal to a world of relentless rhythm and sensory stimulation.",
+        "sounds": "Deep bass, pulsing electronic beats, ambient industrial hum",
+        "spatialLayout": "A grand, open-plan layout with a high ceiling, designed to accommodate a large crowd. The space is defined by the interplay of light and shadow on raw materials, creating a sense of depth and dynamic visual interest.",
+        "primary_surfaces": "Rough, textured concrete walls and floors",
+        "secondary_surfaces": "Glow of neon tubes, diffused LED light panels, polished black steel surfaces",
+        "accent_features": "Stylized, minimalist signage in neon, subtle wisps of atmospheric smoke",
+        "dominant": "Electric Blue (50%)",
+        "secondary": "Deep Purple (30%)",
+        "accent": "Vibrant Magenta (20%)",
+        "ambient": "Strobe-like, high-contrast",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with dynamic light installations",
+        "cultural_tone": "Urban subculture, electronic music enthusiasts, nightlife seekers",
+        "materials_base": "Raw industrial, modern lighting",
+        "mood_baseline": "Energetic, exciting, slightly mysterious",
+        "palette_bias": "Cool neon spectrum",
+        "soundscape_base": "Electronic beats and ambient industrial",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765355870758-sqxxc30yv",
+      "description": "The interior of The Neon Pulse, a vibrant and visually striking entertainment venue within the Ringön region. This space is designed for maximum sensory engagement, characterized by its extensive use of neon lighting and a modern, slightly cyberpunk aesthetic.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A medium-sized, open-plan entertainment space with a focus on visual stimulation. It features a central area for mingling and possibly a performance or service counter.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Lounge seating areas",
+          "Bar counter",
+          "Neon signage",
+          "DJ booth",
+          "Dance floor",
+          "Ambient lighting fixtures"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "front",
+            "description": "Main entrance leading into the main seating area."
+          },
+          {
+            "type": "passage",
+            "position": "back",
+            "description": "Service passage leading to restrooms or staff areas."
+          },
+          {
+            "type": "archway",
+            "position": "side",
+            "description": "Opens to a secondary seating or lounge zone."
+          }
+        ],
+        "dominantElements": [
+          "Vibrant neon lighting",
+          "Sleek, modern furniture",
+          "Reflective surfaces",
+          "Large open floor space"
+        ],
+        "uniqueIdentifiers": [
+          "Pulsating neon light installations",
+          "Futuristic, cyberpunk aesthetic",
+          "Immersive audiovisual elements"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "Modular lounge seating (sofas, armchairs)",
+          "Illuminated bar counter",
+          "Variety of neon signs and displays",
+          "DJ console with integrated lighting",
+          "Mirrored surfaces or polished metal accents",
+          "Low-profile coffee tables"
+        ],
+        "placementNotes": [
+          "Seating arranged in clusters to encourage social interaction.",
+          "Bar counter positioned centrally or along one wall for easy access.",
+          "Neon signage strategically placed to create visual focal points and brand recognition.",
+          "Dance floor in the central or rear area.",
+          "Lighting should be atmospheric and dynamic, capable of changing color and intensity."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front",
+          "description": "Main entrance leading into the main seating area."
+        },
+        {
+          "type": "passage",
+          "position": "back",
+          "description": "Service passage leading to restrooms or staff areas."
+        },
+        {
+          "type": "archway",
+          "position": "side",
+          "description": "Opens to a secondary seating or lounge zone."
+        }
+      ],
+      "dominantElements": [
+        "Vibrant neon lighting",
+        "Sleek, modern furniture",
+        "Reflective surfaces",
+        "Large open floor space"
+      ],
+      "uniqueIdentifiers": [
+        "Pulsating neon light installations",
+        "Futuristic, cyberpunk aesthetic",
+        "Immersive audiovisual elements"
+      ],
+      "searchDesc": "Energetic neon-lit nightclub interior, electric blues, purples, magentas. Industrial concrete.",
+      "slug": "interior-of-the-neon-pulse"
     }
   },
   "views": {},
@@ -1043,6 +1728,32 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "id": "9ba4abd5-81e5-4ddf-8f1a-d70016e28c51",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765354607048-dqbmumowa",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765354642328-pxtpiopah",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765355245626-uq29qk5jo",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765355842283-2w9cabfj1",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -1067,6 +1778,11 @@
                 },
                 {
                   "id": "niche-1765299532957-wu7y0pwzu",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765355870759-qm1m6dkmj",
                   "type": "niche",
                   "children": []
                 }

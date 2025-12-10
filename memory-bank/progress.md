@@ -25,6 +25,11 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Fixed `--furnish` Flag (Dec 10):** Complete fix for furnishing functionality:
+  - Bug: `furnishingDetails` was generated but never saved to node data
+  - Fix: Added `FurnishingDetails` interface and property to nodeBuilder.ts
+  - Enhancement: Strong prompt emphasis for FLUX ("FULLY FURNISHED", "40-60% floor space")
+  - Now persists `furnishingDetails` to node with `userSpecified`, `suggested`, `placementNotes`
 - **Full Parent Context for Slash Commands (Dec 9):** Fixed inaccurate DNA generation in `/NEW_REGION`, `/NEW_LOCATION`:
   - Extended `ParentDNAContext` to include ALL parent data (name, description, 23+ DNA fields, structure)
   - Slash commands now generate geographically accurate results (e.g., "Ringön in Göteborg")

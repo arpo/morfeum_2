@@ -10,6 +10,13 @@ export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'feature' | '
 
 export type SpaceType = 'interior' | 'exterior';
 
+/** Furnishing details from --furnish flag */
+export interface FurnishingDetails {
+  userSpecified?: string[];
+  suggested?: string[];
+  placementNotes?: string[];
+}
+
 export interface NodeBuildOptions {
   spaceType?: SpaceType;
   parentId?: string;
@@ -17,6 +24,8 @@ export interface NodeBuildOptions {
   data?: Record<string, any>;
   /** NEW: Structure data stored separately from DNA */
   structure?: Structure;
+  /** Furnishing details (when --furnish flag is used) */
+  furnishingDetails?: FurnishingDetails;
   navigableElements?: any[];
   dominantElements?: string[];
   uniqueIdentifiers?: string[];
@@ -33,6 +42,8 @@ export interface LocationNode {
   dna: NodeDNA;
   /** NEW: Structure data stored separately from DNA */
   structure?: Structure;
+  /** Furnishing details (when --furnish flag is used) */
+  furnishingDetails?: FurnishingDetails;
   primaryMedia?: string;
   parentId?: string;
   description?: string;
@@ -105,6 +116,11 @@ export function buildNode(
   // NEW: Add structure data (separate from DNA)
   if (options?.structure) {
     node.structure = options.structure;
+  }
+
+  // Add furnishing details (when --furnish flag is used)
+  if (options?.furnishingDetails) {
+    node.furnishingDetails = options.furnishingDetails;
   }
 
   // Add structural fields if provided (legacy, also in structure)

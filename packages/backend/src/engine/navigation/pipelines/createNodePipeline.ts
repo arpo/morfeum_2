@@ -199,6 +199,8 @@ export async function runCreateLocationNodePipeline(
       description: structureAnalysis.description || nodeData.description,
       // Structure is now stored separately at node level (not inside DNA)
       structure: structureAnalysis.structure,
+      // Furnishing details (when --furnish flag is used)
+      furnishingDetails: structureAnalysis.furnishingDetails,
       // Legacy fields (kept for backward compatibility, but now also in structure)
       navigableElements: structureAnalysis.structure.navigableElements || nodeData.navigableElements,
       dominantElements: structureAnalysis.structure.dominantElements || nodeData.dominantElements,
@@ -385,17 +387,31 @@ function composeImagePrompt(
     parts.push(shapeDescriptions[structure.openingShape] || '');
   }
 
-  // Add furnishing details if present
+  // Add furnishing details if present (--furnish flag was used)
+  // Use STRONG emphasis to ensure FLUX renders furniture prominently
   if (structureAnalysis.furnishingDetails) {
     const { userSpecified, suggested, placementNotes } = structureAnalysis.furnishingDetails;
+    console.log('\n🪑 [FURNISHING] --furnish flag detected, adding EMPHASIZED furnishing details to image prompt:');
+    
+    // CRITICAL: Add strong furnishing emphasis to prevent empty spaces
+    parts.push('IMPORTANT: This space is FULLY FURNISHED and IN ACTIVE USE - NOT an empty room.');
+    parts.push('Furniture and equipment FILL THE SPACE, distributed throughout the floor area, not just along walls.');
+    parts.push('Items are HUMAN-SCALE and PROMINENTLY VISIBLE in foreground and midground.');
+    
     if (userSpecified && userSpecified.length > 0) {
-      parts.push(`User-specified furnishings: ${userSpecified.join(', ')}.`);
+      console.log(`  User-specified: ${userSpecified.join(', ')}`);
+      parts.push(`MUST INCLUDE these user-specified items (prominently visible): ${userSpecified.join(', ')}.`);
     }
     if (suggested && suggested.length > 0) {
-      parts.push(`Suggested furnishings: ${suggested.join(', ')}.`);
+      console.log(`  Suggested: ${suggested.join(', ')}`);
+      // Convert list to more descriptive scene setting
+      const furnishingCount = suggested.length;
+      parts.push(`The space contains at least ${Math.min(furnishingCount, 4)}-${Math.min(furnishingCount + 2, 8)} pieces of furniture/equipment: ${suggested.join(', ')}.`);
+      parts.push('These items occupy 40-60% of the visible floor space.');
     }
     if (placementNotes && placementNotes.length > 0) {
-      parts.push(`Furnishing placement notes: ${placementNotes.join('. ')}.`);
+      console.log(`  Placement notes: ${placementNotes.join('. ')}`);
+      parts.push(`Spatial arrangement: ${placementNotes.join(' ')}`);
     }
   }
 
