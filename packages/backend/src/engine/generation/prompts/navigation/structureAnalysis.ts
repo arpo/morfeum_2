@@ -24,67 +24,8 @@ import { furnishingInstructions } from './furnishingInstructions';
 
 /* (already exported above, remove duplicate) */
 
-/**
- * Extract window/opening shapes from parent's dominant elements or description
- * Returns array of detected shapes (e.g., ['rectangular', 'circular'])
- */
-function extractOpeningShapesFromParent(parentStructure: any, parentDna: any): string[] {
-  const shapes: string[] = [];
-  
-  // Check dominantElements and uniqueIdentifiers
-  const elements = [
-    ...(parentStructure?.dominantElements || []),
-    ...(parentStructure?.uniqueIdentifiers || []),
-    parentDna?.looks || '',
-    parentDna?.accent_features || ''
-  ].join(' ').toLowerCase();
-  
-  // Detect rectangular/square windows
-  if (/rectangular window|square window|rectangle window/.test(elements)) {
-    shapes.push('rectangular');
-  }
-  
-  // Detect circular/round windows
-  if (/circular|porthole|round window|round opening/.test(elements)) {
-    shapes.push('circular');
-  }
-  
-  // Detect arched windows
-  if (/arched window|arch window|pointed arch/.test(elements)) {
-    shapes.push('arched');
-  }
-  
-  return [...new Set(shapes)]; // Remove duplicates
-}
-
-/**
- * Infer scale from description text when no explicit scale is set
- * Looks for keywords indicating size
- */
-function inferScaleFromDescription(dna: any, description?: string): 'small' | 'medium' | 'large' | null {
-  const text = [
-    dna?.looks || '',
-    dna?.description || '',
-    description || ''
-  ].join(' ').toLowerCase();
-
-  // Small indicators
-  if (/\b(modest|small|compact|intimate|cozy|tiny|cramped|narrow|pod|booth|closet|cubicle|cabin)\b/.test(text)) {
-    return 'small';
-  }
-  
-  // Large indicators
-  if (/\b(vast|immense|enormous|massive|grand|huge|cathedral|warehouse|hall|arena|stadium|expansive|towering)\b/.test(text)) {
-    return 'large';
-  }
-  
-  // Medium indicators (or default if no strong signal)
-  if (/\b(standard|regular|moderate|typical|average|room|shop|café|cafe|store)\b/.test(text)) {
-    return 'medium';
-  }
-  
-  return null; // No clear signal
-}
+// NOTE: All analysis (form, functional type, scale, opening shapes) is now determined by the LLM
+// No regex-based inference - we trust the LLM to understand context from the full parent data
 
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
   const { userPrompt, context, perspective, includeFurnishing } = input;
@@ -95,8 +36,8 @@ export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
   const currentNodeData = context.currentNode.data as any;
   const parentStructure = currentNodeData?.structure || parentDna?.structure || currentDna?.structure;
   
-  // Infer scale from parent if not explicitly set
-  const inferredParentScale = parentStructure?.scale || inferScaleFromDescription(currentDna, context.currentNode.data?.description as string);
+  // Pass full parent context to LLM - no regex inference needed
+  // The LLM will understand context from cultural_tone and description
 
   let prompt = `You are an expert at spatial and architectural analysis.
 
@@ -107,16 +48,32 @@ Creating a new ${perspective} space.
 ${context.currentNode.type === 'location' ? `Parent location: "${context.currentNode.name}"` : `Current niche: "${context.currentNode.name}"`}
 ${context.parentNode ? `Parent: "${context.parentNode.name}" (${context.parentNode.type})` : ''}
 
-${parentStructure || inferredParentScale ? (() => {
-  const parentWindowShapes = extractOpeningShapesFromParent(parentStructure, currentDna);
-  return `=== PARENT STRUCTURE (inherit where appropriate) ===
-Form: ${parentStructure?.form || 'not specified'}
-Scale: ${parentStructure?.scale || inferredParentScale || 'not specified'}${inferredParentScale && !parentStructure?.scale ? ' (inferred from description)' : ''}
-Orientation: ${parentStructure?.orientation || 'not specified'}
-Functional Type: ${parentStructure?.functionalType || 'not specified'}
-${parentWindowShapes.length > 0 ? `Window/Opening Shapes: ${parentWindowShapes.join(', ')} (MUST match these in interior)` : ''}
-`;
-})() : ''}
+=== PARENT CONTEXT (LLM: USE THIS TO UNDERSTAND THE SPACE) ===
+
+**Parent's Description:** "${context.currentNode.data?.description || 'not specified'}"
+**Parent's Cultural Tone:** "${currentDna?.cultural_tone || 'not specified'}"
+**Parent's Search Description:** "${context.currentNode.data?.searchDesc || 'not specified'}"
+**Parent's Visual Appearance (looks):** "${currentDna?.looks || 'not specified'}"
+**Parent's Accent Features:** "${currentDna?.accent_features || 'not specified'}"
+
+**Parent Structure (if available):**
+- Form: ${parentStructure?.form || 'not specified - YOU MUST DETERMINE from description'}
+- Scale: ${parentStructure?.scale || 'not specified - YOU MUST DETERMINE from description'}
+- Orientation: ${parentStructure?.orientation || 'not specified'}
+- Functional Type: ${parentStructure?.functionalType || 'not specified - YOU MUST DETERMINE from cultural_tone/description'}
+- Opening Shape: ${parentStructure?.openingShape || 'not specified - YOU MUST DETERMINE from looks/accent_features'}
+- Dominant Elements: ${parentStructure?.dominantElements?.join(', ') || 'not specified'}
+- Unique Identifiers: ${parentStructure?.uniqueIdentifiers?.join(', ') || 'not specified'}
+
+**YOUR TASK: Understand the ACTUAL PURPOSE and FORM from the above context.**
+
+KEY PRINCIPLE: Physical appearance ≠ Functional purpose
+- **FORM** = What the building LOOKS like (read the "looks" field for architectural shape)
+- **FUNCTIONAL TYPE** = What the space is USED FOR (read "cultural_tone" and "description" for actual purpose)
+- A building can LOOK one way but be USED for something completely different
+- Always determine functional type from cultural_tone/description, NOT from visual appearance
+- Window/opening shapes should match what you see in the parent's looks, accent_features, or dominant elements
+
 
 === USER'S SPACE DESCRIPTION ===
 "${userPrompt}"
@@ -157,6 +114,8 @@ Analyze the description and determine:
 
 7. **Functional Type**: What is this space used for?
    - residential, commercial, religious, industrial, civic, entertainment
+   - **CRITICAL**: Inherit from parent's cultural_tone and description to determine ACTUAL function.
+   - Physical appearance does NOT determine function - read what the space is USED for.
 
 8. **Spatial Layout**: Describe the physical arrangement in 1-2 sentences.
 
@@ -173,11 +132,21 @@ Analyze the description and determine:
 
 IMPORTANT RULES:
 - Extract ALL user-specified elements as requiredElements - these MUST appear in the final image
-- Inherit form/scale from parent when it makes architectural sense
+- **FORM INHERITANCE IS MANDATORY**: Interior form MUST match exterior form. NEVER change form based on names or metaphors.
 - Interior spaces should logically fit within their parent structure
 - Be specific with positions (left, right, center, back, corner, etc.)
+- **DO NOT interpret the name literally** - The name may be metaphorical; form comes from the physical building.
+- **FUNCTIONAL TYPE IS ABOUT PURPOSE, NOT APPEARANCE**: Read cultural_tone and description to determine actual use.
 
-=== CRITICAL: FORM AND ORIENTATION INHERITANCE ===
+=== CRITICAL: FORM AND ORIENTATION INHERITANCE (NON-NEGOTIABLE) ===
+
+**FORM INHERITANCE IS ABSOLUTE (MOST IMPORTANT RULE):**
+- Interior form MUST match parent's form (determined from the "looks" field)
+- RECTANGULAR parent → RECTANGULAR interior
+- ROUND parent → ROUND interior
+- CYLINDRICAL parent → CYLINDRICAL interior
+- **NEVER change form based on the room's NAME** - names can be metaphorical
+- The form describes the PHYSICAL SHAPE of the building, not metaphorical meanings
 
 **Orientation MUST be compatible with parent:**
 - Parent HORIZONTAL → Interior MUST be horizontal or wide (NEVER vertical)
@@ -213,7 +182,7 @@ IMPORTANT RULES:
 **Approximate Dimension Hints for Image Generation:**
 - small: ~2-4m in primary dimension (pods, booths, closets, cabins, compact rooms)
 - medium: ~4-10m in primary dimension (standard rooms, shops, cafés)
-- large: ~10-30m+ in primary dimension (halls, warehouses, cathedrals)
+- large: ~10-30m+ in primary dimension (halls, grand spaces, cathedrals)
 
 **CRITICAL SCALE RULE FOR INTERIORS:**
 When creating an interior inside a parent structure, the interior MUST be SMALLER than the exterior.

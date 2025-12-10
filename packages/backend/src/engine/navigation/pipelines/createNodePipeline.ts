@@ -12,7 +12,7 @@
 import { generateNodeDNA, extractParentContext, mergeDNAWithParent } from '../../hierarchyAnalysis/nodeDNAGenerator';
 import { generateLocationImage } from '../../generation/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
-// Note: generateImagePromptForNode (legacy) removed - now using composeImagePrompt locally
+import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
 import type { NavigationDecision, NavigationContext, IntentResult, DestinationAnalysis, StructureAnalysis, Structure } from '../types';
 import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
 import { findParentLocationNode } from '../navigationHelpers';
@@ -132,20 +132,32 @@ export async function runCreateLocationNodePipeline(
     }
 
     // ═══════════════════════════════════════════════════════════════════════════
-    // STEP 2: IMAGE PROMPT COMPOSITION (uses pre-computed data)
+    // STEP 2: IMAGE PROMPT GENERATION (LLM-based, unified approach)
     // ═══════════════════════════════════════════════════════════════════════════
     if (helper) {
-      helper.startStage('image_prompt', 'Composing image prompt...');
+      helper.startStage('image_prompt', 'Generating image prompt...');
     }
 
     // Get parent DNA for visual consistency (architectural_tone, cultural_tone, etc.)
     const { parentLocationDNA } = findParentLocationNode(context);
     
-    // Build image prompt using structure + DNA data + inherited parent DNA
-    let imagePrompt = composeImagePrompt(structureAnalysis, dnaResult, userPrompt, parentLocationDNA);
+    // Use unified LLM-based image prompt generator
+    let imagePrompt = await generateImagePromptForNode(apiKey, {
+      structureAnalysis,
+      dna: dnaResult.dna || {},
+      parentDNA: parentLocationDNA,
+      userPrompt,
+      nodeType,
+      perspective: perspective as 'interior' | 'exterior',
+      parentChain: context.parentNode ? [{
+        type: context.parentNode.type,
+        name: context.parentNode.name,
+        description: context.parentNode.data?.description || ''
+      }] : []
+    });
 
     if (helper) {
-      helper.completeStage('image_prompt', 'Image prompt composed', { imagePrompt });
+      helper.completeStage('image_prompt', 'Image prompt generated', { imagePrompt });
     }
 
     // Step 2: Generate FLUX image using shared module

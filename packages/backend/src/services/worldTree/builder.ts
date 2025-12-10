@@ -86,6 +86,18 @@ export class WorldTreeBuilder {
     if (Object.keys(structure).length > 0) {
       node.structure = structure;
     }
+    
+    // ALSO add structural fields at node root for backward compatibility
+    // Many parts of the codebase read from node.navigableElements, node.dominantElements, etc.
+    if (data.navigableElements && data.navigableElements.length > 0) {
+      node.navigableElements = data.navigableElements;
+    }
+    if (data.dominantElements && data.dominantElements.length > 0) {
+      node.dominantElements = data.dominantElements;
+    }
+    if (data.uniqueIdentifiers && data.uniqueIdentifiers.length > 0) {
+      node.uniqueIdentifiers = data.uniqueIdentifiers;
+    }
 
     // Add primaryMedia if present in data
     if (data.primaryMedia) {

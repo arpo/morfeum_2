@@ -45,6 +45,14 @@ export interface TreeNode {
   slug?: string;
   /** True for pass-through regions that inherit all DNA from host */
   isPassThrough?: boolean;
+  // Legacy fields (also in structure) for backward compatibility
+  navigableElements?: Array<{
+    type: string;
+    position: string;
+    description: string;
+  }>;
+  dominantElements?: string[];
+  uniqueIdentifiers?: string[];
 }
 
 export interface WorldTree {
