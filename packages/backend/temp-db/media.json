@@ -136,110 +136,6 @@
       },
       "entityRefs": []
     },
-    "media-1765360055947-ugplsig7d": {
-      "id": "media-1765360055947-ugplsig7d",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85b9c4/YXHcqpF0s1nHSBRkRPwHW.jpg",
-      "createdAt": "2025-12-10T09:47:35.947Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of an enigmatic, robed figure seated in a field of tall, wild grass. The character's head is a smooth, reflective black orb, encased by a wide, textured dark grey circular structure that resembles a futuristic radar dish or an ornate hood. Bright, thin orange lines subtly glow along the collar of the sleek, dark neck. The figure wears a voluminous, flowing black robe, adorned with intricate, ceremonial metallic chest pieces and shoulder elements, from which hangs a large, circular medallion featuring a stylized emblem. Sleek black gloved hands hold a flat, circular metallic disc with concentric rings and a detailed central design, while a golden ring with a small red gem adorns one finger. In the background, under an overcast sky, two massive, dark, arch-like futuristic or alien structures with intricate paneling loom, creating a mysterious and ancient or advanced technological atmosphere.\"\n\nCygnus, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A smooth, obsidian orb for a head, reflecting the overcast sky. It's framed by a wide, matte charcoal ring. A sleek, dark neck pulses with faint, thin orange light around its collar..\n\nWearing: A sweeping, midnight black robe of dense, matte fabric. Intricate, gunmetal grey metallic plating adorns the chest and shoulders, resembling ceremonial armor. A large, circular obsidian medallion with silver filigree hangs from the neck. Both hands are covered in close-fitting black gloves. A thin gold band with a tiny ruby rests on one finger..\n\nPresence: A chilling stillness, tinged with a subtle hum of latent power. An aura of alien enigma..\n\nSetting: A field of whispering, dry grass under a muted, bruised-grey sky, with colossal, dark technological arches dominating the horizon..\n\nTheir demeanor reflects: Reserved, observant, and deeply focused. Its demeanor suggests ancient knowledge and a detached, analytical nature..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": [
-        "char-1765360040232-x6ol3pp47"
-      ]
-    },
-    "media-1765360172350-hoqf8n3pt": {
-      "id": "media-1765360172350-hoqf8n3pt",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a85b9d1/EUA5p4uQhISMOaRhi2_S3_062f1803d6e549b2a65b921d9007b508.png",
-      "createdAt": "2025-12-10T09:49:32.350Z",
-      "metadata": {
-        "parentMedia": "media-1765360055947-ugplsig7d",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "char-1765360040232-x6ol3pp47"
-      ],
-      "parentMedia": "media-1765360055947-ugplsig7d"
-    },
-    "media-1765364451031-31i3n0rnv": {
-      "id": "media-1765364451031-31i3n0rnv",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bb7c/PLpyev-xWJQjlXFq-h1cD.jpg",
-      "createdAt": "2025-12-10T11:00:51.031Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nAn ultra-wide, street-level view (25° downward tilt) of \"The Resonance Spire\" on Xyloth Prime, a city street bathed in the ethereal, cool glow of deep indigos and violets. The impossibly tall Spire twists and bends in non-Euclidean geometry, its obsidian-like surface a tapestry of constantly shifting fractal patterns and sharp angles, absorbing and refracting light with infinite facets. Pulsing emerald and cyan light nodes accent its form. Glimpses of alien skies and nebulae are visible through illusory gaps. The Spire is slightly off-center, showcasing its immense scale and paradoxical spatial layout, appearing to fold in on itself. In the foreground, worn cobblestones are slick with puddles reflecting the Spire's luminescence, hinting at faint, melodic whispers carried on imperceptible, charged air currents. The entrance to the Spire is visible, subtly integrated into its impossible facade, with no conventional signage. Neighboring structures, implied to be equally alien in design, recede into a cool, slightly hazy background under an alien sky. The overall mood is awe-inspiring, bewildering, and profoundly mysterious, with a palpable, low resonant frequency vibrating through the scene.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "FLUX"
-      },
-      "entityRefs": [
-        "a2e87a87-b9d2-4e15-b882-80feb9b41e57"
-      ]
-    },
-    "media-1765365046556-ypct2fwef": {
-      "id": "media-1765365046556-ypct2fwef",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bbb8/DJ-BWukzKCzckWHcF6veM.jpg",
-      "createdAt": "2025-12-10T11:10:46.556Z",
-      "metadata": {
-        "prompt": "interior of Alien Control Room. This space is characterized by its non-standard, contorted geometry, filled with a complex array of alien technology. The layout is dictated by the placement of this strange apparatus. A medium irregular space (approximately 3-6m in each dimension). The interior is a vast, impossibly twisted space that mirrors the exterior geometry of The Resonance Spire. Complex alien apparatus occupies the space, hinting at advanced control functions and unknown purposes. Glimpses of alien skies can be seen through illusory gaps in the structure. Materials: The primary material is the same unknown, obsidian-like substance as the exterior, smooth yet possessing unsettling depth. The strange apparatus is constructed from similar materials, often incorporating crystalline elements and glowing conduits. The space is bathed in a soft, internal luminescence of deep indigos and violets, punctuated by the pulsing glow of emerald and cyan light emanating from the apparatus. Shadows are deep and shifting. The air hums with a palpable energy, a low resonant frequency that vibrates through the space. The temperature is cool and slightly charged, with faint, melodic whispers carried on imperceptible currents. ARCHITECTURAL STYLE (from host): Impossible, non-Euclidean alien geometry Cultural context: Alien communication hub, mysterious and sacred Color palette bias: Deep blues, purples, and glowing neons Mood: Awe, mystery, disorientation MUST INCLUDE: strange apparatus. Fixtures: Control consoles, Holographic displays, Alien machinery, Diagnostic equipment, Power conduits, Unusual seating. Navigation points: passage at center: A winding passage leading deeper into the spire.. archway at rear: An archway hinting at further alien chambers.. Key features: Impossibly twisted spire structure, Alien control consoles, Interconnected strange apparatus, Unconventional lighting. Windows and openings have organic, non-standard shapes. IMPORTANT: This space is FULLY FURNISHED and IN ACTIVE USE - NOT an empty room. Furniture and equipment FILL THE SPACE, distributed throughout the floor area, not just along walls. Items are HUMAN-SCALE and PROMINENTLY VISIBLE in foreground and midground. MUST INCLUDE these user-specified items (prominently visible): strange apparatus. The space contains at least 4-8 pieces of furniture/equipment: Control consoles, Holographic displays, Alien machinery, Diagnostic equipment, Power conduits, Unusual seating. These items occupy 40-60% of the visible floor space. Spatial arrangement: Apparatus should be intricately networked and visually complex. Consoles and displays should emit faint, otherworldly light. Seating should appear designed for non-humanoid forms. Maintain a sense of cramped, alien functionality.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX"
-      },
-      "entityRefs": []
-    },
-    "media-1765365116296-p8kbvrsfd": {
-      "id": "media-1765365116296-p8kbvrsfd",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bbbf/TwdeeGgeHNRs_jut2qWtg.jpg",
-      "createdAt": "2025-12-10T11:11:56.296Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nUltra-wide street-level view, camera positioned at a 28° downward tilt, capturing the imposing \"Dragon's Tooth Castle\" in its desolate fantasy realm. The castle's entrance is partially visible, dwarfed by its immense, jagged silhouette. The foreground features worn, dark cobblestone street slick with recent rain, puddles reflecting the faint, cold starlight. Jagged, brutalist spires of dark volcanic rock, resembling massive, sharpened teeth, dominate the midground. These impossibly tall structures are hewn directly from the mountain peak, connected by narrow, exposed walkways and fortified battlements. Corroded iron reinforcements are sparsely visible, adding to the unyielding, ancient defense aesthetic. Small, shadowed alcoves and gleaming ice crystals punctuate the sheer rock faces. The facade, built from unworked dark volcanic basalt and granite, shows extreme erosion and elemental weathering, with stark white highlights of perpetual snow on the highest peaks. The background reveals a vast, star-filled night sky above the desolate, windswept peak, with an overwhelming sense of isolation. The atmosphere is frigid and thin, carrying the keen of the wind. Lighting is sparse and stark, casting deep, foreboding shadows across the volcanic stone, with occasional glints from ice and distant stars. The overall mood is menacing, austere, and majestic, evoking primal fear and awe. The composition is asymmetric, with more of the desolate mountain terrain visible on the left, and the castle itself angled slightly to the right, emphasizing its depth and terrifying scale.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "FLUX"
-      },
-      "entityRefs": [
-        "de02adf7-3433-45a2-8fa1-5cdf6d1e21df"
-      ]
-    },
-    "media-1765365155995-as10d924p": {
-      "id": "media-1765365155995-as10d924p",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bbc3/hPOxNXF7SKLeh8TkaJYfx.jpg",
-      "createdAt": "2025-12-10T11:12:35.995Z",
-      "metadata": {
-        "prompt": "interior of Dragon's Tooth Castle Interior. A grand central hall with high, vaulted ceilings, featuring imposing stone walls and large, arched windows that allow light to filter in. A medium gothic space (approximately 3-6m in each dimension). Vast, echoing halls carved from dark, unworked volcanic rock. The interior mirrors the fortress's exterior, with sharply angled walls, impossibly high ceilings that disappear into shadow, and naturalistic, jagged formations. Walkways and battlements are visible at higher levels through openings. Materials: Primarily unworked, dark volcanic basalt and granite, exhibiting extreme erosion and elemental weathering. Iron, where present for structural reinforcement, is heavily corroded and blackened. Dominated by deep greys and blacks of the volcanic stone. Light is extremely sparse, cast from unseen sources, creating deep, long shadows and stark contrasts. Glints of ice on stone surfaces are rare but striking. The air is thin, biting cold, and still, carrying a profound silence broken only by the distant, mournful keen of the wind. A pervasive sense of immense age, isolation, and slumbering, elemental power emanates from the stone itself. ARCHITECTURAL STYLE (from host): brutalist mountain fortress with naturalistic spire forms Cultural context: ancient defense, isolation, formidable power Color palette bias: monochromatic, cool tones Mood: menacing, austere, majestic Fixtures: Large stone fireplace, Tapestries, Wooden benches, Heavy oak table, Suit of armor, Torches. Navigation points: door at center back: A large, ornate wooden door leading further into the castle.. passage at left wall: An archway leading to a secondary chamber or corridor.. stairs at right corner: A winding stone staircase ascending to upper levels.. Key features: High, vaulted ceiling, Stone walls, Large, arched windows, Imposing fireplace, Wooden beams. Windows and openings have arched tops. IMPORTANT: This space is FULLY FURNISHED and IN ACTIVE USE - NOT an empty room. Furniture and equipment FILL THE SPACE, distributed throughout the floor area, not just along walls. Items are HUMAN-SCALE and PROMINENTLY VISIBLE in foreground and midground. The space contains at least 4-8 pieces of furniture/equipment: Large stone fireplace, Tapestries, Wooden benches, Heavy oak table, Suit of armor, Torches. These items occupy 40-60% of the visible floor space. Spatial arrangement: Fireplace positioned on the far wall for warmth and a focal point. Tapestries hung on the stone walls for decoration and insulation. Wooden benches arranged around the central area for seating. Heavy oak table placed in the center of the hall. Suit of armor displayed prominently near an entrance or wall. Torches mounted on the walls at regular intervals for ambient lighting.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX"
-      },
-      "entityRefs": []
-    },
-    "media-1765365192403-u89xljbhc": {
-      "id": "media-1765365192403-u89xljbhc",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bbc7/8SVPZMvruTTEoC-ax41Qq.jpg",
-      "createdAt": "2025-12-10T11:13:12.403Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nAethelgard: The Shattered Peaks. A realm of untamed magic and ancient, colossal geology. Jagged mountains scrape a sky often choked with ash, and the very earth groans with primordial power. This is a world where colossal forces have shaped both the land and its inhabitants.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nVast, imposing landscapes dominated by colossal geological formations and rugged terrain. Impossibly tall spires, deep chasms, and raw, elemental beauty define the visual identity. Structures are often integrated directly into the natural rock faces.\n\nAtmosphere:\nThe air is often thin and carries the bite of elemental forces – wind, volcanic ash, or biting cold. A sense of immense scale, ancient power, and profound isolation pervades the atmosphere, punctuated by the raw sounds of nature.\n\nColors and Lighting:\nDominant: Deep grey (60%), Secondary: Black (20%), Accent: Icy white (10%), fiery orange (5%), obsidian sheen (5%)\nLight: Dim, often shadowed, with strong directional light or internal luminescence, Dominated by the stark contrasts of dark earth and rock against dramatic skies. Lighting is often harsh, with deep shadows cast by towering formations and infrequent, intense sources like volcanic glows or ethereal magical lights.\n\nGenre/Style: Fantasy\nArchitectural Style: Brutalist mountain fortress with naturalistic spire forms\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "loc-1765365099317-p7waorkbt"
-      ]
-    },
-    "media-1765365243711-uf9gznxu7": {
-      "id": "media-1765365243711-uf9gznxu7",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bbcc/oaB3gjp3NIUogeFNwj2e1.jpg",
-      "createdAt": "2025-12-10T11:14:03.711Z",
-      "metadata": {
-        "prompt": "interior of Dragon's Tooth Castle Dungeons. A series of interconnected, low-ceilinged chambers and narrow corridors, primarily carved from stone. These spaces are designed for confinement and storage, featuring rough textures and minimal natural light. A large irregular space (approximately 10-30m wide, 8-15m deep, 5-15m ceiling height). These are the bowels of the mountain fortress, a labyrinth of rough-hewn chambers and claustrophobic tunnels. The scale is oppressive, with low, vaulted ceilings and uneven floors. Shadow clings to every surface, broken only by the glint of ice or the sparse, harsh light filtering from above. Materials: Primarily unworked, sheer volcanic basalt and granite, slick with ice and perpetual dampness. Corroded iron bands and hinges are embedded into the stone, showing heavy signs of age and neglect. Dominated by the inky blackness of the deepest volcanic rock, accented by the dull gleam of corroded iron. Light is nonexistent, creating an oppressive darkness punctuated by the stark white of ice. The air is impossibly cold, still, and heavy with the scent of damp stone and ancient dust. A profound silence reigns, broken only by the drip of unseen water or the faint, chilling sigh of wind finding its way through unseen cracks. ARCHITECTURAL STYLE (from host): brutalist mountain fortress with naturalistic spire forms Cultural context: ancient defense, isolation, formidable power Color palette bias: monochromatic, cool tones Mood: menacing, austere, majestic Fixtures: stone cells, heavy iron doors, chains, torches, storage crates, cobwebs. Navigation points: archway at center: A heavy, crudely carved archway leading deeper into the dungeon complex.. door at left: A thick, banded iron door set into a stone frame, likely leading to a cell.. passage at back: A narrow, dark passage disappearing into the shadows.. Key features: rough-hewn stone walls, arched ceilings, iron cell doors, torch sconces, dampness. Windows and openings have arched tops. IMPORTANT: This space is FULLY FURNISHED and IN ACTIVE USE - NOT an empty room. Furniture and equipment FILL THE SPACE, distributed throughout the floor area, not just along walls. Items are HUMAN-SCALE and PROMINENTLY VISIBLE in foreground and midground. The space contains at least 4-8 pieces of furniture/equipment: stone cells, heavy iron doors, chains, torches, storage crates, cobwebs, rattraps. These items occupy 40-60% of the visible floor space. Spatial arrangement: Cells should be sparsely furnished, emphasizing their purpose of confinement. Torches should be placed in sconces along the walls, providing dim and flickering light. Storage crates should be stacked in less frequented areas. Cobwebs and general disarray should be present throughout.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX"
-      },
-      "entityRefs": []
-    },
     "media-1765365978028-wkgwr0b18": {
       "id": "media-1765365978028-wkgwr0b18",
       "type": "image",
@@ -256,48 +152,21 @@
         "loc-1765365774619-9mlqxjz7g"
       ]
     },
-    "media-1765366000327-4v99putg5": {
-      "id": "media-1765366000327-4v99putg5",
+    "media-1765369565725-godcwua6s": {
+      "id": "media-1765369565725-godcwua6s",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bc17/v0prdN4ZFUNUGUKoi9b7F.jpg",
-      "createdAt": "2025-12-10T11:26:40.327Z",
+      "url": "https://v3b.fal.media/files/b/0a85bd7c/TO6kisDSFN8XzT0CfQ8dC.jpg",
+      "createdAt": "2025-12-10T12:26:05.725Z",
       "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nCamden district/region. A vibrant and eclectic district known for its alternative culture, bustling markets, and live music scene. It retains a bohemian spirit amidst the grander London cityscape.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nA lively, somewhat grittier urban landscape where Victorian industrial architecture meets vibrant street art. Buildings are often adorned with colourful murals and eccentric signage, especially around the market areas.\n\nAtmosphere:\nEnergetic and bohemian, with a palpable sense of creative freedom and a constant hum of activity. The air carries the scents of street food, diverse cultures, and a hint of damp canal water, with a younger, more rebellious vibe than central London.\n\nColors:\nDominant: Muted brick and grey with vibrant splashes of colour, Secondary: Weathered corrugated iron and painted wood\nLight: Varied, from functional daylight to atmospheric stage lighting\n\nArchitectural Style: Eclectic industrial with prevalent street art and bohemian modifications\nMaterials: A mix of weathered brick, corrugated iron, painted wood, and rough concrete, often overlaid with vibrant graffiti. The canal towpath features worn stone and metal.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nCamden district/region. A vibrant and eclectic district known for its alternative culture, bustling markets, and live music scene. Camden merges Victorian industrial architecture with a rebellious, bohemian spirit.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nA vibrant mix of Victorian industrial buildings, often adorned with colorful murals and street art, contrasted with more modern market structures and canal-side developments. Narrow, winding streets give way to expansive market squares.\n\nAtmosphere:\nA buzzing, energetic atmosphere charged with creativity and a free-spirited vibe. The air is thick with the aroma of diverse street food and the distant echoes of live music. It feels both historic and defiantly modern.\n\nColors:\nDominant: Muted Brick (approx. 40%), Secondary: Dark Iron and Steel (approx. 30%)\nLight: Slightly Grimy Daylight with Spotlit Evening Glow\n\nArchitectural Style: Eclectic mix of Victorian industrial, street art, and bohemian market stalls\nMaterials: A blend of weathered brick, rusted iron, corrugated metal, and colorful painted surfaces. Textures range from rough and industrial to smooth and polished in market stalls.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "model": "flux",
         "width": 1920,
         "height": 1080,
         "aspectRatio": "landscape_16_9"
       },
       "entityRefs": [
-        "23e88878-3d97-4375-9bd4-d38807c367b1"
+        "32252063-7661-42c7-bc83-b8e997dcdcdf"
       ]
-    },
-    "media-1765366051028-87i6eqb83": {
-      "id": "media-1765366051028-87i6eqb83",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bc1c/8GgrUS8fFU2aoxsIYGoXB.jpg",
-      "createdAt": "2025-12-10T11:27:31.028Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Grimy Grotto. A dimly lit, no-frills bar tucked away in a narrow alley, exuding a raw, authentic Camden vibe. Its exterior is a collage of weathered posters and peeling paint, hinting at the stories within.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nA squat, two-story building with a chaotic, layered facade. The ground floor is dominated by a large, smudged window and a weathered wooden door, while the upper floor features smaller, shuttered windows. The overall form is utilitarian and unrefined.\n\nMaterials and Surfaces:\nPrimary: Graffiti-covered brick, peeling painted wood\nSecondary: Corrugated metal sheeting, damp concrete\nAccents: Flickering neon sign, torn band posters, hand-painted 'Bar' lettering\n\nColors:\nDominant: Muted urban tones (grey, brown) with vibrant graffiti splashes, Secondary: Faded paintwork, rust-colored metal, Accent: Lurid pink neon light\nLight: Dim, inconsistent street light\n\nAtmosphere: The air is thick with the smell of stale beer and damp concrete. It feels enclosed and slightly claustrophobic, with a palpable sense of neglect and a rough, unvarnished charm. The sounds are muted from the street but hint at a low hum of activity within.\nMood: Rebellious and unpretentious, offering a refuge for those seeking an authentic, unpolished experience. It evokes a sense of gritty camaraderie and defiant individuality.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "428844d8-ce0b-43b0-a99f-998d4a1073a2"
-      ]
-    },
-    "media-1765366071792-zfzofuvzt": {
-      "id": "media-1765366071792-zfzofuvzt",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85bc1f/ZwUk1u4OsolBCdzyx41HG.jpg",
-      "createdAt": "2025-12-10T11:27:51.792Z",
-      "metadata": {
-        "prompt": "interior of The Grimy Grotto Interior. The Grimy Grotto interior is an irregularly shaped, cavernous space with low, uneven ceilings and rough-hewn walls. It is designed to be a dimly lit, disorienting environment, likely for a clandestine gathering or performance. A medium organic space (approximately 4-10m wide, 3-6m deep, 3-5m ceiling height). A low-ceilinged, utilitarian space dominated by raw, unforgiving surfaces. The interior is a chaotic canvas of layered graffiti over exposed brick and rough-hewn timber, creating a sense of cramped authenticity. Materials: The primary materials are graffiti-covered weathered brick and rough-hewn timber, heavily scarred and layered. Accents of corrugated metal and damp concrete contribute to the unrefined, abused aesthetic. Muted urban tones of grey and brown are violently interrupted by splashes of vibrant graffiti. A single, bare neon sign casts a lurid pink glow, creating stark shadows and patchy illumination. The air is thick with the pungent aroma of stale beer and damp concrete, feeling enclosed and slightly claustrophobic. A palpable sense of neglect is offset by a rough, unvarnished charm, with muted street sounds hinting at activity within. ARCHITECTURAL STYLE (from host): Eclectic industrial with prevalent street art and bohemian modifications Cultural context: Alternative culture, music, independent markets, youth scene, and subcultures Color palette bias: Muted urban tones punctuated by bold, vibrant colours Mood: Individually expressive, energetic, and slightly rebellious. Fixtures: low-level ambient lighting, makeshift seating areas, a small, central performance platform, decorative rubble and detritus, exposed pipes or structural elements. Navigation points: passage at rear: A narrow, uneven passage leading further into the grotto.. archway at left wall: An irregular opening into a darker recess.. door at right wall: A heavy, crudely made wooden door.. Key features: irregular rock formations, damp, uneven floor, low, irregular ceiling, dim, atmospheric lighting. Windows and openings have organic, non-standard shapes. IMPORTANT: This space is FULLY FURNISHED and IN ACTIVE USE - NOT an empty room. Furniture and equipment FILL THE SPACE, distributed throughout the floor area, not just along walls. Items are HUMAN-SCALE and PROMINENTLY VISIBLE in foreground and midground. The space contains at least 4-8 pieces of furniture/equipment: makeshift seating areas, a small, central performance platform, decorative rubble and detritus, exposed pipes or structural elements, low-level ambient lighting, worn, mismatched furniture. These items occupy 40-60% of the visible floor space. Spatial arrangement: Seating should be scattered and informal, reflecting the rough nature of the space. The performance platform should be central, with the lighting focused on it. Rubble and detritus should enhance the 'grimy' aesthetic, particularly in corners and along walls. Exposed pipes should appear as if part of the original structure or hastily added. Lighting should be minimal, creating deep shadows and a claustrophobic atmosphere.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX"
-      },
-      "entityRefs": []
     }
   }
 }
