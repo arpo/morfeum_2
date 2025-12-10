@@ -1,220 +1,225 @@
 {
   "nodes": {
-    "loc-1765374000902-713cqsmwd": {
-      "id": "loc-1765374000902-713cqsmwd",
+    "loc-1765376309037-lxlf916g5": {
+      "id": "loc-1765376309037-lxlf916g5",
       "type": "host",
       "name": "Göteborg",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A coastal metropolis characterized by a functional industrial presence alongside areas of modern urban design. Port areas feature large-scale infrastructure, while other districts showcase Scandinavian architectural styles. Waterways are a prominent feature throughout.",
-        "colorsAndLighting": "The city's palette is influenced by its coastal location and industrial past, featuring a range of blues, grays, and earthy tones. Natural light is often diffused by sea mists, with artificial lighting in port areas being stark and functional.",
-        "atmosphere": "The air is typically fresh with a salty tang, occasionally mixed with industrial scents. The sounds of the sea, seagulls, and city life create a dynamic soundscape. Weather is often cool and breezy.",
-        "materials": "Concrete, steel, and glass are prevalent in industrial and modern structures. Older buildings incorporate brick and traditional Nordic materials, often showing signs of weathering from the coastal environment.",
-        "mood": "A mood of industriousness and pragmatic efficiency, overlaid with a laid-back coastal vibe. There's a sense of history in its industrial roots and forward momentum in its contemporary development.",
-        "sounds": "Seagulls, ship horns, distant traffic, water lapping, wind",
-        "primary_surfaces": "Concrete, weathered steel, brick",
-        "secondary_surfaces": "Glass, natural stone, timber",
-        "accent_features": "Maritime markers, industrial cranes, bridges, modern sculptures",
-        "dominant": "Industrial gray and sea blue with significant coverage",
-        "secondary": "Earthy browns and weathered concrete",
-        "accent": "Vibrant reds and whites from signage, occasional greenery",
-        "ambient": "Cool, salty, and slightly overcast",
-        "genre": "industrial realism",
-        "architectural_tone": "functional Scandinavian industrial and maritime architecture",
-        "cultural_tone": "port city, maritime trade, working-class heritage, modern urbanism",
-        "materials_base": "durable, weather-resistant materials",
-        "mood_baseline": "practical, resilient, forward-looking",
-        "palette_bias": "muted blues, grays, and earth tones",
-        "soundscape_base": "maritime and urban ambient sounds",
-        "flora_base": "Hardy coastal plants, urban greenery",
-        "fauna_base": "Seagulls, pigeons, urban wildlife"
+        "looks": "A cityscape characterized by a blend of historical maritime structures, functional industrial zones, and modern urban development. Buildings range from older brick edifices to sleek contemporary designs, often situated near the extensive harbor and waterways.",
+        "colorsAndLighting": "A palette of maritime blues and grays, complemented by the earthy tones of brick and concrete. City lighting is functional but can become more vibrant and atmospheric in entertainment districts and along the waterfront at night.",
+        "atmosphere": "The air is fresh and carries the scent of the sea, mixed with the urban ambiance of a bustling port city. There's a constant sense of movement and activity, from the working harbor to the lively streets.",
+        "materials": "A mix of weathered brick, sturdy concrete, glass, and steel, reflecting both its industrial past and modern growth. Elements of maritime timber and metal are also common.",
+        "mood": "A feeling of industriousness, maritime tradition, and a contemporary, forward-looking spirit. It can be both pragmatic and surprisingly artistic.",
+        "sounds": "Ship horns, seagulls, city traffic, conversation, the distant hum of a large port.",
+        "primary_surfaces": "Sturdy concrete and brick structures, modern glass and steel facades",
+        "secondary_surfaces": "Weathered maritime timber, steel beams, granite quay walls",
+        "accent_features": "Nautical motifs, public art installations, vibrant signage in commercial areas",
+        "dominant": "Grays and blues",
+        "secondary": "Earthy browns and muted industrial metallics",
+        "accent": "Occasional bright commercial signage and ambient city lights",
+        "ambient": "Bright, clean, with maritime influences",
+        "genre": "Urban Exploration",
+        "architectural_tone": "Post-industrial modern with maritime influences",
+        "cultural_tone": "Maritime hub, diverse urban culture, industrial heritage",
+        "materials_base": "Concrete, steel, brick, maritime wood",
+        "mood_baseline": "Pragmatic, robust, with underlying artistic flair",
+        "palette_bias": "Coastal blues and grays, earthy industrial tones",
+        "soundscape_base": "Maritime, urban, industrial",
+        "flora_base": "Coastal vegetation, urban parks",
+        "fauna_base": "Seabirds, urban wildlife"
       },
-      "description": "Göteborg is a major port city in Sweden, renowned for its strong industrial heritage, particularly in shipbuilding and manufacturing. Its maritime culture is deeply ingrained, with a distinct blend of working-class grit and modern urban development.",
-      "searchDesc": "A major Swedish port city known for its industrial heritage, maritime culture, and blend of old and new.",
+      "description": "A major port city on Sweden's west coast, Göteborg boasts a rich maritime heritage and a dynamic, diverse cultural scene. It's a city that balances its industrial roots with a forward-thinking approach to art, music, and innovation.",
+      "searchDesc": "A vibrant port city in Sweden known for its maritime history and lively cultural scene.",
       "slug": "goteborg",
       "structure": {
-        "spatialLayout": "A sprawling city built around a complex network of natural and man-made waterways, with distinct industrial, commercial, and residential zones. The scale varies from open port areas to more dense urban centers.",
+        "spatialLayout": "A coastal layout with a central urban core, branching out to industrial areas and residential districts, all defined by the presence of the harbor and archipelago. Streets are generally well-organized, with open plazas and waterfront promenades.",
         "dominantElements": [
-          "Port facilities",
-          "Industrial zones",
-          "Canals"
+          "Harbor and canals",
+          "Maritime architecture",
+          "Modern city infrastructure"
         ],
         "uniqueIdentifiers": [
-          "Swedish coastal identity",
-          "Industrial legacy",
-          "Maritime trade"
+          "Coastal location",
+          "Industrial and modern mix",
+          "Swedish cultural hub"
         ]
       },
       "dominantElements": [
-        "Port facilities",
-        "Industrial zones",
-        "Canals"
+        "Harbor and canals",
+        "Maritime architecture",
+        "Modern city infrastructure"
       ],
       "uniqueIdentifiers": [
-        "Swedish coastal identity",
-        "Industrial legacy",
-        "Maritime trade"
-      ],
-      "primaryMedia": "media-1765374049522-wsz2tkps5"
+        "Coastal location",
+        "Industrial and modern mix",
+        "Swedish cultural hub"
+      ]
     },
-    "ccb4079a-e42c-42b8-ad8f-e2c0995433eb": {
-      "id": "ccb4079a-e42c-42b8-ad8f-e2c0995433eb",
+    "1673b735-989e-424a-8827-a60f0ef26cee": {
+      "id": "1673b735-989e-424a-8827-a60f0ef26cee",
       "type": "region",
       "name": "Ringön",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A utilitarian landscape dominated by large, weathered industrial buildings and active port infrastructure. Warehouses with corrugated metal siding and expansive docks are common. Newer additions show a contrast, but the overall impression is functional and maritime-focused.",
-        "colorsAndLighting": "The color palette is largely desaturated, featuring industrial grays, rusts, and weathered blues from the sea and sky. Lighting is often functional and harsh, with harbor lights and utilitarian lamps casting stark shadows.",
-        "atmosphere": "The air carries the scent of saltwater, industrial lubricants, and diesel fumes. The sounds of gulls, foghorns, and creaking metal are ever-present. A cool, damp breeze often blows in from the water.",
-        "materials": "The primary materials are weathered corrugated steel, concrete, and thick, often stained glass. Salvaged wood is used for piers and some structures, showing signs of age and repair.",
-        "mood": "A mood of pragmatic resilience and industry, tinged with the potential for new life. It evokes a sense of hardworking environments and the transient nature of port life.",
-        "sounds": "Gulls, foghorns, clanging metal, distant ship engines, lapping water",
-        "primary_surfaces": "Weathered corrugated metal, concrete docks",
-        "secondary_surfaces": "Stained glass, salvaged timber",
-        "accent_features": "Harbor cranes, bollards, old signage",
-        "dominant": "Industrial gray with vast coverage",
-        "secondary": "Rust brown with prominent banding",
-        "accent": "Muted blues and weathered whites from signage",
-        "ambient": "Damp and salty, with a pervasive industrial undertone",
+        "looks": "A dense collection of large, utilitarian industrial structures, many of which are repurposed warehouses and factories. The architecture is predominantly functional and robust, with a mix of brick, concrete, and corrugated metal facades showing signs of age and adaptation.",
+        "colorsAndLighting": "Muted industrial tones dominate the visible exteriors, with occasional bursts of vibrant, artificial light emanating from club entrances and windows at night. Shadows are deep and industrial, interspersed with the glow of activity.",
+        "atmosphere": "The air carries a faint briny scent from the nearby water, mingled with the less pleasant, but characteristic, industrial odors of oil and damp concrete. A sense of gritty energy permeates the district, especially after dark.",
+        "materials": "Dominated by weathered brickwork, exposed concrete, corrugated metal sheeting, and robust steel beams. Many surfaces bear the marks of their industrial past, with rust and patina evident.",
+        "mood": "A potent mix of historical industrial grit and modern underground vitality. It feels authentic, raw, and a little secretive, a place where innovation happens in the shadows.",
+        "sounds": "Distant ship horns, the hum of industry, the murmur of crowds, thumping basslines.",
+        "primary_surfaces": "Massive concrete and brick industrial structures",
+        "secondary_surfaces": "Corrugated metal cladding, weathered steel beams",
+        "accent_features": "Graffiti art, salvaged industrial components, vibrant club signage",
+        "dominant": "Muted grays and earthy browns",
+        "secondary": "Rust browns on metal",
+        "accent": "Pulsing neon and colored club lights",
+        "ambient": "Dim, industrial, with pockets of intense artificial light",
         "genre": null,
-        "architectural_tone": "weathered industrial dockside architecture",
-        "cultural_tone": "maritime working-class hub, industrial port",
-        "materials_base": "heavy industrial metals and weathered wood",
-        "mood_baseline": "pragmatic, hardworking",
-        "palette_bias": "desaturated grays, browns, and muted blues",
-        "soundscape_base": "maritime industrial ambience",
-        "flora_base": "None",
-        "fauna_base": "Seagulls, harbour seals"
-      },
-      "description": "Ringön is an island district in Göteborg, historically a working-class and industrial hub with docks and warehouses. It's currently experiencing a period of revitalization, blending its maritime heritage with new artistic and commercial ventures.",
-      "searchDesc": "Industrial island district in Göteborg known for its maritime heritage and ongoing revitalization.",
-      "slug": "ringon",
-      "structure": {
-        "spatialLayout": "Expansive and open, with large industrial footprints. The layout is dictated by waterways and dock access, creating a network of functional spaces.",
-        "dominantElements": [
-          "Docks",
-          "Warehouses",
-          "Shipyards"
-        ],
-        "uniqueIdentifiers": [
-          "Industrial architecture",
-          "Harbor activity",
-          "Waterways"
-        ]
-      },
-      "dominantElements": [
-        "Docks",
-        "Warehouses",
-        "Shipyards"
-      ],
-      "uniqueIdentifiers": [
-        "Industrial architecture",
-        "Harbor activity",
-        "Waterways"
-      ],
-      "primaryMedia": "media-1765374038348-fswphpu3j"
-    },
-    "a7e37cd1-a742-422d-99a8-fd5ce7dc5e25": {
-      "id": "a7e37cd1-a742-422d-99a8-fd5ce7dc5e25",
-      "type": "location",
-      "name": "The Echo Chamber",
-      "spaceType": "exterior",
-      "description": "A converted industrial warehouse on Ringön, this techno club pulses with a raw energy. Its exterior remains largely utilitarian, reflecting its dockside heritage, but hints of vibrant, clandestine activity can be glimpsed within.",
-      "dna": {
-        "looks": "A hulking, utilitarian warehouse structure made of corrugated metal and concrete, showing signs of age and industrial wear. Its form is stark and functional, with minimal ornamentation, serving as a blank canvas for urban art.",
-        "colorsAndLighting": "The exterior is dominated by muted industrial grays and rusts. The primary lighting is sparse and functional, but from within, washes of deep blues, purples, and reds spill out, creating stark contrasts and hinting at the vibrant nightlife.",
-        "atmosphere": "The air around the club carries the faint scent of brine mixed with diesel and the underlying hum of powerful sound systems. A cool, damp breeze often blows in from the nearby water, mingling with the energy emanating from the building.",
-        "materials": "Primarily weathered corrugated steel, stained concrete, and thick, industrial-grade glass. Salvaged metal components are evident, showing a history of repair and adaptation.",
-        "mood": "A mood of hidden excitement and raw, unpolished energy, contrasting with the pragmatic resilience of its industrial surroundings.",
-        "sounds": "Distant gulls, lapping water, muffled bass throb, creaking metal, indistinct chatter",
-        "primary_surfaces": "weathered corrugated steel, stained concrete",
-        "secondary_surfaces": "graffiti-covered walls, reinforced glass",
-        "accent_features": "flickering neon lights visible through windows, vibrant graffiti art",
-        "dominant": "Industrial gray with vast coverage",
-        "secondary": "Rust browns and weathered blues",
-        "accent": "Deep purples and electric blues from internal lighting",
-        "ambient": "Harsh and functional",
-        "genre": null,
-        "architectural_tone": "weathered industrial dockside architecture",
-        "cultural_tone": "underground techno scene, repurposed industrial space",
-        "materials_base": "heavy industrial metals and weathered wood",
-        "mood_baseline": "pragmatic resilience and industry, tinged with the potential for new life",
-        "palette_bias": "desaturated grays, browns, and muted blues",
-        "soundscape_base": "industrial port ambience",
+        "architectural_tone": "Brutalist industrial with weathered utilitarian elements",
+        "cultural_tone": "Underground techno club scene, repurposed industrial spaces, urban nightlife",
+        "materials_base": "Raw industrial, concrete and metal",
+        "mood_baseline": "Gritty authenticity and raw energy",
+        "palette_bias": "Cool grays, earthy browns, industrial metallics",
+        "soundscape_base": "Industrial hum, distant maritime sounds, muffled bass",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "searchDesc": "A techno club on Ringön, a converted industrial warehouse with a utilitarian exterior and hidden entrances.",
-      "slug": "the-echo-chamber",
+      "description": "An industrial island district in Göteborg, characterized by its historical maritime and manufacturing past. Ringön has seen a significant resurgence, transforming into a vibrant hub for arts, culture, and a burgeoning underground techno club scene.",
+      "searchDesc": "Industrial island district in Göteborg, a hub for arts, culture, and a thriving techno club scene.",
+      "slug": "ringon",
       "structure": {
-        "spatialLayout": "A large, open-plan industrial shell, its vastness suggesting ample space for dancing and sound to reverberate. The exterior presents a solid, imposing facade.",
+        "spatialLayout": "A grid-like layout of streets and docks, interspersed with large, blocky industrial buildings. The spaces can feel cavernous and imposing, with areas of open quayside contrasting with confined interiors.",
+        "dominantElements": [
+          "Former industrial buildings",
+          "Warehouses",
+          "Quayside infrastructure"
+        ],
+        "uniqueIdentifiers": [
+          "Island setting",
+          "Industrial heritage",
+          "Concentration of clubs"
+        ]
+      },
+      "dominantElements": [
+        "Former industrial buildings",
+        "Warehouses",
+        "Quayside infrastructure"
+      ],
+      "uniqueIdentifiers": [
+        "Island setting",
+        "Industrial heritage",
+        "Concentration of clubs"
+      ],
+      "primaryMedia": "media-1765376381456-563pry4at"
+    },
+    "0aa6ebe5-8a19-42be-a751-0a1ff6b55af7": {
+      "id": "0aa6ebe5-8a19-42be-a751-0a1ff6b55af7",
+      "type": "location",
+      "name": "The Warehouse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, brutalist industrial structure, likely a former factory or warehouse. The scale is imposing, with a predominantly rectilinear form. Large, unadorned surfaces dominate the facade, hinting at its utilitarian past.",
+        "colorsAndLighting": "The primary colors are muted grays and rust-browns from weathered metal and concrete. Strategic, low-intensity colored lights, likely pulsing in rhythm with music, spill from behind windows or the main entrance, creating dramatic shadows.",
+        "atmosphere": "The air is likely cool and carries the faint scent of ozone and damp concrete. Shadows are deep and sharp, contrasting with the occasional burst of colored light. The surrounding area might be sparsely populated, contributing to a sense of urban isolation.",
+        "materials": "Dominant materials include rough, exposed concrete and corrugated or sheet metal, showing signs of age and industrial wear. Areas of weathered brick might be visible, alongside robust steel beams and fixtures.",
+        "mood": "The overall mood is one of gritty authenticity and raw energy. It evokes a sense of anticipation and hidden excitement, a place for underground experiences.",
+        "sounds": "Distant bass thumps, muffled music, city hum, industrial echoes, wind",
+        "primary_surfaces": "weathered concrete walls, corrugated metal panels",
+        "secondary_surfaces": "rusted steel beams, exposed piping, chain-link fence",
+        "accent_features": "graffiti murals, colored pulsing lights, faded industrial signage",
+        "dominant": "concrete gray with high coverage",
+        "secondary": "rust brown on metal cladding",
+        "accent": "deep red and electric blue from interior lights",
+        "ambient": "dark and shadowy with occasional colored light",
+        "genre": null,
+        "architectural_tone": "brutalist industrial with weathered utilitarian elements",
+        "cultural_tone": "underground techno club, urban nightlife, repurposed industrial space",
+        "materials_base": "raw industrial, concrete and metal",
+        "mood_baseline": "gritty, energetic, anticipation",
+        "palette_bias": "cool grays, earthy browns, industrial metallics",
+        "soundscape_base": "low-frequency hum, industrial echoes",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A repurposed industrial building on Ringön, now a renowned techno club with pulsing lights and a raw, industrial aesthetic. EXTERIOR VIEW.",
+      "searchDesc": "Raw industrial techno club exterior on Ringön, Göteborg. Concrete, metal, and graffiti.",
+      "slug": "the-warehouse",
+      "structure": {
+        "spatialLayout": "The building presents a large, flat, and imposing facade. The sense of depth is created by the interplay of shadows and light on its expansive, unadorned surfaces and the visible industrial components.",
         "navigableElements": [
           {
             "type": "door",
             "position": "center",
-            "description": "A heavy, steel roller door, partially ajar, revealing pulsating lights and the muffled throb of bass from within."
-          },
-          {
-            "type": "passage",
-            "position": "left",
-            "description": "A narrow, graffiti-covered alleyway that seems to lead around the side of the main structure, possibly to a less conspicuous entrance."
-          },
-          {
-            "type": "window",
-            "position": "right",
-            "description": "A grimy, reinforced glass window with frosted sections, offering tantalizing glimpses of neon light and silhouettes dancing inside."
+            "description": "Large, imposing metal entrance door"
           }
         ],
         "dominantElements": [
-          "Weathered corrugated steel siding",
-          "Industrial-scale structure",
-          "Graffiti and urban art",
-          "Concealed entrance",
-          "Harsh, functional exterior lighting"
+          "Large concrete facade",
+          "Industrial metal cladding",
+          "Overhead loading bay doors",
+          "Exterior piping and conduits"
         ],
         "uniqueIdentifiers": [
-          "Contrasting stark industrial facade with vibrant interior glow",
-          "Heavy, repurposed industrial doors",
-          "Graffiti adorning exterior walls",
-          "Subtle hints of sound bleeding out",
-          "Location within the dockside industrial zone"
+          "Graffiti art on lower walls",
+          "Subtle, colored light emanating from within",
+          "Heavy-duty chain-link fencing",
+          "An old, faded industrial sign"
         ]
       },
-      "imageUrl": "https://v3b.fal.media/files/b/0a85bf43/5FNP13NELctd5KoqzqGMb.jpg",
-      "primaryMedia": "media-1765374112365-fnp8miuqp"
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "Large, imposing metal entrance door"
+        }
+      ],
+      "dominantElements": [
+        "Large concrete facade",
+        "Industrial metal cladding",
+        "Overhead loading bay doors",
+        "Exterior piping and conduits"
+      ],
+      "uniqueIdentifiers": [
+        "Graffiti art on lower walls",
+        "Subtle, colored light emanating from within",
+        "Heavy-duty chain-link fencing",
+        "An old, faded industrial sign"
+      ],
+      "primaryMedia": "media-1765376337017-2m5aaorpk"
     },
-    "niche-1765375672646-6y04dyh21": {
-      "id": "niche-1765375672646-6y04dyh21",
+    "niche-1765376360569-3j10y8nte": {
+      "id": "niche-1765376360569-3j10y8nte",
       "type": "niche",
-      "name": "The Echo Chamber Interior",
+      "name": "The Warehouse Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "A cavernous industrial space with exposed concrete pillars and corrugated metal walls. The scale feels immense, with high ceilings and a raw, unfinished aesthetic that serves as a backdrop for dynamic lighting and art.",
-        "colorsAndLighting": "The interior is bathed in washes of deep blues, purples, and reds that spill from unseen sources, creating stark contrasts against the muted industrial palette. Flickering neon lights are visible through windows, adding to the dynamic illumination.",
-        "atmosphere": "The air is thick with the residual energy of past events, carrying a cool, damp scent mingled with the faint metallic tang of the structure. The deep hum of powerful sound systems is a constant presence, a palpable vibration within the space.",
-        "materials": "The primary materials are weathered corrugated steel and stained concrete, forming the raw structure. Secondary surfaces include graffiti-covered walls and thick, industrial-grade glass.",
-        "mood": "A mood of raw, unpolished energy and hidden excitement pervades the space, a stark contrast to its utilitarian origins.",
-        "sounds": "deep bass thrum, echoing music, distant chatter, metallic resonance",
-        "spatialLayout": "A large, open-plan space with a high ceiling, its dimensions suggesting a former warehouse or industrial hall. Pillars break up the expanse, creating zones of activity and shadow.",
-        "primary_surfaces": "weathered corrugated steel walls, stained concrete floors and pillars",
-        "secondary_surfaces": "graffiti-covered sections of wall, industrial glass panels",
-        "accent_features": "flickering neon lights, vibrant internal lighting washes, graffiti art",
-        "dominant": "Industrial gray with vast coverage on concrete elements",
-        "secondary": "Rust browns and weathered blues on corrugated steel",
-        "accent": "Deep purples and electric blues from internal lighting, vibrant graffiti",
-        "ambient": "Harsh and functional with dramatic colored washes",
+        "looks": "A cavernous industrial space characterized by a predominantly rectilinear, brutalist form. Imposing scale is defined by raw concrete walls and robust steel beams. The layout is open and utilitarian, hinting at its former industrial purpose.",
+        "colorsAndLighting": "Muted grays and rust-browns dominate, contrasted by dramatic, low-intensity pulsing lights in deep red and electric blue. Shadows are deep and sharp, creating a stark, atmospheric contrast.",
+        "atmosphere": "The air is cool, carrying the faint, metallic scent of ozone and damp concrete. Large open spaces create an echo chamber for ambient industrial sounds. A sense of urban isolation and hidden energy pervades.",
+        "materials": "Dominant materials are rough, exposed concrete and corrugated sheet metal, showing signs of significant age and industrial wear. Robust steel beams and exposed piping are prevalent throughout.",
+        "mood": "Gritty authenticity and raw, underground energy. Evokes anticipation and hidden excitement, a perfect backdrop for intense experiences.",
+        "sounds": "Low-frequency hum, industrial echoes, distant rhythmic beat",
+        "spatialLayout": "Vast, open floor plan with high ceilings. Large, unobstructed central area punctuated by structural elements like pillars and beams.",
+        "primary_surfaces": "weathered concrete walls, corrugated metal panels",
+        "secondary_surfaces": "rusted steel beams, exposed piping, chain-link fence",
+        "accent_features": "graffiti murals, colored pulsing lights, faded industrial signage",
+        "dominant": "concrete gray with high coverage",
+        "secondary": "rust brown on metal cladding",
+        "accent": "deep red and electric blue from interior lights",
+        "ambient": "dark and shadowy with occasional colored light",
         "genre": null,
-        "architectural_tone": "weathered industrial dockside architecture",
-        "cultural_tone": "underground techno scene, repurposed industrial space",
-        "materials_base": "heavy industrial metals and weathered wood",
-        "mood_baseline": "pragmatic resilience and industry, tinged with the potential for new life",
-        "palette_bias": "desaturated grays, browns, and muted blues",
-        "soundscape_base": "industrial port ambience",
+        "architectural_tone": "brutalist industrial with weathered utilitarian elements",
+        "cultural_tone": "underground techno club, urban nightlife, repurposed industrial space",
+        "materials_base": "raw industrial, concrete and metal",
+        "mood_baseline": "gritty, energetic, anticipation",
+        "palette_bias": "cool grays, earthy browns, industrial metallics",
+        "soundscape_base": "low-frequency hum, industrial echoes",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765375672641-drdj1qogp",
-      "description": "The interior of 'The Echo Chamber' is a large, rectangular space within a hulking industrial warehouse. It's designed for entertainment, reflecting the underground techno scene with a focus on open space for dancing and socializing.",
+      "primaryMedia": "media-1765376360567-nv2bscy9y",
+      "description": "The interior of 'The Warehouse' is a large, open rectangular space characterized by its raw, brutalist industrial aesthetic. Its vast scale and wide orientation evoke a sense of immense volume, fitting for its repurposed function as an underground techno club.",
       "structure": {
         "form": "rectangular",
         "roofType": "flat",
@@ -223,44 +228,382 @@
         "openings": "minimal",
         "openingShape": "rectangular",
         "functionalType": "entertainment",
-        "spatialLayout": "A vast, open rectangular space with high ceilings, suggesting a repurposed industrial building. The interior is designed to accommodate a bustling entertainment venue.",
+        "spatialLayout": "A vast, open rectangular space with high ceilings, defined by raw industrial materials and a sense of immense volume. The orientation emphasizes a wide, expansive feel, typical of large industrial structures.",
         "requiredElements": [],
         "suggestedFixtures": [
           "DJ booth",
-          "Dance floor",
-          "Bar counter",
-          "Lounge seating areas",
-          "Industrial-style lighting fixtures",
-          "Sound system speakers"
+          "dance floor",
+          "bar counter",
+          "lounge seating",
+          "industrial lighting fixtures",
+          "sound system speakers"
         ],
         "navigableElements": [
           {
-            "type": "door",
-            "position": "back wall, center",
-            "description": "Large, heavy industrial door for access and emergency egress."
+            "type": "passage",
+            "position": "rear wall",
+            "description": "A large, utilitarian passage leading to other sections of the warehouse."
           },
           {
-            "type": "passage",
-            "position": "left wall, mid-length",
-            "description": "Service passage leading to back-of-house areas."
+            "type": "door",
+            "position": "left side wall",
+            "description": "A heavy industrial door."
           },
           {
             "type": "archway",
-            "position": "right wall, near front",
-            "description": "Opening leading to bar area or restrooms."
+            "position": "center of the space",
+            "description": "An industrial archway creating a central pathway."
           }
         ],
         "dominantElements": [
-          "Exposed concrete walls",
-          "Industrial metal beams",
-          "Large open floor space",
-          "High ceilings",
-          "Concrete floor"
+          "exposed concrete walls",
+          "high ceiling with exposed beams",
+          "large open floor space",
+          "raw, industrial aesthetic",
+          "metal structural supports"
         ],
         "uniqueIdentifiers": [
-          "Signs of industrial wear and tear",
-          "Potential for extensive graffiti art",
-          "Dim, atmospheric lighting"
+          "Brutalist architectural style",
+          "Repurposed industrial character",
+          "Vast, unadorned volume"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "DJ booth with advanced audio equipment",
+          "expansive dance floor area",
+          "long, industrial-style bar counter",
+          "various types of lounge seating (booths, industrial sofas)",
+          "hanging industrial spotlights and strobes",
+          "large, strategically placed sound system speakers"
+        ],
+        "placementNotes": [
+          "DJ booth positioned at the back or elevated section of the space.",
+          "Dance floor centrally located to maximize visibility and flow.",
+          "Bar counter along one of the longer walls for efficient service.",
+          "Lounge seating arranged in clusters to create intimate zones within the large space.",
+          "Lighting should be dynamic and responsive to music, with atmospheric effects.",
+          "Speakers should be hung or mounted to ensure optimal sound distribution throughout the area."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear wall",
+          "description": "A large, utilitarian passage leading to other sections of the warehouse."
+        },
+        {
+          "type": "door",
+          "position": "left side wall",
+          "description": "A heavy industrial door."
+        },
+        {
+          "type": "archway",
+          "position": "center of the space",
+          "description": "An industrial archway creating a central pathway."
+        }
+      ],
+      "dominantElements": [
+        "exposed concrete walls",
+        "high ceiling with exposed beams",
+        "large open floor space",
+        "raw, industrial aesthetic",
+        "metal structural supports"
+      ],
+      "uniqueIdentifiers": [
+        "Brutalist architectural style",
+        "Repurposed industrial character",
+        "Vast, unadorned volume"
+      ],
+      "searchDesc": "Vast brutalist industrial warehouse interior with pulsing colored lights and raw concrete.",
+      "slug": "interior-of-the-warehouse"
+    },
+    "loc-1765376411741-rj4gz11p5": {
+      "id": "loc-1765376411741-rj4gz11p5",
+      "type": "host",
+      "name": "London",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast and varied urban tapestry, blending centuries of architectural styles from gothic cathedrals and Victorian terraces to brutalist concrete and sleek modern skyscrapers. Iconic landmarks punctuate a dense cityscape traversed by major transport arteries.",
+        "colorsAndLighting": "Daylight is often softened by atmospheric conditions, casting a diffused light. Artificial lighting ranges from the warm glow of historic streetlamps to the harsh, cool illumination of modern city centers. A palette of greys, brick reds, and deep blues dominates, punctuated by diverse signage.",
+        "atmosphere": "A constant thrum of activity, a blend of global influences, and the omnipresent hum of traffic. The air can carry the scent of rain, exhaust fumes, and diverse cuisines. It feels both historic and rapidly progressing.",
+        "materials": "Predominantly brick, stone, steel, glass, and concrete. Materials vary greatly by district and age, from ancient weathered stone to polished modern composites.",
+        "mood": "A complex mix of historical gravitas, modern dynamism, and a sense of constant change. It can feel grand, overwhelming, exciting, and sometimes melancholic.",
+        "sounds": "Traffic roar, distant sirens, public transport announcements, varied languages, ubiquitous chatter.",
+        "primary_surfaces": "Weathered brickwork, aged stone facades, vast expanses of glass",
+        "secondary_surfaces": "Cast iron railings, asphalt roads, concrete structures",
+        "accent_features": "Ornate building details, neon signs in entertainment districts, historical statues",
+        "dominant": "Various shades of grey and muted earth tones forming the bulk of structures",
+        "secondary": "Red brick and stone providing structural and historical character",
+        "accent": "Diverse signage, historical accents, and modern architectural highlights",
+        "ambient": "Neutral to slightly cool, with variations based on daylight and artificial light sources",
+        "genre": "Urban Metropolis",
+        "architectural_tone": "Eclectic, spanning historical periods with a strong modern influence",
+        "cultural_tone": "Global hub for finance, arts, fashion, and diverse subcultures",
+        "materials_base": "A rich palette of urban construction materials, from ancient stone to modern composites",
+        "mood_baseline": "Dynamic, complex, and ever-evolving",
+        "palette_bias": "Muted urban tones with strong accent colors from signage and diverse districts",
+        "soundscape_base": "Pervasive urban hum with layered sounds of traffic, transport, and human activity",
+        "flora_base": "Managed urban parks and street trees (e.g., Plane trees, Oaks)",
+        "fauna_base": "Urban adapted wildlife (e.g., Pigeons, Foxes, Squirrels)"
+      },
+      "description": "The historic capital of England, a sprawling metropolis of history and modernity. It's a global hub of culture, finance, and diverse communities, characterized by its iconic landmarks, distinct neighborhoods, and ever-evolving urban landscape.",
+      "searchDesc": "London: a historic yet modern metropolis, a global city of culture, finance, and diverse neighborhoods.",
+      "slug": "london",
+      "structure": {
+        "spatialLayout": "A sprawling, complex grid with areas of dense urbanity, wide avenues, and historic winding streets. Distinct districts create varied spatial experiences, from grand plazas to intimate mews.",
+        "navigableElements": [
+          "River Thames",
+          "Underground network",
+          "iconic bridges"
+        ],
+        "dominantElements": [
+          "Parliament",
+          "Tower of London",
+          "skyscrapers"
+        ],
+        "uniqueIdentifiers": [
+          "red double-decker buses",
+          "black cabs",
+          "distinct architectural eras"
+        ]
+      },
+      "navigableElements": [
+        "River Thames",
+        "Underground network",
+        "iconic bridges"
+      ],
+      "dominantElements": [
+        "Parliament",
+        "Tower of London",
+        "skyscrapers"
+      ],
+      "uniqueIdentifiers": [
+        "red double-decker buses",
+        "black cabs",
+        "distinct architectural eras"
+      ]
+    },
+    "c767c42e-a932-40eb-b3a8-0b401fa5eae6": {
+      "id": "c767c42e-a932-40eb-b3a8-0b401fa5eae6",
+      "type": "region",
+      "name": "Camden",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A dense urban environment with a chaotic yet organized sprawl of market stalls and venues. Architecture varies from Victorian warehouses to modern structures, all layered with a thick coat of vibrant, often political, street art. A constant flow of people creates a dynamic visual landscape.",
+        "colorsAndLighting": "Daylight is diffused by overhead coverings and building density. Artificial lighting from market stalls, shop signs, and venue marquees creates a kaleidoscope of colors, particularly vibrant in the evening. The street art itself is a major source of color.",
+        "atmosphere": "The air is thick with the scent of diverse street food, a low hum of chatter, and distant music. It feels energetic, slightly gritty, and alive with a constant flux of people. There's a palpable sense of freedom and self-expression.",
+        "materials": "A mix of weathered brick, corrugated metal roofing for stalls, exposed concrete, and vibrant painted surfaces. Worn wooden market stalls and sturdy metal signage are prevalent.",
+        "mood": "Energetic, rebellious, creative, and alive with a sense of urban exploration. It evokes curiosity and the thrill of discovery.",
+        "sounds": "Market chatter, street performers, distant music genres, traffic hum, diverse languages.",
+        "primary_surfaces": "Graffiti-covered walls, weathered brickwork, corrugated metal roofing",
+        "secondary_surfaces": "Painted shopfronts, worn wooden market stalls, exposed concrete",
+        "accent_features": "Intricate street art murals, flashing neon signs for venues, eclectic market displays",
+        "dominant": "Vibrant street art with heavy coverage on many surfaces",
+        "secondary": "Weathered brick and concrete forming the underlying structures",
+        "accent": "Brightly colored market stalls and flashing venue lights",
+        "ambient": "Varied, from daylight to the colorful glow of artificial lights",
+        "genre": null,
+        "architectural_tone": "Eclectic urban sprawl with heavy street art and functional market structures",
+        "cultural_tone": "Alternative culture, music enthusiasts, market shoppers, subculture adherents",
+        "materials_base": "Urban decay, repurposed industrial, and vibrant painted surfaces",
+        "mood_baseline": "Rebellious excitement and creative freedom",
+        "palette_bias": "High contrast with a broad spectrum of vibrant, often clashing colors",
+        "soundscape_base": "Urban cacophony with a focus on music and market sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A vibrant, eclectic neighborhood known for its markets, music venues, and alternative culture. It's a melting pot of subcultures, buzzing with street art, independent shops, and diverse culinary offerings.",
+      "searchDesc": "Camden: a vibrant London district famed for its markets, alternative culture, and live music scene.",
+      "slug": "camden",
+      "structure": {
+        "spatialLayout": "A maze-like network of narrow streets and open market areas. Buildings are often multi-story, creating a sense of enclosure and verticality, with alleyways and hidden courtyards.",
+        "dominantElements": [
+          "Camden Lock Market",
+          "Roundhouse venue",
+          "street art"
+        ],
+        "uniqueIdentifiers": [
+          "eclectic street art",
+          "vibrant market stalls",
+          "live music posters"
+        ]
+      },
+      "dominantElements": [
+        "Camden Lock Market",
+        "Roundhouse venue",
+        "street art"
+      ],
+      "uniqueIdentifiers": [
+        "eclectic street art",
+        "vibrant market stalls",
+        "live music posters"
+      ],
+      "primaryMedia": "media-1765376487362-am3v0skdr"
+    },
+    "6cf7329d-a5a0-46fe-ad72-fdd90971ba9f": {
+      "id": "6cf7329d-a5a0-46fe-ad72-fdd90971ba9f",
+      "type": "location",
+      "name": "The Electra Pulse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior is a stark, brutalist concrete structure, heavily graffitied and adorned with industrial metalwork. Large, recessed panels dominate the facade, occasionally flashing with intense, synchronized light displays. The scale is imposing, suggesting a hidden, powerful interior.",
+        "colorsAndLighting": "Dominant colors are deep blacks and concrete greys, sharply contrasted by vibrant, artificial neon blues, purples, and reds that pulse and strobe. The lighting is a key feature, creating a disorienting but exciting visual cacophony.",
+        "atmosphere": "The air outside feels charged with anticipation, a palpable hum of energy radiating from the building. A slight warmth emanates from the interior, carrying the muffled thud of bass. The atmosphere is electric and slightly aggressive, fitting for a late-night venue.",
+        "materials": "Rough, exposed concrete forms the primary material, showing signs of wear and tear. Accents of weathered steel and thick, tinted glass for the entrance suggest durability and a raw, industrial aesthetic.",
+        "mood": "The mood is one of intense excitement and urban edginess. It evokes a sense of raw power and a promise of an unforgettable, high-energy experience.",
+        "sounds": "Deep bass thrum, distant crowd murmur, metallic clangs, muffled techno beats, industrial hum.",
+        "primary_surfaces": "Rough concrete, weathered steel panels, tinted glass",
+        "secondary_surfaces": "Graffiti art, industrial grates, exposed wiring conduits",
+        "accent_features": "Pulsing LED panels, neon lettering, strobe lights",
+        "dominant": "Black with heavy coverage, encompassing the base structure",
+        "secondary": "Concrete grey, forming the bulk of the facade",
+        "accent": "Electric blues and purples on LED panels, vibrant reds in neon signage",
+        "ambient": "Harsh and artificial, with deep shadows punctuated by intense light bursts",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with aggressive neon and graffiti accents",
+        "cultural_tone": "Youth culture, electronic music enthusiasts, urban nightlife seekers",
+        "materials_base": "Concrete, steel, glass, paint",
+        "mood_baseline": "Excited, edgy, intense",
+        "palette_bias": "Cool tones with high contrast vibrant accents",
+        "soundscape_base": "Industrial and electronic bass-heavy",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A buzzing techno club with pulsating lights and a heavy bass sound system. EXTERIOR VIEW.",
+      "searchDesc": "London Camden techno club exterior with pulsing lights and heavy bass. Electrifying nightlife.",
+      "slug": "the-electra-pulse",
+      "structure": {
+        "spatialLayout": "The facade is a solid block, with minimal articulation except for the recessed entrance and prominent light panels. The overall impression is one of a contained, powerful source of sound and light.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A heavy, black steel door."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "A dimly lit, narrow passage."
+          }
+        ],
+        "dominantElements": [
+          "Large, pulsing LED panels",
+          "Industrial-style ventilation grates",
+          "Towering sound system speakers",
+          "Graffiti-art adorned walls"
+        ],
+        "uniqueIdentifiers": [
+          "A sign with jagged, neon-like lettering spelling 'Electra Pulse'",
+          "Flickering strobe lights visible through the entrance",
+          "The muffled, deep thrum of bass emanating from within"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A heavy, black steel door."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "A dimly lit, narrow passage."
+        }
+      ],
+      "dominantElements": [
+        "Large, pulsing LED panels",
+        "Industrial-style ventilation grates",
+        "Towering sound system speakers",
+        "Graffiti-art adorned walls"
+      ],
+      "uniqueIdentifiers": [
+        "A sign with jagged, neon-like lettering spelling 'Electra Pulse'",
+        "Flickering strobe lights visible through the entrance",
+        "The muffled, deep thrum of bass emanating from within"
+      ],
+      "primaryMedia": "media-1765376440774-2309niycs"
+    },
+    "niche-1765376469623-v717pv403": {
+      "id": "niche-1765376469623-v717pv403",
+      "type": "niche",
+      "name": "The Electra Pulse Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a vast, raw industrial space characterized by exposed concrete ceilings and walls, punctuated by the dynamic glow of integrated LED panels and vibrant neon signage. The layout is open, designed to accommodate a large crowd with a central dance floor and a prominent DJ booth. Seating is integrated into the architecture, often carved into concrete alcoves or featuring minimalist metal designs.",
+        "colorsAndLighting": "The primary palette consists of deep blacks and concrete greys, aggressively cut through by electric blues, purples, and reds from pulsing LEDs and neon. Lighting is intensely dynamic, creating shifting patterns and deep, dramatic shadows.",
+        "atmosphere": "The air thrums with a palpable energy, thick with the reverberations of a bass-heavy electronic soundtrack. A slight warmth, tinged with the faint scent of ozone and industrial lubricants, permeates the space. The atmosphere is electric, a disorienting yet exhilarating sensory overload.",
+        "materials": "Dominant materials include rough, unpolished concrete forming the structural elements, weathered steel for accents and fixtures, and tinted glass for bar surfaces or partitions. Graffiti art continues its presence from the exterior, integrated directly onto some concrete surfaces.",
+        "mood": "The mood is one of unbridled excitement and raw, urban edginess. It's a space that demands engagement, fostering a sense of collective intensity and primal energy.",
+        "sounds": "Industrial hum, muffled bass, electronic beats, crowd chatter, synthesized rhythms.",
+        "spatialLayout": "A large, open volume with high ceilings, creating a sense of imposing scale. The layout is designed for high-traffic flow and dynamic visual interaction with the lighting and sound systems.",
+        "primary_surfaces": "Rough concrete walls and floors, weathered steel panels, heavily tinted glass surfaces",
+        "secondary_surfaces": "Graffiti art murals, exposed wiring conduits, industrial grates",
+        "accent_features": "Pulsing LED floor tiles, custom neon light sculptures, synchronized strobe light arrays, integrated sound system elements",
+        "dominant": "Deep black, covering large structural elements and providing a canvas for light.",
+        "secondary": "Concrete grey, forming the bulk of the walls and ceiling.",
+        "accent": "Electric blues and purples on LED panels; vibrant reds and pinks in neon signage.",
+        "ambient": "Harsh and artificial, characterized by deep shadows and intense, pulsing light bursts.",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with aggressive neon and graffiti accents",
+        "cultural_tone": "Youth culture, electronic music enthusiasts, urban nightlife seekers",
+        "materials_base": "Concrete, steel, glass, paint",
+        "mood_baseline": "Excited, edgy, intense",
+        "palette_bias": "Cool tones with high contrast vibrant accents",
+        "soundscape_base": "Industrial and electronic bass-heavy",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765376469623-0h681o9ae",
+      "description": "The interior of The Electra Pulse is a large, raw, and industrial entertainment venue, characterized by brutalist concrete architecture, metalwork, and dynamic lighting, catering to youth culture and electronic music enthusiasts.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "The interior is an expansive, raw space with exposed brutalist concrete walls and floors, designed to accommodate large gatherings and performances.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "DJ booth with turntables and mixer",
+          "Spacious dance floor",
+          "Modular lounge seating areas",
+          "Industrial-style bar with stools",
+          "Programmable LED lighting system",
+          "Subwoofer sound system"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear",
+            "description": "Large industrial-style double doors leading to service areas or exits."
+          },
+          {
+            "type": "archway",
+            "position": "left wall",
+            "description": "A wide, imposing archway leading to a VIP section or additional lounge."
+          },
+          {
+            "type": "door",
+            "position": "right wall",
+            "description": "An access door for staff or emergency exit."
+          }
+        ],
+        "dominantElements": [
+          "Exposed brutalist concrete walls and ceiling",
+          "Industrial metal framework",
+          "Integrated programmable LED lighting panels",
+          "Large, open floor space",
+          "Recessed structural elements"
+        ],
+        "uniqueIdentifiers": [
+          "Synchronized flashing light displays",
+          "Graffiti-adorned concrete surfaces",
+          "Imposing, powerful scale",
+          "Sound-system infrastructure"
         ]
       },
       "furnishingDetails": {
@@ -268,51 +611,53 @@
         "suggested": [
           "DJ booth with turntables and mixer",
           "Spacious dance floor",
-          "Long, robust bar counter with stools",
-          "Clusters of low-slung lounge seating and banquettes",
-          "Industrial pendant lights and stage lighting",
-          "Visible, large-scale speakers mounted on walls or trussing"
+          "Modular lounge seating areas",
+          "Industrial-style bar with stools",
+          "Programmable LED lighting system",
+          "Subwoofer sound system",
+          "Branded signage",
+          "Strobe lights"
         ],
         "placementNotes": [
-          "DJ booth should be elevated and centrally located with clear sightlines to the dance floor.",
-          "Dance floor should occupy the majority of the central open space.",
-          "Bar counter positioned along one wall for efficient service.",
-          "Lounge areas strategically placed around the perimeter for breaks.",
-          "Lighting should be dynamic and atmospheric, with an emphasis on low-level illumination and effect lights.",
-          "Sound equipment should be prominent and integrated into the space's industrial aesthetic."
+          "DJ booth positioned centrally towards the back or on an elevated platform.",
+          "Dance floor occupying the main central area.",
+          "Lounge seating arranged around the perimeter or in designated alcoves.",
+          "Bar located along one of the main walls.",
+          "Lighting and strobe effects should be dynamic and synchronized with music."
         ]
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "back wall, center",
-          "description": "Large, heavy industrial door for access and emergency egress."
-        },
-        {
           "type": "passage",
-          "position": "left wall, mid-length",
-          "description": "Service passage leading to back-of-house areas."
+          "position": "rear",
+          "description": "Large industrial-style double doors leading to service areas or exits."
         },
         {
           "type": "archway",
-          "position": "right wall, near front",
-          "description": "Opening leading to bar area or restrooms."
+          "position": "left wall",
+          "description": "A wide, imposing archway leading to a VIP section or additional lounge."
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "An access door for staff or emergency exit."
         }
       ],
       "dominantElements": [
-        "Exposed concrete walls",
-        "Industrial metal beams",
-        "Large open floor space",
-        "High ceilings",
-        "Concrete floor"
+        "Exposed brutalist concrete walls and ceiling",
+        "Industrial metal framework",
+        "Integrated programmable LED lighting panels",
+        "Large, open floor space",
+        "Recessed structural elements"
       ],
       "uniqueIdentifiers": [
-        "Signs of industrial wear and tear",
-        "Potential for extensive graffiti art",
-        "Dim, atmospheric lighting"
+        "Synchronized flashing light displays",
+        "Graffiti-adorned concrete surfaces",
+        "Imposing, powerful scale",
+        "Sound-system infrastructure"
       ],
-      "searchDesc": "Industrial warehouse interior of The Echo Chamber club with concrete, metal, and vibrant light.",
-      "slug": "interior-of-the-echo-chamber"
+      "searchDesc": "Inside The Electra Pulse: brutalist concrete, neon, and intense electronic music.",
+      "slug": "interior-of-the-electra-pulse"
     }
   },
   "views": {},
@@ -335,7 +680,53 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765375672646-6y04dyh21",
+                  "id": "niche-1765376219460-dv5rpadcc",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765376309037-lxlf916g5",
+      "type": "host",
+      "children": [
+        {
+          "id": "1673b735-989e-424a-8827-a60f0ef26cee",
+          "type": "region",
+          "children": [
+            {
+              "id": "0aa6ebe5-8a19-42be-a751-0a1ff6b55af7",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765376360569-3j10y8nte",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765376411741-rj4gz11p5",
+      "type": "host",
+      "children": [
+        {
+          "id": "c767c42e-a932-40eb-b3a8-0b401fa5eae6",
+          "type": "region",
+          "children": [
+            {
+              "id": "6cf7329d-a5a0-46fe-ad72-fdd90971ba9f",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765376469623-v717pv403",
                   "type": "niche",
                   "children": []
                 }
@@ -347,6 +738,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765374000902-713cqsmwd"
+    "loc-1765376309037-lxlf916g5",
+    "loc-1765376411741-rj4gz11p5"
   ]
 }
