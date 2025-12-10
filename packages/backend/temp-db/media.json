@@ -262,6 +262,35 @@
         "model": "FLUX"
       },
       "entityRefs": []
+    },
+    "media-1765360055947-ugplsig7d": {
+      "id": "media-1765360055947-ugplsig7d",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a85b9c4/YXHcqpF0s1nHSBRkRPwHW.jpg",
+      "createdAt": "2025-12-10T09:47:35.947Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of an enigmatic, robed figure seated in a field of tall, wild grass. The character's head is a smooth, reflective black orb, encased by a wide, textured dark grey circular structure that resembles a futuristic radar dish or an ornate hood. Bright, thin orange lines subtly glow along the collar of the sleek, dark neck. The figure wears a voluminous, flowing black robe, adorned with intricate, ceremonial metallic chest pieces and shoulder elements, from which hangs a large, circular medallion featuring a stylized emblem. Sleek black gloved hands hold a flat, circular metallic disc with concentric rings and a detailed central design, while a golden ring with a small red gem adorns one finger. In the background, under an overcast sky, two massive, dark, arch-like futuristic or alien structures with intricate paneling loom, creating a mysterious and ancient or advanced technological atmosphere.\"\n\nCygnus, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A smooth, obsidian orb for a head, reflecting the overcast sky. It's framed by a wide, matte charcoal ring. A sleek, dark neck pulses with faint, thin orange light around its collar..\n\nWearing: A sweeping, midnight black robe of dense, matte fabric. Intricate, gunmetal grey metallic plating adorns the chest and shoulders, resembling ceremonial armor. A large, circular obsidian medallion with silver filigree hangs from the neck. Both hands are covered in close-fitting black gloves. A thin gold band with a tiny ruby rests on one finger..\n\nPresence: A chilling stillness, tinged with a subtle hum of latent power. An aura of alien enigma..\n\nSetting: A field of whispering, dry grass under a muted, bruised-grey sky, with colossal, dark technological arches dominating the horizon..\n\nTheir demeanor reflects: Reserved, observant, and deeply focused. Its demeanor suggests ancient knowledge and a detached, analytical nature..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765360040232-x6ol3pp47"
+      ]
+    },
+    "media-1765360172350-hoqf8n3pt": {
+      "id": "media-1765360172350-hoqf8n3pt",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a85b9d1/EUA5p4uQhISMOaRhi2_S3_062f1803d6e549b2a65b921d9007b508.png",
+      "createdAt": "2025-12-10T09:49:32.350Z",
+      "metadata": {
+        "parentMedia": "media-1765360055947-ugplsig7d",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1765360040232-x6ol3pp47"
+      ],
+      "parentMedia": "media-1765360055947-ugplsig7d"
     }
   }
 }
