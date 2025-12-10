@@ -39,7 +39,6 @@ export {
 
 export {
   parsePromptToHierarchy,
-  detectsInterior,
   type ParsedHierarchy,
 } from './detection/parsePromptToHierarchy';
 

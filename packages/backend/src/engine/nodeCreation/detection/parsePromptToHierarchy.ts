@@ -19,6 +19,8 @@ import type { HierarchySpec } from '../types';
 /**
  * Prompt for hierarchy classification
  * Creates a SINGLE branch with appropriate depth
+ * 
+ * IMPORTANT: Niches should be RARE - only when user explicitly requests interior
  */
 function buildClassificationPrompt(userPrompt: string): string {
   return `You are a world-building assistant. Analyze the user's location description and create a SINGLE-BRANCH hierarchy.
@@ -27,31 +29,37 @@ function buildClassificationPrompt(userPrompt: string): string {
 1. **host** - A city, world, or major setting (e.g., "London", "Steampunk Metropolis")
 2. **region** - A district, neighborhood, or area within the host (e.g., "Camden", "The Industrial Quarter")
 3. **location** - A specific building, site, or landmark (e.g., "The Anchor Pub", "Clockwork Factory")
-4. **niche** - An interior space or specific spot (e.g., "Inside the pub", "The rooftop terrace")
+4. **niche** - RARE: An interior space ONLY when explicitly requested (e.g., "Inside the pub", "The kitchen")
 
 ## CRITICAL RULES:
 1. Create ONLY ONE of each level (no arrays, no multiple regions/locations)
 2. Always work top-down: if you have a location, you MUST have host and region
-3. **DEFAULT to location (exterior)** - Only add niche if explicitly interior
-4. Detect interior keywords: "inside", "interior", "within", "in the room", "indoors"
+3. **STOP AT LOCATION by default** - Show the EXTERIOR of buildings/sites
+4. **NICHE IS RARE** - ONLY create niche when user EXPLICITLY says: "inside", "interior", "within", "in the room", "indoors", "enter"
+
+## ⚠️ NICHE RESTRICTION (VERY IMPORTANT):
+- DO NOT create a niche just because a building has interior spaces
+- DO NOT create a niche for "a pub", "a house", "a shop" - these show EXTERIOR
+- DO NOT create a niche when describing what's visible through windows
+- ONLY create niche when user explicitly wants to BE INSIDE the space
 
 ## Depth Detection:
-- City/world only → stop at host
-- District/area mentioned → stop at region  
-- Building/site mentioned → stop at location (show EXTERIOR)
-- Interior explicitly mentioned → include niche
+- City/world only → stop at HOST (depth 1)
+- District/area mentioned → stop at REGION (depth 2)
+- Building/site mentioned → stop at LOCATION (depth 3) - EXTERIOR VIEW
+- User explicitly says "inside/interior/within" → include NICHE (depth 4)
 
 ## Output JSON Format:
 {
   "host": { "name": "...", "description": "..." },
   "region": { "name": "...", "description": "..." },  // omit if not needed
   "location": { "name": "...", "description": "..." }, // omit if not needed
-  "niche": { "name": "...", "description": "..." },    // ONLY if interior
+  "niche": { "name": "...", "description": "..." },    // ONLY if user explicitly requests interior
   "depth": 1-4,
   "isInterior": true/false
 }
 
-## Examples:
+## Examples - NO NICHE (most common):
 
 Input: "Go to London"
 Output: { "host": { "name": "London", "description": "The historic capital of England, a sprawling metropolis of history and modernity." }, "depth": 1, "isInterior": false }
@@ -60,10 +68,21 @@ Input: "Camden in London"
 Output: { "host": { "name": "London", "description": "The historic capital of England" }, "region": { "name": "Camden", "description": "A vibrant, eclectic neighborhood known for its markets and alternative culture" }, "depth": 2, "isInterior": false }
 
 Input: "A Victorian pub with ornate brass fittings"
-Output: { "host": { "name": "Victorian London", "description": "London during the Victorian era, gaslit streets and ornate architecture" }, "region": { "name": "Historic District", "description": "An area of preserved Victorian architecture and traditional establishments" }, "location": { "name": "The Crown & Anchor", "description": "A traditional Victorian pub with ornate brass fittings, etched glass windows, and warm wooden interior glimpsed through the windows" }, "depth": 3, "isInterior": false }
+Output: { "host": { "name": "Victorian London", "description": "London during the Victorian era, gaslit streets and ornate architecture" }, "region": { "name": "Historic District", "description": "An area of preserved Victorian architecture and traditional establishments" }, "location": { "name": "The Crown & Anchor", "description": "A traditional Victorian pub with ornate brass fittings, etched glass windows, and warm wooden interior glimpsed through the windows. EXTERIOR VIEW showing the building facade." }, "depth": 3, "isInterior": false }
+
+Input: "A cozy cottage with a roaring fireplace"
+Output: { "host": { "name": "English Countryside", "description": "Rolling hills and pastoral landscapes" }, "region": { "name": "Cotswolds Village", "description": "A quaint village with honey-colored stone buildings" }, "location": { "name": "Rose Cottage", "description": "A cozy stone cottage with climbing roses and smoke curling from the chimney. EXTERIOR VIEW showing the charming facade." }, "depth": 3, "isInterior": false }
+
+Input: "A medieval castle"
+Output: { "host": { "name": "Medieval Kingdom", "description": "A realm of knights and nobility" }, "region": { "name": "Highland Province", "description": "Mountainous terrain with strategic fortifications" }, "location": { "name": "Dragonstone Keep", "description": "An imposing medieval castle with high stone walls and battlements. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+## Examples - WITH NICHE (rare - only when explicitly interior):
 
 Input: "Inside a cozy Victorian pub with a roaring fireplace"
 Output: { "host": { "name": "Victorian London", "description": "London during the Victorian era" }, "region": { "name": "Historic District", "description": "An area of traditional establishments" }, "location": { "name": "The Hearthstone Pub", "description": "A cozy Victorian pub known for its warm atmosphere" }, "niche": { "name": "The Fireside Nook", "description": "A cozy interior space dominated by a roaring fireplace, with plush seating and warm amber lighting" }, "depth": 4, "isInterior": true }
+
+Input: "The kitchen of a farmhouse"
+Output: { "host": { "name": "Rural Countryside", "description": "Pastoral farmland" }, "region": { "name": "Valley Farm District", "description": "Fertile agricultural area" }, "location": { "name": "Oakwood Farmhouse", "description": "A traditional farmhouse" }, "niche": { "name": "The Kitchen", "description": "A rustic farmhouse kitchen with a wood-burning stove and copper pots" }, "depth": 4, "isInterior": true }
 
 Now analyze this prompt:
 "${userPrompt}"`;
@@ -146,24 +165,4 @@ function countSpecDepth(spec: HierarchySpec): number {
   if (spec.location) depth++;
   if (spec.niche) depth++;
   return depth;
-}
-
-/**
- * Quick check if prompt mentions interior
- * (Used as fallback/validation)
- */
-export function detectsInterior(prompt: string): boolean {
-  const interiorKeywords = [
-    'inside',
-    'interior',
-    'within',
-    'indoors',
-    'in the room',
-    'in the building',
-    'internal',
-    'inner',
-  ];
-  
-  const lowerPrompt = prompt.toLowerCase();
-  return interiorKeywords.some(keyword => lowerPrompt.includes(keyword));
 }
