@@ -29,6 +29,8 @@ export function useAppLogic() {
     return (localStorage.getItem('displayMode') as DisplayMode) || 'full';
   });
   const [hasDepthMap, setHasDepthMap] = useState(false);
+  const [trainingSaving, setTrainingSaving] = useState(false);
+  const [trainingSavedEntityId, setTrainingSavedEntityId] = useState<string | null>(null);
   
   // Global keyboard shortcuts
   useKeyboardShortcuts();
@@ -215,7 +217,7 @@ export function useAppLogic() {
   }, []);
 
   const handleSaveTrainingData = useCallback(async () => {
-    if (!activeEntity || !activeEntitySession?.entityImage) return;
+    if (!activeEntity || !activeEntitySession?.entityImage || trainingSaving) return;
     
     let text = '';
     let name = activeEntitySession.entityName || 'entity';
@@ -236,12 +238,23 @@ export function useAppLogic() {
       return;
     }
     
-    await saveTrainingData({
-      imageUrl: activeEntitySession.entityImage,
-      text,
-      name
-    });
-  }, [activeEntity, activeEntitySession, isCharacter]);
+    setTrainingSaving(true);
+    
+    try {
+      const result = await saveTrainingData({
+        imageUrl: activeEntitySession.entityImage,
+        text,
+        name,
+        entityId: activeEntity
+      });
+      
+      if (result.success) {
+        setTrainingSavedEntityId(activeEntity);
+      }
+    } finally {
+      setTrainingSaving(false);
+    }
+  }, [activeEntity, activeEntitySession, isCharacter, trainingSaving]);
 
   // Broadcast entity change to external views
   useEffect(() => {
@@ -293,6 +306,9 @@ export function useAppLogic() {
 
   const depthMapDisabled = !activeEntity || !getPrimaryMediaId();
 
+  // Reset trainingSaved when entity changes
+  const trainingSaved = trainingSavedEntityId === activeEntity;
+
   return {
     // State
     isSavedEntitiesModalOpen,
@@ -302,6 +318,8 @@ export function useAppLogic() {
     hasDepthMap,
     depthMapGenerating,
     depthMapDisabled,
+    trainingSaving,
+    trainingSaved,
     
     // Entity state
     activeEntity,

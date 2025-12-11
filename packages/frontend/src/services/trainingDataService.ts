@@ -7,6 +7,7 @@ interface SaveTrainingDataParams {
   imageUrl: string;
   text: string;
   name: string;
+  entityId: string;
 }
 
 interface SaveTrainingDataResponse {

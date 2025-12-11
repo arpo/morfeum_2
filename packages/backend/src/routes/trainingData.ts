@@ -13,6 +13,7 @@ interface SaveTrainingDataBody {
   imageUrl: string;
   text: string;
   name: string;
+  entityId: string;
 }
 
 // Sanitize filename to be filesystem-safe
@@ -55,20 +56,18 @@ async function downloadImage(url: string): Promise<Buffer> {
 // POST /api/training-data - Save training data pair
 router.post('/', async (req: Request, res: Response) => {
   try {
-    const { imageUrl, text, name } = req.body as SaveTrainingDataBody;
+    const { imageUrl, text, name, entityId } = req.body as SaveTrainingDataBody;
     
-    if (!imageUrl || !text || !name) {
-      res.status(400).json({ error: 'Missing required fields: imageUrl, text, name' });
+    if (!imageUrl || !text || !entityId) {
+      res.status(400).json({ error: 'Missing required fields: imageUrl, text, entityId' });
       return;
     }
     
     // Ensure training data directory exists
     await fs.mkdir(TRAINING_DATA_DIR, { recursive: true });
     
-    // Generate unique filename with timestamp
-    const timestamp = Date.now();
-    const sanitizedName = sanitizeFilename(name);
-    const baseFilename = `${sanitizedName}-${timestamp}`;
+    // Use entity ID as filename (overwrites existing files for same entity)
+    const baseFilename = entityId;
     
     // Download and save image
     const imageBuffer = await downloadImage(imageUrl);

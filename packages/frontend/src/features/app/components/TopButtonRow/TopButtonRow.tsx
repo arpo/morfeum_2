@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui';
-import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera } from '@/icons';
+import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera, IconCheck } from '@/icons';
 import styles from './TopButtonRow.module.css';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
@@ -24,6 +24,8 @@ interface TopButtonRowProps {
   depthMapGenerating: boolean;
   displayMode: DisplayMode;
   hasDepthMap: boolean;
+  trainingSaving: boolean;
+  trainingSaved: boolean;
 }
 
 export function TopButtonRow({
@@ -40,6 +42,8 @@ export function TopButtonRow({
   depthMapGenerating,
   displayMode,
   hasDepthMap,
+  trainingSaving,
+  trainingSaved,
 }: TopButtonRowProps) {
   const cycleDisplayMode = () => {
     const modes: DisplayMode[] = ['2d', 'full', 'hsbs'];
@@ -122,9 +126,16 @@ export function TopButtonRow({
       <Button
         onClick={onSaveTrainingData}
         className={styles.button}
-        aria-label="Save training data"
+        disabled={trainingSaving}
+        aria-label={trainingSaved ? "Training data saved" : "Save training data"}
       >
-        <IconCamera size={20} />
+        {trainingSaving ? (
+          <IconLoader2 size={20} className={styles.spinner} />
+        ) : trainingSaved ? (
+          <IconCheck size={20} />
+        ) : (
+          <IconCamera size={20} />
+        )}
       </Button>
     </div>
   );

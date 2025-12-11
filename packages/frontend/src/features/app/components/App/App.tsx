@@ -36,6 +36,8 @@ export function App() {
     hasDepthMap,
     depthMapGenerating,
     depthMapDisabled,
+    trainingSaving,
+    trainingSaved,
     
     // Entity state
     activeEntity,
@@ -118,6 +120,8 @@ export function App() {
             depthMapGenerating={depthMapGenerating}
             displayMode={displayMode}
             hasDepthMap={hasDepthMap}
+            trainingSaving={trainingSaving}
+            trainingSaved={trainingSaved}
           />
         </div>
         
