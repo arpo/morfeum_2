@@ -50,7 +50,7 @@ function startServer(): void {
   const app = createApp();
   const config = getConfig();
 
-  app.listen(config.port, () => {
+  const server = app.listen(config.port, () => {
     console.log(`🚀 Backend server is running at http://localhost:${config.port}`);
     console.log(`📦 Environment: ${config.nodeEnv}`);
     console.log(`📁 Frontend build path: ${config.frontendBuildPath}`);
@@ -61,16 +61,17 @@ function startServer(): void {
     console.log(`   GET  http://localhost:${config.port}/health/detailed`);
   });
 
-  // Graceful shutdown handling
-  process.on('SIGTERM', () => {
-    console.log('🛑 SIGTERM received, shutting down gracefully');
-    process.exit(0);
-  });
+  // Graceful shutdown handling - close server before exiting to release port
+  const shutdown = () => {
+    server.close(() => {
+      process.exit(0);
+    });
+    // Force exit after 5s if server.close hangs
+    setTimeout(() => process.exit(0), 5000);
+  };
 
-  process.on('SIGINT', () => {
-    console.log('🛑 SIGINT received, shutting down gracefully');
-    process.exit(0);
-  });
+  process.on('SIGTERM', shutdown);
+  process.on('SIGINT', shutdown);
 }
 
 // Start the server if this file is run directly
