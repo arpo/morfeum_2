@@ -299,6 +299,388 @@
       "searchDesc": "Luxurious cave dwelling with ocean views, warm lighting, and lush foliage.",
       "slug": "the-living-cavern",
       "parentId": "7a823c2a-ada9-49ed-93b0-4c2557c3abe3"
+    },
+    "loc-1765445806432-aikmvx07a": {
+      "id": "loc-1765445806432-aikmvx07a",
+      "type": "host",
+      "name": "Earth Orbit",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sprawling network of interconnected orbital structures and spacecraft, characterized by metallic surfaces, large viewing ports, and the constant presence of Earth's celestial sphere. The scale ranges from intimate modules to massive station complexes.",
+        "colorsAndLighting": "Dominated by the deep blues and blacks of space, punctuated by the bright, diverse lights of Earth and the internal illumination of spacecraft. Sunlight creates sharp contrasts and harsh shadows.",
+        "atmosphere": "The absolute vacuum of space, with no air, extreme temperature fluctuations, and constant radiation. Motion is dictated by orbital mechanics, station rotation, and the graceful movement of spacecraft.",
+        "materials": "Advanced, lightweight metallic alloys for hulls and structures, reinforced transparent composites for windows, and a variety of specialized materials for life support and radiation shielding. Surfaces are often polished or brushed metals.",
+        "mood": "Awe-inspiring, pioneering, functional, and profoundly connected to Earth, blending isolation with observation.",
+        "sounds": "Silence, hum of machinery, radio static, distant communications, gentle thrumming.",
+        "primary_surfaces": "Smooth metallic alloys, reinforced transparent composites",
+        "secondary_surfaces": "Textured insulation panels, exposed conduits, soft furnishings",
+        "accent_features": "Large panoramic windows, complex control panels, vibrant Earth illumination",
+        "dominant": "Deep space black (60%)",
+        "secondary": "Metallic grey and white (30%)",
+        "accent": "Earth glow and internal instrumentation lights (10%)",
+        "ambient": "Cold, stark, with pockets of warm internal light",
+        "genre": "Science Fiction",
+        "architectural_tone": "Functional space-age modularity with scientific observation features",
+        "cultural_tone": "Human engineered, scientific exploration, Earth observation, advanced technology",
+        "materials_base": "Polished and brushed metallic alloys, reinforced transparent composites",
+        "mood_baseline": "Profound exploration and technological advancement",
+        "palette_bias": "Deep blues, blacks, greys, whites, with vibrant planetary and internal light accents",
+        "soundscape_base": "Low hums and ambient mechanical noise",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "The vast expanse of Earth's orbit, a bustling nexus of scientific research, commercial travel, and interplanetary endeavors. It's a realm where advanced technology meets the awe-inspiring beauty of the planet below.",
+      "searchDesc": "Humanity's frontier in Earth orbit, a hub of technology and exploration with stunning planet views.",
+      "slug": "earth-orbit",
+      "structure": {
+        "spatialLayout": "Vast, three-dimensional environments within pressurized modules, and unbounded emptiness outside. Layouts are often modular and functional, prioritizing utility and safety.",
+        "dominantElements": [
+          "Orbital stations",
+          "Spacecraft",
+          "Satellites"
+        ],
+        "uniqueIdentifiers": [
+          "Earth view",
+          "Vacuum of space",
+          "Orbital mechanics"
+        ]
+      },
+      "dominantElements": [
+        "Orbital stations",
+        "Spacecraft",
+        "Satellites"
+      ],
+      "uniqueIdentifiers": [
+        "Earth view",
+        "Vacuum of space",
+        "Orbital mechanics"
+      ],
+      "primaryMedia": "media-1765445872402-5wyk5ju57"
+    },
+    "732b269c-ab3d-4714-8be1-758d0bd02c70": {
+      "id": "732b269c-ab3d-4714-8be1-758d0bd02c70",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "ec879597-890a-46a3-8176-c4e3dd8d5505": {
+      "id": "ec879597-890a-46a3-8176-c4e3dd8d5505",
+      "type": "location",
+      "name": "Orbital Observation Module",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior of the Orbital Observation Module is a sleek, metallic structure dominated by a colossal, multi-paned observation window. This vast aperture is strikingly framed by bold, angular red structural beams that are visibly integrated into the module's hull. The overall form is functional and utilitarian, hinting at the advanced technology within.",
+        "colorsAndLighting": "The hull features a combination of light grey and off-white metallic panels, contrasted with darker, brushed metal sections and the prominent red framing of the main window. Subtle external lighting illuminates the structure, with faint glows of red and orange potentially emanating from behind the observation window, reflecting the internal instrumentation.",
+        "atmosphere": "The immediate surroundings are the vacuum of Earth orbit, characterized by an absolute absence of air, temperature extremes, and atmospheric phenomena. Motion is defined by the slow rotation of the station and its orbital path around the planet below.",
+        "materials": "The primary materials are advanced, lightweight metallic alloys for the hull, providing durability and thermal regulation. The observation window is likely constructed from reinforced, transparent composite materials designed to withstand the vacuum and radiation of space. The red structural beams appear to be a robust, high-strength composite.",
+        "mood": "The mood is one of sophisticated engineering and profound exploration, conveying a sense of isolation yet connection to the planet below.",
+        "sounds": "Silence, faint hum of internal systems, gentle orbital drift.",
+        "primary_surfaces": "Smooth, metallic hull panels, reinforced transparent window composite",
+        "secondary_surfaces": "Red composite structural beams, brushed metal accents, sensor housings",
+        "accent_features": "The vibrant red structural beams framing the observation window, subtle external antennae and sensor clusters",
+        "dominant": "Light grey metallic (approx. 60% coverage)",
+        "secondary": "Dark brushed metal (approx. 20% coverage), Red structural beams (approx. 15% coverage)",
+        "accent": "Orange/red glows from internal instrumentation (subtle, visible through window)",
+        "ambient": "Sterile, artificial external illumination with contrast from the deep black of space.",
+        "genre": null,
+        "architectural_tone": "Functional space-age modularity with prominent scientific observation features",
+        "cultural_tone": "Human engineered, scientific exploration, Earth observation",
+        "materials_base": "Polished and brushed metallic alloys, reinforced transparent composites",
+        "mood_baseline": "Scientific curiosity, advanced technology, serene observation",
+        "palette_bias": "Greys, whites, reds, subtle orange/red glows",
+        "soundscape_base": "Vacuum ambient, faint mechanical hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A segment of a space station or spacecraft designed for observation, featuring a large, multi-paned window with a view of Earth. EXTERIOR VIEW implied as the focus is the vehicle.",
+      "searchDesc": "Exterior of a space module with a huge Earth-view window framed by red beams.",
+      "slug": "orbital-observation-module",
+      "structure": {
+        "spatialLayout": "The module is a cylindrical or slightly elongated capsule, with the primary feature being the expansive, curved window dominating one facade. The internal layout is directly hinted at by the external structural elements and the visible window size.",
+        "navigableElements": [
+          {
+            "type": "hatch",
+            "position": "mid-section, forward-facing hull",
+            "description": "A circular, reinforced hatch with visible locking mechanisms."
+          }
+        ],
+        "dominantElements": [
+          "Massive, multi-paned observation window",
+          "Red structural support beams framing the window",
+          "Modular, metallic hull segments",
+          "External sensor arrays and antenna protrusions"
+        ],
+        "uniqueIdentifiers": [
+          "The distinct curvature of the large observation window",
+          "Visible internal red structural elements through the window",
+          "Glow of illuminated instrumentation visible from the exterior",
+          "Contrasting light-colored hull panels against darker metallic sections"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "hatch",
+          "position": "mid-section, forward-facing hull",
+          "description": "A circular, reinforced hatch with visible locking mechanisms."
+        }
+      ],
+      "dominantElements": [
+        "Massive, multi-paned observation window",
+        "Red structural support beams framing the window",
+        "Modular, metallic hull segments",
+        "External sensor arrays and antenna protrusions"
+      ],
+      "uniqueIdentifiers": [
+        "The distinct curvature of the large observation window",
+        "Visible internal red structural elements through the window",
+        "Glow of illuminated instrumentation visible from the exterior",
+        "Contrasting light-colored hull panels against darker metallic sections"
+      ],
+      "primaryMedia": "media-1765445853465-25mh46pyu"
+    },
+    "niche-1765445835262-240rt9ffi": {
+      "id": "niche-1765445835262-240rt9ffi",
+      "type": "niche",
+      "name": "Observation Cockpit",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a functional space centered around a panoramic observation window framing Earth. Light-colored control panels and instrumentation are densely packed, interspersed with technical interfaces and a simple bed. Small potted plants add a touch of life to the otherwise technical environment.",
+        "colorsAndLighting": "Illuminated displays cast a warm glow of red and orange across the light-colored panels. The ambient light is a mix of this internal illumination and the cool, distant light from Earth visible through the window.",
+        "atmosphere": "The air is climate-controlled and still, with the faint hum of life support systems. The primary visual element is the breathtaking, static view of Earth through the massive window, creating a profound sense of isolation and wonder.",
+        "materials": "The walls and panels are smooth, light-colored composites, contrasting with the darker technical interfaces. The bed is covered with a red blanket, and small ceramic pots hold the plants.",
+        "mood": "A blend of focused operational readiness and serene contemplation, underscored by a sense of advanced technology and human presence in the void.",
+        "sounds": "Faint mechanical hums, life support purr, distant comms static.",
+        "spatialLayout": "A relatively compact, multi-functional space. The control area is forward-facing, with living amenities like the bed situated to the side, all oriented towards the dominant observation window.",
+        "primary_surfaces": "Smooth, light-colored composite panels, reinforced transparent window composite",
+        "secondary_surfaces": "Dark brushed metal accents on interfaces, red structural beams (visible through window)",
+        "accent_features": "Red and orange illuminated instrumentation, small potted plants, red blanket on bed",
+        "dominant": "Light grey metallic (approx. 50% coverage, internal panels)",
+        "secondary": "Dark brushed metal (approx. 25% coverage, interfaces), Red structural beams (visible through window)",
+        "accent": "Red and orange glows from instrumentation (subtle, internal)",
+        "ambient": "Sterile, artificial internal illumination with contrast from Earth's view.",
+        "genre": null,
+        "architectural_tone": "Functional space-age modularity with prominent scientific observation features",
+        "cultural_tone": "Human engineered, scientific exploration, Earth observation",
+        "materials_base": "Polished and brushed metallic alloys, reinforced transparent composites",
+        "mood_baseline": "Scientific curiosity, advanced technology, serene observation",
+        "palette_bias": "Greys, whites, reds, subtle orange/red glows",
+        "soundscape_base": "Vacuum ambient, faint mechanical hums",
+        "flora_base": "small potted plants",
+        "fauna_base": "None"
+      },
+      "description": "The cockpit/living area of the Orbital Observation Module, characterized by its expansive Earth view, functional control interfaces, and integrated living comforts, all contained within a cylindrical structure framed by prominent red beams.",
+      "primaryMedia": "media-1765445835261-7ocrt33o8",
+      "structure": {
+        "form": "cylindrical",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "civic",
+        "spatialLayout": "The cockpit is a functional space centered around a large window with control panels and living amenities arranged around it. The main view is directed outwards, with living elements integrated into the supporting structure.",
+        "requiredElements": [
+          "light-colored control panels",
+          "instrumentation with red and orange illuminated displays",
+          "switches",
+          "technical interfaces",
+          "a bed with a red blanket",
+          "small potted plants",
+          "a panoramic view of Earth through a large window",
+          "red structural beams framing the window",
+          "red and orange illuminated displays",
+          "red blanket"
+        ],
+        "suggestedFixtures": [
+          "command chair",
+          "storage lockers",
+          "environmental control unit",
+          "food synthesizer",
+          "sleep restraint system",
+          "personal communication terminal"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear",
+            "description": "Passage leading deeper into the module."
+          },
+          {
+            "type": "door",
+            "position": "side",
+            "description": "A small access hatch for external maintenance or emergency egress."
+          }
+        ],
+        "dominantElements": [
+          "colossal observation window",
+          "control panels and instrumentation",
+          "red structural beams",
+          "bed",
+          "integrated technical interfaces"
+        ],
+        "uniqueIdentifiers": [
+          "panoramic Earth view",
+          "red structural beam framing",
+          "cockpit and living amenities combined",
+          "illuminated displays"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear",
+          "description": "Passage leading deeper into the module."
+        },
+        {
+          "type": "door",
+          "position": "side",
+          "description": "A small access hatch for external maintenance or emergency egress."
+        }
+      ],
+      "dominantElements": [
+        "colossal observation window",
+        "control panels and instrumentation",
+        "red structural beams",
+        "bed",
+        "integrated technical interfaces"
+      ],
+      "uniqueIdentifiers": [
+        "panoramic Earth view",
+        "red structural beam framing",
+        "cockpit and living amenities combined",
+        "illuminated displays"
+      ],
+      "searchDesc": "Space vehicle cockpit/living area with Earth view, control panels, and red/orange lights.",
+      "slug": "cockpit-living-area",
+      "parentId": "ec879597-890a-46a3-8176-c4e3dd8d5505"
+    },
+    "niche-1765445974611-v6obffsod": {
+      "id": "niche-1765445974611-v6obffsod",
+      "type": "niche",
+      "name": "Orbital Dining Niche",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a colossal, cavernous interior space, characterized by immense ceiling height and a vast, open floor plan. Visible structural support beams crisscross overhead, forming an industrial cathedral-like ceiling. The overall form is dictated by its function: to accommodate large vehicles.",
+        "colorsAndLighting": "The lighting is stark and functional, provided by industrial-grade overhead fixtures casting a bright, diffused illumination. The primary colors are variations of the building's inherent metallic and grey tones, with functional equipment adding splashes of utilitarian colors.",
+        "atmosphere": "The air within the hangar is dry and sterile, with a constant, low-level hum of active machinery and ventilation. The temperature is regulated and consistently moderate. There is a sense of immense, contained space, often filled with the ambient echoes of its own scale.",
+        "materials": "The walls and primary surfaces are constructed from the same durable, metallic alloys and composite materials as the exterior hull, maintaining the building's structural integrity. Floor plating is robust, likely reinforced metal, designed to withstand heavy loads. Industrial-grade machinery and fixtures are made of various metals and hardened plastics.",
+        "mood": "The mood is one of immense capability, logistical importance, and industrial efficiency. It evokes a sense of preparedness and the scale of operations facilitated within.",
+        "sounds": "Machinery hum, distant echoes, clanking, ventilation, occasional metallic thuds",
+        "spatialLayout": "An enormous, rectangular volume with a high ceiling. The open floor space dominates, with operational areas and access points along the periphery. Depth is emphasized by the sheer scale and the vanishing points created by parallel structural elements.",
+        "primary_surfaces": "Smooth metallic hull panels, robust metal floor plating, large reinforced composite structural beams",
+        "secondary_surfaces": "Brushed metal accents on equipment, exposed conduits and piping, industrial lighting housings",
+        "accent_features": "The stark red structural beams visible where they penetrate the interior, specialized vehicle maintenance gantries, brightly colored warning stripes on floor edges",
+        "dominant": "Light grey metallic (approx. 50% coverage)",
+        "secondary": "Dark brushed metal and industrial grey tones (approx. 30% coverage), Red structural beams (approx. 10% coverage)",
+        "accent": "Functional hazard stripes (yellow/black), indicator lights (various colors on equipment)",
+        "ambient": "Bright, utilitarian artificial illumination, casting minimal shadows in the open spaces",
+        "genre": null,
+        "architectural_tone": "Functional space-age modularity with prominent scientific observation features",
+        "cultural_tone": "Human engineered, scientific exploration, Earth observation",
+        "materials_base": "Polished and brushed metallic alloys, reinforced transparent composites",
+        "mood_baseline": "Scientific curiosity, advanced technology, serene observation",
+        "palette_bias": "Greys, whites, reds, subtle orange/red glows",
+        "soundscape_base": "Vacuum ambient, faint mechanical hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765445974611-b9o71yjhs",
+      "description": "An exclusive dining area within the Orbital Observation Module, offering a unique culinary experience with breathtaking views of Earth. The space is designed for intimacy and comfort, seamlessly blending functionality with the awe-inspiring environment.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A curved, immersive space where a central dining table is integrated with the metallic hull, surrounded by built-in seating and dominated by a large observation window.",
+        "requiredElements": [
+          "central dining table integrated with the module's hull",
+          "ergonomically designed seating built into the surrounding metallic structure",
+          "expansive observation window"
+        ],
+        "suggestedFixtures": [
+          "minimalist dining chairs",
+          "ambient lighting fixtures",
+          "integrated food/drink dispenser",
+          "holographic menu display",
+          "sound-dampening panels",
+          "personal environmental controls"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear wall",
+            "description": "Connects to the main Orbital Observation Module."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "Leads to galley elements."
+          }
+        ],
+        "dominantElements": [
+          "integrated dining table",
+          "curved metallic hull",
+          "expansive observation window",
+          "built-in seating"
+        ],
+        "uniqueIdentifiers": [
+          "seamless integration of dining table with hull",
+          "panoramic Earth view",
+          "ergonomic, built-in seating"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "central, minimalist dining table integrated with the module's hull",
+          "ergonomically designed seating built into the surrounding metallic structure",
+          "expansive observation window"
+        ],
+        "suggested": [
+          "place settings",
+          "low-profile, ambient lighting",
+          "sound-absorbing materials for the curved walls",
+          "small, integrated side tables for drinks",
+          "holographic entertainment display"
+        ],
+        "placementNotes": [
+          "Seating should follow the curve of the interior, facing the observation window.",
+          "The dining table should be positioned centrally, allowing for clear sightlines.",
+          "Lighting should be subtle and directed to enhance the dining experience and the view."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear wall",
+          "description": "Connects to the main Orbital Observation Module."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "Leads to galley elements."
+        }
+      ],
+      "dominantElements": [
+        "integrated dining table",
+        "curved metallic hull",
+        "expansive observation window",
+        "built-in seating"
+      ],
+      "uniqueIdentifiers": [
+        "seamless integration of dining table with hull",
+        "panoramic Earth view",
+        "ergonomic, built-in seating"
+      ],
+      "searchDesc": "Vast space station hangar, industrial design, massive scale, functional and utilitarian.",
+      "slug": "big-hangar"
     }
   },
   "views": {},
@@ -325,9 +707,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765445806432-aikmvx07a",
+      "type": "host",
+      "children": [
+        {
+          "id": "732b269c-ab3d-4714-8be1-758d0bd02c70",
+          "type": "region",
+          "children": [
+            {
+              "id": "ec879597-890a-46a3-8176-c4e3dd8d5505",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765445835262-240rt9ffi",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765445974611-v6obffsod",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1765445110185-u3ycnzkdu"
+    "loc-1765445110185-u3ycnzkdu",
+    "loc-1765445806432-aikmvx07a"
   ]
 }

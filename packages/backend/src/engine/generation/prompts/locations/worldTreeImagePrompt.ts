@@ -79,30 +79,79 @@ MAY include: distant landmarks, atmospheric elements (clouds, haze).
 `;
 
 /**
- * Host/Region overview composition instructions
+ * HOST composition instructions - VAST AERIAL/SATELLITE VIEW
+ * Shows entire city/world from great height
  */
-const OVERVIEW_COMPOSITION_INSTRUCTIONS = `
-OVERVIEW/AERIAL COMPOSITION (HOST/REGION):
+const HOST_COMPOSITION_INSTRUCTIONS = `
+AERIAL/PANORAMIC COMPOSITION (HOST - WORLD LEVEL):
 
-1. CAMERA POSITION
-- Elevated oblique angle (45° tilt)
-- Wide view capturing the environment's character
-- Layered depth from foreground through distant background
+1. CAMERA POSITION (CRITICAL - MUST BE AERIAL)
+- AERIAL VIEW from GREAT HEIGHT (satellite, airplane, or mountaintop perspective)
+- Camera positioned at SIGNIFICANT DISTANCE to capture the ENTIRE landscape/cityscape
+- Oblique angle (30-60°) looking DOWN at the vast world below
+- DO NOT use ground-level or street-level perspective
+- Think: "viewing a city from an airplane window" or "satellite imagery"
 
-2. ENVIRONMENTAL CHARACTER
-- Show the dominant features that define this place
-- Include: landmarks, typical architecture, atmospheric conditions
-- Capture the scale and scope of the environment
+2. SCALE & SCOPE (EPIC)
+- Show the ENTIRE landscape/cityscape as a VAST PANORAMA
+- Multiple districts, regions, or zones visible in one view
+- Buildings and structures appear SMALL as part of the larger whole
+- Distant horizons, sprawling terrain, water bodies, mountain ranges
+- This should feel like looking at an entire WORLD, not just a neighborhood
 
 3. COMPOSITION LAYERS
-**Foreground:** Immediate terrain, structures, or features with detail.
-**Midground:** Major landmarks, characteristic buildings, key features.
-**Background:** Horizon, sky, distant elements, atmospheric depth.
+**Far Background:** Distant horizon line, sky dome, atmospheric haze
+**Mid-Distance:** Major landmarks, terrain features, district boundaries, waterways
+**Closer Elements:** Terrain texture, road networks, building clusters (but still distant)
 
-4. ATMOSPHERE & MOOD
-- Match the DNA's atmosphere and mood fields
-- Include environmental effects (haze, clouds, weather)
-- Lighting should establish time of day and overall tone
+4. ATMOSPHERE & DEPTH (CRITICAL)
+- Strong ATMOSPHERIC PERSPECTIVE (distant areas hazier/lighter in color)
+- Weather and sky are MAJOR composition elements (clouds, sun position)
+- Time of day establishes world mood (golden hour, midday, dusk)
+- May include: fog banks, cloud shadows on terrain, weather systems
+
+5. ESTABLISHING SHOT REQUIREMENTS
+- This is the "HERE IS THE WORLD" establishing shot
+- Viewer should feel they are seeing an entire civilization/landscape
+- Include enough detail to suggest stories and places to explore
+- Avoid: close-ups, street-level details, individual people/characters
+`;
+
+/**
+ * REGION composition instructions - DISTRICT/NEIGHBORHOOD OVERVIEW
+ * Shows a specific district from elevated street-level view
+ */
+const REGION_COMPOSITION_INSTRUCTIONS = `
+DISTRICT OVERVIEW COMPOSITION (REGION - NEIGHBORHOOD LEVEL):
+
+1. CAMERA POSITION (ELEVATED STREET-LEVEL)
+- ELEVATED VIEW from rooftop, drone, or low-flying aircraft height
+- Camera positioned CLOSER than host - showing a specific DISTRICT
+- Oblique angle (35-50°) capturing neighborhood character
+- Think: "viewing a neighborhood from a rooftop" or "drone footage of a district"
+
+2. SCALE & SCOPE (DISTRICT)
+- Show a SPECIFIC DISTRICT or NEIGHBORHOOD, not the entire city
+- Individual buildings are RECOGNIZABLE and have character
+- Streets, plazas, and local landmarks are visible
+- This should feel like looking at "one part of a larger world"
+
+3. COMPOSITION LAYERS
+**Foreground:** Nearby rooftops, architectural details, local features
+**Midground:** Main district character - streets, buildings, local landmarks
+**Background:** Neighboring districts, distant skyline, horizon
+
+4. ATMOSPHERE & CHARACTER
+- Show the UNIQUE CHARACTER of this specific district
+- Include: typical architecture, street patterns, district landmarks
+- Lighting emphasizes district mood and time of day
+- May include: local activity hints, district-specific elements
+
+5. DISTRICT IDENTITY
+- This shows "HERE IS THIS PART OF THE WORLD"
+- Viewer should understand this district's character and purpose
+- Include enough detail to suggest what happens in this area
+- Maintain visual connection to larger world while focusing on district
 `;
 
 /**
@@ -112,10 +161,17 @@ OVERVIEW/AERIAL COMPOSITION (HOST/REGION):
 export function worldTreeImagePromptContext(params: WorldTreeImagePromptParams): string {
   const { nodeType, nodeName, dna, originalPrompt, parentChain } = params;
   
-  // Get appropriate composition instructions
-  const compositionInstructions = nodeType === 'location' 
-    ? EXTERIOR_COMPOSITION_INSTRUCTIONS 
-    : OVERVIEW_COMPOSITION_INSTRUCTIONS;
+  // Get appropriate composition instructions based on node type
+  // Each level has distinct visual identity:
+  // - HOST: Vast aerial view of entire world/city
+  // - REGION: District/neighborhood overview
+  // - LOCATION: Building exterior
+  // - NICHE: Interior space
+  const compositionInstructions = 
+    nodeType === 'host' ? HOST_COMPOSITION_INSTRUCTIONS :
+    nodeType === 'region' ? REGION_COMPOSITION_INSTRUCTIONS :
+    nodeType === 'location' ? EXTERIOR_COMPOSITION_INSTRUCTIONS :
+    EXTERIOR_COMPOSITION_INSTRUCTIONS; // Fallback for niche (shouldn't reach here)
   
   // Build parent context
   const parentContext = parentChain.length > 0

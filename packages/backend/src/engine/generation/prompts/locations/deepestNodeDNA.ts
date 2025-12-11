@@ -75,9 +75,9 @@ RULES:
 function getCompactTypeHint(nodeType: 'host' | 'region' | 'location' | 'niche'): string {
   switch (nodeType) {
     case 'host':
-      return 'TYPE: HOST (world/city level, aerial view, MUST set genre, all cascading fields required)';
+      return 'TYPE: HOST (VAST AERIAL VIEW from great height - satellite/airplane perspective of entire world/city. Shows sprawling landscape with multiple districts visible. Buildings appear small. Epic panoramic scale. MUST set genre, all cascading fields required)';
     case 'region':
-      return 'TYPE: REGION (district/area level, street-level view, no genre)';
+      return 'TYPE: REGION (DISTRICT OVERVIEW from rooftop/drone height - shows specific neighborhood character. Individual buildings recognizable. Street-level elevated view, no genre)';
     case 'location':
       return 'TYPE: LOCATION (building exterior, facade/entrance view, no genre)';
     case 'niche':
