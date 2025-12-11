@@ -208,17 +208,20 @@ export class WorldViewRenderer {
       const deltaTime = (currentTime - this.lastFrameTime) / 1000;
       this.lastFrameTime = currentTime;
       
-      const state = {
-        targetX: this.targetX, targetY: this.targetY,
-        focus: this.focus, easing: this.easing,
-        displayMode: this.displayMode, mouseXOffset: this.mouseXOffset
-      };
-      
-      const smoothed = processAnimationFrame(
-        state, this.cameraConfig, this.camera, this.material, this.stereoState
-      );
-      this.targetX = smoothed.targetX;
-      this.targetY = smoothed.targetY;
+      // Only animate camera if we have a depth map (parallax requires depth)
+      if (this.hasDepthMap()) {
+        const state = {
+          targetX: this.targetX, targetY: this.targetY,
+          focus: this.focus, easing: this.easing,
+          displayMode: this.displayMode, mouseXOffset: this.mouseXOffset
+        };
+        
+        const smoothed = processAnimationFrame(
+          state, this.cameraConfig, this.camera, this.material, this.stereoState
+        );
+        this.targetX = smoothed.targetX;
+        this.targetY = smoothed.targetY;
+      }
 
       // Update particles
       if (this.particleSystem) {
