@@ -1,356 +1,1956 @@
 {
   "nodes": {
-    "loc-1765379826464-k1h2e8te7": {
-      "id": "loc-1765379826464-k1h2e8te7",
+    "loc-1765394333541-v5h1ucwp3": {
+      "id": "loc-1765394333541-v5h1ucwp3",
       "type": "host",
       "name": "Aethelgard",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Landscapes of immense natural grandeur, featuring vast canyons, crystalline formations, and clear skies dotted with soft clouds. Civilizations are deeply integrated with the natural environment.",
-        "colorsAndLighting": "Dominated by natural light, with palettes favoring luminous earth tones, precious metals, and vibrant natural contrasts. Skies are clear and bright.",
-        "atmosphere": "Crisp, clear air pervades the world, often carrying a profound sense of peace and ancient calm. Gentle breezes are common.",
-        "materials": "Natural materials such as polished stone, rare minerals, and intricately worked metals are common.",
-        "mood": "Serenity, grandeur, ancient wisdom, harmonious coexistence.",
-        "sounds": "Natural ambient sounds: wind, water, distant echoes",
-        "primary_surfaces": "Smooth, natural stone; sculpted earth",
-        "secondary_surfaces": "Polished metals, crystalline inlays",
-        "accent_features": "Celestial observation points, flowing water features",
-        "dominant": "Luminous Cream (primarily rock formations and structures)",
-        "secondary": "Shimmering Gold (architectural details)",
-        "accent": "Vibrant Turquoise (rivers, sky elements)",
-        "ambient": "Bright, clear daylight",
-        "genre": "Ethereal Fantasy",
-        "architectural_tone": "Harmonious integration with nature, organic forms",
-        "cultural_tone": "Ancient civilizations focused on wisdom and celestial observation",
-        "materials_base": "Natural stone and precious metals",
-        "mood_baseline": "Peaceful and majestic",
-        "palette_bias": "Luminous earth tones, warm metallics, vibrant natural contrasts",
-        "soundscape_base": "Quiet, natural ambiance",
-        "flora_base": "None",
+        "looks": "Vast, interconnected cities float amidst ethereal skies, showcasing awe-inspiring monumental architecture. Structures are grand, often pyramidal or spire-like, adorned with intricate details and bathed in brilliant celestial light.",
+        "colorsAndLighting": "Bright, clear daylight illuminates the realm, casting sharp highlights and deep shadows. The palette is dominated by rich, saturated colors, accented with radiant metallic sheens. Ambient light is clean and pure.",
+        "atmosphere": "The air is impossibly clear and crisp, with a sense of serene stillness broken only by gentle, unseen currents. Weather is consistently fair, with endless blue skies and pristine, billowing clouds below.",
+        "materials": "Primary materials include polished, vibrant stones, gleaming precious metals, and abundant, luxuriant flora. Surfaces are meticulously crafted and maintained, radiating an aura of timeless perfection.",
+        "mood": "A profound sense of awe, grandeur, and ethereal beauty pervades the realm. It evokes feelings of divine presence, ancient wisdom, and ultimate achievement.",
+        "sounds": "Distant celestial chimes, gentle breezes, faint echoes of grandeur",
+        "primary_surfaces": "Polished crimson stone, gleaming gold alloy, vibrant emerald foliage",
+        "secondary_surfaces": "Intricately carved friezes, smooth obsidian-like ceramics, sparkling turquoise water features",
+        "accent_features": "Radiant golden spires, majestic golden archways, ornate statues",
+        "dominant": "Deep crimson, vast coverage on major structures",
+        "secondary": "Brilliant gold, extensive detailing and prominent architectural elements",
+        "accent": "Vibrant emerald green flora, sparkling turquoise water features",
+        "ambient": "Bright, clear daylight, high contrast",
+        "genre": "Celestial Fantasy",
+        "architectural_tone": "Majestic, ornate ancient-futuristic with celestial influences",
+        "cultural_tone": "Home to a highly evolved, perhaps divine or ascended civilization; a hub of knowledge, beauty, and cosmic order.",
+        "materials_base": "Polished exotic stones, precious metals, cultivated extraordinary flora",
+        "mood_baseline": "Serene grandeur and divine tranquility",
+        "palette_bias": "Rich jewel tones with opulent metallic accents",
+        "soundscape_base": "Ethereal, resonant, and serene",
+        "flora_base": "Lush, vibrant, and exotic",
         "fauna_base": "None"
       },
-      "description": "A world of breathtaking natural beauty and advanced, harmonious civilizations. Its landscapes are sculpted by time and grace, holding ancient wisdom within their depths.",
-      "searchDesc": "A world of majestic natural beauty and advanced, harmonious civilizations.",
+      "description": "A celestial realm of floating cities and ancient-futuristic marvels, suspended above an endless sea of clouds. Aethelgard is a testament to a civilization that mastered both cosmic engineering and aesthetic artistry, creating breathtaking havens of light and beauty.",
+      "searchDesc": "Celestial realm of floating cities, crimson pyramids, golden accents, and lush sky-gardens.",
       "slug": "aethelgard",
       "structure": {
-        "spatialLayout": "Vast, open spaces with dramatic vertical and horizontal elements, emphasizing scale and natural forms.",
+        "spatialLayout": "The realm is characterized by immense verticality and open, boundless sky. Cities are spread across multiple altitudes, connected by unseen forces and visual cues, creating a sense of vast, layered space.",
+        "navigableElements": [
+          "Floating cities",
+          "Cloud seas",
+          "Celestial bodies"
+        ],
         "dominantElements": [
-          "World-spanning canyons",
-          "Azure rivers",
-          "Ancient cities"
+          "Sky-borne architectures",
+          "Exquisite detailing",
+          "Vast cloudscapes"
         ],
         "uniqueIdentifiers": [
-          "Naturally occurring crystalline formations",
-          "Sky-rivers"
+          "Crimson and gold pyramid-cities",
+          "Golden arches of ascension",
+          "Cascading tropical gardens in the sky"
         ]
       },
+      "navigableElements": [
+        "Floating cities",
+        "Cloud seas",
+        "Celestial bodies"
+      ],
       "dominantElements": [
-        "World-spanning canyons",
-        "Azure rivers",
-        "Ancient cities"
+        "Sky-borne architectures",
+        "Exquisite detailing",
+        "Vast cloudscapes"
       ],
       "uniqueIdentifiers": [
-        "Naturally occurring crystalline formations",
-        "Sky-rivers"
+        "Crimson and gold pyramid-cities",
+        "Golden arches of ascension",
+        "Cascading tropical gardens in the sky"
       ],
-      "primaryMedia": "media-1765379886012-370oj421i"
+      "primaryMedia": "media-1765394455000-hsuw5ijoy"
     },
-    "d0dba85a-c1bc-4580-b93b-8e3d1e3f4c4b": {
-      "id": "d0dba85a-c1bc-4580-b93b-8e3d1e3f4c4b",
+    "f2e9c732-cc3c-4485-9b8a-38e4bc7b37f5": {
+      "id": "f2e9c732-cc3c-4485-9b8a-38e4bc7b37f5",
       "type": "region",
-      "name": "The Azure Chasm",
+      "name": "Region",
       "spaceType": "exterior",
-      "dna": {
-        "looks": "Towering, intricately sculpted structures integrated into smooth, pale canyon walls. A vibrant turquoise river winds through the deep chasm. Soft, fluffy clouds dot the bright sky.",
-        "colorsAndLighting": "Bathed in bright daylight, illuminated by a luminous, soft sky. Dominant colors are off-white and cream, with shimmering gold and ochre accents. Vibrant turquoise provides a striking contrast.",
-        "atmosphere": "The air is crisp and clear, with a profound sense of serenity and ancient calm. A gentle breeze might whisper through the chasm. The atmosphere is majestic and untouched.",
-        "materials": "Structures are made of a polished, stone-like substance, smooth and pale. Accented with lustrous, finely worked gold.",
-        "mood": "Serene grandeur, timeless wisdom, awe, advanced ancient civilization in harmony with nature.",
-        "sounds": "Whispering breeze, distant echoes, flowing water",
-        "primary_surfaces": "Smooth, luminous cream rock and sculpted stone",
-        "secondary_surfaces": "Shimmering gold embellishments and accents",
-        "accent_features": "Spherical blue windows, miniature buildings on platforms",
-        "dominant": "Luminous Cream (80%)",
-        "secondary": "Shimmering Gold (15%)",
-        "accent": "Vibrant Turquoise (5%)",
-        "ambient": "Bright daylight",
-        "genre": null,
-        "architectural_tone": "Organically sculpted, integrated with natural rock formations",
-        "cultural_tone": "Seat of celestial observances and ancient wisdom keepers",
-        "materials_base": "Polished stone and precious metals",
-        "mood_baseline": "Serene grandeur",
-        "palette_bias": "Light neutrals, warm metallics, vibrant cool contrast",
-        "soundscape_base": "Quiet natural ambiance",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A vast, luminous canyon city carved into smooth, pale rock faces. A vibrant turquoise river flows through its depths, reflecting a bright, clear sky.",
-      "searchDesc": "Ethereal canyon city with luminous cream structures, golden accents, and a turquoise river.",
-      "slug": "the-azure-chasm",
-      "structure": {
-        "spatialLayout": "Deep, expansive chasm with verticality emphasized by towering structures and horizontal platforms.",
-        "dominantElements": [
-          "The Celestial Citadel",
-          "Canyon walls",
-          "River"
-        ],
-        "uniqueIdentifiers": [
-          "Turquoise river",
-          "Luminous cream canyon"
-        ]
-      },
-      "dominantElements": [
-        "The Celestial Citadel",
-        "Canyon walls",
-        "River"
-      ],
-      "uniqueIdentifiers": [
-        "Turquoise river",
-        "Luminous cream canyon"
-      ],
-      "primaryMedia": "media-1765379874286-l9ey0jpnh"
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
     },
-    "3f2ab237-09d7-40ea-bba2-1a69fcf78816": {
-      "id": "3f2ab237-09d7-40ea-bba2-1a69fcf78816",
+    "7a7e00f5-a4ba-4e9f-9d06-ae98c0cea906": {
+      "id": "7a7e00f5-a4ba-4e9f-9d06-ae98c0cea906",
       "type": "location",
-      "name": "The Celestial Citadel",
+      "name": "The Crimson Zenith",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The Celestial Citadel is a breathtaking organic complex seamlessly integrated into luminous cream canyon walls. Its scale is colossal, with fluid, sculpted forms reaching towards the sky. Golden embellishments highlight its flowing architecture, drawing the eye to the apex where a massive spherical blue window dominates the facade.",
-        "colorsAndLighting": "Bathed in bright daylight, the environment is illuminated by a luminous, soft sky. The dominant colors are off-white and cream, with shimmering gold and ochre accents. The vibrant turquoise of the river adds a striking contrast.",
-        "atmosphere": "The air is crisp and clear, carrying a profound sense of serenity and ancient calm. A gentle breeze might whisper through the chasm, stirring the soft clouds visible in the sky. The atmosphere is one of majestic, untouched beauty.",
-        "materials": "The primary materials appear to be a form of polished, stone-like substance, smooth and pale, resembling luminous cream. These are heavily accented with lustrous, finely worked gold.",
-        "mood": "The overall mood is one of serene grandeur and timeless wisdom. It evokes awe and a sense of advanced, ancient civilization in perfect harmony with nature.",
-        "sounds": "Whispering wind, distant flowing water, faint chimes",
-        "primary_surfaces": "Luminous cream stone, smooth canyon walls",
-        "secondary_surfaces": "Polished gold detailing, sculpted rock",
-        "accent_features": "Spherical blue windows, intricate golden filigree, miniature spires",
-        "dominant": "Luminous Cream (80%)",
-        "secondary": "Shimmering Gold (15%)",
-        "accent": "Vibrant Turquoise (5%)",
-        "ambient": "Bright daylight, soft sky glow",
+        "looks": "A colossal, multi-tiered pyramid city dominates the sky, its rich crimson facets gleaming. Intricate golden filigree and statues adorn every level, emphasizing its grandeur. Lush tropical vegetation spills over lower terraces, intermingling with smaller, ornate structures and serene turquoise water features.",
+        "colorsAndLighting": "The primary palette is a deep, rich crimson contrasted with brilliant gold accents. Bright, clear daylight bathes the city, casting sharp highlights and defined shadows.",
+        "atmosphere": "The air is clear and crisp, with a palpable sense of ancient wonder blended with futuristic innovation. Gentle air currents suggest the vast expanse of the cloud sea. The weather is consistently bright and cloudless.",
+        "materials": "The pyramid appears constructed from polished crimson stone, possibly a form of hardened obsidian or ceramic. Golden elements are likely a gleaming, perhaps alloys or a precious metal, intricately worked and detailed. Foliage is vibrant and healthy.",
+        "mood": "Breathtaking grandeur and awe-inspiring wonder, evoking a sense of magnificent achievement and ethereal beauty.",
+        "sounds": "Distant hum of aircraft, gentle breeze, occasional water lapping, faint chimes.",
+        "primary_surfaces": "Polished crimson stone, gleaming gold ornamentation, vibrant green foliage.",
+        "secondary_surfaces": "Smooth turquoise water, dark metallic aircraft hulls, stone pathways.",
+        "accent_features": "Golden spire, radiant archway, intricate friezes, statues.",
+        "dominant": "Deep crimson with expansive coverage.",
+        "secondary": "Brilliant gold used for detailing and prominent structures.",
+        "accent": "Vibrant emerald green from flora, sparkling turquoise from water.",
+        "ambient": "Bright, clear daylight.",
         "genre": null,
-        "architectural_tone": "Organic, flowing, integrated with natural rock formations",
-        "cultural_tone": "Seat of celestial observances and ancient wisdom keepers",
-        "materials_base": "Polished stone and precious metals",
-        "mood_baseline": "Awe-inspiring, serene, majestic",
-        "palette_bias": "Light neutrals, warm metallics, vibrant cool contrast",
-        "soundscape_base": "Natural and ambient tones",
-        "flora_base": "None",
+        "architectural_tone": "Majestic, ornate ancient-futuristic pyramid with intricate golden embellishments.",
+        "cultural_tone": "Home to an advanced, perhaps celestial or highly evolved civilization; a center of power, beauty, and innovation.",
+        "materials_base": "Polished stone, precious metals, abundant flora.",
+        "mood_baseline": "Awe-inspiring, wondrous, grand.",
+        "palette_bias": "Crimson and gold, with strong secondary green and turquoise.",
+        "soundscape_base": "Serene, with hints of advanced technology.",
+        "flora_base": "Lush tropical greenery",
         "fauna_base": "None"
       },
-      "description": "A colossal, organically shaped building complex, mostly white with golden embellishments, featuring a very large, prominent spherical blue window near its apex. EXTERIOR VIEW.",
-      "searchDesc": "Ethereal canyon city with white and gold structures, dominated by a giant blue-windowed Citadel.",
-      "slug": "the-celestial-citadel",
+      "description": "A colossal, ornate pyramid-city floating majestically amidst a vast expanse of fluffy white clouds. The multi-tiered pyramid, predominantly colored a rich crimson red, is lavishly adorned with intricate golden detailing, friezes, and statues. A grand, golden inclined pathway leads up its front face, culminating in a radiant golden archway, and its apex is crowned with a gleaming golden spire. Lush tropical greenery cascades down its lower terraces, surrounding smaller red and gold buildings, domes, and spire-topped structures that form a complex city-like base. Patches of turquoise water are visible among the lower buildings. Sleek, dark futuristic aircraft fly through the sky and among the clouds, circling the immense structure. The atmosphere is one of breathtaking grandeur and ancient-futuristic wonder, bathed in bright, clear daylight. EXTERIOR VIEW.",
+      "searchDesc": "Colossal crimson pyramid-city floating among clouds, adorned with gold, lush greenery, and futuristic aircraft.",
+      "slug": "the-crimson-zenith",
       "structure": {
-        "spatialLayout": "The space is a vast, vertical chasm, with structures built upwards and outwards along its walls. The Citadel itself is a towering focal point, with an expansive void below and a network of platforms and bridges creating a complex, multi-layered environment.",
+        "spatialLayout": "The city is built vertically on a monumental pyramid structure, with extensive horizontal spread at its base. The scale is immense, with great depth and vast open spaces among the clouds.",
         "navigableElements": [
           {
-            "type": "door",
-            "position": "base of the main structure",
-            "description": "An immense, golden-arched gateway, shimmering with celestial energy."
-          },
-          {
-            "type": "passage",
-            "position": "leading up the canyon wall",
-            "description": "Intricately carved pathways winding upwards, lined with miniature spires."
+            "type": "path",
+            "position": "front face of pyramid",
+            "description": "A grand, golden inclined pathway leading to the main entrance."
           },
           {
             "type": "archway",
-            "position": "connecting platforms",
-            "description": "Graceful, golden arches spanning the void between structures."
+            "position": "top of inclined pathway",
+            "description": "A radiant golden archway serving as the primary portal."
+          },
+          {
+            "type": "stairs",
+            "position": "lower terraces",
+            "description": "Cascading stairways integrated with lush greenery."
           }
         ],
         "dominantElements": [
-          "The colossal, organically shaped Citadel building",
-          "The vibrant turquoise river below",
-          "The pale, sculpted canyon walls",
-          "The numerous sky-bridges and platforms"
+          "Colossal crimson pyramid",
+          "Intricate golden detailing",
+          "Lush cascading greenery",
+          "Sleek futuristic aircraft",
+          "Turquoise water features"
         ],
         "uniqueIdentifiers": [
-          "The prominent spherical blue 'celestial' window",
-          "Embedded spherical blue windows",
-          "Golden embellishments on white structures",
-          "Flowing, organic architectural contours"
+          "Floating pyramid-city",
+          "Crimson and gold color scheme",
+          "Golden apex spire",
+          "Tropical flora on terraces",
+          "Advanced VTOL vehicles"
         ]
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "base of the main structure",
-          "description": "An immense, golden-arched gateway, shimmering with celestial energy."
-        },
-        {
-          "type": "passage",
-          "position": "leading up the canyon wall",
-          "description": "Intricately carved pathways winding upwards, lined with miniature spires."
+          "type": "path",
+          "position": "front face of pyramid",
+          "description": "A grand, golden inclined pathway leading to the main entrance."
         },
         {
           "type": "archway",
-          "position": "connecting platforms",
-          "description": "Graceful, golden arches spanning the void between structures."
+          "position": "top of inclined pathway",
+          "description": "A radiant golden archway serving as the primary portal."
+        },
+        {
+          "type": "stairs",
+          "position": "lower terraces",
+          "description": "Cascading stairways integrated with lush greenery."
         }
       ],
       "dominantElements": [
-        "The colossal, organically shaped Citadel building",
-        "The vibrant turquoise river below",
-        "The pale, sculpted canyon walls",
-        "The numerous sky-bridges and platforms"
+        "Colossal crimson pyramid",
+        "Intricate golden detailing",
+        "Lush cascading greenery",
+        "Sleek futuristic aircraft",
+        "Turquoise water features"
       ],
       "uniqueIdentifiers": [
-        "The prominent spherical blue 'celestial' window",
-        "Embedded spherical blue windows",
-        "Golden embellishments on white structures",
-        "Flowing, organic architectural contours"
+        "Floating pyramid-city",
+        "Crimson and gold color scheme",
+        "Golden apex spire",
+        "Tropical flora on terraces",
+        "Advanced VTOL vehicles"
       ],
-      "primaryMedia": "media-1765379857278-vgqfgmk2t"
+      "primaryMedia": "media-1765394348341-i94e4v4wq"
     },
-    "niche-1765379916747-1ob71mj1t": {
-      "id": "niche-1765379916747-1ob71mj1t",
+    "niche-1765394396166-tw92vkecj": {
+      "id": "niche-1765394396166-tw92vkecj",
       "type": "niche",
-      "name": "Celestial Citadel Interior",
+      "name": "Crimson Zenith Pyramid Chamber",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior is an expansive, cavernous space defined by fluid, sculpted forms that blend seamlessly with the canyon walls. Colossal scale and flowing architecture create a sense of immense, natural grandeur. Golden embellishments highlight the organic curves and lead the eye towards the apex.",
-        "colorsAndLighting": "Bathed in bright daylight filtering from the soft sky, the space is predominantly luminous cream, accented by shimmering gold. A striking spherical blue window dominates one wall, casting a unique light.",
-        "atmosphere": "The air is crisp, clear, and imbued with an ancient serenity. A gentle, almost imperceptible breeze might stir the vastness, carrying echoes of timeless calm. The atmosphere evokes awe and profound peace.",
-        "materials": "The primary materials are polished, smooth, luminous cream stone, exhibiting a subtle, natural sheen. These are lavishly accented with finely worked, lustrous gold detailing in intricate patterns.",
-        "mood": "The mood is one of serene grandeur, ancient wisdom, and breathtaking majesty. It inspires awe and a deep sense of timelessness.",
-        "sounds": "Whispering breezes, distant echoes, soft ambient hum",
-        "spatialLayout": "A vast, open central chamber with high, sculpted ceilings and flowing, organic walls that merge with the natural rock. Multiple passages branch off, suggesting greater depth and complexity.",
-        "primary_surfaces": "Luminous cream stone, smooth sculpted walls",
-        "secondary_surfaces": "Polished gold detailing, flowing rock formations",
-        "accent_features": "Massive spherical blue window, intricate golden filigree, high sculpted archways",
-        "dominant": "Luminous Cream (80%)",
-        "secondary": "Shimmering Gold (15%)",
-        "accent": "Vibrant Turquoise (5%)",
-        "ambient": "Bright daylight, soft sky glow",
+        "looks": "Vast, multi-tiered chambers with soaring ceilings, adorned with intricate golden filigree and statues. Polished crimson stone forms the primary construction, reflecting the ambient light. Lush tropical vegetation spills from ornate planters, adding vibrant contrast.",
+        "colorsAndLighting": "The interior is dominated by deep, rich crimson stone walls, accented by brilliant gold embellishments. Bright, clear light is cast from unseen sources, creating sharp highlights and defined shadows.",
+        "atmosphere": "The air is clear and crisp, carrying a sense of ancient grandeur and advanced innovation. A gentle, circulating breeze is subtly felt. The overall ambiance is serene and awe-inspiring.",
+        "materials": "The walls and floors are made of highly polished crimson stone, smooth and cool to the touch. Intricate golden alloys or precious metals form the detailed ornamentation and fixtures. Vibrant, healthy foliage provides organic textures.",
+        "mood": "Breathtaking grandeur and awe-inspiring wonder, evoking a sense of magnificent achievement and ethereal beauty.",
+        "sounds": "Soft hum of advanced systems, distant gentle chimes, rustling of leaves.",
+        "spatialLayout": "Expansive, cavernous halls with high ceilings and grand proportions. The layout suggests a hierarchical structure, with grand pathways and alcoves.",
+        "primary_surfaces": "Polished crimson stone walls and floors, gleaming gold architectural elements.",
+        "secondary_surfaces": "Vibrant green foliage, smooth obsidian-like accents, polished metallic surfaces.",
+        "accent_features": "Intricate golden friezes, life-sized golden statues, radiant archways, ornate planters.",
+        "dominant": "Deep crimson with expansive coverage on walls and floors.",
+        "secondary": "Brilliant gold used for intricate filigree, statues, and decorative accents.",
+        "accent": "Vibrant emerald green from flora, sparkling turquoise from water features (if any are visible internally).",
+        "ambient": "Bright, clear daylight, likely filtered or artificially replicated.",
         "genre": null,
-        "architectural_tone": "Organic, flowing, integrated with natural rock formations",
-        "cultural_tone": "Seat of celestial observances and ancient wisdom keepers",
-        "materials_base": "Polished stone and precious metals",
-        "mood_baseline": "Awe-inspiring, serene, majestic",
-        "palette_bias": "Light neutrals, warm metallics, vibrant cool contrast",
-        "soundscape_base": "Natural and ambient tones",
-        "flora_base": "None",
+        "architectural_tone": "Majestic, ornate ancient-futuristic pyramid with intricate golden embellishments.",
+        "cultural_tone": "Home to an advanced, perhaps celestial or highly evolved civilization; a center of power, beauty, and innovation.",
+        "materials_base": "Polished stone, precious metals, abundant flora.",
+        "mood_baseline": "Awe-inspiring, wondrous, grand.",
+        "palette_bias": "Crimson and gold, with strong secondary green and turquoise.",
+        "soundscape_base": "Serene, with hints of advanced technology.",
+        "flora_base": "Lush tropical greenery",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765379916745-wic4p1ffr",
-      "description": "The interior of The Celestial Citadel is a grand, organic chamber designed for celestial observances and housing ancient wisdom keepers. Its colossal scale and flowing architectural forms create an awe-inspiring atmosphere, with a domed ceiling and minimal, circular openings that echo the Citadel's exterior.",
+      "primaryMedia": "media-1765394396165-jqzg6oro8",
+      "description": "An interior chamber within the colossal Crimson Zenith pyramid, echoing its exterior faceted geometry. The space is vast, designed for significant civic functions of an advanced civilization.",
       "structure": {
-        "form": "organic",
-        "roofType": "domed",
+        "form": "faceted",
+        "roofType": "faceted",
         "scale": "large",
         "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "circular",
-        "functionalType": "religious",
-        "spatialLayout": "The interior is a vast, cavernous organic space, characterized by flowing walls and a grand, domed ceiling. Its expansive nature suggests it is a central chamber for celestial observances.",
+        "openings": "none",
+        "openingShape": "rectangular",
+        "functionalType": "civic",
+        "spatialLayout": "A grand, multi-faceted chamber within the pyramid, designed for important gatherings or pronouncements. The space is central and expansive, with high, angled walls.",
         "requiredElements": [],
         "suggestedFixtures": [
-          "Ornate celestial altar",
-          "Tiered seating for observers",
-          "Grand astrolabe or orrery",
-          "Floating light orbs",
-          "Carved observation platforms",
-          "Wisdom scrolls or tablets"
+          "Ornate central dais or platform",
+          "Seating arrangements for dignitaries",
+          "Large-scale decorative friezes or murals",
+          "Ambient, glowing light sources integrated into walls",
+          "Subtle sound amplification systems",
+          "Symbolic statuary"
         ],
         "navigableElements": [
           {
+            "type": "archway",
+            "position": "back wall",
+            "description": "An imposing, intricately carved archway leading further into the pyramid structure."
+          },
+          {
             "type": "passage",
-            "position": "center back",
-            "description": "A grand, arched passage leading deeper into the Citadel."
-          },
-          {
-            "type": "archway",
             "position": "left wall",
-            "description": "An ornate archway with golden filigree."
+            "description": "A discreet passage, possibly for ceremonial processions or staff."
           },
           {
-            "type": "archway",
+            "type": "passage",
             "position": "right wall",
-            "description": "Another ornate archway mirroring the left."
+            "description": "Another discreet passage, mirroring the left, for balance and symmetry."
           }
         ],
         "dominantElements": [
-          "Flowing organic walls",
-          "Colossal domed ceiling",
-          "Large central void",
-          "Golden filigree accents"
+          "Angled, crimson-hued walls",
+          "Intricate golden filigree and inlays",
+          "High, faceted ceiling",
+          "Central raised platform or dais",
+          "Massive scale"
         ],
         "uniqueIdentifiers": [
-          "Integration with luminous cream canyon walls (implied)",
-          "Spherical blue window motifs (implied as openings)",
-          "Miniature spires (implied as decorative elements)"
+          "The sheer scale and inherent geometric complexity of the faceted interior.",
+          "The deep crimson coloration of the walls, possibly with integrated golden patterns.",
+          "A sense of immense grandeur and otherworldly power."
         ]
       },
       "furnishingDetails": {
         "userSpecified": [],
         "suggested": [
-          "Central celestial altar adorned with gold and celestial symbols",
-          "Tiered seating carved into the organic walls for observers",
-          "A large, intricate astrolabe or orrery positioned centrally",
-          "Floating, soft light orbs that illuminate the space",
-          "Carved observation platforms offering views towards the apex",
-          "Ancient scrolls or carved tablets displayed on pedestals"
+          "Ornate central dais or platform",
+          "Seating arrangements for dignitaries (e.g., carved chairs, elevated benches)",
+          "Large-scale decorative friezes or murals depicting celestial events or historical narratives",
+          "Ambient, glowing light sources integrated into walls or ceiling facets",
+          "Subtle sound amplification systems or resonant acoustics",
+          "Symbolic statuary or effigies"
         ],
         "placementNotes": [
-          "Altar should be the focal point at the front.",
-          "Seating should be arranged in semi-circular tiers facing the altar.",
-          "The astrolabe/orrery should be centrally located and prominent.",
-          "Light orbs should provide ambient, ethereal illumination.",
-          "Observation platforms can be integrated into the upper walls.",
-          "Wisdom scrolls should be placed strategically for reverence."
+          "The dais should be positioned centrally in the main open area.",
+          "Seating should be arranged facing the dais in concentric or tiered formations.",
+          "Friezes and murals should cover significant portions of the angled wall surfaces.",
+          "Light sources should be subtle and evenly distributed to highlight architectural features.",
+          "Statuary could be placed in alcoves or at key junctures of the passages."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "back wall",
+          "description": "An imposing, intricately carved archway leading further into the pyramid structure."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "A discreet passage, possibly for ceremonial processions or staff."
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "Another discreet passage, mirroring the left, for balance and symmetry."
+        }
+      ],
+      "dominantElements": [
+        "Angled, crimson-hued walls",
+        "Intricate golden filigree and inlays",
+        "High, faceted ceiling",
+        "Central raised platform or dais",
+        "Massive scale"
+      ],
+      "uniqueIdentifiers": [
+        "The sheer scale and inherent geometric complexity of the faceted interior.",
+        "The deep crimson coloration of the walls, possibly with integrated golden patterns.",
+        "A sense of immense grandeur and otherworldly power."
+      ],
+      "searchDesc": "Grand crimson and gold pyramid interior with lush tropical accents.",
+      "slug": "interior-of-the-crimson-zenith"
+    },
+    "niche-1765394568580-sjwqdebvy": {
+      "id": "niche-1765394568580-sjwqdebvy",
+      "type": "niche",
+      "name": "Crimson Zenith Observation Balcony",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An open-air platform extending from the pyramid's structure, featuring a low, intricately carved golden filigree railing. The floor is laid with polished crimson stone, and it opens directly onto a breathtaking panorama of the city below and the cloud sea beyond.",
+        "colorsAndLighting": "Bathed in bright, clear daylight, the polished crimson stone gleams, interspersed with sharp highlights on the golden railing. Deep, defined shadows are cast by the architectural elements and any passing aerial craft.",
+        "atmosphere": "The air is crisp and clear, carrying the faint scent of distant tropical flora. Gentle currents suggest the vastness of the space. The weather is consistently bright and cloudless, offering unobstructed views.",
+        "materials": "The balcony floor is constructed from smooth, polished crimson stone, consistent with the pyramid's facade. The railing is crafted from gleaming, intricately worked gold. The edges might show subtle signs of weathering or integration with the parent structure.",
+        "mood": "Evokes a sense of serene observation and unparalleled grandeur, a place to contemplate the magnificence of the civilization.",
+        "sounds": "Distant hum of technology, faint wind, city ambience.",
+        "spatialLayout": "A relatively flat, open expanse projecting outwards, providing ample unobstructed viewing space. Its depth is dictated by the surrounding cityscape.",
+        "primary_surfaces": "Polished crimson stone flooring, gleaming gold filigree railing.",
+        "secondary_surfaces": "Smooth, possibly metallic, structural supports integrated into the pyramid.",
+        "accent_features": "Intricate golden filigree along the railing, possibly small decorative statues or planters.",
+        "dominant": "Deep crimson with expansive coverage on the floor.",
+        "secondary": "Brilliant gold used for the railing and decorative elements.",
+        "accent": "Vibrant green from distant flora, sparkling turquoise from water features in the city.",
+        "ambient": "Bright, clear daylight.",
+        "genre": null,
+        "architectural_tone": "Majestic, ornate ancient-futuristic pyramid with intricate golden embellishments.",
+        "cultural_tone": "Home to an advanced, perhaps celestial or highly evolved civilization; a center of power, beauty, and innovation.",
+        "materials_base": "Polished stone, precious metals, abundant flora.",
+        "mood_baseline": "Awe-inspiring, wondrous, grand.",
+        "palette_bias": "Crimson and gold, with strong secondary green and turquoise.",
+        "soundscape_base": "Serene, with hints of advanced technology.",
+        "flora_base": "Lush tropical greenery",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765394568579-2t8omwqnc",
+      "description": "A magnificent balcony, carved from the same crimson stone as its parent structure, providing breathtaking views. Its arched form and expansive openings are designed to maximize the visual experience of the surrounding environment.",
+      "structure": {
+        "form": "arched",
+        "roofType": "arched",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "A broad, semi-circular balcony extending from a larger chamber, offering an unobstructed panoramic view of the surroundings.",
+        "requiredElements": [
+          "balcony with viewover the surrounding",
+          "viewover the surrounding"
+        ],
+        "suggestedFixtures": [
+          "elegant seating",
+          "telescopic viewer",
+          "decorative railing",
+          "ambient lighting fixtures",
+          "small ornamental plants"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center rear",
+            "description": "Leads into the main pyramid chamber."
+          },
+          {
+            "type": "passage",
+            "position": "left side",
+            "description": "Connects to an adjacent section of the pyramid."
+          }
+        ],
+        "dominantElements": [
+          "expansive arched opening",
+          "polished crimson stone floor",
+          "ornate, low-profile railing",
+          "sweeping vista"
+        ],
+        "uniqueIdentifiers": [
+          "direct, unobstructed view",
+          "integration with crimson stone architecture",
+          "designed for observation and contemplation"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center rear",
+          "description": "Leads into the main pyramid chamber."
+        },
+        {
+          "type": "passage",
+          "position": "left side",
+          "description": "Connects to an adjacent section of the pyramid."
+        }
+      ],
+      "dominantElements": [
+        "expansive arched opening",
+        "polished crimson stone floor",
+        "ornate, low-profile railing",
+        "sweeping vista"
+      ],
+      "uniqueIdentifiers": [
+        "direct, unobstructed view",
+        "integration with crimson stone architecture",
+        "designed for observation and contemplation"
+      ],
+      "searchDesc": "Ornate crimson stone balcony with golden accents, offering breathtaking city views.",
+      "slug": "balcony-with-viewover-the-surrounding"
+    },
+    "niche-1765394668679-hu0v3brcl": {
+      "id": "niche-1765394668679-hu0v3brcl",
+      "type": "niche",
+      "name": "Bedroom Of The",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The chamber is furnished with items befitting a ruler. Dominating the space is an immense, four-poster bed with richly draped fabrics and intricate gold carvings. Near the bed sits a large, polished stone sarcophagus, serving as a statement piece. Gilded furniture, such as ceremonial chairs and low tables, are strategically placed, alongside chests adorned with detailed hieroglyphs.",
+        "colorsAndLighting": "The primary colors are deep crimson and brilliant gold, reflecting the parent's palette, applied to textiles, furniture inlays, and decorative elements. Soft, diffused daylight filters in, casting warm, gentle shadows that highlight the textures of the materials.",
+        "atmosphere": "The air within the chamber is still and hushed, carrying a faint scent of ancient incense and polished stone. The atmosphere is one of solemn grandeur and undisturbed tranquility, suitable for rest and contemplation. The temperature is consistently cool and dry.",
+        "materials": "Furnishings are crafted from polished hardwoods, possibly ebony or mahogany, heavily embellished with gleaming gold inlay. The bed draperies are made of fine, rich crimson fabrics. The sarcophagus is carved from smooth, dark, possibly obsidian-like stone, while storage chests are constructed from seasoned wood with metallic fittings and gold ornamentation.",
+        "mood": "A profound sense of regal solitude and timeless majesty pervades the room, evoking respect for its occupant and the weight of history.",
+        "sounds": "Faint echoes, hushed fabric rustles, subtle metallic chimes.",
+        "spatialLayout": "The room is spacious, designed to accommodate large pieces of furniture without feeling cramped. The layout is functional yet emphasizes the grandeur of the royal sleeping quarters.",
+        "primary_surfaces": "Polished dark wood furniture, rich crimson draperies, smooth dark stone sarcophagus.",
+        "secondary_surfaces": "Gleaming gold ornamentation, metallic hardware on chests, finely woven textiles.",
+        "accent_features": "Intricate gold filigree on furniture, detailed hieroglyphic carvings, ornate bed canopy.",
+        "dominant": "Deep crimson for textiles and accents.",
+        "secondary": "Brilliant gold for inlay and decorative elements.",
+        "accent": "Dark polished wood, stone of sarcophagus, and subtle metallic sheens.",
+        "ambient": "Warm, diffused daylight.",
+        "genre": null,
+        "architectural_tone": "Majestic, ornate ancient-futuristic pyramid with intricate golden embellishments.",
+        "cultural_tone": "Home to an advanced, perhaps celestial or highly evolved civilization; a center of power, beauty, and innovation.",
+        "materials_base": "Polished stone, precious metals, abundant flora.",
+        "mood_baseline": "Awe-inspiring, wondrous, grand.",
+        "palette_bias": "Crimson and gold, with strong secondary green and turquoise.",
+        "soundscape_base": "Serene, with hints of advanced technology.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765394668679-pm2rx9r0n",
+      "description": "bedroom of the pharao -furnish",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "functionalType": "residential",
+        "spatialLayout": "A medium interior space.",
+        "suggestedFixtures": [
+          "furniture",
+          "storage",
+          "decorative elements",
+          "lighting"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "back",
+            "description": "Main entrance"
+          }
+        ],
+        "dominantElements": [
+          "Bedroom Of The"
+        ],
+        "uniqueIdentifiers": [
+          "Bedroom Of The"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "back",
+          "description": "Main entrance"
+        }
+      ],
+      "dominantElements": [
+        "Bedroom Of The"
+      ],
+      "uniqueIdentifiers": [
+        "Bedroom Of The"
+      ],
+      "searchDesc": "Opulent Pharaonic bedroom furnishings with gold inlay and hieroglyphic carvings.",
+      "slug": "bedroom-of-the-pharao-furnish"
+    },
+    "niche-1765394735262-del4585s4": {
+      "id": "niche-1765394735262-del4585s4",
+      "type": "niche",
+      "name": "Crimson Zenith Ritual Chamber",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This chamber is a grand, elevated space carved from the same colossal pyramid structure. Polished crimson stone forms the primary walls, adorned with intricate golden filigree that traces ancient patterns. A series of expansive, clear windows or open archways offer a commanding view of the vast pyramid city below and the ritual grounds.",
+        "colorsAndLighting": "The space is bathed in bright, clear daylight, casting sharp, defined shadows. The dominant color is deep crimson, punctuated by brilliant gold accents on the decorative elements and architectural trims.",
+        "atmosphere": "The air within this chamber is clear and crisp, carrying a profound sense of ancient reverence mixed with advanced technological presence. A gentle, almost imperceptible current of air suggests the immense scale of the surrounding environment. The weather is consistently bright and cloudless.",
+        "materials": "The walls are of polished crimson stone, smooth and gleaming, mirroring the exterior facades. Golden filigree and ornamentation are meticulously crafted, suggesting precious metal alloys. The floor is likely a continuation of the polished crimson stone, offering a seamless transition.",
+        "mood": "A profound sense of awe, majestic observation, and serene power emanates from this space, befitting its name and elevated position.",
+        "sounds": "Distant ceremonial chants, faint hum of advanced systems, gentle breeze.",
+        "spatialLayout": "A spacious, rectangular chamber with high ceilings, designed to maximize views and create a sense of openness while maintaining an aura of sanctity.",
+        "primary_surfaces": "Polished crimson stone walls, gleaming gold filigree.",
+        "secondary_surfaces": "Smooth stone flooring, clear or translucent window materials.",
+        "accent_features": "Intricate golden friezes depicting celestial events or divine figures, opulent statues.",
+        "dominant": "Deep crimson, covering walls and floor.",
+        "secondary": "Brilliant gold, used for extensive ornamentation and detailing.",
+        "accent": "None distinct within the room itself, derived from the exterior view.",
+        "ambient": "Bright, clear daylight.",
+        "genre": null,
+        "architectural_tone": "Majestic, ornate ancient-futuristic pyramid with intricate golden embellishments.",
+        "cultural_tone": "Home to an advanced, perhaps celestial or highly evolved civilization; a center of power, beauty, and innovation.",
+        "materials_base": "Polished stone, precious metals, abundant flora.",
+        "mood_baseline": "Awe-inspiring, wondrous, grand.",
+        "palette_bias": "Crimson and gold, with strong secondary green and turquoise.",
+        "soundscape_base": "Serene, with hints of advanced technology.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765394735261-xq9krjf4f",
+      "description": "An interior chamber dedicated to sacred rituals, likely within the Crimson Zenith. The space is enclosed, with a domed ceiling and walls adorned with crimson stone, creating an atmosphere of solemnity and divine focus.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "rectangular",
+        "functionalType": "religious",
+        "spatialLayout": "A medium-scale, enclosed chamber with a prominent central focal point, designed for sacred rituals. The space is designed to evoke reverence and awe.",
+        "requiredElements": [
+          "ritual for the gods"
+        ],
+        "suggestedFixtures": [
+          "Central altar",
+          "Sacred brazier",
+          "Hierarchical seating arrangements",
+          "Symbolic statuary",
+          "Ceremonial tools",
+          "Incense burners"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "A grand, ornate doorway leading to further sacred areas."
+          },
+          {
+            "type": "passage",
+            "position": "left side",
+            "description": "A discreet passage, possibly for attendants or priests."
+          },
+          {
+            "type": "passage",
+            "position": "right side",
+            "description": "Another discreet passage, mirroring the left."
+          }
+        ],
+        "dominantElements": [
+          "Intricately carved crimson stone walls",
+          "A celestial-themed domed ceiling",
+          "A central, elevated ritualistic platform or altar",
+          "Subtle, divine lighting emanating from within the structure"
+        ],
+        "uniqueIdentifiers": [
+          "The 'Crimson Zenith' aesthetic influence",
+          "The inherent sacredness of the space",
+          "Absence of external openings, emphasizing inward focus"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "ritual for the gods"
+        ],
+        "suggested": [
+          "Central altar",
+          "Sacred brazier",
+          "Hierarchical seating arrangements",
+          "Symbolic statuary",
+          "Ceremonial tools",
+          "Incense burners",
+          "Glow-in-the-dark celestial motifs on ceiling"
+        ],
+        "placementNotes": [
+          "Altar positioned centrally and elevated. Seating arranged in tiers facing the altar. Statuary placed at strategic points along the walls. Lighting is ambient and indirect, originating from within the space itself.",
+          "The 'ritual for the gods' aspect implies a focal point of worship or offering."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "A grand, ornate doorway leading to further sacred areas."
+        },
+        {
+          "type": "passage",
+          "position": "left side",
+          "description": "A discreet passage, possibly for attendants or priests."
+        },
+        {
+          "type": "passage",
+          "position": "right side",
+          "description": "Another discreet passage, mirroring the left."
+        }
+      ],
+      "dominantElements": [
+        "Intricately carved crimson stone walls",
+        "A celestial-themed domed ceiling",
+        "A central, elevated ritualistic platform or altar",
+        "Subtle, divine lighting emanating from within the structure"
+      ],
+      "uniqueIdentifiers": [
+        "The 'Crimson Zenith' aesthetic influence",
+        "The inherent sacredness of the space",
+        "Absence of external openings, emphasizing inward focus"
+      ],
+      "searchDesc": "A chamber above a ritual, featuring crimson stone, gold filigree, and an awe-inspiring view.",
+      "slug": "room-over-ritual-for-the-gods"
+    },
+    "niche-1765395519728-je2svlpj5": {
+      "id": "niche-1765395519728-je2svlpj5",
+      "type": "niche",
+      "name": "The Kings Aquarium",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Within the colossal crimson pyramid city, this aquarium features expansive, multi-tiered exhibition halls. Large, crystal-clear tanks are integrated into the structure, filled with turquoise water and a variety of marine life, most prominently majestic sharks. Golden filigree and ornate statues continue to adorn the interior surfaces, seamlessly blending with the aquatic displays.",
+        "colorsAndLighting": "Deep crimson walls are accented by brilliant gold fixtures. The interior is bathed in bright, clear daylight, creating sharp highlights on polished surfaces and casting defined shadows, with the turquoise water of the tanks providing a luminous glow.",
+        "atmosphere": "The air is clear and crisp, carrying a faint scent of ozone and exotic flora. Gentle internal air currents suggest a vast, controlled environment. The weather inside is consistently bright and cloudless, fostering a sense of wonder.",
+        "materials": "Interior surfaces consist of polished crimson stone and gleaming gold ornamentation, mirroring the exterior architecture. The primary viewing surfaces are constructed from incredibly clear, durable transparent composite material. Vibrant green foliage is incorporated into decorative landscaping within viewing areas.",
+        "mood": "A breathtaking sense of awe and wonder pervades the aquarium, evoking the magnificence of both nature's aquatic predators and the advanced civilization that houses them.",
+        "sounds": "Gentle water flow, distant hum of life support, muffled aquatic sounds, soft ambient music.",
+        "spatialLayout": "The aquarium occupies several levels within the pyramid, with a central hub leading to interconnected exhibition galleries. Enclosures vary in size, from intimate displays to vast, cathedral-like halls designed to house large shark species.",
+        "primary_surfaces": "Polished crimson stone walls, gleaming gold accents, transparent composite viewing panels, vibrant green foliage planters.",
+        "secondary_surfaces": "Smooth turquoise water, dark metallic structural supports, stone pathways, ornate golden fixtures.",
+        "accent_features": "Golden spire motifs, radiant archways leading to exhibits, intricate friezes depicting marine life, statues of sea creatures.",
+        "dominant": "Deep crimson with expansive coverage on walls and structural elements.",
+        "secondary": "Brilliant gold used for decorative elements, framing, and fixtures.",
+        "accent": "Vibrant emerald green from flora, sparkling turquoise from water.",
+        "ambient": "Bright, clear daylight.",
+        "genre": null,
+        "architectural_tone": "Majestic, ornate ancient-futuristic pyramid with intricate golden embellishments.",
+        "cultural_tone": "Home to an advanced, perhaps celestial or highly evolved civilization; a center of power, beauty, and innovation.",
+        "materials_base": "Polished stone, precious metals, abundant flora.",
+        "mood_baseline": "Awe-inspiring, wondrous, grand.",
+        "palette_bias": "Crimson and gold, with strong secondary green and turquoise.",
+        "soundscape_base": "Serene, with hints of advanced technology.",
+        "flora_base": "Lush tropical greenery",
+        "fauna_base": "Sharks and other marine life."
+      },
+      "primaryMedia": "media-1765395519725-unpzvb0fm",
+      "description": "the kings aquarium with sharks",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "functionalType": "residential",
+        "spatialLayout": "A medium interior space.",
+        "requiredElements": [
+          "sharks"
+        ],
+        "suggestedFixtures": [
+          "furniture",
+          "storage",
+          "decorative elements",
+          "lighting"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "back",
+            "description": "Main entrance"
+          }
+        ],
+        "dominantElements": [
+          "The Kings Aquarium"
+        ],
+        "uniqueIdentifiers": [
+          "sharks"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "back",
+          "description": "Main entrance"
+        }
+      ],
+      "dominantElements": [
+        "The Kings Aquarium"
+      ],
+      "uniqueIdentifiers": [
+        "sharks"
+      ],
+      "searchDesc": "King's pyramid aquarium with sharks, featuring crimson and gold architecture and lush tropical flora.",
+      "slug": "the-kings-aquarium-with-sharks"
+    },
+    "niche-1765396112608-8jrivgvik": {
+      "id": "niche-1765396112608-8jrivgvik",
+      "type": "niche",
+      "name": "Crimson Zenith Tomb",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The tomb is a somber, interior chamber carved from the same polished crimson stone as the pyramid city. Grand sarcophagi, likely of ceremonial importance, are central features. The space is filled with meticulously crafted golden funerary objects and detailed friezes depicting historical or religious scenes.",
+        "colorsAndLighting": "Deep crimson stone forms the primary color, accented by the brilliant gleam of gold. Soft, internal illumination emanates from hidden sources, casting long, respectful shadows that emphasize the solemnity of the space.",
+        "atmosphere": "The air is still and cool, carrying a profound sense of reverence and ancient history. A palpable stillness pervades the chamber, broken only by the faint echoes of the city beyond. The weather here is eternally calm and undisturbed.",
+        "materials": "Polished crimson stone forms the walls and sarcophagi, smooth and cool to the touch. Intricately worked gold is used for artifacts, detailing, and decorative elements. Surfaces are meticulously maintained, showing no signs of decay.",
+        "mood": "Solemn, reverent, and awe-inspiring. The tomb evokes a deep respect for the past and the beings interred within.",
+        "sounds": "Stillness, faint echoes, hushed reverence.",
+        "spatialLayout": "A large, cavernous chamber with high, vaulted ceilings. The layout is designed to prominently display the sarcophagi and funerary arrangements, with alcoves for additional artifacts.",
+        "primary_surfaces": "Polished crimson stone walls and floors, smooth golden adornments.",
+        "secondary_surfaces": "Intricately carved sarcophagi, dark stone pathways.",
+        "accent_features": "Golden statues of honored figures, detailed friezes, ceremonial golden vessels.",
+        "dominant": "Deep crimson with extensive wall and floor coverage.",
+        "secondary": "Brilliant gold used for sarcophagi detailing, artifacts, and intricate carvings.",
+        "accent": "Subtle variations in crimson stone, occasional polished obsidian-like accents.",
+        "ambient": "Soft, diffused internal light.",
+        "genre": null,
+        "architectural_tone": "Majestic, ornate ancient-futuristic pyramid with intricate golden embellishments.",
+        "cultural_tone": "Home to an advanced, perhaps celestial or highly evolved civilization; a center of power, beauty, and innovation.",
+        "materials_base": "Polished stone, precious metals, abundant flora.",
+        "mood_baseline": "Awe-inspiring, wondrous, grand.",
+        "palette_bias": "Crimson and gold, with strong secondary green and turquoise.",
+        "soundscape_base": "Serene, with hints of advanced technology.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765396112607-49g6mausy",
+      "description": "This vast chamber, carved from the same rich crimson stone as its parent structure, serves as a sacred tomb. Its faceted walls rise to a domed ceiling, reflecting the soft, ambient light. The scale is impressive, designed to evoke awe and reverence for the departed entity.",
+      "structure": {
+        "form": "faceted",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "irregular",
+        "functionalType": "religious",
+        "spatialLayout": "A grand, multi-faceted chamber serves as a final resting place, with the primary emphasis on a central sarcophagus and surrounding ceremonial elements.",
+        "requiredElements": [
+          "tomb"
+        ],
+        "suggestedFixtures": [
+          "ornate sarcophagus",
+          "ceremonial urns",
+          "intricate murals",
+          "glowing light sources",
+          "stone seating",
+          "statuary"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "back",
+            "description": "A large, sealed passage leading deeper into the complex."
+          },
+          {
+            "type": "archway",
+            "position": "sides",
+            "description": "Two grand, radiant archways on either side, hinting at hidden chambers."
+          }
+        ],
+        "dominantElements": [
+          "central sarcophagus",
+          "faceted crimson stone walls",
+          "golden filigree accents",
+          "ambient, soft illumination"
+        ],
+        "uniqueIdentifiers": [
+          "Crimson stone construction",
+          "Celestial-inspired geometric form",
+          "Integration of golden ornamentation"
         ]
       },
       "navigableElements": [
         {
           "type": "passage",
-          "position": "center back",
-          "description": "A grand, arched passage leading deeper into the Citadel."
+          "position": "back",
+          "description": "A large, sealed passage leading deeper into the complex."
         },
         {
           "type": "archway",
-          "position": "left wall",
-          "description": "An ornate archway with golden filigree."
-        },
-        {
-          "type": "archway",
-          "position": "right wall",
-          "description": "Another ornate archway mirroring the left."
+          "position": "sides",
+          "description": "Two grand, radiant archways on either side, hinting at hidden chambers."
         }
       ],
       "dominantElements": [
-        "Flowing organic walls",
-        "Colossal domed ceiling",
-        "Large central void",
-        "Golden filigree accents"
+        "central sarcophagus",
+        "faceted crimson stone walls",
+        "golden filigree accents",
+        "ambient, soft illumination"
       ],
       "uniqueIdentifiers": [
-        "Integration with luminous cream canyon walls (implied)",
-        "Spherical blue window motifs (implied as openings)",
-        "Miniature spires (implied as decorative elements)"
+        "Crimson stone construction",
+        "Celestial-inspired geometric form",
+        "Integration of golden ornamentation"
       ],
-      "searchDesc": "Interior of The Celestial Citadel: organic cream stone, gold accents, grand blue window.",
-      "slug": "interior-of-the-celestial-citadel"
+      "searchDesc": "Solemn crimson tomb adorned with gold, filled with sarcophagi and ancient artifacts.",
+      "slug": "tomb"
+    },
+    "loc-1765424984260-l2stsl9f0": {
+      "id": "loc-1765424984260-l2stsl9f0",
+      "type": "host",
+      "name": "Xylos Desert",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast desert expanses dotted with colossal, intricately carved sandstone structures. These monumental edifices frame winding waterways of luminous, clear water. The sky transitions to a deep indigo filled with visible stars and nebulas.",
+        "colorsAndLighting": "The environment is bathed in a bright, almost magical light, with warm sandstone tones contrasted by the cool, luminous blues and greens of the water and glowing orbs. The sky shifts from bright blue to deep indigo.",
+        "atmosphere": "The air is crisp and clear, imbued with a sense of ancient serenity. Gentle, ethereal breezes rustle sparse desert vegetation. The temperature within the oases is cool and pleasant, a stark contrast to the harsh desert outside.",
+        "materials": "The primary material is intricately carved sandstone, displaying fine geometric patterns. Waterways are filled with exceptionally clear, luminous water. Translucent, glowing orbs are a unique, non-organic element.",
+        "mood": "Profound serenity, otherworldly beauty, and mystical enchantment. Evokes feelings of peace, awe, and wonder.",
+        "sounds": "Whispering winds, gentle water lapping, faint hum of glowing orbs, distant natural desert sounds.",
+        "primary_surfaces": "Monumental carved sandstone, luminous water",
+        "secondary_surfaces": "Tiered platforms, desert rock formations, sparse vegetation",
+        "accent_features": "Translucent glowing blue orbs, cyan platform illumination",
+        "dominant": "Sandstone Red (80%)",
+        "secondary": "Luminous Blue-Green (15%)",
+        "accent": "Cyan Glow, Translucent Blue (5%)",
+        "ambient": "Bright, magical light",
+        "genre": "Desert Fantasy",
+        "architectural_tone": "Monumental desert architecture with intricate geometric carvings",
+        "cultural_tone": "A sacred natural sanctuary and a place of contemplation.",
+        "materials_base": "Stone and water with ethereal elements",
+        "mood_baseline": "Serene and mystical",
+        "palette_bias": "Earth tones, luminous blues and greens",
+        "soundscape_base": "Ethereal and natural desert ambiance",
+        "flora_base": "Sparse desert vegetation and luminous oasis plants",
+        "fauna_base": "None"
+      },
+      "description": "A world of vast, surreal deserts punctuated by breathtaking oases. Its ancient civilizations have left behind monumental sandstone architecture, imbued with a mystical and serene energy.",
+      "searchDesc": "World of grand desert oases, monumental sandstone architecture, and luminous waterways under starry skies.",
+      "slug": "xylos-desert",
+      "structure": {
+        "spatialLayout": "Expansive and open desert vistas giving way to enclosed, monumental architectural spaces and serene oasis areas. Significant verticality in the rock formations and structures.",
+        "navigableElements": [
+          "Oasis",
+          "Desert",
+          "Sandstone Structures",
+          "Waterways",
+          "Cliffs"
+        ],
+        "dominantElements": [
+          "Monumental Sandstone Architecture",
+          "Luminous Oases",
+          "Desert Landscapes"
+        ],
+        "uniqueIdentifiers": [
+          "Colossal geometric sandstone arches",
+          "Luminous blue-green waterways",
+          "Glowing orb flora",
+          "Star-filled indigo skies"
+        ]
+      },
+      "navigableElements": [
+        "Oasis",
+        "Desert",
+        "Sandstone Structures",
+        "Waterways",
+        "Cliffs"
+      ],
+      "dominantElements": [
+        "Monumental Sandstone Architecture",
+        "Luminous Oases",
+        "Desert Landscapes"
+      ],
+      "uniqueIdentifiers": [
+        "Colossal geometric sandstone arches",
+        "Luminous blue-green waterways",
+        "Glowing orb flora",
+        "Star-filled indigo skies"
+      ],
+      "primaryMedia": "media-1765425316305-zpuqrdiot"
+    },
+    "7a75e97b-9073-4f58-9c49-7655ebe1a79e": {
+      "id": "7a75e97b-9073-4f58-9c49-7655ebe1a79e",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "0804982d-9eca-44a1-9608-7fa50251af5c": {
+      "id": "0804982d-9eca-44a1-9608-7fa50251af5c",
+      "type": "location",
+      "name": "The Azure Oasis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Monumental sandstone architecture featuring intricate geometric carvings dominates the landscape, framing a vibrant, winding waterway. Tiered platforms around the water are illuminated by an internal cyan glow, creating a surreal and enchanting environment. The sky above is a deep indigo, heavily populated with stars and nebulas.",
+        "colorsAndLighting": "The scene is bathed in a bright, almost magical light, with the luminous blue-green water and cyan platform glows providing key light sources against the warm red-brown of the sandstone and rock formations. The sky transitions from bright blue to deep indigo.",
+        "atmosphere": "The air is crisp and clear, with a palpable sense of ancient serenity. A gentle, ethereal breeze might rustle the sparse vegetation. The temperature is likely cool and pleasant, contrasting with the harsh desert outside the oasis.",
+        "materials": "The primary material is intricately carved sandstone, displaying fine geometric patterns. The waterway is composed of exceptionally clear, luminous water. Translucent, glowing orbs are a unique, non-organic material.",
+        "mood": "The mood is one of profound serenity, otherworldly beauty, and mystical enchantment. It evokes feelings of peace, awe, and wonder.",
+        "sounds": "Gentle water flow, faint hum of orbs, distant desert winds.",
+        "primary_surfaces": "Intricately carved sandstone, luminous blue-green water",
+        "secondary_surfaces": "Red rock formations, jagged cliffs, lush vegetation",
+        "accent_features": "Glowing blue orbs, cyan platform illumination",
+        "dominant": "Sandstone Red (80%)",
+        "secondary": "Luminous Blue-Green (15%)",
+        "accent": "Cyan Glow, Translucent Blue (5%)",
+        "ambient": "Magical, ethereal light",
+        "genre": null,
+        "architectural_tone": "Monumental desert architecture with intricate geometric carvings",
+        "cultural_tone": "A sacred natural sanctuary and a place of contemplation.",
+        "materials_base": "Stone and water with ethereal elements",
+        "mood_baseline": "Serene and mystical",
+        "palette_bias": "Earth tones, luminous blues and greens",
+        "soundscape_base": "Natural and ethereal hums",
+        "flora_base": "Lush vegetation, tall grasses, palm trees",
+        "fauna_base": "None"
+      },
+      "description": "A grand desert oasis dominated by colossal, intricately carved sandstone arches and structures. A winding waterway of luminous blue-green water flows through it, lined with circular, tiered platforms illuminated from beneath by a cyan glow. Lush vegetation and glowing blue orbs dot the platforms and water's edge. Towering red rock formations and jagged desert cliffs form the backdrop under a star-filled indigo sky. EXTERIOR VIEW.",
+      "searchDesc": "Grand desert oasis with blue-green water, glowing blue orbs, and sandstone arches under a starry indigo sky.",
+      "slug": "the-azure-oasis",
+      "structure": {
+        "spatialLayout": "The space is grand and expansive, with the colossal structures creating a sense of immense scale and depth. The winding waterway draws the eye through the central area, with tiered platforms creating layered visual interest.",
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "entrance",
+            "description": "Colossal, intricately carved sandstone archway."
+          },
+          {
+            "type": "path",
+            "position": "along waterway",
+            "description": "Winding path along the luminous blue-green waterway."
+          },
+          {
+            "type": "stairs",
+            "position": "tiered platforms",
+            "description": "Circular stairs connecting tiered platforms."
+          }
+        ],
+        "dominantElements": [
+          "Colossal sandstone arches and structures",
+          "Luminous blue-green waterway",
+          "Circular, tiered platforms",
+          "Towering red rock formations"
+        ],
+        "uniqueIdentifiers": [
+          "Geometric patterns on sandstone",
+          "Cyan glow beneath platforms",
+          "Translucent, glowing blue orbs",
+          "Star-filled indigo sky"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "entrance",
+          "description": "Colossal, intricately carved sandstone archway."
+        },
+        {
+          "type": "path",
+          "position": "along waterway",
+          "description": "Winding path along the luminous blue-green waterway."
+        },
+        {
+          "type": "stairs",
+          "position": "tiered platforms",
+          "description": "Circular stairs connecting tiered platforms."
+        }
+      ],
+      "dominantElements": [
+        "Colossal sandstone arches and structures",
+        "Luminous blue-green waterway",
+        "Circular, tiered platforms",
+        "Towering red rock formations"
+      ],
+      "uniqueIdentifiers": [
+        "Geometric patterns on sandstone",
+        "Cyan glow beneath platforms",
+        "Translucent, glowing blue orbs",
+        "Star-filled indigo sky"
+      ],
+      "primaryMedia": "media-1765424998652-2q1fj02dp"
+    },
+    "niche-1765425033264-gjl9i7pxh": {
+      "id": "niche-1765425033264-gjl9i7pxh",
+      "type": "niche",
+      "name": "The Azure Sanctuary Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Monumental sandstone architecture with intricate geometric carvings forms the interior space. A vibrant, winding waterway flows through the area, and tiered platforms around it are illuminated by an internal cyan glow. Translucent, glowing orbs are embedded within the structure.",
+        "colorsAndLighting": "The interior is bathed in a bright, almost magical light. The luminous blue-green water and cyan platform glows provide key light sources against the warm red-brown of the sandstone. Ambient light is ethereal and soft.",
+        "atmosphere": "The air within is crisp and clear, carrying a palpable sense of ancient serenity. A gentle, ethereal breeze might be felt. The temperature is cool and pleasant.",
+        "materials": "The primary interior material is intricately carved sandstone, displaying fine geometric patterns. The waterway is composed of exceptionally clear, luminous water. Translucent, glowing orbs are a unique, non-organic material.",
+        "mood": "Profound serenity, otherworldly beauty, and mystical enchantment define the mood, evoking feelings of peace, awe, and wonder.",
+        "sounds": "Gentle water flow, faint ethereal hums, soft breeze whispers",
+        "spatialLayout": "The space is characterized by grand, monumental architecture with open areas around the central waterway. Tiered platforms create varied levels and depths within the chamber.",
+        "primary_surfaces": "Intricately carved sandstone walls, luminous blue-green water channels",
+        "secondary_surfaces": "Smooth composite floors, translucent glowing orb inlays",
+        "accent_features": "Cyan platform illumination, embedded glowing blue orbs",
+        "dominant": "Sandstone Red (80%)",
+        "secondary": "Luminous Blue-Green (15%)",
+        "accent": "Cyan Glow, Translucent Blue (5%)",
+        "ambient": "Magical, ethereal light",
+        "genre": null,
+        "architectural_tone": "Monumental desert architecture with intricate geometric carvings",
+        "cultural_tone": "A sacred natural sanctuary and a place of contemplation.",
+        "materials_base": "Stone and water with ethereal elements",
+        "mood_baseline": "Serene and mystical",
+        "palette_bias": "Earth tones, luminous blues and greens",
+        "soundscape_base": "Natural and ethereal hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765425033263-x83xdruf",
+      "description": "The interior of The Azure Oasis is a vast, contemplative space carved from monumental sandstone, echoing the exterior's intricate geometric carvings. A pervasive internal cyan glow illuminates tiered platforms, creating an ethereal ambiance, while a winding waterway or reflective pool likely forms a central feature. The form is organic and flowing, designed for spiritual reflection and immersion in the sacred sanctuary.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "spatialLayout": "This expansive interior is designed to evoke a sense of wonder and contemplation, with flowing lines and illuminated features that guide the eye. The space is centered around a tranquil element, encouraging reflection.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Incense burners",
+          "Meditative seating cushions",
+          "Water features",
+          "Ceremonial altars",
+          "Torches or glow-lamps",
+          "Carved devotional statues"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear wall",
+            "description": "A grand, subtly glowing archway leading deeper into the sanctuary."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "A discreet, smaller opening framed by carved sandstone, suggesting a private alcove."
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "Another elegantly carved archway, potentially leading to auxiliary spaces."
+          }
+        ],
+        "dominantElements": [
+          "Sandstone walls with geometric carvings",
+          "Internal cyan illumination emanating from floor platforms",
+          "Subtle, flowing curves of the interior architecture",
+          "Central reflective pool or shallow waterway",
+          "Starry sky projected or visible through openings"
+        ],
+        "uniqueIdentifiers": [
+          "The omnipresent cyan glow",
+          "The blend of monumental sandstone architecture and ethereal light",
+          "The sacred, contemplative atmosphere",
+          "Intricate geometric carvings throughout"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear wall",
+          "description": "A grand, subtly glowing archway leading deeper into the sanctuary."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "A discreet, smaller opening framed by carved sandstone, suggesting a private alcove."
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "Another elegantly carved archway, potentially leading to auxiliary spaces."
+        }
+      ],
+      "dominantElements": [
+        "Sandstone walls with geometric carvings",
+        "Internal cyan illumination emanating from floor platforms",
+        "Subtle, flowing curves of the interior architecture",
+        "Central reflective pool or shallow waterway",
+        "Starry sky projected or visible through openings"
+      ],
+      "uniqueIdentifiers": [
+        "The omnipresent cyan glow",
+        "The blend of monumental sandstone architecture and ethereal light",
+        "The sacred, contemplative atmosphere",
+        "Intricate geometric carvings throughout"
+      ],
+      "searchDesc": "Interior of a monumental sandstone oasis with cyan glows and a luminous waterway.",
+      "slug": "interior-of-the-azure-oasis"
+    },
+    "niche-1765425111620-b0rep0ftf": {
+      "id": "niche-1765425111620-b0rep0ftf",
+      "type": "niche",
+      "name": "The Celestial Observatory Chamber",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This niche is an intimate chamber, its walls continuing the monumental sandstone architecture with intricate geometric carvings. The space is dominated by a large, unadorned aperture in the ceiling, offering a direct view of the star-filled indigo sky. Soft, diffused light emanates from strategically placed glowing orbs.",
+        "colorsAndLighting": "The interior is bathed in a gentle, ethereal light, primarily from translucent, glowing orbs and the ambient cyan glow. The warm red-brown of the sandstone walls contrasts with the deep indigo of the sky visible through the ceiling aperture.",
+        "atmosphere": "The air within this chamber is crisp and still, imbued with a palpable sense of ancient serenity and focused contemplation. It feels like a sanctuary for introspection, far removed from external distractions.",
+        "materials": "The primary material is intricately carved sandstone, maintaining its fine geometric patterns. Translucent, smooth glowing orbs serve as the light source, providing a soft, diffused illumination.",
+        "mood": "The mood is one of profound serenity, quiet awe, and mystical enchantment, fostering deep contemplation and a connection to the cosmos.",
+        "sounds": "Soft hum, distant ethereal whispers, profound silence",
+        "spatialLayout": "A relatively small, enclosed chamber with high ceilings, designed to focus attention upwards towards the celestial view.",
+        "primary_surfaces": "Intricately carved sandstone walls and ceiling",
+        "secondary_surfaces": "Smooth, translucent glowing orbs",
+        "accent_features": "Ceiling aperture for direct sky view",
+        "dominant": "Sandstone Red (70%) - Walls and primary structure",
+        "secondary": "Translucent Blue/White (20%) - Glowing orbs",
+        "accent": "Deep Indigo (10%) - Sky viewed through aperture",
+        "ambient": "Magical, ethereal light",
+        "genre": null,
+        "architectural_tone": "Monumental desert architecture with intricate geometric carvings",
+        "cultural_tone": "A sacred natural sanctuary and a place of contemplation.",
+        "materials_base": "Stone and water with ethereal elements",
+        "mood_baseline": "Serene and mystical",
+        "palette_bias": "Earth tones, luminous blues and greens",
+        "soundscape_base": "Natural and ethereal hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765425111619-ltvrzzfe4",
+      "description": "This chamber, designated for 'communication with the stars,' is an expansive, vertically oriented cylindrical space. Its monumental sandstone structure, adorned with intricate geometric carvings, draws inspiration from the parent sanctuary. The interior is dominated by tiered platforms encircling a central void, illuminated by an internal cyan glow and embedded translucent orbs. The form and the presence of embedded glowing orbs directly reference the parent's visual appearance, while the function is derived from the user's stated purpose.",
+      "structure": {
+        "form": "cylindrical",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "vertical",
+        "openings": "none",
+        "openingShape": "circular",
+        "functionalType": "religious",
+        "spatialLayout": "A grand cylindrical chamber with a high, domed ceiling. Tiered platforms surround a central, open area designed for observation and contemplation.",
+        "requiredElements": [
+          "room for communication with the stars",
+          "stars"
+        ],
+        "suggestedFixtures": [
+          "Telescopic viewing stations",
+          "Celestial projection system",
+          "Meditative seating platforms",
+          "Star charts and astronomical instruments",
+          "Holographic displays of constellations",
+          "Ambient cyan lighting"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "rear",
+            "description": "A grand archway leading into the chamber."
+          },
+          {
+            "type": "passage",
+            "position": "periphery",
+            "description": "Circumferential passages connecting the tiered platforms."
+          },
+          {
+            "type": "stairs",
+            "position": "sides of the platforms",
+            "description": "Staircases ascending to higher tiers."
+          }
+        ],
+        "dominantElements": [
+          "Monumental sandstone architecture",
+          "Intricate geometric carvings",
+          "Tiered observation platforms",
+          "Central open space",
+          "Embedded translucent glowing orbs"
+        ],
+        "uniqueIdentifiers": [
+          "Internal cyan glow illumination",
+          "Winding central waterway (implied continuation from parent)",
+          "Seamless integration of glowing orbs within sandstone"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "rear",
+          "description": "A grand archway leading into the chamber."
+        },
+        {
+          "type": "passage",
+          "position": "periphery",
+          "description": "Circumferential passages connecting the tiered platforms."
+        },
+        {
+          "type": "stairs",
+          "position": "sides of the platforms",
+          "description": "Staircases ascending to higher tiers."
+        }
+      ],
+      "dominantElements": [
+        "Monumental sandstone architecture",
+        "Intricate geometric carvings",
+        "Tiered observation platforms",
+        "Central open space",
+        "Embedded translucent glowing orbs"
+      ],
+      "uniqueIdentifiers": [
+        "Internal cyan glow illumination",
+        "Winding central waterway (implied continuation from parent)",
+        "Seamless integration of glowing orbs within sandstone"
+      ],
+      "searchDesc": "Sandstone chamber with celestial aperture, glowing orbs, and intricate carvings for star communication.",
+      "slug": "a-room-for-communicatin-with-the-stars"
+    },
+    "niche-1765425175808-ockekiv5h": {
+      "id": "niche-1765425175808-ockekiv5h",
+      "type": "niche",
+      "name": "Hall of Memories",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a monumental hall, characterized by sweeping, intricately carved sandstone walls that rise to an unseen ceiling. The space is punctuated by ethereal conduits that glow with a soft, blue-green light, pulsing gently. A serene, shallow pool occupies the center of the hall.",
+        "colorsAndLighting": "The hall is bathed in a soft, magical light originating from the luminous blue-green memory conduits and the cyan illumination around the central pool. The dominant sandstone red of the walls provides a warm contrast, while the deep indigo of the ambient sky is visible through high, starry openings.",
+        "atmosphere": "The air within the hall is cool, crisp, and still, carrying a palpable sense of ancient serenity and quiet contemplation. A faint, ethereal hum resonates throughout the space, suggesting the stored memories within.",
+        "materials": "The primary material is intricately carved sandstone, displaying fine geometric patterns that have endured for ages. The memory conduits are composed of a smooth, translucent, non-organic material that emits light. The central pool is filled with exceptionally clear, luminous water.",
+        "mood": "The mood is one of profound peace, quiet awe, and mystical enchantment, fostering introspection and a connection to the past.",
+        "sounds": "Ethereal hum, gentle water lapping, faint echoes",
+        "spatialLayout": "The hall is vast and open, with a cavernous feel. The space is defined by the immense scale of the carved walls and the depth created by the luminous conduits and the central pool.",
+        "primary_surfaces": "Intricately carved sandstone walls, luminous blue-green conduits",
+        "secondary_surfaces": "Luminous blue-green water in the central pool, smooth composite flooring",
+        "accent_features": "Cyan platform illumination around the pool, celestial openings in the ceiling",
+        "dominant": "Sandstone Red (80%)",
+        "secondary": "Luminous Blue-Green (15%)",
+        "accent": "Cyan Glow (5%)",
+        "ambient": "Magical, ethereal light",
+        "genre": null,
+        "architectural_tone": "Monumental desert architecture with intricate geometric carvings",
+        "cultural_tone": "A sacred natural sanctuary and a place of contemplation.",
+        "materials_base": "Stone and water with ethereal elements",
+        "mood_baseline": "Serene and mystical",
+        "palette_bias": "Earth tones, luminous blues and greens",
+        "soundscape_base": "Natural and ethereal hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765425175806-2qcscldrt",
+      "description": "This 'big hall of memories' is an interior space designed for contemplation and remembrance, situated within 'The Azure Oasis'. It maintains the monumental sandstone architecture and intricate geometric carvings of its parent. A key feature is the large aperture in the ceiling, offering a direct view of the night sky, amplified by soft, diffused light from glowing orbs. Its functional type is civic, serving as a place for collective memory and contemplation, resonating with the sacred natural sanctuary tone of its parent location. The form is rectangular, with a vaulted roof, scaled large and oriented wide. Minimal arched openings are present, reflecting the parent structure. The spatial layout is an expansive hall with pathways and alcoves for reflection.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "spatialLayout": "A grand, expansive hall designed for communal reflection. Pathways lead through open areas and alcoves where memories can be contemplated.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Memory consoles",
+          "Interactive projection surfaces",
+          "Comfortable seating alcoves",
+          "Ambient atmospheric lighting",
+          "Sound dampening panels",
+          "Display pedestals"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "central",
+            "description": "A wide, open pathway leading into the main expanse of the hall."
+          },
+          {
+            "type": "archway",
+            "position": "rear left",
+            "description": "An ornate archway leading to a quieter contemplation zone."
+          },
+          {
+            "type": "archway",
+            "position": "rear right",
+            "description": "A symmetrical archway leading to another thematic memory display area."
+          }
+        ],
+        "dominantElements": [
+          "Monumental sandstone architecture",
+          "Intricate geometric carvings",
+          "Vast open floor space",
+          "Strategically placed glowing orbs",
+          "Central unadorned aperture in the ceiling"
+        ],
+        "uniqueIdentifiers": [
+          "Direct view of the star-filled indigo sky",
+          "Sacred sanctuary atmosphere",
+          "Intimate chamber feel within a grander space"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "A wide, open pathway leading into the main expanse of the hall."
+        },
+        {
+          "type": "archway",
+          "position": "rear left",
+          "description": "An ornate archway leading to a quieter contemplation zone."
+        },
+        {
+          "type": "archway",
+          "position": "rear right",
+          "description": "A symmetrical archway leading to another thematic memory display area."
+        }
+      ],
+      "dominantElements": [
+        "Monumental sandstone architecture",
+        "Intricate geometric carvings",
+        "Vast open floor space",
+        "Strategically placed glowing orbs",
+        "Central unadorned aperture in the ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "Direct view of the star-filled indigo sky",
+        "Sacred sanctuary atmosphere",
+        "Intimate chamber feel within a grander space"
+      ],
+      "searchDesc": "Monumental hall of carved sandstone with glowing memory conduits and a serene pool.",
+      "slug": "big-hall-of-memories"
+    },
+    "niche-1765425249741-t3m4s161o": {
+      "id": "niche-1765425249741-t3m4s161o",
+      "type": "niche",
+      "name": "The Observatory",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The observatory interior features smooth, polished composite surfaces that reflect the ambient light. Large, arched windows or open sections offer panoramic views of the indigo, star-filled sky. Central to the space is a large, ornate telescope and surrounding consoles displaying complex star charts and celestial projections.",
+        "colorsAndLighting": "The space is illuminated by a soft, ethereal glow emanating from the external cyan platform lights that bleed into the interior, mixing with the warm, internal light of the console displays. The dominant colors are the warm sandstone reds of the building's structure and the deep indigos and blues of the sky visible through openings.",
+        "atmosphere": "The air within the observatory is cool and crisp, carrying a faint, clean scent. A sense of profound quietude pervades, punctuated only by the subtle hum of machinery. The atmosphere is one of focused contemplation and awe.",
+        "materials": "Interior surfaces are primarily smooth, cool composites and polished metals. The exterior sandstone architecture is visible through openings, providing a textural contrast. The telescope itself is likely made of polished metal and advanced optics.",
+        "mood": "The mood is one of intellectual curiosity, wonder, and serene contemplation of the cosmos.",
+        "sounds": "Low hum of technology, faint celestial murmurs, soft ambient light.",
+        "spatialLayout": "The observatory is a circular or domed chamber, designed to maximize viewing angles. It is spacious enough to accommodate a large telescope and consoles, with clear pathways for movement.",
+        "primary_surfaces": "Smooth composite walls, polished metal consoles, large viewing apertures",
+        "secondary_surfaces": "Visible sandstone architecture, glass optics of the telescope",
+        "accent_features": "Ornate telescope, glowing star chart displays, celestial projections",
+        "dominant": "Sandstone Red (50%) - visible through apertures and structural elements",
+        "secondary": "Deep Indigo/Blue (30%) - sky visible through openings",
+        "accent": "Cyan Glow (10%) - ambient light bleed, Translucent Blue (10%) - console displays and projections",
+        "ambient": "Ethereal, soft, and focused",
+        "genre": null,
+        "architectural_tone": "Monumental desert architecture with intricate geometric carvings",
+        "cultural_tone": "A sacred natural sanctuary and a place of contemplation.",
+        "materials_base": "Stone and water with ethereal elements",
+        "mood_baseline": "Serene and mystical",
+        "palette_bias": "Earth tones, luminous blues and greens",
+        "soundscape_base": "Natural and ethereal hums",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765425249740-cptam677m",
+      "description": "An observational chamber within The Azure Oasis, designed for celestial contemplation. The space retains the sacred, natural sanctuary feel of its parent, featuring carved sandstone and soft, pulsing lights.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "civic",
+        "spatialLayout": "A grand, circular hall with a prominent central viewing apparatus, surrounded by alcoves and illuminated by celestial light filtering from above.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Telescope",
+          "Stargazing chairs",
+          "Celestial charts",
+          "Cosmic projection system",
+          "Information kiosks",
+          "Seating benches"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "back wall",
+            "description": "Main entrance passage to the observatory."
+          },
+          {
+            "type": "archway",
+            "position": "side alcoves",
+            "description": "Archways leading to smaller viewing stations or exhibits."
+          },
+          {
+            "type": "stairs",
+            "position": "around central apparatus",
+            "description": "Spiral stairs leading to higher viewing platforms or control rooms."
+          }
+        ],
+        "dominantElements": [
+          "Massive central telescope",
+          "Intricately carved sandstone walls",
+          "Ethereal blue-green light conduits",
+          "Celestial openings",
+          "Central shallow pool"
+        ],
+        "uniqueIdentifiers": [
+          "Central, monumental observatory apparatus",
+          "Atmospheric pulsing light",
+          "Sacred natural sanctuary ambiance"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "Central, highly detailed telescope on a gimbal mount",
+          "Comfortable, upholstered stargazing chairs positioned around the periphery",
+          "Large, holographic celestial charts displaying constellations",
+          "Ambient, low-level lighting emanating from wall conduits",
+          "Subtle water features reminiscent of the parent's pool",
+          "Decorative star maps and astronomical diagrams on wall panels"
+        ],
+        "placementNotes": [
+          "The central telescope should be the focal point.",
+          "Chairs should offer clear views of the central apparatus and the 'sky' above.",
+          "Celestial charts and diagrams should be integrated into the wall design.",
+          "Lighting should be ethereal and not detract from the observatory function."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "back wall",
+          "description": "Main entrance passage to the observatory."
+        },
+        {
+          "type": "archway",
+          "position": "side alcoves",
+          "description": "Archways leading to smaller viewing stations or exhibits."
+        },
+        {
+          "type": "stairs",
+          "position": "around central apparatus",
+          "description": "Spiral stairs leading to higher viewing platforms or control rooms."
+        }
+      ],
+      "dominantElements": [
+        "Massive central telescope",
+        "Intricately carved sandstone walls",
+        "Ethereal blue-green light conduits",
+        "Celestial openings",
+        "Central shallow pool"
+      ],
+      "uniqueIdentifiers": [
+        "Central, monumental observatory apparatus",
+        "Atmospheric pulsing light",
+        "Sacred natural sanctuary ambiance"
+      ],
+      "searchDesc": "An observatory within a glowing sandstone sanctuary, offering celestial views.",
+      "slug": "the-observatory"
+    },
+    "niche-1765425302002-e6ma3xtmi": {
+      "id": "niche-1765425302002-e6ma3xtmi",
+      "type": "niche",
+      "name": "The Azure Sanctuary Garden",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Monumental sandstone architecture with intricate geometric carvings surrounds a vibrant, winding waterway. Tiered platforms are illuminated by an internal cyan glow. The sky above is a deep indigo, heavily populated with stars and nebulas.",
+        "colorsAndLighting": "The scene is bathed in bright, magical light from luminous blue-green water and cyan platform glows, contrasting with warm red-brown sandstone. The sky transitions from bright blue to deep indigo.",
+        "atmosphere": "The air is crisp and clear, with a palpable sense of ancient serenity. A gentle, ethereal breeze rustles sparse vegetation. The temperature is cool and pleasant.",
+        "materials": "Intricately carved sandstone forms the primary structure, displaying fine geometric patterns. The waterway is composed of exceptionally clear, luminous water. Translucent, glowing orbs are a unique, non-organic material.",
+        "mood": "Profound serenity, otherworldly beauty, and mystical enchantment. It evokes feelings of peace, awe, and wonder.",
+        "sounds": "Gentle water flow, ethereal hums, rustling leaves",
+        "spatialLayout": "A winding waterway carved through a monumental structure, with tiered levels and a vast, open sky above.",
+        "primary_surfaces": "Intricately carved sandstone, luminous blue-green water",
+        "secondary_surfaces": "Red rock formations, jagged cliffs, sparse lush vegetation",
+        "accent_features": "Glowing blue orbs, cyan platform illumination",
+        "dominant": "Sandstone Red (80%)",
+        "secondary": "Luminous Blue-Green (15%)",
+        "accent": "Cyan Glow, Translucent Blue (5%)",
+        "ambient": "Magical, ethereal light",
+        "genre": null,
+        "architectural_tone": "Monumental desert architecture with intricate geometric carvings",
+        "cultural_tone": "A sacred natural sanctuary and a place of contemplation.",
+        "materials_base": "Stone and water with ethereal elements",
+        "mood_baseline": "Serene and mystical",
+        "palette_bias": "Earth tones, luminous blues and greens",
+        "soundscape_base": "Natural and ethereal hums",
+        "flora_base": "Lush vegetation, sparse tall grasses",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765425302000-6eomo31ji",
+      "description": "An enclosed yet open 'secret garden' within the Azure Oasis, designed as a sacred space for contemplation, featuring a central waterway and illuminated platforms.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "religious",
+        "spatialLayout": "This is an expansive, open-air garden sanctuary, centered around a flowing waterway and tiered platforms.",
+        "requiredElements": [
+          "secret garden"
+        ],
+        "suggestedFixtures": [
+          "meditation benches",
+          "small decorative water features",
+          "stone pathways",
+          "lush vegetation",
+          "ambient lighting fixtures"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "multiple, winding throughout the garden",
+            "description": "Paths leading to different areas of contemplation"
+          },
+          {
+            "type": "archway",
+            "position": "entrance, leading from the parent structure",
+            "description": "An ornate, carved entrance to the garden"
+          }
+        ],
+        "dominantElements": [
+          "winding waterway",
+          "tiered platforms",
+          "lush vegetation",
+          "sandstone architecture"
+        ],
+        "uniqueIdentifiers": [
+          "internal cyan glow illumination",
+          "embedded translucent glowing orbs"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "meditation cushions",
+          "stone lanterns",
+          "sculptural elements",
+          "native flora",
+          "informational plaques (minimalist)"
+        ],
+        "placementNotes": [
+          "Furnishings should enhance the sense of tranquility and natural immersion.",
+          "Place meditation cushions on designated platforms or along the waterway.",
+          "Vegetation should be abundant and varied, creating natural enclosures."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "multiple, winding throughout the garden",
+          "description": "Paths leading to different areas of contemplation"
+        },
+        {
+          "type": "archway",
+          "position": "entrance, leading from the parent structure",
+          "description": "An ornate, carved entrance to the garden"
+        }
+      ],
+      "dominantElements": [
+        "winding waterway",
+        "tiered platforms",
+        "lush vegetation",
+        "sandstone architecture"
+      ],
+      "uniqueIdentifiers": [
+        "internal cyan glow illumination",
+        "embedded translucent glowing orbs"
+      ],
+      "searchDesc": "Monumental sandstone garden with luminous water and a starry indigo sky.",
+      "slug": "the-secret-garden"
+    },
+    "loc-1765434296823-tpxqjm5wm": {
+      "id": "loc-1765434296823-tpxqjm5wm",
+      "type": "host",
+      "name": "Arboreal Canopy World",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The world is characterized by an overwhelming scale of ancient trees, their immense trunks forming natural foundations for settlements. Architectural structures are integrated harmoniously, appearing as extensions of the trees themselves, reaching high into the canopy.",
+        "colorsAndLighting": "Dominated by deep greens of foliage and rich browns of bark, with dappled sunlight filtering through the canopy. Natural light is the primary source, creating shifting patterns of light and shadow. Settlements emit warm, inviting artificial light.",
+        "atmosphere": "The air is perpetually fresh and carrying the scent of damp earth and ancient wood. A pervasive sense of calm and natural order defines the atmosphere, with gentle breezes rustling through the upper branches.",
+        "materials": "The fundamental materials are the colossal wood and bark of ancient trees, intertwined with advanced, bio-integrated construction materials. Abundant natural foliage is an integral part of the environment.",
+        "mood": "Serene, awe-inspiring, and deeply tranquil, fostering a sense of connection to a primal, living world.",
+        "sounds": "Rustling leaves, creaking wood, distant birdsong, gentle breezes.",
+        "primary_surfaces": "Massive, textured tree bark and dense foliage",
+        "secondary_surfaces": "Smooth, bio-integrated construction materials",
+        "accent_features": "Integrated glowing flora, natural water features",
+        "dominant": "Deep greens and browns",
+        "secondary": "Dappled sunlight",
+        "accent": "Warm, inviting settlement lights",
+        "ambient": "Natural, filtered sunlight",
+        "genre": "Eco-Fantasy",
+        "architectural_tone": "Biomorphic integration and living architecture",
+        "cultural_tone": "Societies deeply respectful of nature, prioritizing sustainable living and harmony with their environment.",
+        "materials_base": "Organic, natural, and bio-engineered",
+        "mood_baseline": "Awe, serenity, and profound natural connection",
+        "palette_bias": "Earth tones, forest greens, rich browns",
+        "soundscape_base": "Natural ambient sounds of a vast forest",
+        "flora_base": "Dominant colossal trees with abundant undergrowth and epiphytes",
+        "fauna_base": "Diverse arboreal and forest-dwelling wildlife"
+      },
+      "description": "A world where colossal ancient trees have been integrated with advanced architecture, forming living cities and dwelling spaces. The landscape is dominated by immense flora, with human civilization woven into its very fabric.",
+      "searchDesc": "A world of colossal trees transformed into architectural marvels, blending nature and advanced civilization.",
+      "slug": "arboreal-canopy-world",
+      "structure": {
+        "spatialLayout": "Vast vertical spaces within the tree canopies and trunks, interconnected by natural pathways and constructed bridges. The landscape is characterized by rolling hills and valleys covered in dense forest.",
+        "dominantElements": [
+          "World-spanning ancient trees",
+          "Canopy-level settlements",
+          "Verdant mountain ranges"
+        ],
+        "uniqueIdentifiers": [
+          "Gigantic, ancient trees",
+          "Biocentric architecture",
+          "Vast forested landscapes"
+        ]
+      },
+      "dominantElements": [
+        "World-spanning ancient trees",
+        "Canopy-level settlements",
+        "Verdant mountain ranges"
+      ],
+      "uniqueIdentifiers": [
+        "Gigantic, ancient trees",
+        "Biocentric architecture",
+        "Vast forested landscapes"
+      ],
+      "primaryMedia": "media-1765434436722-8bh2w144c"
+    },
+    "b469e4af-1080-4cdd-b8fa-09b54d88e468": {
+      "id": "b469e4af-1080-4cdd-b8fa-09b54d88e468",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "16c421fd-f63b-4b87-ae22-b03b8cc3f0a6": {
+      "id": "16c421fd-f63b-4b87-ae22-b03b8cc3f0a6",
+      "type": "location",
+      "name": "Sky-Root Dwellings",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Spacious, open-plan interiors with clean lines and expansive glass walls that frame the natural surroundings. Furniture is minimalist and modular, complementing the organic architecture. Indoor plants are artfully arranged, bringing the outside in.",
+        "colorsAndLighting": "Warm, ambient light from hidden sources creates a cozy glow, highlighting the natural wood tones, soft grays, and vibrant greens. The deep browns of the tree bark are visible through the transparent walls, providing a dramatic contrast.",
+        "atmosphere": "Crisp, clean air with a consistent, comfortable temperature. A profound sense of tranquility pervades, punctuated only by the faint hum of life support systems. The distant mist can softly diffuse light, adding to the ethereal quality.",
+        "materials": "The primary structural elements are the massive, textured bark of ancient trees. Interior finishes feature polished glass, brushed metal accents, and smooth, light-colored wood. Lush foliage spills over balconies and clings to structures.",
+        "mood": "Calm, sophisticated, and deeply serene, fostering a sense of luxurious seclusion and harmonious connection with nature.",
+        "sounds": "Gentle hum of systems, rustling leaves, distant natural sounds.",
+        "primary_surfaces": "Polished glass walls, smooth wood floors",
+        "secondary_surfaces": "Textured tree bark, brushed metal fixtures",
+        "accent_features": "Strategically placed indoor greenery, subtle lighting designs",
+        "dominant": "Light gray and wood tones within, deep brown bark outside",
+        "secondary": "Vibrant green from indoor plants",
+        "accent": "Subtle metallic sheens",
+        "ambient": "Warm, diffused",
+        "genre": null,
+        "architectural_tone": "Contemporary organic integration with biomorphic elements",
+        "cultural_tone": "Affluent inhabitants seeking a harmonious blend of modern living and natural immersion.",
+        "materials_base": "Sleek, refined, nature-inspired",
+        "mood_baseline": "Peaceful contemplation and luxurious seclusion",
+        "palette_bias": "Greens, grays, wood tones, deep browns",
+        "soundscape_base": "Quietude with subtle ambient hums",
+        "flora_base": "Abundant integrated greenery and foliage",
+        "fauna_base": "None"
+      },
+      "description": "Multi-story modern residences seamlessly integrated into the massive trunks and canopies of colossal ancient trees. Transparent walls offer breathtaking views of a sprawling mountain wilderness, while lush foliage cascades around the elevated structures.",
+      "searchDesc": "Modern glass dwellings built into ancient trees, offering panoramic mountain views.",
+      "slug": "sky-root-dwellings",
+      "structure": {
+        "spatialLayout": "Expansive internal spaces with high ceilings, designed to maximize natural light and outward views. Decks and balconies extend living areas into the canopy.",
+        "navigableElements": [
+          {
+            "type": "path",
+            "position": "exterior",
+            "description": "Bridges and walkways connecting tree dwellings"
+          },
+          {
+            "type": "door",
+            "position": "dwelling entrance",
+            "description": "Sleek, automated entryways into residences"
+          }
+        ],
+        "dominantElements": [
+          "Colossal ancient trees",
+          "Integrated glass and metal architecture",
+          "Canopy platforms",
+          "Vine-covered structures"
+        ],
+        "uniqueIdentifiers": [
+          "Integrated tree architecture",
+          "Elevated dwellings",
+          "Panoramic mountain views"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "exterior",
+          "description": "Bridges and walkways connecting tree dwellings"
+        },
+        {
+          "type": "door",
+          "position": "dwelling entrance",
+          "description": "Sleek, automated entryways into residences"
+        }
+      ],
+      "dominantElements": [
+        "Colossal ancient trees",
+        "Integrated glass and metal architecture",
+        "Canopy platforms",
+        "Vine-covered structures"
+      ],
+      "uniqueIdentifiers": [
+        "Integrated tree architecture",
+        "Elevated dwellings",
+        "Panoramic mountain views"
+      ],
+      "primaryMedia": "media-1765434332324-tzv2ls7gj"
+    },
+    "niche-1765434355914-v4o9i4mwi": {
+      "id": "niche-1765434355914-v4o9i4mwi",
+      "type": "niche",
+      "name": "Sky-Root Dwelling Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Spacious, open-plan interiors defined by clean lines and expansive glass walls that seamlessly connect with the natural environment. Furniture is minimalist and modular, designed to complement the organic architecture. Lush indoor plants are artfully arranged, bringing vibrant life into the living spaces.",
+        "colorsAndLighting": "Warm, ambient light emanates from hidden sources, casting a cozy glow that highlights the natural wood tones, soft grays, and vibrant greens of the foliage. The deep browns of the surrounding tree bark are visible through the transparent walls, offering a dramatic natural contrast.",
+        "atmosphere": "Crisp, clean air with a consistently comfortable temperature pervades the space, fostering a profound sense of tranquility. The only sounds are the faint hum of life support systems, and distant mist may softly diffuse light, enhancing the ethereal quality.",
+        "materials": "The primary structural elements are the massive, textured bark of ancient trees, visible through polished glass. Interior finishes feature smooth, light-colored wood, brushed metal accents, and polished glass. Lush foliage spills over structures and clings to surfaces.",
+        "mood": "Calm, sophisticated, and deeply serene, evoking a sense of luxurious seclusion and harmonious connection with nature.",
+        "sounds": "Quietude, faint life support hum, distant ambient natural sounds",
+        "spatialLayout": "The interior is characterized by an open-plan layout, with high ceilings and a strong visual connection to the exterior through large glass expanses. The sense of depth is enhanced by the framing of the natural landscape.",
+        "primary_surfaces": "Polished glass walls, smooth light wood floors",
+        "secondary_surfaces": "Textured tree bark structural elements, brushed metal fixtures",
+        "accent_features": "Strategically placed indoor greenery, subtle integrated lighting designs",
+        "dominant": "Light gray and natural wood tones",
+        "secondary": "Vibrant green from integrated foliage",
+        "accent": "Subtle metallic sheens",
+        "ambient": "Warm, diffused ambient light",
+        "genre": null,
+        "architectural_tone": "Contemporary organic integration with biomorphic elements",
+        "cultural_tone": "Affluent inhabitants seeking a harmonious blend of modern living and natural immersion.",
+        "materials_base": "Sleek, refined, nature-inspired",
+        "mood_baseline": "Peaceful contemplation and luxurious seclusion",
+        "palette_bias": "Greens, grays, wood tones, deep browns",
+        "soundscape_base": "Quietude with subtle ambient hums",
+        "flora_base": "Abundant integrated greenery and foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765434355913-z4mmekhm1",
+      "description": "The interior of a Sky-Root Dwelling, designed for affluent inhabitants seeking a harmonious blend of modern living and natural immersion. This space features spacious, open-plan layouts with clean lines and expansive glass walls that offer stunning views of the natural surroundings. Furniture is minimalist and modular, complementing the organic architecture, while strategically placed indoor greenery and subtle lighting designs enhance the serene atmosphere.",
+      "structure": {
+        "form": "organic",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "spatialLayout": "Spacious, open-plan interiors with clean lines and expansive glass walls that frame the natural surroundings. Furniture is minimalist and modular, complementing the organic architecture.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Modular seating units",
+          "Minimalist coffee table",
+          "Integrated shelving",
+          "Ambient lighting fixtures",
+          "Smart home control panel",
+          "Concealed storage solutions"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center",
+            "description": "Leading to other areas within the dwelling."
+          },
+          {
+            "type": "door",
+            "position": "back-right corner",
+            "description": "Access to private quarters or outdoor areas."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "Connecting to common areas."
+          }
+        ],
+        "dominantElements": [
+          "Expansive glass walls",
+          "Organic architectural lines",
+          "Integrated indoor greenery",
+          "Minimalist modular furniture"
+        ],
+        "uniqueIdentifiers": [
+          "Seamless indoor-outdoor transition",
+          "Artfully arranged indoor plants",
+          "Subtle, integrated lighting design"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "Leading to other areas within the dwelling."
+        },
+        {
+          "type": "door",
+          "position": "back-right corner",
+          "description": "Access to private quarters or outdoor areas."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "Connecting to common areas."
+        }
+      ],
+      "dominantElements": [
+        "Expansive glass walls",
+        "Organic architectural lines",
+        "Integrated indoor greenery",
+        "Minimalist modular furniture"
+      ],
+      "uniqueIdentifiers": [
+        "Seamless indoor-outdoor transition",
+        "Artfully arranged indoor plants",
+        "Subtle, integrated lighting design"
+      ],
+      "searchDesc": "Spacious, nature-integrated dwelling with glass walls, minimalist furniture, and lush plants.",
+      "slug": "interior-of-sky-root-dwellings"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765379826464-k1h2e8te7",
+      "id": "loc-1765394333541-v5h1ucwp3",
       "type": "host",
       "children": [
         {
-          "id": "d0dba85a-c1bc-4580-b93b-8e3d1e3f4c4b",
+          "id": "f2e9c732-cc3c-4485-9b8a-38e4bc7b37f5",
           "type": "region",
           "children": [
             {
-              "id": "3f2ab237-09d7-40ea-bba2-1a69fcf78816",
+              "id": "7a7e00f5-a4ba-4e9f-9d06-ae98c0cea906",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765379916747-1ob71mj1t",
+                  "id": "niche-1765394396166-tw92vkecj",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765394568580-sjwqdebvy",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765394668679-hu0v3brcl",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765394735262-del4585s4",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765395519728-je2svlpj5",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765396112608-8jrivgvik",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765424984260-l2stsl9f0",
+      "type": "host",
+      "children": [
+        {
+          "id": "7a75e97b-9073-4f58-9c49-7655ebe1a79e",
+          "type": "region",
+          "children": [
+            {
+              "id": "0804982d-9eca-44a1-9608-7fa50251af5c",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765425033264-gjl9i7pxh",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765425111620-b0rep0ftf",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765425175808-ockekiv5h",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765425249741-t3m4s161o",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765425302002-e6ma3xtmi",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765434139779-rx67etocy",
+      "type": "host",
+      "children": [
+        {
+          "id": "78522d61-8c1a-4748-9ead-781763fadcb5",
+          "type": "region",
+          "children": [
+            {
+              "id": "190460ee-b2b4-4f1c-a52c-5315a007444c",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765434196004-6uyd38yux",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765434296823-tpxqjm5wm",
+      "type": "host",
+      "children": [
+        {
+          "id": "b469e4af-1080-4cdd-b8fa-09b54d88e468",
+          "type": "region",
+          "children": [
+            {
+              "id": "16c421fd-f63b-4b87-ae22-b03b8cc3f0a6",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765434355914-v4o9i4mwi",
                   "type": "niche",
                   "children": []
                 }
@@ -362,6 +1962,8 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765379826464-k1h2e8te7"
+    "loc-1765394333541-v5h1ucwp3",
+    "loc-1765424984260-l2stsl9f0",
+    "loc-1765434296823-tpxqjm5wm"
   ]
 }

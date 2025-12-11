@@ -65,6 +65,20 @@ CRITICAL MATERIAL INHERITANCE RULES:
 KEY PRINCIPLE: Function changes, building materials don't.
 WRONG: Replacing parent's wall materials with generic function-appropriate materials
 RIGHT: Adding function-specific fixtures while KEEPING the parent's wall materials
+
+**INTERIOR vs EXTERIOR MATERIAL DISTINCTION (CRITICAL FOR INTERIORS):**
+When creating an INTERIOR space, distinguish between:
+- **BUILDING MATERIALS** (use these for interior): facades, walls, composites, metals, smooth surfaces, polished materials, constructed elements
+- **LANDSCAPE/ENVIRONMENT** (do NOT use for interior): rock formations, sand, water, vegetation, terrain, natural geology
+
+WRONG for interior: "reddish-brown rock walls" when rock is the SURROUNDING landscape
+RIGHT for interior: "smooth composite walls" when the building is made of composite materials
+
+The parent may describe BOTH the building AND its surroundings. For interiors:
+- Look for: "facades", "building", "structure", "composite", "metal", "polished", "sleek", "constructed"
+- Ignore: "rock formations", "sand", "water", "terrain", "surrounding landscape", "natural features"
+
+The building is INSIDE the landscape, but the interior walls are made of BUILDING materials, not landscape materials.
 `
     : '';
 

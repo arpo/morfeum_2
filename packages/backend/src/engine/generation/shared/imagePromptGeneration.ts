@@ -161,8 +161,14 @@ Create a detailed, vivid image prompt for FLUX that:
 2. Uses ALL the DNA details (materials, colors, atmosphere, mood)
 3. Includes ALL required elements and navigable elements
 4. Creates an ASYMMETRIC, visually interesting composition
-5. Interior materials should be consistent with parent's exterior materials
-6. Matches the architectural_tone and cultural_tone
+5. Matches the architectural_tone and cultural_tone
+
+**CRITICAL FOR INTERIORS - MATERIAL PRIORITY:**
+For INTERIOR spaces, the scene-specific DNA fields take PRIORITY over inherited/cascading fields:
+- USE: "looks", "materials", "primary_surfaces" from this node's DNA (these describe BUILDING materials)
+- IGNORE: landscape/environment references in inherited fields (rock formations, sand, terrain, vegetation)
+- The parent's "architectural_tone" and "materials_base" may reference the EXTERIOR landscape - do NOT use landscape materials for interior walls
+- Interior walls are made of BUILDING materials (composites, metals, polished surfaces), NOT surrounding landscape (rocks, sand)
 
 OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
 The prompt should be rich, specific, and capture the unique character of this ${nodeType}.
