@@ -756,22 +756,22 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
 
 /**
  * Helper: Detect perspective from node data
+ * Uses stored spaceType from LLM analysis (no string matching)
  */
 function detectPerspectiveFromNode(node: any): 'interior' | 'exterior' {
-  const description = (node.description || node.name || '').toLowerCase();
-  
-  const interiorWords = ['inside', 'interior', 'room', 'hall', 'chamber', 'within', 'indoor'];
-  if (interiorWords.some(word => description.includes(word))) {
-    return 'interior';
+  // 1. Use stored spaceType if available (from LLM structure analysis)
+  if (node.spaceType === 'interior' || node.spaceType === 'exterior') {
+    return node.spaceType;
   }
-
-  const exteriorWords = ['outside', 'exterior', 'street', 'garden', 'rooftop', 'terrace', 'outdoor'];
-  if (exteriorWords.some(word => description.includes(word))) {
+  
+  // 2. Fallback based on node type (domain rules)
+  // Location nodes are always exterior (they represent buildings/places)
+  if (node.type === 'location' || node.type === 'host' || node.type === 'region') {
     return 'exterior';
   }
-
-  // Default to exterior for most cases
-  return 'exterior';
+  
+  // 3. Default for niches without spaceType
+  return node.type === 'niche' ? 'interior' : 'exterior';
 }
 
 export { router as navigationRouter };

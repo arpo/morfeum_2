@@ -53,6 +53,31 @@ export class PipelineHelper {
   }
 
   /**
+   * Update pipeline configuration (steps) mid-stream
+   * Used when interior is detected after initial exterior pipeline config was sent
+   * Frontend will update its step count based on this event
+   */
+  updatePipelineConfig(newPipelineType: PipelineType, message: string = 'Updating pipeline...') {
+    this.pipelineType = newPipelineType;
+    this.steps = getStepsForPipeline(newPipelineType);
+    
+    console.log(`[${this.pipelineName}] ${this.spawnId} Updating pipeline type to: ${newPipelineType} (${this.steps.length} steps)`);
+    
+    // Send config update event - frontend will update its step count
+    sseService.sendEvent(this.spawnId, 'progress', {
+      stage: 'config_update',
+      message,
+      pipelineType: newPipelineType,
+      steps: this.steps.map((step, index) => ({
+        index,
+        id: step.id,
+        name: step.name,
+        duration: step.duration
+      }))
+    });
+  }
+
+  /**
    * Start timing a stage
    */
   startStage(stageName: string, message: string, data?: any) {

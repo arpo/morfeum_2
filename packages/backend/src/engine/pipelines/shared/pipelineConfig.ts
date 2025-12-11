@@ -23,6 +23,19 @@ export const PIPELINE_STEPS = {
     { id: 'tree_building', name: 'Finalizing', duration: 500 }
   ],
   
+  // Interior spawn pipeline: creates exterior hierarchy first, then GO_INSIDE for niche
+  // Used when hierarchy_classification detects niche/interior intent
+  worldTreeInterior: [
+    { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 2000 },
+    { id: 'location_dna_generation', name: 'Creating Location DNA', duration: 6000 },
+    { id: 'parent_dna_generation', name: 'Building World', duration: 9000 },
+    { id: 'tree_building', name: 'Building Tree', duration: 500 },
+    { id: 'space_analysis', name: 'Analyzing Interior', duration: 3000 },
+    { id: 'image_prompt', name: 'Composing Scene', duration: 1000 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2000 },
+    { id: 'node_building', name: 'Creating Interior', duration: 1000 }
+  ],
+  
   character: [
     { id: 'seed_generation', name: 'Creating Seed', duration: 3000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },

@@ -34,6 +34,7 @@ export interface CreateNodeOptions {
   userPrompt?: string;   // User's space description (used for structure analysis)
   useUnifiedPipeline?: boolean; // Enable new unified pipeline (defaults to true)
   includeFurnishing?: boolean; // Include furnishing details in structure analysis (--furnish flag)
+  isSubPipeline?: boolean; // Running as sub-pipeline - skip started/completed events (parent handles progress)
 }
 
 /**
@@ -52,7 +53,10 @@ export async function runCreateLocationNodePipeline(
 ): Promise<{ imageUrl: string; imagePrompt: string; node: any }> {
   // Auto-detect pipeline type from intent (GOTO uses 'navigationGoto', GO_INSIDE uses 'navigation')
   const pipelineType = options?.gotoText ? 'navigationGoto' : getPipelineTypeForIntent(intent.intent);
-  const helper = navigationId ? new PipelineHelper(navigationId, 'CreateNodePipeline', pipelineType) : null;
+  // Skip helper entirely for sub-pipelines - parent handles all progress events
+  const helper = (navigationId && !options?.isSubPipeline) 
+    ? new PipelineHelper(navigationId, 'CreateNodePipeline', pipelineType) 
+    : null;
 
   try {
     const nodeType = options?.nodeType || 'niche';
@@ -62,7 +66,8 @@ export async function runCreateLocationNodePipeline(
     let style = options?.style || decision.style || intent.style || 'default';
     let perspective = options?.perspective || decision.perspective || intent.spaceType || 'interior';
 
-    if (helper) {
+    // Only send started event if not a sub-pipeline (parent handles progress)
+    if (helper && !options?.isSubPipeline) {
       helper.started('Starting node creation...');
     }
 
@@ -241,7 +246,8 @@ export async function runCreateLocationNodePipeline(
     console.log('  Has DNA:', !!node.dna ? '✓' : '✗');
     console.log('═══════════════════════════════════════════════════════════\n');
 
-    if (helper) {
+    // Only send completion event if not a sub-pipeline (parent handles progress)
+    if (helper && !options?.isSubPipeline) {
       helper.completed('Node created successfully', { node, imageUrl, imagePrompt });
     }
 

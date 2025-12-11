@@ -13,6 +13,7 @@ import { runWorldTreePipeline } from '../engine/pipelines/worldTreePipeline';
 import { runNodeCreationPipeline } from '../engine/pipelines/nodeCreationPipeline';
 import { sseService } from '../services/SSEService';
 import { getStepsForPipeline } from '../engine/pipelines/shared/pipelineConfig';
+import { parsePromptToHierarchy } from '../engine/nodeCreation/detection/parsePromptToHierarchy';
 import type { HierarchyStructure, HierarchyNode } from '../engine/hierarchyAnalysis/types';
 import { 
   createNode, 
@@ -109,11 +110,9 @@ router.post('/engine/start', asyncHandler(async (req: Request, res: Response) =>
  * POST /api/spawn/location/start - Start hierarchy-based location spawn with SSE
  * 
  * USES NEW NODE CREATION PIPELINE
- * - Parses prompt to detect depth (host only, host/region, host/region/location, or full with niche)
- * - Creates single-branch hierarchy
- * - Defaults to Host/Region/Location (exterior) unless "inside/interior" mentioned
- * - Uses per-node-type DNA prompts
- * - Uses PipelineHelper for proper SSE events
+ * - Sends response IMMEDIATELY for instant UI feedback
+ * - Pipeline handles detection at start and sends updated config if interior detected
+ * - Frontend updates step count based on SSE config events
  */
 router.post('/location/start', asyncHandler(async (req: Request, res: Response) => {
   const { prompt } = req.body;
@@ -130,10 +129,13 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
   const spawnId = `loc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const apiKey = (req as any).mzooApiKey;
 
-  // Store pipeline configuration for SSE initialization (use worldTree config for compatibility)
-  const steps = getStepsForPipeline('worldTree');
+  // Use default pipeline type - pipeline will detect interior and send updated config via SSE
+  const pipelineType = 'worldTree';
+
+  // Store pipeline configuration for SSE initialization
+  const steps = getStepsForPipeline(pipelineType);
   pipelineConfigs.set(spawnId, {
-    pipelineType: 'worldTree',
+    pipelineType,
     steps: steps.map((step, index) => ({
       index,
       id: step.id,
@@ -146,14 +148,20 @@ router.post('/location/start', asyncHandler(async (req: Request, res: Response) 
   const abortController = new AbortController();
   activeAbortControllers.set(spawnId, abortController);
 
-  // Send immediate response
+  // Send IMMEDIATE response - no blocking operations before this
   res.status(HTTP_STATUS.OK).json({
     message: 'Location spawn started (new nodeCreation pipeline)',
-    data: { spawnId, entityType: 'location', engine: 'nodeCreation', eventsUrl: `/api/spawn/events/${spawnId}` },
+    data: { 
+      spawnId, 
+      entityType: 'location', 
+      engine: 'nodeCreation', 
+      pipelineType,
+      eventsUrl: `/api/spawn/events/${spawnId}` 
+    },
     timestamp: new Date().toISOString(),
   });
 
-  // Start NEW nodeCreation pipeline (parses prompt, creates hierarchy, uses PipelineHelper)
+  // Start pipeline - it will detect interior and send updated config if needed
   runNodeCreationPipeline(spawnId, prompt.trim(), apiKey, abortController.signal)
     .finally(() => {
       activeAbortControllers.delete(spawnId);

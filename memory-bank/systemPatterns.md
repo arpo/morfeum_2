@@ -181,6 +181,29 @@ Frontend Input → commandParser → Backend Route → Pipeline → Analyzer
 
 **Examples**: `worldTreePipeline.ts` + `spawn.ts`, `createNodePipeline.ts` + `navigation.ts`
 
+### Dynamic Pipeline Configuration
+**Problem**: Pipeline type unknown until after first LLM call (e.g., interior detection).
+
+**Solution**:
+1. Route sends HTTP response immediately with default config (e.g., `worldTree` 6 steps)
+2. Pipeline's first stage detects actual type
+3. If different, call `helper.updatePipelineConfig(newType, message)`
+4. SSE event sends new `pipelineType` and `steps` array to frontend
+5. Frontend updates progress bar step count dynamically
+
+**Example**: `nodeCreationPipeline.ts` - starts as `worldTree`, updates to `worldTreeInterior` if niche detected
+
+### Sub-Pipeline Pattern
+**Problem**: Nested pipelines send their own SSE events (double progress bars, premature completion).
+
+**Solution**:
+1. Pass `isSubPipeline: true` in options
+2. Inner pipeline skips `PipelineHelper` creation entirely
+3. No `started()`, `startStage()`, `completeStage()`, `completed()` events from inner pipeline
+4. Parent pipeline handles ALL SSE events
+
+**Example**: `runCreateLocationNodePipeline` called from `runInteriorFlow` with `isSubPipeline: true`
+
 ## Development Guidelines
 
 ### File Size Limits

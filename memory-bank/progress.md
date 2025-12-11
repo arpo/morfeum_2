@@ -25,6 +25,13 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Interior Spawn Pipeline System (Dec 11):** Complete rework of interior/niche creation:
+  - **Two-phase approach**: Creates exterior hierarchy first, then runs GO_INSIDE for niche
+  - **Dynamic pipeline config**: Route responds immediately, pipeline updates config via SSE when interior detected
+  - **Sub-pipeline pattern**: `isSubPipeline: true` flag prevents nested pipelines from sending SSE events
+  - **Single progress bar**: No more double progress bars or mid-stream switching
+  - **Documentation**: Added comprehensive README at `packages/backend/src/engine/pipelines/README.md`
+  - Key files: `nodeCreationPipeline.ts`, `createNodePipeline.ts`, `pipelineHelpers.ts`, `spawn.ts`
 - **Windowless/Solid Exterior System (Dec 10):** Prevents incorrect window generation in solid structures:
   - Solid forms (dome, mushroom, saucer, pod, capsule, sphere) now MUST use `openings: "none"`
   - Added enclosed interior constraint for FLUX: no gaps, holes, or skylights unless specified

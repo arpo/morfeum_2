@@ -1,6 +1,39 @@
 # Active Context
 
-## Recent Changes (2025-12-10)
+## Recent Changes (2025-12-11)
+
+### Interior Spawn Pipeline System (Dec 11)
+- **Feature**: When spawning interior locations (e.g., "Inside a Victorian pub"), the system now uses a specialized two-phase approach
+- **Problem Solved**: 
+  1. Interior spawns were not saving worldTree (double completion events)
+  2. Two progress bars appearing (inner pipeline creating separate SSE events)
+  3. Generate button had no visual feedback (pre-flight detection blocking HTTP response)
+
+- **Architecture - Dynamic Pipeline Config Update**:
+  1. Route sends HTTP response immediately with default `worldTree` config (6 steps)
+  2. Pipeline's first stage detects if prompt describes an interior
+  3. If interior detected, sends SSE `config_update` event with `worldTreeInterior` (8 steps)
+  4. Frontend updates its step count based on SSE event
+  5. Single progress bar flows 0% → 100%
+
+- **Key Implementation**:
+  - `pipelineHelpers.ts`: Added `updatePipelineConfig(newPipelineType, message)` method
+  - `nodeCreationPipeline.ts`: Calls `helper.updatePipelineConfig('worldTreeInterior')` when niche detected
+  - `createNodePipeline.ts`: Added `isSubPipeline: true` flag to prevent nested pipelines from sending SSE events
+  - `spawn.ts`: Removed blocking pre-flight detection, sends response immediately
+
+- **Sub-Pipeline Pattern**:
+  ```javascript
+  const result = await runCreateLocationNodePipeline(
+    decision, context, intent, apiKey,
+    { isSubPipeline: true },  // Prevents helper creation, no SSE events
+    spawnId
+  );
+  ```
+
+- **Documentation**: Added comprehensive README at `packages/backend/src/engine/pipelines/README.md`
+
+## Previous Changes (2025-12-10)
 
 ### Windowless/Solid Exterior System (Dec 10)
 - **Issue**: Solid exterior structures (mushroom, saucer, dome, pod) were generating interiors with windows when they shouldn't
