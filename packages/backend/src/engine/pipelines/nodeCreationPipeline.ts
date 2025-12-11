@@ -347,9 +347,17 @@ async function runInteriorFlow(
 
   // Create exterior-focused prompt for location DNA generation
   // The user's prompt describes an interior space, but the location needs EXTERIOR DNA
-  const exteriorLocationPrompt = `EXTERIOR VIEW of the building/structure named "${locationInfo.name}" that contains the interior space "${nicheInfo.name}".
-Describe the building's facade, entrance, and exterior architectural features.
-Style context from interior: ${prompt}`;
+  const exteriorLocationPrompt = `EXTERIOR VIEW of "${locationInfo.name}" - the structure or formation that contains "${nicheInfo.name}".
+
+Interior description: ${nicheInfo.description}
+
+Generate the EXTERIOR appearance - what this location looks like from OUTSIDE:
+- The entrance/opening leading to the interior
+- External surfaces and materials (consistent with the interior)
+- The immediate surrounding environment
+
+Maintain the same architectural style and materials as the interior, viewed from outside.
+Original concept: ${prompt}`;
 
   const locationDNAPrompt = deepestNodeDNAGeneration(
     exteriorLocationPrompt,

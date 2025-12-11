@@ -1,62 +1,76 @@
 {
   "nodes": {
-    "loc-1765444317433-8170b8qyu": {
-      "id": "loc-1765444317433-8170b8qyu",
+    "loc-1765445110185-u3ycnzkdu": {
+      "id": "loc-1765445110185-u3ycnzkdu",
       "type": "host",
-      "name": "The Haven Isles",
+      "name": "Exotic Coastline",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The islands feature dramatic cliff faces sculpted by the elements, with natural formations that blend seamlessly into the landscape. Lush, vibrant vegetation cascades down to meet the pristine ocean.",
-        "colorsAndLighting": "A palette of earthy browns, deep greens, and vibrant ocean blues dominates, illuminated by the warm glow of the sun and soft, natural light filtering through foliage.",
-        "atmosphere": "The air is fresh, crisp, and carries the invigorating scent of salt spray and damp earth. A gentle, constant sea breeze rustles through the leaves, creating a sense of calm and wildness.",
-        "materials": "Dominated by natural elements such as rock, wood, and lush plant life, with a raw, untamed texture.",
-        "mood": "Evokes a profound sense of peace, tranquility, and connection to the natural world, offering a sanctuary from external pressures.",
-        "sounds": "Waves crashing, seabirds calling, wind rustling leaves, gentle ocean breeze.",
-        "primary_surfaces": "Natural rock faces, dense foliage",
-        "secondary_surfaces": "Sandy beaches, ocean water",
-        "accent_features": "Hidden coves, cascading waterfalls, dramatic viewpoints",
-        "dominant": "Earthy browns and greys (rock)",
-        "secondary": "Deep ocean blues and greens (water and vegetation)",
-        "accent": "Warm sunlight and soft, diffused light from natural openings",
-        "ambient": "Bright and natural",
-        "genre": "Eco-Fantasy",
-        "architectural_tone": "Organic integration with natural landscapes, cliffside dwellings",
-        "cultural_tone": "Exclusive eco-retreat for nature immersion and deep relaxation",
-        "materials_base": "Natural stone, earth, dense vegetation",
-        "mood_baseline": "Serene, peaceful, rejuvenating",
-        "palette_bias": "Earth tones, ocean blues, lush greens",
-        "soundscape_base": "Natural ambient sounds of sea and wind",
-        "flora_base": "Abundant, wild, and native island flora",
-        "fauna_base": "Native seabirds and marine life"
+        "looks": "Expansive coastlines with dramatic, sculpted rock formations. Turquoise waters meet rugged cliffs, interspersed with vibrant, untamed flora. The overall impression is one of raw, natural beauty amplified by gentle, organic human intervention.",
+        "colorsAndLighting": "Dominated by the vibrant blues of the ocean and sky, contrasted with the warm, earthy tones of the cliffs. Natural light is abundant, softened by mist and the angle of the sun, creating a golden hour glow that permeates the landscape.",
+        "atmosphere": "The air is thick with the scent of salt and exotic blooms, carried on a refreshing sea breeze. The temperature is consistently mild and pleasant, fostering a sense of calm and renewal. The distant sound of waves is a constant, soothing presence.",
+        "materials": "Primarily natural materials: rough-hewn stone, weathered wood, and abundant lush vegetation. Where structures exist, they are seamlessly integrated, appearing as extensions of the natural forms.",
+        "mood": "Serene, opulent, and awe-inspiring. A place of profound connection with nature, offering a luxurious escape and deep tranquility.",
+        "sounds": "Ocean waves, seabirds, gentle breeze, distant calls of marine life",
+        "primary_surfaces": "Sculpted rock faces, naturalistic composites",
+        "secondary_surfaces": "Smooth wooden elements, lush foliage",
+        "accent_features": "Glowingly recessed lighting, organic archways, integrated plant life",
+        "dominant": "Deep ocean blue and sky azure (dominant)",
+        "secondary": "Sandstone beige and rocky grey-brown (secondary)",
+        "accent": "Warm amber and vibrant green (accent)",
+        "ambient": "Soft, natural daylight with warm golden hour tones",
+        "genre": "Luxury Eco-Fantasy",
+        "architectural_tone": "Organic, cave-like, integrated with nature",
+        "cultural_tone": "Exclusive eco-retreat, private natural sanctuary",
+        "materials_base": "Naturalistic composite and stone",
+        "mood_baseline": "Tranquil, opulent, connected",
+        "palette_bias": "Earth tones with warm and vibrant accents",
+        "soundscape_base": "Natural coastal ambience",
+        "flora_base": "Lush coastal foliage",
+        "fauna_base": "Marine life and seabirds"
       },
-      "description": "A secluded archipelago where natural beauty meets tranquil living. The islands are characterized by dramatic cliff faces, lush vegetation, and pristine coastlines, offering a sanctuary for those seeking peace and rejuvenation.",
-      "searchDesc": "A tranquil archipelago offering a sanctuary of natural beauty and serene living.",
-      "slug": "the-haven-isles",
+      "description": "A surreal and breathtaking coastal region where organic architecture meets natural splendor. Towering cliffs meet turquoise waters under a sky that constantly shifts through vibrant hues, creating a landscape of unparalleled natural beauty and secluded luxury.",
+      "searchDesc": "Luxurious coastal region with organic architecture and breathtaking ocean views at sunset or sunrise.",
+      "slug": "exotic-coastline",
       "structure": {
-        "spatialLayout": "Expansive, with a strong sense of verticality due to cliffs and horizontal spread of coastlines and dense interiors.",
+        "spatialLayout": "Vast and open coastal vistas, with intimate, sculpted retreats carved into the landscape. Depth is emphasized by the receding ocean and the layered cliffs.",
+        "navigableElements": [
+          "Sea caves",
+          "Hidden coves",
+          "Coastal trails",
+          "Ocean vistas"
+        ],
         "dominantElements": [
-          "Secluded Islands",
-          "Dramatic Coastlines",
-          "Abundant Greenery"
+          "Dramatic coastal cliffs",
+          "Azure ocean",
+          "Bioluminescent flora"
         ],
         "uniqueIdentifiers": [
-          "Archipelago Geography",
-          "Harmonious Integration with Nature"
+          "Eroded rock formations",
+          "Unique tidal patterns",
+          "Rare marine life"
         ]
       },
+      "navigableElements": [
+        "Sea caves",
+        "Hidden coves",
+        "Coastal trails",
+        "Ocean vistas"
+      ],
       "dominantElements": [
-        "Secluded Islands",
-        "Dramatic Coastlines",
-        "Abundant Greenery"
+        "Dramatic coastal cliffs",
+        "Azure ocean",
+        "Bioluminescent flora"
       ],
       "uniqueIdentifiers": [
-        "Archipelago Geography",
-        "Harmonious Integration with Nature"
+        "Eroded rock formations",
+        "Unique tidal patterns",
+        "Rare marine life"
       ],
-      "primaryMedia": "media-1765444412217-lt3snuv5c"
+      "primaryMedia": "media-1765445189003-wfj364gsd"
     },
-    "d0e0345e-c07b-4fe5-9d9e-3faa0f2c60da": {
-      "id": "d0e0345e-c07b-4fe5-9d9e-3faa0f2c60da",
+    "96e7ee20-4b65-4fa7-bde9-2e6b2b0e942d": {
+      "id": "96e7ee20-4b65-4fa7-bde9-2e6b2b0e942d",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -66,219 +80,243 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "5bd5d5ff-577c-4feb-8f49-00ac4ccdcd2f": {
-      "id": "5bd5d5ff-577c-4feb-8f49-00ac4ccdcd2f",
+    "7a823c2a-ada9-49ed-93b0-4c2557c3abe3": {
+      "id": "7a823c2a-ada9-49ed-93b0-4c2557c3abe3",
       "type": "location",
-      "name": "Ocean's Embrace Retreat",
+      "name": "The Ocean's Embrace Dwelling",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The exterior appears as if sculpted directly from the living rock of the cliff face, with organic, flowing lines mimicking natural erosion. Terraced levels and cantilevered sections jut out, maximizing ocean vistas. The scale is grand yet harmonious with its surroundings, avoiding sharp, artificial angles.",
-        "colorsAndLighting": "The primary colors are earthy tones of grey, brown, and ochre, mirroring the surrounding rock. Warm, diffused light glows from within the structure, visible through openings and accentuating the rocky textures at dusk.",
-        "atmosphere": "The air is fresh and carries the scent of salt spray. A constant gentle breeze rustles through the surrounding greenery. The sounds of the ocean are ever-present, creating a tranquil and invigorating atmosphere. The temperature is comfortably mild, influenced by the sea air.",
-        "materials": "The dominant materials are rough-hewn, natural stone and integrated rock formations. Smooth, polished elements might be used sparingly for contrast, but the overall impression is of a structure born from the earth and sea.",
-        "mood": "The retreat evokes a sense of profound peace and connection to nature. It offers a feeling of sanctuary and awe-inspiring beauty, inviting deep relaxation.",
-        "sounds": "Crashing waves, seabird calls, gentle breeze, distant ocean roar",
-        "primary_surfaces": "Textured, rugged cliff face; weathered stone facades",
-        "secondary_surfaces": "Smooth, natural rock outcrops; subtly polished stone accents",
-        "accent_features": "Embedded soft lighting; native, low-lying greenery cascading over ledges",
-        "dominant": "Earthy browns and greys (rock)",
-        "secondary": "Deep blues and oranges (ocean and sky reflections)",
-        "accent": "Warm, soft glow (lighting)",
-        "ambient": "Warm, inviting glow",
+        "looks": "The exterior presents as a natural extension of the coastal cliffs, with gently sculpted, undulating walls that mimic erosion. The primary form is organic and flowing, with a large, sweeping archway serving as the main entrance, offering a glimpse of the interior and the distant ocean.  Small, scattered openings reveal pockets of vibrant green foliage clinging to the structure.",
+        "colorsAndLighting": "The natural stone tones of the cliff face are complemented by the warm, amber glow emanating from recessed lighting within the dwelling's facade.  Shadows are soft and rounded, emphasizing the organic forms.",
+        "atmosphere": "The air is fresh and carries the scent of salt and sea spray, with a gentle, cooling breeze.  The constant, soothing murmur of waves provides a natural soundtrack. The temperature is pleasantly mild, reflecting its coastal positioning.",
+        "materials": "The primary material is a sculpted, light-colored composite that mimics natural rock, exhibiting a smooth, textured surface.  This is integrated with the actual rougher textures of the surrounding cliff face.  Vibrant green foliage spills over some edges.",
+        "mood": "Serene and inviting, evoking a sense of luxurious sanctuary deeply connected to the natural world. It promises tranquility and breathtaking beauty.",
+        "sounds": "Ocean waves, gentle breeze, distant seabirds",
+        "primary_surfaces": "Sculpted, undulating composite mimicking light stone; Natural, textured cliff face",
+        "secondary_surfaces": "Embedded stone, integrated rock formations",
+        "accent_features": "Warmly glowing light recesses, lush green foliage",
+        "dominant": "Light beige-tan (mimicking sandstone)",
+        "secondary": "Rocky grey-brown (natural cliff integration)",
+        "accent": "Warm amber (lighting), Vibrant green (foliage)",
+        "ambient": "Soft, naturalistic glow",
         "genre": null,
-        "architectural_tone": "Organic cliffside dwelling integrated with cave-like structures",
-        "cultural_tone": "Luxury eco-retreat for those seeking nature immersion and serenity",
-        "materials_base": "Natural stone and earth",
-        "mood_baseline": "Serene and awe-inspiring",
-        "palette_bias": "Earth tones, ocean blues, sunset oranges",
-        "soundscape_base": "Coastal nature sounds",
-        "flora_base": "Native coastal vegetation",
-        "fauna_base": "Seabirds"
+        "architectural_tone": "Organic sculpted cave-dwelling seamlessly integrated with natural cliffs",
+        "cultural_tone": "Luxury eco-retreat, private sanctuary for appreciating nature",
+        "materials_base": "Naturalistic composite and stone",
+        "mood_baseline": "Tranquil luxury",
+        "palette_bias": "Earth tones with warm and vibrant accents",
+        "soundscape_base": "Coastal ambient",
+        "flora_base": "Clinging coastal foliage",
+        "fauna_base": "None"
       },
-      "description": "A unique dwelling built into the natural landscape, offering stunning ocean vistas. EXTERIOR VIEW.",
-      "searchDesc": "Cliffside dwelling with cave-like structure, ocean views, and organic architecture.",
-      "slug": "ocean-s-embrace-retreat",
+      "description": "A luxurious, organically sculpted dwelling with a cave-like ceiling and undulating walls, opening to a coastal view. EXTERIOR VIEW implied by the opening to the view, but the focus is on the dwelling's exterior integration.",
+      "searchDesc": "Luxurious organically sculpted dwelling with cave-like entrance, opening to ocean views.",
+      "slug": "the-ocean-s-embrace-dwelling",
       "structure": {
-        "spatialLayout": "The layout is asymmetrical and organic, following the contours of the cliff. Spaces flow into one another, with a sense of depth created by the natural formations and the expansive view.",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center",
-            "description": "A wide, naturally formed archway leading into the main structure."
-          },
-          {
-            "type": "path",
-            "position": "left",
-            "description": "A winding stone path descending towards the ocean shore."
-          }
-        ],
-        "dominantElements": [
-          "Organic, rock-face integration",
-          "Expansive ocean-facing facade",
-          "Terraced, cantilevered platforms",
-          "Subtle, embedded lighting"
-        ],
-        "uniqueIdentifiers": [
-          "Living rock walls",
-          "Sunset vista orientation",
-          "Cave-like architectural flow",
-          "Seamless indoor-outdoor transition"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center",
-          "description": "A wide, naturally formed archway leading into the main structure."
-        },
-        {
-          "type": "path",
-          "position": "left",
-          "description": "A winding stone path descending towards the ocean shore."
-        }
-      ],
-      "dominantElements": [
-        "Organic, rock-face integration",
-        "Expansive ocean-facing facade",
-        "Terraced, cantilevered platforms",
-        "Subtle, embedded lighting"
-      ],
-      "uniqueIdentifiers": [
-        "Living rock walls",
-        "Sunset vista orientation",
-        "Cave-like architectural flow",
-        "Seamless indoor-outdoor transition"
-      ],
-      "primaryMedia": "media-1765444354845-c6dltc0mx"
-    },
-    "niche-1765444342226-9xtd84v48": {
-      "id": "niche-1765444342226-9xtd84v48",
-      "type": "niche",
-      "name": "The Tranquil Core",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This interior space is characterized by its organic, cave-like form, seamlessly integrated with modern comforts. Textured, rocky walls and ceiling create a naturalistic enclosure, softened by the arrangement of plush, curved sofas and cushions. A central fire pit with a crackling flame serves as a focal point.",
-        "colorsAndLighting": "Warm, diffused light emanates from embedded sources within the rocky surfaces, casting a gentle glow that accentuates textures. The dominant colors are earthy tones derived from the rock, complemented by the warm hues of the fire and the distant sunset.",
-        "atmosphere": "The air within the Tranquil Core is infused with the warmth of the fire and the faint scent of salt spray from the adjacent ocean. A sense of calm and enclosure prevails, creating a tranquil and inviting ambiance. The temperature is comfortably mild, a gentle contrast to the external sea air.",
-        "materials": "The interior surfaces are primarily textured, rocky elements, designed to evoke a natural cave-like feel. This is contrasted by the soft textures of cushions and upholstery, and the smooth, polished surfaces often found in modern comfort elements.",
-        "mood": "The retreat evokes profound peace and a deep sense of sanctuary, offering awe-inspiring beauty and an invitation to deep relaxation.",
-        "sounds": "Crackling fire, distant ocean waves, gentle breeze.",
-        "spatialLayout": "The space is an enclosed, organic form, likely with irregular contours. Sofas and seating are arranged around a central feature, with a prominent opening directing the view outwards.",
-        "primary_surfaces": "Textured, rocky walls and ceiling",
-        "secondary_surfaces": "Soft, curved upholstery on sofas and cushions",
-        "accent_features": "Embedded warm, glowing lights; crackling flame in central fire pit",
-        "dominant": "Earthy browns and greys (rock)",
-        "secondary": "Warm, soft glow (lighting)",
-        "accent": "Deep blues and oranges (sunset view)",
-        "ambient": "Warm, inviting glow",
-        "genre": null,
-        "architectural_tone": "Organic cliffside dwelling integrated with cave-like structures",
-        "cultural_tone": "Luxury eco-retreat for those seeking nature immersion and serenity",
-        "materials_base": "Natural stone and earth",
-        "mood_baseline": "Serene and awe-inspiring",
-        "palette_bias": "Earth tones, ocean blues, sunset oranges",
-        "soundscape_base": "Coastal nature sounds",
-        "flora_base": "Native coastal vegetation",
-        "fauna_base": "Seabirds"
-      },
-      "description": "An interior space that embodies the natural, organic forms of its cliffside parent. Textured, rocky surfaces and embedded lighting create a cave-like ambiance, while soft furnishings around a central fire pit encourage relaxation, all centered around a breathtaking ocean view.",
-      "primaryMedia": "media-1765444342223-ildcljmee",
-      "structure": {
-        "form": "organic",
-        "roofType": "vaulted",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "open-passages",
-        "openingShape": "irregular",
-        "functionalType": "residential",
-        "spatialLayout": "This space features organically curved walls and a vaulted ceiling, creating an enveloping, cave-like atmosphere. Seating is arranged in a circular fashion around a central fire pit, with a prominent opening offering a direct view of the ocean.",
-        "requiredElements": [
-          "textured, rocky walls and ceiling",
-          "embedded warm, glowing lights",
-          "soft, curved sofas and cushions",
-          "central fire pit with a crackling flame",
-          "serene ocean view at sunset",
-          "modern comfort",
-          "crackling flame"
-        ],
-        "suggestedFixtures": [
-          "low-profile coffee table",
-          "natural fiber rugs",
-          "ambient floor lighting",
-          "decorative stone elements",
-          "soft throws and blankets",
-          "incense or aromatherapy diffuser"
-        ],
+        "spatialLayout": "The dwelling appears carved into the landscape, with its main living space forming a broad, shallow cavern that opens dramatically outwards.  Its dimensions feel expansive yet intimately connected to the surrounding rock.",
         "navigableElements": [
           {
             "type": "archway",
-            "position": "front",
-            "description": "A large, organically shaped opening framing the ocean vista."
+            "position": "front facade",
+            "description": "A grand, arching opening that mirrors the interior's expansive view."
           },
           {
-            "type": "passage",
-            "position": "rear",
-            "description": "A less defined, cave-like passage leading to other areas of the retreat."
+            "type": "path",
+            "position": "leading to dwelling",
+            "description": "A gently winding path carved into the cliffside."
           }
         ],
         "dominantElements": [
-          "organic, rocky walls",
-          "vaulted ceiling",
-          "central fire pit",
-          "large ocean-view opening",
-          "embedded lighting"
+          "Undulating, sculpted exterior walls",
+          "Cave-like entrance aperture",
+          "Integrated rocky cliff face",
+          "Lush, clinging foliage"
         ],
         "uniqueIdentifiers": [
-          "cave-like integration with cliff face",
-          "direct, expansive ocean panorama",
-          "warm, fire-lit gathering space"
+          "Warm orange light glowing from recesses",
+          "Smooth, organic curves of the structure",
+          "Seamless blend of natural rock and sculpted form",
+          "Opening directly onto a coastal vista"
         ]
       },
       "navigableElements": [
         {
           "type": "archway",
-          "position": "front",
-          "description": "A large, organically shaped opening framing the ocean vista."
+          "position": "front facade",
+          "description": "A grand, arching opening that mirrors the interior's expansive view."
         },
         {
-          "type": "passage",
-          "position": "rear",
-          "description": "A less defined, cave-like passage leading to other areas of the retreat."
+          "type": "path",
+          "position": "leading to dwelling",
+          "description": "A gently winding path carved into the cliffside."
         }
       ],
       "dominantElements": [
-        "organic, rocky walls",
-        "vaulted ceiling",
-        "central fire pit",
-        "large ocean-view opening",
-        "embedded lighting"
+        "Undulating, sculpted exterior walls",
+        "Cave-like entrance aperture",
+        "Integrated rocky cliff face",
+        "Lush, clinging foliage"
       ],
       "uniqueIdentifiers": [
-        "cave-like integration with cliff face",
-        "direct, expansive ocean panorama",
-        "warm, fire-lit gathering space"
+        "Warm orange light glowing from recesses",
+        "Smooth, organic curves of the structure",
+        "Seamless blend of natural rock and sculpted form",
+        "Opening directly onto a coastal vista"
       ],
-      "searchDesc": "Cave-like interior with modern comfort, fire pit, and ocean sunset view.",
-      "slug": "the-tranquil-core",
-      "parentId": "5bd5d5ff-577c-4feb-8f49-00ac4ccdcd2f"
+      "primaryMedia": "media-1765445153600-bh1qylzqm"
+    },
+    "niche-1765445135126-9bgkzg52g": {
+      "id": "niche-1765445135126-9bgkzg52g",
+      "type": "niche",
+      "name": "The Living Cavern",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A luxuriously sculpted interior dwelling with a cave-like ceiling and undulating walls. Irregular-shaped recesses glow with warm orange light, and smaller openings reveal lush green foliage. The space is anchored by a large, plush sectional sofa and a low-profile coffee table with a fire pit.",
+        "colorsAndLighting": "Dominant warm amber light emanates from irregular recesses and a central fire pit. Soft ambient lighting enhances sculpted features. Shadows are soft and rounded, emphasizing organic forms.",
+        "atmosphere": "The air is fresh and carries the scent of salt and sea spray, with a gentle, cooling breeze. The constant, soothing murmur of waves provides a natural soundtrack. The temperature is pleasantly mild, reflecting its coastal positioning.",
+        "materials": "The interior walls are a light, textured, and undulating sculpted composite mimicking natural rock. Smooth, light wooden flooring contrasts with a light-colored shaggy rug. Furniture features plush fabrics and ribbed textures.",
+        "mood": "Serene and inviting, evoking a sense of luxurious sanctuary deeply connected to the natural world. It promises tranquility and breathtaking beauty.",
+        "sounds": "Murmur of waves, gentle breeze, crackling fire",
+        "spatialLayout": "An organically shaped, flowing interior space with a curved sectional sofa, leading to an expansive archway with a view.",
+        "primary_surfaces": "Light, textured, undulating sculpted composite walls and ceiling.",
+        "secondary_surfaces": "Smooth, light wooden flooring; light-colored shaggy rug; plush fabric sofa; ribbed sofa texture.",
+        "accent_features": "Warm orange glowing irregular-shaped recesses; smaller openings revealing lush green foliage; flickering fire pit; decorative vases and potted plants.",
+        "dominant": "Light beige-tan (interior walls, rug)",
+        "secondary": "Rocky grey-brown (integrated cliff face view)",
+        "accent": "Warm amber (lighting), Vibrant green (foliage), Light-cream (sofa)",
+        "ambient": "Soft, naturalistic glow",
+        "genre": null,
+        "architectural_tone": "Organic sculpted cave-dwelling seamlessly integrated with natural cliffs",
+        "cultural_tone": "Luxury eco-retreat, private sanctuary for appreciating nature",
+        "materials_base": "Naturalistic composite and stone",
+        "mood_baseline": "Tranquil luxury",
+        "palette_bias": "Earth tones with warm and vibrant accents",
+        "soundscape_base": "Coastal ambient",
+        "flora_base": "Clinging coastal foliage",
+        "fauna_base": "None"
+      },
+      "description": "A luxuriously sculpted living space with organically flowing cave-like walls and ceiling, featuring integrated glowing light recesses. This medium-scale, wide-oriented interior opens dramatically to the ocean through a grand archway, leading to an outdoor patio. The space is furnished with a curved sectional sofa, a fire pit coffee table, and adorned with soft lighting and natural elements.",
+      "primaryMedia": "media-1765445135125-qlyn00p7e",
+      "structure": {
+        "form": "organic",
+        "roofType": "arched",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "spatialLayout": "The main seating area, defined by a curved sofa and coffee table with a fire pit, is centrally located. Sculpted niches and shelves are integrated into the walls, showcasing decorative items and plants, all illuminated by soft ambient lighting.",
+        "requiredElements": [
+          "luxuriously sculpted interior dwelling with a cave-like ceiling and walls featuring a light, textured, and undulating surface",
+          "Irregular-shaped recesses glow with warm orange light",
+          "smaller openings reveal lush green foliage",
+          "A large, plush, light-cream sectional sofa with a ribbed texture",
+          "a dark, low-profile coffee table with a flickering fire pit",
+          "Soft cushions in beige, blue, and green",
+          "A light-colored shaggy rug lies beneath the seating area",
+          "smooth, light wooden flooring",
+          "Sculpted niches and shelves display decorative vases and potted plants",
+          "soft ambient lighting",
+          "An expansive, arching opening reveals a serene ocean under a vibrant sunset or sunrise sky, framed by rocky cliffs draped in foliage",
+          "an outdoor patio",
+          "a lounge chair",
+          "a small, glowing fire element",
+          "cave-like ceiling and walls featuring a light",
+          "warm orange light",
+          "ribbed texture curves around a dark",
+          "flickering fire pit",
+          "outdoor patio featuring a lounge chair and a small"
+        ],
+        "suggestedFixtures": [
+          "Ambient accent lighting (integrated into niches)",
+          "Recessed ceiling spotlights",
+          "Decorative vases and planters",
+          "Textured throw pillows",
+          "Natural fiber rugs",
+          "Fire pit with protective screen"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "front center",
+            "description": "Expansive archway opening to the ocean and outdoor patio"
+          },
+          {
+            "type": "passage",
+            "position": "rear wall",
+            "description": "Passage leading to other internal dwelling areas"
+          },
+          {
+            "type": "passage",
+            "position": "side wall",
+            "description": "Passage leading to other internal dwelling areas or alcoves"
+          }
+        ],
+        "dominantElements": [
+          "Organic, undulating cave-like walls and ceiling",
+          "Expansive arching opening to the ocean",
+          "Curving sectional sofa",
+          "Glowing irregular-shaped light recesses",
+          "Sculpted niches and shelves"
+        ],
+        "uniqueIdentifiers": [
+          "Cave-like sculpted interior form",
+          "Integrated warm orange glowing light recesses",
+          "Seamless transition to outdoor patio via a grand archway",
+          "Ribbed texture on the plush sectional sofa"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front center",
+          "description": "Expansive archway opening to the ocean and outdoor patio"
+        },
+        {
+          "type": "passage",
+          "position": "rear wall",
+          "description": "Passage leading to other internal dwelling areas"
+        },
+        {
+          "type": "passage",
+          "position": "side wall",
+          "description": "Passage leading to other internal dwelling areas or alcoves"
+        }
+      ],
+      "dominantElements": [
+        "Organic, undulating cave-like walls and ceiling",
+        "Expansive arching opening to the ocean",
+        "Curving sectional sofa",
+        "Glowing irregular-shaped light recesses",
+        "Sculpted niches and shelves"
+      ],
+      "uniqueIdentifiers": [
+        "Cave-like sculpted interior form",
+        "Integrated warm orange glowing light recesses",
+        "Seamless transition to outdoor patio via a grand archway",
+        "Ribbed texture on the plush sectional sofa"
+      ],
+      "searchDesc": "Luxurious cave dwelling with ocean views, warm lighting, and lush foliage.",
+      "slug": "the-living-cavern",
+      "parentId": "7a823c2a-ada9-49ed-93b0-4c2557c3abe3"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765444317433-8170b8qyu",
+      "id": "loc-1765445110185-u3ycnzkdu",
       "type": "host",
       "children": [
         {
-          "id": "d0e0345e-c07b-4fe5-9d9e-3faa0f2c60da",
+          "id": "96e7ee20-4b65-4fa7-bde9-2e6b2b0e942d",
           "type": "region",
           "children": [
             {
-              "id": "5bd5d5ff-577c-4feb-8f49-00ac4ccdcd2f",
+              "id": "7a823c2a-ada9-49ed-93b0-4c2557c3abe3",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765444342226-9xtd84v48",
+                  "id": "niche-1765445135126-9bgkzg52g",
                   "type": "niche",
                   "children": []
                 }
@@ -290,6 +328,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765444317433-8170b8qyu"
+    "loc-1765445110185-u3ycnzkdu"
   ]
 }
