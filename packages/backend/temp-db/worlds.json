@@ -1,76 +1,915 @@
 {
   "nodes": {
-    "loc-1765445110185-u3ycnzkdu": {
-      "id": "loc-1765445110185-u3ycnzkdu",
+    "loc-1765452778037-xijjhyos9": {
+      "id": "loc-1765452778037-xijjhyos9",
       "type": "host",
-      "name": "Exotic Coastline",
+      "name": "Aethelburg",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Expansive coastlines with dramatic, sculpted rock formations. Turquoise waters meet rugged cliffs, interspersed with vibrant, untamed flora. The overall impression is one of raw, natural beauty amplified by gentle, organic human intervention.",
-        "colorsAndLighting": "Dominated by the vibrant blues of the ocean and sky, contrasted with the warm, earthy tones of the cliffs. Natural light is abundant, softened by mist and the angle of the sun, creating a golden hour glow that permeates the landscape.",
-        "atmosphere": "The air is thick with the scent of salt and exotic blooms, carried on a refreshing sea breeze. The temperature is consistently mild and pleasant, fostering a sense of calm and renewal. The distant sound of waves is a constant, soothing presence.",
-        "materials": "Primarily natural materials: rough-hewn stone, weathered wood, and abundant lush vegetation. Where structures exist, they are seamlessly integrated, appearing as extensions of the natural forms.",
-        "mood": "Serene, opulent, and awe-inspiring. A place of profound connection with nature, offering a luxurious escape and deep tranquility.",
-        "sounds": "Ocean waves, seabirds, gentle breeze, distant calls of marine life",
-        "primary_surfaces": "Sculpted rock faces, naturalistic composites",
-        "secondary_surfaces": "Smooth wooden elements, lush foliage",
-        "accent_features": "Glowingly recessed lighting, organic archways, integrated plant life",
-        "dominant": "Deep ocean blue and sky azure (dominant)",
-        "secondary": "Sandstone beige and rocky grey-brown (secondary)",
-        "accent": "Warm amber and vibrant green (accent)",
-        "ambient": "Soft, natural daylight with warm golden hour tones",
-        "genre": "Luxury Eco-Fantasy",
-        "architectural_tone": "Organic, cave-like, integrated with nature",
-        "cultural_tone": "Exclusive eco-retreat, private natural sanctuary",
-        "materials_base": "Naturalistic composite and stone",
-        "mood_baseline": "Tranquil, opulent, connected",
-        "palette_bias": "Earth tones with warm and vibrant accents",
-        "soundscape_base": "Natural coastal ambience",
-        "flora_base": "Lush coastal foliage",
-        "fauna_base": "Marine life and seabirds"
+        "looks": "A colossal, spherical metallic city bristling with intricate machinery, windows, and charming residential structures. Its underside is a complex network of pipes, gears, and propulsion units, suggesting advanced, functional engineering.",
+        "colorsAndLighting": "Dominated by a light blue-grey metallic sheen, accented by warm yellow houses and dark spires. The scene is illuminated by bright, ethereal celestial light from two large moons, creating a grand and fantastical atmosphere.",
+        "atmosphere": "The air is crisp and thin, carrying the faint scent of ozone and distant metalwork. A gentle hum of machinery emanates from the city, punctuated by the cries of soaring birds. The feeling is one of bustling activity within a serene, elevated environment.",
+        "materials": "The primary material is weathered, riveted light blue-grey metal, showing signs of age and extensive use. Accents of gleaming brass and dark, robust wood are visible in the housing and decorative elements.",
+        "mood": "Grand and fantastical, evoking a sense of imaginative escapism and pioneering spirit. It inspires wonder and a desire to explore the unknown.",
+        "sounds": "Hum of machinery, cries of birds, clanking of gears, distant wind.",
+        "primary_surfaces": "Weathered, riveted metal",
+        "secondary_surfaces": "Brass machinery, dark wood roofs",
+        "accent_features": "Visible gears, hanging orbs, engine assembly with fins",
+        "dominant": "Light blue-grey metal with extensive coverage",
+        "secondary": "Dark grey and brown on spires and roofs",
+        "accent": "Bright brass on machinery, warm yellow on houses",
+        "ambient": "Bright and ethereal",
+        "genre": "Fantasy Steampunk",
+        "architectural_tone": "Whimsical steampunk citadel with baroque and functional elements",
+        "cultural_tone": "Inhabited by intrepid sky-farers and artisans; a hub of innovation and aerial commerce.",
+        "materials_base": "Metal, wood, brass, glass",
+        "mood_baseline": "Awe and wonder",
+        "palette_bias": "Cool blues and greys with warm yellow and metallic accents",
+        "soundscape_base": "Industrial hum and avian calls",
+        "flora_base": "None",
+        "fauna_base": "Birds"
       },
-      "description": "A surreal and breathtaking coastal region where organic architecture meets natural splendor. Towering cliffs meet turquoise waters under a sky that constantly shifts through vibrant hues, creating a landscape of unparalleled natural beauty and secluded luxury.",
-      "searchDesc": "Luxurious coastal region with organic architecture and breathtaking ocean views at sunset or sunrise.",
-      "slug": "exotic-coastline",
+      "description": "A magnificent city of fantastical architecture and celestial wonders, where the impossible takes flight. It is a nexus of innovation, trade, and adventure, suspended between the earth and the stars.",
+      "searchDesc": "Aethelburg: City of celestial wonders and impossible flights.",
+      "slug": "aethelburg",
       "structure": {
-        "spatialLayout": "Vast and open coastal vistas, with intimate, sculpted retreats carved into the landscape. Depth is emphasized by the receding ocean and the layered cliffs.",
+        "spatialLayout": "A massive, dense sphere with intricate internal and external structures, featuring a complex underside and a vibrant, occupied upper surface. It exists in a vast, open sky.",
         "navigableElements": [
-          "Sea caves",
-          "Hidden coves",
-          "Coastal trails",
-          "Ocean vistas"
+          "Sky-docks",
+          "Aerial thoroughfares",
+          "Propulsion systems"
         ],
         "dominantElements": [
-          "Dramatic coastal cliffs",
-          "Azure ocean",
-          "Bioluminescent flora"
+          "Colossal spherical city",
+          "Sprawling metropolis below",
+          "Celestial bodies"
         ],
         "uniqueIdentifiers": [
-          "Eroded rock formations",
-          "Unique tidal patterns",
-          "Rare marine life"
+          "Whimsical steampunk citadel aesthetic",
+          "Two prominent moons",
+          "Intricate brass machinery"
         ]
       },
       "navigableElements": [
-        "Sea caves",
-        "Hidden coves",
-        "Coastal trails",
-        "Ocean vistas"
+        "Sky-docks",
+        "Aerial thoroughfares",
+        "Propulsion systems"
       ],
       "dominantElements": [
-        "Dramatic coastal cliffs",
-        "Azure ocean",
-        "Bioluminescent flora"
+        "Colossal spherical city",
+        "Sprawling metropolis below",
+        "Celestial bodies"
       ],
       "uniqueIdentifiers": [
-        "Eroded rock formations",
-        "Unique tidal patterns",
-        "Rare marine life"
+        "Whimsical steampunk citadel aesthetic",
+        "Two prominent moons",
+        "Intricate brass machinery"
       ],
-      "primaryMedia": "media-1765445189003-wfj364gsd"
+      "primaryMedia": "media-1765452941899-fabtg9gd5"
     },
-    "96e7ee20-4b65-4fa7-bde9-2e6b2b0e942d": {
-      "id": "96e7ee20-4b65-4fa7-bde9-2e6b2b0e942d",
+    "5cb8a11c-64e5-4bab-99ea-07139d8397bc": {
+      "id": "5cb8a11c-64e5-4bab-99ea-07139d8397bc",
+      "type": "region",
+      "name": "The Azure Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A boundless expanse of sky, transitioning through deep indigos to soft teals. Dominated by the immense scale of celestial bodies and airborne civilizations. The overall visual is one of immense, open space punctuated by grand constructions.",
+        "colorsAndLighting": "The sky is a gradient of deep indigo overhead, fading to lighter teal near the horizon. Illuminated by two large, luminous moons and a faint third celestial body, casting a bright, ethereal glow. Shadows are soft and elongated.",
+        "atmosphere": "The air is thin, crisp, and carries a faint scent of ozone and high altitude. Subtle currents of wind flow through the expanse, providing gentle movement. The temperature is cool and refreshing.",
+        "materials": "Primarily composed of atmospheric elements and the materials of the structures that inhabit it. The visible surfaces are often metallic, stone, or crystalline, reflecting the celestial light.",
+        "mood": "A sense of profound wonder, boundless possibility, and serene majesty. It evokes awe at the vastness of the cosmos and the ingenuity of those who inhabit it.",
+        "sounds": "Distant hum of machinery, cries of high-flying birds, faint wind whistles.",
+        "primary_surfaces": "Atmospheric sky, celestial light",
+        "secondary_surfaces": "Air currents, distant structures",
+        "accent_features": "Luminous moons, faint celestial bodies",
+        "dominant": "Deep indigo and teal sky with extensive coverage",
+        "secondary": "Celestial light from moons",
+        "accent": "Faint starlight and atmospheric shimmer",
+        "ambient": "Bright and ethereal",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "materials_base": null,
+        "mood_baseline": "Wonder and serenity",
+        "palette_bias": "Cool blues and purples with celestial whites",
+        "soundscape_base": "Subtle ambient sounds of height and distance",
+        "flora_base": "None",
+        "fauna_base": "High-flying avians"
+      },
+      "description": "A vast, high-altitude domain characterized by ethereal skies and the majestic presence of celestial structures. This region is a canvas for airborne wonders and a testament to humanity's reach beyond the terrestrial.",
+      "searchDesc": "Ethereal celestial domain with floating cities and grand skies.",
+      "slug": "the-azure-expanse",
+      "structure": {
+        "spatialLayout": "An overwhelmingly vast, three-dimensional space with immense depth and open vistas. Structures are often suspended or floating, creating a sense of verticality and isolation.",
+        "dominantElements": [
+          "Celestial cities",
+          "Floating islands",
+          "Sky-currents"
+        ],
+        "uniqueIdentifiers": [
+          "Two luminous moons",
+          "Vast gradients of indigo and teal sky"
+        ]
+      },
+      "dominantElements": [
+        "Celestial cities",
+        "Floating islands",
+        "Sky-currents"
+      ],
+      "uniqueIdentifiers": [
+        "Two luminous moons",
+        "Vast gradients of indigo and teal sky"
+      ]
+    },
+    "3a8ab53c-c146-43fb-833e-418447f94e16": {
+      "id": "3a8ab53c-c146-43fb-833e-418447f94e16",
+      "type": "location",
+      "name": "The Sky Citadel",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, spherical metallic construct, densely packed with mechanical detail and adorned with charming, almost toy-like residential structures. Its underside drips with intricate, functional-looking propulsion systems, giving it a complex, multi-layered appearance.",
+        "colorsAndLighting": "Dominated by a cool, light blue-grey metallic sheen, contrasted with warm yellow housing and dark, brooding spires. The scene is illuminated by a bright, ethereal celestial light, casting soft shadows.",
+        "atmosphere": "The air is crisp and thin, carrying the faint scent of ozone and distant metalwork. A gentle hum of machinery emanates from the city, punctuated by the cries of soaring birds. The overall feeling is one of awe and wonder.",
+        "materials": "The primary material is a weathered, riveted light blue-grey metal, showing signs of age and extensive use. Accents of gleaming brass and dark, robust wood are visible in the housing and decorative elements.",
+        "mood": "Grand and fantastical, evoking a sense of imaginative escapism and pioneering spirit. It inspires wonder and a desire to explore the unknown.",
+        "sounds": "Hum of machinery, cries of gulls, distant wind, soft clanking of gears.",
+        "primary_surfaces": "Smooth, metallic sphere; textured housing walls; sharp, angular spires.",
+        "secondary_surfaces": "Polished brass machinery; dark, pitched roofs; intricately geared components.",
+        "accent_features": "Hanging orbs from propulsion units; finned engine assemblies; decorative balconies.",
+        "dominant": "Light blue-grey with extensive coverage",
+        "secondary": "Dark grey and brown on spires and roofs",
+        "accent": "Bright brass on machinery and windows, warm yellow on houses",
+        "ambient": "Bright, ethereal celestial light",
+        "genre": null,
+        "architectural_tone": "Whimsical steampunk citadel with baroque and functional elements",
+        "cultural_tone": "Inhabited by intrepid sky-farers and artisans; a hub of innovation and aerial commerce.",
+        "materials_base": "Metal, wood, brass, glass",
+        "mood_baseline": "Awe-inspiring and adventurous",
+        "palette_bias": "Cool blues and greys with warm yellow and metallic accents",
+        "soundscape_base": "Mechanical hum and natural ambient sounds",
+        "flora_base": "None",
+        "fauna_base": "Birds (gulls)"
+      },
+      "description": "A magnificent, spherical flying city of light blue-grey metal, densely packed with rivets, windows, brass machinery, gears, and platforms. Charming houses with yellow walls and dark pitched roofs intermingle with dark spires, turrets, and balconies, resembling a whimsical, airborne castle. A complex network of bronze pipes, gears, and propulsion units with hanging orbs and finned engines extends from its underside. EXTERIOR VIEW.",
+      "searchDesc": "Spherical flying city of light blue-grey metal, with yellow houses and dark spires, complex bronze machinery below, under a celestial sky with two moons.",
+      "slug": "the-sky-citadel",
+      "structure": {
+        "spatialLayout": "A massive, self-contained sphere suspended in open air, with structures built both on its surface and extending downwards. It possesses significant verticality and an intricate internal network.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "various houses",
+            "description": "Ornate wooden doors with brass fittings."
+          },
+          {
+            "type": "passage",
+            "position": "between platforms",
+            "description": "Open walkways and bridges connecting different sections."
+          },
+          {
+            "type": "stairs",
+            "position": "vertical access",
+            "description": "Spiral staircases winding around turrets."
+          },
+          {
+            "type": "archway",
+            "position": "major entry points",
+            "description": "Decorative arches adorned with gears."
+          }
+        ],
+        "dominantElements": [
+          "Colossal spherical metallic body",
+          "Whimsical house and spire clusters",
+          "Intricate underside propulsion system",
+          "Celestial sky with multiple moons",
+          "Sprawling metropolis below"
+        ],
+        "uniqueIdentifiers": [
+          "Light blue-grey metallic hull with dense rivets",
+          "Intermingling yellow-walled houses and dark spires",
+          "Bronze pipes, gears, and finned engines hanging from the underside",
+          "Two luminous full moons dominating the sky",
+          "Delicate cables connecting to unseen lower structures"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "various houses",
+          "description": "Ornate wooden doors with brass fittings."
+        },
+        {
+          "type": "passage",
+          "position": "between platforms",
+          "description": "Open walkways and bridges connecting different sections."
+        },
+        {
+          "type": "stairs",
+          "position": "vertical access",
+          "description": "Spiral staircases winding around turrets."
+        },
+        {
+          "type": "archway",
+          "position": "major entry points",
+          "description": "Decorative arches adorned with gears."
+        }
+      ],
+      "dominantElements": [
+        "Colossal spherical metallic body",
+        "Whimsical house and spire clusters",
+        "Intricate underside propulsion system",
+        "Celestial sky with multiple moons",
+        "Sprawling metropolis below"
+      ],
+      "uniqueIdentifiers": [
+        "Light blue-grey metallic hull with dense rivets",
+        "Intermingling yellow-walled houses and dark spires",
+        "Bronze pipes, gears, and finned engines hanging from the underside",
+        "Two luminous full moons dominating the sky",
+        "Delicate cables connecting to unseen lower structures"
+      ],
+      "primaryMedia": "media-1765452798692-6oegsitg1"
+    },
+    "niche-1765452906034-nw1evgh2v": {
+      "id": "niche-1765452906034-nw1evgh2v",
+      "type": "niche",
+      "name": "The Sky Citadel Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a labyrinth of exposed, riveted blue-grey metal structures, interwoven with gleaming brass machinery and intricate conduits. Compact, warm yellow residential modules are integrated into the walls and ceilings, connected by elevated walkways and arching passages. The scale feels immense yet intricately detailed.",
+        "colorsAndLighting": "A cool, pervasive blue-grey dominates the metalwork, interspersed with the warm glow from yellow housing interiors and the bright gleam of brass. Ambient celestial light filters in, creating soft, diffused illumination with gentle highlights on polished surfaces.",
+        "atmosphere": "The air within the Sky Citadel is recycled and carries the faint, sharp scent of ozone mixed with the metallic tang of machinery. A constant, low-level hum of unseen engines and complex clockwork mechanisms forms the ambient soundscape, occasionally punctuated by distant clanks or whirs.",
+        "materials": "The primary building material is weathered, riveted light blue-grey metal, echoing the exterior. Gleaming brass is used for functional components and decorative inlays, while dark wood accents might be found within the residential modules. Surfaces range from smooth and polished to heavily textured and geared.",
+        "mood": "The interior evokes a sense of industrious awe and a comforting, albeit intricate, domesticity. It feels both grandly engineered and lived-in, a testament to pioneering ingenuity.",
+        "sounds": "Mechanical hum, whirring gears, distant clanks, occasional vents hissing",
+        "spatialLayout": "The interior is a complex, multi-layered space characterized by interconnecting chambers and pathways. Exposed structural elements create a sense of depth, with various levels accessible via walkways and access points.",
+        "primary_surfaces": "weathered riveted metal walls, smooth composite flooring, exposed metal beams",
+        "secondary_surfaces": "polished brass piping and gears, dark wood paneling within housing units, textured conduit coverings",
+        "accent_features": "integrated ventilation grates with intricate patterns, brass-plated control panels, small porthole windows",
+        "dominant": "Light blue-grey metal with extensive coverage",
+        "secondary": "Warm yellow on housing interiors and lighting fixtures",
+        "accent": "Bright brass on machinery, conduits, and structural connectors",
+        "ambient": "Bright, ethereal celestial light, diffused and soft",
+        "genre": null,
+        "architectural_tone": "Whimsical steampunk citadel with baroque and functional elements",
+        "cultural_tone": "Inhabited by intrepid sky-farers and artisans; a hub of innovation and aerial commerce.",
+        "materials_base": "Metal, wood, brass, glass",
+        "mood_baseline": "Awe-inspiring and adventurous",
+        "palette_bias": "Cool blues and greys with warm yellow and metallic accents",
+        "soundscape_base": "Mechanical hum and natural ambient sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765452906034-g772h2k7s",
+      "description": "The interior of The Sky Citadel is a large, spherical environment that mirrors the colossal metallic construct it resides within. It serves as a bustling hub for sky-farers and artisans, facilitating innovation and aerial commerce through its integrated systems and dynamic layout.",
+      "structure": {
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "commercial",
+        "spatialLayout": "The interior of the Sky Citadel is a vast, cavernous space that follows the curvature of the parent structure. It is designed to accommodate diverse activities, with distinct zones for commerce, innovation, and social interaction.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Holographic displays for commerce",
+          "Artisan workbenches",
+          "Seating areas for patrons",
+          "Information kiosks",
+          "Display cases for goods",
+          "Integrated lighting systems"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "central",
+            "description": "A wide, curving passage that allows free movement throughout the citadel's interior."
+          },
+          {
+            "type": "door",
+            "position": "periphery",
+            "description": "Numerous access points leading to smaller chambers, workshops, or residential areas."
+          },
+          {
+            "type": "stairs",
+            "position": "integrated",
+            "description": "Spiral or levitating staircases connecting different levels within the spherical expanse."
+          }
+        ],
+        "dominantElements": [
+          "Curving walls that follow the spherical form",
+          "Intricate mechanical conduits and support structures",
+          "Varying levels of illumination",
+          "Interactive holographic interfaces",
+          "Visible propulsion system components integrated into the structure"
+        ],
+        "uniqueIdentifiers": [
+          "The omnipresent curvature of the spherical interior",
+          "The blend of advanced technology with a 'toy-like' aesthetic",
+          "Integrated and visible functional propulsion elements",
+          "A dynamic, multi-layered appearance of interconnected systems"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "A wide, curving passage that allows free movement throughout the citadel's interior."
+        },
+        {
+          "type": "door",
+          "position": "periphery",
+          "description": "Numerous access points leading to smaller chambers, workshops, or residential areas."
+        },
+        {
+          "type": "stairs",
+          "position": "integrated",
+          "description": "Spiral or levitating staircases connecting different levels within the spherical expanse."
+        }
+      ],
+      "dominantElements": [
+        "Curving walls that follow the spherical form",
+        "Intricate mechanical conduits and support structures",
+        "Varying levels of illumination",
+        "Interactive holographic interfaces",
+        "Visible propulsion system components integrated into the structure"
+      ],
+      "uniqueIdentifiers": [
+        "The omnipresent curvature of the spherical interior",
+        "The blend of advanced technology with a 'toy-like' aesthetic",
+        "Integrated and visible functional propulsion elements",
+        "A dynamic, multi-layered appearance of interconnected systems"
+      ],
+      "searchDesc": "Interior of a colossal, mechanical Sky Citadel with residential pods and ornate metalwork.",
+      "slug": "interior-of-the-sky-citadel"
+    },
+    "niche-1765453009115-h3nr4f4lm": {
+      "id": "niche-1765453009115-h3nr4f4lm",
+      "type": "niche",
+      "name": "The Sky Citadel Ballroom",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a colossal, spherical metallic construct, densely packed with intricate mechanical detail. Charming, toy-like residential structures are integrated into its form, and its underside drips with complex, functional-looking propulsion systems, creating a multi-layered appearance.",
+        "colorsAndLighting": "Dominated by a cool, light blue-grey metallic sheen, warm yellow housing, and dark spires, illuminated by a bright, ethereal celestial light that casts soft shadows.",
+        "atmosphere": "The air feels crisp and thin, carrying a faint scent of ozone and distant metalwork. A gentle hum of machinery is punctuated by the cries of soaring birds.",
+        "materials": "Primarily weathered, riveted light blue-grey metal with accents of gleaming brass and dark wood in housing and decorative elements. Mechanical components gleam with polished brass.",
+        "mood": "Grand and fantastical, evoking a sense of imaginative escapism and pioneering spirit, inspiring awe and wonder.",
+        "sounds": "Gentle machinery hum, distant metalwork, soaring bird cries.",
+        "spatialLayout": "A vast, cavernous spherical interior space, with intricate layers of mechanical structures and integrated housing elements creating a sense of immense depth and density.",
+        "primary_surfaces": "Smooth, riveted metallic sphere; textured housing walls; sharp, angular spires.",
+        "secondary_surfaces": "Polished brass machinery; dark, pitched roofs on housing; intricately geared components.",
+        "accent_features": "Hanging orbs from propulsion units; finned engine assemblies; decorative balconies.",
+        "dominant": "Light blue-grey metallic with extensive coverage",
+        "secondary": "Dark grey and brown on spires and roofs",
+        "accent": "Bright brass on machinery and windows, warm yellow on houses",
+        "ambient": "Bright, ethereal celestial light",
+        "genre": null,
+        "architectural_tone": "Whimsical steampunk citadel with baroque and functional elements",
+        "cultural_tone": "Inhabited by intrepid sky-farers and artisans; a hub of innovation and aerial commerce.",
+        "materials_base": "Metal, wood, brass, glass",
+        "mood_baseline": "Awe-inspiring and adventurous",
+        "palette_bias": "Cool blues and greys with warm yellow and metallic accents",
+        "soundscape_base": "Mechanical hum and natural ambient sounds",
+        "flora_base": "None",
+        "fauna_base": "Birds (gulls)"
+      },
+      "primaryMedia": "media-1765453009115-ie11tdoya",
+      "description": "The Sky Citadel Ballroom is a vast, wide-ranging entertainment space within the Sky Citadel. Its form is rectangular, echoing the larger structural elements of its parent location, with a flat ceiling. The scale is undeniably large, designed to accommodate grand events, and it maintains the overall industrial yet refined aesthetic of the Citadel.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A grand, wide rectangular hall characterized by its immense scale, featuring exposed metal structures and brass machinery. Elevated walkways and arching passages connect to other parts of the Citadel.",
+        "requiredElements": [
+          "the big ball room"
+        ],
+        "suggestedFixtures": [
+          "large central dance floor",
+          "tiered seating areas",
+          "brass control consoles for lighting and sound",
+          "a raised platform for performances or a DJ booth",
+          "decorative conduits and machinery integrated into the walls"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "back wall",
+            "description": "A grand archway leading to further sections of the Sky Citadel, adorned with intricate brass detailing."
+          },
+          {
+            "type": "door",
+            "position": "left wall, mid-section",
+            "description": "A heavy, riveted metal door, likely a service entrance or access to private lounges."
+          },
+          {
+            "type": "passage",
+            "position": "right wall, mid-section",
+            "description": "An elevated walkway connecting to residential or commercial modules."
+          }
+        ],
+        "dominantElements": [
+          "exposed riveted blue-grey metal structures",
+          "gleaming brass machinery and conduits",
+          "immense open floor space",
+          "integrated residential modules within the walls"
+        ],
+        "uniqueIdentifiers": [
+          "sky-faring artisan aesthetic",
+          "interwoven machinery and architectural elements",
+          "combination of industrial and elegant design"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "the big ball room"
+        ],
+        "suggested": [
+          "dance floor",
+          "seating",
+          "bar",
+          "decorative lighting fixtures",
+          "sound system",
+          "stage/performance area"
+        ],
+        "placementNotes": [
+          "The dance floor should occupy the central expanse of the room.",
+          "Seating can be arranged in tiered sections along the periphery or in intimate lounge areas.",
+          "A prominent bar should be situated towards the back or a side wall.",
+          "Lighting fixtures should be integrated into the exposed machinery and conduits, providing atmospheric illumination.",
+          "The performance area should be clearly defined, perhaps with a raised stage or a designated section of the floor.",
+          "Emphasize the integration of functional machinery into the decorative elements of the space."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "back wall",
+          "description": "A grand archway leading to further sections of the Sky Citadel, adorned with intricate brass detailing."
+        },
+        {
+          "type": "door",
+          "position": "left wall, mid-section",
+          "description": "A heavy, riveted metal door, likely a service entrance or access to private lounges."
+        },
+        {
+          "type": "passage",
+          "position": "right wall, mid-section",
+          "description": "An elevated walkway connecting to residential or commercial modules."
+        }
+      ],
+      "dominantElements": [
+        "exposed riveted blue-grey metal structures",
+        "gleaming brass machinery and conduits",
+        "immense open floor space",
+        "integrated residential modules within the walls"
+      ],
+      "uniqueIdentifiers": [
+        "sky-faring artisan aesthetic",
+        "interwoven machinery and architectural elements",
+        "combination of industrial and elegant design"
+      ],
+      "searchDesc": "Colossal spherical ballroom, densely packed with mechanical detail, charming housing, and intricate propulsion systems.",
+      "slug": "the-big-ball-room"
+    },
+    "niche-1765453110090-6h0jhppe8": {
+      "id": "niche-1765453110090-6h0jhppe8",
+      "type": "niche",
+      "name": "Sky Citadel Energy Core",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The space is a cavernous, circular chamber, its walls lined with densely packed, intricate machinery. At its center pulses a radiant, contained energy source, casting a vibrant glow. Heavy conduits snake across the walls and ceiling, converging on the core.",
+        "colorsAndLighting": "Illuminated by the bright, ethereal light of the energy source, casting dynamic, shifting shadows across the blue-grey metal. Warm brass accents on machinery gleam intensely.",
+        "atmosphere": "The air is thick with the scent of ozone and hot metal, charged with barely contained power. A deep, resonant hum emanates from the energy core, a palpable vibration that permeates the entire space.",
+        "materials": "The primary walls are constructed of the same weathered, riveted light blue-grey metal as the exterior. This is interspersed with gleaming brass piping and dark, robust wood casing for some of the older equipment.",
+        "mood": "Awe-inspiring and intense, conveying the immense power and delicate balance required to maintain the construct's energy.",
+        "sounds": "Deep hum, crackling energy, whirring gears, faint metallic echoes",
+        "spatialLayout": "A large, cylindrical space, deeper than it is wide, dominated by a central, illuminated energy core and the machinery surrounding it.",
+        "primary_surfaces": "Riveted light blue-grey metal walls, smooth composite floor, dense network of metallic conduits",
+        "secondary_surfaces": "Polished brass piping, dark wood control panels, reinforced steel plating",
+        "accent_features": "Pulsating energy core, arcing electrical discharges, viewing ports into critical systems",
+        "dominant": "Light blue-grey metal with extensive coverage",
+        "secondary": "Dark grey and brown on older wooden casings and structural supports",
+        "accent": "Bright brass on machinery and conduits, ethereal white/blue from the energy core",
+        "ambient": "Bright, ethereal celestial light emanating from the energy source",
+        "genre": null,
+        "architectural_tone": "Whimsical steampunk citadel with baroque and functional elements",
+        "cultural_tone": "Inhabited by intrepid sky-farers and artisans; a hub of innovation and aerial commerce.",
+        "materials_base": "Metal, wood, brass, glass",
+        "mood_baseline": "Awe-inspiring and adventurous",
+        "palette_bias": "Cool blues and greys with warm yellow and metallic accents",
+        "soundscape_base": "Mechanical hum and natural ambient sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765453110090-939ya2znw",
+      "description": "The 'basement with energy source' of the Sky Citadel, a large, industrial, spherical chamber designed to house and manage the citadel's power. It features a prominent central energy core, extensive maintenance infrastructure, and a sealed, windowless environment consistent with its parent structure's robust, metallic form.",
+      "structure": {
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "circular",
+        "functionalType": "industrial",
+        "spatialLayout": "A vast, spherical chamber housing a central, glowing energy source. Catwalks and maintenance platforms ascend the curved walls.",
+        "requiredElements": [
+          "basement with energy source",
+          "energy source"
+        ],
+        "suggestedFixtures": [
+          "Central energy containment unit",
+          "Maintenance catwalks",
+          "Power conduits and cabling",
+          "Control consoles",
+          "Structural support beams",
+          "Cooling vents"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear wall, lower section",
+            "description": "Access tunnel leading from the rest of the Sky Citadel."
+          },
+          {
+            "type": "stairs",
+            "position": "along the curved wall, mid-section",
+            "description": "Spiral staircase ascending to higher catwalk levels."
+          },
+          {
+            "type": "passage",
+            "position": "side wall, upper section",
+            "description": "Service access to auxiliary power regulators."
+          }
+        ],
+        "dominantElements": [
+          "Massive, spherical chamber",
+          "Central glowing energy source",
+          "Intricate network of pipes and conduits",
+          "Multi-tiered maintenance platforms and catwalks"
+        ],
+        "uniqueIdentifiers": [
+          "The spherical, enclosed form echoing the Sky Citadel's exterior",
+          "The overwhelming presence of the central energy source",
+          "The industrial, functional aesthetic of advanced machinery"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "energy source"
+        ],
+        "suggested": [
+          "Central energy containment unit",
+          "Maintenance catwalks",
+          "Power conduits and cabling",
+          "Control consoles",
+          "Structural support beams",
+          "Cooling vents"
+        ],
+        "placementNotes": [
+          "The energy source is the absolute focal point, centrally located.",
+          "Catwalks and conduits are integrated into the curved walls, providing access and detail.",
+          "Control consoles are positioned on lower, accessible platforms.",
+          "Cooling vents are subtly incorporated into the wall panels."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear wall, lower section",
+          "description": "Access tunnel leading from the rest of the Sky Citadel."
+        },
+        {
+          "type": "stairs",
+          "position": "along the curved wall, mid-section",
+          "description": "Spiral staircase ascending to higher catwalk levels."
+        },
+        {
+          "type": "passage",
+          "position": "side wall, upper section",
+          "description": "Service access to auxiliary power regulators."
+        }
+      ],
+      "dominantElements": [
+        "Massive, spherical chamber",
+        "Central glowing energy source",
+        "Intricate network of pipes and conduits",
+        "Multi-tiered maintenance platforms and catwalks"
+      ],
+      "uniqueIdentifiers": [
+        "The spherical, enclosed form echoing the Sky Citadel's exterior",
+        "The overwhelming presence of the central energy source",
+        "The industrial, functional aesthetic of advanced machinery"
+      ],
+      "searchDesc": "The humming heart of the construct, a basement alive with energy and intricate machinery.",
+      "slug": "basement-with-energy-source"
+    },
+    "niche-1765453215706-6ws8cxdsf": {
+      "id": "niche-1765453215706-6ws8cxdsf",
+      "type": "niche",
+      "name": "Sky Citadel Rooftop Terrace",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is an exposed platform on the uppermost surface of a massive, spherical metallic city. Small, brightly colored residential structures are nestled among intricate mechanical components.  Beneath the platform, complex propulsion systems hang, appearing almost like ornate decorations. Sharp, dark spires pierce the sky around the edges.",
+        "colorsAndLighting": "The dominant light blue-grey metallic sheen of the construct is illuminated by a bright, ethereal celestial light, casting soft, long shadows. Warm yellow accents from the houses contrast with the dark grey of the spires.",
+        "atmosphere": "The air here is crisp and thin, carrying the faint, sharp scent of ozone and distant metalwork. A low, pervasive hum of machinery rises from the city's depths, occasionally broken by the cries of soaring gulls.",
+        "materials": "The primary material is weathered, riveted light blue-grey metal, showing its age. Gleaming brass accents are visible on machinery and window frames, while the small houses feature dark wood roofs and warm yellow walls.",
+        "mood": "Grand and fantastical, this space evokes a sense of awe and adventurous wonder, inspiring the spirit of exploration.",
+        "sounds": "Mechanical hum, wind, distant city sounds, bird cries",
+        "spatialLayout": "An expansive, flat open area forming the apex of the spherical structure, with the vast expanse of the sky above and the city sprawling below.",
+        "primary_surfaces": "Smooth, weathered metallic platform; textured walls of housing units; sharp, angular spire surfaces.",
+        "secondary_surfaces": "Polished brass machinery components; dark, pitched roofs of houses; intricately geared elements of propulsion units.",
+        "accent_features": "Hanging orbs from propulsion units; finned engine assemblies; decorative balconies on housing units.",
+        "dominant": "Light blue-grey metallic sheen with extensive coverage.",
+        "secondary": "Dark grey and brown on spires and house roofs.",
+        "accent": "Bright brass on machinery and windows; warm yellow on house walls.",
+        "ambient": "Bright, ethereal celestial light.",
+        "genre": null,
+        "architectural_tone": "Whimsical steampunk citadel with baroque and functional elements",
+        "cultural_tone": "Inhabited by intrepid sky-farers and artisans; a hub of innovation and aerial commerce.",
+        "materials_base": "Metal, wood, brass, glass",
+        "mood_baseline": "Awe-inspiring and adventurous",
+        "palette_bias": "Cool blues and greys with warm yellow and metallic accents",
+        "soundscape_base": "Mechanical hum and natural ambient sounds",
+        "flora_base": "None",
+        "fauna_base": "Birds (gulls)"
+      },
+      "primaryMedia": "media-1765453215705-qqqcpi97d",
+      "description": "An open-air rooftop space atop the Sky Citadel, offering an immersive experience of the aerial environment. The terrace is expansive, designed to accommodate gatherings and provide unparalleled views of the world below, blending the utilitarian structure of the Citadel with elements suited for leisure and observation.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "An expansive, open-air space situated on the highest level of the Sky Citadel, offering panoramic views. It is designed for gathering and relaxation amidst the aerial environment.",
+        "requiredElements": [
+          "rooftop open air"
+        ],
+        "suggestedFixtures": [
+          "observation decks",
+          "seating areas",
+          "weather-resistant furniture",
+          "telescopes",
+          "lighting fixtures",
+          "decorative metallic elements"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "central",
+            "description": "A wide, open passage leading into the terrace from an interior access point."
+          },
+          {
+            "type": "archway",
+            "position": "perimeter",
+            "description": "Several ornate archways providing access to different viewing platforms around the edge."
+          },
+          {
+            "type": "stairs",
+            "position": "corner",
+            "description": "A spiral staircase leading up from a lower level."
+          }
+        ],
+        "dominantElements": [
+          "open sky above",
+          "views of the cityscape below",
+          "exposed structural elements of the Citadel",
+          "metallic railings and platforms",
+          "wind-swept atmosphere"
+        ],
+        "uniqueIdentifiers": [
+          "direct exposure to the elements",
+          "unobstructed aerial vistas",
+          "integration with the Citadel's superstructure"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "A wide, open passage leading into the terrace from an interior access point."
+        },
+        {
+          "type": "archway",
+          "position": "perimeter",
+          "description": "Several ornate archways providing access to different viewing platforms around the edge."
+        },
+        {
+          "type": "stairs",
+          "position": "corner",
+          "description": "A spiral staircase leading up from a lower level."
+        }
+      ],
+      "dominantElements": [
+        "open sky above",
+        "views of the cityscape below",
+        "exposed structural elements of the Citadel",
+        "metallic railings and platforms",
+        "wind-swept atmosphere"
+      ],
+      "uniqueIdentifiers": [
+        "direct exposure to the elements",
+        "unobstructed aerial vistas",
+        "integration with the Citadel's superstructure"
+      ],
+      "searchDesc": "Open-air rooftop platform on a vast, metallic sky-city with charming houses and complex machinery.",
+      "slug": "roof-top-open-air"
+    },
+    "niche-1765453382421-0snjzc8tc": {
+      "id": "niche-1765453382421-0snjzc8tc",
+      "type": "niche",
+      "name": "Sky Citadel Dwelling",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A compact, utilitarian living space defined by its functional design. Warm yellow walls contrast with exposed metallic conduits and simple, built-in furniture. The scale is intimate, suggesting a personal dwelling within the larger citadel.",
+        "colorsAndLighting": "Dominated by warm yellow walls with accents of brass and light blue-grey metal. Soft, diffused light emanates from internal fixtures, casting a gentle glow.",
+        "atmosphere": "The air is warm and slightly stuffy, carrying a faint scent of oiled metal and old wood. A low, rhythmic hum from the citadel's machinery is subtly present, a constant reminder of its presence.",
+        "materials": "Walls are constructed from a warm yellow, lightly textured composite material. Exposed pipes and structural elements are made of weathered light blue-grey metal and polished brass. Dark wood is used for furniture and fittings.",
+        "mood": "Cozy and lived-in, with a sense of hardy comfort and practical resourcefulness.",
+        "sounds": "Low machinery hum, faint creaking, muffled external sounds",
+        "spatialLayout": "A single, rectangular room with clearly defined zones for living and resting. The space feels efficient and uncluttered, maximizing its modest dimensions.",
+        "primary_surfaces": "Warm yellow composite walls; smooth metallic conduit runs",
+        "secondary_surfaces": "Polished brass fixtures; dark wooden trim and furniture",
+        "accent_features": "Small, functional storage crates; integrated lighting panels",
+        "dominant": "Warm yellow on walls and ceiling panels",
+        "secondary": "Light blue-grey metal on exposed conduits and structural beams",
+        "accent": "Bright brass on window frames, door hardware, and fixture details",
+        "ambient": "Soft, diffused internal light",
+        "genre": null,
+        "architectural_tone": "Whimsical steampunk citadel with baroque and functional elements",
+        "cultural_tone": "Inhabited by intrepid sky-farers and artisans; a hub of innovation and aerial commerce.",
+        "materials_base": "Metal, wood, brass, glass",
+        "mood_baseline": "Awe-inspiring and adventurous",
+        "palette_bias": "Cool blues and greys with warm yellow and metallic accents",
+        "soundscape_base": "Mechanical hum and natural ambient sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765453382420-ayknfp6gb",
+      "description": "A compact, self-contained residential unit nestled within the spherical architecture of the Sky Citadel, characterized by its curved surfaces and essential amenities for sky-farers.",
+      "structure": {
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "small",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "residential",
+        "spatialLayout": "A cozy, intimate living space occupying a curved section of the Sky Citadel's spherical hull, with integrated utilities and a view towards the azure expanse.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Comfortable seating nook",
+          "Fold-down sleeping berth",
+          "Integrated storage cabinets",
+          "Small food preparation counter",
+          "Ambient lighting fixtures"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center back wall",
+            "description": "A circular, pressure-sealed hatch leading to other sections of the Citadel."
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "A gently curving corridor connecting to the main thoroughfares."
+          }
+        ],
+        "dominantElements": [
+          "Curved spherical walls",
+          "Integrated, compact furnishings",
+          "A single, circular viewport",
+          "Internal atmospheric regulators"
+        ],
+        "uniqueIdentifiers": [
+          "The feeling of being within a perfectly formed sphere",
+          "A primary living unit designed for single or dual occupancy",
+          "Strategic placement on the 'right wing' of the Citadel's structure"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "Upholstered bench with integrated storage",
+          "Pull-down bed with magnetic restraints",
+          "Small galley counter with induction cooktop and sink",
+          "Wall-mounted shelving for personal effects",
+          "Circular viewport with adjustable tinting",
+          "Soft, diffused internal lighting"
+        ],
+        "placementNotes": [
+          "Furnishings should conform to the curvature of the walls.",
+          "Maximize vertical space with integrated storage.",
+          "The viewport should be positioned for optimal viewing of the Azure Expanse."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center back wall",
+          "description": "A circular, pressure-sealed hatch leading to other sections of the Citadel."
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "A gently curving corridor connecting to the main thoroughfares."
+        }
+      ],
+      "dominantElements": [
+        "Curved spherical walls",
+        "Integrated, compact furnishings",
+        "A single, circular viewport",
+        "Internal atmospheric regulators"
+      ],
+      "uniqueIdentifiers": [
+        "The feeling of being within a perfectly formed sphere",
+        "A primary living unit designed for single or dual occupancy",
+        "Strategic placement on the 'right wing' of the Citadel's structure"
+      ],
+      "searchDesc": "Interior of a small, warm house within The Sky Citadel, featuring yellow housing and metallic details.",
+      "slug": "interior-of-the-sky-citadel"
+    },
+    "loc-1765453936786-mwhzxgifp": {
+      "id": "loc-1765453936786-mwhzxgifp",
+      "type": "host",
+      "name": "Countryside",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Expansive vistas of rolling hills, verdant fields, and scattered woodlands. The horizon is often unbroken, emphasizing the vastness of the natural world. Small, simple structures are sparse and blend into the landscape.",
+        "colorsAndLighting": "Dominated by natural daylight, ranging from soft dawn hues to bright midday sun and warm, golden sunsets. Colors are earthy and organic, with greens, browns, and blues forming the primary palette.",
+        "atmosphere": "Crisp, clean air carrying the scents of earth, grass, and blooming flora. The atmosphere is generally tranquil, with gentle breezes and the sounds of nature. Weather patterns are varied but often predictable, contributing to the seasonal rhythm.",
+        "materials": "Predominantly natural materials like wood, stone, soil, and vegetation. Structures are often built from local resources, appearing weathered and integrated with their surroundings.",
+        "mood": "Evokes a sense of peace, freedom, and connection to nature. It inspires feelings of simplicity, hard work, and rustic charm, offering a retreat from complex urban life.",
+        "sounds": "Birdsong, wind rustling leaves, distant animal calls, flowing water, gentle breezes",
+        "primary_surfaces": "Rolling fields, grassy hills, forested expanses",
+        "secondary_surfaces": "Dirt roads, streams, simple wooden fences",
+        "accent_features": "Wildflowers, occasional rock outcroppings, solitary trees",
+        "dominant": "Verdant green (fields and foliage)",
+        "secondary": "Earthy brown (soil and wood)",
+        "accent": "Sky blue (daytime) or sunset oranges/pinks",
+        "ambient": "Natural daylight, varying in intensity by time of day",
+        "genre": "Rural",
+        "architectural_tone": "Simple, functional, vernacular building styles",
+        "cultural_tone": "Agrarian, self-sufficient, community-focused",
+        "materials_base": "Natural and locally sourced",
+        "mood_baseline": "Peaceful, serene, grounded",
+        "palette_bias": "Earthy tones, greens, blues, and natural wood hues",
+        "soundscape_base": "Natural ambient sounds, agricultural activity",
+        "flora_base": "Grasslands, forests, crops",
+        "fauna_base": "Farm animals, wild birds, small mammals"
+      },
+      "description": "A world characterized by vast, open rural landscapes, dotted with small settlements and isolated dwellings. Nature is the dominant force, with rolling hills, forests, and fields shaping the environment.",
+      "searchDesc": "A pastoral world of rolling hills, farms, and tranquil rural life, where nature's beauty reigns supreme.",
+      "slug": "countryside",
+      "structure": {
+        "spatialLayout": "Open and expansive, with vast distances between points of interest. The layout is dictated by natural topography and agricultural land use, creating a sense of unhurried exploration.",
+        "navigableElements": [
+          "Dirt roads",
+          "Farms",
+          "Villages",
+          "Forests",
+          "Rivers"
+        ],
+        "dominantElements": [
+          "Sky",
+          "Fields",
+          "Trees"
+        ],
+        "uniqueIdentifiers": [
+          "Abundant natural beauty",
+          "Peaceful rural life",
+          "Seasons"
+        ]
+      },
+      "navigableElements": [
+        "Dirt roads",
+        "Farms",
+        "Villages",
+        "Forests",
+        "Rivers"
+      ],
+      "dominantElements": [
+        "Sky",
+        "Fields",
+        "Trees"
+      ],
+      "uniqueIdentifiers": [
+        "Abundant natural beauty",
+        "Peaceful rural life",
+        "Seasons"
+      ],
+      "primaryMedia": "media-1765453974821-4klnwz29v"
+    },
+    "8c2bb06c-a85c-4115-8912-14b958ac76f4": {
+      "id": "8c2bb06c-a85c-4115-8912-14b958ac76f4",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -80,382 +919,1234 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "7a823c2a-ada9-49ed-93b0-4c2557c3abe3": {
-      "id": "7a823c2a-ada9-49ed-93b0-4c2557c3abe3",
+    "b19128b7-4437-421e-afe3-d7b676969bf9": {
+      "id": "b19128b7-4437-421e-afe3-d7b676969bf9",
       "type": "location",
-      "name": "The Ocean's Embrace Dwelling",
+      "name": "Little Red House",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The exterior presents as a natural extension of the coastal cliffs, with gently sculpted, undulating walls that mimic erosion. The primary form is organic and flowing, with a large, sweeping archway serving as the main entrance, offering a glimpse of the interior and the distant ocean.  Small, scattered openings reveal pockets of vibrant green foliage clinging to the structure.",
-        "colorsAndLighting": "The natural stone tones of the cliff face are complemented by the warm, amber glow emanating from recessed lighting within the dwelling's facade.  Shadows are soft and rounded, emphasizing the organic forms.",
-        "atmosphere": "The air is fresh and carries the scent of salt and sea spray, with a gentle, cooling breeze.  The constant, soothing murmur of waves provides a natural soundtrack. The temperature is pleasantly mild, reflecting its coastal positioning.",
-        "materials": "The primary material is a sculpted, light-colored composite that mimics natural rock, exhibiting a smooth, textured surface.  This is integrated with the actual rougher textures of the surrounding cliff face.  Vibrant green foliage spills over some edges.",
-        "mood": "Serene and inviting, evoking a sense of luxurious sanctuary deeply connected to the natural world. It promises tranquility and breathtaking beauty.",
-        "sounds": "Ocean waves, gentle breeze, distant seabirds",
-        "primary_surfaces": "Sculpted, undulating composite mimicking light stone; Natural, textured cliff face",
-        "secondary_surfaces": "Embedded stone, integrated rock formations",
-        "accent_features": "Warmly glowing light recesses, lush green foliage",
-        "dominant": "Light beige-tan (mimicking sandstone)",
-        "secondary": "Rocky grey-brown (natural cliff integration)",
-        "accent": "Warm amber (lighting), Vibrant green (foliage)",
-        "ambient": "Soft, naturalistic glow",
+        "looks": "A small, rectangular cottage with a prominent pitched roof and a single story. The facade is dominated by its bright red painted wooden siding and a central, inviting white-trimmed door. Windows are symmetrically placed on either side of the entrance.",
+        "colorsAndLighting": "The vibrant red of the house contrasts sharply with the deep grey of the roof. Soft, natural daylight bathes the scene, casting gentle shadows from the eaves and window frames.",
+        "atmosphere": "The air is crisp and clean, carrying the faint scent of wild grasses. A gentle breeze rustles through the surrounding foliage. The temperature is mild, suggesting a pleasant day.",
+        "materials": "The primary material is weathered wooden siding, painted a bold red. The roof appears to be made of slate or asphalt shingles. White-painted trim adorns windows and the door frame.",
+        "mood": "Evokes a sense of peace, simplicity, and nostalgic charm. It feels like a safe and cozy haven.",
+        "sounds": "Chirping birds, gentle breeze, distant crickets, rustling leaves",
+        "primary_surfaces": "Crimson red painted wooden siding",
+        "secondary_surfaces": "Dark grey roof shingles, white painted trim",
+        "accent_features": "White-trimmed windows and door",
+        "dominant": "Crimson red (walls)",
+        "secondary": "Dark grey (roof)",
+        "accent": "White (trim)",
+        "ambient": "Bright natural daylight",
         "genre": null,
-        "architectural_tone": "Organic sculpted cave-dwelling seamlessly integrated with natural cliffs",
-        "cultural_tone": "Luxury eco-retreat, private sanctuary for appreciating nature",
-        "materials_base": "Naturalistic composite and stone",
-        "mood_baseline": "Tranquil luxury",
-        "palette_bias": "Earth tones with warm and vibrant accents",
-        "soundscape_base": "Coastal ambient",
-        "flora_base": "Clinging coastal foliage",
-        "fauna_base": "None"
+        "architectural_tone": "Simple country cottage with a traditional pitched roof",
+        "cultural_tone": "Residential, humble dwelling, evokes rural life",
+        "materials_base": "Wood and shingles",
+        "mood_baseline": "Peaceful, cozy, nostalgic",
+        "palette_bias": "Warm reds and natural greens",
+        "soundscape_base": "Rural nature",
+        "flora_base": "Grasses, wildflowers",
+        "fauna_base": "Birds"
       },
-      "description": "A luxurious, organically sculpted dwelling with a cave-like ceiling and undulating walls, opening to a coastal view. EXTERIOR VIEW implied by the opening to the view, but the focus is on the dwelling's exterior integration.",
-      "searchDesc": "Luxurious organically sculpted dwelling with cave-like entrance, opening to ocean views.",
-      "slug": "the-ocean-s-embrace-dwelling",
+      "description": "A small, charming red-painted house nestled amongst gentle hills. EXTERIOR VIEW.",
+      "searchDesc": "Charming little red house on a country hillside with a gravel path and garden.",
+      "slug": "little-red-house",
       "structure": {
-        "spatialLayout": "The dwelling appears carved into the landscape, with its main living space forming a broad, shallow cavern that opens dramatically outwards.  Its dimensions feel expansive yet intimately connected to the surrounding rock.",
+        "spatialLayout": "A compact, rectangular footprint with a defined front facade. The space feels intimate and grounded.",
         "navigableElements": [
           {
-            "type": "archway",
-            "position": "front facade",
-            "description": "A grand, arching opening that mirrors the interior's expansive view."
+            "type": "door",
+            "position": "front",
+            "description": "A sturdy wooden door, painted white"
           },
           {
             "type": "path",
-            "position": "leading to dwelling",
-            "description": "A gently winding path carved into the cliffside."
+            "position": "leading to door",
+            "description": "A gravel path winding through a small garden"
           }
         ],
         "dominantElements": [
-          "Undulating, sculpted exterior walls",
-          "Cave-like entrance aperture",
-          "Integrated rocky cliff face",
-          "Lush, clinging foliage"
+          "The bright red exterior walls",
+          "A steeply pitched dark roof",
+          "White-trimmed windows"
         ],
         "uniqueIdentifiers": [
-          "Warm orange light glowing from recesses",
-          "Smooth, organic curves of the structure",
-          "Seamless blend of natural rock and sculpted form",
-          "Opening directly onto a coastal vista"
+          "The striking red paint",
+          "A small, well-tended garden",
+          "Location on a gentle hill"
         ]
       },
       "navigableElements": [
         {
-          "type": "archway",
-          "position": "front facade",
-          "description": "A grand, arching opening that mirrors the interior's expansive view."
+          "type": "door",
+          "position": "front",
+          "description": "A sturdy wooden door, painted white"
         },
         {
           "type": "path",
-          "position": "leading to dwelling",
-          "description": "A gently winding path carved into the cliffside."
+          "position": "leading to door",
+          "description": "A gravel path winding through a small garden"
         }
       ],
       "dominantElements": [
-        "Undulating, sculpted exterior walls",
-        "Cave-like entrance aperture",
-        "Integrated rocky cliff face",
-        "Lush, clinging foliage"
+        "The bright red exterior walls",
+        "A steeply pitched dark roof",
+        "White-trimmed windows"
       ],
       "uniqueIdentifiers": [
-        "Warm orange light glowing from recesses",
-        "Smooth, organic curves of the structure",
-        "Seamless blend of natural rock and sculpted form",
-        "Opening directly onto a coastal vista"
+        "The striking red paint",
+        "A small, well-tended garden",
+        "Location on a gentle hill"
       ],
-      "primaryMedia": "media-1765445153600-bh1qylzqm"
+      "primaryMedia": "media-1765453956738-l65fz3gxh"
     },
-    "niche-1765445135126-9bgkzg52g": {
-      "id": "niche-1765445135126-9bgkzg52g",
+    "niche-1765454008764-v5od2npc6": {
+      "id": "niche-1765454008764-v5od2npc6",
       "type": "niche",
-      "name": "The Living Cavern",
+      "name": "The Hallway",
       "spaceType": "interior",
       "dna": {
-        "looks": "A luxuriously sculpted interior dwelling with a cave-like ceiling and undulating walls. Irregular-shaped recesses glow with warm orange light, and smaller openings reveal lush green foliage. The space is anchored by a large, plush sectional sofa and a low-profile coffee table with a fire pit.",
-        "colorsAndLighting": "Dominant warm amber light emanates from irregular recesses and a central fire pit. Soft ambient lighting enhances sculpted features. Shadows are soft and rounded, emphasizing organic forms.",
-        "atmosphere": "The air is fresh and carries the scent of salt and sea spray, with a gentle, cooling breeze. The constant, soothing murmur of waves provides a natural soundtrack. The temperature is pleasantly mild, reflecting its coastal positioning.",
-        "materials": "The interior walls are a light, textured, and undulating sculpted composite mimicking natural rock. Smooth, light wooden flooring contrasts with a light-colored shaggy rug. Furniture features plush fabrics and ribbed textures.",
-        "mood": "Serene and inviting, evoking a sense of luxurious sanctuary deeply connected to the natural world. It promises tranquility and breathtaking beauty.",
-        "sounds": "Murmur of waves, gentle breeze, crackling fire",
-        "spatialLayout": "An organically shaped, flowing interior space with a curved sectional sofa, leading to an expansive archway with a view.",
-        "primary_surfaces": "Light, textured, undulating sculpted composite walls and ceiling.",
-        "secondary_surfaces": "Smooth, light wooden flooring; light-colored shaggy rug; plush fabric sofa; ribbed sofa texture.",
-        "accent_features": "Warm orange glowing irregular-shaped recesses; smaller openings revealing lush green foliage; flickering fire pit; decorative vases and potted plants.",
-        "dominant": "Light beige-tan (interior walls, rug)",
-        "secondary": "Rocky grey-brown (integrated cliff face view)",
-        "accent": "Warm amber (lighting), Vibrant green (foliage), Light-cream (sofa)",
-        "ambient": "Soft, naturalistic glow",
+        "looks": "The interior hall is a simple, rectangular space with naturally lit walls. The primary structure visible are the interior walls and the floor. The entrance door, with its white trim, is a focal point.",
+        "colorsAndLighting": "The walls are a warm crimson red, complementing the soft, natural daylight that streams in, creating gentle highlights and shadows. The white trim provides crisp contrast.",
+        "atmosphere": "The air inside is still and pleasant, carrying a subtle, clean scent from the outside. The mild temperature suggests a comfortable interior climate, protected from the elements.",
+        "materials": "The interior walls are constructed from smooth, painted wooden surfaces, maintaining the exterior's bold crimson hue. The floor is likely made of simple, natural wood. White-painted trim is present around openings.",
+        "mood": "The hall evokes a strong sense of peace, simplicity, and a cozy, nostalgic charm, serving as a welcoming entryway.",
+        "sounds": "Faint rustling of leaves, distant bird song.",
+        "spatialLayout": "A straightforward rectangular hall, likely of moderate width to accommodate the central door and side passages. The space feels open yet contained.",
+        "primary_surfaces": "Crimson red painted wooden walls",
+        "secondary_surfaces": "Natural wood floorboards, white painted trim",
+        "accent_features": "White-trimmed door and interior passages",
+        "dominant": "Crimson red (walls)",
+        "secondary": "Natural wood (floor)",
+        "accent": "White (trim)",
+        "ambient": "Bright natural daylight",
         "genre": null,
-        "architectural_tone": "Organic sculpted cave-dwelling seamlessly integrated with natural cliffs",
-        "cultural_tone": "Luxury eco-retreat, private sanctuary for appreciating nature",
-        "materials_base": "Naturalistic composite and stone",
-        "mood_baseline": "Tranquil luxury",
-        "palette_bias": "Earth tones with warm and vibrant accents",
-        "soundscape_base": "Coastal ambient",
-        "flora_base": "Clinging coastal foliage",
-        "fauna_base": "None"
+        "architectural_tone": "Simple country cottage with a traditional pitched roof",
+        "cultural_tone": "Residential, humble dwelling, evokes rural life",
+        "materials_base": "Wood and shingles",
+        "mood_baseline": "Peaceful, cozy, nostalgic",
+        "palette_bias": "Warm reds and natural greens",
+        "soundscape_base": "Rural nature",
+        "flora_base": "Grasses, wildflowers",
+        "fauna_base": "Birds"
       },
-      "description": "A luxuriously sculpted living space with organically flowing cave-like walls and ceiling, featuring integrated glowing light recesses. This medium-scale, wide-oriented interior opens dramatically to the ocean through a grand archway, leading to an outdoor patio. The space is furnished with a curved sectional sofa, a fire pit coffee table, and adorned with soft lighting and natural elements.",
-      "primaryMedia": "media-1765445135125-qlyn00p7e",
+      "primaryMedia": "media-1765454008763-6otambtae",
+      "description": "An interior hallway designed to connect rooms within the humble, rural-toned 'Little Red House'. It maintains the parent's simple, residential character.",
       "structure": {
-        "form": "organic",
-        "roofType": "arched",
+        "form": "rectangular",
+        "roofType": "flat",
         "scale": "medium",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "arched",
+        "orientation": "horizontal",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
         "functionalType": "residential",
-        "spatialLayout": "The main seating area, defined by a curved sofa and coffee table with a fire pit, is centrally located. Sculpted niches and shelves are integrated into the walls, showcasing decorative items and plants, all illuminated by soft ambient lighting.",
-        "requiredElements": [
-          "luxuriously sculpted interior dwelling with a cave-like ceiling and walls featuring a light, textured, and undulating surface",
-          "Irregular-shaped recesses glow with warm orange light",
-          "smaller openings reveal lush green foliage",
-          "A large, plush, light-cream sectional sofa with a ribbed texture",
-          "a dark, low-profile coffee table with a flickering fire pit",
-          "Soft cushions in beige, blue, and green",
-          "A light-colored shaggy rug lies beneath the seating area",
-          "smooth, light wooden flooring",
-          "Sculpted niches and shelves display decorative vases and potted plants",
-          "soft ambient lighting",
-          "An expansive, arching opening reveals a serene ocean under a vibrant sunset or sunrise sky, framed by rocky cliffs draped in foliage",
-          "an outdoor patio",
-          "a lounge chair",
-          "a small, glowing fire element",
-          "cave-like ceiling and walls featuring a light",
-          "warm orange light",
-          "ribbed texture curves around a dark",
-          "flickering fire pit",
-          "outdoor patio featuring a lounge chair and a small"
-        ],
+        "spatialLayout": "A long, rectangular corridor connecting various rooms within the Little Red House. It serves as a passage and a transition space.",
+        "requiredElements": [],
         "suggestedFixtures": [
-          "Ambient accent lighting (integrated into niches)",
-          "Recessed ceiling spotlights",
-          "Decorative vases and planters",
-          "Textured throw pillows",
-          "Natural fiber rugs",
-          "Fire pit with protective screen"
+          "Narrow console table",
+          "Wall-mounted coat rack",
+          "Picture frames or artwork",
+          "Runner rug",
+          "Small potted plant",
+          "Wall sconces"
         ],
         "navigableElements": [
           {
-            "type": "archway",
-            "position": "front center",
-            "description": "Expansive archway opening to the ocean and outdoor patio"
+            "type": "door",
+            "position": "left wall",
+            "description": "Leading to another room"
           },
           {
-            "type": "passage",
-            "position": "rear wall",
-            "description": "Passage leading to other internal dwelling areas"
+            "type": "door",
+            "position": "right wall",
+            "description": "Leading to another room"
           },
           {
-            "type": "passage",
-            "position": "side wall",
-            "description": "Passage leading to other internal dwelling areas or alcoves"
+            "type": "door",
+            "position": "back wall",
+            "description": "Leading to the exterior or a central area"
           }
         ],
         "dominantElements": [
-          "Organic, undulating cave-like walls and ceiling",
-          "Expansive arching opening to the ocean",
-          "Curving sectional sofa",
-          "Glowing irregular-shaped light recesses",
-          "Sculpted niches and shelves"
+          "Long, continuous walls",
+          "Multiple doorways",
+          "Flooring",
+          "Ceiling lighting"
         ],
         "uniqueIdentifiers": [
-          "Cave-like sculpted interior form",
-          "Integrated warm orange glowing light recesses",
-          "Seamless transition to outdoor patio via a grand archway",
-          "Ribbed texture on the plush sectional sofa"
+          "Connection to the 'Little Red House' aesthetic",
+          "Transitionary nature of the space",
+          "Symmetry of the parent house's architecture"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "Narrow console table",
+          "Wall-mounted coat rack",
+          "Picture frames or artwork",
+          "Runner rug",
+          "Small potted plant",
+          "Wall sconces"
+        ],
+        "placementNotes": [
+          "Runner rug should extend the length of the hallway.",
+          "Console table and coat rack placed along one wall for convenience.",
+          "Artwork or picture frames spaced evenly on walls.",
+          "Wall sconces should provide ambient lighting."
         ]
       },
       "navigableElements": [
         {
-          "type": "archway",
-          "position": "front center",
-          "description": "Expansive archway opening to the ocean and outdoor patio"
+          "type": "door",
+          "position": "left wall",
+          "description": "Leading to another room"
         },
         {
-          "type": "passage",
-          "position": "rear wall",
-          "description": "Passage leading to other internal dwelling areas"
+          "type": "door",
+          "position": "right wall",
+          "description": "Leading to another room"
         },
         {
-          "type": "passage",
-          "position": "side wall",
-          "description": "Passage leading to other internal dwelling areas or alcoves"
+          "type": "door",
+          "position": "back wall",
+          "description": "Leading to the exterior or a central area"
         }
       ],
       "dominantElements": [
-        "Organic, undulating cave-like walls and ceiling",
-        "Expansive arching opening to the ocean",
-        "Curving sectional sofa",
-        "Glowing irregular-shaped light recesses",
-        "Sculpted niches and shelves"
+        "Long, continuous walls",
+        "Multiple doorways",
+        "Flooring",
+        "Ceiling lighting"
       ],
       "uniqueIdentifiers": [
-        "Cave-like sculpted interior form",
-        "Integrated warm orange glowing light recesses",
-        "Seamless transition to outdoor patio via a grand archway",
-        "Ribbed texture on the plush sectional sofa"
+        "Connection to the 'Little Red House' aesthetic",
+        "Transitionary nature of the space",
+        "Symmetry of the parent house's architecture"
       ],
-      "searchDesc": "Luxurious cave dwelling with ocean views, warm lighting, and lush foliage.",
-      "slug": "the-living-cavern",
-      "parentId": "7a823c2a-ada9-49ed-93b0-4c2557c3abe3"
+      "searchDesc": "Interior hall of a charming red cottage, bathed in natural light.",
+      "slug": "interior-of-little-red-house"
     },
-    "niche-1765446621074-vfjmwfq97": {
-      "id": "niche-1765446621074-vfjmwfq97",
+    "niche-1765454047468-q659fko7s": {
+      "id": "niche-1765454047468-q659fko7s",
       "type": "niche",
-      "name": "The Kitchen",
+      "name": "The Left Room",
       "spaceType": "interior",
       "dna": {
-        "looks": "The kitchen features a central, sculpted island with smooth, integrated countertops. Recessed shelving is carved directly into the composite walls, maintaining the organic flow. Function-specific fixtures are subtly incorporated, not altering the primary architectural form.",
-        "colorsAndLighting": "Warm amber light emanates from recessed fixtures, casting soft shadows. Countertops are a light beige-tan, while accent lighting highlights polished composite surfaces. The ambient light maintains a soft, naturalistic glow.",
-        "atmosphere": "The air remains fresh, carrying the subtle scent of salt and sea spray, though less pronounced than outside. A gentle, almost imperceptible breeze circulates. The murmur of waves is a distant, soothing background hum, contributing to a calm and focused environment.",
-        "materials": "The primary building material is a smooth, light-colored composite that mimics natural rock, forming the walls, countertops, and integrated shelving. This is consistent with the exterior's composite facade. Function-specific fixtures are made of polished metal.",
-        "mood": "Serene and functional, this space offers a luxurious and tranquil environment for culinary preparation, deeply connected to the dwelling's overall sanctuary feel.",
-        "sounds": "Distant waves, soft hum of appliances, gentle air circulation",
-        "spatialLayout": "The kitchen is a well-defined area, likely open-plan, with a central island serving as the focal point. The layout is efficient, with clear pathways and integrated storage maximizing the organically sculpted space.",
-        "primary_surfaces": "Smooth, sculpted light composite walls and countertops",
-        "secondary_surfaces": "Polished metal fixtures, embedded shelving",
-        "accent_features": "Warmly glowing light recesses, integrated spice racks",
-        "dominant": "Light beige-tan (composite surfaces)",
-        "secondary": "Rocky grey-brown (integrated cliff texture visible in some wall sections)",
-        "accent": "Warm amber (lighting), polished metal (fixtures)",
-        "ambient": "Soft, naturalistic glow",
+        "looks": "This room is a simple, rectangular interior space. Its walls are constructed from the same brightly painted wooden siding as the exterior, maintaining the cottage's humble aesthetic. The space is lit by natural light entering from the adjacent exterior.",
+        "colorsAndLighting": "The dominant color is the vibrant crimson red of the wooden walls, accented by crisp white trim around the door frame. Bright, natural daylight fills the space, creating soft shadows.",
+        "atmosphere": "The air feels crisp and clean, reminiscent of the outdoors, carrying the faint scent of dried wood and perhaps old textiles. The mild temperature suggests it's part of the pleasant day outside.",
+        "materials": "The primary interior material is weathered wooden siding, painted a bold crimson red. Accents are made of painted white trim, likely wood.",
+        "mood": "Evokes a sense of simple comfort and the enduring charm of a rural dwelling.",
+        "sounds": "Muffled rural sounds, gentle breeze rustling.",
+        "spatialLayout": "A basic rectangular room with a clear entry point.",
+        "primary_surfaces": "Crimson red painted wooden walls",
+        "secondary_surfaces": "White painted trim",
+        "accent_features": "White door frame",
+        "dominant": "Crimson red (walls)",
+        "secondary": "Dark grey (inheriting roof tone indirectly via overall structure, but not visible interior surface)",
+        "accent": "White (trim)",
+        "ambient": "Bright natural daylight",
         "genre": null,
-        "architectural_tone": "Organic sculpted cave-dwelling seamlessly integrated with natural cliffs",
-        "cultural_tone": "Luxury eco-retreat, private sanctuary for appreciating nature",
-        "materials_base": "Naturalistic composite and stone",
-        "mood_baseline": "Tranquil luxury",
-        "palette_bias": "Earth tones with warm and vibrant accents",
-        "soundscape_base": "Coastal ambient",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "architectural_tone": "Simple country cottage with a traditional pitched roof",
+        "cultural_tone": "Residential, humble dwelling, evokes rural life",
+        "materials_base": "Wood and shingles",
+        "mood_baseline": "Peaceful, cozy, nostalgic",
+        "palette_bias": "Warm reds and natural greens",
+        "soundscape_base": "Rural nature",
+        "flora_base": "Grasses, wildflowers",
+        "fauna_base": "Birds"
       },
-      "primaryMedia": "media-1765446621073-29ds8n5mh",
-      "description": "A residential kitchen designed to seamlessly blend with the luxurious, naturalistic aesthetic of the Ocean's Embrace Dwelling, featuring organic forms and integrated features.",
+      "primaryMedia": "media-1765454047467-23ordqvd4",
+      "description": "This is a residential room located to the left of the main hallway within a humble dwelling.",
       "structure": {
-        "form": "organic",
-        "roofType": "null",
+        "form": "rectangular",
+        "roofType": "flat",
         "scale": "medium",
         "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "irregular",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
         "functionalType": "residential",
-        "spatialLayout": "The kitchen is integrated into the organic, cave-like structure, featuring a central preparation area and accessible alcoves.",
+        "spatialLayout": "A rectangular room accessed via an opening to the left of the main hall, featuring walls and a floor.",
         "requiredElements": [
-          "kitchen"
+          "room to the left"
         ],
         "suggestedFixtures": [
-          "Sink and faucet",
-          "Countertops",
-          "Custom cabinetry",
-          "Integrated appliances (oven, stovetop, refrigerator)",
-          "Island with seating",
-          "Spice rack"
+          "Wooden chair",
+          "Small table",
+          "Bookshelf",
+          "Rug",
+          "Lamp"
         ],
         "navigableElements": [
           {
             "type": "passage",
-            "position": "rear corner",
-            "description": "Passage to other parts of the dwelling"
-          },
-          {
-            "type": "passage",
-            "position": "side wall",
-            "description": "Passage to a pantry or storage area"
-          },
-          {
-            "type": "opening",
-            "position": "upper wall",
-            "description": "Small, irregular opening to allow for ventilation, echoing the parent's foliage reveal openings."
+            "position": "center",
+            "description": "Opening from the main hallway into this room."
           }
         ],
         "dominantElements": [
-          "Undulating, cave-like walls",
-          "Integrated cooking appliances",
-          "Natural stone or wood countertops",
-          "Illuminated recess for storage",
-          "Central preparation island"
+          "Interior walls",
+          "Floor",
+          "Opening to the hallway"
         ],
         "uniqueIdentifiers": [
-          "Organic wall integration",
-          "Warm, ambient lighting within recesses",
-          "Irregularly shaped openings for light and air"
+          "Location to the left",
+          "Simple interior construction"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "Opening from the main hallway into this room."
+        }
+      ],
+      "dominantElements": [
+        "Interior walls",
+        "Floor",
+        "Opening to the hallway"
+      ],
+      "uniqueIdentifiers": [
+        "Location to the left",
+        "Simple interior construction"
+      ],
+      "searchDesc": "Interior of a humble cottage room, crimson red walls with white trim, bright daylight.",
+      "slug": "room-to-the-left"
+    },
+    "niche-1765454147614-aepg11rnp": {
+      "id": "niche-1765454147614-aepg11rnp",
+      "type": "niche",
+      "name": "The Little Red House Kitchen",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This space is a functional kitchen, adhering to the exterior's cottage form. The walls are covered in white wallpaper featuring small, delicate floral patterns. The layout is optimized for culinary tasks while maintaining a cozy domestic feel.",
+        "colorsAndLighting": "The primary color is the white of the wallpaper, accented by the subtle colors of the small flowers. Soft, natural daylight is the ambient light source, creating a gentle and inviting atmosphere. Shadows are soft, highlighting the textures of the wallpaper and kitchen elements.",
+        "atmosphere": "The air is clean and smells faintly of cooking spices and a hint of dried flowers. The temperature is mild and comfortable, consistent with a well-maintained dwelling. A subtle sense of domestic tranquility pervades the space.",
+        "materials": "The walls are covered in white wallpaper with a textured finish, bearing small, faded floral patterns. Kitchen fixtures and appliances are present, likely made of wood, metal, and ceramic. The overall impression is one of age and comfortable use.",
+        "mood": "Evokes a feeling of warm, inviting domesticity and simple, cherished routines. It is a peaceful and cozy heart of the home.",
+        "sounds": "Gentle clinking of dishes, soft hum of appliances, distant birdsong",
+        "spatialLayout": "A rectangular or square space optimized for kitchen functionality, with clear zones for cooking, preparation, and perhaps a small dining area. It feels intimate and well-defined.",
+        "primary_surfaces": "White wallpaper with small floral patterns",
+        "secondary_surfaces": "Wooden cabinetry, countertops (material varies by function)",
+        "accent_features": "Floral patterns on wallpaper, functional kitchen appliances",
+        "dominant": "White (wallpaper)",
+        "secondary": "Natural wood tones (cabinetry)",
+        "accent": "Subtle floral colors, metallic finishes (appliances)",
+        "ambient": "Bright natural daylight",
+        "genre": null,
+        "architectural_tone": "Simple country cottage with a traditional pitched roof",
+        "cultural_tone": "Residential, humble dwelling, evokes rural life",
+        "materials_base": "Wood and shingles",
+        "mood_baseline": "Peaceful, cozy, nostalgic",
+        "palette_bias": "Warm reds and natural greens",
+        "soundscape_base": "Rural nature",
+        "flora_base": "Grasses, wildflowers",
+        "fauna_base": "Birds"
+      },
+      "primaryMedia": "media-1765454147613-dltmyt359",
+      "description": "This is the kitchen of a humble dwelling, distinguished by its white walls covered in charming wallpaper with small flowers. It maintains the simple, rectangular form and rustic aesthetic of the 'Little Red House'.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "spatialLayout": "A modest kitchen space within a humble dwelling, featuring white walls adorned with floral wallpaper. The space is illuminated by natural light.",
+        "requiredElements": [
+          "white wall paper with small flowers",
+          "small flowers"
+        ],
+        "suggestedFixtures": [
+          "kitchen counter",
+          "sink",
+          "stove",
+          "refrigerator",
+          "kitchen cabinets",
+          "dining table"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center-back",
+            "description": "Passage leading to the exterior or another room, possibly with a white door frame."
+          },
+          {
+            "type": "door",
+            "position": "left-wall",
+            "description": "Door to another interior space."
+          }
+        ],
+        "dominantElements": [
+          "white floral wallpaper",
+          "wooden siding walls",
+          "natural light source"
+        ],
+        "uniqueIdentifiers": [
+          "small flower pattern wallpaper",
+          "rural cottage aesthetic",
+          "natural illumination"
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "kitchen"
+          "white wall paper with small flowers"
         ],
         "suggested": [
-          "Sink and faucet",
-          "Countertops",
-          "Custom cabinetry",
-          "Integrated appliances (oven, stovetop, refrigerator)",
-          "Island with seating",
-          "Spice rack"
+          "kitchen counter",
+          "sink",
+          "stove",
+          "refrigerator",
+          "kitchen cabinets",
+          "dining table",
+          "wooden chairs"
         ],
         "placementNotes": [
-          "Countertops and cabinetry should follow the organic lines of the walls.",
-          "The island should be centrally placed for efficient workflow.",
-          "Appliances should be seamlessly integrated into the cabinetry.",
-          "Lighting should be warm and subtle, highlighting textures.",
-          "Small potted herbs could be placed on countertops or in recesses."
+          "Counter and sink along one wall, stove and refrigerator on another.",
+          "Dining table placed centrally or in a corner, allowing for movement.",
+          "Cabinets above and below counters for storage.",
+          "The wallpaper provides a cozy and lived-in feel."
         ]
       },
       "navigableElements": [
         {
           "type": "passage",
-          "position": "rear corner",
-          "description": "Passage to other parts of the dwelling"
+          "position": "center-back",
+          "description": "Passage leading to the exterior or another room, possibly with a white door frame."
         },
         {
-          "type": "passage",
-          "position": "side wall",
-          "description": "Passage to a pantry or storage area"
-        },
-        {
-          "type": "opening",
-          "position": "upper wall",
-          "description": "Small, irregular opening to allow for ventilation, echoing the parent's foliage reveal openings."
+          "type": "door",
+          "position": "left-wall",
+          "description": "Door to another interior space."
         }
       ],
       "dominantElements": [
-        "Undulating, cave-like walls",
-        "Integrated cooking appliances",
-        "Natural stone or wood countertops",
-        "Illuminated recess for storage",
-        "Central preparation island"
+        "white floral wallpaper",
+        "wooden siding walls",
+        "natural light source"
       ],
       "uniqueIdentifiers": [
-        "Organic wall integration",
-        "Warm, ambient lighting within recesses",
-        "Irregularly shaped openings for light and air"
+        "small flower pattern wallpaper",
+        "rural cottage aesthetic",
+        "natural illumination"
       ],
-      "searchDesc": "The kitchen, with smooth composite surfaces and ocean views, integrated into cliff-face architecture.",
-      "slug": "the-kichen"
+      "searchDesc": "Kitchen with white floral wallpaper, embodying cottage charm and domestic simplicity.",
+      "slug": "kitchen-white-wall-papper-with-small-flowers-"
+    },
+    "niche-1765454264350-1qdcdv0z7": {
+      "id": "niche-1765454264350-1qdcdv0z7",
+      "type": "niche",
+      "name": "The Little Red House Balcony",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A small, open-air wooden platform extending from the cottage facade. It features a simple railing and provides an unobstructed vista of the surrounding environment. The scale is intimate, designed for enjoying the outdoors.",
+        "colorsAndLighting": "The natural wood of the balcony harmonizes with the surrounding greenery. Bathed in the same soft, natural daylight as the cottage, it experiences gentle dappled light and shadows from any nearby foliage.",
+        "atmosphere": "The crisp, clean air is amplified here, with the scent of wild grasses and distant wildflowers carried on a gentle breeze. The mild temperature makes it an inviting space to linger and observe.",
+        "materials": "Constructed primarily from weathered wood that matches the cottage siding. The railing is also wooden, possibly with a slightly smoother finish. The floor is composed of wooden planks.",
+        "mood": "Conveys a feeling of serenity and connection with nature, offering a peaceful retreat to appreciate the quiet beauty of the surroundings.",
+        "sounds": "Rustling leaves, distant bird songs, gentle breeze.",
+        "spatialLayout": "An elongated rectangular projection from the building, with a shallow depth and a railing defining its open edge. It feels like an extension of the interior living space into the natural world.",
+        "primary_surfaces": "Weathered wooden planks (floor and walls of the adjoining cottage), natural wood railing",
+        "secondary_surfaces": "White painted trim elements from the cottage facade",
+        "accent_features": "The expansive, natural view of the surroundings.",
+        "dominant": "Crimson red (implied from parent cottage facade visible from balcony)",
+        "secondary": "Dark grey (implied from parent cottage roof visible from balcony)",
+        "accent": "White (implied from parent cottage trim)",
+        "ambient": "Bright natural daylight",
+        "genre": null,
+        "architectural_tone": "Simple country cottage with a traditional pitched roof",
+        "cultural_tone": "Residential, humble dwelling, evokes rural life",
+        "materials_base": "Wood and shingles",
+        "mood_baseline": "Peaceful, cozy, nostalgic",
+        "palette_bias": "Warm reds and natural greens",
+        "soundscape_base": "Rural nature",
+        "flora_base": "Grasses, wildflowers",
+        "fauna_base": "Birds"
+      },
+      "primaryMedia": "media-1765454264349-utd7v2dzh",
+      "description": "An external, open-air platform attached to the 'Little Red House', designed for enjoying views of the surrounding environment.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "small",
+        "orientation": "cubic",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "spatialLayout": "A small, open-air platform extending from the main dwelling, offering an unobstructed vista.",
+        "requiredElements": [
+          "view of the surrounding"
+        ],
+        "suggestedFixtures": [
+          "wrought-iron railing",
+          "small outdoor chair",
+          "potted plants",
+          "lantern",
+          "decorative rug"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear",
+            "description": "Passage connecting to the interior of the Little Red House."
+          }
+        ],
+        "dominantElements": [
+          "open-air platform",
+          "surrounding view",
+          "railing"
+        ],
+        "uniqueIdentifiers": [
+          "Outdoor extension of the house",
+          "Dedicated viewing space"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear",
+          "description": "Passage connecting to the interior of the Little Red House."
+        }
+      ],
+      "dominantElements": [
+        "open-air platform",
+        "surrounding view",
+        "railing"
+      ],
+      "uniqueIdentifiers": [
+        "Outdoor extension of the house",
+        "Dedicated viewing space"
+      ],
+      "searchDesc": "Wooden balcony attached to a red cottage, offering scenic views of the surrounding landscape.",
+      "slug": "balcony-with-view-of-the-surrounding"
+    },
+    "044c16bc-3c56-4e27-80b2-c34289d4152e": {
+      "id": "044c16bc-3c56-4e27-80b2-c34289d4152e",
+      "type": "region",
+      "name": "Seaside Meadows",
+      "spaceType": "exterior",
+      "description": "This region marks the gentle transition from rolling countryside to the vast expanse of the sea. Here, windswept grasses meet sandy shores, creating a tranquil, sun-drenched haven.",
+      "dna": {
+        "looks": "Expansive, open vistas dominated by the meeting of land and sea. Rolling dunes covered in hardy grasses give way to wide, sandy beaches and the shimmering ocean. The horizon is often a clear, unbroken line where the blue of the sky meets the blue of the water.",
+        "colorsAndLighting": "Bathed in bright, natural daylight, with sunlight reflecting off sand and water. The palette shifts to include sandy beiges, ocean blues, and the muted greens of dune grasses.",
+        "atmosphere": "The air is crisp and carries the distinct tang of salt and brine. Gentle, persistent sea breezes are common, sometimes carrying the cries of seabirds. The atmosphere is open and liberating, a stark contrast to the more sheltered countryside.",
+        "materials": "Primarily sand, weathered wood from driftwood, smooth stones, and tough, resilient coastal vegetation. Surfaces are often textured by wind and water erosion.",
+        "mood": "Evokes a sense of vastness, freedom, and a peaceful, natural transition. It inspires feelings of relaxation and open-ended exploration.",
+        "sounds": "Waves crashing, seabirds calling, wind whistling through dunes, distant foghorns",
+        "primary_surfaces": "Soft, yielding sand",
+        "secondary_surfaces": "Weathered wood, smooth stones, resilient grasses",
+        "accent_features": "Seafoam patterns, shells, tangled seaweed",
+        "dominant": "Sandy beige with extensive coverage",
+        "secondary": "Ocean blue and muted dune green",
+        "accent": "White for seafoam and highlights",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Simple, functional, vernacular building styles",
+        "cultural_tone": "Agrarian, self-sufficient, community-focused",
+        "materials_base": "Natural and locally sourced",
+        "mood_baseline": "Peace, freedom, connection to nature",
+        "palette_bias": "Earthy tones, greens, blues, and natural wood hues",
+        "soundscape_base": "Natural sounds of the environment",
+        "flora_base": "Hardy coastal grasses and maritime plants",
+        "fauna_base": "Seabirds and small coastal creatures"
+      },
+      "searchDesc": "Expansive beaches and dunes where countryside meets the sea, with salty air and the sound of waves.",
+      "slug": "seaside-meadows",
+      "structure": {
+        "spatialLayout": "Characterized by wide, open spaces with a strong sense of depth. The transition from gently sloping dunes to the flat expanse of the beach creates a gradual, sweeping dimension.",
+        "navigableElements": [
+          "Sandy trails",
+          "Rocky outcrops",
+          "Tidal pools"
+        ],
+        "dominantElements": [
+          "Ocean horizon",
+          "Wind-swept dunes",
+          "Driftwood"
+        ],
+        "uniqueIdentifiers": [
+          "Salty air",
+          "Sound of waves",
+          "Seabirds",
+          "Sandy terrain",
+          "Maritime flora"
+        ]
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a85de9a/aUaq4Zee72gb3V92wS8Cu.jpg",
+      "primaryMedia": "media-1765454344219-o7si47pi9"
+    },
+    "0083ae83-6613-4621-a561-a9dd22260e40": {
+      "id": "0083ae83-6613-4621-a561-a9dd22260e40",
+      "type": "location",
+      "name": "Seascape Haven",
+      "spaceType": "exterior",
+      "description": "A charming beach house nestled on the edge of the Seaside Meadows, offering sweeping views of the ocean. Its weathered exterior blends seamlessly with the natural coastal environment.",
+      "dna": {
+        "looks": "A modest, rectangular structure with a gently sloping roof. The design is understated, prioritizing views and ease of access to the surrounding sandy terrain. Simple lines and an unpretentious scale characterize its appearance.",
+        "colorsAndLighting": "The exterior is a tapestry of faded beiges and muted blues from weathered wood and coastal paint. Bright, natural sunlight reflects off its surfaces, creating gentle highlights.",
+        "atmosphere": "The air here is perpetually fresh, carrying the sharp scent of salt and sea spray. A constant, gentle breeze whispers through the surrounding grasses, hinting at the vast ocean beyond.",
+        "materials": "Constructed primarily from sun-bleached and sea-worn timber, with accents of smooth, sea-tumbled stones. The textures are rough and organic, reflecting the natural elements.",
+        "mood": "Evokes a sense of peaceful solitude and effortless connection with nature. It inspires relaxation and quiet contemplation.",
+        "sounds": "Waves, seabirds, wind, distant foghorns, creaking wood",
+        "primary_surfaces": "Weathered wooden planks, sandy soil",
+        "secondary_surfaces": "Smooth stones, resilient dune grasses",
+        "accent_features": "Seashells incorporated into pathways, weathered shutters",
+        "dominant": "Sandy beige with extensive coverage",
+        "secondary": "Ocean blue on trim and shutters",
+        "accent": "Muted green from dune grasses",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Simple, functional, vernacular building styles",
+        "cultural_tone": "Agrarian, self-sufficient, community-focused",
+        "materials_base": "Natural and locally sourced",
+        "mood_baseline": "Peaceful, liberating",
+        "palette_bias": "Earthy tones, greens, blues, and natural wood hues",
+        "soundscape_base": "Natural coastal sounds",
+        "flora_base": "Resilient coastal vegetation",
+        "fauna_base": "Seabirds"
+      },
+      "searchDesc": "Beach house with weathered wood, ocean views, and dune grass. Offers access to the sea.",
+      "slug": "seascape-haven",
+      "structure": {
+        "spatialLayout": "A compact, rectangular footprint designed to maximize ocean frontage. The scale is intimate, fitting comfortably within the expansive coastal landscape.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A sturdy, weathered wooden door that opens into the main living area."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "A sandy path leading around the side of the house towards a small deck overlooking the dunes."
+          },
+          {
+            "type": "window",
+            "position": "left",
+            "description": "Large, glass-paned windows offering unobstructed views of the sea."
+          }
+        ],
+        "dominantElements": [
+          "Weathered wooden exterior",
+          "Large ocean-facing windows",
+          "Simple, pitched roofline",
+          "Dune grass surrounding the foundation"
+        ],
+        "uniqueIdentifiers": [
+          "Salt-kissed wood",
+          "Sounds of distant gulls",
+          "Dune grass integration",
+          "Panoramic sea views"
+        ]
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a85de9d/pS2csKcGN9IO2-jE2YF_3.jpg",
+      "primaryMedia": "media-1765454373099-a9tber5g0"
+    },
+    "niche-1765454390611-pgoiddlbs": {
+      "id": "niche-1765454390611-pgoiddlbs",
+      "type": "niche",
+      "name": "Seascape Haven Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is characterized by simple, unadorned spaces. Walls are clad in weathered wooden planks, maintaining the exterior's aesthetic. Furnishings are sparse and functional, prioritizing comfort and the connection to the outside.",
+        "colorsAndLighting": "Natural daylight floods the space, reflecting off the pale, wood-paneled walls and creating soft highlights. The dominant color palette is warm, sandy beige with subtle accents of ocean blue and muted green.",
+        "atmosphere": "The air is perpetually fresh and cool, carrying the distinct, sharp scent of salt and sea spray. A gentle, almost imperceptible breeze seems to permeate the space, hinting at the constant movement of the ocean.",
+        "materials": "The primary interior surfaces are the same sun-bleached and sea-worn timber planks used for the exterior. Accents are provided by smooth, sea-tumbled stones used sparingly, and perhaps simple woven textiles.",
+        "mood": "This space evokes a profound sense of peaceful solitude and effortless connection with the natural world. It inspires deep relaxation and quiet contemplation.",
+        "sounds": "Gentle waves, seabird cries, whispering wind",
+        "spatialLayout": "The interior is open and uncluttered, with a rectangular layout designed to maximize natural light and views. The scale is modest, contributing to an intimate and cozy feel.",
+        "primary_surfaces": "Weathered wooden planks, smooth composite walls",
+        "secondary_surfaces": "Smooth stones, simple woven textiles",
+        "accent_features": "Seashells incorporated into decorative elements, weathered shutters visible from inside",
+        "dominant": "Sandy beige (walls, 70%)",
+        "secondary": "Ocean blue (accents on furnishings, trim, 20%)",
+        "accent": "Muted green (soft furnishings, 10%)",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Simple, functional, vernacular building styles",
+        "cultural_tone": "Agrarian, self-sufficient, community-focused",
+        "materials_base": "Natural and locally sourced",
+        "mood_baseline": "Peaceful, liberating",
+        "palette_bias": "Earthy tones, greens, blues, and natural wood hues",
+        "soundscape_base": "Natural coastal sounds",
+        "flora_base": "Resilient coastal vegetation",
+        "fauna_base": "Seabirds"
+      },
+      "primaryMedia": "media-1765454390610-2m9vfeqyc",
+      "description": "The interior of Seascape Haven offers a modest yet comfortable living space, reflecting the agrarian and self-sufficient ethos of its parent region. The design prioritizes a connection with the surrounding environment through its understated scale and focus on natural elements.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "pitched",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "spatialLayout": "The interior is a welcoming, medium-sized space with a focus on comfort and connection to the coastal environment. It features a pitched ceiling that mirrors the exterior roofline.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Comfortable seating (sofa, armchairs)",
+          "Wooden coffee table",
+          "Bookshelf with regional literature",
+          "Seashell-adorned decor",
+          "Warm, ambient lighting"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center wall",
+            "description": "Leads to the exterior or other parts of the dwelling."
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "Connects to other interior rooms."
+          }
+        ],
+        "dominantElements": [
+          "Gently sloping pitched ceiling",
+          "Walls with a natural, sandy texture",
+          "Rectangular windows offering coastal views",
+          "Seashell accents"
+        ],
+        "uniqueIdentifiers": [
+          "Incorporation of natural materials",
+          "Light-filled atmosphere",
+          "Understated, comfortable design"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center wall",
+          "description": "Leads to the exterior or other parts of the dwelling."
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "Connects to other interior rooms."
+        }
+      ],
+      "dominantElements": [
+        "Gently sloping pitched ceiling",
+        "Walls with a natural, sandy texture",
+        "Rectangular windows offering coastal views",
+        "Seashell accents"
+      ],
+      "uniqueIdentifiers": [
+        "Incorporation of natural materials",
+        "Light-filled atmosphere",
+        "Understated, comfortable design"
+      ],
+      "searchDesc": "Modest coastal interior with weathered wood, ocean views, and a peaceful, salty atmosphere.",
+      "slug": "interior-of-seascape-haven"
+    },
+    "niche-1765454573388-cxz2c4akf": {
+      "id": "niche-1765454573388-cxz2c4akf",
+      "type": "niche",
+      "name": "Seascape Haven Basement Storage",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A low-ceilinged, rectangular space with rough-hewn stone foundation walls. Exposed, weathered wooden beams support the floor above, creating a sturdy, utilitarian appearance.  The layout is simple and functional, designed for storage and access.",
+        "colorsAndLighting": "Dominated by the muted greys and browns of stone and aged wood. Limited, cool ambient light emanates from a single bare bulb, casting deep shadows.",
+        "atmosphere": "The air is cool and still, carrying a distinct earthy scent mixed with the faint dampness of being underground.  It feels enclosed and grounded, a quiet, protected space removed from the elements above.",
+        "materials": "Constructed with the original sun-bleached and sea-worn timber for structural elements and accent features, adhering to the parent's material rules. The primary interior surfaces are formed from the smooth, sea-tumbled stones of the foundation, providing a solid and enduring presence. Textured and organic in feel.",
+        "mood": "Evokes a sense of secure containment and quiet functionality. It inspires a feeling of being sheltered and grounded.",
+        "sounds": "Damp quiet, faint creaking of wood",
+        "spatialLayout": "A compact, rectangular volume with a low ceiling. The space feels solid and deeply set into the earth.",
+        "primary_surfaces": "Smooth, cool stone foundation walls",
+        "secondary_surfaces": "Rough, weathered wooden beams",
+        "accent_features": "Bare light bulb fixture, simple wooden shelving",
+        "dominant": "Stone grey with extensive coverage",
+        "secondary": "Aged wood brown on beams and shelves",
+        "accent": "Muted natural wood on stairs and door",
+        "ambient": "Dim, cool light",
+        "genre": null,
+        "architectural_tone": "Simple, functional, vernacular building styles",
+        "cultural_tone": "Agrarian, self-sufficient, community-focused",
+        "materials_base": "Natural and locally sourced",
+        "mood_baseline": "Peaceful, liberating",
+        "palette_bias": "Earthy tones, greens, blues, and natural wood hues",
+        "soundscape_base": "Natural coastal sounds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765454573387-hgizx09uc",
+      "description": "A utilitarian basement space within the Seascape Haven, designed for storage and utility, echoing the agrarian and self-sufficient ethos of the parent location. The physical form is dictated by its subterranean nature.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "spatialLayout": "The basement is a rectangular space with continuous, unadorned walls and a flat ceiling. Openings are minimal, suggesting limited natural light.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Wooden shelving units",
+          "Storage crates",
+          "Lantern or simple electric lighting",
+          "Weathered wooden door",
+          "Stone or packed earth floor",
+          "Hose reel"
+        ],
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "center",
+            "description": "Wooden stairs leading up to the main level."
+          },
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "A weathered wooden door providing access to a smaller storage alcove."
+          }
+        ],
+        "dominantElements": [
+          "Rough-hewn wooden planks (on walls)",
+          "Packed earth or stone flooring",
+          "Low, flat ceiling",
+          "Wooden support beams"
+        ],
+        "uniqueIdentifiers": [
+          "Incorporation of weathered wooden planks",
+          "Potential for embedded seashells in mortar or decorative niches",
+          "Sense of utilitarian purpose"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "center",
+          "description": "Wooden stairs leading up to the main level."
+        },
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "A weathered wooden door providing access to a smaller storage alcove."
+        }
+      ],
+      "dominantElements": [
+        "Rough-hewn wooden planks (on walls)",
+        "Packed earth or stone flooring",
+        "Low, flat ceiling",
+        "Wooden support beams"
+      ],
+      "uniqueIdentifiers": [
+        "Incorporation of weathered wooden planks",
+        "Potential for embedded seashells in mortar or decorative niches",
+        "Sense of utilitarian purpose"
+      ],
+      "searchDesc": "Cool, stone-walled basement with exposed beams and a faint scent of earth.",
+      "slug": "basement"
+    },
+    "loc-1765454996372-hszvm4bc7": {
+      "id": "loc-1765454996372-hszvm4bc7",
+      "type": "host",
+      "name": "The North Pole",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, snow-covered landscape dotted with fantastical structures. Buildings are adorned with whimsical, oversized decorations, and lights twinkle brightly against the perpetual twilight or starry night. The overall scale is grand and magical, befitting a legendary location.",
+        "colorsAndLighting": "Dominant cool blues and whites of snow and ice are punctuated by warm, inviting golden light spilling from windows. Festive reds and greens are common in decorations and architectural accents, with shimmering metallics adding a touch of magic.",
+        "atmosphere": "The air is crisp, cold, and pure, carrying the faint scent of pine, peppermint, and gingerbread. A sense of wonder and anticipation permeates the atmosphere, often accompanied by the gentle chime of bells and the distant sound of cheerful activity.",
+        "materials": "Primarily ice, snow, and wood, often treated to appear edible or festive. Buildings feature sturdy timber, gingerbread-like trim, peppermint candy shingles, and frosted glass. The overall impression is one of warmth and resilience despite the frigid environment.",
+        "mood": "Overwhelmingly joyful, magical, and imbued with a profound sense of wonder and anticipation. It evokes childhood innocence and the spirit of giving.",
+        "sounds": "Gentle wind, distant chimes, faint laughter, cheerful hum of activity, sleigh bells",
+        "primary_surfaces": "Snow-covered ground, ice formations, dark timber walls",
+        "secondary_surfaces": "Gingerbread trim, peppermint candy shingles, frosted glass windows",
+        "accent_features": "Candy cane stripes, oversized icicles, twinkling lights, festive garlands",
+        "dominant": "Deep forest green on roofs and large structural elements",
+        "secondary": "Bright cherry red on candy cane stripes and chimney accents",
+        "accent": "Shimmering gold on fixtures, pure white on gingerbread trim and snow",
+        "ambient": "Soft, warm, golden glow from interiors contrasting with cool ambient light",
+        "genre": "Fantasy",
+        "architectural_tone": "Whimsical gingerbread and candy confection with a grand, fantastical scale",
+        "cultural_tone": "Built and operated by cheerful elves for the purpose of crafting toys for Santa Claus.",
+        "materials_base": "Playful, edible-inspired materials",
+        "mood_baseline": "Joyful and magical, evoking wonder and anticipation",
+        "palette_bias": "Warm reds, greens, golds, and whites",
+        "soundscape_base": "Festive and cheerful ambient sounds",
+        "flora_base": "Pine trees and magical ice formations",
+        "fauna_base": "Reindeer, magical arctic creatures"
+      },
+      "description": "A magical, perpetually snowy realm at the top of the world, filled with festive cheer and the industrious spirit of toy-making. This is the central hub for Santa's operations, a beacon of joy during the holiday season.",
+      "searchDesc": "Santa's magical workshop and home, a land of perpetual snow, festive cheer, and toy-making elves.",
+      "slug": "the-north-pole",
+      "structure": {
+        "spatialLayout": "Expansive and sprawling, with buildings clustered around central areas. While vast, it maintains an intimate, cozy feel within its core operations. Open snowy plains contrast with densely packed, whimsical structures.",
+        "dominantElements": [
+          "Santa's Workshop",
+          "Reindeer Stables",
+          "Elf Village",
+          "Ice Palaces"
+        ],
+        "uniqueIdentifiers": [
+          "Magical Auroras",
+          "Constant Snowfall",
+          "Presence of Santa Claus"
+        ]
+      },
+      "dominantElements": [
+        "Santa's Workshop",
+        "Reindeer Stables",
+        "Elf Village",
+        "Ice Palaces"
+      ],
+      "uniqueIdentifiers": [
+        "Magical Auroras",
+        "Constant Snowfall",
+        "Presence of Santa Claus"
+      ],
+      "primaryMedia": "media-1765455031368-1hg0yogd7"
+    },
+    "4b3bd094-9e78-4886-bc01-57548cf1922c": {
+      "id": "4b3bd094-9e78-4886-bc01-57548cf1922c",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "60cd3356-ca6d-4bfd-b349-0afff3a6f89d": {
+      "id": "60cd3356-ca6d-4bfd-b349-0afff3a6f89d",
+      "type": "location",
+      "name": "Santa's Workshop",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The workshop is a colossal, whimsical structure with steeply pitched roofs and numerous dormer windows. Candy-cane striped chimneys punctuate the skyline, and oversized icicles hang from the eaves. Lights twinkle from every window, hinting at the activity within. The scale is grand and fantastical.",
+        "colorsAndLighting": "Warm, golden light spills from countless windows, contrasting with the cool blues and whites of the snowy exterior. The primary colors are festive reds and greens, accented with shimmering gold and silver.",
+        "atmosphere": "The air is crisp and cold, carrying the faint scent of pine and gingerbread. A gentle, constant hum of activity emanates from within, punctuated by the occasional chime of bells. A light, magical snowfall often dusts the scene.",
+        "materials": "The workshop is constructed from sturdy, dark timber, adorned with gingerbread-like trim and candy cane stripes. The roofs are tiled with what appears to be peppermint candy shingles, and windows are framed with frosted glass.",
+        "mood": "Joyful and magical, evoking a sense of wonder, anticipation, and childhood innocence. It feels like the heart of Christmas.",
+        "sounds": "Rhythmic hammering, cheerful elven chatter, distant sleigh bells, melodic carols, whirring machinery",
+        "primary_surfaces": "Steeply pitched, peppermint-candy roofs; dark, timbered walls",
+        "secondary_surfaces": "Frosted glass windows, gingerbread trim, candy cane columns",
+        "accent_features": "Glistening icicles, glowing window panes, ornate golden door handles",
+        "dominant": "Deep forest green with expansive coverage on walls and roofs",
+        "secondary": "Bright cherry red on candy cane stripes and chimney accents",
+        "accent": "Shimmering gold on door handles and window frames, pure white on gingerbread trim and snow",
+        "ambient": "Warm, inviting golden glow",
+        "genre": null,
+        "architectural_tone": "Whimsical gingerbread and candy confection with a grand, fantastical scale",
+        "cultural_tone": "Built and operated by cheerful elves for the purpose of crafting toys for Santa Claus.",
+        "materials_base": "Playful, edible-inspired materials",
+        "mood_baseline": "Enchanting and festive",
+        "palette_bias": "Warm reds, greens, golds, and whites",
+        "soundscape_base": "Bustling workshop symphony",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A sprawling, wondrous factory filled with elves and toys. EXTERIOR VIEW.",
+      "searchDesc": "Santa's Workshop: A joyous, oversized toy factory at the North Pole, facade view with festive details.",
+      "slug": "santa-s-workshop",
+      "structure": {
+        "spatialLayout": "The building is expansive and multi-leveled, with a complex, interlocking design that suggests a labyrinth of workshops and storage areas. The facade presents a welcoming but immense presence.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "A grand, red double door with ornate golden handles."
+          },
+          {
+            "type": "path",
+            "position": "leading away from entrance",
+            "description": "A snow-dusted cobblestone path."
+          }
+        ],
+        "dominantElements": [
+          "Towering, candy-cane striped chimneys",
+          "A multitude of glowing windows",
+          "Whimsical, oversized clock tower",
+          "Festive, garland-draped rooftops"
+        ],
+        "uniqueIdentifiers": [
+          "Glistening, frost-covered gingerbread trim",
+          "Animated toy soldiers guarding the entrance",
+          "A constant swirl of magical, shimmering dust",
+          "Steam puffing rhythmically from decorative pipes"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "A grand, red double door with ornate golden handles."
+        },
+        {
+          "type": "path",
+          "position": "leading away from entrance",
+          "description": "A snow-dusted cobblestone path."
+        }
+      ],
+      "dominantElements": [
+        "Towering, candy-cane striped chimneys",
+        "A multitude of glowing windows",
+        "Whimsical, oversized clock tower",
+        "Festive, garland-draped rooftops"
+      ],
+      "uniqueIdentifiers": [
+        "Glistening, frost-covered gingerbread trim",
+        "Animated toy soldiers guarding the entrance",
+        "A constant swirl of magical, shimmering dust",
+        "Steam puffing rhythmically from decorative pipes"
+      ],
+      "primaryMedia": "media-1765455016676-q1ynanz58"
+    },
+    "niche-1765455057533-4a3a00vsb": {
+      "id": "niche-1765455057533-4a3a00vsb",
+      "type": "niche",
+      "name": "Santa's Workshop Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a vast, lively space dominated by immense, fantastical toy-making contraptions. Workbenches are laden with half-finished toys, and shelves overflow with colorful creations. Elevated walkways and chutes crisscross the ceiling, facilitating efficient toy production. The scale feels grand, though ingeniously adapted for elven workers.",
+        "colorsAndLighting": "Warm, golden light emanates from glowing lanterns and strategically placed magical orbs, casting playful shadows. Festive reds and greens are present in decorations and toy components, accented by shimmering gold on fixtures and polished surfaces. The overall illumination is inviting and cheerful.",
+        "atmosphere": "The air buzzes with a symphony of cheerful industry: the whirring of unseen gears, the gentle clinking of tools, and the happy chatter of elves. It carries the sweet scent of gingerbread and pine, with a palpable sense of joyful anticipation. A magical dust of glitter occasionally settles from above.",
+        "materials": "Interior walls mimic the exterior's peppermint candy shingles, smooth and brightly striped. Gingerbread-like trim adorns doorways and machinery. Polished wood is used for workbenches and shelving, while metal components of the machinery gleam with a festive sheen. Accents of woven fabric and plush toy materials add texture.",
+        "mood": "Overflowing with pure, unadulterated joy and the magic of creation. It inspires wonder, excitement, and the warmth of giving, embodying the very essence of Christmas spirit.",
+        "sounds": "Whirring gears, cheerful elven chatter, tinkling bells, rhythmic hammering, gentle carols.",
+        "spatialLayout": "A large, cavernous space with a high ceiling, filled with a dense but organized arrangement of machinery and workstations. Multiple levels are suggested by walkways and chutes, creating a sense of dynamic verticality.",
+        "primary_surfaces": "Striped peppermint candy shingle walls, polished wooden workbenches",
+        "secondary_surfaces": "Gingerbread trim accents, gleaming metal machinery components, woven fabric",
+        "accent_features": "Magical glowing lanterns, sparkling glitter dust, colorful toy prototypes, ornate brass fixtures",
+        "dominant": "Deep forest green on machinery casings and decorative elements",
+        "secondary": "Bright cherry red on candy cane-inspired structural supports and tool handles",
+        "accent": "Shimmering gold on mechanical joints and display shelves, pure white on gingerbread trim",
+        "ambient": "Warm, inviting golden glow",
+        "genre": null,
+        "architectural_tone": "Whimsical gingerbread and candy confection with a grand, fantastical scale",
+        "cultural_tone": "Built and operated by cheerful elves for the purpose of crafting toys for Santa Claus.",
+        "materials_base": "Playful, edible-inspired materials",
+        "mood_baseline": "Enchanting and festive",
+        "palette_bias": "Warm reds, greens, golds, and whites",
+        "soundscape_base": "Bustling workshop symphony",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765455057532-hmusondk4",
+      "description": "The interior of Santa's Workshop is a large, industrially designed space dedicated to toy manufacturing, reflecting the cheerful and grand aesthetic of its parent structure.",
+      "structure": {
+        "form": "faceted",
+        "roofType": "pitched",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "industrial",
+        "spatialLayout": "The vast interior of Santa's Workshop is a bustling hub of toy creation, with organized workstations and ample space for movement and storage, all under a grand, pitched ceiling.",
+        "requiredElements": [
+          "interior of Santa's Workshop"
+        ],
+        "suggestedFixtures": [
+          "Toy assembly benches",
+          "Gift wrapping stations",
+          "Tool racks",
+          "Storage shelves for toys",
+          "Conveyor belts for toy distribution",
+          "Painting and finishing stations"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "Large, ornate doors leading to other parts of the workshop or exterior."
+          },
+          {
+            "type": "passage",
+            "position": "left side",
+            "description": "Wide passage allowing movement between work zones."
+          },
+          {
+            "type": "stairs",
+            "position": "right corner",
+            "description": "Stairs leading to a mezzanine or upper level work area."
+          }
+        ],
+        "dominantElements": [
+          "Steeply pitched interior ceiling",
+          "Numerous dormer windows",
+          "Candy-cane striped architectural elements",
+          "Oversized icicle-like decorations"
+        ],
+        "uniqueIdentifiers": [
+          "Whimsical and colossal scale",
+          "Glistening icicle accents",
+          "Ornate golden door handles (if applicable internally)"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "Large, ornate doors leading to other parts of the workshop or exterior."
+        },
+        {
+          "type": "passage",
+          "position": "left side",
+          "description": "Wide passage allowing movement between work zones."
+        },
+        {
+          "type": "stairs",
+          "position": "right corner",
+          "description": "Stairs leading to a mezzanine or upper level work area."
+        }
+      ],
+      "dominantElements": [
+        "Steeply pitched interior ceiling",
+        "Numerous dormer windows",
+        "Candy-cane striped architectural elements",
+        "Oversized icicle-like decorations"
+      ],
+      "uniqueIdentifiers": [
+        "Whimsical and colossal scale",
+        "Glistening icicle accents",
+        "Ornate golden door handles (if applicable internally)"
+      ],
+      "searchDesc": "Interior of Santa's whimsical, candy-themed workshop filled with elves and toys.",
+      "slug": "interior-of-santa-s-workshop"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765445110185-u3ycnzkdu",
+      "id": "loc-1765452778037-xijjhyos9",
       "type": "host",
       "children": [
         {
-          "id": "96e7ee20-4b65-4fa7-bde9-2e6b2b0e942d",
+          "id": "5cb8a11c-64e5-4bab-99ea-07139d8397bc",
           "type": "region",
           "children": [
             {
-              "id": "7a823c2a-ada9-49ed-93b0-4c2557c3abe3",
+              "id": "3a8ab53c-c146-43fb-833e-418447f94e16",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765445135126-9bgkzg52g",
+                  "id": "niche-1765452906034-nw1evgh2v",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1765446621074-vfjmwfq97",
+                  "id": "niche-1765453009115-h3nr4f4lm",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765453110090-6h0jhppe8",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765453215706-6ws8cxdsf",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765453382421-0snjzc8tc",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765453730970-kciitqlkn",
+      "type": "host",
+      "children": [
+        {
+          "id": "21e30ca0-0745-4a54-82a5-2a6d20103397",
+          "type": "region",
+          "children": [
+            {
+              "id": "75b783d3-f567-4f26-a110-4a3e25596ff7",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765453936786-mwhzxgifp",
+      "type": "host",
+      "children": [
+        {
+          "id": "8c2bb06c-a85c-4115-8912-14b958ac76f4",
+          "type": "region",
+          "children": [
+            {
+              "id": "b19128b7-4437-421e-afe3-d7b676969bf9",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765454008764-v5od2npc6",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765454047468-q659fko7s",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765454147614-aepg11rnp",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765454264350-1qdcdv0z7",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "044c16bc-3c56-4e27-80b2-c34289d4152e",
+          "type": "region",
+          "children": [
+            {
+              "id": "0083ae83-6613-4621-a561-a9dd22260e40",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765454390611-pgoiddlbs",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765454573388-cxz2c4akf",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765454996372-hszvm4bc7",
+      "type": "host",
+      "children": [
+        {
+          "id": "4b3bd094-9e78-4886-bc01-57548cf1922c",
+          "type": "region",
+          "children": [
+            {
+              "id": "60cd3356-ca6d-4bfd-b349-0afff3a6f89d",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765455057533-4a3a00vsb",
                   "type": "niche",
                   "children": []
                 }
@@ -467,6 +2158,8 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765445110185-u3ycnzkdu"
+    "loc-1765452778037-xijjhyos9",
+    "loc-1765453936786-mwhzxgifp",
+    "loc-1765454996372-hszvm4bc7"
   ]
 }

@@ -25,6 +25,17 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Open-Sky Rooftop/Terrace Fix (Dec 11):** Rooftop terraces now correctly show open sky:
+  - Uses `roofType` field from structure analysis (not string matching)
+  - When `roofType === 'open-sky'`, appends constraint DIRECTLY to final FLUX prompt
+  - Constraint: `[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space...]`
+  - Bypasses LLM which was ignoring guidance due to parent DNA "cave" references
+  - Key file: `imagePromptGeneration.ts`
+- **DNA Bleeding Fix for /goto (Dec 11):** Current niche DNA no longer bleeds into new locations:
+  - `findParentLocationNode()` now returns `null` for parentDNA when no valid location parent
+  - NEVER returns niche DNA as parent DNA
+  - Added `includeCurrentNodeDNA: false` option to image prompt generation
+  - Key files: `navigationHelpers.ts`, `createNodePipeline.ts`, `imagePromptGeneration.ts`
 - **Interior Spawn Pipeline System (Dec 11):** Complete rework of interior/niche creation:
   - **Two-phase approach**: Creates exterior hierarchy first, then runs GO_INSIDE for niche
   - **Dynamic pipeline config**: Route responds immediately, pipeline updates config via SSE when interior detected
@@ -95,6 +106,8 @@
 - Strict separation patterns enforced
 - Scale consistency system implemented for interior/exterior matching
 - Opening shape inheritance for window consistency
+- Open-sky rooftop/terrace system implemented
+- DNA bleeding fix for /goto complete
 - Pending: database migration, testing, CI/CD, advanced features
 
 ## Known Issues 🐛

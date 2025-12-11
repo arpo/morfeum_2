@@ -36,17 +36,20 @@ export const SNOW_PRESET: ParticlePreset = {
   name: 'snow',
   config: {
     enabled: true,
-    count: 80,
-    size: { min: 0.5, max: 1.5 },  // Small to medium snowflakes
-    speed: { min: 0.3, max: 0.8 },
-    opacity: { min: 0.5, max: 0.9 },
+    count: 6000,
+    size: { min: 0.04, max: 0.1 },  // Larger for better visibility
+    speed: { min: 0.002, max: 0.007 },
+    opacity: { min: 0.4, max: 0.7 },  // More visible
     color: '#ffffff',
-    behavior: 'fall',
-    blendMode: 'normal',  // Normal blending for natural look
-    wind: { x: 0.1, y: 0 },
-    drift: { x: 0, y: 0 },  // Fall behavior handles vertical movement
-    turbulence: 0.4,
+    behavior: 'float',
+    blendMode: 'normal',
+    wind: { x: 0.02, y: -0.1 },
+    drift: { x: 0.5, y: 0 },
+    turbulence: 2.9,  // Reduced from 0.9 to prevent z-depth clustering
     depthAware: true,
+    lifetime: { min: 8, max: 15 },  // Particles respawn every 8-15 seconds
+    fadeIn: 1.0,   // 1 second fade in
+    fadeOut: 1.0,  // 1 second fade out
   }
 };
 

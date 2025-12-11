@@ -60,7 +60,28 @@ function buildSystemPrompt(input: ImagePromptGenerationInput): string {
     const s = structureAnalysis.structure;
     
     // Add enclosed interior constraint for windowless spaces
-    if (s.openings === 'none' && input.perspective === 'interior') {
+    // Uses roofType to distinguish enclosed spaces from open-air spaces (terrace, rooftop, balcony)
+    // - roofType === 'open-sky' → outdoor space, add OPEN-SKY constraint
+    // - roofType !== 'open-sky' AND openings === 'none' → enclosed interior, apply enclosed constraint
+    const isOpenSky = s.roofType === 'open-sky';
+    const isEnclosedInterior = 
+      !isOpenSky && 
+      s.roofType !== null &&
+      s.openings === 'none' && 
+      input.perspective === 'interior';
+
+    if (isOpenSky) {
+      // CRITICAL: For open-sky spaces (terrace, rooftop, balcony), override any cave/dome ceiling from parent DNA
+      enclosedInteriorConstraint = `
+[CRITICAL: OPEN-SKY SPACE]
+This is an OPEN-AIR space with NO ROOF or CEILING above.
+- The architectural_tone from parents applies to WALLS and STYLE only, NOT to any roof/ceiling
+- DO NOT add any roof, cave ceiling, dome, or covered structure overhead
+- The SKY is directly visible above - show natural sky, clouds, or sunset/sunrise
+- Even if parent is a "cave-dwelling", this specific space has open sky above
+- Walls can maintain the organic/cave-like style, but there is NO cave ceiling
+`;
+    } else if (isEnclosedInterior) {
       enclosedInteriorConstraint = `
 [CONSTRAINT:] fully enclosed interior; no openings, holes, skylights, or gaps in the roof or ceiling unless explicitly specified; maintain intact, continuous ceiling structure
 `;
@@ -206,6 +227,15 @@ export async function generateImagePromptForNode(
     throw new Error(result.error || 'Failed to generate image prompt');
   }
 
-  // Return raw prompt - Morfeum style is applied by imageGeneration.ts
-  return result.data.text.trim();
+  let finalPrompt = result.data.text.trim();
+
+  // CRITICAL: Append open-sky constraint DIRECTLY to FLUX prompt
+  // The LLM often ignores the guidance due to overwhelming "cave" references in DNA
+  // By appending directly, FLUX receives the instruction regardless of LLM behavior
+  const isOpenSky = input.structureAnalysis?.structure?.roofType === 'open-sky';
+  if (isOpenSky) {
+    finalPrompt += '\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]';
+  }
+
+  return finalPrompt;
 }

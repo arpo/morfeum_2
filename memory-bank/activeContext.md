@@ -2,7 +2,42 @@
 
 ## Recent Changes (2025-12-11)
 
-### Interior Spawn Pipeline System (Dec 11)
+### Open-Sky Rooftop/Terrace Fix (Dec 11 - Later)
+- **Problem**: Rooftop terraces inside "cave dwellings" were generating cave roofs even when `roofType: "open-sky"` was correctly set
+- **Root Cause**: 
+  1. The OPEN-SKY constraint was only in the system prompt as guidance TO the LLM
+  2. LLM ignored the guidance due to overwhelming "cave" references in parent DNA (`architectural_tone: "cave-dwelling"`)
+  3. The constraint never appeared in the final FLUX prompt
+
+- **Fix in `imagePromptGeneration.ts`**:
+  - Append OPEN-SKY constraint **DIRECTLY to the final FLUX prompt** (not just as LLM guidance)
+  ```typescript
+  const isOpenSky = input.structureAnalysis?.structure?.roofType === 'open-sky';
+  if (isOpenSky) {
+    finalPrompt += '\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]';
+  }
+  ```
+  - Also added OPEN-SKY guidance in system prompt for LLM awareness
+  - Uses `roofType` field from structure analysis (not string matching)
+
+- **roofType-based constraints**:
+  - `roofType === 'open-sky'` → Append open-sky constraint (terrace, balcony, rooftop)
+  - `roofType !== 'open-sky'` AND `openings === 'none'` → Enclosed interior constraint
+
+### DNA Bleeding Fix for /goto (Dec 11 - Earlier)
+- **Problem**: When running `/goto` from a niche, the current niche's DNA was bleeding into the new location's image
+- **Root Cause**: `findParentLocationNode()` had a fallback that returned current node's DNA as parent DNA
+- **Fix in `navigationHelpers.ts`**:
+  - `findParentLocationNode()` now returns `null` for `parentLocationDNA` when no valid location parent found
+  - NEVER returns niche DNA as parent DNA
+  - Callers must use cascaded DNA functions if parent DNA is null
+- **Fix in `createNodePipeline.ts`**:
+  - Added `includeCurrentNodeDNA: false` flag to image prompt generation
+  - Converts null parentDNA to undefined for cleaner handling
+- **Fix in `imagePromptGeneration.ts`**:
+  - Added `includeCurrentNodeDNA?: boolean` option to interface (default: false)
+
+### Interior Spawn Pipeline System (Dec 11 - Earlier)
 - **Feature**: When spawning interior locations (e.g., "Inside a Victorian pub"), the system now uses a specialized two-phase approach
 - **Problem Solved**: 
   1. Interior spawns were not saving worldTree (double completion events)
@@ -55,64 +90,22 @@
 ### Pass-Through Region System (Dec 10)
 - **Feature**: Generic prompts (e.g., "a building on a planet") now create pass-through regions instead of fully-generated regions
 - **Purpose**: Regions should only be created when user explicitly names a known place (e.g., "Ringön in Göteborg")
-- **Implementation**:
-  1. `parsePromptToHierarchy.ts` - Detects generic vs specific prompts, returns `regionIsPassThrough: true`
-  2. `nodeCreationPipeline.ts` - Passes flag to `buildHierarchyStructure()`
-  3. `createHierarchy.ts` - Creates region with `isPassThrough: true`, name: "Region", empty DNA
-  4. `WorldTreeBuilder.ts` - Preserves `isPassThrough` flag when saving to worlds.json
-  5. `worldTree/types.ts` - Added `isPassThrough?: boolean` to `TreeNode` interface
-  6. `navigation/types.ts` - Added `isPassThrough?: boolean` to NavigationContext data
-
-### Pass-Through Region UI Protection (Dec 10)
-- **TreeView**:
-  - Cannot select pass-through nodes (handleSelect returns early)
-  - Can still expand/collapse to see children
-  - Arrow badge icon (→) indicates pass-through
-  - Muted styling (opacity 0.6, italic)
-  - No delete button
-  - Cursor: `default` (not pointer)
-- **SpawnInput**:
-  - `useNavigationLogic.ts` blocks commands on pass-through nodes
-  - Shows error: "Commands cannot be run on pass-through regions"
-- **Backend**:
-  - `/api/mzoo/navigation/command` validates and rejects commands on pass-through nodes
-
-### Files Modified for Pass-Through System
-- `packages/backend/src/engine/nodeCreation/detection/parsePromptToHierarchy.ts`
-- `packages/backend/src/engine/pipelines/nodeCreationPipeline.ts`
-- `packages/backend/src/engine/nodeCreation/core/createHierarchy.ts`
-- `packages/backend/src/services/worldTree/builder.ts`
-- `packages/backend/src/services/worldTree/types.ts`
-- `packages/backend/src/engine/navigation/types.ts`
-- `packages/backend/src/routes/mzoo/navigation.ts`
-- `packages/frontend/src/components/ui/TreeView/TreeView.tsx`
-- `packages/frontend/src/components/ui/TreeView/TreeView.module.css`
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts`
-- `packages/frontend/src/icons/index.ts` - Added IconArrowBadgeRight
-
-## Previous Changes (2025-12-10)
-
-### Fixed `--furnish` Flag for GO_INSIDE
-- Added `FurnishingDetails` interface and property to nodeBuilder.ts
-- Updated `createNodePipeline.ts` to pass furnishingDetails to buildNode()
-- Added strong emphasis statements for FLUX rendering
+- Full implementation details in progress.md
 
 ## Current Focus
 
-- Pass-through region system complete and tested
-- Monitor hierarchy creation for correct region behavior
+- Open-sky rooftop/terrace system complete
+- DNA bleeding fix for /goto complete
 - Continue database migration planning (Supabase/PostgreSQL)
 
-## Pass-Through Region Criteria
+## Key Files Modified Today
 
-| Prompt Type | Region Treatment | Example |
-|-------------|------------------|---------|
-| Generic | Pass-through (empty DNA) | "a building on a planet" |
-| Named place | Full DNA generation | "Ringön in Göteborg" |
-| Known geography | Full DNA generation | "downtown Tokyo" |
+- `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts` - Open-sky constraint, includeCurrentNodeDNA option
+- `packages/backend/src/engine/navigation/navigationHelpers.ts` - findParentLocationNode fix
+- `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - includeCurrentNodeDNA: false
 
 ## Next Steps
 
-- Test pass-through region behavior with various prompts
-- Consider intentClassifier prompt update (reduce niche creation)
+- Test open-sky constraint with various rooftop/terrace prompts
 - Continue database migration planning
+- Consider improvements to DNA inheritance system

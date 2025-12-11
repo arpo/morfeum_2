@@ -62,7 +62,7 @@ export const WORLD_VIEW_3D_CONFIG = {
     X: 0.0003,  // Horizontal cycle (~7.8 sec)
     Y: 0.00025,  // Vertical cycle (~10.5 sec)
     Z: 0.0001,  // Zoom cycle (~15.7 sec, slowest for subtle breathing)
-    ROLL: 0.000,  // Roll cycle (~13 sec, slow head tilt)
+    ROLL: 0.0005,  // Roll cycle (~13 sec, slow head tilt)
   },
   
   /** Easing factor for movement smoothness (0.01 = very smooth, 0.2 = snappy) */
@@ -90,13 +90,13 @@ export const WORLD_VIEW_3D_CONFIG = {
   PARTICLES: {
     ENABLED: true,
     PRESET: 'dust', // 'dust' | 'snow' | 'rain' | 'fireflies' | 'embers' | 'fog' | 'bubbles' | 'sparks' | 'stars' | 'ash' | 'pollen'
-    DEPTH: 6, // Particle depth range (2 = shallow, 4 = moderate, 6+ = deep spread with more size variation)
+    DEPTH: 4, // Particle depth range (2 = shallow, 4 = moderate, 6+ = deep spread with more size variation)
   },
   
   /** Post-processor effects - image displacement/distortion */
   POSTPROCESSOR: {
     ENABLED: false,
-    PRESET: 'dream', // 'heatwave' | 'underwater' | 'glitch' | 'dream'
+    PRESET: 'glitch', // 'heatwave' | 'underwater' | 'glitch' | 'dream'
   },
   
   /** Scene presets - combined particle + post-processor + color effects */
