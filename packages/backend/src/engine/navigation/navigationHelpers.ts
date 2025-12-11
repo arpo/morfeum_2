@@ -9,8 +9,12 @@ import type { NodeSpec, NodeType, NavigationContext } from './types';
 /**
  * Find parent location node from context
  * Traverses up from niche nodes to find the closest location parent
+ * 
+ * IMPORTANT: This function should NEVER return a niche's DNA as parentDNA.
+ * Only location-type nodes can be valid parents for DNA inheritance.
+ * 
  * @param context - Navigation context
- * @returns Object with parentLocationId and parentLocationDNA
+ * @returns Object with parentLocationId and parentLocationDNA (null if no valid parent found)
  */
 export function findParentLocationNode(context: NavigationContext): {
   parentLocationId: string;
@@ -28,7 +32,7 @@ export function findParentLocationNode(context: NavigationContext): {
   
   // If current node is a niche, traverse to parent location
   if (currentNode.type === 'niche' && parentNode) {
-    // Parent should be a location
+    // Parent should be a location - this is the expected case
     if (parentNode.type === 'location') {
       return {
         parentLocationId: parentNode.id,
@@ -36,20 +40,21 @@ export function findParentLocationNode(context: NavigationContext): {
       };
     }
     
-    // If parent is also a niche (shouldn't happen after our fix, but handle it)
-    // Use the parent's parent ID and DNA if available
-    if (parentNode.type === 'niche' && parentNode.dna) {
+    // If parent is also a niche, we can't use its DNA as parent DNA
+    // Return null for DNA to indicate no valid parent location found
+    if (parentNode.type === 'niche') {
       return {
         parentLocationId: currentNode.parentId || currentNode.id,
-        parentLocationDNA: parentNode.dna
+        parentLocationDNA: null // NEVER return niche DNA as parent DNA
       };
     }
   }
   
-  // Fallback: use current node
+  // Fallback: return null for DNA - NEVER use current niche DNA as parent
+  // The caller should use cascaded DNA functions instead
   return {
     parentLocationId: currentNode.parentId || currentNode.id,
-    parentLocationDNA: currentNode.dna
+    parentLocationDNA: null // Explicit null - caller must use cascaded DNA
   };
 }
 

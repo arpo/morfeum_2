@@ -20,7 +20,7 @@ export interface ImagePromptGenerationInput {
   structureAnalysis?: StructureAnalysis;
   /** DNA result (looks, atmosphere, materials, mood, etc.) */
   dna: Record<string, any>;
-  /** Parent DNA for inheritance */
+  /** Parent DNA for inheritance (cascaded from all ancestors) */
   parentDNA?: Record<string, any>;
   /** User's original prompt/description */
   userPrompt: string;
@@ -30,6 +30,15 @@ export interface ImagePromptGenerationInput {
   perspective: 'interior' | 'exterior';
   /** Parent chain for context */
   parentChain?: Array<{ type: string; name: string; description: string }>;
+  /** 
+   * Include current node's DNA in inherited fields (default: false)
+   * When false: Only parentDNA is used for inheritance fields
+   * When true: Current node's DNA is also shown in inheritance section
+   * 
+   * IMPORTANT: For /goto from a niche, this should be FALSE to avoid
+   * the current niche's DNA bleeding into the new location's image.
+   */
+  includeCurrentNodeDNA?: boolean;
 }
 
 /**

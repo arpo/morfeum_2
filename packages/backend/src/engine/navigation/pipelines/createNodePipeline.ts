@@ -144,13 +144,17 @@ export async function runCreateLocationNodePipeline(
     }
 
     // Get parent DNA for visual consistency (architectural_tone, cultural_tone, etc.)
+    // NOTE: findParentLocationNode now returns null if no valid location parent found
+    // This prevents niche DNA from bleeding into new location images
     const { parentLocationDNA } = findParentLocationNode(context);
     
     // Use unified LLM-based image prompt generator
+    // IMPORTANT: includeCurrentNodeDNA is false by default to prevent
+    // the current niche's DNA from affecting the new node's image
     let imagePrompt = await generateImagePromptForNode(apiKey, {
       structureAnalysis,
       dna: dnaResult.dna || {},
-      parentDNA: parentLocationDNA,
+      parentDNA: parentLocationDNA || undefined, // Convert null to undefined for cleaner handling
       userPrompt,
       nodeType,
       perspective: perspective as 'interior' | 'exterior',
@@ -158,7 +162,8 @@ export async function runCreateLocationNodePipeline(
         type: context.parentNode.type,
         name: context.parentNode.name,
         description: context.parentNode.data?.description || ''
-      }] : []
+      }] : [],
+      includeCurrentNodeDNA: false // NEVER include current niche DNA in /goto image generation
     });
 
     if (helper) {
