@@ -182,10 +182,20 @@ export function deleteNodeWithChildren(
   nodeIdsToDelete.forEach(id => delete newNodes[id]);
   
   // Remove the subtree from parent in the tree structure
-  const newTrees = worldTrees.map((tree: TreeNode) => {
-    if (tree.id !== targetWorldId) return tree;
-    return cloneTreeWithoutNode(tree, nodeId);
-  });
+  // Special case: if nodeId is the root of a world tree, remove the entire tree
+  let newTrees: TreeNode[];
+  const isRootNode = worldTrees.some(tree => tree.id === nodeId);
+  
+  if (isRootNode) {
+    // Filter out the entire tree when deleting a root node
+    newTrees = worldTrees.filter(tree => tree.id !== nodeId);
+  } else {
+    // Remove node from within the tree structure
+    newTrees = worldTrees.map((tree: TreeNode) => {
+      if (tree.id !== targetWorldId) return tree;
+      return cloneTreeWithoutNode(tree, nodeId);
+    });
+  }
   
   // Clean up pins
   const newPinnedIds = pinnedIds.filter((id: string) => !nodeIdsToDelete.has(id));
