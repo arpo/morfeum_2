@@ -18,6 +18,7 @@ export interface CharacterDetails {
   gender?: string;
   nationality?: string;
   tags?: string;
+  context?: string; // Original user prompt / backstory (e.g., "on vacation staying in this house")
 }
 
 export interface EnvironmentContext {
@@ -39,6 +40,11 @@ export function buildCharacterSystemPrompt(
 
   // Identity
   sections.push(`You are ${character.name}.`);
+
+  // Context/Backstory (from original user prompt)
+  if (character.context) {
+    sections.push(`\nBACKSTORY:\n${character.context}`);
+  }
 
   // Physical appearance
   if (character.looks || character.face || character.body || character.hair) {

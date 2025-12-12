@@ -204,6 +204,70 @@ Frontend Input → commandParser → Backend Route → Pipeline → Analyzer
 
 **Example**: `runCreateLocationNodePipeline` called from `runInteriorFlow` with `isSubPipeline: true`
 
+## Character Creation System
+
+### Character Creation Pipeline
+Location: `packages/backend/src/engine/navigation/pipelines/createCharacterPipeline.ts`
+
+7-step flow:
+1. Prompt Engineering - Transform user input + environment DNA into detailed description
+2. Seed Generation - Create character seed from engineered prompt
+3. Scene Composition - LLM composes character + location into scene prompt
+4. Image Generation - Generate character in environment image
+5. Visual Analysis - Analyze the generated image
+6. Profile Enrichment - Build deep character profile
+7. Save - Persist character with location reference
+
+### Camera Mode System
+Location: `packages/backend/src/engine/generation/prompts/characters/composeCharacterScenePrompt.ts`
+
+**9 Shot Types:**
+- `half_portrait` - Face + upper body (default for character creation)
+- `full_body` - Head to toe in environment
+- `environmental_portrait` - 30-40% character, 60-70% environment
+- `full_scene` - Wide shot, character small
+- `close_up` - Face focus
+- `action_shot` - Dynamic motion
+- `dramatic_low_angle` - Power pose from below
+- `aerial_overview` - Bird's eye view
+- `over_shoulder` - From behind
+
+**Usage:**
+```typescript
+composeCharacterScenePrompt(character, locationContext, shotType, apiKey, action?)
+```
+
+### Character Chat System Prompts
+Location: `packages/frontend/src/utils/entity/buildCharacterSystemPrompt.ts`
+
+**Includes:**
+- Identity and backstory (from original user prompt)
+- Full appearance (looks, face, body, hair)
+- Clothing, personality, voice, speech style
+- Current environment context
+- Behavior instructions
+
+**Interface:**
+```typescript
+interface CharacterDetails {
+  name, looks, wearing, face?, body?, hair?,
+  specificDetails?, style?, personality,
+  voice?, speechStyle?, gender?, nationality?,
+  tags?, context?  // Original user prompt / backstory
+}
+```
+
+### Character Data Storage
+Characters store reference to source location, NOT environment data:
+```typescript
+{
+  sourceLocationId: string,
+  sourceLocationName: string,
+  characterType: 'real' | 'unreal',
+  context: string  // Original user prompt / backstory
+}
+```
+
 ## Development Guidelines
 
 ### File Size Limits

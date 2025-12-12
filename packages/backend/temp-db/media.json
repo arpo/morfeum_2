@@ -59,19 +59,200 @@
       },
       "entityRefs": []
     },
-    "media-1765534845381-gr2nnza81": {
-      "id": "media-1765534845381-gr2nnza81",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85fe0b/YQ9jqmEXf_C2x3T4GzAva.jpg",
-      "createdAt": "2025-12-12T10:20:45.381Z",
+    "media-1765539743621-emxl0u69e": {
+      "id": "media-1765539743621-emxl0u69e",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a85fff6/1qz3HY23ca51lD3kvtUAJ_31a52c6fb5bf4890a08165455d6fda9e.png",
+      "createdAt": "2025-12-12T11:42:23.621Z",
       "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA half portrait, focusing on Cora Meadowsweet's face and upper body, with a subtle depth blur in the background. She stands in front of a modest, rectangular structure made of sun-bleached, sea-worn timber and smooth, sea-tumbled stones, its faded beige and muted blue exterior bathed in bright, natural sunlight. Cora, with her sun-kissed skin, light brown freckles, and wind-tousled sandy blonde hair peeking from under her wide-brimmed straw hat, is turned slightly towards the camera, a gentle squint in her eyes as she observes the scene. Her muted seafoam green linen sundress is visible, and her weathered hands rest relaxed at her sides. The atmosphere is fresh, carrying the scent of salt and sea spray, with a gentle breeze subtly ruffling her hair and dress. The mood is one of peaceful solitude and effortless connection with nature, reflecting a quiet sense of self-reliance and contentment.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "parentMedia": "media-1765453974821-4klnwz29v",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "loc-1765453936786-mwhzxgifp"
+      ],
+      "parentMedia": "media-1765453974821-4klnwz29v"
+    },
+    "media-1765539784986-d0qdp4zxj": {
+      "id": "media-1765539784986-d0qdp4zxj",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a85fffa/AdsTYHPobbg4rbwON7L5B_b7ce588aa14745a1959fbb4596014d0d.png",
+      "createdAt": "2025-12-12T11:43:04.986Z",
+      "metadata": {
+        "parentMedia": "media-1765454373099-a9tber5g0",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "0083ae83-6613-4621-a561-a9dd22260e40"
+      ],
+      "parentMedia": "media-1765454373099-a9tber5g0"
+    },
+    "media-1765539863914-hw8pv7bzo": {
+      "id": "media-1765539863914-hw8pv7bzo",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860001/Rkfu3SvT9mpGzdw1alCvI.jpg",
+      "createdAt": "2025-12-12T11:44:23.914Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait of Coralia Vance, facing 3/4 towards the camera, her face illuminated by bright, natural sunlight. She stands in front of a modestly designed, rectangular structure made of sun-bleached, sea-worn timber with accents of smooth, sea-tumbled stones, set against a backdrop of sandy terrain and hinting at a vast ocean beyond. Her tanned, freckled skin glows, and her faded denim eyes are serenely observant, framed by thick, untamed blonde hair knotted by the wind. She wears a knee-length, sleeveless sundress of coarse, pale seafoam green linen and a wide-brimmed straw hat. The air feels fresh, carrying the scent of salt and sea spray, creating a mood of peaceful solitude and connection with nature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "model": "FLUX",
         "width": 1024,
         "height": 1024
       },
       "entityRefs": [
-        "char-1765534845380-h1g69cydy"
+        "char-1765539863914-b33juwdbc"
+      ]
+    },
+    "media-1765539897119-hyvgbobsw": {
+      "id": "media-1765539897119-hyvgbobsw",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a860005/5yjmfjlT6ToLMFBQRkKDp_03594a1a5d3c417dbabb4febb3ac31fb.png",
+      "createdAt": "2025-12-12T11:44:57.119Z",
+      "metadata": {
+        "parentMedia": "media-1765539863914-hw8pv7bzo",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1765539863914-b33juwdbc"
+      ],
+      "parentMedia": "media-1765539863914-hw8pv7bzo"
+    },
+    "media-1765540083280-mo23i6cc6": {
+      "id": "media-1765540083280-mo23i6cc6",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860017/c-XxFnrsSVbV0euP6inW_.jpg",
+      "createdAt": "2025-12-12T11:48:03.280Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA street-level, ultra-wide photograph of the Habitation Blocks in Neo-Kyoto, captured from a slightly elevated position (25-30° downward tilt). Towering, utilitarian Brutalist residential blocks, constructed from weathered, grimy concrete stained with streaks, dominate the frame, forming a narrow, canyon-like street. These aged facades are augmented with prominent, rounded, smooth white composite living pods projecting outwards, their large, curved windows emitting a warm, inviting orange glow that reveals glimpses of furniture and art within. The narrow street below is perpetually damp asphalt, reflecting scattered artificial streetlights that cast pools of stark light and deep shadows. Several yellow, boxy, futuristic vehicles, resembling taxis or delivery vans, traverse the wet surface. Balconies on the older parts of the buildings are cluttered with an assortment of items: potted plants, tables, and salvaged equipment, creating a lived-in, chaotic yet functional atmosphere. In the distant background, formidable, spiky skyscrapers pierce through a pervasive, hazy, overcast sky, suggesting a more imposing sector of the metropolis. The lighting is low and diffused, with pockets of warm orange glow from the pods contrasting sharply with the muted grays and browns of the concrete and the stark artificial lights. Rusted metal railings and grimy glass windows add to the worn texture of the scene. The overall mood is one of resilient, lived-in grit and a slightly melancholic beauty, capturing the working-class inhabitants' adaptation to a dense megacity. The composition is asymmetric, with the building entrance visible but not centered, shot at a slight angle to emphasize depth and dimension, and more street visible on one side, avoiding any perfect symmetry.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "8db02d6c-7765-4237-900c-5410b37ff150"
+      ]
+    },
+    "media-1765540140741-psdb1r57g": {
+      "id": "media-1765540140741-psdb1r57g",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a86001c/HwQoLGO7RkEWWcuao_nHD.jpg",
+      "createdAt": "2025-12-12T11:49:00.741Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA half_portrait shot, framing the upper body of Ochre prominently, with a subtle depth blur to the background. The scene is the street level of utilitarian habitation blocks, their aged, weathered concrete stained and streaked with grime, juxtaposed against smooth, white spherical living pods. Rusted metal elements adorn balconies overloaded with the detritus of daily life. Ochre, a weathered, rough-textured concrete humanoid with jagged white composite segments integrated into its form, stands in a 3/4 turn, facing slightly away from the camera. A subtle, pulsating orange light emanates from deep within its core, casting faint, deepening shadows on its concrete skin, which is etched with subtle patterns resembling erosion. The artificial streetlights pierce the perpetual gloom, casting pools of stark light that highlight the damp, reflective street surfaces, creating a visual dialogue with the warm orange glow from the pod windows. The atmosphere is heavy with moisture and the scent of damp concrete, a pervasive haze obscuring distant views, unifying the functional grit with the quiet resilience of a lived-in, slightly melancholic megacity.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765540140740-ze0ten6ww"
+      ]
+    },
+    "media-1765540244136-dratspeg6": {
+      "id": "media-1765540244136-dratspeg6",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860027/Rzp4eVPekz-dUAN92IgYc.jpg",
+      "createdAt": "2025-12-12T11:50:44.136Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA half_portrait framing Eleanor Vance, her face and upper body prominent, a 3/4 turn towards the viewer, set against the street level of the Habitation Blocks. Towering, grimy concrete residential blocks rise on either side, their surfaces streaked and stained. Spherical, stark white living pods are integrated into their structure, some with warm orange light spilling from their windows. The narrow street below is perpetually damp, reflecting the harsh, yellow glow of artificial streetlights that create deep shadows. Eleanor’s mousy brown hair is pulled back in a tight bun, her deep-set hazel eyes showing a quiet stoicism. She wears a faded charcoal grey jumpsuit with reinforced knee panels and heavily scuffed dark leather work boots. A worn, earth-toned canvas messenger bag is slung across her body. The atmosphere is heavy with moisture and the scent of damp concrete, a pervasive haze softening distant details, unified by a mood of functional grit and enduring resilience.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765540244135-tdxs68xut"
+      ]
+    },
+    "media-1765540329789-xcngogzje": {
+      "id": "media-1765540329789-xcngogzje",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860030/ZRWdZmFbYeyIC7tLdHZQL.jpg",
+      "createdAt": "2025-12-12T11:52:09.789Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nUltra-wide shot, street level, 25° downward tilt, capturing the monumental, circular, tiered citadel, \"The Lumina Citadel,\" embedded into a vast, rugged desert canyon wall. The outermost ring of the citadel is a deep burnt orange, intricately patterned with a network of fine white lines resembling circuits, transitioning inward to a shadowy ring, and culminating in a vibrant teal core filled with delicate radial lines and scattered luminous dots, centering on a bright, concentric blue point. Two figures, clad in long, flowing robes of rich teal over deep reddish-orange or maroon, stand with their backs to the viewer on a rocky, uneven slope in the foreground, facing the citadel. They wear ornate, metallic-toned helmets with sensor-like protrusions and carry tall staffs topped with glowing blue orbs. Pouches, bags, and glowing devices are attached to their backs and hips. Sparse, dry scrub dots the rocky foreground. The canyon wall exhibits horizontal striations and cracks. The bright, clear ambient light of a temperate, high-altitude environment illuminates the arid textures. The atmosphere is dry and still, conveying profound silence and a sense of monumental discovery and silent awe. The architectural style is monumental arid alien architecture, with stone, glowing energy, and metallic inlay. The palette is dominated by deep burnt orange, shadowy grays, and vibrant teal, with accents of bright blue. The scene is shot at a slight angle to show depth and dimension, with more street visible on one side, creating an asymmetric composition.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "80153b08-d218-4139-944d-7c41e39b84a7"
+      ]
+    },
+    "media-1765540344827-o2b89c4cx": {
+      "id": "media-1765540344827-o2b89c4cx",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860032/axdlhmDn8lEXrEVTwsUUV.jpg",
+      "createdAt": "2025-12-12T11:52:24.827Z",
+      "metadata": {
+        "prompt": "Interior of the Lumina Citadel: a vast, circular, domed chamber of monumental, arid alien architecture, evoking ancient, technologically advanced guardians. The scene is dominated by a luminous, ethereal teal core, radiating bright, clear light and casting sharp, defined shadows. Smooth, composite walls with metallic inlays transition from shadowy grays to the vibrant teal, subtly hinting at intricate, embedded technology with visible fine circuit lines on some patterned panels. Concentric tiers rise inwards towards the glowing core, with wide, open passages at the outer perimeter and tiered ramps or stairs connecting the levels. A grand archway, leading to the vibrant teal core, is a focal point. Seating areas, information consoles, holographic projectors, archival displays, and a central glowing orb pedestal with glowing blue orbs on staffs are strategically placed on the intermediate, shadowy rings and observation platforms. The atmosphere is dry, still, and profoundly silent, with a subtle hum of energy. The color palette features a dominant vibrant teal, with secondary shadowy grays and accents of bright blue and white highlights. The mood is one of profound discovery, silent awe, and enigma, with a sense of immense scale and advanced, unknown purpose. The composition is asymmetric, with the luminous core slightly off-center, drawing the eye through the layered architecture and technological elements. The materials are primarily smooth composite and light-emitting crystalline material for the core, with polished metallic inlays and patterned panels.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765540373079-mvuw6rfcs": {
+      "id": "media-1765540373079-mvuw6rfcs",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860035/8NTOeP-Nm_Vvcm2zmYxqM.jpg",
+      "createdAt": "2025-12-12T11:52:53.079Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nArid Expanse. A harsh, windswept desert world characterized by colossal geological formations and the lingering echoes of ancient, technologically advanced civilizations. Vast, rugged canyons and towering mesas define its unforgiving landscape, concealing untold mysteries beneath a perpetually clear, bright sky.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nVast, rugged desert landscapes dominated by colossal canyons and towering mesas. Scarred rock faces display horizontal striations and deep cracks, hinting at immense geological age. Scattered, sparse scrub vegetation clings to the arid terrain. The overall impression is one of immense scale and natural, raw beauty.\n\nAtmosphere:\nThe air is dry, thin, and carries a profound stillness. The vastness of the open spaces evokes a sense of solitude. The clear skies suggest a temperate, perhaps high-altitude climate, free from typical atmospheric phenomena like clouds or fog. A subtle hum might emanate from ancient, active devices.\n\nColors and Lighting:\nDominant: Beige and ochre earth tones, covering vast rock faces and ground, Secondary: Burnt orange and shadowy grays, defining monumental structures and deep shadows, Accent: Vibrant teal, luminous blue, and bright white, as core elements of advanced technology\nLight: Bright, clear, high-contrast sunlight, Dominated by warm earth tones of beige, ochre, and burnt orange. The bright, clear lighting casts sharp shadows, accentuating the rugged textures and creating a stark, high-contrast environment. Luminous elements from ancient technology occasionally pierce the arid palette with vibrant blues and teals.\n\nGenre/Style: Sci-Fi Archaeological Adventure\nArchitectural Style: Monumental arid alien architecture\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "loc-1765540313069-tild8stil"
+      ]
+    },
+    "media-1765540419660-73rlieyhy": {
+      "id": "media-1765540419660-73rlieyhy",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860038/xJA_OCcG8FGbByWGmud_H.jpg",
+      "createdAt": "2025-12-12T11:53:39.660Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA half portrait shot of Silas Vane, his face and upper body prominent, positioned slightly to the right of the frame. He is turned 3/4 towards the viewer, his twilight eyes with their subtle internal glow fixed with observant intensity. The background shows the Lumina Citadel Interior, a vast chamber with smooth, curved walls transitioning from shadowy greys to a vibrant, ethereal teal glow emanating from a luminous central core. Intricate patterns and metallic inlays are visible on the walls, reflecting the bright, clear teal and blue light. His form-fitting charcoal grey tunic with teal piping and matte black shoulder pads is clearly visible. The air is dry and still, creating an atmosphere of profound discovery and silent awe, with a subtle depth blur on the background to keep Silas Vane in sharp focus.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765540419659-06s32x8rk"
+      ]
+    },
+    "media-1765540501726-366pzxear": {
+      "id": "media-1765540501726-366pzxear",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860041/ZE9fUHVTyBVF89OVXTR6-.jpg",
+      "createdAt": "2025-12-12T11:55:01.726Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA half portrait shot, with the subject occupying 60% of the frame, facing a 3/4 turn. The environment is the vast interior of the Lumina Citadel, a monumental chamber bathed in the ethereal, vibrant teal glow emanating from a massive central core. Smooth, curved walls transition from shadowy grays to the luminous core, reflecting the bright, clear light and casting sharp, defined shadows. Intricate patterns suggest advanced technology embedded within the monumental, arid alien stone-like composite walls, accented with fine circuit lines and metallic inlays. Unit 77, a tall, slender humanoid form cast from dark, matte composite material, stands within this space. Fine, geometric lines of polished obsidian are inlaid across its surface, catching the teal light with sharp reflections. A soft, internal luminescence of teal pulses gently beneath its composite skin, most noticeable at the seams of the inlay, forming circuit-like designs across its torso and shoulders. Unit 77’s demeanor is detached and observant, its pose exuding a cool, almost sterile stillness. The air around it feels subtly hum-filled and unnaturally still, creating a mood of profound discovery, silent awe, and enigmatic mystery within this ancient, technologically advanced sanctuary.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765540501725-x1x9aq179"
+      ]
+    },
+    "media-1765540550076-5ybbcnmhu": {
+      "id": "media-1765540550076-5ybbcnmhu",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860046/TEQzkzoWqejzodbXi-xRj.jpg",
+      "createdAt": "2025-12-12T11:55:50.076Z",
+      "metadata": {
+        "prompt": "An interior wide shot of a medium-scale, round Techno Bar within the Lumina Citadel. The space features seamless, smooth composite walls with a shadowy gray to teal gradient, inlaid with intricate technological patterns and traced by luminous teal core accents and bright blue circuit lines. A central, domed ceiling glows softly, with minimal circular openings. At the heart of the bar, a glowing teal orb feature pulses with ethereal light, surrounded by a seamless, curved bar counter with integrated holographic display units and interactive cocktail mixing stations. Futuristic seating pods upholstered in matte dark fabric are arranged around the perimeter. Ambient lighting systems cast bright, clear light, with focused spotlights highlighting the displays. A passage with glowing blue orb accents is visible at the left wall, leading to private booths. A discreet entrance/exit with subtle luminous dots is located at the right wall. At the rear wall, an archway passage offers a view to service areas. The atmosphere is cool, refined, and sophisticated, evoking a sense of focused creativity and quiet contemplation. Polished, reflective display surfaces enhance the holographic projections. The overall mood is sophisticated innovation and aesthetic appreciation.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765540584847-twzcjzr19": {
+      "id": "media-1765540584847-twzcjzr19",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a860049/F501PWDbvTKm528UuWUTu.jpg",
+      "createdAt": "2025-12-12T11:56:24.847Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait, capturing Sasha Vex from the shoulders up, with a subtle depth blur in the background. The scene is the exterior of a techno bar, part of a monumental arid alien citadel. Smooth, flowing architecture in a vibrant teal dominates the core, with luminous blue circuitry tracing the walls and ceiling. Sasha Vex, a human female with pale skin, sharp cheekbones, and full lips, her eyes gleaming with intelligent light, stands within this space. She wears a form-fitting, iridescent micro-mini dress, shimmering with teal and blue light, adorned with minimalist metallic jewelry that catches the ambient glow. Her presence is cool and magnetic, her confident, playful demeanor evident in her expression as she faces the camera in a 3/4 turn. Soft, subtle shadows add depth, and the atmosphere is cool, refined, and sophisticated, hinting at focused creativity and aesthetic appreciation.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765540584846-foisaeqzp"
       ]
     }
   }

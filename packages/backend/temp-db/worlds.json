@@ -302,6 +302,596 @@
       ],
       "searchDesc": "Modest coastal interior with weathered wood, ocean views, and a peaceful, salty atmosphere.",
       "slug": "interior-of-seascape-haven"
+    },
+    "loc-1765540062105-s1wqdhzh6": {
+      "id": "loc-1765540062105-s1wqdhzh6",
+      "type": "host",
+      "name": "Neo-Kyoto",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, densely packed futuristic cityscape stretches towards a hazy, overcast sky. Towering, narrow residential buildings line wet, bustling streets, augmented with distinctive living pods. In the distant background, formidable, spiky skyscrapers pierce through the atmospheric haze, suggesting a more advanced sector.",
+        "colorsAndLighting": "The overall palette is muted, dominated by grays and browns, with pools of artificial light casting deep shadows on damp surfaces. Warm orange glows from residential pods provide localized comfort against the pervasive gloom.",
+        "atmosphere": "The air is heavy with moisture and pollution, creating a pervasive haze that obscures distant views and lends a sense of claustrophobia. The environment feels damp, lived-in, and perpetually overcast, perhaps twilight or a dreary day.",
+        "materials": "The city's base materials include aged concrete and weathered metal, interspersed with newer composite materials in the advanced sectors. Textures range from grime-streaked and rusted to sleek and manufactured.",
+        "mood": "A blend of functional grit, quiet resilience, and the melancholic beauty of a densely populated, challenging urban environment, juxtaposed with hints of imposing technological advancement.",
+        "sounds": "Dull urban hum, distant traffic, occasional mechanical whirring, muffled voices",
+        "primary_surfaces": "Aged concrete and weathered metals",
+        "secondary_surfaces": "Composite building additions, glass windows",
+        "accent_features": "Glowing residential pods, distant imposing skyscrapers",
+        "dominant": "Muted Grey (general cityscape)",
+        "secondary": "Brown (aged structures)",
+        "accent": "Orange (residential glow), Yellow (vehicles), Silver/Black (distant towers)",
+        "ambient": "Overcast, hazy twilight, artificial light dominance",
+        "genre": "Cyberpunk",
+        "architectural_tone": "Brutalist utilitarianism meets modular adaptability and imposing futuristic megastructures",
+        "cultural_tone": "A sprawling, multi-tiered society grappling with rapid technological advancement and urban decay, with distinct class stratifications",
+        "materials_base": "Concrete, metal, composite, glass",
+        "mood_baseline": "Melancholic grit and functional resilience",
+        "palette_bias": "Muted industrial tones with warm and cool artificial light accents",
+        "soundscape_base": "Pervasive urban hum with intermingling mechanical and environmental sounds",
+        "flora_base": "Sparse, hardy urban vegetation",
+        "fauna_base": "Urban vermin, robotic drones"
+      },
+      "description": "A sprawling, multi-layered metropolis where hyper-modernity clashes with a decaying past. Vast sectors of advanced technology stand adjacent to older, more utilitarian districts, creating a stark visual and cultural dichotomy.",
+      "searchDesc": "Sprawling, multi-layered metropolis with a clash of hyper-modernity and decaying past.",
+      "slug": "neo-kyoto",
+      "structure": {
+        "spatialLayout": "Extremely dense and multi-layered, with a strong emphasis on verticality. Narrow streets in older sectors contrast with the immense scale of distant skyscrapers.",
+        "dominantElements": [
+          "Spiky skyscrapers",
+          "Multi-layered infrastructure"
+        ],
+        "uniqueIdentifiers": [
+          "Atmospheric haze",
+          "Juxtaposition of old and new architecture"
+        ]
+      },
+      "dominantElements": [
+        "Spiky skyscrapers",
+        "Multi-layered infrastructure"
+      ],
+      "uniqueIdentifiers": [
+        "Atmospheric haze",
+        "Juxtaposition of old and new architecture"
+      ]
+    },
+    "92a9ba03-12d2-4033-b72a-736efa48e0d2": {
+      "id": "92a9ba03-12d2-4033-b72a-736efa48e0d2",
+      "type": "region",
+      "name": "The Habitation Blocks",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Towering, utilitarian residential blocks rise densely, their aged facades augmented with prominent, rounded white living pods. The narrow streets below are perpetually damp, reflecting scattered artificial lights. Balconies are overloaded with the detritus of daily life, creating a layered, chaotic appearance.",
+        "colorsAndLighting": "The primary palette is dominated by muted grays and browns of aged concrete, sharply contrasted by the warm, inviting orange glow from the pod windows. Artificial streetlights cast stark pools of light, creating deep shadows on wet surfaces.",
+        "atmosphere": "The air is heavy with moisture and the scent of damp concrete, tinged with exhaust fumes. A pervasive haze obscures distant views, lending a sense of claustrophobia and density. The constant low hum of passing vehicles creates a dull thrum.",
+        "materials": "Aged, weathered concrete forms the base structure, stained and streaked with grime. The living pods are a smooth, contrasting white composite. Metal elements on balconies are rusted and worn, indicative of long-term use.",
+        "mood": "A blend of functional grit and the quiet resilience of inhabitants making a home in a dense, challenging environment. There's a sense of a lived-in, somewhat melancholic beauty.",
+        "sounds": "Dull hum of traffic, distant sirens, muffled chatter, dripping water",
+        "primary_surfaces": "Grime-streaked concrete facades",
+        "secondary_surfaces": "Smooth white composite pods",
+        "accent_features": "Cluttered balconies, warm glowing windows",
+        "dominant": "Muted Grey (building facades)",
+        "secondary": "White (living pods)",
+        "accent": "Orange (pod windows), Yellow (vehicles)",
+        "ambient": "Overcast, hazy twilight",
+        "genre": null,
+        "architectural_tone": "Brutalist residential with modular pod additions",
+        "cultural_tone": "Working-class inhabitants in a densely populated megacity, prioritizing function and adaptation",
+        "materials_base": "Concrete, composite, weathered metal",
+        "mood_baseline": "Functional grit and quiet resilience",
+        "palette_bias": "Greys, browns, muted oranges, contrasting bright yellow",
+        "soundscape_base": "Urban hum with mechanical undertones",
+        "flora_base": "Sparse, hardy potted plants",
+        "fauna_base": "None"
+      },
+      "description": "A dense, older district characterized by narrow streets and augmented residential buildings. These blocks house the majority of the city's working populace, with a strong emphasis on functional, adaptable living spaces.",
+      "searchDesc": "Dense residential district with augmented towers, narrow streets, and lived-in balconies.",
+      "slug": "the-habitation-blocks",
+      "structure": {
+        "spatialLayout": "Extremely dense and layered. Verticality is dominant, with narrow chasms between buildings. Streets are confined, with significant overhang from buildings and pods.",
+        "dominantElements": [
+          "Augmented residential towers",
+          "Narrow, wet streets"
+        ],
+        "uniqueIdentifiers": [
+          "Spherical living pods",
+          "Cluttered balconies"
+        ]
+      },
+      "dominantElements": [
+        "Augmented residential towers",
+        "Narrow, wet streets"
+      ],
+      "uniqueIdentifiers": [
+        "Spherical living pods",
+        "Cluttered balconies"
+      ]
+    },
+    "8db02d6c-7765-4237-900c-5410b37ff150": {
+      "id": "8db02d6c-7765-4237-900c-5410b37ff150",
+      "type": "location",
+      "name": "Street Level of the Habitation Blocks",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Towering, utilitarian residential blocks are augmented with spherical, white living pods. The street below is narrow and perpetually damp, reflecting the artificial lights that pierce the gloom. Balconies are overloaded with the detritus of daily life.",
+        "colorsAndLighting": "The primary palette is dominated by muted grays and browns of aged concrete, contrasted by the warm, inviting orange glow emanating from the pod windows. Artificial streetlights cast pools of stark light, creating deep shadows on the wet surfaces.",
+        "atmosphere": "The air is heavy with moisture and the scent of damp concrete, perhaps tinged with exhaust fumes. A pervasive haze obscures distant views, lending a sense of claustrophobia. The constant low hum of passing vehicles creates a dull thrum.",
+        "materials": "Aged, weathered concrete forms the base structure, stained and streaked with grime. The living pods are a smooth, contrasting white composite. Metal elements on balconies are rusted and worn.",
+        "mood": "A blend of functional grit and the quiet resilience of inhabitants making a home in a dense, challenging environment. There's a sense of a lived-in, somewhat melancholic beauty.",
+        "sounds": "Distant traffic hum, occasional vehicle horn, dripping water, muffled voices from pods.",
+        "primary_surfaces": "Weathered concrete facades, damp asphalt street, smooth white pod exteriors",
+        "secondary_surfaces": "Rusted metal railings, grimy glass windows, scattered debris",
+        "accent_features": "Warm orange light from pod windows, vibrant green of potted plants on balconies, yellow of boxy vehicles",
+        "dominant": "Muted Grey (building facades)",
+        "secondary": "White (living pods)",
+        "accent": "Orange (pod windows), Yellow (vehicles)",
+        "ambient": "Low, diffused artificial light with pockets of warm glow",
+        "genre": null,
+        "architectural_tone": "Brutalist residential with modular pod additions",
+        "cultural_tone": "Working-class inhabitants in a densely populated megacity, prioritizing function and adaptation",
+        "materials_base": "Concrete, composite, weathered metal",
+        "mood_baseline": "Resilient, lived-in, slightly melancholic",
+        "palette_bias": "Greys, browns, muted oranges, contrasting bright yellow",
+        "soundscape_base": "Urban hum, ambient traffic",
+        "flora_base": "Potted plants",
+        "fauna_base": "None"
+      },
+      "description": "A narrow, wet street reflecting artificial lights, lined with towering, aged residential buildings augmented with prominent, rounded white living pods. The street is traversed by yellow, boxy vehicles. Balconies are cluttered with plants, tables, and salvaged equipment. In the distance, spiky skyscrapers pierce the hazy sky. EXTERIOR VIEW.",
+      "searchDesc": "Wet street, Habitation Blocks, orange pod glow, yellow vehicles, cluttered balconies, hazy sky.",
+      "slug": "street-level-of-the-habitation-blocks",
+      "structure": {
+        "spatialLayout": "A narrow, canyon-like street flanked by immense, stacked buildings, creating a strong sense of verticality and confinement.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "building facade",
+            "description": "rusted metal doors leading into apartments"
+          },
+          {
+            "type": "path",
+            "position": "street",
+            "description": "wet, reflective asphalt"
+          },
+          {
+            "type": "archway",
+            "position": "between buildings",
+            "description": "narrow, shadowed passages"
+          }
+        ],
+        "dominantElements": [
+          "Towering residential buildings",
+          "Rounded white living pods",
+          "Wet, reflective street",
+          "Yellow, boxy vehicles",
+          "Cluttered balconies"
+        ],
+        "uniqueIdentifiers": [
+          "Orange glow from pod windows",
+          "Salvaged equipment on balconies",
+          "Spiky distant skyscrapers",
+          "Hazy, overcast sky",
+          "Artificial street lighting"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "building facade",
+          "description": "rusted metal doors leading into apartments"
+        },
+        {
+          "type": "path",
+          "position": "street",
+          "description": "wet, reflective asphalt"
+        },
+        {
+          "type": "archway",
+          "position": "between buildings",
+          "description": "narrow, shadowed passages"
+        }
+      ],
+      "dominantElements": [
+        "Towering residential buildings",
+        "Rounded white living pods",
+        "Wet, reflective street",
+        "Yellow, boxy vehicles",
+        "Cluttered balconies"
+      ],
+      "uniqueIdentifiers": [
+        "Orange glow from pod windows",
+        "Salvaged equipment on balconies",
+        "Spiky distant skyscrapers",
+        "Hazy, overcast sky",
+        "Artificial street lighting"
+      ],
+      "primaryMedia": "media-1765540083280-mo23i6cc6"
+    },
+    "loc-1765540313069-tild8stil": {
+      "id": "loc-1765540313069-tild8stil",
+      "type": "host",
+      "name": "Arid Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, rugged desert landscapes dominated by colossal canyons and towering mesas. Scarred rock faces display horizontal striations and deep cracks, hinting at immense geological age. Scattered, sparse scrub vegetation clings to the arid terrain. The overall impression is one of immense scale and natural, raw beauty.",
+        "colorsAndLighting": "Dominated by warm earth tones of beige, ochre, and burnt orange. The bright, clear lighting casts sharp shadows, accentuating the rugged textures and creating a stark, high-contrast environment. Luminous elements from ancient technology occasionally pierce the arid palette with vibrant blues and teals.",
+        "atmosphere": "The air is dry, thin, and carries a profound stillness. The vastness of the open spaces evokes a sense of solitude. The clear skies suggest a temperate, perhaps high-altitude climate, free from typical atmospheric phenomena like clouds or fog. A subtle hum might emanate from ancient, active devices.",
+        "materials": "Primarily composed of natural, eroded rock: sandstone, granite, and sedimentary layers. Textures are rough, striated, and cracked. Where ancient structures are present, materials shift to advanced ceramics, patterned metals, and luminous energy conduits.",
+        "mood": "The scene evokes a profound sense of discovery, silent awe, and deep mystery. The monumental scale and evidence of lost civilizations inspire contemplation and a feeling of insignificance in the face of time and advanced knowledge.",
+        "sounds": "Distant wind, silence, subtle energy hum, crunching footsteps on rock",
+        "primary_surfaces": "Rugged rock faces, striated canyon walls, eroded earth",
+        "secondary_surfaces": "Sparse scrub, ancient metallic inlays, glowing energy conduits",
+        "accent_features": "Luminous core of ancient structures, glowing orbs atop staffs, intricate metallic patterns",
+        "dominant": "Beige and ochre earth tones, covering vast rock faces and ground",
+        "secondary": "Burnt orange and shadowy grays, defining monumental structures and deep shadows",
+        "accent": "Vibrant teal, luminous blue, and bright white, as core elements of advanced technology",
+        "ambient": "Bright, clear, high-contrast sunlight",
+        "genre": "Sci-Fi Archaeological Adventure",
+        "architectural_tone": "Monumental arid alien architecture",
+        "cultural_tone": "Ancient, technologically advanced guardians or scholars",
+        "materials_base": "Stone, glowing energy, metallic inlay",
+        "mood_baseline": "Wonder and Enigmatic Discovery",
+        "palette_bias": "Warm earth tones with vibrant cool accents",
+        "soundscape_base": "Quiet, vast, natural, with subtle technological undertones",
+        "flora_base": "Sparse scrub, drought-resistant desert plants",
+        "fauna_base": "Small desert creatures, possibly adapted to arid conditions"
+      },
+      "description": "A harsh, windswept desert world characterized by colossal geological formations and the lingering echoes of ancient, technologically advanced civilizations. Vast, rugged canyons and towering mesas define its unforgiving landscape, concealing untold mysteries beneath a perpetually clear, bright sky.",
+      "searchDesc": "Vast desert canyons and ancient alien ruins on a harsh world. Arid, monumental, mysterious.",
+      "slug": "arid-expanse",
+      "structure": {
+        "spatialLayout": "Expansive and open, with immense verticality created by canyon walls and towering rock formations. Depth is conveyed through vast distances and layered geological strata. Pockets of enclosed space exist within canyons and structures.",
+        "navigableElements": [
+          "Desert Canyons",
+          "Mesa Formations",
+          "Ancient Structures"
+        ],
+        "dominantElements": [
+          "Geological Wonders",
+          "Enigmatic Alien Ruins"
+        ],
+        "uniqueIdentifiers": [
+          "Extreme Aridity",
+          "Massive Scale Formations",
+          "Traces of Advanced Ancient Tech"
+        ]
+      },
+      "navigableElements": [
+        "Desert Canyons",
+        "Mesa Formations",
+        "Ancient Structures"
+      ],
+      "dominantElements": [
+        "Geological Wonders",
+        "Enigmatic Alien Ruins"
+      ],
+      "uniqueIdentifiers": [
+        "Extreme Aridity",
+        "Massive Scale Formations",
+        "Traces of Advanced Ancient Tech"
+      ],
+      "primaryMedia": "media-1765540373079-mvuw6rfcs"
+    },
+    "6f8e6008-810a-483f-bbcd-44141af6e048": {
+      "id": "6f8e6008-810a-483f-bbcd-44141af6e048",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "80153b08-d218-4139-944d-7c41e39b84a7": {
+      "id": "80153b08-d218-4139-944d-7c41e39b84a7",
+      "type": "location",
+      "name": "The Lumina Citadel",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A monumental, circular, tiered citadel embedded into a vast desert canyon. The structure exhibits a clear concentric layout, with the outermost ring a deep burnt orange, transitioning inward to a shadowy segment, and culminating in a vibrant teal core. Its scale is immense, dwarfing the surrounding arid landscape.",
+        "colorsAndLighting": "The palette is dominated by deep burnt orange, shadowy grays, and vibrant teal, with accents of bright white and luminous blue. The scene is bathed in bright, clear lighting, emphasizing the arid textures and highlighting the citadel's internal glow.",
+        "atmosphere": "The air is dry and still, carrying the immensity of the desert. A sense of profound silence prevails, broken only by the subtle hum of the citadel's energies. The clear, bright light suggests a temperate, high-altitude environment.",
+        "materials": "The citadel's exterior appears to be composed of stone-like materials, with intricate patterns suggesting advanced, perhaps metallic or ceramic, inlays. The internal core glows with an ethereal, light-emitting material. The surrounding canyon walls are rough, striated rock.",
+        "mood": "The scene evokes a sense of profound discovery and silent awe, hinting at advanced, ancient technology and an unknown purpose. It feels monumental and enigmatic.",
+        "sounds": "low hum, faint electronic pulses, distant wind",
+        "primary_surfaces": "Textured rock, smooth metallic inlays, glowing crystalline core",
+        "secondary_surfaces": "Rough stone, patterned panels, fine circuit lines",
+        "accent_features": "Luminous dots, glowing blue orb on staffs, concentric blue point",
+        "dominant": "burnt orange (outer ring)",
+        "secondary": "shadowy grays (mid-ring)",
+        "accent": "vibrant teal (core), bright blue (center point and staff orbs)",
+        "ambient": "bright and clear",
+        "genre": null,
+        "architectural_tone": "Monumental arid alien architecture",
+        "cultural_tone": "Ancient, technologically advanced guardians or scholars",
+        "materials_base": "Stone, glowing energy, metallic inlay",
+        "mood_baseline": "Awe and mystery",
+        "palette_bias": "Warm earth tones with vibrant cool accents",
+        "soundscape_base": "Quiet technological hum",
+        "flora_base": "Sparse dry scrub",
+        "fauna_base": "None"
+      },
+      "description": "A colossal, circular, multi-layered structure embedded high into a vast, rugged desert canyon wall. Its outermost ring is a deep burnt orange with intricate white line patterns, transitioning inward to a shadowy ring and a vibrant teal core with radial lines and luminous dots, centering on a bright blue point. The exterior is bathed in bright, clear lighting, highlighting the arid, monumental landscape.",
+      "searchDesc": "Colossal desert citadel with burnt orange, shadowy, and teal layers, glowing blue core.",
+      "slug": "the-lumina-citadel",
+      "structure": {
+        "spatialLayout": "The citadel is a massive, concentric disc shape embedded vertically into a canyon wall. The internal layout is radial, with the core as the central focal point. The depth is emphasized by the layers and the scale against the canyon.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center of teal core",
+            "description": "A shimmering portal, the entrance to the citadel's depths."
+          },
+          {
+            "type": "passage",
+            "position": "between rings",
+            "description": "Circuits of light illuminate pathways connecting the citadel's layers."
+          }
+        ],
+        "dominantElements": [
+          "Colossal circular structure",
+          "Burnt orange outer ring",
+          "Vibrant teal core",
+          "Bright blue central point"
+        ],
+        "uniqueIdentifiers": [
+          "Intricate white line patterns",
+          "Luminous dots",
+          "Radial lines",
+          "Figures in flowing robes with staffs"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of teal core",
+          "description": "A shimmering portal, the entrance to the citadel's depths."
+        },
+        {
+          "type": "passage",
+          "position": "between rings",
+          "description": "Circuits of light illuminate pathways connecting the citadel's layers."
+        }
+      ],
+      "dominantElements": [
+        "Colossal circular structure",
+        "Burnt orange outer ring",
+        "Vibrant teal core",
+        "Bright blue central point"
+      ],
+      "uniqueIdentifiers": [
+        "Intricate white line patterns",
+        "Luminous dots",
+        "Radial lines",
+        "Figures in flowing robes with staffs"
+      ],
+      "primaryMedia": "media-1765540329789-xcngogzje"
+    },
+    "niche-1765540344828-ccv1wf660": {
+      "id": "niche-1765540344828-ccv1wf660",
+      "type": "niche",
+      "name": "Lumina Citadel Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a vast, open chamber dominated by the luminous, ethereal teal core. Smooth, curved walls transition from shadowy grays to the vibrant core, reflecting the bright light. Intricate patterns suggest advanced technology embedded within the structure.",
+        "colorsAndLighting": "The space is illuminated by a vibrant teal glow emanating from the central core, with accents of bright blue in the orbs and concentric patterns. The ambient light is bright and clear, casting sharp, defined shadows.",
+        "atmosphere": "The air is dry and still, carrying a profound silence broken only by the subtle hum of the citadel's energies. The bright, clear light suggests a temperate, high-altitude environment within this advanced structure.",
+        "materials": "The interior walls are composed of smooth, composite materials with metallic inlays, retaining the citadel's monumental stone-like character. The central core is made of an ethereal, light-emitting crystalline material, and fine circuit lines are visible in some panels.",
+        "mood": "A sense of profound discovery and silent awe pervades the space, hinting at advanced, ancient technology and an unknown purpose. It feels monumental and enigmatic.",
+        "sounds": "Subtle technological hum, profound silence",
+        "spatialLayout": "A large, circular chamber with a dominant central feature, the glowing core, creating a sense of immense scale and depth. Passages and archways suggest further exploration.",
+        "primary_surfaces": "Smooth composite walls, glowing crystalline core, polished metallic inlays",
+        "secondary_surfaces": "Patterned panels, fine circuit lines",
+        "accent_features": "Luminous dots, glowing blue orb on staffs, concentric blue points",
+        "dominant": "vibrant teal (core and accents)",
+        "secondary": "shadowy grays (walls transitioning from core)",
+        "accent": "bright white (highlights), bright blue (orbs and points)",
+        "ambient": "bright and clear",
+        "genre": null,
+        "architectural_tone": "Monumental arid alien architecture",
+        "cultural_tone": "Ancient, technologically advanced guardians or scholars",
+        "materials_base": "Stone, glowing energy, metallic inlay",
+        "mood_baseline": "Awe and mystery",
+        "palette_bias": "Warm earth tones with vibrant cool accents",
+        "soundscape_base": "Quiet technological hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765540344827-o2b89c4cx",
+      "description": "The interior of The Lumina Citadel is a grand, circular space defined by its concentric tiered structure. The form mirrors the exterior, featuring a vast, wide orientation with a domed ceiling. Scale is large, fitting within the monumental citadel. Openings are minimal and circular, consistent with the parent's luminous dots and blue orb accents. Functionally, it serves as a civic or scholarly space, likely for guardianship or knowledge preservation, given the 'Ancient, technologically advanced guardians or scholars' cultural tone. Spatial layout consists of rising concentric tiers, with the vibrant teal core at the center acting as a focal point.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "civic",
+        "spatialLayout": "The space is vast and circular, with concentric tiers rising inwards. The teal core is the most illuminated and central area.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Information consoles",
+          "Holographic projectors",
+          "Seating areas",
+          "Archival displays",
+          "Central glowing orb pedestal",
+          "Observation platforms"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "outer perimeter",
+            "description": "Wide, open passages connecting to other sections of the citadel."
+          },
+          {
+            "type": "stairs",
+            "position": "concentric rings",
+            "description": "Tiered ramps or stairs leading up through the concentric levels."
+          },
+          {
+            "type": "archway",
+            "position": "leading to teal core",
+            "description": "A grand archway marking the entrance to the vibrant central area."
+          }
+        ],
+        "dominantElements": [
+          "Concentric tiered levels",
+          "Vast open circular volume",
+          "Inner teal luminous core",
+          "Shadowy intermediate rings",
+          "Burnt orange outer ring visible at the periphery"
+        ],
+        "uniqueIdentifiers": [
+          "Concentric circular layout",
+          "Color transitions from burnt orange to teal",
+          "Implied advanced technology based on parent features",
+          "Massive scale"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "outer perimeter",
+          "description": "Wide, open passages connecting to other sections of the citadel."
+        },
+        {
+          "type": "stairs",
+          "position": "concentric rings",
+          "description": "Tiered ramps or stairs leading up through the concentric levels."
+        },
+        {
+          "type": "archway",
+          "position": "leading to teal core",
+          "description": "A grand archway marking the entrance to the vibrant central area."
+        }
+      ],
+      "dominantElements": [
+        "Concentric tiered levels",
+        "Vast open circular volume",
+        "Inner teal luminous core",
+        "Shadowy intermediate rings",
+        "Burnt orange outer ring visible at the periphery"
+      ],
+      "uniqueIdentifiers": [
+        "Concentric circular layout",
+        "Color transitions from burnt orange to teal",
+        "Implied advanced technology based on parent features",
+        "Massive scale"
+      ],
+      "searchDesc": "Interior of Lumina Citadel: vibrant teal core, glowing orbs, ancient monumental architecture.",
+      "slug": "interior-of-the-lumina-citadel"
+    },
+    "niche-1765540550077-d0x9ny5kk": {
+      "id": "niche-1765540550077-d0x9ny5kk",
+      "type": "niche",
+      "name": "Techno Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This space is a refined extension of the citadel's core, featuring a circular layout with smooth, flowing architecture. The core is a vibrant teal, radiating outward into the shadowy segments of the citadel. Sleek, minimalist furniture is integrated into the structure, illuminated by subtle, embedded light sources.",
+        "colorsAndLighting": "The vibrant teal core is the primary color, accented by luminous blue lines that trace the walls and ceiling. Bright, clear ambient light emanates from the surfaces, with focused spotlights highlighting display areas. Shadows are soft and subtle, adding depth.",
+        "atmosphere": "The air is cool and refined, with a gentle, almost imperceptible circulation. A sense of focused creativity and sophisticated observation pervades the space. The immensity of the desert is a distant, framed presence through the large windows.",
+        "materials": "Interior walls are composed of a smooth, seamless composite material with integrated luminous circuitry. Seating is upholstered in a matte, dark fabric. Display surfaces are a polished, reflective material that enhances the holographic projections. The central core pulses with an ethereal, light-emitting substance.",
+        "mood": "Sophisticated innovation, quiet contemplation, and aesthetic appreciation.",
+        "sounds": "Subtle ambient hum, synthesized ambient tones, hushed murmurs.",
+        "spatialLayout": "A spacious, open circular chamber with zones defined by furniture placement and subtle shifts in lighting. The layout encourages exploration and interaction with displays, while maintaining a sense of communal yet intimate space.",
+        "primary_surfaces": "Smooth composite walls, glowing crystalline core, polished display surfaces",
+        "secondary_surfaces": "Matte fabric upholstery, fine luminous circuit lines, integrated light panels",
+        "accent_features": "Holographic display units, dynamic light sculptures, luminous blue point emitters",
+        "dominant": "vibrant teal (core and primary wall accents)",
+        "secondary": "shadowy grays (integrated furniture and structural elements)",
+        "accent": "bright blue (circuit lines, console details, display highlights)",
+        "ambient": "bright and clear",
+        "genre": null,
+        "architectural_tone": "Monumental arid alien architecture",
+        "cultural_tone": "Ancient, technologically advanced guardians or scholars",
+        "materials_base": "Stone, glowing energy, metallic inlay",
+        "mood_baseline": "Awe and mystery",
+        "palette_bias": "Warm earth tones with vibrant cool accents",
+        "soundscape_base": "Quiet technological hum",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765540550076-5ybbcnmhu",
+      "description": "An entertainment space designed as a 'techno bar', set within the Lumina Citadel. It features a round, domed form with a medium scale and wide orientation, echoing the parent structure's curvature. Minimal, circular openings are present, hinting at controlled light ingress, while the primary illumination emanates from integrated tech and the luminous teal core. The functional type is entertainment, utilizing the advanced technological aesthetic for patrons.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A circular space with a central bar area and seating arranged around the perimeter. The curved walls provide a continuous, immersive feel.",
+        "requiredElements": [
+          "techno bar"
+        ],
+        "suggestedFixtures": [
+          "holographic bar displays",
+          "futuristic seating pods",
+          "interactive cocktail mixing stations",
+          "ambient lighting systems",
+          "sound dampening panels",
+          "a central glowing orb feature"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear wall",
+            "description": "An archway leading to service areas or other parts of the Citadel."
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "An opening with glowing blue orb accents, potentially leading to private booths."
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "A discreet entrance/exit with subtle luminous dots."
+          }
+        ],
+        "dominantElements": [
+          "central bar counter",
+          "curved, seamless walls",
+          "glowing teal core accents",
+          "interactive displays"
+        ],
+        "uniqueIdentifiers": [
+          "luminous teal core integration",
+          "shadowy gray to teal wall gradient",
+          "embedded intricate technological patterns"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear wall",
+          "description": "An archway leading to service areas or other parts of the Citadel."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "An opening with glowing blue orb accents, potentially leading to private booths."
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "A discreet entrance/exit with subtle luminous dots."
+        }
+      ],
+      "dominantElements": [
+        "central bar counter",
+        "curved, seamless walls",
+        "glowing teal core accents",
+        "interactive displays"
+      ],
+      "uniqueIdentifiers": [
+        "luminous teal core integration",
+        "shadowy gray to teal wall gradient",
+        "embedded intricate technological patterns"
+      ],
+      "searchDesc": "A design techno bar within a desert citadel, blending alien architecture with futuristic tech.",
+      "slug": "the-design-techno-bar"
     }
   },
   "views": {},
@@ -350,9 +940,56 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765540062105-s1wqdhzh6",
+      "type": "host",
+      "children": [
+        {
+          "id": "92a9ba03-12d2-4033-b72a-736efa48e0d2",
+          "type": "region",
+          "children": [
+            {
+              "id": "8db02d6c-7765-4237-900c-5410b37ff150",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765540313069-tild8stil",
+      "type": "host",
+      "children": [
+        {
+          "id": "6f8e6008-810a-483f-bbcd-44141af6e048",
+          "type": "region",
+          "children": [
+            {
+              "id": "80153b08-d218-4139-944d-7c41e39b84a7",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765540344828-ccv1wf660",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765540550077-d0x9ny5kk",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1765453936786-mwhzxgifp"
+    "loc-1765453936786-mwhzxgifp",
+    "loc-1765540062105-s1wqdhzh6",
+    "loc-1765540313069-tild8stil"
   ]
 }

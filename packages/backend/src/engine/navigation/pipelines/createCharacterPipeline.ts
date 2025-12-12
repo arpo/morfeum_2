@@ -190,10 +190,11 @@ export async function runCreateCharacterPipeline(
       finalPrompt // Store the scene prompt, not the old portrait prompt
     );
 
-    // Add location reference and character type (NOT embedding environment data)
+    // Add location reference, character type, and original context/backstory
     (character as any).sourceLocationId = locationId;
     (character as any).sourceLocationName = locationName;
     (character as any).characterType = characterType;
+    (character as any).context = userPrompt; // Store original user prompt as backstory
 
     await saveAndPinEntity('character', character);
 

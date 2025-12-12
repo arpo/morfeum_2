@@ -25,6 +25,14 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Character Creation System (Dec 12):** Full character creation from location nodes:
+  - `/CREATE_CHARACTER_REAL` and `/CREATE_CHARACTER_UNREAL` slash commands
+  - 7-step pipeline: prompt engineering → seed → scene composition → image → analysis → profile → save
+  - Camera mode system with 9 shot types (`half_portrait`, `full_body`, `close_up`, etc.)
+  - LLM scene composer for character-in-environment images
+  - Character context/backstory storage (original user prompt preserved)
+  - Rich chat system prompts with full character DNA and environment context
+  - Key files: `createCharacterPipeline.ts`, `composeCharacterScenePrompt.ts`, `buildCharacterSystemPrompt.ts`
 - **Open-Sky Rooftop/Terrace Fix (Dec 11):** Rooftop terraces now correctly show open sky:
   - Uses `roofType` field from structure analysis (not string matching)
   - When `roofType === 'open-sky'`, appends constraint DIRECTLY to final FLUX prompt
