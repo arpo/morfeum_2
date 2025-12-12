@@ -6,6 +6,12 @@
 
 import type { StateCreator } from 'zustand';
 import { EntityUISlice } from './entityUISlice';
+import { 
+  buildCharacterSystemPrompt, 
+  buildMinimalSystemPrompt,
+  type CharacterDetails,
+  type EnvironmentContext
+} from '../../utils/entity/buildCharacterSystemPrompt';
 
 export interface ChatMessage {
   id: string;
@@ -51,7 +57,13 @@ export interface EntityManagerSlice {
   entities: Map<string, EntityData>;
   activeEntity: string | null;
 
-  createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => void;
+  createEntity: (
+    spawnId: string, 
+    seed: any, 
+    entityType?: 'character' | 'location',
+    characterDetails?: CharacterDetails,
+    environment?: EnvironmentContext
+  ) => void;
   updateEntityImage: (spawnId: string, imageUrl: string) => void;
   updateEntityImagePrompt: (spawnId: string, imagePrompt: string) => void;
   updateEntitySystemPrompt: (spawnId: string, systemPrompt: string) => void;
@@ -70,11 +82,27 @@ export const createEntityManagerSlice: StateCreator<EntitySlices, [], [], Entity
   entities: new Map(),
   activeEntity: null,
 
-  createEntity: (spawnId: string, seed: any, entityType?: 'character' | 'location') => {
+  createEntity: (
+    spawnId: string, 
+    seed: any, 
+    entityType?: 'character' | 'location',
+    characterDetails?: CharacterDetails,
+    environment?: EnvironmentContext
+  ) => {
+    // Build rich system prompt if full character details provided
+    let systemPromptContent: string;
+    
+    if (characterDetails) {
+      systemPromptContent = buildCharacterSystemPrompt(characterDetails, environment);
+    } else {
+      // Fallback to minimal prompt for basic seed data
+      systemPromptContent = buildMinimalSystemPrompt(seed.name, seed.personality);
+    }
+    
     const systemMessage: ChatMessage = {
       id: 'system-001',
       role: 'system',
-      content: `You are ${seed.name}. ${seed.personality}`,
+      content: systemPromptContent,
       timestamp: new Date().toISOString()
     };
 
