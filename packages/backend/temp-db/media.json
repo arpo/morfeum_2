@@ -113,21 +113,6 @@
       ],
       "parentMedia": "media-1765453519743-13ri2fssf"
     },
-    "media-1765453721531-j5lpiuovv": {
-      "id": "media-1765453721531-j5lpiuovv",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85de5a/eGcKL4Q3vaqgsc9lR7bGn.jpg",
-      "createdAt": "2025-12-11T11:48:41.531Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"Overgrown football field with a buried saucer-shaped lab, hatch protruding like a forgotten manhole\"\n\nField Keeper, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Ancient human male, skin like sun-baked earth, deep-set eyes like polished obsidian, bald head etched with the patterns of ley lines..\n\nWearing: Tattered canvas overalls stained with chlorophyll and rust, thick leather boots caked with dried mud, a woven belt holding a single, glowing shard of unknown origin..\n\nPresence: A sense of deep stillness, grounded and ancient, like the quiet hum of forgotten machinery..\n\nSetting: Verdant green overgrowth swallowing the skeletal remains of a stadium, a metallic circle just visible through the weeds..\n\nTheir demeanor reflects: Quietly territorial, observant, possesses an immense patience born from long solitude, communicates through gestures and subtle shifts in the earth's hum..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": [
-        "char-1765453704287-79n2g6z0y"
-      ]
-    },
     "media-1765453956738-l65fz3gxh": {
       "id": "media-1765453956738-l65fz3gxh",
       "type": "image",
@@ -367,114 +352,6 @@
       ],
       "parentMedia": "media-1765452941899-fabtg9gd5"
     },
-    "media-1765460001536-iccvi8zwf": {
-      "id": "media-1765460001536-iccvi8zwf",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a85e0d0/JI3guu_QfJoMhgerfS0VY_8ed478f1472d40fd87d1f25e78df11f1.png",
-      "createdAt": "2025-12-11T13:33:21.536Z",
-      "metadata": {
-        "parentMedia": "media-1765453721531-j5lpiuovv",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "char-1765453704287-79n2g6z0y"
-      ],
-      "parentMedia": "media-1765453721531-j5lpiuovv"
-    },
-    "media-1765460125593-eijbsbqbz": {
-      "id": "media-1765460125593-eijbsbqbz",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85e0db/9zYEpY2AWaxNBCnSwhDA-.jpg",
-      "createdAt": "2025-12-11T13:35:25.593Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A portrait of a slender, curvaceous woman adorned in a futuristic, shimmering metallic ensemble, standing gracefully amidst a field of vibrant pink flowers. The figure's head is replaced by a smooth, iridescent spherical helmet reflecting hues of blue, purple, and green, partially obscured by a broad-brimmed, sharply angled dark metallic hat with a visor-like extension that shows a golden reflection. The neck is encased in tightly corrugated metallic rings. Its form-fitting garment is a striking gold metallic, deeply reflective with streaks of blue and silver, featuring prominent horizontal wavy pleats that ripple across its entire body, including the long sleeves and gloved hands, highlighting its elegant contours. The figure is posed from behind and slightly to the side, looking away, with its body subtly curved. The background features a soft, light purple sky, creating a serene and otherworldly atmosphere.\"\n\nAura, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A smooth, iridescent spherical helmet reflecting blue, purple, and green, partially covered by a dark metallic hat with a golden visor. A neck encased in corrugated metallic rings. The body is a slender, curvaceous humanoid form..\n\nWearing: A form-fitting, striking gold metallic garment deeply reflective with blue and silver streaks. Prominent horizontal wavy pleats ripple across the entire body, including long sleeves and gloved hands..\n\nPresence: Cool, distant, and faintly mesmerizing..\n\nSetting: A field of vibrant pink flowers under a soft, light purple sky..\n\nTheir demeanor reflects: Enigmatic, poised, and silent..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": [
-        "char-1765460110935-p7tanolij"
-      ]
-    },
-    "media-1765460129986-w1ukez0u5": {
-      "id": "media-1765460129986-w1ukez0u5",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a85e0dc/d7WkrFHuKAQ5Orx-nPv1H_f99a914c8d954691a6dc0963286201e1.png",
-      "createdAt": "2025-12-11T13:35:29.986Z",
-      "metadata": {
-        "parentMedia": "media-1765460125593-eijbsbqbz",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "char-1765460110935-p7tanolij"
-      ],
-      "parentMedia": "media-1765460125593-eijbsbqbz"
-    },
-    "media-1765464260614-oliyepivm": {
-      "id": "media-1765464260614-oliyepivm",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85e279/n0RiDYLMA2HIxBQWHx75C.jpg",
-      "createdAt": "2025-12-11T14:44:20.614Z",
-      "metadata": {
-        "prompt": "A low-slung, circular dining nook within an organic garden pavilion, bathed in the warm, inviting glow of scattered ornate metal lanterns and a central, glowing amber centerpiece atop a round dark wooden table. Four dark, cushioned stools with rich, dark wooden bases encircle the table. Lush, dense foliage of broad-leafed plants and the dark, textured bark of tree trunks create a secluded atmosphere. One prominent tree trunk is dramatically illuminated from below by a soft, warm yellow light, casting long, dancing shadows. The overall mood is mysterious, alluring, and deeply intimate, with a humid, tropical scent and a sense of secluded tranquility. The color palette is dominated by deep emerald greens of the foliage and dark browns of the wood, accented by the warm amber and yellow light sources. Open passages in the foliage hint at further exploration within the grove. --style raw --ar 16:9 --quality 2\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX"
-      },
-      "entityRefs": []
-    },
-    "media-1765464279372-gnkmkhwd8": {
-      "id": "media-1765464279372-gnkmkhwd8",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85e27b/SGsOofbyFBLDep44gcdkY.jpg",
-      "createdAt": "2025-12-11T14:44:39.372Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nExotic Garden Sanctuary. A hidden world of lush, tropical flora, where the air is thick with the scent of blossoms and the evening is illuminated by the warm glow of countless ornate lanterns. This sanctuary offers an escape into a realm of secluded tranquility and enchantment.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nA sprawling, semi-enclosed garden paradise where dense, vibrant foliage spills over everything. Overhead structures are organic, almost swallowed by vines and leaves, hinting at natural integration. Entrances are fluid, a parting of the greenery that beckoms exploration.\n\nAtmosphere:\nThe air is thick with humidity and the intoxicating perfume of exotic flowers and damp earth. A gentle, pervasive warmth emanates from the abundant plant life and the soft lighting. A sense of stillness and secluded peace pervades.\n\nColors and Lighting:\nDominant: Deep emerald green with significant coverage from foliage., Secondary: Dark, rich brown of wooden structures and tree trunks., Accent: Warm amber and yellow from internal lighting.\nLight: Warm, diffused glow, Deep, saturated greens dominate, punctuated by the warm, pulsating glow of amber and yellow from numerous ornate lanterns. Intricate patterns of light and shadow dance across surfaces, creating a dynamic, enchanting visual.\n\nGenre/Style: Fantasy\nArchitectural Style: Organic garden pavilion with integrated lighting features\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "loc-1765464235601-ow3hvb5nr"
-      ]
-    },
-    "media-1765464289041-zcdtblzbd": {
-      "id": "media-1765464289041-zcdtblzbd",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85e27c/5A-IkahrwWT9nXY8S4X25.jpg",
-      "createdAt": "2025-12-11T14:44:49.041Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Lantern Grove. An outdoor dining and lounge area bathed in the warm glow of evening lights. Numerous ornate, perforated metal lanterns in teardrop and diamond shapes hang at varying heights from an overhead structure, casting intricate patterns of light and shadow through the dense, vibrant green foliage. Large fern fronds spill into the foreground, contributing to the tropical atmosphere. The ground is made of dark wooden planks.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThe exterior presents an inviting opening into a lush, dimly lit space. The overhead structure is robust but partially obscured by overflowing foliage, hinting at the vibrant life within. The entrance is not a defined door but a natural parting in the greenery.\n\nMaterials and Surfaces:\nPrimary: Overhanging dark wooden beams, dense tropical foliage\nSecondary: Dark, weathered tree trunks, large fern fronds\nAccents: Glimmers of light from ornate metal lanterns, illuminated tree base\n\nColors:\nDominant: Deep emerald green with significant coverage from foliage., Secondary: Dark, rich brown of wooden structures and tree trunks., Accent: Warm amber and yellow from internal lighting.\nLight: Warm, inviting glow.\n\nAtmosphere: The air feels humid and rich with the scent of tropical plants. A gentle warmth emanates from within, drawing visitors into its embrace. There's a sense of secluded tranquility, as if stepping into a hidden world.\nMood: Mysterious and alluring, promising a romantic and intimate experience. It evokes a sense of discovery and enchanted escape.\n\nArchitectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "db35bd49-ffa7-4de2-9ce2-a5073b7c54dd"
-      ]
-    },
-    "media-1765464328403-3lpd70kt6": {
-      "id": "media-1765464328403-3lpd70kt6",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85e280/KHhtYRVgyYWKMIikmKlS4.jpg",
-      "createdAt": "2025-12-11T14:45:28.403Z",
-      "metadata": {
-        "prompt": "An intimate, medium-sized circular bar interior, illuminated by the warm, pulsating glow of amber and yellow ornate metal lanterns. Dense tropical foliage, heavy with waxy leaves and fronds, spills down from dark, weathered wooden beams forming a partially obscured, domed ceiling, creating an exotic retreat atmosphere. The 'bar' is an organic, integrated surface within this lush environment, appearing as a functional alcove. The scene is characterized by deep emerald greens of foliage and dark browns of wood, accented by the glowing lanterns. Shifting shadows create depth and mystery. A passage at the center serves as the main entrance, a service door is at the back, and an archway connects to an adjacent area. Dominant elements include the integrated bar counter, glowing lanterns, the base of an illuminated tree, a round wooden table, and cushioned stools, all contributing to a mood of enchanting serenity and alluring mystery, promising a romantic and intimate experience within this hidden, humid, and warm oasis.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX"
-      },
-      "entityRefs": []
-    },
-    "media-1765464359308-wvste6f33": {
-      "id": "media-1765464359308-wvste6f33",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a85e283/XvWMpLz4eoqXtpf6cTjzv.jpg",
-      "createdAt": "2025-12-11T14:45:59.308Z",
-      "metadata": {
-        "prompt": "Interior view of the \"Lantern Grove Chill Zone,\" a small, cubic, organic-form niche designed as an entertainment space. The perspective is an intimate interior looking into a dimly lit, lush enclosure. Overhanging dark wooden beams, partially obscured by dense tropical foliage, create a sense of abundant life. The entrance is a natural parting in the greenery. The space features low-lying plush seating nestled within strategically placed tropical plants. Small, organic-shaped side tables are scattered throughout. Soft, warm lighting emanates from ornate metal lanterns casting intricate, shifting shadows. A passage at the center leads into the main seating area, a smaller passage at the left offers access to a more secluded nook, and another passage at the right subtly directs flow towards adjacent areas. Dominant elements include the overhanging dark wooden beams, dense tropical foliage, ornate metal lanterns, and an illuminated bar surface seamlessly integrated into the organic structure. The unique identifiers are the organic integration of the bar and seating, the lush, intimate enclosure, and the glimmering lantern light. The atmosphere is humid and rich with the scent of tropical plants, emanating a gentle warmth and a sense of secluded tranquility. The colors are dominated by deep emerald greens with warm amber and yellow accents from the lanterns, casting a warm and inviting ambient light. Visible interior materials include dark, weathered wooden beams and the textured, damp bark of unseen trees, with large, waxy leaves and fronds forming the primary texture. The mood is mysterious and alluring, promising a romantic and intimate experience, an enchanted escape. Primary surfaces are overhanging dark wooden beams and dense tropical foliage. Secondary surfaces include dark, weathered tree trunks and large fern fronds. Accent features are glimmers of light from ornate metal lanterns and an illuminated tree base. Architectural tone is an organic garden pavilion with integrated lighting features. Cultural tone is an exotic retreat for intimate gatherings and dining. Mood baseline is enchanting and serene. Materials base is natural wood, lush vegetation, and decorative metalwork. Palette bias is greens and browns with warm light accents. The composition is asymmetric, with the seating area slightly off-center, drawing the viewer's eye towards the illuminated bar and the inviting passages.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
-        "model": "FLUX"
-      },
-      "entityRefs": []
-    },
     "media-1765464432266-hsovzjtjt": {
       "id": "media-1765464432266-hsovzjtjt",
       "type": "depth-map",
@@ -612,6 +489,36 @@
         "niche-1765520423636-4ci9nzy8w"
       ],
       "parentMedia": "media-1765520423634-xk147ujw6"
+    },
+    "media-1765531020834-ac10pcjfm": {
+      "id": "media-1765531020834-ac10pcjfm",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a85fc8d/WVfp8wYginUQ5s_kdewlI.jpg",
+      "createdAt": "2025-12-12T09:17:00.834Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"An androgynous silhouette humanoid figure with a skin of tessellated, deep teal and dark grey metallic alloys, composed of overlapping, irregularly shaped panels and interwoven conduits, carrying a faint warm orange light from within its viewport-shaped face, shaped as a living extension of this place.\"\n\nUnit 734, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: Androgynous humanoid form. Skin is a mosaic of deep teal and dark grey metallic alloys, tessellated into overlapping, irregular panels. Interwoven conduits are visible beneath the surface. The face is a featureless viewport emitting a faint, warm orange light from within..\n\nWearing: No distinct clothing. The metallic alloy skin appears to be its entire form. Subtle variations in panel texture suggest integrated functional elements..\n\nPresence: A quiet, humming resonance that suggests ancient purpose and deep knowledge. A feeling of being both alien and intrinsically part of the world..\n\nSetting: Deep within a cavern of shimmering obsidian, lit by the faint internal glow of the humanoid..\n\nTheir demeanor reflects: Observant, methodical, and implicitly integrated with its environment. It communicates through subtle shifts in internal light intensity and panel articulation..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765531020833-23p8netuw"
+      ]
+    },
+    "media-1765531433457-kxc763n6m": {
+      "id": "media-1765531433457-kxc763n6m",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a85fcb6/JiZsBUJdsJzXILLdSr2UC.jpg",
+      "createdAt": "2025-12-12T09:23:53.457Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOriginal user description: \"A realistic female human figure with sun-kissed skin, light brown hair pulled back in a practical braid, and weathered hands, dressed in a loose-fitting linen tunic, sturdy canvas trousers tucked into worn leather boots, and a simple woven straw hat, embodying the lifestyle of this place.\"\n\nElara Vance, subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture..\n\nLook: A woman in her late forties, her sun-kissed skin etched with fine lines around the eyes and mouth, a testament to years spent outdoors. Her light brown hair is tightly pulled back into a functional braid, revealing a strong jawline. Her hands are calloused and rough, with dirt ingrained under the nails..\n\nWearing: A simple, earth-toned linen tunic, loose and breathable, over sturdy canvas trousers. Her trousers are tucked into well-worn, dark leather boots that show signs of frequent use and repair. A broad-brimmed, woven straw hat shields her face from the sun..\n\nPresence: A quiet warmth, like the gentle heat of the sun on skin after a long day. There's a groundedness about her, a sense of unwavering stability..\n\nSetting: Dust motes dance in shafts of sunlight filtering through rough-hewn wooden beams..\n\nTheir demeanor reflects: Practical, resilient, and deeply connected to her environment. She is quiet by nature, her movements efficient and purposeful. She possesses an understated strength and a deep well of patience..\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765531433456-cc3pqdesd"
+      ]
     }
   }
 }

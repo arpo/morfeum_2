@@ -56,6 +56,18 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     blockedOnPassThrough: true,  // Pass-through regions have no unique visual
     description: 'Generate image for current node',
     category: 'media'
+  },
+  
+  // Character creation commands
+  CREATE_CHARACTER_REAL: {
+    requiresNodeType: ['location', 'niche'],
+    description: 'Create a realistic human character for this location',
+    category: 'creation'
+  },
+  CREATE_CHARACTER_UNREAL: {
+    requiresNodeType: ['location', 'niche'],
+    description: 'Create a fantastical humanoid character for this location',
+    category: 'creation'
   }
 } as const;
 

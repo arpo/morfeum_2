@@ -204,6 +204,29 @@ export async function handleNavigationCommand(
 
       setMovementInput('');
       return { success: true };
+    } else if (data.decision.action === 'create_character' && data.eventsUrl && data.navigationId) {
+      const registerExternalSpawn = useStore.getState().registerExternalSpawn;
+
+      registerExternalSpawn(
+        data.navigationId,
+        data.eventsUrl,
+        `/${command}${text ? ' ' + text : ''}`,
+        'character',
+        async (completedData: any) => {
+          // Character created and saved - reload characters from storage
+          if (completedData.character) {
+            console.log('[navigationCommands] Character created:', completedData.character.name);
+          }
+          setIsMoving(false);
+        },
+        (error: any) => {
+          console.error('[navigationCommands] Character creation error:', error);
+          setIsMoving(false);
+        }
+      );
+
+      setMovementInput('');
+      return { success: true };
     }
 
     return { success: true };

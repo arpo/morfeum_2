@@ -10,6 +10,7 @@ import { NAVIGATION_COMMANDS, SLASH_COMMANDS, type NavigationCommand, type NodeT
 import { classifyIntent, routeNavigation, buildIntentFromCommand, analyzeDestination } from '../../engine/navigation';
 import type { RouteOptions } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
+import { runCreateCharacterPipeline } from '../../engine/navigation/pipelines/createCharacterPipeline';
 import { findParentLocationNode } from '../../engine/navigation/navigationHelpers';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
@@ -307,6 +308,52 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
           message: decision.reasoning
         }
       });
+      return;
+    }
+
+    // Handle create_character action (CREATE_CHARACTER_REAL / CREATE_CHARACTER_UNREAL)
+    if (decision.action === 'create_character') {
+      const navigationId = `char-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      const eventsUrl = `/api/mzoo/navigation/events/${navigationId}`;
+      
+      console.log(`\n🎭 [NAVIGATION] Starting create_character pipeline...`);
+      console.log(`[NAVIGATION] Navigation ID: ${navigationId}`);
+      console.log(`[NAVIGATION] Character Type: ${decision.metadata?.characterType}`);
+      console.log(`[NAVIGATION] Location: ${decision.metadata?.locationName}`);
+      
+      // Store pipeline configuration for SSE initialization
+      const steps = getStepsForPipeline('characterNavigation');
+      pipelineConfigs.set(navigationId, {
+        pipelineType: 'characterNavigation',
+        steps: steps.map((step, index) => ({
+          index,
+          id: step.id,
+          name: step.name,
+          duration: step.duration
+        }))
+      });
+      
+      // Return response immediately
+      res.status(HTTP_STATUS.OK).json({
+        data: {
+          ...result,
+          navigationId,
+          eventsUrl
+        }
+      });
+
+      // Run character pipeline asynchronously
+      (async () => {
+        try {
+          await runCreateCharacterPipeline(decision, context, apiKey, navigationId);
+          console.log('✅ [NAVIGATION] Character pipeline complete');
+        } catch (pipelineError) {
+          console.error('\n❌ [NAVIGATION CHARACTER ERROR]', pipelineError);
+        } finally {
+          pipelineConfigs.delete(navigationId);
+        }
+      })();
+      
       return;
     }
 

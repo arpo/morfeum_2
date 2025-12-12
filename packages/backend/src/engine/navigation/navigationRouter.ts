@@ -4,7 +4,7 @@
  */
 
 import type { IntentResult, NavigationContext, NavigationDecision, DestinationAnalysis } from './types';
-import { handleGoInside, handleGoto } from './handlers';
+import { handleGoInside, handleGoto, handleCreateCharacterReal, handleCreateCharacterUnreal } from './handlers';
 
 /**
  * Options for routing that may include pre-computed analysis
@@ -21,6 +21,8 @@ export interface RouteOptions {
  * Currently implemented commands:
  * - GO_INSIDE: Enter a location (creates interior niche)
  * - GOTO: Navigate to specific place (requires destinationAnalysis)
+ * - CREATE_CHARACTER_REAL: Create realistic human character at current location
+ * - CREATE_CHARACTER_UNREAL: Create fantastical humanoid character at current location
  */
 export function routeNavigation(
   intent: IntentResult,
@@ -34,6 +36,12 @@ export function routeNavigation(
     
     case 'GOTO':
       return handleGoto(intent, context, options?.destinationAnalysis);
+    
+    case 'CREATE_CHARACTER_REAL':
+      return handleCreateCharacterReal(intent, context);
+    
+    case 'CREATE_CHARACTER_UNREAL':
+      return handleCreateCharacterUnreal(intent, context);
     
     // Add new command cases here as they are implemented
     

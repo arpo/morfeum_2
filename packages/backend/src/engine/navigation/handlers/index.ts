@@ -8,3 +8,4 @@
 
 export { handleGoInside } from './basicMovement';
 export { handleGoto } from './goto';
+export { handleCreateCharacterReal, handleCreateCharacterUnreal } from './createCharacter';

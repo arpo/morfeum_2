@@ -12,6 +12,8 @@ export type NodeType = 'host' | 'region' | 'location' | 'niche' | 'detail' | 'vi
 export type NavigationIntent = 
   | 'GO_INSIDE'
   | 'GOTO'
+  | 'CREATE_CHARACTER_REAL'
+  | 'CREATE_CHARACTER_UNREAL'
   | 'UNKNOWN';
 
 export interface IntentResult {
@@ -89,6 +91,7 @@ export type NavigationAction =
   | 'create_detail'
   | 'create_view'
   | 'create_hierarchy'
+  | 'create_character'
   | 'teleport'
   | 'not_implemented'
   | 'unknown';

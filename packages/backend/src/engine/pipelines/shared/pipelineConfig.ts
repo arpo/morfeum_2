@@ -37,6 +37,7 @@ export const PIPELINE_STEPS = {
   ],
   
   character: [
+    { id: 'prompt_engineering', name: 'Crafting Description', duration: 2500 },
     { id: 'seed_generation', name: 'Creating Seed', duration: 3000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'visual_analysis', name: 'Analyzing Appearance', duration: 4000 },
@@ -67,6 +68,15 @@ export const PIPELINE_STEPS = {
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'dna_generation', name: 'Creating DNA', duration: 6000 },
     { id: 'node_building', name: 'Building Space', duration: 1000 }
+  ],
+  
+  // Character creation from navigation (CREATE_CHARACTER_REAL / CREATE_CHARACTER_UNREAL)
+  characterNavigation: [
+    { id: 'prompt_engineering', name: 'Crafting Description', duration: 2500 },
+    { id: 'seed_generation', name: 'Creating Seed', duration: 3000 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2000 },
+    { id: 'visual_analysis', name: 'Analyzing Appearance', duration: 4000 },
+    { id: 'profile_enrichment', name: 'Building Profile', duration: 5000 }
   ]
 } as const;
 
