@@ -5,25 +5,57 @@
  * Flow:
  * 1. Prompt Engineering - Transform user input + environment DNA into detailed description
  * 2. Seed Generation - Create character seed from engineered prompt
- * 3. Image Generation - Generate character image
- * 4. Visual Analysis - Analyze the generated image
- * 5. Profile Enrichment - Build deep character profile
- * 6. Save - Persist character with location reference
+ * 3. Scene Composition - LLM composes character + location into scene prompt
+ * 4. Image Generation - Generate character in environment image
+ * 5. Visual Analysis - Analyze the generated image
+ * 6. Profile Enrichment - Build deep character profile
+ * 7. Save - Persist character with location reference
  */
 
 import { AI_MODELS } from '../../../config/constants';
 import * as mzooService from '../../../services/mzoo';
+import mediaService from '../../../services/media/mediaService';
 import type { NavigationDecision, NavigationContext } from '../types';
 import type { CharacterType } from '../../generation/prompts/characters/characterPromptEngineering';
 import { getCharacterPromptEngineer } from '../../generation/prompts/characters/characterPromptEngineering';
+import { 
+  composeCharacterScenePrompt,
+  getDefaultShotTypeForCharacterCreation 
+} from '../../generation/prompts/characters/composeCharacterScenePrompt';
 import {
   generateCharacterSeed,
-  generateCharacterImage,
   analyzeCharacterImage,
   enrichCharacterProfile
 } from '../../pipelines/characterPipeline';
+import { generateImage } from '../../pipelines/shared/imageGeneration';
+import { applyMorfeumStyle } from '../../generation/shared/applyMorfeumStyle';
 import { saveAndPinEntity, buildCharacterEntity } from '../../pipelines/shared/entityPersistence';
 import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
+
+/**
+ * Get the node's original image prompt from its primaryMedia
+ */
+function getNodeImagePrompt(context: NavigationContext): string | null {
+  const currentNode = context.currentNode;
+  
+  // Try to get primaryMedia ID from the node (may be in data or at node level)
+  const primaryMediaId = (currentNode as any).primaryMedia || (currentNode.data as any)?.primaryMedia;
+  
+  if (!primaryMediaId) {
+    console.log('[CreateCharacterPipeline] No primaryMedia on node, falling back to environment DNA');
+    return null;
+  }
+  
+  // Fetch the media to get its prompt
+  const media = mediaService.getMediaById(primaryMediaId);
+  
+  if (!media || !media.metadata?.prompt) {
+    console.log('[CreateCharacterPipeline] Could not get image prompt from media, falling back');
+    return null;
+  }
+  
+  return media.metadata.prompt;
+}
 
 /**
  * Run the character creation pipeline from a navigation command
@@ -80,28 +112,73 @@ export async function runCreateCharacterPipeline(
 
     helper.completeStage('seed_generation', 'Character seed created', { name: seed.name });
 
-    // Step 3: Image Generation
+    // Step 3: Scene Composition
+    // LLM combines character seed with location context (image prompt or environment DNA)
+    helper.startStage('scene_composition', 'Composing scene...');
+
+    // Get the node's original image prompt (the prompt that generated its image)
+    const locationImagePrompt = getNodeImagePrompt(context);
+    
+    // Use either the actual image prompt OR the environment DNA
+    // Both go through the LLM scene composer for intelligent integration
+    const locationContext = locationImagePrompt || environmentDNA || 'A natural outdoor environment';
+    
+    console.log(`[CreateCharacterPipeline] Using ${locationImagePrompt ? 'image prompt' : 'environment DNA'} for scene composition`);
+    
+    // Use half_portrait for initial character creation (character identity image)
+    const shotType = getDefaultShotTypeForCharacterCreation(); // 'half_portrait'
+    
+    // ALWAYS use LLM scene composer - no fallback concatenation
+    const scenePrompt = await composeCharacterScenePrompt(
+      {
+        name: seed.name,
+        looks: seed.looks,
+        wearing: seed.wearing || '',
+        presence: seed.presence,
+        personality: seed.personality
+      },
+      locationContext,
+      shotType,
+      apiKey
+      // No action for initial character creation - natural pose
+    );
+    
+    console.log('[CreateCharacterPipeline] LLM composed scene prompt');
+
+    helper.completeStage('scene_composition', 'Scene composed', {
+      promptLength: scenePrompt.length
+    });
+
+    // Step 4: Image Generation
+    // Generate character in environment (NOT portrait style)
     helper.startStage('image_generation', 'Generating character image...');
 
-    const { imageUrl, imagePrompt } = await generateCharacterImage(seed, apiKey);
+    // Apply Morfeum style WITHOUT NoCreatures filter (characters need people!)
+    const finalPrompt = applyMorfeumStyle(scenePrompt, { excludeCreatures: false });
+    
+    console.log('\n==================== CHARACTER SCENE PROMPT ====================');
+    console.log(finalPrompt);
+    console.log('==================== END SCENE PROMPT ====================\n');
+
+    const { imageUrl } = await generateImage(apiKey, finalPrompt, 1, 'landscape_16_9', 'none');
 
     helper.completeStage('image_generation', 'Character image generated', { imageUrl });
 
-    // Step 4: Visual Analysis
+    // Step 5: Visual Analysis
     helper.startStage('visual_analysis', 'Analyzing character appearance...');
 
     const visualAnalysis = await analyzeCharacterImage(imageUrl, seed, apiKey);
 
     helper.completeStage('visual_analysis', 'Character appearance analyzed');
 
-    // Step 5: Profile Enrichment
+    // Step 6: Profile Enrichment
     helper.startStage('profile_enrichment', 'Building character profile...');
 
     const deepProfile = await enrichCharacterProfile(seed, visualAnalysis, apiKey);
 
     helper.completeStage('profile_enrichment', 'Character profile complete');
 
-    // Step 6: Save character with location reference
+    // Step 7: Save character with location reference
     const characterId = `char-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     
     const character = buildCharacterEntity(
@@ -110,7 +187,7 @@ export async function runCreateCharacterPipeline(
       visualAnalysis,
       deepProfile,
       imageUrl,
-      imagePrompt
+      finalPrompt // Store the scene prompt, not the old portrait prompt
     );
 
     // Add location reference and character type (NOT embedding environment data)

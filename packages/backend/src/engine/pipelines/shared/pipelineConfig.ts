@@ -74,6 +74,7 @@ export const PIPELINE_STEPS = {
   characterNavigation: [
     { id: 'prompt_engineering', name: 'Crafting Description', duration: 2500 },
     { id: 'seed_generation', name: 'Creating Seed', duration: 3000 },
+    { id: 'scene_composition', name: 'Composing Scene', duration: 2000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'visual_analysis', name: 'Analyzing Appearance', duration: 4000 },
     { id: 'profile_enrichment', name: 'Building Profile', duration: 5000 }

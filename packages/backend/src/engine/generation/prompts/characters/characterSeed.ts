@@ -14,8 +14,7 @@ Return only valid JSON with these exact fields:
   "looks": "...",
   "wearing": "...",
   "personality": "...",
-  "presence": "...",
-  "setting": "..."
+  "presence": "..."
 }
 
 Core rule:
@@ -48,9 +47,6 @@ Field hints:
 
 - [presence]: 
   - Describe emotional temperature — what others *feel* in their vicinity.
-
-- [setting]: 
-  - One line of light, color, and spatial atmosphere.
 
 IMPORTANT:
 If created character is non-human or fantastical (e.g., alien, elf, robot), don't describe them as human.
