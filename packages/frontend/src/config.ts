@@ -34,14 +34,14 @@ export const PANEL_CONFIG = {
  */
 export const WORLD_VIEW_3D_CONFIG = {
   /** Depth scale - how much the 3D should "bulge" out (0.1 = subtle, 2.0 = extreme) */
-  MESH_DEPTH: 0.5,
+  MESH_DEPTH: 0.8,
   
   /** Focus plane - depth at which objects stay still during parallax (0 = far, 1 = near) */
   FOCUS: 0.25,
   
   /** Camera movement amplitude - how far the view shifts during animation (shader parallax) */
   CAMERA_AMPLITUDE: {
-    X: 0.4,   // Horizontal shift range
+    X: 0.5,   // Horizontal shift range
     Y: 0.5,   // Vertical shift range
     Z: 0.33,  // Zoom range (camera z position offset)
     ROLL: 0.0,  // Camera roll/tilt amplitude in radians (~1.7 degrees)

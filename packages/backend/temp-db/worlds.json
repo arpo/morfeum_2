@@ -905,6 +905,847 @@
       ],
       "searchDesc": "Cool, stone-walled basement with exposed beams and a faint scent of earth.",
       "slug": "basement"
+    },
+    "loc-1765464235601-ow3hvb5nr": {
+      "id": "loc-1765464235601-ow3hvb5nr",
+      "type": "host",
+      "name": "Exotic Garden Sanctuary",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sprawling, semi-enclosed garden paradise where dense, vibrant foliage spills over everything. Overhead structures are organic, almost swallowed by vines and leaves, hinting at natural integration. Entrances are fluid, a parting of the greenery that beckoms exploration.",
+        "colorsAndLighting": "Deep, saturated greens dominate, punctuated by the warm, pulsating glow of amber and yellow from numerous ornate lanterns. Intricate patterns of light and shadow dance across surfaces, creating a dynamic, enchanting visual.",
+        "atmosphere": "The air is thick with humidity and the intoxicating perfume of exotic flowers and damp earth. A gentle, pervasive warmth emanates from the abundant plant life and the soft lighting. A sense of stillness and secluded peace pervades.",
+        "materials": "Primary materials are overwhelmingly natural: dark, textured bark of ancient trees, large waxy leaves, and dense fronds. Where man-made elements appear, they are integrated seamlessly, such as weathered dark wood for structures.",
+        "mood": "Enchanting and alluring, fostering a sense of romantic intimacy and quiet wonder. It promises a discovery of hidden beauty and an escape from the ordinary.",
+        "sounds": "Rustling leaves, distant insect hum, soft chirping of unseen birds, gentle water trickles",
+        "primary_surfaces": "Lush, overflowing foliage, ancient tree trunks",
+        "secondary_surfaces": "Dark, weathered wooden planks and beams",
+        "accent_features": "Ornate, perforated metal lanterns in teardrop and diamond shapes, glowing amber centerpieces",
+        "dominant": "Deep emerald green with significant coverage from foliage.",
+        "secondary": "Dark, rich brown of wooden structures and tree trunks.",
+        "accent": "Warm amber and yellow from internal lighting.",
+        "ambient": "Warm, diffused glow",
+        "genre": "Fantasy",
+        "architectural_tone": "Organic garden pavilion with integrated lighting features",
+        "cultural_tone": "Exotic retreat for intimate gatherings and dining.",
+        "materials_base": "Natural wood, lush vegetation, decorative metalwork",
+        "mood_baseline": "Romantic and serene",
+        "palette_bias": "Greens and Browns with warm light accents",
+        "soundscape_base": "Tranquil natural sounds",
+        "flora_base": "Dense tropical flora",
+        "fauna_base": "Abundant insect life, unseen birds"
+      },
+      "description": "A hidden world of lush, tropical flora, where the air is thick with the scent of blossoms and the evening is illuminated by the warm glow of countless ornate lanterns. This sanctuary offers an escape into a realm of secluded tranquility and enchantment.",
+      "searchDesc": "An enchanting, secluded tropical garden sanctuary bathed in lantern light, offering an exotic and intimate escape.",
+      "slug": "exotic-garden-sanctuary",
+      "structure": {
+        "spatialLayout": "A seemingly endless expanse of layered vegetation, with pathways and seating areas subtly carved out. The depth is created by dense foliage and strategically placed lighting, suggesting hidden alcoves and further exploration.",
+        "dominantElements": [
+          "Massive, ancient trees",
+          "Overgrown tropical foliage",
+          "Intricately designed metal lanterns"
+        ],
+        "uniqueIdentifiers": [
+          "Secret garden entrances",
+          "Bioluminescent flora",
+          "Whispering ancient trees"
+        ]
+      },
+      "dominantElements": [
+        "Massive, ancient trees",
+        "Overgrown tropical foliage",
+        "Intricately designed metal lanterns"
+      ],
+      "uniqueIdentifiers": [
+        "Secret garden entrances",
+        "Bioluminescent flora",
+        "Whispering ancient trees"
+      ],
+      "primaryMedia": "media-1765464279372-gnkmkhwd8"
+    },
+    "21485c96-e103-454c-a345-027e4673b683": {
+      "id": "21485c96-e103-454c-a345-027e4673b683",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "db35bd49-ffa7-4de2-9ce2-a5073b7c54dd": {
+      "id": "db35bd49-ffa7-4de2-9ce2-a5073b7c54dd",
+      "type": "location",
+      "name": "The Lantern Grove",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior presents an inviting opening into a lush, dimly lit space. The overhead structure is robust but partially obscured by overflowing foliage, hinting at the vibrant life within. The entrance is not a defined door but a natural parting in the greenery.",
+        "colorsAndLighting": "The exterior is dominated by deep greens of foliage, with the warm, pulsating glow of amber and yellow lanterns spilling outwards. Shadows are cast in intricate, shifting patterns by the perforated metal.",
+        "atmosphere": "The air feels humid and rich with the scent of tropical plants. A gentle warmth emanates from within, drawing visitors into its embrace. There's a sense of secluded tranquility, as if stepping into a hidden world.",
+        "materials": "The visible exterior materials include dark, weathered wooden beams of the overhead structure and the textured, damp bark of unseen trees. Large, waxy leaves and fronds form the primary external texture.",
+        "mood": "Mysterious and alluring, promising a romantic and intimate experience. It evokes a sense of discovery and enchanted escape.",
+        "sounds": "Rustling leaves, distant chirping, soft hum of ambient light.",
+        "primary_surfaces": "Overhanging dark wooden beams, dense tropical foliage",
+        "secondary_surfaces": "Dark, weathered tree trunks, large fern fronds",
+        "accent_features": "Glimmers of light from ornate metal lanterns, illuminated tree base",
+        "dominant": "Deep emerald green with significant coverage from foliage.",
+        "secondary": "Dark, rich brown of wooden structures and tree trunks.",
+        "accent": "Warm amber and yellow from internal lighting.",
+        "ambient": "Warm, inviting glow.",
+        "genre": null,
+        "architectural_tone": "Organic garden pavilion with integrated lighting features",
+        "cultural_tone": "Exotic retreat for intimate gatherings and dining.",
+        "materials_base": "Natural wood, lush vegetation, decorative metalwork",
+        "mood_baseline": "Enchanting and serene",
+        "palette_bias": "Greens and Browns with warm light accents",
+        "soundscape_base": "Nature sounds",
+        "flora_base": "Tropical foliage and ferns",
+        "fauna_base": "None"
+      },
+      "description": "An outdoor dining and lounge area bathed in the warm glow of evening lights. Numerous ornate, perforated metal lanterns in teardrop and diamond shapes hang at varying heights from an overhead structure, casting intricate patterns of light and shadow through the dense, vibrant green foliage. Large fern fronds spill into the foreground, contributing to the tropical atmosphere. The ground is made of dark wooden planks.",
+      "searchDesc": "Exterior of The Lantern Grove, an exotic garden dining area with ornate lanterns.",
+      "slug": "the-lantern-grove",
+      "structure": {
+        "spatialLayout": "The grove appears as an organically shaped clearing within a denser garden, its boundaries softened by abundant plant life. The depth is suggested by the layering of foliage and the receding light.",
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center",
+            "description": "An open archway, framed by dense foliage, leading into the lantern-lit grove."
+          }
+        ],
+        "dominantElements": [
+          "Overhead wooden structure supporting lanterns",
+          "Dense, vibrant green foliage",
+          "Ornamental metal lanterns",
+          "Dark wooden plank flooring"
+        ],
+        "uniqueIdentifiers": [
+          "Teardrop and diamond shaped lanterns",
+          "Intricate light and shadow patterns",
+          "Large fern fronds spilling from foliage",
+          "Warm, amber and yellow light sources"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "An open archway, framed by dense foliage, leading into the lantern-lit grove."
+        }
+      ],
+      "dominantElements": [
+        "Overhead wooden structure supporting lanterns",
+        "Dense, vibrant green foliage",
+        "Ornamental metal lanterns",
+        "Dark wooden plank flooring"
+      ],
+      "uniqueIdentifiers": [
+        "Teardrop and diamond shaped lanterns",
+        "Intricate light and shadow patterns",
+        "Large fern fronds spilling from foliage",
+        "Warm, amber and yellow light sources"
+      ],
+      "primaryMedia": "media-1765464289041-zcdtblzbd"
+    },
+    "niche-1765464260616-8j2vhtdrf": {
+      "id": "niche-1765464260616-8j2vhtdrf",
+      "type": "niche",
+      "name": "Lantern Grove Dining Nook",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The space centers around a round, dark wooden table set for intimate dining. Four dark, cushioned stools with wooden bases surround it. The area is softly illuminated by glowing lanterns and the warm light of a single tree.",
+        "colorsAndLighting": "Dominated by the deep greens of foliage and dark wood, with warm amber and yellow light emanating from the centerpiece and lanterns, casting soft shadows.",
+        "atmosphere": "Humid and rich with the scent of tropical plants. A gentle warmth emanates from within, fostering a sense of secluded tranquility and intimacy.",
+        "materials": "Dark, weathered wood for the table and stool bases, complemented by soft cushioning. The surrounding elements feature dark tree trunks and broad, waxy leaves.",
+        "mood": "Mysterious and alluring, promising a romantic and intimate dining experience. It evokes enchantment and escape.",
+        "sounds": "Gentle rustling leaves, faint insect hum, distant water drip.",
+        "spatialLayout": "A defined circular area for dining, enclosed by dense foliage and structural elements, creating a secluded nook within the larger pavilion.",
+        "primary_surfaces": "Dark wooden table, dark cushioned stool seats",
+        "secondary_surfaces": "Wooden stool bases, broad-leafed plants, dark tree trunks",
+        "accent_features": "Glowing amber centerpiece, warm yellow illuminated tree base, scattered glowing lanterns",
+        "dominant": "Deep emerald green (foliage)",
+        "secondary": "Dark brown (wood)",
+        "accent": "Warm amber and yellow (lanterns, centerpiece)",
+        "ambient": "Warm, inviting glow",
+        "genre": null,
+        "architectural_tone": "Organic garden pavilion with integrated lighting features",
+        "cultural_tone": "Exotic retreat for intimate gatherings and dining.",
+        "materials_base": "Natural wood, lush vegetation, decorative metalwork",
+        "mood_baseline": "Enchanting and serene",
+        "palette_bias": "Greens and Browns with warm light accents",
+        "soundscape_base": "Nature sounds",
+        "flora_base": "Tropical foliage and ferns",
+        "fauna_base": "None"
+      },
+      "description": "An intimate, small-scale dining nook within The Lantern Grove, characterized by its organic integration with the surrounding foliage and enchanting lantern lighting.",
+      "primaryMedia": "media-1765464260614-oliyepivm",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "small",
+        "orientation": "cubic",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A circular, low-slung dining arrangement is nestled amongst dark tree trunks and broad-leafed plants, illuminated by ambient lantern light.",
+        "requiredElements": [
+          "A round dark wooden table set with white napkins and a glowing, amber-colored centerpiece",
+          "Four dark cushioned stools with wooden bases surrounding the table",
+          "Glowing lanterns dotting the background",
+          "Dark tree trunks",
+          "Broad-leafed plants",
+          "One tree illuminated from below by a warm yellow light",
+          "white napkins and features a glowing",
+          "wooden bases",
+          "one tree illuminated from below by a warm yellow light"
+        ],
+        "suggestedFixtures": [
+          "Ambient string lights",
+          "Decorative foliage accents",
+          "Small serving trays",
+          "Soft floor cushions",
+          "Subtle background music system"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "surrounding",
+            "description": "Openings in the foliage lead to other parts of The Lantern Grove."
+          }
+        ],
+        "dominantElements": [
+          "Ornate metal lanterns",
+          "Lush, dense foliage",
+          "Dark wooden furniture",
+          "Ambient, glowing light sources"
+        ],
+        "uniqueIdentifiers": [
+          "Illuminated tree base",
+          "Amber centerpiece glow",
+          "Intimate, hidden dining feel"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "surrounding",
+          "description": "Openings in the foliage lead to other parts of The Lantern Grove."
+        }
+      ],
+      "dominantElements": [
+        "Ornate metal lanterns",
+        "Lush, dense foliage",
+        "Dark wooden furniture",
+        "Ambient, glowing light sources"
+      ],
+      "uniqueIdentifiers": [
+        "Illuminated tree base",
+        "Amber centerpiece glow",
+        "Intimate, hidden dining feel"
+      ],
+      "searchDesc": "Dark wooden dining table, amber glow, tropical plants, lanterns.",
+      "slug": "dining-area",
+      "parentId": "db35bd49-ffa7-4de2-9ce2-a5073b7c54dd"
+    },
+    "niche-1765464328405-gk6yuivvf": {
+      "id": "niche-1765464328405-gk6yuivvf",
+      "type": "niche",
+      "name": "Lantern Grove Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The bar area is a continuation of the exterior's lushness, with overhanging dark wooden beams forming a robust, albeit partially obscured, ceiling. Dense tropical foliage spills down, creating an intimate enclosure. The 'bar' itself is integrated into this organic structure, not a distinct fixture but a functional surface within the living environment.",
+        "colorsAndLighting": "The space is dominated by deep emerald greens of foliage, punctuated by the warm, pulsating glow of amber and yellow lanterns. Shadows are intricate and shifting, cast by the interplay of light and leaves.",
+        "atmosphere": "The air is thick with the scent of tropical plants and feels humid and warm. A gentle, inviting warmth emanates from the illuminated corners, drawing patrons deeper into the secluded tranquility. The atmosphere is that of a hidden, enchanted oasis.",
+        "materials": "Dark, weathered wooden beams and the textured, damp bark of unseen trees form the structural elements. Large, waxy leaves and fronds provide the primary texture, blending the constructed with the natural.",
+        "mood": "Mysterious and alluring, promising a romantic and intimate experience within a secluded, enchanted escape.",
+        "sounds": "Gentle rustling leaves, distant water trickle, soft ambient hum",
+        "spatialLayout": "The bar occupies a naturally formed alcove within the larger pavilion. The space feels enclosed by vegetation, with a sense of depth created by layers of foliage and the receding light.",
+        "primary_surfaces": "Dense, waxy tropical foliage, dark weathered wooden beams",
+        "secondary_surfaces": "Textured tree bark, large fern fronds",
+        "accent_features": "Glimmers of light from ornate metal lanterns, illuminated bar surfaces.",
+        "dominant": "Deep emerald green (foliage)",
+        "secondary": "Dark brown (wooden beams)",
+        "accent": "Warm amber and yellow (lanterns)",
+        "ambient": "Warm, inviting glow",
+        "genre": null,
+        "architectural_tone": "Organic garden pavilion with integrated lighting features",
+        "cultural_tone": "Exotic retreat for intimate gatherings and dining.",
+        "materials_base": "Natural wood, lush vegetation, decorative metalwork",
+        "mood_baseline": "Enchanting and serene",
+        "palette_bias": "Greens and Browns with warm light accents",
+        "soundscape_base": "Nature sounds",
+        "flora_base": "Tropical foliage and ferns",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765464328403-3lpd70kt6",
+      "description": "An intimate bar area designed for exclusive gatherings, nestled within The Lantern Grove. It complements the parent space's exotic and atmospheric ambiance with soft lighting and natural elements.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "A medium-sized circular space featuring a central bar counter and seating arrangements. The ambiance is enhanced by soft lighting from lanterns and an illuminated tree.",
+        "requiredElements": [
+          "bar"
+        ],
+        "suggestedFixtures": [
+          "bar counter",
+          "stools",
+          "liquor shelves",
+          "ambient lighting fixtures",
+          "decorative plants",
+          "small tables"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center",
+            "description": "Main entrance passage leading into the bar."
+          },
+          {
+            "type": "door",
+            "position": "back",
+            "description": "Service door for staff access."
+          },
+          {
+            "type": "archway",
+            "position": "side",
+            "description": "Connecting archway to an adjacent area."
+          }
+        ],
+        "dominantElements": [
+          "central bar counter",
+          "glowing lanterns",
+          "illuminated tree base",
+          "round wooden table",
+          "cushioned stools"
+        ],
+        "uniqueIdentifiers": [
+          "Exotic retreat atmosphere",
+          "Intimate gathering space",
+          "Lantern-inspired illumination",
+          "Tree as a central decorative element"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "Main entrance passage leading into the bar."
+        },
+        {
+          "type": "door",
+          "position": "back",
+          "description": "Service door for staff access."
+        },
+        {
+          "type": "archway",
+          "position": "side",
+          "description": "Connecting archway to an adjacent area."
+        }
+      ],
+      "dominantElements": [
+        "central bar counter",
+        "glowing lanterns",
+        "illuminated tree base",
+        "round wooden table",
+        "cushioned stools"
+      ],
+      "uniqueIdentifiers": [
+        "Exotic retreat atmosphere",
+        "Intimate gathering space",
+        "Lantern-inspired illumination",
+        "Tree as a central decorative element"
+      ],
+      "searchDesc": "Lush, dimly lit bar with amber lanterns and organic, tropical ambiance.",
+      "slug": "bar"
+    },
+    "niche-1765464359309-qgy7t5l4c": {
+      "id": "niche-1765464359309-qgy7t5l4c",
+      "type": "niche",
+      "name": "Lantern Grove Chill Zone",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This niche presents an inviting opening into a dimly lit, lush space. Robust overhead beams are partially obscured by overflowing foliage, suggesting abundant life within. The entrance is a natural parting in the greenery, not a defined door.",
+        "colorsAndLighting": "Dominated by deep emerald greens, the space is illuminated by the warm, pulsating glow of amber and yellow lanterns, casting intricate, shifting shadows. Ambient light is warm and inviting.",
+        "atmosphere": "The air feels humid and rich with the scent of tropical plants, emanating a gentle warmth. A sense of secluded tranquility pervades, like stepping into a hidden, enchanted world.",
+        "materials": "Visible exterior materials include dark, weathered wooden beams and the textured, damp bark of unseen trees. Large, waxy leaves and fronds form the primary external texture.",
+        "mood": "Mysterious and alluring, this niche promises a romantic and intimate experience, evoking a sense of discovery and enchanted escape.",
+        "sounds": "Gentle rustling leaves, faint chirping insects, distant water trickles",
+        "spatialLayout": "An intimate, enclosed niche formed by dense vegetation, creating a sense of seclusion and depth.",
+        "primary_surfaces": "Overhanging dark wooden beams, dense tropical foliage",
+        "secondary_surfaces": "Dark, weathered tree trunks, large fern fronds",
+        "accent_features": "Glimmers of light from ornate metal lanterns, illuminated tree base",
+        "dominant": "Deep emerald green (foliage)",
+        "secondary": "Dark, rich brown (wood and tree trunks)",
+        "accent": "Warm amber and yellow (lanterns)",
+        "ambient": "Warm, inviting glow",
+        "genre": null,
+        "architectural_tone": "Organic garden pavilion with integrated lighting features",
+        "cultural_tone": "Exotic retreat for intimate gatherings and dining.",
+        "materials_base": "Natural wood, lush vegetation, decorative metalwork",
+        "mood_baseline": "Enchanting and serene",
+        "palette_bias": "Greens and Browns with warm light accents",
+        "soundscape_base": "Nature sounds",
+        "flora_base": "Tropical foliage and ferns",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765464359308-wvste6f33",
+      "description": "A continuation of the Lantern Grove's exotic retreat atmosphere, this chill-out zone offers an intimate and lush space for relaxation, bathed in the warm glow of ornate lanterns.",
+      "structure": {
+        "form": "organic",
+        "roofType": "vaulted",
+        "scale": "small",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "mixed",
+        "functionalType": "entertainment",
+        "spatialLayout": "This cozy space is designed for relaxation, featuring comfortable seating nestled within dense foliage and illuminated by ambient lantern light.",
+        "requiredElements": [
+          "chill out zone"
+        ],
+        "suggestedFixtures": [
+          "low-lying plush seating",
+          "ambient lanterns",
+          "strategically placed tropical plants",
+          "small, organic-shaped side tables",
+          "soft, warm lighting",
+          "decorative metal screens"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center",
+            "description": "An inviting passage leads into the main seating area."
+          },
+          {
+            "type": "passage",
+            "position": "left",
+            "description": "A smaller passage offers access to a more secluded nook."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "Another passage subtly directs flow towards adjacent areas."
+          }
+        ],
+        "dominantElements": [
+          "overhanging dark wooden beams",
+          "dense tropical foliage",
+          "ornate metal lanterns",
+          "illuminated bar surface integrated into the organic structure"
+        ],
+        "uniqueIdentifiers": [
+          "organic integration of bar and seating",
+          "lush, intimate enclosure",
+          "glimmering lantern light"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "An inviting passage leads into the main seating area."
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "A smaller passage offers access to a more secluded nook."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "Another passage subtly directs flow towards adjacent areas."
+        }
+      ],
+      "dominantElements": [
+        "overhanging dark wooden beams",
+        "dense tropical foliage",
+        "ornate metal lanterns",
+        "illuminated bar surface integrated into the organic structure"
+      ],
+      "uniqueIdentifiers": [
+        "organic integration of bar and seating",
+        "lush, intimate enclosure",
+        "glimmering lantern light"
+      ],
+      "searchDesc": "Lush, dimly lit chill out zone with tropical foliage and warm lantern light.",
+      "slug": "chill-out-zone"
+    },
+    "loc-1765520303086-gwjuwbjna": {
+      "id": "loc-1765520303086-gwjuwbjna",
+      "type": "host",
+      "name": "Galactic Hub",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sprawling, multi-layered cosmic environment where monumental artificial structures intermingle with natural celestial phenomena. Gigantic vessels and orbital stations are common, connected by intricate networks of conduits and glowing energy pathways. Distant nebulae and star clusters provide a breathtaking, yet immense, backdrop.",
+        "colorsAndLighting": "A diverse palette of deep space blues and greens is punctuated by the warm glow of artificial lights from countless vessels and stations. Ambient light is often dim, with strong contrasts created by intense localized light sources like engines, windows, and docking bay illumination.",
+        "atmosphere": "The atmosphere is the vacuum of space, but within habitats and vessels, it is controlled and often recycled. The palpable sense of immense scale and the silence of the void are ever-present, broken only by the hum of technology and communication signals.",
+        "materials": "Primary materials are advanced metallic alloys, duranium composites, and energy-resistant plating, often showing signs of interstellar wear and tear. Natural elements like exotic minerals and gas clouds exist in abundance in the wider expanse.",
+        "mood": "The mood evokes awe, mystery, and a sense of boundless potential, underscored by the sheer scale of the environment and the constant activity of advanced civilizations.",
+        "sounds": "Deep hum of machinery, distant comms chatter, subtle energy fluctuations, occasional alarm klaxons.",
+        "primary_surfaces": "Dark metallic hulls, nebulae clouds, starfield.",
+        "secondary_surfaces": "Conduits, panels, atmospheric filters.",
+        "accent_features": "Glowing windows, engine exhausts, external lighting arrays.",
+        "dominant": "Dark blue-green (75%)",
+        "secondary": "Deep teal (15%)",
+        "accent": "Warm orange (5%), Amber (5%)",
+        "ambient": "Dim, star-filled darkness",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Monumental, functional, and advanced interstellar structures",
+        "cultural_tone": "A nexus for diverse alien species, interstellar trade, and exploration.",
+        "materials_base": "Advanced metallic alloys and composites",
+        "mood_baseline": "Awe-inspiring, mysterious, and vast",
+        "palette_bias": "Cool metallics with punctuated warm light sources",
+        "soundscape_base": "Industrial hum and ambient void",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A vast expanse of space teeming with advanced civilizations and interstellar travel. This region is a crossroads for commerce, culture, and clandestine operations, characterized by monumental structures and a constant flow of diverse species and vessels.",
+      "searchDesc": "Vast cosmic expanse, advanced civilizations, interstellar travel, mega-structures, and transit routes.",
+      "slug": "galactic-hub",
+      "structure": {
+        "spatialLayout": "Vast and three-dimensional, characterized by immense distances between points of interest. Structures are often spherical, toroidal, or complex polyhedral forms designed for efficiency and durability in space. Depth is emphasized by layers of structures and the receding starfield.",
+        "dominantElements": [
+          "Mega-structures",
+          "Interstellar transit routes"
+        ],
+        "uniqueIdentifiers": [
+          "Cosmic trade lanes",
+          "Nebula formations",
+          "Distant stellar phenomena"
+        ]
+      },
+      "dominantElements": [
+        "Mega-structures",
+        "Interstellar transit routes"
+      ],
+      "uniqueIdentifiers": [
+        "Cosmic trade lanes",
+        "Nebula formations",
+        "Distant stellar phenomena"
+      ],
+      "primaryMedia": "media-1765520392066-viq4llmrx"
+    },
+    "d5127fcf-109b-471a-b3ca-fb55f513bae8": {
+      "id": "d5127fcf-109b-471a-b3ca-fb55f513bae8",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "b396a628-4780-4294-afcc-6a429bf0a3a1": {
+      "id": "b396a628-4780-4294-afcc-6a429bf0a3a1",
+      "type": "location",
+      "name": "The Stellar Citadel",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, perfectly spherical vessel dominates the view, clad in overlapping, irregularly shaped metallic panels. Intricate conduits and tubing weave across its surface, connecting various mechanical protrusions and smaller illuminated sections.  The main observation chamber is a prominent feature, marked by a vast, circular viewport from which a warm orange light spills outwards.",
+        "colorsAndLighting": "The primary color scheme consists of deep teal and dark grey metallic surfaces, punctuated by numerous small, glowing windows of the same teal hue. A large, circular viewport emits a powerful, warm orange light, while smaller amber lights dot the exterior structure. The surrounding cosmic expanse is a dark blue-green, subtly illuminated by distant points of light.",
+        "atmosphere": "The air feels cold and still, carrying the faint hum of advanced machinery. The vessel moves with a slow, deliberate grace through the void, its form imposing against the deep, silent darkness. The distant lights suggest a vast, inhabited region of space.",
+        "materials": "The primary materials are weathered, dark grey and deep teal metallic alloys, showing varied textures from smooth plating to rough, pitted surfaces. Exposed conduits and mechanical attachments appear to be constructed from darker, more utilitarian metals.",
+        "mood": "The mood is one of immense scale, technological sophistication, and a slightly utilitarian, functional beauty. It evokes a sense of awe, mystery, and the quiet power of deep space exploration.",
+        "sounds": "Distant hum, low thrum, faint clanking, occasional energy pulse.",
+        "primary_surfaces": "weathered dark grey and deep teal metallic panels",
+        "secondary_surfaces": "exposed conduits, mechanical attachments, reinforced hull plating",
+        "accent_features": "large circular orange viewport, numerous small glowing teal windows, amber external lights",
+        "dominant": "dark grey (70%)",
+        "secondary": "deep teal (25%)",
+        "accent": "warm orange (5%), amber (trace)",
+        "ambient": "dark blue-green cosmic expanse",
+        "genre": null,
+        "architectural_tone": "weathered industrial sci-fi vessel with intricate mechanical detailing",
+        "cultural_tone": "Galactic hub for observation and operations, likely used by advanced sentient species.",
+        "materials_base": "metallic alloys, advanced composites",
+        "mood_baseline": "awe-inspiring, functional, mysterious",
+        "palette_bias": "cool metallics with warm core illumination",
+        "soundscape_base": "ambient space hum and mechanical resonance",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A colossal, spherical futuristic vessel or station, intricately detailed with metallic panels, conduits, and small glowing windows in shades of deep teal and dark grey. A massive, circular viewport dominates the foreground, radiating a warm, bright orange light from its interior. The external structure is adorned with smaller amber lights and complex mechanical attachments, showcasing various textures and levels of wear. This enormous craft floats in a vast, dark blue-green expanse, subtly illuminated by distant lights. Numerous cables and smaller structures extend from and around the main vessel. EXTERIOR VIEW.",
+      "searchDesc": "Colossal spherical vessel, teal/grey with orange viewport, mechanical details, cosmic expanse.",
+      "slug": "the-stellar-citadel",
+      "structure": {
+        "spatialLayout": "The Stellar Citadel is a massive, spherical entity. Its exterior is densely packed with details, giving it a complex and layered appearance that suggests significant internal volume. Numerous smaller structures and cables extend outwards, creating a sense of depth and connection to its surroundings.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "main hull near observation chamber viewport",
+            "description": "A reinforced, hexagonal airlock door with a teal glow, leading to the observation chamber."
+          }
+        ],
+        "dominantElements": [
+          "Massive, circular main viewport radiating orange light",
+          "Intricate network of metallic panels and conduits",
+          "Numerous smaller glowing windows in deep teal and dark grey",
+          "Complex mechanical attachments and extending cables"
+        ],
+        "uniqueIdentifiers": [
+          "Spherical, colossal scale",
+          "Deep teal and dark grey color scheme with orange and amber lighting",
+          "Visible signs of wear and mechanical complexity",
+          "Location within a dark blue-green cosmic expanse"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "main hull near observation chamber viewport",
+          "description": "A reinforced, hexagonal airlock door with a teal glow, leading to the observation chamber."
+        }
+      ],
+      "dominantElements": [
+        "Massive, circular main viewport radiating orange light",
+        "Intricate network of metallic panels and conduits",
+        "Numerous smaller glowing windows in deep teal and dark grey",
+        "Complex mechanical attachments and extending cables"
+      ],
+      "uniqueIdentifiers": [
+        "Spherical, colossal scale",
+        "Deep teal and dark grey color scheme with orange and amber lighting",
+        "Visible signs of wear and mechanical complexity",
+        "Location within a dark blue-green cosmic expanse"
+      ],
+      "primaryMedia": "media-1765520360963-yfka4gyka"
+    },
+    "niche-1765520324079-evd5i8i6m": {
+      "id": "niche-1765520324079-evd5i8i6m",
+      "type": "niche",
+      "name": "Observation Control Room",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a functional control room, densely packed with screens displaying various data and illuminated panels with an array of controls. Three figures, clad in bulky environmental suits, are positioned before these displays, engaged in observation and discussion.",
+        "colorsAndLighting": "Warm orange light emanates from the main viewport, casting a diffused glow across the control room. Screens emit their own localized light, while the control panels are dotted with small, functional amber and teal lights. Ambient light is muted, emphasizing the internal glow.",
+        "atmosphere": "The air within the chamber feels controlled and still, carrying the low hum of active machinery. A sense of focused purpose pervades the space, with the figures' movements deliberate and hushed amidst the technological hum.",
+        "materials": "The walls and surfaces are constructed from the same weathered, dark grey and deep teal metallic alloys as the vessel's exterior, exhibiting a similar functional, industrial texture. Panels and screens are integrated seamlessly into these metallic structures.",
+        "mood": "The mood is one of intense focus, technological sophistication, and quiet observation, tinged with the mystery of the vessel's mission.",
+        "sounds": "faint machinery hum, hushed voices, data readouts",
+        "spatialLayout": "The space is efficiently designed, with workstations and control consoles arranged to maximize viewing angles of the main viewport and data displays, creating a sense of enclosed, functional depth.",
+        "primary_surfaces": "weathered dark grey and deep teal metallic alloy walls and panels",
+        "secondary_surfaces": "integrated control panels, data screens, conduits within walls",
+        "accent_features": "glowing displays, illuminated control buttons, figures in environmental suits",
+        "dominant": "dark grey (60%), from the main hull materials",
+        "secondary": "deep teal (30%), integrated into panels and accents",
+        "accent": "warm orange (5%) from viewport spill, amber and teal (5%) from lights and displays",
+        "ambient": "muted, influenced by internal lights",
+        "genre": null,
+        "architectural_tone": "weathered industrial sci-fi vessel with intricate mechanical detailing",
+        "cultural_tone": "Galactic hub for observation and operations, likely used by advanced sentient species.",
+        "materials_base": "metallic alloys, advanced composites",
+        "mood_baseline": "awe-inspiring, functional, mysterious",
+        "palette_bias": "cool metallics with warm core illumination",
+        "soundscape_base": "ambient space hum and mechanical resonance",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "The illuminated interior of a control room within the Stellar Citadel, a medium-sized, spherical space outfitted with numerous screens and panels. Three figures in bulky environmental suits are actively observing and discussing data, likely related to the vessel's observational duties.",
+      "primaryMedia": "media-1765520324076-oaogxd5th",
+      "structure": {
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "civic",
+        "spatialLayout": "The room is a section of the larger spherical vessel, with control consoles and screens arranged to face the primary observation viewport. Figures are situated within this operational space.",
+        "requiredElements": [
+          "screens",
+          "panels",
+          "three figures in bulky environmental suits",
+          "observing and discussing",
+          "screens and panels"
+        ],
+        "suggestedFixtures": [
+          "command chairs",
+          "holographic displays",
+          "environmental suit charging stations",
+          "data conduits",
+          "communications array",
+          "diagnostic tools"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear wall",
+            "description": "A sealed, pressurized corridor leading to other sections of the vessel."
+          },
+          {
+            "type": "door",
+            "position": "side wall",
+            "description": "A heavy, reinforced airlock door."
+          },
+          {
+            "type": "window",
+            "position": "forward-facing wall",
+            "description": "The primary, large circular viewport offering views of the cosmic expanse."
+          }
+        ],
+        "dominantElements": [
+          "central control console",
+          "multiple display screens",
+          "the primary observation viewport",
+          "environmental suits",
+          "various operational panels"
+        ],
+        "uniqueIdentifiers": [
+          "large orange circular viewport",
+          "advanced control interfaces",
+          "figures in environmental suits"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear wall",
+          "description": "A sealed, pressurized corridor leading to other sections of the vessel."
+        },
+        {
+          "type": "door",
+          "position": "side wall",
+          "description": "A heavy, reinforced airlock door."
+        },
+        {
+          "type": "window",
+          "position": "forward-facing wall",
+          "description": "The primary, large circular viewport offering views of the cosmic expanse."
+        }
+      ],
+      "dominantElements": [
+        "central control console",
+        "multiple display screens",
+        "the primary observation viewport",
+        "environmental suits",
+        "various operational panels"
+      ],
+      "uniqueIdentifiers": [
+        "large orange circular viewport",
+        "advanced control interfaces",
+        "figures in environmental suits"
+      ],
+      "searchDesc": "Control room interior with screens, panels, and figures in environmental suits.",
+      "slug": "the-observation-chamber",
+      "parentId": "b396a628-4780-4294-afcc-6a429bf0a3a1"
+    },
+    "niche-1765520423636-4ci9nzy8w": {
+      "id": "niche-1765520423636-4ci9nzy8w",
+      "type": "niche",
+      "name": "Engine Core Chamber",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The engine room is a dense labyrinth of machinery. A colossal, pulsating energy core is housed within a protective containment field at the center, drawing power from a dense, interwoven network of conduits and pipes that snake across the walls, ceiling, and floor. Numerous indicator panels glow with operational data.",
+        "colorsAndLighting": "The primary colors are dark grey and deep teal metallic surfaces, reflecting the ambient glow from the central power core which emits a warm, vibrant orange light. Smaller teal and amber indicator lights dot the machinery, casting dynamic shadows.",
+        "atmosphere": "The air is thick with the scent of ozone and heated metal, carrying a palpable vibration from the immense power generated. The ambient sound is a deep, resonant hum, punctuated by the hiss of pressurized systems and occasional metallic clanks.",
+        "materials": "The primary materials are the same weathered dark grey and deep teal metallic alloys found throughout the vessel, showing signs of heat exposure and regular maintenance. Exposed conduits are of darker, utilitarian metals, some showing slight heat discoloration.",
+        "mood": "A feeling of immense power, controlled chaos, and vital functionality permeates the space, evoking awe at the sheer scale of technological might.",
+        "sounds": "Deep hum, hissing steam, metallic clanks, system alerts",
+        "spatialLayout": "A large, cavernous space dominated by the central power core. Walls are heavily encrusted with machinery, creating a sense of depth and complex layering. The ceiling is lost in a tangle of pipes and structural supports.",
+        "primary_surfaces": "weathered dark grey and deep teal metallic walls, floor, and ceiling plating",
+        "secondary_surfaces": "exposed conduits, pipework, energy containment field, control consoles, heat sinks",
+        "accent_features": "central pulsating orange power core, glowing teal and amber indicator panels, steam vents",
+        "dominant": "dark grey (65%)",
+        "secondary": "deep teal (25%)",
+        "accent": "warm orange (5%), amber (5%)",
+        "ambient": "warm orange and teal glow",
+        "genre": null,
+        "architectural_tone": "weathered industrial sci-fi vessel with intricate mechanical detailing",
+        "cultural_tone": "Galactic hub for observation and operations, likely used by advanced sentient species.",
+        "materials_base": "metallic alloys, advanced composites",
+        "mood_baseline": "awe-inspiring, functional, mysterious",
+        "palette_bias": "cool metallics with warm core illumination",
+        "soundscape_base": "ambient space hum and mechanical resonance",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765520423634-xk147ujw6",
+      "description": "The heart of the Citadel's propulsion system, this industrial engine room is a large, cylindrical space dominated by a central, powerful engine core. Access is provided via encircling catwalks and multiple access points, highlighting its functional, industrial purpose.",
+      "structure": {
+        "form": "cylindrical",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "A vast, cylindrical chamber housing a central, complex engine core. Catwalks and platforms encircle the core at various levels, providing access for maintenance and observation.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Massive energy conduits",
+          "Coolant pipes",
+          "Maintenance access panels",
+          "Diagnostic terminals",
+          "Emergency power cells",
+          "Workstations for engineers"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "rear wall, central",
+            "description": "Large access corridor leading to the engine core."
+          },
+          {
+            "type": "stairs",
+            "position": "left side, encircling",
+            "description": "Spiral staircase leading to upper maintenance levels."
+          },
+          {
+            "type": "door",
+            "position": "right side, mid-level",
+            "description": "Hatchway to a secondary control room or storage area."
+          }
+        ],
+        "dominantElements": [
+          "Central, humming engine core",
+          "Intricate network of pipes and conduits",
+          "Multi-level metal catwalks",
+          "Illuminated control panels"
+        ],
+        "uniqueIdentifiers": [
+          "The sheer scale of the engine core",
+          "The ambient hum of immense power",
+          "The labyrinthine system of industrial piping"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "rear wall, central",
+          "description": "Large access corridor leading to the engine core."
+        },
+        {
+          "type": "stairs",
+          "position": "left side, encircling",
+          "description": "Spiral staircase leading to upper maintenance levels."
+        },
+        {
+          "type": "door",
+          "position": "right side, mid-level",
+          "description": "Hatchway to a secondary control room or storage area."
+        }
+      ],
+      "dominantElements": [
+        "Central, humming engine core",
+        "Intricate network of pipes and conduits",
+        "Multi-level metal catwalks",
+        "Illuminated control panels"
+      ],
+      "uniqueIdentifiers": [
+        "The sheer scale of the engine core",
+        "The ambient hum of immense power",
+        "The labyrinthine system of industrial piping"
+      ],
+      "searchDesc": "The vessel's operational core, filled with humming machinery and a central power core.",
+      "slug": "engine-room"
     }
   },
   "views": {},
@@ -985,9 +1826,72 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765464235601-ow3hvb5nr",
+      "type": "host",
+      "children": [
+        {
+          "id": "21485c96-e103-454c-a345-027e4673b683",
+          "type": "region",
+          "children": [
+            {
+              "id": "db35bd49-ffa7-4de2-9ce2-a5073b7c54dd",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765464260616-8j2vhtdrf",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765464328405-gk6yuivvf",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765464359309-qgy7t5l4c",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765520303086-gwjuwbjna",
+      "type": "host",
+      "children": [
+        {
+          "id": "d5127fcf-109b-471a-b3ca-fb55f513bae8",
+          "type": "region",
+          "children": [
+            {
+              "id": "b396a628-4780-4294-afcc-6a429bf0a3a1",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765520324079-evd5i8i6m",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765520423636-4ci9nzy8w",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1765453936786-mwhzxgifp"
+    "loc-1765453936786-mwhzxgifp",
+    "loc-1765464235601-ow3hvb5nr",
+    "loc-1765520303086-gwjuwbjna"
   ]
 }
