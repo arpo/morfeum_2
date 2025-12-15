@@ -46,19 +46,19 @@ export const PIPELINE_STEPS = {
   // Navigation intent pipeline (generic - GO_INSIDE and similar)
   // Uses the new unified space analysis (Structure + DNA in parallel)
   navigation: [
-    { id: 'space_analysis', name: 'Analyzing Space', duration: 3000 },     // Structure + DNA in parallel
-    { id: 'image_prompt', name: 'Composing Scene', duration: 1000 },       // Uses pre-computed data
+    { id: 'space_analysis', name: 'Analyzing Space', duration: 6000 },     // Structure + DNA in parallel
+    { id: 'image_prompt', name: 'Composing Scene', duration: 3000 },       // Uses pre-computed data
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
-    { id: 'node_building', name: 'Building Space', duration: 1000 }
+    { id: 'node_building', name: 'Building Space', duration: 300 }
   ],
   
   // GOTO pipeline - same as navigation (now unified)
   // Kept separate for backward compatibility but uses same steps
   navigationGoto: [
-    { id: 'space_analysis', name: 'Analyzing Space', duration: 5000 },     // Structure + DNA in parallel
-    { id: 'image_prompt', name: 'Composing Scene', duration: 3500 },       // Uses pre-computed data
+    { id: 'space_analysis', name: 'Analyzing Space', duration: 6000 },     // Structure + DNA in parallel
+    { id: 'image_prompt', name: 'Composing Scene', duration: 3000 },       // Uses pre-computed data
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
-    { id: 'node_building', name: 'Building Space', duration: 1000 }
+    { id: 'node_building', name: 'Building Space', duration: 300 }
   ],
   
   // Legacy navigation pipeline (for backward compatibility during transition)
