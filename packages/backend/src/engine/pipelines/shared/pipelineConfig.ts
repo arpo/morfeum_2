@@ -17,10 +17,10 @@ export const PIPELINE_STEPS = {
   worldTree: [
     { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 2000 },
     { id: 'deepest_dna_generation', name: 'Creating DNA', duration: 6000 },
-    { id: 'image_prompt_generation', name: 'Crafting Visual', duration: 3000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2500 },
     { id: 'parent_dna_generation', name: 'Building World', duration: 9000 },
-    { id: 'tree_building', name: 'Finalizing', duration: 500 }
+    { id: 'tree_building', name: 'Building Tree', duration: 500 },
+    { id: 'media_assignment', name: 'Finalizing', duration: 500 }
   ],
   
   // Interior spawn pipeline: creates exterior hierarchy first, then GO_INSIDE for niche
@@ -37,7 +37,6 @@ export const PIPELINE_STEPS = {
   ],
   
   character: [
-    { id: 'prompt_engineering', name: 'Crafting Description', duration: 2500 },
     { id: 'seed_generation', name: 'Creating Seed', duration: 3000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'visual_analysis', name: 'Analyzing Appearance', duration: 4000 },
@@ -56,8 +55,8 @@ export const PIPELINE_STEPS = {
   // GOTO pipeline - same as navigation (now unified)
   // Kept separate for backward compatibility but uses same steps
   navigationGoto: [
-    { id: 'space_analysis', name: 'Analyzing Space', duration: 3000 },     // Structure + DNA in parallel
-    { id: 'image_prompt', name: 'Composing Scene', duration: 1000 },       // Uses pre-computed data
+    { id: 'space_analysis', name: 'Analyzing Space', duration: 5000 },     // Structure + DNA in parallel
+    { id: 'image_prompt', name: 'Composing Scene', duration: 3500 },       // Uses pre-computed data
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'node_building', name: 'Building Space', duration: 1000 }
   ],

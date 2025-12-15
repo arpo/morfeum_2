@@ -40,15 +40,23 @@ export class PipelineHelper {
    * Send pipeline started event
    * This creates an initial progress event that allows the UI to show the progress bar
    * at 0% before the first step begins animating
+   * Includes pipeline steps so frontend knows total step count for progress calculation
    */
   started(message: string = 'Initializing...') {
-    console.log(`[${this.pipelineName}] Starting pipeline for ${this.spawnId}`);
+    console.log(`[${this.pipelineName}] Starting pipeline for ${this.spawnId} (${this.steps.length} steps)`);
     this.currentStageStart = Date.now();
     
-    // Send started event to allow progress bar to appear at 0%
+    // Send started event with step configuration so frontend can calculate progress
     sseService.sendEvent(this.spawnId, 'progress', {
       stage: 'started',
-      message
+      message,
+      pipelineType: this.pipelineType,
+      steps: this.steps.map((step, index) => ({
+        index,
+        id: step.id,
+        name: step.name,
+        duration: step.duration
+      }))
     });
   }
 

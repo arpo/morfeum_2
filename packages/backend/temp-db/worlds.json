@@ -2477,6 +2477,1019 @@
       ],
       "searchDesc": "Vast hall with divine throne, bathed in brilliant white light and pastel iridescence.",
       "slug": "the-great-hall-with-gods-throne"
+    },
+    "loc-1765787933815-0por9eiib": {
+      "id": "loc-1765787933815-0por9eiib",
+      "type": "host",
+      "name": "Azure Coast",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Sprawling coastal landscapes dominated by natural formations and elegant, integrated architecture. Structures often feature organic shapes and a harmonious blend with the environment. Expansive ocean views are paramount.",
+        "colorsAndLighting": "Bathed in bright, clear sunlight, casting warm, dappled light. Dominated by brilliant blues of the ocean and sky, complemented by warm neutrals and vibrant natural greens.",
+        "atmosphere": "The air is warm and filled with the fresh scent of the sea. A gentle, refreshing breeze is ever-present, rustling through surrounding foliage. The atmosphere is profoundly peaceful, healthy, and invigorating.",
+        "materials": "A harmonious blend of natural and refined materials. Smooth, light-colored plasters, rough natural stone, and warm, weathered woods are common. Textures range from smooth to rugged.",
+        "mood": "Serene, tranquil, and aspirational. The environment evokes feelings of peace, relaxation, and sophisticated comfort, encouraging escape and rejuvenation.",
+        "sounds": "Gentle waves, distant seabirds, soft breeze, ambient nature",
+        "primary_surfaces": "Smooth white stucco, natural rock formations",
+        "secondary_surfaces": "Light wooden decks, woven fibers",
+        "accent_features": "Cascading vines, potted greenery, natural archways",
+        "dominant": "Brilliant blue (ocean, sky)",
+        "secondary": "White (stucco, architectural elements), Earth tones (rock, wood)",
+        "accent": "Vibrant green (flora), burnt orange (textiles)",
+        "ambient": "Bright, sun-drenched daylight",
+        "genre": "Luxury Coastal Retreat",
+        "architectural_tone": "Organic modern coastal with natural integration",
+        "cultural_tone": "High-end retreat for relaxation and entertainment",
+        "materials_base": "Stucco, natural stone, wood, woven fibers",
+        "mood_baseline": "Peaceful, luxurious, aspirational",
+        "palette_bias": "Coastal blues, warm neutrals, vibrant greens",
+        "soundscape_base": "Calm natural ambient sounds",
+        "flora_base": "Lush coastal and Mediterranean plants",
+        "fauna_base": "Seabirds, small coastal wildlife"
+      },
+      "description": "A tranquil stretch of coastline renowned for its serene beauty and luxurious retreats. The region is characterized by its brilliant blue waters, sun-drenched landscapes, and a pervasive sense of calm and sophistication.",
+      "searchDesc": "Serene coastal region with luxurious villas, pristine beaches, and brilliant blue waters.",
+      "slug": "azure-coast",
+      "structure": {
+        "spatialLayout": "Open, expansive spaces that seamlessly blend indoor and outdoor living. Views are directed towards the ocean, with a focus on natural light and air circulation.",
+        "dominantElements": [
+          "Expansive coastline",
+          "Luxury villas"
+        ],
+        "uniqueIdentifiers": [
+          "Pristine beaches",
+          "Clear azure waters"
+        ]
+      },
+      "dominantElements": [
+        "Expansive coastline",
+        "Luxury villas"
+      ],
+      "uniqueIdentifiers": [
+        "Pristine beaches",
+        "Clear azure waters"
+      ]
+    },
+    "cf58838f-433b-4125-a5d5-07d5d35f1133": {
+      "id": "cf58838f-433b-4125-a5d5-07d5d35f1133",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "772f39b3-5bfe-4df4-ac3c-0c46c1166bb0": {
+      "id": "772f39b3-5bfe-4df4-ac3c-0c46c1166bb0",
+      "type": "location",
+      "name": "The Serenity Villa",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The villa features organic, rounded forms of white stucco integrated with natural rock. It is multi-tiered with numerous dark-framed windows and arched doorways. Lush greenery cascades from rock formations and adorns the exterior.",
+        "colorsAndLighting": "The scene is bathed in bright, clear sunlight, creating dappled reflections on the light blue pool. Dominant colors are brilliant blue of the ocean, white stucco, and earthy tones of rock and wood.",
+        "atmosphere": "The air is warm and filled with the fresh scent of the sea. A gentle breeze rustles the leaves of the surrounding plants. The atmosphere is profoundly peaceful and luxurious.",
+        "materials": "Smooth, white stucco contrasts with rough, textured natural rock. Dark wood is used for window frames and an outdoor dining deck. Woven baskets and terra cotta pots add natural elements.",
+        "mood": "Serene, tranquil, and aspirational. The villa evokes feelings of peace, relaxation, and sophisticated comfort.",
+        "sounds": "Gentle waves, distant seagulls, soft breeze, faint clinking of glasses.",
+        "primary_surfaces": "smooth white stucco, rough natural rock",
+        "secondary_surfaces": "dark wood, light wood deck, woven textures",
+        "accent_features": "cascading green vines, potted cacti and greenery, decorative woven baskets",
+        "dominant": "white (stucco, seating)",
+        "secondary": "blue (ocean, pool), earth tones (rock, wood)",
+        "accent": "vibrant green (vines, plants), burnt orange (pillows)",
+        "ambient": "bright daylight, sunny",
+        "genre": null,
+        "architectural_tone": "organic modern coastal with natural integration",
+        "cultural_tone": "high-end retreat for relaxation and entertainment",
+        "materials_base": "stucco, natural stone, wood, woven fibers",
+        "mood_baseline": "peaceful luxury",
+        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
+        "soundscape_base": "calm ocean breeze and water",
+        "flora_base": "vines, cacti, potted greenery",
+        "fauna_base": "None"
+      },
+      "description": "A striking coastal retreat with organic, rounded white stucco walls seamlessly integrated with natural rock formations. It overlooks a vast expanse of calm, brilliant blue ocean under a clear, sunny sky. A sparkling light blue swimming pool sits in the foreground, reflecting the sun's dappled light. Adjacent is a wide, curved white seating area with pillows. Steps lead to various tiers of the structure. To the left, a natural rock archway frames the sea, with verdant vines cascading down its face. Beyond, on a wooden deck, is an outdoor dining setup surrounded by potted plants. The building features multi-layered dark-framed windows, some with closed wooden shutters, and arched doorways. Decorative woven baskets and potted cacti and greenery contribute to the tranquil, natural, and luxurious atmosphere. EXTERIOR VIEW.",
+      "searchDesc": "Organic white stucco villa with rock formations, pool, ocean views, and lush greenery.",
+      "slug": "the-serenity-villa",
+      "structure": {
+        "spatialLayout": "The villa is spread across multiple levels, connected by steps, creating depth and visual interest. It opens outwards to embrace the expansive ocean view.",
+        "navigableElements": [
+          {
+            "type": "stairs",
+            "position": "leading up the tiers of the villa",
+            "description": "graceful stone steps"
+          },
+          {
+            "type": "archway",
+            "position": "left side, framing the sea",
+            "description": "natural rock archway"
+          },
+          {
+            "type": "door",
+            "position": "various entrances",
+            "description": "arched doorways"
+          },
+          {
+            "type": "path",
+            "position": "leading to the dining area",
+            "description": "wooden deck path"
+          }
+        ],
+        "dominantElements": [
+          "rounded white stucco walls",
+          "natural rock formations",
+          "sparkling light blue swimming pool",
+          "vast blue ocean view"
+        ],
+        "uniqueIdentifiers": [
+          "cascading green vines on rock arch",
+          "multi-layered dark-framed windows",
+          "curved white seating area with pillows",
+          "decorative woven baskets"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "leading up the tiers of the villa",
+          "description": "graceful stone steps"
+        },
+        {
+          "type": "archway",
+          "position": "left side, framing the sea",
+          "description": "natural rock archway"
+        },
+        {
+          "type": "door",
+          "position": "various entrances",
+          "description": "arched doorways"
+        },
+        {
+          "type": "path",
+          "position": "leading to the dining area",
+          "description": "wooden deck path"
+        }
+      ],
+      "dominantElements": [
+        "rounded white stucco walls",
+        "natural rock formations",
+        "sparkling light blue swimming pool",
+        "vast blue ocean view"
+      ],
+      "uniqueIdentifiers": [
+        "cascading green vines on rock arch",
+        "multi-layered dark-framed windows",
+        "curved white seating area with pillows",
+        "decorative woven baskets"
+      ],
+      "primaryMedia": "media-1765787947199-fnh17cg72"
+    },
+    "niche-1765787993863-4jpqxu18f": {
+      "id": "niche-1765787993863-4jpqxu18f",
+      "type": "niche",
+      "name": "The Serenity Villa Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior continues the villa's organic, rounded forms with smooth white stucco. Natural rock is integrated into some wall sections and as decorative elements. Numerous dark-framed windows offer views of the exterior, and arched doorways lead to other spaces.",
+        "colorsAndLighting": "Bathed in bright, clear sunlight filtering through windows, the interior features dominant white stucco, complemented by earthy rock tones and accents of vibrant green from indoor plants. Dappled light creates dynamic reflections.",
+        "atmosphere": "The air feels warm and carries a faint, fresh scent of the sea. A gentle, almost imperceptible breeze might stir the leaves of carefully placed indoor plants, contributing to an atmosphere of profound peace and luxurious tranquility.",
+        "materials": "Smooth, white stucco forms the primary surfaces. Rough, textured natural rock is visible in select architectural elements. Dark wood is used for window frames and potential built-in shelving or decorative accents. Woven textures might appear in soft furnishings or decorative baskets.",
+        "mood": "Serene, tranquil, and aspirational. The interior evokes feelings of peace, relaxation, and sophisticated comfort, mirroring the outdoor ambiance.",
+        "sounds": "Subtle ocean sounds, gentle breeze, rustling leaves",
+        "spatialLayout": "The interior spaces are likely to feel open and airy, with curved walls and a sense of seamless flow between areas, echoing the organic architectural style.",
+        "primary_surfaces": "smooth white stucco, integrated rough natural rock",
+        "secondary_surfaces": "dark wood accents, woven textures",
+        "accent_features": "cascading green vines, potted cacti and greenery",
+        "dominant": "white (stucco walls and ceilings)",
+        "secondary": "earth tones (rock, wood)",
+        "accent": "vibrant green (indoor plants)",
+        "ambient": "bright daylight, sunny",
+        "genre": null,
+        "architectural_tone": "organic modern coastal with natural integration",
+        "cultural_tone": "high-end retreat for relaxation and entertainment",
+        "materials_base": "stucco, natural stone, wood, woven fibers",
+        "mood_baseline": "peaceful luxury",
+        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
+        "soundscape_base": "calm ocean breeze and water",
+        "flora_base": "vines, cacti, potted greenery",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765787993861-oxpqc9d8a",
+      "description": "The interior of The Serenity Villa, reflecting its parent's high-end retreat nature with organic forms and abundant natural light.",
+      "structure": {
+        "form": "organic",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "This expansive interior space is designed for relaxation and entertainment, featuring flowing, organic forms that seamlessly integrate with the villa's exterior aesthetic. Large, arched openings allow natural light to flood the space, connecting it visually with the lush surrounding greenery.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Plush lounge seating",
+          "Low-profile coffee tables",
+          "Ambient floor lamps",
+          "Large decorative planters with greenery",
+          "Woven accent rugs",
+          "Integrated bar or refreshment station"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "rear",
+            "description": "A grand arched entrance leading further into the villa."
+          },
+          {
+            "type": "passage",
+            "position": "left",
+            "description": "A wide passage opening to other areas of the villa."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "Another expansive passage connecting to adjacent rooms."
+          }
+        ],
+        "dominantElements": [
+          "Organic, flowing wall contours",
+          "Large arched doorways and windows",
+          "Integration of natural rock elements",
+          "Abundant natural light"
+        ],
+        "uniqueIdentifiers": [
+          "Seamless blend of interior and exterior aesthetics",
+          "Soft, rounded architectural forms",
+          "Emphasis on natural light and greenery"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [],
+        "suggested": [
+          "Plush lounge seating",
+          "Low-profile coffee tables",
+          "Ambient floor lamps",
+          "Large decorative planters with greenery",
+          "Woven accent rugs",
+          "Integrated bar or refreshment station"
+        ],
+        "placementNotes": [
+          "Furniture should be arranged to encourage conversation and relaxation.",
+          "Maintain a sense of openness and flow, avoiding cluttered arrangements.",
+          "Incorporate natural materials and textures consistent with the villa's aesthetic.",
+          "Place planters strategically to echo the exterior's cascading greenery."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "rear",
+          "description": "A grand arched entrance leading further into the villa."
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "A wide passage opening to other areas of the villa."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "Another expansive passage connecting to adjacent rooms."
+        }
+      ],
+      "dominantElements": [
+        "Organic, flowing wall contours",
+        "Large arched doorways and windows",
+        "Integration of natural rock elements",
+        "Abundant natural light"
+      ],
+      "uniqueIdentifiers": [
+        "Seamless blend of interior and exterior aesthetics",
+        "Soft, rounded architectural forms",
+        "Emphasis on natural light and greenery"
+      ],
+      "searchDesc": "Luxurious white stucco interior with natural rock, organic forms, and lush indoor plants.",
+      "slug": "interior-of-the-serenity-villa"
+    },
+    "niche-1765788118539-q4xccxb1g": {
+      "id": "niche-1765788118539-q4xccxb1g",
+      "type": "niche",
+      "name": "Serenity Villa Bedroom",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The bedroom features the villa's characteristic organic, rounded forms, with smooth white stucco walls and a large, comfortable bed. A dark-framed window dominates one wall, offering expansive views of the ocean and integrating the natural surroundings.",
+        "colorsAndLighting": "Bathed in bright, clear daylight, the room is illuminated by natural sunlight, casting soft shadows. The dominant color is the brilliant white of the stucco walls and soft furnishings, complemented by the blues of the ocean view.",
+        "atmosphere": "The air within the bedroom is warm and still, carrying a faint, pleasant scent of the sea. It is a space designed for profound peace and luxurious relaxation, free from external noise.",
+        "materials": "Interior walls are of smooth white stucco, consistent with the villa's exterior building materials. Dark wood accents are present in the window frames.",
+        "mood": "Serene and aspirational, the bedroom evokes feelings of deep peace, relaxation, and sophisticated comfort, promoting restful sleep.",
+        "sounds": "Soft ocean waves, gentle breeze (distant)",
+        "spatialLayout": "A generously sized, rectangular room designed for comfort and rest, with ample space around the central bed and a clear vantage point through the window.",
+        "primary_surfaces": "smooth white stucco walls",
+        "secondary_surfaces": "dark wood window frames",
+        "accent_features": "ocean view",
+        "dominant": "white (walls, soft furnishings)",
+        "secondary": "blue (ocean view)",
+        "accent": "earth tones (bedding, wood accents)",
+        "ambient": "bright daylight, sunny",
+        "genre": null,
+        "architectural_tone": "organic modern coastal with natural integration",
+        "cultural_tone": "high-end retreat for relaxation and entertainment",
+        "materials_base": "stucco, natural stone, wood, woven fibers",
+        "mood_baseline": "peaceful luxury",
+        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
+        "soundscape_base": "calm ocean breeze and water",
+        "flora_base": "vines, cacti, potted greenery",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765788118538-9igydx0jp",
+      "description": "An interior bedroom within the Serenity Villa, characterized by the villa's organic, rounded forms and a high-end retreat atmosphere.",
+      "structure": {
+        "form": "organic",
+        "roofType": "arched",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "spatialLayout": "A tranquil bedroom designed for rest, featuring soft lighting and natural textures. The space flows organically, maintaining the villa's signature curves.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "King-sized bed with natural linens",
+          "Carved wooden bedside tables",
+          "Soft, ambient floor lamps",
+          "Upholstered seating area",
+          "Dressing vanity",
+          "Integrated natural stone wall feature"
+        ],
+        "navigableElements": [
+          {
+            "type": "arched doorway",
+            "position": "center back",
+            "description": "Leads to the main villa corridors."
+          },
+          {
+            "type": "arched-windows",
+            "position": "left and right walls",
+            "description": "Offer views of the exterior gardens."
+          }
+        ],
+        "dominantElements": [
+          "Smooth white stucco walls with rounded corners",
+          "Integrated natural rock sections",
+          "Arched openings",
+          "Abundant natural light"
+        ],
+        "uniqueIdentifiers": [
+          "Seamless integration of organic forms",
+          "Harmonious blend of stucco and natural stone",
+          "Ample arched windows connecting to the exterior"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "arched doorway",
+          "position": "center back",
+          "description": "Leads to the main villa corridors."
+        },
+        {
+          "type": "arched-windows",
+          "position": "left and right walls",
+          "description": "Offer views of the exterior gardens."
+        }
+      ],
+      "dominantElements": [
+        "Smooth white stucco walls with rounded corners",
+        "Integrated natural rock sections",
+        "Arched openings",
+        "Abundant natural light"
+      ],
+      "uniqueIdentifiers": [
+        "Seamless integration of organic forms",
+        "Harmonious blend of stucco and natural stone",
+        "Ample arched windows connecting to the exterior"
+      ],
+      "searchDesc": "Tranquil bedroom with ocean views, white stucco walls, and natural light.",
+      "slug": "bedroom"
+    },
+    "niche-1765788436892-kr0xxr8v4": {
+      "id": "niche-1765788436892-kr0xxr8v4",
+      "type": "niche",
+      "name": "Ocean View Kitchen",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This kitchen features smooth, integrated surfaces and is defined by expansive, dark-framed windows that blur the lines between interior and exterior. The space feels open and airy, designed to maximize the stunning ocean panorama.",
+        "colorsAndLighting": "Bathed in bright, natural daylight from the ocean-facing windows, the space reflects the brilliant blue of the sea and the clean white of the villa's stucco. Dappled sunlight may play across surfaces.",
+        "atmosphere": "The air is fresh with the scent of the sea, carrying the subtle sounds of gentle waves. A sense of peaceful luxury pervades, enhanced by the tranquil ocean backdrop.",
+        "materials": "Smooth, light-colored composite or stucco forms the primary building materials for the walls and countertops, echoing the parent villa's aesthetic. Dark wood accents might be present in cabinetry or island features.",
+        "mood": "Serene and aspirational, this kitchen evokes a sense of calm, sophisticated comfort, and connection with the natural environment.",
+        "sounds": "gentle waves, distant seagulls, quiet kitchen hum",
+        "spatialLayout": "An open-plan layout, this kitchen is spacious and functional, with a clear visual connection to the exterior due to the prominent windows.",
+        "primary_surfaces": "smooth white stucco walls, composite countertops",
+        "secondary_surfaces": "dark wood cabinetry, possibly a wood accent on the island",
+        "accent_features": "potted greenery (if space allows), functional kitchenware",
+        "dominant": "white (stucco, surfaces)",
+        "secondary": "blue (reflected from ocean view), earth tones (wood accents)",
+        "accent": "vibrant green (potted plants if present)",
+        "ambient": "bright daylight, sunny",
+        "genre": null,
+        "architectural_tone": "organic modern coastal with natural integration",
+        "cultural_tone": "high-end retreat for relaxation and entertainment",
+        "materials_base": "stucco, natural stone, wood, woven fibers",
+        "mood_baseline": "peaceful luxury",
+        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
+        "soundscape_base": "calm ocean breeze and water",
+        "flora_base": "vines, cacti, potted greenery",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765788436889-jjew1sc3n",
+      "description": "This medium-scale kitchen within the Serenity Villa embraces an organic form, featuring smooth white stucco walls and integrated natural rock. Large, dark-framed windows dominate the front, providing panoramic ocean views. The functional type is residential, designed for cooking and entertainment within the high-end retreat context. Suggested fixtures include a large island, modern cabinetry, and professional appliances. Navigable elements include a back door, a side passage, and the prominent ocean-view windows.",
+      "structure": {
+        "form": "organic",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "spatialLayout": "A spacious kitchen designed for both culinary preparation and enjoyment of the surrounding environment, with a primary focus on the expansive ocean views.",
+        "requiredElements": [
+          "kitchen",
+          "view over the ocean from the windows",
+          "view over the ocean from the windiws"
+        ],
+        "suggestedFixtures": [
+          "large island with seating",
+          "modern cabinetry",
+          "professional-grade appliances",
+          "ample counter space",
+          "under-cabinet lighting",
+          "a small dining nook"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "Leads to other areas of the villa"
+          },
+          {
+            "type": "passage",
+            "position": "side wall",
+            "description": "Connects to a pantry or utility room"
+          },
+          {
+            "type": "window",
+            "position": "front wall",
+            "description": "Expansive windows offering ocean views"
+          }
+        ],
+        "dominantElements": [
+          "large, dark-framed windows",
+          "smooth white stucco walls",
+          "integrated natural rock elements",
+          "kitchen island",
+          "ocean view"
+        ],
+        "uniqueIdentifiers": [
+          "direct ocean vista",
+          "organic architectural integration",
+          "high-end retreat atmosphere"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "Leads to other areas of the villa"
+        },
+        {
+          "type": "passage",
+          "position": "side wall",
+          "description": "Connects to a pantry or utility room"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "Expansive windows offering ocean views"
+        }
+      ],
+      "dominantElements": [
+        "large, dark-framed windows",
+        "smooth white stucco walls",
+        "integrated natural rock elements",
+        "kitchen island",
+        "ocean view"
+      ],
+      "uniqueIdentifiers": [
+        "direct ocean vista",
+        "organic architectural integration",
+        "high-end retreat atmosphere"
+      ],
+      "searchDesc": "Modern kitchen with panoramic ocean views, integrated into organic stucco villa architecture.",
+      "slug": "kitchen-with-view-over-the-ocean-from-the-windiws"
+    },
+    "niche-1765788593164-ppvxrdqh0": {
+      "id": "niche-1765788593164-ppvxrdqh0",
+      "type": "niche",
+      "name": "Serenity Villa Spa",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The spa features smooth, white stucco walls seamlessly integrated with natural rock elements. Arched doorways lead to treatment areas, and plush seating areas offer tranquil views. Lush greenery spills from hidden alcoves, enhancing the organic feel.",
+        "colorsAndLighting": "Soft, diffused light illuminates the space, with dappled sunlight filtering through strategically placed openings. Dominant colors are the serene white of the stucco, complemented by the earthy tones of the rock and accents of vibrant green from the plants.",
+        "atmosphere": "The air is infused with calming scents, possibly of essential oils, and the gentle sound of trickling water. The atmosphere is profoundly peaceful and exclusive, designed for deep relaxation and sensory indulgence.",
+        "materials": "Smooth, cool white stucco forms the primary wall surfaces, contrasted by textured natural rock accents. Soft, luxurious fabrics are used for seating, and dark wood may be present in subtle decorative elements or fixture framing.",
+        "mood": "Serene, tranquil, and aspirational. The spa evokes feelings of absolute peace, sophisticated comfort, and rejuvenation.",
+        "sounds": "trickling water, hushed tranquility, soft ambient music",
+        "spatialLayout": "The spa is composed of intimate treatment rooms and a central relaxation area, with a sense of flowing space connected by arched doorways.",
+        "primary_surfaces": "smooth white stucco walls, textured natural rock accents",
+        "secondary_surfaces": "soft, luxurious fabrics, dark wood accents",
+        "accent_features": "cascading green vines, strategically placed potted greenery, discreet water features",
+        "dominant": "white (stucco walls, seating)",
+        "secondary": "earth tones (rock accents, subtle wood)",
+        "accent": "vibrant green (plants), muted blues (water)",
+        "ambient": "soft, diffused daylight",
+        "genre": null,
+        "architectural_tone": "organic modern coastal with natural integration",
+        "cultural_tone": "high-end retreat for relaxation and entertainment",
+        "materials_base": "stucco, natural stone, wood, woven fibers",
+        "mood_baseline": "peaceful luxury",
+        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
+        "soundscape_base": "calm ocean breeze and water",
+        "flora_base": "vines, cacti, potted greenery",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765788593164-etcvx5tfy",
+      "description": "An interior spa space within The Serenity Villa, designed for ultimate relaxation and rejuvenation, mirroring the villa's organic architectural style and high-end ambiance.",
+      "structure": {
+        "form": "organic",
+        "roofType": "arched",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "A spacious, serene area with flowing organic forms and integrated natural elements, designed for relaxation and therapeutic treatments.",
+        "requiredElements": [
+          "spa"
+        ],
+        "suggestedFixtures": [
+          "massage tables",
+          "soaking tubs",
+          "steam room",
+          "sauna",
+          "relaxation loungers",
+          "water features"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center back",
+            "description": "An arched doorway leading deeper into the spa facilities."
+          },
+          {
+            "type": "passage",
+            "position": "right",
+            "description": "An opening to a relaxation area or treatment room."
+          },
+          {
+            "type": "passage",
+            "position": "left",
+            "description": "An opening to another treatment area or changing rooms."
+          }
+        ],
+        "dominantElements": [
+          "smooth white stucco walls",
+          "integrated natural rock features",
+          "arched doorways",
+          "dark-framed windows"
+        ],
+        "uniqueIdentifiers": [
+          "organic, rounded forms",
+          "integration of natural rock and greenery",
+          "high-end retreat atmosphere"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center back",
+          "description": "An arched doorway leading deeper into the spa facilities."
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "An opening to a relaxation area or treatment room."
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "An opening to another treatment area or changing rooms."
+        }
+      ],
+      "dominantElements": [
+        "smooth white stucco walls",
+        "integrated natural rock features",
+        "arched doorways",
+        "dark-framed windows"
+      ],
+      "uniqueIdentifiers": [
+        "organic, rounded forms",
+        "integration of natural rock and greenery",
+        "high-end retreat atmosphere"
+      ],
+      "searchDesc": "Luxurious spa with white stucco, natural rock, and lush greenery.",
+      "slug": "spa"
+    },
+    "niche-1765790238718-mszc4fz4z": {
+      "id": "niche-1765790238718-mszc4fz4z",
+      "type": "niche",
+      "name": "Ocean View Living Room",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The living room features the villa's signature organic, rounded forms with smooth white stucco walls seamlessly integrated with subtle natural rock accents. Large, dark-framed windows offer breathtaking views of the ocean, while plush seating arrangements invite relaxation within the spacious, light-filled interior.",
+        "colorsAndLighting": "Bathed in bright, clear daylight, the space is illuminated by the natural sunlight pouring through the windows, creating soft dappled reflections. Dominant colors include the brilliant blue of the ocean visible through the windows, the clean white of the stucco walls, and warm earthy tones from wood accents and furnishings.",
+        "atmosphere": "The air is warm and carries a subtle hint of the sea, creating a fresh and inviting ambiance. The gentle sound of distant waves provides a tranquil backdrop. The atmosphere is one of profound peace, luxury, and relaxed comfort, a perfect retreat.",
+        "materials": "Smooth, white stucco forms the primary wall surfaces, providing a clean, minimalist backdrop. Rough-textured natural rock is subtly incorporated into accent areas, perhaps around a fireplace or as decorative niches. Dark wood is used for window frames and potentially some furniture elements, complemented by woven textiles and comfortable upholstery.",
+        "mood": "Serene, tranquil, and aspirational. This living room evokes feelings of peace, relaxation, and sophisticated comfort, embodying the essence of a high-end retreat.",
+        "sounds": "distant waves, gentle breeze, quiet conversation",
+        "spatialLayout": "An open and airy space with a comfortable flow, featuring distinct zones for seating and relaxation. The layout is designed to maximize natural light and the stunning ocean vistas.",
+        "primary_surfaces": "smooth white stucco walls, natural rock accents",
+        "secondary_surfaces": "dark wood window frames, woven rug, comfortable upholstery",
+        "accent_features": "integrated rock niches, decorative woven baskets",
+        "dominant": "white (stucco walls, seating)",
+        "secondary": "blue (ocean view), earth tones (wood, rug)",
+        "accent": "vibrant green (potted plants), burnt orange (decorative pillows)",
+        "ambient": "bright daylight, sunny",
+        "genre": null,
+        "architectural_tone": "organic modern coastal with natural integration",
+        "cultural_tone": "high-end retreat for relaxation and entertainment",
+        "materials_base": "stucco, natural stone, wood, woven fibers",
+        "mood_baseline": "peaceful luxury",
+        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
+        "soundscape_base": "calm ocean breeze and water",
+        "flora_base": "vines, cacti, potted greenery",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765790238717-580az1ply",
+      "description": "A luxurious living room designed for comfort and to fully appreciate the stunning ocean panorama, featuring ample space for relaxation and entertainment.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "spatialLayout": "A spacious living area designed for relaxation and entertainment, oriented towards expansive ocean views through large windows.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "comfortable sofa",
+          "armchairs",
+          "coffee table",
+          "entertainment console",
+          "side tables",
+          "ocean-themed decor"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "back wall",
+            "description": "Passage leading deeper into the villa"
+          },
+          {
+            "type": "door",
+            "position": "left wall",
+            "description": "Door to an adjacent room"
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "Passage leading to a balcony or terrace"
+          }
+        ],
+        "dominantElements": [
+          "Expansive dark-framed windows with ocean views",
+          "Smooth, integrated surfaces",
+          "Open and airy layout",
+          "Comfortable seating arrangement"
+        ],
+        "uniqueIdentifiers": [
+          "Unobstructed panoramic ocean vista",
+          "Seamless indoor-outdoor feel",
+          "High-end, minimalist aesthetic"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "back wall",
+          "description": "Passage leading deeper into the villa"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "Door to an adjacent room"
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "Passage leading to a balcony or terrace"
+        }
+      ],
+      "dominantElements": [
+        "Expansive dark-framed windows with ocean views",
+        "Smooth, integrated surfaces",
+        "Open and airy layout",
+        "Comfortable seating arrangement"
+      ],
+      "uniqueIdentifiers": [
+        "Unobstructed panoramic ocean vista",
+        "Seamless indoor-outdoor feel",
+        "High-end, minimalist aesthetic"
+      ],
+      "searchDesc": "Serene living room with organic stucco, ocean views, and natural materials.",
+      "slug": "living-room"
+    },
+    "niche-1765790440211-8w99aja02": {
+      "id": "niche-1765790440211-8w99aja02",
+      "type": "niche",
+      "name": "Ocean View Roof Terrace",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This roof terrace features organic, rounded forms that echo the villa's main structure. It is multi-tiered, providing distinct zones for lounging and dining, with dark-framed windows framing distant sea views. Lush greenery cascades from integrated planters and along edges.",
+        "colorsAndLighting": "The scene is bathed in bright, clear sunlight, creating dappled reflections. Dominant colors are the brilliant blue of the ocean and sky, complemented by the white stucco of the villa's architecture and the earthy tones of natural materials.",
+        "atmosphere": "The air is warm and filled with the fresh scent of the sea. A gentle breeze rustles the leaves of the surrounding plants. The atmosphere is profoundly peaceful, luxurious, and open to the elements.",
+        "materials": "Smooth, white stucco forms the primary architectural elements, contrasting with the rough texture of natural rock accents and dark wood used for built-in seating or railings. Terra cotta pots and woven elements add further natural textures.",
+        "mood": "Serene, tranquil, and aspirational. The roof terrace evokes feelings of peace, relaxation, and sophisticated comfort with an expansive sense of openness.",
+        "sounds": "Gentle ocean waves, distant seabirds, rustling leaves, soft breeze",
+        "spatialLayout": "An open-air, multi-level space offering unobstructed views. Defined zones for seating and dining are integrated seamlessly into the architectural flow.",
+        "primary_surfaces": "smooth white stucco, rough natural rock accents",
+        "secondary_surfaces": "dark wood, terra cotta, woven textures",
+        "accent_features": "cascading green vines, potted cacti and greenery, decorative woven baskets",
+        "dominant": "white (stucco, seating)",
+        "secondary": "blue (ocean vista, pool reflections)",
+        "accent": "vibrant green (plants), burnt orange (cushions, if present)",
+        "ambient": "bright daylight, sunny",
+        "genre": null,
+        "architectural_tone": "organic modern coastal with natural integration",
+        "cultural_tone": "high-end retreat for relaxation and entertainment",
+        "materials_base": "stucco, natural stone, wood, woven fibers",
+        "mood_baseline": "peaceful luxury",
+        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
+        "soundscape_base": "calm ocean breeze and water",
+        "flora_base": "vines, cacti, potted greenery",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765790440210-b7q7o43t1",
+      "description": "An elevated terrace designed for entertainment and relaxation, boasting unobstructed views of the ocean. It features the villa's characteristic organic forms and opens to the elements, creating a breathtaking experience.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "An expansive outdoor space situated atop the villa, offering panoramic ocean vistas. Its organic form seamlessly integrates with the surrounding architecture, providing a spacious area for relaxation and entertainment.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "comfortable lounge seating",
+          "outdoor dining table",
+          "bar area",
+          "fire pit",
+          "ambient lighting",
+          "planters with coastal flora"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "central",
+            "description": "Seamless transition from interior villa spaces"
+          },
+          {
+            "type": "stairs",
+            "position": "corner",
+            "description": "Access to lower levels or ground"
+          }
+        ],
+        "dominantElements": [
+          "sweeping ocean views",
+          "organic architectural integration",
+          "open-air environment",
+          "integrated seating areas"
+        ],
+        "uniqueIdentifiers": [
+          "panoramic ocean vista",
+          "seamless extension of villa's organic design",
+          "elevated entertainment space"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "Seamless transition from interior villa spaces"
+        },
+        {
+          "type": "stairs",
+          "position": "corner",
+          "description": "Access to lower levels or ground"
+        }
+      ],
+      "dominantElements": [
+        "sweeping ocean views",
+        "organic architectural integration",
+        "open-air environment",
+        "integrated seating areas"
+      ],
+      "uniqueIdentifiers": [
+        "panoramic ocean vista",
+        "seamless extension of villa's organic design",
+        "elevated entertainment space"
+      ],
+      "searchDesc": "Luxurious roof terrace with stunning ocean views, organic architecture, and lush greenery.",
+      "slug": "roof-terrace"
+    },
+    "loc-1765790561637-7v1qxx00x": {
+      "id": "loc-1765790561637-7v1qxx00x",
+      "type": "host",
+      "name": "The Crystal Frontier",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, largely monochromatic landscape dominated by ice and snow in all its forms. Jagged mountain peaks pierce the sky, while glaciers carve slow paths through the terrain. Subtle geological features hint at a long and dynamic geological history.",
+        "colorsAndLighting": "The primary palette consists of deep blues, stark whites, and muted greys. Lighting is often diffused and cold, with periods of intense, low-angle sunlight that create long, sharp shadows. Auroras occasionally paint the night sky with ethereal greens and purples.",
+        "atmosphere": "The air is profoundly cold, sharp, and thin, carrying the scent of ancient ice and minerals. Sounds are muffled by snow and ice, with the dominant noises being the creak of shifting glaciers, the whisper of wind, and the occasional distant rumble of an icefall.",
+        "materials": "The world is composed primarily of ice, compressed snow, and rock. Ice varies from translucent and crystalline to opaque and densely packed. Snowdrifts and glacial plains cover vast areas, while exposed rock is often weathered and scarred.",
+        "mood": "A pervasive sense of isolation, vastness, and ancient stillness. There's an underlying feeling of sublime beauty mixed with the raw, untamed power of nature, evoking contemplation and a touch of primal awe.",
+        "sounds": "Whispering wind, creaking ice, distant rumbles, echoing emptiness",
+        "primary_surfaces": "Glacial ice, snowfields, frozen rock faces",
+        "secondary_surfaces": "Frost, ice crystals, wind-sculpted snow",
+        "accent_features": "Naturally occurring ice formations, exposed mineral veins (rare)",
+        "dominant": "Ice blue with vast coverage",
+        "secondary": "Translucent white with large surface areas",
+        "accent": "Muted greys (rock), occasional auroral colors (sky)",
+        "ambient": "Cold, diffused daylight or starlit/auroral night",
+        "genre": "Post-apocalyptic Fantasy",
+        "architectural_tone": "Naturally formed and ice-encased structures",
+        "cultural_tone": "A world of survival and exploration, where ancient history is revealed through frozen remnants",
+        "materials_base": "Ice, stone, preserved organic matter",
+        "mood_baseline": "Sublime, isolated, ancient",
+        "palette_bias": "Cool blues, whites, greys, and occasional ethereal hues",
+        "soundscape_base": "Quiet, natural, echoing",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A desolate, frozen world where colossal ice formations are the norm. Ancient geological processes have sculpted a landscape of breathtaking, often dangerous, beauty. Within this icy expanse lie remnants of past civilizations, encased and preserved by the relentless cold.",
+      "searchDesc": "A frozen world of ice, containing ancient, preserved structures and natural wonders.",
+      "slug": "the-crystal-frontier",
+      "structure": {
+        "spatialLayout": "Expansive, open vistas punctuated by colossal geological formations and deep glacial valleys. A sense of immense scale and depth is constantly present, with horizons often obscured by ice formations or atmospheric conditions.",
+        "navigableElements": [
+          "Frozen rivers",
+          "Ice caves",
+          "Glacial expanses",
+          "Sub-glacial structures",
+          "Crystalline canyons"
+        ],
+        "dominantElements": [
+          "Immense glaciers",
+          "Towering ice spires",
+          "Frozen waterfalls",
+          "Geothermal vents (rare)"
+        ],
+        "uniqueIdentifiers": [
+          "Naturally occurring ice sculptures",
+          "Encased historical ruins",
+          "Extreme cold temperatures",
+          "Auroral displays"
+        ]
+      },
+      "navigableElements": [
+        "Frozen rivers",
+        "Ice caves",
+        "Glacial expanses",
+        "Sub-glacial structures",
+        "Crystalline canyons"
+      ],
+      "dominantElements": [
+        "Immense glaciers",
+        "Towering ice spires",
+        "Frozen waterfalls",
+        "Geothermal vents (rare)"
+      ],
+      "uniqueIdentifiers": [
+        "Naturally occurring ice sculptures",
+        "Encased historical ruins",
+        "Extreme cold temperatures",
+        "Auroral displays"
+      ]
+    },
+    "e57c3e5f-517f-49a6-b79f-12d8eb5982d3": {
+      "id": "e57c3e5f-517f-49a6-b79f-12d8eb5982d3",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "3b86ea71-1cad-4fc8-a68e-67e8bd4c2c0c": {
+      "id": "3b86ea71-1cad-4fc8-a68e-67e8bd4c2c0c",
+      "type": "location",
+      "name": "The Glacial Grand Central",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An immense, vertical frozen waterfall dominates the scene, its icy surface partially obscuring a sprawling Art Nouveau train station. The station's intricate, curvilinear architectural elements are encased in crystalline ice, with warm light spilling through frosted, mosaic-like stained-glass windows that are themselves partially frozen.",
+        "colorsAndLighting": "The primary colors are the deep blues and whites of ice, contrasted with the warm, golden glow emanating from within the station. Shadows are cast by the undulating ice formations and the station's protrusions, creating a dynamic interplay of light and dark.",
+        "atmosphere": "The air is bitingly cold and crisp, filled with the faint, echoing sound of dripping ice and distant echoes from within the station. Motion is limited to the slow, almost imperceptible melt of the ice and the movement of light. A sense of awe and stillness pervades the frigid environment.",
+        "materials": "The dominant materials are clear, opaque, and textured ice, showing varying degrees of clarity and frost. The underlying architecture features wrought iron with a verdigris patina, polished brass, and etched glass, all partially encased and softened by the encroaching ice.",
+        "mood": "The mood is one of surreal beauty and frozen majesty, combining the raw power of nature with refined human artistry. It evokes a sense of wonder and a touch of melancholic grandeur, a testament to enduring beauty against the elements.",
+        "sounds": "Dripping ice, faint echoes, muffled warmth, distant train whistles",
+        "primary_surfaces": "Glacial ice (clear, opaque, textured), frosted glass",
+        "secondary_surfaces": "Verdigris-patinated wrought iron, polished brass, carved stone",
+        "accent_features": "Warm, glowing stained-glass panels, intricate ice formations resembling sculpted drapery",
+        "dominant": "Ice blue with vast coverage",
+        "secondary": "Translucent white with large surface areas",
+        "accent": "Warm gold and amber (from windows), verdigris green (on metal)",
+        "ambient": "Soft, warm internal glow contrasting with cool blue exterior",
+        "genre": null,
+        "architectural_tone": "Art Nouveau integrated with glacial ice",
+        "cultural_tone": "A grand transport hub and architectural marvel for travelers venturing into frozen lands.",
+        "materials_base": "Ice-bound historic architecture",
+        "mood_baseline": "Awe-inspiring and surreal",
+        "palette_bias": "Blues, whites, and warm golds",
+        "soundscape_base": "Echoing and natural",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "An immense, frozen waterfall, its icy cascade encasing a magnificent Art Nouveau train station. Warm light spills from frosted, stained-glass windows.",
+      "searchDesc": "Art Nouveau train station encased in a frozen waterfall, warm light from frosted windows.",
+      "slug": "the-glacial-grand-central",
+      "structure": {
+        "spatialLayout": "The space is overwhelmingly vertical due to the waterfall, with the station facade built into its sheer face. The depth is implied by the layers of ice and the perceived distance to the station's interior.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "Ornate, ice-encrusted Art Nouveau entrance doors"
+          },
+          {
+            "type": "passage",
+            "position": "left",
+            "description": "A semi-frozen archway leading deeper into the station"
+          },
+          {
+            "type": "stairs",
+            "position": "right",
+            "description": "Crystalized staircases spiraling upwards"
+          }
+        ],
+        "dominantElements": [
+          "The immense, frozen waterfall",
+          "The embedded Art Nouveau train station facade",
+          "Frosted, stained-glass windows",
+          "Intricate ice formations on the station's exterior"
+        ],
+        "uniqueIdentifiers": [
+          "Train station integrated into a glacier",
+          "Warm light glowing from within ice",
+          "Art Nouveau architectural style",
+          "Frozen waterfall cascade"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "Ornate, ice-encrusted Art Nouveau entrance doors"
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "A semi-frozen archway leading deeper into the station"
+        },
+        {
+          "type": "stairs",
+          "position": "right",
+          "description": "Crystalized staircases spiraling upwards"
+        }
+      ],
+      "dominantElements": [
+        "The immense, frozen waterfall",
+        "The embedded Art Nouveau train station facade",
+        "Frosted, stained-glass windows",
+        "Intricate ice formations on the station's exterior"
+      ],
+      "uniqueIdentifiers": [
+        "Train station integrated into a glacier",
+        "Warm light glowing from within ice",
+        "Art Nouveau architectural style",
+        "Frozen waterfall cascade"
+      ],
+      "primaryMedia": "media-1765790578252-y0aq80zzp"
     }
   },
   "views": {},
@@ -2669,6 +3682,71 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765787933815-0por9eiib",
+      "type": "host",
+      "children": [
+        {
+          "id": "cf58838f-433b-4125-a5d5-07d5d35f1133",
+          "type": "region",
+          "children": [
+            {
+              "id": "772f39b3-5bfe-4df4-ac3c-0c46c1166bb0",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765787993863-4jpqxu18f",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765788118539-q4xccxb1g",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765788436892-kr0xxr8v4",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765788593164-ppvxrdqh0",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765790238718-mszc4fz4z",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765790440211-8w99aja02",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765790561637-7v1qxx00x",
+      "type": "host",
+      "children": [
+        {
+          "id": "e57c3e5f-517f-49a6-b79f-12d8eb5982d3",
+          "type": "region",
+          "children": [
+            {
+              "id": "3b86ea71-1cad-4fc8-a68e-67e8bd4c2c0c",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -2677,6 +3755,8 @@
     "loc-1765540313069-tild8stil",
     "loc-1765619357703-3wc5eiodr",
     "loc-1765619807528-4b8x8txdt",
-    "loc-1765707481919-2zjxghd55"
+    "loc-1765707481919-2zjxghd55",
+    "loc-1765787933815-0por9eiib",
+    "loc-1765790561637-7v1qxx00x"
   ]
 }

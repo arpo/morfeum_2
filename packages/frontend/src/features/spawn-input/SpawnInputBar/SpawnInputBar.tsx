@@ -47,9 +47,10 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   // Get active spawns from store
   const activeSpawns = useStore(state => state.activeSpawns);
   
-  // Filter to processing spawns (steps will be added by first SSE event)
+  // Filter to processing and recently completed spawns
+  // Include 'completed' so progress bar can animate to 100% before being removed
   const activeProcesses = activeSpawns.filter(spawn => 
-    spawn.status === 'processing'
+    spawn.status === 'processing' || spawn.status === 'completed'
   );
 
   return (
@@ -78,6 +79,10 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 steps={spawn.steps.map(s => ({ name: s.name, duration: s.duration }))}
                 currentStep={spawn.currentStepIndex ?? -1}
                 isComplete={spawn.status === 'completed'}
+                onComplete={() => {
+                  // Remove spawn after progress bar animation completes
+                  useStore.getState().removeSpawn(spawn.id);
+                }}
               />
             );
           })}
