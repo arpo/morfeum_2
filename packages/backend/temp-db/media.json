@@ -87,35 +87,6 @@
       ],
       "parentMedia": "media-1765454373099-a9tber5g0"
     },
-    "media-1765539863914-hw8pv7bzo": {
-      "id": "media-1765539863914-hw8pv7bzo",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a860001/Rkfu3SvT9mpGzdw1alCvI.jpg",
-      "createdAt": "2025-12-12T11:44:23.914Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait of Coralia Vance, facing 3/4 towards the camera, her face illuminated by bright, natural sunlight. She stands in front of a modestly designed, rectangular structure made of sun-bleached, sea-worn timber with accents of smooth, sea-tumbled stones, set against a backdrop of sandy terrain and hinting at a vast ocean beyond. Her tanned, freckled skin glows, and her faded denim eyes are serenely observant, framed by thick, untamed blonde hair knotted by the wind. She wears a knee-length, sleeveless sundress of coarse, pale seafoam green linen and a wide-brimmed straw hat. The air feels fresh, carrying the scent of salt and sea spray, creating a mood of peaceful solitude and connection with nature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "FLUX",
-        "width": 1024,
-        "height": 1024
-      },
-      "entityRefs": [
-        "char-1765539863914-b33juwdbc"
-      ]
-    },
-    "media-1765539897119-hyvgbobsw": {
-      "id": "media-1765539897119-hyvgbobsw",
-      "type": "depth-map",
-      "url": "https://v3b.fal.media/files/b/0a860005/5yjmfjlT6ToLMFBQRkKDp_03594a1a5d3c417dbabb4febb3ac31fb.png",
-      "createdAt": "2025-12-12T11:44:57.119Z",
-      "metadata": {
-        "parentMedia": "media-1765539863914-hw8pv7bzo",
-        "model": "fal-depth-anything-v2"
-      },
-      "entityRefs": [
-        "char-1765539863914-b33juwdbc"
-      ],
-      "parentMedia": "media-1765539863914-hw8pv7bzo"
-    },
     "media-1765540083280-mo23i6cc6": {
       "id": "media-1765540083280-mo23i6cc6",
       "type": "image",
@@ -240,20 +211,410 @@
       },
       "entityRefs": []
     },
-    "media-1765540584847-twzcjzr19": {
-      "id": "media-1765540584847-twzcjzr19",
+    "media-1765619372622-q8edtszi4": {
+      "id": "media-1765619372622-q8edtszi4",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a860049/F501PWDbvTKm528UuWUTu.jpg",
-      "createdAt": "2025-12-12T11:56:24.847Z",
+      "url": "https://v3b.fal.media/files/b/0a861f10/BLLnqeQtdAzJKLNPPWLL2.jpg",
+      "createdAt": "2025-12-13T09:49:32.622Z",
       "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait, capturing Sasha Vex from the shoulders up, with a subtle depth blur in the background. The scene is the exterior of a techno bar, part of a monumental arid alien citadel. Smooth, flowing architecture in a vibrant teal dominates the core, with luminous blue circuitry tracing the walls and ceiling. Sasha Vex, a human female with pale skin, sharp cheekbones, and full lips, her eyes gleaming with intelligent light, stands within this space. She wears a form-fitting, iridescent micro-mini dress, shimmering with teal and blue light, adorned with minimalist metallic jewelry that catches the ambient glow. Her presence is cool and magnetic, her confident, playful demeanor evident in her expression as she faces the camera in a 3/4 turn. Soft, subtle shadows add depth, and the atmosphere is cool, refined, and sophisticated, hinting at focused creativity and aesthetic appreciation.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nStreet level, slightly elevated view (25-30° downward tilt) of \"The Celestial Gateway,\" a colossal, ornate blue-hued structure dominating the center, resembling a massive, intricate gateway or portal to another dimension. Its circular opening pulses with bright blue light, revealing a deep cosmic expanse filled with glowing stars and nebulae within its vortex. The immense structure itself is composed of countless interconnected mechanical and organic-like components, featuring elaborate circuitry, glowing internal lights, and delicate filigree, all rendered in shades of cyan, sapphire, and deep indigo, reflecting a cosmic biomechanical architectural tone. The entrance is visible but not dominating. The vast structure is set back slightly from the immediate foreground. In the foreground, worn cobblestone with shallow puddles reflects the warm, golden light of the distant cityscape. The midground showcases the sprawling cityscape of fantastical architecture with numerous towering spires, intricate facades, and dome-shaped buildings, all illuminated by a warm, golden light that contrasts sharply with the cool blues of the main structure and the sky. The ground beneath the city reflects this golden glow, appearing somewhat liquid or reflective. The background is a vast, inky black sky absolutely teeming with glittering stars and distant cosmic dust, with a faint, large purple planet visible on the right horizon. The atmosphere crackles with latent energy and a palpable hum of cosmic power, with a gentle, cool breeze carrying the scent of ozone and distant stardust. The scene evokes majestic wonder and the mystery of an advanced, cosmic civilization. Asymmetric composition with more street visible on the left. Ultra-wide view capturing the gateway in its environmental context, with extensive surroundings visible.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "a1c5633e-5527-49fd-a65f-137b004c4da1"
+      ]
+    },
+    "media-1765619414307-bfuq23s2t": {
+      "id": "media-1765619414307-bfuq23s2t",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f15/c-GkS-3adrKaXwT_yYVBC.jpg",
+      "createdAt": "2025-12-13T09:50:14.307Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nCosmic Nexus. A realm at the edge of dimensions, where the fabric of reality is thin and wonders abound. This world serves as a gateway and meeting point for countless alien civilizations, featuring breathtaking celestial vistas and awe-inspiring architectural marvels that bridge the gap between the cosmic and the constructed.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nVast, awe-inspiring structures designed to harness or interact with cosmic energies. Key forms are monumental and often orbital or celestial in nature, featuring intricate, self-assembling components that blur the lines between technology and organic growth.\n\nAtmosphere:\nThe air is thin, crisp, and often charged with palpable cosmic energy. Gentle, cool breezes carry the scent of ozone and distant stardust. A profound sense of otherworldly presence pervades, inspiring awe and mystery.\n\nColors and Lighting:\nDominant: Deep indigo and sapphire, covering massive structures and cosmic voids., Secondary: Bright cyan and electric blue, found within energy vortexes and portal cores., Accent: Warm golden light, emanating from distant cityscapes or specific civic areas.\nLight: Cool, ethereal blue-purple glow from celestial bodies and cosmic phenomena., Dominated by deep, cosmic blues and indigos, with vibrant celestial lights, nebulae, and stellar phenomena providing illumination. Accents of bright, energetic light emanate from portals and energy conduits.\n\nGenre/Style: Cosmic Sci-Fi\nArchitectural Style: Monumental cosmic biomechanical with intricate filigree\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "loc-1765619357703-3wc5eiodr"
+      ]
+    },
+    "media-1765619448910-zak0ykcmq": {
+      "id": "media-1765619448910-zak0ykcmq",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f18/nQw_Boqg1dh-w7UU5HQgw.jpg",
+      "createdAt": "2025-12-13T09:50:48.910Z",
+      "metadata": {
+        "prompt": "An awe-inspiring interior view of \"The Celestial Gateway Chamber,\" a vast, cavernous space with organically curving walls that swell and recede, converging towards a central, illuminated nexus. The domed ceiling arches overhead, suggesting immense height and depth. Dominating the scene are gigantic, sculpted organic walls, a central energy nexus that pulses with bright, ethereal blue light, casting shifting patterns of cyan and electric blue onto the surrounding surfaces, and intricate filigree patterns embedded in the architecture. Visible, glowing internal circuitry is woven into the structure, creating a sensation of contained cosmic energy. A monumental, subtly glowing archway at the rear wall serves as the primary portal, shimmering with contained energy. To the left, a smaller, more discreet door is integrated seamlessly into the organic curvature. A secondary passage at the right wall pulses with a different hue, possibly leading to another dimension. Below, a breathtaking vista of a sprawling, gem-like cityscape can be seen, composed of materials that reflect and refract light with a polished, gem-like quality. The air crackles with latent cosmic energy, a palpable hum resonating through the space, with a gentle, cool breeze carrying the faint scent of ozone and distant stardust. The primary surfaces are massive, intricately detailed metal and bio-luminescent crystalline structures, exhibiting precise engineering and smooth, almost chitinous textures. Secondary surfaces are the gleaming, reflective surfaces of the distant cityscape buildings. Accent features include the pulsating bright blue vortex, delicate filigree, and glowing internal circuitry patterns. The dominant colors are deep indigo and sapphire for the gateway structure, with bright cyan and electric blue within the central vortex, contrasted by the warm, golden light emanating from the cityscape vista. The ambient light is cool, ethereal blue and indigo. The architectural tone is cosmic biomechanical with intricate filigree, and the cultural tone is that of a nexus for interdimensional travel, created by an ancient and advanced cosmic civilization. The mood is one of profound majestic wonder and the mystery of advanced cosmic civilizations. --ar 16:9 --style raw\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765619511288-uwhokhijk": {
+      "id": "media-1765619511288-uwhokhijk",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f1f/n2gL4VLEoenJ6TP8oW2hK.jpg",
+      "createdAt": "2025-12-13T09:51:51.289Z",
+      "metadata": {
+        "prompt": "A breathtaking, wide-angle interior view of the \"Celestial Observatory,\" a grand, cubic chamber with a monumental domed ceiling crafted from transparent, star-filled crystalline material, offering an unobstructed panorama of the cosmos. The vast space is dominated by a complex array of advanced, bio-mechanical telescopic instruments integrated with the structure, positioned around a central open area. Expansive, crystal-like faceted walls, composed of interlocking crystalline facets, recede into the deep indigo and sapphire hues of the chamber. Sleek, dark composite observation consoles with integrated, pulsating bright cyan and electric blue holographic displays of celestial bodies are seamlessly embedded into the polished surfaces along the periphery. Spiral staircases ascend along the walls, leading to elevated observation platforms. Integrated, pulsating blue light patterns reflecting celestial phenomena emanate from the dome's core and glow from the intricate, filigree-like circuitry of the advanced cosmic machinery. The atmosphere is cool and still, charged with the faint hum of cosmic energy and the subtle scent of ozone, evoking a profound sense of quiet contemplation and advanced knowledge. Warm golden light from the distant cityscape below subtly filters in, creating gentle contrasts. Polished dark metal and smooth bio-luminescent crystalline structures form the primary interior surfaces. A passage at the center provides entry, while an auxiliary door is visible at a back corner. The mood is one of majestic wonder and the awe of cosmic discovery, tinged with the mystery of an ancient, advanced civilization. --ar 16:9 --style raw\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765619539183-4zzd4vhp5": {
+      "id": "media-1765619539183-4zzd4vhp5",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a861f21/2TcDaxq2A8xFYyvEP_Q5t_d4df8e65c69245bb86f19ef2c54b8023.png",
+      "createdAt": "2025-12-13T09:52:19.183Z",
+      "metadata": {
+        "parentMedia": "media-1765619511288-uwhokhijk",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "niche-1765619511291-e1m4ej9bu"
+      ],
+      "parentMedia": "media-1765619511288-uwhokhijk"
+    },
+    "media-1765619600650-0h7rwo50d": {
+      "id": "media-1765619600650-0h7rwo50d",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f27/A6kxAzhEQ5VUlhiVELhfc.jpg",
+      "createdAt": "2025-12-13T09:53:20.650Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA half-portrait shot, focusing on Silas Vance's face and upper body against a backdrop of the Celestial Observatory's monumental gateway. The interior surfaces of polished dark metal and smooth bio-luminescent crystalline structures are visible, bathed in the cool, ethereal blue and indigo ambient light of the gateway. Beyond, the vast observation dome showcases the cosmos, its crystalline ceiling revealing a tapestry of stars. Advanced telescopic instruments with intricate filigree and bio-mechanical design are subtly visible in the background, alongside seamless, curved control consoles made of sleek, dark composites. Silas Vance, a middle-aged human male with deeply creased skin and piercing blue eyes with shimmering silver flecks, stands with erect posture. His silver-grey hair is impeccably short. He wears a matte black, form-fitting jumpsuit with subtle sheen and thin lines of cyan light tracing its seams, pulsing gently. A delicate, wing-shaped metallic device adorns his left ear. He holds a thin, dark tablet displaying shifting, three-dimensional constellations, his gaze focused and analytical. The scene is unified by an atmosphere of calm, expansive intellect and profound order, tinged with the awe of cosmic discovery and the mystery of an ancient, advanced civilization, the air charged with the faint hum of cosmic energy and the scent of ozone.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "model": "FLUX",
         "width": 1024,
         "height": 1024
       },
       "entityRefs": [
-        "char-1765540584846-foisaeqzp"
+        "char-1765619600650-s6ancy4wr"
       ]
+    },
+    "media-1765619716948-p5zt421qm": {
+      "id": "media-1765619716948-p5zt421qm",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f32/7hFu5jkmhOdib_KREtkGX.jpg",
+      "createdAt": "2025-12-13T09:55:16.948Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA half portrait shot framed to show the upper body of Chromascape, facing slightly towards the camera, with the background showing a subtle depth blur. The environment is the Celestial Gateway Chamber, a vast cavernous space of polished, dark indigo and sapphire metals that blend with organic, chitinous textures. Intricate, delicate filigree work traces patterns across colossal mechanical elements that form the monumental gateway. Below and in the distance, a breathtaking vista of a sprawling, gem-like cityscape gleams with warm golden light. Chromascape, a seamless, obsidian-like metallic humanoid, is positioned within this space, its form reflecting the cool blues and indigos of the chamber. Shards of captured starlight, crystalline structures that glow with a soft, pulsing inner gold luminescence, protrude from its body, catching the ambient light. The central vortex of the gateway pulses with a bright, ethereal blue light, casting shifting patterns of cyan and electric blue across the metallic surfaces and Chromascape's form. The air within the gateway crackles with latent cosmic energy, a palpable hum resonating through the space, creating an atmosphere charged with otherworldly presence and profound majestic wonder.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765619716947-tc0dpcda2"
+      ]
+    },
+    "media-1765619732279-32pui7h5l": {
+      "id": "media-1765619732279-32pui7h5l",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a861f35/QKTfV72EPSU5R7gjN6Iuu_01301ec72005420dac0d60a522578f68.png",
+      "createdAt": "2025-12-13T09:55:32.279Z",
+      "metadata": {
+        "parentMedia": "media-1765619716948-p5zt421qm",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1765619716947-tc0dpcda2"
+      ],
+      "parentMedia": "media-1765619716948-p5zt421qm"
+    },
+    "media-1765619821829-kgcny9jc9": {
+      "id": "media-1765619821829-kgcny9jc9",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f3d/zpql6VRPpxmP51eug5dGc.jpg",
+      "createdAt": "2025-12-13T09:57:01.829Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA traditional Swedish rural vernacular farmhouse, painted a deep, weathered red, stands slightly off-center in an ultra-wide view, capturing its enduring presence in West Skåne. The single-story building features a prominent gabled roof with dark, rustic shingles. Its facade is characterized by functional, multi-paned windows with off-white frames, a sturdy, dark wooden door with visible hardware, and the textured grain of aged wooden planks. A rough-hewn fieldstone foundation anchors the structure, showing its age. The building is positioned along a worn cobblestone street with subtle puddles reflecting the soft, slightly cool natural daylight. In the midground, the building's entrance and window details are clearly visible, hinting at a homestead's quiet resilience. The background reveals glimpses of rolling hills and the vast, pale blue Scandinavian sky, perhaps with a few wispy clouds. The atmosphere is crisp and still, with a hint of damp earth. The composition is intentionally asymmetric, with more street visible on one side and the building angled to showcase its depth, avoiding any hint of frontal symmetry.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "381bc8b2-6b22-4510-8fca-37bad0f3e9dc"
+      ]
+    },
+    "media-1765619839786-kilqkasjt": {
+      "id": "media-1765619839786-kilqkasjt",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a861f3f/bUdsh7AiaKeotP5DQJLRH_157fd5d9f22c48909d8ff4648e80693f.png",
+      "createdAt": "2025-12-13T09:57:19.787Z",
+      "metadata": {
+        "parentMedia": "media-1765619821829-kgcny9jc9",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "381bc8b2-6b22-4510-8fca-37bad0f3e9dc"
+      ],
+      "parentMedia": "media-1765619821829-kgcny9jc9"
+    },
+    "media-1765619959040-rbi1dao28": {
+      "id": "media-1765619959040-rbi1dao28",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f4b/RryDfbh1dmaeKAEhE6YaU.jpg",
+      "createdAt": "2025-12-13T09:59:19.040Z",
+      "metadata": {
+        "prompt": "A horizontal, medium-scale, rectangular Homestead Hallway, interior view, featuring smooth, matte white wallpaper on the walls with a pitched ceiling overhead. The floor is made of weathered wooden floorboards. A sturdy, dark wooden door is visible on the left wall, and another wooden door is present on the right wall. A wider opening leads towards the main living area at the back wall. Natural daylight filters in, casting soft, cool light and creating gentle shadows, highlighting the crisp white walls and the simple, functional layout. The atmosphere is calm, neutral, and quiet, with a sense of understated cleanliness. Suggested fixtures include a wooden bench, a coat rack, a hallway runner rug, a wall-mounted mirror, and period-appropriate sconces. The overall mood is one of functional simplicity and quietude, evoking a traditional Swedish rural vernacular architectural style and a homestead cultural context. The composition is asymmetric, drawing the eye towards the depth of the hallway and the interplay of light and shadow.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765619994034-y3lytq8ij": {
+      "id": "media-1765619994034-y3lytq8ij",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f4e/9Wk_Jet3SeIyOILQ0BtvZ.jpg",
+      "createdAt": "2025-12-13T09:59:54.034Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nhalf_portrait, a middle-aged Caucasian woman, Eleanor Vance, with weathered skin, gentle blue eyes, and silver-streaked blonde hair pulled back, stands in a Swedish rural vernacular hallway. She wears a loose, off-white linen dress cinched with a rope belt and scuffed dark brown leather clogs. Eleanor is positioned 3/4 turn to the camera, her face and upper body prominent, showing her patient and observant demeanor. The hallway features smooth, matte white wallpaper, with soft, natural daylight filtering in, casting gentle shadows and creating a cool, bright ambiance. The scene evokes a sense of functional simplicity and quietude, with a subtle depth blur in the background.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765619994033-grl4hsfdv"
+      ]
+    },
+    "media-1765620002605-rs7gdki3x": {
+      "id": "media-1765620002605-rs7gdki3x",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f50/nAv9E2U8yPkdTL0sVUxMZ.jpg",
+      "createdAt": "2025-12-13T10:00:02.605Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nWest Skåne district/region. A region in southern Sweden characterized by rolling hills, fertile farmland, and a picturesque coastline along the Öresund. It's known for its historic estates, charming villages, and abundant natural beauty.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nThe landscape is dominated by gently rolling hills covered in patchwork fields of green and gold, interspersed with deciduous forests and occasional clusters of traditional red-painted farmhouses. The architecture features prominent gabled roofs and wooden construction.\n\nAtmosphere:\nThe air carries the scent of fertile soil, blooming flowers in spring and summer, and the crispness of the sea breeze near the coast. Gentle winds rustle through the fields and trees, creating a peaceful, natural ambiance. Temperatures vary from mild summers to cool, damp winters.\n\nColors:\nDominant: Earthy Greens (fields, forests), Secondary: Deep Red (farmhouses, barns)\nLight: Soft daylight, occasional coastal mist\n\nArchitectural Style: Traditional Swedish rural vernacular architecture with elements of agricultural buildings and homesteads.\nMaterials: Predominantly natural materials like wood for buildings and fences, stone for foundations and field walls, and rich soil for the farmland. Everything appears well-maintained but weathered by time and seasons.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "51298756-4643-4f14-8b19-d56590948794"
+      ]
+    },
+    "media-1765620066571-dtteza6ld": {
+      "id": "media-1765620066571-dtteza6ld",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a861f56/5F_jVMfaXBC1Qo5Xgi0NG.jpg",
+      "createdAt": "2025-12-13T10:01:06.571Z",
+      "metadata": {
+        "prompt": "A rustic, medium-scale rectangular Homestead Kitchen interior, cubic orientation. The walls are clad in weathered, painted deep red wooden planks, creating a clean expanse. A functional, sturdy wooden door with visible dark hardware is centered on the back wall, leading out. To the left, a passage connects to an adjacent room. A multi-paned, ornate window with whitewashed frames is situated at the back wall, allowing soft, slightly cool natural daylight to stream in, casting gentle shadows. A wooden farmhouse table stands centrally, a gathering point. Along the longest wall, a butcher block countertop complements simple, sturdy aged wooden cabinetry. Above, a pot rack is suspended. A sink with visible hardware and a stove with a chimney are integrated into the cabinetry. A rough fieldstone element, possibly a foundation or hearth, anchors the space. The atmosphere is one of quiet practicality and homely warmth, with subtle hints of past meals and aged wood. The dominant colors are deep red, complemented by natural wood tones of the cabinetry and countertops, with accents of off-white window frames and dark hardware. The mood is one of historical continuity and functional simplicity, a space built for enduring use.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765623518446-4fiys4ht1": {
+      "id": "media-1765623518446-4fiys4ht1",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8620af/1GprMvjse00oFYDdQI-cl.jpg",
+      "createdAt": "2025-12-13T10:58:38.446Z",
+      "metadata": {
+        "prompt": "A cramped, low-slung attic interior with sloped ceilings and exposed, rough-hewn timber beams, characteristic of traditional Swedish rural vernacular architecture. The space is filled with dusty storage chests and forgotten, aged furniture draped in cobwebs, creating a sense of deep, quiet abandonment. Muted browns and grays of weathered wooden planks and exposed beams dominate the color palette, subtly highlighted by off-white dust and cobwebs. Ambient light, slightly cool and dim, filters through a single, small, grime-covered rectangular window, casting long, dramatic shadows and accentuating the rich textures of the aged wood. The air is still and cool, heavy with the scent of old wood and dust. At the back wall, a breathtaking, luminescent portal shimmers as a glowing rift – the focal point of the scene – pulsating with an ethereal, otherworldly energy that starkly contrasts with the rustic, aged surroundings. A simple wooden door is positioned at the center, leading into this forgotten space. The overall mood is one of profound mystery, hidden potential, and quiet, enduring rustic charm, a testament to forgotten history and a secret gateway to another world. ASYMMETRIC COMPOSITION.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765623544609-d76ksuw3d": {
+      "id": "media-1765623544609-d76ksuw3d",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8620b2/QQ7iYXCPv-UrGqOn2tDLL.jpg",
+      "createdAt": "2025-12-13T10:59:04.609Z",
+      "metadata": {
+        "prompt": "An interior view of a small, rectangular, cubic attic chamber bathed in the cool, natural daylight casting gentle shadows. The space is dominated by visible, low-sloped, pitched wooden rafters and the pervasive atmosphere of dust motes dancing in the light. Weathered red painted wooden planks form the walls, with a rough fieldstone foundation peeking through in places, and dark wooden shingles covering the ceiling where the rafters recede. Accent features include off-white window frames with ornate multi-paned windows, though openings are minimal. Dust cloths, storage crates, and old furniture are scattered around, hinting at forgotten purposes. The primary focus is the shimmering, ethereal portal, an archway at the center of the room, glowing with an otherworldly light. To the back wall, a simple wooden passage offers the only other navigable element, a dark rectangular opening implying the entrance from Brännan. The mood is one of rustic simplicity, quiet resilience, and enduring history, with the scent of old wood and faint damp earth.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765623565058-6mglyjpch": {
+      "id": "media-1765623565058-6mglyjpch",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8620b4/5_TWJgrzVyAYAJn2sso4P.jpg",
+      "createdAt": "2025-12-13T10:59:25.058Z",
+      "metadata": {
+        "prompt": "An interior view of a rectangular, medium-scale, wide-oriented balcony, an extension from an attic portal chamber, featuring a pitched roof overhead. The scene is dominated by a weathered, deep red wooden deck and a sturdy, dark brown wooden railing. A central rectangular passage leads into the space from the main chamber, with multi-paned, off-white trimmed windows visible at the rear. The atmosphere is fresh and crisp, with dappled natural daylight illuminating the rustic simplicity of the weathered wood construction, accented by dark hardware on a nearby door. The mood is one of tranquil connection to the surroundings, evoking a sense of quiet observation and enduring, traditional Swedish rural vernacular architecture. A lantern hangs from a beam, and a few planters with local flora sit near the railing. Outdoor seating, perhaps a simple wooden bench, is arranged to overlook the open air.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765623783168-pazgunsb3": {
+      "id": "media-1765623783168-pazgunsb3",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8620c9/fTTOY1kpKsLtQH-BlKqO6.jpg",
+      "createdAt": "2025-12-13T11:03:03.168Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA half_portrait framing Timberstone, a humanoid of weathered, crimson-stained wood planks and rough-hewn stone blocks, as it stands against the facade of a classic Swedish rural building. The building features a gabled roof with dark shingles and deep red painted wood siding, accented by cream window frames. The stone foundation of the building is visible, mirroring Timberstone's lower form. Natural daylight casts dappled shadows, illuminating the subtle, amber internal glow of Timberstone and the faint wisps of pale grey smoke curling from its wooden structure. The atmosphere is one of quiet resilience and earthy warmth, with a subtle depth blur in the background to keep the focus on Timberstone's stoic, ancient presence.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765623783167-tqrwdt2l5"
+      ]
+    },
+    "media-1765623807296-o1ymfphuf": {
+      "id": "media-1765623807296-o1ymfphuf",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8620cc/n9WTYLM6ieMkIGGfitKQ4_b16ef50c48ac41a79e6f8adf9183644e.png",
+      "createdAt": "2025-12-13T11:03:27.296Z",
+      "metadata": {
+        "parentMedia": "media-1765623783168-pazgunsb3",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1765623783167-tqrwdt2l5"
+      ],
+      "parentMedia": "media-1765623783168-pazgunsb3"
+    },
+    "media-1765707503222-76j4cp6rh": {
+      "id": "media-1765707503222-76j4cp6rh",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a86417d/eeaCpVlNbs4rRI6dlWUTK.jpg",
+      "createdAt": "2025-12-14T10:18:23.222Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nStreet-level, ultra-wide, slightly elevated view (25° downward tilt) of \"The City of Light,\" a singular building with an ethereal, divine, crystalline, fluidic architectural tone. The facade is sculpted from pure, intensely brilliant white light, with subtle iridescent pastel hues shimmering within, and occasional accents of pale gold along the edges. Windows are vast, impossibly smooth, and reflective planes of light. The entrance is a gently arching gateway of pure luminescence. The building is positioned slightly off-center, set back from the street, revealing a significant portion of its radiant, fluidic structure.\n\n**Foreground:** Worn cobblestone street with reflective puddles mirroring the intense luminescence of the city, showing detailed texture and an uneven surface.\n\n**Midground:** The central building, composed of solidified light and pearlescent substances, emits an all-encompassing brilliance. Spiraling columns of pure light ascend from its base. Its surfaces are impossibly smooth, giving the impression of infinite depth. Subtle, shimmering iridescent pastel hues dance across its crystalline facade.\n\n**Background:** An infinite expanse of pure, intense white light, punctuated by the soft shimmer of iridescent pastel colors. Neighboring structures, also crafted from light and crystal, recede into a serene, luminous haze, suggesting vast, open spaces. The sky is a radiant, unbroken expanse of pure luminescence.\n\n**Lighting & Atmosphere:** The scene is bathed in an intense, pure white light, so bright it is almost palpable, with subtle, dynamic shifts of iridescent pastel colors and intermittent pale gold highlights. The air hums with benevolent energy, feeling warm, invigorating, and utterly serene. There is a gentle, constant flow of spiritual essence, creating an atmosphere of profound peace and spiritual upliftment, a sense of ecstatic bliss and divine presence. No physical weather, only eternal radiance.\n\n**Composition:** Asymmetric, with more street visible on the left. The building is not centered, and the camera is angled slightly to reveal its depth and dimension. The composition is layered, showcasing the street texture, the radiant building facade, and the infinite luminous background.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "6749d524-073f-45d9-9193-9d01b4ad2185"
+      ]
+    },
+    "media-1765707533485-lw8innp16": {
+      "id": "media-1765707533485-lw8innp16",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a864181/hAAXMaaobr1NXViSwdisO.jpg",
+      "createdAt": "2025-12-14T10:18:53.485Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Celestial Realms. The vast spiritual dimensions described by Emanuel Swedenborg, representing higher planes of existence accessible through divine revelation and spiritual correspondence. These realms are realms of order, beauty, and divine love.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nThe realms manifest as realms of immense spiritual light and divine order. Architecture and landscapes are shaped by the spiritual states of their inhabitants, appearing as sublime and perfect forms.\n\nAtmosphere:\nThe atmosphere is one of profound divine presence and spiritual activity. It is a realm of pure thought and perception, free from physical limitations or worldly concerns.\n\nColors and Lighting:\nDominant: Pure Divine Light (near total coverage), Secondary: Vibrant Spiritual Colors (integrated into light), Accent: Expressions of Divine Love and Wisdom (subtle shimmer)\nLight: Divine, all-encompassing light, The dominant light is a pure, radiant divine essence, illuminating all with an exquisite clarity. Colors are vibrant and imbued with spiritual significance, reflecting divine love and wisdom.\n\nGenre/Style: Spiritualism\nArchitectural Style: Divine, ordered, spiritual, perfect forms\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "loc-1765707481919-2zjxghd55"
+      ]
+    },
+    "media-1765707544467-ep1m0ubwy": {
+      "id": "media-1765707544467-ep1m0ubwy",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a864182/_hoss84P2sfHscXcxSyK1.jpg",
+      "createdAt": "2025-12-14T10:19:04.467Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe First Heaven district/region. The initial celestial sphere, inhabited by benevolent spiritual beings who lived lives of natural goodness and charity. This realm embodies a pure and serene existence, a step towards higher spiritual understanding.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nSoaring, harmonious structures composed of solidified light and crystalline forms dominate the landscape. Their design appears divinely sculpted, radiating an all-encompassing brilliance. The city flows seamlessly, a testament to spiritual order.\n\nAtmosphere:\nThe air is alive with a palpable benevolent energy, feeling warm and invigorating yet profoundly serene. A constant, gentle flow of spiritual essence permeates the environment, fostering deep peace and upliftment. Physical weather is absent, replaced by eternal radiance.\n\nColors:\nDominant: White (over 90% coverage), Secondary: Pale gold (along architectural edges and subtle details)\nLight: Pure, bright white illumination\n\nArchitectural Style: Ethereal, divine, crystalline, fluidic\nMaterials: The primary materials are pure light, crystal, and pearlescent substances, all designed to refract and emit illumination. Surfaces are impossibly smooth and reflective, mirroring the luminous expanse.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "d27fbc1f-2b15-46e4-9d6e-e4d75203d15f"
+      ]
+    },
+    "media-1765707606525-dc4nodiqt": {
+      "id": "media-1765707606525-dc4nodiqt",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a864188/7WQftRSDO9w35S7hj1s-C_ee75425dc0fc4c2180d89e4c1ab80e71.png",
+      "createdAt": "2025-12-14T10:20:06.525Z",
+      "metadata": {
+        "parentMedia": "media-1765707533485-lw8innp16",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "loc-1765707481919-2zjxghd55"
+      ],
+      "parentMedia": "media-1765707533485-lw8innp16"
+    },
+    "media-1765707640836-ga9hbinfd": {
+      "id": "media-1765707640836-ga9hbinfd",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a86418b/koslWTNSpH0Le_PIEzv_c.jpg",
+      "createdAt": "2025-12-14T10:20:40.836Z",
+      "metadata": {
+        "prompt": "An ultra-wide, expansive interior of \"The First Heaven Interior,\" a vast, cathedral-like space with soaring, fluid, and harmonious structures of solidified light and crystal. The architecture is organic and divine, sculpted by divine will, with impossibly smooth, reflective surfaces emitting an all-encompassing brilliance. Dominating the scene are luminous facades and radiant planes. Crystalline walls shimmer with a pure, intense white light, accounting for over 90% of the coverage. Subtle, dynamic shimmers of iridescent pastel hues dance within this illumination, with intermittent pale gold accents along the edges of pearlescent arches and gleaming pathways. A luminous domed ceiling curves gracefully overhead, creating a sense of infinite depth.\n\nIn the foreground, a grand, arching passage at the center draws the eye deeper into the celestial realm, its edges softly outlined in pale gold. To the rear left, a smaller, more intimate passage offers a space for individual contemplation, while another serene passage to the rear right provides a different perspective of the divine. Scattered throughout the space are suggested fixtures: luminous altars, crystal seating arrangements, and floating light orbs that contribute to the divine communion. The atmosphere hums with benevolent energy, feeling warm, invigorating, and profoundly serene, a constant flow of spiritual essence banishing any trace of physical weather for eternal radiance. The overall mood is one of ecstatic bliss and profound spiritual realization, evoking awe, purity, and an overwhelming sense of divine presence. The scene embodies an ethereal, divine, crystalline, and fluidic architectural tone, befitting a place of spiritual residence and divine communion for benevolent spiritual beings. Accent features include spiraling light columns and gates of pure luminescence.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765707695092-p0mjgib6d": {
+      "id": "media-1765707695092-p0mjgib6d",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a864190/CwVObwNg-MV09gOfaxhDF.jpg",
+      "createdAt": "2025-12-14T10:21:35.092Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait capturing the upper body of Luminaria, facing a 3/4 turn against a backdrop of The First Heaven Interior. The environment is an infinite, luminous expanse of soaring, fluidic structures made of solidified light and crystal, emitting a pure, intense white light with subtle iridescent pastel shimmers and pale gold accents. Luminaria, a towering, translucent form with moonstone-like skin rippled with internal light, is studded with pearlescent growths on her shoulders and forearms. Her indistinct features are suggested by the play of light within her crystalline structure. She wears drapery woven from captured starlight, shimmering in rose gold and amethyst, flowing with an inner current, and delicate, spiraling opalescent bands encircle her limbs. The atmosphere is one of benevolent energy, warm, invigorating, and profoundly serene, with a gentle flow of spiritual essence. The mood is ecstatic bliss and profound spiritual realization, creating an awe-inspiring, pure, and divine presence.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765707695092-p66hlx2p5"
+      ]
+    },
+    "media-1765707702869-y1b8ktzu2": {
+      "id": "media-1765707702869-y1b8ktzu2",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a864192/o3L9S3z44FAQ0u7Kv7NAJ_333ce4d678c34ef48f56927c86ba7fbf.png",
+      "createdAt": "2025-12-14T10:21:42.869Z",
+      "metadata": {
+        "parentMedia": "media-1765707695092-p0mjgib6d",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1765707695092-p66hlx2p5"
+      ],
+      "parentMedia": "media-1765707695092-p0mjgib6d"
+    },
+    "media-1765731410969-wtxaxoqq9": {
+      "id": "media-1765731410969-wtxaxoqq9",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a864ad3/ZNO5f0XSdVdzBwD1DAWG1.jpg",
+      "createdAt": "2025-12-14T16:56:50.969Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait, with the face and upper body of Luminar prominent, filling 60% of the frame. The City of Light, an exterior bathed in an all-encompassing brilliance, is the background, its soaring structures of solidified light and crystalline materials radiating pure white light with subtle iridescence and pastel hues. Luminar, a humanoid form of solidified, semi-translucent light, shimmers with crystalline, pearlescent structures and emanates a soft, internal glow of shifting iridescent pastels. Its seamless, organic form subtly suggests intricate internal structures. Luminar is positioned in a 3/4 turn, its serene, observant demeanor evident as it subtly reflects the ambient light of its surroundings. The atmosphere is one of profound peace and spiritual upliftment, with the air humming with benevolent energy, unifying the character and the ecstatic bliss of the environment.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765731410967-4xnjqweh9"
+      ]
+    },
+    "media-1765731468261-uwkg4jhry": {
+      "id": "media-1765731468261-uwkg4jhry",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a864ad9/iftvV8hvldEMNIzOH7so1.jpg",
+      "createdAt": "2025-12-14T16:57:48.261Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nhalf_portrait, a serene female being named Aethelgard with pale skin and a faint internal glow, her alabaster-white hair pulsing with captured light and luminous soft blue eyes, delicate crystalline growths adorning her temples and collarbone, stands in the City of Light. She wears a flowing robe of pearlescent threads in shifting pastel iridescence, with translucent, feathery wings of solidified light extending from her shoulders. The City of Light is a breathtaking exterior vista of soaring structures made of solidified light and pearlescent substances, radiating an all-encompassing brilliance, with surfaces impossibly smooth and reflective. The dominant color is intense, pure white light, with subtle iridescence and pastel hues shimmering within. Aethelgard is positioned slightly off-center, facing a 3/4 turn towards the viewer, her upper body filling approximately 60% of the frame, her translucent wings subtly catching and refracting the ambient light. The background of crystalline architecture fades with a subtle depth blur, maintaining the ethereal, divine, and fluidic architectural style. The atmosphere hums with benevolent energy, warm and invigorating yet utterly serene, evoking a mood of ecstatic bliss and profound spiritual realization, a divine communion.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1765731468260-hriqaiml9"
+      ]
+    },
+    "media-1765747501234-ba5lsnxf6": {
+      "id": "media-1765747501234-ba5lsnxf6",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a86511d/sEvc-MicuHm-5AyRUB2xt.jpg",
+      "createdAt": "2025-12-14T21:25:01.234Z",
+      "metadata": {
+        "prompt": "A breathtaking, immense, and cavernous interior of the \"Hall of Divine Authority\" within the City of Light. The space is defined by soaring, fluid structures of solidified light and impossibly smooth, reflective pearlescent surfaces, creating an all-encompassing brilliance and an infinite luminous expanse. Dominating the center of the vast, open hall is a prominent, elevated **gods throne**, seemingly sculpted from pure, intense white luminescence with subtle, shimmering iridescent pastel hues woven through it, accented by pale gold edges. Two massive **spiraling light columns** flank the throne, reaching towards the impossibly high, **domed roof** crafted from radiant planes of solidified light. A **celestial fountain** of pure energy, cascading with gentle, shimmering light, sits to the left of the throne. On the right, a cluster of **incense burners of pure energy** emit soft, glowing tendrils. **Celestial banners**, shimmering with iridescent pastels, hang from unseen points high above. In the background, a grand, luminescent **passage at rear center** invites deeper exploration into the divine realm, glowing with an otherworldly white light. To the left, an ornate **archway at left side**, framed with pale gold, offers access to ancillary chambers, its opening filled with a soft, ethereal glow. Mirroring this on the right, another ornate **archway at right side** ensures symmetry, also filled with soft light. **Glowing lecterns** stand at intervals along the gleaming, reflective pathways, their surfaces reflecting the overwhelming brilliance. The atmosphere thrums with benevolent, invigorating energy, a profound peace, and spiritual upliftment, bathed in an intense, pure white luminescence with intermittent pale gold accents. The mood is ecstatic bliss, awe, purity, and an overwhelming sense of divine presence. architectural_tone: ethereal, divine, crystalline, fluidic. cultural_tone: inhabited by benevolent spiritual beings, a place of spiritual residence and divine communion.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1765747581307-ccbrm5zwk": {
+      "id": "media-1765747581307-ccbrm5zwk",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a865126/39jhs4ALlvrbQSKeTYa1n_58f240b51a9b427abcbd918de75dd9c4.png",
+      "createdAt": "2025-12-14T21:26:21.307Z",
+      "metadata": {
+        "parentMedia": "media-1765731468261-uwkg4jhry",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "char-1765731468260-hriqaiml9"
+      ],
+      "parentMedia": "media-1765731468261-uwkg4jhry"
     }
   }
 }
