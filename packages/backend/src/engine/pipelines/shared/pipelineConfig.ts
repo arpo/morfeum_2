@@ -77,6 +77,11 @@ export const PIPELINE_STEPS = {
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'visual_analysis', name: 'Analyzing Appearance', duration: 4000 },
     { id: 'profile_enrichment', name: 'Building Profile', duration: 5000 }
+  ],
+  
+  // VIEW command - generate image for existing node (save happens silently)
+  view: [
+    { id: 'generate', name: 'Generating Image', duration: 2500 }
   ]
 } as const;
 

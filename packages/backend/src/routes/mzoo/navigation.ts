@@ -650,7 +650,7 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
 
 /**
  * POST /api/mzoo/navigation/create-image
- * Generate image for an existing node via /create-image command
+ * Generate image for an existing node via /VIEW command
  */
 router.post('/create-image', asyncHandler(async (req: Request, res: Response) => {
   const { nodeId, flags } = req.body as {
@@ -673,17 +673,14 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
   const operationId = `img-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const eventsUrl = `/api/mzoo/navigation/events/${operationId}`;
 
-  console.log(`\n🖼️ [CREATE-IMAGE] Starting image generation pipeline...`);
-  console.log(`[CREATE-IMAGE] Operation ID: ${operationId}`);
-  console.log(`[CREATE-IMAGE] Node ID: ${nodeId}`);
+  console.log(`\n🖼️ [VIEW] Starting image generation pipeline...`);
+  console.log(`[VIEW] Operation ID: ${operationId}`);
+  console.log(`[VIEW] Node ID: ${nodeId}`);
 
-  // Store pipeline configuration for SSE initialization
-  const steps = [
-    { id: 'generate', name: 'Generating image', duration: 8000 },
-    { id: 'save', name: 'Saving media', duration: 2000 }
-  ];
+  // Use pipeline config (single source of truth)
+  const steps = getStepsForPipeline('view');
   pipelineConfigs.set(operationId, {
-    pipelineType: 'imageGeneration',
+    pipelineType: 'view',
     steps: steps.map((step, index) => ({
       index,
       id: step.id,
@@ -703,8 +700,12 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
 
   // Run pipeline asynchronously
   (async () => {
+    const startTime = Date.now();
+    const timings: Record<string, number> = {};
+    let stageStart = Date.now();
+    
     try {
-      // Step 1: Load node from storage
+      // Step 1: Load node and generate image
       sseService.sendEvent(operationId, 'progress', {
         stage: 'generate',
         message: 'Loading node data...'
@@ -720,9 +721,9 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
         throw new Error(`Node not found: ${nodeId}`);
       }
 
-      console.log(`[CREATE-IMAGE] Found node: ${node.name} (type: ${node.type})`);
+      console.log(`[VIEW] Found node: ${node.name} (type: ${node.type})`);
 
-      // Step 2: Generate image prompt from node DNA
+      // Generate image prompt from node DNA
       sseService.sendEvent(operationId, 'progress', {
         stage: 'generate',
         message: 'Generating image...'
@@ -731,9 +732,9 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
       const perspective = detectPerspectiveFromNode(node);
       const imagePrompt = getNodeImagePrompt(node, perspective);
       
-      console.log(`[CREATE-IMAGE] Image prompt: ${imagePrompt.substring(0, 100)}...`);
+      console.log(`[VIEW] Image prompt: ${imagePrompt.substring(0, 100)}...`);
 
-      // Step 3: Call FLUX API
+      // Call FLUX API
       const result = await generateImage(
         apiKey,
         imagePrompt,
@@ -747,14 +748,10 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
       }
 
       const imageUrl = result.data.images[0].url;
-      console.log(`[CREATE-IMAGE] Image generated: ${imageUrl.substring(0, 50)}...`);
+      timings['generate'] = Date.now() - stageStart;
+      console.log(`[VIEW] Image generated (${(timings['generate'] / 1000).toFixed(2)}s)`);
 
-      // Step 4: Create media entry and update node
-      sseService.sendEvent(operationId, 'progress', {
-        stage: 'save',
-        message: 'Saving image...'
-      });
-
+      // Save media entry and update node (silently, no separate step)
       // Create media entry
       const mediaEntry = mediaService.createMedia({
         type: 'image',
@@ -768,29 +765,34 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
         },
         entityRefs: [nodeId]
       });
-      
-      console.log(`[CREATE-IMAGE] Media entry created: ${mediaEntry.id}`);
 
-      // Update node with primaryMedia (not just imageUrl)
+      // Update node with primaryMedia
       node.primaryMedia = mediaEntry.id;
-      node.imageUrl = imageUrl; // Keep for backward compatibility
+      node.imageUrl = imageUrl;
       worldsData.nodes[nodeId] = node;
 
       // Save updated worlds data
       await storageService.saveWorlds(worldsData);
-      console.log(`[CREATE-IMAGE] Node updated with primaryMedia: ${mediaEntry.id}`);
+      
+      // Log timing summary
+      const totalTime = Date.now() - startTime;
+      console.log(`\n[VIEW] ${operationId} completed in ${(totalTime / 1000).toFixed(2)}s`);
+      console.log(`  Stage Timings:`);
+      console.log(`    - Image Generation: ${(timings['generate'] / 1000).toFixed(2)}s`);
+      console.log(`  Total: ${(totalTime / 1000).toFixed(2)}s\n`);
 
       // Send completion event with mediaId
       sseService.sendEvent(operationId, 'completed', {
         message: 'Image created successfully',
         node,
         imageUrl,
-        mediaId: mediaEntry.id
+        mediaId: mediaEntry.id,
+        timings
       });
 
       setTimeout(() => sseService.closeConnection(operationId), 1000);
     } catch (error) {
-      console.error(`\n❌ [CREATE-IMAGE ERROR]`, error);
+      console.error(`\n❌ [VIEW ERROR]`, error);
       sseService.sendEvent(operationId, 'error', {
         message: error instanceof Error ? error.message : 'Failed to create image'
       });
