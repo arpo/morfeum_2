@@ -140,3 +140,71 @@
 .navigationInput {
   flex: 1;
 }
+
+/* Image Drop Overlay */
+.dropOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(var(--color-primary-rgb, 59, 130, 246), 0.15);
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.dropOverlayText {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: var(--glass-bg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+}
+
+/* Analyzing Overlay */
+.analyzingOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  z-index: 10;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Drop Error */
+.dropError {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-error);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  font-size: var(--text-sm);
+  text-align: center;
+  z-index: 10;
+}

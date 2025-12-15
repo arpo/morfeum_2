@@ -18,6 +18,7 @@ interface SlashCommandInputProps {
   disabled?: boolean;
   onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   onInvalidCommand?: (command: string) => void;
+  onPaste?: (e: React.ClipboardEvent<HTMLInputElement>) => void;
   className?: string;
 }
 
@@ -30,6 +31,7 @@ export function SlashCommandInput({
   disabled,
   onKeyPress,
   onInvalidCommand,
+  onPaste,
   className
 }: SlashCommandInputProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -248,6 +250,7 @@ export function SlashCommandInput({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={handleKeyDown}
+        onPaste={onPaste}
         placeholder={placeholder}
         disabled={disabled}
       />

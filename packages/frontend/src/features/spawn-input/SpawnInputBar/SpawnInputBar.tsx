@@ -3,10 +3,11 @@
  * Command-based input for creating worlds, characters, and navigating
  */
 
-import { KeyboardEvent } from 'react';
+import { KeyboardEvent, useCallback } from 'react';
 import { useNavigationLogic } from './useNavigationLogic';
+import { useImageDropLogic } from './useImageDropLogic';
 import { useStore } from '@/store';
-import { IconChevronDown, IconChevronUp } from '@/icons';
+import { IconChevronDown, IconChevronUp, IconLoader2 } from '@/icons';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Button, SlashCommandInput } from '@/components/ui';
 import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
@@ -20,6 +21,15 @@ interface SpawnInputBarProps {
 
 export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const navigation = useNavigationLogic();
+  
+  // Image drop/paste handling - append analyzed description to existing input
+  const handleDescriptionReceived = useCallback((description: string) => {
+    navigation.handlers.setMovementInput((prev: string) => 
+      prev ? `${prev}\n\n${description}` : description
+    );
+  }, [navigation.handlers]);
+  
+  const imageDrop = useImageDropLogic({ onDescriptionReceived: handleDescriptionReceived });
   
   // Get current node type for contextual commands
   const activeEntityId = useStore(state => state.activeEntity);
@@ -41,7 +51,32 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   );
 
   return (
-    <div data-component="spawn-input-bar">
+    <div 
+      data-component="spawn-input-bar"
+      onDragEnter={imageDrop.handlers.handleDragEnter}
+      onDragLeave={imageDrop.handlers.handleDragLeave}
+      onDragOver={imageDrop.handlers.handleDragOver}
+      onDrop={imageDrop.handlers.handleDrop}
+    >
+      {/* Image drop overlay */}
+      {imageDrop.state.isDragging && (
+        <div className={styles.dropOverlay}>
+          <div className={styles.dropOverlayText}>Drop image to analyze</div>
+        </div>
+      )}
+      
+      {/* Analyzing overlay */}
+      {imageDrop.state.isAnalyzing && (
+        <div className={styles.analyzingOverlay}>
+          <IconLoader2 size={24} className={styles.spinner} />
+          <span>Analyzing image...</span>
+        </div>
+      )}
+      
+      {/* Drop error message */}
+      {imageDrop.state.error && (
+        <div className={styles.dropError}>{imageDrop.state.error}</div>
+      )}
       {/* Active Spawn Progress Bars */}
       {activeProcesses.length > 0 && (
         <div style={{
@@ -122,7 +157,8 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                     navigation.handlers.handleMove();
                   }
                 }}
-                placeholder="Type / to see commands..."
+                onPaste={imageDrop.handlers.handlePaste}
+                placeholder="Type / to see commands... (paste or drop image)"
                 disabled={navigation.state.isMoving}
               />
               <Button
