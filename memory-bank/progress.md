@@ -25,6 +25,22 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Pipeline Optimization & Prompt Enhancer (Dec 15):**
+  - Removed navigableElements/furnishing LLM generation from pipeline (faster, cheaper)
+  - Created new Prompt Enhancer feature for user-controlled AI suggestions
+  - Frontend: Enhance button (sparkles icon) in SpawnInputBar, `handleEnhance()` in useNavigationLogic
+  - Backend: `promptEnhancer.ts` service, `enhancerPromptTemplate.ts`, `enhancementParser.ts`
+  - New endpoint: `POST /api/mzoo/navigation/enhance-prompt`
+  - User workflow: Type `/GO_INSIDE spa` → Click Enhance → Gets suggested navigableElements and furnishing
+  - Key files: `SpawnInputBar.tsx`, `useNavigationLogic.ts`, `promptEnhancer.ts`, `enhancementParser.ts`
+- **Interior Surface Transformation (Dec 15):**
+  - Fixed facade materials being copied directly to interiors (e.g., red wood walls inside kitchen)
+  - Added transformation rules in `nodeDNAGeneration.ts`
+  - Priority order: 1) User-specified (highest), 2) Interior transformation, 3) Keep as-is
+  - Painted wood residential → whitewashed panels, plaster, wallpaper
+  - Stone temples/churches → keep stone; Log cabins → keep logs; Industrial brick → keep exposed brick
+  - User can override any surface with explicit command text (e.g., "with floral wallpaper")
+  - Key file: `nodeDNAGeneration.ts`
 - **SpawnInputBar Refactoring & Dead Code Cleanup (Dec 15):**
   - Moved image drag/drop/paste from App.tsx to SpawnInputBar (was connected to wrong state)
   - Image descriptions now **append** to existing input text (not replace)

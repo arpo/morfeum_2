@@ -55,30 +55,40 @@ PARENT CONTEXT (CSS-like inheritance - inherit ALL these attributes unless overr
 - Flora Base: ${parentContext.flora_base || 'Not specified'}
 - Fauna Base: ${parentContext.fauna_base || 'Not specified'}
 
-CRITICAL MATERIAL INHERITANCE RULES:
-1. Child spaces MUST use the SAME WALL MATERIALS as the parent - the function changes, not the building materials.
-2. You are ADAPTING the parent's visual style to a new function - NOT replacing it with a generic style.
-3. The child's "looks", "materials", and "primary_surfaces" fields MUST incorporate the parent's materials.
-4. Only ADD function-specific fixtures and equipment - do NOT REPLACE the parent's wall/floor/ceiling materials.
-5. The building's architectural character (materials, textures, aging) must be preserved in all child spaces.
+CRITICAL: INTERIOR vs EXTERIOR MATERIAL RULES (READ CAREFULLY):
 
-KEY PRINCIPLE: Function changes, building materials don't.
-WRONG: Replacing parent's wall materials with generic function-appropriate materials
-RIGHT: Adding function-specific fixtures while KEEPING the parent's wall materials
+**WALL SURFACE PRIORITY ORDER (HIGHEST TO LOWEST):**
+1. USER-SPECIFIED → If user mentions wallpaper, wall treatment, or surface in their command, USE IT (highest priority)
+2. INTERIOR TRANSFORMATION → For exterior→interior transitions, TRANSFORM facade materials to interior finishes
+3. KEEP AS-IS → Some materials are appropriate for both (stone temples, log cabins, industrial brick)
 
-**INTERIOR vs EXTERIOR MATERIAL DISTINCTION (CRITICAL FOR INTERIORS):**
-When creating an INTERIOR space, distinguish between:
-- **BUILDING MATERIALS** (use these for interior): facades, walls, composites, metals, smooth surfaces, polished materials, constructed elements
-- **LANDSCAPE/ENVIRONMENT** (do NOT use for interior): rock formations, sand, water, vegetation, terrain, natural geology
+**EXTERIOR → EXTERIOR inheritance (same facade):**
+Child spaces on the OUTSIDE of a building KEEP the same facade materials.
+Example: A wing of a building uses same exterior materials as main building.
 
-WRONG for interior: "reddish-brown rock walls" when rock is the SURROUNDING landscape
-RIGHT for interior: "smooth composite walls" when the building is made of composite materials
+**EXTERIOR → INTERIOR transformation (DIFFERENT for interiors):**
+When going INSIDE a building, wall surfaces TRANSFORM to appropriate interior finishes.
+The ARCHITECTURAL STYLE stays the same, but SURFACE MATERIALS change for livability.
 
-The parent may describe BOTH the building AND its surroundings. For interiors:
-- Look for: "facades", "building", "structure", "composite", "metal", "polished", "sleek", "constructed"
-- Ignore: "rock formations", "sand", "water", "terrain", "surrounding landscape", "natural features"
+| Facade Material | Building Type | Interior Transformation |
+|-----------------|---------------|------------------------|
+| Painted wood (red, yellow, etc.) | Residential | Whitewashed wood panels, plaster walls, wallpaper, wainscoting |
+| Painted wood | Commercial | Painted panels, plaster with wood trim |
+| Natural logs | Cabin/Lodge | KEEP natural wood (appropriate for interior) |
+| Stone/Brick | Temple/Church/Castle | KEEP stone (appropriate for sacred/grand spaces) |
+| Stone/Brick | Residential | Plaster over stone, tapestries, wood paneling |
+| Brick | Industrial | KEEP exposed brick (appropriate for industrial) |
+| Concrete/Metal/Glass | Modern | KEEP (appropriate for modern interiors) |
 
-The building is INSIDE the landscape, but the interior walls are made of BUILDING materials, not landscape materials.
+**KEY PRINCIPLE:** Architectural STYLE inherits, but FACADE materials transform for interiors.
+WRONG: Interior with "red painted wood plank walls" when exterior has red painted wood
+RIGHT: Interior with "whitewashed wood panels" or "plaster walls with wooden beams" in same Swedish style
+
+**LANDSCAPE vs BUILDING materials (don't confuse):**
+- BUILDING MATERIALS (for interior walls): facades, walls, composites, metals, polished surfaces
+- LANDSCAPE (NEVER for interior walls): rock formations, sand, terrain, natural geology
+
+The parent may describe the building AND its surroundings. For interiors, use BUILDING materials only.
 `
     : '';
 
