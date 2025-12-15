@@ -25,6 +25,12 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **Pipeline Progress Bar Fix & VIEW Command (Dec 15):**
+  - Fixed GO_INSIDE progress bar not reaching 100% (filter was excluding completed spawns)
+  - Added `view` pipeline to `pipelineConfig.ts` (was hardcoded in route)
+  - Simplified VIEW pipeline to single step (matching other pipelines that save silently)
+  - Added timing logs to VIEW command terminal output
+  - Key files: `SpawnInputBar.tsx`, `pipelineConfig.ts`, `navigation.ts`, `pipelineHelpers.ts`
 - **Character Creation System (Dec 12):** Full character creation from location nodes:
   - `/CREATE_CHARACTER_REAL` and `/CREATE_CHARACTER_UNREAL` slash commands
   - 7-step pipeline: prompt engineering → seed → scene composition → image → analysis → profile → save

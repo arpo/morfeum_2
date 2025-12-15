@@ -3493,6 +3493,148 @@
         "Frozen waterfall cascade"
       ],
       "primaryMedia": "media-1765790578252-y0aq80zzp"
+    },
+    "loc-1765791253658-4rckpb8h0": {
+      "id": "loc-1765791253658-4rckpb8h0",
+      "type": "host",
+      "name": "Xylos",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast landscapes dominated by glowing, alien plant life and towering crystalline structures that refract light. The terrain is often varied, with deep canyons and high plateaus.",
+        "colorsAndLighting": "A symphony of vibrant, self-generated light from flora and minerals. Deep blues, purples, and greens intermingle with stark whites and occasional fiery oranges, creating a constantly shifting, luminous environment. Shadows are soft and diffused.",
+        "atmosphere": "The air is cool and clean, carrying the subtle scent of exotic pollens and minerals. A faint hum often resonates from the crystalline formations, and gentle, ethereal breezes stir the luminous foliage. Weather is rare, with most atmospheric phenomena being light-based.",
+        "materials": "Dominant materials are organic and crystalline. Luminescent plant matter, resilient but delicate, grows over and integrates with massive, polished, and faceted crystals of unknown composition. Surfaces range from smooth and cool to soft and yielding.",
+        "mood": "A mood of wonder and alien beauty, tinged with a sense of profound otherworldliness and quiet solitude. It evokes awe at the planet's unique, self-sustaining ecosystems.",
+        "sounds": "Subtle hums, soft chimes, rustling bioluminescent leaves, distant crystalline resonance",
+        "primary_surfaces": "Glow-infused flora, polished obsidian-like glass, faceted crystal",
+        "secondary_surfaces": "Fibrous lichen, soft mosses, mineral veins",
+        "accent_features": "Bioluminescent spores, shimmering mineral deposits, intricate floral patterns",
+        "dominant": "Deep blues and purples (flora, ~60%)",
+        "secondary": "Luminous whites and greens (lichen, crystals, ~30%)",
+        "accent": "Occasional fiery oranges and subtle bio-luminescent pinks within floral patterns (~10%)",
+        "ambient": "Ethereal and luminous",
+        "genre": "Bio-Luminescent Sci-Fi",
+        "architectural_tone": "Organic integration with crystalline geometry",
+        "cultural_tone": "A world for reclusive xenobotanists, alien researchers, or those seeking pristine, alien natural wonders.",
+        "materials_base": "Bioluminescent organic matter and cultivated crystal",
+        "mood_baseline": "Ethereal and awe-inspiring",
+        "palette_bias": "Cool luminous tones with organic contrasts",
+        "soundscape_base": "Resonant and subtly humming",
+        "flora_base": "Bioluminescent and exotic",
+        "fauna_base": "None"
+      },
+      "description": "A world where bioluminescent flora and crystalline formations dominate the landscape, creating an ethereal and alien beauty. Crystalline structures and glowing plant life are woven into the very fabric of civilization.",
+      "searchDesc": "Xylos: A planet of strange bioluminescent flora and crystalline formations.",
+      "slug": "xylos",
+      "structure": {
+        "spatialLayout": "Expansive natural vistas with organic forms and geometric crystalline formations. Depth is often emphasized by layered luminescence and the sheer scale of structures.",
+        "dominantElements": [
+          "Bioluminescent Forests",
+          "Crystal Caves",
+          "Floating Islands"
+        ],
+        "uniqueIdentifiers": [
+          "Pulsating Flora",
+          "Singing Crystals",
+          "Atmospheric Luminescence"
+        ]
+      },
+      "dominantElements": [
+        "Bioluminescent Forests",
+        "Crystal Caves",
+        "Floating Islands"
+      ],
+      "uniqueIdentifiers": [
+        "Pulsating Flora",
+        "Singing Crystals",
+        "Atmospheric Luminescence"
+      ]
+    },
+    "84aff295-639f-43a1-99f6-7230bf7e891c": {
+      "id": "84aff295-639f-43a1-99f6-7230bf7e891c",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "40f9588c-80d4-43ce-b2f3-746d9dd21073": {
+      "id": "40f9588c-80d4-43ce-b2f3-746d9dd21073",
+      "type": "location",
+      "name": "The Obsidian Conservatory",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A striking geodesic dome constructed from large panels of polished, black glass.  It is heavily adorned with a thick, creeping growth of glowing white lichen that illuminates the structure.  The main entrance is a massive, circular iris door, its segments pulled apart in a dynamic, petal-like fashion.",
+        "colorsAndLighting": "The dominant colors are deep, reflective black from the glass and a stark, ethereal white from the bioluminescent lichen.  The lichen provides the primary light source, casting a soft, otherworldly glow.",
+        "atmosphere": "The air feels cool and slightly humid, with a palpable stillness.  The glowing lichen emanates a faint, almost imperceptible warmth.  There is no discernible weather, only the quiet ambiance of contained nature.",
+        "materials": "The primary material is obsidian-like, highly polished black glass.  The lichen appears soft and fibrous, clinging tenaciously to the glass surfaces.",
+        "mood": "The mood is one of mysterious beauty and quiet isolation. It evokes a sense of awe at the unexpected fusion of rigid geometry and organic life.",
+        "sounds": "Soft hum, faint crackling, muffled organic rustling.",
+        "primary_surfaces": "Polished black glass, glowing white lichen",
+        "secondary_surfaces": "None readily apparent on the exterior",
+        "accent_features": "Cracked iris door, bioluminescent patterns of lichen",
+        "dominant": "Black (glass, ~70%)",
+        "secondary": "White (lichen, ~30%)",
+        "accent": "Subtle blues and greens within the lichen's glow",
+        "ambient": "Ethereal white glow",
+        "genre": null,
+        "architectural_tone": "Futuristic geodesic with organic embellishments",
+        "cultural_tone": "A place for cultivating rare or unique flora, perhaps by reclusive scholars or alien botanists.",
+        "materials_base": "Glass and organic matter",
+        "mood_baseline": "Mysterious and serene",
+        "palette_bias": "Monochromatic with luminous highlights",
+        "soundscape_base": "Subdued and natural",
+        "flora_base": "Abundant bioluminescent flora",
+        "fauna_base": "None"
+      },
+      "description": "A geodesic dome of black glass overgrown with glowing white lichen, its main iris door cracked open like a flower. EXTERIOR VIEW.",
+      "searchDesc": "Geodesic dome of black glass covered in glowing lichen, with a flower-like iris door.",
+      "slug": "the-obsidian-conservatory",
+      "structure": {
+        "spatialLayout": "The space is a perfect hemisphere, vast and open within. The interior is likely filled with the gentle curves of the dome and the organic forms of plants.",
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "main entrance",
+            "description": "A large, circular iris door cracked open like a flower."
+          }
+        ],
+        "dominantElements": [
+          "Geodesic dome",
+          "Black glass exterior",
+          "Glowing white lichen",
+          "Cracked iris door"
+        ],
+        "uniqueIdentifiers": [
+          "Obsidian-like glass",
+          "Bioluminescent lichen",
+          "Flower-like iris mechanism",
+          "Geodesic geometry"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "main entrance",
+          "description": "A large, circular iris door cracked open like a flower."
+        }
+      ],
+      "dominantElements": [
+        "Geodesic dome",
+        "Black glass exterior",
+        "Glowing white lichen",
+        "Cracked iris door"
+      ],
+      "uniqueIdentifiers": [
+        "Obsidian-like glass",
+        "Bioluminescent lichen",
+        "Flower-like iris mechanism",
+        "Geodesic geometry"
+      ],
+      "primaryMedia": "media-1765791267517-8t0c3hsln"
     }
   },
   "views": {},
@@ -3750,6 +3892,23 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765791253658-4rckpb8h0",
+      "type": "host",
+      "children": [
+        {
+          "id": "84aff295-639f-43a1-99f6-7230bf7e891c",
+          "type": "region",
+          "children": [
+            {
+              "id": "40f9588c-80d4-43ce-b2f3-746d9dd21073",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -3760,6 +3919,7 @@
     "loc-1765619807528-4b8x8txdt",
     "loc-1765707481919-2zjxghd55",
     "loc-1765787933815-0por9eiib",
-    "loc-1765790561637-7v1qxx00x"
+    "loc-1765790561637-7v1qxx00x",
+    "loc-1765791253658-4rckpb8h0"
   ]
 }
