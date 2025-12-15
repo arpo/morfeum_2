@@ -64,12 +64,14 @@ export interface NodeDNA {
   // Inheritable Style Attributes (can be null in children if inherited from parent)
   architectural_tone?: string;      // Architectural style (e.g., 'industrial metallic')
   cultural_tone?: string;           // Social/functional identity
-  materials_base?: string;          // Material palette/style
-  mood_baseline?: string;           // Emotional baseline
   palette_bias?: string;            // Color style/families
-  soundscape_base?: string;         // Ambient sound style
   flora_base?: string;              // Plant life types, or 'None'
   fauna_base?: string;              // Animal life types, or 'None'
+  
+  // DEPRECATED - kept for backward compatibility with existing data
+  materials_base?: string;          // Use 'materials' instead
+  mood_baseline?: string;           // Use 'mood' instead
+  soundscape_base?: string;         // Use 'sounds' instead
 }
 
 /**

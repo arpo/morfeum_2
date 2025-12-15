@@ -32,10 +32,7 @@ export const DNA_CASCADING_FIELDS = {
   genre: 'World genre (cyberpunk, fantasy, etc.) - HOST ONLY',
   architectural_tone: 'Style phrase (e.g., "weathered Victorian with Gothic arches")',
   cultural_tone: 'Who uses this, what purpose',
-  materials_base: 'Material palette style',
-  mood_baseline: 'Emotional baseline',
   palette_bias: 'Color families defining this space',
-  soundscape_base: 'Ambient sound style',
   flora_base: 'Plant life or "None"',
   fauna_base: 'Animal life or "None"'
 } as const;
@@ -105,25 +102,19 @@ export function buildDNAFieldsString(options: DNATemplateOptions): string {
       : `"genre": null,`;
   }
 
-  // Cascading fields
+  // Cascading fields (reduced - mood/materials/sounds are in scene fields)
   const cascadingFields = short ? `
     ${genreField}
     "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone}",
     "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone}",
-    "materials_base": "${DNA_CASCADING_FIELDS.materials_base}",
-    "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline}",
     "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias}",
-    "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base}",
     "flora_base": "${DNA_CASCADING_FIELDS.flora_base}",
     "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base}"` : `
     // === CASCADING STYLE ATTRIBUTES (optional - can be null if inherited) ===
     ${genreField}
     "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null to inherit",
     "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null to inherit",
-    "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null to inherit",
-    "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null to inherit",
     "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null to inherit",
-    "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null to inherit",
     "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null to inherit",
     "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null to inherit"`;
 

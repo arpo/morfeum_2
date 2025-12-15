@@ -131,7 +131,7 @@ OUTPUT JSON STRUCTURE:
     "name": "Location Name",
     "description": "2-3 sentences about this location",
     
-    // Structural fields
+    // Structural fields (locations DO have these)
     "navigableElements": [{"type": "door|path|gate", "position": "location", "description": "what it is"}],
     "dominantElements": ["Major features visible from outside"],
     "uniqueIdentifiers": ["Distinctive exterior features"],
@@ -160,10 +160,7 @@ OUTPUT JSON STRUCTURE:
       "genre": null,
       "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null",
       "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null",
-      "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null",
-      "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null",
       "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null",
-      "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null",
       "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null",
       "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null"
     }
@@ -172,10 +169,7 @@ OUTPUT JSON STRUCTURE:
     "name": "Region Name",
     "description": "2-3 sentences about this region/district",
     
-    // Structural fields
-    "navigableElements": [],
-    "dominantElements": ["Regional landmarks"],
-    "uniqueIdentifiers": ["Distinctive regional features"],
+    // NOTE: Regions do NOT have navigableElements, dominantElements, uniqueIdentifiers
     "searchDesc": "75-100 char description",
     "slug": "kebab-case-name",
     
@@ -201,10 +195,7 @@ OUTPUT JSON STRUCTURE:
       "genre": null,
       "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null",
       "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null",
-      "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null",
-      "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null",
       "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null",
-      "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null",
       "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null",
       "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null"
     }
@@ -213,10 +204,7 @@ OUTPUT JSON STRUCTURE:
     "name": "Host Name",
     "description": "2-3 sentences about this world/city",
     
-    // Structural fields
-    "navigableElements": [],
-    "dominantElements": ["World-level landmarks"],
-    "uniqueIdentifiers": ["Distinctive world features"],
+    // NOTE: Hosts do NOT have navigableElements, dominantElements, uniqueIdentifiers
     "searchDesc": "75-100 char description",
     "slug": "kebab-case-name",
     
@@ -242,10 +230,7 @@ OUTPUT JSON STRUCTURE:
       "genre": "${DNA_CASCADING_FIELDS.genre}",
       "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone}",
       "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone}",
-      "materials_base": "${DNA_CASCADING_FIELDS.materials_base}",
-      "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline}",
       "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias}",
-      "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base}",
       "flora_base": "${DNA_CASCADING_FIELDS.flora_base}",
       "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base}"
     }

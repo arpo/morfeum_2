@@ -1,1953 +1,243 @@
 {
   "nodes": {
-    "loc-1765619807528-4b8x8txdt": {
-      "id": "loc-1765619807528-4b8x8txdt",
+    "loc-1765806622914-ydat5badj": {
+      "id": "loc-1765806622914-ydat5badj",
       "type": "host",
-      "name": "Sweden",
+      "name": "Göteborg",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A land of contrasts, featuring dense evergreen and deciduous forests, sparkling blue lakes, and rugged, often rocky coastlines dotted with islands. Settlements range from modern urban centers to traditional wooden villages.",
-        "colorsAndLighting": "A palette dominated by greens and blues of nature, with the grey and brown of rock and earth. Seasonal light varies dramatically, from the long twilight of summer to the deep, soft light of winter, often enhanced by the aurora borealis in the north.",
-        "atmosphere": "Crisp, clean air, often carrying the scent of pine, damp earth, or the salty tang of the sea. Temperatures fluctuate significantly between seasons. A general sense of order and respect for nature pervades.",
-        "materials": "Extensive use of wood in construction, often complemented by stone and modern materials in urban areas. Natural textures and materials are highly valued.",
-        "mood": "A blend of serene natural beauty, quiet contemplation, and modern functionality. It evokes a sense of resilience, innovation, and a deep connection to the environment.",
-        "sounds": "Wind in trees, lapping water, distant bird calls, crackling fire, occasional urban hum",
-        "primary_surfaces": "Dense forests, expansive lakes, rocky shorelines",
-        "secondary_surfaces": "Wooden structures, cultivated fields (in the south)",
-        "accent_features": "Coastal archipelagos, dramatic fjords (in the west), glacial landforms",
-        "dominant": "Forest Greens",
-        "secondary": "Lake Blues",
-        "accent": "Grey (rock), Brown (earth/wood)",
-        "ambient": "Natural daylight, often diffused or dramatic depending on season and latitude",
-        "genre": "Nature/Simulation",
-        "architectural_tone": "Modern Scandinavian, functional, minimalist, with strong roots in traditional vernacular architecture.",
-        "cultural_tone": "A society that values nature, innovation, social welfare, and a balance between tradition and modernity.",
-        "materials_base": "Wood, Stone, and Modern Composites",
-        "mood_baseline": "Serene, functional, resilient",
-        "palette_bias": "Natural greens, blues, greys, and earthy browns, with clean whites and wood tones.",
-        "soundscape_base": "Nature-centric, with elements of quiet urban life",
-        "flora_base": "Boreal forests, deciduous woodlands, coastal flora",
-        "fauna_base": "Moose, reindeer, various bird species, marine life"
+        "looks": "A city of contrasts, featuring grand 19th-century architecture, functional modernist buildings, and expansive industrial harbor areas. Waterways and canals are prominent, reflecting a strong maritime identity. Diverse urban districts offer varying architectural styles.",
+        "colorsAndLighting": "A palette of coastal greys and blues, punctuated by the earthy tones of brick and the industrial hues of its harbor. Natural daylight is often diffused by cloud cover, and city lights create a warm glow at night.",
+        "atmosphere": "The air is fresh, carrying the scent of the sea, mixed with the sounds of urban life and industrial activity. There's a pervasive sense of openness and a steady, pragmatic energy.",
+        "materials": "Brick, stone, concrete, and steel are prevalent. Wood is common in older structures and harbor areas. Modern construction utilizes glass and steel.",
+        "mood": "Pragmatic, industrious, and forward-thinking, with an undercurrent of maritime calm and creative ambition.",
+        "sounds": "Ship horns, seagulls, tram bells, ocean breeze, city bustle.",
+        "primary_surfaces": "Brick facades, concrete structures",
+        "secondary_surfaces": "Harbor metal, maritime wood",
+        "accent_features": "Canal bridges, public sculptures, industrial cranes",
+        "dominant": "Coastal grey: urban facades",
+        "secondary": "Maritime blue: water and sky",
+        "accent": "Industrial orange: port machinery",
+        "ambient": "Cool, diffused light",
+        "genre": "Urban Realism",
+        "architectural_tone": "Nordic Modernism, Industrial Maritime, Historic Brick",
+        "cultural_tone": "Port city, industrial heritage, thriving arts and music scene",
+        "palette_bias": "Cool blues and greys, industrial neutrals, muted earth tones",
+        "flora_base": "Common city trees and coastal grasses",
+        "fauna_base": "Seagulls, pigeons, urban wildlife"
       },
-      "description": "A Scandinavian country renowned for its vast boreal forests, numerous lakes, and long, diverse coastline. It is known for its innovative design, strong welfare system, and rich cultural heritage blending modernity with tradition.",
-      "searchDesc": "Discover the natural beauty and cultural richness of Sweden, from its vast forests to its coastal archipelagos.",
-      "slug": "sweden",
+      "description": "A major port city in Sweden, Göteborg is characterized by its industrial heritage, maritime connections, and a thriving, progressive cultural scene. It blends historic charm with modern innovation, offering a dynamic urban experience.",
+      "searchDesc": "Swedish port city with industrial roots, vibrant culture, and maritime influence.",
+      "slug": "goteborg",
       "structure": {
-        "spatialLayout": "Vast expanses of natural terrain punctuated by human settlements. Characterized by a strong presence of water bodies and dense woodland.",
-        "navigableElements": [
-          "Forests",
-          "Lakes",
-          "Coastline",
-          "Cities",
-          "Villages"
-        ],
-        "dominantElements": [
-          "Vast forests",
-          "Numerous lakes",
-          "Extensive coastline"
-        ],
-        "uniqueIdentifiers": [
-          "Midsummer celebrations",
-          "Northern Lights (in the north)",
-          "Archipelago landscapes"
-        ]
-      },
-      "navigableElements": [
-        "Forests",
-        "Lakes",
-        "Coastline",
-        "Cities",
-        "Villages"
-      ],
-      "dominantElements": [
-        "Vast forests",
-        "Numerous lakes",
-        "Extensive coastline"
-      ],
-      "uniqueIdentifiers": [
-        "Midsummer celebrations",
-        "Northern Lights (in the north)",
-        "Archipelago landscapes"
-      ],
-      "primaryMedia": "media-1765790740175-56709t43c"
+        "spatialLayout": "A well-planned urban grid with significant waterfront development, interspersed with green spaces and distinct cultural districts. The layout balances open maritime views with dense city blocks."
+      }
     },
-    "51298756-4643-4f14-8b19-d56590948794": {
-      "id": "51298756-4643-4f14-8b19-d56590948794",
+    "a47c6a59-df5f-4ab5-b3e4-351cc8a17da4": {
+      "id": "a47c6a59-df5f-4ab5-b3e4-351cc8a17da4",
       "type": "region",
-      "name": "West Skåne",
+      "name": "Ringön",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The landscape is dominated by gently rolling hills covered in patchwork fields of green and gold, interspersed with deciduous forests and occasional clusters of traditional red-painted farmhouses. The architecture features prominent gabled roofs and wooden construction.",
-        "colorsAndLighting": "Dominated by earthy greens and browns of fields and forests, with splashes of deep red from buildings. Light is often soft and diffused, with long shadows cast during the golden hours, especially near the coast.",
-        "atmosphere": "The air carries the scent of fertile soil, blooming flowers in spring and summer, and the crispness of the sea breeze near the coast. Gentle winds rustle through the fields and trees, creating a peaceful, natural ambiance. Temperatures vary from mild summers to cool, damp winters.",
-        "materials": "Predominantly natural materials like wood for buildings and fences, stone for foundations and field walls, and rich soil for the farmland. Everything appears well-maintained but weathered by time and seasons.",
-        "mood": "Evokes a sense of pastoral tranquility, historical continuity, and serene natural beauty. It feels peaceful and deeply rooted in its agricultural heritage.",
-        "sounds": "Rustling leaves, distant bird calls, lowing cattle, gentle wind, lapping waves (coastal)",
-        "primary_surfaces": "Expansive cultivated fields, weathered wooden structures",
-        "secondary_surfaces": "Stone foundations, dense tree lines, sandy or rocky coastlines",
-        "accent_features": "Distant church spires, stone farm walls, coastal bluffs",
-        "dominant": "Earthy Greens (fields, forests)",
-        "secondary": "Deep Red (farmhouses, barns)",
-        "accent": "Off-White (window frames), Dark Brown (roofs, fences)",
-        "ambient": "Soft daylight, occasional coastal mist",
+        "looks": "A sprawling industrial landscape of weathered brick and corrugated iron structures. Large, cavernous warehouses and older factory buildings are interspersed with newer, artfully repurposed spaces. The overall impression is one of organic growth and creative adaptation.",
+        "colorsAndLighting": "Dominant industrial greys and browns of aged metal and brick, often softened by the diffused glow of workshop lights and the warmer, more inviting lights of emerging nightlife spots. Shadows are deep and varied.",
+        "atmosphere": "The air carries a mix of industrial grit and creative energy. You can feel the hum of workshops during the day, transitioning to a pulse of music and chatter as night falls. There's a sense of rough authenticity and ongoing transformation.",
+        "materials": "Primarily aged brick, rusted corrugated metal, and sturdy, unvarnished wood. Concrete floors are common, and repurposed industrial fixtures are integrated throughout.",
+        "mood": "Gritty, creative, and evolving. It evokes a sense of raw potential and bohemian charm within an industrial shell.",
+        "sounds": "Distant machinery, ambient city hum, occasional bursts of music, creative chatter.",
+        "primary_surfaces": "Aged brickwork, weathered corrugated metal",
+        "secondary_surfaces": "Concrete floors, raw wood beams",
+        "accent_features": "Street art, exposed industrial piping, unique signage",
+        "dominant": "Charcoal grey: aged metal and brick",
+        "secondary": "Rust brown: metal accents and signage",
+        "accent": "Industrial yellow: workshop lighting",
+        "ambient": "Muted, industrial light",
         "genre": null,
-        "architectural_tone": "Traditional Swedish rural vernacular architecture with elements of agricultural buildings and homesteads.",
-        "cultural_tone": "Homestead, farm building, dwelling for rural inhabitants; a place deeply connected to agriculture and local traditions.",
-        "materials_base": "Wood and Stone",
-        "mood_baseline": "Peaceful, grounded, enduring",
-        "palette_bias": "Earthy tones, deep reds, natural greens",
-        "soundscape_base": "Rural natural sounds",
-        "flora_base": "Agricultural crops, deciduous trees, coastal vegetation",
-        "fauna_base": "Farm animals, local birds, coastal wildlife"
+        "architectural_tone": "Repurposed industrial, raw urban",
+        "cultural_tone": "Artist studios, craft workshops, emerging nightlife",
+        "palette_bias": "Industrial neutrals with pops of artistic color",
+        "flora_base": "None",
+        "fauna_base": "None"
       },
-      "description": "A region in southern Sweden characterized by rolling hills, fertile farmland, and a picturesque coastline along the Öresund. It's known for its historic estates, charming villages, and abundant natural beauty.",
-      "searchDesc": "Explore the rolling hills and historic charm of West Skåne, Sweden's picturesque southern region.",
-      "slug": "west-skane",
+      "description": "An industrial island in Gothenburg, Ringön has transformed into a vibrant hub for artists, craftspeople, and a burgeoning nightlife. Its gritty, repurposed warehouses now house studios, galleries, and unique venues.",
+      "searchDesc": "Industrial island district in Gothenburg, known for art, crafts, and evolving nightlife.",
+      "slug": "ringon",
       "structure": {
-        "spatialLayout": "Expansive, open agricultural plains broken by clusters of woodlands and villages. The coastline offers more varied terrain with cliffs and beaches.",
-        "dominantElements": [
-          "Historic estates",
-          "Farmland",
-          "Coastal areas"
-        ],
-        "uniqueIdentifiers": [
-          "Rolling agricultural landscapes",
-          "Öresund coastline"
-        ]
-      },
-      "dominantElements": [
-        "Historic estates",
-        "Farmland",
-        "Coastal areas"
-      ],
-      "uniqueIdentifiers": [
-        "Rolling agricultural landscapes",
-        "Öresund coastline"
-      ],
-      "primaryMedia": "media-1765620002605-rs7gdki3x"
+        "spatialLayout": "A network of interconnected streets and alleys weaving through large, open-plan industrial buildings and smaller workshop units. Depth is created by the interplay of massive structures and human-scaled interventions."
+      }
     },
-    "381bc8b2-6b22-4510-8fca-37bad0f3e9dc": {
-      "id": "381bc8b2-6b22-4510-8fca-37bad0f3e9dc",
+    "f167be57-fd19-4388-8711-83e11db03357": {
+      "id": "f167be57-fd19-4388-8711-83e11db03357",
       "type": "location",
-      "name": "Brännan",
+      "name": "The Circuit Lounge",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The facade presents a classic rural Swedish aesthetic, likely a single-story or 1.5-story building with a prominent gabled roof. The primary material is wood, often painted in traditional colors, with functional windows and a sturdy entrance.",
-        "colorsAndLighting": "Dominated by deep red or ochre facade colors, contrasted by white or cream window frames and dark roof shingles. Natural daylight, potentially dappled by nearby trees, would cast gentle shadows.",
-        "atmosphere": "The air would likely smell faintly of wood smoke and damp earth. Temperatures would reflect the Swedish climate, varying from crisp coolness to mild warmth. A sense of stillness, broken only by natural sounds, would prevail.",
-        "materials": "Mainly weathered, painted wood siding and wooden shingles on the roof. A foundation of local fieldstone or rough-hewn stone would be typical, showing signs of age and exposure.",
-        "mood": "Evokes a sense of rustic simplicity, history, and quiet resilience. It feels grounded and enduring, a reflection of its rural purpose.",
-        "sounds": "Distant birdsong, wind rustling leaves, creaking wood, faint animal sounds.",
-        "primary_surfaces": "Weathered red wooden planks, dark slate or wooden shingles",
-        "secondary_surfaces": "Rough fieldstone foundation, whitewashed window frames, dark wooden door",
-        "accent_features": "Ornate, multi-paned windows, sturdy wooden door with visible hardware",
-        "dominant": "Deep Red (facade)",
-        "secondary": "Off-White (window frames)",
-        "accent": "Dark Brown/Black (door, roof)",
-        "ambient": "Natural daylight, slightly cool tone",
+        "looks": "The exterior is a brutalist concrete structure, stark and imposing. Industrial metal grilles cover small, high windows, hinting at the darkness within. A singular, heavy door serves as the entrance, marked by a distinctive neon glow.",
+        "colorsAndLighting": "Dominated by deep blacks and greys of concrete and metal, punctuated by vibrant neon purples and blues. Light spills out sparsely from behind the grilles, casting long, distorted shadows.",
+        "atmosphere": "The air feels cool and still, carrying the muffled thrum of deep bass. A sense of anticipation hangs heavy, drawing visitors into the electric embrace of the lounge.",
+        "materials": "Rough, unpainted concrete forms the primary structure, contrasted with weathered, dark steel for doors and window coverings. Subtle touches of worn metal add to the industrial aesthetic.",
+        "mood": "Mysterious and alluring, evoking a sense of urban escapism and underground energy.",
+        "sounds": "Muffled bass, distant industrial hum, faint electronic music pulses",
+        "primary_surfaces": "raw concrete walls",
+        "secondary_surfaces": "darkened steel plating, grimy glass",
+        "accent_features": "pulsing neon signs, circuit board patterns",
+        "dominant": "charcoal grey: facade",
+        "secondary": "midnight blue: neon accents",
+        "accent": "vivid purple: circuit patterns",
+        "ambient": "very dim",
         "genre": null,
-        "architectural_tone": "Traditional Swedish rural vernacular architecture",
-        "cultural_tone": "Homestead, farm building, dwelling for rural inhabitants",
-        "materials_base": "Wood and Stone",
-        "mood_baseline": "Quiet, enduring, rustic",
-        "palette_bias": "Earth tones, reds, off-whites",
-        "soundscape_base": "Natural rural ambiance",
+        "architectural_tone": "brutalist industrial with neon embellishments",
+        "cultural_tone": "urban nightlife, techno music subculture",
+        "palette_bias": "cool, dark, electric",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A specific locality within West Skåne.",
-      "searchDesc": "Rural Swedish farmstead facade in West Skåne, featuring red-painted wood, a gabled roof, and weathered details.",
-      "slug": "br-nnan",
+      "description": "A dimly lit techno bar with pulsing neon lights and industrial decor. EXTERIOR VIEW.",
+      "searchDesc": "Dimly lit techno bar on Ringön, Göteborg. Features industrial decor and pulsing neon lights. Exterior view.",
+      "slug": "the-circuit-lounge",
       "structure": {
-        "spatialLayout": "A rectangular or L-shaped footprint typical of older farm buildings, with a clear front facade oriented towards a yard or path.",
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center",
-            "description": "A sturdy, weathered wooden door, possibly painted red or dark brown."
-          },
-          {
-            "type": "path",
-            "position": "leading to entrance",
-            "description": "A worn, gravel or dirt path."
-          }
-        ],
-        "dominantElements": [
-          "Red-painted wooden facade",
-          "Gabled roof",
-          "Small, multi-paned windows",
-          "Stone foundation"
-        ],
-        "uniqueIdentifiers": [
-          "Whitewashed window frames",
-          "A prominent chimney",
-          "Dormer windows",
-          "Weathered wooden shutters"
-        ]
+        "spatialLayout": "The facade is a solid, unyielding block, with a recessed entrance. The overall impression is of a tightly sealed, self-contained space."
       },
       "navigableElements": [
         {
           "type": "door",
           "position": "center",
-          "description": "A sturdy, weathered wooden door, possibly painted red or dark brown."
-        },
-        {
-          "type": "path",
-          "position": "leading to entrance",
-          "description": "A worn, gravel or dirt path."
+          "description": "a heavy, dark metal door with a small, illuminated neon sign above it"
         }
       ],
       "dominantElements": [
-        "Red-painted wooden facade",
-        "Gabled roof",
-        "Small, multi-paned windows",
-        "Stone foundation"
+        "brutalist concrete facade",
+        "prominent neon signage",
+        "industrial metal accents",
+        "dimly lit interior visible through windows"
       ],
       "uniqueIdentifiers": [
-        "Whitewashed window frames",
-        "A prominent chimney",
-        "Dormer windows",
-        "Weathered wooden shutters"
+        "glowing purple circuit board pattern on the facade",
+        "series of small, grimy windows",
+        "faint bass vibrations emanating from within",
+        "graffiti tags stylized like electric current"
       ],
-      "primaryMedia": "media-1765619821829-kgcny9jc9"
+      "primaryMedia": "media-1765806647160-hc5np0shb"
     },
-    "niche-1765619959042-v1o5rxw0q": {
-      "id": "niche-1765619959042-v1o5rxw0q",
+    "niche-1765806770450-fl06oxpgl": {
+      "id": "niche-1765806770450-fl06oxpgl",
       "type": "niche",
-      "name": "Homestead Hallway",
+      "name": "The Circuit Lounge Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior presents a simple hall space, dominated by the clean expanse of white wallpaper. The scale and proportion suggest a functional passage, free from ornate embellishments. Lighting is natural and casts soft illumination.",
-        "colorsAndLighting": "The dominant color is off-white from the wallpaper. Natural daylight filters in, creating gentle shadows and an overall cool, bright ambiance.",
-        "atmosphere": "The air is still and neutral, carrying no distinct scents beyond the faint presence of aged paper and plaster. The temperature is moderate, reflecting the indoor climate. A sense of quietude pervades the space.",
-        "materials": "The primary material visible is smooth, matte white wallpaper covering the walls. Beneath this, the underlying structure would likely be wood or plaster, consistent with traditional building methods.",
-        "mood": "Evokes a sense of functional simplicity, calm, and understated cleanliness. It feels like a quiet transition space, ready to be imbued with further character.",
-        "sounds": "Muted footsteps, ambient quiet, faint drafts",
-        "spatialLayout": "A linear, functional hall space, likely with moderate depth and a clear line of sight.",
-        "primary_surfaces": "Smooth, matte white wallpaper",
-        "secondary_surfaces": "Underlying plaster or wooden wall structure",
-        "accent_features": "Ornate, multi-paned windows, sturdy wooden door with visible hardware",
-        "dominant": "Off-White (walls)",
-        "secondary": "Neutral (underlying structure)",
-        "accent": "Dark Brown/Black (door, roof)",
-        "ambient": "Natural daylight, slightly cool tone",
+        "looks": "The interior is characterized by raw, unpainted concrete walls forming the primary structure. Darkened steel plating is visible on secondary surfaces, and grimy glass peeks through industrial metal grilles. Accentuated by pulsing neon signs and intricate circuit board patterns.",
+        "colorsAndLighting": "Dominated by deep charcoals and blacks, with vibrant neon accents of midnight blue and vivid purple. Ambient light is very dim, casting long, distorted shadows from the sparse illumination.",
+        "atmosphere": "The air feels cool and still, with the muffled thrum of deep bass resonating. A sense of anticipation hangs heavy, drawing visitors into the electric embrace of the lounge.",
+        "materials": "Rough, unpainted concrete forms the main surfaces, contrasted with weathered, dark steel plating. Subtle touches of worn metal add to the industrial aesthetic.",
+        "mood": "Mysterious and alluring, evoking a sense of urban escapism and underground energy.",
+        "sounds": "Muffled deep bass, static hum, distant chatter",
+        "spatialLayout": "The space is likely enclosed and somewhat cavernous, with a focus on creating an intimate yet expansive feel for nightlife.",
+        "primary_surfaces": "raw concrete walls",
+        "secondary_surfaces": "darkened steel plating, grimy glass",
+        "accent_features": "pulsing neon signs, circuit board patterns",
+        "dominant": "charcoal grey: walls",
+        "secondary": "midnight blue: neon accents",
+        "accent": "vivid purple: circuit patterns",
+        "ambient": "very dim",
         "genre": null,
-        "architectural_tone": "Traditional Swedish rural vernacular architecture",
-        "cultural_tone": "Homestead, farm building, dwelling for rural inhabitants",
-        "materials_base": "Wood and Stone",
-        "mood_baseline": "Quiet, enduring, rustic",
-        "palette_bias": "Earth tones, reds, off-whites",
-        "soundscape_base": "Natural rural ambiance",
+        "architectural_tone": "brutalist industrial with neon embellishments",
+        "cultural_tone": "urban nightlife, techno music subculture",
+        "palette_bias": "cool, dark, electric",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765619959040-rbi1dao28",
-      "description": "An interior hallway space within a rural Swedish homestead, characterized by bright white wallpaper.",
+      "primaryMedia": "media-1765806770449-a3iz1ity0",
+      "description": "The interior of The Circuit Lounge, a vibrant space within the Ringön region, designed for urban nightlife and techno music subculture. It features a stark, brutalist concrete structure with industrial metal grilles and minimal openings, illuminated by pulsing neon signs and circuit board patterns, creating an immersive and imposing atmosphere.",
       "structure": {
-        "form": "rectangular",
-        "roofType": "pitched",
-        "scale": "medium",
-        "orientation": "horizontal",
-        "openings": "open-passages",
-        "openingShape": "rectangular",
-        "functionalType": "residential",
-        "spatialLayout": "A linear passage, likely connecting rooms within a rural dwelling. The white wallpaper creates a bright and simple aesthetic.",
-        "requiredElements": [
-          "white wallpaper"
-        ],
-        "suggestedFixtures": [
-          "Wooden bench",
-          "Coat rack",
-          "Hallway runner rug",
-          "Wall-mounted mirror",
-          "Period-appropriate sconces"
-        ],
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "left wall",
-            "description": "Sturdy wooden door leading to an adjacent room."
-          },
-          {
-            "type": "door",
-            "position": "right wall",
-            "description": "Another wooden door connecting to a different part of the house."
-          },
-          {
-            "type": "door",
-            "position": "back wall",
-            "description": "A wider opening leading towards the main living area."
-          }
-        ],
-        "dominantElements": [
-          "White wallpapered walls",
-          "Wooden floorboards",
-          "Pitched ceiling",
-          "Interior doors"
-        ],
-        "uniqueIdentifiers": [
-          "Crisp white walls evoking a clean homestead feel",
-          "The simple, functional layout of a traditional hallway"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "Sturdy wooden door leading to an adjacent room."
-        },
-        {
-          "type": "door",
-          "position": "right wall",
-          "description": "Another wooden door connecting to a different part of the house."
-        },
-        {
-          "type": "door",
-          "position": "back wall",
-          "description": "A wider opening leading towards the main living area."
-        }
-      ],
-      "dominantElements": [
-        "White wallpapered walls",
-        "Wooden floorboards",
-        "Pitched ceiling",
-        "Interior doors"
-      ],
-      "uniqueIdentifiers": [
-        "Crisp white walls evoking a clean homestead feel",
-        "The simple, functional layout of a traditional hallway"
-      ],
-      "searchDesc": "Interior hall with white wallpaper in Brännan.",
-      "slug": "interior-of-br-nnan"
-    },
-    "niche-1765623518448-w3rpugbyy": {
-      "id": "niche-1765623518448-w3rpugbyy",
-      "type": "niche",
-      "name": "The Attic Portal",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The attic is a compact, low-ceilinged space beneath a gabled roof, filled with stored items and crisscrossed by wooden rafters. Dust motes dance in the limited light, highlighting the rough-hewn timber construction.  At its heart lies an ethereal, self-contained portal.",
-        "colorsAndLighting": "Dim, natural light filters through a small, perhaps grimy, window, casting long shadows. The dominant colors are muted browns and grays of aged wood and dust, starkly contrasted by the luminescent glow of the portal.",
-        "atmosphere": "The air is heavy with the scent of old wood, dust, and a faint, indefinable scent emanating from the portal. The temperature is cool and still, with the silence broken only by the creaks of the old building and the subtle hum of the portal.",
-        "materials": "Predominantly weathered, rough-hewn wooden planks and exposed timber beams form the structure. Cobwebs drape across forgotten objects, adding to the sense of disuse and mystery. The portal itself appears to be made of pure, shimmering light.",
-        "mood": "Evokes a strong sense of mystery, hidden potential, and quiet abandonment. It is a place of secrets, both past and future, holding a profound sense of otherworldliness.",
-        "sounds": "Dusty silence, creaking wood, faint portal hum",
-        "spatialLayout": "A cramped, triangular space defined by the attic's roofline, with a central focus on the portal. Storage clutter creates a sense of depth and hidden corners.",
-        "primary_surfaces": "Weathered wooden planks, exposed timber beams",
-        "secondary_surfaces": "Cobwebs, dust",
-        "accent_features": "Shimmering, otherworldly portal",
-        "dominant": "Muted Brown (aged wood, rafters)",
-        "secondary": "Off-White (dust, cobwebs)",
-        "accent": "Luminescent Glow (portal)",
-        "ambient": "Slightly cool, dim natural light",
-        "genre": null,
-        "architectural_tone": "null",
-        "cultural_tone": "null",
-        "materials_base": "null",
-        "mood_baseline": "null",
-        "palette_bias": "null",
-        "soundscape_base": "null",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765623518446-4fiys4ht1",
-      "description": "A cramped attic space, hinting at secrets and a hidden passage to another realm, built within a rustic Swedish homestead.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "pitched",
-        "scale": "small",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "residential",
-        "spatialLayout": "This small, compact attic space is characterized by sloped ceilings and exposed structural beams. A singular, small window offers limited natural light, and a mysterious portal is the focal point.",
-        "requiredElements": [
-          "secret portal to another world"
-        ],
-        "suggestedFixtures": [
-          "dusty storage chests",
-          "cobwebs",
-          "old forgotten furniture",
-          "exposed wooden beams",
-          "a small, grime-covered window"
-        ],
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center",
-            "description": "A simple wooden door leading into the attic."
-          },
-          {
-            "type": "passage",
-            "position": "back wall",
-            "description": "The shimmering, otherworldly portal, appearing as a glowing rift."
-          }
-        ],
-        "dominantElements": [
-          "sloped ceilings",
-          "exposed wooden beams",
-          "the secret portal"
-        ],
-        "uniqueIdentifiers": [
-          "The secret portal itself",
-          "a sense of forgotten history",
-          "dusty, aged atmosphere"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center",
-          "description": "A simple wooden door leading into the attic."
-        },
-        {
-          "type": "passage",
-          "position": "back wall",
-          "description": "The shimmering, otherworldly portal, appearing as a glowing rift."
-        }
-      ],
-      "dominantElements": [
-        "sloped ceilings",
-        "exposed wooden beams",
-        "the secret portal"
-      ],
-      "uniqueIdentifiers": [
-        "The secret portal itself",
-        "a sense of forgotten history",
-        "dusty, aged atmosphere"
-      ],
-      "searchDesc": "Attic with a hidden portal to another world, classic Swedish rural aesthetic.",
-      "slug": "the-attic-here-is-a-secret-portal-to-another-world"
-    },
-    "niche-1765623565059-9pnl87lb0": {
-      "id": "niche-1765623565059-9pnl87lb0",
-      "type": "niche",
-      "name": "The Attic Portal Chamber Balcony",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This is an open-air extension of the main building. It features a classic gabled roofline overhead (if covered) and a sturdy wooden railing. The floor is likely constructed from the same weathered wood as the facade.",
-        "colorsAndLighting": "Dominated by the deep red or ochre of the building's facade, with white or cream trim on any surrounding windows and dark accents on the railing. Natural daylight, possibly dappled, illuminates the space.",
-        "atmosphere": "The air is fresh and crisp, carrying faint scents of wood and damp earth. Temperatures reflect the outdoor climate. A sense of quiet observation and connection to the surroundings prevails.",
-        "materials": "Predominantly weathered, painted wood siding and planks for the flooring and railing. Any supporting elements would likely be constructed from similarly aged timber or stone.",
-        "mood": "Evokes rustic simplicity and a tranquil connection to the natural environment, offering a serene place for contemplation.",
-        "sounds": "Distant birdsong, rustling leaves, gentle breeze.",
-        "spatialLayout": "An open-air platform extending from the building, offering a defined but exposed space for viewing.",
-        "primary_surfaces": "Weathered red wooden planks (floor and railing)",
-        "secondary_surfaces": "Whitewashed window frames (if adjacent), dark wooden door",
-        "accent_features": "Ornate, multi-paned windows (if present on the adjacent wall), visible door hardware",
-        "dominant": "Deep Red (from facade, if visible)",
-        "secondary": "Off-White (window frames, if present)",
-        "accent": "Dark Brown/Black (railing, door)",
-        "ambient": "Natural daylight, slightly cool tone",
-        "genre": null,
-        "architectural_tone": "Traditional Swedish rural vernacular architecture",
-        "cultural_tone": "Homestead, farm building, dwelling for rural inhabitants",
-        "materials_base": "Wood and Stone",
-        "mood_baseline": "Quiet, enduring, rustic",
-        "palette_bias": "Earth tones, reds, off-whites",
-        "soundscape_base": "Natural rural ambiance",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765623565058-6mglyjpch",
-      "description": "An outdoor balcony space attached to the Attic Portal Chamber, offering a rustic, open-air extension of the dwelling.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "pitched",
-        "scale": "medium",
-        "orientation": "wide",
-        "openings": "open-passages",
-        "openingShape": "rectangular",
-        "functionalType": "residential",
-        "spatialLayout": "A horizontal, open platform extending from the main chamber, overlooking the surroundings. It is defined by a railing and offers a view outwards.",
-        "requiredElements": [
-          "balcony"
-        ],
-        "suggestedFixtures": [
-          "wooden railing",
-          "outdoor seating",
-          "lantern",
-          "weathered floorboards",
-          "planters with local flora"
-        ],
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center",
-            "description": "The main entrance from the Portal Chamber leading onto the balcony."
-          },
-          {
-            "type": "window",
-            "position": "rear",
-            "description": "Multi-paned windows from the Portal Chamber opening onto the balcony."
-          }
-        ],
-        "dominantElements": [
-          "open air",
-          "wooden deck",
-          "viewpoint",
-          "railing",
-          "gable roof extension"
-        ],
-        "uniqueIdentifiers": [
-          "extension from an attic chamber",
-          "rural farm building aesthetic",
-          "weathered wood construction"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center",
-          "description": "The main entrance from the Portal Chamber leading onto the balcony."
-        },
-        {
-          "type": "window",
-          "position": "rear",
-          "description": "Multi-paned windows from the Portal Chamber opening onto the balcony."
-        }
-      ],
-      "dominantElements": [
-        "open air",
-        "wooden deck",
-        "viewpoint",
-        "railing",
-        "gable roof extension"
-      ],
-      "uniqueIdentifiers": [
-        "extension from an attic chamber",
-        "rural farm building aesthetic",
-        "weathered wood construction"
-      ],
-      "searchDesc": "Outdoor balcony of a classic Swedish rural house, weathered wood, natural light.",
-      "slug": "out-on-the-balcony"
-    },
-    "loc-1765787933815-0por9eiib": {
-      "id": "loc-1765787933815-0por9eiib",
-      "type": "host",
-      "name": "Azure Coast",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Sprawling coastal landscapes dominated by natural formations and elegant, integrated architecture. Structures often feature organic shapes and a harmonious blend with the environment. Expansive ocean views are paramount.",
-        "colorsAndLighting": "Bathed in bright, clear sunlight, casting warm, dappled light. Dominated by brilliant blues of the ocean and sky, complemented by warm neutrals and vibrant natural greens.",
-        "atmosphere": "The air is warm and filled with the fresh scent of the sea. A gentle, refreshing breeze is ever-present, rustling through surrounding foliage. The atmosphere is profoundly peaceful, healthy, and invigorating.",
-        "materials": "A harmonious blend of natural and refined materials. Smooth, light-colored plasters, rough natural stone, and warm, weathered woods are common. Textures range from smooth to rugged.",
-        "mood": "Serene, tranquil, and aspirational. The environment evokes feelings of peace, relaxation, and sophisticated comfort, encouraging escape and rejuvenation.",
-        "sounds": "Gentle waves, distant seabirds, soft breeze, ambient nature",
-        "primary_surfaces": "Smooth white stucco, natural rock formations",
-        "secondary_surfaces": "Light wooden decks, woven fibers",
-        "accent_features": "Cascading vines, potted greenery, natural archways",
-        "dominant": "Brilliant blue (ocean, sky)",
-        "secondary": "White (stucco, architectural elements), Earth tones (rock, wood)",
-        "accent": "Vibrant green (flora), burnt orange (textiles)",
-        "ambient": "Bright, sun-drenched daylight",
-        "genre": "Luxury Coastal Retreat",
-        "architectural_tone": "Organic modern coastal with natural integration",
-        "cultural_tone": "High-end retreat for relaxation and entertainment",
-        "materials_base": "Stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "Peaceful, luxurious, aspirational",
-        "palette_bias": "Coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "Calm natural ambient sounds",
-        "flora_base": "Lush coastal and Mediterranean plants",
-        "fauna_base": "Seabirds, small coastal wildlife"
-      },
-      "description": "A tranquil stretch of coastline renowned for its serene beauty and luxurious retreats. The region is characterized by its brilliant blue waters, sun-drenched landscapes, and a pervasive sense of calm and sophistication.",
-      "searchDesc": "Serene coastal region with luxurious villas, pristine beaches, and brilliant blue waters.",
-      "slug": "azure-coast",
-      "structure": {
-        "spatialLayout": "Open, expansive spaces that seamlessly blend indoor and outdoor living. Views are directed towards the ocean, with a focus on natural light and air circulation.",
-        "dominantElements": [
-          "Expansive coastline",
-          "Luxury villas"
-        ],
-        "uniqueIdentifiers": [
-          "Pristine beaches",
-          "Clear azure waters"
-        ]
-      },
-      "dominantElements": [
-        "Expansive coastline",
-        "Luxury villas"
-      ],
-      "uniqueIdentifiers": [
-        "Pristine beaches",
-        "Clear azure waters"
-      ],
-      "primaryMedia": "media-1765790657293-0huujyk0a"
-    },
-    "cf58838f-433b-4125-a5d5-07d5d35f1133": {
-      "id": "cf58838f-433b-4125-a5d5-07d5d35f1133",
-      "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "772f39b3-5bfe-4df4-ac3c-0c46c1166bb0": {
-      "id": "772f39b3-5bfe-4df4-ac3c-0c46c1166bb0",
-      "type": "location",
-      "name": "The Serenity Villa",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The villa features organic, rounded forms of white stucco integrated with natural rock. It is multi-tiered with numerous dark-framed windows and arched doorways. Lush greenery cascades from rock formations and adorns the exterior.",
-        "colorsAndLighting": "The scene is bathed in bright, clear sunlight, creating dappled reflections on the light blue pool. Dominant colors are brilliant blue of the ocean, white stucco, and earthy tones of rock and wood.",
-        "atmosphere": "The air is warm and filled with the fresh scent of the sea. A gentle breeze rustles the leaves of the surrounding plants. The atmosphere is profoundly peaceful and luxurious.",
-        "materials": "Smooth, white stucco contrasts with rough, textured natural rock. Dark wood is used for window frames and an outdoor dining deck. Woven baskets and terra cotta pots add natural elements.",
-        "mood": "Serene, tranquil, and aspirational. The villa evokes feelings of peace, relaxation, and sophisticated comfort.",
-        "sounds": "Gentle waves, distant seagulls, soft breeze, faint clinking of glasses.",
-        "primary_surfaces": "smooth white stucco, rough natural rock",
-        "secondary_surfaces": "dark wood, light wood deck, woven textures",
-        "accent_features": "cascading green vines, potted cacti and greenery, decorative woven baskets",
-        "dominant": "white (stucco, seating)",
-        "secondary": "blue (ocean, pool), earth tones (rock, wood)",
-        "accent": "vibrant green (vines, plants), burnt orange (pillows)",
-        "ambient": "bright daylight, sunny",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "vines, cacti, potted greenery",
-        "fauna_base": "None"
-      },
-      "description": "A striking coastal retreat with organic, rounded white stucco walls seamlessly integrated with natural rock formations. It overlooks a vast expanse of calm, brilliant blue ocean under a clear, sunny sky. A sparkling light blue swimming pool sits in the foreground, reflecting the sun's dappled light. Adjacent is a wide, curved white seating area with pillows. Steps lead to various tiers of the structure. To the left, a natural rock archway frames the sea, with verdant vines cascading down its face. Beyond, on a wooden deck, is an outdoor dining setup surrounded by potted plants. The building features multi-layered dark-framed windows, some with closed wooden shutters, and arched doorways. Decorative woven baskets and potted cacti and greenery contribute to the tranquil, natural, and luxurious atmosphere. EXTERIOR VIEW.",
-      "searchDesc": "Organic white stucco villa with rock formations, pool, ocean views, and lush greenery.",
-      "slug": "the-serenity-villa",
-      "structure": {
-        "spatialLayout": "The villa is spread across multiple levels, connected by steps, creating depth and visual interest. It opens outwards to embrace the expansive ocean view.",
-        "navigableElements": [
-          {
-            "type": "stairs",
-            "position": "leading up the tiers of the villa",
-            "description": "graceful stone steps"
-          },
-          {
-            "type": "archway",
-            "position": "left side, framing the sea",
-            "description": "natural rock archway"
-          },
-          {
-            "type": "door",
-            "position": "various entrances",
-            "description": "arched doorways"
-          },
-          {
-            "type": "path",
-            "position": "leading to the dining area",
-            "description": "wooden deck path"
-          }
-        ],
-        "dominantElements": [
-          "rounded white stucco walls",
-          "natural rock formations",
-          "sparkling light blue swimming pool",
-          "vast blue ocean view"
-        ],
-        "uniqueIdentifiers": [
-          "cascading green vines on rock arch",
-          "multi-layered dark-framed windows",
-          "curved white seating area with pillows",
-          "decorative woven baskets"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "leading up the tiers of the villa",
-          "description": "graceful stone steps"
-        },
-        {
-          "type": "archway",
-          "position": "left side, framing the sea",
-          "description": "natural rock archway"
-        },
-        {
-          "type": "door",
-          "position": "various entrances",
-          "description": "arched doorways"
-        },
-        {
-          "type": "path",
-          "position": "leading to the dining area",
-          "description": "wooden deck path"
-        }
-      ],
-      "dominantElements": [
-        "rounded white stucco walls",
-        "natural rock formations",
-        "sparkling light blue swimming pool",
-        "vast blue ocean view"
-      ],
-      "uniqueIdentifiers": [
-        "cascading green vines on rock arch",
-        "multi-layered dark-framed windows",
-        "curved white seating area with pillows",
-        "decorative woven baskets"
-      ],
-      "primaryMedia": "media-1765787947199-fnh17cg72"
-    },
-    "niche-1765787993863-4jpqxu18f": {
-      "id": "niche-1765787993863-4jpqxu18f",
-      "type": "niche",
-      "name": "The Serenity Villa Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior continues the villa's organic, rounded forms with smooth white stucco. Natural rock is integrated into some wall sections and as decorative elements. Numerous dark-framed windows offer views of the exterior, and arched doorways lead to other spaces.",
-        "colorsAndLighting": "Bathed in bright, clear sunlight filtering through windows, the interior features dominant white stucco, complemented by earthy rock tones and accents of vibrant green from indoor plants. Dappled light creates dynamic reflections.",
-        "atmosphere": "The air feels warm and carries a faint, fresh scent of the sea. A gentle, almost imperceptible breeze might stir the leaves of carefully placed indoor plants, contributing to an atmosphere of profound peace and luxurious tranquility.",
-        "materials": "Smooth, white stucco forms the primary surfaces. Rough, textured natural rock is visible in select architectural elements. Dark wood is used for window frames and potential built-in shelving or decorative accents. Woven textures might appear in soft furnishings or decorative baskets.",
-        "mood": "Serene, tranquil, and aspirational. The interior evokes feelings of peace, relaxation, and sophisticated comfort, mirroring the outdoor ambiance.",
-        "sounds": "Subtle ocean sounds, gentle breeze, rustling leaves",
-        "spatialLayout": "The interior spaces are likely to feel open and airy, with curved walls and a sense of seamless flow between areas, echoing the organic architectural style.",
-        "primary_surfaces": "smooth white stucco, integrated rough natural rock",
-        "secondary_surfaces": "dark wood accents, woven textures",
-        "accent_features": "cascading green vines, potted cacti and greenery",
-        "dominant": "white (stucco walls and ceilings)",
-        "secondary": "earth tones (rock, wood)",
-        "accent": "vibrant green (indoor plants)",
-        "ambient": "bright daylight, sunny",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "vines, cacti, potted greenery",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765787993861-oxpqc9d8a",
-      "description": "The interior of The Serenity Villa, reflecting its parent's high-end retreat nature with organic forms and abundant natural light.",
-      "structure": {
-        "form": "organic",
+        "form": "irregular",
         "roofType": "flat",
         "scale": "large",
         "orientation": "wide",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "spatialLayout": "This expansive interior space is designed for relaxation and entertainment, featuring flowing, organic forms that seamlessly integrate with the villa's exterior aesthetic. Large, arched openings allow natural light to flood the space, connecting it visually with the lush surrounding greenery.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "Plush lounge seating",
-          "Low-profile coffee tables",
-          "Ambient floor lamps",
-          "Large decorative planters with greenery",
-          "Woven accent rugs",
-          "Integrated bar or refreshment station"
-        ],
-        "navigableElements": [
-          {
-            "type": "archway",
-            "position": "rear",
-            "description": "A grand arched entrance leading further into the villa."
-          },
-          {
-            "type": "passage",
-            "position": "left",
-            "description": "A wide passage opening to other areas of the villa."
-          },
-          {
-            "type": "passage",
-            "position": "right",
-            "description": "Another expansive passage connecting to adjacent rooms."
-          }
-        ],
-        "dominantElements": [
-          "Organic, flowing wall contours",
-          "Large arched doorways and windows",
-          "Integration of natural rock elements",
-          "Abundant natural light"
-        ],
-        "uniqueIdentifiers": [
-          "Seamless blend of interior and exterior aesthetics",
-          "Soft, rounded architectural forms",
-          "Emphasis on natural light and greenery"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [],
-        "suggested": [
-          "Plush lounge seating",
-          "Low-profile coffee tables",
-          "Ambient floor lamps",
-          "Large decorative planters with greenery",
-          "Woven accent rugs",
-          "Integrated bar or refreshment station"
-        ],
-        "placementNotes": [
-          "Furniture should be arranged to encourage conversation and relaxation.",
-          "Maintain a sense of openness and flow, avoiding cluttered arrangements.",
-          "Incorporate natural materials and textures consistent with the villa's aesthetic.",
-          "Place planters strategically to echo the exterior's cascading greenery."
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "rear",
-          "description": "A grand arched entrance leading further into the villa."
-        },
-        {
-          "type": "passage",
-          "position": "left",
-          "description": "A wide passage opening to other areas of the villa."
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "Another expansive passage connecting to adjacent rooms."
-        }
-      ],
-      "dominantElements": [
-        "Organic, flowing wall contours",
-        "Large arched doorways and windows",
-        "Integration of natural rock elements",
-        "Abundant natural light"
-      ],
-      "uniqueIdentifiers": [
-        "Seamless blend of interior and exterior aesthetics",
-        "Soft, rounded architectural forms",
-        "Emphasis on natural light and greenery"
-      ],
-      "searchDesc": "Luxurious white stucco interior with natural rock, organic forms, and lush indoor plants.",
-      "slug": "interior-of-the-serenity-villa"
-    },
-    "niche-1765788593164-ppvxrdqh0": {
-      "id": "niche-1765788593164-ppvxrdqh0",
-      "type": "niche",
-      "name": "Serenity Villa Spa",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The spa features smooth, white stucco walls seamlessly integrated with natural rock elements. Arched doorways lead to treatment areas, and plush seating areas offer tranquil views. Lush greenery spills from hidden alcoves, enhancing the organic feel.",
-        "colorsAndLighting": "Soft, diffused light illuminates the space, with dappled sunlight filtering through strategically placed openings. Dominant colors are the serene white of the stucco, complemented by the earthy tones of the rock and accents of vibrant green from the plants.",
-        "atmosphere": "The air is infused with calming scents, possibly of essential oils, and the gentle sound of trickling water. The atmosphere is profoundly peaceful and exclusive, designed for deep relaxation and sensory indulgence.",
-        "materials": "Smooth, cool white stucco forms the primary wall surfaces, contrasted by textured natural rock accents. Soft, luxurious fabrics are used for seating, and dark wood may be present in subtle decorative elements or fixture framing.",
-        "mood": "Serene, tranquil, and aspirational. The spa evokes feelings of absolute peace, sophisticated comfort, and rejuvenation.",
-        "sounds": "trickling water, hushed tranquility, soft ambient music",
-        "spatialLayout": "The spa is composed of intimate treatment rooms and a central relaxation area, with a sense of flowing space connected by arched doorways.",
-        "primary_surfaces": "smooth white stucco walls, textured natural rock accents",
-        "secondary_surfaces": "soft, luxurious fabrics, dark wood accents",
-        "accent_features": "cascading green vines, strategically placed potted greenery, discreet water features",
-        "dominant": "white (stucco walls, seating)",
-        "secondary": "earth tones (rock accents, subtle wood)",
-        "accent": "vibrant green (plants), muted blues (water)",
-        "ambient": "soft, diffused daylight",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "vines, cacti, potted greenery",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765788593164-etcvx5tfy",
-      "description": "An interior spa space within The Serenity Villa, designed for ultimate relaxation and rejuvenation, mirroring the villa's organic architectural style and high-end ambiance.",
-      "structure": {
-        "form": "organic",
-        "roofType": "arched",
-        "scale": "medium",
-        "orientation": "wide",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "spatialLayout": "A spacious, serene area with flowing organic forms and integrated natural elements, designed for relaxation and therapeutic treatments.",
-        "requiredElements": [
-          "spa"
-        ],
-        "suggestedFixtures": [
-          "massage tables",
-          "soaking tubs",
-          "steam room",
-          "sauna",
-          "relaxation loungers",
-          "water features"
-        ],
-        "navigableElements": [
-          {
-            "type": "archway",
-            "position": "center back",
-            "description": "An arched doorway leading deeper into the spa facilities."
-          },
-          {
-            "type": "passage",
-            "position": "right",
-            "description": "An opening to a relaxation area or treatment room."
-          },
-          {
-            "type": "passage",
-            "position": "left",
-            "description": "An opening to another treatment area or changing rooms."
-          }
-        ],
-        "dominantElements": [
-          "smooth white stucco walls",
-          "integrated natural rock features",
-          "arched doorways",
-          "dark-framed windows"
-        ],
-        "uniqueIdentifiers": [
-          "organic, rounded forms",
-          "integration of natural rock and greenery",
-          "high-end retreat atmosphere"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center back",
-          "description": "An arched doorway leading deeper into the spa facilities."
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "An opening to a relaxation area or treatment room."
-        },
-        {
-          "type": "passage",
-          "position": "left",
-          "description": "An opening to another treatment area or changing rooms."
-        }
-      ],
-      "dominantElements": [
-        "smooth white stucco walls",
-        "integrated natural rock features",
-        "arched doorways",
-        "dark-framed windows"
-      ],
-      "uniqueIdentifiers": [
-        "organic, rounded forms",
-        "integration of natural rock and greenery",
-        "high-end retreat atmosphere"
-      ],
-      "searchDesc": "Luxurious spa with white stucco, natural rock, and lush greenery.",
-      "slug": "spa"
-    },
-    "niche-1765790238718-mszc4fz4z": {
-      "id": "niche-1765790238718-mszc4fz4z",
-      "type": "niche",
-      "name": "Ocean View Living Room",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The living room features the villa's signature organic, rounded forms with smooth white stucco walls seamlessly integrated with subtle natural rock accents. Large, dark-framed windows offer breathtaking views of the ocean, while plush seating arrangements invite relaxation within the spacious, light-filled interior.",
-        "colorsAndLighting": "Bathed in bright, clear daylight, the space is illuminated by the natural sunlight pouring through the windows, creating soft dappled reflections. Dominant colors include the brilliant blue of the ocean visible through the windows, the clean white of the stucco walls, and warm earthy tones from wood accents and furnishings.",
-        "atmosphere": "The air is warm and carries a subtle hint of the sea, creating a fresh and inviting ambiance. The gentle sound of distant waves provides a tranquil backdrop. The atmosphere is one of profound peace, luxury, and relaxed comfort, a perfect retreat.",
-        "materials": "Smooth, white stucco forms the primary wall surfaces, providing a clean, minimalist backdrop. Rough-textured natural rock is subtly incorporated into accent areas, perhaps around a fireplace or as decorative niches. Dark wood is used for window frames and potentially some furniture elements, complemented by woven textiles and comfortable upholstery.",
-        "mood": "Serene, tranquil, and aspirational. This living room evokes feelings of peace, relaxation, and sophisticated comfort, embodying the essence of a high-end retreat.",
-        "sounds": "distant waves, gentle breeze, quiet conversation",
-        "spatialLayout": "An open and airy space with a comfortable flow, featuring distinct zones for seating and relaxation. The layout is designed to maximize natural light and the stunning ocean vistas.",
-        "primary_surfaces": "smooth white stucco walls, natural rock accents",
-        "secondary_surfaces": "dark wood window frames, woven rug, comfortable upholstery",
-        "accent_features": "integrated rock niches, decorative woven baskets",
-        "dominant": "white (stucco walls, seating)",
-        "secondary": "blue (ocean view), earth tones (wood, rug)",
-        "accent": "vibrant green (potted plants), burnt orange (decorative pillows)",
-        "ambient": "bright daylight, sunny",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "vines, cacti, potted greenery",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765790238717-580az1ply",
-      "description": "A luxurious living room designed for comfort and to fully appreciate the stunning ocean panorama, featuring ample space for relaxation and entertainment.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "large-glass",
+        "openings": "minimal",
         "openingShape": "rectangular",
-        "functionalType": "residential",
-        "spatialLayout": "A spacious living area designed for relaxation and entertainment, oriented towards expansive ocean views through large windows.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "comfortable sofa",
-          "armchairs",
-          "coffee table",
-          "entertainment console",
-          "side tables",
-          "ocean-themed decor"
-        ],
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "back wall",
-            "description": "Passage leading deeper into the villa"
-          },
-          {
-            "type": "door",
-            "position": "left wall",
-            "description": "Door to an adjacent room"
-          },
-          {
-            "type": "passage",
-            "position": "right wall",
-            "description": "Passage leading to a balcony or terrace"
-          }
-        ],
-        "dominantElements": [
-          "Expansive dark-framed windows with ocean views",
-          "Smooth, integrated surfaces",
-          "Open and airy layout",
-          "Comfortable seating arrangement"
-        ],
-        "uniqueIdentifiers": [
-          "Unobstructed panoramic ocean vista",
-          "Seamless indoor-outdoor feel",
-          "High-end, minimalist aesthetic"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "back wall",
-          "description": "Passage leading deeper into the villa"
-        },
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "Door to an adjacent room"
-        },
-        {
-          "type": "passage",
-          "position": "right wall",
-          "description": "Passage leading to a balcony or terrace"
-        }
-      ],
-      "dominantElements": [
-        "Expansive dark-framed windows with ocean views",
-        "Smooth, integrated surfaces",
-        "Open and airy layout",
-        "Comfortable seating arrangement"
-      ],
-      "uniqueIdentifiers": [
-        "Unobstructed panoramic ocean vista",
-        "Seamless indoor-outdoor feel",
-        "High-end, minimalist aesthetic"
-      ],
-      "searchDesc": "Serene living room with organic stucco, ocean views, and natural materials.",
-      "slug": "living-room"
-    },
-    "niche-1765790440211-8w99aja02": {
-      "id": "niche-1765790440211-8w99aja02",
-      "type": "niche",
-      "name": "Ocean View Roof Terrace",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This roof terrace features organic, rounded forms that echo the villa's main structure. It is multi-tiered, providing distinct zones for lounging and dining, with dark-framed windows framing distant sea views. Lush greenery cascades from integrated planters and along edges.",
-        "colorsAndLighting": "The scene is bathed in bright, clear sunlight, creating dappled reflections. Dominant colors are the brilliant blue of the ocean and sky, complemented by the white stucco of the villa's architecture and the earthy tones of natural materials.",
-        "atmosphere": "The air is warm and filled with the fresh scent of the sea. A gentle breeze rustles the leaves of the surrounding plants. The atmosphere is profoundly peaceful, luxurious, and open to the elements.",
-        "materials": "Smooth, white stucco forms the primary architectural elements, contrasting with the rough texture of natural rock accents and dark wood used for built-in seating or railings. Terra cotta pots and woven elements add further natural textures.",
-        "mood": "Serene, tranquil, and aspirational. The roof terrace evokes feelings of peace, relaxation, and sophisticated comfort with an expansive sense of openness.",
-        "sounds": "Gentle ocean waves, distant seabirds, rustling leaves, soft breeze",
-        "spatialLayout": "An open-air, multi-level space offering unobstructed views. Defined zones for seating and dining are integrated seamlessly into the architectural flow.",
-        "primary_surfaces": "smooth white stucco, rough natural rock accents",
-        "secondary_surfaces": "dark wood, terra cotta, woven textures",
-        "accent_features": "cascading green vines, potted cacti and greenery, decorative woven baskets",
-        "dominant": "white (stucco, seating)",
-        "secondary": "blue (ocean vista, pool reflections)",
-        "accent": "vibrant green (plants), burnt orange (cushions, if present)",
-        "ambient": "bright daylight, sunny",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "vines, cacti, potted greenery",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765790440210-b7q7o43t1",
-      "description": "An elevated terrace designed for entertainment and relaxation, boasting unobstructed views of the ocean. It features the villa's characteristic organic forms and opens to the elements, creating a breathtaking experience.",
-      "structure": {
-        "form": "organic",
-        "roofType": "open-sky",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "open-passages",
-        "openingShape": "irregular",
         "functionalType": "entertainment",
-        "spatialLayout": "An expansive outdoor space situated atop the villa, offering panoramic ocean vistas. Its organic form seamlessly integrates with the surrounding architecture, providing a spacious area for relaxation and entertainment.",
-        "requiredElements": [],
-        "suggestedFixtures": [
-          "comfortable lounge seating",
-          "outdoor dining table",
-          "bar area",
-          "fire pit",
-          "ambient lighting",
-          "planters with coastal flora"
-        ],
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "central",
-            "description": "Seamless transition from interior villa spaces"
-          },
-          {
-            "type": "stairs",
-            "position": "corner",
-            "description": "Access to lower levels or ground"
-          }
-        ],
-        "dominantElements": [
-          "sweeping ocean views",
-          "organic architectural integration",
-          "open-air environment",
-          "integrated seating areas"
-        ],
-        "uniqueIdentifiers": [
-          "panoramic ocean vista",
-          "seamless extension of villa's organic design",
-          "elevated entertainment space"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "central",
-          "description": "Seamless transition from interior villa spaces"
-        },
-        {
-          "type": "stairs",
-          "position": "corner",
-          "description": "Access to lower levels or ground"
-        }
-      ],
-      "dominantElements": [
-        "sweeping ocean views",
-        "organic architectural integration",
-        "open-air environment",
-        "integrated seating areas"
-      ],
-      "uniqueIdentifiers": [
-        "panoramic ocean vista",
-        "seamless extension of villa's organic design",
-        "elevated entertainment space"
-      ],
-      "searchDesc": "Luxurious roof terrace with stunning ocean views, organic architecture, and lush greenery.",
-      "slug": "roof-terrace"
-    },
-    "niche-1765798373080-wrwdi0ms0": {
-      "id": "niche-1765798373080-wrwdi0ms0",
-      "type": "niche",
-      "name": "The Serenity Villa Gym",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The gym space is characterized by the villa's signature smooth white stucco walls and integrated natural rock elements. Modern, sleek exercise equipment is carefully positioned within the organic, multi-tiered forms of the architecture. Dark-framed mirrors reflect the abundant natural light and the surrounding serene environment.",
-        "colorsAndLighting": "Bathed in bright, clear sunlight, the space features the villa's dominant white stucco, accented by the earthy tones of rock visible in structural elements. Dappled light plays across the smooth flooring, creating a dynamic and invigorating atmosphere.",
-        "atmosphere": "The air feels warm and invigorating, carrying a faint hint of the sea. A sense of focused energy permeates the space, tempered by the villa's inherent tranquility. The gentle breeze from outside can be subtly felt through ventilation.",
-        "materials": "Smooth, polished composite flooring is paired with the villa's foundational smooth white stucco walls. Accent areas feature the texture of natural rock, seamlessly integrated into the structure. Dark wood might be present in equipment detailing or door frames.",
-        "mood": "Aspirational and invigorating, fostering a sense of well-being and sophisticated fitness within a luxurious retreat.",
-        "sounds": "Muffled ocean waves, soft breeze, quiet hum of equipment, rhythmic breathing",
-        "spatialLayout": "The gym occupies a spacious area within the villa, featuring high ceilings and an open layout conducive to various exercise routines. The organic architectural flow of the villa is maintained, with equipment integrated into alcoves and open zones.",
-        "primary_surfaces": "smooth white stucco walls, polished composite flooring",
-        "secondary_surfaces": "integrated natural rock elements, dark wood accents",
-        "accent_features": "large reflective mirrors, modern exercise equipment, subtle potted greenery",
-        "dominant": "white (walls, ceiling)",
-        "secondary": "earth tones (rock accents, equipment details)",
-        "accent": "vibrant green (potted plants), metallic (equipment)",
-        "ambient": "bright daylight, sunny",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "vines, cacti, potted greenery",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765798373077-jhpxic3ao",
-      "description": "An interior gym space within The Serenity Villa, designed to offer a high-end retreat for relaxation and entertainment, likely incorporating organic forms and natural elements.",
-      "structure": {
-        "form": "organic",
-        "roofType": "flat",
-        "scale": "medium",
-        "orientation": "wide",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "spatialLayout": "A spacious gym area with equipment arranged for functional training and cardiovascular activities. The space is designed to feel open and connected to the surrounding natural environment.",
+        "spatialLayout": "A large, open industrial space with a focus on immersive sound and visual experiences. The layout is designed for movement and mingling.",
         "requiredElements": [],
         "dominantElements": [
-          "yoga mats",
-          "weight lifting equipment",
-          "cardio machines",
-          "large windows",
-          "natural rock elements"
+          "Brutalist concrete walls",
+          "Industrial metal grilles",
+          "Pulsing neon signage",
+          "Circuit board patterns"
         ],
         "uniqueIdentifiers": [
-          "integration with natural rock formations",
-          "views of lush greenery through arched windows",
-          "organic, flowing interior lines complementing the exterior form"
+          "Industrial concrete aesthetic",
+          "Neon glow accents",
+          "Circuit board motifs"
         ],
         "navigableElements": [
           {
             "type": "door",
             "position": "front wall",
-            "description": "door glass s"
-          },
-          {
-            "type": "door",
-            "position": "left wall",
-            "description": "door to spa"
-          },
-          {
-            "type": "window",
-            "position": "right wall",
-            "description": "window large   overlooking ocean"
+            "description": "door heavy steel"
           },
           {
             "type": "archway",
-            "position": "center",
-            "description": "archway behind reception desk"
-          }
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "modern cardio machines (treadmills",
-          "ellipticals)",
-          "weight training equipment (dumbbells",
-          "barbells",
-          "weight machines)",
-          "yoga mats",
-          "water cooler",
-          "reception desk with tablet",
-          "motivational posters",
-          "large mirror wall",
-          "potted plants."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door glass s"
-        },
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "door to spa"
-        },
-        {
-          "type": "window",
-          "position": "right wall",
-          "description": "window large   overlooking ocean"
-        },
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "archway behind reception desk"
-        }
-      ],
-      "dominantElements": [
-        "yoga mats",
-        "weight lifting equipment",
-        "cardio machines",
-        "large windows",
-        "natural rock elements"
-      ],
-      "uniqueIdentifiers": [
-        "integration with natural rock formations",
-        "views of lush greenery through arched windows",
-        "organic, flowing interior lines complementing the exterior form"
-      ],
-      "searchDesc": "Organic modern gym in The Serenity Villa, featuring white stucco, natural rock accents, and ocean views.",
-      "slug": "interior-of-the-serenity-villa-gym"
-    },
-    "niche-1765803110872-3t5hy94dt": {
-      "id": "niche-1765803110872-3t5hy94dt",
-      "type": "niche",
-      "name": "The Homestead Kitchen",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A functional and inviting kitchen space, likely with a central wooden table.  The layout is practical for cooking and dining, featuring ample storage. Exposed wooden beams might be present overhead, contributing to the rustic charm.",
-        "colorsAndLighting": "Warm, diffused light emanates from a hearth and potentially a few small windows. Colors are dominated by the natural tones of wood, accented by the muted hues of food and cooking tools. Shadows are soft and inviting.",
-        "atmosphere": "The air is thick with the comforting aroma of wood smoke, simmering food, and perhaps baked bread. Temperatures are pleasantly warm, especially near the hearth. A gentle, lived-in stillness prevails, occasionally broken by the clatter of dishes or the crackling of the fire.",
-        "materials": "Interior surfaces are primarily transformed from the exterior wood. Expect whitewashed wooden panels or plaster walls, complemented by worn wooden floorboards.  A stone hearth would be a central feature, possibly with some exposed stonework.",
-        "mood": "Evokes a sense of warmth, nourishment, and tradition. It feels like the heart of the home, safe, comforting, and deeply rooted.",
-        "sounds": "crackling fire, simmering pot, soft footsteps, distant birdsong",
-        "spatialLayout": "A moderately sized, rectangular room designed for efficient work and comfortable gathering. The presence of a hearth and a central table creates focal points.",
-        "primary_surfaces": "Whitewashed wooden panels, worn wooden floorboards",
-        "secondary_surfaces": "Stone hearth, wooden cabinetry",
-        "accent_features": "Copper pots and pans, hand-painted ceramic dishes, a sturdy wooden chopping block",
-        "dominant": "Warm wood tones (natural and whitewashed)",
-        "secondary": "Muted earthy tones (from food and utensils)",
-        "accent": "Subtle glints of copper and ceramic",
-        "ambient": "Warm, diffused, and slightly golden",
-        "genre": null,
-        "architectural_tone": "Traditional Swedish rural vernacular architecture",
-        "cultural_tone": "Homestead, farm building, dwelling for rural inhabitants",
-        "materials_base": "Wood and Stone",
-        "mood_baseline": "Quiet, enduring, rustic",
-        "palette_bias": "Earth tones, reds, off-whites",
-        "soundscape_base": "Natural rural ambiance",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765803110871-2tgch9bpv",
-      "description": "This interior space is a kitchen, designed to fit within the traditional rural homestead context of West Skåne. It features a medium scale with cubic orientation, a pitched roof translating to a pitched ceiling, and arched windows. The functional type is residential, emphasizing its role in a dwelling. Dominant elements include wooden beams, stone flooring, a hearth, and wooden countertops, with unique identifiers being its homestead aesthetic, rustic charm, and functional design.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "pitched",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "residential",
-        "spatialLayout": "A cozy, functional kitchen space designed for rural living, centered around cooking and communal gathering.",
-        "requiredElements": [
-          "kitchen"
-        ],
-        "dominantElements": [
-          "Wooden beams",
-          "Stone or tile flooring",
-          "Large hearth or stove",
-          "Wooden countertops"
-        ],
-        "uniqueIdentifiers": [
-          "Homestead aesthetic",
-          "Rustic charm",
-          "Functional design"
-        ],
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "front wall",
-            "description": "door heavy wooden"
-          },
-          {
-            "type": "window",
             "position": "left wall",
-            "description": "window small   with herb garden view"
-          },
-          {
-            "type": "door",
-            "position": "right wall",
-            "description": "door pantry"
-          }
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "large stone hearth with cast iron pot",
-          "rough-hewn wooden table with benches",
-          "hanging dried herbs",
-          "ceramic pitchers",
-          "iron cooking utensils"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door heavy wooden"
-        },
-        {
-          "type": "window",
-          "position": "left wall",
-          "description": "window small   with herb garden view"
-        },
-        {
-          "type": "door",
-          "position": "right wall",
-          "description": "door pantry"
-        }
-      ],
-      "dominantElements": [
-        "Wooden beams",
-        "Stone or tile flooring",
-        "Large hearth or stove",
-        "Wooden countertops"
-      ],
-      "uniqueIdentifiers": [
-        "Homestead aesthetic",
-        "Rustic charm",
-        "Functional design"
-      ],
-      "searchDesc": "Cozy Swedish rural kitchen with worn wood, hearth, and a warm, inviting atmosphere.",
-      "slug": "interior-of-br-nnan"
-    },
-    "niche-1765803192556-aatfv1mu5": {
-      "id": "niche-1765803192556-aatfv1mu5",
-      "type": "niche",
-      "name": "The Serenity Villa Kitchen",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The kitchen features the villa's signature organic, rounded forms, with smooth white stucco cabinetry and integrated natural stone countertops. Dark wood accents are present, possibly in shelving or fixtures. Ample natural light floods the space.",
-        "colorsAndLighting": "Bathed in bright, clear daylight, the kitchen has white stucco dominating, accented by the earthy tones of stone and dark wood. Dappled light may fall on surfaces.",
-        "atmosphere": "The air feels warm and clean, carrying a subtle hint of the nearby sea. A gentle breeze might be felt if windows are open. The atmosphere is profoundly peaceful and luxurious, ideal for culinary creation.",
-        "materials": "Smooth, white stucco is the primary material for cabinetry, contrasted with rough or polished natural stone for countertops. Dark wood is used for accents like shelving or hardware.",
-        "mood": "Serene, tranquil, and aspirational. The kitchen evokes feelings of peace, relaxation, and sophisticated comfort, encouraging creativity.",
-        "sounds": "Subtle clinking, gentle hum of appliances, distant sea breeze",
-        "spatialLayout": "Spacious and functional, with an open layout that likely flows into living areas. The organic forms create a sense of flow rather than rigid division.",
-        "primary_surfaces": "smooth white stucco (cabinetry), natural stone (countertops)",
-        "secondary_surfaces": "dark wood (accents, hardware)",
-        "accent_features": "potted herbs, woven storage baskets",
-        "dominant": "white (cabinetry, walls)",
-        "secondary": "earth tones (countertops, wood accents)",
-        "accent": "vibrant green (herbs)",
-        "ambient": "bright daylight, sunny",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "potted greenery",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765803192555-69xzjkekq",
-      "description": "This is the kitchen for The Serenity Villa, designed to align with the parent location's high-end retreat and relaxation theme. The interior form will be organic, mirroring the exterior's rounded stucco and rock integration. It will feature arched ceilings and arched window openings, consistent with the villa's visual appearance. The scale is medium, suitable for a villa of this nature. The functional type is residential, serving the villa's purpose for relaxation and entertainment. The spatial layout will be functional for cooking and potentially for guests to gather around.",
-      "structure": {
-        "form": "organic",
-        "roofType": "arched",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "residential",
-        "spatialLayout": "A functional and aesthetically pleasing kitchen space, likely incorporating elements that complement the villa's organic and luxurious retreat style. It will be designed for both preparation and potential casual dining or entertainment.",
-        "requiredElements": [],
-        "dominantElements": [
-          "organic architectural forms",
-          "natural materials integration",
-          "arched doorways and windows",
-          "lush greenery accents"
-        ],
-        "uniqueIdentifiers": [
-          "integration with villa's organic design",
-          "high-end retreat aesthetic",
-          "arched openings matching exterior"
-        ],
-        "navigableElements": [
-          {
-            "type": "archway",
-            "position": "center",
-            "description": "archway leading from living area"
-          },
-          {
-            "type": "door",
-            "position": "center",
-            "description": "door large sliding glass s to patio"
-          },
-          {
-            "type": "window",
-            "position": "center",
-            "description": "window above sink with ocean view"
-          },
-          {
-            "type": "door",
-            "position": "center",
-            "description": "door service  to pantry"
-          }
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "minimalist white cabinetry",
-          "polished concrete countertops",
-          "professional-grade stainless steel appliances",
-          "large central island with bar stools",
-          "integrated high-end cookware",
-          "open shelving with decorative ceramics"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "archway leading from living area"
-        },
-        {
-          "type": "door",
-          "position": "center",
-          "description": "door large sliding glass s to patio"
-        },
-        {
-          "type": "window",
-          "position": "center",
-          "description": "window above sink with ocean view"
-        },
-        {
-          "type": "door",
-          "position": "center",
-          "description": "door service  to pantry"
-        }
-      ],
-      "dominantElements": [
-        "organic architectural forms",
-        "natural materials integration",
-        "arched doorways and windows",
-        "lush greenery accents"
-      ],
-      "uniqueIdentifiers": [
-        "integration with villa's organic design",
-        "high-end retreat aesthetic",
-        "arched openings matching exterior"
-      ],
-      "searchDesc": "Serene luxury kitchen in The Serenity Villa, bright with natural light and organic forms.",
-      "slug": "interior-of-the-serenity-villa-kitchen"
-    },
-    "66698ee4-6c1d-43eb-b317-ead086f661fd": {
-      "id": "66698ee4-6c1d-43eb-b317-ead086f661fd",
-      "type": "location",
-      "name": "Skåne Coastline Beach",
-      "spaceType": "exterior",
-      "description": "A wide expanse of sandy shore meeting the gentle waves of the Öresund. The air is fresh with the scent of salt and sea, offering a tranquil escape from the inland rolling hills.",
-      "dna": {
-        "looks": "A broad stretch of fine, pale sand curves gently along the coastline, meeting shallow, clear waters. Low, tufted dunes covered in marram grass form a natural boundary behind the beach, occasionally dotted with smooth, sea-worn pebbles.",
-        "colorsAndLighting": "The sand is a pale, sun-bleached beige, contrasting with the muted greens of the dune grasses. The water shifts from pale aquamarine near the shore to a deeper blue further out. Light is bright and often diffused by coastal mist or sea spray.",
-        "atmosphere": "The air is crisp and carries the clean, sharp scent of salt and damp sand, with a subtle undertone of seaweed. A gentle sea breeze constantly moves across the open expanse, ruffling the grasses and the surface of the water. The temperature is generally mild, with a refreshing coolness from the sea.",
-        "materials": "Predominantly soft sand, interspersed with smooth, water-worn stones and the rough, dry texture of dune grasses. Scattered pieces of weathered driftwood add a touch of natural texture.",
-        "mood": "Evokes a sense of open freedom, natural serenity, and peaceful solitude. It feels like a place to breathe deeply and connect with the vastness of the sea.",
-        "sounds": "Lapping waves, gentle wind, cries of seagulls, rustling dune grass",
-        "primary_surfaces": "Soft, fine sand",
-        "secondary_surfaces": "Sea-worn stones, dry dune grasses",
-        "accent_features": "Driftwood fragments, colorful shells",
-        "dominant": "Pale Beige (sand)",
-        "secondary": "Muted Green (grasses)",
-        "accent": "Aquamarine (water near shore), Grey-Blue (deeper water)",
-        "ambient": "Bright, diffused sunlight",
-        "genre": null,
-        "architectural_tone": "Traditional Swedish rural vernacular architecture with elements of agricultural buildings and homesteads.",
-        "cultural_tone": "Homestead, farm building, dwelling for rural inhabitants; a place deeply connected to agriculture and local traditions.",
-        "materials_base": "Wood and Stone",
-        "mood_baseline": "Peaceful, grounded, enduring",
-        "palette_bias": "Pastel, Earthy, Watery",
-        "soundscape_base": "Coastal natural sounds",
-        "flora_base": "Dune grasses",
-        "fauna_base": "Seagulls"
-      },
-      "searchDesc": "Sandy beach on the Öresund, part of West Skåne. Features dunes, gentle waves, and sea air.",
-      "slug": "skane-coastline-beach",
-      "structure": {
-        "spatialLayout": "An open, horizontal expanse defined by the line of the sea meeting the land, with shallow depth towards the water and a gradual rise into undulating dunes.",
-        "navigableElements": [
-          {
-            "type": "passage",
-            "position": "center",
-            "description": "A sandy path leading from the dunes to the water's edge"
-          },
-          {
-            "type": "passage",
-            "position": "right",
-            "description": "A narrow trail winding through coastal grasses and leading back inland towards a small path"
-          },
-          {
-            "type": "window",
-            "position": "left",
-            "description": "A weathered wooden beach hut with open windows revealing hints of interior space"
-          }
-        ],
-        "dominantElements": [
-          "Expansive sandy beach",
-          "Gentle rolling waves",
-          "Coastal dunes with grasses",
-          "Driftwood and sea shells",
-          "Distant view of the Öresund"
-        ],
-        "uniqueIdentifiers": [
-          "Soft, fine sand characteristic of the region",
-          "Interspersed smooth, sea-worn stones",
-          "Salt-kissed air with a hint of seaweed",
-          "The distinct sound of lapping waves against the shore"
-        ]
-      },
-      "imageUrl": "https://v3b.fal.media/files/b/0a8666e9/rdj9pfA_I50YKy-Ns08-3.jpg",
-      "primaryMedia": "media-1765803298772-lnmbtoelc"
-    },
-    "niche-1765804428160-kfukbyk2g": {
-      "id": "niche-1765804428160-kfukbyk2g",
-      "type": "niche",
-      "name": "The Villa Basement",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The basement features organically curved walls of smooth white stucco seamlessly integrated with rough-hewn natural rock formations. Dark wooden beams are exposed overhead, hinting at robust construction. The layout is multi-tiered, with recessed lighting creating a sense of depth and intrigue.",
-        "colorsAndLighting": "The lighting is deliberately subdued, a contrast to the exterior's brightness, casting soft shadows that highlight the textures of the stone and stucco. Dominant colors are the creamy white of the stucco and the earthy browns and greys of the natural rock, complemented by the dark tones of the wood.",
-        "atmosphere": "The air is cool and still, carrying a subtle hint of damp earth and the faint, distant murmur of the sea. It feels insulated and private, a quiet sanctuary from the outside world. The atmosphere is one of profound calm and exclusive tranquility.",
-        "materials": "Smooth, cool white stucco forms the primary wall surfaces, contrasting with the rugged, textured natural rock that appears to grow from the earth. Dark, polished wood is used for structural beams and possibly hidden doors or accents, adding warmth and a sense of grounded luxury.",
-        "mood": "The mood is one of secluded peace, sophisticated comfort, and intimate relaxation. It is a space designed for unwinding and quiet contemplation.",
-        "sounds": "soft, hushed, distant ocean, stillness",
-        "spatialLayout": "The basement space is cavernous yet inviting, with organic, flowing lines that avoid sharp corners. It suggests interconnected chambers and alcoves carved into the earth.",
-        "primary_surfaces": "smooth white stucco, rough natural rock",
-        "secondary_surfaces": "dark exposed wooden beams",
-        "accent_features": "recessed lighting, integrated stone shelving",
-        "dominant": "white (stucco)",
-        "secondary": "earth tones (rock, wood)",
-        "accent": "dark wood",
-        "ambient": "subdued, soft, warm glow",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues (implied by exterior connection), warm neutrals, earthy tones",
-        "soundscape_base": "calm ocean breeze and water (muted and distant)",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765804428159-kxf50z9iq",
-      "description": "A subterranean entertainment space within the Serenity Villa, retaining the parent structure's organic form and luxurious retreat ambiance.",
-      "structure": {
-        "form": "organic",
-        "roofType": "flat",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "spatialLayout": "This basement space is carved into the villa's foundation, featuring a central open area with smaller alcoves or rooms branching off. The space is naturally integrated with the villa's organic form.",
-        "requiredElements": [],
-        "dominantElements": [
-          "Organic, curved walls",
-          "Stone or stucco finishes",
-          "Dark-framed openings",
-          "Integrated natural elements"
-        ],
-        "uniqueIdentifiers": [
-          "Subterranean integration",
-          "Cozy, secluded atmosphere",
-          "Echoes of the villa's organic architecture"
-        ],
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "center",
-            "description": "door arched way leading upstairs"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object textured plaster walls"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object recessed lighting"
-          },
-          {
-            "type": "door",
-            "position": "center",
-            "description": "door large glass-paned  to a wine cellar"
-          }
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "plush velvet sectional sofa",
-          "dark wood coffee table",
-          "built-in bar with leather stools",
-          "contemporary abstract art on walls",
-          "integrated mood lighting",
-          "navigable elements: arched doorway front wall leading upstairs",
-          "large glass-paned door left wall to wine cellar",
-          "textured plaster walls",
-          "recessed lighting",
-          "built-in bar",
-          "contemporary abstract art on walls",
-          "integrated mood lighting",
-          "furnish: plush velvet sectional sofa",
-          "dark wood coffee table",
-          "leather bar stools"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center",
-          "description": "door arched way leading upstairs"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object textured plaster walls"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object recessed lighting"
-        },
-        {
-          "type": "door",
-          "position": "center",
-          "description": "door large glass-paned  to a wine cellar"
-        }
-      ],
-      "dominantElements": [
-        "Organic, curved walls",
-        "Stone or stucco finishes",
-        "Dark-framed openings",
-        "Integrated natural elements"
-      ],
-      "uniqueIdentifiers": [
-        "Subterranean integration",
-        "Cozy, secluded atmosphere",
-        "Echoes of the villa's organic architecture"
-      ],
-      "searchDesc": "Luxury villa basement: organic stucco, rock, dark wood, serene, peaceful.",
-      "slug": "interior-of-the-serenity-villa"
-    },
-    "niche-1765804550098-zdw3qsfuh": {
-      "id": "niche-1765804550098-zdw3qsfuh",
-      "type": "niche",
-      "name": "Otherworldly Portal Chamber",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior echoes the villa's exterior with smooth, white stucco walls forming organic, rounded shapes. Natural rock formations are integrated into the architecture, with lush greenery spilling from crevices. Dark-framed openings suggest passages to other areas.",
-        "colorsAndLighting": "The space is bathed in bright, natural light, creating soft highlights and shadows. Dominant colors are the pure white of the stucco, accented by the earthy tones of integrated rock and the vibrant green of foliage.",
-        "atmosphere": "The air feels warm and still, carrying a subtle hint of the sea. A profound sense of peace and luxurious tranquility pervades the space, enhanced by the visual harmony of natural and man-made elements.",
-        "materials": "Smooth, cool white stucco forms the primary surfaces. Rough, textured natural rock is artfully integrated. Dark wood is present in framing elements, and woven textures might appear in furnishings.",
-        "mood": "Deeply serene, tranquil, and aspirational. The interior evokes feelings of sophisticated comfort and profound peace.",
-        "sounds": "Gentle breeze, distant ocean, subtle interior stillness",
-        "spatialLayout": "The space is likely open and flowing, with rounded walls and a sense of seamless integration between architectural elements and natural features. The portal creates a focal point and suggests depth.",
-        "primary_surfaces": "smooth white stucco, rough natural rock",
-        "secondary_surfaces": "dark wood accents, woven textures",
-        "accent_features": "cascading green vines, potted greenery, portal to another world",
-        "dominant": "white (stucco walls)",
-        "secondary": "earth tones (integrated rock)",
-        "accent": "vibrant green (foliage), shimmering portal effect",
-        "ambient": "bright daylight",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "vines, potted greenery",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765804550096-9kbw6xrdq",
-      "description": "This medium-scale, organically formed chamber serves as a unique entertainment space, designed to host a portal to another realm. Its walls are a continuation of the parent villa's style, featuring organic, rounded forms of white stucco integrated with natural rock. Arched openings and minimal windows allow for controlled light, drawing focus to the central 'portal to another world' which is the primary required element and a unique identifier of this specialized room. Lush greenery cascades, maintaining the serene and naturalistic ambiance of the Serenity Villa.",
-      "structure": {
-        "form": "organic",
-        "roofType": "arched",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "spatialLayout": "A medium-sized, organically shaped room designed to house a unique portal, featuring integrated natural elements and ample space for observation and passage.",
-        "requiredElements": [
-          "portal to another world"
-        ],
-        "dominantElements": [
-          "central portal to another world",
-          "organic, rounded stucco walls",
-          "natural rock integration",
-          "lush cascading greenery"
-        ],
-        "uniqueIdentifiers": [
-          "the portal itself",
-          "integration of natural rock formations within the interior",
-          "organic, flowing architectural lines"
-        ],
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "front wall",
-            "description": "door grand arched way  leading to an ethereal glow"
-          },
-          {
-            "type": "door",
-            "position": "left wall",
-            "description": "door a smaller way"
-          },
-          {
-            "type": "object",
-            "position": "right wall",
-            "description": "object a full-length mirror  reflecting an unusual scene"
-          }
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "plush velvet chaise lounge",
-          "ornate celestial-themed rug",
-          "a crystal orb on a pedestal",
-          "overflowing antique chest of curiosities",
-          "hanging iridescent fabrics"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door grand arched way  leading to an ethereal glow"
-        },
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "door a smaller way"
-        },
-        {
-          "type": "object",
-          "position": "right wall",
-          "description": "object a full-length mirror  reflecting an unusual scene"
-        }
-      ],
-      "dominantElements": [
-        "central portal to another world",
-        "organic, rounded stucco walls",
-        "natural rock integration",
-        "lush cascading greenery"
-      ],
-      "uniqueIdentifiers": [
-        "the portal itself",
-        "integration of natural rock formations within the interior",
-        "organic, flowing architectural lines"
-      ],
-      "searchDesc": "Serene villa interior with organic stucco, rock, greenery, and a portal to another world.",
-      "slug": "interior-of-the-serenity-villa"
-    },
-    "niche-1765804607973-ynv5dfvqe": {
-      "id": "niche-1765804607973-ynv5dfvqe",
-      "type": "niche",
-      "name": "Otherworldly Spaceship Chamber",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This is an interior room, likely cavernous or expansive to accommodate a spaceship. The spaceship itself is the focal point, with alien, non-terrestrial design elements. The room's architecture might reflect or contrast with the ship's form.",
-        "colorsAndLighting": "Lighting is likely to be unconventional, emanating from the spaceship or integrated into the room's structure, possibly casting strange hues or shadows. Dominant colors would be dictated by the spaceship's materials and the room's construction, potentially metallic, dark, or bioluminescent.",
-        "atmosphere": "The air might be sterile, tinged with unusual scents, or have a faint hum from the ship's systems. A sense of mystery and awe pervades the space, with a feeling of advanced, alien technology.",
-        "materials": "Materials would depend on the room's purpose; if it's a hangar or docking bay, it might feature robust, metallic, or composite surfaces. If it's more of a display or sanctuary, it could incorporate polished stone or unique otherworldly textures.",
-        "mood": "Mysterious, awe-inspiring, and potentially slightly unnerving. It evokes feelings of discovery and the unknown.",
-        "sounds": "Low hum, electronic beeps, faint propulsion sounds",
-        "spatialLayout": "A large, open volume designed to contain a significant object like a spaceship. The layout is likely functional for the spaceship's presence.",
-        "primary_surfaces": "Smooth, possibly metallic or composite walls",
-        "secondary_surfaces": "Alien-textured panels, glowing conduits",
-        "accent_features": "The otherworldly spaceship itself, integrated lighting elements",
-        "dominant": "Varies based on spaceship/room design, likely dark or metallic",
-        "secondary": "Varies, could be glowing accents or contrasting metallic tones",
-        "accent": "Any unusual lights or details on the spaceship",
-        "ambient": "Unconventional, often sourced from alien technology",
-        "genre": null,
-        "architectural_tone": "organic modern coastal with natural integration",
-        "cultural_tone": "high-end retreat for relaxation and entertainment",
-        "materials_base": "stucco, natural stone, wood, woven fibers",
-        "mood_baseline": "peaceful luxury",
-        "palette_bias": "coastal blues, warm neutrals, vibrant greens",
-        "soundscape_base": "calm ocean breeze and water",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765804607971-odjsgx73k",
-      "description": "An otherworldly chamber within The Serenity Villa, designed for unique entertainment experiences, featuring a central spaceship as its main attraction. The space's organic form and domed ceiling, devoid of traditional openings, create an immersive and mysterious atmosphere.",
-      "structure": {
-        "form": "organic",
-        "roofType": "domed",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "none",
-        "openingShape": "irregular",
-        "functionalType": "entertainment",
-        "spatialLayout": "A medium-sized, organic chamber with continuous, flowing walls and a domed ceiling. The primary focus is a central, otherworldly spaceship.",
-        "requiredElements": [
-          "otherworldly space ship"
-        ],
-        "dominantElements": [
-          "otherworldly spaceship",
-          "organic curved walls",
-          "domed ceiling",
-          "integrated low-level lighting"
-        ],
-        "uniqueIdentifiers": [
-          "The central spaceship as the focal point",
-          "seamlessly integrated, non-geometric architecture"
-        ],
-        "navigableElements": [
-          {
-            "type": "object",
-            "position": "left wall",
-            "description": "object seamless entryway"
-          },
-          {
-            "type": "object",
-            "position": "front wall",
-            "description": "object holographic display panel"
+            "description": "archway glowing blue   leading to dance floor"
           },
           {
             "type": "hatch",
-            "position": "floor",
-            "description": "hatch access"
+            "position": "center",
+            "description": "hatch service  rear wall"
           },
           {
-            "type": "object",
+            "type": "window",
             "position": "right wall",
-            "description": "object portal alcove"
+            "description": "window blacked-out"
           }
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "ergonomic captain's chair",
-          "holographic star charts",
-          "floating console with glowing buttons",
-          "viewport displaying nebulae",
-          "ambient bioluminescent lighting."
+          "worn leather bar stools",
+          "long concrete bar",
+          "scattered industrial metal tables",
+          "laser projection system",
+          "fog machine"
         ],
         "suggested": [],
         "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "object",
-          "position": "left wall",
-          "description": "object seamless entryway"
+          "type": "door",
+          "position": "front wall",
+          "description": "door heavy steel"
         },
         {
-          "type": "object",
-          "position": "front wall",
-          "description": "object holographic display panel"
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway glowing blue   leading to dance floor"
         },
         {
           "type": "hatch",
-          "position": "floor",
-          "description": "hatch access"
+          "position": "center",
+          "description": "hatch service  rear wall"
         },
         {
-          "type": "object",
+          "type": "window",
           "position": "right wall",
-          "description": "object portal alcove"
+          "description": "window blacked-out"
         }
       ],
       "dominantElements": [
-        "otherworldly spaceship",
-        "organic curved walls",
-        "domed ceiling",
-        "integrated low-level lighting"
+        "Brutalist concrete walls",
+        "Industrial metal grilles",
+        "Pulsing neon signage",
+        "Circuit board patterns"
       ],
       "uniqueIdentifiers": [
-        "The central spaceship as the focal point",
-        "seamlessly integrated, non-geometric architecture"
+        "Industrial concrete aesthetic",
+        "Neon glow accents",
+        "Circuit board motifs"
       ],
-      "searchDesc": "Interior room containing an otherworldly spaceship.",
-      "slug": "room-with-a-otherworldly-space-ship"
+      "searchDesc": "Interior of The Circuit Lounge: brutalist concrete, neon purple/blue, industrial, urban nightlife.",
+      "slug": "interior-of-the-circuit-lounge"
     }
   },
   "views": {},
@@ -1970,102 +260,19 @@
       ]
     },
     {
-      "id": "loc-1765619807528-4b8x8txdt",
+      "id": "loc-1765806622914-ydat5badj",
       "type": "host",
       "children": [
         {
-          "id": "51298756-4643-4f14-8b19-d56590948794",
+          "id": "a47c6a59-df5f-4ab5-b3e4-351cc8a17da4",
           "type": "region",
           "children": [
             {
-              "id": "381bc8b2-6b22-4510-8fca-37bad0f3e9dc",
+              "id": "f167be57-fd19-4388-8711-83e11db03357",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765619959042-v1o5rxw0q",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765623518448-w3rpugbyy",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765623565059-9pnl87lb0",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765803110872-3t5hy94dt",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "id": "66698ee4-6c1d-43eb-b317-ead086f661fd",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1765787933815-0por9eiib",
-      "type": "host",
-      "children": [
-        {
-          "id": "cf58838f-433b-4125-a5d5-07d5d35f1133",
-          "type": "region",
-          "children": [
-            {
-              "id": "772f39b3-5bfe-4df4-ac3c-0c46c1166bb0",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765787993863-4jpqxu18f",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765788593164-ppvxrdqh0",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765790238718-mszc4fz4z",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765790440211-8w99aja02",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765798373080-wrwdi0ms0",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765803192556-aatfv1mu5",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765804428160-kfukbyk2g",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765804550098-zdw3qsfuh",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765804607973-ynv5dfvqe",
+                  "id": "niche-1765806770450-fl06oxpgl",
                   "type": "niche",
                   "children": []
                 }
@@ -2077,7 +284,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765619807528-4b8x8txdt",
-    "loc-1765787933815-0por9eiib"
+    "loc-1765806622914-ydat5badj"
   ]
 }

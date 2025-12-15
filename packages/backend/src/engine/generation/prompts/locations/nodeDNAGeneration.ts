@@ -7,7 +7,10 @@ import type { ParentContext } from '../../../hierarchyAnalysis/types';
  * Generates simplified, flat DNA structure for a single node
  * Now accepts FULL parent DNA for CSS-like inheritance
  * 
- * NOTE: Structure is now a separate node property, not part of DNA.
+ * OPTIMIZATIONS:
+ * - Host/Region: Skip navigableElements, dominantElements, uniqueIdentifiers (not needed at city/district level)
+ * - Removed redundant cascading fields: materials_base, mood_baseline, soundscape_base
+ *   (these duplicate scene fields: materials, mood, sounds)
  * 
  * @param originalPrompt - Original user input
  * @param nodeName - Name of the node to generate DNA for
@@ -23,6 +26,9 @@ export function nodeDNAGeneration(
   nodeDescription: string,
   parentContext?: ParentContext
 ): string {
+  // Determine if this node type needs structural fields
+  const needsStructuralFields = nodeType === 'location' || nodeType === 'niche' || nodeType === 'detail';
+  
   // Build comprehensive parent context section from ALL parent DNA fields
   const contextSection = parentContext 
     ? `
@@ -48,10 +54,7 @@ PARENT CONTEXT (CSS-like inheritance - inherit ALL these attributes unless overr
 === CASCADING STYLE (MUST inherit unless distinctly different) ===
 - Architectural Tone: ${parentContext.architectural_tone || 'Not specified'}
 - Cultural Tone: ${parentContext.cultural_tone || 'Not specified'}
-- Materials Base: ${parentContext.materials_base || 'Not specified'}
-- Mood Baseline: ${parentContext.mood_baseline || 'Not specified'}
 - Palette Bias: ${parentContext.palette_bias || 'Not specified'}
-- Soundscape Base: ${parentContext.soundscape_base || 'Not specified'}
 - Flora Base: ${parentContext.flora_base || 'Not specified'}
 - Fauna Base: ${parentContext.fauna_base || 'Not specified'}
 
@@ -92,6 +95,15 @@ The parent may describe the building AND its surroundings. For interiors, use BU
 `
     : '';
 
+  // Build structural fields section - only for location/niche/detail, not host/region
+  const structuralFieldsSection = needsStructuralFields ? `
+  // === STRUCTURAL FIELDS (for navigation - only for location/niche/detail) ===
+  "navigableElements": [
+    {"type": "door|passage|stairs|archway|portal|window", "position": "location in scene", "description": "what it is"}
+  ],
+  "dominantElements": ["List of major positioned objects/features in scene"],
+  "uniqueIdentifiers": ["List of distinctive visual features that make this place recognizable"],` : '';
+
   const ret = `Interpret the user's description into a DNA structure with cascading style attributes.
 
 OBJECTIVE: Create visual/atmospheric DNA that separates scene-specific details from inheritable style attributes.
@@ -109,16 +121,9 @@ OUTPUT JSON STRUCTURE:
 {
   "name": "${nodeName}",
   "description": "Brief description of this node",
-  
-  // === STRUCTURAL FIELDS (metadata and navigation) ===
-  "navigableElements": [
-    {"type": "door|passage|stairs|archway|portal|window", "position": "location in scene", "description": "what it is"}
-  ],
-  "dominantElements": ["List of major positioned objects/features in scene"],
-  "uniqueIdentifiers": ["List of distinctive visual features that make this place recognizable"],
   "searchDesc": "75-100 char search-friendly description",
   "slug": "${nodeName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}",
-  
+  ${structuralFieldsSection}
   // === DNA: SCENE-SPECIFIC VISUAL FIELDS (always populated) ===
   "dna": {
     "looks": "${DNA_SCENE_FIELDS.looks}",
@@ -137,13 +142,10 @@ OUTPUT JSON STRUCTURE:
     "ambient": "${DNA_SCENE_FIELDS.ambient}",
     
     // === CASCADING STYLE ATTRIBUTES (optional - can be null if inherited from parent) ===
-    "genre": null,  // NEVER set genre - only host nodes have this
+    "genre": ${nodeType === 'host' ? `"${DNA_CASCADING_FIELDS.genre}"` : 'null'},
     "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null to inherit",
     "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null to inherit",
-    "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null to inherit",
-    "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null to inherit",
     "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null to inherit",
-    "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null to inherit",
     "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null to inherit",
     "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null to inherit"
   }

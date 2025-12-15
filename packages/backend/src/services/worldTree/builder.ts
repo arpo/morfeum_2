@@ -50,24 +50,13 @@ export class WorldTreeBuilder {
     // Use DNA object directly (don't spread entire data object to avoid nested dna.dna)
     const dna: NodeDNA = { ...(data.dna || {}) };
     
-    // Build structure object with structural fields (NEW FORMAT)
+    // Build structure object for physical/spatial properties only
     const structure: any = {};
     
     // Move spatialLayout from DNA to structure if present
     if (dna.spatialLayout) {
       structure.spatialLayout = dna.spatialLayout;
       delete dna.spatialLayout;
-    }
-    
-    // Add structural fields to structure object
-    if (data.navigableElements && data.navigableElements.length > 0) {
-      structure.navigableElements = data.navigableElements;
-    }
-    if (data.dominantElements && data.dominantElements.length > 0) {
-      structure.dominantElements = data.dominantElements;
-    }
-    if (data.uniqueIdentifiers && data.uniqueIdentifiers.length > 0) {
-      structure.uniqueIdentifiers = data.uniqueIdentifiers;
     }
 
     const node: TreeNode = {
@@ -82,21 +71,23 @@ export class WorldTreeBuilder {
       slug: data.slug || ''
     };
     
-    // Add structure object if it has any fields (NEW FORMAT)
+    // Add structure object if it has any fields
     if (Object.keys(structure).length > 0) {
       node.structure = structure;
     }
     
-    // ALSO add structural fields at node root for backward compatibility
-    // Many parts of the codebase read from node.navigableElements, node.dominantElements, etc.
-    if (data.navigableElements && data.navigableElements.length > 0) {
-      node.navigableElements = data.navigableElements;
-    }
-    if (data.dominantElements && data.dominantElements.length > 0) {
-      node.dominantElements = data.dominantElements;
-    }
-    if (data.uniqueIdentifiers && data.uniqueIdentifiers.length > 0) {
-      node.uniqueIdentifiers = data.uniqueIdentifiers;
+    // Add structural fields at ROOT level ONLY for location/niche, not host/region
+    // These are only needed for navigable spaces (locations/niches), not cities/districts
+    if (type === 'location' || type === 'niche') {
+      if (data.navigableElements && data.navigableElements.length > 0) {
+        node.navigableElements = data.navigableElements;
+      }
+      if (data.dominantElements && data.dominantElements.length > 0) {
+        node.dominantElements = data.dominantElements;
+      }
+      if (data.uniqueIdentifiers && data.uniqueIdentifiers.length > 0) {
+        node.uniqueIdentifiers = data.uniqueIdentifiers;
+      }
     }
 
     // Add primaryMedia if present in data

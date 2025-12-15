@@ -173,6 +173,9 @@ async function generateNodeDNA(
 /**
  * Build a node object from DNA result
  * NEW FORMAT: Uses spaceType and structure object (no legacy children arrays)
+ * 
+ * Note: navigableElements, dominantElements, uniqueIdentifiers only set for location/niche, not host/region
+ * These are stored at ROOT level, not in structure object (to avoid duplication)
  */
 function buildNodeFromDNA(
   nodeId: string,
@@ -191,24 +194,13 @@ function buildNodeFromDNA(
   // Determine spaceType based on nodeType (niche = interior, others = exterior)
   const spaceType = nodeType === 'niche' ? 'interior' : 'exterior';
   
-  // Build structure object with structural fields
+  // Build structure object for physical/spatial properties only
   const structure: any = {};
   
   // Move spatialLayout from DNA to structure if present
   if ((dnaResult.dna as any)?.spatialLayout) {
     structure.spatialLayout = (dnaResult.dna as any).spatialLayout;
     delete (dnaResult.dna as any).spatialLayout;
-  }
-  
-  // Add structural fields to structure object
-  if (dnaResult.navigableElements && dnaResult.navigableElements.length > 0) {
-    structure.navigableElements = dnaResult.navigableElements;
-  }
-  if (dnaResult.dominantElements && dnaResult.dominantElements.length > 0) {
-    structure.dominantElements = dnaResult.dominantElements;
-  }
-  if (dnaResult.uniqueIdentifiers && dnaResult.uniqueIdentifiers.length > 0) {
-    structure.uniqueIdentifiers = dnaResult.uniqueIdentifiers;
   }
 
   const baseNode: any = {
@@ -221,6 +213,20 @@ function buildNodeFromDNA(
     searchDesc: dnaResult.searchDesc,
     slug: dnaResult.slug,
   };
+  
+  // Only add structural fields for location/niche, not host/region
+  // Store at root level (not in structure) to avoid duplication
+  if (nodeType === 'location' || nodeType === 'niche') {
+    if (dnaResult.navigableElements && dnaResult.navigableElements.length > 0) {
+      baseNode.navigableElements = dnaResult.navigableElements;
+    }
+    if (dnaResult.dominantElements && dnaResult.dominantElements.length > 0) {
+      baseNode.dominantElements = dnaResult.dominantElements;
+    }
+    if (dnaResult.uniqueIdentifiers && dnaResult.uniqueIdentifiers.length > 0) {
+      baseNode.uniqueIdentifiers = dnaResult.uniqueIdentifiers;
+    }
+  }
   
   // Add structure object if it has any fields
   if (Object.keys(structure).length > 0) {

@@ -47,6 +47,8 @@ function cleanDNA(dna: any): any {
 /**
  * Build hierarchy structure from parsed response + DNA data
  * @param regionIsPassThrough - If true, create minimal pass-through region
+ * 
+ * Note: navigableElements, dominantElements, uniqueIdentifiers only set for location/niche, not host/region
  */
 function buildHierarchyStructure(
   parsedHierarchy: any,
@@ -64,25 +66,23 @@ function buildHierarchyStructure(
   const regionDNA = parentDNA?.region || null;
   const locationDNA = parentDNA?.location || null;
 
-  // Build host
+  // Build host (no structural fields - hosts don't need navigableElements etc.)
   if (parsedHierarchy.host) {
     structure.host = {
       type: 'host',
       name: hostDNA?.name || parsedHierarchy.host.name,
       description: hostDNA?.description || parsedHierarchy.host.description,
       dna: cleanDNA(hostDNA?.dna || (deepestType === 'host' ? deepestNodeDNA.dna : null)),
-      navigableElements: hostDNA?.navigableElements || (deepestType === 'host' ? deepestNodeDNA.navigableElements : []),
-      dominantElements: hostDNA?.dominantElements || (deepestType === 'host' ? deepestNodeDNA.dominantElements : []),
-      uniqueIdentifiers: hostDNA?.uniqueIdentifiers || (deepestType === 'host' ? deepestNodeDNA.uniqueIdentifiers : []),
       searchDesc: hostDNA?.searchDesc || (deepestType === 'host' ? deepestNodeDNA.searchDesc : ''),
       slug: hostDNA?.slug || (deepestType === 'host' ? deepestNodeDNA.slug : ''),
       regions: [],
+      // Skip: navigableElements, dominantElements, uniqueIdentifiers (not needed for host)
     };
   }
 
   if (!structure.host) return null;
 
-  // Build region
+  // Build region (no structural fields - regions don't need navigableElements etc.)
   if (parsedHierarchy.region) {
     // Check if this should be a pass-through region
     if (regionIsPassThrough && deepestType !== 'region') {
@@ -97,48 +97,48 @@ function buildHierarchyStructure(
         locations: [],
       }];
     } else {
-      // Create normal region with full DNA
+      // Create normal region with full DNA but no structural fields
       structure.host.regions = [{
         type: 'region',
         name: regionDNA?.name || parsedHierarchy.region.name,
         description: regionDNA?.description || parsedHierarchy.region.description,
         dna: cleanDNA(regionDNA?.dna || (deepestType === 'region' ? deepestNodeDNA.dna : null)),
-        navigableElements: regionDNA?.navigableElements || (deepestType === 'region' ? deepestNodeDNA.navigableElements : []),
-        dominantElements: regionDNA?.dominantElements || (deepestType === 'region' ? deepestNodeDNA.dominantElements : []),
-        uniqueIdentifiers: regionDNA?.uniqueIdentifiers || (deepestType === 'region' ? deepestNodeDNA.uniqueIdentifiers : []),
         searchDesc: regionDNA?.searchDesc || (deepestType === 'region' ? deepestNodeDNA.searchDesc : ''),
         slug: regionDNA?.slug || (deepestType === 'region' ? deepestNodeDNA.slug : ''),
         locations: [],
+        // Skip: navigableElements, dominantElements, uniqueIdentifiers (not needed for region)
       }];
     }
 
-    // Build location
+    // Build location (includes structural fields)
     if (parsedHierarchy.location) {
       structure.host.regions[0].locations = [{
         type: 'location',
         name: locationDNA?.name || parsedHierarchy.location.name,
         description: locationDNA?.description || parsedHierarchy.location.description,
         dna: cleanDNA(locationDNA?.dna || (deepestType === 'location' ? deepestNodeDNA.dna : null)),
+        searchDesc: locationDNA?.searchDesc || (deepestType === 'location' ? deepestNodeDNA.searchDesc : ''),
+        slug: locationDNA?.slug || (deepestType === 'location' ? deepestNodeDNA.slug : ''),
+        // Locations DO get structural fields
         navigableElements: locationDNA?.navigableElements || (deepestType === 'location' ? deepestNodeDNA.navigableElements : []),
         dominantElements: locationDNA?.dominantElements || (deepestType === 'location' ? deepestNodeDNA.dominantElements : []),
         uniqueIdentifiers: locationDNA?.uniqueIdentifiers || (deepestType === 'location' ? deepestNodeDNA.uniqueIdentifiers : []),
-        searchDesc: locationDNA?.searchDesc || (deepestType === 'location' ? deepestNodeDNA.searchDesc : ''),
-        slug: locationDNA?.slug || (deepestType === 'location' ? deepestNodeDNA.slug : ''),
         niches: [],
       }];
 
-      // Build niche
+      // Build niche (includes structural fields)
       if (parsedHierarchy.niche) {
         structure.host.regions[0].locations[0].niches = [{
           type: 'niche',
           name: deepestNodeDNA.name || parsedHierarchy.niche.name,
           description: deepestNodeDNA.description || parsedHierarchy.niche.description,
           dna: cleanDNA(deepestNodeDNA.dna),
+          searchDesc: deepestNodeDNA.searchDesc || '',
+          slug: deepestNodeDNA.slug || '',
+          // Niches DO get structural fields
           navigableElements: deepestNodeDNA.navigableElements || [],
           dominantElements: deepestNodeDNA.dominantElements || [],
           uniqueIdentifiers: deepestNodeDNA.uniqueIdentifiers || [],
-          searchDesc: deepestNodeDNA.searchDesc || '',
-          slug: deepestNodeDNA.slug || '',
         }];
       }
     }
