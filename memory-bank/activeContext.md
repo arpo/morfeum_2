@@ -2,68 +2,54 @@
 
 ## Recent Changes (2025-12-15)
 
-### Pipeline Progress Bar Fix & VIEW Command Alignment (Dec 15)
-- **Problem 1**: GO_INSIDE progress bar not reaching 100%
-- **Root Cause**: SpawnInputBar.tsx filtered out completed spawns before animation could show 100%
-- **Fix**: Changed filter to include `status === 'completed'` spawns, added `onComplete` callback to remove spawn after animation
+### SpawnInputBar Refactoring & Dead Code Cleanup (Dec 15)
 
-- **Problem 2**: VIEW command had hardcoded pipeline steps in route, not in `pipelineConfig.ts`
-- **Fix**: Added `view` pipeline to `pipelineConfig.ts` as single source of truth
+#### Image Drop/Paste Moved to Command Input
+- **Change**: Moved image drag/drop/paste functionality from App.tsx to SpawnInputBar
+- **Reason**: Image drop was connected to wrong state (store's `spawnInputText` instead of local `movementInput`)
+- **Implementation**:
+  - `SpawnInputBar.tsx` now uses `useImageDropLogic` hook
+  - Drag handlers on spawn-input-bar container div
+  - `onPaste` prop added to `SlashCommandInput`
+  - Analyzed image descriptions **append** to existing input text (not replace)
+- **Visual indicators**: Drop overlay, analyzing spinner, error message all in SpawnInputBar
 
-- **Problem 3**: VIEW had unnecessary "save" step (other pipelines save silently)
-- **Fix**: Simplified VIEW pipeline to single step, matching other pipelines
+#### Saved Entities Button Moved to TopButtonRow
+- **Change**: Moved "Saved Entities" button from SpawnInputBar to TopButtonRow
+- **Location**: Now between sidebar toggle and info button
+- **Cleanup**: Added proper `savedEntitiesButton` CSS class (was using `shuffleButton`)
 
-- **Enhancement**: Added timing logs to VIEW command terminal output
+#### Dead Code Cleanup
+Removed code from old tab-based spawn input system:
+- **Deleted `useSpawnInputLogic.ts`** - Entire hook was unused
+- **Deleted `types.ts`** - All types only used by deleted hook
+- **Cleaned `index.ts`** - Removed dead exports
+- **Cleaned `spawnSlice.ts`** - Removed `spawnInputText`, `setSpawnInputText`, `appendSpawnInputText`
+- **Cleaned `App.module.css`** - Removed 9 unused styles (dropOverlay, analyzingOverlay, spinner, etc.)
 
 #### Key Files Modified
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/SpawnInputBar.tsx` - Filter fix + onComplete
-- `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - Added `view` pipeline
-- `packages/backend/src/routes/mzoo/navigation.ts` - Updated `/create-image` to use config + timing logs
-- `packages/backend/src/engine/pipelines/shared/pipelineHelpers.ts` - Fixed `started()` to send steps
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/SpawnInputBar.tsx` - Added image drop logic
+- `packages/frontend/src/components/ui/SlashCommandInput/SlashCommandInput.tsx` - Added `onPaste` prop
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/SpawnInputBar.module.css` - Added drop overlay styles
+- `packages/frontend/src/features/app/components/TopButtonRow/TopButtonRow.tsx` - Added saved entities button
+- `packages/frontend/src/features/app/components/App/App.tsx` - Removed image drop logic
+- `packages/frontend/src/features/app/components/App/App.module.css` - Removed unused styles
+- `packages/frontend/src/store/slices/spawnSlice.ts` - Removed unused state
 
-#### Pipeline Steps Now (Single Source of Truth)
-```typescript
-// VIEW command - generate image for existing node (save happens silently)
-view: [
-  { id: 'generate', name: 'Generating Image', duration: 8000 }
-]
-```
-
-#### VIEW Terminal Output
-```
-[VIEW] img-xxx completed in 8.25s
-  Stage Timings:
-    - Image Generation: 8.15s
-  Total: 8.25s
-```
-
-## Previous Changes (2025-12-12)
-
-### Character Creation System (Dec 12)
-- **Feature**: Implemented `/CREATE_CHARACTER_REAL` and `/CREATE_CHARACTER_UNREAL` slash commands
-- **7-Step Flow**: Prompt Engineering → Seed → Scene Composition → Image → Visual Analysis → Profile → Save
-- **Camera Mode System**: 9 shot types (`half_portrait`, `full_body`, `close_up`, etc.)
-- **Character Context/Backstory Storage**: Original user prompt stored as `context` field
-- **Rich Chat System Prompts**: Full appearance, personality, voice, environment context
-
-### Open-Sky Rooftop/Terrace Fix (Dec 11)
-- Append OPEN-SKY constraint DIRECTLY to final FLUX prompt
-
-### DNA Bleeding Fix for /goto (Dec 11)
-- `findParentLocationNode()` returns `null` for `parentLocationDNA` when no valid location parent
-
-### Interior Spawn Pipeline System (Dec 11)
-- Two-phase approach for interior/niche creation with dynamic pipeline config
+### Previous Changes (Dec 15)
+- Pipeline Progress Bar Fix & VIEW Command Alignment
+- Fixed GO_INSIDE progress bar not reaching 100%
+- Added `view` pipeline to `pipelineConfig.ts`
 
 ## Current Focus
 
-- Pipeline configuration now centralized in `pipelineConfig.ts`
-- All pipelines have consistent timing logs
-- Progress bars correctly animate to 100% before removal
-- VIEW command properly integrated with pipeline system
+- Command-based input system (slash commands only, no tabs)
+- Image drop/paste now properly connected to command input
+- Clean codebase with no dead code from old tab system
+- TopButtonRow contains: sidebar toggle, saved entities, info, chat, depth map, display mode, external view, training data
 
 ## Next Steps
 
 - Implement `/SCENE_IMAGE` command for generating new images of existing characters
-- Test character chat with full context
-- Consider database migration for character storage
+- Test image drop/paste in command input
+- Consider additional command enhancements

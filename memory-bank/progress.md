@@ -25,6 +25,17 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **SpawnInputBar Refactoring & Dead Code Cleanup (Dec 15):**
+  - Moved image drag/drop/paste from App.tsx to SpawnInputBar (was connected to wrong state)
+  - Image descriptions now **append** to existing input text (not replace)
+  - Moved "Saved Entities" button from SpawnInputBar to TopButtonRow
+  - Added `onPaste` prop to SlashCommandInput component
+  - **Dead code removed:**
+    - Deleted `useSpawnInputLogic.ts` (unused hook from old tab system)
+    - Deleted `types.ts` (types only used by deleted hook)
+    - Removed 9 unused CSS styles from App.module.css
+    - Removed `spawnInputText`, `setSpawnInputText`, `appendSpawnInputText` from spawnSlice.ts
+  - Key files: `SpawnInputBar.tsx`, `SlashCommandInput.tsx`, `TopButtonRow.tsx`, `App.tsx`, `spawnSlice.ts`
 - **Pipeline Progress Bar Fix & VIEW Command (Dec 15):**
   - Fixed GO_INSIDE progress bar not reaching 100% (filter was excluding completed spawns)
   - Added `view` pipeline to `pipelineConfig.ts` (was hardcoded in route)
