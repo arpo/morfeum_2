@@ -110,6 +110,7 @@ export function App() {
             onToggleSidebar={toggleEntityExplorerPanel}
             onOpenInfo={handleOpenInfo}
             onOpenChat={handleOpenChat}
+            onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)}
             onGenerateDepthMap={handleGenerateDepthMap}
             onDisplayModeChange={handleDisplayModeChange}
             onSaveTrainingData={handleSaveTrainingData}

@@ -15,7 +15,7 @@ interface CreationCallbacks {
 }
 
 /**
- * Handle creation commands (NEW_HOST, NEW_REGION, NEW_LOCATION)
+ * Handle creation commands (NEW_WORLD, NEW_REGION, NEW_LOCATION)
  */
 export async function handleCreationCommand(
   parsedCommand: ParsedCommand,
@@ -26,6 +26,11 @@ export async function handleCreationCommand(
   const { setIsMoving, setErrorMessage, setMovementInput } = callbacks;
 
   setIsMoving(true);
+  
+  // NEW_WORLD uses the spawn system (creates full hierarchy from description)
+  if (command === 'NEW_WORLD') {
+    return handleNewWorldCommand(text, callbacks);
+  }
   
   try {
     const response = await fetch('/api/mzoo/navigation/create-node', {
@@ -137,6 +142,78 @@ async function addNodeToStoreAndTree(
     primaryMedia: node.primaryMedia,
     imageUrl
   });
+}
+
+/**
+ * Handle NEW_WORLD command using spawn system (creates full hierarchy from description)
+ * Uses the same endpoint as the Location tab (/api/spawn/location/start)
+ */
+async function handleNewWorldCommand(
+  text: string | undefined,
+  callbacks: CreationCallbacks
+): Promise<CreationResult> {
+  const { setIsMoving, setErrorMessage, setMovementInput } = callbacks;
+  
+  if (!text || !text.trim()) {
+    setErrorMessage('Please provide a world description');
+    setTimeout(() => setErrorMessage(null), 5000);
+    setIsMoving(false);
+    setMovementInput('');
+    return { success: false, error: 'No description provided' };
+  }
+
+  try {
+    const response = await fetch('/api/spawn/location/start', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: text.trim() })
+    });
+    
+    const result = await response.json();
+    
+    if (!response.ok) {
+      setErrorMessage(result.error || 'Failed to create world');
+      setTimeout(() => setErrorMessage(null), 5000);
+      setIsMoving(false);
+      setMovementInput('');
+      return { success: false, error: result.error };
+    }
+    
+    const { data } = result;
+    
+    // Register with spawn system for progress tracking
+    if (data.eventsUrl && data.spawnId) {
+      const startSpawn = useStore.getState().registerExternalSpawn;
+      
+      startSpawn(
+        data.spawnId,
+        data.eventsUrl,
+        `/NEW_WORLD ${text}`,
+        'location',
+        async () => {
+          // World tree completion is handled by the spawn completion handler
+          setIsMoving(false);
+        },
+        (error: any) => {
+          console.error('[creationCommands] NEW_WORLD error:', error);
+          setIsMoving(false);
+        }
+      );
+      
+      setMovementInput('');
+      return { success: true };
+    }
+    
+    setMovementInput('');
+    return { success: true };
+  } catch (error) {
+    console.error('[creationCommands] NEW_WORLD command error:', error);
+    setErrorMessage('Failed to create world');
+    setTimeout(() => setErrorMessage(null), 5000);
+    setIsMoving(false);
+    setMovementInput('');
+    return { success: false, error: 'Failed to create world' };
+  }
 }
 
 /**

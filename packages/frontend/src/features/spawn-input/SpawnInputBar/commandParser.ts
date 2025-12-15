@@ -53,7 +53,7 @@ export function parseCommandInput(input: string): ParsedCommand {
  * Check if command is a creation command
  */
 export function isCreationCommand(command: string): boolean {
-  return ['NEW_HOST', 'NEW_REGION', 'NEW_LOCATION'].includes(command);
+  return ['NEW_WORLD', 'NEW_REGION', 'NEW_LOCATION'].includes(command);
 }
 
 /**
@@ -76,7 +76,7 @@ export function isNavigationCommand(command: string): boolean {
  */
 export function getNodeTypeFromCommand(command: string): string {
   const nodeTypeMap: Record<string, string> = {
-    NEW_HOST: 'host',
+    NEW_WORLD: 'host',
     NEW_REGION: 'region',
     NEW_LOCATION: 'location'
   };

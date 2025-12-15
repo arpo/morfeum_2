@@ -34,9 +34,9 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   },
   
   // Node creation commands
-  NEW_HOST: { 
+  NEW_WORLD: { 
     requiresNodeType: null, 
-    description: 'Create a new host world',
+    description: 'Create a new world from description',
     category: 'creation'
   },
   NEW_REGION: { 

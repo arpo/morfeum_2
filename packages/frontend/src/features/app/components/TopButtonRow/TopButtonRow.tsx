@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui';
-import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera, IconCheck } from '@/icons';
+import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera, IconCheck, IconBookmark } from '@/icons';
 import styles from './TopButtonRow.module.css';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
@@ -14,6 +14,7 @@ interface TopButtonRowProps {
   onToggleSidebar: () => void;
   onOpenInfo: () => void;
   onOpenChat: () => void;
+  onOpenSavedEntities: () => void;
   onGenerateDepthMap: () => void;
   onDisplayModeChange: (mode: DisplayMode) => void;
   onSaveTrainingData: () => void;
@@ -32,6 +33,7 @@ export function TopButtonRow({
   onToggleSidebar,
   onOpenInfo,
   onOpenChat,
+  onOpenSavedEntities,
   onGenerateDepthMap,
   onDisplayModeChange,
   onSaveTrainingData,
@@ -60,6 +62,14 @@ export function TopButtonRow({
         aria-label="Toggle Entity Explorer"
       >
         <IconLayoutSidebar size={20} />
+      </Button>
+      
+      <Button
+        onClick={onOpenSavedEntities}
+        className={styles.button}
+        aria-label="Saved Entities"
+      >
+        <IconBookmark size={20} />
       </Button>
       
       <Button

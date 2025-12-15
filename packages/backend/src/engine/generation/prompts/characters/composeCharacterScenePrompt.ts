@@ -40,7 +40,7 @@ export interface CharacterVisualData {
  * Shot type descriptions for the LLM
  */
 const SHOT_TYPE_GUIDELINES: Record<ShotType, string> = {
-  half_portrait: 'Half portrait - Face and upper body prominent (60% of frame). Background visible but can have subtle depth blur. Subject facing camera or 3/4 turn. Good for character identity shots.',
+  half_portrait: 'Half portrait - Subject facing the camera directly, steady eye contact; face in crisp focus; natural depth of field with gentle background bokeh; balanced or slightly off-center framing emphasizing eyes and expression; neutral or soft directional light enhancing skin texture.',
   full_body: 'Full body shot - Character visible head to toe (40-50% of frame). Standing or posed naturally in the environment. Environment clearly visible around them.',
   environmental_portrait: 'Environmental portrait - Character takes 30-40% of frame, environment clearly visible (60-70%). Mid to 3/4 shot showing character grounded in their surroundings.',
   full_scene: 'Wide establishing shot - Character is small part of landscape (15-25%), environment dominant. Character placed naturally within vast scenery.',

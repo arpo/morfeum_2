@@ -463,7 +463,7 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
 
   // Map command to node type
   const commandToNodeType: Record<string, NodeType> = {
-    NEW_HOST: 'host',
+    NEW_WORLD: 'host',
     NEW_REGION: 'region',
     NEW_LOCATION: 'location'
   };

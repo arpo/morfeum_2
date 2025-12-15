@@ -1,44 +1,31 @@
 /**
  * Spawn Input Bar Component
- * Simplified input for triggering entity spawn processes
+ * Command-based input for creating worlds, characters, and navigating
  */
 
-import { useState, KeyboardEvent, useCallback } from 'react';
-import { useSpawnInputLogic } from './useSpawnInputLogic';
+import { KeyboardEvent } from 'react';
 import { useNavigationLogic } from './useNavigationLogic';
-import { useImageDropLogic } from './useImageDropLogic';
 import { useStore } from '@/store';
-import { IconDice, IconChevronDown, IconChevronUp, IconBookmark } from '@/icons';
+import { IconChevronDown, IconChevronUp } from '@/icons';
 import { ProgressBar } from '@/components/ui/ProgressBar';
-import { Tabs, Button, SlashCommandInput } from '@/components/ui';
+import { Button, SlashCommandInput } from '@/components/ui';
 import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
 import { useLocationsStore } from '@/store/slices/locations';
 import styles from './SpawnInputBar.module.css';
 import buttonStyles from './SpawnInputButtons.module.css';
-import dropZoneStyles from './SpawnInputDropZone.module.css';
 
 interface SpawnInputBarProps {
   onOpenSavedEntities?: () => void;
 }
 
 export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
-  const { state, handlers } = useSpawnInputLogic();
   const navigation = useNavigationLogic();
-  const [activeTab, setActiveTab] = useState('character');
   
   // Get current node type for contextual commands
   const activeEntityId = useStore(state => state.activeEntity);
   const getNode = useLocationsStore(state => state.getNode);
   const currentNode = activeEntityId ? getNode(activeEntityId) : null;
   const currentNodeType = currentNode?.type as 'host' | 'region' | 'location' | 'niche' | null;
-  
-  // Handle image paste - use store's append function
-  const appendSpawnInputText = useStore(state => state.appendSpawnInputText);
-  const handleDescriptionReceived = useCallback((description: string) => {
-    appendSpawnInputText(description);
-  }, [appendSpawnInputText]);
-  
-  const imageDrop = useImageDropLogic({ onDescriptionReceived: handleDescriptionReceived });
   
   // Get spawn input state from store
   const isMinimized = useStore(state => state.spawnInputMinimized);
@@ -112,198 +99,43 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
             </button>
           </div>
           
-          <Tabs
-            activeTabId={activeTab}
-            onChange={(tabId) => {
-              setActiveTab(tabId);
-              if (tabId === 'character') {
-                handlers.setEntityType('character');
-              } else if (tabId === 'location') {
-                handlers.setEntityType('location');
-              }
-            }}
-            items={[
-              {
-                id: 'character',
-                label: 'Character',
-                content: (
-                  <div className={styles.tabContent}>
-                    <div className={dropZoneStyles.dropZone}>
-                      <textarea
-                        className={styles.textarea}
-                        value={state.textPrompt}
-                        onChange={(e) => handlers.setTextPrompt(e.target.value)}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
-                            e.preventDefault();
-                            handlers.handleGenerate();
-                          }
-                        }}
-                        onPaste={imageDrop.handlers.handlePaste}
-                        placeholder="Describe a character to spawn... (paste an image)"
-                        rows={3}
-                      />
-                      {imageDrop.state.isAnalyzing && (
-                        <div className={dropZoneStyles.analyzingOverlay}>
-                          <span className={dropZoneStyles.analyzingText}>
-                            <span className={dropZoneStyles.spinner} />
-                            Analyzing image...
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                    {imageDrop.state.error && (
-                      <div className={styles.errorMessage}>{imageDrop.state.error}</div>
-                    )}
-                    <div className={buttonStyles.buttonRow}>
-                      <button
-                        className={buttonStyles.generateButton}
-                        onClick={handlers.handleGenerate}
-                        disabled={!state.textPrompt.trim()}
-                      >
-                        Generate
-                      </button>
-                      
-                      <button
-                        className={buttonStyles.shuffleButton}
-                        onClick={handlers.handleShuffle}
-                        title="Random example"
-                      >
-                        <IconDice size={18} />
-                      </button>
-                      {onOpenSavedEntities && (
-                        <button
-                          className={buttonStyles.shuffleButton}
-                          onClick={onOpenSavedEntities}
-                          title="Saved Entities"
-                        >
-                          <IconBookmark size={18} />
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                )
-              },
-              {
-                id: 'location',
-                label: 'Location',
-                content: (
-                  <div className={styles.tabContent}>
-                    <div className={dropZoneStyles.dropZone}>
-                      <textarea
-                        className={styles.textarea}
-                        value={state.textPrompt}
-                        onChange={(e) => handlers.setTextPrompt(e.target.value)}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' && !e.shiftKey && state.textPrompt.trim()) {
-                            e.preventDefault();
-                            handlers.handleGenerate();
-                          }
-                        }}
-                        onPaste={imageDrop.handlers.handlePaste}
-                        placeholder="Describe a location to spawn... (paste an image)"
-                        rows={3}
-                      />
-                      {imageDrop.state.isAnalyzing && (
-                        <div className={dropZoneStyles.analyzingOverlay}>
-                          <span className={dropZoneStyles.analyzingText}>
-                            <span className={dropZoneStyles.spinner} />
-                            Analyzing image...
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                    {imageDrop.state.error && (
-                      <div className={styles.errorMessage}>{imageDrop.state.error}</div>
-                    )}
-                    <div className={buttonStyles.buttonRow}>
-                      <button
-                        className={buttonStyles.generateButton}
-                        onClick={handlers.handleGenerate}
-                        disabled={!state.textPrompt.trim()}
-                      >
-                        Generate
-                      </button>
-                      
-                      <button
-                        className={buttonStyles.shuffleButton}
-                        onClick={handlers.handleShuffle}
-                        title="Random example"
-                      >
-                        <IconDice size={18} />
-                      </button>
-                      {onOpenSavedEntities && (
-                        <button
-                          className={buttonStyles.shuffleButton}
-                          onClick={onOpenSavedEntities}
-                          title="Saved Entities"
-                        >
-                          <IconBookmark size={18} />
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                )
-              },
-              {
-                id: 'navigate',
-                label: 'Navigate',
-                content: (
-                  <div className={styles.tabContent}>
-                    {!navigation.state.activeEntity ? (
-                      <p className={styles.noLocationMessage}>
-                        Select or generate a location to navigate
-                      </p>
-                    ) : (
-                      <>
-                        <p className={styles.navigationDescription}>
-                          Type / to see navigation commands.
-                        </p>
-                        {navigation.state.errorMessage && (
-                          <div className={styles.errorMessage}>
-                            {navigation.state.errorMessage}
-                          </div>
-                        )}
-                        <div className={styles.navigationSection}>
-                          <SlashCommandInput
-                            className={styles.navigationInput}
-                            value={navigation.state.movementInput}
-                            onChange={navigation.handlers.setMovementInput}
-                            commands={NAVIGATION_COMMANDS}
-                            currentNodeType={currentNodeType}
-                            onInvalidCommand={navigation.handlers.handleInvalidCommand}
-                            onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => {
-                              if (e.key === 'Enter' && !navigation.state.isMoving) {
-                                e.preventDefault();
-                                navigation.handlers.handleMove();
-                              }
-                            }}
-                            placeholder="Type / to see commands..."
-                            disabled={navigation.state.isMoving}
-                          />
-                          <Button
-                            onClick={navigation.handlers.handleMove}
-                            disabled={navigation.state.isMoving || !navigation.state.movementInput.trim()}
-                            loading={navigation.state.isMoving}
-                          >
-                            Go
-                          </Button>
-                        </div>
-                      </>
-                    )}
-                  </div>
-                )
-              }
-            ]}
-          />
+          <div className={styles.commandContent}>
+            <p className={styles.navigationDescription}>
+              Type / to see available commands
+            </p>
+            {navigation.state.errorMessage && (
+              <div className={styles.errorMessage}>
+                {navigation.state.errorMessage}
+              </div>
+            )}
+            <div className={styles.navigationSection}>
+              <SlashCommandInput
+                className={styles.navigationInput}
+                value={navigation.state.movementInput}
+                onChange={navigation.handlers.setMovementInput}
+                commands={NAVIGATION_COMMANDS}
+                currentNodeType={currentNodeType}
+                onInvalidCommand={navigation.handlers.handleInvalidCommand}
+                onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => {
+                  if (e.key === 'Enter' && !navigation.state.isMoving) {
+                    e.preventDefault();
+                    navigation.handlers.handleMove();
+                  }
+                }}
+                placeholder="Type / to see commands..."
+                disabled={navigation.state.isMoving}
+              />
+              <Button
+                onClick={navigation.handlers.handleMove}
+                disabled={navigation.state.isMoving || !navigation.state.movementInput.trim()}
+                loading={navigation.state.isMoving}
+              >
+                Go
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
-      
-      {state.error && (
-        <div className={styles.errorMessage}>
-          {state.error}
-        </div>
-      )}
     </div>
   );
 }

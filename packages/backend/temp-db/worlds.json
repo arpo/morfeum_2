@@ -3635,6 +3635,106 @@
         "Geodesic geometry"
       ],
       "primaryMedia": "media-1765791267517-8t0c3hsln"
+    },
+    "niche-1765793329661-w9s6sfekt": {
+      "id": "niche-1765793329661-w9s6sfekt",
+      "type": "niche",
+      "name": "The Obsidian Conservatory Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is defined by the continuation of the striking geodesic dome structure, with its large panels of polished, black glass. A thick, creeping growth of glowing white lichen covers many of the internal surfaces, providing a soft illumination. The scale is grand, emphasizing the enclosed, contained nature of the space.",
+        "colorsAndLighting": "The dominant colors are deep, reflective black from the glass and a stark, ethereal white from the bioluminescent lichen. The lichen serves as the primary light source, casting a soft, otherworldly glow that minimizes harsh shadows.",
+        "atmosphere": "The air within the conservatory feels cool and slightly humid, carrying a palpable stillness. The glowing lichen emanates a faint, almost imperceptible warmth, creating a serene and enclosed natural environment.",
+        "materials": "The primary interior surfaces are the highly polished, obsidian-like black glass and the soft, fibrous glowing white lichen clinging tenaciously to it. The construction materials of the dome are evident throughout.",
+        "mood": "The mood is one of mysterious beauty, quiet isolation, and awe at the fusion of geometric structure and organic, luminous life.",
+        "sounds": "Subdued natural ambiance, faint hum of life.",
+        "spatialLayout": "The interior follows the hemispherical shape of the geodesic dome, with the curved glass panels forming the walls and ceiling. The space is open and grand, with its depth defined by the extent of the dome's curvature.",
+        "primary_surfaces": "Polished black glass panels, glowing white lichen growth",
+        "secondary_surfaces": "Subtle structural supports integrated into the glass and lichen",
+        "accent_features": "Bioluminescent patterns of lichen, the segmented iris door's internal mechanism",
+        "dominant": "Black (polished glass, ~70%)",
+        "secondary": "White (glowing lichen, ~30%)",
+        "accent": "Subtle blues and greens within the lichen's glow",
+        "ambient": "Ethereal white glow",
+        "genre": null,
+        "architectural_tone": "Futuristic geodesic with organic embellishments",
+        "cultural_tone": "A place for cultivating rare or unique flora, perhaps by reclusive scholars or alien botanists.",
+        "materials_base": "Glass and organic matter",
+        "mood_baseline": "Mysterious and serene",
+        "palette_bias": "Monochromatic with luminous highlights",
+        "soundscape_base": "Subdued and natural",
+        "flora_base": "Abundant bioluminescent flora",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765793329660-jbocdyz2m",
+      "description": "The interior of the Obsidian Conservatory is a vast, geodetically structured space, designed for the cultivation and study of rare flora. Its form directly mirrors the exterior geodesic dome, with faceted walls and ceiling creating an expansive, light-filled (from internal luminescence) environment. The dominant features are the exotic plants themselves, the glowing lichen that illuminates the space, and the polished black interior surfaces that reflect the botanical wonders.",
+      "structure": {
+        "form": "faceted",
+        "roofType": "geodesic",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "none",
+        "openingShape": "mixed",
+        "functionalType": "civic",
+        "spatialLayout": "The interior of the Obsidian Conservatory is a large, open, and potentially humid environment, dominated by its geodesic structure and the cultivated flora. It is likely a vast greenhouse or botanical research facility.",
+        "requiredElements": [],
+        "suggestedFixtures": [
+          "Bioluminescent plant displays",
+          "Advanced environmental control systems",
+          "Specimen cultivation tanks",
+          "Research workstations",
+          "Automated watering systems",
+          "Pathways through dense foliage"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "The massive, petal-like iris door from the exterior, now seen from the inside, creating a grand entrance."
+          },
+          {
+            "type": "passage",
+            "position": "side",
+            "description": "Access points to other sections or maintenance areas."
+          }
+        ],
+        "dominantElements": [
+          "Geodesic framework",
+          "Dense, exotic flora",
+          "Creeping white lichen (interior illumination)",
+          "Polished black glass panels (interior surface)"
+        ],
+        "uniqueIdentifiers": [
+          "The pervasive, soft glow of bioluminescent lichen",
+          "The stark contrast between the dark, reflective interior surfaces and the vibrant plant life",
+          "The unique hexagonal and pentagonal facets of the interior structure"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "The massive, petal-like iris door from the exterior, now seen from the inside, creating a grand entrance."
+        },
+        {
+          "type": "passage",
+          "position": "side",
+          "description": "Access points to other sections or maintenance areas."
+        }
+      ],
+      "dominantElements": [
+        "Geodesic framework",
+        "Dense, exotic flora",
+        "Creeping white lichen (interior illumination)",
+        "Polished black glass panels (interior surface)"
+      ],
+      "uniqueIdentifiers": [
+        "The pervasive, soft glow of bioluminescent lichen",
+        "The stark contrast between the dark, reflective interior surfaces and the vibrant plant life",
+        "The unique hexagonal and pentagonal facets of the interior structure"
+      ],
+      "searchDesc": "Interior of a black glass geodesic conservatory covered in glowing white lichen.",
+      "slug": "interior-of-the-obsidian-conservatory"
     }
   },
   "views": {},
@@ -3904,7 +4004,13 @@
             {
               "id": "40f9588c-80d4-43ce-b2f3-746d9dd21073",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1765793329661-w9s6sfekt",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }

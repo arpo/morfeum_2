@@ -41,11 +41,11 @@ export function useNavigationLogic() {
       setMovementInput
     };
 
-    // Get current node (may be undefined for NEW_HOST)
+    // Get current node (may be undefined for NEW_WORLD)
     let currentNode: ReturnType<typeof getNode> | undefined = undefined;
 
-    // For NEW_HOST, we don't need an active entity
-    if (command !== 'NEW_HOST') {
+    // For NEW_WORLD, we don't need an active entity
+    if (command !== 'NEW_WORLD') {
       const activeEntityId = useStore.getState().activeEntity;
       if (!activeEntityId) {
         console.warn('[useNavigationLogic] No active entity');

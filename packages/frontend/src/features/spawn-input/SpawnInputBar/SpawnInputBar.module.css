@@ -109,6 +109,13 @@
   gap: var(--spacing-sm);
 }
 
+/* Command Content (replaces tabs) */
+.commandContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
 /* Navigation Section */
 .navigationDescription {
   font-size: var(--text-sm);
