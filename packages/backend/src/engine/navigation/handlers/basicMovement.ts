@@ -60,16 +60,22 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
 }
 
 /**
- * Helper: Find entrance from dominantElements
+ * Helper: Find entrance target from dominantElements (primary) or navigableElements (fallback)
+ * dominantElements[0] should be the main enterable structure if any
  */
 function findEntrance(context: NavigationContext): string {
+  // 1. Use first dominantElement as the main structure/target
   const elements = context.currentNode.data.dominantElements || [];
+  if (elements.length > 0) {
+    return elements[0];
+  }
   
-  // Look for entrance-like elements
-  const entranceWords = ['door', 'entrance', 'gate', 'archway', 'portal', 'doorway'];
-  const entrance = elements.find(el => 
-    entranceWords.some(word => el.toLowerCase().includes(word))
-  );
+  // 2. Fall back to navigableElements description
+  const navigable = context.currentNode.data.navigableElements || [];
+  if (navigable.length > 0) {
+    return navigable[0].description || navigable[0].type || 'entrance';
+  }
   
-  return entrance || elements[0] || context.currentNode.name;
+  // 3. Last resort: location name
+  return context.currentNode.name;
 }

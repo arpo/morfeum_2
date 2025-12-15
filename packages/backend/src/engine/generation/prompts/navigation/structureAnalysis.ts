@@ -65,7 +65,7 @@ OUTPUT (pure JSON):
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment",
     "spatialLayout": "1-2 sentence physical description",
     "requiredElements": ["user-specified elements that MUST appear"],
-    "dominantElements": ["3-5 main features"],
+    "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
     "uniqueIdentifiers": ["2-4 distinctive features"]
   },
   "description": "Brief space description"

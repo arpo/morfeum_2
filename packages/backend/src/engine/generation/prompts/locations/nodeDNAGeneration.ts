@@ -31,7 +31,7 @@ MATERIAL RULES:
     : '';
 
   const structuralFields = needsStructuralFields ? `"navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
-  "dominantElements": ["3-5 main features"],
+  "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
   "uniqueIdentifiers": ["2-4 distinctive features"],` : '';
 
   return `Generate DNA for ${nodeType} "${nodeName}".

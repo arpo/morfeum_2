@@ -25,7 +25,14 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **DNA & Prompt Optimization (Dec 15, Latest):**
+- **GO_INSIDE & dominantElements Improvements (Dec 15, Latest):**
+  - Fixed GO_INSIDE target selection: now uses `dominantElements[0]` (main structure) instead of `navigableElements`
+  - Updated `findEntrance()` in `basicMovement.ts` to prioritize dominantElements
+  - Added instruction to DNA prompts: \"FIRST: main enterable structure if any, then 3-4 other major features\"
+  - Files updated: `locationDNA.ts`, `deepestNodeDNA.ts`, `nodeDNAGeneration.ts`, `structureAnalysis.ts`
+  - Prompt Enhancer now includes `navigableElements` context (shows existing entrances to LLM)
+  - Key files: `basicMovement.ts`, `promptEnhancer.ts`, `enhancerPromptTemplate.ts`, `navigation.ts`
+- **DNA & Prompt Optimization (Dec 15):**
   - Goal: Reduce pipeline execution time for NEW_WORLD, GOTO, GO_INSIDE commands
   - Removed redundant DNA fields: `materials_base`, `mood_baseline`, `soundscape_base`
   - Skip structural fields for Host/Region (only needed for location/niche)

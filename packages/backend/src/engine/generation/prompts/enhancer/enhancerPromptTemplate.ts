@@ -142,10 +142,12 @@ export function buildEnhancerPrompt(
     type: string;
     description?: string;
     dna?: any;
+    navigableElements?: Array<{ type: string; position: string; description: string }>;
   },
   destinationText: string
 ): string {
   const isExterior = commandType === 'NEW_LOCATION';
+  const hasNavigableElements = currentNodeContext.navigableElements && currentNodeContext.navigableElements.length > 0;
   
   let prompt = `You are an expert at suggesting scene details for image generation.
 
@@ -156,7 +158,10 @@ Current location: "${currentNodeContext.name}" (${currentNodeContext.type})
 ${currentNodeContext.description ? `Description: ${currentNodeContext.description}` : ''}
 ${currentNodeContext.dna?.architectural_tone ? `Architectural style: ${currentNodeContext.dna.architectural_tone}` : ''}
 ${currentNodeContext.dna?.cultural_tone ? `Cultural context: ${currentNodeContext.dna.cultural_tone}` : ''}
-
+${hasNavigableElements ? `
+=== EXISTING ENTRANCES ===
+${currentNodeContext.navigableElements!.map(e => `- ${e.type} at ${e.position}: ${e.description}`).join('\n')}
+` : ''}
 === USER'S DESTINATION ===
 "${destinationText}"
 

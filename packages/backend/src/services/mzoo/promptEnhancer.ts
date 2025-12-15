@@ -21,6 +21,7 @@ export interface EnhancePromptInput {
     type: string;
     description?: string;
     dna?: any;
+    navigableElements?: Array<{ type: string; position: string; description: string }>;
   };
 }
 
@@ -52,7 +53,8 @@ export async function enhancePrompt(
         name: input.currentNode.name,
         type: input.currentNode.type,
         description: input.currentNode.description,
-        dna: input.currentNode.dna
+        dna: input.currentNode.dna,
+        navigableElements: input.currentNode.navigableElements
       },
       input.destinationText
     );
