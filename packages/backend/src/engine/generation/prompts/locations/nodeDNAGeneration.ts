@@ -31,6 +31,7 @@ MATERIAL RULES:
     : '';
 
   const structuralFields = needsStructuralFields ? `"navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
+  NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
   "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
   "uniqueIdentifiers": ["2-4 distinctive features"],` : '';
 

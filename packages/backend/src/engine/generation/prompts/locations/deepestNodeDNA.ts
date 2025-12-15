@@ -39,6 +39,7 @@ export function deepestNodeDNAGeneration(
   // Only include structural fields for location/niche
   const structuralFields = (nodeType === 'location' || nodeType === 'niche') 
     ? `"navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
+  NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
   "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
   "uniqueIdentifiers": ["3-5 distinctive features"],`
     : '';

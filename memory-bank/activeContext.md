@@ -62,26 +62,29 @@ Reduced all prompt files significantly:
   - Added `POST /api/mzoo/navigation/enhance-prompt` endpoint
   - Created `enhancementParser.ts` to parse "navigable elements:", "furnish:", "facade:" from commands
 
-### GO_INSIDE & dominantElements Improvements (Dec 15, Latest)
+### GO_INSIDE & Prompt Enhancer Improvements (Dec 15, Latest)
 
-#### GO_INSIDE Target Selection
-- **Problem**: `findEntrance()` was prioritizing `navigableElements` (door descriptions) over the main structure name
-- **Fix**: Updated `basicMovement.ts` to use `dominantElements[0]` as the primary target
-- **Result**: GO_INSIDE now targets "The towering ethereal spire" instead of "An arched opening..."
+#### Combined Entrance Target
+- **Problem**: GO_INSIDE needed both the structure name AND the entrance
+- **Fix**: `findEntrance()` now combines `dominantElements[0]` + `navigableElements[0]`
+- **Result**: `"the Lumina Arbor's spherical canopy via a small, rectangular door at the base of the trunk"`
 
-#### DNA Prompts - dominantElements Ordering
-- **Added instruction to all DNA prompts**: "FIRST: main enterable structure if any, then 3-4 other major features"
-- **Files updated**:
-  - `locationDNA.ts`
-  - `deepestNodeDNA.ts`
-  - `nodeDNAGeneration.ts`
-  - `structureAnalysis.ts`
-- **Result**: LLM will place main building/structure as first element in dominantElements array
+#### DNA Prompts - Ordering Instructions
+- All 4 DNA prompts now include:
+  - `dominantElements`: "FIRST: main enterable structure if any, then 3-4 other major features"
+  - `navigableElements`: "FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE"
+- **Files**: `locationDNA.ts`, `deepestNodeDNA.ts`, `nodeDNAGeneration.ts`, `structureAnalysis.ts`
 
-#### Prompt Enhancer - Added navigableElements Context
-- **Problem**: Enhancer didn't know about existing entrances when suggesting GO_INSIDE details
-- **Fix**: Added `navigableElements` to enhancer context (all 3 files: interface, template, route)
-- **Result**: Enhancer now shows "EXISTING ENTRANCES" section with actual doors/passages
+#### Contextual Prompt Enhancer
+- **Problem**: Enhancer focused on existing structure even when user specified destination (e.g., "a roof top bar")
+- **Fix**: Made enhancer contextual based on `destinationText` presence:
+  - If destination provided: Focus on that space, use location style as context only
+  - If empty: Use existing structure/entrance as target
+- **Example**: `GO_INSIDE a roof top bar` → Suggests bar furnishing matching location's arboreal style
+
+#### Prompt Enhancer - dominantElements Context
+- Added `dominantElements` to enhancer context (interface, template, route)
+- Enhancer now shows main structure and main entrance to LLM
 
 ## Current Focus
 

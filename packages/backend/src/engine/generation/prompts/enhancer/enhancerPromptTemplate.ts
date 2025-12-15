@@ -143,29 +143,49 @@ export function buildEnhancerPrompt(
     description?: string;
     dna?: any;
     navigableElements?: Array<{ type: string; position: string; description: string }>;
+    dominantElements?: string[];
   },
   destinationText: string
 ): string {
   const isExterior = commandType === 'NEW_LOCATION';
-  const hasNavigableElements = currentNodeContext.navigableElements && currentNodeContext.navigableElements.length > 0;
+  const hasDestination = destinationText && destinationText.trim().length > 0;
+  const mainStructure = currentNodeContext.dominantElements?.[0];
+  const mainEntrance = currentNodeContext.navigableElements?.[0];
   
   let prompt = `You are an expert at suggesting scene details for image generation.
 
 TASK: Suggest appropriate details to enhance a scene description.
 
-=== CURRENT CONTEXT ===
-Current location: "${currentNodeContext.name}" (${currentNodeContext.type})
-${currentNodeContext.description ? `Description: ${currentNodeContext.description}` : ''}
-${currentNodeContext.dna?.architectural_tone ? `Architectural style: ${currentNodeContext.dna.architectural_tone}` : ''}
-${currentNodeContext.dna?.cultural_tone ? `Cultural context: ${currentNodeContext.dna.cultural_tone}` : ''}
-${hasNavigableElements ? `
-=== EXISTING ENTRANCES ===
-${currentNodeContext.navigableElements!.map(e => `- ${e.type} at ${e.position}: ${e.description}`).join('\n')}
-` : ''}
-=== USER'S DESTINATION ===
-"${destinationText}"
+`;
 
-=== YOUR TASK ===
+  // If user provided a specific destination, focus on THAT - use location as context only
+  if (hasDestination) {
+    prompt += `=== TARGET SPACE ===
+"${destinationText}"
+This is what the user wants to create. Focus your suggestions on THIS space.
+
+=== LOCATION CONTEXT (for style matching) ===
+Location: "${currentNodeContext.name}" (${currentNodeContext.type})
+${currentNodeContext.dna?.architectural_tone ? `Style: ${currentNodeContext.dna.architectural_tone}` : ''}
+${currentNodeContext.dna?.cultural_tone ? `Cultural: ${currentNodeContext.dna.cultural_tone}` : ''}
+
+Your suggestions should match the location's style while being appropriate for "${destinationText}".
+`;
+  } else {
+    // No destination - use existing structure/entrance as target
+    prompt += `=== CURRENT LOCATION ===
+"${currentNodeContext.name}" (${currentNodeContext.type})
+${currentNodeContext.description ? `Description: ${currentNodeContext.description}` : ''}
+${currentNodeContext.dna?.architectural_tone ? `Style: ${currentNodeContext.dna.architectural_tone}` : ''}
+${currentNodeContext.dna?.cultural_tone ? `Cultural: ${currentNodeContext.dna.cultural_tone}` : ''}
+${mainStructure ? `\nMain structure: ${mainStructure}` : ''}
+${mainEntrance ? `\nMain entrance: ${mainEntrance.type} at ${mainEntrance.position} - ${mainEntrance.description}` : ''}
+
+The user wants to go inside this location. Suggest details for the interior.
+`;
+  }
+
+  prompt += `\n=== YOUR TASK ===
 `;
 
   if (isExterior) {

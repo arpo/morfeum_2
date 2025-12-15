@@ -25,12 +25,17 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **GO_INSIDE & dominantElements Improvements (Dec 15, Latest):**
-  - Fixed GO_INSIDE target selection: now uses `dominantElements[0]` (main structure) instead of `navigableElements`
-  - Updated `findEntrance()` in `basicMovement.ts` to prioritize dominantElements
-  - Added instruction to DNA prompts: \"FIRST: main enterable structure if any, then 3-4 other major features\"
-  - Files updated: `locationDNA.ts`, `deepestNodeDNA.ts`, `nodeDNAGeneration.ts`, `structureAnalysis.ts`
-  - Prompt Enhancer now includes `navigableElements` context (shows existing entrances to LLM)
+- **GO_INSIDE & Prompt Enhancer Improvements (Dec 15, Latest):**
+  - **Combined entrance target**: `findEntrance()` now returns `dominantElements[0] + navigableElements[0]`
+    - Example: `"the Lumina Arbor's spherical canopy via a small, rectangular door at the base of the trunk"`
+  - **DNA prompts ordering instructions**:
+    - `dominantElements`: "FIRST: main enterable structure if any, then 3-4 other major features"
+    - `navigableElements`: "FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE"
+  - **Contextual Prompt Enhancer**: Now adapts based on user's destination text
+    - `GO_INSIDE` (empty) → Uses existing structure/entrance as target
+    - `GO_INSIDE a roof top bar` → Focuses on "a roof top bar", uses location style as context only
+  - Prompt Enhancer now includes `dominantElements` context (main structure + entrance)
+  - Files updated: `basicMovement.ts`, `locationDNA.ts`, `deepestNodeDNA.ts`, `nodeDNAGeneration.ts`, `structureAnalysis.ts`
   - Key files: `basicMovement.ts`, `promptEnhancer.ts`, `enhancerPromptTemplate.ts`, `navigation.ts`
 - **DNA & Prompt Optimization (Dec 15):**
   - Goal: Reduce pipeline execution time for NEW_WORLD, GOTO, GO_INSIDE commands

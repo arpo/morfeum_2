@@ -62,6 +62,7 @@ OUTPUT JSON:
   "navigableElements": [
     {"type": "door|passage|stairs|archway|portal|window|balcony|gate", "position": "location in scene (left, center, right, foreground, background)", "description": "brief description of what it is and where it leads"}
   ],
+  NOTE: FIRST navigableElement should be the MAIN ENTRANCE used for GO_INSIDE command.
   "dominantElements": ["FIRST: main enterable building/structure if any, then 3-4 other major features"],
   "uniqueIdentifiers": ["3-5 distinctive features that make this building recognizable"],
   "searchDesc": "75-100 char search description with type and key features",

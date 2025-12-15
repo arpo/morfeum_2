@@ -1,214 +1,5 @@
 {
   "nodes": {
-    "loc-1765832162431-0nuj5683e": {
-      "id": "loc-1765832162431-0nuj5683e",
-      "type": "host",
-      "name": "The Lumina Jungle",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: Vast emerald canopy stretching to the horizon, punctuated by glowing organic spires and shimmering water bodies. Distant mountain ranges shrouded in mist.",
-        "colorsAndLighting": "Overall soft, diffused glow from bioluminescent flora and organic structures, with patches of sunlight filtering through the canopy.",
-        "atmosphere": "Humid, mist-laden air, with a sense of deep, ancient peace and vibrant life.",
-        "materials": "Dominated by dense foliage, rich soil, and the luminous, crystalline-like material of the spires.",
-        "mood": "Enchanting and awe-inspiring. Evokes a sense of wonder, peace, and a touch of otherworldly mystery.",
-        "sounds": "Distant calls of exotic creatures, gentle rustling of leaves, the soft murmur of waterfalls.",
-        "primary_surfaces": "Thick, unbroken jungle canopy.",
-        "secondary_surfaces": "Shimmering lakes and rivers, moss-covered mounds.",
-        "accent_features": "Towering, glowing organic spires, cascading waterfalls.",
-        "dominant": "Deep Emerald Green",
-        "secondary": "Teal Glow",
-        "accent": "Bioluminescent Orange",
-        "ambient": "Hazy Sunlight filtering through canopy",
-        "genre": "Fantasy",
-        "architectural_tone": "Organic",
-        "cultural_tone": "Mystical",
-        "palette_bias": "Cool Tones",
-        "flora_base": "Exotic Bioluminescent Plants",
-        "fauna_base": "Unseen, Whispering Wildlife"
-      },
-      "description": "A vast and untamed jungle landscape where nature thrives in vibrant, bioluminescent glory. Ethereal structures, pulsating with soft light, rise organically from the verdant earth, interwoven with the very fabric of the jungle itself.",
-      "searchDesc": "Mystical jungle with bioluminescent flora and ethereal structures.",
-      "slug": "the-lumina-jungle",
-      "structure": {
-        "spatialLayout": "Dense, sprawling jungle with clearings for water bodies and prominent spires."
-      },
-      "primaryMedia": "media-1765832191337-60x20w5gx"
-    },
-    "61388fab-b6f5-4a0a-be73-d4768c119825": {
-      "id": "61388fab-b6f5-4a0a-be73-d4768c119825",
-      "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "ea1acc15-120e-44c5-9c24-aaefd4d83dbb": {
-      "id": "ea1acc15-120e-44c5-9c24-aaefd4d83dbb",
-      "type": "location",
-      "name": "The Ethereal Spire",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A monumental, organic spire with an impossibly smooth, glowing surface. It is heavily entwined with thick, vibrant green vines and dense foliage that cascade down its form. The base sprouts from a natural mound covered in bioluminescent flora.",
-        "colorsAndLighting": "The primary light source is the internal teal glow of the spire, which illuminates the surrounding jungle and reflects off the dark water. Pockets of hazy sunlight filter through the canopy, adding golden hues. The flora features a spectrum of greens, punctuated by the bright red and orange of fantastical mushrooms.",
-        "atmosphere": "The air is thick with mist from the background waterfalls, creating a sense of depth and humidity. The overall atmosphere is serene, magical, and slightly humid, with the faint sound of water and the hum of ambient light.",
-        "materials": "The spire appears to be made of solidified light or an unknown crystalline substance. The surrounding elements are natural: damp moss, rich soil, dense tree bark, and lush, waxy leaves. The mushrooms have smooth, firm caps and fleshy stems.",
-        "mood": "Enchanting and awe-inspiring. Evokes a sense of wonder, peace, and a touch of otherworldly mystery.",
-        "sounds": "Gentle waterfall cascades, subtle hum of light, rustling leaves, distant water lapping",
-        "primary_surfaces": "Glowing teal spire, dense emerald foliage, dark reflective water",
-        "secondary_surfaces": "Mossy rocks, damp earth, smooth mushroom caps, verdant leaves",
-        "accent_features": "Bright red mushroom caps, glowing orange mushroom stems, fan-like fern leaves",
-        "dominant": "Teal (Spire and glow)",
-        "secondary": "Emerald green (Vines, foliage, trees)",
-        "accent": "Crimson red and glowing orange (Mushrooms)",
-        "ambient": "Soft, diffused teal glow with dappled golden sunlight",
-        "genre": null,
-        "architectural_tone": "Bioluminescent natural crystalline growth entwined with organic jungle architecture",
-        "cultural_tone": "Unknown inhabitants; likely a sacred or natural wonder, revered for its light and life-giving properties.",
-        "palette_bias": "Teal, Emerald Green, with accents of Red and Orange",
-        "flora_base": "Lush jungle vines, dense foliage, fan-like ferns, fantastical glowing mushrooms",
-        "fauna_base": "None"
-      },
-      "description": "A towering, ethereal spire that glows with a soft, internal teal light, intricately entwined with lush green vines and foliage. It emerges from a mound covered in glowing flora, reflecting its light onto the calm, dark green waters of a foreground pond. Slender waterfalls cascade down steep, verdant cliffs in the background, densely covered in rich green trees and hanging vines, contributing to a misty atmosphere. The sky is a clear, bright blue, with hazy sunlight filtering through the dense canopy. In the immediate foreground, large fan-like fern leaves frame the bottom left, alongside clusters of fantastical mushrooms with bright red caps and glowing orange stems, perched on mossy rocks by the water's edge. Similar glowing mushrooms dot the mossy banks on the right, breaking the surface of the placid water with moss-covered rocks.",
-      "searchDesc": "Ethereal teal spire entwined with jungle flora, glowing mushrooms, and waterfalls.",
-      "slug": "the-ethereal-spire",
-      "structure": {
-        "spatialLayout": "The spire is the dominant vertical element, drawing the eye upward. The foreground is defined by the pond and its edge, with dense jungle flora providing a sense of enclosure. The background features layered, receding cliffs and waterfalls, creating a deep and expansive vista."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "at the base of the spire, partially obscured by vines",
-          "description": "An arched opening leading into the spire's interior, radiating soft teal light."
-        }
-      ],
-      "dominantElements": [
-        "The towering ethereal spire",
-        "Lush green vines and foliage",
-        "The foreground pond",
-        "Cascading waterfalls"
-      ],
-      "uniqueIdentifiers": [
-        "Internal teal glow of the spire",
-        "Fantastical red-capped, orange-stemmed mushrooms",
-        "Fan-like fern leaves framing the foreground",
-        "Moss-covered rocks breaking the water's surface"
-      ],
-      "primaryMedia": "media-1765832174752-zmab4y430"
-    },
-    "niche-1765833456876-f4qj6cr2q": {
-      "id": "niche-1765833456876-f4qj6cr2q",
-      "type": "niche",
-      "name": "Interior of The Ethereal Spire",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior is a symphony of organic crystalline growth and living light. Walls are not solid in a traditional sense but composed of shimmering, solidified light that pulses with an inner radiance. Thick, vibrant green vines, also subtly glowing, weave through these crystalline structures, some bearing large, waxy leaves and exotic, bioluminescent flowers. The ground is often composed of smooth, cool crystalline surfaces interspersed with patches of damp moss and rich, dark soil. Mushrooms with smooth, firm caps and fleshy stems dot the landscape, some emitting soft light.",
-        "colorsAndLighting": "Dominant colors are deep teal and emerald green from the foliage and light. Accents of soft red and orange emanate from flowering plants and specific crystalline formations. The primary light source is the internal glow of the spire itself, casting a soft, ethereal luminescence. Light is diffused, with pockets of intense bioluminescence from flora.",
-        "atmosphere": "The air is cool, humid, and smells faintly of damp earth, ozone, and exotic blossoms. There's a subtle, gentle hum or thrumming emanating from the spire's core, almost imperceptible, and a feeling of still, deep magic.",
-        "materials": "Solidified light, crystalline substances, living vines, damp moss, rich soil, smooth mushroom caps, fleshy stems, waxy leaves.",
-        "mood": "Serene, awe-inspiring, magical, ancient, sacred, otherworldly.",
-        "sounds": "Gentle hum, soft dripping water, rustling leaves, faint chimes.",
-        "spatialLayout": "The interior is a series of interconnected, cavernous spaces, some opening into grand, cathedral-like chambers, others forming winding, intimate pathways. The verticality of the spire is emphasized by spiraling stairs and cascading vines.",
-        "primary_surfaces": "Solidified light walls and floors, smooth crystalline formations.",
-        "secondary_surfaces": "Living vines, moss, rich soil, bioluminescent flora.",
-        "accent_features": "Glowing flowers, bioluminescent mushrooms, pools of pure light, crystalline bridges.",
-        "dominant": "Teal",
-        "secondary": "Emerald Green",
-        "accent": "Red and Orange",
-        "ambient": "Soft, pulsing luminescence",
-        "genre": null,
-        "architectural_tone": "Bioluminescent natural crystalline growth entwined with organic jungle architecture",
-        "cultural_tone": "Unknown inhabitants; likely a sacred or natural wonder, revered for its light and life-giving properties.",
-        "palette_bias": "Teal, Emerald Green, Red, Orange",
-        "flora_base": "Lush, bioluminescent jungle flora",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765833456875-kvi7ebp58",
-      "description": "The interior of the Ethereal Spire is a breathtaking, naturally formed cavern with walls that curve and twist upwards, echoing its external spiraling shape. The smooth, glowing surface of the spire is integrated with vibrant internal foliage and bioluminescent flora, creating a sacred and awe-inspiring atmosphere.",
-      "structure": {
-        "form": "organic",
-        "roofType": "null",
-        "scale": "large",
-        "orientation": "cubic",
-        "openings": "none",
-        "openingShape": "none",
-        "functionalType": "religious",
-        "spatialLayout": "The interior of the Ethereal Spire is a vast, cavernous space that echoes the organic, spiraling form of its exterior. Walls seem to undulate and twist upwards, creating a sense of immense height and natural growth rather than constructed architecture. The smooth, glowing surface of the spire extends inward, suffused with a soft, diffused light that emanates from the structure itself.",
-        "requiredElements": [],
-        "dominantElements": [
-          "The living, glowing walls of the spire",
-          "Cascading internal foliage",
-          "The central, awe-inspiring volume of the spire's interior",
-          "Bioluminescent flora integrated into the walls"
-        ],
-        "uniqueIdentifiers": [
-          "Impossibly smooth, internally glowing walls",
-          "Organic, spiraling interior form",
-          "Integrated bioluminescent plant life",
-          "Absence of any artificial lighting or construction materials"
-        ],
-        "navigableElements": [
-          {
-            "type": "opening",
-            "position": "center",
-            "description": "opening an  to a spiraling crystal staircase ascending upwards"
-          },
-          {
-            "type": "archway",
-            "position": "center",
-            "description": "archway an  to a chamber of bioluminescent flora"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object a shimmering portal to an observatory"
-          }
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "crystalline benches",
-          "glowing moss carpets",
-          "pulsating geode formations",
-          "intricately carved pedestals displaying spectral flora"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "opening",
-          "position": "center",
-          "description": "opening an  to a spiraling crystal staircase ascending upwards"
-        },
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "archway an  to a chamber of bioluminescent flora"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object a shimmering portal to an observatory"
-        }
-      ],
-      "dominantElements": [
-        "The living, glowing walls of the spire",
-        "Cascading internal foliage",
-        "The central, awe-inspiring volume of the spire's interior",
-        "Bioluminescent flora integrated into the walls"
-      ],
-      "uniqueIdentifiers": [
-        "Impossibly smooth, internally glowing walls",
-        "Organic, spiraling interior form",
-        "Integrated bioluminescent plant life",
-        "Absence of any artificial lighting or construction materials"
-      ],
-      "searchDesc": "Interior of the Ethereal Spire: glowing crystal, bioluminescent vines, and light-formed architecture.",
-      "slug": "interior-of-the-ethereal-spire"
-    },
     "loc-1765833560160-ofvxf446l": {
       "id": "loc-1765833560160-ofvxf446l",
       "type": "host",
@@ -240,7 +31,8 @@
       "slug": "the-ethereal-expanse",
       "structure": {
         "spatialLayout": "A vast, three-dimensional cosmic landscape where colossal, tree-like celestial bodies float in a void, interconnected by streams of nebulae and gravitational forces. The layout is organic and boundless, defined by the placement of these immense formations."
-      }
+      },
+      "primaryMedia": "media-1765833631215-wri6zd2ts"
     },
     "93e4f41b-fde1-4d00-9aca-bf8744d5ca96": {
       "id": "93e4f41b-fde1-4d00-9aca-bf8744d5ca96",
@@ -305,6 +97,340 @@
         "roots partially submerged in water"
       ],
       "primaryMedia": "media-1765833577019-6hghfltt0"
+    },
+    "niche-1765834180427-zb63euiwy": {
+      "id": "niche-1765834180427-zb63euiwy",
+      "type": "niche",
+      "name": "The Lumina Arbor Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a cavernous, organic space. Walls are a smooth, polished wood, resembling the interior bark, punctuated by many small, glowing golden squares that provide a warm, diffused light. The overall form is curvilinear and flowing, with naturalistic arches and hollows. Root-like structures form furniture and platforms.",
+        "colorsAndLighting": "Dominant dark earth tones of polished wood and warm, soft golden light emanating from the square 'windows' and diffused throughout the space. Shadows are deep but not oppressive, softened by the ambient glow.",
+        "atmosphere": "Warm, still, and hushed. A sense of ancient peace and gentle energy permeates the air.",
+        "materials": "Primary materials are polished, living wood and smooth, compressed earth. Elements of soft, glowing light embedded within the surfaces.",
+        "mood": "Serene, tranquil, ancient, sacred, and deeply peaceful.",
+        "sounds": "Soft, resonant hum, gentle rustling, distant melodic chimes.",
+        "spatialLayout": "Vast, cavernous central space within the canopy, with spiraling passages and chambers within the trunk and root structure. Flowing, interconnected, and organic.",
+        "primary_surfaces": "Polished, living wood walls and ceilings, root-like formations.",
+        "secondary_surfaces": "Subtle earthen flooring, glowing light panels.",
+        "accent_features": "The 'windows' of soft golden light, intricate root carvings, suspended glowing flora (if any).",
+        "dominant": "dark earth tones (wood)",
+        "secondary": "warm gold (light)",
+        "accent": "pale gold (glowing panels)",
+        "ambient": "warm, diffused golden light",
+        "genre": null,
+        "architectural_tone": "Organic, naturalistic, ancient arboreal dwelling",
+        "cultural_tone": "Dwelling for a hidden, serene community; a place of refuge or ancient purpose",
+        "palette_bias": "dark earth tones and warm golds",
+        "flora_base": "embedded luminescent flora",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765834180426-j0jff0gk9",
+      "description": "The interior of the Lumina Arbor is a breathtaking, cavernous sphere of polished, living wood, softly lit by the golden glow of the exterior 'windows' seeping through the immense, curved walls. It is a place of profound peace and quiet contemplation, a natural cathedral built by and for the hidden community.",
+      "structure": {
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "null",
+        "functionalType": "religious",
+        "spatialLayout": "The interior is a vast, hollow sphere carved within the colossal arboreal entity. The smooth, curved walls are subtly illuminated by the diffused golden light emanating from countless hexagonal openings on the exterior.",
+        "requiredElements": [],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center",
+            "description": "archway forward leading deeper into the canopy"
+          },
+          {
+            "type": "door",
+            "position": "the left",
+            "description": "door small circular  to"
+          },
+          {
+            "type": "window",
+            "position": "the right",
+            "description": "window mountain view to"
+          }
+        ],
+        "dominantElements": [
+          "Grand Sanctuary",
+          "Softly glowing hexagonal wall patterns",
+          "Massive, smoothed interior walls"
+        ],
+        "uniqueIdentifiers": [
+          "Internal arboreal structure",
+          "Subtle golden internal illumination",
+          "Echoing acoustics"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "moss-covered seating built into the walls",
+          "low wooden tables with glowing orbs",
+          "woven tapestries depicting celestial scenes",
+          "hanging vines with bioluminescent flowers"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "archway forward leading deeper into the canopy"
+        },
+        {
+          "type": "door",
+          "position": "the left",
+          "description": "door small circular  to"
+        },
+        {
+          "type": "window",
+          "position": "the right",
+          "description": "window mountain view to"
+        }
+      ],
+      "dominantElements": [
+        "Grand Sanctuary",
+        "Softly glowing hexagonal wall patterns",
+        "Massive, smoothed interior walls"
+      ],
+      "uniqueIdentifiers": [
+        "Internal arboreal structure",
+        "Subtle golden internal illumination",
+        "Echoing acoustics"
+      ],
+      "searchDesc": "Inside the Lumina Arbor: glowing golden squares, organic passages, a sanctuary of light and ancient wood.",
+      "slug": "interior-of-the-lumina-arbor"
+    },
+    "niche-1765834438921-s97quoxea": {
+      "id": "niche-1765834438921-s97quoxea",
+      "type": "niche",
+      "name": "The Lumina Arbor's Basement",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Smooth, organic walls with textures like polished wood and compressed earth. The glowing golden squares are flush with the surfaces, emitting a warm, constant light. Root structures are visible, polished and integrated into the living space. The air itself seems to shimmer faintly.",
+        "colorsAndLighting": "Dominated by deep, warm earth tones of brown and ochre. The primary light source is the uniformly glowing golden squares, casting a soft, diffused, and inviting illumination. Occasional deeper shadows define the organic curves.",
+        "atmosphere": "Warm, still, and hushed. The air is clean and carries a subtle, earthy aroma with hints of ancient wood. A gentle, almost imperceptible vibration can be felt.",
+        "materials": "Primary: Polished, petrified wood and compressed, dark earth. Secondary: Smooth, sculpted root structures. Accent: The glowing golden material of the light squares.",
+        "mood": "Serene, ancient, peaceful, welcoming, secure.",
+        "sounds": "Gentle hum, soft murmurs, distant water trickle, faint rustling.",
+        "spatialLayout": "A large, central chamber with organic, rounded walls that curve inwards. Passages branch off, some widening into smaller alcoves, others spiraling upwards.",
+        "primary_surfaces": "Polished, dark wood with subtle grain patterns; compressed, matte earth.",
+        "secondary_surfaces": "Smooth, sculpted root wood; the glowing golden material of the light panels.",
+        "accent_features": "The embedded golden light squares, sculpted root furniture, occasional mossy patches on deeper roots.",
+        "dominant": "Dark earth brown",
+        "secondary": "Warm gold",
+        "accent": "Deep ochre",
+        "ambient": "Warm, golden glow",
+        "genre": null,
+        "architectural_tone": "Organic, naturalistic, ancient arboreal dwelling",
+        "cultural_tone": "Dwelling for a hidden, serene community; a place of refuge or ancient purpose",
+        "palette_bias": "Dark earth tones and warm golds",
+        "flora_base": "Faint mosses, small, bioluminescent fungi in crevices",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765834438920-by22mxqdd",
+      "description": "The subterranean heart of the Lumina Arbor, a network of organic chambers where the serene community finds deeper refuge.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "none",
+        "functionalType": "residential",
+        "spatialLayout": "Beneath the massive trunk of the Lumina Arbor, the basement is a series of interconnected, root-like chambers. The 'walls' are the rough, grooved texture of the tree's interior, curving and twisting organically. The golden glow from above filters down, creating an ethereal, diffused light.",
+        "requiredElements": [],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center",
+            "description": "archway moss-covered stone  leading downwards"
+          },
+          {
+            "type": "passage",
+            "position": "the left",
+            "description": "passage winding root-lined  to"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object small"
+          },
+          {
+            "type": "door",
+            "position": "right",
+            "description": "door rough-hewn"
+          }
+        ],
+        "dominantElements": [
+          "Interior of the Lumina Arbor's trunk",
+          "Root-like chambers",
+          "Diffused golden light"
+        ],
+        "uniqueIdentifiers": [
+          "Organic, root-like chambers",
+          "Interior of a gargantuan tree",
+          "Soft, diffused golden light from above"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "glowing fungal growths providing soft light",
+          "woven vine baskets filled with dried herbs",
+          "smooth",
+          "polished river stones arranged in patterns",
+          "ancient wooden chest bound with living roots"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "archway moss-covered stone  leading downwards"
+        },
+        {
+          "type": "passage",
+          "position": "the left",
+          "description": "passage winding root-lined  to"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object small"
+        },
+        {
+          "type": "door",
+          "position": "right",
+          "description": "door rough-hewn"
+        }
+      ],
+      "dominantElements": [
+        "Interior of the Lumina Arbor's trunk",
+        "Root-like chambers",
+        "Diffused golden light"
+      ],
+      "uniqueIdentifiers": [
+        "Organic, root-like chambers",
+        "Interior of a gargantuan tree",
+        "Soft, diffused golden light from above"
+      ],
+      "searchDesc": "Inside the Lumina Arbor: glowing golden squares, organic wood, root furniture, serene refuge.",
+      "slug": "interior-of-the-lumina-arbor"
+    },
+    "niche-1765834464004-wizywkfp0": {
+      "id": "niche-1765834464004-wizywkfp0",
+      "type": "niche",
+      "name": "Lumina Arbor Rooftop Terrace",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Smooth, polished inner bark forms the primary architecture, interwoven with glowing, golden square panels. Chambers are rounded and cavernous, with naturalistic alcoves and openings.",
+        "colorsAndLighting": "Dominated by warm, diffused golden light emanating from the square panels, casting a soft glow on the dark, polished bark. Occasional points of soft, white light from crystalline fixtures.",
+        "atmosphere": "Still, warm, and subtly humid. A gentle, almost imperceptible hum of life emanates from the structure.",
+        "materials": "Polished inner bark, glowing resin, woven plant fibers, smooth, aged wood.",
+        "mood": "Serene, tranquil, ancient, nurturing, hidden.",
+        "sounds": "Soft hum, rustling of unseen leaves, distant gentle chimes.",
+        "spatialLayout": "Cavernous, interconnected chambers with rounded walls and organic openings, flowing seamlessly into one another.",
+        "primary_surfaces": "Polished inner bark, glowing golden panels.",
+        "secondary_surfaces": "Woven plant fibers, smooth aged wood, mossy patches.",
+        "accent_features": "Floating crystalline light sources, bioluminescent moss, carved wooden details.",
+        "dominant": "Warm gold",
+        "secondary": "Dark earth brown (bark)",
+        "accent": "Soft white (light crystals)",
+        "ambient": "Warm golden glow",
+        "genre": null,
+        "architectural_tone": "Organic, naturalistic, ancient arboreal dwelling",
+        "cultural_tone": "Dwelling for a hidden, serene community; a place of refuge or ancient purpose",
+        "palette_bias": "Dark earth tones and warm golds",
+        "flora_base": "Bioluminescent moss, subtle indoor vines",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765834464003-4zpoqdo2y",
+      "description": "An elevated, open-air terrace offering a serene vantage point from the upper reaches of the Lumina Arbor.",
+      "structure": {
+        "form": "round",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "horizontal",
+        "openings": "none",
+        "openingShape": "null",
+        "functionalType": "residential",
+        "spatialLayout": "A circular terrace carved into the upper canopy of the Lumina Arbor, offering panoramic views of the region. The floor is a continuation of the tree's natural texture, and small, glowing golden squares are embedded into the perimeter.",
+        "requiredElements": [
+          "rooftop terrace"
+        ],
+        "navigableElements": [
+          {
+            "type": "opening",
+            "position": "front wall",
+            "description": "opening arched"
+          },
+          {
+            "type": "object",
+            "position": "left wall",
+            "description": "object spiral staircase"
+          },
+          {
+            "type": "window",
+            "position": "right wall",
+            "description": "window vine-covered"
+          }
+        ],
+        "dominantElements": [
+          "Lumina Arbor Rooftop Terrace",
+          "Glowing Golden Square Edging",
+          "Arboreal Canopy Walls"
+        ],
+        "uniqueIdentifiers": [
+          "Carved into the gargantuan tree canopy",
+          "Embedded glowing golden lights",
+          "Panoramic region views"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "woven seating",
+          "natural wood table",
+          "glowing moss planters",
+          "carved stone water basin"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "opening",
+          "position": "front wall",
+          "description": "opening arched"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object spiral staircase"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window vine-covered"
+        }
+      ],
+      "dominantElements": [
+        "Lumina Arbor Rooftop Terrace",
+        "Glowing Golden Square Edging",
+        "Arboreal Canopy Walls"
+      ],
+      "uniqueIdentifiers": [
+        "Carved into the gargantuan tree canopy",
+        "Embedded glowing golden lights",
+        "Panoramic region views"
+      ],
+      "searchDesc": "Organic, golden-lit interior of a giant arboreal dwelling, with glowing panels and smooth bark walls.",
+      "slug": "interior-of-the-lumina-arbor"
     }
   },
   "views": {},
@@ -327,29 +453,6 @@
       ]
     },
     {
-      "id": "loc-1765832162431-0nuj5683e",
-      "type": "host",
-      "children": [
-        {
-          "id": "61388fab-b6f5-4a0a-be73-d4768c119825",
-          "type": "region",
-          "children": [
-            {
-              "id": "ea1acc15-120e-44c5-9c24-aaefd4d83dbb",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765833456876-f4qj6cr2q",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1765833560160-ofvxf446l",
       "type": "host",
       "children": [
@@ -360,7 +463,23 @@
             {
               "id": "f0b6a1db-a859-4243-b118-98428dc25540",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1765834180427-zb63euiwy",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765834438921-s97quoxea",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765834464004-wizywkfp0",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -368,7 +487,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765832162431-0nuj5683e",
     "loc-1765833560160-ofvxf446l"
   ]
 }

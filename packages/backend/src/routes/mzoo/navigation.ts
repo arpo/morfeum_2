@@ -855,7 +855,8 @@ router.post('/enhance-prompt', asyncHandler(async (req: Request, res: Response) 
         type: node.type,
         description: node.description,
         dna: node.dna,
-        navigableElements: node.navigableElements || node.structure?.navigableElements
+        navigableElements: node.navigableElements || node.structure?.navigableElements,
+        dominantElements: node.dominantElements || node.structure?.dominantElements
       }
     });
 

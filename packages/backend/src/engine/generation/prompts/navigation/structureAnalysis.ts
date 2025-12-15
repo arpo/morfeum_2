@@ -65,6 +65,8 @@ OUTPUT (pure JSON):
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment",
     "spatialLayout": "1-2 sentence physical description",
     "requiredElements": ["user-specified elements that MUST appear"],
+    "navigableElements": [{...}],
+    NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
     "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
     "uniqueIdentifiers": ["2-4 distinctive features"]
   },
