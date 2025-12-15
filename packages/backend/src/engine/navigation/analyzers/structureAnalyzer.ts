@@ -2,12 +2,21 @@
  * Structure Analyzer
  * LLM-powered analysis of space structure for navigation commands
  * Determines physical/spatial properties of a new space
+ * 
+ * NOTE: navigableElements and furnishing are NO LONGER generated here.
+ * They are now user-controlled via the prompt enhancer feature.
  */
 
 import * as mzooService from '../../../services/mzoo.service';
 import { AI_MODELS } from '../../../config';
 import { structureAnalysisPrompt, extractRequiredElements } from '../../generation/prompts/navigation/structureAnalysis';
-import type { NavigationContext, StructureAnalysis, Structure } from '../types';
+import type { NavigationContext, StructureAnalysis, Structure, NavigableElement } from '../types';
+
+/** Parsed enhancements from user command */
+export interface ParsedEnhancements {
+  navigableElements?: NavigableElement[];
+  furnishing?: string[];
+}
 
 /**
  * Analyze structure using LLM to determine physical/spatial properties
@@ -16,6 +25,7 @@ import type { NavigationContext, StructureAnalysis, Structure } from '../types';
  * @param userPrompt - User's space description (e.g., "Parisian Café, cozy charm...")
  * @param context - Navigation context including current node and parent location
  * @param perspective - Whether this is an interior or exterior space
+ * @param parsedEnhancements - Optional pre-parsed navigable elements and furnishing from command
  * @returns StructureAnalysis with physical structure data
  */
 export async function analyzeStructure(
@@ -23,14 +33,13 @@ export async function analyzeStructure(
   userPrompt: string,
   context: NavigationContext,
   perspective: 'interior' | 'exterior',
-  includeFurnishing?: boolean
+  parsedEnhancements?: ParsedEnhancements
 ): Promise<StructureAnalysis> {
   // Generate the analysis prompt
   const prompt = structureAnalysisPrompt({
     userPrompt,
     context,
-    perspective,
-    includeFurnishing
+    perspective
   });
 
   // Call LLM for structure analysis
@@ -43,7 +52,7 @@ export async function analyzeStructure(
   // Handle errors
   if (response.error || !response.data) {
     console.error('[StructureAnalyzer] LLM call failed:', response.error);
-    return createFallbackAnalysis(userPrompt, perspective, context);
+    return createFallbackAnalysis(userPrompt, perspective, context, parsedEnhancements);
   }
 
   // Extract text from response
@@ -83,14 +92,28 @@ export async function analyzeStructure(
     console.log(`  Scale: ${result.structure.scale}`);
     console.log(`  Functional Type: ${result.structure.functionalType}`);
     console.log(`  Required Elements: ${result.structure.requiredElements?.length || 0}`);
-    console.log(`  Navigable Elements: ${result.structure.navigableElements?.length || 0}`);
     console.log('═══════════════════════════════════════════════════════════\n');
+    
+    // Apply parsed enhancements from command (user-controlled)
+    if (parsedEnhancements?.navigableElements && parsedEnhancements.navigableElements.length > 0) {
+      result.structure.navigableElements = parsedEnhancements.navigableElements;
+      console.log(`  [Enhanced] Navigable Elements: ${parsedEnhancements.navigableElements.length}`);
+    }
+    
+    if (parsedEnhancements?.furnishing && parsedEnhancements.furnishing.length > 0) {
+      result.furnishingDetails = {
+        userSpecified: parsedEnhancements.furnishing,
+        suggested: [],
+        placementNotes: []
+      };
+      console.log(`  [Enhanced] Furnishing Items: ${parsedEnhancements.furnishing.length}`);
+    }
     
     return result;
   } catch (parseError) {
     console.error('[StructureAnalyzer] Failed to parse LLM response:', parseError);
     console.error('[StructureAnalyzer] Raw response:', cleaned);
-    return createFallbackAnalysis(userPrompt, perspective, context);
+    return createFallbackAnalysis(userPrompt, perspective, context, parsedEnhancements);
   }
 }
 
@@ -100,7 +123,8 @@ export async function analyzeStructure(
 function createFallbackAnalysis(
   userPrompt: string,
   perspective: 'interior' | 'exterior',
-  context: NavigationContext
+  context: NavigationContext,
+  parsedEnhancements?: ParsedEnhancements
 ): StructureAnalysis {
   // Extract name from user prompt
   const name = extractSimpleName(userPrompt);
@@ -119,6 +143,8 @@ function createFallbackAnalysis(
   // Determine scale first so we can use it in spatialLayout
   const scale = parentStructure?.scale || 'medium';
 
+  // NOTE: navigableElements and suggestedFixtures are NO LONGER auto-generated
+  // They come from user input via the prompt enhancer feature
   const structure: Structure = {
     form: parentStructure?.form || 'rectangular',
     roofType: perspective === 'exterior' ? 'open-sky' : (parentStructure?.roofType || 'flat'),
@@ -128,20 +154,32 @@ function createFallbackAnalysis(
     functionalType,
     spatialLayout: `A ${scale} ${perspective} space.`,
     requiredElements: requiredElements.length > 0 ? requiredElements : undefined,
-    suggestedFixtures: getSuggestedFixtures(functionalType),
-    navigableElements: [
-      { type: 'door', position: 'back', description: 'Main entrance' }
-    ],
     dominantElements: [name],
     uniqueIdentifiers: requiredElements.length > 0 ? requiredElements.slice(0, 2) : [name]
   };
 
-  return {
+  // Apply parsed enhancements if provided
+  if (parsedEnhancements?.navigableElements && parsedEnhancements.navigableElements.length > 0) {
+    structure.navigableElements = parsedEnhancements.navigableElements;
+  }
+
+  const result: StructureAnalysis = {
     name,
     perspective,
     structure,
     description: userPrompt
   };
+
+  // Apply furnishing enhancements
+  if (parsedEnhancements?.furnishing && parsedEnhancements.furnishing.length > 0) {
+    result.furnishingDetails = {
+      userSpecified: parsedEnhancements.furnishing,
+      suggested: [],
+      placementNotes: []
+    };
+  }
+
+  return result;
 }
 
 /**
@@ -194,25 +232,4 @@ function detectFunctionalType(userPrompt: string): Structure['functionalType'] {
   
   // Default to residential
   return 'residential';
-}
-
-/**
- * Get suggested fixtures based on functional type
- */
-function getSuggestedFixtures(functionalType: Structure['functionalType']): string[] {
-  switch (functionalType) {
-    case 'commercial':
-      return ['display shelves', 'sales counter', 'merchandise racks', 'signage'];
-    case 'entertainment':
-      return ['seating area', 'bar counter', 'stage or performance area', 'atmospheric lighting'];
-    case 'religious':
-      return ['altar', 'pews or prayer area', 'religious iconography', 'candles'];
-    case 'industrial':
-      return ['machinery', 'workstations', 'storage racks', 'control panels'];
-    case 'civic':
-      return ['desks', 'display cases', 'seating', 'information displays'];
-    case 'residential':
-    default:
-      return ['furniture', 'storage', 'decorative elements', 'lighting'];
-  }
 }

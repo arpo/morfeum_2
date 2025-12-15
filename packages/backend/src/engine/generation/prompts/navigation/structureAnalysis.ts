@@ -2,6 +2,10 @@
  * Structure Analysis Prompt
  * LLM prompt for analyzing physical/spatial properties of a new space
  * Runs in parallel with DNA analysis for both GO_INSIDE and GOTO commands
+ * 
+ * NOTE: navigableElements and furnishing are NO LONGER generated here.
+ * They are now user-controlled via the prompt enhancer feature.
+ * The pipeline accepts these as parsed input from the command text.
  */
 
 import type { NavigationContext } from '../../../navigation/types';
@@ -13,14 +17,15 @@ export interface StructureAnalysisInput {
   context: NavigationContext;
   /** Whether this is an interior or exterior space */
   perspective: 'interior' | 'exterior';
-  /** Whether to include furnishing instructions */
-  includeFurnishing?: boolean;
+  /** Pre-parsed navigable elements from command (user-controlled) */
+  navigableElements?: Array<{ type: string; position: string; description: string }>;
+  /** Pre-parsed furnishing from command (user-controlled) */
+  furnishing?: string[];
 }
 
 /**
  * Generate prompt for LLM to analyze physical structure of a space
  */
-import { furnishingInstructions } from './furnishingInstructions';
 
 /* (already exported above, remove duplicate) */
 
@@ -28,7 +33,7 @@ import { furnishingInstructions } from './furnishingInstructions';
 // No regex-based inference - we trust the LLM to understand context from the full parent data
 
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
-  const { userPrompt, context, perspective, includeFurnishing } = input;
+  const { userPrompt, context, perspective } = input;
 
   const parentDna = context.parentNode?.dna as any;
   const currentDna = context.currentNode.dna as any;
@@ -121,14 +126,10 @@ Analyze the description and determine:
 
 9. **Required Elements**: Extract any SPECIFIC elements the user mentioned that MUST appear.
    Look for phrases like "Include:", "with a", "featuring", specific furniture, fixtures, or features.
-   
-10. **Suggested Fixtures**: Based on functional type, suggest 4-6 appropriate fixtures/furniture.
 
-11. **Navigable Elements**: Suggest 2-3 navigation points (doors, passages, stairs) with positions.
+10. **Dominant Elements**: List 3-5 main physical features that define the space.
 
-12. **Dominant Elements**: List 3-5 main physical features that define the space.
-
-13. **Unique Identifiers**: List 2-4 distinctive features that make this space memorable.
+11. **Unique Identifiers**: List 2-4 distinctive features that make this space memorable.
 
 IMPORTANT RULES:
 - Extract ALL user-specified elements as requiredElements - these MUST appear in the final image
@@ -198,13 +199,7 @@ When creating an interior inside a parent structure, the interior MUST be SMALLE
 If parent scale is "small" (2-4m exterior), the interior dimensions should be ~1.5-3m.
 If parent scale is "medium" (4-10m exterior), the interior can be 3-8m.
 If parent scale is "large", the interior can be up to the full range.
-`;
 
-  if (includeFurnishing) {
-    prompt += furnishingInstructions;
-  }
-
-  prompt += `
 OUTPUT: Return ONLY valid JSON with this exact structure:
 {
   "name": "string - concise space name",
@@ -219,20 +214,10 @@ OUTPUT: Return ONLY valid JSON with this exact structure:
     "functionalType": "residential | commercial | religious | industrial | civic | entertainment",
     "spatialLayout": "string - 1-2 sentence description of physical arrangement",
     "requiredElements": ["array of user-specified elements that MUST appear"],
-    "suggestedFixtures": ["array of 4-6 appropriate fixtures"],
-    "navigableElements": [
-      { "type": "door | passage | stairs | archway | window", "position": "string", "description": "string" }
-    ],
     "dominantElements": ["array of 3-5 main physical features"],
     "uniqueIdentifiers": ["array of 2-4 distinctive features"]
   },
   "description": "string - brief description of the space"
-  ${includeFurnishing ? `,
-  "furnishingDetails": {
-    "userSpecified": ["array of user-specified items"],
-    "suggested": ["array of suggested furnishings"],
-    "placementNotes": ["array of placement or style notes"]
-  }` : ''}
 }`;
   return prompt;
 }

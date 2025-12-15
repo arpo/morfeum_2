@@ -6,9 +6,13 @@ import { handleCreationCommand } from './creationCommands';
 import { handleMediaCommand } from './mediaCommands';
 import { handleNavigationCommand } from './navigationCommands';
 
+/** Commands that support enhancement (navigable elements, furnishing) */
+const ENHANCEABLE_COMMANDS = ['GO_INSIDE', 'GOTO', 'NEW_LOCATION'];
+
 export function useNavigationLogic() {
   const [movementInput, setMovementInput] = useState('');
   const [isMoving, setIsMoving] = useState(false);
+  const [isEnhancing, setIsEnhancing] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const getNode = useLocationsStore(state => state.getNode);
@@ -96,17 +100,104 @@ export function useNavigationLogic() {
     setTimeout(() => setErrorMessage(null), 5000);
   }, []);
 
+  /**
+   * Enhance the current command with navigable elements, furnishing, or facade
+   * Uses LLM to suggest appropriate details based on context
+   */
+  const handleEnhance = useCallback(async () => {
+    if (isEnhancing) return;
+    
+    const trimmedInput = movementInput.trim();
+    if (!trimmedInput.startsWith('/')) {
+      setErrorMessage('Enter a command first (e.g., /GO_INSIDE spa)');
+      setTimeout(() => setErrorMessage(null), 3000);
+      return;
+    }
+
+    // Parse the command
+    const parsedCommand = parseCommandInput(trimmedInput);
+    const { command, text } = parsedCommand;
+
+    // Check if command supports enhancement
+    if (!ENHANCEABLE_COMMANDS.includes(command)) {
+      setErrorMessage(`Enhancement not available for /${command}. Supported: ${ENHANCEABLE_COMMANDS.join(', ')}`);
+      setTimeout(() => setErrorMessage(null), 3000);
+      return;
+    }
+
+    // Get current node
+    const activeEntityId = useStore.getState().activeEntity;
+    if (!activeEntityId) {
+      setErrorMessage('Select a location first');
+      setTimeout(() => setErrorMessage(null), 3000);
+      return;
+    }
+
+    setIsEnhancing(true);
+
+    try {
+      const response = await fetch('/api/mzoo/navigation/enhance-prompt', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          command,
+          text: text || '',
+          nodeId: activeEntityId
+        })
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Enhancement failed');
+      }
+
+      const result = await response.json();
+      const enhancement = result.data?.enhancement;
+
+      if (enhancement) {
+        // Append enhancement to existing command
+        const newInput = text 
+          ? `/${command} ${text}, ${enhancement}`
+          : `/${command} ${enhancement}`;
+        setMovementInput(newInput);
+        console.log('[useNavigationLogic] Enhanced command:', newInput);
+      }
+    } catch (error) {
+      console.error('[useNavigationLogic] Enhancement failed:', error);
+      setErrorMessage(error instanceof Error ? error.message : 'Enhancement failed');
+      setTimeout(() => setErrorMessage(null), 5000);
+    } finally {
+      setIsEnhancing(false);
+    }
+  }, [movementInput, isEnhancing]);
+
+  /**
+   * Check if the current input can be enhanced
+   */
+  const canEnhance = useCallback((): boolean => {
+    const trimmedInput = movementInput.trim();
+    if (!trimmedInput.startsWith('/')) return false;
+    
+    const parsedCommand = parseCommandInput(trimmedInput);
+    return ENHANCEABLE_COMMANDS.includes(parsedCommand.command);
+  }, [movementInput]);
+
   return {
     state: {
       movementInput,
       isMoving,
+      isEnhancing,
       errorMessage,
       activeEntity
     },
     handlers: {
       setMovementInput,
       handleMove,
+      handleEnhance,
       handleInvalidCommand
+    },
+    utils: {
+      canEnhance
     }
   };
 }

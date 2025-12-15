@@ -33,7 +33,8 @@ export {
   Icon3dCubeSphere,
   IconExternalLink,
   IconCamera,
-  IconArrowBadgeRight
+  IconArrowBadgeRight,
+  IconSparkles
 } from '@tabler/icons-react';
 
 // Icon type for string references

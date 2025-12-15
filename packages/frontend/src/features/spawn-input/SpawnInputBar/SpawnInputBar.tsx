@@ -7,7 +7,7 @@ import { KeyboardEvent, useCallback } from 'react';
 import { useNavigationLogic } from './useNavigationLogic';
 import { useImageDropLogic } from './useImageDropLogic';
 import { useStore } from '@/store';
-import { IconChevronDown, IconChevronUp, IconLoader2 } from '@/icons';
+import { IconChevronDown, IconChevronUp, IconLoader2, IconSparkles } from '@/icons';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Button, SlashCommandInput } from '@/components/ui';
 import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
@@ -161,6 +161,15 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 placeholder="Type / to see commands... (paste or drop image)"
                 disabled={navigation.state.isMoving}
               />
+              <Button
+                onClick={navigation.handlers.handleEnhance}
+                disabled={navigation.state.isEnhancing || navigation.state.isMoving || !navigation.utils.canEnhance()}
+                loading={navigation.state.isEnhancing}
+                title="Add AI-suggested navigable elements and furnishing"
+                style={{ padding: '0 var(--spacing-sm)' }}
+              >
+                <IconSparkles size={18} />
+              </Button>
               <Button
                 onClick={navigation.handlers.handleMove}
                 disabled={navigation.state.isMoving || !navigation.state.movementInput.trim()}

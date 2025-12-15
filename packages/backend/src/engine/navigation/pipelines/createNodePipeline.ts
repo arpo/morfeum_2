@@ -20,7 +20,7 @@ import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
 import { getPipelineTypeForIntent } from '../../pipelines/shared/pipelineConfig';
 import mediaService from '../../../services/media/mediaService';
 import { analyzeDestination } from '../analyzers/destinationAnalyzer';
-import { analyzeStructure } from '../analyzers/structureAnalyzer';
+import { analyzeStructure, ParsedEnhancements } from '../analyzers/structureAnalyzer';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
 export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
@@ -33,7 +33,8 @@ export interface CreateNodeOptions {
   gotoText?: string;     // For GOTO: The destination text to analyze
   userPrompt?: string;   // User's space description (used for structure analysis)
   useUnifiedPipeline?: boolean; // Enable new unified pipeline (defaults to true)
-  includeFurnishing?: boolean; // Include furnishing details in structure analysis (--furnish flag)
+  /** Pre-parsed navigable elements and furnishing from command (user-controlled) */
+  parsedEnhancements?: ParsedEnhancements;
   isSubPipeline?: boolean; // Running as sub-pipeline - skip started/completed events (parent handles progress)
 }
 
@@ -86,7 +87,8 @@ export async function runCreateLocationNodePipeline(
     // Run Structure Analysis and DNA Generation in PARALLEL
     const [structureAnalysis, dnaResult] = await Promise.all([
       // Structure Analysis (determines physical/spatial properties)
-      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.includeFurnishing),
+      // NOTE: parsedEnhancements (navigableElements, furnishing) come from user command, not LLM
+      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.parsedEnhancements),
       
       // DNA Generation (determines visual/atmospheric properties)
       (async () => {
