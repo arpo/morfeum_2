@@ -1,204 +1,954 @@
 {
   "nodes": {
-    "loc-1765806622914-ydat5badj": {
-      "id": "loc-1765806622914-ydat5badj",
+    "loc-1765807589803-59ch3d60g": {
+      "id": "loc-1765807589803-59ch3d60g",
       "type": "host",
-      "name": "Göteborg",
+      "name": "London",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A city of contrasts, featuring grand 19th-century architecture, functional modernist buildings, and expansive industrial harbor areas. Waterways and canals are prominent, reflecting a strong maritime identity. Diverse urban districts offer varying architectural styles.",
-        "colorsAndLighting": "A palette of coastal greys and blues, punctuated by the earthy tones of brick and the industrial hues of its harbor. Natural daylight is often diffused by cloud cover, and city lights create a warm glow at night.",
-        "atmosphere": "The air is fresh, carrying the scent of the sea, mixed with the sounds of urban life and industrial activity. There's a pervasive sense of openness and a steady, pragmatic energy.",
-        "materials": "Brick, stone, concrete, and steel are prevalent. Wood is common in older structures and harbor areas. Modern construction utilizes glass and steel.",
-        "mood": "Pragmatic, industrious, and forward-thinking, with an undercurrent of maritime calm and creative ambition.",
-        "sounds": "Ship horns, seagulls, tram bells, ocean breeze, city bustle.",
-        "primary_surfaces": "Brick facades, concrete structures",
-        "secondary_surfaces": "Harbor metal, maritime wood",
-        "accent_features": "Canal bridges, public sculptures, industrial cranes",
-        "dominant": "Coastal grey: urban facades",
-        "secondary": "Maritime blue: water and sky",
-        "accent": "Industrial orange: port machinery",
-        "ambient": "Cool, diffused light",
-        "genre": "Urban Realism",
-        "architectural_tone": "Nordic Modernism, Industrial Maritime, Historic Brick",
-        "cultural_tone": "Port city, industrial heritage, thriving arts and music scene",
-        "palette_bias": "Cool blues and greys, industrial neutrals, muted earth tones",
-        "flora_base": "Common city trees and coastal grasses",
-        "fauna_base": "Seagulls, pigeons, urban wildlife"
+        "looks": "A vast cityscape with iconic landmarks, diverse architectural styles ranging from ancient to ultra-modern, and a mix of green spaces and dense urban areas.",
+        "colorsAndLighting": "A spectrum of colors reflecting its diverse architecture and cultures, with a mix of natural light, streetlights, and building illuminations.",
+        "atmosphere": "Dynamic, busy, and always evolving, with a constant hum of activity and a sense of grand scale.",
+        "materials": "Stone, brick, glass, steel, concrete.",
+        "mood": "Grand, historic, modern, diverse, and energetic.",
+        "sounds": "Traffic, distant sirens, diverse languages, public transport, crowds.",
+        "primary_surfaces": "Stone, brick.",
+        "secondary_surfaces": "Glass, steel.",
+        "accent_features": "Iconic landmarks, historical monuments, public art.",
+        "dominant": "grey",
+        "secondary": "brown",
+        "accent": "blue",
+        "ambient": "varied",
+        "genre": "urban",
+        "architectural_tone": "historic-modern blend",
+        "cultural_tone": "cosmopolitan",
+        "palette_bias": "muted",
+        "flora_base": "urban trees",
+        "fauna_base": "city birds"
       },
-      "description": "A major port city in Sweden, Göteborg is characterized by its industrial heritage, maritime connections, and a thriving, progressive cultural scene. It blends historic charm with modern innovation, offering a dynamic urban experience.",
-      "searchDesc": "Swedish port city with industrial roots, vibrant culture, and maritime influence.",
-      "slug": "goteborg",
+      "description": "The historic capital of England, a sprawling metropolis that seamlessly blends centuries of history with cutting-edge modernity. It's a global hub for culture, finance, and innovation.",
+      "searchDesc": "Historic and modern global capital, a melting pot of cultures, finance, art, and diverse urban landscapes.",
+      "slug": "london",
       "structure": {
-        "spatialLayout": "A well-planned urban grid with significant waterfront development, interspersed with green spaces and distinct cultural districts. The layout balances open maritime views with dense city blocks."
+        "spatialLayout": "Vast and sprawling with distinct neighborhoods and major arteries."
       }
     },
-    "a47c6a59-df5f-4ab5-b3e4-351cc8a17da4": {
-      "id": "a47c6a59-df5f-4ab5-b3e4-351cc8a17da4",
+    "81cdaf5d-448d-4f90-b8f2-8e256db7871c": {
+      "id": "81cdaf5d-448d-4f90-b8f2-8e256db7871c",
       "type": "region",
-      "name": "Ringön",
+      "name": "Camden",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A sprawling industrial landscape of weathered brick and corrugated iron structures. Large, cavernous warehouses and older factory buildings are interspersed with newer, artfully repurposed spaces. The overall impression is one of organic growth and creative adaptation.",
-        "colorsAndLighting": "Dominant industrial greys and browns of aged metal and brick, often softened by the diffused glow of workshop lights and the warmer, more inviting lights of emerging nightlife spots. Shadows are deep and varied.",
-        "atmosphere": "The air carries a mix of industrial grit and creative energy. You can feel the hum of workshops during the day, transitioning to a pulse of music and chatter as night falls. There's a sense of rough authenticity and ongoing transformation.",
-        "materials": "Primarily aged brick, rusted corrugated metal, and sturdy, unvarnished wood. Concrete floors are common, and repurposed industrial fixtures are integrated throughout.",
-        "mood": "Gritty, creative, and evolving. It evokes a sense of raw potential and bohemian charm within an industrial shell.",
-        "sounds": "Distant machinery, ambient city hum, occasional bursts of music, creative chatter.",
-        "primary_surfaces": "Aged brickwork, weathered corrugated metal",
-        "secondary_surfaces": "Concrete floors, raw wood beams",
-        "accent_features": "Street art, exposed industrial piping, unique signage",
-        "dominant": "Charcoal grey: aged metal and brick",
-        "secondary": "Rust brown: metal accents and signage",
-        "accent": "Industrial yellow: workshop lighting",
-        "ambient": "Muted, industrial light",
+        "looks": "A visually dynamic and diverse area with a mix of historic architecture and modern, independent storefronts. Street art is abundant, and markets are a central feature.",
+        "colorsAndLighting": "A wide spectrum of colors from market stalls, diverse fashion, and street art. Lighting is often varied, from natural daylight to neon signs and market lamps.",
+        "atmosphere": "Energetic, busy, and sometimes chaotic, with a constant flow of people and activity.",
+        "materials": "Brick, graffiti-covered walls, market stalls made of wood and canvas, with modern shop fronts.",
+        "mood": "Creative, rebellious, exciting, and slightly gritty, with a strong sense of individuality.",
+        "sounds": "Market chatter, buskers, diverse music, traffic, footsteps.",
+        "primary_surfaces": "Brickwork, concrete, graffiti.",
+        "secondary_surfaces": "Market stalls, shop fronts, signage.",
+        "accent_features": "Street art, eclectic shop displays, unique fashion.",
+        "dominant": "multicolored",
+        "secondary": "grey",
+        "accent": "red",
+        "ambient": "varied",
         "genre": null,
-        "architectural_tone": "Repurposed industrial, raw urban",
-        "cultural_tone": "Artist studios, craft workshops, emerging nightlife",
-        "palette_bias": "Industrial neutrals with pops of artistic color",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "architectural_tone": "eclectic",
+        "cultural_tone": "alternative",
+        "palette_bias": "vibrant",
+        "flora_base": "urban weeds",
+        "fauna_base": "pigeons"
       },
-      "description": "An industrial island in Gothenburg, Ringön has transformed into a vibrant hub for artists, craftspeople, and a burgeoning nightlife. Its gritty, repurposed warehouses now house studios, galleries, and unique venues.",
-      "searchDesc": "Industrial island district in Gothenburg, known for art, crafts, and evolving nightlife.",
-      "slug": "ringon",
+      "description": "A vibrant, eclectic neighborhood in London known for its bustling markets and alternative culture. It's a hub for music, fashion, and unique street art.",
+      "searchDesc": "Vibrant London district, known for markets, alternative culture, music, fashion, and street art.",
+      "slug": "camden",
       "structure": {
-        "spatialLayout": "A network of interconnected streets and alleys weaving through large, open-plan industrial buildings and smaller workshop units. Depth is created by the interplay of massive structures and human-scaled interventions."
-      }
+        "spatialLayout": "Dense urban sprawl with winding streets and open market areas."
+      },
+      "primaryMedia": "media-1765807631164-axf6i2cmq"
     },
-    "f167be57-fd19-4388-8711-83e11db03357": {
-      "id": "f167be57-fd19-4388-8711-83e11db03357",
+    "c3cd5c43-a6f2-4204-a1f8-197e4948609e": {
+      "id": "c3cd5c43-a6f2-4204-a1f8-197e4948609e",
       "type": "location",
-      "name": "The Circuit Lounge",
+      "name": "Cyber Dog",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The exterior is a brutalist concrete structure, stark and imposing. Industrial metal grilles cover small, high windows, hinting at the darkness within. A singular, heavy door serves as the entrance, marked by a distinctive neon glow.",
-        "colorsAndLighting": "Dominated by deep blacks and greys of concrete and metal, punctuated by vibrant neon purples and blues. Light spills out sparsely from behind the grilles, casting long, distorted shadows.",
-        "atmosphere": "The air feels cool and still, carrying the muffled thrum of deep bass. A sense of anticipation hangs heavy, drawing visitors into the electric embrace of the lounge.",
-        "materials": "Rough, unpainted concrete forms the primary structure, contrasted with weathered, dark steel for doors and window coverings. Subtle touches of worn metal add to the industrial aesthetic.",
-        "mood": "Mysterious and alluring, evoking a sense of urban escapism and underground energy.",
-        "sounds": "Muffled bass, distant industrial hum, faint electronic music pulses",
-        "primary_surfaces": "raw concrete walls",
-        "secondary_surfaces": "darkened steel plating, grimy glass",
-        "accent_features": "pulsing neon signs, circuit board patterns",
-        "dominant": "charcoal grey: facade",
-        "secondary": "midnight blue: neon accents",
-        "accent": "vivid purple: circuit patterns",
-        "ambient": "very dim",
+        "looks": "The facade is a vibrant, multi-layered structure dominated by sharp angles and geometric shapes. It features extensive use of mirrored surfaces, polished chrome, and a dense array of LED panels that pulse with dynamic, multi-colored light. Large display windows showcase eclectic products within.",
+        "colorsAndLighting": "The exterior is bathed in intense, saturated neon colors – electric blue, vibrant pink, and lime green – complemented by the cool gleam of chrome. Lighting is primarily artificial, with a constant flux of animated LEDs creating an energetic, almost overwhelming visual experience.",
+        "atmosphere": "The air buzzes with a simulated energy, a constant hum from the electronics. The temperature feels neutral, perhaps slightly warmer due to the illuminated displays. There's a sense of constant, controlled motion from the changing lights and animated screens, creating a lively and immersive urban atmosphere.",
+        "materials": "Primary materials include highly polished chrome, mirrored glass, and robust composite panels for the facade. The condition is pristine and well-maintained, emphasizing a clean, high-tech aesthetic.",
+        "mood": "The store evokes excitement, curiosity, and a sense of urban futurism. It feels energetic, slightly overwhelming, and very much alive, drawing you in with its visual spectacle.",
+        "sounds": "humming electronics, faint electronic music, distant city noise",
+        "primary_surfaces": "reflective chrome, mirrored glass",
+        "secondary_surfaces": "composite panels, LED screens",
+        "accent_features": "animated neon signs, robot sculptures",
+        "dominant": "electric blue with extensive coverage",
+        "secondary": "chrome with high reflectivity",
+        "accent": "hot pink and lime green neon accents",
+        "ambient": "bright, dynamic, multi-colored",
         "genre": null,
-        "architectural_tone": "brutalist industrial with neon embellishments",
-        "cultural_tone": "urban nightlife, techno music subculture",
-        "palette_bias": "cool, dark, electric",
+        "architectural_tone": "Cyberpunk-inspired commercial facade",
+        "cultural_tone": "A vibrant retail space catering to fans of alternative fashion, electronics, and futuristic aesthetics; a modern landmark in a bohemian district.",
+        "palette_bias": "Cool blues, vibrant neons, metallics",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A dimly lit techno bar with pulsing neon lights and industrial decor. EXTERIOR VIEW.",
-      "searchDesc": "Dimly lit techno bar on Ringön, Göteborg. Features industrial decor and pulsing neon lights. Exterior view.",
-      "slug": "the-circuit-lounge",
+      "description": "A store called Cyber Dog with a futuristic facade.",
+      "searchDesc": "Futuristic store facade in London's Camden, known for neon, chrome, and LED displays.",
+      "slug": "cyber-dog",
       "structure": {
-        "spatialLayout": "The facade is a solid, unyielding block, with a recessed entrance. The overall impression is of a tightly sealed, self-contained space."
+        "spatialLayout": "The facade presents a relatively flat plane broken by numerous protruding and recessed elements, suggesting a complex interior. The overall impression is one of density and layered visual information."
       },
       "navigableElements": [
         {
           "type": "door",
           "position": "center",
-          "description": "a heavy, dark metal door with a small, illuminated neon sign above it"
+          "description": "large glass door with a chrome frame"
         }
       ],
       "dominantElements": [
-        "brutalist concrete facade",
-        "prominent neon signage",
-        "industrial metal accents",
-        "dimly lit interior visible through windows"
+        "multi-colored LED panels",
+        "reflective chrome accents",
+        "large display windows",
+        "prominent neon signage"
       ],
       "uniqueIdentifiers": [
-        "glowing purple circuit board pattern on the facade",
-        "series of small, grimy windows",
-        "faint bass vibrations emanating from within",
-        "graffiti tags stylized like electric current"
+        "\"Cyber Dog\" illuminated sign",
+        "animated digital billboards",
+        "chrome robot statues flanking entrance",
+        "intermittent bursts of colored light"
       ],
-      "primaryMedia": "media-1765806647160-hc5np0shb"
+      "primaryMedia": "media-1765807609770-jao1oieio"
     },
-    "niche-1765806770450-fl06oxpgl": {
-      "id": "niche-1765806770450-fl06oxpgl",
+    "niche-1765807657055-v1j52vl7l": {
+      "id": "niche-1765807657055-v1j52vl7l",
       "type": "niche",
-      "name": "The Circuit Lounge Interior",
+      "name": "Cyber Dog Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior is characterized by raw, unpainted concrete walls forming the primary structure. Darkened steel plating is visible on secondary surfaces, and grimy glass peeks through industrial metal grilles. Accentuated by pulsing neon signs and intricate circuit board patterns.",
-        "colorsAndLighting": "Dominated by deep charcoals and blacks, with vibrant neon accents of midnight blue and vivid purple. Ambient light is very dim, casting long, distorted shadows from the sparse illumination.",
-        "atmosphere": "The air feels cool and still, with the muffled thrum of deep bass resonating. A sense of anticipation hangs heavy, drawing visitors into the electric embrace of the lounge.",
-        "materials": "Rough, unpainted concrete forms the main surfaces, contrasted with weathered, dark steel plating. Subtle touches of worn metal add to the industrial aesthetic.",
-        "mood": "Mysterious and alluring, evoking a sense of urban escapism and underground energy.",
-        "sounds": "Muffled deep bass, static hum, distant chatter",
-        "spatialLayout": "The space is likely enclosed and somewhat cavernous, with a focus on creating an intimate yet expansive feel for nightlife.",
-        "primary_surfaces": "raw concrete walls",
-        "secondary_surfaces": "darkened steel plating, grimy glass",
-        "accent_features": "pulsing neon signs, circuit board patterns",
-        "dominant": "charcoal grey: walls",
-        "secondary": "midnight blue: neon accents",
-        "accent": "vivid purple: circuit patterns",
-        "ambient": "very dim",
+        "looks": "The interior is a multi-layered space dominated by sharp angles and geometric shapes, reflecting the exterior's design. Mirrored surfaces and a dense array of LED panels pulse with dynamic, multi-colored light, creating an immersive environment.",
+        "colorsAndLighting": "Intense, saturated neon colors like electric blue, vibrant pink, and lime green dominate, reflected by polished chrome. The lighting is artificial and constantly in flux, with animated LEDs providing an energetic and almost overwhelming visual experience.",
+        "atmosphere": "The air buzzes with simulated energy from electronics, maintaining a neutral, perhaps slightly warm temperature due to illuminated displays. A sense of constant, controlled motion emanates from the shifting lights and animated screens, fostering a lively and immersive urban atmosphere.",
+        "materials": "Primary materials include highly polished chrome and mirrored glass, seamlessly integrated with composite panels. Surfaces are pristine, emphasizing a clean, high-tech aesthetic.",
+        "mood": "Excitement, curiosity, and a sense of urban futurism permeate the space. It feels energetic, slightly overwhelming, and very much alive, drawing visitors in with its visual spectacle.",
+        "sounds": "electronic hum, synthesized ambient music, occasional chime",
+        "spatialLayout": "The interior is characterized by a complex, multi-tiered layout with sharp angles and geometric divisions. It feels expansive due to reflective surfaces and dynamic lighting, creating a sense of depth.",
+        "primary_surfaces": "highly polished chrome, mirrored glass",
+        "secondary_surfaces": "composite panels, LED screens",
+        "accent_features": "animated neon signs, robot sculptures (potentially in cyber dog motif)",
+        "dominant": "electric blue with extensive coverage",
+        "secondary": "chrome with high reflectivity",
+        "accent": "hot pink and lime green neon accents",
+        "ambient": "bright, dynamic, multi-colored",
         "genre": null,
-        "architectural_tone": "brutalist industrial with neon embellishments",
-        "cultural_tone": "urban nightlife, techno music subculture",
-        "palette_bias": "cool, dark, electric",
+        "architectural_tone": "Cyberpunk-inspired commercial interior",
+        "cultural_tone": "A vibrant retail space catering to fans of alternative fashion, electronics, and futuristic aesthetics; a modern landmark in a bohemian district.",
+        "palette_bias": "Cool blues, vibrant neons, metallics",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765806770449-a3iz1ity0",
-      "description": "The interior of The Circuit Lounge, a vibrant space within the Ringön region, designed for urban nightlife and techno music subculture. It features a stark, brutalist concrete structure with industrial metal grilles and minimal openings, illuminated by pulsing neon signs and circuit board patterns, creating an immersive and imposing atmosphere.",
+      "primaryMedia": "media-1765807657054-pynq2zme9",
+      "description": "The interior of Cyber Dog is a large, wide retail space with a futuristic and vibrant atmosphere, reflecting the parent location's aesthetic. It is characterized by extensive use of mirrored surfaces, polished chrome, and dynamic LED panels, creating an immersive shopping experience for fans of alternative fashion, electronics, and futuristic items.",
       "structure": {
-        "form": "irregular",
+        "form": "faceted",
         "roofType": "flat",
         "scale": "large",
         "orientation": "wide",
-        "openings": "minimal",
+        "openings": "large-glass",
         "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "A large, open industrial space with a focus on immersive sound and visual experiences. The layout is designed for movement and mingling.",
+        "functionalType": "commercial",
+        "spatialLayout": "The interior is an expansive retail environment with high ceilings, designed to showcase a wide array of products. It features open floor space with distinct zones for different categories of items.",
         "requiredElements": [],
         "dominantElements": [
-          "Brutalist concrete walls",
-          "Industrial metal grilles",
-          "Pulsing neon signage",
-          "Circuit board patterns"
+          "mirrored surfaces",
+          "polished chrome accents",
+          "LED panels",
+          "display windows",
+          "animated neon signs"
         ],
         "uniqueIdentifiers": [
-          "Industrial concrete aesthetic",
-          "Neon glow accents",
-          "Circuit board motifs"
+          "futuristic aesthetic",
+          "vibrant multi-colored lighting",
+          "robot sculptures"
         ],
         "navigableElements": [
           {
             "type": "door",
             "position": "front wall",
-            "description": "door heavy steel"
+            "description": "door large glass double s"
           },
           {
-            "type": "archway",
-            "position": "left wall",
-            "description": "archway glowing blue   leading to dance floor"
-          },
-          {
-            "type": "hatch",
+            "type": "door",
             "position": "center",
-            "description": "hatch service  rear wall"
+            "description": "door connecting  rear wall"
           },
           {
             "type": "window",
+            "position": "left wall",
+            "description": "window small display"
+          },
+          {
+            "type": "object",
+            "position": "front wall",
+            "description": "object cash register counter"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object glowing neon signs"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object holographic mannequins displaying cybernetic enhancements"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object shelves stacked with custom circuit boards and neon LED strips"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object metallic display racks holding avant-garde techwear"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object cyberpunk-themed merchandise displays"
+          },
+          {
+            "type": "object",
             "position": "right wall",
-            "description": "window blacked-out"
+            "description": "object small fitting room entrance"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object ambient holographic advertisements"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object a cashier behind a sleek counter"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object and racks of unique electronics and apparel."
+          }
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door large glass double s"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door connecting  rear wall"
+        },
+        {
+          "type": "window",
+          "position": "left wall",
+          "description": "window small display"
+        },
+        {
+          "type": "object",
+          "position": "front wall",
+          "description": "object cash register counter"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object glowing neon signs"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object holographic mannequins displaying cybernetic enhancements"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object shelves stacked with custom circuit boards and neon LED strips"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object metallic display racks holding avant-garde techwear"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object cyberpunk-themed merchandise displays"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object small fitting room entrance"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object ambient holographic advertisements"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object a cashier behind a sleek counter"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object and racks of unique electronics and apparel."
+        }
+      ],
+      "dominantElements": [
+        "mirrored surfaces",
+        "polished chrome accents",
+        "LED panels",
+        "display windows",
+        "animated neon signs"
+      ],
+      "uniqueIdentifiers": [
+        "futuristic aesthetic",
+        "vibrant multi-colored lighting",
+        "robot sculptures"
+      ],
+      "searchDesc": "Futuristic retail interior, vibrant neon lights, polished chrome, geometric displays.",
+      "slug": "interior-of-cyber-dog"
+    },
+    "niche-1765807724645-u6zd0dcy3": {
+      "id": "niche-1765807724645-u6zd0dcy3",
+      "type": "niche",
+      "name": "Cyber Dog Second Floor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This level continues the building's facade, characterized by sharp, geometric forms and an abundance of mirrored surfaces. Dense arrays of LED panels pulsate with dynamic, multi-colored light, showcasing eclectic products through large display windows.",
+        "colorsAndLighting": "The space is bathed in intense, saturated neon colors, primarily electric blue and vibrant pink, accented by lime green. The lighting is artificial and energetic, dominated by the constant flux of animated LEDs.",
+        "atmosphere": "The air buzzes with simulated energy from the electronics, maintaining a neutral temperature. There's a palpable sense of controlled motion from the ever-changing lights and animated screens, creating an immersive, lively urban atmosphere.",
+        "materials": "Highly polished chrome and mirrored glass dominate, interspersed with robust composite panels. The surfaces are pristine, emphasizing a clean, high-tech aesthetic.",
+        "mood": "The mood is one of excitement and curiosity, evoking urban futurism. It feels energetic, slightly overwhelming, and very much alive.",
+        "sounds": "constant hum of electronics, soft electronic music",
+        "spatialLayout": "The spatial layout follows the building's exterior design, featuring sharp angles and potentially layered platforms or display areas.",
+        "primary_surfaces": "reflective chrome, mirrored glass",
+        "secondary_surfaces": "composite panels, LED screens",
+        "accent_features": "animated neon signs, robot sculptures (if present on this floor)",
+        "dominant": "electric blue with extensive coverage",
+        "secondary": "chrome with high reflectivity",
+        "accent": "hot pink and lime green neon accents",
+        "ambient": "bright, dynamic, multi-colored",
+        "genre": null,
+        "architectural_tone": "Cyberpunk-inspired commercial facade",
+        "cultural_tone": "A vibrant retail space catering to fans of alternative fashion, electronics, and futuristic aesthetics; a modern landmark in a bohemian district.",
+        "palette_bias": "Cool blues, vibrant neons, metallics",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765807724644-4nud2k8wt",
+      "description": "The second floor of the Cyber Dog establishment, maintaining the sharp, geometric, and technologically advanced aesthetic of the parent location with mirrored surfaces and dynamic LED lighting.",
+      "structure": {
+        "form": "faceted",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "spatialLayout": "This is the second level of the Cyber Dog retail space, likely a continuation of the immersive, angular design of the main floor. It would feature additional retail displays and pathways.",
+        "requiredElements": [],
+        "dominantElements": [
+          "angular geometric shapes",
+          "mirrored surfaces",
+          "pulsing LED panels",
+          "retail displays"
+        ],
+        "uniqueIdentifiers": [
+          "multi-layered design",
+          "dynamic multi-colored lighting"
+        ]
+      },
+      "navigableElements": [],
+      "dominantElements": [
+        "angular geometric shapes",
+        "mirrored surfaces",
+        "pulsing LED panels",
+        "retail displays"
+      ],
+      "uniqueIdentifiers": [
+        "multi-layered design",
+        "dynamic multi-colored lighting"
+      ],
+      "searchDesc": "Second floor of a cyberpunk retail space with mirrored surfaces and neon lights.",
+      "slug": "seconf-floor"
+    },
+    "loc-1765821723770-7xdbd1ilt": {
+      "id": "loc-1765821723770-7xdbd1ilt",
+      "type": "host",
+      "name": "Nexus City",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sprawling, hazy cityscape of towering, detailed, weathered buildings, many reclaimed by nature. Elevated walkways and shimmering water bodies are visible, reflecting embedded lights.",
+        "colorsAndLighting": "Dim, hazy lighting suggesting twilight or atmospheric diffusion. Pockets of brilliant illumination from golden-orange and electric blue glowing symbols and a radiant mandala.",
+        "atmosphere": "Hazy, atmospheric, blending natural effluvia with controlled urban mist. A sense of advanced environmental integration.",
+        "materials": "Weathered, possibly metallic or composite building materials, integrated with natural elements like stone and advanced technological components.",
+        "mood": "Tranquil majesty and advanced mysticism, a sense of peaceful awe and spiritual grandeur within a technologically advanced yet nature-reclaimed environment.",
+        "sounds": "Distant urban hum, gentle water sounds, occasional electronic chimes.",
+        "primary_surfaces": "Weathered building facades, overgrown stone.",
+        "secondary_surfaces": "Water, metallic conduits, integrated glowing tech.",
+        "accent_features": "Glowing circular symbols, elevated walkways, water reflections.",
+        "dominant": "Muted Grey",
+        "secondary": "Hazy Blue",
+        "accent": "Electric Blue",
+        "ambient": "Soft twilight glow",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Ancient Futuristic",
+        "cultural_tone": "Techno-Spiritualists",
+        "palette_bias": "Desaturated Urban Tones with Vibrant Accents",
+        "flora_base": "Reclaimed Nature",
+        "fauna_base": null
+      },
+      "description": "A sprawling metropolis where advanced technology and ancient spirituality intertwine, reclaimed by nature. Towering, weathered buildings merge with vibrant, overgrown ecosystems, creating a unique urban landscape.",
+      "searchDesc": "A sprawling metropolis of intertwined tech and ancient spirituality, reclaimed by nature.",
+      "slug": "nexus-city",
+      "structure": {
+        "spatialLayout": "Vast and sprawling, with towering structures, elevated pathways, and interconnected natural and artificial elements."
+      },
+      "primaryMedia": "media-1765822889533-hpmb4ev6i"
+    },
+    "96e00485-796a-41ea-b8f6-4603cd8c5caa": {
+      "id": "96e00485-796a-41ea-b8f6-4603cd8c5caa",
+      "type": "region",
+      "name": "The Serene Core",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal Buddha statue seated cross-legged atop a grand, multi-tiered platform. Intricately overgrown foliage covers the ornate stone structures of the platform. The background features a sprawling, hazy cityscape.",
+        "colorsAndLighting": "Deep greens of foliage with significant coverage, illuminated by the warm golden-orange and electric blue glow of embedded symbols and a mandala. Dim, atmospheric lighting.",
+        "atmosphere": "Tranquil, mystical, with a pervasive sense of ancient calm. Hazy air suggesting advanced atmospheric control or natural effluvia.",
+        "materials": "Ornate dark stone structures heavily adorned with lush green foliage, moss, and creeping vines. The Buddha appears to be made of a smooth, possibly stone or metallic, material.",
+        "mood": "Tranquil majesty and advanced mysticism, evoking a sense of peaceful awe and spiritual grandeur.",
+        "sounds": "Soft chimes, gentle water flow, distant hum of technology.",
+        "primary_surfaces": "Ornate dark stone, lush foliage.",
+        "secondary_surfaces": "Moss, creeping vines, smooth Buddha material.",
+        "accent_features": "Glowing circular symbols (golden-orange, electric blue), radiant golden mandala, crown-like headdress, luminous core.",
+        "dominant": "Deep Green",
+        "secondary": "Dark Stone Grey",
+        "accent": "Golden-Orange",
+        "ambient": "Dim, mystical glow",
+        "genre": null,
+        "architectural_tone": "Ancient Spiritual Monument",
+        "cultural_tone": "Spiritual Ascetics",
+        "palette_bias": "Earthy Tones with Mystical Glows",
+        "flora_base": "Abundant Overgrown Foliage",
+        "fauna_base": null
+      },
+      "description": "The central district of Nexus City, characterized by monumental structures and a pervasive sense of ancient calm. This area is dominated by the colossal Buddha statue, a beacon of spiritual energy and advanced mysticism.",
+      "searchDesc": "Monumental structures and ancient calm in Nexus City's spiritual heart.",
+      "slug": "the-serene-core",
+      "structure": {
+        "spatialLayout": "Dominated by a central monumental structure, with cascading levels and surrounding water features."
+      },
+      "primaryMedia": "media-1765822879253-dxlv330ol"
+    },
+    "1dac00b0-b69e-4f84-a2ff-b06c14902bbf": {
+      "id": "1dac00b0-b69e-4f84-a2ff-b06c14902bbf",
+      "type": "location",
+      "name": "The Great Buddha",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The colossal Buddha statue is the central, dominating form, seated cross-legged atop a grand, multi-tiered platform. Intricately overgrown foliage covers the ornate stone structures of the platform. The background features a sprawling, hazy cityscape of towering, weathered buildings.",
+        "colorsAndLighting": "The scene is dimly lit, with pockets of brilliant illumination from the golden mandala, the chest core, and electric blue and golden-orange circular symbols embedded in the architecture. The water below reflects the blue lights.",
+        "atmosphere": "The air is thick with a sense of ancient mysticism and advanced technology, suggesting a tranquil, overgrown ecosystem. A dim twilight or atmospheric haze pervades the scene, creating a mood of serene majesty.",
+        "materials": "Ornate dark stone structures form the platform, heavily adorned with lush green foliage, moss, and creeping vines. The Buddha appears to be made of a smooth, possibly stone or metallic, material.",
+        "mood": "Tranquil majesty and advanced mysticism pervade this scene, evoking a sense of peaceful awe and spiritual grandeur.",
+        "sounds": "Gentle water flow, distant city hum, rustling leaves.",
+        "primary_surfaces": "Ornate dark stone, lush green foliage, weathered building facades",
+        "secondary_surfaces": "Moss, creeping vines, shimmering water, golden light",
+        "accent_features": "Radiant golden mandala, luminous chest core, glowing circular symbols (golden-orange and electric blue)",
+        "dominant": "Deep greens of foliage with significant coverage",
+        "secondary": "Dark grey and black of stone, with prominent placement on the platform",
+        "accent": "Radiant gold and electric blue from the mandala, core, and symbols, appearing in concentrated luminous bursts",
+        "ambient": "Dim, ethereal twilight with glowing highlights",
+        "genre": null,
+        "architectural_tone": "Ancient overgrown spiritual monument with integrated futuristic elements",
+        "cultural_tone": "Sacred site for advanced spiritual civilization, a place of worship and contemplation",
+        "palette_bias": "Earth tones, deep greens, and luminous metallic accents",
+        "flora_base": "Lush green foliage, moss, creeping vines",
+        "fauna_base": "None"
+      },
+      "description": "A colossal Buddha statue meditating peacefully amidst an intricately overgrown, ancient yet futuristic city. The serene figure sits cross-legged, hands clasped, wearing elaborate robes and a crown-like headdress, with a radiant golden mandala glowing brightly behind its head and a warm, luminous core emanating from its chest. The statue is perched on a grand, multi-tiered platform composed of ornate, dark stone structures heavily adorned with lush green foliage, moss, and creeping vines. Embedded within the architecture are various glowing circular symbols, some a vibrant golden-orange and others a striking electric blue, illuminating the surrounding stone and water below. To the left, a waterfall cascades into a shimmering body of water that reflects the blue lights, bordered by complex, elevated walkways and distant, hazy buildings. The vast cityscape in the background is a sprawling blend of towering, detailed structures, many appearing weathered and reclaimed by nature, creating a sense of a civilization where advanced technology and ancient spirituality coexist within a vibrant, overgrown ecosystem. The lighting is dim, suggesting twilight or an atmospheric haze, with the mystical glowing elements providing pockets of brilliant illumination and contributing to a mood of tranquil majesty and advanced mysticism. EXTERIOR VIEW.",
+      "searchDesc": "Colossal Buddha statue in overgrown futuristic city with glowing symbols and waterfall.",
+      "slug": "the-great-buddha",
+      "structure": {
+        "spatialLayout": "The Buddha occupies a central, elevated position, with the platform expanding outwards. The background cityscape recedes into a hazy depth, emphasizing the statue's colossal scale."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "front",
+          "description": "A grand, multi-tiered stone platform leading to the Buddha"
+        }
+      ],
+      "dominantElements": [
+        "Colossal Buddha statue",
+        "Grand multi-tiered stone platform",
+        "Overgrown foliage and creeping vines",
+        "Radiant golden mandala",
+        "Luminous core within the Buddha's chest"
+      ],
+      "uniqueIdentifiers": [
+        "Glowing circular symbols (golden-orange and electric blue)",
+        "Cascading waterfall to the left",
+        "Shimmering body of water reflecting blue lights",
+        "Complex, elevated walkways",
+        "Hazy distant buildings"
+      ],
+      "primaryMedia": "media-1765821747395-xtwx9tep1"
+    },
+    "niche-1765821771650-5e3g8ex0j": {
+      "id": "niche-1765821771650-5e3g8ex0j",
+      "type": "niche",
+      "name": "Temple",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is characterized by smooth, curved surfaces that suggest the inner workings of a colossal statue. Dim, diffused light emanates from hidden sources, highlighting intricate patterns and the occasional glowing artifact. Holographic projections shimmer intermittently.",
+        "colorsAndLighting": "Deep, muted earth tones and soft greens from mossy growths on the exterior are transformed into a palette of deep blues, purples, and subtle bronze hues within. Lighting is dim, diffused, and ethereal, with pockets of intense, soft luminescence from sacred objects and the central crystal.",
+        "atmosphere": "Still and contemplative, with a cool, slightly humid air. A sense of profound peace and ancient energy pervades the space. There is a faint, almost imperceptible hum.",
+        "materials": "The inner surfaces are predominantly smooth, polished stone or a similar advanced composite material, appearing almost like obsidian or dark polished metal. Accents of glowing metallic alloys and translucent crystalline structures are present.",
+        "mood": "Serene, contemplative, awe-inspiring, sacred, ancient.",
+        "sounds": "Soft, resonant hum, faint ethereal chants, gentle whispers, distant chimes.",
+        "spatialLayout": "Domed and curved, creating a sense of being within a protective, sacred vessel. The space feels vast and hollow yet intimately enclosed.",
+        "primary_surfaces": "Polished dark stone/composite",
+        "secondary_surfaces": "Luminous crystalline formations, soft metallic inlays",
+        "accent_features": "Shimmering holographic projections, glowing sacred artifacts, the central colossal crystal.",
+        "dominant": "Deep indigo",
+        "secondary": "Muted bronze",
+        "accent": "Ethereal teal",
+        "ambient": "Softly luminous",
+        "genre": "Spiritual Sci-Fi",
+        "architectural_tone": "Ancient overgrown spiritual monument with integrated futuristic elements",
+        "cultural_tone": "Sacred site for advanced spiritual civilization, a place of worship and contemplation",
+        "palette_bias": "Deep blues, purples, muted earth tones, luminous metallic accents",
+        "flora_base": "Lush green foliage, moss, creeping vines",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765821771648-8ytujfkh2",
+      "description": "An expansive, sacred interior dedicated to worship, with a colossal Buddha statue as its focal point, set within a grand, multi-tiered platform covered in overgrown foliage.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "none",
+        "functionalType": "religious",
+        "spatialLayout": "The interior is a vast, circular chamber with a soaring domed ceiling, echoing the colossal scale of the external Buddha statue. The walls are subtly curved, leading the eye inwards towards the central altar.",
+        "requiredElements": [
+          "temple"
+        ],
+        "dominantElements": [
+          "colossal Buddha statue",
+          "grand, multi-tiered platform",
+          "ornate stone structures",
+          "overgrown foliage",
+          "hazy cityscape"
+        ],
+        "uniqueIdentifiers": [
+          "central Buddha statue",
+          "multi-tiered platform",
+          "overgrown ornamentation"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "front wall",
+            "description": "archway grand"
+          },
+          {
+            "type": "window",
+            "position": "back wall",
+            "description": "window large circular"
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "passage narrow"
+          },
+          {
+            "type": "door",
+            "position": "right wall",
+            "description": "door hidden"
           }
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "worn leather bar stools",
-          "long concrete bar",
-          "scattered industrial metal tables",
-          "laser projection system",
-          "fog machine"
+          "central glowing altar",
+          "ornate meditation cushions",
+          "intricate wall carvings depicting spiritual narratives",
+          "tall crystalline incense burners",
+          "flickering bio-luminescent flora."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway grand"
+        },
+        {
+          "type": "window",
+          "position": "back wall",
+          "description": "window large circular"
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "passage narrow"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door hidden"
+        }
+      ],
+      "dominantElements": [
+        "colossal Buddha statue",
+        "grand, multi-tiered platform",
+        "ornate stone structures",
+        "overgrown foliage",
+        "hazy cityscape"
+      ],
+      "uniqueIdentifiers": [
+        "central Buddha statue",
+        "multi-tiered platform",
+        "overgrown ornamentation"
+      ],
+      "searchDesc": "Sacred interior of the Great Buddha, ancient circuitry, ethereal glow, contemplation space.",
+      "slug": "interior-of-the-great-buddha"
+    },
+    "niche-1765822922364-xb4oy2hhg": {
+      "id": "niche-1765822922364-xb4oy2hhg",
+      "type": "niche",
+      "name": "Temple",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A smaller, enclosed space with walls covered in detailed, low-relief carvings. Dust motes dance in shafts of light. The floor is smooth, worn stone.",
+        "colorsAndLighting": "Dominated by deep earth tones, illuminated by soft, golden ambient light filtering from unseen sources, creating a peaceful, contemplative atmosphere. Occasional luminous metallic accents gleam from the carvings.",
+        "atmosphere": "Still, cool air, with a subtle scent of old stone and dried incense.",
+        "materials": "Smooth, worn dark stone walls and flooring, with intricate carvings likely made from the same material.",
+        "mood": "Contemplative, serene, ancient, sacred",
+        "sounds": "Whispers of wind, distant chimes, hushed reverence",
+        "spatialLayout": "Rectangular chamber with a prominent alcove or niche.",
+        "primary_surfaces": "carved stone walls",
+        "secondary_surfaces": "worn stone floor",
+        "accent_features": "luminous metallic inlays within carvings",
+        "dominant": "deep earth tones",
+        "secondary": "dark stone",
+        "accent": "luminous metallic",
+        "ambient": "soft golden light",
+        "genre": null,
+        "architectural_tone": "Ancient overgrown spiritual monument with integrated futuristic elements",
+        "cultural_tone": "Sacred site for advanced spiritual civilization, a place of worship and contemplation",
+        "palette_bias": "Earth tones, deep greens, and luminous metallic accents",
+        "flora_base": "Lush green foliage, moss, creeping vines",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765822922363-w1xwza654",
+      "description": "A sacred niche within the colossal statue, designed for worship and contemplation.",
+      "structure": {
+        "form": "organic",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "spatialLayout": "This space is an organically shaped chamber with smooth, flowing walls that blend seamlessly. The lighting is subdued and diffused, creating an atmosphere of quiet reverence, with occasional glowing artifacts and shimmering holographic projections adding to the ethereal ambiance.",
+        "requiredElements": [],
+        "dominantElements": [
+          "smooth, curved interior surfaces",
+          "dim, diffused lighting",
+          "glowing artifacts",
+          "holographic projections"
+        ],
+        "uniqueIdentifiers": [
+          "organic curvature",
+          "hidden light sources",
+          "intermittent holographic displays"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "left wall",
+            "description": "archway at left wall"
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "passage narrow"
+          },
+          {
+            "type": "door",
+            "position": "front wall",
+            "description": "door ancient ornate"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "meditation cushions",
+          "glowing crystalline orb on pedestal",
+          "wall murals depicting celestial beings",
+          "intricate incense burners"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway at left wall"
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "passage narrow"
+        },
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door ancient ornate"
+        }
+      ],
+      "dominantElements": [
+        "smooth, curved interior surfaces",
+        "dim, diffused lighting",
+        "glowing artifacts",
+        "holographic projections"
+      ],
+      "uniqueIdentifiers": [
+        "organic curvature",
+        "hidden light sources",
+        "intermittent holographic displays"
+      ],
+      "searchDesc": "A quiet, ancient chamber with carved walls and soft, spiritual light.",
+      "slug": "room-to-the-left"
+    },
+    "loc-1765822974860-x3brdhesq": {
+      "id": "loc-1765822974860-x3brdhesq",
+      "type": "host",
+      "name": "Gothenburg",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A city skyline featuring a mix of historical red-brick buildings, modern glass structures, and the imposing presence of port facilities and industrial complexes. Waterways and canals weave through parts of the city.",
+        "colorsAndLighting": "A palette of blues and greys reflecting the sea and sky, contrasted with the warm tones of brick and the occasional vibrant splash of modern architecture or public art. Natural light often softened by maritime haze or the glow of city lights at night.",
+        "atmosphere": "A crisp, often cool maritime air, carrying the faint scent of salt and industry. The sounds of the port, city bustle, and the distant cries of seagulls are ever-present.",
+        "materials": "Brick, stone, steel, glass, concrete, wood.",
+        "mood": "A sense of industriousness, maritime resilience, and a progressive cultural outlook. It evokes both a connection to the past and an embrace of the future.",
+        "sounds": "Ship horns, seagulls, city traffic, distant industrial hum, chatter.",
+        "primary_surfaces": "Brick facades, stone foundations, paved plazas.",
+        "secondary_surfaces": "Steel structures, glass windows, wooden docks.",
+        "accent_features": "Maritime sculptures, historical plaques, public art installations, colorful trams.",
+        "dominant": "Blue",
+        "secondary": "Red",
+        "accent": "Yellow",
+        "ambient": "Cool coastal light",
+        "genre": "Urban",
+        "architectural_tone": "Industrial Maritime",
+        "cultural_tone": "Arts and Innovation",
+        "palette_bias": "Cool Maritime",
+        "flora_base": "Coastal vegetation",
+        "fauna_base": "Seagulls"
+      },
+      "description": "Sweden's second-largest city, Gothenburg is a vibrant port city celebrated for its rich industrial heritage and a thriving, dynamic arts and culture scene. It offers a unique blend of maritime history and modern innovation.",
+      "searchDesc": "Vibrant Swedish port city, rich industrial heritage, thriving arts scene, maritime history.",
+      "slug": "gothenburg",
+      "structure": {
+        "spatialLayout": "Varied, from the grand scale of industrial areas and ports to the more intimate scale of historic districts and parks. Open public spaces and waterfront promenades."
+      }
+    },
+    "07fd789d-e50c-4000-88d6-ef2413a70e09": {
+      "id": "07fd789d-e50c-4000-88d6-ef2413a70e09",
+      "type": "region",
+      "name": "Ringön",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A mix of large, utilitarian warehouse structures and smaller, repurposed industrial buildings. Cobblestone or weathered asphalt pathways between structures.",
+        "colorsAndLighting": "Dominantly muted industrial tones with occasional pops of vibrant street art. Natural daylight filtered through large windows, supplemented by functional industrial lighting.",
+        "atmosphere": "A slightly damp, cool air with the faint scent of metal and old wood. A gentle breeze from the nearby water. The sounds of distant industry mixed with creative endeavors.",
+        "materials": "Weathered brick, corrugated metal, concrete, aged wood, steel, and iron.",
+        "mood": "A palpable sense of history and industrial grit interwoven with a dynamic and forward-thinking creative energy. A feeling of authentic, lived-in spaces.",
+        "sounds": "Distant ship horns, grinding metal, creative music, muffled conversations, seagulls.",
+        "primary_surfaces": "Brick walls, concrete floors, exposed structural beams.",
+        "secondary_surfaces": "Corrugated metal sheeting, wooden crates, industrial shelving.",
+        "accent_features": "Street art murals, industrial signage, repurposed machinery, eclectic studio equipment.",
+        "dominant": "Grey",
+        "secondary": "Brown",
+        "accent": "Orange",
+        "ambient": "Cool daylight",
+        "genre": "Industrial",
+        "architectural_tone": "Utilitarian",
+        "cultural_tone": "Creative Community",
+        "palette_bias": "Muted Industrial",
+        "flora_base": "Hardy urban plants",
+        "fauna_base": "Seagulls"
+      },
+      "description": "An industrial island in Gothenburg, Sweden, Ringön is a unique area where historical warehouses meet a vibrant, burgeoning creative community. It's a hub for artists, designers, and craftspeople.",
+      "searchDesc": "Industrial island in Gothenburg, Sweden. Warehouses, creative studios, artists, designers.",
+      "slug": "ringon",
+      "structure": {
+        "spatialLayout": "Large, open-plan warehouse interiors with exposed beams and high ceilings. Smaller, more intimate studio spaces carved out within larger structures."
+      }
+    },
+    "79e4bf27-c8ab-4887-91ba-cf2f19bf41cc": {
+      "id": "79e4bf27-c8ab-4887-91ba-cf2f19bf41cc",
+      "type": "location",
+      "name": "The Old Textile Warehouse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The warehouse presents a formidable rectangular volume, characterized by its extensive, aged brickwork. The upper sections feature a rhythmic pattern of tall, arched window openings, many of which are now boarded or have broken panes, emphasizing its industrial past. A significant loading bay door dominates the ground level, suggesting its former function for large-scale transport.",
+        "colorsAndLighting": "Muted, earthy tones of aged red brick are primary, with shadows cast by the deep-set windows. The lighting is natural, often diffuse due to overcast skies or filtered through grimy glass, creating a subdued and somewhat melancholic ambiance.",
+        "atmosphere": "The air carries a faint scent of dust and dampness, mixed with the subtle aroma of creative materials from within. A sense of quiet stillness prevails, occasionally punctuated by distant industrial sounds from the island, but the immediate feeling is one of contemplative solitude.",
+        "materials": "The dominant material is weathered red brick, showing signs of age with chipped edges and discolored patches. Industrial metal, likely steel or iron, is present in the loading bay door and window frames, exhibiting rust and patina. Sections of the roof may feature corrugated metal.",
+        "mood": "A blend of nostalgic industrial decay and burgeoning creative energy. It evokes a feeling of history preserved, now repurposed for contemporary expression.",
+        "sounds": "Distant harbor sounds, creaking metal, faint echoes from within, rustling leaves, wind whistling",
+        "primary_surfaces": "Weathered red brick walls, grimy glass panes, rusted metal",
+        "secondary_surfaces": "Concrete foundation, corrugated metal sheeting, aged wooden planks",
+        "accent_features": "Graffiti art, faded signage, bird nests",
+        "dominant": "Red brick (extensive coverage)",
+        "secondary": "Gray (metal elements, concrete)",
+        "accent": "Faded white/yellow (signage), multi-colored (graffiti)",
+        "ambient": "Subdued natural light",
+        "genre": null,
+        "architectural_tone": "Utilitarian Industrial Warehouse with Art Nouveau window detailing",
+        "cultural_tone": "A space repurposed by artists, reflecting a transition from industrial past to creative present.",
+        "palette_bias": "Earth tones, muted industrial grays",
+        "flora_base": "None",
+        "fauna_base": "Birds"
+      },
+      "description": "A large, brick warehouse on Ringön, once used for textile storage, now a hub for artists. EXTERIOR VIEW.",
+      "searchDesc": "Old brick textile warehouse on Ringön, Gothenburg, now an art hub.",
+      "slug": "the-old-textile-warehouse",
+      "structure": {
+        "spatialLayout": "A vast, open rectangular footprint, designed for efficient storage and movement of goods. The exterior suggests a cavernous interior with high ceilings."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of the facade",
+          "description": "A large, imposing metal loading bay door."
+        },
+        {
+          "type": "door",
+          "position": "to the left of the loading bay door",
+          "description": "A smaller, weathered wooden pedestrian entrance."
+        }
+      ],
+      "dominantElements": [
+        "Expansive brick walls",
+        "High, arched window frames (many boarded or broken)",
+        "Industrial-style metal loading bay door",
+        "Overhanging corrugated metal roof extension"
+      ],
+      "uniqueIdentifiers": [
+        "Faded signage with partially visible lettering from its textile past",
+        "Graffiti art adorning sections of the lower brickwork",
+        "Exposed electrical conduits running along the upper facade",
+        "Bird nests tucked into the eaves"
+      ],
+      "primaryMedia": "media-1765822991176-m61vnm72n"
+    },
+    "niche-1765823020876-erxaymthn": {
+      "id": "niche-1765823020876-erxaymthn",
+      "type": "niche",
+      "name": "art studio",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Vast, high-ceilinged industrial space with exposed brick walls, steel beams, and large, north-facing windows. Areas are sectioned off by temporary partitions, art racks, and large canvases. Evidence of artistic activity is everywhere: splatters of paint, scattered tools, unfinished sculptures, and vibrant artworks in various stages of completion.",
+        "colorsAndLighting": "Dominated by the muted earth tones of brick and concrete, punctuated by the vibrant hues of paint and canvases. Natural light floods in from large windows, creating dramatic shafts of illumination. Task lighting from industrial lamps and spotlights illuminates work areas. Overall, a utilitarian but inspiring light.",
+        "atmosphere": "A sense of industrious creativity. The air is thick with the scent of oil paint, turpentine, and possibly old dust. Temperature is likely cool, with drafts near the large windows and doors. There's a palpable energy of focused work and artistic exploration.",
+        "materials": "Exposed weathered red brick, polished concrete floors, raw steel beams and columns, large panes of glass in industrial frames, some areas with worn wooden planks.",
+        "mood": "Creative, utilitarian, inspiring, slightly chaotic, industrial, vast.",
+        "sounds": "Distant hum of machinery, occasional clatter of tools, quiet concentration, muffled street noise.",
+        "spatialLayout": "Large, open-plan space with distinct work zones. High ceilings, with potential for mezzanine levels or elevated platforms. Load-bearing columns break up the expanse. Areas are delineated by artistic materials and works rather than solid walls.",
+        "primary_surfaces": "Exposed brick, concrete floor, steel beams",
+        "secondary_surfaces": "Canvas, wood, glass, metal (machinery parts)",
+        "accent_features": "Brightly colored paint splatters, large finished artworks, industrial art supplies, remnants of textile machinery",
+        "dominant": "Muted Brick Red",
+        "secondary": "Industrial Gray",
+        "accent": "Vibrant Paint Hues",
+        "ambient": "Natural Daylight with Task Lighting",
+        "genre": null,
+        "architectural_tone": "Utilitarian Industrial Warehouse with Art Nouveau window detailing",
+        "cultural_tone": "A space repurposed by artists, reflecting a transition from industrial past to creative present.",
+        "palette_bias": "Earth tones, muted industrial grays, with vibrant artistic accents",
+        "flora_base": "None",
+        "fauna_base": "Birds"
+      },
+      "primaryMedia": "media-1765823020875-5ny7w4i6w",
+      "description": "A spacious art studio within the old textile warehouse, retaining its industrial character while serving as a vibrant creative hub.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "industrial",
+        "spatialLayout": "A vast, open-plan rectangular space with high, arched ceilings. Exposed brick walls and remnants of industrial infrastructure are softened by natural light filtering through tall, arched windows.",
+        "requiredElements": [
+          "easel",
+          "paint supplies",
+          "storage for materials"
+        ],
+        "dominantElements": [
+          "expansive open floor plan",
+          "tall, arched windows",
+          "exposed brick walls",
+          "high, vaulted ceiling"
+        ],
+        "uniqueIdentifiers": [
+          "industrial past evident in structure",
+          "ample natural light",
+          "flexible workspace"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "front wall",
+            "description": "door large metal workshop"
+          },
+          {
+            "type": "door",
+            "position": "left wall",
+            "description": "door internal glass"
+          },
+          {
+            "type": "window",
+            "position": "center",
+            "description": "window tall arched  rear wall"
+          },
+          {
+            "type": "corridor",
+            "position": "right",
+            "description": "corridor exposed brick archway leading to"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "easels with canvases",
+          "paint splattered workbenches",
+          "metal shelves filled with art supplies",
+          "discarded fabric scraps",
+          "industrial lighting fixtures"
         ],
         "suggested": [],
         "placementNotes": []
@@ -207,37 +957,1085 @@
         {
           "type": "door",
           "position": "front wall",
-          "description": "door heavy steel"
+          "description": "door large metal workshop"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door internal glass"
+        },
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window tall arched  rear wall"
+        },
+        {
+          "type": "corridor",
+          "position": "right",
+          "description": "corridor exposed brick archway leading to"
+        }
+      ],
+      "dominantElements": [
+        "expansive open floor plan",
+        "tall, arched windows",
+        "exposed brick walls",
+        "high, vaulted ceiling"
+      ],
+      "uniqueIdentifiers": [
+        "industrial past evident in structure",
+        "ample natural light",
+        "flexible workspace"
+      ],
+      "searchDesc": "Sprawling art studio in an old textile warehouse, raw industrial, creative chaos.",
+      "slug": "interior-of-the-old-textile-warehouse-art-studio"
+    },
+    "niche-1765823092043-jldid2wyp": {
+      "id": "niche-1765823092043-jldid2wyp",
+      "type": "niche",
+      "name": "Arcade & Music Loft",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The space retains the raw, industrial feel of the warehouse, with exposed brick walls and visible structural beams. The arcade games add pops of neon color, while the sofas and tables create cozy nooks. The music studio is a clearly defined, soundproofed area.",
+        "colorsAndLighting": "A mix of muted industrial grays and weathered brick tones, contrasted by the vibrant, glowing neon of the arcade games. Soft, diffused lighting from Edison bulbs and task lighting in the studio create a warm, inviting atmosphere.",
+        "atmosphere": "Energetic yet relaxed. The air is filled with the faint hum of electronics, occasional arcade sound effects, and the muffled sounds of music production. Comfortable temperature.",
+        "materials": "Weathered red brick, exposed steel beams, worn wood flooring, plush upholstery on sofas, laminate and metal on arcade cabinets, soundproofing materials in the studio.",
+        "mood": "Playful, creative, relaxed, nostalgic.",
+        "sounds": "Arcade beeps and boops, muffled music, chatter, shuffling feet, hum of equipment.",
+        "spatialLayout": "Open plan with distinct zones for different activities. Arcade games line one wall, sofas and tables form a central lounge area, and the music studio is a semi-enclosed booth.",
+        "primary_surfaces": "Exposed brick walls, worn concrete or wood flooring.",
+        "secondary_surfaces": "Metal beams, soundproofing panels, upholstery, laminated surfaces of arcade machines, wooden tabletops.",
+        "accent_features": "Neon lights from arcade games, vintage posters, worn leather of the sofas, musical instruments.",
+        "dominant": "Muted industrial gray",
+        "secondary": "Weathered red brick",
+        "accent": "Neon pink and electric blue",
+        "ambient": "Warm, diffused yellow",
+        "genre": null,
+        "architectural_tone": "Utilitarian Industrial Warehouse with Art Nouveau window detailing",
+        "cultural_tone": "A space repurposed by artists, reflecting a transition from industrial past to creative present.",
+        "palette_bias": "Earth tones, muted industrial grays, vibrant neons",
+        "flora_base": "None",
+        "fauna_base": "Birds"
+      },
+      "primaryMedia": "media-1765823092042-fcsaqqx2e",
+      "description": "A second-floor extension of the textile warehouse, this space has been transformed into a lively entertainment hub featuring arcade games, comfortable seating areas with sofas and tables, and a dedicated music studio, all within the raw industrial shell.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "This large, wide space is a vibrant entertainment zone within the industrial warehouse. It features a distinct separation for a music studio, while the main area is filled with arcade games and comfortable seating areas.",
+        "requiredElements": [
+          "arcade games",
+          "sofas",
+          "tables",
+          "music studio"
+        ],
+        "dominantElements": [
+          "rows of arcade cabinets",
+          "clusters of sofas and tables",
+          "soundproofed music studio area",
+          "exposed brick and steel beams"
+        ],
+        "uniqueIdentifiers": [
+          "amalgamation of arcade entertainment and music creation",
+          "contrasting industrial backdrop with modern leisure elements"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "back wall",
+            "description": "archway open"
+          },
+          {
+            "type": "window",
+            "position": "left wall",
+            "description": "window large industrial"
+          },
+          {
+            "type": "door",
+            "position": "right wall",
+            "description": "door to music studio"
+          },
+          {
+            "type": "stairs",
+            "position": "front wall",
+            "description": "stairs down"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "vintage arcade machines",
+          "worn leather sofas",
+          "low-slung coffee tables",
+          "soundproofed music studio booth",
+          "drum kit",
+          "guitars",
+          "record player"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "back wall",
+          "description": "archway open"
+        },
+        {
+          "type": "window",
+          "position": "left wall",
+          "description": "window large industrial"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door to music studio"
+        },
+        {
+          "type": "stairs",
+          "position": "front wall",
+          "description": "stairs down"
+        }
+      ],
+      "dominantElements": [
+        "rows of arcade cabinets",
+        "clusters of sofas and tables",
+        "soundproofed music studio area",
+        "exposed brick and steel beams"
+      ],
+      "uniqueIdentifiers": [
+        "amalgamation of arcade entertainment and music creation",
+        "contrasting industrial backdrop with modern leisure elements"
+      ],
+      "searchDesc": "Second floor loft with arcade games, comfy sofas, tables, and a professional music studio.",
+      "slug": "second-floor-with-arcade-games-sofas-tables-and-a-music-studio"
+    },
+    "loc-1765823134842-sqfp3ic7h": {
+      "id": "loc-1765823134842-sqfp3ic7h",
+      "type": "host",
+      "name": "The Aridian Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Monumental brutalist structures rise with immense scale, featuring sharp geometric forms and a modular panel construction. Exposed conduits and vents crisscross the surfaces, hinting at complex internal systems and immense power. A lone figure in a flowing red cloak stands in the foreground, holding a long, dark firearm. The ground is rugged and sandy, with scattered rocks and sparse green foliage.",
+        "colorsAndLighting": "Dominated by grey and beige building panels, textured metal conduits, and robust vent systems. Vibrant red lights emanate from many sections of the structures. The sky is a bright, clear blue-green with wispy white clouds, illuminated by a bright, warm light.",
+        "atmosphere": "Dry, warm, and still, with a faint hum of distant machinery.",
+        "materials": "Massive, weathered concrete-like panels, textured metal conduits, robust vent systems, sandy ground, scattered rocks.",
+        "mood": "A sense of awe-inspiring grandeur and technological isolation pervades the space. The sheer scale evokes insignificance, while the red lights hint at hidden, powerful forces. Solitary grandeur and mystery.",
+        "sounds": "Distant mechanical hum, faint wind, crunching sand underfoot.",
+        "primary_surfaces": "Weathered concrete-like panels",
+        "secondary_surfaces": "Textured metal conduits, robust vent systems",
+        "accent_features": "Glowing red apertures and machinery, flowing red hooded cloak",
+        "dominant": "Grey",
+        "secondary": "Beige",
+        "accent": "Red",
+        "ambient": "Bright, warm light",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Brutalist Megastructures",
+        "cultural_tone": "Industrial Isolation",
+        "palette_bias": "Monochromatic with strong accent",
+        "flora_base": "Sparse, hardy desert vegetation",
+        "fauna_base": "None visible (hinted at by distant vehicles)"
+      },
+      "description": "A vast, desolate desert world where colossal, industrial structures pierce the alien sky. This arid landscape is defined by its monumental architecture and a sense of profound technological isolation.",
+      "searchDesc": "Desolate desert world with colossal industrial structures under an alien sky.",
+      "slug": "the-aridian-expanse",
+      "structure": {
+        "spatialLayout": "Vast, open desert expanse with towering vertical structures creating canyons and imposing vistas."
+      },
+      "primaryMedia": "media-1765823187796-25qjem8p0"
+    },
+    "22ad6c4e-c528-4d18-a44f-019a0063e29c": {
+      "id": "22ad6c4e-c528-4d18-a44f-019a0063e29c",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "344a18b5-1852-478b-9b8d-abc80a42f9a5": {
+      "id": "344a18b5-1852-478b-9b8d-abc80a42f9a5",
+      "type": "location",
+      "name": "The Monolith City",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Monumental brutalist structures rise with immense scale, featuring sharp geometric forms and a modular panel construction. Exposed conduits and vents crisscross the surfaces, hinting at complex internal systems and immense power.",
+        "colorsAndLighting": "The primary palette consists of cool greys and earthy beiges, starkly contrasted by intense, pulsating red light emanating from apertures and internal sources. This red glow casts dramatic, sharp shadows.",
+        "atmosphere": "The air is dry and carries a faint scent of ozone. A low hum of distant machinery is ever-present, punctuated by the occasional mechanical whir. The temperature is warm under a clear sky.",
+        "materials": "Buildings are constructed from massive, weathered concrete-like panels, textured metal conduits, and robust vent systems. The surfaces appear heavily industrialized and show signs of age.",
+        "mood": "A sense of awe-inspiring grandeur and technological isolation pervades the space. The sheer scale evokes insignificance, while the red lights hint at hidden, powerful forces.",
+        "sounds": "Distant hum, mechanical whirs, wind over metal",
+        "primary_surfaces": "Massive grey and beige concrete panels",
+        "secondary_surfaces": "Textured metal conduits, robust vents",
+        "accent_features": "Glowing red apertures, intricate mechanical components",
+        "dominant": "Grey with vast coverage",
+        "secondary": "Beige panels and surfaces",
+        "accent": "Intense red light from apertures and vents",
+        "ambient": "Bright, warm natural light",
+        "genre": null,
+        "architectural_tone": "Intricately designed brutalist megastructures",
+        "cultural_tone": "Unknown inhabitants, highly advanced industrial civilization",
+        "palette_bias": "Greys, beiges, and reds",
+        "flora_base": "Small patches of green foliage",
+        "fauna_base": "None"
+      },
+      "description": "Colossal, intricately designed brutalist buildings dominate the landscape, constructed from grey and beige panels, vents, and exposed conduits. Many sections glow intensely with bright red lights. The largest structure rises majestically into the sky, detailed with glowing red apertures and mechanical components. Scattered rocks and small patches of green foliage are visible. EXTERIOR VIEW.",
+      "searchDesc": "Vast brutalist city in the desert with red glowing lights and towering structures.",
+      "slug": "the-monolith-city",
+      "structure": {
+        "spatialLayout": "The city is characterized by vast, open spaces between colossal structures, creating a sense of immense depth and imposing verticality. Pathways are wide and functional."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "at the base of the largest structure",
+          "description": "a massive, reinforced entrance"
+        },
+        {
+          "type": "passage",
+          "position": "between buildings",
+          "description": "wide, open pathways"
+        }
+      ],
+      "dominantElements": [
+        "Towering brutalist architecture",
+        "Intricate mechanical components",
+        "Intense red lighting accents",
+        "Exposed vents and conduits",
+        "Vast, sandy desert floor"
+      ],
+      "uniqueIdentifiers": [
+        "Grey and beige panel construction",
+        "Glowing red apertures",
+        "The central sky-piercing monolith",
+        "Scattered desert rocks",
+        "Small patches of green foliage"
+      ],
+      "primaryMedia": "media-1765823148268-mnbgr525b"
+    },
+    "niche-1765823217842-1d6aq0g75": {
+      "id": "niche-1765823217842-1d6aq0g75",
+      "type": "niche",
+      "name": "Monolith City Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Immensely scaled brutalist architecture. Walls are formed from massive, unfinished concrete panels, scarred with age and industrial residue. Intricate networks of thick, weathered metal conduits, pipes, and massive ventilation shafts crisscross the surfaces and ceilings. Geometric forms are sharp and imposing, with low, vaulted ceilings and stark, utilitarian lines.",
+        "colorsAndLighting": "Dominated by dark greys and muted beiges of concrete, interspersed with the dark reds and rusted browns of metalwork. Lighting is sparse, originating from utilitarian, recessed fixtures casting pools of dim, yellowish light, and the occasional red glow of emergency indicators. Shadows are deep and pervasive.",
+        "atmosphere": "The air is cool, still, and smells faintly of ozone and damp concrete. A low, pervasive hum of unseen machinery creates a constant, subtle vibration.",
+        "materials": "Primarily massive, aged concrete panels. Exposed, heavily industrialized metal conduits, pipes, and grates. Wearthered, textured metal surfaces showing rust and grime.",
+        "mood": "Oppressive, awe-inspiring, utilitarian, mysterious, somewhat derelict.",
+        "sounds": "Low hum, echoing drips, metallic creaks, distant clangs, faint whirring.",
+        "spatialLayout": "Expansive, cavernous spaces, long, wide corridors with low ceilings, intersecting passageways, and vertical shafts.",
+        "primary_surfaces": "weathered concrete panels",
+        "secondary_surfaces": "industrial metal conduits and pipes",
+        "accent_features": "grated metal, ventilation grilles, warning lights",
+        "dominant": "dark grey",
+        "secondary": "muted beige",
+        "accent": "rusted red",
+        "ambient": "dim yellow",
+        "genre": null,
+        "architectural_tone": "Intricately designed brutalist megastructures",
+        "cultural_tone": "Unknown inhabitants, highly advanced industrial civilization",
+        "palette_bias": "Greys, beiges, and reds",
+        "flora_base": "Small patches of green foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765823217841-3hmzw13ao",
+      "description": "The interior of the Monolith City is as imposing and industrial as its exterior, a testament to a highly advanced civilization. Expect vast, raw spaces characterized by immense scale and functional, brutalist design, with complex internal systems on full display.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "narrow-slits",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "Vast, cavernous interiors are defined by massive, modular concrete panels and exposed, heavy-duty conduits. Sharp, angular geometries dominate, with intermittent narrow, slit-like openings that offer glimpses of other, equally imposing structures.",
+        "requiredElements": [],
+        "dominantElements": [
+          "Massive modular paneling",
+          "Exposed industrial conduits and vents",
+          "Monumental scale",
+          "Sharp geometric forms"
+        ],
+        "uniqueIdentifiers": [
+          "Brutalist interior architecture",
+          "Integrated power and ventilation systems",
+          "Limited natural light penetration"
+        ],
+        "navigableElements": [
+          {
+            "type": "hatch",
+            "position": "floor",
+            "description": "hatch massive metal"
+          },
+          {
+            "type": "opening",
+            "position": "ceiling",
+            "description": "opening maintenance shaft"
+          },
+          {
+            "type": "door",
+            "position": "center",
+            "description": "door reinforced  rear wall"
+          },
+          {
+            "type": "window",
+            "position": "front wall",
+            "description": "window large observati"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "heavy industrial workstations",
+          "exposed pipework along walls",
+          "tool racks with specialized instruments",
+          "flickering red emergency lights",
+          "ventilation grates",
+          "metal storage cabinets"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "hatch",
+          "position": "floor",
+          "description": "hatch massive metal"
+        },
+        {
+          "type": "opening",
+          "position": "ceiling",
+          "description": "opening maintenance shaft"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door reinforced  rear wall"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window large observati"
+        }
+      ],
+      "dominantElements": [
+        "Massive modular paneling",
+        "Exposed industrial conduits and vents",
+        "Monumental scale",
+        "Sharp geometric forms"
+      ],
+      "uniqueIdentifiers": [
+        "Brutalist interior architecture",
+        "Integrated power and ventilation systems",
+        "Limited natural light penetration"
+      ],
+      "searchDesc": "Vast brutalist interiors, industrial conduits, concrete, dim lighting, hum of machinery.",
+      "slug": "interior-of-the-monolith-city"
+    },
+    "niche-1765823247099-b13l2kgro": {
+      "id": "niche-1765823247099-b13l2kgro",
+      "type": "niche",
+      "name": "The Monolith City - Grand Nexus Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Monumental brutalist structures rise with immense scale, featuring sharp geometric forms and a modular panel construction. Exposed conduits and vents crisscross the surfaces, hinting at complex internal systems and immense power. The entrance hall is defined by colossal, ribbed concrete columns that soar upwards, disappearing into a vast, vaulted ceiling.",
+        "colorsAndLighting": "Dominated by deep greys and muted beiges of weathered concrete. Stark, directional lighting from embedded fixtures casts long, dramatic shadows. Accentuated by intermittent, pulsing red emergency lights that cast an eerie glow.",
+        "atmosphere": "The air is cool and still, carrying a faint metallic scent. A pervasive, low-frequency hum of unseen machinery resonates throughout the space, creating a sense of immense, latent power.",
+        "materials": "Massive, weathered concrete-like panels form the primary structure. Textured, oxidized metal conduits and robust vent systems are integrated into the walls and ceiling. Weathered stone is present in the foundational elements and large, monolithic statues.",
+        "mood": "Awe-inspiring, imposing, ancient, and slightly oppressive.",
+        "sounds": "Deep resonant hum, echoing footsteps, distant mechanical groans, faint air currents.",
+        "spatialLayout": "Vast, rectangular hall with an extremely high ceiling, creating a sense of being dwarfed by the architecture.",
+        "primary_surfaces": "Weathered, rough-textured concrete panels.",
+        "secondary_surfaces": "Oxidized metal conduits, grimy ventilation grates, rough-hewn stone.",
+        "accent_features": "Monolithic statues of unknown, abstract forms; glowing red emergency lighting panels; deeply recessed structural supports.",
+        "dominant": "Dark Grey",
+        "secondary": "Muted Beige",
+        "accent": "Industrial Red",
+        "ambient": "Cool, shadowed, punctuated by stark light sources.",
+        "genre": "Sci-Fi, Dystopian",
+        "architectural_tone": "Intricately designed brutalist megastructures",
+        "cultural_tone": "Unknown inhabitants, highly advanced industrial civilization",
+        "palette_bias": "Greys, beiges, and reds",
+        "flora_base": "Small patches of green foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765823247098-edid4st2h",
+      "description": "The Grand Nexus Hall serves as a central hub within the Monolith City, a vast civic space designed for immense gatherings or transit. Its colossal scale and raw, industrial aesthetic reflect the advanced and utilitarian nature of its inhabitants.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "none",
+        "openingShape": "none",
+        "functionalType": "civic",
+        "spatialLayout": "An immense, cavernous hall with towering, rectangular pillars that mimic the exterior brutalist architecture. The space is dominated by vast, exposed conduit systems and large, modular paneling that forms the walls and ceiling.",
+        "requiredElements": [
+          "big entrance hall"
+        ],
+        "dominantElements": [
+          "Monumental brutalist pillars",
+          "Exposed industrial conduits",
+          "Modular paneling",
+          "Vast open floor space"
+        ],
+        "uniqueIdentifiers": [
+          "Scale echoing the city's monumental nature",
+          "Seamless integration of functional infrastructure into aesthetic",
+          "Absence of natural light or decorative elements"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "front wall",
+            "description": "door massive metal double s"
+          },
+          {
+            "type": "door",
+            "position": "left wall",
+            "description": "door reinforced"
+          },
+          {
+            "type": "corridor",
+            "position": "right",
+            "description": "corridor open archway leading to"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "imposing reception desk made of dark metal",
+          "holographic status displays",
+          "two tall security checkpoints with glowing red sensors",
+          "brushed metal benches",
+          "stark geometric sculptures."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door massive metal double s"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door reinforced"
+        },
+        {
+          "type": "corridor",
+          "position": "right",
+          "description": "corridor open archway leading to"
+        }
+      ],
+      "dominantElements": [
+        "Monumental brutalist pillars",
+        "Exposed industrial conduits",
+        "Modular paneling",
+        "Vast open floor space"
+      ],
+      "uniqueIdentifiers": [
+        "Scale echoing the city's monumental nature",
+        "Seamless integration of functional infrastructure into aesthetic",
+        "Absence of natural light or decorative elements"
+      ],
+      "searchDesc": "Immense brutalist hall with concrete columns, red lights, and exposed conduits.",
+      "slug": "interior-of-the-monolith-city-entrance-hall"
+    },
+    "niche-1765823279539-ahsze03ke": {
+      "id": "niche-1765823279539-ahsze03ke",
+      "type": "niche",
+      "name": "The Monolith City - Grand Nexus Hall - Machine Room",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Immense, cavernous halls dominated by massive, utilitarian machinery. Geometric brutalist forms are softened by the organic sprawl of pipes and conduits.",
+        "colorsAndLighting": "Dominated by shades of industrial grey and muted concrete beige, with stark, functional red accents on warning labels and some pipework. Lighting is harsh and directional, casting deep shadows, with occasional red emergency lights.",
+        "atmosphere": "Cool, dry air with a faint metallic tang. A constant, deep hum and vibration emanates from the machinery. Occasional hisses and clanks punctuate the drone.",
+        "materials": "Massive, weathered concrete-like panels, heavily textured metal conduits, robust vent systems, and exposed piping.",
+        "mood": "Industrial, imposing, functional, awe-inspiring, slightly menacing.",
+        "sounds": "Deep hum, rhythmic thrum, metallic clanks, hissing steam, occasional sirens",
+        "spatialLayout": "Vast, open spaces punctuated by towering machinery, creating a sense of scale and complexity. Multiple levels are suggested by walkways and the height of the equipment.",
+        "primary_surfaces": "Weathered concrete panels",
+        "secondary_surfaces": "Textured metal conduits and pipes",
+        "accent_features": "Red warning stripes, pressure gauges, large riveted panels",
+        "dominant": "grey",
+        "secondary": "beige",
+        "accent": "red",
+        "ambient": "harsh, industrial",
+        "genre": null,
+        "architectural_tone": "Intricately designed brutalist megastructures",
+        "cultural_tone": "Highly advanced industrial civilization",
+        "palette_bias": "Greys, beiges, and reds",
+        "flora_base": "Small patches of green foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765823279538-q2kx3dity",
+      "description": "A functional core within the Grand Nexus Hall, this machine room houses the immense power and operational systems that sustain the Monolith City's industrial might.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "This machine room is a vast, cavernous space dominated by colossal, humming machinery. Exposed conduits and powerful energy systems crisscross the walls and ceiling, illuminated by the harsh glow of operational indicators.",
+        "requiredElements": [
+          "machine room"
+        ],
+        "dominantElements": [
+          "Massive industrial machinery",
+          "Exposed conduits and pipes",
+          "High-energy components",
+          "Modular paneling"
+        ],
+        "uniqueIdentifiers": [
+          "Vast scale fitting the Grand Nexus Hall",
+          "Brutalist aesthetic extended from exterior",
+          "Visible complex internal systems"
+        ],
+        "navigableElements": [
+          {
+            "type": "hatch",
+            "position": "front wall",
+            "description": "hatch heavy steel"
+          },
+          {
+            "type": "archway",
+            "position": "left wall",
+            "description": "archway conduit-lined"
+          },
+          {
+            "type": "object",
+            "position": "ceiling",
+            "description": "object exposed pipework"
+          },
+          {
+            "type": "ladder",
+            "position": "right wall",
+            "description": "ladder maintenance"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "massive humming generator",
+          "coolant pipes and valves",
+          "diagnostic control consoles",
+          "warning lights and pressure gauges"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "hatch",
+          "position": "front wall",
+          "description": "hatch heavy steel"
         },
         {
           "type": "archway",
           "position": "left wall",
-          "description": "archway glowing blue   leading to dance floor"
+          "description": "archway conduit-lined"
         },
         {
-          "type": "hatch",
-          "position": "center",
-          "description": "hatch service  rear wall"
+          "type": "object",
+          "position": "ceiling",
+          "description": "object exposed pipework"
         },
         {
-          "type": "window",
+          "type": "ladder",
           "position": "right wall",
-          "description": "window blacked-out"
+          "description": "ladder maintenance"
         }
       ],
       "dominantElements": [
-        "Brutalist concrete walls",
-        "Industrial metal grilles",
-        "Pulsing neon signage",
-        "Circuit board patterns"
+        "Massive industrial machinery",
+        "Exposed conduits and pipes",
+        "High-energy components",
+        "Modular paneling"
       ],
       "uniqueIdentifiers": [
-        "Industrial concrete aesthetic",
-        "Neon glow accents",
-        "Circuit board motifs"
+        "Vast scale fitting the Grand Nexus Hall",
+        "Brutalist aesthetic extended from exterior",
+        "Visible complex internal systems"
       ],
-      "searchDesc": "Interior of The Circuit Lounge: brutalist concrete, neon purple/blue, industrial, urban nightlife.",
-      "slug": "interior-of-the-circuit-lounge"
+      "searchDesc": "Monumental brutalist machine room with colossal machinery, exposed conduits, and industrial sounds.",
+      "slug": "machine-room"
+    },
+    "niche-1765823342724-oa4sg3mba": {
+      "id": "niche-1765823342724-oa4sg3mba",
+      "type": "niche",
+      "name": "Monolith City Interior: Basement Reactor Chamber",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Massive, brutalist brutalist architecture in a subterranean setting. Features immense scale, sharp geometric forms, and modular panel construction. Exposed conduits, vents, and pipes are omnipresent, hinting at advanced internal systems and immense power. Surfaces are heavily industrialized and weathered.",
+        "colorsAndLighting": "Dominated by dark greys and weathered concrete tones. The reactor core emits a deep, pulsating red glow, casting long shadows. Emergency red indicator lights blink sporadically. Overall lighting is dim and utilitarian, with pools of stark, functional illumination around critical components.",
+        "atmosphere": "The air is cool and heavy with the scent of ozone and damp concrete. A low, resonant hum emanates from the reactor, punctuated by the whirring of fans and the occasional clank of machinery. There's a sense of immense latent power and contained energy.",
+        "materials": "Massive, weathered concrete-like panels, textured metal conduits, thick, insulated pipes, and robust vent systems. Floors are reinforced concrete with drainage channels. Control consoles are a mix of weathered metal and dark, utilitarian plastics.",
+        "mood": "Imposing, awe-inspiring, utilitarian, slightly menacing, powerful, immense.",
+        "sounds": "Low hum, reactor pulse, whirring fans, distant clanks, echoing drips",
+        "spatialLayout": "An enormous, cavernous space with a colossal, central reactor structure. High ceilings lost in shadow. The periphery is lined with industrial infrastructure and access points.",
+        "primary_surfaces": "Weathered concrete panels, dark industrial metal",
+        "secondary_surfaces": "Thick, insulated conduits and pipes, robust vent systems, reinforced steel hatches",
+        "accent_features": "Pulsating red reactor core, blinking red emergency lights, control panel displays",
+        "dominant": "dark grey",
+        "secondary": "concrete beige",
+        "accent": "pulsating red",
+        "ambient": "dim, functional, with pockets of intense glow",
+        "genre": null,
+        "architectural_tone": "Intricately designed brutalist megastructures",
+        "cultural_tone": "Unknown inhabitants, highly advanced industrial civilization",
+        "palette_bias": "Greys, beiges, and reds",
+        "flora_base": "Small patches of green foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765823342723-oaiaz0fnx",
+      "description": "A sprawling, subterranean industrial chamber within the Monolith City, housing a primary reactor and defined by its immense scale and stark, utilitarian brutalist architecture.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "This vast, rectangular chamber is a crucial industrial hub, dominated by a colossal, humming reactor at its center. Low, vaulted ceilings and raw, unfinished concrete walls are intersected by thick, weathered conduits and ventilation shafts, typical of the Monolith City's utilitarian aesthetic.",
+        "requiredElements": [
+          "reactor",
+          "huge room",
+          "basement"
+        ],
+        "dominantElements": [
+          "massive reactor core",
+          "brutalist concrete walls",
+          "extensive metal conduit network",
+          "low, vaulted ceilings"
+        ],
+        "uniqueIdentifiers": [
+          "subterranean industrial location",
+          "centralized energy reactor",
+          "uncompromising brutalist design"
+        ],
+        "navigableElements": [
+          {
+            "type": "door",
+            "position": "center",
+            "description": "door massive reinforced steel blast  rear wall"
+          },
+          {
+            "type": "object",
+            "position": "ceiling",
+            "description": "object heavy conduit pipe network descending from"
+          },
+          {
+            "type": "hatch",
+            "position": "front wall",
+            "description": "hatch access"
+          },
+          {
+            "type": "object",
+            "position": "left wall",
+            "description": "object emergency stairwell access"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "colossal glowing fusion reactor core",
+          "intricate network of pipes and conduits",
+          "large control consoles with holographic displays",
+          "sturdy metal gantries and walkways",
+          "warning signage and hazard lights"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door massive reinforced steel blast  rear wall"
+        },
+        {
+          "type": "object",
+          "position": "ceiling",
+          "description": "object heavy conduit pipe network descending from"
+        },
+        {
+          "type": "hatch",
+          "position": "front wall",
+          "description": "hatch access"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object emergency stairwell access"
+        }
+      ],
+      "dominantElements": [
+        "massive reactor core",
+        "brutalist concrete walls",
+        "extensive metal conduit network",
+        "low, vaulted ceilings"
+      ],
+      "uniqueIdentifiers": [
+        "subterranean industrial location",
+        "centralized energy reactor",
+        "uncompromising brutalist design"
+      ],
+      "searchDesc": "Vast underground chamber with a monumental nuclear reactor, industrial scale, concrete and metal.",
+      "slug": "basement-with-reactor-huge-room"
+    },
+    "loc-1765823404991-rj6hzmqo8": {
+      "id": "loc-1765823404991-rj6hzmqo8",
+      "type": "host",
+      "name": "Xylos Prime",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "vast, arid alien desert landscape",
+        "colorsAndLighting": "clear, bright blue sky, golden-yellow sand, reddish-brown rocks, distinct shadows, bright daytime lighting",
+        "atmosphere": "dry, still air, clear visibility, bright daylight",
+        "materials": "fine, granular sand, solid rock formations",
+        "mood": "solitary, awe-inspiring, grand, desolate",
+        "sounds": "wind whispering, crunching sand, distant rockfalls",
+        "primary_surfaces": "sand, rock",
+        "secondary_surfaces": "sparse vegetation, sky",
+        "accent_features": "red rock formations, distant celestial body",
+        "dominant": "red",
+        "secondary": "blue",
+        "accent": "golden-yellow",
+        "ambient": "bright",
+        "genre": "Science Fiction",
+        "architectural_tone": "Alien",
+        "cultural_tone": "Nomadic",
+        "palette_bias": "Earth Tones",
+        "flora_base": "Cactus",
+        "fauna_base": "Reptile"
+      },
+      "description": "A vast, arid alien desert planet characterized by dramatic, towering red rock formations. The atmosphere is clear and bright, with a vibrant blue sky stretching across the immense, sandy expanse.",
+      "searchDesc": "Alien desert planet, red rocks, blue sky, arid, sandy",
+      "slug": "xylos-prime",
+      "structure": {
+        "spatialLayout": "open, expansive, vast plains with towering rock formations"
+      },
+      "primaryMedia": "media-1765823585924-iu1yr402d"
+    },
+    "a6dfa522-47ef-47f8-afc3-154cb458b3aa": {
+      "id": "a6dfa522-47ef-47f8-afc3-154cb458b3aa",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "2e566e94-5ac5-4442-8b23-07697cc6fe68": {
+      "id": "2e566e94-5ac5-4442-8b23-07697cc6fe68",
+      "type": "location",
+      "name": "The Arid Explorer",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A large, smooth, and rounded futuristic spacecraft or dwelling. Its primary form is organic, with a prominent oval-shaped doorway interrupting its seamless exterior. Circular portholes dot the lower front section.",
+        "colorsAndLighting": "The hull is a clean off-white, complemented by muted orange and grey for mechanical elements. Bright daytime lighting casts strong, defined shadows across the golden-yellow sand.",
+        "atmosphere": "The air is clear and dry, with a palpable stillness. A bright, alien sun creates sharp contrasts and a sense of serene isolation. The distant horizon is softened by haze.",
+        "materials": "The main hull appears to be a polished, seamless composite, possibly ceramic or advanced polymer. Mechanical components are likely metallic, with a matte finish. The ground is fine, granular sand.",
+        "mood": "A mood of quiet, solitary exploration and discovery. The vastness of the landscape evokes a sense of awe and potential.",
+        "sounds": "Gentle wind, faint hum of craft systems, crunching sand underfoot.",
+        "primary_surfaces": "Smooth, off-white composite hull",
+        "secondary_surfaces": "Golden-yellow sand, reddish-brown rocks",
+        "accent_features": "Muted orange and grey mechanical accents, oval doorway",
+        "dominant": "Off-white (80%) hull",
+        "secondary": "Golden-yellow (primary ground color)",
+        "accent": "Muted orange and grey (mechanicals), reddish-brown (rocks)",
+        "ambient": "Bright, clear daylight",
+        "genre": null,
+        "architectural_tone": "Smooth, organically shaped futuristic spaceship/dwelling",
+        "cultural_tone": "Used for exploration or habitation in an arid alien environment",
+        "palette_bias": "Neutrals, warm earth tones, cool blues",
+        "flora_base": "Sparse, light-colored desert vegetation",
+        "fauna_base": "None"
+      },
+      "description": "A large, smooth, organically shaped futuristic spacecraft or dwelling, rendered in off-white with muted orange and grey mechanical accents. It rests on golden-yellow sandy ground scattered with reddish-brown rocks and sparse, light-colored vegetation. Distinct shadows are cast by the bright daytime lighting. Towering red rock formations resembling mesas and buttes rise dramatically in the distance, disappearing into a hazy horizon. A large, pale blue celestial body with visible cloud patterns hangs serenely in the upper left of the sky. EXTERIOR VIEW.",
+      "searchDesc": "Futuristic craft, oval door, alien desert, red rocks, pale blue sky.",
+      "slug": "the-arid-explorer",
+      "structure": {
+        "spatialLayout": "The Explorer is a significant, low-lying structure on a vast, flat expanse. Its depth is implied by the receding landscape and distant geological formations."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "mid-side hull",
+          "description": "An oval-shaped doorway, revealing a person looking outwards."
+        }
+      ],
+      "dominantElements": [
+        "Smooth, organically shaped hull",
+        "Golden-yellow sandy ground",
+        "Towering red rock formations in the distance",
+        "Pale blue celestial body in the sky"
+      ],
+      "uniqueIdentifiers": [
+        "Oval-shaped doorway",
+        "Muted orange and grey mechanical accents",
+        "Sparse, light-colored vegetation",
+        "Visible cloud patterns on celestial body"
+      ],
+      "primaryMedia": "media-1765823492081-74yd61yal"
+    },
+    "niche-1765823509841-ow11uvkog": {
+      "id": "niche-1765823509841-ow11uvkog",
+      "type": "niche",
+      "name": "Interior of The Arid Explorer",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior mirrors the organic, rounded exterior, with smooth, flowing walls that curve seamlessly into the ceiling and floor. Integrated furniture and control panels blend into the architecture. Circular portholes are visible on the lower front.",
+        "colorsAndLighting": "The lighting is diffused and cool, casting soft blue and white hues. Accents of warm earth tones from integrated materials provide contrast. Shadows are minimal due to the smooth, unbroken surfaces.",
+        "atmosphere": "A carefully regulated, slightly cooler temperature than the exterior. The air is clean and still, with a faint hum of life support systems. Dust is meticulously filtered.",
+        "materials": "The dominant material is a polished, seamless composite that lines the walls, ceiling, and integrated furniture. Metallic accents with a matte finish are used for control interfaces and structural elements. The ground is fine, granular sand.",
+        "mood": "Calm, functional, and slightly isolated. A sense of contained exploration and safety.",
+        "sounds": "Low hum of machinery, soft ventilation, occasional clicks of controls, muffled exterior wind.",
+        "spatialLayout": "Open, flowing spaces that curve and merge, with distinct zones for habitation and operation. Minimal sharp angles.",
+        "primary_surfaces": "Polished, seamless composite (interior finish)",
+        "secondary_surfaces": "Matte metallic components",
+        "accent_features": "Integrated control panels with glowing blue indicators, subtle sand patterns on wall inlays.",
+        "dominant": "cool blue",
+        "secondary": "warm earth tones",
+        "accent": "matte silver",
+        "ambient": "soft white and blue",
+        "genre": null,
+        "architectural_tone": "Smooth, organically shaped futuristic spaceship/dwelling",
+        "cultural_tone": "Used for exploration or habitation in an arid alien environment",
+        "palette_bias": "Neutrals, warm earth tones, cool blues",
+        "flora_base": "Sparse, light-colored desert vegetation",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765823509840-s3dacrv52",
+      "description": "The interior of The Arid Explorer is a harmonious blend of form and function, designed for comfortable habitation in a harsh alien climate. Its organic structure provides a sense of enclosure and protection, while the thoughtfully designed spaces cater to the needs of exploration and rest.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "residential",
+        "spatialLayout": "The interior of The Arid Explorer is a surprisingly spacious and organic-feeling environment, curving gently with the exterior hull. The smooth, seamless walls give way to functional areas, with soft, diffused lighting from hidden sources.",
+        "requiredElements": [],
+        "dominantElements": [
+          "Curving, organic walls",
+          "Integrated, low-profile furniture",
+          "Diffused, ambient lighting",
+          "Minimal visible technology"
+        ],
+        "uniqueIdentifiers": [
+          "Seamless wall transitions",
+          "The absence of sharp corners",
+          "Subtle, integrated technology panels"
+        ],
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "left wall",
+            "description": "object seamless main entrance"
+          },
+          {
+            "type": "window",
+            "position": "front wall",
+            "description": "window circular observati"
+          },
+          {
+            "type": "door",
+            "position": "right wall",
+            "description": "door recessed way"
+          },
+          {
+            "type": "corridor",
+            "position": "center",
+            "description": "corridor short  rear"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "integrated seating pods",
+          "holographic display table",
+          "wall-mounted environmental controls",
+          "soft ambient lighting panels"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object seamless main entrance"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window circular observati"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door recessed way"
+        },
+        {
+          "type": "corridor",
+          "position": "center",
+          "description": "corridor short  rear"
+        }
+      ],
+      "dominantElements": [
+        "Curving, organic walls",
+        "Integrated, low-profile furniture",
+        "Diffused, ambient lighting",
+        "Minimal visible technology"
+      ],
+      "uniqueIdentifiers": [
+        "Seamless wall transitions",
+        "The absence of sharp corners",
+        "Subtle, integrated technology panels"
+      ],
+      "searchDesc": "Seamless, organic interior of an arid exploration vessel with sand floors and cool blue lighting.",
+      "slug": "interior-of-the-arid-explorer"
+    },
+    "niche-1765829534917-si4eo7wal": {
+      "id": "niche-1765829534917-si4eo7wal",
+      "type": "niche",
+      "name": "Cockpit of The Arid Explorer",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A smooth, rounded interior with a large, wraparound viewport dominating the front. The space is designed for functionality and observation.",
+        "colorsAndLighting": "Dominated by cool blues from displays and soft, ambient neutral lighting. Occasional warm earth tones in seating or structural elements.",
+        "atmosphere": "Cool, filtered air, slightly sterile. A constant, low-level hum of machinery.",
+        "materials": "Polished composite walls transitioning to matte metallic surfaces for controls. Padded, ergonomic seating.",
+        "mood": "Focused, controlled, awe-inspiring, safe.",
+        "sounds": "Subtle hum, soft beeps, occasional system announcements, wind outside.",
+        "spatialLayout": "Open, semi-circular, focused towards the viewport.",
+        "primary_surfaces": "Smooth, polished composite walls and ceiling; advanced polymer viewport.",
+        "secondary_surfaces": "Matte metallic control panels and consoles, padded synthetic fabric for seating.",
+        "accent_features": "Glowing holographic projections, subtle indicator lights on panels, brushed metal trim.",
+        "dominant": "Cool blue",
+        "secondary": "Neutral grey",
+        "accent": "Warm sand",
+        "ambient": "Soft, cool white",
+        "genre": null,
+        "architectural_tone": "Smooth, organically shaped futuristic spaceship/dwelling",
+        "cultural_tone": "Used for exploration or habitation in an arid alien environment",
+        "palette_bias": "Neutrals, warm earth tones, cool blues",
+        "flora_base": "Sparse, light-colored desert vegetation",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765829534914-gtnkm0a9j",
+      "description": "The cockpit of The Arid Explorer is a masterclass in integrated design, with all controls and seating organically blended into the rounded, organic interior. Small, circular portholes offer a limited but vital view of the arid alien landscape.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "small",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "industrial",
+        "spatialLayout": "The cockpit is a tightly integrated space within the rounded hull of The Arid Explorer. Smooth, organic walls curve upwards and merge with the domed ceiling, creating a cohesive and enclosed environment. Control panels and seating are seamlessly built into the structure, optimizing the limited space for the pilot.",
+        "requiredElements": [
+          "control panels",
+          "pilot seating"
+        ],
+        "dominantElements": [
+          "integrated control consoles",
+          "curving organic walls",
+          "domed ceiling",
+          "circular portholes"
+        ],
+        "uniqueIdentifiers": [
+          "seamless integration of controls",
+          "organic, flowing architecture",
+          "limited, circular viewing ports"
+        ],
+        "navigableElements": [
+          {
+            "type": "hatch",
+            "position": "center",
+            "description": "hatch seamless  rear wall"
+          },
+          {
+            "type": "object",
+            "position": "front wall",
+            "description": "object wide viewport"
+          },
+          {
+            "type": "passage",
+            "position": "left wall",
+            "description": "passage connecting"
+          },
+          {
+            "type": "hatch",
+            "position": "floor",
+            "description": "hatch control panel access"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "pilot's command chair",
+          "holographic navigation console",
+          "multi-spectral sensor display",
+          "atmospheric regulator controls",
+          "emergency ration dispenser"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "hatch",
+          "position": "center",
+          "description": "hatch seamless  rear wall"
+        },
+        {
+          "type": "object",
+          "position": "front wall",
+          "description": "object wide viewport"
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "passage connecting"
+        },
+        {
+          "type": "hatch",
+          "position": "floor",
+          "description": "hatch control panel access"
+        }
+      ],
+      "dominantElements": [
+        "integrated control consoles",
+        "curving organic walls",
+        "domed ceiling",
+        "circular portholes"
+      ],
+      "uniqueIdentifiers": [
+        "seamless integration of controls",
+        "organic, flowing architecture",
+        "limited, circular viewing ports"
+      ],
+      "searchDesc": "Futuristic cockpit with panoramic views and holographic displays, set in an arid alien environment.",
+      "slug": "cockpit"
     }
   },
   "views": {},
@@ -260,19 +2058,146 @@
       ]
     },
     {
-      "id": "loc-1765806622914-ydat5badj",
+      "id": "loc-1765807589803-59ch3d60g",
       "type": "host",
       "children": [
         {
-          "id": "a47c6a59-df5f-4ab5-b3e4-351cc8a17da4",
+          "id": "81cdaf5d-448d-4f90-b8f2-8e256db7871c",
           "type": "region",
           "children": [
             {
-              "id": "f167be57-fd19-4388-8711-83e11db03357",
+              "id": "c3cd5c43-a6f2-4204-a1f8-197e4948609e",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765806770450-fl06oxpgl",
+                  "id": "niche-1765807657055-v1j52vl7l",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765807724645-u6zd0dcy3",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765821723770-7xdbd1ilt",
+      "type": "host",
+      "children": [
+        {
+          "id": "96e00485-796a-41ea-b8f6-4603cd8c5caa",
+          "type": "region",
+          "children": [
+            {
+              "id": "1dac00b0-b69e-4f84-a2ff-b06c14902bbf",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765821771650-5e3g8ex0j",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765822922364-xb4oy2hhg",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765822974860-x3brdhesq",
+      "type": "host",
+      "children": [
+        {
+          "id": "07fd789d-e50c-4000-88d6-ef2413a70e09",
+          "type": "region",
+          "children": [
+            {
+              "id": "79e4bf27-c8ab-4887-91ba-cf2f19bf41cc",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765823020876-erxaymthn",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765823092043-jldid2wyp",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765823134842-sqfp3ic7h",
+      "type": "host",
+      "children": [
+        {
+          "id": "22ad6c4e-c528-4d18-a44f-019a0063e29c",
+          "type": "region",
+          "children": [
+            {
+              "id": "344a18b5-1852-478b-9b8d-abc80a42f9a5",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765823217842-1d6aq0g75",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765823247099-b13l2kgro",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765823279539-ahsze03ke",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765823342724-oa4sg3mba",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765823404991-rj6hzmqo8",
+      "type": "host",
+      "children": [
+        {
+          "id": "a6dfa522-47ef-47f8-afc3-154cb458b3aa",
+          "type": "region",
+          "children": [
+            {
+              "id": "2e566e94-5ac5-4442-8b23-07697cc6fe68",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765823509841-ow11uvkog",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765829534917-si4eo7wal",
                   "type": "niche",
                   "children": []
                 }
@@ -284,6 +2209,10 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765806622914-ydat5badj"
+    "loc-1765807589803-59ch3d60g",
+    "loc-1765821723770-7xdbd1ilt",
+    "loc-1765822974860-x3brdhesq",
+    "loc-1765823134842-sqfp3ic7h",
+    "loc-1765823404991-rj6hzmqo8"
   ]
 }

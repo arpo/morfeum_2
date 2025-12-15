@@ -25,6 +25,19 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
+- **DNA & Prompt Optimization (Dec 15, Latest):**
+  - Goal: Reduce pipeline execution time for NEW_WORLD, GOTO, GO_INSIDE commands
+  - Removed redundant DNA fields: `materials_base`, `mood_baseline`, `soundscape_base`
+  - Skip structural fields for Host/Region (only needed for location/niche)
+  - Fixed structure duplication in builder.ts (structural fields at node ROOT only)
+  - **Major prompt verbosity reduction:**
+    - `parentChainDNA.ts`: ~290 → ~110 lines (~62% reduction)
+    - `structureAnalysis.ts`: ~250 → ~90 lines (~64% reduction)
+    - `nodeDNAGeneration.ts`: ~170 → ~75 lines (~56% reduction)
+    - `deepestNodeDNA.ts`: ~85 → ~75 lines (~12% reduction)
+  - **Results: NEW_WORLD 24.25s → 19.97s** (17.6% faster)
+  - Parent DNA Generation: 9.90s → 5.24s (47% faster - biggest win)
+  - Key files: `dnaSchema.ts`, `deepestNodeDNA.ts`, `parentChainDNA.ts`, `structureAnalysis.ts`, `nodeDNAGeneration.ts`, `builder.ts`
 - **Pipeline Optimization & Prompt Enhancer (Dec 15):**
   - Removed navigableElements/furnishing LLM generation from pipeline (faster, cheaper)
   - Created new Prompt Enhancer feature for user-controlled AI suggestions

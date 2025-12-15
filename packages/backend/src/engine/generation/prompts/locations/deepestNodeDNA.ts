@@ -1,10 +1,8 @@
 import { buildDNAFieldsString } from '../shared/dnaSchema';
 
 /**
- * Deepest Node DNA Generation Prompt (Optimized for Speed)
- * 
- * Generates FULL DNA for the deepest node in a world tree hierarchy.
- * This DNA is used to generate an image, so be RICH and DETAILED.
+ * Deepest Node DNA Generation - Optimized for speed
+ * Generates DNA for the deepest node (used for image generation)
  */
 export function deepestNodeDNAGeneration(
   originalPrompt: string,
@@ -22,65 +20,59 @@ export function deepestNodeDNAGeneration(
     description: string;
   }>
 ): string {
-  // Build compact parent context
   const parentContext = parentChain.length > 0
     ? `\nCONTEXT: ${parentChain.map(p => `${p.type}: ${p.name}`).join(' → ')}\n`
     : '';
 
-  // Build compact classification hints
   const hints = [classificationData.looks, classificationData.atmosphere, classificationData.mood]
     .filter(Boolean)
     .join('; ');
   const hintsSection = hints ? `\nHINTS: ${hints}\n` : '';
 
-  // Compact type instruction
-  const typeHint = getCompactTypeHint(nodeType);
-
-  // Build DNA fields using shared schema
+  const typeHint = getTypeHint(nodeType);
   const dnaFields = buildDNAFieldsString({
     genreHandling: 'conditional',
     descLength: 'short',
     nodeType
   });
 
-  return `Generate DNA for a ${nodeType} named "${nodeName}".
+  // Only include structural fields for location/niche
+  const structuralFields = (nodeType === 'location' || nodeType === 'niche') 
+    ? `"navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
+  "dominantElements": ["3-5 major features"],
+  "uniqueIdentifiers": ["3-5 distinctive features"],`
+    : '';
+
+  return `Generate DNA for ${nodeType} "${nodeName}".
 ${parentContext}${hintsSection}
-DESCRIPTION: ${nodeDescription}
-USER REQUEST: ${originalPrompt}
+DESC: ${nodeDescription}
+USER: ${originalPrompt}
 
 ${typeHint}
 
-OUTPUT (JSON only, no markdown):
+OUTPUT (pure JSON):
 {
   "name": "${nodeName}",
-  "description": "2-3 sentences about purpose and character",
-  "navigableElements": [{"type": "door|passage|stairs|archway|path", "position": "location", "description": "brief"}],
-  "dominantElements": ["3-5 major features"],
-  "uniqueIdentifiers": ["3-5 distinctive features"],
-  "searchDesc": "75-100 char description",
+  "description": "2-3 sentences",
+  ${structuralFields}
+  "searchDesc": "75-100 chars",
   "slug": "${nodeName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}",
   "dna": {${dnaFields}
   }
 }
 
-RULES:
-- Be SPECIFIC (not "nice" but "weathered brass with verdigris patina")
-- architectural_tone is CRITICAL for image generation
-- Pure JSON output, no explanations`;
+RULES: Be SPECIFIC (not "nice" but "weathered brass with verdigris"). architectural_tone is CRITICAL. Pure JSON only.`;
 }
 
-/**
- * Get compact type hint
- */
-function getCompactTypeHint(nodeType: 'host' | 'region' | 'location' | 'niche'): string {
+function getTypeHint(nodeType: 'host' | 'region' | 'location' | 'niche'): string {
   switch (nodeType) {
     case 'host':
-      return 'TYPE: HOST (VAST AERIAL VIEW from great height - satellite/airplane perspective of entire world/city. Shows sprawling landscape with multiple districts visible. Buildings appear small. Epic panoramic scale. MUST set genre, all cascading fields required)';
+      return 'VIEW: VAST AERIAL (satellite/airplane). Epic panoramic. MUST set genre.';
     case 'region':
-      return 'TYPE: REGION (DISTRICT OVERVIEW from rooftop/drone height - shows specific neighborhood character. Individual buildings recognizable. Street-level elevated view, no genre)';
+      return 'VIEW: DISTRICT (rooftop/drone height). Street-level elevated. No genre.';
     case 'location':
-      return 'TYPE: LOCATION (building exterior, facade/entrance view, no genre)';
+      return 'VIEW: BUILDING EXTERIOR (facade/entrance). No genre.';
     case 'niche':
-      return 'TYPE: NICHE (interior space, room view from entrance, no genre)';
+      return 'VIEW: INTERIOR (room from entrance). No genre.';
   }
 }

@@ -2,6 +2,43 @@
 
 ## Recent Changes (2025-12-15)
 
+### DNA & Prompt Optimization (Dec 15, Latest)
+
+#### Goal: Reduce Pipeline Execution Time
+- Investigated DNA structure size and prompt verbosity to reduce tokens and speed up pipelines
+- Target commands: `NEW_WORLD`, `GOTO`, `GO_INSIDE`
+
+#### DNA Structure Optimization
+- **Removed redundant fields from dnaSchema.ts:**
+  - `materials_base` (duplicates `materials`)
+  - `mood_baseline` (duplicates `mood`)
+  - `soundscape_base` (duplicates `sounds`)
+- **Skip structural fields for Host/Region:**
+  - `navigableElements`, `dominantElements`, `uniqueIdentifiers` only for location/niche (not needed at city/district level)
+- **Fixed structure duplication in builder.ts:**
+  - Structural fields now stored at node ROOT level only, not in structure object
+
+#### Prompt Verbosity Optimization (Major Speed Win)
+Reduced all prompt files significantly:
+
+| File | Before | After | Reduction |
+|------|--------|-------|-----------|
+| `deepestNodeDNA.ts` | ~85 lines | ~75 lines | ~12% |
+| `parentChainDNA.ts` | ~290 lines | ~110 lines | **~62%** |
+| `structureAnalysis.ts` | ~250 lines | ~90 lines | **~64%** |
+| `nodeDNAGeneration.ts` | ~170 lines | ~75 lines | **~56%** |
+
+**Key optimizations:**
+- Removed ASCII box diagrams and long explanations
+- Condensed repeated form inheritance rules (3x → 1x)
+- Removed markdown tables, replaced with compact rule lists
+- Used compact JSON templates instead of verbose field descriptions
+
+#### Results
+- **NEW_WORLD pipeline: 24.25s → 19.97s** (~4.28s faster, 17.6% improvement)
+- Parent DNA Generation: 9.90s → 5.24s (**47% faster** - biggest win from parentChainDNA.ts optimization)
+- GO_INSIDE/GOTO expected to see similar improvements
+
 ### Pipeline Optimization & Prompt Enhancer (Dec 15)
 
 #### Removed NavigableElements/Furnishing from Pipeline LLM
@@ -25,50 +62,24 @@
   - Added `POST /api/mzoo/navigation/enhance-prompt` endpoint
   - Created `enhancementParser.ts` to parse "navigable elements:", "furnish:", "facade:" from commands
 
-#### Usage Example
-```
-/GO_INSIDE spa
-→ Click Enhance button
-→ Command becomes: /GO_INSIDE spa, navigable elements: door left wall, window front wall, furnish: circular jacuzzi, spa loungers, potted palms
-→ Click Go
-```
-
-### Interior Surface Transformation (Dec 15)
-
-#### Problem
-- Exterior materials (e.g., "red painted wood planks") were being copied directly to interior spaces
-- This looked wrong for residential buildings (red wood walls inside a kitchen)
-
-#### Solution
-- Updated `nodeDNAGeneration.ts` with interior surface transformation rules
-- **Priority order**:
-  1. USER-SPECIFIED → If user mentions wallpaper/wall treatment, USE IT (highest priority)
-  2. INTERIOR TRANSFORMATION → For exterior→interior, transform facade to interior finishes
-  3. KEEP AS-IS → Some materials appropriate for both (stone temples, log cabins)
-
-#### Transformation Rules
-| Facade Material | Building Type | Interior Transformation |
-|-----------------|---------------|------------------------|
-| Painted wood (red, etc.) | Residential | Whitewashed panels, plaster, wallpaper |
-| Painted wood | Commercial | Painted panels, plaster with wood trim |
-| Natural logs | Cabin/Lodge | KEEP natural wood |
-| Stone/Brick | Temple/Church/Castle | KEEP stone |
-| Stone/Brick | Residential | Plaster, tapestries, wood paneling |
-| Brick | Industrial | KEEP exposed brick |
-| Concrete/Metal/Glass | Modern | KEEP |
-
-### Previous Changes (Dec 15)
-- SpawnInputBar Refactoring & Dead Code Cleanup
-- Pipeline Progress Bar Fix & VIEW Command Alignment
-
 ## Current Focus
 
-- Command-based input with Enhance button for optional AI suggestions
-- Interior surfaces now properly transform from facade materials
+- Prompt optimization complete for all pipelines
+- Interior surfaces properly transform from facade materials
 - User can override any surface with explicit command text
+
+## Key Files Modified (DNA/Prompt Optimization)
+
+- `packages/backend/src/engine/generation/prompts/shared/dnaSchema.ts` - Removed redundant fields
+- `packages/backend/src/engine/hierarchyAnalysis/types.ts` - Updated NodeDNA interface
+- `packages/backend/src/engine/generation/prompts/locations/deepestNodeDNA.ts` - Optimized
+- `packages/backend/src/engine/generation/prompts/locations/parentChainDNA.ts` - Major optimization
+- `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts` - Major optimization
+- `packages/backend/src/engine/generation/prompts/locations/nodeDNAGeneration.ts` - Major optimization
+- `packages/backend/src/services/worldTree/builder.ts` - Fixed duplication
 
 ## Next Steps
 
-- Test Prompt Enhancer with various building types
-- Test interior surface transformation with different facade materials
+- Test GO_INSIDE/GOTO with optimized prompts to measure time improvement
 - Implement `/SCENE_IMAGE` command for generating new images of existing characters
+- Further optimization: Consider combining DNA LLM calls into single request
