@@ -10,30 +10,45 @@
 
 /**
  * Instructions for suggesting navigable elements (doors, windows, passages)
- * Used for both interior and exterior spaces
+ * Different position terminology for interior vs exterior
  */
-export const navigableElementsInstructions = `
-NAVIGABLE ELEMENTS - What openings/passages should this space have?
+export const navigableElementsInteriorInstructions = `
+NAVIGABLE ELEMENTS (INTERIOR) - What openings should this enclosed space have?
 
-For INTERIOR spaces, suggest 2-4 navigation points:
+For INTERIOR spaces with walls, suggest 2-4 navigation points:
 - Doors: main entrance, connecting doors to other rooms, closet doors
 - Windows: with specific positions (left wall, front wall, etc.)
 - Passages: archways, open doorways, corridors
 - Stairs: if multi-level space
 - Special: elevators, hatches, hidden doors (genre-appropriate)
 
-For EXTERIOR spaces (building facades), suggest 1-3 entry points:
-- Main entrance: door type, position, style
-- Secondary entrances: side doors, service entrances
-- Windows: arrangement, style, what's visible through them
-- Gates/archways: for courtyards, gardens
-
 FORMAT your suggestions as:
 "navigable elements: [element1] [position1], [element2] [position2]"
 
 Examples:
 - "navigable elements: wooden door left wall, large window front wall with garden view, archway right leading to hallway"
-- "navigable elements: glass double doors center, display windows flanking entrance, service door right side"
+`;
+
+export const navigableElementsExteriorInstructions = `
+NAVIGABLE ELEMENTS (EXTERIOR) - What paths/passages lead to/from this outdoor space?
+
+For EXTERIOR spaces WITHOUT walls, suggest 1-3 paths or connections:
+- Paths: dirt path, stone walkway, forest trail (north, south, east, west)
+- Openings: clearing edges, forest boundaries, garden entrances
+- Features: bridge, stepping stones, gate in fence
+- Views: what's visible in different directions
+
+IMPORTANT: Do NOT use "wall" positions (left wall, front wall) - this is an OPEN outdoor space!
+Use directional or descriptive positions instead:
+- "north side", "eastern edge", "toward the forest"
+- "clearing entrance", "path leading to", "near the fountain"
+
+FORMAT your suggestions as:
+"navigable elements: [element] [direction/position], [element] [direction/position]"
+
+Examples:
+- "navigable elements: winding path north toward main gathering, stone steps east to lookout point, forest trail west into deeper woods"
+- "navigable elements: wooden bridge crossing stream to the south, clearing opening northeast to sculpture garden"
 `;
 
 /**
@@ -100,6 +115,82 @@ Examples:
 `;
 
 /**
+ * Instructions for suggesting exterior niche elements
+ * Used for fully outdoor spaces (parks, plazas, gardens, art installations)
+ */
+export const exteriorNicheInstructions = `
+EXTERIOR SPACE ELEMENTS - What features should this outdoor space have?
+
+For fully outdoor spaces, suggest terrain, vegetation, and points of interest.
+These spaces have NO roof and are completely open to the environment.
+
+NATURAL LANDSCAPES (parks, gardens, forests, beaches):
+- Vegetation: trees, shrubs, flower beds, grass areas, ground cover
+- Terrain: pathways, clearings, slopes, rocky areas, sandy patches
+- Water: streams, ponds, fountains, waterfalls
+- Seating: benches, stones, logs, grass areas for sitting
+- Lighting: lampposts, ground lights, string lights, lanterns
+
+ART INSTALLATIONS (galleries, sculpture parks, Burning Man-style):
+- Structures: sculptures, interactive pieces, art platforms
+- Zones: viewing areas, gathering spaces, performance circles
+- Utilities: shade structures, seating pods, water stations
+- Lighting: dramatic spotlights, ambient glows, projection surfaces
+- Paths: connecting walkways, observation points, photo spots
+
+URBAN EXTERIOR (plazas, courtyards, market squares):
+- Hardscape: paved areas, steps, platforms, cobblestones
+- Street furniture: benches, planters, bollards, fountains
+- Lighting: streetlights, architectural lighting, festive lights
+- Commercial: stalls, kiosks, outdoor dining areas
+
+FORMAT your suggestions as:
+"exterior elements: [item1], [item2], [item3], [item4]"
+
+Examples:
+- "exterior elements: winding gravel path, glowing sculpture cluster, wooden viewing platform, ambient ground lighting"
+- "exterior elements: central fountain with stone benches, flowering trees, cobblestone pathways, vintage lampposts"
+`;
+
+/**
+ * Instructions for suggesting open-air space elements
+ * Used for semi-enclosed spaces (balconies, terraces, rooftops)
+ */
+export const openAirInstructions = `
+OPEN-AIR SPACE ELEMENTS - What features should this semi-enclosed space have?
+
+For spaces with partial walls/railings but open sky (balcony, terrace, rooftop, patio).
+These spaces blend interior comfort with exterior exposure.
+
+BALCONIES/TERRACES:
+- Railings: wrought iron, glass panels, wooden balustrades, cable rails
+- Flooring: wood decking, stone tiles, concrete, artificial turf
+- Seating: lounge chairs, bistro sets, hammocks, daybeds
+- Plants: potted plants, climbing vines, planters, hanging baskets
+- Views: what's visible, focal points in the distance
+
+ROOFTOPS:
+- Rooftop bar elements: bar counter, high stools, cocktail tables
+- Lounge areas: sectional sofas, fire pits, pergolas
+- Urban gardening: raised beds, herb planters, small trees
+- Entertainment: projection screens, speakers, dance floor
+- Safety: barriers, lighting along edges
+
+COVERED PATIOS/PERGOLAS:
+- Overhead: partial cover, vines, retractable awning, string lights
+- Dining: tables, chairs, outdoor kitchen area
+- Comfort: heaters, fans, misting systems
+- Decor: outdoor rugs, cushions, lanterns
+
+FORMAT your suggestions as:
+"open-air elements: [item1], [item2], [item3], [item4]"
+
+Examples:
+- "open-air elements: iron railing with city view, teak lounge chairs, potted olive trees, string lights overhead"
+- "open-air elements: wooden pergola with climbing wisteria, stone fire pit, cushioned sectional, moroccan lanterns"
+`;
+
+/**
  * Instructions for suggesting facade/exterior details
  * Used for NEW_LOCATION commands (building exteriors)
  */
@@ -133,6 +224,11 @@ Examples:
 `;
 
 /**
+ * Perspective type for determining which instructions to use
+ */
+export type EnhancerPerspective = 'interior' | 'exterior' | 'open-air' | 'facade';
+
+/**
  * Build the full enhancer prompt for a given command type
  */
 export function buildEnhancerPrompt(
@@ -141,13 +237,17 @@ export function buildEnhancerPrompt(
     name: string;
     type: string;
     description?: string;
+    spaceType?: string;
     dna?: any;
     navigableElements?: Array<{ type: string; position: string; description: string }>;
     dominantElements?: string[];
   },
-  destinationText: string
+  destinationText: string,
+  perspectiveHint?: EnhancerPerspective
 ): string {
-  const isExterior = commandType === 'NEW_LOCATION';
+  // Determine the perspective for enhancement suggestions
+  const isBuildingFacade = commandType === 'NEW_LOCATION';
+  const parentIsExterior = currentNodeContext.spaceType === 'exterior';
   const hasDestination = destinationText && destinationText.trim().length > 0;
   const mainStructure = currentNodeContext.dominantElements?.[0];
   const mainEntrance = currentNodeContext.navigableElements?.[0];
@@ -188,36 +288,78 @@ The user wants to go inside this location. Suggest details for the interior.
   prompt += `\n=== YOUR TASK ===
 `;
 
-  if (isExterior) {
+  if (isBuildingFacade) {
+    // NEW_LOCATION - building facade
     prompt += `
 This is a NEW_LOCATION command creating a BUILDING EXTERIOR.
 Suggest facade details that would make this building visually interesting.
 
 ${facadeInstructions}
 
-${navigableElementsInstructions}
+${navigableElementsInteriorInstructions}
+`;
+    prompt += `
+=== OUTPUT FORMAT ===
+Return a single line that can be appended to the user's command.
+Format: "facade: [details], navigable elements: [elements]"
+
+Be specific but concise. Match the style/era of the current location.
+`;
+  } else if (perspectiveHint === 'exterior' || (parentIsExterior && !hasDestination)) {
+    // Exterior niche - fully outdoor space
+    prompt += `
+This is a ${commandType} command creating a FULLY OUTDOOR space.
+This space has NO roof and NO walls - it's completely open to sky and environment.
+Suggest terrain, pathways, vegetation, and points of interest.
+
+${exteriorNicheInstructions}
+
+${navigableElementsExteriorInstructions}
+`;
+    prompt += `
+=== OUTPUT FORMAT ===
+Return a single line that can be appended to the user's command.
+Format: "exterior elements: [items], navigable elements: [elements]"
+
+IMPORTANT: Do NOT use "wall" positions - this is outdoor! Use directional positions instead.
+Be specific but concise. Match the style/era of the current location.
+`;
+  } else if (perspectiveHint === 'open-air') {
+    // Open-air niche - semi-enclosed with open sky
+    prompt += `
+This is a ${commandType} command creating an OPEN-AIR space.
+This space has partial walls/railings but open sky above (balcony, terrace, rooftop).
+Suggest furnishing that works both indoors and outdoors.
+
+${openAirInstructions}
+
+${navigableElementsInteriorInstructions}
+`;
+    prompt += `
+=== OUTPUT FORMAT ===
+Return a single line that can be appended to the user's command.
+Format: "open-air elements: [items], navigable elements: [elements]"
+
+Be specific but concise. Match the style/era of the current location.
 `;
   } else {
+    // Interior niche - default
     prompt += `
 This is a ${commandType} command creating an INTERIOR space.
 Suggest navigable elements and furnishing appropriate for this space.
 
-${navigableElementsInstructions}
+${navigableElementsInteriorInstructions}
 
 ${furnishingInstructions}
 `;
-  }
-
-  prompt += `
+    prompt += `
 === OUTPUT FORMAT ===
 Return a single line that can be appended to the user's command.
-${isExterior 
-  ? 'Format: "facade: [details], navigable elements: [elements]"'
-  : 'Format: "navigable elements: [elements], furnish: [items]"'
-}
+Format: "navigable elements: [elements], furnish: [items]"
 
 Be specific but concise. Match the style/era of the current location.
 `;
+  }
 
   return prompt;
 }

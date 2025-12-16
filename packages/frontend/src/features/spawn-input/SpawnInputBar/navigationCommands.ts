@@ -117,9 +117,11 @@ export async function handleNavigationCommand(
   const { command, text, flags } = parsedCommand;
   
   // Reconstruct text with flags for backend parsing
+  // Note: --furnish is no longer used (replaced by prompt enhancer with "furnish:" syntax)
   let textWithFlags = text || '';
-  if (flags.furnish) {
-    textWithFlags = textWithFlags ? `${textWithFlags} --furnish` : '--furnish';
+  if (flags.perspectiveOverride) {
+    const perspectiveFlag = `--${flags.perspectiveOverride}`;
+    textWithFlags = textWithFlags ? `${textWithFlags} ${perspectiveFlag}` : perspectiveFlag;
   }
   const { setIsMoving, setErrorMessage, setMovementInput } = callbacks;
   const { getNode, getSpatialNodes, setActiveEntity } = deps;

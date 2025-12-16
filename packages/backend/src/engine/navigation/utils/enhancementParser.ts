@@ -1,14 +1,15 @@
 /**
  * Enhancement Parser
- * Parses navigable elements, furnishing, and facade details from command text
+ * Parses navigable elements, furnishing, facade details, and perspective flags from command text
  * 
  * Format examples:
  * - "navigable elements: door left wall, window front wall"
  * - "furnish: jacuzzi, spa chairs, potted palms"
  * - "facade: glass storefront, striped awning"
+ * - "--interior" or "--exterior" or "--open-air" (perspective flags)
  */
 
-import type { NavigableElement } from '../types';
+import type { NavigableElement, ScenePerspective } from '../types';
 
 export interface ParsedEnhancements {
   /** Parsed navigable elements from command */
@@ -17,6 +18,8 @@ export interface ParsedEnhancements {
   furnishing?: string[];
   /** Parsed facade details for exteriors */
   facade?: string;
+  /** User-specified perspective override (--interior, --exterior, --open-air) */
+  perspectiveOverride?: ScenePerspective;
   /** Clean command text with enhancement sections removed */
   cleanCommand: string;
 }
@@ -39,6 +42,13 @@ export function parseEnhancements(commandText: string): ParsedEnhancements {
   const result: ParsedEnhancements = {
     cleanCommand: commandText
   };
+
+  // Extract and remove perspective flags (--interior, --exterior, --open-air)
+  const perspectiveMatch = commandText.match(/\s*--(interior|exterior|open-air)\b/i);
+  if (perspectiveMatch) {
+    result.perspectiveOverride = perspectiveMatch[1].toLowerCase() as ScenePerspective;
+    result.cleanCommand = result.cleanCommand.replace(perspectiveMatch[0], '');
+  }
 
   // Extract and remove "navigable elements:" section
   const navMatch = commandText.match(/,?\s*navigable elements?:\s*([^,]+(?:,\s*[^,]+)*?)(?=,\s*(?:furnish|facade):|$)/i);

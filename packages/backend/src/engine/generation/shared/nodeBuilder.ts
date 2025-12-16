@@ -8,7 +8,7 @@ import type { Structure } from '../../navigation/types';
 
 export type LayerType = 'host' | 'region' | 'location' | 'niche' | 'feature' | 'detail';
 
-export type SpaceType = 'interior' | 'exterior';
+export type SpaceType = 'interior' | 'exterior' | 'open-air';
 
 /** Furnishing details from --furnish flag */
 export interface FurnishingDetails {
@@ -65,9 +65,16 @@ function generateNodeId(type: LayerType): string {
 }
 
 /**
- * Determine space type based on layer type
+ * Determine space type based on layer type and optional structure
+ * NOTE: This is just a fallback. The pipeline should pass spaceType explicitly
+ * based on structure analysis (roofType: 'open-sky' → 'exterior')
  */
-function determineSpaceType(type: LayerType): SpaceType {
+function determineSpaceType(type: LayerType, structure?: Structure): SpaceType {
+  // If structure indicates open-sky, it's exterior (not interior)
+  if (structure?.roofType === 'open-sky') {
+    return 'exterior';
+  }
+  // Default: niches are interior, others are exterior
   return type === 'niche' ? 'interior' : 'exterior';
 }
 
@@ -92,7 +99,7 @@ export function buildNode(
     id: nodeId,
     type,
     name,
-    spaceType: options?.spaceType || determineSpaceType(type),
+    spaceType: options?.spaceType || determineSpaceType(type, options?.structure),
     dna,
   };
 

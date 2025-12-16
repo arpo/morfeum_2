@@ -35,22 +35,31 @@ PARENT LOCATION CONTEXT (inherit and respect these attributes):
   const perspectiveGuidance = perspective === 'interior' 
     ? `
 PERSPECTIVE: INTERIOR
-- This is an indoor space (room, hall, chamber, etc.)
+- This is an enclosed indoor space (room, hall, chamber, cave, etc.)
 - Focus on walls, floor, ceiling, furniture, lighting fixtures
 - Describe the enclosed feeling, how light enters
 - NavigableElements: doors leading to other rooms, stairs, windows with views`
+    : perspective === 'open-air'
+    ? `
+PERSPECTIVE: OPEN-AIR
+- This is a semi-enclosed space with open sky (balcony, terrace, rooftop, covered patio, pergola)
+- Has partial walls/railings but NO ceiling - sky is directly visible above
+- Focus on the view, railing/edge details, relationship to building AND sky/weather
+- Describe the blend of shelter and exposure - protected from some elements but open to sky
+- NavigableElements: doors back inside, stairs to other levels, overlook points`
     : `
 PERSPECTIVE: EXTERIOR
-- This is an outdoor space attached to the location (balcony, terrace, garden, rooftop)
-- Focus on the view, surrounding elements, relationship to the building
-- Describe open-air feeling, weather, sky visibility
-- NavigableElements: doors back inside, paths, stairs, other access points`;
+- This is a fully open outdoor space (park path, plaza, garden, forest clearing, sculpture area)
+- NO walls, NO ceiling - completely open to the environment
+- Focus on natural features, pathways, zones, landmarks, sky/weather
+- Describe spatial flow, vegetation, terrain, points of interest
+- NavigableElements: paths to other areas, entrances to structures, viewpoints, gathering spots`;
 
   return `You are creating the DNA for a NICHE node - a specific space within or attached to a location.
 
 NICHE ROLE:
 - The deepest level of the hierarchy (e.g., "Main Bar Room" in "The Anchor Pub")
-- Can be INTERIOR (room, chamber, hall) or EXTERIOR (balcony, terrace, rooftop)
+- Can be INTERIOR (room, chamber, hall), EXTERIOR (park, plaza, clearing), or OPEN-AIR (balcony, terrace, rooftop)
 - This is where the user IS - the most detailed, immersive description
 - Inherits style from parent location but describes the specific space
 ${perspectiveGuidance}
@@ -115,9 +124,10 @@ CRITICAL GUIDELINES:
    - What can be seen through windows?
    - What stairs or passages connect to other spaces?
 
-5. **Perspective Matters**: Interior and exterior niches feel different:
-   - Interior: enclosed, intimate, focused inward
-   - Exterior: open, connected to environment, weather-affected
+5. **Perspective Matters**: Each perspective type feels different:
+   - Interior: enclosed, intimate, focused inward, climate-controlled
+   - Open-air: semi-enclosed, dramatic views, partial weather exposure, blend of shelter and openness
+   - Exterior: fully open, connected to environment, weather-affected, spatial flow
 
 Return ONLY valid JSON, no markdown or explanations.`;
 }

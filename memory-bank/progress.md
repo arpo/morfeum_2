@@ -25,7 +25,16 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **GO_INSIDE & Prompt Enhancer Improvements (Dec 15, Latest):**
+- **Exterior Scenes & Perspective Flags (Dec 16, Latest):**
+  - **Fixed `--exterior`, `--interior`, `--open-air` flags**: Users can now explicitly control scene perspective
+  - **Root cause**: Frontend was silently dropping unrecognized `--` flags in command parsing
+  - **Solution**: Added perspective flags to `COMMAND_FLAGS`, enhanced frontend parsing, added perspective override logic
+  - **Backend**: `structureAnalyzer.ts` now forces user's perspective choice and sets `roofType: 'open-sky'` for exterior spaces
+  - **Frontend**: `commandParser.ts` parses perspective flags, `navigationCommands.ts` reconstructs them for API calls
+  - **Cleanup**: Removed unused `--furnish` flag (replaced by prompt enhancer `furnish:` syntax)
+  - **Usage**: `/GO_INSIDE sculpture area --exterior` → creates exterior niche with open sky
+  - Key files: `navigation.ts`, `structureAnalyzer.ts`, `commandParser.ts`, `navigationCommands.ts`
+- **GO_INSIDE & Prompt Enhancer Improvements (Dec 15):**
   - **Combined entrance target**: `findEntrance()` now returns `dominantElements[0] + navigableElements[0]`
     - Example: `"the Lumina Arbor's spherical canopy via a small, rectangular door at the base of the trunk"`
   - **DNA prompts ordering instructions**:

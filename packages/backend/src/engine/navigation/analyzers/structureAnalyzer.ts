@@ -10,7 +10,7 @@
 import * as mzooService from '../../../services/mzoo.service';
 import { AI_MODELS } from '../../../config';
 import { structureAnalysisPrompt, extractRequiredElements } from '../../generation/prompts/navigation/structureAnalysis';
-import type { NavigationContext, StructureAnalysis, Structure, NavigableElement } from '../types';
+import type { NavigationContext, StructureAnalysis, Structure, NavigableElement, ScenePerspective } from '../types';
 
 /** Parsed enhancements from user command */
 export interface ParsedEnhancements {
@@ -24,15 +24,15 @@ export interface ParsedEnhancements {
  * @param apiKey - MZOO API key
  * @param userPrompt - User's space description (e.g., "Parisian Café, cozy charm...")
  * @param context - Navigation context including current node and parent location
- * @param perspective - Whether this is an interior or exterior space
+ * @param perspective - Optional perspective override. If null/undefined, LLM determines it.
  * @param parsedEnhancements - Optional pre-parsed navigable elements and furnishing from command
- * @returns StructureAnalysis with physical structure data
+ * @returns StructureAnalysis with physical structure data (includes LLM-determined perspective)
  */
 export async function analyzeStructure(
   apiKey: string,
   userPrompt: string,
   context: NavigationContext,
-  perspective: 'interior' | 'exterior',
+  perspective?: ScenePerspective | null,
   parsedEnhancements?: ParsedEnhancements
 ): Promise<StructureAnalysis> {
   // Generate the analysis prompt
@@ -52,7 +52,8 @@ export async function analyzeStructure(
   // Handle errors
   if (response.error || !response.data) {
     console.error('[StructureAnalyzer] LLM call failed:', response.error);
-    return createFallbackAnalysis(userPrompt, perspective, context, parsedEnhancements);
+    // Fallback to interior if no perspective provided
+    return createFallbackAnalysis(userPrompt, perspective || 'interior', context, parsedEnhancements);
   }
 
   // Extract text from response
@@ -68,9 +69,25 @@ export async function analyzeStructure(
     cleaned = cleaned.replace(/^```\n?/, '').replace(/\n?```$/, '');
   }
 
-  // Parse JSON
+    // Parse JSON
   try {
     const result: StructureAnalysis = JSON.parse(cleaned);
+    
+    // CRITICAL: If user explicitly specified perspective (--exterior, --interior, --open-air),
+    // FORCE that perspective regardless of what LLM returned
+    if (perspective) {
+      const userExplicitlySpecified = perspective !== result.perspective;
+      if (userExplicitlySpecified) {
+        console.log(`[StructureAnalyzer] Overriding LLM perspective '${result.perspective}' with user-specified '${perspective}'`);
+        result.perspective = perspective;
+        
+        // For exterior/open-air, ensure roofType is 'open-sky'
+        if (perspective === 'exterior' || perspective === 'open-air') {
+          result.structure.roofType = 'open-sky';
+          console.log(`[StructureAnalyzer] Setting roofType to 'open-sky' for ${perspective} space`);
+        }
+      }
+    }
     
     // Ensure requiredElements includes user-specified elements (fallback extraction)
     const extractedElements = extractRequiredElements(userPrompt);
@@ -113,7 +130,8 @@ export async function analyzeStructure(
   } catch (parseError) {
     console.error('[StructureAnalyzer] Failed to parse LLM response:', parseError);
     console.error('[StructureAnalyzer] Raw response:', cleaned);
-    return createFallbackAnalysis(userPrompt, perspective, context, parsedEnhancements);
+    // Fallback to interior if no perspective provided
+    return createFallbackAnalysis(userPrompt, perspective || 'interior', context, parsedEnhancements);
   }
 }
 
@@ -122,7 +140,7 @@ export async function analyzeStructure(
  */
 function createFallbackAnalysis(
   userPrompt: string,
-  perspective: 'interior' | 'exterior',
+  perspective: ScenePerspective,
   context: NavigationContext,
   parsedEnhancements?: ParsedEnhancements
 ): StructureAnalysis {
@@ -145,12 +163,14 @@ function createFallbackAnalysis(
 
   // NOTE: navigableElements and suggestedFixtures are NO LONGER auto-generated
   // They come from user input via the prompt enhancer feature
+  // For exterior and open-air, use open-sky roofType
+  const isOpenSky = perspective === 'exterior' || perspective === 'open-air';
   const structure: Structure = {
     form: parentStructure?.form || 'rectangular',
-    roofType: perspective === 'exterior' ? 'open-sky' : (parentStructure?.roofType || 'flat'),
+    roofType: isOpenSky ? 'open-sky' : (parentStructure?.roofType || 'flat'),
     scale,
     orientation: parentStructure?.orientation || 'cubic',
-    openings: perspective === 'interior' ? 'minimal' : 'large-glass',
+    openings: perspective === 'interior' ? 'minimal' : (perspective === 'open-air' ? 'open-passages' : 'large-glass'),
     functionalType,
     spatialLayout: `A ${scale} ${perspective} space.`,
     requiredElements: requiredElements.length > 0 ? requiredElements : undefined,

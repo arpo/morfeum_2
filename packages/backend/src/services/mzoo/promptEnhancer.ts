@@ -20,10 +20,13 @@ export interface EnhancePromptInput {
     name: string;
     type: string;
     description?: string;
+    spaceType?: string;
     dna?: any;
     navigableElements?: Array<{ type: string; position: string; description: string }>;
     dominantElements?: string[];
   };
+  /** User-specified perspective override (--interior, --exterior, --open-air flags) */
+  perspectiveOverride?: 'interior' | 'exterior' | 'open-air';
 }
 
 export interface EnhancePromptResult {
@@ -54,11 +57,13 @@ export async function enhancePrompt(
         name: input.currentNode.name,
         type: input.currentNode.type,
         description: input.currentNode.description,
+        spaceType: input.currentNode.spaceType,
         dna: input.currentNode.dna,
         navigableElements: input.currentNode.navigableElements,
         dominantElements: input.currentNode.dominantElements
       },
-      input.destinationText
+      input.destinationText,
+      input.perspectiveOverride  // Pass perspective flag to template
     );
 
     // Call LLM for enhancement suggestions

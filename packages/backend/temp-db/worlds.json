@@ -1,242 +1,355 @@
 {
   "nodes": {
-    "loc-1765865346215-l1vrt0u4j": {
-      "id": "loc-1765865346215-l1vrt0u4j",
+    "loc-1765875425382-3c5jonhsu": {
+      "id": "loc-1765875425382-3c5jonhsu",
       "type": "host",
-      "name": "Aetheria",
+      "name": "The Lumina Desert",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: city skyline, geography, distant landmarks as tiny shapes (NO individual buildings, NO facades, NO close-up details). A vast expanse of varied terrain dotted with areas of intense, unusual light and color.",
-        "colorsAndLighting": "city-wide light and color from above shows pockets of intense, artificial luminescence within darker natural landscapes.",
-        "atmosphere": "city-wide air, weather patterns are likely diverse, with pockets of unusual atmospheric phenomena related to the blend of reality and imagination.",
-        "materials": "dominant materials visible from distance are natural terrains (forests, mountains, water) interwoven with hints of crystalline or luminous structures.",
-        "mood": "overall city character is one of wonder, mystery, and boundless imagination.",
-        "sounds": "distant city ambience could be a low hum of ethereal energy, interspersed with natural sounds.",
-        "primary_surfaces": "vast natural landscapes, large open areas.",
-        "secondary_surfaces": "bodies of water, areas of dense flora.",
-        "accent_features": "distinct clusters of surreal, glowing formations visible from afar.",
-        "dominant": "deep blues and purples of the night sky",
-        "secondary": "emerald greens of dense foliage",
-        "accent": "faint hints of vibrant, artificial lights",
-        "ambient": "cosmic and mysterious",
-        "genre": "Fantasy",
-        "architectural_tone": "Surreal",
-        "cultural_tone": "Imaginative",
-        "palette_bias": "Deep blues and ethereal lights",
-        "flora_base": "Dense forests and diverse plant life",
-        "fauna_base": "Mythical creatures and elemental spirits"
+        "looks": "AERIAL/SATELLITE VIEW: A vast, flat expanse of pale desert stretching to a distant horizon, dotted with faint clusters of bioluminescent flora. Distant, indistinct mountain ranges form a dark line against a softly colored twilight sky.",
+        "colorsAndLighting": "Soft pastel purples and pinks near the horizon, deepening to cooler blues above. Subtle, diffused glow from widespread luminous flora.",
+        "atmosphere": "Clear, still desert air with a sense of immense scale. The twilight sky provides a soft, ambient light.",
+        "materials": "Dominant pale sand, with scattered organic textures from luminous plant life.",
+        "mood": "Serene, expansive, with a hint of latent magic.",
+        "sounds": "Distant, faint hum of natural luminescence, a gentle desert wind.",
+        "primary_surfaces": "Vast stretches of pale sand.",
+        "secondary_surfaces": "Scattered areas of soft, glowing desert vegetation.",
+        "accent_features": "Distant, silhouetted mountain ranges.",
+        "dominant": "Pale Sand (70%)",
+        "secondary": "Soft Twilight Sky Hues (20%)",
+        "accent": "Subtle Bioluminescent Glow (10%)",
+        "ambient": "Soft, gradient light from the twilight sky.",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Naturalistic",
+        "cultural_tone": "Mystical",
+        "palette_bias": "Cool",
+        "flora_base": "Bioluminescent Desert Flora",
+        "fauna_base": "None Visible from Aerial View"
       },
-      "description": "A realm where the veil between reality and imagination is thin, blending natural landscapes with surreal, artificial wonders. From a distance, it appears as a world of vibrant contrasts and magical phenomena.",
-      "searchDesc": "A realm where reality and imagination blur, blending natural beauty with surreal wonders.",
-      "slug": "aetheria",
+      "description": "A vast, flat desert world known for its breathtaking twilight displays and vibrant, luminous flora. Its expansive, pale ground is often bathed in the soft glow of bioluminescent plant life, creating an ethereal and otherworldly landscape.",
+      "searchDesc": "Vast, flat desert world with luminous flora and twilight displays.",
+      "slug": "the-lumina-desert",
       "structure": {
-        "spatialLayout": "city layout from above is varied, with a sense of wild, untamed nature coexisting with concentrated areas of imaginative construction."
-      },
-      "primaryMedia": "media-1765869913691-1pxabrln5"
+        "spatialLayout": "An unbroken, flat plain extending to the horizon."
+      }
     },
-    "3431ae00-f20b-4dc0-a9d9-0928ff54d07c": {
-      "id": "3431ae00-f20b-4dc0-a9d9-0928ff54d07c",
+    "609614b5-86d6-4830-9a5f-6b4a3af56b39": {
+      "id": "609614b5-86d6-4830-9a5f-6b4a3af56b39",
       "type": "region",
-      "name": "The Lumina Grove",
+      "name": "Region",
       "spaceType": "exterior",
-      "dna": {
-        "looks": "ELEVATED STREET VIEW: district atmosphere, street character, general building styles (NOT specific facades). Lush, naturalistic setting enhanced by vibrant, artificial light installations.",
-        "colorsAndLighting": "Neighborhood light quality is dominated by intense, artificial light sources casting electric hues on natural elements.",
-        "atmosphere": "district air and energy is filled with wonder and mystery, a sense of artistic marvel and magical discovery.",
-        "materials": "common building materials in area are natural (trees) and artificial (mesh, patterned surfaces).",
-        "mood": "neighborhood emotional tone is awe-inspiring, mysterious, and enchanting.",
-        "sounds": "district ambient sounds are likely a low hum of energy, soft whispers of wind through illuminated foliage, and perhaps distant, ethereal chimes.",
-        "primary_surfaces": "tree trunks, forest floor.",
-        "secondary_surfaces": "mesh fabric of sculptures, patterned surfaces of pyramid.",
-        "accent_features": "large, glowing jellyfish sculptures and a patterned pyramid installation.",
-        "dominant": "electric blue",
-        "secondary": "vibrant greens and purples",
-        "accent": "warm yellow-white and magenta",
-        "ambient": "electric and saturated light tones.",
-        "genre": null,
-        "architectural_tone": "Surreal organic light installations",
-        "cultural_tone": null,
-        "palette_bias": "Electric hues",
-        "flora_base": "Tall, slender trees",
-        "fauna_base": null
-      },
-      "description": "A unique sector of Aetheria where the natural forest floor is transformed by fantastical, glowing art installations. Tall, slender trees are illuminated in electric hues, creating a surreal organic light display within a natural setting.",
-      "searchDesc": "Mystical forest clearing with glowing sculptures and illuminated trees.",
-      "slug": "the-lumina-grove",
-      "structure": {
-        "spatialLayout": "street layout, density is open clearing within a dense forest, allowing for large installations to be focal points."
-      },
-      "primaryMedia": "media-1765869932023-v7bkj2txi"
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
     },
-    "cfbfc527-37ae-4318-9899-af65b5933022": {
-      "id": "cfbfc527-37ae-4318-9899-af65b5933022",
+    "c115b226-b8fc-4d89-8dd0-af527cff2ce1": {
+      "id": "c115b226-b8fc-4d89-8dd0-af527cff2ce1",
       "type": "location",
-      "name": "The Ethereal Art Installation",
+      "name": "The Bloom Buggy",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A nighttime forest clearing transformed by vibrant, artificial lights and large, glowing sculptures. Tall, slender trees are illuminated in electric hues, while mesh jellyfish and a patterned pyramid dominate the landscape.",
-        "colorsAndLighting": "The scene is bathed in electric greens, blues, purples, and yellows from artificial sources, with warm yellow-white and magenta lights on the sculptures and pyramid. Faint red, white, and orange glows are scattered in the background.",
-        "atmosphere": "The air feels cool and crisp, with a palpable sense of wonder and unreality. Gentle, unseen currents seem to move the luminous tentacles, and the lighting pulses softly.",
-        "materials": "Sculptures are primarily made of a fine mesh material, with internal light sources. Trees appear natural but are coated in colored light. The pyramid has intricate, patterned surfaces.",
-        "mood": "Mysterious and awe-inspiring, evoking a sense of magical discovery and artistic marvel.",
-        "sounds": "Soft hums, faint electronic pulses, distant rustling.",
-        "primary_surfaces": "Illuminated mesh, glowing organic forms, light-coated tree trunks.",
-        "secondary_surfaces": "Dark forest canopy, patterned pyramid facade.",
-        "accent_features": "Luminous tentacles of varying colors, swirling patterns on the pyramid, glowing rod held by observer.",
-        "dominant": "Electric blue (tree lighting, dominant tentacle color)",
-        "secondary": "Vibrant green (tentacle highlights, tree sections)",
-        "accent": "Magenta (pyramid lighting), yellow-white (ground jellyfish bell), pink (tentacles), purple (bell, tentacles)",
-        "ambient": "Cool electric glow with warm pockets.",
+        "looks": "A colossal, rugged off-road buggy forms the base, its entire exposed framework and large tires encrusted with an overwhelming number of tiny, brilliant blue lights. Rising dramatically from its top are immense, bioluminescent floral structures, resembling giant water lilies or lotus blossoms, their petals intricately formed from pure glowing blue light. Accompanying leaf-like elements also emit a soft luminescence.",
+        "colorsAndLighting": "The vehicle and its floral displays are dominated by a vibrant, pulsating brilliant blue light, casting a strong glow on the surroundings. The twilight sky offers a soft gradient of pastel purples and pinks near the horizon, transitioning to a cooler blue overhead, creating a stark contrast.",
+        "atmosphere": "The air is still and cool, typical of desert twilight. A profound sense of wonder and celebratory awe permeates the atmosphere, as if witnessing a rare, magical phenomenon. The blue lights flicker and pulse, suggesting a vibrant, almost living energy.",
+        "materials": "The buggy itself appears to be constructed from heavy-duty, likely metallic components, showing signs of ruggedness. The floral elements are ethereal and light-based, with no discernible physical material, appearing as pure, solidified luminescence.",
+        "mood": "Otherworldly and celebratory, evoking a sense of awe and magical discovery. The scene feels both intimate in its focused spectacle and grand due to the vast desert backdrop.",
+        "sounds": "Soft hum of energy, distant wind, hushed murmurs of observers",
+        "primary_surfaces": "Sparkling blue lights, glowing floral petals, rugged metal chassis",
+        "secondary_surfaces": "Pale desert sand, dark tires, distant mountain silhouettes",
+        "accent_features": "Individual silhouetted figures observing the spectacle, the backpack of a foreground figure",
+        "dominant": "Brilliant Blue (80% - lights and floral structures)",
+        "secondary": "Pale Desert Sand (15% - ground)",
+        "accent": "Pastel Purple and Pink (5% - sky gradient)",
+        "ambient": "Soft, dim twilight glow",
         "genre": null,
-        "architectural_tone": "Surreal organic light installations within a natural setting.",
-        "cultural_tone": "Contemporary art exhibition, public spectacle for wonder and contemplation.",
-        "palette_bias": "Cyan, Magenta, Yellow, Green.",
-        "flora_base": "Tall, slender trees",
+        "architectural_tone": "Futuristic Art Installation on a Rugged Vehicle Base",
+        "cultural_tone": "Festival-goers, desert explorers, admirers of unique illuminated art",
+        "palette_bias": "Cool blues with subtle pastel warm accents",
+        "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A mystical forest clearing at night, illuminated by vibrant, artificial lights. Tall, slender tree trunks rise into the dark canopy, with sections bathed in electric greens, blues, purples, and yellows. Dominating the scene are large, glowing jellyfish-like sculptures and an intricately patterned pyramid structure, all radiating with surreal colors and light.",
-      "searchDesc": "Ethereal forest art installation with glowing jellyfish sculptures and a pyramid.",
-      "slug": "the-ethereal-art-installation",
+      "description": "A spectacularly illuminated, large, rugged off-road buggy with exposed framework and large tires, covered in countless tiny, brilliant blue lights. Enormous, luminous floral structures resembling giant water lilies or lotus flowers, made of glowing blue light, rise from its top. The vehicle is set against a vast, flat desert landscape at twilight, with distant mountain ranges. EXTERIOR VIEW.",
+      "searchDesc": "Gigantic illuminated off-road buggy with glowing blue flowers in a vast twilight desert.",
+      "slug": "the-bloom-buggy",
       "structure": {
-        "spatialLayout": "An open clearing within a dense forest, with sculptures arranged at varying depths and heights, creating a dynamic and immersive environment."
+        "spatialLayout": "The Bloom Buggy is a dominant, central feature within an expansive, flat desert plane. The scale is immense, with the vehicle and its floral display towering over the landscape. Depth is created by the receding desert floor and distant mountain ranges."
       },
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "center",
-          "description": "A path leading through the illuminated sculptures."
+          "type": "door",
+          "position": "center of the front grille",
+          "description": "A small, circular hatch that serves as the primary entrance."
         }
       ],
       "dominantElements": [
-        "Three large, glowing jellyfish sculptures",
-        "Intricately patterned pyramid structure",
-        "Tall, slender tree trunks",
-        "Artificial colored lighting"
+        "The Bloom Buggy art car",
+        "Giant luminous floral structures",
+        "Vast desert landscape at twilight",
+        "Silhouetted observers"
       ],
       "uniqueIdentifiers": [
-        "Jellyfish-like sculptures made of mesh",
-        "Pyramid with swirling patterns",
-        "Electric green, blue, purple, and yellow tree lighting",
-        "Person observing with glowing rod"
+        "Covered in tiny brilliant blue lights",
+        "Ethereal, glowing blue floral displays",
+        "Rugged off-road buggy chassis",
+        "Desert twilight setting"
       ],
-      "primaryMedia": "media-1765865362340-325fiqcsc"
+      "primaryMedia": "media-1765875438772-mk2gnuedx"
     },
-    "niche-1765865383439-ugngnw9mb": {
-      "id": "niche-1765865383439-ugngnw9mb",
+    "niche-1765876875270-vahj624kc": {
+      "id": "niche-1765876875270-vahj624kc",
       "type": "niche",
-      "name": "Interior of The Ethereal Art Installation",
-      "spaceType": "interior",
+      "name": "The Bloom Buggy Sculpture Area",
+      "spaceType": "exterior",
       "dna": {
-        "looks": "Softly diffused, pulsating light emanates from within large, translucent mesh structures and illuminates the surrounding natural elements, creating an ethereal glow.  Projections and light patterns shift across surfaces.",
-        "colorsAndLighting": "Vibrant cyan, magenta, yellow, and green light sources are embedded within sculptures and projected onto surfaces, creating dynamic, shifting color fields. Light is soft and diffused, with occasional sharper beams.",
-        "atmosphere": "Cool, still air with a gentle hum of ambient sound. The space feels vast and serene, inviting quiet observation.",
-        "materials": "The primary material is fine, semi-translucent mesh forming large sculptural elements.  The pyramid has intricately patterned, perhaps frosted, glass or acrylic surfaces.  Internal light sources glow through these.",
-        "mood": "Wonder, awe, contemplation, surreal tranquility.",
-        "sounds": "Soft hum, distant ambient electronic music, subtle chime-like tones.",
-        "spatialLayout": "Open, cavernous space with large, organically shaped sculptural forms.  Pathways are implied rather than defined, guiding movement around the dominant pieces.",
-        "primary_surfaces": "Semi-translucent, fine mesh; patterned, frosted glass/acrylic.",
-        "secondary_surfaces": "Illuminated natural tree trunks and branches (appearing as if coated in light).",
-        "accent_features": "Shifting holographic projections, pulsing internal lights, subtle atmospheric mist.",
-        "dominant": "Cyan",
-        "secondary": "Magenta",
-        "accent": "Yellow",
-        "ambient": "Ethereal glow",
-        "genre": "Art Installation",
-        "architectural_tone": "Surreal organic light installations within a natural setting.",
-        "cultural_tone": "Contemporary art exhibition, public spectacle for wonder and contemplation.",
-        "palette_bias": "Cyan, Magenta, Yellow, Green",
-        "flora_base": "Illuminated trees",
+        "looks": "A massive, industrial buggy base encrusted with countless tiny, brilliant blue LEDs. Towering over it are giant, ethereal floral forms constructed from pure, solidified blue light, with subtly luminescent leaf-like accents. The overall impression is that of a moving, illuminated art installation.",
+        "colorsAndLighting": "Dominant cool blues from the lights and floral structures, with subtle pastel warm accents appearing as faint glows or reflections. The entire structure emits a bright, cool luminescence.",
+        "atmosphere": "Cool, ethereal, with a constant, gentle hum of energy. A faint scent of ozone or cool night air.",
+        "materials": "Rugged metallic components for the buggy base, pure bioluminescent light for the floral structures.",
+        "mood": "Awe-inspiring, futuristic, whimsical, magical",
+        "sounds": "Low hum, subtle electronic pulse, distant festival chatter",
+        "spatialLayout": "A large, sprawling, roughly cubical area formed by the illuminated flora, anchored by the expansive buggy base.",
+        "primary_surfaces": "Bioluminescent light (floral structures), LED-encrusted metal (buggy)",
+        "secondary_surfaces": "Subtle pastel glowing accents, dark industrial metal",
+        "accent_features": "Intricately formed light petals, glowing leaf-like elements, scattered pastel glows",
+        "dominant": "Brilliant Blue",
+        "secondary": "Soft White Luminescence",
+        "accent": "Subtle Pastel Warm Tones",
+        "ambient": "Cool Blue Luminescence",
+        "genre": null,
+        "architectural_tone": "Futuristic Art Installation on a Rugged Vehicle Base",
+        "cultural_tone": "Festival-goers, desert explorers, admirers of unique illuminated art",
+        "palette_bias": "Cool blues with subtle pastel warm accents",
+        "flora_base": "Bioluminescent floral structures",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765865383438-2uvthqsx2",
-      "description": "An immersive interior space within the art installation, characterized by vibrant artificial lights and large, glowing sculptures that define the experience.",
+      "primaryMedia": "media-1765876875269-leeucle2g",
+      "description": "An expansive outdoor sculpture area situated around 'The Bloom Buggy', featuring a collection of large, glowing cubical art pieces amidst the buggy's own dazzling blue lights and immense bioluminescent floral formations.",
       "structure": {
-        "form": "organic",
-        "roofType": "null",
+        "form": "irregular",
+        "roofType": "open-sky",
         "scale": "large",
         "orientation": "wide",
-        "openings": "none",
-        "openingShape": "none",
+        "openings": "open-passages",
+        "openingShape": "irregular",
         "functionalType": "entertainment",
-        "spatialLayout": "The interior is a vast, open clearing where the glowing sculptures from the exterior are now encountered up close. The artificial lights create a dreamlike, immersive atmosphere, with illuminated trees and large, translucent forms.",
-        "requiredElements": [],
+        "spatialLayout": "The Bloom Buggy itself serves as a colossal base for a vibrant, open-air exhibition space. Immense, glowing floral sculptures of pure blue light rise from its structure, creating a fantastical and illuminated environment for festival-goers and art admirers.",
+        "requiredElements": [
+          "glowing, cubical, big sculpture area"
+        ],
         "navigableElements": [
           {
-            "type": "archway",
-            "position": "front wall",
-            "description": "archway glowing"
-          },
-          {
-            "type": "object",
-            "position": "left wall",
-            "description": "object translucent curtain"
-          },
-          {
-            "type": "object",
-            "position": "right wall",
-            "description": "object holographic display panel"
-          },
-          {
-            "type": "passage",
-            "position": "center",
-            "description": "passage behind central sculpture"
+            "name": "Main Sculpture Platform",
+            "description": "The primary area where the cubical sculptures are displayed, emanating a soft, blue glow."
           }
         ],
         "dominantElements": [
-          "Glowing Mesh Jellyfish",
-          "Patterned Pyramid Sculpture",
-          "Illuminated Trees"
+          "The Bloom Buggy base",
+          "Immense bioluminescent floral sculptures",
+          "The glowing, cubical sculpture area"
         ],
         "uniqueIdentifiers": [
-          "Vibrant artificial light play",
-          "Translucent, glowing sculptures",
-          "Enclosed, dreamlike atmosphere"
+          "Encrusted with tiny blue lights",
+          "Bioluminescent floral structures",
+          "Gigantic, glowing water lily/lotus shapes"
         ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "crystalline seating pods",
-          "pulsing light emitters",
-          "holographic flora",
-          "interactive light streams"
-        ],
-        "suggested": [],
-        "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "archway",
-          "position": "front wall",
-          "description": "archway glowing"
-        },
-        {
-          "type": "object",
-          "position": "left wall",
-          "description": "object translucent curtain"
-        },
-        {
-          "type": "object",
-          "position": "right wall",
-          "description": "object holographic display panel"
-        },
-        {
-          "type": "passage",
-          "position": "center",
-          "description": "passage behind central sculpture"
+          "name": "Main Sculpture Platform",
+          "description": "The primary area where the cubical sculptures are displayed, emanating a soft, blue glow."
         }
       ],
       "dominantElements": [
-        "Glowing Mesh Jellyfish",
-        "Patterned Pyramid Sculpture",
-        "Illuminated Trees"
+        "The Bloom Buggy base",
+        "Immense bioluminescent floral sculptures",
+        "The glowing, cubical sculpture area"
       ],
       "uniqueIdentifiers": [
-        "Vibrant artificial light play",
-        "Translucent, glowing sculptures",
-        "Enclosed, dreamlike atmosphere"
+        "Encrusted with tiny blue lights",
+        "Bioluminescent floral structures",
+        "Gigantic, glowing water lily/lotus shapes"
       ],
-      "searchDesc": "Immersive art installation interior with glowing sculptures and surreal light.",
-      "slug": "interior-of-the-ethereal-art-installation"
+      "searchDesc": "Glowing blue light sculpture on a rugged buggy.",
+      "slug": "exterior-of-the-bloom-buggy"
+    },
+    "loc-1765876959185-22dwdzn38": {
+      "id": "loc-1765876959185-22dwdzn38",
+      "type": "host",
+      "name": "Black Rock Desert",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: expansive, flat, cracked earth with distant mountain ranges and the faint outline of temporary structures. The scale is immense and featureless from this height.",
+        "colorsAndLighting": "Dusty earth tones, muted browns and grays, with the vast, clear sky casting natural light and shadows. Occasional distant specks of artificial light may be visible.",
+        "atmosphere": "Dry, dusty, vast, and open. Extreme temperature fluctuations between day and night.",
+        "materials": "Primarily earth, sand, and mineral deposits.",
+        "mood": "Desolate, ancient, and immense. A canvas for temporary transformation.",
+        "sounds": "Wind, silence, distant natural sounds.",
+        "primary_surfaces": "Cracked earth playa, sand dunes.",
+        "secondary_surfaces": "Distant mountain ranges, sparse scrub vegetation.",
+        "accent_features": "None visible from this scale, the landscape itself is the feature.",
+        "dominant": "Earthy browns",
+        "secondary": "Pale grays",
+        "accent": "Distant blues and purples of mountains",
+        "ambient": "Clear, bright desert sky (day) or deep, star-filled sky (night)",
+        "genre": "Environmental",
+        "architectural_tone": "Natural",
+        "cultural_tone": "Nomadic",
+        "palette_bias": "Monochromatic",
+        "flora_base": "Sparse desert scrub",
+        "fauna_base": "Desert wildlife"
+      },
+      "description": "A vast, ancient dry lakebed in Nevada, renowned for its stark, ethereal beauty and as the site of the legendary Burning Man festival. Its immense, flat expanse transforms into a temporary city of art and self-expression under the desert sky.",
+      "searchDesc": "Vast ancient dry lakebed in Nevada, site of Burning Man festival.",
+      "slug": "black-rock-desert",
+      "structure": {
+        "spatialLayout": "An almost perfectly flat, featureless plain bordered by distant, low-lying mountains."
+      },
+      "primaryMedia": "media-1765877120439-2r6mq9zfb"
+    },
+    "7649ad4b-0832-40ad-a8dc-47dce038631e": {
+      "id": "7649ad4b-0832-40ad-a8dc-47dce038631e",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "03d156aa-c28c-439f-ae0e-30dc9cb0d6c1": {
+      "id": "03d156aa-c28c-439f-ae0e-30dc9cb0d6c1",
+      "type": "location",
+      "name": "The Mayan Warrior",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, multi-segmented structure with flowing, organic lines, evoking a futuristic deep-sea organism or spacecraft. It features dramatic, wing-like protrusions and is covered in a multitude of lights.",
+        "colorsAndLighting": "Vibrant LED lights in iridescent purple, pink, blue, and green pulse across its surface, with bright magenta glowing from window-like panels. Smaller, star-like lights dot the larger fins.",
+        "atmosphere": "The desert air is clear and still, with a moderate temperature transitioning from day to night. A palpable sense of festive energy emanates from the diverse crowd mingling around the illuminated structure.",
+        "materials": "Likely constructed from metal and composite materials, with a sleek, polished finish that reflects the surrounding lights. The surfaces appear robust and designed for outdoor exposure.",
+        "mood": "Awe-inspiring, festive, and futuristic. The Mayan Warrior evokes a sense of wonder and excitement, a beacon of art and technology in the vast desert.",
+        "sounds": "Distant music, crowd chatter, occasional exclamations of awe.",
+        "primary_surfaces": "Sleek metallic hull",
+        "secondary_surfaces": "Illuminated panels, glowing fins",
+        "accent_features": "Star-like LED lights, magenta window glows",
+        "dominant": "Iridescent purple and pink with extensive coverage",
+        "secondary": "Blue and green light accents on body segments",
+        "accent": "Bright magenta on window panels",
+        "ambient": "Twilight, transitioning from deep turquoise to warm orange-pink",
+        "genre": null,
+        "architectural_tone": "Futuristic, bio-mechanical spaceship",
+        "cultural_tone": "Art car for a temporary desert festival, community gathering space",
+        "palette_bias": "Electric blues, vibrant purples, hot pinks, iridescent greens",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A colossal, futuristic art vehicle resembling a deep-sea creature or spaceship, dominating the playa with vibrant LED lights and dramatic fins. EXTERIOR VIEW.",
+      "searchDesc": "The Mayan Warrior art car at Burning Man, a futuristic deep-sea creature with LED lights.",
+      "slug": "the-mayan-warrior",
+      "structure": {
+        "spatialLayout": "The vehicle is a large, dominant mass on a flat, expansive playa, with significant depth created by its fins and the surrounding open space. It's designed to be viewed from all angles."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front",
+          "description": "A glowing magenta panel serves as a potential entrance."
+        }
+      ],
+      "dominantElements": [
+        "The main body of the art vehicle",
+        "Large, curved rear fins",
+        "Front wing-like structure",
+        "The gathered crowd"
+      ],
+      "uniqueIdentifiers": [
+        "Deep-sea creature/spaceship form",
+        "Segmented body with vibrant LEDs",
+        "Dramatic, fin-like extensions",
+        "Twilight desert setting"
+      ],
+      "primaryMedia": "media-1765876973076-9bhcwc3rm"
+    },
+    "niche-1765877030761-tsxj3x95c": {
+      "id": "niche-1765877030761-tsxj3x95c",
+      "type": "niche",
+      "name": "The Whale's Belly",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal, segmented structure with flowing, organic lines, resembling a futuristic deep-sea organism. Dramatic wing-like protrusions extend outwards, and the entire surface is covered in a multitude of dynamic lights.",
+        "colorsAndLighting": "Dominated by electric blues, vibrant purples, and hot pinks, with iridescent greens in its shimmering surfaces. Internal lighting pulses rhythmically, creating a bioluminescent effect.",
+        "atmosphere": "Warm and humid inside, with a gentle, constant hum of energy. A subtle mist might be present near light sources.",
+        "materials": "Sleek, polished composite and metal alloys forming the primary hull. Internal finishes are smooth and seamlessly integrated.",
+        "mood": "Energetic, awe-inspiring, communal, slightly otherworldly",
+        "sounds": "Deep electronic hum, pulsating beats, distant cheers, shimmering echoes",
+        "spatialLayout": "Amorphous, flowing internal spaces with vast open areas and organically shaped chambers.",
+        "primary_surfaces": "Polished iridescent composite",
+        "secondary_surfaces": "Sleek, dark metal alloys",
+        "accent_features": "Integrated LED light veins, translucent panels, shimmering bio-luminescent patches",
+        "dominant": "Electric Blue",
+        "secondary": "Vibrant Purple",
+        "accent": "Hot Pink",
+        "ambient": "Bioluminescent glow",
+        "genre": null,
+        "architectural_tone": "Futuristic, bio-mechanical spaceship",
+        "cultural_tone": "Art car for a temporary desert festival, community gathering space",
+        "palette_bias": "Electric blues, vibrant purples, hot pinks, iridescent greens",
+        "flora_base": "None",
+        "fauna_base": "Whale"
+      },
+      "primaryMedia": "media-1765877030760-zr0r9y33m",
+      "description": "Inside 'The Mayan Warrior', the whale building, is a grand, multi-level interior space that mirrors the organic, flowing form of its exterior. It's designed as a communal gathering and entertainment hub.",
+      "structure": {
+        "form": "organic",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "The interior is a vast, cavernous space with curving, organic walls that undulate like the inside of a living creature. Numerous walkways and platforms are suspended at different levels, creating a multi-tiered environment.",
+        "requiredElements": [],
+        "navigableElements": [
+          {
+            "name": "Main Entrance Archway",
+            "description": "A large, irregular opening in the 'ribs' of the structure, leading into the main body of the whale.",
+            "scale": "large",
+            "form": "organic",
+            "shape": "irregular"
+          }
+        ],
+        "dominantElements": [
+          "Suspended Platforms",
+          "Internal 'Ribs' and 'Bones'",
+          "Lighting Matrix"
+        ],
+        "uniqueIdentifiers": [
+          "Bio-luminescent wall textures",
+          "Sound-reactive lighting"
+        ]
+      },
+      "navigableElements": [
+        {
+          "name": "Main Entrance Archway",
+          "description": "A large, irregular opening in the 'ribs' of the structure, leading into the main body of the whale.",
+          "scale": "large",
+          "form": "organic",
+          "shape": "irregular"
+        }
+      ],
+      "dominantElements": [
+        "Suspended Platforms",
+        "Internal 'Ribs' and 'Bones'",
+        "Lighting Matrix"
+      ],
+      "uniqueIdentifiers": [
+        "Bio-luminescent wall textures",
+        "Sound-reactive lighting"
+      ],
+      "searchDesc": "A massive, bioluminescent whale-shaped structure, art car for a desert festival, glowing with electric blues and purples.",
+      "slug": "null-of-the-mayan-warrior"
     }
   },
   "views": {},
@@ -259,19 +372,42 @@
       ]
     },
     {
-      "id": "loc-1765865346215-l1vrt0u4j",
+      "id": "loc-1765875425382-3c5jonhsu",
       "type": "host",
       "children": [
         {
-          "id": "3431ae00-f20b-4dc0-a9d9-0928ff54d07c",
+          "id": "609614b5-86d6-4830-9a5f-6b4a3af56b39",
           "type": "region",
           "children": [
             {
-              "id": "cfbfc527-37ae-4318-9899-af65b5933022",
+              "id": "c115b226-b8fc-4d89-8dd0-af527cff2ce1",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765865383439-ugngnw9mb",
+                  "id": "niche-1765876875270-vahj624kc",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765876959185-22dwdzn38",
+      "type": "host",
+      "children": [
+        {
+          "id": "7649ad4b-0832-40ad-a8dc-47dce038631e",
+          "type": "region",
+          "children": [
+            {
+              "id": "03d156aa-c28c-439f-ae0e-30dc9cb0d6c1",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765877030761-tsxj3x95c",
                   "type": "niche",
                   "children": []
                 }
@@ -283,6 +419,7 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765865346215-l1vrt0u4j"
+    "loc-1765875425382-3c5jonhsu",
+    "loc-1765876959185-22dwdzn38"
   ]
 }

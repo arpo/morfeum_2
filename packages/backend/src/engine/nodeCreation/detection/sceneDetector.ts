@@ -162,7 +162,7 @@ export function detectSceneType(description: string): ScenePerspective {
   
   // Determine winner
   if (transitionalScore > 0 && transitionalScore >= interiorScore && transitionalScore >= exteriorScore) {
-    return 'transitional';
+    return 'open-air';
   }
   
   if (interiorScore > exteriorScore) {

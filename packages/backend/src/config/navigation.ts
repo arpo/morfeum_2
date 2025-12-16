@@ -77,11 +77,15 @@ export const NAVIGATION_COMMANDS = Object.keys(SLASH_COMMANDS) as (keyof typeof 
 export type NavigationCommand = keyof typeof SLASH_COMMANDS;
 
 // Flags supported by commands
+// Note: --furnish is no longer used (replaced by prompt enhancer with "furnish:" syntax)
 export const COMMAND_FLAGS = {
   VIEW: '--view',
   NOVIEW: '--noview',
   BACKGROUND_TASK: '--bgtask',
-  FURNISH: '--furnish'
+  // Perspective flags for controlling interior/exterior scene generation
+  INTERIOR: '--interior',
+  EXTERIOR: '--exterior',
+  OPEN_AIR: '--open-air'
 } as const;
 
 export type CommandFlag = typeof COMMAND_FLAGS[keyof typeof COMMAND_FLAGS];

@@ -4,7 +4,7 @@
  * Synthesizes user's destination prompt with parent location context
  */
 
-import type { NavigationContext } from '../../../navigation/types';
+import type { NavigationContext, ScenePerspective } from '../../../navigation/types';
 import { mergeDNA } from '../../../hierarchyAnalysis/dnaMerge';
 
 interface DestinationAnalysisInput {
@@ -61,9 +61,10 @@ Analyze the user's destination and determine:
 
 1. **Name**: Extract or create a concise name for this space (e.g., "The Kitchen", "Rooftop Terrace", "Wine Cellar")
 
-2. **Perspective**: Is this an INTERIOR or EXTERIOR space?
-   - INTERIOR: Enclosed spaces like rooms, hallways, cellars, attics
-   - EXTERIOR: Open-air spaces like balconies, terraces, gardens, courtyards, rooftops
+2. **Perspective**: What type of space is this?
+   - INTERIOR: Fully enclosed space with roof/ceiling (room, hall, chamber, cave, vehicle interior)
+   - EXTERIOR: Fully open outdoor space (park path, plaza, sculpture garden, forest clearing)
+   - OPEN-AIR: Semi-enclosed with open sky (balcony, terrace, rooftop, covered patio, pergola)
 
 3. **Space Type**: What type of space is this? (room, outdoor, hallway, cellar, attic, balcony, garden, courtyard, etc.)
 
@@ -85,7 +86,7 @@ IMPORTANT RULES:
 OUTPUT: Return ONLY valid JSON with this exact structure:
 {
   "name": "string - concise space name",
-  "perspective": "interior" | "exterior",
+  "perspective": "interior" | "exterior" | "open-air",
   "spaceType": "string - type of space",
   "isEnclosed": boolean,
   "atmosphereHint": "string - brief atmosphere description",

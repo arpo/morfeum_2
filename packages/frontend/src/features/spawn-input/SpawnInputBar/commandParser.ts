@@ -1,12 +1,14 @@
 import { COMMAND_FLAGS } from '@backend/config/navigation';
 
+export type PerspectiveOverride = 'interior' | 'exterior' | 'open-air' | undefined;
+
 export interface ParsedCommand {
   command: string;
   text: string | undefined;
   flags: {
     createImage: boolean;
     backgroundTask: boolean;
-    furnish: boolean;
+    perspectiveOverride: PerspectiveOverride;
   };
 }
 
@@ -22,7 +24,7 @@ export function parseCommandInput(input: string): ParsedCommand {
   const flags = {
     createImage: true,
     backgroundTask: false,
-    furnish: false
+    perspectiveOverride: undefined as PerspectiveOverride
   };
   
   const textParts: string[] = [];
@@ -35,8 +37,12 @@ export function parseCommandInput(input: string): ParsedCommand {
       flags.createImage = true;
     } else if (part === COMMAND_FLAGS.BACKGROUND_TASK || part === '-bgtask') {
       flags.backgroundTask = true;
-    } else if (part === COMMAND_FLAGS.FURNISH) {
-      flags.furnish = true;
+    } else if (part === COMMAND_FLAGS.INTERIOR || part === '-interior') {
+      flags.perspectiveOverride = 'interior';
+    } else if (part === COMMAND_FLAGS.EXTERIOR || part === '-exterior') {
+      flags.perspectiveOverride = 'exterior';
+    } else if (part === COMMAND_FLAGS.OPEN_AIR || part === '-open-air') {
+      flags.perspectiveOverride = 'open-air';
     } else if (!part.startsWith('--')) {
       textParts.push(part);
     }

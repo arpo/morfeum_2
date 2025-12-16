@@ -66,6 +66,13 @@ export async function runCreateLocationNodePipeline(
     // Get style and perspective from decision or options
     let style = options?.style || decision.style || intent.style || 'default';
     let perspective = options?.perspective || decision.perspective || intent.spaceType || 'interior';
+    
+    // DEBUG: Log perspective resolution
+    console.log(`[PERSPECTIVE DEBUG] Pipeline perspective resolution:`);
+    console.log(`  options?.perspective: ${options?.perspective}`);
+    console.log(`  decision.perspective: ${decision.perspective}`);
+    console.log(`  intent.spaceType: ${intent.spaceType}`);
+    console.log(`  Final perspective: ${perspective}`);
 
     // Only send started event if not a sub-pipeline (parent handles progress)
     if (helper && !options?.isSubPipeline) {
@@ -117,6 +124,14 @@ export async function runCreateLocationNodePipeline(
 
     // Update perspective from analysis
     perspective = structureAnalysis.perspective;
+
+    // CRITICAL: If roofType is 'open-sky', the space is EXTERIOR (not interior)
+    // This prevents "interior shot" + "open-sky" contradiction that causes cave-like images
+    if (structureAnalysis.structure.roofType === 'open-sky' && perspective === 'interior') {
+      console.log(`[Pipeline] Overriding perspective from '${perspective}' to 'exterior' (roofType is open-sky)`);
+      perspective = 'exterior';
+      structureAnalysis.perspective = 'exterior';
+    }
 
     console.log('\n═══════════════════════════════════════════════════════════');
     console.log('✅ SPACE ANALYSIS COMPLETE (Parallel)');

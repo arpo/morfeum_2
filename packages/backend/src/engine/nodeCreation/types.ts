@@ -20,8 +20,11 @@ export type NodeType = 'host' | 'region' | 'location' | 'niche';
 
 /**
  * Scene perspective for image generation
+ * - interior: Fully enclosed space (room, hall, cave)
+ * - exterior: Open outdoor space (park, plaza, garden)
+ * - open-air: Semi-enclosed with open sky (balcony, terrace, rooftop)
  */
-export type ScenePerspective = 'interior' | 'exterior' | 'transitional';
+export type ScenePerspective = 'interior' | 'exterior' | 'open-air';
 
 /**
  * Camera style based on node type

@@ -16,10 +16,18 @@ export type NavigationIntent =
   | 'CREATE_CHARACTER_UNREAL'
   | 'UNKNOWN';
 
+/**
+ * Scene perspective types
+ * - interior: Fully enclosed space (room, hall, cave)
+ * - exterior: Open outdoor space (park, plaza, garden)
+ * - open-air: Semi-enclosed with open sky (balcony, terrace, rooftop, covered patio)
+ */
+export type ScenePerspective = 'interior' | 'exterior' | 'open-air';
+
 export interface IntentResult {
   intent: NavigationIntent;
   target: string | null;
-  spaceType?: 'interior' | 'exterior' | 'unknown' | null;
+  spaceType?: ScenePerspective | 'unknown' | null;
   // Legacy props - kept for backward compatibility, rarely used
   direction?: string | null;
   newRegion?: string | null;
@@ -146,8 +154,8 @@ export interface NavigationAnalysisResult {
 export interface DestinationAnalysis {
   /** Refined name for the destination niche */
   name: string;
-  /** Whether this is an interior or exterior space */
-  perspective: 'interior' | 'exterior';
+  /** Whether this is an interior, exterior, or open-air space */
+  perspective: ScenePerspective;
   /** Type of space (room, outdoor, hallway, cellar, etc.) */
   spaceType: string;
   /** Whether the space is enclosed (affects image generation) */
@@ -209,8 +217,8 @@ export interface Structure {
 export interface StructureAnalysis {
   /** Name for the space */
   name: string;
-  /** Whether this is an interior or exterior space */
-  perspective: 'interior' | 'exterior';
+  /** Whether this is an interior, exterior, or open-air space */
+  perspective: ScenePerspective;
   /** Physical structure data */
   structure: Structure;
   /** Brief description of the space */

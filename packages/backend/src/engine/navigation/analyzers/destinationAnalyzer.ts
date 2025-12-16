@@ -7,7 +7,7 @@
 import * as mzooService from '../../../services/mzoo.service';
 import { AI_MODELS } from '../../../config';
 import { destinationAnalysisPrompt } from '../../generation/prompts/navigation';
-import type { NavigationContext, DestinationAnalysis } from '../types';
+import type { NavigationContext, DestinationAnalysis, ScenePerspective } from '../types';
 
 /**
  * Analyze a destination using LLM to synthesize user prompt with location context
@@ -79,21 +79,20 @@ export async function analyzeDestination(
 
 /**
  * Create a fallback analysis when LLM fails
+ * Note: No string matching - defaults to 'interior' as the safest fallback
+ * The LLM should determine the actual perspective in normal operation
  */
 function createFallbackAnalysis(userPrompt: string): DestinationAnalysis {
-  // Simple heuristic for perspective detection as fallback
-  const lowerPrompt = userPrompt.toLowerCase();
-  const exteriorWords = ['balcony', 'terrace', 'garden', 'patio', 'courtyard', 'rooftop', 'porch', 'veranda', 'deck', 'yard', 'outside', 'exterior', 'outdoor'];
-  const isExterior = exteriorWords.some(word => lowerPrompt.includes(word));
-  
   // Extract a simple name from the prompt
   const name = extractSimpleName(userPrompt);
   
+  // Default to interior as the safest fallback when LLM fails
+  // The structure analyzer will make the final determination
   return {
     name,
-    perspective: isExterior ? 'exterior' : 'interior',
-    spaceType: isExterior ? 'outdoor' : 'room',
-    isEnclosed: !isExterior,
+    perspective: 'interior',
+    spaceType: 'room',
+    isEnclosed: true,
     atmosphereHint: 'ambient atmosphere',
     synthesizedDescription: userPrompt
   };

@@ -1,5 +1,58 @@
 # Active Context
 
+## Recent Changes (2025-12-16)
+
+### Exterior Scenes & Perspective Flags (Dec 16, Latest)
+
+#### Problem Solved: --exterior Flag Not Working
+When using `GO_INSIDE glowing sculpture area --exterior`, niches were still getting `spaceType: "interior"` due to:
+1. **Frontend flag stripping**: `commandParser.ts` was silently dropping any flags starting with `--` that weren't explicitly handled
+2. **Missing flag definitions**: Only `--view`, `--noview`, `--bgtask`, and `--furnish` were defined in `COMMAND_FLAGS`
+3. **No reconstruction**: Frontend was reconstructing `--furnish` flag but not perspective flags
+
+#### Root Cause Investigation
+- Added debug logging to trace perspective flow from frontend → backend → structure analyzer
+- Found `perspectiveOverride: undefined` in frontend parsing (flag was being dropped)
+- Backend `enhancementParser.ts` worked correctly but never received the flags
+- Frontend command parsing had logic gap for perspective flags
+
+#### Fix Implementation
+**Backend Changes:**
+- `config/navigation.ts` - Added perspective flags to `COMMAND_FLAGS`:
+  - `INTERIOR: '--interior'`, `EXTERIOR: '--exterior'`, `OPEN_AIR: '--open-air'`
+- `structureAnalyzer.ts` - Enhanced with perspective override logic:
+  ```typescript
+  if (perspective && perspective !== result.perspective) {
+    result.perspective = perspective;
+    if (perspective === 'exterior' || perspective === 'open-air') {
+      result.structure.roofType = 'open-sky';
+    }
+  }
+  ```
+
+**Frontend Changes:**
+- `commandParser.ts` - Added `perspectiveOverride` to `ParsedCommand.flags` interface and parsing logic
+- `navigationCommands.ts` - Added perspective flag reconstruction for API calls
+
+#### Cleanup: Removed Unused --furnish Flag
+- `--furnish` flag replaced by prompt enhancer with `furnish:` syntax
+- Removed from: `navigationCommands.ts`, `commandParser.ts`, `config/navigation.ts`
+- Added explanatory comments about replacement
+
+#### Result
+Users now have full control over scene perspective:
+```bash
+/GO_INSIDE sculpture area --exterior   # → spaceType: "exterior", roofType: "open-sky"
+/GO_INSIDE reading corner --interior   # → spaceType: "interior"  
+/GOTO courtyard --open-air            # → spaceType: "open-air", roofType: "open-sky"
+```
+
+#### Files Modified
+- `packages/backend/src/config/navigation.ts` - Added perspective flags, removed FURNISH
+- `packages/backend/src/engine/navigation/analyzers/structureAnalyzer.ts` - Perspective override logic
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/commandParser.ts` - Perspective flag parsing
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/navigationCommands.ts` - Flag reconstruction
+
 ## Recent Changes (2025-12-15)
 
 ### DNA & Prompt Optimization (Dec 15, Latest)

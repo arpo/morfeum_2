@@ -192,16 +192,25 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
   const apiKey = (req as any).mzooApiKey;
 
   try {
-    // Parse enhancements from text (navigable elements, furnish, facade)
+    // Parse enhancements from text (navigable elements, furnish, facade, perspective flags)
     const parsed = parseEnhancements(text || '');
     const cleanText = parsed.cleanCommand || undefined;
     
+    // DEBUG: Log parsed perspective override
+    console.log(`[PERSPECTIVE DEBUG] Command: ${command}, Raw text: "${text}"`);
+    console.log(`[PERSPECTIVE DEBUG] Parsed perspectiveOverride: ${parsed.perspectiveOverride}`);
+    
     // Build intent from command with CLEAN text (enhancements removed)
+    // Pass perspectiveOverride if user specified --interior, --exterior, or --open-air
     const intent = buildIntentFromCommand(
       command as NavigationCommand,
       cleanText || null,
-      context.currentNode.type
+      context.currentNode.type,
+      parsed.perspectiveOverride  // User-specified perspective flag
     );
+    
+    // DEBUG: Log intent spaceType
+    console.log(`[PERSPECTIVE DEBUG] intent.spaceType after buildIntentFromCommand: ${intent.spaceType}`);
 
     // Build parsedEnhancements for pipeline
     const parsedEnhancements = (parsed.navigableElements || parsed.furnishing) ? {
@@ -798,10 +807,11 @@ router.post('/create-image', asyncHandler(async (req: Request, res: Response) =>
  * Generate enhancement suggestions (navigable elements, furnishing, facade) for a command
  */
 router.post('/enhance-prompt', asyncHandler(async (req: Request, res: Response) => {
-  const { command, text, nodeId } = req.body as {
+  const { command, text, nodeId, perspectiveOverride } = req.body as {
     command: string;
     text: string;
     nodeId: string;
+    perspectiveOverride?: 'interior' | 'exterior' | 'open-air';
   };
 
   // Validation
@@ -854,10 +864,12 @@ router.post('/enhance-prompt', asyncHandler(async (req: Request, res: Response) 
         name: node.name,
         type: node.type,
         description: node.description,
+        spaceType: node.spaceType,  // Pass spaceType for perspective detection
         dna: node.dna,
         navigableElements: node.navigableElements || node.structure?.navigableElements,
         dominantElements: node.dominantElements || node.structure?.dominantElements
-      }
+      },
+      perspectiveOverride  // Pass user's --exterior, --interior, --open-air flag
     });
 
     if (!result.success) {
@@ -884,9 +896,9 @@ router.post('/enhance-prompt', asyncHandler(async (req: Request, res: Response) 
  * Helper: Detect perspective from node data
  * Uses stored spaceType from LLM analysis (no string matching)
  */
-function detectPerspectiveFromNode(node: any): 'interior' | 'exterior' {
+function detectPerspectiveFromNode(node: any): 'interior' | 'exterior' | 'open-air' {
   // 1. Use stored spaceType if available (from LLM structure analysis)
-  if (node.spaceType === 'interior' || node.spaceType === 'exterior') {
+  if (node.spaceType === 'interior' || node.spaceType === 'exterior' || node.spaceType === 'open-air') {
     return node.spaceType;
   }
   

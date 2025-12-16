@@ -215,6 +215,14 @@ export async function generateImagePromptForNode(
   apiKey: string,
   input: ImagePromptGenerationInput
 ): Promise<string> {
+  // CRITICAL: Override perspective to 'exterior' when roofType is 'open-sky'
+  // This prevents "interior shot" + "open-sky" contradiction that causes cave-like images
+  const isOpenSky = input.structureAnalysis?.structure?.roofType === 'open-sky';
+  if (isOpenSky && input.perspective === 'interior') {
+    console.log(`[ImagePromptGeneration] Overriding perspective from 'interior' to 'exterior' (roofType is open-sky)`);
+    input.perspective = 'exterior';
+  }
+
   const systemPrompt = buildSystemPrompt(input);
 
   const result = await generateText(
@@ -232,7 +240,6 @@ export async function generateImagePromptForNode(
   // CRITICAL: Append open-sky constraint DIRECTLY to FLUX prompt
   // The LLM often ignores the guidance due to overwhelming "cave" references in DNA
   // By appending directly, FLUX receives the instruction regardless of LLM behavior
-  const isOpenSky = input.structureAnalysis?.structure?.roofType === 'open-sky';
   if (isOpenSky) {
     finalPrompt += '\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]';
   }
