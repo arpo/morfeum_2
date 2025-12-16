@@ -25,7 +25,16 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **Exterior Scenes & Perspective Flags (Dec 16, Latest):**
+- **GOTO DNA Resolution Fix & Code Cleanup (Dec 16, Latest):**
+  - **Fixed GOTO creating generic locations**: `/GOTO the playground` now inherits DNA from parent region/host
+  - **Root cause**: `findParentRegionNode()` was extracting DNA from context object which doesn't include full ancestry
+  - **Solution**: Route handler now loads worldsData and pre-resolves cascaded DNA before calling pipeline
+  - **Pass-through region handling**: Correctly uses host DNA when region is pass-through
+  - **Code cleanup**: Extracted `findHostForRegion()` and `addChildToWorldTree()` to `navigationHelpers.ts`
+  - Removed 35+ lines of duplicated tree traversal code
+  - Added clear documentation about DNA resolution architecture
+  - Key files: `navigation.ts`, `createNodePipeline.ts`, `navigationHelpers.ts`
+- **Exterior Scenes & Perspective Flags (Dec 16):**
   - **Fixed `--exterior`, `--interior`, `--open-air` flags**: Users can now explicitly control scene perspective
   - **Root cause**: Frontend was silently dropping unrecognized `--` flags in command parsing
   - **Solution**: Added perspective flags to `COMMAND_FLAGS`, enhanced frontend parsing, added perspective override logic

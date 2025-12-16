@@ -2,7 +2,60 @@
 
 ## Recent Changes (2025-12-16)
 
-### Exterior Scenes & Perspective Flags (Dec 16, Latest)
+### GOTO DNA Resolution Fix & Code Cleanup (Dec 16, Latest)
+
+#### Problem: GOTO Creating Generic Locations
+When using `/GOTO the playground` from a location within "The Ethereal Gardens", the new location got generic styling instead of inheriting the ethereal/crystalline aesthetic.
+
+#### Root Cause
+The `findParentRegionNode()` helper was trying to extract DNA from `context.parentNode` passed from frontend, but the context object doesn't include full ancestry chain with resolved DNA. The region's DNA was often empty or missing.
+
+**Incorrect Pattern:**
+```typescript
+const { parentRegionDNA } = findParentRegionNode(context);
+// Returns empty DNA because context doesn't have full tree
+```
+
+**Correct Pattern (from fundamentals.md):**
+```typescript
+// Load worldsData, then resolve DNA from actual nodes
+const worldsData = await storageService.loadWorlds();
+const regionNode = worldsData.nodes[regionId];
+// For pass-through regions, get host DNA
+const hostNode = findHostForRegion(regionId, worldsData.worldTrees, worldsData.nodes);
+```
+
+#### Solution: Pre-resolve DNA in Route Handler
+Updated `navigation.ts` to resolve DNA before calling pipeline:
+1. **Load worldsData** before running pipeline
+2. **Resolve parent DNA properly**:
+   - GOTO from location → Get region DNA, or host DNA if region is pass-through
+   - GOTO from niche → Get location DNA
+3. **Pass `resolvedParentDNA`** via CreateNodeOptions to pipeline
+4. **Pipeline uses resolved DNA** if available (falls back to context-based resolution)
+
+#### Code Cleanup: Shared Utility Functions
+Extracted duplicated functions to `navigationHelpers.ts`:
+
+**`findHostForRegion(regionId, worldTrees, nodes)`**
+- Traverses worldTrees to find the host node for a given region
+- Used for pass-through regions to get DNA from the host
+
+**`addChildToWorldTree(tree, targetId, childEntry)`**
+- Recursively adds a child entry under a target parent
+- Was previously duplicated in 2 places (GOTO handler, create-node handler)
+
+#### Documentation Added
+- Clear header in `navigationHelpers.ts` explaining DNA resolution architecture
+- Notes that `findParent*Node` returns IDs from context only
+- Documents that proper cascaded DNA resolution happens in route handler
+
+#### Files Modified
+- `packages/backend/src/routes/mzoo/navigation.ts` - Pre-resolve DNA for GOTO, use shared functions
+- `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Accept and use `resolvedParentDNA`
+- `packages/backend/src/engine/navigation/navigationHelpers.ts` - Added shared utility functions with docs
+
+### Exterior Scenes & Perspective Flags (Dec 16)
 
 #### Problem Solved: --exterior Flag Not Working
 When using `GO_INSIDE glowing sculpture area --exterior`, niches were still getting `spaceType: "interior"` due to:
