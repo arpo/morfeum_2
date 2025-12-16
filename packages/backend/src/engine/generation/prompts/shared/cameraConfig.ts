@@ -35,13 +35,13 @@ export const OVERVIEW_SHOT = {
 /**
  * First-person EXTERIOR shot (Location)
  * Ground-level outdoor perspective
- * Camera positioned directly facing entrance for smooth transitions
+ * Camera positioned at distance to capture entire building/structure
  */
 export const LOCATION_SHOT = {
-  shot: 'camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context',
+  shot: 'wide establishing shot from significant distance, entire building or structure fully visible from base to roof/top, main subject occupies 40-60% of frame height with ample environmental context around all sides, camera far enough back that complete architectural form is captured, balanced composition showing full structure within surrounding environment',
   light: 'directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions',
-  lens: '12-24mm ultra-wide lens, elevated perspective, expansive framing',
-  position: 'Camera on approach path, facing entrance from elevated position (25-30° downward angle). Entrance visible within wide environmental context. Ultra-wide perspective captures extensive surroundings while maintaining entrance visibility. Creates alignment for smooth zoom-in transition to interior view.',
+  lens: '10-16mm ultra-wide lens, elevated perspective, expansive framing to capture entire structure',
+  position: 'Camera positioned at distance where entire main subject fits comfortably in frame. Complete building/structure visible from ground to top. Environmental context visible on all sides. Creates establishing shot showing the full location.',
 };
 
 /**
