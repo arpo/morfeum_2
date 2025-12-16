@@ -856,6 +856,1014 @@
       ],
       "searchDesc": "Nighttime chill-out area with palm trees, lanterns, and hammocks under the stars.",
       "slug": "a-chill-out-area-among-the-palm-trees-lamps-night-and-hammocks"
+    },
+    "loc-1765914681256-vla6yt8rg": {
+      "id": "loc-1765914681256-vla6yt8rg",
+      "type": "host",
+      "name": "The Lumina Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: vast, sweeping alien structures forming monumental shapes across the landscape, with a dominant celestial body in the sky and reflective bodies of water.",
+        "colorsAndLighting": "Dominated by pale, stone-like hues, with warm orange glows from the celestial body and horizon, contrasting with dark water.",
+        "atmosphere": "Clear, calm skies with soft orange hues and scattered wispy clouds, suggesting an otherworldly, tranquil atmosphere.",
+        "materials": "Monolithic, pale, stone-like textures on colossal structures; dark, still water.",
+        "mood": "Serene, awe-inspiring, contemplative, evoking cosmic grandeur and insignificance.",
+        "sounds": "Distant, ethereal hums or resonating echoes from the colossal structures; faint celestial whispers.",
+        "primary_surfaces": "The colossal, pale monolithic walls of the archways and structures.",
+        "secondary_surfaces": "The dark, still, reflective bodies of water.",
+        "accent_features": "Subtly embedded circular points of light within the walls; the luminous celestial body.",
+        "dominant": "Pale",
+        "secondary": "Dark",
+        "accent": "Orange",
+        "ambient": "Soft, warm light of dawn or dusk, casting gentle glows.",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Alien Monumentalism",
+        "cultural_tone": "Enigmatic Contemplation",
+        "palette_bias": "Monochromatic Pastel",
+        "flora_base": "None",
+        "fauna_base": "Distant birds"
+      },
+      "description": "A vast, surreal cosmic frontier where colossal, alien structures dominate the landscape. The sky above is a canvas of soft oranges and pale blues, punctuated by a giant, luminous celestial body.",
+      "searchDesc": "Colossal alien architecture on a cosmic frontier with celestial bodies and reflective water.",
+      "slug": "the-lumina-expanse",
+      "structure": {
+        "spatialLayout": "Immense, sweeping forms of architecture integrated with expansive, calm water bodies and open skies."
+      },
+      "primaryMedia": "media-1765914809790-63wrz0l2h"
+    },
+    "40e7d4bd-f925-4ecb-96e1-95999bb96b74": {
+      "id": "40e7d4bd-f925-4ecb-96e1-95999bb96b74",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "43f4cb94-e85c-4962-a495-efa9835a711a": {
+      "id": "43f4cb94-e85c-4962-a495-efa9835a711a",
+      "type": "location",
+      "name": "The Arch of Solara",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A monumental, sweeping archway formed by colossal, pale, textured walls of immense scale. Circular points of light are subtly embedded within these monolithic structures. The scale is awe-inspiring, dwarfing any observers.",
+        "colorsAndLighting": "The scene is bathed in the soft, warm light of dawn or dusk, casting a gentle glow on one side of the arch. Pale blue skies with orange horizons and soft, wispy clouds contrast with the dark water and the reddish-orange celestial body. Shadows highlight the recesses of the structure.",
+        "atmosphere": "The air is clear and still, with a sense of profound calm and quiet. The vastness of the space evokes a feeling of serenity and wonder. Distant birds and the gentle presence of water suggest a stable, tranquil environment.",
+        "materials": "The primary material appears to be a pale, stone-like substance with a distinct, rough texture. The water is dark and still, suggesting depth and calmness. The celestial body is a luminous, gaseous or rocky sphere.",
+        "mood": "Serene and awe-inspiring, evoking a sense of peaceful contemplation and insignificance in the face of cosmic grandeur.",
+        "sounds": "Gentle lapping water, distant bird calls, faint wind",
+        "primary_surfaces": "Colossal, pale, textured walls",
+        "secondary_surfaces": "Dark, reflective water",
+        "accent_features": "Subtly embedded circular points of light",
+        "dominant": "Pale (90%) monolithic walls",
+        "secondary": "Dark water (80% reflective)",
+        "accent": "Reddish-orange celestial body (20% sky)",
+        "ambient": "Soft, warm dawn/dusk light",
+        "genre": null,
+        "architectural_tone": "Monolithic, monumental alien architecture",
+        "cultural_tone": "Unknown civilization, possibly for passage or reverence",
+        "palette_bias": "Pale neutrals, deep blues, soft oranges",
+        "flora_base": "None",
+        "fauna_base": "Small flock of birds"
+      },
+      "description": "A monumental, sweeping archway formed by colossal, pale, textured walls. EXTERIOR VIEW.",
+      "searchDesc": "Colossal pale archway framing a giant red celestial body over reflective water.",
+      "slug": "the-arch-of-solara",
+      "structure": {
+        "spatialLayout": "A vast, open space defined by the immense archway. The depth is emphasized by the distant celestial body and the receding horizon over the water. The pathway along the water creates a defined foreground."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center of the arch",
+          "description": "The grand, open passage beneath the Arch of Solara."
+        }
+      ],
+      "dominantElements": [
+        "The Arch of Solara",
+        "Reddish-orange celestial body",
+        "Calm, dark body of water",
+        "Pale blue sky"
+      ],
+      "uniqueIdentifiers": [
+        "Pale, textured monolithic walls",
+        "Sweeping, curved arch formation",
+        "Giant, reddish-orange moon/planet",
+        "Subtly embedded circular points of light"
+      ],
+      "primaryMedia": "media-1765914692085-6vkh4m60d"
+    },
+    "location-1765914742146-jh8kimhp4": {
+      "id": "location-1765914742146-jh8kimhp4",
+      "type": "location",
+      "name": "The Second Arch",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An immense, unbroken arch of smooth, opalescent material that glows from within, its form defying gravity. The surface is covered in deeply recessed geometric patterns that pulse with faint internal light.",
+        "colorsAndLighting": "Soft, diffused light emanates from the arch and the mist, casting gentle, monochromatic pastel hues of pale lavender, blush pink, and misty blue. Shadows are soft and indistinct.",
+        "atmosphere": "The air is cool and still, carrying a faint, almost imperceptible hum. The mist swirls lazily around the base.",
+        "materials": "Unknown pearlescent composite, dense and cool to the touch.",
+        "mood": "Serene, awe-inspiring, mysterious, ancient.",
+        "sounds": "Faint hum, distant whispers, soft mist settling.",
+        "spatialLayout": "An open, expansive space dominated by the arch, with the mist creating a sense of depth and enclosure.",
+        "primary_surfaces": "Polished, pearlescent composite.",
+        "secondary_surfaces": "Recessed geometric patterns.",
+        "accent_features": "Subtle internal luminescence of the etched patterns.",
+        "dominant": "Pale Lavender",
+        "secondary": "Misty Blue",
+        "accent": "Blush Pink",
+        "ambient": "Soft glow",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Alien Monumentalism",
+        "cultural_tone": "Enigmatic Contemplation",
+        "palette_bias": "Monochromatic Pastel",
+        "flora_base": "None",
+        "fauna_base": "Distant birds"
+      },
+      "primaryMedia": "media-1765914742146-1dtxsnmqm",
+      "description": "The Second Arch is a monumental, irregularly shaped structure with a dominant arched roof, serving as a large-scale civic gateway. Its exterior features open, arched passages and is heavily adorned with intricate alien carvings, rendered in pale neutrals, deep blues, and soft oranges.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "arched",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "spatialLayout": "A colossal, monumental archway, intricately carved with alien motifs, serving as a grand portal or gateway. Its immense scale suggests it is a landmark or entrance to a larger complex.",
+        "requiredElements": [
+          "arch"
+        ],
+        "dominantElements": [
+          "massive arch structure",
+          "alien carvings",
+          "gateway function"
+        ],
+        "uniqueIdentifiers": [
+          "its designation as 'the second Arch'"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "at the base of the arch",
+          "description": "A shimmering, translucent portal that invites passage."
+        }
+      ],
+      "dominantElements": [
+        "massive arch structure",
+        "alien carvings",
+        "gateway function"
+      ],
+      "uniqueIdentifiers": [
+        "its designation as 'the second Arch'"
+      ],
+      "searchDesc": "A colossal, pearlescent archway suspended in pastel mist with shifting patterns.",
+      "slug": "the-second-arch"
+    },
+    "location-1765914797198-9nyd6rjfd": {
+      "id": "location-1765914797198-9nyd6rjfd",
+      "type": "location",
+      "name": "The Mountain Top Viewpoint",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A monumental, alien structure of impossibly smooth, iridescent crystalline material forms the mountain. The observatory is a vast, segmented sphere of polished obsidian and glowing energy, with colossal lenses focusing distant galaxies.",
+        "colorsAndLighting": "A monochromatic pastel palette of soft lavender, pale cyan, and pearlescent white. The primary light source is the diffuse glow of nebulae and distant stars, casting soft, ethereal shadows. The observatory pulses with internal energy in shades of cool blue and subtle violet.",
+        "atmosphere": "Thin, crisp, and cold air. A profound sense of stillness and ancient cosmic energy pervades. Subtle, almost imperceptible gravitic shifts are felt.",
+        "materials": "Polished, monolithic crystal, obsidian, solidified starlight, and interwoven energy filaments.",
+        "mood": "Awe-inspiring, contemplative, serene, infinitely vast, and humbling.",
+        "sounds": "Deep cosmic hum, faint stellar winds, ethereal chimes, distant gravitational resonances.",
+        "spatialLayout": "A soaring, vertical structure culminating in a vast, domed observatory that opens to the sky. Interior spaces are cavernous and impossibly scaled.",
+        "primary_surfaces": "Sheer, polished crystal faces of the mountain, the smooth, curved surfaces of the observatory dome.",
+        "secondary_surfaces": "Textured energy conduits, intricately etched monoliths, reflective lensing elements.",
+        "accent_features": "Subtle patterns of starlight embedded within the crystal, shimmering energy motes, swirling galactic dust visible through the observatory aperture.",
+        "dominant": "Lavender",
+        "secondary": "Pale Cyan",
+        "accent": "Pearlescent White",
+        "ambient": "Ethereal Starlight",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Alien Monumentalism",
+        "cultural_tone": "Enigmatic Contemplation",
+        "palette_bias": "Monochromatic Pastel",
+        "flora_base": "None",
+        "fauna_base": "Distant birds"
+      },
+      "primaryMedia": "media-1765914797197-ojaejkffl",
+      "description": "An awe-inspiring mountain peak, its summit a natural observatory offering a breathtaking viewpoint directly into the vastness of the universe, rendered in the monumental and monochromatic pastel style of Alien Monumentalism.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "spatialLayout": "This location is a vast, naturally formed mountain peak, its summit flattened to create an expansive, unobstructed platform.  It offers an unparalleled, panoramic vista that extends beyond earthly realms.",
+        "requiredElements": [
+          "mountain top",
+          "viewpoint",
+          "universe",
+          "viewpoint over the universe"
+        ],
+        "dominantElements": [
+          "expansive plateau",
+          "celestial panorama",
+          "cosmic expanse"
+        ],
+        "uniqueIdentifiers": [
+          "gravity-defying rock formations",
+          "a subtle energy field",
+          "uninterrupted view of the cosmos"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "base of the peak",
+          "description": "A shimmering, ethereal gateway leading into the mountain's core."
+        }
+      ],
+      "dominantElements": [
+        "expansive plateau",
+        "celestial panorama",
+        "cosmic expanse"
+      ],
+      "uniqueIdentifiers": [
+        "gravity-defying rock formations",
+        "a subtle energy field",
+        "uninterrupted view of the cosmos"
+      ],
+      "searchDesc": "Colossal crystalline peak with an observatory overlooking the universe, alien monumentalism.",
+      "slug": "the-mountain-top-with-the-viewpoint-over-the-universe"
+    },
+    "niche-1765914867977-p45rxzjh9": {
+      "id": "niche-1765914867977-p45rxzjh9",
+      "type": "niche",
+      "name": "The Celestial Observatory Chamber",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal, geode-like mountain of polished crystal and obsidian, crowned by a vast, segmented obsidian sphere observatory with immense lenses.",
+        "colorsAndLighting": "Dominated by deep, lustrous blacks of obsidian, interspersed with the soft, internal glow of bioluminescent flora and the spectral blues and purples of energy streams. Light is often diffused and shimmering, reflecting off polished surfaces.",
+        "atmosphere": "Crisp, thin air with a faint, resonant hum. A gentle, cool breeze carries the scent of ozone and mineral dust. The air exhibits subtle distortions due to atmospheric lensing.",
+        "materials": "Polished obsidian, raw crystalline formations, solidified light (for benches), interwoven energy filaments.",
+        "mood": "Awe-inspiring, contemplative, alien, vast, serene, enigmatic.",
+        "sounds": "Distant cosmic whispers, soft hums of energy, faint echoes from chambers, rustling of bioluminescent flora.",
+        "spatialLayout": "Expansive plateau with towering formations, leading to a central, dominant spherical structure. Interior spaces within the sphere are likely cavernous and segmented.",
+        "primary_surfaces": "Polished obsidian, raw crystalline surfaces.",
+        "secondary_surfaces": "Solidified light, energy filaments.",
+        "accent_features": "Bioluminescent flora patches, atmospheric lensing devices, spectral energy streams.",
+        "dominant": "Obsidian Black",
+        "secondary": "Iridescent Crystal White",
+        "accent": "Spectral Purple",
+        "ambient": "Cool, diffused, shimmering",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Alien Monumentalism",
+        "cultural_tone": "Enigmatic Contemplation",
+        "palette_bias": "Monochromatic Pastel",
+        "flora_base": "Bioluminescent flora",
+        "fauna_base": "Distant birds"
+      },
+      "primaryMedia": "media-1765914867976-799rjw9bs",
+      "description": "Within the heart of the alien mountain, a vast spherical chamber serves as an observatory. Colossal lenses on the interior of the structure focus on distant galaxies, their light amplified and projected. Polished obsidian walls reflect spectral energy streams that weave through the space, while bioluminescent flora and crystalline outcroppings add to the otherworldly atmosphere. The chamber is characterized by its deep, echoing resonance and the contemplative silence that pervades it.",
+      "structure": {
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "none",
+        "functionalType": "civic",
+        "spatialLayout": "A vast, segmented spherical chamber where colossal lenses dominate the view, drawing the gaze outwards. Polished obsidian surfaces reflect the faint glow of internal energy streams, and the air resonates with a deep, contemplative hum.",
+        "requiredElements": [
+          "obsidian rock formations",
+          "bioluminescent flora patches",
+          "crystalline outcroppings",
+          "echoing chambers carved into the plateau",
+          "monumental geometric structures",
+          "spectral energy streams",
+          "atmospheric lensing devices",
+          "smooth, polished obsidian pathways",
+          "benches of solidified light"
+        ],
+        "navigableElements": [
+          {
+            "type": "passage",
+            "position": "center",
+            "description": "passage shimmering  leading down from the plateau"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object stark path continuing east toward the void"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object sheer cliff face to the west offering view of nebulae."
+          }
+        ],
+        "dominantElements": [
+          "Colossal Observation Lenses",
+          "Spectral Energy Streams",
+          "Polished Obsidian Surfaces",
+          "Carved Echoing Chambers"
+        ],
+        "uniqueIdentifiers": [
+          "Iridescent Crystalline Mountain Exterior (viewed through lenses)",
+          "Enigmatic Contemplation Tone",
+          "Luminescent Benches"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "passage shimmering  leading down from the plateau"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object stark path continuing east toward the void"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object sheer cliff face to the west offering view of nebulae."
+        }
+      ],
+      "dominantElements": [
+        "Colossal Observation Lenses",
+        "Spectral Energy Streams",
+        "Polished Obsidian Surfaces",
+        "Carved Echoing Chambers"
+      ],
+      "uniqueIdentifiers": [
+        "Iridescent Crystalline Mountain Exterior (viewed through lenses)",
+        "Enigmatic Contemplation Tone",
+        "Luminescent Benches"
+      ],
+      "searchDesc": "Alien observatory of obsidian and crystal atop a geode-like mountain.",
+      "slug": "null-of-the-mountain-top-viewpoint"
+    },
+    "loc-1765914946951-lywpx06gy": {
+      "id": "loc-1765914946951-lywpx06gy",
+      "type": "host",
+      "name": "The Whispering Peaks",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: Enormous mountain ranges and deep, expansive valleys are visible. Distant geological formations and vast, open spaces dominate the scene. The scale is immense, with no individual structures or details discernible.",
+        "colorsAndLighting": "Bright daylight illuminates the scene from above, casting long shadows across the immense geographical features. The sky is a hazy, bright blue, and distant areas are softened by a light atmospheric haze.",
+        "atmosphere": "The air is clear and vast, with a light haze softening distant mountain ranges, contributing to a sense of immense depth and scale. The mood is one of awe and profound antiquity.",
+        "materials": "Dominant materials are rugged, weathered stone and earth, reflecting the colossal mountainous terrain visible from a vast distance.",
+        "mood": "Awe, reverence, profound antiquity, immense natural power, forgotten rituals.",
+        "sounds": "Distant, echoing winds, the faint rumble of geological shifts, vast silence.",
+        "primary_surfaces": "Mountain slopes, valley floors, vast expanses of exposed rock.",
+        "secondary_surfaces": "Open sky, atmospheric haze, distant snow-capped peaks.",
+        "accent_features": "The colossal scale of the mountain ranges and the depth of the valleys themselves.",
+        "dominant": "Earth-toned stone (dominant, extensive)",
+        "secondary": "Hazy bright blue (sky)",
+        "accent": "Varying shades of brown and gray (mountain textures)",
+        "ambient": "Bright, clear daylight with a hazy atmospheric quality",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient Monumental",
+        "cultural_tone": "Ceremonial, Sacred, Forgotten Rituals",
+        "palette_bias": "Earth Tones",
+        "flora_base": "Sparse alpine vegetation",
+        "fauna_base": "Large, elemental creatures"
+      },
+      "description": "A realm of colossal mountains and ancient, forgotten places. Vast, deep valleys are carved between towering, rugged peaks that stretch into a hazy, bright blue sky. Immense natural power and a profound sense of antiquity permeate this desolate yet majestic landscape.",
+      "searchDesc": "Colossal mountains, ancient valleys, hazy skies, a realm of forgotten power.",
+      "slug": "the-whispering-peaks",
+      "structure": {
+        "spatialLayout": "Vast, deep valleys carved between colossal mountain ranges, with expansive open sky above."
+      },
+      "primaryMedia": "media-1765915211007-j3d6ul6du"
+    },
+    "c21605c3-ed6f-4245-9ea7-ce39dd0ef666": {
+      "id": "c21605c3-ed6f-4245-9ea7-ce39dd0ef666",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "255b3b96-25c8-41a4-a9c9-d818ecbeed47": {
+      "id": "255b3b96-25c8-41a4-a9c9-d818ecbeed47",
+      "type": "location",
+      "name": "The Sundered Arch",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A monumental, weathered stone archway, intentionally broken at its apex, stands as the focal point. Its surfaces are richly decorated with complex, ancient carvings and inlaid patterns. The scale is immense, dwarfing the figures and structures below.",
+        "colorsAndLighting": "The scene is bathed in bright daylight, casting sharp shadows that emphasize the arch's texture and intricate designs. Dominant colors include the earthy tones of the stone, vibrant greens, lustrous golds, and deep reddish-browns of the ornamentation. The sky is a hazy, bright blue.",
+        "atmosphere": "The air is likely thin and crisp at this elevation, with a palpable sense of stillness. A light haze softens distant mountain peaks. The atmosphere is charged with reverence and ancient energy.",
+        "materials": "The arch is constructed from massive, weathered stone blocks, showing signs of age and exposure. The intricate patterns are rendered in what appears to be inlaid colored stone or pigment, showing slight wear but retaining their vibrancy.",
+        "mood": "The mood is one of awe, reverence, and profound antiquity. It evokes a sense of forgotten rituals and immense natural power.",
+        "sounds": "Wind whistling, distant echoes, hushed murmurs of a congregation, faint chimes.",
+        "primary_surfaces": "Weathered stone, intricately carved surfaces",
+        "secondary_surfaces": "Polished gold, inlaid colored stone, reflective water",
+        "accent_features": "Green, gold, and reddish-brown ornamentation, golden-topped staff",
+        "dominant": "Earth-toned stone (dominant, extensive)",
+        "secondary": "Green patterns (secondary, significant coverage on arch)",
+        "accent": "Gold and reddish-brown patterns (accent, highlight details)",
+        "ambient": "Bright daylight with strong contrast",
+        "genre": null,
+        "architectural_tone": "Ancient monumental stonework with intricate ceremonial carvings",
+        "cultural_tone": "A sacred site for ancient rituals, possibly involving celestial observation or connection to spiritual realms",
+        "palette_bias": "Earth tones, deep greens, metallic golds, rich browns",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A massive, weathered stone archway, broken at its peak, adorned with intricate green, gold, and reddish-brown patterns, standing in the center of a grand valley with towering, rugged mountain cliffs and a hazy, bright blue sky. A long, wide staircase ascends the archway, leading to its broken opening. EXTERIOR VIEW.",
+      "searchDesc": "Massive broken arch with intricate patterns in a grand valley, site of a solemn ritual.",
+      "slug": "the-sundered-arch",
+      "structure": {
+        "spatialLayout": "The arch forms a colossal gateway, framing the distant landscape. The valley floor is expansive, leading up to the monumental structure and the ascending staircase, creating a sense of journey and discovery."
+      },
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "ascending the archway",
+          "description": "A long, wide stone staircase leads up to the broken opening of the arch."
+        },
+        {
+          "type": "passage",
+          "position": "through the broken opening at the top of the arch",
+          "description": "The sundered peak of the archway forms a passage."
+        }
+      ],
+      "dominantElements": [
+        "The Sundered Arch",
+        "Towering mountain cliffs",
+        "Grand valley floor",
+        "Tiered circular platform and gathering"
+      ],
+      "uniqueIdentifiers": [
+        "Broken archway peak",
+        "Intricate green, gold, and reddish-brown patterns",
+        "Figure with golden-topped staff at summit",
+        "Ritualistic gathering with reflective pool"
+      ],
+      "primaryMedia": "media-1765914959393-2dmyfea0r"
+    },
+    "location-1765914990918-t9tlkxtyh": {
+      "id": "location-1765914990918-t9tlkxtyh",
+      "type": "location",
+      "name": "The Valley",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast valley floor dotted with colossal, eroded stone structures. Dry riverbed snakes through. Wind-scoured pillars stand sentinel. Vegetation is sparse and hardy.",
+        "colorsAndLighting": "Muted earth tones dominate. Sunlight casts long, soft shadows, illuminating dust motes. Ambient light is diffuse and warm.",
+        "atmosphere": "Still, dry air with a subtle chill. A constant, low murmur of wind is the only movement.",
+        "materials": "Massive, rough-hewn stone blocks, packed earth, weathered bedrock.",
+        "mood": "Contemplative, ancient, solemn, enduring.",
+        "sounds": "Whispering wind, distant rockfall, faint echoing, crunching gravel.",
+        "spatialLayout": "Expansive, open valley floor with a sense of immense depth and enclosure by towering walls.",
+        "primary_surfaces": "Rough stone, compacted earth, weathered rock faces.",
+        "secondary_surfaces": "Gravel beds, sparse scrub, eroded stone fragments.",
+        "accent_features": "Ornate but eroded carvings on pillars, geometric patterns in stonework, a central circular depression.",
+        "dominant": "Ochre",
+        "secondary": "Slate Grey",
+        "accent": "Faded Terracotta",
+        "ambient": "Warm Sunlight",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient Monumental",
+        "cultural_tone": "Ceremonial, Sacred, Forgotten Rituals",
+        "palette_bias": "Earth Tones",
+        "flora_base": "Hardy scrub, drought-resistant grasses",
+        "fauna_base": "Large, elemental creatures"
+      },
+      "primaryMedia": "media-1765914990917-d0dzhjcx1",
+      "description": "The valley floor unfolds before you, a breathtaking expanse of natural grandeur. Ancient trees, their branches draped in emerald moss, guard the approach, while the air hums with the life of this untouched realm. The distant whisper of a river promises further exploration into this deep, green heart of the land.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "spatialLayout": "A sprawling, verdant valley floor, carved by ancient geological forces and now teeming with life. Gentle slopes rise on either side, covered in a dense tapestry of ancient trees and moss-covered stones.",
+        "requiredElements": [],
+        "dominantElements": [
+          "rolling hills",
+          "lush vegetation",
+          "ancient trees",
+          "winding river",
+          "stone outcroppings"
+        ],
+        "uniqueIdentifiers": [
+          "misty atmosphere",
+          "echoing sounds of nature",
+          "sense of deep time"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "at the mouth of the valley",
+          "description": "A wide, natural passage carved by time, leading into the heart of the valley."
+        }
+      ],
+      "dominantElements": [
+        "rolling hills",
+        "lush vegetation",
+        "ancient trees",
+        "winding river",
+        "stone outcroppings"
+      ],
+      "uniqueIdentifiers": [
+        "misty atmosphere",
+        "echoing sounds of nature",
+        "sense of deep time"
+      ],
+      "searchDesc": "Enter a valley of ancient monumental structures, earth tones, and quiet permanence.",
+      "slug": "down-the-valley"
+    },
+    "location-1765915026716-ufbot94dh": {
+      "id": "location-1765915026716-ufbot94dh",
+      "type": "location",
+      "name": "The Big Temple",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Massive stone structure, weathered and ancient, with signs of elaborate carvings and monumental scale.",
+        "colorsAndLighting": "Warm, earthy tones of sandstone and granite. Sunlight streams through high openings, creating dappled light and deep shadows.",
+        "atmosphere": "Still, silent air with a faint scent of dust and aged stone. A sense of immense age and reverence.",
+        "materials": "Hewn sandstone, granite, rough-hewn stone blocks.",
+        "mood": "Solemn, awe-inspiring, mysterious.",
+        "sounds": "Distant wind, echoes, faint rustling, creaking stone.",
+        "spatialLayout": "Vast, open central hall with surrounding chambers and high ceilings.",
+        "primary_surfaces": "Stone walls, stone floors, stone pillars.",
+        "secondary_surfaces": "Carved reliefs, weathered plaster remnants, occasional moss.",
+        "accent_features": "Intricate hieroglyphs, large stone statues, a central, stylized altar.",
+        "dominant": "Sandstone brown",
+        "secondary": "Granite grey",
+        "accent": "Ochre",
+        "ambient": "Warm, dim sunlight",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient Monumental",
+        "cultural_tone": "Ancient civilization",
+        "palette_bias": "Earth Tones",
+        "flora_base": "Moss, lichen",
+        "fauna_base": "Insects, bats"
+      },
+      "primaryMedia": "media-1765915026716-m0fcunxf2",
+      "description": "An immense temple, built in an ancient and monumental style, its imposing structure dominates the landscape. The temple is characterized by its earth-toned materials, massive stone construction, and a grand, awe-inspiring presence.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "spatialLayout": "A sprawling temple complex with multiple courtyards and grand halls, designed to evoke awe and reverence. The architecture is monumental, featuring massive stone structures and intricate carvings.",
+        "requiredElements": [
+          "temple"
+        ],
+        "dominantElements": [
+          "colossal stone pillars",
+          "ornate carvings",
+          "spacious courtyards"
+        ],
+        "uniqueIdentifiers": [
+          "massive scale",
+          "ancient architectural style"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front facade",
+          "description": "The grand entrance, a massive stone archway."
+        }
+      ],
+      "dominantElements": [
+        "colossal stone pillars",
+        "ornate carvings",
+        "spacious courtyards"
+      ],
+      "uniqueIdentifiers": [
+        "massive scale",
+        "ancient architectural style"
+      ],
+      "searchDesc": "Vast ancient temple with colossal pillars, glyphs, and a grand entrance.",
+      "slug": "the-big-temple"
+    },
+    "niche-1765915054308-mi6c13sn2": {
+      "id": "niche-1765915054308-mi6c13sn2",
+      "type": "niche",
+      "name": "Inner Courtyard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive stone structure of weathered sandstone and granite, featuring colossal pillars that define an inner courtyard. Sun-drenched flagstones pave the ground, interspersed with sparse desert vegetation. A central reflecting pool acts as the heart of the space.",
+        "colorsAndLighting": "Bright, direct sunlight on warm earth tones of sandstone and grey granite. The reflecting pool mirrors the sky, offering a cool, silvery contrast. Shadows are sharp and deep.",
+        "atmosphere": "Still, dry desert air. Profound silence punctuated by the faint whisper of wind. A palpable sense of immense age and stillness.",
+        "materials": "Hewn sandstone, granite, rough-hewn stone blocks, water.",
+        "mood": "Contemplative, awe-inspiring, serene, ancient.",
+        "sounds": "Silence, faint wind, distant echoes, water lapping.",
+        "spatialLayout": "Open courtyard, defined by monumental pillars, with a central focus on the reflecting pool.",
+        "primary_surfaces": "Weathered sandstone, sun-baked flagstones, still water.",
+        "secondary_surfaces": "Rough-hewn stone blocks, ancient stone benches.",
+        "accent_features": "Sparse desert scrub, intricate but faded carvings on pillars, the shimmering surface of the reflecting pool.",
+        "dominant": "Warm Sandstone",
+        "secondary": "Stone Grey",
+        "accent": "Silver (water)",
+        "ambient": "Bright Sunlight",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient Monumental",
+        "cultural_tone": "Ancient civilization",
+        "palette_bias": "Earth Tones",
+        "flora_base": "Sparse Desert Vegetation",
+        "fauna_base": "Insects, bats"
+      },
+      "primaryMedia": "media-1765915054307-dfrwoejox",
+      "description": "The inner courtyard of The Big Temple is an expansive, open-air space enclosed by colossal stone pillars. Weathered pathways and flagstones lead through sparse desert vegetation to a central reflecting pool, with ancient stone benches offering places for repose. The entire area is bathed in the warmth of the sun.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "spatialLayout": "This is a vast, open-air courtyard within the temple complex, characterized by colossal stone pillars and weathered pathways under a sun-drenched sky.",
+        "requiredElements": [
+          "colossal stone pillars forming an inner courtyard",
+          "weathered stone pathways",
+          "sparse desert vegetation",
+          "central reflecting pool",
+          "ancient stone benches",
+          "sun-drenched flagstones"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center",
+            "description": "archway grand  leading from the south"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object wide stone steps descending to the east"
+          },
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object open desert plain stretching to the north"
+          }
+        ],
+        "dominantElements": [
+          "Colossal Stone Pillars",
+          "Central Reflecting Pool",
+          "Massive Stone Structure (Parent)"
+        ],
+        "uniqueIdentifiers": [
+          "Central Reflecting Pool",
+          "Colossal Stone Pillars",
+          "Ancient Stone Benches"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "archway grand  leading from the south"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object wide stone steps descending to the east"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object open desert plain stretching to the north"
+        }
+      ],
+      "dominantElements": [
+        "Colossal Stone Pillars",
+        "Central Reflecting Pool",
+        "Massive Stone Structure (Parent)"
+      ],
+      "uniqueIdentifiers": [
+        "Central Reflecting Pool",
+        "Colossal Stone Pillars",
+        "Ancient Stone Benches"
+      ],
+      "searchDesc": "A vast, ancient temple courtyard with a central reflecting pool and colossal pillars.",
+      "slug": "null-of-the-big-temple"
+    },
+    "niche-1765915119717-q7jsi59vg": {
+      "id": "niche-1765915119717-q7jsi59vg",
+      "type": "niche",
+      "name": "The Rooftop Terrace",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A broad, weathered stone platform with worn flagstones and low, robust balustrades carved from immense blocks. Deep shadows are cast by the angled sun. Scattered, hardy plants struggle in ancient, cracked stone planters.",
+        "colorsAndLighting": "Warm, dusty earth tones dominate, with the golden hues of late afternoon sun illuminating worn surfaces.  Shadows are deep and cool, creating contrast. The light feels ancient and filtered.",
+        "atmosphere": "The air is crisp and carries the faint scent of dry stone and distant city smog. A constant, gentle wind whispers across the open space. The temperature is pleasantly mild.",
+        "materials": "Hewn stone, coarse granite, compacted earth, weathered wood (for ancient benches).",
+        "mood": "Contemplative, grand, ancient, serene, slightly melancholic.",
+        "sounds": "Wind, distant city hum, bird calls, creaking stone.",
+        "spatialLayout": "A broad, flat expanse with a commanding central focus and outward-facing perimeters.",
+        "primary_surfaces": "Worn flagstones, rough-hewn stone blocks.",
+        "secondary_surfaces": "Chipped plaster, mossy stone, dry soil.",
+        "accent_features": "Ornate, but weathered, stone carvings on balustrades, ancient inscribed tablets, wind-chimes made of bone or ceramic.",
+        "dominant": "Ochre",
+        "secondary": "Terracotta",
+        "accent": "Verdigris green (from weathered metal accents)",
+        "ambient": "Golden hour light",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient Monumental",
+        "cultural_tone": "Ancient civilization",
+        "palette_bias": "Earth Tones",
+        "flora_base": "Hardy succulents, dry grasses, gnarled shrubs",
+        "fauna_base": "Pigeons, soaring birds of prey"
+      },
+      "primaryMedia": "media-1765915119716-2umxpka9e",
+      "description": "A grand rooftop terrace offering breathtaking views of the surrounding landscape, designed with an open-sky roof and elegant arched passages.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "spatialLayout": "An expansive open-air rooftop space designed for gathering and enjoying panoramic views of the surrounding landscape. It features an open-sky roof with strategically placed archways framing the vistas.",
+        "requiredElements": [
+          "rooftop terrace",
+          "view over the surroundings",
+          "view over the surroudingn"
+        ],
+        "dominantElements": [
+          "open-air space",
+          "panoramic views",
+          "arched openings"
+        ],
+        "uniqueIdentifiers": [
+          "elevated perspective",
+          "open-air design"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "central spiral staircase",
+          "description": "A grand, spiraling stone staircase ascends from the depths below."
+        }
+      ],
+      "dominantElements": [
+        "open-air space",
+        "panoramic views",
+        "arched openings"
+      ],
+      "uniqueIdentifiers": [
+        "elevated perspective",
+        "open-air design"
+      ],
+      "searchDesc": "Ancient stone rooftop terrace with breathtaking city views and weathered charm.",
+      "slug": "the-roof-top-terrase-with-view-over-the-surroudingn"
+    },
+    "location-1765915160067-0or1dby3w": {
+      "id": "location-1765915160067-0or1dby3w",
+      "type": "location",
+      "name": "The Fortress",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Massive, blocky architecture constructed from immense, irregularly shaped stone blocks, weathered by ages of exposure. Features include crenellated battlements, thick defensive walls, and a towering central keep. Scars of ancient battles are visible in the stonework.",
+        "colorsAndLighting": "Dominated by deep, earthy browns, grays, and ochres. The lighting is generally dim and subdued, with shafts of sunlight cutting through openings, creating dramatic contrasts. Shadows are deep and pervasive.",
+        "atmosphere": "Still and heavy, with a cool, dry air. The wind occasionally whistles through arrow slits. A sense of immense age and quiet solitude pervades.",
+        "materials": "Rough-hewn granite, weathered sandstone, iron for reinforcement, and aged oak for doors.",
+        "mood": "Solemn, stoic, powerful, and ancient.",
+        "sounds": "Wind, distant echoes, creaking wood, shifting stones, profound silence.",
+        "spatialLayout": "Solid, imposing, and enclosed. Spaces are vast and open within the walls, but feel protected and contained. Courtyards are wide and functional.",
+        "primary_surfaces": "Unpolished, rough stone walls and floors.",
+        "secondary_surfaces": "Iron banding on gates, wooden doorways, exposed rock faces.",
+        "accent_features": "Moss and lichen growing in crevices, ancient carvings worn by time, strategic arrow slits.",
+        "dominant": "Dark Earth Brown",
+        "secondary": "Stone Gray",
+        "accent": "Verdigris Green",
+        "ambient": "Muted sunlight and deep shadows",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient Monumental",
+        "cultural_tone": "Ceremonial, Sacred, Forgotten Rituals",
+        "palette_bias": "Earth Tones",
+        "flora_base": "lichen, moss, hardy weeds",
+        "fauna_base": "ravens, rodents, insects"
+      },
+      "primaryMedia": "media-1765915160066-167f5hn1t",
+      "description": "The Fortress, a massive structure of ancient monumental stonework, stands as a testament to enduring defense. Its irregular form sprawls across the landscape, its thick, imposing walls studded with narrow, arched slits for observation and defense. Ceremonial carvings, rendered in earth tones and deep greens, adorn its surfaces, hinting at its historical significance beyond mere military function.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "narrow-slits",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "spatialLayout": "A formidable, sprawling stone structure built into a natural landscape. Its walls are thick and imposing, punctuated by numerous defensive emplacements and watchtowers.",
+        "requiredElements": [
+          "fortress"
+        ],
+        "dominantElements": [
+          "stone walls",
+          "watchtowers",
+          "defensive emplacements"
+        ],
+        "uniqueIdentifiers": [
+          "ancient monumental stonework",
+          "intricate ceremonial carvings"
+        ],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "center",
+            "description": "archway grand stone  rear wall"
+          },
+          {
+            "type": "door",
+            "position": "left wall",
+            "description": "door weathered wooden"
+          },
+          {
+            "type": "window",
+            "position": "front wall",
+            "description": "window narrow slit"
+          },
+          {
+            "type": "object",
+            "position": "right wall",
+            "description": "object recessed alcove"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "ancient stone altar carved with celestial symbols",
+          "rows of worn stone benches",
+          "large obsidian scrying bowl on a pedestal",
+          "faded tapestries depicting constellations",
+          "ceremonial braziers with glowing embers"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "archway grand stone  rear wall"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door weathered wooden"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window narrow slit"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object recessed alcove"
+        }
+      ],
+      "dominantElements": [
+        "stone walls",
+        "watchtowers",
+        "defensive emplacements"
+      ],
+      "uniqueIdentifiers": [
+        "ancient monumental stonework",
+        "intricate ceremonial carvings"
+      ],
+      "searchDesc": "An ancient, monumental fortress with earth-toned stone walls and imposing ramparts.",
+      "slug": "the-fortress"
+    },
+    "niche-1765915188838-70mnfndmo": {
+      "id": "niche-1765915188838-70mnfndmo",
+      "type": "niche",
+      "name": "The Fortress Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Immense, irregularly shaped stone blocks forming massive, blocky architecture. Crenellated battlements, thick defensive walls, and a towering central keep. Visible scars of ancient battles.",
+        "colorsAndLighting": "Dominated by deep greys, muted browns, and mossy greens. Light is dim and diffused, filtering through cracks and openings, casting long, deep shadows. Overall a twilight ambiance.",
+        "atmosphere": "Still and cold air, a profound sense of emptiness. No perceptible motion beyond the slow drift of dust motes.",
+        "materials": "Rough-hewn granite, weathered sandstone, iron reinforcement (rusted), aged oak (rotted/splintered).",
+        "mood": "Solemn, melancholic, desolate, awe-inspiring emptiness.",
+        "sounds": "Distant echoes, wind whispers, settling dust, profound silence.",
+        "spatialLayout": "Vast, echoing chambers and imposing, open courtyards. Grand, monumental scale with a sense of oppressive enclosure.",
+        "primary_surfaces": "Massive, rough-hewn stone blocks, bearing the marks of age and conflict.",
+        "secondary_surfaces": "Patches of moss and lichen, areas of crumbled mortar, rusted iron banding, remnants of aged oak timbers.",
+        "accent_features": "Cracks and fissures in the stone, deeply carved (now obscured) ceremonial symbols, skeletal remains of ancient banners, the glint of ancient, unyielding iron.",
+        "dominant": "Stone Grey",
+        "secondary": "Muted Earth Brown",
+        "accent": "Verdigris Green",
+        "ambient": "Dim, diffuse, shadow-laden",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient Monumental",
+        "cultural_tone": "Ceremonial, Sacred, Forgotten Rituals",
+        "palette_bias": "Earth Tones",
+        "flora_base": "Moss, lichen, stubborn weeds in crevices",
+        "fauna_base": "None perceptible, perhaps unseen vermin"
+      },
+      "primaryMedia": "media-1765915188837-7x075z914",
+      "description": "The interior of 'The Fortress' is a sprawling, sacred space, dominated by immense stone architecture and imbued with the atmosphere of forgotten rituals. Massive pillars and vaulted ceilings create a sense of awe, while narrow openings allow only faint light to pierce the gloom.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "narrow-slits",
+        "openingShape": "rectangular",
+        "functionalType": "religious",
+        "spatialLayout": "Vast, cavernous halls echo with the silence of forgotten rituals. Massive stone pillars, carved with faded, intricate symbols, support a high, vaulted ceiling that disappears into shadow, punctuated by narrow slits that allow slivers of dim light to penetrate.",
+        "requiredElements": [],
+        "navigableElements": [
+          {
+            "type": "archway",
+            "position": "front wall",
+            "description": "archway massive stone"
+          },
+          {
+            "type": "door",
+            "position": "left wall",
+            "description": "door smaller stone way"
+          },
+          {
+            "type": "passage",
+            "position": "right wall",
+            "description": "passage collapsed"
+          },
+          {
+            "type": "window",
+            "position": "center",
+            "description": "window high narrow  rear wall"
+          }
+        ],
+        "dominantElements": [
+          "Massive stone pillars",
+          "Vaulted ceiling",
+          "Narrow light slits"
+        ],
+        "uniqueIdentifiers": [
+          "Faded ritualistic carvings",
+          "Echoing silence",
+          "Imense, irregularly shaped stone blocks"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "central stone altar covered in ancient symbols",
+          "rows of stone benches facing the altar",
+          "flickering braziers casting long shadows",
+          "carved relief panels depicting forgotten rituals"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway massive stone"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door smaller stone way"
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "passage collapsed"
+        },
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window high narrow  rear wall"
+        }
+      ],
+      "dominantElements": [
+        "Massive stone pillars",
+        "Vaulted ceiling",
+        "Narrow light slits"
+      ],
+      "uniqueIdentifiers": [
+        "Faded ritualistic carvings",
+        "Echoing silence",
+        "Imense, irregularly shaped stone blocks"
+      ],
+      "searchDesc": "The null essence of a monumental, forgotten fortress, a silent echo of stone and ancient ceremony.",
+      "slug": "null-of-the-fortress"
     }
   },
   "views": {},
@@ -947,10 +1955,94 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765914681256-vla6yt8rg",
+      "type": "host",
+      "children": [
+        {
+          "id": "40e7d4bd-f925-4ecb-96e1-95999bb96b74",
+          "type": "region",
+          "children": [
+            {
+              "id": "43f4cb94-e85c-4962-a495-efa9835a711a",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1765914742146-jh8kimhp4",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1765914797198-9nyd6rjfd",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765914867977-p45rxzjh9",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1765914946951-lywpx06gy",
+      "type": "host",
+      "children": [
+        {
+          "id": "c21605c3-ed6f-4245-9ea7-ce39dd0ef666",
+          "type": "region",
+          "children": [
+            {
+              "id": "255b3b96-25c8-41a4-a9c9-d818ecbeed47",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1765914990918-t9tlkxtyh",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1765915026716-ufbot94dh",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765915054308-mi6c13sn2",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765915119717-q7jsi59vg",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1765915160067-0or1dby3w",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765915188838-70mnfndmo",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1765877487336-nfrgwat5f",
-    "loc-1765914108118-becdkukoo"
+    "loc-1765914108118-becdkukoo",
+    "loc-1765914681256-vla6yt8rg",
+    "loc-1765914946951-lywpx06gy"
   ]
 }
