@@ -86,10 +86,7 @@ OUTPUT JSON:
     "genre": null,
     "architectural_tone": "${DNA_CASCADING_FIELDS.architectural_tone} OR null to inherit",
     "cultural_tone": "${DNA_CASCADING_FIELDS.cultural_tone} OR null to inherit",
-    "materials_base": "${DNA_CASCADING_FIELDS.materials_base} OR null to inherit",
-    "mood_baseline": "${DNA_CASCADING_FIELDS.mood_baseline} OR null to inherit",
     "palette_bias": "${DNA_CASCADING_FIELDS.palette_bias} OR null to inherit",
-    "soundscape_base": "${DNA_CASCADING_FIELDS.soundscape_base} OR null to inherit",
     "flora_base": "${DNA_CASCADING_FIELDS.flora_base} OR null to inherit",
     "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null to inherit"
   }
