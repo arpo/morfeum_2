@@ -1,238 +1,5 @@
 {
   "nodes": {
-    "loc-1765877487336-nfrgwat5f": {
-      "id": "loc-1765877487336-nfrgwat5f",
-      "type": "host",
-      "name": "The Shadowlands",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A vast, desolate expanse of shadowed plains and skeletal forests stretching to a featureless horizon. Distant, jagged mountain ranges pierce the oppressive grey sky like broken teeth. No individual structures are discernible, only the oppressive sweep of the land.",
-        "colorsAndLighting": "Dominated by muted, desaturated tones of deep grey, bruised purple, and faded ochre. Light is weak and diffused, casting long, indistinct shadows.",
-        "atmosphere": "A heavy, suffocating stillness hangs in the air, broken only by the occasional mournful whisper of unseen winds. The air is thick with a palpable sense of melancholy and unease.",
-        "materials": "Predominantly appears as vast, uneven expanses of dark, cracked earth and stunted, skeletal trees. Jagged rock formations are visible in the far distance.",
-        "mood": "Overwhelmingly melancholic, foreboding, and spiritually oppressive. A sense of profound loss and eternal decay pervades the entire realm.",
-        "sounds": "Distant, faint whispers, the sighing of wind through unseen skeletal branches, and a low, pervasive hum of spiritual unrest.",
-        "primary_surfaces": "Vast, cracked earth plains and the skeletal canopy of dying forests.",
-        "secondary_surfaces": "Distant, jagged mountain ranges and stagnant, dark pools of water.",
-        "accent_features": "None discernible from this scale; the land itself is the overwhelming feature.",
-        "dominant": "Dark Grey",
-        "secondary": "Bruised Purple",
-        "accent": "Faded Ochre",
-        "ambient": "Weak, diffused grey light filtering through a perpetual overcast sky.",
-        "genre": "Gothic Horror",
-        "architectural_tone": "Decay and Desolation",
-        "cultural_tone": "Lingering Spirits and Lost Souls",
-        "palette_bias": "Desaturated and Muted",
-        "flora_base": "Skeletal and Dying",
-        "fauna_base": "Unseen and Whispering"
-      },
-      "description": "A realm shrouded in perpetual twilight, where ancient spirits linger and the veil between worlds is thin. Mist perpetually clings to the desolate landscape, obscuring distant, melancholic vistas.",
-      "searchDesc": "Realm of lingering spirits, perpetual twilight, and thin veils.",
-      "slug": "the-shadowlands",
-      "structure": {
-        "spatialLayout": "Expansive and featureless, with a sense of unending desolation. The landscape stretches infinitely towards a blurred, indistinct horizon."
-      },
-      "primaryMedia": "media-1765878842570-s74oa36x3"
-    },
-    "ba5cbb7d-48e1-49f8-a2f6-9436ae13d853": {
-      "id": "ba5cbb7d-48e1-49f8-a2f6-9436ae13d853",
-      "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "22d40676-13ed-4c73-85cf-bd731b47163b": {
-      "id": "22d40676-13ed-4c73-85cf-bd731b47163b",
-      "type": "location",
-      "name": "Blackwood Manor",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A towering, three-story Victorian structure with steeply pitched gables and ornate, but decaying, gingerbread trim. The overall shape is rectangular with protruding bay windows and a prominent central gable. Scale is imposing and designed to intimidate.",
-        "colorsAndLighting": "Predominantly muted greys and browns of weathered wood and stone, punctuated by the stark black of broken glass. Light struggles to penetrate the dense foliage and shattered panes, creating deep shadows.",
-        "atmosphere": "The air hangs heavy and still, carrying the damp scent of decay and wet earth. A palpable chill emanates from the manor, even on a clear day. A faint, almost imperceptible breeze rustles the dead leaves.",
-        "materials": "Primarily dark, weathered wood siding, crumbling brick foundations, and rusted ironwork. Textures are rough, splintered, and slick with moss and dampness.",
-        "mood": "The manor evokes a sense of dread, melancholy, and foreboding. It feels like a place where secrets fester and time has long since stopped.",
-        "sounds": "Creaking wood, rustling leaves, distant wind, faint echoes",
-        "primary_surfaces": "weathered wooden siding, cracked brick walls, shattered glass panes",
-        "secondary_surfaces": "overgrown ivy, decaying shingles, rusted iron railings",
-        "accent_features": "ornate gingerbread trim, a gargoyle, a rusted weather vane",
-        "dominant": "dark grey (structure)",
-        "secondary": "muted brown (foliage, wood)",
-        "accent": "black (broken glass), verdigris (iron)",
-        "ambient": "dim, shadowy, twilight",
-        "genre": null,
-        "architectural_tone": "dilapidated Victorian Gothic with elements of decay",
-        "cultural_tone": "Abandoned residence, once belonging to wealthy but now forgotten inhabitants.",
-        "palette_bias": "cool desaturated tones, dark earth tones",
-        "flora_base": "gnarled trees, dead bushes, thick ivy",
-        "fauna_base": "None"
-      },
-      "description": "An imposing, dilapidated Victorian mansion with broken windows and overgrown gardens. EXTERIOR VIEW.",
-      "searchDesc": "An imposing, dilapidated Victorian mansion with broken windows and overgrown gardens.",
-      "slug": "blackwood-manor",
-      "structure": {
-        "spatialLayout": "The facade presents a deep, shadowed entry framed by imposing walls. The interior space is implied to be vast and echoing, with a sense of great depth behind the broken facade."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center of the facade",
-          "description": "a large, imposing oak door, slightly ajar"
-        }
-      ],
-      "dominantElements": [
-        "the mansion's imposing, dilapidated facade",
-        "shattered window panes",
-        "skeletal, overgrown garden foliage",
-        "a sagging, moss-covered roofline"
-      ],
-      "uniqueIdentifiers": [
-        "a single, ornate, but rusted weather vane",
-        "ivy that has completely consumed one side of the house",
-        "a stone gargoyle perched precariously on a corner",
-        "a single, flickering gas lamp near the entrance"
-      ],
-      "primaryMedia": "media-1765877504838-q6bjfkbxc"
-    },
-    "niche-1765880649357-4fl80qgg0": {
-      "id": "niche-1765880649357-4fl80qgg0",
-      "type": "niche",
-      "name": "Blackwood Manor Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "High ceilings, grand but decaying rooms, heavy velvet curtains, dusty furniture draped in white sheets, cobweb-laden chandeliers, dark wood paneling, ornate but chipped plasterwork.",
-        "colorsAndLighting": "Dim, cool, desaturated tones dominate. Weak shafts of sunlight pierce through grimy windows, illuminating dust motes. Shadows are deep and pervasive. The palette leans towards muted greys, deep blues, and faded greens, with occasional hints of tarnished gold.",
-        "atmosphere": "Stagnant, cool air thick with the scent of dust, mildew, and decaying fabric. A palpable stillness broken only by the house's groans and creaks. A sense of oppressive quiet.",
-        "materials": "Dark, aged wood paneling, peeling floral wallpaper, threadbare velvet upholstery, tarnished brass fixtures, brittle lace, chipped porcelain, crumbling plaster, thick dust.",
-        "mood": "Melancholy, oppressive, haunting, forgotten, opulent decay.",
-        "sounds": "Creaking floorboards, distant wind whistling, faint scuttling, settling house sounds.",
-        "spatialLayout": "Grand, echoing spaces with high ceilings. Long, dark corridors. Rooms that once bespoke wealth are now decaying mausoleums.",
-        "primary_surfaces": "Dark wood paneling, peeling wallpaper, plaster walls.",
-        "secondary_surfaces": "Threadbare carpets, decaying velvet drapes, tarnished brass, grimy glass.",
-        "accent_features": "Cobweb-draped chandeliers, chipped porcelain figurines, tarnished silver frames holding faded portraits, dusty tomes in the library.",
-        "dominant": "Deep, desaturated grey-blue",
-        "secondary": "Muted, desaturated forest green",
-        "accent": "Tarnished gold",
-        "ambient": "Cool and dim",
-        "genre": null,
-        "architectural_tone": "dilapidated Victorian Gothic with elements of decay",
-        "cultural_tone": "Abandoned residence, once belonging to wealthy but now forgotten inhabitants.",
-        "palette_bias": "cool desaturated tones, dark earth tones",
-        "flora_base": "gnarled trees, dead bushes, thick ivy",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765880649357-3h5huu4jr",
-      "description": "The interior of Blackwood Manor is a chilling testament to its abandonment, a place where grandeur has succumbed to decay and silence.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "vaulted",
-        "scale": "large",
-        "orientation": "horizontal",
-        "openings": "minimal",
-        "openingShape": "arched",
-        "functionalType": "residential",
-        "spatialLayout": "The interior of Blackwood Manor is a labyrinth of grand, yet decaying, halls and rooms. Dust motes dance in the scarce light filtering through grimy, arched windows, illuminating peeling wallpaper and the skeletal remains of opulent furnishings.",
-        "requiredElements": [],
-        "navigableElements": [
-          {
-            "name": "Grand Foyer",
-            "description": "The cavernous entrance hall, dominated by a sweeping, dilapidated staircase.",
-            "entryPoint": true,
-            "uniqueIdentifiers": [
-              "grand staircase",
-              "dusty chandeliers"
-            ]
-          },
-          {
-            "name": "Drawing Room",
-            "description": "A once-elegant room, now filled with shrouded furniture.",
-            "uniqueIdentifiers": [
-              "rotting velvet upholstery",
-              "tarnished gilt frames"
-            ]
-          },
-          {
-            "name": "Library",
-            "description": "Shelves of mildewed books line the walls, a testament to lost knowledge.",
-            "uniqueIdentifiers": [
-              "decaying leather-bound books",
-              "cobweb-laden shelves"
-            ]
-          },
-          {
-            "name": "Ballroom",
-            "description": "A vast, empty space with a warped wooden floor, echoing with past revelries.",
-            "uniqueIdentifiers": [
-              "cracked plaster",
-              "faded frescoes"
-            ]
-          }
-        ],
-        "dominantElements": [
-          "Grand Foyer",
-          "Dilapidated Grand Staircase",
-          "Empty Ballroom",
-          "Dusty Library"
-        ],
-        "uniqueIdentifiers": [
-          "peeling wallpaper",
-          "shadows",
-          "smell of decay"
-        ]
-      },
-      "navigableElements": [
-        {
-          "name": "Grand Foyer",
-          "description": "The cavernous entrance hall, dominated by a sweeping, dilapidated staircase.",
-          "entryPoint": true,
-          "uniqueIdentifiers": [
-            "grand staircase",
-            "dusty chandeliers"
-          ]
-        },
-        {
-          "name": "Drawing Room",
-          "description": "A once-elegant room, now filled with shrouded furniture.",
-          "uniqueIdentifiers": [
-            "rotting velvet upholstery",
-            "tarnished gilt frames"
-          ]
-        },
-        {
-          "name": "Library",
-          "description": "Shelves of mildewed books line the walls, a testament to lost knowledge.",
-          "uniqueIdentifiers": [
-            "decaying leather-bound books",
-            "cobweb-laden shelves"
-          ]
-        },
-        {
-          "name": "Ballroom",
-          "description": "A vast, empty space with a warped wooden floor, echoing with past revelries.",
-          "uniqueIdentifiers": [
-            "cracked plaster",
-            "faded frescoes"
-          ]
-        }
-      ],
-      "dominantElements": [
-        "Grand Foyer",
-        "Dilapidated Grand Staircase",
-        "Empty Ballroom",
-        "Dusty Library"
-      ],
-      "uniqueIdentifiers": [
-        "peeling wallpaper",
-        "shadows",
-        "smell of decay"
-      ],
-      "searchDesc": "Decaying Victorian interiors of Blackwood Manor, a forgotten estate.",
-      "slug": "interior-of-blackwood-manor"
-    },
     "loc-1765880738190-88rku824g": {
       "id": "loc-1765880738190-88rku824g",
       "type": "host",
@@ -278,726 +45,6 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "032490d5-45f1-4c1f-a9eb-ea7d753b8cd8": {
-      "id": "032490d5-45f1-4c1f-a9eb-ea7d753b8cd8",
-      "type": "location",
-      "name": "The Skyward Temple",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A monumental, multi-tiered stone temple dominates the landscape. Its upper section seamlessly blends into a natural, moss-covered rock formation, while the lower tiers are constructed from rough-hewn blocks. A wide, stepped stone staircase ascends to a central rectangular doorway, flanked by tall, slender monoliths.",
-        "colorsAndLighting": "The scene is bathed in bright daylight, with clear, light blue skies. Green and yellow mosses add vibrant color to the stone, contrasted by the grey and brown of the weathered blocks. The floating objects emit a faint, ethereal glow.",
-        "atmosphere": "The air is crisp and clear, indicative of a high mountain environment. A tranquil and serene atmosphere pervades, undisturbed by wind or significant weather, creating a sense of timelessness.",
-        "materials": "The primary materials are weathered stone blocks and natural rock. Moss covers extensive surfaces, adding a soft, organic texture. Ancient symbols are deeply etched into monoliths and the facade.",
-        "mood": "A profound sense of ancient mystery and serene tranquility emanates from the Skyward Temple, evoking awe and contemplation.",
-        "sounds": "Distant wind, occasional bird calls, faint stone erosion.",
-        "primary_surfaces": "Weathered stone blocks, rough-hewn stone, natural rock formations",
-        "secondary_surfaces": "Moss, cracked flagstones, etched symbols",
-        "accent_features": "Intricate circular and geometric carvings, faint glowing tips of floating objects, slender stone monoliths",
-        "dominant": "Grey (stone structure, 70%)",
-        "secondary": "Green (moss, 20%)",
-        "accent": "Yellow (moss accents, 5%), Faint light blue/white (sky orbs, 5%)",
-        "ambient": "Bright daylight",
-        "genre": null,
-        "architectural_tone": "Ancient monolithic with naturalistic integration",
-        "cultural_tone": "Ancient religious or ceremonial site, possibly for sky worship or observation.",
-        "palette_bias": "Earth tones with vibrant green accents",
-        "flora_base": "Moss, scattered grass tufts",
-        "fauna_base": "None"
-      },
-      "description": "A massive, multi-tiered stone temple or monument nestled in a serene mountainous landscape. The uppermost section resembles a moss-covered rock formation, while the lower part is constructed of rough-hewn blocks with a triangular facade adorned with intricate carvings. A wide, stepped stone staircase leads to a central, rectangular doorway. Tall, slender stone monoliths stand on either side of its foundation. In the sky above, two large, tear-drop shaped stone-like objects float. Distant, hazy mountains frame the background. EXTERIOR VIEW.",
-      "searchDesc": "Ancient multi-tiered stone temple with mossy summit and floating sky orbs.",
-      "slug": "the-skyward-temple",
-      "structure": {
-        "spatialLayout": "The temple is a vertical structure with distinct tiers, creating a commanding presence. The surrounding landscape is open with distant mountain ranges adding depth."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "central, rectangular, slightly ajar",
-          "description": "The main entrance to the temple."
-        },
-        {
-          "type": "stairs",
-          "position": "leading to the central doorway",
-          "description": "A wide, stepped stone staircase."
-        }
-      ],
-      "dominantElements": [
-        "Multi-tiered stone temple",
-        "Moss-covered rock formation summit",
-        "Stepped stone staircase",
-        "Floating tear-drop shaped stone objects"
-      ],
-      "uniqueIdentifiers": [
-        "Moss-covered natural rock summit",
-        "Triangular facade with circular/geometric carvings",
-        "Floating tear-drop shaped stone objects",
-        "Tall, slender stone monoliths with ancient symbols"
-      ],
-      "primaryMedia": "media-1765880753276-2nozblnwv"
-    },
-    "niche-1765880813387-jol3ehgtq": {
-      "id": "niche-1765880813387-jol3ehgtq",
-      "type": "niche",
-      "name": "Exterior Elements: Moss-covered",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Vast, echoing stone chamber with high vaulted ceilings. Walls are of rough-hewn, yet smooth and dry stone, marked by intricate, deeply etched murals depicting celestial patterns and astronomical events. Shafts of diffused sunlight descend from unseen sources above.",
-        "colorsAndLighting": "Dominant earth tones (grays, browns) from stone, accented by the deep blues and golds of the celestial murals. Lighting is dramatic, with bright shafts of light contrasting with deep shadows, creating an ethereal, awe-inspiring effect.",
-        "atmosphere": "Still, cool, dry air with a faint scent of ancient dust and sacred incense. The vastness of the space creates a palpable sense of reverence and quiet contemplation.",
-        "materials": "Primarily rough-hewn stone blocks (interior facade), with areas of smoother, polished stone around the altar and seating areas. Accents of inlaid precious metals (gold, silver) and semi-precious stones within the murals.",
-        "mood": "Reverent, awe-inspiring, contemplative, ancient, celestial",
-        "sounds": "Echoing whispers, soft wind drafts, distant chimes (imagined)",
-        "spatialLayout": "A large, open central chamber with a high, vaulted ceiling, tapering towards the main entrance. Smaller, darker passages may branch off.",
-        "primary_surfaces": "Stone walls and ceiling",
-        "secondary_surfaces": "Polished stone floor, inlaid metal and stone within murals",
-        "accent_features": "Deeply etched celestial murals, ancient stone altar, shafts of light",
-        "dominant": "Stone Grey",
-        "secondary": "Celestial Blue",
-        "accent": "Ethereal Gold",
-        "ambient": "Diffused Sunlight",
-        "genre": "Ancient Mysticism",
-        "architectural_tone": "Ancient monolithic with naturalistic integration",
-        "cultural_tone": "Ancient religious or ceremonial site, possibly for sky worship or observation.",
-        "palette_bias": "Earth tones with celestial accents",
-        "flora_base": "Moss, scattered grass tufts",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765880813386-orerdd0dz",
-      "description": "exterior elements: moss-covered stone steps, ancient celestial observation platforms, scattered weathered stone markers, hardy mountain wildflowers, clearings with smooth, worn stone seating",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "functionalType": "residential",
-        "spatialLayout": "A medium interior space.",
-        "requiredElements": [
-          "smooth"
-        ],
-        "dominantElements": [
-          "Exterior Elements: Moss-covered"
-        ],
-        "uniqueIdentifiers": [
-          "smooth"
-        ],
-        "navigableElements": [
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object pathway leading down the mountain to the south"
-          },
-          {
-            "type": "stairs",
-            "position": "center",
-            "description": "stairs winding stone  east toward a valley clearing"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object open sky directly overhead"
-          }
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object pathway leading down the mountain to the south"
-        },
-        {
-          "type": "stairs",
-          "position": "center",
-          "description": "stairs winding stone  east toward a valley clearing"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object open sky directly overhead"
-        }
-      ],
-      "dominantElements": [
-        "Exterior Elements: Moss-covered"
-      ],
-      "uniqueIdentifiers": [
-        "smooth"
-      ],
-      "searchDesc": "Vast stone interior with celestial murals and shafts of light, echoing with ancient whispers.",
-      "slug": "interior-of-the-skyward-temple"
-    },
-    "niche-1765880842677-7ufvra32c": {
-      "id": "niche-1765880842677-7ufvra32c",
-      "type": "niche",
-      "name": "The Astrolabe Chamber",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "An immense cavernous space dominated by colossal, complex machinery humming with power. Ancient monolithic stone walls are intricately carved with patterns resembling advanced circuitry, some of which glow with internal light.",
-        "colorsAndLighting": "Dim, utilitarian lighting emanates from the machinery itself and faint glowing lines on the walls. Dominant colors are dark, weathered stone, dull metallic grays, and the vibrant, electric blue of glowing conduits and indicators. Shadows are deep and pervasive.",
-        "atmosphere": "A palpable hum of contained power. The air is cool and carries the faint scent of ozone and lubricant. Subtle vibrations can be felt through the floor.",
-        "materials": "Primary materials are rough-hewn, ancient stone, and aged, patinated metal. Exposed wiring, glowing conduits, and polished brass accents.",
-        "mood": "Awe-inspiring, powerful, slightly foreboding, and anciently technological.",
-        "sounds": "Deep hum, clicks, whirs, occasional electrical crackles, rhythmic pulsations.",
-        "spatialLayout": "Vast and cavernous, with multiple levels and platforms occupied by intricate machinery. Open central areas are interspersed with dense arrays of equipment.",
-        "primary_surfaces": "weathered stone blocks",
-        "secondary_surfaces": "patinated metal plating, glowing conduits",
-        "accent_features": "etched circuit patterns, flashing indicator lights, holographic projections",
-        "dominant": "dark stone",
-        "secondary": "dull metal",
-        "accent": "electric blue",
-        "ambient": "utilitarian, low",
-        "genre": "sci-fi",
-        "architectural_tone": "Ancient monolithic with industrial integration",
-        "cultural_tone": "Ancient custodians of advanced technology",
-        "palette_bias": "earth tones with electric blue and metallic accents",
-        "flora_base": "Moss, scattered grass tufts",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765880842676-tiort2qho",
-      "description": "An industrial chamber dedicated to celestial observation and calculation, featuring intricate machinery integrated into the ancient stone structure of the Skyward Temple.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "vaulted",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "minimal",
-        "openingShape": "arched",
-        "functionalType": "industrial",
-        "spatialLayout": "This vast, stone chamber echoes with the hum of unseen machinery. Large, metal contraptions, some resembling astrolabes and celestial tracking devices, are integrated into the walls and floor, hinting at their operational purpose.",
-        "requiredElements": [
-          "machine room"
-        ],
-        "navigableElements": [
-          {
-            "type": "archway",
-            "position": "front wall",
-            "description": "archway moss-covered stone"
-          },
-          {
-            "type": "door",
-            "position": "right wall",
-            "description": "door heavy stone slab"
-          },
-          {
-            "type": "passage",
-            "position": "left wall",
-            "description": "passage narrow"
-          },
-          {
-            "type": "object",
-            "position": "back wall",
-            "description": "object circular aperture"
-          }
-        ],
-        "dominantElements": [
-          "Central Astrolabe Mechanism",
-          "Wall-Mounted Consoles",
-          "Floor Mechanisms",
-          "Large Arched Doorway"
-        ],
-        "uniqueIdentifiers": [
-          "celestial machinery",
-          "etched stone murals (visible on some wall sections)",
-          "ambient mechanical hum"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "ancient celestial charting device with glowing orbs",
-          "mossy stone pedestals with intricate carvings",
-          "ancient energy conduits resembling gnarled roots",
-          "whispering wind chimes made of carved bone."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "front wall",
-          "description": "archway moss-covered stone"
-        },
-        {
-          "type": "door",
-          "position": "right wall",
-          "description": "door heavy stone slab"
-        },
-        {
-          "type": "passage",
-          "position": "left wall",
-          "description": "passage narrow"
-        },
-        {
-          "type": "object",
-          "position": "back wall",
-          "description": "object circular aperture"
-        }
-      ],
-      "dominantElements": [
-        "Central Astrolabe Mechanism",
-        "Wall-Mounted Consoles",
-        "Floor Mechanisms",
-        "Large Arched Doorway"
-      ],
-      "uniqueIdentifiers": [
-        "celestial machinery",
-        "etched stone murals (visible on some wall sections)",
-        "ambient mechanical hum"
-      ],
-      "searchDesc": "Ancient stone temple transformed into a humming, circuit-etched machine room.",
-      "slug": "machine-room"
-    },
-    "niche-1765881136477-lc7yijhnq": {
-      "id": "niche-1765881136477-lc7yijhnq",
-      "type": "niche",
-      "name": "Blackwood Manor Interior Basement",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A claustrophobic and cavernous space with low, arched ceilings and uneven stone walls. Puddles of stagnant water reflect the dim light. Cobwebs hang like tattered curtains from every surface.",
-        "colorsAndLighting": "Dim, flickering, and cool. The primary light source is an unseen, weak bulb casting long, distorted shadows. Colors are desaturated greys, deep browns, and mossy greens.",
-        "atmosphere": "Cold, heavy, and still. The air is thick with the smell of damp earth, mildew, and dust. It feels undisturbed and ancient.",
-        "materials": "Rough-hewn, damp stone blocks, packed earth, rusted metal, thick cobwebs, decaying wood.",
-        "mood": "Oppressive, forgotten, and unsettling. A sense of deep, undisturbed decay and isolation.",
-        "sounds": "Dripping water, distant scurrying, low hum of unseen machinery, creaking wood overhead.",
-        "spatialLayout": "A series of interconnected, roughly hewn chambers, some appearing like natural caverns, others crudely walled. Low ceilings and uneven floors create a disorienting, subterranean feel.",
-        "primary_surfaces": "Damp, moss-covered stone block walls and floor.",
-        "secondary_surfaces": "Packed earth, rusted iron pipes, rotting wooden shelves, thick cobwebs.",
-        "accent_features": "Water stains creating abstract patterns on the stone, a large, archaic furnace, a single, rusted barrel.",
-        "dominant": "dark grey",
-        "secondary": "damp brown",
-        "accent": "verdigris green",
-        "ambient": "cool dimness",
-        "genre": "Gothic",
-        "architectural_tone": "primitive subterranean",
-        "cultural_tone": "forgotten storage, hidden refuge",
-        "palette_bias": "cool desaturated tones",
-        "flora_base": "mildew, moss",
-        "fauna_base": "insects, rodents"
-      },
-      "primaryMedia": "media-1765881136476-qpxa2rmog",
-      "description": "The basement of Blackwood Manor is a damp, forgotten space, characterized by its rough stone walls, a low, vaulted ceiling, and minimal light. The primary navigable element is a worn, wooden staircase leading upwards.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "vaulted",
-        "scale": "medium",
-        "orientation": "horizontal",
-        "openings": "minimal",
-        "openingShape": "arched",
-        "functionalType": "residential",
-        "spatialLayout": "This is a dark, musty basement with rough stone walls and a low, vaulted ceiling. The air is damp and carries the faint scent of earth and decay. Sparse light filters in from a single, small, arched opening.",
-        "requiredElements": [
-          "basement"
-        ],
-        "navigableElements": [
-          {
-            "type": "door",
-            "position": "back wall",
-            "description": "door cobweb-draped wooden"
-          },
-          {
-            "type": "stairs",
-            "position": "front wall",
-            "description": "stairs crumbling stone  leading up"
-          },
-          {
-            "type": "opening",
-            "position": "right wall",
-            "description": "opening narrow crawlspace"
-          },
-          {
-            "type": "window",
-            "position": "left wall",
-            "description": "window boarded-up"
-          }
-        ],
-        "dominantElements": [
-          "rough stone walls",
-          "vaulted ceiling",
-          "small arched opening"
-        ],
-        "uniqueIdentifiers": [
-          "damp air",
-          "scent of earth",
-          "sparse light"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "forgotten crates and barrels",
-          "dusty shelves filled with glass jars",
-          "rusted tools",
-          "a single flickering oil lamp on a barrel",
-          "cobweb-covered workbench with decaying scientific equipment."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "back wall",
-          "description": "door cobweb-draped wooden"
-        },
-        {
-          "type": "stairs",
-          "position": "front wall",
-          "description": "stairs crumbling stone  leading up"
-        },
-        {
-          "type": "opening",
-          "position": "right wall",
-          "description": "opening narrow crawlspace"
-        },
-        {
-          "type": "window",
-          "position": "left wall",
-          "description": "window boarded-up"
-        }
-      ],
-      "dominantElements": [
-        "rough stone walls",
-        "vaulted ceiling",
-        "small arched opening"
-      ],
-      "uniqueIdentifiers": [
-        "damp air",
-        "scent of earth",
-        "sparse light"
-      ],
-      "searchDesc": "A dark, damp, stone basement beneath a Victorian manor, smelling of mildew and decay.",
-      "slug": "basement"
-    },
-    "loc-1765881232346-us17mu7lx": {
-      "id": "loc-1765881232346-us17mu7lx",
-      "type": "host",
-      "name": "Göteborg",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A sprawling city nestled along a coast, with a prominent harbor and river delta. Clusters of buildings of varying heights, interspersed with green parks and waterways. Distant industrial areas and shipping ports visible.",
-        "colorsAndLighting": "Dominated by the cool blues of the sea and sky, with muted greys and browns of urban and industrial areas. Sunlight glints off water and metallic structures.",
-        "atmosphere": "A distinct maritime air, blending the robust feel of industry with the openness of the coast and the energy of a modern city.",
-        "materials": "Concrete, steel, brick, and water are the dominant visual materials from above.",
-        "mood": "Resilient, hardworking, and forward-looking, with a strong connection to its natural surroundings.",
-        "sounds": "Distant hum of city life, the occasional foghorn, sounds of the sea.",
-        "primary_surfaces": "Roofs of industrial buildings, dense urban blocks, major shipping lanes.",
-        "secondary_surfaces": "Water bodies, parks, open green spaces, major roadways.",
-        "accent_features": "The distinct outline of the harbor, bridges, notable taller buildings as distant shapes.",
-        "dominant": "Steel grey",
-        "secondary": "Deep blue",
-        "accent": "Verdigris green",
-        "ambient": "Overcast sky, cool diffused light",
-        "genre": "Maritime Industrial",
-        "architectural_tone": "Functionalism, post-war industrial",
-        "cultural_tone": "Hardworking, maritime-influenced, progressive",
-        "palette_bias": "Cool and muted tones",
-        "flora_base": "Coastal grasses, urban trees",
-        "fauna_base": "Seagulls, harbor seals"
-      },
-      "description": "Göteborg is a major port city on Sweden's west coast, characterized by its rich industrial heritage, maritime atmosphere, and a vibrant, dynamic cultural scene.",
-      "searchDesc": "Swedish west coast port city, industrial heritage, vibrant cultural scene.",
-      "slug": "goteborg",
-      "structure": {
-        "spatialLayout": "Organized around its waterways and port, with a central urban core expanding outwards."
-      },
-      "primaryMedia": "media-1765881403728-dy3z45eev"
-    },
-    "ca509841-2e05-4a44-b34c-66804d1e993d": {
-      "id": "ca509841-2e05-4a44-b34c-66804d1e993d",
-      "type": "region",
-      "name": "Ringön",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "ELEVATED STREET VIEW: Warehouses and industrial buildings with some modern additions. Cobblestone or asphalt streets, graffiti art on some surfaces, outdoor seating areas for cafes and bars.",
-        "colorsAndLighting": "Daytime has a mix of overcast sky and artificial industrial lighting. Evenings feature neon signs, warm bar lights, and streetlights.",
-        "atmosphere": "A gritty yet vibrant atmosphere, blending the echoes of industry with the pulse of nightlife and creativity.",
-        "materials": "Predominantly corrugated metal, brick, concrete, and weathered wood.",
-        "mood": "Energetic and slightly edgy, with a sense of hidden gems and underground culture.",
-        "sounds": "Distant industrial hum, traffic, occasional music spilling from venues, chatter from outdoor spaces.",
-        "primary_surfaces": "Corrugated metal, brick facades, concrete walls.",
-        "secondary_surfaces": "Cobblestone or asphalt streets, chain-link fences, loading docks.",
-        "accent_features": "Street art, neon signs, outdoor bar setups, industrial salvage elements.",
-        "dominant": "Dark grey",
-        "secondary": "Rust brown",
-        "accent": "Electric blue",
-        "ambient": "Cool, diffused light",
-        "genre": null,
-        "architectural_tone": "Industrial",
-        "cultural_tone": "Creative, alternative",
-        "palette_bias": "Monochromatic with pops of artificial color",
-        "flora_base": "Hardy urban plants",
-        "fauna_base": "Urban birds"
-      },
-      "description": "Ringön is an industrial island district in Göteborg, transformed into a thriving hub for creative businesses, clubs, and restaurants. It retains its raw, industrial character while buzzing with contemporary energy.",
-      "searchDesc": "Industrial island transformed into creative hub with clubs & restaurants.",
-      "slug": "ringon",
-      "structure": {
-        "spatialLayout": "A mix of dense industrial blocks and more open waterfront areas. Streets are generally functional rather than ornate."
-      },
-      "primaryMedia": "media-1765881391698-abkatuup7"
-    },
-    "fd675259-39f7-4612-968a-14422f2f98a1": {
-      "id": "fd675259-39f7-4612-968a-14422f2f98a1",
-      "type": "location",
-      "name": "The Pulse",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The building presents a stark, utilitarian facade dominated by unadorned, reinforced concrete. Exposed metal pipes and industrial ventilation shafts snake across its surface. Angular, low-profile windows offer minimal glimpses into the interior.",
-        "colorsAndLighting": "Dominant cool blues and electric purples emanate from pulsing neon strips that outline geometric shapes on the facade. These are contrasted by the dull grey of concrete and the dark, oxidized tones of metal.",
-        "atmosphere": "The air outside feels crisp and slightly metallic, carrying faint echoes of distant bass. A palpable sense of anticipation hangs in the air, drawing one towards the entrance.",
-        "materials": "Rough, unpainted concrete forms the bulk of the exterior, juxtaposed with heavily weathered steel elements that show signs of rust and verdigris. Exposed electrical conduits add to the raw, functional aesthetic.",
-        "mood": "Intriguing and slightly forbidding, the exterior evokes a sense of raw power and underground energy, hinting at an exclusive and intense experience.",
-        "sounds": "Distant bass thumps, industrial hum, static.",
-        "primary_surfaces": "Rough concrete walls, weathered steel panels",
-        "secondary_surfaces": "Exposed piping, industrial fixtures",
-        "accent_features": "Pulsing neon light strips, flickering holographic signage",
-        "dominant": "Cool grey concrete with large coverage",
-        "secondary": "Dark, oxidized steel with structural placement",
-        "accent": "Electric blue and purple neon lights outlining edges and forms",
-        "ambient": "Dim and moody",
-        "genre": null,
-        "architectural_tone": "Brutalist industrial with neo-noir lighting",
-        "cultural_tone": "Underground electronic music scene, urban nightlife",
-        "palette_bias": "Grays, blues, purples, blacks",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A cutting-edge techno club with industrial aesthetics and pulsing neon lights. EXTERIOR VIEW.",
-      "searchDesc": "Industrial techno club exterior on Ringön, Göteborg, with neon lights and steel entrance.",
-      "slug": "the-pulse",
-      "structure": {
-        "spatialLayout": "The building appears as a solid, monolithic block, suggesting a densely packed interior. The entrance is a focal point, a clear invitation into a concealed space."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "central, heavy steel",
-          "description": "The main entrance, a imposing steel door that contrasts sharply with the surrounding weathered facade."
-        }
-      ],
-      "dominantElements": [
-        "the main steel entrance door",
-        "large, reinforced concrete walls",
-        "angular, industrial ventilation shafts",
-        "strategically placed neon light strips"
-      ],
-      "uniqueIdentifiers": [
-        "verdigris-stained metal accents",
-        "exposed conduit piping",
-        "flickering holographic signage",
-        "low-profile industrial windows"
-      ],
-      "primaryMedia": "media-1765881249011-mp37ch6pt"
-    },
-    "niche-1765881266442-w4gqbx4ti": {
-      "id": "niche-1765881266442-w4gqbx4ti",
-      "type": "niche",
-      "name": "The Pulse",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Vast, cavernous industrial space with rough concrete walls and exposed structural steel. Low ceilings with exposed ductwork and wiring. Minimalist, raw aesthetic.",
-        "colorsAndLighting": "Dominated by the cool grays of concrete and the dark tones of steel. Stark, directional LED uplighting casts long shadows. Occasional flashes of deep blues and purples emanate from unseen areas.",
-        "atmosphere": "Cool, with a slight dampness. The air carries the faint scent of ozone and metal. A constant, low-frequency hum is perceptible.",
-        "materials": "Rough, unpainted concrete, raw structural steel, exposed conduits and pipes.",
-        "mood": "Gritty, mysterious, utilitarian, industrial, slightly oppressive.",
-        "sounds": "Low hum, distant industrial clangs, muffled electronic beats, echoey footsteps.",
-        "spatialLayout": "Open, cavernous main areas interspersed with narrower, functional corridors and passages.",
-        "primary_surfaces": "Concrete walls, concrete floors, exposed concrete ceiling.",
-        "secondary_surfaces": "Raw steel beams, exposed metal pipes and conduits.",
-        "accent_features": "Scattered geometric metal sculptures repurposed as seating or decorative elements, industrial light fixtures with sharp beams.",
-        "dominant": "Gray",
-        "secondary": "Black",
-        "accent": "Deep Blue/Purple",
-        "ambient": "Stark, directional LED",
-        "genre": "Industrial Techno/Dark Electronic",
-        "architectural_tone": "Brutalist industrial",
-        "cultural_tone": "Underground electronic music scene, urban nightlife",
-        "palette_bias": "Grays, blues, purples, blacks",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765881266441-4duhda1pe",
-      "description": "Inside 'The Pulse', the raw, utilitarian aesthetic of the exterior is carried through. The vast, rectangular space is dominated by exposed concrete and industrial elements, creating an atmosphere befitting its underground electronic music scene.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "A cavernous, industrial space with polished concrete floors and exposed ceiling beams. Dim, atmospheric lighting emanates from strategic points, highlighting the raw, unfinished nature of the architecture.",
-        "requiredElements": [
-          "rough concrete plaza",
-          "scattered geometric metal sculptures",
-          "stark LED uplighting from the ground",
-          "sparse, dark metal planters with hardy, spiky vegetation",
-          "hardy"
-        ],
-        "navigableElements": [
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object cracked asphalt path leading east towards the city glow"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object narrow dirt track disappearing west into an industrial alleyway"
-          }
-        ],
-        "dominantElements": [
-          "Main Dance Floor",
-          "DJ Booth",
-          "Bar Area",
-          "Seating Niches"
-        ],
-        "uniqueIdentifiers": [
-          "Exposed concrete walls",
-          "Industrial ventilation shafts",
-          "Recessed LED lighting",
-          "Sound system infrastructure"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object cracked asphalt path leading east towards the city glow"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object narrow dirt track disappearing west into an industrial alleyway"
-        }
-      ],
-      "dominantElements": [
-        "Main Dance Floor",
-        "DJ Booth",
-        "Bar Area",
-        "Seating Niches"
-      ],
-      "uniqueIdentifiers": [
-        "Exposed concrete walls",
-        "Industrial ventilation shafts",
-        "Recessed LED lighting",
-        "Sound system infrastructure"
-      ],
-      "searchDesc": "Industrial interior with concrete, steel, and stark lighting, echoing underground electronic music.",
-      "slug": "interior-of-the-pulse"
-    },
-    "niche-1765881310450-4487aplf5": {
-      "id": "niche-1765881310450-4487aplf5",
-      "type": "niche",
-      "name": "The Pulse Bar",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Dimly lit space with low ceilings. Exposed concrete walls and dark, metallic accents. Minimal, functional furniture.",
-        "colorsAndLighting": "Dominant deep blues and purples, punctuated by sharp neon pinks and electric greens. Strobe lights and spotlights create dynamic shadows.",
-        "atmosphere": "Thick with smoke, heat, and the palpable energy of a dense crowd. A constant, vibrating hum.",
-        "materials": "Raw concrete, rough steel, stained wood, polished chrome.",
-        "mood": "Energetic, hedonistic, slightly dangerous, thrilling, immersive.",
-        "sounds": "Deep bass thumps, electronic beats, muffled crowd chatter, clinking glasses.",
-        "spatialLayout": "Open central area with a dance floor, enclosed by a bar and scattered seating.",
-        "primary_surfaces": "Raw concrete walls, stained concrete floor.",
-        "secondary_surfaces": "Brushed steel bar top, dark wood booth upholstery, industrial metal fixtures.",
-        "accent_features": "Flickering neon signage, custom glow-in-the-dark graffiti, mirrored panels, exposed ventilation shafts.",
-        "dominant": "Deep Blue",
-        "secondary": "Black",
-        "accent": "Neon Pink",
-        "ambient": "Low, pulsating neon and strobe",
-        "genre": "underground electronic music",
-        "architectural_tone": "Brutalist industrial with neo-noir lighting",
-        "cultural_tone": "urban nightlife",
-        "palette_bias": "Grays, blues, purples, blacks",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765881310449-yz3n1bwr3",
-      "description": "The Pulse Bar is a vibrant and densely packed interior within 'The Pulse,' embodying the raw, underground electronic music scene. It's a large, rectangular industrial space where the primary focus is a long, crowded bar.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "spatialLayout": "This is a sprawling, cavernous space dominated by the raw aesthetics of its industrial origins. A long, busy bar stretches across one side, with numerous patrons packed tightly together.",
-        "requiredElements": [
-          "crowded bar"
-        ],
-        "navigableElements": [
-          {
-            "name": "Main Entrance",
-            "type": "doorway",
-            "description": "A wide, industrial metal doorway leading into the main bar area."
-          },
-          {
-            "name": "The Bar",
-            "type": "bar",
-            "description": "A substantial, worn concrete and steel bar, bustling with activity and packed with people."
-          },
-          {
-            "name": "Dance Floor",
-            "type": "open-area",
-            "description": "A large, open space in front of a DJ booth, currently filled with dancing patrons."
-          },
-          {
-            "name": "Seating Area",
-            "type": "seating",
-            "description": "Scattered industrial-style benches and stools, many of which are occupied."
-          }
-        ],
-        "dominantElements": [
-          "The crowded bar",
-          "Exposed concrete walls",
-          "Structural steel beams",
-          "DJ booth"
-        ],
-        "uniqueIdentifiers": [
-          "Low ceilings with exposed ductwork",
-          "Industrial, raw aesthetic",
-          "Pulsating electronic music",
-          "Dim, atmospheric lighting"
-        ]
-      },
-      "navigableElements": [
-        {
-          "name": "Main Entrance",
-          "type": "doorway",
-          "description": "A wide, industrial metal doorway leading into the main bar area."
-        },
-        {
-          "name": "The Bar",
-          "type": "bar",
-          "description": "A substantial, worn concrete and steel bar, bustling with activity and packed with people."
-        },
-        {
-          "name": "Dance Floor",
-          "type": "open-area",
-          "description": "A large, open space in front of a DJ booth, currently filled with dancing patrons."
-        },
-        {
-          "name": "Seating Area",
-          "type": "seating",
-          "description": "Scattered industrial-style benches and stools, many of which are occupied."
-        }
-      ],
-      "dominantElements": [
-        "The crowded bar",
-        "Exposed concrete walls",
-        "Structural steel beams",
-        "DJ booth"
-      ],
-      "uniqueIdentifiers": [
-        "Low ceilings with exposed ductwork",
-        "Industrial, raw aesthetic",
-        "Pulsating electronic music",
-        "Dim, atmospheric lighting"
-      ],
-      "searchDesc": "Underground electronic music bar, packed, pulsing beats, neon, industrial.",
-      "slug": "crowded-bar"
-    },
     "c82800de-1531-403e-be22-cdf832c1c383": {
       "id": "c82800de-1531-403e-be22-cdf832c1c383",
       "type": "region",
@@ -1036,504 +83,105 @@
       "imageUrl": "https://v3b.fal.media/files/b/0a868575/PUfuTAMGql3ac9-YoJbPq.jpg",
       "primaryMedia": "media-1765881492816-3u8spmjm7"
     },
-    "loc-1765882161336-zpcvtvqu4": {
-      "id": "loc-1765882161336-zpcvtvqu4",
-      "type": "host",
-      "name": "Xylos",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: a vast alien world with swirling twilight skies, distant celestial bodies, and the faint outlines of immense, spire-like structures rising from a reflective surface.",
-        "colorsAndLighting": "The sky transitions from serene blue to soft lavender and warm pink, illuminated by countless tiny stars and ambient atmospheric light.",
-        "atmosphere": "A thin, ethereal atmosphere with fluffy pink clouds and delicate pink wisps trailing behind large, gliding creatures.",
-        "materials": "Dominant materials from a distance would be reflective water and smooth, distant geological formations.",
-        "mood": "Otherworldly, tranquil, serene, and awe-inspiring.",
-        "sounds": "Distant, echoing calls of unseen creatures, a gentle atmospheric hum.",
-        "primary_surfaces": "The vast, tranquil mirror-like water surface.",
-        "secondary_surfaces": "Distant, smooth, light blue cliffs and the expansive, colorful twilight sky.",
-        "accent_features": "The faint outlines of ornate, futuristic structures on tall spires visible as tiny shapes in the distance.",
-        "dominant": "Light blue",
-        "secondary": "Lavender",
-        "accent": "Pink",
-        "ambient": "Soft, diffused twilight glow from the sky.",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Futuristic",
-        "cultural_tone": "Ethereal",
-        "palette_bias": "Pastel",
-        "flora_base": "Alien flora",
-        "fauna_base": "Aerial megafauna"
-      },
-      "description": "A vibrant, ethereal alien world where the skies paint themselves in twilight hues and gravity bends. Majestic whale-like creatures glide through an atmosphere of soft lavender and warm pink, amidst countless stars and fluffy pink clouds.",
-      "searchDesc": "Ethereal alien world with twilight skies, gliding whale-like creatures.",
-      "slug": "xylos",
-      "structure": {
-        "spatialLayout": "A vast, open world with large bodies of reflective water and towering, distant geological or architectural formations."
-      },
-      "primaryMedia": "media-1765882197955-7hsvtcxx8"
-    },
-    "b6a7ba52-be3a-40d7-b62c-00ff71ccc21f": {
-      "id": "b6a7ba52-be3a-40d7-b62c-00ff71ccc21f",
-      "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "7f07f864-c27c-44c6-98d6-47f20eb29f2d": {
-      "id": "7f07f864-c27c-44c6-98d6-47f20eb29f2d",
+    "0ee43f9d-170f-4d40-848d-efbcb4904aed": {
+      "id": "0ee43f9d-170f-4d40-848d-efbcb4904aed",
       "type": "location",
-      "name": "The Whispering Falls",
+      "name": "The Whispering Hearth Inn",
       "spaceType": "exterior",
+      "description": "Nestled deep within Shadowwood, this ancient inn appears to have grown from the very earth. Its structure is a testament to primal construction, blending seamlessly with the colossal trees that surround it, offering a rare pocket of warmth and shelter in the perpetual twilight.",
       "dna": {
-        "looks": "A breathtaking vista dominated by luminous, cascading waterfalls plunging from steep, light blue cliffs. The water below forms a vast, tranquil mirror reflecting a vibrant twilight sky and a collection of ornate, futuristic structures perched atop tall spires.",
-        "colorsAndLighting": "The scene is illuminated by the soft, multi-hued glow of a twilight sky transitioning through blues, lavenders, and pinks, casting a gentle light on the landscape. Tiny stars and fluffy pink clouds add to the ethereal illumination.",
-        "atmosphere": "The air is calm and still, with a palpable sense of tranquility. Delicate pink wisps trail the graceful, whale-like creatures gliding through the atmosphere, and small blue and green bubbles float gently, adding to the serene motion.",
-        "materials": "The cliffs appear to be composed of smooth, cool-toned stone, perhaps a type of crystalline rock. The water is glass-like, with a perfect reflective quality. The futuristic structures likely utilize polished, synthetic materials in vibrant hues.",
-        "mood": "The mood is overwhelmingly tranquil, serene, and otherworldly. It evokes a sense of wonder and peaceful contemplation.",
-        "sounds": "Gentle water flow, distant humming, soft atmospheric whispers.",
-        "primary_surfaces": "Smooth, reflective water; sheer, light blue cliffs.",
-        "secondary_surfaces": "Polished synthetic materials of spires; sandy islands.",
-        "accent_features": "Golden-orange butterfly-like creatures; light pink flowering plant; circular water indentations.",
-        "dominant": "Light blue (cliffs)",
-        "secondary": "Deep blue and lavender (sky)",
-        "accent": "Pink and yellow (structures, clouds, flora), golden-orange (creatures)",
-        "ambient": "Twilight glow",
+        "looks": "The inn is a squat, sturdy structure that seems to have organically emerged from the dense forest floor. Its walls are rough-hewn timber and dark, moss-covered stone, appearing more grown than built. Large, ancient trees press in close, their roots weaving through the foundation, and the roof is a thick thatch of moss and dark leaves.",
+        "colorsAndLighting": "Dominated by deep, earthy browns and greens, with muted ochre tones from the inn's roof thatch. Light is dim and diffused, with warm, flickering light spilling from the windows, a stark contrast to the shadowy forest.",
+        "atmosphere": "The air around the inn is noticeably warmer and stiller than the surrounding forest, carrying the faint scent of woodsmoke and hearth-baked bread. It feels remarkably sheltered and safe, a beacon of warmth in the oppressive gloom, yet the ancient woods still whisper their secrets nearby.",
+        "materials": "Rough, dark timber, rough-hewn stone, thick moss, decaying leaf litter, and ancient bark. The ground around it is packed earth and tangled roots.",
+        "mood": "Welcoming and cozy, yet with an underlying sense of ancient mystery inherent to its location.",
+        "sounds": "Muffled laughter, crackling fire, dripping water, distant rustling leaves",
+        "primary_surfaces": "Rough timber walls, moss-covered stone foundation",
+        "secondary_surfaces": "Thick thatch roof, gnarled root systems",
+        "accent_features": "The carved wooden sign, warped glass windows, heavy wooden door",
+        "dominant": "Deep forest green, covering moss and foliage",
+        "secondary": "Dark brown timber, covering walls",
+        "accent": "Muted ochre thatch, warm interior light",
+        "ambient": "Dim, shadowed with occasional warm glows",
         "genre": null,
-        "architectural_tone": "Futuristic, ornate, spire-based",
-        "cultural_tone": "Unknown advanced civilization, potentially for observation or habitation",
-        "palette_bias": "Cool blues and purples with warm pink and yellow accents",
-        "flora_base": "Delicate plants with light pink petals",
-        "fauna_base": "Whale-like atmospheric creatures, butterfly-like insects"
-      },
-      "description": "A dramatic vista of cascading waterfalls down steep, light blue cliffs into a vast, calm body of water that perfectly mirrors the colorful twilight sky, dotted with ornate, futuristic structures on tall spires. EXTERIOR VIEW.",
-      "searchDesc": "Ethereal alien landscape with cascading waterfalls and futuristic spires.",
-      "slug": "the-whispering-falls",
-      "structure": {
-        "spatialLayout": "The area opens up to a grand vista with significant depth created by the vast water body and the distant spires. The cliffs create verticality, contrasting with the expansive horizontal plane of the water."
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center",
-          "description": "A luminous archway leading towards the futuristic structures."
-        }
-      ],
-      "dominantElements": [
-        "The Whispering Falls themselves",
-        "Ornate, futuristic spire structures",
-        "The vast, reflective body of water",
-        "The cascading waterfalls"
-      ],
-      "uniqueIdentifiers": [
-        "light blue cliffs",
-        "mirror-like water surface",
-        "futuristic spire structures",
-        "whale-like atmospheric creatures"
-      ],
-      "primaryMedia": "media-1765882173950-dui1q3ck5"
-    },
-    "niche-1765882223141-jb2fwg3tj": {
-      "id": "niche-1765882223141-jb2fwg3tj",
-      "type": "niche",
-      "name": "The Whispering Falls Observation Chamber",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, cavernous space bathed in soft, ethereal light. Interior walls are formed from smooth, translucent crystalline rock, interspersed with dense clusters of bioluminescent flora. Waterfalls cascade gently from unseen heights, feeding into a central, tranquil pool. Holographic projectors create dynamic displays of celestial bodies and abstract patterns on the walls and ceiling. Integrated seating pods, crafted from polished synthetic materials, are nestled within the crystalline spires.",
-        "colorsAndLighting": "Soft, diffused light emanating from bioluminescent flora and the crystalline structures themselves. The palette is dominated by cool blues and purples, with warm pinks and yellows acting as vibrant accents in the flora and holographic displays. The water reflects the ambient light, creating a shimmering, otherworldly glow.",
-        "atmosphere": "Cool, humid air with a constant, gentle mist. A sense of profound tranquility and awe pervades the space. Subtle, soothing air currents move through the chamber.",
-        "materials": "Translucent crystalline rock, polished synthetic polymers, dense bioluminescent mosses and fungi, glass-like water.",
-        "mood": "Serene, awe-inspiring, mystical, tranquil",
-        "sounds": "Soft, echoing water drips, gentle cascading sounds, faint harmonic hums",
-        "spatialLayout": "Vast, open cavern with soaring spires and integrated alcoves.",
-        "primary_surfaces": "Translucent crystalline rock",
-        "secondary_surfaces": "Polished synthetic polymers, dense bioluminescent flora",
-        "accent_features": "Holographic projections, integrated seating pods, cascading water veils",
-        "dominant": "Cool blue",
-        "secondary": "Deep purple",
-        "accent": "Vibrant pink",
-        "ambient": "Ethereal and diffused",
-        "genre": "Sci-Fi/Fantasy",
-        "architectural_tone": "Futuristic, ornate, spire-based",
-        "cultural_tone": "Unknown advanced civilization, potentially for observation or habitation",
-        "palette_bias": "Cool blues and purples with warm pink and yellow accents",
-        "flora_base": "Bioluminescent flora lining pathways",
-        "fauna_base": "Whale-like atmospheric creatures, butterfly-like insects"
-      },
-      "primaryMedia": "media-1765882223140-jbq37i15h",
-      "description": "An immersive interior space designed for observing the breathtaking vista of The Whispering Falls, featuring integrated seating and advanced holographic displays.",
-      "structure": {
-        "form": "organic",
-        "roofType": "domed",
-        "scale": "medium",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "spatialLayout": "This interior space is a large, organically shaped chamber with a domed, transparent roof offering panoramic views.  Seating pods are seamlessly integrated into the curved walls, providing comfortable vantage points.",
-        "requiredElements": [
-          "bioluminescent flora lining pathways",
-          "crystalline rock formations",
-          "holographic projection points",
-          "seating pods integrated into spires"
-        ],
-        "navigableElements": [
-          {
-            "type": "archway",
-            "position": "center",
-            "description": "archway luminous  leading inward"
-          },
-          {
-            "type": "platform",
-            "position": "center",
-            "description": "platform observation  to the east"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object pathway descending toward water's edge to the south"
-          }
-        ],
-        "dominantElements": [
-          "The transparent, domed roof",
-          "Integrated seating pods",
-          "Crystalline rock formations providing structural support and aesthetic appeal",
-          "Holographic projection points"
-        ],
-        "uniqueIdentifiers": [
-          "Bioluminescent flora accentuating pathways",
-          "The panoramic view through the domed roof",
-          "The seamless integration of seating pods into the architecture"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "archway luminous  leading inward"
-        },
-        {
-          "type": "platform",
-          "position": "center",
-          "description": "platform observation  to the east"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object pathway descending toward water's edge to the south"
-        }
-      ],
-      "dominantElements": [
-        "The transparent, domed roof",
-        "Integrated seating pods",
-        "Crystalline rock formations providing structural support and aesthetic appeal",
-        "Holographic projection points"
-      ],
-      "uniqueIdentifiers": [
-        "Bioluminescent flora accentuating pathways",
-        "The panoramic view through the domed roof",
-        "The seamless integration of seating pods into the architecture"
-      ],
-      "searchDesc": "Luminous interior with crystalline formations and holographic projections.",
-      "slug": "interior-of-the-whispering-falls"
-    },
-    "468e366c-59ed-4bc6-8f35-7720dedfbda5": {
-      "id": "468e366c-59ed-4bc6-8f35-7720dedfbda5",
-      "type": "region",
-      "name": "The Grotto Harbor",
-      "spaceType": "exterior",
-      "description": "Nestled at the base of the Serene Mountains, the Grotto Harbor is a sheltered inlet where the vast mountain lake meets the towering peaks. Water cascades down sheer rock faces, feeding into a surprisingly calm and deep harbor.",
-      "dna": {
-        "looks": "The harbor is a vast, U-shaped inlet formed by immense, sheer cliff faces that plunge directly into a deep, dark lake. Waterfalls streak down these rock walls like silver threads, disappearing into the mysterious depths below. The scale is imposing, emphasizing the raw power of nature.",
-        "colorsAndLighting": "Deep blues and greens dominate the water, contrasting with the grey and brown of the wet rock. Light penetrates the water's surface, creating shifting patterns, while the shadowed cliff faces absorb much of the ambient light, leading to a chiaroscuro effect.",
-        "atmosphere": "The air is perpetually damp and cool, thick with the mist from the constant waterfalls. A pervasive sense of enclosure and stillness hangs heavy, broken only by the amplified sounds of water and wind echoing off the rock. It feels ancient and untouched.",
-        "materials": "Exposed, water-worn rock in various shades of grey and brown is the primary material. The lake bed is likely composed of silt and larger submerged rock formations.",
-        "mood": "Awe-inspiring yet slightly claustrophobic, with a feeling of deep, hidden secrets within its watery embrace.",
-        "sounds": "Crashing water, echoing winds, dripping, deep watery resonance",
-        "primary_surfaces": "Sheer, wet rock faces",
-        "secondary_surfaces": "Deep, dark lake water",
-        "accent_features": "Cascading waterfalls, submerged grottos",
-        "dominant": "Grey (rock faces)",
-        "secondary": "Deep blues and greens (lake water)",
-        "accent": "Silver (waterfalls)",
-        "ambient": "Dim, diffused",
-        "genre": null,
-        "architectural_tone": "Naturalistic",
-        "cultural_tone": "null",
-        "materials_base": "undefined",
-        "mood_baseline": "undefined",
-        "palette_bias": "Cool",
-        "soundscape_base": "undefined",
-        "flora_base": "Sparse, hardy mosses and lichens on rock faces, aquatic plants within the lake",
-        "fauna_base": "Aquatic life adapted to deep, cold waters"
-      },
-      "searchDesc": "A mountain lake harbor carved into cliffs, fed by waterfalls, with serene depths.",
-      "slug": "the-grotto-harbor",
-      "structure": {
-        "spatialLayout": "The harbor is a deep, enclosed basin, with its primary dimensions defined by the sheer verticality of the surrounding cliffs and the immense depth of the lake. It feels both vast in its watery expanse and intimately confined by rock."
-      },
-      "imageUrl": "https://v3b.fal.media/files/b/0a8687e9/zquQdyeKSrixWbmWeUpPr.jpg",
-      "primaryMedia": "media-1765887779947-ww0mbv747"
-    },
-    "b56fdb62-f90c-45c1-a165-c2453e08322d": {
-      "id": "b56fdb62-f90c-45c1-a165-c2453e08322d",
-      "type": "location",
-      "name": "The Mariner's Whisper House",
-      "spaceType": "exterior",
-      "description": "A solitary house perched precariously at the edge of the harbor, its weathered facade hinting at a long and secretive history. The salt-stained wood and salt-crusted windows speak of countless storms endured and untold tales within.",
-      "dna": {
-        "looks": "A small, sturdy house with a steeply pitched roof, its form dictated by resilience against the elements. Irregularly placed windows punctuate the weathered wooden walls, some bearing the marks of salt and time. A subtle chipped 'Private' sign above the main entrance suggests a desire for seclusion.",
-        "colorsAndLighting": "Dominated by the muted greys and browns of salt-bleached wood, with deep, shadowed recesses. The salt-crusted windows diffuse any ambient light, creating a dim and diffused glow from within.",
-        "atmosphere": "The air around the house is perpetually damp and cool, carrying the faint scent of brine and aged wood. A sense of quiet seclusion and hidden purpose hangs heavy, as if the house itself is guarding a secret from the surrounding grotto.",
-        "materials": "The primary material is weathered, salt-stained wood, showing signs of age and exposure. The heavy iron latch on the door speaks of robustness and an effort to keep things secured.",
-        "mood": "Intriguing and slightly melancholic, with an underlying sense of mystery and hidden purpose.",
-        "sounds": "Creaking wood, distant water, wind whistling, muffled drips",
-        "primary_surfaces": "Weathered wooden walls, salt-stained door",
-        "secondary_surfaces": "Salt-crusted window panes, iron hardware",
-        "accent_features": "Chipped 'Private' sign, boarded-up window",
-        "dominant": "Grey (weathered wood)",
-        "secondary": "Brown (door and accents)",
-        "accent": "Iron (latch)",
-        "ambient": "Dim and diffused",
-        "genre": null,
-        "architectural_tone": "Naturalistic, resilient coastal dwelling",
-        "cultural_tone": "null",
-        "palette_bias": "Cool",
-        "flora_base": "None",
-        "fauna_base": "None",
-        "materials_base": "undefined",
-        "mood_baseline": "undefined",
-        "soundscape_base": "undefined"
-      },
-      "searchDesc": "A weathered house with a secret in the Grotto Harbor, featuring a salt-stained door and salt-crusted windows.",
-      "slug": "the-mariners-whisper-house",
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "A heavy, salt-stained wooden door with a prominent iron latch, leading into the house."
-        },
-        {
-          "type": "window",
-          "position": "left wall",
-          "description": "A small, irregularly placed window with salt-crusted panes, offering a dim glimpse inside."
-        },
-        {
-          "type": "window",
-          "position": "right wall",
-          "description": "A boarded-up window on the upper floor, its planks weathered and hinting at something concealed."
-        }
-      ],
-      "dominantElements": [
-        "The house itself",
-        "The harbor edge",
-        "Weathered wooden facade"
-      ],
-      "uniqueIdentifiers": [
-        "Salt-stained wooden door",
-        "Salt-crusted windows",
-        "Boarded-up upper window",
-        "Chipped 'Private' sign"
-      ],
-      "structure": {
-        "spatialLayout": "A compact structure, seemingly built to withstand the harsh conditions of the harbor edge. Its layout appears functional rather than ornate, prioritizing shelter and defense."
-      },
-      "imageUrl": "https://v3b.fal.media/files/b/0a86880e/CjtNNS1c-eR3_oIIVz2HN.jpg",
-      "primaryMedia": "media-1765888147136-6lfnj45ee"
-    },
-    "niche-1765888175452-scvonfs6x": {
-      "id": "niche-1765888175452-scvonfs6x",
-      "type": "niche",
-      "name": "The Mariner's Whisper House",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A compact and intimate interior. Walls are primarily a rough, salt-bleached plaster, revealing patches of exposed, dark, rough-hewn wooden beams and structural elements. The ceiling is low, also featuring exposed beams. Furnishings are simple and functional, many crafted from salvaged driftwood. Windows are small and strategically placed, letting in diffused light.",
-        "colorsAndLighting": "Muted, cool tones dominate. Soft, diffused natural light filters through the windows, supplemented by the warm, flickering glow of oil lamps or a simple lantern. The palette leans towards pale grays, off-whites, and the deep, aged tones of the wood.",
-        "atmosphere": "The air is cool and carries a faint scent of salt and aged wood. There's a sense of quiet and stillness, broken only by the distant murmur of the sea.",
-        "materials": "Salt-bleached plaster, rough-hewn weathered wood, driftwood, weathered rope, iron fixtures.",
-        "mood": "Cozy, resilient, tranquil, timeworn, intimate.",
-        "sounds": "Muffled sea sounds, creaking wood, soft ambient hum.",
-        "spatialLayout": "Compact and functional, with a central living/gathering space. Low ceilings create a sense of enclosure. Alcoves or nooks might be present.",
-        "primary_surfaces": "Salt-bleached plaster walls, exposed wooden beams.",
-        "secondary_surfaces": "Driftwood furniture, woven seagrass mats, rough wooden floorboards.",
-        "accent_features": "Weathered fishing nets draped on walls, small collections of sea-worn shells or stones, a simple, sturdy wooden table.",
-        "dominant": "Pale Gray",
-        "secondary": "Aged Wood Brown",
-        "accent": "Verdigris Green (from aged metal fixtures)",
-        "ambient": "Soft, diffused, cool.",
-        "genre": null,
-        "architectural_tone": "Naturalistic, resilient coastal dwelling",
-        "cultural_tone": "null",
-        "palette_bias": "Cool",
-        "flora_base": "Hardy sea grass (dried, as decor)",
-        "fauna_base": "None",
-        "materials_base": "undefined",
-        "mood_baseline": "undefined",
-        "soundscape_base": "undefined"
-      },
-      "primaryMedia": "media-1765888175451-zx0ptmozn",
-      "description": "Inside The Mariner's Whisper House, the interior echoes the resilient, compact form of its exterior. A steeply pitched ceiling creates a cozy, almost cabin-like atmosphere, while the limited space is pragmatically arranged for a solitary existence against the elements. Weathered wood surfaces and sparse, functional furnishings speak to a life lived in close communion with the sea.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "pitched",
-        "scale": "small",
-        "orientation": "horizontal",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "residential",
-        "spatialLayout": "A compact, rectangular room with a steeply pitched ceiling that mirrors the exterior. The limited space is efficiently utilized, with walls likely lined with built-in storage or simple furnishings to maximize the feeling of coziness and resilience.",
-        "requiredElements": [
-          "salt-worn cobblestone path",
-          "scattered driftwood seating",
-          "hardy sea grass",
-          "weathered fishing nets draped as decor"
-        ],
-        "navigableElements": [
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object path leading west towards the docks"
-          },
-          {
-            "type": "opening",
-            "position": "center",
-            "description": "opening to the sea to the east"
-          }
-        ],
-        "dominantElements": [
-          "The House Interior",
-          "Weathered Wood Paneling",
-          "Functional, Compact Furnishings"
-        ],
-        "uniqueIdentifiers": [
-          "Steeply Pitched Interior Ceiling",
-          "Salt-Scoured Surfaces",
-          "Sense of Seclusion"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object path leading west towards the docks"
-        },
-        {
-          "type": "opening",
-          "position": "center",
-          "description": "opening to the sea to the east"
-        }
-      ],
-      "dominantElements": [
-        "The House Interior",
-        "Weathered Wood Paneling",
-        "Functional, Compact Furnishings"
-      ],
-      "uniqueIdentifiers": [
-        "Steeply Pitched Interior Ceiling",
-        "Salt-Scoured Surfaces",
-        "Sense of Seclusion"
-      ],
-      "searchDesc": "Cozy, salt-bleached interior with driftwood and weathered nets.",
-      "slug": "interior-of-the-mariner-s-whisper-house"
-    },
-    "c68683f6-6585-4bda-821f-748a1a8c4680": {
-      "id": "c68683f6-6585-4bda-821f-748a1a8c4680",
-      "type": "location",
-      "name": "The Whispering Boughs Inn",
-      "spaceType": "exterior",
-      "description": "A sturdy, ancient inn built into the massive roots of a colossal Shadowwood tree. Its weathered timbers blend seamlessly with the surrounding forest, offering a dim but welcome refuge.",
-      "dna": {
-        "looks": "The inn appears to have grown organically from the forest floor, with its walls formed by the intertwined, ancient roots of a colossal tree. Its roof is a thick thatch of dark moss and leaves, blending with the shadows. Small, irregular windows are recessed deep within the wooden and stone structure.",
-        "colorsAndLighting": "Dominated by deep greens and browns of moss and aged wood. Dim, flickering light emanates from within, casting long, distorted shadows.",
-        "atmosphere": "The air around the inn is cool and damp, carrying the scent of wet earth and ancient wood. A perpetual twilight clings to its exterior, a stark contrast to the slightly warmer glow from its windows. It feels secluded and timeless.",
-        "materials": "Constructed from rough-hewn timbers, living roots, and dark, moss-covered stones. The ground is a soft, yielding layer of decaying leaves and moss.",
-        "mood": "Mysterious and inviting, offering a sense of hidden warmth within the oppressive forest.",
-        "sounds": "Muffled laughter, crackling fire, dripping water, rustling leaves, creaking wood",
-        "primary_surfaces": "Gnarled, dark wood timbers",
-        "secondary_surfaces": "Moss-covered stone foundation, thick thatch roof",
-        "accent_features": "Carved wooden sign, recessed windows",
-        "dominant": "Deep forest green, covering roof and accents",
-        "secondary": "Dark brown, covering main walls",
-        "accent": "Muted grey on stone foundation, faint amber from windows",
-        "ambient": "Dimly lit",
-        "genre": null,
-        "architectural_tone": "Naturalistic, integrated with environment",
-        "cultural_tone": "Ancient, rustic",
-        "palette_bias": "Cool",
-        "flora_base": "Moss, ancient tree roots",
+        "architectural_tone": "Primal, naturalistic construction",
+        "cultural_tone": "Ancient, sheltering",
+        "palette_bias": "Cool with warm accents",
+        "flora_base": "Ancient trees, dense moss, tangled undergrowth",
         "fauna_base": "None",
         "materials_base": null,
         "mood_baseline": null,
         "soundscape_base": null
       },
-      "searchDesc": "An ancient forest inn built into giant tree roots, offering dim shelter.",
-      "slug": "the-whispering-boughs-inn",
+      "searchDesc": "The Whispering Hearth Inn, an ancient structure blending into Shadowwood, offering a warm respite.",
+      "slug": "the-whispering-hearth-inn",
       "navigableElements": [
         {
           "type": "door",
-          "position": "center foreground",
-          "description": "A heavy, dark wooden door carved with knotwork, leading into the common room."
-        },
-        {
-          "type": "passage",
-          "position": "left midground",
-          "description": "A moss-lined opening between massive roots, disappearing into deeper darkness."
+          "position": "center, foreground",
+          "description": "A heavy, arched wooden door, deeply grooved and worn, leading into the inn's common room."
         },
         {
           "type": "window",
-          "position": "right midground",
-          "description": "Small, deeply recessed windows with rough glass, offering glimpses of dim interior light."
+          "position": "right, midground",
+          "description": "A small, irregularly shaped window with thick, warped glass, hinting at a cozy interior."
+        },
+        {
+          "type": "passage",
+          "position": "left, midground",
+          "description": "A shadowed alcove beside the inn, leading to a hidden side entrance or service passage."
         }
       ],
       "dominantElements": [
-        "The inn itself, built from gnarled wood and stone",
-        "Massive, gnarled roots of the host tree",
-        "A thick, moss-covered stone foundation"
+        "The Inn building",
+        "Towering ancient trees immediately surrounding the inn",
+        "Thick, gnarled roots entwined with the inn's foundation",
+        "A moss-covered, low-pitched roof"
       ],
       "uniqueIdentifiers": [
-        "Inn sign carved from a single piece of dark wood",
-        "Chimney made of rough-hewn stones, often emitting thin wisps of smoke",
-        "A collection of weathered barrels near the entrance"
+        "The prominent, hand-carved wooden sign depicting a flickering hearth",
+        "The unnaturally smooth, dark wood of the main door",
+        "The faint, warm glow emanating from its windows",
+        "The way the inn seems to hug the trunk of a massive elder tree"
       ],
       "structure": {
-        "spatialLayout": "The inn is a compact, multi-leveled structure nestled amongst immense tree roots, giving it an enclosed and somewhat cave-like appearance."
+        "spatialLayout": "The inn appears compact and low to the ground, its form somewhat irregular, hugging the contours of the forest."
       },
-      "imageUrl": "https://v3b.fal.media/files/b/0a868814/16yR4V38bAqklq89aijMG.jpg",
-      "primaryMedia": "media-1765888206725-6eb2r3yfx"
+      "imageUrl": "https://v3b.fal.media/files/b/0a8689df/2vLJI8AsGzTObYr-OSyFc.jpg",
+      "primaryMedia": "media-1765892794306-tm8qf8dmv"
     },
-    "niche-1765888287657-figbmr39j": {
-      "id": "niche-1765888287657-figbmr39j",
+    "niche-1765892830229-fa7f522qg": {
+      "id": "niche-1765892830229-fa7f522qg",
       "type": "niche",
-      "name": "The Whispering Boughs Inn",
+      "name": "The Whispering Hearth Inn",
       "spaceType": "interior",
       "dna": {
-        "looks": "Walls are formed from tightly interwoven, living tree roots, some with rough bark, others smoothed by time. Sections of dark, moss-covered stone are visible, particularly in areas of higher traffic or structural support.  The ceiling is a canopy of intertwined branches and dense moss, occasionally allowing dappled light to filter through.  Irregular openings in the root walls reveal alcoves and deeper chambers.",
-        "colorsAndLighting": "Dominated by deep greens, earthy browns, and muted grays. The primary light source comes from the soft, ethereal glow of various bioluminescent fungi and drifting fireflies, creating a dappled, otherworldly illumination.  Occasional pockets of warm, amber light emanate from hearths or lanterns hidden within nooks.",
-        "atmosphere": "Cool and damp, with a gentle, constant circulation of forest air. The air is thick with the scent of damp earth, decaying leaves, and ancient wood. A sense of profound stillness pervades the space.",
-        "materials": "Living tree roots, dark moss-covered stone, aged rough-hewn timber, decaying leaves, soft moss.",
-        "mood": "Mysterious, ancient, serene, slightly melancholic, deeply natural.",
-        "sounds": "Distant dripping water, soft rustling leaves, faint insect hum, the occasional creak of wood.",
-        "spatialLayout": "Organic and flowing, with irregular chambers and winding passages formed by the natural growth of the tree roots. There are no sharp angles, and spaces often blend into one another.",
-        "primary_surfaces": "Living tree roots, moss-covered stone.",
-        "secondary_surfaces": "Aged timber, decaying leaf litter, packed earth.",
-        "accent_features": "Ancient carvings on exposed roots, clusters of glowing mushrooms, natural seating formed from fallen logs, fireflies, ambient bioluminescent flora.",
-        "dominant": "Deep Green",
-        "secondary": "Earthy Brown",
-        "accent": "Muted Grey/Stone",
-        "ambient": "Ethereal Glow",
+        "looks": "Low, vaulted ceilings of dark, exposed timber beams. Walls are rough-hewn dark wood, interspersed with patches of exposed, moss-kissed stone from the exterior. A large, central stone hearth dominates the main space, its flames casting warm, dancing shadows. Furniture is sturdy, unadorned wood. The floor is uneven, packed earth and worn flagstones.",
+        "colorsAndLighting": "Dominated by warm, flickering firelight and the deep browns and grays of wood and stone. Accents of muted green from moss clinging to stone and small potted herbs. Lighting is dim and ambient, primarily from the hearth and a few wall-mounted lanterns with amber glass.",
+        "atmosphere": "Warm, dry, and comforting. Still air, with a gentle circulation from the hearth. Smells of woodsmoke, roasted meats, and dried herbs.",
+        "materials": "Rough-hewn timber, rough stone, packed earth, worn flagstones, wrought iron, amber glass.",
+        "mood": "Sheltering, ancient, cozy, communal, peaceful.",
+        "sounds": "Crackling fire, low murmurs, occasional clinking of mugs, distant forest whispers.",
+        "spatialLayout": "A large, open common area centered around the hearth, with smaller passages leading off to the sides.",
+        "primary_surfaces": "Rough timber walls, stone hearth, stone floor.",
+        "secondary_surfaces": "Exposed timber beams, wooden tables and benches.",
+        "accent_features": "Carvings of woodland creatures on beams, potted herbs, woven tapestries with forest motifs.",
+        "dominant": "Warm browns (wood)",
+        "secondary": "Deep grays and earthy tones (stone, earth)",
+        "accent": "Muted greens (moss, herbs)",
+        "ambient": "Warm, flickering amber",
         "genre": null,
-        "architectural_tone": "Naturalistic, integrated with environment",
-        "cultural_tone": "Ancient, rustic",
-        "palette_bias": "Cool",
-        "flora_base": "Moss, fungi, bioluminescent plants, tree roots",
-        "fauna_base": "Fireflies",
+        "architectural_tone": "Primal, naturalistic construction",
+        "cultural_tone": "Ancient, sheltering",
+        "palette_bias": "Cool with warm accents",
+        "flora_base": "Potted herbs, moss",
+        "fauna_base": "None",
         "materials_base": null,
         "mood_baseline": null,
         "soundscape_base": null
       },
-      "primaryMedia": "media-1765888287656-xe50y049l",
-      "description": "Stepping inside The Whispering Boughs Inn is like entering the heart of an ancient, living entity. The air is cool and smells of damp earth and moss. The interior echoes the exterior's organic growth, with massive, gnarled roots forming the walls and archways. Light, a mix of faint natural illumination and the ethereal glow of mushrooms and bioluminescent plants, creates a deeply atmospheric and ancient space. Seating areas are carved directly into fallen logs, and pathways are naturally formed by the exposed, root-lined floor. The whole environment hums with a quiet, ancient energy.",
+      "primaryMedia": "media-1765892830228-snx3cin51",
+      "description": "The interior of The Whispering Hearth Inn is a rustic and cozy space, feeling as though it has grown alongside the ancient forest. Rough timber and stone form its uneven walls, and a large, moss-covered hearth is the central feature, casting a warm, flickering glow.",
       "structure": {
         "form": "organic",
         "roofType": "pitched",
@@ -1542,74 +190,45 @@
         "openings": "minimal",
         "openingShape": "irregular",
         "functionalType": "commercial",
-        "spatialLayout": "The interior of the inn is a cavernous space, with walls formed by the living, intertwined roots of the colossal tree. The floor is uneven, a mix of packed earth and smoother, moss-covered stone. Natural light filters in through the small, deep-set windows, supplemented by the soft glow of bioluminescent flora and strategically placed mushroom clusters.",
-        "requiredElements": [
-          "moss-covered stone flooring",
-          "gnarled root-lined pathways",
-          "glowing mushroom clusters",
-          "ancient carvings on exposed tree roots",
-          "natural seating formed from fallen logs",
-          "fireflies and ambient bioluminescent flora"
-        ],
+        "spatialLayout": "The interior of the inn is a single, large, communal space characterized by its low, uneven ceiling and rough-hewn timber beams. The air is thick with the scent of woodsmoke and aged ale. Patches of moss seem to have crept in from the exterior, adding to the organic feel of the place.",
+        "requiredElements": [],
         "navigableElements": [
           {
-            "type": "object",
-            "position": "center",
-            "description": "object forest trail leading south into shadowwood"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object clearing edge to the east"
-          },
-          {
-            "type": "object",
-            "position": "entrance",
-            "description": "object subterranean  to the west"
+            "name": "Main Entrance",
+            "description": "A heavy, roughly hewn wooden door, slightly warped and set within a stone archway.",
+            "navigable": true
           }
         ],
         "dominantElements": [
-          "Living Root Walls",
-          "Central Hearth (implied, for a functional inn)",
-          "Seating Areas",
-          "Bioluminescent Flora"
+          "The Hearth",
+          "Wooden Tables and Benches",
+          "Bar Counter"
         ],
         "uniqueIdentifiers": [
-          "Living Root Structure",
-          "Bioluminescent Lighting",
-          "Organic Seating"
+          "Moss-covered stone fireplace",
+          "Gnarled wooden beams",
+          "Dim, flickering lamplight"
         ]
       },
       "navigableElements": [
         {
-          "type": "object",
-          "position": "center",
-          "description": "object forest trail leading south into shadowwood"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object clearing edge to the east"
-        },
-        {
-          "type": "object",
-          "position": "entrance",
-          "description": "object subterranean  to the west"
+          "name": "Main Entrance",
+          "description": "A heavy, roughly hewn wooden door, slightly warped and set within a stone archway.",
+          "navigable": true
         }
       ],
       "dominantElements": [
-        "Living Root Walls",
-        "Central Hearth (implied, for a functional inn)",
-        "Seating Areas",
-        "Bioluminescent Flora"
+        "The Hearth",
+        "Wooden Tables and Benches",
+        "Bar Counter"
       ],
       "uniqueIdentifiers": [
-        "Living Root Structure",
-        "Bioluminescent Lighting",
-        "Organic Seating"
+        "Moss-covered stone fireplace",
+        "Gnarled wooden beams",
+        "Dim, flickering lamplight"
       ],
-      "searchDesc": "Mossy roots, glowing mushrooms, and ancient wood inside a forest inn.",
-      "slug": "interior-of-the-whispering-boughs-inn"
+      "searchDesc": "Cozy inn interior, warm hearth, timber beams, intimate and sheltering.",
+      "slug": "interior-of-the-whispering-hearth-inn"
     }
   },
   "views": {},
@@ -1632,137 +251,24 @@
       ]
     },
     {
-      "id": "loc-1765877487336-nfrgwat5f",
-      "type": "host",
-      "children": [
-        {
-          "id": "ba5cbb7d-48e1-49f8-a2f6-9436ae13d853",
-          "type": "region",
-          "children": [
-            {
-              "id": "22d40676-13ed-4c73-85cf-bd731b47163b",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765880649357-4fl80qgg0",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765881136477-lc7yijhnq",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1765880738190-88rku824g",
       "type": "host",
       "children": [
         {
           "id": "c3007629-64e9-478d-8a67-5dd65495cf8e",
           "type": "region",
-          "children": [
-            {
-              "id": "032490d5-45f1-4c1f-a9eb-ea7d753b8cd8",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765880813387-jol3ehgtq",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765880842677-7ufvra32c",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
+          "children": []
         },
         {
           "id": "c82800de-1531-403e-be22-cdf832c1c383",
           "type": "region",
           "children": [
             {
-              "id": "c68683f6-6585-4bda-821f-748a1a8c4680",
+              "id": "0ee43f9d-170f-4d40-848d-efbcb4904aed",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765888287657-figbmr39j",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "468e366c-59ed-4bc6-8f35-7720dedfbda5",
-          "type": "region",
-          "children": [
-            {
-              "id": "b56fdb62-f90c-45c1-a165-c2453e08322d",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765888175452-scvonfs6x",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1765881232346-us17mu7lx",
-      "type": "host",
-      "children": [
-        {
-          "id": "ca509841-2e05-4a44-b34c-66804d1e993d",
-          "type": "region",
-          "children": [
-            {
-              "id": "fd675259-39f7-4612-968a-14422f2f98a1",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765881266442-w4gqbx4ti",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765881310450-4487aplf5",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1765882161336-zpcvtvqu4",
-      "type": "host",
-      "children": [
-        {
-          "id": "b6a7ba52-be3a-40d7-b62c-00ff71ccc21f",
-          "type": "region",
-          "children": [
-            {
-              "id": "7f07f864-c27c-44c6-98d6-47f20eb29f2d",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765882223141-jb2fwg3tj",
+                  "id": "niche-1765892830229-fa7f522qg",
                   "type": "niche",
                   "children": []
                 }
@@ -1774,9 +280,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765877487336-nfrgwat5f",
-    "loc-1765880738190-88rku824g",
-    "loc-1765881232346-us17mu7lx",
-    "loc-1765882161336-zpcvtvqu4"
+    "loc-1765880738190-88rku824g"
   ]
 }
