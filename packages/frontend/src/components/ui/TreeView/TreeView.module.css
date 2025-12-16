@@ -87,9 +87,9 @@
 
 /* Pass-through region styling */
 .passThrough {
-  opacity: 0.6;
+  opacity: 0.8;
   font-style: italic;
-  cursor: default;
+  cursor: pointer;
 }
 
 .passThrough .label {
@@ -97,7 +97,21 @@
 }
 
 .passThrough .icon {
-  opacity: 0.5;
+  opacity: 0.7;
+}
+
+/* Pass-through selected state */
+.passThrough.selected {
+  opacity: 1;
+  background-color: var(--color-primary-light, rgba(59, 130, 246, 0.15));
+}
+
+.passThrough.selected .label {
+  color: var(--color-primary-text, #60a5fa);
+}
+
+.passThrough.selected .icon {
+  opacity: 1;
 }
 
 .passThroughIndicator {

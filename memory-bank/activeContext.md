@@ -2,7 +2,66 @@
 
 ## Recent Changes (2025-12-16)
 
-### Exterior Scenes & Perspective Flags (Dec 16, Latest)
+### GO_INSIDE Default Interior Fix (Dec 16, Latest)
+
+#### Problem Solved: GO_INSIDE Creating Exterior Instead of Interior
+When using `/GO_INSIDE` on a building (like "Blackwood Manor" with a door entrance), the system was incorrectly creating an exterior courtyard instead of entering the building interior.
+
+#### Root Cause
+- `commandBuilder.ts` was returning `null` for GO_INSIDE perspective
+- This let the LLM structure analyzer decide the perspective
+- LLM incorrectly determined it was exterior because parent location had `spaceType: "exterior"`
+- Comment in code said "perspective is now determined by LLM analysis" - this was wrong for GO_INSIDE
+
+#### Fix Implementation
+**Backend Change in `commandBuilder.ts`:**
+```typescript
+case 'GO_INSIDE':
+  // GO_INSIDE means entering an enclosed space = interior by default
+  // User can override with --exterior or --open-air flags if needed
+  return 'interior';
+```
+
+#### Result
+- `/GO_INSIDE` → always creates **interior** space (entering through a door)
+- `/GO_INSIDE --exterior` → user can override if they want courtyard/grounds
+- `/GOTO forest` → LLM determines perspective (could be exterior)
+
+#### Files Modified
+- `packages/backend/src/engine/navigation/commandBuilder.ts` - Changed GO_INSIDE to return 'interior'
+
+### Pass-Through Region Selection & NEW_LOCATION Support (Dec 16)
+
+#### Problem Solved: Can't Select Pass-Through Regions
+Pass-through region nodes in the tree view couldn't be selected, which prevented using `/NEW_LOCATION` to create locations under them.
+
+#### Fix Implementation
+**Frontend Changes:**
+- `TreeView.tsx` - Removed the block that prevented selecting pass-through nodes
+- `TreeView.module.css` - Added proper styling for selectable pass-through nodes
+- `useNavigationLogic.ts` - Added `NEW_LOCATION` to allowed commands on pass-through regions
+
+#### Result
+- Pass-through regions can now be selected in tree view
+- `/NEW_LOCATION` command works on pass-through regions
+- Other commands (GOTO, GO_INSIDE, etc.) still blocked on pass-through regions
+
+### Outdoor Location Image Prompts (Dec 16)
+
+#### Problem Solved: Image Prompts Using Building Language for Forests
+When creating outdoor locations (forests, parks, gardens), the image prompt was using building-focused language like "Architectural photography" and "Building exterior in focus".
+
+#### Fix Implementation
+**Backend Change in `nodeCreation/prompts/image/index.ts`:**
+- Added `isOutdoorLocation()` detection function
+- Checks navigableElements for outdoor types (trail, path, clearing, etc.)
+- Checks DNA and node name for outdoor keywords
+- When outdoor detected, uses nature photography language:
+  - "Nature/landscape photography" instead of "Architectural photography"
+  - "Natural area in focus" instead of "Building exterior in focus"
+  - "Natural Environment:" instead of "Building/Site Exterior:"
+
+### Exterior Scenes & Perspective Flags (Dec 16)
 
 #### Problem Solved: --exterior Flag Not Working
 When using `GO_INSIDE glowing sculpture area --exterior`, niches were still getting `spaceType: "interior"` due to:
@@ -47,128 +106,27 @@ Users now have full control over scene perspective:
 /GOTO courtyard --open-air            # → spaceType: "open-air", roofType: "open-sky"
 ```
 
-#### Files Modified
-- `packages/backend/src/config/navigation.ts` - Added perspective flags, removed FURNISH
+## Current Focus
+
+- GO_INSIDE now defaults to interior (no more LLM guessing)
+- Pass-through regions can be selected for NEW_LOCATION
+- Outdoor locations get nature photography prompts
+- User can override any perspective with --exterior or --open-air flags
+
+## Key Files Modified (Dec 16)
+
+- `packages/backend/src/engine/navigation/commandBuilder.ts` - GO_INSIDE defaults to interior
+- `packages/frontend/src/components/ui/TreeView/TreeView.tsx` - Pass-through selection enabled
+- `packages/frontend/src/components/ui/TreeView/TreeView.module.css` - Pass-through styling
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - NEW_LOCATION on pass-through
+- `packages/backend/src/engine/nodeCreation/prompts/image/index.ts` - Outdoor detection for image prompts
+- `packages/backend/src/config/navigation.ts` - Perspective flags
 - `packages/backend/src/engine/navigation/analyzers/structureAnalyzer.ts` - Perspective override logic
 - `packages/frontend/src/features/spawn-input/SpawnInputBar/commandParser.ts` - Perspective flag parsing
 - `packages/frontend/src/features/spawn-input/SpawnInputBar/navigationCommands.ts` - Flag reconstruction
 
-## Recent Changes (2025-12-15)
-
-### DNA & Prompt Optimization (Dec 15, Latest)
-
-#### Goal: Reduce Pipeline Execution Time
-- Investigated DNA structure size and prompt verbosity to reduce tokens and speed up pipelines
-- Target commands: `NEW_WORLD`, `GOTO`, `GO_INSIDE`
-
-#### DNA Structure Optimization
-- **Removed redundant fields from dnaSchema.ts:**
-  - `materials_base` (duplicates `materials`)
-  - `mood_baseline` (duplicates `mood`)
-  - `soundscape_base` (duplicates `sounds`)
-- **Skip structural fields for Host/Region:**
-  - `navigableElements`, `dominantElements`, `uniqueIdentifiers` only for location/niche (not needed at city/district level)
-- **Fixed structure duplication in builder.ts:**
-  - Structural fields now stored at node ROOT level only, not in structure object
-
-#### Prompt Verbosity Optimization (Major Speed Win)
-Reduced all prompt files significantly:
-
-| File | Before | After | Reduction |
-|------|--------|-------|-----------|
-| `deepestNodeDNA.ts` | ~85 lines | ~75 lines | ~12% |
-| `parentChainDNA.ts` | ~290 lines | ~110 lines | **~62%** |
-| `structureAnalysis.ts` | ~250 lines | ~90 lines | **~64%** |
-| `nodeDNAGeneration.ts` | ~170 lines | ~75 lines | **~56%** |
-
-**Key optimizations:**
-- Removed ASCII box diagrams and long explanations
-- Condensed repeated form inheritance rules (3x → 1x)
-- Removed markdown tables, replaced with compact rule lists
-- Used compact JSON templates instead of verbose field descriptions
-
-#### Results
-- **NEW_WORLD pipeline: 24.25s → 19.97s** (~4.28s faster, 17.6% improvement)
-- Parent DNA Generation: 9.90s → 5.24s (**47% faster** - biggest win from parentChainDNA.ts optimization)
-- GO_INSIDE/GOTO expected to see similar improvements
-
-### Pipeline Optimization & Prompt Enhancer (Dec 15)
-
-#### Removed NavigableElements/Furnishing from Pipeline LLM
-- **Goal**: Make pipelines faster and cheaper by removing LLM-generated navigableElements and furnishing
-- **Change**: These are now user-controlled via the Prompt Enhancer
-- **Implementation**:
-  - Removed `navigableElements` and `furnishing` generation from `structureAnalysis.ts`
-  - Removed `includeFurnishing` parameter from `structureAnalyzer.ts`
-  - Updated `createNodePipeline.ts` to accept parsed enhancements from command
-  - Deleted `furnishingInstructions.ts` (content moved to enhancer template)
-
-#### New Prompt Enhancer Feature
-- **Purpose**: User clicks Enhance button to get AI-suggested navigable elements and furnishing
-- **Frontend**:
-  - Added `handleEnhance()` and `canEnhance()` to `useNavigationLogic.ts`
-  - Added Enhance button (sparkles icon) in `SpawnInputBar.tsx`
-  - Added `IconSparkles` to icons index
-- **Backend**:
-  - Created `promptEnhancer.ts` service
-  - Created `enhancerPromptTemplate.ts` with saved prompt text
-  - Added `POST /api/mzoo/navigation/enhance-prompt` endpoint
-  - Created `enhancementParser.ts` to parse "navigable elements:", "furnish:", "facade:" from commands
-
-### GO_INSIDE & Prompt Enhancer Improvements (Dec 15, Latest)
-
-#### Combined Entrance Target
-- **Problem**: GO_INSIDE needed both the structure name AND the entrance
-- **Fix**: `findEntrance()` now combines `dominantElements[0]` + `navigableElements[0]`
-- **Result**: `"the Lumina Arbor's spherical canopy via a small, rectangular door at the base of the trunk"`
-
-#### DNA Prompts - Ordering Instructions
-- All 4 DNA prompts now include:
-  - `dominantElements`: "FIRST: main enterable structure if any, then 3-4 other major features"
-  - `navigableElements`: "FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE"
-- **Files**: `locationDNA.ts`, `deepestNodeDNA.ts`, `nodeDNAGeneration.ts`, `structureAnalysis.ts`
-
-#### Contextual Prompt Enhancer
-- **Problem**: Enhancer focused on existing structure even when user specified destination (e.g., "a roof top bar")
-- **Fix**: Made enhancer contextual based on `destinationText` presence:
-  - If destination provided: Focus on that space, use location style as context only
-  - If empty: Use existing structure/entrance as target
-- **Example**: `GO_INSIDE a roof top bar` → Suggests bar furnishing matching location's arboreal style
-
-#### Prompt Enhancer - dominantElements Context
-- Added `dominantElements` to enhancer context (interface, template, route)
-- Enhancer now shows main structure and main entrance to LLM
-
-## Current Focus
-
-- Prompt optimization complete for all pipelines
-- Interior surfaces properly transform from facade materials
-- User can override any surface with explicit command text
-- GO_INSIDE now uses dominantElements[0] as target (main structure name)
-
-## Key Files Modified (GO_INSIDE & dominantElements)
-
-- `packages/backend/src/engine/navigation/handlers/basicMovement.ts` - findEntrance() uses dominantElements[0]
-- `packages/backend/src/services/mzoo/promptEnhancer.ts` - Added navigableElements to input interface
-- `packages/backend/src/engine/generation/prompts/enhancer/enhancerPromptTemplate.ts` - Shows existing entrances
-- `packages/backend/src/routes/mzoo/navigation.ts` - Passes navigableElements to enhancer
-- `packages/backend/src/engine/nodeCreation/prompts/dna/locationDNA.ts` - dominantElements ordering
-- `packages/backend/src/engine/generation/prompts/locations/deepestNodeDNA.ts` - dominantElements ordering
-- `packages/backend/src/engine/generation/prompts/locations/nodeDNAGeneration.ts` - dominantElements ordering
-- `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts` - dominantElements ordering
-
-## Key Files Modified (DNA/Prompt Optimization)
-
-- `packages/backend/src/engine/generation/prompts/shared/dnaSchema.ts` - Removed redundant fields
-- `packages/backend/src/engine/hierarchyAnalysis/types.ts` - Updated NodeDNA interface
-- `packages/backend/src/engine/generation/prompts/locations/deepestNodeDNA.ts` - Optimized
-- `packages/backend/src/engine/generation/prompts/locations/parentChainDNA.ts` - Major optimization
-- `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts` - Major optimization
-- `packages/backend/src/engine/generation/prompts/locations/nodeDNAGeneration.ts` - Major optimization
-- `packages/backend/src/services/worldTree/builder.ts` - Fixed duplication
-
 ## Next Steps
 
-- Test GO_INSIDE/GOTO with optimized prompts to measure time improvement
-- Implement `/SCENE_IMAGE` command for generating new images of existing characters
-- Further optimization: Consider combining DNA LLM calls into single request
+- Test GO_INSIDE with buildings to verify interior creation
+- Test /NEW_LOCATION on pass-through regions
+- Test outdoor location image prompts (forests, gardens, etc.)

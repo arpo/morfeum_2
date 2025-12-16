@@ -3,27 +3,25 @@
  * LLM-based intent classification + deterministic routing + slash commands
  */
 
-import { Router, Request, Response } from 'express';
-import { asyncHandler } from '../../middleware/errorHandler';
+import { Request, Response, Router } from 'express';
 import { HTTP_STATUS } from '../../config';
-import { NAVIGATION_COMMANDS, SLASH_COMMANDS, type NavigationCommand, type NodeType } from '../../config/navigation';
-import { classifyIntent, routeNavigation, buildIntentFromCommand, analyzeDestination } from '../../engine/navigation';
-import type { RouteOptions } from '../../engine/navigation';
-import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
-import { runCreateCharacterPipeline } from '../../engine/navigation/pipelines/createCharacterPipeline';
+import { NAVIGATION_COMMANDS, type NavigationCommand, type NodeType } from '../../config/navigation';
+import type { NavigationAnalysisResult, NavigationContext, RouteOptions } from '../../engine/navigation';
+import { buildIntentFromCommand, classifyIntent, routeNavigation } from '../../engine/navigation';
 import { findParentLocationNode } from '../../engine/navigation/navigationHelpers';
-import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
-import { sseService } from '../../services/SSEService';
-import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
-import { createNode } from '../../engine/nodeCreation/core/createNode';
-import { createHierarchy } from '../../engine/nodeCreation/core/createHierarchy';
-import { extractParentDNAContext } from '../../engine/nodeCreation/core/dnaInheritance';
-import { storageService } from '../../services/storage/storageService';
-import { generateImage } from '../../services/mzoo';
-import { getNodeImagePrompt } from '../../engine/nodeCreation/prompts/image';
-import mediaService from '../../services/media/mediaService';
+import { runCreateCharacterPipeline } from '../../engine/navigation/pipelines/createCharacterPipeline';
+import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import { parseEnhancements } from '../../engine/navigation/utils/enhancementParser';
+import { createNode } from '../../engine/nodeCreation/core/createNode';
+import { extractParentDNAContext } from '../../engine/nodeCreation/core/dnaInheritance';
+import { getNodeImagePrompt } from '../../engine/nodeCreation/prompts/image';
+import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
+import { asyncHandler } from '../../middleware/errorHandler';
+import mediaService from '../../services/media/mediaService';
+import { generateImage } from '../../services/mzoo';
 import { enhancePrompt } from '../../services/mzoo/promptEnhancer';
+import { sseService } from '../../services/SSEService';
+import { storageService } from '../../services/storage/storageService';
 
 const router = Router();
 
@@ -449,7 +447,7 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
     command: string;
     description?: string;
     parentId?: string;
-    flags: { createImage: boolean; backgroundTask: boolean };
+    flags: { createImage: boolean; backgroundTask: boolean; perspectiveOverride?: 'interior' | 'exterior' | 'open-air' };
   };
 
   // Validation
@@ -553,7 +551,8 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
           apiKey,
           parentId,
           parentContext,
-          createImage: flags.createImage
+          createImage: flags.createImage,
+          perspective: flags.perspectiveOverride  // Pass --exterior, --interior, --open-air flag
         }
       );
 

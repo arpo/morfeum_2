@@ -43,9 +43,9 @@ function deriveSpaceType(
 ): ScenePerspective | 'unknown' | null {
   switch (command) {
     case 'GO_INSIDE':
-      // GO_INSIDE perspective is now determined by LLM analysis
-      // based on parent location's spaceType and user's target
-      return null;
+      // GO_INSIDE means entering an enclosed space = interior by default
+      // User can override with --exterior or --open-air flags if needed
+      return 'interior';
     case 'GOTO':
       // GOTO perspective is determined by LLM analysis of the destination
       return null;

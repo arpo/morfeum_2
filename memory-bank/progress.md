@@ -25,7 +25,23 @@
 - Feature-based folder structure
 
 ### Recent Improvements (Nov-Dec 2025)
-- **Exterior Scenes & Perspective Flags (Dec 16, Latest):**
+- **GO_INSIDE Default Interior Fix (Dec 16, Latest):**
+  - **Problem**: GO_INSIDE on buildings was creating exterior courtyards instead of entering the building interior
+  - **Root cause**: `commandBuilder.ts` returned `null` for GO_INSIDE perspective, letting LLM guess (incorrectly)
+  - **Fix**: Changed GO_INSIDE to return `'interior'` by default in `deriveSpaceType()`
+  - **Result**: `/GO_INSIDE` → always interior; `/GO_INSIDE --exterior` → user can override
+  - Key file: `commandBuilder.ts`
+- **Pass-Through Region Selection (Dec 16):**
+  - Pass-through regions can now be selected in tree view
+  - `/NEW_LOCATION` command works on pass-through regions
+  - Other commands still blocked on pass-through regions
+  - Key files: `TreeView.tsx`, `TreeView.module.css`, `useNavigationLogic.ts`
+- **Outdoor Location Image Prompts (Dec 16):**
+  - Added `isOutdoorLocation()` detection in `nodeCreation/prompts/image/index.ts`
+  - Outdoor locations use nature photography language instead of building language
+  - "Nature/landscape photography" instead of "Architectural photography"
+  - Key file: `image/index.ts`
+- **Exterior Scenes & Perspective Flags (Dec 16):**
   - **Fixed `--exterior`, `--interior`, `--open-air` flags**: Users can now explicitly control scene perspective
   - **Root cause**: Frontend was silently dropping unrecognized `--` flags in command parsing
   - **Solution**: Added perspective flags to `COMMAND_FLAGS`, enhanced frontend parsing, added perspective override logic

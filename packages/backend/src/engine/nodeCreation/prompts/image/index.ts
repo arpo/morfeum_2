@@ -96,17 +96,53 @@ Professional photography, detailed urban/landscape scene, atmospheric perspectiv
 }
 
 /**
+ * Detect if a location node represents an outdoor/natural area rather than a building
+ */
+function isOutdoorLocation(node: Node): boolean {
+  // Check navigableElements for outdoor types
+  const outdoorNavTypes = ['trail', 'path', 'clearing', 'bridge', 'cave', 'shore', 'ruins'];
+  const hasOutdoorNav = node.navigableElements?.some(el => 
+    outdoorNavTypes.includes(el.type)
+  ) || false;
+  
+  // Check DNA for natural/outdoor indicators
+  const dna = node.dna || {};
+  const lowerLooks = (dna.looks || '').toLowerCase();
+  const outdoorIndicators = ['forest', 'trees', 'grove', 'meadow', 'beach', 'shore', 'park', 'garden', 'trail', 'mountain', 'river', 'lake', 'clearing', 'wilderness'];
+  const hasOutdoorDNA = outdoorIndicators.some(ind => lowerLooks.includes(ind));
+  
+  // Check node name for outdoor keywords
+  const lowerName = (node.name || '').toLowerCase();
+  const hasOutdoorName = outdoorIndicators.some(ind => lowerName.includes(ind));
+  
+  return hasOutdoorNav || hasOutdoorDNA || hasOutdoorName;
+}
+
+/**
  * Generate image prompt for a location node
  */
 export function locationImagePrompt(node: Node): string {
   const dna = node.dna || {};
-  const camera = CAMERA_CONFIGS.location;
+  const isOutdoor = isOutdoorLocation(node);
+  
+  // Different camera config for outdoor vs building locations
+  const camera = isOutdoor ? {
+    style: 'Nature/landscape photography',
+    composition: 'Natural area in focus, surrounding environment visible',
+    angle: 'Ground level or slightly elevated, showing depth and scale of landscape',
+  } : CAMERA_CONFIGS.location;
+  
+  // Different section labels and closing text
+  const sectionLabel = isOutdoor ? 'Natural Environment' : 'Building/Site Exterior';
+  const closingText = isOutdoor 
+    ? 'Nature photography, natural outdoor setting, sense of wilderness, environmental depth, natural lighting through foliage.'
+    : 'Architectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.';
 
   return `${node.name}. ${node.description}
 
 ${camera.style}. ${camera.composition}. ${camera.angle}.
 
-Building/Site Exterior:
+${sectionLabel}:
 ${dna.looks || ''}
 
 Materials and Surfaces:
@@ -121,7 +157,7 @@ Light: ${dna.ambient || 'natural'}
 Atmosphere: ${dna.atmosphere || ''}
 Mood: ${dna.mood || ''}
 
-Architectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.`;
+${closingText}`;
 }
 
 /**

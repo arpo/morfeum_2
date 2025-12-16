@@ -81,7 +81,8 @@ export async function createNode(
     apiKey,
     description,
     nodeType,
-    parentContext
+    parentContext,
+    perspective  // Pass perspective for outdoor location detection
   );
 
   // Step 2: Build the node

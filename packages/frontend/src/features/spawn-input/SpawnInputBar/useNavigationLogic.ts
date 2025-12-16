@@ -64,8 +64,8 @@ export function useNavigationLogic() {
         return;
       }
 
-      // Block commands on pass-through nodes
-      if (currentNode.isPassThrough) {
+      // Block commands on pass-through nodes (except NEW_LOCATION which creates children)
+      if (currentNode.isPassThrough && command !== 'NEW_LOCATION') {
         setErrorMessage('Commands cannot be run on pass-through regions. Navigate to a location first.');
         setMovementInput('');
         setTimeout(() => setErrorMessage(null), 5000);

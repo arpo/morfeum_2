@@ -40,7 +40,7 @@ export function getNodeDNAPrompt(
     case 'region':
       return regionDNAPrompt(description, parentContext);
     case 'location':
-      return locationDNAPrompt(description, parentContext);
+      return locationDNAPrompt(description, parentContext, perspective);
     case 'niche':
       return nicheDNAPrompt(description, perspective, parentContext);
     default:

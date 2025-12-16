@@ -1,21 +1,44 @@
 /**
  * Location DNA Generation Prompt
  * 
- * Generates DNA for location nodes (buildings, sites, points of interest).
- * Location nodes inherit from region/host and focus on architectural details.
+ * Generates DNA for location nodes (buildings, sites, points of interest, OR outdoor areas).
+ * Location nodes inherit from region/host and focus on architectural details or natural features.
  */
 
 import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
-import type { ParentDNAContext } from '../../types';
+import type { ParentDNAContext, ScenePerspective } from '../../types';
+
+/**
+ * Detect if description suggests an outdoor/natural area rather than a building
+ */
+function isOutdoorArea(description: string): boolean {
+  const lowerDesc = description.toLowerCase();
+  const outdoorKeywords = [
+    'forest', 'woods', 'grove', 'clearing', 'trail', 'path',
+    'park', 'garden', 'meadow', 'field', 'plains',
+    'beach', 'shore', 'coast', 'bay', 'cove',
+    'mountain', 'hill', 'cliff', 'canyon', 'valley',
+    'lake', 'river', 'stream', 'waterfall', 'pond',
+    'desert', 'dunes', 'oasis',
+    'swamp', 'marsh', 'wetland', 'bog',
+    'plaza', 'square', 'courtyard', 'marketplace',
+    'ruins', 'cemetery', 'graveyard',
+    'jungle', 'rainforest', 'savanna', 'tundra'
+  ];
+  return outdoorKeywords.some(keyword => lowerDesc.includes(keyword));
+}
 
 /**
  * Generate DNA prompt for a location node
  * 
  * @param description - User description of the location
  * @param parentContext - FULL DNA context inherited from parent region
+ * @param perspective - Scene perspective (exterior, interior, open-air)
  * @returns Prompt string for LLM
  */
-export function locationDNAPrompt(description: string, parentContext?: ParentDNAContext): string {
+export function locationDNAPrompt(description: string, parentContext?: ParentDNAContext, perspective?: ScenePerspective): string {
+  const isOutdoor = isOutdoorArea(description);
+  const isExteriorPerspective = perspective === 'exterior' || perspective === 'open-air';
   // Build rich parent context with name, description, and full DNA
   const contextSection = parentContext ? `
 PARENT REGION: ${parentContext.name || 'Unknown'} (${parentContext.type || 'region'})
@@ -42,14 +65,49 @@ PARENT STRUCTURE:
 - Unique Identifiers: ${parentContext.uniqueIdentifiers?.join(', ') || 'Not specified'}
 ` : '';
 
-  return `You are creating the DNA for a LOCATION node - a specific building or site within a region.
+  // Determine if this should be treated as an outdoor location
+  const treatAsOutdoor = isOutdoor && isExteriorPerspective;
+  
+  // Different role description based on location type
+  const roleSection = treatAsOutdoor ? `You are creating the DNA for an OUTDOOR LOCATION node - a natural area, park, plaza, or outdoor point of interest.
+
+OUTDOOR LOCATION ROLE:
+- A specific outdoor area (e.g., "Black Forest Clearing", "Central Park", "Harbor Plaza", "Misty Falls")
+- Inherits style from parent region/host
+- Describes the outdoor environment itself - NOT a building within it
+- NavigableElements are paths, trails, clearings, or structures WITHIN the area
+- Children (niches) represent specific spots or structures within this outdoor location
+
+IMPORTANT: Create the outdoor area ITSELF, not a building inside it.
+- "black forest" → Create a forest clearing/area named something like "The Whispering Pines" or "Blackwood Grove"
+- "beach" → Create a beach area named something like "Moonlit Shore" or "Driftwood Cove"
+- "park" → Create the park itself, not a building in the park` 
+  : `You are creating the DNA for a LOCATION node - a specific building or site within a region.
 
 LOCATION ROLE:
 - A specific place (e.g., "The Anchor Pub" in "Camden", "Central Tower" in "Industrial District")
 - Inherits style from parent region/host
 - Defines the exterior appearance of a building/site
 - NavigableElements are CRITICAL here - doors, passages, stairs that lead inside
-- Children (niches) represent spaces within this location
+- Children (niches) represent spaces within this location`;
+
+  // Different navigable elements guidance
+  const navigableGuidance = treatAsOutdoor 
+    ? `"navigableElements": [
+    {"type": "path|trail|clearing|bridge|cave|structure|ruins|shore", "position": "location in scene (left, center, right, foreground, background)", "description": "brief description of what it is and where it leads"}
+  ],
+  NOTE: NavigableElements for outdoor areas are paths, trails, clearings, caves, or small structures.`
+    : `"navigableElements": [
+    {"type": "door|passage|stairs|archway|portal|window|balcony|gate", "position": "location in scene (left, center, right, foreground, background)", "description": "brief description of what it is and where it leads"}
+  ],
+  NOTE: FIRST navigableElement should be the MAIN ENTRANCE used for GO_INSIDE command.`;
+
+  // Different dominant elements guidance  
+  const dominantGuidance = treatAsOutdoor
+    ? `"dominantElements": ["Major natural features like ancient trees, rock formations, water features, clearings"]`
+    : `"dominantElements": ["FIRST: main enterable building/structure if any, then 3-4 other major features"]`;
+
+  return `${roleSection}
 
 USER DESCRIPTION:
 ${description}
@@ -57,14 +115,11 @@ ${contextSection}
 
 OUTPUT JSON:
 {
-  "name": "If a REAL landmark is mentioned (e.g., 'Big Ben', 'The British Museum'), use the EXACT name. For generic descriptions (e.g., 'a pub', 'a shop'), create an evocative, memorable name.",
-  "description": "2-3 sentence description of this building/site",
-  "navigableElements": [
-    {"type": "door|passage|stairs|archway|portal|window|balcony|gate", "position": "location in scene (left, center, right, foreground, background)", "description": "brief description of what it is and where it leads"}
-  ],
-  NOTE: FIRST navigableElement should be the MAIN ENTRANCE used for GO_INSIDE command.
-  "dominantElements": ["FIRST: main enterable building/structure if any, then 3-4 other major features"],
-  "uniqueIdentifiers": ["3-5 distinctive features that make this building recognizable"],
+  "name": "If a REAL landmark is mentioned (e.g., 'Big Ben', 'Central Park'), use the EXACT name. For generic descriptions, create an evocative, memorable name that matches the type (forest, beach, park, building, etc.).",
+  "description": "2-3 sentence description of this ${treatAsOutdoor ? 'outdoor area' : 'building/site'}",
+  ${navigableGuidance}
+  ${dominantGuidance},
+  "uniqueIdentifiers": ["3-5 distinctive features that make this ${treatAsOutdoor ? 'area' : 'building'} recognizable"],
   "searchDesc": "75-100 char search description with type and key features",
   "slug": "kebab-case-name",
   "dna": {

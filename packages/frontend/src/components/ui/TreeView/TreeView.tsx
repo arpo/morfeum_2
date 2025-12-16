@@ -61,10 +61,6 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
 
   const handleSelect = (e: React.MouseEvent) => {
     e.stopPropagation();
-    // Block selection of pass-through nodes (but allow expand/collapse)
-    if (item.isPassThrough) {
-      return;
-    }
     if (onSelect) {
       onSelect(item);
     }
