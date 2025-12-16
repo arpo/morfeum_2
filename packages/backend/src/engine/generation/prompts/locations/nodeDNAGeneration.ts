@@ -10,12 +10,23 @@ export function nodeDNAGeneration(
   nodeName: string,
   nodeType: string,
   nodeDescription: string,
-  parentContext?: ParentContext
+  parentContext?: ParentContext,
+  options?: { isGotoCommand?: boolean }
 ): string {
   const needsStructuralFields = nodeType === 'location' || nodeType === 'niche' || nodeType === 'detail';
   
+  // For GOTO commands, parent context is STYLE ONLY (don't let parent content dominate)
   const contextSection = parentContext 
-    ? `
+    ? options?.isGotoCommand 
+      ? `
+STYLE CONTEXT (for visual consistency only - do NOT copy parent content):
+- Architectural tone: ${parentContext.architectural_tone || 'none'}
+- Palette: ${parentContext.palette_bias || 'none'}
+
+IMPORTANT: Create the location described in USER INPUT.
+The parent context provides STYLE/ATMOSPHERE only, not what to create.
+`
+      : `
 PARENT CONTEXT (inherit unless overriding):
 - Looks: ${parentContext.looks || 'none'}
 - Materials: ${parentContext.materials || 'none'}

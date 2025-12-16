@@ -11,7 +11,7 @@ import { classifyIntent, routeNavigation, buildIntentFromCommand, analyzeDestina
 import type { RouteOptions } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import { runCreateCharacterPipeline } from '../../engine/navigation/pipelines/createCharacterPipeline';
-import { findParentLocationNode } from '../../engine/navigation/navigationHelpers';
+import { findParentLocationNode, findParentRegionNode } from '../../engine/navigation/navigationHelpers';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
@@ -219,15 +219,78 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
     } : undefined;
 
     // For GOTO: Send response immediately, run analysis in pipeline
+    // Context-aware: from niche = sibling niche, from location = sibling location
     if (command === 'GOTO' && cleanText) {
       console.log(`[GOTO DEBUG] Raw text received: "${text}"`);
+      console.log(`[GOTO DEBUG] Current node type: ${context.currentNode.type}`);
       console.log(`[GOTO DEBUG] Parsed: cleanText="${cleanText}", enhancements=${JSON.stringify(parsedEnhancements)}`);
       
       const navigationId = `nav-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       const eventsUrl = `/api/mzoo/navigation/events/${navigationId}`;
       
-      // Get parent location for sibling niche creation (not current niche)
-      const { parentLocationId } = findParentLocationNode(context);
+      // Load worldsData for proper DNA resolution
+      const worldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };
+      
+      // Context-aware parent resolution
+      const isFromLocation = context.currentNode.type === 'location';
+      let parentNodeId: string;
+      let nodeType: 'niche' | 'location';
+      let action: 'create_niche' | 'create_location';
+      let resolvedParentDNA: any = null;
+      
+      if (isFromLocation) {
+        // GOTO from location: create sibling location under parent region
+        const { parentRegionId } = findParentRegionNode(context);
+        parentNodeId = parentRegionId;
+        nodeType = 'location';
+        action = 'create_location';
+        console.log(`[GOTO DEBUG] From location - creating sibling location under region ${parentRegionId}`);
+        
+        // CRITICAL: Resolve CASCADED DNA from region (using proper functions)
+        // This ensures parent DNA includes inherited values from host
+        const parentRegionNode = worldsData.nodes[parentRegionId];
+        if (parentRegionNode) {
+          // Check if region is pass-through (use host DNA instead)
+          const isPassThrough = parentRegionNode.isPassThrough || 
+            (parentRegionNode.type === 'region' && (!parentRegionNode.dna || Object.keys(parentRegionNode.dna).length === 0));
+          
+          if (isPassThrough) {
+            // Find host and use its DNA
+            const hostNode = findHostForRegion(parentRegionId, worldsData.worldTrees, worldsData.nodes);
+            if (hostNode?.dna) {
+              resolvedParentDNA = hostNode.dna;
+              console.log(`[GOTO DEBUG] Region is pass-through, using HOST DNA from "${hostNode.name}"`);
+            }
+          } else if (parentRegionNode.dna) {
+            resolvedParentDNA = parentRegionNode.dna;
+            console.log(`[GOTO DEBUG] Using REGION DNA from "${parentRegionNode.name}"`);
+          }
+        }
+      } else {
+        // GOTO from niche: create sibling niche under parent location
+        const { parentLocationId } = findParentLocationNode(context);
+        parentNodeId = parentLocationId;
+        nodeType = 'niche';
+        action = 'create_niche';
+        console.log(`[GOTO DEBUG] From niche - creating sibling niche under location ${parentLocationId}`);
+        
+        // Resolve DNA from parent location
+        const parentLocationNode = worldsData.nodes[parentLocationId];
+        if (parentLocationNode?.dna) {
+          resolvedParentDNA = parentLocationNode.dna;
+          console.log(`[GOTO DEBUG] Using LOCATION DNA from "${parentLocationNode.name}"`);
+        }
+      }
+      
+      // Log resolved DNA for debugging
+      if (resolvedParentDNA) {
+        console.log(`[GOTO DEBUG] Resolved parent DNA:`);
+        console.log(`  - architectural_tone: ${resolvedParentDNA.architectural_tone || 'null'}`);
+        console.log(`  - palette_bias: ${resolvedParentDNA.palette_bias || 'null'}`);
+        console.log(`  - looks: ${(resolvedParentDNA.looks || 'null').substring(0, 60)}...`);
+      } else {
+        console.log(`[GOTO DEBUG] WARNING: No parent DNA resolved!`);
+      }
       
       // Use navigationGoto pipeline type (includes destination_analysis step)
       const steps = getStepsForPipeline('navigationGoto');
@@ -247,10 +310,10 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
         context,
         intent,
         decision: {
-          action: 'create_niche',
-          newNodeType: 'niche',
-          reasoning: 'GOTO command - destination analysis pending',
-          parentNodeId: parentLocationId,  // Use parent location for sibling creation
+          action,
+          newNodeType: nodeType,
+          reasoning: `GOTO command from ${context.currentNode.type} - destination analysis pending`,
+          parentNodeId,
           newNodeName: cleanText
         }
       };
@@ -267,14 +330,60 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       // Run pipeline asynchronously with destination analysis as first step
       (async () => {
         try {
-          await runCreateNodePipeline(
+          const result = await runCreateNodePipeline(
             initialResult.decision,
             context,
             intent,
             apiKey,
-            { gotoText: cleanText, parsedEnhancements },  // Pass clean text and parsed enhancements
+            { 
+              gotoText: cleanText, 
+              parsedEnhancements, 
+              isFromLocation,
+              nodeType: isFromLocation ? 'location' : 'niche',  // Pass correct node type
+              resolvedParentDNA  // CRITICAL: Pass pre-resolved DNA to avoid empty parent DNA
+            },
             navigationId
           );
+          
+          // Save node to storage and update worldTrees
+          if (result.node) {
+            const worldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };
+            
+            // Save node to nodes collection
+            worldsData.nodes[result.node.id] = result.node;
+            
+            // Add to worldTrees under parent
+            const addChildToTree = (tree: any[], targetId: string, childEntry: any): boolean => {
+              for (const treeNode of tree) {
+                if (treeNode.id === targetId) {
+                  if (!treeNode.children) treeNode.children = [];
+                  treeNode.children.push(childEntry);
+                  return true;
+                }
+                if (treeNode.children && addChildToTree(treeNode.children, targetId, childEntry)) {
+                  return true;
+                }
+              }
+              return false;
+            };
+            
+            const childEntry = {
+              id: result.node.id,
+              type: nodeType,
+              children: []
+            };
+            
+            const added = addChildToTree(worldsData.worldTrees, parentNodeId, childEntry);
+            if (added) {
+              console.log(`[GOTO] Added ${nodeType} "${result.node.name}" as child of ${parentNodeId}`);
+            } else {
+              console.log(`[GOTO] Warning: Could not find parent ${parentNodeId} in worldTrees`);
+            }
+            
+            // Save updated data
+            await storageService.saveWorlds(worldsData);
+            console.log(`[GOTO] Saved node to storage: ${result.node.id}`);
+          }
         } catch (pipelineError) {
           console.error('[GOTO COMMAND ERROR]', pipelineError);
         } finally {
@@ -528,21 +637,42 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
       });
 
       // Load parent DNA context if parentId is provided
+      // For pass-through regions, traverse up to find ancestor with DNA
       let parentContext;
       if (parentId) {
         const worldsData = await storageService.loadWorlds();
         const parentNode = worldsData?.nodes?.[parentId];
         if (parentNode) {
-          // Pass FULL parent node data including name, description, structure
-          parentContext = extractParentDNAContext(parentNode.dna, {
-            name: parentNode.name,
-            description: parentNode.description,
-            type: parentNode.type,
-            dominantElements: parentNode.dominantElements || parentNode.structure?.dominantElements,
-            uniqueIdentifiers: parentNode.uniqueIdentifiers || parentNode.structure?.uniqueIdentifiers,
-            searchDesc: parentNode.searchDesc,
-          });
-          console.log(`[CREATE-NODE] Loaded FULL parent context from ${parentNode.name} (${parentNode.type})`);
+          // Check if parent is a pass-through region (empty DNA)
+          const isPassThrough = parentNode.isPassThrough || 
+            (parentNode.type === 'region' && (!parentNode.dna || Object.keys(parentNode.dna).length === 0));
+          
+          if (isPassThrough && worldsData?.worldTrees) {
+            // Find the host (grandparent) by traversing worldTrees
+            const hostNode = findHostForRegion(parentId, worldsData.worldTrees, worldsData.nodes);
+            if (hostNode) {
+              console.log(`[CREATE-NODE] Parent is pass-through region, using host DNA from ${hostNode.name}`);
+              parentContext = extractParentDNAContext(hostNode.dna, {
+                name: hostNode.name,
+                description: hostNode.description,
+                type: hostNode.type,
+                dominantElements: hostNode.dominantElements || hostNode.structure?.dominantElements,
+                uniqueIdentifiers: hostNode.uniqueIdentifiers || hostNode.structure?.uniqueIdentifiers,
+                searchDesc: hostNode.searchDesc,
+              });
+            }
+          } else {
+            // Normal case: use parent's DNA directly
+            parentContext = extractParentDNAContext(parentNode.dna, {
+              name: parentNode.name,
+              description: parentNode.description,
+              type: parentNode.type,
+              dominantElements: parentNode.dominantElements || parentNode.structure?.dominantElements,
+              uniqueIdentifiers: parentNode.uniqueIdentifiers || parentNode.structure?.uniqueIdentifiers,
+              searchDesc: parentNode.searchDesc,
+            });
+            console.log(`[CREATE-NODE] Loaded FULL parent context from ${parentNode.name} (${parentNode.type})`);
+          }
         }
       }
 
@@ -891,6 +1021,25 @@ router.post('/enhance-prompt', asyncHandler(async (req: Request, res: Response) 
     });
   }
 }));
+
+/**
+ * Helper: Find the host node for a given region ID by traversing worldTrees
+ * Used for pass-through regions to get DNA from the host
+ */
+function findHostForRegion(regionId: string, worldTrees: any[], nodes: Record<string, any>): any | null {
+  for (const tree of worldTrees) {
+    // Check if this tree's host has the region as a child
+    if (tree.children) {
+      for (const child of tree.children) {
+        if (child.id === regionId) {
+          // Found the region, return the host node
+          return nodes[tree.id];
+        }
+      }
+    }
+  }
+  return null;
+}
 
 /**
  * Helper: Detect perspective from node data

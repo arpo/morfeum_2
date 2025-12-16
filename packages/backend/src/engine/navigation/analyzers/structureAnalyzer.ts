@@ -18,6 +18,13 @@ export interface ParsedEnhancements {
   furnishing?: string[];
 }
 
+/** Options for structure analysis */
+export interface StructureAnalysisOptions {
+  parsedEnhancements?: ParsedEnhancements;
+  /** True for GOTO command - uses destination-focused prompt */
+  isGotoCommand?: boolean;
+}
+
 /**
  * Analyze structure using LLM to determine physical/spatial properties
  * 
@@ -26,6 +33,7 @@ export interface ParsedEnhancements {
  * @param context - Navigation context including current node and parent location
  * @param perspective - Optional perspective override. If null/undefined, LLM determines it.
  * @param parsedEnhancements - Optional pre-parsed navigable elements and furnishing from command
+ * @param options - Additional options including isGotoCommand
  * @returns StructureAnalysis with physical structure data (includes LLM-determined perspective)
  */
 export async function analyzeStructure(
@@ -33,14 +41,21 @@ export async function analyzeStructure(
   userPrompt: string,
   context: NavigationContext,
   perspective?: ScenePerspective | null,
-  parsedEnhancements?: ParsedEnhancements
+  parsedEnhancements?: ParsedEnhancements,
+  options?: StructureAnalysisOptions
 ): Promise<StructureAnalysis> {
-  // Generate the analysis prompt
+  // Generate the analysis prompt - use GOTO-specific prompt if isGotoCommand
   const prompt = structureAnalysisPrompt({
     userPrompt,
     context,
-    perspective
+    perspective,
+    isGotoCommand: options?.isGotoCommand
   });
+  
+  // Log which prompt type is being used
+  if (options?.isGotoCommand) {
+    console.log(`[StructureAnalyzer] Using GOTO-specific prompt (destination: "${userPrompt}")`);
+  }
 
   // Call LLM for structure analysis
   const response = await mzooService.generateText(

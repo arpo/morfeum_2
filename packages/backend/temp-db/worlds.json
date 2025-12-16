@@ -97,47 +97,189 @@
       ],
       "primaryMedia": "media-1765877504838-q6bjfkbxc"
     },
-    "niche-1765877533709-x8tw0egsu": {
-      "id": "niche-1765877533709-x8tw0egsu",
+    "location-1765913595061-ays6oks5v": {
+      "id": "location-1765913595061-ays6oks5v",
+      "type": "location",
+      "name": "The Dark Park",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skeletal, contorted trees with bare branches reaching like grasping hands. Overgrown weeds and moss choke the ground. Faint, broken pathways wind through the gloom.",
+        "colorsAndLighting": "Deep desaturated blues, grays, and sickly greens. Minimal, weak moonlight filtering through a dense canopy or fog. Shadows are deep and oppressive.",
+        "atmosphere": "Still, heavy, and damp air. A profound sense of quiet, broken only by the creak of branches. A palpable chill that has nothing to do with temperature.",
+        "materials": "Rotting wood, damp earth, moss-covered stone, stagnant water.",
+        "mood": "Melancholy, eerie, foreboding, desolate, haunted.",
+        "sounds": "Whispering wind, rustling leaves (if any), distant creaking, unnatural silence.",
+        "spatialLayout": "Sprawling and open, yet feels claustrophobic due to the oppressive atmosphere and dense, spectral foliage.",
+        "primary_surfaces": "Damp earth, gnarled tree bark, decaying wood.",
+        "secondary_surfaces": "Moss-covered stone, murky water, tangled undergrowth.",
+        "accent_features": "Twisted branches, skeletal forms of trees, faint hints of broken structures.",
+        "dominant": "Desaturated Charcoal Gray",
+        "secondary": "Muted Olive Green",
+        "accent": "Faded Bone White",
+        "ambient": "Twilight",
+        "genre": "Gothic Horror",
+        "architectural_tone": "Decay and Desolation",
+        "cultural_tone": "Lingering Spirits and Lost Souls",
+        "palette_bias": "Desaturated and Muted",
+        "flora_base": "Bare, skeletal trees, thorny bushes, moss, and fungi",
+        "fauna_base": "Unseen and Whispering"
+      },
+      "primaryMedia": "media-1765913595060-tzqwscjut",
+      "description": "A desolate and shadow-laden park, where the trees themselves seem to possess a ghostly, spectral quality, their branches contorted into unsettling shapes against the perpetually dim sky.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "spatialLayout": "A sprawling, shadowy park characterized by gnarled, spectral trees. The atmosphere is heavy with a sense of desolation, with winding, overgrown paths barely visible in the dim light.",
+        "requiredElements": [
+          "ghostlike trees"
+        ],
+        "dominantElements": [
+          "gnarled trees",
+          "overgrown paths",
+          "shadows"
+        ],
+        "uniqueIdentifiers": [
+          "eerie atmosphere",
+          "spectral trees"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "the overgrown path leading into the park",
+          "description": "A faint, weed-choked path hinting at forgotten routes."
+        }
+      ],
+      "dominantElements": [
+        "gnarled trees",
+        "overgrown paths",
+        "shadows"
+      ],
+      "uniqueIdentifiers": [
+        "eerie atmosphere",
+        "spectral trees"
+      ],
+      "searchDesc": "Dark park with spectral trees, overgrown paths, and a palpable sense of decay.",
+      "slug": "the-dark-park-with-ghostlike-trees"
+    },
+    "location-1765913645065-6uzaqrt2q": {
+      "id": "location-1765913645065-6uzaqrt2q",
+      "type": "location",
+      "name": "The Playground",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Rusty metal structures, cracked and faded plastic, patchy weeds, broken asphalt.",
+        "colorsAndLighting": "Desaturated earth tones, rust browns, muted grays, and faded blues/reds. Overcast, dim light filtering through.",
+        "atmosphere": "Still and quiet, with a faint, metallic tang in the air. A palpable sense of neglect and absence.",
+        "materials": "Rusted steel, brittle plastic, cracked asphalt, dry earth, weeds.",
+        "mood": "Melancholy, nostalgic, eerie, desolate.",
+        "sounds": "Creaking metal, rustling weeds, distant wind, faint echoes of children's laughter.",
+        "spatialLayout": "Open, yet fragmented, with distinct areas for different play structures.",
+        "primary_surfaces": "Rusted metal, cracked asphalt.",
+        "secondary_surfaces": "Faded plastic, dry soil, overgrown weeds.",
+        "accent_features": "Peeling paint, faded graffiti, scattered debris.",
+        "dominant": "Muted Brown (rust)",
+        "secondary": "Desaturated Gray",
+        "accent": "Faded Red/Blue",
+        "ambient": "Dim, overcast",
+        "genre": "Gothic Horror",
+        "architectural_tone": "Decay and Desolation",
+        "cultural_tone": "childhood, forgotten",
+        "palette_bias": "Desaturated and Muted",
+        "flora_base": "Weeds, dry grasses",
+        "fauna_base": "Unseen and Whispering"
+      },
+      "primaryMedia": "media-1765913645064-ptbw01rir",
+      "description": "An abandoned playground, a testament to forgotten childhood joys, now reclaimed by decay and desolation. The once vibrant equipment stands as skeletal remains against a muted, desaturated sky.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "An open, sprawling area designed for recreation, featuring scattered, weathered play equipment. Paths are cracked and overgrown, with pockets of debris collecting in corners.",
+        "requiredElements": [
+          "playground"
+        ],
+        "dominantElements": [
+          "swings",
+          "slides",
+          "climbing frames",
+          "open ground"
+        ],
+        "uniqueIdentifiers": [
+          "rusted metal",
+          "chipped paint",
+          "overgrown vegetation"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "through a gap in the rusted fence",
+          "description": "An opening in the chain-link fence, bent and twisted."
+        }
+      ],
+      "dominantElements": [
+        "swings",
+        "slides",
+        "climbing frames",
+        "open ground"
+      ],
+      "uniqueIdentifiers": [
+        "rusted metal",
+        "chipped paint",
+        "overgrown vegetation"
+      ],
+      "searchDesc": "An abandoned, decaying playground with rusty swings and cracked slides, overgrown with weeds.",
+      "slug": "the-playground"
+    },
+    "niche-1765913689563-m0gzpm8i0": {
+      "id": "niche-1765913689563-m0gzpm8i0",
       "type": "niche",
-      "name": "Grand Hall",
+      "name": "Blackwood Manor Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, high-ceilinged hall, dimly lit, with the echoes of former opulence now choked by dust and decay. Cobwebs drape like macabre decorations from ornate fixtures and cracked plaster.",
-        "colorsAndLighting": "Deep, desaturated shadows dominate, punctuated by weak shafts of dusty light filtering through grimy, leaded windows. The palette is a symphony of muted greys, deep browns, and the occasional dull gleam of tarnished metal.",
-        "atmosphere": "Heavy, stagnant air, cool and damp, carrying the faint scent of mildew and age. A profound stillness pervades, broken only by the creaks and groans of the old house.",
-        "materials": "Cracked plaster walls, dark stained wood paneling, wrought iron fixtures, dusty velvet draperies, and stone flagging.",
-        "mood": "Melancholy, foreboding, and lonely. A sense of grandeur lost and forgotten.",
-        "sounds": "Creaking wood, dripping water, distant wind, faint whispers of the past.",
-        "spatialLayout": "A grand, rectangular hall with a high ceiling, featuring a central void leading to a prominent staircase at the rear.",
-        "primary_surfaces": "Cracked plaster, dark wood paneling, rough stone floor",
-        "secondary_surfaces": "Dusty velvet, tarnished brass, cobweb-laden wood trim",
-        "accent_features": "Faded tapestries, ornate but broken chandelier, skeletal furniture covered in sheets",
-        "dominant": "deep charcoal grey",
-        "secondary": "dull, aged brown",
-        "accent": "tarnished brass",
-        "ambient": "dim, dusty twilight",
+        "looks": "A towering, three-story Victorian structure with steeply pitched gables, ornate but decaying gingerbread trim, protruding bay windows, and a prominent central gable. The scale is imposing and designed to intimidate.",
+        "colorsAndLighting": "Cool, desaturated tones dominate, with dark earth tones forming the base. Light is dim, diffused by grimy windows and casting long, unsettling shadows. Moonlight filters weakly through gaps in the roof.",
+        "atmosphere": "Stagnant air, heavy with the scent of dust, mold, and decay. The temperature is unnaturally cool, even on a warm day. An almost imperceptible stillness pervades, broken only by the creak of shifting timbers.",
+        "materials": "Dark, weathered wood siding, crumbling brick foundations, rusted ironwork. Textures are rough, splintered, and slick with moss and dampness. Interior plaster is cracked and peeling, revealing dark laths.",
+        "mood": "Melancholy, oppressive, foreboding, spectral.",
+        "sounds": "Wind whistling through broken panes, distant creaks, rustling leaves, faint whispers.",
+        "spatialLayout": "Rectangular structure with asymmetrical protrusions like bay windows and gables, creating a maze-like exterior and potentially complex interior.",
+        "primary_surfaces": "Weathered wood siding, crumbling brick, peeling plaster.",
+        "secondary_surfaces": "Moss, damp patches, rusted iron, grimy glass.",
+        "accent_features": "Decaying gingerbread trim, warped window frames, a missing turret spire.",
+        "dominant": "Deep Charcoal Grey",
+        "secondary": "Muted Forest Green",
+        "accent": "Rust Orange",
+        "ambient": "Muted Twilight",
         "genre": null,
         "architectural_tone": "dilapidated Victorian Gothic",
         "cultural_tone": "Abandoned residence, once belonging to wealthy but now forgotten inhabitants.",
         "palette_bias": "cool desaturated tones, dark earth tones",
-        "flora_base": "gnarled trees, dead bushes, thick ivy",
-        "fauna_base": "None"
+        "flora_base": "overgrown ivy, moss, tangled vines",
+        "fauna_base": "spiders, rodents, nesting birds (in decay)"
       },
-      "primaryMedia": "media-1765877533708-bwnsamjgw",
-      "description": "The main hall of Blackwood Manor, a vast space that speaks of former grandeur, now muted by neglect.",
+      "primaryMedia": "media-1765913689563-snwd5s4f8",
+      "description": "The interior of Blackwood Manor is a testament to its former grandeur, now surrendered to decay and neglect. Vast halls and rooms are marked by crumbling plaster, dust-laden furnishings, and an oppressive silence.",
       "structure": {
         "form": "rectangular",
         "roofType": "vaulted",
         "scale": "large",
         "orientation": "wide",
-        "openings": "large-glass|arched-windows|minimal",
+        "openings": "minimal",
         "openingShape": "arched",
         "functionalType": "residential",
-        "spatialLayout": "A cavernous hall with high, vaulted ceilings. Faded tapestries hang from the walls, and a grand, but dust-covered, staircase dominates one end.",
-        "requiredElements": [
-          "hall"
-        ],
+        "spatialLayout": "The interior of Blackwood Manor is characterized by grand, yet decaying, spaces. High, vaulted ceilings dominate, with remnants of once-ornate plasterwork visible. Dust motes dance in the sparse light filtering through infrequent, grimy arched windows.",
+        "requiredElements": [],
         "navigableElements": [
           {
             "type": "door",
@@ -147,94 +289,39 @@
           {
             "type": "object",
             "position": "center",
-            "description": "object sweeping staircase"
-          },
-          {
-            "type": "door",
-            "position": "left wall",
-            "description": "door dark wood"
-          },
-          {
-            "type": "archway",
-            "position": "right",
-            "description": "archway imposing  leading to dining room"
-          },
-          {
-            "type": "door",
-            "position": "center",
-            "description": "door small service  hidden rear wall"
+            "description": "object servants' staircase rear wall"
           },
           {
             "type": "window",
             "position": "left wall",
-            "description": "window tall gothic"
-          },
-          {
-            "type": "window",
-            "position": "front wall",
-            "description": "window stained glass"
+            "description": "window tall lancet"
           },
           {
             "type": "object",
-            "position": "ceiling",
-            "description": "object ornate chandelier hanging from"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object dusty portraits lining walls"
-          },
-          {
-            "type": "object",
-            "position": "floor",
-            "description": "object tattered velvet runner on"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object grandfather clock ticking erratically"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object mahogany console table with faded photographs"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object suits of armor standing sentinel"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object overturned velvet armchair"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object cobweb-draped candelabra"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object Persian rug with moth-eaten patches"
-          },
-          {
-            "type": "object",
-            "position": "center",
-            "description": "object marble bust of a stern-faced ancestor"
+            "position": "right wall",
+            "description": "object ornate fireplace"
           }
         ],
         "dominantElements": [
-          "Grand Staircase",
-          "Faded Tapestries",
-          "High Vaulted Ceiling"
+          "sweeping staircase",
+          "fireplace",
+          "decaying tapestries"
         ],
         "uniqueIdentifiers": [
-          "Dust-covered chandeliers",
-          "Ornate banisters",
-          "Echoing acoustics"
+          "rotting portraits",
+          "broken furniture",
+          "faint scent of decay"
         ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "dust-shrouded grand piano",
+          "tattered velvet armchair",
+          "decaying chaise lounge",
+          "cobweb-draped candelabra"
+        ],
+        "suggested": [],
+        "placementNotes": []
       },
       "navigableElements": [
         {
@@ -245,96 +332,355 @@
         {
           "type": "object",
           "position": "center",
-          "description": "object sweeping staircase"
-        },
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "door dark wood"
-        },
-        {
-          "type": "archway",
-          "position": "right",
-          "description": "archway imposing  leading to dining room"
-        },
-        {
-          "type": "door",
-          "position": "center",
-          "description": "door small service  hidden rear wall"
+          "description": "object servants' staircase rear wall"
         },
         {
           "type": "window",
           "position": "left wall",
-          "description": "window tall gothic"
-        },
-        {
-          "type": "window",
-          "position": "front wall",
-          "description": "window stained glass"
+          "description": "window tall lancet"
         },
         {
           "type": "object",
-          "position": "ceiling",
-          "description": "object ornate chandelier hanging from"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object dusty portraits lining walls"
-        },
-        {
-          "type": "object",
-          "position": "floor",
-          "description": "object tattered velvet runner on"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object grandfather clock ticking erratically"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object mahogany console table with faded photographs"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object suits of armor standing sentinel"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object overturned velvet armchair"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object cobweb-draped candelabra"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object Persian rug with moth-eaten patches"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object marble bust of a stern-faced ancestor"
+          "position": "right wall",
+          "description": "object ornate fireplace"
         }
       ],
       "dominantElements": [
-        "Grand Staircase",
-        "Faded Tapestries",
-        "High Vaulted Ceiling"
+        "sweeping staircase",
+        "fireplace",
+        "decaying tapestries"
       ],
       "uniqueIdentifiers": [
-        "Dust-covered chandeliers",
-        "Ornate banisters",
-        "Echoing acoustics"
+        "rotting portraits",
+        "broken furniture",
+        "faint scent of decay"
       ],
-      "searchDesc": "The vast, decaying hall of Blackwood Manor, shrouded in shadows and silence.",
+      "searchDesc": "The imposing, decaying Victorian Blackwood Manor, shrouded in shadow and silence.",
       "slug": "null-of-blackwood-manor"
+    },
+    "niche-1765913714007-yybfe1z5b": {
+      "id": "niche-1765913714007-yybfe1z5b",
+      "type": "niche",
+      "name": "The Basement",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The basement is a large, irregular chamber with rough-hewn stone walls and a low, uneven ceiling supported by thick, rotting wooden beams. Cobwebs hang heavily, and a thick layer of dust and debris covers the floor. Puddles of stagnant water reflect the meager light.",
+        "colorsAndLighting": "Dominated by deep, desaturated browns, greys, and blacks. The only light is a weak, flickering amber glow from a single gas lamp, casting long, dancing shadows.",
+        "atmosphere": "Cold, clammy air with the pervasive scent of damp earth, mold, and decay. The air is still and heavy, creating a sense of oppressive enclosure.",
+        "materials": "Rough-hewn stone, rotting wood, packed earth, rusted iron.",
+        "mood": "Oppressive, unsettling, foreboding, ancient.",
+        "sounds": "Dripping water, distant creaks, faint scurrying, the hiss of the gas lamp, unsettling silence.",
+        "spatialLayout": "Sprawling, irregular, cavernous, low ceiling.",
+        "primary_surfaces": "Stone walls, packed earth floor.",
+        "secondary_surfaces": "Rotting wooden beams, rusted iron grate.",
+        "accent_features": "Cobwebs, stagnant puddles, flickering gas lamp, moss growth.",
+        "dominant": "Desaturated Grey",
+        "secondary": "Dark Earth Brown",
+        "accent": "Flickering Amber",
+        "ambient": "Dim Amber",
+        "genre": null,
+        "architectural_tone": "dilapidated Victorian Gothic with elements of decay",
+        "cultural_tone": "Abandoned residence, once belonging to wealthy but now forgotten inhabitants.",
+        "palette_bias": "cool desaturated tones, dark earth tones",
+        "flora_base": "mold, fungi, moss",
+        "fauna_base": "vermin, insects"
+      },
+      "primaryMedia": "media-1765913714007-591udvnhp",
+      "description": "The dark, damp depths of the dilapidated Victorian Gothic house, a place of forgotten storage and creeping shadows.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "spatialLayout": "A cramped and musty basement with low ceilings and uneven floors. Damp stone walls are interspersed with rough-hewn wooden supports, hinting at a forgotten history.",
+        "requiredElements": [],
+        "dominantElements": [
+          "damp stone walls",
+          "rough wooden supports",
+          "low ceilings",
+          "uneven floors"
+        ],
+        "uniqueIdentifiers": [
+          "sense of disuse",
+          "pervasive mustiness"
+        ],
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "floor",
+            "description": "object crumbling stone staircase leading up to main"
+          },
+          {
+            "type": "door",
+            "position": "back wall",
+            "description": "door heavy oak"
+          },
+          {
+            "type": "hatch",
+            "position": "ceiling",
+            "description": "hatch rusted iron  in"
+          },
+          {
+            "type": "passage",
+            "position": "the left",
+            "description": "passage narrow dirt  to"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "cobweb-draped wine racks",
+          "dusty barrels",
+          "an overturned wooden crate",
+          "decaying sacks of unknown contents",
+          "rusted chains hanging from hooks"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "floor",
+          "description": "object crumbling stone staircase leading up to main"
+        },
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "door heavy oak"
+        },
+        {
+          "type": "hatch",
+          "position": "ceiling",
+          "description": "hatch rusted iron  in"
+        },
+        {
+          "type": "passage",
+          "position": "the left",
+          "description": "passage narrow dirt  to"
+        }
+      ],
+      "dominantElements": [
+        "damp stone walls",
+        "rough wooden supports",
+        "low ceilings",
+        "uneven floors"
+      ],
+      "uniqueIdentifiers": [
+        "sense of disuse",
+        "pervasive mustiness"
+      ],
+      "searchDesc": "Damp, stone basement with rotting wood and pervasive shadows.",
+      "slug": "the-basement"
+    },
+    "location-1765913755990-imb99gha7": {
+      "id": "location-1765913755990-imb99gha7",
+      "type": "location",
+      "name": "The Abandoned Store",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A derelict retail space. Broken display windows, dusty aisles, scattered merchandise, and decaying fixtures.",
+        "colorsAndLighting": "Muted grays, dusty browns, and desaturated greens. Dim, weak sunlight filters through grimy windows and holes in the roof, casting long, faint shadows.",
+        "atmosphere": "Still and heavy air, slightly cool and damp. No discernible motion beyond dust motes.",
+        "materials": "Rusted metal, splintered wood, cracked glass, decaying cardboard, and concrete.",
+        "mood": "Melancholy, forgotten, desolate.",
+        "sounds": "Distant creaking, wind whistling through gaps, dripping water, rustling of unseen things.",
+        "spatialLayout": "Rectangular main floor with aisles, possibly a back stockroom.",
+        "primary_surfaces": "Dusty concrete floor, peeling painted drywall walls, stained ceiling tiles.",
+        "secondary_surfaces": "Rusted metal shelving, broken glass shards, scattered cardboard boxes.",
+        "accent_features": "Faded product labels, a lone forgotten item on a shelf, cobweb-draped fixtures.",
+        "dominant": "Dusty brown",
+        "secondary": "Muted grey",
+        "accent": "Faded green",
+        "ambient": "Dim and hazy",
+        "genre": "Gothic Horror",
+        "architectural_tone": "Decay and Desolation",
+        "cultural_tone": "Retail",
+        "palette_bias": "Desaturated and Muted",
+        "flora_base": "Skeletal and Dying",
+        "fauna_base": "Insects, rodents"
+      },
+      "primaryMedia": "media-1765913755989-6mt4q2l4z",
+      "description": "An abandoned store, its facade showing signs of neglect and decay. The once-prominent commercial space now stands as a silent testament to forgotten commerce, its windows either boarded up or shattered, and its signage faded and peeling.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "spatialLayout": "A weathered, rectangular storefront with a faded sign. The large display windows are either boarded up or shattered, revealing a dark, empty interior. A single, rickety door might hang ajar, hinting at entry.",
+        "requiredElements": [
+          "store"
+        ],
+        "dominantElements": [
+          "faded signage",
+          "broken or boarded windows",
+          "weathered facade"
+        ],
+        "uniqueIdentifiers": [
+          "abandoned",
+          "empty",
+          "decaying"
+        ],
+        "navigableElements": [
+          {
+            "type": "window",
+            "position": "front",
+            "description": "window broken storefront wall"
+          },
+          {
+            "type": "door",
+            "position": "center",
+            "description": "door swinging  rear wall leading to storage"
+          },
+          {
+            "type": "door",
+            "position": "left wall",
+            "description": "door boarded-up way"
+          }
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "overturned display shelves with scattered",
+          "dusty toys",
+          "a grimy",
+          "empty cash register on a counter",
+          "faded promotional posters peeling from walls",
+          "a single",
+          "broken rocking horse in the center of the floor"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "window",
+          "position": "front",
+          "description": "window broken storefront wall"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door swinging  rear wall leading to storage"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door boarded-up way"
+        }
+      ],
+      "dominantElements": [
+        "faded signage",
+        "broken or boarded windows",
+        "weathered facade"
+      ],
+      "uniqueIdentifiers": [
+        "abandoned",
+        "empty",
+        "decaying"
+      ],
+      "searchDesc": "A desolate, abandoned store with broken windows and scattered goods.",
+      "slug": "the-abandoned-store"
+    },
+    "niche-1765913780223-xs2p0m4sk": {
+      "id": "niche-1765913780223-xs2p0m4sk",
+      "type": "niche",
+      "name": "The Abandoned Store",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A derelict retail space, its exterior a testament to decay. Cracked asphalt is carpeted with hardy weeds and colorful wildflowers. Rusted shopping carts lie scattered like forgotten skeletons. Shards of shattered glass glint amidst the overgrowth, remnants of broken display windows.",
+        "colorsAndLighting": "Muted greens, browns, and grays dominate, interspersed with pops of desaturated floral colors. Sunlight filters weakly through the debris, casting dappled, somber shadows.",
+        "atmosphere": "Still and quiet, with a faint, dry rustling of weeds in any breeze. The air carries a scent of damp earth and decay.",
+        "materials": "Cracked asphalt, wild grasses, dried wildflowers, rusted metal, splintered glass.",
+        "mood": "Melancholy, desolate, with a touch of untamed beauty.",
+        "sounds": "Wind rustling through weeds, crunch of glass underfoot, distant bird calls.",
+        "spatialLayout": "An open, irregular clearing surrounding the abandoned structure.",
+        "primary_surfaces": "cracked asphalt",
+        "secondary_surfaces": "overgrown weeds, scattered wildflowers, rusted metal, shattered glass",
+        "accent_features": "skeletal shopping carts",
+        "dominant": "gray",
+        "secondary": "desaturated green",
+        "accent": "desaturated yellow and purple",
+        "ambient": "dim, dappled sunlight",
+        "genre": "Gothic Horror",
+        "architectural_tone": "Decay and Desolation",
+        "cultural_tone": "Retail",
+        "palette_bias": "Desaturated and Muted",
+        "flora_base": "weeds and wildflowers",
+        "fauna_base": "Insects, rodents"
+      },
+      "primaryMedia": "media-1765913780223-zro6vyz2o",
+      "description": "Inside the derelict retail space, the air is thick with dust and the scent of decay. Broken shelves, scattered merchandise, and decaying fixtures tell a story of a once-bustling store now forgotten.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "spatialLayout": "A large, open rectangular space that was once a retail store. It is now in disarray, with aisles and display areas littered with debris.",
+        "requiredElements": [
+          "cracked asphalt clearing",
+          "overgrown weeds and wildflowers",
+          "rusted shopping carts",
+          "shattered glass debris"
+        ],
+        "navigableElements": [
+          {
+            "type": "object",
+            "position": "center",
+            "description": "object dirt path leading east to a boarded-up alley"
+          },
+          {
+            "type": "object",
+            "position": "front",
+            "description": "object collapsed section of storeto the south"
+          }
+        ],
+        "dominantElements": [
+          "Dilapidated shelves and display racks",
+          "Scattered, decaying merchandise",
+          "Dusty, cracked flooring",
+          "Peeling paint on walls"
+        ],
+        "uniqueIdentifiers": [
+          "Faded, peeling signage",
+          "Cobwebs and dust accumulations",
+          "Remnants of old promotional displays"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object dirt path leading east to a boarded-up alley"
+        },
+        {
+          "type": "object",
+          "position": "front",
+          "description": "object collapsed section of storeto the south"
+        }
+      ],
+      "dominantElements": [
+        "Dilapidated shelves and display racks",
+        "Scattered, decaying merchandise",
+        "Dusty, cracked flooring",
+        "Peeling paint on walls"
+      ],
+      "uniqueIdentifiers": [
+        "Faded, peeling signage",
+        "Cobwebs and dust accumulations",
+        "Remnants of old promotional displays"
+      ],
+      "searchDesc": "Abandoned store exterior: cracked asphalt, weeds, wildflowers, rusted carts, shattered glass.",
+      "slug": "null-of-the-abandoned-store"
     }
   },
   "views": {},
@@ -369,7 +715,33 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765877533709-x8tw0egsu",
+                  "id": "niche-1765913689563-m0gzpm8i0",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765913714007-yybfe1z5b",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1765913595061-ays6oks5v",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1765913645065-6uzaqrt2q",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1765913755990-imb99gha7",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765913780223-xs2p0m4sk",
                   "type": "niche",
                   "children": []
                 }

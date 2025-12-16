@@ -28,8 +28,8 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     category: 'navigation'
   },
   GOTO: { 
-    requiresNodeType: ['niche'], 
-    description: 'Navigate to a specific place within the current location',
+    requiresNodeType: ['niche', 'location'], 
+    description: 'Navigate to a specific place (from niche: sibling niche, from location: sibling location)',
     category: 'navigation'
   },
   

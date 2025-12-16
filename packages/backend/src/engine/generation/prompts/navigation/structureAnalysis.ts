@@ -15,10 +15,12 @@ export interface StructureAnalysisInput {
   perspective?: ScenePerspective | null;
   navigableElements?: Array<{ type: string; position: string; description: string }>;
   furnishing?: string[];
+  /** True for GOTO command (creates new location based on user destination) */
+  isGotoCommand?: boolean;
 }
 
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
-  const { userPrompt, context, perspective } = input;
+  const { userPrompt, context, perspective, isGotoCommand } = input;
 
   const parentDna = context.parentNode?.dna as any;
   const currentDna = context.currentNode.dna as any;
@@ -33,18 +35,16 @@ export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
   const perspectiveSection = perspective 
     ? `PERSPECTIVE: ${perspective.toUpperCase()} (user-specified)`
     : `STEP 1: DETERMINE PERSPECTIVE
-Analyze the context and user input to determine the appropriate perspective:
+Analyze the USER INPUT to determine the appropriate perspective:
 
 - INTERIOR: Enclosed space with roof/ceiling (room, hall, chamber, cave, vehicle interior)
-- EXTERIOR: Fully open outdoor space (park path, plaza, sculpture garden, forest clearing)  
+- EXTERIOR: Fully open outdoor space (park, plaza, garden, forest, street, path)  
 - OPEN-AIR: Semi-enclosed with open sky (balcony, terrace, rooftop, covered patio, pergola)
 
-PERSPECTIVE CLUES:
-- Parent location spaceType: "${parentSpaceType}"
-- If parent is "exterior" and user isn't entering a building → likely EXTERIOR or OPEN-AIR
-- If entering a structure/building → likely INTERIOR
-- If balcony/terrace/rooftop mentioned → OPEN-AIR
-- If garden/plaza/path/clearing mentioned → EXTERIOR`;
+PERSPECTIVE CLUES from USER INPUT:
+- If park/garden/plaza/forest/street/path → EXTERIOR
+- If room/hall/chamber/building interior → INTERIOR
+- If balcony/terrace/rooftop mentioned → OPEN-AIR`;
 
   const perspectiveRules = perspective
     ? ''
@@ -54,6 +54,58 @@ PERSPECTIVE RULES:
 - For OPEN-AIR: roofType MUST be "open-sky", may have partial walls/railings
 - For INTERIOR: roofType is domed/flat/vaulted/etc, enclosed`;
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GOTO COMMAND: User's destination text is PRIMARY - parent is just for style
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (isGotoCommand) {
+    return `Create a NEW LOCATION based on the user's destination.
+
+CRITICAL: The USER INPUT describes the DESTINATION to create. The name and type should match what the user asked for.
+
+${perspectiveSection}
+
+USER INPUT (THIS IS THE DESTINATION): "${userPrompt}"
+
+STYLE CONTEXT (for visual consistency only):
+- World style: "${currentDna?.architectural_tone || currentDna?.genre || 'default'}"
+- Palette: "${currentDna?.palette_bias || 'determine from destination'}"
+
+NAMING RULES:
+- Extract the destination name from USER INPUT
+- "to the park" → name should be "The Park" or a specific park name
+- "the old church" → name should be "The Old Church" or a specific church name
+- Keep it simple and match what the user asked for
+${perspectiveRules}
+
+SCALE HINTS:
+- small: 2-4m (pods, booths, cabins)
+- medium: 4-10m (rooms, shops, cafés)  
+- large: 10-30m+ (parks, plazas, halls)
+
+OUTPUT (pure JSON):
+{
+  "name": "Destination Name (from USER INPUT)",
+  "perspective": "${perspective || 'interior|exterior|open-air'}",
+  "structure": {
+    "form": "rectangular|round|organic|irregular",
+    "roofType": "open-sky|domed|flat|vaulted|pitched|arched|null",
+    "scale": "small|medium|large",
+    "orientation": "vertical|horizontal|wide|cubic",
+    "openings": "large-glass|arched-windows|narrow-slits|open-passages|minimal|none",
+    "openingShape": "rectangular|circular|arched|mixed|irregular",
+    "functionalType": "residential|commercial|religious|industrial|civic|entertainment|natural",
+    "spatialLayout": "1-2 sentence description of the DESTINATION",
+    "requiredElements": ["elements from USER INPUT that MUST appear"],
+    "dominantElements": ["main features of this DESTINATION"],
+    "uniqueIdentifiers": ["distinctive features of this DESTINATION"]
+  },
+  "description": "Brief description of the DESTINATION"
+}`;
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GO_INSIDE COMMAND: Create interior space that matches parent structure
+  // ═══════════════════════════════════════════════════════════════════════════
   return `Analyze space and determine physical structure.
 
 ${perspectiveSection}

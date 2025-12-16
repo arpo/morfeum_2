@@ -175,16 +175,23 @@ export async function handleNavigationCommand(
 
     if (data.decision.action === 'move') {
       handleMoveAction(data.decision, getNode, setActiveEntity);
-    } else if (data.decision.action === 'create_niche' && data.eventsUrl && data.navigationId) {
+    } else if (
+      (data.decision.action === 'create_niche' || data.decision.action === 'create_location') && 
+      data.eventsUrl && 
+      data.navigationId
+    ) {
       const registerExternalSpawn = useStore.getState().registerExternalSpawn;
       const capturedCurrentNode = currentNode;
       const capturedParentNodeId = data.decision.parentNodeId;
+      
+      // Determine node type based on action
+      const nodeType = data.decision.action === 'create_location' ? 'location' : 'niche';
 
       registerExternalSpawn(
         data.navigationId,
         data.eventsUrl,
         `/${command}${text ? ' ' + text : ''}`,
-        'niche',
+        nodeType,
         async (completedData: any) => {
           if (completedData.node) {
             await handleNodeCreation(

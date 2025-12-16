@@ -25,7 +25,8 @@ export async function generateNodeDNA(
   nodeName: string,
   nodeType: LayerType,
   nodeDescription: string,
-  parentContext?: ParentContext
+  parentContext?: ParentContext,
+  options?: { isGotoCommand?: boolean }
 ): Promise<{
   dna: NodeDNA;
   name: string;
@@ -37,12 +38,14 @@ export async function generateNodeDNA(
   slug?: string;
 }> {
   // Build prompt from centralized prompts
+  // For GOTO commands, uses simplified parent context (style only)
   const prompt = nodeDNAGeneration(
     originalPrompt,
     nodeName,
     nodeType,
     nodeDescription,
-    parentContext
+    parentContext,
+    options
   );
 
   // DEBUG: Log what we're sending to the LLM

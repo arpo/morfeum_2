@@ -59,6 +59,45 @@ export function findParentLocationNode(context: NavigationContext): {
 }
 
 /**
+ * Find parent region node from context
+ * Used when creating sibling locations from GOTO command
+ * 
+ * @param context - Navigation context (current node should be a location)
+ * @returns Object with parentRegionId and parentRegionDNA
+ */
+export function findParentRegionNode(context: NavigationContext): {
+  parentRegionId: string;
+  parentRegionDNA: any;
+} {
+  const { currentNode, parentNode } = context;
+  
+  // If current node is a location, find its parent region
+  if (currentNode.type === 'location') {
+    // Use parentNode if available
+    if (parentNode && parentNode.type === 'region') {
+      return {
+        parentRegionId: parentNode.id,
+        parentRegionDNA: parentNode.dna
+      };
+    }
+    
+    // Fallback to parentId from current node
+    if (currentNode.parentId) {
+      return {
+        parentRegionId: currentNode.parentId,
+        parentRegionDNA: parentNode?.dna || null
+      };
+    }
+  }
+  
+  // Fallback: use currentNode's parentId or id
+  return {
+    parentRegionId: currentNode.parentId || currentNode.id,
+    parentRegionDNA: null
+  };
+}
+
+/**
  * Create region specification (stub - will use LLM later)
  * @param hostId - Parent host ID
  * @param regionName - Name of the region

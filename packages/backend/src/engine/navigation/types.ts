@@ -96,6 +96,7 @@ export interface NavigationContext {
 export type NavigationAction = 
   | 'move'
   | 'create_niche'
+  | 'create_location'
   | 'create_detail'
   | 'create_view'
   | 'create_hierarchy'

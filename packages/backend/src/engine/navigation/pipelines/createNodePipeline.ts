@@ -15,7 +15,7 @@ import { buildNode } from '../../generation/shared/nodeBuilder';
 import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
 import type { NavigationDecision, NavigationContext, IntentResult, DestinationAnalysis, StructureAnalysis, Structure } from '../types';
 import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
-import { findParentLocationNode } from '../navigationHelpers';
+import { findParentLocationNode, findParentRegionNode } from '../navigationHelpers';
 import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
 import { getPipelineTypeForIntent } from '../../pipelines/shared/pipelineConfig';
 import mediaService from '../../../services/media/mediaService';
@@ -36,6 +36,10 @@ export interface CreateNodeOptions {
   /** Pre-parsed navigable elements and furnishing from command (user-controlled) */
   parsedEnhancements?: ParsedEnhancements;
   isSubPipeline?: boolean; // Running as sub-pipeline - skip started/completed events (parent handles progress)
+  /** True when GOTO is triggered from a location node (creates sibling location instead of niche) */
+  isFromLocation?: boolean;
+  /** Pre-resolved parent DNA (from region/host) - used when route handler has already resolved DNA */
+  resolvedParentDNA?: any;
 }
 
 /**
@@ -64,14 +68,21 @@ export async function runCreateLocationNodePipeline(
     const shouldGenerateImage = options?.generateImage !== false;
 
     // Get style and perspective from decision or options
+    // IMPORTANT: For location-type nodes (GOTO from location), default to exterior
     let style = options?.style || decision.style || intent.style || 'default';
-    let perspective = options?.perspective || decision.perspective || intent.spaceType || 'interior';
+    
+    // Default perspective based on node type being created
+    const defaultPerspective = (nodeType === 'location' || options?.isFromLocation) ? 'exterior' : 'interior';
+    let perspective = options?.perspective || decision.perspective || intent.spaceType || defaultPerspective;
     
     // DEBUG: Log perspective resolution
     console.log(`[PERSPECTIVE DEBUG] Pipeline perspective resolution:`);
     console.log(`  options?.perspective: ${options?.perspective}`);
     console.log(`  decision.perspective: ${decision.perspective}`);
     console.log(`  intent.spaceType: ${intent.spaceType}`);
+    console.log(`  nodeType: ${nodeType}`);
+    console.log(`  isFromLocation: ${options?.isFromLocation}`);
+    console.log(`  defaultPerspective: ${defaultPerspective}`);
     console.log(`  Final perspective: ${perspective}`);
 
     // Only send started event if not a sub-pipeline (parent handles progress)
@@ -91,27 +102,51 @@ export async function runCreateLocationNodePipeline(
 
     console.log(`\n🔄 [Pipeline] Starting parallel Space Analysis for: "${userPrompt}"`);
 
+    // Determine if this is a GOTO command (creates new destination vs entering current location)
+    const isGotoCommand = !!options?.gotoText;
+    
     // Run Structure Analysis and DNA Generation in PARALLEL
     const [structureAnalysis, dnaResult] = await Promise.all([
       // Structure Analysis (determines physical/spatial properties)
       // NOTE: parsedEnhancements (navigableElements, furnishing) come from user command, not LLM
-      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.parsedEnhancements),
+      // For GOTO: uses destination-focused prompt (user input is PRIMARY)
+      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.parsedEnhancements, { isGotoCommand }),
       
       // DNA Generation (determines visual/atmospheric properties)
       (async () => {
-        const { parentLocationDNA } = findParentLocationNode(context);
-        const parentContext = parentLocationDNA
-          ? extractParentContext(parentLocationDNA)
+        // CRITICAL: Use pre-resolved parent DNA if available (from route handler)
+        // This ensures proper cascaded DNA from region/host is used
+        let parentDNA: any;
+        if (options?.resolvedParentDNA) {
+          // Route handler already resolved cascaded DNA - use it directly
+          parentDNA = options.resolvedParentDNA;
+          console.log(`[DNA] Using PRE-RESOLVED parent DNA from route handler`);
+          console.log(`  - architectural_tone: ${parentDNA.architectural_tone || 'null'}`);
+          console.log(`  - palette_bias: ${parentDNA.palette_bias || 'null'}`);
+        } else if (isGotoCommand && options?.isFromLocation) {
+          // Fallback: try to get region DNA from context (may be incomplete)
+          const { parentRegionDNA } = findParentRegionNode(context);
+          parentDNA = parentRegionDNA;
+          console.log(`[DNA] GOTO from location: Using REGION DNA from context (fallback)`);
+        } else {
+          const { parentLocationDNA } = findParentLocationNode(context);
+          parentDNA = parentLocationDNA;
+        }
+        
+        const parentContext = parentDNA
+          ? extractParentContext(parentDNA)
           : undefined;
         
         // Generate DNA with basic info - we'll enhance with structure later
+        // For GOTO: uses simplified parent context (style only, not content)
         return generateNodeDNA(
           apiKey,
           userPrompt,
           decision.newNodeName || 'Unnamed Space',
           nodeType,
           userPrompt,
-          parentContext
+          parentContext,
+          { isGotoCommand }
         );
       })()
     ]);
@@ -161,9 +196,20 @@ export async function runCreateLocationNodePipeline(
     }
 
     // Get parent DNA for visual consistency (architectural_tone, cultural_tone, etc.)
-    // NOTE: findParentLocationNode now returns null if no valid location parent found
-    // This prevents niche DNA from bleeding into new location images
-    const { parentLocationDNA } = findParentLocationNode(context);
+    // CRITICAL: Use pre-resolved DNA if available (from route handler)
+    let parentDNAForImagePrompt: any;
+    if (options?.resolvedParentDNA) {
+      // Route handler already resolved cascaded DNA - use it directly
+      parentDNAForImagePrompt = options.resolvedParentDNA;
+      console.log(`[ImagePrompt] Using PRE-RESOLVED parent DNA from route handler`);
+    } else if (isGotoCommand && options?.isFromLocation) {
+      const { parentRegionDNA } = findParentRegionNode(context);
+      parentDNAForImagePrompt = parentRegionDNA;
+      console.log(`[ImagePrompt] GOTO from location: Using REGION DNA from context (fallback)`);
+    } else {
+      const { parentLocationDNA } = findParentLocationNode(context);
+      parentDNAForImagePrompt = parentLocationDNA;
+    }
     
     // Use unified LLM-based image prompt generator
     // IMPORTANT: includeCurrentNodeDNA is false by default to prevent
@@ -171,7 +217,7 @@ export async function runCreateLocationNodePipeline(
     let imagePrompt = await generateImagePromptForNode(apiKey, {
       structureAnalysis,
       dna: dnaResult.dna || {},
-      parentDNA: parentLocationDNA || undefined, // Convert null to undefined for cleaner handling
+      parentDNA: parentDNAForImagePrompt || undefined,
       userPrompt,
       nodeType,
       perspective: perspective as 'interior' | 'exterior',
@@ -208,8 +254,8 @@ export async function runCreateLocationNodePipeline(
 
     // DNA already generated in parallel during space_analysis step
     // Now merge with parent DNA for CSS-like inheritance (fill null values from parent)
-    // Note: parentLocationDNA already declared above for image prompt
-    const mergedDNA = mergeDNAWithParent(dnaResult.dna, parentLocationDNA);
+    // Use the same parent DNA as image prompt (region DNA for GOTO from location)
+    const mergedDNA = mergeDNAWithParent(dnaResult.dna, parentDNAForImagePrompt);
     const nodeData = { ...dnaResult, dna: mergedDNA };
 
     // Step 4: Build complete node using shared builder, passing structural fields
