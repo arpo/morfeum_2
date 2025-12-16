@@ -681,6 +681,194 @@
       ],
       "searchDesc": "Abandoned store exterior: cracked asphalt, weeds, wildflowers, rusted carts, shattered glass.",
       "slug": "null-of-the-abandoned-store"
+    },
+    "loc-1765914108118-becdkukoo": {
+      "id": "loc-1765914108118-becdkukoo",
+      "type": "host",
+      "name": "The Enchanted Garden",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: sprawling celestial gardens with crystalline waterways and distant, softly glowing structures. Flora and geographical features dominate, with distant landmarks as shimmering patterns.",
+        "colorsAndLighting": "Soft, diffused celestial light bathing the entire realm in iridescent hues.",
+        "atmosphere": "A gentle, ethereal mist hangs in the air, carrying the scent of exotic blooms.",
+        "materials": "Dominant materials are shimmering crystalline structures and the lush, varied foliage of the gardens.",
+        "mood": "Overarching mood of peaceful enchantment, awe, and serene contemplation.",
+        "sounds": "Distant, melodic chimes and the gentle murmur of flowing water.",
+        "primary_surfaces": "Lush, varied garden terrain and the surfaces of reflective waterways.",
+        "secondary_surfaces": "Distant, softly glowing ethereal structures and winding paths.",
+        "accent_features": "Shimmering crystalline formations and the distant outlines of unique architectural marvels.",
+        "dominant": "Lush Green",
+        "secondary": "Ethereal Blue",
+        "accent": "Iridescent White",
+        "ambient": "Soft Celestial Glow",
+        "genre": "Fantasy",
+        "architectural_tone": "Ethereal and Organic",
+        "cultural_tone": "Mystical and Serene",
+        "palette_bias": "Cool and Luminous",
+        "flora_base": "Exotic and Luminescent",
+        "fauna_base": "Mythical and Ethereal"
+      },
+      "description": "A realm of serene beauty and peaceful enchantment, where nature and artistry intertwine under a celestial canvas.  Vast, luminous gardens stretch as far as the eye can see, punctuated by crystalline waterways and exotic flora.  The air hums with a gentle magic, fostering an atmosphere of profound tranquility.",
+      "searchDesc": "Enchanted garden realm, serene, peaceful, nature and artistry.",
+      "slug": "the-enchanted-garden",
+      "structure": {
+        "spatialLayout": "Organic, flowing layout of interconnected garden expanses and water features."
+      },
+      "primaryMedia": "media-1765914181198-j7s38x3tf"
+    },
+    "86d9a908-ff13-48e9-853c-392f19fb1644": {
+      "id": "86d9a908-ff13-48e9-853c-392f19fb1644",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "482b9bf5-71ce-4c8d-87aa-713dfba5a037": {
+      "id": "482b9bf5-71ce-4c8d-87aa-713dfba5a037",
+      "type": "location",
+      "name": "The Whispering Oasis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior is dominated by a large, opulent tent structure. Draped red fabric panels, possibly with intricate geometric or floral patterns, hang from a deep blue-purple roof. The structure appears robust yet elegant, designed to impress and provide shelter.",
+        "colorsAndLighting": "The deep blue-purple of the roof contrasts with the rich red of the fabric panels. Warm, golden light spills from within the tent and from ornate standing lanterns positioned around its base, casting long shadows and highlighting the textures of the fabrics and surrounding foliage.",
+        "atmosphere": "The air is still and serene, carrying a faint scent of exotic blooms. The temperature is pleasant and balmy, with a gentle breeze rustling the distant palm fronds. The overall atmosphere is one of peaceful enchantment and luxurious seclusion.",
+        "materials": "The primary materials are rich, heavy fabrics for the tent walls and roof, possibly supported by dark, carved wooden or metal poles. The path leading to the entrance is made of smooth, dark stone tiles. Ornate metalwork likely forms the standing lanterns.",
+        "mood": "Evokes feelings of mystery, exoticism, and serene luxury. It suggests a place of hidden pleasures and tranquil repose.",
+        "sounds": "Gentle rustling leaves, distant water lapping, soft murmurs from within.",
+        "primary_surfaces": "Draped red velvet panels, deep blue-purple canvas roof.",
+        "secondary_surfaces": "Smooth stone tiles, dark carved wood or metal tent poles.",
+        "accent_features": "Intricate golden patterns on fabric, heavy golden tassels, ornate lantern bases.",
+        "dominant": "Deep blue-purple (tent roof)",
+        "secondary": "Rich red (tent panels)",
+        "accent": "Golden (patterns, tassels, lantern details)",
+        "ambient": "Warm golden glow.",
+        "genre": null,
+        "architectural_tone": "Exotic, opulent tent architecture with intricate ornamentation",
+        "cultural_tone": "Used for luxurious gatherings or private retreat by affluent or discerning individuals.",
+        "palette_bias": "Deep jewel tones and warm metallics.",
+        "flora_base": "Lush green and purple-hued foliage, small pink flowers, tall palm-like trees.",
+        "fauna_base": "None"
+      },
+      "description": "A tranquil garden at night, illuminated by numerous lanterns, with a calm body of water reflecting the golden light and lush foliage. A stone-tiled path leads to a richly adorned tent or canopy structure. EXTERIOR VIEW.",
+      "searchDesc": "Luxurious tent at a tranquil garden oasis at night, with ornate details and lantern light.",
+      "slug": "the-whispering-oasis",
+      "structure": {
+        "spatialLayout": "The tent is a central, imposing structure, with the entrance serving as a clear focal point. The surrounding environment is lush and open, with the water providing a reflective foreground."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center of the front facade",
+          "description": "An inviting, open passage leading into the tent, framed by ornate pillars."
+        }
+      ],
+      "dominantElements": [
+        "Richly adorned tent structure",
+        "Deep blue-purple tent roof",
+        "Draped red fabric panels",
+        "Ornate standing lanterns"
+      ],
+      "uniqueIdentifiers": [
+        "Intricate patterned fabric",
+        "Golden tassels",
+        "Tall palm-like trees silhouetted against the sky",
+        "Calm water reflecting lantern light"
+      ],
+      "primaryMedia": "media-1765914164381-4rjtgzxxb"
+    },
+    "location-1765914246151-0fu2tyfpn": {
+      "id": "location-1765914246151-0fu2tyfpn",
+      "type": "location",
+      "name": "Richly Adorned and Exotic Interior Space",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Opulent and detailed, with intricate patterns and textures dominating the visual field.",
+        "colorsAndLighting": "Warm, diffused light casting soft shadows. Dominant colors are deep jewel tones: purple, fuchsia, teal, orange, and gold, with accents of blue, red, and gold.",
+        "atmosphere": "Intimate, tranquil, inviting, and serene.",
+        "materials": "Luxurious textiles (velvet, silk, brocade), intricately perforated metal, carved wood, plush upholstery, woven rugs.",
+        "mood": "Relaxed, luxurious, exotic, and peaceful.",
+        "sounds": "Muffled, soft, occasional gentle chiming.",
+        "spatialLayout": "Spacious yet cozy, with defined seating areas and alcoves.",
+        "primary_surfaces": "Patterned fabric ceiling, tapestry-covered walls, layered rugs.",
+        "secondary_surfaces": "Plush upholstery of benches and pillows, ornate metal of lanterns and coffee table base, reflective tray.",
+        "accent_features": "Intricately perforated lanterns, starburst light patterns, jewel-toned throw pillows, decorative bowl on coffee table.",
+        "dominant": "Deep Purple",
+        "secondary": "Fuchsia",
+        "accent": "Gold",
+        "ambient": "Warm, soft, golden glow",
+        "genre": "Fantasy",
+        "architectural_tone": "Ethereal and Organic",
+        "cultural_tone": "Mystical and Serene",
+        "palette_bias": "Cool and Luminous",
+        "flora_base": "Exotic and Luminescent",
+        "fauna_base": "Mythical and Ethereal"
+      },
+      "primaryMedia": "media-1765914246150-v6ik6ysgb",
+      "description": "An exterior view of a richly adorned and exotic interior space, hinting at the opulence within, bathed in the warm glow of many ornate lanterns.",
+      "structure": {
+        "form": "organic",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "This space is designed for relaxation and sensory indulgence, featuring abundant soft furnishings and opulent decorative elements.",
+        "requiredElements": [
+          "ornate lanterns",
+          "deep purples, fuchsia, teal, orange, and gold color palette",
+          "luxurious textiles",
+          "intricate architectural details",
+          "high ceiling with patterned fabric",
+          "perforated metal lantern",
+          "patterned tapestries",
+          "arched alcoves",
+          "low, plush bench-style seating",
+          "throw pillows",
+          "layered rugs with complex patterns",
+          "low square coffee table",
+          "reflective tray",
+          "lit candle",
+          "decorative bowl",
+          "large",
+          "smaller lanterns casting starburst-like designs onto the surfaces",
+          "numerous throw pillows in solid jewel tones of purple",
+          "patterned pillows in blues",
+          "multiple layered rugs showcasing complex traditional patterns in coordinating deep blues",
+          "ornate metal base holds a reflective tray"
+        ],
+        "dominantElements": [
+          "abundant luxurious textiles",
+          "ornate lanterns casting intricate patterns",
+          "richly patterned ceiling and wall coverings"
+        ],
+        "uniqueIdentifiers": [
+          "vibrant tapestry of deep jewel tones and gold",
+          "starburst-like designs from alcove lanterns"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "north wall, central alcove",
+          "description": "An ornately carved wooden door, partially obscured by a tapestry."
+        }
+      ],
+      "dominantElements": [
+        "abundant luxurious textiles",
+        "ornate lanterns casting intricate patterns",
+        "richly patterned ceiling and wall coverings"
+      ],
+      "uniqueIdentifiers": [
+        "vibrant tapestry of deep jewel tones and gold",
+        "starburst-like designs from alcove lanterns"
+      ],
+      "searchDesc": "Exotic room with lanterns, tapestries, plush seating, and layered rugs.",
+      "slug": "a-scene-of-a-richly-adorned-and-exotic-interior-space-illuminated-by-soft-warm-light-emanating-from-multiple-ornate-lanterns-creating-an-intimate-and-tranquil-atmosphere-the-room-is-a-vibrant-tapestry-of-deep-purples-fuchsia-teal-orange-and-gold-expressed-through-an-abundance-of-luxurious-textiles-and-intricate-architectural-details-the-high-ceiling-is-covered-in-richly-patterned-fabric-featuring-geometric-and-floral-motifs-from-which-hangs-a-large-intricately-perforated-metal-lantern-that-casts-delicate-patterns-of-light-and-shadow-across-the-surfaces-the-walls-are-similarly-adorned-with-large-highly-patterned-tapestries-in-shades-of-purple-blue-and-orange-while-arched-alcoves-feature-coordinating-patterns-and-hues-with-smaller-lanterns-casting-starburst-like-designs-onto-the-surfaces-low-plush-bench-style-seating-lines-the-walls-overflowing-with-numerous-throw-pillows-in-solid-jewel-tones-of-purple-fuchsia-and-orange-interspersed-with-patterned-pillows-in-blues-reds-and-gold-inviting-relaxation-the-floor-is-covered-with-multiple-layered-rugs-showcasing-complex-traditional-patterns-in-coordinating-deep-blues-purples-and-oranges-in-the-center-of-the-room-a-low-square-coffee-table-with-an-ornate-metal-base-holds-a-reflective-tray-featuring-a-single-lit-candle-in-a-holder-and-a-small-decorative-bowl-"
     }
   },
   "views": {},
@@ -750,9 +938,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765914108118-becdkukoo",
+      "type": "host",
+      "children": [
+        {
+          "id": "86d9a908-ff13-48e9-853c-392f19fb1644",
+          "type": "region",
+          "children": [
+            {
+              "id": "482b9bf5-71ce-4c8d-87aa-713dfba5a037",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1765914246151-0fu2tyfpn",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1765877487336-nfrgwat5f"
+    "loc-1765877487336-nfrgwat5f",
+    "loc-1765914108118-becdkukoo"
   ]
 }

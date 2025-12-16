@@ -11,7 +11,7 @@ import { classifyIntent, routeNavigation, buildIntentFromCommand, analyzeDestina
 import type { RouteOptions } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import { runCreateCharacterPipeline } from '../../engine/navigation/pipelines/createCharacterPipeline';
-import { findParentLocationNode, findParentRegionNode } from '../../engine/navigation/navigationHelpers';
+import { findParentLocationNode, findParentRegionNode, findHostForRegion, addChildToWorldTree } from '../../engine/navigation/navigationHelpers';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
@@ -352,28 +352,14 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
             // Save node to nodes collection
             worldsData.nodes[result.node.id] = result.node;
             
-            // Add to worldTrees under parent
-            const addChildToTree = (tree: any[], targetId: string, childEntry: any): boolean => {
-              for (const treeNode of tree) {
-                if (treeNode.id === targetId) {
-                  if (!treeNode.children) treeNode.children = [];
-                  treeNode.children.push(childEntry);
-                  return true;
-                }
-                if (treeNode.children && addChildToTree(treeNode.children, targetId, childEntry)) {
-                  return true;
-                }
-              }
-              return false;
-            };
-            
+            // Add to worldTrees under parent using shared utility
             const childEntry = {
               id: result.node.id,
               type: nodeType,
               children: []
             };
             
-            const added = addChildToTree(worldsData.worldTrees, parentNodeId, childEntry);
+            const added = addChildToWorldTree(worldsData.worldTrees, parentNodeId, childEntry);
             if (added) {
               console.log(`[GOTO] Added ${nodeType} "${result.node.name}" as child of ${parentNodeId}`);
             } else {
@@ -725,27 +711,13 @@ router.post('/create-node', asyncHandler(async (req: Request, res: Response) => 
         console.log(`[CREATE-NODE] Added host to worldTrees: ${result.node.id}`);
       } else if (parentId) {
         // Child nodes (region, location, niche) need to be added to their parent's children array
-        const addChildToTree = (tree: any[], targetId: string, childEntry: any): boolean => {
-          for (const node of tree) {
-            if (node.id === targetId) {
-              if (!node.children) node.children = [];
-              node.children.push(childEntry);
-              return true;
-            }
-            if (node.children && addChildToTree(node.children, targetId, childEntry)) {
-              return true;
-            }
-          }
-          return false;
-        };
-        
         const childEntry = {
           id: result.node.id,
           type: nodeType,
           children: []
         };
         
-        const added = addChildToTree(updatedWorldsData.worldTrees, parentId, childEntry);
+        const added = addChildToWorldTree(updatedWorldsData.worldTrees, parentId, childEntry);
         if (added) {
           console.log(`[CREATE-NODE] Added ${nodeType} as child of ${parentId}`);
         } else {
@@ -1022,24 +994,7 @@ router.post('/enhance-prompt', asyncHandler(async (req: Request, res: Response) 
   }
 }));
 
-/**
- * Helper: Find the host node for a given region ID by traversing worldTrees
- * Used for pass-through regions to get DNA from the host
- */
-function findHostForRegion(regionId: string, worldTrees: any[], nodes: Record<string, any>): any | null {
-  for (const tree of worldTrees) {
-    // Check if this tree's host has the region as a child
-    if (tree.children) {
-      for (const child of tree.children) {
-        if (child.id === regionId) {
-          // Found the region, return the host node
-          return nodes[tree.id];
-        }
-      }
-    }
-  }
-  return null;
-}
+// findHostForRegion is now imported from navigationHelpers
 
 /**
  * Helper: Detect perspective from node data
