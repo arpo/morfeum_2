@@ -44,19 +44,26 @@ export const DNA_CASCADING_FIELDS = {
 /**
  * Compact rules string for dominantElements - use in prompts BEFORE the JSON template.
  * Single source of truth - import this in all prompt files.
+ * 
+ * IMPORTANT: dominantElements are the PROMINENT ENTERABLE THINGS in the scene.
+ * Can be buildings, structures, vehicles, or objects you can GO_INSIDE.
  */
-export const DOMINANT_ELEMENTS_RULES = `DOMINANTELEMENTS (CRITICAL - for GO_INSIDE support):
-- ONLY physically enterable structures (doors, buildings, vehicles, portals, caves)
-- NEVER include: trees, decorations, terrain, patterns, atmosphere, general features
-- FORMAT: "[name]: [shape], [scale], interior has [floor], [walls], [lighting]"
-- Return empty array [] if nothing is enterable`;
+export const DOMINANT_ELEMENTS_RULES = `DOMINANTELEMENTS (CRITICAL - seed data for GO_INSIDE):
+- PROMINENT STRUCTURES or OBJECTS in the scene you can ENTER
+- Buildings: café, factory, temple, house, shop, warehouse
+- Vehicles/Objects: car, spaceship, kiosk, telephone booth, container
+- NOT areas/zones (like "factory floor", "main hall" - these are parts of the location)
+- FORMAT: "[name]: [shape/style], [scale], interior has [floor], [walls], [lighting]"
+- Usually 1-3 items maximum - the MAIN things visible in the scene
+- Examples: "alien factory: industrial megastructure, massive scale, interior has metal floors, machinery, industrial lighting"
+- Examples: "café: Parisian facade, small scale, interior has tiled floors, bistro chairs, warm lighting"`;
 
 /**
- * Example for JSON template placeholders - shows exact format expected.
- * Use this AS the placeholder value in JSON templates.
+ * Generic format placeholder for JSON templates.
+ * Shows the FORMAT pattern, not specific content (to prevent LLM from copying literally).
  */
 export const DOMINANT_ELEMENTS_EXAMPLE = 
-  `"main entrance: arched doorway, large scale, interior has stone floors, carved walls, ambient light"`;
+  `"<enterable_object>: <shape>, <scale>, interior has <floor_material>, <wall_features>, <lighting_type>"`;
 
 /**
  * Legacy format specifications - kept for reference but prefer using RULES + EXAMPLE above.

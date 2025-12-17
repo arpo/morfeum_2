@@ -1,36 +1,52 @@
 {
   "media": {
-    "media-1765968110652-vpscg4e5m": {
-      "id": "media-1765968110652-vpscg4e5m",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a86a74a/jxTaRX9o_ScydCJmAcvcU.jpg",
-      "createdAt": "2025-12-17T10:41:50.652Z",
+    "media-1765968716622-j8ote0w4l": {
+      "id": "media-1765968716622-j8ote0w4l",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a86a787/MwwrV621_gkz9hNo7t7XQ_a9c7f860649e4a3693c701214f032652.png",
+      "createdAt": "2025-12-17T10:51:56.622Z",
       "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA street-level, slightly elevated ultra-wide view of \"The Xenovault Manufactory\" under a twilight sky on an alien world. The foreground features worn cobblestones glistening with puddles that reflect the sharp, electric viridian of pulsating energy conduits snaking across the monolithic structure. The manufactory itself is a sprawling, impenetrable block of dark, unidentifiable alloys, its facade a tapestry of geometric inhumanity with impossibly sharp angles and vast, smooth surfaces. It is set back slightly from the street, emphasizing its immense scale. A central, grand entrance is visible, flanked by clusters of glowing conduits and externalized, complex machinery. Internal bioluminescent panels cast an eerie, green glow from within visible portals, creating stark contrasts and deep shadows. The architecture is a perfect embodiment of a Brutalist alien megastructure with bioluminescent accents, with primary surfaces of brushed dark alloys, smooth metallic panels, and crystalline growths, accented by polished obsidian and pulsating viridian energy conduits. Neighboring buildings, if any, are lost in the immense scale and shadowed depths of the alien cityscape. The atmosphere feels charged with a faint, metallic tang, a low, resonant hum permeating the air, occasionally overlaid by the sharp crackle of energy discharges. The composition is asymmetric, with more street visible on the left, and the building shot at a slight angle to show depth and dimension, evoking a mood of awe mixed with unease, immense power, and alien purpose.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "parentMedia": "media-1765968400413-q5dgij1xp",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "niche-1765968400414-e9p5319dy"
+      ],
+      "parentMedia": "media-1765968400413-q5dgij1xp"
+    },
+    "media-1765971657577-erag4ofo3": {
+      "id": "media-1765971657577-erag4ofo3",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a86a8ad/ULZpi709TiWc1ZtGGaShm.jpg",
+      "createdAt": "2025-12-17T11:40:57.577Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA gargantuan, imposing Brutalist industrial megastructure, the \"Lunar Assembly Plant,\" dominates the desolate, cratered dark side of the moon. The camera is positioned street-level, slightly elevated at a 25-30° downward tilt, offering an ultra-wide view that captures the building in its stark environmental context. The foreground features worn, textured lunar regolith with faint, deep craters, subtly reflecting the sparse, focused industrial lighting from the structure. In the midground, the \"Lunar Assembly Plant\" facade is the main subject, positioned slightly off-center to the right. It is a brutalist industrial megastructure, composed of dense, matte dark metallic alloys with rough, industrial textures, prominent rivets, and weld seams. Functional protrusions and docking bays are visible. Sparse, focused industrial lighting from within casts long, sharp shadows across its unadorned surfaces, highlighting deep grays and blacks. A large, stark sign with non-humanoid script, glowing faintly with a deep charcoal hue, is affixed near the main entrance. No visible windows, only heavy, reinforced functional doors. The building is set back slightly from the immediate lunar surface, emphasizing its immense scale. In the background, the black vacuum of space is the ever-present \"weather,\" devoid of any atmospheric motion or distant landmarks, save for the faint, harsh glow of active machinery and occasional red and yellow warning lights emanating from within the structure. The overall composition is asymmetric, with more street-level lunar surface visible on the left, and the building shot at a slight angle to showcase its imposing depth and dimension, creating an oppressive yet awe-inspiring mood of isolation and immense power. The color palette is dominated by deep charcoal and muted steel gray, with minimal accent colors from warning lights and active machinery.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "model": "FLUX"
       },
       "entityRefs": [
-        "63480085-8c36-402a-9d72-7f248a282543"
+        "915dfcad-eb88-45cd-826b-c335088ae86c"
       ]
     },
-    "media-1765968283207-86vs108hf": {
-      "id": "media-1765968283207-86vs108hf",
+    "media-1765971724121-b70ykxahy": {
+      "id": "media-1765971724121-b70ykxahy",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a86a75c/QFPTbhrqQjPx7dFJQvsqF.jpg",
-      "createdAt": "2025-12-17T10:44:43.207Z",
+      "url": "https://v3b.fal.media/files/b/0a86a8b4/w9fEEjZDI0s4iBMAAjdkH.jpg",
+      "createdAt": "2025-12-17T11:42:04.121Z",
       "metadata": {
-        "prompt": "A breathtaking, wide-angle interior shot looking down the massive, conical tunnel of a main entrance to a Xenovault Manufactory. The scale is colossal, with a dramatically arched ceiling soaring overhead and meeting seamless, matte metallic walls at sharp, imposing angles. The floor is a vast expanse of flawlessly polished obsidian, reflecting the cool, pulsing bioluminescent lighting that emanates from intricate veins embedded within the walls and ceiling. These veins glow with vibrant electric blues and greens, casting an ambient, cool light across the austere, brutalist alien megastructure. Dominating the rear of the space is a massive archway, hinting at the passage into the central hub. To the left, a secondary access conduit is recessed into the wall. Within the expansive chamber, towering consoles with holographic displays stand sentinel, a central monolithic control nexus pulses with dormant energy, metallic shelving units are laden with unidentifiable artifacts, and recessed alcoves house dormant, alien machinery. The atmosphere is cool and still, with a faint, almost imperceptible hum. The mood is awe-inspiring, mysterious, and profoundly unnerving, emphasizing the pristine condition and advanced construction of this unknown alien civilization's industrial marvel. The composition is asymmetric, drawing the eye deep into the cavernous space towards the glowing archway and the promise of what lies beyond.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nAn ultra-wide, slightly elevated (28° downward tilt) street-level view of the \"Lunar Shipyards,\" a colossal alien factory for space crafts on the dark side of the Moon. The Brutalist alien industrial megastructure is rendered in dark, reinforced metal plating and scarred concrete, its facade dominated by deep charcoal gray (70%) and muted steel silver on exposed structural supports and colossal docking bays. The building entrance, a massive, utilitarian portal framed by heavy-duty composite alloys, is visible but not central, slightly to the right of frame. Sparse, functional industrial lighting casts harsh shadows, with occasional faint cyan and amber indicator lights flickering along warning stripes and oversized utility cranes. Pitted and scarred textures on the metal plating suggest years of intense industrial use. In the foreground, a section of worn, textured lunar regolith pavement, tinged with faint metallic dust and reflecting the sparse, colored indicator lights from the distant structure, anchors the scene. The midground features the imposing, sprawling facade of the shipyards, its immense scale emphasized by deep, cavernous openings suggesting docking bays, and visible ventilation conduits. Large-scale machinery and reinforced glass observation ports are subtly integrated. The background reveals the vast, inky blackness of the lunar night sky, devoid of atmosphere or weather, punctuated by distant, faint celestial bodies. The composition is deliberately asymmetric, with more lunar landscape visible on the left, creating a sense of depth and drawing the viewer's eye towards the awe-inspiring and formidable alien ambition. The overall mood is one of immense power and purpose, evoking insignificance against this backdrop of alien engineering.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
         "model": "FLUX"
       },
-      "entityRefs": []
+      "entityRefs": [
+        "a4203d54-04e6-4f95-8977-bca4a4671aa0"
+      ]
     },
-    "media-1765968400413-q5dgij1xp": {
-      "id": "media-1765968400413-q5dgij1xp",
+    "media-1765971804864-vkqrllg5i": {
+      "id": "media-1765971804864-vkqrllg5i",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a86a767/tBOX36sw8neghJGL6BlRi.jpg",
-      "createdAt": "2025-12-17T10:46:40.413Z",
+      "url": "https://v3b.fal.media/files/b/0a86a8bc/GVv5aRsokT3xP-qZbSXFx.jpg",
+      "createdAt": "2025-12-17T11:43:24.864Z",
       "metadata": {
-        "prompt": "An awe-inspiring, imposing, and mysterious vast cavernous interior of an industrial alien hangar. The irregular domed ceiling soars high above, supported by massive, monolithic pillars of rough-hewn dark ferrocrete. Polished, dark metallic alloy floors gleam under the ambient light. The focal point is an immense, monolithic alien craft dominating the central space, its form partially obscured by shadow and sheer scale, hinting at unknown technologies. Bioluminescent lighting strips in sharp electric violet trace the structural edges of the hangar, while glowing conduits in teal and violet snake across the floor and walls. Secondary surfaces include metallic gantries and the intricate hull plating of the alien craft. Accent features include pulsing violet bioluminescent veins and glowing alien symbols integrated into control consoles along the walls. The atmosphere is cool and still, with a faint metallic tang and a low, resonant hum. The color palette is predominantly monochromatic grey and black, dramatically punctuated by sharp, electric violet and teal bioluminescence. The architectural tone is that of a brutalist alien megastructure, and the cultural tone is of an advanced, unknown alien civilization. The composition is asymmetric, drawing the eye deep into the hangar towards the colossal alien artifact.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
+        "prompt": "Interior of a colossal, multi-tiered Brutalist industrial megastructure hangar, vast and cavernous, with a vaulted ceiling and massive, arched docking bays and observation galleries. Dominating the immense, irregular cubic volume is a gargantuan spacecraft, a monument to interstellar engineering, under construction or repair, its hull plating industrial-grade. The scene is rendered in a strictly monochromatic palette of dark grays and blacks, punctuated by stark, functional high-bay industrial lamps casting deep, dramatic shadows and occasional cold, white emergency lights. Primary surfaces are rough, raw concrete floors and weathered steel beam walls, interwoven with exposed wiring, conduits, and riveted panels. A complex network of elevated walkways, gantries with prominent warning stripes, and robotic maintenance platforms crisscross the upper reaches, alongside large-scale robotic manipulators and repair arms. Integrated lighting arrays and environmental controls are subtly present. The atmosphere is still and cool, with a faint, almost imperceptible scent of ozone and industrial lubricant, conveying a sense of immense endeavor in a slightly desolate, awe-inspiring setting. Accent features include access hatches on the spacecraft and structural supports. The composition is asymmetric and visually striking, emphasizing the sheer scale and utilitarian purpose of the space.\n[CAMERA:] Off center one-point perspective\n[LENS:] 18mm f/4, ultra-wide\n ",
         "model": "FLUX"
       },
       "entityRefs": []

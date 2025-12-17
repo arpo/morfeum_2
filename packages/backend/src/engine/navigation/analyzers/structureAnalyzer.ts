@@ -197,9 +197,8 @@ function createFallbackAnalysis(
     openings: perspective === 'interior' ? 'minimal' : (perspective === 'open-air' ? 'open-passages' : 'large-glass'),
     functionalType,
     spatialLayout: `A ${scale} ${perspective} space.`,
-    requiredElements: requiredElements.length > 0 ? requiredElements : undefined,
-    dominantElements: [name],
-    uniqueIdentifiers: requiredElements.length > 0 ? requiredElements.slice(0, 2) : [name]
+    requiredElements: requiredElements.length > 0 ? requiredElements : undefined
+    // NOTE: dominantElements/uniqueIdentifiers now at root level, not inside structure
   };
 
   // Apply parsed enhancements if provided
@@ -207,11 +206,14 @@ function createFallbackAnalysis(
     structure.navigableElements = parsedEnhancements.navigableElements;
   }
 
-  const result: StructureAnalysis = {
+  const result: StructureAnalysis & { dominantElements?: string[]; uniqueIdentifiers?: string[] } = {
     name,
     perspective,
     structure,
-    description: userPrompt
+    description: userPrompt,
+    // Visual anchor fields at ROOT level (not inside structure)
+    dominantElements: [name],
+    uniqueIdentifiers: requiredElements.length > 0 ? requiredElements.slice(0, 2) : [name]
   };
 
   // Apply furnishing enhancements

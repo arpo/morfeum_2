@@ -314,16 +314,17 @@ export async function runCreateLocationNodePipeline(
     }
 
     // Build node with SEPARATE structure (new architecture)
+    // NOTE: dominantElements/uniqueIdentifiers are now at ROOT level (not inside structure)
     const node = buildNode(nodeType, structureAnalysis.name, nodeData.dna, {
       description: structureAnalysis.description || nodeData.description,
       // Structure is now stored separately at node level (not inside DNA)
       structure: structureAnalysis.structure,
       // Furnishing details (when --furnish flag is used)
       furnishingDetails: structureAnalysis.furnishingDetails,
-      // Legacy fields (kept for backward compatibility, but now also in structure)
-      navigableElements: structureAnalysis.structure.navigableElements || nodeData.navigableElements,
-      dominantElements: structureAnalysis.structure.dominantElements || nodeData.dominantElements,
-      uniqueIdentifiers: structureAnalysis.structure.uniqueIdentifiers || nodeData.uniqueIdentifiers,
+      // Visual anchor fields - now at ROOT level in LLM response (not inside structure)
+      navigableElements: (structureAnalysis as any).navigableElements || structureAnalysis.structure.navigableElements || nodeData.navigableElements,
+      dominantElements: (structureAnalysis as any).dominantElements || nodeData.dominantElements,
+      uniqueIdentifiers: (structureAnalysis as any).uniqueIdentifiers || nodeData.uniqueIdentifiers,
       searchDesc: nodeData.searchDesc,
       slug: nodeData.slug,
       primaryMedia: mediaId

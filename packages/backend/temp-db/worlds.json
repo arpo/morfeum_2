@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1765968095922-6j7j6e5us": {
-      "id": "loc-1765968095922-6j7j6e5us",
+    "loc-1765971642198-6s15arzdi": {
+      "id": "loc-1765971642198-6s15arzdi",
       "type": "host",
-      "name": "Xenovault Manufactory",
+      "name": "The Moon",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A sprawling, monolithic edifice constructed from dark, unidentifiable alloys, its facade a tapestry of geometric inhumanity with impossibly sharp angles and vast, smooth surfaces interrupted by clusters of glowing conduits and externalized, complex machinery. The scale is overwhelming, designed for colossal operations, set against a backdrop of an unknown alien world.",
-        "colorsAndLighting": "Dark charcoal dominates (90%), with shimmering internal light from crystalline growths. Distant alien sky provides ambient light.",
-        "atmosphere": "A sense of awe mixed with unease permeates the environment, evoking feelings of immense power and alien purpose. The atmosphere is likely thin and alien, with no discernible weather patterns visible from this distance.",
-        "materials": "Primarily brushed, dark metallic alloys with a smooth, almost frictionless texture. Sections are reinforced with crystalline growths that shimmer with internal light.",
-        "mood": "Awe, unease, immense power, alien purpose, sublime indifference.",
-        "sounds": "Distant, low hum of colossal machinery, faint, unidentifiable alien resonance.",
-        "primary_surfaces": "Vast, smooth metallic plains, colossal geometric structures, glowing conduit networks.",
-        "secondary_surfaces": "Shimmering crystalline formations, vast empty spaces between structures.",
-        "accent_features": "Clusters of intensely glowing conduits, externalized complex machinery, colossal entryways or vents.",
-        "dominant": "Dark Charcoal",
-        "secondary": "Deep Black",
-        "accent": "Internal Crystalline Glow (various hues)",
-        "ambient": "Pale, alien sky light, internal glow from machinery.",
+        "looks": "AERIAL/SATELLITE VIEW: vast, cratered lunar surface with sharp shadows and the distant blue marble of Earth hanging in the black sky. No individual structures are discernible at this scale, only geological features and the immense, empty plains.",
+        "colorsAndLighting": "Harsh, high-contrast lighting from a single solar source. Deep blacks of shadow contrast with the stark grays and whites of illuminated surfaces. The distant Earth provides a muted blue and white presence.",
+        "atmosphere": "Absolute vacuum. The blackness of space is absolute, with no atmospheric diffusion of light. Dust motes can be visible in direct sunlight, but there is no air or weather.",
+        "materials": "Dominated by fine, dark gray regolith (lunar dust) and exposed, ancient bedrock. Rocky outcrops and vast, smooth plains of dust are the primary visible textures.",
+        "mood": "Utter desolation, profound silence, and immense, cold grandeur. A sense of isolation and the vastness of space.",
+        "sounds": "Absolute silence. The only sounds would be those generated internally by an observer or equipment, none external.",
+        "primary_surfaces": "Cratered plains, dusty expanses, large impact basins.",
+        "secondary_surfaces": "The black void of space, distant celestial bodies.",
+        "accent_features": "The sharp, geometric shadows cast by craters and mountains, the brilliant blue and white of Earth.",
+        "dominant": "Deep Charcoal",
+        "secondary": "Lunar Gray",
+        "accent": "Stark White (sunlit surfaces)",
+        "ambient": "The deep black of space, with a stark, high-contrast light source.",
         "genre": "Sci-Fi",
-        "architectural_tone": "Alien Megastructure",
-        "cultural_tone": "Indifferent Advancement",
-        "palette_bias": "Monochromatic Industrial",
+        "architectural_tone": "Natural Geology / Extreme Industrial",
+        "cultural_tone": "Alien / Utterly Other",
+        "palette_bias": "Monochromatic",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A colossal, alien manufactory dominating the landscape. Its immense scale and alien geometry suggest a purpose far beyond human comprehension, exuding an aura of immense, indifferent power.",
-      "searchDesc": "Sprawling alien megastructure, dark alloys, crystalline growths, immense scale, alien purpose.",
-      "slug": "xenovault-manufactory",
+      "description": "A desolate, cratered natural satellite orbiting Earth. Its surface is a stark, monochromatic expanse of gray dust and rock, punctuated by the dark, silent emptiness of deep craters and the sharp shadows cast by solar illumination.",
+      "searchDesc": "Cratered, desolate lunar landscape, Earth's silent companion.",
+      "slug": "the-moon",
       "structure": {
-        "spatialLayout": "A vast, geometric sprawl, hinting at immense internal processing and manufacturing capabilities. The layout suggests a focus on efficient, alien-driven operations."
+        "spatialLayout": "A near-featureless, undulating expanse of craters and plains stretching to the horizon. The curvature of the moon is apparent at extreme distances."
       }
     },
-    "f6a0f060-4ec1-42aa-83e0-7b94feffbf01": {
-      "id": "f6a0f060-4ec1-42aa-83e0-7b94feffbf01",
+    "80e472c1-20ef-401d-9f29-972bdceab818": {
+      "id": "80e472c1-20ef-401d-9f29-972bdceab818",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,257 +44,144 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "63480085-8c36-402a-9d72-7f248a282543": {
-      "id": "63480085-8c36-402a-9d72-7f248a282543",
+    "915dfcad-eb88-45cd-826b-c335088ae86c": {
+      "id": "915dfcad-eb88-45cd-826b-c335088ae86c",
       "type": "location",
-      "name": "The Xenovault Manufactory",
+      "name": "Lunar Assembly Plant",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The Xenovault Manufactory is a sprawling, monolithic edifice constructed from dark, unidentifiable alloys. Its facade is a tapestry of geometric inhumanity, with impossibly sharp angles and vast, smooth surfaces interrupted by clusters of glowing conduits and externalized, complex machinery. The scale is overwhelming, designed for colossal operations.",
-        "colorsAndLighting": "Dominant hues are deep charcoal and obsidian, punctuated by the electric viridian of pulsating energy conduits. Internal bioluminescent panels cast an eerie, green glow from within visible portals, creating stark contrasts and deep shadows.",
-        "atmosphere": "The air around the manufactory feels charged, with a faint, metallic tang. A low, resonant hum permeates the atmosphere, occasionally overlaid by the sharp crackle of energy discharges. Temperature is surprisingly consistent, despite the visible energy flows.",
-        "materials": "Primary materials appear to be brushed, dark metallic alloys with a smooth, almost frictionless texture. Sections are reinforced with crystalline growths that shimmer with internal light. The condition is pristine, showing no signs of wear or decay.",
-        "mood": "A sense of awe mixed with unease. The manufactory evokes feelings of immense power, alien purpose, and the sublime indifference of advanced, non-human engineering.",
-        "sounds": "Deep hum, energy crackle, rhythmic vibrations, metallic clanking",
-        "primary_surfaces": "Brushed dark alloys, smooth metallic panels, crystalline growths",
-        "secondary_surfaces": "Polished obsidian, glowing conduits, externalized machinery components",
-        "accent_features": "Pulsating viridian energy conduits, bioluminescent light panels, intricate network of pipes and vents",
-        "dominant": "Dark Charcoal (90%)",
-        "secondary": "Obsidian (8%)",
-        "accent": "Viridian Green (2%)",
-        "ambient": "Eerie green glow",
+        "looks": "A gargantuan, imposing structure dominates the lunar landscape. Its form is angular and brutalist, with large, unadorned surfaces. Functional protrusions and docking bays hint at its purpose.",
+        "colorsAndLighting": "Dominated by deep grays and blacks, reflecting the metallic construction. Sparse, focused industrial lighting casts long, sharp shadows, creating a stark contrast against the blackness of space.",
+        "atmosphere": "The air is thin and sterile, maintained by robust life support systems. Temperatures are extremely controlled, with no atmospheric motion. The vacuum of space is the ever-present 'weather'.",
+        "materials": "Primarily constructed from dense, matte dark metallic alloys. Textures are rough and industrial, showing signs of heavy use and atmospheric exposure. Rivets and weld seams are prominent.",
+        "mood": "Oppressive and awe-inspiring. The sheer scale and functional starkness evoke a sense of isolation and immense power.",
+        "sounds": "Hums, clanks, whirs, metallic impacts, hiss of hydraulics",
+        "primary_surfaces": "Dark metallic panels, rough-hewn concrete",
+        "secondary_surfaces": "Exposed piping, conduit, structural beams",
+        "accent_features": "Glow of active machinery, warning lights, exhaust ports",
+        "dominant": "Deep charcoal with extensive coverage",
+        "secondary": "Muted steel gray for structural elements",
+        "accent": "Occasional red and yellow warning lights",
+        "ambient": "Harsh, functional",
         "genre": null,
-        "architectural_tone": "Brutalist alien megastructure with bioluminescent accents",
-        "cultural_tone": "Constructed by an advanced, unknown alien civilization for large-scale industrial production and potentially unknown scientific endeavors.",
-        "palette_bias": "Monochromatic with sharp, electric accents",
+        "architectural_tone": "Brutalist industrial megastructure",
+        "cultural_tone": "An advanced, non-humanoid civilization's manufacturing hub for interstellar craft.",
+        "palette_bias": "Monochromatic grays and blacks",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A vast, alien factory with pulsating energy conduits and bizarre machinery. EXTERIOR VIEW.",
-      "searchDesc": "Alien factory with pulsating energy conduits and bizarre machinery. Exterior view of the manufactory's facade.",
-      "slug": "the-xenovault-manufactory",
+      "description": "A massive, utilitarian factory constructed from dark, metallic alloys, designed for building space crafts. Its exterior is stark and functional, reflecting the harsh lunar environment. EXTERIOR VIEW.",
+      "searchDesc": "Massive dark metallic factory for building spacecraft on the Moon's dark side.",
+      "slug": "lunar-assembly-plant",
       "structure": {
-        "spatialLayout": "The structure presents as a vast, impenetrable block with a central, grand entrance. Its dimensions are immense, suggesting interior volumes far exceeding terrestrial architectural norms, with a profound sense of depth and complexity."
+        "spatialLayout": "Vast, cavernous interior spaces designed for efficiency. Enormous volumes are dedicated to assembly lines and vehicle bays, with clear pathways for heavy machinery."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "central facade",
-          "description": "A massive, magnetically sealed portal"
+          "position": "central main entrance",
+          "description": "a massive, reinforced blast door"
         }
       ],
       "dominantElements": [
-        "main entrance: arched doorway, large scale, interior has polished obsidian floors, metallic walls, bioluminescent lighting"
+        "alien factory: industrial megastructure, massive scale, interior has metal floors, intricate machinery, harsh industrial lighting"
       ],
       "uniqueIdentifiers": [
-        "Pulsating energy conduits along the facade",
-        "Towering, non-Euclidean architectural angles",
-        "Intermittent bursts of emerald light from within",
-        "Massive, industrial-grade docking bays",
-        "Subtle, rhythmic vibrations emanating from the structure"
+        "massive scale",
+        "dark metallic alloys",
+        "utilitarian design",
+        "harsh lunar environment",
+        "spacecraft construction"
       ],
-      "primaryMedia": "media-1765968110652-vpscg4e5m"
+      "primaryMedia": "media-1765971657577-erag4ofo3"
     },
-    "niche-1765968283208-dn641jmrr": {
-      "id": "niche-1765968283208-dn641jmrr",
+    "niche-1765971804865-rdkvx69jo": {
+      "id": "niche-1765971804865-rdkvx69jo",
       "type": "niche",
-      "name": "Interior of Main Entrance",
+      "name": "Interior of the Big Hangar with the Big Spacecraft",
       "spaceType": "interior",
       "dna": {
-        "looks": "Enormous, monolithic architectural space with a striking contrast between dark, reflective surfaces and luminous light sources.",
-        "colorsAndLighting": "Dominated by deep blacks and silvers, punctuated by vibrant, cool-toned bioluminescent blues and greens. Lighting is ambient and internal, emanating from the walls and floor.",
-        "atmosphere": "Cool, still air with a faint hum.",
-        "materials": "Polished obsidian, brushed metal alloys.",
-        "mood": "Awe-inspiring, mysterious, and slightly unnerving.",
-        "sounds": "Low hum, echoing footsteps, soft metallic creaks.",
-        "spatialLayout": "Vast, open, rectangular chamber with a monumental arched opening.",
-        "primary_surfaces": "Polished obsidian floor, seamless metallic walls.",
-        "secondary_surfaces": "Integrated bioluminescent channels.",
-        "accent_features": "The glowing bioluminescent veins within the walls.",
-        "dominant": "black",
-        "secondary": "silver",
-        "accent": "electric blue",
-        "ambient": "cool",
-        "genre": null,
-        "architectural_tone": "Brutalist alien megastructure with bioluminescent accents",
-        "cultural_tone": "Constructed by an advanced, unknown alien civilization for large-scale industrial production and potentially unknown scientific endeavors.",
-        "palette_bias": "Monochromatic with sharp, electric accents",
+        "looks": "A monumental hangar space, filled with the imposing presence of a colossal spacecraft under construction or repair. Heavy industrial architecture, exposed metallic structures, and utilitarian design dominate.",
+        "colorsAndLighting": "Predominantly monochromatic grays and blacks. Stark, functional lighting, likely high-bay industrial lamps, casting deep shadows and highlighting metallic surfaces. Occasional cold, white emergency lights.",
+        "atmosphere": "Still and cool, with a faint smell of ozone and industrial lubricant. Heavy, silent air, suggesting vast, empty volume.",
+        "materials": "Primarily raw concrete, weathered steel, and exposed metal alloys. Functional, unadorned surfaces.",
+        "mood": "Imposing, awe-inspiring, utilitarian, slightly desolate, sense of immense endeavor.",
+        "sounds": "Distant hum of machinery, occasional metallic clang, echo of footsteps, pervasive silence.",
+        "spatialLayout": "Vast, open cubic volume with high ceilings, punctuated by the immense, irregularly shaped form of the spacecraft.",
+        "primary_surfaces": "Concrete floor, steel beam walls, spacecraft hull plating",
+        "secondary_surfaces": "Exposed wiring and conduits, riveted panels, ventilation shafts",
+        "accent_features": "Warning stripes on gantries, access hatches on spacecraft, structural supports",
+        "dominant": "dark gray",
+        "secondary": "black",
+        "accent": "industrial white",
+        "ambient": "cold, stark",
+        "genre": "science fiction",
+        "architectural_tone": "Brutalist industrial megastructure",
+        "cultural_tone": "highly industrialized society",
+        "palette_bias": "monochromatic grays and blacks",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765968283207-86vs108hf",
-      "description": "The interior of the main entrance is a vast, monumental passage. Polished obsidian floors reflect the ethereal bioluminescent light that emanates from the metallic walls and vaulted ceiling. The sheer scale and monolithic design speak to the advanced, unknown alien civilization that constructed this industrial marvel.",
+      "primaryMedia": "media-1765971804864-vkqrllg5i",
+      "description": "The interior of the hangar is a monolithic testament to colossal engineering. The vastness is palpable, filled with the muted hum of machinery and the stark monochromatic tones of industrial construction. The immense spacecraft, a behemoth of dark, unreflective alloys, dominates the view, its complex hull scarred and marked by ongoing assembly and repair. Above, a skeletal network of gantries and maintenance platforms casts long, sharp shadows, hinting at the ceaseless activity required to bring such interstellar vessels to life.",
       "structure": {
-        "form": "conical tunnel",
-        "roofType": "arched",
-        "scale": "large",
-        "orientation": "horizontal",
-        "openings": [],
-        "openingShape": "none",
-        "functionalType": "passage",
-        "spatialLayout": "A grand, imposing entryway that widens as it recedes from the external facade. The space funnels inward towards the visible interior of the Xenovault Manufactory. The arched ceiling rises dramatically overhead, meeting the metallic walls at sharp angles.",
-        "requiredElements": [
-          "polished obsidian floors",
-          "metallic walls",
-          "bioluminescent lighting"
-        ],
-        "dominantElements": [
-          "main entrance: arched doorway, large scale, interior has polished obsidian floors, metallic walls, bioluminescent lighting"
-        ],
-        "uniqueIdentifiers": [
-          "The sheer scale of the arched entryway, suggesting passage into a colossal structure.",
-          "The contrasting textures of the polished obsidian floor and the matte metallic walls.",
-          "The soft, pulsing glow of bioluminescent veins embedded within the walls and ceiling."
-        ],
-        "navigableElements": [
-          {
-            "type": "archway",
-            "position": "center",
-            "description": "archway massive  to rear sector"
-          },
-          {
-            "type": "door",
-            "position": "center",
-            "description": "door reinforced blast  to central hub"
-          },
-          {
-            "type": "object",
-            "position": "left wall",
-            "description": "object secondary access conduit"
-          }
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "towering consoles with holographic displays",
-          "central monolithic control nexus",
-          "metallic shelving units with unknown artifacts",
-          "recessed alcoves with dormant machinery"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "archway massive  to rear sector"
-        },
-        {
-          "type": "door",
-          "position": "center",
-          "description": "door reinforced blast  to central hub"
-        },
-        {
-          "type": "object",
-          "position": "left wall",
-          "description": "object secondary access conduit"
-        }
-      ],
-      "dominantElements": [
-        "main entrance: arched doorway, large scale, interior has polished obsidian floors, metallic walls, bioluminescent lighting"
-      ],
-      "uniqueIdentifiers": [
-        "The sheer scale of the arched entryway, suggesting passage into a colossal structure.",
-        "The contrasting textures of the polished obsidian floor and the matte metallic walls.",
-        "The soft, pulsing glow of bioluminescent veins embedded within the walls and ceiling."
-      ],
-      "searchDesc": "Massive arched entrance with obsidian floors, metallic walls, and bioluminescent light.",
-      "slug": "interior-of-main-entrance-arched-doorway-large-scale-interior-has-polished-obsidian-floors-metallic-walls-bioluminescent-lighting"
-    },
-    "niche-1765968400414-e9p5319dy": {
-      "id": "niche-1765968400414-e9p5319dy",
-      "type": "niche",
-      "name": "Hangar with Big Alien Craft",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Vast, cavernous interior with towering, rough-hewn walls of dark, unyielding material. The air hums with latent energy. Immense alien craft dominates the central space, its form obscured by shadow and scale.",
-        "colorsAndLighting": "Primarily monochromatic grey and black, punctuated by sharp, electric violet and teal bioluminescent lines tracing architectural features and pulsing from the alien craft's systems.",
-        "atmosphere": "Cool, still air with a faint metallic tang. A low, resonant hum permeates the space.",
-        "materials": "Reinforced ferrocrete, dark metallic alloys, crystalline bioluminescent conduits.",
-        "mood": "Awe-inspiring, imposing, mysterious, alien.",
-        "sounds": "Deep hum, echoing silence, faint electrical crackles.",
-        "spatialLayout": "Vast, open cavern with high ceilings and immense, unadorned structural supports.",
-        "primary_surfaces": "Rough ferrocrete walls, polished dark floor.",
-        "secondary_surfaces": "Metallic gantries, intricate alien hull plating.",
-        "accent_features": "Bioluminescent veins, glowing alien symbols, control consoles integrated into walls.",
-        "dominant": "Dark grey",
-        "secondary": "Black",
-        "accent": "Electric violet",
-        "ambient": "Pulsing violet",
-        "genre": null,
-        "architectural_tone": "Brutalist alien megastructure with bioluminescent accents",
-        "cultural_tone": "Unknown alien civilization",
-        "palette_bias": "Monochromatic with sharp, electric accents",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765968400413-q5dgij1xp",
-      "description": "The interior of a colossal hangar, designed in a Brutalist alien megastructure style. The air hums with latent energy, illuminated by stark, bioluminescent accents that trace the edges of the raw, metallic architecture. Dominating the space is a gargantuan alien craft, its form both awe-inspiring and unnerving.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "domed",
+        "form": "Vast, cavernous space with a highly irregular and utilitarian form, dominated by the immense presence of the spacecraft it encloses. Think immense, reinforced concrete and metallic structures, with gantries, scaffolding, and maintenance bays carved into its periphery.",
+        "roofType": "vaulted",
         "scale": "large",
         "orientation": "wide",
-        "openings": "open-passages",
-        "openingShape": "irregular",
-        "functionalType": "industrial",
-        "spatialLayout": "A vast, cavernous hangar space with a high, irregular domed ceiling. Massive, monolithic pillars support the structure, and the floor is a polished, dark material. The focal point is the immense, imposing alien craft.",
+        "openings": "Massive, reinforced docking bays and observation galleries.",
+        "openingShape": "arched",
+        "functionalType": "Interstellar craft assembly and maintenance",
+        "spatialLayout": "The hangar is a colossal, multi-tiered space. The floor is a vast expanse of hardened, metallic plating. Massive structural supports and a complex network of catwalks, gantries, and robotic armatures crisscross the upper reaches. Pockets of activity are visible at various levels, with integrated maintenance bays and fabrication units built into the hangar walls.",
         "requiredElements": [
-          "big alien craft"
-        ],
-        "dominantElements": [
-          "main entrance: massive, recessed archway, dark metal, leading into the main hangar space"
-        ],
-        "uniqueIdentifiers": [
-          "bioluminescent lighting strips along structural edges",
-          "glowing conduits snaking across the floor and walls"
+          "The immense spacecraft itself, occupying a significant portion of the hangar's volume",
+          "Industrial-grade flooring and wall plating",
+          "A complex system of elevated walkways and maintenance platforms",
+          "Large-scale robotic manipulators and repair arms",
+          "Integrated lighting arrays and environmental controls",
+          "big space craft"
         ]
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "central gantry access",
-          "description": "Massive, sliding blast door with glowing runes."
+          "position": "far wall, left side",
+          "description": "A massive, reinforced blast door, partially ajar."
         },
         {
           "type": "passage",
-          "position": "service tunnel entrance",
-          "description": "Low, recessed opening leading into maintenance corridors."
+          "position": "leading to spacecraft hull",
+          "description": "A temporary access gantry connecting the hangar floor to a large opening in the spacecraft."
         }
       ],
       "dominantElements": [
-        "main entrance: massive, recessed archway, dark metal, leading into the main hangar space"
+        "Big spacecraft: colossal, angular, dark metal, interior has polished composite floor, reinforced metallic wall plating, integrated volumetric lighting"
       ],
       "uniqueIdentifiers": [
-        "bioluminescent lighting strips along structural edges",
-        "glowing conduits snaking across the floor and walls"
+        "The sheer scale of the hangar dwarfing all other elements.",
+        "The monolithic presence of the partially assembled or undergoing maintenance spacecraft.",
+        "The interwoven network of industrial infrastructure supporting the craft."
       ],
-      "searchDesc": "Colossal alien hangar, brutalist megastructure, bioluminescent accents, housing giant alien craft.",
-      "slug": "hangar-witj-big-alien-craft"
+      "searchDesc": "Vast hangar housing a colossal spacecraft, with exposed industrial framework and functional lighting.",
+      "slug": "interior-of-a-big-hangar-with-a-big-space-craft"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765968095922-6j7j6e5us",
+      "id": "loc-1765971642198-6s15arzdi",
       "type": "host",
       "children": [
         {
-          "id": "f6a0f060-4ec1-42aa-83e0-7b94feffbf01",
+          "id": "80e472c1-20ef-401d-9f29-972bdceab818",
           "type": "region",
           "children": [
             {
-              "id": "63480085-8c36-402a-9d72-7f248a282543",
+              "id": "915dfcad-eb88-45cd-826b-c335088ae86c",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765968283208-dn641jmrr",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765968400414-e9p5319dy",
+                  "id": "niche-1765971804865-rdkvx69jo",
                   "type": "niche",
                   "children": []
                 }
@@ -306,6 +193,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765968095922-6j7j6e5us"
+    "loc-1765971642198-6s15arzdi"
   ]
 }

@@ -102,10 +102,10 @@ OUTPUT (pure JSON):
     "openingShape": "rectangular|circular|arched|mixed|irregular",
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment|natural",
     "spatialLayout": "1-2 sentence description of the DESTINATION",
-    "requiredElements": ["elements from USER INPUT that MUST appear"],
-    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
-    "uniqueIdentifiers": ["distinctive features of this DESTINATION"]
+    "requiredElements": ["elements from USER INPUT that MUST appear"]
   },
+  "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
+  "uniqueIdentifiers": ["distinctive features of this DESTINATION"],
   "description": "Brief description of the DESTINATION"
 }`;
   }
@@ -167,10 +167,10 @@ OUTPUT (pure JSON):
     "openingShape": "circular|rectangular|arched|mixed (appropriate for TARGET OBJECT)",
     "functionalType": "Determined by TARGET OBJECT purpose",
     "spatialLayout": "Description of the TARGET OBJECT's interior layout",
-    "requiredElements": ["Key features that MUST be in the TARGET OBJECT's interior"],
-    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
-    "uniqueIdentifiers": ["Distinctive features of this TARGET OBJECT"]
+    "requiredElements": ["Key features that MUST be in the TARGET OBJECT's interior"]
   },
+  "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
+  "uniqueIdentifiers": ["Distinctive features of this TARGET OBJECT"],
   "description": "Brief description of the TARGET OBJECT's interior"
 }`;
   }
@@ -224,12 +224,11 @@ OUTPUT (pure JSON):
     "openingShape": "rectangular|circular|arched|mixed|irregular",
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment",
     "spatialLayout": "1-2 sentence physical description",
-    "requiredElements": ["user-specified elements that MUST appear"],
-    "navigableElements": [{...}],
-    NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
-    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
-    "uniqueIdentifiers": ["2-4 distinctive features"]
+    "requiredElements": ["user-specified elements that MUST appear"]
   },
+  "navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
+  "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
+  "uniqueIdentifiers": ["2-4 distinctive features"],
   "description": "Brief space description"
 }`;
 }
