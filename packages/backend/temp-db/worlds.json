@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1765980350720-ugqavlju8": {
-      "id": "loc-1765980350720-ugqavlju8",
+    "loc-1765981794692-l8uvzmazp": {
+      "id": "loc-1765981794692-l8uvzmazp",
       "type": "host",
       "name": "The Moon",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: The Moon as a desolate, cratered orb with stark light and shadow. Distant Earth hangs as a jewel in the blackness. No individual structures are visible, only vast plains and shadowed craters.",
-        "colorsAndLighting": "Harsh, high-contrast sunlight creates deep shadows. The primary color is an omnipresent lunar gray, with the vibrant blue and white of Earth as a striking, distant accent.",
-        "atmosphere": "A vacuum. The sky is an absolute, star-filled black. No weather or atmospheric diffusion.",
-        "materials": "Dominant lunar regolith (dust and rock), with hints of metallic sheen from subsurface materials in select, distant geological formations.",
-        "mood": "Utter solitude, ancient stillness, and cosmic indifference. A sense of immense scale and emptiness.",
-        "sounds": "Absolute silence, broken only by the faint hum of a spacecraft or internal ship noises.",
-        "primary_surfaces": "Lunar regolith plains, crater floors.",
-        "secondary_surfaces": "Crater rims, mountain ranges, shadowed abysses.",
-        "accent_features": "The distant, vibrant Earth.",
-        "dominant": "Gray",
-        "secondary": "Black",
-        "accent": "Blue and White (Earth)",
-        "ambient": "Stark, direct sunlight and the black void of space.",
+        "looks": "AERIAL/SATELLITE VIEW: A vast, grey, cratered expanse under a black sky, with the curved horizon of the Moon visible. No structures or details are discernible from this distance, only geological features.",
+        "colorsAndLighting": "Harsh, unfiltered sunlight creating extreme contrast between brightly lit surfaces and deep, inky shadows. The dominant color is a muted, dusty grey.",
+        "atmosphere": "Absolute vacuum. No atmosphere, no weather, only the unchanging celestial backdrop of stars and Earth. The silence is profound.",
+        "materials": "Primarily lunar regolith (dust and rock), visible as a uniform, dusty grey surface across vast distances.",
+        "mood": "Profound isolation, ancient silence, and immense cosmic scale. The overwhelming feeling is one of emptiness and enduring stillness.",
+        "sounds": "Absolute silence. The absence of any medium for sound to travel.",
+        "primary_surfaces": "Cratered lunar surface, plains of regolith.",
+        "secondary_surfaces": "Deep, dark shadows within craters.",
+        "accent_features": "The distant, tiny blue marble of Earth in the black sky.",
+        "dominant": "Dusty Grey",
+        "secondary": "Black (shadows and space)",
+        "accent": "Earth's Blue",
+        "ambient": "Stark, direct sunlight from the Sun, deep blackness of space.",
         "genre": "Sci-Fi",
-        "architectural_tone": "Extraterrestrial",
-        "cultural_tone": "Ancient/Primal",
-        "palette_bias": "Monochromatic with a distant color anomaly",
+        "architectural_tone": "Natural Geology",
+        "cultural_tone": "Ancient & Isolated",
+        "palette_bias": "Monochromatic",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A vast, desolate sphere of gray dust and rock, illuminated by the distant, brilliant Earth. Craters scar its surface, and the stark, shadow-drenched plains stretch towards an inky black sky.",
-      "searchDesc": "Barren lunar surface, craters, distant Earth view.",
+      "description": "A vast, desolate celestial body bathed in stark sunlight and deep shadow. Its surface is a landscape of ancient craters and fine, grey dust, stretching to an endless, star-filled horizon.",
+      "searchDesc": "Barren lunar surface, craters, dust, stark sunlight and shadow.",
       "slug": "the-moon",
       "structure": {
-        "spatialLayout": "Dominated by vast, flat plains, ancient impact craters of varying sizes, and mountain ranges casting long shadows."
+        "spatialLayout": "A vast, undulating plane of craters and plains, curving towards the horizon."
       }
     },
-    "24603574-f6b9-438b-916b-ff12ae2234ca": {
-      "id": "24603574-f6b9-438b-916b-ff12ae2234ca",
+    "c59e213b-1450-4d46-99af-a8918a946554": {
+      "id": "c59e213b-1450-4d46-99af-a8918a946554",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,66 +44,221 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "5d0841cc-cf38-492e-bd8b-79558bc7c0a7": {
-      "id": "5d0841cc-cf38-492e-bd8b-79558bc7c0a7",
+    "1600dcd7-3876-4909-9ab0-4225d73a7f18": {
+      "id": "1600dcd7-3876-4909-9ab0-4225d73a7f18",
       "type": "location",
-      "name": "Lunar Orbital Forge",
+      "name": "Lunar Processing Plant",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The Lunar Orbital Forge is a monumental edifice sculpted from the lunar crust, its exterior a rugged expanse of metallic plating and extruded structures. It appears as a series of interconnected modules and vast excavation sites, designed for sheer industrial capacity. The scale is immense, dwarfing any human-made structures.",
-        "colorsAndLighting": "Dominated by the muted grays and ochres of the lunar regolith, accented by the dull sheen of weathered metallic alloys. Industrial lighting casts stark, long shadows across the surfaces, with occasional bursts of intense, functional spotlights within openings.",
-        "atmosphere": "The air is thin and sterile within enclosed areas, a constant hum of powerful machinery pervading the environment. Temperature fluctuates wildly between direct sunlight and shadow, though internal climate control is likely rigorous. A sense of immense, ongoing labor pervades.",
-        "materials": "The primary materials are reinforced, dark metallic alloys and compressed lunar regolith. Textures are rough and functional, with visible seams, rivets, and extruded conduits. Surfaces are generally weathered, bearing the marks of cosmic radiation and micrometeorite impacts.",
-        "mood": "A mood of awe-inspiring, relentless productivity and alien ingenuity. The forge evokes a sense of insignificance against its vast, functional power.",
-        "sounds": "Low hum, metallic clanks, distant grinding, pressurized hiss, rhythmic thuds.",
-        "primary_surfaces": "Rough regolith, weathered metal plating",
-        "secondary_surfaces": "Exposed conduits, reinforced struts, heavy-duty hatches",
-        "accent_features": "Glow of internal machinery visible through openings, directional spotlights, subtle panel lines.",
-        "dominant": "Gray (70%) - lunar regolith and general metallic structures",
-        "secondary": "Dark Charcoal (20%) - reinforced plating and structural elements",
-        "accent": "Dull Orange/Yellow (5%) - internal machinery glow, hazard markings",
-        "ambient": "Slightly cool, sterile grey.",
+        "looks": "A massive, modular industrial complex constructed from grey, weathered metallic panels.  Large, functional components like intake vents and exhaust ports dominate the exterior.  It appears built for extreme durability and efficiency in a vacuum.",
+        "colorsAndLighting": "Primarily muted greys and silvers of the metal. The lighting is sharp and high-contrast, with deep shadows cast by the unfiltered, direct sunlight against the black lunar sky.  Emergency lights might offer small, harsh points of color.",
+        "atmosphere": "A vacuum environment outside, requiring specialized equipment for access.  The temperature would fluctuate wildly between extreme heat and cold.  No natural motion aside from the slow drift of micrometeorites or operational machinery.",
+        "materials": "Heavily reinforced, utilitarian metals such as titanium alloys and specialized lunar concrete.  Textures are rough, brushed, or welded, showing signs of exposure to the harsh lunar environment.",
+        "mood": "Functional and stark. Evokes a sense of isolation and relentless industrial purpose in a hostile environment.",
+        "sounds": "Silence, metallic hum, grinding, whirring, servo motors.",
+        "primary_surfaces": "Brushed metallic panels, reinforced steel plating.",
+        "secondary_surfaces": "Welded seams, composite plating, heat-resistant tiles.",
+        "accent_features": "Warning labels, access panels, external conduit pipes.",
+        "dominant": "Gunmetal grey, covering the majority of the structure.",
+        "secondary": "Silver, used for exposed machinery and panel edges.",
+        "accent": "Red, for warning labels and emergency lights.",
+        "ambient": "Harsh, direct sunlight.",
         "genre": null,
-        "architectural_tone": "Brutalist industrial alien megastructure",
-        "cultural_tone": "Designed for large-scale extraterrestrial spacecraft construction, prioritizing function and durability.",
-        "palette_bias": "Monochromatic greys and muted earth tones",
+        "architectural_tone": "Brutalist industrial with extreme environmental adaptation.",
+        "cultural_tone": "Human (or alien) industrial resource extraction operation; driven by necessity and efficiency.",
+        "palette_bias": "Grays and metallics.",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A sprawling, utilitarian alien factory built into the lunar regolith, designed for constructing spacecraft. EXTERIOR VIEW.",
-      "searchDesc": "Sprawling alien factory built into the moon, constructing spacecraft. Utilitarian and massive.",
-      "slug": "lunar-orbital-forge",
+      "description": "A utilitarian factory structure designed for resource extraction on the lunar surface. EXTERIOR VIEW.",
+      "searchDesc": "Utilitarian lunar factory for resource extraction, metallic, functional, harsh sunlight, stark landscape.",
+      "slug": "lunar-processing-plant",
       "structure": {
-        "spatialLayout": "The forge is an expansive complex, largely subterranean or excavated into the lunar surface. Its layout is dictated by function, with vast open manufacturing bays and a network of utility tunnels and access corridors."
+        "spatialLayout": "A sprawling, low-profile structure with a clearly defined industrial footprint.  Spaces are dictated by function, with ample room for machinery and transport."
       },
       "navigableElements": [
         {
-          "type": "gate",
-          "position": "center",
-          "description": "Leads into the main manufacturing bay, a vast, cavernous interior filled with industrial machinery."
+          "type": "door",
+          "position": "central to the facade",
+          "description": "A heavy, reinforced airlock leading into the factory's interior."
         },
         {
           "type": "passage",
-          "position": "left",
-          "description": "A smaller, reinforced opening that seems to lead to personnel quarters or administrative areas."
-        },
-        {
-          "type": "path",
-          "position": "right",
-          "description": "An external maintenance path winding around the primary structure, offering views of the surrounding lunar terrain."
+          "position": "to the left of the main entrance",
+          "description": "A utilitarian external conduit, possibly for cargo or maintenance, leading to a loading bay."
         }
       ],
       "dominantElements": [
-        "factory: utilitarian, colossal, exterior, regolith, reinforced metal plates, industrial lighting",
-        "gates: colossal, exterior, steel alloy, reinforced plating, dim ambient light"
+        "factory: utilitarian industrial, large-scale, exterior, metallic plating, reinforced seams, harsh sunlight"
       ],
       "uniqueIdentifiers": [
-        "embedded into lunar regolith",
-        "massive, unadorned metallic structures",
-        "imposing, functional design",
-        "low-gravity construction atmosphere"
+        "large intake vents",
+        "articulated robotic arms",
+        "solar panel arrays",
+        "dust-covered hull",
+        "pressurized dome sections"
       ],
-      "primaryMedia": "media-1765980368089-ucm2sytiw"
+      "primaryMedia": "media-1765981821922-y2gyqs7jq"
+    },
+    "niche-1765981872392-xe25fhwt4": {
+      "id": "niche-1765981872392-xe25fhwt4",
+      "type": "niche",
+      "name": "Lunar Processing Plant",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Exterior of a large-scale, utilitarian industrial facility constructed from weathered, grey metallic plating. Reinforced seams are prominent, and large, functional components like intake vents and exhaust ports dominate the facade. The entire structure appears built for extreme durability in a vacuum.",
+        "colorsAndLighting": "Dominated by metallic grays, with stark contrasts from the harsh, direct sunlight creating deep, sharp shadows. Ambient light is minimal and utilitarian, primarily from the sun itself.",
+        "atmosphere": "Vacuum. Extreme temperature fluctuations. Utter silence except for internal machinery hums that might barely be audible through hull plating.",
+        "materials": "Heavily reinforced titanium alloys and specialized lunar concrete.",
+        "mood": "Impersonal, functional, resilient, austere.",
+        "sounds": "Subtle hum, clanking, distant machinery, vacuum.",
+        "spatialLayout": "Expansive, monolithic, imposing.",
+        "primary_surfaces": "Metallic plating, reinforced concrete.",
+        "secondary_surfaces": "Industrial piping, structural beams, vents.",
+        "accent_features": "Recessed lighting fixtures (when active), warning labels, access panels.",
+        "dominant": "dark grey",
+        "secondary": "light grey",
+        "accent": "industrial yellow (for hazard markings)",
+        "ambient": "stark, high-contrast",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with extreme environmental adaptation",
+        "cultural_tone": "Human (or alien) industrial resource extraction operation; driven by necessity and efficiency",
+        "palette_bias": "Grays and metallics",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765981872392-nr32fj7q0",
+      "description": "The interior of the Lunar Processing Plant is a cavernous space dedicated to resource extraction and refinement. Towering machinery hums with activity, casting sharp shadows across the utilitarian metallic surfaces. The air is thick with the scents of industry, and the overall impression is one of relentless, efficient operation.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "This vast interior space is dominated by heavy machinery and processing equipment. Exposed conduits and robust support beams crisscross the ceiling, with a utilitarian, metallic floor underfoot.",
+        "requiredElements": [
+          "factory: utilitarian industrial, large-scale, exterior, metallic plating, reinforced seams, harsh sunlight"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "leads to the main processing floor"
+        },
+        {
+          "type": "door",
+          "position": "far wall",
+          "description": "leads to an auxiliary storage area"
+        }
+      ],
+      "dominantElements": [
+        "processing machinery: utilitarian industrial, large-scale, interior, metallic, exposed conduits, harsh industrial lighting",
+        "control booth: utilitarian industrial, medium, interior, metallic, reinforced, dim lighting"
+      ],
+      "uniqueIdentifiers": [
+        "high-frequency hum of machinery",
+        "smell of ozone and heated metal",
+        "visible dust motes dancing in the artificial light"
+      ],
+      "searchDesc": "Massive industrial lunar plant exterior, metallic plating, reinforced seams, harsh sunlight.",
+      "slug": "null-of-lunar-processing-plant"
+    },
+    "niche-1765981916712-tdb4og51u": {
+      "id": "niche-1765981916712-tdb4og51u",
+      "type": "niche",
+      "name": "Lunar Processing Plant Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, open industrial space filled with colossal, unrefined processing equipment. Exposed conduits snake across the walls and ceiling, and the air shimmers with heat. Large sections of raw lunar ore are visible on conveyor belts and in hoppers.",
+        "colorsAndLighting": "Harsh, utilitarian, industrial lighting casts stark shadows. The primary colors are deep grays and muted metallic tones, punctuated by the occasional hazard-striped yellow or red warning label.",
+        "atmosphere": "The air is dry, filled with the metallic tang of processed lunar regolith and the scent of ozone. Temperature is cool but with localized hot spots near active machinery. A constant, low hum of operation permeates the space.",
+        "materials": "Raw, unpolished steel, reinforced concrete, heavy-duty rubberized conveyor belts, and exposed circuitry. Metal plating is functional rather than aesthetic, with visible welds and bolt lines.",
+        "mood": "Functional, intense, raw, industrial, utilitarian, awe-inspiring in scale.",
+        "sounds": "Deep hum, grinding, clanking, hissing steam, automated alerts, heavy thuds.",
+        "spatialLayout": "Cavernous and open, with high ceilings supported by industrial beams. Multiple levels are suggested by gantries and staircases, creating a multi-tiered industrial landscape.",
+        "primary_surfaces": "weathered metallic plating, unpolished steel",
+        "secondary_surfaces": "exposed concrete, industrial piping, reinforced glass (for observation points)",
+        "accent_features": "warning labels, hazard stripes, indicator lights",
+        "dominant": "dark gray",
+        "secondary": "steel gray",
+        "accent": "hazard yellow",
+        "ambient": "harsh white industrial",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with extreme environmental adaptation",
+        "cultural_tone": "Human (or alien) industrial resource extraction operation; driven by necessity and efficiency",
+        "palette_bias": "Grays and metallics",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765981916711-3n2j5s81q",
+      "description": "Inside the Lunar Processing Plant, the air hums with the low thrum of powerful machinery. The scale is immense, with towering equipment dedicated to resource extraction and refinement.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "This is a vast, cavernous industrial space dominated by massive machinery and utilitarian structures. Exposed conduits and support beams crisscross the ceiling, while the floor is a functional expanse of reinforced concrete or metal grating, stained with industrial residues.",
+        "requiredElements": [
+          "factory",
+          "utilitarian industrial",
+          "large-scale",
+          "metallic plating",
+          "reinforced seams",
+          "harsh sunlight"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "industrial workbench",
+          "hydraulic press",
+          "conveyor belt system",
+          "complex control console with exposed wiring",
+          "warning signage",
+          "stacks of metallic components",
+          "oxygen tanks"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door reinforced blast"
+        },
+        {
+          "type": "hatch",
+          "position": "floor",
+          "description": "hatch maintenance"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object pressurized airlock"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object conduit access panel rear wall"
+        }
+      ],
+      "dominantElements": [
+        "processing machinery: massive industrial, large-scale, interior, metal grating, exposed pipes and wires, dim overhead lighting with harsh spotlights"
+      ],
+      "uniqueIdentifiers": [
+        "heavy industrial machinery",
+        "exposed conduits and pipes",
+        "grimy metallic surfaces",
+        "functional, non-decorative architecture"
+      ],
+      "searchDesc": "Vast industrial processing core, exposed machinery, raw lunar materials, utilitarian metal.",
+      "slug": "null-of-lunar-processing-plant"
     }
   },
   "views": {},
@@ -126,17 +281,28 @@
       ]
     },
     {
-      "id": "loc-1765980350720-ugqavlju8",
+      "id": "loc-1765981794692-l8uvzmazp",
       "type": "host",
       "children": [
         {
-          "id": "24603574-f6b9-438b-916b-ff12ae2234ca",
+          "id": "c59e213b-1450-4d46-99af-a8918a946554",
           "type": "region",
           "children": [
             {
-              "id": "5d0841cc-cf38-492e-bd8b-79558bc7c0a7",
+              "id": "1600dcd7-3876-4909-9ab0-4225d73a7f18",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1765981872392-xe25fhwt4",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765981916712-tdb4og51u",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -144,6 +310,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765980350720-ugqavlju8"
+    "loc-1765981794692-l8uvzmazp"
   ]
 }

@@ -97,10 +97,28 @@ Professional photography, detailed urban/landscape scene, atmospheric perspectiv
 
 /**
  * Generate image prompt for a location node
+ * Includes navigableElements (doors, gates, passages) and dominantElements (main structures)
  */
 export function locationImagePrompt(node: Node): string {
   const dna = node.dna || {};
   const camera = CAMERA_CONFIGS.location;
+  
+  // Get navigable elements (entry points that should be visible in the image)
+  const navigableElements = (node as any).navigableElements || [];
+  const navigableSection = navigableElements.length > 0
+    ? `\nVisible Entry Points/Openings:\n${navigableElements.map((elem: any) => 
+        `- ${elem.type} at ${elem.position}: ${elem.description}`
+      ).join('\n')}`
+    : '';
+  
+  // Get dominant elements (main structures - extract just the type name)
+  const dominantElements = (node as any).dominantElements || [];
+  const mainStructures = dominantElements
+    .map((elem: string) => elem.split(':')[0].trim())
+    .filter((name: string) => name.length > 0);
+  const structuresSection = mainStructures.length > 0
+    ? `\nKey Structures: ${mainStructures.join(', ')}`
+    : '';
 
   return `${node.name}. ${node.description}
 
@@ -108,6 +126,8 @@ ${camera.style}. ${camera.composition}. ${camera.angle}.
 
 Building/Site Exterior:
 ${dna.looks || ''}
+${structuresSection}
+${navigableSection}
 
 Materials and Surfaces:
 Primary: ${dna.primary_surfaces || ''}
@@ -121,7 +141,7 @@ Light: ${dna.ambient || 'natural'}
 Atmosphere: ${dna.atmosphere || ''}
 Mood: ${dna.mood || ''}
 
-Architectural photography, building exterior in context, inviting entrance visible, warm ambient lighting from windows, detailed facade.`;
+Architectural photography, building exterior in context, all entry points and openings clearly visible, detailed facade showing doors/gates/passages.`;
 }
 
 /**
