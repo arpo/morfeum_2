@@ -1,41 +1,40 @@
 {
   "nodes": {
-    "loc-1765915322802-w78kd3uv5": {
-      "id": "loc-1765915322802-w78kd3uv5",
+    "loc-1765977094783-uxxzcqqfs": {
+      "id": "loc-1765977094783-uxxzcqqfs",
       "type": "host",
-      "name": "Xylos",
+      "name": "The Moon - Shadow Foundry Sector",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: vast, arid plains punctuated by immense, geometric stone formations and clusters of faintly glowing, monolithic structures. Distant mountain ranges and barren plateaus dominate the horizon.",
-        "colorsAndLighting": "Muted, dusty earth tones from the arid landscape under a hazy, alien sky that shifts from golden-yellow to orange and pink.",
-        "atmosphere": "A dry, dusty atmosphere with a faint, pervasive haze that softens distant features.",
-        "materials": "Dominant materials are weathered stone and vast expanses of fine, barren sand.",
-        "mood": "A profound sense of ancient mystery, vastness, and desolate beauty.",
-        "sounds": "Distant, low hums and occasional faint echoes, suggesting the presence of dormant technology.",
-        "primary_surfaces": "Vast sandy plains and the surfaces of massive stone structures.",
-        "secondary_surfaces": "Rocky outcrops and distant, eroded mountain formations.",
-        "accent_features": "Clusters of glowing, translucent structures visible as faint teal-green points from afar.",
-        "dominant": "Earthy browns and grays of weathered stone and sand.",
-        "secondary": "Dusty oranges and pinks of the alien sky.",
-        "accent": "Faint teal-green glow from distant containment structures.",
-        "ambient": "Hazy, warm light transitioning across the sky.",
+        "looks": "AERIAL/SATELLITE VIEW: A sprawling, impossibly smooth obsidian construct with stark geometric forms and immense, angular spires piercing the desolate lunar landscape. Gigantic, recessed sections glow with a cold, inner light across its vast, seamless facade.",
+        "colorsAndLighting": "Dominant deep black of the obsidian, punctuated by the cold, ethereal glow emanating from recessed sections and crystalline accents. The surrounding lunar surface is bathed in the faint, stark illumination of distant stars and reflected Earthlight.",
+        "atmosphere": "The vacuum of space, with no discernible atmosphere. The stark, unchanging nature of the lunar environment creates an oppressive stillness.",
+        "materials": "Seamless, ultra-hard obsidian-like substance forms the primary structure. Crystalline, light-emitting polymers are visible as accent features.",
+        "mood": "Imposing, mysterious, and deeply alien. Evokes feelings of awe and apprehension, suggesting immense power and an unknown origin.",
+        "sounds": "Absolute silence, the profound emptiness of space.",
+        "primary_surfaces": "The vast, impossibly smooth obsidian exterior surfaces of the foundry.",
+        "secondary_surfaces": "The barren, cratered lunar regolith surrounding the structure.",
+        "accent_features": "Immense, angular spires and the glowing recessed sections.",
+        "dominant": "Black",
+        "secondary": "Dark Grey",
+        "accent": "Pale Blue/White (from internal glow)",
+        "ambient": "Starlight, faint Earthlight.",
         "genre": "Sci-Fi",
-        "architectural_tone": "Ancient Monolithic",
-        "cultural_tone": "Mysterious",
-        "palette_bias": "Desaturated Warm",
+        "architectural_tone": "Monolithic Brutalist alien construct",
+        "cultural_tone": "Deeply alien, technologically advanced, enigmatic",
+        "palette_bias": "Monochromatic with luminous accents",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "Xylos is a world where colossal remnants of ancient, forgotten civilizations lie scattered across alien landscapes. Vast, weathered stone structures hint at a technologically advanced past, now coexisting with the eerie glow of mysterious containment technology.",
-      "searchDesc": "Ancient alien ruins and glowing alien life on Xylos",
-      "slug": "xylos",
+      "description": "A vast, impossibly smooth obsidian structure dominates the desolate lunar surface, its stark geometric forms and angular spires piercing the void. Gigantic recessed sections glow with a cold, inner light, hinting at the immense alien technology within.",
+      "searchDesc": "Alien factory on the dark side of the moon",
+      "slug": "the-moon-shadow-foundry-sector",
       "structure": {
-        "spatialLayout": "Sprawling, with large, isolated monumental structures spread across a vast, flat terrain."
-      },
-      "primaryMedia": "media-1765915354526-ml8bu6rkk"
+        "spatialLayout": "A monolithic, geometric structure with precise, interlocking blocks and sharp spires, appearing as a stark anomaly against the pockmarked lunar terrain."
+      }
     },
-    "f7f5c6f4-47e7-4025-a7b6-348d8ece52c7": {
-      "id": "f7f5c6f4-47e7-4025-a7b6-348d8ece52c7",
+    "54d5b1d3-2bb3-4d4a-a8b0-2bef173f1640": {
+      "id": "54d5b1d3-2bb3-4d4a-a8b0-2bef173f1640",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -45,254 +44,58 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "9e04a754-91dc-4ef2-83ff-22cdc9bcabee": {
-      "id": "9e04a754-91dc-4ef2-83ff-22cdc9bcabee",
+    "d2ec92e0-9388-43bd-88ab-7d911e956a1d": {
+      "id": "d2ec92e0-9388-43bd-88ab-7d911e956a1d",
       "type": "location",
-      "name": "The Lumina Archive",
+      "name": "The Shadow Foundry",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Massive, ancient stone structures with intricate carvings dominate the landscape. Towering, rectangular translucent containers, glowing with an internal teal-green light, house alien organisms. The environment is characterized by a stark contrast between the worn stone and the glowing containers.",
-        "colorsAndLighting": "The primary light emanates from the teal-green glow within the containers, casting an ethereal luminescence. The alien sky shifts from golden-yellow overhead to dusty orange and pink near the horizon. Shadows are deep and stark.",
-        "atmosphere": "The air is still and dry, carrying a sense of profound age and mystery. A feeling of desolate beauty permeates the arid, sandy surroundings. The atmosphere is contemplative and awe-inspiring.",
-        "materials": "The dominant materials are ancient, weathered stone with finely detailed carvings, and smooth, translucent containment material. The ground is composed of fine, barren sand.",
-        "mood": "The mood is one of awe, discovery, and profound contemplation. It evokes a sense of ancient mystery and the vastness of alien life.",
-        "sounds": "Ethereal hum, faint organic pulses, soft wind whispers",
-        "primary_surfaces": "Weathered stone with intricate carvings, smooth translucent containment",
-        "secondary_surfaces": "Barren, fine sand",
-        "accent_features": "Teal-green internal glow, spiral and ripple patterns",
-        "dominant": "Earthy tones of weathered stone (browns, grays)",
-        "secondary": "Teal-green (within containers)",
-        "accent": "Golden-yellow, orange, pink (sky)",
-        "ambient": "Ethereal teal-green luminescence",
+        "looks": "The Shadow Foundry is a vast, impossibly smooth obsidian structure, shaped into stark, geometric forms. Massive, interlocking blocks create an unsettlingly perfect facade, punctuated by immense, angular spires that pierce the void. Gigantic, recessed sections glow with an inner, cold light.",
+        "colorsAndLighting": "Dominated by deep blacks and inky purples, the only significant light comes from internal, pale blue and violet glowing panels, casting long, sharp shadows. The exterior seems to absorb ambient starlight.",
+        "atmosphere": "The air is thin, frigid, and utterly still, carrying a faint, metallic scent. There is no discernible weather, only the vacuum of space. A low, persistent hum seems to vibrate through the very structure.",
+        "materials": "The primary material is a seamless, ultra-hard obsidian-like substance, cool to the touch and impossibly smooth. Accents appear to be composed of crystalline, light-emitting polymers.",
+        "mood": "Imposing, mysterious, and deeply alien. It evokes feelings of awe and apprehension, suggesting immense power and an unknown origin.",
+        "sounds": "Faint, rhythmic hum, distant metallic echoes, deep resonant thrum",
+        "primary_surfaces": "Seamless obsidian walls, polished black facets",
+        "secondary_surfaces": "Recessed luminous panels, angular spires",
+        "accent_features": "Internal pale blue and violet light glow",
+        "dominant": "Black (90% of exterior surfaces)",
+        "secondary": "Deep purple (5% of exterior surfaces, especially in recessed areas)",
+        "accent": "Pale blue and violet (5% from internal lighting)",
+        "ambient": "Extremely low, primarily internal light sources",
         "genre": null,
-        "architectural_tone": "Ancient alien monolithic with intricate organic carvings",
-        "cultural_tone": "Archaeological, scientific, contemplative (discovery of alien life and history)",
-        "palette_bias": "Earth tones, bioluminescent blues/greens, sunset hues",
-        "flora_base": "None",
-        "fauna_base": "Alien organisms within containers"
-      },
-      "description": "An otherworldly archaeological site with ancient, worn stone steps. Intricately carved spiral and ripple patterns adorn its pedestals and retaining walls. Towering, rectangular translucent containers glow with an internal teal-green light, encasing unique alien organisms. Smaller spherical containers display similar life forms. The surrounding ground is barren and sandy, under an alien sky transitioning from golden-yellow to dusty orange and pink. EXTERIOR VIEW.",
-      "searchDesc": "Alien archive with glowing organisms in translucent containers and carved stone.",
-      "slug": "the-lumina-archive",
-      "structure": {
-        "spatialLayout": "The site is built around a central, ascending structure. The space opens up to a barren, sandy plain, with the main structure rising vertically with distinct levels for the containers."
-      },
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "center, leading upwards",
-          "description": "A wide, worn flight of ancient stone steps forms the main ascent into the archive."
-        }
-      ],
-      "dominantElements": [
-        "Towering rectangular translucent containers",
-        "Intricately carved stone pedestals and retaining walls",
-        "Ancient, worn stone steps",
-        "Barren, sandy ground"
-      ],
-      "uniqueIdentifiers": [
-        "Teal-green glowing alien organisms within containers",
-        "Spiral and ripple stone carvings",
-        "Gradient alien sky (golden-yellow to pink)",
-        "Spherical glowing containers"
-      ],
-      "primaryMedia": "media-1765915334406-1fmxrezm6"
-    },
-    "niche-1765915447833-l576zmksm": {
-      "id": "niche-1765915447833-l576zmksm",
-      "type": "niche",
-      "name": "Alien Laboratory",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The laboratory is a colossal, semi-organic chamber. Smooth, dark obsidian-like walls curve upwards, interspersed with veins of glowing, phosphorescent minerals. Massive, cylindrical tanks, some reaching hundreds of feet in height, are the focal point. These tanks are crafted from a resilient, glass-like substance that allows clear viewing of their contents. Intricate patterns, reminiscent of alien hieroglyphs and circuitry, are etched into the surfaces of the tanks and surrounding platforms.",
-        "colorsAndLighting": "The primary colors are deep obsidian, punctuated by the ethereal glow of bioluminescent blues and greens emanating from the tanks. Accents of warm, sunset oranges and deep purples are visible within some of the contained organisms and on the holographic displays. The lighting is predominantly internal, cast by the alien life and the glowing conduits, creating a mysterious and otherworldly ambiance.",
-        "atmosphere": "The air is cool and thick with a faint, metallic tang and the subtle scent of exotic, humid flora. A low, pervasive hum resonates through the space, occasionally overlaid with soft, liquid gurgles and the faint clicks of unseen alien mechanisms. Subtle currents of air can be felt near the ventilation shafts.",
-        "materials": "The dominant materials are a polished, obsidian-like composite for the walls and floors, and a thick, translucent crystalline polymer for the containment tanks. Conduits and structural supports are fashioned from a dark, metallic alloy with a subtle, iridescent sheen. Observation platforms are a combination of woven, fibrous material and smooth, polished stone.",
-        "mood": "Mysterious, awe-inspiring, slightly unsettling, and profoundly alien.",
-        "sounds": "Low hum, liquid gurgles, faint clicks, bubbling, alien vocalizations.",
-        "spatialLayout": "A cavernous, roughly circular chamber with a high, vaulted ceiling. The tanks are arranged in a dense, organized cluster towards the center, with walkways weaving between them at various levels. The overall impression is one of immense scale and complex, interconnected systems.",
-        "primary_surfaces": "Obsidian-like composite walls and floors, translucent crystalline containment tanks.",
-        "secondary_surfaces": "Iridescent metallic conduits and supports, woven fibrous walkways.",
-        "accent_features": "Intricate organic carvings on tank edges, shifting holographic projections, pulsing veins of light within tank structures.",
-        "dominant": "deep obsidian",
-        "secondary": "bioluminescent blue-green",
-        "accent": "sunset orange",
-        "ambient": "eerie glow",
-        "genre": null,
-        "architectural_tone": "Ancient alien monolithic with intricate organic carvings",
-        "cultural_tone": "Xenobiologists, alien researchers",
-        "palette_bias": "earth tones, bioluminescent blues/greens, sunset hues",
-        "flora_base": "bioluminescent fungi, alien pitcher plants, glowing mosses",
-        "fauna_base": "aquatic alien creatures, floating invertebrate forms, symbiotic organisms"
-      },
-      "primaryMedia": "media-1765915447832-cnd4oujvq",
-      "description": "An ancient alien laboratory, its organic architecture dimly lit by the bioluminescent glow emanating from numerous large tanks housing mysterious extraterrestrial specimens.",
-      "structure": {
-        "form": "organic",
-        "roofType": "domed",
-        "scale": "large",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "irregular",
-        "functionalType": "industrial",
-        "spatialLayout": "A vast, cavernous laboratory space with curved, monolithic walls that pulse with subtle bioluminescent light. The central area is dominated by towering, organic tanks filled with strange alien lifeforms.",
-        "requiredElements": [
-          "laboratory",
-          "tanks",
-          "aliens",
-          "tanks woth aliens"
-        ],
-        "dominantElements": [
-          "bioluminescent tanks",
-          "organic architecture",
-          "alien specimens"
-        ],
-        "uniqueIdentifiers": [
-          "ancient alien monolithic carvings",
-          "bioluminescent glow"
-        ],
-        "navigableElements": [
-          {
-            "type": "archway",
-            "position": "center",
-            "description": "archway carved stone  rear wall"
-          },
-          {
-            "type": "object",
-            "position": "left wall",
-            "description": "object pulsing energy portal"
-          },
-          {
-            "type": "hatch",
-            "position": "ceiling",
-            "description": "hatch observation deck access"
-          },
-          {
-            "type": "window",
-            "position": "front wall",
-            "description": "window observati with celestial view"
-          }
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "bioluminescent alien specimen tanks with intricate organic circuitry",
-          "crystalline nutrient vats",
-          "humming containment fields",
-          "ancient alien scientific instruments with glowing glyphs",
-          "organic nutrient paste dispensers"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "archway carved stone  rear wall"
-        },
-        {
-          "type": "object",
-          "position": "left wall",
-          "description": "object pulsing energy portal"
-        },
-        {
-          "type": "hatch",
-          "position": "ceiling",
-          "description": "hatch observation deck access"
-        },
-        {
-          "type": "window",
-          "position": "front wall",
-          "description": "window observati with celestial view"
-        }
-      ],
-      "dominantElements": [
-        "bioluminescent tanks",
-        "organic architecture",
-        "alien specimens"
-      ],
-      "uniqueIdentifiers": [
-        "ancient alien monolithic carvings",
-        "bioluminescent glow"
-      ],
-      "searchDesc": "Alien containment lab with massive tanks, bioluminescent fluids, and strange life forms.",
-      "slug": "a-room-laboratory-filled-with-tanks-woth-aliens"
-    },
-    "location-1765915650486-ofd47802u": {
-      "id": "location-1765915650486-ofd47802u",
-      "type": "location",
-      "name": "Hangar with Alien Spaceships",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "An immense, cavernous space with a high, arching ceiling. The walls are rough-hewn stone or a similar monolithic material, interspersed with glowing, complex alien script. Enormous alien spacecraft of various shapes and sizes are docked or resting in the dust-filled space. Large, worn consoles and robotic arms are scattered around. Beams of weak, atmospheric light pierce the gloom.",
-        "colorsAndLighting": "Dominated by desaturated warm earth tones like ochre, umber, and muted terracotta, with hints of dusty gold. Lighting is dim and atmospheric, with shafts of diffused light cutting through the dust, and subtle, internal glows emanating from alien technology and wall glyphs. Overall, a warm, yet somber illumination.",
-        "atmosphere": "Still, dry, and cool. The air is thick with dust motes dancing in the light beams. A profound silence reigns, broken only by the faintest hum from dormant alien machinery or the distant echo of settling debris. A sense of immense age and abandonment.",
-        "materials": "Monolithic, unidentifiable stone or concrete-like material for the structure. Strange, metallic alloys and crystalline components for the spacecraft. Worn, aged metals for consoles and machinery.",
-        "mood": "Ancient, awe-inspiring, mysterious, desolate, forgotten.",
-        "sounds": "Deep silence, faint hum, settling dust, distant echoes, soft mechanical whirring.",
-        "spatialLayout": "Vast, open, and cavernous with a high ceiling, punctuated by enormous monolithic pillars and the hulking forms of spacecraft. The scale is immense and overwhelming.",
-        "primary_surfaces": "Rough-hewn, monolithic stone; dark, brushed alien metals.",
-        "secondary_surfaces": "Dusty, aged concrete; translucent crystalline panels; weathered metal plating.",
-        "accent_features": "Glowing alien hieroglyphs; intricate, dormant propulsion systems; shimmering energy conduits.",
-        "dominant": "Ochre",
-        "secondary": "Umber",
-        "accent": "Dusty Gold",
-        "ambient": "Warm, diffused, low intensity",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Ancient Monolithic",
-        "cultural_tone": "Alien",
-        "palette_bias": "Desaturated Warm",
+        "architectural_tone": "Monolithic Brutalist alien construct with sharp geometric precision",
+        "cultural_tone": "Built by an unknown, highly advanced alien civilization for unknown industrial purposes.",
+        "palette_bias": "Blacks, deep purples, and electric blues/violets",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765915650484-a0l3sxm8a",
-      "description": "An immense hangar with a domed, organic roof, housing a collection of alien spacecraft. The exterior showcases ancient monolithic design intertwined with intricate, glowing organic carvings in earth tones, accented by bioluminescent blues and greens, all bathed in the soft light of sunset.",
+      "description": "A sprawling, monolithic alien factory on the perpetually dark side of the moon. EXTERIOR VIEW.",
+      "searchDesc": "Massive alien factory on the dark side of the moon, monolithic and black, with glowing panels.",
+      "slug": "the-shadow-foundry",
       "structure": {
-        "form": "organic",
-        "roofType": "domed",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "arched",
-        "functionalType": "industrial",
-        "spatialLayout": "A colossal, organically shaped hangar with vast, arcing openings, designed to house massive alien spacecraft. The structure blends ancient monolithic architecture with intricate, bioluminescent organic carvings, illuminated by the warm glow of sunset hues and pulsing blues and greens.",
-        "requiredElements": [
-          "hangar",
-          "alien space ships"
-        ],
-        "dominantElements": [
-          "massive hangar structure",
-          "large alien spacecraft",
-          "bioluminescent organic carvings",
-          "monolithic architecture"
-        ],
-        "uniqueIdentifiers": [
-          "organic, monolithic form",
-          "bioluminescent details",
-          "scale of alien vessels"
-        ]
+        "spatialLayout": "The structure presents as a massive, rectilinear block with monumental, protruding elements, hinting at vast internal volumes and complex, unseen processes."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "center of the far wall",
-          "description": "A colossal, segmented aperture that seems to have retracted into the wall."
+          "position": "center of the main facade",
+          "description": "A colossal, recessed portal of polished, jet-black material, seemingly absorbing all light."
         }
       ],
       "dominantElements": [
-        "massive hangar structure",
-        "large alien spacecraft",
-        "bioluminescent organic carvings",
-        "monolithic architecture"
+        "The main monolithic structure",
+        "Towering, angular spires",
+        "Recessed, glowing panels",
+        "Vast, seamless obsidian walls"
       ],
       "uniqueIdentifiers": [
-        "organic, monolithic form",
-        "bioluminescent details",
-        "scale of alien vessels"
+        "Absence of visible seams on walls",
+        "The unnerving perfect geometric shapes",
+        "The faint, rhythmic hum emanating from within",
+        "The way light seems to bend away from its surfaces"
       ],
-      "searchDesc": "Vast hangar housing ancient alien starships, monolithic architecture, desaturated warm tones.",
-      "slug": "hangar-with-alien-space-ships"
+      "primaryMedia": "media-1765977126346-mqver95gr"
     }
   },
   "views": {},
@@ -315,26 +118,15 @@
       ]
     },
     {
-      "id": "loc-1765915322802-w78kd3uv5",
+      "id": "loc-1765977094783-uxxzcqqfs",
       "type": "host",
       "children": [
         {
-          "id": "f7f5c6f4-47e7-4025-a7b6-348d8ece52c7",
+          "id": "54d5b1d3-2bb3-4d4a-a8b0-2bef173f1640",
           "type": "region",
           "children": [
             {
-              "id": "9e04a754-91dc-4ef2-83ff-22cdc9bcabee",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765915447833-l576zmksm",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "id": "location-1765915650486-ofd47802u",
+              "id": "d2ec92e0-9388-43bd-88ab-7d911e956a1d",
               "type": "location",
               "children": []
             }
@@ -344,6 +136,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765915322802-w78kd3uv5"
+    "loc-1765977094783-uxxzcqqfs"
   ]
 }

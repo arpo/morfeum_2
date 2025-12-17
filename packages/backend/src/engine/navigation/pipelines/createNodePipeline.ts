@@ -279,17 +279,26 @@ export async function runCreateLocationNodePipeline(
       mediaId = createdMedia.id;
     }
 
+    // Extract structural fields from structure object to store at ROOT level only (not duplicated inside structure)
+    const { 
+      dominantElements, 
+      uniqueIdentifiers, 
+      navigableElements, 
+      ...cleanStructure 
+    } = structureAnalysis.structure;
+
     // Build node with SEPARATE structure (new architecture)
     const node = buildNode(nodeType, structureAnalysis.name, nodeData.dna, {
       description: structureAnalysis.description || nodeData.description,
       // Structure is now stored separately at node level (not inside DNA)
-      structure: structureAnalysis.structure,
+      // These fields are stripped out and stored at root level to avoid duplication
+      structure: cleanStructure,
       // Furnishing details (when --furnish flag is used)
       furnishingDetails: structureAnalysis.furnishingDetails,
-      // Legacy fields (kept for backward compatibility, but now also in structure)
-      navigableElements: structureAnalysis.structure.navigableElements || nodeData.navigableElements,
-      dominantElements: structureAnalysis.structure.dominantElements || nodeData.dominantElements,
-      uniqueIdentifiers: structureAnalysis.structure.uniqueIdentifiers || nodeData.uniqueIdentifiers,
+      // Structural fields at ROOT level only (not inside structure object)
+      navigableElements: navigableElements || nodeData.navigableElements,
+      dominantElements: dominantElements || nodeData.dominantElements,
+      uniqueIdentifiers: uniqueIdentifiers || nodeData.uniqueIdentifiers,
       searchDesc: nodeData.searchDesc,
       slug: nodeData.slug,
       primaryMedia: mediaId

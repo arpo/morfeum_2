@@ -1,6 +1,9 @@
 /**
  * Shared Node Builder Module
- * Standardized node construction for all location types
+ * SINGLE SOURCE OF TRUTH for node construction across the entire codebase.
+ * Used by:
+ * - WorldTreeBuilder (for building hierarchies from spawn data)
+ * - createNodePipeline (for creating nodes during navigation)
  */
 
 import type { NodeDNA } from '../../hierarchyAnalysis/types';
@@ -18,11 +21,13 @@ export interface FurnishingDetails {
 }
 
 export interface NodeBuildOptions {
+  /** Override auto-generated ID (used by WorldTreeBuilder for specific IDs) */
+  id?: string;
   spaceType?: SpaceType;
   parentId?: string;
   description?: string;
   data?: Record<string, any>;
-  /** NEW: Structure data stored separately from DNA */
+  /** Structure data stored separately from DNA */
   structure?: Structure;
   /** Furnishing details (when --furnish flag is used) */
   furnishingDetails?: FurnishingDetails;
@@ -32,6 +37,8 @@ export interface NodeBuildOptions {
   searchDesc?: string;
   slug?: string;
   primaryMedia?: string;
+  /** Pass-through region flag */
+  isPassThrough?: boolean;
 }
 
 export interface LocationNode {
@@ -40,7 +47,7 @@ export interface LocationNode {
   name: string;
   spaceType: SpaceType;
   dna: NodeDNA;
-  /** NEW: Structure data stored separately from DNA */
+  /** Structure data stored separately from DNA */
   structure?: Structure;
   /** Furnishing details (when --furnish flag is used) */
   furnishingDetails?: FurnishingDetails;
@@ -53,12 +60,15 @@ export interface LocationNode {
   uniqueIdentifiers?: string[];
   searchDesc?: string;
   slug?: string;
+  /** Pass-through region flag */
+  isPassThrough?: boolean;
 }
 
 /**
- * Generate unique node ID
+ * Generate unique node ID with type prefix
+ * Exported for use by WorldTreeBuilder and other modules
  */
-function generateNodeId(type: LayerType): string {
+export function generateNodeId(type: LayerType): string {
   const timestamp = Date.now();
   const random = Math.random().toString(36).substr(2, 9);
   return `${type}-${timestamp}-${random}`;
@@ -93,7 +103,8 @@ export function buildNode(
   dna: NodeDNA,
   options?: NodeBuildOptions
 ): LocationNode {
-  const nodeId = generateNodeId(type);
+  // Use provided ID or generate a new one
+  const nodeId = options?.id || generateNodeId(type);
   
   const node: LocationNode = {
     id: nodeId,
@@ -149,6 +160,11 @@ export function buildNode(
 
   if (options?.slug) {
     node.slug = options.slug;
+  }
+
+  // Add isPassThrough flag for pass-through regions
+  if (options?.isPassThrough) {
+    node.isPassThrough = true;
   }
 
   return node;

@@ -1,6 +1,14 @@
 import { randomUUID } from 'crypto';
 import type { TreeNode, NodeDNA } from './types';
 
+/**
+ * WorldTreeBuilder - Builds hierarchical world trees from spawn data
+ * 
+ * NOTE: This uses its own buildNode implementation because TreeNode has a different
+ * type system (different NodeDNA structure, different spaceType values) than 
+ * LocationNode used in navigation pipelines. Both follow the same pattern of
+ * storing structural fields at ROOT level only (not inside structure object).
+ */
 export class WorldTreeBuilder {
   static build(spawnId: string, hierarchy: any): TreeNode {
     const host = hierarchy.host;
@@ -10,11 +18,6 @@ export class WorldTreeBuilder {
 
     // Build the tree recursively
     const rootNode = this.buildNode(host, 'host', spawnId); // Host uses spawnId as ID
-    
-    // Note: Image handling is now done in entityPersistence via mediaService
-
-    // Ensure creation metadata is preserved if needed (can be in DNA or extra prop if types allow)
-    // For now, sticking to TreeNode structure which is clean.
 
     return rootNode;
   }
