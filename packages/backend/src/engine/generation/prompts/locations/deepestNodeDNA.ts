@@ -1,4 +1,11 @@
 import { buildDNAFieldsString } from '../shared/dnaSchema';
+import { 
+  DOMINANT_ELEMENTS_RULES, 
+  DOMINANT_ELEMENTS_EXAMPLE,
+  DOMINANT_ELEMENTS_FORMAT,
+  NAVIGABLE_ELEMENTS_RULES,
+  NAVIGABLE_ELEMENTS_EXAMPLE 
+} from '../shared/elementRules';
 
 /**
  * Deepest Node DNA Generation - Optimized for speed
@@ -38,10 +45,14 @@ export function deepestNodeDNAGeneration(
 
   // Only include structural fields for location/niche
   const structuralFields = (nodeType === 'location' || nodeType === 'niche') 
-    ? `"navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
-  NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
-  "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
+    ? `"navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
+  "dominantElements": [${nodeType === 'location' ? DOMINANT_ELEMENTS_EXAMPLE : DOMINANT_ELEMENTS_FORMAT.niche}],
   "uniqueIdentifiers": ["3-5 distinctive features"],`
+    : '';
+
+  // Build element rules section for location/niche
+  const elementRulesSection = (nodeType === 'location' || nodeType === 'niche')
+    ? `\n${NAVIGABLE_ELEMENTS_RULES}\n\n${nodeType === 'location' ? DOMINANT_ELEMENTS_RULES : ''}\n`
     : '';
 
   return `Generate DNA for ${nodeType} "${nodeName}".
@@ -50,7 +61,7 @@ DESC: ${nodeDescription}
 USER: ${originalPrompt}
 
 ${typeHint}
-
+${elementRulesSection}
 OUTPUT (pure JSON):
 {
   "name": "${nodeName}",

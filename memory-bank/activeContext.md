@@ -1,5 +1,13 @@
 # Active Context
 
+## 2025-12-17
+
+- Updated all prompt pipelines to use shared `DOMINANT_ELEMENTS_RULES` and `NAVIGABLE_ELEMENTS_RULES` for `dominantElements` and `navigableElements` fields.
+- Clarified that:
+  - `dominantElements` is for GO_INSIDE (enterable structures, seed for interior, main scene target)
+  - `navigableElements` is for GOTO (elements used for navigation, e.g. doors, passages)
+- Refactored all DNA/prompt files to import these rules from a single source of truth.
+- TypeScript build verified clean after changes.
 ## Recent Changes (2025-12-16)
 
 ### GOTO DNA Resolution Fix & Code Cleanup (Dec 16, Latest)

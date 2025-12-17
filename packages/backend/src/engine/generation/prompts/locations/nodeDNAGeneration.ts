@@ -1,5 +1,12 @@
 import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../shared/dnaSchema';
 import type { ParentContext } from '../../../hierarchyAnalysis/types';
+import { 
+  DOMINANT_ELEMENTS_RULES, 
+  DOMINANT_ELEMENTS_EXAMPLE,
+  DOMINANT_ELEMENTS_FORMAT,
+  NAVIGABLE_ELEMENTS_RULES,
+  NAVIGABLE_ELEMENTS_EXAMPLE 
+} from '../shared/elementRules';
 
 /**
  * Node DNA Generation Prompt - Optimized
@@ -41,50 +48,54 @@ MATERIAL RULES:
 `
     : '';
 
-  const structuralFields = needsStructuralFields ? `"navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
-  NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
-  "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
-  "uniqueIdentifiers": ["2-4 distinctive features"],` : '';
+  const structuralFields = needsStructuralFields ? `\"navigableElements\": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
+  \"dominantElements\": [${nodeType === 'location' ? DOMINANT_ELEMENTS_EXAMPLE : DOMINANT_ELEMENTS_FORMAT.niche}],
+  \"uniqueIdentifiers\": [\"2-4 distinctive features\"],` : '';
 
-  return `Generate DNA for ${nodeType} "${nodeName}".
+  // Build element rules section for location/niche
+  const elementRulesSection = needsStructuralFields
+    ? `\n${NAVIGABLE_ELEMENTS_RULES}\n\n${nodeType === 'location' ? DOMINANT_ELEMENTS_RULES : ''}\n`
+    : '';
+
+  return `Generate DNA for ${nodeType} \"${nodeName}\".
 
 DESC: ${nodeDescription}
 USER: ${originalPrompt}
-${contextSection}
+${contextSection}${elementRulesSection}
 OUTPUT (pure JSON):
 {
-  "name": "${nodeName}",
-  "description": "Brief description",
+  \"name\": \"${nodeName}\",
+  \"description\": \"Brief description\",
   ${structuralFields}
-  "searchDesc": "75-100 chars",
-  "slug": "${nodeName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}",
-  "dna": {
-    "looks": "visual description",
-    "colorsAndLighting": "colors and light",
-    "atmosphere": "air, temp, motion",
-    "materials": "main materials",
-    "mood": "emotional tone",
-    "sounds": "5-10 words",
-    "spatialLayout": "space shape",
-    "primary_surfaces": "main surfaces",
-    "secondary_surfaces": "supporting materials",
-    "accent_features": "decorative details",
-    "dominant": "primary color",
-    "secondary": "secondary color",
-    "accent": "accent color",
-    "ambient": "light tone",
-    "genre": ${nodeType === 'host' ? '"REQUIRED"' : 'null'},
-    "architectural_tone": "style or null",
-    "cultural_tone": "who uses or null",
-    "palette_bias": "colors or null",
-    "flora_base": "plants or null",
-    "fauna_base": "animals or null"
+  \"searchDesc\": \"75-100 chars\",
+  \"slug\": \"${nodeName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}\",
+  \"dna\": {
+    \"looks\": \"visual description\",
+    \"colorsAndLighting\": \"colors and light\",
+    \"atmosphere\": \"air, temp, motion\",
+    \"materials\": \"main materials\",
+    \"mood\": \"emotional tone\",
+    \"sounds\": \"5-10 words\",
+    \"spatialLayout\": \"space shape\",
+    \"primary_surfaces\": \"main surfaces\",
+    \"secondary_surfaces\": \"supporting materials\",
+    \"accent_features\": \"decorative details\",
+    \"dominant\": \"primary color\",
+    \"secondary\": \"secondary color\",
+    \"accent\": \"accent color\",
+    \"ambient\": \"light tone\",
+    \"genre\": ${nodeType === 'host' ? '\"REQUIRED\"' : 'null'},
+    \"architectural_tone\": \"style or null\",
+    \"cultural_tone\": \"who uses or null\",
+    \"palette_bias\": \"colors or null\",
+    \"flora_base\": \"plants or null\",
+    \"fauna_base\": \"animals or null\"
   }
 }
 
 RULES:
 - Scene fields: THIS location's appearance (always populate)
 - Cascading fields: Set null to inherit from parent
-- Be SPECIFIC (not "nice" but "weathered brass with verdigris")
+- Be SPECIFIC (not \"nice\" but \"weathered brass with verdigris\")
 - Pure JSON only`;
 }

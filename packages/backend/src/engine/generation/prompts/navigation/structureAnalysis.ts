@@ -7,6 +7,12 @@
  */
 
 import type { NavigationContext, ScenePerspective } from '../../../navigation/types';
+import { 
+  DOMINANT_ELEMENTS_RULES, 
+  DOMINANT_ELEMENTS_EXAMPLE,
+  NAVIGABLE_ELEMENTS_RULES,
+  NAVIGABLE_ELEMENTS_EXAMPLE 
+} from '../shared/elementRules';
 
 export interface StructureAnalysisInput {
   userPrompt: string;
@@ -82,6 +88,10 @@ SCALE HINTS:
 - medium: 4-10m (rooms, shops, cafés)  
 - large: 10-30m+ (parks, plazas, halls)
 
+${NAVIGABLE_ELEMENTS_RULES}
+
+${DOMINANT_ELEMENTS_RULES}
+
 OUTPUT (pure JSON):
 {
   "name": "Destination Name (from USER INPUT)",
@@ -96,7 +106,7 @@ OUTPUT (pure JSON):
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment|natural",
     "spatialLayout": "1-2 sentence description of the DESTINATION",
     "requiredElements": ["elements from USER INPUT that MUST appear"],
-    "dominantElements": ["main features of this DESTINATION"],
+    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
     "uniqueIdentifiers": ["distinctive features of this DESTINATION"]
   },
   "description": "Brief description of the DESTINATION"
@@ -139,6 +149,10 @@ SCALE HINTS:
 - medium: 4-10m (rooms, shops, cafés)
 - large: 10-30m+ (halls, cathedrals, plazas)
 
+${NAVIGABLE_ELEMENTS_RULES}
+
+${DOMINANT_ELEMENTS_RULES}
+
 OUTPUT (pure JSON):
 {
   "name": "Space Name",
@@ -153,9 +167,8 @@ OUTPUT (pure JSON):
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment",
     "spatialLayout": "1-2 sentence physical description",
     "requiredElements": ["user-specified elements that MUST appear"],
-    "navigableElements": [{...}],
-    NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
-    "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
+    "navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
+    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
     "uniqueIdentifiers": ["2-4 distinctive features"]
   },
   "description": "Brief space description"

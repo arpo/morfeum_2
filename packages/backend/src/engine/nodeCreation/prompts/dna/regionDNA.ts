@@ -6,6 +6,7 @@
  */
 
 import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
+import { DOMINANT_ELEMENTS_FORMAT } from '../../../generation/prompts/shared/elementRules';
 import type { ParentDNAContext } from '../../types';
 
 /**
@@ -54,12 +55,17 @@ USER DESCRIPTION:
 ${description}
 ${contextSection}
 
+DOMINANT ELEMENTS (for regions):
+- Notable features or landmarks visible from an elevated street view
+- List ${DOMINANT_ELEMENTS_FORMAT.region}
+- Focus on district character, street features, general architectural styles
+
 OUTPUT JSON:
 {
   "name": "The EXACT name if a real location is mentioned (e.g., 'Camden' stays 'Camden', 'Soho' stays 'Soho'). Only create evocative names for fictional places.",
   "description": "2-3 sentence description of this area",
   "navigableElements": [],
-  "dominantElements": ["3-5 notable features or landmarks in this region"],
+  "dominantElements": [${DOMINANT_ELEMENTS_FORMAT.region}],
   "uniqueIdentifiers": ["3-5 features that distinguish this region from others"],
   "searchDesc": "75-100 char search description",
   "slug": "kebab-case-name",

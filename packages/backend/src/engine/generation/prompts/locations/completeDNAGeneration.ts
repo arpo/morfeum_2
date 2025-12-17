@@ -11,6 +11,15 @@
  * @param hierarchy - The hierarchy structure from classification
  * @returns Prompt string for LLM
  */
+
+import { 
+  DOMINANT_ELEMENTS_RULES, 
+  DOMINANT_ELEMENTS_EXAMPLE,
+  DOMINANT_ELEMENTS_FORMAT,
+  NAVIGABLE_ELEMENTS_RULES,
+  NAVIGABLE_ELEMENTS_EXAMPLE 
+} from '../shared/elementRules';
+
 export function completeDNAGeneration(
   originalPrompt: string,
   hostName: string,
@@ -84,6 +93,10 @@ ${region.locations ? region.locations.map(loc => `
 `).join('')}
 ${visualAnalysisSection}
 
+${NAVIGABLE_ELEMENTS_RULES}
+
+${DOMINANT_ELEMENTS_RULES}
+
 OUTPUT STRUCTURE:
 
 For each node, generate:
@@ -98,7 +111,7 @@ For each node, generate:
     
     // STRUCTURAL FIELDS (at node root, NOT in DNA)
     "navigableElements": [],  // Usually empty for host (no navigation from world view)
-    "dominantElements": ["Major landmark 1", "Major landmark 2", "Major landmark 3"],
+    "dominantElements": [${DOMINANT_ELEMENTS_FORMAT.host}],
     "uniqueIdentifiers": ["Unique feature 1", "Unique feature 2"],
     "searchDesc": "Short search description (75-100 chars)",
     "slug": "kebab-case-name",
@@ -140,7 +153,7 @@ For each node, generate:
       
       // STRUCTURAL FIELDS
       "navigableElements": [],  // Usually empty for regions
-      "dominantElements": ["Regional landmark 1", "Regional landmark 2"],
+      "dominantElements": [${DOMINANT_ELEMENTS_FORMAT.region}],
       "uniqueIdentifiers": ["Unique regional feature 1", "Unique regional feature 2"],
       "searchDesc": "Short description (75-100 chars)",
       "slug": "kebab-case-name",
@@ -183,14 +196,8 @@ For each node, generate:
       "description": "Location description",
       
       // STRUCTURAL FIELDS (CRITICAL for navigation!)
-      "navigableElements": [
-        {
-          "type": "door|passage|stairs|portal|window|bridge",
-          "position": "location in scene (left, center, right, background, etc.)",
-          "description": "What it is"
-        }
-      ],
-      "dominantElements": ["Object 1", "Object 2", "Object 3"],
+      "navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
+      "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
       "uniqueIdentifiers": ["Feature 1", "Feature 2"],
       "searchDesc": "Type, function, key visuals (75-100 chars)",
       "slug": "kebab-case-name",
@@ -303,13 +310,7 @@ CRITICAL GUIDELINES
    - Use flora_base as inspiration for: color palettes, decorative motifs, carved patterns, painted themes
    - Do NOT interpret flora_base as "put plants everywhere" - it's a style cue
 
-8. **navigableElements - CRITICAL**:
-   - Locations MUST have navigableElements (for navigation system)
-   - Types: door, passage, stairs, portal, window, bridge, path, gate
-   - Include position (left, center, right, background, etc.)
-   - Example: {"type": "door", "position": "left wall, midground", "description": "Heavy wooden door"}
-
-9. **Output Format**:
+8. **Output Format**:
    - Flat JSON only
    - No markdown, code fences, or comments
    - All required fields must be present

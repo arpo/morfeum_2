@@ -1,4 +1,10 @@
 import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../shared/dnaSchema';
+import { 
+  DOMINANT_ELEMENTS_RULES, 
+  DOMINANT_ELEMENTS_EXAMPLE,
+  NAVIGABLE_ELEMENTS_RULES,
+  NAVIGABLE_ELEMENTS_EXAMPLE 
+} from '../shared/elementRules';
 
 /**
  * Parent Chain DNA Generation - Optimized
@@ -31,6 +37,11 @@ export function parentChainDNAGeneration(
   const hasRegion = nodesToGen.includes('region');
   const hasLocation = nodesToGen.includes('location');
 
+  // Build element rules for location section
+  const locationElementRules = hasLocation 
+    ? `\n${NAVIGABLE_ELEMENTS_RULES}\n\n${DOMINANT_ELEMENTS_RULES}\n` 
+    : '';
+
   return `Generate PARENT DNA working backwards from deepest node.
 
 DEEPEST NODE (established truth):
@@ -45,13 +56,14 @@ CRITICAL SCALE RULES (different "looks" per level):
 - HOST: AERIAL/SATELLITE view of entire city/world. NO individual buildings, NO facades, NO close-up details. Focus: skyline, geography, distant landmarks as tiny shapes. Example: "A sprawling coastal metropolis stretching along a curved bay, with clusters of tall buildings in the center and green hills beyond."
 - REGION: ELEVATED STREET view of district/neighborhood. NO specific building facades. Focus: street character, general architectural style, neighborhood atmosphere. Example: "A bohemian district of narrow streets lined with Victorian shopfronts, street art, and market stalls."
 - LOCATION: GROUND LEVEL view of specific building. Show facade, entrance, signage. This is where individual buildings are described.
-
+${locationElementRules}
 OUTPUT (pure JSON):
 {
   ${hasLocation ? `"location": {
     "name": "Name", "description": "2-3 sentences",
-    "navigableElements": [{"type": "door|path", "position": "where", "description": "brief"}],
-    "dominantElements": ["features"], "uniqueIdentifiers": ["distinctive"],
+    "navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
+    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
+    "uniqueIdentifiers": ["distinctive"],
     "searchDesc": "75-100 chars", "slug": "kebab-case",
     "dna": {
       "looks": "GROUND LEVEL: building facade, entrance, signage visible",

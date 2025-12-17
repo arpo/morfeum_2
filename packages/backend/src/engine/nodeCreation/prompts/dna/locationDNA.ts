@@ -6,6 +6,12 @@
  */
 
 import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
+import { 
+  DOMINANT_ELEMENTS_RULES, 
+  DOMINANT_ELEMENTS_EXAMPLE,
+  NAVIGABLE_ELEMENTS_RULES,
+  NAVIGABLE_ELEMENTS_EXAMPLE 
+} from '../../../generation/prompts/shared/elementRules';
 import type { ParentDNAContext } from '../../types';
 
 /**
@@ -55,15 +61,16 @@ USER DESCRIPTION:
 ${description}
 ${contextSection}
 
+${NAVIGABLE_ELEMENTS_RULES}
+
+${DOMINANT_ELEMENTS_RULES}
+
 OUTPUT JSON:
 {
   "name": "If a REAL landmark is mentioned (e.g., 'Big Ben', 'The British Museum'), use the EXACT name. For generic descriptions (e.g., 'a pub', 'a shop'), create an evocative, memorable name.",
   "description": "2-3 sentence description of this building/site",
-  "navigableElements": [
-    {"type": "door|passage|stairs|archway|portal|window|balcony|gate", "position": "location in scene (left, center, right, foreground, background)", "description": "brief description of what it is and where it leads"}
-  ],
-  NOTE: FIRST navigableElement should be the MAIN ENTRANCE used for GO_INSIDE command.
-  "dominantElements": ["FIRST: main enterable building/structure if any, then 3-4 other major features"],
+  "navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
+  "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
   "uniqueIdentifiers": ["3-5 distinctive features that make this building recognizable"],
   "searchDesc": "75-100 char search description with type and key features",
   "slug": "kebab-case-name",

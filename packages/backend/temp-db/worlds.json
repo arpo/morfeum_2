@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1765977094783-uxxzcqqfs": {
-      "id": "loc-1765977094783-uxxzcqqfs",
+    "loc-1765979080810-shc3w3nrj": {
+      "id": "loc-1765979080810-shc3w3nrj",
       "type": "host",
-      "name": "The Moon - Shadow Foundry Sector",
+      "name": "Candyland",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A sprawling, impossibly smooth obsidian construct with stark geometric forms and immense, angular spires piercing the desolate lunar landscape. Gigantic, recessed sections glow with a cold, inner light across its vast, seamless facade.",
-        "colorsAndLighting": "Dominant deep black of the obsidian, punctuated by the cold, ethereal glow emanating from recessed sections and crystalline accents. The surrounding lunar surface is bathed in the faint, stark illumination of distant stars and reflected Earthlight.",
-        "atmosphere": "The vacuum of space, with no discernible atmosphere. The stark, unchanging nature of the lunar environment creates an oppressive stillness.",
-        "materials": "Seamless, ultra-hard obsidian-like substance forms the primary structure. Crystalline, light-emitting polymers are visible as accent features.",
-        "mood": "Imposing, mysterious, and deeply alien. Evokes feelings of awe and apprehension, suggesting immense power and an unknown origin.",
-        "sounds": "Absolute silence, the profound emptiness of space.",
-        "primary_surfaces": "The vast, impossibly smooth obsidian exterior surfaces of the foundry.",
-        "secondary_surfaces": "The barren, cratered lunar regolith surrounding the structure.",
-        "accent_features": "Immense, angular spires and the glowing recessed sections.",
-        "dominant": "Black",
-        "secondary": "Dark Grey",
-        "accent": "Pale Blue/White (from internal glow)",
-        "ambient": "Starlight, faint Earthlight.",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Monolithic Brutalist alien construct",
-        "cultural_tone": "Deeply alien, technologically advanced, enigmatic",
-        "palette_bias": "Monochromatic with luminous accents",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "looks": "AERIAL/SATELLITE VIEW: A vast, undulating landscape of colorful confectioneries, resembling giant scoops of ice cream, rivers of caramel, and sparkling sugar plains. Distant landmarks are stylized candy structures, all viewed from high above with no individual building details.",
+        "colorsAndLighting": "Bright, almost iridescent light reflecting off sugary surfaces, with vibrant, saturated colors dominating the landscape.",
+        "atmosphere": "A light, airy atmosphere, perhaps with a faint, sweet scent carried on gentle breezes. No discernible weather, just perpetual pleasantness.",
+        "materials": "Dominant materials are spun sugar clouds, hardened caramel plains, and crystalline sugar mountains, all visible from a distance.",
+        "mood": "Overarching sense of joy, wonder, and pure, unadulterated sweetness. A world built for delight and indulgence.",
+        "sounds": "Distant, faint tinkling sounds, like tiny bells, and a soft, cheerful hum.",
+        "primary_surfaces": "Vast expanses of smooth, shimmering candy surfaces, resembling frozen icing and hard candy.",
+        "secondary_surfaces": "Flowing rivers of chocolate and lakes of melted caramel.",
+        "accent_features": "Colossal lollipop trees, towering gingerbread structures, and sparkling rock candy mountains visible as distant shapes.",
+        "dominant": "vibrant pink",
+        "secondary": "chocolate brown",
+        "accent": "candy apple red",
+        "ambient": "Warm, golden sunlight filtered through a syrupy sky.",
+        "genre": "Fantasy",
+        "architectural_tone": "Confectionary",
+        "cultural_tone": "Playful",
+        "palette_bias": "Saturated",
+        "flora_base": "Lollipop trees",
+        "fauna_base": "Gummy creatures"
       },
-      "description": "A vast, impossibly smooth obsidian structure dominates the desolate lunar surface, its stark geometric forms and angular spires piercing the void. Gigantic recessed sections glow with a cold, inner light, hinting at the immense alien technology within.",
-      "searchDesc": "Alien factory on the dark side of the moon",
-      "slug": "the-moon-shadow-foundry-sector",
+      "description": "A whimsical world entirely crafted from sweets and confectioneries, stretching as far as the eye can see. Towering lollipop trees and gingerbread castles define its fantastical landscape, all bathed in a perpetual sugary glow.",
+      "searchDesc": "Whimsical world made of sweets and confectioneries, towering lollipop trees and gingerbread castles",
+      "slug": "candyland",
       "structure": {
-        "spatialLayout": "A monolithic, geometric structure with precise, interlocking blocks and sharp spires, appearing as a stark anomaly against the pockmarked lunar terrain."
+        "spatialLayout": "A sprawling, organic layout with winding 'rivers' of chocolate and flowing icing, dotted with clusters of colossal candy formations."
       }
     },
-    "54d5b1d3-2bb3-4d4a-a8b0-2bef173f1640": {
-      "id": "54d5b1d3-2bb3-4d4a-a8b0-2bef173f1640",
+    "7c7dcc3c-cf54-4f9b-bf32-2378c15c57d9": {
+      "id": "7c7dcc3c-cf54-4f9b-bf32-2378c15c57d9",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,58 +44,65 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "d2ec92e0-9388-43bd-88ab-7d911e956a1d": {
-      "id": "d2ec92e0-9388-43bd-88ab-7d911e956a1d",
+    "554cc600-2f2f-41e5-8e4c-899f255581ca": {
+      "id": "554cc600-2f2f-41e5-8e4c-899f255581ca",
       "type": "location",
-      "name": "The Shadow Foundry",
+      "name": "The Gumdrop Grotto",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The Shadow Foundry is a vast, impossibly smooth obsidian structure, shaped into stark, geometric forms. Massive, interlocking blocks create an unsettlingly perfect facade, punctuated by immense, angular spires that pierce the void. Gigantic, recessed sections glow with an inner, cold light.",
-        "colorsAndLighting": "Dominated by deep blacks and inky purples, the only significant light comes from internal, pale blue and violet glowing panels, casting long, sharp shadows. The exterior seems to absorb ambient starlight.",
-        "atmosphere": "The air is thin, frigid, and utterly still, carrying a faint, metallic scent. There is no discernible weather, only the vacuum of space. A low, persistent hum seems to vibrate through the very structure.",
-        "materials": "The primary material is a seamless, ultra-hard obsidian-like substance, cool to the touch and impossibly smooth. Accents appear to be composed of crystalline, light-emitting polymers.",
-        "mood": "Imposing, mysterious, and deeply alien. It evokes feelings of awe and apprehension, suggesting immense power and an unknown origin.",
-        "sounds": "Faint, rhythmic hum, distant metallic echoes, deep resonant thrum",
-        "primary_surfaces": "Seamless obsidian walls, polished black facets",
-        "secondary_surfaces": "Recessed luminous panels, angular spires",
-        "accent_features": "Internal pale blue and violet light glow",
-        "dominant": "Black (90% of exterior surfaces)",
-        "secondary": "Deep purple (5% of exterior surfaces, especially in recessed areas)",
-        "accent": "Pale blue and violet (5% from internal lighting)",
-        "ambient": "Extremely low, primarily internal light sources",
+        "looks": "The Gumdrop Grotto is a fantastical candy factory with a playful, almost cartoonish architectural style. Its scale is large and inviting, with prominent gumdrop-shaped turrets and candy cane accents. The facade is a spectacle of edible-looking materials.",
+        "colorsAndLighting": "The primary colors are vibrant and saturated, dominated by sugary pinks, blues, and yellows, with accents of rich chocolate brown. Lighting is bright and cheerful, emanating from candy-like fixtures, casting playful shadows.",
+        "atmosphere": "The air is thick with the sweet scent of sugar and cocoa, warm and slightly sticky. A gentle hum of machinery can be heard, suggesting a constant production of delights. There's a sense of sugary magic in the air.",
+        "materials": "The main materials are spun sugar, forming delicate and translucent walls, alongside hardened caramel for structural elements. Rivers of flowing chocolate are a key feature, with hard candy decorations adorning the surfaces. Textures are smooth, sticky, and crystalline.",
+        "mood": "Joyful and whimsical, evoking a sense of childlike wonder and delightful indulgence. It's a place of pure, unadulterated sweetness and fun.",
+        "sounds": "gentle hum, sugary drips, faint clinking, popping, bubbling chocolate",
+        "primary_surfaces": "spun sugar walls, flowing chocolate river",
+        "secondary_surfaces": "hard candy accents, gingerbread trim, lollipop windows",
+        "accent_features": "gumdrop turrets, candy cane columns, marshmallow clouds",
+        "dominant": "vibrant pink",
+        "secondary": "chocolate brown",
+        "accent": "rainbow sprinkles, sky blue",
+        "ambient": "bright and cheerful",
         "genre": null,
-        "architectural_tone": "Monolithic Brutalist alien construct with sharp geometric precision",
-        "cultural_tone": "Built by an unknown, highly advanced alien civilization for unknown industrial purposes.",
-        "palette_bias": "Blacks, deep purples, and electric blues/violets",
+        "architectural_tone": "whimsical confectionary with playful candy-inspired elements",
+        "cultural_tone": "Created for the production of sweets, likely by magical confectioners or candy sprites, for the enjoyment of all.",
+        "palette_bias": "Pastel and vibrant confectionary colors",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A sprawling, monolithic alien factory on the perpetually dark side of the moon. EXTERIOR VIEW.",
-      "searchDesc": "Massive alien factory on the dark side of the moon, monolithic and black, with glowing panels.",
-      "slug": "the-shadow-foundry",
+      "description": "A fantastical factory where all manner of candies are produced, with walls of spun sugar and rivers of chocolate. EXTERIOR VIEW.",
+      "searchDesc": "Whimsical candy factory with spun sugar walls and chocolate rivers. Explore its sweet exterior.",
+      "slug": "the-gumdrop-grotto",
       "structure": {
-        "spatialLayout": "The structure presents as a massive, rectilinear block with monumental, protruding elements, hinting at vast internal volumes and complex, unseen processes."
+        "spatialLayout": "The factory presents a broad, welcoming facade. The space appears deep, with the chocolate river suggesting a continuous flow and activity within."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "center of the main facade",
-          "description": "A colossal, recessed portal of polished, jet-black material, seemingly absorbing all light."
+          "position": "center of the facade",
+          "description": "A grand entrance leading into the heart of the factory."
+        },
+        {
+          "type": "window",
+          "position": "left side of the facade",
+          "description": "A large, circular window offering a glimpse of colorful candy machines within."
+        },
+        {
+          "type": "path",
+          "position": "leading away from the entrance",
+          "description": "A shimmering, peppermint-striped path that winds out of sight."
         }
       ],
       "dominantElements": [
-        "The main monolithic structure",
-        "Towering, angular spires",
-        "Recessed, glowing panels",
-        "Vast, seamless obsidian walls"
+        "factory: whimsical confectionary, large, exterior, spun sugar, candy canes, bright overhead lights"
       ],
       "uniqueIdentifiers": [
-        "Absence of visible seams on walls",
-        "The unnerving perfect geometric shapes",
-        "The faint, rhythmic hum emanating from within",
-        "The way light seems to bend away from its surfaces"
+        "spun sugar walls",
+        "chocolate river flowing from the entrance",
+        "gumdrop-shaped turrets",
+        "peppermint-striped path"
       ],
-      "primaryMedia": "media-1765977126346-mqver95gr"
+      "primaryMedia": "media-1765979098825-048jj9s55"
     }
   },
   "views": {},
@@ -118,15 +125,15 @@
       ]
     },
     {
-      "id": "loc-1765977094783-uxxzcqqfs",
+      "id": "loc-1765979080810-shc3w3nrj",
       "type": "host",
       "children": [
         {
-          "id": "54d5b1d3-2bb3-4d4a-a8b0-2bef173f1640",
+          "id": "7c7dcc3c-cf54-4f9b-bf32-2378c15c57d9",
           "type": "region",
           "children": [
             {
-              "id": "d2ec92e0-9388-43bd-88ab-7d911e956a1d",
+              "id": "554cc600-2f2f-41e5-8e4c-899f255581ca",
               "type": "location",
               "children": []
             }
@@ -136,6 +143,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765977094783-uxxzcqqfs"
+    "loc-1765979080810-shc3w3nrj"
   ]
 }

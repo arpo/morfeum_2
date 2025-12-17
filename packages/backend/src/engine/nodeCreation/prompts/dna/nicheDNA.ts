@@ -6,6 +6,11 @@
  */
 
 import { DNA_SCENE_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
+import { 
+  DOMINANT_ELEMENTS_FORMAT,
+  NAVIGABLE_ELEMENTS_RULES,
+  NAVIGABLE_ELEMENTS_EXAMPLE 
+} from '../../../generation/prompts/shared/elementRules';
 import type { ParentDNAContext, ScenePerspective } from '../../types';
 
 /**
@@ -68,14 +73,19 @@ USER DESCRIPTION:
 ${description}
 ${contextSection}
 
+${NAVIGABLE_ELEMENTS_RULES}
+
+DOMINANT ELEMENTS (for niches):
+- Major objects/features visible in this space (NOT enterable structures)
+- List ${DOMINANT_ELEMENTS_FORMAT.niche}
+- Focus on furniture, fixtures, decorations, natural features
+
 OUTPUT JSON:
 {
   "name": "Evocative name for this specific space",
   "description": "2-3 sentence immersive description of this space",
-  "navigableElements": [
-    {"type": "door|passage|stairs|archway|portal|window|balcony|bridge", "position": "specific position in this space", "description": "where it leads and what's visible through it"}
-  ],
-  "dominantElements": ["3-5 major objects/features in this space"],
+  "navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
+  "dominantElements": [${DOMINANT_ELEMENTS_FORMAT.niche}],
   "uniqueIdentifiers": ["3-5 distinctive features that make this space memorable"],
   "searchDesc": "75-100 char search description",
   "slug": "kebab-case-name",
