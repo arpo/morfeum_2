@@ -17,6 +17,7 @@ interface NavigationCallbacks {
 
 /**
  * Extract description/looks from DNA based on node type
+ * Also extracts dominantElements and navigableElements from node
  */
 function extractNodeData(node: any): {
   description?: string;
@@ -30,18 +31,22 @@ function extractNodeData(node: any): {
   
   const innerDNA = dna.dna || dna;
   
+  // Extract dominantElements and navigableElements from node (not from DNA)
+  const dominantElements = node.dominantElements || node.structure?.dominantElements || [];
+  const navigableElements = node.navigableElements || node.structure?.navigableElements || [];
+  
   if (node.type === 'location' || node.type === 'niche') {
     const profile = innerDNA?.profile;
     return {
       description: profile?.looks || '',
       looks: profile?.looks || '',
       searchDesc: profile?.searchDesc || '',
-      dominantElements: [],
-      navigableElements: []
+      dominantElements,
+      navigableElements
     };
   }
   
-  return {};
+  return { dominantElements, navigableElements };
 }
 
 /**

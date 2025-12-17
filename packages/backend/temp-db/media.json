@@ -40,17 +40,31 @@
         "char-1765959006964-5pqhe1srs"
       ]
     },
-    "media-1765979098825-048jj9s55": {
-      "id": "media-1765979098825-048jj9s55",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a86ab95/F8s7pKUD1mXvahm5y4SqO.jpg",
-      "createdAt": "2025-12-17T13:44:58.825Z",
+    "media-1765979194148-t5br8ftcj": {
+      "id": "media-1765979194148-t5br8ftcj",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a86ab9f/5e9kHuuluCOpdSXE-YfuM_c025f3b3b4b0403485692782115275da.png",
+      "createdAt": "2025-12-17T13:46:34.148Z",
       "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA fantastical candy factory, \"The Gumdrop Grotto,\" at street level, viewed from a slightly elevated angle (25° downward tilt), ultra-wide view capturing the entire structure within its whimsical Candyland environment. The building's facade, a spectacle of edible-looking materials, showcases playful, cartoonish architecture with prominent gumdrop-shaped turrets and candy cane columns. Spun sugar forms delicate, translucent walls, complemented by hardened caramel for structural elements and gingerbread trim. Lollipop windows glow from within, and vibrant rainbow sprinkles adorn various surfaces. A river of flowing chocolate winds its way through the scene. The factory is set back slightly from the street, with a broad, welcoming entrance.\n\n**Foreground:** Worn cobblestone street glistening with puddles reflecting the bright, cheerful neon glow of candy-like light fixtures.\n\n**Midground:** The Gumdrop Grotto's facade, slightly off-center, featuring its distinctive gumdrop turrets, candy cane accents, and intricately decorated entrance. Window displays showcase an array of sweets, and a gentle hum of unseen machinery emanates from within.\n\n**Background:** A vibrant sky of pastel pink and sky blue, dotted with fluffy marshmallow clouds. Neighboring confectionery buildings, equally whimsical and colorful, line the street.\n\n**Lighting & Atmosphere:** Bright and cheerful lighting emanates from candy-like fixtures, casting playful, elongated shadows. The air is visibly thick with a sweet, slightly sticky scent, hinting at the constant production of sugary delights with gentle sugary drips and faint clinking sounds. The mood is joyful, whimsical, and filled with a sense of childlike wonder and delightful indulgence.\n\n**Composition:** Asymmetric composition with more street visible on the left side, emphasizing depth and dimension. No perfectly frontal shots or bilateral symmetry.\n\n**Colors:** Dominant vibrant pink, secondary chocolate brown, with accents of rainbow sprinkles and sky blue.\n\n**Materials:** Translucent spun sugar walls, flowing chocolate river, hard candy decorations, gingerbread trim, lollipop windows, marshmallow clouds, candy cane columns.\n\n**Architectural Tone:** Whimsical confectionary with playful candy-inspired elements.\n\n**Cultural Tone:** Created for the production of sweets by magical confectioners for the enjoyment of all.\n\n**Palette Bias Style:** Pastel and vibrant confectionary colors.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "model": "FLUX"
+        "parentMedia": "media-1765979098825-048jj9s55",
+        "model": "fal-depth-anything-v2"
       },
       "entityRefs": [
         "554cc600-2f2f-41e5-8e4c-899f255581ca"
+      ],
+      "parentMedia": "media-1765979098825-048jj9s55"
+    },
+    "media-1765980368089-ucm2sytiw": {
+      "id": "media-1765980368089-ucm2sytiw",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a86ac14/m8LJ6om2aC801oK0u3kSb.jpg",
+      "createdAt": "2025-12-17T14:06:08.089Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nA brutalist industrial alien megastructure, the Lunar Orbital Forge, is revealed from a slightly elevated, ultra-wide street-level perspective, looking down at a 25° angle. The monumental edifice is sculpted from the lunar crust, a rugged expanse of weathered metallic plating and extruded structures, appearing as interconnected modules and vast excavation sites. Its immense scale dwarfs the surrounding environment. The foreground features worn, textured lunar regolith with subtle undulations, interspersed with patches of darker, compacted dust, subtly reflecting the dim ambient light. In the midground, the forge's facade is a colossal, asymmetrical composition of interlocking, dark charcoal reinforced plating and massive, functional hatches, interspersed with rough lunar regolith surfaces. Massive, unadorned ingress points and vast excavation openings reveal glimpses of internal, dimly glowing, dull orange and yellow machinery. Accent features include thick, exposed conduits snaking across the surfaces and subtle panel lines that hint at the sheer industrial capacity. No delicate decorative elements exist, only raw, functional design. The building is set back from the immediate foreground, emphasizing its colossal presence. The background reveals the stark, gray, cratered lunar landscape under a deep black, star-speckled sky. The atmosphere is one of awe-inspiring, relentless productivity, with the low hum of unseen machinery and the distant grinding sounds subtly evoked by the visual. The lighting is stark, with long, dramatic shadows cast by an unseen sun, punctuated by occasional functional spotlights from within the forge's openings. The overall color palette is dominated by muted grays and ochres of the lunar regolith and weathered metallic alloys, accented by the dull sheen of the dark charcoal secondary materials and the faint, functional glow of internal machinery. The mood is one of insignificance against its vast, functional alien power.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "5d0841cc-cf38-492e-bd8b-79558bc7c0a7"
       ]
     }
   }

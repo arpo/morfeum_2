@@ -9,6 +9,31 @@ import { handleNavigationCommand } from './navigationCommands';
 /** Commands that support enhancement (navigable elements, furnishing) */
 const ENHANCEABLE_COMMANDS = ['GO_INSIDE', 'GOTO', 'NEW_LOCATION'];
 
+/**
+ * Get default argument for navigation commands based on node data
+ * GO_INSIDE: uses dominantElements[0] (main enterable structure)
+ * GOTO: uses navigableElements[0] (main navigation point)
+ */
+function getDefaultNavigationArg(command: string, node: any): string | null {
+  if (command === 'GO_INSIDE') {
+    const dominantElements = node.dominantElements || node.structure?.dominantElements || [];
+    if (dominantElements.length > 0) {
+      return dominantElements[0];
+    }
+  } else if (command === 'GOTO') {
+    const navigableElements = node.navigableElements || node.structure?.navigableElements || [];
+    if (navigableElements.length > 0) {
+      const elem = navigableElements[0];
+      // Format: "type at position - description" or just description
+      if (typeof elem === 'object') {
+        return elem.description || `${elem.type} at ${elem.position}`;
+      }
+      return String(elem);
+    }
+  }
+  return null;
+}
+
 export function useNavigationLogic() {
   const [movementInput, setMovementInput] = useState('');
   const [isMoving, setIsMoving] = useState(false);
@@ -35,7 +60,7 @@ export function useNavigationLogic() {
     }
 
     // Parse command with flags
-    const parsedCommand = parseCommandInput(trimmedInput);
+    let parsedCommand = parseCommandInput(trimmedInput);
     const { command } = parsedCommand;
 
     // Callbacks for all command handlers
@@ -70,6 +95,14 @@ export function useNavigationLogic() {
         setMovementInput('');
         setTimeout(() => setErrorMessage(null), 5000);
         return;
+      }
+      
+      // For GO_INSIDE/GOTO with no text, inject default argument from node data
+      if ((command === 'GO_INSIDE' || command === 'GOTO') && !parsedCommand.text) {
+        const defaultArg = getDefaultNavigationArg(command, currentNode);
+        if (defaultArg) {
+          parsedCommand = { ...parsedCommand, text: defaultArg };
+        }
       }
     }
 
@@ -116,7 +149,8 @@ export function useNavigationLogic() {
 
     // Parse the command
     const parsedCommand = parseCommandInput(trimmedInput);
-    const { command, text } = parsedCommand;
+    const { command } = parsedCommand;
+    let { text } = parsedCommand;
 
     // Check if command supports enhancement
     if (!ENHANCEABLE_COMMANDS.includes(command)) {
@@ -131,6 +165,16 @@ export function useNavigationLogic() {
       setErrorMessage('Select a location first');
       setTimeout(() => setErrorMessage(null), 3000);
       return;
+    }
+
+    const currentNode = getNode(activeEntityId);
+    
+    // For GO_INSIDE/GOTO with no text, inject default argument from node data
+    if ((command === 'GO_INSIDE' || command === 'GOTO') && !text && currentNode) {
+      const defaultArg = getDefaultNavigationArg(command, currentNode);
+      if (defaultArg) {
+        text = defaultArg;
+      }
     }
 
     setIsEnhancing(true);
@@ -160,7 +204,6 @@ export function useNavigationLogic() {
           ? `/${command} ${text}, ${enhancement}`
           : `/${command} ${enhancement}`;
         setMovementInput(newInput);
-        console.log('[useNavigationLogic] Enhanced command:', newInput);
       }
     } catch (error) {
       console.error('[useNavigationLogic] Enhancement failed:', error);
@@ -169,7 +212,7 @@ export function useNavigationLogic() {
     } finally {
       setIsEnhancing(false);
     }
-  }, [movementInput, isEnhancing]);
+  }, [movementInput, isEnhancing, getNode]);
 
   /**
    * Check if the current input can be enhanced

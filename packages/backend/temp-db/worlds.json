@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1765979080810-shc3w3nrj": {
-      "id": "loc-1765979080810-shc3w3nrj",
+    "loc-1765980350720-ugqavlju8": {
+      "id": "loc-1765980350720-ugqavlju8",
       "type": "host",
-      "name": "Candyland",
+      "name": "The Moon",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A vast, undulating landscape of colorful confectioneries, resembling giant scoops of ice cream, rivers of caramel, and sparkling sugar plains. Distant landmarks are stylized candy structures, all viewed from high above with no individual building details.",
-        "colorsAndLighting": "Bright, almost iridescent light reflecting off sugary surfaces, with vibrant, saturated colors dominating the landscape.",
-        "atmosphere": "A light, airy atmosphere, perhaps with a faint, sweet scent carried on gentle breezes. No discernible weather, just perpetual pleasantness.",
-        "materials": "Dominant materials are spun sugar clouds, hardened caramel plains, and crystalline sugar mountains, all visible from a distance.",
-        "mood": "Overarching sense of joy, wonder, and pure, unadulterated sweetness. A world built for delight and indulgence.",
-        "sounds": "Distant, faint tinkling sounds, like tiny bells, and a soft, cheerful hum.",
-        "primary_surfaces": "Vast expanses of smooth, shimmering candy surfaces, resembling frozen icing and hard candy.",
-        "secondary_surfaces": "Flowing rivers of chocolate and lakes of melted caramel.",
-        "accent_features": "Colossal lollipop trees, towering gingerbread structures, and sparkling rock candy mountains visible as distant shapes.",
-        "dominant": "vibrant pink",
-        "secondary": "chocolate brown",
-        "accent": "candy apple red",
-        "ambient": "Warm, golden sunlight filtered through a syrupy sky.",
-        "genre": "Fantasy",
-        "architectural_tone": "Confectionary",
-        "cultural_tone": "Playful",
-        "palette_bias": "Saturated",
-        "flora_base": "Lollipop trees",
-        "fauna_base": "Gummy creatures"
+        "looks": "AERIAL/SATELLITE VIEW: The Moon as a desolate, cratered orb with stark light and shadow. Distant Earth hangs as a jewel in the blackness. No individual structures are visible, only vast plains and shadowed craters.",
+        "colorsAndLighting": "Harsh, high-contrast sunlight creates deep shadows. The primary color is an omnipresent lunar gray, with the vibrant blue and white of Earth as a striking, distant accent.",
+        "atmosphere": "A vacuum. The sky is an absolute, star-filled black. No weather or atmospheric diffusion.",
+        "materials": "Dominant lunar regolith (dust and rock), with hints of metallic sheen from subsurface materials in select, distant geological formations.",
+        "mood": "Utter solitude, ancient stillness, and cosmic indifference. A sense of immense scale and emptiness.",
+        "sounds": "Absolute silence, broken only by the faint hum of a spacecraft or internal ship noises.",
+        "primary_surfaces": "Lunar regolith plains, crater floors.",
+        "secondary_surfaces": "Crater rims, mountain ranges, shadowed abysses.",
+        "accent_features": "The distant, vibrant Earth.",
+        "dominant": "Gray",
+        "secondary": "Black",
+        "accent": "Blue and White (Earth)",
+        "ambient": "Stark, direct sunlight and the black void of space.",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Extraterrestrial",
+        "cultural_tone": "Ancient/Primal",
+        "palette_bias": "Monochromatic with a distant color anomaly",
+        "flora_base": "None",
+        "fauna_base": "None"
       },
-      "description": "A whimsical world entirely crafted from sweets and confectioneries, stretching as far as the eye can see. Towering lollipop trees and gingerbread castles define its fantastical landscape, all bathed in a perpetual sugary glow.",
-      "searchDesc": "Whimsical world made of sweets and confectioneries, towering lollipop trees and gingerbread castles",
-      "slug": "candyland",
+      "description": "A vast, desolate sphere of gray dust and rock, illuminated by the distant, brilliant Earth. Craters scar its surface, and the stark, shadow-drenched plains stretch towards an inky black sky.",
+      "searchDesc": "Barren lunar surface, craters, distant Earth view.",
+      "slug": "the-moon",
       "structure": {
-        "spatialLayout": "A sprawling, organic layout with winding 'rivers' of chocolate and flowing icing, dotted with clusters of colossal candy formations."
+        "spatialLayout": "Dominated by vast, flat plains, ancient impact craters of varying sizes, and mountain ranges casting long shadows."
       }
     },
-    "7c7dcc3c-cf54-4f9b-bf32-2378c15c57d9": {
-      "id": "7c7dcc3c-cf54-4f9b-bf32-2378c15c57d9",
+    "24603574-f6b9-438b-916b-ff12ae2234ca": {
+      "id": "24603574-f6b9-438b-916b-ff12ae2234ca",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,65 +44,66 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "554cc600-2f2f-41e5-8e4c-899f255581ca": {
-      "id": "554cc600-2f2f-41e5-8e4c-899f255581ca",
+    "5d0841cc-cf38-492e-bd8b-79558bc7c0a7": {
+      "id": "5d0841cc-cf38-492e-bd8b-79558bc7c0a7",
       "type": "location",
-      "name": "The Gumdrop Grotto",
+      "name": "Lunar Orbital Forge",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The Gumdrop Grotto is a fantastical candy factory with a playful, almost cartoonish architectural style. Its scale is large and inviting, with prominent gumdrop-shaped turrets and candy cane accents. The facade is a spectacle of edible-looking materials.",
-        "colorsAndLighting": "The primary colors are vibrant and saturated, dominated by sugary pinks, blues, and yellows, with accents of rich chocolate brown. Lighting is bright and cheerful, emanating from candy-like fixtures, casting playful shadows.",
-        "atmosphere": "The air is thick with the sweet scent of sugar and cocoa, warm and slightly sticky. A gentle hum of machinery can be heard, suggesting a constant production of delights. There's a sense of sugary magic in the air.",
-        "materials": "The main materials are spun sugar, forming delicate and translucent walls, alongside hardened caramel for structural elements. Rivers of flowing chocolate are a key feature, with hard candy decorations adorning the surfaces. Textures are smooth, sticky, and crystalline.",
-        "mood": "Joyful and whimsical, evoking a sense of childlike wonder and delightful indulgence. It's a place of pure, unadulterated sweetness and fun.",
-        "sounds": "gentle hum, sugary drips, faint clinking, popping, bubbling chocolate",
-        "primary_surfaces": "spun sugar walls, flowing chocolate river",
-        "secondary_surfaces": "hard candy accents, gingerbread trim, lollipop windows",
-        "accent_features": "gumdrop turrets, candy cane columns, marshmallow clouds",
-        "dominant": "vibrant pink",
-        "secondary": "chocolate brown",
-        "accent": "rainbow sprinkles, sky blue",
-        "ambient": "bright and cheerful",
+        "looks": "The Lunar Orbital Forge is a monumental edifice sculpted from the lunar crust, its exterior a rugged expanse of metallic plating and extruded structures. It appears as a series of interconnected modules and vast excavation sites, designed for sheer industrial capacity. The scale is immense, dwarfing any human-made structures.",
+        "colorsAndLighting": "Dominated by the muted grays and ochres of the lunar regolith, accented by the dull sheen of weathered metallic alloys. Industrial lighting casts stark, long shadows across the surfaces, with occasional bursts of intense, functional spotlights within openings.",
+        "atmosphere": "The air is thin and sterile within enclosed areas, a constant hum of powerful machinery pervading the environment. Temperature fluctuates wildly between direct sunlight and shadow, though internal climate control is likely rigorous. A sense of immense, ongoing labor pervades.",
+        "materials": "The primary materials are reinforced, dark metallic alloys and compressed lunar regolith. Textures are rough and functional, with visible seams, rivets, and extruded conduits. Surfaces are generally weathered, bearing the marks of cosmic radiation and micrometeorite impacts.",
+        "mood": "A mood of awe-inspiring, relentless productivity and alien ingenuity. The forge evokes a sense of insignificance against its vast, functional power.",
+        "sounds": "Low hum, metallic clanks, distant grinding, pressurized hiss, rhythmic thuds.",
+        "primary_surfaces": "Rough regolith, weathered metal plating",
+        "secondary_surfaces": "Exposed conduits, reinforced struts, heavy-duty hatches",
+        "accent_features": "Glow of internal machinery visible through openings, directional spotlights, subtle panel lines.",
+        "dominant": "Gray (70%) - lunar regolith and general metallic structures",
+        "secondary": "Dark Charcoal (20%) - reinforced plating and structural elements",
+        "accent": "Dull Orange/Yellow (5%) - internal machinery glow, hazard markings",
+        "ambient": "Slightly cool, sterile grey.",
         "genre": null,
-        "architectural_tone": "whimsical confectionary with playful candy-inspired elements",
-        "cultural_tone": "Created for the production of sweets, likely by magical confectioners or candy sprites, for the enjoyment of all.",
-        "palette_bias": "Pastel and vibrant confectionary colors",
+        "architectural_tone": "Brutalist industrial alien megastructure",
+        "cultural_tone": "Designed for large-scale extraterrestrial spacecraft construction, prioritizing function and durability.",
+        "palette_bias": "Monochromatic greys and muted earth tones",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A fantastical factory where all manner of candies are produced, with walls of spun sugar and rivers of chocolate. EXTERIOR VIEW.",
-      "searchDesc": "Whimsical candy factory with spun sugar walls and chocolate rivers. Explore its sweet exterior.",
-      "slug": "the-gumdrop-grotto",
+      "description": "A sprawling, utilitarian alien factory built into the lunar regolith, designed for constructing spacecraft. EXTERIOR VIEW.",
+      "searchDesc": "Sprawling alien factory built into the moon, constructing spacecraft. Utilitarian and massive.",
+      "slug": "lunar-orbital-forge",
       "structure": {
-        "spatialLayout": "The factory presents a broad, welcoming facade. The space appears deep, with the chocolate river suggesting a continuous flow and activity within."
+        "spatialLayout": "The forge is an expansive complex, largely subterranean or excavated into the lunar surface. Its layout is dictated by function, with vast open manufacturing bays and a network of utility tunnels and access corridors."
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "center of the facade",
-          "description": "A grand entrance leading into the heart of the factory."
+          "type": "gate",
+          "position": "center",
+          "description": "Leads into the main manufacturing bay, a vast, cavernous interior filled with industrial machinery."
         },
         {
-          "type": "window",
-          "position": "left side of the facade",
-          "description": "A large, circular window offering a glimpse of colorful candy machines within."
+          "type": "passage",
+          "position": "left",
+          "description": "A smaller, reinforced opening that seems to lead to personnel quarters or administrative areas."
         },
         {
           "type": "path",
-          "position": "leading away from the entrance",
-          "description": "A shimmering, peppermint-striped path that winds out of sight."
+          "position": "right",
+          "description": "An external maintenance path winding around the primary structure, offering views of the surrounding lunar terrain."
         }
       ],
       "dominantElements": [
-        "factory: whimsical confectionary, large, exterior, spun sugar, candy canes, bright overhead lights"
+        "factory: utilitarian, colossal, exterior, regolith, reinforced metal plates, industrial lighting",
+        "gates: colossal, exterior, steel alloy, reinforced plating, dim ambient light"
       ],
       "uniqueIdentifiers": [
-        "spun sugar walls",
-        "chocolate river flowing from the entrance",
-        "gumdrop-shaped turrets",
-        "peppermint-striped path"
+        "embedded into lunar regolith",
+        "massive, unadorned metallic structures",
+        "imposing, functional design",
+        "low-gravity construction atmosphere"
       ],
-      "primaryMedia": "media-1765979098825-048jj9s55"
+      "primaryMedia": "media-1765980368089-ucm2sytiw"
     }
   },
   "views": {},
@@ -125,15 +126,15 @@
       ]
     },
     {
-      "id": "loc-1765979080810-shc3w3nrj",
+      "id": "loc-1765980350720-ugqavlju8",
       "type": "host",
       "children": [
         {
-          "id": "7c7dcc3c-cf54-4f9b-bf32-2378c15c57d9",
+          "id": "24603574-f6b9-438b-916b-ff12ae2234ca",
           "type": "region",
           "children": [
             {
-              "id": "554cc600-2f2f-41e5-8e4c-899f255581ca",
+              "id": "5d0841cc-cf38-492e-bd8b-79558bc7c0a7",
               "type": "location",
               "children": []
             }
@@ -143,6 +144,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765979080810-shc3w3nrj"
+    "loc-1765980350720-ugqavlju8"
   ]
 }
