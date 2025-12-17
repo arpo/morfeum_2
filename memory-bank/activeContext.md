@@ -3,6 +3,12 @@
 ## 2025-12-17
 
 - Updated all prompt pipelines to use shared `DOMINANT_ELEMENTS_RULES` and `NAVIGABLE_ELEMENTS_RULES` for `dominantElements` and `navigableElements` fields.
+- dominantElements format improved:
+  - Now uses explicit field labels: `shape=`, `scale=`, `style=`, `surfaces=`, `light=`
+  - SHAPE vocabulary added: rectangular, cylindrical, domed, organic, irregular, pyramidal, modular, tiered, sprawling, compact
+  - Removed `interior|exterior|open-air` field
+  - Combined floor/walls into `surfaces`
+  - Style can be combined with shape (e.g., `rectangular-industrial`)
 - Clarified that:
   - `dominantElements` is for GO_INSIDE (enterable structures, seed for interior, main scene target)
   - `navigableElements` is for GOTO (elements used for navigation, e.g. doors, passages)

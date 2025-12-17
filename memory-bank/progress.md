@@ -3,6 +3,7 @@
 ## 2025-12-17
 
 - [x] Refactored all prompt pipelines to use shared `DOMINANT_ELEMENTS_RULES` and `NAVIGABLE_ELEMENTS_RULES` for `dominantElements` and `navigableElements`.
+- [x] dominantElements format improved: explicit field labels (`shape=`, `scale=`, `style=`, `surfaces=`, `light=`), added SHAPE vocabulary, removed `interior|exterior|open-air`, combined floor/walls into `surfaces`, style can be combined with shape.
 - [x] Clarified usage: `dominantElements` = GO_INSIDE (enterable, interior seed), `navigableElements` = GOTO (navigation elements).
 - [x] All DNA/prompt files now import these rules from a single source of truth.
 - [x] TypeScript build verified clean after changes.
