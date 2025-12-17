@@ -53,10 +53,7 @@ OUTPUT JSON:
     "genre": "REQUIRED: ${DNA_CASCADING_FIELDS.genre}",
     "architectural_tone": "REQUIRED: ${DNA_CASCADING_FIELDS.architectural_tone}",
     "cultural_tone": "REQUIRED: ${DNA_CASCADING_FIELDS.cultural_tone}",
-    "materials_base": "REQUIRED: ${DNA_CASCADING_FIELDS.materials_base}",
-    "mood_baseline": "REQUIRED: ${DNA_CASCADING_FIELDS.mood_baseline}",
     "palette_bias": "REQUIRED: ${DNA_CASCADING_FIELDS.palette_bias}",
-    "soundscape_base": "REQUIRED: ${DNA_CASCADING_FIELDS.soundscape_base}",
     "flora_base": "${DNA_CASCADING_FIELDS.flora_base}",
     "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base}"
   }

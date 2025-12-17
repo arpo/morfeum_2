@@ -472,83 +472,6 @@
       ],
       "searchDesc": "Vast hangar housing ancient alien starships, monolithic architecture, desaturated warm tones.",
       "slug": "hangar-with-alien-space-ships"
-    },
-    "niche-1765915683308-xwkjda6j3": {
-      "id": "niche-1765915683308-xwkjda6j3",
-      "type": "niche",
-      "name": "Alien Spaceship Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "An immense, cavernous space with a high, arching ceiling. The walls are rough-hewn monolithic stone, interspersed with glowing, complex alien script. Enormous alien spacecraft of various shapes and sizes are docked or resting in the dust-filled space. Large, worn consoles and robotic arms are scattered around. Beams of weak, atmospheric light pierce the gloom.",
-        "colorsAndLighting": "Dominated by desaturated warm tones. Weak, atmospheric light filters through, casting long shadows and highlighting dust particles. The alien script provides a subtle, internal luminescence.",
-        "atmosphere": "Still, dusty, and heavy with age. A sense of immense quiet and dormant power. The air is cool and dry.",
-        "materials": "Rough-hewn, unidentifiable monolithic stone for the structure. Strange, weathered metallic alloys and crystalline components for the spacecraft. Aged, tarnished metals for consoles and machinery.",
-        "mood": "Ancient, awe-inspiring, mysterious, melancholic, dormant, monumental.",
-        "sounds": "Distant, faint hum. Settling dust. Echoes of immense emptiness.",
-        "spatialLayout": "Vast, open cavern with a very high ceiling and cavernous depth. Defined by the docked spacecraft.",
-        "primary_surfaces": "Rough monolithic stone.",
-        "secondary_surfaces": "Weathered alien metal alloys, aged tarnished metals.",
-        "accent_features": "Glowing alien script, crystalline components on spacecraft, dust motes.",
-        "dominant": "Desaturated warm browns and greys.",
-        "secondary": "Muted ochres and deep, dusty reds.",
-        "accent": "Subtle, cool-toned glow from alien script.",
-        "ambient": "Dim, atmospheric, dusty.",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Ancient Monolithic",
-        "cultural_tone": "Alien",
-        "palette_bias": "Desaturated Warm",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765915683307-dnntdg7ue",
-      "description": "Inside the hulking alien vessel, a world of strange technology and alien design unfolds, a stark contrast to the hangar it rests within.",
-      "structure": {
-        "form": "organic",
-        "roofType": "arched",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "minimal",
-        "openingShape": "irregular",
-        "functionalType": "industrial",
-        "spatialLayout": "The interior of the spaceship is a complex, organic network of dimly lit corridors and chambers. Intricate alien machinery, glowing conduits, and control panels are integrated into the very structure of the ship.",
-        "requiredElements": [
-          "space ship"
-        ],
-        "navigableElements": [
-          {
-            "name": "Main Airlock",
-            "description": "A large, irregularly shaped opening leading into the main interior of the spaceship, likely the primary entry point."
-          }
-        ],
-        "dominantElements": [
-          "Alien Control Consoles",
-          "Engine Core",
-          "Storage Bays"
-        ],
-        "uniqueIdentifiers": [
-          "Glow-in-the-dark alien script on walls",
-          "Low-gravity sections",
-          "Humming alien technology"
-        ]
-      },
-      "navigableElements": [
-        {
-          "name": "Main Airlock",
-          "description": "A large, irregularly shaped opening leading into the main interior of the spaceship, likely the primary entry point."
-        }
-      ],
-      "dominantElements": [
-        "Alien Control Consoles",
-        "Engine Core",
-        "Storage Bays"
-      ],
-      "uniqueIdentifiers": [
-        "Glow-in-the-dark alien script on walls",
-        "Low-gravity sections",
-        "Humming alien technology"
-      ],
-      "searchDesc": "Vast alien hangar filled with enormous, ancient spaceships under dim, atmospheric light.",
-      "slug": "null-of-hangar-with-alien-spaceships"
     }
   },
   "views": {},
@@ -602,13 +525,7 @@
             {
               "id": "location-1765915650486-ofd47802u",
               "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765915683308-xwkjda6j3",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
+              "children": []
             }
           ]
         }
