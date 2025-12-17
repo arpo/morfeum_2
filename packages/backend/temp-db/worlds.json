@@ -100,74 +100,9 @@
       ],
       "primaryMedia": "media-1765983353843-ha6wq6k2g"
     },
-    "niche-1765983373369-c09ky71uj": {
-      "id": "niche-1765983373369-c09ky71uj",
-      "type": "niche",
-      "name": "The Martian Assembly Plant Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, cavernous space defined by imposing, angular structures. Dim industrial light casts long, deep shadows. The scale is immense, with unseen ceilings and distant walls lost in gloom.",
-        "colorsAndLighting": "Dominated by dark greys and metallic tones. Lighting is sparse and functional, casting an oppressive, dim industrial ambiance. Occasional sparks or indicator lights provide fleeting bursts of color.",
-        "atmosphere": "The air is still and heavy, carrying the faint scent of ozone and hot metal. Temperature is cool but bears the residual warmth of industrial processes. A constant, low-frequency hum pervades.",
-        "materials": "Primarily rough, weathered metallic alloys, pitted and corroded. Some conduits are a darker, obsidian-like material. Rivets are prominent. Surfaces are utilitarian and raw.",
-        "mood": "Imposing, functional, alien, industrial, somewhat oppressive.",
-        "sounds": "distant machinery hum, occasional sparks, metallic echoes, faint ventilation",
-        "spatialLayout": "Vast, cavernous, open, with immense scale and angular geometry.",
-        "primary_surfaces": "weathered-metallic-panels-and-rivets",
-        "secondary_surfaces": "dark-obsidian-like-conduits",
-        "accent_features": "alien-etched-glyphs",
-        "dominant": "dark-grey",
-        "secondary": "metallic-silver",
-        "accent": "glowing-red-indicator-lights",
-        "ambient": "dim-industrial",
-        "genre": null,
-        "architectural_tone": "massive-industrial-brutalism-with-alien-geometric-forms",
-        "cultural_tone": "alien-manufacturing-hub-highly-functional-and-devoid-of-ornamentation",
-        "palette_bias": "greys-and-dark-metallics",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765983373368-tv76x1rh4",
-      "description": "Inside the Martian Assembly Plant, the sheer scale of alien manufacturing is overwhelming. Massive, unidentifiable machines dominate the space, their surfaces scarred by years of heavy use.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "industrial",
-        "spatialLayout": "Vast, open-plan factory floor dominated by colossal, alien machinery. Dim industrial lighting casts long shadows across the weathered metallic surfaces.",
-        "requiredElements": [
-          "factory: shape=sprawling-industrial, scale=massive, style=brutalist, surfaces=weathered-metallic-panels-and-rivets, light=dim-industrial"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "far wall",
-          "description": "Leads to the main control hub, a slightly elevated platform overlooking the factory floor."
-        },
-        {
-          "type": "door",
-          "position": "side wall",
-          "description": "Opens into a smaller maintenance bay, filled with specialized tools and spare parts."
-        }
-      ],
-      "dominantElements": [
-        "assembly_line: shape=sprawling-industrial, scale=massive, style=brutalist, surfaces=weathered-metallic-panels-and-rivets, light=dim-industrial"
-      ],
-      "uniqueIdentifiers": [
-        "Gargantuan robotic arms suspended from the ceiling",
-        "Rivers of molten metal flowing through conduits",
-        "The constant hum of unseen industrial processes"
-      ],
-      "searchDesc": "Dim, sprawling industrial void, metallic, brutalist, alien manufacturing hub.",
-      "slug": "null-of-the-martian-assembly-plant"
-    },
     "niche-1765983413561-7ajflq76n": {
       "id": "niche-1765983413561-7ajflq76n",
-      "type": "niche",
+      "type": "location",
       "name": "Hangar with Large Spacecraft",
       "spaceType": "interior",
       "dna": {
@@ -256,6 +191,77 @@
       ],
       "searchDesc": "Vast hangar housing a colossal spacecraft; brutalist architecture, metallic greys.",
       "slug": "hangar-with-large-space-craft"
+    },
+    "niche-1765984268781-nu2syi3ns": {
+      "id": "niche-1765984268781-nu2syi3ns",
+      "type": "niche",
+      "name": "Spacecraft Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a continuation of the exterior's industrial brutalism. Surfaces are unadorned, functional, and show signs of immense scale and alien design. Angularity and exposed machinery are prevalent.",
+        "colorsAndLighting": "Dominated by deep greys and blacks. Muted, intermittent internal lighting from conduits and sporadic status indicators casts long, deep shadows. The overall illumination is dim and functional.",
+        "atmosphere": "Cool, dry air with a faint metallic tang. A constant, low-frequency hum permeates the space, occasionally punctuated by the clanking of unseen mechanisms.",
+        "materials": "Rough, weathered dark metallic alloys, similar to the exterior. Some conduit sheathing appears to be a polished, obsidian-like material. Exposed wiring and structural beams are common.",
+        "mood": "Imposing, functional, and slightly unnerving. A sense of immense scale and alien efficiency.",
+        "sounds": "Low hum, distant clanking, occasional electrical crackle, soft ventilation hiss",
+        "spatialLayout": "Vast, interconnected chambers and corridors, characterized by sharp angles, high ceilings, and a sense of industrial cavernousness. Openings lead to further expansive or cramped spaces.",
+        "primary_surfaces": "Dark, unidentifiable metallic alloys with a rough, industrial texture.",
+        "secondary_surfaces": "Obsidian-like conduit sheathing, exposed metal framework, occasional grates.",
+        "accent_features": "Faintly glowing conduits, small, blinking indicator lights, etched geometric patterns.",
+        "dominant": "dark grey",
+        "secondary": "black metallic",
+        "accent": "dim blue-white light",
+        "ambient": "dim, cool",
+        "genre": "sci-fi",
+        "architectural_tone": "Massive industrial brutalism with alien geometric forms",
+        "cultural_tone": "Alien manufacturing hub, highly functional and devoid of ornamentation",
+        "palette_bias": "Greys and dark metallics",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765984268781-7hwre21la",
+      "description": "Inside the massive spacecraft, the interior is a labyrinth of alien industrial design, mirroring the brutalist aesthetic of the hangar. Worn, dark metallic surfaces are interspersed with glowing alien geometric accents, and the lighting is consistently dim and functional, befitting an industrial manufacturing hub.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "industrial",
+        "spatialLayout": "The interior of the spacecraft is a cramped and functional network of conduits, worn metal plating, and dimly lit chambers, reflecting its utilitarian purpose. Access is primarily through irregular hatches and narrow passages, with very few openings to the exterior.",
+        "requiredElements": [
+          "the spacecraft"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "aft section",
+          "description": "Leads to the engine room."
+        },
+        {
+          "type": "passage",
+          "position": "forward section",
+          "description": "Leads to the bridge."
+        },
+        {
+          "type": "door",
+          "position": "mid-section",
+          "description": "Opens into the cargo bay."
+        }
+      ],
+      "dominantElements": [
+        "cockpit: shape=organic, scale=medium, style=industrial-alien, surfaces=dark-metal-worn, light=dim-industrial",
+        "engineering bay: shape=irregular, scale=large, style=industrial-alien, surfaces=exposed-conduits-metal, light=dim-industrial"
+      ],
+      "uniqueIdentifiers": [
+        "alien geometric accents",
+        "scarred and utilitarian surfaces",
+        "dim, functional lighting"
+      ],
+      "searchDesc": "Industrial spaceship interior with dark metal, glowing conduits, and a constant hum.",
+      "slug": "interior-of-the-spacecraft"
     }
   },
   "views": {},
@@ -290,14 +296,15 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765983373369-c09ky71uj",
-                  "type": "niche",
-                  "children": []
-                },
-                {
                   "id": "niche-1765983413561-7ajflq76n",
-                  "type": "niche",
-                  "children": []
+                  "type": "location",
+                  "children": [
+                    {
+                      "id": "niche-1765984268781-nu2syi3ns",
+                      "type": "niche",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }

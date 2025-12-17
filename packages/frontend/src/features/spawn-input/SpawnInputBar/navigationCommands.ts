@@ -203,7 +203,8 @@ export async function handleNavigationCommand(
               {
                 node: completedData.node,
                 parentNodeId: capturedParentNodeId,
-                imageUrl: completedData.imageUrl
+                imageUrl: completedData.imageUrl,
+                promoteParentToLocation: completedData.promoteParentToLocation
               },
               capturedCurrentNode
             );

@@ -218,14 +218,25 @@ async function handleNewWorldCommand(
 
 /**
  * Handle node creation from navigation (GO_INSIDE creating a niche)
+ * 
+ * When `promoteParentToLocation` is true, the parent niche is promoted to a location
+ * before adding the new niche as its child. This allows GO_INSIDE to work from niches.
  */
 export async function handleNodeCreation(
-  navigation: { node: any; parentNodeId?: string; imageUrl?: string },
+  navigation: { node: any; parentNodeId?: string; imageUrl?: string; promoteParentToLocation?: boolean },
   currentNode: any
 ): Promise<void> {
-  const { node, parentNodeId, imageUrl } = navigation;
+  const { node, parentNodeId, imageUrl, promoteParentToLocation } = navigation;
   
+  const updateNode = useLocationsStore.getState().updateNode;
   const createNodeInStore = useLocationsStore.getState().createNode;
+  
+  // If promoteParentToLocation is set, change the parent niche to a location
+  if (promoteParentToLocation && parentNodeId) {
+    console.log(`[handleNodeCreation] Promoting parent niche ${parentNodeId} to location`);
+    updateNode(parentNodeId, { type: 'location' });
+  }
+  
   createNodeInStore(node);
   
   const currentWorldTrees = useLocationsStore.getState().worldTrees;
@@ -243,6 +254,18 @@ export async function handleNodeCreation(
   }
   
   const correctParentId = parentNodeId || currentNode.id;
+  
+  // Also update the world tree entry for the promoted node
+  if (promoteParentToLocation && parentNodeId) {
+    const updateNodeTypeInTree = (treeNode: any): boolean => {
+      if (treeNode.id === parentNodeId) {
+        treeNode.type = 'location';
+        return true;
+      }
+      return treeNode.children?.some((child: any) => updateNodeTypeInTree(child)) || false;
+    };
+    updateNodeTypeInTree(worldTree);
+  }
   
   const addNodeToTree = useLocationsStore.getState().addNodeToTree;
   addNodeToTree(worldTree.id, correctParentId, node.id, node.type);

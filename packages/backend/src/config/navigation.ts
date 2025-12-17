@@ -23,8 +23,8 @@ export interface SlashCommandConfig {
 export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   // Navigation commands
   GO_INSIDE: { 
-    requiresNodeType: ['location'], 
-    description: 'Enter a location',
+    requiresNodeType: ['location', 'niche'], 
+    description: 'Enter a location or structure',
     category: 'navigation'
   },
   GOTO: { 

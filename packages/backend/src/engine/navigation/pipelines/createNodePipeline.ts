@@ -321,11 +321,20 @@ export async function runCreateLocationNodePipeline(
     console.log('  Type:', node.type);
     console.log('  Name:', node.name);
     console.log('  Has DNA:', !!node.dna ? '✓' : '✗');
+    if (decision.metadata?.promoteParentToLocation) {
+      console.log('  Promote Parent: ✓ (parent niche will become location)');
+    }
     console.log('═══════════════════════════════════════════════════════════\n');
 
     // Only send completion event if not a sub-pipeline (parent handles progress)
     if (helper && !options?.isSubPipeline) {
-      helper.completed('Node created successfully', { node, imageUrl, imagePrompt });
+      // Include promoteParentToLocation flag if set (for GO_INSIDE from niche)
+      const completedData: any = { node, imageUrl, imagePrompt };
+      if (decision.metadata?.promoteParentToLocation) {
+        completedData.promoteParentToLocation = true;
+        completedData.parentNodeId = decision.parentNodeId;
+      }
+      helper.completed('Node created successfully', completedData);
     }
 
     return {

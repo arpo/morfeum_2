@@ -10,12 +10,15 @@ import { findParentLocationNode } from '../navigationHelpers';
 
 /**
  * Handle GO_INSIDE intent
- * User wants to enter/go inside current location
+ * User wants to enter/go inside current location or a structure within a niche
+ * 
+ * When used from a niche: promotes the niche to a location, then creates a niche inside it.
+ * This maintains the Location → Niche hierarchy pattern.
  */
 export function handleGoInside(intent: IntentResult, context: NavigationContext): NavigationDecision {
   const { currentNode } = context;
   
-  // Must be at a location (exterior) to go inside
+  // From a location: create a niche inside it
   if (currentNode.type === 'location') {
     // Prioritize intent.target from smart selection, fall back to findEntrance helper
     const entrance = intent.target || findEntrance(context);
@@ -35,21 +38,24 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
     };
   }
   
-  // Already inside a niche? Create sibling niche under parent location
-  if (currentNode.type === 'niche' && intent.target) {
-    const { parentLocationId } = findParentLocationNode(context);
+  // From a niche: promote the niche to a location, then create a niche inside it
+  // This handles cases like "GO_INSIDE the spacecraft" when standing in a hangar niche
+  if (currentNode.type === 'niche') {
+    const entrance = intent.target || findEntrance(context);
     
     return {
       action: 'create_niche',
-      parentNodeId: parentLocationId,
+      parentNodeId: currentNode.id,
       newNodeType: 'niche',
-      newNodeName: `${intent.spaceType || 'Interior'} of ${intent.target}`,
+      newNodeName: `${intent.spaceType || 'Interior'} of ${entrance}`,
       style: intent.style || 'default',
       perspective: intent.spaceType || 'interior',
       metadata: {
-        relation: 'sibling'
+        relation: 'child',
+        entrance: entrance,
+        promoteParentToLocation: true  // Signal to promote current niche to location
       },
-      reasoning: `Creating sibling niche under parent location for ${intent.target}`
+      reasoning: `Promoting ${currentNode.name} to location and creating niche inside for ${entrance}`
     };
   }
   
