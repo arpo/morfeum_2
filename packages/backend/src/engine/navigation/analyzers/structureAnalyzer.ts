@@ -23,6 +23,10 @@ export interface StructureAnalysisOptions {
   parsedEnhancements?: ParsedEnhancements;
   /** True for GOTO command - uses destination-focused prompt */
   isGotoCommand?: boolean;
+  /** True when GO_INSIDE has a specific target object (e.g., "alien spaceship") */
+  hasSpecificTarget?: boolean;
+  /** The specific target object when hasSpecificTarget is true */
+  targetObject?: string;
 }
 
 /**
@@ -44,12 +48,14 @@ export async function analyzeStructure(
   parsedEnhancements?: ParsedEnhancements,
   options?: StructureAnalysisOptions
 ): Promise<StructureAnalysis> {
-  // Generate the analysis prompt - use GOTO-specific prompt if isGotoCommand
+  // Generate the analysis prompt - handle three cases: GOTO, GO_INSIDE with target, GO_INSIDE generic
   const prompt = structureAnalysisPrompt({
     userPrompt,
     context,
     perspective,
-    isGotoCommand: options?.isGotoCommand
+    isGotoCommand: options?.isGotoCommand,
+    hasSpecificTarget: options?.hasSpecificTarget,
+    targetObject: options?.targetObject
   });
   
   // Log which prompt type is being used

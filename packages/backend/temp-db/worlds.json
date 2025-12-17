@@ -293,6 +293,86 @@
       ],
       "searchDesc": "Vast hangar housing ancient alien starships, monolithic architecture, desaturated warm tones.",
       "slug": "hangar-with-alien-space-ships"
+    },
+    "niche-1765962938597-4rtzqctqy": {
+      "id": "niche-1765962938597-4rtzqctqy",
+      "type": "niche",
+      "name": "Monolithic Alien Spaceship Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Immense, cavernous space with smooth, dark, and subtly textured walls. Light sources are infrequent and diffuse.  Forms are often curved and organic, yet undeniably manufactured.  Dust motes dance in faint beams.",
+        "colorsAndLighting": "Dim, warm ambient light emanating from hidden sources.  Occasional pulses of faint, cool bioluminescence from organic growths.  Dominant colors are deep ochres, burnt siennas, and muted brass tones, with shadows of charcoal and deep umber.",
+        "atmosphere": "Still, cool air with a faint, mineral scent.  No detectable currents, creating a profound sense of stillness. A low, almost imperceptible hum resonates throughout.",
+        "materials": "Polished, stone-like composites with a subtle, almost waxy sheen.  Areas of a dark, obsidian-like material and hints of corroded, coppery alloys.",
+        "mood": "Awe-inspiring, mysterious, melancholic, ancient, silent.",
+        "sounds": "Distant, resonant hum, soft echoes, faint organic pulsing.",
+        "spatialLayout": "Vast, open central area with high, arcing ceilings.  Deeper recesses and alcoves branch off.  The overall shape suggests a colossal, organic cavity.",
+        "primary_surfaces": "Smooth, matte composites, polished stone-like surfaces.",
+        "secondary_surfaces": "Corroded metallic conduits, crystalline formations, porous rock-like growths.",
+        "accent_features": "Pulsating bioluminescent moss, intricate etched symbols on the floor, a shimmering central energy sphere.",
+        "dominant": "Deep Ochre",
+        "secondary": "Muted Brass",
+        "accent": "Bioluminescent Green",
+        "ambient": "Warm, Dim",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Ancient Monolithic",
+        "cultural_tone": "Unknown Alien Civilization",
+        "palette_bias": "Desaturated Warm",
+        "flora_base": "Bioluminescent mosses and fungi",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765962938597-t4ujwv0kb",
+      "description": "The interior of the alien spaceship is a breathtakingly vast, monolithic space. Vaulted ceilings disappear into shadow, supported by colossal, seamlessly integrated pillars. Recessed, arched openings hint at external views or other sections of the ship. The atmosphere is thick with the scent of ozone and ancient dust, illuminated by a dim, desaturated warm glow that emanates from the very fabric of the structure. A central dais suggests a control or focal point, surrounded by subtle, alien glyphs that pulse with an unseen energy.",
+      "structure": {
+        "form": "A vast, cavernous space that evokes the interior of a colossal, ancient vessel. The form is not strictly defined by typical geometric shapes but feels organically sculpted, as if the ship itself grew rather than was built.",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": [
+          "Numerous, deeply recessed openings that suggest viewports, though their current state is opaque.",
+          "Occasional larger, arching portals that lead to unknown chambers."
+        ],
+        "openingShape": "arched",
+        "functionalType": "Command and control center, possibly also a transport hub or life support core.",
+        "spatialLayout": "The interior is a single, immense chamber with a subtly sloped floor leading towards a central, raised dais. Massive, monolithic pillars rise from the floor and disappear into the vaulted darkness above. The walls are smooth and seamless, broken only by the recessed openings and occasional, subtly glowing glyphs.",
+        "requiredElements": [
+          "Central command nexus with integrated control surfaces.",
+          "Ambient, low-frequency hum.",
+          "Unfamiliar, geometric symbols etched into surfaces.",
+          "Varying levels of atmospheric condensation."
+        ],
+        "dominantElements": [
+          "The immense scale of the primary chamber.",
+          "The monolithic, unadorned pillars.",
+          "The subtle, emanating light sources from unknown technologies.",
+          "The deep, resonant silence punctuated by subtle, alien sounds."
+        ],
+        "uniqueIdentifiers": [
+          "The impression of immense age and advanced, yet seemingly organic, alien engineering.",
+          "The consistent use of desaturated warm tones throughout the interior, despite the lack of obvious light sources.",
+          "The feeling of being within a living, breathing entity rather than a manufactured object."
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "far wall, center",
+          "description": "A massive, seamless iris-like aperture that remains partially ajar."
+        }
+      ],
+      "dominantElements": [
+        "The immense scale of the primary chamber.",
+        "The monolithic, unadorned pillars.",
+        "The subtle, emanating light sources from unknown technologies.",
+        "The deep, resonant silence punctuated by subtle, alien sounds."
+      ],
+      "uniqueIdentifiers": [
+        "The impression of immense age and advanced, yet seemingly organic, alien engineering.",
+        "The consistent use of desaturated warm tones throughout the interior, despite the lack of obvious light sources.",
+        "The feeling of being within a living, breathing entity rather than a manufactured object."
+      ],
+      "searchDesc": "Vast, ancient spaceship interior with monolithic architecture and dormant alien technology.",
+      "slug": "interior-of-alien-spaceship"
     }
   },
   "views": {},
@@ -336,7 +416,13 @@
             {
               "id": "location-1765915650486-ofd47802u",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1765962938597-4rtzqctqy",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }

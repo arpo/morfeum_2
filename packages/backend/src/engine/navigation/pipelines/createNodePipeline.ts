@@ -110,7 +110,12 @@ export async function runCreateLocationNodePipeline(
       // Structure Analysis (determines physical/spatial properties)
       // NOTE: parsedEnhancements (navigableElements, furnishing) come from user command, not LLM
       // For GOTO: uses destination-focused prompt (user input is PRIMARY)
-      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.parsedEnhancements, { isGotoCommand }),
+      // For GO_INSIDE with target: uses target-focused prompt (enter specific object)
+      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.parsedEnhancements, { 
+        isGotoCommand,
+        hasSpecificTarget: decision.metadata?.hasSpecificTarget,
+        targetObject: decision.metadata?.targetObject
+      }),
       
       // DNA Generation (determines visual/atmospheric properties)
       (async () => {
@@ -139,6 +144,7 @@ export async function runCreateLocationNodePipeline(
         
         // Generate DNA with basic info - we'll enhance with structure later
         // For GOTO: uses simplified parent context (style only, not content)
+        // For GO_INSIDE with target: uses target-focused generation
         return generateNodeDNA(
           apiKey,
           userPrompt,
@@ -146,7 +152,11 @@ export async function runCreateLocationNodePipeline(
           nodeType,
           userPrompt,
           parentContext,
-          { isGotoCommand }
+          { 
+            isGotoCommand,
+            hasSpecificTarget: decision.metadata?.hasSpecificTarget,
+            targetObject: decision.metadata?.targetObject
+          }
         );
       })()
     ]);

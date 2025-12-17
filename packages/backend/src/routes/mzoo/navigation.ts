@@ -11,7 +11,7 @@ import { classifyIntent, routeNavigation, buildIntentFromCommand, analyzeDestina
 import type { RouteOptions } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import { runCreateCharacterPipeline } from '../../engine/navigation/pipelines/createCharacterPipeline';
-import { findParentLocationNode, findParentRegionNode, findHostForRegion, addChildToWorldTree } from '../../engine/navigation/navigationHelpers';
+import { findParentLocationNode, findParentRegionNode, findHostForRegion, addChildToWorldTree, updateNodeTypeInTree } from '../../engine/navigation/navigationHelpers';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
@@ -483,7 +483,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       // Run pipeline asynchronously - use cleanText (already parsed at top of handler)
       (async () => {
         try {
-          await runCreateNodePipeline(
+          const pipelineResult = await runCreateNodePipeline(
             decision, 
             context, 
             intent, 
@@ -494,6 +494,29 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
             },
             navigationId
           );
+          
+          // Handle parent promotion if requested (niche → location)
+          if (decision.metadata?.promoteParentToLocation && pipelineResult.node) {
+            const worldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };
+            const parentId = decision.parentNodeId;
+            
+            if (parentId && worldsData.nodes[parentId]) {
+              console.log(`\n🔄 [GO_INSIDE] Promoting parent niche to location: ${parentId}`);
+              
+              // Update parent node type
+              worldsData.nodes[parentId].type = 'location';
+              
+              // Update worldTree entry type
+              const updated = updateNodeTypeInTree(worldsData.worldTrees, parentId, 'location');
+              if (updated) {
+                console.log(`[GO_INSIDE] Updated worldTree entry type for ${parentId}`);
+              }
+              
+              // Save updated data
+              await storageService.saveWorlds(worldsData);
+              console.log(`[GO_INSIDE] Parent promoted to location successfully`);
+            }
+          }
         } catch (pipelineError) {
           console.error('[NAVIGATION COMMAND ERROR]', pipelineError);
         } finally {

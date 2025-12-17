@@ -17,6 +17,10 @@ export interface StructureAnalysisInput {
   furnishing?: string[];
   /** True for GOTO command (creates new location based on user destination) */
   isGotoCommand?: boolean;
+  /** True when GO_INSIDE has a specific target object (e.g., "alien spaceship") */
+  hasSpecificTarget?: boolean;
+  /** The specific target object when hasSpecificTarget is true */
+  targetObject?: string;
 }
 
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
@@ -104,7 +108,63 @@ OUTPUT (pure JSON):
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // GO_INSIDE COMMAND: Create interior space that matches parent structure
+  // GO_INSIDE WITH SPECIFIC TARGET: Create interior OF the target object
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (input.hasSpecificTarget && input.targetObject) {
+    return `Create the INTERIOR OF A SPECIFIC OBJECT/CONTAINER.
+
+CRITICAL: The USER INPUT specifies what object/container to enter. Create the INTERIOR of that specific thing.
+
+${perspectiveSection}
+
+TARGET OBJECT TO ENTER: "${input.targetObject}"
+
+PARENT CONTEXT (for atmosphere/style only):
+- Location: "${context.currentNode.name}"
+- Cultural tone: "${currentDna?.cultural_tone || 'none'}"
+- Architectural style: "${currentDna?.architectural_tone || 'none'}"
+- Palette: "${currentDna?.palette_bias || 'none'}"
+
+NAMING RULES:
+- Name should be "Interior of [TARGET OBJECT]" or similar
+- Example: "alien spaceship" → "Alien Spaceship Interior" or "Spaceship Cockpit"
+- The name must clearly indicate it's the inside of the target object
+
+STRUCTURE RULES:
+- FORM: Determined by the TARGET OBJECT'S shape (spaceship → cylindrical/spherical, vehicle → rectangular, etc.)
+- SCALE: Appropriate for the TARGET OBJECT (small vehicle = small interior, large ship = medium/large)
+- DO NOT copy parent space's structure - focus on what makes sense for the TARGET OBJECT
+- Inherit only atmosphere/cultural style from parent, NOT physical structure
+${perspectiveRules}
+
+SCALE HINTS:
+- small: 2-4m (pods, small vehicles, cabins)
+- medium: 4-10m (spaceships, large vehicles, aircraft)
+- large: 10-30m+ (cruise ships, large spacecraft)
+
+OUTPUT (pure JSON):
+{
+  "name": "Interior name that clearly indicates it's inside the TARGET OBJECT",
+  "perspective": "${perspective || 'interior'}",
+  "structure": {
+    "form": "Form appropriate for TARGET OBJECT interior (cylindrical for ships, rectangular for rooms, etc.)",
+    "roofType": "domed|flat|vaulted|arched (appropriate for the TARGET OBJECT)",
+    "scale": "Appropriate scale for the TARGET OBJECT",
+    "orientation": "vertical|horizontal|wide|cubic",
+    "openings": "windows/viewports appropriate for TARGET OBJECT",
+    "openingShape": "circular|rectangular|arched|mixed (appropriate for TARGET OBJECT)",
+    "functionalType": "Determined by TARGET OBJECT purpose",
+    "spatialLayout": "Description of the TARGET OBJECT's interior layout",
+    "requiredElements": ["Key features that MUST be in the TARGET OBJECT's interior"],
+    "dominantElements": ["Main features of this TARGET OBJECT's interior"],
+    "uniqueIdentifiers": ["Distinctive features of this TARGET OBJECT"]
+  },
+  "description": "Brief description of the TARGET OBJECT's interior"
+}`;
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GO_INSIDE GENERIC: Create interior space that matches parent structure
   // ═══════════════════════════════════════════════════════════════════════════
   return `Analyze space and determine physical structure.
 

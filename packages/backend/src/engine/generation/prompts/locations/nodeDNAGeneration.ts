@@ -11,13 +11,19 @@ export function nodeDNAGeneration(
   nodeType: string,
   nodeDescription: string,
   parentContext?: ParentContext,
-  options?: { isGotoCommand?: boolean }
+  options?: { isGotoCommand?: boolean; hasSpecificTarget?: boolean; targetObject?: string }
 ): string {
   const needsStructuralFields = nodeType === 'location' || nodeType === 'niche' || nodeType === 'detail';
   
-  // For GOTO commands, parent context is STYLE ONLY (don't let parent content dominate)
+  // Special case: GO_INSIDE with specific target (e.g., "alien spaceship")
+  // Use target name and focus on target interior
+  const effectiveName = options?.hasSpecificTarget && options?.targetObject
+    ? `Interior of ${options.targetObject}`
+    : nodeName;
+  
+  // For GO_INSIDE with target OR GOTO commands, parent context is STYLE ONLY
   const contextSection = parentContext 
-    ? options?.isGotoCommand 
+    ? (options?.isGotoCommand || options?.hasSpecificTarget)
       ? `
 STYLE CONTEXT (for visual consistency only - do NOT copy parent content):
 - Architectural tone: ${parentContext.architectural_tone || 'none'}
@@ -46,18 +52,18 @@ MATERIAL RULES:
   "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
   "uniqueIdentifiers": ["2-4 distinctive features"],` : '';
 
-  return `Generate DNA for ${nodeType} "${nodeName}".
+  return `Generate DNA for ${nodeType} "${effectiveName}".
 
 DESC: ${nodeDescription}
 USER: ${originalPrompt}
 ${contextSection}
 OUTPUT (pure JSON):
 {
-  "name": "${nodeName}",
+  "name": "${effectiveName}",
   "description": "Brief description",
   ${structuralFields}
   "searchDesc": "75-100 chars",
-  "slug": "${nodeName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}",
+  "slug": "${effectiveName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}",
   "dna": {
     "looks": "visual description",
     "colorsAndLighting": "colors and light",

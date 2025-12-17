@@ -26,7 +26,7 @@ export async function generateNodeDNA(
   nodeType: LayerType,
   nodeDescription: string,
   parentContext?: ParentContext,
-  options?: { isGotoCommand?: boolean }
+  options?: { isGotoCommand?: boolean; hasSpecificTarget?: boolean; targetObject?: string }
 ): Promise<{
   dna: NodeDNA;
   name: string;

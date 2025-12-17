@@ -80,6 +80,32 @@ export function addChildToWorldTree(
   return false;
 }
 
+/**
+ * Update a node's type in the world tree
+ * Used when promoting a niche to a location when it gets child nodes
+ * 
+ * @param tree - The world tree array to modify
+ * @param nodeId - The node ID whose type should be updated
+ * @param newType - The new type to set
+ * @returns true if node was found and updated, false otherwise
+ */
+export function updateNodeTypeInTree(
+  tree: WorldTreeNode[],
+  nodeId: string,
+  newType: string
+): boolean {
+  for (const node of tree) {
+    if (node.id === nodeId) {
+      node.type = newType;
+      return true;
+    }
+    if (node.children && updateNodeTypeInTree(node.children, nodeId, newType)) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // PARENT NODE RESOLUTION (from context)
 // ═══════════════════════════════════════════════════════════════════════════

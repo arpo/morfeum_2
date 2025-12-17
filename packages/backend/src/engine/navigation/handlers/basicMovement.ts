@@ -19,6 +19,7 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
   if (currentNode.type === 'location') {
     // Prioritize intent.target from smart selection, fall back to findEntrance helper
     const entrance = intent.target || findEntrance(context);
+    const hasSpecificTarget = !!intent.target;
     
     return {
       action: 'create_niche',
@@ -29,27 +30,34 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
       perspective: intent.spaceType || 'interior',
       metadata: {
         relation: 'child',
-        entrance: entrance
+        entrance: entrance,
+        hasSpecificTarget: hasSpecificTarget,
+        targetObject: hasSpecificTarget ? entrance : undefined
       },
       reasoning: `Creating ${intent.spaceType} niche based on ${entrance} in ${currentNode.name}`
     };
   }
   
-  // Already inside a niche? Create sibling niche under parent location
-  if (currentNode.type === 'niche' && intent.target) {
-    const { parentLocationId } = findParentLocationNode(context);
+  // Inside a niche? Create child niche and promote parent to location
+  if (currentNode.type === 'niche') {
+    const entrance = intent.target || findEntrance(context);
+    const hasSpecificTarget = !!intent.target;
     
     return {
       action: 'create_niche',
-      parentNodeId: parentLocationId,
+      parentNodeId: currentNode.id,
       newNodeType: 'niche',
-      newNodeName: `${intent.spaceType || 'Interior'} of ${intent.target}`,
+      newNodeName: `${intent.spaceType || 'Interior'} of ${entrance}`,
       style: intent.style || 'default',
       perspective: intent.spaceType || 'interior',
       metadata: {
-        relation: 'sibling'
+        relation: 'child',
+        entrance: entrance,
+        promoteParentToLocation: true,
+        hasSpecificTarget: hasSpecificTarget,
+        targetObject: hasSpecificTarget ? entrance : undefined
       },
-      reasoning: `Creating sibling niche under parent location for ${intent.target}`
+      reasoning: `Creating child niche inside ${currentNode.name}, will promote parent to location`
     };
   }
   
