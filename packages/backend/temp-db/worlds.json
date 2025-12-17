@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1765981794692-l8uvzmazp": {
-      "id": "loc-1765981794692-l8uvzmazp",
+    "loc-1765982665286-r8uqgyi1u": {
+      "id": "loc-1765982665286-r8uqgyi1u",
       "type": "host",
-      "name": "The Moon",
+      "name": "Aquatic Ruin",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A vast, grey, cratered expanse under a black sky, with the curved horizon of the Moon visible. No structures or details are discernible from this distance, only geological features.",
-        "colorsAndLighting": "Harsh, unfiltered sunlight creating extreme contrast between brightly lit surfaces and deep, inky shadows. The dominant color is a muted, dusty grey.",
-        "atmosphere": "Absolute vacuum. No atmosphere, no weather, only the unchanging celestial backdrop of stars and Earth. The silence is profound.",
-        "materials": "Primarily lunar regolith (dust and rock), visible as a uniform, dusty grey surface across vast distances.",
-        "mood": "Profound isolation, ancient silence, and immense cosmic scale. The overwhelming feeling is one of emptiness and enduring stillness.",
-        "sounds": "Absolute silence. The absence of any medium for sound to travel.",
-        "primary_surfaces": "Cratered lunar surface, plains of regolith.",
-        "secondary_surfaces": "Deep, dark shadows within craters.",
-        "accent_features": "The distant, tiny blue marble of Earth in the black sky.",
-        "dominant": "Dusty Grey",
-        "secondary": "Black (shadows and space)",
-        "accent": "Earth's Blue",
-        "ambient": "Stark, direct sunlight from the Sun, deep blackness of space.",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Natural Geology",
-        "cultural_tone": "Ancient & Isolated",
-        "palette_bias": "Monochromatic",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "looks": "AERIAL/SATELLITE VIEW: vast expanses of shallow, clear ocean dotted with clusters of partially submerged, geometric ruins. Distant coastlines with overgrown structures are barely visible.",
+        "colorsAndLighting": "Sunlight glinting off water surfaces, casting dappled light on submerged structures. Hazy atmospheric diffusion softens colors.",
+        "atmosphere": "A humid, salty air pervades the world. Light sea mists often obscure distant horizons.",
+        "materials": "Dominant materials are weathered metal and composite panels, visible as dull, rusted surfaces and faded paneling from altitude.",
+        "mood": "A pervasive sense of lost grandeur and the quiet triumph of nature.",
+        "sounds": "Distant, rhythmic lapping of waves, the occasional creak of shifting metal, and the mournful cries of seabirds.",
+        "primary_surfaces": "Vast, calm ocean surfaces, visible expanses of submerged structures.",
+        "secondary_surfaces": "Rocky seabeds, patches of seaweed, small, overgrown islets.",
+        "accent_features": "The geometric shapes of the larger ruined structures, catching the light.",
+        "dominant": "Aquamarine and turquoise from the water.",
+        "secondary": "Faded orange-red from rust.",
+        "accent": "Mottled off-white and dark green from algae.",
+        "ambient": "Bright, hazy daylight filtered through a slightly overcast sky.",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Deconstructivist",
+        "cultural_tone": "Melancholic Isolation",
+        "palette_bias": "Cool-Toned",
+        "flora_base": "Algae and Moss",
+        "fauna_base": "Marine Life"
       },
-      "description": "A vast, desolate celestial body bathed in stark sunlight and deep shadow. Its surface is a landscape of ancient craters and fine, grey dust, stretching to an endless, star-filled horizon.",
-      "searchDesc": "Barren lunar surface, craters, dust, stark sunlight and shadow.",
-      "slug": "the-moon",
+      "description": "A world where advanced coastal and oceanic structures have succumbed to time and the elements, now lying partially submerged and derelict. Nature has begun to reclaim these forgotten vestiges of civilization, creating a melancholic yet strangely serene landscape.",
+      "searchDesc": "Derelict oceanic structures, nature's reclamation, submerged ruins.",
+      "slug": "aquatic-ruin",
       "structure": {
-        "spatialLayout": "A vast, undulating plane of craters and plains, curving towards the horizon."
+        "spatialLayout": "Scattered clusters of ruins across a vast oceanic canvas, interspersed with natural oceanic features."
       }
     },
-    "c59e213b-1450-4d46-99af-a8918a946554": {
-      "id": "c59e213b-1450-4d46-99af-a8918a946554",
+    "0864e519-643e-4030-bb99-47f5e470c5fe": {
+      "id": "0864e519-643e-4030-bb99-47f5e470c5fe",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,184 +44,286 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "1600dcd7-3876-4909-9ab0-4225d73a7f18": {
-      "id": "1600dcd7-3876-4909-9ab0-4225d73a7f18",
+    "7be61065-eb6a-4393-b31e-dd77f59614e9": {
+      "id": "7be61065-eb6a-4393-b31e-dd77f59614e9",
       "type": "location",
-      "name": "Lunar Processing Plant",
+      "name": "The Sunken Dwellings",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A massive, modular industrial complex constructed from grey, weathered metallic panels.  Large, functional components like intake vents and exhaust ports dominate the exterior.  It appears built for extreme durability and efficiency in a vacuum.",
-        "colorsAndLighting": "Primarily muted greys and silvers of the metal. The lighting is sharp and high-contrast, with deep shadows cast by the unfiltered, direct sunlight against the black lunar sky.  Emergency lights might offer small, harsh points of color.",
-        "atmosphere": "A vacuum environment outside, requiring specialized equipment for access.  The temperature would fluctuate wildly between extreme heat and cold.  No natural motion aside from the slow drift of micrometeorites or operational machinery.",
-        "materials": "Heavily reinforced, utilitarian metals such as titanium alloys and specialized lunar concrete.  Textures are rough, brushed, or welded, showing signs of exposure to the harsh lunar environment.",
-        "mood": "Functional and stark. Evokes a sense of isolation and relentless industrial purpose in a hostile environment.",
-        "sounds": "Silence, metallic hum, grinding, whirring, servo motors.",
-        "primary_surfaces": "Brushed metallic panels, reinforced steel plating.",
-        "secondary_surfaces": "Welded seams, composite plating, heat-resistant tiles.",
-        "accent_features": "Warning labels, access panels, external conduit pipes.",
-        "dominant": "Gunmetal grey, covering the majority of the structure.",
-        "secondary": "Silver, used for exposed machinery and panel edges.",
-        "accent": "Red, for warning labels and emergency lights.",
-        "ambient": "Harsh, direct sunlight.",
+        "looks": "A collection of interconnected, weathered spherical and cylindrical pods, partially submerged in shallow, clear ocean water. Moss and algae creep across the rusted, off-white surfaces, with numerous circular openings dotting the structure.",
+        "colorsAndLighting": "Dominated by faded orange-red rust and mottled off-white, with vibrant green accents from moss and algae. Soft, diffused sunlight filters through the hazy sky and clear water.",
+        "atmosphere": "The air is thick with the scent of salt and damp decay. A palpable sense of abandonment and tranquility pervades the scene, with the gentle lapping of waves being the primary sound.",
+        "materials": "The primary materials are heavily rusted metal and weathered, composite panels. These surfaces are textured by patches of soft moss and slick algae, indicating prolonged exposure to the aquatic environment.",
+        "mood": "Eerie and melancholic, evoking a sense of lost civilization and nature's reclamation.",
+        "sounds": "Gentle waves, distant seabirds, dripping water, creaking metal",
+        "primary_surfaces": "Rusted metal, moss-covered panels, algae-slicked crevices",
+        "secondary_surfaces": "Mottled off-white composite, underwater rock, dark green seaweed",
+        "accent_features": "Circular windows revealing interior glimpses, rusted metal ladder",
+        "dominant": "Faded orange-red (rust)",
+        "secondary": "Mottled off-white",
+        "accent": "Vibrant green (moss/algae)",
+        "ambient": "Soft, diffused sunlight",
         "genre": null,
-        "architectural_tone": "Brutalist industrial with extreme environmental adaptation.",
-        "cultural_tone": "Human (or alien) industrial resource extraction operation; driven by necessity and efficiency.",
-        "palette_bias": "Grays and metallics.",
-        "flora_base": "None",
+        "architectural_tone": "Weathered utilitarian with organic integration",
+        "cultural_tone": "Designed for aquatic habitation, now abandoned and decaying",
+        "palette_bias": "Earth tones with strong green accents",
+        "flora_base": "Moss and algae",
         "fauna_base": "None"
       },
-      "description": "A utilitarian factory structure designed for resource extraction on the lunar surface. EXTERIOR VIEW.",
-      "searchDesc": "Utilitarian lunar factory for resource extraction, metallic, functional, harsh sunlight, stark landscape.",
-      "slug": "lunar-processing-plant",
+      "description": "A multi-pod structure emerging from clear, shallow turquoise ocean waters under a hazy, bright sky. The unusual building consists of several interconnected, spherical and cylindrical modules, predominantly rusted in shades of faded orange-red and mottled off-white, with significant patches of green moss and algae growing across its flat surfaces and crevices. Multiple circular openings serve as windows or entrances. The base of the structure rests on a rocky foundation, partially submerged, with various underwater rocks and patches of dark green seaweed clearly visible through the transparent water. A rusted metal ladder extends from one of the lower pods directly into the calm sea.",
+      "searchDesc": "Weathered multi-pod structure in shallow turquoise water, encrusted with moss and algae.",
+      "slug": "the-sunken-dwellings",
       "structure": {
-        "spatialLayout": "A sprawling, low-profile structure with a clearly defined industrial footprint.  Spaces are dictated by function, with ample room for machinery and transport."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "central to the facade",
-          "description": "A heavy, reinforced airlock leading into the factory's interior."
-        },
-        {
-          "type": "passage",
-          "position": "to the left of the main entrance",
-          "description": "A utilitarian external conduit, possibly for cargo or maintenance, leading to a loading bay."
-        }
-      ],
-      "dominantElements": [
-        "factory: utilitarian industrial, large-scale, exterior, metallic plating, reinforced seams, harsh sunlight"
-      ],
-      "uniqueIdentifiers": [
-        "large intake vents",
-        "articulated robotic arms",
-        "solar panel arrays",
-        "dust-covered hull",
-        "pressurized dome sections"
-      ],
-      "primaryMedia": "media-1765981821922-y2gyqs7jq"
-    },
-    "niche-1765981872392-xe25fhwt4": {
-      "id": "niche-1765981872392-xe25fhwt4",
-      "type": "niche",
-      "name": "Lunar Processing Plant",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Exterior of a large-scale, utilitarian industrial facility constructed from weathered, grey metallic plating. Reinforced seams are prominent, and large, functional components like intake vents and exhaust ports dominate the facade. The entire structure appears built for extreme durability in a vacuum.",
-        "colorsAndLighting": "Dominated by metallic grays, with stark contrasts from the harsh, direct sunlight creating deep, sharp shadows. Ambient light is minimal and utilitarian, primarily from the sun itself.",
-        "atmosphere": "Vacuum. Extreme temperature fluctuations. Utter silence except for internal machinery hums that might barely be audible through hull plating.",
-        "materials": "Heavily reinforced titanium alloys and specialized lunar concrete.",
-        "mood": "Impersonal, functional, resilient, austere.",
-        "sounds": "Subtle hum, clanking, distant machinery, vacuum.",
-        "spatialLayout": "Expansive, monolithic, imposing.",
-        "primary_surfaces": "Metallic plating, reinforced concrete.",
-        "secondary_surfaces": "Industrial piping, structural beams, vents.",
-        "accent_features": "Recessed lighting fixtures (when active), warning labels, access panels.",
-        "dominant": "dark grey",
-        "secondary": "light grey",
-        "accent": "industrial yellow (for hazard markings)",
-        "ambient": "stark, high-contrast",
-        "genre": null,
-        "architectural_tone": "Brutalist industrial with extreme environmental adaptation",
-        "cultural_tone": "Human (or alien) industrial resource extraction operation; driven by necessity and efficiency",
-        "palette_bias": "Grays and metallics",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765981872392-nr32fj7q0",
-      "description": "The interior of the Lunar Processing Plant is a cavernous space dedicated to resource extraction and refinement. Towering machinery hums with activity, casting sharp shadows across the utilitarian metallic surfaces. The air is thick with the scents of industry, and the overall impression is one of relentless, efficient operation.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "horizontal",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "industrial",
-        "spatialLayout": "This vast interior space is dominated by heavy machinery and processing equipment. Exposed conduits and robust support beams crisscross the ceiling, with a utilitarian, metallic floor underfoot.",
-        "requiredElements": [
-          "factory: utilitarian industrial, large-scale, exterior, metallic plating, reinforced seams, harsh sunlight"
-        ]
+        "spatialLayout": "An interconnected, modular complex of rounded and elongated forms, resting on a submerged rocky base. The internal spaces are hinted at through various openings."
       },
       "navigableElements": [
         {
           "type": "passage",
-          "position": "center",
-          "description": "leads to the main processing floor"
+          "position": "center, lower pod",
+          "description": "Leads into a reddish-orange interior, where a bed of pillows and a rug are visible."
         },
         {
-          "type": "door",
-          "position": "far wall",
-          "description": "leads to an auxiliary storage area"
+          "type": "passage",
+          "position": "various pods",
+          "description": "Circular openings lead to other interiors showing exposed walls and debris."
+        },
+        {
+          "type": "stairs",
+          "position": "lower pod, right side",
+          "description": "A rusted metal ladder extends from a lower pod directly into the calm sea."
         }
       ],
       "dominantElements": [
-        "processing machinery: utilitarian industrial, large-scale, interior, metallic, exposed conduits, harsh industrial lighting",
-        "control booth: utilitarian industrial, medium, interior, metallic, reinforced, dim lighting"
+        "multi-pod structure: shape=modular, scale=medium, style=futuristic-derelict, surfaces=rusted metal, moss-covered, mottled off-white, light=soft-ambient"
       ],
       "uniqueIdentifiers": [
-        "high-frequency hum of machinery",
-        "smell of ozone and heated metal",
-        "visible dust motes dancing in the artificial light"
+        "interconnected spherical and cylindrical modules",
+        "rusted metal with significant moss and algae growth",
+        "circular openings revealing interiors",
+        "partially submerged rocky foundation",
+        "rusted metal ladder into the sea"
       ],
-      "searchDesc": "Massive industrial lunar plant exterior, metallic plating, reinforced seams, harsh sunlight.",
-      "slug": "null-of-lunar-processing-plant"
+      "primaryMedia": "media-1765982704192-6hdqcz56r"
     },
-    "niche-1765981916712-tdb4og51u": {
-      "id": "niche-1765981916712-tdb4og51u",
+    "niche-1765982733664-0p0im6eh8": {
+      "id": "niche-1765982733664-0p0im6eh8",
       "type": "niche",
-      "name": "Lunar Processing Plant Interior",
+      "name": "The Sunken Dwellings - Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, open industrial space filled with colossal, unrefined processing equipment. Exposed conduits snake across the walls and ceiling, and the air shimmers with heat. Large sections of raw lunar ore are visible on conveyor belts and in hoppers.",
-        "colorsAndLighting": "Harsh, utilitarian, industrial lighting casts stark shadows. The primary colors are deep grays and muted metallic tones, punctuated by the occasional hazard-striped yellow or red warning label.",
-        "atmosphere": "The air is dry, filled with the metallic tang of processed lunar regolith and the scent of ozone. Temperature is cool but with localized hot spots near active machinery. A constant, low hum of operation permeates the space.",
-        "materials": "Raw, unpolished steel, reinforced concrete, heavy-duty rubberized conveyor belts, and exposed circuitry. Metal plating is functional rather than aesthetic, with visible welds and bolt lines.",
-        "mood": "Functional, intense, raw, industrial, utilitarian, awe-inspiring in scale.",
-        "sounds": "Deep hum, grinding, clanking, hissing steam, automated alerts, heavy thuds.",
-        "spatialLayout": "Cavernous and open, with high ceilings supported by industrial beams. Multiple levels are suggested by gantries and staircases, creating a multi-tiered industrial landscape.",
-        "primary_surfaces": "weathered metallic plating, unpolished steel",
-        "secondary_surfaces": "exposed concrete, industrial piping, reinforced glass (for observation points)",
-        "accent_features": "warning labels, hazard stripes, indicator lights",
-        "dominant": "dark gray",
-        "secondary": "steel gray",
-        "accent": "hazard yellow",
-        "ambient": "harsh white industrial",
+        "looks": "A collection of interconnected, weathered spherical and cylindrical pods, partially submerged in shallow, clear ocean water. Moss and algae creep across the rusted, off-white surfaces, with numerous circular openings dotting the structure.",
+        "colorsAndLighting": "Dominant earth tones of rust and mottled off-white, with strong green accents from moss and algae. Soft, diffused ambient light filtering through the water and openings.",
+        "atmosphere": "Damp, slightly salty air, cool to the touch, with a gentle, almost imperceptible sway from the water currents.",
+        "materials": "Heavily rusted metal, weathered composite panels, and natural growth.",
+        "mood": "Melancholy, serene, abandoned, forgotten.",
+        "sounds": "Gentle lapping water, distant creaking metal, muffled aquatic sounds.",
+        "spatialLayout": "Modular, interconnected pod structure, partially submerged.",
+        "primary_surfaces": "Rusted metal, mottled off-white composite.",
+        "secondary_surfaces": "Soft moss, slick algae.",
+        "accent_features": "Circular hull openings, barnacle clusters, trailing seaweed.",
+        "dominant": "earth tones",
+        "secondary": "mottled off-white",
+        "accent": "green",
+        "ambient": "soft-ambient",
         "genre": null,
-        "architectural_tone": "Brutalist industrial with extreme environmental adaptation",
-        "cultural_tone": "Human (or alien) industrial resource extraction operation; driven by necessity and efficiency",
-        "palette_bias": "Grays and metallics",
-        "flora_base": "None",
+        "architectural_tone": "Weathered utilitarian with organic integration",
+        "cultural_tone": "Designed for aquatic habitation, now abandoned and decaying",
+        "palette_bias": "earth tones with strong green accents",
+        "flora_base": "moss, algae",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765981916711-3n2j5s81q",
-      "description": "Inside the Lunar Processing Plant, the air hums with the low thrum of powerful machinery. The scale is immense, with towering equipment dedicated to resource extraction and refinement.",
+      "primaryMedia": "media-1765982733663-3y4b0sm6j",
+      "description": "The interior of the sunken dwellings are contained within interconnected, spherical pods. The spaces are characterized by curved, potentially cramped living areas, reflecting a design focused on maximizing space within a modular, futuristic-derelict aesthetic. Soft, ambient light filters through the limited openings, illuminating surfaces of rusted metal, moss, and mottled off-white.",
       "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "horizontal",
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "cubic",
         "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "industrial",
-        "spatialLayout": "This is a vast, cavernous industrial space dominated by massive machinery and utilitarian structures. Exposed conduits and support beams crisscross the ceiling, while the floor is a functional expanse of reinforced concrete or metal grating, stained with industrial residues.",
+        "openingShape": "circular",
+        "functionalType": "residential",
+        "spatialLayout": "Within the interconnected pods, the interior spaces are curved and often cramped, with remnants of habitation suggesting a compact living arrangement. The limited openings are strategically placed to allow for controlled light penetration.",
         "requiredElements": [
-          "factory",
-          "utilitarian industrial",
-          "large-scale",
-          "metallic plating",
-          "reinforced seams",
-          "harsh sunlight"
+          "multi-pod structure: shape=modular, scale=medium, style=futuristic-derelict, surfaces=rusted metal, moss-covered, mottled off-white, light=soft-ambient"
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "industrial workbench",
-          "hydraulic press",
-          "conveyor belt system",
-          "complex control console with exposed wiring",
-          "warning signage",
-          "stacks of metallic components",
-          "oxygen tanks"
+          "salvaged submersible seating",
+          "algae-encrusted control console",
+          "tangled wiring",
+          "waterlogged storage crates"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "hatch",
+          "position": "center",
+          "description": "hatch rusted metal  rear wall"
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "passage open"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window grimy porthole"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door narrow connecting way"
+        }
+      ],
+      "dominantElements": [
+        "habitation pod: shape=spherical, scale=medium, style=futuristic-derelict, surfaces=rusted metal, moss-covered, mottled off-white, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "curved interior walls",
+        "decaying habitation pods",
+        "submerged structure elements"
+      ],
+      "searchDesc": "Modular pods, half-submerged, rusted metal, moss-covered, off-white, soft ambient light.",
+      "slug": "null-of-the-sunken-dwellings"
+    },
+    "location-1765982818114-z6bv17jxq": {
+      "id": "location-1765982818114-z6bv17jxq",
+      "type": "location",
+      "name": "Two Islands Connected With A Bridge",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A scene dominated by cool, muted tones. The islands are rugged and unadorned, with sharp geological features. The bridge is a stark, geometric structure of exposed metal. A single, imposing industrial building stands on the smaller island, its form angular and functional.",
+        "colorsAndLighting": "Dominated by deep blues, greys, and muted greens. Lighting is diffused and cool, with no strong direct sunlight, suggesting an overcast or twilight atmosphere. The industrial building has harsh, focused internal lighting spilling out.",
+        "atmosphere": "Cool air, a sense of isolation and stillness. A faint salty mist hangs in the air. Minimal wind.",
+        "materials": "Primarily rough stone, weathered steel, and aged concrete. Some areas of sparse, hardy vegetation.",
+        "mood": "Isolated, functional, stark, slightly melancholic.",
+        "sounds": "Distant waves, creaking metal, dripping water, faint industrial hum.",
+        "spatialLayout": "Two distinct landmasses separated by water, connected by a linear structure.",
+        "primary_surfaces": "rock, weathered steel",
+        "secondary_surfaces": "concrete, water, sparse vegetation",
+        "accent_features": "sharp edges of the bridge, geometric form of the building",
+        "dominant": "deep blue",
+        "secondary": "grey",
+        "accent": "steel grey",
+        "ambient": "cool, diffused",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Deconstructivist",
+        "cultural_tone": "Melancholic Isolation",
+        "palette_bias": "Cool-Toned",
+        "flora_base": "sparse coastal scrub",
+        "fauna_base": "Marine Life"
+      },
+      "primaryMedia": "media-1765982818113-c2ols8wcl",
+      "description": "An exterior view of two islands connected by a sturdy, utilitarian bridge, set against a backdrop of weathered structures and abundant green.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "natural-openings",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "spatialLayout": "Two distinct landmasses separated by water, linked by a man-made bridge. The islands feature varied terrain and vegetation, integrated with utilitarian structures.",
+        "requiredElements": [
+          "islands",
+          "bridge"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "waterlogged wooden chests overflowing with rusted tools",
+          "algae-covered fishing nets draped over decaying crates",
+          "a corroded winch mechanism",
+          "barnacle-encrusted workbenches with scattered",
+          "unidentifiable mechanical parts"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door barnacle-encrusted way"
+        },
+        {
+          "type": "passage",
+          "position": "front wall",
+          "description": "passage gaping archway  leading to submerged"
+        },
+        {
+          "type": "hatch",
+          "position": "ceiling",
+          "description": "hatch rusted access"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window large reinforced porthole"
+        }
+      ],
+      "dominantElements": [
+        "The Bridge: shape=arched, scale=medium, style=weathered-utilitarian, surfaces=stone-wood-metal, light=natural-diffused"
+      ],
+      "uniqueIdentifiers": [
+        "two distinct islands",
+        "connecting bridge"
+      ],
+      "searchDesc": "Two islands connected by a stark bridge, one featuring a brutalist industrial building.",
+      "slug": "two-islands-conncted-with-an-bridge"
+    },
+    "niche-1765982855188-913o15vo0": {
+      "id": "niche-1765982855188-913o15vo0",
+      "type": "niche",
+      "name": "Interior of the Industrial Building",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Rugged islands with sharp geological features, a stark geometric arched bridge, and an angular industrial building.",
+        "colorsAndLighting": "Cool, muted tones dominate. Natural, diffused light. Overcast sky.",
+        "atmosphere": "Crisp, cool air with a faint salty mist. Still and silent.",
+        "materials": "Rough stone, weathered steel, aged concrete, aged wood.",
+        "mood": "Melancholic isolation, stark beauty, industrial decay.",
+        "sounds": "Distant waves, creaking metal, wind whistling.",
+        "spatialLayout": "Linear connection between two distinct landmasses.",
+        "primary_surfaces": "Rough stone, weathered steel, aged wood.",
+        "secondary_surfaces": "Aged concrete, sparse hardy vegetation.",
+        "accent_features": "Sharp geological edges, exposed rivets on metal.",
+        "dominant": "Slate grey",
+        "secondary": "Muted blue-grey",
+        "accent": "Verdigris on metal",
+        "ambient": "Cool, diffused",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Deconstructivist",
+        "cultural_tone": "Melancholic Isolation",
+        "palette_bias": "Cool-Toned",
+        "flora_base": "Sparse hardy vegetation",
+        "fauna_base": "Marine Life"
+      },
+      "primaryMedia": "media-1765982855188-g1i6a4v00",
+      "description": "Inside the imposing industrial building on the smaller island, the space is dominated by functional machinery and stark, utilitarian construction.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "spatialLayout": "The interior is a cavernous, rectangular space with high ceilings. Exposed pipes and concrete walls create a utilitarian atmosphere. The lighting is dim and functional.",
+        "requiredElements": [
+          "The Bridge: shape=arched, scale=medium, style=weathered-utilitarian, surfaces=stone-wood-metal, light=natural-diffused"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "worn wooden table",
+          "two simple wooden benches",
+          "rusted metal toolbox",
+          "flickering oil lamp"
         ],
         "suggested": [],
         "placementNotes": []
@@ -230,35 +332,174 @@
         {
           "type": "door",
           "position": "front wall",
-          "description": "door reinforced blast"
+          "description": "door heavy ir"
         },
         {
-          "type": "hatch",
-          "position": "floor",
-          "description": "hatch maintenance"
-        },
-        {
-          "type": "object",
+          "type": "passage",
           "position": "left wall",
-          "description": "object pressurized airlock"
+          "description": "passage narrow stone"
         },
         {
-          "type": "object",
-          "position": "center",
-          "description": "object conduit access panel rear wall"
+          "type": "window",
+          "position": "right wall",
+          "description": "window small barred"
         }
       ],
       "dominantElements": [
-        "processing machinery: massive industrial, large-scale, interior, metal grating, exposed pipes and wires, dim overhead lighting with harsh spotlights"
+        "Industrial Machinery: shape=irregular, scale=large, style=functional-industrial, surfaces=metal-concrete-plastic, light=dim-industrial"
       ],
       "uniqueIdentifiers": [
-        "heavy industrial machinery",
-        "exposed conduits and pipes",
-        "grimy metallic surfaces",
-        "functional, non-decorative architecture"
+        "exposed pipes",
+        "concrete walls",
+        "industrial machinery"
       ],
-      "searchDesc": "Vast industrial processing core, exposed machinery, raw lunar materials, utilitarian metal.",
-      "slug": "null-of-lunar-processing-plant"
+      "searchDesc": "Two rugged islands connected by a weathered arched bridge, with an industrial building.",
+      "slug": "null-of-two-islands-connected-with-a-bridge"
+    },
+    "niche-1765982926601-uc4h3j7mb": {
+      "id": "niche-1765982926601-uc4h3j7mb",
+      "type": "niche",
+      "name": "Sunken Dwelling Pod Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A circular platform constructed from heavily rusted metal and worn composite panels, showing signs of prolonged exposure to a damp, salty environment. The edges are reinforced with a low, verdigris-streaked metal railing. Patches of resilient moss cling to the surfaces, and faint waterline marks are visible.",
+        "colorsAndLighting": "Muted earth tones of rust and damp grey are offset by vibrant green moss and algae. The lighting is diffuse and somewhat dim, reflecting the overcast sky and the proximity of the water.",
+        "atmosphere": "The air is heavy with the scent of salt and decay. A gentle, cool breeze whispers across the platform. The overall feeling is one of damp stillness.",
+        "materials": "Heavily rusted metal, weathered composite panels, hardy moss, and scattered algae.",
+        "mood": "Melancholy, enduring, forgotten.",
+        "sounds": "Distant lapping of waves, creaking metal, rustling moss.",
+        "spatialLayout": "A flat, circular expanse with a central downward passage and an accessible edge path.",
+        "primary_surfaces": "rusted metal, weathered composite panels",
+        "secondary_surfaces": "moss, algae, barnacles",
+        "accent_features": "verdigris streaks on railing, waterline marks",
+        "dominant": "rust",
+        "secondary": "grey",
+        "accent": "green",
+        "ambient": "dim, diffused",
+        "genre": null,
+        "architectural_tone": "weathered utilitarian with organic integration",
+        "cultural_tone": "designed for aquatic habitation, now abandoned and decaying",
+        "palette_bias": "earth tones with strong green accents",
+        "flora_base": "moss, algae",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1765982926601-0ixyb7xlx",
+      "description": "Inside one of the weathered pods, the curved walls create a sense of confinement. Water trickles down the surfaces, and the air is thick with the smell of the sea and decay.",
+      "structure": {
+        "form": "spherical",
+        "roofType": "domed",
+        "scale": "small",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "circular",
+        "functionalType": "residential",
+        "spatialLayout": "The interior of the pod is a compact, spherical space. Curved walls meet at a central point, offering limited floor area and a claustrophobic feel.",
+        "requiredElements": [
+          "user-specified elements that MUST appear"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "algae-covered cistern",
+          "salvaged metal pipes",
+          "weathered fishing nets",
+          "barnacle-encrusted crates"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "hatch",
+          "position": "center",
+          "description": "hatch rusted metal  leading down"
+        },
+        {
+          "type": "object",
+          "position": "side",
+          "description": "object broken railing to one"
+        },
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "archway open  to a collapsed section"
+        }
+      ],
+      "dominantElements": [
+        "worn bench: shape=curved, scale=small, style=futuristic-derelict, surfaces=rusted metal, padding ripped, light=dim-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "condensation sheen on walls",
+        "faint smell of brine and decay",
+        "lack of furniture beyond basic fittings"
+      ],
+      "searchDesc": "Weathered platform overlooking submerged dwellings, accessible by stairs and a path.",
+      "slug": "null-of-the-sunken-dwellings"
+    },
+    "niche-1765983095839-48zrtjpn0": {
+      "id": "niche-1765983095839-48zrtjpn0",
+      "type": "niche",
+      "name": "Rooftop Balcony View Over Ocean",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A small, functional balcony with worn concrete flooring. A simple, dark metal railing encloses the space, providing a clear, unobstructed vista of the ocean.",
+        "colorsAndLighting": "Sun-drenched with bright, cool blues from the ocean. Earthy greys and muted greens from sparse vegetation.",
+        "atmosphere": "Crisp, salty air; gentle sea breeze; constant, low hum of waves.",
+        "materials": "Weathered concrete, oxidized metal, rough-hewn wood (for planters), tough, leathery plant leaves.",
+        "mood": "Serene, expansive, contemplative.",
+        "sounds": "Waves crashing, seagulls crying, distant boat horn, wind.",
+        "spatialLayout": "Rectangular, open to one side (the view).",
+        "primary_surfaces": "Concrete floor, metal railing, sky, ocean.",
+        "secondary_surfaces": "Weathered building facade, potted plant leaves.",
+        "accent_features": "A few hardy green plants in simple, dark planters, perhaps a single weathered metal chair.",
+        "dominant": "Ocean Blue",
+        "secondary": "Concrete Grey",
+        "accent": "Deep Green",
+        "ambient": "Bright, natural sunlight with cool, reflective tones.",
+        "genre": null,
+        "architectural_tone": "Weathered utilitarian with organic integration",
+        "cultural_tone": "Designed for aquatic habitation, now abandoned and decaying",
+        "palette_bias": "Earth tones with strong green accents",
+        "flora_base": "Drought-tolerant succulents and grasses",
+        "fauna_base": "Seagulls"
+      },
+      "primaryMedia": "media-1765983095838-h2ufjhbwn",
+      "description": "A small, open-air balcony perched atop a structure, providing an unobstructed view of the expansive ocean.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "small",
+        "orientation": "horizontal",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "natural",
+        "spatialLayout": "A small, intimate balcony situated on a rooftop, offering a breathtaking panoramic view of the vast ocean. It's a serene space designed for contemplation and enjoying the seascape.",
+        "requiredElements": [
+          "balcony",
+          "ocean view"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "rear",
+          "description": "Leads into a utilitarian rooftop access area with storage."
+        },
+        {
+          "type": "passage",
+          "position": "left edge",
+          "description": "A narrow, slightly rusted metal railing delineates the edge of the balcony, overlooking the vast ocean below."
+        }
+      ],
+      "dominantElements": [
+        "balcony railing: shape=linear, scale=small, style=weathered utilitarian, surfaces=rusted metal, textured concrete, light=harsh-sunlight"
+      ],
+      "uniqueIdentifiers": [
+        "ocean vista",
+        "rooftop elevation"
+      ],
+      "searchDesc": "Small rooftop balcony with a stunning, wide ocean view.",
+      "slug": "roof-top-small-balcony-view-over-ocean"
     }
   },
   "views": {},
@@ -281,24 +522,40 @@
       ]
     },
     {
-      "id": "loc-1765981794692-l8uvzmazp",
+      "id": "loc-1765982665286-r8uqgyi1u",
       "type": "host",
       "children": [
         {
-          "id": "c59e213b-1450-4d46-99af-a8918a946554",
+          "id": "0864e519-643e-4030-bb99-47f5e470c5fe",
           "type": "region",
           "children": [
             {
-              "id": "1600dcd7-3876-4909-9ab0-4225d73a7f18",
+              "id": "7be61065-eb6a-4393-b31e-dd77f59614e9",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765981872392-xe25fhwt4",
+                  "id": "niche-1765982733664-0p0im6eh8",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1765981916712-tdb4og51u",
+                  "id": "niche-1765982926601-uc4h3j7mb",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1765983095839-48zrtjpn0",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1765982818114-z6bv17jxq",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765982855188-913o15vo0",
                   "type": "niche",
                   "children": []
                 }
@@ -310,6 +567,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765981794692-l8uvzmazp"
+    "loc-1765982665286-r8uqgyi1u"
   ]
 }

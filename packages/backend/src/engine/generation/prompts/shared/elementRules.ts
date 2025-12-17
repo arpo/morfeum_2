@@ -17,11 +17,13 @@ export const DOMINANT_ELEMENTS_RULES = `DOMINANT ELEMENTS (seed data for GO_INSI
 - Buildings: café, factory, temple, house, shop, warehouse
 - Vehicles/Objects: car, spaceship, kiosk, telephone booth, container
 - NOT areas/zones (like "factory floor", "main hall" - these are parts of the location)
-- FORMAT: "[name]: [shape/style], [scale], [interior|exterior|open-air], [floor], [walls], [lighting]"
-- PERSPECTIVE values:
-  - interior: enclosed space with roof/ceiling (rooms, halls, caves, vehicle interiors)
-  - exterior: fully open outdoor space (parks, plazas, gardens, forests)
-  - open-air: semi-enclosed with open sky (balconies, terraces, rooftops, covered patios)
+- FORMAT: "[name]: shape=[form], scale=[size], style=[aesthetic], surfaces=[materials], light=[lighting]"
+- SHAPE values: rectangular, cylindrical, domed, organic, irregular, pyramidal, modular, tiered, sprawling, compact
+  - Can combine with style: rectangular-industrial, domed-classical, organic-futuristic
+- SCALE values: small, medium, large, massive, intimate, towering
+- STYLE values: brutalist, art-deco, victorian, futuristic, rustic, minimalist, industrial, commercial, sacred, ornate
+- SURFACES: materials and textures (metallic, stone, wood, glass, concrete, polished, weathered, textured)
+- LIGHT: harsh-sunlight, soft-ambient, neon-glow, candlelit, dim-industrial, natural-diffused
 - Usually 1-3 items maximum - the MAIN things visible in the scene
 - First item should be the main target for GO_INSIDE if applicable`;
 
@@ -30,7 +32,7 @@ export const DOMINANT_ELEMENTS_RULES = `DOMINANT ELEMENTS (seed data for GO_INSI
  * Shows the FORMAT pattern, not specific content (to prevent LLM from copying literally).
  */
 export const DOMINANT_ELEMENTS_EXAMPLE = 
-  `"<enterable_structure>: <shape/style>, <scale>, <interior|exterior|open-air>, <floor_material>, <wall_features>, <lighting_type>"`;
+  `"<enterable_structure>: shape=<form>, scale=<size>, style=<aesthetic>, surfaces=<materials>, light=<lighting>"`;
 
 /**
  * Format specifications for different node types.
