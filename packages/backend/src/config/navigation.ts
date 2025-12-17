@@ -29,7 +29,7 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   },
   GOTO: { 
     requiresNodeType: ['niche', 'location'], 
-    description: 'Navigate to a specific place (from niche: sibling niche, from location: sibling location)',
+    description: 'Navigate to a specific place',
     category: 'navigation'
   },
   
@@ -61,12 +61,12 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   // Character creation commands
   CREATE_CHARACTER_REAL: {
     requiresNodeType: ['location', 'niche'],
-    description: 'Create a realistic human character for this location',
+    description: 'Create a realistic human character',
     category: 'creation'
   },
   CREATE_CHARACTER_UNREAL: {
     requiresNodeType: ['location', 'niche'],
-    description: 'Create a fantastical humanoid character for this location',
+    description: 'Create a fantastical character',
     category: 'creation'
   }
 } as const;
