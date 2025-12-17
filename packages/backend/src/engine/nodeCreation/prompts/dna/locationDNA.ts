@@ -5,7 +5,7 @@
  * Location nodes inherit from region/host and focus on architectural details.
  */
 
-import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
+import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS, DOMINANT_ELEMENTS_RULES, DOMINANT_ELEMENTS_EXAMPLE } from '../../../generation/prompts/shared/dnaSchema';
 import type { ParentDNAContext } from '../../types';
 
 /**
@@ -63,7 +63,7 @@ OUTPUT JSON:
     {"type": "door|passage|stairs|archway|portal|window|balcony|gate", "position": "location in scene (left, center, right, foreground, background)", "description": "brief description of what it is and where it leads"}
   ],
   NOTE: FIRST navigableElement should be the MAIN ENTRANCE used for GO_INSIDE command.
-  "dominantElements": ["FIRST: main enterable building/structure if any, then 3-4 other major features"],
+  "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
   "uniqueIdentifiers": ["3-5 distinctive features that make this building recognizable"],
   "searchDesc": "75-100 char search description with type and key features",
   "slug": "kebab-case-name",
@@ -91,6 +91,8 @@ OUTPUT JSON:
     "fauna_base": "${DNA_CASCADING_FIELDS.fauna_base} OR null to inherit"
   }
 }
+
+${DOMINANT_ELEMENTS_RULES}
 
 CRITICAL GUIDELINES:
 

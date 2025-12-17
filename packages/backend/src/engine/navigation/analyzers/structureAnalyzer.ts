@@ -27,6 +27,8 @@ export interface StructureAnalysisOptions {
   hasSpecificTarget?: boolean;
   /** The specific target object when hasSpecificTarget is true */
   targetObject?: string;
+  /** Rich seed data from parent's dominantElements (shape, scale, materials) */
+  targetSeed?: string;
 }
 
 /**
@@ -55,7 +57,8 @@ export async function analyzeStructure(
     perspective,
     isGotoCommand: options?.isGotoCommand,
     hasSpecificTarget: options?.hasSpecificTarget,
-    targetObject: options?.targetObject
+    targetObject: options?.targetObject,
+    targetSeed: options?.targetSeed
   });
   
   // Log which prompt type is being used

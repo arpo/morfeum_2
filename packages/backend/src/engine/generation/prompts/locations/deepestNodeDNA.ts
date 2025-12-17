@@ -1,4 +1,4 @@
-import { buildDNAFieldsString } from '../shared/dnaSchema';
+import { buildDNAFieldsString, DOMINANT_ELEMENTS_RULES, DOMINANT_ELEMENTS_EXAMPLE } from '../shared/dnaSchema';
 
 /**
  * Deepest Node DNA Generation - Optimized for speed
@@ -37,10 +37,10 @@ export function deepestNodeDNAGeneration(
   });
 
   // Only include structural fields for location/niche
+  // dominantElements: ONLY enterable structures with rich seed format for GO_INSIDE support
   const structuralFields = (nodeType === 'location' || nodeType === 'niche') 
     ? `"navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
-  NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
-  "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
+  "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
   "uniqueIdentifiers": ["3-5 distinctive features"],`
     : '';
 
@@ -50,6 +50,8 @@ DESC: ${nodeDescription}
 USER: ${originalPrompt}
 
 ${typeHint}
+
+${DOMINANT_ELEMENTS_RULES}
 
 OUTPUT (pure JSON):
 {

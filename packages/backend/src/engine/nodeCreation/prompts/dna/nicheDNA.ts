@@ -5,7 +5,7 @@
  * Niche nodes can be interior or exterior and represent the deepest navigable level.
  */
 
-import { DNA_SCENE_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
+import { DNA_SCENE_FIELDS, DOMINANT_ELEMENTS_FORMAT } from '../../../generation/prompts/shared/dnaSchema';
 import type { ParentDNAContext, ScenePerspective } from '../../types';
 
 /**
@@ -75,7 +75,7 @@ OUTPUT JSON:
   "navigableElements": [
     {"type": "door|passage|stairs|archway|portal|window|balcony|bridge", "position": "specific position in this space", "description": "where it leads and what's visible through it"}
   ],
-  "dominantElements": ["3-5 major objects/features in this space"],
+  "dominantElements": [${DOMINANT_ELEMENTS_FORMAT.niche}],
   "uniqueIdentifiers": ["3-5 distinctive features that make this space memorable"],
   "searchDesc": "75-100 char search description",
   "slug": "kebab-case-name",

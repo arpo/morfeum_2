@@ -1,4 +1,4 @@
-import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../shared/dnaSchema';
+import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS, DOMINANT_ELEMENTS_RULES, DOMINANT_ELEMENTS_EXAMPLE } from '../shared/dnaSchema';
 
 /**
  * Parent Chain DNA Generation - Optimized
@@ -41,6 +41,8 @@ ${parentList}
 
 USER: ${originalPrompt}
 
+${DOMINANT_ELEMENTS_RULES}
+
 CRITICAL SCALE RULES (different "looks" per level):
 - HOST: AERIAL/SATELLITE view of entire city/world. NO individual buildings, NO facades, NO close-up details. Focus: skyline, geography, distant landmarks as tiny shapes. Example: "A sprawling coastal metropolis stretching along a curved bay, with clusters of tall buildings in the center and green hills beyond."
 - REGION: ELEVATED STREET view of district/neighborhood. NO specific building facades. Focus: street character, general architectural style, neighborhood atmosphere. Example: "A bohemian district of narrow streets lined with Victorian shopfronts, street art, and market stalls."
@@ -51,7 +53,8 @@ OUTPUT (pure JSON):
   ${hasLocation ? `"location": {
     "name": "Name", "description": "2-3 sentences",
     "navigableElements": [{"type": "door|path", "position": "where", "description": "brief"}],
-    "dominantElements": ["features"], "uniqueIdentifiers": ["distinctive"],
+    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
+    "uniqueIdentifiers": ["distinctive"],
     "searchDesc": "75-100 chars", "slug": "kebab-case",
     "dna": {
       "looks": "GROUND LEVEL: building facade, entrance, signage visible",

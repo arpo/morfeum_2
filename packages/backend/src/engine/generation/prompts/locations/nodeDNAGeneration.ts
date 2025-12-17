@@ -47,9 +47,17 @@ MATERIAL RULES:
 `
     : '';
 
+  // Compact dominantElements rules - placed close to JSON for LLM attention
+  const dominantElementsRules = needsStructuralFields ? `
+DOMINANTELEMENTS (CRITICAL - for GO_INSIDE support):
+- ONLY physically enterable structures (doors, buildings, vehicles, portals, caves)
+- NEVER include: trees, decorations, terrain, patterns, atmosphere
+- FORMAT: "[name]: [shape], [scale], interior has [floor], [walls], [lighting]"
+- Return empty array [] if nothing is enterable
+` : '';
+
   const structuralFields = needsStructuralFields ? `"navigableElements": [{"type": "door|passage|stairs", "position": "where", "description": "brief"}],
-  NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
-  "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
+  "dominantElements": ["temple entrance: stone archway, large scale, interior has marble floors, carved walls with murals, filtered light"],
   "uniqueIdentifiers": ["2-4 distinctive features"],` : '';
 
   return `Generate DNA for ${nodeType} "${effectiveName}".
@@ -57,6 +65,7 @@ MATERIAL RULES:
 DESC: ${nodeDescription}
 USER: ${originalPrompt}
 ${contextSection}
+${dominantElementsRules}
 OUTPUT (pure JSON):
 {
   "name": "${effectiveName}",

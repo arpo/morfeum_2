@@ -93,6 +93,29 @@ export async function runCreateLocationNodePipeline(
     // Determine user prompt (from GOTO text or GO_INSIDE reasoning)
     const userPrompt = options?.userPrompt || options?.gotoText || intent.target || decision.newNodeName || 'interior space';
 
+    // Extract targetSeed from parent's dominantElements when GO_INSIDE has specific target
+    let targetSeed: string | undefined;
+    if (decision.metadata?.hasSpecificTarget && decision.metadata?.targetObject) {
+      const targetName = decision.metadata.targetObject.toLowerCase();
+      // Get parent node's dominantElements from structure
+      const parentNode = context.parentNode as any;
+      const parentDominantElements = parentNode?.structure?.dominantElements || 
+                                     parentNode?.dominantElements;
+      
+      if (parentDominantElements && Array.isArray(parentDominantElements)) {
+        // Find matching element (fuzzy match on target name)
+        targetSeed = parentDominantElements.find((elem: string) => 
+          elem.toLowerCase().includes(targetName)
+        );
+        
+        if (targetSeed) {
+          console.log(`[Pipeline] Found targetSeed for "${targetName}": ${targetSeed}`);
+        } else {
+          console.log(`[Pipeline] No matching dominantElement found for "${targetName}"`);
+        }
+      }
+    }
+
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 1: SPACE ANALYSIS (Structure + DNA in parallel)
     // ═══════════════════════════════════════════════════════════════════════════
@@ -114,7 +137,8 @@ export async function runCreateLocationNodePipeline(
       analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.parsedEnhancements, { 
         isGotoCommand,
         hasSpecificTarget: decision.metadata?.hasSpecificTarget,
-        targetObject: decision.metadata?.targetObject
+        targetObject: decision.metadata?.targetObject,
+        targetSeed
       }),
       
       // DNA Generation (determines visual/atmospheric properties)

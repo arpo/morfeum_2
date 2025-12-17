@@ -38,6 +38,41 @@ export const DNA_CASCADING_FIELDS = {
 } as const;
 
 // ============================================================================
+// DOMINANT ELEMENTS FORMAT (for targetSeed support in GO_INSIDE)
+// ============================================================================
+
+/**
+ * Compact rules string for dominantElements - use in prompts BEFORE the JSON template.
+ * Single source of truth - import this in all prompt files.
+ */
+export const DOMINANT_ELEMENTS_RULES = `DOMINANTELEMENTS (CRITICAL - for GO_INSIDE support):
+- ONLY physically enterable structures (doors, buildings, vehicles, portals, caves)
+- NEVER include: trees, decorations, terrain, patterns, atmosphere, general features
+- FORMAT: "[name]: [shape], [scale], interior has [floor], [walls], [lighting]"
+- Return empty array [] if nothing is enterable`;
+
+/**
+ * Example for JSON template placeholders - shows exact format expected.
+ * Use this AS the placeholder value in JSON templates.
+ */
+export const DOMINANT_ELEMENTS_EXAMPLE = 
+  `"main entrance: arched doorway, large scale, interior has stone floors, carved walls, ambient light"`;
+
+/**
+ * Legacy format specifications - kept for reference but prefer using RULES + EXAMPLE above.
+ */
+export const DOMINANT_ELEMENTS_FORMAT = {
+  /** Format for niches (interior spaces) - simpler since they're not usually enterable */
+  niche: `"3-5 major objects/features in this space"`,
+  
+  /** Format for regions - landmarks and features */
+  region: `"3-5 notable features or landmarks in this region"`,
+  
+  /** Format for host worlds - major defining features */
+  host: `"3-5 major landmarks or features that define this world"`
+} as const;
+
+// ============================================================================
 // DNA JSON TEMPLATE BUILDERS
 // ============================================================================
 

@@ -7,6 +7,7 @@
  */
 
 import type { NavigationContext, ScenePerspective } from '../../../navigation/types';
+import { DOMINANT_ELEMENTS_RULES, DOMINANT_ELEMENTS_EXAMPLE } from '../../prompts/shared/dnaSchema';
 
 export interface StructureAnalysisInput {
   userPrompt: string;
@@ -21,6 +22,8 @@ export interface StructureAnalysisInput {
   hasSpecificTarget?: boolean;
   /** The specific target object when hasSpecificTarget is true */
   targetObject?: string;
+  /** Rich seed data from parent's dominantElements (shape, scale, materials) */
+  targetSeed?: string;
 }
 
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
@@ -100,7 +103,7 @@ OUTPUT (pure JSON):
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment|natural",
     "spatialLayout": "1-2 sentence description of the DESTINATION",
     "requiredElements": ["elements from USER INPUT that MUST appear"],
-    "dominantElements": ["main features of this DESTINATION"],
+    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
     "uniqueIdentifiers": ["distinctive features of this DESTINATION"]
   },
   "description": "Brief description of the DESTINATION"
@@ -111,6 +114,15 @@ OUTPUT (pure JSON):
   // GO_INSIDE WITH SPECIFIC TARGET: Create interior OF the target object
   // ═══════════════════════════════════════════════════════════════════════════
   if (input.hasSpecificTarget && input.targetObject) {
+    const seedSection = input.targetSeed 
+      ? `
+TARGET SEED DATA (CRITICAL - Use this to determine form, scale, materials):
+${input.targetSeed}
+
+PARSE THE SEED: Extract shape, scale, floor materials, wall materials, lighting from the seed data above.
+` 
+      : '';
+
     return `Create the INTERIOR OF A SPECIFIC OBJECT/CONTAINER.
 
 CRITICAL: The USER INPUT specifies what object/container to enter. Create the INTERIOR of that specific thing.
@@ -118,7 +130,7 @@ CRITICAL: The USER INPUT specifies what object/container to enter. Create the IN
 ${perspectiveSection}
 
 TARGET OBJECT TO ENTER: "${input.targetObject}"
-
+${seedSection}
 PARENT CONTEXT (for atmosphere/style only):
 - Location: "${context.currentNode.name}"
 - Cultural tone: "${currentDna?.cultural_tone || 'none'}"
@@ -156,7 +168,7 @@ OUTPUT (pure JSON):
     "functionalType": "Determined by TARGET OBJECT purpose",
     "spatialLayout": "Description of the TARGET OBJECT's interior layout",
     "requiredElements": ["Key features that MUST be in the TARGET OBJECT's interior"],
-    "dominantElements": ["Main features of this TARGET OBJECT's interior"],
+    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
     "uniqueIdentifiers": ["Distinctive features of this TARGET OBJECT"]
   },
   "description": "Brief description of the TARGET OBJECT's interior"
@@ -215,7 +227,7 @@ OUTPUT (pure JSON):
     "requiredElements": ["user-specified elements that MUST appear"],
     "navigableElements": [{...}],
     NOTE: FIRST navigableElement = MAIN ENTRANCE for GO_INSIDE.
-    "dominantElements": ["FIRST: main enterable structure if any, then 3-4 other major features"],
+    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
     "uniqueIdentifiers": ["2-4 distinctive features"]
   },
   "description": "Brief space description"

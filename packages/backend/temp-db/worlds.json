@@ -1,41 +1,40 @@
 {
   "nodes": {
-    "loc-1765915322802-w78kd3uv5": {
-      "id": "loc-1765915322802-w78kd3uv5",
+    "loc-1765968095922-6j7j6e5us": {
+      "id": "loc-1765968095922-6j7j6e5us",
       "type": "host",
-      "name": "Xylos",
+      "name": "Xenovault Manufactory",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: vast, arid plains punctuated by immense, geometric stone formations and clusters of faintly glowing, monolithic structures. Distant mountain ranges and barren plateaus dominate the horizon.",
-        "colorsAndLighting": "Muted, dusty earth tones from the arid landscape under a hazy, alien sky that shifts from golden-yellow to orange and pink.",
-        "atmosphere": "A dry, dusty atmosphere with a faint, pervasive haze that softens distant features.",
-        "materials": "Dominant materials are weathered stone and vast expanses of fine, barren sand.",
-        "mood": "A profound sense of ancient mystery, vastness, and desolate beauty.",
-        "sounds": "Distant, low hums and occasional faint echoes, suggesting the presence of dormant technology.",
-        "primary_surfaces": "Vast sandy plains and the surfaces of massive stone structures.",
-        "secondary_surfaces": "Rocky outcrops and distant, eroded mountain formations.",
-        "accent_features": "Clusters of glowing, translucent structures visible as faint teal-green points from afar.",
-        "dominant": "Earthy browns and grays of weathered stone and sand.",
-        "secondary": "Dusty oranges and pinks of the alien sky.",
-        "accent": "Faint teal-green glow from distant containment structures.",
-        "ambient": "Hazy, warm light transitioning across the sky.",
+        "looks": "AERIAL/SATELLITE VIEW: A sprawling, monolithic edifice constructed from dark, unidentifiable alloys, its facade a tapestry of geometric inhumanity with impossibly sharp angles and vast, smooth surfaces interrupted by clusters of glowing conduits and externalized, complex machinery. The scale is overwhelming, designed for colossal operations, set against a backdrop of an unknown alien world.",
+        "colorsAndLighting": "Dark charcoal dominates (90%), with shimmering internal light from crystalline growths. Distant alien sky provides ambient light.",
+        "atmosphere": "A sense of awe mixed with unease permeates the environment, evoking feelings of immense power and alien purpose. The atmosphere is likely thin and alien, with no discernible weather patterns visible from this distance.",
+        "materials": "Primarily brushed, dark metallic alloys with a smooth, almost frictionless texture. Sections are reinforced with crystalline growths that shimmer with internal light.",
+        "mood": "Awe, unease, immense power, alien purpose, sublime indifference.",
+        "sounds": "Distant, low hum of colossal machinery, faint, unidentifiable alien resonance.",
+        "primary_surfaces": "Vast, smooth metallic plains, colossal geometric structures, glowing conduit networks.",
+        "secondary_surfaces": "Shimmering crystalline formations, vast empty spaces between structures.",
+        "accent_features": "Clusters of intensely glowing conduits, externalized complex machinery, colossal entryways or vents.",
+        "dominant": "Dark Charcoal",
+        "secondary": "Deep Black",
+        "accent": "Internal Crystalline Glow (various hues)",
+        "ambient": "Pale, alien sky light, internal glow from machinery.",
         "genre": "Sci-Fi",
-        "architectural_tone": "Ancient Monolithic",
-        "cultural_tone": "Mysterious",
-        "palette_bias": "Desaturated Warm",
+        "architectural_tone": "Alien Megastructure",
+        "cultural_tone": "Indifferent Advancement",
+        "palette_bias": "Monochromatic Industrial",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "Xylos is a world where colossal remnants of ancient, forgotten civilizations lie scattered across alien landscapes. Vast, weathered stone structures hint at a technologically advanced past, now coexisting with the eerie glow of mysterious containment technology.",
-      "searchDesc": "Ancient alien ruins and glowing alien life on Xylos",
-      "slug": "xylos",
+      "description": "A colossal, alien manufactory dominating the landscape. Its immense scale and alien geometry suggest a purpose far beyond human comprehension, exuding an aura of immense, indifferent power.",
+      "searchDesc": "Sprawling alien megastructure, dark alloys, crystalline growths, immense scale, alien purpose.",
+      "slug": "xenovault-manufactory",
       "structure": {
-        "spatialLayout": "Sprawling, with large, isolated monumental structures spread across a vast, flat terrain."
-      },
-      "primaryMedia": "media-1765915354526-ml8bu6rkk"
+        "spatialLayout": "A vast, geometric sprawl, hinting at immense internal processing and manufacturing capabilities. The layout suggests a focus on efficient, alien-driven operations."
+      }
     },
-    "f7f5c6f4-47e7-4025-a7b6-348d8ece52c7": {
-      "id": "f7f5c6f4-47e7-4025-a7b6-348d8ece52c7",
+    "f6a0f060-4ec1-42aa-83e0-7b94feffbf01": {
+      "id": "f6a0f060-4ec1-42aa-83e0-7b94feffbf01",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -45,142 +44,132 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "9e04a754-91dc-4ef2-83ff-22cdc9bcabee": {
-      "id": "9e04a754-91dc-4ef2-83ff-22cdc9bcabee",
+    "63480085-8c36-402a-9d72-7f248a282543": {
+      "id": "63480085-8c36-402a-9d72-7f248a282543",
       "type": "location",
-      "name": "The Lumina Archive",
+      "name": "The Xenovault Manufactory",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Massive, ancient stone structures with intricate carvings dominate the landscape. Towering, rectangular translucent containers, glowing with an internal teal-green light, house alien organisms. The environment is characterized by a stark contrast between the worn stone and the glowing containers.",
-        "colorsAndLighting": "The primary light emanates from the teal-green glow within the containers, casting an ethereal luminescence. The alien sky shifts from golden-yellow overhead to dusty orange and pink near the horizon. Shadows are deep and stark.",
-        "atmosphere": "The air is still and dry, carrying a sense of profound age and mystery. A feeling of desolate beauty permeates the arid, sandy surroundings. The atmosphere is contemplative and awe-inspiring.",
-        "materials": "The dominant materials are ancient, weathered stone with finely detailed carvings, and smooth, translucent containment material. The ground is composed of fine, barren sand.",
-        "mood": "The mood is one of awe, discovery, and profound contemplation. It evokes a sense of ancient mystery and the vastness of alien life.",
-        "sounds": "Ethereal hum, faint organic pulses, soft wind whispers",
-        "primary_surfaces": "Weathered stone with intricate carvings, smooth translucent containment",
-        "secondary_surfaces": "Barren, fine sand",
-        "accent_features": "Teal-green internal glow, spiral and ripple patterns",
-        "dominant": "Earthy tones of weathered stone (browns, grays)",
-        "secondary": "Teal-green (within containers)",
-        "accent": "Golden-yellow, orange, pink (sky)",
-        "ambient": "Ethereal teal-green luminescence",
+        "looks": "The Xenovault Manufactory is a sprawling, monolithic edifice constructed from dark, unidentifiable alloys. Its facade is a tapestry of geometric inhumanity, with impossibly sharp angles and vast, smooth surfaces interrupted by clusters of glowing conduits and externalized, complex machinery. The scale is overwhelming, designed for colossal operations.",
+        "colorsAndLighting": "Dominant hues are deep charcoal and obsidian, punctuated by the electric viridian of pulsating energy conduits. Internal bioluminescent panels cast an eerie, green glow from within visible portals, creating stark contrasts and deep shadows.",
+        "atmosphere": "The air around the manufactory feels charged, with a faint, metallic tang. A low, resonant hum permeates the atmosphere, occasionally overlaid by the sharp crackle of energy discharges. Temperature is surprisingly consistent, despite the visible energy flows.",
+        "materials": "Primary materials appear to be brushed, dark metallic alloys with a smooth, almost frictionless texture. Sections are reinforced with crystalline growths that shimmer with internal light. The condition is pristine, showing no signs of wear or decay.",
+        "mood": "A sense of awe mixed with unease. The manufactory evokes feelings of immense power, alien purpose, and the sublime indifference of advanced, non-human engineering.",
+        "sounds": "Deep hum, energy crackle, rhythmic vibrations, metallic clanking",
+        "primary_surfaces": "Brushed dark alloys, smooth metallic panels, crystalline growths",
+        "secondary_surfaces": "Polished obsidian, glowing conduits, externalized machinery components",
+        "accent_features": "Pulsating viridian energy conduits, bioluminescent light panels, intricate network of pipes and vents",
+        "dominant": "Dark Charcoal (90%)",
+        "secondary": "Obsidian (8%)",
+        "accent": "Viridian Green (2%)",
+        "ambient": "Eerie green glow",
         "genre": null,
-        "architectural_tone": "Ancient alien monolithic with intricate organic carvings",
-        "cultural_tone": "Archaeological, scientific, contemplative (discovery of alien life and history)",
-        "palette_bias": "Earth tones, bioluminescent blues/greens, sunset hues",
+        "architectural_tone": "Brutalist alien megastructure with bioluminescent accents",
+        "cultural_tone": "Constructed by an advanced, unknown alien civilization for large-scale industrial production and potentially unknown scientific endeavors.",
+        "palette_bias": "Monochromatic with sharp, electric accents",
         "flora_base": "None",
-        "fauna_base": "Alien organisms within containers"
+        "fauna_base": "None"
       },
-      "description": "An otherworldly archaeological site with ancient, worn stone steps. Intricately carved spiral and ripple patterns adorn its pedestals and retaining walls. Towering, rectangular translucent containers glow with an internal teal-green light, encasing unique alien organisms. Smaller spherical containers display similar life forms. The surrounding ground is barren and sandy, under an alien sky transitioning from golden-yellow to dusty orange and pink. EXTERIOR VIEW.",
-      "searchDesc": "Alien archive with glowing organisms in translucent containers and carved stone.",
-      "slug": "the-lumina-archive",
+      "description": "A vast, alien factory with pulsating energy conduits and bizarre machinery. EXTERIOR VIEW.",
+      "searchDesc": "Alien factory with pulsating energy conduits and bizarre machinery. Exterior view of the manufactory's facade.",
+      "slug": "the-xenovault-manufactory",
       "structure": {
-        "spatialLayout": "The site is built around a central, ascending structure. The space opens up to a barren, sandy plain, with the main structure rising vertically with distinct levels for the containers."
+        "spatialLayout": "The structure presents as a vast, impenetrable block with a central, grand entrance. Its dimensions are immense, suggesting interior volumes far exceeding terrestrial architectural norms, with a profound sense of depth and complexity."
       },
       "navigableElements": [
         {
-          "type": "stairs",
-          "position": "center, leading upwards",
-          "description": "A wide, worn flight of ancient stone steps forms the main ascent into the archive."
+          "type": "door",
+          "position": "central facade",
+          "description": "A massive, magnetically sealed portal"
         }
       ],
       "dominantElements": [
-        "Towering rectangular translucent containers",
-        "Intricately carved stone pedestals and retaining walls",
-        "Ancient, worn stone steps",
-        "Barren, sandy ground"
+        "main entrance: arched doorway, large scale, interior has polished obsidian floors, metallic walls, bioluminescent lighting"
       ],
       "uniqueIdentifiers": [
-        "Teal-green glowing alien organisms within containers",
-        "Spiral and ripple stone carvings",
-        "Gradient alien sky (golden-yellow to pink)",
-        "Spherical glowing containers"
+        "Pulsating energy conduits along the facade",
+        "Towering, non-Euclidean architectural angles",
+        "Intermittent bursts of emerald light from within",
+        "Massive, industrial-grade docking bays",
+        "Subtle, rhythmic vibrations emanating from the structure"
       ],
-      "primaryMedia": "media-1765915334406-1fmxrezm6"
+      "primaryMedia": "media-1765968110652-vpscg4e5m"
     },
-    "niche-1765915447833-l576zmksm": {
-      "id": "niche-1765915447833-l576zmksm",
+    "niche-1765968283208-dn641jmrr": {
+      "id": "niche-1765968283208-dn641jmrr",
       "type": "niche",
-      "name": "Alien Laboratory",
+      "name": "Interior of Main Entrance",
       "spaceType": "interior",
       "dna": {
-        "looks": "The laboratory is a colossal, semi-organic chamber. Smooth, dark obsidian-like walls curve upwards, interspersed with veins of glowing, phosphorescent minerals. Massive, cylindrical tanks, some reaching hundreds of feet in height, are the focal point. These tanks are crafted from a resilient, glass-like substance that allows clear viewing of their contents. Intricate patterns, reminiscent of alien hieroglyphs and circuitry, are etched into the surfaces of the tanks and surrounding platforms.",
-        "colorsAndLighting": "The primary colors are deep obsidian, punctuated by the ethereal glow of bioluminescent blues and greens emanating from the tanks. Accents of warm, sunset oranges and deep purples are visible within some of the contained organisms and on the holographic displays. The lighting is predominantly internal, cast by the alien life and the glowing conduits, creating a mysterious and otherworldly ambiance.",
-        "atmosphere": "The air is cool and thick with a faint, metallic tang and the subtle scent of exotic, humid flora. A low, pervasive hum resonates through the space, occasionally overlaid with soft, liquid gurgles and the faint clicks of unseen alien mechanisms. Subtle currents of air can be felt near the ventilation shafts.",
-        "materials": "The dominant materials are a polished, obsidian-like composite for the walls and floors, and a thick, translucent crystalline polymer for the containment tanks. Conduits and structural supports are fashioned from a dark, metallic alloy with a subtle, iridescent sheen. Observation platforms are a combination of woven, fibrous material and smooth, polished stone.",
-        "mood": "Mysterious, awe-inspiring, slightly unsettling, and profoundly alien.",
-        "sounds": "Low hum, liquid gurgles, faint clicks, bubbling, alien vocalizations.",
-        "spatialLayout": "A cavernous, roughly circular chamber with a high, vaulted ceiling. The tanks are arranged in a dense, organized cluster towards the center, with walkways weaving between them at various levels. The overall impression is one of immense scale and complex, interconnected systems.",
-        "primary_surfaces": "Obsidian-like composite walls and floors, translucent crystalline containment tanks.",
-        "secondary_surfaces": "Iridescent metallic conduits and supports, woven fibrous walkways.",
-        "accent_features": "Intricate organic carvings on tank edges, shifting holographic projections, pulsing veins of light within tank structures.",
-        "dominant": "deep obsidian",
-        "secondary": "bioluminescent blue-green",
-        "accent": "sunset orange",
-        "ambient": "eerie glow",
+        "looks": "Enormous, monolithic architectural space with a striking contrast between dark, reflective surfaces and luminous light sources.",
+        "colorsAndLighting": "Dominated by deep blacks and silvers, punctuated by vibrant, cool-toned bioluminescent blues and greens. Lighting is ambient and internal, emanating from the walls and floor.",
+        "atmosphere": "Cool, still air with a faint hum.",
+        "materials": "Polished obsidian, brushed metal alloys.",
+        "mood": "Awe-inspiring, mysterious, and slightly unnerving.",
+        "sounds": "Low hum, echoing footsteps, soft metallic creaks.",
+        "spatialLayout": "Vast, open, rectangular chamber with a monumental arched opening.",
+        "primary_surfaces": "Polished obsidian floor, seamless metallic walls.",
+        "secondary_surfaces": "Integrated bioluminescent channels.",
+        "accent_features": "The glowing bioluminescent veins within the walls.",
+        "dominant": "black",
+        "secondary": "silver",
+        "accent": "electric blue",
+        "ambient": "cool",
         "genre": null,
-        "architectural_tone": "Ancient alien monolithic with intricate organic carvings",
-        "cultural_tone": "Xenobiologists, alien researchers",
-        "palette_bias": "earth tones, bioluminescent blues/greens, sunset hues",
-        "flora_base": "bioluminescent fungi, alien pitcher plants, glowing mosses",
-        "fauna_base": "aquatic alien creatures, floating invertebrate forms, symbiotic organisms"
+        "architectural_tone": "Brutalist alien megastructure with bioluminescent accents",
+        "cultural_tone": "Constructed by an advanced, unknown alien civilization for large-scale industrial production and potentially unknown scientific endeavors.",
+        "palette_bias": "Monochromatic with sharp, electric accents",
+        "flora_base": "None",
+        "fauna_base": "None"
       },
-      "primaryMedia": "media-1765915447832-cnd4oujvq",
-      "description": "An ancient alien laboratory, its organic architecture dimly lit by the bioluminescent glow emanating from numerous large tanks housing mysterious extraterrestrial specimens.",
+      "primaryMedia": "media-1765968283207-86vs108hf",
+      "description": "The interior of the main entrance is a vast, monumental passage. Polished obsidian floors reflect the ethereal bioluminescent light that emanates from the metallic walls and vaulted ceiling. The sheer scale and monolithic design speak to the advanced, unknown alien civilization that constructed this industrial marvel.",
       "structure": {
-        "form": "organic",
-        "roofType": "domed",
+        "form": "conical tunnel",
+        "roofType": "arched",
         "scale": "large",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "irregular",
-        "functionalType": "industrial",
-        "spatialLayout": "A vast, cavernous laboratory space with curved, monolithic walls that pulse with subtle bioluminescent light. The central area is dominated by towering, organic tanks filled with strange alien lifeforms.",
+        "orientation": "horizontal",
+        "openings": [],
+        "openingShape": "none",
+        "functionalType": "passage",
+        "spatialLayout": "A grand, imposing entryway that widens as it recedes from the external facade. The space funnels inward towards the visible interior of the Xenovault Manufactory. The arched ceiling rises dramatically overhead, meeting the metallic walls at sharp angles.",
         "requiredElements": [
-          "laboratory",
-          "tanks",
-          "aliens",
-          "tanks woth aliens"
+          "polished obsidian floors",
+          "metallic walls",
+          "bioluminescent lighting"
         ],
         "dominantElements": [
-          "bioluminescent tanks",
-          "organic architecture",
-          "alien specimens"
+          "main entrance: arched doorway, large scale, interior has polished obsidian floors, metallic walls, bioluminescent lighting"
         ],
         "uniqueIdentifiers": [
-          "ancient alien monolithic carvings",
-          "bioluminescent glow"
+          "The sheer scale of the arched entryway, suggesting passage into a colossal structure.",
+          "The contrasting textures of the polished obsidian floor and the matte metallic walls.",
+          "The soft, pulsing glow of bioluminescent veins embedded within the walls and ceiling."
         ],
         "navigableElements": [
           {
             "type": "archway",
             "position": "center",
-            "description": "archway carved stone  rear wall"
+            "description": "archway massive  to rear sector"
+          },
+          {
+            "type": "door",
+            "position": "center",
+            "description": "door reinforced blast  to central hub"
           },
           {
             "type": "object",
             "position": "left wall",
-            "description": "object pulsing energy portal"
-          },
-          {
-            "type": "hatch",
-            "position": "ceiling",
-            "description": "hatch observation deck access"
-          },
-          {
-            "type": "window",
-            "position": "front wall",
-            "description": "window observati with celestial view"
+            "description": "object secondary access conduit"
           }
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "bioluminescent alien specimen tanks with intricate organic circuitry",
-          "crystalline nutrient vats",
-          "humming containment fields",
-          "ancient alien scientific instruments with glowing glyphs",
-          "organic nutrient paste dispensers"
+          "towering consoles with holographic displays",
+          "central monolithic control nexus",
+          "metallic shelving units with unknown artifacts",
+          "recessed alcoves with dormant machinery"
         ],
         "suggested": [],
         "placementNotes": []
@@ -189,236 +178,123 @@
         {
           "type": "archway",
           "position": "center",
-          "description": "archway carved stone  rear wall"
+          "description": "archway massive  to rear sector"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door reinforced blast  to central hub"
         },
         {
           "type": "object",
           "position": "left wall",
-          "description": "object pulsing energy portal"
-        },
-        {
-          "type": "hatch",
-          "position": "ceiling",
-          "description": "hatch observation deck access"
-        },
-        {
-          "type": "window",
-          "position": "front wall",
-          "description": "window observati with celestial view"
+          "description": "object secondary access conduit"
         }
       ],
       "dominantElements": [
-        "bioluminescent tanks",
-        "organic architecture",
-        "alien specimens"
+        "main entrance: arched doorway, large scale, interior has polished obsidian floors, metallic walls, bioluminescent lighting"
       ],
       "uniqueIdentifiers": [
-        "ancient alien monolithic carvings",
-        "bioluminescent glow"
+        "The sheer scale of the arched entryway, suggesting passage into a colossal structure.",
+        "The contrasting textures of the polished obsidian floor and the matte metallic walls.",
+        "The soft, pulsing glow of bioluminescent veins embedded within the walls and ceiling."
       ],
-      "searchDesc": "Alien containment lab with massive tanks, bioluminescent fluids, and strange life forms.",
-      "slug": "a-room-laboratory-filled-with-tanks-woth-aliens"
+      "searchDesc": "Massive arched entrance with obsidian floors, metallic walls, and bioluminescent light.",
+      "slug": "interior-of-main-entrance-arched-doorway-large-scale-interior-has-polished-obsidian-floors-metallic-walls-bioluminescent-lighting"
     },
-    "location-1765915650486-ofd47802u": {
-      "id": "location-1765915650486-ofd47802u",
-      "type": "location",
-      "name": "Hangar with Alien Spaceships",
-      "spaceType": "exterior",
+    "niche-1765968400414-e9p5319dy": {
+      "id": "niche-1765968400414-e9p5319dy",
+      "type": "niche",
+      "name": "Hangar with Big Alien Craft",
+      "spaceType": "interior",
       "dna": {
-        "looks": "An immense, cavernous space with a high, arching ceiling. The walls are rough-hewn stone or a similar monolithic material, interspersed with glowing, complex alien script. Enormous alien spacecraft of various shapes and sizes are docked or resting in the dust-filled space. Large, worn consoles and robotic arms are scattered around. Beams of weak, atmospheric light pierce the gloom.",
-        "colorsAndLighting": "Dominated by desaturated warm earth tones like ochre, umber, and muted terracotta, with hints of dusty gold. Lighting is dim and atmospheric, with shafts of diffused light cutting through the dust, and subtle, internal glows emanating from alien technology and wall glyphs. Overall, a warm, yet somber illumination.",
-        "atmosphere": "Still, dry, and cool. The air is thick with dust motes dancing in the light beams. A profound silence reigns, broken only by the faintest hum from dormant alien machinery or the distant echo of settling debris. A sense of immense age and abandonment.",
-        "materials": "Monolithic, unidentifiable stone or concrete-like material for the structure. Strange, metallic alloys and crystalline components for the spacecraft. Worn, aged metals for consoles and machinery.",
-        "mood": "Ancient, awe-inspiring, mysterious, desolate, forgotten.",
-        "sounds": "Deep silence, faint hum, settling dust, distant echoes, soft mechanical whirring.",
-        "spatialLayout": "Vast, open, and cavernous with a high ceiling, punctuated by enormous monolithic pillars and the hulking forms of spacecraft. The scale is immense and overwhelming.",
-        "primary_surfaces": "Rough-hewn, monolithic stone; dark, brushed alien metals.",
-        "secondary_surfaces": "Dusty, aged concrete; translucent crystalline panels; weathered metal plating.",
-        "accent_features": "Glowing alien hieroglyphs; intricate, dormant propulsion systems; shimmering energy conduits.",
-        "dominant": "Ochre",
-        "secondary": "Umber",
-        "accent": "Dusty Gold",
-        "ambient": "Warm, diffused, low intensity",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Ancient Monolithic",
-        "cultural_tone": "Alien",
-        "palette_bias": "Desaturated Warm",
+        "looks": "Vast, cavernous interior with towering, rough-hewn walls of dark, unyielding material. The air hums with latent energy. Immense alien craft dominates the central space, its form obscured by shadow and scale.",
+        "colorsAndLighting": "Primarily monochromatic grey and black, punctuated by sharp, electric violet and teal bioluminescent lines tracing architectural features and pulsing from the alien craft's systems.",
+        "atmosphere": "Cool, still air with a faint metallic tang. A low, resonant hum permeates the space.",
+        "materials": "Reinforced ferrocrete, dark metallic alloys, crystalline bioluminescent conduits.",
+        "mood": "Awe-inspiring, imposing, mysterious, alien.",
+        "sounds": "Deep hum, echoing silence, faint electrical crackles.",
+        "spatialLayout": "Vast, open cavern with high ceilings and immense, unadorned structural supports.",
+        "primary_surfaces": "Rough ferrocrete walls, polished dark floor.",
+        "secondary_surfaces": "Metallic gantries, intricate alien hull plating.",
+        "accent_features": "Bioluminescent veins, glowing alien symbols, control consoles integrated into walls.",
+        "dominant": "Dark grey",
+        "secondary": "Black",
+        "accent": "Electric violet",
+        "ambient": "Pulsing violet",
+        "genre": null,
+        "architectural_tone": "Brutalist alien megastructure with bioluminescent accents",
+        "cultural_tone": "Unknown alien civilization",
+        "palette_bias": "Monochromatic with sharp, electric accents",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765915650484-a0l3sxm8a",
-      "description": "An immense hangar with a domed, organic roof, housing a collection of alien spacecraft. The exterior showcases ancient monolithic design intertwined with intricate, glowing organic carvings in earth tones, accented by bioluminescent blues and greens, all bathed in the soft light of sunset.",
+      "primaryMedia": "media-1765968400413-q5dgij1xp",
+      "description": "The interior of a colossal hangar, designed in a Brutalist alien megastructure style. The air hums with latent energy, illuminated by stark, bioluminescent accents that trace the edges of the raw, metallic architecture. Dominating the space is a gargantuan alien craft, its form both awe-inspiring and unnerving.",
       "structure": {
-        "form": "organic",
+        "form": "irregular",
         "roofType": "domed",
         "scale": "large",
         "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "arched",
+        "openings": "open-passages",
+        "openingShape": "irregular",
         "functionalType": "industrial",
-        "spatialLayout": "A colossal, organically shaped hangar with vast, arcing openings, designed to house massive alien spacecraft. The structure blends ancient monolithic architecture with intricate, bioluminescent organic carvings, illuminated by the warm glow of sunset hues and pulsing blues and greens.",
+        "spatialLayout": "A vast, cavernous hangar space with a high, irregular domed ceiling. Massive, monolithic pillars support the structure, and the floor is a polished, dark material. The focal point is the immense, imposing alien craft.",
         "requiredElements": [
-          "hangar",
-          "alien space ships"
+          "big alien craft"
         ],
         "dominantElements": [
-          "massive hangar structure",
-          "large alien spacecraft",
-          "bioluminescent organic carvings",
-          "monolithic architecture"
+          "main entrance: massive, recessed archway, dark metal, leading into the main hangar space"
         ],
         "uniqueIdentifiers": [
-          "organic, monolithic form",
-          "bioluminescent details",
-          "scale of alien vessels"
+          "bioluminescent lighting strips along structural edges",
+          "glowing conduits snaking across the floor and walls"
         ]
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "center of the far wall",
-          "description": "A colossal, segmented aperture that seems to have retracted into the wall."
-        }
-      ],
-      "dominantElements": [
-        "massive hangar structure",
-        "large alien spacecraft",
-        "bioluminescent organic carvings",
-        "monolithic architecture"
-      ],
-      "uniqueIdentifiers": [
-        "organic, monolithic form",
-        "bioluminescent details",
-        "scale of alien vessels"
-      ],
-      "searchDesc": "Vast hangar housing ancient alien starships, monolithic architecture, desaturated warm tones.",
-      "slug": "hangar-with-alien-space-ships"
-    },
-    "niche-1765962938597-4rtzqctqy": {
-      "id": "niche-1765962938597-4rtzqctqy",
-      "type": "niche",
-      "name": "Monolithic Alien Spaceship Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Immense, cavernous space with smooth, dark, and subtly textured walls. Light sources are infrequent and diffuse.  Forms are often curved and organic, yet undeniably manufactured.  Dust motes dance in faint beams.",
-        "colorsAndLighting": "Dim, warm ambient light emanating from hidden sources.  Occasional pulses of faint, cool bioluminescence from organic growths.  Dominant colors are deep ochres, burnt siennas, and muted brass tones, with shadows of charcoal and deep umber.",
-        "atmosphere": "Still, cool air with a faint, mineral scent.  No detectable currents, creating a profound sense of stillness. A low, almost imperceptible hum resonates throughout.",
-        "materials": "Polished, stone-like composites with a subtle, almost waxy sheen.  Areas of a dark, obsidian-like material and hints of corroded, coppery alloys.",
-        "mood": "Awe-inspiring, mysterious, melancholic, ancient, silent.",
-        "sounds": "Distant, resonant hum, soft echoes, faint organic pulsing.",
-        "spatialLayout": "Vast, open central area with high, arcing ceilings.  Deeper recesses and alcoves branch off.  The overall shape suggests a colossal, organic cavity.",
-        "primary_surfaces": "Smooth, matte composites, polished stone-like surfaces.",
-        "secondary_surfaces": "Corroded metallic conduits, crystalline formations, porous rock-like growths.",
-        "accent_features": "Pulsating bioluminescent moss, intricate etched symbols on the floor, a shimmering central energy sphere.",
-        "dominant": "Deep Ochre",
-        "secondary": "Muted Brass",
-        "accent": "Bioluminescent Green",
-        "ambient": "Warm, Dim",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Ancient Monolithic",
-        "cultural_tone": "Unknown Alien Civilization",
-        "palette_bias": "Desaturated Warm",
-        "flora_base": "Bioluminescent mosses and fungi",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765962938597-t4ujwv0kb",
-      "description": "The interior of the alien spaceship is a breathtakingly vast, monolithic space. Vaulted ceilings disappear into shadow, supported by colossal, seamlessly integrated pillars. Recessed, arched openings hint at external views or other sections of the ship. The atmosphere is thick with the scent of ozone and ancient dust, illuminated by a dim, desaturated warm glow that emanates from the very fabric of the structure. A central dais suggests a control or focal point, surrounded by subtle, alien glyphs that pulse with an unseen energy.",
-      "structure": {
-        "form": "A vast, cavernous space that evokes the interior of a colossal, ancient vessel. The form is not strictly defined by typical geometric shapes but feels organically sculpted, as if the ship itself grew rather than was built.",
-        "roofType": "vaulted",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": [
-          "Numerous, deeply recessed openings that suggest viewports, though their current state is opaque.",
-          "Occasional larger, arching portals that lead to unknown chambers."
-        ],
-        "openingShape": "arched",
-        "functionalType": "Command and control center, possibly also a transport hub or life support core.",
-        "spatialLayout": "The interior is a single, immense chamber with a subtly sloped floor leading towards a central, raised dais. Massive, monolithic pillars rise from the floor and disappear into the vaulted darkness above. The walls are smooth and seamless, broken only by the recessed openings and occasional, subtly glowing glyphs.",
-        "requiredElements": [
-          "Central command nexus with integrated control surfaces.",
-          "Ambient, low-frequency hum.",
-          "Unfamiliar, geometric symbols etched into surfaces.",
-          "Varying levels of atmospheric condensation."
-        ],
-        "dominantElements": [
-          "The immense scale of the primary chamber.",
-          "The monolithic, unadorned pillars.",
-          "The subtle, emanating light sources from unknown technologies.",
-          "The deep, resonant silence punctuated by subtle, alien sounds."
-        ],
-        "uniqueIdentifiers": [
-          "The impression of immense age and advanced, yet seemingly organic, alien engineering.",
-          "The consistent use of desaturated warm tones throughout the interior, despite the lack of obvious light sources.",
-          "The feeling of being within a living, breathing entity rather than a manufactured object."
-        ]
-      },
-      "navigableElements": [
+          "position": "central gantry access",
+          "description": "Massive, sliding blast door with glowing runes."
+        },
         {
-          "type": "door",
-          "position": "far wall, center",
-          "description": "A massive, seamless iris-like aperture that remains partially ajar."
+          "type": "passage",
+          "position": "service tunnel entrance",
+          "description": "Low, recessed opening leading into maintenance corridors."
         }
       ],
       "dominantElements": [
-        "The immense scale of the primary chamber.",
-        "The monolithic, unadorned pillars.",
-        "The subtle, emanating light sources from unknown technologies.",
-        "The deep, resonant silence punctuated by subtle, alien sounds."
+        "main entrance: massive, recessed archway, dark metal, leading into the main hangar space"
       ],
       "uniqueIdentifiers": [
-        "The impression of immense age and advanced, yet seemingly organic, alien engineering.",
-        "The consistent use of desaturated warm tones throughout the interior, despite the lack of obvious light sources.",
-        "The feeling of being within a living, breathing entity rather than a manufactured object."
+        "bioluminescent lighting strips along structural edges",
+        "glowing conduits snaking across the floor and walls"
       ],
-      "searchDesc": "Vast, ancient spaceship interior with monolithic architecture and dormant alien technology.",
-      "slug": "interior-of-alien-spaceship"
+      "searchDesc": "Colossal alien hangar, brutalist megastructure, bioluminescent accents, housing giant alien craft.",
+      "slug": "hangar-witj-big-alien-craft"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765453730970-kciitqlkn",
+      "id": "loc-1765968095922-6j7j6e5us",
       "type": "host",
       "children": [
         {
-          "id": "21e30ca0-0745-4a54-82a5-2a6d20103397",
+          "id": "f6a0f060-4ec1-42aa-83e0-7b94feffbf01",
           "type": "region",
           "children": [
             {
-              "id": "75b783d3-f567-4f26-a110-4a3e25596ff7",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1765915322802-w78kd3uv5",
-      "type": "host",
-      "children": [
-        {
-          "id": "f7f5c6f4-47e7-4025-a7b6-348d8ece52c7",
-          "type": "region",
-          "children": [
-            {
-              "id": "9e04a754-91dc-4ef2-83ff-22cdc9bcabee",
+              "id": "63480085-8c36-402a-9d72-7f248a282543",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765915447833-l576zmksm",
+                  "id": "niche-1765968283208-dn641jmrr",
                   "type": "niche",
                   "children": []
-                }
-              ]
-            },
-            {
-              "id": "location-1765915650486-ofd47802u",
-              "type": "location",
-              "children": [
+                },
                 {
-                  "id": "niche-1765962938597-4rtzqctqy",
+                  "id": "niche-1765968400414-e9p5319dy",
                   "type": "niche",
                   "children": []
                 }
@@ -430,6 +306,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765915322802-w78kd3uv5"
+    "loc-1765968095922-6j7j6e5us"
   ]
 }

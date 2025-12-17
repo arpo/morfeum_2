@@ -5,7 +5,7 @@
  * Host nodes define the genre and foundational style attributes.
  */
 
-import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
+import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS, DOMINANT_ELEMENTS_FORMAT } from '../../../generation/prompts/shared/dnaSchema';
 
 /**
  * Generate DNA prompt for a host node
@@ -30,7 +30,7 @@ OUTPUT JSON:
   "name": "The EXACT place name if a real location is mentioned (e.g., 'London' stays 'London', 'Paris' stays 'Paris'). Only create evocative names for fictional/fantasy places.",
   "description": "2-3 sentence description of this place as a whole",
   "navigableElements": [],
-  "dominantElements": ["3-5 major landmarks or features that define this world"],
+  "dominantElements": [${DOMINANT_ELEMENTS_FORMAT.host}],
   "uniqueIdentifiers": ["3-5 distinctive features that make this setting recognizable"],
   "searchDesc": "75-100 char search description",
   "slug": "kebab-case-name",
