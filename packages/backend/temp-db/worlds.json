@@ -192,76 +192,222 @@
       "searchDesc": "Vast hangar housing a colossal spacecraft; brutalist architecture, metallic greys.",
       "slug": "hangar-with-large-space-craft"
     },
-    "niche-1765984268781-nu2syi3ns": {
-      "id": "niche-1765984268781-nu2syi3ns",
+    "niche-1765986975196-n5k0qg1ro": {
+      "id": "niche-1765986975196-n5k0qg1ro",
       "type": "niche",
-      "name": "Spacecraft Interior",
+      "name": "Space ship Hangar",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior is a continuation of the exterior's industrial brutalism. Surfaces are unadorned, functional, and show signs of immense scale and alien design. Angularity and exposed machinery are prevalent.",
-        "colorsAndLighting": "Dominated by deep greys and blacks. Muted, intermittent internal lighting from conduits and sporadic status indicators casts long, deep shadows. The overall illumination is dim and functional.",
-        "atmosphere": "Cool, dry air with a faint metallic tang. A constant, low-frequency hum permeates the space, occasionally punctuated by the clanking of unseen mechanisms.",
-        "materials": "Rough, weathered dark metallic alloys, similar to the exterior. Some conduit sheathing appears to be a polished, obsidian-like material. Exposed wiring and structural beams are common.",
-        "mood": "Imposing, functional, and slightly unnerving. A sense of immense scale and alien efficiency.",
-        "sounds": "Low hum, distant clanking, occasional electrical crackle, soft ventilation hiss",
-        "spatialLayout": "Vast, interconnected chambers and corridors, characterized by sharp angles, high ceilings, and a sense of industrial cavernousness. Openings lead to further expansive or cramped spaces.",
-        "primary_surfaces": "Dark, unidentifiable metallic alloys with a rough, industrial texture.",
-        "secondary_surfaces": "Obsidian-like conduit sheathing, exposed metal framework, occasional grates.",
-        "accent_features": "Faintly glowing conduits, small, blinking indicator lights, etched geometric patterns.",
+        "looks": "Massive, brutalist industrial hangar with alien geometric accents. The spacecraft itself is a dark, angular behemoth, scarred and utilitarian. Pillars are immense, rough-hewn concrete. Catwalks and gantries crisscross the upper reaches.",
+        "colorsAndLighting": "Dominated by deep greys and dark metallics. Sparse, harsh industrial lighting casts long, deep shadows. Occasional cool, alien glow emanates from the spacecraft's systems.",
+        "atmosphere": "Cool, dry air with a faint scent of ozone and metallic dust. A profound stillness broken only by the low hum of distant machinery.",
+        "materials": "Reinforced concrete, dark weathered steel, durasteel plating, unknown alien alloys for the spacecraft.",
+        "mood": "Imposing, utilitarian, awe-inspiring, stark, functional.",
+        "sounds": "Distant machinery hum, echoing footsteps, metallic creaks, faint ventilation.",
+        "spatialLayout": "Vast, cavernous open space with high ceilings, dominated by the spacecraft's bulk. Verticality emphasized by pillars and gantries.",
+        "primary_surfaces": "Rough concrete, weathered dark steel plating.",
+        "secondary_surfaces": "Alien alloy plating on spacecraft, durasteel catwalks.",
+        "accent_features": "Subtle alien geometric carvings on pillar bases, glowing conduits on the spacecraft.",
         "dominant": "dark grey",
-        "secondary": "black metallic",
-        "accent": "dim blue-white light",
-        "ambient": "dim, cool",
-        "genre": "sci-fi",
+        "secondary": "metallic black",
+        "accent": "faint blue-white glow",
+        "ambient": "harsh industrial",
+        "genre": null,
         "architectural_tone": "Massive industrial brutalism with alien geometric forms",
         "cultural_tone": "Alien manufacturing hub, highly functional and devoid of ornamentation",
         "palette_bias": "Greys and dark metallics",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765984268781-7hwre21la",
-      "description": "Inside the massive spacecraft, the interior is a labyrinth of alien industrial design, mirroring the brutalist aesthetic of the hangar. Worn, dark metallic surfaces are interspersed with glowing alien geometric accents, and the lighting is consistently dim and functional, befitting an industrial manufacturing hub.",
+      "primaryMedia": "media-1765986975195-u7lsp4ylq",
+      "description": "Inside the alien assembly plant's hangar, a colossal spacecraft rests, filling the space with its imposing presence. The hangar itself is a testament to brutalist, functional design, with immense pillars and crisscrossing gantries.",
       "structure": {
-        "form": "organic",
-        "roofType": "null",
+        "form": "rectangular",
+        "roofType": "flat",
         "scale": "large",
-        "orientation": "wide",
+        "orientation": "horizontal",
         "openings": "minimal",
         "openingShape": "irregular",
         "functionalType": "industrial",
-        "spatialLayout": "The interior of the spacecraft is a cramped and functional network of conduits, worn metal plating, and dimly lit chambers, reflecting its utilitarian purpose. Access is primarily through irregular hatches and narrow passages, with very few openings to the exterior.",
+        "spatialLayout": "The interior of the hangar is a vast, cavernous space dominated by the immense spacecraft. Dim industrial lighting casts long shadows across the utilitarian surfaces, highlighting the raw, functional design.",
         "requiredElements": [
-          "the spacecraft"
+          "space ship"
+        ]
+      },
+      "navigableElements": [],
+      "dominantElements": [
+        "Large Spacecraft: shape=organic, scale=massive, style=industrial-brutalism-with-alien-geometric-forms, surfaces=dark-metallic-plated, light=dim-industrial"
+      ],
+      "uniqueIdentifiers": [
+        "massive spacecraft",
+        "brutalist architecture",
+        "alien geometric accents"
+      ],
+      "searchDesc": "Vast brutalist hangar with a massive, dark, angular spacecraft. Industrial alien manufacturing hub.",
+      "slug": "null-of-hangar-with-large-spacecraft"
+    },
+    "loc-1765994404118-i30ueqefm": {
+      "id": "loc-1765994404118-i30ueqefm",
+      "type": "host",
+      "name": "The Moon",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: vast, desolately cratered plains stretching to a curved horizon, with faint outlines of distant mountain ranges as tiny shapes. The surface is a uniform, dusty grey, with the Earth a brilliant blue marble in the black sky. NO individual buildings, NO facades, NO close-up details.",
+        "colorsAndLighting": "Harsh, direct sunlight creates deep, sharp shadows. The overall color palette is monochromatic greys and blacks, with the brilliant white of sunlight glinting off the surface and the vibrant blue of Earth in the sky.",
+        "atmosphere": "Absolute vacuum. No air, no weather, no sound. The only dynamic element is the constant sweep of starlight and the distant, silent passage of the Earth.",
+        "materials": "Dominant materials are fine, grey lunar regolith (dust and pulverized rock) covering a denser substrata of ancient basalt and impact breccia. Craters reveal exposed rock formations.",
+        "mood": "Profound isolation and cosmic emptiness. A feeling of immense scale and timelessness, where survival is the only objective.",
+        "sounds": "Silence. Absolute, profound silence that amplifies the feeling of being utterly alone.",
+        "primary_surfaces": "Dusty plains, crater floors, exposed rock faces within craters.",
+        "secondary_surfaces": "The distant, brilliant blue of Earth in the black sky, starlit void.",
+        "accent_features": "The stark, geometric shapes of large impact craters, distant mountain ranges casting long shadows.",
+        "dominant": "Silver",
+        "secondary": "Black",
+        "accent": "Blue",
+        "ambient": "Stark, unfiltered starlight and the reflected light of the distant Earth.",
+        "genre": "science-fiction",
+        "architectural_tone": "utilitarian-functional",
+        "cultural_tone": "pioneering-isolationist",
+        "palette_bias": "monochromatic",
+        "flora_base": "none",
+        "fauna_base": "none"
+      },
+      "description": "A desolate, crater-pocked celestial body with a thin, dusty surface reflecting the stark light of distant stars. Its geography is defined by ancient impact basins and vast plains of regolith, devoid of any atmosphere or natural life.",
+      "searchDesc": "Barren, cratered surface of the Moon, dust, rock, stark lighting",
+      "slug": "the-moon",
+      "structure": {
+        "spatialLayout": "Vast, open, and largely undifferentiated plains punctuated by impact craters of varying sizes. Mountain ranges form distant, shadowed outlines. The curvature of the moon is apparent."
+      },
+      "primaryMedia": "media-1766019217213-rzcrktp8h"
+    },
+    "68d0b8d1-2215-40cb-889e-d1967f802891": {
+      "id": "68d0b8d1-2215-40cb-889e-d1967f802891",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "7812a7f4-374b-4810-8a44-c6b3d39f3e67": {
+      "id": "7812a7f4-374b-4810-8a44-c6b3d39f3e67",
+      "type": "location",
+      "name": "Lunar Habitation Unit",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A large, domed structure with a smooth, reflective metallic exterior. It appears utilitarian and functional, designed for extreme conditions. Minimal external protrusions are visible, emphasizing its pressurized integrity.",
+        "colorsAndLighting": "The primary color is a brushed aluminum, reflecting the harsh, direct sunlight of the Moon. Shadows are sharp and stark. No artificial external lighting is immediately apparent.",
+        "atmosphere": "The atmosphere within would be carefully controlled, likely sterile and recycled. The exterior is vacuum, subject to extreme temperature fluctuations. No natural motion or weather is present.",
+        "materials": "The main materials are advanced metallic composites, designed for durability and radiation shielding. The surfaces are smooth and engineered, with very few textures beyond the brushed metal finish.",
+        "mood": "A sense of isolation and resilience. The structure evokes a feeling of pioneering spirit and scientific endeavor, yet also the stark reality of surviving in a hostile environment.",
+        "sounds": "Silence, faint hum of life support systems, muffled equipment sounds.",
+        "primary_surfaces": "Polished metallic composite, smooth and reflective.",
+        "secondary_surfaces": "Reinforced composite plating, utilitarian access panels.",
+        "accent_features": "External docking ports, recessed sensor arrays.",
+        "dominant": "Silver: 90%",
+        "secondary": "Dark Grey: 10%",
+        "accent": "Black: subtle panel lines",
+        "ambient": "Harsh sunlight, stark contrast",
+        "genre": null,
+        "architectural_tone": "futuristic-industrial with robust environmental shielding",
+        "cultural_tone": "human pioneers, scientific research, survival outpost",
+        "palette_bias": "metallic, grey, black",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A sturdy, pressurized dome-like structure designed for extraterrestrial living. EXTERIOR VIEW.",
+      "searchDesc": "Pressurized dome habitat on the Moon, with a metallic exterior and airlock entrance.",
+      "slug": "lunar-habitation-unit",
+      "structure": {
+        "spatialLayout": "The primary space is a large, open dome. Interior layout is likely modular and efficient, with clear divisions for living and operational areas."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of the facade",
+          "description": "leads into the main living area"
+        },
+        {
+          "type": "passage",
+          "position": "to the right of the main entrance",
+          "description": "leads to a utility bay"
+        }
+      ],
+      "dominantElements": [
+        "Lunar Habitation Unit: shape=domed, scale=large, style=futuristic-industrial, surfaces=polished-metallic-composite, light=harsh-sunlight"
+      ],
+      "uniqueIdentifiers": [
+        "domed primary structure",
+        "metallic composite exterior",
+        "airlock sealed entrance",
+        "solar panel arrays",
+        "minimalist external features"
+      ],
+      "primaryMedia": "media-1765994435380-egf9yyw89"
+    },
+    "niche-1765994551194-12q9qrnnu": {
+      "id": "niche-1765994551194-12q9qrnnu",
+      "type": "location",
+      "name": "Lunar Habitation Unit - Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A prominent, sleek, metallic UFO-shaped dome juts from the grey lunar surface. Beneath, the habitation unit is a robust, subterranean structure with exposed metallic beams and utilitarian consoles.",
+        "colorsAndLighting": "Dominant greys and blacks of the lunar surface and interior, accented by the cool blue and white glow of internal lighting and console displays. The dome interior is bathed in filtered lunar light.",
+        "atmosphere": "Stale, recycled air, cool ambient temperature, constant low hum of machinery.",
+        "materials": "Polished metallic composites for the dome, raw, reinforced concrete and steel for the subterranean structure, brushed aluminum for consoles, transparent polymer for the dome's viewing surface.",
+        "mood": "Isolated, scientific, functional, with a touch of awe inspired by the view.",
+        "sounds": "Hum of life support, faint computer beeps, muffled thuds from external operations.",
+        "spatialLayout": "Circular observation dome connected to a series of interconnected utilitarian hexagonal rooms forming the habitation unit.",
+        "primary_surfaces": "brushed metallic composites",
+        "secondary_surfaces": "reinforced concrete, exposed steel beams",
+        "accent_features": "glowing holographic displays, status indicator lights",
+        "dominant": "metallic grey",
+        "secondary": "dark grey",
+        "accent": "cool blue",
+        "ambient": "low, functional",
+        "genre": "sci-fi",
+        "architectural_tone": "futuristic-industrial with robust environmental shielding",
+        "cultural_tone": "human pioneers, scientific research, survival outpost",
+        "palette_bias": "metallic, grey, black",
+        "flora_base": "hydroponically grown vegetables",
+        "fauna_base": "none"
+      },
+      "primaryMedia": "media-1765994551193-z8qtdujp2",
+      "description": "Inside the Lunar Habitation Unit, the vast, domed interior opens up, revealing a functional living and research space. A prominent feature is the presence of a basement accessible from the main level, and surprisingly, a hovering UFO at its center.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "none",
+        "openingShape": "circular",
+        "functionalType": "residential",
+        "spatialLayout": "The interior is a cavernous, domed space with utilitarian design, featuring a central raised platform and integrated living/working modules. The curved walls reflect the diffused, artificial lighting.",
+        "requiredElements": [
+          "basement",
+          "UFO"
         ]
       },
       "navigableElements": [
         {
           "type": "passage",
-          "position": "aft section",
-          "description": "Leads to the engine room."
-        },
-        {
-          "type": "passage",
-          "position": "forward section",
-          "description": "Leads to the bridge."
-        },
-        {
-          "type": "door",
-          "position": "mid-section",
-          "description": "Opens into the cargo bay."
+          "position": "center of main dome",
+          "description": "leads to the 'Basement Levels' below."
         }
       ],
       "dominantElements": [
-        "cockpit: shape=organic, scale=medium, style=industrial-alien, surfaces=dark-metal-worn, light=dim-industrial",
-        "engineering bay: shape=irregular, scale=large, style=industrial-alien, surfaces=exposed-conduits-metal, light=dim-industrial"
+        "Habitat Module: shape=cylindrical, scale=medium, style=futuristic-industrial, surfaces=brushed-aluminum-and-composite, light=soft-ambient",
+        "UFO: shape=disc, scale=medium, style=alien-organic, surfaces=unknown-iridescent-material, light=faint-internal-glow"
       ],
       "uniqueIdentifiers": [
-        "alien geometric accents",
-        "scarred and utilitarian surfaces",
-        "dim, functional lighting"
+        "domed interior",
+        "integrated habitat modules",
+        "central landing platform for UFO"
       ],
-      "searchDesc": "Industrial spaceship interior with dark metal, glowing conduits, and a constant hum.",
-      "slug": "interior-of-the-spacecraft"
+      "searchDesc": "Lunar habitation with a UFO dome, underground, metallic, grey, black, scientific research, survival.",
+      "slug": "null-of-lunar-habitation-unit"
     }
   },
   "views": {},
@@ -300,7 +446,7 @@
                   "type": "location",
                   "children": [
                     {
-                      "id": "niche-1765984268781-nu2syi3ns",
+                      "id": "niche-1765986975196-n5k0qg1ro",
                       "type": "niche",
                       "children": []
                     }
@@ -311,9 +457,33 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1765994404118-i30ueqefm",
+      "type": "host",
+      "children": [
+        {
+          "id": "68d0b8d1-2215-40cb-889e-d1967f802891",
+          "type": "region",
+          "children": [
+            {
+              "id": "7812a7f4-374b-4810-8a44-c6b3d39f3e67",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1765994551194-12q9qrnnu",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1765983339677-1myxbtxg5"
+    "loc-1765983339677-1myxbtxg5",
+    "loc-1765994404118-i30ueqefm"
   ]
 }
