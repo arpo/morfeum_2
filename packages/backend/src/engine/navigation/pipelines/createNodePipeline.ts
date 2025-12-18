@@ -123,6 +123,13 @@ export async function runCreateLocationNodePipeline(
           console.log(`[DNA] Using PRE-RESOLVED parent DNA from route handler`);
           console.log(`  - architectural_tone: ${parentDNA.architectural_tone || 'null'}`);
           console.log(`  - palette_bias: ${parentDNA.palette_bias || 'null'}`);
+        } else if (decision.metadata?.promoteParentToLocation) {
+          // GO_INSIDE from niche: Use the CURRENT NICHE's DNA as parent
+          // The niche is being promoted to a location, so its DNA should be the parent for the new child
+          parentDNA = context.currentNode.dna;
+          console.log(`[DNA] GO_INSIDE from niche: Using CURRENT NICHE DNA as parent`);
+          console.log(`  - architectural_tone: ${parentDNA?.architectural_tone || 'null'}`);
+          console.log(`  - looks: ${(parentDNA?.looks || 'null').substring(0, 60)}...`);
         } else if (isGotoCommand && options?.isFromLocation) {
           // Fallback: try to get region DNA from context (may be incomplete)
           const { parentRegionDNA } = findParentRegionNode(context);
@@ -138,7 +145,9 @@ export async function runCreateLocationNodePipeline(
           : undefined;
         
         // Generate DNA with basic info - we'll enhance with structure later
-        // For GOTO: uses simplified parent context (style only, not content)
+        // For GOTO or GO_INSIDE from niche: uses simplified parent context (style only, not content)
+        // This prevents parent content (e.g., "hangar with spacecraft") from bleeding into child node
+        const useStyleOnlyContext = isGotoCommand || decision.metadata?.promoteParentToLocation;
         return generateNodeDNA(
           apiKey,
           userPrompt,
@@ -146,7 +155,7 @@ export async function runCreateLocationNodePipeline(
           nodeType,
           userPrompt,
           parentContext,
-          { isGotoCommand }
+          { isGotoCommand: useStyleOnlyContext }
         );
       })()
     ]);
@@ -202,6 +211,11 @@ export async function runCreateLocationNodePipeline(
       // Route handler already resolved cascaded DNA - use it directly
       parentDNAForImagePrompt = options.resolvedParentDNA;
       console.log(`[ImagePrompt] Using PRE-RESOLVED parent DNA from route handler`);
+    } else if (decision.metadata?.promoteParentToLocation) {
+      // GO_INSIDE from niche: Use the CURRENT NICHE's DNA as parent
+      // The niche is being promoted to a location, so its DNA should be the parent for the new child
+      parentDNAForImagePrompt = context.currentNode.dna;
+      console.log(`[ImagePrompt] GO_INSIDE from niche: Using CURRENT NICHE DNA as parent`);
     } else if (isGotoCommand && options?.isFromLocation) {
       const { parentRegionDNA } = findParentRegionNode(context);
       parentDNAForImagePrompt = parentRegionDNA;
