@@ -1,41 +1,40 @@
 {
   "nodes": {
-    "loc-1765982665286-r8uqgyi1u": {
-      "id": "loc-1765982665286-r8uqgyi1u",
+    "loc-1766043421174-ok5ym8zhb": {
+      "id": "loc-1766043421174-ok5ym8zhb",
       "type": "host",
-      "name": "Aquatic Ruin",
+      "name": "Dystopian World",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: vast expanses of shallow, clear ocean dotted with clusters of partially submerged, geometric ruins. Distant coastlines with overgrown structures are barely visible.",
-        "colorsAndLighting": "Sunlight glinting off water surfaces, casting dappled light on submerged structures. Hazy atmospheric diffusion softens colors.",
-        "atmosphere": "A humid, salty air pervades the world. Light sea mists often obscure distant horizons.",
-        "materials": "Dominant materials are weathered metal and composite panels, visible as dull, rusted surfaces and faded paneling from altitude.",
-        "mood": "A pervasive sense of lost grandeur and the quiet triumph of nature.",
-        "sounds": "Distant, rhythmic lapping of waves, the occasional creak of shifting metal, and the mournful cries of seabirds.",
-        "primary_surfaces": "Vast, calm ocean surfaces, visible expanses of submerged structures.",
-        "secondary_surfaces": "Rocky seabeds, patches of seaweed, small, overgrown islets.",
-        "accent_features": "The geometric shapes of the larger ruined structures, catching the light.",
-        "dominant": "Aquamarine and turquoise from the water.",
-        "secondary": "Faded orange-red from rust.",
-        "accent": "Mottled off-white and dark green from algae.",
-        "ambient": "Bright, hazy daylight filtered through a slightly overcast sky.",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Deconstructivist",
-        "cultural_tone": "Melancholic Isolation",
-        "palette_bias": "Cool-Toned",
-        "flora_base": "Algae and Moss",
-        "fauna_base": "Marine Life"
+        "looks": "AERIAL/SATELLITE VIEW: A vast, sprawling urban landscape choked with smog. Dense clusters of colossal, Brutalist skyscrapers dominate the center, surrounded by lower, grimy industrial sectors and decaying residential blocks. Faint lines of elevated transit are visible. No individual buildings are discernible, only massive shapes and urban sprawl.",
+        "colorsAndLighting": "Muted grays, oppressive browns, and sickly industrial greens dominate. The sky is a perpetual, dim overcast, casting a uniform, weak light.",
+        "atmosphere": "Thick, acrid smog hangs heavy, obscuring distant views. A constant, low hum of industry and distant machinery permeates the air.",
+        "materials": "Predominantly vast expanses of dark, weathered concrete and stained metal plating visible on distant structures.",
+        "mood": "Oppressive, bleak, and industrial. A sense of overwhelming scale and decay.",
+        "sounds": "Distant, monotonous industrial hum, faint whirring of unseen machinery, and the occasional, muffled clang.",
+        "primary_surfaces": "Massive, dark rooftops of immense structures, wide, grimy arterial roads.",
+        "secondary_surfaces": "Vast, polluted industrial zones, patches of sickly, overgrown brown scrubland.",
+        "accent_features": "Towering, monolithic skyscrapers that form the central skyline, barely discernible from afar.",
+        "dominant": "Dark gray",
+        "secondary": "Industrial brown",
+        "accent": "Sickly green",
+        "ambient": "Dim, overcast sky",
+        "genre": "Dystopian",
+        "architectural_tone": "Brutalist, Industrial",
+        "cultural_tone": "Oppressive, Decadent",
+        "palette_bias": "Monochromatic",
+        "flora_base": "Scrubland",
+        "fauna_base": "None visible"
       },
-      "description": "A world where advanced coastal and oceanic structures have succumbed to time and the elements, now lying partially submerged and derelict. Nature has begun to reclaim these forgotten vestiges of civilization, creating a melancholic yet strangely serene landscape.",
-      "searchDesc": "Derelict oceanic structures, nature's reclamation, submerged ruins.",
-      "slug": "aquatic-ruin",
+      "description": "A sprawling, smog-choked megalopolis where towering, monolithic structures pierce a perpetually gray sky. Grimy industrial zones bleed into decaying residential sectors, crisscrossed by elevated transit lines and choked with pollution.",
+      "searchDesc": "Bleak, polluted dystopian city with towering structures and decaying zones.",
+      "slug": "dystopian-world",
       "structure": {
-        "spatialLayout": "Scattered clusters of ruins across a vast oceanic canvas, interspersed with natural oceanic features."
-      },
-      "primaryMedia": "media-1765983149839-eyyynu142"
+        "spatialLayout": "A dense, sprawling urban mass with a towering core, surrounded by industrial and residential sprawl. Elevated transit lines form a skeletal network."
+      }
     },
-    "0864e519-643e-4030-bb99-47f5e470c5fe": {
-      "id": "0864e519-643e-4030-bb99-47f5e470c5fe",
+    "299d6c07-d91a-4068-9174-25431b3f7eba": {
+      "id": "299d6c07-d91a-4068-9174-25431b3f7eba",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -45,202 +44,203 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "7be61065-eb6a-4393-b31e-dd77f59614e9": {
-      "id": "7be61065-eb6a-4393-b31e-dd77f59614e9",
+    "2b581e19-0b32-4077-8809-4e32dc47e0e0": {
+      "id": "2b581e19-0b32-4077-8809-4e32dc47e0e0",
       "type": "location",
-      "name": "The Sunken Dwellings",
+      "name": "The Rusty Mug",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A collection of interconnected, weathered spherical and cylindrical pods, partially submerged in shallow, clear ocean water. Moss and algae creep across the rusted, off-white surfaces, with numerous circular openings dotting the structure.",
-        "colorsAndLighting": "Dominated by faded orange-red rust and mottled off-white, with vibrant green accents from moss and algae. Soft, diffused sunlight filters through the hazy sky and clear water.",
-        "atmosphere": "The air is thick with the scent of salt and damp decay. A palpable sense of abandonment and tranquility pervades the scene, with the gentle lapping of waves being the primary sound.",
-        "materials": "The primary materials are heavily rusted metal and weathered, composite panels. These surfaces are textured by patches of soft moss and slick algae, indicating prolonged exposure to the aquatic environment.",
-        "mood": "Eerie and melancholic, evoking a sense of lost civilization and nature's reclamation.",
-        "sounds": "Gentle waves, distant seabirds, dripping water, creaking metal",
-        "primary_surfaces": "Rusted metal, moss-covered panels, algae-slicked crevices",
-        "secondary_surfaces": "Mottled off-white composite, underwater rock, dark green seaweed",
-        "accent_features": "Circular windows revealing interior glimpses, rusted metal ladder",
-        "dominant": "Faded orange-red (rust)",
-        "secondary": "Mottled off-white",
-        "accent": "Vibrant green (moss/algae)",
-        "ambient": "Soft, diffused sunlight",
+        "looks": "A low-slung, rectangular building with a heavily weathered corrugated metal exterior. The structure appears somewhat lopsided, with visible signs of patch repairs and structural wear. A prominent, dented sign hangs precariously above the main entrance.",
+        "colorsAndLighting": "Dominated by muted, rusty browns and grays. The primary light source is a sickly, flickering neon glow from the sign, casting weak, intermittent shadows. The interior light spills out weakly, hinting at a dim interior.",
+        "atmosphere": "The air feels heavy and stagnant, carrying the faint smell of stale alcohol and decay. A palpable sense of neglect permeates the space, suggesting a rough and uninviting environment. Dust motes likely dance in the limited light.",
+        "materials": "The exterior is primarily composed of heavily rusted and dented corrugated metal. Weathered, splintered wood is visible around the doorway and window frames. Interior surfaces are likely a mix of worn wood and stained concrete.",
+        "mood": "The Rusty Mug evokes a mood of desolation, grit, and forgotten resilience. It feels like a place on the edge of society, offering refuge but little comfort.",
+        "sounds": "distant clatter, low hum, faint voices, wind whistling",
+        "primary_surfaces": "Heavily rusted corrugated metal, deeply weathered wood",
+        "secondary_surfaces": "Stained concrete, tarnished metal fixtures",
+        "accent_features": "Flickering neon sign, visible dents and patches",
+        "dominant": "Rust brown (covering most of the exterior)",
+        "secondary": "Dark grey (metal sheeting and shadows)",
+        "accent": "Sickly neon pink/green (sign)",
+        "ambient": "Dim, flickering neon-glow",
         "genre": null,
-        "architectural_tone": "Weathered utilitarian with organic integration",
-        "cultural_tone": "Designed for aquatic habitation, now abandoned and decaying",
-        "palette_bias": "Earth tones with strong green accents",
-        "flora_base": "Moss and algae",
+        "architectural_tone": "Dystopian industrial shack",
+        "cultural_tone": "A refuge for the downtrodden, a place for illicit dealings or cheap drinks",
+        "palette_bias": "Earthy and metallic tones",
+        "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A multi-pod structure emerging from clear, shallow turquoise ocean waters under a hazy, bright sky. The unusual building consists of several interconnected, spherical and cylindrical modules, predominantly rusted in shades of faded orange-red and mottled off-white, with significant patches of green moss and algae growing across its flat surfaces and crevices. Multiple circular openings serve as windows or entrances. The base of the structure rests on a rocky foundation, partially submerged, with various underwater rocks and patches of dark green seaweed clearly visible through the transparent water. A rusted metal ladder extends from one of the lower pods directly into the calm sea.",
-      "searchDesc": "Weathered multi-pod structure in shallow turquoise water, encrusted with moss and algae.",
-      "slug": "the-sunken-dwellings",
+      "description": "A dilapidated dive bar, its facade grimy and broken. EXTERIOR VIEW.",
+      "searchDesc": "Dilapidated dive bar with a rusty, corrugated metal facade and a flickering neon sign.",
+      "slug": "the-rusty-mug",
       "structure": {
-        "spatialLayout": "An interconnected, modular complex of rounded and elongated forms, resting on a submerged rocky base. The internal spaces are hinted at through various openings."
+        "spatialLayout": "A compact, single-story structure with a straightforward, utilitarian layout. The interior space is likely cramped and somewhat disorganized."
       },
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "center, lower pod",
-          "description": "Leads into a reddish-orange interior, where a bed of pillows and a rug are visible."
+          "type": "door",
+          "position": "center of facade",
+          "description": "Leads inside the bar."
         },
         {
-          "type": "passage",
-          "position": "various pods",
-          "description": "Circular openings lead to other interiors showing exposed walls and debris."
-        },
-        {
-          "type": "stairs",
-          "position": "lower pod, right side",
-          "description": "A rusted metal ladder extends from a lower pod directly into the calm sea."
+          "type": "window",
+          "position": "to the left of the door",
+          "description": "A grimy, barred window offering a glimpse into the dark interior."
         }
       ],
       "dominantElements": [
-        "multi-pod structure: shape=modular, scale=medium, style=futuristic-derelict, surfaces=rusted metal, moss-covered, mottled off-white, light=soft-ambient"
+        "bar: shape=rectangular, scale=medium, style=rustic, surfaces=weathered wood, tarnished metal, light=dim-neon-glow"
       ],
       "uniqueIdentifiers": [
-        "interconnected spherical and cylindrical modules",
-        "rusted metal with significant moss and algae growth",
-        "circular openings revealing interiors",
-        "partially submerged rocky foundation",
-        "rusted metal ladder into the sea"
+        "flickering neon sign",
+        "corrugated metal facade",
+        "rusted exterior",
+        "grimy window",
+        "prominent dent on the left wall"
       ],
-      "primaryMedia": "media-1765982704192-6hdqcz56r"
+      "primaryMedia": "media-1766043432658-7t926garv"
     },
-    "niche-1765982733664-0p0im6eh8": {
-      "id": "niche-1765982733664-0p0im6eh8",
-      "type": "niche",
-      "name": "The Sunken Dwellings - Interior",
+    "niche-1766043457724-g6i2bq3ej": {
+      "id": "niche-1766043457724-g6i2bq3ej",
+      "type": "location",
+      "name": "The Rusty Mug",
       "spaceType": "interior",
       "dna": {
-        "looks": "A collection of interconnected, weathered spherical and cylindrical pods, partially submerged in shallow, clear ocean water. Moss and algae creep across the rusted, off-white surfaces, with numerous circular openings dotting the structure.",
-        "colorsAndLighting": "Dominant earth tones of rust and mottled off-white, with strong green accents from moss and algae. Soft, diffused ambient light filtering through the water and openings.",
-        "atmosphere": "Damp, slightly salty air, cool to the touch, with a gentle, almost imperceptible sway from the water currents.",
-        "materials": "Heavily rusted metal, weathered composite panels, and natural growth.",
-        "mood": "Melancholy, serene, abandoned, forgotten.",
-        "sounds": "Gentle lapping water, distant creaking metal, muffled aquatic sounds.",
-        "spatialLayout": "Modular, interconnected pod structure, partially submerged.",
-        "primary_surfaces": "Rusted metal, mottled off-white composite.",
-        "secondary_surfaces": "Soft moss, slick algae.",
-        "accent_features": "Circular hull openings, barnacle clusters, trailing seaweed.",
-        "dominant": "earth tones",
-        "secondary": "mottled off-white",
-        "accent": "green",
-        "ambient": "soft-ambient",
+        "looks": "A low-slung, rectangular bar with a heavily weathered corrugated metal exterior, appearing lopsided with visible patch repairs. A prominent, dented sign hangs precariously above the main entrance.",
+        "colorsAndLighting": "Dim, with a neon glow from behind the bar. Predominantly earthy and metallic tones.",
+        "atmosphere": "Smoky, warm, and slightly humid, with a gentle motion of patrons and clinking glasses.",
+        "materials": "Weathered wood and tarnished metal for the bar surfaces.",
+        "mood": "Gritty, welcoming to outcasts, a place for cheap drinks and perhaps shady dealings.",
+        "sounds": "Muffled chatter, clinking glasses, the occasional jukebox tune, a low hum.",
+        "spatialLayout": "Rectangular bar",
+        "primary_surfaces": "weathered wood",
+        "secondary_surfaces": "tarnished metal",
+        "accent_features": "dim neon glow",
+        "dominant": "brown",
+        "secondary": "grey",
+        "accent": "glowing red",
+        "ambient": "dim",
         "genre": null,
-        "architectural_tone": "Weathered utilitarian with organic integration",
-        "cultural_tone": "Designed for aquatic habitation, now abandoned and decaying",
-        "palette_bias": "earth tones with strong green accents",
-        "flora_base": "moss, algae",
+        "architectural_tone": "Dystopian industrial shack",
+        "cultural_tone": "A refuge for the downtrodden, a place for illicit dealings or cheap drinks",
+        "palette_bias": "Earthy and metallic tones",
+        "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1765982733663-3y4b0sm6j",
-      "description": "The interior of the sunken dwellings are contained within interconnected, spherical pods. The spaces are characterized by curved, potentially cramped living areas, reflecting a design focused on maximizing space within a modular, futuristic-derelict aesthetic. Soft, ambient light filters through the limited openings, illuminating surfaces of rusted metal, moss, and mottled off-white.",
+      "primaryMedia": "media-1766043457724-4koixjxt8",
+      "description": "The interior of The Rusty Mug is a refuge for the downtrodden, a place for illicit dealings or cheap drinks. The space is dimly lit by a neon glow, highlighting the weathered wood and tarnished metal of the bar.",
       "structure": {
-        "form": "spherical",
-        "roofType": "domed",
+        "form": "rectangular",
+        "roofType": "flat",
         "scale": "medium",
-        "orientation": "cubic",
+        "orientation": "wide",
         "openings": "minimal",
-        "openingShape": "circular",
-        "functionalType": "residential",
-        "spatialLayout": "Within the interconnected pods, the interior spaces are curved and often cramped, with remnants of habitation suggesting a compact living arrangement. The limited openings are strategically placed to allow for controlled light penetration.",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A dim, medium-sized rectangular space dominated by a prominent, rustic bar. The surfaces are a mix of weathered wood and tarnished metal, illuminated by a dim neon glow.",
         "requiredElements": [
-          "multi-pod structure: shape=modular, scale=medium, style=futuristic-derelict, surfaces=rusted metal, moss-covered, mottled off-white, light=soft-ambient"
+          "bar: shape=rectangular, scale=medium, style=rustic, surfaces=weathered wood, tarnished metal, light=dim-neon-glow"
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "salvaged submersible seating",
-          "algae-encrusted control console",
-          "tangled wiring",
-          "waterlogged storage crates"
+          "worn bar stools",
+          "chipped ceramic mugs",
+          "overflowing ashtrays",
+          "flickering neon beer signs",
+          "makeshift stools from scrap metal",
+          "barrels used as tables",
+          "graffiti-covered walls"
         ],
         "suggested": [],
         "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "hatch",
+          "type": "door",
           "position": "center",
-          "description": "hatch rusted metal  rear wall"
-        },
-        {
-          "type": "passage",
-          "position": "left wall",
-          "description": "passage open"
+          "description": "door grimy metal  rear wall"
         },
         {
           "type": "window",
-          "position": "front wall",
-          "description": "window grimy porthole"
+          "position": "left wall",
+          "description": "window boarded-up"
         },
         {
           "type": "door",
-          "position": "right wall",
-          "description": "door narrow connecting way"
+          "position": "front wall",
+          "description": "door reinforced"
+        },
+        {
+          "type": "hatch",
+          "position": "ceiling",
+          "description": "hatch at ceiling"
         }
       ],
       "dominantElements": [
-        "habitation pod: shape=spherical, scale=medium, style=futuristic-derelict, surfaces=rusted metal, moss-covered, mottled off-white, light=soft-ambient"
+        "bar: shape=rectangular, scale=medium, style=rustic, surfaces=weathered wood, tarnished metal, light=dim-neon-glow"
       ],
       "uniqueIdentifiers": [
-        "curved interior walls",
-        "decaying habitation pods",
-        "submerged structure elements"
+        "tarnished metal bar surfaces",
+        "dim neon lighting",
+        "weathered wood accents"
       ],
-      "searchDesc": "Modular pods, half-submerged, rusted metal, moss-covered, off-white, soft ambient light.",
-      "slug": "null-of-the-sunken-dwellings"
+      "searchDesc": "Rustic, medium rectangular bar with weathered wood, tarnished metal, and dim neon lighting.",
+      "slug": "null-of-the-rusty-mug"
     },
-    "location-1765982818114-z6bv17jxq": {
-      "id": "location-1765982818114-z6bv17jxq",
+    "niche-1766043540874-8yb4a96f6": {
+      "id": "niche-1766043540874-8yb4a96f6",
       "type": "location",
-      "name": "Two Islands Connected With A Bridge",
-      "spaceType": "exterior",
+      "name": "The Rusty Mug Basement",
+      "spaceType": "interior",
       "dna": {
-        "looks": "A scene dominated by cool, muted tones. The islands are rugged and unadorned, with sharp geological features. The bridge is a stark, geometric structure of exposed metal. A single, imposing industrial building stands on the smaller island, its form angular and functional.",
-        "colorsAndLighting": "Dominated by deep blues, greys, and muted greens. Lighting is diffused and cool, with no strong direct sunlight, suggesting an overcast or twilight atmosphere. The industrial building has harsh, focused internal lighting spilling out.",
-        "atmosphere": "Cool air, a sense of isolation and stillness. A faint salty mist hangs in the air. Minimal wind.",
-        "materials": "Primarily rough stone, weathered steel, and aged concrete. Some areas of sparse, hardy vegetation.",
-        "mood": "Isolated, functional, stark, slightly melancholic.",
-        "sounds": "Distant waves, creaking metal, dripping water, faint industrial hum.",
-        "spatialLayout": "Two distinct landmasses separated by water, connected by a linear structure.",
-        "primary_surfaces": "rock, weathered steel",
-        "secondary_surfaces": "concrete, water, sparse vegetation",
-        "accent_features": "sharp edges of the bridge, geometric form of the building",
-        "dominant": "deep blue",
-        "secondary": "grey",
-        "accent": "steel grey",
-        "ambient": "cool, diffused",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Deconstructivist",
-        "cultural_tone": "Melancholic Isolation",
-        "palette_bias": "Cool-Toned",
-        "flora_base": "sparse coastal scrub",
-        "fauna_base": "Marine Life"
+        "looks": "Vast, uneven cavernous space with rough, damp, earthen walls. A small, elaborately decorated house made of mismatched materials stands in the center, its colors vibrant against the drab surroundings. Debris and water puddles are scattered on the floor.",
+        "colorsAndLighting": "Dominated by dark browns, grays, and damp earth tones. Accents of vibrant, almost childlike colors on the house (pinks, blues, yellows). Lighting is dim and uneven, with some areas illuminated by faint, ethereal glows from the house or moss, and others in deep shadow.",
+        "atmosphere": "Cool, damp, and still. The air smells of wet earth, mineral deposits, and a faint, sweet, unidentifiable scent from the whimsical house. A sense of profound quietude broken only by the occasional drip of water.",
+        "materials": "Raw earth, packed soil, rough-hewn rock, weathered wood, corrugated metal, a cacophony of materials for the whimsical house (stained glass, painted plaster, salvaged scrap).",
+        "mood": "Surreal, isolated, with an underlying sense of mystery and quiet wonder. The contrast creates a feeling of displacement and unexpected charm.",
+        "sounds": "Dripping water, faint humming, distant echoes, silence.",
+        "spatialLayout": "A large, irregular open space with a central focal point.",
+        "primary_surfaces": "Earthen walls and floor",
+        "secondary_surfaces": "Whimsical house structure, water puddles",
+        "accent_features": "Luminescent moss, brightly colored decorative elements on the house, intricate details on the house's facade.",
+        "dominant": "earth brown",
+        "secondary": "damp gray",
+        "accent": "vibrant rainbow",
+        "ambient": "dim, cool",
+        "genre": null,
+        "architectural_tone": "dystopian industrial shack",
+        "cultural_tone": "A refuge for the downtrodden, a place for illicit dealings or cheap drinks",
+        "palette_bias": "earthy and metallic tones",
+        "flora_base": "luminescent moss",
+        "fauna_base": "None"
       },
-      "primaryMedia": "media-1765982818113-c2ols8wcl",
-      "description": "An exterior view of two islands connected by a sturdy, utilitarian bridge, set against a backdrop of weathered structures and abundant green.",
+      "primaryMedia": "media-1766043540874-qmt07t7wh",
+      "description": "Beneath The Rusty Mug lies a cavernous basement, a large room crudely dug from the earth. Amidst the rough, unrefined walls, a peculiar and charmingly whimsical house has been constructed.",
       "structure": {
         "form": "irregular",
         "roofType": "null",
         "scale": "large",
         "orientation": "horizontal",
-        "openings": "natural-openings",
+        "openings": "minimal",
         "openingShape": "irregular",
-        "functionalType": "natural",
-        "spatialLayout": "Two distinct landmasses separated by water, linked by a man-made bridge. The islands feature varied terrain and vegetation, integrated with utilitarian structures.",
+        "functionalType": "entertainment",
+        "spatialLayout": "A large, dug-out room forming a rough cavern. Within this raw space, a surprisingly whimsical house stands in stark contrast.",
         "requiredElements": [
-          "islands",
-          "bridge"
+          "basement",
+          "big room dugged out",
+          "whimsical house"
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "waterlogged wooden chests overflowing with rusted tools",
-          "algae-covered fishing nets draped over decaying crates",
-          "a corroded winch mechanism",
-          "barnacle-encrusted workbenches with scattered",
-          "unidentifiable mechanical parts"
+          "cobbled together scrap metal sofa",
+          "mismatched salvaged chairs",
+          "crates used as tables",
+          "flickering bare bulb lighting",
+          "grimy tapestries depicting industrial machinery",
+          "discarded tools and spare parts scattered around",
+          "a makeshift bar with beer kegs."
         ],
         "suggested": [],
         "placementNotes": []
@@ -249,258 +249,34 @@
         {
           "type": "door",
           "position": "left wall",
-          "description": "door barnacle-encrusted way"
-        },
-        {
-          "type": "passage",
-          "position": "front wall",
-          "description": "passage gaping archway  leading to submerged"
+          "description": "door corrugated ir"
         },
         {
           "type": "hatch",
           "position": "ceiling",
-          "description": "hatch rusted access"
+          "description": "hatch open  in"
+        },
+        {
+          "type": "ladder",
+          "position": "right wall",
+          "description": "ladder rusty metal"
         },
         {
           "type": "window",
-          "position": "right wall",
-          "description": "window large reinforced porthole"
-        }
-      ],
-      "dominantElements": [
-        "The Bridge: shape=arched, scale=medium, style=weathered-utilitarian, surfaces=stone-wood-metal, light=natural-diffused"
-      ],
-      "uniqueIdentifiers": [
-        "two distinct islands",
-        "connecting bridge"
-      ],
-      "searchDesc": "Two islands connected by a stark bridge, one featuring a brutalist industrial building.",
-      "slug": "two-islands-conncted-with-an-bridge"
-    },
-    "niche-1765982855188-913o15vo0": {
-      "id": "niche-1765982855188-913o15vo0",
-      "type": "niche",
-      "name": "Interior of the Industrial Building",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Rugged islands with sharp geological features, a stark geometric arched bridge, and an angular industrial building.",
-        "colorsAndLighting": "Cool, muted tones dominate. Natural, diffused light. Overcast sky.",
-        "atmosphere": "Crisp, cool air with a faint salty mist. Still and silent.",
-        "materials": "Rough stone, weathered steel, aged concrete, aged wood.",
-        "mood": "Melancholic isolation, stark beauty, industrial decay.",
-        "sounds": "Distant waves, creaking metal, wind whistling.",
-        "spatialLayout": "Linear connection between two distinct landmasses.",
-        "primary_surfaces": "Rough stone, weathered steel, aged wood.",
-        "secondary_surfaces": "Aged concrete, sparse hardy vegetation.",
-        "accent_features": "Sharp geological edges, exposed rivets on metal.",
-        "dominant": "Slate grey",
-        "secondary": "Muted blue-grey",
-        "accent": "Verdigris on metal",
-        "ambient": "Cool, diffused",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Deconstructivist",
-        "cultural_tone": "Melancholic Isolation",
-        "palette_bias": "Cool-Toned",
-        "flora_base": "Sparse hardy vegetation",
-        "fauna_base": "Marine Life"
-      },
-      "primaryMedia": "media-1765982855188-g1i6a4v00",
-      "description": "Inside the imposing industrial building on the smaller island, the space is dominated by functional machinery and stark, utilitarian construction.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "medium",
-        "orientation": "horizontal",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "industrial",
-        "spatialLayout": "The interior is a cavernous, rectangular space with high ceilings. Exposed pipes and concrete walls create a utilitarian atmosphere. The lighting is dim and functional.",
-        "requiredElements": [
-          "The Bridge: shape=arched, scale=medium, style=weathered-utilitarian, surfaces=stone-wood-metal, light=natural-diffused"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "worn wooden table",
-          "two simple wooden benches",
-          "rusted metal toolbox",
-          "flickering oil lamp"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
           "position": "front wall",
-          "description": "door heavy ir"
-        },
-        {
-          "type": "passage",
-          "position": "left wall",
-          "description": "passage narrow stone"
-        },
-        {
-          "type": "window",
-          "position": "right wall",
-          "description": "window small barred"
+          "description": "window small reinforced"
         }
       ],
       "dominantElements": [
-        "Industrial Machinery: shape=irregular, scale=large, style=functional-industrial, surfaces=metal-concrete-plastic, light=dim-industrial"
+        "whimsical house: shape=organic, scale=medium, style=whimsical, surfaces=mismatched-materials, light=warm-glow"
       ],
       "uniqueIdentifiers": [
-        "exposed pipes",
-        "concrete walls",
-        "industrial machinery"
+        "dug-out cavernous space",
+        "contrasting whimsical house",
+        "uneven, unrefined walls"
       ],
-      "searchDesc": "Two rugged islands connected by a weathered arched bridge, with an industrial building.",
-      "slug": "null-of-two-islands-connected-with-a-bridge"
-    },
-    "niche-1765982926601-uc4h3j7mb": {
-      "id": "niche-1765982926601-uc4h3j7mb",
-      "type": "niche",
-      "name": "Sunken Dwelling Pod Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A circular platform constructed from heavily rusted metal and worn composite panels, showing signs of prolonged exposure to a damp, salty environment. The edges are reinforced with a low, verdigris-streaked metal railing. Patches of resilient moss cling to the surfaces, and faint waterline marks are visible.",
-        "colorsAndLighting": "Muted earth tones of rust and damp grey are offset by vibrant green moss and algae. The lighting is diffuse and somewhat dim, reflecting the overcast sky and the proximity of the water.",
-        "atmosphere": "The air is heavy with the scent of salt and decay. A gentle, cool breeze whispers across the platform. The overall feeling is one of damp stillness.",
-        "materials": "Heavily rusted metal, weathered composite panels, hardy moss, and scattered algae.",
-        "mood": "Melancholy, enduring, forgotten.",
-        "sounds": "Distant lapping of waves, creaking metal, rustling moss.",
-        "spatialLayout": "A flat, circular expanse with a central downward passage and an accessible edge path.",
-        "primary_surfaces": "rusted metal, weathered composite panels",
-        "secondary_surfaces": "moss, algae, barnacles",
-        "accent_features": "verdigris streaks on railing, waterline marks",
-        "dominant": "rust",
-        "secondary": "grey",
-        "accent": "green",
-        "ambient": "dim, diffused",
-        "genre": null,
-        "architectural_tone": "weathered utilitarian with organic integration",
-        "cultural_tone": "designed for aquatic habitation, now abandoned and decaying",
-        "palette_bias": "earth tones with strong green accents",
-        "flora_base": "moss, algae",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1765982926601-0ixyb7xlx",
-      "description": "Inside one of the weathered pods, the curved walls create a sense of confinement. Water trickles down the surfaces, and the air is thick with the smell of the sea and decay.",
-      "structure": {
-        "form": "spherical",
-        "roofType": "domed",
-        "scale": "small",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "circular",
-        "functionalType": "residential",
-        "spatialLayout": "The interior of the pod is a compact, spherical space. Curved walls meet at a central point, offering limited floor area and a claustrophobic feel.",
-        "requiredElements": [
-          "user-specified elements that MUST appear"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "algae-covered cistern",
-          "salvaged metal pipes",
-          "weathered fishing nets",
-          "barnacle-encrusted crates"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "hatch",
-          "position": "center",
-          "description": "hatch rusted metal  leading down"
-        },
-        {
-          "type": "object",
-          "position": "side",
-          "description": "object broken railing to one"
-        },
-        {
-          "type": "archway",
-          "position": "center",
-          "description": "archway open  to a collapsed section"
-        }
-      ],
-      "dominantElements": [
-        "worn bench: shape=curved, scale=small, style=futuristic-derelict, surfaces=rusted metal, padding ripped, light=dim-ambient"
-      ],
-      "uniqueIdentifiers": [
-        "condensation sheen on walls",
-        "faint smell of brine and decay",
-        "lack of furniture beyond basic fittings"
-      ],
-      "searchDesc": "Weathered platform overlooking submerged dwellings, accessible by stairs and a path.",
-      "slug": "null-of-the-sunken-dwellings"
-    },
-    "niche-1765983095839-48zrtjpn0": {
-      "id": "niche-1765983095839-48zrtjpn0",
-      "type": "niche",
-      "name": "Rooftop Balcony View Over Ocean",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A small, functional balcony with worn concrete flooring. A simple, dark metal railing encloses the space, providing a clear, unobstructed vista of the ocean.",
-        "colorsAndLighting": "Sun-drenched with bright, cool blues from the ocean. Earthy greys and muted greens from sparse vegetation.",
-        "atmosphere": "Crisp, salty air; gentle sea breeze; constant, low hum of waves.",
-        "materials": "Weathered concrete, oxidized metal, rough-hewn wood (for planters), tough, leathery plant leaves.",
-        "mood": "Serene, expansive, contemplative.",
-        "sounds": "Waves crashing, seagulls crying, distant boat horn, wind.",
-        "spatialLayout": "Rectangular, open to one side (the view).",
-        "primary_surfaces": "Concrete floor, metal railing, sky, ocean.",
-        "secondary_surfaces": "Weathered building facade, potted plant leaves.",
-        "accent_features": "A few hardy green plants in simple, dark planters, perhaps a single weathered metal chair.",
-        "dominant": "Ocean Blue",
-        "secondary": "Concrete Grey",
-        "accent": "Deep Green",
-        "ambient": "Bright, natural sunlight with cool, reflective tones.",
-        "genre": null,
-        "architectural_tone": "Weathered utilitarian with organic integration",
-        "cultural_tone": "Designed for aquatic habitation, now abandoned and decaying",
-        "palette_bias": "Earth tones with strong green accents",
-        "flora_base": "Drought-tolerant succulents and grasses",
-        "fauna_base": "Seagulls"
-      },
-      "primaryMedia": "media-1765983095838-h2ufjhbwn",
-      "description": "A small, open-air balcony perched atop a structure, providing an unobstructed view of the expansive ocean.",
-      "structure": {
-        "form": "organic",
-        "roofType": "null",
-        "scale": "small",
-        "orientation": "horizontal",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "natural",
-        "spatialLayout": "A small, intimate balcony situated on a rooftop, offering a breathtaking panoramic view of the vast ocean. It's a serene space designed for contemplation and enjoying the seascape.",
-        "requiredElements": [
-          "balcony",
-          "ocean view"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "rear",
-          "description": "Leads into a utilitarian rooftop access area with storage."
-        },
-        {
-          "type": "passage",
-          "position": "left edge",
-          "description": "A narrow, slightly rusted metal railing delineates the edge of the balcony, overlooking the vast ocean below."
-        }
-      ],
-      "dominantElements": [
-        "balcony railing: shape=linear, scale=small, style=weathered utilitarian, surfaces=rusted metal, textured concrete, light=harsh-sunlight"
-      ],
-      "uniqueIdentifiers": [
-        "ocean vista",
-        "rooftop elevation"
-      ],
-      "searchDesc": "Small rooftop balcony with a stunning, wide ocean view.",
-      "slug": "roof-top-small-balcony-view-over-ocean"
+      "searchDesc": "Vast dug-out basement with a colorful, whimsical house at its center.",
+      "slug": "interior-of-basement-a-big-room-dugged-out-in-it-there-is-a-whimsical-house"
     }
   },
   "views": {},
@@ -523,42 +299,27 @@
       ]
     },
     {
-      "id": "loc-1765982665286-r8uqgyi1u",
+      "id": "loc-1766043421174-ok5ym8zhb",
       "type": "host",
       "children": [
         {
-          "id": "0864e519-643e-4030-bb99-47f5e470c5fe",
+          "id": "299d6c07-d91a-4068-9174-25431b3f7eba",
           "type": "region",
           "children": [
             {
-              "id": "7be61065-eb6a-4393-b31e-dd77f59614e9",
+              "id": "2b581e19-0b32-4077-8809-4e32dc47e0e0",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1765982733664-0p0im6eh8",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765982926601-uc4h3j7mb",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1765983095839-48zrtjpn0",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "id": "location-1765982818114-z6bv17jxq",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1765982855188-913o15vo0",
-                  "type": "niche",
-                  "children": []
+                  "id": "niche-1766043457724-g6i2bq3ej",
+                  "type": "location",
+                  "children": [
+                    {
+                      "id": "niche-1766043540874-8yb4a96f6",
+                      "type": "location",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -568,6 +329,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1765982665286-r8uqgyi1u"
+    "loc-1766043421174-ok5ym8zhb"
   ]
 }
