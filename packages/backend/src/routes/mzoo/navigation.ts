@@ -12,6 +12,7 @@ import type { RouteOptions } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import { runCreateCharacterPipeline } from '../../engine/navigation/pipelines/createCharacterPipeline';
 import { findParentLocationNode, findParentRegionNode, findHostForRegion, addChildToWorldTree } from '../../engine/navigation/navigationHelpers';
+import { getResolvedNodeDNA } from '../../engine/hierarchyAnalysis/dnaMerge';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
@@ -274,11 +275,22 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
         action = 'create_niche';
         console.log(`[GOTO DEBUG] From niche - creating sibling niche under location ${parentLocationId}`);
         
-        // Resolve DNA from parent location
-        const parentLocationNode = worldsData.nodes[parentLocationId];
-        if (parentLocationNode?.dna) {
-          resolvedParentDNA = parentLocationNode.dna;
-          console.log(`[GOTO DEBUG] Using LOCATION DNA from "${parentLocationNode.name}"`);
+        // CRITICAL: Use CASCADED DNA resolution (Host → Region → Location)
+        // This ensures the new niche inherits context from the entire hierarchy
+        // (e.g., "on The Moon" from host, not just "Lunar Lounge" from location)
+        resolvedParentDNA = getResolvedNodeDNA(
+          parentLocationId,
+          worldsData.nodes,
+          worldsData.worldTrees
+        );
+        
+        if (resolvedParentDNA) {
+          const parentLocationNode = worldsData.nodes[parentLocationId];
+          console.log(`[GOTO DEBUG] Using CASCADED DNA for "${parentLocationNode?.name}" (includes ancestry)`);
+          console.log(`  - genre: ${resolvedParentDNA.genre || 'null'}`);
+          console.log(`  - architectural_tone: ${resolvedParentDNA.architectural_tone || 'null'}`);
+        } else {
+          console.log(`[GOTO DEBUG] WARNING: No cascaded DNA resolved for location ${parentLocationId}`);
         }
       }
       

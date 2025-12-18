@@ -22,29 +22,39 @@ export function nodeDNAGeneration(
 ): string {
   const needsStructuralFields = nodeType === 'location' || nodeType === 'niche' || nodeType === 'detail';
   
-  // For GOTO commands, parent context is STYLE ONLY (don't let parent content dominate)
+  // Use full parent context for both GO_INSIDE and GOTO commands
+  // This ensures proper world context (e.g., "on The Moon") is passed for all navigation
   const contextSection = parentContext 
-    ? options?.isGotoCommand 
-      ? `
-STYLE CONTEXT (for visual consistency only - do NOT copy parent content):
-- Architectural tone: ${parentContext.architectural_tone || 'none'}
-- Palette: ${parentContext.palette_bias || 'none'}
-
-IMPORTANT: Create the location described in USER INPUT.
-The parent context provides STYLE/ATMOSPHERE only, not what to create.
-`
-      : `
+    ? `
 PARENT CONTEXT (inherit unless overriding):
+- Genre: ${parentContext.genre || 'none'}
 - Looks: ${parentContext.looks || 'none'}
+- Colors/Lighting: ${parentContext.colorsAndLighting || 'none'}
+- Atmosphere: ${parentContext.atmosphere || 'none'}
 - Materials: ${parentContext.materials || 'none'}
+- Mood: ${parentContext.mood || 'none'}
 - Architectural tone: ${parentContext.architectural_tone || 'none'}
 - Cultural tone: ${parentContext.cultural_tone || 'none'}
 - Palette: ${parentContext.palette_bias || 'none'}
+- Primary surfaces: ${parentContext.primary_surfaces || 'none'}
+- Secondary surfaces: ${parentContext.secondary_surfaces || 'none'}
+- Accent features: ${parentContext.accent_features || 'none'}
+- Dominant color: ${parentContext.dominant || 'none'}
+- Secondary color: ${parentContext.secondary || 'none'}
+- Accent color: ${parentContext.accent || 'none'}
+- Ambient: ${parentContext.ambient || 'none'}
+- Flora: ${parentContext.flora_base || 'none'}
+- Fauna: ${parentContext.fauna_base || 'none'}
 
 MATERIAL RULES:
 - Exterior→Exterior: KEEP same facade
 - Exterior→Interior: TRANSFORM facade to interior finish (wood facade→plaster/wallpaper, stone→keep for grand spaces)
 - User-specified surfaces override all
+
+INHERITANCE RULES:
+- Set field to null to INHERIT from parent
+- Only override when the new space has DIFFERENT characteristics
+- Genre MUST be inherited (set to null) - only host defines genre
 `
     : '';
 
