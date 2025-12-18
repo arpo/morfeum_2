@@ -114,27 +114,26 @@ OUTPUT (pure JSON):
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // GO_INSIDE COMMAND: Create interior space that matches parent structure
+  // GO_INSIDE COMMAND: Create space WITHIN the target structure
   // ═══════════════════════════════════════════════════════════════════════════
   return `Analyze space and determine physical structure.
 
 ${perspectiveSection}
 
-CONTEXT:
-Current: "${context.currentNode.name}" (${context.currentNode.type})
+TARGET STRUCTURE TO ENTER: "${userPrompt}"
+
+CRITICAL: You are ENTERING the target structure above. Create the space WITHIN it.
+This is a DIFFERENT space from the parent - do NOT recreate the parent space.
+The parent provides style/atmosphere context, but OUTPUT describes what's INSIDE the target.
+
+PARENT CONTEXT (for style inheritance only):
+Current Location: "${context.currentNode.name}" (${context.currentNode.type})
 ${context.parentNode ? `Parent: "${context.parentNode.name}" (${context.parentNode.type})` : ''}
-
-PARENT DATA:
-- Description: "${context.currentNode.data?.description || 'none'}"
 - Cultural tone: "${currentDna?.cultural_tone || 'none'}"
-- Looks: "${currentDna?.looks || 'none'}"
-- DominantElements: ${JSON.stringify(currentNodeData?.dominantElements?.slice(0, 3) || [])}
-- Form: ${parentStructure?.form || 'determine from looks'}
-- Scale: ${parentStructure?.scale || 'determine'}
+- Architectural tone: "${currentDna?.architectural_tone || 'none'}"
+- Form hint from target: ${parentStructure?.form || 'determine from target description'}
+- Scale: ${parentStructure?.scale || 'determine from target'}
 - Functional type: ${parentStructure?.functionalType || 'determine from cultural_tone'}
-- Opening shape: ${parentStructure?.openingShape || 'determine from looks'}
-
-USER INPUT: "${userPrompt}"
 
 STRUCTURE RULES:
 1. FORM: Interior MUST match parent form (rectangular→rectangular, round→round)

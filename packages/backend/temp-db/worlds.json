@@ -277,6 +277,72 @@
       ],
       "searchDesc": "Vast dug-out basement with a colorful, whimsical house at its center.",
       "slug": "interior-of-basement-a-big-room-dugged-out-in-it-there-is-a-whimsical-house"
+    },
+    "niche-1766047833051-xe4p5px43": {
+      "id": "niche-1766047833051-xe4p5px43",
+      "type": "niche",
+      "name": "Whimsical House Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A cluttered, subterranean den with a patchwork of surfaces and a cozy, if slightly grimy, feel.",
+        "colorsAndLighting": "Dominated by warm, amber glows from the gas lamp and stained glass accents, with deep browns and earthy ochres.",
+        "atmosphere": "Stale, slightly damp air with a hint of old wood and fermented beverages. Still and heavy.",
+        "materials": "Primary: Rough-hewn wood, stained plaster, and salvaged scrap metal. Secondary: Worn leather, faded upholstery, and packed earth.",
+        "mood": "Secretive, comfortable, slightly illicit, and surprisingly inviting.",
+        "sounds": "Muffled bar noise, creaking wood, occasional drip, low hum.",
+        "spatialLayout": "Organic, low-ceilinged space with alcoves and varying floor levels.",
+        "primary_surfaces": "Mismatched plaster and wood paneling",
+        "secondary_surfaces": "Exposed earth and stone patches, corrugated metal",
+        "accent_features": "Stained glass fragments, bottle cap mosaic, salvaged metal ornaments",
+        "dominant": "Earthy Brown",
+        "secondary": "Muted Ochre",
+        "accent": "Verdigris Green",
+        "ambient": "Warm-Glow",
+        "genre": null,
+        "architectural_tone": "dystopian industrial shack",
+        "cultural_tone": "A refuge for the downtrodden, a place for illicit dealings or cheap drinks",
+        "palette_bias": "earthy and metallic tones",
+        "flora_base": "luminescent moss",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766047833050-94ma9efk0",
+      "description": "The interior of the whimsical house is a surreal, organic space. Walls are not straight lines but curves and swells, fashioned from a charmingly mismatched collection of materials – rough-hewn stone meets polished, swirling wood, interspersed with patches of soft, textured plaster. The air is filled with a warm, inviting glow, emanating from unseen sources that cast dappled shadows. Furniture seems to have organically sprouted from the floor, its forms mirroring the gentle curves of the architecture. It feels both ancient and newly born, a cozy sanctuary born from pure imagination.",
+      "structure": {
+        "form": "organic",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "spatialLayout": "This interior is a flowing, organic space where walls curve and meld into one another. The feeling is one of cozy, almost burrow-like habitation, despite the ample living area.",
+        "requiredElements": [
+          "mismatched-materials",
+          "warm-glow light"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "near center of main wall",
+          "description": "A strangely shaped wooden door leading back to 'The Rusty Mug Basement'."
+        },
+        {
+          "type": "passage",
+          "position": "curving into the far wall",
+          "description": "A wide, dimly lit passage that seems to recede into an unknown part of the house."
+        }
+      ],
+      "dominantElements": [
+        "Living Area: shape=organic, scale=medium, style=whimsical, surfaces=patchwork-wood-and-stone, light=warm-glow"
+      ],
+      "uniqueIdentifiers": [
+        "Walls that undulate like living tissue",
+        "Ceilings that glow with a soft, internal light",
+        "Furniture that appears to have grown from the floor"
+      ],
+      "searchDesc": "Downtrodden den below The Rusty Mug, filled with mismatched furniture and dim, warm glow.",
+      "slug": "null-of-the-rusty-mug-basement"
     }
   },
   "views": {},
@@ -317,7 +383,13 @@
                     {
                       "id": "niche-1766043540874-8yb4a96f6",
                       "type": "location",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "niche-1766047833051-xe4p5px43",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }

@@ -481,6 +481,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       });
 
       // Run pipeline asynchronously - use cleanText (already parsed at top of handler)
+      // For GO_INSIDE: prioritize entrance (dominantElements[0]) from metadata
       (async () => {
         try {
           await runCreateNodePipeline(
@@ -489,7 +490,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
             intent, 
             apiKey, 
             { 
-              userPrompt: cleanText || decision.newNodeName,
+              userPrompt: cleanText || decision.metadata?.entrance || decision.newNodeName,
               parsedEnhancements  // User-controlled navigable elements and furnishing
             },
             navigationId

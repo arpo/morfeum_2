@@ -211,6 +211,17 @@ export async function runCreateLocationNodePipeline(
       parentDNAForImagePrompt = parentLocationDNA;
     }
     
+    // Build surrounding environment context for BOTH interior AND open-air spaces
+    // CRITICAL: For nested spaces (e.g., house inside a cavern, balcony in underground world), this tells FLUX what surrounds this space
+    // The current node (where the user is standing) IS the surrounding environment for the new space
+    const currentNodeDNA = context.currentNode.dna as any;
+    // Pass exterior environment for ALL GO_INSIDE commands (not GOTO) - works for interior, exterior, and open-air
+    const exteriorEnvironment = !isGotoCommand ? {
+      name: context.currentNode.name,
+      description: context.currentNode.data?.description || '',
+      looks: currentNodeDNA?.looks || ''
+    } : undefined;
+
     // Use unified LLM-based image prompt generator
     // IMPORTANT: includeCurrentNodeDNA is false by default to prevent
     // the current niche's DNA from affecting the new node's image
@@ -226,7 +237,8 @@ export async function runCreateLocationNodePipeline(
         name: context.parentNode.name,
         description: context.parentNode.data?.description || ''
       }] : [],
-      includeCurrentNodeDNA: false // NEVER include current niche DNA in /goto image generation
+      includeCurrentNodeDNA: false, // NEVER include current niche DNA in /goto image generation
+      exteriorEnvironment // Pass what's visible through windows (the current node we're entering from)
     });
 
     if (helper) {

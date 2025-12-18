@@ -39,6 +39,16 @@ export interface ImagePromptGenerationInput {
    * the current niche's DNA bleeding into the new location's image.
    */
   includeCurrentNodeDNA?: boolean;
+  /**
+   * Exterior environment context - what's visible through windows/openings
+   * For interior spaces, this describes the surrounding environment
+   * CRITICAL for nested spaces (e.g., house inside a cavern)
+   */
+  exteriorEnvironment?: {
+    name: string;
+    description: string;
+    looks?: string;
+  };
 }
 
 /**
@@ -161,6 +171,28 @@ ${f.placementNotes && f.placementNotes.length > 0 ? `Placement notes: ${f.placem
 `;
   }
 
+  // Build surrounding environment context for BOTH interior AND open-air spaces
+  // CRITICAL: For nested spaces (e.g., house inside a cavern, balcony in underground world), this tells FLUX what surrounds this space
+  let exteriorEnvContext = '';
+  if (input.exteriorEnvironment) {
+    const env = input.exteriorEnvironment;
+    const isInterior = input.perspective === 'interior';
+    exteriorEnvContext = `
+=== SURROUNDING ENVIRONMENT ===
+This space is located WITHIN/ATTACHED TO: "${env.name}"
+${isInterior 
+  ? `View through any windows/openings: "${env.looks || env.description}"`
+  : `View from this open-air space (what surrounds it): "${env.looks || env.description}"`
+}
+CRITICAL: The visible surroundings MUST match this environment.
+${isInterior 
+  ? 'Any windows, doors, or openings should show THIS environment, not generic outdoor scenes.'
+  : 'The backdrop, horizon, and surrounding view should match THIS environment, not generic sky/gardens.'
+}
+DO NOT show generic gardens, forests, blue sky, or sunny outdoor scenes unless the parent environment explicitly describes them.
+`;
+  }
+
   return `
 You are an expert at creating image prompts for FLUX image generation.
 
@@ -182,6 +214,8 @@ ${dnaContext}
 ${inheritedContext}
 
 ${furnishingContext}
+
+${exteriorEnvContext}
 
 ${fluxInstructionsShort}
 

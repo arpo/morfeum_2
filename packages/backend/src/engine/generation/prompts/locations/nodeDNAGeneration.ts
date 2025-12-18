@@ -23,6 +23,7 @@ export function nodeDNAGeneration(
   const needsStructuralFields = nodeType === 'location' || nodeType === 'niche' || nodeType === 'detail';
   
   // For GOTO commands, parent context is STYLE ONLY (don't let parent content dominate)
+  // For GO_INSIDE (default), clarify that we're ENTERING a target structure
   const contextSection = parentContext 
     ? options?.isGotoCommand 
       ? `
@@ -34,16 +35,17 @@ IMPORTANT: Create the location described in USER INPUT.
 The parent context provides STYLE/ATMOSPHERE only, not what to create.
 `
       : `
-PARENT CONTEXT (inherit unless overriding):
-- Looks: ${parentContext.looks || 'none'}
-- Materials: ${parentContext.materials || 'none'}
+TARGET STRUCTURE: You are ENTERING the structure described in USER INPUT below.
+Create DNA for the space WITHIN that target - NOT the parent space.
+
+PARENT CONTEXT (for style inheritance only - do NOT recreate parent):
 - Architectural tone: ${parentContext.architectural_tone || 'none'}
 - Cultural tone: ${parentContext.cultural_tone || 'none'}
 - Palette: ${parentContext.palette_bias || 'none'}
+- Materials: ${parentContext.materials || 'none'}
 
 MATERIAL RULES:
-- Exterior→Exterior: KEEP same facade
-- Exterior→Interior: TRANSFORM facade to interior finish (wood facade→plaster/wallpaper, stone→keep for grand spaces)
+- Exterior→Interior: TRANSFORM facade to interior finish (wood facade→plaster/wallpaper, stone→keep for grand)
 - User-specified surfaces override all
 `
     : '';
