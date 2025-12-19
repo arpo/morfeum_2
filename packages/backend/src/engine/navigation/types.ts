@@ -197,6 +197,8 @@ export interface Structure {
   openingShape?: 'rectangular' | 'circular' | 'arched' | 'mixed' | 'irregular';
   /** Functional purpose of the space */
   functionalType: 'residential' | 'commercial' | 'religious' | 'industrial' | 'civic' | 'entertainment';
+  /** Elevation/positioning of the space - determined by LLM from context */
+  elevation?: 'ground-level' | 'rooftop' | 'elevated' | 'underground' | 'floating' | 'suspended';
   /** Spatial layout description */
   spatialLayout?: string;
   /** User-specified elements that must be included */

@@ -127,6 +127,36 @@ Store → getCascadedDNA → getMergedDNA → Backend LLM (merged)
 
 ## Structure Analysis Patterns
 
+### LLM-Based Elevation Detection
+Location: `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts`, `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts`
+
+**Pattern**: Use LLM to determine vertical positioning during structure analysis, avoiding brittle string matching.
+
+**Architecture**:
+1. Structure Analysis LLM analyzes user input and determines `elevation` field
+2. Elevation stored as structured data in `Structure` interface
+3. Image Prompt Generation uses elevation field to add positioning context
+
+**Elevation Types**:
+- `ground-level` - Standard ground floor (default)
+- `rooftop` - On top of a building (rooftop terrace, helipad)
+- `elevated` - Above ground, not rooftop (tower room, penthouse, observation deck)
+- `underground` - Below surface (basement, cellar, crypt)
+- `floating` - Suspended in air/space (cloud platform, space station)
+- `suspended` - Hanging structure (suspended walkway, cable car)
+
+**Detection Examples**:
+- "rooftop balcony" → `elevation: "rooftop"`
+- "tower room with view" → `elevation: "elevated"`
+- "penthouse suite" → `elevation: "elevated"`
+- "basement bar" → `elevation: "underground"`
+
+**Benefits**:
+- No additional LLM calls (uses existing structure analysis)
+- Contextual understanding (LLM interprets meaning, not keywords)
+- Structured, reusable data
+- Extensible to new elevation types
+
 ### Scale Consistency System
 Location: `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts`
 

@@ -123,9 +123,55 @@
   - Navigation helpers consolidated: `findHostForRegion()` and `addChildToWorldTree()` extracted into `navigationHelpers.ts`.
   - `createNodePipeline` accepts `resolvedParentDNA` (pre-resolved by route handler) and uses it when available.
 
+### LLM-Based Elevation Detection (Dec 19, Latest)
+
+**Replaced string matching with intelligent LLM-based elevation detection** for rooftop and elevated spaces:
+
+#### **1. New `elevation` Field in Structure**
+- **Type Addition** (`types.ts`): Added `elevation?: 'ground-level' | 'rooftop' | 'elevated' | 'underground' | 'floating' | 'suspended'` to `Structure` interface
+- **LLM-Determined**: Structure analysis LLM now analyzes user input to determine vertical positioning
+- **Structured Data**: Replaces brittle string matching with clean, reusable field
+
+#### **2. Enhanced Structure Analysis Prompt**
+- **File**: `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts`
+- **Added Elevation Rules**: Comprehensive rules for LLM to determine elevation from user input
+- **Detection Examples**:
+  - "rooftop balcony" → `elevation: "rooftop"`
+  - "tower room with view" → `elevation: "elevated"`
+  - "penthouse suite" → `elevation: "elevated"`
+  - "observation deck" → `elevation: "elevated"`
+  - "basement bar" → `elevation: "underground"`
+  - Default → `elevation: "ground-level"`
+
+#### **3. Image Prompt Generation Updates**
+- **File**: `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts`
+- **Removed**: String matching logic (`nameLC.includes('rooftop')`)
+- **Added**: Structured elevation checking (`s.elevation === 'rooftop'`)
+- **Elevation-Specific Context**:
+  - **Rooftop/Elevated**: "Space located ON TOP of tall building, elevated viewpoint looking DOWN, base FAR BELOW"
+  - **Underground**: "Space BELOW ground level, no natural sky, artificial lighting"
+  - **Floating/Suspended**: "Space floating/suspended in air, no ground foundation, surface far below"
+
+#### **4. Benefits**
+- **No Additional LLM Calls**: Uses existing structure analysis
+- **Contextual Understanding**: LLM interprets meaning, not just keywords
+- **Robust**: Handles variations like "tower room", "penthouse", "observation deck"
+- **Extensible**: Easy to add new elevation types
+- **Reusable**: Other system parts can use elevation data
+
+#### **5. Problem Solved**
+- **Before**: "roof top balcony" described as ground-level ("cracked regolith at the base of the structure")
+- **After**: LLM determines `elevation: "rooftop"`, image prompt adds elevated context automatically
+
+### **Files Modified**
+1. `packages/backend/src/engine/navigation/types.ts` - Added `elevation` field to Structure interface
+2. `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts` - Added elevation rules to LLM prompt
+3. `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts` - Replaced string matching with elevation field checking
+
 ## Current Focus
+- ✅ **COMPLETED**: LLM-based elevation detection replacing string matching
 - ✅ **COMPLETED**: GOTO/GO_INSIDE alignment and conditional destination analysis
 - ✅ **COMPLETED**: Unified CommandContext interface and helper functions
 - ✅ **COMPLETED**: Dynamic pipeline configuration with accurate progress bars
-- Stabilize image prompt output to avoid inappropriate vegetation in non-flora worlds (add flora_base guard in image prompt generation).
-- Run integration tests for GOTO/GO_INSIDE flows to confirm cascaded inheritance end-to-end.
+- Stabilize image prompt output to avoid inappropriate vegetation in non-flora worlds (add flora_base guard in image prompt generation)
+- Run integration tests for GOTO/GO_INSIDE flows to confirm cascaded inheritance end-to-end

@@ -2,7 +2,16 @@
 
 ## 2025-12-19
 
-- [x] **File Size Limit Refactoring (Latest)**: Brought all backend files under 50-300 line limit
+- [x] **LLM-Based Elevation Detection (Dec 19, Latest)**: Replaced string matching with intelligent LLM-based elevation detection
+  - [x] Added `elevation` field to Structure interface (`ground-level`, `rooftop`, `elevated`, `underground`, `floating`, `suspended`)
+  - [x] Enhanced structure analysis prompt with elevation rules and detection examples
+  - [x] Updated image prompt generation to use elevation field instead of string matching
+  - [x] Added elevation-specific context for all elevation types
+  - [x] Benefits: No additional LLM calls, contextual understanding, robust detection, extensible
+  - [x] Problem solved: Rooftop spaces now correctly described as elevated, not ground-level
+  - Key files: `types.ts`, `structureAnalysis.ts`, `imagePromptGeneration.ts`
+
+- [x] **File Size Limit Refactoring**: Brought all backend files under 50-300 line limit
   - [x] Extracted navigation route handlers to separate files (navigation.ts: 997 → 54 lines)
     - Created handlers/ directory with 6 dedicated handler files
     - Exported shared utilities (pipelineConfigs, detectPerspectiveFromNode)
@@ -60,7 +69,17 @@
 - **Dynamic pipeline configuration** with accurate SSE progress tracking
 
 ### Recent Improvements (Nov-Dec 2025)
-- **GOTO/GO_INSIDE Alignment & Pipeline Updates (Dec 19, Latest):**
+- **LLM-Based Elevation Detection (Dec 19, Latest):**
+  - **Replaced string matching** with intelligent LLM-based elevation detection for rooftop/elevated spaces
+  - **New `elevation` field**: Structure interface now includes `elevation?: 'ground-level' | 'rooftop' | 'elevated' | 'underground' | 'floating' | 'suspended'`
+  - **LLM determines positioning**: Structure analysis prompt now includes elevation rules and detection examples
+  - **Image prompt updates**: Removed string matching (`nameLC.includes('rooftop')`), now checks structured `elevation` field
+  - **Elevation-specific context**: Each elevation type gets appropriate image prompt context
+  - **Detection examples**: "rooftop balcony" → rooftop, "tower room with view" → elevated, "penthouse suite" → elevated
+  - **Benefits**: Uses existing LLM call (no extra cost), contextual understanding, robust detection, extensible
+  - **Problem solved**: "roof top balcony" was described as ground-level, now correctly positioned as elevated
+  - Key files: `types.ts`, `structureAnalysis.ts`, `imagePromptGeneration.ts`
+- **GOTO/GO_INSIDE Alignment & Pipeline Updates (Dec 19):**
   - **Unified Architecture**: Created `CommandContext` interface replacing scattered boolean flags
   - **DNA Resolution**: New `resolveNavigationParentDNA()` helper as single source of truth
   - **Conditional Destination Analysis**: GO_INSIDE now runs destination analysis for rich descriptions (>20 chars)

@@ -88,6 +88,21 @@ SCALE HINTS:
 - medium: 4-10m (rooms, shops, cafés)  
 - large: 10-30m+ (parks, plazas, halls)
 
+ELEVATION RULES:
+Analyze the USER INPUT to determine the vertical positioning of the space:
+- ground-level: Standard ground floor or surface level (default for most spaces)
+- rooftop: On top of a building (rooftop, roof terrace, helipad)
+- elevated: Above ground but not a rooftop (tower room, penthouse, upper floor, observation deck, treehouse)
+- underground: Below surface (basement, cellar, bunker, cave, crypt, tunnel)
+- floating: Suspended in air/space (cloud platform, space station, floating island)
+- suspended: Hanging structure (suspended walkway, hanging garden, cable car station)
+
+ELEVATION CLUES from USER INPUT:
+- "rooftop", "roof terrace", "on the roof" → rooftop
+- "tower room", "penthouse", "observation deck", "upper floor" → elevated
+- "basement", "cellar", "underground", "crypt" → underground
+- Default/standard spaces → ground-level
+
 ${NAVIGABLE_ELEMENTS_RULES}
 
 ${DOMINANT_ELEMENTS_RULES}
@@ -104,6 +119,7 @@ OUTPUT (pure JSON):
     "openings": "large-glass|arched-windows|narrow-slits|open-passages|minimal|none",
     "openingShape": "rectangular|circular|arched|mixed|irregular",
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment|natural",
+    "elevation": "ground-level|rooftop|elevated|underground|floating|suspended",
     "spatialLayout": "1-2 sentence description of the DESTINATION",
     "requiredElements": ["elements from USER INPUT that MUST appear"],
     "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
@@ -149,6 +165,21 @@ SCALE HINTS:
 - medium: 4-10m (rooms, shops, cafés)
 - large: 10-30m+ (halls, cathedrals, plazas)
 
+ELEVATION RULES:
+Analyze the USER INPUT to determine the vertical positioning of the space:
+- ground-level: Standard ground floor or surface level (default for most spaces)
+- rooftop: On top of a building (rooftop, roof terrace, helipad)
+- elevated: Above ground but not a rooftop (tower room, penthouse, upper floor, observation deck, treehouse)
+- underground: Below surface (basement, cellar, bunker, cave, crypt, tunnel)
+- floating: Suspended in air/space (cloud platform, space station, floating island)
+- suspended: Hanging structure (suspended walkway, hanging garden, cable car station)
+
+ELEVATION CLUES from USER INPUT:
+- "rooftop", "roof terrace", "on the roof" → rooftop
+- "tower room", "penthouse", "observation deck", "upper floor" → elevated
+- "basement", "cellar", "underground", "crypt" → underground
+- Default/standard spaces → ground-level
+
 ${NAVIGABLE_ELEMENTS_RULES}
 
 ${DOMINANT_ELEMENTS_RULES}
@@ -165,6 +196,7 @@ OUTPUT (pure JSON):
     "openings": "large-glass|arched-windows|narrow-slits|open-passages|minimal|none",
     "openingShape": "rectangular|circular|arched|mixed|irregular",
     "functionalType": "residential|commercial|religious|industrial|civic|entertainment",
+    "elevation": "ground-level|rooftop|elevated|underground|floating|suspended",
     "spatialLayout": "1-2 sentence physical description",
     "requiredElements": ["user-specified elements that MUST appear"],
     "navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],

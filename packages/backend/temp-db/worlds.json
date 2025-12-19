@@ -31,7 +31,8 @@
       "slug": "the-moon",
       "structure": {
         "spatialLayout": "Vast, unbroken plains interrupted by impact craters of varying sizes. A gentle curvature to the horizon."
-      }
+      },
+      "primaryMedia": "media-1766138732531-8x0yvvnx9"
     },
     "c19d4e67-ddf7-4364-a2df-8571e269ae35": {
       "id": "c19d4e67-ddf7-4364-a2df-8571e269ae35",
@@ -185,6 +186,155 @@
       ],
       "searchDesc": "Interior of the Lunar Obelisk: polished obsidian, starlight, tiered platforms, profound silence.",
       "slug": "null-of-lunar-obelisk"
+    },
+    "niche-1766138646000-whu4yrquo": {
+      "id": "niche-1766138646000-whu4yrquo",
+      "type": "niche",
+      "name": "Top Room of a Tower",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, cylindrical chamber with an impossibly smooth, obsidian-like finish that seems to absorb all light, save for what is reflected from the external panorama. The space feels both vast and intimately enclosed by the starfield visible through the transparent walls.",
+        "colorsAndLighting": "Dominated by the deep blacks of space and the muted greys of the lunar surface as seen through the windows. Interior lighting is minimal, provided by strategically placed, recessed panels emitting a cool, stark white light that casts no discernible shadows, accentuating the smoothness of the surfaces. The primary color is deep black, reflecting starlight (8%), with sharp white light accents (2%).",
+        "atmosphere": "Absolute silence, an oppressive void punctuated only by the faintest hum of internal systems. The air is thin and sterile, temperature perfectly regulated, but the profound desolation of the exterior is palpable. No motion is visible save for the slow sweep of distant stars.",
+        "materials": "The interior surfaces are crafted from the same impossibly smooth, obsidian-like substance as the exterior, creating a seamless, almost liquid appearance. The floor is similarly polished.",
+        "mood": "A profound sense of awe, isolation, and cosmic insignificance. The sheer scale of the universe on display instills a deep contemplation of existence and the unknown.",
+        "sounds": "Silence, faint internal hum, distant star whispers, sterile air.",
+        "spatialLayout": "A large, cylindrical chamber, open and vast, with the entire perimeter serving as a window onto the external environment.",
+        "primary_surfaces": "Sleek, polished obsidian-like material",
+        "secondary_surfaces": "None",
+        "accent_features": "Recessed, cool white light emitters, minimalist control console",
+        "dominant": "Deep black (90%)",
+        "secondary": "Starfield reflection (8%)",
+        "accent": "Sharp white light (2%)",
+        "ambient": "Starlight and harsh sunlight reflection (reflected externally, creating internal mood)",
+        "genre": null,
+        "architectural_tone": "Futuristic minimalist monolithic",
+        "cultural_tone": "Alien, ancient, unknown purpose",
+        "palette_bias": "Monochromatic black and grey",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766138645999-2tmqf6vsu",
+      "description": "This open-air top room of a tower provides a commanding, unobstructed view of the world below. Designed with a futuristic minimalist aesthetic in black and grey, the space is sleek and functional.",
+      "structure": {
+        "form": "cylindrical",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "vertical",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "observation",
+        "elevation": "elevated",
+        "spatialLayout": "A minimalist, monochromatic room at the apex of a futuristic tower, offering panoramic views of the surrounding landscape. The space is designed for unobstructed observation, with sleek, dark surfaces and ample, clear viewing areas.",
+        "requiredElements": [
+          "view over surroundings"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of back wall",
+          "description": "Leads back down into the main structure of the Lunar Obelisk."
+        },
+        {
+          "type": "window",
+          "position": "entire perimeter of the room",
+          "description": "Expansive, seamless transparent panels offering a breathtaking 360-degree view of the lunar surface and the cosmos."
+        }
+      ],
+      "dominantElements": [
+        "observation deck: shape=cylindrical-circular, scale=medium, style=futuristic-minimalist, surfaces=polished-metal, stone, glass, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "monochromatic palette",
+        "tower apex location"
+      ],
+      "searchDesc": "Top room of a tower with immense panoramic views of space and the lunar surface.",
+      "slug": "the-apex-observatory"
+    },
+    "niche-1766138856857-ol0cx1j55": {
+      "id": "niche-1766138856857-ol0cx1j55",
+      "type": "niche",
+      "name": "Rooftop Bar",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An open-plan rooftop space with expansive, transparent walls offering unobstructed views of the lunar surface and the star-filled sky. The interior is a fusion of stark minimalism and organic, glowing forms.",
+        "colorsAndLighting": "Dominated by the deep blacks of space, punctuated by the cool, internal glow of bioluminescent seating and the crisp white light of holographic menus. The bar counter reflects starlight in fractured patterns. Shadows are soft and diffuse within the bar area, contrasting with the sharp shadows of the exterior.",
+        "atmosphere": "A serene and sophisticated atmosphere. The silence of space is subtly overlaid with ambient, low-frequency electronic music. Temperature is perfectly controlled, offering comfort amidst the lunar void. A gentle, almost imperceptible, hum emanates from the technological furnishings.",
+        "materials": "The bar counter is made of a flawless, clear crystalline material. Seating pods are crafted from a flexible, self-illuminating bio-polymer. Tables are carved from polished, smooth lunar stone. The floor and walls are a seamless extension of the Lunar Obelisk's obsidian-like material.",
+        "mood": "Evokes exclusivity, wonder, and tranquil contemplation. A place for sophisticated indulgence with a sense of cosmic awe.",
+        "sounds": "Ambient electronic, gentle hum, distant echoes of quiet conversation",
+        "spatialLayout": "An expansive, open circular space with the bar as the central focal point, surrounded by clusters of seating pods and tables.",
+        "primary_surfaces": "Polished, obsidian-like material of the building's core structure",
+        "secondary_surfaces": "Crystalline bar counter, smooth lunar stone tables",
+        "accent_features": "Bioluminescent seating pods, floating holographic menus",
+        "dominant": "Deep black with subtle starlight reflections",
+        "secondary": "Cool, soft bioluminescent blues and greens",
+        "accent": "Sharp, crisp white of holographic displays",
+        "ambient": "Starlight and internal luminescence",
+        "genre": null,
+        "architectural_tone": "Futuristic minimalist",
+        "cultural_tone": "Exclusive, sophisticated",
+        "palette_bias": "Monochromatic black and grey with glowing accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766138856856-dhh1qr3hc",
+      "description": "An open-air rooftop bar with a futuristic, minimalist design. It features a crystalline bar counter, floating holographic menus, bioluminescent seating pods, and minimalist lunar stone tables.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "rooftop",
+        "spatialLayout": "A sleek, open-air rooftop bar with a minimalist aesthetic, offering panoramic views. The space is illuminated by ambient bioluminescence and the glow of holographic menus.",
+        "requiredElements": [
+          "crystalline bar counter",
+          "floating holographic menus",
+          "bioluminescent seating pods",
+          "minimalist lunar stone tables"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "crystalline bar counter",
+          "floating holographic menus",
+          "bioluminescent seating pods",
+          "minimalist lunar stone tables --open-air"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door to observatory deck"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object sealed viewport"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object hidden access panel rear wall"
+        }
+      ],
+      "dominantElements": [
+        "bar: shape=rectangular, scale=medium, style=futuristic-minimalist, surfaces=crystalline, metallic, light=neon-glow"
+      ],
+      "uniqueIdentifiers": [
+        "bioluminescent glow",
+        "holographic menus",
+        "lunar stone textures"
+      ],
+      "searchDesc": "Rooftop bar with crystalline counter, holo menus, glowing pods, and lunar tables. Views of space.",
+      "slug": "lunar-zenith-bar"
     }
   },
   "views": {},
@@ -203,6 +353,16 @@
               "children": [
                 {
                   "id": "niche-1766137256715-bp4q1z4mv",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766138646000-whu4yrquo",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766138856857-ol0cx1j55",
                   "type": "niche",
                   "children": []
                 }

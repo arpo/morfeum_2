@@ -56,6 +56,7 @@ function buildSystemPrompt(input: ImagePromptGenerationInput): string {
   // Build structure context if available (ALL analysis already done by structureAnalysis.ts)
   let structureContext = '';
   let enclosedInteriorConstraint = '';
+  let elevationContext = '';
   if (structureAnalysis) {
     const s = structureAnalysis.structure;
     
@@ -86,6 +87,42 @@ This is an OPEN-AIR space with NO ROOF or CEILING above.
 [CONSTRAINT:] fully enclosed interior; no openings, holes, skylights, or gaps in the roof or ceiling unless explicitly specified; maintain intact, continuous ceiling structure
 `;
     }
+
+    // Add elevation context based on LLM-determined elevation field
+    if (s.elevation === 'rooftop' || s.elevation === 'elevated') {
+      const architecturalStyle = parentDNA?.architectural_tone || dna?.architectural_tone || 'monolithic';
+      const surfaceType = parentDNA?.materials_base || 'surface';
+      const elevationType = s.elevation === 'rooftop' ? 'rooftop of' : 'elevated position in';
+      
+      elevationContext = `
+[CRITICAL: ${s.elevation.toUpperCase()} POSITION]
+This space is located at an ${elevationType} a tall ${architecturalStyle} building or structure.
+- The building rises significantly from the ${surfaceType} below
+- The viewpoint is from an ELEVATED POSITION, looking DOWN at the surroundings
+- The structure's base and foundation are FAR BELOW, NOT visible from this elevated perspective
+- DO NOT show ground-level elements like "at the base of the structure"
+- This is a view FROM ABOVE, not a ground-level view
+- The surrounding environment should be visible BELOW the elevation level
+`;
+    } else if (s.elevation === 'underground') {
+      elevationContext = `
+[CRITICAL: UNDERGROUND POSITION]
+This space is located BELOW ground level.
+- No natural sky or horizon visible (unless there are specific openings to surface)
+- Surrounded by earth, rock, or structural foundation
+- Lighting comes from artificial sources or bioluminescence
+- May show ceiling/walls of excavated or constructed underground space
+`;
+    } else if (s.elevation === 'floating' || s.elevation === 'suspended') {
+      elevationContext = `
+[CRITICAL: ${s.elevation.toUpperCase()} POSITION]
+This space is ${s.elevation === 'floating' ? 'floating' : 'suspended'} in the air.
+- The structure has NO ground-level foundation visible
+- Far below, the surface/ground is visible at a great distance
+- The space is suspended or floating freely
+- Emphasize the aerial, disconnected nature of the positioning
+`;
+    }
     
     structureContext = `
 === STRUCTURE (Pre-analyzed by structureAnalysis.ts) ===
@@ -98,8 +135,10 @@ Roof/Ceiling Type: ${s.roofType || 'not specified'}
 Openings: ${s.openings || 'not specified'}
 Opening Shape: ${s.openingShape || 'not specified'}
 Functional Type: ${s.functionalType}
+Elevation: ${s.elevation || 'ground-level'}
 Spatial Layout: ${s.spatialLayout || 'not specified'}
 ${enclosedInteriorConstraint}
+${elevationContext}
 ${s.requiredElements && s.requiredElements.length > 0 ? `MUST INCLUDE (User-specified): ${s.requiredElements.join(', ')}` : ''}
 ${s.suggestedFixtures && s.suggestedFixtures.length > 0 ? `Suggested Fixtures: ${s.suggestedFixtures.join(', ')}` : ''}
 ${s.navigableElements && s.navigableElements.length > 0 ? `Navigable Elements: ${s.navigableElements.map(n => `${n.type} at ${n.position}: ${n.description}`).join('; ')}` : ''}
