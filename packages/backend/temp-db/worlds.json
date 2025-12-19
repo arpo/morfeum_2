@@ -335,6 +335,73 @@
       ],
       "searchDesc": "Rooftop bar with crystalline counter, holo menus, glowing pods, and lunar tables. Views of space.",
       "slug": "lunar-zenith-bar"
+    },
+    "niche-1766139293597-o9xfgtcga": {
+      "id": "niche-1766139293597-o9xfgtcga",
+      "type": "niche",
+      "name": "Room with Two Doors",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A perfectly symmetrical, cubic chamber with intensely polished obsidian-like walls and floor, devoid of any extraneous detail save for two identical, seamless doors set precisely into the left and right walls.",
+        "colorsAndLighting": "The interior is bathed in the same stark, reflected light as the exterior, with deep blacks dominating and sharp, angular reflections creating dramatic, high-contrast shadows. The light intensity is low, emphasizing the monolithic nature of the space.",
+        "atmosphere": "The atmosphere is one of absolute silence and profound desolation, mirroring the exterior. The air is non-existent, and temperature fluctuations would be extreme if not for the presumed internal environmental controls. There is no visible motion.",
+        "materials": "The primary material is an impossibly smooth, obsidian-like substance that appears to absorb and reflect light simultaneously. Textures are non-existent, creating a perfectly polished, almost liquid-like surface. The condition is pristine.",
+        "mood": "Evokes feelings of calculated design, deliberate neutrality, and a sense of being a pivotal, yet impersonal, transition point. The symmetry and identical exits create a feeling of being on the precipice of an unknown, equally balanced choice.",
+        "sounds": "Silence, faint hum of internal systems, subtle echoes.",
+        "spatialLayout": "Cubic chamber",
+        "primary_surfaces": "Sleek, polished obsidian-like material",
+        "secondary_surfaces": "Cracked lunar regolith at base",
+        "accent_features": "The perfectly flush, seamless doors with no visible mechanism.",
+        "dominant": "Deep black (90%)",
+        "secondary": "Starfield reflection (8%)",
+        "accent": "Sharp white light (2%)",
+        "ambient": "Starlight and harsh sunlight reflection",
+        "genre": null,
+        "architectural_tone": "Futuristic minimalist monolithic",
+        "cultural_tone": "Alien, ancient, unknown purpose",
+        "palette_bias": "Monochromatic black and grey",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766139293595-63zbqyoq3",
+      "description": "A stark, futuristic minimalist room rendered in shades of black and grey. Two identical doors are present, one on the left and one on the right wall, offering egress from the space.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "A minimalist, monochromatic room with a single point of entry and two exits, one on the left wall and one on the right wall. The overall aesthetic is stark and futuristic.",
+        "requiredElements": [
+          "door in the wall to the left",
+          "door on the wall to the right",
+          "door in the wall to the left and a door on the wall to the right"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "Leads to a dimly lit corridor. Visible through the doorway is a continuation of the obsidian-like material, stretching into the darkness."
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "Leads to a dimly lit corridor. Visible through the doorway is a continuation of the obsidian-like material, stretching into the darkness."
+        }
+      ],
+      "dominantElements": [
+        "minimalist room: shape=rectangular, scale=medium, style=futuristic-minimalist, surfaces=polished-concrete, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "two contrasting doors",
+        "monochromatic color scheme"
+      ],
+      "searchDesc": "Symmetrical chamber with identical obsidian doors on left and right walls.",
+      "slug": "nexus-chamber"
     }
   },
   "views": {},
@@ -363,6 +430,11 @@
                 },
                 {
                   "id": "niche-1766138856857-ol0cx1j55",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766139293597-o9xfgtcga",
                   "type": "niche",
                   "children": []
                 }
